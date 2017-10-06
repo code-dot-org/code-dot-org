@@ -237,16 +237,16 @@ var TopInstructions = React.createClass({
             {experiments.isEnabled('resourcesTab') &&
               <div style={styles.helpTabs}>
                 <Tab
-                  className="uitest-instructionsTab"
+                  class="uitest-instructionsTab"
                   onClick={this.handleInstructionTabClick}
-                  style={!this.state.helpTabSelected && styles.highlighted}
+                  style={this.state.helpTabSelected? null : styles.highlighted}
                   text={msg.instructions()}
                 />
                 {this.props.levelVideos.length > 0 &&
                   <Tab
-                    className="uitest-helpTab"
+                    class="uitest-helpTab"
                     onClick={this.handleHelpTabClick}
-                    style={this.state.helpTabSelected && styles.highlighted}
+                    style={this.state.helpTabSelected? styles.highlighted : null}
                     text={msg.helpTips()}
                   />
                 }
