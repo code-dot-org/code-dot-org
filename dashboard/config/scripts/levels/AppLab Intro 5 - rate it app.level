@@ -65,10 +65,7 @@
     "display_name": "Using playSound",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"heart\" style=\"padding: 0px; margin: 0px; color: rgb(255, 255, 255); position: absolute; top: 375px; width: 50px; height: 50px; font-size: 30px; left: 10px; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; background-color: white;\" data-canonical-image-url=\"icon://fa-heart-o\" data-icon-color=\"black\"></button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; max-width: 320px; position: absolute; top: 20px; text-align: left; color: black; left: 60px; width: 250px; font-size: 30px; height: 40px;\" id=\"profileName\">myProfile</label><img data-canonical-image-url=\"icon://fa-picture-o\" id=\"bigImage\" style=\"height: 300px; position: absolute; left: 10px; top: 70px; margin: 0px; width: 300px;\"><button id=\"camera\" style=\"padding: 0px; margin: 0px; color: rgb(255, 255, 255); position: absolute; top: 10px; width: 50px; height: 50px; font-size: 30px; left: 10px; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; background-color: white;\" data-canonical-image-url=\"icon://fa-camera-retro\" data-icon-color=\"black\" class=\"\"></button></div></div>",
     "start_blocks": "onEvent(\"thumbsUpButton\", \"click\", function(event) {\r\n  playSound(\"sound://category_instrumental/sax_upscale_2.mp3\", false);\r\n});\r\nonEvent(\"thumbsDownButton\", \"click\", function(event) {\r\n  playSound(\"sound://category_instrumental/sax_downscale_2.mp3\", false);\r\n});",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
