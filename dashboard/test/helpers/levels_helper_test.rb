@@ -541,10 +541,10 @@ class LevelsHelperTest < ActionView::TestCase
   test 'video data available for levels with associated videos' do
     leveldata = [
       {src: "https://www.youtube.com/embed/Bogus text/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Bogus+text&wmode=transparent",
-       key: "concept_2",
-       name: "translation missing: en-US.data.video.name.concept_2",
+       key: "concept_13",
+       name: "translation missing: en-US.data.video.name.concept_13",
        download: nil,
-       thumbnail: "//videos.code.org/youtube/concept_2.jpg",
+       thumbnail: "//videos.code.org/youtube/concept_13.jpg",
        enable_fallback: true,
        autoplay: true}
     ]
