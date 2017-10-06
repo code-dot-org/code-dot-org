@@ -544,7 +544,7 @@ var projects = module.exports = {
       case 'craft':
         if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
-        } else if (appOptions.level.isConnectionLevel) {
+        } else if (appOptions.level.isConnectionLevel || appOptions.level.isAgentLevel) {
           return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
