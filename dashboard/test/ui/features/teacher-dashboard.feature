@@ -156,8 +156,9 @@ Feature: Using the teacher dashboard
     # Load the section projects page
 
     When I sign in as "Teacher_Sally"
-    And I am on "http://code.org/teacher-dashboard?enableExperiments=showProjectThumbnails#/sections"
-    And I wait to see ".header_user"
+    # Enable the showProjectThumbnails experiment on Pegasus for this test.
+    Given I am on "http://code.org/teacher-dashboard?no_home_redirect=1&enableExperiments=showProjectThumbnails"
+    Then I am on "http://studio.code.org/home"
     And I click selector "a:contains('New Section')" once I see it
     And I click selector "#learn-tabs a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
