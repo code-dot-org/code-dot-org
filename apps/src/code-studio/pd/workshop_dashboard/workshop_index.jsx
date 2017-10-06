@@ -29,43 +29,43 @@ const filterParams = {
   }
 };
 
-const WorkshopIndex = React.createClass({
-  contextTypes: {
+export default class WorkshopIndex extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
   componentWillMount() {
     this.permission = new Permission();
-  },
+  }
 
-  handleNewWorkshopClick() {
+  handleNewWorkshopClick = () => {
     this.context.router.push('/workshops/new');
-  },
+  };
 
-  handleAttendanceReportsClick() {
+  handleAttendanceReportsClick = () => {
     this.context.router.push('/reports');
-  },
+  };
 
-  handleOrganizerSurveyResultsClick() {
+  handleOrganizerSurveyResultsClick = () => {
     this.context.router.push('/organizer_survey_results');
-  },
+  };
 
-  handleSurveyResultsClick() {
+  handleSurveyResultsClick = () => {
     this.context.router.push('/survey_results');
-  },
+  };
 
-  handleUserManagementClick(e) {
+  handleUserManagementClick = (e) => {
     this.context.router.push('../workshop_user_management/facilitator_courses');
-  },
+  };
 
-  handleFilterClick(e) {
+  handleFilterClick = (e) => {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
-  },
+  };
 
   generateFilterUrl(state) {
     return `/workshops/filter?${$.param({state})}`;
-  },
+  }
 
   render() {
     const showOrganizer = this.permission.isWorkshopAdmin;
@@ -128,5 +128,4 @@ const WorkshopIndex = React.createClass({
       </div>
     );
   }
-});
-export default WorkshopIndex;
+}
