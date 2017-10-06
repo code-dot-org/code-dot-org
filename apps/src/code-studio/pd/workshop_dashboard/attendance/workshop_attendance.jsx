@@ -28,40 +28,38 @@ const styles = {
   }
 };
 
-const WorkshopAttendance = React.createClass({
-  contextTypes: {
+export default class WorkshopAttendance extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  propTypes: {
+  static propTypes = {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,
       sessionId: PropTypes.string
     }).isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      loadingSummary: true,
-      workshopState: undefined,
-      sessions: undefined,
-      numPendingSaves: 0,
-      lastSaveFailed: false,
-      accountRequiredForAttendance: true
-    };
-  },
+  state = {
+    loadingSummary: true,
+    workshopState: undefined,
+    sessions: undefined,
+    numPendingSaves: 0,
+    lastSaveFailed: false,
+    accountRequiredForAttendance: true
+  };
 
   hasWorkshopEnded() {
     return this.state.workshopState === 'Ended';
-  },
+  }
 
   componentWillMount() {
     this.permission = new Permission();
-  },
+  }
 
   componentDidMount() {
     this.loadSummary();
-  },
+  }
 
   loadSummary() {
     this.loadSummaryRequest = $.ajax({
@@ -81,7 +79,7 @@ const WorkshopAttendance = React.createClass({
         course: data.course
       });
     });
-  },
+  }
 
   componentWillUnmount() {
     if (this.loadSummaryRequest) {
@@ -90,47 +88,47 @@ const WorkshopAttendance = React.createClass({
     if (this.saveRequest) {
       this.saveRequest.abort();
     }
-  },
+  }
 
   updateUrlWithSession(sessionId) {
     this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionId}`);
-  },
+  }
 
-  handleNavSelect(sessionId) {
+  handleNavSelect = (sessionId) => {
     this.updateUrlWithSession(sessionId);
-  },
+  };
 
-  handleBackClick() {
+  handleBackClick = () => {
     this.context.router.push(`/workshops/${this.props.params.workshopId}`);
-  },
+  };
 
-  handleDownloadCsvClick() {
+  handleDownloadCsvClick = () => {
     window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`);
-  },
+  };
 
   // returns workshopId from the router params, in number form
   workshopId() {
     return parseInt(this.props.params.workshopId, 10);
-  },
+  }
 
   // returns the active sessionId from the router params, in number form (or null if non specified).
   activeSessionId() {
     return this.props.params.sessionId ? parseInt(this.props.params.sessionId, 10) : null;
-  },
+  }
 
-  handleSaving() {
+  handleSaving = () => {
     const numPendingSaves = this.state.numPendingSaves + 1;
     this.setState({numPendingSaves});
-  },
+  };
 
-  handleSaved(value) {
+  handleSaved = (value) => {
     const lastSaveFailed = !!value.error;
     const numPendingSaves = this.state.numPendingSaves - 1;
     this.setState({
       numPendingSaves,
       lastSaveFailed
     });
-  },
+  };
 
   render() {
     if (this.state.loadingSummary) {
@@ -232,5 +230,4 @@ const WorkshopAttendance = React.createClass({
       </div>
     );
   }
-});
-export default WorkshopAttendance;
+}

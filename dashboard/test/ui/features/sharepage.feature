@@ -58,7 +58,7 @@ Scenario: Share and save an artist level to the project gallery
 
   # Make sure the published project shows up in the public gallery
 
-  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
   And I wait until element "#public-gallery" is visible
   And I wait until element ".project_card:contains(Artist Project)" is visible
   And I sign out
@@ -88,7 +88,7 @@ Scenario: Share and save a playlab level to the project gallery
 
   # Make sure the published project shows up in the public gallery
 
-  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
   And I wait until element "#public-gallery" is visible
   And I wait until element ".project_card:contains(Play Lab Project)" is visible
   And I sign out
