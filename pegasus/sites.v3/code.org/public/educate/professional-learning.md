@@ -28,15 +28,15 @@ These workshops are facilitated by experienced computer science educators across
 
 ### Professional learning for middle and high school teachers to teach computer science
 
-Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started.
+Our [middle and high school programs](/files/PLProgramsOverview_1-Pager.pdf) offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started.
 
 <br>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom: 20px;">
 
-<h4>7-9th grade: Computer Science Discoveries</h4>
+<h4>6 - 10th grade: Computer Science Discoveries</h4>
 
-For educators in 7-9th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.
+For educators in 6th - 10th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.
 
 <br>
 <a href="/educate/professional-learning/cs-discoveries"><button>Learn more</button>
@@ -45,9 +45,9 @@ For educators in 7-9th grade classrooms, our Computer Science Discoveries course
 
 <div class="col-50" style="padding-left: 20px; padding-bottom: 20px;">
 
-<h4>9-12th grade: Computer Science Principles</h4>
+<h4>9 - 12th grade: Computer Science Principles</h4>
 
-If you're teaching 9-12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course. Either way, there are no prerequisites required. The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course. It explores many of the big, foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
+If you're teaching 9 - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course. Either way, there are no prerequisites required. The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course. It explores many of the big, foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
 <br>
 <a href="/educate/professional-learning/cs-principles"><button>Learn more</button>
@@ -57,10 +57,9 @@ If you're teaching 9-12th grade students, our Computer Science Principles course
 <div style="clear: both;"></div>
 <br>
 <br>
-**Applications to join our Professional Learning Program for the 2018-19 academic year will open in the winter. In the meantime, sign up on our interest form if you'd like to apply.**
+Not sure which Code.org program is right for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your teaching situation.
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1"><button>Join our contact list</button>
-
+**Applications to join our Professional Learning Program for the 2018-19 academic year will open in January 2018.** In the meantime, [sign up on our interest form](https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1) if you'd like to apply.
 
 ## International
 

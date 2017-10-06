@@ -870,5 +870,11 @@
   "failedMultiplyCharactersTimeoutBlockly": "უნდა დაიჭიროთ 20 თაგვი დროიდი. გამოიყენეთ ბრძანება \"თაგვი დროიდის დამატება\" მოვლენაში \"თაგვი დროიდის დაჭერისას\" და დაამატეთ ორი ან მეტი თაგვი ყოველი ერთის დაჭერისას.",
   "failedMultiplyCharactersTimeoutGotSome": "გილოცავთ, თქვენ დაამათეთ კოდი და დააგროვეთ რამდენიმე თაგვი დროიდი. შეგიძლიათ ახალ თავსატეხზე გადასვლა ან თავიდან ცდა და 20 თაგვი დროიდის დაგროვება. გაიმარტივეთ საქმე - დაამატეთ მეტი! (გინდათ უფრო სწრაფად იმოძრაოთ? დააჭირეთ ღილაკებს და არ აუშვათ.)",
   "failedChangeSettingTimeout": "გასაგრძელებლად დაიჭირეთ სამი მეამბოხე პილოტი.",
-  "failedChangeSettingSettings": "მოარგეთ თამაში თქვენს საჭიროებებს. ამ თავსატეხის დასასრულებლად უნდა შეცვალოთ თქვენი დროიდი და განსაზღვროთ მისი სიჩქარე."
+  "failedChangeSettingSettings": "მოარგეთ თამაში თქვენს საჭიროებებს. ამ თავსატეხის დასასრულებლად უნდა შეცვალოთ თქვენი დროიდი და განსაზღვროთ მისი სიჩქარე.",
+  "ifDroidN": "droid {spriteIndex}",
+  "moveDroidN": "move droid {spriteIndex}",
+  "setDroidN": "set droid {spriteIndex}",
+  "stopDroidN": "stop droid {spriteIndex}",
+  "whenDroidClicked": "when droid clicked",
+  "whenDroidClickedN": "when droid {spriteIndex} clicked"
 }

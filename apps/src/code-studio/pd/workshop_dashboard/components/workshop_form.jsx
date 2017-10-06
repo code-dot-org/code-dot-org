@@ -50,12 +50,12 @@ const placeholderSession = {
   endTime: '5:00pm'
 };
 
-const WorkshopForm = React.createClass({
-  contextTypes: {
+export default class WorkshopForm extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  propTypes: {
+  static propTypes = {
     workshop: PropTypes.shape({
       id: PropTypes.number.isRequired,
       facilitators: PropTypes.array.isRequired,
@@ -73,9 +73,14 @@ const WorkshopForm = React.createClass({
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
     children: PropTypes.node,
-  },
+  };
 
-  getInitialState() {
+  constructor(props) {
+    super(props);
+    this.state = this.computeInitialState(props);
+  }
+
+  computeInitialState(props) {
     let initialState = {
       errors: [],
       shouldValidate: false,
@@ -96,9 +101,9 @@ const WorkshopForm = React.createClass({
       showTypeOptionsHelpDisplay: false
     };
 
-    if (this.props.workshop) {
+    if (props.workshop) {
       initialState = _.merge(initialState,
-        _.pick(this.props.workshop, [
+        _.pick(props.workshop, [
           'facilitators',
           'location_name',
           'location_address',
@@ -110,15 +115,16 @@ const WorkshopForm = React.createClass({
           'notes'
         ])
       );
-      initialState.sessions = this.prepareSessionsForForm(this.props.workshop.sessions);
-      this.loadAvailableFacilitators(this.props.workshop.course);
+      initialState.sessions = this.prepareSessionsForForm(props.workshop.sessions);
+      this.loadAvailableFacilitators(props.workshop.course);
     }
+
     return initialState;
-  },
+  }
 
   componentDidMount() {
     this.enableAutocompleteLocation();
-  },
+  }
 
   componentWillUnmount() {
     if (this.isGoogleMapsLoaded()) {
@@ -135,17 +141,17 @@ const WorkshopForm = React.createClass({
     if (this.loadWorkshopRequest) {
       this.loadWorkshopRequest.abort();
     }
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.readOnly && !this.props.readOnly) {
-      this.setState(this.getInitialState());
+      this.setState(this.computeInitialState(this.props));
     }
-  },
+  }
 
   componentDidUpdate() {
     this.enableAutocompleteLocation();
-  },
+  }
 
   loadAvailableFacilitators(course) {
     this.loadWorkshopRequest = $.ajax({
@@ -155,11 +161,11 @@ const WorkshopForm = React.createClass({
     }).done(data => {
       this.setState({availableFacilitators: data});
     });
-  },
+  }
 
   isGoogleMapsLoaded() {
     return (typeof google === 'object' && typeof google.maps === 'object');
-  },
+  }
 
   enableAutocompleteLocation() {
     if (!this.state.useAutocomplete) {
@@ -187,7 +193,7 @@ const WorkshopForm = React.createClass({
         this.setState({location_address: place.formatted_address});
       });
     }
-  },
+  }
 
   // Convert from [start, end] to [date, startTime, endTime]
   prepareSessionsForForm(sessions) {
@@ -199,7 +205,7 @@ const WorkshopForm = React.createClass({
         endTime: moment.utc(session.end).format(TIME_FORMAT)
       };
     });
-  },
+  }
 
   // Convert from [date, startTime, endTime] to [start, end] and merge destroyedSessions
   prepareSessionsForApi(sessions, destroyedSessions) {
@@ -215,16 +221,16 @@ const WorkshopForm = React.createClass({
         _destroy: true
       };
     }));
-  },
+  }
 
   // Convert from [id, name, email] to an array of ids.
   prepareFacilitatorsForApi(facilitators) {
     return facilitators.filter(f => f.id > 0).map(f => f.id);
-  },
+  }
 
-  handleSessionsChange(sessions, removedSession) {
+  handleSessionsChange = (sessions, removedSession) => {
     sessions = _.cloneDeep(sessions);
-    const destroyedSessions = [];
+    const destroyedSessions = _.cloneDeep(this.state.destroyedSessions);
     if (removedSession && removedSession.id) {
       destroyedSessions.push(removedSession);
     }
@@ -233,10 +239,10 @@ const WorkshopForm = React.createClass({
       sessions,
       destroyedSessions
     });
-  },
-  handleFacilitatorsChange(facilitators) {
+  };
+  handleFacilitatorsChange = (facilitators) => {
     this.setState({facilitators: facilitators});
-  },
+  };
 
   renderCourseSelect(validation) {
     const options = window.dashboard.workshop.COURSES.map((course, i) => {
@@ -260,7 +266,7 @@ const WorkshopForm = React.createClass({
         <HelpBlock>{validation.help.course}</HelpBlock>
       </FormGroup>
     );
-  },
+  }
 
   renderOnMapRadios(validation) {
     return (
@@ -295,7 +301,7 @@ const WorkshopForm = React.createClass({
         <HelpBlock>{validation.help.on_map}</HelpBlock>
       </FormGroup>
     );
-  },
+  }
 
   renderFundedSelect(validation) {
     return (
@@ -322,11 +328,11 @@ const WorkshopForm = React.createClass({
         </Col>
       </Row>
     );
-  },
+  }
 
   shouldRenderSubject() {
     return this.state.course && window.dashboard.workshop.SUBJECTS[this.state.course];
-  },
+  }
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
@@ -352,17 +358,17 @@ const WorkshopForm = React.createClass({
         </FormGroup>
       );
     }
-  },
+  }
 
   getInputStyle() {
     return this.props.readOnly && styles.readOnlyInput;
-  },
+  }
 
-  handleErrorClick(i) {
+  handleErrorClick = (i) => {
     const errors = _.cloneDeep(this.state.errors);
     errors.splice(i,1);
     this.setState({errors: errors});
-  },
+  };
 
   renderErrors() {
     if (!this.state.errors || this.state.errors.length === 0) {
@@ -379,7 +385,7 @@ const WorkshopForm = React.createClass({
         </Alert>
       );
     });
-  },
+  }
 
   shouldConfirmSave() {
     const workshop = this.props.workshop;
@@ -392,9 +398,9 @@ const WorkshopForm = React.createClass({
       this.state.location_address !== workshop.location_address ||
       this.state.notes !== workshop.notes
     );
-  },
+  }
 
-  handleSaveClick() {
+  handleSaveClick = () => {
     const validation = this.validate();
     if (validation.isValid) {
       if (this.shouldConfirmSave()) {
@@ -405,22 +411,22 @@ const WorkshopForm = React.createClass({
     } else {
       this.setState({shouldValidate: true});
     }
-  },
+  };
 
-  handleSaveAndNotifyClick() {
+  handleSaveAndNotifyClick = () => {
     this.save(true);
-  },
+  };
 
-  handleSaveNoNotifyClick() {
+  handleSaveNoNotifyClick = () => {
     this.save(false);
-  },
+  };
 
-  handleAbortSave() {
+  handleAbortSave = () => {
     this.setState({showSaveConfirmation: false});
-  },
+  };
 
   // Determines which field to update based on the target's name attribute. Returns new value.
-  handleFieldChange(event) {
+  handleFieldChange = (event) => {
     const fieldName = $(event.target).attr('name');
     if (!fieldName) {
       console.error("Expected name attribute on handleFieldChange target.");
@@ -430,9 +436,9 @@ const WorkshopForm = React.createClass({
     const value = event.target.value;
     this.setState({[fieldName]: value});
     return value;
-  },
+  };
 
-  handleRadioChange(event) {
+  handleRadioChange = (event) => {
     const fieldName = $(event.target).attr('name');
     if (!fieldName) {
       console.error("Expected name attribute on handleRadioChange target.");
@@ -442,15 +448,15 @@ const WorkshopForm = React.createClass({
     const enabled = event.target.value === "yes";
     this.setState({[fieldName]: enabled});
     return enabled;
-  },
+  };
 
-  handleCourseChange(event) {
+  handleCourseChange = (event) => {
     const course = this.handleFieldChange(event);
 
     // clear facilitators and subject
     this.setState({facilitators: [], subject: null});
     this.loadAvailableFacilitators(course);
-  },
+  };
 
   save(notify = false) {
     const workshop_data = {
@@ -493,16 +499,16 @@ const WorkshopForm = React.createClass({
         });
       }
     });
-  },
+  }
 
-  handleCancelClick() {
+  handleCancelClick = () => {
     // discard changes.
     this.context.router.goBack();
-  },
+  };
 
   shouldShowFacilitators() {
     return !['Counselor', 'Admin'].includes(this.state.course);
-  },
+  }
 
   renderFormButtons() {
     if (this.props.readOnly) {
@@ -537,20 +543,20 @@ const WorkshopForm = React.createClass({
         </Col>
       </Row>
     );
-  },
+  }
 
-  toggleTypeOptionsHelpDisplay() {
+  toggleTypeOptionsHelpDisplay = () => {
     this.setState({
       showTypeOptionsHelpDisplay: !this.state.showTypeOptionsHelpDisplay
     });
-  },
+  };
 
   render() {
     if (this.state.loading) {
       return <Spinner/>;
     }
     return this.renderForm();
-  },
+  }
 
   validate(shouldValidate = true) {
     const validation = {isValid: true, style: {}, help: {}};
@@ -599,7 +605,7 @@ const WorkshopForm = React.createClass({
       }
     }
     return validation;
-  },
+  }
 
   renderForm() {
     const validation = this.validate(this.state.shouldValidate);
@@ -756,5 +762,4 @@ const WorkshopForm = React.createClass({
       </Grid>
     );
   }
-});
-export default WorkshopForm;
+}

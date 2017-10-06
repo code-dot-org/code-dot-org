@@ -162,6 +162,110 @@ class CourseTest < ActiveSupport::TestCase
     assert_nil summary[:scripts][0]['stageDescriptions']
   end
 
+  class SelectCourseScriptTests < ActiveSupport::TestCase
+    setup do
+      @teacher = create :teacher
+      @student = create :student
+      @section = create :section, user: @teacher
+      create :follower, section: @section, student_user: @student
+
+      @course = create(:course, name: 'my-course')
+      @script1 = create(:script, name: 'script1')
+      @script2 = create(:script, name: 'script2')
+      @script2a = create(:script, name: 'script2a')
+      @script3 = create(:script, name: 'script3')
+
+      create :course_script, course: @course, script: @script1, position: 1
+
+      @default_course_script = create :course_script, course: @course, script: @script2, position: 2
+      @alternate_course_script = create :course_script,
+        course: @course,
+        script: @script2a,
+        position: 2,
+        default_script: @script2,
+        experiment_name: 'my-experiment'
+
+      create :course_script, course: @course, script: @script3, position: 3
+    end
+
+    test 'course script test data is properly initialized' do
+      assert_equal 'my-course', @course.name
+      assert_equal %w(script1 script2 script3), @course.default_scripts.map(&:name)
+      assert_equal %w(script2a), @course.alternate_course_scripts.map(&:script).map(&:name)
+    end
+
+    test 'select default course script for teacher without experiment' do
+      assert_equal(
+        @default_course_script,
+        @course.select_course_script(@teacher, @default_course_script)
+      )
+    end
+
+    test 'select alternate course script for teacher with experiment' do
+      create :single_user_experiment, min_user_id: @teacher.id, name: 'my-experiment'
+      assert_equal(
+        @alternate_course_script,
+        @course.select_course_script(@teacher, @default_course_script)
+      )
+    end
+
+    test 'select default course script for student by default' do
+      assert_equal(
+        @default_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'select alternate course script for student when teacher has experiment' do
+      create :single_user_experiment, min_user_id: @teacher.id, name: 'my-experiment'
+      assert_equal(
+        @alternate_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'select alternate course script for student with progress' do
+      create :user_script, user: @student, script: @script2a
+      assert_equal(
+        @alternate_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'progress in default script overrides experiment' do
+      create :user_script, user: @student, script: @script2
+      create :single_user_experiment, min_user_id: @teacher.id, name: 'my-experiment'
+      assert_equal(
+        @default_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'new assignment of alternate script overrides old progress in default script' do
+      Timecop.freeze do
+        create :user_script, user: @student, script: @script2, last_progress_at: Time.now
+        Timecop.travel 1
+        create :user_script, user: @student, script: @script2a, assigned_at: Time.now
+        assert_equal(
+          @alternate_course_script,
+          @course.select_course_script(@student, @default_course_script)
+        )
+      end
+    end
+
+    test 'new assignment of default script overrides old assignment of alternate script' do
+      Timecop.freeze do
+        create :user_script, user: @student, script: @script2a, assigned_at: Time.now
+        Timecop.travel 1
+        create :user_script, user: @student, script: @script2, assigned_at: Time.now
+        assert_equal(
+          @default_course_script,
+          @course.select_course_script(@student, @default_course_script)
+        )
+      end
+    end
+  end
+
   test "load_from_path" do
     create(:script, name: 'script1')
     create(:script, name: 'script2')
@@ -275,17 +379,17 @@ class CourseTest < ActiveSupport::TestCase
     # has script_ids
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
 
-    # user without experiment has default script_ids
-    user = create(:user)
-    courses = Course.valid_courses(user)
+    # teacher without experiment has default script_ids
+    teacher = create(:teacher)
+    courses = Course.valid_courses(teacher)
     assert_equal csp.id, courses[0][:id]
     csp_assign_info = courses[0]
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
 
-    # user with experiment has alternate script_ids
-    user_with_experiment = create(:user)
-    create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: user_with_experiment.id)
-    courses = Course.valid_courses(user_with_experiment)
+    # teacher with experiment has alternate script_ids
+    teacher_with_experiment = create(:teacher)
+    create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
+    courses = Course.valid_courses(teacher_with_experiment)
     assert_equal csp.id, courses[0][:id]
     csp_assign_info = courses[0]
     assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
