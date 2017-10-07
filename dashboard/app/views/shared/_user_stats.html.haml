@@ -19,8 +19,9 @@
       .games
         - last_level_id = nil
         - level_repeat = 0
-        - stage[:levels].each do |script_level|
-          - level_id = level_with_best_progress(script_level[:ids], level_progress)
+        - stage[:script_levels].each do |script_level|
+          - level_id = level_with_best_progress(script_level[:levels].map{|l| l[:id]}, level_progress)
+          - level = script_level[:levels].find {|l| l[:id] == level_id}
 
           - if last_level_id != level_id
             - level_repeat = 0
@@ -39,7 +40,7 @@
               - result = p.try(:[], :result) || 0
             - if current_level_id == "#{level_id}"
               - puzzle_outer_class = 'puzzle_outer_current'
-            - elsif script_level[:kind] == SharedConstants::LEVEL_KIND.assessment
+            - elsif level[:kind] == SharedConstants::LEVEL_KIND.assessment
               - puzzle_outer_class = 'puzzle_outer_assessment'
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
@@ -50,13 +51,13 @@
               - if @section
                 - link += "&section_id=#{@section.id}"
               %a.level_link{href: link, class: status, data: {result: result}}
-                - if script_level[:kind] == SharedConstants::LEVEL_KIND.unplugged
+                - if level[:kind] == SharedConstants::LEVEL_KIND.unplugged
                   %span.puzzle-named
-                    = script_level[:title]
+                    = level[:title]
                 - elsif status == SharedConstants::LEVEL_STATUS.passed || status == SharedConstants::LEVEL_STATUS.perfect
                   = check_mark_html
                 - else
                   %span.puzzle-number
-                    = script_level[:title]
+                    = level[:title]
 
   = render partial: 'shared/user_stats_key'

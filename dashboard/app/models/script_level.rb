@@ -279,31 +279,6 @@ class ScriptLevel < ActiveRecord::Base
         summary[:conceptDifficulty] = level.summarize_concept_difficulty
       end
 
-      if include_prev_next
-        # Add a previous pointer if it's not the obvious (level-1)
-        if previous_level
-          if previous_level.stage.absolute_position != stage.absolute_position
-            summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
-          end
-        else
-          # This is the first level in the script
-          summary[:previous] = false
-        end
-
-        # Add a next pointer if it's not the obvious (level+1)
-        if end_of_stage?
-          if next_level
-            summary[:next] = [next_level.stage.absolute_position, next_level.position]
-          else
-            # This is the final level in the script
-            summary[:next] = false
-            if script.wrapup_video
-              summary[:wrapupVideo] = script.wrapup_video.summarize
-            end
-          end
-        end
-      end
-
       summary
     end
 
@@ -313,7 +288,32 @@ class ScriptLevel < ActiveRecord::Base
       url: build_script_level_url(self),
       levels: level_summaries,
     }
+    if include_prev_next
+      # Add a previous pointer if it's not the obvious (level-1)
+      if previous_level
+        if previous_level.stage.absolute_position != stage.absolute_position
+          script_level_summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
+        end
+      else
+        # This is the first level in the script
+        script_level_summary[:previous] = false
+      end
+
+      # Add a next pointer if it's not the obvious (level+1)
+      if end_of_stage?
+        if next_level
+          script_level_summary[:next] = [next_level.stage.absolute_position, next_level.position]
+        else
+          # This is the final level in the script
+          script_level_summary[:next] = false
+          if script.wrapup_video
+            script_level_summary[:wrapupVideo] = script.wrapup_video.summarize
+          end
+        end
+      end
+    end
     script_level_summary[:progression] = progression if progression
+
     script_level_summary
   end
 
