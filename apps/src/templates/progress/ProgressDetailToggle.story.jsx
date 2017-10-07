@@ -8,7 +8,7 @@ export default storybook => {
     progress: {
       stages: [
         {
-          levels: []
+          script_levels: []
         }
       ],
       focusAreaStageIds: [],
@@ -21,11 +21,11 @@ export default storybook => {
       stages: [
         {
           flex_category: 'cat1',
-          levels: []
+          script_levels: []
         },
         {
           flex_category: 'cat2',
-          levels: []
+          script_levels: []
         }
       ],
       focusAreaStageIds: [],

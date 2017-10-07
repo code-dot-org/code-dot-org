@@ -9,7 +9,7 @@ export default storybook => {
     progress: {
       stages: [
         {
-          levels: []
+          script_levels: []
         }
       ],
       focusAreaStageIds: [],
