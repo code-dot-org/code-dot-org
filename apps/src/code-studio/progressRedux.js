@@ -209,19 +209,21 @@ export default function reducer(state = initialState, action) {
  * @param {number[]} levelIds
  * @param {Object.<number,number>} - Mapping from level id to progress result
  */
-function bestResultLevel(levels, progressData) {
+function bestResultLevel(scriptLevel, progressData) {
   // The usual case
-  if (levels.length === 1) {
-    return levels[0];
+  if (scriptLevel.levels.length === 1) {
+    return scriptLevel.levels[0];
   }
 
   // Return the level with the highest result
-  var attemptedLevels = levels.filter(level =>
+  var attemptedLevels = scriptLevel.levels.filter(level =>
     progressData[level.id] ||
       (level.contained_level_ids || []).some(id => progressData[id]));
   if (attemptedLevels.length === 0) {
-    // None of them have been attempted, just return the first
-    return levels[0];
+    // None of them have been attempted, return the active one
+    return scriptLevel.activeId !== undefined ?
+      scriptLevel.levels.find(level => level.id === scriptLevel.activeId) :
+      scriptLevel.levels[0];
   }
   var bestLevel = attemptedLevels[0];
   var bestResult = resultForLevel(bestLevel, progressData);
@@ -404,7 +406,7 @@ const levelWithStatus = (state, scriptLevel) => {
     }
     level = scriptLevel.levels[0];
   } else {
-    level = bestResultLevel(scriptLevel.levels, state.levelProgress);
+    level = bestResultLevel(scriptLevel, state.levelProgress);
   }
   return {
     status: statusForLevel(scriptLevel, level, state.levelProgress),
