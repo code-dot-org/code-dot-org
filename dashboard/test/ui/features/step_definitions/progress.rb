@@ -33,15 +33,34 @@ def verify_progress(selector, test_result)
   }
 end
 
-Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
-  # Sometimes there's a momentary delay loading progress (which updates the color)
-  # so allow a brief wait for the appropriate styling to show up.
-  selector = ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child :first-child"
-  # Wait 5 seconds because progress is async
+def verify_bubble_type(selector, type)
+  if type == "concept"
+    border_radius = "2px"
+  elsif type == "activity"
+    border_radius = "9px"
+  else
+    raise "Unexpected bubble type"
+  end
   steps %{
-    And I wait for 5 seconds
+    And I wait until element "#{selector}" is in the DOM
+    And element "#{selector}" has css property "border-radius" equal to "#{border_radius}"
   }
-  verify_progress(selector, test_result)
+end
+
+def header_bubble_selector(level_num)
+  ".header_level_container .react_stage a:nth(#{level_num - 1}) :first-child :first-child"
+end
+
+Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  wait_short_until do
+    verify_progress(header_bubble_selector(level.to_i), test_result)
+  end
+end
+
+Then /^I verify the bubble for level (\d+) is an? (concept|activity) bubble/ do |level, type|
+  wait_short_until do
+    verify_bubble_type(header_bubble_selector(level.to_i), type)
+  end
 end
 
 Then /^I open the progress drop down of the current page$/ do
