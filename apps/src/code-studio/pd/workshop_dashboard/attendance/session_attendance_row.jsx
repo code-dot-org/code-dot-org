@@ -14,8 +14,8 @@ const styles = {
   }
 };
 
-export default class SessionAttendanceRow extends React.Component {
-  static propTypes = {
+const SessionAttendanceRow = React.createClass({
+  propTypes: {
     workshopId: PropTypes.number.isRequired,
     sessionId: PropTypes.number.isRequired,
     attendance: PropTypes.shape({
@@ -35,23 +35,25 @@ export default class SessionAttendanceRow extends React.Component {
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     showPuzzlesCompleted: PropTypes.bool.isRequired,
     displayYesNoAttendance: PropTypes.bool.isRequired
-  };
+  },
 
-  state = {
-    pendingRequest: null
-  };
+  getInitialState() {
+    return {
+      pendingRequest: null
+    };
+  },
 
   componentWillUnmount() {
     if (this.state.pendingRequest) {
       this.state.pendingRequest.abort();
     }
-  }
+  },
 
   isValid() {
     return !this.props.accountRequiredForAttendance || this.props.attendance.user_id;
-  }
+  },
 
-  handleClickAttended = () => {
+  handleClickAttended() {
     if (this.isValid()) {
       if (this.props.attendance.attended) {
         this.deleteAttendance();
@@ -59,7 +61,7 @@ export default class SessionAttendanceRow extends React.Component {
         this.setAttendance();
       }
     }
-  };
+  },
 
   getApiUrl() {
     const {workshopId, sessionId} = this.props;
@@ -71,7 +73,7 @@ export default class SessionAttendanceRow extends React.Component {
       const enrollmentId = this.props.attendance.enrollment_id;
       return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/enrollment/${enrollmentId}`;
     }
-  }
+  },
 
   setAttendance() {
     let url = this.getApiUrl();
@@ -86,7 +88,7 @@ export default class SessionAttendanceRow extends React.Component {
         attended: true
       }
     );
-  }
+  },
 
   deleteAttendance() {
     this.save(
@@ -96,7 +98,7 @@ export default class SessionAttendanceRow extends React.Component {
         attended: false
       }
     );
-  }
+  },
 
   // Saves via the specified method and url, merging in the newAttendanceValues on success.
   save(method, url, newAttendanceValues) {
@@ -122,7 +124,7 @@ export default class SessionAttendanceRow extends React.Component {
     // Tell the parent we are saving.
     this.setState({pendingRequest});
     this.props.onSaving();
-  }
+  },
 
   renderAttendedCellContents() {
     if (this.props.displayYesNoAttendance) {
@@ -130,7 +132,7 @@ export default class SessionAttendanceRow extends React.Component {
     } else {
       return this.renderEditableAttendedCellContents();
     }
-  }
+  },
 
   renderEditableAttendedCellContents() {
     const checkBoxClass = this.props.attendance.attended ? "fa fa-check-square-o" : "fa fa-square-o";
@@ -162,9 +164,9 @@ export default class SessionAttendanceRow extends React.Component {
     }
 
     return contents;
-  }
+  },
 
-  render() {
+  render: function () {
     return (
       <tr className={this.props.attendance.attended ? 'success' : null}>
         <td>
@@ -202,4 +204,5 @@ export default class SessionAttendanceRow extends React.Component {
       </tr>
     );
   }
-}
+});
+export default SessionAttendanceRow;
