@@ -412,7 +412,7 @@ const levelWithStatus = (state, scriptLevel) => {
     status: statusForLevel(scriptLevel, level, state.levelProgress),
     url: scriptLevel.url,
     name: level.name,
-    progression: level.progression,
+    progression: scriptLevel.progression,
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.kind === LevelKind.unplugged,

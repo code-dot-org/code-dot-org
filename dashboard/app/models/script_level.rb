@@ -267,8 +267,6 @@ class ScriptLevel < ActiveRecord::Base
         summary[:contained_level_ids] = level.contained_levels.map(&:id)
       end
 
-      summary[:progression] = progression if progression
-
       if named_level
         summary[:name] = level.display_name || level.name
       end
@@ -309,12 +307,14 @@ class ScriptLevel < ActiveRecord::Base
       summary
     end
 
-    {
+    script_level_summary = {
       position: position,
       activeId: oldest_active_level.id,
       url: build_script_level_url(self),
       levels: level_summaries,
     }
+    script_level_summary[:progression] = progression if progression
+    script_level_summary
   end
 
   # Given a script level summary for the last level in a stage that has already
