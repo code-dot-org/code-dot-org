@@ -5908,7 +5908,7 @@ en:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: 'Loops in Artist (UPDATED)'
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -6155,6 +6155,8 @@ en:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
               name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -6357,6 +6359,8 @@ en:
               name: Debugging with Scrat
             Nested Loops:
               name: Nested Loops
+            Loops in Artist (UPDATED!):
+              name: Loops in Artist (UPDATED!)
           title: New Express Script
           description_audience: ''
           description_short: ''
@@ -6367,6 +6371,8 @@ en:
               name: Loops in Artist
             Sequences with Scrat:
               name: Sequences with Scrat
+            Testing Template:
+              name: Testing Template
           title: New stages for 9/17
           description_audience: ''
           description_short: ''

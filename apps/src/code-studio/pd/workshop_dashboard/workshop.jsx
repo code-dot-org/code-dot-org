@@ -37,36 +37,34 @@ const styles = {
   }
 };
 
-export default class Workshop extends React.Component {
-  static contextTypes = {
+const Workshop = React.createClass({
+  contextTypes: {
     router: PropTypes.object.isRequired
-  };
+  },
 
-  static propTypes = {
+  propTypes: {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired
     }).isRequired,
     route: PropTypes.shape({
       view: PropTypes.string
     }).isRequired,
-  };
+  },
 
-  constructor(props) {
-    super(props);
-
-    if (props.params.workshopId) {
-      this.state = {
+  getInitialState() {
+    if (this.props.params.workshopId) {
+      return {
         loadingWorkshop: true,
         loadingEnrollments: true,
         enrollmentActiveTab: 0
       };
     }
-  }
+  },
 
   componentDidMount() {
     this.loadWorkshop();
     this.loadEnrollments();
-  }
+  },
 
   shouldComponentUpdate() {
     // Don't allow editing a workshop that has been started.
@@ -75,7 +73,7 @@ export default class Workshop extends React.Component {
       return false;
     }
     return true;
-  }
+  },
 
   loadWorkshop() {
     this.loadWorkshopRequest = $.ajax({
@@ -112,7 +110,7 @@ export default class Workshop extends React.Component {
         });
       }
     });
-  }
+  },
 
   loadEnrollments() {
     this.setState({loadingEnrollments: true});
@@ -129,9 +127,9 @@ export default class Workshop extends React.Component {
         })
       });
     });
-  }
+  },
 
-  handleDeleteEnrollment = (id) => {
+  handleDeleteEnrollment(id) {
     this.deleteEnrollmentRequest = $.ajax({
       method: 'DELETE',
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments/${id}`,
@@ -140,7 +138,7 @@ export default class Workshop extends React.Component {
       // reload
       this.loadEnrollments();
     });
-  };
+  },
 
   componentWillUnmount() {
     if (this.loadWorkshopRequest) {
@@ -158,17 +156,17 @@ export default class Workshop extends React.Component {
     if (this.endRequest) {
       this.endRequest.abort();
     }
-  }
+  },
 
-  handleStartWorkshopClick = () => {
+  handleStartWorkshopClick() {
     this.setState({showStartWorkshopConfirmation: true});
-  };
+  },
 
-  handleStartWorkshopCancel = () => {
+  handleStartWorkshopCancel() {
     this.setState({showStartWorkshopConfirmation: false});
-  };
+  },
 
-  handleStartWorkshopConfirmed = () => {
+  handleStartWorkshopConfirmed() {
     this.startRequest = $.ajax({
       method: "POST",
       url: "/api/v1/pd/workshops/" + this.props.params.workshopId + "/start",
@@ -182,17 +180,17 @@ export default class Workshop extends React.Component {
         alert("We're sorry, we were unable to start the workshop. Please try again.");
       }
     });
-  };
+  },
 
-  handleEndWorkshopClick = () => {
+  handleEndWorkshopClick() {
     this.setState({showEndWorkshopConfirmation: true});
-  };
+  },
 
-  handleEndWorkshopCancel = () => {
+  handleEndWorkshopCancel() {
     this.setState({showEndWorkshopConfirmation: false});
-  };
+  },
 
-  handleEndWorkshopConfirmed = () => {
+  handleEndWorkshopConfirmed() {
     this.endRequest = $.ajax({
       method: "POST",
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/end`,
@@ -206,48 +204,48 @@ export default class Workshop extends React.Component {
         alert("We're sorry, we were unable to end the workshop. Please try again.");
       }
     });
-  };
+  },
 
   getAttendanceUrl(sessionId) {
     return `/workshops/${this.props.params.workshopId}/attendance/${sessionId}`;
-  }
+  },
 
-  handleTakeAttendanceClick = (event) => {
+  handleTakeAttendanceClick(event) {
     event.preventDefault();
     const sessionId = event.currentTarget.dataset.session_id;
     this.context.router.push(this.getAttendanceUrl(sessionId));
-  };
+  },
 
-  handleEditClick = () => {
+  handleEditClick() {
     this.context.router.push(`/workshops/${this.props.params.workshopId}/edit`);
-  };
+  },
 
-  handleBackClick = () => {
+  handleBackClick() {
     this.context.router.push('/workshops');
-  };
+  },
 
-  handleWorkshopSaved = (workshop) => {
+  handleWorkshopSaved(workshop) {
     this.setState({workshop: workshop});
     this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
-  };
+  },
 
-  handleSaveClick = () => {
+  handleSaveClick() {
     // This button is just a shortcut to click the Save button in the form component,
     // which will handle the logic.
     $('#workshop-form-save-btn').trigger('click');
-  };
+  },
 
-  handleEnrollmentRefreshClick = () => {
+  handleEnrollmentRefreshClick() {
     this.loadEnrollments();
-  };
+  },
 
-  handleEnrollmentDownloadClick = () => {
+  handleEnrollmentDownloadClick() {
     window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`);
-  };
+  },
 
-  handleEnrollmentActiveTabSelect = (enrollmentActiveTab) => {
+  handleEnrollmentActiveTabSelect(enrollmentActiveTab) {
     this.setState({enrollmentActiveTab});
-  };
+  },
 
   getSessionAttendanceLink(session) {
     const url = this.getSessionAttendanceUrl(session);
@@ -256,7 +254,7 @@ export default class Workshop extends React.Component {
         {url}
       </a>
     );
-  }
+  },
 
   getSessionAttendanceUrl(session) {
     if (!session.code) {
@@ -265,7 +263,7 @@ export default class Workshop extends React.Component {
     }
 
     return `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${session.code}`;
-  }
+  },
 
   renderSignupPanel() {
     if (this.state.workshop.state !== 'Not Started') {
@@ -289,7 +287,7 @@ export default class Workshop extends React.Component {
     );
 
     return this.renderPanel(header, content);
-  }
+  },
 
   renderIntroPanel() {
     const header = (
@@ -399,7 +397,7 @@ export default class Workshop extends React.Component {
     }
 
     return this.renderPanel(header, contents);
-  }
+  },
 
   renderAttendancePanel() {
     if (this.state.workshop.state === 'Not Started') {
@@ -414,7 +412,7 @@ export default class Workshop extends React.Component {
 
     const contents = this.renderAttendancePanelContents();
     return this.renderPanel(header, contents);
-  }
+  },
 
   renderAttendancePanelContents() {
     return (
@@ -468,7 +466,7 @@ export default class Workshop extends React.Component {
         }
       </div>
     );
-  }
+  },
 
   renderEndWorkshopPanel() {
     if (this.state.workshop.state !== 'In Progress') {
@@ -508,7 +506,7 @@ export default class Workshop extends React.Component {
     );
 
     return this.renderPanel(header, contents);
-  }
+  },
 
   renderDetailsPanelHeader() {
     let button = null;
@@ -525,7 +523,7 @@ export default class Workshop extends React.Component {
         Workshop Details: {button}
       </span>
     );
-  }
+  },
 
   renderDetailsPanelContent() {
     if (this.props.route.view === 'edit' ) {
@@ -560,11 +558,11 @@ export default class Workshop extends React.Component {
         </WorkshopForm>
       </div>
     );
-  }
+  },
 
   renderDetailsPanel() {
     return this.renderPanel(this.renderDetailsPanelHeader(), this.renderDetailsPanelContent());
-  }
+  },
 
   renderEnrollmentsPanel() {
     const header = (
@@ -600,7 +598,7 @@ export default class Workshop extends React.Component {
     }
 
     return this.renderPanel(header, contents);
-  }
+  },
 
   renderPanel(header, content) {
     return (
@@ -612,7 +610,7 @@ export default class Workshop extends React.Component {
         </Col>
       </Row>
     );
-  }
+  },
 
   render() {
     if (this.state.loadingWorkshop) {
@@ -632,4 +630,5 @@ export default class Workshop extends React.Component {
       </Grid>
     );
   }
-}
+});
+export default Workshop;

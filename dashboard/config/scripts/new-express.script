@@ -38,7 +38,7 @@ bonus 'courseC_maze_debugging_challenge2', challenge: true
 stage 'Loops: My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
-stage 'Loops in Artist'
+stage 'Loops in Artist (UPDATED!)'
 level 'ramp_video_artistIntro'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
@@ -50,6 +50,12 @@ level 'ramp_artist_loops6'
 level 'ramp_artist_loops7'
 level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
+level 'courseC_artist_loops1a'
+level 'courseC_artist_loops2a'
+level 'courseC_artist_loops3a'
+level 'courseC_artist_loops4a'
+level 'courseC_artist_loops5b'
+level 'courseC_artist_loops8a'
 
 stage 'Nested Loops'
 level 'courseD_bee_nestedLoops1a'

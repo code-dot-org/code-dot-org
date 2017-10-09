@@ -66,6 +66,8 @@ The CS Discoveries Professional Learning Program is open to teachers who are int
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
 * Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our [Regional Partner Map](https://code.org/educate/regional-partner/partners).
 
+Not sure if this is the right Code.org program for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your teaching situation.
+
 
 ## <a name="locations"></a>Where is the program offered?
 
