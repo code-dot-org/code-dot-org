@@ -276,7 +276,7 @@ class CensusForm extends Component {
         </h2>
         <form id="census-form">
           <div style={styles.question}>
-            School
+            {i18n.schoolName()}
             <span style={styles.asterisk}> *</span>
             {errors.school && (
                <div style={styles.errors}>
