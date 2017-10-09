@@ -6,26 +6,24 @@ import {Button} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
 import Permission from '../../permission';
 
-const WorkshopManagement = React.createClass({
-  contextTypes: {
+export default class WorkshopManagement extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
-  propTypes: {
+  static propTypes = {
     workshopId: PropTypes.number.isRequired,
     subject: PropTypes.string,
     viewUrl: PropTypes.string.isRequired,
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
     showSurveyUrl: PropTypes.bool
-  },
+  };
 
-  getDefaultProps() {
-    return {
-      editUrl: null,
-      onDelete: null
-    };
-  },
+  static defaultProps = {
+    editUrl: null,
+    onDelete: null
+  };
 
   componentWillMount() {
     if (this.props.showSurveyUrl) {
@@ -41,41 +39,39 @@ const WorkshopManagement = React.createClass({
 
       this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
     }
-  },
+  }
 
-  getInitialState() {
-    return {
-      showDeleteConfirmation: false
-    };
-  },
+  state = {
+    showDeleteConfirmation: false
+  };
 
-  handleViewClick(event) {
+  handleViewClick = (event) => {
     event.preventDefault();
     this.context.router.push(this.props.viewUrl);
-  },
+  };
 
-  handleEditClick(event) {
+  handleEditClick = (event) => {
     event.preventDefault();
     this.context.router.push(this.props.editUrl);
-  },
+  };
 
-  handleDeleteClick() {
+  handleDeleteClick = () => {
     this.setState({showDeleteConfirmation: true});
-  },
+  };
 
-  handleDeleteCanceled() {
+  handleDeleteCanceled = () => {
     this.setState({showDeleteConfirmation: false});
-  },
+  };
 
-  handleDeleteConfirmed() {
+  handleDeleteConfirmed = () => {
     this.setState({showDeleteConfirmation: false});
     this.props.onDelete(this.props.workshopId);
-  },
+  };
 
-  handleSurveyClick(event) {
+  handleSurveyClick = (event) => {
     event.preventDefault();
     this.context.router.push(this.surveyUrl);
-  },
+  };
 
   renderViewButton() {
     return (
@@ -87,7 +83,7 @@ const WorkshopManagement = React.createClass({
         View Workshop
       </Button>
     );
-  },
+  }
 
   renderEditButton() {
     if (!this.props.editUrl) {
@@ -103,7 +99,7 @@ const WorkshopManagement = React.createClass({
         Edit
       </Button>
     );
-  },
+  }
 
   renderSurveyButton() {
     if (!this.props.showSurveyUrl) {
@@ -119,7 +115,7 @@ const WorkshopManagement = React.createClass({
         View Survey Results
       </Button>
     );
-  },
+  }
 
   renderDeleteButton() {
     if (!this.props.onDelete) {
@@ -131,7 +127,7 @@ const WorkshopManagement = React.createClass({
         Delete
       </Button>
     );
-  },
+  }
 
   render() {
     return (
@@ -150,5 +146,4 @@ const WorkshopManagement = React.createClass({
       </div>
     );
   }
-});
-export default WorkshopManagement;
+}

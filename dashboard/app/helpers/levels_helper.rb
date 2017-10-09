@@ -54,14 +54,13 @@ module LevelsHelper
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
-      user_storage_id = storage_id_for_user_id(user.id)
-      channel_token = ChannelToken.find_channel_token(level, user_storage_id)
+      channel_token = ChannelToken.find_channel_token(level, user)
     else
-      user_storage_id = storage_id('user')
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
+        current_user,
         request.ip,
-        user_storage_id,
+        StorageApps.new(storage_id('user')),
         {
           hidden: true,
         }
@@ -201,7 +200,7 @@ module LevelsHelper
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
         elsif @level.channel_backed?
           recent_channel = get_channel_for(@level, recent_user) if recent_user
-          level_view_options(@level.id, pairing_attempt: send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel)) if recent_channel
+          level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
         end
       end
     end

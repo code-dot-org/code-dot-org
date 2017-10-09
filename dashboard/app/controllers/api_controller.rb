@@ -307,7 +307,7 @@ class ApiController < ApplicationController
         elsif level.channel_backed?
           @level = level
           recent_channel = safe_get_channel_for(level, recent_user) if recent_user
-          response[:pairingAttempt] = send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel) if recent_channel
+          response[:pairingChannelId] = recent_channel if recent_channel
         end
       end
     end
