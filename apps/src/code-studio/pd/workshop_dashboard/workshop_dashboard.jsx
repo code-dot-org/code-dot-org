@@ -29,58 +29,58 @@ const browserHistory = useRouterHistory(createHistory)({
 
 const WorkshopDashboard = (
   <Router history={browserHistory} >
-    <Route path="/" component={Header}>
+    <Route path="/" breadcrumbs="Workshop Dashboard" component={Header}>
       <IndexRedirect to="/workshops"/>
       <Route
         path="reports"
-        breadcrumbs="Reports"
+        breadcrumbs="Workshop Dashboard,Reports"
         component={ReportView}
       />
       <Route
         path="workshops"
-        breadcrumbs="Workshops"
+        breadcrumbs="Workshop Dashboard,Workshops"
         component={WorkshopIndex}
       />
       <Route
         path="workshops/filter"
-        breadcrumbs="Workshops,Filter"
+        breadcrumbs="Workshop Dashboard,Workshops,Filter"
         component={WorkshopFilter}
       />
       <Route
         path="survey_results(/:workshopId)"
-        breadcrumbs="Survey Results"
+        breadcrumbs="Workshop Dashboard,Survey Results"
         component={SurveyResults}
       />
       <Route
         path="organizer_survey_results(/:workshopId)"
-        breadcrumbs="Organizer Survey Results"
+        breadcrumbs="Workshop Dashboard,Organizer Survey Results"
         component={OrganizerSurveyResults}
       />
       <Route
         path="local_summer_workshop_survey_results(/:workshopId)"
-        breadcrumbs="Local Summer Workshop Survey Results"
+        breadcrumbs="Workshop Dashboard,Local Summer Workshop Survey Results"
         component={LocalSummerWorkshopSurveyResults}
       />
       <Route
         path="workshops/new"
-        breadcrumbs="Workshops,New Workshop"
+        breadcrumbs="Workshop Dashboard,Workshops,New Workshop"
         component={NewWorkshop}
       />
       <Route
         path="workshops/:workshopId"
-        breadcrumbs="Workshops,View Workshop"
+        breadcrumbs="Workshop Dashboard,Workshops,View Workshop"
         component={Workshop}
         view="show"
       />
       <Route
         path="workshops/:workshopId/edit"
-        breadcrumbs="Workshops,Edit Workshop"
+        breadcrumbs="Workshop Dashboard,Workshops,Edit Workshop"
         component={Workshop}
         view="edit"
       />
       <Route
         path="workshops/:workshopId/attendance(/:sessionId)"
-        breadcrumbs="Workshops,Workshop,Take Attendance"
+        breadcrumbs="Workshop Dashboard,Workshops,Workshop,Take Attendance"
         component={WorkshopAttendance}
       />
     </Route>
