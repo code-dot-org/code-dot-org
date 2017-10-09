@@ -22,8 +22,8 @@ const styles = {
   }
 };
 
-export default class SessionAttendance extends React.Component {
-  static propTypes = {
+const SessionAttendance = React.createClass({
+  propTypes: {
     workshopId: PropTypes.number.isRequired,
     course: PropTypes.string.isRequired,
     sessionId: PropTypes.number.isRequired,
@@ -31,35 +31,37 @@ export default class SessionAttendance extends React.Component {
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired
-  };
+  },
 
-  static state = {
-    loading: true,
-    attendance: undefined,
-    refreshInterval: undefined
-  };
+  getInitialState() {
+    return {
+      loading: true,
+      attendance: undefined,
+      refreshInterval: undefined
+    };
+  },
 
   componentWillMount() {
     this.permission = new Permission();
-  }
+  },
 
   componentDidMount() {
     this.load();
     this.startRefreshInterval();
     this.isCSF = this.props.course === COURSE_CSF;
     this.showPuzzlesCompleted = this.isCSF;
-  }
+  },
 
   componentWillUnmount() {
     this.stopRefreshInterval();
-  }
+  },
 
   startRefreshInterval() {
     if (!this.state.refreshInterval) {
       const refreshInterval = window.setInterval(this.load, REFRESH_DELAY);
       this.setState({refreshInterval});
     }
-  }
+  },
 
   stopRefreshInterval() {
     if (this.state.refreshInterval) {
@@ -67,22 +69,22 @@ export default class SessionAttendance extends React.Component {
       this.abortLoadRequest();
       this.setState({refreshInterval: null});
     }
-  }
+  },
 
   abortLoadRequest() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
-  }
+  },
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.sessionId !== this.props.sessionId) {
       this.load(nextProps);
       this.startRefreshInterval();
     }
-  }
+  },
 
-  load = (props = null) => {
+  load(props = null) {
     // Abort any previous load request.
     this.abortLoadRequest();
 
@@ -107,22 +109,22 @@ export default class SessionAttendance extends React.Component {
         attendance: _.sortBy(data.attendance, ['last_name', 'first_name'])
       });
     });
-  };
+  },
 
-  setIdle = () => {
+  setIdle() {
     this.stopRefreshInterval();
-  };
+  },
 
-  setActive = () => {
+  setActive() {
     this.load();
     this.startRefreshInterval();
-  };
+  },
 
-  handleAttendanceChangeSaving = () => {
+  handleAttendanceChangeSaving() {
     this.props.onSaving();
-  };
+  },
 
-  handleAttendanceChangeSaved = (i, value) => {
+  handleAttendanceChangeSaved(i, value) {
     if (!value.error) {
       const clonedAttendance = _.cloneDeep(this.state.attendance);
       clonedAttendance[i] = value;
@@ -131,7 +133,7 @@ export default class SessionAttendance extends React.Component {
       });
     }
     this.props.onSaved(value);
-  };
+  },
 
   render() {
     if (this.state.loading) {
@@ -193,4 +195,5 @@ export default class SessionAttendance extends React.Component {
       </VisibilitySensor>
     );
   }
-}
+});
+export default SessionAttendance;

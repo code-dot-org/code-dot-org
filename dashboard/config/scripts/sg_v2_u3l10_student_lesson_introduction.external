@@ -1,0 +1,33 @@
+name 'SG v2 U3L10 Student Lesson Introduction'
+display_name 'Lesson Vocabulary & Resources'
+title 'Design a Digital Scene'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 10 - Practice PT - Design a Digital Scene
+
+## Lesson
+
+* Collaborate with a group to choose a topic for a digital scene
+* Identify the major components of your digital scene and assign them to individual group members
+* Individually plan your assigned components with subgoals
+* Individually program your assigned components of the digital scene
+* Recombine your group's code and use it to create a digital scene
+* Complete reflection questions
+
+## Vocabulary
+
+* **Abstraction:** Pulling out specific differences to make one solution work for multiple problems.
+
+## Resources
+
+* [Design a Digital Scene - Planning Guide](https://docs.google.com/document/d/1piOp7zsljj_cpUs5yEy5-9EH3Zh7iD2LdzsyaEJDKcE/edit?usp=sharing) - Worksheet ([PDF](https://docs.google.com/document/d/1piOp7zsljj_cpUs5yEy5-9EH3Zh7iD2LdzsyaEJDKcE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1piOp7zsljj_cpUs5yEy5-9EH3Zh7iD2LdzsyaEJDKcE/export?format=doc))
+* [Design a Digital Scene - Project Overview and Rubric](https://docs.google.com/document/d/1aWGZCnkozPfDKGiFxCJhr0LH_zHTgEVoZcDYQPNpsFY/edit?usp=sharing) - Worksheet ([PDF](https://docs.google.com/document/d/1aWGZCnkozPfDKGiFxCJhr0LH_zHTgEVoZcDYQPNpsFY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1aWGZCnkozPfDKGiFxCJhr0LH_zHTgEVoZcDYQPNpsFY/export?format=doc))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Cumulative Assessment: Lessons 1-10](https://drive.google.com/open?id=1Wo4klp6ExoaFTS2Jf-uh79-PzFXMmV3D1YKHMxBHrro)
+* [Cumulative Assessment KEY: Lessons 1-10](https://drive.google.com/open?id=1coxNqKbRnxEpOzdJPJoxgPaCRQzpLBsCCixceCJsWXo)
+MARKDOWN
