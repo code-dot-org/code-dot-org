@@ -436,6 +436,8 @@ Dashboard::Application.routes.draw do
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
 
+    # React-router will handle sub-routes on the client.
+    get 'application_dashboard/*path', to: 'application_dashboard#index'
     get 'application_dashboard', to: 'application_dashboard#index'
   end
 
