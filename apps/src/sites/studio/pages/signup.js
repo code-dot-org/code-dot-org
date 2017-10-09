@@ -62,9 +62,9 @@ window.SignupManager = function (options) {
       }
     }
 
-    // if we did no receive a response that had field-specific error information,
+    // if we did not receive a response that had field-specific error information,
     // show a generic error
-    if (fieldsWithErrors == 0) {
+    if (fieldsWithErrors === 0) {
       $('#signup-error').show();
       console.log("got unhandled error");
     }
