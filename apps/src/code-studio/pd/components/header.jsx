@@ -13,7 +13,7 @@ export default class Header extends React.Component {
   static propTypes = {
     routes: PropTypes.arrayOf(
       PropTypes.shape({
-        breadcrumbs: PropTypes.string
+        breadcrumbs: PropTypes.string.isRequired
       })
     ).isRequired,
     params: PropTypes.object.isRequired,
@@ -22,19 +22,20 @@ export default class Header extends React.Component {
 
   handleClick = (path) => {
     this.context.router.push(path.toLowerCase());
-  };  
+  };
 
   renderBreadcrumbItems() {
     const breadcrumbItems = [];
     let builtPath = "/";
-    breadcrumbItems.push({name: "Workshop Dashboard", path: builtPath});
 
     if (this.props.routes[1].breadcrumbs) {
       // The breadcrumbs property is a CSV string. Each item will be displayed in the breadcrumbs.
+      // The first item goes to the root of this router.
       // The associated path part will be an id if that is present in params (e.g. "Workshop" -> this.props.params.workshopId)
       // Otherwise it will be same as the display text.
       // The last item, the current page, will be plain text instead of a link.
       const breadcrumbs = this.props.routes[1].breadcrumbs.split(",");
+      breadcrumbItems.push({name: breadcrumbs.shift(), path: builtPath});
       for (let i = 0; i < breadcrumbs.length; i++) {
         const breadcrumb = breadcrumbs[i];
         const paramName = breadcrumb[0].toLowerCase() + breadcrumb.substr(1) + "Id";
