@@ -271,7 +271,7 @@ describe('progressReduxTest', () => {
         stages: [
           {
             lockable: false,
-            script_levels: [
+            scriptLevels: [
               {
                 levels: [{ id: 339, kind: 'puzzle' }]
               }
@@ -296,7 +296,7 @@ describe('progressReduxTest', () => {
         stages: [
           {
             lockable: false,
-            script_levels: [
+            scriptLevels: [
               {
                 levels: [{ id: 339, kind: 'puzzle' }]
               }
@@ -551,15 +551,19 @@ describe('progressReduxTest', () => {
     it('can provide progress for peer reviews', () => {
       // construct an initial state where we have 1 stage of non-peer reviews
       // with some progress, and 1 stage of peer reviews
-      const state = {
-        levelProgress: {
-          339: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
-        },
+      const initialProgress = {
         stages: [stageData[1]],
         peerReviewStage: peerReviewStage
       };
-      assert.equal(state.stages[0].script_levels[2].levels[0].id, 339);
-      state.stages[0].script_levels[2].status = LevelStatus.attempted;
+      let action = initProgress(initialProgress);
+      let state = reducer(undefined, action);
+      action = mergeProgress({
+        339: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+      });
+      state = reducer(state, action);
+
+      assert.equal(state.stages[0].scriptLevels[2].levels[0].id, 339);
+      state.stages[0].scriptLevels[2].status = LevelStatus.attempted;
 
       assert.deepEqual(peerReviewStage.levels[0], {
         ids: [0],
@@ -571,7 +575,7 @@ describe('progressReduxTest', () => {
         locked: true
       });
 
-      const action = mergePeerReviewProgress([{
+      action = mergePeerReviewProgress([{
         id: 13,
         locked: false,
         name: 'Ready to review',
@@ -721,7 +725,7 @@ describe('progressReduxTest', () => {
     it('Only numbers non-unplugged lesson', () => {
       const results = levelsByLesson({
         stages: [{
-          script_levels: [
+          scriptLevels: [
             {
               levels: [{
                 kind: LevelKind.unplugged,
@@ -965,7 +969,7 @@ describe('progressReduxTest', () => {
       flex_category: categoryName,
       name: stageName,
       id: stageId,
-      script_levels: [{
+      scriptLevels: [{
         url: '',
         levels: [{
           id: 1,

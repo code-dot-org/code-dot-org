@@ -253,6 +253,7 @@ function resultForLevel(level, progressData) {
  * Does some processing of our passed in stages, namely
  * - Removes 'hidden' field
  * - Adds 'stageNumber' field for non-lockable, non-PLC stages
+ * - Renames script_levels to scriptLevels
  */
 export function processedStages(stages, isPlc) {
   let numberOfNonLockableStages = 0;
@@ -263,8 +264,11 @@ export function processedStages(stages, isPlc) {
       numberOfNonLockableStages++;
       stageNumber = numberOfNonLockableStages;
     }
+    let hidden, script_levels; // eslint-disable-line no-unused-vars
+    ({ hidden, script_levels, ...stage } = stage);
     return {
-      ..._.omit(stage, 'hidden'),
+      ...stage,
+      scriptLevels: script_levels,
       stageNumber
     };
   });
@@ -429,7 +433,7 @@ const levelWithStatus = (state, scriptLevel) => {
  */
 export const levelsByLesson = state => (
   state.stages.map(stage => (
-    stage.script_levels.map(scriptLevel => levelWithStatus(state, scriptLevel))
+    stage.scriptLevels.map(scriptLevel => levelWithStatus(state, scriptLevel))
   ))
 );
 
@@ -437,7 +441,7 @@ export const levelsByLesson = state => (
  * Get data for a particular lesson/stage
  */
 export const levelsForLessonId = (state, lessonId) => (
-  state.stages.find(stage => stage.id === lessonId).script_levels.map(
+  state.stages.find(stage => stage.id === lessonId).scriptLevels.map(
     scriptLevel => levelWithStatus(state, scriptLevel)
   )
 );

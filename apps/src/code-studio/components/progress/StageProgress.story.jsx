@@ -89,15 +89,15 @@ const unplugged = {
 };
 
 export default storybook => {
-  const createStoreForScriptLevels = (script_levels, currentLevelIndex) => {
+  const createStoreForScriptLevels = (scriptLevels, currentLevelIndex) => {
     const store = createStore(combineReducers({progress, stageLock}));
     store.dispatch(initProgress({
-      currentLevelId: script_levels[currentLevelIndex].levels[0].id.toString(),
+      currentLevelId: scriptLevels[currentLevelIndex].levels[0].id.toString(),
       scriptName: 'csp1',
       saveAnswersBeforeNavigation: false,
       stages: [{
         id: 123,
-        script_levels
+        script_levels: scriptLevels
       }]
     }));
     return store;
