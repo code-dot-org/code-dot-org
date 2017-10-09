@@ -78,9 +78,24 @@ let DEFAULT_PROP_VALUES = {
 };
 
 // When we don't know the element type, we display all possible friendly names
-var fullDropdownOptions = _.uniq(Object.keys(PROP_INFO).map(function (key) {
-  return '"' + PROP_INFO[key].friendlyName + '"';
-}));
+var fullDropdownOptions = _.uniqBy(Object.keys(PROP_INFO).map(function (key) {
+  if (PROP_INFO[key].alias) {
+    return;
+  }
+  let friendlyName = PROP_INFO[key].friendlyName;
+  let setValueParam = DEFAULT_PROP_VALUES[friendlyName];
+  if (setValueParam) {
+    return {
+      text: '"' + friendlyName + '"',
+      display: '"' + friendlyName + '"',
+      setValueParam: setValueParam,
+    };
+  } else {
+    return '"' + PROP_INFO[key].friendlyName + '"';
+  }
+}).filter(object => object), object => {
+  return object.text;
+});
 
 /**
  * Information about properties pertaining to each element type. Values have the following
@@ -403,21 +418,20 @@ export function setPropertyValueSelector() {
  */
 export function setPropertyDropdown() {
   return function (aceEditor) {
+    var elementType;
     // Note: We depend on "this" being the droplet socket when in block mode,
     // such that parent ends up being the block. In text mode, this.parent
     // ends up being undefined.
     var param1 = getFirstSetPropertyParam(this.parent, aceEditor);
-    if (!param1) {
-      return fullDropdownOptions;
+    if (param1) {
+      let elementId = stripQuotes(param1);
+      let element = document.querySelector("#divApplab #" + elementId);
+      if (element) {
+        elementType = library.getElementType(element, true);
+      }
     }
 
-    var elementId = stripQuotes(param1);
-    var element = document.querySelector("#divApplab #" + elementId);
-    if (!element) {
-      return fullDropdownOptions;
-    }
-
-    return getDropdownProperties(this.parent, aceEditor, library.getElementType(element));
+    return getDropdownProperties(this.parent, aceEditor, elementType);
   };
 }
 
