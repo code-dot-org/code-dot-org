@@ -33,7 +33,7 @@ class RegionalPartner < ActiveRecord::Base
     through: :regional_partner_program_managers
 
   has_many :pd_workshops
-  has_many :mappings, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
+  has_many :mappings, -> {order :state, :zip_code}, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
 
   # Make sure the phone number contains at least 10 digits.
   # Allow any format and additional text, such as extensions.
