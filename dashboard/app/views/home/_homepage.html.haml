@@ -65,7 +65,7 @@
 
   $(document).ready(function() {
     window.cleverTakeoverManager = new CleverTakeoverManager({
-      cleverLinkFlag: #{session['clever_link_flag']},
+      cleverLinkFlag: "#{session['clever_link_flag']}",
       userIDToMerge: "#{session['clever_takeover_id']}",
       mergeAuthToken: "#{session['clever_takeover_token']}",
     });
