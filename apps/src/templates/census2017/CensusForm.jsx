@@ -190,8 +190,7 @@ class CensusForm extends Component {
   }
 
   toggleTopics(option) {
-    const selected = this.state.selectedTopics.slice(0);
-    if (selected.includes(option)) {
+    if (this.state.selectedTopics.includes(option)) {
       this.clearOption(option);
     } else {
       this.selectOption(option);
@@ -199,16 +198,14 @@ class CensusForm extends Component {
   }
 
   selectOption(option) {
-    const selected = this.state.selectedTopics.slice(0);
     this.setState({
-      selectedTopics: selected.concat(option)
+      selectedTopics: this.state.selectedTopics.concat(option)
     });
   }
 
   clearOption(option) {
-    const selected = this.state.selectedTopics.slice(0);
     this.setState({
-      selectedTopics: _.without(selected, option)
+      selectedTopics: _.without(this.state.selectedTopics, option)
     });
   }
 
