@@ -21,7 +21,7 @@ export default class SchoolAutocompleteDropdown extends Component {
   render() {
     const getOptions = (q) => {
       if (!q.length) {
-        return Promise.resolve({ options: [{ value: -1, label: "Search for your school"}] });
+        return Promise.resolve();
       }
       return fetch('/dashboardapi/v1/schoolsearch/' + encodeURIComponent(q) + '/40')
         .then((response) => response.json())
@@ -33,11 +33,8 @@ export default class SchoolAutocompleteDropdown extends Component {
               label: json[i].name + ' - ' + json[i].city + ', ' + json[i].state + ' ' + json[i].zip
             });
           }
-          if (schools.length > 1) {
-            return { options: schools };
-          } else {
-            return { options: [{ value: -1, label: "School not found"}] };
-          }
+          schools.unshift({ value: -1, label: "School not found"});
+          return { options: schools };
       });
     };
 
