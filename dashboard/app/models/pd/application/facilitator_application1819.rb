@@ -3,6 +3,7 @@
 # Table name: pd_applications
 #
 #  id                  :integer          not null, primary key
+#  user_id             :integer          not null
 #  type                :string(255)      not null
 #  application_year    :string(255)      not null
 #  application_type    :string(255)      not null
@@ -21,6 +22,7 @@
 #  index_pd_applications_on_regional_partner_id  (regional_partner_id)
 #  index_pd_applications_on_status               (status)
 #  index_pd_applications_on_type                 (type)
+#  index_pd_applications_on_user_id              (user_id)
 #
 
 module Pd::Application
