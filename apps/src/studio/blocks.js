@@ -8,7 +8,7 @@
 
 import _ from 'lodash';
 import commonMsg from '@cdo/locale';
-import msg from './locale';
+import i18n from './locale';
 import paramLists from './paramLists';
 import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
 import { singleton as studioApp } from '../StudioApp';
@@ -28,6 +28,7 @@ import {
   VISIBLE_VALUE
 } from './constants';
 
+var msg = i18n;
 
 // 9 possible positions in playspace (+ random):
 var POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
@@ -137,6 +138,7 @@ exports.install = function (blockly, blockInstallOptions) {
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
+  msg = {...msg, ...skin.msgOverrides};
 
   // Add some defaults; specifically for those values we expect to be
   // arrays, so that we can blindly .filter, .map, and .slice them, else

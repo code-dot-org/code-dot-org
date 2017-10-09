@@ -31,25 +31,6 @@ const ArrowIds = {
   DOWN: 'downButton',
 };
 
-const characters = {
-  Steve: {
-    name: 'Steve',
-    staticAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
-    smallStaticAvatar:
-      MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
-    failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Win.png',
-  },
-  Alex: {
-    name: 'Alex',
-    staticAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
-    smallStaticAvatar:
-      MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
-    failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Win.png',
-  },
-};
-
 const interfaceImages = {
   DEFAULT: [
     MEDIA_URL + 'Sliced_Parts/MC_Loading_Spinner.gif',
@@ -68,23 +49,9 @@ const interfaceImages = {
   1: [
     MEDIA_URL + 'Sliced_Parts/Steve_Character_Select.png',
     MEDIA_URL + 'Sliced_Parts/Alex_Character_Select.png',
-    characters.Steve.staticAvatar,
-    characters.Steve.smallStaticAvatar,
-    characters.Alex.staticAvatar,
-    characters.Alex.smallStaticAvatar,
-  ],
-  2: [
-    // TODO(bjordan): find different pre-load point for feedback images,
-    // bucket by selected character
-    characters.Alex.winAvatar,
-    characters.Steve.winAvatar,
-    characters.Alex.failureAvatar,
-    characters.Steve.failureAvatar,
-  ],
-  6: [
-    MEDIA_URL + 'Sliced_Parts/House_Option_A_v3.png',
-    MEDIA_URL + 'Sliced_Parts/House_Option_B_v3.png',
-    MEDIA_URL + 'Sliced_Parts/House_Option_C_v3.png',
+    MEDIA_URL + 'Sliced_Parts/Agent_Fail.png',
+    MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png',
+    MEDIA_URL + 'Sliced_Parts/Agent_Success.png',
   ],
 };
 
@@ -155,7 +122,6 @@ export default class Craft {
             trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
             Craft.clearPlayerState();
             trySetLocalStorage('craftSelectedPlayer', selectedPlayer);
-            Craft.updateUIForCharacter(selectedPlayer);
             Craft.initializeAppLevel(config.level);
             showInstructions();
           });
@@ -190,11 +156,10 @@ export default class Craft {
       levelTracks.length > 1 ? 7500 : null,
     );
 
-    const character = characters[Craft.getCurrentCharacter()];
-    config.skin.staticAvatar = character.staticAvatar;
-    config.skin.smallStaticAvatar = character.smallStaticAvatar;
-    config.skin.failureAvatar = character.failureAvatar;
-    config.skin.winAvatar = character.winAvatar;
+    config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
+    config.skin.smallStaticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
+    config.skin.failureAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Fail.png';
+    config.skin.winAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Success.png';
 
     const onMount = function () {
       studioApp().init(
@@ -409,17 +374,6 @@ export default class Craft {
     return (
       window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
     );
-  }
-
-  static updateUIForCharacter(character) {
-    Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
-    Craft.initialConfig.skin.smallStaticAvatar =
-      characters[character].smallStaticAvatar;
-    Craft.initialConfig.skin.failureAvatar =
-      characters[character].failureAvatar;
-    Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
-    studioApp().setIconsFromSkin(Craft.initialConfig.skin);
-    $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
   }
 
   static showPlayerSelectionPopup(onSelectedCallback) {
