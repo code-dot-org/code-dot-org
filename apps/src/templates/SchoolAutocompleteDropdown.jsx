@@ -26,13 +26,10 @@ export default class SchoolAutocompleteDropdown extends Component {
       return fetch(`/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`)
         .then(response => response.json())
         .then(json => {
-          var schools = [];
-          for (var i = 0; i < json.length; i++) {
-            schools.push({
-              value: json[i].nces_id,
-              label: json[i].name + ' - ' + json[i].city + ', ' + json[i].state + ' ' + json[i].zip
-            });
-          }
+          var schools = json.map(school => ({
+            value: school.nces_id,
+            label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`
+          }));
           schools.unshift({ value: -1, label: "School not found"});
           return { options: schools };
       });
