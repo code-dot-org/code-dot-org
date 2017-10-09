@@ -64,7 +64,7 @@ const styles = {
  * become visible on the accounts page after the transition, which is a
  * potential violation of student privacy).
  */
-export default class ConfirmEmailModal extends React.Component {
+export default class LinkCleverAccountModal extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func,
     handleCancel: PropTypes.func,
