@@ -18,21 +18,8 @@ Feature: Swapped levels
 
   @as_student
   Scenario: Student with progress sees old version
-    Given I am on "http://studio.code.org/s/allthethings/stage/29/puzzle/1?level_name=2-3 Maze 1&noautoplay=true"
-    And I wait until element ".instructions-markdown" contains text "Can you help me catch the naughty pig?"
-    And I close the instructions overlay if it exists
-    And I drag block "1" to block "4"
-    And I drag block "1" to block "5"
-    And I press "runButton"
-    And I wait until element ".congrats" is visible
-    And I am on "http://studio.code.org/s/allthethings/stage/29/puzzle/4?level_name=2-3 Artist 1 new&noautoplay=true"
-    And I wait for the page to fully load
-    And I close the instructions overlay if it exists
-    And I drag block "1" to block "25"
-    And I drag block "2" to block "26"
-    And I drag block "1" to block "27"
-    And I press "runButton"
-    And I wait until element ".congrats" is visible
+    Given I complete the level on "http://studio.code.org/s/allthethings/stage/29/puzzle/1?level_name=2-3 Maze 1"
+    And I complete the level on "http://studio.code.org/s/allthethings/stage/29/puzzle/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/s/allthethings/stage/29/puzzle/5?level_name=ramp_video_loopsArtist&noautoplay=true"
     And I wait until element ".submitButton" is visible
     When I click selector ".submitButton" to load a new page
