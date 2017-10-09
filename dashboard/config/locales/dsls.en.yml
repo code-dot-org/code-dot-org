@@ -1993,7 +1993,9 @@ en:
       SFLP - Web - Images on the Web: {}
       SFLP - Web - Quality Websites: {}
       SFLP - Web - Text on the Web: {}
-      'SG How To: Share Code with Teammates': {}
+      'SG How To: Share Code with Teammates':
+        description here: description here
+        title: title
       SG U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       SG v2 U3L01 Student Lesson Introduction:
