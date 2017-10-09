@@ -3,7 +3,7 @@
  */
 import _ from 'lodash';
 
-import {getFirstParam, getSecondParam} from '../dropletUtils';
+import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
 import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 var ElementType = library.ElementType;
@@ -51,6 +51,30 @@ var PROP_INFO = {
   min: { friendlyName: 'min', internalName: 'min', type: 'number' },
   max: { friendlyName: 'max', internalName: 'max', type: 'number' },
   step: { friendlyName: 'step', internalName: 'step', type: 'number' }
+};
+
+let DEFAULT_PROP_VALUES = {
+  width: '100',
+  height: '100',
+  x: '100',
+  y: '100',
+  'text-color': '"red"',
+  'background-color': '"red"',
+  'font-size': '100',
+  'text-align': '"left"',
+  hidden: 'true',
+  text: '"text"',
+  placeholder: '"text"',
+  image: '"https://code.org/images/logo.png"',
+  'icon-color': '"red"',
+  'group-id': '"text"',
+  checked: 'true',
+  readonly: 'true',
+  options: '["option1", "etc"]',
+  value: '100',
+  min: '100',
+  max: '100',
+  step: '100',
 };
 
 // When we don't know the element type, we display all possible friendly names
@@ -233,7 +257,16 @@ for (var elementType in PROPERTIES) {
     }
     elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
     if (!PROP_INFO[propName].alias) {
-      elementProperties.dropdownOptions.push('"' + friendlyName + '"');
+      let setValueParam = DEFAULT_PROP_VALUES[friendlyName];
+      if (setValueParam) {
+        elementProperties.dropdownOptions.push({
+          text: '"' + friendlyName + '"',
+          display: '"' + friendlyName + '"',
+          setValueParam: setValueParam,
+        });
+      } else {
+        elementProperties.dropdownOptions.push('"' + friendlyName + '"');
+      }
     }
   });
 }
@@ -267,19 +300,32 @@ function stripQuotes(str) {
 
 /**
  * Gets the properties that should be shown in the dropdown list for elements of the given type.
+ * @param {object} block Optional droplet block (will be undefined in text mode)
+ * @param {object} editor Optional droplet editor (will be undefined in text mode)
  * @param {string} elementType
  * @returns {!Array<string>} list of quoted property names
  */
-function getDropdownProperties(elementType) {
-  if (!elementType) {
-    return fullDropdownOptions;
+function getDropdownProperties(block, editor, elementType) {
+  var opts = fullDropdownOptions.slice();
+
+  if (elementType in PROPERTIES) {
+    opts = PROPERTIES[elementType].dropdownOptions.slice();
   }
 
-  if (!(elementType in PROPERTIES)) {
-    return fullDropdownOptions;
+  for (let [index, opt] of opts.entries()) {
+    if (opt.setValueParam) {
+      // If a setValueParam is specified, generate a click handler that will
+      // update the 3rd parameter with that value whenever the dropdown is
+      // selected
+      var newOpt = Object.assign({}, opt);
+      newOpt.click = (callback) => {
+        callback(opt.text);
+        setParamAtIndex(2, opt.setValueParam, block, editor);
+      };
+      opts[index] = newOpt;
+    }
   }
-
-  return PROPERTIES[elementType].dropdownOptions;
+  return opts;
 }
 
 /**
@@ -356,11 +402,11 @@ export function setPropertyValueSelector() {
  *   types, provides full list of properties across all types.
  */
 export function setPropertyDropdown() {
-  return function (editor) {
+  return function (aceEditor) {
     // Note: We depend on "this" being the droplet socket when in block mode,
     // such that parent ends up being the block. In text mode, this.parent
     // ends up being undefined.
-    var param1 = getFirstSetPropertyParam(this.parent, editor);
+    var param1 = getFirstSetPropertyParam(this.parent, aceEditor);
     if (!param1) {
       return fullDropdownOptions;
     }
@@ -371,7 +417,7 @@ export function setPropertyDropdown() {
       return fullDropdownOptions;
     }
 
-    return getDropdownProperties(library.getElementType(element));
+    return getDropdownProperties(this.parent, aceEditor, library.getElementType(element));
   };
 }
 
