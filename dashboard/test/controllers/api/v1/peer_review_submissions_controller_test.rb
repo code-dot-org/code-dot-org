@@ -111,7 +111,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_response :success
     response = CSV.parse(@response.body)
 
-    expected_headers = ['Name']
+    expected_headers = ['Name', 'Email']
     expected_headers << [@level_1, @level_2, @level_3, @level_4].map do |level|
       [level.name.titleize, "#{level.name.titleize} Submit Date"]
     end
@@ -121,7 +121,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
     assert_equal [
       expected_headers.flatten,
-      [@submitter.name, 'Unsubmitted', date, 'Unsubmitted', date, 'Accepted', date, 'Unsubmitted', date, '1']
+      [@submitter.name, @submitter.email, 'Unsubmitted', date, 'Unsubmitted', date, 'Accepted', date, 'Unsubmitted', date, '1']
     ], response
   end
 
