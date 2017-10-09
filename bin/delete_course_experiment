@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+unless ARGV.length == 2
+  puts "Usage: #{$0} user_email experiment_name"
+  exit 1
+end
+
+puts "loading rails environment..."
+require_relative '../dashboard/config/environment'
+
+user_email = ARGV[0]
+experiment_name = ARGV[1]
+
+unless user = User.find_by_email_or_hashed_email(user_email)
+  puts "could not find user with email #{user_email.dump}"
+  exit 1
+end
+
+experiment = SingleUserExperiment.find_by(min_user_id: user.id, name: experiment_name)
+
+unless experiment
+  puts "user #{user_email.dump} was not a member of experiment #{experiment_name.dump}"
+  exit 1
+end
+
+experiment.delete
+puts "successfully removed user #{user_email.dump} from experiment #{experiment_name.dump}"
