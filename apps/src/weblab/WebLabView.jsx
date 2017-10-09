@@ -1,6 +1,4 @@
 /** @file Top-level view for GameLab */
-/* global dashboard */
-
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
@@ -13,8 +11,8 @@ import CompletionButton from '../templates/CompletionButton';
 /**
  * Top-level React wrapper for WebLab
  */
-const WebLabView = React.createClass({
-  propTypes: {
+class WebLabView extends React.Component {
+  static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     isInspectorOn: PropTypes.bool.isRequired,
@@ -26,24 +24,13 @@ const WebLabView = React.createClass({
     onAddFileCSS: PropTypes.func.isRequired,
     onAddFileImage: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired
-  },
+  };
 
-  getChannelId: function () {
-    if (dashboard && dashboard.project) {
-      return dashboard.project.getCurrentId();
-    }
-    return undefined;
-  },
-
-  componentDidMount: function () {
+  componentDidMount() {
     this.props.onMount();
-  },
+  }
 
-  shouldShowHeader: function () {
-    return true;
-  },
-
-  render: function () {
+  render() {
     let iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
     let iframeStyles = {
       position: 'absolute',
@@ -139,12 +126,10 @@ const WebLabView = React.createClass({
       </StudioAppWrapper>
     );
   }
-});
+}
 
-export default connect(function propsFromStore(state) {
-  return {
-    isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isInspectorOn: state.inspectorOn,
-  };
-})(WebLabView);
+export default connect(state => ({
+  isProjectLevel: state.pageConstants.isProjectLevel,
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+  isInspectorOn: state.inspectorOn,
+}))(WebLabView);

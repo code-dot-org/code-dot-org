@@ -33,8 +33,8 @@
           %span.required*
         %select#country.form-control{name: "hoc_country_s", type: "select"}
           %option{value: "", selected: true, disabled: true}
-          - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
-            %option{value: code}= country_name_from_code(code)
+          - get_all_countries().each do |code, name|
+            %option{value: code}= name
         #country-error.error-message{style: "display:none;"}
           = hoc_s(:signup_event_country_error)
 
