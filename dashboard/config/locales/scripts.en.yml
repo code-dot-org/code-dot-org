@@ -5908,7 +5908,7 @@ en:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: 'Loops in Artist (UPDATED)'
+              name: Loops in Artist (UPDATED)
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -6361,6 +6361,8 @@ en:
               name: Nested Loops
             Loops in Artist (UPDATED!):
               name: Loops in Artist (UPDATED!)
+            Sarah test stage:
+              name: Sarah test stage
           title: New Express Script
           description_audience: ''
           description_short: ''
@@ -6572,6 +6574,14 @@ en:
             colehoc2017 stage:
               name: colehoc2017 stage
           title: 'HoC 17 - Cole '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17-kiki:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''
