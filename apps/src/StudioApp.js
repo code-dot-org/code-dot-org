@@ -509,6 +509,11 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
             {msg.pairingNavigatorLink()}
           </a>
         }
+        {config.level.pairingChannelId &&
+          <a href={project.getPathName('view', config.level.pairingChannelId)}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
       </div>
     );
   }
@@ -2007,9 +2012,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: (
-      config.level.textModeAtStart === 'block' ? false :
+      config.level.textModeAtStart === 'blocks' ? false :
       config.level.textModeAtStart === false ? config.usingTextModePref :
-      config.level.textModeAtStart
+      !!config.level.textModeAtStart
     ),
   });
 

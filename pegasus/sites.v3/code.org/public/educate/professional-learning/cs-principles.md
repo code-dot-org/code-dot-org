@@ -8,7 +8,7 @@ theme: responsive
 <iframe style="max-width: 100%" width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
 <br />
 
-The Code.org Computer Science Principles Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. 
+The [Code.org Computer Science Principles Professional Learning Program](/files/PLProgramsOverview_1-pager.pdf) is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. 
 
 ## What does a Code.org CS Principles educator do?
 If accepted into the Code.org CS Principles Professional Learning Program, you will:
@@ -29,11 +29,11 @@ The program has two components:
 
 ## <a name="commitments"></a>What are the program commitments?
 
-Five-Day Summer Workshop: (Summer 2017)
+Five-Day Summer Workshop: (Summer)
 
 - 5 days in-person. Dates and locations vary by district.
 
-Continuing Professional Development: (September 2017 - June 2018)
+Continuing Professional Development: (September - June of the following academic year)
 
 - 4 days (24 hours) local, in-person workshops (usually on Saturdays)
 - 20 hours online, self-paced
@@ -48,6 +48,7 @@ The CS Principles Professional Learning Program is open to educators who are int
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
 * Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our  [Regional Partner Map](https://code.org/educate/professional-learning-partner/partners).
 
+Not sure if this is the right Code.org program for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your teaching situation.
 
 ## <a name="locations"></a>Where is the program offered?
 
@@ -55,6 +56,6 @@ The CS Principles Professional Learning Program is available in regions served b
 
 ## <a name="apply"></a>How to apply?
 
-**Applications for the 2017-18 CS Principles Professional Learning Program are closed.** If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
