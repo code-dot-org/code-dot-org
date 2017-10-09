@@ -9,6 +9,7 @@ class Census2017 < Form
     result[:role_s] = data[:role_s]
 
     result[:country_s] = data[:country_s]
+    result[:nces_school_s] = data[:nces_school_s]
     result[:school_type_s] = data[:school_type_s]
     result[:school_state_s] = data[:school_state_s]
     result[:school_district_id_s] = data[:school_district_id_s]

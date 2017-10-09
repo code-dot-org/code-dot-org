@@ -20,7 +20,7 @@ export default class SchoolAutocompleteDropdown extends Component {
 
   render() {
     const getOptions = (q) => {
-      if (!q.length) {
+      if (q.length < 4) {
         return Promise.resolve();
       }
       return fetch('/dashboardapi/v1/schoolsearch/' + encodeURIComponent(q) + '/40')
@@ -44,14 +44,12 @@ export default class SchoolAutocompleteDropdown extends Component {
       <div>
         <VirtualizedSelect
           id="nces_school"
-          clearable={true}
+          name="nces_school_s"
           async={true}
           loadOptions={getOptions}
           filterOption={() => true}
           value={this.state.selectValue}
-          disabled={false}
           onChange={(selectValue) => this.setState({ selectValue })}
-          placeholder="Search for your school"
         />
         {schoolNotFound && !this.props.overrideSchoolNotFound && (
           <SchoolNotFound/>
