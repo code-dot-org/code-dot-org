@@ -400,7 +400,7 @@ const levelWithStatus = (state, scriptLevel) => {
     }
   });
   let level;
-  if (scriptLevel.levels.some(level => level.ind === LevelKind.peer_review)) {
+  if (scriptLevel.levels.some(level => level.kind === LevelKind.peer_review)) {
     if (scriptLevel.levels.length > 1) {
       throw new Error('Level swapping not supported for peer reviews');
     }
