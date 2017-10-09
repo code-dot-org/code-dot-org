@@ -275,15 +275,19 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-          {errors.school && (
-             <div style={styles.errors}>
-               {i18n.censusRequiredSchool()}
-             </div>
-           )}
-          <SchoolAutocompleteDropdown/>
+          <div style={styles.question}>
+            School
+            <span style={styles.asterisk}> * </span>
+            {errors.school && (
+               <div style={styles.errors}>
+                 {i18n.censusRequiredSchool()}
+               </div>
+             )}
+           </div>
+           <SchoolAutocompleteDropdown/>
           <div style={styles.question}>
             How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
-            <span style={styles.asterisk}> *</span>
+            <span style={styles.asterisk}> * </span>
           </div>
           <div style={styles.firstQuestion}>
             <label style={styles.dropdownBox}>
