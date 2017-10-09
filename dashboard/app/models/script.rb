@@ -692,6 +692,8 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
+      # make sure we have an up to date view
+      stage.reload
       stage.script_levels = script_levels_by_stage[stage.id]
 
       # Go through all the script levels for this stage, except the last one,
