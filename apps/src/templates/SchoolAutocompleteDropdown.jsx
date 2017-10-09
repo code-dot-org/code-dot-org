@@ -38,7 +38,7 @@ export default class SchoolAutocompleteDropdown extends Component {
       });
     };
 
-    const schoolNotFound = this.state.selectValue.value === -1;
+    const schoolNotFound = this.state.selectValue &&  this.state.selectValue.value === -1;
 
     return (
       <div>
