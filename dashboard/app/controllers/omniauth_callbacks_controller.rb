@@ -17,6 +17,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
+    elsif @user.provider == 'clever' && cookies['pm'] == 'clever_takeover'
+      handle_clever_signin(@user)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
       sign_in_user
@@ -31,9 +33,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
     else
       # This is a new registration
-      move_oauth_params_to_cache(@user)
-      session["devise.user_attributes"] = @user.attributes
-      redirect_to new_user_registration_url
+      register_new_user(@user)
     end
   end
 
@@ -48,6 +48,27 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def register_new_user(user)
+    move_oauth_params_to_cache(user)
+    session["devise.user_attributes"] = user.attributes
+    redirect_to new_user_registration_url
+  end
+
+  # Clever signins have unique requirements, and must be handled a bit outside the normal flow
+  def handle_clever_signin(user)
+    # If account exists and it's not the first login, just sign in
+    if user.persisted? && user.sign_in_count > 1
+      sign_in_user
+    else
+      # Otherwise, go through the new user flow - there we will
+      # offer to connect the Clever account to an existing one
+      session['clever_link_flag'] = true
+      session['clever_takeover_id'] = user.uid
+      session['clever_takeover_token'] = user.oauth_token
+      sign_in_user
+    end
+  end
 
   def move_oauth_params_to_cache(user)
     # Because some oauth tokens are quite large, we strip them from the session

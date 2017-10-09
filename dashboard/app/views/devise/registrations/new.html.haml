@@ -131,7 +131,10 @@
       teacherDashboardUrl: "#{teacher_dashboard_url}",
       invalidPasswordString: "#{t('signup_form.invalid_password')}",
       passwordMismatchString: "#{t('signup_form.mismatch_password')}",
-      acceptTermsString: "#{t('signup_form.accept_terms')}"
+      acceptTermsString: "#{t('signup_form.accept_terms')}",
+      cleverLinkFlag: #{session['clever_link_flag']},
+      userIDToMerge: "#{session['clever_takeover_id']}",
+      mergeAuthToken: "#{session['clever_takeover_token']}",
     });
   });
 
