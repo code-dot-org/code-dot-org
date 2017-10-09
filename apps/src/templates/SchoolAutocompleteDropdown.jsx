@@ -53,9 +53,9 @@ export default class SchoolAutocompleteDropdown extends Component {
           onChange={(selectValue) => this.setState({ selectValue })}
           placeholder="Search for your school"
         />
-      {schoolNotFound && (
-        <SchoolNotFound/>
-      )}
+        {schoolNotFound && !this.props.overrideSchoolNotFound && (
+          <SchoolNotFound/>
+        )}
       </div>
     );
   }
