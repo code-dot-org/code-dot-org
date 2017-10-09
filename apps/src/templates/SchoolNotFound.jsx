@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import color from "../util/color";
-// import i18n from "@cdo/locale";
+import i18n from "@cdo/locale";
 import { STATES, schoolTypes } from './schoolDropdownOptions';
 
 const styles = {
@@ -62,13 +62,13 @@ export default class SchoolNotFound extends Component {
     return (
       <div>
         <div style={styles.question}>
-          Sorry, we couldn't find your school. Please enter it below.
+          {i18n.schoolNotFound()}
         </div>
         <div>
           <div style={styles.field}>
             <label>
               <div style={styles.question}>
-                School Name
+                {i18n.schoolName()}
               </div>
               <input
                 type="text"
@@ -83,7 +83,7 @@ export default class SchoolNotFound extends Component {
           <div style={styles.field}>
             <label>
               <div style={styles.question}>
-                School Type
+                {i18n.schoolType()}
               </div>
               <select
                 name="school_type_s"
@@ -107,7 +107,7 @@ export default class SchoolNotFound extends Component {
           <div style={styles.field}>
             <label>
               <div style={styles.question}>
-                School City
+                {i18n.schoolCity()}
               </div>
               <input
                 type="text"
@@ -121,7 +121,7 @@ export default class SchoolNotFound extends Component {
           <div style={styles.field}>
             <label>
               <div style={styles.question}>
-                School State
+                {i18n.schoolState()}
               </div>
               <select
                 name="school_state_s"
@@ -144,7 +144,7 @@ export default class SchoolNotFound extends Component {
         <div style={styles.field}>
           <label>
             <div style={styles.question}>
-              School Postal Code
+              {i18n.schoolZip()}
             </div>
             <input
               type="text"

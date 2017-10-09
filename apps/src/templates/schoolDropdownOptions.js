@@ -1,4 +1,4 @@
-// import i18n from "@cdo/locale";
+import i18n from "@cdo/locale";
 
 export const STATES = [
   '',
@@ -57,8 +57,8 @@ export const STATES = [
 
 export const schoolTypes = [
   '',
-  'Charter',
-  'Private',
-  'Public',
-  'Other'
+  i18n.schoolTypeCharter(),
+  i18n.schoolTypePrivate(),
+  i18n.schoolTypePublic(),
+  i18n.other()
 ];
