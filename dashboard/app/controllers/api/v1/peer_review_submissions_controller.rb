@@ -58,6 +58,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
       enrollment_submissions[enrollment.user_id] = {
         name: enrollment.user.name,
+        email: enrollment.user.email,
         submissions: peer_review_submissions,
         reviews_performed: PeerReview.where(reviewer_id: enrollment.user_id, script: scripts).count
       }
@@ -66,6 +67,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     response_body = enrollment_submissions.values.map do |enrollment_submission|
       {}.tap do |row|
         row[:name] = enrollment_submission[:name]
+        row[:email] = enrollment_submission[:email]
 
         peer_reviewable_levels.each do |level|
           if enrollment_submission[:submissions].key? level.name
