@@ -1,0 +1,4 @@
+name 'Testing Video Bitly'
+markdown <<MARKDOWN
+<iframe width="560" height="315" src="http://bit.ly/testVideoBitly" frameborder="0" allowfullscreen></iframe>
+MARKDOWN
