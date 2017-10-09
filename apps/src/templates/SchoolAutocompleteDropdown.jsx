@@ -23,7 +23,7 @@ export default class SchoolAutocompleteDropdown extends Component {
       if (q.length < 4) {
         return Promise.resolve();
       }
-      return fetch('/dashboardapi/v1/schoolsearch/' + encodeURIComponent(q) + '/40')
+      return fetch(`/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`)
         .then(response => response.json())
         .then(json => {
           var schools = [];
