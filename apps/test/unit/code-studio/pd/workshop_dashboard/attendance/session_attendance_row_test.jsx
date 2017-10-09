@@ -28,13 +28,7 @@ const DEFAULT_PROPS = {
   displayYesNoAttendance: false,
 };
 
-describe('SessionAttendance', () => {
-  beforeEach(() => {
-  });
-
-  afterEach(() => {
-  });
-
+describe('SessionAttendanceRow', () => {
   it('renders default (unattended) row', () => {
     const wrapper = shallow(
       <SessionAttendanceRow {...DEFAULT_PROPS}/>
