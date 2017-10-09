@@ -348,14 +348,58 @@ export default class Craft {
       },
       id: 'craft-popup-connect',
     });
-    dom.addClickTouchEvent($('#download-button')[0], function () {
+    dom.addClickTouchEvent(document.getElementById('download-button'), function () {
       var win = window.open('https://education.minecraft.net/get-started/download', '_blank');
       win.focus();
       popupDialog.hide();
     }.bind(this));
-    dom.addClickTouchEvent($('#close-popup')[0], function () {
+    dom.addClickTouchEvent(document.getElementById('close-popup'), function () {
       popupDialog.hide();
     }.bind(this));
     popupDialog.show();
   };
+
+  static showImportFromShareLinkPopup = function (callback) {
+    let shareLink;
+    const popupDiv = document.createElement('div');
+    popupDiv.innerHTML = require('./dialogs/importFromShareLink.html.ejs')();
+    const popupDialog = studioApp().createModalDialog({
+      contentDiv: popupDiv,
+      onHidden: function () {
+        callback(shareLink);
+      },
+      id: 'craft-popup-import',
+    });
+    dom.addClickTouchEvent(document.getElementById('import-button'), () => {
+      shareLink = $('#share-link').val();
+      popupDialog.hide();
+    });
+    dom.addClickTouchEvent(document.getElementById('close-popup'), () => {
+      popupDialog.hide();
+    });
+    dom.addClickTouchEvent(document.getElementById('cancel-button'), () => {
+      popupDialog.hide();
+    });
+    popupDialog.show();
+  }
+
+  static showErrorMessagePopup = function (title, message) {
+    const popupDiv = document.createElement('div');
+    popupDiv.innerHTML = require('./dialogs/errorMessage.html.ejs')({
+      title,
+      message
+    });
+
+    const popupDialog = studioApp().createModalDialog({
+      contentDiv: popupDiv,
+      onHidden: function () {},
+      id: 'craft-popup-error',
+    });
+
+    dom.addClickTouchEvent(document.getElementById('close-popup'), () => {
+      popupDialog.hide();
+    });
+
+    popupDialog.show();
+  }
 }
