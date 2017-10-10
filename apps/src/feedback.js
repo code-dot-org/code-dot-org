@@ -388,10 +388,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   // hint if the button gets pressed.
   if (hintRequestButton) {
     const feedbackXml = feedbackBlocks ? feedbackBlocks.xml : undefined;
-    var alreadySeen = fallback.hint_view_requests.some(function (request) {
-          return request.feedback_type === options.feedbackType &&
-            request.feedback_xml === feedbackXml;
-        });
+    var alreadySeen = fallback.hint_view_requests &&
+      fallback.hint_view_requests.some(function (request) {
+        return request.feedback_type === options.feedbackType &&
+          request.feedback_xml === feedbackXml;
+      });
 
     if (alreadySeen) {
       // Remove "Show hint" button.  Making it invisible isn't enough,
