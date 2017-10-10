@@ -216,11 +216,17 @@ class ApiController < ApplicationController
         paired = (paired_user_level_ids & user_levels_ids).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
-        {
-          class: level_class,
-          title: title,
-          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id)
-        }
+        # We use a list rather than a hash here to save ourselves from sending
+        # the field names over the wire (which adds up to a lot of bytes when
+        # multiplied across all the levels)
+        [
+          level_class,
+          title,
+          # we use to build a path that included section_id/user_id. We now let
+          # the client adds these params itself, thus saving ourselves many bytes
+          # over the wire again
+          build_script_level_path(script_level)
+        ]
       end
       {id: student.id, levels: student_levels}
     end
