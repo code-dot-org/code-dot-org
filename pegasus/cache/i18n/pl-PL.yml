@@ -8,7 +8,7 @@
     i 10. Zaktualizuj swoją przeglądarkę.
   upgrade_ie_message_csedweek: CSEdWeek.org wkrótce przestanie wspierać Internet Explorer
     8, 9 i 10. Zaktualizuj swoją przeglądarkę.
-  upgrade_ie_link: Ucz się więcej
+  upgrade_ie_link: Dowiedz się więcej
   en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 8-14 grudnia 2014
@@ -420,13 +420,13 @@
   homepage_banner_link_prizes: 'Dołącz do największego wydarzenia edukacyjnego w historii. '
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia
     różnorodności w dziedzinie informatyki.
-  homepage_banner_text_link: Ucz się więcej
+  homepage_banner_text_link: Dowiedz się więcej
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Naucz się więcej
   homepage_banner_20k_teachers: Wyszkolonych jest 20,000 nauczycieli i teraz uczą
     informatyki w klasach.
-  homepage_banner_20k_teachers_link: Ucz się więcej
+  homepage_banner_20k_teachers_link: Dowiedz się więcej
   homepage_banner_congress: Amerykańscy przywódcy wzywają Kongres do finansowania
     informatyki w klasach K-12.
   homepage_banner_congress_link: Dodaj swoje wsparcie
@@ -434,7 +434,7 @@
     prywatność.
   homepage_banner_emailprivacy_link: Dowiedz się więcej
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: Ucz się więcej
+  homepage_banner_40k_teachers_link: Dowiedz się więcej
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
@@ -1224,6 +1224,8 @@
   csp1_name: 'Unit 1: Internet'
   csp2_name: 'Unit 2: Cyfrowe informacje'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -2013,7 +2015,7 @@
   header_home: Strona główna
   header_my_dashboard: Pulpit
   header_courses: Kursy
-  header_course_catalog: Course Catalog
+  header_course_catalog: Katalog Kursów
   header_project_gallery: Galeria Projektów
   header_sections: Sekcje
   header_professional_learning: Kształcenia Profesjonalne
@@ -2107,5 +2109,3 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
