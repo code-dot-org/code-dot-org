@@ -154,9 +154,68 @@ describe("ButtonList", () => {
       <Checkbox>
         <div>
           <span>Other: </span>
+          &nbsp;
           <input type="text" id="favoritePet_other" maxLength="1000" />
         </div>
       </Checkbox>
     );
+  });
+
+  describe("With input fields", () => {
+    let buttonList;
+    let onDogBreedInputChange;
+    let dogBreedInput;
+
+    before(() => {
+      onDogBreedInputChange = sinon.spy();
+
+      buttonList = shallow(
+        <ButtonList
+          type="check"
+          label="What is your favorite pet?"
+          groupName="favoritePet"
+          answers={[
+            "Cat",
+            {
+              answerText: "Specific dog breed",
+              inputId: "dog-breed-input",
+              inputValue: "--enter dog breed--",
+              onInputChange: onDogBreedInputChange
+            }
+          ]}
+        />
+      );
+
+      dogBreedInput = buttonList.find("input[id='dog-breed-input']");
+    });
+
+    it("Renders correctly", () => {
+      expect(buttonList).to.containMatchingElement(
+        <FormGroup>
+          <Checkbox value="Cat" label="Cat" name="favoritePet">
+            Cat
+          </Checkbox>
+          <Checkbox value="Specific dog breed" label="Specific dog breed" name="favoritePet">
+            <div>
+              <span>Specific dog breed</span>
+              &nbsp;
+              <input type="text" id="dog-breed-input" maxLength="1000" />
+            </div>
+          </Checkbox>
+        </FormGroup>
+      );
+    });
+
+    it("Displays supplied input value", () => {
+      expect(dogBreedInput).to.have.prop("value", "--enter dog breed--");
+    });
+
+    it("Calls the onInputChange callback when text is entered", () => {
+      dogBreedInput.simulate("change", {target: {value: "all dogs"}});
+
+      expect(onDogBreedInputChange).to.have.been.calledOnce;
+      console.log(onDogBreedInputChange.args);
+      expect(onDogBreedInputChange).to.have.been.calledWith("all dogs");
+    });
   });
 });
