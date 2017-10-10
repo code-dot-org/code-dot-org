@@ -7,7 +7,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
+import { COUNTRIES } from '../../geographyConstants';
 
 const styles = {
   formHeading: {
@@ -123,6 +123,7 @@ class CensusForm extends Component {
       name: '',
       email: '',
       role: '',
+      country: '',
       hoc: '',
       afterSchool: '',
       tenHours: '',
@@ -140,7 +141,6 @@ class CensusForm extends Component {
   componentDidMount() {
     // Move the haml-rendered DOM section inside our protected stateful div
     $('#school-country-dropdown').appendTo(ReactDOM.findDOMNode(this.refs.schoolCountry)).show();
-
   }
 
   handleChange(propertyName, event) {
@@ -270,7 +270,7 @@ class CensusForm extends Component {
   render() {
     const { showFollowUp, showPledge, submission, selectedTopics, errors } = this.state;
     const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
-    const US = $('#school-country').val() === "US";
+    const US = submission.country === "United States";
 
     return (
       <div id="form">
@@ -278,11 +278,48 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-          <ProtectedStatefulDiv
-            ref="schoolCountry"
-          />
+          <div>
+            <label style={styles.dropdownBox}>
+              <div style={styles.question}>
+                {i18n.schoolCountry()}
+                <span style={styles.asterisk}> *</span>
+              </div>
+              <select
+                name="country_s"
+                value={this.state.submission.country}
+                onChange={this.handleChange.bind(this, 'country')}
+                style={styles.wideDropdown}
+              >
+                {COUNTRIES.map((country, index) =>
+                  <option
+                    value={country}
+                    key={index}
+                  >
+                    {country}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
           {US && (
             <SchoolAutocompleteDropdown/>
+          )}
+          {!US && (
+            <div>
+              <label>
+                <div style={styles.question}>
+                  {i18n.schoolName()}
+                  <span style={styles.asterisk}> *</span>
+                </div>
+                <input
+                  type="text"
+                  name="school_name_s"
+                  value={this.state.schoolName}
+                  onChange={this.handleChange.bind(this, 'schoolName')}
+                  style={styles.input}
+                />
+              </label>
+            </div>
           )}
           <div style={styles.question}>
             How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)

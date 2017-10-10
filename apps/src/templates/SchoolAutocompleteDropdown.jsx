@@ -70,6 +70,7 @@ export default class SchoolAutocompleteDropdown extends Component {
           filterOption={() => true}
           value={this.state.selectValue}
           onChange={(selectValue) => this.setState({ selectValue })}
+          placeholder="Find your school"
         />
         {schoolNotFound && !overrideSchoolNotFound && (
           <SchoolNotFound/>

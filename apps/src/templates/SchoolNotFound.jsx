@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import color from "../util/color";
 import i18n from "@cdo/locale";
-import { STATES, schoolTypes } from './schoolDropdownOptions';
+import { STATES } from '../geographyConstants';
 
 const styles = {
   question: {
@@ -62,6 +62,13 @@ export default class SchoolNotFound extends Component {
   }
 
   render() {
+    const schoolTypes = [
+      '',
+      i18n.schoolTypeCharter(),
+      i18n.schoolTypePrivate(),
+      i18n.schoolTypePublic(),
+      i18n.other()
+    ];
 
     return (
       <div>
