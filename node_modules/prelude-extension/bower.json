@@ -1,0 +1,24 @@
+{
+  "name": "prelude-extension",
+  "main": "dist/index.min.js",
+  "version": "0.0.13",
+  "homepage": "https://github.com/furqanZafar/prelude-extension",
+  "authors": [
+    "Furqan Zafar (Mac Pro) <fruzi89@gmail.com>"
+  ],
+  "main": "dist/index.min.js",
+  "ignore": [
+    "*",
+    "!dist/",
+    "!dist/*"
+  ],
+  "description": "prelude-extension",
+  "dependencies": {
+    "bower-prelude-ls": "*"
+  },
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ]
+}

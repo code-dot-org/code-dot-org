@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Button from '../Button';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import color from "../../util/color";
 import i18n from "@cdo/locale";
 import _ from 'lodash';
@@ -329,9 +330,11 @@ class CensusForm extends Component {
                {i18n.censusRequiredSchool()}
              </div>
            )}
-          <ProtectedStatefulDiv
-            ref="schoolInfo"
-          />
+          <div style={styles.question}>
+            Find your school
+            <span style={styles.asterisk}> *</span>
+          </div>
+          <SchoolAutocompleteDropdown/>
           <div style={styles.question}>
             How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
             <span style={styles.asterisk}> *</span>
