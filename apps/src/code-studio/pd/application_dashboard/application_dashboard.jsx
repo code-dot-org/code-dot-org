@@ -13,6 +13,7 @@ import {
 } from 'react-router';
 import {createHistory} from 'history';
 import Summary from './summary';
+import QuickView from './quick_view';
 
 const ROOT_PATH = '/pd/application_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
@@ -31,22 +32,26 @@ const ApplicationDashboard = ()=> (
       <Route
         path="csd_facilitators"
         breadcrumbs="Application Dashboard,CSD Facilitator Applications"
-        component={Summary}
+        component={QuickView}
+        title="CSD Facilitator Applications"
       />
       <Route
         path="csp_facilitators"
         breadcrumbs="Application Dashboard,CSP Facilitator Applications"
-        component={Summary}
+        component={QuickView}
+        title="CSP Facilitator Applications"
       />
       <Route
         path="csd_teachers"
         breadcrumbs="Application Dashboard,CSD Teacher Applications"
-        component={Summary}
+        component={QuickView}
+        title="CSD Teacher Applications"
       />
       <Route
         path="csp_teachers"
         breadcrumbs="Application Dashboard,CSP Teacher Applications"
-        component={Summary}
+        component={QuickView}
+        title="CSP Teacher Applications"
       />
     </Route>
   </Router>
