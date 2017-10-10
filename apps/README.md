@@ -116,9 +116,7 @@ This will work on any of the test commands.
 
 ##### Debugging Tests #####
 
-To debug tests, your best bet is to run them in Chrome. Keep in mind that there
-can be subtle differences between Chrome and PhantomJS, so after fixing your
-test in Chrome, make sure it still works in PhantomJS. To run the tests in
+To debug tests, your best bet is to run them in Chrome. To run the tests in
 Chrome, use the `BROWSER` environment variable in conjunction with `WATCH`:
 
 ```

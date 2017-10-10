@@ -57,7 +57,7 @@ export default function init(options) {
   // Instantiate the renderer and connect it to the VM.
   const canvas = document.getElementById('scratch-stage');
 
-  // PhantomJS doesn't support WebGL.
+  // Headless  doesn't support WebGL.
   if (!IN_UNIT_TEST) {
     const renderer = new Renderer(canvas);
     vm.attachRenderer(renderer);
