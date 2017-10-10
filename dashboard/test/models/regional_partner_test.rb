@@ -48,4 +48,21 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     refute regional_partner.valid?
     assert_equal ['Zip code is invalid'], regional_partner.errors.full_messages
   end
+
+  test 'assign program manager to regional partner assigns program manager' do
+    regional_partner = create :regional_partner
+    program_manager = create :teacher
+    assert_creates RegionalPartnerProgramManager do
+      regional_partner.program_manager = program_manager.id
+    end
+    assert regional_partner.program_managers.exists?(program_manager.id)
+  end
+
+  test 'assign existing program manager does not create duplicate regional partner program manager' do
+    regional_partner = create :regional_partner
+    program_manager = create(:regional_partner_program_manager, regional_partner: regional_partner).program_manager
+    assert_does_not_create RegionalPartnerProgramManager do
+      regional_partner.program_manager = program_manager.id
+    end
+  end
 end
