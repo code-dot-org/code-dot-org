@@ -7,6 +7,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
 
 const styles = {
   formHeading: {
@@ -138,7 +139,8 @@ class CensusForm extends Component {
 
   componentDidMount() {
     // Move the haml-rendered DOM section inside our protected stateful div
-    $('#school-info').appendTo(ReactDOM.findDOMNode(this.refs.schoolInfo)).show();
+    $('#school-country-dropdown').appendTo(ReactDOM.findDOMNode(this.refs.schoolCountry)).show();
+
   }
 
   handleChange(propertyName, event) {
@@ -268,6 +270,7 @@ class CensusForm extends Component {
   render() {
     const { showFollowUp, showPledge, submission, selectedTopics, errors } = this.state;
     const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
+    const US = $('#school-country').val() === "US";
 
     return (
       <div id="form">
@@ -275,16 +278,12 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-          <div style={styles.question}>
-            {i18n.schoolName()}
-            <span style={styles.asterisk}> *</span>
-            {errors.school && (
-               <div style={styles.errors}>
-                 {i18n.censusRequiredSchool()}
-               </div>
-             )}
-           </div>
-           <SchoolAutocompleteDropdown/>
+          <ProtectedStatefulDiv
+            ref="schoolCountry"
+          />
+          {US && (
+            <SchoolAutocompleteDropdown/>
+          )}
           <div style={styles.question}>
             How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
             <span style={styles.asterisk}> *</span>
