@@ -58,7 +58,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert regional_partner.program_managers.exists?(program_manager.id)
   end
 
-  test 'assign existing program manager does not create duplicate regional partner program manager' do
+  test 'assign existing program manager does not create duplicate regional partner program managers' do
     regional_partner = create :regional_partner
     program_manager = create(:regional_partner_program_manager, regional_partner: regional_partner).program_manager
     assert_does_not_create RegionalPartnerProgramManager do

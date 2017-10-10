@@ -47,6 +47,7 @@ class RegionalPartner < ActiveRecord::Base
 
   # assign a program manager to a regional partner
   def program_manager=(program_manager_id)
+    # TODO: switch this to use find_create_by, which is tricky with a has_many through association
     program_manager = User.find(program_manager_id)
     program_managers << program_manager unless program_managers.include?(program_manager)
   end
