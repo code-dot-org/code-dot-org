@@ -38,6 +38,7 @@ class Census2017 < Form
     result[:topic_web_design_b] = data[:topic_web_design_b]
     result[:topic_game_design_b] = data[:topic_game_design_b]
     result[:topic_other_b] = data[:topic_other_b]
+    result[:topic_other_desc_s] = data[:topic_other_desc_s]
     result[:topic_dont_know_b] = data[:topic_dont_know_b]
 
     result[:pledge_b] = data[:pledge_b]

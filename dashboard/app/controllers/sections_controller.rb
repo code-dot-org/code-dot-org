@@ -1,4 +1,6 @@
 class SectionsController < ApplicationController
+  include UsersHelper
+
   before_action :load_section_by_code, only: [:log_in, :show]
 
   def show
@@ -36,6 +38,7 @@ class SectionsController < ApplicationController
       bypass_sign_in user
       user.update_tracked_fields!(request)
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
+      check_and_apply_clever_takeover(user) if cookies['pm'] == 'clever_takeover'
       redirect_to_section_script_or_course
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')

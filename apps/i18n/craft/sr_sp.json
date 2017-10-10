@@ -282,5 +282,9 @@
   "blockTypeGlowstone": "glowstone",
   "blockTypePressurePlateUp": "pressure plate",
   "blockTypeRailsRedstoneTorch": "redstone torch",
-  "blockTypeRedstoneWire": "redstone wire"
+  "blockTypeRedstoneWire": "redstone wire",
+  "cancel": "Cancel",
+  "import": "Import",
+  "importShareLinkBody": "Type your Hour of Code share link here and click \"Import\" to copy your code into Minecraft",
+  "importShareLinkHeader": "Import a share link"
 }
