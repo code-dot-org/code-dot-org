@@ -1375,7 +1375,7 @@ class User < ActiveRecord::Base
 
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level = User.track_level_progress_sync(
+        navigator_user_level, _ = User.track_level_progress_sync(
           user_id: navigator_user_id,
           level_id: level_id,
           script_id: script_id,

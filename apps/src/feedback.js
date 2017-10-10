@@ -318,8 +318,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     if (showPuzzleRatingButtons) {
       onContinue = () => {
         puzzleRatingUtils.cachePuzzleRating(container, {
-          script_id: options.response.script_id,
-          level_id: options.response.level_id,
+          script_id: fallback.script_id,
+          level_id: fallback.level_id,
         });
         options.onContinue();
       };
@@ -953,8 +953,10 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel = options.level.final_level;
         var stageCompleted = null;
-        if (options.response && options.response.stage_changing) {
-          stageCompleted = options.response.stage_changing.previous.name;
+        const fallback = window.appOptions.report.fallback_response.success;
+
+        if (fallback.stage_changing) {
+          stageCompleted = fallback.stage_changing.previous.name;
         }
         var msgParams = {
           stageNumber: 0, // TODO: remove once localized strings have been fixed

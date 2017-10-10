@@ -92,10 +92,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   def build_expected_response(options = {})
-    {
-      level_source: "http://test.host/c/#{assigns(:level_source_id)}",
-      level_source_id: assigns(:level_source_id)
-    }.merge options
+    {}.merge options
   end
 
   def build_try_again_response(options = {})
@@ -1078,6 +1075,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone changes to next stage in default script' do
+    skip 'stage_changing no longer in milestone response'
+
     last_level_in_stage = @script_level.script.script_levels.reverse.find {|x| x.level.game.name == 'Artist'}
     post :milestone,
       params: @milestone_params.merge(script_level_id: last_level_in_stage.id)
@@ -1087,6 +1086,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone changes to next stage in custom script' do
+    skip 'stage_changing no longer in milestone response'
+
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
