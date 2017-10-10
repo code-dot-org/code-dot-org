@@ -141,9 +141,9 @@
     "teacher_markdown": "Notice that we have already broken the problem solution down into the necessary subgoals. All the students have to do is drag the correct turtle blocks into the right place.\r\n\r\nThe constraint of working with only 4 commands is important. (See: \r\n\"What's the Point?\" below.) If students come to the class with prior knowledge of programming they might try to go outside these constraints to reduce the number of lines of code.  \r\n\r\nIf you see students using commands beyond the 4 provided - or using parameters with those commands like: `moveForward(150)`, you should tell them that they are not solving the problem; the problem is to create the images using only the 4 commands provided.",
     "disable_procedure_autopopulate": "false",
     "start_blocks": "//Move turtle\r\n//Orient turtle\r\n//Move turtle\r\n//Orient turtle\r\n//Move turtle\r\n//Orient turtle\r\n//Move turtle\r\n//Orient turtle",
-    "contained_level_names": null,
     "step_speed": "5",
-    "palette_category_at_start": "turtle"
+    "palette_category_at_start": "turtle",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

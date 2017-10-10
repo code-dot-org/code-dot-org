@@ -58,9 +58,6 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "markdown_instructions": "This is how we'll be using App Lab throughout this unit. You'll get several puzzles to solve by dragging blocks from the toolbox to the workspace. Sometimes the workspace will tell you the subgoals of the puzzle, and sometimes you'll have to identify the subgoals yourself. \r\n\r\nThe first step of every puzzle will be to put the subgoals of the problem in the workspace (if they aren't already there). Then you'll put the blocks that solve the subgoals underneath.\r\n\r\nIn the workspace below, we've added two subgoals, Move turtle and Orient turtle. Underneath each subgoal, we've added the blocks to complete the subgoal.\r\n\r\nThe subgoals are described in comment blocks. This means that the subgoal comment will be visible in your code, but they won't do anything when you run the code. Comments are purely to make notes to yourself or other people who might view the code.\r\n\r\n# Do This:\r\nPress the `Run` button to run the code. \r\nNotice that the subgoals don't show up in the drawing. Only the blocks will make the turtle do something.",
-    "encrypted_examples": [
-
-    ],
     "examples_required": "false",
     "never_autoplay_video": "true",
     "submittable": "false",

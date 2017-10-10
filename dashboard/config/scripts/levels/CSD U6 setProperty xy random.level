@@ -50,11 +50,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSD U6 setProperty clicker template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "palette_category_at_start": "math"
+    "palette_category_at_start": "math",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
