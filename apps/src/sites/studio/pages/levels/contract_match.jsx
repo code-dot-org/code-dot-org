@@ -91,60 +91,67 @@ $(window).load(function () {
    *   - DomainsList
    *     - TypeChooser
    */
-  var ContractForm = React.createClass({
-    getName: function () {
+  class ContractForm extends React.Component {
+    getName() {
       return this.state.name;
-    },
-    getRangeType: function () {
+    }
+
+    getRangeType() {
       return this.state.rangeType;
-    },
-    getDomainTypes: function () {
+    }
+
+    getDomainTypes() {
       return this.state.domainTypes;
-    },
-    nextUniqueID_: 0,
-    grabUniqueID: function () {
+    }
+
+    nextUniqueID_ = 0;
+
+    grabUniqueID() {
       return (this.nextUniqueID_++);
-    },
-    getInitialState: function () {
-      /**
-       * @param data {{
-       *   name: string,
-       *   rangeType: BlockValueType,
-       *   domainTypes: {
-       *     type: BlockValueType,
-       *     key: string
-       *   },
-       * }}
-       */
-      return {
-        name: "",
-        rangeType: blockValueType.NUMBER,
-        domainTypes: []
-      };
-    },
-    onNameChangeEvent: function (event) {
+    }
+
+    /**
+     * @param data {{
+     *   name: string,
+     *   rangeType: BlockValueType,
+     *   domainTypes: {
+     *     type: BlockValueType,
+     *     key: string
+     *   },
+     * }}
+     */
+    state = {
+      name: "",
+      rangeType: blockValueType.NUMBER,
+      domainTypes: []
+    };
+
+    onNameChangeEvent = (event) => {
       this.setState({
         name: event.target.value
       });
-    },
-    onRangeChange: function (newType) {
+    };
+
+    onRangeChange = (newType) => {
       this.setState({
         rangeType: newType
       });
-    },
-    onDomainChange: function (domainKey, newType) {
+    };
+
+    onDomainChange = (domainKey, newType) => {
       this.setState({
         domainTypes:
-          this.state.domainTypes.map(function (object) {
+          this.state.domainTypes.map((object) => {
             if (object.key === domainKey) {
               object.type = newType;
             }
             return object;
           })
       });
-    },
-    onDomainAdd: function () {
-      var nextDomainID = this.grabUniqueID();
+    };
+
+    onDomainAdd = () => {
+      const nextDomainID = this.grabUniqueID();
       this.setState({
         domainTypes:
           this.state.domainTypes.concat({
@@ -153,8 +160,9 @@ $(window).load(function () {
             order: nextDomainID
           })
       });
-    },
-    onDomainRemove: function (domainKey) {
+    };
+
+    onDomainRemove = (domainKey) => {
       this.setState({
         domainTypes:
           // TODO(bjordan): change to _.find once lodash available
@@ -162,8 +170,9 @@ $(window).load(function () {
             return object.key !== domainKey;
           })
       });
-    },
-    render: function () {
+    };
+
+    render() {
       return (
         <div>
           <div id="sectionTitle">Name</div>
@@ -182,7 +191,7 @@ $(window).load(function () {
         </div>
       );
     }
-  });
+  }
 
   var DomainsList = React.createClass({
     propTypes: {
