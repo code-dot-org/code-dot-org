@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import Button from '../Button';
 import color from "../../util/color";
 import i18n from "@cdo/locale";
@@ -137,11 +136,6 @@ class CensusForm extends Component {
       invalidEmail: false
     }
   };
-
-  componentDidMount() {
-    // Move the haml-rendered DOM section inside our protected stateful div
-    $('#school-country-dropdown').appendTo(ReactDOM.findDOMNode(this.refs.schoolCountry)).show();
-  }
 
   handleChange(propertyName, event) {
     this.setState({
