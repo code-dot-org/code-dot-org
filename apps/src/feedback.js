@@ -953,7 +953,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel = options.level.final_level;
         var stageCompleted = null;
-        const fallback = window.appOptions.report.fallback_response.success;
+        var fallback = window.appOptions.report.fallback_response.success;
 
         if (fallback.stage_changing) {
           stageCompleted = fallback.stage_changing.previous.name;
