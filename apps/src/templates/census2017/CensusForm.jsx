@@ -208,8 +208,8 @@ class CensusForm extends Component {
   }
 
   validateSchool() {
-    if ($("#school-country").val() === "US") {
-      if (($("#school-id").val()) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
+    if ($("#school-country").val() === "United States") {
+      if (($("#nces_school").val()) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
         return false;
       } else {
       return true;
@@ -238,6 +238,7 @@ class CensusForm extends Component {
         email: this.validateNotBlank(this.state.submission.email),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
+        country: this.validateNotBlank(this.state.submission.country),
         school: this.validateSchool(),
         role: this.validateNotBlank(this.state.submission.role),
         hoc: this.validateNotBlank(this.state.submission.hoc),
@@ -250,7 +251,7 @@ class CensusForm extends Component {
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours) {
+    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours && !errors.country) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -263,7 +264,7 @@ class CensusForm extends Component {
 
   render() {
     const { showFollowUp, showPledge, submission, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
+    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours || errors.country);
     const US = submission.country === "United States";
 
     return (
@@ -277,6 +278,11 @@ class CensusForm extends Component {
               <div style={styles.question}>
                 {i18n.schoolCountry()}
                 <span style={styles.asterisk}> *</span>
+                {errors.country && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredSelect()}
+                  </div>
+                )}
               </div>
               <select
                 name="country_s"
