@@ -1,0 +1,11 @@
+- require 'country_codes'
+
+#school-country-dropdown{style:"display:none"}
+  .form-section
+    .form-group#school-country-group
+      .question{style:"float:left; font-family: 'Gotham 3r', sans-serif; font-size: 16px; padding-top: 10; padding-bottom: 5; padding-right: 3px;"} School Country
+      %span{style: "color:#c00; font-family: 'Gotham 5r'; font-size:20px"} *
+      %select#school-country.form-control{name: "country_s", type: "select", required: false}
+        %option#selected-school-country{value: "", selected: true, disabled: true}
+        - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
+          %option{value: code}= country_name_from_code(code)

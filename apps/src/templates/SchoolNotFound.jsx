@@ -31,16 +31,20 @@ const styles = {
     paddingTop: 5,
     paddingBottom: 5
   },
+  field: {
+    float: 'left',
+    height: '80px',
+    width: '450px',
+  },
+  clear: {
+    width: '100%',
+    clear: 'both'
+  },
   asterisk: {
     fontSize: 20,
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red,
   },
-  field: {
-    float: 'left',
-    height: '80px',
-    width: '450px',
-  }
 };
 
 export default class SchoolNotFound extends Component {
@@ -62,20 +66,20 @@ export default class SchoolNotFound extends Component {
     return (
       <div>
         <div style={styles.question}>
-          {i18n.schoolNotFound()}
+          {i18n.schoolNotFoundDescription()}
         </div>
         <div>
           <div style={styles.field}>
             <label>
               <div style={styles.question}>
                 {i18n.schoolName()}
+                <span style={styles.asterisk}> *</span>
               </div>
               <input
                 type="text"
                 name="school_name_s"
                 value={this.state.schoolName}
                 onChange={this.handleChange.bind(this, 'schoolName')}
-                placeholder="Central High School"
                 style={styles.input}
               />
             </label>
@@ -84,6 +88,7 @@ export default class SchoolNotFound extends Component {
             <label>
               <div style={styles.question}>
                 {i18n.schoolType()}
+                <span style={styles.asterisk}> *</span>
               </div>
               <select
                 name="school_type_s"
@@ -108,6 +113,7 @@ export default class SchoolNotFound extends Component {
             <label>
               <div style={styles.question}>
                 {i18n.schoolCity()}
+                <span style={styles.asterisk}> *</span>
               </div>
               <input
                 type="text"
@@ -122,6 +128,7 @@ export default class SchoolNotFound extends Component {
             <label>
               <div style={styles.question}>
                 {i18n.schoolState()}
+                <span style={styles.asterisk}> *</span>
               </div>
               <select
                 name="school_state_s"
@@ -145,6 +152,7 @@ export default class SchoolNotFound extends Component {
           <label>
             <div style={styles.question}>
               {i18n.schoolZip()}
+              <span style={styles.asterisk}> *</span>
             </div>
             <input
               type="text"
@@ -155,7 +163,7 @@ export default class SchoolNotFound extends Component {
             />
           </label>
         </div>
-        <div style={{width: '100%', clear: 'both'}}/>
+        <div style={styles.clear}/>
       </div>
     );
   }
