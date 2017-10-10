@@ -1111,6 +1111,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone post respects level_id for active level' do
+    skip 'level_id no longer in milestone repsonse'
+
     script = create :script
     stage = create :stage, script: script
     level1a = create :maze, name: 'maze 1'
@@ -1124,7 +1126,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       )
     response = JSON.parse(@response.body)
 
-    assert_equal response['level_id'], level1a.id
+    assert_equal level1a.id, response['level_id']
   end
 
   test 'New level completed response' do
