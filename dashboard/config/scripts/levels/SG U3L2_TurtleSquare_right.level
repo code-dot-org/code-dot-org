@@ -139,11 +139,11 @@
     "expand_debugger": "false",
     "teacher_markdown": "The insight here is that we can turn right by turning left 3 times.",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "start_blocks": "// Move turtle\r\n// Orient turtle\r\n// Move turtle\r\n// Orient turtle\r\n// Move turtle\r\n// Orient turtle\r\n// Move turtle\r\n// Orient turtle",
     "ideal": "16",
     "step_speed": "4",
-    "palette_category_at_start": "turtle"
+    "palette_category_at_start": "turtle",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
