@@ -110,6 +110,7 @@ const ButtonList = React.createClass({
   }
 });
 
+export default ButtonList;
 export {
   ButtonList,
   otherString
