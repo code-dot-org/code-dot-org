@@ -66,7 +66,6 @@ window.SignupManager = function (options) {
     // show a generic error
     if (fieldsWithErrors === 0) {
       $('#signup-error').show();
-      console.log("got unhandled error");
     }
   }
 
