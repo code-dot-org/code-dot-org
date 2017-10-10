@@ -84,10 +84,12 @@ he:
     twitter: 'טוויטר'
     facebook: 'פייסבוק'
     windowslive: 'חשבון מיקרוסופט'
+    clever: 'Clever Account'
     forgot_password: 'שכחת את הסיסמא שלך?'
     need_confirmation: "לא קיבלת את  ההוראות האישור?"
     need_unlock: "לא קיבלת את ההוראות הפתיחה?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} תלמידים כבר נרשמו.'
     teacher_count: '%{count} מורים כבר נרשמו.'
@@ -257,7 +259,7 @@ he:
       my_dashboard: "My Dashboard"
       courses: "מסלולים"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "פרויקט"
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report bug"
@@ -751,9 +753,10 @@ he:
     rename: "שנה שם"
     save: "שמור"
     delete: "מחק"
+    import: "Import"
     exit: "חזור לקורס"
     my_projects: "הפרויקטים שלי"
-    project_gallery: "Project Gallery"
+    project_gallery: "פרויקט"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "שתף"
@@ -784,6 +787,7 @@ he:
     remix: 'רמיקס'
     click_to_remix: "Click \"Remix\" to spin-off your own version!"
     edit_project: 'ערוך פרויקט'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
       policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
@@ -836,6 +840,10 @@ he:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
