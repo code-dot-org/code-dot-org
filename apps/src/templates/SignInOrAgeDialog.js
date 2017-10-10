@@ -6,6 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
+import { navigateToHref } from '@cdo/apps/utils';
 
 const styles = {
   container: {
@@ -84,7 +85,7 @@ class SignInOrAgeDialog extends Component {
 
     if (parseInt(value, 10) < 13) {
       // redirect to /home, with an info warning if possible
-      window.location = '/too_young';
+      navigateToHref('/too_young');
       return;
     }
 
