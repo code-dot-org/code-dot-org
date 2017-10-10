@@ -25,6 +25,7 @@ import {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
+  setIsAge13Required,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
   setScriptCompleted,
@@ -82,7 +83,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     currentLevelId, saveAnswersBeforeNavigation, signedIn, stageExtrasEnabled) {
   const store = getStore();
 
-  const { name, disablePostMilestone, isHocScript } = scriptData;
+  const { name, disablePostMilestone, isHocScript, age_13_required } = scriptData;
 
   // Depend on the fact that signed in users have a bunch of progress related
   // keys that signed out users do not
@@ -105,6 +106,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     store.dispatch(setUserSignedIn(signedIn));
   }
   store.dispatch(setIsHocScript(isHocScript));
+  store.dispatch(setIsAge13Required(age_13_required));
   if (signedIn) {
     progress.showDisabledBubblesAlert();
   }

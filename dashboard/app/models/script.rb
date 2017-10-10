@@ -125,6 +125,7 @@ class Script < ActiveRecord::Base
     stage_extras_available
     has_verified_resources
     script_announcements
+    age_13_required
   )
 
   def self.twenty_hour_script
@@ -879,6 +880,7 @@ class Script < ActiveRecord::Base
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
       script_announcements: script_announcements,
+      age_13_required: age_13_required?,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -896,7 +898,8 @@ class Script < ActiveRecord::Base
       name: name,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      student_detail_progress_view: student_detail_progress_view?
+      student_detail_progress_view: student_detail_progress_view?,
+      age_13_required: age_13_required?
     }
   end
 
@@ -944,6 +947,7 @@ class Script < ActiveRecord::Base
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
       script_announcements: script_data[:script_announcements],
+      age_13_required: !!script_data[:age_13_required],
     }.compact
   end
 
