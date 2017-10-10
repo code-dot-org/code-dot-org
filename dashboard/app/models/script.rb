@@ -654,7 +654,7 @@ class Script < ActiveRecord::Base
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
-      end || ScriptLevel.create(script_level_attributes) do |sl|
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
       # Set/create Stage containing custom ScriptLevel

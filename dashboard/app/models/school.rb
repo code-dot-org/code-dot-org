@@ -11,6 +11,9 @@
 #  school_type        :string(255)      not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  address_line1      :string(30)
+#  address_line2      :string(30)
+#  address_line3      :string(30)
 #
 # Indexes
 #

@@ -10,7 +10,7 @@ theme: responsive
 
 ## <a name="what"></a>What is CS Discoveries?
 
-Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
 <div class="col-50" style="padding-right: 20px">
 
@@ -39,9 +39,7 @@ Computer Science Discoveries (CS Discoveries) is an introductory computer scienc
 
 If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
-
-[<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
+[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52) [<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
 
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
@@ -79,28 +77,54 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 <hr/>
 
-## <a name="content"></a>Unit Overview
+## <a name="content"></a>Curriculum Overview
 
 The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into lessons. The curriculum guide contains
 details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations. 
 
 <br>
 
-|                   Unit                   |                   Overview                   | Lesson Plans                              |
-| :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
-| [**Unit 1 - Problem Solving**](https://studio.code.org/s/csd1) | Explore the problem-solving process and the different ways humans and computers solve problems. | [Lesson plans](https://curriculum.code.org/csd/unit1) |
-| [**Unit 2 - Web Development**](https://studio.code.org/s/csd2) | Discover the languages powering the web. Build your own websites in HTML and CSS using [Web Lab](/educate/weblab). | [Lesson plans](https://curriculum.code.org/csd/unit2) |
-| [**Unit 3 - Animations and Games**](https://studio.code.org/s/csd3) | Learn the powerful constructs underlying programming languages. Build interactive animations and games in JavaScript using [Game Lab](/educate/gamelab). | [Lesson plans](https://curriculum.code.org/csd/unit3) |
-| [**Unit 4 - The Design Process**](https://studio.code.org/s/csd4) | Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using [App Lab](/educate/applab). | [Lesson plans](https://curriculum.code.org/csd/unit4) |
-| [**Unit 5 - Data and Society**](https://studio.code.org/s/csd5) | Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data. | [Lesson plans](https://curriculum.code.org/csd/unit5) |
-| [**Unit 6 - Physical Computing**](https://studio.code.org/s/csd6) | Explore the relationship between hardware and software while building interactive projects on Adafruit's Circuit Playground. | [Lesson plans](https://curriculum.code.org/csd/unit6) |
+<div class="col-50" style="padding-right: 20px">
 
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd1'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'Problem Solving', description: 'Explore the problem-solving process and the different ways humans and computers solve problems.'%>
 
+</div>
 
+[col-50]
 
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd2'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Web Development', description: 'Discover the languages powering the web. Build your own websites in HTML and CSS using Web Lab.'%>
 
-<div style='clear:both'></div>
+[/col-50]
 
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px">
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd3'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Animations and Games', description: 'Learn the powerful constructs underlying programming languages. Build interactive games in JavaScript using Game Lab.'%>
+
+</div>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd4'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'The Design Process', description: 'Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using App Lab.'%>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px">
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd5'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Data and Society', description: 'Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data.'%>
+
+</div>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground."%>
+
+[/col-50]
+
+<div style="clear:both"></div>
 
 ## <a name="involved"></a>Keep up with CS Discoveries
 
