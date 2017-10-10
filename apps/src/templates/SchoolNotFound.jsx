@@ -83,6 +83,7 @@ export default class SchoolNotFound extends Component {
                 <span style={styles.asterisk}> *</span>
               </div>
               <input
+                id="school_name"
                 type="text"
                 name="school_name_s"
                 value={this.state.schoolName}
@@ -162,6 +163,7 @@ export default class SchoolNotFound extends Component {
               <span style={styles.asterisk}> *</span>
             </div>
             <input
+              id="school_zipcode"
               type="text"
               name="school_zip_s"
               value={this.state.schoolZip}
