@@ -9,7 +9,8 @@ import $ from 'jquery';
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
     filterType: PropTypes.string.isRequired,
-    courseList: PropTypes.arrayOf(PropTypes.array).isRequired
+    courseList: PropTypes.arrayOf(PropTypes.array).isRequired,
+    courseUnitMap: PropTypes.object.isRequired
   }
 
   state = {
@@ -22,6 +23,10 @@ class PeerReviewSubmissions extends React.Component {
     this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
 
     this.getFilteredResults();
+  }
+
+  handleCourseUnitFilterChange = (event) => {
+    this.setState({plcCourseUnitId: event.target.value});
   }
 
   handleCourseFilterChange = (event) => {
@@ -82,6 +87,28 @@ class PeerReviewSubmissions extends React.Component {
               </option>
             );
           })}
+        </FormControl>
+        <FormControl
+          id="PlcCourseUnitSelect"
+          style={{marginLeft: '20px', marginBottom: '0px', verticalAlign: 'middle'}}
+          componentClass="select"
+          placeholder="Filter by course unit"
+          disabled={!this.state.plcCourseId}
+          onChange={this.handleCourseUnitFilterChange}
+          value={this.state.plcCourseUnitId}
+        >
+          <option value="">
+            All Course Units
+          </option>
+          {
+            this.state.plcCourseId && this.props.courseUnitMap[this.state.plcCourseId].map((courseUnit, i) => {
+              return (
+                <option key={i} value={courseUnit[1]}>
+                  {courseUnit[0]}
+                </option>
+              )
+            })
+          }
         </FormControl>
         <Button
           id="DownloadCsvReport"
