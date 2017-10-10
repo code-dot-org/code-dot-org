@@ -89,12 +89,12 @@
   congratulations_on_completing_course2: Onnittelut! Läpäisit kurssin 2
   congratulations_on_completing_course3: Onnittelut! Läpäisit kurssin 3
   congratulations_on_completing_course4: Onnittelut! Läpäisit kurssin 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Onnittelut! Läpäisit kurssin A
+  congratulations_on_completing_courseb: Onnittelut! Läpäisit kurssin B
+  congratulations_on_completing_coursec: Onnittelut! Läpäisit kurssin C
+  congratulations_on_completing_coursed: Onnittelut! Läpäisit kurssin D
+  congratulations_on_completing_coursee: Onnittelut! Läpäisit kurssin E
+  congratulations_on_completing_coursef: Onnittelut! Läpäisit kurssin F
   congratulations_on_completing_accelerated: Onnittelut nopeutetun kurssin suorittamisesta
   congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
   congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
@@ -142,10 +142,10 @@
     hahmonsa lohkojen avulla eloon.
   third_party_scratchjr_btn_curriculum: Lataa Scratch Jr. opetussuunnitelma
   third_party_scratchjr_btn_site: Vieraile Scratch Jr. -sivustolla.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: Scratchin kanssa voit ohjelmoida vuorovaikutteisia tarinoita,
+    pelejä ja animaatioita ja jakaa luomuksesi muille online-yhteisössä. Scratch auttaa
+    nuoria ajattelemaan luovasti, järjestelmällisesti ja työskentelemään yhdessä —
+    keskeisiä taitoja elämässä 2000-luvulla.
   third_party_scratch_btn_curriculum: Lataa Scratch opetussuunnitelma
   third_party_scratch_btn_forum: Scratch Kasvattaja Foorumi
   third_party_scratch_btn_site: Vieraile Scratch -sivustolla
@@ -263,47 +263,41 @@
   just_did_course2: Suoritin juuri kurssin 2 - tsekkaa tämä! @codeorg
   just_did_course3: Suoritin juuri kurssin 3 - tsekkaa tämä! @codeorg
   just_did_course4: Suoritin juuri kurssin 4 - tsekkaa tämä! @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_coursea: Suoritin juuri kurssin A - tarkista tämä! @codeorg
+  just_did_courseb: Suoritin juuri kurssin B - tarkista tämä! @codeorg
+  just_did_coursec: Suoritin juuri kurssin C - tarkista tämä! @codeorg
+  just_did_coursed: Suoritin juuri kurssin D - tarkista tämä! @codeorg
+  just_did_coursee: Suoritin juuri kurssin E - tarkista tämä! @codeorg
+  just_did_coursef: Suoritin juuri kurssin F - tarkista tämä! @codeorg
   just_did_accelerated: Suoritin juuri nopeutetun kurssin - tsekkaa tämä! @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
+  just_did_hoc_donor: 'Suoritin juuri #Koodaustunnin - Tarkista tämä! (Kiitos %{donor_twitter}
+    tukemisesta @codeorg)'
+  just_did_course1_donor: Suoritin juuri kurssin 1 - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_course2_donor: Suoritin juuri kurssin 2 - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_course3_donor: Suoritin juuri kurssin 3 - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_course4_donor: Suoritin juuri kurssin 4 - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_coursea_donor: Suoritin juuri kurssin A - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_courseb_donor: Suoritin juuri kurssin B - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_coursec_donor: Suoritin juuri kurssin C - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_coursed_donor: Suoritin juuri kurssin D - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_coursee_donor: Suoritin juuri kurssin E - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_coursef_donor: Suoritin juuri kurssin F - Tarkista tämä! Kiitos %{donor_twitter}
+    tukemisesta @codeorg
+  just_did_accelerated_donor: Suoritin juuri nopeutetun kurssin - Tarkista tämä! Kiitos
+    %{donor_twitter} tukemisesta @codeorg
   twitter_teach_cs: Yhdeksän kymmenestä haluaisi että kouluissa opettaisiin tietojenkäsittelyä.
     http://youtu.be/nKIu9yen5nc. Käy katsomassa https://code.org/.
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
+  twitter_cs_foundational: Tietojenkäsittelytiede on perustavaa opintoa jokaiselle
+    oppilaalle. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Opiskele Koodaustunnilla
   beyond_hoc: Koodaustunnin jälkeen
   what_gender: Mikä on sukupuolesi?
@@ -314,8 +308,8 @@
   lines_of_code: TÄHÄN MENNESSÄ KIRJOITETTU YLI <b># RIVIÄ KOODIA</b>.
   lines_of_code_alt: "<b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA"
   who_has_done_hoc: 'Kuka on suorittanut #Koodaustunti? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
+  who_has_done_hoc_donor: Kuka on tehnyt kodaustunnin? (Kiitos %{donor_twitter} tukemisesta
+    @codeorg)
   hoc_leaderboards: Koodaustunnin pistetaulukot
   students_and_lines: "%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
     %{lines} riviä koodia."
@@ -625,8 +619,8 @@
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Päivitä tietosi
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_header_shared: Tietoa jaetaan opettajille vapaaehtoisten
+    kartasta
   volunteer_engineer_submission_field_name: Nimi
   volunteer_engineer_submission_field_name_placeholder: Koko nimi
   volunteer_engineer_submission_field_company: Yritys (tai yliopisto)
@@ -1190,6 +1184,8 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1413,8 +1409,7 @@
     Python.
   texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
     calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  teacherled_shortdescription: Innostu luomaan oma kooditunti tapahtuma näillä tuntisuunnitelmilla.
   course2_shortdescription_congrats: For students with basic reading skills, this
     course builds on Course 1. Students will create programs to solve problems and
     develop interactive games or stories they can share. Recommended for grades 2-5.
@@ -1940,7 +1935,7 @@
   header_my_dashboard: My Dashboard
   header_courses: Kurssit
   header_course_catalog: Course Catalog
-  header_project_gallery: Project Gallery
+  header_project_gallery: Projektit
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Kouluttajan yleiskatsaus
@@ -2033,5 +2028,3 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
