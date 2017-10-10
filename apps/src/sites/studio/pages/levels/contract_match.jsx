@@ -51,22 +51,6 @@ $(window).load(function () {
   }
 
   /**
-   * TODO(bjordan): Change usages to lodash _.curry once available in this context
-   * @param fn function to be curried with arguments
-   * @params [...] rest of args
-   * @returns {Function} new function with the given arguments pre-set as the
-   *                     defaults (curried)
-   */
-  var curry = function (fn) {
-    var args = Array.prototype.slice.call(arguments, 1);
-
-    return function () {
-      return fn.apply(this, args.concat(
-        Array.prototype.slice.call(arguments, 0)));
-    };
-  };
-
-  /**
    * Enum of block types. Used for block and domain/range coloring
    * @enum {string}
    */
@@ -205,11 +189,11 @@ $(window).load(function () {
             order={object.order}
             type={object.type}
             key={object.key}
-            onTypeChange={curry(this.props.onDomainChange, object.key)}
+            onTypeChange={(...args) => this.props.onDomainChange(object.key, ...args)}
           />
           <button
             className="btn domain-x-button"
-            onClick={curry(this.props.onDomainRemove, object.key)}
+            onClick={(...args) => this.props.onDomainRemove(object.key, ...args)}
           >
             Remove
           </button>
