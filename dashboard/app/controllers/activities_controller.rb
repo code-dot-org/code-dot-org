@@ -121,7 +121,7 @@ class ActivitiesController < ApplicationController
         level_source,
         script_level,
         test_result,
-        params[:lines],
+        params[:lines].to_i,
         params[:attempt].to_i,
         params[:time].to_i,
         params[:submitted] == 'true',
