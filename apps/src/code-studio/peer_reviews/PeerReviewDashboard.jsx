@@ -6,7 +6,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 class PeerReviewDashboard extends React.Component {
   render() {
     let courseList = getScriptData('courseList');
-    let courseUnitMap = getScriptData('courseUnitMap')
+    let courseUnitMap = getScriptData('courseUnitMap');
 
     return (
       <Tabs id="peer review dashboard" defaultActiveKey={1}>
