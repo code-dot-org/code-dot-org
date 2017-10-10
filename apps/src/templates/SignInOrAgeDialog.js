@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
+import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 
 const styles = {
   container: {
@@ -60,9 +62,15 @@ const styles = {
   }
 };
 
-export default class SignInOrAgeDialog extends Component {
+const sessionStorageKey = 'anon_over13';
+
+class SignInOrAgeDialog extends Component {
   state = {
     open: true
+  };
+
+  static propTypes = {
+    signedIn: PropTypes.bool.isRequired
   };
 
   onClickAgeOk = () => {
@@ -78,6 +86,8 @@ export default class SignInOrAgeDialog extends Component {
       return;
     }
 
+    sessionStorage.setItem(sessionStorageKey, true);
+
     // Over 13, let them do the tutorial
     this.setState({
       open: false
@@ -85,6 +95,11 @@ export default class SignInOrAgeDialog extends Component {
   };
 
   render() {
+    // TODO: also check LB setting
+    if (this.props.signedIn || sessionStorage.getItem(sessionStorageKey)) {
+      return null;
+    }
+
     // TODO: i18n
     return (
       <BaseDialog
@@ -138,3 +153,9 @@ export default class SignInOrAgeDialog extends Component {
     );
   }
 }
+
+export const UnconnectedSignInOrAgeDialog = SignInOrAgeDialog;
+
+export default connect(state => ({
+  signedIn: state.progress.signInState === SignInState.SignedIn
+}))(SignInOrAgeDialog);
