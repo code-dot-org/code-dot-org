@@ -224,16 +224,32 @@ $(window).load(function () {
     }
   }
 
-  var TypeChooser = React.createClass({
-    propTypes: {
+  class TypeChooser extends React.Component {
+    static propTypes = {
       onTypeChange: PropTypes.func.isRequired,
       type: PropTypes.string,
-    },
-    selectmenuChange: function (selectChange) {
+    };
+
+    selectmenuChange = (selectChange) => {
       this.props.onTypeChange(selectChange.target.value);
-    },
-    render: function () {
-      var divStyle = {
+    };
+
+    componentDidMount() {
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu({
+        select: function () {
+          addSquareIconToButton(this);
+        },
+        change: this.selectmenuChange
+      });
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu('styleCurrentValue');
+    }
+
+    componentWillUnmount() {
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu('destroy');
+    }
+
+    render() {
+      const divStyle = {
         backgroundColor: typesToColors[this.props.type]
       };
       return (
@@ -244,20 +260,8 @@ $(window).load(function () {
           <option data-color={typesToColors[blockValueType.BOOLEAN]} value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
         </select>
       );
-    },
-    componentDidMount: function () {
-      $(ReactDOM.findDOMNode(this)).coloriconselectmenu({
-        select: function () {
-          addSquareIconToButton(this);
-        },
-        change: this.selectmenuChange
-      });
-      $(ReactDOM.findDOMNode(this)).coloriconselectmenu("styleCurrentValue");
-    },
-    componentWillUnmount: function () {
-      $(ReactDOM.findDOMNode(this)).coloriconselectmenu('destroy');
     }
-  });
+  }
 
   var contractForm = ReactDOM.render(<ContractForm />, document.getElementById('contractForm'));
 
