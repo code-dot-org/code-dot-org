@@ -18,84 +18,51 @@ var ElementType = library.ElementType;
  * friendlyName: Name used in the code editor to refer to this property
  * internalName: Name used in updateProperty to refer to this property
  * type: Type of this property, used for validation at run time.
+ * defaultValue: String to be displayed as the setProperty value when this
+ *     property is chosen in the setProperty dropdown
  * alias (optional): True if this property should not be displayed to the user
  *     in the drop down list of properties
  */
 var PROP_INFO = {
-  width: { friendlyName: 'width', internalName: 'style-width', type: 'number'},
-  height: { friendlyName: 'height', internalName: 'style-height', type: 'number' },
-  canvasWidth: { friendlyName: 'width', internalName: 'width', type: 'number'},
-  canvasHeight: { friendlyName: 'height', internalName: 'height', type: 'number' },
-  x: { friendlyName: 'x', internalName: 'left', type: 'number' },
-  y: { friendlyName: 'y', internalName: 'top', type: 'number' },
-  textColor: { friendlyName: 'text-color', internalName: 'textColor', type: 'string' },
-  backgroundColor: { friendlyName: 'background-color', internalName: 'backgroundColor', type: 'string' },
-  fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number' },
-  textAlign: { friendlyName: 'text-align', internalName: 'textAlign', type: 'string' },
-  hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean' },
-  text: { friendlyName: 'text', internalName: 'text', type: 'uistring' },
-  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'uistring' },
-  image: { friendlyName: 'image', internalName: 'image', type: 'string' },
-  screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string' },
+  width: { friendlyName: 'width', internalName: 'style-width', type: 'number', defaultValue: '100' },
+  height: { friendlyName: 'height', internalName: 'style-height', type: 'number', defaultValue: '100' },
+  canvasWidth: { friendlyName: 'width', internalName: 'width', type: 'number', defaultValue: '100' },
+  canvasHeight: { friendlyName: 'height', internalName: 'height', type: 'number', defaultValue: '100' },
+  x: { friendlyName: 'x', internalName: 'left', type: 'number', defaultValue: '100' },
+  y: { friendlyName: 'y', internalName: 'top', type: 'number', defaultValue: '100' },
+  textColor: { friendlyName: 'text-color', internalName: 'textColor', type: 'string', defaultValue: '"red"' },
+  backgroundColor: { friendlyName: 'background-color', internalName: 'backgroundColor', type: 'string', defaultValue: '"red"' },
+  fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number', defaultValue: '100' },
+  textAlign: { friendlyName: 'text-align', internalName: 'textAlign', type: 'string', defaultValue: '"left"' },
+  hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean', defaultValue: 'true' },
+  text: { friendlyName: 'text', internalName: 'text', type: 'uistring', defaultValue: '"text"' },
+  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'uistring', defaultValue: '"text"' },
+  image: { friendlyName: 'image', internalName: 'image', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
+  screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
   // pictureImage and picture both map to 'picture' internally, but allow us to accept
   // either 'image' or 'picture' as the property name. picture is marked as an alias so
   // it won't show up in the dropdown.
-  pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string' },
-  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true },
-  iconColor: { friendlyName: 'icon-color', internalName: 'icon-color', type: 'string' },
-  groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string' },
-  checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean' },
-  readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean' },
-  options: { friendlyName: 'options', internalName: 'options', type: 'array' },
-  value: { friendlyName: 'value', internalName: 'defaultValue', type: 'number' },
-  min: { friendlyName: 'min', internalName: 'min', type: 'number' },
-  max: { friendlyName: 'max', internalName: 'max', type: 'number' },
-  step: { friendlyName: 'step', internalName: 'step', type: 'number' }
-};
-
-let DEFAULT_PROP_VALUES = {
-  width: '100',
-  height: '100',
-  x: '100',
-  y: '100',
-  'text-color': '"red"',
-  'background-color': '"red"',
-  'font-size': '100',
-  'text-align': '"left"',
-  hidden: 'true',
-  text: '"text"',
-  placeholder: '"text"',
-  image: '"https://code.org/images/logo.png"',
-  'icon-color': '"red"',
-  'group-id': '"text"',
-  checked: 'true',
-  readonly: 'true',
-  options: '["option1", "etc"]',
-  value: '100',
-  min: '100',
-  max: '100',
-  step: '100',
+  pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
+  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true, defaultValue: '"https://code.org/images/logo.png"' },
+  iconColor: { friendlyName: 'icon-color', internalName: 'icon-color', type: 'string', defaultValue: '"red"' },
+  groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string', defaultValue: '"text"' },
+  checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean', defaultValue: 'true' },
+  readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean', defaultValue: 'true' },
+  options: { friendlyName: 'options', internalName: 'options', type: 'array', defaultValue: '["option1", "etc"]' },
+  value: { friendlyName: 'value', internalName: 'defaultValue', type: 'number', defaultValue: '100' },
+  min: { friendlyName: 'min', internalName: 'min', type: 'number', defaultValue: '100' },
+  max: { friendlyName: 'max', internalName: 'max', type: 'number', defaultValue: '100' },
+  step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' }
 };
 
 // When we don't know the element type, we display all possible friendly names
-var fullDropdownOptions = _.uniqBy(Object.keys(PROP_INFO).map(function (key) {
-  if (PROP_INFO[key].alias) {
-    return;
-  }
-  let friendlyName = PROP_INFO[key].friendlyName;
-  let setValueParam = DEFAULT_PROP_VALUES[friendlyName];
-  if (setValueParam) {
-    return {
-      text: '"' + friendlyName + '"',
-      display: '"' + friendlyName + '"',
-      setValueParam: setValueParam,
-    };
-  } else {
-    return '"' + PROP_INFO[key].friendlyName + '"';
-  }
-}).filter(object => object), object => {
-  return object.text;
-});
+var fullDropdownOptions = _.uniqBy(Object.keys(PROP_INFO)
+    .map(key => {
+      return constructDropdownOption(key);
+    }).filter(object => object),
+  object => {
+    return object.text;
+  });
 
 /**
  * Information about properties pertaining to each element type. Values have the following
@@ -271,19 +238,32 @@ for (var elementType in PROPERTIES) {
         ' in elementType: ' + elementType);
     }
     elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
-    if (!PROP_INFO[propName].alias) {
-      let setValueParam = DEFAULT_PROP_VALUES[friendlyName];
-      if (setValueParam) {
-        elementProperties.dropdownOptions.push({
-          text: '"' + friendlyName + '"',
-          display: '"' + friendlyName + '"',
-          setValueParam: setValueParam,
-        });
-      } else {
-        elementProperties.dropdownOptions.push('"' + friendlyName + '"');
-      }
+    let dropdownOption = constructDropdownOption(propName);
+    if (dropdownOption) {
+      elementProperties.dropdownOptions.push(dropdownOption);
     }
   });
+}
+
+/**
+ * @param {string} propName Key from PROP_INFO
+ * @return {object|undefined} A droplet dropdown object with an additional
+ *   setValueParam property that can be used to generate a click handler
+ */
+function constructDropdownOption(propName) {
+  let propInfo = PROP_INFO[propName];
+  if (!propInfo || propInfo.alias) {
+    return;
+  }
+  let {friendlyName, defaultValue} = propInfo;
+  if (!friendlyName || !defaultValue) {
+    return;
+  }
+  return {
+    text: '"' + friendlyName + '"',
+    display: '"' + friendlyName + '"',
+    setValueParam: defaultValue,
+  };
 }
 
 /**
