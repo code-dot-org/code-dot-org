@@ -71,7 +71,8 @@ class SignInOrAgeDialog extends Component {
   };
 
   static propTypes = {
-    signedIn: PropTypes.bool.isRequired
+    signedIn: PropTypes.bool.isRequired,
+    age13Required: PropTypes.bool.isRequired,
   };
 
   onClickAgeOk = () => {
@@ -96,8 +97,10 @@ class SignInOrAgeDialog extends Component {
   };
 
   render() {
-    // TODO: also check LB setting
-    if (this.props.signedIn || sessionStorage.getItem(sessionStorageKey)) {
+    const { signedIn, age13Required } = this.props;
+    // Don't show dialog unless script requires 13+, we're not signed in, and
+    // we haven't already given this dialog our age
+    if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
       return null;
     }
 
@@ -157,5 +160,6 @@ class SignInOrAgeDialog extends Component {
 export const UnconnectedSignInOrAgeDialog = SignInOrAgeDialog;
 
 export default connect(state => ({
+  age13Required: state.progress.isAge13Required,
   signedIn: state.progress.signInState === SignInState.SignedIn
 }))(SignInOrAgeDialog);
