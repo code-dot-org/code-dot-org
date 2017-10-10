@@ -654,7 +654,7 @@ class Script < ActiveRecord::Base
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
-      end || ScriptLevel.create(script_level_attributes) do |sl|
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
       # Set/create Stage containing custom ScriptLevel
@@ -692,6 +692,8 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
+      # make sure we have an up to date view
+      stage.reload
       stage.script_levels = script_levels_by_stage[stage.id]
 
       # Go through all the script levels for this stage, except the last one,
