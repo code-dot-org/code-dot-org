@@ -709,6 +709,7 @@
         infinity_playlab_events: Play Lab - Udalosti
         infinity_playlab_repeat_forever: Play Lab - Doživotné opakovanie
         csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_search: How Search Works
         csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
@@ -811,6 +812,11 @@
         mc_2016_events: Hodina kódu Minecraft - Udalosti
         mc_2016_spawn: Hodina kódu Minecraft - Vytváranie postáv
         mc_2016_congrats: Hodina kódu Minecraft - Gratulujeme
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_share: AppLab Hour of Code - Share
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

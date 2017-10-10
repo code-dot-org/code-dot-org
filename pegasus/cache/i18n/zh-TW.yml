@@ -970,6 +970,8 @@
   csp1_name: "單元 1：網際網路"
   csp2_name: "單元 2：數位資訊"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1475,7 +1477,7 @@
   header_my_dashboard: My Dashboard
   header_courses: "課程"
   header_course_catalog: Course Catalog
-  header_project_gallery: "專案作品集"
+  header_project_gallery: "所有專案"
   header_sections: "學習小組"
   header_professional_learning: "專業學習"
   header_educate_overview: "教育工作者概覽"
@@ -1568,5 +1570,3 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
