@@ -209,8 +209,8 @@ const SectionsTable = React.createClass({
                 </td>
               )}
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
-                {section.login_type == SectionLoginType.clever ? i18n.loginTypeClever() :
-                    section.login_type == SectionLoginType.google_classroom ? i18n.loginTypeGoogleClassroom() :
+                {section.login_type === SectionLoginType.clever ? i18n.loginTypeClever() :
+                    section.login_type === SectionLoginType.google_classroom ? i18n.loginTypeGoogleClassroom() :
                         section.code}
               </td>
               {!isTeacher && canLeave && (
