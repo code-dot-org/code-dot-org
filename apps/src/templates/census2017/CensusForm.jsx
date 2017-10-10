@@ -131,6 +131,7 @@ class CensusForm extends Component {
       role: '',
       country: '',
       hoc: '',
+      nces: '',
       afterSchool: '',
       tenHours: '',
       twentyHours: '',
@@ -144,13 +145,31 @@ class CensusForm extends Component {
     }
   };
 
-  handleChange(propertyName, event) {
+  handleChange = (propertyName, event) => {
     this.setState({
       submission: {
         ...this.state.submission,
         [propertyName]: event.target.value
       }
     }, this.checkShowFollowUp);
+  }
+
+  handleSchoolChange = (event) => {
+    if (event) {
+      this.setState({
+        submission: {
+          ...this.state.submission,
+          "nces": event.value
+        }
+      });
+    } else {
+      this.setState({
+        submission: {
+          ...this.state.submission,
+          "nces": ""
+        }
+      });
+    }
   }
 
   checkShowFollowUp() {
@@ -238,8 +257,8 @@ class CensusForm extends Component {
   }
 
   validateSchool() {
-    if ($("#school-country").val() === "United States") {
-      if (($("#nces_school").val()) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
+    if (this.state.submission.country === "United States") {
+      if ((this.state.submission.nces) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
         return false;
       } else {
       return true;
@@ -309,6 +328,7 @@ class CensusForm extends Component {
   }
 
   render() {
+    console.log("STATE:", this.state);
     const { showFollowUp, showPledge, submission, errors } = this.state;
     const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours || errors.country);
     const US = submission.country === "United States";
@@ -348,7 +368,10 @@ class CensusForm extends Component {
             </label>
           </div>
           {US && (
-            <SchoolAutocompleteDropdown/>
+            <SchoolAutocompleteDropdown
+              setField={this.handleSchoolChange}
+              value={this.state.submission.nces}
+            />
           )}
           {!US && (
             <div>

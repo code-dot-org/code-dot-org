@@ -29,7 +29,9 @@ export default class SchoolAutocompleteDropdown extends Component {
     // the default SchooNotFound input fields. Specifically, on the Hour of
     // Code signup form, the school location is entered via a Google maps
     // lookup to support the functionality of the map on that page.
-    overrideSchoolNotFound: PropTypes.bool
+    overrideSchoolNotFound: PropTypes.bool,
+    setField: PropTypes.func,
+    value: PropTypes.string
   };
 
   state = {
@@ -52,6 +54,10 @@ export default class SchoolAutocompleteDropdown extends Component {
     });
   }
 
+  sendToParent = (event) => {
+    this.props.setField(event);
+  }
+
   render() {
     const schoolNotFound = this.state.selectValue &&  this.state.selectValue.value === -1;
     const {overrideSchoolNotFound} = this.props;
@@ -68,8 +74,8 @@ export default class SchoolAutocompleteDropdown extends Component {
           async={true}
           loadOptions={this.getOptions}
           filterOption={() => true}
-          value={this.state.selectValue}
-          onChange={(selectValue) => this.setState({ selectValue })}
+          value={this.props.value}
+          onChange={this.sendToParent}
           placeholder="Find your school"
         />
         {schoolNotFound && !overrideSchoolNotFound && (
