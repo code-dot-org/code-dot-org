@@ -189,29 +189,32 @@ $(window).load(function () {
     }
   }
 
-  var DomainsList = React.createClass({
-    propTypes: {
+  class DomainsList extends React.Component {
+    static propTypes = {
       domainTypes: PropTypes.array.isRequired,
       onDomainAdd: PropTypes.func.isRequired,
-    },
-    render: function () {
-      var self = this;
-      var sortedDomains = this.props.domainTypes.sort(function (a,b) {
-        return a.order > b.order;
-      });
-      var typeChoiceNodes = sortedDomains.map(function (object) {
-        return (
-          <div className="clear" key={object.key}>
-            <TypeChooser
-              order={object.order}
-              type={object.type}
-              key={object.key}
-              onTypeChange={curry(self.props.onDomainChange, object.key)}
-            />
-            <button className="btn domain-x-button" onClick={curry(self.props.onDomainRemove, object.key)}>Remove</button>
-          </div>
-        );
-      });
+      onDomainChange: PropTypes.func.isRequired,
+      onDomainRemove: PropTypes.func.isRequired,
+    };
+
+    render() {
+      const sortedDomains = this.props.domainTypes.sort((a,b) => (a.order > b.order));
+      const typeChoiceNodes = sortedDomains.map(object => (
+        <div className="clear" key={object.key}>
+          <TypeChooser
+            order={object.order}
+            type={object.type}
+            key={object.key}
+            onTypeChange={curry(this.props.onDomainChange, object.key)}
+          />
+          <button
+            className="btn domain-x-button"
+            onClick={curry(this.props.onDomainRemove, object.key)}
+          >
+            Remove
+          </button>
+        </div>
+      ));
       return (
         <div className="domainsList">
           {typeChoiceNodes}
@@ -219,7 +222,7 @@ $(window).load(function () {
         </div>
       );
     }
-  });
+  }
 
   var TypeChooser = React.createClass({
     propTypes: {
