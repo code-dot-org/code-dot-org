@@ -53,12 +53,11 @@
     "callout_json": "[]",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "markdown_instructions": "This is how we'll be using App Lab throughout this unit. You'll get several puzzles to solve by dragging blocks from the toolbox to the workspace. Sometimes the workspace will tell you the subgoals of the puzzle, and sometimes you'll have to identify the subgoals yourself. \r\n\r\nThe first step of every puzzle will be to put the subgoals of the problem in the workspace (if they aren't already there). Then you'll put the blocks that solve the subgoals underneath.\r\n\r\nIn the workspace below, we've added two subgoals, Move turtle and Orient turtle. Underneath each subgoal, we've added the blocks to complete the subgoal.\r\n\r\nThe subgoals are described in comment blocks. This means that the subgoal comment will be visible in your code, but they won't do anything when you run the code. Comments are purely to make notes to yourself or other people who might view the code.\r\n\r\n# Do This:\r\nPress the `Run` button to run the code. \r\nNotice that the subgoals don't show up in the drawing. Only the blocks will make the turtle do something.",
-    "encrypted_examples": "W3q87n8NyBYYlbn6V96A+lnBp6SYwxZLzfl8Jkyjv1YcCqEVP6Fh8kfoJVeK\nSkZy\n",
     "examples_required": "false",
     "never_autoplay_video": "true",
     "submittable": "false",
@@ -113,22 +112,6 @@
         "minTimes": 0,
         "maxTimes": 0,
         "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
-      },
-      {
-        "entries": [
-          "turnLeft"
-        ],
-        "matchType": "exact",
-        "minTimes": 4,
-        "message": "It seems like you’re not turning the turtle left enough times.  Remember that at the end the turtle should be facing the same direction in which it started."
-      },
-      {
-        "entries": [
-          "moveForward"
-        ],
-        "matchType": "exact",
-        "minTimes": 4,
-        "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
       }
     ],
     "instructions_important": "false",
@@ -145,7 +128,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-09 13:26:20 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"video_key\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 13:35:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-09 13:40:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 13:44:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-09 13:26:20 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"video_key\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 13:35:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-09 13:40:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 13:44:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 20:39:09 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 20:40:02 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
