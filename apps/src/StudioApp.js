@@ -1437,8 +1437,6 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
-  this.onFeedback(options);
-
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1464,6 +1462,8 @@ StudioApp.prototype.displayFeedback = function (options) {
   if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
     this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
+
+  this.onFeedback(options);
 };
 
 /**
