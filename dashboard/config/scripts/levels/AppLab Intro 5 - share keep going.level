@@ -72,10 +72,7 @@
     "display_name": "Using playSound",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px; transform: scale(0.9375);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"heart\" style=\"padding: 0px; margin: 0px; color: rgb(255, 255, 255); position: absolute; top: 375px; width: 50px; height: 50px; font-size: 30px; left: 10px; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; background-color: white;\" data-canonical-image-url=\"icon://fa-heart-o\" data-icon-color=\"black\"></button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; max-width: 320px; position: absolute; top: 20px; text-align: left; color: black; left: 60px; width: 250px; font-size: 30px; height: 40px;\" id=\"profileName\">myProfile</label><img data-canonical-image-url=\"icon://fa-picture-o\" id=\"bigImage\" style=\"height: 300px; position: absolute; left: 10px; top: 70px; margin: 0px; width: 300px;\"><button id=\"camera\" style=\"padding: 0px; margin: 0px; color: rgb(255, 255, 255); position: absolute; top: 10px; width: 50px; height: 50px; font-size: 30px; left: 10px; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; background-color: white;\" data-canonical-image-url=\"icon://fa-user\" data-icon-color=\"black\"></button></div></div>",
     "project_template_level_name": "AppLab Intro 5 - socialTemplate",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
