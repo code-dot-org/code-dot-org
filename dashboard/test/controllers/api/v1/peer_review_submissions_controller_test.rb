@@ -106,7 +106,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create :peer_review, reviewer: @submitter, script: @course_unit.script
     create :peer_review, reviewer: @submitter
 
-    get :report_csv, params: {plc_course_id: @course_unit.plc_course_id}
+    get :report_csv, params: {plc_course_unit_id: @course_unit.id}
 
     assert_response :success
     response = CSV.parse(@response.body)
@@ -129,7 +129,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   [:teacher, :facilitator, :student].each do |user|
     test_user_gets_response_for(
       :report_csv,
-      params: {plc_course_id: 1},
+      params: {plc_course_unit_id: 1},
       user: user,
       response: :forbidden
     )
