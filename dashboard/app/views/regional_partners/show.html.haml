@@ -1,0 +1,60 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 View Regional Partner
+
+#application-container
+  = show_flashes.html_safe
+%p
+  %strong ID:
+  = @regional_partner.id
+%p
+  %strong Name:
+  = @regional_partner.name
+%p
+  %strong Group:
+  = @regional_partner.group
+%p
+  %strong Urban:
+  = @regional_partner.urban? ? 'Yes' : 'No'
+%p
+  %strong Contact Email:
+  = @regional_partner.contact.try(:email)
+%p
+  %strong Contact Name:
+  = @regional_partner.contact.try(:name)
+%p
+  %strong Ship Attention:
+  = @regional_partner.attention
+%p
+  %strong Street:
+  = @regional_partner.street
+%p
+  %strong Apartment/Suite:
+  = @regional_partner.apartment_or_suite
+%p
+  %strong City:
+  = @regional_partner.city
+%p
+  %strong State:
+  = @regional_partner.state
+%p
+  %strong Zip Code:
+  = @regional_partner.zip_code
+%p
+  %strong Ship Phone Number:
+  = @regional_partner.phone_number
+%p
+  %strong Notes:
+  = @regional_partner.notes
+%p
+  %strong Created At:
+  = @regional_partner.created_at.strftime('%F')
+%p
+  %strong Updated At:
+  = @regional_partner.updated_at.strftime('%F')
+- if can? :update, @regional_partner
+  = link_to 'Edit', edit_regional_partner_path(@regional_partner)
+\|
+= link_to 'Back', regional_partners_path
+
