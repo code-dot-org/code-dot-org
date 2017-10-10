@@ -20,7 +20,8 @@ school_info_ids = ActiveRecord::Base.connection.execute(%Q{
         SELECT MIN(id) AS id FROM school_infos WHERE validation_type = 'none' AND country = 'US'
         AND school_type in ('public','charter') AND state IS NOT NULL AND school_district_id IS NOT NULL
         GROUP BY school_type, state, school_district_id
-      ) t JOIN school_infos si ON si.id = t.id WHERE si.school_id IS NOT NULL
+      ) t JOIN school_infos si ON si.id = t.id
+      WHERE (si.school_id IS NOT NULL or si.school_name IS NOT NULL)
     }
   ).each do |row|
   row[0]
