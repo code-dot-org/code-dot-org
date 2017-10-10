@@ -63,11 +63,12 @@ $(window).load(function () {
     BOOLEAN: 'Boolean'
   };
 
-  const typesToColors = {};
-  typesToColors[blockValueType.NUMBER] = '#00ccff';
-  typesToColors[blockValueType.STRING] = '#009999';
-  typesToColors[blockValueType.IMAGE] = '#9900cc';
-  typesToColors[blockValueType.BOOLEAN] = '#336600';
+  const typesToColors = {
+    [blockValueType.NUMBER]: '#00ccff',
+    [blockValueType.STRING]: '#009999',
+    [blockValueType.IMAGE]: '#9900cc',
+    [blockValueType.BOOLEAN]: '#336600'
+  };
 
   /**
    * Component Structure:
@@ -266,9 +267,7 @@ $(window).load(function () {
 
       const answers = levelData.answers;
 
-      const formattedDomains = domains.map(function (domain) {
-        return domain.type;
-      }).join('|');
+      const formattedDomains = domains.map(domain => domain.type).join('|');
 
       const formattedResponse = functionName + '|' + rangeType + '|' + formattedDomains;
 
