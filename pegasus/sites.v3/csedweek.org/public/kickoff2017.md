@@ -87,7 +87,25 @@ Thank you for your support of computer science education. Have questions? Contac
 
 ## **National Awards**
 
-Teachers and students have been at the heart of the amazing growth in computer science education, and we will be shining a light on those achievements! In partnership with the Computer Science Teachers Association (CSTA), we will be selecting outstanding students, teachers, schools, and districts to receive awards for their accomplishments.
+Teachers and students have been at the heart of the amazing growth in computer science education, and we will be shining a light on those achievements! Tell us about what you, your student, your school, and/or your district have accomplished this past year for the opportunity to be recognized at the kickoff event for CSEdWeek!
+
+Example achievements:
+
+- A teacher doubled the number of students in a computer science program and increased the percentage of females and underrepresented minorities.
+- A student created an app that helps people in their community.
+- A school held a special Computer Science showcase for all students and their families.
+- A district made computer science mandatory for all incoming freshmen.
+- A new after-school club for elementary school students was created, and those students placed first in a regional competition.
+
+Those selected will be awarded a trip to Palo Alto, CA to be recognized on stage at the kickoff of CSEdWeek. The awards event is a collaboration between the CSTA and Code.org. Selected students must be accompanied by a parent or guardian. This opportunity is only available for US submissions.
+
+The nomination period opens October 2, 2017, and closes October 20, 2017, at 11:59 pm PT. Selections will be announced at the end of October. To be eligible, teachers must be employed at a K-12/pre-university school.
+
+Nominate a student, your school, yourself, a fellow teacher/administrator/counselor, an organization, or after-school club, etc…the point is to celebrate computer science! 
+
+[Click here to submit an achievement](https://goo.gl/forms/XXvDw45oC3Tpdaqc2)
+
+Email awards@csteachers.org if you have any questions.
 
 <div class="row">
   <div class="col-md-12">
