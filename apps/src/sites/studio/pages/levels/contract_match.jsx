@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import React, {PropTypes} from 'react';
-var ReactDOM = require('react-dom');
+import ReactDOM from 'react-dom';
 
 $(window).load(function () {
-  $.widget("custom.coloriconselectmenu", $.ui.selectmenu, {
+  $.widget('custom.coloriconselectmenu', $.ui.selectmenu, {
     /**
      * Override the jQuery selectmenu to add a color square icon driven by the
      * data-color attribute on select elements.
@@ -14,8 +14,8 @@ $(window).load(function () {
      * @private
      */
     _renderItem: function (ul, item) {
-      var li = $("<li>", {text: item.label});
-      var color = item.element.attr("data-color");
+      const li = $("<li>", {text: item.label});
+      const color = item.element.attr("data-color");
       makeColorSquareIcon(color).appendTo(li);
       return li.appendTo(ul);
     },
@@ -29,7 +29,7 @@ $(window).load(function () {
    * @returns {string}
    */
   function bgColorStyle(color) {
-    return "background-color: " + color;
+    return `background-color: ${color}`;
   }
 
   /**
@@ -37,8 +37,9 @@ $(window).load(function () {
    * @param {Element} selectElement
    */
   function addSquareIconToButton(selectElement) {
-    var selectMenuButton = $("#" + $(selectElement).attr("id") + "-button .ui-selectmenu-text");
-    var selectedColor = $(selectElement).find("option:selected").attr("data-color");
+    const $element = $(selectElement);
+    const selectMenuButton = $(`#${$element.attr('id')}-button .ui-selectmenu-text`);
+    const selectedColor = $element.find('option:selected').attr('data-color');
     makeColorSquareIcon(selectedColor).prependTo(selectMenuButton);
   }
 
@@ -47,14 +48,14 @@ $(window).load(function () {
    * @returns {jQuery}
    */
   function makeColorSquareIcon(color) {
-    return $("<div>", {class: "color-square-icon", style: bgColorStyle(color)});
+    return $('<div>', {class: 'color-square-icon', style: bgColorStyle(color)});
   }
 
   /**
    * Enum of block types. Used for block and domain/range coloring
    * @enum {string}
    */
-  var blockValueType = {
+  const blockValueType = {
     NONE: 'None',
     NUMBER: 'Number',
     STRING: 'String',
@@ -62,11 +63,11 @@ $(window).load(function () {
     BOOLEAN: 'Boolean'
   };
 
-  var typesToColors = {};
-  typesToColors[blockValueType.NUMBER] = "#00ccff";
-  typesToColors[blockValueType.STRING] = "#009999";
-  typesToColors[blockValueType.IMAGE] = "#9900cc";
-  typesToColors[blockValueType.BOOLEAN] = "#336600";
+  const typesToColors = {};
+  typesToColors[blockValueType.NUMBER] = '#00ccff';
+  typesToColors[blockValueType.STRING] = '#009999';
+  typesToColors[blockValueType.IMAGE] = '#9900cc';
+  typesToColors[blockValueType.BOOLEAN] = '#336600';
 
   /**
    * Component Structure:
@@ -105,7 +106,7 @@ $(window).load(function () {
      * }}
      */
     state = {
-      name: "",
+      name: '',
       rangeType: blockValueType.NUMBER,
       domainTypes: []
     };
@@ -247,7 +248,7 @@ $(window).load(function () {
     }
   }
 
-  var contractForm = ReactDOM.render(<ContractForm />, document.getElementById('contractForm'));
+  const contractForm = ReactDOM.render(<ContractForm />, document.getElementById('contractForm'));
 
   /**
    * Creates a getResult function compatible with _dialog.html.haml's getResult call
@@ -256,29 +257,27 @@ $(window).load(function () {
    * @param {Object} levelData
    * @returns {Function} getResult function
    */
-  var generateGetResultFunction = function (contractForm, levelData) {
+  function generateGetResultFunction(contractForm, levelData) {
     return function () {
       /** @type {ContractForm} */
-      var functionName = contractForm.getName().trim();
-      var rangeType = contractForm.getRangeType();
-      var domains = contractForm.getDomainTypes();
+      const functionName = contractForm.getName().trim();
+      const rangeType = contractForm.getRangeType();
+      const domains = contractForm.getDomainTypes();
 
-      var answers = levelData.answers;
+      const answers = levelData.answers;
 
-      var formattedDomains = domains.map(function (domain) {
+      const formattedDomains = domains.map(function (domain) {
         return domain.type;
       }).join('|');
 
-      var formattedResponse = functionName + '|' + rangeType + '|' + formattedDomains;
+      const formattedResponse = functionName + '|' + rangeType + '|' + formattedDomains;
 
-      var checkUserAnswer = checkAnswer.bind(null, functionName, rangeType, formattedDomains);
-      var answerErrors = answers.map(checkUserAnswer);
+      const checkUserAnswer = checkAnswer.bind(null, functionName, rangeType, formattedDomains);
+      const answerErrors = answers.map(checkUserAnswer);
 
       // If any succeeded, we succeed. Otherwise, grab the first error.
-      var result = answerErrors.some(function (answerResult) {
-        return answerResult === '';
-      });
-      var errorType = result ? null : answerErrors[0];
+      const result = answerErrors.some(answerResult => answerResult === '');
+      const errorType = result ? null : answerErrors[0];
 
       return {
         response: formattedResponse,
@@ -286,7 +285,7 @@ $(window).load(function () {
         errorType: errorType
       };
     };
-  };
+  }
 
   /**
    * Set the getResult used by _dialog.html.haml
@@ -305,11 +304,11 @@ $(window).load(function () {
    * @returns {string}
    */
   function checkAnswer(functionName, rangeInput, domainInput, correctAnswer) {
-    var correctAnswerItems = correctAnswer.split('|');
-    var correctName = correctAnswerItems[0];
-    var correctRange = correctAnswerItems[1];
-    var correctDomain = correctAnswerItems.slice(2);
-    var domainInputItems = domainInput.split('|');
+    const correctAnswerItems = correctAnswer.split('|');
+    const correctName = correctAnswerItems[0];
+    const correctRange = correctAnswerItems[1];
+    const correctDomain = correctAnswerItems.slice(2);
+    const domainInputItems = domainInput.split('|');
 
     if (correctName !== functionName) {
       if (functionName.toLowerCase() === correctName.toLowerCase()) {
@@ -323,9 +322,9 @@ $(window).load(function () {
     if (correctDomain.length !== domainInputItems.length) {
       return 'baddomainsize';
     }
-    for (var i = 0; i < correctDomain.length; i++) {
-      var correctDomainType = correctDomain[i];
-      var domainType = domainInputItems[i];
+    for (let i = 0; i < correctDomain.length; i++) {
+      const correctDomainType = correctDomain[i];
+      const domainType = domainInputItems[i];
       if (correctDomainType !== domainType) {
         return 'baddomaintype';
       }
