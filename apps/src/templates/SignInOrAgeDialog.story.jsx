@@ -1,5 +1,5 @@
 import React from 'react';
-import SignInOrAgeDialog from './SignInOrAgeDialog';
+import { UnconnectedSignInOrAgeDialog as SignInOrAgeDialog } from './SignInOrAgeDialog';
 
 export default storybook => {
   return storybook

@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import i18n from '@cdo/locale';
 
 const styles = {
   container: {
@@ -100,7 +101,6 @@ class SignInOrAgeDialog extends Component {
       return null;
     }
 
-    // TODO: i18n
     return (
       <BaseDialog
         useUpdatedStyles
@@ -110,15 +110,15 @@ class SignInOrAgeDialog extends Component {
       >
         <div style={styles.container}>
           <div style={styles.heading}>
-            Sign in or provide your age to continue
+            {i18n.signinOrAge()}
           </div>
           <div style={styles.middle}>
             <div style={styles.middleCell}>
-              If you want to be able to save your progress, sign in to Code.org.
+              {i18n.signinForProgress()}
               <div style={styles.button}>
                 <Button
                   href="/users/sign_in"
-                  text="Sign in to Code.org"
+                  text={i18n.signinCodeOrg()}
                   color={Button.ButtonColor.gray}
                 />
               </div>
@@ -126,12 +126,12 @@ class SignInOrAgeDialog extends Component {
             <div style={styles.center}>
               <div style={styles.centerLine}/>
               <div style={styles.centerText}>
-                or
+                {i18n.or()}
               </div>
               <div style={styles.centerLine}/>
             </div>
             <div style={styles.middleCell}>
-              Provide your age below and click OK to continue.
+              {i18n.provideAge()}
               <div style={styles.age}>
                 <AgeDropdown
                   style={styles.dropdown}
@@ -139,14 +139,14 @@ class SignInOrAgeDialog extends Component {
                 />
                 <Button
                   onClick={this.onClickAgeOk}
-                  text="OK"
+                  text={i18n.ok()}
                   color={Button.ButtonColor.gray}
                 />
               </div>
             </div>
           </div>
           <div>
-            <a href="https://code.org/privacy">Our privacy policy</a>
+            <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
           </div>
         </div>
       </BaseDialog>
