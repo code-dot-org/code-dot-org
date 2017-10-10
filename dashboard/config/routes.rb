@@ -235,6 +235,7 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
+  resources :regional_partners
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
