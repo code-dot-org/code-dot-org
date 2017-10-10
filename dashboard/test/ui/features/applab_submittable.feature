@@ -65,6 +65,6 @@ Scenario: 'Help & Tips' and 'Instruction' tabs are visible
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?disableExperiments=resourcesTab"
 
 Scenario: Do not display resources tab when there are no videos
-  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?enableExperiments=resourcesTab"
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/3?enableExperiments=resourcesTab"
   And element ".uitest-helpTab" is not visible
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?disableExperiments=resourcesTab"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/3?disableExperiments=resourcesTab"
