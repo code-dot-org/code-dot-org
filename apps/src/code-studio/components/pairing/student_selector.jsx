@@ -4,19 +4,17 @@ import { studentsShape } from './types';
 /**
  * A component for selecting one or more students in a section.
  */
-const StudentSelector = React.createClass({
-  propTypes: {
+export default class StudentSelector extends React.Component {
+  static propTypes = {
     students: studentsShape,
     handleSubmit: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      selectedStudentIds: []
-    };
-  },
+  state = {
+    selectedStudentIds: []
+  };
 
-  handleStudentClicked(event) {
+  handleStudentClicked = (event) => {
     var selectedStudentIds = this.state.selectedStudentIds;
     var studentId = +event.target.getAttribute('data-id');
     var index = selectedStudentIds.indexOf(studentId);
@@ -28,12 +26,12 @@ const StudentSelector = React.createClass({
       selectedStudentIds.splice(index, 1);
     }
     this.setState({selectedStudentIds: selectedStudentIds});
-  },
+  };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     this.props.handleSubmit(this.state.selectedStudentIds);
     event.preventDefault();
-  },
+  };
 
   render() {
     if (!this.props.students) {
@@ -74,5 +72,4 @@ const StudentSelector = React.createClass({
       </div>
     );
   }
-});
-export default StudentSelector;
+}
