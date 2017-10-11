@@ -47,6 +47,14 @@ const styles = {
   },
 };
 
+const schoolTypes = [
+  '',
+  i18n.schoolTypeCharter(),
+  i18n.schoolTypePrivate(),
+  i18n.schoolTypePublic(),
+  i18n.other()
+];
+
 export default class SchoolNotFound extends Component {
   static propTypes = {
     setField: PropTypes.func,
@@ -79,13 +87,6 @@ export default class SchoolNotFound extends Component {
   }
 
   render() {
-    const schoolTypes = [
-      '',
-      i18n.schoolTypeCharter(),
-      i18n.schoolTypePrivate(),
-      i18n.schoolTypePublic(),
-      i18n.other()
-    ];
 
     return (
       <div>
