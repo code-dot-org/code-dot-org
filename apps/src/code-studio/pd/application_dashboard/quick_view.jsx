@@ -6,6 +6,7 @@
  *        /csp_facilitators
  */
 import React, {PropTypes} from 'react';
+import QuickViewTable from './quick_view_table';
 
 export default class QuickView extends React.Component {
   static propTypes = {
@@ -18,6 +19,7 @@ export default class QuickView extends React.Component {
     return (
       <div>
         <h1>{this.props.route.title}</h1>
+        <QuickViewTable />
       </div>
     );
   }
