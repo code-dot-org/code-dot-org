@@ -116,11 +116,21 @@ jobs:
           paths:
             - vendor/bundle
 
+      - restore_cache:
+          keys:
+            - code-dot-org-apps-v6-staging-
+            - code-dot-org-apps-v6-{{ .Branch }}-
+
       # bump timeout
       - run:
           name: rake build
           command: |
             mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
+
+      - save_cache:
+          key: code-dot-org-apps-v6-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - apps/build
 
       - save_cache:
           key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}
