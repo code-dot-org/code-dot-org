@@ -22,6 +22,7 @@
 #
 
 require_relative '../../../dashboard/config/environment'
+require 'tmpdir'
 
 ACTUALLY_UPDATE = (ARGV[0].eql? "--actually-update").freeze
 puts "Called with --actually-update=#{ACTUALLY_UPDATE}"
