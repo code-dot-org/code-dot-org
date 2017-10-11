@@ -8,7 +8,10 @@ export default storybook => {
       {
         name:'SignInOrAgeDialog',
         story: () => (
-          <SignInOrAgeDialog/>
+          <SignInOrAgeDialog
+            signedIn={false}
+            age13Required={true}
+          />
         )
       }
     ]);
