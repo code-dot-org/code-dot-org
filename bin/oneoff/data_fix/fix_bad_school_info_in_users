@@ -22,6 +22,7 @@
 #
 
 require_relative '../../../dashboard/config/environment'
+require 'tmpdir'
 
 ACTUALLY_UPDATE = (ARGV[0].eql? "--actually-update").freeze
 puts "Called with --actually-update=#{ACTUALLY_UPDATE}"
@@ -49,18 +50,28 @@ school_info_ids = ActiveRecord::Base.connection.execute(%Q{
   }
 ).pluck(0)
 
-school_info_ids.each do |school_info_id|
-  users = User.where("user_type = 'teacher' AND school_info_id = ?", school_info_id)
-  next unless users.count > 1
+ActiveRecord::Base.record_timestamps = false
 
-  users.each do |user|
-    if ACTUALLY_UPDATE
-      user.update!(school_info_id: nil)
+csv_file = "#{Dir.tmpdir}/#{File.basename(__FILE__)}.#{Time.now.strftime('%Y%m%d%H%M')}.csv"
+puts "Writting results to #{csv_file}"
+
+CSV.open(csv_file, 'w') do |csv|
+  csv << ["id", "school_info_id"]
+
+  school_info_ids.each do |school_info_id|
+    users = User.where("user_type = 'teacher' AND school_info_id = ?", school_info_id)
+    next unless users.count > 1
+
+    users.each do |user|
+      csv << [user.id.to_s, user.school_info_id.to_s]
+      if ACTUALLY_UPDATE
+        user.update!(school_info_id: nil)
+      end
+      user_count += 1
     end
-    user_count += 1
-  end
 
-  info_count += 1
+    info_count += 1
+  end
 end
 
 puts "Updated #{user_count} user(s) from #{info_count} school_info(s) in #{Time.now - start_time} second(s)."

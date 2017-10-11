@@ -735,6 +735,11 @@ FactoryGirl.define do
     group 1
   end
 
+  factory :regional_partner_program_manager do
+    regional_partner {create :regional_partner}
+    program_manager {create :teacher}
+  end
+
   factory :regional_partners_school_district do
     association :school_district
     association :regional_partner

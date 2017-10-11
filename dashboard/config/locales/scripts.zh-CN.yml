@@ -158,6 +158,7 @@
           stages:
             Maze:
               name: "迷宫"
+          description_audience: ''
         frozen:
           title: "和安娜、爱莎一起编程"
           description: "让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！"
@@ -5342,6 +5343,10 @@
               name: 'Project: Prototype an Innovation'
             Map:
               name: "地图"
+            Board Events:
+              name: Board Events
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5402,6 +5407,10 @@
               name: Representing Numbers
             8-bit Numbers:
               name: 8-bit Numbers
+            Encryption:
+              name: Encryption
+            Structuring Data:
+              name: Structuring Data
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
@@ -6011,6 +6020,38 @@
                 manipulative that will help them to encode and decode 8-bit numbers
                 (0-255).  After practicing with the flippy-do, students discuss how
                 they could extend that standardization to the other types of data.
+            Encryption:
+              name: Encryption
+              description_student: Students have a discussion on the different levels
+                of security they would like for personal data.  Once the class has
+                developed an understanding of the importance of privacy, they learn
+                about the process of encrypting information by enciphering a note
+                for a partner and deciphering the partner's note.  The class concludes
+                with a discussion about the importance of both physical and digital
+                security.
+              description_teacher: Students have a discussion on the different levels
+                of security they would like for personal data.  Once the class has
+                developed an understanding of the importance of privacy, they learn
+                about the process of encrypting information by enciphering a note
+                for a partner and deciphering the partner's note.  The class concludes
+                with a discussion about the importance of both physical and digital
+                security.
+            Structuring Data:
+              name: Structuring Data
+              description_student: This lesson goes further into the interpretation
+                of data, including cleaning and visualizing raw data sets.  The class
+                first looks at the how presenting data in different ways can help
+                people to understand it better.  After seeing how cleaning and visualization
+                can help people make better decisions, the class looks at what parts
+                of this process can be automated, and what need a human.
+              description_teacher: In this lesson, students go further into the collection
+                and interpretation of data, including cleaning and visualizing raw
+                data sets.  Students first look at the how presenting data in different
+                ways can help people to understand it better.  They then visualize
+                their own raw data set, in the context of a pizza topping survey,
+                deciding what to do with data that does not easily fit into the visualization
+                scheme that they have chosen.  Last, students look at what parts of
+                this process can be automated, and what need a human to make decisions.
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6909,6 +6950,26 @@
                 DNA are almost impossible to do as an individual. Adding the power
                 of others makes these tasks manageable. This lesson will show your
                 students how helpful teamwork can be in the industry of computer science.
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: "打基础"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Nested Loops:
+              name: "循环嵌套"
           title: "课程 E"
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7129,6 +7190,24 @@
                 using their programs.
             Functions in Bee:
               name: Functions in Bee
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: "打基础"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
           title: "课程 F"
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7516,6 +7595,10 @@
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
+            Building a Foundation:
+              name: "打基础"
+            Nested Loops:
+              name: "循环嵌套"
           title: ''
           description_audience: ''
           description_short: ''
@@ -7618,7 +7701,7 @@
               name: foo
           title: ''
           description_audience: ''
-          description_short: ''
+          description_short: "通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。"
           description: ''
         csd4-draft:
           stages:
@@ -7656,6 +7739,8 @@
               name: Improving and Iterating
             App Presentation:
               name: App Presentation
+            Linking Screens:
+              name: Linking Screens
           title: CSD Unit 4 Revisions Draft
           description_audience: ''
           description_short: ''
@@ -7674,8 +7759,447 @@
               name: Intro to AppLab - Choose Your Own Adventure
             Intro to AppLab - Choose Your Own Adventure 2:
               name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of
             creative projects.
+        e-f-ramp:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence and Preview in Maze:
+              name: Sequence and Preview in Maze
+            Building a Foundation:
+              name: "打基础"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: "循环嵌套"
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Intro to Conditionals with Farmer:
+              name: Intro to Conditionals with Farmer
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Course E Introduction:
+              name: Course E Introduction
+            Conditionals:
+              name: "条件语句"
+            Private and Personal Information:
+              name: Private and Personal Information
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: "互联网"
+            Crowdsourcing:
+              name: "众包"
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Sequence in Maze:
+              name: Sequence in Maze
+          title: Course E & F Ramp
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-d:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Introduction:
+              name: "介绍"
+            Events in Bounce:
+              name: Events in Bounce
+            Nested Loops:
+              name: "循环嵌套"
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals with Cards:
+              name: "用 扑克牌 的 条件子句"
+            Conditionals in Bee:
+              name: Conditionals in Bee
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Digital Citizenship:
+              name: "数字公民"
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            'Unplugged: Binary':
+              name: "离线：二进制"
+            Artist Binary:
+              name: "小艺术家：二进制"
+            Building a Foundation:
+              name: "打基础"
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+          title: New Course D Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-a:
+          stages:
+            new stage:
+              name: new stage
+            'CSP3A: Using Simple Commands':
+              name: 'CSP3A: Using Simple Commands'
+          title: CSP Unit 3 - Subgoals Group A
+          description_audience: ''
+          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment
+            group A.
+          description: This unit introduces the foundational concepts of computer
+            programming, for students in Subgoals Group A.
+        new-express:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Introduction:
+              name: "介绍"
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Star Wars:
+              name: Events in Star Wars
+            Events with Flappy:
+              name: Events with Flappy
+            Events in Bounce:
+              name: Events in Bounce
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+            Building a Foundation:
+              name: "打基础"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Nested Loops:
+              name: "循环嵌套"
+            Loops in Artist (UPDATED!):
+              name: Loops in Artist (UPDATED!)
+            Sarah test stage:
+              name: Sarah test stage
+          title: New Express Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-stages-sept-2017:
+          stages:
+            Loops in Artist:
+              name: Loops in Artist
+            Sequences with Scrat:
+              name: Sequences with Scrat
+            Testing Template:
+              name: Testing Template
+          title: New stages for 9/17
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-e:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: "打基础"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Course E Introduction:
+              name: Course E Introduction
+            Conditionals:
+              name: "条件语句"
+            Private and Personal Information:
+              name: Private and Personal Information
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: "互联网"
+            Crowdsourcing:
+              name: "众包"
+          title: New Script for E
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-f:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: "打基础"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Course E Introduction:
+              name: Course E Introduction
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: "冰河世界游戏实验室"
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Envelope Variables:
+              name: "封装变量"
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: "计数循环的乐趣"
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: "通过输入参数来作曲。"
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+          title: New Script for F
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd5-old:
+          stages:
+            Representation Matters:
+              name: "表示事项"
+            Patterns and Representation:
+              name: "模式和表示法"
+            ASCII and Binary Representation:
+              name: ASCII 和二进制表示形式
+            Representing Images:
+              name: "表示图像"
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
+            Combining Representations:
+              name: "组合表示"
+            Project - Create a Representation:
+              name: "项目-创建表示"
+            Problem Solving and Data:
+              name: "解决问题和数据"
+            Making Decisions with Data:
+              name: "依靠数据做决定"
+            Interpreting Data:
+              name: Interpreting Data
+            Automating Data Decisions:
+              name: "自动化数据决策"
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Project - Solve a Data Problem:
+              name: Project - Solve a Data Problem
+          title: CSD Unit 5 - Data and Society
+          description_audience: ''
+          description_short: Learn how people use computers to solve data problems.
+          description: Unit 5 is about the importance of data in solving problems
+            and highlights how computers can help in this process. The first chapter
+            explores different systems used to represent information in a computer
+            and the challenges and tradeoffs posed by using them. In the second chapter
+            you’ll learn how collections of data are used to solve problems, and how
+            computers help to automate the steps of this process. The chapter concludes
+            by considering how the data problem solving process can be applied to
+            an area of the your choosing.
+        subgoals-assessment-staging:
+          stages:
+            subgoal assessments:
+              name: subgoal assessments
+            lg by itself:
+              name: lg by itself
+            test of single level lg:
+              name: test of single level lg
+            submittable question at end of lessson:
+              name: submittable question at end of lessson
+            all assessment items as standalone assessment levels:
+              name: all assessment items as standalone assessment levels
+            all assessment items clustered in levelgroup:
+              name: all assessment items clustered in levelgroup
+            submittable if last assessment item:
+              name: submittable if last assessment item
+            assessment sandwiched between app lab levels:
+              name: assessment sandwiched between app lab levels
+            all assessment items clustered in levelgroup as a single "test":
+              name: all assessment items clustered in levelgroup as a single "test"
+            dummy:
+              name: dummy
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hocali:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        colehoc2017:
+          stages:
+            colehoc2017 stage:
+              name: colehoc2017 stage
+          title: 'HoC 17 - Cole '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17-kiki:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
