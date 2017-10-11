@@ -17,7 +17,8 @@ export default class Header extends React.Component {
       })
     ).isRequired,
     params: PropTypes.object.isRequired,
-    children: PropTypes.object.isRequired
+    children: PropTypes.object.isRequired,
+    baseName: PropTypes.string
   };
 
   handleClick = (path) => {
@@ -27,7 +28,9 @@ export default class Header extends React.Component {
   renderBreadcrumbItems() {
     const breadcrumbItems = [];
     let builtPath = "/";
-    breadcrumbItems.push({name: "Workshop Dashboard", path: builtPath});
+    if (this.props.baseName) {
+      breadcrumbItems.push({name: this.props.baseName, path: builtPath});
+    }
 
     if (this.props.routes[1].breadcrumbs) {
       // The breadcrumbs property is a CSV string. Each item will be displayed in the breadcrumbs.
