@@ -10,7 +10,6 @@ describe('SchoolAutocompleteDropdown', () => {
         showErrorMsg={false}
       />
     );
-    console.log(wrapper.debug());
     expect(wrapper.find('VirtualizedSelect').exists()).to.be.true;
   });
 });
