@@ -100,22 +100,16 @@ export default class Pairing extends React.Component {
   }
 
   selectedSection() {
-    if (this.selectedSectionId()) {
-      // todo use jquery find
-      for (let i = 0; i < this.state.sections.length; i++) {
-        if (this.state.sections[i].id === this.selectedSectionId()) {
-          return this.state.sections[i];
-        }
-      }
+    const selectedId = this.selectedSectionId();
+    if (selectedId) {
+      return this.state.sections.find(s => s.id === selectedId) || null;
     }
     return null;
   }
 
   studentsInSection() {
-    if (this.selectedSection()) {
-      return this.selectedSection().students;
-    }
-    return null;
+    const section = this.selectedSection();
+    return section ? section.students : null;
   }
 
   renderPairingSelector() {
