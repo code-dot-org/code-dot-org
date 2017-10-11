@@ -1,6 +1,8 @@
 require 'cdo/shared_cache'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  include UsersHelper
+
   # GET /users/auth/:provider/callback
   def all
     @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
@@ -21,6 +23,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       handle_clever_signin(@user)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
+      check_and_apply_clever_takeover(@user) if cookies['pm'] == 'clever_takeover'
       sign_in_user
     elsif allows_silent_takeover(@user)
       silent_takeover(@user)
