@@ -78,6 +78,8 @@ CSV.open(csv_file, 'w') do |csv|
       if options[:actually_update]
         user.last_seen_school_info_interstitial = DateTime.now + options[:interstitial_days]
         user.school_info_id = nil
+        # We skip validation as some of our users (particularly teachers) do not
+        # pass our own validations (often because they are missing an email).
         user.save!(validate: false)
       end
       user_count += 1
