@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import color from "../util/color";
 import i18n from "@cdo/locale";
 import { STATES } from '../geographyConstants';
@@ -48,17 +48,33 @@ const styles = {
 };
 
 export default class SchoolNotFound extends Component {
-  state = {
-    schoolName: "",
-    schoolCity: "",
-    schoolState: "",
-    schoolZip: ""
+  static propTypes = {
+    setField: PropTypes.func,
+    schoolName: PropTypes.string,
+    schoolCity: PropTypes.string,
+    schoolState: PropTypes.string,
+    schoolZip: PropTypes.string,
+    schoolType: PropTypes.string
   };
 
-  handleChange(propertyName, event) {
-    this.setState({
-      [propertyName]: event.target.value
-    });
+  sendNameToParent = (event) => {
+    this.props.setField("schoolName", event.target.value);
+  }
+
+  sendTypeToParent = (event) => {
+    this.props.setField("schoolType", event.target.value);
+  }
+
+  sendStateToParent = (event) => {
+    this.props.setField("schoolState", event.target.value);
+  }
+
+  sendZipToParent = (event) => {
+    this.props.setField("schoolZip", event.target.value);
+  }
+
+  sendCityToParent = (event) => {
+    this.props.setField("schoolCity", event.target.value);
   }
 
   render() {
@@ -86,8 +102,8 @@ export default class SchoolNotFound extends Component {
                 id="school_name"
                 type="text"
                 name="school_name_s"
-                value={this.state.schoolName}
-                onChange={this.handleChange.bind(this, 'schoolName')}
+                value={this.props.schoolName}
+                onChange={this.sendNameToParent}
                 style={styles.input}
               />
             </label>
@@ -100,8 +116,8 @@ export default class SchoolNotFound extends Component {
               </div>
               <select
                 name="school_type_s"
-                value={this.state.schoolType}
-                onChange={this.handleChange.bind(this, 'schoolType')}
+                value={this.props.schoolType}
+                onChange={this.sendTypeToParent}
                 style={styles.dropdown}
               >
                 {schoolTypes.map((schoolType, index) =>
@@ -126,8 +142,8 @@ export default class SchoolNotFound extends Component {
               <input
                 type="text"
                 name="school_city_s"
-                value={this.state.schoolCity}
-                onChange={this.handleChange.bind(this, 'schoolCity')}
+                value={this.props.schoolCity}
+                onChange={this.sendCityToParent}
                 style={styles.input}
               />
             </label>
@@ -140,8 +156,8 @@ export default class SchoolNotFound extends Component {
               </div>
               <select
                 name="school_state_s"
-                value={this.state.schoolState}
-                onChange={this.handleChange.bind(this, 'schoolState')}
+                value={this.props.schoolState}
+                onChange={this.sendStateToParent}
                 style={styles.dropdown}
               >
                 {STATES.map((state, index) =>
@@ -166,8 +182,8 @@ export default class SchoolNotFound extends Component {
               id="school_zipcode"
               type="text"
               name="school_zip_s"
-              value={this.state.schoolZip}
-              onChange={this.handleChange.bind(this, 'schoolZip')}
+              value={this.props.schoolZip}
+              onChange={this.sendZipToParent}
               style={styles.input}
             />
           </label>
