@@ -60,7 +60,8 @@ const TutorialExplorer = React.createClass({
     }
 
     const sortBy = TutorialsSortBy.default;
-    const filteredTutorials = this.filterTutorialSet(filters, sortBy);
+    const orgName = "all";
+    const filteredTutorials = this.filterTutorialSet(filters, sortBy, orgName);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
 
@@ -74,6 +75,7 @@ const TutorialExplorer = React.createClass({
       mobileLayout: isResponsiveCategoryInactive('md'),
       showingModalFilters: false,
       sortBy: sortBy,
+      orgName: orgName,
       showingAllTutorials: showingAllTutorials
     };
   },
@@ -101,7 +103,11 @@ const TutorialExplorer = React.createClass({
 
     newState = newState.toJS();
 
-    const filteredTutorials = this.filterTutorialSet(newState.filters, this.state.sortBy);
+    const filteredTutorials = this.filterTutorialSet(
+      newState.filters,
+      this.state.sortBy,
+      this.state.orgName);
+
     this.setState({
       ...newState,
       filteredTutorials,
@@ -115,11 +121,25 @@ const TutorialExplorer = React.createClass({
    * @param {SortBy} value - The new sort order.
    */
   handleUserInputSortBy(value) {
-    const filteredTutorials = this.filterTutorialSet(this.state.filters, value);
+    const filteredTutorials = this.filterTutorialSet(this.state.filters, value, this.state.orgName);
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
       sortBy: value
+    });
+
+    this.scrollToTop();
+  },
+
+  /**
+   * Called when the org name is changed via dropdown.
+   */
+  handleUserInputOrgName(value) {
+    const filteredTutorials = this.filterTutorialSet(this.state.filters, this.state.sortBy, value);
+    this.setState({
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      orgName: value
     });
 
     this.scrollToTop();
@@ -158,11 +178,12 @@ const TutorialExplorer = React.createClass({
    *
    * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
-  filterTutorialSet(filters, sortBy) {
+  filterTutorialSet(filters, sortBy, orgName) {
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
-      locale: "en-US"
+      locale: "en-US",
+      orgName: orgName
     };
 
     // If the user hasn't chosen a sorting option yet (and the dropdown is still in its
@@ -181,7 +202,8 @@ const TutorialExplorer = React.createClass({
    */
   filterTutorialSetForLocale() {
     const filterProps = {
-      sortBy: this.props.defaultSortBy
+      sortBy: this.props.defaultSortBy,
+      orgName: "all"
     };
 
     if (!this.props.roboticsButtonUrl) {
@@ -193,6 +215,10 @@ const TutorialExplorer = React.createClass({
     filterProps.specificLocale = true;
     filterProps.locale = this.props.locale;
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+  },
+
+  getUniqueOrgNames() {
+    return TutorialExplorer.getUniqueOrgNamesFromTutorials(this.props.tutorials);
   },
 
   componentDidMount() {
@@ -296,7 +322,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters, hideFilters, sortBy } = filterProps;
+      const { locale, specificLocale, orgName, filters, hideFilters, sortBy } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as do-not-show.  If it does,
@@ -322,8 +348,16 @@ const TutorialExplorer = React.createClass({
           return false;
         }
 
+        // If we are showing an explicit orgname, then filter if it doesn't
+        // match.
+        if (orgName && orgName !== "all") {
+          if (tutorial.orgname !== orgName) {
+            return false;
+          }
+        }
+
         // If we are explicitly hiding a matching filter, then don't show the
-        // the tutorial.
+        // tutorial.
         for (const filterGroupName in hideFilters) {
           const tutorialTags = tutorial["tags_" + filterGroupName];
           const filterGroup = hideFilters[filterGroupName];
@@ -374,8 +408,33 @@ const TutorialExplorer = React.createClass({
      */
     findMatchingTag(filterGroup, tutorialTags) {
       return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
-    }
+    },
 
+    /* Returns an array of unique organisation names from the set of tutorials,
+     * sorted alphabetically, truncated and ellipsed.
+     *
+     * @param {Array} tutorials - Array of tutorials.  Each contains a variety of
+     *   strings, each of which is a list of tags separated by commas, no spaces.
+     * @return {Array} - Array of strings.
+     */
+    getUniqueOrgNamesFromTutorials(tutorials) {
+      // Filter out tutorials with do-not-show tag.
+      const availableTutorials = tutorials.filter(t => {
+        return t.tags.split(',').indexOf("do-not-show") === -1 && t.orgname !== "do-not-show";
+      });
+
+      // Construct sorted array of unique org names from the tutorials.
+      let uniqueOrgNames = [...new Set(availableTutorials.map(t => t.orgname))];
+
+      // Sort the unique org names alphabetically, case-insensitive.
+      uniqueOrgNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+      // Truncate each of them to limit length.
+      const maxOrgNameChars = 25;
+      uniqueOrgNames = uniqueOrgNames.map(t => t.length > maxOrgNameChars ? t.substring(0, maxOrgNameChars) + '...' : t);
+
+      return uniqueOrgNames;
+    }
   },
 
   render() {
@@ -436,9 +495,12 @@ const TutorialExplorer = React.createClass({
               {this.shouldShowFilters() && (
                 <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
                   <FilterSet
+                    uniqueOrgNames={this.getUniqueOrgNames()}
                     filterGroups={this.props.filterGroups}
                     onUserInput={this.handleUserInputFilter}
+                    onUserInputOrgName={this.handleUserInputOrgName}
                     selection={this.state.filters}
+                    orgName={this.state.orgName}
                     roboticsButtonUrl={this.props.roboticsButtonUrl}
                   />
                 </div>
