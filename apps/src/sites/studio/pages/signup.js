@@ -25,6 +25,9 @@ window.SignupManager = function (options) {
   }
 
   function formError(err) {
+    // re-enable "Sign up" button upon error
+    $('#signup-button').prop('disabled', false);
+
     // Define the fields that can have specific errors attached to them.
     var fields = [
       "user_type",
@@ -38,21 +41,31 @@ window.SignupManager = function (options) {
       "school_info.zip"
     ];
 
-    for (var i = 0; i < fields.length; i++) {
-      var field = fields[i];
-      if (err.responseJSON.errors[field]) {
-        var errorField = $(`#${field}-block .error_in_field`);
-         // We have a custom inline message for user_type errors already set in the DOM.
-        if (field === "terms_of_service_version") {
-          errorField.text(self.options.acceptTermsString);
-        } else if (field === "school_info.zip") {
-          errorField = $('#school-zip').find('.error_in_field');
-          errorField.text(err.responseJSON.errors[field][0]);
-        } else if (field !== "user_type") {
-          errorField.text(err.responseJSON.errors[field][0]);
+    var fieldsWithErrors = 0;
+    if (err.responseJSON && err.responseJSON.errors) {
+      for (var i = 0; i < fields.length; i++) {
+        var field = fields[i];
+        if (err.responseJSON.errors[field]) {
+          var errorField = $(`#${field}-block .error_in_field`);
+          // We have a custom inline message for user_type errors already set in the DOM.
+          if (field === "terms_of_service_version") {
+            errorField.text(self.options.acceptTermsString);
+          } else if (field === "school_info.zip") {
+            errorField = $('#school-zip').find('.error_in_field');
+            errorField.text(err.responseJSON.errors[field][0]);
+          } else if (field !== "user_type") {
+            errorField.text(err.responseJSON.errors[field][0]);
+          }
+          errorField.fadeTo("normal", 1);
+          fieldsWithErrors++;
         }
-        errorField.fadeTo("normal", 1);
       }
+    }
+
+    // if we did not receive a response that had field-specific error information,
+    // show a generic error
+    if (fieldsWithErrors === 0) {
+      $('#signup-error').show();
     }
   }
 
@@ -121,6 +134,10 @@ window.SignupManager = function (options) {
   $(".signupform").submit(function () {
     // Clear the prior hashed email.
     $('#user_hashed_email').val('');
+    // Hide error message if there is one from previous attempt
+    $('#signup-error').hide();
+    // Disable "Sign up" button to avoid multiple clicks while submitting
+    $('#signup-button').prop('disabled', true);
 
     // Hash the email.
     window.dashboard.hashEmail({email_selector: "#user_email",

@@ -138,7 +138,7 @@
     ve görsel programlama dilimiz, interaktif kişiye özel kurslarımız ve oyun tabanlı
     programlama aktivitelereimiz programlamaya kolay bir giriş sağlar ve çocukları
     keşfetmeye ve yaratmaya teşvik eder.
-  third_party_tynker_btn_curriculum: Tynker'in programını deneyin
+  third_party_tynker_btn_curriculum: Tynker'in  Okul Öncesi için programını deneyin
   third_party_tynker_btn_site: Tynker'ı ziyaret et
   third_party_scratchjr_desc: Scratch Jr. küçük çocukların  (5-7 yaş arası) kendi
     interaktif hikayelerini ve oyunlarını yaratmalarını sağlayan tanıtıcı bir programlama
@@ -147,13 +147,13 @@
     boyama editörünü kullanarak karakterleri değiştirebilir,kendi seslerini ekleyebilir,
     ve hatta kendi fotoğraflarını ekleyebilirler - daha sonrada karakterlerini programlama
     bloglarını  kullanarak canlandırırlar.
-  third_party_scratchjr_btn_curriculum: Jr. Müfredatı Sıfırdan İndir
+  third_party_scratchjr_btn_curriculum: Scratch Jr. Müfredatı İndir
   third_party_scratchjr_btn_site: Scractch Jr.'ı ziyaret edin.
   third_party_scratch_desc: Scratch ile siz de kendi interaktif hikaye, oyun ve anismasyonlarınızı
     programlayıp, yarattıklarınızı online topluluklarda paylaşabilirsiniz. Scratch
     küçük çocukların yaratıcı düşünme, sistematik  sebep sonuç ilişkisi kurma, ekip
     çalışması gibi 21. yüzyılın olmazsa olmaz becerilerini öğrenmesine yardımcı olur.
-  third_party_scratch_btn_curriculum: Scratch Zaman Planını İndirin
+  third_party_scratch_btn_curriculum: Scratch Müfredatını İndirin
   third_party_scratch_btn_forum: Scratch Eğitimci Forumu
   third_party_scratch_btn_site: Scratch'i ziyaret edin
   third_party_lightbot_desc: Lightbot oyununda, öğrenciler bulmacayı çözmek için komutlarla
@@ -194,7 +194,7 @@
   third_party_codecademy_btn_curriculum: Codecademy Eğitim videosunu indirin
   third_party_codecademy_btn_site: Codeacademy'i ziyaret et
   third_party_organization: Organizasyon
-  third_party_curriculum: Ders Programı
+  third_party_curriculum: Müfredat
   third_party_pricing: Fiyatlandırma
   third_party_cost_free: "Öğrenciler ve öğretmenler için ücretsiz"
   third_party_cost_5permonth: Sınıf başına aylık/5$
@@ -319,14 +319,14 @@
   what_gender: Cinsiyetiniz nedir?
   girl: Kız
   boy: Erkek
-  help_recruit_coders: Takımına daha fazla kod yazıcıyı üye yapmamıza yardım et!
-  help_recruit: Daha fazla kod yazıcıyı üye yapmamıza yardım et!
+  help_recruit_coders: Takımına daha fazla kod yazarı üye yapmamıza yardım et!
+  help_recruit: Daha fazla kod yazarı üye yapmamıza yardım et!
   lines_of_code: "ÜSTÜNDE<b># KOD SATIRLARI</b> BUGÜNE KADAR YAZILAN."
   lines_of_code_alt: "<b>#</b> ÖĞRENCİLER TARAFINDAN YAZILMIŞ KOD SATIRLARI"
   who_has_done_hoc: "#HourOfCode'u kim bitirdi? @codeorg"
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: Kod saatinin liderler sıralaması
+  hoc_leaderboards: Kod Saatinin Liderler Sıralaması
   students_and_lines: "% {Öğrenciler} öğrenciler tarafından kod saati yapılır ve kod
     satırlarının % {hatları} yazılır."
   start_hoc: Kod saatine başla
@@ -395,7 +395,7 @@
   homepage_hero_text_stat_students: 'Code Stüdyoda #student_count tane öğrenci hesabı'
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
   homepage_slot_text_hoc: Kod Saati
-  homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
+  homepage_slot_text_frozen: 'Frozen: Anna ve Elsa '
   homepage_slot_text_teacher: "Öğretmen Panosu"
   homepage_slot_text_studio: Tüm eğitim içeriklerimiz
   homepage_slot_text_course4: Ders 4
@@ -415,7 +415,7 @@
   homepage_action_text_signpetition: "Üye dilekçesi"
   homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
   homepage_diversity_pledge: "Çeşitlilik oluştur ! "
-  homepage_banner_text_prizes: "`Hour of Code` 7-13 Aralıkta tekrar gerçekleşecek."
+  homepage_banner_text_prizes: "`Kod Saati` 7-13 Aralıkta tekrar gerçekleşecek."
   homepage_banner_link_prizes: 'Tarihteki en büyük eğitim etkinliğine katılın. '
   homepage_banner_text_main: Code.org ve Üniversite Yönetim Kurulu Bilgisayar Bilimleri
     çeşitlilik geliştirmek için bir ittifak kurdular.
@@ -456,8 +456,8 @@
   homepage_slot_text_link_fullcurriculum: Müfredatımızın tamamına göz atın
   homepage_slot_text_link_pd: Mesleki Gelişim
   homepage_slot_text_title_advocates: Katkıda bulunanlar
-  homepage_slot_text_blurb_advocates: Bizi destekleyin
-  homepage_slot_text_link_stats: Istatistiklere göz atın
+  homepage_slot_text_blurb_advocates: Bilgisayar Bilimlerinde çeşitliliği destekle
+  homepage_slot_text_link_stats: "İstatistiklere göz atın"
   homepage_slot_text_link_buy: Dahil olun
   homepage_slot_text_link_donate: Bağış yap
   homepage_slot_text_link_shop: Tişörtler, şapkalar ve daha fazlası
@@ -480,7 +480,7 @@
   class_submission_in_school: Okulda
   class_submission_in_school_daily_programming_course: Günlük programlama kursu
   class_submission_in_school_ap_computer_science: AP (Advanced Placement) bilgisayar
-    bilimi
+    bilimi sınavı
   class_submission_in_school_full_university_cs_curriculum: "Üniversite için Bilgisayar
     Bilimi müfredatı "
   class_submission_in_school_robotics_club: Robotik Kulübü
@@ -735,7 +735,7 @@
   dashboard_landing_progress_title: Temel sınıf gelişimi
   dashboard_landing_progress_biggest: Bu senin en büyük bölüm için ilerlemen.
   dashboard_landing_view_progress: "%{biggest_section} için ilerlemenizi görüntüleyin"
-  dashboard_landing_print_progress: "İlerlemeyi kaydediniz"
+  dashboard_landing_print_progress: "İlerlemeyi yazdır"
   dashboard_landing_available_title: Kullanılabilir kurslar
   dashboard_landing_available_courses: Siz ve öğrencileriniz için mevcut dersler.
   dashboard_landing_more_tutorials: Daha fazla eğitim görmek ister misiniz?
@@ -802,8 +802,8 @@
   dashboard_assessments_none_part2: Eğer bir ortaokul yada lisede öğretmen iseniz
     değerlendirme soruları code studyoda mevcut. Bu değerlendirmeleri kullanmak için
     önce dersi sınıfa ata ve dersi seç. Öğrencinin cevaplarını burada görebilirsin.
-  dashboard_assessments_summaries: "Özetler"
-  dashboard_assessments_answers: Tüm cevaplar
+  dashboard_assessments_summaries: Değerlendirme Özetleri
+  dashboard_assessments_answers: Tüm Değerlendirme cevapları
   dashboard_surveys_answers: Anketler
   dashboard_percent: Yüzde
   dashboard_filter_by_stage: 'Aşamaya göre filtrele:'
@@ -818,13 +818,13 @@
   dashboard_navigation_section_speakers: Bilgisayar Bilimi<br/>Davetli Konuşmacılar
   dashboard_navigation_all_sections: "Öğrenci hesapları ve ilerleme"
   dashboard_navigation_view_progress: "İlerleme Durumu"
-  dashboard_navigation_view_text_responses: Metin Yanıtlar
+  dashboard_navigation_view_text_responses: Metin Cevaplar
   dashboard_navigation_view_assessments: Değerlendirmeler
   dashboard_navigation_view_assessments_surveys: Değerlendirmeler/Anketler
   dashboard_navigation_add_students: "Öğrenci EKle"
   dashboard_navigation_manage_students: "Öğrencileri Yönet"
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
-  dashboard_navigation_view_stats: Istatistikler
+  dashboard_navigation_view_stats: "İstatistikler"
   dashboard_navigation_section: 'Bölüm: %{section_name}'
   dashboard_navigation_student: "Öğrenci: %{student_name}"
   dashboard_progress_not_started: Başlatılmadı
@@ -866,7 +866,7 @@
     olarak seçiniz.
   dashboard_sections_print_secrets: Daha sonra, öğrencilerinize dağıtılmak üzere,
     üzerinde hesap bilgileri bulunan kartların çıktısını yazdırabilirsiniz.
-  dashboard_sections_switch_section: 'Bölüm değşitir:'
+  dashboard_sections_switch_section: 'Bölüm değiştir:'
   dashboard_sections_close: Kapat
   dashboard_sections_move_students_desc: Bir sonraki bölüme geçecek öğrencileri seç.
     Öğrencileri taşıma ilerlemelerini temizlemeyecek.
@@ -889,7 +889,7 @@
     (Çoğu öğretmen bu sertifikaları önceden  <a href='%{certificate_url}'>bastırmakta
     </a>.)  Geri kalan haftalarda öğrenci ilerlemesini kaydetmeyi ve bunu raporlamaya
     devam edeceğiz.
-  dashboard_sections_assign_activity: Eğitim Ata
+  dashboard_sections_assign_activity: Kurs Ata
   dashboard_error_none_selected: Taşımak için herhangi bir öğrenci seçmediniz. Lütfen
     en az bir öğrenci seçin.
   dashboard_error_other_section: "Öğrenciler kendi bölümleri arasında taşıyorsanız,
@@ -953,7 +953,7 @@
   dashboard_curriculum_middle_title: Orta Okul Eğitimci Kaynakları
   dashboard_curriculum_high_title: Lise Eğitimci Kaynakları
   dashboard_lesson_plans: Ders Planları
-  dashboard_view_all_lesson_plans: Tüm ders planlarını görüntüleyin
+  dashboard_view_all_lesson_plans: Kurs 1-4 için tüm ders planlarını indir
   dashboard_course1: 'Ders 1:'
   dashboard_course2: 'Ders 2:'
   dashboard_course3: 'Ders 3:'
@@ -966,8 +966,8 @@
   dashboard_coursef: 'Ders F: '
   dashboard_unplugged: Bilgisayarlarınız yok ise bu bağımsız dersleri sınıfınızda
     kullanın.<a href='%{unplugged_url}'>
-  dashboard_curriculum: Ders Programı
-  dashboard_curriculum_overview: K-5 Eğitim Programına genel bakış
+  dashboard_curriculum: Müfredat
+  dashboard_curriculum_overview: K-5 Müfredatı Ana Hatları
   dashboard_overview: Genel Bakış
   dashboard_sequence: Sıra
   dashboard_framework: Taslak
@@ -980,12 +980,12 @@
   dashboard_student_worksheet: "Öğrenci çalışma sayfası"
   dashboard_teacher_worksheet: "Öğretmen çalışma sayfası"
   dashboard_curriculum_csina: 'Cebirde Bilgisayar Bilimi:'
-  dashboard_curriculum_csins: 'Bilgisayar Bilimi:'
+  dashboard_curriculum_csins: 'Fen Bilimlerinde Bilgisayar Bilimi:'
   dashboard_curriculum_csp: 'AP ® Bilgisayar Bilimi İlkeleri:'
   dashboard_curriculum_ecs: 'Bilgisayar Bilimini Keşfet:'
   dashboard_grade_k: K
   dashboard_grade_other: Diğer
-  dashboard_login_word: Sözcük
+  dashboard_login_word: Kelime
   dashboard_login_picture: Resim
   dashboard_login_none: E-posta
   dashboard_new_password: yeni şifre
@@ -1000,7 +1000,7 @@
   dashboard_correctness_incorrect: Yanlış
   dashboard_submission_submitted: Gönderildi
   dashboard_submission_in_progress: Devam ediyor
-  dashboard_status: durum
+  dashboard_status: Durum
   dashboard_multi_correct: "# çoklu seçim"
   dashboard_multi_count: "Çoktan Seçmeli"
   dashboard_multi_correct_percent: "# çoklu seçim"
@@ -1195,6 +1195,8 @@
   csp1_name: "Ünite 1: Internet"
   csp2_name: "Ünite 2: Sayısal bilgi"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1278,11 +1280,11 @@
   kodableunplugged_gradelevel: 8-13 yaş grubu
   projguts_gradelevel: 10-13 yaş grubu
   hourofcode_gradelevel: 4-104 Yaş
-  frozen_gradelevel: 8 + Yaş grubu
+  frozen_gradelevel: 8 'den 108 yaşa kadar
   starwars_gradelevel: 6 yaş ve üzeri
   playlab_gradelevel: 4-104 Yaş
   infinity_gradelevel: 4-104 Yaş
-  artist_gradelevel: 8 + Yaş grubu
+  artist_gradelevel: 8 'den 108 yaşa kadar
   monstercoding_gradelevel: 5-13 yaş grubu
   allcancode_gradelevel: 5-10 yaş
   csfirst_gradelevel: 9-14 yaş
@@ -1924,7 +1926,7 @@
   header_my_dashboard: Panelim
   header_courses: kurslar
   header_course_catalog: Kurs Kataloğu
-  header_project_gallery: Proje Galerisi
+  header_project_gallery: Projeler
   header_sections: Bölümler
   header_professional_learning: Profesyonel öğrenme
   header_educate_overview: Eğitimci genel bakış
@@ -1949,7 +1951,7 @@
   header_about_faqs: SSS
   header_learn: "Öğren"
   header_teach: "Öğret"
-  header_stats: Istatistikler
+  header_stats: "İstatistikler"
   header_help_us: Bize yardım edin
   header_about: Hakkında
   header_teacher_community: "Öğretmen topluluğu"

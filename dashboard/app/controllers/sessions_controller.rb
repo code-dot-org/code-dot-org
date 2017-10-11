@@ -1,4 +1,6 @@
 class SessionsController < Devise::SessionsController
+  include UsersHelper
+
   # see also
   # https://github.com/plataformatec/devise/blob/v3.2/app/controllers/devise/sessions_controller.rb
 
@@ -21,9 +23,25 @@ class SessionsController < Devise::SessionsController
     super
   end
 
+  # POST /resource/clever_takeover
+  def clever_takeover
+    clever_takeover_id = session['clever_takeover_id']
+    clever_takeover_token = session['clever_takeover_token']
+    sign_out(current_user)
+    session['clever_takeover_id'] = clever_takeover_id
+    session['clever_takeover_token'] = clever_takeover_token
+    redirect_to action: :new
+  end
+
   # POST /resource/sign_in
   def create
-    super
+    if cookies['pm'] == 'clever_takeover'
+      super do |user|
+        check_and_apply_clever_takeover(user)
+      end
+    else
+      super
+    end
   end
 
   # DELETE /resource/sign_out

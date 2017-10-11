@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005190150) do
+ActiveRecord::Schema.define(version: 20171010172413) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20171005190150) do
     t.datetime "updated_at"
     t.integer  "storage_id",     null: false
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
+    t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true, using: :btree
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
@@ -357,6 +358,7 @@ ActiveRecord::Schema.define(version: 20171005190150) do
   end
 
   create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                           null: false
     t.string   "type",                              null: false
     t.string   "application_year",                  null: false
     t.string   "application_type",                  null: false
@@ -372,6 +374,7 @@ ActiveRecord::Schema.define(version: 20171005190150) do
     t.index ["regional_partner_id"], name: "index_pd_applications_on_regional_partner_id", using: :btree
     t.index ["status"], name: "index_pd_applications_on_status", using: :btree
     t.index ["type"], name: "index_pd_applications_on_type", using: :btree
+    t.index ["user_id"], name: "index_pd_applications_on_user_id", using: :btree
   end
 
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -801,15 +804,18 @@ ActiveRecord::Schema.define(version: 20171005190150) do
   end
 
   create_table "schools", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.bigint   "id",                 null: false, comment: "NCES public school ID"
-    t.integer  "school_district_id", null: false
-    t.string   "name",               null: false
-    t.string   "city",               null: false
-    t.string   "state",              null: false
-    t.string   "zip",                null: false
-    t.string   "school_type",        null: false
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.bigint   "id",                            null: false, comment: "NCES public school ID"
+    t.integer  "school_district_id",            null: false
+    t.string   "name",                          null: false
+    t.string   "city",                          null: false
+    t.string   "state",                         null: false
+    t.string   "zip",                           null: false
+    t.string   "school_type",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "address_line1",      limit: 30,              comment: "Location address, street 1"
+    t.string   "address_line2",      limit: 30,              comment: "Location address, street 2"
+    t.string   "address_line3",      limit: 30,              comment: "Location address, street 3"
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree

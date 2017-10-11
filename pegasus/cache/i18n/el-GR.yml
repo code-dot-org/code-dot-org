@@ -939,7 +939,7 @@
     τμήμα ΚΑΙ στο νέο τμήμα"
   dashboard_sections_no_move: "Όχι, θέλω να μεταφέρω τους μαθητές μόνο στο νέο τμήμα."
   dashboard_sections_move_students: "Μετακίνησε τους μαθητές"
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_desc: "Συμμετοχή στην Ωρα του Κώδικα;"
   dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
     in this course during the week of December 3-7, due to the unprecedented level
     of traffic our site will receive for the Hour of Code.  You may still assign the
@@ -1269,14 +1269,16 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
+  cspassessment_name: "Πλήρης εξέταση - 50 ερωτήσεις"
+  cspexam1-mWU7ilDYM9_name: "Εξέταση Μέρος 1 -25 ερωτήσεις"
+  cspexam2-AKwgAh1ac5_name: "Εξέταση Μέρος 2 -25 ερωτήσεις"
   cspunit3_gradelevel: "Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου"
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1284,9 +1286,9 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: "Επιταχυνόμενη πορεία μάθησης"
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: "Επιστήμη Υπολογιστών στην Αλγεβρα"
+  AlgebraA_name: "Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Α"
+  AlgebraB_name: "Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Β"
   gumball_name: Gumball
   classicmaze_name: "Κλασικός λαβύρινθος"
   iceage_name: "Εποχή των Παγετώνων"
@@ -1299,7 +1301,7 @@
   math_category_name: "Μαθηματικά"
   hoc_category_name: "Ώρα του Κώδικα"
   csf_category_name: "Βασικές αρχές της Επιστήμης των Υπολογιστών"
-  csf_international_category_name: CS Fundamentals International
+  csf_international_category_name: "Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών"
   csf2_draft_category_name: "Υπό ανάπτυξη: Μαθήματα A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "Αρχές της Επιστήμης των Υπολογιστών ' 15-'16"
@@ -1368,12 +1370,12 @@
   course2_gradelevel: "Ηλικίες 6+ (απαιτείται ανάγνωση)"
   course3_gradelevel: "Ηλικίες 8+ (μετά το Μάθημα 2)"
   course4_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
-  coursea_gradelevel: Grade 5+
+  coursea_gradelevel: "Τάξεις Ε' Δημοτικού +"
   courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursec_gradelevel: "Τάξεις Α' Γυμνασίου +"
   coursed_gradelevel: "Τάξεις Β' Γυμνασίου +"
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
+  coursee_gradelevel: "Τάξεις Γ' Γυμνασίου +"
+  coursef_gradelevel: "Τάξεις Α' Λυκείου +"
   accelerated_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
@@ -2108,7 +2110,7 @@
   header_my_dashboard: My Dashboard
   header_courses: "Τες"
   header_course_catalog: Course Catalog
-  header_project_gallery: Project Gallery
+  header_project_gallery: "Έργα"
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
@@ -2137,7 +2139,7 @@
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
+  header_help_support: "Βοήθεια και υποστήριξη "
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
