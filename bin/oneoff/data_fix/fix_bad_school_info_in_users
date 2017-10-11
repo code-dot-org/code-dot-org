@@ -49,6 +49,8 @@ school_info_ids = ActiveRecord::Base.connection.execute(%Q{
   }
 ).pluck(0)
 
+ActiveRecord::Base.record_timestamps = false
+
 school_info_ids.each do |school_info_id|
   users = User.where("user_type = 'teacher' AND school_info_id = ?", school_info_id)
   next unless users.count > 1
