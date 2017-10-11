@@ -106,7 +106,7 @@ describe("ButtonList", () => {
       expect(onChangeCallback).to.have.been.calledWith({favoritePet: ["Cat"]});
 
       // Unselect "Cat" from ["Cat", "Dog"], resulting in ["Dog"]
-      checkboxList.setProps({...checkboxList.props.merge, selectedItems: ["Cat", "Dog"]});
+      checkboxList.setProps({selectedItems: ["Cat", "Dog"]});
       onChangeCallback.reset();
       checkboxList.find("Checkbox[value='Cat']").simulate("change", {target: {value: "Cat", checked: false}});
       expect(onChangeCallback).to.have.been.calledOnce;
