@@ -295,12 +295,11 @@ function stripQuotes(str) {
 
 /**
  * Gets the properties that should be shown in the dropdown list for elements of the given type.
+ * @param {string} elementType Optional type of element (e.g. BUTTON, IMAGE, etc.)
  * @param {object} block Optional droplet block (will be undefined in text mode)
- * @param {object} editor Optional droplet editor (will be undefined in text mode)
- * @param {string} elementType
  * @returns {!Array<string>} list of quoted property names
  */
-function getDropdownProperties(block, editor, elementType) {
+function getDropdownProperties(elementType, block) {
   var opts = fullDropdownOptions.slice();
 
   if (elementType in PROPERTIES) {
@@ -315,7 +314,7 @@ function getDropdownProperties(block, editor, elementType) {
       var newOpt = Object.assign({}, opt);
       newOpt.click = (callback) => {
         callback(opt.text);
-        setParamAtIndex(2, opt.setValueParam, block, editor);
+        setParamAtIndex(2, opt.setValueParam, block);
       };
       opts[index] = newOpt;
     }
@@ -411,7 +410,7 @@ export function setPropertyDropdown() {
       }
     }
 
-    return getDropdownProperties(this.parent, aceEditor, elementType);
+    return getDropdownProperties(elementType, this.parent);
   };
 }
 
