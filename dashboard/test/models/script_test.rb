@@ -441,7 +441,8 @@ class ScriptTest < ActiveSupport::TestCase
       name: 'single-stage-script',
       disablePostMilestone: false,
       isHocScript: false,
-      student_detail_progress_view: false
+      student_detail_progress_view: false,
+      age_13_required: false,
     }
     assert_equal expected, script.summarize_header
   end
