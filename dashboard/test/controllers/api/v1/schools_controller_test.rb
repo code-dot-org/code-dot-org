@@ -35,6 +35,12 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     assert_equal [GLADYS_JUNG_ELEMENTARY], JSON.parse(@response.body)
   end
 
+  test 'search by school zip' do
+    get :search, params: {q: '91355', limit: 40}
+    assert_response :success
+    assert_equal [ALBERT_EINSTEIN_ACADEMY_ELEMENTARY], JSON.parse(@response.body)
+  end
+
   test 'search with limit of negative one' do
     get :search, params: {q: 'glad', limit: -1}
     assert_response :success
