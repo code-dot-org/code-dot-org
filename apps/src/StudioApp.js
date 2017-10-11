@@ -1437,8 +1437,6 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
-  this.onFeedback(options);
-
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1464,6 +1462,8 @@ StudioApp.prototype.displayFeedback = function (options) {
   if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
     this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
+
+  this.onFeedback(options);
 };
 
 /**
@@ -2012,9 +2012,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: (
-      config.level.textModeAtStart === 'block' ? false :
+      config.level.textModeAtStart === 'blocks' ? false :
       config.level.textModeAtStart === false ? config.usingTextModePref :
-      config.level.textModeAtStart
+      !!config.level.textModeAtStart
     ),
   });
 

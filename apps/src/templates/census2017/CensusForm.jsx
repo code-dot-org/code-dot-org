@@ -75,6 +75,12 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     padding: 5
   },
+  inputInline: {
+    height: 25,
+    width: 390,
+    fontFamily: '"Gotham 3r", sans-serif',
+    padding: 5
+  },
   textArea: {
     height: 100,
     width: '100%',
@@ -118,6 +124,7 @@ class CensusForm extends Component {
     showPledge: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
+    otherTopicsDesc: '',
     submission: {
       name: '',
       email: '',
@@ -183,17 +190,40 @@ class CensusForm extends Component {
   }
 
   toggleTopics(option) {
-     const selected = this.state.selectedTopics.slice(0);
-     if (selected.includes(option)) {
-       this.setState({
-         selectedTopics: _.without(selected, option)
-       });
-     } else {
-       this.setState({
-         selectedTopics: selected.concat(option)
-       });
-     }
-   }
+    if (this.state.selectedTopics.includes(option)) {
+      this.clearOption(option);
+    } else {
+      this.selectOption(option);
+    }
+  }
+
+  selectOption(option) {
+    this.setState({
+      selectedTopics: this.state.selectedTopics.concat(option)
+    });
+  }
+
+  clearOption(option) {
+    this.setState({
+      selectedTopics: _.without(this.state.selectedTopics, option)
+    });
+  }
+
+  updateOtherTopicsDesc(event) {
+    const description = event.target.value;
+    const emptyDescription = ("" === description);
+
+    // Clear the "other topics" checkbox when there is no description.
+    if (emptyDescription) {
+      this.clearOption("topic_other_b");
+    }
+    // Mark the "other topics" checkbox when there is a description.
+    if (!emptyDescription) {
+      this.selectOption("topic_other_b");
+    }
+
+    this.setState({ otherTopicsDesc: description });
+  }
 
   processResponse() {
     window.location.href = "/yourschool/thankyou";
@@ -265,8 +295,27 @@ class CensusForm extends Component {
     }
   }
 
+  topicCheckbox(name, label) {
+    return (
+    <label>
+      <input
+        type="checkbox"
+        name={name}
+        checked={this.state.selectedTopics.includes(name)}
+        onChange={() => this.toggleTopics(name)}
+      />
+      <span style={styles.checkboxOption}>
+        {label}
+      </span>
+    </label>
+    );
+  }
+
   render() {
-    const { showFollowUp, showPledge, submission, selectedTopics, errors } = this.state;
+    const showFollowUp = this.state.showFollowUp;
+    const showPledge = this.state.showPledge;
+    const submission = this.state.submission;
+    const errors = this.state.errors;
     const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
 
     return (
@@ -425,19 +474,23 @@ class CensusForm extends Component {
                     key={index}
                     style={styles.leftMargin}
                   >
-                    <label>
-                      <input
-                        type="checkbox"
-                        name={courseTopic.name}
-                        checked={selectedTopics.includes(courseTopic.name)}
-                        onChange={() => this.toggleTopics(courseTopic.name)}
-                      />
-                      <span style={styles.checkboxOption}>
-                        {courseTopic.label}
-                      </span>
-                    </label>
+                    {this.topicCheckbox(courseTopic.name, courseTopic.label)}
                   </div>
                 )}
+                <div style={styles.leftMargin}>
+                  {this.topicCheckbox("topic_other_b", `${i18n.censusOtherDescribeHere()}`)}
+                  &nbsp;
+                  <input
+                    type="text"
+                    name="topic_other_desc_s"
+                    value={this.state.otherTopicsDesc}
+                    onChange={this.updateOtherTopicsDesc.bind(this)}
+                    style={styles.inputInline}
+                  />
+                </div>
+                <div style={styles.leftMargin}>
+                  {this.topicCheckbox("topic_dont_know_b", i18n.iDontKnow())}
+                </div>
               </div>
               <label>
                 <div style={styles.question}>

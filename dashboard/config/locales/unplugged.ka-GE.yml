@@ -285,26 +285,29 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: "ამ გაკვეთილში თქვენ ისწავლით ციკლების შესახებ!"
       courseB_unplugged_MRF:
         title: "აქტივობა უკომპიუტეროდ"
-        desc: In this lesson, you will 'program' your friends!
+        desc: "ამ გაკვეთილში თქვენ `დააპროპგრამებთ` მეგობრებთან ერთად!"
       courseB_unplugged_loopyMRF:
         title: "აქტივობა უკომპიუტეროდ"
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: ზუსტად ისე, როგორც "ჩემს რობოტულ მეგობრებში" თქვენ "დააპროგრამებთ" თქვენს
+          მეგობრებთან ერთად, თუმცა ამჯერად ციკლების საშუალებით!
       courseC_Unplugged_ScreenOutTheMean:
         title: "აქტივობა უკომპიუტეროდ"
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: "დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ
+          ონლაინში."
       courseD_unplugged_digitalCitizenship:
         title: "აქტივობა უკომპიუტეროდ"
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: "დღეს თქვენ გაიგებთ თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა."
       courseE_unplugged_privateInformation:
         title: "აქტივობა უკომპიუტეროდ"
-        desc: Today you will learn the difference between private and personal information!
+        desc: "დღეს თქვენ ისწავლით განსხვავებას კონფიდენციალური და პირადი ინფორმაციის
+          შორის!"
       courseF_unplugged_powerOfWords:
         title: "აქტივობა უკომპიუტეროდ"
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: "დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ
+          ონლაინში."
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -376,7 +379,7 @@
           სიღრმისეულად გავეცნობით ამ თემას და გაჩვენებთ, თუ როგორ ინახავს კომპიუტერი
           ორობითში უფრო რთულ ინფორმაციას (მაგალითად, სურათებსა და ფერებს)."
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: "ცხოვრებისეული ალგორითმები: კამათლების შეჯიბრი"
         desc: "ამ გაკვეთილში ნაჩვენებია, თუ როგორ ვიყენებთ ალგორითმებს ყოველდღიურ
           ცხოვრებაში. გაკვეთილის მსვლელობისას მოსწავლეები გამოიცნობენ და დაწერენ კამათლების
           შეჯიბრის ალგორითმს."

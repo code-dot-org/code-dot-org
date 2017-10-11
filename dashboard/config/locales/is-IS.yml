@@ -92,11 +92,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft reikning
+    clever: Clever Account
     forgot_password: Gleymt lykilorð?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
     not_linked: "Því miður er Code.org aðgangur þinn ekki tengur við %{provider}.
       Þú þarft því að skrá þig inn með því að rita lykilorð hér fyrir neðan."
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} nemendur hafa þegar skráð sig."
     teacher_count: "%{count} kennarar hafa þegar skráð sig."
@@ -296,7 +299,7 @@
       my_dashboard: My Dashboard
       courses: Námskeið
       course_catalog: Course Catalog
-      project_gallery: Verkefnagallerí
+      project_gallery: Verkefni
       sections: Hópar
       help_support: Aðstoð og þjónusta
       report_bug: Tilkynna galla
@@ -988,9 +991,10 @@
     rename: Endurnefna
     save: Vista
     delete: Eyða
+    import: Import
     exit: Til baka í námskeið
     my_projects: Verkefni mín
-    project_gallery: Verkefnagallerí
+    project_gallery: Verkefni
     publish: Birta
     unpublish: Taka úr birtingu
     share: Deila leik
@@ -1030,6 +1034,9 @@
     remix: Endurblanda
     click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!
     edit_project: Breyta verkefni
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: "Þetta verkefni hefur verið tilkynnt fyrir brot á <a href='http://code.org/tos'>Þjónustuskilmálum</a>
         Code.org og þess vegna er ekki hægt að deila því."
@@ -1096,6 +1103,10 @@
     optional_stages: Optional Stages
     main_course: Aðalnámskeið
     extra_course_content: Viðbótarefni námskeiðs
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Kafli 1: Lausn vandamála sem ferli'
     csd1_2: 'Kafli 2: Tölvur og lausn vandamála'
     csd2_1: 'Kafli 1: Innihald vefja og HTML'

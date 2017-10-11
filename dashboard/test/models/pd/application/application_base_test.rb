@@ -10,6 +10,7 @@ module Pd::Application
       assert_equal(
         [
           'Form data is required',
+          'User is required',
           'Application type is not included in the list',
           'Application year is not included in the list',
           'Type is required'
@@ -23,8 +24,9 @@ module Pd::Application
       assert_equal TEACHER_APPLICATION, application.application_type
       assert_equal YEAR_18_19, application.application_year
 
-      # with form_data, it is valid
+      # with form_data and user, it is valid
       application.form_data = {}.to_json
+      application.user = create(:user)
       assert application.valid?
     end
 

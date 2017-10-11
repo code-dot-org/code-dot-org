@@ -1,3 +1,5 @@
+require 'sort_alphabetical'
+# coding: utf-8
 COUNTRY_CODE_TO_COUNTRY_NAME = {
   "AD" => "Andorra",
   "AE" => "United Arab Emirates",
@@ -254,5 +256,5 @@ end
 
 # Returns the entire list of countries
 def get_all_countries
-  return COUNTRY_CODE_TO_COUNTRY_NAME.sort_by {|_code, name| name}
+  return COUNTRY_CODE_TO_COUNTRY_NAME.sort_alphabetical_by {|_code, name| name}
 end

@@ -58,10 +58,6 @@ export default class WorkshopIndex extends React.Component {
     this.context.router.push('../workshop_user_management/facilitator_courses');
   };
 
-  handleRegionalPartnersClick = (e) => {
-    this.context.router.push('../../regional_partners');
-  };
-
   handleFilterClick = (e) => {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
@@ -94,13 +90,6 @@ export default class WorkshopIndex extends React.Component {
               onClick={this.handleUserManagementClick}
             >
               User Management
-            </Button>}
-          {this.permission.isWorkshopAdmin &&
-            <Button
-              href={this.context.router.createHref("../../regional_partners")}
-              onClick={this.handleRegionalPartnersClick}
-            >
-              Regional Partners
             </Button>}
           <Button
             href={this.context.router.createHref("/workshops/filter")}

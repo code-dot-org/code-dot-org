@@ -91,6 +91,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.osc.org/">Orlando Science Center</a>
 * <a href="http://philadelphiapact.com/">Philadelphia Alliance for Capital and Technologies</a>
 * <a href="https://www.pluralsight.com/one">Pluralsight</a>
+* <a href="http://www.ruraltechfund.org">Rural Technology Fund</a>
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a>
@@ -100,6 +101,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.talklou.com/wp/">Technology Association of Louisville Kentucky</a>
 * <a href="http://www.techoregon.org/">Technology Association of Oregon</a>
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
+* <a href="https://udtonline.com/portfolio-item/education/">United Data Technologies</a>
 * <a href="http://www.washingtonstem.org/">Washington STEM</a>
 
 [#tools-section]

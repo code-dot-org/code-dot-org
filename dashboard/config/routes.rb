@@ -104,6 +104,7 @@ Dashboard::Application.routes.draw do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
+    get '/users/clever_takeover', to: 'sessions#clever_takeover'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
