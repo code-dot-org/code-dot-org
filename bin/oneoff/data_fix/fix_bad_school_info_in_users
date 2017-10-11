@@ -17,15 +17,26 @@
 #
 # However, because of the order on id, it was matching a school in NJ.
 #
-# Arguments:
-#   --actually-update Indicates to execute the update on the affected users.
-#
 
 require_relative '../../../dashboard/config/environment'
+require 'optparse'
 require 'tmpdir'
 
-ACTUALLY_UPDATE = (ARGV[0].eql? "--actually-update").freeze
-puts "Called with --actually-update=#{ACTUALLY_UPDATE}"
+options = {actually_update: false, interstitial_days: 0}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-u', '--actually-update', 'Actually perform the update.') do
+    options[:actually_update] = true
+  end
+  opts.on('-d', '--interstitial-days DAYS', 'Number of days before showing the interstitial dialog.') do |d|
+    options[:interstitial_days] = Integer(d)
+  end
+  opts.on('-h', '--help', 'Prints this help') do
+    puts opts
+    exit
+  end
+end.parse!
+puts "Called with options: #{options}"
 
 start_time = Time.now
 
@@ -53,7 +64,7 @@ school_info_ids = ActiveRecord::Base.connection.execute(%Q{
 ActiveRecord::Base.record_timestamps = false
 
 csv_file = "#{Dir.tmpdir}/#{File.basename(__FILE__)}.#{Time.now.strftime('%Y%m%d%H%M')}.csv"
-puts "Writting results to #{csv_file}"
+puts "Writting results to: #{csv_file}"
 
 CSV.open(csv_file, 'w') do |csv|
   csv << ["id", "school_info_id"]
@@ -64,8 +75,10 @@ CSV.open(csv_file, 'w') do |csv|
 
     users.each do |user|
       csv << [user.id.to_s, user.school_info_id.to_s]
-      if ACTUALLY_UPDATE
-        user.update!(school_info_id: nil)
+      if options[:actually_update]
+        user.last_seen_school_info_interstitial = DateTime.now + options[:interstitial_days]
+        user.school_info_id = nil
+        user.save!(validate: false)
       end
       user_count += 1
     end
