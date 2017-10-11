@@ -17,7 +17,7 @@ $(document).ready(() => {
     window.initLevelGroup(
       initData.total_level_count,
       initData.page,
-      JSON.parse(initData.last_attempt)
+      initData.last_attempt
     );
   }
 });
