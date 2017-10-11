@@ -90,7 +90,8 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   initializeStoreWithProgress(store, {
     name,
     stages: [stageData],
-    disablePostMilestone
+    disablePostMilestone,
+    age_13_required
   }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
@@ -106,7 +107,6 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     store.dispatch(setUserSignedIn(signedIn));
   }
   store.dispatch(setIsHocScript(isHocScript));
-  store.dispatch(setIsAge13Required(age_13_required));
   if (signedIn) {
     progress.showDisabledBubblesAlert();
   }
@@ -133,6 +133,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
  * @param {string} scriptData.name
  * @param {boolean} scriptData.hideable_stages
  * @param {boolean} scriptData.isHocScript
+ * @param {boolean} scriptData.age_13_required
  * Render our progress on the course overview page.
  */
 progress.renderCourseProgress = function (scriptData) {
@@ -288,6 +289,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} [scriptData.plc]
  * @param {object[]} [scriptData.stages]
+ * @param {boolean} scriptData.age_13_required
  * @param {string} currentLevelId
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
@@ -323,6 +325,8 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
   }
+
+  store.dispatch(setIsAge13Required(scriptData.age_13_required));
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.
