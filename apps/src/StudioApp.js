@@ -1794,8 +1794,10 @@ StudioApp.prototype.configureDom = function (config) {
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
-  // The check for instructionsWhenCollapsed checks for whether the app uses CSPTopInstructions
-  if ((!config.noInstructionsWhenCollapsed || !experiments.isEnabled('resourcesTab')) && referenceArea) {
+  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
+  // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
+  if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
   }
 
