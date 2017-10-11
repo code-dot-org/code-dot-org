@@ -65,6 +65,21 @@ class CollectionsApi {
     }
     return ajaxInternal(method, this.basePath(file), success, error, data);
   }
+
+  /*
+   * Restore this file to the state of a previous version
+   * @param file {String} name of file
+   * @param versionId {String} identifier of previous version
+   * @param success {Function} callback when successful (includes xhr parameter)
+   * @param error {Function} callback when failed (includes xhr parameter)
+   */
+  restorePreviousFileVersion(file, versionId, success, error) {
+    var path = this.basePath(`${file}/restore`);
+    path += '?' + queryString.stringify({
+      version: versionId
+    });
+    return ajaxInternal('PUT', path, success, error);
+  }
 }
 
 class AssetsApi extends CollectionsApi {
