@@ -537,4 +537,17 @@ class LevelsHelperTest < ActionView::TestCase
 
     assert_includes app_options[:experiments], experiment.name
   end
+
+  test 'video data available for levels with associated videos' do
+    @level = create :applab, :with_autoplay_video
+    assert_equal app_options[:level][:levelVideos].length, 1
+    # accounts for the random assignmnet of video data in stub
+    assert_includes app_options[:level][:levelVideos][0][:key], "concept_"
+  end
+
+  test 'video data is empty for levels with no associated videos' do
+    leveldata = []
+    @level = create :applab
+    assert_equal app_options[:level][:levelVideos], leveldata
+  end
 end
