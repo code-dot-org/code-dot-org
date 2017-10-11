@@ -5,6 +5,9 @@ import * as utils from '../utils';
 // Sorting for tutorials.
 export const TutorialsSortBy = utils.makeEnum('default', 'popularityrank', 'displayweight');
 
+// Orgname value.
+export const TutorialsOrgName = utils.makeEnum('all');
+
 
 /**
  * For a comma-separated string of tags, generate a comma-separated string of their friendly

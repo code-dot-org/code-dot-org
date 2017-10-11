@@ -10,7 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortBy, mobileCheck } from './util';
+import { TutorialsSortBy, TutorialsOrgName, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
@@ -60,7 +60,7 @@ const TutorialExplorer = React.createClass({
     }
 
     const sortBy = TutorialsSortBy.default;
-    const orgName = "all";
+    const orgName = TutorialsOrgName.all;
     const filteredTutorials = this.filterTutorialSet(filters, sortBy, orgName);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
@@ -203,7 +203,7 @@ const TutorialExplorer = React.createClass({
   filterTutorialSetForLocale() {
     const filterProps = {
       sortBy: this.props.defaultSortBy,
-      orgName: "all"
+      orgName: TutorialsOrgName.all
     };
 
     if (!this.props.roboticsButtonUrl) {
@@ -350,10 +350,8 @@ const TutorialExplorer = React.createClass({
 
         // If we are showing an explicit orgname, then filter if it doesn't
         // match.
-        if (orgName && orgName !== "all") {
-          if (tutorial.orgname !== orgName) {
-            return false;
-          }
+        if (orgName && orgName !== TutorialsOrgName.all && tutorial.orgname !== orgName) {
+          return false;
         }
 
         // If we are explicitly hiding a matching filter, then don't show the
@@ -410,11 +408,10 @@ const TutorialExplorer = React.createClass({
       return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
     },
 
-    /* Returns an array of unique organisation names from the set of tutorials,
+    /* Returns an array of unique organization names from the set of tutorials,
      * sorted alphabetically, truncated and ellipsed.
      *
-     * @param {Array} tutorials - Array of tutorials.  Each contains a variety of
-     *   strings, each of which is a list of tags separated by commas, no spaces.
+     * @param {Array} tutorials - Array of tutorials.
      * @return {Array} - Array of strings.
      */
     getUniqueOrgNamesFromTutorials(tutorials) {
@@ -423,7 +420,7 @@ const TutorialExplorer = React.createClass({
         return t.tags.split(',').indexOf("do-not-show") === -1 && t.orgname !== "do-not-show";
       });
 
-      // Construct sorted array of unique org names from the tutorials.
+      // Construct array of unique org names from the tutorials.
       let uniqueOrgNames = [...new Set(availableTutorials.map(t => t.orgname))];
 
       // Sort the unique org names alphabetically, case-insensitive.
@@ -431,7 +428,9 @@ const TutorialExplorer = React.createClass({
 
       // Truncate each of them to limit length.
       const maxOrgNameChars = 25;
-      uniqueOrgNames = uniqueOrgNames.map(t => t.length > maxOrgNameChars ? t.substring(0, maxOrgNameChars) + '...' : t);
+      uniqueOrgNames = uniqueOrgNames.map(t => {
+        return t.length > maxOrgNameChars ? t.substring(0, maxOrgNameChars) + '...' : t;
+      });
 
       return uniqueOrgNames;
     }
