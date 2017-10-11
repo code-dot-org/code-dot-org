@@ -19,11 +19,19 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red,
   },
+  errors: {
+    fontSize: 14,
+    fontFamily: '"Gotham 3r", sans-serif',
+    color: color.red,
+    paddingTop: 5,
+    paddingBottom: 5
+  },
 };
 
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
     setField: PropTypes.func,
+    showErrorMsg: PropTypes.bool,
     // Value is the NCES id of the school
     value: PropTypes.string
   };
@@ -54,6 +62,11 @@ export default class SchoolAutocompleteDropdown extends Component {
         <div style={styles.question}>
           {i18n.schoolName()}
           <span style={styles.asterisk}> *</span>
+          {this.props.showErrorMsg && (
+            <div style={styles.errors}>
+              {i18n.censusRequiredSelect()}
+            </div>
+          )}
         </div>
         <VirtualizedSelect
           id="nces_school"

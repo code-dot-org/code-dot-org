@@ -273,9 +273,9 @@ class CensusForm extends Component {
   validateSchoolDropdown() {
     if (this.state.submission.country === "United States") {
       if (this.state.submission.nces) {
-        return true;
-      } else {
         return false;
+      } else {
+        return true;
       }
     } else {
       return false;
@@ -392,7 +392,8 @@ class CensusForm extends Component {
           {US && (
             <SchoolAutocompleteDropdown
               setField={this.handleSchoolDropdownChange}
-              value={this.state.submission.nces}
+              value={submission.nces}
+              showErrorMsg={errors.nces}
             />
           )}
           {US && this.state.submission.nces === "-1" && (
