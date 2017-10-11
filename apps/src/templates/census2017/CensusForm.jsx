@@ -130,7 +130,7 @@ class CensusForm extends Component {
       name: '',
       email: '',
       role: '',
-      country: '',
+      country: 'United States',
       hoc: '',
       nces: '',
       schoolName: '',
