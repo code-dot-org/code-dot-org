@@ -803,6 +803,7 @@ Craft.reportResult = function (success) {
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? image.split(',')[1] : null;
+  const showingSharing = Craft.initialConfig.level.freePlay;
 
   studioApp().report({
     app: 'craft',
@@ -813,6 +814,7 @@ Craft.reportResult = function (success) {
     program: Blockly.Xml.domToText(
           Blockly.Xml.blockSpaceToDom(
               Blockly.mainBlockSpace)),
+    showingSharing,
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
@@ -832,7 +834,7 @@ Craft.reportResult = function (success) {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: image,
-        showingSharing: Craft.initialConfig.level.freePlay
+        showingSharing
       });
     }
   });

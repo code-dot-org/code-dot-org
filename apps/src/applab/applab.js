@@ -1239,6 +1239,7 @@ Applab.onPuzzleComplete = function (submit) {
         program: program,
         image: Applab.encodedFeedbackImage,
         containedLevelResultsInfo: containedLevelResultsInfo,
+        showingSharing: level.freePlay,
         onComplete
       });
     }

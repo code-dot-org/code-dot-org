@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { TestResults } from '@cdo/apps/constants';
 import experiments from '../util/experiments';
 var clientState = require('./clientState');
-import { onUnload, beacon } from '@cdo/apps/utils';
+import { onUnload, beacon, xhr } from '@cdo/apps/utils';
 
 var lastAjaxRequest;
 var unloadListener;
@@ -49,6 +49,9 @@ function validateReport(report) {
 
     const value = report[key];
     switch (key) {
+      case 'showingSharing':
+        validateType('showingSharing', value, 'boolean');
+        break;
       case 'program':
         if (report.app === 'match') {
           validateType('program', value, 'array');
@@ -173,6 +176,8 @@ function validateReport(report) {
  * @property {?} image - ??
  * @property {boolean} pass - true if the attempt is passing.
  * @property {boolean} gamification_enabled - true if experiment is enabled.
+ * @property {boolean} showingSharing - true if the share dialog should be shown.
+ *           This forces synchronous submission so a LevelSource is returned in the response.
  */
 
 /**
@@ -219,6 +224,9 @@ reporting.sendReport = function (report) {
 
   const progressUpdated = clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
+  // Showing sharing dialog requires a synchronous response.
+  const sync = report.showingSharing;
+
   // Enable reports for this level iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
@@ -228,7 +236,14 @@ reporting.sendReport = function (report) {
     milestones.push(serverReport);
 
     console.log(`Queued ${milestones.length} milestones (${JSON.stringify(milestones).length} bytes)`);
-    if (progressUpdated) {
+    if (sync) {
+      console.log("Synchronous response required, posting progress");
+      xhr(report.callback, {milestones: milestones}, function (response) {
+        reportComplete(report, response);
+      }, 2000);
+      milestones = [];
+      return;
+    } else if (progressUpdated) {
       console.log("Progress updated, posting progress");
       beacon(report.callback, {milestones: milestones});
       milestones = [];

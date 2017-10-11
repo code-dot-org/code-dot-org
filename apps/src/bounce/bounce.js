@@ -1111,6 +1111,7 @@ Bounce.onPuzzleComplete = function () {
       testResult: Bounce.testResults,
       program: textBlocks,
       image: Bounce.encodedFeedbackImage,
+      showingSharing: level.freePlay,
       onComplete: Bounce.onReportComplete
     });
   };

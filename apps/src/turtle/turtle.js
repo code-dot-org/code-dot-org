@@ -1840,7 +1840,8 @@ Artist.prototype.checkAnswer = function () {
       testResult: this.testResults,
       program: program,
       onComplete: _.bind(this.onReportComplete, this),
-      save_to_gallery: level.impressive
+      save_to_gallery: level.impressive,
+      showingSharing: !level.disableSharing && (level.freePlay || level.impressive),
     };
 
     reportData = this.setReportDataImage_(level, reportData);

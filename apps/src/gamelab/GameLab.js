@@ -562,6 +562,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
         submitted: submit,
         program: program,
         image: this.encodedFeedbackImage,
+        showingSharing: !this.level.disableSharing && (this.level.freePlay /* || this.level.impressive */),
         onComplete
       });
     }

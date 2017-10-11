@@ -711,7 +711,7 @@ export function resetAniGif(element) {
 }
 
 /**
- * Post data to a url with a timeout, using sendBeacon with fallback to synchronous ajax.
+ * Post data to a url, using sendBeacon with fallback to synchronous ajax.
  * @param {string} url
  * @param {Object} data
  */
@@ -728,6 +728,28 @@ export function beacon(url, data) {
     request.open('POST', url, false);
     request.send(blob);
   }
+}
+
+/**
+ * Post data to a url with a timeout, using an asynchronous XMLHttpRequest.
+ * @param url
+ * @param data
+ * @param callback
+ * @param timeout
+ */
+export function xhr(url, data, callback, timeout) {
+  const blob = new Blob([encode(data, {skipIndex: true})], {type: 'application/x-www-form-urlencoded'});
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', url);
+  xhr.responseType = 'json';
+  xhr.timeout = timeout;
+  xhr.onload = function () {
+    callback(xhr.response);
+  };
+  xhr.ontimeout = function () {
+    callback({});
+  };
+  xhr.send(blob);
 }
 
 /**

@@ -812,7 +812,8 @@ Flappy.onPuzzleComplete = function () {
                      result: Flappy.result === ResultType.SUCCESS,
                      testResult: Flappy.testResults,
                      program: textBlocks,
-                     onComplete: Flappy.onReportComplete
+                     onComplete: Flappy.onReportComplete,
+                     showingSharing: level.freePlay && level.shareable,
                      });
 };
 

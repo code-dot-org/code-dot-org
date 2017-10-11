@@ -3390,6 +3390,10 @@ Studio.onPuzzleComplete = function () {
       testResult: Studio.testResults,
       program: program,
       image: Studio.encodedFeedbackImage,
+      showingSharing: !level.disableSharing &&
+        level.freePlay &&
+        !Studio.preExecutionFailure &&
+        !level.projectTemplateLevelName,
       onComplete: Studio.onReportComplete
     });
   };

@@ -476,7 +476,8 @@ Eval.execute = function () {
     testResult: Eval.testResults,
     program: textBlocks,
     onComplete: onReportComplete,
-    image: Eval.encodedFeedbackImage
+    image: Eval.encodedFeedbackImage,
+    showingSharing: !level.disableSharing && (level.freePlay),
   };
 
   // don't try it if function is not defined, which should probably only be
