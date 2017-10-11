@@ -21,7 +21,7 @@ $(document).ready(function () {
     censusFormSubmit();
   });
 
-  $('.continue-btn').click(function () {
+  $('#continue').click(function () {
     if (validateFields()) {
       signupFormSubmit(showCensusForm);
     }
