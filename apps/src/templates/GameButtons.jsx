@@ -32,7 +32,7 @@ export const RunButton = Radium(props => (
     style={props.style}
   >
     <div>
-      {msg.runProgram()}
+      {props.agent ? 'Run Agent' : msg.runProgram()}
     </div>
     <img
       src={blankImg}
@@ -43,6 +43,7 @@ export const RunButton = Radium(props => (
 RunButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
+  agent: PropTypes.bool,
 };
 RunButton.displayName = 'RunButton';
 
