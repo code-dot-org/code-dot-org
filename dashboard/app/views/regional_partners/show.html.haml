@@ -83,6 +83,10 @@
   = text_field_tag :search_term, params[:search_term], class: 'form-control'
   %button.btn{type: 'submit'}
     %i.fa.fa-search
+  - if params[:search_term]
+    %h4
+      Filter:
+      = params[:search_term]
 -if @users
   %table.table.table-hover.table-condensed.table-auto-width{:id => 'assign-program-managers-table'}
     %thead
