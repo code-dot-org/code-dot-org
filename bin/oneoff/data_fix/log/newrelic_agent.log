@@ -1,0 +1,49 @@
+# Logfile created on 2017-10-10 19:13:39 -0700 by logger.rb/56504
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Starting the New Relic agent in "development" environment.
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] WARN : No configuration file found. Working directory = /home/polsky/code-dot-org/bin/oneoff/data_fix
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] WARN : Looked in these locations (based on defaults): /home/polsky/code-dot-org/bin/oneoff/data_fix/config/newrelic.yml, /home/polsky/code-dot-org/bin/oneoff/data_fix/newrelic.yml, /home/polsky/code-dot-org/dashboard/config/newrelic.yml, /home/polsky/code-dot-org/dashboard/newrelic.yml, /home/polsky/.newrelic/newrelic.yml, /home/polsky/newrelic.yml
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Environment: development
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Dispatcher: webrick
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Application: development
+[2017-10-10 19:13:39 -0700 DESKTOP-U1ERKQJ (3662)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing ActiveJob instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing ActiveRecord 4+ instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing HTTPClient instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Memcache instrumentation for dalli gem
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Net instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Sinatra instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Redis Instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Sequel instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Rails 5 Controller instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Installing Rails 5 view instrumentation
+[2017-10-10 19:13:40 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Finished instrumentation
+[2017-10-10 19:13:43 -0700 DESKTOP-U1ERKQJ (3662)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Starting the New Relic agent in "development" environment.
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] WARN : No configuration file found. Working directory = /home/polsky/code-dot-org/bin/oneoff/data_fix
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] WARN : Looked in these locations (based on defaults): /home/polsky/code-dot-org/bin/oneoff/data_fix/config/newrelic.yml, /home/polsky/code-dot-org/bin/oneoff/data_fix/newrelic.yml, /home/polsky/code-dot-org/dashboard/config/newrelic.yml, /home/polsky/code-dot-org/dashboard/newrelic.yml, /home/polsky/.newrelic/newrelic.yml, /home/polsky/newrelic.yml
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Environment: development
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Dispatcher: webrick
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Application: development
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing ActiveJob instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing ActiveRecord 4+ instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing HTTPClient instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Memcache instrumentation for dalli gem
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Net instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Sinatra instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Redis Instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Sequel instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Rails 5 Controller instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Installing Rails 5 view instrumentation
+[2017-10-10 19:23:23 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Finished instrumentation
+[2017-10-10 19:23:26 -0700 DESKTOP-U1ERKQJ (3712)] INFO : Doing deferred dependency-detection before Rack startup
