@@ -8,6 +8,9 @@ export const TutorialsSortBy = utils.makeEnum('default', 'popularityrank', 'disp
 // Orgname value.
 export const TutorialsOrgName = utils.makeEnum('all');
 
+// "do-not-show" string used in the source data as both a tag and in place of an
+// organization name.
+export const DoNotShow = "do-not-show";
 
 /**
  * For a comma-separated string of tags, generate a comma-separated string of their friendly
