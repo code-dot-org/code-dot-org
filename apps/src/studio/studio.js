@@ -1206,7 +1206,7 @@ Studio.onTick = function () {
   }
 
   if (!animationOnlyFrame) {
-    Studio.executeQueue('whenGameStarts');
+    Studio.executeQueue('whenGameStarts', skin.animateWhenGameStarts);
 
     callHandler('repeatForever');
     Studio.executeQueue('repeatForever');
@@ -4119,10 +4119,12 @@ Studio.executeQueue = function (name, oneOnly) {
     }
     if (handler.name === name && handler.cmdQueue.length) {
       for (var cmd = handler.cmdQueue[0]; cmd; cmd = handler.cmdQueue[0]) {
-        if (Studio.callCmd(cmd)) {
+        const complete = Studio.callCmd(cmd);
+        if (complete) {
           // Command executed immediately, remove from queue and continue
           handler.cmdQueue.shift();
-        } else {
+        }
+        if (!complete || oneOnly) {
           break;
         }
         if (Studio.paused || Studio.yieldExecutionTicks > 0) {
