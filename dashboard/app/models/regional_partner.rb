@@ -47,7 +47,7 @@ class RegionalPartner < ActiveRecord::Base
 
   # assign a program manager to a regional partner
   def program_manager=(program_manager_id)
-    regional_partner_program_managers << regional_partner_program_managers.find_or_create_by(
+    regional_partner_program_managers << regional_partner_program_managers.find_or_create_by!(
       regional_partner_id: id,
       program_manager_id: program_manager_id
     )
