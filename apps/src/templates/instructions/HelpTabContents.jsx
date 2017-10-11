@@ -10,7 +10,7 @@ const styles = {
     margin: 8,
     fontWeight: 'bold',
     fontSize: 16,
-    lineHeight: 25 + 'px',
+    lineHeight: '25px',
   },
   videoThumbnail: {
     borderRadius: 5,
@@ -23,7 +23,7 @@ const styles = {
 export default class HelpTabContents extends Component {
   static propTypes = {
     videoData: PropTypes.shape({
-      src: PropTypes.string,
+      src: PropTypes.string.isRequired,
       name: PropTypes.string,
       key: PropTypes.string,
       download: PropTypes.string,
