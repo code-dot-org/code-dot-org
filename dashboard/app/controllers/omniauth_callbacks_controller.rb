@@ -58,7 +58,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Clever signins have unique requirements, and must be handled a bit outside the normal flow
   def handle_clever_signin(user)
     # If account exists and it's not the first login, just sign in
-    if user.persisted? && user.sign_in_count > 1
+    if user.persisted? && user.sign_in_count > 0
       sign_in_user
     else
       # Otherwise, go through the new user flow - there we will
