@@ -3,7 +3,7 @@
  */
 import _ from 'lodash';
 
-import {getFirstParam, getSecondParam} from '../dropletUtils';
+import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
 import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 var ElementType = library.ElementType;
@@ -18,45 +18,51 @@ var ElementType = library.ElementType;
  * friendlyName: Name used in the code editor to refer to this property
  * internalName: Name used in updateProperty to refer to this property
  * type: Type of this property, used for validation at run time.
+ * defaultValue: String to be displayed as the setProperty value when this
+ *     property is chosen in the setProperty dropdown
  * alias (optional): True if this property should not be displayed to the user
  *     in the drop down list of properties
  */
 var PROP_INFO = {
-  width: { friendlyName: 'width', internalName: 'style-width', type: 'number'},
-  height: { friendlyName: 'height', internalName: 'style-height', type: 'number' },
-  canvasWidth: { friendlyName: 'width', internalName: 'width', type: 'number'},
-  canvasHeight: { friendlyName: 'height', internalName: 'height', type: 'number' },
-  x: { friendlyName: 'x', internalName: 'left', type: 'number' },
-  y: { friendlyName: 'y', internalName: 'top', type: 'number' },
-  textColor: { friendlyName: 'text-color', internalName: 'textColor', type: 'string' },
-  backgroundColor: { friendlyName: 'background-color', internalName: 'backgroundColor', type: 'string' },
-  fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number' },
-  textAlign: { friendlyName: 'text-align', internalName: 'textAlign', type: 'string' },
-  hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean' },
-  text: { friendlyName: 'text', internalName: 'text', type: 'uistring' },
-  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'uistring' },
-  image: { friendlyName: 'image', internalName: 'image', type: 'string' },
-  screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string' },
+  width: { friendlyName: 'width', internalName: 'style-width', type: 'number', defaultValue: '100' },
+  height: { friendlyName: 'height', internalName: 'style-height', type: 'number', defaultValue: '100' },
+  canvasWidth: { friendlyName: 'width', internalName: 'width', type: 'number', defaultValue: '100' },
+  canvasHeight: { friendlyName: 'height', internalName: 'height', type: 'number', defaultValue: '100' },
+  x: { friendlyName: 'x', internalName: 'left', type: 'number', defaultValue: '100' },
+  y: { friendlyName: 'y', internalName: 'top', type: 'number', defaultValue: '100' },
+  textColor: { friendlyName: 'text-color', internalName: 'textColor', type: 'string', defaultValue: '"red"' },
+  backgroundColor: { friendlyName: 'background-color', internalName: 'backgroundColor', type: 'string', defaultValue: '"red"' },
+  fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number', defaultValue: '100' },
+  textAlign: { friendlyName: 'text-align', internalName: 'textAlign', type: 'string', defaultValue: '"left"' },
+  hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean', defaultValue: 'true' },
+  text: { friendlyName: 'text', internalName: 'text', type: 'uistring', defaultValue: '"text"' },
+  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'uistring', defaultValue: '"text"' },
+  image: { friendlyName: 'image', internalName: 'image', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
+  screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
   // pictureImage and picture both map to 'picture' internally, but allow us to accept
   // either 'image' or 'picture' as the property name. picture is marked as an alias so
   // it won't show up in the dropdown.
-  pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string' },
-  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true },
-  iconColor: { friendlyName: 'icon-color', internalName: 'icon-color', type: 'string' },
-  groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string' },
-  checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean' },
-  readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean' },
-  options: { friendlyName: 'options', internalName: 'options', type: 'array' },
-  value: { friendlyName: 'value', internalName: 'defaultValue', type: 'number' },
-  min: { friendlyName: 'min', internalName: 'min', type: 'number' },
-  max: { friendlyName: 'max', internalName: 'max', type: 'number' },
-  step: { friendlyName: 'step', internalName: 'step', type: 'number' }
+  pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
+  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true, defaultValue: '"https://code.org/images/logo.png"' },
+  iconColor: { friendlyName: 'icon-color', internalName: 'icon-color', type: 'string', defaultValue: '"red"' },
+  groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string', defaultValue: '"text"' },
+  checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean', defaultValue: 'true' },
+  readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean', defaultValue: 'true' },
+  options: { friendlyName: 'options', internalName: 'options', type: 'array', defaultValue: '["option1", "etc"]' },
+  value: { friendlyName: 'value', internalName: 'defaultValue', type: 'number', defaultValue: '100' },
+  min: { friendlyName: 'min', internalName: 'min', type: 'number', defaultValue: '100' },
+  max: { friendlyName: 'max', internalName: 'max', type: 'number', defaultValue: '100' },
+  step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' }
 };
 
 // When we don't know the element type, we display all possible friendly names
-var fullDropdownOptions = _.uniq(Object.keys(PROP_INFO).map(function (key) {
-  return '"' + PROP_INFO[key].friendlyName + '"';
-}));
+var fullDropdownOptions = _.uniqBy(Object.keys(PROP_INFO)
+    .map(key => {
+      return constructDropdownOption(key);
+    }).filter(object => object),
+  object => {
+    return object.text;
+  });
 
 /**
  * Information about properties pertaining to each element type. Values have the following
@@ -232,10 +238,32 @@ for (var elementType in PROPERTIES) {
         ' in elementType: ' + elementType);
     }
     elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
-    if (!PROP_INFO[propName].alias) {
-      elementProperties.dropdownOptions.push('"' + friendlyName + '"');
+    let dropdownOption = constructDropdownOption(propName);
+    if (dropdownOption) {
+      elementProperties.dropdownOptions.push(dropdownOption);
     }
   });
+}
+
+/**
+ * @param {string} propName Key from PROP_INFO
+ * @return {object|undefined} A droplet dropdown object with an additional
+ *   setValueParam property that can be used to generate a click handler
+ */
+function constructDropdownOption(propName) {
+  let propInfo = PROP_INFO[propName];
+  if (!propInfo || propInfo.alias) {
+    return;
+  }
+  let {friendlyName, defaultValue} = propInfo;
+  if (!friendlyName || !defaultValue) {
+    return;
+  }
+  return {
+    text: '"' + friendlyName + '"',
+    display: '"' + friendlyName + '"',
+    setValueParam: defaultValue,
+  };
 }
 
 /**
@@ -267,19 +295,31 @@ function stripQuotes(str) {
 
 /**
  * Gets the properties that should be shown in the dropdown list for elements of the given type.
- * @param {string} elementType
+ * @param {string} elementType Optional type of element (e.g. BUTTON, IMAGE, etc.)
+ * @param {object} block Optional droplet block (will be undefined in text mode)
  * @returns {!Array<string>} list of quoted property names
  */
-function getDropdownProperties(elementType) {
-  if (!elementType) {
-    return fullDropdownOptions;
+function getDropdownProperties(elementType, block) {
+  var opts = fullDropdownOptions.slice();
+
+  if (elementType in PROPERTIES) {
+    opts = PROPERTIES[elementType].dropdownOptions.slice();
   }
 
-  if (!(elementType in PROPERTIES)) {
-    return fullDropdownOptions;
+  for (let [index, opt] of opts.entries()) {
+    if (opt.setValueParam) {
+      // If a setValueParam is specified, generate a click handler that will
+      // update the 3rd parameter with that value whenever the dropdown is
+      // selected
+      var newOpt = Object.assign({}, opt);
+      newOpt.click = (callback) => {
+        callback(opt.text);
+        setParamAtIndex(2, opt.setValueParam, block);
+      };
+      opts[index] = newOpt;
+    }
   }
-
-  return PROPERTIES[elementType].dropdownOptions;
+  return opts;
 }
 
 /**
@@ -356,22 +396,21 @@ export function setPropertyValueSelector() {
  *   types, provides full list of properties across all types.
  */
 export function setPropertyDropdown() {
-  return function (editor) {
+  return function (aceEditor) {
+    var elementType;
     // Note: We depend on "this" being the droplet socket when in block mode,
     // such that parent ends up being the block. In text mode, this.parent
     // ends up being undefined.
-    var param1 = getFirstSetPropertyParam(this.parent, editor);
-    if (!param1) {
-      return fullDropdownOptions;
+    var param1 = getFirstSetPropertyParam(this.parent, aceEditor);
+    if (param1) {
+      let elementId = stripQuotes(param1);
+      let element = document.querySelector("#divApplab #" + elementId);
+      if (element) {
+        elementType = library.getElementType(element, true);
+      }
     }
 
-    var elementId = stripQuotes(param1);
-    var element = document.querySelector("#divApplab #" + elementId);
-    if (!element) {
-      return fullDropdownOptions;
-    }
-
-    return getDropdownProperties(library.getElementType(element));
+    return getDropdownProperties(elementType, this.parent);
   };
 }
 
