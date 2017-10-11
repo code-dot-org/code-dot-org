@@ -13,9 +13,12 @@ class Api::V1::SchoolAutocomplete
   # @return [Array] an array of JSON formatted schools
   def get_matches(query, limit)
     return [] if query.length < MIN_QUERY_LENGTH
-    schools = School.
-      where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", to_search_string(query)).
-      limit(limit)
+    schools = School.limit(limit)
+    if query.match(/^\d{,5}$/).nil?
+      schools = schools.where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", to_search_string(query))
+    else
+      schools = schools.where("zip LIKE ?", "#{query}%")
+    end
     results = schools.map do |school|
       Serializer.new(school).attributes
     end
