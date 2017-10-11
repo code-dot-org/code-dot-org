@@ -80,6 +80,8 @@ module Dashboard
 
     # By default, config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    require 'cdo/lazy_locale_backend'
+    config.i18n.backend = LazyLocaleBackend.new
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = ['en-US']
     config.i18n.fallbacks = {}
