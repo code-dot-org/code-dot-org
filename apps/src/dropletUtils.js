@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import color from './util/color';
+import {singleton as studioApp} from './StudioApp';
 
 /**
  * @name DropletBlock
@@ -695,6 +696,40 @@ function getParamAtIndex(index, methodName, block, editor) {
     token = token.next;
   } while (token);
   return null;
+}
+
+/**
+ * Sets the parameter at a given index of a given function name, given that
+ * function's DropletBlock (AceEditor not supported).
+ *
+ * @param {number} index of the parameter requested
+ * @param {string} value the new parameter value
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
+ */
+export function setParamAtIndex(index, value, block) {
+  let editor = studioApp().editor;
+  if (!block || !editor) {
+    // If we're not given a block, assume that we're in text mode and do nothing
+    return;
+  }
+  // We have a block. Parse it to find our first socket.
+  let token = block.start;
+  let paramNumber = -1;
+  do {
+    if (token.type === 'socketStart') {
+      paramNumber++;
+      if (paramNumber !== index) {
+        token = token.next;
+        continue;
+      }
+      let socket = token.container;
+      editor.undoCapture();
+      editor.populateSocket(socket, value);
+      editor.redrawPalette();
+      editor.redrawMain();
+    }
+    token = token.next;
+  } while (token);
 }
 
 /**
