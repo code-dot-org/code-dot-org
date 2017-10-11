@@ -84,10 +84,12 @@ sk:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft účet'
+    clever: 'Clever Account'
     forgot_password: 'Zabudli ste heslo?'
     need_confirmation: "Neprišli ti pokyny na potvrdenie?"
     need_unlock: "Neprišli ti pokyny na odomknutie?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} študentov sa už zaregistrovalo.'
     teacher_count: '%{count} učitelov sa už zaregistrovalo.'
@@ -256,7 +258,7 @@ sk:
       my_dashboard: "My Dashboard"
       courses: "Kurzy"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "Projekty"
       sections: "Sections"
       help_support: "Pomoc a podpora"
       report_bug: "Report bug"
@@ -750,9 +752,10 @@ sk:
     rename: "Premenovať"
     save: "Uložiť"
     delete: "Odstrániť"
+    import: "Import"
     exit: "Vrátiť sa do kurzu"
     my_projects: "Moje Projekty"
-    project_gallery: "Project Gallery"
+    project_gallery: "Projekty"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Zdieľať"
@@ -783,6 +786,7 @@ sk:
     remix: 'Remix'
     click_to_remix: "Kliknite na 'Remix' a roztočte to s Vašou vlastnou verziou!"
     edit_project: 'Upraviť projekt'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Tento projekt bol nahlásený za porušenie <a href='http://code.org/tos'> Používateľských podmienok</a> Code.org a nie je ho možné zdieľať s ostatnými."
       policy_violation: "Tento projekt obsahuje informácie, ktoré nie je možné zdielať s ostatnými užívateľmi. Pre úpravu obsahu aplikácie sa prosím skontaktujte s vlastníkom aplikácie."
@@ -835,6 +839,10 @@ sk:
     optional_stages: 'Optional Stages'
     main_course: 'Hlavný kurz'
     extra_course_content: 'Obsah ku kurzom navyše'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

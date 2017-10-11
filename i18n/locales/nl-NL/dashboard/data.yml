@@ -423,6 +423,7 @@ nl:
         'infinity_playlab_events': 'Play Lab - Gebeurtenissen'
         'infinity_playlab_repeat_forever': 'Play Lab - Oneindig Herhalen'
         'csd_concept_computer': 'Wat maakt een Computer, een Computer?'
+        'csd_concept_binary_data': 'How Computers Work: Binary & Data'
         'csd_concept_search': 'Hoe zoeken werkt'
         'csd_gamelab_animation_tab': 'Het tabblad Animatie'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
@@ -524,6 +525,11 @@ nl:
         'mc_2016_events': 'Minecraft Code Uur - Evenementen'
         'mc_2016_spawn': 'Minecraft Code Uur - Neerzetten'
         'mc_2016_congrats': 'Minecraft Code Uur - Gefeliciteerd'
+        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
+        'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
+        'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
+        'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
+        'applab_hoc_share': 'AppLab Hour of Code - Share'
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'

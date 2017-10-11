@@ -69,8 +69,7 @@ var VersionHistory = React.createClass({
     if (this.props.useFilesApi) {
       filesApi.restorePreviousVersion(versionId, this.onRestoreSuccess, this.onAjaxFailure);
     } else {
-      // TODO: Use Dave's client api when it's finished.
-      sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
+      sourcesApi.restorePreviousFileVersion('main.json', versionId, this.onRestoreSuccess, this.onAjaxFailure);
     }
 
     // Show the spinner.

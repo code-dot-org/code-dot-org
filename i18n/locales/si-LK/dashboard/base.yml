@@ -84,10 +84,12 @@ si:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft ගිණුම'
+    clever: 'Clever Account'
     forgot_password: 'ඔබගේ මුරපදය අමතකද?'
     need_confirmation: "තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?"
     need_unlock: "අගුළු හැරීමේ උපදෙස් ලැබී නැත් ද?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: 'සිසුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     teacher_count: 'ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
@@ -256,7 +258,7 @@ si:
       my_dashboard: "My Dashboard"
       courses: "පාඨමාලාව"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "ව්යාපෘති"
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report bug"
@@ -750,9 +752,10 @@ si:
     rename: "නැවත නම් කරන්න"
     save: "සුරකින්න"
     delete: "මකන්න"
+    import: "Import"
     exit: "පාඨමාලාව වෙත ආපසු යන්න"
     my_projects: "මගේ ව්යාපෘති"
-    project_gallery: "Project Gallery"
+    project_gallery: "ව්යාපෘති"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "බෙදා ගන්න"
@@ -783,6 +786,7 @@ si:
     remix: 'නැවත සංකලනය'
     click_to_remix: "ඔබේම නව සංස්කරණයක් නිර්මාණය කිරීමට \"Remix\" මත ක්ලික් කරන්න!"
     edit_project: 'ව්යාපෘතිය සංස්කරණය කරන්න'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "මෙම ව්‍යාපෘතිය විසින් <a href='http://code.org/tos'>සේවා කොන්දේසි</a> කඩ කිරීම පිලිබඳ වාර්තා වී ඇත. එම නිසා බෙදාගත නොහැකිය."
       policy_violation: "වෙනත් අය සමග බෙදා ගත නොහැකි තොරතුරු මෙම ව්‍යාපෘතියේ ඇතුලත් ව ඇත. මෙම ගැටලුව විසඳා ගැනීමට මෙහි අයිතිකරු ව විමසන්න."
@@ -835,6 +839,10 @@ si:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

@@ -94,11 +94,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft fiók
+    clever: Clever Account
     forgot_password: Elfelejtette jelszavát?
     need_confirmation: Nem kapta meg a megerősítő instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
     not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
       have to sign in by typing your password below.
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} tanuló iratkozott már fel."
     teacher_count: "%{count} tanár iratkozott már fel."
@@ -291,7 +294,7 @@
       my_dashboard: My Dashboard
       courses: tanfolyamok
       course_catalog: Course Catalog
-      project_gallery: Project Gallery
+      project_gallery: Projektek
       sections: Csoportok
       help_support: Súgó és támogatás
       report_bug: Hiba jelentése
@@ -988,9 +991,10 @@
     rename: "Átnevezés"
     save: Mentés
     delete: Törlés
+    import: Import
     exit: Vissza a tanfolyamhoz
     my_projects: Projektjeim
-    project_gallery: Project Gallery
+    project_gallery: Projektek
     publish: Publish
     unpublish: Unpublish
     share: Megosztás
@@ -1030,6 +1034,9 @@
     remix: Remix
     click_to_remix: Kattints a 'Remix'-re, hogy lepörgesd a saját verziódat!
     edit_project: Projekt szerkesztése
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Ezt a projektet jelentették, mint amely nem tesz eleget a Code.org <a href='http://code.org/tos'>Felhasználói
         Feltételekben előírtaknak,</a> így nem osztható meg másokkal.
@@ -1096,6 +1103,10 @@
     optional_stages: Optional Stages
     main_course: Main Course
     extra_course_content: Extra Course Content
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: '1. fejezet: A probléma-megoldási folyamat'
     csd1_2: '2. fejezet: Számítógépek és problémamegoldás'
     csd2_1: 'Chapter 1: Web Content and HTML'

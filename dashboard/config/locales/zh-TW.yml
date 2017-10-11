@@ -85,10 +85,13 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: "微軟帳戶"
+    clever: Clever Account
     forgot_password: "忘了密碼？"
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
     not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} 名學生已經註冊。"
     teacher_count: "%{count} 名教師已經註冊。"
@@ -267,7 +270,7 @@
       my_dashboard: My Dashboard
       courses: "課程"
       course_catalog: Course Catalog
-      project_gallery: "專案作品集"
+      project_gallery: "所有專案"
       sections: "學習小組"
       help_support: "幫助與支援"
       report_bug: "回報 Bug"
@@ -826,9 +829,10 @@
     rename: "重新命名"
     save: "儲存"
     delete: "删除"
+    import: Import
     exit: "返回課程"
     my_projects: "我的專案"
-    project_gallery: "專案作品集"
+    project_gallery: "所有專案"
     publish: "發佈"
     unpublish: "取消發佈"
     share: "分享"
@@ -859,6 +863,9 @@
     remix: "改編"
     click_to_remix: "點擊「改編」，創造自己的版本！"
     edit_project: "編輯專案"
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: "這個專案被檢舉違反了 Code.org 的<a href='http://code.org/tos'>服務條款</a>，因此不能跟其它人進行分享。"
       policy_violation: "這個專案包含了無法分享給其他人的資訊。請聯絡 app 的擁有者以修正它們的 app 內容。"
@@ -912,6 +919,10 @@
     optional_stages: Optional Stages
     main_course: "主要課程"
     extra_course_content: "額外的課程內容"
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: "第 1 章：解決問題的流程"
     csd1_2: "第 2 章：計算機與問題解決能力"
     csd2_1: "第 1 章：網站內容和 HTML"

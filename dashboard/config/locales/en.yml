@@ -144,6 +144,7 @@ en:
     user_type_student: "Student"
     field_is_required: "is required"
     accept_terms: "You must agree to create an account"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'

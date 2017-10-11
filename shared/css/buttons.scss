@@ -15,6 +15,12 @@
   letter-spacing: normal;
   text-align: center;
   vertical-align: middle;
+  &[disabled=disabled],
+  &:disabled {
+    border: 1px solid $light_gray;
+    background-color: $lighter_gray;
+    box-shadow: none;
+  }
 }
 
 .primary {

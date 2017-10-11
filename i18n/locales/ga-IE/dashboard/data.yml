@@ -423,6 +423,7 @@ ga:
         'infinity_playlab_events': 'Súgradh is Dáiríre - Teagmhais'
         'infinity_playlab_repeat_forever': 'Súgradh is Dáiríre - Athdhéan go deo'
         'csd_concept_computer': 'Cad is Ríomhaire ann, i ndáiríre?'
+        'csd_concept_binary_data': 'How Computers Work: Binary & Data'
         'csd_concept_search': 'Conas a Oibríonn Inneall Cuardaigh'
         'csd_gamelab_animation_tab': 'An Cluaisín Beochana'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
@@ -524,6 +525,11 @@ ga:
         'mc_2016_events': 'Uair Chódála Minecraft - Teagmhais'
         'mc_2016_spawn': 'Uair Chódála Minecraft - Sceitheadh'
         'mc_2016_congrats': 'Uair Chódála Minecraft - Comhghairdeas'
+        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
+        'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
+        'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
+        'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
+        'applab_hoc_share': 'AppLab Hour of Code - Share'
     callout:
       text:
         drag_blocks: 'Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é'

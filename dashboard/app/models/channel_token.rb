@@ -13,9 +13,10 @@
 #
 # Indexes
 #
-#  index_channel_tokens_on_storage_app_id        (storage_app_id)
-#  index_channel_tokens_on_storage_id            (storage_id)
-#  index_channel_tokens_on_user_id_and_level_id  (user_id,level_id) UNIQUE
+#  index_channel_tokens_on_storage_app_id           (storage_app_id)
+#  index_channel_tokens_on_storage_id               (storage_id)
+#  index_channel_tokens_on_storage_id_and_level_id  (storage_id,level_id) UNIQUE
+#  index_channel_tokens_on_user_id_and_level_id     (user_id,level_id) UNIQUE
 #
 
 class ChannelToken < ActiveRecord::Base
