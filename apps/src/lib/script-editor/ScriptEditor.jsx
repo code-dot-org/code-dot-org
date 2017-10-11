@@ -36,6 +36,7 @@ const ScriptEditor = React.createClass({
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
     loginRequired: PropTypes.bool,
+    age13Required: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
     professionalLearningCourse: PropTypes.bool,
@@ -138,7 +139,21 @@ const ScriptEditor = React.createClass({
             style={styles.checkbox}
           />
           <p>
-            Require users to log in before viewing this script. This should be
+            Require users to log in before viewing this script. This or 13+ should be
+            enabled on scripts that contain App Lab or Game Lab levels.
+          </p>
+        </label>
+        <label>
+          13+ Required
+          <input
+            name="age_13_required"
+            type="checkbox"
+            defaultChecked={this.props.age13Required}
+            style={styles.checkbox}
+          />
+          <p>
+            If login is not required, still requires that users be at least 13+,
+            prompting them to provide their age. This or login_required should be
             enabled on scripts that contain App Lab or Game Lab levels.
           </p>
         </label>

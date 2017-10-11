@@ -10,6 +10,7 @@ class DslTest < ActiveSupport::TestCase
     hidden: true,
     wrapup_video: nil,
     login_required: false,
+    age_13_required: false,
     professional_learning_course: nil,
     hideable_stages: false,
     exclude_csf_column_in_legend: false,
@@ -20,7 +21,7 @@ class DslTest < ActiveSupport::TestCase
     has_verified_resources: false,
     project_widget_visible: false,
     project_widget_types: [],
-    script_announcements: nil
+    script_announcements: nil,
   }
 
   test 'test Script DSL' do
@@ -384,6 +385,19 @@ level 'Level 2'
 DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:student_detail_progress_view]
+  end
+
+  test 'can set age_13_required' do
+    input_dsl = <<DSL
+age_13_required true
+
+stage 'Stage1'
+level 'Level 1'
+stage 'Stage2'
+level 'Level 2'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:age_13_required]
   end
 
   test 'can set has_verified_resources' do

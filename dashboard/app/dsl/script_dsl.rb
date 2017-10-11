@@ -225,7 +225,7 @@ class ScriptDSL < BaseDSL
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'stage_extras_available true' if script.stage_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
-    s << 'age_13_required' if script.age_13_required
+    s << 'age_13_required true' if script.age_13_required
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements

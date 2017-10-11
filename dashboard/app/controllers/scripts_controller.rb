@@ -103,6 +103,7 @@ class ScriptsController < ApplicationController
     h = params.permit(
       :visible_to_teachers,
       :login_required,
+      :age_13_required,
       :hideable_stages,
       :professional_learning_course,
       :peer_reviews_to_complete,
