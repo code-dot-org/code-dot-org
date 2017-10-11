@@ -1,5 +1,3 @@
-/* global window */
-
 /**
  * Main landing page and router for the application dashboard.
  */
@@ -20,36 +18,43 @@ const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
 
+const ApplicationDashboardHeader = (props) => (
+  <Header
+    baseName="Application Dashboard"
+    {...props}
+  />
+);
+
 const ApplicationDashboard = ()=> (
   <Router history={browserHistory} >
-    <Route path="/" breadcrumbs="Application Dashboard" component={Header}>
+    <Route path="/" component={ApplicationDashboardHeader}>
       <IndexRedirect to="/summary"/>
       <Route
         path="summary"
-        breadcrumbs="Application Dashboard,Summary"
+        breadcrumbs="Summary"
         component={Summary}
       />
       <Route
         path="csd_facilitators"
-        breadcrumbs="Application Dashboard,CSD Facilitator Applications"
+        breadcrumbs="CSD Facilitator Applications"
         component={QuickView}
         title="CSD Facilitator Applications"
       />
       <Route
         path="csp_facilitators"
-        breadcrumbs="Application Dashboard,CSP Facilitator Applications"
+        breadcrumbs="CSP Facilitator Applications"
         component={QuickView}
         title="CSP Facilitator Applications"
       />
       <Route
         path="csd_teachers"
-        breadcrumbs="Application Dashboard,CSD Teacher Applications"
+        breadcrumbs="CSD Teacher Applications"
         component={QuickView}
         title="CSD Teacher Applications"
       />
       <Route
         path="csp_teachers"
-        breadcrumbs="Application Dashboard,CSP Teacher Applications"
+        breadcrumbs="CSP Teacher Applications"
         component={QuickView}
         title="CSP Teacher Applications"
       />
@@ -58,4 +63,3 @@ const ApplicationDashboard = ()=> (
 );
 
 export default ApplicationDashboard;
-window.ApplicationDashboard = ApplicationDashboard;

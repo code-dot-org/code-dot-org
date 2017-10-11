@@ -24,11 +24,6 @@ export default class QuickViewTable extends React.Component {
         header: {
           label: 'Date Submitted',
         },
-        // cell: {
-        //   formatters: [
-        //     date_submitted => date_submitted.hammer ? 'Hammertime' : 'nope' // make pretty
-        //   ]
-        // }
       },
       {
         property: 'name',
