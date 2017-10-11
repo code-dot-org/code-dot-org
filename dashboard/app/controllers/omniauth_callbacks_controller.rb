@@ -114,6 +114,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
     # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
-    allow_takeover && lookup_user && lookup_user.provider != 'clever' # do *not* allow silent takeover of Clever accounts!
+    if cookies['pm'] == 'clever_takeover'
+      allow_takeover && lookup_user
+    else
+      allow_takeover && lookup_user && lookup_user.provider != 'clever' # do *not* allow silent takeover of Clever accounts!
+    end
   end
 end
