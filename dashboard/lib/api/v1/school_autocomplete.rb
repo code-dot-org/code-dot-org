@@ -12,16 +12,20 @@ class Api::V1::SchoolAutocomplete
   # @param limit [int] the maximum number of results to return
   # @return [Array] an array of JSON formatted schools
   def get_matches(query, limit)
-    return [] if (query = query.strip).length < MIN_QUERY_LENGTH
+    query = query.strip
+    return [] if query.length < MIN_QUERY_LENGTH
+
     schools = School.limit(limit)
-    if zip_search?(query)
+    if search_by_zip?(query)
       schools = schools.where("zip LIKE ?", "#{query[0, 5]}%")
     else
       schools = schools.where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", to_search_string(query))
     end
+
     results = schools.map do |school|
       Serializer.new(school).attributes
     end
+
     return results
   end
 
@@ -29,7 +33,7 @@ class Api::V1::SchoolAutocomplete
   # name or city.
   # @param query [String] the user-define query string
   # @return [boolean] true if it might be a ZIP, false otherwise
-  def zip_search?(query)
+  def search_by_zip?(query)
     return !!(query =~ /^(\d{,5}|(\d{5}-\d{,4}))$/)
   end
 
