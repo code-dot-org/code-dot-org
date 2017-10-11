@@ -210,6 +210,7 @@ reporting.sendReport = function (report) {
   validateReport(report);
 
   const serverReport = _.pick(report, serverFields);
+  Object.keys(serverReport).map(key => serverReport[key] = '' + serverReport[key]);
 
   // Tell the server about the current list of experiments (right now only Gamification has server-side changes)
   if (experiments.isEnabled('gamification')) {

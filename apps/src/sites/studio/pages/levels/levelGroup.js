@@ -115,7 +115,7 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {
-      response: encodeURIComponent(JSON.stringify(lastAttempt)),
+      response: JSON.stringify(lastAttempt),
       result: true,
       errorType: null,
       submitted: window.appOptions.level.submittable,
