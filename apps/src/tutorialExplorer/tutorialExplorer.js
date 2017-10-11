@@ -10,7 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortBy, TutorialsOrgName, mobileCheck } from './util';
+import { TutorialsSortBy, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
@@ -325,9 +325,9 @@ const TutorialExplorer = React.createClass({
       const { locale, specificLocale, orgName, filters, hideFilters, sortBy } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
-        // Check that the tutorial isn't marked as do-not-show.  If it does,
+        // Check that the tutorial isn't marked as DoNotShow.  If it does,
         // it's hidden.
-        if (tutorial.tags.split(',').indexOf("do-not-show") !== -1) {
+        if (tutorial.tags.split(',').indexOf(DoNotShow) !== -1) {
           return false;
         }
 
@@ -415,13 +415,13 @@ const TutorialExplorer = React.createClass({
      * @return {Array} - Array of strings.
      */
     getUniqueOrgNamesFromTutorials(tutorials) {
-      // Filter out tutorials with do-not-show tag.
+      // Filter out tutorials with DoNotShow as either tag or organization name.
       const availableTutorials = tutorials.filter(t => {
-        return t.tags.split(',').indexOf("do-not-show") === -1 && t.orgname !== "do-not-show";
+        return t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow;
       });
 
       // Construct array of unique org names from the tutorials.
-      let uniqueOrgNames = [...new Set(availableTutorials.map(t => t.orgname))];
+      let uniqueOrgNames = _.uniq(availableTutorials.map(t => t.orgname));
 
       // Sort the unique org names alphabetically, case-insensitive.
       uniqueOrgNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));

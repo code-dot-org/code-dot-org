@@ -3,7 +3,7 @@
 
 import React, {PropTypes} from 'react';
 import shapes from './shapes';
-import { getTagString, getTutorialDetailString } from './util';
+import { getTagString, getTutorialDetailString, DoNotShow } from './util';
 import Image from './image';
 import i18n from './locale';
 /* global ga */
@@ -232,7 +232,7 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>
-                  {this.props.item.orgname !== "do-not-show" &&
+                  {this.props.item.orgname !== DoNotShow &&
                     <div style={styles.tutorialDetailPublisher}>
                       {this.props.item.orgname}
                     </div>}
