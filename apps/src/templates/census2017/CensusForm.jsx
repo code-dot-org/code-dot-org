@@ -354,7 +354,6 @@ class CensusForm extends Component {
   }
 
   render() {
-    console.log("STATE:", this.state);
     const { showFollowUp, showPledge, submission, errors } = this.state;
     const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours || errors.country || errors.nces);
     const US = submission.country === "United States";
