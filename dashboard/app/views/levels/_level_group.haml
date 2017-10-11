@@ -1,12 +1,6 @@
 - app = 'level_group'
 - data = @level.properties
 
-- content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/levelGroup.js')}
-
-:javascript
-  window.levelData = #{data.to_json};
-
 = render partial: 'levels/common_audio'
 
 -#
@@ -77,12 +71,10 @@
         - unless @script_level.nil?
           = render partial: 'levels/dialog', locals: {app: app, data: data, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
 
-- unless @script_level.nil?
-  :javascript
-    $(document).ready(function() {
-      window.initLevelGroup(
-        #{@total_level_count},
-        #{current_page || -1},
-        #{@last_attempt || {}}
-      );
-    });
+- content_for(:head) do
+  - level_data = data
+  - init_data = nil
+  - unless @script_level.nil?
+    - init_data = { total_level_count: @total_level_count, page: @current_page || -1, last_attempt: @last_attempt}
+
+  %script{src: minifiable_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}
