@@ -326,7 +326,7 @@ class CensusForm extends Component {
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours && !errors.country) {
+    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.nces && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours && !errors.country) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
