@@ -161,21 +161,12 @@ class CensusForm extends Component {
   }
 
   handleSchoolDropdownChange = (event) => {
-    if (event) {
-      this.setState({
-        submission: {
-          ...this.state.submission,
-          "nces": event.value
-        }
-      });
-    } else {
-      this.setState({
-        submission: {
-          ...this.state.submission,
-          "nces": ""
-        }
-      });
-    }
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        nces: event ? event.value : ''
+      }
+    });
   }
 
   handleNoSchoolFoundChange = (field, event) => {
