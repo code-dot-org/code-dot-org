@@ -404,6 +404,7 @@ class CensusForm extends Component {
               schoolCity={submission.schoolCity}
               schoolState={submission.schoolState}
               schoolZip={submission.schoolZip}
+              showErrorMsg={errors.school}
             />
           )}
           {!US && (

@@ -54,7 +54,8 @@ export default class SchoolNotFound extends Component {
     schoolCity: PropTypes.string,
     schoolState: PropTypes.string,
     schoolZip: PropTypes.string,
-    schoolType: PropTypes.string
+    schoolType: PropTypes.string,
+    showErrorMsg: PropTypes.bool
   };
 
   sendNameToParent = (event) => {
@@ -90,6 +91,11 @@ export default class SchoolNotFound extends Component {
       <div>
         <div style={styles.question}>
           {i18n.schoolNotFoundDescription()}
+          {this.props.showErrorMsg && (
+            <div style={styles.errors}>
+              {i18n.schoolInfoRequired()}
+            </div>
+          )}
         </div>
         <div>
           <div style={styles.field}>
