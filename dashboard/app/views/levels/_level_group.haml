@@ -1,5 +1,6 @@
 - app = 'level_group'
 - data = @level.properties
+- parsed_last_attempt = JSON.parse(@last_attempt || '{}')
 
 = render partial: 'levels/common_audio'
 
@@ -36,8 +37,7 @@
 
         - page.levels.each_with_index do |level, index|
           -# Fall back to retrieving the last_attempt from the parsed levelgroup last_attempt
-          - parsed = JSON.parse(@last_attempt || '{}')
-          - sublevel_last_attempt = parsed[level.id.to_s].try(:[], 'result')
+          - sublevel_last_attempt = parsed_last_attempt[level.id.to_s].try(:[], 'result')
           - if @user && current_user && @user != current_user
             -# load other user's solution for teachers viewing their students' solution
             - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
@@ -75,6 +75,6 @@
   - level_data = data
   - init_data = nil
   - unless @script_level.nil?
-    - init_data = { total_level_count: @total_level_count, page: @current_page || -1, last_attempt: @last_attempt}
+    - init_data = { total_level_count: @total_level_count, page: @current_page || -1, last_attempt: parsed_last_attempt}
 
   %script{src: minifiable_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}
