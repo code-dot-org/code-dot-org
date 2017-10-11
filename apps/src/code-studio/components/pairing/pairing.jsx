@@ -130,8 +130,11 @@ export default class Pairing extends React.Component {
             selectedSectionId={this.selectedSectionId()}
             handleChange={this.handleSectionChange}
           />
-          <div className="clear"></div>
-          <StudentSelector students={this.studentsInSection()} handleSubmit={this.handleAddPartners}/>
+          <div className="clear"/>
+          <StudentSelector
+            students={this.studentsInSection()}
+            handleSubmit={this.handleAddPartners}
+          />
         </form>
       </div>
     );
@@ -143,11 +146,21 @@ export default class Pairing extends React.Component {
         <h1>Pair Programming</h1>
         <h2>You are Pair Programming with:</h2>
         {this.state.pairings.map(student =>
-          <div key={student.id} data-id={student.id} className="student">{student.name}</div>
+          <div
+            key={student.id}
+            data-id={student.id}
+            className="student"
+          >
+            {student.name}
+          </div>
         )}
-        <div className="clear"></div>
-        <button className="stop" onClick={this.handleStop}>Stop Pair Programming</button>
-        <button className="ok" onClick={this.props.handleClose}>OK</button>
+        <div className="clear"/>
+        <button className="stop" onClick={this.handleStop}>
+          Stop Pair Programming
+        </button>
+        <button className="ok" onClick={this.props.handleClose}>
+          OK
+        </button>
       </div>
     );
   }
