@@ -657,7 +657,7 @@
   "schoolTypePrivate": "Private",
   "schoolTypePublic": "Public",
   "schoolZip": "School Postal Code",
-  "schoolNotFound": "School not found",
+  "schoolNotFound": "My school isn’t listed.",
   "schoolNotFoundDescription": "Sorry, we couldn't find your school. Please enter information below.",
   "score": "score",
   "section": "Section",
