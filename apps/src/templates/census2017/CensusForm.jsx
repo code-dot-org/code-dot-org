@@ -285,7 +285,8 @@ class CensusForm extends Component {
   validateSchool() {
     const {submission} = this.state;
     if (submission.country === "United States" && submission.nces === "-1") {
-      return (this.validateNotBlank(submission.schoolName) && this.validateNotBlank(submission.schoolZip));
+      return (this.validateNotBlank(submission.schoolName) && this.validateNotBlank(submission.schoolState) && this.validateNotBlank(submission.schoolCity)
+      && this.validateNotBlank(submission.schoolType) && this.validateNotBlank(submission.schoolZip));
     }
   }
 
