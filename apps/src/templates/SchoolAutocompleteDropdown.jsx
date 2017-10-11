@@ -5,8 +5,6 @@ import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import i18n from "@cdo/locale";
 import color from "../util/color";
-import SchoolNotFound from './SchoolNotFound';
-
 
 const styles = {
   question: {
@@ -25,17 +23,9 @@ const styles = {
 
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
-    // This prop allows us to handle special cases where even if the school is // not found via the school autocomplete dropdown, we do NOT want to show
-    // the default SchooNotFound input fields. Specifically, on the Hour of
-    // Code signup form, the school location is entered via a Google maps
-    // lookup to support the functionality of the map on that page.
-    overrideSchoolNotFound: PropTypes.bool,
     setField: PropTypes.func,
+    // Value is the NCES id of the school
     value: PropTypes.string
-  };
-
-  state = {
-    selectValue: {value: 0, label: ""}
   };
 
   getOptions(q) {
@@ -46,10 +36,10 @@ export default class SchoolAutocompleteDropdown extends Component {
       .then(response => response.json())
       .then(json => {
         var schools = json.map(school => ({
-          value: school.nces_id,
+          value: school.nces_id.toString(),
           label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`
         }));
-        schools.unshift({ value: -1, label: i18n.schoolNotFound()});
+        schools.unshift({ value: "-1", label: i18n.schoolNotFound()});
         return { options: schools };
     });
   }
@@ -59,9 +49,6 @@ export default class SchoolAutocompleteDropdown extends Component {
   }
 
   render() {
-    const schoolNotFound = this.state.selectValue &&  this.state.selectValue.value === -1;
-    const {overrideSchoolNotFound} = this.props;
-
     return (
       <div>
         <div style={styles.question}>
@@ -78,9 +65,6 @@ export default class SchoolAutocompleteDropdown extends Component {
           onChange={this.sendToParent}
           placeholder="Find your school"
         />
-        {schoolNotFound && !overrideSchoolNotFound && (
-          <SchoolNotFound/>
-        )}
       </div>
     );
   }

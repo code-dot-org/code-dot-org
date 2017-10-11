@@ -6,6 +6,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import SchoolNotFound from '../SchoolNotFound';
 import { COUNTRIES } from '../../geographyConstants';
 
 const styles = {
@@ -132,6 +133,10 @@ class CensusForm extends Component {
       country: '',
       hoc: '',
       nces: '',
+      schoolName: '',
+      schoolCity: '',
+      schoolState: '',
+      schoolZip: '',
       afterSchool: '',
       tenHours: '',
       twentyHours: '',
@@ -154,7 +159,7 @@ class CensusForm extends Component {
     }, this.checkShowFollowUp);
   }
 
-  handleSchoolChange = (event) => {
+  handleSchoolDropdownChange = (event) => {
     if (event) {
       this.setState({
         submission: {
@@ -170,6 +175,15 @@ class CensusForm extends Component {
         }
       });
     }
+  }
+
+  handleNoSchoolFoundChange = (field, event) => {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        [field]: event
+      }
+    });
   }
 
   checkShowFollowUp() {
@@ -256,15 +270,22 @@ class CensusForm extends Component {
     }
   }
 
-  validateSchool() {
+  validateSchoolDropdown() {
     if (this.state.submission.country === "United States") {
-      if ((this.state.submission.nces) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
-        return false;
+      if (this.state.submission.nces) {
+        return true;
       } else {
-      return true;
+        return false;
       }
     } else {
-    return false;
+      return false;
+    }
+  }
+
+  validateSchool() {
+    const {submission} = this.state;
+    if (submission.country === "United States" && submission.nces === "-1") {
+      return (this.validateNotBlank(submission.schoolName) && this.validateNotBlank(submission.schoolZip));
     }
   }
 
@@ -288,6 +309,7 @@ class CensusForm extends Component {
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
         country: this.validateNotBlank(this.state.submission.country),
+        nces: this.validateSchoolDropdown(),
         school: this.validateSchool(),
         role: this.validateNotBlank(this.state.submission.role),
         hoc: this.validateNotBlank(this.state.submission.hoc),
@@ -330,7 +352,7 @@ class CensusForm extends Component {
   render() {
     console.log("STATE:", this.state);
     const { showFollowUp, showPledge, submission, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours || errors.country);
+    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours || errors.country || errors.nces);
     const US = submission.country === "United States";
 
     return (
@@ -369,8 +391,18 @@ class CensusForm extends Component {
           </div>
           {US && (
             <SchoolAutocompleteDropdown
-              setField={this.handleSchoolChange}
+              setField={this.handleSchoolDropdownChange}
               value={this.state.submission.nces}
+            />
+          )}
+          {US && this.state.submission.nces === "-1" && (
+            <SchoolNotFound
+              setField={this.handleNoSchoolFoundChange}
+              schoolName={submission.schoolName}
+              schoolType={submission.schoolType}
+              schoolCity={submission.schoolCity}
+              schoolState={submission.schoolState}
+              schoolZip={submission.schoolZip}
             />
           )}
           {!US && (
