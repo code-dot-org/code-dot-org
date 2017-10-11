@@ -1312,7 +1312,6 @@ NetSim.prototype.completeLevelAndContinue = function () {
   $('.submitButton').attr('disabled', true);
 
   window.dashboard.reporting.sendReport({
-    fallbackResponse: this.reportingInfo_.fallback_response,
     callback: this.reportingInfo_.callback,
     app: 'netsim',
     level: this.level.id,

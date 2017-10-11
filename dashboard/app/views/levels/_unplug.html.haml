@@ -60,7 +60,6 @@
 
     finishedButton.addClass("disabled");
     window.dashboard.reporting.sendReport({
-      fallbackResponse: '#{@fallback_response.to_json}',
       callback: '#{@callback}',
       app: 'unplug',
       level: '#{escape_javascript(@level.level_num)}',

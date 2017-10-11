@@ -48,7 +48,6 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
       window.dashboard.reporting.sendReport({
         program: response,
-        fallbackResponse: appOptions.dialog.fallbackResponse,
         callback: appOptions.dialog.sublevelCallback + subLevelId,
         app: subLevel.getAppName(),
         allowMultipleSends: true,

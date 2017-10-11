@@ -28,7 +28,6 @@ export function postMilestoneForPageLoad() {
 
   sendReport({
     program: result.response,
-    fallbackResponse: appOptions.dialog.fallbackResponse,
     callback: postUrl,
     // expect this to always be standalone_video here
     app: appOptions.dialog.app,

@@ -149,7 +149,6 @@ export function processResults(onComplete, beforeHook) {
 
     window.dashboard.reporting.sendReport({
       program: response,
-      fallbackResponse: appOptions.dialog.fallbackResponse,
       callback: appOptions.dialog.callback,
       app: appOptions.dialog.app,
       level: appOptions.dialog.level,
