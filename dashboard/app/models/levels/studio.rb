@@ -562,6 +562,9 @@ class Studio < Grid
   <block type="functional_cond_image" />
   <block type="functional_cond_boolean" />
 </category>
+<category name="Comment">
+  <block type="comment" />
+</category>
 
 #{k1_blocks(type) if is_k1 == 'true'}
     XML

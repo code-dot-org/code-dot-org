@@ -144,7 +144,12 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          pipes = Array.new(procs) {|i| ">(mysql -u#{writer.user} dashboard_test#{i + 1})"}.join(' ')
+          databases = procs.times.map {|i| "dashboard_test#{i + 1}"}
+          databases.each do |db|
+            recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
+            RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql -u#{writer.user}"
+          end
+          pipes = databases.map {|db| ">(mysql -u#{writer.user} #{db})"}.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 

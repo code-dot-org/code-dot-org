@@ -44,7 +44,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
 
-* [One-pager](/files/CSDiscoveries_1-pager.pdf) describing the course
+* [**One-pager**](/files/CSDiscoveries_1-pager.pdf) describing the course
 * [**Curriculum Guide**](/files/CS-Discoveries-Curriculum-Guide.pdf) for teachers
 * [**Course Materials List**](#supplies)
 * [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
@@ -170,7 +170,7 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 ### <a name="timeline"></a>What is the timeline for CS Discoveries?
 
-All units are released at this time and can be used by teachers and classrooms. Throughout Fall 2017, we will be releasing revised versions of Units 4 - 6 to incorporate feedback from our Spring 2017 pilot.
+All units are released at this time and can be used by teachers and classrooms. Throughout Fall 2017, we will be releasing a revised version of Unit 6 to incorporate feedback from our Spring 2017 pilot.
 
 ### <a name="standards"></a>Will CS Discoveries be mapped to standards?
 

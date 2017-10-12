@@ -211,8 +211,8 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel exists
-    create :channel_token, level: @level, user: @user, channel: 'whatever'
-    assert_equal 'whatever', get_channel_for(@level, @user)
+    create :channel_token, level: @level, storage_id: storage_id_for_user_id(@user.id)
+    assert_not_nil get_channel_for(@level, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
@@ -229,7 +229,7 @@ class LevelsHelperTest < ActionView::TestCase
     @driver_user_level = create :user_level, user: @driver, level: @level
     @navigator_user_level = create :user_level, user: @navigator, level: @level
     @driver_user_level.navigator_user_levels << @navigator_user_level
-    create :channel_token, level: @level, user: @driver
+    create :channel_token, level: @level, storage_id: storage_id_for_user_id(@driver.id)
 
     sign_in @navigator
 
@@ -536,5 +536,18 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in student
 
     assert_includes app_options[:experiments], experiment.name
+  end
+
+  test 'video data available for levels with associated videos' do
+    @level = create :applab, :with_autoplay_video
+    assert_equal app_options[:level][:levelVideos].length, 1
+    # accounts for the random assignmnet of video data in stub
+    assert_includes app_options[:level][:levelVideos][0][:key], "concept_"
+  end
+
+  test 'video data is empty for levels with no associated videos' do
+    leveldata = []
+    @level = create :applab
+    assert_equal app_options[:level][:levelVideos], leveldata
   end
 end

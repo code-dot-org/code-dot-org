@@ -102,6 +102,7 @@
               = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
 
         %br
+        #signup-error.error{style: 'display: none'}= t('signup_form.error')
         %button#signup-button.primary= t('signup_form.submit')
 
         #student-terms
