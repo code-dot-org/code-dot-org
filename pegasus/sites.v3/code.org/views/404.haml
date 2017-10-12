@@ -5,24 +5,23 @@ rightbar: blank
 theme: responsive
 style_min: true
 ---
-%header
-  :css
-    h1 {
-      font-size: 2em;
-      color: #4d575f;
-    }
+:css
+  h1 {
+    font-size: 2em;
+    color: #4d575f;
+  }
 
-    p {
-      font-size: 1.25em;
-      line-height: 1.5em;
-      color: #4d575f;
-    }
+  p {
+    font-size: 1.25em;
+    line-height: 1.5em;
+    color: #4d575f;
+  }
 
-    .col-50
-      %img{src: '/failure_avatar.png', style: 'float: left'} 
-    .col-50
-      %h1 404: Page Not Found
-      %p
-        The page you are looking for doesn't exist at this address. Check the web address and resubmit or go back to our homepage.
-        %a{href: '/', style: 'color: #fff'}
-          %button.orange-button Return home
+.col-50
+  %img{src: '/failure_avatar.png', style: 'float: middle'}
+.col-50
+  %h1 404: Page Not Found
+  %p
+    The page you are looking for doesn't exist at this address. Check the web address and resubmit or go back to our homepage.
+    %a{href: '/', style: 'color: #fff'}
+      %button.orange-button Return home
