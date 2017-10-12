@@ -1529,6 +1529,13 @@ class User < ActiveRecord::Base
       sections.find {|section| section.script_id == script.id}
   end
 
+  def stage_extras_enabled?(script)
+    sections_to_check = teacher? ? sections : sections_as_student
+    sections_to_check.any? do |section|
+      section.script_id == script.id && section.stage_extras
+    end
+  end
+
   # Returns the version of our Terms of Service we consider the user as having
   # accepted. For teachers, this is the latest major version of the Terms of
   # Service accepted. For students, this is the latest major version accepted by
