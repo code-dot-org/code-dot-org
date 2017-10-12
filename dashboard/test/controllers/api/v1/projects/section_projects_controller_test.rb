@@ -72,7 +72,8 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     # this verifies that the hidden project was not shown.
     assert_equal 1, projects_list.size
     project_row = projects_list.first
-    assert_equal 'STUB_CHANNEL_ID-11-22', project_row['channel']
+    storage_id, _ = storage_decrypt_channel_id(project_row['channel'])
+    assert_equal STUDENT_STORAGE_ID, storage_id
     assert_equal 'Bobs App', project_row['name']
     assert_equal @student.name, project_row['studentName']
     assert_equal 'applab', project_row['type']
