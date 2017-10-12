@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011043757) do
+ActiveRecord::Schema.define(version: 20171012180944) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -795,7 +795,7 @@ ActiveRecord::Schema.define(version: 20171011043757) do
 
   create_table "schools", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "id",                 limit: 12, null: false, comment: "NCES public school ID"
-    t.integer  "school_district_id",            null: false
+    t.integer  "school_district_id"
     t.string   "name",                          null: false
     t.string   "city",                          null: false
     t.string   "state",                         null: false
