@@ -100,6 +100,7 @@ $(document).ready(function () {
 
 function showCensusForm(data) {
   $('.main-form').hide();
+  $('#signup-header').hide();
   $('.continue-btn').hide();
   // Copy all of the hoc-signup inputs to the census form
   $('.main-form :input').each(
@@ -115,6 +116,7 @@ function showCensusForm(data) {
       }
     }
   );
+  $('#census-header').show();
   $('#census-form').show();
 }
 

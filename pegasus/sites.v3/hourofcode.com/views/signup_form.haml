@@ -5,7 +5,8 @@
 - hoc_year = DCDO.get("hoc_year", 2017)
 
 #signupform
-  %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
+  %h2#signup-header= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
+  %h2#census-header{style: "display: none;"}= hoc_s(:census_header)
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
