@@ -807,5 +807,17 @@
   "yourSchoolParentDesc": "Podejmij działanie i rozwiń naukę informatyki w Twojej szkole lub okolicy",
   "yourSchoolTeacherButton": "Zacznij uczyć",
   "yourSchoolTeacherDesc": "Zacznij uczyć już dziś. Doświadczenie informatyczne nie jest do tego niezbędne",
-  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole"
+  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole",
+  "schoolCity": "School City",
+  "schoolCountry": "School Country",
+  "schoolInfoRequired": "School information is required.",
+  "schoolName": "School Name",
+  "schoolState": "School State",
+  "schoolType": "School Type",
+  "schoolTypeCharter": "Charter",
+  "schoolTypePrivate": "Private",
+  "schoolTypePublic": "Public",
+  "schoolZip": "School Postal Code",
+  "schoolNotFound": "My school isn’t listed.",
+  "schoolNotFoundDescription": "Sorry, we couldn't find your school. Please enter information below."
 }

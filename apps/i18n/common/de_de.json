@@ -807,5 +807,17 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Erzähl uns von deiner Schule"
+  "yourSchoolTellUs": "Erzähl uns von deiner Schule",
+  "schoolCity": "School City",
+  "schoolCountry": "School Country",
+  "schoolInfoRequired": "School information is required.",
+  "schoolName": "School Name",
+  "schoolState": "School State",
+  "schoolType": "School Type",
+  "schoolTypeCharter": "Charter",
+  "schoolTypePrivate": "Private",
+  "schoolTypePublic": "Public",
+  "schoolZip": "School Postal Code",
+  "schoolNotFound": "My school isn’t listed.",
+  "schoolNotFoundDescription": "Sorry, we couldn't find your school. Please enter information below."
 }
