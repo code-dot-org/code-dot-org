@@ -28,7 +28,7 @@ var PlcHeader = React.createClass({
     };
 
     return (
-      <div style={breadcrumbStyle.container}>
+      <div style={breadcrumbStyle.container} className="uitest-plcbreadcrumb">
         <a href={this.props.course_view_path}>
           My Learning Plan
         </a>
