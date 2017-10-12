@@ -2,11 +2,12 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import { renderCourseProgress } from '@cdo/apps/code-studio/progress';
 import { setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { getStore } from '@cdo/apps/code-studio/redux';
+import { registerReducers } from '@cdo/apps/redux';
 import TeacherNotification from '@cdo/apps/code-studio/components/progress/TeacherNotification';
+import plcHeaderReducer, { setPlcHeader } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
 
 $(document).ready(initPage);
 
@@ -18,7 +19,10 @@ function initPage() {
   const store = getStore();
 
   if (plcBreadcrumb) {
-    renderPlcBreadcrumb(plcBreadcrumb, document.getElementById('breadcrumb'));
+    // Dispatch breadcrumb props so that ScriptOverviewHeader can add the breadcrumb
+    // as appropriate
+    registerReducers({plcHeader: plcHeaderReducer});
+    store.dispatch(setPlcHeader(plcBreadcrumb.unit_name, plcBreadcrumb.course_view_path));
   }
 
   if (scriptData.has_verified_resources) {
@@ -43,11 +47,4 @@ function initPage() {
     );
   }
   renderCourseProgress(scriptData);
-}
-
-function renderPlcBreadcrumb(props, element) {
-  ReactDOM.render(
-    <PlcHeader {...props}/>,
-    element
-  );
 }
