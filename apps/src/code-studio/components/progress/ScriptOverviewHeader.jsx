@@ -91,6 +91,8 @@ class ScriptOverviewHeader extends Component {
   }
 }
 
+export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
+
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.scriptAnnouncements || [],
