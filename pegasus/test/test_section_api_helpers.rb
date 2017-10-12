@@ -523,9 +523,6 @@ class SectionApiHelperTest < SequelTestCase
           # params[:script][:id] is specified by the REST API client, and only
           # params[:script][:id] is checked for validity. Therefore, only test
           # params[:script][:id], here and below.
-          #
-          # TODO(dave): remove unused params[:script_id] from the
-          # DashboardSection.create and /v2/sections/.../update APIs.
           script: {id: script_id}
         }
         Dashboard.db.transaction(rollback: :always) do
