@@ -12,6 +12,8 @@ import {
 import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
+import DetailView from './detail_view';
+import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
@@ -25,6 +27,13 @@ const ApplicationDashboardHeader = (props) => (
   />
 );
 
+const paths = {
+  'csd_facilitators': 'CSD Facilitator Applications',
+  'csd_teachers': 'CSD Teacher Applications',
+  'csp_facilitators': 'CSP Facilitator Applications',
+  'csp_teachers': 'CSP Teacher Applications'
+};
+
 const ApplicationDashboard = ()=> (
   <Router history={browserHistory} >
     <Route path="/" component={ApplicationDashboardHeader}>
@@ -34,30 +43,30 @@ const ApplicationDashboard = ()=> (
         breadcrumbs="Summary"
         component={Summary}
       />
-      <Route
-        path="csd_facilitators"
-        breadcrumbs="CSD Facilitator Applications"
-        component={QuickView}
-        title="CSD Facilitator Applications"
-      />
-      <Route
-        path="csp_facilitators"
-        breadcrumbs="CSP Facilitator Applications"
-        component={QuickView}
-        title="CSP Facilitator Applications"
-      />
-      <Route
-        path="csd_teachers"
-        breadcrumbs="CSD Teacher Applications"
-        component={QuickView}
-        title="CSD Teacher Applications"
-      />
-      <Route
-        path="csp_teachers"
-        breadcrumbs="CSP Teacher Applications"
-        component={QuickView}
-        title="CSP Teacher Applications"
-      />
+      {
+        _.flatten(Object.keys(paths).map((path, i) => {
+          return [
+            (
+              <Route
+                key={`detail_${i}`}
+                path={`${path}/(:applicationId)`}
+                breadcrumb={`${paths[path]},Application Details`}
+                component={DetailView}
+                title={'Application Detail'}
+              />
+            ),
+            (
+              <Route
+                key={`quick_view_${i}`}
+                path={path}
+                breadcrumbs={paths[path]}
+                component={QuickView}
+                title={paths[path]}
+              />
+            )
+          ];
+        }))
+      }
     </Route>
   </Router>
 );
