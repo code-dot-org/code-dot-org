@@ -21,27 +21,26 @@
         %span
           = I18n.t('view_all_units')
   #landingpage
+    -# This div ends up being owned by ScriptOverviewHeader in react
     #lesson
-      -# This div ends up being owned by ScriptOverviewHeader in react
-      #react-scriptoverview-header
-        #heading
-          %h1
-            = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
-            = data_t_suffix('script.name', @script.name, 'title')
-            - if @script.beta?
-              %span.betatext
-                = t('beta')
+      #heading
+        %h1
+          = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
+          = data_t_suffix('script.name', @script.name, 'title')
+          - if @script.beta?
+            %span.betatext
+              = t('beta')
 
-          %p
-            = data_t_suffix('script.name', @script.name, 'description')
+        %p
+          = data_t_suffix('script.name', @script.name, 'description')
 
-        - if @script.banner_image
-          %p
-            = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
+      - if @script.banner_image
+        %p
+          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
 
-        - if @script.beta?
-          %p.lightgreytext
-            != t('landing.prerelease_hoc2014')
+      - if @script.beta?
+        %p.lightgreytext
+          != t('landing.prerelease_hoc2014')
 
     #stats
       .user-stats-block

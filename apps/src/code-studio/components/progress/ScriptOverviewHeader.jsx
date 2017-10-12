@@ -21,7 +21,7 @@ class ScriptOverviewHeader extends Component {
   };
 
   componentDidMount() {
-    $('#react-scriptoverview-header').appendTo(ReactDOM.findDOMNode(this.protected));
+    $('#lesson').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
   render() {
