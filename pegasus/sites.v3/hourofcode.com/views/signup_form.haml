@@ -5,7 +5,8 @@
 - hoc_year = DCDO.get("hoc_year", 2017)
 
 #signupform
-  %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
+  %h2#signup-header= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
+  %h2#census-header{style: "display: none;"}= hoc_s(:census_header)
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
@@ -107,8 +108,8 @@
 
     .form-group.continue-btn{style: "display: none;"}
       %div
-        %button.continue-btn#continue{type: "button"}
-          = hoc_s(:signup_continue_label)
+        %button.submit-btn#continue{type: "button"}
+          = hoc_s(:signup_submit_and_continue_label)
 
     #submit
       %input{name:'hoc_country_s', type:'hidden', value:@country}
