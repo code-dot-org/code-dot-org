@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import i18n from '@cdo/locale';
 
 /**
  * This component takes some of the HAML generated content on the script overview
@@ -17,7 +21,17 @@ class ScriptOverviewHeader extends Component {
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
       courseViewPath: PropTypes.string.isRequired,
-    })
+    }),
+    announcements: PropTypes.arrayOf(
+      PropTypes.shape({
+        notice: PropTypes.string.isRequired,
+        details: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
+      })
+    ),
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isSignedIn: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -25,7 +39,7 @@ class ScriptOverviewHeader extends Component {
   }
 
   render() {
-    const { plcHeaderProps } = this.props;
+    const { plcHeaderProps, announcements, viewAs, isSignedIn } = this.props;
 
     return (
       <div>
@@ -34,6 +48,21 @@ class ScriptOverviewHeader extends Component {
             unit_name={plcHeaderProps.unitName}
             course_view_path={plcHeaderProps.courseViewPath}
           />
+        }
+        {viewAs === ViewType.Teacher && isSignedIn &&
+          announcements.map((announcement, index) => (
+            <Notification
+              key={index}
+              type={announcement.type}
+              notice={announcement.notice}
+              details={announcement.details}
+              buttonText={i18n.learnMore()}
+              buttonLink={announcement.link}
+              dismissible={true}
+              isRtl={false}
+              width={1100}
+            />
+          ))
         }
         <ProtectedStatefulDiv
           ref={element => this.protected = element}
@@ -44,5 +73,8 @@ class ScriptOverviewHeader extends Component {
 }
 
 export default connect(state => ({
-  plcHeaderProps: state.plcHeader
+  plcHeaderProps: state.plcHeader,
+  announcements: state.scriptAnnouncements || [],
+  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  viewAs: state.viewAs,
 }))(ScriptOverviewHeader);
