@@ -49,29 +49,37 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 * [**Course Materials List**](#supplies)
 * [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
 
-[col-33]
+[col-25]
 
 <center><img src="/images/animated-examples/lessonplans_csd.png" width="90%"></center>
 
 <div style="margin-top: 5px;">Daily lesson plans come with detailed instructions, activity guides, and assessments</div>
 
-[/col-33]
+[/col-25]
 
-[col-33]
+[col-25]
+
+<center><img src="/images/WebLab.png" width="90%"></center>
+
+<div style="margin-top: 5px;">Students learn to use HTML and CSS to design web pages in <a href="/weblab">Web Lab</a></div>
+
+[/col-25]
+
+[col-25]
 
 <center><img src="/images/animated-examples/tennis_jump.gif" width="90%"></center>
 
 <div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in <a href="/gamelab">Game Lab</a></div>
 
-[/col-33]
+[/col-25]
 
-[col-33]
+[col-25]
 
 <center><img src="/images/animated-examples/circuitplayground.gif" width="90%"></center>
 
 <div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and <a href="/applab">App Lab</a></div>
 
-[/col-33]
+[/col-25]
 
 <p style="clear:both"></p>
 
