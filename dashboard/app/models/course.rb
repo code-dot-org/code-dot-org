@@ -250,39 +250,52 @@ class Course < ApplicationRecord
   # course script (or the default course script itself) by evaluating these
   # rules in order:
   #
-  # 1. If the user is a student, and the student has progress in (or has been
-  # assigned to) the script associated with one of the default or alternate
-  # course scripts, return that script. If there is more than one such script,
-  # return the one that was assigned/progressed/updated most recently.
+  # 1. If the user is a teacher, and they have a course experiment enabled,
+  # show the corresponding alternate course script.
   #
-  # 2. Return the first alternate course script for which the teacher (either
-  # the current user, or the teacher of the student's most recently-joined
-  # section) has the corresponding experiment enabled, if one exists.
+  # 2. If the user is in a section assigned to this course: show an alternate
+  # course script if any section's teacher is in a corresponding course
+  # experiment, otherwise show the default course script.
   #
-  # 3. otherwise, return the default course script.
+  # 3. If the user is a student and has progress in an alternate course script,
+  # show the alternate course script.
+  #
+  # 4. Otherwise, show the default course script.
   #
   # @param user [User|nil]
   # @param default_course_script [CourseScript]
   # @return [CourseScript]
   def select_course_script(user, default_course_script)
+    return default_course_script unless user
+
     alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
 
-    if user.try(:student?)
-      course_scripts = alternates + [default_course_script]
-
-      # include hidden scripts when iterating over user scripts.
-      user.user_scripts.each do |us|
-        course_script = course_scripts.find {|cs| cs.script == us.script}
-        return course_script if course_script
+    if user.teacher?
+      alternates.each do |cs|
+        return cs if SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
       end
     end
 
-    teacher = user.try(:student?) ? user.last_joined_section.try(:teacher) : user
-    alternate_course_script = alternates.find do |cs|
-      SingleUserExperiment.enabled?(user: teacher, experiment_name: cs.experiment_name)
+    course_sections = user.sections_as_student.where(course: self)
+    unless course_sections.empty?
+      alternates.each do |cs|
+        course_sections.each do |section|
+          return cs if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: cs.experiment_name)
+        end
+      end
+      return default_course_script
     end
 
-    alternate_course_script || default_course_script
+    if user.student?
+      alternates.each do |cs|
+        # include hidden scripts when iterating over user scripts.
+        user.user_scripts.each do |us|
+          return cs if cs.script == us.script
+        end
+      end
+    end
+
+    default_course_script
   end
 
   @@course_cache = nil

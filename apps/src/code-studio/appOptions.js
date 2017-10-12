@@ -115,6 +115,7 @@
  * @property {?} lastAttempt
  * @property {boolean} submittable
  * @property {boolean} final_level
+ * @property {array} levelVideos
  */
 
 /**
