@@ -2,6 +2,8 @@
 title: "404: Page Not Found"
 nav: blank
 rightbar: blank
+theme: responsive
+style_min: true
 ---
 %header
   :css
@@ -15,9 +17,12 @@ rightbar: blank
       line-height: 1.5em;
       color: #4d575f;
     }
-  %img{src: '/failure_avatar.png', style: 'float: left'}
-  %h1 404: Page Not Found
-  %p
-    The page you are looking for doesn't exist at this address. Check the web address and resubmit or go back to our homepage.
-    %a{href: '/', style: 'color: #fff'}
-      %button.orange-button Return home
+
+    .col-50
+      %img{src: '/failure_avatar.png', style: 'float: left'} 
+    .col-50
+      %h1 404: Page Not Found
+      %p
+        The page you are looking for doesn't exist at this address. Check the web address and resubmit or go back to our homepage.
+        %a{href: '/', style: 'color: #fff'}
+          %button.orange-button Return home
