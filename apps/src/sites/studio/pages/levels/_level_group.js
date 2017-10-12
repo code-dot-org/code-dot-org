@@ -2,10 +2,25 @@
 
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
+
+$(document).ready(() => {
+  const levelData = getScriptData('levelData');
+  const initData = getScriptData('initData');
+  window.levelData = levelData;
+
+  if (initData) {
+    window.initLevelGroup(
+      initData.total_level_count,
+      initData.page,
+      initData.last_attempt
+    );
+  }
+});
 
 window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 

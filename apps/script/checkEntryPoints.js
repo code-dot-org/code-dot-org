@@ -66,7 +66,6 @@ const SILENCED = [
   'levels/contract_match',
   'levels/submissionHelper',
   'levels/external',
-  'levels/levelGroup',
   'levels/multi',
   'levels/textMatch',
   'levels/widget',
