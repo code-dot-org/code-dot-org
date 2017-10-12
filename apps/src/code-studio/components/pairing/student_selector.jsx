@@ -4,22 +4,20 @@ import { studentsShape } from './types';
 /**
  * A component for selecting one or more students in a section.
  */
-const StudentSelector = React.createClass({
-  propTypes: {
+export default class StudentSelector extends React.Component {
+  static propTypes = {
     students: studentsShape,
     handleSubmit: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      selectedStudentIds: []
-    };
-  },
+  state = {
+    selectedStudentIds: []
+  };
 
-  handleStudentClicked(event) {
-    var selectedStudentIds = this.state.selectedStudentIds;
-    var studentId = +event.target.getAttribute('data-id');
-    var index = selectedStudentIds.indexOf(studentId);
+  handleStudentClicked = (event) => {
+    const selectedStudentIds = [...this.state.selectedStudentIds];
+    const studentId = +event.target.getAttribute('data-id');
+    const index = selectedStudentIds.indexOf(studentId);
     if (index === -1) {
       // not selected, select it
       selectedStudentIds.push(studentId);
@@ -27,13 +25,13 @@ const StudentSelector = React.createClass({
       // selected, unselect it
       selectedStudentIds.splice(index, 1);
     }
-    this.setState({selectedStudentIds: selectedStudentIds});
-  },
+    this.setState({selectedStudentIds});
+  };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     this.props.handleSubmit(this.state.selectedStudentIds);
     event.preventDefault();
-  },
+  };
 
   render() {
     if (!this.props.students) {
@@ -42,10 +40,10 @@ const StudentSelector = React.createClass({
       return <span>There are no other students in this section.</span>;
     }
 
-    var studentDivs = this.props.students.map(student => {
-      var className = "student selectable";
+    const studentDivs = this.props.students.map(student => {
+      let className = 'student selectable';
       if (this.state.selectedStudentIds.indexOf(student.id) !== -1) {
-        className = "student selectable selected";
+        className = 'student selectable selected';
       }
       return (
         <div
@@ -62,7 +60,7 @@ const StudentSelector = React.createClass({
     return (
       <div>
         {studentDivs}
-        <div className="clear"></div>
+        <div className="clear"/>
         {(this.state.selectedStudentIds.length !== 0) &&
           <button
             onClick={this.handleSubmit}
@@ -74,5 +72,4 @@ const StudentSelector = React.createClass({
       </div>
     );
   }
-});
-export default StudentSelector;
+}
