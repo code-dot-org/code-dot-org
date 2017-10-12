@@ -253,7 +253,6 @@ function installJoinBlock(blockly) {
 
 function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
-    // Repeat n times (internal number) with simplified UI
     init: function () {
       this.setHSV(0, 0, 0.6);
       this.appendDummyInput()
