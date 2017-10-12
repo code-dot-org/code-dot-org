@@ -202,11 +202,10 @@ const TutorialExplorer = React.createClass({
    */
   filterTutorialSetForLocale() {
     const filterProps = {
-      sortBy: this.props.defaultSortBy,
-      orgName: TutorialsOrgName.all
+      sortBy: this.props.defaultSortBy
     };
 
-    if (!this.props.roboticsButtonUrl) {
+    if (this.isRobotics()) {
       filterProps.filters = {
         activity_type: ["robotics"]
       };
@@ -218,7 +217,7 @@ const TutorialExplorer = React.createClass({
   },
 
   getUniqueOrgNames() {
-    return TutorialExplorer.getUniqueOrgNamesFromTutorials(this.props.tutorials);
+    return TutorialExplorer.getUniqueOrgNamesFromTutorials(this.props.tutorials, this.isRobotics());
   },
 
   componentDidMount() {
@@ -267,6 +266,10 @@ const TutorialExplorer = React.createClass({
 
   isLocaleEnglish() {
     return this.props.locale.substring(0,2) === "en";
+  },
+
+  isRobotics() {
+    return !this.props.roboticsButtonUrl;
   },
 
   /**
@@ -412,12 +415,23 @@ const TutorialExplorer = React.createClass({
      * sorted alphabetically, truncated and ellipsed.
      *
      * @param {Array} tutorials - Array of tutorials.
+     * @param {bool} robotics - Whether the page is for robotics.
      * @return {Array} - Array of strings.
      */
-    getUniqueOrgNamesFromTutorials(tutorials) {
+    getUniqueOrgNamesFromTutorials(tutorials, robotics) {
       // Filter out tutorials with DoNotShow as either tag or organization name.
-      const availableTutorials = tutorials.filter(t => {
+      let availableTutorials = tutorials.filter(t => {
         return t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow;
+      });
+
+      // Ensure robotics tag is either present or absent, depending whether we
+      // are on robotics variant of the page or not.
+      availableTutorials = availableTutorials.filter(t => {
+        if (robotics) {
+          return t.tags_activity_type.split(',').indexOf("robotics") !== -1;
+        } else {
+          return t.tags_activity_type.split(',').indexOf("robotics") === -1;
+        }
       });
 
       // Construct array of unique org names from the tutorials.
@@ -678,9 +692,10 @@ function getUrlParameters(filters, robotics) {
 window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
   let {filters, initialFilters, hideFilters} = getFilters(options);
+  const robotics = !options.roboticsButtonUrl;
 
   // Check for URL-based override of initialFilters.
-  const providedParameters = getUrlParameters(filters, !options.roboticsButtonUrl);
+  const providedParameters = getUrlParameters(filters, robotics);
   if (!_.isEmpty(providedParameters)) {
     initialFilters = providedParameters;
   }
