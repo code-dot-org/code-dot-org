@@ -44,7 +44,7 @@ $(document).ready(function () {
       $('#hoc-entire-school').show();
       // continue button goes to census questions on click
       $('.continue-btn').show();
-      $('#submit').hide();
+      $('#submit-button').hide();
     } else if (($('#hoc-event-type').val() === 'in_school')){
     // in-school & NOT US
       $('#school-name-field').show();
@@ -52,7 +52,7 @@ $(document).ready(function () {
       $('#hoc-event-location-field').show();
       $('#hoc-entire-school').show();
       $('.continue-btn').hide();
-      $('#submit').show();
+      $('#submit-button').show();
     } else if ($('#hoc-event-type').val() === 'out_of_school') {
       // out of school, either US or non-US
       $('#organization-name-field').show();
@@ -60,7 +60,7 @@ $(document).ready(function () {
       $('#school-name-field').hide();
       $('#hoc-entire-school').hide();
       $('.continue-btn').hide();
-      $('#submit').show();
+      $('#submit-button').show();
     }
   }
 
