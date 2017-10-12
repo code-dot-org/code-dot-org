@@ -107,8 +107,8 @@
 
     .form-group.continue-btn{style: "display: none;"}
       %div
-        %button.continue-btn#continue{type: "button"}
-          = hoc_s(:signup_continue_label)
+        %button.submit-btn#continue{type: "button"}
+          = hoc_s(:signup_submit_and_continue_label)
 
     #submit
       %input{name:'hoc_country_s', type:'hidden', value:@country}

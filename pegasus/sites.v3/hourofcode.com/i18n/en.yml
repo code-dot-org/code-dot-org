@@ -269,6 +269,7 @@
   signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: 'Sign up'
   signup_submit_error_message: "An error occurred. Please check to make sure all required fields have been filled out properly."
+  signup_submit_and_continue_label: 'Submit and Continue'
   signup_continue_label: 'Continue'
 
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
