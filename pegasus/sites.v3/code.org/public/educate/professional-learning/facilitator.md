@@ -54,7 +54,7 @@ In order to be selected for this program, potential Code.org facilitators must d
 **Classroom Experience and Knowledgeable about Content**
 
   * Prior or current teaching experience
-  * Strong backgroound in curriculum focus area, preferrably through past teaching experience with specific course
+  * Strong background in curriculum focus area, preferably through past teaching experience with specific course
   * High level of comfort with technology, including virtual meeting tools and experience with Google suite
 
 **Engaging Leader**
