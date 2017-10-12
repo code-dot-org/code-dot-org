@@ -497,6 +497,7 @@ describe('entry tests', () => {
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
+    'regional_partners/show': './src/sites/studio/pages/regional_partners/show.js',
 
     'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
 
