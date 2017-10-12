@@ -83,6 +83,7 @@ const ScriptOverview = React.createClass({
       scriptProgress = IN_PROGRESS;
     }
 
+    // TODO - move this into notifications
     const showNotification = viewAs === ViewType.Teacher && isSignedIn &&
       !isVerifiedTeacher && hasVerifiedResources;
 
