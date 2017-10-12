@@ -43,24 +43,24 @@ $(document).ready(function () {
       $('#hoc-event-location-field').show();
       $('#hoc-entire-school').show();
       // continue button goes to census questions on click
-      $('.continue-btn').show();
-      $('#submit-button').hide();
+      $('#continue-btn').show();
+      $('#submit-btn').hide();
     } else if (($('#hoc-event-type').val() === 'in_school')){
     // in-school & NOT US
       $('#school-name-field').show();
       $('#organization-name-field').hide();
       $('#hoc-event-location-field').show();
       $('#hoc-entire-school').show();
-      $('.continue-btn').hide();
-      $('#submit-button').show();
+      $('#continue-btn').hide();
+      $('#submit-btn').show();
     } else if ($('#hoc-event-type').val() === 'out_of_school') {
       // out of school, either US or non-US
       $('#organization-name-field').show();
       $('#hoc-event-location-field').show();
       $('#school-name-field').hide();
       $('#hoc-entire-school').hide();
-      $('.continue-btn').hide();
-      $('#submit-button').show();
+      $('#continue-btn').hide();
+      $('#submit-btn').show();
     }
   }
 
@@ -101,7 +101,7 @@ $(document).ready(function () {
 function showCensusForm(data) {
   $('.main-form').hide();
   $('#signup-header').hide();
-  $('.continue-btn').hide();
+  $('#submit').hide();
   // Copy all of the hoc-signup inputs to the census form
   $('.main-form :input').each(
     function (index) {
