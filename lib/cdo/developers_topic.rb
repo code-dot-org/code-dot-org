@@ -13,6 +13,9 @@ module DevelopersTopic
   PRODUCTION = 'production'
   LEVELBUILDER = 'levelbuilder'
 
+  DEVELOPERS_ROOM = 'developers'
+  DEPLOY_STATUS_ROOM = 'deploy-status'
+
   # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
   def self.dotd
     current_topic = Slack.get_topic 'developers'
@@ -89,9 +92,19 @@ module DevelopersTopic
     set_branch_message LEVELBUILDER, message
   end
 
+  private_class_method def self.get_room_for_branch(branch)
+    case branch
+      when STAGING
+        DEVELOPERS_ROOM
+      when TEST, PRODUCTION, LEVELBUILDER
+        DEPLOY_STATUS_ROOM
+      else raise "Unknown branch: #{branch}"
+    end
+  end
+
   # @return [Boolean] Whether the specified branch is open for merges.
   private_class_method def self.branch_open_for_merge?(branch)
-    current_topic = Slack.get_topic('developers')
+    current_topic = Slack.get_topic(get_room_for_branch(branch))
     prefix = BRANCH_PREFIXES[branch.to_sym]
     current_topic.include? "#{prefix}yes"
   end
@@ -101,7 +114,7 @@ module DevelopersTopic
   # @raise [RuntimeError] If the existing topic does not specify a message.
   private_class_method def self.branch_message(branch)
     prefix = BRANCH_PREFIXES[branch.to_sym]
-    current_topic = Slack.get_topic 'developers'
+    current_topic = Slack.get_topic(get_room_for_branch(branch))
     unless current_topic.include? prefix
       raise "DevelopersTopic does not specify a message for #{branch}"
     end
@@ -116,9 +129,10 @@ module DevelopersTopic
   # @raise [RuntimeError] If the existing topic does not specify a message.
   private_class_method def self.set_branch_message(branch, message)
     prefix = BRANCH_PREFIXES[branch.to_sym]
-    current_topic = Slack.get_topic 'developers'
+    room = get_room_for_branch(branch)
+    current_topic = Slack.get_topic(room)
     old_message = branch_message(branch)
     new_topic = current_topic.gsub "#{prefix}#{old_message}", "#{prefix}#{message}"
-    Slack.update_topic 'developers', new_topic
+    Slack.update_topic room, new_topic
   end
 end
