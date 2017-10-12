@@ -50,8 +50,8 @@
     "is_agent_level": "true",
     "agent_start_position": "[5,9]",
     "level_verification_timeout": "0",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Crossing these two pressure plates will open the path for the player.\\n\\n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)\",\"hint_id\":\"MC_HOC_2017_04POINT5_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8d8d07ac6512ca3fe181958cdbaa000a/MC_HOC_2017_04POINT5_Cole.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Crossing these two pressure plates will open the path for the player.\\n\\n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)\",\"hint_id\":\"MC_HOC_2017_04POINT5_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8d8d07ac6512ca3fe181958cdbaa000a/MC_HOC_2017_04POINT5_Cole.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

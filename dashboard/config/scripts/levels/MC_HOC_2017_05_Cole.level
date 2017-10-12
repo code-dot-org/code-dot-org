@@ -51,8 +51,8 @@
     "markdown_instructions": "Oh no, the bridge is out! \r\n\r\nHelp the Agent rebuild the bridge so that the player can get to the orange square.",
     "place_block_options": "[\"sand\", \"planksAcacia\", \"planksBirch\", \"planksOak\", \"planksSpruce\"]",
     "level_verification_timeout": "0",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.\",\"hint_id\":\"MC_HOC_2017_05_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1e073228d1522c98e7330b5db6a79367/MC_HOC_2017_05_Cole.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your final solution should look something like this:\\n\\n![](https://images.code.org/07ed5554bced3aeb0411d6fa75d0b747-image-1507751916859.gif)\",\"hint_id\":\"MC_HOC_2017_05_Cole_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db102fa3e5e673f83f4efdc697ea4dc9/MC_HOC_2017_05_Cole.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.\",\"hint_id\":\"MC_HOC_2017_05_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1e073228d1522c98e7330b5db6a79367/MC_HOC_2017_05_Cole.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your final solution should look something like this:\\n\\n![](https://images.code.org/07ed5554bced3aeb0411d6fa75d0b747-image-1507751916859.gif)\",\"hint_id\":\"MC_HOC_2017_05_Cole_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db102fa3e5e673f83f4efdc697ea4dc9/MC_HOC_2017_05_Cole.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
