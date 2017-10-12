@@ -25,7 +25,6 @@
     #lesson
       #heading
         %h1
-          = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
           = data_t_suffix('script.name', @script.name, 'title')
           - if @script.beta?
             %span.betatext
