@@ -295,6 +295,9 @@ sl:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Each item will need its own `while` loop.
+      AppLab Intro 3 - Change Screen Color_authored_hint: [ ]
+      AppLab Intro 4 - Change Screen Color_authored_hint: [ ]
+      AppLab Intro 5 - Change Screen Color_authored_hint: [ ]
       Artist Inspiration_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
         double_loop: Try putting a `for loop` inside of a `repeat` loop.
@@ -5814,7 +5817,7 @@ sl:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
-        courseC_PlayLab_events2_b: Use the dropdown menu on the block to change which actor speaks.
+        courseC_PlayLab_events2_b: Use the dropdown menu on the second `actor __ say` block to change which actor speaks.
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
         courseC_PlayLab_events3_b: Is there a block in the toolbox that looks like it would move an actor?
@@ -5829,8 +5832,8 @@ sl:
           </block>
           </xml>
       courseC_PlayLab_events4_authored_hint:
-        courseC_PlayLab_events4_b: Jorge needs to move right 100 pixels to reach Olive the Cat.
-        courseC_PlayLab_events4_a: You will need to attach a block to the `when actor touches` event to solve this puzzle.
+        courseC_PlayLab_events4_b: When the "Run" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.
+        courseC_PlayLab_events4_a: You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle.
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
         courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
@@ -5988,7 +5991,7 @@ sl:
           A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?
           Check the suggested rotations to see that this works!
       courseC_artist_loopsPre1a_authored_hint:
-        courseC_artist_loopsPre1a_a: Remember to put the `turn` block inside of your loop.
+        courseC_artist_loopsPre1a_a: Remember to put the `turn` block inside of the loop.
         courseC_artist_loopsPre1a_b: 'Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`.'
       courseC_artist_loopsPrePre1a_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
@@ -6486,7 +6489,7 @@ sl:
           To do this easily:
           
           - repeat 4 times
-          - make a cirlce
+          - make a circle
           - jump forward 50 pixels
           - turn right 90 degrees
         courseD_artist_nestedLoops5_b: To make a circle you'll need to set a repeat loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.
@@ -6598,6 +6601,7 @@ sl:
           
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: [ ]
+      courseD_artist_project_embedded_authored_hint: [ ]
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
         courseD_artist_ramp11b: |-
@@ -6755,6 +6759,9 @@ sl:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see what happens line by line.
         courseD_bee_nestedLoops1_b: Try writing code for one side of the square first. Can you loop this to get all of the nectar?
         courseD_bee_nestedLoops1_c: Remember to use the `get nectar` block once you are on a square with a flower.
+      courseD_bee_nestedLoops1a_authored_hint:
+        courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see what happens line by line.
+        courseD_bee_nestedLoops1_c: Remember to use the `get nectar` block once you are on a square with a flower.
       courseD_bee_nestedLoops2_authored_hint:
         courseD_bee_nestedLoops2_a: To solve this puzzle, you will need to nest one `repeat` loop inside of another.
         courseD_bee_nestedLoops2_b: Can't figure out where to put the loops? Try writing the code on paper step-by-step and look for a pattern.
@@ -6781,15 +6788,8 @@ sl:
           - get nectar
           - move forward
           - turn right
-      courseD_bee_nestedLoops8_authored_hint:
-        courseD_bee_nestedLoops8_a: Try writing your code line by line on a piece of paper and see if you can spot the places where a repeat will make the code shorter!
-        courseD_bee_nestedLoops8_b: |-
-          You will need a nested loop to move forward and get nectar, but only a single loop to collect honey at the end.
-          Altogether, you should be using 3 `repeat` loops.
-        courseD_bee_nestedLoops8_c: The repeat loop that makes honey will come after the nested loop and will not be inside of any other loop.
-      courseD_bee_nestedLoops9_authored_hint:
-        courseD_bee_nestedLoops9_a: Try writing the steps on paper and looking for patterns that can be simplified with loops.
-        courseD_bee_nestedLoops9_b: You will need one `repeat` loop to move forward and make honey along the horizontal path. Would this pattern work for the vertical path as well?
+      courseD_bee_nestedLoops8_authored_hint: [ ]
+      courseD_bee_nestedLoops9_authored_hint: [ ]
       courseD_bee_nestedLoops9_predict2_authored_hint: [ ]
       courseD_bee_nested_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
@@ -6854,6 +6854,15 @@ sl:
       courseD_collector_debugging10_predict1_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but they all involve turns!
         courseD_collector_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
+      courseD_collector_debugging1a_authored_hint:
+        courseD_collector_debugging1_a: |-
+          Use the "Step" button to see if everything is right at the first step.
+          
+          How about the second?
+          
+          Where does it go wrong?
+        courseD_collector_debugging1_c: |
+          Remember to use the `collect` block to pick up treasure once you have moved to it.
       courseD_collector_debugging2_authored_hint:
         courseD_collector_debugging2_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -6863,13 +6872,31 @@ sl:
           Where does it go wrong?
         courseD_collector_debugging2_b: Do you see any patterns that could be made more simple using a `repeat` loop?
         courseD_collector_debugging2_c: Try collecting treasure for one side of this pattern. Can you repeat this to collect treasure on the other two sides?
+      courseD_collector_debugging2a_authored_hint:
+        courseD_collector_debugging2a_a: |-
+          Use the "Step" button to see if everything is right at the first step.
+          
+          How about the second?
+          
+          Where does it go wrong?
+        courseD_collector_debugging2a_c: |-
+          What happens?
+          
+          What is supposed to happen?
+          
+          What does that tell you?
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_a: Is there any place where Laurel does something that doesn't make sense? What happens when you change those blocks?
         courseD_collector_debugging3_b: Try simplifying the code using nested loops.
+      courseD_collector_debugging3a_authored_hint:
+        courseD_collector_debugging3_a: Is there any place where Laurel does something that doesn't make sense? What happens when you change those blocks?
       courseD_collector_debugging4_authored_hint:
         courseD_collector_debugging4_a: "Try using the debugging process a couple of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed, what goes wrong?"
         courseD_collector_debugging4_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
         courseD_collector_debugging4_c: This loop is only missing one block. Can you figure out which one?
+      courseD_collector_debugging4a_authored_hint:
+        courseD_collector_debugging4_a: "Try using the debugging process a couple of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed, what goes wrong?"
+        courseD_collector_debugging4_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_a: |-
           Start by looking at just the first loop.
@@ -6880,6 +6907,14 @@ sl:
           
           What does that tell you?
         courseD_collector_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
+      courseD_collector_debugging5a_authored_hint:
+        courseD_collector_debugging5a_a: |-
+          What does it do?
+          
+          What is it supposed to do?
+          
+          What does that tell you?
+        courseD_collector_debugging5a_b: Once you have the first line of treasure collected, what is left over in your code?
       courseD_collector_debugging6_authored_hint:
         courseD_collector_debugging6_a: |-
           Try running through the code using the "Step" button.  Is everything good at the first step?
@@ -6888,6 +6923,14 @@ sl:
           
           Where do things go wrong?
         courseD_collector_debugging6_b: It looks like all of the right steps are here, you just need more of them.  How can you repeat the `collect` action multiple times?
+      courseD_collector_debugging6a_authored_hint:
+        courseD_collector_debugging6_a: |-
+          Try running through the code using the "Step" button.  Is everything good at the first step?
+          
+          How about the second?
+          
+          Where do things go wrong?
+        courseD_collector_debugging6_b: It looks like all of the blocks you need are in the workspace. Try clicking "start over" if things get too confusing.
       courseD_collector_debugging7_authored_hint:
         courseD_collector_debugging7_a: |-
           Try running through the code using the "Step" button.  Is everything good at the first step?
@@ -6900,9 +6943,11 @@ sl:
       courseD_collector_debugging8_authored_hint:
         courseD_collector_debugging8_a: Do you see a pattern that you can simplify with a loop?
         courseD_collector_debugging8_b: Try using a nested loop to make this code shorter.
+      courseD_collector_debugging8a_authored_hint: [ ]
       courseD_collector_debugging9_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but they all involve turns!
         courseD_collector_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
+      courseD_collector_debugging9a_authored_hint: [ ]
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
@@ -7139,9 +7184,7 @@ sl:
       courseD_farmer_while1_authored_hint:
         courseD_farmer_while1_a: You will need to move forward four times to get to the pile. Can you use a `repeat` loop for this?
         courseD_farmer_while1_b: Use the `remove 1` block when you are standing on the pile of dirt to remove it.
-      courseD_farmer_while10_authored_hint:
-        courseD_farmer_while10_a: You can use `while there is a pile` even if you know how much dirt you need to remove, to make simpler code.
-        courseD_farmer_while10_b: Do you recognize a stair step pattern like in other puzzles?
+      courseD_farmer_while10_authored_hint: [ ]
       courseD_farmer_while10_predict2_authored_hint: [ ]
       courseD_farmer_while2_authored_hint:
         courseD_farmer_while2_a: You will only need to move once to get to the hole.
@@ -7180,9 +7223,7 @@ sl:
         courseD_farmer_conditionals8_a: You are going to need to use more than one `while` loop.
         courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
-      courseD_farmer_while9_authored_hint:
-        courseD_farmer_while9_a: Each pile is at the end of a path. Does that tell you something about which `while` loop you need?
-        courseD_farmer_while9_b: Notice that every pile is the same size, so you don't need a while loop to remove dirt.
+      courseD_farmer_while9_authored_hint: [ ]
       courseD_farmer_while_challenge1_authored_hint:
         courseD_farmer_while_challenge1_a: Each hole or pile is located one space **backward** from the end of the path.
         courseD_farmer_while_challenge1_b: If you use a `while` loop, you can tell the farmer to remove a pile or fill a hole, even if one isn't there. That means you can program her to remove any dirt or fill any hole, no matter where she is.
@@ -7207,7 +7248,7 @@ sl:
         courseD_maze_nestedLoops4_a: |-
           Try using this path through the maze.
           
-          ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
+          ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
         courseD_maze_nestedLoops4_b: If the loop pattern is hard to see, try coding it all out first and see what code repeats over and over before you put the loops in.
         courseD_maze_nestedLoops4_c: Try using one `repeat` loop inside of another to cut down on the amount of code you need.
       courseD_maze_nestedLoops5_authored_hint:
@@ -7232,10 +7273,22 @@ sl:
         courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
         courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_maze_ramp5a_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_maze_ramp5b_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_maze_ramp5c_authored_hint: [ ]
+      courseD_maze_ramp5d_authored_hint: [ ]
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: There are two ways to solve this puzzle!
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to turn before you move.
         courseC_maze_programming6_c: Remember you can write one piece of the code at a time, then run it to figure out where you need to go from there.
+      courseD_maze_ramp6a_authored_hint:
+        courseC_maze_programming6a_a: Use a `repeat` loop to get this bird moving!
       courseD_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
@@ -7292,7 +7345,7 @@ sl:
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
         courseD_playLab_cond1_b: Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.
-        courseD_playLab_cond1_c: Remember to move Pegleg to the dragon once you've written your code!
+        courseD_playLab_cond1_c: Remember to move Pegleg to both of the flags once you click "Run"!
       courseD_playLab_cond2_authored_hint:
         courseD_playLab_cond2_a: To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event.
       courseD_playLab_cond3_authored_hint:
@@ -7319,6 +7372,34 @@ sl:
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
       courseD_playLab_embedded_authored_hint: [ ]
+      courseD_scrat_predict1_authored_hint: [ ]
+      courseD_scrat_ramp1_authored_hint:
+        courseC_maze_programming1_a: If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click "Run" again.
+        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_scrat_ramp2_authored_hint:
+        courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
+        courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
+      courseD_scrat_ramp3_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_b: Remember that turns to the right and left are from Scrat's perspective.
+      courseD_scrat_ramp4_authored_hint:
+        courseC_maze_programming4_a: You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.
+        courseC_maze_programming4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_scrat_ramp5_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+        courseC_maze_programming5_b: How far do you need to move to get to the corner?
+        courseC_maze_programming5_c: You will need to turn left at the corner to get to the acorn.
+      courseD_scrat_ramp6_authored_hint:
+        courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_b: Remember to turn first before moving, since Scrat is facing the wrong direction.
+        courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_scrat_ramp8_authored_hint:
+        courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+        courseD_maze_ramp7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseE_artist_concept1_authored_hint:
         courseE_artist_concept1_a: The hexagons have 50 pixel sides and 60 degree turns to the right.
         courseE_artist_concept1_b: Try using a function here so you don't have to write the code for a hexagon over and over again.
@@ -7465,6 +7546,7 @@ sl:
         courseE_bee_concept1_a: If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.
       courseE_bee_concept2_authored_hint:
         courseE_bee_concept2_a: Would a `while` loop help here?
+        courseE_bee_concept2_d: You can even check empty spaces to see if honey is > 0.
         courseE_bee_concept2_b: You can use `while` loops to move to the end of each path, and to collect all of the honey from each space.
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept3_authored_hint:
@@ -7507,6 +7589,9 @@ sl:
         courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
+      courseE_bee_functions6test_authored_hint:
         courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
@@ -7636,15 +7721,29 @@ sl:
         courseE_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce instead of dragging out 5 `pick lettuce` blocks?
         courseE_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a `move forward` block, and you'll have it!)
       courseE_farmer_ramp11a_authored_hint:
-        courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  '
-        courseE_farmer_ramp12_b: You only need to move forward once to get to the lettuce.
+        courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to shovel dirt, now you can use a `while there is a pile` block.  '
+        courseE_farmer_ramp12_b: You only need to move forward once to get to the dirt.
+      courseE_farmer_ramp11b_authored_hint:
+        courseE_farmer_ramp11b_a: You can nest your `while` loop inside of a `repeat` loop to make your code shorter.
       courseE_farmer_ramp12_authored_hint:
-        courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  '
+        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+      courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
       courseE_farmer_ramp12a_authored_hint:
         courseE_farmer_ramp12b: You will need to check your `if` statement 21 times to solve this puzzle.
         courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
         courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins.
+      courseE_farmer_ramp12b_authored_hint: [ ]
+      courseE_farmer_ramp12c_authored_hint:
+        courseE_farmer_ramp12b_b: You will still need to use an `until` loop first, then use a `while` loop once you get to the lettuce.
+      courseE_farmer_ramp12d_authored_hint:
+        courseE_farmer_ramp12d_b: You will still need to put your `until` and `while` loops inside of a `repeat` loop to solve this puzzle!
+      courseE_farmer_ramp12e_authored_hint:
+        courseE_farmer_ramp12e_b: The solution to this puzzle will look a lot like the solution to the last puzzle, but turning in the other direction.
+      courseE_farmer_ramp12f_authored_hint:
+        courseE_farmer_ramp12f_b: Use an `if/else` block to help the farmer decide if she needs to turn right or left.
+      courseE_farmer_ramp12g_authored_hint:
+        courseE_farmer_ramp12G_b: Use an `if/else` block to help the farmer decide if she needs to turn right or left.
       courseE_farmer_ramp13_authored_hint:
         courseE_farmer_ramp13_a: There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!
         courseE_farmer_ramp13_b: Use a `repeat` loop so that you don't have to write a separate if statement for each square.
@@ -8528,6 +8627,7 @@ sl:
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
           
           Only check for nectar and honey at the end of your path.
+        courseF_bee_conditionals8_c: What happens if you use the `while path ahead` block and get the first flower last?
       courseF_bee_for1_authored_hint:
         courseF_bee_for1_a: Drag a purple number block into the blank space on the `repeat` loop to tell it how many times to repeat.
         courseF_bee_for1_b: You will need two blocks in your ‘repeat’ loop to collect all of the nectar.
@@ -10426,6 +10526,7 @@ sl:
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'You should only have to add two blocks to get this puzzle where it needs to be. '
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
+      k1stickerfreeplay_authored_hint: [ ]
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       level 'grade3_Loops_11_authored_hint:

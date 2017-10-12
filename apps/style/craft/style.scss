@@ -232,7 +232,7 @@ body {
 //}
 
 #codeApp {
-  top: 100px !important;
+  top: 75px !important;
 
   &.hide-source {
     top: 0 !important;
@@ -578,6 +578,13 @@ $height-to-width: 434 / 477;
 
 #craft-popup-house-selection {
   @include craft-popup();
+
+  .modal-content {
+    margin-left: 0;
+    html[dir=rtl] & {
+      margin-right: 0;
+    }
+  }
 
   @include popup-width-height(654px, 510px);
 

@@ -84,10 +84,13 @@
     twitter: "推特"
     facebook: "脸谱"
     windowslive: "微软账户"
+    clever: Clever Account
     forgot_password: "忘记密码？"
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
     not_linked: "对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。"
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
@@ -259,7 +262,7 @@
       my_dashboard: "我的控制面板"
       courses: "课程"
       course_catalog: "课程分类"
-      project_gallery: "项目集"
+      project_gallery: "项目"
       sections: "小组"
       help_support: "帮助与支持"
       report_bug: "报告错误"
@@ -781,9 +784,10 @@
     rename: "重命名"
     save: "保存​​"
     delete: "刪除"
+    import: Import
     exit: "返回课程"
     my_projects: "我的项目"
-    project_gallery: "项目集"
+    project_gallery: "项目"
     publish: "发布"
     unpublish: "取消发布"
     share: "分享"
@@ -814,6 +818,7 @@
     remix: "混合"
     click_to_remix: 点击"混合"来创造出你自己的版本！
     edit_project: "编辑工程"
+    sharing_disabled: "抱歉，这个项目不能分享。如果这是你或者你学生的项目，请<a href='https://studio.code.org/users/sign_in'>登录</a>到你的账号查看这个项目。"
     abuse:
       tos: "此工程因违反了Code.org的<a href='http://code.org/tos'>服务条款</a> ，不能被共享。"
       policy_violation: "这个项目包含了不能和他人分享的数据。请联系应用程序的主人以修复他们的应用内容。"
@@ -867,6 +872,10 @@
     optional_stages: Optional Stages
     main_course: "主要课程"
     extra_course_content: "额外的课程内容"
+    csf_e_1: "提升到课程E（可选）"
+    csf_e_2: "课程E的内容"
+    csf_f_1: "提升到课程F（可选）"
+    csf_f_2: "课程F的内容"
     csd1_1: "第 1 章︰ 解决问题的流程"
     csd1_2: "第 2 章︰ 计算机和解决问题的能力"
     csd2_1: "第 1 章︰ 网站内容和 HTML"

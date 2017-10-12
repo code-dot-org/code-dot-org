@@ -84,10 +84,12 @@ ru:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Учетная запись Майкрософт'
+    clever: 'Clever Account'
     forgot_password: 'Забыли пароль?'
     need_confirmation: "Не получили инструкции по подтверждению?"
     need_unlock: "Не получили инструкции для разблокированию?"
     not_linked: "Извините, но вам надо ввести ваш пароль внизу, чтобы продолжить. Ваша учётная запись не зарегистрирована в %{provider}."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: 'Зарегистрировано учеников: %{count}.'
     teacher_count: 'Зарегистрировано учителей: %{count}.'
@@ -256,7 +258,7 @@ ru:
       my_dashboard: "My Dashboard"
       courses: "курсы"
       course_catalog: "Course Catalog"
-      project_gallery: "Галерея проектов"
+      project_gallery: "Проекты"
       sections: "Секции"
       help_support: "Помощь и поддержка"
       report_bug: "Сообщить об ошибке"
@@ -750,9 +752,10 @@ ru:
     rename: "Переименовать"
     save: "Сохранить"
     delete: "Удалить"
+    import: "Import"
     exit: "Вернуться к курсу"
     my_projects: "Мои проекты"
-    project_gallery: "Галерея проектов"
+    project_gallery: "Проекты"
     publish: "Опубликовать"
     unpublish: "Отменить публикацию"
     share: "Поделитесь"
@@ -783,6 +786,7 @@ ru:
     remix: 'Ремикс'
     click_to_remix: "Нажмите «Ремикс», чтобы воспроизвести свою собственную версию!"
     edit_project: 'Редактировать проект'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Этот проект нарушает <a href='http://code.org/tos'>Условия предоставления услуг</a> Code.org, о чем было направлено уведомление, поэтому этим проектом нельзя поделиться."
       policy_violation: "Этот проект содержит информацию, которой нельзя делиться с другими. Пожалуйста, свяжитесь с владельцем приложения что бы исправить его содержание."
@@ -835,6 +839,10 @@ ru:
     optional_stages: 'Optional Stages'
     main_course: 'Основной курс'
     extra_course_content: 'Дополнительный материал для курса'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

@@ -1201,6 +1201,8 @@
   csp1_name: 'Kafli 1: Internetið'
   csp2_name: Kafli 2 - Stafrænar upplýsingar
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1947,7 +1949,7 @@
   header_my_dashboard: My Dashboard
   header_courses: Námskeið
   header_course_catalog: Course Catalog
-  header_project_gallery: Verkefnagallerí
+  header_project_gallery: Verkefni
   header_sections: Hópar
   header_professional_learning: Fagnám
   header_educate_overview: Samantekt
@@ -2040,5 +2042,3 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'

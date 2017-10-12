@@ -50,10 +50,10 @@
   add_teacher_form:
     code:
       label: 'Dodaj nauczyciela:'
-      placeholder: Kod sekcja (ABCDEF)
+      placeholder: Kod sekcji (ABCDEF)
       instructions: Wprowadź kod, który udostępnił Ci Twój nauczyciel. Ten kod składa
         się z 6 liter, np. ABCDEF.
-      instructions_short: Enter your 6 letter section code
+      instructions_short: Wprowadź swój 6-literowy kod sekcji
     submit: Dodaj nauczyciela
   add_hint_form:
     placeholder: Wprowadź tutaj swoją wskazówkę
@@ -81,7 +81,7 @@
   prize: nagroda
   more_info: Więcej informacji
   auth:
-    sign_in_with: Zaloguj się przy użyciu %{provider}
+    sign_in_with: Zaloguj się przez %{provider}
     signed_in: Zalogowany!
     signed_out: Wylogowałeś się z <a href="%{url}"> Code.org</a>.
     sign_out_of: Używałeś %{provider} do zalogowania się . <a href="%{url}"> Kliknij
@@ -92,11 +92,14 @@
     twitter: Twitter
     facebook: Facebooka
     windowslive: Konto Microsoft
+    clever: Clever Account
     forgot_password: Nie pamiętasz swojego hasła?
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
     not_linked: Przepraszamy, ale twoje konto Code.org nie jest połączone z Twoim
       %{provider}. Będziesz musiał się zalogować, wpisując swoje hasło poniżej.
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} uczniów już się zarejestrowało."
     teacher_count: "%{count} nauczycieli już się zarejestrowało."
@@ -298,7 +301,7 @@
       home: Strona główna
       my_dashboard: Pulpit
       courses: Kursy
-      course_catalog: Course Catalog
+      course_catalog: Katalog Kursów
       project_gallery: Galeria Projektów
       sections: Sekcje
       help_support: Pomoc i wsparcie
@@ -492,7 +495,7 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: Ucz się więcej
+    announcement_learn_more_button: Dowiedz się więcej
     announcement_try_now_button: Spróbuj teraz
     announcement_host_an_hour_button: Przeprowadź Godzinę Kodowania
     announcement_watch_video_button: Obejrzyj Film
@@ -682,7 +685,7 @@
         przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej
         z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale
         może nie działać właściwie.
-      link: Ucz się więcej
+      link: Dowiedz się więcej
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -767,7 +770,7 @@
       cta: Zobacz instrukcję
     weblab:
       title: Web Lab (beta)
-      body: Web Lap to środowisko programowania, w którym można tworzyć proste strony
+      body: Web Lab to środowisko programowania, w którym można tworzyć proste strony
         www za pomocą HTML i CSS. Zaprojektuj swoją stronę www i udostępnij ją w kilka
         sekund.
       audience: Wiek 13+
@@ -789,7 +792,7 @@
         Minecraft.
     sports:
       title: Zawody
-      body: Make a basketball game or mix and match across sports.
+      body: Stwórz grę w koszykówkę albo włąsną mieszankę różnych sportów.
     text-compression:
       title: Text Compression
       body: In this lesson, students will use the Text Compression Widget to compress
@@ -805,8 +808,8 @@
         te lekcje bez komputerów.
     unplugged_conditionals:
       title: Warunkowe
-      body: Learn about algorithms and conditional statements in this “unplugged”
-        activity using a deck of cards.
+      body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności "bez prądu",
+        przy użyciu talii kart.
     widgets:
       title: Widgets
       body: Students can explore concepts from our Computer Science Principles course
@@ -845,7 +848,7 @@
     help_resources: Pomoc i Zasoby
     help_support: Pomoc i wsparcie
     documentation: Documentation
-    tutorials: Tutorials
+    tutorials: Samouczki
   multi:
     wrong_title: Błędna odpowiedź
     wrong_body: Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!
@@ -996,9 +999,10 @@
     rename: Zmień nazwę
     save: Zapisz
     delete: Usuń
+    import: Import
     exit: Powrót do Kursu
     my_projects: Moje Projekty
-    project_gallery: Project Gallery
+    project_gallery: Projekty
     publish: Publish
     unpublish: Unpublish
     share: Udostępnij
@@ -1038,6 +1042,9 @@
     remix: Remix
     click_to_remix: Kliknij 'Remix', aby utworzyć swoją własną wersję!
     edit_project: Edytuj projekt
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Zgłoszono, że ten projekt narusza <a href='http://code.org/tos'> Warunki
         korzystania</a> z Code.org i nie może być udostępniony innym.
@@ -1102,6 +1109,10 @@
     optional_stages: Optional Stages
     main_course: Main Course
     extra_course_content: Extra Course Content
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

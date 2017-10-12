@@ -16,14 +16,14 @@
     errors:
       messages:
         blank: må fylles ut
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: må fylles ut
+        invalid_plural: er ugyldig
     attributes:
       user:
         name: Visningsnavn
         name_example: Kallenavn<br/>(f.eks Kule Knut eller Tøffe Trine)
         email: E-post
-        parent_email: Parent/guardian email
+        parent_email: Foreldre/foresatt epost
         personal_email: Personal email address
         username: brukernavn
         password: passord
@@ -94,11 +94,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-konto
+    clever: Clever Account
     forgot_password: Har du glemt passordet ditt?
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
     not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
       have to sign in by typing your password below.
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} elever har allerede registrert seg."
     teacher_count: "%{count} lærere har allerede registrert seg."
@@ -297,7 +300,7 @@
       my_dashboard: My Dashboard
       courses: kurs
       course_catalog: Course Catalog
-      project_gallery: Project Gallery
+      project_gallery: Prosjekter
       sections: Sections
       help_support: Help and support
       report_bug: Report bug
@@ -468,7 +471,7 @@
     heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
     heading_tools: "<h2>Klar for neste trinn?</h2><h1>JavaScript-verktøy for videregående
       skole</h1>"
-    heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>"
+    heading_legacy: "<h2>Våre introduksjonskurs for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
     choose_next_course: Prøv et av Code Studio kursene ved å velge nedenfor
@@ -751,7 +754,7 @@
       title: Galleri
       body: Se et galleri av app- og artist-bilder laget av våre brukere
     gamelab:
-      title: Game Lab (beta)
+      title: Spill-lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Minstealder 13 år
@@ -980,9 +983,10 @@
     rename: Gi nytt navn
     save: Lagre
     delete: Slett
+    import: Import
     exit: Tilbake til kurset
     my_projects: Mine prosjekter
-    project_gallery: Project Gallery
+    project_gallery: Prosjekter
     publish: Publish
     unpublish: Unpublish
     share: Del
@@ -1021,6 +1025,9 @@
     remix: Remix
     click_to_remix: Klikk "Remix" til spin-off din egen versjon!
     edit_project: Rediger prosjekt
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Dette prosjektet er rapportert for brudd på Code.orgs<a href='http://code.org/tos'>
         Vilkår</a> og kan ikke deles med andre.
@@ -1085,6 +1092,10 @@
     optional_stages: Optional Stages
     main_course: Main Course
     extra_course_content: Extra Course Content
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

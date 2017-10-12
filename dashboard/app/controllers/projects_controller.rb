@@ -139,7 +139,7 @@ class ProjectsController < ApplicationController
     end
     return if redirect_under_13_without_tos_teacher(@level)
     if current_user
-      channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
+      channel = StorageApps.new(storage_id_for_current_user).most_recent(params[:key])
       if channel
         redirect_to action: 'edit', channel_id: channel
         return
@@ -220,13 +220,16 @@ class ProjectsController < ApplicationController
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
     end
+
     FirehoseClient.instance.put_record(
-      'projects-events',
-      {
-        channel_id: params[:channel_id],
-        iframe_embed: iframe_embed,
-        share: sharing,
-      }
+      'analysis-events',
+      # Use -wip suffix until we settle on an exact format for these records.
+      study: 'project-views-wip',
+      event: project_view_event_type(iframe_embed, sharing),
+      project_id: params[:channel_id],
+      data_json: {
+        project_type: params[:key],
+      }.to_json
     )
     render 'levels/show'
   end
@@ -266,6 +269,19 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  # @param iframe_embed [Boolean] Whether the project view event was via iframe.
+  # @param sharing [Boolean] Whether the project view event was via share page.
+  # @returns [String] A string representing the project view event type.
+  def project_view_event_type(iframe_embed, sharing)
+    if iframe_embed
+      'iframe_embed'
+    elsif sharing
+      'share'
+    else
+      'view'
+    end
+  end
 
   def get_from_cache(key)
     @@project_level_cache[key] ||= Level.find_by_key(key)
