@@ -4,29 +4,7 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import i18n from "@cdo/locale";
-import color from "../util/color";
-
-const styles = {
-  question: {
-    fontSize: 16,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.charcoal,
-    paddingTop: 10,
-    paddingBottom: 5
-  },
-  asterisk: {
-    fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red,
-  },
-  errors: {
-    fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.red,
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-};
+import { styles } from './census2017/censusFormStyles';
 
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {

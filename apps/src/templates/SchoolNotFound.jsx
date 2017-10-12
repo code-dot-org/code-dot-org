@@ -1,51 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import color from "../util/color";
 import i18n from "@cdo/locale";
 import { STATES } from '../geographyConstants';
-
-const styles = {
-  question: {
-    fontSize: 16,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.charcoal,
-    paddingTop: 10,
-    paddingBottom: 5
-  },
-  input: {
-    height: 40,
-    width: 250,
-    fontFamily: '"Gotham 3r", sans-serif',
-    padding: 5
-  },
-  dropdown: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    height: 30,
-    marginTop: 5,
-    width: 250
-  },
-  errors: {
-    fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.red,
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  field: {
-    float: 'left',
-    height: '80px',
-    width: '450px',
-  },
-  clear: {
-    width: '100%',
-    clear: 'both'
-  },
-  asterisk: {
-    fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red,
-  },
-};
+import { styles } from './census2017/censusFormStyles';
 
 const schoolTypes = [
   '',
@@ -125,7 +81,7 @@ export default class SchoolNotFound extends Component {
                 name="school_type_s"
                 value={this.props.schoolType}
                 onChange={this.sendTypeToParent}
-                style={styles.dropdown}
+                style={styles.schoolNotFoundDropdown}
               >
                 {schoolTypes.map((schoolType, index) =>
                   <option
@@ -165,7 +121,7 @@ export default class SchoolNotFound extends Component {
                 name="school_state_s"
                 value={this.props.schoolState}
                 onChange={this.sendStateToParent}
-                style={styles.dropdown}
+                style={styles.schoolNotFoundDropdown}
               >
                 {STATES.map((state, index) =>
                   <option
