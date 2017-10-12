@@ -96,11 +96,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Outlook
+    clever: Clever Account
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
     not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
       have to sign in by typing your password below.
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} alunos já criaram uma conta."
     teacher_count: "%{count} professores já criaram uma conta."
@@ -302,7 +305,7 @@
       my_dashboard: My Dashboard
       courses: Cursos
       course_catalog: Course Catalog
-      project_gallery: Galeria de projetos
+      project_gallery: Projetos
       sections: Turmas
       help_support: Ajuda e suporte
       report_bug: Comunicar um problema
@@ -1002,9 +1005,10 @@
     rename: Renomear
     save: Guardar
     delete: Apagar
+    import: Import
     exit: Voltar ao curso
     my_projects: Os meus projetos
-    project_gallery: Galeria de projetos
+    project_gallery: Projetos
     publish: Publicar
     unpublish: Unpublish
     share: Partilhar
@@ -1045,6 +1049,9 @@
     remix: Criar variação
     click_to_remix: Clica em "Criar variação" para criares a tua própria versão!
     edit_project: Editar Projeto
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Este projeto foi reportado por violar os <a href='http://code.org/tos'>Termos
         de Serviço</a> do Code.org e não pode ser partilhado.
@@ -1111,6 +1118,10 @@
     optional_stages: Optional Stages
     main_course: Main Course
     extra_course_content: Extra Course Content
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

@@ -1,0 +1,134 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2017-10-11T01:38:28.000Z",
+  "level_num": "custom",
+  "user_id": 562,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"water\",\"stone\",\"stone\",\"water\",\"stone\",\"stone\",\"stone\",\"wool\",\"wool_orange\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"oreDiamond\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"water\",\"water\",\"water\",\"stone\",\"water\",\"stone\",\"grass\",\"grass\",\"water\",\"stone\",\"water\",\"water\",\"water\",\"water\",\"stone\",\"grass\",\"grass\",\"water\",\"water\",\"stone\",\"sandstone\",\"sandstone\",\"water\",\"grass\",\"stone\",\"stone\",\"grass\",\"stone\",\"stone\",\"stone\",\"sand\",\"sand\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"stone\",\"dirtCoarse\",\"dirtCoarse\",\"stone\",\"stone\",\"sandstone\",\"sandstone\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"stone\",\"dirtCoarse\",\"dirtCoarse\",\"stone\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"railsRedstoneTorch\",\"redstoneWire\",\"redstoneWire\",\"redstoneWire\",\"redstoneWire\",\"redstoneWire\",\"redstoneWire\",\"pistonDownOnSticky\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"pistonArmDownSticky\",\"bedrock\",\"bedrock\",\"pistonUp\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"torch\",\"pressurePlateUp\",\"\",\"stone\",\"stone\",\"\",\"stone\",\"\",\"stone\",\"bedrock\",\"bedrock\",\"diamondMiniblock\",\"\",\"\",\"stone\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"stone\",\"sandstone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"sandstone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\"]",
+    "player_start_position": "[0,8]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "player_start_direction": "1",
+    "is_daytime": "true",
+    "is_event_level": "false",
+    "use_player": "false",
+    "verification_function": "function (verificationAPI) {\r\n      // player is at given x, y position\r\n      return verificationAPI.isPlayerAt([9, 2]);\r\n}",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
+    "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "use_score": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "display_name": "The Cave",
+    "agent_start_direction": "0",
+    "is_agent_level": "true",
+    "agent_start_position": "[4,8]",
+    "markdown_instructions": "Fix this function to fill in the holes, then step on the pressure plate to clear a path to the torch.",
+    "place_block_options": "[\"bedrock\", \"bricks\", \"clay\" , \"cobblestone\", \"dirt\", \"dirtCoarse\", \"stone\"]",
+    "level_verification_timeout": "0",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-07 02:44:27 +0000\",\"changed\":[\"notes\",\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"player_start_direction\",\"is_daytime\",\"is_event_level\",\"use_player\",\"verification_function\",\"timeout_verification_function\",\"failure_check_function\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 17:48:37 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:00:00 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:00:59 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:20:39 +0000\",\"changed\":[\"ground_decoration_plane\",\"player_start_position\",\"player_start_direction\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:21:55 +0000\",\"changed\":[\"player_start_position\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 18:30:14 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-07 22:38:10 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:11:53 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:14:35 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:08 +0000\",\"changed\":[],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:22 +0000\",\"changed\":[],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:15:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:16:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:16:52 +0000\",\"changed\":[],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:17:47 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 00:19:03 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 01:33:06 +0000\",\"changed\":[\"name\",\"ground_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:09:29 +0000\",\"changed\":[\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:12:12 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-08 02:15:37 +0000\",\"changed\":[\"ground_decoration_plane\",\"action_plane\",\"player_start_position\",\"player_start_direction\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-09 00:17:27 +0000\",\"changed\":[\"name\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-09 00:19:07 +0000\",\"changed\":[\"ground_plane\",\"is_event_level\",\"verification_function\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-09 00:21:36 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-22 22:11:39 +0000\",\"changed\":[\"player_start_position\",\"is_event_level\",\"use_player\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-28 00:42:24 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 01:29:03 +0000\",\"changed\":[\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 01:30:58 +0000\",\"changed\":[\"ground_plane\",\"player_start_position\",\"player_start_direction\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 01:31:25 +0000\",\"changed\":[\"ground_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 01:32:15 +0000\",\"changed\":[\"ground_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 01:32:55 +0000\",\"changed\":[\"player_start_position\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 04:10:42 +0000\",\"changed\":[\"ground_plane\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 04:28:11 +0000\",\"changed\":[\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 04:35:56 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 04:42:31 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"player_start_position\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 04:43:33 +0000\",\"changed\":[\"ground_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 04:44:27 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 23:00:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 23:00:11 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 23:00:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 23:01:00 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-28 23:01:28 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-29 00:30:55 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-29 00:33:24 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-29 00:34:45 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-29 00:39:34 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-29 02:55:02 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-29 17:42:30 +0000\",\"changed\":[\"toolbox_blocks\",\"is_agent_level\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-29 17:43:00 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-29 20:37:42 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-09-30 00:58:11 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-30 00:59:36 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-30 01:01:08 +0000\",\"changed\":[\"verification_function\",\"agent_start_position\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-30 01:02:22 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-30 01:02:41 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-30 01:03:49 +0000\",\"changed\":[],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-09-30 01:03:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-10-02 17:44:00 +0000\",\"changed\":[\"ground_decoration_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-10-02 17:44:32 +0000\",\"changed\":[\"ground_decoration_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-10-02 17:45:24 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-10-03 19:24:55 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-10-04 00:38:09 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 00:39:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 00:46:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 01:56:45 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 05:52:20 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 15:40:50 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 17:05:14 +0000\",\"changed\":[\"toolbox_blocks\",\"verification_function\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-10-04 17:07:04 +0000\",\"changed\":[\"toolbox_blocks\",\"verification_function\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-10-04 17:11:02 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-10-04 17:11:35 +0000\",\"changed\":[\"toolbox_blocks\",\"verification_function\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-10-04 17:18:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 17:19:07 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 18:00:51 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-05 19:02:23 +0000\",\"changed\":[\"toolbox_blocks\",\"place_block_options\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-10-06 17:36:29 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":732,\"changed_by_email\":\"v-alalb@microsoft.com\"},{\"changed_at\":\"2017-10-06 22:51:33 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-10-06 23:03:40 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":562,\"changed_by_email\":\"v-cophil@microsoft.com\"},{\"changed_at\":\"2017-10-10 20:24:29 +0000\",\"changed\":[\"toolbox_blocks\",\"level_verification_timeout\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:39:38 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:39:58 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:40:27 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:41:09 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:42:58 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:43:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:44:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:44:42 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:46:29 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:47:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:48:13 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"instructions\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:49:18 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-11 01:50:54 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml/>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" id="when_run">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="move and fill"/>
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="move and fill"/>
+                  <next>
+                    <block type="craft_turn">
+                      <title name="DIR">left</title>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="move and fill"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false">
+          <mutation/>
+          <title name="NAME">move and fill</title>
+          <statement name="STACK">
+            <block type="craft_moveForward">
+              <next>
+                <block type="craft_moveForward">
+                  <next>
+                    <block type="craft_placeBlock">
+                      <title name="TYPE">bedrock</title>
+                      <next>
+                        <block type="craft_moveForward"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveBackward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_destroyBlock"/>
+        <block type="craft_placeBlock">
+          <title name="TYPE">sandstone</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="move and fill"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>

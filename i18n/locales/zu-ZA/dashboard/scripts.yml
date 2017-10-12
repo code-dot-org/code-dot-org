@@ -157,6 +157,7 @@ zu:
           stages:
             Maze:
               name: Maze
+          description_audience: ''
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -4506,7 +4507,7 @@ zu:
             Simple Sprite Movement:
               name: Simple Sprite Movement
         csd6-draft:
-          title: Draft Unit 6
+          title: CSD Unit 6 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''
@@ -4557,6 +4558,10 @@ zu:
               name: 'Project: Prototype an Innovation'
             Map:
               name: Map
+            Board Events:
+              name: Board Events
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4613,6 +4618,10 @@ zu:
               name: Representing Numbers
             8-bit Numbers:
               name: 8-bit Numbers
+            Encryption:
+              name: Encryption
+            Structuring Data:
+              name: Structuring Data
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
@@ -4817,19 +4826,19 @@ zu:
           stages:
             Representation Matters:
               name: Representation Matters
-              description_student: In the first lesson of the data unit, students will get an overview of what data is and how it is used to solve problems.  Students will start off with a brief discussion to come to a common understanding of data.  They then split into groups and use a data set to make a series of meal recommendations for people with various criteria.  Each group has the choices of meal represented in a different way (pictures, recipes, menu, nutrition) that gives an advantage for one of the recommendations.  Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.
-              description_teacher: In the first lesson of the data unit, students will get an overview of what data is and how it is used to solve problems.  Students will start off with a brief discussion to come to a common understanding of data.  They then split into groups and use a data set to make a series of meal recommendations for people with various criteria.  Each group has the choices of meal represented in a different way (pictures, recipes, menu, nutrition) that gives an advantage for one of the recommendations.  Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.
+              description_student: This first lesson provides an overview of what data is and how it is used to solve problems.  Groups use a data set to make a series of meal recommendations for people with various criteria.   Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.
+              description_teacher: In the first lesson of the data unit, students get an overview of what data is and how it is used to solve problems.  Students start off with a brief discussion to come to a common understanding of data.  They then split into groups and use a data set to make a series of meal recommendations for people with various criteria.  Each group has the choices of meal represented in a different way (pictures, recipes, menu, nutrition) that gives an advantage for one of the recommendations.  Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.
             Patterns and Representation:
               name: Patterns and Representation
-              description_student: In this lesson students create their own system for representing information. They begin by brainstorming all the different systems they already use to represent yes-no responses. They then work in small groups to create a system that can represent any letter in the alphabet using only a single stack of cards. The cards used have one of 6 different possible drawings (6 animals, 6 colors, etc.) and so to represent the entire alphabet students will need to use patterns of multiple cards to represent each letter. Students will create messages with their systems and exchange with other groups to ensure the system worked as intended. In the wrap-up discussion the class will review any pros and cons of the different systems. They will discuss commonalities between working systems and recognize that there are many possible solutions to this problem and what's important is that everyone use the same arbitrary system to communicate.
-              description_teacher: In this lesson students create their own system for representing information. They begin by brainstorming all the different systems they already use to represent yes-no responses. They then work in small groups to create a system that can represent any letter in the alphabet using only a single stack of cards. The cards used have one of 6 different possible drawings (6 animals, 6 colors, etc.) and so to represent the entire alphabet students will need to use patterns of multiple cards to represent each letter. Students will create messages with their systems and exchange with other groups to ensure the system worked as intended. In the wrap-up discussion the class will review any pros and cons of the different systems. They will discuss commonalities between working systems and recognize that there are many possible solutions to this problem and what's important is that everyone use the same arbitrary system to communicate.
+              description_student: This lesson looks closer at what is needed to create a system of representation.  Groups create systems that can represent any letter in the alphabet using only a single stack of cards, then create messages with their systems and exchange with other groups to ensure the system worked as intended.   The class discusses commonalities between working systems while recognizing that there are many possible working solutions.
+              description_teacher: In this lesson students create their own system for representing information. They begin by brainstorming all the different systems they already use to represent yes-no responses. They then work in small groups to create a system that can represent any letter in the alphabet using only a single stack of cards. The cards used have one of 6 different possible drawings (6 animals, 6 colors, etc.) and so to represent the entire alphabet students will need to use patterns of multiple cards to represent each letter. Students create messages with their systems and exchange with other groups to ensure the system worked as intended. In the wrap-up discussion the class  reviews any pros and cons of the different systems. They discuss commonalities between working systems and recognize that there are many possible solutions to this problem and what's important is that everyone use the same arbitrary system to communicate.
             ASCII and Binary Representation:
               name: ASCII and Binary Representation
-              description_student: In this lesson students learn to use their first binary system for encoding information, the ASCII system for representing letters and other characters. At the beginning of the lesson the teacher introduces the fact that computers must represent information using either "on" or "off". Then students are introduced to the ASCII system for representing text using binary symbols. Students practice using this system before encoding their own message using ASCII. At the end of the lesson a debrief conversation helps synthesize the key learning objectives of the activity.
+              description_student: This lesson introduces a formal binary system for encoding information, the ASCII system for representing letters and other characters. At the beginning of the lesson the teacher introduces the fact that computers must represent information using either "on" or "off". The class is then introduced to the ASCII system for representing text using binary symbols and practices using this system before encoding their own messages using ASCII.
               description_teacher: In this lesson students learn to use their first binary system for encoding information, the ASCII system for representing letters and other characters. At the beginning of the lesson the teacher introduces the fact that computers must represent information using either "on" or "off". Then students are introduced to the ASCII system for representing text using binary symbols. Students practice using this system before encoding their own message using ASCII. At the end of the lesson a debrief conversation helps synthesize the key learning objectives of the activity.
             Representing Images:
               name: Representing Images
-              description_student: In this lesson students learn how computers represent images. To begin the lesson they consider the challenge of turning all the complexity of vision into a binary pattern. Through a series of images showing how this transformation is made students are introduced to the concept of splitting images into squares or "pixels" which can then be turned on or off individually to make the entire image. Students then do a short set of challenges using the Pixelation Widget in order to draw black and white images. Puzzles are designed to call out some of the challenges of representing images in this way. In the wrap up students make connections between the system for representing images and the system for representing text they learned in the previous lesson.
+              description_student: This lesson continues the study of binary representation systems, this time with images. The class is introduced to the concept of splitting images into squares or "pixels" which can then be turned on or off individually to make the entire image. After doing a short set of challenges using the Pixelation Widget, the class makes connections between the system for representing images and the system for representing text they learned in the previous lesson.
               description_teacher: In this lesson students learn how computers represent images. To begin the lesson they consider the challenge of turning all the complexity of vision into a binary pattern. Through a series of images showing how this transformation is made students are introduced to the concept of splitting images into squares or "pixels" which can then be turned on or off individually to make the entire image. Students then do a short set of challenges using the Pixelation Widget in order to draw black and white images. Puzzles are designed to call out some of the challenges of representing images in this way. In the wrap up students make connections between the system for representing images and the system for representing text they learned in the previous lesson.
             Representing Numbers Part 1:
               name: Representing Numbers Part 1
@@ -4837,44 +4846,52 @@ zu:
               name: Representing Numbers Part 2
             Combining Representations:
               name: Combining Representations
-              description_student: In this lesson, students use all three types of binary representation systems (ASCII characters, binary number, and images) to decode information in a record.  After seeing a series of bits and being asked to decode them, students are introduced to the idea that in order to understand binary information, they must understand both the system that is being used and the meaning of the information encoded.  They then decode a record representing a pet based on a given structure.
+              description_student: This lesson combines all three types of binary representation systems (ASCII characters, binary number, and images) to allow for the encode of more complex types information in a record.  After seeing a series of bits and being asked to decode them, the class is introduced to the idea that  understanding binary information requires understanding both the system that is being used and the meaning of the information encoded.
               description_teacher: In this lesson, students use all three types of binary representation systems (ASCII characters, binary number, and images) to decode information in a record.  After seeing a series of bits and being asked to decode them, students are introduced to the idea that in order to understand binary information, they must understand both the system that is being used and the meaning of the information encoded.  They then decode a record representing a pet based on a given structure.
             Project - Create a Representation:
               name: Project - Create a Representation
-              description_student: In this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decipher what the other student's perfect day is like. The lesson ends with a reflection.
+              description_student: The class designs structure to represent their perfect day using the binary representation systems they've learned in this chapter. After deciding which pieces of information the record should capture, the class will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Afterwards, everyone will use the ASCII, binary number, and image formats they have learned to represent their perfect days try to decipher what a partner's perfect day is like.
               description_teacher: In this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decipher what the other student's perfect day is like. The lesson ends with a reflection.
             Problem Solving and Data:
               name: Problem Solving and Data
-              description_student: In this lesson, students use the problem solving process from earlier in the course to solve a data problem.
-              description_teacher: In this lesson, students use the problem solving process from earlier in the course to solve a data problem.
+              description_student: This lesson covers how the problem solving process can be tailored to deal with data problems, in particular.  The class is tasked with deciding what a city most needs to spend resources on.  They must find and use data from the Internet to support their decision.
+              description_teacher: 'In this lesson, students use the problem solving process from earlier in the course to solve a data problem.  After reviewing the process, the class is presented with a decision: whether a city should build a library, pet shelter, or fire department.  Students work in teams to collect information on the Internet to help them decide what should be built, then use this information build an argument that will convince the city council of their choice.  They then map what they have done to the problem solving process that they have been using throughout the course, comparing the general problem solving process to its specific application to data problems.'
             Making Decisions with Data:
               name: Making Decisions with Data
-              description_student: In this lesson students get practice making decisions with data based on some problems designed to be familiar to middle school students. Students work in groups discussing how they would use the data presented to make a decision before the class discusses their final choices. Not all questions have right answers and in some cases students can and should decide that they should collect more data. The lesson concludes with a discussion of how different people could draw different conclusions from the same data, or how collecting different data might have affected the decisions they made.
+              description_student: This lesson gives the class a chance to practice the data problem solving process introduced in the last lesson.  Not all questions have right answers and in some cases the class can and should decide that they should collect more data. The lesson concludes with a discussion of how different people could draw different conclusions from the same data, or how collecting different data might have affected the decisions they made.
               description_teacher: In this lesson students get practice making decisions with data based on some problems designed to be familiar to middle school students. Students work in groups discussing how they would use the data presented to make a decision before the class discusses their final choices. Not all questions have right answers and in some cases students can and should decide that they should collect more data. The lesson concludes with a discussion of how different people could draw different conclusions from the same data, or how collecting different data might have affected the decisions they made.
             Interpreting Data:
               name: Interpreting Data
-              description_student: In this lesson, students go further into the interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
-              description_teacher: In this lesson, students go further into the interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+              description_student: Students begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor.  They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend.  They are then introduced to cross tabulation, which allows them to graph relationships to different preferences.  They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.
+              description_teacher: Students begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor.  They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend.  They are then introduced to cross tabulation, which allows them to graph relationships to different preferences.  They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.
             Automating Data Decisions:
               name: Automating Data Decisions
-              description_student: In this lesson students look at a simple example of how a computer could be used to complete essentially every step of the data problem solving process. To begin students are given the clean data they collected about their ice cream preferences. They use a spreadsheet to visualize this data using simple charts and discuss in groups the decision they would make with this data. Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Groups share their rules and what choices their rules would make with the class data. They then use their rules on data from another class to reinforce the fact that the rules they create should be useful for any data set. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
-              description_teacher: In this lesson students look at a simple example of how a computer could be used to complete essentially every step of the data problem solving process. To begin students are given the clean data they collected about their ice cream preferences. They use a spreadsheet to visualize this data using simple charts and discuss in groups the decision they would make with this data. Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Groups share their rules and what choices their rules would make with the class data. They then use their rules on data from another class to reinforce the fact that the rules they create should be useful for any data set. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
+              description_student: In this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot.  Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that  a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
+              description_teacher: In this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot.  Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that  a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
-              description_student: In this lesson, students look at how data is collected and used by a organizations to solve problems in the real world. The lesson begins with a quick review of the data problem solving process they have explored in this unit. Then students are presented three scenarios that could be solved using data and they brainstorm the types of data they would want to solve them and how they could collect the data. Each problem is designed to reflect a real-world service that exists. After brainstorming students will watch a video about a real-world service and will record notes about what data is collected by the real-world service and how it is used. At the end of the lesson students record whether data was provided actively by a user, was recorded passively, or is collected by sensors.
-              description_teacher: In this lesson, students look at how data is collected and used by a organizations to solve problems in the real world. The lesson begins with a quick review of the data problem solving process they have explored in this unit. Then students are presented three scenarios that could be solved using data and they brainstorm the types of data they would want to solve them and how they could collect the data. Each problem is designed to reflect a real-world service that exists. After brainstorming students will watch a video about a real-world service and will record notes about what data is collected by the real-world service and how it is used. At the end of the lesson students record whether data was provided actively by a user, was recorded passively, or is collected by sensors.
+              description_student: This lesson covers how data is collected and used by a organizations to solve problems in the real world. The class looks at three scenarios that could be solved using data and brainstorms the types of data they would want to solve them and how they could collect the data.  Each scenario also includes a video about a real-world service that has solved a similar problem with data.
+              description_teacher: In this lesson, students look at how data is collected and used by organizations to solve problems in the real world. The lesson begins with a quick review of the data problem solving process they  explored in the last lesson. Then students are presented three scenarios that could be solved using data and brainstorm the types of data they would want to solve them and how they could collect the data. Each problem is designed to reflect a real-world service that exists. After brainstorming, students watch a video about a real-world service and record notes about what data is collected by the real-world service and how it is used. At the end of the lesson, students record whether data was provided actively by a user, was recorded passively, or is collected by sensors.
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
-              description_student: To conclude this unit students will design a way to use data to make a recommendation or prediction to help solve a problem. Students will follow a project guide to complete this multi-day activity. In the first several steps students brainstorm problems, perform simple research, and define a problem of their choosing. They will then decide what kind of data they would want to collect, how it could be collected, and how it could be used. Students will perform a peer review and make any necessary updates to their project before preparing a presentation to their classmates.
-              description_teacher: To conclude this unit students will design a way to use data to make a recommendation or prediction to help solve a problem. Students will follow a project guide to complete this multi-day activity. In the first several steps students brainstorm problems, perform simple research, and define a problem of their choosing. They will then decide what kind of data they would want to collect, how it could be collected, and how it could be used. Students will perform a peer review and make any necessary updates to their project before preparing a presentation to their classmates.
+              description_student: To conclude this unit the class designs ways to use data to make a recommendations or predictions to help solve a problem.  In the first several steps the class brainstorms problems, performs simple research, and defines a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.
+              description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
             Representing Numbers:
               name: Representing Numbers
-              description_student: In this lesson, students learn about the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system by a collection of dots, students turn bits "on" or "off" by turning cards face up and face down, then observe the numbers that result from these different patterns.  Eventually, student extend the pattern to a generic 4-bit system.
-              description_teacher: In this lesson, students learn about the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system by a collection of dots, students turn bits "on" or "off" by turning cards face up and face down, then observe the numbers that result from these different patterns.  Eventually, student extend the pattern to a generic 4-bit system.
+              description_student: This lesson introduces the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system, the class turns bits "on" or "off" by turning cards face up and face down, then observes the numbers that result from these different patterns.  Eventually, the pattern is extended to a generic 4-bit system.
+              description_teacher: In this lesson, students learn about the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system by a collection of dots, students turn bits "on" or "off" by turning cards face up and face down, then observe the numbers that result from these different patterns.  Eventually, students extend the pattern to a generic 4-bit system.
             8-bit Numbers:
               name: 8-bit Numbers
               description_student: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
               description_teacher: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
+            Encryption:
+              name: Encryption
+              description_student: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
+              description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
+            Structuring Data:
+              name: Structuring Data
+              description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
+              description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -5516,6 +5533,26 @@ zu:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Nested Loops:
+              name: Nested Loops
           title: Course E
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
@@ -5606,6 +5643,24 @@ zu:
               description_teacher: This lesson gives students a chance to learn and practice conditionals. It features characters and settings from Minecraft, and students will complete tasks such as mining and building structures using their programs.
             Functions in Bee:
               name: Functions in Bee
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
           title: Course F
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
@@ -5845,11 +5900,11 @@ zu:
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Loops in Artist (UPDATED)
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -5928,6 +5983,10 @@ zu:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
+            Building a Foundation:
+              name: Building a Foundation
+            Nested Loops:
+              name: Nested Loops
           title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -6028,10 +6087,10 @@ zu:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
-          title: ''
+          title: CSP Unit 3 - Intro to Programming
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -6068,6 +6127,8 @@ zu:
               name: Improving and Iterating
             App Presentation:
               name: App Presentation
+            Linking Screens:
+              name: Linking Screens
           title: CSD Unit 4 Revisions Draft
           description_audience: ''
           description_short: ''
@@ -6086,7 +6147,437 @@ zu:
               name: Intro to AppLab - Choose Your Own Adventure
             Intro to AppLab - Choose Your Own Adventure 2:
               name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of creative projects.
+        e-f-ramp:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence and Preview in Maze:
+              name: Sequence and Preview in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Intro to Conditionals with Farmer:
+              name: Intro to Conditionals with Farmer
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Course E Introduction:
+              name: Course E Introduction
+            Conditionals:
+              name: Conditionals
+            Private and Personal Information:
+              name: Private and Personal Information
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Sequence in Maze:
+              name: Sequence in Maze
+          title: Course E & F Ramp
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-d:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Introduction:
+              name: Introduction
+            Events in Bounce:
+              name: Events in Bounce
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Conditionals in Bee:
+              name: Conditionals in Bee
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Digital Citizenship:
+              name: Digital Citizenship
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+            Building a Foundation:
+              name: Building a Foundation
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+          title: New Course D Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-a:
+          stages:
+            new stage:
+              name: new stage
+            'CSP3A: Using Simple Commands':
+              name: 'CSP3A: Using Simple Commands'
+          title: CSP Unit 3 - Subgoals Group A
+          description_audience: ''
+          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment group A.
+          description: This unit introduces the foundational concepts of computer programming, for students in Subgoals Group A.
+        new-express:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Introduction:
+              name: Introduction
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Star Wars:
+              name: Events in Star Wars
+            Events with Flappy:
+              name: Events with Flappy
+            Events in Bounce:
+              name: Events in Bounce
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Nested Loops:
+              name: Nested Loops
+            Loops in Artist (UPDATED!):
+              name: Loops in Artist (UPDATED!)
+            Sarah test stage:
+              name: Sarah test stage
+          title: New Express Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-stages-sept-2017:
+          stages:
+            Loops in Artist:
+              name: Loops in Artist
+            Sequences with Scrat:
+              name: Sequences with Scrat
+            Testing Template:
+              name: Testing Template
+          title: New stages for 9/17
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-e:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Course E Introduction:
+              name: Course E Introduction
+            Conditionals:
+              name: Conditionals
+            Private and Personal Information:
+              name: Private and Personal Information
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+          title: New Script for E
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-f:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Course E Introduction:
+              name: Course E Introduction
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Envelope Variables:
+              name: Envelope Variables
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: For Loop Fun
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Songwriting with Parameters
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+          title: New Script for F
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd5-old:
+          stages:
+            Representation Matters:
+              name: Representation Matters
+            Patterns and Representation:
+              name: Patterns and Representation
+            ASCII and Binary Representation:
+              name: ASCII and Binary Representation
+            Representing Images:
+              name: Representing Images
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
+            Combining Representations:
+              name: Combining Representations
+            Project - Create a Representation:
+              name: Project - Create a Representation
+            Problem Solving and Data:
+              name: Problem Solving and Data
+            Making Decisions with Data:
+              name: Making Decisions with Data
+            Interpreting Data:
+              name: Interpreting Data
+            Automating Data Decisions:
+              name: Automating Data Decisions
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Project - Solve a Data Problem:
+              name: Project - Solve a Data Problem
+          title: CSD Unit 5 - Data and Society
+          description_audience: ''
+          description_short: Learn how people use computers to solve data problems.
+          description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the your choosing.
+        subgoals-assessment-staging:
+          stages:
+            subgoal assessments:
+              name: subgoal assessments
+            lg by itself:
+              name: lg by itself
+            test of single level lg:
+              name: test of single level lg
+            submittable question at end of lessson:
+              name: submittable question at end of lessson
+            all assessment items as standalone assessment levels:
+              name: all assessment items as standalone assessment levels
+            all assessment items clustered in levelgroup:
+              name: all assessment items clustered in levelgroup
+            submittable if last assessment item:
+              name: submittable if last assessment item
+            assessment sandwiched between app lab levels:
+              name: assessment sandwiched between app lab levels
+            all assessment items clustered in levelgroup as a single "test":
+              name: all assessment items clustered in levelgroup as a single "test"
+            dummy:
+              name: dummy
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hocali:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        colehoc2017:
+          stages:
+            colehoc2017 stage:
+              name: colehoc2017 stage
+          title: 'HoC 17 - Cole '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17-kiki:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

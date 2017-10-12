@@ -93,9 +93,9 @@
       2-3 Artist Functions 13_instruction: "Sana dört fonksiyon sunuyoruz. \nBunları
         bir veya daha fazla döngü içinde kullanarak resimler yap ve arkadaşlarınla
         paylaş. Örnek için çalıştıra bas."
-      2-3 Artist Functions 2_instruction: "Fonksiyonlaryeni bloklar tanımlamanı sağlar!Blokları
-        \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\" fonksiyonunu kullanarak bardakları
-        çizebilir misin? Kareler \n75 piksel uzaklıktadır."
+      2-3 Artist Functions 2_instruction: "Fonksiyonla ryeni bloklar tanımlamanı sağlar!
+        Blokları \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\" fonksiyonunu kullanarak
+        bardakları çizebilir misin? Kareler \n75 piksel uzaklıktadır."
       2-3 Artist Functions 3_instruction: |-
         Fonksiyonu 115 piksel kenar uzunluğunda
         bir kare çizmek için düzenle ve daha büyük bir gözlük çiz. Kareler şimdi 45 piksel
@@ -495,9 +495,11 @@
         kenarı 200 pikseldir. Çizimi tamamlayın.
       4-5 Artist 7_instruction: Bu dik üçgenin açıları, 30, 60 ve 90 derecedir. Eğimli
         tarafının uzunluğu çift 100 piksel yüksekliğindedir. Çizimi tamamlayın.
-      4-5 Artist 8_instruction: "Futbol sahasında yarım satır aralarında dik. Bu alan
-        800 piksel 240 piksel olduğu bir çevre vardır \nuzun. Ne kadar geniş mi? Sınırları
-        ve yarım çizgi çizin."
+      4-5 Artist 8_instruction: |-
+        Bir futbol sahasındaki orta saha çizgisi kenarları ile dikeydir.   \r
+        Dikdörtgenin çevresi toplamda 800 pikseldir ve uzun kenarı 240 pikseldir. Orta saha çizgisi kaç pikseldir?   \r
+        \r
+        Sınırları ve orta saha çizgisini çizin.
       4-5 Artist 9_instruction: Tasarımın simetrik olması için diğer yarsını çizin.
         Üçgenler eşkenar ve 50 piksel uzunluğunda.
       4-5 Artist Assessment 1_instruction: 'Değerlendirme: Döngü kullanarak bir eşkenar
@@ -3748,6 +3750,77 @@
         5 puana ulaş!
       MC HOC 2016 Village Test_instruction: Olamaz! Zombiler seni içerde tuzağa düşürdü.
         Zombileri kovalayıp onlara saldırması için Demir Golem'i kodla!
+      MC_2017_Ryan_02_instruction: |-
+        Help the player get out by using loops to get
+        the Agent to the pressure plate.
+      MC_HOC_2017 Agent Test_instruction: |-
+        Click "Run" to move the player to the
+        orange square inside of the house.
+      MC_HOC_2017_01_instruction: |-
+        Click "Run" to move the player to the orange
+        square inside of the house.
+      MC_HOC_2017_01_Cole_instruction: |-
+        Click "Run" to move the player to the orange
+        square inside of the house.
+      MC_HOC_2017_01_Kiki_instruction: |-
+        Click "Run" to move the player to the orange
+        square inside of the house.
+      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_02_Kiki_instruction: |-
+        Get the Agent to the pressure plate, then
+        get the player to the orange square.
+      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04_instruction: |-
+        Change the loop from the last puzzle to help the
+        Agent make a path over the wider part of this river.
+      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_05_instruction: |-
+        Use a function to help the Agent get to the pressure
+        plate.
+      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
+      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
+      MC_HOC_2017_06_Cole_instruction: |-
+        Fix this code to help the Agent build a bridge
+        across this river.
+      MC_HOC_2017_06_Kiki_instruction: |-
+        Fix this code to help the Agent build a bridge
+        across this river.
+      MC_HOC_2017_07_Cole_instruction: |-
+        Use a function to clear the path to the orange
+        square.
+      MC_HOC_2017_07_Kiki_instruction: |-
+        Use a function to clear the path to the orange
+        square.
+      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
+      MC_HOC_2017_08_Cole_instruction: |-
+        Change the provided function to work for
+        this biome.
+      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
+      MC_HOC_2017_09_Cole_instruction: |-
+        Program the Agent to clear the player's
+        path.
+      MC_HOC_2017_09_Kiki_instruction: |-
+        Program the Agent to clear the player's
+        path and get to the pressure plate.
+      MC_HOC_2017_10_Cole_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_Cole_old_instruction: |-
+        Create a function to help you finish
+        this minecart.
+      MC_HOC_2017_10_Kiki_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_Ryan_03_instruction: |-
+        Now use loops to help The Agent build a bridge
+        over the river by placing blocks in the water.
+      MC_HOC_2017_Ryan_05_instruction: |-
+        Destroy these cacti so that the player can
+        get to the goal.
+      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4430,6 +4503,165 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG U3L03 - draw rect function_instruction: |-
+        Write a function called drawRectangle().\r
+        (Click
+        to see full instructions)
+      SG U3L03 - draw step_instruction: |-
+        Write the drawStep function. (Click to see
+        full instructions)
+      SG U3L03 Define and use turnAround_instruction: |-
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
+      SG U3L03 Draw a T using turnAround_instruction: |-
+        Draw a plus sign using the
+        provided version of turnAround().  (Click to see full instructions)
+      SG U3L03 Three Steps_instruction: |-
+        Define a function called drawSide() which
+        draws three steps and moves the turtle to prepare for the next side (Click
+        to see full instructions)
+      SG U3L03 define turnRight and draw a rectangle_instruction: |-
+        Define a function
+        called right() that turns the turtle to the right. Then use this function
+        to draw a rectangle, as shown below. (Click to see full instructions)
+      SG U3L03 draw diamond_instruction: |-
+        Create a function called drawDiamond()
+        that makes use of your previous work to draw the complete diamond. (Click
+        to see full instructions)
+      SG U3L04 - 3 by 3 with functions_instruction: |-
+        Make the 3x3 square as efficiently
+        as you can. (Click to see full instructions)
+      SG U3L04 - snowflake_instruction: |-
+        Create the design by breaking it down into
+        layers of functions. (Click to see full instructions)
+      SG U3L06 - moveForwardwithParams_instruction: |-
+        Use a single command to move
+        the turtle to the edge of the screen. (Click to see full instructions)
+      SG U3L06 Challenge 1 triangle_instruction: |-
+        Use the parameterized versions
+        of the turtle commands to create a triangle with sides 100 pixels long. (Click
+        to see full instructions)
+      SG U3L06 Challenge 2 purple square_instruction: |-
+        Read the documentation for
+        penColor() and penWidth() before using them to draw the blue square.
+      SG U3L06 Challenge 3 fill pink_instruction: |-
+        Fill in the background of the
+        screen with your favorite color. (Click to see full instructions)
+      SG U3L06 Challenge 4 bullseye_instruction: |-
+        Create the bullseye using hexadecimal
+        colors and dot(). (Click to see full instructions)
+      SG U3L06 Challenge 5 overlapping circles_instruction: |-
+        This image is created
+        just using dot() and penColor() but, how are we going to get those circles
+        to be transparent?  If you haven't gotten the hint yet: check out the documentation!
+      SG U3L06 Challenge 6 squiggles_instruction: |
+        Read the documentation for the
+        "arcLeft" and "arcRight" commands and then draw the squiggles as shown.
+      SG U3L06 Challenge 7 smiley face_instruction: |-
+        Use turnTo() and moveTo() to
+        help draw a smiley face. (Click to see full instructions)
+      SG U3L06 Challenge 8 make your own_instruction: |-
+        Create a drawing of your own.
+        (Click to see full instructions)
+      SG U3L07 - Free Play Loops and Random_instruction: |-
+        Free Play! Use what you
+        learned from loops and random to make your own little scene. Have fun.
+      SG U3L07 - allSeaGrass_instruction: |-
+        Add 50 pieces of seagrass to the image
+        by writing drawAllSeagrass with a loop. (Click to see full instructions)
+      SG U3L07 - bubbles_instruction: |-
+        Add 200 bubbles to the image by writing drawAllBubbles
+        with a loop. (Click to see full instructions)
+      SG U3L07 - createTriangleParam_instruction: |-
+        Define a function that accepts
+        a parameter to match the function calls and complete the image. (Click to
+        see full instructions)
+      SG U3L07 - fish_instruction: |-
+        Add 15 fish to the image by writing drawAllFish
+        with a loop. (Click to see full instructions)
+      SG U3L07 - introSquare_instruction: |-
+        Use a loop to draw a square. Then add
+        another loop to draw many squares each one rotated some amount. (Click to
+        see full instructions)
+      SG U3L07 - loopsWithRandom_instruction: |-
+        Increase the number of iterations
+        to fill the screen with white. (Click to see full instructions)
+      SG U3L07 - randomDots1_instruction: |-
+        Increase the number of iterations to fully
+        fill the screen with random dots. (Click to see full instructions)
+      SG U3L07 - randomSquare_instruction: |-
+        Draw the figure using a loop. (Click
+        to see full instructions)
+      SG U3L07 - seaGrass_instruction: |-
+        Add a parameter to drawSeagrass that controls
+        the number of waves in the grass. (Click to see full instructions)
+      SG U3L07 - seaStar_instruction: |-
+        Add 5 sea stars to the image by writing drawAllSeaStars
+        with a loop. (Click to see full instructions)
+      SG U3L07 - sunBeams_instruction: |-
+        Add 100 sunbeams to the image by writing
+        drawAllSunbeams with a loop. (Click to see full instructions)
+      SG U3L07 - topDownDesign_instruction: |-
+        Get comfortable with the structure of
+        this program, then move on to the next exercise. (Click to see full instructions)
+      SG U3L07 More Subgoals_instruction: |-
+        Read the documentation for penColor()
+        and penWidth() before using them to draw the blue square.
+      SG U3L08 - createTwoParamTriangle_instruction: |-
+        Define a function called drawTriangle()
+        that accepts two parameters to set the size and width of the triangle. (Click
+        to see full instructions)
+      SG U3L08 - digitalScene_instruction: |-
+        Create the functions you were assigned
+        as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - drawSquareWithParam_instruction: |-
+        Use drawSquare() to recreate the
+        image of both squares, this time using parameters. (Click to see full instructions)
+      SG U3L08 - fish_instruction: |-
+        Add a parameter to drawFish that changes the
+        size of the fish drawn. (Click to see full instructions)
+      SG U3L08 - freePlay_instruction: |-
+        Keep adding to your image by making more
+        calls to your new functions with parameters. (Click to see full instructions)
+      SG U3L08 - individualCode_instruction: |-
+        Create the functions you were assigned
+        as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea_instruction: |-
+        Add an extra fish, starfish, and
+        piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
+      SG U3L08 - multiParamFish_instruction: |-
+        Add three parameters to your drawFish
+        function to accept red, green and blue values to make your fish different
+        colors. (Click to see full instructions)
+      SG U3L08 - paramsToStarfish_instruction: |-
+        Add a parameter to drawStarfish that
+        changes the size of the starfish drawn. (Click to see full instructions)
+      SG U3L08 - randomInput_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
+      SG U3L08 - seaGrass_instruction: |-
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
+      SG U3L08 - squareTwoParams_instruction: |-
+        Call drawSquare() to complete the
+        drawing of two squares. (Click to see full instructions)
+      SG U3L08 comments_instruction: |-
+        Use the randomNumber() blocks to test the functions
+        you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and to
+        the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Turtle3by3Grid_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
+      SG U3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and to
+        the right of the starting location. (Click to show full instructions)
+      SGU3L07 - randomDots1_instruction: |-
+        Increase the number of iterations to fully
+        fill the screen with random dots. (Click to see full instructions)
       Sam the Butterfly 1 (copy 1)_instruction: |-
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -6522,97 +6754,72 @@
       bounce_1_instruction: '"Sol ok tuşuna basıldığında" bloğuna bir blok ekle ve
         "Çalıştır"a bas. Hedefi tamamlamak için sol ok tuşunu kullanarak raketi hareket
         ettir.'
-      bounce_10_instruction: |-
-        There is now a goal at the top. Attach the "score
-        point" and "score opponent point" blocks to the "when ball in goal" and
-        "when ball misses paddle" blocks to make a game. See how many points you
-        can score before your opponent scores twice.
-      bounce_10_basketball_instruction: |-
-        Now there is a goal at the top! Attach the
-        "score point" and "score opponent point" blocks to the "when ball in
-        goal" and "when ball misses hand" blocks to make a game. See how many points
-        you can score before your opponent scores twice.
-      bounce_10_sports_instruction: |-
-        Now there is a goal at the top! Attach the "score
-        point" and "score opponent point" blocks to the "when ball in goal" and
-        "when ball misses hand" blocks to make a game. See how many points you can
-        score before your opponent scores twice!
+      bounce_10_instruction: Şimdi yukarıda bir kale var. Oyun oluşturmak için "Puan
+        yaz" ve "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top raketi ıskaladığında"  bloklarına
+        ekle. Bakalım rakibin 2 kere sayı almadan önce sen ne kadar sayı yapabileceksin.
+      bounce_10_basketball_instruction: Şimdi yukarıda bir kale var. Oyun oluşturmak
+        için "Puan yaz" ve "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top
+        eli ıskaladığında" bloklarına ekle. Bakalım rakibin 2 kere sayı almadan önce
+        sen ne kadar sayı yapabileceksin.
+      bounce_10_sports_instruction: Şimdi yukarıda bir kale var. Oyun oluşturmak için
+        "Puan yaz" ve "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top eli
+        ıskaladığında" bloklarına ekle. Bakalım rakibin 2 kere sayı almadan önce sen
+        ne kadar sayı yapabileceksin!
       bounce_11_instruction: 'Şimdi "çalıştığında" bloğuna blok ekleyebilirsiniz.
         "Yeni top fırlat" bloğunu birden fazla yere eklemelisiniz. Aynı zamanda, arka
         planı ve ya top ve raketin hızını değiştirmeyi deneyin ve rakibiniz iki kez
         puan almadan önce kaç puan alabileceğinizi görün. '
-      bounce_11_basketball_instruction: |-
-        You can now attach blocks to the "when
-        run" block. You have to attach the new "throw new ball" block in more than
-        one place. Also, try changing the scene or the speed of the hand and the ball
-        and see how many points you can score before your opponent scores twice!
-      bounce_11_sports_instruction: |-
-        You can now attach blocks to the "when run"
-        block. You have to attach the new "throw new ball" block in more than one
-        place. Also, try changing the scene or the speed of the hand and the ball
-        and see how many points you can score before your opponent scores twice!
+      bounce_11_basketball_instruction: Şimdi "çalıştığı zaman" bloğuna ekleme yapabilirsin.
+        "Yeni top fırlat"  bloğunu birden fazla yerde kullanmalısın. Birde, arkaplanı,
+        el ve top hızını değiştirip, rakibin 2 puan almadan önce kaç puan alabileceksin
+        görelim.
+      bounce_11_sports_instruction: Şimdi "çalıştığı zaman" bloğuna ekleme yapabilirsin.
+        "Yeni top fırlat"  bloğunu birden fazla yerde kullanmalısın. Birde, arkaplanı,
+        el ve top hızını değiştirip, rakibin 2 puan almadan önce kaç puan alabileceksin
+        görelim.
       bounce_12_instruction: Kendi zıplama oyununu oluştur. Bütün kuralları değiştirebilirsin.
         Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının telefonlarında
         oynaması için paylaş.
       bounce_12_basketball_instruction: Kendi basketbol oyununu oluştur. Bütün kuralları
-        değiştirebilirsin. Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının
+        değiştirebilirsin.  Oluşturduğunda, bitir düğmesine tıklayarak oyununu arkadaşlarının
         telefonlarında oynaması için paylaş.
-      bounce_12_sports_instruction: 'Kendi oyununu oluştur! Burada sen ne dersen o
-        olur: bütün kuralları değiştirebilir, sporları karıştırabilir ve birbirine
-        uydurabilirsin, yaratıcı ol! Oluşturduğunda, bitir düğmesine tıklayarak oyununu
-        arkadaşlarının telefonlarında oynaması için paylaş.'
-      bounce_1_basketball_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run". Move the hand using the left arrow to reach the finish
-        target.
-      bounce_1_sports_instruction: |-
-        Get to the flag! Attach a block to the "when
-        left arrow" block and press "Run" to move the player to the flag.
-      bounce_2_instruction: |-
-        Attach a block to the "when right arrow" and "when
-        left arrow" blocks. Move the paddle to reach both finish targets.
-      bounce_2_basketball_instruction: |-
-        Attach a block to the "when right arrow"
-        and "when left arrow" blocks. Move the hand to reach both finish targets.
-      bounce_2_sports_instruction: |-
-        There are two flags now! Attach a block to the
-        "when left arrow" and "when right arrow" blocks to make your player move
-        in two directions.
-      bounce_3_instruction: |-
-        Now try something similar with the "when up arrow"
-        block. Move the paddle to the finish target at the top.
-      bounce_4_instruction: |-
-        This time you need to add four blocks. Move the paddle
-        to all four finish targets to complete this puzzle.
-      bounce_5_instruction: |-
-        We're going to send a ball flying down towards the
-        paddle. Attach a block to the "when ball hits paddle" block to ensure the
-        ball reaches the finish target.
-      bounce_5_basketball_instruction: |-
-        We're going to send a ball flying down towards
-        the hand. Attach a block to the "when ball hits hand" block to ensure the
-        ball reaches the flag.
-      bounce_5_sports_instruction: |-
-        The hockey puck is going to fly down toward the
-        player! Attach a block to the "when ball hits player" block to hit the flag.
-      bounce_6_instruction: |-
-        Now the finish target is on the top. You need to attach
-        blocks to both of the "when ball hits" blocks to solve this puzzle.
-      bounce_6_basketball_instruction: |-
-        Now the flag is on the top. You need to attach
-        blocks to both of the "when ball hits" blocks to solve this puzzle.
-      bounce_6_sports_instruction: |-
-        Now the flag is on the top. You need to attach
-        blocks to both of the "when ball hits" blocks to solve this puzzle.
-      bounce_7_instruction: |-
-        Attach blocks to each of the "when" blocks. Bounce
-        the ball until it hits the finish target.
-      bounce_7_basketball_instruction: |-
-        Attach blocks to each of the "when" blocks.
-        Bounce the ball until it hits the flag.
-      bounce_7_sports_instruction: |-
-        Attach blocks to each of the "when" blocks.
-        Bounce the ball until it hits the flag.
+      bounce_12_sports_instruction: Kendi oyununu yarat! Burada sen ne dersen o olur
+        bütün kuralları değiştirebilirsin, yaratıcı ol! Tamamladığında arkadaşlarının
+        telefonlarında oyunu denemeleri için Bitir düğmesine bas.
+      bounce_1_basketball_instruction: '"sol ok tıklandığında" komutuna blok ekleyin
+        ve çalıştırın. Sol ok tuşunu kullanarak hedefi sola doğru hareket ettirip
+        bitirmeye çalışın.'
+      bounce_1_sports_instruction: Bayrağa gidin! "sol ok basıldığında" durumuna bir
+        blok ekleyin. ve "Çalıştır" tuşuna basın.
+      bounce_2_instruction: '"sol ok tıklandığında" ve "sağ ok tıklandığında" komutlarına
+        bloklar ilave edin. Hedefi hareket ettirip bölümü bitirin.'
+      bounce_2_basketball_instruction: '"sol ok tıklandığında" ve "sağ ok tıklandığında"
+        komutlarına bloklar ilave edin. Eli hareket ettirip bölümü bitirin.'
+      bounce_2_sports_instruction: Şimdi iki bayrak var! Bir blok için eklemek "Sol
+        oka basıldığında" ve "sağ oka basıldığında"durumlalarına birer blok ekleyerek
+        oyuncunun iki yene de hareket etmesini sağla.
+      bounce_3_instruction: '"yukarı oka basıldığında" raketi yukarı hedefe taşıyan
+        kodu yazın.'
+      bounce_4_instruction: Bu sefer 4 tane blok eklemeniz gerek. Bölümü bitirmek
+        için raketi 4 hedefe de ulaştırın.
+      bounce_5_instruction: Rakete doğru topu göndereceğiz.  "top rakete vurduğunda"
+        bloğuna gerekli eklemeyi yaparak topun hedefi vurmasını sağlayınız.
+      bounce_5_basketball_instruction: Ele doğru topu göndereceğiz. "top ele vurduğunda"
+        bloğuna gerekli eklemeyi yaparak topun hedefi vurmasını sağlayınız.
+      bounce_5_sports_instruction: Hokey diski aşağı doğru oyuncuya  uçacak! "topu
+        oyuncuyu vurduğunda" bloğuna bir blok ekleyerek bayrağı vurun.
+      bounce_6_instruction: Bu sefer hedef üst tarafta. "top duvara çarptığında" bloklarının
+        ikisine ekleme yaparak bulmacayı çözmek zorundasın.
+      bounce_6_basketball_instruction: Bu sefer bayrak üst tarafta. "top duvara çarptığında"
+        bloklarının ikisine ekleme yaparak bulmacayı çözmek zorundasın.
+      bounce_6_sports_instruction: Bu sefer bayrak üst tarafta. "top duvara çarptığında"
+        bloklarının ikisine ekleme yaparak bulmacayı çözmek zorundasın.
+      bounce_7_instruction: Blokları "ne zaman" bloklarının her birine ekleyin. Bitiş
+        hedefine ulaşana kadar topu sektirin.
+      bounce_7_basketball_instruction: Blokları "ne zaman" bloklarının her birine
+        ekleyin. Bitiş hedefine ulaşana kadar topu sektirin.
+      bounce_7_sports_instruction: Blokları "ne zaman" bloklarının her birine ekleyin.
+        Bitiş hedefine ulaşana kadar topu sektirin.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -6793,9 +7000,8 @@
         içe döngüleri kullanmayı deneyin.
       course4_artist_binary_challenge2_instruction: Bu logoyu normal haline geri yüklemek
         için yeterince ısrarcı mısın?
-      course4_artist_concept_challenge2_instruction: |-
-        Create five pinwheel designs
-        using the code below.
+      course4_artist_concept_challenge2_instruction: Aşağıdaki kodları kullanarak
+        beş adet rüzgar gülü tasarımı oluştur.
       course4_artist_functions_challenge2_instruction: Nasıl çalıştığını görmek için
         bu kodu deneyin, sonra kendi programınızı yapın!
       course4_artist_fwp_challenge1_instruction: Programı çalıştırmayı dene ve neler
@@ -6941,7 +7147,7 @@
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
       courseB_artist_loops2_instruction: |-
-        The Artist is trying to draw a line six
+        The Artist is trying to draw a line **6**
         times, but can't get it right.  Can you help?
       courseB_artist_loops3_instruction: Bahçe duvarı yapmak için 7 kere bir çizgi
         çizin.
@@ -6949,7 +7155,7 @@
         the bugs in the code and help the artist prepare the ground. "
       courseB_artist_loops5_instruction: |-
         Time to fix the stairs!  Repeat this pattern
-        five times so the artist can reach the top of the bushes.
+        **5** times so the artist can reach the top of the bushes.
       courseB_artist_loops6_instruction: Asmaya tırmanın ve nereye gittiğini görün?
       courseB_artist_loops7_instruction: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops8_instruction: Eve dönme vakti. Sanatçıya yardımcı olmak
@@ -7572,6 +7778,9 @@
         - What does it look like to draw two snowflakes
         on top of one another?
       courseD_artist_project5_instruction: Kar taneleri ile oynayın!
+      courseD_artist_project_embedded_instruction: |-
+        Here's what you will soon be
+        making!
       courseD_artist_ramp11_instruction: "Şimdi sanatçıyı kullanarak bir kare oluşturun!"
       courseD_artist_ramp12_instruction: Bu üçgeni içinde bir kare çizmek öğrendiklerini
         kullanın.
@@ -7646,6 +7855,7 @@
         izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir
         misin?
       courseD_bee_nestedLoops1_instruction: Help the bee collect all of the nectar.
+      courseD_bee_nestedLoops1a_instruction: Help the bee collect all of the nectar.
       courseD_bee_nestedLoops2_instruction: |-
         This time, help the bee collect all
         of the nectar using as few blocks as possible.
@@ -7745,17 +7955,31 @@
         hand. Bounce the ball until it hits the finish target.
       courseD_collector_debugging1_instruction: Tüm hazineyi toplamak için hataları
         düzelt.
+      courseD_collector_debugging1a_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
       courseD_collector_debugging2_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
+      courseD_collector_debugging2a_instruction: Tüm hazineyi toplamak için hataları
         düzelt.
       courseD_collector_debugging3_instruction: Tüm hazineyi toplamak için hataları
         düzelt.
+      courseD_collector_debugging3a_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
       courseD_collector_debugging4_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
+      courseD_collector_debugging4a_instruction: Tüm hazineyi toplamak için hataları
         düzelt.
       courseD_collector_debugging5_instruction: 'Meydan Okuma: İhtiyacınız olan bütün
         komutlar burada... Şimdi hata ayıklama becerilerinizi kullanarak bu bulmacayı
         nasıl çözeceğinizi bulun.'
+      courseD_collector_debugging5a_instruction: 'Meydan Okuma: İhtiyacınız olan bütün
+        komutlar burada... Şimdi hata ayıklama becerilerinizi kullanarak bu bulmacayı
+        nasıl çözeceğinizi bulun.'
       courseD_collector_debugging6_instruction: 'Meydan Okuma: Hataları düzeltmek
         ve hazinenin tamamını toplamak için hata ayıklama yeteneklerinizi kullanın.'
+      courseD_collector_debugging6a_instruction: |-
+        Challenge: Use the code in the
+        work area to get at least **6** pieces of treasure!
       courseD_collector_debugging7_instruction: 'Meydan Okuma: İhtiyacınız olan bütün
         komutlar burada... Şimdi hata ayıklama becerilerinizi kullanarak bu bulmacayı
         nasıl çözeceğinizi bulun.'
@@ -7913,8 +8137,18 @@
         var. O bloğu bulup araç kurtusuna geri at.
       courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseD_maze_ramp5_instruction: Avoid the TNT.
+      courseD_maze_ramp5a_instruction: |-
+        Pay attention to the sequence and see if
+        you can figure out how to get to that pig!
+      courseD_maze_ramp5b_instruction: |-
+        Navigate this maze to help the bird find
+        the pig!
+      courseD_maze_ramp5c_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5d_instruction: Get the bird to the pig.
       courseD_maze_ramp6_instruction: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa
         sinirlenebilirim
+      courseD_maze_ramp6a_instruction: Sakin ol ve kötü domuzu bulmama yardım et.
+        Yoksa sinirlenebilirim
       courseD_maze_ramp7_instruction: "** Meydan okuma: ** kKuşu domuza ulaştır!"
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
@@ -7985,6 +8219,20 @@
         longer you stay there, the more points you lose. \r
         \r
         Get 5 points to win!
+      courseD_scrat_ramp1_instruction: Bu bulmaca için tüm blokların birlikte sürükleyin
+        ve izlemek için "Çalıştır" ı tıklatın!
+      courseD_scrat_ramp2_instruction: Bir ilave 'ileri' bloğundan sürükleyin, sonra
+        çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
+      courseD_scrat_ramp3_instruction: |-
+        There is one extra block that is going to
+        cause Scrat to crash. Throw it away by dragging it back to the toolbox.
+      courseD_scrat_ramp4_instruction: Avoid the cracked ice to keep Scrat safe!
+      courseD_scrat_ramp5_instruction: Avoid the cracked ice.
+      courseD_scrat_ramp6_instruction: Help Scrat get to the acorn using a loop!
+      courseD_scrat_ramp7_instruction: Help Scrat get to the acorn!
+      courseD_scrat_ramp8_instruction: |-
+        Use what you've learned to get Scrat to
+        the acorn!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -7992,9 +8240,8 @@
       courseE_artist_concept_challenge1_instruction: Deneme yanılmayı kullanmaktan
         çekinmeyin. İlk seferde mükemmel olman beklenmiyor. Daha fazla ipucu ister
         misin?  Buraya tıklayın!
-      courseE_artist_concept_challenge2_instruction: |-
-        Create five pinwheel designs
-        using the code below.
+      courseE_artist_concept_challenge2_instruction: Aşağıdaki kodları kullanarak
+        beş adet rüzgar gülü tasarımı oluştur.
       courseE_artist_embed_functions8_instruction: Bu bölüme dikkatli bak. Böyle bir
         tasarımı oluşturmak için programın ne tür fonksiyonlara ihtiyacı olduğunu
         düşünüyorsun. Yakında kendininkini yapacaksın, yardıma ihtiyacın olursa buraya
@@ -8078,6 +8325,9 @@
         Now write the function to collect nectar
         from the flowers.
       courseE_bee_functions6_instruction: |-
+        Create a function and call it to collect
+        nectar at each flower and make honey at each honeycomb.
+      courseE_bee_functions6test_instruction: |-
         Create a function and call it to collect
         nectar at each flower and make honey at each honeycomb.
       courseE_bee_functions7_instruction: |-
@@ -8203,9 +8453,29 @@
       courseE_farmer_ramp11_instruction: Bu bulmaca iç içe döngüleri kullanır.  Nasıl
         olduğunu anlayabildin mi?
       courseE_farmer_ramp11a_instruction: 'Marul olduğu sürece marlu topla. '
+      courseE_farmer_ramp11b_instruction: 'Marul olduğu sürece marlu topla. '
       courseE_farmer_ramp12_instruction: 'Marul olduğu sürece marlu topla. '
+      courseE_farmer_ramp12_forswap_instruction: |-
+        Now use nested loops to solve this
+        puzzle.
       courseE_farmer_ramp12a_instruction: Eğer marul ise marul topla. değilse, mısır
         al.
+      courseE_farmer_ramp12b_instruction: While there is lettuce, pick lettuce!
+      courseE_farmer_ramp12c_instruction: |-
+        Move forward until you reach the lettuce,
+        then pick it all using a `while` loop.
+      courseE_farmer_ramp12d_instruction: |-
+        Move forward until you reach the lettuce,
+        then pick it all using a `while` loop.
+      courseE_farmer_ramp12e_instruction: |-
+        Move forward until you reach the lettuce,
+        then pick it all using a `while` loop.
+      courseE_farmer_ramp12f_instruction: |-
+        Move forward until you reach the lettuce,
+        then turn left **if** there is a path to the left.  Otherwise, turn right.
+      courseE_farmer_ramp12g_instruction: |-
+        Move forward until you reach the lettuce,
+        then turn left **if** there is a path to the left.  Otherwise, turn right.
       courseE_farmer_ramp13_instruction: Mısır varsa mısır al ve marul varsa marul
         al.
       courseE_farmer_ramp15_instruction: Mvcut blokları kullanarak bulmacayı çöz.
@@ -8242,9 +8512,9 @@
       courseE_playLab_scaffold1_instruction: |-
         Choose a background and map, and pick
         an actor to be your game's hero.
-      courseE_playLab_scaffold2_instruction: |
+      courseE_playLab_scaffold2_instruction: |-
         Use event handlers and actions to make
-        your hero move.\r
+        your hero move.
       courseE_playLab_scaffold3_instruction: |-
         Add two or more additional actors to
         your game and make them move.
@@ -10507,6 +10777,9 @@
       jessie-test_instruction: Lots of instructions
       k-1 maze 1_instruction: Beni domuza götürmek için batı yönünde ilerletebilir
         misin?
+      k1stickerfreeplay_instruction: |-
+        The artist saw something funny in the distance.  Draw
+        what you think he saw.
       kikiTesta_instruction: |-
         Our adventurer wants to collect coins.  But she can
         only use 4 blocks to get them.\r
@@ -10624,6 +10897,25 @@
       playLabDebugVideo1_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
+      ramp_artist_loops1_instruction: |-
+        Move forward by 60 pixels to complete this
+        puzzle.
+      ramp_artist_loops2_instruction: |-
+        Move forward five times and make this colored
+        line.
+      ramp_artist_loops3_instruction: Use a `repeat` loop to draw five colored dashes.
+      ramp_artist_loops4_instruction: |-
+        What happens when you add a 72 degree right
+        turn after everything else inside your loop?
+      ramp_artist_loops5_instruction: Use loops to draw this staircase.
+      ramp_artist_loops6_instruction: Edit your loop to draw this staircase.
+      ramp_artist_loops7_instruction: |-
+        Look for a pattern and make this code shorter
+        using loops!
+      ramp_artist_loops8_instruction: |-
+        Look for a pattern and make this code shorter
+        using loops.
+      ramp_artist_loops9_instruction: Solve this puzzle by drawing a square.
       sample1_instruction: |-
         Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r

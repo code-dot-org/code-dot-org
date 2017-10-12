@@ -84,10 +84,12 @@ ja:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft アカウント'
+    clever: 'Clever Account'
     forgot_password: 'パスワードをお忘れですか？'
     need_confirmation: "確認Eメールが届かない"
     need_unlock: "ロック解除用のEメールが届いていない"
     not_linked: "申し訳ありませんが、あなたのCode.org アカウントは %{provider} にリンクしていません。以下のパスワードを入力してサインインして下さい。"
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} 人の生徒がサインアップ済みです。'
     teacher_count: '%{count} 人の教師がサインアップ済みです。'
@@ -256,7 +258,7 @@ ja:
       my_dashboard: "マイ ダッシュボード"
       courses: "コース"
       course_catalog: "コース カタログ"
-      project_gallery: "プロジェクト ギャラリー"
+      project_gallery: "プロジェクト"
       sections: "セクション"
       help_support: "ヘルプとサポート"
       report_bug: "バグを報告"
@@ -750,9 +752,10 @@ ja:
     rename: "名前をかえる"
     save: "保存"
     delete: "削除（さくじょ）"
+    import: "Import"
     exit: "コースに戻る"
     my_projects: "マイプロジェクト"
-    project_gallery: "プロジェクト ギャラリー"
+    project_gallery: "プロジェクト"
     publish: "みんなに見せる"
     unpublish: "見られなくする"
     share: "シェアする"
@@ -783,6 +786,7 @@ ja:
     remix: 'リミックス'
     click_to_remix: "\"Remix\" をクリックしてあなただけのバージョンを作成しましょう"
     edit_project: 'プロジェクトを編集します'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "このプロジェクトは、Code.org との <a href='http://code.org/tos'> サービス利用規約</a> に違反するという報告があったため、他のユーザーとは共有できません。"
       policy_violation: "このプロジェクトには、他の人と共有できない情報が含まれています。アプリの内容を修正するには、アプリ所有者にお問い合わせください。"
@@ -835,6 +839,10 @@ ja:
     optional_stages: 'Optional Stages'
     main_course: 'メイン コース'
     extra_course_content: '追加のコース内容'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: '第 1章: 問題解決プロセス'
     csd1_2: 第 2 章コンピューターと問題解決
     csd2_1: 第 1 章： Web コンテンツと HTML

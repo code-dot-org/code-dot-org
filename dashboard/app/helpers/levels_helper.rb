@@ -236,6 +236,11 @@ module LevelsHelper
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
     }
 
+    # Sets video options for this level
+    if @app_options[:level]
+      @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
+    end
+
     if current_user
       if @script
         section = current_user.sections_as_student.find_by(script_id: @script.id) ||

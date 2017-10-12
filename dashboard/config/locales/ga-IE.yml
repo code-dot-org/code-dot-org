@@ -94,11 +94,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Cuntas Microsoft
+    clever: Clever Account
     forgot_password: Focal faire dearmadta?
     need_confirmation: Nach bhfuair tú na treoracha deimhnithe?
     need_unlock: Nach bhfuair tú na treoracha díghlasála?
     not_linked: Níl do chuntas Code.org ceangailte le do chuntas %{provider}. Caithfidh
       tú d'fhocal faire a chur isteach thíos.
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: Tá %{count} dalta cláraithe cheana.
     teacher_count: Tá %{count} múinteoir cláraithe cheana.
@@ -300,7 +303,7 @@
       my_dashboard: My Dashboard
       courses: Cúrsaí
       course_catalog: Course Catalog
-      project_gallery: Gailearaí na dTionscadal
+      project_gallery: Tograí
       sections: Rannáin
       help_support: Cabhair agus tacaíocht
       report_bug: Déan tuairisc ar fhadhb
@@ -1002,9 +1005,10 @@
     rename: Ainm Nua
     save: Sábháil
     delete: Scrios
+    import: Import
     exit: Fill ar an gCúrsa
     my_projects: Mo Chuid Tograí
-    project_gallery: Gailearaí na dTionscadal
+    project_gallery: Tograí
     publish: Foilsigh
     unpublish: Dífhoilsigh
     share: Comhroinn
@@ -1045,6 +1049,9 @@
     remix: Athmheascadh
     click_to_remix: Cliceáil "Athmheascadh" le do leagan féin a dhéanamh!
     edit_project: Cuir an Togra in Eagar
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Tuairiscíodh an togra seo agus dúradh go sáraíonn sé <a href='http://code.org/tos'>Téarmaí
         Seirbhíse</a> Code.org. Dá bharr sin, ní féidir é a chomhroinnt.
@@ -1107,6 +1114,10 @@
     optional_stages: Optional Stages
     main_course: Príomhchúrsa
     extra_course_content: "Ábhar Breise"
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
     csd1_2: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
     csd2_1: 'Caibidil 1: Ábhar Gréasáin agus HTML'
