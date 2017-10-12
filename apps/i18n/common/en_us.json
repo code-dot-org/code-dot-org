@@ -111,6 +111,8 @@
   "codeIntroduced": "Code Introduced",
   "codeMode": "Code",
   "codeTooltip": "See generated JavaScript code.",
+  "commentPrefix": "Comment:",
+  "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
   "completed": "Completed",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "concept": "Concept",
