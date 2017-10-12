@@ -236,6 +236,9 @@ Dashboard::Application.routes.draw do
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
   resources :regional_partners
+  get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
+  get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -437,6 +440,10 @@ Dashboard::Application.routes.draw do
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    # React-router will handle sub-routes on the client.
+    get 'application_dashboard/*path', to: 'application_dashboard#index'
+    get 'application_dashboard', to: 'application_dashboard#index'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

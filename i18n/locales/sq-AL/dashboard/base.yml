@@ -84,10 +84,12 @@ sq:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
+    clever: 'Clever Account'
     forgot_password: 'Keni harruar fjalëkalimin?'
     need_confirmation: "Nuk i keni marr instruksionet e konfirmimit?"
     need_unlock: "Nuk keni marre instruksionet e zhbllokimit?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} nxënës janë regjistruar tashmë.'
     teacher_count: '%{count}  mesues janë regjistruar tashmë.'
@@ -256,7 +258,7 @@ sq:
       my_dashboard: "My Dashboard"
       courses: "Kurset"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "Projekte"
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report bug"
@@ -750,9 +752,10 @@ sq:
     rename: "Riemëro"
     save: "Ruaj"
     delete: "Fshi"
+    import: "Import"
     exit: "Kthehu te Kursi"
     my_projects: "Projektet e mia"
-    project_gallery: "Project Gallery"
+    project_gallery: "Projekte"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Shpërndaje"
@@ -783,6 +786,7 @@ sq:
     remix: 'Remix'
     click_to_remix: "Kliko \"Remix\" për të nxjerrë versionin tënd!"
     edit_project: 'Ndërhy në Projekt'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Ky projekt është raportuar si shkelje e <a href='http://code.org/tos'> së Termave të Shërbimit të Code.org</a> dhe nuk mund të behet publik për të tjerët."
       policy_violation: "Ky projekt përmban informacion që nuk mund të ndahet me të tjerët. Ju lutemi të kontaktoni pronarin e aplikacionit për të rregulluar përmbajtjen e aplikacionit të tyre."
@@ -835,6 +839,10 @@ sq:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

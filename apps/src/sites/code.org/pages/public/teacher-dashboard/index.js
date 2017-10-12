@@ -201,6 +201,23 @@ function main() {
   // to be replaced within the next couple of sprints as we move this to React.
   services.factory('paginatedSectionProgressService', ['$http', '$q',
     function ($http, $q) {
+      function reinflateDate(data, sectionId) {
+        // We try to minimize how much data we send back to the client, as this can
+        // grow large with big sections. This means some additional processing to
+        // get the data back in a form that we'd like
+        return {
+          ...data,
+          students: data.students.map(student => ({
+            ...student,
+            levels: student.levels.map(([className, title, url]) => ({
+              class: className,
+              title,
+              url: studioUrlPrefix + url + `?section_id=${sectionId}&user_id=${student.id}`
+            }))
+          }))
+        };
+      }
+
       return {
         get: (id, script_id=undefined) => {
           const deferred = $q.defer();
@@ -227,7 +244,7 @@ function main() {
             }
             // resolve once we've received our last page
             if (result.data.students.length < pageSize) {
-              deferred.resolve(data);
+              deferred.resolve(reinflateDate(data, id));
             } else {
               page++;
               getNextPage();

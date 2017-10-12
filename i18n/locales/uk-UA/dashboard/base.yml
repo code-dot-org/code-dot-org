@@ -84,10 +84,12 @@ uk:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'обліковий запис Microsoft'
+    clever: 'Clever Account'
     forgot_password: 'Забули свій пароль?'
     need_confirmation: "Не отримали вказівок підтвердження?"
     need_unlock: "Не отримали вказівок розблокування?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} учнів вже зареєструвались.'
     teacher_count: '%{count} вчителів вже зареєструвались.'
@@ -256,7 +258,7 @@ uk:
       my_dashboard: "My Dashboard"
       courses: "курси"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "Проекти"
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report bug"
@@ -750,9 +752,10 @@ uk:
     rename: "Перейменувати"
     save: "зберегти"
     delete: "Видалити"
+    import: "Import"
     exit: "Повернутися до курсу"
     my_projects: "Мої проекти"
-    project_gallery: "Project Gallery"
+    project_gallery: "Проекти"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Поділитися"
@@ -783,6 +786,7 @@ uk:
     remix: 'Ремікс'
     click_to_remix: "Клацни 'Ремікс', щоб створити власну версію на основі цієї!"
     edit_project: 'Редагування проекту'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "На цей проект надійшла скарга про порушення <a href='http://code.org/tos'>Умов надання послуг</a> Code.org's, тому ним не можна поділитись з іншими."
       policy_violation: "Цей проект містить інформацію, якою не можна ділитись з іншими. Зв'яжіться з власником програми, щоб виправити вміст цього продукту."
@@ -835,6 +839,10 @@ uk:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
