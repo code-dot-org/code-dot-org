@@ -62,7 +62,7 @@ export default class SeeMoreCourses extends Component {
         )}
         {!this.state.open && (
           <Button
-            onClick={this.showMoreCourses}
+            onClick={this.showMoreCourses.bind(this)}
             color={Button.ButtonColor.gray}
             icon="caret-down"
             text={i18n.viewMore()}
