@@ -22,24 +22,26 @@
         - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
           #breadcrumb
           -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
-      #heading
-        %h1
-          = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
-          = data_t_suffix('script.name', @script.name, 'title')
-          - if @script.beta?
-            %span.betatext
-              = t('beta')
+      -# This div ends up being owned by ScriptOverviewHeader in react
+      #react-scriptoverview-header
+        #heading
+          %h1
+            = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
+            = data_t_suffix('script.name', @script.name, 'title')
+            - if @script.beta?
+              %span.betatext
+                = t('beta')
 
-        %p
-          = data_t_suffix('script.name', @script.name, 'description')
+          %p
+            = data_t_suffix('script.name', @script.name, 'description')
 
-      - if @script.banner_image
-        %p
-          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
+        - if @script.banner_image
+          %p
+            = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
 
-      - if @script.beta?
-        %p.lightgreytext
-          != t('landing.prerelease_hoc2014')
+        - if @script.beta?
+          %p.lightgreytext
+            != t('landing.prerelease_hoc2014')
 
     #stats
       .user-stats-block
