@@ -15,7 +15,7 @@ import MakerError, {
 } from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
-import {isChrome, gtChrome33} from './util/browserChecks';
+import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -122,7 +122,7 @@ export function connect({interpreter, onDisconnect}) {
  * @returns {Promise}
  */
 function confirmSupportedBrowser() {
-  if (isChrome() && gtChrome33()) {
+  if (isCodeOrgBrowser || (isChrome() && gtChrome33())) {
     return Promise.resolve();
   } else {
     return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));
