@@ -265,15 +265,18 @@
   signup_event_type_in_school: 'In a school'
   signup_event_type_out_of_school: 'Outside of school'
 
+  signup_submit_census_label: 'Submit'
+  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: 'Sign up'
   signup_submit_error_message: "An error occurred. Please check to make sure all required fields have been filled out properly."
+  signup_submit_and_continue_label: 'Submit and Continue'
   signup_continue_label: 'Continue'
 
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
   map_title: "Hour of Code map"
-  map_header: '# Hour of Code events around the world'
+  map_header: '# events registered for Hour of Code 2017'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
   map_header_country: '# in %{country}'

@@ -310,6 +310,10 @@ FactoryGirl.define do
 
   factory :applab, parent: :level, class: Applab do
     game {Game.applab}
+
+    trait :with_autoplay_video do
+      video_key {create(:video).key}
+    end
   end
 
   factory :free_response, parent: :level, class: FreeResponse do
@@ -709,7 +713,7 @@ FactoryGirl.define do
 
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {School.maximum(:id) + 1}
+    id {(School.maximum(:id).to_i + 1).to_s}
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -720,7 +724,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {School.maximum(:id) + 1}
+    id {(School.maximum(:id).to_i + 1).to_s}
     name "A seattle charter school"
     city "Seattle"
     state "WA"
@@ -733,6 +737,11 @@ FactoryGirl.define do
     sequence(:name) {|n| "Partner#{n}"}
     contact {create :teacher}
     group 1
+  end
+
+  factory :regional_partner_program_manager do
+    regional_partner {create :regional_partner}
+    program_manager {create :teacher}
   end
 
   factory :regional_partners_school_district do

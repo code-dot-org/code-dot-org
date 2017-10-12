@@ -34,6 +34,7 @@ module.exports = function activateReferenceAreaOnLoad() {
         }, true);
       }, this));
     });
+
     // Allow levels to specify how and where the reference area is rendered.
     // Reparent the reference area under the target if the target exists.
     $('#reference_area_target').append($('#reference_area'));
