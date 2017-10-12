@@ -28,6 +28,7 @@ export function getContainedLevelResultInfo() {
     // We only care whether they've submitted or not, and in many cases don't even
     // know as the client if the submission was correct or not, as we're often
     // not provided correct answers (i.e. in multis).
+    pass: true,
     result: true,
     testResult: TestResults.CONTAINED_LEVEL_RESULT,
     program: containedResult.result.response,
