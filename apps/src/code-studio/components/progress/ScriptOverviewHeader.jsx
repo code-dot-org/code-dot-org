@@ -32,6 +32,8 @@ class ScriptOverviewHeader extends Component {
     ),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -39,7 +41,24 @@ class ScriptOverviewHeader extends Component {
   }
 
   render() {
-    const { plcHeaderProps, announcements, viewAs, isSignedIn } = this.props;
+    const {
+      plcHeaderProps,
+      announcements,
+      viewAs,
+      isSignedIn,
+      isVerifiedTeacher,
+      hasVerifiedResources,
+    } = this.props;
+
+    let verifiedResourcesAnnounce = [];
+    if (!isVerifiedTeacher && hasVerifiedResources) {
+      verifiedResourcesAnnounce.push({
+        notice: i18n.verifiedResourcesNotice(),
+        details: i18n.verifiedResourcesDetails(),
+        link: "https://support.code.org/hc/en-us/articles/115001550131",
+        type: NotificationType.information,
+      });
+    }
 
     return (
       <div>
@@ -50,7 +69,7 @@ class ScriptOverviewHeader extends Component {
           />
         }
         {viewAs === ViewType.Teacher && isSignedIn &&
-          announcements.map((announcement, index) => (
+          verifiedResourcesAnnounce.concat(announcements).map((announcement, index) => (
             <Notification
               key={index}
               type={announcement.type}
@@ -77,4 +96,6 @@ export default connect(state => ({
   announcements: state.scriptAnnouncements || [],
   isSignedIn: state.progress.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
 }))(ScriptOverviewHeader);
