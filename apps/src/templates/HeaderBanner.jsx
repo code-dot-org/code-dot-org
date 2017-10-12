@@ -10,19 +10,23 @@ import Responsive from '../responsive';
 const styles = {
   headerBanner: {
     height: 260,
-    maxWidth: '60%'
+    maxWidth: '60%',
+    paddingTop: 25
   },
   headerBannerResponsive: {
     marginBottom: 61,
-    maxWidth: '60%'
+    maxWidth: '60%',
+    paddingTop: 25
   },
   headerBannerShort: {
     height: 140,
-    maxWidth: '60%'
+    maxWidth: '60%',
+    paddingTop: 25
   },
   headerBannerShortResponsive: {
     marginBottom: 61,
-    maxWidth: '60%'
+    maxWidth: '60%',
+    paddingTop: 25
   },
   bannerHeading: {
     fontFamily: '"Gotham 7r", sans-serif',
