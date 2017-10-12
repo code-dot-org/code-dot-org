@@ -278,8 +278,8 @@ class Course < ApplicationRecord
 
     course_sections = user.sections_as_student.where(course: self)
     unless course_sections.empty?
-      course_sections.each do |section|
-        alternates.each do |cs|
+      alternates.each do |cs|
+        course_sections.each do |section|
           return cs if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: cs.experiment_name)
         end
       end
@@ -287,9 +287,9 @@ class Course < ApplicationRecord
     end
 
     if user.student?
-      # include hidden scripts when iterating over user scripts.
-      user.user_scripts.each do |us|
-        alternates.each do |cs|
+      alternates.each do |cs|
+        # include hidden scripts when iterating over user scripts.
+        user.user_scripts.each do |us|
           return cs if cs.script == us.script
         end
       end
