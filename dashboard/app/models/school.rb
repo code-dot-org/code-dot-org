@@ -2,7 +2,7 @@
 #
 # Table name: schools
 #
-#  id                 :integer          not null, primary key
+#  id                 :string(12)       not null, primary key
 #  school_district_id :integer          not null
 #  name               :string(255)      not null
 #  city               :string(255)      not null
