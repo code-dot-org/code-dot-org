@@ -40,11 +40,9 @@ export function initializeSubmitHelper(params) {
 
 /**
  * If submit succeeds, then redirect appropriately.  Called by the app.
- *
- * @param {Object} response
- * @param {string} response.redirect - URL to go to.
  */
-export function onSubmitComplete(response) {
+export function onSubmitComplete() {
+  const response = window.appOptions.report.fallback_response.success;
   window.location.href = response.redirect;
 }
 
