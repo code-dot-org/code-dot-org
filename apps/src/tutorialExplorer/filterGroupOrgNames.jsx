@@ -27,6 +27,16 @@ const FilterGroupOrgNames = React.createClass({
     );
   },
 
+  truncateOrgName(orgName) {
+    // Truncate and ellipsis organization name to limit length in dropdown.
+    const maxOrgNameChars = 25;
+    if (orgName.length > maxOrgNameChars) {
+      return orgName.substring(0, maxOrgNameChars) + '...';
+    } else {
+      return orgName;
+    }
+  },
+
   render() {
     return (
       <FilterGroupContainer text={i18n.filterOrgNames()}>
@@ -47,7 +57,7 @@ const FilterGroupOrgNames = React.createClass({
               key={item}
               value={item}
             >
-              {item}
+              {this.truncateOrgName(item)}
             </option>
           ))}
         </select>
