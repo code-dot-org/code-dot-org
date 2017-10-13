@@ -605,7 +605,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
@@ -1527,6 +1527,13 @@ class User < ActiveRecord::Base
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id} ||
       sections.find {|section| section.script_id == script.id}
+  end
+
+  def stage_extras_enabled?(script)
+    sections_to_check = teacher? ? sections : sections_as_student
+    sections_to_check.any? do |section|
+      section.script_id == script.id && section.stage_extras
+    end
   end
 
   # Returns the version of our Terms of Service we consider the user as having

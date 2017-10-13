@@ -1259,6 +1259,8 @@
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 2: Informação Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -2055,7 +2057,7 @@
   header_my_dashboard: My Dashboard
   header_courses: percursos
   header_course_catalog: Course Catalog
-  header_project_gallery: Galeria de projetos
+  header_project_gallery: Projetos
   header_sections: Turmas
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
@@ -2148,5 +2150,3 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'

@@ -12,14 +12,29 @@ lv:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      AppLab Intro 2 - Edit place1 2_callout:
+        dragTextAreaIn: Click and drag a "Text Area" onto the screen
+        screenSelectorCallout3: Pick the screen you made
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout: Select place1 to change screens
-        changePlace1ID: Change the name of your screen here.
+        screenSelectorCallout2: This is the screen selector
+        changePlace1ID: Change the id of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Click the title of your app
         appLabIntro2_designMenu: Use these menus to change your app's "text"
+        appLabIntro2_textColor: Scroll down to change the "text color"
+      AppLab Intro 2 - Edit startScreen2_callout:
+        applabIntro2storyText: Click the story text on this screen
+        appLabIntro2_editStoryText: Drag out the bottom right hand corner of this text box for more space. Then fill in your story text
+        appLabIntro2_textColor: Try out some of the different properties you can change below
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
+        designToolboxCallOut: Drag a button onto your screen.
+        changeButtonID: Choose a clear "id" for your button. For example "callFriendButton" or "goOutsideButton"
+        screenSelectorCallout3: Go to your "startScreen"
+      AppLab Intro 2 - add more buttons 2_callout: [ ]
+      AppLab Intro 2 - add more buttons_callout: [ ]
+      AppLab Intro 2 - add onEvent_callout:
+        onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
+        setScreenFirstTime: Click and drag into the space in your "onEvent" block
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -430,6 +445,10 @@ lv:
       MC HOC 2016 New Spawn_callout: [ ]
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
+      MC_HOC_2017_01_Cole_callout: [ ]
+      MC_HOC_2017_01_Kiki_callout: [ ]
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to repeat it over and over again!
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
@@ -530,6 +549,10 @@ lv:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      SG U3L2 Using Simple Commands_callout: [ ]
+      SG U3L2_Turtle3by3Grid_callout: [ ]
+      SG U3L2_TurtleSquare_right_callout: [ ]
+      SGU3L2A Introducing Subgoals_callout: [ ]
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right side
       Sam the Butterfly 5_callout: [ ]
@@ -666,6 +689,8 @@ lv:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+      courseC_artist_loopsPrePre1a_callout:
+        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
@@ -681,6 +706,8 @@ lv:
       courseC_collector_prog_challenge2_callout: [ ]
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
+      courseC_maze_debugging5_callout:
+        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: [ ]
@@ -752,11 +779,33 @@ lv:
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseD_maze_ramp5_callout: [ ]
+      courseD_maze_ramp5a_callout: [ ]
+      courseD_maze_ramp5b_callout: [ ]
+      courseD_maze_ramp5c_callout: [ ]
+      courseD_maze_ramp5d_callout: [ ]
       courseD_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseD_maze_ramp6a_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_scrat_predict1_callout: [ ]
+      courseD_scrat_ramp1_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseD_scrat_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseD_scrat_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      courseD_scrat_ramp4_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseD_scrat_ramp5_callout: [ ]
+      courseD_scrat_ramp6_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseD_scrat_ramp7_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseD_scrat_ramp8_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseE_artist_concept_challenge2_callout: [ ]
       courseE_artist_embed_functions8_callout: [ ]
       courseE_artist_functions1_callout:

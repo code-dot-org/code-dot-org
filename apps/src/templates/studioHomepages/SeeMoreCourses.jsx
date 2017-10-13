@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes, Component } from 'react';
 import i18n from "@cdo/locale";
 import CourseCard from './CourseCard';
 import ContentContainer from '../ContentContainer';
@@ -11,24 +11,28 @@ const styles = {
     width: 20,
     float: 'left',
     color: color.white
+  },
+  button: {
+    float: 'right',
+    marginBottom: 20
   }
 };
 
-// This component - used on the teacher and student homepages - shows a button to view more courses if the user has more than a few courses.  Teachers will see up to 4 courses and a button if they have more. Students will see up to 5 courses, with their most recent as a TopCourse, and the button if they have more. Clicking the button will show CoursesCards for all of the users' courses beyond the top 4 or 5.
+// This component - used on the teacher and student homepages - shows a button to view more courses if the user has more than a few courses. Students and teachers will see up to 5 courses, with their most recent as a TopCourse, and the button if they have more. Clicking the button will show CoursesCards for all of the users' courses beyond the top 5.
 
-const SeeMoreCourses = React.createClass({
-  propTypes: {
+export default class SeeMoreCourses extends Component {
+  static propTypes = {
     courses: shapes.courses,
     isRtl: PropTypes.bool.isRequired
-  },
+  };
 
-  getInitialState() {
-    return { open: false };
-  },
+  state = {
+    open: false
+  };
 
-  showMoreCourses(){
+  showMoreCourses() {
     this.setState({ open: true });
-  },
+  }
 
   render() {
     const { courses, isRtl } = this.props;
@@ -58,16 +62,14 @@ const SeeMoreCourses = React.createClass({
         )}
         {!this.state.open && (
           <Button
-            onClick={this.showMoreCourses}
+            onClick={this.showMoreCourses.bind(this)}
             color={Button.ButtonColor.gray}
             icon="caret-down"
             text={i18n.viewMore()}
-            style={{float: 'right', marginBottom: 20}}
+            style={styles.button}
           />
         )}
       </div>
     );
   }
-});
-
-export default SeeMoreCourses;
+}

@@ -104,6 +104,7 @@ Dashboard::Application.routes.draw do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
+    get '/users/clever_takeover', to: 'sessions#clever_takeover'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -234,6 +235,10 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
+  resources :regional_partners
+  get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
+  get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -435,6 +440,10 @@ Dashboard::Application.routes.draw do
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    # React-router will handle sub-routes on the client.
+    get 'application_dashboard/*path', to: 'application_dashboard#index'
+    get 'application_dashboard', to: 'application_dashboard#index'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

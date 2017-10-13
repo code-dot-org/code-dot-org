@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Itago ang mga aktibidad para sa maraming mga wika",
   "noTutorialsYourLanguage": "Walang mga suportadong aktibidad para sa iyong wika. Subukan ang mga aktibidad sa ibang wika sa pagpindot sa button sa ibaba.",
   "bottomGuidelinesLink": "Mag-click dito para tingnan ang aming pamantayan at mga patnubay sa pagsusumite para sa Hour of Code tutorials.",
-  "bottomSpecialNeedsLink": "Mag-click dito para sa karagdagang impormasiyon sa pagsuporta sa mga mag-aaral na may mga espesyal na pangangailangan."
+  "bottomSpecialNeedsLink": "Mag-click dito para sa karagdagang impormasiyon sa pagsuporta sa mga mag-aaral na may mga espesyal na pangangailangan.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

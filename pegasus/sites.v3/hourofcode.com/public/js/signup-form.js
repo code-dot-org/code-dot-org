@@ -1,3 +1,9 @@
+var google;
+var thanksUrl;
+var signupErrorMessage;
+var censusErrorMessage;
+var hocYear;
+
 $(document).ready(function () {
   new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
 
@@ -7,16 +13,17 @@ $(document).ready(function () {
 
   $("#hoc-signup-form").submit(function ( event ) {
     if (validateFields()) {
-      signupFormSubmit();
+      signupFormSubmit(gotoThankYouPage);
     }
   });
 
-  $('.continue-btn').click(function () {
+  $("#census-form").submit(function ( event ) {
+    censusFormSubmit();
+  });
+
+  $('#continue').click(function () {
     if (validateFields()) {
-      $('.main-form').hide();
-      $('.continue-btn').hide();
-      $('#census-questions').show();
-      $('#submit').show();
+      signupFormSubmit(showCensusForm);
     }
   });
 
@@ -36,24 +43,24 @@ $(document).ready(function () {
       $('#hoc-event-location-field').show();
       $('#hoc-entire-school').show();
       // continue button goes to census questions on click
-      $('.continue-btn').show();
-      $('#submit').hide();
+      $('#continue-btn').show();
+      $('#submit-btn').hide();
     } else if (($('#hoc-event-type').val() === 'in_school')){
     // in-school & NOT US
       $('#school-name-field').show();
       $('#organization-name-field').hide();
       $('#hoc-event-location-field').show();
       $('#hoc-entire-school').show();
-      $('.continue-btn').hide();
-      $('#submit').show();
+      $('#continue-btn').hide();
+      $('#submit-btn').show();
     } else if ($('#hoc-event-type').val() === 'out_of_school') {
       // out of school, either US or non-US
       $('#organization-name-field').show();
       $('#hoc-event-location-field').show();
       $('#school-name-field').hide();
       $('#hoc-entire-school').hide();
-      $('.continue-btn').hide();
-      $('#submit').show();
+      $('#continue-btn').hide();
+      $('#submit-btn').show();
     }
   }
 
@@ -91,7 +98,31 @@ $(document).ready(function () {
   });
  });
 
-function signupFormComplete(data) {
+function showCensusForm(data) {
+  $('.main-form').hide();
+  $('#signup-header').hide();
+  $('#join-us-header').hide();
+  $('#submit').hide();
+  // Copy all of the hoc-signup inputs to the census form
+  $('.main-form :input').each(
+    function (index) {
+      var input = $(this);
+      var name = input.attr('name');
+      if (name !== undefined) {
+        var newInput = document.createElement("input");
+        newInput.value = input.val();
+        newInput.setAttribute("name", input.attr('name'));
+        newInput.setAttribute("type", "hidden");
+        $('#census-form').append(newInput);
+      }
+    }
+  );
+  $('#census-header').show();
+  $('#thanks-header').show();
+  $('#census-form').show();
+}
+
+function gotoThankYouPage() {
   window.location = thanksUrl;
 }
 
@@ -156,7 +187,12 @@ function signupFormError(data) {
   $("#signup_submit").removeAttr('disabled');
 }
 
-function signupFormSubmit() {
+function censusFormError(data) {
+  $('#error_message').html("<p>" + censusErrorMessage + "</p>").show();
+  $("#census_submit").removeAttr('disabled');
+}
+
+function signupFormSubmit(successHandler) {
   $("#signup_submit").attr('disabled','disabled');
 
   $.ajax({
@@ -164,5 +200,16 @@ function signupFormSubmit() {
     type: "post",
     dataType: "json",
     data: $("#hoc-signup-form").serialize()
-  }).done(signupFormComplete).fail(signupFormError);
+  }).done(successHandler).fail(signupFormError);
+}
+
+function censusFormSubmit() {
+  $("#census_submit").attr('disabled','disabled');
+
+  $.ajax({
+    url: "/forms/HocCensus" + hocYear,
+    type: "post",
+    dataType: "json",
+    data: $("#census-form").serialize()
+  }).done(gotoThankYouPage).fail(censusFormError);
 }

@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "多くの言語用のアクティビティを隠します。",
   "noTutorialsYourLanguage": "あなたの言語でサポートされるアクティビティはありません。下のボタンをクリックして他の言語のアクティビティを試してください。",
   "bottomGuidelinesLink": "ここをクリックして、Hour of Code チュートリアルの条件と提出ガイドラインを参照してください。",
-  "bottomSpecialNeedsLink": "特別なニーズの学生をサポートするための情報は、こちらをクリック"
+  "bottomSpecialNeedsLink": "特別なニーズの学生をサポートするための情報は、こちらをクリック",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

@@ -31,8 +31,8 @@ class NetSimApi < Sinatra::Base
   DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'
 
   # Largest request we allow from NetSim clients.
-  # TODO (Brad) tune this limit after gathering metrics.
-  MAX_REQUEST_SIZE = 5_000_000 # 5 MB
+  # Max request size we've observed in normal traffic: 9KB
+  MAX_REQUEST_SIZE = 50_000 # 50 KB
 
   helpers do
     %w{

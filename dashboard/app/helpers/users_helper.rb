@@ -5,6 +5,23 @@ module UsersHelper
   include ApplicationHelper
   include SharedConstants
 
+  def check_and_apply_clever_takeover(user)
+    raise 'Pagemode should be set to clever_takeover to enable feature' unless cookies['pm'] == 'clever_takeover'
+    if session['clever_link_flag'].present? && session['clever_takeover_id'].present? && session['clever_takeover_token'].present?
+      uid = session['clever_takeover_id']
+      # TODO: validate that we're not destroying an active account?
+      existing_clever_account = User.where(uid: uid).first
+      existing_clever_account.destroy! if existing_clever_account
+      user.provider = 'clever'
+      user.uid = uid
+      user.oauth_token = session['clever_takeover_token']
+      user.save
+      session.delete('clever_link_flag')
+      session.delete('clever_takeover_id')
+      session.delete('clever_takeover_token')
+    end
+  end
+
   # Summarize a user and his or her progress progress within a certain script.
   # Example return value:
   # {
