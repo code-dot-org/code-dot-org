@@ -495,15 +495,6 @@ export default class Craft {
     }
   }
 
-  /** Folds array B on top of array A */
-  static foldInArray(arrayA, arrayB) {
-    for (let i = 0; i < arrayA.length; i++) {
-      if (arrayB[i] !== '') {
-        arrayA[i] = arrayB[i];
-      }
-    }
-  }
-
   static hideSoftButtons() {
     $('#soft-buttons').hide();
     studioApp().resizePinnedBelowVisualizationArea();
