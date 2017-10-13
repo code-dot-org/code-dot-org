@@ -19,7 +19,10 @@ class Api::V1::SchoolAutocomplete
     if search_by_zip?(query)
       schools = schools.where("zip LIKE ?", "#{query[0, 5]}%")
     else
-      schools = schools.where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", to_search_string(query))
+      query = to_search_string(query)
+      schools = schools.
+        where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
+        order("MATCH(name,city) AGAINST('#{query}' IN BOOLEAN MODE) DESC, state, city")
     end
 
     results = schools.map do |school|
