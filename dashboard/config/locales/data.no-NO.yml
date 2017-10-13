@@ -37,7 +37,7 @@
         NetSim: Internett Simulator
         Custom: Kunstner
         CustomStudio: Spill-lab
-        Gamelab: Game Lab
+        Gamelab: Spill-lab
     trophy:
       name:
         Bronze: Bronse
@@ -699,22 +699,22 @@
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parametere
         C4_unplugged_binary: Binær
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
+        CSF_artist_angles: Engler i Kunstner
+        CSF_collector_k1_blocks: 'Grunnleggende: Samleren'
+        CSF_collector_repeat_loops: Samler gjenta-løkker
+        CSF_collector_text_blocks: 'Grunnleggende: Samleren'
+        CSF_create_functions: Lag funksjoner
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_EF_cs_matters: Programmering-temaer
+        CSF_maze_intro_k1_blocks: Introduksjon til Code Studio
+        CSF_maze_intro_text_blocks: Introduksjon til Code Studio
         CSF_my_robotic_friends: Mine robotliknende venner
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_Power_of_Words: Ordenes kraft
+        CSF_Super_Digital_Citizen: Superdigital innbygger
         CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_unspotted_bugs: Uoppdagede feil
+        CSF_zuck_loops_short: Gjenta-løkker
         frozen_intro: Kodetimen Intro
         frozen_loops: Introduksjon til løkker
         frozen_functions: Introduksjon til funksjoner
@@ -726,8 +726,9 @@
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
         csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_search: How Search Works
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_binary_data: 'Hvordan datamaskiner fungerer: Binær og data'
+        csd_concept_search: Hvordan søk fungerer
+        csd_gamelab_animation_tab: Animasjons-lab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -737,12 +738,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_gamelab_velocity: Hastighet
+        csd_weblab_intro_1: Introduksjon til nettet - Del 1
+        csd_weblab_intro_2: Introduksjon til nettet - Del 2
+        csd_weblab_css_1: Introduksjon til programmering - Del 1
+        csd_weblab_css_2: Introduksjon til programmering - Del 2
+        csd_weblab_intro_3: Introduksjon til nettet - Del 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -828,6 +829,11 @@
         mc_2016_events: Minecraft Kodetimen - Hendelser
         mc_2016_spawn: Minecraft Kodetimen - Sett ut
         mc_2016_congrats: Minecraft Kodetimen - Gratulerer!
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_share: AppLab Hour of Code - Share
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

@@ -927,6 +927,8 @@
   csp1_name: '第 1 章: インターネット'
   csp2_name: '第 2 章: デジタル情報'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1380,7 +1382,7 @@
   header_my_dashboard: "マイ ダッシュボード"
   header_courses: "コース"
   header_course_catalog: "コース カタログ"
-  header_project_gallery: "プロジェクト ギャラリー"
+  header_project_gallery: "プロジェクト"
   header_sections: "セクション"
   header_professional_learning: "専門的な学習"
   header_educate_overview: "教育の概要"
@@ -1426,8 +1428,8 @@
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
   signing_in: "Signing In"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to Code.org and click on the 'Sign in' button on the top right."
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of the page: %{section_code}.'
+  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: "Choose their display name."
   sign_in_instruct_secret: "Choose their secret %{secret}."
   sign_in_instruct_button: "Click the “Sign in” button."

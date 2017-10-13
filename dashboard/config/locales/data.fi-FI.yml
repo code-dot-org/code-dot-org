@@ -740,6 +740,7 @@
         infinity_playlab_events: Pelilabra - Tapahtumia
         infinity_playlab_repeat_forever: Pelilabra - Ikuinen Toisto
         csd_concept_computer: Mikä tekee tietokoneesta tietokoneen?
+        csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_search: Miten haku toimii
         csd_gamelab_animation_tab: Animaatio-välilehti
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
@@ -842,6 +843,11 @@
         mc_2016_events: Minecraft Koodaustunti - Tapahtumat
         mc_2016_spawn: Minecraft Koodaustunti - Luonti
         mc_2016_congrats: Minecraft Koodaustunti - Onneksi olkoon
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_share: AppLab Hour of Code - Share
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan

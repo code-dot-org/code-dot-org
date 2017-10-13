@@ -284,7 +284,8 @@ class SectionApiHelperTest < SequelTestCase
         assert_includes script_names, 'csp2-alt'
         assert_includes script_names, 'csp3'
 
-        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
+        # Without an entry in the i18n gsheet, the script name is shown.
+        assert_equal 'csp2-alt', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
       end
 
       it 'does not cache alternate scripts as default scripts' do
@@ -522,9 +523,6 @@ class SectionApiHelperTest < SequelTestCase
           # params[:script][:id] is specified by the REST API client, and only
           # params[:script][:id] is checked for validity. Therefore, only test
           # params[:script][:id], here and below.
-          #
-          # TODO(dave): remove unused params[:script_id] from the
-          # DashboardSection.create and /v2/sections/.../update APIs.
           script: {id: script_id}
         }
         Dashboard.db.transaction(rollback: :always) do

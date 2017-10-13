@@ -33,7 +33,7 @@ export default class SessionAttendance extends React.Component {
     accountRequiredForAttendance: PropTypes.bool.isRequired
   };
 
-  static state = {
+  state = {
     loading: true,
     attendance: undefined,
     refreshInterval: undefined

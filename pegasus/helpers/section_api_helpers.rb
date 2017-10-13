@@ -351,7 +351,11 @@ class DashboardSection
     if alternate_course_script
       alternate_script = Dashboard.db[:scripts].first(id: alternate_course_script[:script_id])
       # create a defensive copy so that we don't change what's in the cache
-      return script.merge(id: alternate_script[:id], script_name: alternate_script[:name])
+      return script.merge(
+        id: alternate_script[:id],
+        name: I18n.t("#{alternate_script[:name]}_name", default: alternate_script[:name]),
+        script_name: alternate_script[:name]
+      )
     end
     script
   end

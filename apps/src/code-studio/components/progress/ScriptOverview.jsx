@@ -13,6 +13,7 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages, SignInState } from '@cdo/apps/code-studio/progressRedux';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import ScriptOverviewHeader from './ScriptOverviewHeader';
 
 const styles = {
   notification: {
@@ -94,6 +95,7 @@ const ScriptOverview = React.createClass({
                 <VerifiedResourcesNotification width={1100}/>
               </div>
             }
+            <ScriptOverviewHeader/>
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
               professionalLearningCourse={professionalLearningCourse}
