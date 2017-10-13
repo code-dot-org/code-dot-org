@@ -111,6 +111,12 @@
   = f.text_area :place_block_options, rows: 10
   :javascript
     var placeBlocksEditor = levelbuilder.initializeCodeMirror('level_place_block_options', 'javascript');
+.field
+  = f.label :songs, 'Background Music. Format: ["first song to play", "second song to play", ...]'
+  %a{style:"cursor: pointer", onclick: "songsEditor.getDoc().setValue('#{Craft.song_options}')"}= "Insert all"
+  = f.text_area :songs, rows: 10
+  :javascript
+    var songsEditor = levelbuilder.initializeCodeMirror('level_songs', 'javascript');
 %div{style: "opacity: .5"}
   .field
     = f.label :grid_width, 'Grid width (warning: do not change, only use for initial sizing)'
