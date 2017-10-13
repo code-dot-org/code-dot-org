@@ -35,6 +35,7 @@ describe('getContainedLevelResultInfo', () => {
         level: 6669,
         callback: 'http://localhost-studio.code.org:3000/milestone/2023/16504/6669',
         result: true,
+        pass: true,
         testResult: TestResults.CONTAINED_LEVEL_RESULT,
         program: 1,
         feedback: 'This is feedback',
