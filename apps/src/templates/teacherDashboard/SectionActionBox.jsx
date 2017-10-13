@@ -130,7 +130,7 @@ class SectionActionBox extends Component {
           {(
             <Popover id="action-options">
               <div style={[styles.actionBox, this.props.style]}>
-                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)} style={{zIndex: 200}}>
+                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)}>
                   <div style={styles.actionText}>
                     {i18n.sectionViewProgress()}
                   </div>
@@ -140,28 +140,36 @@ class SectionActionBox extends Component {
                     {i18n.manageStudents()}
                   </div>
                 </a>
-                <div href style={styles.actionText2} onClick={this.onClickEdit}>
-                  {i18n.editSectionDetails()}
-                </div>
+                <a>
+                  <div style={styles.actionText2} onClick={this.onClickEdit}>
+                    {i18n.editSectionDetails()}
+                  </div>
+                </a>
                 <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
                   <div style={styles.actionText}>
                     {i18n.printLoginCards()}
                   </div>
                 </a>
-                <div style={styles.actionText}>
-                  <PrintCertificates
-                    sectionId={this.props.sectionData.id}
-                    assignmentName={this.props.sectionData.assignmentNames[0]}
-                  />
-                </div>
-                <div style={styles.actionText} onClick={this.onClickHideShow}>
-                  {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
-                </div>
-                {this.props.sectionData.studentCount === 0 || (
-                  <div style={styles.archiveDelete}>
-                    <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-                    {i18n.deleteSection()}
+                <a>
+                  <div style={styles.actionText}>
+                    <PrintCertificates
+                      sectionId={this.props.sectionData.id}
+                      assignmentName={this.props.sectionData.assignmentNames[0]}
+                    />
                   </div>
+                </a>
+                <a>
+                  <div style={styles.actionText} onClick={this.onClickHideShow}>
+                    {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
+                  </div>
+                </a>
+                {this.props.sectionData.studentCount === 0 || (
+                  <a>
+                    <div style={styles.archiveDelete}>
+                      <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+                      {i18n.deleteSection()}
+                    </div>
+                  </a>
                 )}
               </div>
             </Popover>
