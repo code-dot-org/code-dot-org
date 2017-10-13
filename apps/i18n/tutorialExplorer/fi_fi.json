@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Piilota tehtävät monilla kielillä",
   "noTutorialsYourLanguage": "Ei ole aktiviteetteja omalla kielellä. Yritä toimia muilla kielillä napsauttamalla alla olevaa painiketta.",
   "bottomGuidelinesLink": "Klikkaa tästä nähdäksesi kriteerimme ja lähetysohjeet Kooditunti oppitunneille.",
-  "bottomSpecialNeedsLink": "Klikkaa tästä nähdäksesi lisätietoja kuinka tuemme oppilaiden erityistarpeita."
+  "bottomSpecialNeedsLink": "Klikkaa tästä nähdäksesi lisätietoja kuinka tuemme oppilaiden erityistarpeita.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }
