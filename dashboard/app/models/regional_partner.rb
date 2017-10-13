@@ -54,6 +54,20 @@ class RegionalPartner < ActiveRecord::Base
     )
   end
 
+  # find a Regional Partner that services a particular region
+  def self.find_by_region(zip_code, state)
+    return RegionalPartner.
+      joins(:mappings).
+      where(pd_regional_partner_mappings: {state: state}).
+      or(
+        joins(:mappings).
+        where(pd_regional_partner_mappings: {zip_code: zip_code})
+      ).
+      # prefer match by zip code when multiple partners cover the same state
+      order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').
+      first
+  end
+
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
 
   def self.find_or_create_all_from_tsv(filename)
