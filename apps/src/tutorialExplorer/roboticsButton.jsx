@@ -40,10 +40,10 @@ const styles = {
   }
 };
 
-const RoboticsButton = React.createClass({
-  propTypes: {
+export default class RoboticsButton extends React.Component {
+  static propTypes = {
     url: PropTypes.string
-  },
+  };
 
   render() {
     const roboticsTextStyle = {
@@ -76,6 +76,4 @@ const RoboticsButton = React.createClass({
       </div>
     );
   }
-});
-
-export default RoboticsButton;
+}
