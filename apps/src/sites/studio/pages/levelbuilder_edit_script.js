@@ -37,6 +37,11 @@ export default function initPage(scriptEditorData) {
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
 
+  let announcements = [];
+  if (scriptData.script_announcements) {
+    announcements = JSON.parse(scriptData.script_announcements);
+  }
+
   ReactDOM.render(
     <Provider store={store}>
       <ScriptEditor
@@ -57,6 +62,7 @@ export default function initPage(scriptEditorData) {
         stageExtrasAvailable={!!scriptData.stage_extras_available}
         stageLevelData={stageLevelData}
         hasVerifiedResources={scriptData.has_verified_resources}
+        announcements={announcements}
       />
     </Provider>,
     document.querySelector('.edit_container')
