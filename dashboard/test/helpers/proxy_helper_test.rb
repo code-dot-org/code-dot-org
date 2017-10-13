@@ -20,5 +20,6 @@ class ProxyHelperTest < ActionView::TestCase
 
   test 'disallows hostname matching subdomain suffix at subword boundaries' do
     refute allowed_hostname?(URI.parse('http://foobar.org/'), ALLOWED_HOSTNAME_SUFFIXES)
+    refute allowed_hostname?(URI.parse('http://foo-bar.org/'), ALLOWED_HOSTNAME_SUFFIXES)
   end
 end
