@@ -9,13 +9,15 @@ import $ from 'jquery';
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
     filterType: PropTypes.string.isRequired,
-    courseList: PropTypes.arrayOf(PropTypes.array).isRequired
+    courseList: PropTypes.arrayOf(PropTypes.array).isRequired,
+    courseUnitMap: PropTypes.object.isRequired
   }
 
   state = {
     loading: true,
     emailFilter: '',
-    plcCourseId: ''
+    plcCourseId: '',
+    plcCourseUnitId: ''
   }
 
   componentWillMount() {
@@ -24,26 +26,36 @@ class PeerReviewSubmissions extends React.Component {
     this.getFilteredResults();
   }
 
+  handleCourseUnitFilterChange = (event) => {
+    this.setState({plcCourseUnitId: event.target.value});
+    this.getFilteredResults(this.state.emailFilter, this.state.plcCourseId, event.target.value);
+  }
+
   handleCourseFilterChange = (event) => {
-    this.setState({plcCourseId: event.target.value});
-    this.getFilteredResults(this.state.emailFilter, event.target.value);
+    if (event.target.value === '') {
+      this.setState({plcCourseId: '', plcCourseUnitId: ''});
+      this.getFilteredResults(this.state.emailFilter, '', '');
+    } else {
+      this.setState({plcCourseId: event.target.value});
+      this.getFilteredResults(this.state.emailFilter, event.target.value, this.state.plcCourseUnitId);
+    }
   }
 
   handleEmailFilterChange = (event) => {
     this.setState({emailFilter: event.target.value});
-    this.getFilteredResults(event.target.value, this.state.plcCourseId);
+    this.getFilteredResults(event.target.value, this.state.plcCourseId, this.state.plcCourseUnitId);
   }
 
   handleDownloadCsvClick = () => {
-    window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_id=${this.state.plcCourseId}`);
+    window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_unit_id=${this.state.plcCourseUnitId}`);
   }
 
-  getFilteredResults = (emailFilter, plcCourseId) => {
+  getFilteredResults = (emailFilter, plcCourseId, plcCourseUnitId) => {
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${emailFilter || ''}&plc_course_id=${plcCourseId || ''}`,
+      url: `/api/v1/peer_review_submissions/index?filter=${this.props.filterType}&email=${emailFilter || ''}&plc_course_id=${plcCourseId || ''}&plc_course_unit_id=${plcCourseUnitId || ''}`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -66,7 +78,7 @@ class PeerReviewSubmissions extends React.Component {
         />
         <FormControl
           id="PlcCourseSelect"
-          style={{marginLeft: '20px', marginBottom: '0px', verticalAlign: 'middle'}}
+          style={{marginLeft: '10px', marginBottom: '0px', verticalAlign: 'middle'}}
           componentClass="select"
           placeholder="Filter by course"
           onChange={this.handleCourseFilterChange}
@@ -83,13 +95,35 @@ class PeerReviewSubmissions extends React.Component {
             );
           })}
         </FormControl>
+        <FormControl
+          id="PlcCourseUnitSelect"
+          style={{marginLeft: '10px', marginBottom: '0px', verticalAlign: 'middle'}}
+          componentClass="select"
+          placeholder="Filter by course unit"
+          disabled={!this.state.plcCourseId}
+          onChange={this.handleCourseUnitFilterChange}
+          value={this.state.plcCourseUnitId}
+        >
+          <option value="">
+            All Course Units
+          </option>
+          {
+            this.state.plcCourseId && this.props.courseUnitMap[this.state.plcCourseId].map((courseUnit, i) => {
+              return (
+                <option key={i} value={courseUnit[1]}>
+                  {courseUnit[0]}
+                </option>
+              );
+            })
+          }
+        </FormControl>
         <Button
           id="DownloadCsvReport"
           style={{float: 'right', marginTop: '0px', marginBottom: '10px', verticalAlign: 'middle'}}
-          disabled={!this.state.plcCourseId}
+          disabled={!this.state.plcCourseUnitId}
           onClick={this.handleDownloadCsvClick}
         >
-          Download CSV report for this course
+          CSV report for this course unit
         </Button>
       </div>
     );

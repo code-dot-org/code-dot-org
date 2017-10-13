@@ -2,8 +2,8 @@
 #
 # Table name: schools
 #
-#  id                 :integer          not null, primary key
-#  school_district_id :integer          not null
+#  id                 :string(12)       not null, primary key
+#  school_district_id :integer
 #  name               :string(255)      not null
 #  city               :string(255)      not null
 #  state              :string(255)      not null
@@ -11,6 +11,9 @@
 #  school_type        :string(255)      not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  address_line1      :string(30)
+#  address_line2      :string(30)
+#  address_line3      :string(30)
 #
 # Indexes
 #
