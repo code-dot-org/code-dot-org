@@ -253,7 +253,7 @@ class CensusForm extends Component {
         </h2>
         <form id="census-form">
           <CountryAutocompleteDropdown
-            setField={this.handleDropdownChange.bind("country")}
+            onChange={this.handleDropdownChange.bind("country")}
             value={submission.country}
             required={true}
             showErrorMsg={errors.country}

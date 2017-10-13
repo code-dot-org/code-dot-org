@@ -9,14 +9,14 @@ import { COUNTRIES } from '../geographyConstants';
 
 export default class CountryAutocompleteDropdown extends Component {
   static propTypes = {
-    setField: PropTypes.func,
+    onChange: PropTypes.func,
     showErrorMsg: PropTypes.bool,
     required: PropTypes.bool,
     value: PropTypes.string
   };
 
-  sendToParent = (event) => {
-    this.props.setField("country", event);
+  handleChange = (event) => {
+    this.props.onChange("country", event);
   }
 
   render() {
@@ -40,7 +40,7 @@ export default class CountryAutocompleteDropdown extends Component {
           name="country_s"
           options={COUNTRIES}
           value={value}
-          onChange={this.sendToParent}
+          onChange={this.handleChange}
           placeholder={i18n.searchForCountry()}
           labelKey="value"
           matchPos="start"
