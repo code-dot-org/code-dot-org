@@ -112,9 +112,10 @@ class ScriptsController < ApplicationController
       :exclude_csf_column_in_legend,
       :stage_extras_available,
       :has_verified_resources,
+      :script_announcements,
       resourceTypes: [],
       resourceLinks: [],
-      project_widget_types: []
+      project_widget_types: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]

@@ -122,6 +122,10 @@ export default class ScriptAnnouncementsEditor extends Component {
           value={JSON.stringify(announcements)}
         />
         <h4>Script Announcements</h4>
+        <div>
+          This can be used to provide one or more announcements that will show
+          up for signed in teachers on the script overview page.
+        </div>
         {announcements.map((announce, index) => (
           <Announce
             key={index}
@@ -136,11 +140,14 @@ export default class ScriptAnnouncementsEditor extends Component {
           className="btn"
           onClick={this.add}
         >
-          Add Announcement
+          Additional Announcement
         </button>
-        <div style={styles.preview}>
-          <ScriptAnnouncements announcements={announcements}/>
-        </div>
+        {announcements.length > 0 &&
+          <div style={styles.preview}>
+            <div>Preview:</div>
+            <ScriptAnnouncements announcements={announcements}/>
+          </div>
+        }
       </div>
     );
   }
