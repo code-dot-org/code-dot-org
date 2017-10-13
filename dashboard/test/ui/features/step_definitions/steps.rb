@@ -890,7 +890,6 @@ And /^I create a new section$/ do
     Then I should see the new section dialog
 
     When I select email login
-    And I scroll the save button into view
     And I press the save button to create a new section
     And I wait for the dialog to close
     Then I should see the section table
@@ -904,9 +903,7 @@ And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do 
 
     When I select email login
     Then I wait to see "#uitest-primary-assignment"
-  }
 
-  steps %Q{
     When I select the "#{primary}" option in dropdown "uitest-primary-assignment"
   }
 
@@ -918,7 +915,6 @@ And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do 
   end
 
   individual_steps %Q{
-    And I scroll the save button into view
     And I press the save button to create a new section
     And I wait for the dialog to close
     Then I should see the section table
