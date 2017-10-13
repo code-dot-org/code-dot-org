@@ -36,7 +36,7 @@ social:
       = view :share_buttons, facebook:facebook, twitter:twitter
 
     %div{:style=>'float:left'}
-      %a{:href=>'http://code.org'}
+      %a{:href=>CDO.code_org_url('/learn')}
         %button{:style=>"margin-top:10px; font-family: 'Gotham 5r', sans-serif;"}= "Start the Hour of Code now"
 
     %div{:style=>'clear:both;'}
@@ -62,7 +62,7 @@ social:
 
   %div{:style=>'clear:both; text-align:center'}
     %br
-    %a{:href=>'http://code.org'}
+    %a{:href=>CDO.code_org_url('/learn')}
       %button{:style=>"font-family: 'Gotham 5r', sans-serif;"}= "Start the Hour of Code now"
 
 = view 'popup_window.js'

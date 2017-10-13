@@ -808,6 +808,8 @@
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Put your school on the map",
+  "commentPrefix": "Comment:",
+  "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
   "schoolCity": "School City",
   "schoolCountry": "School Country",
   "schoolInfoRequired": "School information is required.",
