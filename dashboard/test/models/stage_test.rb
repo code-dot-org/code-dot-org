@@ -52,7 +52,7 @@ class StageTest < ActiveSupport::TestCase
     create :script_level, script: script, levels: [level1], assessment: true, stage: stage
 
     # Ensure that a single page long assessment has a uid that ends with "_0".
-    assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
+    assert_equal stage.summarize[:script_levels].first[:uid], "#{stage.summarize[:script_levels].first[:levels].first[:id]}_0"
   end
 
   test "last_progression_script_level" do

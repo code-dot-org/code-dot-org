@@ -3,9 +3,9 @@
 var assert = require('assert');
 import { __testonly__ } from '@cdo/apps/code-studio/progressRedux';
 
-describe('bestResultLevelId', function () {
+describe('bestResultLevel', function () {
   var progressData;
-  const bestResultLevelId = __testonly__.bestResultLevelId;
+  const bestResultLevel = __testonly__.bestResultLevel;
 
   before(function () {
     progressData = {
@@ -19,18 +19,29 @@ describe('bestResultLevelId', function () {
     };
   });
   it('returns the level when there\'s only one', function () {
-    assert.strictEqual(bestResultLevelId([1], progressData), 1);
+    assert.deepEqual(bestResultLevel(stubStage(1), progressData), stubLevel(1));
   });
-  it('returns the first level when none have progress', function () {
-    assert.strictEqual(bestResultLevelId([1, 2], progressData), 1);
+  it('returns the active level when none have progress', function () {
+    assert.deepEqual(bestResultLevel(stubStage(1, 2), progressData), stubLevel(1));
   });
   it('returns the passed level', function () {
-    assert.strictEqual(bestResultLevelId([1, 4], progressData), 4);
+    assert.deepEqual(bestResultLevel(stubStage(1, 4), progressData), stubLevel(4));
   });
   it('returns the unsubmitted level', function () {
-    assert.strictEqual(bestResultLevelId([1, 3], progressData), 3);
+    assert.deepEqual(bestResultLevel(stubStage(1, 3), progressData), stubLevel(3));
   });
   it('returns the perfect level over the passed level', function () {
-    assert.strictEqual(bestResultLevelId([4, 5], progressData), 5);
+    assert.deepEqual(bestResultLevel(stubStage(4, 5), progressData), stubLevel(5));
   });
 });
+
+function stubLevel(id) {
+  return { id };
+}
+
+function stubStage(...ids) {
+  return {
+    activeId: ids[0],
+    levels: ids.map(stubLevel),
+  };
+}

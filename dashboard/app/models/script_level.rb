@@ -236,7 +236,7 @@ class ScriptLevel < ActiveRecord::Base
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
-  def level_display_text
+  def level_display_text(level)
     if level.unplugged?
       I18n.t('unplugged_activity')
     elsif stage.unplugged?
@@ -255,88 +255,92 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def summarize(include_prev_next=true)
-    if level.unplugged?
-      kind = LEVEL_KIND.unplugged
-    elsif assessment
-      kind = LEVEL_KIND.assessment
-    else
-      kind = LEVEL_KIND.puzzle
+    level_summaries = levels.map do |level|
+      if level.unplugged?
+        kind = LEVEL_KIND.unplugged
+      elsif assessment
+        kind = LEVEL_KIND.assessment
+      else
+        kind = LEVEL_KIND.puzzle
+      end
+
+      summary = {
+        id: level.id,
+        kind: kind,
+        icon: level.icon,
+        is_concept_level: level.concept_level?,
+        title: level_display_text(level),
+        freePlay: level.try(:free_play) == "true",
+      }
+
+      if level.contained_levels.any?
+        summary[:contained_level_ids] = level.contained_levels.map(&:id)
+      end
+
+      if named_level
+        summary[:name] = level.display_name || level.name
+      end
+
+      if Rails.application.config.levelbuilder_mode
+        summary[:key] = level.key
+        summary[:skin] = level.try(:skin)
+        summary[:videoKey] = level.video_key
+        summary[:concepts] = level.summarize_concepts
+        summary[:conceptDifficulty] = level.summarize_concept_difficulty
+      end
+
+      summary
     end
 
-    ids = level_ids
-
-    levels.each do |l|
-      ids.concat(l.contained_levels.map(&:id))
-    end
-
-    summary = {
-      ids: ids,
-      activeId: oldest_active_level.id,
+    script_level_summary = {
       position: position,
-      kind: kind,
-      icon: level.icon,
-      is_concept_level: level.concept_level?,
-      title: level_display_text,
+      activeId: oldest_active_level.id,
       url: build_script_level_url(self),
-      freePlay: level.try(:free_play) == "true",
+      levels: level_summaries,
     }
-
-    summary[:progression] = progression if progression
-
-    if named_level
-      summary[:name] = level.display_name || level.name
-    end
-
-    if Rails.application.config.levelbuilder_mode
-      summary[:key] = level.key
-      summary[:skin] = level.try(:skin)
-      summary[:videoKey] = level.video_key
-      summary[:concepts] = level.summarize_concepts
-      summary[:conceptDifficulty] = level.summarize_concept_difficulty
-    end
-
     if include_prev_next
       # Add a previous pointer if it's not the obvious (level-1)
       if previous_level
         if previous_level.stage.absolute_position != stage.absolute_position
-          summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
+          script_level_summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
         end
       else
         # This is the first level in the script
-        summary[:previous] = false
+        script_level_summary[:previous] = false
       end
 
       # Add a next pointer if it's not the obvious (level+1)
       if end_of_stage?
         if next_level
-          summary[:next] = [next_level.stage.absolute_position, next_level.position]
+          script_level_summary[:next] = [next_level.stage.absolute_position, next_level.position]
         else
           # This is the final level in the script
-          summary[:next] = false
+          script_level_summary[:next] = false
           if script.wrapup_video
-            summary[:wrapupVideo] = script.wrapup_video.summarize
+            script_level_summary[:wrapupVideo] = script.wrapup_video.summarize
           end
         end
       end
     end
+    script_level_summary[:progression] = progression if progression
 
-    summary
+    script_level_summary
   end
 
   # Given a script level summary for the last level in a stage that has already
   # been determined to be a long assessment, returns an array of additional
   # level summaries.
-  def self.summarize_extra_puzzle_pages(last_level_summary)
+  def self.summarize_extra_puzzle_pages(last_script_level_summary)
     extra_levels = []
-    level_id = last_level_summary[:ids].first
+    level_id = last_script_level_summary[:levels].first[:id]
     level = Script.cache_find_level(level_id)
     extra_level_count = level.properties["pages"].length - 1
     (1..extra_level_count).each do |page_index|
-      new_level = last_level_summary.deep_dup
+      new_level = last_script_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
       new_level[:url] << "/page/#{page_index + 1}"
-      new_level[:position] = last_level_summary[:position] + page_index
-      new_level[:title] = last_level_summary[:position] + page_index
+      new_level[:position] = last_script_level_summary[:position] + page_index
+      new_level[:title] = last_script_level_summary[:position] + page_index
       extra_levels << new_level
     end
     extra_levels

@@ -61,15 +61,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
-    assert_equal LEVEL_KIND.puzzle, summary[:kind]
-    assert_equal 1, summary[:title]
+    assert_equal LEVEL_KIND.puzzle, summary[:levels].first[:kind]
+    assert_equal 1, summary[:levels].first[:title]
 
     summary = sl2.summarize
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
-    assert_equal LEVEL_KIND.puzzle, summary[:kind]
-    assert_equal 2, summary[:title]
+    assert_equal LEVEL_KIND.puzzle, summary[:levels].first[:kind]
+    assert_equal 2, summary[:levels].first[:title]
   end
 
   test 'summarize with custom route' do
@@ -77,8 +77,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "#{root_url.chomp('/')}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
-    assert_equal LEVEL_KIND.puzzle, summary[:kind]
-    assert_equal 1, summary[:title]
+    assert_equal LEVEL_KIND.puzzle, summary[:levels].first[:kind]
+    assert_equal 1, summary[:levels].first[:title]
   end
 
   test 'named level summarize' do
@@ -86,11 +86,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl.update(named_level: true)
 
     summary = sl.summarize
-    assert_equal sl.level.name, summary[:name]
+    assert_equal sl.level.name, summary[:levels].first[:name]
 
     sl.level.display_name = 'Test Display Name Override'
     summary = sl.summarize
-    assert_equal 'Test Display Name Override', summary[:name]
+    assert_equal 'Test Display Name Override', summary[:levels].first[:name]
   end
 
   test 'calling next_level when next level is unplugged skips the level for script without stages' do
@@ -423,7 +423,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'bonus levels do not appear in the normal progression' do
     script_level = create :script_level, bonus: true
-    assert_empty script_level.stage.summarize[:levels]
+    assert_empty script_level.stage.summarize[:script_levels]
   end
 
   test 'hidden_for_section returns true if stage is hidden' do
