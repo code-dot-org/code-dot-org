@@ -2680,7 +2680,7 @@
   census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
   census_topics_blocks: "Block-based programming"
   census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
-  census_topics_robots: "Physical computing/robotics"
+  census_topics_robots: "Robotics / Physical Computing"
   census_topics_internet: "Internet and networking"
   census_topics_security: "Cybersecurity"
   census_topics_data: "Data analysis"
