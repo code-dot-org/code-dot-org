@@ -29,7 +29,7 @@ describe('PrintCertificates', () => {
 
   it('has a submission button', () => {
     assert.equal(wrapper.find('Button').length, 1);
-    assert.equal(wrapper.find('Button').props().text, 'Print certificates');
+    assert.equal(wrapper.find('Button').props().text, 'Print Certificates');
   });
 
   it('loads student names', finish => {
