@@ -5,8 +5,8 @@ import _ from 'lodash';
 import $ from 'jquery';
 import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
-import { COUNTRIES } from '../../geographyConstants';
 import { styles } from './censusFormStyles';
 
 class CensusForm extends Component {
@@ -51,11 +51,11 @@ class CensusForm extends Component {
     }, this.checkShowFollowUp);
   }
 
-  handleSchoolDropdownChange = (event) => {
+  handleDropdownChange = (field, event) => {
     this.setState({
       submission: {
         ...this.state.submission,
-        nces: event ? event.value : ''
+        [field]: event ? event.value : ''
       }
     });
   }
@@ -252,37 +252,15 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-          <div>
-            <label style={styles.dropdownBox}>
-              <div style={styles.question}>
-                {i18n.schoolCountry()}
-                <span style={styles.asterisk}> *</span>
-                {errors.country && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredSelect()}
-                  </div>
-                )}
-              </div>
-              <select
-                name="country_s"
-                value={this.state.submission.country}
-                onChange={this.handleChange.bind(this, 'country')}
-                style={styles.wideDropdown}
-              >
-                {COUNTRIES.map((country, index) =>
-                  <option
-                    value={country}
-                    key={index}
-                  >
-                    {country}
-                  </option>
-                )}
-              </select>
-            </label>
-          </div>
+          <CountryAutocompleteDropdown
+            onChange={this.handleDropdownChange.bind("country")}
+            value={submission.country}
+            required={true}
+            showErrorMsg={errors.country}
+          />
           {US && (
             <SchoolAutocompleteDropdown
-              setField={this.handleSchoolDropdownChange}
+              setField={this.handleDropdownChange}
               value={submission.nces}
               showErrorMsg={errors.nces}
             />
