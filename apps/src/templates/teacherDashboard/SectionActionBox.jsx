@@ -54,6 +54,7 @@ const styles = {
     paddingBottom: 4,
     borderRadius: 5,
     color: color.lighter_gray,
+    margin: 3
   },
   hoverFocus: {
     backgroundColor: color.lighter_gray,
