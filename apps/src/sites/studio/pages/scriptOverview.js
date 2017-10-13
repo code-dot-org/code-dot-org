@@ -29,23 +29,24 @@ function initPage() {
   // This notification is a temporary hack we want to stick on a few courses. In
   // the future this will instead be LB configurable and we will get this data
   // from the server
-  const announcementCourses = [
-    'coursee',
-    'coursef',
-    'express'
-  ];
+  // const announcementCourses = [
+  //   'coursee',
+  //   'coursef',
+  //   'express'
+  // ];
+  //
+  // let announcements;
+  // if (announcementCourses.includes(scriptData.name)) {
+  //   announcements = [{
+  //     notice: "This course has recently been updated!",
+  //     details: "See what changed and how it may affect your classroom.",
+  //     link: "https://support.code.org/hc/en-us/articles/115001931251",
+  //     type: 'information',
+  //   }];
+  // }
 
-  let announcements;
-  if (announcementCourses.includes(scriptData.name)) {
-    announcements = [{
-      notice: "This course has recently been updated!",
-      details: "See what changed and how it may affect your classroom.",
-      link: "https://support.code.org/hc/en-us/articles/115001931251",
-      type: 'information',
-    }];
-  }
-
-  if (announcements) {
+  if (scriptData.script_announcements) {
+    const announcements = JSON.parse(scriptData.script_announcements);
     registerReducers({scriptAnnouncements: scriptAnnouncementReducer});
     announcements.forEach(announcement =>
       store.dispatch(addAnnouncement(announcement.notice, announcement.details,
