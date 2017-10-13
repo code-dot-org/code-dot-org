@@ -62,6 +62,7 @@ const styles = {
     paddingTop: 20,
     paddingLeft: 20,
     paddingBottom: 20,
+    width: 40,
   },
   sectionCol: {
     paddingLeft: 20,
