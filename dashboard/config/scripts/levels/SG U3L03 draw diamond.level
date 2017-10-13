@@ -165,8 +165,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "teacher_markdown": "**DECOMPOSITION**\r\nEncourage the students to be aware of the pattern recognition that occurs in this example. By noticing the repeated patterns (each side repeated, etc.) it can help them to determine when they need to define functions. Functions should be used whenever a pattern is repeated more than one time, it helps to make the code more reusable. This also helps to decompose the problem into smaller pieces which are easier to solve."
+    "teacher_markdown": "**DECOMPOSITION**\r\nEncourage the students to be aware of the pattern recognition that occurs in this example. By noticing the repeated patterns (each side repeated, etc.) it can help them to determine when they need to define functions. Functions should be used whenever a pattern is repeated more than one time, it helps to make the code more reusable. This also helps to decompose the problem into smaller pieces which are easier to solve.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
