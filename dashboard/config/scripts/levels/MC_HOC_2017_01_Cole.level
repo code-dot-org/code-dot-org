@@ -52,8 +52,8 @@
     "show_popup_on_load": "playerSelection",
     "special_level_type": "agentSpawn",
     "level_verification_timeout": "0",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use your arrow keys to direct the player into the house. End up on the orange square to win.\",\"hint_id\":\"MC_HOC_2017_01_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4d971c331095663b5d7064246c0ec3ca/MC_HOC_2017_01_Cole.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use your arrow keys to direct the player into the house. End up on the orange square to win.\",\"hint_id\":\"MC_HOC_2017_01_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4d971c331095663b5d7064246c0ec3ca/MC_HOC_2017_01_Cole.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

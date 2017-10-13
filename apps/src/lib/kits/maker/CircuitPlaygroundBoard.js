@@ -37,6 +37,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     /** @private {string} a port identifier, e.g. "/dev/ttyACM0" */
     this.portName_ = portName;
 
+    /** @private {SerialPort} serial port controller */
+    this.serialPort_ = null;
+
     /** @private {five.Board} A johnny-five board controller */
     this.fiveBoard_ = null;
 
@@ -70,6 +73,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
+        this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         resolve();
       });
@@ -114,6 +118,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   /**
    * Disconnect and clean up the board controller and all components.
+   * @return {Promise}
    */
   destroy() {
     this.dynamicComponents_.forEach(component => {
@@ -144,6 +149,26 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       delete Firmata.SYSEX_RESPONSE[CP_COMMAND];
     }
     delete Playground.hasRegisteredSysexResponse;
+
+    return new Promise((resolve) => {
+      // It can take a moment for the reset() command to reach the board, so defer
+      // closing the serialport for a moment.
+      // TODO (Brad): Make changes to Firmata so we can be notified when writes
+      // succeed instead of making a 50ms guess, and make this a properly async
+      // method.
+      setTimeout(() => {
+        // Close the serialport, cleaning it up properly so we can open it again
+        // on the next run.
+        // Note: This doesn't seem to be necessary when using browser-serialport
+        // and the Chrome App connector, but it is required for native
+        // node serialport in the Maker Toolkit Browser.
+        if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
+          this.serialPort_.close();
+        }
+        this.serialPort_ = null;
+        resolve();
+      }, 50);
+    });
   }
 
   /**
