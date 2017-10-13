@@ -32,7 +32,7 @@ export const RunButton = Radium(props => (
     style={props.style}
   >
     <div>
-      {msg.runProgram()}
+      {props.useAgent ? msg.runAgent() : msg.runProgram()}
     </div>
     <img
       src={blankImg}
@@ -43,6 +43,7 @@ export const RunButton = Radium(props => (
 RunButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
+  useAgent: PropTypes.bool,
 };
 RunButton.displayName = 'RunButton';
 
@@ -73,7 +74,10 @@ export const UnconnectedGameButtons = props => (
   <div>
     <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
       {!props.playspacePhoneFrame &&
-        <RunButton hidden={props.hideRunButton}/>
+        <RunButton
+          hidden={props.hideRunButton}
+          useAgent={props.useAgent}
+        />
       }
       {!props.playspacePhoneFrame &&
         <ResetButton />
@@ -91,6 +95,7 @@ export const UnconnectedGameButtons = props => (
 );
 UnconnectedGameButtons.propTypes = {
   hideRunButton: PropTypes.bool,
+  useAgent: PropTypes.bool,
   playspacePhoneFrame: PropTypes.bool,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
@@ -101,6 +106,7 @@ UnconnectedGameButtons.displayName = 'GameButtons';
 
 export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
+  useAgent: state.pageConstants.useAgent,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   nextLevelUrl: state.pageConstants.nextLevelUrl,
   showSkipButton: state.pageConstants.isChallengeLevel,
