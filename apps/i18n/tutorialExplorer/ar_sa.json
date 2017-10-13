@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "إخفاء الأنشطة للعديد من اللغات",
   "noTutorialsYourLanguage": "لا يوجد أنشطة مدعومة بلغتك. جرب أنشطة بلغات أخرى عبر الضغط على الزر أدناه.",
   "bottomGuidelinesLink": "اضغط هنا لترى معاييرنا و ارشاداتنا لدروس ساعة من البرمجة.",
-  "bottomSpecialNeedsLink": "اضغط هنا للمزيد من المعلومات حول دعم التلاميذ ذوي الحاجيات الخاصة."
+  "bottomSpecialNeedsLink": "اضغط هنا للمزيد من المعلومات حول دعم التلاميذ ذوي الحاجيات الخاصة.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }
