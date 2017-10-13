@@ -119,50 +119,23 @@ stage 'Loops: My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
 stage 'Loops in Artist'
-variants
-  level 'ramp_video_artistIntro'
-  level 'courseC_artist_loopsPrePre1a', active: false
-endvariants
-variants
-  level 'ramp_artist_loops1'
-  level 'courseC_artist_loopsPre1a', active: false
-endvariants
-variants
-  level 'ramp_artist_loops2'
-  level 'courseC_artist_loop1', active: false
-endvariants
-variants
-  level 'ramp_video_loopsArtist'
-  level 'courseC_artist_loops1a', active: false
-endvariants
-variants
-  level 'ramp_artist_loops3'
-  level 'courseC_artist_loops2a', active: false
-endvariants
-variants
-  level 'ramp_artist_loops4'
-  level 'courseC_artist_loops3a', active: false
-endvariants
-variants
-  level 'ramp_artist_loops5'
-  level 'courseC_artist_loops4a', active: false
-endvariants
-variants
-  level 'ramp_artist_loops6'
-  level 'courseC_artist_loops5a', active: false
-endvariants
-variants
-  level 'ramp_artist_loops7'
-  level 'courseC_artist_loops5b', active: false
-endvariants
-variants
-  level 'ramp_artist_loops8', challenge: true
-  level 'courseC_artist_loops6a', active: false, challenge: true
-endvariants
-variants
-  level 'ramp_artist_loops9'
-  level 'courseC_artist_loops7a', active: false
-endvariants
+level 'ramp_video_artistIntro'
+level 'ramp_artist_loops1'
+level 'ramp_artist_loops2'
+level 'ramp_video_loopsArtist'
+level 'ramp_artist_loops3'
+level 'ramp_artist_loops4'
+level 'ramp_artist_loops5'
+level 'ramp_artist_loops6'
+level 'ramp_artist_loops7'
+level 'ramp_artist_loops8', challenge: true
+level 'ramp_artist_loops9'
+level 'courseC_artist_loops1a'
+level 'courseC_artist_loops2a'
+level 'courseC_artist_loops3a'
+level 'courseC_artist_loops4a'
+level 'courseC_artist_loops5b'
+level 'courseC_artist_loops8a'
 
 stage 'Nested Loops'
 level 'courseD_bee_nestedLoops1a'
