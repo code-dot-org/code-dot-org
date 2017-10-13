@@ -480,11 +480,6 @@ class Craft < Blockly
       player_start_direction
       agent_start_position
       agent_start_direction
-      available_blocks
-      if_block_options
-      place_block_options
-      drop_dropdown_options
-      play_sound_options
       songs
     ).map {|x| x.camelize(:lower)}
   end
