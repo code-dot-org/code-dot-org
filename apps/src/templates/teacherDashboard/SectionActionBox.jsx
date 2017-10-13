@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import {editedSectionId, removeSection, toggleSectionHidden} from './teacherSectionsRedux';
 import {sortableSectionShape} from "./shapes.jsx";
 import {pegasus} from "../../lib/util/urlHelpers";
+import {Popover, OverlayTrigger} from 'react-bootstrap';
 
 
 const styles = {
@@ -121,46 +122,53 @@ class SectionActionBox extends Component {
 
   render() {
     return (
-      <div>
-        <a onClick={this.onClickSelect}> <i className="fa fa-caret-down"></i></a>
-        {this.state.selected &&
-          <div style={[styles.actionBox, this.props.style]}>
-            <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)}>
-              <div style={styles.actionText}>
-                {i18n.sectionViewProgress()}
-              </div>
-            </a>
-            <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + "/manage")}>
-              <div style={styles.actionText}>
-                {i18n.manageStudents()}
-              </div>
-            </a>
-            <div href style={styles.actionText2} onClick={this.onClickEdit}>
-              {i18n.editSectionDetails()}
-            </div>
-            <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
-              <div style={styles.actionText}>
-                {i18n.printLoginCards()}
-              </div>
-            </a>
-            <div style={styles.actionText}>
-              <PrintCertificates
-                sectionId={this.props.sectionData.id}
-                assignmentName={this.props.sectionData.assignmentNames[0]}
-              />
-            </div>
-            <div style={styles.actionText} onClick={this.onClickHideShow}>
-              {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
-            </div>
-            {this.props.sectionData.studentCount === 0 || (
-                <div style={styles.archiveDelete}>
-                  <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-                  {i18n.deleteSection()}
+      <OverlayTrigger
+        trigger="click"
+        rootClose
+        placement="bottom"
+        overlay=
+          {(
+            <Popover id="action-options">
+              <div style={[styles.actionBox, this.props.style]}>
+                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)} style={{zIndex: 200}}>
+                  <div style={styles.actionText}>
+                    {i18n.sectionViewProgress()}
+                  </div>
+                </a>
+                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + "/manage")}>
+                  <div style={styles.actionText}>
+                    {i18n.manageStudents()}
+                  </div>
+                </a>
+                <div href style={styles.actionText2} onClick={this.onClickEdit}>
+                  {i18n.editSectionDetails()}
                 </div>
-            )}
-          </div>
-        }
-      </div>
+                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
+                  <div style={styles.actionText}>
+                    {i18n.printLoginCards()}
+                  </div>
+                </a>
+                <div style={styles.actionText}>
+                  <PrintCertificates
+                    sectionId={this.props.sectionData.id}
+                    assignmentName={this.props.sectionData.assignmentNames[0]}
+                  />
+                </div>
+                <div style={styles.actionText} onClick={this.onClickHideShow}>
+                  {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
+                </div>
+                {this.props.sectionData.studentCount === 0 || (
+                  <div style={styles.archiveDelete}>
+                    <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+                    {i18n.deleteSection()}
+                  </div>
+                )}
+              </div>
+            </Popover>
+          )}
+      >
+        <i className="fa fa-chevron-down"></i>
+      </OverlayTrigger>
     );
   }
 }
