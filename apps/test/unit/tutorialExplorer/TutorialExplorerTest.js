@@ -170,7 +170,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
 
     assert.equal(uniqueOrgNames.length, 2);
     assert.equal(uniqueOrgNames[0], "code");
-    assert.equal(uniqueOrgNames[1], longOrgName.substring(0,25) + '...');
+    assert.equal(uniqueOrgNames[1], longOrgName);
   });
 
   it("get unique orgnames for robotics", function () {
@@ -179,6 +179,6 @@ describe("TutorialExplorer filterTutorials tests", function () {
     assert.equal(uniqueOrgNames.length, 3);
     assert.equal(uniqueOrgNames[0], "code");
     assert.equal(uniqueOrgNames[1], "tech");
-    assert.equal(uniqueOrgNames[2], longOrgName.substring(0,25) + '...');
+    assert.equal(uniqueOrgNames[2], longOrgName);
   });
 });
