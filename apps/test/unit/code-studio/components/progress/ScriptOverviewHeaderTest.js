@@ -70,7 +70,7 @@ describe('ScriptOverviewHeader', () => {
         isVerifiedTeacher={false}
       />
     );
-    assert.equal(wrapper.find('Notification').length, 1);
+    assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 1);
   });
 
   it('has non-verified and provided announcements if necessary', () => {
@@ -82,7 +82,7 @@ describe('ScriptOverviewHeader', () => {
         announcements={[fakeAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Notification').length, 2);
+    assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 2);
   });
 
   it('does not show announcements to students', () => {
@@ -95,6 +95,6 @@ describe('ScriptOverviewHeader', () => {
         announcements={[fakeAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Notification').length, 0);
+    assert.equal(wrapper.find('ScriptAnnouncements').length, 0);
   });
 });
