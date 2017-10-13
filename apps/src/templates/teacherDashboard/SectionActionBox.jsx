@@ -15,15 +15,11 @@ const styles = {
     paddingRight: 8
   },
   actionBox: {
-    width: 180,
-    paddingLeft: 15,
-    paddingRight: 15,
+    width: 140,
+    paddingLeft: 10,
+    paddingRight: 10,
     paddingBottom: 10,
     paddingTop: 10,
-    border: '1px solid ' + color.lighter_gray,
-    borderRadius: 2,
-    backgroundColor: color.white,
-    boxShadow: "2px 2px 2px " + color.light_gray,
   },
   actionText: {
     fontSize: 14,
@@ -31,7 +27,7 @@ const styles = {
     color: color.charcoal,
     padding: '10px 0px 4px 0px',
   },
-  actionText2: {
+  actionTextBreak: {
     fontSize: 14,
     fontFamily: '"Gotham", sans-serif',
     borderTop: '1px solid ' + color.lighter_gray,
@@ -52,30 +48,6 @@ const styles = {
   }
 };
 
-/**
- * Buttons for confirming whether or not we want to delete a section
- */
-/*export const ConfirmDelete = ({onClickYes, onClickNo}) => (
-    <div style={styles.nowrap}>
-      <div>{i18n.deleteConfirm()}</div>
-      <Button
-          text={i18n.yes()}
-          onClick={onClickYes}
-          color={Button.ButtonColor.red}
-      />
-      <Button
-          text={i18n.no()}
-          style={styles.rightButton}
-          onClick={onClickNo}
-          color={Button.ButtonColor.gray}
-      />
-    </div>
-);
-ConfirmDelete.propTypes = {
-    onClickYes: PropTypes.func.isRequired,
-    onClickNo: PropTypes.func.isRequired,
-};*/
-
 class SectionActionBox extends Component {
   static propTypes = {
     style: PropTypes.object,
@@ -86,10 +58,6 @@ class SectionActionBox extends Component {
     editedSectionId: PropTypes.number,
     removeSection: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
-  };
-
-  state = {
-    selected: false,
   };
 
   onConfirmDelete = () => {
@@ -116,10 +84,6 @@ class SectionActionBox extends Component {
       this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
-  onClickSelect = () => {
-    this.setState({selected: !this.state.selected});
-  }
-
   render() {
     return (
       <OverlayTrigger
@@ -129,7 +93,7 @@ class SectionActionBox extends Component {
         overlay=
           {(
             <Popover id="action-options">
-              <div style={[styles.actionBox, this.props.style]}>
+              <div style={styles.actionBox}>
                 <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)}>
                   <div style={styles.actionText}>
                     {i18n.sectionViewProgress()}
@@ -141,7 +105,7 @@ class SectionActionBox extends Component {
                   </div>
                 </a>
                 <a>
-                  <div style={styles.actionText2} onClick={this.onClickEdit}>
+                  <div style={styles.actionTextBreak} onClick={this.onClickEdit}>
                     {i18n.editSectionDetails()}
                   </div>
                 </a>
@@ -163,9 +127,9 @@ class SectionActionBox extends Component {
                     {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
                   </div>
                 </a>
-                {this.props.sectionData.studentCount === 0 || (
+                {this.props.sectionData.studentCount === 0 && (
                   <a>
-                    <div style={styles.archiveDelete}>
+                    <div style={styles.archiveDelete} onClick={this.onConfirmDelete}>
                       <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
                       {i18n.deleteSection()}
                     </div>
