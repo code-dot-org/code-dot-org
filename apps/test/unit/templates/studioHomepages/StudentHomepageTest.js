@@ -94,12 +94,12 @@ describe('StudentHomepage', () => {
   it('shows section codes correctly', () => {
     const wrapper = mount(
         <StudentHomepage
-            courses={courses}
-            topCourse={topCourse}
-            sections={joinedSections}
-            codeOrgUrlPrefix="http://localhost:3000/"
-            isRtl={false}
-            canLeave={false}
+          courses={courses}
+          topCourse={topCourse}
+          sections={joinedSections}
+          codeOrgUrlPrefix="http://localhost:3000/"
+          isRtl={false}
+          canLeave={false}
         />
     );
     expect(wrapper).to.containMatchingElement(
