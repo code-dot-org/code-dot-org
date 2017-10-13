@@ -50,9 +50,9 @@
     "agent_start_position": "[4,9]",
     "place_block_options": "[\"dirt\", \"dirtCoarse\", \"glass\",  \"sandstone\", \"planksAcacia\", \"planksBirch\", \"planksOak\", \"planksSpruce\"]",
     "level_verification_timeout": "0",
-    "contained_level_names": null,
     "instructions": "These cacti are in the way! Use `destroy block` to destroy each cactus that is in the way.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can find the right pattern, you should be able to solve this using only `repeat 2 times` with three instructions inside.\",\"hint_id\":\"MC_HOC_2017_07_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9dd0710004a3b42bb687af3c3b915d3b/MC_HOC_2017_07_Cole.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can find the right pattern, you should be able to solve this using only `repeat 2 times` with three instructions inside.\",\"hint_id\":\"MC_HOC_2017_07_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9dd0710004a3b42bb687af3c3b915d3b/MC_HOC_2017_07_Cole.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

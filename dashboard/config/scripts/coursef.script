@@ -281,7 +281,6 @@ bonus 'courseF_bee_functions_challenge1'
 bonus 'courseF_bee_functions_challenge2'
 
 stage 'Functions with Parameters in Artist', flex_category: 'csf_f_2'
-level 'courseF_video_artistFunctions'
 level 'courseF_artist_fwp1'
 level 'gradeF_video_artistParameters'
 level 'courseF_artist_fwp2_predict1'

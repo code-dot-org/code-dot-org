@@ -482,10 +482,6 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def logo_image
-    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true) rescue nil
-  end
-
   def k5_course?
     %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
   end

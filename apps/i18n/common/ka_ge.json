@@ -807,5 +807,19 @@
   "yourSchoolParentDesc": "მოიმოქმედეთ რამე, რათა განავრცოთ კომპიუტერული მეცნიერება თქვენს სკოლასა ან უბანში",
   "yourSchoolTeacherButton": "სწავლების დაწყება",
   "yourSchoolTeacherDesc": "დაიწყეთ სწავლება დღესვე, გამოცდილება კომპიუტერულ მეცნიერებაში საჭირო არაა",
-  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება"
+  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება",
+  "commentPrefix": "Comment:",
+  "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
+  "schoolCity": "School City",
+  "schoolCountry": "School Country",
+  "schoolInfoRequired": "School information is required.",
+  "schoolName": "School Name",
+  "schoolState": "School State",
+  "schoolType": "School Type",
+  "schoolTypeCharter": "Charter",
+  "schoolTypePrivate": "Private",
+  "schoolTypePublic": "Public",
+  "schoolZip": "School Postal Code",
+  "schoolNotFound": "My school isn’t listed.",
+  "schoolNotFoundDescription": "Sorry, we couldn't find your school. Please enter information below."
 }

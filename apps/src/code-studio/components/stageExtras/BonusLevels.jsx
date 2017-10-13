@@ -26,6 +26,9 @@ const styles = {
   solutionImage: {
     border: `1px solid ${color.lighter_gray}`,
     marginBottom: 5,
+    width: 400,
+    height: 400,
+    maxWidth: 'initial',
   }
 };
 
@@ -38,7 +41,7 @@ class BonusLevel extends React.Component {
         <a href={`?id=${this.props.id}`}>
           <CompletableLevelThumbnail
             size={THUMBNAIL_IMAGE_SIZE}
-            perfected={this.props.perfected}
+            completed={this.props.perfected}
           >
             <MazeThumbnail {...this.props}/>
           </CompletableLevelThumbnail>
@@ -52,12 +55,15 @@ class BonusLevel extends React.Component {
     return (
       <div style={styles.bonusLevel}>
         <a href={`?id=${this.props.id}`}>
-          <img
-            src={this.props.solutionImageUrl}
-            width={THUMBNAIL_IMAGE_SIZE}
-            height={THUMBNAIL_IMAGE_SIZE}
-            style={styles.solutionImage}
-          />
+          <CompletableLevelThumbnail
+            size={THUMBNAIL_IMAGE_SIZE}
+            completed={this.props.perfected}
+          >
+            <img
+              src={this.props.solutionImageUrl}
+              style={styles.solutionImage}
+            />
+          </CompletableLevelThumbnail>
           <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
         </a>
       </div>
