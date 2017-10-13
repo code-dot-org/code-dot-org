@@ -108,6 +108,7 @@ describe('CodeWritten', () => {
               padding: 5,
               fontColor: 'black',
               marginLeft: 40,
+              display: 'list-item',
             }}
           >
             <b>Show code</b>
