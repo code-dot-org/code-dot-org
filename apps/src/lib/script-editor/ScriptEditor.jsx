@@ -113,6 +113,7 @@ const ScriptEditor = React.createClass({
         />
         <ScriptAnnouncementsEditor
           announcements={this.props.announcements}
+          inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>
         <label>
