@@ -412,7 +412,7 @@ const TutorialExplorer = React.createClass({
     },
 
     /* Returns an array of unique organization names from the set of tutorials,
-     * sorted alphabetically, truncated and ellipsed.
+     * sorted alphabetically.
      *
      * @param {Array} tutorials - Array of tutorials.
      * @param {bool} robotics - Whether the page is for robotics.
@@ -439,12 +439,6 @@ const TutorialExplorer = React.createClass({
 
       // Sort the unique org names alphabetically, case-insensitive.
       uniqueOrgNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-
-      // Truncate each of them to limit length.
-      const maxOrgNameChars = 25;
-      uniqueOrgNames = uniqueOrgNames.map(t => {
-        return t.length > maxOrgNameChars ? t.substring(0, maxOrgNameChars) + '...' : t;
-      });
 
       return uniqueOrgNames;
     }
