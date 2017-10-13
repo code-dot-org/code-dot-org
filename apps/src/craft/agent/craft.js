@@ -205,6 +205,14 @@ export default class Craft {
                 config.level.puzzle_number,
               ),
               afterAssetsLoaded: function () {
+                // Make the game solvable as soon as it loads.
+                Craft.gameController.codeOrgAPI.startAttempt(success => {
+                  if (Craft.level.freePlay) {
+                    return;
+                  }
+                  Craft.reportResult(success);
+                });
+
                 // preload music after essential game asset downloads completely finished
                 Craft.musicController.preload();
               },
@@ -503,6 +511,12 @@ export default class Craft {
       return;
     }
     Craft.gameController.codeOrgAPI.resetAttempt();
+    Craft.gameController.codeOrgAPI.startAttempt(success => {
+      if (Craft.level.freePlay) {
+        return;
+      }
+      Craft.reportResult(success);
+    });
   }
 
   static phaserLoaded() {
@@ -660,13 +674,6 @@ export default class Craft {
             dirStringToDirection[direction], targetEntity);
       },
     }, {legacy: true});
-
-    appCodeOrgAPI.startAttempt((success, levelModel) => {
-      if (Craft.level.freePlay) {
-        return;
-      }
-      Craft.reportResult(success);
-    });
   }
 
   static getTestResultFrom(success, studioTestResults) {
