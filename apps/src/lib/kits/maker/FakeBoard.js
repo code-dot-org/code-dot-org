@@ -21,8 +21,11 @@ export default class FakeBoard extends EventEmitter {
 
   /**
    * Disconnect and clean up the board controller and all components.
+   * @returns {Promise}
    */
-  destroy() {}
+  destroy() {
+    return Promise.resolve();
+  }
 
   /**
    * Marshals the board component controllers and appropriate constants into the

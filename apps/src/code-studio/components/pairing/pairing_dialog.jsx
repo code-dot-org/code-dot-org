@@ -6,22 +6,16 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 /**
  * Pair programming dialog.
  */
-var PairingDialog = React.createClass({
-  propTypes: {
+export default class PairingDialog extends React.Component {
+  static propTypes = {
     source: PropTypes.string
-  },
+  };
 
-  getInitialState() {
-    return {isOpen: false};
-  },
+  state = {isOpen: false};
 
-  close() {
-    this.setState({isOpen: false});
-  },
+  close = () => this.setState({isOpen: false});
 
-  open() {
-    this.setState({isOpen: true});
-  },
+  open = () => this.setState({isOpen: true});
 
   render() {
     return (
@@ -30,5 +24,4 @@ var PairingDialog = React.createClass({
       </BaseDialog>
     );
   }
-});
-export default PairingDialog;
+}
