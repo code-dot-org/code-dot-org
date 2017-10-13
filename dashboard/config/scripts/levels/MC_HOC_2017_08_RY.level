@@ -50,10 +50,10 @@
     "markdown_instructions": "Now there are **TWO** functions to choose from!\r\n\r\nUse these functions to quickly build a bridge across the lava for the player.",
     "place_block_options": "[\"lava\",  \"oreIron\", \"sand\", \"sandstone\", \"stone\"]",
     "level_verification_timeout": "0",
-    "contained_level_names": null,
     "instructions": "Use the functions to find a way across the lava.",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"MC_HOC_2017_08_RY_1\",\r\n  \"callout_text\": \"The Agent can hover over lava, but the player can't!  \",\r\n  \"element_id\": \"#minecraft-frame\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -170,\r\n     \"y\": 150\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Press \\\"Run\\\"!  \\n\\nYou can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.\",\"hint_id\":\"MC_HOC_2017_08_RY_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57bc95757eb576a089d454ea8b3f1ace/MC_HOC_2017_08_RY.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are LOTS of ways to solve this puzzle.  Try a few!\",\"hint_id\":\"MC_HOC_2017_08_RY_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdea2c269c741d080fa34abe2ac982a2/MC_HOC_2017_08_RY.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Press \\\"Run\\\"!  \\n\\nYou can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.\",\"hint_id\":\"MC_HOC_2017_08_RY_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57bc95757eb576a089d454ea8b3f1ace/MC_HOC_2017_08_RY.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are LOTS of ways to solve this puzzle.  Try a few!\",\"hint_id\":\"MC_HOC_2017_08_RY_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdea2c269c741d080fa34abe2ac982a2/MC_HOC_2017_08_RY.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
