@@ -161,9 +161,14 @@ export function reset() {
     return;
   }
 
-  if (currentBoard) {
-    currentBoard.destroy();
+  const setDisconnected = () => {
     currentBoard = null;
+    getStore().dispatch(redux.disconnect());
+  };
+
+  if (currentBoard) {
+    currentBoard.destroy().then(setDisconnected);
+  } else {
+    setDisconnected();
   }
-  getStore().dispatch(redux.disconnect());
 }
