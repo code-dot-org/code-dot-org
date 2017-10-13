@@ -14,34 +14,49 @@ const styles = {
   }
 };
 
-const Announce = ({announcement, inputStyle, index}) => (
+const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
   <div style={styles.announcement}>
     <h5>Announcement #{index + 1}</h5>
     <label>
       Notice
-      <input value={announcement.notice} style={inputStyle}/>
+      <input
+        value={announcement.notice}
+        style={inputStyle}
+        onChange={event => onChange(index, 'notice', event.target.value)}
+      />
     </label>
     <label>
       Details
-      <input value={announcement.details} style={inputStyle}/>
+      <input
+        value={announcement.details}
+        style={inputStyle}
+        onChange={event => onChange(index, 'details', event.target.value)}
+      />
     </label>
     <label>
       Link
-      <input value={announcement.link} style={inputStyle}/>
+      <input
+        value={announcement.link}
+        style={inputStyle}
+        onChange={event => onChange(index, 'link', event.target.value)}
+      />
     </label>
     <label>
       Type
       <div>
-        <select value={announcement.type}>
+        <select
+          value={announcement.type}
+          onChange={event => onChange(index, 'type', event.target.value)}
+        >
           {Object.values(NotificationType).map(type => (
-            <option value={type}>{type}</option>
+            <option key={type} value={type}>{type}</option>
           ))}
         </select>
       </div>
     </label>
     <button
       className="btn"
-      onClick={() => console.log('remove')}
+      onClick={() => onRemove(index)}
     >
       Remove
     </button>
@@ -51,6 +66,8 @@ Announce.propTypes = {
   announcement: announcementShape,
   inputStyle: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default class ScriptAnnouncementsEditor extends Component {
@@ -67,8 +84,36 @@ export default class ScriptAnnouncementsEditor extends Component {
     };
   }
 
+  add = () => {
+    this.setState({
+      announcements: this.state.announcements.concat({
+        notice: '',
+        details: '',
+        link: '',
+        type: NotificationType.information
+      })
+    });
+  }
+
+  remove = (index) => {
+    const newAnnouncements = [...this.state.announcements];
+    newAnnouncements.splice(index, 1);
+    this.setState({
+      announcements: newAnnouncements
+    });
+  }
+
+  change = (index, field, newValue) => {
+    const newAnnouncements = [...this.state.announcements];
+    newAnnouncements[index][field] = newValue;
+    this.setState({
+      announcements: newAnnouncements
+    });
+  }
+
   render() {
-    const { announcements, inputStyle } = this.props;
+    const { inputStyle } = this.props;
+    const { announcements } = this.state;
     return (
       <div>
         <input
@@ -83,11 +128,13 @@ export default class ScriptAnnouncementsEditor extends Component {
             index={index}
             announcement={announce}
             inputStyle={inputStyle}
+            onChange={this.change}
+            onRemove={this.remove}
           />
         ))}
         <button
           className="btn"
-          onClick={() => console.log('add')}
+          onClick={this.add}
         >
           Add Announcement
         </button>
