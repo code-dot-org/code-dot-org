@@ -1,6 +1,8 @@
 require 'cdo/shared_cache'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  include UsersHelper
+
   # GET /users/auth/:provider/callback
   def all
     @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
@@ -17,8 +19,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
+    elsif @user.provider == 'clever' && cookies['pm'] == 'clever_takeover'
+      handle_clever_signin(@user)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
+      check_and_apply_clever_takeover(@user) if cookies['pm'] == 'clever_takeover'
       sign_in_user
     elsif allows_silent_takeover(@user)
       silent_takeover(@user)
@@ -31,9 +36,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
     else
       # This is a new registration
-      move_oauth_params_to_cache(@user)
-      session["devise.user_attributes"] = @user.attributes
-      redirect_to new_user_registration_url
+      register_new_user(@user)
     end
   end
 
@@ -48,6 +51,27 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def register_new_user(user)
+    move_oauth_params_to_cache(user)
+    session["devise.user_attributes"] = user.attributes
+    redirect_to new_user_registration_url
+  end
+
+  # Clever signins have unique requirements, and must be handled a bit outside the normal flow
+  def handle_clever_signin(user)
+    # If account exists and it's not the first login, just sign in
+    if user.persisted? && user.sign_in_count > 0
+      sign_in_user
+    else
+      # Otherwise, go through the new user flow - there we will
+      # offer to connect the Clever account to an existing one
+      session['clever_link_flag'] = true
+      session['clever_takeover_id'] = user.uid
+      session['clever_takeover_token'] = user.oauth_token
+      sign_in_user
+    end
+  end
 
   def move_oauth_params_to_cache(user)
     # Because some oauth tokens are quite large, we strip them from the session
@@ -90,6 +114,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
     # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
-    allow_takeover && lookup_user && lookup_user.provider != 'clever' # do *not* allow silent takeover of Clever accounts!
+    if cookies['pm'] == 'clever_takeover'
+      allow_takeover && lookup_user
+    else
+      allow_takeover && lookup_user && lookup_user.provider != 'clever' # do *not* allow silent takeover of Clever accounts!
+    end
   end
 end

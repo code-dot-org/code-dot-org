@@ -232,7 +232,7 @@ body {
 //}
 
 #codeApp {
-  top: 100px !important;
+  top: 75px !important;
 
   &.hide-source {
     top: 0 !important;
@@ -403,15 +403,9 @@ $height-to-width: 434 / 477;
   }
 }
 
-#craft-popup-connect {
+@mixin craft-popup() {
   @include reset-dialog;
   background-color: $almost-very-dark-gray;
-
-  @include popup-width-height(540px, 516px);
-
-  @media screen and (max-height: 630px) {
-    @include popup-width-height(540px, 400px);
-  }
 
   border-style: solid;
   border-width: 18px 21px 22px 19px;
@@ -438,6 +432,16 @@ $height-to-width: 434 / 477;
     color: $header-text-yellow;
     line-height: 11px;
     font-size: 30px;
+  }
+}
+
+#craft-popup-connect {
+  @include craft-popup();
+
+  @include popup-width-height(540px, 516px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(540px, 400px);
   }
 
   #download-text {
@@ -469,40 +473,12 @@ $height-to-width: 434 / 477;
 }
 
 #craft-popup-player-selection {
-  @include reset-dialog;
-  background-color: $almost-very-dark-gray;
+  @include craft-popup();
 
   @include popup-width-height(540px, 516px);
 
   @media screen and (max-height: 630px) {
     @include popup-width-height(540px, 400px);
-  }
-
-  border-style: solid;
-  border-width: 18px 21px 22px 19px;
-  box-shadow: none;
-  @include pixelated();
-  -moz-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
-  -webkit-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
-  -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
-  border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
-
-  #modal-body {
-    background-color: $almost-very-dark-gray;
-  }
-
-  .modal-content.no-modal-icon {
-    margin-left: 0;
-    html[dir=rtl] & {
-      margin-right: 0;
-    }
-  }
-
-  .minecraft-big-yellow-header {
-    text-shadow: 2px 2px $darker-gray !important;
-    color: $header-text-yellow;
-    line-height: 11px;
-    font-size: 30px;
   }
 
   #select-character-text {
@@ -601,27 +577,7 @@ $height-to-width: 434 / 477;
 }
 
 #craft-popup-house-selection {
-  @include reset-dialog;
-  background-color: $almost-very-dark-gray;
-
-  @include popup-width-height(654px, 510px);
-
-  @media screen and (max-height: 630px) {
-    @include popup-width-height(654px, 300px);
-  }
-
-  border-style: solid;
-  border-width: 18px 21px 22px 19px;
-  box-shadow: none;
-  @include pixelated();
-  -moz-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
-  -webkit-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
-  -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
-  border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
-
-  #modal-body {
-    background-color: $almost-very-dark-gray;
-  }
+  @include craft-popup();
 
   .modal-content {
     margin-left: 0;
@@ -630,11 +586,10 @@ $height-to-width: 434 / 477;
     }
   }
 
-  .minecraft-big-yellow-header {
-    text-shadow: 2px 2px $darker-gray !important;
-    color: $header-text-yellow;
-    line-height: 11px;
-    font-size: 30px;
+  @include popup-width-height(654px, 510px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(654px, 300px);
   }
 
   #getting-started-header {
@@ -777,7 +732,68 @@ $height-to-width: 434 / 477;
     display: inline-block;
     padding: 5px;
   }
+}
 
+#craft-popup-import {
+  @include craft-popup();
+
+  @include popup-width-height(540px, 516px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(540px, 400px);
+  }
+
+  #close-popup {
+    @include mc-x-close-button();
+  }
+
+  h2 {
+    line-height: 50px;
+    font-size: 22px;
+    color: $lightest_gray;
+  }
+
+  input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  .button {
+    border-style: solid !important;
+    border-width: 4px 5px 6px !important;
+    @include pixelated();
+    @include gray-button();
+    @include mc-text-shadow();
+
+    color: $button-text-white !important;
+    font-size: 26px;
+    line-height: 26px;
+    font-family: $gotham-bold !important;
+
+    display: inline-block;
+    padding: 5px;
+  }
+}
+
+#craft-popup-error {
+  @include craft-popup();
+
+  @include popup-width-height(540px, 516px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(540px, 400px);
+  }
+
+  #close-popup {
+    @include mc-x-close-button();
+  }
+
+  h2 {
+    line-height: 50px;
+    font-size: 22px;
+    color: $lightest_gray;
+  }
 }
 
 @mixin orange-button() {

@@ -5908,7 +5908,7 @@ en:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Loops in Artist (UPDATED)
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -6091,10 +6091,10 @@ en:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
-          title: ''
+          title: CSP Unit 3 - Intro to Programming
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -6361,6 +6361,8 @@ en:
               name: Nested Loops
             Loops in Artist (UPDATED!):
               name: Loops in Artist (UPDATED!)
+            Sarah test stage:
+              name: Sarah test stage
           title: New Express Script
           description_audience: ''
           description_short: ''
@@ -6574,4 +6576,52 @@ en:
           title: 'HoC 17 - Cole '
           description_audience: ''
           description_short: ''
+          description: ''
+        craft17-kiki:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
           description: ''

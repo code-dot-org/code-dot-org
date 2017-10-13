@@ -117,14 +117,11 @@ export const gradeFormatter = function (grade, {rowData}) {
 export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
   let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
-  if (rowData.providerManaged){
-    let providerName;
-    if (rowData.loginType === OAuthSectionTypes.clever){
-      providerName = i18n.loginTypeClever();
-    } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
-      providerName = i18n.loginTypeGoogleClassroom();
-    }
-    sectionCode = providerName;
+  // For managed logins, just show the provider name rather than the login code.
+  if (rowData.loginType === OAuthSectionTypes.clever){
+    sectionCode = i18n.loginTypeClever();
+  } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
+    sectionCode = i18n.loginTypeGoogleClassroom();
   } else {
     sectionCode = rowData.code;
   }
