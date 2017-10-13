@@ -1,6 +1,6 @@
-class CreateSchoolYearlyStats < ActiveRecord::Migration[5.0]
+class CreateSchoolAnnualStats < ActiveRecord::Migration[5.0]
   def change
-    create_table :school_yearly_stats, primary_key: [:school_id, :school_year] do |t|
+    create_table :school_annual_stats, primary_key: [:school_id, :school_year] do |t|
       # Alternate composite key on school NCES ID and dataset year
       t.references :school, type: :string, limit: 12, foreign_key: true, null: false, comment: 'NCES public school ID'
       t.string :school_year, limit: 9, null: false, comment: 'School Year'
