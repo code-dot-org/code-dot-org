@@ -32,7 +32,7 @@ const styles = {
     fontFamily: '"Gotham", sans-serif',
     borderTop: '1px solid ' + color.lighter_gray,
     color: color.charcoal,
-    padding: '7px 0px 2px 0px',
+    padding: '13px 0px 2px 0px',
     marginTop: '7px',
   },
   archiveDelete: {
@@ -45,7 +45,26 @@ const styles = {
   },
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
-  }
+  },
+  actionButton:{
+    border: '1px solid ' + color.white,
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingTop: 4,
+    paddingBottom: 4,
+    borderRadius: 5,
+    color: color.lighter_gray,
+  },
+  hoverFocus: {
+    backgroundColor: color.lighter_gray,
+    border: '1px solid ' + color.light_gray,
+    borderRadius: 5,
+    paddingTop: 4,
+    paddingBottom: 4,
+    paddingLeft: 5,
+    paddingRight: 5,
+    color: color.white,
+  },
 };
 
 class SectionActionBox extends Component {
@@ -58,6 +77,10 @@ class SectionActionBox extends Component {
     editedSectionId: PropTypes.number,
     removeSection: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
+  };
+
+  state = {
+    selected : false,
   };
 
   onConfirmDelete = () => {
@@ -90,6 +113,8 @@ class SectionActionBox extends Component {
         trigger="click"
         rootClose
         placement="bottom"
+        onEnter={() => this.setState({selected : true})}
+        onExiting={() => this.setState({selected : false})}
         overlay=
           {(
             <Popover id="action-options">
@@ -104,14 +129,14 @@ class SectionActionBox extends Component {
                     {i18n.manageStudents()}
                   </div>
                 </a>
-                <a>
-                  <div style={styles.actionTextBreak} onClick={this.onClickEdit}>
-                    {i18n.editSectionDetails()}
-                  </div>
-                </a>
                 <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
                   <div style={styles.actionText}>
                     {i18n.printLoginCards()}
+                  </div>
+                </a>
+                <a>
+                  <div style={styles.actionTextBreak} onClick={this.onClickEdit}>
+                    {i18n.editSectionDetails()}
                   </div>
                 </a>
                 <a>
@@ -139,7 +164,9 @@ class SectionActionBox extends Component {
             </Popover>
           )}
       >
-        <i className="fa fa-chevron-down"></i>
+        <a style={this.state.selected ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}>
+          <i className="fa fa-chevron-down"></i>
+        </a>
       </OverlayTrigger>
     );
   }
