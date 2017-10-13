@@ -248,7 +248,6 @@ export default class Craft {
             $('#soft-buttons')
               .removeClass('soft-buttons-none')
               .addClass('soft-buttons-' + 4);
-            Craft.hideSoftButtons();
 
             const phaserGame = document.getElementById('phaser-game');
             const onDrag = function (e) {
@@ -495,16 +494,6 @@ export default class Craft {
     }
   }
 
-  static hideSoftButtons() {
-    $('#soft-buttons').hide();
-    studioApp().resizePinnedBelowVisualizationArea();
-  }
-
-  static showSoftButtons() {
-    $('#soft-buttons').show();
-    studioApp().resizePinnedBelowVisualizationArea();
-  }
-
   /**
    * Reset the app to the start position and kill any pending animation tasks.
    * @param {boolean} first true if first reset
@@ -512,9 +501,6 @@ export default class Craft {
   static reset(first) {
     if (first) {
       return;
-    }
-    if (Craft.level.usePlayer) {
-      Craft.hideSoftButtons();
     }
     Craft.gameController.codeOrgAPI.resetAttempt();
   }
@@ -538,10 +524,6 @@ export default class Craft {
   static runButtonClick() {
     if (!Craft.phaserLoaded()) {
       return;
-    }
-
-    if (Craft.level.usePlayer) {
-      Craft.showSoftButtons();
     }
 
     const runButton = document.getElementById('runButton');
@@ -680,7 +662,6 @@ export default class Craft {
     }, {legacy: true});
 
     appCodeOrgAPI.startAttempt((success, levelModel) => {
-      Craft.hideSoftButtons();
       if (Craft.level.freePlay) {
         return;
       }
