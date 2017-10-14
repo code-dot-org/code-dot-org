@@ -34,15 +34,14 @@ failure_count = 0
 open(err_file, 'w') do |err|
   CSV.foreach(tmp_file.path, {col_sep: "\t", headers: true, quote_char: "\x00"}) do |row|
     school = School.find_by_id(row['NCESSCH'].to_i.to_s)
-    unless school.nil?
-      begin
-        school[:address_line1] = row['LSTREE']
-        school.save!
-        success_count += 1
-      rescue
-        err << row
-        failure_count += 1
-      end
+    next if school.nil?
+    begin
+      school[:address_line1] = row['LSTREE']
+      school.save!
+      success_count += 1
+    rescue
+      err << row
+      failure_count += 1
     end
   end
 end
