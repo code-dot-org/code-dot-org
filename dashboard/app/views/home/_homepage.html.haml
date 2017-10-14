@@ -48,6 +48,10 @@
     %a{href:'/pd/workshop_dashboard'}
       %h3
         Manage PD Workshops
+    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      = link_to pd_workshop_admins_path do
+        %h3
+          Directory for Workshop Admins
   -if current_user.permission?(UserPermission::CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
     %h1
       Old CSF Workshop Dashboard
