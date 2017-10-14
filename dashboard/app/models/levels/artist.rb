@@ -235,6 +235,9 @@ class Artist < Blockly
     <category name="Picker">
       <block type="pick_one"></block>
     </category>
+    <category name="Comment">
+      <block type="comment" />
+    </category>
     XML
   end
 

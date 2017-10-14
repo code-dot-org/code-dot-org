@@ -534,7 +534,7 @@ describe('entry tests', () => {
           otherEntries
         ),
         function (val) {
-          return ['./src/util/idempotent-babel-polyfill'].concat(val);
+          return ['./src/util/idempotent-babel-polyfill', 'whatwg-fetch'].concat(val);
         }
       ),
       externals: [

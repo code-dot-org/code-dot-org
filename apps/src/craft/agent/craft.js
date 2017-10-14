@@ -205,6 +205,14 @@ export default class Craft {
                 config.level.puzzle_number,
               ),
               afterAssetsLoaded: function () {
+                // Make the game solvable as soon as it loads.
+                Craft.gameController.codeOrgAPI.startAttempt(success => {
+                  if (Craft.level.freePlay) {
+                    return;
+                  }
+                  Craft.reportResult(success);
+                });
+
                 // preload music after essential game asset downloads completely finished
                 Craft.musicController.preload();
               },
@@ -248,7 +256,6 @@ export default class Craft {
             $('#soft-buttons')
               .removeClass('soft-buttons-none')
               .addClass('soft-buttons-' + 4);
-            $('#soft-buttons').hide();
 
             const phaserGame = document.getElementById('phaser-game');
             const onDrag = function (e) {
@@ -495,15 +502,6 @@ export default class Craft {
     }
   }
 
-  /** Folds array B on top of array A */
-  static foldInArray(arrayA, arrayB) {
-    for (let i = 0; i < arrayA.length; i++) {
-      if (arrayB[i] !== '') {
-        arrayA[i] = arrayB[i];
-      }
-    }
-  }
-
   /**
    * Reset the app to the start position and kill any pending animation tasks.
    * @param {boolean} first true if first reset
@@ -512,10 +510,13 @@ export default class Craft {
     if (first) {
       return;
     }
-    if (Craft.level.usePlayer) {
-      $('#soft-buttons').hide();
-    }
     Craft.gameController.codeOrgAPI.resetAttempt();
+    Craft.gameController.codeOrgAPI.startAttempt(success => {
+      if (Craft.level.freePlay) {
+        return;
+      }
+      Craft.reportResult(success);
+    });
   }
 
   static phaserLoaded() {
@@ -537,10 +538,6 @@ export default class Craft {
   static runButtonClick() {
     if (!Craft.phaserLoaded()) {
       return;
-    }
-
-    if (Craft.level.usePlayer) {
-      $('#soft-buttons').show();
     }
 
     const runButton = document.getElementById('runButton');
@@ -677,14 +674,6 @@ export default class Craft {
             dirStringToDirection[direction], targetEntity);
       },
     }, {legacy: true});
-
-    appCodeOrgAPI.startAttempt((success, levelModel) => {
-      $('#soft-buttons').hide();
-      if (Craft.level.freePlay) {
-        return;
-      }
-      Craft.reportResult(success);
-    });
   }
 
   static getTestResultFrom(success, studioTestResults) {

@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-10-13T17:08:14.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "# AP Practice - Performance Task Response\r\n\r\nThe AP Create Performance task asks you to write about an abstraction that you developed and wrote into your code. Most of the time that means identifying a function or procedure you wrote to help \"manage complexity\" in your program.\r\n\r\nHere is the actual prompt from the Create Performance Task:\r\n\r\n<div style=\"width: 70%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt\">\r\n\r\n<b>2d.</b> Capture and paste a program code segment that contains an abstraction you developed individually on your own (marked with a <b>rectangle</b>). ... Explain how your abstraction helped manage the complexity of your program. \r\n<br>\r\n<i>(Must not exceed 200 words)</i>\r\n\r\n</div>\r\n\r\n<br>\r\n\r\nBelow is a segment of code from an \"under the sea\" program. Imagine that you are composing an AP response about how this abstraction manages complexity.  (Note: we are ignoring the requirement that the abstraction include \"mathematical and logical components\" for this practice response.  Just write about managing complexity.\r\n\r\n![](https://images.code.org/d98fa58fce78eff86fd734f32e2960e4-image-1507913593511.png)\r\n",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "\r\n",
+  "audit_log": "[{\"changed_at\":\"2017-10-13 17:08:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
