@@ -360,13 +360,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'banner_course2.jpg', Script.find_by_name('course2').banner_image
   end
 
-  test 'logo image' do
-    # this is configured in scripts.en.yml
-    assert_nil Script.find_by_name('flappy').logo_image
-    assert_nil Script.find_by_name('ECSPD').logo_image
-    assert_equal 'nextech_logo.png', Script.find_by_name('ECSPD-NexTech').logo_image
-  end
-
   test 'professional_learning_course?' do
     refute Script.find_by_name('flappy').professional_learning_course?
     assert Script.find_by_name('ECSPD').professional_learning_course?

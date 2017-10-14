@@ -3,10 +3,14 @@ require 'test_helper'
 class ProjectsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  # Sign in, and stub request.user_id to return the signed in user's id
+  def sign_in_with_request(user)
+    sign_in user
+    ActionDispatch::TestRequest.any_instance.stubs(:user_id).returns(user.id)
+  end
+
   setup do
-    # Workaround for 'undefined method `user_id` in ActionDispatch::TestRequest'
-    ActionDispatch::TestRequest.any_instance.stubs(:user_id).returns(nil)
-    sign_in create(:user)
+    sign_in_with_request create :user
   end
 
   self.use_transactional_test_case = true
@@ -83,7 +87,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab and gamelab edit gets redirected if under 13' do
-    sign_in create(:young_student)
+    sign_in_with_request create(:young_student)
 
     %w(applab gamelab).each do |lab|
       get :edit, params: {key: lab, channel_id: 'my_channel_id'}
@@ -93,7 +97,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab and gamelab remix gets redirected if under 13' do
-    sign_in create(:young_student)
+    sign_in_with_request create(:young_student)
 
     %w(applab gamelab).each do |lab|
       get :remix, params: {key: lab, channel_id: 'my_channel_id'}
@@ -103,7 +107,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab and gamelab project level gets redirected if under 13' do
-    sign_in create(:young_student)
+    sign_in_with_request create(:young_student)
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -113,7 +117,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab and gamelab project level gets redirected to edit if over 13' do
-    sign_in create(:student)
+    sign_in_with_request create(:student)
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -123,7 +127,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab and gamelab project levels gets redirected to edit if under 13 with tos teacher' do
-    sign_in create(:young_student_with_tos_teacher)
+    sign_in_with_request create(:young_student_with_tos_teacher)
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -135,7 +139,7 @@ class ProjectsControllerTest < ActionController::TestCase
   test 'applab and gamelab project levels get redirected if under 13 with over 13 pair' do
     @driver.update(age: 10)
     @navigator.update(age: 18)
-    sign_in @driver
+    sign_in_with_request @driver
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
@@ -148,7 +152,7 @@ class ProjectsControllerTest < ActionController::TestCase
   test 'applab and gamelab project levels get redirected if over 13 with under 13 pair' do
     @driver.update(age: 18)
     @navigator.update(age: 10)
-    sign_in @driver
+    sign_in_with_request @driver
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
@@ -162,7 +166,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @driver.update(age: 18)
     @navigator.update(age: 10)
     create :follower, user: (create :terms_of_service_teacher), student_user: @navigator
-    sign_in @driver
+    sign_in_with_request @driver
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
@@ -173,7 +177,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'shared applab project does not get redirected if under 13' do
-    sign_in create(:young_student)
+    sign_in_with_request create(:young_student)
 
     get :show, params: {key: 'applab', share: true, channel_id: 'my_channel_id'}
 
@@ -181,7 +185,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'shared applab project does not get redirected if over 13' do
-    sign_in create(:student)
+    sign_in_with_request create(:student)
 
     # We can't make successful requests for both applab and gamelab within the
     # same test case, or we'll get an error about view_options already being
@@ -193,7 +197,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'shared applab and gamelab project level gets redirected to edit if under 13 with tos teacher' do
-    sign_in create(:young_student_with_tos_teacher)
+    sign_in_with_request create(:young_student_with_tos_teacher)
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -211,7 +215,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'admins get redirected away' do
-    sign_in create(:admin)
+    sign_in_with_request create(:admin)
 
     get :index
     assert_redirected_to '/'
@@ -228,13 +232,13 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab project level goes to edit if teacher' do
-    sign_in create(:teacher)
+    sign_in_with_request create(:teacher)
     get :load, params: {key: 'applab'}
     assert @response.headers['Location'].ends_with? '/edit'
   end
 
   test 'applab project level goes to edit if student without admin teacher' do
-    sign_in create(:student)
+    sign_in_with_request create(:student)
     get :load, params: {key: 'applab'}
     assert @response.headers['Location'].ends_with? '/edit'
   end

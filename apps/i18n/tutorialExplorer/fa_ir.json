@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Hide activities for many languages",
   "noTutorialsYourLanguage": "هیچ فعالیتی برای زبان شما وجود ندارد. ب کلیک روی دکمه‌ی زیر، فعالیت در زبان‌های دیگر را امتحان کنید.",
   "bottomGuidelinesLink": "Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
-  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students."
+  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }
