@@ -5,6 +5,7 @@ import {expect} from '../../util/configuredChai';
 import {TutorialsSortBy} from '@cdo/apps/tutorialExplorer/util';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
 import BackButton from '@cdo/apps/tutorialExplorer/backButton';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const FAKE_ON_USER_INPUT = () => {};
 const FAKE_SHOW_MODAL_FILTERS = () => {};
@@ -30,10 +31,14 @@ describe('FilterHeader', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
-          <div>Filter By</div>
+          <div>
+            {i18n.filterHeaderFilterBy()}
+          </div>
         </div>
         <div>
-          <span>5 results</span>
+          <span>
+            {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
+          </span>
           &nbsp;
           &nbsp;
         </div>
@@ -51,21 +56,25 @@ describe('FilterHeader', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
-          <div>Filter By</div>
+          <div>
+            {i18n.filterHeaderFilterBy()}
+          </div>
         </div>
         <div>
-          <span>5 results</span>
+          <span>
+            {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
+          </span>
           &nbsp;
           &nbsp;
           <select value={TutorialsSortBy.default}>
             <option>
-              Sort
+              {i18n.filterHeaderDefault()}
             </option>
             <option value="displayweight">
-              Recommended
+              {i18n.filterHeaderDisplayWeight()}
             </option>
             <option value="popularityrank">
-              Most popular
+              {i18n.filterHeaderPopularityRank()}
             </option>
           </select>
         </div>
@@ -84,13 +93,13 @@ describe('FilterHeader', () => {
     expect(wrapper).to.containMatchingElement(
       <select value={TutorialsSortBy.default}>
         <option>
-          Sort
+          {i18n.filterHeaderDefault()}
         </option>
         <option value="popularityrank">
-          Most popular
+          {i18n.filterHeaderPopularityRank()}
         </option>
         <option value="displayweight">
-          Recommended
+          {i18n.filterHeaderDisplayWeight()}
         </option>
       </select>
     );
@@ -119,7 +128,9 @@ describe('FilterHeader', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
-          <span>5 results</span>
+          <span>
+            {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
+          </span>
         </div>
         <div>
           &nbsp;
@@ -128,7 +139,7 @@ describe('FilterHeader', () => {
             &nbsp;
             &nbsp;
             <button onClick={FAKE_SHOW_MODAL_FILTERS}>
-              Filters
+              {i18n.filterHeaderShowFilters()}
             </button>
           </span>
         </div>
@@ -147,27 +158,29 @@ describe('FilterHeader', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
-          <span>5 results</span>
+          <span>
+            {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
+          </span>
         </div>
         <div>
           &nbsp;
           &nbsp;
           <select value={TutorialsSortBy.default}>
             <option>
-              Sort
+              {i18n.filterHeaderDefault()}
             </option>
             <option value="displayweight">
-              Recommended
+              {i18n.filterHeaderDisplayWeight()}
             </option>
             <option value="popularityrank">
-              Most popular
+              {i18n.filterHeaderPopularityRank()}
             </option>
           </select>
           <span>
             &nbsp;
             &nbsp;
             <button onClick={FAKE_SHOW_MODAL_FILTERS}>
-              Filters
+              {i18n.filterHeaderShowFilters()}
             </button>
           </span>
         </div>
@@ -186,7 +199,9 @@ describe('FilterHeader', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
-          <span>5 results</span>
+          <span>
+            {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
+          </span>
         </div>
         <div>
           &nbsp;
@@ -195,7 +210,7 @@ describe('FilterHeader', () => {
             &nbsp;
             &nbsp;
             <button onClick={FAKE_HIDE_MODAL_FILTERS}>
-              Apply
+              {i18n.filterHeaderHideFilters()}
             </button>
           </span>
         </div>
@@ -223,7 +238,9 @@ describe('FilterHeader', () => {
       />
     );
     expect(noResults).to.containMatchingElement(
-      <span>0 results</span>
+      <span>
+        {i18n.filterHeaderTutorialCountPlural({tutorial_count: 0})}
+      </span>
     );
 
     const oneResult = shallow(
@@ -233,7 +250,9 @@ describe('FilterHeader', () => {
       />
     );
     expect(oneResult).to.containMatchingElement(
-      <span>1 result</span>
+      <span>
+        {i18n.filterHeaderTutorialCountSingle()}
+      </span>
     );
 
     const twoResults = shallow(
@@ -243,7 +262,9 @@ describe('FilterHeader', () => {
       />
     );
     expect(twoResults).to.containMatchingElement(
-      <span>2 results</span>
+      <span>
+        {i18n.filterHeaderTutorialCountPlural({tutorial_count: 2})}
+      </span>
     );
   });
 });

@@ -3,7 +3,7 @@
 
 import React, {PropTypes} from 'react';
 import { getResponsiveValue } from './responsive';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   button: {

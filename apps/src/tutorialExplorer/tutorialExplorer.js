@@ -12,7 +12,7 @@ import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
 import { TutorialsSortBy, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
 import { StickyContainer } from 'react-sticky';

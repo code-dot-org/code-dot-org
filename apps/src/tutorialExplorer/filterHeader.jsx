@@ -6,7 +6,7 @@ import React, {PropTypes} from 'react';
 import BackButton from './backButton';
 import { TutorialsSortBy } from './util';
 import { Sticky } from 'react-sticky';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   header: {

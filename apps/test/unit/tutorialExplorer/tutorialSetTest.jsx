@@ -4,6 +4,7 @@ import {expect} from '../../util/configuredChai';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
 import TutorialDetail from '@cdo/apps/tutorialExplorer/tutorialDetail';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const TUTORIAL_1 = {
   name: 'Tutorial 1',
@@ -39,9 +40,7 @@ describe('TutorialSet', () => {
           changeTutorial={instance.changeTutorial}
         />
         <div>
-          Your search returned no results.
-          {'\n'}
-          Please try removing some filters to see more activities.
+          {i18n.tutorialSetNoTutorials()}
         </div>
       </div>
     );
