@@ -14,6 +14,7 @@ if (envConstants.COVERAGE) {
 }
 
 module.exports = function (config) {
+  var browser = envConstants.BROWSER || 'PhantomJS';
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -62,6 +63,7 @@ module.exports = function (config) {
       captureConsole: true,
       mocha: {
         timeout: 14000,
+        bail: browser === 'PhantomJS'
       },
     },
 
@@ -105,9 +107,7 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [
-      envConstants.BROWSER || 'PhantomJS'
-    ],
+    browsers: [browser],
 
 
     // Continuous Integration mode
@@ -119,7 +119,7 @@ module.exports = function (config) {
     concurrency: Infinity,
 
     // increase timeout to wait for webpack to do its thing.
-    captureTimeout: 60000,
-    browserNoActivityTimeout: 60000 // 60 seconds
+    captureTimeout: 90000,
+    browserNoActivityTimeout: 90000 // 60 seconds
   });
 };

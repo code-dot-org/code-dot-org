@@ -63,7 +63,7 @@ tr:
         'maze_2_4': "Sakin ol ve kötü domuzu bulmama yardımcı ol. Aksi halde kızmaya başlayabilirim!"
         'maze_2_5': "Sadece 2 blok kullanarak yeşil domuza ulaşabileceğim bir yol var. Bulabilir misin?"
         'maze_2_6': "Sadece üç blok kullanarak beni yeşil işgalciye ulaştırmaya çalış."
-        'maze_2_7': "Bloklar en az sayıda kullanarak bu kötü domuzcuğu ortadan kaldırmama yardım et. Birden fazla \"defa tekrar\" bloğu kullanmayı dene."
+        'maze_2_7': "En az sayıda blok kullanarak bu kötü domuzcuğu ortadan kaldırmama yardım et. Birden fazla \"...defa tekrar et \" bloğu kullanmayı dene."
         'maze_2_8': "Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Yapbozu 3 defa tekrar eden \"tekrar\" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki \"tekrar\" bloğunun içine yerleştir: oynat, oynat, dön."
         'maze_2_9': "Tamam, yeni \"e kadar tekrarla\" bloğunu dene. Bu, ben yeşil domuza ulaşana kadar tekrarlayacak."
         'maze_2_10': "Tamam, pratik için son kez. Bunu sadece 4 blok kullanarak çözebilir misin?"
@@ -423,6 +423,7 @@ tr:
         'infinity_playlab_events': 'Oyun Laboratuvarı - Olaylar'
         'infinity_playlab_repeat_forever': 'Oyun Laboratuvarı - Sonsuz Döngü'
         'csd_concept_computer': 'Bir bilgisayarı, bilgisayar yapan nedir?'
+        'csd_concept_binary_data': 'How Computers Work: Binary & Data'
         'csd_concept_search': 'Arama nasıl çalışır'
         'csd_gamelab_animation_tab': 'Animasyon sekmesi'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
@@ -524,6 +525,11 @@ tr:
         'mc_2016_events': 'Minecraft Kodlama Saati - Olaylar'
         'mc_2016_spawn': 'Minecraft Kodlama Saati - Spawn'
         'mc_2016_congrats': 'Minecraft Kodlama Saati - Tebrikler'
+        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
+        'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
+        'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
+        'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
+        'applab_hoc_share': 'AppLab Hour of Code - Share'
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

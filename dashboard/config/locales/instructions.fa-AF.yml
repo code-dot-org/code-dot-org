@@ -4652,6 +4652,77 @@
       MC HOC 2016 Village Test_instruction: |-
         Oh no! Zombies have trapped you inside!
         Code the Iron Golem to chase and attack the zombies!
+      MC_2017_Ryan_02_instruction: |-
+        Help the player get out by using loops to get
+        the Agent to the pressure plate.
+      MC_HOC_2017 Agent Test_instruction: |-
+        Click "Run" to move the player to the
+        orange square inside of the house.
+      MC_HOC_2017_01_instruction: |-
+        Click "Run" to move the player to the orange
+        square inside of the house.
+      MC_HOC_2017_01_Cole_instruction: |-
+        Click "Run" to move the player to the orange
+        square inside of the house.
+      MC_HOC_2017_01_Kiki_instruction: |-
+        Click "Run" to move the player to the orange
+        square inside of the house.
+      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_02_Kiki_instruction: |-
+        Get the Agent to the pressure plate, then
+        get the player to the orange square.
+      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04_instruction: |-
+        Change the loop from the last puzzle to help the
+        Agent make a path over the wider part of this river.
+      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_05_instruction: |-
+        Use a function to help the Agent get to the pressure
+        plate.
+      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
+      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
+      MC_HOC_2017_06_Cole_instruction: |-
+        Fix this code to help the Agent build a bridge
+        across this river.
+      MC_HOC_2017_06_Kiki_instruction: |-
+        Fix this code to help the Agent build a bridge
+        across this river.
+      MC_HOC_2017_07_Cole_instruction: |-
+        Use a function to clear the path to the orange
+        square.
+      MC_HOC_2017_07_Kiki_instruction: |-
+        Use a function to clear the path to the orange
+        square.
+      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
+      MC_HOC_2017_08_Cole_instruction: |-
+        Change the provided function to work for
+        this biome.
+      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
+      MC_HOC_2017_09_Cole_instruction: |-
+        Program the Agent to clear the player's
+        path.
+      MC_HOC_2017_09_Kiki_instruction: |-
+        Program the Agent to clear the player's
+        path and get to the pressure plate.
+      MC_HOC_2017_10_Cole_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_Cole_old_instruction: |-
+        Create a function to help you finish
+        this minecart.
+      MC_HOC_2017_10_Kiki_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_Ryan_03_instruction: |-
+        Now use loops to help The Agent build a bridge
+        over the river by placing blocks in the water.
+      MC_HOC_2017_Ryan_05_instruction: |-
+        Destroy these cacti so that the player can
+        get to the goal.
+      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -5426,6 +5497,165 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG U3L03 - draw rect function_instruction: |-
+        Write a function called drawRectangle().\r
+        (Click
+        to see full instructions)
+      SG U3L03 - draw step_instruction: |-
+        Write the drawStep function. (Click to see
+        full instructions)
+      SG U3L03 Define and use turnAround_instruction: |-
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
+      SG U3L03 Draw a T using turnAround_instruction: |-
+        Draw a plus sign using the
+        provided version of turnAround().  (Click to see full instructions)
+      SG U3L03 Three Steps_instruction: |-
+        Define a function called drawSide() which
+        draws three steps and moves the turtle to prepare for the next side (Click
+        to see full instructions)
+      SG U3L03 define turnRight and draw a rectangle_instruction: |-
+        Define a function
+        called right() that turns the turtle to the right. Then use this function
+        to draw a rectangle, as shown below. (Click to see full instructions)
+      SG U3L03 draw diamond_instruction: |-
+        Create a function called drawDiamond()
+        that makes use of your previous work to draw the complete diamond. (Click
+        to see full instructions)
+      SG U3L04 - 3 by 3 with functions_instruction: |-
+        Make the 3x3 square as efficiently
+        as you can. (Click to see full instructions)
+      SG U3L04 - snowflake_instruction: |-
+        Create the design by breaking it down into
+        layers of functions. (Click to see full instructions)
+      SG U3L06 - moveForwardwithParams_instruction: |-
+        Use a single command to move
+        the turtle to the edge of the screen. (Click to see full instructions)
+      SG U3L06 Challenge 1 triangle_instruction: |-
+        Use the parameterized versions
+        of the turtle commands to create a triangle with sides 100 pixels long. (Click
+        to see full instructions)
+      SG U3L06 Challenge 2 purple square_instruction: |-
+        Read the documentation for
+        penColor() and penWidth() before using them to draw the blue square.
+      SG U3L06 Challenge 3 fill pink_instruction: |-
+        Fill in the background of the
+        screen with your favorite color. (Click to see full instructions)
+      SG U3L06 Challenge 4 bullseye_instruction: |-
+        Create the bullseye using hexadecimal
+        colors and dot(). (Click to see full instructions)
+      SG U3L06 Challenge 5 overlapping circles_instruction: |-
+        This image is created
+        just using dot() and penColor() but, how are we going to get those circles
+        to be transparent?  If you haven't gotten the hint yet: check out the documentation!
+      SG U3L06 Challenge 6 squiggles_instruction: |
+        Read the documentation for the
+        "arcLeft" and "arcRight" commands and then draw the squiggles as shown.
+      SG U3L06 Challenge 7 smiley face_instruction: |-
+        Use turnTo() and moveTo() to
+        help draw a smiley face. (Click to see full instructions)
+      SG U3L06 Challenge 8 make your own_instruction: |-
+        Create a drawing of your own.
+        (Click to see full instructions)
+      SG U3L07 - Free Play Loops and Random_instruction: |-
+        Free Play! Use what you
+        learned from loops and random to make your own little scene. Have fun.
+      SG U3L07 - allSeaGrass_instruction: |-
+        Add 50 pieces of seagrass to the image
+        by writing drawAllSeagrass with a loop. (Click to see full instructions)
+      SG U3L07 - bubbles_instruction: |-
+        Add 200 bubbles to the image by writing drawAllBubbles
+        with a loop. (Click to see full instructions)
+      SG U3L07 - createTriangleParam_instruction: |-
+        Define a function that accepts
+        a parameter to match the function calls and complete the image. (Click to
+        see full instructions)
+      SG U3L07 - fish_instruction: |-
+        Add 15 fish to the image by writing drawAllFish
+        with a loop. (Click to see full instructions)
+      SG U3L07 - introSquare_instruction: |-
+        Use a loop to draw a square. Then add
+        another loop to draw many squares each one rotated some amount. (Click to
+        see full instructions)
+      SG U3L07 - loopsWithRandom_instruction: |-
+        Increase the number of iterations
+        to fill the screen with white. (Click to see full instructions)
+      SG U3L07 - randomDots1_instruction: |-
+        Increase the number of iterations to fully
+        fill the screen with random dots. (Click to see full instructions)
+      SG U3L07 - randomSquare_instruction: |-
+        Draw the figure using a loop. (Click
+        to see full instructions)
+      SG U3L07 - seaGrass_instruction: |-
+        Add a parameter to drawSeagrass that controls
+        the number of waves in the grass. (Click to see full instructions)
+      SG U3L07 - seaStar_instruction: |-
+        Add 5 sea stars to the image by writing drawAllSeaStars
+        with a loop. (Click to see full instructions)
+      SG U3L07 - sunBeams_instruction: |-
+        Add 100 sunbeams to the image by writing
+        drawAllSunbeams with a loop. (Click to see full instructions)
+      SG U3L07 - topDownDesign_instruction: |-
+        Get comfortable with the structure of
+        this program, then move on to the next exercise. (Click to see full instructions)
+      SG U3L07 More Subgoals_instruction: |-
+        Read the documentation for penColor()
+        and penWidth() before using them to draw the blue square.
+      SG U3L08 - createTwoParamTriangle_instruction: |-
+        Define a function called drawTriangle()
+        that accepts two parameters to set the size and width of the triangle. (Click
+        to see full instructions)
+      SG U3L08 - digitalScene_instruction: |-
+        Create the functions you were assigned
+        as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - drawSquareWithParam_instruction: |-
+        Use drawSquare() to recreate the
+        image of both squares, this time using parameters. (Click to see full instructions)
+      SG U3L08 - fish_instruction: |-
+        Add a parameter to drawFish that changes the
+        size of the fish drawn. (Click to see full instructions)
+      SG U3L08 - freePlay_instruction: |-
+        Keep adding to your image by making more
+        calls to your new functions with parameters. (Click to see full instructions)
+      SG U3L08 - individualCode_instruction: |-
+        Create the functions you were assigned
+        as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea_instruction: |-
+        Add an extra fish, starfish, and
+        piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
+      SG U3L08 - multiParamFish_instruction: |-
+        Add three parameters to your drawFish
+        function to accept red, green and blue values to make your fish different
+        colors. (Click to see full instructions)
+      SG U3L08 - paramsToStarfish_instruction: |-
+        Add a parameter to drawStarfish that
+        changes the size of the starfish drawn. (Click to see full instructions)
+      SG U3L08 - randomInput_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
+      SG U3L08 - seaGrass_instruction: |-
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
+      SG U3L08 - squareTwoParams_instruction: |-
+        Call drawSquare() to complete the
+        drawing of two squares. (Click to see full instructions)
+      SG U3L08 comments_instruction: |-
+        Use the randomNumber() blocks to test the functions
+        you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands_instruction: |-
+        Draw a 1x1 square above and to
+        the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Turtle3by3Grid_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
+      SG U3L2_TurtleSquare_right_instruction: |-
+        Draw a square to the front and to
+        the right of the starting location. (Click to show full instructions)
+      SGU3L07 - randomDots1_instruction: |-
+        Increase the number of iterations to fully
+        fill the screen with random dots. (Click to see full instructions)
       Sam the Butterfly 1 (copy 1)_instruction: |-
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -8076,7 +8306,7 @@
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
       courseB_artist_loops2_instruction: |-
-        The Artist is trying to draw a line six
+        The Artist is trying to draw a line **6**
         times, but can't get it right.  Can you help?
       courseB_artist_loops3_instruction: |-
         Help the artist draw a line 7 times to
@@ -8085,7 +8315,7 @@
         the bugs in the code and help the artist prepare the ground. "
       courseB_artist_loops5_instruction: |-
         Time to fix the stairs!  Repeat this pattern
-        five times so the artist can reach the top of the bushes.
+        **5** times so the artist can reach the top of the bushes.
       courseB_artist_loops6_instruction: Climb the vine and see where it goes?
       courseB_artist_loops7_instruction: |-
         **Challenge:**  It's a hidden garden!
@@ -8318,7 +8548,7 @@
         him dig holes along the path to plant more flowers!
       courseC_artist_loops2a_instruction: |-
         Now, use a loop to spin your bird around
-        10 times with a 36 degree turn.
+        12 times with a 30 degree turn.
       courseC_artist_loops3_instruction: |-
         Excellent!  Now that the flowers have sprouted,
         help the zombie place a friend every 50 pixels to guard over them until they
@@ -8796,6 +9026,9 @@
         - What does it look like to draw two snowflakes
         on top of one another?
       courseD_artist_project5_instruction: Play with the snowflakes!
+      courseD_artist_project_embedded_instruction: |-
+        Here's what you will soon be
+        making!
       courseD_artist_ramp11_instruction: Now make a square using Artist!
       courseD_artist_ramp12_instruction: |-
         Use what you've learned to draw this triangle
@@ -8877,6 +9110,7 @@
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of honey?
       courseD_bee_nestedLoops1_instruction: Help the bee collect all of the nectar.
+      courseD_bee_nestedLoops1a_instruction: Help the bee collect all of the nectar.
       courseD_bee_nestedLoops2_instruction: |-
         This time, help the bee collect all
         of the nectar using as few blocks as possible.
@@ -8981,22 +9215,41 @@
       courseD_collector_debugging1_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging1a_instruction: |-
+        Fix the error(s) to collect all
+        of the treasure.
       courseD_collector_debugging2_instruction: |-
+        Fix the error(s) to collect all
+        of the treasure.
+      courseD_collector_debugging2a_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
       courseD_collector_debugging3_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging3a_instruction: |-
+        Fix the error(s) to collect all
+        of the treasure.
       courseD_collector_debugging4_instruction: |-
+        Fix the error(s) to collect all
+        of the treasure.
+      courseD_collector_debugging4a_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
       courseD_collector_debugging5_instruction: |-
         All of the commands that you need
         are already here...now use your debugging skills to figure out how to solve
         this puzzle.
+      courseD_collector_debugging5a_instruction: |-
+        All of the commands that you need
+        are already here...now use your debugging skills to figure out how to solve
+        this puzzle.
       courseD_collector_debugging6_instruction: |-
         Challenge: Use your debugging skills
         to fix the errors and collect all of the treasure.
+      courseD_collector_debugging6a_instruction: |-
+        Challenge: Use the code in the
+        work area to get at least **6** pieces of treasure!
       courseD_collector_debugging7_instruction: |-
         Challenge: All of the commands that
         you need are already here...now use your debugging skills to figure out how
@@ -9159,7 +9412,7 @@
         Get the zombie to the sunflower using
         only the blocks available.
       courseD_maze_ramp1_instruction: |-
-        For this puzzle, drag all of the blocks together
+        For this puzzle, snap all of the blocks together
         and click "Run" to watch it go!
       courseD_maze_ramp2_instruction: |-
         Drag an extra `move forward` block out of
@@ -9169,7 +9422,18 @@
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseD_maze_ramp5_instruction: Avoid the TNT.
+      courseD_maze_ramp5a_instruction: |-
+        Pay attention to the sequence and see if
+        you can figure out how to get to that pig!
+      courseD_maze_ramp5b_instruction: |-
+        Navigate this maze to help the bird find
+        the pig!
+      courseD_maze_ramp5c_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5d_instruction: Get the bird to the pig.
       courseD_maze_ramp6_instruction: |-
+        "Keep calm and help me find the bad pig.
+        Otherwise I might get angry!"
+      courseD_maze_ramp6a_instruction: |-
         "Keep calm and help me find the bad pig.
         Otherwise I might get angry!"
       courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
@@ -9248,6 +9512,22 @@
         longer you stay there, the more points you lose. \r
         \r
         Get 5 points to win!
+      courseD_scrat_ramp1_instruction: |-
+        For this puzzle, snap all of the blocks together
+        and click "Run" to watch it go!
+      courseD_scrat_ramp2_instruction: |-
+        Drag an extra `move forward` block out of
+        the toolbox, then attach all blocks to `when run` to finish your code.
+      courseD_scrat_ramp3_instruction: |-
+        There is one extra block that is going to
+        cause Scrat to crash. Throw it away by dragging it back to the toolbox.
+      courseD_scrat_ramp4_instruction: Avoid the cracked ice to keep Scrat safe!
+      courseD_scrat_ramp5_instruction: Avoid the cracked ice.
+      courseD_scrat_ramp6_instruction: Help Scrat get to the acorn using a loop!
+      courseD_scrat_ramp7_instruction: Help Scrat get to the acorn!
+      courseD_scrat_ramp8_instruction: |-
+        Use what you've learned to get Scrat to
+        the acorn!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -9349,6 +9629,9 @@
         Now write the function to collect nectar
         from the flowers.
       courseE_bee_functions6_instruction: |-
+        Create a function and call it to collect
+        nectar at each flower and make honey at each honeycomb.
+      courseE_bee_functions6test_instruction: |-
         Create a function and call it to collect
         nectar at each flower and make honey at each honeycomb.
       courseE_bee_functions7_instruction: |-
@@ -9486,12 +9769,32 @@
         you figure out how?
       courseE_farmer_ramp11a_instruction: "Pick lettuce only while there is still\nlettuce
         to pick. "
+      courseE_farmer_ramp11b_instruction: While there is a pile, remove dirt.
       courseE_farmer_ramp12_instruction: |-
         Now use nested loops (`repeat` and `while`)
         to solve this puzzle.
+      courseE_farmer_ramp12_forswap_instruction: |-
+        Now use nested loops to solve this
+        puzzle.
       courseE_farmer_ramp12a_instruction: |-
         Help the farmer correctly travel the path
         to gather all of the lettuce.
+      courseE_farmer_ramp12b_instruction: While there is lettuce, pick lettuce!
+      courseE_farmer_ramp12c_instruction: |-
+        Move forward until you reach the lettuce,
+        then pick it all using a `while` loop.
+      courseE_farmer_ramp12d_instruction: |-
+        Move forward until you reach the lettuce,
+        then pick it all using a `while` loop.
+      courseE_farmer_ramp12e_instruction: |-
+        Move forward until you reach the lettuce,
+        then pick it all using a `while` loop.
+      courseE_farmer_ramp12f_instruction: |-
+        Move forward until you reach the lettuce,
+        then turn left **if** there is a path to the left.  Otherwise, turn right.
+      courseE_farmer_ramp12g_instruction: |-
+        Move forward until you reach the lettuce,
+        then turn left **if** there is a path to the left.  Otherwise, turn right.
       courseE_farmer_ramp13_instruction: |-
         Pick corn if there is corn, and pick lettuce
         while there is lettuce.
@@ -9542,9 +9845,9 @@
       courseE_playLab_scaffold1_instruction: |-
         Choose a background and map, and pick
         an actor to be your game's hero.
-      courseE_playLab_scaffold2_instruction: |
+      courseE_playLab_scaffold2_instruction: |-
         Use event handlers and actions to make
-        your hero move.\r
+        your hero move.
       courseE_playLab_scaffold3_instruction: |-
         Add two or more additional actors to
         your game and make them move.
@@ -12059,6 +12362,9 @@
         set Sid’s (actor 1) speed to fast.
       jessie-test_instruction: Lots of instructions
       k-1 maze 1_instruction: Can you make me move West to get to the pig?
+      k1stickerfreeplay_instruction: |-
+        The artist saw something funny in the distance.  Draw
+        what you think he saw.
       kikiTesta_instruction: |-
         Our adventurer wants to collect coins.  But she can
         only use 4 blocks to get them.\r
@@ -12176,6 +12482,25 @@
       playLabDebugVideo1_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
+      ramp_artist_loops1_instruction: |-
+        Move forward by 60 pixels to complete this
+        puzzle.
+      ramp_artist_loops2_instruction: |-
+        Move forward five times and make this colored
+        line.
+      ramp_artist_loops3_instruction: Use a `repeat` loop to draw five colored dashes.
+      ramp_artist_loops4_instruction: |-
+        What happens when you add a 72 degree right
+        turn after everything else inside your loop?
+      ramp_artist_loops5_instruction: Use loops to draw this staircase.
+      ramp_artist_loops6_instruction: Edit your loop to draw this staircase.
+      ramp_artist_loops7_instruction: |-
+        Look for a pattern and make this code shorter
+        using loops!
+      ramp_artist_loops8_instruction: |-
+        Look for a pattern and make this code shorter
+        using loops.
+      ramp_artist_loops9_instruction: Solve this puzzle by drawing a square.
       sample1_instruction: |-
         Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r

@@ -1,0 +1,29 @@
+name 'SG v2 U3L03 Student Lesson Introduction'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 3 Lesson 03 - Creativity in Algorithms
+
+## Vocabulary
+
+* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer
+* **Iterate** - To repeat in order to achieve, or get closer to, a desired goal.
+* **Selection** - A generic term for a type of programming statement (usually an if-statement) that uses a Boolean condition to determine, or select, whether or not to run a certain block of statements.
+* **Sequencing** - Putting commands in correct order so computers can read the commands.
+
+## Lesson
+
+* Introduce the 'swap' command, new to the Human Machine Language
+* Design an algorithm for the "Min-to-Front" problem
+* Optionally try other algorithms
+
+## Resources
+
+* Activity Guide: [Human Machine Language - Part 2: Min To Front](https://docs.google.com/document/d/1l2XoaDmn0vYphlT_KS9_Yl7TVgoy6z310qUuUGGKbGg)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[KEY: Human Machine Language Part 2 - Min To Front](https://docs.google.com/document/d/1rprtSHQOBzx5vBIETrZrlJgoov5J_pfnF8Sgbm2i2sc)
+MARKDOWN

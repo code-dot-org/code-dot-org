@@ -1,0 +1,65 @@
+:ruby
+  topic_options = [
+    {
+      name: "topic_blocks_b",
+      label: hoc_s(:census_topics_blocks)
+    },
+    {
+      name: "topic_text_b",
+      label: hoc_s(:census_topics_text)
+    },
+    {
+      name: "topic_robots_b",
+      label: hoc_s(:census_topics_robots)
+    },
+    {
+      name: "topic_internet_b",
+      label: hoc_s(:census_topics_internet)
+    },
+    {
+      name: "topic_security_b",
+      label: hoc_s(:census_topics_security)
+    },
+    {
+      name: "topic_data_b",
+      label: hoc_s(:census_topics_data)
+    },
+    {
+      name: "topic_web_design_b",
+      label: hoc_s(:census_topics_web_design)
+    },
+    {
+      name: "topic_game_design_b",
+      label: hoc_s(:census_topics_game_design)
+    },
+    {
+      name: "topic_other_b",
+      label: hoc_s(:other_describe)
+    },
+    {
+      name: "topic_dont_know_b",
+      label: hoc_s(:dont_know)
+    }
+  ]
+
+.form-group
+  .census_followup_heading=hoc_s(:census_followup_heading)
+  - topic_options.each do |option|
+    .checkbox
+      %label
+        %input{name: option[:name], type: "checkbox", value: "1"}
+        =option[:label]
+
+.form-group
+  %label.control-label=hoc_s(:census_followup_frequency)
+  %select#frequency.form-control{name: "followup_frequency_s", type: "select"}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: "less_than_one"}=hoc_s(:less_than_one)
+    %option{value: "one_to_three"}=hoc_s(:one_to_three)
+    %option{value: "three_plus"}=hoc_s(:three_plus)
+    %option{value: "dont_know"}=hoc_s(:dont_know)
+
+.form-group
+  %label.control-label{for: "followup_more"}=hoc_s(:census_followup_more)
+  %div
+    %textarea#followup-more.form-control{name: "followup_more_s", type: "text_area", placeholder: hoc_s(:census_followup_more_placeholder), style: 'height: 5em;'}

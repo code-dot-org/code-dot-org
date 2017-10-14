@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-09-20T16:55:17.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Programming with Simple Commands",
+    "markdown_instructions": "Summarize your experiences with this first App Lab lesson by answering the following questions:\r\n\r\n\r\n* Were you able to be creative with such a limited set of tools?\r\n* What was most frustrating about this activity? If you could add one additional block, what would it be and why? What subgoal would that block achieve?",
+    "encrypted_solution": "WReOS28AlQ0oqY8VtKadiPGQM4PZWHlCE+m1nlH96dmHJMvuwjZWcoNdW3qB\n5bxtPl/mZGOO+l+duXo4/cg/TjgTXvK+BY2Iy4Ro4+jxwaKF9W8Pk7p2joey\n/jZTEwxdKA1WpzcHzoz7nQnsQ7/0rAHGfIVQ7uqypkJ07/h6hbfXGsW+CPAv\nMAImSBlUfm2O/BGb5NbaC+6/y/YwZiY7yhGe6FHKcJQSFlP8ZNZLyfEIwVVX\nzolrR/1yethfLeva18kg8751Ph02NTH4dYgdQxQq+qwew8DF24xWO0iOgkT5\neRm4kIFAeLYvRLNmLBvIP2HcF5KuBwM0Q/x6x8cSaS0urVpDUsieRHCeU87q\nC7Lpik9oVD7KoV6k7ILQwjiuXhW46vSB87P+F8wX+nO7a8bidXNafjxyhntR\nwgxDT91uV7ITQg+T5aDd4MlcWzpdpb9Ny/Xny3EMg4cMinIe/ALbx/qDgLwl\nQ6INaOi+J11vTBFH8QgG4A8iONTgJO/+Sv4mIV2kQHvdq2m4ehDvi0dapE8i\n65z5yjP5Pj9wud+Cf2lyftyUYzKmeTw/ods5MQWXVQ6LlR7IrGExkpXgLWLa\neJfIZEzzAUqpzPN4a4K2Ite2KwK+myl14MFbXSya0CMBL7uOitBe7XTKqEif\nI8789gM5ZE1qHVd0CWNFK2Q=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-20 16:55:28 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-02 17:19:08 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-09 21:28:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

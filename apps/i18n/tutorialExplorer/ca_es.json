@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Activitats per a diversos idiomes",
   "noTutorialsYourLanguage": "Hi ha activitats compatibles amb el teu idioma. Prova les activitats en altres llengües fent clic al botó de abaix.",
   "bottomGuidelinesLink": "Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
-  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students."
+  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

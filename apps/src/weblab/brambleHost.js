@@ -1,3 +1,5 @@
+import logToCloud from '../logToCloud';
+
 /* global requirejs */
 
 /**
@@ -335,7 +337,7 @@ function addFileCSS() {
   brambleProxy_.addNewFile({
     basenamePrefix: 'new',
     ext: 'css',
-    contents: 'body {\n  \n}',
+    contents: 'body {\n  background: white;\n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n}',
   }, err => {
     if (err) {
       throw err;
@@ -473,7 +475,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "//downloads.computinginthecore.org/bramble_0.1.18/index.html?disableExtensions=bramble-move-file",
+    url: "//downloads.computinginthecore.org/bramble_0.1.22/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,
@@ -566,7 +568,17 @@ function load(Bramble) {
 
   Bramble.once("error", function (err) {
     console.error("Bramble error", err);
-    alert("Fatal Error: " + err.message + ". If you're in Private Browsing mode, data can't be written.");
+
+    // Send to New Relic
+    logToCloud.addPageAction(logToCloud.PageAction.BrambleError, {
+      error: err && err.message
+    });
+
+    if (err && err.code === "EFILESYSTEMERROR") {
+      alert("Sorry, it looks like we cannot load this project because you are running low on disk space. Please clear some disk space and try again. If you still see errors, please contact support@code.org.");
+    } else {
+      alert("Fatal Error: " + err.message + ". If you're in Private Browsing mode, data can't be written.");
+    }
   });
 
   Bramble.on("readyStateChange", function (previous, current) {

@@ -821,12 +821,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 
+    user_storage_id = storage_id_for_user_id(@student.id)
+
     level = create :applab
     script_level = create :script_level, levels: [level]
-    ChannelToken.create!(level: level, user: @student) do |ct|
-      ct.channel = 'test_channel_id'
-      ct.storage_app_id = 1
-    end
+
+    create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
       script_id: script_level.script,
@@ -913,6 +913,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel.hidden'
 
     assert_equal @section, assigns(:section)
+    assert_nil assigns(:user)
+  end
+
+  test 'chooses section when teacher has multiple sections, but only one unhidden' do
+    @section.update!(hidden: true)
+    unhidden_section = create :section, user_id: @teacher.id
+
+    sign_in @teacher
+
+    get :show, params: {
+      script_id: @custom_script,
+      stage_position: @custom_stage_1.absolute_position,
+      id: @custom_s1_l1.position
+    }
+
+    assert_equal unhidden_section, assigns(:section)
     assert_nil assigns(:user)
   end
 

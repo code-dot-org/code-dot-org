@@ -46,6 +46,7 @@ class DslTest < ActiveSupport::TestCase
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }
@@ -96,6 +97,7 @@ level 'Level 3'
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }
@@ -165,6 +167,7 @@ endvariants
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }
@@ -333,6 +336,7 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }
@@ -376,6 +380,7 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }
@@ -423,6 +428,19 @@ DSL
     assert_equal true, output[:student_detail_progress_view]
   end
 
+  test 'can set has_verified_resources' do
+    input_dsl = <<DSL
+has_verified_resources 'true'
+
+stage 'Stage1'
+level 'Level 1'
+stage 'Stage2'
+level 'Level 2'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:has_verified_resources]
+  end
+
   test 'can set teacher_resources' do
     input_dsl = <<DSL
 teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
@@ -463,6 +481,7 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }
@@ -510,6 +529,7 @@ level 'Level 3'
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }
@@ -540,7 +560,10 @@ level 'Level 1'
 level 'Level 2'
 level 'Level 3', challenge: true
 level 'Level 4', target: true
-level 'Level 5'
+variants
+  level 'Level 5', challenge: true
+  level 'Level 5.1', active: false
+endvariants
 DSL
     expected = {
       id: nil,
@@ -552,7 +575,17 @@ DSL
             {stage: "Stage1", levels: [{name: "Level 2"}]},
             {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
             {stage: "Stage1", levels: [{name: "Level 4"}], properties: {target: true}},
-            {stage: "Stage1", levels: [{name: "Level 5"}]},
+            {
+              stage: "Stage1",
+              levels: [
+                {name: "Level 5"},
+                {name: "Level 5.1"},
+              ],
+              properties: {
+                variants: {"Level 5.1" => {active: false}},
+                challenge: true,
+              },
+            },
           ]
         }
       ],
@@ -566,6 +599,7 @@ DSL
       peer_reviews_to_complete: nil,
       teacher_resources: [],
       stage_extras_available: false,
+      has_verified_resources: false,
       project_widget_visible: false,
       project_widget_types: [],
     }

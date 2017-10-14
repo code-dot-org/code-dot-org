@@ -83,11 +83,11 @@ class CourseTest < ActiveSupport::TestCase
       course.update_scripts(['script1', 'script2'])
 
       course.reload
-      assert_equal 2, course.course_scripts.length
-      assert_equal 1, course.course_scripts[0].position
-      assert_equal 'script1', course.course_scripts[0].script.name
-      assert_equal 2, course.course_scripts[1].position
-      assert_equal 'script2', course.course_scripts[1].script.name
+      assert_equal 2, course.default_course_scripts.length
+      assert_equal 1, course.default_course_scripts[0].position
+      assert_equal 'script1', course.default_course_scripts[0].script.name
+      assert_equal 2, course.default_course_scripts[1].position
+      assert_equal 'script2', course.default_course_scripts[1].script.name
     end
 
     test "remove CourseScripts" do
@@ -99,9 +99,9 @@ class CourseTest < ActiveSupport::TestCase
       course.update_scripts(['script2'])
 
       course.reload
-      assert_equal 1, course.course_scripts.length
-      assert_equal 1, course.course_scripts[0].position
-      assert_equal 'script2', course.course_scripts[0].script.name
+      assert_equal 1, course.default_course_scripts.length
+      assert_equal 1, course.default_course_scripts[0].position
+      assert_equal 'script2', course.default_course_scripts[0].script.name
     end
   end
 
@@ -142,7 +142,8 @@ class CourseTest < ActiveSupport::TestCase
     summary = course.summarize
 
     assert_equal [:name, :id, :title, :description_short, :description_student,
-                  :description_teacher, :scripts, :teacher_resources], summary.keys
+                  :description_teacher, :scripts, :teacher_resources,
+                  :has_verified_resources], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -150,6 +151,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal 'Teacher description here', summary[:description_teacher]
     assert_equal 2, summary[:scripts].length
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
+    assert_equal false, summary[:has_verified_resources]
 
     # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
     assert_equal 'script1', summary[:scripts][0][:name]
@@ -160,41 +162,96 @@ class CourseTest < ActiveSupport::TestCase
     assert_nil summary[:scripts][0]['stageDescriptions']
   end
 
-  test "load_from_path" do
-    create(:script, name: 'script1')
-    create(:script, name: 'script2')
+  class SelectCourseScriptTests < ActiveSupport::TestCase
+    setup do
+      @course = create(:course, name: 'my-course')
 
-    serialization = {
-      name: 'this-course',
-      script_names: ['script1', 'script2'],
-      properties: {
-        teacher_resources: [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']],
-      }
-    }
+      @course_teacher = create :teacher
+      @course_section = create :section, user: @course_teacher, course: @course
+      @other_teacher = create :teacher
+      @other_section = create :section, user: @other_teacher
+      @student = create :student
 
-    File.stubs(:read).returns(serialization.to_json)
+      @script1 = create(:script, name: 'script1')
+      @script2 = create(:script, name: 'script2')
+      @script2a = create(:script, name: 'script2a')
+      @script3 = create(:script, name: 'script3')
 
-    Course.load_from_path('file_path')
+      create :course_script, course: @course, script: @script1, position: 1
 
-    course = Course.find_by_name!('this-course')
-    assert_equal 2, CourseScript.where(course: course).length
-    assert_equal course.teacher_resources, [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']]
+      @default_course_script = create :course_script, course: @course, script: @script2, position: 2
+      @alternate_course_script = create :course_script,
+        course: @course,
+        script: @script2a,
+        position: 2,
+        default_script: @script2,
+        experiment_name: 'my-experiment'
 
-    # can also change teacher_resources
-    serialization[:properties][:teacher_resources] = [['curriculum', '/link/to/curriculum']]
-    File.stubs(:read).returns(serialization.to_json)
-    Course.load_from_path('file_path')
+      create :course_script, course: @course, script: @script3, position: 3
+    end
 
-    course = Course.find_by_name!('this-course')
-    assert_equal [['curriculum', '/link/to/curriculum']], course.teacher_resources
+    test 'course script test data is properly initialized' do
+      assert_equal 'my-course', @course.name
+      assert_equal %w(script1 script2 script3), @course.default_scripts.map(&:name)
+      assert_equal %w(script2a), @course.alternate_course_scripts.map(&:script).map(&:name)
+    end
 
-    # can remove them completely
-    serialization[:properties] = {}
-    File.stubs(:read).returns(serialization.to_json)
-    Course.load_from_path('file_path')
+    test 'select default course script for teacher without experiment' do
+      assert_equal(
+        @default_course_script,
+        @course.select_course_script(@other_teacher, @default_course_script)
+      )
+    end
 
-    course = Course.find_by_name!('this-course')
-    assert_nil course.teacher_resources
+    test 'select alternate course script for teacher with experiment' do
+      create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
+      assert_equal(
+        @alternate_course_script,
+        @course.select_course_script(@other_teacher, @default_course_script)
+      )
+    end
+
+    test 'select default course script for student by default' do
+      assert_equal(
+        @default_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'select alternate course script for student when course teacher has experiment' do
+      create :follower, section: @course_section, student_user: @student
+      create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
+      assert_equal(
+        @alternate_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'select default course script for student when other teacher has experiment' do
+      create :follower, section: @other_section, student_user: @student
+      create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
+      assert_equal(
+        @default_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'select alternate course script for student with progress' do
+      create :user_script, user: @student, script: @script2a
+      assert_equal(
+        @alternate_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
+
+    test 'ignore progress if assigned to course teacher without experiment' do
+      create :follower, section: @course_section, student_user: @student
+      create :user_script, user: @student, script: @script2a
+      assert_equal(
+        @default_course_script,
+        @course.select_course_script(@student, @default_course_script)
+      )
+    end
   end
 
   test "valid_courses" do
@@ -202,12 +259,20 @@ class CourseTest < ActiveSupport::TestCase
     csp = create(:course, name: 'csp')
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
+    csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
     csd = create(:course, name: 'csd')
     create(:course, name: 'madeup')
 
     create(:course_script, position: 1, course: csp, script: csp1)
     create(:course_script, position: 2, course: csp, script: csp2)
+    create(:course_script,
+      position: 2,
+      course: csp,
+      script: csp2_alt,
+      experiment_name: 'csp2-alt-experiment',
+      default_script: csp2
+    )
     create(:course_script, position: 3, course: csp, script: csp3)
 
     courses = Course.valid_courses
@@ -231,6 +296,21 @@ class CourseTest < ActiveSupport::TestCase
 
     # has script_ids
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
+
+    # teacher without experiment has default script_ids
+    teacher = create(:teacher)
+    courses = Course.valid_courses(teacher)
+    assert_equal csp.id, courses[0][:id]
+    csp_assign_info = courses[0]
+    assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
+
+    # teacher with experiment has alternate script_ids
+    teacher_with_experiment = create(:teacher)
+    create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
+    courses = Course.valid_courses(teacher_with_experiment)
+    assert_equal csp.id, courses[0][:id]
+    csp_assign_info = courses[0]
+    assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
   end
 
   test "update_teacher_resources" do

@@ -22,7 +22,7 @@
   "filterTopicsHistory": "Nauki społeczne",
   "filterTopicsLa": "Sztuki języków",
   "filterTopicsArt": "Sztuka, Media, Muzyka",
-  "filterTopicsCsOnly": "Informatyka tylko",
+  "filterTopicsCsOnly": "Tylko Informatyka",
   "filterActivityType": "Rodzaj aktywności",
   "filterActivityTypeOnlineTutorial": "Samouczek",
   "filterActivityTypeLessonPlan": "Plan Lekcji",
@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Ukryj aktywności w wielu językach",
   "noTutorialsYourLanguage": "Nie ma żadnych aktywności w Twoim języku. Spróbuj aktywności w innych językach, klikając na przycisk poniżej.",
   "bottomGuidelinesLink": "Kliknij tutaj, aby zobaczyć nasze kryteria i wskazówki dla poradników w Godzinie Kodowania.",
-  "bottomSpecialNeedsLink": "Kliknij tutaj, aby uzyskać więcej informacji dotyczących wsparcia uczniów o specjalnych potrzebach."
+  "bottomSpecialNeedsLink": "Kliknij tutaj, aby uzyskać więcej informacji dotyczących wsparcia uczniów o specjalnych potrzebach.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

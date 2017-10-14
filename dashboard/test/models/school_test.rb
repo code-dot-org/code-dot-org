@@ -11,7 +11,7 @@ class SchoolTest < ActiveSupport::TestCase
     assert_equal(16, schools.size, 'test data contains 16 schools')
     assert_not_nil School.find_by(
       {
-        id: 10_000_500_871,
+        id: '010000500871',
         school_district_id: 100005,
         name: 'ALBERTVILLE HIGH SCH',
         city: 'ALBERTVILLE',

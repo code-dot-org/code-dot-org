@@ -36,7 +36,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 {img: '/images/testimonials/fit-150/students-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."'},
 {img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
-**General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
+**General applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** 
 
 If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
@@ -53,7 +53,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 ## <a name="overview"></a>Curriculum Resources and Features
 
-- [One-pager](/files/programs/CSP_1-pager_final.pdf) describing the course
+- [One-pager](/files/CSPrinciples_1-pager.pdf) describing the course
 - [2017 AP Endorsed Syllabus and Overview](/files/CSPSyllabusMay2017.pdf)
 - [Curriculum Guide](/files/CSP_CurriculumGuide_2017_forWeb.pdf) for teachers
 - [Course Materials List](#materials)

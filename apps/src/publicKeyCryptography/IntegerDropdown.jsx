@@ -7,19 +7,17 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 
-const IntegerDropdown = React.createClass({
-  propTypes: {
+export default class IntegerDropdown extends React.Component {
+  static propTypes = {
     className: PropTypes.string,
     value: PropTypes.number,
     options: PropTypes.arrayOf(PropTypes.number).isRequired,
     style: PropTypes.object,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired
-  },
+  };
 
-  onChange(selected) {
-    this.props.onChange(selected ? selected.value : null);
-  },
+  onChange = (selected) => this.props.onChange(selected ? selected.value : null);
 
   render() {
     let {className, value, options, style, disabled} = this.props;
@@ -34,7 +32,7 @@ const IntegerDropdown = React.createClass({
         style={style}
         disabled={disabled}
         onChange={this.onChange}
-      />);
+      />
+    );
   }
-});
-export default IntegerDropdown;
+}

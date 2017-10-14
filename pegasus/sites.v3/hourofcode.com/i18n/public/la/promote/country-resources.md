@@ -12,16 +12,31 @@ nav: promote_nav
 
 # Recursos
 
-## Vídeos <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
-<
+## ¿Qué hacemos cuando hacemos la Hora del Código?
 
-p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
+<div class="handout" style="width: 50%; float: left;">
+<a href="/la/files/hacemos-la-Hora-del-Codigo.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo.png"></a>
+<br/>En Español
+</div>
 
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
-<
+<div class="handout" style="width: 50%; float: left;">
+<a href="/la/files/hacemos-la-Hora-del-Codigo-Ingles.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo-Ingles.png"></a>
+<br/>En Inglés
+</div>
 
-p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+<div style="clear:both"></div>
+
+## Vídeos
+
+<br/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)</strong></a>
+
+<br/>
+<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
+<br/><a href="https://www.youtube.com/watch?v=_vq6Wpb-WyQ"><strong>La Hora del Código en Chile (2 min)</strong></a>
 
 <% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe>
 <

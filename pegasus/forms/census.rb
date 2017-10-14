@@ -9,6 +9,7 @@ class Census2017 < Form
     result[:role_s] = data[:role_s]
 
     result[:country_s] = data[:country_s]
+    result[:nces_school_s] = data[:nces_school_s]
     result[:school_type_s] = data[:school_type_s]
     result[:school_state_s] = data[:school_state_s]
     result[:school_district_id_s] = data[:school_district_id_s]
@@ -20,17 +21,11 @@ class Census2017 < Form
     result[:school_zip_s] = data[:school_zip_s]
     result[:school_full_address_s] = data[:school_full_address_s]
 
-    result[:cs_none_b] = data[:cs_none_b]
-    result[:hoc_some_b] = data[:hoc_some_b]
-    result[:hoc_all_b] = data[:hoc_all_b]
-    result[:after_school_some_b] = data[:after_school_some_b]
-    result[:after_school_all_b] = data[:after_school_all_b]
-    result[:ten_hr_some_b] = data[:ten_hr_some_b]
-    result[:ten_hr_all_b] = data[:ten_hr_all_b]
-    result[:twenty_hr_some_b] = data[:twenty_hr_some_b]
-    result[:twenty_hr_all_b] = data[:twenty_hr_all_b]
-    result[:other_course_b] = data[:other_course_b]
-    result[:cs_dont_know_b] = data[:cs_dont_know_b]
+    result[:hoc_s] = data[:hoc_s]
+    result[:after_school_s] = data[:after_school_s]
+    result[:ten_hours_s] = data[:ten_hours_s]
+    result[:twenty_hours_s] = data[:twenty_hours_s]
+    result[:other_cs_b] = data[:other_cs_b]
 
     result[:followup_frequency_s] = data[:followup_frequency_s]
     result[:followup_more_s] = stripped data[:followup_more_s]
@@ -43,10 +38,15 @@ class Census2017 < Form
     result[:topic_web_design_b] = data[:topic_web_design_b]
     result[:topic_game_design_b] = data[:topic_game_design_b]
     result[:topic_other_b] = data[:topic_other_b]
+    result[:topic_other_desc_s] = data[:topic_other_desc_s]
     result[:topic_dont_know_b] = data[:topic_dont_know_b]
 
     result[:pledge_b] = data[:pledge_b]
 
     result
+  end
+
+  def self.receipt
+    'census_form_receipt'
   end
 end

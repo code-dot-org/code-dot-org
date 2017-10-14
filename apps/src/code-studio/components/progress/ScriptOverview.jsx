@@ -12,6 +12,7 @@ import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
+import ScriptOverviewHeader from './ScriptOverviewHeader';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -42,45 +43,50 @@ const ScriptOverview = React.createClass({
 
   render() {
     const {
-      professionalLearningCourse,
+      onOverviewPage,
+      excludeCsfColumnInLegend,
+      teacherResources,
+      perLevelProgress,
+      scriptCompleted,
       scriptId,
       scriptName,
       scriptTitle,
+      professionalLearningCourse,
       viewAs,
       isRtl,
-      onOverviewPage,
-      excludeCsfColumnInLegend,
       sectionsInfo,
       currentCourseId,
-      teacherResources,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
     } = this.props;
 
     let scriptProgress = NOT_STARTED;
-    if (this.props.scriptCompleted) {
+    if (scriptCompleted) {
       scriptProgress = COMPLETED;
-    } else if (Object.keys(this.props.perLevelProgress).length > 0) {
+    } else if (Object.keys(perLevelProgress).length > 0) {
       scriptProgress = IN_PROGRESS;
     }
 
     return (
       <div>
         {onOverviewPage && (
-          <ScriptOverviewTopRow
-            sectionsInfo={sectionsInfo}
-            professionalLearningCourse={professionalLearningCourse}
-            scriptProgress={scriptProgress}
-            scriptId={scriptId}
-            scriptName={scriptName}
-            scriptTitle={scriptTitle}
-            currentCourseId={currentCourseId}
-            viewAs={viewAs}
-            isRtl={isRtl}
-            resources={teacherResources}
-            scriptHasLockableStages={scriptHasLockableStages}
-            scriptAllowsHiddenStages={scriptAllowsHiddenStages}
-          />
+          <div>
+            <ScriptOverviewHeader/>
+            <ScriptOverviewTopRow
+              sectionsInfo={sectionsInfo}
+              professionalLearningCourse={professionalLearningCourse}
+              scriptProgress={scriptProgress}
+              scriptId={scriptId}
+              scriptName={scriptName}
+              scriptTitle={scriptTitle}
+              currentCourseId={currentCourseId}
+              viewAs={viewAs}
+              isRtl={isRtl}
+              resources={teacherResources}
+              scriptHasLockableStages={scriptHasLockableStages}
+              scriptAllowsHiddenStages={scriptAllowsHiddenStages}
+            />
+          </div>
         )}
 
         <ProgressTable/>
@@ -91,6 +97,8 @@ const ScriptOverview = React.createClass({
     );
   }
 });
+
+export const UnconnectedScriptOverview = ScriptOverview;
 
 export default connect(state => ({
   perLevelProgress: state.progress.levelProgress,

@@ -97,11 +97,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Account Microsoft
+    clever: Clever Account
     forgot_password: Hai dimenticato la tua password?
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
     not_linked: Purtroppo il tuo account Code.org non è collegato al tuo %{provider}.
       Dovrai accedere digitando la password qui sotto.
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} studenti si sono già iscritti."
     teacher_count: "%{count} insegnanti si sono già iscritti."
@@ -197,8 +200,9 @@
     login: Accedi
     invalid_login: Accesso non valido, per favore riprova
     pair_programming: Sto lavorando in coppia
-    student_privacy: Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a>per
-      ulteriori informazioni sul perché non stai visualizzando il tuo nome completo.
+    student_privacy: Clicca <a href='%{student_privacy_blog}' target='_blank'>qui</a>
+      per ulteriori informazioni (in inglese) sul perché non stai visualizzando il
+      tuo nome completo.
   password:
     reset_form:
       title: Hai dimenticato la tua password?
@@ -227,12 +231,12 @@
     new_teacher_subject: Benvenuto su Code.org!
   section:
     your_section:
-      one: 'La tua sezione:'
+      one: 'La tua classe:'
       other: 'Le tue sezioni:'
     code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
-      remove: Sicuro di voler lasciare questa sezione?
-    remove: "(rimuovi sezione)"
+      remove: Sicuro di voler abbandonare questa classe?
+    remove: "(elimina classe)"
     type:
       picture: Password Immagine
       word: Parole Segrete
@@ -297,7 +301,7 @@
         gamelab: Crea un progetto Game Lab
         weblab: Crea un progetto Web Lab (beta)
       home: Home
-      my_dashboard: My Dashboard
+      my_dashboard: Home
       courses: Corsi
       course_catalog: Corsi
       project_gallery: Progetti
@@ -370,7 +374,8 @@
     students:
       dashboard: Vai al Cruscotto di controllo dell'insegnante
     user_not_found: Insegnante non trovato.
-    student_teacher_disassociated: Hai rimosso %{teacher_name} come tuo insegnante.
+    student_teacher_disassociated: Hai abbandonato la classe %{section_code} con l'insegnante
+      %{teacher_name}.
     panel:
       answer_viewer: Pannello insegnante
       student: Studente
@@ -612,8 +617,8 @@
     student_not_found: Non sono stati trovati uno o più studenti.
     all_students_must_be_in_current_section: Tutti gli studenti da spostare devono
       appartenere alla tua classe.
-    already_enrolled_in_new_section: Non è possibile spostare questi studenti perché
-      questo insegnante li ha già in un'altra sezione.
+    already_enrolled_in_new_section: Non puoi spostare questi studenti perché appartengono
+      già ad una classe di questo insegnante.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -823,7 +828,7 @@
       body: Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali
         usando un mazzo di carte.
     widgets:
-      title: Widgets
+      title: Widget
       body: Students can explore concepts from our Computer Science Principles course
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
@@ -1011,6 +1016,7 @@
     rename: Rinomina
     save: Salva
     delete: Elimina
+    import: Import
     exit: Ritorna al corso
     my_projects: Collezione Privata
     project_gallery: Progetti
@@ -1055,6 +1061,9 @@
     click_to_remix: Clicca su 'Rimescola' per ottenere una tua copia da cambiare a
       piacere!
     edit_project: Modifica progetto
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Questo progetto è stato segnalato per una violazione dei <a href='http://code.org/tos'>
         Termini di servizio</a> di Code.org e non può essere condiviso con altri.
@@ -1122,6 +1131,10 @@
     optional_stages: Optional Stages
     main_course: Corso principale
     extra_course_content: Extra Course Content
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
@@ -1289,4 +1302,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Corsi Completi

@@ -3,27 +3,21 @@ import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import Dialog from '../templates/Dialog';
 
-const StartOverButton = React.createClass({
-  propTypes: {
+export default class StartOverButton extends React.Component {
+  static propTypes = {
     onClick: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {confirming: false};
-  },
+  state = {confirming: false};
 
-  confirm() {
-    this.setState({confirming: true});
-  },
+  confirm = () => this.setState({confirming: true});
 
-  onConfirm() {
+  onConfirm = () => {
     this.props.onClick();
     this.setState({confirming: false});
-  },
+  };
 
-  onCancel() {
-    this.setState({confirming: false});
-  },
+  onCancel = () => this.setState({confirming: false});
 
   render() {
     return (
@@ -42,7 +36,7 @@ const StartOverButton = React.createClass({
           onConfirm={this.onConfirm}
           onCancel={this.onCancel}
         />
-      </span>);
+      </span>
+    );
   }
-});
-export default StartOverButton;
+}

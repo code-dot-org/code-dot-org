@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2017-09-29T18:50:30.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "video_key": "applab_hoc_designmode",
+    "instructions_important": "false",
+    "display_name": "Sneak Peak of Design Mode",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-29 18:46:40 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:47:17 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:48:17 +0000\",\"changed\":[\"markdown_instructions\",\"display_name\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:49:12 +0000\",\"changed\":[\"markdown_instructions\",\"display_name\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:49:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:50:48 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 18:51:32 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 19:02:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 20:49:23 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-09-29 20:49:44 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

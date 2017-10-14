@@ -9,6 +9,18 @@ class DevelopersTopicTest < Minitest::Test
       assert_equal 'someone', DevelopersTopic.dotd
     end
 
+    it 'returns the dotd even if not "@" mentioned' do
+      Slack.stubs(:get_topic).returns('DOTD: someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_equal 'someone', DevelopersTopic.dotd
+    end
+
+    it 'handles usernames with a period in them' do
+      Slack.stubs(:get_topic).returns('DOTD: @erin.bond; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_equal 'erin.bond', DevelopersTopic.dotd
+    end
+
     it 'raises an exception if topic is malformed' do
       Slack.stubs(:get_topic).returns('DTS: yes; DTT: yes; DTP: yes; DTL: yes')
 
@@ -173,7 +185,7 @@ class DevelopersTopicTest < Minitest::Test
     it 'sets DTT message' do
       Slack.stubs(:get_topic).returns('DOTD: @someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
       Slack.expects(:update_topic).with(
-        'developers',
+        'deploy-status',
         'DOTD: @someone; DTS: yes; DTT: no; DTP: yes; DTL: yes'
       )
       DevelopersTopic.set_dtt('no')
@@ -190,7 +202,7 @@ class DevelopersTopicTest < Minitest::Test
     it 'sets DTP message' do
       Slack.stubs(:get_topic).returns('DOTD: @someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
       Slack.expects(:update_topic).with(
-        'developers',
+        'deploy-status',
         'DOTD: @someone; DTS: yes; DTT: yes; DTP: no; DTL: yes'
       )
       DevelopersTopic.set_dtp('no')
@@ -207,7 +219,7 @@ class DevelopersTopicTest < Minitest::Test
     it 'sets DTL message' do
       Slack.stubs(:get_topic).returns('DOTD: @someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
       Slack.expects(:update_topic).with(
-        'developers',
+        'deploy-status',
         'DOTD: @someone; DTS: yes; DTT: yes; DTP: yes; DTL: no'
       )
       DevelopersTopic.set_dtl('no')

@@ -2148,6 +2148,27 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "last_joined_section returns the most recently joined section" do
+    student = create :student
+    teacher = create :teacher
+
+    section_1 = create :section, user_id: teacher.id
+    section_2 = create :section, user_id: teacher.id
+    section_3 = create :section, user_id: teacher.id
+
+    Timecop.freeze do
+      assert_equal nil, student.last_joined_section
+      Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
+      assert_equal section_1, student.last_joined_section
+      Timecop.travel 1
+      Follower.create!(section_id: section_3.id, student_user_id: student.id, user: teacher)
+      assert_equal section_3, student.last_joined_section
+      Timecop.travel 1
+      Follower.create!(section_id: section_2.id, student_user_id: student.id, user: teacher)
+      assert_equal section_2, student.last_joined_section
+    end
+  end
+
   test 'clear_user removes all PII and other information' do
     user = create :teacher
 
@@ -2210,6 +2231,29 @@ class UserTest < ActiveSupport::TestCase
       },
       @student.summarize
     )
+  end
+
+  test 'stage_extras_enabled?' do
+    script = create :script
+    other_script = create :script
+    teacher = create :teacher
+    student = create :student
+
+    section1 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section1.add_student(student)
+    section2 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section2.add_student(student)
+    section3 = create :section, stage_extras: true, script_id: other_script.id
+    section3.add_student(teacher)
+
+    assert student.stage_extras_enabled?(script)
+    refute student.stage_extras_enabled?(other_script)
+
+    assert teacher.stage_extras_enabled?(script)
+    refute teacher.stage_extras_enabled?(other_script)
+
+    refute (create :student).stage_extras_enabled?(script)
+    refute (create :teacher).stage_extras_enabled?(script)
   end
 
   class HiddenIds < ActiveSupport::TestCase

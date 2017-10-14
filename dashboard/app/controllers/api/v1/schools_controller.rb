@@ -10,11 +10,8 @@ class Api::V1::SchoolsController < ApplicationController
 
   # GET /dashboardapi/v1/schoolsearch/:q/:limit
   def search
-    limit = [40, Integer(params[:limit])].min
-    schools = School.where("name LIKE ?", "%#{params[:q]}%").order(:name).limit(limit)
-    serialized_schools = schools.map do |school|
-      Api::V1::SchoolAddressSerializer.new(school).attributes
-    end
-    render json: serialized_schools
+    query = params.require(:q)
+    limit = [1, [40, Integer(params[:limit])].min].max
+    render json: Api::V1::SchoolAutocomplete.instance.get_matches(query, limit)
   end
 end

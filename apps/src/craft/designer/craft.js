@@ -314,7 +314,7 @@ Craft.init = function (config) {
 
         dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
-        $('#soft-buttons').hide();
+        Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
         const onDrag = function (e) {
@@ -390,10 +390,10 @@ Craft.init = function (config) {
 };
 
 const directionToFacing = {
-  upButton: FacingDirection.Up,
-  downButton: FacingDirection.Down,
-  leftButton: FacingDirection.Left,
-  rightButton: FacingDirection.Right,
+  upButton: FacingDirection.North,
+  downButton: FacingDirection.South,
+  leftButton: FacingDirection.West,
+  rightButton: FacingDirection.East,
 };
 
 Craft.onArrowButtonDown = function (e, btn) {
@@ -570,6 +570,16 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   return ['allAssetsMinusPlayer'];
 };
 
+Craft.hideSoftButtons = function () {
+  $('#soft-buttons').hide();
+  studioApp().resizePinnedBelowVisualizationArea();
+};
+
+Craft.showSoftButtons = function () {
+  $('#soft-buttons').show();
+  studioApp().resizePinnedBelowVisualizationArea();
+};
+
 /**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first true if first reset
@@ -579,7 +589,7 @@ Craft.reset = function (first) {
     return;
   }
   if (Craft.level.usePlayer) {
-    $('#soft-buttons').hide();
+    Craft.hideSoftButtons();
   }
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
@@ -605,7 +615,7 @@ Craft.runButtonClick = function () {
   }
 
   if (Craft.level.usePlayer) {
-    $('#soft-buttons').show();
+    Craft.showSoftButtons();
   }
 
   var runButton = document.getElementById('runButton');
@@ -721,10 +731,10 @@ Craft.executeUserCode = function () {
     },
     moveDirection: function (direction, targetEntity, blockID) {
       const dirStringToDirection = {
-        up: FacingDirection.Up,
-        down: FacingDirection.Down,
-        left: FacingDirection.Left,
-        right: FacingDirection.Right,
+        up: FacingDirection.North,
+        down: FacingDirection.South,
+        left: FacingDirection.West,
+        right: FacingDirection.East,
       };
       appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
           dirStringToDirection[direction], targetEntity);
@@ -769,7 +779,7 @@ Craft.executeUserCode = function () {
 
   CustomMarshalingInterpreter.evalWith(code, evalApiMethods, {legacy: true});
   appCodeOrgAPI.startAttempt(function (success) {
-    $('#soft-buttons').hide();
+    Craft.hideSoftButtons();
     if (Craft.level.freePlay) {
       return;
     }

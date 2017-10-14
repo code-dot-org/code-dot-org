@@ -10,6 +10,7 @@ import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
+  const stageLevelData = scriptEditorData.stageLevelData;
   const stages = (scriptData.stages || []).filter(stage => stage.id).map(stage => ({
     position: stage.position,
     flex_category: stage.flex_category,
@@ -53,7 +54,9 @@ export default function initPage(scriptEditorData) {
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
         teacherResources={teacherResources}
-        stageExtrasAvailable={scriptData.stage_extras_available}
+        stageExtrasAvailable={!!scriptData.stage_extras_available}
+        stageLevelData={stageLevelData}
+        hasVerifiedResources={scriptData.has_verified_resources}
       />
     </Provider>,
     document.querySelector('.edit_container')

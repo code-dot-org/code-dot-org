@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
-import FindLocalClassBanner from './FindLocalClassBanner';
+import {LocalClassActionBlock} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
 import Responsive from '../../responsive';
@@ -38,7 +38,7 @@ class CoursesStudentEnglish extends Component {
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
 
-        <FindLocalClassBanner
+        <LocalClassActionBlock
           isRtl={isRtl}
           responsive={responsive}
         />
