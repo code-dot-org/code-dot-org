@@ -3,6 +3,7 @@ import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
 import shapes from './shapes';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -68,11 +69,13 @@ export const styles = {
   },
   sectionCodeCol: {
     lineHeight: '52px',
+    whiteSpace: 'nowrap',
     width: 135,
     borderRightWidth: 0,
   },
   sectionCodeColRtl: {
     lineHeight: '52px',
+    whiteSpace: 'nowrap',
     width: 210
   },
   leaveCol: {
@@ -206,7 +209,9 @@ const SectionsTable = React.createClass({
                 </td>
               )}
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
-                {section.code}
+                {section.login_type === SectionLoginType.clever ? i18n.loginTypeClever() :
+                    section.login_type === SectionLoginType.google_classroom ? i18n.loginTypeGoogleClassroom() :
+                        section.code}
               </td>
               {!isTeacher && canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
