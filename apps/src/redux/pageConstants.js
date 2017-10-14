@@ -33,7 +33,7 @@ var ALLOWED_KEYS = new Set([
   'isDroplet',
   'isBlockly',
   'isMinecraft',
-  'useAgent',
+  'runButtonText',
   'visualizationHasPadding',
   'visualizationInWorkspace',
   'hideCoordinateOverlay',
