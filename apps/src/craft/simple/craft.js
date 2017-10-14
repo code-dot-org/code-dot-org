@@ -520,15 +520,6 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   }
 };
 
-/** Folds array B on top of array A */
-Craft.foldInArray = function (arrayA, arrayB) {
-  for (var i = 0; i < arrayA.length; i++) {
-    if (arrayB[i] !== '') {
-      arrayA[i] = arrayB[i];
-    }
-  }
-};
-
 Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
   var planesToCustomize = [levelConfig.groundPlane, levelConfig.actionPlane];
   planesToCustomize.forEach(function (plane) {
