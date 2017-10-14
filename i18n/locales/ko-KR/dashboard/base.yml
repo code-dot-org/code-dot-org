@@ -84,10 +84,12 @@ ko:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: '마이크로소프트 계정'
+    clever: 'Clever Account'
     forgot_password: '비밀번호를 잊으셨나요?'
     need_confirmation: "확인 메일을 받지 못 했나요?"
     need_unlock: "잠김 해제 메일을 받지 못 했나요?"
     not_linked: "죄송합니다. 여러분의 Code.org 계정이 %{provider}로 연결되어있지 않습니다. 아래에 비밀번호를 입력해서 로그인을 먼저 해주세요."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} 학생 들은 이미 가입했습니다.'
     teacher_count: '%{count} 선생님들은 이미 가입했습니다.'
@@ -253,10 +255,10 @@ ko:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "홈"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "대시보드"
       courses: "courses"
       course_catalog: "Course Catalog"
-      project_gallery: "프로젝트 갤러리"
+      project_gallery: "프로젝트"
       sections: "섹션"
       help_support: "도움말 및 지원"
       report_bug: "Report bug"
@@ -750,9 +752,10 @@ ko:
     rename: "이름 바꾸기"
     save: "저장"
     delete: "삭제"
+    import: "Import"
     exit: "코스로 돌아가기"
     my_projects: "내 프로젝트"
-    project_gallery: "프로젝트 갤러리"
+    project_gallery: "프로젝트"
     publish: "발행하기"
     unpublish: "발행취소하기"
     share: "공유하기"
@@ -783,6 +786,7 @@ ko:
     remix: '리믹스'
     click_to_remix: "자신만의 버전을 만들고 싶으시면 \"Remix\"를 클릭하세요!"
     edit_project: '프로젝트 편집'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "이 프로젝트는 Code.org의 <a href='http://code.org/tos'>이용 약관</a>을 위반하였습니다. 이 프로젝트는 다른 사람과 공유할 수 없습니다."
       policy_violation: "이 프로젝트는 다른 사람과 공유할 수 없는 정보를 포함하고 있습니다. 애플리케이션의 내용을 수정하려면 그 애플리케이션의 소유자에게 문의하세요."
@@ -835,6 +839,10 @@ ko:
     optional_stages: 'Optional Stages'
     main_course: '메인 코스'
     extra_course_content: '추가 코스 내용'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: '1 장: 문제 해결 과정'
     csd1_2: '2 장: 컴퓨터와 문제 해결'
     csd2_1: '1 장: 웹 콘텐츠 및 HTML'

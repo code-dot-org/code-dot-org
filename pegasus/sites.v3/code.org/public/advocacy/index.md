@@ -69,14 +69,17 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.cccoe.k12.ca.us/index.html">Contra Costa County Office of Education</a>
 * <a href="http://cs4tx.org/">CS4TX</a>
 * <a href="http://csta.acm.org/">CSTA</a>
+* <a href="http://cstanj.org/">CSTA New Jersey</a>
 * <a href="https://sites.google.com/a/csta-hq.org/new-mexico/">CSTA-New Mexico</a>
 * <a href="https://cyberinnovationcenter.org/">Cyber Innovation Center</a>
-* <a href="https://www.google.com/edu/">Google</a>
+* <a href="https://eisca.org/">Elementary Institute of Science</a>
 * <a href="http://expandingcomputing.cs.umass.edu/">Expanding Computing Education Pathways (ECEP)</a>
 * <a href="https://www.facebook.com/facebookdiversity">Facebook</a>
+* <a href="https://www.google.com/edu/">Google</a>
 * <a href="https://www.ieee.org/index.html">IEEE</a>
 * <a href="https://www.illinoistech.org/">Illinois Technology Association</a>
 * <a href="http://www.kctechcouncil.com/">KC Tech Council</a>
+* <a href="http://csmatters.org/">Maryland Center for Computing Education</a>
 * <a href="http://masscan.net/">MassCAN</a>
 * <a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/"_blank">Microsoft</a>
 * <a href="https://technologycouncil.com/">Nashville Technology Council</a>
@@ -87,6 +90,8 @@ For more information, please contact advocacy@code.org.
 * <a href="https://nmtechcouncil.org/">New Mexico Technology Council</a>
 * <a href="http://www.osc.org/">Orlando Science Center</a>
 * <a href="http://philadelphiapact.com/">Philadelphia Alliance for Capital and Technologies</a>
+* <a href="https://www.pluralsight.com/one">Pluralsight</a>
+* <a href="http://www.ruraltechfund.org">Rural Technology Fund</a>
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a>
@@ -96,6 +101,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.talklou.com/wp/">Technology Association of Louisville Kentucky</a>
 * <a href="http://www.techoregon.org/">Technology Association of Oregon</a>
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
+* <a href="https://udtonline.com/portfolio-item/education/">United Data Technologies</a>
 * <a href="http://www.washingtonstem.org/">Washington STEM</a>
 
 [#tools-section]

@@ -84,10 +84,12 @@ id:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Akun Microsoft'
+    clever: 'Clever Account'
     forgot_password: 'Lupa kata sandi?'
     need_confirmation: "Tidak menerima instruksi konfirmasi?"
     need_unlock: "Tidak menerima instruksi untuk membuka?"
     not_linked: "Maaf, akun Code.org Anda tidak ditautkan ke %{provider} Anda. Anda harus masuk dengan mengetikkan kata sandi Anda di bawah ini."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} Pelajar telah mendaftar.'
     teacher_count: '%{count} Pengajar telah mendaftar.'
@@ -254,7 +256,7 @@ id:
       my_dashboard: "My Dashboard"
       courses: "Kursus"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "Proyek"
       sections: "Sesi"
       help_support: "Bantuan dan dukungan"
       report_bug: "Laporkan bug"
@@ -748,9 +750,10 @@ id:
     rename: "Ubah Nama"
     save: "Simpan"
     delete: "Hapus"
+    import: "Import"
     exit: "Kembali ke Kursus"
     my_projects: "Project Saya"
-    project_gallery: "Project Gallery"
+    project_gallery: "Proyek"
     publish: "Publikasikan"
     unpublish: "Tidak dipublikasikan"
     share: "Bagikan"
@@ -781,6 +784,7 @@ id:
     remix: 'Remix'
     click_to_remix: "Klik 'Remix' untuk mematikan putaran versi Anda sendiri!"
     edit_project: 'Sunting Proyek'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Proyek ini telah dilaporkan atas pelanggaran<a href='http://code.org/tos'> Syarat Layanan</a> Code.org dan tidak dapat dibagikan kepada orang lain."
       policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
@@ -833,6 +837,10 @@ id:
     optional_stages: 'Optional Stages'
     main_course: 'Kursus Utama'
     extra_course_content: 'Isi Kursus Tambahan'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

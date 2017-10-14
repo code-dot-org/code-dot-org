@@ -84,7 +84,7 @@
   make_app: "Fai un'app"
   congrats_guest_speaker_title: "Trova un relatore da ospitare per la tua classe"
   congrats_guest_speaker_desc: "Ora che i tuoi studenti hanno finito un corso di informatica, considera l'idea di festeggiare e di fare collegamenti con cose che possono creare nel mondo reale invitando un ospite d'onore per la tua classe. Puoi usare la nostra mappa di volontari per contattare volontari in zona per visitare la tua classe, oppure cerca in qualsiasi citta' per trovare studenti di informatica o professionisti pronti ad ispirare i tuoi studenti da remoto, tramite video chat."
-  congrats_guest_speaker_cta: "Trova un ospite parlante"
+  congrats_guest_speaker_cta: "Trova testimonial (USA)"
   congrats_third_party_title: "Usa la tua nuova abilità con queste app e siti"
   third_party_gradelevel_kto8: "Classi K-8"
   third_party_gradelevel_kto2: "Classi K-2"
@@ -361,6 +361,7 @@
   homepage_slot_text_link_buy: "Fatti coinvolgere"
   homepage_slot_text_link_donate: "Fai una donazione"
   homepage_slot_text_link_shop: "T-shirts, cappellini & altro"
+  homepage_slot_text_link_administrators: "Bring to your school or district"
   homepage_header_codestudio: "Creazioni degli studenti di Code Studio"
   homepage_header_donors: "Code.org ringrazia i suoi sostenitori"
   homepage_donors_seall: "Mostra tutto"
@@ -488,10 +489,10 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno un''Ora di Codice nelle loro classi quest''anno: 7-13 Dicembre 2015. Hanno bisogno del tuo aiuto! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} insegnanti cercano volontari appassionati di formazione informatica per aiutarli nella loro Ora del Codice questo Dicembre.<br>%{num_volunteers} volontari hanno aderito. Unisciti a loro."
   volunteer_engineer_submission_intro_background: "L'Ora del Codice è un movimento globale per far provare un'ora di introduzione all'informatica, che raggiunge decine di milioni di studenti in più di 180 nazioni. Partecipa durante la Settimana di Educazione all'Informatica, dal 7-13 Dicembre 2015."
-  volunteer_engineer_submission_intro_recruit: 'Questi insegnanti cercano <span style="font-family: ''Gotham 7r'', sans-serif;"> appassionati di formazione informatica</span> che possano aiutare in classe, o qualcuno che possa <span style="font-family: ''Gotham 7r'', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità dell''informatica (che potrebbe essere fatto con una chat video). Se non siete in cerca di volontari, <a href="%{url}"> impara</a> come organizzare il tuo evento dell''Ora del Codice.'
+  volunteer_engineer_submission_intro_recruit: 'Gli insegnanti cercano <span style="font-family: ''Gotham 7r'', sans-serif;"> appassionati di formazione informatica</span> che possano aiutare in classe, o qualcuno che possa <span style="font-family: ''Gotham 7r'', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità dell''informatica (che potrebbe essere fatto con una chat video).'
   volunteer_engineer_submission_intro_guide: "Scopri di più sul nostro <a href=\"%{volunteer_guide}\">programma volontari</a>."
   volunteer_engineer_submission_intro_signup: "Compila i campi sottostanti se sei uno studente di informatica o uno sviluppatore professionista. I campi contrassegnati con un <span class=\"form-required-field\">*</span> sono obbligatori."
-  volunteer_engineer_submission_intro_links: "Non vuoi offrirti volontario? <a href=\"%{learn_more}\">Scopri di più</a> riguardo organizzare il tuo evento dell' Ora del Codice e trova un volontario locale sulla nostra <a href=\"%{volunteer_local}\">Mappa Volontari</a>."
+  volunteer_engineer_submission_intro_links: "Sei un insegnante in cerca di volontari? Trova un volontario locale sulla nostra <a href=\"%{volunteer_local}\">Mappa Volontari</a> (solo per gli USA)."
   volunteer_engineer_submission_update_information: "Aggiorna le tue informazioni"
   volunteer_engineer_submission_header_shared: "Informazioni condivise con gli insegnanti sulla mappa dei volontari"
   volunteer_engineer_submission_field_name: "Nome"
@@ -705,7 +706,7 @@
   dashboard_students_reset_secret: "Reimposta la password"
   dashboard_students_reset_password: "Reimposta la password"
   dashboard_students_share_section: "Condividi la pagina di accesso di questa classe con i tuoi studenti:"
-  dashboard_students_share_section_secondary: 'In alternativa, condividi con i tuoi studenti il riferimento alla pagina di questa sezione:'
+  dashboard_students_share_section_secondary: 'In alternativa, condividi con i tuoi studenti il link alla pagina di login della classe:'
   dashboard_students_print_info: "Stampa le schede con le informazioni di accesso dei tuoi studenti."
   dashboard_students_secret_picture_title: "Immagine segreta"
   dashboard_students_secret_picture: "Questa classe utilizza un'<b>immagine</b> come tipo di accesso.  Vuol dire che ognuno dei tuoi studenti ha un'immagine segreta, che usa come password per accedere.  Gli studenti devono prima accedere alla pagina web sopra indicata, poi selezionare il proprio nome ed infine scegliere la loro immagine segreta."
@@ -920,8 +921,8 @@
   coursef-draft_name: Corso F
   coursef_name: "Corso F"
   accelerated_name: "Corso rapido"
-  express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
+  express_name: "Corso Rapido"
+  pre-express_name: Corso Rapido pre-scolare
   cspunit1_name: I principi dell'informatica - Unità 1
   cspunit2_name: I principi dell'informatica - Unità 2
   cspunit3_name: I principi dell'informatica - Unità 3
@@ -937,6 +938,8 @@
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -958,12 +961,12 @@
   starwarsblocks_name: "Guerre Stellari (Blocchi)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Crittografia semplice
   text-compression_name: Text Compression
   math_category_name: "Matematica"
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Fondamenti d'informatica"
-  csf_international_category_name: "CS Fundamentals International"
+  csf_international_category_name: "Fondamenti di Informatica (in Italiano)"
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
   csd_category_name: "CS Discoveries"
   csp_category_name: "I principi dell'informatica"
@@ -1387,7 +1390,7 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Home"
-  header_my_dashboard: "My Dashboard"
+  header_my_dashboard: "Home"
   header_courses: "Corsi"
   header_course_catalog: "Corsi"
   header_project_gallery: "Progetti"
@@ -1425,11 +1428,35 @@
   header_documentation: "Documentazione"
   csp_name: "'16-'17 principi d'informatica"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Corsi Completi"
   user_header_label: "Ciao %{username}"
   user_header_settings: "Il mio account"
   user_header_logout: "Esci"
   user_header_signin: "Accedi"
-  view_all_sections: "View All Sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
+  view_all_sections: "Mostra tutte le classi"
+  view_section: "Mostra Classe"
+  view_named_section: "Mostra %{section_name}"
+  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
+  signing_in: "Signing In"
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
+  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
+  sign_in_instruct_name: "Choose their display name."
+  sign_in_instruct_secret: "Choose their secret %{secret}."
+  sign_in_instruct_button: "Click the “Sign in” button."
+  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
+  reset_student_password: "Resetting student passwords"
+  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
+  login_cards: "Login Cards"
+  print_login_cards: "Print login cards"
+  joining_section: "Joining your section (one-time only)"
+  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: "Sign in to their Code.org account."
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
+  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
+  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
+  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
+  syncing_students: "Syncing your students"
+  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'

@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Skrij aktivnosti v drugih jezikih",
   "noTutorialsYourLanguage": "Žal nobena aktivnost ni podprta v vašem jeziku. Poskusi aktivnosti v drugih jezikih z klikom na gumb spodaj.",
   "bottomGuidelinesLink": "Kliknite tukaj za prikaz kriterijev in navodil za prispevanje k vadnicam Ura za kodo.",
-  "bottomSpecialNeedsLink": "Kliknite tukaj za več informacij o podpori za učence s posebnimi potrebami."
+  "bottomSpecialNeedsLink": "Kliknite tukaj za več informacij o podpori za učence s posebnimi potrebami.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

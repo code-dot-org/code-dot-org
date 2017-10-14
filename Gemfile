@@ -111,6 +111,7 @@ gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
 
+gem 'gctools'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -261,3 +262,6 @@ gem 'image_size', require: false
 
 # Auto strip model attributes before validation (opt in)
 gem 'auto_strip_attributes', '~> 2.1'
+
+# Used to sort UTF8 strings properly
+gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'

@@ -9,6 +9,10 @@ module GitHub
   REPO = "code-dot-org/code-dot-org".freeze
   DASHBOARD_DB_DIR = 'dashboard/db/'.freeze
   PEGASUS_DB_DIR = 'pegasus/migrations/'.freeze
+  STAGING_BRANCH = 'staging'.freeze
+  STATUS_SUCCESS = 'success'.freeze
+  STATUS_FAILURE = 'failure'.freeze
+  STATUS_CONTEXT = 'DTS'.freeze
 
   # Configures Octokit with our GitHub access token.
   # @raise [RuntimeError] If CDO.github_access_token is not defined.
@@ -153,6 +157,52 @@ module GitHub
       system "sensible-browser \"#{url}\""
     else
       system "open \"#{url}\""
+    end
+  end
+
+  def self.set_dts_check_pass(pull)
+    Octokit.create_status(
+      pull['base']['repo']['full_name'],
+      pull['head']['sha'],
+      STATUS_SUCCESS,
+      context: STATUS_CONTEXT,
+      description: 'The staging branch is open.'
+    )
+  end
+
+  def self.set_all_dts_check_pass
+    configure_octokit
+    Octokit.pulls(REPO, base: STAGING_BRANCH)
+    paged_for_each(Octokit.last_response) do |pull|
+      set_dts_check_pass(pull)
+    end
+  end
+
+  def self.set_dts_check_fail(pull)
+    Octokit.create_status(
+      pull['base']['repo']['full_name'],
+      pull['head']['sha'],
+      STATUS_FAILURE,
+      context: STATUS_CONTEXT,
+      description: 'The staging branch is closed. Check #developers.'
+    )
+  end
+
+  def self.set_all_dts_check_fail
+    configure_octokit
+    Octokit.pulls(REPO, base: STAGING_BRANCH)
+    paged_for_each(Octokit.last_response) do |pull|
+      set_dts_check_fail(pull)
+    end
+  end
+
+  # Iterate over a paged resource, given the first response
+  def self.paged_for_each(response)
+    loop do
+      resources = response.data
+      resources.each {|resource| yield(resource)}
+      break unless response.rels[:next]
+      response = response.rels[:next].get
     end
   end
 end

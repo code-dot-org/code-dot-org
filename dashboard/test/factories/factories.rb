@@ -113,19 +113,16 @@ FactoryGirl.define do
         end
       end
       # Creates a teacher optionally enrolled in a workshop,
-      # joined the workshop section,
       # or marked attended on either all (true) or a specified list of workshop sessions.
       factory :pd_workshop_participant do
         transient do
           workshop nil
           enrolled true
-          in_section false
           attended false
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|
@@ -313,6 +310,10 @@ FactoryGirl.define do
 
   factory :applab, parent: :level, class: Applab do
     game {Game.applab}
+
+    trait :with_autoplay_video do
+      video_key {create(:video).key}
+    end
   end
 
   factory :free_response, parent: :level, class: FreeResponse do
@@ -546,13 +547,12 @@ FactoryGirl.define do
   end
 
   factory :peer_review do
-    submitter {create :user}
+    submitter {create :teacher}
     from_instructor false
     script {create :script}
     level {create :level}
     level_source {create :level_source}
     data "MyText"
-
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
     end
@@ -713,7 +713,7 @@ FactoryGirl.define do
 
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {School.maximum(:id) + 1}
+    id {(School.maximum(:id).to_i + 1).to_s}
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -724,7 +724,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {School.maximum(:id) + 1}
+    id {(School.maximum(:id).to_i + 1).to_s}
     name "A seattle charter school"
     city "Seattle"
     state "WA"
@@ -739,8 +739,20 @@ FactoryGirl.define do
     group 1
   end
 
+  factory :regional_partner_program_manager do
+    regional_partner {create :regional_partner}
+    program_manager {create :teacher}
+  end
+
   factory :regional_partners_school_district do
     association :school_district
     association :regional_partner
+  end
+
+  factory :channel_token do
+    # Note: This creates channel_tokens where the channel is NOT an accurately
+    # encrypted version of storage_app_id/app_id
+    storage_app_id 1
+    storage_id 2
   end
 end

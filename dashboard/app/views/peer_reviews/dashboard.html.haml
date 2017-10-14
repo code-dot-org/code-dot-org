@@ -1,0 +1,5 @@
+- @page_title = 'Peer Review Dashboard'
+%h1
+  Peer Review Dashboard
+%div#dashboard-container
+%script{src: minifiable_asset_path('js/peer_reviews/dashboard.js'), data: {courseList: @course_list.to_json, courseUnitMap: @course_unit_map.to_json}}

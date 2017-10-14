@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import experiments from '@cdo/apps/util/experiments';
 import color from "../../../util/color";
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
 import { levelsForLessonId, stageExtrasUrl } from '@cdo/apps/code-studio/progressRedux';
@@ -60,7 +59,7 @@ const StageProgress = React.createClass({
             />
           </div>
         )}
-        {stageExtrasUrl && experiments.isEnabled('stageExtras') &&
+        {stageExtrasUrl &&
           <StageExtrasProgressBubble
             stageExtrasUrl={stageExtrasUrl}
             onStageExtras={onStageExtras}

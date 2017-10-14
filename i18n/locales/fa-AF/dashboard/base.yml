@@ -84,10 +84,12 @@ fa:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    clever: 'Clever Account'
     forgot_password: 'Forgot your password?'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
@@ -256,7 +258,7 @@ fa:
       my_dashboard: "My Dashboard"
       courses: "Courses"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "Projects"
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report bug"
@@ -750,9 +752,10 @@ fa:
     rename: "Rename"
     save: "Save"
     delete: "Delete"
+    import: "Import"
     exit: "Return to Course"
     my_projects: "My Projects"
-    project_gallery: "Project Gallery"
+    project_gallery: "Projects"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Share"
@@ -783,6 +786,7 @@ fa:
     remix: 'Remix'
     click_to_remix: "Click \"Remix\" to spin-off your own version!"
     edit_project: 'Edit Project'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
       policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
@@ -835,6 +839,10 @@ fa:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

@@ -15,6 +15,7 @@ import {
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
 
@@ -27,6 +28,7 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
+  const isEnglish = homepageData.isEnglish;
   const query = queryString.parse(window.location.search);
 
   const store = getStore();
@@ -50,14 +52,21 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingCsfAtoF();
-  let announcementDescription = i18n.announcementDescriptionCsfAtoF();
+  let announcementHeading = i18n.announcementHeadingCoursesEFImprovements();
+  let announcementDescription = i18n.announcementDescriptionCoursesEFImprovements();
   let announcementLink =
-    "http://teacherblog.code.org/post/163102110459/codeorg-updates-cs-fundamentals-courses-1-4-to";
-  let announcementId = "csf_new_courses_A_F";
+    "http://teacherblog.code.org/post/165559168804/new-improvements-to-cs-fundamentals-courses-e-and";
+  let announcementId = "courses_e_f_improvements";
 
   // Optional override of teacher announcement.
-  if (announcementOverride) {
+  if (isEnglish &&
+    announcementOverride &&
+    announcementOverride.teacher_announce_heading &&
+    announcementOverride.teacher_announce_description &&
+    announcementOverride.teacher_announce_url &&
+    announcementOverride.teacher_announce_id) {
+
+    // Use the override.
     announcementHeading = announcementOverride.teacher_announce_heading;
     announcementDescription = announcementOverride.teacher_announce_description;
     announcementLink = announcementOverride.teacher_announce_url;
@@ -137,6 +146,7 @@ function showHomepage() {
               }
             ]}
             courses={homepageData.courses}
+            joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
             isRtl={isRtl}
             queryStringOpen={query['open']}
@@ -156,3 +166,39 @@ function showHomepage() {
     document.getElementById('homepage-container')
   );
 }
+
+window.CleverTakeoverManager = function (options) {
+  this.options = options;
+  const self = this;
+
+  const linkCleverDiv = $('<div>');
+  function showLinkCleverModal(cancel, submit) {
+    $(document.body).append(linkCleverDiv);
+
+    ReactDOM.render(
+      <LinkCleverAccountModal
+        isOpen={true}
+        handleCancel={cancel}
+        handleSubmit={submit}
+      />,
+      linkCleverDiv[0]
+    );
+  }
+
+  if (self.options.cleverLinkFlag) {
+    showLinkCleverModal(onCancelModal, onConfirmLink);
+  }
+
+  function closeLinkCleverModal() {
+    ReactDOM.unmountComponentAtNode(linkCleverDiv[0]);
+  }
+
+  function onCancelModal() {
+    $("#user_user_type").val("student");
+    closeLinkCleverModal();
+  }
+
+  function onConfirmLink() {
+    window.location.href = "/users/clever_takeover?mergeID=" + self.options.userIDToMerge + "&token=" + self.options.mergeAuthToken;
+  }
+};

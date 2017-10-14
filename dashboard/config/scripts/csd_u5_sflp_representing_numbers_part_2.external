@@ -3,15 +3,14 @@ display_name 'Lesson Overview'
 markdown <<MARKDOWN
 # Overview
 
-This lesson continues the study of binary numbers with a focus on using a standard bit length.  The class makes flippy-dos, paper manipulatives that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, the class discusses how they could extend that standardization to the other types of data.
+This lesson addresses how people can keep data secret, even when other people can see it.  The class will look at an encoding method for emojis, then learn a way to encrypt their emoji messages using a keyword.
 
 
 ## Resources
 
-* [World Records](https://docs.google.com/document/d/1ZI8_LJ897S8ljE8NbsmEun2_yo5r0bTxo5p83R0uPMo/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1ZI8_LJ897S8ljE8NbsmEun2_yo5r0bTxo5p83R0uPMo/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1ZI8_LJ897S8ljE8NbsmEun2_yo5r0bTxo5p83R0uPMo/export?format=doc))
-* [Flippy-Do Template](https://docs.google.com/document/d/130gl1lCFFGdohPfCNliSScyR8Ecq_etwcgg8pjtIP30/edit) - Manipulative ([PDF](https://docs.google.com/document/d/130gl1lCFFGdohPfCNliSScyR8Ecq_etwcgg8pjtIP30/export?format=pdf) | [DOCX](https://docs.google.com/document/d/130gl1lCFFGdohPfCNliSScyR8Ecq_etwcgg8pjtIP30/export?format=doc))
+* [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-* [World Numbers](https://docs.google.com/document/d/1_KixJC8b4R_Y5D6lAgRGnSofvX2h9IWlQjushWka0NY/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1_KixJC8b4R_Y5D6lAgRGnSofvX2h9IWlQjushWka0NY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1_KixJC8b4R_Y5D6lAgRGnSofvX2h9IWlQjushWka0NY/export?format=doc))
+* Keeping Data Secret - Exemplar ([PDF](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))
 MARKDOWN

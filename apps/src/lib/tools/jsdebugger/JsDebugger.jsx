@@ -12,7 +12,7 @@ import Radium from 'radium';
 import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';
 import styleConstants from '../../../styleConstants';
-import {ConnectedWatchers} from '../../../templates/watchers/Watchers';
+import Watchers from '../../../templates/watchers/Watchers';
 import PaneHeader, {PaneSection, PaneButton} from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
@@ -537,7 +537,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
           </ProtectedStatefulDiv>
         </div>
         {showWatchPane &&
-         <ConnectedWatchers
+         <Watchers
            style={openStyle}
            ref={watchers => this._watchers = watchers}
            debugButtons={this.props.debugButtons}

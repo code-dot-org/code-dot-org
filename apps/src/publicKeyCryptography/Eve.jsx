@@ -18,6 +18,18 @@ import {
 } from './cryptographyFields';
 import {COLORS, LINE_HEIGHT} from './style';
 
+const INITIAL_STATE = {
+  publicModulus: null,
+  publicKey: null,
+  privateKey: null,
+  publicNumber: null,
+  secretNumber: null,
+  checkingPrivateKey: false,
+  privateKeyEquationResult: null,
+  checkingSecretNumber: false,
+  secretNumberEquationResult: null
+};
+
 const tdEquationStyleRHS = {
   lineHeight: LINE_HEIGHT + 'px',
   verticalAlign: 'top'
@@ -33,19 +45,9 @@ export default class Eve extends React.Component {
     runModuloClock: PropTypes.func.isRequired
   };
 
-  state = {
-    publicModulus: null,
-    publicKey: null,
-    privateKey: null,
-    publicNumber: null,
-    secretNumber: null,
-    checkingPrivateKey: false,
-    privateKeyEquationResult: null,
-    checkingSecretNumber: false,
-    secretNumberEquationResult: null
-  };
+  state = {...INITIAL_STATE};
 
-  startOver = () => this.setState(this.getInitialState());
+  startOver = () => this.setState(INITIAL_STATE);
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});

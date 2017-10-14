@@ -13,10 +13,12 @@ class PeerReviewsControllerTest < ActionController::TestCase
     level = create :free_response
     level.update(submittable: true, peer_reviewable: true)
 
-    learning_module = create :plc_learning_module
+    @learning_module = create :plc_learning_module
+    @learning_module.plc_course_unit.script.update(peer_reviews_to_complete: 1)
 
-    @script_level = create :script_level, levels: [level], stage: learning_module.stage
+    @script_level = create :script_level, levels: [level], stage: @learning_module.stage
     @script = @script_level.script
+
     @level_source = create :level_source, data: 'My submitted answer'
   end
 
@@ -25,6 +27,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
     User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id)
     @peer_review = PeerReview.first
+    @peer_review.user_level.update_column(:best_result, ActivityConstants::UNREVIEWED_SUBMISSION_RESULT)
   end
 
   test 'non admins cannot access index' do
@@ -43,6 +46,20 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     get :show, params: {id: @peer_review.id}
     assert :success
+    assert_select '#previous-reviews', 0
+  end
+
+  test 'Reviewers can access peer escalated reviews and view other submissions' do
+    @peer_review.update(status: 2, reviewer: @user, data: 'Help!')
+    PeerReview.second.update(status: 0, reviewer: (create :teacher), data: 'Looks good to me')
+    sign_out(@user)
+    reviewer = create :plc_reviewer
+    sign_in(reviewer)
+
+    get :show, params: {id: PeerReview.last.id}
+    assert :success
+    assert_select '.peer-review-content', 2
+    assert_equal ['Help!', 'Looks good to me'], css_select('.peer-review-data').map(&:text)
   end
 
   test 'Users cannot access other peer reviews' do
@@ -85,7 +102,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     }
     @peer_review.reload
     assert @peer_review.from_instructor
-    assert_redirected_to peer_reviews_path
+    assert_redirected_to peer_reviews_dashboard_path
   end
 
   test 'Submitting a review redirects to the script view' do
@@ -105,5 +122,23 @@ class PeerReviewsControllerTest < ActionController::TestCase
     }
     @peer_review.reload
     assert_equal 'Panda', @peer_review.data
+  end
+
+  test 'Dashboard dropdown gets only plc courses that have peer reviews' do
+    create :plc_course, name: 'Non peer reviewable course'
+    sign_in(create(:plc_reviewer))
+
+    get :dashboard
+    assert_response :success
+    plc_course = @learning_module.plc_course_unit.plc_course
+    assert_equal [[plc_course.name, plc_course.id]], assigns(:course_list)
+  end
+
+  [:plc_reviewer, :facilitator, :teacher, :student].each do |user|
+    test_user_gets_response_for(
+      :dashboard,
+      user: user,
+      response: user == :plc_reviewer ? :success : :forbidden
+    )
   end
 end

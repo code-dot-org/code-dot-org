@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "隱藏各種語言的活動",
   "noTutorialsYourLanguage": "目前沒有任何使用你的語言的活動。點擊下方按鈕以觀看其他語言的活動。",
   "bottomGuidelinesLink": "點擊此處查看如何將課程提交給一小時玩程式。",
-  "bottomSpecialNeedsLink": "點擊此處以取得特殊需求學生支援的相關資訊。"
+  "bottomSpecialNeedsLink": "點擊此處以取得特殊需求學生支援的相關資訊。",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "භාෂා රැසක් සඳහා ක්‍රියාකාරකම් සඟවන්න",
   "noTutorialsYourLanguage": "ඔබේ භාෂාවෙන් ලබාගත හැකි ක්‍රියාකාරකම් කිසිවක් නොමැත. පහත button එක ඔස්සේ වෙනත් භාෂා වලින් ඇති ක්‍රියාකාරකම් උත්සහ කර බලන්න.",
   "bottomGuidelinesLink": "Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
-  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students."
+  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

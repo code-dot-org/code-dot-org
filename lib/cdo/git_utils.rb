@@ -100,4 +100,9 @@ module GitUtils
         'origin/staging'
     end
   end
+
+  def self.valid_commit?(hash_or_branch)
+    `git cat-file commit #{hash_or_branch}`
+    $?.success?
+  end
 end

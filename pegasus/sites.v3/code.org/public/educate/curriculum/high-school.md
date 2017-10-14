@@ -10,7 +10,7 @@ High School
 
 [/solid-block-header]
 
-For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9 and the second, Computer Science Principles, can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide suggestions for teaching AP Computer Science A and additional courses in programming, game design, and more. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
+For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is appropriate for grades 6-10 and the second, Computer Science Principles, can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide suggestions for teaching AP Computer Science A and additional courses in programming, game design, and more. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
 
 <br>
 <hr>
@@ -28,7 +28,7 @@ For high schools, we offer two years of Computer Science courses for beginners. 
 
 [col-60]
 
-Computer Science Discoveries is designed for 7-9th grade students and can be taught as a semester or year long introductory course. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
+Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 

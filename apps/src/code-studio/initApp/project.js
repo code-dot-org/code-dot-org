@@ -13,6 +13,7 @@ var ABUSE_THRESHOLD = 10;
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
+var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
@@ -62,6 +63,7 @@ var PathPart = {
 var current;
 var currentSourceVersionId;
 var currentAbuseScore = 0;
+var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
@@ -182,6 +184,10 @@ var projects = module.exports = {
     return currentAbuseScore;
   },
 
+  getSharingDisabled() {
+    return sharingDisabled;
+  },
+
   /**
    * Whether this project's source has Maker APIs enabled.
    * @returns {boolean}
@@ -203,6 +209,11 @@ var projects = module.exports = {
         throw err;
       }
       assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+      });
+      files.patchAll(id, 'abuse_score=0', null, function (err, result) {
         if (err) {
           throw err;
         }
@@ -515,6 +526,9 @@ var projects = module.exports = {
    * this project as a standalone project, or null if none exists.
    */
   getStandaloneApp() {
+    if (appOptions.level && appOptions.level.projectType) {
+      return appOptions.level.projectType;
+    }
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -530,6 +544,8 @@ var projects = module.exports = {
       case 'craft':
         if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
+        } else if (appOptions.level.isConnectionLevel || appOptions.level.isAgentLevel) {
+          return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
       case 'eval':
@@ -541,7 +557,7 @@ var projects = module.exports = {
           if (appOptions.droplet) {
             return 'starwars';
           } else {
-            return 'starwarsblocks';
+            return 'starwarsblocks_hour';
           }
         } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
@@ -676,6 +692,19 @@ var projects = module.exports = {
         executeCallback(callback, data);
       }.bind(this));
     }.bind(this));
+  },
+
+  createNewChannelFromSource(source, callback) {
+    channels.create({
+      name: "New Project",
+    }, (err, channelData) => {
+      sources.put(channelData.id, JSON.stringify({ source }), SOURCE_FILE, (err, sourceData) => {
+        channelData.migratedToS3 = true;
+        channels.update(channelData.id, channelData, (err, finalChannelData) => {
+          executeCallback(callback, finalChannelData);
+        });
+      });
+    });
   },
 
   /**
@@ -817,6 +846,7 @@ var projects = module.exports = {
       redirectEditView();
     });
   },
+
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
@@ -968,11 +998,12 @@ var projects = module.exports = {
   /**
    * Generates the url to perform the specified action for this project.
    * @param {string} action Action to perform.
+   * @param {string} projectId Optional Project ID (defaults to current ID).
    * @returns {string} Url to the specified action.
    * @throws {Error} If this type of project does not have a standalone app.
    */
-  getPathName(action) {
-    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
+  getPathName(action, projectId = this.getCurrentId()) {
+    let pathName = this.appToProjectUrl() + '/' + projectId;
     if (action) {
       pathName += '/' + action;
     }
@@ -1077,6 +1108,18 @@ function fetchAbuseScore(resolve) {
   });
 }
 
+function fetchSharingDisabled(resolve) {
+  channels.fetch(current.id + '/sharing_disabled', function (err, data) {
+    sharingDisabled = (data && data.sharing_disabled) || sharingDisabled;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean
@@ -1095,6 +1138,10 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 
   if (dashboard.project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
+  } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
+    (dashboard.project.getStandaloneApp() === 'gamelab') ||
+    (dashboard.project.getStandaloneApp() === 'weblab')) {
+    deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
     callback();

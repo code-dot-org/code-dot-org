@@ -92,8 +92,6 @@ describe('Level tests', function () {
   var originalRender;
   var clock, tickInterval;
 
-  // Don't expect console.error or console.warn to be used during any level test
-  testUtils.throwOnConsoleWarnings();
   testUtils.setExternalGlobals();
 
   before(function (done) {

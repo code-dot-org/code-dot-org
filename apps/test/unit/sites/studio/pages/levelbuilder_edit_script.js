@@ -1,11 +1,9 @@
 import sinon from 'sinon';
 import ReactDOM from 'react-dom';
 import {expect} from '../../../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../../../util/testUtils';
 import initPage from '@cdo/apps/sites/studio/pages/levelbuilder_edit_script';
 
 describe("the level builder page init script", () => {
-  throwOnConsoleWarnings();
   let container;
   beforeEach(() => {
     sinon.spy(ReactDOM, 'render');

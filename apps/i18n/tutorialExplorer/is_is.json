@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Fela verkefni á mörgum tungumálum",
   "noTutorialsYourLanguage": "Það eru engin verkefni á þínu tungumáli. Prófaðu verkefni á öðrum tungumálum með því að smella á hnappinn hér fyrir neðan.",
   "bottomGuidelinesLink": "Smelltu hér til að sjá leiðsögn og viðmið sem verkefni fyrir Klukkustund kóðunar þurfa að uppfylla.",
-  "bottomSpecialNeedsLink": "Smelltu hér til að fá meiri upplýsingar um stuðning við nemendur með sérþarfir."
+  "bottomSpecialNeedsLink": "Smelltu hér til að fá meiri upplýsingar um stuðning við nemendur með sérþarfir.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Ascunde activitățile pentru mai multe limbi",
   "noTutorialsYourLanguage": "Nu sunt activităţi susţinute în limba dvs. Încercaţi activităţi în alte limbi, făcând clic pe butonul de mai jos.",
   "bottomGuidelinesLink": "Click aici pentru a vedea criteriile noastre și ghidurile pentru tutorialele Hour of Code.",
-  "bottomSpecialNeedsLink": "Click aici pentru mai multe informaţii despre sprijinirea elevilor cu nevoi speciale."
+  "bottomSpecialNeedsLink": "Click aici pentru mai multe informaţii despre sprijinirea elevilor cu nevoi speciale.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

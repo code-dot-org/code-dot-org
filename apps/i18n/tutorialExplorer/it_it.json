@@ -1,7 +1,7 @@
 {
   "filterGrades": "Classi",
   "filterGradesPre": "Pre-scolare",
-  "filterGrades25": "Classi 2-8",
+  "filterGrades25": "Da 7 a 13 anni (grades 2-8)",
   "filterGrades68": "Da 11 a 13 anni (grades 6-8)",
   "filterGrades9": "Più di 14 anni (grades 9+)",
   "filterTeacherExperience": "Esperienza insegnante",
@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Nascondi attività per molte lingue",
   "noTutorialsYourLanguage": "Non sono presenti attività nella tua lingua. Prova delle attività in altre lingue cliccando sul pulsante qui sotto.",
   "bottomGuidelinesLink": "Clicca qui per vedere i nostri criteri e le linee guida per le lezioni dell'Ora del Codice.",
-  "bottomSpecialNeedsLink": "Clicca qui per ulteriori informazioni sul supporto agli studenti con esigenze speciali."
+  "bottomSpecialNeedsLink": "Clicca qui per ulteriori informazioni sul supporto agli studenti con esigenze speciali.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

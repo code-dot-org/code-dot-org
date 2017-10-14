@@ -1,26 +1,9 @@
 require 'active_support'
 require 'active_record'
+require 'active_record/connection_adapters/mysql2_adapter'
 require 'sequel'
-
-# Monkey-patch the SQLite connection adapter to ignore MySQL-specific schema creation statements.
-module ActiveRecord
-  module ConnectionAdapters
-    module SQLite3
-      class SchemaCreation < AbstractAdapter::SchemaCreation
-        private
-
-        def add_table_options!(create_sql, options)
-          if (options_sql = options[:options])
-            options_sql.gsub!(/ENGINE=\w+/, '')
-            options_sql.gsub!(/DEFAULT CHARSET=\w+/, '')
-            options_sql.gsub!(/COLLATE=\w+/, '')
-            create_sql << " #{options_sql}"
-          end
-        end
-      end
-    end
-  end
-end
+require 'yaml'
+require 'erb'
 
 #
 # Provides a fake Dashboard database with some fake data to test against.
@@ -29,7 +12,6 @@ module FakeDashboard
   # TODO(asher): Many of the CONSTANTS in this module are not constants, being mutated later. Fix
   # this.
 
-  DATABASE_FILENAME = './fake_dashboard_for_tests.db'.freeze
   @@fake_db = nil
 
   #
@@ -118,10 +100,67 @@ module FakeDashboard
       name: 'flappy',
       hidden: 0
     },
+    SCRIPT_CSP1 = {
+      id: 31,
+      name: 'csp1',
+      hidden: 0,
+    },
+    SCRIPT_CSP2 = {
+      id: 32,
+      name: 'csp2',
+      hidden: 0,
+    },
+    SCRIPT_CSP3 = {
+      id: 34,
+      name: 'csp3',
+      hidden: 0,
+    },
+    # put the hidden scripts at the end and give them higher ids, to make
+    # unit testing slightly easier.
     SCRIPT_ALLTHETHINGS = {
       id: 45,
       name: 'allthehiddenthings',
       hidden: 1
+    },
+    SCRIPT_CSP2_ALT = {
+      id: 53,
+      name: 'csp2-alt',
+      hidden: 1
+    },
+  ]
+
+  COURSE_SCRIPTS = [
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP1[:id],
+      position: 1
+    },
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP2[:id],
+      position: 2
+    },
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP2_ALT[:id],
+      position: 2,
+      experiment_name: 'csp2-alt-experiment',
+      default_script_id: SCRIPT_CSP2[:id]
+    },
+    {
+      course_id: COURSE_CSP[:id],
+      script_id: SCRIPT_CSP3[:id],
+      position: 3
+    },
+  ]
+
+  EXPERIMENTS = [
+    CSP2_ALT_EXPERIMENT = {
+      name: 'csp2-alt-experiment',
+      type: 'SingleUserExperiment',
+      min_user_id: 17,
+      created_at: Time.now,
+      updated_at: Time.now
     }
   ]
 
@@ -181,6 +220,50 @@ module FakeDashboard
   #
   SECRET_WORDS = [{word: 'abracadabra'}]
 
+  # Fake-DB definition, map of table names to fixture-object arrays.
+  FAKE_DB = {
+    users: USERS,
+    user_permissions: USER_PERMISSIONS,
+    courses: COURSES,
+    scripts: SCRIPTS,
+    course_scripts: COURSE_SCRIPTS,
+    experiments: EXPERIMENTS,
+    sections: TEACHER_SECTIONS,
+    followers: FOLLOWERS,
+    secret_words: SECRET_WORDS,
+    user_scripts: []
+  }
+
+  # Patch Mysql2Adapter to only create the specified tables when loading the schema.
+  module SchemaTableFilter
+    def create_table(name, options)
+      if (::FakeDashboard::FAKE_DB.keys.map(&:to_s) + [
+        ActiveRecord::Base.schema_migrations_table_name,
+        ActiveRecord::Base.internal_metadata_table_name,
+      ]).include?(name)
+        super(name, options)
+      end
+    end
+  end
+  ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaTableFilter
+
+  # Patch Mysql2Adapter to create temporary tables instead of persistent ones.
+  module TempTableFilter
+    def create_table(name, options)
+      super(name, options.merge(temporary: true))
+    end
+
+    # Temporary tables may shadow persistent tables we don't want to drop.
+    def data_source_exists?(_)
+      false
+    end
+
+    # Temporary tables don't support foreign key indexes, so ignore them.
+    def add_foreign_key(*_)
+    end
+  end
+  ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend TempTableFilter
+
   # Overrides the current database with a procedure that, given a query,
   # will return results appropriate to our test suite.
   #
@@ -199,60 +282,38 @@ module FakeDashboard
     @@fake_db
   end
 
-  # Lazy-creates sqlite database using Dashboard's real ActiveRecord schema,
-  # and populates it with some simple test data.
+  def self.stub_database
+    Dashboard.stubs(:db)
+  end
+
+  # Lazy-creates temporary-tables using Dashboard's real ActiveRecord schema,
+  # and populates them with some simple test data.
   # We might want to extract the test data to individual tests in the future,
   # or provide an explicit way to request certain test-data setups.
   def self.create_fake_dashboard_db
-    @@fake_db = Sequel.sqlite(DATABASE_FILENAME)
+    database = YAML.load(ERB.new(File.new(dashboard_dir('config/database.yml')).read).result) || {}
+    # Temporary tables aren't shared across multiple database connections.
+    database['test']['pool'] = 1
 
-    ActiveRecord::Migration.suppress_messages do
-      ActiveRecord::Base.establish_connection(
-        adapter: 'sqlite3',
-        database: DATABASE_FILENAME
-      )
-
+    ActiveRecord::Base.configurations = database
+    ActiveRecord::Base.establish_connection
+    ActiveRecord::Schema.verbose = false
+    ActiveRecord::Base.transaction do
       require_relative('../../../dashboard/db/schema')
     end
 
-    USERS.each do |user|
-      new_id = @@fake_db[:users].insert(user)
-      user.merge! @@fake_db[:users][id: new_id]
-    end
+    # Reuse the same connection in Sequel to share access to the temporary tables.
+    connection = ActiveRecord::Base.connection.instance_variable_get(:@connection)
+    connection.query_options[:as] = :hash
+    Sequel.extension :meta_def
+    @@fake_db = Sequel.mysql2
+    @@fake_db.meta_def(:connect) {|_| connection}
 
-    USER_PERMISSIONS.each do |perm|
-      new_id = @@fake_db[:user_permissions].insert(perm)
-      perm.merge! @@fake_db[:user_permissions][id: new_id]
+    FAKE_DB.each do |key, value|
+      value.each do |row|
+        new_id = @@fake_db[key].insert(row)
+        row.merge! @@fake_db[key][id: new_id]
+      end
     end
-
-    COURSES.each do |course|
-      new_id = @@fake_db[:courses].insert(course)
-      course.merge! @@fake_db[:courses][id: new_id]
-    end
-
-    SCRIPTS.each do |script|
-      new_id = @@fake_db[:scripts].insert(script)
-      script.merge! @@fake_db[:scripts][id: new_id]
-    end
-
-    TEACHER_SECTIONS.each do |section|
-      new_id = @@fake_db[:sections].insert(section)
-      section.merge! @@fake_db[:sections][id: new_id]
-    end
-
-    FOLLOWERS.each do |follower|
-      new_id = @@fake_db[:followers].insert(follower)
-      follower.merge! @@fake_db[:followers][id: new_id]
-    end
-
-    SECRET_WORDS.each do |secret_word|
-      @@fake_db[:secret_words].insert(secret_word)
-    end
-  end
-
-  # Remove the sqlite3 database file from the filesystem.
-  # Should be called after all tests have run; possibly from a post-test task
-  def self.destroy_fake_dashboard_db
-    File.delete(DATABASE_FILENAME) if File.exist?(DATABASE_FILENAME)
   end
 end

@@ -160,6 +160,47 @@ style="clear:both"&nbsp;
 <br />
 <a id="ca"></a>
 ## California
+### **Northern California**
+[col-33]
+
+### Brian Packham
+Anderson, CA
+
+packham@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+### **Sacramento Area**
+[col-33]
+### Matthew Rowland
+Sacramento, CA
+
+rowland@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Mike Gargiulo
+Elk Grove, CA
+
+gargiulo@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Sandy Feder
+Fair Oaks, CA
+
+feder@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 ### **Bay Area**
 [col-33]
 
@@ -243,44 +284,6 @@ carter@pd.code.org
 Pleasant Hill, CA
 
 schwartz@pd.code.org
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-### **Sacramento Area**
-[col-33]
-### Matthew Rowland
-Sacramento, CA
-
-rowland@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Mike Gargiulo
-Elk Grove, CA
-
-gargiulo@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Sandy Feder
-Fair Oaks, CA
-
-feder@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Brian Packham
-Anderson, CA
-
-packham@pd.code.org
 
 [/col-33]
 
@@ -551,7 +554,7 @@ campanaro@pd.code.org
 [/col-33]
 
 [col-33]
-### Neshea Griffen 
+### Neshea Griffen
 Orlando, FL
 
 griffen@pd.code.org
@@ -1522,14 +1525,6 @@ style="clear:both">&nbsp;
 <a id="ut"></a>
 ## Utah
 [col-33]
-### Grant Smith
-Park City, UT
-
-gsmith@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Nicole Reitz-Larsen
 Salt Lake City, UT
 
@@ -1719,4 +1714,3 @@ kapptie@pd.code.org
 <br />
 <br />
 <a href="#top">Back to top</a>
-
