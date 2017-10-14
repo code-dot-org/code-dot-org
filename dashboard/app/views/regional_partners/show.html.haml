@@ -1,6 +1,5 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
-  %script{src: minifiable_asset_path('js/regional_partners/show.js')}
 
 %h1 View Regional Partner
 
@@ -65,7 +64,6 @@
     %thead
       %th Action
       %th Region
-      %th
     %tbody
       - @regional_partner.mappings.each do |mapping|
         %tr
@@ -81,9 +79,6 @@
             Enter a state or zip code:
             = text_field_tag :region, '', class: 'form-control'
         %td
-          -# We'll apply the Selectize UI control to this input.
-          -# %input#region-id.form-control{name: "region", type: "text", required: false}
-
 %br
 %h2 Program Managers
 %table.table.table-hover.table-condensed.table-auto-width{:id => 'program-managers-table'}
