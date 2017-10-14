@@ -231,6 +231,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Score",
   "seconds": "second(s)",
   "selectChooseButton": "Select",
