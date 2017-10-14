@@ -1,0 +1,70 @@
+login_required true
+
+stage 'Representation Matters', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representation Matters'
+
+stage 'Patterns and Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Patterns and Representation'
+
+stage 'ASCII and Binary Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP ASCII and Binary Representation'
+
+stage 'Representing Images', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Images'
+level 'CSD U5 black white images pixelation', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 2', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 3', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 4', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 5', progression: 'Representing Images'
+
+stage 'Representing Numbers', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Numbers Part 1'
+level 'CSD U5 binary 1', progression: 'Binary Numbers'
+level 'CSD U5 binary 2', progression: 'Binary Numbers'
+level 'CSD U5 binary 4-new', progression: 'Binary Numbers'
+level 'CSD U5 binary 5-new', progression: 'Binary Numbers'
+level 'CSD U5 binary 6-new', progression: 'Binary Numbers'
+level 'CSD U5 binary 7-new', progression: 'Binary Numbers'
+
+stage 'Encryption', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Numbers Part 2'
+
+stage 'Combining Representations', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Combining Representations'
+level 'CSD U3 combining rep', progression: 'Combining Representations'
+level 'CSD U5 student record', progression: 'Combining Representations'
+
+stage 'Project - Create a Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Create a Representation'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1', progression: 'Reflection'
+
+stage 'Problem Solving and Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Problem Solving and Data'
+
+stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Problem Solving with Big Data'
+level 'CSD U5 video2', progression: 'Problem Solving'
+level 'CSD U5 collection UPS2', progression: 'Problem Solving'
+level 'CSD U5 collection ads2', progression: 'Problem Solving'
+
+stage 'Structuring Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Interpreting Data'
+level 'CSD U5 data visualization', progression: 'Data Visualization'
+level 'CSD U5 Pizza', progression: 'Data Visualization'
+level 'CSD U5 Pizza 2', progression: 'Data Visualization'
+
+stage 'Making Decisions with Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Making Decisions with Data'
+
+stage 'Interpreting Data', flex_category: 'csd5_2'
+named_level 'CSD U5 L13 SFLP Interpreting Data'
+level 'CSD U5 data visualization', progression: 'Data Visualization'
+level 'CSD U5 Pizza', progression: 'Data Visualization'
+level 'CSD U5 Pizza 2', progression: 'Data Visualization'
+
+stage 'Automating Data Decisions', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Automating Data Decisions'
+
+stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Solve a Data Problem'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2', progression: 'Reflection'

@@ -48,9 +48,11 @@ import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
+import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
+import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
@@ -291,7 +293,6 @@ StudioApp.prototype.init = function (config) {
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       isResponsive: getStore().getState().pageConstants.isResponsive,
-      isTooYoung: config.isTooYoung,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -382,20 +383,7 @@ StudioApp.prototype.init = function (config) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
-  if (!!config.level.pairingDriver) {
-    this.displayWorkspaceAlert(
-      'warning',
-      <div>
-        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
-        {' '}
-        {config.level.pairingAttempt &&
-          <a href={config.level.pairingAttempt}>
-            {msg.pairingNavigatorLink()}
-          </a>
-        }
-      </div>
-    );
-  }
+  this.alertIfCompletedWhilePairing(config);
 
   // If we are in a non-english locale using our english-specific app
   // (the Spelling Bee), display a warning.
@@ -499,6 +487,7 @@ StudioApp.prototype.init = function (config) {
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
         complete={isComplete}
+        isIntro={true}
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
@@ -507,6 +496,28 @@ StudioApp.prototype.init = function (config) {
   }
 
   this.emit('afterInit');
+};
+
+StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
+  if (!!config.level.pairingDriver) {
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>
+        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+        {' '}
+        {config.level.pairingAttempt &&
+          <a href={config.level.pairingAttempt}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
+        {config.level.pairingChannelId &&
+          <a href={project.getPathName('view', config.level.pairingChannelId)}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
+      </div>
+    );
+  }
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
@@ -1115,6 +1126,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
         <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
+    resetAniGif(this.instructionsDialog.div.find('img.aniGif').get(0));
   });
 
   if (autoClose) {
@@ -1223,6 +1235,14 @@ function resizePinnedBelowVisualizationArea() {
 var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
 }, 10);
+
+/**
+ * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
+ * to be static so it can be statically debounced as onResizeSmallFooter
+ */
+StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
+  resizePinnedBelowVisualizationArea();
+};
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
@@ -1426,8 +1446,6 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
-  this.onFeedback(options);
-
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1435,14 +1453,26 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(
+      this.requiredBlocks_.concat(this.recommendedBlocks_),
+      options.level.isK1,
+    );
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    getStore().dispatch(setFeedback({ message }));
+    const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
+    getStore().dispatch(setFeedback({ message, isFailure }));
   }
+
+  // If this level is enabled with a hint prompt threshold, check it and some
+  // other state values to see if we should show the hint prompt
+  if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
+    this.authoredHintsController_.considerShowingOnetimeHintPrompt();
+  }
+
+  this.onFeedback(options);
 };
 
 /**
@@ -1471,8 +1501,13 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
+  return this.feedback_.getTestResults(
+    levelComplete,
+    this.requiredBlocks_,
+    this.recommendedBlocks_,
+    this.checkForEmptyBlocks_,
+    options,
+  );
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1772,7 +1807,10 @@ StudioApp.prototype.configureDom = function (config) {
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
-  if (referenceArea) {
+  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
+  // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
+  if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
   }
 
@@ -1892,7 +1930,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
             channelId: project.getCurrentId(),
             appType: project.getStandaloneApp(),
             isLegacyShare: options.isLegacyShare,
-            isTooYoung: !!options.isTooYoung,
           }), div);
         }
       }
@@ -1987,9 +2024,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: (
-      config.level.textModeAtStart === 'block' ? false :
+      config.level.textModeAtStart === 'blocks' ? false :
       config.level.textModeAtStart === false ? config.usingTextModePref :
-      config.level.textModeAtStart
+      !!config.level.textModeAtStart
     ),
   });
 
@@ -2823,9 +2860,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
-    // The user is signed in, under 13, and does not have a teacher that has
-    // accepted the terms of service.
-    isTooYoung: !!config.isTooYoung,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

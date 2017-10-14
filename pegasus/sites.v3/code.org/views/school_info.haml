@@ -1,13 +1,7 @@
 - require 'country_codes'
 - require 'state_abbr'
-- require 'geocoder'
 
-- location = Geocoder.search(request.ip).try(:first)
--# geocoder sometimes shows localhost's country as RD/Reserved
-- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 - existing_school_info ||= {}
-- existing_school_info[:country] ||= 'US' if us_ip
-- form_name = "census"
 
 #school-info{style:"display:none"}
   .form-section
@@ -98,13 +92,18 @@
     var suppressScrolling = true;
     options['suppressScrolling'] = suppressScrolling;
 
-    var assumeUsa = false;
-
-    if (assumeUsa) {
-      $('#school-country-group').hide();
-      $('#school-country').val('United States');
-    }
-
     // Send through some values that the JavaScript will need.
     window.schoolInfoManager = new SchoolInfoManager(options);
+
+    // Call geolocation API to determine country and set in country dropdown
+    $.getJSON( "/v2/client-location", function (data) {
+      country_code = data.country_code;
+      if (country_code) {
+        // Consider reserved ("RD") to be US
+        if (country_code === "RD") {
+          country_code = "US";
+        }
+        $('#school-country').val(country_code).change();
+      }
+    });
   });

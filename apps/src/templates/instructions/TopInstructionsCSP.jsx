@@ -8,6 +8,12 @@ import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import InlineAudio from './InlineAudio';
+import ContainedLevel from '../ContainedLevel';
+import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
+import experiments from '@cdo/apps/util/experiments';
+import InstructionsTab from './InstructionsTab';
+import HelpTabContents from './HelpTabContents';
+
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -17,8 +23,6 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
-import ContainedLevel from '../ContainedLevel';
-import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -62,6 +66,15 @@ var styles = {
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
   },
+  helpTabs: {
+    float: 'left',
+    paddingTop: 6,
+    paddingLeft: 30,
+  },
+  highlighted: {
+    borderBottom: "2px solid " + color.default_text,
+    color: color.default_text,
+  },
 };
 
 var audioStyle = {
@@ -97,7 +110,12 @@ var TopInstructions = React.createClass({
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string
+    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    levelVideos: PropTypes.array,
+  },
+
+  state:{
+    helpTabSelected: false,
   },
 
   /**
@@ -182,6 +200,14 @@ var TopInstructions = React.createClass({
     win.focus();
   },
 
+  handleHelpTabClick() {
+    this.setState({helpTabSelected: true});
+  },
+
+  handleInstructionTabClick() {
+    this.setState({helpTabSelected: false});
+  },
+
   render() {
     const mainStyle = [
       styles.main,
@@ -192,13 +218,14 @@ var TopInstructions = React.createClass({
       this.props.isEmbedView && styles.embedView,
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
-
+    const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
-
           <div style={styles.paneHeaderOverride}>
-            <InlineAudio src={ttsUrl} style={audioStyle}/>
+            {!this.state.helpTabSelected &&
+              <InlineAudio src={ttsUrl} style={audioStyle}/>
+            }
             {this.props.documentationUrl &&
               <PaneButton
                 iconClass="fa fa-book"
@@ -207,17 +234,37 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
+            {experiments.isEnabled('resourcesTab') &&
+              <div style={styles.helpTabs}>
+                <InstructionsTab
+                  className="uitest-instructionsTab"
+                  onClick={this.handleInstructionTabClick}
+                  style={this.state.helpTabSelected ? null : styles.highlighted}
+                  text={msg.instructions()}
+                />
+                {this.props.levelVideos.length > 0 &&
+                  <InstructionsTab
+                    className="uitest-helpTab"
+                    onClick={this.handleHelpTabClick}
+                    style={this.state.helpTabSelected ? styles.highlighted : null}
+                    text={msg.helpTips()}
+                  />
+                }
+              </div>
+            }
             {!this.props.isEmbedView &&
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            <div style={styles.title}>
-              {msg.puzzleTitle({
-                stage_total: this.props.stageTotal,
-                puzzle_number: this.props.puzzleNumber
-              })}
-            </div>
+            {!experiments.isEnabled('resourcesTab') &&
+              <div style={styles.title}>
+                {msg.puzzleTitle({
+                  stage_total: this.props.stageTotal,
+                  puzzle_number: this.props.puzzleNumber
+                })}
+              </div>
+            }
           </div>
         </PaneHeader>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
@@ -225,13 +272,20 @@ var TopInstructions = React.createClass({
             {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
             {!this.props.hasContainedLevels &&
               <div ref="instructions">
-                <Instructions
-                  ref="instructions"
-                  renderedMarkdown={processMarkdown(this.props.markdown,
+                {!this.state.helpTabSelected &&
+                  <Instructions
+                    ref="instructions"
+                    renderedMarkdown={processMarkdown(this.props.markdown,
                       { renderer })}
-                  onResize={this.adjustMaxNeededHeight}
-                  inTopPane
-                />
+                    onResize={this.adjustMaxNeededHeight}
+                    inTopPane
+                  />
+                }
+                {this.state.helpTabSelected &&
+                  <HelpTabContents
+                    videoData={videoData}
+                  />
+                }
                 <TeacherOnlyMarkdown/>
               </div>
             }
@@ -260,7 +314,8 @@ module.exports = connect(function propsFromStore(state) {
     noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
-    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+    levelVideos: state.instructions.levelVideos
   };
 }, function propsFromDispatch(dispatch) {
   return {

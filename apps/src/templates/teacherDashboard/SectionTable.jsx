@@ -8,11 +8,11 @@ import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from "./shapes";
+import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionTableButtonCell from "./SectionTableButtonCell";
-import ReactTooltip from 'react-tooltip';
+import Button from '@cdo/apps/templates/Button';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -61,7 +61,7 @@ const styles = {
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
-    paddingBottom: 0,
+    paddingBottom: 20,
   },
   sectionCol: {
     paddingLeft: 20,
@@ -72,8 +72,6 @@ const styles = {
   },
 };
 
-const sectionDataPropType = PropTypes.shape({sortableSectionShape});
-
 // Cell formatters for sortable SectionTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
@@ -81,22 +79,35 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  if (rowData.assignmentName && rowData.assignmentName[0]){
-    if (rowData.assignmentName[1]) {
-      return (
-          <div>
-            <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>
-            <div style={styles.currentUnit}>
-              <div>{i18n.currentUnit()}</div>
-              <a href={rowData.assignmentPaths[1]} style={styles.link}>
-                {rowData.assignmentName[1]}
-              </a>
-            </div>
-          </div>);
-    } else {
-      return <a href={rowData.assignmentPaths[0]} style={styles.link}>{rowData.assignmentName[0]}</a>;
-    }
-  }
+  const { assignmentNames, assignmentPaths } = rowData;
+  return (
+    <div>
+      <a
+        href={rowData.assignmentPaths[0]}
+        style={styles.link}
+      >
+        {rowData.assignmentNames[0]}
+      </a>
+      {assignmentPaths.length > 1 && (
+        <div style={styles.currentUnit}>
+          <div>{i18n.currentUnit()}</div>
+          <a
+            href={assignmentPaths[1]}
+            style={styles.link}
+          >
+            {assignmentNames[1]}
+          </a>
+        </div>
+      )}
+      {assignmentPaths.length < 1 && (
+        <Button
+          text={i18n.coursesCardAction()}
+          href={'/courses'}
+          color={Button.ButtonColor.gray}
+        />
+      )}
+    </div>
+  );
 };
 
 export const gradeFormatter = function (grade, {rowData}) {
@@ -105,31 +116,28 @@ export const gradeFormatter = function (grade, {rowData}) {
 
 export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
-  if (rowData.providerManaged) {
-    sectionCode = (
-      <div data-tip={i18n.providerManagedSection({provider: rowData.loginType})}>
-        {i18n.none()}
-        &nbsp;
-        <i
-          className="fa fa-question-circle"
-          style={styles.sectionCodeNone}
-        />
-        <ReactTooltip
-          role="tooltip"
-          effect="solid"
-        />
-      </div>
-    );
+  let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
+  // For managed logins, just show the provider name rather than the login code.
+  if (rowData.loginType === OAuthSectionTypes.clever){
+    sectionCode = i18n.loginTypeClever();
+  } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
+    sectionCode = i18n.loginTypeGoogleClassroom();
   } else {
     sectionCode = rowData.code;
   }
-  return <div>{sectionCode}</div>;
+  return <a style={styles.link} href={pegasusUrl}>{sectionCode}</a>;
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + "/manage");
-  const studentText = rowData.studentCount <= 0 ? i18n.addStudents() : rowData.studentCount;
-  return <a style={styles.link} href={pegasusUrl}>{studentText}</a>;
+  const studentHtml = rowData.studentCount <= 0 ?
+    <Button
+      text={i18n.addStudents()}
+      href={pegasusUrl}
+      color={Button.ButtonColor.gray}
+    /> :
+    <a style={styles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
+  return studentHtml;
 };
 
 //Displays nothing for hidden column
@@ -151,22 +159,23 @@ const hiddenFormatter = function (id) {
  */
 class SectionTable extends Component {
   static propTypes = {
-    onEdit: PropTypes.func,
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    onEdit: PropTypes.func.isRequired,
 
     //Provided by redux
-    sectionRows: PropTypes.arrayOf(sectionDataPropType),
+    sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
   };
 
   state = {
     sortingColumns: {
       [COLUMNS.ID]: {
-        direction: 'asc',
+        direction: 'desc',
         position: 0
       }
     }
   };
 
-  editDeleteFormatter = (temp, {rowData}) => {
+  actionCellFormatter = (temp, {rowData}) => {
     return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
@@ -195,7 +204,8 @@ class SectionTable extends Component {
     const colStyle = {...styles.cell, ...styles.sectionCol};
 
     return [
-      { //displays nothing, but used as initial sort
+      {
+        //displays nothing, but used as initial sort
         property: 'id',
         header:{
           props: {style: styles.hiddenCol}
@@ -255,8 +265,8 @@ class SectionTable extends Component {
       {
         property: 'loginType',
         header: {
-          label: i18n.sectionCode(),
-          props:{style: colHeaderStyle},
+          label: i18n.loginInfo(),
+          props:{style: {...colHeaderStyle, ...styles.unsortableHeader}}
         },
         cell: {
           format: loginInfoFormatter,
@@ -264,12 +274,12 @@ class SectionTable extends Component {
         }
       },
       {
-        property: 'editDelete',
+        property: 'actions',
         header: {
           props:{style: colHeaderStyle},
         },
         cell: {
-          format: this.editDeleteFormatter,
+          format: this.actionCellFormatter,
           props: {style: {...styles.cell, ...styles.colButton}}
         }
       }
@@ -281,7 +291,6 @@ class SectionTable extends Component {
       // Dim inactive sorting icons in the column headers
       default: {color: 'rgba(148, 156, 162, 0.8 )'}
     };
-
 
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
@@ -307,6 +316,6 @@ class SectionTable extends Component {
 
 export const UnconnectedSectionTable = SectionTable;
 
-export default connect(state => ({
-  sectionRows: getSectionRows(state)
+export default connect((state, ownProps) => ({
+  sectionRows: getSectionRows(state, ownProps.sectionIds)
 }))(SectionTable);

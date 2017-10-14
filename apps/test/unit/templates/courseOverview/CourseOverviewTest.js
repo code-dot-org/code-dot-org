@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
@@ -26,12 +25,12 @@ const defaultProps = {
     title: 'CSP Unit 2',
     name: 'csp2',
     description: 'desc'
-  }]
+  }],
+  isVerifiedTeacher: true,
+  hasVerifiedResources: false,
 };
 
 describe('CourseOverview', () => {
-  throwOnConsoleWarnings();
-
   it('renders a top row for teachers', () => {
     const wrapper = shallow(
       <CourseOverview
@@ -59,5 +58,52 @@ describe('CourseOverview', () => {
       />
     );
     assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
+  });
+
+  describe('VerifiedResourcesNotification', () => {
+    const propsToShow = {
+      ...defaultProps,
+      isVerifiedTeacher: false,
+      hasVerifiedResources: true,
+    };
+
+    it('is shown to unverified teachers if course has verified resources', () => {
+      const wrapper = shallow(
+        <CourseOverview
+          {...propsToShow}
+        />
+      );
+      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+    });
+
+    it('is not shown if teacher is verified', () => {
+      const wrapper = shallow(
+        <CourseOverview
+          {...propsToShow}
+          isVerifiedTeacher={true}
+        />
+      );
+      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+    });
+
+    it('is not shown if course does not have verified resources', () => {
+      const wrapper = shallow(
+        <CourseOverview
+          {...propsToShow}
+          hasVerifiedResources={false}
+        />
+      );
+      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+    });
+
+    it('is not shown while viewing as student', () => {
+      const wrapper = shallow(
+        <CourseOverview
+          {...propsToShow}
+          viewAs={ViewType.Student}
+        />
+      );
+      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+    });
   });
 });

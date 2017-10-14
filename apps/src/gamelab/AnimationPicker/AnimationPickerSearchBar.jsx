@@ -1,14 +1,14 @@
 /** Animation picker dialog search bar */
 import React, {PropTypes} from 'react';
-var color = require("../../util/color");
+import color from '../../util/color';
 
-var BORDER_WIDTH = 1;
-var BORDER_COLOR = color.light_gray;
-var BORDER_RADIUS = 6;
-var INPUT_HORIZONTAL_PADDING = BORDER_RADIUS;
+const BORDER_WIDTH = 1;
+const BORDER_COLOR = color.light_gray;
+const BORDER_RADIUS = 6;
+const INPUT_HORIZONTAL_PADDING = BORDER_RADIUS;
 
 // We have side-by-side elements that should format sort of like one element
-var styles = {
+const styles = {
   input: {
     height: 28,
     paddingTop: 0,
@@ -35,17 +35,15 @@ var styles = {
   }
 };
 
-var AnimationPickerSearchBar = React.createClass({
-  propTypes: {
+export default class AnimationPickerSearchBar extends React.Component {
+  static propTypes = {
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired
-  },
+  };
 
-  onChange(evt) {
-    this.props.onChange(evt.target.value);
-  },
+  onChange = (evt) => this.props.onChange(evt.target.value);
 
-  render: function () {
+  render() {
     return (
       <div style={styles.search}>
         <span className="fa fa-search" style={styles.icon}></span>
@@ -58,5 +56,4 @@ var AnimationPickerSearchBar = React.createClass({
       </div>
     );
   }
-});
-module.exports = AnimationPickerSearchBar;
+}

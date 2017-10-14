@@ -17,6 +17,13 @@ import {
 import {computePublicKey} from './cryptographyMath';
 import {COLORS} from './style';
 
+const INITIAL_STATE = {
+  publicModulus: null,
+  privateKey: null,
+  publicNumber: null,
+  secretNumber: null
+};
+
 export default class Alice extends React.Component {
   static propTypes = {
     disabled: PropTypes.bool,
@@ -25,14 +32,9 @@ export default class Alice extends React.Component {
     runModuloClock: PropTypes.func.isRequired
   };
 
-  state = {
-    publicModulus: null,
-    privateKey: null,
-    publicNumber: null,
-    secretNumber: null
-  };
+  state = {...INITIAL_STATE};
 
-  startOver = () => this.setState(this.getInitialState());
+  startOver = () => this.setState(INITIAL_STATE);
 
   setPublicModulus(publicModulus) {
     this.setState({publicModulus});

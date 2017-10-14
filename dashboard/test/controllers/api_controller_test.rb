@@ -1,10 +1,5 @@
 require 'test_helper'
 
-# Define this here to ensure that we don't incorrectly use the :pegasus version.
-def slog(h)
-  CDO.slog ({application: :dashboard}).merge(h)
-end
-
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
@@ -268,8 +263,6 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get surveys for section with script with anonymous level_group assessment" do
-    skip "temporarily disabled on CircleCI after Ubuntu 14 upgrade" if ENV['CI']
-
     # Seed the RNG deterministically so we get the same "random" shuffling of results.
     srand 1
 
@@ -1075,7 +1068,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal false, body['disableSocialShare']
+    assert_equal nil, body['disableSocialShare']
     assert_equal 100, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 
@@ -1132,7 +1125,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal({}, body)
+    assert_equal({"linesOfCode" => 0, "linesOfCodeText" => 'Total lines of code: 0'}, body)
     assert_equal(
       [
         {
@@ -1203,7 +1196,49 @@ class ApiControllerTest < ActionController::TestCase
     get :section_progress, params: {section_id: @flappy_section.id}
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
+    data = JSON.parse(@response.body)
+    expected = {
+      'script' => {
+        'id' => Script.get_from_cache(Script::FLAPPY_NAME).id,
+        'name' => 'Flappy Code',
+        'levels_count' => 10,
+        'stages' => [{
+          'length' => 10,
+          'title' => 'Flappy Code'
+        }]
+      },
+      'students' => [{
+        'id' => @student_flappy_1.id,
+        'levels' => (1..10).map {|level_num| ['not_tried', level_num, "/flappy/#{level_num}"]}
+      }]
+    }
+
+    assert_equal expected, data
+  end
+
+  test "should get paginated progress" do
+    get :section_progress, params: {section_id: @section.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    get :section_progress, params: {section_id: @section.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    # third page has only one student (of 5 total)
+    get :section_progress, params: {section_id: @section.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].length
+
+    # if we request 1 per page, page 6 should still work (because page 5 gave
+    # us a full page of data), but page 7 should fail
+    get :section_progress, params: {section_id: @section.id, page: 6, per: 1}
+    assert_response :success
+    get :section_progress, params: {section_id: @section.id, page: 7, per: 1}
+    assert_response 416
   end
 
   test "should get progress for section with specific script" do
@@ -1216,6 +1251,27 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal script.id, JSON.parse(@response.body)['script']['id']
+  end
+
+  test "should get paginated progress with specific script" do
+    script = Script.find_by_name('algebra')
+
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+    assert_equal script.id, data['script']['id']
+
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    # third page has only one student (of 5 total)
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].length
   end
 
   test "should get paired icons for paired user levels" do
@@ -1243,8 +1299,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     parsed = JSON.parse(response.body)
 
-    assert_match /paired/, parsed['students'][3]['levels'].first['class']
-    assert_match /paired/, parsed['students'][4]['levels'].first['class']
+    assert_match /paired/, parsed['students'][3]['levels'].first[0]
+    assert_match /paired/, parsed['students'][4]['levels'].first[0]
   end
 
   test "should get progress for section with section script when blank script is specified" do

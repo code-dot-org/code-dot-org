@@ -1,7 +1,7 @@
 - lesson_plans ||= nil
 - ages ||= nil
 
-.courseblock-span6.courseblock-wide-large{style: "height: 330px; max-width: 100%;"}
+.courseblock-span6.courseblock-wide-large{style: "height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;"}
   #courseblock-header{style: 'position: relative; height: 80px;'}
     %a{:href=>cta_link, style: 'position: absolute;'}
       %img{src: img, style: "width: 100%;"}
@@ -11,7 +11,7 @@
       %h4= ages
     .smalltext= description
     %a{:href=>cta_link}
-      %button{style: "margin-left: 10px; margin-top: 20px;"}= cta_text
+      %button{style: "margin-left: 10px; margin-top: 20px;"}!= cta_text
     - unless lesson_plans.nil?
       %a{:href=>lesson_plans, :target=>'_blank'}
         %button{style: "margin-left: 10px; margin-top: 20px;"} Lesson plans

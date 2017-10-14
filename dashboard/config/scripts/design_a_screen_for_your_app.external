@@ -2,9 +2,9 @@ name 'Design a Screen for your App'
 markdown <<MARKDOWN
 # Mocking Up Your App
 
-Now that you have some practice laying out elements in App Lab you can start working on mocking your own app. With your group divvy up the screens so that everyone is working on a different screen.
+Now that you have some practice laying out elements in App Lab, you can start working on mocking your own app. With your group, divvy up the screens so that everyone is working on a different screen.
 
-Because you'll be dividing the work up you'll want to do some planning ahead of time to decide on a common look and feel for your pages. For example, you'll want to agree on things such as:
+Because you'll be dividing the work up, you'll want to do some planning ahead of time to decide on a common look and feel for your pages. For example, you'll want to agree on things such as:
 
 * Where do navigation buttons go?
 * What colors will you use for backgrounds, text, and buttons

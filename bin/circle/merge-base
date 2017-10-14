@@ -13,13 +13,13 @@ end
 
 def circle_yml_changed
   system('git fetch')
-  !`git diff ...#{merge_branch} -- circle.yml`.empty?
+  !`git diff ...#{merge_branch} -- .circleci/config.yml`.empty?
 end
 
 sha = GitUtils.git_revision_branch(merge_branch)
 puts "Merging base branch #{merge_branch} #{sha}"
 
-raise "circle.yml has changed. Please merge latest staging into your branch and try again." if circle_yml_changed
+raise ".circleci/circle.yml has changed. Please merge latest staging into your branch and try again." if circle_yml_changed
 
 system("git merge --no-edit #{merge_branch}")
 
