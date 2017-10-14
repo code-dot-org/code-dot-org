@@ -286,5 +286,6 @@
   "weather": "天气",
   "weatherTypeClear": "晴朗",
   "weatherTypeRain": "下雨",
-  "weatherTypeThunder": "雷电"
+  "weatherTypeThunder": "雷电",
+  "runAgent": "Run Agent"
 }

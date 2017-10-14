@@ -286,5 +286,6 @@
   "weather": "hava durumu",
   "weatherTypeClear": "güneşli",
   "weatherTypeRain": "yağmur",
-  "weatherTypeThunder": "gök gürültüsü"
+  "weatherTypeThunder": "gök gürültüsü",
+  "runAgent": "Run Agent"
 }

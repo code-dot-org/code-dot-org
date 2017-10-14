@@ -286,5 +286,6 @@
   "weather": "sää",
   "weatherTypeClear": "tyhjennä",
   "weatherTypeRain": "sade",
-  "weatherTypeThunder": "ukkonen"
+  "weatherTypeThunder": "ukkonen",
+  "runAgent": "Run Agent"
 }
