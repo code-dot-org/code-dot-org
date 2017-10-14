@@ -326,6 +326,8 @@ export default class Craft {
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
       isMinecraft: true,
+      hideRunButton: config.level.specialLevelType === 'agentSpawn',
+      runButtonText: config.level.agentStartPosition ? craftMsg.runAgent() : undefined,
     });
 
     ReactDOM.render(
