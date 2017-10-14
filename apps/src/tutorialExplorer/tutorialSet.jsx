@@ -5,7 +5,7 @@ import React, {PropTypes} from 'react';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   tutorialSetNoTutorials: {

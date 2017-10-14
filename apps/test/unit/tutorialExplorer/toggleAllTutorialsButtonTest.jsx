@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import ToggleAllTutorialsButton from '@cdo/apps/tutorialExplorer/toggleAllTutorialsButton';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const FAKE_SHOW_ALL = () => {};
 const FAKE_HIDE_ALL = () => {};
@@ -21,7 +22,7 @@ describe('ToggleAllTutorialsButton', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <button onClick={FAKE_HIDE_ALL}>
-          {'Hide activities for many languages'}
+          {i18n.hideAllTutorialsButton()}
           &nbsp;
           <i className="fa fa-caret-up"/>
         </button>
@@ -39,7 +40,7 @@ describe('ToggleAllTutorialsButton', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <button onClick={FAKE_SHOW_ALL}>
-          {'Show activities for many languages'}
+          {i18n.showAllTutorialsButton()}
           &nbsp;
           <i className="fa fa-caret-down"/>
         </button>

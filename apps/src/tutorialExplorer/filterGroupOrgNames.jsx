@@ -4,7 +4,7 @@
 import React, {PropTypes} from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import { TutorialsOrgName } from './util';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   select: {

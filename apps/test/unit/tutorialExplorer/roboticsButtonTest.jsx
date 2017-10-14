@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import RoboticsButton from '@cdo/apps/tutorialExplorer/roboticsButton';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 describe('RoboticsButton', () => {
   it('renders with given url', () => {
@@ -16,7 +17,7 @@ describe('RoboticsButton', () => {
               <div>
                 <img src="/images/learn/robotics-link.png"/>
                 <div>
-                  {'View robotics activities'}
+                  {i18n.roboticsButtonText()}
                   &nbsp;
                   <i className="fa fa-arrow-right"/>
                 </div>
@@ -26,7 +27,7 @@ describe('RoboticsButton', () => {
         </div>
         <div>
           <a href="/i/robot">
-            Got robots? Use these activities and make a tangible Hour of Code for students of any age!
+            {i18n.roboticsText()}
           </a>
         </div>
       </div>

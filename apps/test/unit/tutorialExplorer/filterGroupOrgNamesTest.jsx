@@ -4,6 +4,7 @@ import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const TEST_ORG_NAME = 'Code Studio';
 const ORG_1 = 'Hogwarts School';
@@ -27,13 +28,13 @@ describe('FilterGroupOrgNames', () => {
       <FilterGroupOrgNames {...DEFAULT_PROPS}/>
     );
     expect(wrapper).to.containMatchingElement(
-      <FilterGroupContainer text="Created by">
+      <FilterGroupContainer text={i18n.filterOrgNames()}>
         <select
           value={TEST_ORG_NAME}
           className="noFocusButton"
         >
           <option key="all" value="all">
-            All
+            {i18n.filterOrgNamesAll()}
           </option>
           <option key={ORG_1} value={ORG_1}>
             {ORG_1}

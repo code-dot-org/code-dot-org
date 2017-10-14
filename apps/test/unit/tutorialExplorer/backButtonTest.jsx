@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import BackButton from '@cdo/apps/tutorialExplorer/backButton';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 describe('BackButton', () => {
   it('renders like this', () => {
@@ -11,7 +12,7 @@ describe('BackButton', () => {
         <button>
           <i className="fa fa-arrow-left"/>
           &nbsp;
-          {'Back to all activities'}
+          {i18n.backButtonBack()}
         </button>
       </a>
     );
