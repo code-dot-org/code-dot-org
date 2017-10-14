@@ -5,15 +5,15 @@
 import React, {PropTypes} from 'react';
 import color from "../../util/color";
 
-var PlcHeader = React.createClass({
-  propTypes: {
+export default class PlcHeader extends React.Component {
+  static propTypes = {
     unit_name: PropTypes.string,
     unit_view_path: PropTypes.string,
     course_view_path: PropTypes.string,
     page_name: PropTypes.string
-  },
+  };
 
-  render: function () {
+  render() {
     let breadcrumbStyle = {
       container: {
         marginBottom: 20
@@ -54,6 +54,4 @@ var PlcHeader = React.createClass({
       </div>
     );
   }
-});
-
-export default PlcHeader;
+}
