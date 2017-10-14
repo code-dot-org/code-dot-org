@@ -1,5 +1,4 @@
 - require 'country_codes'
-%script{type: "text/javascript", src: "/js/signup-form.js"}
 - signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
 - signup_submit_census_error_message = hoc_s(:signup_submit_census_error_message).gsub(/"/,"\\\\\"")
 - hoc_year = DCDO.get("hoc_year", 2017)
