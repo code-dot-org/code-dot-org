@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: school_annual_stats
+# Table name: school_stats_by_years
 #
 #  school_id          :string(12)       not null, primary key
 #  school_year        :string(9)        not null, primary key
@@ -37,10 +37,10 @@
 #
 # Indexes
 #
-#  index_school_annual_stats_on_school_id  (school_id)
+#  index_school_stats_by_years_on_school_id  (school_id)
 #
 
-class SchoolAnnualStat < ActiveRecord::Base
+class SchoolStatsByYear < ActiveRecord::Base
   self.primary_keys = :school_id, :school_year
   belongs_to :school
 end

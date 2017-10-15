@@ -764,7 +764,36 @@ ActiveRecord::Schema.define(version: 20171012203910) do
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id", using: :btree
   end
 
-  create_table "school_annual_stats", primary_key: ["school_id", "school_year"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",       null: false
+    t.string   "city",       null: false
+    t.string   "state",      null: false
+    t.string   "zip",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state"], name: "index_school_districts_on_state", using: :btree
+  end
+
+  create_table "school_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "country"
+    t.string   "school_type"
+    t.integer  "zip"
+    t.string   "state"
+    t.integer  "school_district_id"
+    t.boolean  "school_district_other",            default: false
+    t.string   "school_district_name"
+    t.string   "school_id",             limit: 12
+    t.boolean  "school_other",                     default: false
+    t.string   "school_name",                                                    comment: "This column appears to be redundant with pd_enrollments.school and users.school, therefore validation rules must be used to ensure that any user or enrollment with a school_info has its school name stored in the correct place."
+    t.string   "full_address",                                                   comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.string   "validation_type",                  default: "full", null: false
+    t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
+    t.index ["school_id"], name: "index_school_infos_on_school_id", using: :btree
+  end
+
+  create_table "school_stats_by_years", primary_key: ["school_id", "school_year"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "school_id",          limit: 12, null: false, comment: "NCES public school ID"
     t.string   "school_year",        limit: 9,  null: false, comment: "School Year"
     t.string   "grades_offered_lo",  limit: 2,  null: false, comment: "Grades Offered - Lowest"
@@ -797,36 +826,7 @@ ActiveRecord::Schema.define(version: 20171012203910) do
     t.integer  "frl_eligible_total",            null: false, comment: "Total of free and reduced-price lunch eligible"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
-    t.index ["school_id"], name: "index_school_annual_stats_on_school_id", using: :btree
-  end
-
-  create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",       null: false
-    t.string   "city",       null: false
-    t.string   "state",      null: false
-    t.string   "zip",        null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["state"], name: "index_school_districts_on_state", using: :btree
-  end
-
-  create_table "school_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "country"
-    t.string   "school_type"
-    t.integer  "zip"
-    t.string   "state"
-    t.integer  "school_district_id"
-    t.boolean  "school_district_other",            default: false
-    t.string   "school_district_name"
-    t.string   "school_id",             limit: 12
-    t.boolean  "school_other",                     default: false
-    t.string   "school_name",                                                    comment: "This column appears to be redundant with pd_enrollments.school and users.school, therefore validation rules must be used to ensure that any user or enrollment with a school_info has its school name stored in the correct place."
-    t.string   "full_address",                                                   comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
-    t.string   "validation_type",                  default: "full", null: false
-    t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
-    t.index ["school_id"], name: "index_school_infos_on_school_id", using: :btree
+    t.index ["school_id"], name: "index_school_stats_by_years_on_school_id", using: :btree
   end
 
   create_table "schools", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1233,9 +1233,9 @@ ActiveRecord::Schema.define(version: 20171012203910) do
   add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
-  add_foreign_key "school_annual_stats", "schools"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
+  add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
   add_foreign_key "sections", "courses"
   add_foreign_key "survey_results", "users"
