@@ -1,7 +1,12 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+require 'aws-sdk'
 require 'singleton'
 require 'tempfile'
 
-class NcesLoader
+# NCES Schools Data Loader
+class NcesSchoolsLoader
   attr_reader :s3_key, :csv_options
 
   def initialize(s3_key, csv_options)
@@ -9,57 +14,57 @@ class NcesLoader
     @csv_options = csv_options.freeze
   end
 
-  def load
+  # Loads the NCES datafile and merges the resutls into the current dataset.
+  # @param merge [Boolean] true if merging the datasets, false otherwise
+  def load(merge)
     tmp_file = Tempfile.new(["cdo-nces.", ".dat"])
     begin
-      CDO.log.info "Downloading #{s3_key}..."
-
+      puts "Downloading #{s3_key}..."
       client = Aws::S3::Client.new
-      start = Time.now
       open(tmp_file.path, 'wb') do |tmp|
         client.get_object(bucket: 'cdo-nces', key: s3_key) do |chunk|
           tmp.write(chunk)
         end
       end
-
-      CDO.log.info "Downloaded file in #{Time.now - start} second(s)."
-
-      CDO.log.info "Parsing #{tmp_file.path}..."
-      count = 0
-
+      insert_count = 0
+      update_count = 0
       CSV.foreach(tmp_file.path, csv_options) do |row|
-        # TODO: Here we will merge the parsed results into the current dataset
-        # We can use a temporary DDB table to insert/update school information
-        # then, download the results to a .tsv file to be checked-in
-        puts parse(row)
-        count += 1
+        parsed_school = parse(row)
+        school = School.find_by_id(parsed_school[:id])
+        if school.nil?
+          #school = School.new(parsed_school)
+          insert_count += 1
+        else
+          # TODO: merge the parsed school with school
+          update_count += 1
+        end
+        #school.save! if merge
       end
-
-      CDO.log.info "Parsed #{count} school(s)."
+      puts "Processed #{insert_count + update_count} school(s); #{insert_count} insert(s), #{update_count} update(s)."
     ensure
       tmp_file.close
       tmp_file.unlink
     end
   end
 
+  # Loads all the NCES datafiles into the current dataset.
+  # @param load_all [Boolean] true if merging the datasets, false otherwise
+  def self.load_all(merge)
+    NcesSchoolsLoader::Ccd20132014.instance.load(merge)
+    NcesSchoolsLoader::Pss20132014.instance.load(merge)
+    NcesSchoolsLoader::Ccd20142015.instance.load(merge)
+    NcesSchoolsLoader::Ccd20152016.instance.load(merge)
+    NcesSchoolsLoader::Pcc20152016.instance.load(merge)
+    NcesSchoolsLoader::Ccd20162015.instance.load(merge)
+    return self
+  end
+
   # Download the data in the schools table to a TSV file.
-  # @param tsv_file [String] the TSCV file
-  def self.download_to_tsv(tsv_file)
-    start_time = Time.now
-    CDO.log.info "Downloading schools to #{tsv_file}..."
+  # @return [String} the TSV file
+  def self.to_tsv
+    tsv_file = "#{Dir.tmpdir}/schools.#{Time.now.strftime('%Y%m%d%H%M')}.tsv"
     CSV.open(tsv_file, 'w', {col_sep: "\t", headers: true, quote_char: "\x00"}) do |csv|
-      csv << %w(
-        id
-        school_district_id
-        school_type
-        name
-        address_line1
-        address_line2
-        address_line3
-        city
-        state
-        zip
-      )
+      csv << %w(id school_district_id school_type name address_line1 address_line2 address_line3 city state zip)
       School.order(:id).map do |school|
         csv << [
           school[:id],
@@ -75,12 +80,12 @@ class NcesLoader
         ]
       end
     end
-    CDO.log.info "Downloaded schools in #{Time.now - start_time} second(s)."
+    return tsv_file
   end
 
   # NCES Public/Charter School Directory for 2013-2014
   # @see https://nces.ed.gov/ccd/Data/txt/sc132alay.txt
-  class Ccd20132014 < NcesLoader
+  class Ccd20132014 < NcesSchoolsLoader
     include Singleton
 
     def initialize
@@ -105,7 +110,7 @@ class NcesLoader
 
   # NCES Private School Directory for 2013-2014
   # @see https://nces.ed.gov/surveys/pss/zip/layout2013_14.zip
-  class Pss20132014 < NcesLoader
+  class Pss20132014 < NcesSchoolsLoader
     include Singleton
 
     def initialize
@@ -130,7 +135,7 @@ class NcesLoader
 
   # NCES Public/Charter School Directory for 2014-2015
   # @see https://nces.ed.gov/ccd/xls/2014-15%20CCD%20Companion_SCH%20Directory_File_Layout.xlsx
-  class Ccd20142015 < NcesLoader
+  class Ccd20142015 < NcesSchoolsLoader
     include Singleton
 
     def initialize
@@ -155,7 +160,7 @@ class NcesLoader
 
   # NCES Public/Charter School Directory for 2015-2016
   # @see https://nces.ed.gov/ccd/xls/2015-16_CCD_Companion_SCH_Directory.xlsx
-  class Ccd20152016 < NcesLoader
+  class Ccd20152016 < NcesSchoolsLoader
     include Singleton
 
     def initialize
@@ -180,7 +185,7 @@ class NcesLoader
 
   # NCES Private School Directory for 2015-2016
   # @see https://nces.ed.gov/surveys/pss/zip/layout2015_16.zip
-  class Pss20152016 < NcesLoader
+  class Pss20152016 < NcesSchoolsLoader
     include Singleton
 
     def initialize
@@ -205,7 +210,7 @@ class NcesLoader
 
   # NCES Public/Charter School Directory for 2016-2017
   # @see https://nces.ed.gov/ccd/xls/2016-17_CCD_Companion_SCH_Directory_Layout.xlsx
-  class Ccd20162017 < NcesLoader
+  class Ccd20162017 < NcesSchoolsLoader
     include Singleton
 
     def initialize
@@ -228,3 +233,6 @@ class NcesLoader
     end
   end
 end
+
+tsv_file = NcesSchoolsLoader.load_all(false).to_tsv
+puts "Downloaded schools to: #{tsv_file}"
