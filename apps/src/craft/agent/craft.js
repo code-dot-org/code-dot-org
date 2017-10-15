@@ -256,6 +256,10 @@ export default class Craft {
             $('#soft-buttons')
               .removeClass('soft-buttons-none')
               .addClass('soft-buttons-' + 4);
+            $('.arrow').prop("disabled", false);
+
+            const resetButton = document.getElementById('resetButton');
+            dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
 
             const phaserGame = document.getElementById('phaser-game');
             const onDrag = function (e) {
@@ -532,6 +536,13 @@ export default class Craft {
 
   static levelInitialized() {
     return Craft.gameController && Craft.gameController.levelModel;
+  }
+
+  /**
+   * Base's `studioApp().resetButtonClick` will be called first.
+   */
+  static resetButtonClick() {
+    $('.arrow').prop("disabled", false);
   }
 
   /**
