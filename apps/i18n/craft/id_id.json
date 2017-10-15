@@ -286,5 +286,6 @@
   "weather": "cuaca",
   "weatherTypeClear": "cerah",
   "weatherTypeRain": "hujan",
-  "weatherTypeThunder": "guntur"
+  "weatherTypeThunder": "guntur",
+  "runAgent": "Run Agent"
 }

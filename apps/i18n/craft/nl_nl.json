@@ -286,5 +286,6 @@
   "weather": "weer",
   "weatherTypeClear": "wissen",
   "weatherTypeRain": "regen",
-  "weatherTypeThunder": "onweer"
+  "weatherTypeThunder": "onweer",
+  "runAgent": "Run Agent"
 }

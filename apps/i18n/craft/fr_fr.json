@@ -286,5 +286,6 @@
   "weather": "météo",
   "weatherTypeClear": "dégagé",
   "weatherTypeRain": "pluie",
-  "weatherTypeThunder": "tonnerre"
+  "weatherTypeThunder": "tonnerre",
+  "runAgent": "Run Agent"
 }
