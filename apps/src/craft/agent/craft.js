@@ -542,14 +542,6 @@ export default class Craft {
       return;
     }
 
-    const runButton = document.getElementById('runButton');
-    const resetButton = document.getElementById('resetButton');
-
-    // Ensure that Reset button is at least as wide as Run button.
-    if (!resetButton.style.minWidth) {
-      resetButton.style.minWidth = runButton.offsetWidth + 'px';
-    }
-
     studioApp().toggleRunReset('reset');
     Blockly.mainBlockSpace.traceOn(true);
     studioApp().attempts++;
