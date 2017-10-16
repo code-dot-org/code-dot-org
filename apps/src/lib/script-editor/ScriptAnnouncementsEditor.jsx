@@ -72,7 +72,7 @@ Announce.propTypes = {
 
 export default class ScriptAnnouncementsEditor extends Component {
   static propTypes = {
-    announcements: PropTypes.arrayOf(announcementShape),
+    defaultAnnouncements: PropTypes.arrayOf(announcementShape),
     inputStyle: PropTypes.object.isRequired,
   };
 
@@ -80,7 +80,7 @@ export default class ScriptAnnouncementsEditor extends Component {
     super(props);
 
     this.state = {
-      announcements: props.announcements
+      announcements: props.defaultAnnouncements
     };
   }
 

@@ -27,7 +27,7 @@ export default storybook => {
         name:'ScriptAnnouncementsEditor',
         story: () => (
           <ScriptAnnouncementsEditor
-            announcements={announcements}
+            defaultAnnouncements={announcements}
             inputStyle={inputStyle}
           />
         )

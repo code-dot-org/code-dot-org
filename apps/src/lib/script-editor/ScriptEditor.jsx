@@ -112,7 +112,7 @@ const ScriptEditor = React.createClass({
           currentDescriptions={this.props.i18nData.stageDescriptions}
         />
         <ScriptAnnouncementsEditor
-          announcements={this.props.announcements}
+          defaultAnnouncements={this.props.announcements}
           inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>
