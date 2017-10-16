@@ -131,7 +131,7 @@
     "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
     "embed": "false",
     "instructions": "Add three parameters to your drawFish function to accept red, green and blue values to make your fish different colors. (Click to see full instructions)",
-    "markdown_instructions": "# Multiple Parameters\r\n\r\nLet's make our drawings even more interesting by adding some variety to the color.\r\n\r\n**Add** three more parameters called `red` , `green` , and `blue` to your function definition for `drawFish` which allow you to set the color of the fish when you call the function. Remember to separate them with commas!\r\n\r\n**Note:** this means that drawFish will now have 4 parameters total: size, red, green, and blue. Remember that identifying these parameters are all part of the subgoal \"Define function\".\r\n\r\n**HINT:** inside drawFish just replace the numbers of the penRGB values with the parameters of your function.\r\n\r\n**Change** the function calls at the top your code to draw different colored fish.\r\n\r\n![](https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30 PM.png)",
+    "markdown_instructions": "# Multiple Parameters\r\n\r\nLet's make our drawings even more interesting by adding some variety to the color.\r\n\r\n**Add** three more parameters called `red` , `green` , and `blue` to your function definition for `drawFish` which allow you to set the color of the fish when you call the function. Remember to separate them with commas!\r\n\r\n**Note:** this means that drawFish will now have 4 parameters total: size, red, green, and blue. Remember that identifying these parameters are all part of the subgoal `//Define function`.\r\n\r\n**HINT:** inside drawFish just replace the numbers of the penRGB values with the parameters of your function.\r\n\r\n**Change** the function calls at the top your code to draw different colored fish.\r\n\r\n![](https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -154,7 +154,7 @@
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -202,7 +202,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 16:19:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-10 17:32:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 16:19:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-10 17:32:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-15 22:50:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"text_mode_at_start\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
