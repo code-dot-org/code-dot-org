@@ -10,7 +10,7 @@ const sampleAnnouncement = {
   type: "information"
 };
 const defaultProps = {
-  announcements: [],
+  defaultAnnouncements: [],
   inputStyle: {}
 };
 
@@ -19,7 +19,7 @@ describe('ScriptAnnouncementsEditor', () => {
     const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
-        announcements={[sampleAnnouncement]}
+        defaultAnnouncements={[sampleAnnouncement]}
       />
     );
     assert.equal(wrapper.find('Announce').length, 1);
@@ -29,7 +29,7 @@ describe('ScriptAnnouncementsEditor', () => {
     const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
-        announcements={[sampleAnnouncement]}
+        defaultAnnouncements={[sampleAnnouncement]}
       />
     );
     assert.equal(wrapper.find('ScriptAnnouncements').length, 1);
@@ -127,7 +127,7 @@ describe('ScriptAnnouncementsEditor', () => {
     const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
-        announcements={[sampleAnnouncement]}
+        defaultAnnouncements={[sampleAnnouncement]}
       />
     );
     assert.equal(wrapper.find('input[type="hidden"]').props().value,

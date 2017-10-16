@@ -181,7 +181,7 @@ stage 'stage 1'
 variants
   level 'maze 1'
   level 'maze 2', experiments: ["testExperiment"]
-  level 'maze 3', experiments: ["testExperiment2", "testExperiment3"]
+  level 'maze 3', experiments: ["testExperiment2","testExperiment3"]
 endvariants
 SCRIPT
     assert_equal expected, script_text

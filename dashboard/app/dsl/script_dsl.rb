@@ -39,6 +39,7 @@ class ScriptDSL < BaseDSL
   boolean :has_verified_resources
 
   string :wrapup_video
+  string :script_announcements
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -46,10 +47,6 @@ class ScriptDSL < BaseDSL
 
   def project_widget_types(types)
     @project_widget_types = types
-  end
-
-  def script_announcements(announcements)
-    @script_announcements = announcements
   end
 
   def stage(name, properties = {})

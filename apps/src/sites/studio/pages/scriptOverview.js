@@ -27,9 +27,8 @@ function initPage() {
   }
 
   if (scriptData.script_announcements) {
-    const announcements = JSON.parse(scriptData.script_announcements);
     registerReducers({scriptAnnouncements: scriptAnnouncementReducer});
-    announcements.forEach(announcement =>
+    scriptData.script_announcements.forEach(announcement =>
       store.dispatch(addAnnouncement(announcement.notice, announcement.details,
         announcement.link, announcement.type))
     );

@@ -119,6 +119,7 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
+    h[:script_announcements] = JSON.parse(h[:script_announcements]) if h[:script_announcements]
     h.delete(:visible_to_teachers)
     h
   end

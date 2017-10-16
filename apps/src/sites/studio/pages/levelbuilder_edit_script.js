@@ -37,10 +37,7 @@ export default function initPage(scriptEditorData) {
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
 
-  let announcements = [];
-  if (scriptData.script_announcements) {
-    announcements = JSON.parse(scriptData.script_announcements);
-  }
+  let announcements = scriptData.script_announcements || [];
 
   ReactDOM.render(
     <Provider store={store}>
