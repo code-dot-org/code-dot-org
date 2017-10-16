@@ -426,7 +426,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd6'
   end
 
   def k1?

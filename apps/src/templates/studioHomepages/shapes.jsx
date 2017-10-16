@@ -28,6 +28,7 @@ const shapes = {
       linkToAssigned: PropTypes.string.isRequired,
       numberOfStudents: PropTypes.number.isRequired,
       linkToStudents: PropTypes.string.isRequired,
+      login_type: PropTypes.string,
       code: PropTypes.string.isRequired,
     })
   )

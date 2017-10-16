@@ -58,6 +58,28 @@
 \|
 = link_to 'Back', regional_partners_path
 %br
+%h2 Regions
+= form_tag(action: 'add_mapping') do
+  %table.table.table-hover.table-condensed.table-auto-width{:id => 'mappings-table'}
+    %thead
+      %th Action
+      %th Region
+    %tbody
+      - @regional_partner.mappings.each do |mapping|
+        %tr
+          %td= link_to 'Remove', action: :remove_mapping, mapping_id: mapping.id
+          %td= mapping.state? ? mapping.state : mapping.zip_code
+          %td
+      %tr
+        %td
+          .actions
+            = submit_tag('Add', id: 'submitAddMapping')
+        %td
+          .field
+            Enter a state or zip code:
+            = text_field_tag :region, '', class: 'form-control'
+        %td
+%br
 %h2 Program Managers
 %table.table.table-hover.table-condensed.table-auto-width{:id => 'program-managers-table'}
   %thead

@@ -1,5 +1,7 @@
 hidden false
 stage_extras_available true
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF'
