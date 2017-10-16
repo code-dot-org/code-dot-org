@@ -52,6 +52,24 @@
       "show": null,
       "hide": null,
       "speed": null,
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      },
+      "comment_Goals_2": {
+        "goal": "Orient turtle"
+      },
+      "comment_Goals_3": {
+        "goal": "Define function"
+      },
+      "comment_Goals_4": {
+        "goal": "Call function"
+      },
+      "comment_Goals_5": {
+        "goal": "Set pen properties"
+      },
+      "comment_Goals_6": {
+        "goal": "Write a loop"
+      },
       "forLoop_i_0_4": null,
       "randomNumber_min_max": null,
       "functionParams_none": {
@@ -101,7 +119,7 @@
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -126,10 +144,17 @@
     ],
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-15 21:06:43 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

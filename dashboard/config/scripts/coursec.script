@@ -18,8 +18,8 @@ level 'courseC_maze_programming7', challenge: true
 level 'courseC_maze_programming8'
 assessment 'courseC_maze_programming8_predict1'
 level 'courseC_maze_programming9'
-bonus 'courseC_maze_programming_challenge1', challenge: true
-bonus 'courseC_maze_programming_challenge2', challenge: true
+bonus 'courseC_maze_programming_challenge1'
+bonus 'courseC_maze_programming_challenge2'
 
 stage 'Debugging in Maze'
 level 'courseC_video_debugging'
@@ -32,8 +32,8 @@ level 'courseC_maze_debugging6'
 level 'courseC_maze_debugging7', challenge: true
 assessment 'courseC_maze_debugging8_predict1'
 level 'courseC_maze_debugging9'
-bonus 'courseC_maze_debugging_challenge1', challenge: true
-bonus 'courseC_maze_debugging_challenge2', challenge: true
+bonus 'courseC_maze_debugging_challenge1'
+bonus 'courseC_maze_debugging_challenge2'
 
 stage 'Real-life Algorithms: Paper Planes'
 level 'PaperPlanes'
@@ -52,8 +52,8 @@ level 'courseC_collector_prog9'
 level 'grade2_collector_A'
 assessment 'grade2_collector_A_predict1'
 level 'grade2_collector_10'
-bonus 'courseC_collector_prog_challenge1', challenge: true
-bonus 'courseC_collector_prog_challenge2', challenge: true
+bonus 'courseC_collector_prog_challenge1'
+bonus 'courseC_collector_prog_challenge2'
 
 stage 'Programming in Artist'
 level 'courseC_video_artist'
