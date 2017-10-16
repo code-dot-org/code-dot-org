@@ -286,5 +286,6 @@
   "weather": "eguraldia",
   "weatherTypeClear": "oskarbi",
   "weatherTypeRain": "euria",
-  "weatherTypeThunder": "trumoia"
+  "weatherTypeThunder": "trumoia",
+  "runAgent": "Run Agent"
 }

@@ -239,6 +239,8 @@ Dashboard::Application.routes.draw do
   get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
   get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
   get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
+  post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
+  get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -434,9 +436,9 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 
     get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
-    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
+    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course_to_facilitator'
     # TODO: change remove_course to use http delete method
-    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
+    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'

@@ -286,5 +286,6 @@
   "weather": "날씨",
   "weatherTypeClear": "맑음",
   "weatherTypeRain": "비",
-  "weatherTypeThunder": "천둥번개"
+  "weatherTypeThunder": "천둥번개",
+  "runAgent": "Run Agent"
 }

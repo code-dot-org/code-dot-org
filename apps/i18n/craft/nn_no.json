@@ -286,5 +286,6 @@
   "weather": "vær",
   "weatherTypeClear": "tøm",
   "weatherTypeRain": "regn",
-  "weatherTypeThunder": "torden"
+  "weatherTypeThunder": "torden",
+  "runAgent": "Run Agent"
 }
