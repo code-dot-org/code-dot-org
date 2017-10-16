@@ -787,7 +787,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
     level_source = LevelSource.find_identical_or_create(level, last_attempt_data)
-    UserLevel.create!(level: level, user: @student, level_source: level_source)
+    UserLevel.create!(
+      script: @custom_s1_l1.script,
+      level: level,
+      user: @student,
+      level_source: level_source
+    )
 
     get :show, params: {
       script_id: @custom_script,
