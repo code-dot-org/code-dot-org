@@ -1,7 +1,7 @@
 import React from 'react';
 import Dialog, {Icon, Title, Body, Buttons, Cancel, Confirm, Footer} from './Dialog';
 
-const ExampleDialogButton = React.createClass({
+class ExampleDialogButton extends React.Component {
   render() {
     return (
       <div>
@@ -16,7 +16,7 @@ const ExampleDialogButton = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default storybook => {
   return storybook
