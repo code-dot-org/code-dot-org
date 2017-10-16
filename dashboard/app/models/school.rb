@@ -36,7 +36,7 @@ class School < ActiveRecord::Base
 
   def self.find_or_create_all_from_tsv(filename)
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      School.where(row.symbolize_keys).first_or_create!
+      School.where(row.to_hash).first_or_create!
     end
   end
 
@@ -58,23 +58,14 @@ class School < ActiveRecord::Base
 
   # Download the data in the table to a CSV file.
   # @param filename [String] The CSV file name.
+  # @param options [Hash] The CSV file parsing options.
   # @return [String] The CSV file name.
-  def self.write_to_csv(filename)
-    CSV.open(filename, 'w', CSV_IMPORT_OPTIONS) do |csv|
-      csv << %w(id school_district_id name address_line1 address_line2 address_line3 city state zip school_type)
+  def self.write_to_csv(filename, options = CSV_IMPORT_OPTIONS)
+    cols = %w(id school_district_id name address_line1 address_line2 address_line3 city state zip school_type)
+    CSV.open(filename, 'w', options) do |csv|
+      csv << cols
       School.order(:id).map do |row|
-        csv << [
-          row[:id],
-          row[:school_district_id],
-          row[:name],
-          row[:address_line1],
-          row[:address_line2],
-          row[:address_line3],
-          row[:city],
-          row[:state],
-          row[:zip],
-          row[:school_type]
-        ]
+        csv << cols.map {|col| row[col]}
       end
     end
     return filename
