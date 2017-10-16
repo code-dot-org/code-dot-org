@@ -1,6 +1,7 @@
 {
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
+  "filterSortBy": "Sort by",
   "filterGrades": "Grades",
   "filterGradesPre": "Pre-reader",
   "filterGrades25": "Grades 2-5",
@@ -43,7 +44,6 @@
   "filterHeaderHideFilters": "Apply",
   "filterHeaderTutorialCountSingle": "1 result",
   "filterHeaderTutorialCountPlural": "{tutorial_count} results",
-  "filterHeaderDefault": "Sort",
   "filterHeaderDisplayWeight": "Recommended",
   "filterHeaderPopularityRank": "Most popular",
   "roboticsButtonText": "View robotics activities",
