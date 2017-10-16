@@ -206,6 +206,8 @@
   "deleteConfirm": "Delete?",
   "deleteProject": "Delete Project",
   "deleteSection": "Delete Section",
+  "deleteSectionConfirm": "Are you sure you want to delete this section? You will not be able to undo this.",
+  "deleteSectionHideSuggestion": "If you simply want to remove this section from your list of sections, consider using the 'Hide section' option instead.",
   "designMode": "Design",
   "dialogCancel": "Cancel",
   "dialogConfirmEmail": "Confirm email",
