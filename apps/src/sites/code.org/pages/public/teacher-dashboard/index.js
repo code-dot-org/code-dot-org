@@ -55,7 +55,6 @@ function renderSectionProjects(sectionId) {
 function main() {
   const studioUrlPrefix = scriptData.studiourlprefix;
   var valid_scripts = scriptData.valid_scripts;
-  var hoc_assign_warning = scriptData.hoc_assign_warning;
   var disabled_scripts = scriptData.disabled_scripts;
   var i18n = scriptData.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
