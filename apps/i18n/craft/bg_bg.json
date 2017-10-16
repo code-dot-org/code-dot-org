@@ -286,5 +286,6 @@
   "weather": "време",
   "weatherTypeClear": "изчисти",
   "weatherTypeRain": "дъжд",
-  "weatherTypeThunder": "гръм"
+  "weatherTypeThunder": "гръм",
+  "runAgent": "Run Agent"
 }
