@@ -808,7 +808,7 @@ class User < ActiveRecord::Base
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
     sl_level_ids = script.script_levels.map(&:level_ids).flatten
-    ul_with_sl = user_levels_by_level(script).select do |level_id, ul|
+    ul_with_sl = user_levels_by_level(script).select do |level_id, _ul|
       sl_level_ids.include? level_id
     end
 
