@@ -51,6 +51,9 @@ class XhrProxyController < ApplicationController
     query.yahooapis.com
     rejseplanen.dk
     noaa.gov
+    nuevaschool.ngrok.io
+    nuevaschool2.ngrok.io
+    nuevaschool3.ngrok.io
     rhcloud.com
     swapi.co
     transitchicago.com
