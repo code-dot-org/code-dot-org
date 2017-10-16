@@ -41,7 +41,8 @@ class Ability
       Pd::WorkshopMaterialOrder,
       :pd_workshop_user_management,
       :peer_review_submissions,
-      RegionalPartner
+      RegionalPartner,
+      Pd::RegionalPartnerMapping
     ]
 
     if user.persisted?
@@ -131,6 +132,7 @@ class Ability
         can :manage, :pd_workshop_user_management
         can :manage, RegionalPartner
         can :report_csv, :peer_review_submissions
+        can :manage, Pd::RegionalPartnerMapping
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)
