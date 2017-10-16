@@ -24,8 +24,7 @@ markdown <<MARKDOWN
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Either as a class or individually, students should watch a video introducing the way that functions are defined and called in JavaScript. You may wish to take a minute following the video to address any questions that may have developed from watching the video.
+You may notice that the subgoal labels are identical to the blocks. Students can use the subgoal labels as place holders in their problem solutions and then come back to fill them in after determining the remainder of the solution. The subgoal and block names are the same here because the blocks don't have a name until a student defines or calls the function, though the default text is `myFunction`. 
 
-You may notice that the subgoal labels are identical to the blocks. Students can use the subgoal labels as place holders in their problem solutions and then come back to fill them in after determining the remainder of the solution.
-
+Either as a class or individually, students should watch a video introducing the way that functions are defined and called in JavaScript (on the next page). You may wish to take a minute following the video to address any questions that may have developed from watching the video.
 MARKDOWN

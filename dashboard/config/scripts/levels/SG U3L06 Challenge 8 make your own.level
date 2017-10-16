@@ -49,6 +49,21 @@
           "a"
         ]
       },
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      },
+      "comment_Goals_2": {
+        "goal": "Orient turtle"
+      },
+      "comment_Goals_3": {
+        "goal": "Define function"
+      },
+      "comment_Goals_4": {
+        "goal": "Call function"
+      },
+      "comment_Goals_5": {
+        "goal": "Set pen properties"
+      },
       "show": null,
       "hide": null,
       "speed": null,
@@ -93,7 +108,7 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "instructions_important": "false",
-    "teacher_markdown": "The term API is used somewhat ambiguously at times, often used to mean: a programming language, a library of commands provided by a language, or the documentation itself.  \r\n\r\nRemind students that they know how to write functions! And in their drawing, they might use them to make more sophisticated things.\r\n\r\n**The Full Turtle API:** Students are introduced to the term API - “Application Program Interface” - a term that means “the full set of commands provided to the programmer by the given language.”\r\n\r\nThe set of all turtle commands is revealed and students are asked to make any kind of drawing that they like.\r\n\r\nValidation note: Since this is a free form drawing we only check the bare minimum requirements: \r\n* set the `penColor` at least 3 times\r\n* called `moveTo` at least once.",
+    "teacher_markdown": "The term API (Application Programming Interface) is used somewhat ambiguously at times, often used to mean: a programming language, a library of commands provided by a language, or the documentation itself.  \r\n\r\nRemind students that they know how to write functions! And in their drawing, they might use them to make more sophisticated things. Encourage them to use subgoals to plan out their drawing.\r\n\r\n**The Full Turtle API:** Students are introduced to the term API - \"Application Program Interface\" - a term that means \r\n\"the full set of commands provided to the programmer by the given language.\"\r\n\r\nThe set of all turtle commands is revealed and students are asked to make any kind of drawing that they like. If students have questions about the new commands, encourage them to read the documentation and experiment.\r\n\r\nValidation note: Since this is a free form drawing we only check the bare minimum requirements: \r\n* set the `penColor` at least 3 times\r\n* called `moveTo` at least once.",
     "log_conditions": [
       {
         "entries": [
@@ -131,7 +146,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:48:23 +0000\",\"changed\":[\"code_functions\",\"teacher_markdown\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-26 16:37:09 +0000\",\"changed\":[\"code_functions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:48:23 +0000\",\"changed\":[\"code_functions\",\"teacher_markdown\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-26 16:37:09 +0000\",\"changed\":[\"code_functions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-15 14:25:32 +0000\",\"changed\":[\"code_functions\",\"teacher_markdown\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

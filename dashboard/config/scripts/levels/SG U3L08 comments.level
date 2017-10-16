@@ -131,7 +131,7 @@
     "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
     "embed": "false",
     "instructions": "Use the randomNumber() blocks to test the functions you designed with random input. (Click to see full instructions)",
-    "markdown_instructions": "# Commenting code\r\n\r\nWhen you share code with other programmers, you need to add comments to explain your code to others. These comments can replace or be in addition to your subgoal comments. Even if you aren't sharing your code, making comments will help you to remember what you were doing when you come back to it, especially if you haven't worked on it for a while.\r\n\r\nThe way that you add comments is with the `// Comment` block, which is in the **Functions** tab of the toolbox. \r\n\r\n\r\n# Do This\r\nAdd comments to the code that you've been working on. Imagine that you are describing the purpose of the code to one of your classmates.\r\n\r\nADD ANIMATED GIF HERE.\r\n",
+    "markdown_instructions": "# Commenting code\r\n\r\nWhen you share code with other programmers, you need to add comments to explain your code to others. These comments can replace or be in addition to your subgoal comments. Even if you aren't sharing your code, making comments will help you to remember what you were doing when you come back to it, especially if you haven't worked on it for a while.\r\n\r\nThe way that you add comments is with the `// Comment` block, which is in the **Functions** tab of the toolbox. \r\n\r\n\r\n# Do This\r\nAdd comments to the code that you've been working on. Imagine that you are describing the purpose of the code to one of your classmates.\r\n\r\nADD ANIMATED GIF HERE.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -154,7 +154,7 @@
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -207,7 +207,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 16:20:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 16:30:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 16:20:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-09 16:30:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 22:52:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"text_mode_at_start\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
