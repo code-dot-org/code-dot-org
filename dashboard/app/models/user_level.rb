@@ -83,6 +83,7 @@ class UserLevel < ActiveRecord::Base
   end
 
   def self.most_recent_driver(script, level, user)
+    return nil unless user.can_pair?
     most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
     return nil unless most_recent
 
