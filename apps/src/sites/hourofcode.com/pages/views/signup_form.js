@@ -1,16 +1,95 @@
 /* globals google thanksUrl signupErrorMessage censusErrorMessage hocYear */
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown.jsx';
+import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound.jsx';
+
+var schoolData = {
+  nces: '',
+  schoolName: '',
+  schoolCity: '',
+  schoolState: '',
+  schoolZip: '',
+  schoolType: '',
+  showDropdownError: false,
+  showSchoolNotFoundError: false
+};
+
+function renderSchoolDropdown() {
+  ReactDOM.render (
+    <SchoolAutocompleteDropdown
+      setField={schoolDropdownOnChange}
+      value={schoolData.nces}
+      showErrorMsg={schoolData.showDropdownError}
+    />,
+    $('#school-selector')[0]
+  );
+}
+
+function renderSchoolNotFound() {
+  ReactDOM.render (
+    <SchoolNotFound
+      setField={schoolNotFoundOnChange}
+      schoolName={schoolData.schoolName}
+      schoolType={schoolData.schoolType}
+      schoolCity={schoolData.schoolCity}
+      schoolState={schoolData.schoolState}
+      schoolZip={schoolData.schoolZip}
+      showErrorMsg={schoolData.showSchoolNotFoundError}
+    />,
+    $('#school-not-found')[0]
+  );
+}
+
+function schoolDropdownOnChange(event) {
+  const val = (event ? event.value : '');
+  schoolData.nces = val;
+
+  if (!val) {
+    schoolData.showDropdownError = true;
+  } else {
+    schoolData.showDropdownError = false;
+  }
+
+  if (val === "-1"){
+    $('#school-not-found').show();
+  } else if (val){
+    $('#school-not-found').hide();
+  }
+
+  renderSchoolSelect();
+}
+
+function schoolNotFoundOnChange(field, event) {
+  schoolData = {
+    ...schoolData,
+    [field]: event
+  };
+
+  renderSchoolSelect();
+}
+
+function renderSchoolSelect() {
+  renderSchoolDropdown();
+  renderSchoolNotFound();
+}
+
 $(document).ready(function () {
+
   new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
 
   $('#hoc-signup-form select').selectize({
     plugins: ['fast_click']
   });
 
+  renderSchoolSelect();
+
   $("#hoc-signup-form").submit(function ( event ) {
     if (validateFields()) {
       signupFormSubmit(gotoThankYouPage);
     }
+    renderSchoolSelect();
   });
 
   $("#census-form").submit(function ( event ) {
@@ -21,6 +100,7 @@ $(document).ready(function () {
     if (validateFields()) {
       signupFormSubmit(showCensusForm);
     }
+    renderSchoolSelect();
   });
 
   $('#hoc-special-event-flag').change(function () {
@@ -34,15 +114,17 @@ $(document).ready(function () {
   function checkShowNameEventLocation() {
     // in-school & US
     if (($('#hoc-event-type').val() === 'in_school') && ($("#country").val() === 'US')) {
-      $('#school-name-field').show();
+      $('#school-autocomplete').show();
+      $('#school-name-field').hide();
+      $('#hoc-event-location-field').hide();
       $('#organization-name-field').hide();
-      $('#hoc-event-location-field').show();
       $('#hoc-entire-school').show();
       // continue button goes to census questions on click
       $('#continue-btn').show();
       $('#submit-btn').hide();
     } else if (($('#hoc-event-type').val() === 'in_school')){
-    // in-school & NOT US
+      // in-school & NOT US
+      $('#school-autocomplete').hide();
       $('#school-name-field').show();
       $('#organization-name-field').hide();
       $('#hoc-event-location-field').show();
@@ -51,6 +133,7 @@ $(document).ready(function () {
       $('#submit-btn').show();
     } else if ($('#hoc-event-type').val() === 'out_of_school') {
       // out of school, either US or non-US
+      $('#school-autocomplete').hide();
       $('#organization-name-field').show();
       $('#hoc-event-location-field').show();
       $('#school-name-field').hide();
@@ -92,7 +175,7 @@ $(document).ready(function () {
       $('#pledge').hide();
     }
   });
- });
+});
 
 function showCensusForm(data) {
   $('.main-form').hide();
@@ -149,16 +232,7 @@ function validateFields() {
     $('#event-type-error').hide();
   }
 
-  if  ($("#hoc-event-type").val() === "in_school") {
-    if ($("#school-name").val() === "") {
-      $('#school-name-error').show();
-      return false;
-    } else {
-      $('#school-name-error').hide();
-    }
-  }
-
-  if  ($("#hoc-event-type").val() === "out_of_school") {
+  if ($("#hoc-event-type").val() === "out_of_school") {
     if ($("#organization-name").val() === "") {
       $('#organization-name-error').show();
       return false;
@@ -167,12 +241,42 @@ function validateFields() {
     }
   }
 
-  if ($("#hoc-event-location").val() === "") {
-    $('#event-location-error').show();
-    return false;
-  } else {
-    $('#event-location-error').hide();
+  if (($("#country").val() !== 'US') && ($("#hoc-event-type").val() === "in_school")) {
+    if ($("#school-name").val() === "") {
+      $('#school-name-error').show();
+      return false;
+    } else {
+      $('#school-name-error').hide();
+    }
   }
+
+  if (($("#country").val() === 'US') && ($("#hoc-event-type").val() === "in_school")) {
+    if (!schoolData.nces) {
+      schoolData.showDropdownError = true;
+      return false;
+    } else {
+      schoolData.showDropdownError = false;
+    }
+
+    if (schoolData.nces === "-1") {
+      if ((!schoolData.schoolName) || (!schoolData.schoolState) || (!schoolData.schoolCity) || (!schoolData.schoolType) || (!schoolData.schoolZip)) {
+        schoolData.showSchoolNotFoundError = true;
+        return false;
+      } else {
+        schoolData.showSchoolNotFoundError = false;
+      }
+    } else {
+      schoolData.showSchoolNotFoundError = false;
+    }
+  } else {
+    if ($("#hoc-event-location").val() === "") {
+      $('#event-location-error').show();
+      return false;
+    } else {
+      $('#event-location-error').hide();
+    }
+  }
+
   return true;
 }
 
