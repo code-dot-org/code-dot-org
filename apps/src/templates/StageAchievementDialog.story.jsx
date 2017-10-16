@@ -1,7 +1,7 @@
 import React from 'react';
 import StageAchievementDialog from './StageAchievementDialog';
 
-const ExampleDialogButton = React.createClass({
+class ExampleDialogButton extends React.Component {
   render() {
     return (
       <div>
@@ -16,7 +16,7 @@ const ExampleDialogButton = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default storybook => {
   return storybook
