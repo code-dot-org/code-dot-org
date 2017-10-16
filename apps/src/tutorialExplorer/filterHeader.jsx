@@ -6,7 +6,7 @@ import React, {PropTypes} from 'react';
 import BackButton from './backButton';
 import { TutorialsSortBy } from './util';
 import { Sticky } from 'react-sticky';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   header: {
@@ -49,8 +49,8 @@ const styles = {
   }
 };
 
-const FilterHeader = React.createClass({
-  propTypes: {
+export default class FilterHeader extends React.Component {
+  static propTypes = {
     onUserInput: PropTypes.func.isRequired,
     sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
     backButton: PropTypes.bool,
@@ -61,26 +61,26 @@ const FilterHeader = React.createClass({
     hideModalFilters: PropTypes.func.isRequired,
     showSortDropdown: PropTypes.bool.isRequired,
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
-  },
+  };
 
   shouldShowOpenFiltersButton() {
     return this.props.mobileLayout && !this.props.showingModalFilters;
-  },
+  }
 
   shouldShowCloseFiltersButton() {
     return this.props.mobileLayout && this.props.showingModalFilters;
-  },
+  }
 
   shouldShowSortDropdown() {
     return this.props.showSortDropdown &&
       !(this.props.mobileLayout && this.props.showingModalFilters);
-  },
+  }
 
-  handleChangeSort(event) {
+  handleChangeSort = (event) => {
     this.props.onUserInput(
       event.target.value
     );
-  },
+  };
 
   render() {
     const tutorialCount = this.props.filteredTutorialsCount;
@@ -181,6 +181,4 @@ const FilterHeader = React.createClass({
       </div>
     );
   }
-});
-
-export default FilterHeader;
+}
