@@ -5,7 +5,7 @@ import BackButton from '@cdo/apps/tutorialExplorer/backButton';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 describe('BackButton', () => {
-  it('renders like this', () => {
+  it('renders a left-arrow back button', () => {
     const wrapper = shallow(<BackButton/>);
     expect(wrapper).to.containMatchingElement(
       <a href="/learn">
