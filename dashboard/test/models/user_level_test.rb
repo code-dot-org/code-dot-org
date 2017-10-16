@@ -7,8 +7,8 @@ class UserLevelTest < ActiveSupport::TestCase
     @user = create(:user)
     @level = create(:level)
 
-    @driver = create :student, name: 'DriverName'
-    @navigator = create :student
+    @driver = create :student_in_word_section, name: 'DriverName'
+    @navigator = create :student_in_word_section
     @driver_user_level = create :user_level, user: @driver, level: @level
     @navigator_user_level = create :user_level, user: @navigator, level: @level
     @driver_user_level.navigator_user_levels << @navigator_user_level
