@@ -28,29 +28,18 @@ class SchoolDistrict < ActiveRecord::Base
   def self.find_or_create_all_from_tsv(filename)
     created = []
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      created << first_or_create_from_tsv_row(row)
+      created << SchoolDistrict.where(row.symbolize_keys).first_or_create!
     end
     created
   end
 
-  def self.first_or_create_from_tsv_row(row_data)
-    params = {
-      id: row_data['id'],
-      name: row_data['name'],
-      city: row_data['city'],
-      state: row_data['state'],
-      zip: row_data['zip']
-    }
-    SchoolDistrict.where(params).first_or_create!
-  end
-
   # Loads/merges the data from a CSV into the schools table.
+  # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
-  # @param parser [Proc] The row parser.
-  def self.merge_from_csv(filename, options, row_parser)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
     CSV.read(filename, options).each do |row|
-      parsed_school = row_parser.call(row)
+      parsed_school = yield row
       school = SchoolDistrict.find_by_id(parsed_school[:id])
       if school.nil?
         SchoolDistrict.new(parsed_school).save!
