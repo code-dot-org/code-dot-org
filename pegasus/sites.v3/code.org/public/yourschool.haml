@@ -5,7 +5,7 @@ social:
   "og:title": "I'm joining the movement"
   "og:description": "I just signed the pledge to expand computer science at my school. Does your school teach computer science? Join me and take the pledge at code.org/yourschool."
 ---
-
+%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 - census_announcement = DCDO.get('census_announcement', nil)
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
@@ -35,5 +35,3 @@ social:
 
 %br
 %br
-
-= view :school_info

@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Hizkuntza askotako jarduerak ezkutatu",
   "noTutorialsYourLanguage": "Ez dago jarduerarik eskuragarri zure hizkuntzan. Beheko botoia sakatuz beste hizkuntzetako jarduerak frogatu.",
   "bottomGuidelinesLink": "Klikatu hemen gure Kode Ordu Baten tutorialen irizpideak eta bidaltze arauak ikusteko.",
-  "bottomSpecialNeedsLink": "Klikatu hemen behar bereziak dituzten ikasleak laguntzeko informazio gehiago izateko."
+  "bottomSpecialNeedsLink": "Klikatu hemen behar bereziak dituzten ikasleak laguntzeko informazio gehiago izateko.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

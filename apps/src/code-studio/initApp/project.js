@@ -526,6 +526,9 @@ var projects = module.exports = {
    * this project as a standalone project, or null if none exists.
    */
   getStandaloneApp() {
+    if (appOptions.level && appOptions.level.projectType) {
+      return appOptions.level.projectType;
+    }
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -541,6 +544,8 @@ var projects = module.exports = {
       case 'craft':
         if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
+        } else if (appOptions.level.isConnectionLevel || appOptions.level.isAgentLevel) {
+          return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
       case 'eval':
@@ -552,7 +557,7 @@ var projects = module.exports = {
           if (appOptions.droplet) {
             return 'starwars';
           } else {
-            return 'starwarsblocks';
+            return 'starwarsblocks_hour';
           }
         } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
@@ -687,6 +692,19 @@ var projects = module.exports = {
         executeCallback(callback, data);
       }.bind(this));
     }.bind(this));
+  },
+
+  createNewChannelFromSource(source, callback) {
+    channels.create({
+      name: "New Project",
+    }, (err, channelData) => {
+      sources.put(channelData.id, JSON.stringify({ source }), SOURCE_FILE, (err, sourceData) => {
+        channelData.migratedToS3 = true;
+        channels.update(channelData.id, channelData, (err, finalChannelData) => {
+          executeCallback(callback, finalChannelData);
+        });
+      });
+    });
   },
 
   /**
@@ -828,6 +846,7 @@ var projects = module.exports = {
       redirectEditView();
     });
   },
+
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
@@ -979,11 +998,12 @@ var projects = module.exports = {
   /**
    * Generates the url to perform the specified action for this project.
    * @param {string} action Action to perform.
+   * @param {string} projectId Optional Project ID (defaults to current ID).
    * @returns {string} Url to the specified action.
    * @throws {Error} If this type of project does not have a standalone app.
    */
-  getPathName(action) {
-    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
+  getPathName(action, projectId = this.getCurrentId()) {
+    let pathName = this.appToProjectUrl() + '/' + projectId;
     if (action) {
       pathName += '/' + action;
     }

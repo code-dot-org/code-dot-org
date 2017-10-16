@@ -13,7 +13,7 @@ import {
 import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
-import Header from './header';
+import Header from '../components/header';
 import SurveyResults from './survey_results.jsx';
 import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
@@ -27,13 +27,20 @@ const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
 
+const WorkshopDashboardHeader = (props) => (
+  <Header
+    baseName="Workshop Dashboard"
+    {...props}
+  />
+);
+
 const WorkshopDashboard = (
   <Router history={browserHistory} >
-    <Route path="/" component={Header}>
+    <Route path="/" component={WorkshopDashboardHeader}>
       <IndexRedirect to="/workshops"/>
       <Route
         path="reports"
-        breadcrumbs="Reports"
+        breadcrumbs="Workshop Dashboard,Reports"
         component={ReportView}
       />
       <Route

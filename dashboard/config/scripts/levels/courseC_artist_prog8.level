@@ -43,7 +43,7 @@
   },
   "published": true,
   "notes": "Seems a little out of the blue after the last one back to shapes with no scaffolding. ",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:54:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-14 23:37:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:54:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-14 23:37:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-28 06:27:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }
@@ -56,11 +56,11 @@
           <title name="VALUE">100</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">turnLeft</title>
           <title name="VALUE" config="90,120">120</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
+          <title name="DIR">turnRight</title>
           <title name="VALUE" config="90,120">120</title>
         </block>
         <block type="jump_by_constant">

@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Скрий дейности за много езици",
   "noTutorialsYourLanguage": "Няма никакви дейности, подкрепени на вашия език. Опитайте дейности в други езици, като щракнете върху бутона по-долу.",
   "bottomGuidelinesLink": "Щракнете тук, за да видите нашите критерии и насоки за участие за Hour of Code уроците.",
-  "bottomSpecialNeedsLink": "Кликнете тук за повече информация в подкрепа на участие на ученици със СОП."
+  "bottomSpecialNeedsLink": "Кликнете тук за повече информация в подкрепа на участие на ученици със СОП.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

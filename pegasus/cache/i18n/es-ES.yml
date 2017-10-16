@@ -1235,6 +1235,8 @@
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -2024,7 +2026,7 @@
   header_my_dashboard: My Dashboard
   header_courses: Cursos
   header_course_catalog: Course Catalog
-  header_project_gallery: Lista de Proyectos
+  header_project_gallery: Proyectos
   header_sections: Secciones
   header_professional_learning: Aprendizaje Profesional
   header_educate_overview: Resumen del docente

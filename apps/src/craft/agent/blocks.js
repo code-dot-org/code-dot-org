@@ -6,12 +6,14 @@ var blocksToDisplayText = {
   clay: i18n.blockTypeClay(),
   oreCoal: i18n.blockTypeOreCoal(),
   dirtCoarse: i18n.blockTypeDirtCoarse(),
+  doorIron: i18n.blockTypeDoorIron(),
   cobblestone: i18n.blockTypeCobblestone(),
   oreDiamond: i18n.blockTypeOreDiamond(),
   dirt: i18n.blockTypeDirt(),
   oreEmerald: i18n.blockTypeOreEmerald(),
   farmlandWet: i18n.blockTypeFarmlandWet(),
   glass: i18n.blockTypeGlass(),
+  glowstone: i18n.blockTypeGlowstone(),
   oreGold: i18n.blockTypeOreGold(),
   grass: i18n.blockTypeGrass(),
   gravel: i18n.blockTypeGravel(),
@@ -29,8 +31,11 @@ var blocksToDisplayText = {
   planksJungle: i18n.blockTypePlanksJungle(),
   planksOak: i18n.blockTypePlanksOak(),
   planksSpruce: i18n.blockTypePlanksSpruce(),
+  pressurePlateUp: i18n.blockTypePressurePlateUp(),
   oreRedstone: i18n.blockTypeOreRedstone(),
   rail: i18n.blockTypeRail(),
+  railsRedstoneTorch: i18n.blockTypeRailsRedstoneTorch(),
+  redstoneWire: i18n.blockTypeRedstoneWire(),
   sand: i18n.blockTypeSand(),
   sandstone: i18n.blockTypeSandstone(),
   stone: i18n.blockTypeStone(),
@@ -175,21 +180,6 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'destroyBlock(\'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_shear = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockShear()));
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_shear = function () {
-    return 'shear(\'block_id_' + this.id + '\');\n';
-  };
-
   blockly.Blocks.craft_whileBlockAhead = {
     helpUrl: '',
     init: function () {
@@ -288,50 +278,4 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_placeTorch = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlaceTorch());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_placeTorch = function () {
-    return 'placeTorch(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_plantCrop = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockPlantCrop());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_plantCrop = function () {
-    return 'plantCrop(\'block_id_' + this.id + '\');\n';
-  };
-
-  blockly.Blocks.craft_tillSoil = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockTillSoil());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_tillSoil = function () {
-    return 'tillSoil(\'block_id_' + this.id + '\');\n';
-  };
-
 };
-

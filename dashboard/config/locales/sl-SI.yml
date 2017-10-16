@@ -91,11 +91,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft račun
+    clever: Clever Account
     forgot_password: Si pozabil/a svoje geslo?
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
     not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
       have to sign in by typing your password below.
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} študentov se je že prijavilo."
     teacher_count: "%{count} učiteljev se je že prijavilo."
@@ -291,7 +294,7 @@
       my_dashboard: My Dashboard
       courses: Predavanja
       course_catalog: Course Catalog
-      project_gallery: Project Gallery
+      project_gallery: Projekti
       sections: Sections
       help_support: Help and support
       report_bug: Report bug
@@ -966,9 +969,10 @@
     rename: Preimenuj
     save: Shrani
     delete: Izbriši
+    import: Import
     exit: Vrni se na tečaj
     my_projects: Moji projekti
-    project_gallery: Project Gallery
+    project_gallery: Projekti
     publish: Publish
     unpublish: Unpublish
     share: Deli
@@ -1007,6 +1011,9 @@
     remix: Remiks
     click_to_remix: Click 'Remix' to spin-off your own version!
     edit_project: Uredi projekt
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: Ta projekt so prijavili, da je kršil <a href='http://code.org/tos'>Pogoje
         storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi.
@@ -1071,6 +1078,10 @@
     optional_stages: Optional Stages
     main_course: Main Course
     extra_course_content: Extra Course Content
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

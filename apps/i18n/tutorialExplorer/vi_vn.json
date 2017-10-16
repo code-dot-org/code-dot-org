@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Ẩn các hoạt động cho nhiều ngôn ngữ",
   "noTutorialsYourLanguage": "There are no activities supported in your language. Try activities in other languages by clicking the button below.",
   "bottomGuidelinesLink": "Click vào đây để xem tiêu chuẩn của chúng tôi và nộp hướng dẫn cho Hour of Code.",
-  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students."
+  "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

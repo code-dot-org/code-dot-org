@@ -106,10 +106,12 @@ en:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    clever: 'Clever Account'
     forgot_password: 'Forgot your password?'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
@@ -142,6 +144,7 @@ en:
     user_type_student: "Student"
     field_is_required: "is required"
     accept_terms: "You must agree to create an account"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -278,7 +281,7 @@ en:
       my_dashboard: "My Dashboard"
       courses: "Courses"
       course_catalog: "Course Catalog"
-      project_gallery: "Project Gallery"
+      project_gallery: "Projects"
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report bug"
@@ -765,9 +768,14 @@ en:
     rename: "Rename"
     save: "Save"
     delete: "Delete"
+    import: "Import"
+    share_link_import_bad_link_header: "Share link not recognized"
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
+    share_link_import_error_header: "Something went wrong."
+    share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
     my_projects: "My Projects"
-    project_gallery: "Project Gallery"
+    project_gallery: "Projects"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Share"

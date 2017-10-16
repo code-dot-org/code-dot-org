@@ -104,6 +104,7 @@ Dashboard::Application.routes.draw do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
+    get '/users/clever_takeover', to: 'sessions#clever_takeover'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -234,6 +235,12 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
+  resources :regional_partners
+  get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
+  get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
+  post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
+  get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -266,6 +273,7 @@ Dashboard::Application.routes.draw do
   get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
   post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
   get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
+  post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
   get '/admin/studio_person', to: 'admin_users#studio_person_form', as: 'studio_person_form'
   post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
@@ -287,6 +295,8 @@ Dashboard::Application.routes.draw do
   get '/too_young', to: 'too_young#index'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+
+  get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
 
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
@@ -426,12 +436,16 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 
     get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
-    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
+    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course_to_facilitator'
     # TODO: change remove_course to use http delete method
-    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
+    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    # React-router will handle sub-routes on the client.
+    get 'application_dashboard/*path', to: 'application_dashboard#index'
+    get 'application_dashboard', to: 'application_dashboard#index'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

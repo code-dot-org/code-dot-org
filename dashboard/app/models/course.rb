@@ -54,7 +54,8 @@ class Course < ApplicationRecord
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
-    course.update!(teacher_resources: hash.try(:[], 'properties').try(:[], 'teacher_resources'))
+    course.properties = hash['properties']
+    course.save!
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -167,20 +168,25 @@ class Course < ApplicationRecord
 
   # Get the assignable info for this course, then update translations
   # @return AssignableInfo
-  def assignable_info
+  def assignable_info(user = nil)
     info = ScriptConstants.assignable_info(self)
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
     info[:category] = I18n.t('courses_category')
-    info[:script_ids] = default_course_scripts.map(&:script_id)
+    info[:script_ids] = user ?
+      scripts_for_user(user).map(&:id) :
+      default_course_scripts.map(&:script_id)
     info
   end
 
-  # Get the set of valid courses for the dropdown in our sections table. This should
-  # be static data, but contains localized strings so we can only cache on a per
-  # locale basis
-  def self.valid_courses
+  # Get the set of valid courses for the dropdown in our sections table. This
+  # should be static data for users without experiments enabled, but contains
+  # localized strings so we can only cache on a per locale basis.
+  def self.valid_courses(user = nil)
+    # Do not cache if the user might have an experiment enabled which puts them
+    # on an alternate script.
+    return Course.courses_for_user_with_experiments(user) if user && has_any_course_experiments?(user)
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.
         all.
@@ -189,13 +195,29 @@ class Course < ApplicationRecord
     end
   end
 
+  # @param user [User]
+  # @returns [Boolean] Whether the user has any experiment enabled which is
+  #   associated with an alternate course script.
+  def self.has_any_course_experiments?(user)
+    Experiment.any_enabled?(user: user, experiment_names: CourseScript.experiments)
+  end
+
+  # Get the set of valid courses for the dropdown in our sections table, using
+  # any alternate scripts based on any experiments the user belongs to.
+  def self.courses_for_user_with_experiments(user)
+    Course.
+      all.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      map {|course| course.assignable_info(user)}
+  end
+
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
     valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
-  def summarize
+  def summarize(user = nil)
     {
       name: name,
       id: id,
@@ -203,13 +225,77 @@ class Course < ApplicationRecord
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
-      scripts: default_course_scripts.map(&:script).map do |script|
+      scripts: scripts_for_user(user).map do |script|
         include_stages = false
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?
     }
+  end
+
+  # If a user has no experiments enabled, return the default set of scripts.
+  # If a user has an experiment enabled corresponding to an alternate script in
+  # this course, use the alternate script in place of the default script with
+  # the same position.
+  # @param user [User]
+  # @return [Array<Script>]
+  def scripts_for_user(user)
+    default_course_scripts.map do |cs|
+      select_course_script(user, cs).script
+    end
+  end
+
+  # Return an alternate course script associated with the specified default
+  # course script (or the default course script itself) by evaluating these
+  # rules in order:
+  #
+  # 1. If the user is a teacher, and they have a course experiment enabled,
+  # show the corresponding alternate course script.
+  #
+  # 2. If the user is in a section assigned to this course: show an alternate
+  # course script if any section's teacher is in a corresponding course
+  # experiment, otherwise show the default course script.
+  #
+  # 3. If the user is a student and has progress in an alternate course script,
+  # show the alternate course script.
+  #
+  # 4. Otherwise, show the default course script.
+  #
+  # @param user [User|nil]
+  # @param default_course_script [CourseScript]
+  # @return [CourseScript]
+  def select_course_script(user, default_course_script)
+    return default_course_script unless user
+
+    alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
+
+    if user.teacher?
+      alternates.each do |cs|
+        return cs if SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
+      end
+    end
+
+    course_sections = user.sections_as_student.where(course: self)
+    unless course_sections.empty?
+      alternates.each do |cs|
+        course_sections.each do |section|
+          return cs if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: cs.experiment_name)
+        end
+      end
+      return default_course_script
+    end
+
+    if user.student?
+      alternates.each do |cs|
+        # include hidden scripts when iterating over user scripts.
+        user.user_scripts.each do |us|
+          return cs if cs.script == us.script
+        end
+      end
+    end
+
+    default_course_script
   end
 
   @@course_cache = nil

@@ -24,8 +24,12 @@
           ""
         ]
       },
-      "penUp": null,
-      "penDown": null
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      },
+      "comment_Goals_2": {
+        "goal": "Orient turtle"
+      }
     },
     "edit_code": true,
     "embed": "false",
@@ -47,11 +51,11 @@
     "callout_json": "[]",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "markdown_instructions": "# Do This: \r\nDraw a 3x3 grid to the *front* and *right* of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction.\r\n\r\n![](https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png)\r\n\r\n**HINT:** This problem presents some subtle challenges. Work with your partner to discuss possible solutions. Try more than one path. Testing your ideas on paper might be a faster way to brainstorm.\r\n",
+    "markdown_instructions": "# Do This: \r\nDraw a 3x3 grid to the *front* and *right* of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction.\r\n\r\n![](https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png)\r\n\r\n**HINT:** This problem presents some subtle challenges. Before you start creating the program, test your ideas on paper for faster brainstorming. Work with your partner to discuss possible solutions. Try more than one path. Once you have a solution, identify the subgoals and drag them from the **Goals** tab in the toolbox. Next, fill it in with turtle blocks.",
     "instructions": "Draw a 3x3 grid to the front and right of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction. (Click to see full instructions)",
     "examples_required": "false",
     "encrypted_examples": "UdvayYdSjDLGOBFxB4iJXCRJPj5C4V0KwlqKx5jOZOgGYJHgKm2i9ReCsa6L\n7N0N\n",
@@ -132,13 +136,14 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "teacher_markdown": "* Students will need some time to work on the 3x3 grid problem; it is more challenging than it appears at first. * Students will ask you if you know the least possible number of lines of code needed to draw the 3x3 grid.  Rather than giving an answer, ask student pairs to compare their solutions with other pairs. If they agree on a solution, see if you get a class consensus. \r\n\r\n* You can also ask: Can you do it with fewer commands?  If not, can you prove that it’s impossible to do with fewer?\r\n\r\n* Questions like these are the kinds that programmers ask each other all the time.  And programmers usually work with each other to reach a solution. \r\n\r\n* An example of a solution is given in the teacher tab for the problem in Code Studio, but it is just an example; there are millions of ways to do the 3x3 grid.",
+    "teacher_markdown": "* Students will need some time to work on the 3x3 grid problem; it is more challenging than it appears at first. \r\n\r\n* Remind students to begin with the subgoals - when do they need to move the turtle and when do they need to orient the turtle.\r\n\r\n* Students will ask you if you know the least possible number of lines of code needed to draw the 3x3 grid.  Rather than giving an answer, ask student pairs to compare their solutions with other pairs. If they agree on a solution, see if you get a class consensus. \r\n\r\n* You can also ask: Can you do it with fewer commands?  If not, can you prove that it's impossible to do with fewer?\r\n\r\n* Questions like these are the kinds that programmers ask each other all the time.  And programmers usually work with each other to reach a solution. \r\n\r\n* An example of a solution is given in the teacher tab for the problem in Code Studio, but it is just an example; there are millions of ways to do the 3x3 grid.",
     "disable_procedure_autopopulate": "false",
+    "palette_category_at_start": "goals",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:52:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:52:53 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:52:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:52:53 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-02 16:55:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-09 21:05:06 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

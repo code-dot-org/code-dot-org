@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "모든 튜토리얼 숨기기",
   "noTutorialsYourLanguage": "현재 언어로 제공되는 활동들이 없습니다. 다음 버튼을 눌러 다른 언어로 제공되는 활동들을 살펴보세요.",
   "bottomGuidelinesLink": "Hour of Code 활동과 관련한 기준과 제출 가이드라인을 살펴보시려면 여기를 클릭하세요.",
-  "bottomSpecialNeedsLink": "특별한 도움이 필요한 학생들을 위해 필요한 추가적인 정보가 필요하시면 여기를 클릭하세요."
+  "bottomSpecialNeedsLink": "특별한 도움이 필요한 학생들을 위해 필요한 추가적인 정보가 필요하시면 여기를 클릭하세요.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

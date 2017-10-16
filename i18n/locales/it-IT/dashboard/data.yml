@@ -228,7 +228,7 @@ it:
         'studio_c2_4': "Fai arrivare il cane fino al gatto e fai in modo che il gatto dica \"Ciao\" quando il cane lo raggiunge."
         'studio_c2_5': "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'studio_c2_6': "Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?"
-        'studio_c2_7': "Il blocco `ripeti per sempre` permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
+        'studio_c2_7': "Il blocco `ripeti per sempre`, aggiunto in fondo all'area di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
         'studio_c2_8': "Riesci a far dire \"Ahi!\" al pinguino (personaggio 1) e a `riprodurre il suono di un colpo` se esso sbatte contro il dinosauro (personaggio 2), e poi a spostarlo con i tasti freccia per far sì che questo accada?"
         'studio_c2_9': "Aggiungi un blocco che segna un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i tasti freccia fino a che fai un punto."
         'studio_c2_10': "Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai un punto."
@@ -241,7 +241,7 @@ it:
         'studio_c3_story_6': "Crea una storia come vuoi tu. Quando hai fatto, clicca su \"Condividi\" per far provare la storia ai tuoi amici sui loro smartphone."
         'studio_c3_game_1': "Riesci a scrivere un programma per far dire \"ciao\" al polpo quando viene cliccato?"
         'studio_c3_game_2': "Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?"
-        'studio_c3_game_3': "Il blocco `ripeti per sempre` permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
+        'studio_c3_game_3': "Il blocco `ripeti per sempre`, aggiunto in fondo all'area di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
         'studio_c3_game_4': "Riesci a far dire \"Ahi!\" al pinguino e a riprodurre il suono di \"un colpo\" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?"
         'studio_c3_game_5': "Aggiungi un blocco che segna un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i tasti freccia fino a che fai un punto."
         'studio_c3_game_6': "Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai un punto."
@@ -423,6 +423,7 @@ it:
         'infinity_playlab_events': 'Laboratorio - Eventi'
         'infinity_playlab_repeat_forever': 'Laboratorio - Ripeti per sempre'
         'csd_concept_computer': 'Cosa rende un Computer, un Computer?'
+        'csd_concept_binary_data': 'How Computers Work: Binary & Data'
         'csd_concept_search': 'Come Funziona la Ricerca'
         'csd_gamelab_animation_tab': 'La scheda dell''animazione'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
@@ -524,6 +525,11 @@ it:
         'mc_2016_events': 'L''Ora del Codice con Minecraft - Eventi'
         'mc_2016_spawn': 'L''Ora del Codice con Minecraft - Creare'
         'mc_2016_congrats': 'L''Ora del Codice con Minecraft - Complimenti'
+        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
+        'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
+        'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
+        'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
+        'applab_hoc_share': 'AppLab Hour of Code - Share'
     callout:
       text:
         drag_blocks: 'Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l''altro blocco qua sopra'

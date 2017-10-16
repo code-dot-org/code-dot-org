@@ -21,7 +21,7 @@ class ApiController < ApplicationController
         data = section['data']
         {
           id: data['id'],
-          name: data['course_name'],
+          name: data['name'],
           section: data['course_number'],
           enrollment_code: data['sis_id'],
         }
@@ -184,8 +184,22 @@ class ApiController < ApplicationController
 
     script_levels = script.script_levels.where(bonus: nil)
 
+    # Clients are seeing requests time out for large sections as we attempt to
+    # send back all of this data. Allow them to instead request paginated data
+    if params[:page] && params[:per]
+      paged_students = section.students.page(params[:page]).per(params[:per])
+      # As designed, if there are 50 students, the client will ask for both
+      # page 1 and page 2, even though page 2 is out of range. However, it should
+      # never ask for page 3
+      if params[:page].to_i > paged_students.total_pages + 1
+        return head :range_not_satisfiable
+      end
+    else
+      paged_students = section.students
+    end
+
     # student level completion data
-    students = section.students.map do |student|
+    students = paged_students.map do |student|
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
@@ -202,11 +216,17 @@ class ApiController < ApplicationController
         paired = (paired_user_level_ids & user_levels_ids).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
-        {
-          class: level_class,
-          title: title,
-          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id)
-        }
+        # We use a list rather than a hash here to save ourselves from sending
+        # the field names over the wire (which adds up to a lot of bytes when
+        # multiplied across all the levels)
+        [
+          level_class,
+          title,
+          # we use to build a path that included section_id/user_id. We now let
+          # the client adds these params itself, thus saving ourselves many bytes
+          # over the wire again
+          build_script_level_path(script_level)
+        ]
       end
       {id: student.id, levels: student_levels}
     end
@@ -217,7 +237,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: stages
+        stages: stages,
       }
     }
 
@@ -279,7 +299,7 @@ class ApiController < ApplicationController
   # to avoid spurious activity monitor warnings about the level being started
   # but not completed.)
   def user_progress_for_stage
-    response = {}
+    response = user_summary(current_user)
 
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
@@ -297,7 +317,6 @@ class ApiController < ApplicationController
           source: level_source
         }
       end
-      response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
       recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
@@ -308,7 +327,7 @@ class ApiController < ApplicationController
         elsif level.channel_backed?
           @level = level
           recent_channel = safe_get_channel_for(level, recent_user) if recent_user
-          response[:pairingAttempt] = send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: recent_channel) if recent_channel
+          response[:pairingChannelId] = recent_channel if recent_channel
         end
       end
     end

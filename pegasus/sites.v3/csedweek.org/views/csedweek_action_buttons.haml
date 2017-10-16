@@ -1,0 +1,20 @@
+-if ["post-hoc", false].include?(hoc_mode)
+  %a#try-button{:href=>'/learn'}
+    %button.optionbutton{:style=>'min-width: 100px;'}
+      =I18n.t :homepage_action_text_learn
+-elsif ["pre-hoc"].include?(hoc_mode)
+  %a#try-button{:href=>'https://hourofcode.com/#join'}
+    %button.optionbutton{:style=>'min-width: 100px;'}
+      =I18n.t :homepage_action_text_join_us
+-elsif ["soon-hoc"].include?(hoc_mode)
+  %a#try-button{:href=>'https://hourofcode.com/#join', style: "text-decoration: none"}
+    %button.optionbutton{:style=>'min-width: 100px;'}
+      =I18n.t :homepage_action_text_join_us
+  &nbsp;
+  %a#try-button{:href=>'/learn'}
+    %button.optionbutton{:style=>'min-width: 100px;'}
+      =I18n.t :homepage_action_text_try_it
+-elsif ["actual-hoc"].include?(hoc_mode)
+  %a#try-button{:href=>'/learn'}
+    %button.optionbutton{:style=>'min-width: 100px;'}
+      =I18n.t :homepage_action_text_try_it

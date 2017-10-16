@@ -6,6 +6,7 @@ require 'sequel'
 require_relative '../helpers/section_api_helpers'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'sequel_test_case'
+require 'timecop'
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
@@ -182,6 +183,19 @@ class SectionApiHelperTest < SequelTestCase
         refute DashboardSection.valid_script_id?('invalid!!')
       end
 
+      it 'returns false for alternate course scripts for user without experiment' do
+        refute DashboardSection.valid_script_id?(FakeDashboard::SCRIPT_CSP2_ALT[:id].to_s)
+        user_id = 1
+        refute DashboardSection.valid_script_id?(FakeDashboard::SCRIPT_CSP2_ALT[:id].to_s, user_id)
+      end
+
+      it 'returns true for alternate course scripts for teacher with experiment' do
+        assert DashboardSection.valid_script_id?(
+          FakeDashboard::SCRIPT_CSP2_ALT[:id].to_s,
+          FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        )
+      end
+
       it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Classic Maze"' do
         assert_includes(
           DashboardSection.valid_scripts.map {|script| script[:name]},
@@ -229,6 +243,96 @@ class SectionApiHelperTest < SequelTestCase
           category_priority: 2
         }
         assert_equal expected, flappy_script
+      end
+
+      it 'includes default csp scripts' do
+        script_ids = DashboardSection.valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_ids, 'csp1'
+        assert_includes script_ids, 'csp2'
+        refute_includes script_ids, 'csp2-alt'
+        assert_includes script_ids, 'csp3'
+      end
+
+      it 'includes default csp scripts for user without experiment' do
+        user_id = 1
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp1'
+        assert_includes script_names, 'csp2'
+        refute_includes script_names, 'csp2-alt'
+        assert_includes script_names, 'csp3'
+
+        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2'}[:name]
+      end
+
+      it 'only hits the database to check hidden script access on subsequent requests without experiment' do
+        user_id = 1
+        DashboardSection.valid_scripts(user_id)
+        Dashboard.stubs(:hidden_script_access?).returns(false)
+        FakeDashboard.stub_database.raises('unexpected call to fake dashboard DB')
+        DashboardSection.valid_scripts
+        DashboardSection.valid_scripts(user_id)
+        DashboardSection.valid_scripts(user_id + 1)
+      end
+
+      it 'includes alternate csp scripts for user with experiment' do
+        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp1'
+        refute_includes script_names, 'csp2'
+        assert_includes script_names, 'csp2-alt'
+        assert_includes script_names, 'csp3'
+
+        # Without an entry in the i18n gsheet, the script name is shown.
+        assert_equal 'csp2-alt', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
+      end
+
+      it 'does not cache alternate scripts as default scripts' do
+        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        valid_scripts = DashboardSection.valid_scripts(user_id)
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        assert_includes script_names, 'csp2-alt'
+
+        valid_scripts = DashboardSection.valid_scripts
+        script_names = valid_scripts.map {|script| script[:script_name]}
+        refute_includes script_names, 'csp2-alt'
+      end
+
+      it 'caches course experiments for 60 seconds' do
+        Dashboard.db.transaction(rollback: :always) do
+          Timecop.freeze
+          user_id = 1
+
+          # Initially, the user sees the default scripts.
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          assert_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-alt'
+
+          Dashboard.db[:experiments].insert(
+            type: 'SingleUserExperiment',
+            min_user_id: user_id,
+            name: 'csp2-alt-experiment',
+            created_at: Time.now,
+            updated_at: Time.now,
+          )
+
+          # For a period of time after the experiment is set, the user still sees
+          # the default scripts.
+          Timecop.travel 59
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          assert_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-alt'
+
+          # Beyond 60 seconds after the experiment is set, the user sees the
+          # alternate scripts.
+          Timecop.travel 2
+          script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
+          refute_includes script_names, 'csp2'
+          assert_includes script_names, 'csp2-alt'
+
+          Timecop.return
+        end
       end
     end
 
@@ -406,6 +510,48 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal true, row[:pairing_allowed]
         end
       end
+
+      it 'does not create with alternate script id for user without experiment' do
+        user_id = 15
+        script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+        params = {
+          user: {id: user_id, user_type: 'teacher'},
+          course_id: FakeDashboard::COURSE_CSP[:id],
+
+          # For some reason, params[:script][:id] and params[:script_id] can
+          # both be used to set the script id. However, only
+          # params[:script][:id] is specified by the REST API client, and only
+          # params[:script][:id] is checked for validity. Therefore, only test
+          # params[:script][:id], here and below.
+          script: {id: script_id}
+        }
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal user_id, row[:user_id]
+          assert_nil row[:script_id]
+          assert_equal params[:course_id], row[:course_id]
+        end
+      end
+
+      it 'creates with alternate script id for user with experiment' do
+        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+        script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+        params = {
+          user: {id: user_id, user_type: 'teacher'},
+          course_id: FakeDashboard::COURSE_CSP[:id],
+          script: {id: script_id}
+        }
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal user_id, row[:user_id]
+          assert_equal script_id, row[:script_id]
+          assert_equal params[:course_id], row[:course_id]
+        end
+      end
     end
 
     describe 'update_if_owner' do
@@ -484,6 +630,72 @@ class SectionApiHelperTest < SequelTestCase
           }
           DashboardSection.update_if_owner(update_params)
 
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_equal script_id, row[:script_id]
+        end
+      end
+
+      it 'does not assign invalid script ids to user without experiment' do
+        Dashboard.db.transaction(rollback: :always) do
+          params = {
+            user: {id: 15, user_type: 'teacher'}
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+
+          course_id = FakeDashboard::COURSE_CSP[:id]
+          script_id = 999
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            course_id: course_id,
+            script: {id: script_id},
+            pairing_allowed: true,
+            stage_extras: false
+          }
+
+          DashboardSection.update_if_owner(update_params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_nil row[:script_id], 'does not assign invalid script ids'
+
+          script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+          DashboardSection.update_if_owner(update_params.merge(script: {id: script_id}))
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_nil row[:script_id],
+            'does not assign alternate script ids to user without experiment'
+        end
+      end
+
+      it 'assigns alternate script ids to user with experiment' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
+          params = {
+            user: {id: user_id, user_type: 'teacher'}
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+
+          course_id = FakeDashboard::COURSE_CSP[:id]
+          script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
+
+          update_params = {
+            id: section_id,
+            user: {id: user_id, user_type: 'teacher'},
+            course_id: course_id,
+            script: {id: script_id},
+            pairing_allowed: true,
+            stage_extras: false
+          }
+
+          DashboardSection.update_if_owner(update_params)
           row = Dashboard.db[:sections].where(id: section_id).first
           assert_equal course_id, row[:course_id]
           assert_equal script_id, row[:script_id]

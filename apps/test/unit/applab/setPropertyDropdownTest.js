@@ -6,6 +6,7 @@ var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
 describe("setPropertyDropdown", function () {
   var stripQuotes = setPropertyDropdown.__TestInterface.stripQuotes;
   var getDropdownProperties = setPropertyDropdown.__TestInterface.getDropdownProperties;
+  var getPropertyValueDropdown = setPropertyDropdown.__TestInterface.getPropertyValueDropdown;
 
   testUtils.setExternalGlobals();
 
@@ -35,17 +36,65 @@ describe("setPropertyDropdown", function () {
 
     // image elements should have .image but not .picture
     list = getDropdownProperties('IMAGE');
-    assert.notEqual(list.indexOf('"image"'), -1);
-    assert.equal(list.indexOf('"picture"'), -1);
+    var foundImage = false;
+    for (let item of list) {
+      assert(typeof item === 'object');
+      assert(item.text !== '"picture"');
+      foundImage = foundImage || (item.text === '"image"');
+      var clickResult;
+      item.click(text => {
+        clickResult = text;
+      });
+      assert.equal(clickResult, item.display);
+    }
+    assert(foundImage);
 
     list = getDropdownProperties('UNKNOWN');
     // Test two very different properties as a proxy for all properties.
-    assert.notEqual(list.indexOf('"group-id"'), -1);
-    assert.notEqual(list.indexOf('"background-color"'), -1);
+    var foundGroupId = false, foundBackgroundColor = false;
+    for (let item of list) {
+      assert(typeof item === 'object');
+      foundGroupId = foundGroupId || (item.text === '"group-id"');
+      foundBackgroundColor = foundBackgroundColor || (item.text === '"background-color"');
+      item.click(text => {
+        clickResult = text;
+      });
+      assert.equal(clickResult, item.display);
+    }
+    assert(foundGroupId);
+    assert(foundBackgroundColor);
 
     list = getDropdownProperties();
     // Test two very different properties as a proxy for all properties.
-    assert.notEqual(list.indexOf('"group-id"'), list.join());
-    assert.notEqual(list.indexOf('"background-color"'), -1);
+    foundGroupId = false, foundBackgroundColor = false;
+    for (let item of list) {
+      assert(typeof item === 'object');
+      foundGroupId = foundGroupId || (item.text === '"group-id"');
+      foundBackgroundColor = foundBackgroundColor || (item.text === '"background-color"');
+      item.click(text => {
+        clickResult = text;
+      });
+      assert.equal(clickResult, item.display);
+    }
+    assert(foundGroupId);
+    assert(foundBackgroundColor);
+  });
+
+  it('getPropertyValueDropdown', function () {
+    // given all of the property types for a generic unknown element:
+    let list = getDropdownProperties('UNKNOWN');
+    for (let object of list) {
+      let property = object.text;
+      // Verify that getPropertyValueDropdown() returns a function for
+      // 'image' or 'picture', and a non-empty array for all other types
+      let result = getPropertyValueDropdown(property);
+      assert.notEqual(result, undefined);
+      if (property === 'image' || property === 'picture') {
+        assert.isTrue(typeof result === 'function', 'result is a function');
+      } else {
+        assert.isTrue(result instanceof Array, 'result is an array');
+        assert.isFalse(result.length === 0, 'array is not empty');
+      }
+    }
   });
 });

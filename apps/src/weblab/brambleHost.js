@@ -337,7 +337,7 @@ function addFileCSS() {
   brambleProxy_.addNewFile({
     basenamePrefix: 'new',
     ext: 'css',
-    contents: 'body {\n  \n}',
+    contents: 'body {\n  background: white;\n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n}',
   }, err => {
     if (err) {
       throw err;
@@ -475,7 +475,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "//downloads.computinginthecore.org/bramble_0.1.20/index.html?disableExtensions=bramble-move-file",
+    url: "//downloads.computinginthecore.org/bramble_0.1.22/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,

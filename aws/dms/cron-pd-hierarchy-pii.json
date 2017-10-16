@@ -91,9 +91,29 @@
       "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "10",
       "rule-name": "10",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "pd_regional_partner_program_registrations"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "11",
+      "rule-name": "11",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "pd_facilitator_program_registrations"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "12",
+      "rule-name": "12",
       "rule-target": "schema",
       "object-locator": {
         "schema-name": "dashboard_production"

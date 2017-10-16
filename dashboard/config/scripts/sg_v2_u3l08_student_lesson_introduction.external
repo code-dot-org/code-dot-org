@@ -15,11 +15,14 @@ markdown <<MARKDOWN
 
 * **Parameter:** An extra piece of information that you pass to a function to customize it for a specific need.
 
-## New Blocks
+## New Subgoals and Blocks
 
-*  **[randomNumber min/max](//docs.code.org/applab/randomNumber_min_max/)** - `randomNumber min/max`
-*  **[Call a function with parameters](//docs.code.org/applab/callMyFunction_n/)** - `Call a function with parameters`
-*  **[Define a function with parameters](//docs.code.org/applab/functionParams_n/)** - `function myFunction(n){ //code }`
+*  **Subgoal** - `//Define function`
+ * **[Define a function with parameters](//docs.code.org/applab/functionParams_n/)** - `function myFunction(n){ //code }`
+*  **Subgoal** - `//Call function`
+ * **[Call a function with parameters](//docs.code.org/applab/callMyFunction_n/)** - `Call a function with parameters`
+ * **[randomNumber min/max](//docs.code.org/applab/randomNumber_min_max/)** - `randomNumber min/max`
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

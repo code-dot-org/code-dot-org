@@ -10,7 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortBy, mobileCheck } from './util';
+import { TutorialsSortBy, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
@@ -60,7 +60,8 @@ const TutorialExplorer = React.createClass({
     }
 
     const sortBy = TutorialsSortBy.default;
-    const filteredTutorials = this.filterTutorialSet(filters, sortBy);
+    const orgName = TutorialsOrgName.all;
+    const filteredTutorials = this.filterTutorialSet(filters, sortBy, orgName);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
 
@@ -74,6 +75,7 @@ const TutorialExplorer = React.createClass({
       mobileLayout: isResponsiveCategoryInactive('md'),
       showingModalFilters: false,
       sortBy: sortBy,
+      orgName: orgName,
       showingAllTutorials: showingAllTutorials
     };
   },
@@ -101,7 +103,11 @@ const TutorialExplorer = React.createClass({
 
     newState = newState.toJS();
 
-    const filteredTutorials = this.filterTutorialSet(newState.filters, this.state.sortBy);
+    const filteredTutorials = this.filterTutorialSet(
+      newState.filters,
+      this.state.sortBy,
+      this.state.orgName);
+
     this.setState({
       ...newState,
       filteredTutorials,
@@ -115,11 +121,25 @@ const TutorialExplorer = React.createClass({
    * @param {SortBy} value - The new sort order.
    */
   handleUserInputSortBy(value) {
-    const filteredTutorials = this.filterTutorialSet(this.state.filters, value);
+    const filteredTutorials = this.filterTutorialSet(this.state.filters, value, this.state.orgName);
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
       sortBy: value
+    });
+
+    this.scrollToTop();
+  },
+
+  /**
+   * Called when the org name is changed via dropdown.
+   */
+  handleUserInputOrgName(value) {
+    const filteredTutorials = this.filterTutorialSet(this.state.filters, this.state.sortBy, value);
+    this.setState({
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      orgName: value
     });
 
     this.scrollToTop();
@@ -158,11 +178,12 @@ const TutorialExplorer = React.createClass({
    *
    * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
-  filterTutorialSet(filters, sortBy) {
+  filterTutorialSet(filters, sortBy, orgName) {
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
-      locale: "en-US"
+      locale: "en-US",
+      orgName: orgName
     };
 
     // If the user hasn't chosen a sorting option yet (and the dropdown is still in its
@@ -184,7 +205,7 @@ const TutorialExplorer = React.createClass({
       sortBy: this.props.defaultSortBy
     };
 
-    if (!this.props.roboticsButtonUrl) {
+    if (this.isRobotics()) {
       filterProps.filters = {
         activity_type: ["robotics"]
       };
@@ -193,6 +214,10 @@ const TutorialExplorer = React.createClass({
     filterProps.specificLocale = true;
     filterProps.locale = this.props.locale;
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+  },
+
+  getUniqueOrgNames() {
+    return TutorialExplorer.getUniqueOrgNamesFromTutorials(this.props.tutorials, this.isRobotics());
   },
 
   componentDidMount() {
@@ -241,6 +266,10 @@ const TutorialExplorer = React.createClass({
 
   isLocaleEnglish() {
     return this.props.locale.substring(0,2) === "en";
+  },
+
+  isRobotics() {
+    return !this.props.roboticsButtonUrl;
   },
 
   /**
@@ -296,12 +325,12 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters, hideFilters, sortBy } = filterProps;
+      const { locale, specificLocale, orgName, filters, hideFilters, sortBy } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
-        // Check that the tutorial isn't marked as do-not-show.  If it does,
+        // Check that the tutorial isn't marked as DoNotShow.  If it does,
         // it's hidden.
-        if (tutorial.tags.split(',').indexOf("do-not-show") !== -1) {
+        if (tutorial.tags.split(',').indexOf(DoNotShow) !== -1) {
           return false;
         }
 
@@ -322,8 +351,14 @@ const TutorialExplorer = React.createClass({
           return false;
         }
 
+        // If we are showing an explicit orgname, then filter if it doesn't
+        // match.
+        if (orgName && orgName !== TutorialsOrgName.all && tutorial.orgname !== orgName) {
+          return false;
+        }
+
         // If we are explicitly hiding a matching filter, then don't show the
-        // the tutorial.
+        // tutorial.
         for (const filterGroupName in hideFilters) {
           const tutorialTags = tutorial["tags_" + filterGroupName];
           const filterGroup = hideFilters[filterGroupName];
@@ -374,8 +409,39 @@ const TutorialExplorer = React.createClass({
      */
     findMatchingTag(filterGroup, tutorialTags) {
       return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
-    }
+    },
 
+    /* Returns an array of unique organization names from the set of tutorials,
+     * sorted alphabetically.
+     *
+     * @param {Array} tutorials - Array of tutorials.
+     * @param {bool} robotics - Whether the page is for robotics.
+     * @return {Array} - Array of strings.
+     */
+    getUniqueOrgNamesFromTutorials(tutorials, robotics) {
+      // Filter out tutorials with DoNotShow as either tag or organization name.
+      let availableTutorials = tutorials.filter(t => {
+        return t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow;
+      });
+
+      // Ensure robotics tag is either present or absent, depending whether we
+      // are on robotics variant of the page or not.
+      availableTutorials = availableTutorials.filter(t => {
+        if (robotics) {
+          return t.tags_activity_type.split(',').indexOf("robotics") !== -1;
+        } else {
+          return t.tags_activity_type.split(',').indexOf("robotics") === -1;
+        }
+      });
+
+      // Construct array of unique org names from the tutorials.
+      let uniqueOrgNames = _.uniq(availableTutorials.map(t => t.orgname));
+
+      // Sort the unique org names alphabetically, case-insensitive.
+      uniqueOrgNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+      return uniqueOrgNames;
+    }
   },
 
   render() {
@@ -436,9 +502,12 @@ const TutorialExplorer = React.createClass({
               {this.shouldShowFilters() && (
                 <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
                   <FilterSet
+                    uniqueOrgNames={this.getUniqueOrgNames()}
                     filterGroups={this.props.filterGroups}
                     onUserInput={this.handleUserInputFilter}
+                    onUserInputOrgName={this.handleUserInputOrgName}
                     selection={this.state.filters}
+                    orgName={this.state.orgName}
                     roboticsButtonUrl={this.props.roboticsButtonUrl}
                   />
                 </div>
@@ -617,9 +686,10 @@ function getUrlParameters(filters, robotics) {
 window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
   let {filters, initialFilters, hideFilters} = getFilters(options);
+  const robotics = !options.roboticsButtonUrl;
 
   // Check for URL-based override of initialFilters.
-  const providedParameters = getUrlParameters(filters, !options.roboticsButtonUrl);
+  const providedParameters = getUrlParameters(filters, robotics);
   if (!_.isEmpty(providedParameters)) {
     initialFilters = providedParameters;
   }
