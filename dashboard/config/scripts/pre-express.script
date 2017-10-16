@@ -1,5 +1,7 @@
 hidden false
 stage_extras_available true
+project_widget_visible true
+project_widget_types ["playlab_k1", "artist_k1"]
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
