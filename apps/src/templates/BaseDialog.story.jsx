@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseDialog from './BaseDialog';
 
-var ExampleDialogButton = React.createClass({
+class ExampleDialogButton extends React.Component {
   render() {
     return (
       <div>
@@ -20,7 +20,7 @@ var ExampleDialogButton = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default storybook => {
   return storybook
