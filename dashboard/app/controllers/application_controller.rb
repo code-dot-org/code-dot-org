@@ -278,4 +278,11 @@ class ApplicationController < ActionController::Base
     # TODO(asher): Determine whether we need to guard against it being nil.
     session[:pairings].nil? ? [] : session[:pairings]
   end
+
+  # Eager-load the :teachers association when fetching the current logged-in user.
+  def with_teachers
+    User.current_scope = User.includes(:teachers)
+    yield
+    User.current_scope = nil
+  end
 end

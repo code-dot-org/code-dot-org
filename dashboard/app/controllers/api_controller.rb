@@ -293,6 +293,8 @@ class ApiController < ApplicationController
     end
   end
 
+  around_action :with_teachers, only: :user_progress_for_stage
+
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the
   # latter side effect, this should only be called when the user sees the level,

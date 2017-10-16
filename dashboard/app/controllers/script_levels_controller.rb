@@ -3,6 +3,8 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
 class ScriptLevelsController < ApplicationController
+  around_action :with_teachers, only: :show
+
   check_authorization
   include LevelsHelper
 
