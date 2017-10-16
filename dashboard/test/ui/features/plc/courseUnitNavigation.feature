@@ -13,9 +13,9 @@ Scenario: Basic navigation and ribbon changing works as expected
   Then I verify progress for the selector ".course_unit_section a:nth-child(4) .ribbon" is "not_started"
   Then I click selector ".course_unit_title a"
   And I get redirected to "/s/alltheplcthings" via "dashboard"
-  And I wait to see "#breadcrumb"
+  And I wait to see ".uitest-plcbreadcrumb"
   Then I fake completion of the assessment
-  Then I click selector "#breadcrumb a"
+  Then I click selector ".uitest-plcbreadcrumb a"
   And I get redirected to "/courses/all-the-plc-things" via "dashboard"
   And I wait to see ".course_unit_sections"
   Then I verify progress for the selector ".course_unit_section a:nth-child(3) .ribbon" is "completed"

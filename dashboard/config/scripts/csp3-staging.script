@@ -1,0 +1,45 @@
+hidden false
+login_required true
+hideable_stages true
+student_detail_progress_view true
+has_verified_resources true
+
+stage 'The Need For Programming Languages', flex_category: 'csp3_1'
+level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
+stage 'The Need for Algorithms', flex_category: 'csp3_1'
+level 'v2 U3L02 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Creativity in Algorithms', flex_category: 'csp3_1'
+level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Using Simple Commands', flex_category: 'csp3_1'
+named_level 'v2 U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Creating Functions', flex_category: 'csp3_1'
+named_level 'v2 U3L05 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Functions and Top-Down Design', flex_category: 'csp3_1'
+named_level 'v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+assessment 'U3-AP-Practice-FR-design-process', progression: '(new)AP Practice Response - Design Process'
+
+stage 'APIs and Function Parameters', flex_category: 'csp3_1'
+named_level 'v2 U3L07 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+assessment 'U3-AP-Practice-FR-score-abstraction-response', progression: '(new)AP Practice Response - Score a student response'
+
+stage 'Creating functions with Parameters', flex_category: 'csp3_1'
+named_level 'v2 U3L08 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+assessment 'U3-AP-Practice-FR-manage-complexity', progression: '(new)AP Practice Response - Managing Complexity'
+
+stage 'Looping and Random Numbers', flex_category: 'csp3_1'
+named_level 'v2 U3L09 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
+named_level 'v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+variants
+  level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
+assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
