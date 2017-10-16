@@ -1,74 +1,81 @@
 #!/usr/bin/env ruby
 
+# NCES Schools Directories
+# @see https://nces.ed.gov/ccd/ccddata.asp
+# @see https://nces.ed.gov/surveys/pss/pssdata.asp
+
 require_relative '../../../dashboard/config/environment'
+
+# NCES Public/Charter School Directory for 2013-2014
+# @see https://nces.ed.gov/ccd/Data/txt/sc132alay.txt
 
 puts "Processing 2013-2014 public/charter schools..."
 tmp_file = AWS::S3.download_to_temp_file('cdo-nces', '2013-2014/ccd/sc132a.txt')
 begin
-  School.merge_from_csv(tmp_file.path, {col_sep: "\t", headers: true, quote_char: "\x00"},
-    proc do |row|
-      {
-        id:                 row['NCESSCH'].to_i.to_s,
-        school_district_id: row['LEAID'].to_i,
-        name:               row['SCHNAM'].upcase,
-        address_line1:      row['LSTREE'].to_s.upcase.presence,
-        address_line2:      nil,
-        address_line3:      nil,
-        city:               row['LCITY'].to_s.upcase.presence,
-        state:              row['LSTATE'].to_s.upcase.presence,
-        zip:                row['LZIP'],
-        school_type:        row['CHARTR'] == '1' ? 'charter' : 'public'
-      }
-    end
-  )
+  School.merge_from_csv(tmp_file.path) do |row|
+    {
+      id:                 row['NCESSCH'].to_i.to_s,
+      school_district_id: row['LEAID'].to_i,
+      name:               row['SCHNAM'].upcase,
+      address_line1:      row['LSTREE'].to_s.upcase.presence,
+      address_line2:      nil,
+      address_line3:      nil,
+      city:               row['LCITY'].to_s.upcase.presence,
+      state:              row['LSTATE'].to_s.upcase.presence,
+      zip:                row['LZIP'],
+      school_type:        row['CHARTR'] == '1' ? 'charter' : 'public'
+    }
+  end
 ensure
   tmp_file.close
   tmp_file.unlink
 end
+
+# NCES Private School Directory for 2013-2014
+# @see https://nces.ed.gov/surveys/pss/zip/layout2013_14.zip
 
 puts "Processing 2013-2014 private schools..."
 tmp_file = AWS::S3.download_to_temp_file('cdo-nces', '2013-2014/pss/pss1314_pu.csv')
 begin
-  School.merge_from_csv(tmp_file.path, {headers: true, encoding: 'ISO-8859-1:UTF-8'},
-    proc do |row|
-      {
-        id:                 row['PPIN'],
-        school_district_id: nil,
-        name:               row['PINST'].upcase,
-        address_line1:      row[row['PL_ADD'].nil? ? 'PADDRS' : 'PL_ADD'].to_s.upcase.presence,
-        address_line2:      nil,
-        address_line3:      nil,
-        city:               row[row['PL_CIT'].nil? ? 'PCITY' : 'PL_CIT'].to_s.upcase.presence,
-        state:              row[row['PL_STABB'].nil? ? 'PSTABB' : 'PL_STABB'].to_s.upcase.presence,
-        zip:                row[row['PL_ZIP'].nil? ? 'PZIP' : 'PL_ZIP'],
-        school_type:        'private'
-      }
-    end
-  )
+  School.merge_from_csv(tmp_file.path, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+    {
+      id:                 row['PPIN'],
+      school_district_id: nil,
+      name:               row['PINST'].upcase,
+      address_line1:      row[row['PL_ADD'].nil? ? 'PADDRS' : 'PL_ADD'].to_s.upcase.presence,
+      address_line2:      nil,
+      address_line3:      nil,
+      city:               row[row['PL_CIT'].nil? ? 'PCITY' : 'PL_CIT'].to_s.upcase.presence,
+      state:              row[row['PL_STABB'].nil? ? 'PSTABB' : 'PL_STABB'].to_s.upcase.presence,
+      zip:                row[row['PL_ZIP'].nil? ? 'PZIP' : 'PL_ZIP'],
+      school_type:        'private'
+    }
+  end
 ensure
   tmp_file.close
   tmp_file.unlink
 end
 
+# NCES Public/Charter School Directory for 2014-2015
+# @see https://nces.ed.gov/ccd/xls/2014-15%20CCD%20Companion_SCH%20Directory_File_Layout.xlsx
+
 puts "Processing 2014-2015 public/charter schools..."
 tmp_file = AWS::S3.download_to_temp_file('cdo-nces', '2014-2015/ccd/ccd_sch_029_1415_w_0216601a.txt')
 begin
-  School.merge_from_csv(tmp_file.path, {col_sep: "\t", headers: true, quote_char: "\x00"},
-    proc do |row|
-      {
-        id:                 row['NCESSCH'].to_i.to_s,
-        school_district_id: row['LEAID'].to_i,
-        name:               row['SCH_NAME'].upcase,
-        address_line1:      row['LSTREET1'].to_s.upcase.presence,
-        address_line2:      row['LSTREET2'].to_s.upcase.presence,
-        address_line3:      row['LSTREET3'].to_s.upcase.presence,
-        city:               row['LCITY'].to_s.upcase.presence,
-        state:              row['LSTATE'].to_s.upcase.presence,
-        zip:                row['LZIP'],
-        school_type:        row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public'
-      }
-    end
-  )
+  School.merge_from_csv(tmp_file.path) do |row|
+    {
+      id:                 row['NCESSCH'].to_i.to_s,
+      school_district_id: row['LEAID'].to_i,
+      name:               row['SCH_NAME'].upcase,
+      address_line1:      row['LSTREET1'].to_s.upcase.presence,
+      address_line2:      row['LSTREET2'].to_s.upcase.presence,
+      address_line3:      row['LSTREET3'].to_s.upcase.presence,
+      city:               row['LCITY'].to_s.upcase.presence,
+      state:              row['LSTATE'].to_s.upcase.presence,
+      zip:                row['LZIP'],
+      school_type:        row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public'
+    }
+  end
 ensure
   tmp_file.close
   tmp_file.unlink
