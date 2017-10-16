@@ -4,10 +4,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown.jsx';
 
-var schoolData = {
+let schoolData = {
   nces: '',
   showDropdownError: false,
 };
+
+
+// SchoolAutocompleteDropdown sets the value to "-1" when the user selects "My school isn't listed"
+const SCHOOL_NOT_FOUND = "-1";
 
 function renderSchoolDropdown() {
   ReactDOM.render (
@@ -22,15 +26,11 @@ function renderSchoolDropdown() {
 
 function schoolDropdownOnChange(event) {
   const val = (event ? event.value : '');
+
   schoolData.nces = val;
+  schoolData.showDropdownError = !val;
 
-  if (!val) {
-    schoolData.showDropdownError = true;
-  } else {
-    schoolData.showDropdownError = false;
-  }
-
-  if (val === "-1"){
+  if (val === SCHOOL_NOT_FOUND){
     $('#school-name-field').show();
     $('#hoc-event-location-field').show();
   } else if (val){
@@ -81,7 +81,7 @@ $(document).ready(function () {
     // in-school & US
     if (($('#hoc-event-type').val() === 'in_school') && ($("#country").val() === 'US')) {
       $('#school-autocomplete').show();
-      if (schoolData.nces === "-1") {
+      if (schoolData.nces === SCHOOL_NOT_FOUND) {
         $('#school-name-field').show();
         $('#hoc-event-location-field').show();
       } else {
@@ -213,7 +213,7 @@ function validateFields() {
   }
 
   if (($("#hoc-event-type").val() === "in_school") &&
-      (($("#country").val() !== 'US') || (schoolData.nces === "-1"))) {
+      (($("#country").val() !== 'US') || (schoolData.nces === SCHOOL_NOT_FOUND))) {
 
     if ($("#school-name").val() === "") {
       $('#school-name-error').show();
