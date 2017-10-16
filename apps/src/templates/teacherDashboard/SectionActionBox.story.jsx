@@ -5,7 +5,7 @@ import teacherSections, { setSections } from '@cdo/apps/templates/teacherDashboa
 import { Provider } from 'react-redux';
 
 const sectionDataHidden = {
-  id: "1",
+  id: 1,
   name: 'NAME',
   loginType: "email",
   studentCount: 0,
@@ -18,7 +18,7 @@ const sectionDataHidden = {
 };
 
 const sectionDataShown = {
-  id: "1",
+  id: 2,
   name: 'NAME',
   loginType: "email",
   studentCount: 0,
@@ -31,7 +31,7 @@ const sectionDataShown = {
 };
 
 const sectionDataNotEmpty = {
-  id: "1",
+  id: 3,
   name: 'NAME',
   loginType: "email",
   studentCount: 3,
