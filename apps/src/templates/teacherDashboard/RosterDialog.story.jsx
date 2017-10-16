@@ -2,7 +2,7 @@ import React from 'react';
 import {UnconnectedRosterDialog as RosterDialog} from './RosterDialog';
 import { OAuthSectionTypes } from './shapes';
 
-const ExampleDialogButton = React.createClass({
+class ExampleDialogButton extends React.Component {
   render() {
     return (
       <div>
@@ -20,7 +20,7 @@ const ExampleDialogButton = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default storybook => {
   return storybook
