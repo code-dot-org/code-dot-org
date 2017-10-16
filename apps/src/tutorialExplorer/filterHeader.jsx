@@ -50,7 +50,6 @@ const styles = {
 
 const FilterHeader = React.createClass({
   propTypes: {
-
     backButton: PropTypes.bool,
     filteredTutorialsCount: PropTypes.number.isRequired,
     mobileLayout: PropTypes.bool.isRequired,
@@ -67,15 +66,11 @@ const FilterHeader = React.createClass({
     return this.props.mobileLayout && this.props.showingModalFilters;
   },
 
-
-
   render() {
     const tutorialCount = this.props.filteredTutorialsCount;
     const tutorialCountString = tutorialCount === 1 ?
       i18n.filterHeaderTutorialCountSingle() :
       i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
-
-
 
     return (
       <div style={styles.header}>
