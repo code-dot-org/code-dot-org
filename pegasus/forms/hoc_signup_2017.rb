@@ -5,11 +5,6 @@ class HocSignup2017 < HocSignup2014
     result = super
     result[:nces_school_s] = data[:nces_school_s]
     result[:school_name_s] = data[:school_name_s]
-    result[:school_type_s] = data[:school_type_s]
-    result[:school_city_s] = data[:school_city_s]
-    result[:school_state_s] = data[:school_state_s]
-    result[:school_zip_s] = data[:school_zip_s]
-    result[:hoc_school_name_s] = data[:hoc_school_name_s]
 
     #If the user has an in-school US event, they will fill out 2017 census questions.
     result[:role_s] = data[:role_s]

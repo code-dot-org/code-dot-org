@@ -53,14 +53,13 @@
 
       #school-autocomplete{style: "display: none;"}
         .form-group#school-selector
-        .form-group#school-not-found{style: "display: none;"}
 
       .form-group#school-name-field{style: "display: none;"}
         %label.control-label{for: "school-name"}
           = hoc_s(:school_name)
           %span.required*
         %div
-          %input#school-name.form-control{name: "hoc_school_name_s", type: "text"}
+          %input#school-name.form-control{name: "school_name_s", type: "text"}
         #school-name-error.error-message{style: "display:none;"}
           = hoc_s(:school_name_error)
 

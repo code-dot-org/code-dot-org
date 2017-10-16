@@ -3,17 +3,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown.jsx';
-import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound.jsx';
 
 var schoolData = {
   nces: '',
-  schoolName: '',
-  schoolCity: '',
-  schoolState: '',
-  schoolZip: '',
-  schoolType: '',
   showDropdownError: false,
-  showSchoolNotFoundError: false
 };
 
 function renderSchoolDropdown() {
@@ -24,21 +17,6 @@ function renderSchoolDropdown() {
       showErrorMsg={schoolData.showDropdownError}
     />,
     $('#school-selector')[0]
-  );
-}
-
-function renderSchoolNotFound() {
-  ReactDOM.render (
-    <SchoolNotFound
-      setField={schoolNotFoundOnChange}
-      schoolName={schoolData.schoolName}
-      schoolType={schoolData.schoolType}
-      schoolCity={schoolData.schoolCity}
-      schoolState={schoolData.schoolState}
-      schoolZip={schoolData.schoolZip}
-      showErrorMsg={schoolData.showSchoolNotFoundError}
-    />,
-    $('#school-not-found')[0]
   );
 }
 
@@ -53,26 +31,14 @@ function schoolDropdownOnChange(event) {
   }
 
   if (val === "-1"){
-    $('#school-not-found').show();
+    $('#school-name-field').show();
+    $('#hoc-event-location-field').show();
   } else if (val){
-    $('#school-not-found').hide();
+    $('#school-name-field').hide();
+    $('#hoc-event-location-field').hide();
   }
 
-  renderSchoolSelect();
-}
-
-function schoolNotFoundOnChange(field, event) {
-  schoolData = {
-    ...schoolData,
-    [field]: event
-  };
-
-  renderSchoolSelect();
-}
-
-function renderSchoolSelect() {
   renderSchoolDropdown();
-  renderSchoolNotFound();
 }
 
 $(document).ready(function () {
@@ -83,13 +49,13 @@ $(document).ready(function () {
     plugins: ['fast_click']
   });
 
-  renderSchoolSelect();
+  renderSchoolDropdown();
 
   $("#hoc-signup-form").submit(function ( event ) {
     if (validateFields()) {
       signupFormSubmit(gotoThankYouPage);
     }
-    renderSchoolSelect();
+    renderSchoolDropdown();
   });
 
   $("#census-form").submit(function ( event ) {
@@ -100,7 +66,7 @@ $(document).ready(function () {
     if (validateFields()) {
       signupFormSubmit(showCensusForm);
     }
-    renderSchoolSelect();
+    renderSchoolDropdown();
   });
 
   $('#hoc-special-event-flag').change(function () {
@@ -115,8 +81,13 @@ $(document).ready(function () {
     // in-school & US
     if (($('#hoc-event-type').val() === 'in_school') && ($("#country").val() === 'US')) {
       $('#school-autocomplete').show();
-      $('#school-name-field').hide();
-      $('#hoc-event-location-field').hide();
+      if (schoolData.nces === "-1") {
+        $('#school-name-field').show();
+        $('#hoc-event-location-field').show();
+      } else {
+        $('#school-name-field').hide();
+        $('#hoc-event-location-field').hide();
+      }
       $('#organization-name-field').hide();
       $('#hoc-entire-school').show();
       // continue button goes to census questions on click
@@ -241,12 +212,21 @@ function validateFields() {
     }
   }
 
-  if (($("#country").val() !== 'US') && ($("#hoc-event-type").val() === "in_school")) {
+  if (($("#hoc-event-type").val() === "in_school") &&
+      (($("#country").val() !== 'US') || (schoolData.nces === "-1"))) {
+
     if ($("#school-name").val() === "") {
       $('#school-name-error').show();
       return false;
     } else {
       $('#school-name-error').hide();
+    }
+
+    if ($("#hoc-event-location").val() === "") {
+      $('#event-location-error').show();
+      return false;
+    } else {
+      $('#event-location-error').hide();
     }
   }
 
@@ -256,24 +236,6 @@ function validateFields() {
       return false;
     } else {
       schoolData.showDropdownError = false;
-    }
-
-    if (schoolData.nces === "-1") {
-      if ((!schoolData.schoolName) || (!schoolData.schoolState) || (!schoolData.schoolCity) || (!schoolData.schoolType) || (!schoolData.schoolZip)) {
-        schoolData.showSchoolNotFoundError = true;
-        return false;
-      } else {
-        schoolData.showSchoolNotFoundError = false;
-      }
-    } else {
-      schoolData.showSchoolNotFoundError = false;
-    }
-  } else {
-    if ($("#hoc-event-location").val() === "") {
-      $('#event-location-error').show();
-      return false;
-    } else {
-      $('#event-location-error').hide();
     }
   }
 
