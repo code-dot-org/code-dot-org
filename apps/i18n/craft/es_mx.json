@@ -286,5 +286,6 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder"
+  "weatherTypeThunder": "thunder",
+  "runAgent": "Run Agent"
 }

@@ -105,6 +105,19 @@ class PeerReviewsControllerTest < ActionController::TestCase
     assert_redirected_to peer_reviews_dashboard_path
   end
 
+  test 'Submitting a review that throws an exception logs an error to Honeybadger' do
+    @peer_review.update(reviewer_id: @user.id)
+    PeerReview.any_instance.stubs(:update!).raises(ActiveRecord::RecordNotSaved)
+    Honeybadger.expects(:notify)
+
+    post :update, params: {
+      id: @peer_review.id,
+      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
+    }
+
+    assert_redirected_to peer_review_path(@peer_review)
+  end
+
   test 'Submitting a review redirects to the script view' do
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {

@@ -10,6 +10,7 @@ const styles = {
     fontWeight: 'normal',
     outline: 'none',
     padding: 5,
+    display: 'list-item',
   },
   challengeLineCounts: {
     fontSize: 16,

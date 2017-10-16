@@ -286,5 +286,6 @@
   "weather": "počasí",
   "weatherTypeClear": "jasno",
   "weatherTypeRain": "déšť",
-  "weatherTypeThunder": "bouřka"
+  "weatherTypeThunder": "bouřka",
+  "runAgent": "Run Agent"
 }

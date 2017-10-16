@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import React, {PropTypes} from 'react';
 var msg = require('@cdo/locale');
 
@@ -17,9 +15,8 @@ var CraftVisualizationColumn = function (props) {
           </div>
         </div>
       </ProtectedVisualizationDiv>
-      <GameButtons agent={appOptions.levelPosition !== 1}>
-        <ArrowButtons />
-
+      <ArrowButtons />
+      <GameButtons>
         {props.showFinishButton && <div id="right-button-cell">
           <button id="rightButton" className="share mc-share-button">
             <div>{msg.finish()}</div>

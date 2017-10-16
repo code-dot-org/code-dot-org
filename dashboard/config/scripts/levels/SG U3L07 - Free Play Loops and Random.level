@@ -152,7 +152,7 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "project_template_level_name": "SG U3L07 - underTheSeaLoopsTemplate",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -193,7 +193,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 16:53:48 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 16:53:48 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 21:34:44 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

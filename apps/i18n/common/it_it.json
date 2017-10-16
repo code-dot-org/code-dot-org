@@ -810,6 +810,8 @@
   "yourSchoolTellUs": "Raccontaci la tua scuola",
   "commentPrefix": "Comment:",
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
+  "searchForCountry": "Search for your country.",
+  "searchForSchool": "Search for your school.",
   "schoolCity": "School City",
   "schoolCountry": "School Country",
   "schoolInfoRequired": "School information is required.",

@@ -249,7 +249,14 @@ function importProject() {
       return;
     }
 
-    const shareUrl = new URL(shareLink);
+    let shareUrl;
+    try {
+      shareUrl = new URL(shareLink);
+    } catch (e) {
+      // a shareLink that does not represent a valid URL will throw a TypeError
+      Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
+      return;
+    }
 
     const legacyShareRegex = /^\/c\/([^\/]*)/;
     const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
@@ -280,10 +287,10 @@ function importProject() {
           location.href = pathName;
         });
       }).error(function () {
-        Craft.showErrorMessagePopup("Oops", "Something went wrong; please try again");
+        Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
       });
     } else {
-      Craft.showErrorMessagePopup("Oops", "Invalid share link, please try a different link");
+        Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
     }
   });
 }
