@@ -80,6 +80,21 @@ class RegionalPartnersController < ApplicationController
     render :show
   end
 
+  # POST /regional_partners/:id/add_mapping
+  def add_mapping
+    region = params[:region]
+    state = region if region.present? && region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
+    zip_code = region if region.present? && RegexpUtils.us_zip_code?(region)
+    @regional_partner.mappings.find_or_create_by(state: state, zip_code: zip_code)
+    redirect_to @regional_partner
+  end
+
+  # GET /regional_partners/:id/remove_mapping
+  def remove_mapping
+    @regional_partner.mappings.delete(params[:mapping_id])
+    redirect_to @regional_partner
+  end
+
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.
