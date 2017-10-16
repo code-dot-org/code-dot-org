@@ -4,10 +4,15 @@ import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import PrintCertificates from "./PrintCertificates";
 import {connect} from 'react-redux';
-import {editedSectionId, removeSection, toggleSectionHidden} from './teacherSectionsRedux';
-import {sortableSectionShape} from "./shapes.jsx";
+import {sectionCode,
+        sectionName,
+        removeSection,
+        toggleSectionHidden,
+        importOrUpdateRoster} from './teacherSectionsRedux';
+import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
 import {pegasus} from "../../lib/util/urlHelpers";
 import {Popover, OverlayTrigger} from 'react-bootstrap';
+import * as utils from '../../utils';
 
 
 const styles = {
@@ -75,9 +80,11 @@ class SectionActionBox extends Component {
     sectionData: sortableSectionShape.isRequired,
 
     //Provided by redux
-    editedSectionId: PropTypes.number,
     removeSection: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
+    sectionCode: PropTypes.string,
+    sectionName: PropTypes.string,
+    updateRoster: PropTypes.func.isRequired,
   };
 
   state = {
@@ -106,6 +113,18 @@ class SectionActionBox extends Component {
 
   onClickHideShow = () => {
       this.props.toggleSectionHidden(this.props.sectionData.id);
+  };
+
+  onClickSync = () => {
+    // Section code is the course ID, without the G- or C- prefix.
+    const courseId = this.props.sectionCode.replace(/^[GC]-/, '');
+    this.props.updateRoster(courseId, this.props.sectionName)
+      .then(() => {
+        // While we are embedded in an angular page, reloading is the easiest
+        // way to pick up roster changes.  Once everything is React maybe we
+        // won't need to do this.
+        utils.reload();
+      });
   };
 
   render() {
@@ -148,6 +167,20 @@ class SectionActionBox extends Component {
                     />
                   </div>
                 </a>
+                {this.props.sectionData.loginType === OAuthSectionTypes.clever &&
+                  <a>
+                    <div style={styles.actionText} onClick={this.onClickSync}>
+                      {i18n.syncClever()}
+                    </div>
+                  </a>
+                }
+                {this.props.sectionData.loginType === OAuthSectionTypes.google_classroom &&
+                  <a>
+                    <div style={styles.actionText} onClick={this.onClickSync}>
+                      {i18n.syncGoogleClassroom()}
+                    </div>
+                  </a>
+                }
                 <a>
                   <div style={styles.actionText} onClick={this.onClickHideShow}>
                     {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
@@ -175,9 +208,11 @@ class SectionActionBox extends Component {
 
 export const UnconnectedSectionActionBox = SectionActionBox;
 
-export default connect(state => ({
-  editedSectionId: editedSectionId(state.teacherSections)
+export default connect((state, props) => ({
+  sectionCode: sectionCode(state, props.sectionData.id),
+  sectionName: sectionName(state, props.sectionData.id),
 }), {
   removeSection,
   toggleSectionHidden,
+  updateRoster: importOrUpdateRoster,
 })(SectionActionBox);
