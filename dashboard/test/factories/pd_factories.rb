@@ -522,4 +522,13 @@ FactoryGirl.define do
     regional_partner nil
     form_data nil
   end
+
+  factory :pd_regional_partner_cohort, class: 'Pd::RegionalPartnerCohort' do
+    course Pd::Workshop::COURSE_CSP
+  end
+
+  factory :pd_regional_partner_mapping, class: 'Pd::RegionalPartnerMapping' do
+    association :regional_partner
+    state 'WA'
+  end
 end

@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { TestResults } from '@cdo/apps/constants';
 import { getStore } from '../redux';
 import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
@@ -390,6 +391,7 @@ function loadAppAsync(appOptions) {
         if (data.pairingDriver) {
           appOptions.level.pairingDriver = data.pairingDriver;
           appOptions.level.pairingAttempt = data.pairingAttempt;
+          appOptions.level.pairingChannelId = data.pairingChannelId;
         }
       }
 
@@ -406,6 +408,9 @@ function loadAppAsync(appOptions) {
         if (signedInUser) {
           progress.showDisabledBubblesAlert();
         }
+      }
+      if (data.isVerifiedTeacher) {
+        store.dispatch(setVerified());
       }
     }).fail(loadLastAttemptFromSessionStorage);
 

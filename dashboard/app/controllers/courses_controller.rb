@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
         @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
       end
       format.json do
-        render json: Course.valid_courses
+        render json: Course.valid_courses(current_user)
       end
     end
   end
@@ -56,7 +56,7 @@ class CoursesController < ApplicationController
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    course.update_attribute(:has_verified_resources, params[:has_verified_resources])
+    course.update_attribute(:has_verified_resources, !!params[:has_verified_resources])
     redirect_to course
   end
 

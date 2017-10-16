@@ -28,6 +28,13 @@ GIT
       redis
 
 GIT
+  remote: https://github.com/grosser/sort_alphabetical.git
+  revision: f8eea712e236df6ba60839ead116f40094266c08
+  specs:
+    sort_alphabetical (1.1.0)
+      unicode_utils (>= 1.2.2)
+
+GIT
   remote: https://github.com/pahanix/full-name-splitter.git
   revision: 316b4f3f4b1e5902dedc2a369d1d9052f042dd50
   specs:
@@ -319,6 +326,7 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     fspath (3.1.0)
+    gctools (0.2.4)
     gemoji (2.1.0)
     gherkin (4.0.0)
     globalid (0.3.7)
@@ -686,7 +694,6 @@ GEM
     timecop (0.8.1)
     timers (4.0.4)
       hitimes
-    triez (1.0.5)
     ttfunk (1.4.0)
     twilio-ruby (4.11.1)
       builder (>= 2.1.2)
@@ -701,6 +708,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unicode-display_width (1.1.2)
+    unicode_utils (1.4.0)
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -781,6 +789,7 @@ DEPENDENCIES
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
   full-name-splitter!
+  gctools
   gemoji
   geocoder!
   google-api-client
@@ -862,6 +871,7 @@ DEPENDENCIES
   shotgun
   simplecov (~> 0.9)
   sinatra (~> 2.0.0.beta2)
+  sort_alphabetical!
   spring
   spring-commands-testunit
   sprockets!
@@ -872,7 +882,6 @@ DEPENDENCIES
   therubyracer (~> 0.12.2)
   thin
   timecop
-  triez
   twilio-ruby
   uglifier (>= 1.3.0)
   unicorn (~> 5.1.0)

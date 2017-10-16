@@ -1066,6 +1066,8 @@
   csp1_name: "유닛 1: 인터넷"
   csp2_name: "유닛 2: 디지털 정보"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1675,10 +1677,10 @@
   playlab_shortcode: "실행"
   artist_shortcode: art
   header_home: "홈"
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: "대시보드"
   header_courses: courses
   header_course_catalog: Course Catalog
-  header_project_gallery: "프로젝트 갤러리"
+  header_project_gallery: "프로젝트"
   header_sections: "섹션"
   header_professional_learning: "전문 학습"
   header_educate_overview: "교사 개요"

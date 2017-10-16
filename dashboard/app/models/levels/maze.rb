@@ -103,6 +103,9 @@ class Maze < Grid
   <block type="maze_if"></block>
   <block type="maze_ifElse"></block>
 </category>
+<category name="Comment">
+  <block type="comment" />
+</category>
     XML
   end
 

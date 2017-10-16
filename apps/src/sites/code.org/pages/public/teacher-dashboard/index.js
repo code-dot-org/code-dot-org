@@ -194,6 +194,81 @@ function main() {
       });
     }]);
 
+  // For large sections, we're having requests time out before we hear back from
+  // the server. Instead, lets ask for progress for only N students at a time,
+  // and populate our table once we have all data. This is a quick and dirty approach
+  // that may not be the best way to accomplish this in angular, but we expect it
+  // to be replaced within the next couple of sprints as we move this to React.
+  services.factory('paginatedSectionProgressService', ['$http', '$q',
+    function ($http, $q) {
+      function reinflateDate(data, sectionId) {
+        // We try to minimize how much data we send back to the client, as this can
+        // grow large with big sections. This means some additional processing to
+        // get the data back in a form that we'd like
+        return {
+          ...data,
+          students: data.students.map(student => ({
+            ...student,
+            levels: student.levels.map(([className, title, url]) => ({
+              class: className,
+              title,
+              url: studioUrlPrefix + url + `?section_id=${sectionId}&user_id=${student.id}`
+            }))
+          }))
+        };
+      }
+
+      return {
+        get: (id, script_id=undefined) => {
+          const deferred = $q.defer();
+
+          let data;
+          let page = 1;
+          let pageSize = 50;
+
+          const getNextPage = () => {
+            let queryParams = `page=${page}&per=${pageSize}`;
+            if (script_id) {
+              queryParams += `&script_id=${script_id}`;
+            }
+            return $http.get(`/dashboardapi/section_progress/${id}?${queryParams}`)
+            .then(pageSuccess, pageFailure);
+          };
+
+          const pageSuccess = result => {
+            if (!data) {
+              data = result.data;
+            } else {
+              // append student data
+              data.students.push(...result.data.students);
+            }
+            // resolve once we've received our last page
+            if (result.data.students.length < pageSize) {
+              deferred.resolve(reinflateDate(data, id));
+            } else {
+              page++;
+              getNextPage();
+            }
+          };
+
+          const pageFailure = err => {
+            deferred.reject(err);
+          };
+
+          // Query the server for the next page, any time we get a full page
+          // worth of results, assume there are more and ask for the next page.
+          // Once we get a non-full page, resolve our promise with the concatenated
+          // data
+          getNextPage();
+
+          // return our promise
+          return deferred.promise;
+        }
+      };
+    }
+  ]);
+
+
   // CONTROLLERS
 
   var app = angular.module('teacherDashboard.controllers', []);
@@ -645,8 +720,8 @@ function main() {
     );
   }]);
 
-  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
-                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService', 'paginatedSectionProgressService',
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService, paginatedSectionProgressService) {
     firehoseClient.putRecord(
       'analysis-events',
       {
@@ -655,19 +730,24 @@ function main() {
       }
     );
 
+    $scope.genericError = function (result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.progress = sectionsService.progress({id: $routeParams.id});
+    const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
+      .then(result => {
+        $scope.progress = result;
+      })
+      .catch($scope.genericError);
+
     $scope.tab = 'progress';
     $scope.page = {zoom: false};
 
     // error handling
-    $scope.genericError = function (result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.progress.$promise.catch($scope.genericError);
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
@@ -684,7 +764,7 @@ function main() {
     $scope.progress_disabled_scripts = disabled_scripts;
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function (){
+    $q.all([paginatedPromise, $scope.section.$promise]).then(function (){
       $scope.mergeProgress();
       $scope.progressLoadedFirst = true;
       $scope.progressLoaded = true;
@@ -701,13 +781,14 @@ function main() {
       // that the entire table disappears and reappears instead of just
       // the progress bar when using the course dropdown.
 
-      $scope.progress = sectionsService.progress({id: $routeParams.id, script_id: scriptId});
-
-      $scope.progress.$promise.then(function (){
-        $scope.mergeProgress();
-        $scope.progressLoadedFirst = true;
-        $scope.progressLoaded = true;
-      });
+      paginatedSectionProgressService.get($routeParams.id, scriptId)
+        .then(result => {
+          $scope.progress = result;
+          $scope.mergeProgress();
+          $scope.progressLoadedFirst = true;
+          $scope.progressLoaded = true;
+        })
+        .catch($scope.genericError);
     };
 
     $scope.progressWidth = function () {

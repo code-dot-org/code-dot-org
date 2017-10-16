@@ -71,8 +71,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     @browser.navigate.to url
-    refute_bad_gateway
-    refute_site_unreachable
+    refute_bad_gateway_or_site_unreachable
   end
   install_js_error_recorder
 end
@@ -930,10 +929,6 @@ And(/^I create a student named "([^"]*)"$/) do |name|
   }
 end
 
-Then /^I scroll element "([^"]*)" into view$/ do |selector|
-  @browser.execute_script("$(#{selector.dump})[0].scrollIntoView(true)")
-end
-
 And(/^I create a teacher named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 
@@ -946,10 +941,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I wait until element "#signup-button" is visible
-    And I scroll element "#signup-button" into view
     And I click selector "#user_terms_of_service_version"
-    And I wait for 5 seconds
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"
   }
@@ -1215,13 +1207,9 @@ Then /^I select the first section$/ do
   )
 end
 
-def refute_bad_gateway
+def refute_bad_gateway_or_site_unreachable
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   expect(first_header_text).not_to end_with('Bad Gateway')
-end
-
-def refute_site_unreachable
-  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   # This error message is specific to Chrome
   expect(first_header_text).not_to eq('This site can’t be reached')
 end

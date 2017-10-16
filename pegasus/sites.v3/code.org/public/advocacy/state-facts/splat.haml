@@ -182,6 +182,20 @@ theme: pdf
           offered the AP Computer Science course in 2015-2016.
         - if state_param != 'ND' && state_param != 'MT'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
+      %li
+        Universities in
+        = state_info[:state_name_s]
+        - if state_info[:preservice_prepared_i] == 0
+          did not graduate a single new teacher prepared to teach computer science in 2016.
+        - else
+          only graduated
+          = state_info[:preservice_prepared_i]
+          new 
+          - if state_info[:preservice_prepared_i] == 1
+            teacher 
+          - else 
+            teachers
+          prepared to teach computer science in 2016.
 
   .chart-text-group
     %img.chart{src: "/images/charts/learn_teach.png"}
@@ -227,9 +241,9 @@ theme: pdf
         and
         = format_integer_with_commas(state_info[:num_affiliates_i])
         - if state_info[:num_affiliates_i] == 1
-          facilitator
+          K-5 facilitator
         - else
-          facilitators
+          K-5 facilitators
         have provided professional learning for 
         = format_integer_with_commas(state_info[:num_elementary_trained_i])
         - if state_info[:num_elementary_trained_i] == 1
@@ -245,7 +259,7 @@ theme: pdf
               teacher
             -else 
               teachers
-            in Exploring Computer Science 
+            in Exploring Computer Science or Computer Science Discoveries
           - else 
             , 
             = format_integer_with_commas(state_info[:num_ecs_csd_i])
@@ -253,7 +267,7 @@ theme: pdf
               teacher
             -else 
               teachers
-            in Exploring Computer Science, and
+            in Exploring Computer Science or Computer Science Discoveries, and
             = format_integer_with_commas(state_info[:num_csp_i])
             - if state_info[:num_csp_i] == 1
               teacher

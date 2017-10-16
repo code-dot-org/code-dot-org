@@ -1206,6 +1206,8 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1946,7 +1948,7 @@
   header_my_dashboard: My Dashboard
   header_courses: Predavanja
   header_course_catalog: Course Catalog
-  header_project_gallery: Project Gallery
+  header_project_gallery: Projekti
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Vzgojiteljev pregled

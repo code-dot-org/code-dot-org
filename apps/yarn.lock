@@ -5,13 +5,13 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.25":
-  version "1.6.25"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.25.tgz#b411dd21f01e6f2b174650e48c3de339b2dd752a"
+"@code-dot-org/blockly@1.6.26":
+  version "1.6.26"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.26.tgz#14677c90f5ed6a0ae58ae0c2c9e1ea4cc4f4626e"
 
-"@code-dot-org/bramble@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.20.tgz#e54e19a71dc387e0e364aaac61fabad02bee87c6"
+"@code-dot-org/bramble@0.1.22":
+  version "0.1.22"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.22.tgz#bc37afb05339d0623ba44e86bb54cb04f6728463"
   dependencies:
     autoprefixer-core "5.1.8"
     aws-sdk "^2.2.9"
@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#d020d90f39fbc5b27e46e58b60a2c10f24357e88":
-  version "0.0.2"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/d020d90f39fbc5b27e46e58b60a2c10f24357e88"
+"@code-dot-org/craft@github:code-dot-org/craft#a8762bd7b7eda6b50601ac29705d1ec0a03e10fa":
+  version "0.0.8"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/a8762bd7b7eda6b50601ac29705d1ec0a03e10fa"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.0":
   version "0.11.1-cdo.0"
@@ -9350,9 +9350,9 @@ underscore@1.4.x:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.4.4.tgz#61a6a32010622afa07963bf325203cf12239d604"
 
-underscore@^1.6.0:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
+underscore@^1.6.0, underscore@~1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
 
 underscore@~1.5.2:
   version "1.5.2"
@@ -9361,10 +9361,6 @@ underscore@~1.5.2:
 underscore@~1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.6.0.tgz#8b38b10cacdef63337b8b24e4ff86d45aea529a8"
-
-underscore@~1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
 
 union@~0.4.3:
   version "0.4.6"
@@ -9696,9 +9692,9 @@ websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
 
-whatwg-fetch@>=0.10.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz#01c2ac4df40e236aaa18480e3be74bd5c8eb798e"
+whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
 whet.extend@~0.9.9:
   version "0.9.9"

@@ -31,25 +31,6 @@ const ArrowIds = {
   DOWN: 'downButton',
 };
 
-const characters = {
-  Steve: {
-    name: 'Steve',
-    staticAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
-    smallStaticAvatar:
-      MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
-    failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Win.png',
-  },
-  Alex: {
-    name: 'Alex',
-    staticAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
-    smallStaticAvatar:
-      MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
-    failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Win.png',
-  },
-};
-
 const interfaceImages = {
   DEFAULT: [
     MEDIA_URL + 'Sliced_Parts/MC_Loading_Spinner.gif',
@@ -68,23 +49,9 @@ const interfaceImages = {
   1: [
     MEDIA_URL + 'Sliced_Parts/Steve_Character_Select.png',
     MEDIA_URL + 'Sliced_Parts/Alex_Character_Select.png',
-    characters.Steve.staticAvatar,
-    characters.Steve.smallStaticAvatar,
-    characters.Alex.staticAvatar,
-    characters.Alex.smallStaticAvatar,
-  ],
-  2: [
-    // TODO(bjordan): find different pre-load point for feedback images,
-    // bucket by selected character
-    characters.Alex.winAvatar,
-    characters.Steve.winAvatar,
-    characters.Alex.failureAvatar,
-    characters.Steve.failureAvatar,
-  ],
-  6: [
-    MEDIA_URL + 'Sliced_Parts/House_Option_A_v3.png',
-    MEDIA_URL + 'Sliced_Parts/House_Option_B_v3.png',
-    MEDIA_URL + 'Sliced_Parts/House_Option_C_v3.png',
+    MEDIA_URL + 'Sliced_Parts/Agent_Fail.png',
+    MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png',
+    MEDIA_URL + 'Sliced_Parts/Agent_Success.png',
   ],
 };
 
@@ -155,7 +122,6 @@ export default class Craft {
             trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
             Craft.clearPlayerState();
             trySetLocalStorage('craftSelectedPlayer', selectedPlayer);
-            Craft.updateUIForCharacter(selectedPlayer);
             Craft.initializeAppLevel(config.level);
             showInstructions();
           });
@@ -190,11 +156,10 @@ export default class Craft {
       levelTracks.length > 1 ? 7500 : null,
     );
 
-    const character = characters[Craft.getCurrentCharacter()];
-    config.skin.staticAvatar = character.staticAvatar;
-    config.skin.smallStaticAvatar = character.smallStaticAvatar;
-    config.skin.failureAvatar = character.failureAvatar;
-    config.skin.winAvatar = character.winAvatar;
+    config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
+    config.skin.smallStaticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
+    config.skin.failureAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Fail.png';
+    config.skin.winAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Success.png';
 
     const onMount = function () {
       studioApp().init(
@@ -240,6 +205,14 @@ export default class Craft {
                 config.level.puzzle_number,
               ),
               afterAssetsLoaded: function () {
+                // Make the game solvable as soon as it loads.
+                Craft.gameController.codeOrgAPI.startAttempt(success => {
+                  if (Craft.level.freePlay) {
+                    return;
+                  }
+                  Craft.reportResult(success);
+                });
+
                 // preload music after essential game asset downloads completely finished
                 Craft.musicController.preload();
               },
@@ -283,7 +256,10 @@ export default class Craft {
             $('#soft-buttons')
               .removeClass('soft-buttons-none')
               .addClass('soft-buttons-' + 4);
-            $('#soft-buttons').hide();
+            $('.arrow').prop("disabled", false);
+
+            const resetButton = document.getElementById('resetButton');
+            dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
 
             const phaserGame = document.getElementById('phaser-game');
             const onDrag = function (e) {
@@ -354,6 +330,8 @@ export default class Craft {
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
       isMinecraft: true,
+      hideRunButton: config.level.specialLevelType === 'agentSpawn',
+      runButtonText: config.level.agentStartPosition ? craftMsg.runAgent() : undefined,
     });
 
     ReactDOM.render(
@@ -409,17 +387,6 @@ export default class Craft {
     return (
       window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
     );
-  }
-
-  static updateUIForCharacter(character) {
-    Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
-    Craft.initialConfig.skin.smallStaticAvatar =
-      characters[character].smallStaticAvatar;
-    Craft.initialConfig.skin.failureAvatar =
-      characters[character].failureAvatar;
-    Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
-    studioApp().setIconsFromSkin(Craft.initialConfig.skin);
-    $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
   }
 
   static showPlayerSelectionPopup(onSelectedCallback) {
@@ -479,8 +446,8 @@ export default class Craft {
       actionPlane: levelConfig.actionPlane,
       fluffPlane: fluffPlane,
       entities: levelConfig.entities,
-      useAgent: true,
-      usePlayer: true,
+      useAgent: !!levelConfig.agentStartPosition,
+      usePlayer: !!levelConfig.playerStartPosition,
       playerStartPosition: levelConfig.playerStartPosition,
       playerStartDirection: levelConfig.playerStartDirection,
       agentStartPosition: levelConfig.agentStartPosition,
@@ -541,15 +508,6 @@ export default class Craft {
     }
   }
 
-  /** Folds array B on top of array A */
-  static foldInArray(arrayA, arrayB) {
-    for (let i = 0; i < arrayA.length; i++) {
-      if (arrayB[i] !== '') {
-        arrayA[i] = arrayB[i];
-      }
-    }
-  }
-
   /**
    * Reset the app to the start position and kill any pending animation tasks.
    * @param {boolean} first true if first reset
@@ -558,10 +516,13 @@ export default class Craft {
     if (first) {
       return;
     }
-    if (Craft.level.usePlayer) {
-      $('#soft-buttons').hide();
-    }
     Craft.gameController.codeOrgAPI.resetAttempt();
+    Craft.gameController.codeOrgAPI.startAttempt(success => {
+      if (Craft.level.freePlay) {
+        return;
+      }
+      Craft.reportResult(success);
+    });
   }
 
   static phaserLoaded() {
@@ -578,23 +539,18 @@ export default class Craft {
   }
 
   /**
+   * Base's `studioApp().resetButtonClick` will be called first.
+   */
+  static resetButtonClick() {
+    $('.arrow').prop("disabled", false);
+  }
+
+  /**
    * Click the run button.  Start the program.
    */
   static runButtonClick() {
     if (!Craft.phaserLoaded()) {
       return;
-    }
-
-    if (Craft.level.usePlayer) {
-      $('#soft-buttons').show();
-    }
-
-    const runButton = document.getElementById('runButton');
-    const resetButton = document.getElementById('resetButton');
-
-    // Ensure that Reset button is at least as wide as Run button.
-    if (!resetButton.style.minWidth) {
-      resetButton.style.minWidth = runButton.offsetWidth + 'px';
     }
 
     studioApp().toggleRunReset('reset');
@@ -723,14 +679,6 @@ export default class Craft {
             dirStringToDirection[direction], targetEntity);
       },
     }, {legacy: true});
-
-    appCodeOrgAPI.startAttempt((success, levelModel) => {
-      $('#soft-buttons').hide();
-      if (Craft.level.freePlay) {
-        return;
-      }
-      Craft.reportResult(success);
-    });
   }
 
   static getTestResultFrom(success, studioTestResults) {

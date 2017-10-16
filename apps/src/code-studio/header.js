@@ -1,4 +1,4 @@
-/* globals dashboard, appOptions */
+/* globals dashboard, appOptions, Craft */
 
 import $ from 'jquery';
 import React from 'react';
@@ -12,6 +12,8 @@ import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
 import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
+
+import { convertBlocksXml } from '../craft/code-connection/utils';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -230,6 +232,69 @@ function setupReduxSubscribers(store) {
 }
 setupReduxSubscribers(getStore());
 
+/**
+ * Show a popup dialog to collect an Hour of Code share link, and create a new
+ * channel-backed project from the associated LevelSource.
+ *
+ * Currently only supported for Minecraft Code Connection Projects and Minecraft
+ * Agent share links
+ */
+function importProject() {
+  if (!Craft) {
+    return;
+  }
+
+  Craft.showImportFromShareLinkPopup((shareLink) => {
+    if (!shareLink) {
+      return;
+    }
+
+    let shareUrl;
+    try {
+      shareUrl = new URL(shareLink);
+    } catch (e) {
+      // a shareLink that does not represent a valid URL will throw a TypeError
+      Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
+      return;
+    }
+
+    const legacyShareRegex = /^\/c\/([^\/]*)/;
+    const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
+
+    let levelSourcePath;
+
+    // Try a couple different kinds of share links
+    if (shareUrl.pathname.match(legacyShareRegex)) {
+      const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
+      levelSourcePath = `/c/${levelSourceId}.json`;
+    } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
+      const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
+      levelSourcePath = `/r/${levelSourceId}.json`;
+    }
+
+    if (levelSourcePath) {
+      $.ajax({
+        url: levelSourcePath,
+        type: "get",
+        dataType: "json"
+      }).done(function (data) {
+        // Source data will likely be from a different project type than this one,
+        // so convert it
+
+        const convertedSource = convertBlocksXml(data.data);
+        dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
+          const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
+          location.href = pathName;
+        });
+      }).error(function () {
+        Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
+      });
+    } else {
+        Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
+    }
+  });
+}
+
 function remixProject() {
   if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {
     dashboard.project.serverSideRemix();
@@ -313,6 +378,12 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
+  // For Minecraft Code Connection (aka CodeBuilder) projects, add the option to
+  // import code from an Hour of Code share link
+  if (appOptions.level.isConnectionLevel) {
+    $('.project_info').append($('<div class="project_import header_button header_button_light">').text(dashboard.i18n.t('project.import')));
+  }
+
   // TODO: Remove this (and the related style) when Web Lab is no longer in beta.
   if ('weblab' === appOptions.app) {
     $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
@@ -341,6 +412,7 @@ header.showProjectHeader = function () {
 
   $('.project_share').click(shareProject);
   $('.project_remix').click(remixProject);
+  $('.project_import').click(importProject);
 
   var $projectMorePopup = $('.project_more_popup');
   function hideProjectMore() {

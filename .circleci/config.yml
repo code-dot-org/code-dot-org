@@ -9,7 +9,7 @@ jobs:
   build:
     # parallelism: 4
     docker:
-      - image: iynere/code-dot-org:trusty-v2
+      - image: wjordan/code-dot-org:trusty
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -62,7 +62,7 @@ jobs:
             - code-dot-org-node-v8-
 
       # start mysql
-      - run: sudo service mysql start
+      - run: sudo service mysql start && mysql -V
 
       - run:
           name: install dependencies
@@ -95,7 +95,7 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             " >> locals.yml
-            yarn version -V
+            yarn -V
 
       - run:
           name: fix weird gem issue
@@ -120,12 +120,7 @@ jobs:
       - run:
           name: rake build
           command: |
-            for i in 1 2; do
-              mispipe "timeout 16m bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
-              ERR=$?
-              echo "rake build failed on attempt $i with error code $ERR";
-              (exit $ERR)
-            done
+            mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
       - save_cache:
           key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}

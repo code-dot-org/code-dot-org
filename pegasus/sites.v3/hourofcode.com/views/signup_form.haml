@@ -1,122 +1,137 @@
+- require 'country_codes'
+%script{type: "text/javascript", src: "/js/signup-form.js"}
 - signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
+- signup_submit_census_error_message = hoc_s(:signup_submit_census_error_message).gsub(/"/,"\\\\\"")
 - hoc_year = DCDO.get("hoc_year", 2017)
 
 #signupform
-  %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
+  %h2#signup-header= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
+  %h2#census-header{style: "display: none;"}= hoc_s(:census_header)
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
-    .form-group
-      %label.control-label{for: "hoc-name"}
-        = hoc_s(:signup_name_label)
-      %div
-        %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}/
+    .main-form
+      .form-group
+        %label.control-label{for: "hoc-name"}
+          = hoc_s(:signup_name_label)
+          %span.required*
+        %div
+          %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), type: "text"}
+        #name-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_name_error)
 
-    .form-group
-      %label.control-label{for: "hoc-email"}
-        = hoc_s(:signup_email_label)
-      %div
-        %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
+      .form-group
+        %label.control-label{for: "hoc-email"}
+          = hoc_s(:signup_email_label)
+          %span.required*
+        %div
+          %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text"}
+        #email-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_email_error)
 
-    .form-group
-      %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
-      %div
-        %input#hoc-organization-name.form-control{name: "organization_name_s", placeholder: hoc_s(:signup_organization_name_placeholder), type: "text", required: true}/
+      .form-group
+        %label.control-label{for: "hoc-event-country"}
+          = hoc_s(:signup_event_country_label)
+          %span.required*
+        %select#country.form-control{name: "hoc_country_s", type: "select"}
+          %option{value: "", selected: true, disabled: true}
+          - get_all_countries().each do |code, name|
+            %option{value: code}= name
+        #country-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_event_country_error)
 
-    .form-group
-      %label.control-label{for: "hoc-event-type"}= hoc_s(:signup_event_type_label)
-      %div
-        %select#hoc-event-type.form-control{name: "event_type_s", type: "select", required: true}
-          %option{value: nil, selected: true}
-          -['in_school', 'out_of_school'].each do |event_type|
-            %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
+      .form-group
+        %label.control-label{for: "hoc-event-type"}
+          = hoc_s(:signup_event_type_label)
+          %span.required*
+        %div
+          %select#hoc-event-type.form-control{name: "event_type_s", type: "select"}
+            %option{value: nil, selected: true}
+            -['in_school', 'out_of_school'].each do |event_type|
+              %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
+        #event-type-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_event_type_error)
 
-    .form-group
-      %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
-      %div
-        %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
+      -# School lookup autocomplete will go here.
+      -# Until it's ready, default to school name and event location
 
-    .form-group{style: "display: none;"}
-      .checkbox
-        %label
-          %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
-          =hoc_s(:signup_event_entire_school_label)
+      .form-group#school-name-field{style: "display: none;"}
+        %label.control-label{for: "school-name"}
+          = hoc_s(:school_name)
+          %span.required*
+        %div
+          %input#school-name.form-control{name: "school_name_s", type: "text"}
+        #school-name-error.error-message{style: "display:none;"}
+          = hoc_s(:school_name_error)
 
-    .form-group
-      .checkbox
-        %label
-          %input#hoc-special-event-flag{name: "special_event_flag_b", type: "checkbox", value: "1"}/
-          =hoc_s(:signup_special_event_flag_label)
+      .form-group#organization-name-field{style: "display: none;"}
+        %label.control-label{for: "hoc-organization-name"}
+          = hoc_s(:signup_organization_name_label)
+          %span.required*
+        %div
+          %input#organization-name.form-control{name: "organization_name_s", type: "text"}
+        #organization-name-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_organization_name_error)
 
-    .form-group{style: "display: none;"}
-      %label.control-label{for: "hoc-special-event-details"}= hoc_s(:signup_special_event_details_label)
-      %div
-        %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
+      .form-group#hoc-event-location-field{style: "display: none;"}
+        %label.control-label{for: "hoc-event-location"}
+          = hoc_s(:signup_event_location_label)
+          %span.required*
+        %div
+          %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: "Event location address", style: "height: 4em;"}
+        #event-location-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_event_location_error)
 
-    .form-group
-      .checkbox
-        %label
-          %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
-          =hoc_s(:signup_match_volunteer)
+      .form-group#hoc-entire-school{style: "display: none;"}
+        .checkbox
+          %label
+            %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
+            = hoc_s(:signup_event_entire_school_label)
 
-    %input{name:'hoc_country_s', type:'hidden', value:@country}
-    %input{name:'hoc_company_s', type:'hidden', value:@company}
-    %p.footnote
-      = hoc_s(:signup_multiple_event_warning)
-      %strong= hoc_s(:signup_registration_deadline)
-    .form-group.submit-btn
-      %div
-        %button{type: "submit"}= hoc_s(:signup_submit_label)
+      .form-group
+        .checkbox
+          %label
+            %input#hoc-special-event-flag{name: "special_event_flag_b", type: "checkbox", value: "1"}/
+            = hoc_s(:signup_special_event_flag_label)
+
+      .form-group{style: "display: none;"}
+        %label.control-label{for: "hoc-special-event-details"}
+          = hoc_s(:signup_special_event_details_label)
+        %div
+          %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
+
+      .form-group
+        .checkbox
+          %label
+            %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
+            = hoc_s(:signup_match_volunteer)
+
+    #submit
+      %input{name:'hoc_country_s', type:'hidden', value:@country}
+      %input{name:'hoc_company_s', type:'hidden', value:@company}
+      %p.footnote
+        = hoc_s(:signup_multiple_event_warning)
+        %strong= hoc_s(:signup_registration_deadline)
+      .form-group.submit-btn#submit-btn
+        %div
+          %button{type: "submit"}= hoc_s(:signup_submit_label)
+      .form-group.continue-btn#continue-btn{style: "display: none;"}
+        %div
+          %button.submit-btn#continue{type: "button"}
+            = hoc_s(:signup_submit_and_continue_label)
+
+
+  %form{:id=>"census-form", role: "form", onsubmit: "event.preventDefault();", style: "display: none;"}
+    .main-census-form
+      #census-questions
+        =view :census_questions
+        #submit-census
+          .form-group.submit-btn
+            %div
+              %button{type: "submit"}= hoc_s(:signup_submit_census_label)
 
 :javascript
-  $(document).ready(function() {
-    new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
-
-    $('#hoc-signup-form select').selectize({
-      plugins: ['fast_click']
-    });
-
-    $( "#hoc-signup-form" ).submit(function( event ) {
-      signupFormSubmit();
-    });
-
-    $('#hoc-special-event-flag').change(function() {
-      if($(this).is(':checked')) {
-        $('#hoc-special-event-details').closest('.form-group').slideDown();
-      } else {
-        $('#hoc-special-event-details').closest('.form-group').slideUp();
-      }
-    });
-    $('#hoc-event-type').change(function() {
-      if($(this).val() == 'in_school') {
-        $('#hoc-entire-school-flag').closest('.form-group').show();
-      } else {
-        $('#hoc-entire-school-flag').closest('.form-group').hide();
-      }
-    });
-  });
-
-  function signupFormComplete(data)
-  {
-    window.location = "#{resolve_url('thanks')}";
-  }
-
-  function signupFormError(data)
-  {
-    $('#error_message').html("<p>#{signup_submit_error_message}</p>").show();
-    $("#signup_submit").removeAttr('disabled');
-  }
-
-  function signupFormSubmit()
-  {
-    $("#signup_submit").attr('disabled','disabled');
-
-    $.ajax({
-      url: "/forms/HocSignup#{hoc_year}",
-      type: "post",
-      dataType: "json",
-      data: $("#hoc-signup-form").serialize()
-    }).done(signupFormComplete).fail(signupFormError);
-
-    return false;
-  }
+  var thanksUrl = "#{resolve_url('thanks')}";
+  var signupErrorMessage = "#{signup_submit_error_message}";
+  var censusErrorMessage = "#{signup_submit_census_error_message}";
+  var hocYear = "#{hoc_year}"

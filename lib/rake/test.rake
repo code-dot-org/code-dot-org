@@ -144,7 +144,12 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          pipes = Array.new(procs) {|i| ">(mysql -u#{writer.user} dashboard_test#{i + 1})"}.join(' ')
+          databases = procs.times.map {|i| "dashboard_test#{i + 1}"}
+          databases.each do |db|
+            recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
+            RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql -u#{writer.user}"
+          end
+          pipes = databases.map {|db| ">(mysql -u#{writer.user} #{db})"}.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 
@@ -194,14 +199,34 @@ namespace :test do
 
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
     task :dashboard do
-      run_tests_if_changed('dashboard', ['Gemfile', 'deployment.rb', 'dashboard/**/*', 'lib/**/*', 'shared/**/*'], ignore: ['dashboard/test/ui/**/*']) do
+      run_tests_if_changed(
+        'dashboard',
+        [
+          'Gemfile',
+          'deployment.rb',
+          'dashboard/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*']
+      ) do
         TestRunUtils.run_dashboard_tests
       end
     end
 
     desc 'Runs pegasus tests if pegasus might have changed from staging.'
     task :pegasus do
-      run_tests_if_changed('pegasus', ['Gemfile', 'deployment.rb', 'pegasus/**/*', 'lib/**/*', 'shared/**/*']) do
+      run_tests_if_changed(
+        'pegasus',
+        [
+          'Gemfile',
+          'deployment.rb',
+          'pegasus/**/*',
+          'lib/**/*',
+          'shared/**/*',
+          'dashboard/db/schema.rb'
+        ]
+      ) do
         TestRunUtils.run_pegasus_tests
       end
     end

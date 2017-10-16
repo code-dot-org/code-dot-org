@@ -3,46 +3,51 @@
 # Table name: channel_tokens
 #
 #  id             :integer          not null, primary key
-#  channel        :string(255)      not null
+#  channel        :string(255)
 #  storage_app_id :integer          not null
-#  user_id        :integer          not null
+#  user_id        :integer
 #  level_id       :integer          not null
 #  created_at     :datetime
 #  updated_at     :datetime
-#  storage_id     :integer
+#  storage_id     :integer          not null
 #
 # Indexes
 #
-#  index_channel_tokens_on_storage_app_id        (storage_app_id)
-#  index_channel_tokens_on_storage_id            (storage_id)
-#  index_channel_tokens_on_user_id_and_level_id  (user_id,level_id) UNIQUE
+#  index_channel_tokens_on_storage_app_id           (storage_app_id)
+#  index_channel_tokens_on_storage_id               (storage_id)
+#  index_channel_tokens_on_storage_id_and_level_id  (storage_id,level_id) UNIQUE
+#  index_channel_tokens_on_user_id_and_level_id     (user_id,level_id) UNIQUE
 #
 
 class ChannelToken < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
 
+  def channel
+    storage_encrypt_channel_id(storage_id, storage_app_id)
+  end
+
   # @param [Level] level The level associated with the channel token request.
-  # @param [User] user The user associated with the channel token request.
   # @param [String] ip The IP address making the channel token request.
-  # @param [StorageApps] storage_app The storage app associated with the channel token request.
+  # @param [String] user_storage_id The if of the storage app associated with the channel token request.
   # @param [Hash] data
   # @return [ChannelToken] The channel token (new or existing).
-  def self.find_or_create_channel_token(level, user, ip, storage_app, data = {})
+  def self.find_or_create_channel_token(level, ip, user_storage_id, data = {})
+    storage_app = StorageApps.new(user_storage_id)
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       # your own channel
-      find_or_create_by!(level: level.host_level, user: user) do |ct|
+      find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
         # Get a new channel_id.
-        ct.channel = create_channel ip, storage_app, data: data
-        ct.storage_id, ct.storage_app_id = storage_decrypt_channel_id(ct.channel)
+        channel = create_channel ip, storage_app, data: data
+        _, ct.storage_app_id = storage_decrypt_channel_id(channel)
       end
     end
   end
 
-  def self.find_channel_token(level, user)
-    find_by(level: level.host_level, user: user)
+  def self.find_channel_token(level, user_storage_id)
+    find_by(level: level.host_level, storage_id: user_storage_id)
   end
 
   # Create a new channel.

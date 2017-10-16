@@ -159,6 +159,31 @@ class AdminUsersController < ApplicationController
     redirect_to permissions_form_path(search_term: user_id)
   end
 
+  def bulk_grant_permission
+    permission = params[:bulk_permission]
+    emails = params[:emails]
+    if permission.present? && emails.present?
+      failed_emails = []
+      succeeded_emails = []
+      emails.split.each do |email|
+        user = restricted_users.find_by(email: email)
+        unless user.try(:teacher?)
+          failed_emails.push(email)
+          next
+        end
+        user.permission = permission
+        succeeded_emails.push(email)
+      end
+      unless succeeded_emails.empty?
+        flash[:notice] = "#{permission.titleize} Permission added for #{succeeded_emails.length} User#{succeeded_emails.length == 1 ? '' : 's'}"
+      end
+      unless failed_emails.empty?
+        flash[:alert] = "FAILED: These Users could not be found or are not teachers: #{failed_emails.join(', ')}"
+      end
+      redirect_to permissions_form_path
+    end
+  end
+
   # GET /admin/studio_person
   def studio_person_form
   end

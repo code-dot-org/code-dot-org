@@ -24,7 +24,16 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
         reviews = PeerReview.all.limit(limit)
     end
 
-    reviews = reviews.where(submitter: User.find_by_email(params[:email])) if params[:email].presence
+    if params[:email].presence
+      reviews = reviews.where(submitter: User.find_by_email(params[:email]))
+    end
+
+    if params[:plc_course_unit_id].presence
+      reviews = reviews.where(script: Plc::CourseUnit.find(params[:plc_course_unit_id]).script)
+    elsif params[:plc_course_id].presence
+      reviews = reviews.where(script: Plc::Course.find(params[:plc_course_id]).plc_course_units.map(&:script))
+    end
+
     reviews.distinct! {|review| [review.submitter, review.level]}
 
     reviews.each do |review|
@@ -35,11 +44,12 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
   end
 
   def report_csv
-    enrollments = Plc::UserCourseEnrollment.where(plc_course_id: params[:course_id])
+    course_unit = Plc::CourseUnit.find(params[:plc_course_unit_id])
+    enrollments = Plc::EnrollmentUnitAssignment.where(plc_course_unit: course_unit)
     enrollment_submissions = Hash.new
 
-    scripts = Plc::Course.find(params[:course_id]).plc_course_units.map(&:script)
-    peer_reviewable_levels = ScriptLevel.where(script: scripts).select {|sl| sl.level.try(:peer_reviewable?)}.map(&:level).uniq
+    script = Plc::CourseUnit.find(params[:plc_course_unit_id]).script
+    peer_reviewable_levels = ScriptLevel.where(script: script).select {|sl| sl.level.try(:peer_reviewable?)}.map(&:level).uniq
 
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new
@@ -53,14 +63,16 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
       enrollment_submissions[enrollment.user_id] = {
         name: enrollment.user.name,
+        email: enrollment.user.email,
         submissions: peer_review_submissions,
-        reviews_performed: PeerReview.where(reviewer_id: enrollment.user_id, script: scripts).count
+        reviews_performed: PeerReview.where(reviewer_id: enrollment.user_id, script: script).count
       }
     end
 
     response_body = enrollment_submissions.values.map do |enrollment_submission|
       {}.tap do |row|
         row[:name] = enrollment_submission[:name]
+        row[:email] = enrollment_submission[:email]
 
         peer_reviewable_levels.each do |level|
           if enrollment_submission[:submissions].key? level.name
@@ -77,7 +89,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       end
     end
 
-    send_as_csv_attachment response_body, "#{Plc::Course.find(params[:course_id]).name}_peer_review_report.csv"
+    send_as_csv_attachment response_body, "#{course_unit.name}_peer_review_report.csv"
   end
 
   private

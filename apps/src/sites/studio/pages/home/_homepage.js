@@ -15,6 +15,7 @@ import {
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
 
@@ -165,3 +166,39 @@ function showHomepage() {
     document.getElementById('homepage-container')
   );
 }
+
+window.CleverTakeoverManager = function (options) {
+  this.options = options;
+  const self = this;
+
+  const linkCleverDiv = $('<div>');
+  function showLinkCleverModal(cancel, submit) {
+    $(document.body).append(linkCleverDiv);
+
+    ReactDOM.render(
+      <LinkCleverAccountModal
+        isOpen={true}
+        handleCancel={cancel}
+        handleSubmit={submit}
+      />,
+      linkCleverDiv[0]
+    );
+  }
+
+  if (self.options.cleverLinkFlag) {
+    showLinkCleverModal(onCancelModal, onConfirmLink);
+  }
+
+  function closeLinkCleverModal() {
+    ReactDOM.unmountComponentAtNode(linkCleverDiv[0]);
+  }
+
+  function onCancelModal() {
+    $("#user_user_type").val("student");
+    closeLinkCleverModal();
+  }
+
+  function onConfirmLink() {
+    window.location.href = "/users/clever_takeover?mergeID=" + self.options.userIDToMerge + "&token=" + self.options.mergeAuthToken;
+  }
+};

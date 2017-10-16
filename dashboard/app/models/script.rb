@@ -426,7 +426,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd6'
   end
 
   def k1?
@@ -461,7 +461,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME || name == Script::APPLAB_INTRO
   end
 
   def hint_prompt_enabled?
@@ -480,10 +480,6 @@ class Script < ActiveRecord::Base
     if has_banner?
       "banner_#{name}.jpg"
     end
-  end
-
-  def logo_image
-    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true) rescue nil
   end
 
   def k5_course?
@@ -507,7 +503,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_lesson_pdf?
@@ -654,7 +650,7 @@ class Script < ActiveRecord::Base
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
-      end || ScriptLevel.create(script_level_attributes) do |sl|
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
       # Set/create Stage containing custom ScriptLevel
@@ -692,6 +688,8 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
+      # make sure we have an up to date view
+      stage.reload
       stage.script_levels = script_levels_by_stage[stage.id]
 
       # Go through all the script levels for this stage, except the last one,

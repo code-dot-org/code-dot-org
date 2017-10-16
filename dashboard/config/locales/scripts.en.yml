@@ -3851,8 +3851,7 @@ en:
             Understanding Your User:
               name: Understanding Your User
               description_student: Using user profiles, the class explores how different users might react to a variety of products. Role playing as a different person, each member of the class will get to experience designs through someone else's eyes.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.
+              description_teacher: "Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n"
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -3880,16 +3879,15 @@ en:
             Paper Prototypes:
               name: Paper Prototypes
               description_student: Paper prototypes allow developers to quickly test ideas before investing a lot of time writing code. In this lesson teams explore some example apps created in App Lab, using those apps to help inform the first paper prototypes of their apps.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+              description_teacher: "Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r\n"
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes with other members of the class. With one student role playing the computer, one narrating, and the rest observing, teams will get immediate feedback on their app designs which will inform the next version of their app prototypes.
               description_teacher: The primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.
             Digital Design:
               name: Digital Design
-              description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now moves to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
-              description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin implementing an interactive digital version of their prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital app wireframes. From there, each group member builds out at least one page of their app in App Lab.
+              description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
+              description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.
             Event Driven Programming:
               name: Event Driven Programming
               description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
@@ -3926,6 +3924,22 @@ en:
               name: Project - Paper Prototype
               description_student: Using the interview information from the previous lesson, the class comes up with app ideas to address the needs of their users. To express those ideas, and test out their effectiveness, each student creates and tests paper prototypes of their own.
               description_teacher: Based on the peer interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing "screens" on individual notecards. A project guide directs students through the process including building the app and testing it with their user to see if their assumptions about the user interfaces they created are accurate.
+            Linking Screens:
+              name: Linking Screens
+              description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
+              description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they can then link together using code. Students learn basic event driven programming by building up the model app that they started in the previous lesson. In addition to the screen that students designed yesterday, they'll learn how to create additional screens and even import screens made by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and get feedback on software before writing any code. To help out a developer with their idea, the class tests and provides an app prototype made of paper.
+              description_teacher: Following the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called "Txt Ur Grndkdz". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After "using" the provided prototype students begin to identify ways to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots of feedback for the developer. The class needs to sort through all of this feedback, identify the common themes and needs, and start revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Each team prepares a presentation to "pitch" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.
+              description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: Minecraft Hour of Code Designer
           description_audience: ''
@@ -4561,6 +4575,10 @@ en:
               name: 'Project: Prototype an Innovation'
             Map:
               name: Map
+            Board Events:
+              name: Board Events
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5533,6 +5551,26 @@ en:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Nested Loops:
+              name: Nested Loops
           title: Course E
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
@@ -5880,11 +5918,11 @@ en:
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Loops in Artist (UPDATED)
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -5963,6 +6001,10 @@ en:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
+            Building a Foundation:
+              name: Building a Foundation
+            Nested Loops:
+              name: Nested Loops
           title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -6063,10 +6105,10 @@ en:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
-          title: ''
+          title: CSP Unit 3 - Intro to Programming
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -6127,6 +6169,8 @@ en:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
               name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -6247,9 +6291,11 @@ en:
           stages:
             new stage:
               name: new stage
+            'CSP3A: Using Simple Commands':
+              name: 'CSP3A: Using Simple Commands'
           title: CSP Unit 3 - Subgoals Group A
           description_audience: ''
-          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment
+          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment group A.
           description: This unit introduces the foundational concepts of computer programming, for students in Subgoals Group A.
         new-express:
           stages:
@@ -6327,6 +6373,10 @@ en:
               name: Debugging with Scrat
             Nested Loops:
               name: Nested Loops
+            Loops in Artist (UPDATED!):
+              name: Loops in Artist (UPDATED!)
+            Sarah test stage:
+              name: Sarah test stage
           title: New Express Script
           description_audience: ''
           description_short: ''
@@ -6337,6 +6387,8 @@ en:
               name: Loops in Artist
             Sequences with Scrat:
               name: Sequences with Scrat
+            Testing Template:
+              name: Testing Template
           title: New stages for 9/17
           description_audience: ''
           description_short: ''
@@ -6517,7 +6569,101 @@ en:
               name: assessment sandwiched between app lab levels
             all assessment items clustered in levelgroup as a single "test":
               name: all assessment items clustered in levelgroup as a single "test"
+            dummy:
+              name: dummy
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        hocali:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        colehoc2017:
+          stages:
+            colehoc2017 stage:
+              name: colehoc2017 stage
+          title: 'HoC 17 - Cole '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17-kiki:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Creating Functions
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+          title: CSP 3 New Stuff
+          description_audience: ''
+          description_short: ''
+          description: "Place to stage proposed changes and additions to csp3.\r\n***\r\nNOTE: included the SFLP for each lesson to populate the script - but those are the LIVE SFLPs!!!!!.  If you want to change, make a copy first."

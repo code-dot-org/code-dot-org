@@ -953,6 +953,8 @@
   csp1_name: "第1单元：互联网"
   csp2_name: "第2单元︰ 数字信息"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1452,7 +1454,7 @@
   header_my_dashboard: "我的控制面板"
   header_courses: "课程"
   header_course_catalog: "课程分类"
-  header_project_gallery: "项目集"
+  header_project_gallery: "项目"
   header_sections: "小组"
   header_professional_learning: "专业学习"
   header_educate_overview: "教育工作者概述"

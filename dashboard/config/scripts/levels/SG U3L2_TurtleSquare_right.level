@@ -24,8 +24,12 @@
           ""
         ]
       },
-      "penUp": null,
-      "penDown": null
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      },
+      "comment_Goals_2": {
+        "goal": "Orient turtle"
+      }
     },
     "edit_code": true,
     "embed": "false",
@@ -49,11 +53,11 @@
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "markdown_instructions": "<img src=\"https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png\" align=right> \r\n# Do This:\r\nThis time, draw a 1 x 1 square to the *front and right* of the turtle as efficiently as possible.  Notice that there is no command to turn right! You need to figure out how to draw this by only turning left and moving forward.  The program should stop with turtle in its original position, facing its original direction.\r\n\r\nWhen you're done click the Finish button to move onto the next problem.\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png\" align=right> \r\n# Do This:\r\nThis time, draw a 1 x 1 square to the *front and right* of the turtle as efficiently as possible.  Notice that there is no command to turn right! You need to figure out how to draw this by only turning left and moving forward.  The program should stop with turtle in its original position, facing its original direction.\r\n\r\nYou'll still use only two subgoals to solve this problem, `Move turtle` and `Orient turtle`.\r\n\r\nWhen you're done click the Finish button to move onto the next problem.",
     "encrypted_examples": "JTGC4NuKJO3d9ljHmuPCt5EZcab/W1voSQDCiMJtxVrknThKivTvEYoOdOol\n1G5N\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
@@ -135,11 +139,15 @@
     "expand_debugger": "false",
     "teacher_markdown": "The insight here is that we can turn right by turning left 3 times.",
     "disable_procedure_autopopulate": "false",
+    "start_blocks": "// Move turtle\r\n// Orient turtle\r\n// Move turtle\r\n// Orient turtle\r\n// Move turtle\r\n// Orient turtle\r\n// Move turtle\r\n// Orient turtle",
+    "ideal": "16",
+    "step_speed": "4",
+    "palette_category_at_start": "turtle",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:45:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:51:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:45:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:51:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-02 16:44:16 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-09 20:57:11 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

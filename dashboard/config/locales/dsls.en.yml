@@ -483,6 +483,10 @@ en:
       AppLab Intro 2 - Building a Choose Your Own Adventure: {}
       AppLab Intro 2 - Learn App Lab Video: {}
       AppLab Intro 2 - Welcome: {}
+      AppLab Intro 5 - Video Intro Design Mode: {}
+      AppLab Intro 5 - Video Share Keep Going: {}
+      AppLab Intro 5 - Video Videos Sound: {}
+      AppLab Intro 5 - Video Welcome to App Lab: {}
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
@@ -2011,6 +2015,10 @@ en:
         title: title
       SG v2 U3L09 Student Lesson Introduction:
         Looping and Random Numbers: Looping and Random Numbers
+      SG v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      SG v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Functions and Top-Down Design
       Selecting an Appropriate Visualization for your Data: {}
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
@@ -2055,6 +2063,7 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+      Testing Video Bitly: {}
       The Mental Model for Variables: {}
       The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
@@ -2847,6 +2856,7 @@ en:
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
       csp-pulse-check-survey-preamble: {}
+      csp3_subgoal_mc_levelgroup_preamble: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
       csp_subgoal_labels_consent_intro: {}
@@ -3428,6 +3438,7 @@ en:
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
+        SG csp3_U3_turtle_subgoal_mc_levelgroup: {}
         Sample CSP Assessment: {}
         TeacherCon Self-Assessment: {}
         TeacherCon Unit 1 Assessment: {}
@@ -3459,6 +3470,10 @@ en:
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
+        csp-pulse-check-survey-5-levelgroup-U4Ch1: {}
+        csp-pulse-check-survey-6-levelgroup-U5Ch1: {}
+        csp-pulse-check-survey-7-levelgroup-U5Ch2: {}
+        csp3_U3_turtle_subgoal_mc_levelgroup: {}
         csp_ap_questions: {}
         csp_subgoal_consent_levelgroup: {}
         subgoal_assessments_levelgroup_test: {}
@@ -4936,6 +4951,13 @@ en:
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
+      CSD U6 setProperty predict multi:
+        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;"': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;"'
+        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;"': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;"'
+        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"'
+        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"'
+        Make a Prediction: Make a Prediction
+        When run, what will this app look like?: When run, what will this app look like?
       CSDU4 Screens Predict Multi:
         About: About
         Contact Us: Contact Us
@@ -6256,6 +6278,29 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
+      SG U3L03 - multiselect - properties of functions:
+        'Choose Two: True Statements about Functions': 'Choose Two: True Statements about Functions'
+        Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
+        Functions in programming are named groupings of programming instructions.<br>: Functions in programming are named groupings of programming instructions.<br>
+        Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
+        Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
+        Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
+      SG U3L03 Assessment:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        'Multiple Choice: False Statements about Functions': 'Multiple Choice: False Statements about Functions'
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+        Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
+      SG U3L04 Assessment2:
+        'Multiple Choice: Functions and Top-Down Design': 'Multiple Choice: Functions and Top-Down Design'
+        Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
+        Top-Down Design leads to programs which feature multiple layers of abstraction.: Top-Down Design leads to programs which feature multiple layers of abstraction.
+        Top-Down Design relies upon identifying sub-problems of a larger problem.: Top-Down Design relies upon identifying sub-problems of a larger problem.
+        Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+        Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
+        Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
       SG U3L06 Assessment2:
         A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
         A named memory location.: A named memory location.
@@ -6270,6 +6315,47 @@ en:
         Applied Power Implementation: Applied Power Implementation
         Artificial Parameter Intelligence: Artificial Parameter Intelligence
         'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        Which line of code should be removed to make the program do what it's supposed to?: Which line of code should be removed to make the program do what it's supposed to?
+      SG U3L08 Assessment1:
+        'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
+        'Select the two true statements about functions with parameters:': 'Select the two true statements about functions with parameters:'
+        Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
+      SG csp_U3_subgoal_q4_mc:
+        ? Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        : Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        ? Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        : Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        ? Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        : Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        None of the above: None of the above
+        ? Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        : Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
+      SG csp_U3_turtle_subgoal_q1_mc:
+        <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
+        <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
+        <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
+        <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">: <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">
+      SG csp_U3_turtle_subgoal_q2_mc:
+        <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">: <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">
+        <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
+        <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">: <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">
+        <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">: <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+      SG csp_U3_turtle_subgoal_q3_mc:
+        Adding code to the body of the function: Adding code to the body of the function
+        Giving the function a name: Giving the function a name
+        Giving the parameters a value: Giving the parameters a value
+        Identifying the parameters of the function: Identifying the parameters of the function
+        Which of the following is NOT part of defining a function?: Which of the following is NOT part of defining a function?
       Submittable Multi:
         Submittable Multiple choice: Submittable Multiple choice
         What is your favorite color?: What is your favorite color?
@@ -8957,19 +9043,146 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q1-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q2-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q3-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q4-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q5-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q1-U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q2-U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q3-U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q4-U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-6-q5-U5Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q1-U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q2-U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q3-U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q4-U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-7-q5-U5Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp_U3_subgoal_q4_mc:
-        A.: A.
-        ? A. Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
-        : A. Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
-        B.: B.
-        C.: C.
         ? Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
         : Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
-        D.: D.
-        ? Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
-        : Defining the parameters of a function<br><img src="https://images.code.org/3e5e9f2207d84b494d22e488f69652e1-image-1506463307093.png">
-        E.: E.
-        F.: F.
+        ? Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        : Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
         ? Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
         : Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
         None of the above: None of the above

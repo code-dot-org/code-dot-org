@@ -148,6 +148,9 @@ class ScriptDSL < BaseDSL
         end
         @current_scriptlevel[:properties][:progression] = progression
       end
+      if challenge
+        @current_scriptlevel[:properties][:challenge] = challenge
+      end
     else
       script_level = {
         stage: @stage,
