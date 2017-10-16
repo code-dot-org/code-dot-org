@@ -21,6 +21,7 @@ named_level 'v2 U3L05 Student Lesson Introduction', progression: 'Lesson Vocabul
 
 stage 'Functions and Top-Down Design', flex_category: 'csp3_1'
 named_level 'v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+named_level 'CSP Abstraction in Programming', progression: 'Abstraction in Programming'
 assessment 'U3-AP-Practice-FR-design-process', progression: '(new)AP Practice Response - Design Process'
 
 stage 'APIs and Function Parameters', flex_category: 'csp3_1'
@@ -33,6 +34,7 @@ assessment 'U3-AP-Practice-FR-manage-complexity', progression: '(new)AP Practice
 
 stage 'Looping and Random Numbers', flex_category: 'csp3_1'
 named_level 'v2 U3L09 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+assessment 'U3-AP-Practice-Choose-The-Abstraction', progression: '(new)AP Practice Response - Identify the Abstraction'
 
 stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
 named_level 'v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
