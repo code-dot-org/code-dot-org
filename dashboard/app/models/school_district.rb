@@ -21,17 +21,6 @@ class SchoolDistrict < ActiveRecord::Base
   has_many :regional_partners_school_districts
   has_many :regional_partners, through: :regional_partners_school_districts
 
-  # The listing of all US school districts comes from http://nces.ed.gov/ccd/pubagency.asp
-  # and is then exported into a tab-separated file.
-  # The data format, notably the LEAID, is described at https://nces.ed.gov/ccd/aadd.asp
-  CSV_HEADERS = {
-    id: 'LEAID',
-    name: 'NAME',
-    city: 'LCITY',
-    state: 'LSTATE',
-    zip: 'LZIP'
-  }.freeze
-
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
@@ -46,12 +35,47 @@ class SchoolDistrict < ActiveRecord::Base
 
   def self.first_or_create_from_tsv_row(row_data)
     params = {
-      id: row_data[CSV_HEADERS[:id]],
-      name: row_data[CSV_HEADERS[:name]],
-      city: row_data[CSV_HEADERS[:city]],
-      state: row_data[CSV_HEADERS[:state]],
-      zip: row_data[CSV_HEADERS[:zip]]
+      id: row_data['id'],
+      name: row_data['name'],
+      city: row_data['city'],
+      state: row_data['state'],
+      zip: row_data['zip']
     }
     SchoolDistrict.where(params).first_or_create!
+  end
+
+  # Loads/merges the data from a CSV into the schools table.
+  # @param filename [String] The CSV file name.
+  # @param options [Hash] The CSV file parsing options.
+  # @param parser [Proc] The row parser.
+  def self.merge_from_csv(filename, options, row_parser)
+    CSV.read(filename, options).each do |row|
+      parsed_school = row_parser.call(row)
+      school = SchoolDistrict.find_by_id(parsed_school[:id])
+      if school.nil?
+        SchoolDistrict.new(parsed_school).save!
+      else
+        school.update!(parsed_school)
+      end
+    end
+  end
+
+  # Download the data in the table to a CSV file.
+  # @param filename [String] The CSV file name.
+  # @return [String] The CSV file name.
+  def self.write_to_csv(filename)
+    CSV.open(filename, 'w', CSV_IMPORT_OPTIONS) do |csv|
+      csv << %w(id name city state zip)
+      SchoolDistrict.order(:id).map do |row|
+        csv << [
+          row[:id],
+          row[:name],
+          row[:city],
+          row[:state],
+          row[:zip]
+        ]
+      end
+    end
+    return filename
   end
 end

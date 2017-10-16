@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+puts "Processing 2013-2014 public/charter school districts..."
+tmp_file = AWS::S3.download_to_temp_file('cdo-nces', '2013-2014/ccd/ag131a_supp.txt')
+begin
+  SchoolDistrict.merge_from_csv(tmp_file.path, {col_sep: "\t", headers: true, quote_char: "\x00"},
+    proc do |row|
+      {
+        id:    row['LEAID'].to_i,
+        name:  row['NAME'].upcase,
+        city:  row['LCITY'].to_s.upcase.presence,
+        state: row['LSTATE'].to_s.upcase.presence,
+        zip:   row['LZIP']
+      }
+    end
+  )
+ensure
+  tmp_file.close
+  tmp_file.unlink
+end
+
+puts "Processing 2014-2015 public/charter school districts..."
+tmp_file = AWS::S3.download_to_temp_file('cdo-nces', '2014-2015/ccd/ccd_lea_029_1415_w_0216161ar.txt')
+begin
+  SchoolDistrict.merge_from_csv(tmp_file.path, {col_sep: "\t", headers: true, quote_char: "\x00"},
+    proc do |row|
+      {
+        id:    row['LEAID'].to_i,
+        name:  row['LEA_NAME'].upcase,
+        city:  row['LCITY'].to_s.upcase.presence,
+        state: row['LSTATE'].to_s.upcase.presence,
+        zip:   row['LZIP']
+      }
+    end
+  )
+ensure
+  tmp_file.close
+  tmp_file.unlink
+end
+
+tsv_file = SchoolDistrict.write_to_csv("#{Dir.tmpdir}/school_districts.tsv.#{Time.now.strftime('%Y%m%d%H%M')}")
+puts "Downloaded to: #{tsv_file}"
