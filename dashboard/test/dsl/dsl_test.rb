@@ -5,6 +5,24 @@ class DslTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
+  DEFAULT_PROPS = {
+    id: nil,
+    hidden: true,
+    wrapup_video: nil,
+    login_required: false,
+    professional_learning_course: nil,
+    hideable_stages: false,
+    exclude_csf_column_in_legend: false,
+    student_detail_progress_view: false,
+    peer_reviews_to_complete: nil,
+    teacher_resources: [],
+    stage_extras_available: false,
+    has_verified_resources: false,
+    project_widget_visible: false,
+    project_widget_types: [],
+    script_announcements: nil
+  }
+
   test 'test Script DSL' do
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Stage1'
@@ -17,39 +35,27 @@ class DslTest < ActiveSupport::TestCase
       level 'Level 5'
     DSL
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: 'Stage1',
-          scriptlevels: [
-            {stage: 'Stage1', levels: [{name: 'Level 1'}]},
-            {stage: 'Stage1', levels: [{name: 'Level 2'}]},
-            {stage: 'Stage1', levels: [{name: 'Level 3'}]}
-          ]
-        },
-        {
-          stage: 'Stage2',
-          scriptlevels: [
-            {stage: 'Stage2', levels: [{name: 'Level 4'}]},
-            {stage: 'Stage2', levels: [{name: 'Level 5'}]}
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      professional_learning_course: nil,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: 'Stage1',
+            scriptlevels: [
+              {stage: 'Stage1', levels: [{name: 'Level 1'}]},
+              {stage: 'Stage1', levels: [{name: 'Level 2'}]},
+              {stage: 'Stage1', levels: [{name: 'Level 3'}]}
+            ]
+          },
+          {
+            stage: 'Stage2',
+            scriptlevels: [
+              {stage: 'Stage2', levels: [{name: 'Level 4'}]},
+              {stage: 'Stage2', levels: [{name: 'Level 5'}]}
+            ]
+          }
+        ],
+      }
+    )
 
     i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stages' => {
       'Stage1' => {'name' => 'Stage1'},
@@ -69,38 +75,26 @@ level 'Level 2b', active: false
 endvariants
 level 'Level 3'
 "
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: "Stage1",
-          scriptlevels: [
-            {stage: "Stage1", levels: [{name: "Level 1"}]},
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-              properties: {
-                variants: {"Level 2b" => {active: false}}
-              }
-            },
-            {stage: "Stage1", levels: [{name: "Level 3"}]}
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {
+                stage: "Stage1",
+                levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+                properties: {
+                  variants: {"Level 2b" => {active: false}}
+                }
+              },
+              {stage: "Stage1", levels: [{name: "Level 3"}]}
+            ]
+          }
+        ]
+      }
+    )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -123,54 +117,42 @@ variants
   level 'Level 4b', experiments: ['experiment3', 'experiment4']
 endvariants
 "
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: "Stage1",
-          scriptlevels: [
-            {stage: "Stage1", levels: [{name: "Level 1"}]},
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-              properties: {
-                variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
-              }
-            },
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 3a"}, {name: "Level 3b"}],
-              properties: {
-                variants: {
-                  "Level 3a" => {active: false},
-                  "Level 3b" => {experiments: ["experiment2"]}
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {
+                stage: "Stage1",
+                levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+                properties: {
+                  variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
                 }
-              }
-            },
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 4a"}, {name: "Level 4b"}],
-              properties: {
-                variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
-              }
-            },
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+              },
+              {
+                stage: "Stage1",
+                levels: [{name: "Level 3a"}, {name: "Level 3b"}],
+                properties: {
+                  variants: {
+                    "Level 3a" => {active: false},
+                    "Level 3b" => {experiments: ["experiment2"]}
+                  }
+                }
+              },
+              {
+                stage: "Stage1",
+                levels: [{name: "Level 4a"}, {name: "Level 4b"}],
+                properties: {
+                  variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
+                }
+              },
+            ]
+          }
+        ]
+      }
+    )
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
   end
@@ -304,42 +286,30 @@ level 'Level 2'
 stage 'Stage3'
 level 'Level 3'
 DSL
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: "Stage1",
-          scriptlevels: [
-            {stage: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content"}]},
-          ]
-        },
-        {
-          stage: "Stage2",
-          scriptlevels: [
-            {stage: "Stage2", levels: [{name: "Level 2", stage_flex_category: "Practice"}]},
-          ]
-        },
-        {
-          stage: "Stage3",
-          scriptlevels: [
-            {stage: "Stage3", levels: [{name: "Level 3"}]},
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content"}]},
+            ]
+          },
+          {
+            stage: "Stage2",
+            scriptlevels: [
+              {stage: "Stage2", levels: [{name: "Level 2", stage_flex_category: "Practice"}]},
+            ]
+          },
+          {
+            stage: "Stage3",
+            scriptlevels: [
+              {stage: "Stage3", levels: [{name: "Level 3"}]},
+            ]
+          }
+        ]
+      }
+    )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -354,36 +324,24 @@ level 'Level 1'
 stage 'Stage2'
 level 'Level 2'
 DSL
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: "Stage1",
-          scriptlevels: [
-            {stage: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content", stage_lockable: true}]},
-          ]
-        },
-        {
-          stage: "Stage2",
-          scriptlevels: [
-            {stage: "Stage2", levels: [{name: "Level 2"}]},
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content", stage_lockable: true}]},
+            ]
+          },
+          {
+            stage: "Stage2",
+            scriptlevels: [
+              {stage: "Stage2", levels: [{name: "Level 2"}]},
+            ]
+          }
+        ]
+      }
+    )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -452,6 +410,17 @@ DSL
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], output[:teacher_resources]
   end
 
+  test 'can set script_announcements' do
+    input_dsl = <<DSL
+script_announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
+
+stage 'Stage1'
+level 'Level 1'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:script_announcements]
+  end
+
   test 'Script DSL with level progressions' do
     input_dsl = <<DSL
 stage 'Stage1'
@@ -459,32 +428,20 @@ level 'Level 1'
 level 'Level 2', progression: 'Foo'
 level 'Level 3', progression: 'Foo'
 DSL
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: "Stage1",
-          scriptlevels: [
-            {stage: "Stage1", levels: [{name: "Level 1"}]},
-            {stage: "Stage1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
-            {stage: "Stage1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
+              {stage: "Stage1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
+            ]
+          }
+        ]
+      }
+    )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -500,39 +457,27 @@ level 'Level 2b', active: false, progression: 'Foo'
 endvariants
 level 'Level 3'
 "
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: "Stage1",
-          scriptlevels: [
-            {stage: "Stage1", levels: [{name: "Level 1"}]},
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-              properties: {
-                variants: {"Level 2b" => {active: false}},
-                progression: 'Foo'
-              }
-            },
-            {stage: "Stage1", levels: [{name: "Level 3"}]}
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {
+                stage: "Stage1",
+                levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+                properties: {
+                  variants: {"Level 2b" => {active: false}},
+                  progression: 'Foo'
+                }
+              },
+              {stage: "Stage1", levels: [{name: "Level 3"}]}
+            ]
+          }
+        ]
+      }
+    )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
@@ -565,44 +510,32 @@ variants
   level 'Level 5.1', active: false
 endvariants
 DSL
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: "Stage1",
-          scriptlevels: [
-            {stage: "Stage1", levels: [{name: "Level 1"}]},
-            {stage: "Stage1", levels: [{name: "Level 2"}]},
-            {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
-            {stage: "Stage1", levels: [{name: "Level 4"}], properties: {target: true}},
-            {
-              stage: "Stage1",
-              levels: [
-                {name: "Level 5"},
-                {name: "Level 5.1"},
-              ],
-              properties: {
-                variants: {"Level 5.1" => {active: false}},
-                challenge: true,
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2"}]},
+              {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
+              {stage: "Stage1", levels: [{name: "Level 4"}], properties: {target: true}},
+              {
+                stage: "Stage1",
+                levels: [
+                  {name: "Level 5"},
+                  {name: "Level 5.1"},
+                ],
+                properties: {
+                  variants: {"Level 5.1" => {active: false}},
+                  challenge: true,
+                },
               },
-            },
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      hideable_stages: false,
-      exclude_csf_column_in_legend: false,
-      student_detail_progress_view: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil,
-      teacher_resources: [],
-      stage_extras_available: false,
-      has_verified_resources: false,
-      project_widget_visible: false,
-      project_widget_types: [],
-    }
+            ]
+          }
+        ]
+      }
+    )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
