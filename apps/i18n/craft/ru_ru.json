@@ -286,5 +286,6 @@
   "weather": "погода",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "дождь",
-  "weatherTypeThunder": "гром"
+  "weatherTypeThunder": "гром",
+  "runAgent": "Run Agent"
 }

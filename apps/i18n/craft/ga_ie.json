@@ -286,5 +286,6 @@
   "weather": "aimsir",
   "weatherTypeClear": "glan",
   "weatherTypeRain": "báisteach",
-  "weatherTypeThunder": "toirneach"
+  "weatherTypeThunder": "toirneach",
+  "runAgent": "Run Agent"
 }

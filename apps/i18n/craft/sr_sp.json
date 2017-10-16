@@ -286,5 +286,6 @@
   "weather": "време",
   "weatherTypeClear": "ведро",
   "weatherTypeRain": "киша",
-  "weatherTypeThunder": "грмљавина"
+  "weatherTypeThunder": "грмљавина",
+  "runAgent": "Run Agent"
 }

@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Verberge Aktivitäten für andere Sprachen als die ausgewählte",
   "noTutorialsYourLanguage": "Es sind keine passenden Aktivitäten in ihrer Sprache vorhanden. Klicken Sie auf den untenstehenden Knopf, um Aktivitäten in anderen Sprachen zu Versuchen.",
   "bottomGuidelinesLink": "Hier klicken um die Anmeldebedingungen und Anleitungen für den 'Hour of Code' Tutorials einzusehen.",
-  "bottomSpecialNeedsLink": "Hier klicken für mehr Informationen, wie Sie Schüler mit geistigen oder körperlichen Beeinträchtigungen unterstützen können."
+  "bottomSpecialNeedsLink": "Hier klicken für mehr Informationen, wie Sie Schüler mit geistigen oder körperlichen Beeinträchtigungen unterstützen können.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

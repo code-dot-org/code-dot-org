@@ -151,6 +151,7 @@ $(document).ready(function () {
 function showCensusForm(data) {
   $('.main-form').hide();
   $('#signup-header').hide();
+  $('#join-us-header').hide();
   $('#submit').hide();
   // Copy all of the hoc-signup inputs to the census form
   $('.main-form :input').each(
@@ -167,6 +168,7 @@ function showCensusForm(data) {
     }
   );
   $('#census-header').show();
+  $('#thanks-header').show();
   $('#census-form').show();
 }
 

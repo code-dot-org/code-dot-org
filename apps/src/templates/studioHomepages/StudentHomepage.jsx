@@ -6,7 +6,8 @@ import StudentSections from './StudentSections';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
+import $ from 'jquery';
 
 const StudentHomepage = React.createClass({
   propTypes: {

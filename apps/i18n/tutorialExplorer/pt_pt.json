@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Esconder atividades para vários idiomas",
   "noTutorialsYourLanguage": "Não existem actividades no seu idioma. Tente atividades noutros idiomas, clicando no botão abaixo.",
   "bottomGuidelinesLink": "Clique aqui para ver os nossos critérios e orientações de submissão para tutoriais da Hora do Código.",
-  "bottomSpecialNeedsLink": "Clique aqui para obter mais informações sobre apoio a estudantes com necessidades especiais."
+  "bottomSpecialNeedsLink": "Clique aqui para obter mais informações sobre apoio a estudantes com necessidades especiais.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

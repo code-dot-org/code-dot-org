@@ -22,7 +22,7 @@ social:
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 ---
-
+%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -facebook = {:u=>"http://#{request.host}/us"}
@@ -202,7 +202,8 @@ social:
 
   %a#hocsignupform{name: 'signup'}
   #join
-    %h1=hoc_s(:front_join_us_button)
+    %h1#join-us-header=hoc_s(:front_join_us_button)
+    %h1#thanks-header{style: "display:none;"}=hoc_s(:census_thanks)
     %div
       .row
         -# During Hour of Code season, show signup form and announcements.

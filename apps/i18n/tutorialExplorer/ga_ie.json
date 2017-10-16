@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Folaigh gníomhaíochtaí i dteangacha éagsúla",
   "noTutorialsYourLanguage": "Níl aon ghníomhaíochtaí ar fáil i do theanga. Cliceáil an cnaipe thíos chun teacht ar ghníomhaíochtaí i dteangacha eile.",
   "bottomGuidelinesLink": "Cliceáil anseo chun na critéir agus treoirlínte a bhaineann le cúrsaí teagaisc don Uair Chódála a léamh.",
-  "bottomSpecialNeedsLink": "Cliceáil anseo chun tuilleadh eolais a fháil maidir le daltaí faoi riachtanais speisialta."
+  "bottomSpecialNeedsLink": "Cliceáil anseo chun tuilleadh eolais a fháil maidir le daltaí faoi riachtanais speisialta.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }
