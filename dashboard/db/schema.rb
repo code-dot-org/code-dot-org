@@ -849,7 +849,7 @@ ActiveRecord::Schema.define(version: 20171015185425) do
     t.string   "school_type",                   null: false
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
-    t.string   "address_line1",      limit: 50
+    t.string   "address_line1",      limit: 50,              comment: "Location address, street 1"
     t.string   "address_line2",      limit: 30,              comment: "Location address, street 2"
     t.string   "address_line3",      limit: 30,              comment: "Location address, street 3"
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
