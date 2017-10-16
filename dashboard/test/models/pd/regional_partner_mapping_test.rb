@@ -14,8 +14,6 @@ class Pd::RegionalPartnerMappingTest < ActiveSupport::TestCase
   end
 
   test 'either zip code or state must be present but not both' do
-    mapping = create :pd_regional_partner_mapping
-
     # 1st column - zip_code
     # 2nd column - state
     # 3rd column - validity of model based on combination of zip_code and state
@@ -29,7 +27,7 @@ class Pd::RegionalPartnerMappingTest < ActiveSupport::TestCase
       ['98101', '', true]
     ]
     zip_code_state_combinations.each do |zip_code, state, valid|
-      mapping.assign_attributes(zip_code: zip_code, state: state)
+      mapping = build :pd_regional_partner_mapping, zip_code: zip_code, state: state
       assert_equal mapping.valid?, valid
     end
   end
