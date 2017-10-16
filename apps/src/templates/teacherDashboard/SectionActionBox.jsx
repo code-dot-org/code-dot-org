@@ -13,6 +13,9 @@ import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
 import {pegasus} from "../../lib/util/urlHelpers";
 import {Popover, OverlayTrigger} from 'react-bootstrap';
 import * as utils from '../../utils';
+import BaseDialog from '../BaseDialog';
+import Button from '../Button';
+import DialogFooter from "./DialogFooter";
 
 
 const styles = {
@@ -88,7 +91,8 @@ class SectionActionBox extends Component {
   };
 
   state = {
-    selected : false,
+    selected: false,
+    deleting: false,
   };
 
   onConfirmDelete = () => {
@@ -126,6 +130,10 @@ class SectionActionBox extends Component {
         utils.reload();
       });
   };
+
+  onRequestDelete = () => {
+    this.setState({deleting: true});
+  }
 
   render() {
     return (
@@ -187,12 +195,36 @@ class SectionActionBox extends Component {
                   </div>
                 </a>
                 {this.props.sectionData.studentCount === 0 && (
-                  <a>
-                    <div style={styles.archiveDelete} onClick={this.onConfirmDelete}>
-                      <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-                      {i18n.deleteSection()}
-                    </div>
-                  </a>
+                  <div>
+                    <a>
+                      <div style={styles.archiveDelete} onClick={this.onRequestDelete}>
+                        <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+                        {i18n.deleteSection()}
+                      </div>
+                    </a>
+                    <BaseDialog
+                      useUpdatedStyles
+                      uncloseable
+                      isOpen = {this.state.deleting}
+                      assetUrl={() => ''}
+                      style={{padding:20}}
+                    >
+                      <h2>{i18n.deleteSection()}</h2>
+                      <div>{i18n.deleteSectionConfirm()}</div>
+                      <br/>
+                      <div>{i18n.deleteSectionHideSuggestion()}</div>
+                      <DialogFooter>
+                        <Button
+                          text={i18n.dialogCancel()}
+                          onClick={() => {this.setState({deleting: false});}}
+                        />
+                        <Button
+                          text={i18n.delete()}
+                          onClick={this.onConfirmDelete}
+                        />
+                      </DialogFooter>
+                    </BaseDialog>
+                  </div>
                 )}
               </div>
             </Popover>
