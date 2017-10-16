@@ -1,75 +1,96 @@
 import React from 'react';
 import SectionActionBox from './SectionActionBox';
+import { combineReducers, createStore } from 'redux';
+import teacherSections, { setSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import { Provider } from 'react-redux';
 
 const sectionDataHidden = {
-    id: "1",
-    name: 'NAME',
-    loginType: "email",
-    studentCount: 0,
-    code: "RGRBJT",
-    grade: "12",
-    providerManaged: false,
-    hidden: true,
-    assignmentNames: ["Course A"],
-    assignmentPath: ["/s/coursea"],
+  id: "1",
+  name: 'NAME',
+  loginType: "email",
+  studentCount: 0,
+  code: "RGRBJT",
+  grade: "12",
+  providerManaged: false,
+  hidden: true,
+  assignmentNames: ["Course A"],
+  assignmentPath: ["/s/coursea"],
 };
 
 const sectionDataShown = {
-    id: "1",
-    name: 'NAME',
-    loginType: "email",
-    studentCount: 0,
-    code: "RGRBJT",
-    grade: "12",
-    providerManaged: false,
-    hidden: false,
-    assignmentNames: ["Course A"],
-    assignmentPath: ["/s/coursea"],
+  id: "1",
+  name: 'NAME',
+  loginType: "email",
+  studentCount: 0,
+  code: "RGRBJT",
+  grade: "12",
+  providerManaged: false,
+  hidden: false,
+  assignmentNames: ["Course A"],
+  assignmentPath: ["/s/coursea"],
 };
 
 const sectionDataNotEmpty = {
-    id: "1",
-    name: 'NAME',
-    loginType: "email",
-    studentCount: 3,
-    code: "RGRBJT",
-    grade: "12",
-    providerManaged: false,
-    hidden: false,
-    assignmentNames: ["Course A"],
-    assignmentPath: ["/s/coursea"],
+  id: "1",
+  name: 'NAME',
+  loginType: "email",
+  studentCount: 3,
+  code: "RGRBJT",
+  grade: "12",
+  providerManaged: false,
+  hidden: false,
+  assignmentNames: ["Course A"],
+  assignmentPath: ["/s/coursea"],
 };
 
 export default storybook => {
-    storybook
-        .storiesOf('SectionActionBox', module)
-        .addStoryTable([
-            {
-                name: 'Hidden Section',
-                description: 'Should have "Show Section" option',
-                story: () => (
-                    <SectionActionBox
-                      sectionData = {sectionDataHidden}
-                    />
-                )
-            },
-            {
-                name: 'Shown Section',
-                description: 'Should have "Show Section" option',
-                story: () => (
-                    <SectionActionBox
-                      sectionData = {sectionDataShown}
-                    />
-                )
-            },
-            {
-                name: 'Not-Empty Class',
-                description: 'studentCount > 0, show "Archive Section" option',
-                story: () => (
-                    <SectionActionBox
-                      sectionData = {sectionDataNotEmpty}
-                    />
-                )
-            },
-        ]);
+  storybook
+    .storiesOf('SectionActionBox', module)
+    .addStoryTable([
+      {
+        name: 'Hidden Section',
+        description: 'Should have "Show Section" option',
+        story: () => {
+          const store = createStore(combineReducers({teacherSections}));
+          store.dispatch(setSections([sectionDataHidden]));
+          return (
+            <Provider store={store}>
+              <SectionActionBox
+                sectionData = {sectionDataHidden}
+              />
+            </Provider>
+          );
+        }
+      },
+      {
+        name: 'Shown Section',
+        description: 'Should have "Show Section" option',
+        story: () => {
+          const store = createStore(combineReducers({teacherSections}));
+          store.dispatch(setSections([sectionDataShown]));
+          return (
+            <Provider store={store}>
+              <SectionActionBox
+                sectionData={sectionDataShown}
+              />
+            </Provider>
+          );
+        }
+      },
+      {
+        name: 'Not-Empty Class',
+        description: 'studentCount > 0, show "Archive Section" option',
+        story: () => {
+          const store = createStore(combineReducers({teacherSections}));
+          store.dispatch(setSections([sectionDataNotEmpty]));
+          return (
+            <Provider store={store}>
+              <SectionActionBox
+                sectionData={sectionDataNotEmpty}
+              />
+            </Provider>
+          );
+        }
+      },
+    ]);
 };
