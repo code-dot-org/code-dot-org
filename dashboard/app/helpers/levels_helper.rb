@@ -241,7 +241,7 @@ module LevelsHelper
 
     if current_user
       if @script
-        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+        section = current_user.sections_as_student.detect {|s| s.script_id == @script.id} ||
           current_user.sections_as_student.first
       else
         section = current_user.sections_as_student.first
