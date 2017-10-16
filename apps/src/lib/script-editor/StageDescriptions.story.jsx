@@ -30,20 +30,20 @@ const importedDescriptions = [
 /**
  * Hack that gives us a ref to a child so that we can modify it's state;
  */
-const ModifyState = React.createClass({
-  propTypes: {
+class ModifyState extends React.Component {
+  static propTypes = {
     children: PropTypes.element,
-  },
+  };
 
   componentDidMount() {
     this.refs.child.setState(this.props);
-  },
+  }
 
   render() {
     const child = this.props.children;
     return <child.type ref="child" {...child.props}/>;
   }
-});
+}
 
 export default storybook => {
   storybook
