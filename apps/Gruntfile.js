@@ -516,7 +516,7 @@ describe('entry tests', () => {
     'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
 
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-    'hourofcode.com/views/signup_form': './src/sites/hourofcode.com/pages/views/signup_form.js'
+    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js'
   };
 
   // Create a config for each of our bundles
