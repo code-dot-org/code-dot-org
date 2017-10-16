@@ -779,8 +779,12 @@ class User < ActiveRecord::Base
   end
 
   def user_progress_by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
-    user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
+    ul_map = user_levels_by_level(stage.script)
+    stage.script_levels.map(&:level_ids).flatten.map do |level_id|
+      ul_map[level_id]
+    end.compact.map do |ul|
+      [ul.level_id, ul.best_result]
+    end.to_h
   end
 
   def user_level_for(script_level, level)
