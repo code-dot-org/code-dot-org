@@ -6,6 +6,30 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
+  test "script level show" do
+    student = create :student
+    sign_in student
+
+    script = Script.get_from_cache('allthethings')
+    stage = script.stages.first
+    level = stage.script_levels.first.levels.first
+
+    create :user_level,
+      user: student,
+      script: script,
+      level: level,
+      level_source: create(:level_source, level: level)
+
+    assert_cached_queries(22) do
+      get script_stage_script_level_path(
+        script_id: script.name,
+        stage_position: 1,
+        id: 1
+      )
+      assert_response :success
+    end
+  end
+
   test "user progress" do
     student = create :student
     sign_in student
