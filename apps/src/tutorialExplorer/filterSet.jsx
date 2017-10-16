@@ -5,15 +5,21 @@ import React, {PropTypes} from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
 import FilterGroupOrgNames from './filterGroupOrgNames';
+import FilterGroupSortBy from './filterGroupSortBy';
+import { TutorialsSortBy } from './util';
 
 const FilterSet = React.createClass({
   propTypes: {
     uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    filterGroups: PropTypes.array.isRequired,
-    onUserInput: PropTypes.func.isRequired,
-    onUserInputOrgName: PropTypes.func.isRequired,
-    selection: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     orgName: PropTypes.string,
+    showSortDropdown: PropTypes.bool.isRequired,
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
+    sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
+    filterGroups: PropTypes.array.isRequired,
+    selection: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    onUserInputFilter: PropTypes.func.isRequired,
+    onUserInputOrgName: PropTypes.func.isRequired,
+    onUserInputSortBy: PropTypes.func.isRequired,
     roboticsButtonUrl: PropTypes.string
   },
 
@@ -26,13 +32,22 @@ const FilterSet = React.createClass({
           onUserInput={this.props.onUserInputOrgName}
         />
 
+        {this.props.showSortDropdown && (
+          <FilterGroupSortBy
+            showSortDropdown={this.props.showSortDropdown}
+            defaultSortBy={this.props.defaultSortBy}
+            sortBy={this.props.sortBy}
+            onUserInput={this.props.onUserInputSortBy}
+          />
+        )}
+
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup
               name={item.name}
               text={item.text}
               filterEntries={item.entries}
-              onUserInput={this.props.onUserInput}
+              onUserInput={this.props.onUserInputFilter}
               selection={this.props.selection[item.name]}
               key={item.name}
             />
