@@ -5,7 +5,7 @@
 import React, {PropTypes} from 'react';
 import BackButton from './backButton';
 import { Sticky } from 'react-sticky';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   header: {
@@ -48,23 +48,24 @@ const styles = {
   }
 };
 
-const FilterHeader = React.createClass({
-  propTypes: {
+
+export default class FilterHeader extends React.Component {
+  static propTypes = {
     backButton: PropTypes.bool,
     filteredTutorialsCount: PropTypes.number.isRequired,
     mobileLayout: PropTypes.bool.isRequired,
     showingModalFilters: PropTypes.bool.isRequired,
     showModalFilters: PropTypes.func.isRequired,
-    hideModalFilters: PropTypes.func.isRequired,
-  },
+    hideModalFilters: PropTypes.func.isRequired
+  };
 
   shouldShowOpenFiltersButton() {
     return this.props.mobileLayout && !this.props.showingModalFilters;
-  },
+  }
 
   shouldShowCloseFiltersButton() {
     return this.props.mobileLayout && this.props.showingModalFilters;
-  },
+  }
 
   render() {
     const tutorialCount = this.props.filteredTutorialsCount;
@@ -135,6 +136,4 @@ const FilterHeader = React.createClass({
       </div>
     );
   }
-});
-
-export default FilterHeader;
+}

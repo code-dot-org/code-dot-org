@@ -20,10 +20,18 @@
           "minArgs": 1
         }
       },
-      "penUp": null,
-      "penDown": null,
-      "penWidth": null,
-      "penColor": null,
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      },
+      "comment_Goals_2": {
+        "goal": "Orient turtle"
+      },
+      "comment_Goals_3": {
+        "goal": "Define function"
+      },
+      "comment_Goals_4": {
+        "goal": "Call function"
+      },
       "functionParams_none": null,
       "callMyFunction": null,
       "comment": null
@@ -50,10 +58,10 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Documentation\r\nAs we move forward you are going to see more and more (and more!) commands added to the toolbox.  What happens if you see a command and don't understand it, or you forget how it works?  Don't worry, this happens to professional programmers all the time! No one actually memorizes long lists of commands.  Most programming environments have ways to quickly look up documentation about the commands of the language you're using.  **Good news: App Lab has documentation too!**\r\n\r\n![](https://images.code.org/3fe10e1b65edb37306099098161be001-image-1441990727053.gif)\r\n\r\nWhen you **hover your mouse over a command** in the block palette a bubble pops up with a quick reminder of what a function does, and what its parameters are. If you click \"See examples\", you will be taken to more detailed documentation of the command which includes **code examples** that you can even copy and paste.\r\n",
+    "markdown_instructions": "# Documentation\r\nAs we move forward you are going to see more and more (and more!) commands added to the toolbox.  What happens if you see a command and don't understand it, or you forget how it works?  Don't worry, this happens to professional programmers all the time! No one actually memorizes long lists of commands.  Most programming environments have ways to quickly look up documentation about the commands of the language you're using.  **Good news: App Lab has documentation too!**\r\n\r\n![](https://images.code.org/3fe10e1b65edb37306099098161be001-image-1441990727053.gif)\r\n\r\nWhen you **hover your mouse over a non-subgoal command** in the block palette a bubble pops up with a quick reminder of what a function does, and what its parameters are. If you click \"See examples\", you will be taken to more detailed documentation of the command which includes **code examples** that you can even copy and paste.",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -103,7 +111,7 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "**Documentation:** Students are shown where to find documentation about new commands so they can learn how to use them.\r\n\r\n",
+    "teacher_markdown": "**Documentation:** Students are shown where to find documentation about new commands so they can learn how to use them.\r\n\r\nThe **subgoal** blocks do not have documentation as they are implemented only as a type of comment block.\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -113,7 +121,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:28:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-09 15:45:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:28:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-09 15:45:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 13:22:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
