@@ -182,7 +182,6 @@ export default class FormController extends React.Component {
           errorHeader: "Something went wrong on our end; please try again later."
         });
       }
-    }).always(() => {
       this.setState({
         submitting: false
       });
@@ -269,7 +268,9 @@ export default class FormController extends React.Component {
    * @returns {String[]}
    */
   getRequiredFields() {
-    return this.props.requiredFields;
+    const requiredFields = [...this.props.requiredFields];
+    this.getPageComponents().forEach(page => requiredFields.push(...page.getDynamicallyRequiredFields(this.state.data)));
+    return requiredFields;
   }
 
   /**
@@ -336,6 +337,7 @@ export default class FormController extends React.Component {
   shouldShowSubmit() {
     return this.state.currentPage === this.getPageComponents().length - 1;
   }
+  static submitButtonText = "Submit";
 
   /**
    * @returns {Element}
@@ -370,7 +372,7 @@ export default class FormController extends React.Component {
           key="submit"
           type="submit"
         >
-          Submit
+          {this.constructor.submitButtonText}
         </Button>
       );
     }

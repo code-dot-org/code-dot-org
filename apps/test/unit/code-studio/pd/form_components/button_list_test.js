@@ -153,9 +153,9 @@ describe("ButtonList", () => {
     expect(otherCheckbox).to.containMatchingElement(
       <Checkbox>
         <div>
-          <span>Other: </span>
+          <span>Other:</span>
           &nbsp;
-          <input type="text" id="favoritePet_other" maxLength="1000" />
+          <input type="text" id="favoritePet_other" maxLength="200" />
         </div>
       </Checkbox>
     );
@@ -197,9 +197,9 @@ describe("ButtonList", () => {
           </Checkbox>
           <Checkbox value="Specific dog breed" label="Specific dog breed" name="favoritePet">
             <div>
-              <span>Specific dog breed</span>
+              <span>Specific dog breed:</span>
               &nbsp;
-              <input type="text" id="dog-breed-input" maxLength="1000" />
+              <input type="text" id="dog-breed-input" maxLength="200" />
             </div>
           </Checkbox>
         </FormGroup>
@@ -214,7 +214,6 @@ describe("ButtonList", () => {
       dogBreedInput.simulate("change", {target: {value: "all dogs"}});
 
       expect(onDogBreedInputChange).to.have.been.calledOnce;
-      console.log(onDogBreedInputChange.args);
       expect(onDogBreedInputChange).to.have.been.calledWith("all dogs");
     });
   });
