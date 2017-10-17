@@ -4,7 +4,6 @@
 
 import React, {PropTypes} from 'react';
 import BackButton from './backButton';
-import { TutorialsSortBy } from './util';
 import { Sticky } from 'react-sticky';
 import i18n from '@cdo/tutorialExplorer/locale';
 
@@ -49,18 +48,15 @@ const styles = {
   }
 };
 
+
 export default class FilterHeader extends React.Component {
   static propTypes = {
-    onUserInput: PropTypes.func.isRequired,
-    sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
     backButton: PropTypes.bool,
     filteredTutorialsCount: PropTypes.number.isRequired,
     mobileLayout: PropTypes.bool.isRequired,
     showingModalFilters: PropTypes.bool.isRequired,
     showModalFilters: PropTypes.func.isRequired,
-    hideModalFilters: PropTypes.func.isRequired,
-    showSortDropdown: PropTypes.bool.isRequired,
-    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
+    hideModalFilters: PropTypes.func.isRequired
   };
 
   shouldShowOpenFiltersButton() {
@@ -71,39 +67,11 @@ export default class FilterHeader extends React.Component {
     return this.props.mobileLayout && this.props.showingModalFilters;
   }
 
-  shouldShowSortDropdown() {
-    return this.props.showSortDropdown &&
-      !(this.props.mobileLayout && this.props.showingModalFilters);
-  }
-
-  handleChangeSort = (event) => {
-    this.props.onUserInput(
-      event.target.value
-    );
-  };
-
   render() {
     const tutorialCount = this.props.filteredTutorialsCount;
     const tutorialCountString = tutorialCount === 1 ?
       i18n.filterHeaderTutorialCountSingle() :
       i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
-
-    // Show the default sort criteria first.  That way, when the dropdown that
-    // shows "Sort" is opened to show the two possible options, the default
-    // will be first and will get the checkmark that seems to be always shown
-    // next to the first option.
-    let sortOptions;
-    if (this.props.defaultSortBy === TutorialsSortBy.popularityrank) {
-      sortOptions = [
-        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()},
-        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()}
-      ];
-    } else {
-      sortOptions = [
-        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()},
-        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()}
-      ];
-    }
 
     return (
       <div style={styles.header}>
@@ -134,19 +102,6 @@ export default class FilterHeader extends React.Component {
 
               &nbsp;
               &nbsp;
-
-              {this.shouldShowSortDropdown() && (
-                <select
-                  value={this.props.sortBy}
-                  onChange={this.handleChangeSort}
-                  style={styles.select}
-                  className="noFocusButton"
-                >
-                  <option disabled hidden value="default">{i18n.filterHeaderDefault()}</option>
-                  <option value={sortOptions[0].value}>{sortOptions[0].text}</option>
-                  <option value={sortOptions[1].value}>{sortOptions[1].text}</option>
-                </select>
-              )}
 
               {this.shouldShowOpenFiltersButton() && (
                 <span>
