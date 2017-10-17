@@ -197,7 +197,7 @@ describe("ButtonList", () => {
           </Checkbox>
           <Checkbox value="Specific dog breed" label="Specific dog breed" name="favoritePet">
             <div>
-              <span>Specific dog breed:</span>
+              <span>Specific dog breed</span>
               &nbsp;
               <input type="text" id="dog-breed-input" maxLength="200" />
             </div>
