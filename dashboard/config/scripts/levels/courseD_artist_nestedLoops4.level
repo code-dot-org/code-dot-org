@@ -38,8 +38,8 @@
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "permitted_errors": "0"
+    "permitted_errors": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

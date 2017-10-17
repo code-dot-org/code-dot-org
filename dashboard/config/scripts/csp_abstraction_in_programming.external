@@ -9,8 +9,11 @@ markdown <<MARKDOWN
 
 (2) For the AP Create Performance Task you need to...
 
-	"[identify] a code segment that contains an abstraction you developed...[and]...explain how the abstraction helped manage the complexity of your program."
-    
+<div style="width: 70%; margin: auto; background-color: #EEEEEE; font-family: serif; font-size: 12pt; padding: 10px">
+[identify] a code segment that contains an abstraction you developed...[and]...explain how the abstraction helped manage the complexity of your program.
+</div>
+<br>
+
 This unit is largely about:
 
 * teaching you to use abstraction as a problem solving technique
@@ -19,19 +22,33 @@ This unit is largely about:
 
 ## What does *abstraction* mean when it comes to computer science?
 
-**Computer science deals with lots of complex systems.** These complex systems have lots and lots of tiny details that can quickly grow overwhelming making things hard for humans to manage and keep track of.  For a complex system like the Internet, it is simply not possible to see and understand every detail all at once.
+**Computer science deals with lots of complex systems.** 
 
-**It's about compartmentalization.** The human brain needs ways to compartmentalize ideas so you can focus on problems at a higher level. Everyone uses abstraction on a daily basis to effectively manage complexity. 
+These complex systems have lots and lots of tiny details that can quickly grow overwhelming making things hard for humans to manage and keep track of.  For a complex system like the Internet, it is simply not possible to see and understand every detail all at once.
 
-**For an everyday example, think about driving a car.** You don't need to know all of the complex things that happen when you push the gas pedal. All you need to know is that pushing the pedal makes the car go forward. This frees up you brain to focus on other problems like steering correctly so you don't crash.  In some cars you have to manually shift the gears to get the car to operate efficiently, while cars with an automatic transmission "abstract away" the problem of shifting gears.
+**It's about compartmentalization.** 
 
-**Abstraction in computer programming is also about compartmentalization.** Abstraction is a central problem-solving technique for managing the complexity of your own program code. When you write a computer program, even a  small one, there are lots of tiny details that start to accumulate and it can grow overwhelming. The technique of abstraction means identifying portions of your problem that can be compartmentalized so that you can solve that small part allowing you to put those details out of mind to focus on something bigger.
+The human brain needs ways to compartmentalize ideas so you can focus on problems at a higher level. Everyone uses abstraction on a daily basis to effectively manage complexity. 
 
-**Typically, abstraction means compartmentalizing solutions to coding problems in functions or procedures.** From this lesson you have learned how to write a function to encapsulate a solution to a turtle drawing problem.  By writing a function called `drawTriangle()` you have compartmentalized the code necessary to complete that task. If you've tested that function and it works, you don't need to worry about it anymore.  You can move on to thinking about a program that requires multiple triangles or other shapes.
+**For an everyday example, think about driving a car.** 
 
-**Finally, here it is in a nutshell:** Abstractions simplify the representation of something more complex. They allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+You don't need to know all of the complex things that happen when you push the gas pedal. All you need to know is that pushing the pedal makes the car go forward. This frees up you brain to focus on other problems like steering correctly so you don't crash.  In some cars you have to manually shift the gears to get the car to operate efficiently, while cars with an automatic transmission "abstract away" the problem of shifting gears.
 
+**Abstraction in computer programming is also about managing complexity.** 
 
+Abstraction is a central problem-solving technique for managing the complexity of your own program code. When you write a computer program, even a small one, there are lots of tiny details that start to accumulate and it can grow overwhelming. The technique of abstraction means identifying portions of your problem that can be compartmentalized so that you can solve one small part allowing you to put those details out of mind to focus on something bigger.
+
+<img src="https://images.code.org/d872c6ecd8cf6eefeab3c2a293f93246-image-1508249463002.png" style="float: right; width: 150px">
+
+**Typically, abstraction means compartmentalizing solutions to coding problems in functions or procedures.** 
+
+From this lesson you have learned how to write a function to encapsulate a solution to a turtle drawing problem. By writing a functions called `drawRectangle()`, for example, you have compartmentalized the code necessary to complete that task. If you've tested that function and it works, you don't need to worry about it anymore.  You can move on to thinking about a program that requires multiple rectangles or other shapes. You have only seen a small simple example so far, but the idea is quite powerful.
+
+**Finally, here it is in a nutshell:** 
+
+Abstractions simplify the representation of something more complex. They allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+
+## Next: we'll practice using abstraction to write a more complicated program
 
 
 MARKDOWN
