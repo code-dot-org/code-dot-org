@@ -124,6 +124,7 @@ class Script < ActiveRecord::Base
     teacher_resources
     stage_extras_available
     has_verified_resources
+    script_announcements
   )
 
   def self.twenty_hour_script
@@ -426,7 +427,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd6'
   end
 
   def k1?
@@ -876,7 +877,8 @@ class Script < ActiveRecord::Base
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
-      has_verified_resources: has_verified_resources?
+      has_verified_resources: has_verified_resources?,
+      script_announcements: script_announcements,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -940,7 +942,8 @@ class Script < ActiveRecord::Base
       project_widget_types: script_data[:project_widget_types],
       teacher_resources: script_data[:teacher_resources],
       stage_extras_available: script_data[:stage_extras_available] || false,
-      has_verified_resources: !!script_data[:has_verified_resources]
+      has_verified_resources: !!script_data[:has_verified_resources],
+      script_announcements: script_data[:script_announcements],
     }.compact
   end
 

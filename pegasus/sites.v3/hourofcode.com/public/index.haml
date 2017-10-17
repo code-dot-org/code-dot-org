@@ -35,6 +35,9 @@ social:
 
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{type: "text/javascript", src: asset_path('js/hourofcode.com/public/index.js')}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 

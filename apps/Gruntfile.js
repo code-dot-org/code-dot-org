@@ -515,7 +515,8 @@ describe('entry tests', () => {
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
 
-    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js'
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js'
   };
 
   // Create a config for each of our bundles

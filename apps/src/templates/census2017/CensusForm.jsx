@@ -42,11 +42,11 @@ class CensusForm extends Component {
     }
   };
 
-  handleChange = (propertyName, event) => {
+  handleChange = (field, event) => {
     this.setState({
       submission: {
         ...this.state.submission,
-        [propertyName]: event.target.value
+        [field]: event.target.value
       }
     }, this.checkShowFollowUp);
   }
@@ -56,15 +56,6 @@ class CensusForm extends Component {
       submission: {
         ...this.state.submission,
         [field]: event ? event.value : ''
-      }
-    });
-  }
-
-  handleNoSchoolFoundChange = (field, event) => {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        [field]: event
       }
     });
   }
@@ -267,7 +258,7 @@ class CensusForm extends Component {
           )}
           {US && this.state.submission.nces === "-1" && (
             <SchoolNotFound
-              setField={this.handleNoSchoolFoundChange}
+              onChange={this.handleChange}
               schoolName={submission.schoolName}
               schoolType={submission.schoolType}
               schoolCity={submission.schoolCity}

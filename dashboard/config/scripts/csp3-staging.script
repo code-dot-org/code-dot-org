@@ -25,6 +25,7 @@ assessment 'U3-AP-Practice-FR-design-process', progression: '(new)AP Practice Re
 
 stage 'APIs and Function Parameters', flex_category: 'csp3_1'
 named_level 'v2 U3L07 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+assessment 'U3-AP-Practice-FR-score-abstraction-response', progression: '(new)AP Practice Response - Score a student response'
 
 stage 'Creating functions with Parameters', flex_category: 'csp3_1'
 named_level 'v2 U3L08 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

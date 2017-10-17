@@ -4,7 +4,7 @@
 import React, {PropTypes} from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import { TutorialsSortBy } from './util';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   select: {
@@ -14,18 +14,18 @@ const styles = {
   }
 };
 
-const FilterGroupSortBy = React.createClass({
-  propTypes: {
+export default class FilterGroupSortBy extends React.Component {
+  static propTypes = {
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
     sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
     onUserInput: PropTypes.func.isRequired
-  },
+  };
 
-  handleChangeSort(event) {
+  handleChangeSort = (event) => {
     this.props.onUserInput(
       event.target.value
     );
-  },
+  };
 
   render() {
     // Show the default sort criteria first.  That way, when the dropdown that
@@ -59,6 +59,5 @@ const FilterGroupSortBy = React.createClass({
       </FilterGroupContainer>
     );
   }
-});
+}
 
-export default FilterGroupSortBy;

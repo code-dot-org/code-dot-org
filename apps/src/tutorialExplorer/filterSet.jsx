@@ -8,8 +8,8 @@ import FilterGroupOrgNames from './filterGroupOrgNames';
 import FilterGroupSortBy from './filterGroupSortBy';
 import { TutorialsSortBy } from './util';
 
-const FilterSet = React.createClass({
-  propTypes: {
+export default class FilterSet extends React.Component {
+  static propTypes = {
     uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     orgName: PropTypes.string,
     showSortDropdown: PropTypes.bool.isRequired,
@@ -21,7 +21,7 @@ const FilterSet = React.createClass({
     onUserInputOrgName: PropTypes.func.isRequired,
     onUserInputSortBy: PropTypes.func.isRequired,
     roboticsButtonUrl: PropTypes.string
-  },
+  };
 
   render() {
     return (
@@ -61,6 +61,4 @@ const FilterSet = React.createClass({
       </div>
     );
   }
-});
-
-export default FilterSet;
+}
