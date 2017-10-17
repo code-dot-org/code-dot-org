@@ -92,7 +92,7 @@ const blockConversions = Object.freeze({
         <title name="DIR">down</title>
         <value name="SLOTNUM">
           <block type="math_number">
-            <title name="NUM">0</title>
+            <title name="NUM">1</title>
           </block>
         </value>
         ${next ? serialize(next) : ''}
