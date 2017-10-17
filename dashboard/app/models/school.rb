@@ -36,7 +36,7 @@ class School < ActiveRecord::Base
 
   def self.find_or_create_all_from_tsv(filename)
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      School.where(row.to_hash).first_or_create!
+      School.where(row.to_hash.symbolize_keys).first_or_create!
     end
   end
 

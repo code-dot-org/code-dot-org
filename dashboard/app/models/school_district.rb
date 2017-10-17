@@ -28,7 +28,7 @@ class SchoolDistrict < ActiveRecord::Base
   def self.find_or_create_all_from_tsv(filename)
     created = []
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      created << SchoolDistrict.where(row.to_hash).first_or_create!
+      created << SchoolDistrict.where(row.to_hash.symbolize_keys).first_or_create!
     end
     created
   end
