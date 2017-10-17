@@ -1002,6 +1002,8 @@
   csp1_name: "第 1 章: インターネット"
   csp2_name: "第 2 章: デジタル情報"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1502,7 +1504,7 @@
   header_my_dashboard: "マイ ダッシュボード"
   header_courses: "コース"
   header_course_catalog: "コース カタログ"
-  header_project_gallery: "プロジェクト ギャラリー"
+  header_project_gallery: "プロジェクト"
   header_sections: "セクション"
   header_professional_learning: "専門的な学習"
   header_educate_overview: "教育の概要"
@@ -1595,5 +1597,3 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'

@@ -216,11 +216,17 @@ class ApiController < ApplicationController
         paired = (paired_user_level_ids & user_levels_ids).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
-        {
-          class: level_class,
-          title: title,
-          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id)
-        }
+        # We use a list rather than a hash here to save ourselves from sending
+        # the field names over the wire (which adds up to a lot of bytes when
+        # multiplied across all the levels)
+        [
+          level_class,
+          title,
+          # we use to build a path that included section_id/user_id. We now let
+          # the client adds these params itself, thus saving ourselves many bytes
+          # over the wire again
+          build_script_level_path(script_level)
+        ]
       end
       {id: student.id, levels: student_levels}
     end
@@ -262,7 +268,7 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Script.get_from_cache(params[:script_name])
+    script = Script.get_from_cache(params[:script])
     render json: script.summarize
   end
 
@@ -276,10 +282,10 @@ class ApiController < ApplicationController
     end
   end
 
-  # Return a JSON summary of the user's progress for params[:script_name].
+  # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     if current_user
-      script = Script.get_from_cache(params[:script_name])
+      script = Script.get_from_cache(params[:script])
       user = params[:user_id] ? User.find(params[:user_id]) : current_user
       render json: summarize_user_progress(script, user)
     else
@@ -295,7 +301,7 @@ class ApiController < ApplicationController
   def user_progress_for_stage
     response = user_summary(current_user)
 
-    script = Script.get_from_cache(params[:script_name])
+    script = Script.get_from_cache(params[:script])
     stage = script.stages[params[:stage_position].to_i - 1]
     script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level

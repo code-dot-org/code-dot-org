@@ -135,8 +135,8 @@ Check out one-hour, teacher-led lesson and activity plans designed for different
     </p>
     <p>Curriculum</p>
     <ul>
-        <li>Covers K-12 CS Framework Concepts</li>
-        <li>Covers K-12 CS Framework Practices</li>
+        <li>Includes K-12 CS Framework Concepts</li>
+        <li>Includes K-12 CS Framework Practices</li>
         <li>Emphasizes active and authentic learning experiences</li>
         <li>Offers resources or suggestions to address equity issues</li>
         <li>Provides opportunities for social and/or cultural relevance</li>

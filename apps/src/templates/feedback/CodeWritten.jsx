@@ -10,6 +10,7 @@ const styles = {
     fontWeight: 'normal',
     outline: 'none',
     padding: 5,
+    display: 'list-item',
   },
   challengeLineCounts: {
     fontSize: 16,
@@ -24,14 +25,13 @@ const styles = {
   },
 };
 
-export default Radium(React.createClass({
-
-  propTypes: {
+export default Radium(class CodeWritten extends React.Component {
+  static propTypes = {
     numLinesWritten: PropTypes.number.isRequired,
     totalNumLinesWritten: PropTypes.number.isRequired,
     children: PropTypes.node,
     useChallengeStyles: PropTypes.bool,
-  },
+  };
 
   render() {
     const lines = (
@@ -81,4 +81,4 @@ export default Radium(React.createClass({
       </div>
     );
   }
-}));
+});

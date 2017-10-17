@@ -1,10 +1,16 @@
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 import * as utils from '../utils';
 
 
 // Sorting for tutorials.
 export const TutorialsSortBy = utils.makeEnum('default', 'popularityrank', 'displayweight');
 
+// Orgname value.
+export const TutorialsOrgName = utils.makeEnum('all');
+
+// "do-not-show" string used in the source data as both a tag and in place of an
+// organization name.
+export const DoNotShow = "do-not-show";
 
 /**
  * For a comma-separated string of tags, generate a comma-separated string of their friendly

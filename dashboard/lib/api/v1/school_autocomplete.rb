@@ -12,21 +12,39 @@ class Api::V1::SchoolAutocomplete
   # @param limit [int] the maximum number of results to return
   # @return [Array] an array of JSON formatted schools
   def get_matches(query, limit)
+    query = query.strip
     return [] if query.length < MIN_QUERY_LENGTH
-    schools = School.
-      where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", to_search_string(query)).
-      limit(limit)
+
+    schools = School.limit(limit)
+    if search_by_zip?(query)
+      schools = schools.where("zip LIKE ?", "#{query[0, 5]}%")
+    else
+      search_string = to_search_string(query)
+      schools = schools.
+        where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", search_string).
+        order("MATCH(name,city) AGAINST('#{search_string}' IN BOOLEAN MODE) DESC, state, city, name")
+    end
+
     results = schools.map do |school|
       Serializer.new(school).attributes
     end
+
     return results
+  end
+
+  # Determines if we should perform a search by ZIP code rather than by school
+  # name or city.
+  # @param query [String] the user-define query string
+  # @return [boolean] true if it might be a ZIP, false otherwise
+  def search_by_zip?(query)
+    return !!(query =~ /^(\d{,5}|(\d{5}-\d{,4}))$/)
   end
 
   # Formats the query string for boolean full-text search.
   # For instance, if the user-defined query string is 'abc def',
   # the string is reformatted to '+ABC +DEF*'.
   # @see https://dev.mysql.com/doc/refman/5.6/en/fulltext-boolean.html
-  # @param query [String] the user-defined query string.
+  # @param query [String] the user-defined query string
   # @return [String] the formatted query string
   def to_search_string(query)
     words = query.strip.split(/\s+/).map do |w|

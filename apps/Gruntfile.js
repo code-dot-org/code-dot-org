@@ -494,6 +494,7 @@ describe('entry tests', () => {
     'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
+    'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
@@ -514,7 +515,8 @@ describe('entry tests', () => {
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
 
-    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js'
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js'
   };
 
   // Create a config for each of our bundles
@@ -532,7 +534,7 @@ describe('entry tests', () => {
           otherEntries
         ),
         function (val) {
-          return ['./src/util/idempotent-babel-polyfill'].concat(val);
+          return ['./src/util/idempotent-babel-polyfill', 'whatwg-fetch'].concat(val);
         }
       ),
       externals: [
