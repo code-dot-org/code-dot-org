@@ -1,3 +1,10 @@
+# Preload translations (before application fork, after i18n_railtie initializer)
+Dashboard::Application.config.after_initialize do |_|
+  unless ENV['SKIP_I18N_INIT']
+    I18n.t 'cancel' # i18n key found in dashboard (and not pegasus) locale
+  end
+end
+
 # Patch the I18n FileUpdateChecker to only load changed i18n files when updated.
 Dashboard::Application.config.after_initialize do |app|
   app.reloaders.each do |reloader|
