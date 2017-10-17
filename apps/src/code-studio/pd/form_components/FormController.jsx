@@ -269,8 +269,8 @@ export default class FormController extends React.Component {
    */
   getRequiredFields() {
     const requiredFields = [...this.props.requiredFields];
-    this.getPageComponents().forEach(page => requiredFields.push(...page.getDynamicallyRequiredFields(this.state.data)));
-    return requiredFields;
+    const pageRequiredFields = this.getPageComponents().map(page => page.getDynamicallyRequiredFields(this.state.data));
+    return pageRequiredFields.reduce((flattened, subArray) => flattened.concat(subArray), requiredFields);
   }
 
   /**

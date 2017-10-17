@@ -103,7 +103,7 @@ const ButtonList = React.createClass({
           {typeof answer === "object" ?
             <div>
               <span style={styles.inputLabel}>
-                {answerText}{answerText.endsWith(":") ? "" : ":"}
+                {answerText}
               </span>
               &nbsp;
               <input
