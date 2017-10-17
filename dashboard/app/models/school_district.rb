@@ -26,11 +26,9 @@ class SchoolDistrict < ActiveRecord::Base
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
   def self.find_or_create_all_from_tsv(filename)
-    created = []
-    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      created << SchoolDistrict.where(row.to_hash).first_or_create!
+    SchoolDistrict.merge_from_csv(filename) do |row|
+      row.to_hash.symbolize_keys
     end
-    created
   end
 
   # Loads/merges the data from a CSV into the schools table.
