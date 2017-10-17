@@ -262,15 +262,25 @@ export default class Craft {
             dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
 
             const phaserGame = document.getElementById('phaser-game');
+            const hammerToButton = {
+              [Hammer.DIRECTION_LEFT]: 'leftButton',
+              [Hammer.DIRECTION_RIGHT]: 'rightButton',
+              [Hammer.DIRECTION_UP]: 'upButton',
+              [Hammer.DIRECTION_DOWN]: 'downButton',
+            };
+
             const onDrag = function (e) {
-              const hammerToButton = {
-                [Hammer.DIRECTION_LEFT]: 'leftButton',
-                [Hammer.DIRECTION_RIGHT]: 'rightButton',
-                [Hammer.DIRECTION_UP]: 'upButton',
-                [Hammer.DIRECTION_DOWN]: 'downButton',
-              };
               if (hammerToButton[e.direction]) {
                 Craft.gameController.codeOrgAPI.arrowDown(
+                  directionToFacing[hammerToButton[e.direction]],
+                );
+              }
+              e.preventDefault();
+            };
+
+            const onDragEnd = function (e) {
+              if (hammerToButton[e.direction]) {
+                Craft.gameController.codeOrgAPI.arrowUp(
                   directionToFacing[hammerToButton[e.direction]],
                 );
               }
@@ -282,6 +292,7 @@ export default class Craft {
             mc.add(new Hammer.Press({ time: 150 }));
             mc.add(new Hammer.Tap());
             mc.on('pan', onDrag);
+            mc.on('panend pancancel', onDragEnd);
             mc.on('press', () =>
               Craft.gameController.codeOrgAPI.clickDown(() => {}),
             );
