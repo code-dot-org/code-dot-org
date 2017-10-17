@@ -59,7 +59,7 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    const sortBy = TutorialsSortBy.default;
+    const sortBy = this.props.defaultSortBy;
     const orgName = TutorialsOrgName.all;
     const filteredTutorials = this.filterTutorialSet(filters, sortBy, orgName);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();

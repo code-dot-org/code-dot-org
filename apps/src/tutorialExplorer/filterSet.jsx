@@ -34,7 +34,6 @@ export default class FilterSet extends React.Component {
 
         {this.props.showSortDropdown && (
           <FilterGroupSortBy
-            showSortDropdown={this.props.showSortDropdown}
             defaultSortBy={this.props.defaultSortBy}
             sortBy={this.props.sortBy}
             onUserInput={this.props.onUserInputSortBy}
