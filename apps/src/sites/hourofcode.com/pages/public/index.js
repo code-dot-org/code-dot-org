@@ -24,7 +24,7 @@ function renderSchoolDropdown() {
   );
 }
 
-function schoolDropdownOnChange(event) {
+function schoolDropdownOnChange(field, event) {
   const val = (event ? event.value : '');
 
   schoolData.nces = val;
