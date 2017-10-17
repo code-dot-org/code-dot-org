@@ -36,7 +36,6 @@ const ScriptEditor = React.createClass({
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
     loginRequired: PropTypes.bool,
-    age13Required: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
     professionalLearningCourse: PropTypes.bool,
@@ -63,13 +62,6 @@ const ScriptEditor = React.createClass({
       if (!confirm("WARNING: adding or removing video keys will also affect " +
           "uses of this level in other scripts. Are you sure you want to " +
           "continue?")) {
-        e.preventDefault();
-      }
-    }
-
-    if (this.loginRequired.checked && this.age13Plus.checked) {
-      if (!confirm('Turning on "age 13+ required" will have no effect as long as '+
-          '"login required" is still on. Are you sure you want to continue?')) {
         e.preventDefault();
       }
     }
@@ -140,30 +132,13 @@ const ScriptEditor = React.createClass({
         <label>
           Login Required
           <input
-            ref={element => this.loginRequired = element}
             name="login_required"
             type="checkbox"
             defaultChecked={this.props.loginRequired}
             style={styles.checkbox}
           />
           <p>
-            Require users to log in before viewing this script. This or 13+ should be
-            enabled on scripts that contain App Lab or Game Lab levels.
-          </p>
-        </label>
-        <label>
-          13+ Required
-          <input
-            ref={element => this.age13Plus = element}
-            name="age_13_required"
-            type="checkbox"
-            defaultChecked={this.props.age13Required}
-            style={styles.checkbox}
-          />
-          <p>
-            If login is not required, still requires that users be at least 13+,
-            prompting them to provide their age. This or login_required should be
-            enabled on scripts that contain App Lab or Game Lab levels.
+            Require users to log in before viewing this script.
           </p>
         </label>
         <label>

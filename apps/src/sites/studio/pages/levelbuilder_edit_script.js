@@ -47,7 +47,6 @@ export default function initPage(scriptEditorData) {
         i18nData={scriptEditorData.i18n}
         hidden={scriptData.hidden}
         loginRequired={scriptData.loginRequired}
-        age13Required={scriptData.age_13_required}
         hideableStages={scriptData.hideable_stages}
         studentDetailProgressView={scriptData.student_detail_progress_view}
         professionalLearningCourse={scriptData.professionalLearningCourse}

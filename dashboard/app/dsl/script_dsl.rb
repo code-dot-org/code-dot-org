@@ -20,7 +20,6 @@ class ScriptDSL < BaseDSL
     @stage_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
-    @age_13_required = false
     @project_widget_types = []
     @wrapup_video = nil
     @script_announcements = nil
@@ -38,7 +37,6 @@ class ScriptDSL < BaseDSL
   boolean :stage_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
-  boolean :age_13_required
 
   string :wrapup_video
   string :script_announcements
@@ -77,7 +75,6 @@ class ScriptDSL < BaseDSL
       teacher_resources: @teacher_resources,
       stage_extras_available: @stage_extras_available,
       has_verified_resources: @has_verified_resources,
-      age_13_required: @age_13_required,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
       script_announcements: @script_announcements,
@@ -225,7 +222,6 @@ class ScriptDSL < BaseDSL
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'stage_extras_available true' if script.stage_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
-    s << 'age_13_required true' if script.age_13_required
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements

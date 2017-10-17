@@ -217,22 +217,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
-  test 'forbid applab and gamelab levels in public scripts' do
-    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
-      Script.add_script(
-        {name: 'test script', hidden: false},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-      )
-    end
-
-    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
-      Script.add_script(
-        {name: 'test script', hidden: false},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-      )
-    end
-  end
-
   test 'allow applab and gamelab levels in hidden scripts' do
     Script.add_script(
       {name: 'test script', hidden: true},
@@ -745,5 +729,26 @@ class ScriptTest < ActiveSupport::TestCase
     Course.stubs(:should_cache?).returns true
     script = Script.get_from_cache(@script_in_course.name)
     assert_equal "/courses/#{@course.name}", script.course_link
+  end
+
+  test "logged_out_age_13_required?" do
+    script = create :script, login_required: false
+    level = create :applab
+    stage = create :stage, script: script
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    # return true when we have an applab level
+    assert_equal true, script.logged_out_age_13_required?
+
+    # returns false is login_required is true
+    script.login_required = true
+    assert_equal false, script.logged_out_age_13_required?
+
+    # returns false if we don't have any applab/gamelab/weblab levels
+    script = create :script, login_required: false
+    level = create :maze
+    stage = create :stage, script: script
+    create :script_level, script: script, stage: stage, levels: [level]
+    assert_equal false, script.logged_out_age_13_required?
   end
 end
