@@ -10,21 +10,30 @@ import React, {PropTypes} from 'react';
 export default class ExampleDialogButton extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    closeCallbacks: PropTypes.arrayOf(PropTypes.string),
+  };
+
+  static defaultProps = {
+    closeCallbacks: ['handleClose'],
   };
 
   state = {open: false};
+  open = () => this.setState({open: true});
+  close = () => this.setState({open: false});
 
   render() {
+    const closeCallbacks = {};
+    this.props.closeCallbacks.forEach(name => closeCallbacks[name] = this.close);
     return (
       <div>
         {React.cloneElement(
           this.props.children,
           {
             isOpen: this.state.open,
-            handleClose: () => this.setState({open: false})
+            ...closeCallbacks,
           }
         )}
-        <button onClick={() => this.setState({open: true})}>
+        <button onClick={this.open}>
           Open the example dialog
         </button>
       </div>
