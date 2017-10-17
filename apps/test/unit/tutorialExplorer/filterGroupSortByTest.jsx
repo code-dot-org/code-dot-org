@@ -24,10 +24,10 @@ describe('FilterGroupSortBy', () => {
     expect(wrapper).to.containMatchingElement(
       <select>
         <option value="displayweight">
-          {i18n.filterHeaderDisplayWeight()}
+          {i18n.filterSortByDisplayWeight()}
         </option>
         <option value="popularityrank">
-          {i18n.filterHeaderPopularityRank()}
+          {i18n.filterSortByPopularityRank()}
         </option>
       </select>
     );

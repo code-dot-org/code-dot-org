@@ -35,13 +35,13 @@ export default class FilterGroupSortBy extends React.Component {
     let sortOptions;
     if (this.props.defaultSortBy === TutorialsSortBy.popularityrank) {
       sortOptions = [
-        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()},
-        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()}
+        {value: "popularityrank", text: i18n.filterSortByPopularityRank()},
+        {value: "displayweight", text: i18n.filterSortByDisplayWeight()}
       ];
     } else {
       sortOptions = [
-        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()},
-        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()}
+        {value: "displayweight", text: i18n.filterSortByDisplayWeight()},
+        {value: "popularityrank", text: i18n.filterSortByPopularityRank()}
       ];
     }
 
