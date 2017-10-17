@@ -812,9 +812,7 @@ en:
       CSDU6 Innovation: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
-      CSP Abstraction in Programming:
-        description here: description here
-        title: title
+      CSP Abstraction in Programming: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -3286,6 +3284,8 @@ en:
         wrapup: wrapup
       subgoal v2 U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      swipeRightPassThrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
       test cb level:
         description here: description here
         test cb level: test cb level
@@ -4960,6 +4960,7 @@ en:
         '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"'
         '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"'
         Make a Prediction: Make a Prediction
+        Read the code and predict what this app will look like when run.: Read the code and predict what this app will look like when run.
         When run, what will this app look like?: When run, what will this app look like?
       CSDU4 Screens Predict Multi:
         About: About
