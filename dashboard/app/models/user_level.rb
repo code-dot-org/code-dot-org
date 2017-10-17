@@ -116,6 +116,13 @@ class UserLevel < ActiveRecord::Base
     submitted? && !readonly_answers? || has_autolocked?(stage)
   end
 
+  # First ScriptLevel in this Script containing this Level.
+  # Cached equivalent to `level.script_levels.where(script_id: script.id).first`.
+  def script_level
+    s = Script.get_from_cache(script_id)
+    s.script_levels.detect {|sl| sl.level_ids.include? level_id}
+  end
+
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
     user_level = UserLevel.find_or_initialize_by(
       user_id: user_id,
