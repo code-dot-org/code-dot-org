@@ -11,7 +11,7 @@ import {sectionCode,
         importOrUpdateRoster} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
 import {pegasus} from "../../lib/util/urlHelpers";
-import {Popover, OverlayTrigger} from 'react-bootstrap';
+import {Popover} from 'react-bootstrap';
 import * as utils from '../../utils';
 import BaseDialog from '../BaseDialog';
 import Button from '../Button';
@@ -54,26 +54,6 @@ const styles = {
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
   },
-  actionButton:{
-    border: '1px solid ' + color.white,
-    paddingLeft: 5,
-    paddingRight: 5,
-    paddingTop: 4,
-    paddingBottom: 4,
-    borderRadius: 5,
-    color: color.lighter_gray,
-    margin: 3
-  },
-  hoverFocus: {
-    backgroundColor: color.lighter_gray,
-    border: '1px solid ' + color.light_gray,
-    borderRadius: 5,
-    paddingTop: 4,
-    paddingBottom: 4,
-    paddingLeft: 5,
-    paddingRight: 5,
-    color: color.white,
-  },
 };
 
 class SectionActionBox extends Component {
@@ -91,7 +71,6 @@ class SectionActionBox extends Component {
   };
 
   state = {
-    selected: false,
     deleting: false,
   };
 
@@ -137,103 +116,89 @@ class SectionActionBox extends Component {
 
   render() {
     return (
-      <OverlayTrigger
-        trigger="click"
-        rootClose
-        placement="bottom"
-        onEnter={() => this.setState({selected : true})}
-        onExiting={() => this.setState({selected : false})}
-        overlay=
-          {(
-            <Popover id="action-options">
-              <div style={styles.actionBox}>
-                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)}>
-                  <div style={styles.actionText}>
-                    {i18n.sectionViewProgress()}
-                  </div>
-                </a>
-                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + "/manage")}>
-                  <div style={styles.actionText}>
-                    {i18n.manageStudents()}
-                  </div>
-                </a>
-                <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
-                  <div style={styles.actionText}>
-                    {i18n.printLoginCards()}
-                  </div>
-                </a>
-                <a>
-                  <div style={styles.actionTextBreak} onClick={this.onClickEdit}>
-                    {i18n.editSectionDetails()}
-                  </div>
-                </a>
-                <a>
-                  <div style={styles.actionText}>
-                    <PrintCertificates
-                      sectionId={this.props.sectionData.id}
-                      assignmentName={this.props.sectionData.assignmentNames[0]}
-                    />
-                  </div>
-                </a>
-                {this.props.sectionData.loginType === OAuthSectionTypes.clever &&
-                  <a>
-                    <div style={styles.actionText} onClick={this.onClickSync}>
-                      {i18n.syncClever()}
-                    </div>
-                  </a>
-                }
-                {this.props.sectionData.loginType === OAuthSectionTypes.google_classroom &&
-                  <a>
-                    <div style={styles.actionText} onClick={this.onClickSync}>
-                      {i18n.syncGoogleClassroom()}
-                    </div>
-                  </a>
-                }
-                <a>
-                  <div style={styles.actionText} onClick={this.onClickHideShow}>
-                    {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
-                  </div>
-                </a>
-                {this.props.sectionData.studentCount === 0 && (
-                  <div>
-                    <a>
-                      <div style={styles.archiveDelete} onClick={this.onRequestDelete}>
-                        <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-                        {i18n.deleteSection()}
-                      </div>
-                    </a>
-                    <BaseDialog
-                      useUpdatedStyles
-                      uncloseable
-                      isOpen = {this.state.deleting}
-                      assetUrl={() => ''}
-                      style={{padding:20}}
-                    >
-                      <h2>{i18n.deleteSection()}</h2>
-                      <div>{i18n.deleteSectionConfirm()}</div>
-                      <br/>
-                      <div>{i18n.deleteSectionHideSuggestion()}</div>
-                      <DialogFooter>
-                        <Button
-                          text={i18n.dialogCancel()}
-                          onClick={() => {this.setState({deleting: false});}}
-                        />
-                        <Button
-                          text={i18n.delete()}
-                          onClick={this.onConfirmDelete}
-                        />
-                      </DialogFooter>
-                    </BaseDialog>
-                  </div>
-                )}
+      <Popover id="action-options" {...this.props}>
+        <div style={styles.actionBox}>
+          <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)}>
+            <div style={styles.actionText}>
+              {i18n.sectionViewProgress()}
+            </div>
+          </a>
+          <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + "/manage")}>
+            <div style={styles.actionText}>
+              {i18n.manageStudents()}
+            </div>
+          </a>
+          <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
+            <div style={styles.actionText}>
+              {i18n.printLoginCards()}
+            </div>
+          </a>
+          <a>
+            <div style={styles.actionTextBreak} onClick={this.onClickEdit}>
+              {i18n.editSectionDetails()}
+            </div>
+          </a>
+          <a>
+            <div style={styles.actionText}>
+              <PrintCertificates
+                sectionId={this.props.sectionData.id}
+                assignmentName={this.props.sectionData.assignmentNames[0]}
+              />
+            </div>
+          </a>
+          {this.props.sectionData.loginType === OAuthSectionTypes.clever &&
+            <a>
+              <div style={styles.actionText} onClick={this.onClickSync}>
+                {i18n.syncClever()}
               </div>
-            </Popover>
+            </a>
+          }
+          {this.props.sectionData.loginType === OAuthSectionTypes.google_classroom &&
+            <a>
+              <div style={styles.actionText} onClick={this.onClickSync}>
+                {i18n.syncGoogleClassroom()}
+              </div>
+            </a>
+          }
+          <a>
+            <div style={styles.actionText} onClick={this.onClickHideShow}>
+              {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
+            </div>
+          </a>
+          {this.props.sectionData.studentCount === 0 && (
+            <div>
+              <a>
+                <div style={styles.archiveDelete} onClick={this.onRequestDelete}>
+                  <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+                  {i18n.deleteSection()}
+                </div>
+              </a>
+              <BaseDialog
+                useUpdatedStyles
+                uncloseable
+                isOpen = {this.state.deleting}
+                assetUrl={() => ''}
+                style={{padding:20}}
+              >
+                <h2>{i18n.deleteSection()}</h2>
+                <div>{i18n.deleteSectionConfirm()}</div>
+                <br/>
+                <div>{i18n.deleteSectionHideSuggestion()}</div>
+                <DialogFooter>
+                  <Button
+                    text={i18n.dialogCancel()}
+                    onClick={() => {this.setState({deleting: false});}}
+                  />
+                  <Button
+                    text={i18n.delete()}
+                    onClick={this.onConfirmDelete}
+                  />
+                </DialogFooter>
+              </BaseDialog>
+            </div>
           )}
-      >
-        <a style={this.state.selected ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}>
-          <i className="fa fa-chevron-down"></i>
-        </a>
-      </OverlayTrigger>
+        </div>
+      </Popover>
     );
   }
 }

@@ -11,7 +11,7 @@ import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
 import {pegasus} from "../../lib/util/urlHelpers";
-import SectionActionBox from "./SectionActionBox";
+import SectionActionDropdown from "./SectionActionDropdown";
 import Button from '@cdo/apps/templates/Button';
 
 /** @enum {number} */
@@ -177,7 +177,7 @@ class SectionTable extends Component {
   };
 
   actionCellFormatter = (temp, {rowData}) => {
-    return <SectionActionBox sectionData={rowData} handleEdit={this.props.onEdit}/>;
+    return <SectionActionDropdown sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
