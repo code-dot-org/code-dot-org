@@ -2,7 +2,7 @@ import React from 'react';
 import SpeedSlider from './SpeedSlider';
 
 class StorybookHarness extends React.Component {
-  state ={value: 0.5};
+  state = {value: 0.5};
 
   onValueChange = newValue => this.setState({value: newValue});
 
