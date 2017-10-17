@@ -136,10 +136,11 @@ describe('CircuitPlaygroundBoard', () => {
 
   describe(`destroy()`, () => {
     it('sends the board reset signal', () => {
-      return board.connect().then(() => {
-        board.destroy();
-        expect(playground.reset).to.have.been.calledOnce;
-      });
+      return board.connect()
+        .then(() => board.destroy())
+        .then(() => {
+          expect(playground.reset).to.have.been.calledOnce;
+        });
     });
 
     it('lets playground-io register its sysex response handler each time', () => {
@@ -153,15 +154,16 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         expect(playground.sysexResponse).to.have.been.calledTwice;
         expect(Playground.hasRegisteredSysexResponse).to.be.true;
-        board.destroy();
-        expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+        return board.destroy().then(() => {
+          expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
 
-        const newBoard = new CircuitPlaygroundBoard();
-        expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
-        return newBoard.connect().then(() => {
-          // Connecting creates new a new playground transport, and a new spy
-          expect(playground.sysexResponse).to.have.been.calledTwice;
-          expect(Playground.hasRegisteredSysexResponse).to.be.true;
+          const newBoard = new CircuitPlaygroundBoard();
+          expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+          return newBoard.connect().then(() => {
+            // Connecting creates new a new playground transport, and a new spy
+            expect(playground.sysexResponse).to.have.been.calledTwice;
+            expect(Playground.hasRegisteredSysexResponse).to.be.true;
+          });
         });
       });
     });
@@ -176,10 +178,10 @@ describe('CircuitPlaygroundBoard', () => {
         expect(led1.stop).not.to.have.been.called;
         expect(led2.stop).not.to.have.been.called;
 
-        board.destroy();
-
-        expect(led1.stop).to.have.been.calledOnce;
-        expect(led2.stop).to.have.been.calledOnce;
+        return board.destroy().then(() => {
+          expect(led1.stop).to.have.been.calledOnce;
+          expect(led2.stop).to.have.been.calledOnce;
+        });
       });
     });
   });
@@ -322,10 +324,11 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('returns false after destroying the board', () => {
-      return board.connect().then(() => {
-        board.destroy();
-        expect(board.boardConnected()).to.be.false;
-      });
+      return board.connect()
+        .then(() => board.destroy())
+        .then(() => {
+          expect(board.boardConnected()).to.be.false;
+        });
     });
   });
 

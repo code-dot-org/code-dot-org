@@ -756,6 +756,7 @@
         infinity_playlab_events: Jolas Laborategia - Gertaerak
         infinity_playlab_repeat_forever: Jolas Laborategia - "Errepikatu Betirako"
         csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_search: How Search Works
         csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
@@ -862,6 +863,11 @@
         mc_2016_events: Minecraft kode ordua - Gertaerak
         mc_2016_spawn: Minecraft kode ordua - Sortu
         mc_2016_congrats: Minecraft kode ordua - Zorionak
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_share: AppLab Hour of Code - Share
     callout:
       text:
         drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian

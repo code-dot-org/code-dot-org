@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Skjul aktivitetar for mange språk",
   "noTutorialsYourLanguage": "Det finnst ingen aktivitetar i ditt språk. Prøv aktivitetar i andre språk ved å klikke på knappen under.",
   "bottomGuidelinesLink": "Klikk her for å sjå vilkår og retningslinjer for innsending av oppgåver til Kodetimen.",
-  "bottomSpecialNeedsLink": "Klikk her for meir informasjon om tilrettelegging for elevar med spesielle behov."
+  "bottomSpecialNeedsLink": "Klikk her for meir informasjon om tilrettelegging for elevar med spesielle behov.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

@@ -6,7 +6,7 @@
   select_language: "Wybierz język"
   upgrade_ie_message: "Code.org wkrótce przestanie wspierać Internet Explorer 8, 9 i 10. Zaktualizuj swoją przeglądarkę."
   upgrade_ie_message_csedweek: "CSEdWeek.org wkrótce przestanie wspierać Internet Explorer 8, 9 i 10. Zaktualizuj swoją przeglądarkę."
-  upgrade_ie_link: "Ucz się więcej"
+  upgrade_ie_link: "Dowiedz się więcej"
   en: "Informatyka"
   computer_science_edweek: "Tydzień Edukacji Informatycznej"
   csedweek_dates: "8-14 grudnia 2014"
@@ -317,17 +317,17 @@
   homepage_banner_text_prizes: 'Godzina Kodowania nadchodzi ponownie, 7-13 grudnia. '
   homepage_banner_link_prizes: 'Dołącz do największego wydarzenia edukacyjnego w historii. '
   homepage_banner_text_main: "Code.org i College Board tworzą sojusz dla zwiększenia różnorodności w dziedzinie informatyki."
-  homepage_banner_text_link: "Ucz się więcej"
+  homepage_banner_text_link: "Dowiedz się więcej"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Naucz się więcej"
   homepage_banner_20k_teachers: "Wyszkolonych jest 20,000 nauczycieli i teraz uczą informatyki w klasach."
-  homepage_banner_20k_teachers_link: "Ucz się więcej"
+  homepage_banner_20k_teachers_link: "Dowiedz się więcej"
   homepage_banner_congress: "Amerykańscy przywódcy wzywają Kongres do finansowania informatyki w klasach K-12."
   homepage_banner_congress_link: "Dodaj swoje wsparcie"
   homepage_banner_emailprivacy: "Wprowadzamy ważną zmianę w tym, jak zapewniamy uczniom prywatność."
   homepage_banner_emailprivacy_link: "Dowiedz się więcej"
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
-  homepage_banner_40k_teachers_link: "Ucz się więcej"
+  homepage_banner_40k_teachers_link: "Dowiedz się więcej"
   homepage_slot_text_title_hoc: "Godzina Kodowania"
   homepage_slot_text_blurb_hoc: "Każdy może się nauczyć . Zacznij dzisiaj"
   homepage_slot_text_link_hoc: "Weź udział w Godzinie Kodowania (the Hour of Code)"
@@ -932,6 +932,8 @@
   csp1_name: 'Unit 1: Internet'
   csp2_name: 'Unit 2: Cyfrowe informacje'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1384,7 +1386,7 @@
   header_home: "Strona główna"
   header_my_dashboard: "Pulpit"
   header_courses: "Kursy"
-  header_course_catalog: "Course Catalog"
+  header_course_catalog: "Katalog Kursów"
   header_project_gallery: "Galeria Projektów"
   header_sections: "Sekcje"
   header_professional_learning: "Kształcenia Profesjonalne"
@@ -1431,8 +1433,8 @@
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
   signing_in: "Signing In"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to Code.org and click on the 'Sign in' button on the top right."
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of the page: %{section_code}.'
+  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: "Choose their display name."
   sign_in_instruct_secret: "Choose their secret %{secret}."
   sign_in_instruct_button: "Click the “Sign in” button."

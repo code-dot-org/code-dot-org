@@ -793,6 +793,7 @@
         infinity_playlab_events: Spielelabor - Ereignisse
         infinity_playlab_repeat_forever: Spielelabor - Wiederhole ohne Ende
         csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_search: How Search Works
         csd_gamelab_animation_tab: Der Animations Tab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
@@ -896,6 +897,11 @@
         mc_2016_events: Minecraft Hour of Code - Programmereignisse
         mc_2016_spawn: Minecraft Hour of Code - Spawn
         mc_2016_congrats: Minecraft Hour of Code - Gratuliere
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_share: AppLab Hour of Code - Share
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

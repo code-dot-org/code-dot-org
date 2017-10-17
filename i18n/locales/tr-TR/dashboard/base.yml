@@ -84,10 +84,12 @@ tr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
+    clever: 'Clever Account'
     forgot_password: 'Şifrenizi mi unuttunuz?'
     need_confirmation: "Onay talimatlarını almadınız mı?"
     need_unlock: "Kilit açma talimatlarını almadınız mı?"
     not_linked: "Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı yazarak oturum açmanız gerekecek."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count}öğrenci çoktan kaydoldu.'
     teacher_count: '%{count}öğretmen çoktan kaydoldu.'
@@ -253,7 +255,7 @@ tr:
       my_dashboard: "Kontrol panelim"
       courses: "kurslar"
       course_catalog: "Kurs Kataloğu"
-      project_gallery: "Proje Galerisi"
+      project_gallery: "Projeler"
       sections: "Bölümler"
       help_support: "Yardım ve Destek"
       report_bug: "Hata bildir"
@@ -282,7 +284,7 @@ tr:
       about_contact: "Bize Ulaşın"
       about_faqs: "SSS"
       learn: "Öğren"
-      stats: "Istatistikler"
+      stats: "İstatistikler"
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
@@ -747,9 +749,10 @@ tr:
     rename: "Yeniden adlandır"
     save: "Kaydet"
     delete: "Sil"
+    import: "Import"
     exit: "Kursa dön"
     my_projects: "Projelerim"
-    project_gallery: "Proje Galerisi"
+    project_gallery: "Projeler"
     publish: "Yayımla"
     unpublish: "Yayımdan Kaldır"
     share: "Paylaş"
@@ -780,6 +783,7 @@ tr:
     remix: "karıştır.\n"
     click_to_remix: "Kendi sürümünüzü yaratmak için 'Remix'e basın!"
     edit_project: 'Projeyi Düzenle'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Bu projenin Code.org <a href='http://code.org/tos'> Hizmet Şartları'nı</a> ihlal ettiği raporlandı ve başkalarıyla paylaşılamaz."
       policy_violation: "Bu projeyi başkalarıyla paylaşılamaz bilgileri içerir. Lütfen onların app içeriğini düzeltmek için app sahibine başvurun."
@@ -832,6 +836,10 @@ tr:
     optional_stages: 'İsteğe bağlı aşamalar'
     main_course: 'Ana ders'
     extra_course_content: 'İlave kurs içeriği'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Bölüm 1: Problem çözme süreci'
     csd1_2: 'Bölüm 2: Bilgisayar ve Problem çözme'
     csd2_1: 'Bölüm 1: Web içerik ve HTML'

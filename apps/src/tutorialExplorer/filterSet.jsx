@@ -4,18 +4,28 @@
 import React, {PropTypes} from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
+import FilterGroupOrgNames from './filterGroupOrgNames';
 
-const FilterSet = React.createClass({
-  propTypes: {
+export default class FilterSet extends React.Component {
+  static propTypes = {
+    uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     filterGroups: PropTypes.array.isRequired,
     onUserInput: PropTypes.func.isRequired,
+    onUserInputOrgName: PropTypes.func.isRequired,
     selection: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    orgName: PropTypes.string,
     roboticsButtonUrl: PropTypes.string
-  },
+  };
 
   render() {
     return (
       <div>
+        <FilterGroupOrgNames
+          orgName={this.props.orgName}
+          uniqueOrgNames={this.props.uniqueOrgNames}
+          onUserInput={this.props.onUserInputOrgName}
+        />
+
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup
@@ -36,6 +46,4 @@ const FilterSet = React.createClass({
       </div>
     );
   }
-});
-
-export default FilterSet;
+}

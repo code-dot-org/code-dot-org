@@ -57,5 +57,7 @@
   "hideAllTutorialsButton": "Huna i ngā ngohe mō ngā reo maha",
   "noTutorialsYourLanguage": "Karekau noa iho ētahi ngohe kua tuhia ki tō reo. Whakamātau i ngā ngohe i tētahi atu reo mā te pāwhiri i te pātene kei raro nei.",
   "bottomGuidelinesLink": "Pāwhiri i konei kia kitea ā mātou paearu me ā mātou aratohu tāpaetanga mō ngā whakaakoranga Hour of Code.",
-  "bottomSpecialNeedsLink": "Pāwhiri i konei kia kitea he mōhiohio anō e pā ana ki te tautoko i ngā ākonga motuhake."
+  "bottomSpecialNeedsLink": "Pāwhiri i konei kia kitea he mōhiohio anō e pā ana ki te tautoko i ngā ākonga motuhake.",
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All"
 }

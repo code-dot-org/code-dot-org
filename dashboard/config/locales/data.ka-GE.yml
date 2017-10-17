@@ -37,7 +37,7 @@
         NetSim: "ინტერნეტ-სიმულატორი"
         Custom: "მხატვარი"
         CustomStudio: "თამაშების ლაბი"
-        Gamelab: Game Lab
+        Gamelab: "თამაშების ლაბორატორია"
     trophy:
       name:
         Bronze: "ბრინჯაო"
@@ -603,7 +603,7 @@
         farmer_intro: "ფერმერი - შესავალი"
         flappy_intro: Flappy - შესავალი
         loop_times: ბლოკი "რამდენჯერმე გამეორება"
-        loop_until: ბლოკი "გამეორება სანამ"
+        loop_until: ბლოკი "გამეორება, სანამ"
         if: ბლოკი "თუ"
         if_else: ბლოკი "თუ/სხვაგვარად"
         if_else_scrat: ბლოკი "თუ/სხვაგვარად"
@@ -693,22 +693,22 @@
         C4_unplugged_forloops: '"მიზნისთვის" ციკლები'
         C4_unplugged_parameters: "სიმღერის დაწერა პარამეტრების გამოყენებით"
         C4_unplugged_binary: "ორობითი"
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_artist_angles: "კუთხეები ხელოვანში"
+        CSF_collector_k1_blocks: "კომპიუტერული მეცნიერების საფუძვლები: შემგროვებელი"
+        CSF_collector_repeat_loops: "შემგროვებლის გამეორების ციკლები"
+        CSF_collector_text_blocks: "კომპიუტერული მეცნიერების საფუძვლები: შემგროვებელი"
+        CSF_create_functions: "ფუნქციების შექმნა"
+        CSF_debugging_k1_blocks: "დებაგირება"
+        CSF_debugging_text_blocks: "დებაგირება"
+        CSF_EF_cs_matters: "კომპიუტერული მეცნიერება მნიშვნელოვანია"
+        CSF_maze_intro_k1_blocks: "შესავალი კოდის სტუდიაში"
+        CSF_maze_intro_text_blocks: "შესავალი კოდის სტუდიაში"
         CSF_my_robotic_friends: "ჩემი რობოტი-მეგობრები"
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_Power_of_Words: "სიტყვების ძალა"
+        CSF_Super_Digital_Citizen: "სუპერ ციფრული მოქალაქე"
+        CSF_stevie_big_project: "სტივი და დიდი პროექტი"
+        CSF_unspotted_bugs: "შეუჩმნეველი ბაგები"
+        CSF_zuck_loops_short: "გამეორების ციკლები"
         frozen_intro: '"კოდის ერთი საათი": შესავალი'
         frozen_loops: "ციკლები - შესავალი"
         frozen_functions: "ფუნქციები - შესავალი"
@@ -719,9 +719,11 @@
         infinity_playlab_intro: "თამაშების ლაბორატორია - შესავალი"
         infinity_playlab_events: "თამაშების ლაბორატორია - მოვლენები"
         infinity_playlab_repeat_forever: "თამაშების ლაბორატორია - გამეორება უსასრულოდ"
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_search: How Search Works
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_computer: "რა ხდის კომპიუტერს, კომპიუტერად?"
+        csd_concept_binary_data: "როგორ მუშაობს კომპიუტერები: ბინარული სისტემა და
+          მონაცემები"
+        csd_concept_search: "როგორ მუშაობს ძებნა"
+        csd_gamelab_animation_tab: "ანიმაციის ტაბი"
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -731,12 +733,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_gamelab_velocity: "სიჩქარე"
+        csd_weblab_intro_1: "შესავალი ვებ ლაბორატორიაში - ნაწილი 1"
+        csd_weblab_intro_2: "შესავალი ვებ ლაბორატორიაში - ნაწილი 2"
+        csd_weblab_css_1: "შესავალი CSS-ში - ნაწილი 1"
+        csd_weblab_css_2: "შესავალი CSS-ში - ნაწილი 2"
+        csd_weblab_intro_3: "შესავალი ვებ ლაბორატორიაში - ნაწილი 3"
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -822,6 +824,11 @@
         mc_2016_events: "მაინკრაფტის კოდის ერთი საათი: მოვლენები"
         mc_2016_spawn: "მაინკრაფტის კოდის ერთი საათი: შექმნა"
         mc_2016_congrats: "მაინკრაფტის კოდის ერთი საათი - გილოცავთ"
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_share: AppLab Hour of Code - Share
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

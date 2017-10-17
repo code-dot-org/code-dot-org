@@ -84,10 +84,12 @@ sv:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    clever: 'Clever Account'
     forgot_password: 'Glömt ditt lösenord?'
     need_confirmation: "Har du inte fått bekräftelseinstruktioner?"
     need_unlock: "Har du inte fått instruktioner för att låsa upp?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} elever har redan kommit med.'
     teacher_count: '%{count} lärare har redan kommit med.'
@@ -256,7 +258,7 @@ sv:
       my_dashboard: "My Dashboard"
       courses: "kurser"
       course_catalog: "Course Catalog"
-      project_gallery: "Projektgalleriet"
+      project_gallery: "Projekt"
       sections: "Avsnitt"
       help_support: "Hjälp och support"
       report_bug: "Report bug"
@@ -750,9 +752,10 @@ sv:
     rename: "Ändra namn"
     save: "Spara"
     delete: "Ta bort"
+    import: "Import"
     exit: "Tillbaka till kursen"
     my_projects: "Mina projekt"
-    project_gallery: "Projektgalleriet"
+    project_gallery: "Projekt"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Dela"
@@ -783,6 +786,7 @@ sv:
     remix: 'Remix'
     click_to_remix: "Klicka på \"Remix\" för att göra en spin-off som din egen version!"
     edit_project: 'Redigera projektet'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Detta projekt har rapporterats för brott mot Code.org i <a href='http://code.org/tos'> Användarvillkor</a> och kan inte delas med andra."
       policy_violation: "Detta projekt innehåller information som inte kan delas med andra. Vänligen kontakta app-ägaren för att åtgärda innehållet i deras app."
@@ -835,6 +839,10 @@ sv:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csf_e_1: 'Ramp Up to Course E (Optional)'
+    csf_e_2: 'Course E Content'
+    csf_f_1: 'Ramp Up to Course F (Optional)'
+    csf_f_2: 'Course F Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

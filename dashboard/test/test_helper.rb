@@ -46,6 +46,7 @@ require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
 require 'testing/lock_thread'
 require 'testing/transactional_test_case'
+require 'testing/capture_queries'
 
 require 'parallel_tests/test/runtime_logger'
 
@@ -111,6 +112,7 @@ class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
+  include CaptureQueries
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
@@ -228,6 +230,16 @@ class ActiveSupport::TestCase
     Rails.logger.info 'DISCONNECTING DATABASE'
     Rails.logger.info '--------------'
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
+  end
+
+  def setup_script_cache
+    Script.stubs(:should_cache?).returns true
+    Script.clear_cache
+    # turn on the cache (off by default in test env so tests don't confuse each other)
+    Rails.application.config.action_controller.perform_caching = true
+    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
+
+    Rails.cache.clear
   end
 end
 
@@ -452,11 +464,13 @@ end
 
 # Mock StorageApps to generate random tokens
 class StorageApps
-  def initialize(_)
+  def initialize(storage_id)
+    @storage_id = storage_id
   end
 
   def create(_, _)
-    SecureRandom.base64 18
+    storage_app_id = SecureRandom.random_number(100000)
+    storage_encrypt_channel_id(@storage_id, storage_app_id)
   end
 
   def most_recent(_)
@@ -464,48 +478,15 @@ class StorageApps
   end
 end
 
-# Mock storage_id to generate random IDs
+# Mock storage_id to generate random IDs. Seed with current user so that a user maintains
+# the same id
 def storage_id(_)
+  return storage_id_for_user_id(current_user.id) if current_user
   Random.new.rand(1_000_000)
 end
 
-def storage_encrypt_channel_id(storage_id, channel_id)
-  "STUB_CHANNEL_ID-#{storage_id}-#{channel_id}"
-end
-
-# Reverse the pseudo-encryption performed by the storage_encrypt_channel_id mock above. Unless we
-# need to be reversing the real encryption performed...
-# TODO(asher, dave): This is worse than atrocious. But it seems to work, so for expediency, it is
-# being done. For various (good?) reasons, these methods were stubbed. But sometimes tests use
-# the non-stubbed version, so we attempt both versions below.
-# The correct approach seems to be to remove this global stub and restrict its usage to the few
-# places that want (require) the stubbed behavior. That said, it isn't obvious to me (asher) at this
-# time that this stub *should* be used anywhere.
-def storage_decrypt_channel_id(encrypted)
-  raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
-  # pad to a multiple of 4 characters to make a valid base64 string.
-  encrypted += '=' * ((4 - encrypted.length % 4) % 4)
-  storage_id, channel_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).
-    split(':').
-    map(&:to_i)
-  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
-  return [storage_id, channel_id]
-rescue
-  raise ArgumentError if encrypted.nil?
-  storage_id, channel_id = encrypted.split('-')[1, 2]
-  raise ArgumentError if channel_id.nil?
-  return [storage_id.to_i, channel_id.to_i]
-end
-
-$stub_channel_owner = 33
-$stub_channel_id = 44
-# stubbing storage_decrypt is inappropriate access, but
-# allows storage_decrypt_channel_id to throw the right
-# errors if the input is malformed and keeps us from
-# having to access the Pegasus DB from Dashboard tests.
-def storage_decrypt(encrypted)
-  "#{$stub_channel_owner}:#{$stub_channel_id}"
+def storage_id_for_user_id(user_id)
+  Random.new(user_id).rand(1_000_000)
 end
 
 # A fake slogger implementation that captures the records written to it.

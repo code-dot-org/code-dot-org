@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.25":
-  version "1.6.25"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.25.tgz#b411dd21f01e6f2b174650e48c3de339b2dd752a"
+"@code-dot-org/blockly@1.6.26":
+  version "1.6.26"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.26.tgz#14677c90f5ed6a0ae58ae0c2c9e1ea4cc4f4626e"
 
 "@code-dot-org/bramble@0.1.22":
   version "0.1.22"
@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#6aa07649b3b47218bdbf3b7fc25ba157d4a1b559":
-  version "0.0.5"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/6aa07649b3b47218bdbf3b7fc25ba157d4a1b559"
+"@code-dot-org/craft@github:code-dot-org/craft#a8762bd7b7eda6b50601ac29705d1ec0a03e10fa":
+  version "0.0.8"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/a8762bd7b7eda6b50601ac29705d1ec0a03e10fa"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.0":
   version "0.11.1-cdo.0"
@@ -9692,9 +9692,9 @@ websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
 
-whatwg-fetch@>=0.10.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz#01c2ac4df40e236aaa18480e3be74bd5c8eb798e"
+whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
 whet.extend@~0.9.9:
   version "0.9.9"

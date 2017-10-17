@@ -13,6 +13,7 @@ nav: regional_partner_playbook_nav
 ## Table of Contents
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
+- [Facilitator Recruitment Resources](#recruitment)
 - [Facilitator Support Documents](#support)
 - [2016 CS Principles Resources](#csp)
 - [Facilitator Payments](#pay)
@@ -31,6 +32,16 @@ ________________
 [This is an example](/files/example-csp-facilitator-contract.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met. 
 
 *DISCLAIMER: By providing this example, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter.*
+
+[**Back to the top**](#top)
+________________
+<a id="recruitment"></a>
+## Facilitator Recruitment Resources
+
+- [Facilitator Program Page](https://code.org/facilitator) - General webpage to share with potential facilitators
+- [Facilitator Development Program Overview](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit#heading=h.psnytlkvnqcd)
+- [K-12 Facilitator Qualifications and Rubric](https://docs.google.com/document/d/14yKszp5_eYiTgZ4t8KpDTi2cBB4wd5SGxCV-a_eE6c8/edit) - Guide for recruitment
+
 
 [**Back to the top**](#top)
 ________________
