@@ -18,6 +18,19 @@ named_level 'v2 U3L04 Student Lesson Introduction', progression: 'Lesson Vocabul
 
 stage 'Creating Functions', flex_category: 'csp3_1'
 named_level 'v2 U3L05 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+level 'csp_applab_functions', progression: 'Defining and Calling Functions'
+level 'U3L03 Define and use turnAround', progression: 'Using Functions With Turtle Commands'
+level 'U3L03 Draw a T using turnAround', progression: 'Using Functions With Turtle Commands'
+level 'U3L03 define turnRight and draw a rectangle', progression: 'Using Functions With Turtle Commands'
+named_level 'CSP Abstraction in Programming', progression: '(new) Abstraction in Programming'
+level 'U3L03 - draw rect function', progression: 'Using Functions With Turtle Commands'
+level 'U3L03 - draw step', progression: 'Using Functions With Turtle Commands'
+level 'U3L03 Three Steps', progression: 'Using Functions With Turtle Commands'
+level 'U3L03 draw diamond', progression: 'Challenge: Draw a Diamond Using Functions'
+assessment 'U3L03 - multiselect - properties of functions', progression: 'Check Your Understanding'
+assessment 'U3L03 Assessment', progression: 'Check Your Understanding'
+assessment 'U3L03 Free Response Wrap Up', progression: 'Check Your Understanding'
+assessment 'csp_U3_plan_code_FR', progression: 'Check Your Understanding'
 
 stage 'Functions and Top-Down Design', flex_category: 'csp3_1'
 named_level 'v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -33,6 +46,7 @@ assessment 'U3-AP-Practice-FR-manage-complexity', progression: '(new)AP Practice
 
 stage 'Looping and Random Numbers', flex_category: 'csp3_1'
 named_level 'v2 U3L09 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+assessment 'U3-AP-Practice-Choose-The-Abstraction', progression: '(new)AP Practice Response - Identify the Abstraction'
 
 stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
 named_level 'v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

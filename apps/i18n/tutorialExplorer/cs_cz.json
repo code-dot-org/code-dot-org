@@ -59,5 +59,8 @@
   "bottomGuidelinesLink": "Klepnutím sem zobrazíte naše kritéria a pokyny pro kurzy Hodiny kódu.",
   "bottomSpecialNeedsLink": "Klepněte zde pro další informace k podpoře studentů se zvláštními potřebami.",
   "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All"
+  "filterOrgNamesAll": "All",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular"
 }
