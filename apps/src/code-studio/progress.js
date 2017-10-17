@@ -76,9 +76,10 @@ function getCachedIsUserSignedIn() {
 
   // if that didn't give us anything, check the header, which uses a cookie-based
   // approach to populate user id.
+  // This code should be kept in sync with user_header.haml
   if (signedIn === null) {
-    const userData = $('.header_button.header_user.user_menu .user_name').data();
-    if (userData && userData.id) {
+    const nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
+    if (nameSpan && nameSpan.dataset.id) {
       signedIn = true;
     }
   }

@@ -84,7 +84,7 @@ class SignInOrAgeDialog extends Component {
     }
 
     if (parseInt(value, 10) < 13) {
-      // redirect to /home, with an info warning if possible
+      // /too_young will redirect to /home, with an info warning if possible
       navigateToHref('/too_young');
       return;
     }
