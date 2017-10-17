@@ -15,7 +15,6 @@ export default storybook => {
               name: 'Rubeus Hagrid',
               totalScore: 42,
               acceptance: 'accepted',
-              locked: 'locked',
               title: 'Groundskeeper',
               accountEmail: 'hagrid@hogwarts.edu',
               phone: '867-5309',
