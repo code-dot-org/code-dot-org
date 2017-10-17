@@ -1,9 +1,9 @@
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 import * as utils from '../utils';
 
 
 // Sorting for tutorials.
-export const TutorialsSortBy = utils.makeEnum('default', 'popularityrank', 'displayweight');
+export const TutorialsSortBy = utils.makeEnum('popularityrank', 'displayweight');
 
 // Orgname value.
 export const TutorialsOrgName = utils.makeEnum('all');

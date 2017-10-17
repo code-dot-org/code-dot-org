@@ -6,27 +6,23 @@
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
-const Image = React.createClass({
-  propTypes: {
+export default class Image extends React.Component {
+  static propTypes = {
     style: PropTypes.object.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      loaded: false
-    };
-  },
+  state = {
+    loaded: false
+  };
 
-  onImageLoad() {
-    this.setState({ loaded: true });
-  },
+  onImageLoad = () => this.setState({ loaded: true });
 
   componentDidMount() {
     const imgTag = ReactDOM.findDOMNode(this.refs.img);
     const imgSrc = imgTag.getAttribute('src');
     const img = new window.Image();
     img.src = imgSrc;
-  },
+  }
 
   render() {
     let style;
@@ -50,6 +46,4 @@ const Image = React.createClass({
       />
     );
   }
-});
-
-export default Image;
+}
