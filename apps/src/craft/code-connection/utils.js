@@ -86,6 +86,7 @@ const blockConversions = Object.freeze({
   },
 
   craft_placeBlock: function (xml) {
+    const next = getChildNodeByName(xml, 'next');
     return (`
       <block type="craft_place" inline="false">
         <title name="DIR">down</title>
@@ -94,14 +95,17 @@ const blockConversions = Object.freeze({
             <title name="NUM">0</title>
           </block>
         </value>
+        ${next ? serialize(next) : ''}
       </block>
     `);
   },
 
   craft_destroyBlock: function (xml) {
+    const next = getChildNodeByName(xml, 'next');
     return (`
       <block type="craft_destroy">
         <title name="DIR">forward</title>
+        ${next ? serialize(next) : ''}
       </block>
     `);
   },
