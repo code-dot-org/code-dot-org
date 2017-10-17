@@ -68,7 +68,7 @@ const ScriptEditor = React.createClass({
     }
 
     if (this.loginRequired.checked && this.age13Plus.checked) {
-      if (!confirm('Turning on "age 13+ required" will have no affect as long as '+
+      if (!confirm('Turning on "age 13+ required" will have no effect as long as '+
           '"login required" is still on. Are you sure you want to continue?')) {
         e.preventDefault();
       }
