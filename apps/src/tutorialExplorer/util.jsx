@@ -1,4 +1,4 @@
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 import * as utils from '../utils';
 
 

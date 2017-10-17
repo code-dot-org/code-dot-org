@@ -28,6 +28,7 @@ var baseConfig = {
       '@cdo/applab/locale': path.resolve(__dirname, 'src', 'applab', 'locale-do-not-import.js'),
       '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
       '@cdo/weblab/locale': path.resolve(__dirname, 'src', 'weblab', 'locale-do-not-import.js'),
+      '@cdo/tutorialExplorer/locale': path.resolve(__dirname, 'src', 'tutorialExplorer', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
@@ -168,6 +169,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       '@cdo/applab/locale': path.resolve(__dirname, 'test', 'util', 'applab', 'locale-do-not-import.js'),
       '@cdo/gamelab/locale': path.resolve(__dirname, 'test', 'util', 'gamelab', 'locale-do-not-import.js'),
       '@cdo/weblab/locale': path.resolve(__dirname, 'test', 'util', 'weblab', 'locale-do-not-import.js'),
+      '@cdo/tutorialExplorer/locale': path.resolve(__dirname, 'test', 'util', 'tutorialExplorer', 'locale-do-not-import.js'),
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
       // Use mock-firmata to unit test playground-io maker components
       'firmata': 'mock-firmata/mock-firmata',

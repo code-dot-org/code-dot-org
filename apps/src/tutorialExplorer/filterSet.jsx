@@ -6,8 +6,8 @@ import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
 import FilterGroupOrgNames from './filterGroupOrgNames';
 
-const FilterSet = React.createClass({
-  propTypes: {
+export default class FilterSet extends React.Component {
+  static propTypes = {
     uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     filterGroups: PropTypes.array.isRequired,
     onUserInput: PropTypes.func.isRequired,
@@ -15,7 +15,7 @@ const FilterSet = React.createClass({
     selection: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     orgName: PropTypes.string,
     roboticsButtonUrl: PropTypes.string
-  },
+  };
 
   render() {
     return (
@@ -46,6 +46,4 @@ const FilterSet = React.createClass({
       </div>
     );
   }
-});
-
-export default FilterSet;
+}
