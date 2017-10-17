@@ -474,12 +474,12 @@ Dashboard::Application.routes.draw do
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
-  get '/api/script_structure/:script_name', to: 'api#script_structure'
+  get '/api/script_structure/:script', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
+  get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   namespace :api do
     api_methods.each do |action|

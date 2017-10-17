@@ -23,22 +23,22 @@ const styles = {
   }
 };
 
-const FilterChoice = React.createClass({
-  propTypes: {
+export default class FilterChoice extends React.Component {
+  static propTypes = {
     onUserInput: PropTypes.func.isRequired,
     groupName: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     selected: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired
-  },
+  };
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.props.onUserInput(
       this.props.groupName,
       this.props.name,
       event.target.checked
     );
-  },
+  };
 
   render() {
     return (
@@ -55,6 +55,4 @@ const FilterChoice = React.createClass({
       </div>
     );
   }
-});
-
-export default FilterChoice;
+}
