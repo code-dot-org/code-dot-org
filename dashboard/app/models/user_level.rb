@@ -100,7 +100,7 @@ class UserLevel < ActiveRecord::Base
     end
 
     # Destroy any existing peer reviews
-    if level.try(:peer_reviewable?)
+    if Script.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
   end
