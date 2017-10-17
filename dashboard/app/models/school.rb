@@ -46,12 +46,13 @@ class School < ActiveRecord::Base
   # @param options [Hash] The CSV file parsing options.
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
     CSV.read(filename, options).each do |row|
-      parsed_school = yield row
-      school = School.find_by_id(parsed_school[:id])
-      if school.nil?
-        School.new(parsed_school).save!
+      parsed = yield row
+      loaded = School.find_by_id(parsed[:id])
+      if loaded.nil?
+        School.new(parsed).save!
       else
-        school.update!(parsed_school)
+        loaded.assign_attributes(parsed)
+        loaded.update!(parsed) if loaded.changed?
       end
     end
   end
