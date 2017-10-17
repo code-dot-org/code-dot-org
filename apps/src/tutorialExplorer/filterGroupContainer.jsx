@@ -18,11 +18,11 @@ const styles = {
   }
 };
 
-const FilterGroupContainer = React.createClass({
-  propTypes: {
+export default class FilterGroupContainer extends React.Component {
+  static propTypes = {
     text: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired
-  },
+  };
 
   render() {
     const filterGroupOuterStyle = {
@@ -39,6 +39,4 @@ const FilterGroupContainer = React.createClass({
       </div>
     );
   }
-});
-
-export default FilterGroupContainer;
+}

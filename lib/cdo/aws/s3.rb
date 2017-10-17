@@ -1,4 +1,5 @@
 require 'aws-sdk'
+require 'tempfile'
 
 module AWS
   module S3
@@ -29,6 +30,20 @@ module AWS
       create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
     rescue Aws::S3::Errors::NoSuchKey
       raise NoSuchKey.new("No such key `#{key}'")
+    end
+
+    # Downloads the S3 file to a temporary file
+    # @param s3_bucket [String] The S3 buckt name.
+    # @param s3_key [String] The S3 key.
+    # @return The handle to the temporary file.
+    def self.download_to_temp_file(bucket, key)
+      temp_file = Tempfile.new(["#{File.basename(key)}."])
+      open(temp_file.path, 'wb') do |file|
+        create_client.get_object(bucket: bucket, key: key) do |chunk|
+          file.write(chunk)
+        end
+      end
+      return temp_file
     end
 
     # Returns true iff the specified S3 key exists in bucket

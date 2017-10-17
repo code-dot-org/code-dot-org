@@ -5,7 +5,7 @@ import React, {PropTypes} from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString, DoNotShow } from './util';
 import Image from './image';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 /* global ga */
 
 const styles = {
