@@ -7,7 +7,7 @@
  */
 
 import React, {PropTypes} from 'react';
-import {Button, FormControl} from 'react-bootstrap';
+import {Button, FormControl, Table} from 'react-bootstrap';
 import {Facilitator1819Program} from './detail_view_facilitator_specific_components';
 
 const renderLineItem = (key, value) => {
@@ -39,7 +39,16 @@ class DetailViewContents extends React.Component {
       program: PropTypes.string.isRequired,
       planToTeachThisYear: PropTypes.string.isRequired,
       rateAbility: PropTypes.string.isRequired,
-      canAttendFIT: PropTypes.string.isRequired
+      canAttendFIT: PropTypes.string.isRequired,
+      responsesForSections: PropTypes.arrayOf(PropTypes.shape({
+        sectionName: PropTypes.string.isRequired,
+        responses: PropTypes.arrayOf(PropTypes.shape({
+          question: PropTypes.element.isRequired,
+          answer: PropTypes.string.isRequired,
+          score: PropTypes.number.isRequired
+        }))
+      })),
+      notes: PropTypes.string.isRequired
     })
   }
 
@@ -151,6 +160,61 @@ class DetailViewContents extends React.Component {
     );
   }
 
+  renderQuestionResponses = () => {
+    return this.props.applicationData.responsesForSections.map((section, i) => {
+      return (
+        <div key={i}>
+          <h4>
+            {section.sectionName}
+          </h4>
+          <Table bordered hover>
+            <thead>
+              <tr>
+                <th>
+                  Question
+                </th>
+                <th style={{width: '15%'}}>
+                  Score
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                section.responses.map((response, j) => {
+                  return (
+                    <tr>
+                      <td>
+                        {response.question}
+                        <br/>
+                        {response.answer}
+                      </td>
+                      <td>
+                        {response.score}
+                      </td>
+                    </tr>
+                  );
+                })
+              }
+            </tbody>
+          </Table>
+        </div>
+      );
+    });
+  }
+
+  renderNotes() {
+    return (
+      <div>
+        <h4>
+          Notes
+        </h4>
+        <FormControl componentClass="textarea" disabled={!this.state.editing}>
+          {this.props.applicationData.notes}
+        </FormControl>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div style={{backgroundColor: 'white'}}>
@@ -164,6 +228,8 @@ class DetailViewContents extends React.Component {
         }
         {this.renderAboutSection()}
         {this.renderChooseYourProgram()}
+        {this.renderQuestionResponses()}
+        {this.renderNotes()}
       </div>
     );
   }
