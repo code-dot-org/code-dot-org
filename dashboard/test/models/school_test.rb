@@ -21,11 +21,4 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
   end
-
-  # See CHARTR in http://nces.ed.gov/ccd/pdf/2015150_sc132a_Documentation_052716.pdf
-  test "school_type parses charter values properly" do
-    assert_equal 'public', School.send(:school_type, 'N')
-    assert_equal 'charter', School.send(:school_type, '1')
-    assert_equal 'public', School.send(:school_type, '2')
-  end
 end

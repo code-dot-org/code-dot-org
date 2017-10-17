@@ -30,6 +30,15 @@ namespace :seed do
     'course2',
     'course3',
     'course4',
+    'csp1',
+    'csp2',
+    'csp3',
+    'csp3-a',
+    'csp3-research-mxghyt',
+    'csp4',
+    'csp5',
+    'csp-ap',
+    'csppostap',
     'events',
     'flappy',
     'frozen',
@@ -87,7 +96,8 @@ namespace :seed do
   task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     UI_TEST_COURSES = [
-      'allthethingscourse'
+      'allthethingscourse',
+      'csp',
     ].each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end

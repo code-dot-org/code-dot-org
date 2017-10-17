@@ -2,7 +2,7 @@
  */
 
 import React from 'react';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   backButton: {

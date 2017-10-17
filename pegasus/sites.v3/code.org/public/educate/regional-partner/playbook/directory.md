@@ -483,8 +483,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and co-working<br/>
 
 **Contact Information**<br/>
-Kristine Sorensen<br/>
-Kristine@newbo.co
+Samantha Dahlby, K-12 Education Coordinator<br/>
+Samantha@newbo.co
 
 <br/>
 
@@ -592,7 +592,7 @@ ________________
 ### [Twin Cities PBS](http://scigirlsconnect.org)<br/>
 Minnesota<br/>
 
-Twin Cities PBS (TPT) mission is to enrich lives and strengthen our community through the power of media. The STEM Department at TPT creates a nationally broadcast PBS television show, creates STEM content for K-12 educators, and runs a national education outreach program. 
+Twin Cities PBS (TPT) mission is to enrich lives and strengthen our community through the power of media. The STEM Department at TPT creates a nationally broadcast PBS television show, creates STEM content for K-12 educators, and runs a national education outreach program.
 
 **Programs**<br/>
 CS Principles<br/>
