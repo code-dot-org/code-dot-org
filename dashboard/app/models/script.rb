@@ -125,7 +125,6 @@ class Script < ActiveRecord::Base
     stage_extras_available
     has_verified_resources
     script_announcements
-    age_13_required
   )
 
   def self.twenty_hour_script
@@ -533,6 +532,22 @@ class Script < ActiveRecord::Base
     peer_reviews_to_complete.try(:>, 0)
   end
 
+  # Is age 13+ required for logged out users
+  # @return {bool}
+  def logged_out_age_13_required?
+    return false if login_required
+
+    # hard code some exceptions. ideally we'd get rid of these and just make our
+    # UI tests deal with the 13+ requirement
+    return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
+
+    # these are Games where if you're not logged in, we want to prompt to ask if
+    # you're at least 13 years old.
+    thirteen_plus_apps = [Game.applab, Game.gamelab, Game.weblab]
+
+    script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
+  end
+
   def self.setup(custom_files)
     transaction do
       scripts_to_add = []
@@ -627,14 +642,6 @@ class Script < ActiveRecord::Base
           raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
         end
 
-        if [Game.applab, Game.gamelab].include? level.game
-          unless script.hidden || script.login_required || script.age_13_required
-            raise <<-ERROR.gsub(/^\s+/, '')
-              Applab and Gamelab levels can only be added to scripts that are hidden or require login
-              or require age 13+ (while adding level "#{level.name}" to script "#{script.name}")
-            ERROR
-          end
-        end
         level
       end
 
@@ -880,7 +887,7 @@ class Script < ActiveRecord::Base
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
       script_announcements: script_announcements,
-      age_13_required: age_13_required?,
+      age_13_required: logged_out_age_13_required?,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -899,7 +906,7 @@ class Script < ActiveRecord::Base
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
-      age_13_required: age_13_required?
+      age_13_required: logged_out_age_13_required?
     }
   end
 
@@ -947,7 +954,6 @@ class Script < ActiveRecord::Base
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
       script_announcements: script_data[:script_announcements],
-      age_13_required: !!script_data[:age_13_required],
     }.compact
   end
 
