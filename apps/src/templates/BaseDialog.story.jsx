@@ -1,26 +1,12 @@
 import React from 'react';
 import BaseDialog from './BaseDialog';
+import ExampleDialogButton from '../util/ExampleDialogButton';
 
-var ExampleDialogButton = React.createClass({
-  render() {
-    return (
-      <div>
-        <BaseDialog
-          isOpen={!!this.state && this.state.open}
-          handleClose={() => this.setState({open: false})}
-          {...this.props}
-        >
-          <div style={{border: '1px solid black'}}>
-            The contents of the dialog go inside this box! woo
-          </div>
-        </BaseDialog>
-        <button onClick={() => this.setState({open: true})}>
-          Open the example dialog
-        </button>
-      </div>
-    );
-  }
-});
+const EXAMPLE_DIALOG_BODY = (
+  <div style={{border: '1px solid black'}}>
+    The contents of the dialog go inside this box! woo
+  </div>
+);
 
 export default storybook => {
   return storybook
@@ -37,27 +23,47 @@ export default storybook => {
         )
       }, {
         name: 'click to open',
-        story: () => <ExampleDialogButton />
+        story: () => (
+          <ExampleDialogButton>
+            <BaseDialog>
+              {EXAMPLE_DIALOG_BODY}
+            </BaseDialog>
+          </ExampleDialogButton>
+        )
       }, {
         name: 'fullWidth',
-        story: () => <ExampleDialogButton fullWidth/>
+        story: () => (
+          <ExampleDialogButton>
+            <BaseDialog fullWidth>
+              {EXAMPLE_DIALOG_BODY}
+            </BaseDialog>
+          </ExampleDialogButton>
+        )
       }, {
         name: 'fixedWidth',
         story: () => (
-          <ExampleDialogButton
-            useUpdatedStyles
-            fixedWidth={300}
-            assetUrl={url => '/blockly/' + url}
-          />
+          <ExampleDialogButton>
+            <BaseDialog
+              useUpdatedStyles
+              fixedWidth={300}
+              assetUrl={url => '/blockly/' + url}
+            >
+              {EXAMPLE_DIALOG_BODY}
+            </BaseDialog>
+          </ExampleDialogButton>
         )
       }, {
         name: 'fixedHeight',
         story: () => (
-          <ExampleDialogButton
-            useUpdatedStyles
-            fixedHeight={400}
-            assetUrl={url => '/blockly/' + url}
-          />
+          <ExampleDialogButton>
+            <BaseDialog
+              useUpdatedStyles
+              fixedHeight={400}
+              assetUrl={url => '/blockly/' + url}
+            >
+              {EXAMPLE_DIALOG_BODY}
+            </BaseDialog>
+          </ExampleDialogButton>
         )
       }, {
         name: 'old style',
