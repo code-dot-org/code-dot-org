@@ -47,6 +47,9 @@ const blockTypes = Object.freeze({
   water: "dirt",
   grassPath: "dirt",
   snowyGrass: "dirt",
+  tnt: "dirt",
+  tree: "dirt",
+  wool: "dirt",
 
   // Tree parts
   logAcacia: "log2,0",
