@@ -45,15 +45,15 @@ describe('FilterSet', () => {
     const wrapper = shallow(<FilterSet {...DEFAULT_PROPS}/>);
     expect(wrapper).to.containMatchingElement(
       <div>
-        <FilterGroupOrgNames
-          orgName={FAKE_ORG_NAME}
-          uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
-          onUserInput={FAKE_ON_ORG_NAME}
-        />
         <FilterGroupSortBy
           defaultSortBy={TutorialsSortBy.popularityrank}
           sortBy={TutorialsSortBy.popularityrank}
           onUserInput={FAKE_ON_SORT_BY}
+        />
+        <FilterGroupOrgNames
+          orgName={FAKE_ORG_NAME}
+          uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
+          onUserInput={FAKE_ON_ORG_NAME}
         />
         <FilterGroup
           key="group-1"

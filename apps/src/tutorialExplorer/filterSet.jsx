@@ -26,12 +26,6 @@ export default class FilterSet extends React.Component {
   render() {
     return (
       <div>
-        <FilterGroupOrgNames
-          orgName={this.props.orgName}
-          uniqueOrgNames={this.props.uniqueOrgNames}
-          onUserInput={this.props.onUserInputOrgName}
-        />
-
         {this.props.showSortDropdown && (
           <FilterGroupSortBy
             defaultSortBy={this.props.defaultSortBy}
@@ -39,6 +33,12 @@ export default class FilterSet extends React.Component {
             onUserInput={this.props.onUserInputSortBy}
           />
         )}
+
+        <FilterGroupOrgNames
+          orgName={this.props.orgName}
+          uniqueOrgNames={this.props.uniqueOrgNames}
+          onUserInput={this.props.onUserInputOrgName}
+        />
 
         {this.props.filterGroups.map(item =>
           item.display !== false && (
