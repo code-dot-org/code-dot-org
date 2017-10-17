@@ -3,6 +3,8 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
 class ScriptLevelsController < ApplicationController
+  around_action :with_teachers, only: :show
+
   check_authorization
   include LevelsHelper
 
@@ -255,10 +257,7 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
-      @last_activity = current_user.last_attempt(@level)
-      level_source = @last_activity.try(:level_source)
-
-      user_level = current_user.user_level_for(@script_level, @level)
+      user_level = current_user.user_levels_by_level(@script)[@level.id]
       if user_level && user_level.submitted?
         level_view_options(
           @level.id,
@@ -268,6 +267,7 @@ class ScriptLevelsController < ApplicationController
         readonly_view_options
       end
       readonly_view_options if user_level && user_level.readonly_answers?
+      level_source = user_level.try(:level_source)
     end
 
     @last_attempt = level_source.try(:data)

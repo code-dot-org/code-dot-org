@@ -83,6 +83,7 @@ class UserLevel < ActiveRecord::Base
   end
 
   def self.most_recent_driver(script, level, user)
+    return nil unless user.can_pair?
     most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
     return nil unless most_recent
 
@@ -100,7 +101,7 @@ class UserLevel < ActiveRecord::Base
     end
 
     # Destroy any existing peer reviews
-    if level.try(:peer_reviewable?)
+    if Script.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
   end
@@ -114,6 +115,11 @@ class UserLevel < ActiveRecord::Base
     return false unless stage.lockable?
     return false if user.authorized_teacher?
     submitted? && !readonly_answers? || has_autolocked?(stage)
+  end
+
+  def script_level
+    s = Script.get_from_cache(script_id)
+    s.script_levels.detect {|sl| sl.level_ids.include? level_id}
   end
 
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)

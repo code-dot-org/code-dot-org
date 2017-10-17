@@ -779,8 +779,12 @@ class User < ActiveRecord::Base
   end
 
   def user_progress_by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
-    user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
+    ul_map = user_levels_by_level(stage.script)
+    stage.script_levels.map(&:level_ids).flatten.map do |level_id|
+      ul_map[level_id]
+    end.compact.map do |ul|
+      [ul.level_id, ul.best_result]
+    end.to_h
   end
 
   def user_level_for(script_level, level)
@@ -799,22 +803,22 @@ class User < ActiveRecord::Base
     # TODO(brent): Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
-    levels = script.script_levels.map(&:level_ids).flatten
-    user_levels_by_level = user_levels.
-      where(script_id: script.id, level: levels).
-      index_by(&:level_id)
+    sl_level_ids = script.script_levels.map(&:level_ids).flatten
+    ul_with_sl = user_levels_by_level(script).select do |level_id, ul|
+      sl_level_ids.include? level_id
+    end
 
     # Find the user_level that we've most recently had progress on
-    user_level = user_levels_by_level.values.max_by(&:updated_at)
+    user_level = ul_with_sl.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
-      last_script_level = user_level.level.script_levels.where(script_id: script.id).first
+      last_script_level = user_level.script_level
       script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
     next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
-      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
 
@@ -1344,7 +1348,7 @@ class User < ActiveRecord::Base
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
-        first_or_create!
+        first_or_initialize
 
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
@@ -1369,7 +1373,7 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
-      user_level.save!
+      user_level.atomic_save!
     end
 
     if pairing_user_ids

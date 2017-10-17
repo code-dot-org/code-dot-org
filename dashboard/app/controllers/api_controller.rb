@@ -293,6 +293,8 @@ class ApiController < ApplicationController
     end
   end
 
+  around_action :with_teachers, only: :user_progress_for_stage
+
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the
   # latter side effect, this should only be called when the user sees the level,
@@ -307,7 +309,7 @@ class ApiController < ApplicationController
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      user_level = current_user.last_attempt(level)
+      user_level = current_user.user_levels_by_level(script)[level.id]
       level_source = user_level.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)

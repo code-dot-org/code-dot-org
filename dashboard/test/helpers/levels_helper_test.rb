@@ -223,8 +223,8 @@ class LevelsHelperTest < ActionView::TestCase
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
 
-    @driver = create :student, name: 'DriverName'
-    @navigator = create :student
+    @driver = create :student_in_word_section, name: 'DriverName'
+    @navigator = create :student_in_word_section
 
     @driver_user_level = create :user_level, user: @driver, level: @level
     @navigator_user_level = create :user_level, user: @navigator, level: @level
