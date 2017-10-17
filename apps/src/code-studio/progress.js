@@ -68,6 +68,25 @@ progress.showDisabledBubblesAlert = function () {
 };
 
 /**
+ * @returns {boolean}
+ */
+function getCachedIsUserSignedIn() {
+  // first check sessionStorage, where we may have cached sign in
+  let signedIn = clientState.getUserSignedIn();
+
+  // if that didn't give us anything, check the header, which uses a cookie-based
+  // approach to populate user id.
+  if (signedIn === null) {
+    const userData = $('.header_button.header_user.user_menu .user_name').data();
+    if (userData && userData.id) {
+      signedIn = true;
+    }
+  }
+
+  return signedIn;
+}
+
+/**
  * @param {object} scriptData (Note - This is only a subset of the information
  *   we have in renderCourseProgress)
  * @param {object} stageData
@@ -100,7 +119,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   // If the server didn't tell us about signIn state (i.e. because script is
   // cached) see if we cached locally
   if (signedIn === null) {
-    signedIn = clientState.getUserSignedIn();
+    signedIn = getCachedIsUserSignedIn();
   }
 
   if (signedIn !== null) {
@@ -143,6 +162,10 @@ progress.renderCourseProgress = function (scriptData) {
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
+
+  if (getCachedIsUserSignedIn()) {
+    store.dispatch(setUserSignedIn(true));
+  }
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);

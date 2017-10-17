@@ -66,6 +66,13 @@ const ScriptEditor = React.createClass({
         e.preventDefault();
       }
     }
+
+    if (this.loginRequired.checked && this.age13Plus.checked) {
+      if (!confirm('Turning on "age 13+ required" will have no affect as long as '+
+          '"login required" is still on. Are you sure you want to continue?')) {
+        e.preventDefault();
+      }
+    }
   },
 
   render() {
@@ -133,6 +140,7 @@ const ScriptEditor = React.createClass({
         <label>
           Login Required
           <input
+            ref={element => this.loginRequired = element}
             name="login_required"
             type="checkbox"
             defaultChecked={this.props.loginRequired}
@@ -146,6 +154,7 @@ const ScriptEditor = React.createClass({
         <label>
           13+ Required
           <input
+            ref={element => this.age13Plus = element}
             name="age_13_required"
             type="checkbox"
             defaultChecked={this.props.age13Required}
