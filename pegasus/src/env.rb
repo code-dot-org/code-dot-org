@@ -48,7 +48,7 @@ def load_pegasus_settings
 
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
   I18n.fallbacks.map(en: :'en-US')
-  I18n.backend = LazyLocaleBackend.new
+  I18n.backend = LazyLocaleBackend.new unless CDO.with_default(rack_env?(:production)).load_locales
   I18n.load_path += Dir[cache_dir('i18n/*.yml')]
   I18n.enforce_available_locales = false
 end
