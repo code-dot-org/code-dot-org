@@ -388,6 +388,10 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+
+      namespace :application do
+        post :facilitator, to: 'facilitator_applications#create'
+      end
     end
   end
 
@@ -407,6 +411,10 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
+
+    namespace :application do
+      get 'facilitator', to: 'facilitator_application#new'
+    end
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
