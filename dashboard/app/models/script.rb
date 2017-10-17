@@ -628,10 +628,10 @@ class Script < ActiveRecord::Base
         end
 
         if [Game.applab, Game.gamelab].include? level.game
-          unless script.hidden || script.login_required
+          unless script.hidden || script.login_required || script.age_13_required
             raise <<-ERROR.gsub(/^\s+/, '')
               Applab and Gamelab levels can only be added to scripts that are hidden or require login
-              (while adding level "#{level.name}" to script "#{script.name}")
+              or require age 13+ (while adding level "#{level.name}" to script "#{script.name}")
             ERROR
           end
         end
