@@ -39,7 +39,7 @@ class HomeController < ApplicationController
   # Signed out: redirect to /courses
   def index
     if current_user
-      if current_user.student? && current_user.primary_script
+      if current_user.student? && current_user.primary_script && !session['clever_link_flag']
         redirect_to script_path(current_user.primary_script)
       else
         redirect_to '/home'
