@@ -3,6 +3,7 @@ require 'test_helper'
 module Pd::Payment
   class PaymentCalculatorTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
+    freeze_time
 
     setup_all do
       @regional_partner = create :regional_partner
