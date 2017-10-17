@@ -11,7 +11,6 @@ describe("DetailView", () => {
           applicationData={{
           name: '',
           acceptance: 'accepted',
-          locked: 'locked',
           accountEmail: 'email',
           phone: 'phone',
           course: 'course',
@@ -25,22 +24,16 @@ describe("DetailView", () => {
       );
 
       expect(detailView.find('#DetailViewHeader Button')).to.have.length(1);
-      expect(detailView.find('#DetailViewHeader FormControl').map((control) => {
-        return control.prop('disabled');
-      })).to.deep.equal([true, true]);
+      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
 
       detailView.find('#DetailViewHeader Button').simulate('click');
       expect(detailView.find('#DetailViewHeader Button').map((button) => {
         return button.text();
       })).to.deep.equal(['Save', 'Cancel']);
-      expect(detailView.find('#DetailViewHeader FormControl').map((control) => {
-        return control.prop('disabled');
-      })).to.deep.equal([false, false]);
+      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.false;
 
       detailView.find('#DetailViewHeader Button').last().simulate('click');
-      expect(detailView.find('#DetailViewHeader FormControl').map((control) => {
-        return control.prop('disabled');
-      })).to.deep.equal([true, true]);
+      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
     });
   });
 });

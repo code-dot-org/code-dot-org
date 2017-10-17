@@ -27,7 +27,6 @@ class DetailViewContents extends React.Component {
       name: PropTypes.string.isRequired,
       totalScore: PropTypes.number,
       acceptance: PropTypes.oneOf(['accepted', 'rejected']).isRequired,
-      locked: PropTypes.oneOf(['locked', 'unlocked']).isRequired,
       title: PropTypes.string,
       preferredFirstName: PropTypes.string,
       accountEmail: PropTypes.string.isRequired,
@@ -93,14 +92,6 @@ class DetailViewContents extends React.Component {
             </option>
             <option value="rejected">
               Rejected
-            </option>
-          </FormControl>
-          <FormControl componentClass="select" disabled={!this.state.editing} placeholder={this.props.applicationData.acceptance}>
-            <option value="locked">
-              Locked
-            </option>
-            <option value="unlocked">
-              Unlocked
             </option>
           </FormControl>
           {
