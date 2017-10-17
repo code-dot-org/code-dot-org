@@ -22,7 +22,11 @@ export default storybook => {
               district: 'Ministry of Magic Department of Education',
               school: 'Hogwarts',
               course: 'CS Principles',
-              regionalPartner: 'Order of the Phoenix'
+              regionalPartner: 'Order of the Phoenix',
+              program: 'Advanced Expelliarmus',
+              planToTeachThisYear: 'Yes',
+              rateAbility: '6',
+              canAttendFIT: 'Yes'
             }}
           />
         )
