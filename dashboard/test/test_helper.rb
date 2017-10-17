@@ -46,6 +46,7 @@ require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
 require 'testing/lock_thread'
 require 'testing/transactional_test_case'
+require 'testing/capture_queries'
 
 require 'parallel_tests/test/runtime_logger'
 
@@ -111,6 +112,7 @@ class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
+  include CaptureQueries
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
@@ -228,6 +230,16 @@ class ActiveSupport::TestCase
     Rails.logger.info 'DISCONNECTING DATABASE'
     Rails.logger.info '--------------'
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
+  end
+
+  def setup_script_cache
+    Script.stubs(:should_cache?).returns true
+    Script.clear_cache
+    # turn on the cache (off by default in test env so tests don't confuse each other)
+    Rails.application.config.action_controller.perform_caching = true
+    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
+
+    Rails.cache.clear
   end
 end
 
