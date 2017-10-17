@@ -154,7 +154,9 @@ const blockConversions = Object.freeze({
 
     // ifBlockAhead statements are named "DO" (without the 0), but the default
     // controls_if is modular and so numbers its statements
-    statement.setAttribute('name', 'DO0');
+    if (statement) {
+      statement.setAttribute('name', 'DO0');
+    }
 
     let blockType = title.textContent;
     if (blockTypes[blockType]) {
