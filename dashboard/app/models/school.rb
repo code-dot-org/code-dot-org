@@ -35,8 +35,8 @@ class School < ActiveRecord::Base
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
   def self.find_or_create_all_from_tsv(filename)
-    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      School.where(row.to_hash.symbolize_keys).first_or_create!
+    School.merge_from_csv(filename) do |row|
+      row.to_hash.symbolize_keys
     end
   end
 
