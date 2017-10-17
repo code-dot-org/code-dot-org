@@ -193,10 +193,10 @@ module.exports = {
         $("#design_screen1").click();
         validatePropertyRow(0, 'id', 'screen1', assert);
 
-        // Two buttons, first is color picker, second is default
-        assert.equal($("#design-properties button").length, 1, 'There should be one button');
-        assert.equal($("#design-properties button").first().attr('class'), 'rainbow-gradient',
-          'First button is color picker');
+        // Two buttons, first is duplicate, second is color picker
+        assert.equal($("#design-properties button").length, 2, 'There should be two buttons');
+        assert.equal($("#design-properties button").last().attr('class'), 'rainbow-gradient',
+          'Last button is color picker');
 
         // Change name
         var inputId = $('#design-properties input').first();
@@ -205,7 +205,7 @@ module.exports = {
         assert(document.getElementById('design_renamed_screen'));
 
         // Still can't delete
-        assert.equal($("#design-properties button").length, 1, 'There should be one button');
+        assert.equal($("#design-properties button").length, 2, 'There should be two buttons');
         assert.equal($("#design-properties button:contains('Delete')").length, 0, 'None should say Delete');
 
         // add a completion on timeout since this is a freeplay level
