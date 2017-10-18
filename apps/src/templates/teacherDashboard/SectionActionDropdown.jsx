@@ -25,6 +25,9 @@ const styles = {
     paddingRight: 5,
     color: color.white,
   },
+  actionBox: {
+    position: 'absolute',
+  },
 };
 
 export default class SectionActionDropdown extends Component {
@@ -44,8 +47,15 @@ export default class SectionActionDropdown extends Component {
         rootClose
         placement="bottom"
         onEnter={() => this.setState({selected : true})}
-        onExiting={() => this.setState({selected : false})}
-        overlay={<SectionActionBox sectionData={this.props.sectionData} handleEdit={this.props.handleEdit}/>}
+        onExit={() => this.setState({selected : false})}
+        overlay={
+          <SectionActionBox
+            sectionData={this.props.sectionData}
+            handleEdit={this.props.handleEdit}
+            style={styles.actionBox}
+            ref={actionBox => this.actionBox = actionBox}
+          />
+        }
       >
         <a style={this.state.selected ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}>
           <i className="fa fa-chevron-down"></i>

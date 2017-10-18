@@ -11,7 +11,6 @@ import {sectionCode,
         importOrUpdateRoster} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
 import {pegasus} from "../../lib/util/urlHelpers";
-import {Popover} from 'react-bootstrap';
 import * as utils from '../../utils';
 import BaseDialog from '../BaseDialog';
 import Button from '../Button';
@@ -23,11 +22,14 @@ const styles = {
     paddingRight: 8
   },
   actionBox: {
-    width: 140,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 10,
-    paddingTop: 10,
+    width: 180,
+    paddingLeft: 15,
+    paddingRight: 15,
+    border: '1px solid ' + color.lighter_gray,
+    borderRadius: 2,
+    backgroundColor: color.white,
+    boxShadow: "2px 2px 2px " + color.light_gray,
+    marginTop: 5,
   },
   actionText: {
     fontSize: 14,
@@ -112,93 +114,92 @@ class SectionActionBox extends Component {
 
   onRequestDelete = () => {
     this.setState({deleting: true});
-  }
+  };
 
   render() {
+    const {sectionData} = this.props;
     return (
-      <Popover id="action-options" {...this.props}>
-        <div style={styles.actionBox}>
-          <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id)}>
-            <div style={styles.actionText}>
-              {i18n.sectionViewProgress()}
-            </div>
-          </a>
-          <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + "/manage")}>
-            <div style={styles.actionText}>
-              {i18n.manageStudents()}
-            </div>
-          </a>
-          <a href={pegasus('/teacher-dashboard#/sections/' + this.props.sectionData.id + '/print_signin_cards')}>
-            <div style={styles.actionText}>
-              {i18n.printLoginCards()}
-            </div>
-          </a>
+      <div style={{...styles.actionBox, ...this.props.style}}>
+        <a href={pegasus('/teacher-dashboard#/sections/' + sectionData.id)}>
+          <div style={styles.actionText}>
+            {i18n.sectionViewProgress()}
+          </div>
+        </a>
+        <a href={pegasus('/teacher-dashboard#/sections/' + sectionData.id + "/manage")}>
+          <div style={styles.actionText}>
+            {i18n.manageStudents()}
+          </div>
+        </a>
+        <a href={pegasus('/teacher-dashboard#/sections/' + sectionData.id + '/print_signin_cards')}>
+          <div style={styles.actionText}>
+            {i18n.printLoginCards()}
+          </div>
+        </a>
+        <a>
+          <div style={styles.actionTextBreak} onClick={this.onClickEdit} id="ui-test-edit-section">
+            {i18n.editSectionDetails()}
+          </div>
+        </a>
+        <a>
+          <div style={styles.actionText}>
+            <PrintCertificates
+              sectionId={sectionData.id}
+              assignmentName={sectionData.assignmentNames[0]}
+            />
+          </div>
+        </a>
+        {sectionData.loginType === OAuthSectionTypes.clever &&
           <a>
-            <div style={styles.actionTextBreak} onClick={this.onClickEdit}>
-              {i18n.editSectionDetails()}
+            <div style={styles.actionText} onClick={this.onClickSync}>
+              {i18n.syncClever()}
             </div>
           </a>
+        }
+        {sectionData.loginType === OAuthSectionTypes.google_classroom &&
           <a>
-            <div style={styles.actionText}>
-              <PrintCertificates
-                sectionId={this.props.sectionData.id}
-                assignmentName={this.props.sectionData.assignmentNames[0]}
-              />
+            <div style={styles.actionText} onClick={this.onClickSync}>
+              {i18n.syncGoogleClassroom()}
             </div>
           </a>
-          {this.props.sectionData.loginType === OAuthSectionTypes.clever &&
+        }
+        <a>
+          <div style={styles.actionText} onClick={this.onClickHideShow} id="ui-test-hide-section">
+            {sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
+          </div>
+        </a>
+        {sectionData.studentCount === 0 && (
+          <div>
             <a>
-              <div style={styles.actionText} onClick={this.onClickSync}>
-                {i18n.syncClever()}
+              <div style={styles.archiveDelete} onClick={this.onRequestDelete}>
+                <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+                {i18n.deleteSection()}
               </div>
             </a>
-          }
-          {this.props.sectionData.loginType === OAuthSectionTypes.google_classroom &&
-            <a>
-              <div style={styles.actionText} onClick={this.onClickSync}>
-                {i18n.syncGoogleClassroom()}
-              </div>
-            </a>
-          }
-          <a>
-            <div style={styles.actionText} onClick={this.onClickHideShow}>
-              {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
-            </div>
-          </a>
-          {this.props.sectionData.studentCount === 0 && (
-            <div>
-              <a>
-                <div style={styles.archiveDelete} onClick={this.onRequestDelete}>
-                  <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-                  {i18n.deleteSection()}
-                </div>
-              </a>
-              <BaseDialog
-                useUpdatedStyles
-                uncloseable
-                isOpen = {this.state.deleting}
-                assetUrl={() => ''}
-                style={{padding:20}}
-              >
-                <h2>{i18n.deleteSection()}</h2>
-                <div>{i18n.deleteSectionConfirm()}</div>
-                <br/>
-                <div>{i18n.deleteSectionHideSuggestion()}</div>
-                <DialogFooter>
-                  <Button
-                    text={i18n.dialogCancel()}
-                    onClick={() => {this.setState({deleting: false});}}
-                  />
-                  <Button
-                    text={i18n.delete()}
-                    onClick={this.onConfirmDelete}
-                  />
-                </DialogFooter>
-              </BaseDialog>
-            </div>
-          )}
+            <BaseDialog
+              useUpdatedStyles
+              uncloseable
+              isOpen = {this.state.deleting}
+              assetUrl={() => ''}
+              style={{padding:20}}
+            >
+              <h2>{i18n.deleteSection()}</h2>
+              <div>{i18n.deleteSectionConfirm()}</div>
+              <br/>
+              <div>{i18n.deleteSectionHideSuggestion()}</div>
+              <DialogFooter>
+                <Button
+                  text={i18n.dialogCancel()}
+                  onClick={() => {this.setState({deleting: false});}}
+                />
+                <Button
+                  text={i18n.delete()}
+                  onClick={this.onConfirmDelete}
+                />
+              </DialogFooter>
+            </BaseDialog>
+          </div>
+        )}
         </div>
-      </Popover>
     );
   }
 }
