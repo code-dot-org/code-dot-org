@@ -47,6 +47,9 @@ const blockTypes = Object.freeze({
   water: "dirt",
   grassPath: "dirt",
   snowyGrass: "dirt",
+  tnt: "dirt",
+  tree: "dirt",
+  wool: "dirt",
 
   // Tree parts
   logAcacia: "log2,0",
@@ -86,22 +89,26 @@ const blockConversions = Object.freeze({
   },
 
   craft_placeBlock: function (xml) {
+    const next = getChildNodeByName(xml, 'next');
     return (`
       <block type="craft_place" inline="false">
         <title name="DIR">down</title>
         <value name="SLOTNUM">
           <block type="math_number">
-            <title name="NUM">0</title>
+            <title name="NUM">1</title>
           </block>
         </value>
+        ${next ? serialize(next) : ''}
       </block>
     `);
   },
 
   craft_destroyBlock: function (xml) {
+    const next = getChildNodeByName(xml, 'next');
     return (`
       <block type="craft_destroy">
         <title name="DIR">forward</title>
+        ${next ? serialize(next) : ''}
       </block>
     `);
   },
@@ -151,7 +158,9 @@ const blockConversions = Object.freeze({
 
     // ifBlockAhead statements are named "DO" (without the 0), but the default
     // controls_if is modular and so numbers its statements
-    statement.setAttribute('name', 'DO0');
+    if (statement) {
+      statement.setAttribute('name', 'DO0');
+    }
 
     let blockType = title.textContent;
     if (blockTypes[blockType]) {
