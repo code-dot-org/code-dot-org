@@ -2,8 +2,7 @@ import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import {pageLabels} from './Facilitator1819Labels';
-
-const YES = "Yes";
+import {YES} from '../ApplicationConstants';
 
 export default class Section4FacilitationExperience extends Facilitator1819FormComponent {
   static propTypes = {

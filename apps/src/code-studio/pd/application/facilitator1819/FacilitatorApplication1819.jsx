@@ -45,15 +45,6 @@ export default class FacilitatorApplication1819 extends FormController {
   /**
    * @override
    */
-  serializeFormData() {
-    return {
-      ...super.serializeFormData(),
-    };
-  }
-
-  /**
-   * @override
-   */
   onSuccessfulSubmit() {
     // Let the server display a confirmation page as appropriate
     window.location.reload(true);
