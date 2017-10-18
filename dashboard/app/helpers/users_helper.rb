@@ -16,10 +16,14 @@ module UsersHelper
       user.uid = uid
       user.oauth_token = session['clever_takeover_token']
       user.save
-      session.delete('clever_link_flag')
-      session.delete('clever_takeover_id')
-      session.delete('clever_takeover_token')
+      clear_clever_session_variables
     end
+  end
+
+  def clear_clever_session_variables
+    session.delete('clever_link_flag')
+    session.delete('clever_takeover_id')
+    session.delete('clever_takeover_token')
   end
 
   # Summarize a user and his or her progress progress within a certain script.
