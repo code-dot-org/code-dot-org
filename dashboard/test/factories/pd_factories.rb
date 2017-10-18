@@ -543,7 +543,7 @@ FactoryGirl.define do
         state: 'WA',
         zipCode: '98101',
         genderIdentity: 'Male',
-        race: ['White'],
+        race: ['Other'],
         institutionType: ['Institute of higher education'],
         currentEmployer: 'Gryffindor House',
         jobTitle: 'Keeper of Keys and Grounds of Hogwarts',

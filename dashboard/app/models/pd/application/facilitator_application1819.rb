@@ -129,13 +129,13 @@ module Pd::Application
         csd_csp_teachercon_availability: [
           'TeacherCon 1: June 17 - 22, 2018',
           'TeacherCon 2: July 22 - 27, 2018',
-          "I'm not available for either TeacherCon. (please explain)"
+          "I'm not available for either TeacherCon. (Please Explain)"
         ],
 
         csd_csp_fit_availability: [
           'June 23 - 24, 2018 (immediately following TeacherCon 1)',
           'July 28 - 29, 2018 (immediately following TeacherCon 2)',
-          "I'm not available for either Facilitator-in-Training workshop. (please explain)"
+          "I'm not available for either Facilitator-in-Training workshop. (Please Explain)"
         ],
 
         led_cs_extracurriculars: [

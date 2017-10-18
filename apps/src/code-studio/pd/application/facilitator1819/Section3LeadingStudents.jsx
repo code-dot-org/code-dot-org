@@ -2,9 +2,7 @@ import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import {pageLabels} from './Facilitator1819Labels';
-
-const YES = "Yes";
-const NONE = "None";
+import {YES, NONE} from '../ApplicationConstants';
 
 export default class Section3LeadingStudents extends Facilitator1819FormComponent {
   static propTypes = {

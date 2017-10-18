@@ -17,7 +17,7 @@ const pageLabels = {
     genderIdentity: "Gender Identity",
     race: "Race",
     institutionType: "What type of institution do you work for?",
-    currentEmployer: "Current employer?",
+    currentEmployer: "Current employer",
     jobTitle: "What is your job title?",
     resumeLink: "Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.",
     workedInCsJob: "Have you worked in a job that requires computer science knowledge?",
