@@ -32,7 +32,7 @@ class HocSignup2017 < HocSignup2014
 
   def self.process(data)
     # If there is an nces school id then we need to load that school's address and use it as the event location.
-    # A school id of "-1" indicates that thee school was not found in the school dropdown so we treat that the
+    # A school id of "-1" indicates that the school was not found in the school dropdown so we treat that the
     # same as no school id.
     nces_school_id = data['nces_school_s']
     if nces_school_id && (nces_school_id != "-1")
