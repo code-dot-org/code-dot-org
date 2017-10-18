@@ -3,8 +3,8 @@ import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels
 
 registerGetResult();
 
-$(document).on('click', '.submitButton', function () {
-  var submitButton = $('.submitButton');
+$(document).on('click', '.submitButton', () => {
+  const submitButton = $('.submitButton');
   if (submitButton.attr('disabled')) {
     return;
   }
