@@ -1983,6 +1983,8 @@ en:
         title: title
       Rating Websites: {}
       Recipe Page Example: {}
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
       Responding to User Input: {}
       Rules About Choosing Good IDs:
         description here: description here
@@ -2718,6 +2720,9 @@ en:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
       boolean logic and expressions overview: {}
+      brad-test-continue-buttons-in-markdown:
+        "(Brad) Test continue buttons in markdown": "(Brad) Test continue buttons in markdown"
+        description here: description here
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -3285,6 +3290,8 @@ en:
       subgoal v2 U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       swipeRightPassThrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
+      swipeRightPassThrough-test123:
         Recruitment Scenarios Session: Recruitment Scenarios Session
       test cb level:
         description here: description here
