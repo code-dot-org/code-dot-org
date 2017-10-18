@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import Button from '../Button';
+import i18n from "@cdo/locale";
 
 const styles = {
   reset: {
@@ -46,7 +47,7 @@ class ShowSecret extends Component {
     return (
       <div>
         {!this.state.isShowing &&
-          <Button onClick={this.show} color="white" text="Show secret" />
+          <Button onClick={this.show} color="white" text={i18n.showSecret()} />
         }
         {this.state.isShowing &&
           <div>
@@ -56,8 +57,8 @@ class ShowSecret extends Component {
             {this.props.loginType === 'picture' &&
               <img src={this.props.secretPicture} style={styles.image} />
             }
-            <Button onClick={this.reset} color="blue" text="Reset" style={styles.reset} />
-            <Button onClick={this.hide} color="white" text="Hide secret" />
+            <Button onClick={this.reset} color="blue" text={i18n.reset()} style={styles.reset} />
+            <Button onClick={this.hide} color="white" text={i18n.hideSecret()} />
           </div>
         }
       </div>

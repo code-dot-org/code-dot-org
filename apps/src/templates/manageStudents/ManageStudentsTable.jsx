@@ -5,6 +5,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
+import i18n from "@cdo/locale";
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number,
@@ -20,8 +21,8 @@ export const studentSectionDataPropType = PropTypes.shape({
 });
 
 const GENDERS = {
-  'm': 'Male',
-  'f': 'Female'
+  'm': i18n.genderMale(),
+  'f': i18n.genderFemale()
 };
 
 /** @enum {number} */
@@ -77,8 +78,8 @@ const nameFormatter = function (name, {rowData}) {
   const url = '/teacher-dashboard#/sections/' + rowData.sectionId + '/student/' + rowData.id;
   return (<div>
     <a style={styles.link} href={url} target="_blank">{name}</a>
-    {rowData.loginType === 'password' &&
-      <p>{"Username: " + rowData.username}</p>
+    {rowData.loginType === 'email' &&
+      <p>{i18n.usernameLabel() + rowData.username}</p>
     }
   </div>);
 };
@@ -98,7 +99,7 @@ const genderFormatter = function (gender, {rowData}) {
 const passwordFormatter = function (loginType, {rowData}) {
   return (
     <div>
-      {rowData.loginType === 'password' &&
+      {rowData.loginType === 'email' &&
         <PasswordReset
           resetAction={()=>{}}
           isResetting={false}
@@ -158,12 +159,12 @@ class ManageStudentsTable extends Component {
 
   getColumns = (sortable) => {
     const {loginType} = this.props;
-    const passwordLabel = loginType === 'password' ? 'Password' : 'Secret';
+    const passwordLabel = loginType === 'email' ? i18n.password() : i18n.secret();
     const dataColumns = [
       {
         property: 'name',
         header: {
-          label: 'Name',
+          label: i18n.name(),
           props: {style: {
             ...styles.headerCell,
             ...styles.headerCellFirst
@@ -181,7 +182,7 @@ class ManageStudentsTable extends Component {
       {
         property: 'age',
         header: {
-          label: 'Age',
+          label: i18n.age(),
           props: {style: {
             ...styles.headerCell,
           }},
@@ -197,7 +198,7 @@ class ManageStudentsTable extends Component {
       {
         property: 'gender',
         header: {
-          label: 'Gender',
+          label: i18n.gender(),
           props: {style: {
             ...styles.headerCell,
           }},
@@ -230,7 +231,7 @@ class ManageStudentsTable extends Component {
       {
         property: 'actions',
         header: {
-          label: 'Actions',
+          label: i18n.actions(),
           props: {style: {
             ...styles.headerCell,
           }},
