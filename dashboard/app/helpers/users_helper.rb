@@ -21,6 +21,7 @@ module UsersHelper
   end
 
   def clear_clever_session_variables
+    return if session.empty?
     session.delete('clever_link_flag')
     session.delete('clever_takeover_id')
     session.delete('clever_takeover_token')
