@@ -127,13 +127,71 @@ const pictureAccountData = [
   }
 ];
 
+const googleData = [
+  {
+    id: 1,
+    name: 'Erin',
+    username: 'student1',
+    userType: 'student',
+    age: 13,
+    gender: 'f',
+    loginType: 'google',
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+  },
+  {
+    id: 2,
+    name: 'Dave',
+    username: 'student2',
+    userType: 'student',
+    age: 6,
+    gender: 'm',
+    loginType: 'google',
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+  }
+];
+
+const cleverData = [
+  {
+    id: 1,
+    name: 'Mary',
+    username: 'student1',
+    userType: 'student',
+    age: 13,
+    gender: 'f',
+    loginType: 'clever',
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+  },
+  {
+    id: 2,
+    name: 'Ram',
+    username: 'student2',
+    userType: 'student',
+    age: 6,
+    gender: 'm',
+    loginType: 'clever',
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+  }
+];
+
 export default storybook => {
   storybook
     .storiesOf('ManageStudentsTable', module)
     .addStoryTable([
       {
-        name: 'Manage Students Table',
-        description: 'Table for password accounts',
+        name: 'Table for email accounts',
+        description: 'Ability to edit/delete all data including the password',
         story: () => (
           <ManageStudentsTable
             studentData={passwordAccountData}
@@ -143,8 +201,8 @@ export default storybook => {
         )
       },
       {
-        name: 'Manage Students Table',
-        description: 'Table for word accounts',
+        name: 'Table for word accounts',
+        description: 'Ability to edit/delete all data and reset the secret word',
         story: () => (
           <ManageStudentsTable
             studentData={wordAccountData}
@@ -154,13 +212,35 @@ export default storybook => {
         )
       },
       {
-        name: 'Manage Students Table',
-        description: 'Table for picture accounts',
+        name: 'Table for picture accounts',
+        description: 'Ability to edit/delete all data and reset the secret picture',
         story: () => (
           <ManageStudentsTable
             studentData={pictureAccountData}
             id={53}
             loginType={"picture"}
+          />
+        )
+      },
+      {
+        name: 'Table for Google accounts',
+        description: 'Read only table',
+        story: () => (
+          <ManageStudentsTable
+            studentData={googleData}
+            id={53}
+            loginType={"google"}
+          />
+        )
+      },
+      {
+        name: 'Table for Clever accounts',
+        description: 'Ready only table',
+        story: () => (
+          <ManageStudentsTable
+            studentData={cleverData}
+            id={53}
+            loginType={"clever"}
           />
         )
       },

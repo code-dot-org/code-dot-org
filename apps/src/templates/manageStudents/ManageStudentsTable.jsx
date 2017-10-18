@@ -157,8 +157,9 @@ class ManageStudentsTable extends Component {
   };
 
   getColumns = (sortable) => {
-    const passwordLabel = this.props.loginType === 'password' ? 'Password' : 'Secret';
-    return [
+    const {loginType} = this.props;
+    const passwordLabel = loginType === 'password' ? 'Password' : 'Secret';
+    const dataColumns = [
       {
         property: 'name',
         header: {
@@ -209,6 +210,8 @@ class ManageStudentsTable extends Component {
           }}
         }
       },
+    ];
+    const controlsColumns = [
       {
         property: 'password',
         header: {
@@ -240,6 +243,12 @@ class ManageStudentsTable extends Component {
         }
       },
     ];
+
+    if (loginType === 'word' || loginType === 'picture' || loginType === 'email') {
+      return dataColumns.concat(controlsColumns);
+    } else {
+      return dataColumns;
+    }
   };
 
   render() {
