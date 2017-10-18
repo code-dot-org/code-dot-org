@@ -750,14 +750,6 @@ schafer@pd.code.org
 [/col-33]
 
 [col-33]
-### Meredith Allen
-Fort Dodge, IA
-
-allen@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Cindy Herren
 Waukee, IA
 
@@ -1598,14 +1590,6 @@ dovi@pd.code.org
 
 <a id="wa"></a>
 ## Washington
-[col-33]
-### Cheri Bortleson
-Bellevue, WA
-
-bortleson@pd.code.org
-
-[/col-33]
-
 [col-33]
 ### Valerie Buck
 Issaquah, WA
