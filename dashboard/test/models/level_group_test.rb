@@ -213,8 +213,8 @@ MARKDOWN
     create :user_level, user: teacher, level: level1, level_source: teacher_level_source
 
     # loads student's attempt when current_user and user are provided
-    assert_equal '1', LevelGroup.get_sublevel_last_attempt({}, teacher, student, level1)
+    assert_equal '1', LevelGroup.get_sublevel_last_attempt(teacher, student, level1)
     # loads user's attempt if user provided
-    assert_equal '2', LevelGroup.get_sublevel_last_attempt({}, teacher, nil, level1)
+    assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1)
   end
 end

@@ -197,24 +197,16 @@ ruby
     end.compact
   end
 
-  # @param {Hash} level_group_last_attempt - Result of parsing the last attempt (stored as JSON)
-  #   for the outer level group
   # @param {User} current_user - The currently signed in user
   # @param {User} user - The optional user we're trying to see the attempt of
   # @param {Level} level - The sublevel we'd like the last attempt for
-
-  # TODO: might make more sense to just take single user as input and let caller decide
-  # if that should be user or current_user
-  def self.get_sublevel_last_attempt(level_group_last_attempt, current_user, user, level)
+  def self.get_sublevel_last_attempt(current_user, user, level)
     if user && current_user && user != current_user
       # load other user's solution for teachers viewing their students' solution
       user.last_attempt(level).try(:level_source).try(:data)
     elsif current_user
       # load current_user's previous attempt at this puzzle.
       current_user.last_attempt(level).try(:level_source).try(:data)
-    else
-      # fallback is to retrieve the last_attempt from the parsed level group's last_attempt
-      level_group_last_attempt[level.id.to_s].try(:[], 'result')
     end
   end
 end
