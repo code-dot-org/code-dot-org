@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import Button from '../Button';
+import i18n from "@cdo/locale";
 
 const styles = {
   input: {
@@ -35,9 +36,6 @@ class PasswordReset extends Component {
   };
 
   save = () => {
-    //Todo: do we also want a cancel button?
-
-    //Save the inputted password
     this.props.resetAction(this.state.input);
 
     this.setState({
@@ -56,19 +54,19 @@ class PasswordReset extends Component {
     return (
       <div>
         {!this.state.isResetting &&
-          <Button onClick={this.reset} color="white" text="Reset password" />
+          <Button onClick={this.reset} color="white" text={i18n.resetPassword()} />
         }
         {this.state.isResetting &&
           <div>
             <input
               style={styles.input}
-              placeholder="new password"
+              placeholder={i18n.newPassword()}
               value={this.state.input}
               onChange={this.updateInput}
             />
-            <Button onClick={this.save} color="blue" text="Save" />
+            <Button onClick={this.save} color="blue" text={i18n.save()} />
             <div>
-              <Button onClick={this.cancel} color="white" text="Cancel" />
+              <Button onClick={this.cancel} color="white" text={i18n.cancel()} />
             </div>
           </div>
         }
