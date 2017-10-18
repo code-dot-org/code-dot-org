@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
+import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import i18n from '@cdo/locale';
+import { navigateToHref } from '@cdo/apps/utils';
 
 const styles = {
   container: {
@@ -60,9 +64,16 @@ const styles = {
   }
 };
 
-export default class SignInOrAgeDialog extends Component {
+const sessionStorageKey = 'anon_over13';
+
+class SignInOrAgeDialog extends Component {
   state = {
     open: true
+  };
+
+  static propTypes = {
+    signedIn: PropTypes.bool.isRequired,
+    age13Required: PropTypes.bool.isRequired,
   };
 
   onClickAgeOk = () => {
@@ -73,10 +84,12 @@ export default class SignInOrAgeDialog extends Component {
     }
 
     if (parseInt(value, 10) < 13) {
-      // redirect to /home, with an info warning if possible
-      window.location = '/too_young';
+      // /too_young will redirect to /home, with an info warning if possible
+      navigateToHref('/too_young');
       return;
     }
+
+    sessionStorage.setItem(sessionStorageKey, true);
 
     // Over 13, let them do the tutorial
     this.setState({
@@ -85,7 +98,13 @@ export default class SignInOrAgeDialog extends Component {
   };
 
   render() {
-    // TODO: i18n
+    const { signedIn, age13Required } = this.props;
+    // Don't show dialog unless script requires 13+, we're not signed in, and
+    // we haven't already given this dialog our age
+    if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
+      return null;
+    }
+
     return (
       <BaseDialog
         useUpdatedStyles
@@ -95,15 +114,15 @@ export default class SignInOrAgeDialog extends Component {
       >
         <div style={styles.container}>
           <div style={styles.heading}>
-            Sign in or provide your age to continue
+            {i18n.signinOrAge()}
           </div>
           <div style={styles.middle}>
             <div style={styles.middleCell}>
-              If you want to be able to save your progress, sign in to Code.org.
+              {i18n.signinForProgress()}
               <div style={styles.button}>
                 <Button
                   href="/users/sign_in"
-                  text="Sign in to Code.org"
+                  text={i18n.signinCodeOrg()}
                   color={Button.ButtonColor.gray}
                 />
               </div>
@@ -111,12 +130,12 @@ export default class SignInOrAgeDialog extends Component {
             <div style={styles.center}>
               <div style={styles.centerLine}/>
               <div style={styles.centerText}>
-                or
+                {i18n.or()}
               </div>
               <div style={styles.centerLine}/>
             </div>
             <div style={styles.middleCell}>
-              Provide your age below and click OK to continue.
+              {i18n.provideAge()}
               <div style={styles.age}>
                 <AgeDropdown
                   style={styles.dropdown}
@@ -124,17 +143,24 @@ export default class SignInOrAgeDialog extends Component {
                 />
                 <Button
                   onClick={this.onClickAgeOk}
-                  text="OK"
+                  text={i18n.ok()}
                   color={Button.ButtonColor.gray}
                 />
               </div>
             </div>
           </div>
           <div>
-            <a href="https://code.org/privacy">Our privacy policy</a>
+            <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
           </div>
         </div>
       </BaseDialog>
     );
   }
 }
+
+export const UnconnectedSignInOrAgeDialog = SignInOrAgeDialog;
+
+export default connect(state => ({
+  age13Required: state.progress.isAge13Required,
+  signedIn: state.progress.signInState === SignInState.SignedIn
+}))(SignInOrAgeDialog);
