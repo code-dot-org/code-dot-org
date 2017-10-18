@@ -1,4 +1,5 @@
 require 'aws-sdk'
+require 'tempfile'
 
 module AWS
   module S3
@@ -76,6 +77,26 @@ module AWS
 
     def self.public_url(bucket, filename)
       Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
+    end
+
+    # Processes an S3 file, requires a block to be executed after the data has
+    # been downloaded to the temporary file (passed as argument to the block).
+    # @param bucket [String] The S3 buckt name.
+    # @param key [String] The S3 key.
+    def self.process_file(bucket, key)
+      CDO.log.debug "Processing #{key} from #{bucket}..."
+      temp_file = Tempfile.new(["#{File.basename(key)}."])
+      begin
+        open(temp_file.path, 'wb') do |file|
+          create_client.get_object(bucket: bucket, key: key) do |chunk|
+            file.write(chunk)
+          end
+        end
+        yield temp_file.path
+      ensure
+        temp_file.close
+        temp_file.unlink
+      end
     end
 
     class LogUploader

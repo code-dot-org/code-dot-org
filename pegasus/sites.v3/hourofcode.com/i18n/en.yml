@@ -455,7 +455,7 @@
   footer_menu_terms: 'Terms'
   footer_menu_privacy: 'Privacy Policy'
 
-  learn_banner_heading: 'HOUR of CODE'
+  learn_banner_heading: 'Hour of Code Activities'
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
   learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
   learn_banner_teachers: "Teachers: <a id='teacher_banner_host'>Host an hour</a> or <a id='teacher_banner_howto'>read the How-To Guide</a>"
@@ -2681,7 +2681,7 @@
   census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
   census_topics_blocks: "Block-based programming"
   census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
-  census_topics_robots: "Physical computing/robotics"
+  census_topics_robots: "Robotics / Physical Computing"
   census_topics_internet: "Internet and networking"
   census_topics_security: "Cybersecurity"
   census_topics_data: "Data analysis"

@@ -1,5 +1,4 @@
 - require 'country_codes'
-%script{type: "text/javascript", src: "/js/signup-form.js"}
 - signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
 - signup_submit_census_error_message = hoc_s(:signup_submit_census_error_message).gsub(/"/,"\\\\\"")
 - hoc_year = DCDO.get("hoc_year", 2017)
@@ -52,8 +51,8 @@
         #event-type-error.error-message{style: "display:none;"}
           = hoc_s(:signup_event_type_error)
 
-      -# School lookup autocomplete will go here.
-      -# Until it's ready, default to school name and event location
+      #school-autocomplete{style: "display: none;"}
+        .form-group#school-selector
 
       .form-group#school-name-field{style: "display: none;"}
         %label.control-label{for: "school-name"}
