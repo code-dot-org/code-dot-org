@@ -30,6 +30,21 @@ class HocSignup2017 < HocSignup2014
     result
   end
 
+  def self.process(data)
+    # If there is an nces school id then we need to load that school's address and use it as the event location.
+    # A school id of "-1" indicates that thee school was not found in the school dropdown so we treat that the
+    # same as no school id.
+    nces_school_id = data['nces_school_s']
+    if nces_school_id && (nces_school_id != "-1")
+      # id is the primary key of the schools table so we shouldn't get back more than one row
+      DASHBOARD_DB[:schools].where(id: nces_school_id).each do |school_data|
+        school_address = [school_data[:address_line1], school_data[:address_line2], school_data[:address_line3], school_data[:city], school_data[:state], school_data[:zip]].join(' ')
+        data['event_location_s'] = school_address
+      end
+    end
+    super(data)
+  end
+
   def self.receipt
     if %w(co la pe).include? @country
       'hoc_signup_2017_receipt_es'
