@@ -810,6 +810,9 @@
   "yourSchoolTellUs": "Inis dúinn faoi do scoil",
   "commentPrefix": "Comment:",
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
+  "ok": "OK",
+  "or": "or",
+  "provideAge": "Provide your age below and click OK to continue.",
   "searchForCountry": "Search for your country.",
   "searchForSchool": "Search for your school.",
   "schoolCity": "School City",
@@ -823,5 +826,8 @@
   "schoolTypePublic": "Public",
   "schoolZip": "School Postal Code",
   "schoolNotFound": "My school isn’t listed.",
-  "schoolNotFoundDescription": "Sorry, we couldn't find your school. Please enter information below."
+  "schoolNotFoundDescription": "Sorry, we couldn't find your school. Please enter information below.",
+  "signinCodeOrg": "Sign in to Code.org",
+  "signinForProgress": "If you want to be able to save your progress, sign in to Code.org.",
+  "signinOrAge": "Sign in or provide your age to continue"
 }
