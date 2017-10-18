@@ -630,6 +630,52 @@ module.exports = {
       },
     },
     {
+      description: "duplicate screens",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // enter design mode
+        $("#designModeButton").click();
+        assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
+
+        validatePropertyRow(0, 'id', 'screen1', assert);
+
+        testUtils.dragToVisualization('BUTTON', 10, 10);
+
+        var button = $('#design_button1')[0];
+        assert(button);
+
+        var screenElement = $('#design_screen1')[0];
+        assert.equal(screenElement.children.length, 1);
+
+        // duplicate screen1
+        var duplicateButton = $("#design-properties button").eq(1);
+        assert.equal(duplicateButton.text(), 'Duplicate', 'duplicate button on screen 1 should say duplicate');
+
+        ReactTestUtils.Simulate.click(duplicateButton[0]);
+
+        assert.equal($("#designModeViz").children().length, 2, 'has two screen divs');
+        validatePropertyRow(0, 'id', 'screen2', assert);
+
+        assert.equal($("#screenSelector").children().length, 4);
+        assert.equal($("#screenSelector").children().eq(3).text(), "New screen...");
+
+        // verify there is now a button2 on screen2...
+        var buttonTwo = $('#design_button2')[0];
+        assert(buttonTwo);
+
+        var screenElementTwo = $('#design_screen2')[0];
+        assert.equal(screenElementTwo.children.length, 1);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
       description: "load a level with two screens",
       editCode: true,
       xml: '',
