@@ -181,10 +181,10 @@ const ProjectCard = React.createClass({
   },
 
   render() {
-    const { projectData } = this.props;
+    const { projectData, currentGallery } = this.props;
 
     const {type, channel, name} = this.props.projectData;
-    const url = `/projects/${type}/${channel}`;
+    const url = currentGallery === 'personal' ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
 
     return (
       <div className="project_card">
@@ -193,7 +193,7 @@ const ProjectCard = React.createClass({
             <a
               href={url}
               style={{width: '100%'}}
-              target={this.props.currentGallery === 'public' ? '_blank' : undefined}
+              target={currentGallery === 'public' ? '_blank' : undefined}
             >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
@@ -211,7 +211,7 @@ const ProjectCard = React.createClass({
             {this.renderStudentAgeRange(projectData.studentAgeRange)}
           </span>
 
-          {(this.props.currentGallery !== 'personal' && projectData.publishedAt) &&
+          {(currentGallery !== 'personal' && projectData.publishedAt) &&
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}>
@@ -220,7 +220,7 @@ const ProjectCard = React.createClass({
             </div>
           }
 
-          {(this.props.currentGallery === 'personal' && projectData.updatedAt) &&
+          {(currentGallery === 'personal' && projectData.updatedAt) &&
             <div style={styles.lastEdit}>
               {this.renderArrowIcon()}
               {i18n.projectLastUpdated()}:&nbsp;

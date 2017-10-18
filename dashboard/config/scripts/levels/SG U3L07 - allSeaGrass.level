@@ -130,7 +130,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add 50 pieces of seagrass to the image by writing drawAllSeagrass with a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Add Seagrass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This:\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of seagrass using your updated `drawSeagrass` function.\r\n",
+    "markdown_instructions": "# Add Seagrass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This:\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of seagrass using your updated `drawSeagrass` function.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -151,7 +151,7 @@
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -264,7 +264,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 16:52:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"project_template_level_name\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 16:52:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"project_template_level_name\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 21:33:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

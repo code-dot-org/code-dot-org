@@ -142,19 +142,76 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtonsFromOptions({name, label, type, required}) {
-    if (required === undefined) {
-      required = true;
-    }
-
+  buildButtonsFromOptions({name, label, type, required, ...props}) {
     if (!this.props.options[name] || this.props.options[name].length === 0) {
       throw `Cannot create buttons for ${name} without options`;
+    }
+
+    const answers = this.props.options[name];
+    return this.buildButtons({name, label, type, required, answers, ...props});
+  }
+
+  /**
+   * Construct a controlled radio or checkbox input from the options specified
+   * in this.props with additional text fields on certain answers
+   *
+   * @param {String} name - the name of the input. Should match a key in
+   *        this.props.options
+   * @param {String} label
+   * @param {String} type - should be one of 'radio' or 'check'
+   * @param {boolean} [required=true]
+   * @param {Object} textFieldMap - map specifying which answers should be followed by a text field
+   *        Each key is an answer text from options.
+   *        Each value is the suffix (appended to `${name}_`) which will become the name of the new text field
+   *
+   *        For example, {"Other" : "other"} will add a text field called `${name}_other` after the "Other" option.
+   *
+   * @returns {ButtonList}
+   */
+  buildButtonsWithAdditionalTextFieldsFromOptions({name, label, type, required, textFieldMap, ...props}) {
+    if (!this.props.options[name] || this.props.options[name].length === 0) {
+      throw `Cannot create buttons for ${name} without options`;
+    }
+
+    const answers = this.props.options[name].map(answer => {
+      if (!(answer in textFieldMap)) {
+        return answer;
+      }
+
+      const textFieldName = `${name}_${textFieldMap[answer]}`;
+      return {
+        answerText: answer,
+        inputValue: this.props.data[textFieldName],
+        onInputChange: newValue => this.handleChange({[textFieldName]: newValue})
+      };
+    });
+
+    return this.buildButtons({name, label, type, required, answers, ...props});
+  }
+
+  /**
+   * Construct a controlled radio or checkbox input from the provided options
+   *
+   * @param {String} name - the name of the input. Should match a key in
+   *        this.props.options
+   * @param {String} label
+   * @param {String} type - should be one of 'radio' or 'check'
+   * @param {boolean} [required=true]
+   * @param {Array<String|Object>} answers - list of available answers for the ButtonList.
+   *        These can be strings, or objects which will generate an additional text field.
+   *        See #ButtonList for more details.
+   *
+   * @returns {ButtonList}
+   */
+  buildButtons({name, label, type, required, answers, ...props}) {
+    if (required === undefined) {
+      required = true;
     }
 
     return (
       <ButtonList
         key={name}
-        answers={this.props.options[name]}
+        answers={answers}
         groupName={name}
         label={label}
         onChange={this.handleChange}
@@ -164,6 +221,15 @@ export default class FormComponent extends React.Component {
         type={type}
       />
     );
+  }
+
+  /**
+   * Override in derived classes
+   * @param {Object} data - form data
+   * @returns {String[]} - list of dynamic required fields based on other responses in this page
+   */
+  static getDynamicallyRequiredFields(data) {
+    return [];
   }
 }
 
