@@ -436,7 +436,7 @@ describe('entry tests', () => {
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
-    'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
+    'levels/_dialog':               './src/sites/studio/pages/levels/_dialog.js',
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
