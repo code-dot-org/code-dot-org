@@ -9,6 +9,7 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl, Table} from 'react-bootstrap';
 import {Facilitator1819Program} from './detail_view_facilitator_specific_components';
+import _ from 'lodash';
 
 const renderLineItem = (key, value) => {
   return value && (
@@ -52,17 +53,26 @@ class DetailViewContents extends React.Component {
     })
   }
 
-  state = {}
+  state = {
+    acceptance: this.props.applicationData.acceptance
+  }
 
   handleCancelEditClick = () => {
     this.setState({
-      editing: false
+      editing: false,
+      acceptance: this.props.applicationData.acceptance
     });
   }
 
   handleEditClick = () => {
     this.setState({
       editing: true
+    });
+  }
+
+  handleAcceptanceChange = (event) => {
+    this.setState({
+      acceptance: event.target.value
     });
   }
 
@@ -95,7 +105,12 @@ class DetailViewContents extends React.Component {
         </h1>
 
         <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
-          <FormControl componentClass="select" disabled={!this.state.editing} placeholder={this.props.applicationData.acceptance}>
+          <FormControl
+            componentClass="select"
+            disabled={!this.state.editing}
+            value={this.state.acceptance}
+            onChange={this.handleAcceptanceChange}
+          >
             <option value="accepted">
               Accepted
             </option>
@@ -189,7 +204,17 @@ class DetailViewContents extends React.Component {
                         {response.answer}
                       </td>
                       <td>
-                        {response.score}
+                        <FormControl disabled componentClass="select" value={response.score}>
+                          {
+                            _.range(1,6).map((score) => {
+                              return (
+                                <option key={score} value={score}>
+                                  {score}
+                                </option>
+                              );
+                            })
+                          }
+                        </FormControl>
                       </td>
                     </tr>
                   );
@@ -208,7 +233,7 @@ class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <FormControl componentClass="textarea" disabled={!this.state.editing}>
+        <FormControl disabled={true} componentClass="textarea">
           {this.props.applicationData.notes}
         </FormControl>
       </div>
