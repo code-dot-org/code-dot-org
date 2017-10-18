@@ -242,7 +242,7 @@ class DetailViewContents extends React.Component {
 
   render() {
     return (
-      <div style={{backgroundColor: 'white'}}>
+      <div>
         {this.renderHeader()}
         {
           this.props.applicationData.totalScore && (
