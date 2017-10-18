@@ -1,9 +1,9 @@
 module Pd::Application
-  class FacilitatorApplication1819Mailer < ActionMailer::Base
+  class Facilitator1819ApplicationMailer < ActionMailer::Base
     default from: 'Code.org <facilitators@code.org>'
 
     def confirmation(facilitator_application)
-      raise "Unexpected #{facilitator_application.class}" unless facilitator_application.is_a? FacilitatorApplication1819
+      raise "Unexpected #{facilitator_application.class}" unless facilitator_application.is_a? Facilitator1819Application
 
       @application = facilitator_application
       @signed = facilitator_application.csf? ? 'Jenna Garcia' : 'Sarah Fairweather'
