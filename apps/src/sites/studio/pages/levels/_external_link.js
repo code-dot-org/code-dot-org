@@ -1,7 +1,6 @@
 import { processResults } from  '@cdo/apps/code-studio/levels/dialogHelper';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
-// TODO - see if i need anything else from submissionHelper
 registerGetResult();
 
 $(document).on('click', '.submitButton', function () {
