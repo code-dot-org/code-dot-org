@@ -59,5 +59,8 @@
   "bottomGuidelinesLink": "Cliquez ici pour voir nos critères et les lignes directrices de soumission pour les tutoriels d'heure de Code.",
   "bottomSpecialNeedsLink": "Cliquez ici pour plus d’information concernant le soutien aux élèves ayant des besoins spécifiques.",
   "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All"
+  "filterOrgNamesAll": "All",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular"
 }

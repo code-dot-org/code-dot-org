@@ -42,7 +42,7 @@
   "filterHeaderTutorialCountSingle": "1 परिणाम",
   "filterHeaderTutorialCountPlural": "{tutorial_count} परिणाम",
   "filterHeaderDefault": "क्रम किजीए",
-  "filterHeaderDisplayWeight": "Top rated",
+  "filterHeaderDisplayWeight": "Recommended",
   "filterHeaderPopularityRank": "सर्वाधिक लोकप्रिय",
   "roboticsButtonText": "View robotics activities",
   "roboticsText": "रोबोट मिल गया? इन गतिविधियों का उपयोग करें और एक ठोस घंटे कोड के किसी भी उम्र के छात्रों के लिए बना!",
@@ -59,5 +59,8 @@
   "bottomGuidelinesLink": "Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
   "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students.",
   "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All"
+  "filterOrgNamesAll": "All",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular"
 }

@@ -22,4 +22,8 @@ class Api::V1::Pd::FormsController < ::ApplicationController
       render json: return_data, status: :bad_request
     end
   end
+
+  rescue_from 'ActiveRecord::RecordNotUnique' do
+    head :conflict
+  end
 end

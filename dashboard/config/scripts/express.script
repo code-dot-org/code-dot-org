@@ -1,5 +1,8 @@
 hidden false
 stage_extras_available true
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"This course has recently been updated!", "details"=>"See what changed and how it may affect your classroom.", "link"=>"https://support.code.org/hc/en-us/articles/115001931251", "type"=>"information"}]
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'

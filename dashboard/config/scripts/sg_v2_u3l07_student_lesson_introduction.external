@@ -17,17 +17,17 @@ Students read and use App Lab's API documentation to learn about new turtle comm
 ## New Subgoals and Blocks
 
 
-* Subgoal -Set pen properties
+* Subgoal -`//Set pen properties`
      * **[penUp(image)](//docs.code.org/applab/penUp/)** -`penUp`
      * **[penDown(image)](//docs.code.org/applab/penDown/)** -`penDown`
      * **[rgb()](//docs.code.org/applab/rgb/)** - `rgb()`
      * **[penColor](//docs.code.org/applab/penColor/)** - `penColor`
      * **[penWidth](//docs.code.org/applab/penWidth/)** - `penWidth`
-* Subgoal - Orient turtle
+* Subgoal - `//Orient turtle`
 	*  **[arcRight](//docs.code.org/applab/arcRight/)** - `arcRight`
     *  **[arcLeft](//docs.code.org/applab/arcLeft/)** - `arcLeft`
     *  **[turnTo](//docs.code.org/applab/turnTo/)** - `turnTo`
-* Subgoal - Move turtle
+* Subgoal - `//Move turtle`
 	*  **[moveTo](//docs.code.org/applab/moveTo/)** - `moveTo`
 
 
@@ -48,4 +48,6 @@ Students use it to move the turtle to the edge of the screen in one command.
 Encourage students to read the explanation of the term parameter and not just skip it. It’s an important term to know.
 
 **Terminology:** Parameter is introduced. Students are shown parameterized versions of basic turtle move commands and asked to draw a triangle.
+
+A new subgoal `//Set pen properties` is also introduced, along with its associated blocks that control the properties of the pen (line) on the screen.
 MARKDOWN

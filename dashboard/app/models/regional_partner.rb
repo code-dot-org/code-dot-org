@@ -34,6 +34,7 @@ class RegionalPartner < ActiveRecord::Base
     through: :regional_partner_program_managers
 
   has_many :pd_workshops
+  has_many :mappings, -> {order :state, :zip_code}, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
 
   # Make sure the phone number contains at least 10 digits.
   # Allow any format and additional text, such as extensions.
@@ -51,6 +52,20 @@ class RegionalPartner < ActiveRecord::Base
       regional_partner_id: id,
       program_manager_id: program_manager_id
     )
+  end
+
+  # find a Regional Partner that services a particular region
+  def self.find_by_region(zip_code, state)
+    return RegionalPartner.
+      joins(:mappings).
+      where(pd_regional_partner_mappings: {state: state}).
+      or(
+        joins(:mappings).
+        where(pd_regional_partner_mappings: {zip_code: zip_code})
+      ).
+      # prefer match by zip code when multiple partners cover the same state
+      order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').
+      first
   end
 
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze

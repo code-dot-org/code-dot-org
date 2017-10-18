@@ -31,7 +31,7 @@ export default class SchoolAutocompleteDropdown extends Component {
   }
 
   sendToParent = (event) => {
-    this.props.setField(event);
+    this.props.setField("nces", event);
   }
 
   render() {
@@ -54,7 +54,7 @@ export default class SchoolAutocompleteDropdown extends Component {
           filterOption={() => true}
           value={this.props.value}
           onChange={this.sendToParent}
-          placeholder="Find your school"
+          placeholder={i18n.searchForSchool()}
         />
       </div>
     );

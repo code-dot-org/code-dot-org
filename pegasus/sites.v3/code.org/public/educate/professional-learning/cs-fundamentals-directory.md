@@ -1525,14 +1525,6 @@ style="clear:both">&nbsp;
 <a id="ut"></a>
 ## Utah
 [col-33]
-### Grant Smith
-Park City, UT
-
-gsmith@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Nicole Reitz-Larsen
 Salt Lake City, UT
 

@@ -8,12 +8,22 @@ import {
   HelpBlock
 } from 'react-bootstrap';
 
-const otherString = 'Other: ';
+const otherString = 'Other:';
+
+const styles = {
+  inputLabel: {
+    verticalAlign: 'top',
+    marginRight: 15
+  }
+};
 
 const ButtonList = React.createClass({
   propTypes: {
     type: PropTypes.oneOf(['radio', 'check']).isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element
+    ]).isRequired,
     groupName: PropTypes.string.isRequired,
     answers: PropTypes.arrayOf(
      PropTypes.oneOfType([
@@ -92,15 +102,15 @@ const ButtonList = React.createClass({
         >
           {typeof answer === "object" ?
             <div>
-              <span style={{verticalAlign: 'top'}}>
+              <span style={styles.inputLabel}>
                 {answerText}
               </span>
               &nbsp;
               <input
                 type="text"
-                value={answer.inputValue}
+                value={answer.onInputChange ? answer.inputValue || "" : undefined}
                 id={answer.inputId}
-                maxLength="1000"
+                maxLength="200"
                 onChange={answer.onInputChange ? this.handleAnswerInputChange.bind(this, answer) : undefined}
               />
             </div>

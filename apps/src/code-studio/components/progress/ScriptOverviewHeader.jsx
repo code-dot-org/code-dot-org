@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import ScriptAnnouncements from './ScriptAnnouncements';
+import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import { NotificationType } from '@cdo/apps/templates/Notification';
+import i18n from '@cdo/locale';
 
 /**
  * This component takes some of the HAML generated content on the script overview
@@ -17,7 +23,12 @@ class ScriptOverviewHeader extends Component {
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
       courseViewPath: PropTypes.string.isRequired,
-    })
+    }),
+    announcements: PropTypes.arrayOf(announcementShape),
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isSignedIn: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -25,7 +36,24 @@ class ScriptOverviewHeader extends Component {
   }
 
   render() {
-    const { plcHeaderProps } = this.props;
+    const {
+      plcHeaderProps,
+      announcements,
+      viewAs,
+      isSignedIn,
+      isVerifiedTeacher,
+      hasVerifiedResources,
+    } = this.props;
+
+    let verifiedResourcesAnnounce = [];
+    if (!isVerifiedTeacher && hasVerifiedResources) {
+      verifiedResourcesAnnounce.push({
+        notice: i18n.verifiedResourcesNotice(),
+        details: i18n.verifiedResourcesDetails(),
+        link: "https://support.code.org/hc/en-us/articles/115001550131",
+        type: NotificationType.information,
+      });
+    }
 
     return (
       <div>
@@ -33,6 +61,11 @@ class ScriptOverviewHeader extends Component {
           <PlcHeader
             unit_name={plcHeaderProps.unitName}
             course_view_path={plcHeaderProps.courseViewPath}
+          />
+        }
+        {viewAs === ViewType.Teacher && isSignedIn &&
+          <ScriptAnnouncements
+            announcements={verifiedResourcesAnnounce.concat(announcements)}
           />
         }
         <ProtectedStatefulDiv
@@ -43,6 +76,13 @@ class ScriptOverviewHeader extends Component {
   }
 }
 
+export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
+
 export default connect(state => ({
-  plcHeaderProps: state.plcHeader
+  plcHeaderProps: state.plcHeader,
+  announcements: state.scriptAnnouncements || [],
+  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  viewAs: state.viewAs,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
 }))(ScriptOverviewHeader);

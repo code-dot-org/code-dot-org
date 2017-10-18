@@ -12,7 +12,7 @@ import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
 import { TutorialsSortBy, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
 import { StickyContainer } from 'react-sticky';
@@ -59,7 +59,7 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    const sortBy = TutorialsSortBy.default;
+    const sortBy = this.props.defaultSortBy;
     const orgName = TutorialsOrgName.all;
     const filteredTutorials = this.filterTutorialSet(filters, sortBy, orgName);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
@@ -486,16 +486,12 @@ const TutorialExplorer = React.createClass({
           {this.state.showingAllTutorials && (
             <div ref={allTutorials => this.allTutorials = allTutorials}>
               <FilterHeader
-                onUserInput={this.handleUserInputSortBy}
-                sortBy={this.state.sortBy}
                 backButton={this.props.backButton}
                 filteredTutorialsCount={this.state.filteredTutorialsCount}
                 mobileLayout={this.state.mobileLayout}
                 showingModalFilters={this.state.showingModalFilters}
                 showModalFilters={this.showModalFilters}
                 hideModalFilters={this.hideModalFilters}
-                showSortDropdown={this.props.showSortDropdown}
-                defaultSortBy={this.props.defaultSortBy}
               />
               <div style={{clear: "both"}}/>
 
@@ -503,11 +499,15 @@ const TutorialExplorer = React.createClass({
                 <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
                   <FilterSet
                     uniqueOrgNames={this.getUniqueOrgNames()}
-                    filterGroups={this.props.filterGroups}
-                    onUserInput={this.handleUserInputFilter}
-                    onUserInputOrgName={this.handleUserInputOrgName}
-                    selection={this.state.filters}
                     orgName={this.state.orgName}
+                    showSortDropdown={this.props.showSortDropdown}
+                    defaultSortBy={this.props.defaultSortBy}
+                    sortBy={this.state.sortBy}
+                    filterGroups={this.props.filterGroups}
+                    selection={this.state.filters}
+                    onUserInputFilter={this.handleUserInputFilter}
+                    onUserInputOrgName={this.handleUserInputOrgName}
+                    onUserInputSortBy={this.handleUserInputSortBy}
                     roboticsButtonUrl={this.props.roboticsButtonUrl}
                   />
                 </div>

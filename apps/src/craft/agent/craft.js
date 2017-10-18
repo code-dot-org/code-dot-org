@@ -137,6 +137,9 @@ export default class Craft {
     studioApp().reset = Craft.reset.bind(Craft);
     studioApp().runButtonClick = Craft.runButtonClick.bind(Craft);
 
+    // set initial configurations
+    studioApp().setCheckForEmptyBlocks(true);
+
     Craft.level = config.level;
     Craft.skin = config.skin;
 
@@ -205,6 +208,14 @@ export default class Craft {
                 config.level.puzzle_number,
               ),
               afterAssetsLoaded: function () {
+                // Make the game solvable as soon as it loads.
+                Craft.gameController.codeOrgAPI.startAttempt(success => {
+                  if (Craft.level.freePlay) {
+                    return;
+                  }
+                  Craft.reportResult(success);
+                });
+
                 // preload music after essential game asset downloads completely finished
                 Craft.musicController.preload();
               },
@@ -248,7 +259,10 @@ export default class Craft {
             $('#soft-buttons')
               .removeClass('soft-buttons-none')
               .addClass('soft-buttons-' + 4);
-            $('#soft-buttons').hide();
+            $('.arrow').prop("disabled", false);
+
+            const resetButton = document.getElementById('resetButton');
+            dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
 
             const phaserGame = document.getElementById('phaser-game');
             const onDrag = function (e) {
@@ -319,6 +333,8 @@ export default class Craft {
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
       isMinecraft: true,
+      hideRunButton: config.level.specialLevelType === 'agentSpawn',
+      runButtonText: config.level.agentStartPosition ? craftMsg.runAgent() : undefined,
     });
 
     ReactDOM.render(
@@ -495,15 +511,6 @@ export default class Craft {
     }
   }
 
-  /** Folds array B on top of array A */
-  static foldInArray(arrayA, arrayB) {
-    for (let i = 0; i < arrayA.length; i++) {
-      if (arrayB[i] !== '') {
-        arrayA[i] = arrayB[i];
-      }
-    }
-  }
-
   /**
    * Reset the app to the start position and kill any pending animation tasks.
    * @param {boolean} first true if first reset
@@ -512,10 +519,13 @@ export default class Craft {
     if (first) {
       return;
     }
-    if (Craft.level.usePlayer) {
-      $('#soft-buttons').hide();
-    }
     Craft.gameController.codeOrgAPI.resetAttempt();
+    Craft.gameController.codeOrgAPI.startAttempt(success => {
+      if (Craft.level.freePlay) {
+        return;
+      }
+      Craft.reportResult(success);
+    });
   }
 
   static phaserLoaded() {
@@ -532,23 +542,18 @@ export default class Craft {
   }
 
   /**
+   * Base's `studioApp().resetButtonClick` will be called first.
+   */
+  static resetButtonClick() {
+    $('.arrow').prop("disabled", false);
+  }
+
+  /**
    * Click the run button.  Start the program.
    */
   static runButtonClick() {
     if (!Craft.phaserLoaded()) {
       return;
-    }
-
-    if (Craft.level.usePlayer) {
-      $('#soft-buttons').show();
-    }
-
-    const runButton = document.getElementById('runButton');
-    const resetButton = document.getElementById('resetButton');
-
-    // Ensure that Reset button is at least as wide as Run button.
-    if (!resetButton.style.minWidth) {
-      resetButton.style.minWidth = runButton.offsetWidth + 'px';
     }
 
     studioApp().toggleRunReset('reset');
@@ -677,14 +682,6 @@ export default class Craft {
             dirStringToDirection[direction], targetEntity);
       },
     }, {legacy: true});
-
-    appCodeOrgAPI.startAttempt((success, levelModel) => {
-      $('#soft-buttons').hide();
-      if (Craft.level.freePlay) {
-        return;
-      }
-      Craft.reportResult(success);
-    });
   }
 
   static getTestResultFrom(success, studioTestResults) {

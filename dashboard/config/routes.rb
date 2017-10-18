@@ -239,6 +239,8 @@ Dashboard::Application.routes.draw do
   get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
   get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
   get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
+  post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
+  get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -434,9 +436,9 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 
     get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
-    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
+    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course_to_facilitator'
     # TODO: change remove_course to use http delete method
-    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
+    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
@@ -472,12 +474,12 @@ Dashboard::Application.routes.draw do
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
-  get '/api/script_structure/:script_name', to: 'api#script_structure'
+  get '/api/script_structure/:script', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
+  get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   namespace :api do
     api_methods.each do |action|

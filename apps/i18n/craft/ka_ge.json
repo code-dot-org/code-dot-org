@@ -286,5 +286,6 @@
   "weather": "ამინდი",
   "weatherTypeClear": "გასუფთავება",
   "weatherTypeRain": "წვიმა",
-  "weatherTypeThunder": "მეხი"
+  "weatherTypeThunder": "მეხი",
+  "runAgent": "Run Agent"
 }

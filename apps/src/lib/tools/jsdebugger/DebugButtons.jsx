@@ -5,10 +5,9 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-
 import {actions, selectors} from './redux';
 
-const DebugButtons = connect(
+export default connect(
   state => ({
     isAttached: selectors.isAttached(state),
     isPaused: selectors.isPaused(state),
@@ -20,8 +19,8 @@ const DebugButtons = connect(
     stepOut: actions.stepOut,
     togglePause: actions.togglePause,
   }
-)(React.createClass({
-  propTypes: {
+)(class DebugButtons extends React.Component {
+  static propTypes = {
     style: PropTypes.object,
 
     // from redux
@@ -32,7 +31,7 @@ const DebugButtons = connect(
     isPaused: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
     canRunNext: PropTypes.bool.isRequired,
-  },
+  };
 
   render() {
     const {isAttached, isPaused, canRunNext} = this.props;
@@ -93,7 +92,5 @@ const DebugButtons = connect(
         </div>
       </div>
     );
-  },
-}));
-
-export default DebugButtons;
+  }
+});
