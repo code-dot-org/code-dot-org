@@ -9,7 +9,7 @@ import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLe
 import Section6Logistics from './Section6Logistics';
 import Section7Submission from './Section7Submission';
 
-export default class FacilitatorApplication1819 extends FormController {
+export default class Facilitator1819Application extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     accountEmail: PropTypes.string.isRequired

@@ -28,7 +28,7 @@
 #
 
 module Pd::Application
-  class FacilitatorApplication1819 < ApplicationBase
+  class Facilitator1819Application < ApplicationBase
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = FACILITATOR_APPLICATION
