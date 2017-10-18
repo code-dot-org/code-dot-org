@@ -18,7 +18,15 @@ describe("DetailView", () => {
           program: 'program',
           planToTeachThisYear: 'Yes',
           rateAbility: '10',
-          canAttendFIT: 'Yes'
+          canAttendFIT: 'Yes',
+          responsesForSections: [{
+            sectionName: 'section',
+            responses: [{
+              question: (<span>Question</span>),
+              answer: 'Answer',
+              score: 1
+            }]
+          }]
         }}
         />
       );
