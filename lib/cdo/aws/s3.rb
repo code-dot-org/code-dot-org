@@ -32,20 +32,6 @@ module AWS
       raise NoSuchKey.new("No such key `#{key}'")
     end
 
-    # Downloads the S3 file to a temporary file
-    # @param s3_bucket [String] The S3 buckt name.
-    # @param s3_key [String] The S3 key.
-    # @return The handle to the temporary file.
-    def self.download_to_temp_file(bucket, key)
-      temp_file = Tempfile.new(["#{File.basename(key)}."])
-      open(temp_file.path, 'wb') do |file|
-        create_client.get_object(bucket: bucket, key: key) do |chunk|
-          file.write(chunk)
-        end
-      end
-      return temp_file
-    end
-
     # Returns true iff the specified S3 key exists in bucket
     # @param [String] bucket
     # @param [String] key
@@ -91,6 +77,27 @@ module AWS
 
     def self.public_url(bucket, filename)
       Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
+    end
+
+    # Processes an S3 file, requires a block to be executed after the data has
+    # been downloaded to the temporary file (passed as argument to the block).
+    # @param bucket [String] The S3 buckt name.
+    # @param key [String] The S3 key.
+    # @return The handle to the temporary file.
+    def self.process_file(bucket, key)
+      CDO.log.debug "Processing #{key} from #{bucket}..."
+      temp_file = Tempfile.new(["#{File.basename(key)}."])
+      begin
+        open(temp_file.path, 'wb') do |file|
+          create_client.get_object(bucket: bucket, key: key) do |chunk|
+            file.write(chunk)
+          end
+        end
+        yield temp_file.path
+      ensure
+        temp_file.close
+        temp_file.unlink
+      end
     end
 
     class LogUploader
