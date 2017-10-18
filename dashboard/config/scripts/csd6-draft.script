@@ -21,6 +21,7 @@ named_level 'CSD U6 getProperty Map'
 level 'CSD U6 getProperty Demo', progression: 'Getting and Setting'
 level 'CSD U6 getProperty var', progression: 'Getting and Setting'
 level 'CSD U6 getProperty dropdown', progression: 'Getting and Setting'
+level 'CSD U6 getProperty debug', progression: 'Getting and Setting'
 named_level 'Stop: Review Getters and Setters'
 named_level 'Challenge: Input and UI'
 
