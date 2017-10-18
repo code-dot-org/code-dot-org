@@ -137,6 +137,9 @@ export default class Craft {
     studioApp().reset = Craft.reset.bind(Craft);
     studioApp().runButtonClick = Craft.runButtonClick.bind(Craft);
 
+    // set initial configurations
+    studioApp().setCheckForEmptyBlocks(true);
+
     Craft.level = config.level;
     Craft.skin = config.skin;
 

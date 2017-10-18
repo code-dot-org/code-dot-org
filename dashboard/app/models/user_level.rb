@@ -100,7 +100,7 @@ class UserLevel < ActiveRecord::Base
     end
 
     # Destroy any existing peer reviews
-    if level.try(:peer_reviewable?)
+    if Script.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
   end
@@ -114,6 +114,13 @@ class UserLevel < ActiveRecord::Base
     return false unless stage.lockable?
     return false if user.authorized_teacher?
     submitted? && !readonly_answers? || has_autolocked?(stage)
+  end
+
+  # First ScriptLevel in this Script containing this Level.
+  # Cached equivalent to `level.script_levels.where(script_id: script.id).first`.
+  def script_level
+    s = Script.get_from_cache(script_id)
+    s.script_levels.detect {|sl| sl.level_ids.include? level_id}
   end
 
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)

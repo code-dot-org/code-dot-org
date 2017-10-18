@@ -17,6 +17,7 @@ const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
+const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW = 'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
@@ -49,6 +50,7 @@ const initialState = {
   signInState: SignInState.Unknown,
   postMilestoneDisabled: false,
   isHocScript: null,
+  isAge13Required: false,
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
   isSummaryView: true,
@@ -145,6 +147,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isHocScript: action.isHocScript
+    };
+  }
+
+  if (action.type === SET_IS_AGE_13_REQUIRED) {
+    return {
+      ...state,
+      isAge13Required: action.isAge13Required
     };
   }
 
@@ -293,6 +302,7 @@ export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
 export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
 export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
+export const setIsAge13Required = isAge13Required => ({ type: SET_IS_AGE_13_REQUIRED, isAge13Required });
 export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });
 export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => (
   { type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW, studentDefaultsSummaryView });
