@@ -4,6 +4,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PasswordReset from './PasswordReset';
+import ShowSecret from './ShowSecret';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number,
@@ -76,7 +77,9 @@ const nameFormatter = function (name, {rowData}) {
   const url = '/teacher-dashboard#/sections/' + rowData.sectionId + '/student/' + rowData.id;
   return (<div>
     <a style={styles.link} href={url} target="_blank">{name}</a>
-    <p>{"Username: " + rowData.username}</p>
+    {rowData.loginType === 'password' &&
+      <p>{"Username: " + rowData.username}</p>
+    }
   </div>);
 };
 
@@ -94,22 +97,34 @@ const genderFormatter = function (gender, {rowData}) {
 
 const passwordFormatter = function (loginType, {rowData}) {
   return (
-    <PasswordReset
-      resetAction={()=>{}}
-      isResetting={false}
-    />
+    <div>
+      {rowData.loginType === 'password' &&
+        <PasswordReset
+          resetAction={()=>{}}
+          isResetting={false}
+        />
+      }
+      {rowData.loginType === 'word' &&
+        <ShowSecret
+          resetSecret={()=>{}}
+          isShowing={false}
+          secret={rowData.secretWords}
+        />
+      }
+    </div>
   );
 };
 
 const actionsFormatter = function (actions, {rowData}) {
   return (
-    <div>Edit and delete</div>
+    <div>Edit</div>
   );
 };
 
 class ManageStudentsTable extends Component {
   static propTypes = {
-    studentData: PropTypes.arrayOf(studentSectionDataPropType)
+    studentData: PropTypes.arrayOf(studentSectionDataPropType),
+    loginType: PropTypes.string,
   };
 
   state = {
@@ -140,6 +155,7 @@ class ManageStudentsTable extends Component {
   };
 
   getColumns = (sortable) => {
+    const passwordLabel = this.props.loginType === 'word' ? 'Secret' : 'Password';
     return [
       {
         property: 'name',
@@ -194,7 +210,7 @@ class ManageStudentsTable extends Component {
       {
         property: 'password',
         header: {
-          label: 'Password',
+          label: passwordLabel,
           props: {style: {
             ...styles.headerCell,
           }},
