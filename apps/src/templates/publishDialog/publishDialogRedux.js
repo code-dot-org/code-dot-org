@@ -1,7 +1,9 @@
 import { channels as channelsApi } from '../../clientApi';
 
 // Only these project types can be published.
-export const PUBLISHED_PROJECT_TYPES = ['applab', 'gamelab', 'playlab', 'artist'];
+export const PUBLISHED_PROJECT_TYPES = [
+  'applab', 'gamelab', 'playlab', 'artist', 'gumball'
+];
 
 // Action types
 
