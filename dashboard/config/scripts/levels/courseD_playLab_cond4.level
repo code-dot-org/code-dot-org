@@ -55,7 +55,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-24 18:48:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-24 18:48:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-18 04:23:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "events": 3
@@ -71,6 +71,10 @@
         <block type="studio_whenSpriteCollided">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
+        </block>
+        <block type="studio_whenSpriteAndGroupCollideSimple">
+          <title name="SPRITE">0</title>
+          <title name="SPRITENAME">"ninja"</title>
         </block>
         <block type="studio_move">
           <title name="SPRITE">0</title>
