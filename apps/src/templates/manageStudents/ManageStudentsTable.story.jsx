@@ -85,6 +85,48 @@ const wordAccountData = [
   }
 ];
 
+const pictureAccountData = [
+  {
+    id: 1,
+    name: 'Sarah',
+    username: 'student1',
+    userType: 'student',
+    age: 13,
+    gender: 'f',
+    loginType: 'picture',
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+  },
+  {
+    id: 2,
+    name: 'Brent',
+    username: 'student2',
+    userType: 'student',
+    age: 6,
+    gender: 'm',
+    loginType: 'picture',
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+  },
+  {
+    id: 3,
+    name: 'Marina',
+    username: 'student3',
+    userType: 'student',
+    age: 11,
+    gender: 'f',
+    loginType: 'picture',
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+  }
+];
+
 export default storybook => {
   storybook
     .storiesOf('ManageStudentsTable', module)
@@ -108,6 +150,17 @@ export default storybook => {
             studentData={wordAccountData}
             id={53}
             loginType={"word"}
+          />
+        )
+      },
+      {
+        name: 'Manage Students Table',
+        description: 'Table for picture accounts',
+        story: () => (
+          <ManageStudentsTable
+            studentData={pictureAccountData}
+            id={53}
+            loginType={"picture"}
           />
         )
       },

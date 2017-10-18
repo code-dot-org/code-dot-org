@@ -4,14 +4,19 @@ import Button from '../Button';
 const styles = {
   reset: {
     marginRight: 10,
+  },
+  image: {
+    width: 45
   }
 };
 
 class ShowSecret extends Component {
   static propTypes = {
     isShowing: PropTypes.bool,
-    secret: PropTypes.string.isRequired,
+    secretWord: PropTypes.string.isRequired,
+    secretPicture: PropTypes.string.isRequired,
     resetSecret: PropTypes.func.isRequired,
+    loginType: PropTypes.string.isRequired,
   };
 
   state = {
@@ -45,7 +50,12 @@ class ShowSecret extends Component {
         }
         {this.state.isShowing &&
           <div>
-            <p>{this.props.secret}</p>
+            {this.props.loginType === 'word' &&
+              <p>{this.props.secretWord}</p>
+            }
+            {this.props.loginType === 'picture' &&
+              <img src={this.props.secretPicture} style={styles.image} />
+            }
             <Button onClick={this.reset} color="blue" text="Reset" style={styles.reset} />
             <Button onClick={this.hide} color="white" text="Hide secret" />
           </div>

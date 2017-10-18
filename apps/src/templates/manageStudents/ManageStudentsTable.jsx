@@ -104,11 +104,13 @@ const passwordFormatter = function (loginType, {rowData}) {
           isResetting={false}
         />
       }
-      {rowData.loginType === 'word' &&
+      {(rowData.loginType === 'word' || rowData.loginType === 'picture') &&
         <ShowSecret
           resetSecret={()=>{}}
           isShowing={false}
-          secret={rowData.secretWords}
+          secretWord={rowData.secretWords}
+          secretPicture={rowData.secretPicturePath}
+          loginType={rowData.loginType}
         />
       }
     </div>
@@ -155,7 +157,7 @@ class ManageStudentsTable extends Component {
   };
 
   getColumns = (sortable) => {
-    const passwordLabel = this.props.loginType === 'word' ? 'Secret' : 'Password';
+    const passwordLabel = this.props.loginType === 'password' ? 'Password' : 'Secret';
     return [
       {
         property: 'name',
