@@ -54,15 +54,15 @@ variants
   level 'courseC_video_angles', active: false
 endvariants
 variants
-  level 'courseE_artist_ramp8'
+  level 'courseE_artist_ramp8_2'
   level 'courseE_artist_ramp9', active: false
 endvariants
 variants
-  level 'courseC_video_angles'
+  level 'courseC_video_angles2'
   level 'courseE_artist_predict1', active: false
 endvariants
 variants
-  level 'courseE_artist_ramp9'
+  level 'courseE_artist_ramp9_2'
   level 'courseD_video_nestedLoopsArtist', active: false
 endvariants
 
@@ -119,7 +119,7 @@ stage 'Loops: My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
 stage 'Loops in Artist'
-level 'ramp_video_artistIntro'
+level 'ramp_video_artistIntro2'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
 level 'ramp_video_loopsArtist'

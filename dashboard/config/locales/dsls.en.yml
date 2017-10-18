@@ -1983,6 +1983,8 @@ en:
         title: title
       Rating Websites: {}
       Recipe Page Example: {}
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
       Responding to User Input: {}
       Rules About Choosing Good IDs:
         description here: description here
@@ -2718,6 +2720,9 @@ en:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
       boolean logic and expressions overview: {}
+      brad-test-continue-buttons-in-markdown:
+        "(Brad) Test continue buttons in markdown": "(Brad) Test continue buttons in markdown"
+        description here: description here
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -3285,6 +3290,8 @@ en:
       subgoal v2 U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       swipeRightPassThrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
+      swipeRightPassThrough-test123:
         Recruitment Scenarios Session: Recruitment Scenarios Session
       test cb level:
         description here: description here
@@ -4961,7 +4968,6 @@ en:
         '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"'
         Make a Prediction: Make a Prediction
         Read the code and predict what this app will look like when run.: Read the code and predict what this app will look like when run.
-        When run, what will this app look like?: When run, what will this app look like?
       CSDU4 Screens Predict Multi:
         About: About
         Contact Us: Contact Us
