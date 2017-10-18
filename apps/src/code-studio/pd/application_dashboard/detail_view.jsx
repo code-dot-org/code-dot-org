@@ -197,7 +197,7 @@ class DetailViewContents extends React.Component {
               {
                 section.responses.map((response, j) => {
                   return (
-                    <tr>
+                    <tr key={j}>
                       <td>
                         {response.question}
                         <br/>
@@ -233,9 +233,7 @@ class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <FormControl disabled={true} componentClass="textarea">
-          {this.props.applicationData.notes}
-        </FormControl>
+        <FormControl disabled={true} componentClass="textarea" value={this.props.applicationData.notes}/>
       </div>
     );
   }
