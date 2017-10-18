@@ -43,7 +43,7 @@ class Ability
       :peer_review_submissions,
       RegionalPartner,
       Pd::RegionalPartnerMapping,
-      Pd::Application::FacilitatorApplication1819
+      Pd::Application::Facilitator1819Application
     ]
 
     if user.persisted?
@@ -80,7 +80,7 @@ class Ability
           !script.professional_learning_course?
         end
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
-        can [:new, :create, :read], Pd::Application::FacilitatorApplication1819, user_id: user.id
+        can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
       end
 
       if user.facilitator?
@@ -135,7 +135,7 @@ class Ability
         can :manage, RegionalPartner
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
-        can :manage, Pd::Application::FacilitatorApplication1819
+        can :manage, Pd::Application::Facilitator1819Application
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)

@@ -532,7 +532,7 @@ FactoryGirl.define do
     state 'WA'
   end
 
-  factory :pd_facilitator_application1819_hash, class: 'Hash' do
+  factory :pd_facilitator1819_application_hash, class: 'Hash' do
     initialize_with do
       {
         firstName: 'Rubeus',
@@ -575,10 +575,10 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_facilitator_application1819, class: 'Pd::Application::FacilitatorApplication1819' do
+  factory :pd_facilitator1819_application, class: 'Pd::Application::Facilitator1819Application' do
     association :user, factory: :teacher, strategy: :create
     transient do
-      form_data_hash {build :pd_facilitator_application1819_hash}
+      form_data_hash {build :pd_facilitator1819_application_hash}
     end
     form_data {form_data_hash.to_json}
   end
