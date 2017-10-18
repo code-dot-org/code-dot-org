@@ -5,7 +5,9 @@ import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import ScriptAnnouncements from './ScriptAnnouncements';
+import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
 /**
@@ -22,14 +24,7 @@ class ScriptOverviewHeader extends Component {
       unitName: PropTypes.string.isRequired,
       courseViewPath: PropTypes.string.isRequired,
     }),
-    announcements: PropTypes.arrayOf(
-      PropTypes.shape({
-        notice: PropTypes.string.isRequired,
-        details: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
-      })
-    ),
+    announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
@@ -69,19 +64,9 @@ class ScriptOverviewHeader extends Component {
           />
         }
         {viewAs === ViewType.Teacher && isSignedIn &&
-          verifiedResourcesAnnounce.concat(announcements).map((announcement, index) => (
-            <Notification
-              key={index}
-              type={announcement.type}
-              notice={announcement.notice}
-              details={announcement.details}
-              buttonText={i18n.learnMore()}
-              buttonLink={announcement.link}
-              dismissible={true}
-              isRtl={false}
-              width={1100}
-            />
-          ))
+          <ScriptAnnouncements
+            announcements={verifiedResourcesAnnounce.concat(announcements)}
+          />
         }
         <ProtectedStatefulDiv
           ref={element => this.protected = element}

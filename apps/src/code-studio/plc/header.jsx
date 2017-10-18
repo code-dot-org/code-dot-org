@@ -5,28 +5,28 @@
 import React, {PropTypes} from 'react';
 import color from "../../util/color";
 
-var PlcHeader = React.createClass({
-  propTypes: {
+const breadcrumbStyle = {
+  container: {
+    marginBottom: 20
+  },
+  icon: {
+    margin: 5,
+    color: color.charcoal
+  },
+  currentPage: {
+    color: color.orange
+  }
+};
+
+export default class PlcHeader extends React.Component {
+  static propTypes = {
     unit_name: PropTypes.string,
     unit_view_path: PropTypes.string,
     course_view_path: PropTypes.string,
     page_name: PropTypes.string
-  },
+  };
 
-  render: function () {
-    let breadcrumbStyle = {
-      container: {
-        marginBottom: 20
-      },
-      icon: {
-        margin: 5,
-        color: color.charcoal
-      },
-      currentPage: {
-        color: color.orange
-      }
-    };
-
+  render() {
     return (
       <div style={breadcrumbStyle.container} className="uitest-plcbreadcrumb">
         <a href={this.props.course_view_path}>
@@ -50,10 +50,7 @@ var PlcHeader = React.createClass({
             </span>
           )
         }
-
       </div>
     );
   }
-});
-
-export default PlcHeader;
+}

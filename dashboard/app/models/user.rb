@@ -721,6 +721,14 @@ class User < ActiveRecord::Base
     sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
+  # True if the account is teacher-managed, is in at least one picture section, and
+  # is not in any non-picture sections
+  def secret_picture_account_only?
+    return false unless teacher_managed_account?
+    any_sections = !sections_as_student.empty?
+    any_sections && sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
+  end
+
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
@@ -799,22 +807,22 @@ class User < ActiveRecord::Base
     # TODO(brent): Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
-    levels = script.script_levels.map(&:level_ids).flatten
-    user_levels_by_level = user_levels.
-      where(script_id: script.id, level: levels).
-      index_by(&:level_id)
+    sl_level_ids = script.script_levels.map(&:level_ids).flatten
+    ul_with_sl = user_levels_by_level(script).select do |level_id, _ul|
+      sl_level_ids.include? level_id
+    end
 
     # Find the user_level that we've most recently had progress on
-    user_level = user_levels_by_level.values.max_by(&:updated_at)
+    user_level = ul_with_sl.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
-      last_script_level = user_level.level.script_levels.where(script_id: script.id).first
+      last_script_level = user_level.script_level
       script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
     next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
-      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
 

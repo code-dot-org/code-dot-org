@@ -1026,7 +1026,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
 
     # Test user progress.
-    get :user_progress, params: {script_name: script.name}
+    get :user_progress, params: {script: script.name}
     assert_response :success
 
     body = JSON.parse(response.body)
@@ -1062,7 +1062,7 @@ class ApiControllerTest < ActionController::TestCase
     create :activity, user: user, level: level, level_source: level_source
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1100,7 +1100,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1119,7 +1119,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out user
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1147,7 +1147,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in young_student
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1164,7 +1164,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1183,7 +1183,7 @@ class ApiControllerTest < ActionController::TestCase
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1,
       level: level1a.id

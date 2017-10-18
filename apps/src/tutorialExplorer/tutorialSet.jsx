@@ -5,7 +5,7 @@ import React, {PropTypes} from 'react';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   tutorialSetNoTutorials: {
@@ -16,36 +16,30 @@ const styles = {
   }
 };
 
-const TutorialSet = React.createClass({
-  propTypes: {
+export default class TutorialSet extends React.Component {
+  static propTypes = {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     filters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      showingDetail: false,
-      chosenItem: null
-    };
-  },
+  state = {
+    showingDetail: false,
+    chosenItem: null
+  };
 
-  tutorialClicked(item) {
-    this.setState({showingDetail: true, chosenItem: item});
-  },
+  tutorialClicked = item => this.setState({showingDetail: true, chosenItem: item});
 
-  tutorialDetailClosed() {
-    this.setState({showingDetail: false, chosenItem: null});
-  },
+  tutorialDetailClosed = () => this.setState({showingDetail: false, chosenItem: null});
 
-  changeTutorial(delta) {
+  changeTutorial = (delta) => {
     const index = this.props.tutorials.indexOf(this.state.chosenItem);
     let nextItem = this.props.tutorials[index + delta];
     if (nextItem) {
       this.setState({showingDetail: true, chosenItem: nextItem});
     }
-  },
+  };
 
   render() {
     const disabledTutorial = this.state.showingDetail &&
@@ -77,6 +71,4 @@ const TutorialSet = React.createClass({
       </div>
     );
   }
-});
-
-export default TutorialSet;
+}

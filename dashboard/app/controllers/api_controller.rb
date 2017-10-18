@@ -268,7 +268,7 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Script.get_from_cache(params[:script_name])
+    script = Script.get_from_cache(params[:script])
     render json: script.summarize
   end
 
@@ -282,10 +282,10 @@ class ApiController < ApplicationController
     end
   end
 
-  # Return a JSON summary of the user's progress for params[:script_name].
+  # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     if current_user
-      script = Script.get_from_cache(params[:script_name])
+      script = Script.get_from_cache(params[:script])
       user = params[:user_id] ? User.find(params[:user_id]) : current_user
       render json: summarize_user_progress(script, user)
     else
@@ -301,7 +301,7 @@ class ApiController < ApplicationController
   def user_progress_for_stage
     response = user_summary(current_user)
 
-    script = Script.get_from_cache(params[:script_name])
+    script = Script.get_from_cache(params[:script])
     stage = script.stages[params[:stage_position].to_i - 1]
     script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
@@ -326,7 +326,7 @@ class ApiController < ApplicationController
           response[:pairingAttempt] = edit_level_source_path(recent_attempt)
         elsif level.channel_backed?
           @level = level
-          recent_channel = safe_get_channel_for(level, recent_user) if recent_user
+          recent_channel = get_channel_for(level, recent_user) if recent_user
           response[:pairingChannelId] = recent_channel if recent_channel
         end
       end

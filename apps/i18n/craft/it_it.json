@@ -286,5 +286,6 @@
   "weather": "meteo",
   "weatherTypeClear": "cancella",
   "weatherTypeRain": "pioggia",
-  "weatherTypeThunder": "tuono"
+  "weatherTypeThunder": "tuono",
+  "runAgent": "Run Agent"
 }

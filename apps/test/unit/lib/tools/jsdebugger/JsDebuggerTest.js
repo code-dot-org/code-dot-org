@@ -49,7 +49,9 @@ describe('The JSDebugger component', () => {
         />
       </Provider>
     );
-    jsDebugger = root.find('UnconnectedJsDebugger').get(0);
+    // Get the inner JsDebugger component by name (inside the Radium and
+    // React-Redux wrappers).
+    jsDebugger = root.find('JsDebugger').get(0);
   });
 
   afterEach(() => {

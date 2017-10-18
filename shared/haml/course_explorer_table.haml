@@ -6,7 +6,7 @@
   :css
     .courses .bar-#{n} {
       float: left;
-      width: #{n * 72}px;
+      width: #{n * 74.5}px;
     }
 
 - (0..12).each do |n|
@@ -16,7 +16,7 @@
     }
 
     .arrow-offset-#{n}:after {
-      left: #{n * 72 + 34}px;
+      left: #{n * 74.5 + 34}px;
     }
 
 - (0..4).each do |n|
@@ -258,7 +258,7 @@
               .arrow
                 %i.arrow-down{class: "fa fa-caret-down"}
                 %i.arrow-up{class: "fa fa-caret-up"}
-          %div{style: "width: 935px;"}
+          %div{style: "width: 968px;"}
             - if course_index == index_course_first_same_line
             - elsif course_index == index_course_first_same_line + 1
               = detail_containers[index_course_first_same_line]

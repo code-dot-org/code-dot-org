@@ -10,6 +10,12 @@
       "moveTo": null,
       "dot": null,
       "penUp": null,
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      },
+      "comment_Goals_5": {
+        "goal": "Write a loop"
+      },
       "forLoop_i_0_4": null,
       "randomNumber_min_max": null,
       "penRGB": {
@@ -33,7 +39,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "penUp();\r\nfor (var i = 0; i < 100; i++) {\r\n  penRGB(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255), 0.5);\r\n  moveTo(randomNumber(0,320), randomNumber(0,450));\r\n  dot(randomNumber(1,20));\r\n}",
+    "start_blocks": "//Set pen properties\r\npenUp();\r\n//Write a loop\r\nfor (var i = 0; i < 100; i++) {\r\n  //Set pen properties\r\n  penRGB(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255), 0.5);\r\n  //Move turtle\r\n  moveTo(randomNumber(0,320), randomNumber(0,450));\r\n  dot(randomNumber(1,20));\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -55,7 +61,7 @@
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -77,7 +83,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 16:33:48 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 16:33:48 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 15:11:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"text_mode_at_start\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

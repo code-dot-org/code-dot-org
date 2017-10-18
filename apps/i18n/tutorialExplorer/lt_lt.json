@@ -59,5 +59,8 @@
   "bottomGuidelinesLink": "Spauskite čia, norėdami pamatyti mūsų kriterijus ir pateikimo gaires „Programavimo valandos“ pamokėlėms.",
   "bottomSpecialNeedsLink": "Spauskite čia, norėdami gauti daugiau informacijos apie paramą specialiųjų poreikių mokiniams.",
   "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All"
+  "filterOrgNamesAll": "All",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular"
 }

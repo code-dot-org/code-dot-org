@@ -286,5 +286,6 @@
   "weather": "天気",
   "weatherTypeClear": "クリア",
   "weatherTypeRain": "雨",
-  "weatherTypeThunder": "雷"
+  "weatherTypeThunder": "雷",
+  "runAgent": "Run Agent"
 }

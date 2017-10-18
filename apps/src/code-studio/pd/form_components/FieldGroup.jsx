@@ -65,7 +65,10 @@ FieldGroup.defaultProps = {
 
 FieldGroup.propTypes = {
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
+  ]).isRequired,
   required: PropTypes.bool,
   validationState: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.node),

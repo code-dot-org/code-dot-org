@@ -6,14 +6,14 @@ import React, {PropTypes} from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import FilterChoice from './filterChoice';
 
-const FilterGroup = React.createClass({
-  propTypes: {
+export default class FilterGroup extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     filterEntries: PropTypes.array.isRequired,
     selection: PropTypes.array.isRequired,
     onUserInput: PropTypes.func.isRequired
-  },
+  };
 
   render() {
     return (
@@ -31,6 +31,4 @@ const FilterGroup = React.createClass({
       </FilterGroupContainer>
     );
   }
-});
-
-export default FilterGroup;
+}
