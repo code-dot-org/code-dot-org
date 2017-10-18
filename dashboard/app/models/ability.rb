@@ -40,6 +40,7 @@ class Ability
       :workshop_organizer_survey_report,
       Pd::WorkshopMaterialOrder,
       :pd_workshop_user_management,
+      :pd_workshop_admins,
       :peer_review_submissions,
       RegionalPartner,
       Pd::RegionalPartnerMapping
@@ -130,6 +131,7 @@ class Ability
         can :manage, :pd_teacher_attendance_report
         can :manage, Pd::TeacherApplication
         can :manage, :pd_workshop_user_management
+        can :manage, :pd_workshop_admins
         can :manage, RegionalPartner
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
