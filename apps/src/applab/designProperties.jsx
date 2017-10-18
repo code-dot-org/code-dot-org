@@ -204,9 +204,7 @@ export default class DesignProperties extends React.Component {
                   handleDelete={this.props.onDelete}
                 />
                 }
-                {!isScreen &&
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
-                }
               </div>
               <PropertyComponent
                 element={this.props.element}
