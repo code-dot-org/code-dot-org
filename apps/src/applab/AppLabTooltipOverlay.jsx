@@ -47,8 +47,8 @@ export class AppLabTooltipOverlay extends React.Component {
    * @private
    */
   getHoveredControlId(controlElement) {
-    // Check that the element is a child of a screen
-    if (!controlElement || $(controlElement).parents('div.screen').length === 0) {
+    // Check that the element is a child of designModeViz
+    if (!controlElement || $(controlElement).parents('div#designModeViz').length === 0) {
       return null;
     }
 
