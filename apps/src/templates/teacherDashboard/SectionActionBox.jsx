@@ -180,7 +180,7 @@ class SectionActionBox extends Component {
               uncloseable
               isOpen = {this.state.deleting}
               assetUrl={() => ''}
-              style={{padding:20}}
+              style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
             >
               <h2>{i18n.deleteSection()}</h2>
               <div>{i18n.deleteSectionConfirm()}</div>
@@ -190,10 +190,12 @@ class SectionActionBox extends Component {
                 <Button
                   text={i18n.dialogCancel()}
                   onClick={() => {this.setState({deleting: false});}}
+                  color="gray"
                 />
                 <Button
                   text={i18n.delete()}
                   onClick={this.onConfirmDelete}
+                  color="red"
                 />
               </DialogFooter>
             </BaseDialog>
