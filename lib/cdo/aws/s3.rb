@@ -83,7 +83,6 @@ module AWS
     # been downloaded to the temporary file (passed as argument to the block).
     # @param bucket [String] The S3 buckt name.
     # @param key [String] The S3 key.
-    # @return The handle to the temporary file.
     def self.process_file(bucket, key)
       CDO.log.debug "Processing #{key} from #{bucket}..."
       temp_file = Tempfile.new(["#{File.basename(key)}."])
