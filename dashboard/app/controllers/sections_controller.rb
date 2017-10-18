@@ -27,7 +27,7 @@ class SectionsController < ApplicationController
     section.update!(course_id: course_id, script_id: script_id)
     if script_id
       section.students.each do |student|
-        User.track_script_progress(student.id, script_id)
+        student.assign_script(script)
       end
     end
     render json: {}
