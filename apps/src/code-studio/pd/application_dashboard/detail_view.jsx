@@ -49,7 +49,7 @@ class DetailViewContents extends React.Component {
           score: PropTypes.number.isRequired
         }))
       })),
-      notes: PropTypes.string.isRequired
+      notes: PropTypes.string
     })
   }
 
