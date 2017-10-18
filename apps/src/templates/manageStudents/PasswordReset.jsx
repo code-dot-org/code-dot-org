@@ -27,6 +27,13 @@ class PasswordReset extends Component {
     });
   };
 
+  cancel = () => {
+    this.setState({
+      isResetting: false,
+      input: ''
+    });
+  };
+
   save = () => {
     //Todo: do we also want a cancel button?
 
@@ -60,6 +67,9 @@ class PasswordReset extends Component {
               onChange={this.updateInput}
             />
             <Button onClick={this.save} color="blue" text="Save" />
+            <div>
+              <Button onClick={this.cancel} color="white" text="Cancel" />
+            </div>
           </div>
         }
       </div>
