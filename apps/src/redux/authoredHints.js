@@ -10,6 +10,7 @@ import { bisect } from '../utils';
  * @property {string} hintId
  * @property {string} hintClass
  * @property {string} hintType
+ * @property {?Array<Array>>} hintPath
  * @property {boolean} alreadySeen
  * @property {string} ttsMessage
  * @property {Element} block
