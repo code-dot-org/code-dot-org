@@ -1471,14 +1471,6 @@ reeves@pd.code.org
 <br />
 ### **Houston**
 [col-33]
-### Erica Deakins
-Houston, TX
-
-deakins@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Karen North
 Houston, TX
 
@@ -1491,14 +1483,6 @@ north@pd.code.org
 Houston, TX
 
 hanson@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Sabrina Provencher
-Houston, TX
-
-provencher@pd.code.org
 
 [/col-33]
 
