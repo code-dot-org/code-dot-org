@@ -53,8 +53,7 @@ export default storybook => {
                       Describe your wand
                     </div>
                   ),
-                  answer: 'Well, yer see, it looks like kind of an umbrella sorta thing',
-                  score: 5
+                  answer: 'Well, yer see, it looks like kind of an umbrella sorta thing'
                 }]
               }],
               notes: 'Will require a large bed'
