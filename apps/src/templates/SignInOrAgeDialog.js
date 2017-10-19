@@ -121,7 +121,7 @@ class SignInOrAgeDialog extends Component {
               {i18n.signinForProgress()}
               <div style={styles.button}>
                 <Button
-                  href="/users/sign_in"
+                  href={`/users/sign_in?user_return_to=${location.pathname}`}
                   text={i18n.signinCodeOrg()}
                   color={Button.ButtonColor.gray}
                 />
