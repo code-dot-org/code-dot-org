@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import Button from '../Button';
 import i18n from "@cdo/locale";
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   reset: {
@@ -13,7 +14,7 @@ const styles = {
 
 class ShowSecret extends Component {
   static propTypes = {
-    isShowing: PropTypes.bool,
+    initialIsShowing: PropTypes.bool,
     secretWord: PropTypes.string.isRequired,
     secretPicture: PropTypes.string.isRequired,
     resetSecret: PropTypes.func.isRequired,
@@ -21,7 +22,7 @@ class ShowSecret extends Component {
   };
 
   state = {
-    isShowing: !!this.props.isShowing,
+    isShowing: !!this.props.initialIsShowing,
   };
 
   show = () => {
@@ -47,18 +48,18 @@ class ShowSecret extends Component {
     return (
       <div>
         {!this.state.isShowing &&
-          <Button onClick={this.show} color="white" text={i18n.showSecret()} />
+          <Button onClick={this.show} color={Button.ButtonColor.white} text={i18n.showSecret()} />
         }
         {this.state.isShowing &&
           <div>
-            {this.props.loginType === 'word' &&
+            {this.props.loginType === SectionLoginType.word &&
               <p>{this.props.secretWord}</p>
             }
-            {this.props.loginType === 'picture' &&
+            {this.props.loginType === SectionLoginType.picture &&
               <img src={this.props.secretPicture} style={styles.image} />
             }
-            <Button onClick={this.reset} color="blue" text={i18n.reset()} style={styles.reset} />
-            <Button onClick={this.hide} color="white" text={i18n.hideSecret()} />
+            <Button onClick={this.reset} color={Button.ButtonColor.blue} text={i18n.reset()} style={styles.reset} />
+            <Button onClick={this.hide} color={Button.ButtonColor.white} text={i18n.hideSecret()} />
           </div>
         }
       </div>

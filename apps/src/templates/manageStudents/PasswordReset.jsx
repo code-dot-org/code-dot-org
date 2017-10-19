@@ -6,7 +6,7 @@ const styles = {
   input: {
     width: 100,
     height: 29,
-    marginTop: '-25px',
+    marginTop: -25,
     marginRight: 10,
   }
 };
@@ -14,11 +14,11 @@ const styles = {
 class PasswordReset extends Component {
   static propTypes = {
     resetAction: PropTypes.func.isRequired,
-    isResetting: PropTypes.bool
+    initialIsResetting: PropTypes.bool
   };
 
   state = {
-    isResetting: !!this.props.isResetting,
+    isResetting: !!this.props.initialIsResetting,
     input: ''
   };
 
@@ -54,7 +54,7 @@ class PasswordReset extends Component {
     return (
       <div>
         {!this.state.isResetting &&
-          <Button onClick={this.reset} color="white" text={i18n.resetPassword()} />
+          <Button onClick={this.reset} color={Button.ButtonColor.white} text={i18n.resetPassword()} />
         }
         {this.state.isResetting &&
           <div>
@@ -64,9 +64,9 @@ class PasswordReset extends Component {
               value={this.state.input}
               onChange={this.updateInput}
             />
-            <Button onClick={this.save} color="blue" text={i18n.save()} />
+            <Button onClick={this.save} color={Button.ButtonColor.blue} text={i18n.save()} />
             <div>
-              <Button onClick={this.cancel} color="white" text={i18n.cancel()} />
+              <Button onClick={this.cancel} color={Button.ButtonColor.white} text={i18n.cancel()} />
             </div>
           </div>
         }

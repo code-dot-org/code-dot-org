@@ -5,10 +5,11 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
 
 export const studentSectionDataPropType = PropTypes.shape({
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
   userType: PropTypes.string,
@@ -21,8 +22,8 @@ export const studentSectionDataPropType = PropTypes.shape({
 });
 
 const GENDERS = {
-  'm': i18n.genderMale(),
-  'f': i18n.genderFemale()
+  m: i18n.genderMale(),
+  f: i18n.genderFemale()
 };
 
 /** @enum {number} */
@@ -74,41 +75,41 @@ export const styles = {
 };
 
 // Cell formatters.
-const nameFormatter = function (name, {rowData}) {
-  const url = '/teacher-dashboard#/sections/' + rowData.sectionId + '/student/' + rowData.id;
+const nameFormatter = (name, {rowData}) => {
+  const url = `/teacher-dashboard#/sections/${rowData.sectionId}/student/${rowData.id}`;
   return (<div>
     <a style={styles.link} href={url} target="_blank">{name}</a>
-    {rowData.loginType === 'email' &&
+    {rowData.loginType === SectionLoginType.email &&
       <p>{i18n.usernameLabel() + rowData.username}</p>
     }
   </div>);
 };
 
-const ageFormatter = function (age, {rowData}) {
+const ageFormatter = (age, {rowData}) => {
   return (<div>
     {age}
   </div>);
 };
 
-const genderFormatter = function (gender, {rowData}) {
+const genderFormatter = (gender, {rowData}) => {
   return (<div>
     {GENDERS[gender]}
   </div>);
 };
 
-const passwordFormatter = function (loginType, {rowData}) {
+const passwordFormatter = (loginType, {rowData}) => {
   return (
     <div>
-      {rowData.loginType === 'email' &&
+      {rowData.loginType === SectionLoginType.email &&
         <PasswordReset
           resetAction={()=>{}}
-          isResetting={false}
+          initialIsResetting={false}
         />
       }
-      {(rowData.loginType === 'word' || rowData.loginType === 'picture') &&
+      {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
         <ShowSecret
           resetSecret={()=>{}}
-          isShowing={false}
+          initialIsShowing={false}
           secretWord={rowData.secretWords}
           secretPicture={rowData.secretPicturePath}
           loginType={rowData.loginType}
@@ -118,7 +119,7 @@ const passwordFormatter = function (loginType, {rowData}) {
   );
 };
 
-const actionsFormatter = function (actions, {rowData}) {
+const actionsFormatter = (actions, {rowData}) => {
   return (
     <div>Edit</div>
   );
@@ -159,13 +160,14 @@ class ManageStudentsTable extends Component {
 
   getColumns = (sortable) => {
     const {loginType} = this.props;
-    const passwordLabel = loginType === 'email' ? i18n.password() : i18n.secret();
+    const passwordLabel = loginType === SectionLoginType.email ? i18n.password() : i18n.secret();
     const dataColumns = [
       {
         property: 'name',
         header: {
           label: i18n.name(),
-          props: {style: {
+          props: {
+            style: {
             ...styles.headerCell,
             ...styles.headerCellFirst
           }},
@@ -173,7 +175,8 @@ class ManageStudentsTable extends Component {
         },
         cell: {
           format: nameFormatter,
-          props: {style: {
+          props: {
+            style: {
             ...styles.cell,
             ...styles.cellFirst
           }}
@@ -183,14 +186,16 @@ class ManageStudentsTable extends Component {
         property: 'age',
         header: {
           label: i18n.age(),
-          props: {style: {
+          props: {
+            style: {
             ...styles.headerCell,
           }},
           transforms: [sortable],
         },
         cell: {
           format: ageFormatter,
-          props: {style: {
+          props: {
+            style: {
             ...styles.cell,
           }}
         }
@@ -199,14 +204,16 @@ class ManageStudentsTable extends Component {
         property: 'gender',
         header: {
           label: i18n.gender(),
-          props: {style: {
+          props: {
+            style: {
             ...styles.headerCell,
           }},
           transforms: [sortable],
         },
         cell: {
           format: genderFormatter,
-          props: {style: {
+          props: {
+            style: {
             ...styles.cell,
           }}
         }
@@ -217,13 +224,15 @@ class ManageStudentsTable extends Component {
         property: 'password',
         header: {
           label: passwordLabel,
-          props: {style: {
+          props: {
+            style: {
             ...styles.headerCell,
           }},
         },
         cell: {
           format: passwordFormatter,
-          props: {style: {
+          props: {
+            style: {
             ...styles.cell,
           }}
         }
@@ -232,20 +241,22 @@ class ManageStudentsTable extends Component {
         property: 'actions',
         header: {
           label: i18n.actions(),
-          props: {style: {
+          props: {
+            style: {
             ...styles.headerCell,
           }},
         },
         cell: {
           format: actionsFormatter,
-          props: {style: {
+          props: {
+            style: {
             ...styles.cell,
           }}
         }
       },
     ];
 
-    if (loginType === 'word' || loginType === 'picture' || loginType === 'email') {
+    if (loginType === SectionLoginType.word || loginType === SectionLoginType.picture || loginType === SectionLoginType.email) {
       return dataColumns.concat(controlsColumns);
     } else {
       return dataColumns;
