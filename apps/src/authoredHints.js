@@ -16,6 +16,7 @@ import {
   tryGetSessionStorage,
   trySetSessionStorage,
   showGenericQtip,
+  createEvent,
 } from './utils';
 import msg from '@cdo/locale';
 
@@ -114,7 +115,9 @@ export default class AuthoredHints {
     // Notify game types that implement the `displayHintPath` listener to draw
     // hint paths in the visualization area.
     if (hint.hintPath) {
-      window.dispatchEvent(new CustomEvent('displayHintPath', {detail: hint.hintPath}));
+      const event = createEvent('displayHintPath');
+      event.detail = hint.hintPath;
+      window.dispatchEvent(event);
     }
 
     return hint;
