@@ -1159,6 +1159,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
+  # @returns [Array{CourseData}]
   def assigned_courses
     assigned_courses_data = section_courses.map do |course|
       {
@@ -1171,6 +1173,8 @@ class User < ActiveRecord::Base
     assigned_courses_data
   end
 
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @returns boolean
   def any_visible_assigned_scripts?
     assigned_user_scripts = user_scripts.where("assigned_at")
 
@@ -1179,6 +1183,8 @@ class User < ActiveRecord::Base
     !assigned_visible_scripts.flatten.empty?
   end
 
+  # Checks if there are any non-hidden scripts or courses assigned to the user.
+  # @returns boolean
   def assigned_course_or_script?
     !assigned_courses.empty? || any_visible_assigned_scripts?
   end
@@ -1217,7 +1223,7 @@ class User < ActiveRecord::Base
 
   # Figures out the unique set of courses assigned to sections that this user
   # is a part of.
-  # @return [Array<Course>]
+  # @returns [Array<Course>]
   def section_courses
     all_sections = sections.to_a.concat(sections_as_student).uniq
 
