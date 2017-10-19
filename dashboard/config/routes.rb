@@ -393,7 +393,7 @@ Dashboard::Application.routes.draw do
         post :facilitator, to: 'facilitator_applications#create'
       end
 
-      get :applications, to: 'applications#index'
+      resources :applications, controller: 'applications', only: [:index, :show]
     end
   end
 
