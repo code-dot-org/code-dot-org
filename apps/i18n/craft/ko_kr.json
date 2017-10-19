@@ -287,5 +287,7 @@
   "weatherTypeClear": "맑음",
   "weatherTypeRain": "비",
   "weatherTypeThunder": "천둥번개",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "runAgent": "Run Agent"
 }

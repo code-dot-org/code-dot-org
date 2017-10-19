@@ -1,5 +1,7 @@
 {
   "absolute": "absolute",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "at",
   "blockActionAdd": "add",
   "blockActionAttack": "attack",
