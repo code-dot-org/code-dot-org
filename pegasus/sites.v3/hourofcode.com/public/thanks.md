@@ -27,7 +27,7 @@ social:
 
 # Thanks for signing up to host an Hour of Code!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: you'll need to cover shipping costs. If that is not in your budget, the [PDF files](https://code.org/inspire) are available to print yourself.)<br>
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. If that is not in your budget, the [PDF files](https://code.org/inspire) are available to print yourself.)<br>
 <br>
 [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
@@ -40,9 +40,9 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 <br>
-Encourage others to participate. [Send this email to your principal](<%= resolve_url('/promote/resources#sample-emails') %>) and challenge every classroom at your school to sign up. [Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
-Invite a local politician or policy maker. [Send this email to your local representatives, city council, or school board](<%= resolve_url('/promote/resources#sample-emails') %>)  and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 
 ## 2. Find a local volunteer to help you with your event.
 [Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
