@@ -22,7 +22,6 @@ class FeatureModeManager
   # broken down into gatekeeper_general_settings (which apply to all tutorials) and
   # gatekeeper_hoc_tutorial_settings (which apply to high-scale HOC tutorials only).
   MODE_SETTINGS_MAP = {
-    # 'green'
     normal: {
       gatekeeper_general_settings: {
         puzzle_rating: true,
@@ -42,17 +41,16 @@ class FeatureModeManager
         public_max_age: 6.minutes.to_i,
       }
     },
-    # 'yellow'
     scale: {
       gatekeeper_general_settings: {
         puzzle_rating: false,
-        hint_view_request: false,
+        hint_view_request: true,
         postMilestone: true,
         shareEnabled: true,
         slogging: false
       },
       gatekeeper_hoc_tutorial_settings: {
-        postMilestone: false,
+        postMilestone: true,
         shareEnabled: true,
       },
       dcdo_settings: {
@@ -62,12 +60,11 @@ class FeatureModeManager
         public_max_age: 8.hours.to_i,
       }
     },
-    # 'red'
     emergency: {
       gatekeeper_general_settings: {
         puzzle_rating: false,
         hint_view_request: false,
-        postMilestone: false,
+        postMilestone: true,
         shareEnabled: false,
         slogging: false
       },

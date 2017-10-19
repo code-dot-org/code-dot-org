@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016232750) do
+ActiveRecord::Schema.define(version: 20171018203624) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -826,16 +826,16 @@ ActiveRecord::Schema.define(version: 20171016232750) do
     t.boolean  "grade_12_offered",              null: false, comment: "Grade 12 Offered"
     t.boolean  "grade_13_offered",              null: false, comment: "Grade 13 Offered"
     t.string   "virtual_status",     limit: 14, null: false, comment: "Virtual School Status"
-    t.integer  "students_total",                null: false, comment: "Total students, all grades (includes AE)"
-    t.integer  "student_am_count",              null: false, comment: "All Students - American Indian/Alaska Native"
-    t.integer  "student_as_count",              null: false, comment: "All Students - Asian"
-    t.integer  "student_hi_count",              null: false, comment: "All Students - Hispanic"
-    t.integer  "student_bl_count",              null: false, comment: "All Students - Black"
-    t.integer  "student_wh_count",              null: false, comment: "All Students - White"
-    t.integer  "student_hp_count",              null: false, comment: "All Students - Hawaiian Native/Pacific Islander"
-    t.integer  "student_tr_count",              null: false, comment: "All Students - Two or More Races"
-    t.string   "title_i_status",     limit: 1,  null: false, comment: "TITLE I status (code)"
-    t.integer  "frl_eligible_total",            null: false, comment: "Total of free and reduced-price lunch eligible"
+    t.integer  "students_total",                             comment: "Total students, all grades (includes AE)"
+    t.integer  "student_am_count",                           comment: "All Students - American Indian/Alaska Native"
+    t.integer  "student_as_count",                           comment: "All Students - Asian"
+    t.integer  "student_hi_count",                           comment: "All Students - Hispanic"
+    t.integer  "student_bl_count",                           comment: "All Students - Black"
+    t.integer  "student_wh_count",                           comment: "All Students - White"
+    t.integer  "student_hp_count",                           comment: "All Students - Hawaiian Native/Pacific Islander"
+    t.integer  "student_tr_count",                           comment: "All Students - Two or More Races"
+    t.string   "title_i_status",     limit: 1,               comment: "TITLE I status (code)"
+    t.integer  "frl_eligible_total",                         comment: "Total of free and reduced-price lunch eligible"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id", using: :btree
