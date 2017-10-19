@@ -58,12 +58,12 @@ const styles = {
 /**
  * A set of one or more levels that are part of the same progression
  */
-const ProgressLevelSet = React.createClass({
-  propTypes: {
+export default Radium(class ProgressLevelSet extends React.Component {
+  static propTypes = {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-  },
+  };
 
   render() {
     const { name, levels, disabled } = this.props;
@@ -124,5 +124,3 @@ const ProgressLevelSet = React.createClass({
     );
   }
 });
-
-export default Radium(ProgressLevelSet);
