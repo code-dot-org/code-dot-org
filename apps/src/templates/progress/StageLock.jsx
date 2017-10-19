@@ -25,8 +25,8 @@ const styles = {
   }
 };
 
-const StageLock = React.createClass({
-  propTypes: {
+class StageLock extends React.Component {
+  static propTypes = {
     lesson: lessonType.isRequired,
 
     // redux provided
@@ -35,13 +35,12 @@ const StageLock = React.createClass({
     saving: PropTypes.bool.isRequired,
     openLockDialog: PropTypes.func.isRequired,
     closeLockDialog: PropTypes.func.isRequired,
-  },
+  };
 
-  openLockDialog() {
+  openLockDialog = () => {
     const { openLockDialog, sectionId, lesson } = this.props;
-
     openLockDialog(sectionId, lesson.id);
-  },
+  };
 
   render() {
     const { sectionsAreLoaded, saving, closeLockDialog } = this.props;
@@ -65,7 +64,7 @@ const StageLock = React.createClass({
       </div>
     );
   }
-});
+}
 
 export const UnconnectedStageLock = StageLock;
 export default connect(state => ({
