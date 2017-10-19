@@ -267,6 +267,7 @@ module Poste2
       teacher@code.org
       hadi_partovi@code.org
       survey@code.org
+      facilitators@code.org
     ]
 
     def initialize(settings = nil)
