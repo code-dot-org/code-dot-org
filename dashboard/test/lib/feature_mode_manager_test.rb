@@ -78,11 +78,11 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'hint_view_request', 'script')
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'hint_view_request', nil)
     assert FeatureModeManager.allows(@gatekeeper, 'scale', 'postMilestone', nil)
-    refute FeatureModeManager.allows(@gatekeeper, 'scale', 'postMilestone', 'script')
-    refute FeatureModeManager.allows(@gatekeeper, 'scale', 'hint_view_request', 'script')
-    refute FeatureModeManager.allows(@gatekeeper, 'scale', 'hint_view_request', nil)
+    assert FeatureModeManager.allows(@gatekeeper, 'scale', 'postMilestone', 'script')
+    assert FeatureModeManager.allows(@gatekeeper, 'scale', 'hint_view_request', 'script')
+    assert FeatureModeManager.allows(@gatekeeper, 'scale', 'hint_view_request', nil)
     refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', 'script')
-    refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', nil)
+    assert FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', nil)
     refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'hint_view_request', 'script')
     refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'hint_view_request', nil)
 
@@ -107,9 +107,9 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     scripts = ScriptConfig.scale_mode_scripts
     FeatureModeManager.set_mode('scale', @gatekeeper, @dcdo, scripts)
     refute @gatekeeper.allows('puzzle_rating')
-    refute @gatekeeper.allows('hint_view_request')
+    assert @gatekeeper.allows('hint_view_request')
     scripts.each do |script|
-      refute @gatekeeper.allows('postMilestone', where: {script_name: script})
+      assert @gatekeeper.allows('postMilestone', where: {script_name: script})
       assert @gatekeeper.allows('shareEnabled', where: {script_name: script})
     end
     assert @gatekeeper.allows('postMilestone')
@@ -129,7 +129,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
       refute @gatekeeper.allows('postMilestone', where: {script_name: script})
       refute @gatekeeper.allows('shareEnabled', where: {script_name: script})
     end
-    refute @gatekeeper.allows('postMilestone')
+    assert @gatekeeper.allows('postMilestone')
     refute @gatekeeper.allows('shareEnabled')
     refute @gatekeeper.allows('slogging')
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
