@@ -46,7 +46,7 @@ class DetailViewContents extends React.Component {
         responses: PropTypes.arrayOf(PropTypes.shape({
           question: PropTypes.element.isRequired,
           answer: PropTypes.string.isRequired,
-          score: PropTypes.number.isRequired
+          score: PropTypes.number
         }))
       })),
       notes: PropTypes.string
@@ -188,9 +188,6 @@ class DetailViewContents extends React.Component {
                 <th>
                   Question
                 </th>
-                <th style={{width: '15%'}}>
-                  Score
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -203,7 +200,7 @@ class DetailViewContents extends React.Component {
                         <br/>
                         {response.answer}
                       </td>
-                      <td>
+                      {response.score && (<td>
                         <FormControl disabled componentClass="select" value={response.score}>
                           {
                             _.range(1,6).map((score) => {
@@ -215,7 +212,7 @@ class DetailViewContents extends React.Component {
                             })
                           }
                         </FormControl>
-                      </td>
+                      </td>)}
                     </tr>
                   );
                 })
