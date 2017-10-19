@@ -45,9 +45,9 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       end
       apps_by_status = apps.group_by(&:status)
       apps_by_status.each do |status, apps_with_status|
-        key = "#{app_type[:course]}_#{app_type[:role]}".to_sym
+        key = "#{app_type[:course]}_#{app_type[:role]}"
         application_data[key] = {}
-        application_data[key][status] = apps_with_status.group_by(&:locked?)
+        application_data[key][status] = apps_with_status.group_by {|app| app.locked? ? 'locked' : 'unlocked'}
       end
     end
 
