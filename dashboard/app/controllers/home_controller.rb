@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  include UsersHelper
   before_action :authenticate_user!, only: :gallery_activities
 
   # Don't require an authenticity token on set_locale because we post to that
@@ -39,12 +40,13 @@ class HomeController < ApplicationController
   # Signed out: redirect to /courses
   def index
     if current_user
-      if current_user.student? && current_user.primary_script
+      if current_user.student? && current_user.primary_script && !session['clever_link_flag']
         redirect_to script_path(current_user.primary_script)
       else
         redirect_to '/home'
       end
     else
+      clear_clever_session_variables
       redirect_to '/courses'
     end
   end
