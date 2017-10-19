@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Hammer from 'hammerjs';
 
 import trackEvent from '../../util/trackEvent';
-import { trySetLocalStorage } from '../../utils';
+import { tryGetLocalStorage, trySetLocalStorage } from '../../utils';
 import { singleton as studioApp } from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -222,6 +222,12 @@ export default class Craft {
                   Craft.gameController.levelView.drawHintPath(e.detail);
                 });
 
+                window.addEventListener('craftCollectibleCollected', e => {
+                  if (e.blockType === "diamondMiniblock") {
+                    Craft.setSessionDiamondCollected();
+                  }
+                });
+
                 // preload music after essential game asset downloads completely finished
                 Craft.musicController.preload();
               },
@@ -407,6 +413,33 @@ export default class Craft {
     return (
       window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
     );
+  }
+
+  /**
+   * Get the level IDs for which the player has collected a diamond this
+   * session.
+   *
+   * @return {Number[]} collectedLevels
+   */
+  static getSessionDiamondCollectedLevels() {
+    return JSON.parse(tryGetLocalStorage('craftSessionDiamondCollectedLevels', '[]')) || [];
+  }
+
+  /**
+   * Mark this level as being one for which the player has collected a diamond
+   * this session, if not already marked as such.
+   *
+   * @return {boolean} whether or not the level was newly marked
+   */
+  static setSessionDiamondCollected() {
+    const collectedLevels = Craft.getSessionDiamondCollectedLevels();
+    if (!collectedLevels.includes(Craft.initialConfig.serverLevelId)) {
+      collectedLevels.push(Craft.initialConfig.serverLevelId);
+      trySetLocalStorage('craftSessionDiamondCollectedLevels', JSON.stringify(collectedLevels));
+      return true;
+    }
+
+    return false;
   }
 
   static showPlayerSelectionPopup(onSelectedCallback) {
@@ -728,8 +761,14 @@ export default class Craft {
       message = craftMsg.agentGenericFailureMessage();
     } else if (testResultType === TestResults.TOO_FEW_BLOCKS_FAIL) {
       message = craftMsg.agentTooFewBlocksFailureMessage();
+    } else if (testResultType === TestResults.ALL_PASS) {
+      const collectedLevels = Craft.getSessionDiamondCollectedLevels();
+      if (collectedLevels.includes(Craft.initialConfig.serverLevelId)) {
+        message = craftMsg.agentDiamondPathCongrats({
+          count: collectedLevels.length
+        });
+      }
     }
-
 
     studioApp().report({
       app: 'craft',
