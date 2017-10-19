@@ -303,6 +303,11 @@ export const determineInstructionsConstants = config => {
       shortInstructions2 = substituteInstructionImages(shortInstructions2,
         config.skin.instructions2ImageSubstitutions);
     }
+
+    if (config.skin.replaceInstructions) {
+      longInstructions = config.skin.replaceInstructions(longInstructions);
+      shortInstructions = config.skin.replaceInstructions(shortInstructions);
+    }
   }
 
   // If the level has instructions to show, we will in some situations
