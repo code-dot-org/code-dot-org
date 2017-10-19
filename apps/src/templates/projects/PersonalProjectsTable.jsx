@@ -9,7 +9,7 @@ import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import ProjectActionBox from './ProjectActionBox';
-import {tableLayoutStyles} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -225,11 +225,6 @@ const PersonalProjectsTable = React.createClass({
   },
 
   render() {
-    const sortableOptions = {
-      // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(0, 0, 0, 0.2 )'}
-    };
-
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
