@@ -2041,45 +2041,52 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 'course', assigned_courses[0][:name]
     end
 
-    test "it checks visibility of assigned scripts" do
-      # no assigned scripts
-      assert_equal false, @student.any_visible_assigned_scripts?
-
-      # assigned hidden script
-      hidden_script = create :script, name: 'hidden-script', hidden: true
-      @student.assign_script(hidden_script)
-      assert_equal false, @student.any_visible_assigned_scripts?
-
-      # assigned a hidden script and a visible script
-      visible_script = create :script, name: 'visible-script'
-      @student.assign_script(visible_script)
-      assert_equal true, @student.any_visible_assigned_scripts?
+    test "it checks for assigned scripts, no assigned scripts" do
+      refute @student.any_visible_assigned_scripts?
     end
 
-    test "it checks for assigned courses and scripts" do
-      # no assigned courses, no assigned scripts
-      assert_equal false, @student.assigned_course_or_script?
-
-      # no assigned courses, assigned hidden script
+    test "it checks for assigned scripts, assigned hidden script" do
       hidden_script = create :script, name: 'hidden-script', hidden: true
       @student.assign_script(hidden_script)
-      assert_equal false, @student.assigned_course_or_script?
+      refute @student.any_visible_assigned_scripts?
+    end
 
-      # no assigned courses, assigned visible script
+    test "it checks for assigned scripts, assigned visible script" do
       visible_script = create :script, name: 'visible-script'
       @student.assign_script(visible_script)
-      assert_equal true, @student.assigned_course_or_script?
+      assert @student.any_visible_assigned_scripts?
+    end
 
-      # assigned course, assigned visible script
+    test "it checks for assigned courses and scripts, no course, no script" do
+      refute @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned hidden script" do
+      hidden_script = create :script, name: 'hidden-script', hidden: true
+      @student.assign_script(hidden_script)
+      refute @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned visible script" do
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned course" do
       teacher = create :teacher
       section = create :section, user_id: teacher.id, course: @course
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
-      assert_equal true, @student.assigned_course_or_script?
+      assert @student.assigned_course_or_script?
+    end
 
-      # assigned course, no assigned visible script
-      other_student = create :student
-      Follower.create!(section_id: section.id, student_user_id: other_student.id, user: teacher)
-      assert_equal true, other_student.assigned_course_or_script?
+    test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
+      teacher = create :teacher
+      section = create :section, user_id: teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.assigned_course_or_script?
     end
   end
 
