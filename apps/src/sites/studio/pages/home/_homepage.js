@@ -195,6 +195,7 @@ window.CleverTakeoverManager = function (options) {
 
   function onCancelModal() {
     $("#user_user_type").val("student");
+    $.get("/users/clever_modal_dismissed");
     closeLinkCleverModal();
   }
 
