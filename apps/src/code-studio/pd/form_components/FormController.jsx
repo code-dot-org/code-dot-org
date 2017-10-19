@@ -140,6 +140,11 @@ export default class FormController extends React.Component {
    * @param {Event} event
    */
   handleSubmit(event) {
+    event.preventDefault();
+    if (!this.validateCurrentPageRequiredFields()) {
+      return;
+    }
+
     // clear errors so we can more clearly detect "new" errors and toggle
     // submitting flag so we can prevent duplicate submission
     this.setState({
@@ -285,13 +290,34 @@ export default class FormController extends React.Component {
   validateCurrentPageRequiredFields() {
     const requiredFields = this.getRequiredFields();
     const pageFields = this.getCurrentPageComponent().associatedFields;
+
+    // Trim string values on page, and set empty strings to null
+    const pageData = {};
+    pageFields.forEach(field => {
+      let value = this.state.data[field];
+      if (typeof value === "string") {
+        const trimmedValue = value.trim();
+        pageData[field] = trimmedValue.length > 0 ? trimmedValue : null;
+      } else {
+        pageData[field] = value;
+      }
+    });
+    this.setState({
+      data: {
+        ...this.state.data,
+        ...pageData
+      }
+    });
+
     const pageRequiredFields = pageFields.filter(f => requiredFields.includes(f));
-    const missingRequiredFields = pageRequiredFields.filter(f => !this.state.data[f]);
+    const missingRequiredFields = pageRequiredFields.filter(f => !pageData[f]);
 
     if (missingRequiredFields.length) {
       this.setState({
         errors: missingRequiredFields,
-        errorHeader: "Please fill out all required fields"
+        errorHeader:
+          "Please fill out all required fields. You must correctly fill out this section before moving \
+          on to the next section or going back to edit a previous section."
       });
 
       return false;
