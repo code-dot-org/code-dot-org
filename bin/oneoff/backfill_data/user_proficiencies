@@ -6,7 +6,7 @@
 #
 # The data was generated via the query
 #
-#   CREATE TABLE user_proficiencies_#{start_date}_#{end_date} AS
+#   CREATE TABLE user_proficiencies_#{start_date_short}_#{end_date_short} AS
 #   SELECT
 #     user_levels.user_id,
 #
@@ -68,7 +68,7 @@
 #     SUM(IF(level_concept_difficulties.conditionals = 2, 1, 0)) AS conditionals_d2_count,
 #     SUM(IF(level_concept_difficulties.conditionals = 3, 1, 0)) AS conditionals_d3_count,
 #     SUM(IF(level_concept_difficulties.conditionals = 4, 1, 0)) AS conditionals_d4_count,
-#     SUM(IF(level_concept_difficulties.conditionals = 5, 1, 0)) AS conditionals_d5_count,
+#     SUM(IF(level_concept_difficulties.conditionals = 5, 1, 0)) AS conditionals_d5_count
 #   FROM user_levels
 #   LEFT OUTER JOIN authored_hint_view_requests
 #     ON authored_hint_view_requests.user_id = user_levels.user_id
@@ -81,7 +81,7 @@
 #   INNER JOIN level_concept_difficulties
 #     ON level_concept_difficulties.level_id = user_levels.level_id
 #   WHERE user_levels.best_result = 100
-#     AND user_levels.script_id IN (1, 18, 19, 23)
+#     AND user_levels.script_id IN (238, 239, 240, 241, 258)
 #     AND user_levels.id > #{start_id}
 #     AND user_levels.id < #{end_id}
 #     AND user_levels.created_at > #{start_date}
