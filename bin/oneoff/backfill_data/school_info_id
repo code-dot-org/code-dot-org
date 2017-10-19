@@ -20,7 +20,7 @@ end
 puts "\nPROCESSED SCHOOL_INFO"
 
 puts "\nGETTING USER_IDS"
-user_ids = Pd::Enrollment.with_deleted.select(:user_id).where.not(school_info_id: nil).distinct.pluck(:user_id)
+user_ids = Pd::Enrollment.with_deleted.select(:user_id).where.not(school_info_id: nil).where.not(user_id: nil).distinct.pluck(:user_id)
 
 puts "\nPROCESSING USERS"
 counter = 0
