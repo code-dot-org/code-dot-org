@@ -1,11 +1,5 @@
 #!/usr/bin/env ruby
 
-#
-# Public/Charter School Districts Directory for 2014-2015
-#
-# @see https://nces.ed.gov/ccd/pubagency.asp
-#
-
 require_relative '../../../dashboard/config/environment'
 
 CDO.log = Logger.new(STDOUT)

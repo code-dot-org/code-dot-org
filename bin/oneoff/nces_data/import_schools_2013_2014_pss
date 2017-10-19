@@ -1,11 +1,5 @@
 #!/usr/bin/env ruby
 
-#
-# Private Schools Directory for 2013-2014
-#
-# @see https://nces.ed.gov/surveys/pss/pssdata.asp
-#
-
 require_relative '../../../dashboard/config/environment'
 
 CDO.log = Logger.new(STDOUT)
