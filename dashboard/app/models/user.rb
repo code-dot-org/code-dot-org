@@ -1174,9 +1174,9 @@ class User < ActiveRecord::Base
   def any_visible_assigned_scripts?
     assigned_user_scripts = user_scripts.where("assigned_at")
 
-    assigned_visible_scripts = assigned_user_scripts.map {|user_script| Script.where(id: user_script.script_id, hidden: false)}
+    assigned_visible_scripts = assigned_user_scripts.map {|user_script| Script.where(id: user_script.script_id, hidden: 'false')}
 
-    !assigned_visible_scripts.empty?
+    !assigned_visible_scripts.flatten.empty?
   end
 
   def assigned_course_or_script?
