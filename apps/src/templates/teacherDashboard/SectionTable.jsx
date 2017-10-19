@@ -3,13 +3,11 @@ import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import {Table, sort} from 'reactabular';
 import i18n from '@cdo/locale';
-import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
-import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
-import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionTableButtonCell from "./SectionTableButtonCell";
 import Button from '@cdo/apps/templates/Button';
@@ -26,22 +24,10 @@ export const COLUMNS = {
 };
 
 const styles = {
-  table: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    width: styleConstants['content-width'],
-    backgroundColor: color.table_light_row
-  },
-  headerRow: tableStyles.headerRow,
-  col: tableStyles.col,
-  link: tableStyles.link,
-  headerRowPadding: {
-    paddingTop: 20,
-    paddingBottom: 20,
-    color: color.charcoal,
-  },
-  cell: reactTableStyles.cell,
+  table: tableLayoutStyles.table,
+  headerRow: tableLayoutStyles.headerCell,
+  link: tableLayoutStyles.link,
+  cell: tableLayoutStyles.cell,
   currentUnit: {
     marginTop: 10
   },
@@ -200,7 +186,7 @@ class SectionTable extends Component {
   };
 
   getColumns = (sortable) => {
-    const colHeaderStyle = {...styles.headerRow, ...styles.headerRowPadding};
+    const colHeaderStyle = styles.headerRow;
     const colStyle = {...styles.cell, ...styles.sectionCol};
 
     return [
@@ -287,11 +273,6 @@ class SectionTable extends Component {
   };
 
   render() {
-    const sortableOptions = {
-      // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(148, 156, 162, 0.8 )'}
-    };
-
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
