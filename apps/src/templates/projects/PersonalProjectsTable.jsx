@@ -7,7 +7,8 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
-import QuickActionsCell from './QuickActionsCell';
+import QuickActionsCell from '../tables/QuickActionsCell';
+import ProjectActionBox from './ProjectActionBox';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -107,7 +108,9 @@ const isPublishedFormatter = function (isPublished) {
 
 const actionsFormatter = function (actions, {rowData}) {
   return (
-    <QuickActionsCell projectData={rowData} />
+    <QuickActionsCell>
+      <ProjectActionBox isPublished={rowData.isPublished}/>
+    </QuickActionsCell>
   );
 };
 
