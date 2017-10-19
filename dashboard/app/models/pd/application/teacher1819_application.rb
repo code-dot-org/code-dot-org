@@ -28,10 +28,10 @@
 #
 
 module Pd::Application
-  class FacilitatorApplication1819 < ApplicationBase
+  class Teacher1819Application < ApplicationBase
     def set_type_and_year
       self.application_year = YEAR_18_19
-      self.application_type = FACILITATOR_APPLICATION
+      self.application_type = TEACHER_APPLICATION
     end
   end
 end
