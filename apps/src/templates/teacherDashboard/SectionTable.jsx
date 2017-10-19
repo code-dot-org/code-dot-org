@@ -24,10 +24,6 @@ export const COLUMNS = {
 };
 
 const styles = {
-  table: tableLayoutStyles.table,
-  headerRow: tableLayoutStyles.headerCell,
-  link: tableLayoutStyles.link,
-  cell: tableLayoutStyles.cell,
   currentUnit: {
     marginTop: 10
   },
@@ -59,7 +55,7 @@ const styles = {
 // Cell formatters for sortable SectionTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
-  return <a style={styles.link} href={pegasusUrl}>{rowData.name}</a>;
+  return <a style={tableLayoutStyles.link} href={pegasusUrl}>{rowData.name}</a>;
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
@@ -68,7 +64,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
     <div>
       <a
         href={rowData.assignmentPaths[0]}
-        style={styles.link}
+        style={tableLayoutStyles.link}
       >
         {rowData.assignmentNames[0]}
       </a>
@@ -77,7 +73,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
           <div>{i18n.currentUnit()}</div>
           <a
             href={assignmentPaths[1]}
-            style={styles.link}
+            style={tableLayoutStyles.link}
           >
             {assignmentNames[1]}
           </a>
@@ -109,7 +105,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   } else {
     sectionCode = rowData.code;
   }
-  return <a style={styles.link} href={pegasusUrl}>{sectionCode}</a>;
+  return <a style={tableLayoutStyles.link} href={pegasusUrl}>{sectionCode}</a>;
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
@@ -120,7 +116,7 @@ export const studentsFormatter = function (studentCount, {rowData}) {
       href={pegasusUrl}
       color={Button.ButtonColor.gray}
     /> :
-    <a style={styles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
+    <a style={tableLayoutStyles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
   return studentHtml;
 };
 
@@ -184,9 +180,7 @@ class SectionTable extends Component {
   };
 
   getColumns = (sortable) => {
-    const colHeaderStyle = styles.headerRow;
-    const colStyle = {...styles.cell, ...styles.sectionCol};
-
+    const colStyle = {...tableLayoutStyles.cell, ...styles.sectionCol};
     return [
       {
         //displays nothing, but used as initial sort
@@ -203,7 +197,7 @@ class SectionTable extends Component {
         property: 'name',
         header: {
           label: i18n.section(),
-          props: {style: colHeaderStyle},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
@@ -215,7 +209,7 @@ class SectionTable extends Component {
         property: 'grade',
         header: {
           label: i18n.grade(),
-          props: {style: colHeaderStyle},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
@@ -227,7 +221,7 @@ class SectionTable extends Component {
         property: 'course',
         header: {
           label: i18n.course(),
-          props: {style: {...colHeaderStyle, ...styles.unsortableHeader}},
+          props: {style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}},
         },
         cell: {
           format: courseLinkFormatter,
@@ -238,7 +232,7 @@ class SectionTable extends Component {
         property: 'studentCount',
         header: {
           label: i18n.students(),
-          props: {style: colHeaderStyle},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
@@ -250,7 +244,7 @@ class SectionTable extends Component {
         property: 'loginType',
         header: {
           label: i18n.loginInfo(),
-          props:{style: {...colHeaderStyle, ...styles.unsortableHeader}}
+          props:{style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}}
         },
         cell: {
           format: loginInfoFormatter,
@@ -260,11 +254,11 @@ class SectionTable extends Component {
       {
         property: 'actions',
         header: {
-          props:{style: colHeaderStyle},
+          props:{style: tableLayoutStyles.headerCell},
         },
         cell: {
           format: this.actionCellFormatter,
-          props: {style: {...styles.cell, ...styles.colButton}}
+          props: {style: {...tableLayoutStyles.cell, ...styles.colButton}}
         }
       }
     ];
@@ -284,7 +278,7 @@ class SectionTable extends Component {
     return (
       <Table.Provider
         columns={columns}
-        style={styles.table}
+        style={tableLayoutStyles.table}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />
