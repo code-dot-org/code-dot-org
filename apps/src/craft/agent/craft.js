@@ -722,6 +722,14 @@ export default class Craft {
     // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
     const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
+    let message;
+    if (testResultType === TestResults.APP_SPECIFIC_FAIL) {
+      message = craftMsg.agentGenericFailureMessage();
+    } else if (testResultType === TestResults.TOO_FEW_BLOCKS_FAIL) {
+      message = craftMsg.agentTooFewBlocksFailureMessage();
+    }
+
+
     studioApp().report({
       app: 'craft',
       level: Craft.initialConfig.level.id,
@@ -740,9 +748,10 @@ export default class Craft {
           app: 'craft',
           skin: Craft.initialConfig.skin.id,
           feedbackType: testResultType,
-          response: response,
+          response,
           level: Craft.initialConfig.level,
           defaultToContinue: Craft.shouldDefaultToContinue(testResultType),
+          message,
           appStrings: {
             reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
             nextLevelMsg: craftMsg.nextLevelMsg({
