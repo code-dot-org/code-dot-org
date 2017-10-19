@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+#
+# Public/Charter Schools Directory for 2014-2015
+#
+# @see https://nces.ed.gov/ccd/pubschuniv.asp
+#
+
+require_relative '../../../dashboard/config/environment'
+
+CDO.log = Logger.new(STDOUT)
+
+AWS::S3.process_file('cdo-nces', '2014-2015/ccd/ccd_sch_029_1415_w_0216601a.txt') do |filename|
+  School.transaction do
+    School.merge_from_csv(filename) do |row|
+      {
+        id:                 row['NCESSCH'].to_i.to_s,
+        school_district_id: row['LEAID'].to_i,
+        name:               row['SCH_NAME'].upcase,
+        address_line1:      row['LSTREET1'].to_s.upcase.presence,
+        address_line2:      row['LSTREET2'].to_s.upcase.presence,
+        address_line3:      row['LSTREET3'].to_s.upcase.presence,
+        city:               row['LCITY'].to_s.upcase.presence,
+        state:              row['LSTATE'].to_s.upcase.presence,
+        zip:                row['LZIP'],
+        school_type:        row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public'
+      }
+    end
+  end
+end
+
+tsv_file = School.write_to_csv("#{Dir.tmpdir}/schools.tsv")
+CDO.log.info "Downloaded to: #{tsv_file}"

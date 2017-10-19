@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+#
+# Private Schools Directory for 2013-2014
+#
+# @see https://nces.ed.gov/surveys/pss/pssdata.asp
+#
+
+require_relative '../../../dashboard/config/environment'
+
+CDO.log = Logger.new(STDOUT)
+
+AWS::S3.process_file('cdo-nces', '2013-2014/pss/pss1314_pu.csv') do |filename|
+  School.transaction do
+    School.merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+      {
+        id:                 row['PPIN'],
+        school_district_id: nil,
+        name:               row['PINST'].upcase,
+        address_line1:      row[row['PL_ADD'].nil? ? 'PADDRS' : 'PL_ADD'].to_s.upcase.presence,
+        address_line2:      nil,
+        address_line3:      nil,
+        city:               row[row['PL_CIT'].nil? ? 'PCITY' : 'PL_CIT'].to_s.upcase.presence,
+        state:              row[row['PL_STABB'].nil? ? 'PSTABB' : 'PL_STABB'].to_s.upcase.presence,
+        zip:                row[row['PL_ZIP'].nil? ? 'PZIP' : 'PL_ZIP'],
+        school_type:        'private'
+      }
+    end
+  end
+end
+
+tsv_file = School.write_to_csv("#{Dir.tmpdir}/schools.tsv")
+CDO.log.info "Downloaded to: #{tsv_file}"
