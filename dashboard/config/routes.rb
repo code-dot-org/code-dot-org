@@ -392,6 +392,8 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
       end
+
+      get :applications, to: 'applications#index'
     end
   end
 
