@@ -9,6 +9,7 @@ import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import ProjectActionBox from './ProjectActionBox';
+import {tableLayoutStyles} from "../tables/tableConstants";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -25,35 +26,12 @@ export const COLUMNS = {
 };
 
 export const styles = {
-  table: {
-    width: 970,
-    borderRadius: 5,
-    color: color.charcoal,
-    backgroundColor: color.table_light_row
-  },
-  cell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 10,
-    fontSize: 14,
-  },
-  headerCell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal
-  },
   cellThumbnail: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
     padding: 2
   },
   headerCellThumbnail: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
     padding: 0
   },
   cellName: {
@@ -78,12 +56,6 @@ export const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  link: {
-    color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    textDecoration: 'none'
   }
 };
 
@@ -99,7 +71,7 @@ const thumbnailFormatter = function (thumbnailUrl) {
 
 const nameFormatter = function (name, {rowData}) {
   const url = '/projects/${rowData.type}/${rowData.channel}/';
-  return <a style={styles.link} href={url} target="_blank">{name}</a>;
+  return <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>;
 };
 
 const isPublishedFormatter = function (isPublished) {
@@ -166,14 +138,16 @@ const PersonalProjectsTable = React.createClass({
         property: 'thumbnailUrl',
         header: {
           props: {style: {
-            ...styles.headerCell,
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.headerCellFirst,
             ...styles.headerCellThumbnail
           }},
         },
         cell: {
           format: thumbnailFormatter,
           props: {style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
+            ...tableLayoutStyles.cellFirst,
             ...styles.cellThumbnail
           }}
         }
@@ -183,14 +157,14 @@ const PersonalProjectsTable = React.createClass({
         header: {
           label: i18n.projectName(),
           props: {style: {
-            ...styles.headerCell,
+            ...tableLayoutStyles.headerCell,
             ...styles.headerCellName
           }},
         },
         cell: {
           format: nameFormatter,
           props: {style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
             ...styles.cellName
           }}
         }
@@ -199,14 +173,14 @@ const PersonalProjectsTable = React.createClass({
         property: 'type',
         header: {
           label: i18n.projectType(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
           format: typeFormatter,
           props: {style: {
             ...styles.cellType,
-            ...styles.cell
+            ...tableLayoutStyles.cell
           }}
         }
       },
@@ -214,24 +188,24 @@ const PersonalProjectsTable = React.createClass({
         property: 'updatedAt',
         header: {
           label: i18n.lastEdited(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
           format: dateFormatter,
-          props: {style: styles.cell}
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
         property: 'isPublished',
         header: {
           label: i18n.publicGallery(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           format: isPublishedFormatter,
           props: {style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
             ...styles.cellIsPublished
           }}
         }
@@ -240,11 +214,11 @@ const PersonalProjectsTable = React.createClass({
         property: 'actions',
         header: {
           label: i18n.quickActions(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           format: actionsFormatter,
-          props: {style: styles.cell}
+          props: {style: tableLayoutStyles.cell}
         }
       }
     ];
@@ -270,7 +244,7 @@ const PersonalProjectsTable = React.createClass({
     return (
       <Table.Provider
         columns={columns}
-        style={styles.table}
+        style={tableLayoutStyles.table}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="channel" />

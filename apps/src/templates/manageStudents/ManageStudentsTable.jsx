@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import color from "../../util/color";
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -7,6 +6,7 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
+import {tableLayoutStyles} from "../tables/tableConstants";
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -35,50 +35,11 @@ export const COLUMNS = {
   ACTIONS: 4,
 };
 
-export const styles = {
-  table: {
-    width: 970,
-    borderRadius: 5,
-    color: color.charcoal,
-    backgroundColor: color.table_light_row
-  },
-  cell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 10,
-    fontSize: 14,
-  },
-  headerCell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal
-  },
-  cellFirst: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
-    padding: 15,
-    width: 270
-  },
-  headerCellFirst: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
-    padding: 15
-  },
-  link: {
-    color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    textDecoration: 'none'
-  },
-};
-
 // Cell formatters.
 const nameFormatter = (name, {rowData}) => {
   const url = `/teacher-dashboard#/sections/${rowData.sectionId}/student/${rowData.id}`;
   return (<div>
-    <a style={styles.link} href={url} target="_blank">{name}</a>
+    <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>
     {rowData.loginType === SectionLoginType.email &&
       <p>{i18n.usernameLabel() + rowData.username}</p>
     }
@@ -168,8 +129,8 @@ class ManageStudentsTable extends Component {
           label: i18n.name(),
           props: {
             style: {
-            ...styles.headerCell,
-            ...styles.headerCellFirst
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.headerCellFirst
           }},
           transforms: [sortable],
         },
@@ -177,8 +138,8 @@ class ManageStudentsTable extends Component {
           format: nameFormatter,
           props: {
             style: {
-            ...styles.cell,
-            ...styles.cellFirst
+            ...tableLayoutStyles.cell,
+            ...tableLayoutStyles.cellFirst
           }}
         }
       },
@@ -188,7 +149,7 @@ class ManageStudentsTable extends Component {
           label: i18n.age(),
           props: {
             style: {
-            ...styles.headerCell,
+            ...tableLayoutStyles.headerCell,
           }},
           transforms: [sortable],
         },
@@ -196,7 +157,7 @@ class ManageStudentsTable extends Component {
           format: ageFormatter,
           props: {
             style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
           }}
         }
       },
@@ -206,7 +167,7 @@ class ManageStudentsTable extends Component {
           label: i18n.gender(),
           props: {
             style: {
-            ...styles.headerCell,
+            ...tableLayoutStyles.headerCell,
           }},
           transforms: [sortable],
         },
@@ -214,7 +175,7 @@ class ManageStudentsTable extends Component {
           format: genderFormatter,
           props: {
             style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
           }}
         }
       },
@@ -226,14 +187,14 @@ class ManageStudentsTable extends Component {
           label: passwordLabel,
           props: {
             style: {
-            ...styles.headerCell,
+            ...tableLayoutStyles.headerCell,
           }},
         },
         cell: {
           format: passwordFormatter,
           props: {
             style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
           }}
         }
       },
@@ -243,14 +204,14 @@ class ManageStudentsTable extends Component {
           label: i18n.actions(),
           props: {
             style: {
-            ...styles.headerCell,
+            ...tableLayoutStyles.headerCell,
           }},
         },
         cell: {
           format: actionsFormatter,
           props: {
             style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
           }}
         }
       },
@@ -283,7 +244,7 @@ class ManageStudentsTable extends Component {
     return (
       <Table.Provider
         columns={columns}
-        style={styles.table}
+        style={tableLayoutStyles.table}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="name" />
