@@ -26,10 +26,15 @@ class Stage < ActiveRecord::Base
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
+  include SerializedProperties
 
   has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
+
+  serialized_attrs %w(
+    stage_extras_disabled
+  )
 
   # A stage has an absolute position and a relative position. The difference between the two is that relative_position
   # only accounts for other stages that have the same lockable setting, so if we have two lockable stages followed
