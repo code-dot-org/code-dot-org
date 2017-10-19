@@ -1189,6 +1189,12 @@ class User < ActiveRecord::Base
   def recent_courses_and_scripts(exclude_primary_script)
     primary_script_id = primary_script.try(:id)
 
+    # Filter out user_scripts that are already covered by a course
+    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+
+    user_scripts = in_progress_and_completed_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
