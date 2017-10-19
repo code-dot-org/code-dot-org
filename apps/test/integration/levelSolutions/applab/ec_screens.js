@@ -630,6 +630,57 @@ module.exports = {
       },
     },
     {
+      description: "duplicate screens",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // enter design mode
+        $("#designModeButton").click();
+        assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
+
+        validatePropertyRow(0, 'id', 'screen1', assert);
+
+        testUtils.dragToVisualization('BUTTON', 10, 10);
+
+        const button = $('#design_button1')[0];
+        assert(button);
+
+        const screenElement = $('#design_screen1')[0];
+        assert.equal(screenElement.children.length, 1);
+
+        // duplicate screen1
+        ReactTestUtils.Simulate.change($('div#emptyTab').children().children('select')[0],
+          { target: { value: 'screen1' } });
+
+        validatePropertyRow(0, 'id', 'screen1', assert);
+
+        const duplicateButton = $("#design-properties button").eq(0);
+        assert.equal(duplicateButton.text(), 'Duplicate', 'duplicate button on screen 1 should say duplicate');
+
+        ReactTestUtils.Simulate.click(duplicateButton[0]);
+
+        assert.equal($("#designModeViz").children().length, 2, 'has two screen divs');
+        validatePropertyRow(0, 'id', 'button2', assert);
+
+        assert.equal($("#screenSelector").children().length, 4);
+        assert.equal($("#screenSelector").children().eq(3).text(), "New screen...");
+
+        // verify there is now a button2 on screen2...
+        const buttonTwo = $('#design_button2')[0];
+        assert(buttonTwo);
+
+        const screenElementTwo = $('#design_screen2')[0];
+        assert.equal(screenElementTwo.children.length, 1);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
       description: "load a level with two screens",
       editCode: true,
       xml: '',

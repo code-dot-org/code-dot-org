@@ -20,7 +20,7 @@ module Pd::Application
     end
 
     test 'derived classes override type and year' do
-      application = TeacherApplication1819.new
+      application = Teacher1819Application.new
       assert_equal TEACHER_APPLICATION, application.application_type
       assert_equal YEAR_18_19, application.application_year
 
