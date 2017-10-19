@@ -39,7 +39,9 @@ class HocSignup2017 < HocSignup2014
     if nces_school_id && nces_school_id != "-1"
       # id is the primary key of the schools table so we shouldn't get back more than one row
       DASHBOARD_DB[:schools].where(id: nces_school_id).each do |school_data|
-        school_address = [school_data[:address_line1], school_data[:address_line2], school_data[:address_line3], school_data[:city], school_data[:state], school_data[:zip]].join(' ')
+        school_address_field_names = [:address_line1, :address_line2, :address_line3, :city, :state, :zip]
+        school_address_fields = school_address_field_names.map {|k| school_data[k]}
+        school_address = school_address_fields.join(' ')
         data['event_location_s'] = school_address
         nces_school_name = school_data[:name]
       end
