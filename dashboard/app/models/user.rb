@@ -1159,18 +1159,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Return a collection of courses and scripts for the user. First in the list will
-  # be courses enrolled in by the user's sections. Following that will be all scripts
-  # in which the user has made progress that are not in any of the enrolled courses.
-  def recent_courses_and_scripts(exclude_primary_script)
-    courses = section_courses
-    course_scripts_script_ids = courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
-
-    # filter out those that are already covered by a course
-    user_scripts = in_progress_and_completed_scripts.
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
-
-    course_data = courses.map do |course|
+  def assigned_courses
+    assigned_courses_data = section_courses.map do |course|
       {
         name: course[:name],
         title: data_t_suffix('course.name', course[:name], 'title'),
@@ -1178,7 +1168,44 @@ class User < ActiveRecord::Base
         link: course_path(course),
       }
     end
+    assigned_courses_data
+  end
 
+  def assigned_scripts(exclude_hidden)
+    # filter out scripts that are already covered by an assigned course
+    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    non_course_scripts = section_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+
+    # exclude hidden scripts if necessary
+    visible_scripts = []
+    non_course_scripts.each do |script|
+      unless script_hidden?(script)
+        visible_scripts << script
+      end
+    end
+
+    scripts = exclude_hidden ? visible_scripts : non_course_scripts
+
+    assigned_scripts_data = scripts.map do |script|
+      {
+        name: script[:name],
+        title: data_t_suffix('script.name', script[:name], 'title'),
+        description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+        link: script_path(script)
+      }
+    end
+    assigned_scripts_data
+  end
+
+  def assigned_course_or_script?(exclude_hidden)
+    !assigned_courses.empty? || !assigned_scripts(exclude_hidden).empty?
+  end
+
+  # Return a collection of courses and scripts for the user. First in the list will
+  # be courses enrolled in by the user's sections. Following that will be all scripts
+  # in which the user has made progress that are not in any of the enrolled courses.
+  def recent_courses_and_scripts(exclude_primary_script)
     primary_script_id = primary_script.try(:id)
 
     user_script_data = user_scripts.map do |user_script|
@@ -1198,7 +1225,7 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    course_data + user_script_data
+    assigned_courses + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
@@ -1210,6 +1237,15 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # Figures out the unique set of scripts assigned to sections that this user
+  # is a part of.
+  # @return [Array<Script>]
+  def section_scripts
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+
+    all_sections.map(&:script).compact.uniq
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.

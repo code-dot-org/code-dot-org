@@ -34,12 +34,13 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
-  # Signed in student with course progress: redirect course overview page
-  # Signed in, not student with assigned course: redirect to /home
+  # Signed in student, with an assigned course/script: redirect course overview page
+  # Signed in student or teacher, without an assigned course/script: redirect to /home
   # Signed out: redirect to /courses
   def index
+    exclude_hidden = true
     if current_user
-      if current_user.student? && current_user.primary_script
+      if current_user.student? && current_user.assigned_course_or_script?(exclude_hidden) && current_user.primary_script
         redirect_to script_path(current_user.primary_script)
       else
         redirect_to '/home'
