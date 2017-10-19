@@ -1270,6 +1270,8 @@ class User < ActiveRecord::Base
     (DateTime.now - created_at.to_datetime).to_i
   end
 
+  # This method is meant to indicate a user has made progress (i.e. made a milestone
+  # post on a particular level) in a script
   def self.track_script_progress(user_id, script_id)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
@@ -1438,7 +1440,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # This method is called when a section the user belongs to is assigned to
+  # a script. We find or create a new UserScript entry, and set assigned_at
+  # if not already set.
   # @param script [Script] The script to assign.
   # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
