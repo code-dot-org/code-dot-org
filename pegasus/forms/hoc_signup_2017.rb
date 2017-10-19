@@ -35,14 +35,16 @@ class HocSignup2017 < HocSignup2014
     # A school id of "-1" indicates that the school was not found in the school dropdown so we treat that the
     # same as no school id.
     nces_school_id = data['nces_school_s']
-    if nces_school_id && (nces_school_id != "-1")
+    nces_school_name = ''
+    if nces_school_id && nces_school_id != "-1"
       # id is the primary key of the schools table so we shouldn't get back more than one row
       DASHBOARD_DB[:schools].where(id: nces_school_id).each do |school_data|
         school_address = [school_data[:address_line1], school_data[:address_line2], school_data[:address_line3], school_data[:city], school_data[:state], school_data[:zip]].join(' ')
         data['event_location_s'] = school_address
+        nces_school_name = school_data[:name]
       end
     end
-    super(data)
+    super(data).merge!(nces_school_name_s:  nces_school_name)
   end
 
   def self.receipt
