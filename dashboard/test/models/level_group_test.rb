@@ -216,5 +216,7 @@ MARKDOWN
     assert_equal '1', LevelGroup.get_sublevel_last_attempt(teacher, student, level1)
     # loads user's attempt if user provided
     assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1)
+    # returns undefined when signed out
+    assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1)
   end
 end

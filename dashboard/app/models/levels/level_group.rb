@@ -203,6 +203,9 @@ ruby
   def self.get_sublevel_last_attempt(current_user, user, level)
     # if given an alternative user, we want to show that user's solution (for
     # teachers viewing students' solutions), otherwise show that of the current_user
-    (user || current_user).last_attempt(level).try(:level_source).try(:data)
+    (user || current_user).
+      try(:last_attempt, level).
+      try(:level_source).
+      try(:data)
   end
 end
