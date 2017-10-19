@@ -63,6 +63,7 @@ const MUSIC_METADATA = [
   { volume: 1, hasOgg: true, name: 'vignette5-shortpiano' },
   { volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short' },
   { volume: 1, hasOgg: true, name: 'vignette8-free-play' },
+  { volume: 1, hasOgg: true, name: 'nether2' },
 ];
 
 const CHARACTER_STEVE = 'Steve';
