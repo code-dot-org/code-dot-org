@@ -4579,6 +4579,8 @@ en:
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop

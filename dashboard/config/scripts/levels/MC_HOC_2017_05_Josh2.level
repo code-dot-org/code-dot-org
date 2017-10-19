@@ -20,7 +20,6 @@
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
     "level_verification_timeout": "0",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -49,7 +48,8 @@
     "free_play": "false",
     "agent_start_position": "[3,6]",
     "place_block_options": "[\"sand\", \"planksAcacia\", \"planksBirch\", \"planksOak\", \"planksSpruce\"]",
-    "songs": "[\"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\"]"
+    "songs": "[\"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\"]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
