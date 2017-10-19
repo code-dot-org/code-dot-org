@@ -443,7 +443,8 @@ Dashboard::Application.routes.draw do
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 
-    get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
+    get 'workshop_admins', controller: 'workshop_admins', action: 'directory', as: 'workshop_admins'
+    get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form', as: 'facilitator_courses'
     post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course_to_facilitator'
     # TODO: change remove_course to use http delete method
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
