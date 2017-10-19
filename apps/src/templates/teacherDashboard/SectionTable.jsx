@@ -41,9 +41,7 @@ const styles = {
   leftHiddenCol: {
     borderLeft: 0,
   },
-  unsortableHeader: {
-    paddingLeft: 25,
-  },
+  unsortableHeader: tableLayoutStyles.unsortableHeader,
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
