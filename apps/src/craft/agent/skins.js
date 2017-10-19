@@ -12,5 +12,10 @@ exports.load = function (assetUrl, id) {
     return instructions;
   };
 
+  skin.instructions2ImageSubstitutions = {
+    "agent": '/blockly/media/craft/instructions/agent.png',
+    "pressureplate": '/blockly/media/craft/instructions/pressureplate.png',
+  };
+
   return skin;
 };

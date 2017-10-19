@@ -73,6 +73,11 @@ $text-shadow-gray: #5a5a5a;
   @include pixelated();
 }
 
+.instructionsImage {
+  vertical-align: text-bottom;
+  height: 25px;
+}
+
 @mixin mc-x-close-button() {
   $button-centering-offset: 35px;
 
