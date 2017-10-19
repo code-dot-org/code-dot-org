@@ -6,7 +6,7 @@ import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
 import { levelType, lessonType } from './progressTypes';
 
-const styles = {
+export const styles = {
   hidden: {
     display: 'none'
   }
@@ -83,6 +83,7 @@ const ProgressTable = React.createClass({
   }
 });
 
+export const UnconnectedProgressTable = ProgressTable;
 export default connect(state => ({
   isPlc: state.progress.professionalLearningCourse,
   isSummaryView: state.progress.isSummaryView,
