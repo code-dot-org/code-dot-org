@@ -216,6 +216,11 @@ export default class Craft {
                   Craft.reportResult(success);
                 });
 
+                // Listen for hint events that draw a path in the game.
+                window.addEventListener('displayHintPath', e => {
+                  Craft.gameController.levelView.drawHintPath(e.detail);
+                });
+
                 // preload music after essential game asset downloads completely finished
                 Craft.musicController.preload();
               },
