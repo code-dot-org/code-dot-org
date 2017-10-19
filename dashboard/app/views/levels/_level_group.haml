@@ -36,14 +36,7 @@
           %br/
 
         - page.levels.each_with_index do |level, index|
-          -# Fall back to retrieving the last_attempt from the parsed levelgroup last_attempt
-          - sublevel_last_attempt = parsed_last_attempt[level.id.to_s].try(:[], 'result')
-          - if @user && current_user && @user != current_user
-            -# load other user's solution for teachers viewing their students' solution
-            - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
-          - elsif current_user
-            -# load user's previous attempt at this puzzle.
-            - sublevel_last_attempt = current_user.last_attempt(level).try(:level_source).try(:data)
+          - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level)
 
           -# Show any text from an external level.
           - if data["texts"]
