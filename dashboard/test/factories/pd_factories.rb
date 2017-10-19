@@ -531,4 +531,55 @@ FactoryGirl.define do
     association :regional_partner
     state 'WA'
   end
+
+  factory :pd_facilitator1819_application_hash, class: 'Hash' do
+    initialize_with do
+      {
+        firstName: 'Rubeus',
+        lastName: 'Hagrid',
+        phone: '555-555-5555',
+        address: '101 Hogwarts Ave',
+        city: 'Seattle',
+        state: 'WA',
+        zipCode: '98101',
+        genderIdentity: 'Male',
+        race: ['Other'],
+        institutionType: ['Institute of higher education'],
+        currentEmployer: 'Gryffindor House',
+        jobTitle: 'Keeper of Keys and Grounds of Hogwarts',
+        resumeLink: 'linkedin.com/rubeus_hagrid',
+        workedInCsJob: 'No',
+        completedCsCoursesAndActivities: ['Advanced CS in HS or College'],
+        diversityTraining: 'No',
+        howHeard: ['Code.org email'],
+        program: 'CS Fundamentals (Pre-K - 5th grade)',
+        csfAvailability: 'Yes',
+        planOnTeaching: ['Yes'],
+        abilityToMeetRequirements: '5',
+        codeOrgFacilitator: 'No',
+        groupsLedPd: ['None'],
+        describePriorPd: 'None',
+        whoShouldHaveOpportunity: 'all students',
+        howSupportEquity: 'support equity',
+        expectedTeacherNeeds: 'teacher needs',
+        describeAdaptingLessonPlan: 'adapt lesson plan',
+        describeStrategies: 'strategies',
+        exampleHowUsedFeedback: 'used feedback',
+        exampleHowProvidedFeedback: 'provided feedback',
+        hopeToLearn: 'many things',
+        weeklyAvailability: ['7am PT / 10am ET'],
+        travelDistance: 'Within my city',
+        additionalInfo: 'none',
+        agree: true
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_facilitator1819_application, class: 'Pd::Application::Facilitator1819Application' do
+    association :user, factory: :teacher, strategy: :create
+    transient do
+      form_data_hash {build :pd_facilitator1819_application_hash}
+    end
+    form_data {form_data_hash.to_json}
+  end
 end

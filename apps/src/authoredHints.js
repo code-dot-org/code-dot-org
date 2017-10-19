@@ -110,6 +110,13 @@ export default class AuthoredHints {
     }
     const hint = this.getUnseenHints()[0];
     this.recordUserViewedHint_(hint);
+
+    // Notify game types that implement the `displayHintPath` listener to draw
+    // hint paths in the visualization area.
+    if (hint.hintPath) {
+      window.dispatchEvent(new CustomEvent('displayHintPath', {detail: hint.hintPath}));
+    }
+
     return hint;
   }
 

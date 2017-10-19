@@ -28,6 +28,6 @@ class HocCensus2017 < HocSignup2017
   end
 
   def self.receipt
-    'census_form_receipt'
+    []
   end
 end
