@@ -53,18 +53,18 @@ class ContactRollups
   # PD courses in quoted, comma-separated form for inclusion in SQL IN clauses
   COURSE_LIST = COURSE_ARRAY.map {|x| "'#{x}'"}.join(',')
 
-  CSF_SCRIPT_ARRAY = [
-      "course1",
-      "course2",
-      "course3",
-      "course4",
-      "coursea",
-      "courseb",
-      "coursec",
-      "coursed",
-      "coursee",
-      "coursef"
-  ].freeze
+  CSF_SCRIPT_ARRAY = %w(
+    course1
+    course2
+    course3
+    course4
+    coursea
+    courseb
+    coursec
+    coursed
+    coursee
+    coursef
+  ).freeze
 
   CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
 
@@ -357,11 +357,11 @@ class ContactRollups
     log "Updating CSF/CSD/CSP teacher roles"
     # CSF scripts don't have a course mapping - identify CSF teachers by
     # specific scripts
-    add_role_from_script_sections_taught("CSF Teacher",CSF_SCRIPT_LIST)
+    add_role_from_script_sections_taught("CSF Teacher", CSF_SCRIPT_LIST)
     # CSD and CSP scripts are mapped to course - identify CSD/CSP teachers
     # that way
-    add_role_from_course_sections_taught("CSD Teacher","csd")
-    add_role_from_course_sections_taught("CSP Teacher","csp")
+    add_role_from_course_sections_taught("CSD Teacher", "csd")
+    add_role_from_course_sections_taught("CSP Teacher", "csp")
     log_completion(start)
   end
 
