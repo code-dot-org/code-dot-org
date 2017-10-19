@@ -1,6 +1,9 @@
 hidden false
 login_required true
+hideable_stages true
+student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
+script_announcements [{"notice"=>"Teacher notice: Updates still in progress", "details"=>"Hi we're working feverishly to land these lessons by Oct. 20.  We'll post status updates in this space as we have them.  RIght now we're working to make sure lesson plan links exist in the sidebar and to activate the hide/show button for lessons.", "link"=>"", "type"=>"information"}]
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -17,7 +20,8 @@ level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & 
 stage 'Using Simple Commands', flex_category: 'csp3_1'
 named_level 'SG U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'SG csp_applab_turtle', progression: 'Turtle Programming'
-level 'SGU3L2A Introducing Subgoals', progression: 'Introducing Subgoals'
+level 'SG U3L2 Using Simple Commands part 1', progression: 'Introducing Simple Commands and Subgoals'
+level 'SGU3L2A Introducing Subgoals', progression: 'Introducing Simple Commands and Subgoals'
 level 'SG U3L2 Using Simple Commands', progression: 'Using Simple Turtle Commands'
 level 'SG U3L2_TurtleSquare_right', progression: 'Using Simple Turtle Commands'
 level 'SG U3L2_Turtle3by3Grid', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'
