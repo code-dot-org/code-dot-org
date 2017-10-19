@@ -8,6 +8,8 @@ import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
  */
 
 $(document).ready(function () {
+  // This setting (pre_title) is used by only a couple of levels in our system.
+  // Ideally we would get rid of it.
   if (appOptions.dialog.preTitle) {
     window.setTimeout(function () {
       showDialog("pre");
