@@ -37,6 +37,9 @@ export const tableLayoutStyles = {
     fontSize: 14,
     textDecoration: 'none'
   },
+  unsortableHeader: {
+    paddingLeft: 25,
+  },
 };
 
 // Settings for WrappedSortable

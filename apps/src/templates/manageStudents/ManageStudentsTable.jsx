@@ -186,6 +186,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
           }},
         },
         cell: {
@@ -203,6 +204,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
           }},
         },
         cell: {

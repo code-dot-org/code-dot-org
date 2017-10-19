@@ -148,7 +148,8 @@ const PersonalProjectsTable = React.createClass({
           props: {style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCellFirst,
-            ...styles.headerCellThumbnail
+            ...styles.headerCellThumbnail,
+            ...tableLayoutStyles.unsortableHeader,
           }},
         },
         cell: {
@@ -166,7 +167,7 @@ const PersonalProjectsTable = React.createClass({
           label: i18n.projectName(),
           props: {style: {
             ...tableLayoutStyles.headerCell,
-            ...styles.headerCellName
+            ...styles.headerCellName,
           }},
         },
         cell: {
@@ -208,7 +209,12 @@ const PersonalProjectsTable = React.createClass({
         property: 'isPublished',
         header: {
           label: i18n.publicGallery(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            }
+          },
         },
         cell: {
           format: isPublishedFormatter,
@@ -222,7 +228,12 @@ const PersonalProjectsTable = React.createClass({
         property: 'actions',
         header: {
           label: i18n.quickActions(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            }
+          },
         },
         cell: {
           format: actionsFormatter,
