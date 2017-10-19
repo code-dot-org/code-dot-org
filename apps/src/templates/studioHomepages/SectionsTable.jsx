@@ -7,9 +7,9 @@ import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-// Many of these styles are also used by our similar SectionTable on the
-// teacher-dashboard page (which is why we export them).
-export const styles = {
+// When this table gets converted to reacttabular, it should also
+// use styles from /tables/tableConstants.js
+const styles = {
   table: {
     borderWidth: 1,
     borderStyle: 'solid',

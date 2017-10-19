@@ -6,9 +6,10 @@ import styleConstants from "../../styleConstants";
 // Styles for a reacttabular table
 export const tableLayoutStyles = {
   table: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
     width: styleConstants['content-width'],
-    borderRadius: 5,
-    color: color.charcoal,
     backgroundColor: color.table_light_row
   },
   cell: {
@@ -18,19 +19,17 @@ export const tableLayoutStyles = {
     fontSize: 14,
   },
   headerCell: {
-    border: '1px solid',
+    backgroundColor: color.table_header,
+    fontWeight: 'bold',
     borderColor: color.border_light_gray,
-    padding: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal
-  },
-  cellFirst: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
-  },
-  headerCellFirst: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
+    borderStyle: 'solid',
+    borderBottomWidth: 1,
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+    borderRightWidth: 1,
+    paddingTop: 20,
+    paddingBottom: 20,
+    color: color.charcoal,
   },
   link: {
     color: color.teal,

@@ -26,6 +26,14 @@ export const COLUMNS = {
 };
 
 export const styles = {
+  cellFirst: {
+    borderWidth: '1px 0px 1px 1px',
+    borderColor: color.border_light_gray,
+  },
+  headerCellFirst: {
+    borderWidth: '0px 0px 1px 0px',
+    borderColor: color.border_light_gray,
+  },
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
@@ -41,7 +49,7 @@ export const styles = {
     width: 270
   },
   headerCellName: {
-    borderWidth: '1px 1px 1px 0px',
+    borderWidth: '0px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15
   },
@@ -139,7 +147,7 @@ const PersonalProjectsTable = React.createClass({
         header: {
           props: {style: {
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.headerCellFirst,
+            ...styles.headerCellFirst,
             ...styles.headerCellThumbnail
           }},
         },
@@ -147,7 +155,7 @@ const PersonalProjectsTable = React.createClass({
           format: thumbnailFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
-            ...tableLayoutStyles.cellFirst,
+            ...styles.cellFirst,
             ...styles.cellThumbnail
           }}
         }

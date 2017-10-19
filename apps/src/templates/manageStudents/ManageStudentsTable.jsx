@@ -130,7 +130,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.headerCellFirst
           }},
           transforms: [sortable],
         },
@@ -139,7 +138,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            ...tableLayoutStyles.cellFirst
           }}
         }
       },
