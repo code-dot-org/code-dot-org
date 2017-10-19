@@ -67,6 +67,7 @@ const StageLock = React.createClass({
   }
 });
 
+export const UnconnectedStageLock = StageLock;
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
   sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
