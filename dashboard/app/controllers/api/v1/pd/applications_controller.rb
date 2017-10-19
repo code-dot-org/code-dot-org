@@ -1,4 +1,6 @@
 class Api::V1::Pd::ApplicationsController < ::ApplicationController
+  load_and_authorize_resource class: 'Pd::Application::ApplicationBase'
+
   # GET /api/v1/pd/applications
   def index
     application_data = {}
@@ -58,5 +60,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
 
     render json: application_data
+  end
+
+  # GET /api/v1/pd/applications/1
+  def show
+    render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
   end
 end
