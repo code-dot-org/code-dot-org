@@ -1160,7 +1160,7 @@ class User < ActiveRecord::Base
   end
 
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
-  # @returns [Array{CourseData}]
+  # @return [Array{CourseData}]
   def assigned_courses
     section_courses.map do |course|
       {
@@ -1173,7 +1173,7 @@ class User < ActiveRecord::Base
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
-  # @returns boolean
+  # @return [Boolean]
   def any_visible_assigned_scripts?
     user_scripts.where("assigned_at").
       map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
@@ -1182,7 +1182,7 @@ class User < ActiveRecord::Base
   end
 
   # Checks if there are any non-hidden scripts or courses assigned to the user.
-  # @returns boolean
+  # @return [Boolean]
   def assigned_course_or_script?
     assigned_courses.any? || any_visible_assigned_scripts?
   end
@@ -1190,6 +1190,10 @@ class User < ActiveRecord::Base
   # Return a collection of courses and scripts for the user.
   # First in the list will be courses enrolled in by the user's sections.
   # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
   def recent_courses_and_scripts(exclude_primary_script)
     primary_script_id = primary_script.try(:id)
 
@@ -1221,7 +1225,7 @@ class User < ActiveRecord::Base
 
   # Figures out the unique set of courses assigned to sections that this user
   # is a part of.
-  # @returns [Array<Course>]
+  # @return [Array<Course>]
   def section_courses
     all_sections = sections.to_a.concat(sections_as_student).uniq
 
@@ -1231,7 +1235,7 @@ class User < ActiveRecord::Base
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
-  # @returns [Section|nil]
+  # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
