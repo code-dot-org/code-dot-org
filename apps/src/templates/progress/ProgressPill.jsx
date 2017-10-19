@@ -39,15 +39,15 @@ const styles = {
  * a circle with a number inside, it is an ellipse with text (and possibly an
  * icon)
  */
-const ProgressPill = React.createClass({
-  propTypes: {
+export default Radium(class ProgressPill extends React.Component {
+  static propTypes = {
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
     text: PropTypes.string,
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-  },
+  };
 
   render() {
     const { levels, icon, text, fontSize, tooltip, disabled } = this.props;
@@ -94,5 +94,3 @@ const ProgressPill = React.createClass({
     );
   }
 });
-
-export default Radium(ProgressPill);
