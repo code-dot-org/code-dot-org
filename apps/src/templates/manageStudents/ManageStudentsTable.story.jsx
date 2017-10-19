@@ -1,15 +1,18 @@
 import React from 'react';
 import ManageStudentsTable from './ManageStudentsTable';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
+// Student names out of alphabetical order to demonstrate
+// sorting functionality in the storybook
 const passwordAccountData = [
   {
     id: 1,
-    name: 'Caley',
+    name: 'StudentNameA',
     username: 'student1',
     userType: 'student',
     age: 17,
     gender: 'f',
-    loginType: 'email',
+    loginType: SectionLoginType.email,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
@@ -17,12 +20,12 @@ const passwordAccountData = [
   },
   {
     id: 2,
-    name: 'Mehal',
+    name: 'StudentNameC',
     username: 'student2',
     userType: 'student',
     age: 14,
     gender: 'm',
-    loginType: 'email',
+    loginType: SectionLoginType.email,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
@@ -30,12 +33,12 @@ const passwordAccountData = [
   },
   {
     id: 3,
-    name: 'Brad',
+    name: 'StudentNameD',
     username: 'student3',
     userType: 'student',
     age: 9,
     gender: 'm',
-    loginType: 'email',
+    loginType: SectionLoginType.email,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
@@ -46,12 +49,12 @@ const passwordAccountData = [
 const wordAccountData = [
   {
     id: 1,
-    name: 'Sung',
+    name: 'StudentNameC',
     username: 'student1',
     userType: 'student',
     age: 12,
     gender: 'f',
-    loginType: 'word',
+    loginType: SectionLoginType.word,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
@@ -59,12 +62,12 @@ const wordAccountData = [
   },
   {
     id: 2,
-    name: 'Josh',
+    name: 'StudentNameA',
     username: 'student2',
     userType: 'student',
     age: 16,
     gender: 'm',
-    loginType: 'word',
+    loginType: SectionLoginType.word,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
@@ -72,12 +75,12 @@ const wordAccountData = [
   },
   {
     id: 3,
-    name: 'Tanya',
+    name: 'StudentNameB',
     username: 'student3',
     userType: 'student',
     age: 10,
     gender: 'f',
-    loginType: 'word',
+    loginType: SectionLoginType.word,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
@@ -88,12 +91,12 @@ const wordAccountData = [
 const pictureAccountData = [
   {
     id: 1,
-    name: 'Sarah',
+    name: 'StudentNameA',
     username: 'student1',
     userType: 'student',
     age: 13,
     gender: 'f',
-    loginType: 'picture',
+    loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
@@ -101,12 +104,12 @@ const pictureAccountData = [
   },
   {
     id: 2,
-    name: 'Brent',
+    name: 'StudentNameB',
     username: 'student2',
     userType: 'student',
     age: 6,
     gender: 'm',
-    loginType: 'picture',
+    loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
@@ -114,12 +117,12 @@ const pictureAccountData = [
   },
   {
     id: 3,
-    name: 'Marina',
+    name: 'StudentNameC',
     username: 'student3',
     userType: 'student',
     age: 11,
     gender: 'f',
-    loginType: 'picture',
+    loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
@@ -130,12 +133,12 @@ const pictureAccountData = [
 const googleData = [
   {
     id: 1,
-    name: 'Erin',
+    name: 'StudentNameA',
     username: 'student1',
     userType: 'student',
     age: 13,
     gender: 'f',
-    loginType: 'google',
+    loginType: SectionLoginType.google_classroom,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
@@ -143,12 +146,12 @@ const googleData = [
   },
   {
     id: 2,
-    name: 'Dave',
+    name: 'StudentNameB',
     username: 'student2',
     userType: 'student',
     age: 6,
     gender: 'm',
-    loginType: 'google',
+    loginType: SectionLoginType.google_classroom,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
@@ -159,12 +162,12 @@ const googleData = [
 const cleverData = [
   {
     id: 1,
-    name: 'Mary',
+    name: 'StudentNameB',
     username: 'student1',
     userType: 'student',
     age: 13,
     gender: 'f',
-    loginType: 'clever',
+    loginType: SectionLoginType.clever,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
@@ -172,12 +175,12 @@ const cleverData = [
   },
   {
     id: 2,
-    name: 'Ram',
+    name: 'StudentNameA',
     username: 'student2',
     userType: 'student',
     age: 6,
     gender: 'm',
-    loginType: 'clever',
+    loginType: SectionLoginType.clever,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
@@ -196,7 +199,7 @@ export default storybook => {
           <ManageStudentsTable
             studentData={passwordAccountData}
             id={53}
-            loginType={"email"}
+            loginType={SectionLoginType.email}
           />
         )
       },
@@ -207,7 +210,7 @@ export default storybook => {
           <ManageStudentsTable
             studentData={wordAccountData}
             id={53}
-            loginType={"word"}
+            loginType={SectionLoginType.word}
           />
         )
       },
@@ -218,7 +221,7 @@ export default storybook => {
           <ManageStudentsTable
             studentData={pictureAccountData}
             id={53}
-            loginType={"picture"}
+            loginType={SectionLoginType.picture}
           />
         )
       },
@@ -229,7 +232,7 @@ export default storybook => {
           <ManageStudentsTable
             studentData={googleData}
             id={53}
-            loginType={"google"}
+            loginType={SectionLoginType.google_classroom}
           />
         )
       },
@@ -240,7 +243,7 @@ export default storybook => {
           <ManageStudentsTable
             studentData={cleverData}
             id={53}
-            loginType={"clever"}
+            loginType={SectionLoginType.clever}
           />
         )
       },
