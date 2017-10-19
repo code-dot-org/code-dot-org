@@ -6,7 +6,7 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
-import {tableLayoutStyles} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -225,11 +225,6 @@ class ManageStudentsTable extends Component {
   };
 
   render() {
-    const sortableOptions = {
-      // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(0, 0, 0, 0.2 )'}
-    };
-
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);

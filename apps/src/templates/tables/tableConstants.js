@@ -39,3 +39,9 @@ export const tableLayoutStyles = {
     textDecoration: 'none'
   },
 };
+
+// Settings for WrappedSortable
+export const sortableOptions = {
+  // Dim inactive sorting icons in the column headers
+  default: {color: 'rgba(0, 0, 0, 0.2 )'}
+};
