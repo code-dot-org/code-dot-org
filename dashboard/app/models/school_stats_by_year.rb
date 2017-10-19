@@ -22,16 +22,16 @@
 #  grade_12_offered   :boolean          not null
 #  grade_13_offered   :boolean          not null
 #  virtual_status     :string(14)       not null
-#  students_total     :integer          not null
-#  student_am_count   :integer          not null
-#  student_as_count   :integer          not null
-#  student_hi_count   :integer          not null
-#  student_bl_count   :integer          not null
-#  student_wh_count   :integer          not null
-#  student_hp_count   :integer          not null
-#  student_tr_count   :integer          not null
-#  title_i_status     :string(1)        not null
-#  frl_eligible_total :integer          not null
+#  students_total     :integer
+#  student_am_count   :integer
+#  student_as_count   :integer
+#  student_hi_count   :integer
+#  student_bl_count   :integer
+#  student_wh_count   :integer
+#  student_hp_count   :integer
+#  student_tr_count   :integer
+#  title_i_status     :string(1)
+#  frl_eligible_total :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
