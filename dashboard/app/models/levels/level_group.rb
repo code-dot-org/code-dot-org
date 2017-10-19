@@ -201,12 +201,8 @@ ruby
   # @param {User} user - The optional user we're trying to see the attempt of
   # @param {Level} level - The sublevel we'd like the last attempt for
   def self.get_sublevel_last_attempt(current_user, user, level)
-    if user && current_user && user != current_user
-      # load other user's solution for teachers viewing their students' solution
-      user.last_attempt(level).try(:level_source).try(:data)
-    elsif current_user
-      # load current_user's previous attempt at this puzzle.
-      current_user.last_attempt(level).try(:level_source).try(:data)
-    end
+    # if given an alternative user, we want to show that user's solution (for
+    # teachers viewing students' solutions), otherwise show that of the current_user
+    (user || current_user).last_attempt(level).try(:level_source).try(:data)
   end
 end
