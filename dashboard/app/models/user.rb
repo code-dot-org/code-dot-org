@@ -1162,7 +1162,7 @@ class User < ActiveRecord::Base
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @returns [Array{CourseData}]
   def assigned_courses
-    assigned_courses_data = section_courses.map do |course|
+    section_courses.map do |course|
       {
         name: course[:name],
         title: data_t_suffix('course.name', course[:name], 'title'),
@@ -1170,23 +1170,21 @@ class User < ActiveRecord::Base
         link: course_path(course),
       }
     end
-    assigned_courses_data
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
   # @returns boolean
   def any_visible_assigned_scripts?
-    assigned_user_scripts = user_scripts.where("assigned_at")
-
-    assigned_visible_scripts = assigned_user_scripts.map {|user_script| Script.where(id: user_script.script_id, hidden: 'false')}
-
-    !assigned_visible_scripts.flatten.empty?
+    user_scripts.where("assigned_at").
+      map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
+      flatten.
+      any?
   end
 
   # Checks if there are any non-hidden scripts or courses assigned to the user.
   # @returns boolean
   def assigned_course_or_script?
-    !assigned_courses.empty? || any_visible_assigned_scripts?
+    assigned_courses.any? || any_visible_assigned_scripts?
   end
 
   # Return a collection of courses and scripts for the user.
