@@ -2,7 +2,7 @@ require 'test_helper'
 require 'state_abbr'
 
 module Pd::Application
-  class Facilitator1819ApplicationText < ActiveSupport::TestCase
+  class Facilitator1819ApplicationTest < ActiveSupport::TestCase
     test 'course is filled in from the form program before validation' do
       [:csf, :csd, :csp].each do |program|
         program_name = Facilitator1819Application::PROGRAMS[program]

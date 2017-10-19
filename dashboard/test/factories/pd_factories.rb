@@ -595,13 +595,7 @@ FactoryGirl.define do
     association :user, factory: :teacher, strategy: :create
     transient do
       form_data_hash {build :pd_facilitator1819_application_hash}
-      regional_partner nil
     end
     form_data {form_data_hash.to_json}
-    after(:create) do |application, evaluator|
-      # apply a supplied test regional partner after create,
-      # otherwise it will be overridden on save from matching the program in form_data
-      application.update!(regional_partner: evaluator.regional_partner)
-    end
   end
 end

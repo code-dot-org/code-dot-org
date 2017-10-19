@@ -48,7 +48,8 @@ module Pd::Application
 
     test 'submitted page displays regional partner when there is a match' do
       regional_partner = create :regional_partner
-      application = create :pd_facilitator1819_application, regional_partner: regional_partner
+      RegionalPartner.expects(:find_by_region).returns(regional_partner)
+      application = create :pd_facilitator1819_application
       sign_in application.user
       get :new
       assert_response :success
@@ -56,7 +57,8 @@ module Pd::Application
     end
 
     test 'submitted page displays no partner message when there is no match' do
-      application = create :pd_facilitator1819_application, regional_partner: nil
+      RegionalPartner.expects(:find_by_region).returns(nil)
+      application = create :pd_facilitator1819_application
       sign_in application.user
       get :new
       assert_response :success
