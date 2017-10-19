@@ -674,21 +674,16 @@ var TopInstructions = React.createClass({
                 </LegacyButton>
               }
             </ChatBubble>
-            {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) => {
-              if (hint.hintPath) {
-                window.dispatchEvent(new CustomEvent('displayHintPath', {detail: hint.hintPath}));
-              }
-              return (
-                <InlineHint
-                  key={hint.hintId}
-                  borderColor={color.yellow}
-                  content={hint.content}
-                  ttsUrl={hint.ttsUrl}
-                  ttsMessage={hint.ttsMessage}
-                  block={hint.block}
-                />
-              );
-            })}
+            {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
+              <InlineHint
+                key={hint.hintId}
+                borderColor={color.yellow}
+                content={hint.content}
+                ttsUrl={hint.ttsUrl}
+                ttsMessage={hint.ttsMessage}
+                block={hint.block}
+              />
+            )}
             {this.props.feedback && !this.props.collapsed &&
               <InlineFeedback
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
