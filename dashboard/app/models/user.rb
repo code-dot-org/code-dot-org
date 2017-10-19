@@ -1172,20 +1172,29 @@ class User < ActiveRecord::Base
   end
 
   def assigned_scripts(exclude_hidden)
+    assigned_user_scripts = user_scripts.where("assigned_at")
+
+    # get the scripts associated with the assigned_user_scripts
+    assigned_scripts = []
+    assigned_user_scripts.each do |user_script|
+      assigned_scripts << Script.where(id: user_script.script_id)
+    end
+
     # filter out scripts that are already covered by an assigned course
     course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
-    non_course_scripts = section_scripts.
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+
+    assigned_scripts = assigned_scripts.flatten.
+      select {|assigned_script| !course_scripts_script_ids.include?(assigned_script.id)}
 
     # exclude hidden scripts if necessary
-    visible_scripts = []
-    non_course_scripts.each do |script|
+    visible_assigned_scripts = []
+    assigned_scripts.each do |script|
       unless script_hidden?(script)
-        visible_scripts << script
+        visible_assigned_scripts << script
       end
     end
 
-    scripts = exclude_hidden ? visible_scripts : non_course_scripts
+    scripts = exclude_hidden ? visible_assigned_scripts : assigned_scripts
 
     assigned_scripts_data = scripts.map do |script|
       {
@@ -1237,15 +1246,6 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
-  end
-
-  # Figures out the unique set of scripts assigned to sections that this user
-  # is a part of.
-  # @return [Array<Script>]
-  def section_scripts
-    all_sections = sections.to_a.concat(sections_as_student).uniq
-
-    all_sections.map(&:script).compact.uniq
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.

@@ -35,6 +35,8 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
 
   # Signed in student, with an assigned course/script: redirect course overview page
+  # Note: the student will be redirected to the course or script in which they
+  # most recently made progress, which may not be an assigned course or script.
   # Signed in student or teacher, without an assigned course/script: redirect to /home
   # Signed out: redirect to /courses
   def index
