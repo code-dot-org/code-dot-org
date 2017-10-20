@@ -7,31 +7,31 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_types = [
       {
         course: :csf,
-        role: :facilitator,
+        role: :csf_facilitator,
         klass: 'Pd::Application::Facilitator1819Application'
 
       },
       {
         course: :csd,
-        role: :facilitator,
+        role: :csd_facilitator,
         klass: 'Pd::Application::Facilitator1819Application'
 
       },
       {
         course: :csp,
-        role: :facilitator,
+        role: :csp_facilitator,
         klass: 'Pd::Application::Facilitator1819Application'
 
       },
       {
         course: :csd,
-        role: :teacher,
+        role: :csd_teacher,
         klass: 'Pd::Application::Teacher1819Application'
 
       },
       {
         course: :csp,
-        role: :teacher,
+        role: :csp_teacher,
         klass: 'Pd::Application::Teacher1819Application'
       },
     ]
@@ -41,8 +41,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_types.each do |app_type|
       klass = app_type[:klass]
       course = app_type[:course]
-      key = "#{app_type[:course]}_#{app_type[:role]}"
-      application_data[key] = {}
+      role = app_type[:role]
+      application_data[role] = {}
       applications = Object.const_get(klass).send(course)
 
       if regional_partner_id
@@ -51,10 +51,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
       apps_by_status = applications.group_by(&:status)
       apps_by_status.each do |status, apps_with_status|
-        application_data[key][status] = {}
+        application_data[role][status] = {}
         grouped_apps = apps_with_status.group_by {|app| app.locked? ? 'locked' : 'unlocked'}
         grouped_apps.each do |locked_state, apps|
-          application_data[key][status][locked_state] = apps.size
+          application_data[role][status][locked_state] = apps.size
         end
       end
     end
