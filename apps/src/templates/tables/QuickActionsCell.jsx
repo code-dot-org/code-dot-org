@@ -1,7 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from "../../util/color";
-import ProjectActionBox from './ProjectActionBox';
 import $ from 'jquery';
 
 const styles = {
@@ -28,7 +27,7 @@ const styles = {
 
 class QuickActionsCell extends Component {
   static propTypes = {
-    projectData: PropTypes.object
+    children: PropTypes.element.isRequired
   };
 
   state = {actionsOpen: false};
@@ -61,11 +60,12 @@ class QuickActionsCell extends Component {
           <FontAwesome icon="angle-down" />
         </div>
         {this.state.actionsOpen &&
-          <ProjectActionBox
-            isPublished={this.props.projectData.isPublished}
+          <div
             style={styles.actionBox}
             ref={actionBox => this.actionBox = actionBox}
-          />
+          >
+            {this.props.children}
+          </div>
         }
       </div>
     );
