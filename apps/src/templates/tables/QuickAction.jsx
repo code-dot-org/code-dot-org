@@ -8,7 +8,7 @@ const styles = {
     fontSize: 14,
     fontFamily: '"Gotham", sans-serif',
     color: color.charcoal,
-    padding: '10px 0px 10px 0px',
+    padding: '10px 15px',
     ':hover': {
       backgroundColor: color.lightest_gray,
       cursor: 'pointer',

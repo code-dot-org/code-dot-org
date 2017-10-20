@@ -5,7 +5,7 @@ import Radium from 'radium';
 const styles = {
   actionBox: {
     width: 180,
-    padding: '10px 15px',
+    padding: '10px 0px',
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     backgroundColor: color.white,
