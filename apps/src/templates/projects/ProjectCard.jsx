@@ -3,7 +3,6 @@ import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
 import $ from 'jquery';
-import ProjectActionBox from './ProjectActionBox';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -230,13 +229,6 @@ const ProjectCard = React.createClass({
             </div>
           }
         </div>
-
-        {this.state.actionsOpen &&
-          <ProjectActionBox
-            isPublished={this.props.projectData.publishedToPublic}
-            style={styles.actionBox}
-          />
-        }
 
       </div>
     );
