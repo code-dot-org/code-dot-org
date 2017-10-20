@@ -10,6 +10,8 @@ class ProjectActionBox extends Component {
   };
 
   render() {
+    const {isPublished} = this.props;
+
     return (
       <div style={this.props.style}>
         <QuickActionsBox>
@@ -21,18 +23,14 @@ class ProjectActionBox extends Component {
             text={i18n.remix()}
             action={()=>{}}
           />
-          {this.props.isPublished &&
-            <QuickAction
-              text={i18n.removeFromPublicGallery()}
-              action={()=>{}}
-            />
-          }
-          {!this.props.isPublished &&
-            <QuickAction
-              text={i18n.publishToPublicGallery()}
-              action={()=>{}}
-            />
-          }
+          <QuickAction
+            text={isPublished ? i18n.removeFromPublicGallery() : i18n.publishToPublicGallery}
+            action={()=>{}}
+          />
+          <QuickAction
+            text={i18n.publishToPublicGallery()}
+            action={()=>{}}
+          />
           <QuickAction
             text={i18n.deleteProject()}
             action={()=>{}}
