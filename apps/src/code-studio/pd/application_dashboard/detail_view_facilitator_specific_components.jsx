@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {renderLineItem} from './detail_view';
+import _ from 'lodash';
 
 const lineItemKeys = {
   planToTeachThisYear1819: 'Do you plan on teaching this course in the 2018-19 school year?',
@@ -9,17 +10,15 @@ const lineItemKeys = {
 
 class Facilitator1819Program extends React.Component {
   static propTypes = {
-    planToTeachThisYear1819: PropTypes.string.isRequired,
-    rateAbility: PropTypes.string.isRequired,
-    canAttendFIT: PropTypes.string.isRequired
+    planToTeachThisYear1819: PropTypes.arrayOf(PropTypes.string.isRequired),
+    abilityToMeetRequirements: PropTypes.string.isRequired
   }
 
   render() {
     return  (
       <div>
-        {renderLineItem(lineItemKeys['planToTeachThisYear1819'], this.props.planToTeachThisYear1819)}
-        {renderLineItem(lineItemKeys['rateAbility'], this.props.rateAbility)}
-        {renderLineItem(lineItemKeys['canAttendFIT'], this.props.canAttendFIT)}
+        {renderLineItem(lineItemKeys['planToTeachThisYear1819'], _.join(this.props.planToTeachThisYear1819, ','))}
+        {renderLineItem(lineItemKeys['rateAbility'], this.props.abilityToMeetRequirements)}
       </div>
     );
   }
