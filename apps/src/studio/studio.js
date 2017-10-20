@@ -119,7 +119,7 @@ let level;
 let skin;
 
 // These skins can be published as projects.
-const PUBLISHABLE_SKINS = ['gumball', 'studio'];
+const PUBLISHABLE_SKINS = ['gumball', 'studio', 'iceage', 'infinity'];
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
