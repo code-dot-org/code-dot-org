@@ -39,7 +39,7 @@ const styles = {
  * a circle with a number inside, it is an ellipse with text (and possibly an
  * icon)
  */
-export default Radium(class ProgressPill extends React.Component {
+class ProgressPill extends React.Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
@@ -93,4 +93,6 @@ export default Radium(class ProgressPill extends React.Component {
       </a>
     );
   }
-});
+}
+
+export default Radium(ProgressPill);
