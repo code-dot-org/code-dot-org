@@ -97,18 +97,6 @@ const actionsFormatter = function (actions, {rowData}) {
         text={i18n.remix()}
         action={()=>{}}
       />
-      {rowData.isPublished &&
-        <QuickAction
-          text={i18n.removeFromPublicGallery()}
-          action={()=>{}}
-        />
-      }
-      {!rowData.isPublished &&
-        <QuickAction
-          text={i18n.publishToPublicGallery()}
-          action={()=>{}}
-        />
-      }
       <QuickAction
         text={i18n.deleteProject()}
         action={()=>{}}
