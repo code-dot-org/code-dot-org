@@ -83,5 +83,9 @@ module Pd::Application
       return unless locked?
       update! locked_at: nil
     end
+
+    def regional_partner_name
+      regional_partner.try(:name)
+    end
   end
 end

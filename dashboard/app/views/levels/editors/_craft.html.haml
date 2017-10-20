@@ -1,3 +1,6 @@
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/levelbuilder_craft.js')}
+
 %hr
 %h1 Minecraft Level Configuration
 %hr
@@ -77,46 +80,39 @@
 .field
   = f.label :level_verification_timeout, 'Level verification timeout in milliseconds (failure if player does not succeed in allotted time)'
   = f.text_field :level_verification_timeout, {value: @level.level_verification_timeout || 0}
-.field
-  = f.label :drop_dropdown_options, 'Available drop dropdown items in format ["wool", "milk", "clay"] (will eventually be multi-select)'
-  %a{style:"cursor: pointer", onclick: "dropBlocksEditor.getDoc().setValue('#{Craft::ALL_MINIBLOCKS_ARRAY}')"}= "Insert all"
-  = f.text_area :drop_dropdown_options, rows: 10
-  :javascript
-    var dropBlocksEditor = levelbuilder.initializeCodeMirror('level_drop_dropdown_options', 'javascript');
 
 .field
-  = f.label :play_sound_options, 'Available play sound sounds in format ["sheepBaa"] (will eventually be multi-select)'
-  %a{style:"cursor: pointer", onclick: "soundBlocksEditor.getDoc().setValue('#{Craft::ALL_SOUNDS_ARRAY}')"}= "Insert all"
-  = f.text_area :play_sound_options, rows: 10
-  :javascript
-    var soundBlocksEditor = levelbuilder.initializeCodeMirror('level_play_sound_options', 'javascript');
+  = f.label :drop_dropdown_options, 'Available drop dropdown items'
+  - drop_dropdown_options = @level.drop_dropdown_options.is_a?(String) ? JSON.parse(@level.drop_dropdown_options) : @level.drop_dropdown_options
+  = f.select :drop_dropdown_options, options_for_select(Craft::ALL_MINIBLOCKS.keys, drop_dropdown_options), {}, {multiple: true, class: "selectize"}
 
 .field
-  = f.label :available_blocks, 'Available Blocks in format ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"] (will eventually be multi-select)'
-  %a{style:"cursor: pointer", onclick: "availableBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
-  = f.text_area :available_blocks, rows: 10
-  :javascript
-    var availableBlocksEditor = levelbuilder.initializeCodeMirror('level_available_blocks', 'javascript');
+  = f.label :play_sound_options, 'Available play sound sounds'
+  - play_sound_options = @level.play_sound_options.is_a?(String) ? JSON.parse(@level.play_sound_options) : @level.play_sound_options
+  = f.select :play_sound_options, options_for_select(Craft::ALL_SOUNDS.keys, play_sound_options), {}, {multiple: true, class: "selectize"}
 
 .field
-  = f.label :if_block_options, 'Override if and while ahead block dropdown options. Format: ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"]'
-  %a{style:"cursor: pointer", onclick: "ifBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
-  = f.text_area :if_block_options, rows: 10
-  :javascript
-    var ifBlocksEditor = levelbuilder.initializeCodeMirror('level_if_block_options', 'javascript');
+  = f.label :available_blocks, 'Available Blocks'
+  - available_blocks = @level.available_blocks.is_a?(String) ? JSON.parse(@level.available_blocks) : @level.available_blocks
+  = f.select :available_blocks, options_for_select(Craft::ALL_BLOCKS.keys, available_blocks), {}, {multiple: true, class: "selectize"}
 
 .field
-  = f.label :place_block_options, 'Override place and place ahead block dropdown options. Format: ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"]'
-  %a{style:"cursor: pointer", onclick: "placeBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
-  = f.text_area :place_block_options, rows: 10
-  :javascript
-    var placeBlocksEditor = levelbuilder.initializeCodeMirror('level_place_block_options', 'javascript');
+  = f.label :if_block_options, 'Override if and while ahead block dropdown options'
+  - if_block_options = @level.if_block_options.is_a?(String) ? JSON.parse(@level.if_block_options) : @level.if_block_options
+  = f.select :if_block_options, options_for_select(Craft::ALL_BLOCKS.keys, if_block_options), {}, {multiple: true, class: "selectize"}
+
+.field
+  = f.label :place_block_options, 'Override place and place ahead block dropdown options'
+  - place_block_options = @level.place_block_options.is_a?(String) ? JSON.parse(@level.place_block_options) : @level.place_block_options
+  = f.select :place_block_options, options_for_select(Craft::ALL_BLOCKS.keys, place_block_options), {}, {multiple: true, class: "selectize"}
+
 .field
   = f.label :songs, 'Background Music. Format: ["first song to play", "second song to play", ...]'
   %a{style:"cursor: pointer", onclick: "songsEditor.getDoc().setValue('#{Craft.song_options}')"}= "Insert all"
   = f.text_area :songs, rows: 10
   :javascript
     var songsEditor = levelbuilder.initializeCodeMirror('level_songs', 'javascript');
+
 %div{style: "opacity: .5"}
   .field
     = f.label :grid_width, 'Grid width (warning: do not change, only use for initial sizing)'

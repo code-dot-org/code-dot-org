@@ -430,6 +430,7 @@ describe('entry tests', () => {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
+    'levelbuilder_craft':          './src/sites/studio/pages/levelbuilder_craft.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',

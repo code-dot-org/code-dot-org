@@ -30,4 +30,13 @@ describe('DetailProgressTable', () => {
     const rows = wrapper.props().children;
     assert.equal(rows.length, 4);
   });
+
+  it('throws if passed mismatched props', () => {
+    assert.throws(() => shallow(
+      <DetailProgressTable
+        lessons={lessons}
+        levelsByLesson={levelsByLesson.slice(1)}
+      />
+    ));
+  });
 });

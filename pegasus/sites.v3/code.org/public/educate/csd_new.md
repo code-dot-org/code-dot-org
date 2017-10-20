@@ -30,10 +30,7 @@ Computer Science Discoveries is appropriate for 6-10th grade students and can be
 <hr/>
 ## <a name="what"></a>Professional Learning
 
-<%= view :three_circles, circles: [
-{img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
-{img: '/images/testimonials/fit-150/students-1.jpg', text: '"I truly believe that this course may level the playing field for some of my students and very likely give them a break they need to find a path to success."'},
-{img: '/images/testimonials/fit-150/students-2.jpg', text: '"After teaching 27 years, it is refreshing to attend a training that has me energized and enthusiastic about offering new content to my students."'}] %>
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
 **General applications for the 2018-19 [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) will open in January, 2018.** 
 
