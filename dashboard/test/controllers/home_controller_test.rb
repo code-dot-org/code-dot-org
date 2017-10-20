@@ -32,7 +32,7 @@ class HomeControllerTest < ActionController::TestCase
   test "student without progress or assigned course/script redirected to index" do
     user = create(:user)
     sign_in user
-    assert_queries 2 do
+    assert_queries 4 do
       get :index
       assert_redirected_to '/home'
     end
