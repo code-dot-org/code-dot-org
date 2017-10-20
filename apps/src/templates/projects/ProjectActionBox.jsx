@@ -24,7 +24,7 @@ class ProjectActionBox extends Component {
             action={()=>{}}
           />
           <QuickAction
-            text={isPublished ? i18n.removeFromPublicGallery() : i18n.publishToPublicGallery}
+            text={isPublished ? i18n.removeFromPublicGallery() : i18n.publishToPublicGallery()}
             action={()=>{}}
           />
           <QuickAction
