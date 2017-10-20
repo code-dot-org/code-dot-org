@@ -114,8 +114,8 @@ DATE_RANGES = [
   ['20170913', '20171001', '2017-09-30 23:59:59', true]
 ].freeze
 
-MONTHLY_FILENAME_PREFIX = '/tmp/proficiency'.freeze
-AGGREGATE_FILENAME = '/tmp/proficiency_20160101_20170101'.freeze
+MONTHLY_FILENAME_PREFIX = '/tmp/proficiency/user_proficiencies'.freeze
+AGGREGATE_FILENAME = '/tmp/proficiency/aggregate_20170601_20171001'.freeze
 
 SLICE_SIZE = 5_000
 
