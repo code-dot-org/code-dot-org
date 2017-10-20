@@ -7,6 +7,8 @@ import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import QuickAction from "../tables/QuickAction";
+import QuickActionsCell from "../tables/QuickActionsCell";
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -80,9 +82,20 @@ const passwordFormatter = (loginType, {rowData}) => {
   );
 };
 
-const actionsFormatter = (actions, {rowData}) => {
+const actionsFormatter = function (actions, {rowData}) {
   return (
-    <div>Edit</div>
+    <QuickActionsCell>
+      <QuickAction
+        text={"Edit"}
+        action={()=>{}}
+      />
+      <QuickAction
+        text={"Remove student"}
+        action={()=>{}}
+        hasLineAbove={true}
+        isDelete={true}
+      />
+    </QuickActionsCell>
   );
 };
 
