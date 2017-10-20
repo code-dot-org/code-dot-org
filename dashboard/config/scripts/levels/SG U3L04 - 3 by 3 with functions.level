@@ -153,8 +153,8 @@
     "expand_debugger": "false",
     "teacher_markdown": "Now we revisit the 3x3 grid challenge; this time students can write much more efficient and clear solutions by using a top-down design strategy to figure out good functions to write.\r\n\r\n***Notes***: \r\n\r\n* It's very possible that in writing a solution with functions, the turtle might actually execute more primitive operations than in the student's previous version.  \r\n* That's OK, because the code should be *much* shorter and *much* easier to read.  \r\n* We will trade a well-designed, well-written program for a clumsy hard-to-read program at the cost of a few primitive operations.",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "palette_category_at_start": "goals"
+    "palette_category_at_start": "goals",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

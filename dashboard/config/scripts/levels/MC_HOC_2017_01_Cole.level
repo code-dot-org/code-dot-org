@@ -53,8 +53,8 @@
     "level_verification_timeout": "0",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use your arrow keys to direct the player into the house. End up on the orange square to win.\",\"hint_id\":\"MC_HOC_2017_01_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4d971c331095663b5d7064246c0ec3ca/MC_HOC_2017_01_Cole.mp3\"}]",
     "songs": "[\"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\"]",
-    "contained_level_names": null,
-    "instructions": "You need to collect tools on this journey. Move around using the **arrow keys**, and get to the chest inside the house to win."
+    "instructions": "You need to collect tools on this journey. Move around using the **arrow keys**, and get to the chest inside the house to win.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
