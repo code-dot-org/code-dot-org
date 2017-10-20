@@ -66,8 +66,8 @@ services.factory('projectsService', ['$resource',
     Project.prototype.isPublishableProjectType = function () {
       var projectType = this.getType();
       var publishableTypes = isUnder13 || userSharingDisabled ?
-        ['artist', 'playlab'] :
-        ['applab', 'gamelab', 'artist', 'playlab'];
+        window.PublishableProjectTypesUnder13 :
+        window.PublishableProjectTypesOver13;
       return publishableTypes.indexOf(projectType) > -1;
     };
 
