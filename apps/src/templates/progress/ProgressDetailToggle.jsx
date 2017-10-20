@@ -49,14 +49,7 @@ const styles = {
  * A toggle that provides a way to switch between detail and summary views of
  * our course progress.
  */
-export default connect(
-  state => ({
-    isPlc: !!state.progress.professionalLearningCourse,
-    isSummaryView: state.progress.isSummaryView,
-    hasGroups: hasGroups(state.progress)
-  }),
-  {setIsSummaryView}
-)(class ProgressDetailToggle extends React.Component {
+class ProgressDetailToggle extends React.Component {
   static propTypes = {
     activeColor: PropTypes.string,
     whiteBorder: PropTypes.bool,
@@ -103,4 +96,13 @@ export default connect(
     );
 
   }
-});
+}
+
+export default connect(
+  state => ({
+    isPlc: !!state.progress.professionalLearningCourse,
+    isSummaryView: state.progress.isSummaryView,
+    hasGroups: hasGroups(state.progress)
+  }),
+  {setIsSummaryView}
+)(ProgressDetailToggle);
