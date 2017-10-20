@@ -11,7 +11,25 @@ class HomeControllerTest < ActionController::TestCase
     Properties.stubs(:get).returns nil
   end
 
-  test "redirect index when signed in without course progress" do
+  test "teacher without progress or assigned course/script redirected to index" do
+    teacher = create :teacher
+    sign_in teacher
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "teacher with assigned course/script redirected to index" do
+    teacher = create :teacher
+    script = create :script
+    sign_in teacher
+    teacher.assign_script(script)
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student without progress or assigned course/script redirected to index" do
     user = create(:user)
     sign_in user
     get :index
@@ -19,24 +37,34 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/home'
   end
 
-  test "student with course progress is redirected to course overview" do
+  test "student with progress but not an assigned course/script will go to index" do
     student = create :student
     script = create :script
     sign_in student
-    User.any_instance.expects(:primary_script).returns(script).twice
+    User.any_instance.stubs(:primary_script).returns(script)
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with assigned course or script is redirected to course overview" do
+    student = create :student
+    script = create :script
+    sign_in student
+    student.assign_script(script)
     get :index
 
     assert_redirected_to script_path(script)
   end
 
-  test "student with course progress and no age is still redirected to course overview" do
+  test "student with assigned course or script and no age is still redirected to course overview" do
     student = create :student
     student.birthday = nil
     student.age = nil
     student.save(validate: false)
     script = create :script
     sign_in student
-    User.any_instance.expects(:primary_script).returns(script).twice
+    student.assign_script(script)
     get :index
 
     assert_redirected_to script_path(script)

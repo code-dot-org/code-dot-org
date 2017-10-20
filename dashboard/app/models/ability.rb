@@ -44,6 +44,7 @@ class Ability
       :peer_review_submissions,
       RegionalPartner,
       Pd::RegionalPartnerMapping,
+      Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application
     ]
 
@@ -137,6 +138,7 @@ class Ability
         can :manage, RegionalPartner
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
+        can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1819Application
       end
 
