@@ -31,6 +31,8 @@ class ScriptConfig
       coursed
       coursee
       coursef
+      express
+      pre-express
       playlab
       artist
       infinity
