@@ -11,6 +11,14 @@ module UsersHelper
       uid = session['clever_takeover_id']
       # TODO: validate that we're not destroying an active account?
       existing_clever_account = User.where(uid: uid).first
+
+      # Move over sections that students follow
+      if user.student?
+        Follower.where(student_user_id: existing_clever_account.id).each do |follower|
+          follower.update(student_user_id: user.id)
+        end
+      end
+
       existing_clever_account.destroy! if existing_clever_account
       user.provider = 'clever'
       user.uid = uid
