@@ -8,12 +8,12 @@ litmus_tracking_id: "5g5lyi1a"
   <% storedotcodedotorg = CDO.canonical_hostname('store.code.org') %>
 
 ### Thanks for signing up to host an Hour of Code!
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a [free set of 12 professionally printed posters featuring diverse role models for your classroom](https://<%= storedotcodedotorg %>/products/code-org-posters-set-of-12). Use offer code FREEPOSTERS at checkout. (This code is good through 12/31 while supplies last. You'll need to cover shipping costs. If that is not in your budget, the [PDF files](https://<%= codedotorg %>/educate/resources/inspire#posters) are available to print yourself.)
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a [free set of 12 professionally printed posters featuring diverse role models for your classroom](https://<%= storedotcodedotorg %>/products/code-org-posters-set-of-12). Use offer code FREEPOSTERS at checkout. (This code is good through 12/31 while supplies last. You'll need to cover shipping costs. If that is not in your budget, the [PDF files](https://<%= hourofcode %>/promote/resources#posters) are available to print yourself.)
 
 Hour of Code runs December 4-10. We'll be in touch about new tutorials and other exciting updates as they come out. **In the meantime, what can you do now?**
 
 ### 1. Find a local volunteer to help you with your event.
-[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](https://<%= codedotorg %>/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ### 2. Spread the word & recruit your whole school
 We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hourofcode %>/promote/resources) to promote your event.
@@ -21,7 +21,7 @@ We need your help to reach organizers worldwide. Tell your friends about the #Ho
 Help recruit more people from your school and community by [sending our sample emails](https://<%= hourofcode %>/promote/resources#sample-emails) to your principal, a local group, or even some friends.
 
 ### 3. Start planning your event
-Choose an [Hour of Code activity](https://<%= hourofcode %>/learn) for your classroom and [review this how-to guide](https://<%= hourofcode %>/us/how-to).
+Choose an [Hour of Code activity](https://<%= hourofcode %>/learn) for your classroom and [review this how-to guide](https://<%= hourofcode %>/how-to).
 
 ### From an Hour of Code to years of computer science
 <% if form.data["hoc_event_country_s"] == 'US' %>
