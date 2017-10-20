@@ -286,5 +286,9 @@
   "weather": "meteo",
   "weatherTypeClear": "cancella",
   "weatherTypeRain": "pioggia",
-  "weatherTypeThunder": "tuono"
+  "weatherTypeThunder": "tuono",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
+  "runAgent": "Run Agent"
 }

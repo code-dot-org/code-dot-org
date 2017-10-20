@@ -4,7 +4,7 @@
 import React, {PropTypes} from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import { TutorialsOrgName } from './util';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   select: {
@@ -14,18 +14,18 @@ const styles = {
   }
 };
 
-const FilterGroupOrgNames = React.createClass({
-  propTypes: {
+export default class FilterGroupOrgNames extends React.Component {
+  static propTypes = {
     orgName: PropTypes.string.isRequired,
     uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     onUserInput: PropTypes.func.isRequired
-  },
+  };
 
-  handleChangeOrgName(event) {
+  handleChangeOrgName = (event) => {
     this.props.onUserInput(
       event.target.value
     );
-  },
+  };
 
   truncateOrgName(orgName) {
     // Truncate and ellipsis organization name to limit length in dropdown.
@@ -35,7 +35,7 @@ const FilterGroupOrgNames = React.createClass({
     } else {
       return orgName;
     }
-  },
+  }
 
   render() {
     return (
@@ -64,6 +64,4 @@ const FilterGroupOrgNames = React.createClass({
       </FilterGroupContainer>
     );
   }
-});
-
-export default FilterGroupOrgNames;
+}

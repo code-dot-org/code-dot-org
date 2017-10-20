@@ -43,13 +43,10 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
-  # Returns the channel associated with the given Level and User pair, or
-  # creates a new channel for the pair if one doesn't exist.
+  # If given a user, find the channel associated with the given level/user.
+  # Otherwise, gets the storage_id associated with the (potentially signed out)
+  # current user, and either finds or creates a channel for the level
   def get_channel_for(level, user = nil)
-    # This only works for logged-in users because the storage_id cookie is not
-    # sent back to the client if it is modified by ChannelsApi.
-    return unless current_user
-
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
@@ -244,7 +241,7 @@ module LevelsHelper
 
     if current_user
       if @script
-        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+        section = current_user.sections_as_student.detect {|s| s.script_id == @script.id} ||
           current_user.sections_as_student.first
       else
         section = current_user.sections_as_student.first
@@ -550,6 +547,7 @@ module LevelsHelper
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
+    app_options[:userType] = user_type_from_cookie
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
@@ -585,6 +583,11 @@ module LevelsHelper
     end
 
     app_options
+  end
+
+  private def user_type_from_cookie
+    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    request && request.cookies && request.cookies[cookie_key]
   end
 
   def build_copyright_strings

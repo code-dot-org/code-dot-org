@@ -23,7 +23,7 @@ class SessionsController < Devise::SessionsController
     super
   end
 
-  # POST /resource/clever_takeover
+  # GET /resource/clever_takeover
   def clever_takeover
     clever_takeover_id = session['clever_takeover_id']
     clever_takeover_token = session['clever_takeover_token']
@@ -31,6 +31,11 @@ class SessionsController < Devise::SessionsController
     session['clever_takeover_id'] = clever_takeover_id
     session['clever_takeover_token'] = clever_takeover_token
     redirect_to action: :new
+  end
+
+  def clever_modal_dismissed
+    clear_clever_session_variables
+    render status: 200, nothing: true
   end
 
   # POST /resource/sign_in

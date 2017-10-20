@@ -46,6 +46,7 @@ require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
 require 'testing/lock_thread'
 require 'testing/transactional_test_case'
+require 'testing/capture_queries'
 
 require 'parallel_tests/test/runtime_logger'
 
@@ -111,6 +112,7 @@ class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
+  include CaptureQueries
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
@@ -229,6 +231,16 @@ class ActiveSupport::TestCase
     Rails.logger.info '--------------'
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
+
+  def setup_script_cache
+    Script.stubs(:should_cache?).returns true
+    Script.clear_cache
+    # turn on the cache (off by default in test env so tests don't confuse each other)
+    Rails.application.config.action_controller.perform_caching = true
+    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
+
+    Rails.cache.clear
+  end
 end
 
 # Helpers for all controller test cases
@@ -298,6 +310,7 @@ class ActionController::TestCase
   #   Otherwise it will be generated based on parameter values.
   #   Note: It is recommended to supply a name when varying params or user procs,
   #     as the default generated names may be ambiguous and may conflict.
+  # @param queries [Number] optional number of expected ActiveRecord database queries.
   # @yield runs an optional block of additional test logic after asserting the response
   #   Note: name is required when providing a block.
   #
@@ -323,7 +336,7 @@ class ActionController::TestCase
   #     assert_equal :admin, assigns(:permission)
   #   end
   def self.test_user_gets_response_for(action, method: :get, response: :success,
-    user: nil, params: {}, name: nil, &block)
+    user: nil, params: {}, name: nil, queries: nil, &block)
 
     unless name.present?
       raise 'name is required when a block is provided' if block
@@ -352,8 +365,10 @@ class ActionController::TestCase
         sign_out :user
       end
 
-      send method, action, params: params
-      assert_response response
+      assert_queries queries do
+        send method, action, params: params
+        assert_response response
+      end
 
       # Run additional test logic, if supplied
       instance_exec(&block) if block

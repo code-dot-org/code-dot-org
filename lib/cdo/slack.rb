@@ -1,5 +1,6 @@
 require 'net/http'
 require 'open-uri'
+require 'retryable'
 
 class Slack
   COLOR_MAP = {
@@ -43,11 +44,13 @@ class Slack
     channel_id = get_channel_id(channel_name)
     return nil unless channel_id
 
-    response = open(
-      'https://slack.com/api/channels.info'\
-      "?token=#{SLACK_TOKEN}"\
-      "&channel=#{channel_id}"\
-    )
+    response = Retryable.retryable(on: [Errno::ETIMEDOUT, OpenURI::HTTPError], tries: 2) do
+      open(
+        'https://slack.com/api/channels.info'\
+        "?token=#{SLACK_TOKEN}"\
+        "&channel=#{channel_id}"\
+      )
+    end
 
     begin
       parsed_response = JSON.parse(response.read)

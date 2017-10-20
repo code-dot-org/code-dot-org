@@ -430,19 +430,21 @@ describe('entry tests', () => {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
+    'levelbuilder_craft':          './src/sites/studio/pages/levelbuilder_craft.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
-    'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
+    'levels/_dialog':               './src/sites/studio/pages/levels/_dialog.js',
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
-    'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
+    'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'levels/_external_link':        './src/sites/studio/pages/levels/_external_link.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
@@ -495,6 +497,7 @@ describe('entry tests', () => {
     'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
+    'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
@@ -515,7 +518,8 @@ describe('entry tests', () => {
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
 
-    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js'
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js'
   };
 
   // Create a config for each of our bundles

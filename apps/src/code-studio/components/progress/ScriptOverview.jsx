@@ -11,18 +11,9 @@ import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherS
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
-import { hasLockableStages, SignInState } from '@cdo/apps/code-studio/progressRedux';
-import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
-
-const styles = {
-  notification: {
-    display: 'flex',
-    justifyContent: 'center',
-    paddingTop: 20,
-    paddingBottom: 20,
-  }
-};
+import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -34,9 +25,6 @@ const ScriptOverview = React.createClass({
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
 
     // redux provided
-    isSignedIn: PropTypes.bool.isRequired,
-    isVerifiedTeacher: PropTypes.bool.isRequired,
-    hasVerifiedResources: PropTypes.bool.isRequired,
     perLevelProgress: PropTypes.object.isRequired,
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
@@ -59,9 +47,6 @@ const ScriptOverview = React.createClass({
       onOverviewPage,
       excludeCsfColumnInLegend,
       teacherResources,
-      isSignedIn,
-      isVerifiedTeacher,
-      hasVerifiedResources,
       perLevelProgress,
       scriptCompleted,
       scriptId,
@@ -83,18 +68,11 @@ const ScriptOverview = React.createClass({
       scriptProgress = IN_PROGRESS;
     }
 
-    const showNotification = viewAs === ViewType.Teacher && isSignedIn &&
-      !isVerifiedTeacher && hasVerifiedResources;
-
     return (
       <div>
         {onOverviewPage && (
           <div>
-            {showNotification &&
-              <div style={styles.notification}>
-                <VerifiedResourcesNotification width={1100}/>
-              </div>
-            }
+            <SignInOrAgeDialog/>
             <ScriptOverviewHeader/>
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
@@ -125,9 +103,6 @@ const ScriptOverview = React.createClass({
 export const UnconnectedScriptOverview = ScriptOverview;
 
 export default connect(state => ({
-  isSignedIn: state.progress.signInState === SignInState.SignedIn,
-  isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
   perLevelProgress: state.progress.levelProgress,
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,

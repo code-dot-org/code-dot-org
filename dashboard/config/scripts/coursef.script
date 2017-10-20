@@ -1,5 +1,7 @@
 hidden false
 stage_extras_available true
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF'
@@ -133,7 +135,7 @@ variants
   level 'courseF_artist_ramp9', active: false
 endvariants
 variants
-  level 'ramp_video_artistIntro'
+  level 'ramp_video_artistIntro2'
   level 'courseF_artist_predict1', active: false
 endvariants
 variants
@@ -141,7 +143,7 @@ variants
   level 'courseD_video_nestedLoopsArtist', active: false
 endvariants
 variants
-  level 'courseC_video_angles'
+  level 'courseC_video_angles2'
   level 'courseF_artist_ramp10', active: false
 endvariants
 variants
@@ -281,7 +283,6 @@ bonus 'courseF_bee_functions_challenge1'
 bonus 'courseF_bee_functions_challenge2'
 
 stage 'Functions with Parameters in Artist', flex_category: 'csf_f_2'
-level 'courseF_video_artistFunctions'
 level 'courseF_artist_fwp1'
 level 'gradeF_video_artistParameters'
 level 'courseF_artist_fwp2_predict1'
