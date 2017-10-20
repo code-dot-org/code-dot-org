@@ -316,7 +316,7 @@ export default class FormController extends React.Component {
       this.setState({
         errors: missingRequiredFields,
         errorHeader:
-          "Please fill out all required fields. You must correctly fill out this section before moving \
+          "Please fill out all required fields. You must completely fill out this section before moving \
           on to the next section or going back to edit a previous section."
       });
 

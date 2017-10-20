@@ -536,7 +536,7 @@ FactoryGirl.define do
     transient do
       program Pd::Application::Facilitator1819Application::PROGRAM_OPTIONS.first
       state 'WA'
-      zip_code '98101'
+      add_attribute :zip_code, '98101'
     end
 
     initialize_with do
