@@ -2,6 +2,7 @@ require 'test_helper'
 
 class OmniauthCallbacksControllerTest < ActionController::TestCase
   include Mocha::API
+  include UsersHelper
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
@@ -333,6 +334,27 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
+  end
+
+  test 'clever takeover transfers sections to taken over account' do
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'clever'
+    clever_student = create :student, provider: 'clever', uid: '12345'
+    student = create :student
+
+    clever_students = [clever_student]
+    section.set_exact_student_list(clever_students)
+
+    # Pull sections_as_student from the database and store them in an array to compare later
+    sections_as_student = clever_student.sections_as_student.to_ary
+
+    @request.cookies[:pm] = 'clever_takeover'
+    @request.session['clever_link_flag'] = true
+    @request.session['clever_takeover_id'] = clever_student.uid
+    @request.session['clever_takeover_token'] = '54321'
+    check_and_apply_clever_takeover(student)
+
+    assert_equal sections_as_student, student.sections_as_student
   end
 
   def generate_auth_user_hash(email, user_type)
