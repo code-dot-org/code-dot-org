@@ -143,6 +143,7 @@ namespace :seed do
     LevelLoader.load_custom_levels
   end
 
+  # Seeds the data in callouts
   task callouts: :environment do
     Callout.transaction do
       Callout.reset_db
@@ -152,44 +153,49 @@ namespace :seed do
     end
   end
 
+  # Seeds the data in school_districts
   task school_districts: :environment do
     # use a much smaller dataset in environments that reseed data frequently.
     school_districts_tsv = CDO.stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
     expected_count = `wc -l #{school_districts_tsv}`.to_i - 1
     raise "#{school_districts_tsv} contains no data" unless expected_count > 0
 
-    SchoolDistrict.transaction do
-      # It takes approximately 30 seconds to seed config/school_districts.tsv.
-      # Skip seeding if the data is already present. Note that this logic may need
-      # to be updated once we incorporate data from future survey years.
-      if SchoolDistrict.count < expected_count
-        # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
-        # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
-        puts "seeding school districts (#{expected_count} rows)"
+    # It takes approximately 30 seconds to seed config/school_districts.tsv.
+    # Skip seeding if the data is already present. Note that this logic will
+    # not re-seed data if the number of records in the DB is greater than or
+    # equal to that in the TSV file, even if the data is different.
+    if SchoolDistrict.count < expected_count
+      # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
+      # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
+      puts "seeding school districts (#{expected_count} rows)"
+      SchoolDistrict.transaction do
         SchoolDistrict.find_or_create_all_from_tsv(school_districts_tsv)
       end
     end
   end
 
+  # Seeds the data in schools
   task schools: :environment do
     # use a much smaller dataset in environments that reseed data frequently.
     schools_tsv = CDO.stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
     expected_count = `wc -l #{schools_tsv}`.to_i - 1
     raise "#{schools_tsv} contains no data" unless expected_count > 0
 
-    School.transaction do
-      # It takes approximately 4 minutes to seed config/schools.tsv.
-      # Skip seeding if the data is already present. Note that this logic may need
-      # to be updated once we incorporate data from future survey years.
-      if School.count < expected_count
-        # Since other models will have a foreign key dependency
-        # on School, don't reset_db first.  (Callout, above, does that.)
-        puts "seeding schools (#{expected_count} rows)"
+    # It takes approximately 4 minutes to seed config/schools.tsv.
+    # Skip seeding if the data is already present. Note that this logic will
+    # not re-seed data if the number of records in the DB is greater than or
+    # equal to that in the TSV file, even if the data is different.
+    if School.count < expected_count
+      # Since other models will have a foreign key dependency
+      # on School, don't reset_db first.  (Callout, above, does that.)
+      puts "seeding schools (#{expected_count} rows)"
+      School.transaction do
         School.find_or_create_all_from_tsv(schools_tsv)
       end
     end
   end
 
+  # Seeds the data in regional_partners
   task regional_partners: :environment do
     RegionalPartner.transaction do
       RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
