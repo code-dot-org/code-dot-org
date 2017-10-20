@@ -59,6 +59,7 @@ const SILENCED = [
   'jigsaw',
   'levelbuilder',
   'levelbuilder_applab',
+  'levelbuilder_craft',
   'levelbuilder_edit_script',
   'levelbuilder_gamelab',
   'levelbuilder_studio',

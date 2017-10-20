@@ -7,7 +7,9 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
-import QuickActionsCell from './QuickActionsCell';
+import QuickActionsCell from '../tables/QuickActionsCell';
+import ProjectActionBox from './ProjectActionBox';
+import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -24,35 +26,20 @@ export const COLUMNS = {
 };
 
 export const styles = {
-  table: {
-    width: 970,
-    borderRadius: 5,
-    color: color.charcoal,
-    backgroundColor: color.table_light_row
-  },
-  cell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 10,
-    fontSize: 14,
-  },
-  headerCell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal
-  },
-  cellThumbnail: {
+  cellFirst: {
     borderWidth: '1px 0px 1px 1px',
     borderColor: color.border_light_gray,
+  },
+  headerCellFirst: {
+    borderWidth: '0px 0px 1px 0px',
+    borderColor: color.border_light_gray,
+  },
+  cellThumbnail: {
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
     padding: 2
   },
   headerCellThumbnail: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
     padding: 0
   },
   cellName: {
@@ -62,7 +49,7 @@ export const styles = {
     width: 270
   },
   headerCellName: {
-    borderWidth: '1px 1px 1px 0px',
+    borderWidth: '0px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15
   },
@@ -77,12 +64,6 @@ export const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  link: {
-    color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    textDecoration: 'none'
   }
 };
 
@@ -98,7 +79,7 @@ const thumbnailFormatter = function (thumbnailUrl) {
 
 const nameFormatter = function (name, {rowData}) {
   const url = '/projects/${rowData.type}/${rowData.channel}/';
-  return <a style={styles.link} href={url} target="_blank">{name}</a>;
+  return <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>;
 };
 
 const isPublishedFormatter = function (isPublished) {
@@ -107,7 +88,9 @@ const isPublishedFormatter = function (isPublished) {
 
 const actionsFormatter = function (actions, {rowData}) {
   return (
-    <QuickActionsCell projectData={rowData} />
+    <QuickActionsCell>
+      <ProjectActionBox isPublished={rowData.isPublished}/>
+    </QuickActionsCell>
   );
 };
 
@@ -163,14 +146,17 @@ const PersonalProjectsTable = React.createClass({
         property: 'thumbnailUrl',
         header: {
           props: {style: {
-            ...styles.headerCell,
-            ...styles.headerCellThumbnail
+            ...tableLayoutStyles.headerCell,
+            ...styles.headerCellFirst,
+            ...styles.headerCellThumbnail,
+            ...tableLayoutStyles.unsortableHeader,
           }},
         },
         cell: {
           format: thumbnailFormatter,
           props: {style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
+            ...styles.cellFirst,
             ...styles.cellThumbnail
           }}
         }
@@ -180,14 +166,14 @@ const PersonalProjectsTable = React.createClass({
         header: {
           label: i18n.projectName(),
           props: {style: {
-            ...styles.headerCell,
-            ...styles.headerCellName
+            ...tableLayoutStyles.headerCell,
+            ...styles.headerCellName,
           }},
         },
         cell: {
           format: nameFormatter,
           props: {style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
             ...styles.cellName
           }}
         }
@@ -196,14 +182,14 @@ const PersonalProjectsTable = React.createClass({
         property: 'type',
         header: {
           label: i18n.projectType(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
           format: typeFormatter,
           props: {style: {
             ...styles.cellType,
-            ...styles.cell
+            ...tableLayoutStyles.cell
           }}
         }
       },
@@ -211,24 +197,29 @@ const PersonalProjectsTable = React.createClass({
         property: 'updatedAt',
         header: {
           label: i18n.lastEdited(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
           format: dateFormatter,
-          props: {style: styles.cell}
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
         property: 'isPublished',
         header: {
           label: i18n.publicGallery(),
-          props: {style: styles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            }
+          },
         },
         cell: {
           format: isPublishedFormatter,
           props: {style: {
-            ...styles.cell,
+            ...tableLayoutStyles.cell,
             ...styles.cellIsPublished
           }}
         }
@@ -237,22 +228,22 @@ const PersonalProjectsTable = React.createClass({
         property: 'actions',
         header: {
           label: i18n.quickActions(),
-          props: {style: styles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            }
+          },
         },
         cell: {
           format: actionsFormatter,
-          props: {style: styles.cell}
+          props: {style: tableLayoutStyles.cell}
         }
       }
     ];
   },
 
   render() {
-    const sortableOptions = {
-      // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(0, 0, 0, 0.2 )'}
-    };
-
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
@@ -267,7 +258,7 @@ const PersonalProjectsTable = React.createClass({
     return (
       <Table.Provider
         columns={columns}
-        style={styles.table}
+        style={tableLayoutStyles.table}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="channel" />

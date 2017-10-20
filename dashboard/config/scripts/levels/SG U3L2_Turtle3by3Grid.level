@@ -29,7 +29,9 @@
       },
       "comment_Goals_2": {
         "goal": "Orient turtle"
-      }
+      },
+      "penUp": null,
+      "penDown": null
     },
     "edit_code": true,
     "embed": "false",
@@ -55,7 +57,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "markdown_instructions": "# Do This: \r\nDraw a 3x3 grid to the *front* and *right* of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction.\r\n\r\n![](https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png)\r\n\r\n**HINT:** This problem presents some subtle challenges. Before you start creating the program, test your ideas on paper for faster brainstorming. Work with your partner to discuss possible solutions. Try more than one path. Once you have a solution, identify the subgoals and drag them from the **Goals** tab in the toolbox. Next, fill it in with turtle blocks.",
+    "markdown_instructions": "# New challenge <img src=\"https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png\" style=\"float: right\">\r\n\r\nDraw a 3x3 grid to the *front* and *right* of the turtle *as efficiently* as possible.\r\n\r\nWhat does “efficient” mean? In computer science it can actually mean several different things depending on the situation. For this problem let's say that efficient means: **using the fewest turtle commands possible**\r\n\r\n**note:** we're now including all 4 turtle commands in the turtle toolbox. `penUp()` and `penDown()` have been added in. [Show me where]\r\n\r\n# Do this\r\n\r\n1. This problem presents some subtle challenges. Before you start creating the program, you might want to test your ideas on paper for faster brainstorming. Work with your partner to discuss possible solutions or strategies. Try more than one.\r\n\r\n2. Once you have a solution, **start** by identifying the subgoals and drag them from the **Goals** tab into the workspace. \r\n\r\n3. Then start filling it in with turtle blocks, and **testing** it out as you go by adding a few commands, then running the program, adding a few more, run again, and so on.\r\n\r\nWhen you think you're done click `Finish` and move on.",
     "instructions": "Draw a 3x3 grid to the front and right of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction. (Click to see full instructions)",
     "examples_required": "false",
     "encrypted_examples": "UdvayYdSjDLGOBFxB4iJXCRJPj5C4V0KwlqKx5jOZOgGYJHgKm2i9ReCsa6L\n7N0N\n",
@@ -143,7 +145,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:52:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:52:53 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-02 16:55:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-09 21:05:06 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:52:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-20 16:52:53 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-02 16:55:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-09 21:05:06 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-19 19:33:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-19 19:35:38 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-20 18:46:08 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-20 18:47:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
