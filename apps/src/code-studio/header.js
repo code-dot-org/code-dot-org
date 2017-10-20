@@ -11,7 +11,7 @@ import Dialog from './LegacyDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
-import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
+import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
 
 import { convertBlocksXml } from '../craft/code-connection/utils';
 
@@ -175,8 +175,12 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+
+    // Allow publishing for any project type that older students can publish.
+    // Younger students should never be able to get to the share dialog in the
+    // first place, so there's no need to check age against project types here.
     const canPublish = !!appOptions.isSignedIn &&
-      PUBLISHED_PROJECT_TYPES.includes(appType);
+      PublishableProjectTypesOver13.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>

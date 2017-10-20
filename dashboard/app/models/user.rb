@@ -1159,18 +1159,10 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Return a collection of courses and scripts for the user. First in the list will
-  # be courses enrolled in by the user's sections. Following that will be all scripts
-  # in which the user has made progress that are not in any of the enrolled courses.
-  def recent_courses_and_scripts(exclude_primary_script)
-    courses = section_courses
-    course_scripts_script_ids = courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
-
-    # filter out those that are already covered by a course
-    user_scripts = in_progress_and_completed_scripts.
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
-
-    course_data = courses.map do |course|
+  # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
+  # @return [Array{CourseData}]
+  def assigned_courses
+    section_courses.map do |course|
       {
         name: course[:name],
         title: data_t_suffix('course.name', course[:name], 'title'),
@@ -1178,8 +1170,38 @@ class User < ActiveRecord::Base
         link: course_path(course),
       }
     end
+  end
 
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @return [Boolean]
+  def any_visible_assigned_scripts?
+    user_scripts.where("assigned_at").
+      map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
+      flatten.
+      any?
+  end
+
+  # Checks if there are any non-hidden scripts or courses assigned to the user.
+  # @return [Boolean]
+  def assigned_course_or_script?
+    assigned_courses.any? || any_visible_assigned_scripts?
+  end
+
+  # Return a collection of courses and scripts for the user.
+  # First in the list will be courses enrolled in by the user's sections.
+  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
+  def recent_courses_and_scripts(exclude_primary_script)
     primary_script_id = primary_script.try(:id)
+
+    # Filter out user_scripts that are already covered by a course
+    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+
+    user_scripts = in_progress_and_completed_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
@@ -1198,7 +1220,7 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    course_data + user_script_data
+    assigned_courses + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
@@ -1213,7 +1235,7 @@ class User < ActiveRecord::Base
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
-  # @returns [Section|nil]
+  # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
