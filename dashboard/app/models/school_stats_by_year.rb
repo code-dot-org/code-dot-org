@@ -42,5 +42,23 @@
 
 class SchoolStatsByYear < ActiveRecord::Base
   self.primary_keys = :school_id, :school_year
+
   belongs_to :school
+
+  # Loads/merges the data from a CSV into the table.
+  # Requires a block to parse the row.
+  # @param filename [String] The CSV file name.
+  # @param options [Hash] Optional, the CSV file parsing options.
+  def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"})
+    CSV.read(filename, options).each do |row|
+      parsed = yield row
+      loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
+      if loaded.nil?
+        SchoolStatsByYear.new(parsed).save!
+      else
+        loaded.assign_attributes(parsed)
+        loaded.update!(parsed) if loaded.changed?
+      end
+    end
+  end
 end
