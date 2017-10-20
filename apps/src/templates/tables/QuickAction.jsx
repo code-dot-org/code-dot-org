@@ -8,7 +8,7 @@ const styles = {
     fontSize: 14,
     fontFamily: '"Gotham", sans-serif',
     color: color.charcoal,
-    padding: '8px 0px 6px 0px',
+    padding: '10px 0px 10px 0px',
     ':hover': {
       backgroundColor: color.lightest_gray,
       cursor: 'pointer',
@@ -20,8 +20,6 @@ const styles = {
   },
   lineAbove: {
     borderTop: '1px solid ' + color.lighter_gray,
-    marginTop: 8,
-    padding: '10px 0px 10px 0px',
   },
   xIcon: {
     paddingRight: 5
