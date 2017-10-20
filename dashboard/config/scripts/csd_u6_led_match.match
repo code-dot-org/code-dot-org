@@ -1,0 +1,17 @@
+name 'CSD U6 LED match'
+title 'Match the Block'
+description 'Match the block to the picture of what it does.'
+question '<img src="https://images.code.org/557b25702c7c3fbef1ce625030d68778-image-1508454410109.gif">'
+answer 'pulse'
+question '<img src="https://images.code.org/71cd707de8e60c80e5347edafaab18a2-image-1508454429445.gif">'
+answer 'blink'
+question '<img src="https://images.code.org/e9758bc0f748cda626087e6cd6447e2a-image-1508454431880.gif">'
+answer 'off'
+question '<img src="https://images.code.org/afebdad5266eadef03515e74bd289d1e-image-1508454435044.gif">'
+answer 'on'
+question '<img src="https://images.code.org/a351756cbed7972f759129a42e71c745-image-1508454442597.gif">'
+answer 'toggle'
+
+markdown <<MARKDOWN
+
+MARKDOWN
