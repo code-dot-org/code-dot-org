@@ -144,8 +144,8 @@
     "makerlab_enabled": "false",
     "teacher_markdown": "NOTE: this is a problem from the worksheet. Students are now being asked to write code for it.\r\n\r\nStudents' solutions should involve writing multiple layers of functions following the principles of top-down design. If students are having difficulty in the design, encourage them to use subgoals first, then write the code associated with each subgoal.",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "palette_category_at_start": "goals"
+    "palette_category_at_start": "goals",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
