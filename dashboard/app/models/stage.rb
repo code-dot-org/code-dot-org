@@ -11,12 +11,13 @@
 #  flex_category     :string(255)
 #  lockable          :boolean          default(FALSE), not null
 #  relative_position :integer          not null
+#  properties        :text(65535)
 #
 # Indexes
 #
 #  index_stages_on_script_id  (script_id)
 #
-#
+
 require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
