@@ -15,6 +15,7 @@ import projects, {
 import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
+import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@cdo/apps/util/sharedConstants';
 
 $(document).ready(() => {
   registerReducers({projects, publishDialog: publishDialogReducer});
@@ -61,11 +62,16 @@ function showGallery(gallery) {
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
-// Make this method available to angularProjects.js. This can go away
+// Make these available to angularProjects.js. These can go away
 // once My Projects is moved to React.
+
 window.onShowConfirmPublishDialog = function (projectId, projectType) {
   getStore().dispatch(showPublishDialog(projectId, projectType));
 };
+
+window.PublishableProjectTypesUnder13 = PublishableProjectTypesUnder13;
+
+window.PublishableProjectTypesOver13 = PublishableProjectTypesOver13;
 
 function setupReduxSubscribers(store) {
   let state = {};

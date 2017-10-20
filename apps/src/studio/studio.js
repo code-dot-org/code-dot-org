@@ -118,6 +118,9 @@ const EdgeClassNames = [
 let level;
 let skin;
 
+// These skins can be published as projects.
+const PUBLISHABLE_SKINS = ['gumball', 'studio', 'iceage', 'infinity'];
+
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
 
@@ -2778,8 +2781,8 @@ Studio.displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    const saveToProjectGallery = skin.id === 'studio';
-    const {isSignedIn} = getStore().getState().pageConstants;
+    const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
+    const {isSignedIn, userType} = getStore().getState().pageConstants;
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2798,7 +2801,10 @@ Studio.displayFeedback = function () {
       saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
-      disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
+      // The rails session cookie is blocked on some playlab level types,
+      // causing isSignedIn to be null. In this case, use the userType (based on
+      // a different cookie) to determine if the user is signed in.
+      disableSaveToGallery: level.disableSaveToGallery || !(isSignedIn || userType),
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
