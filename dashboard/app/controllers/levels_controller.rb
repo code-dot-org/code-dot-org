@@ -286,11 +286,29 @@ class LevelsController < ApplicationController
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
       {soft_buttons: []},
       {contained_level_names: []},
-      {examples: []}
+      {examples: []},
+
+      # Minecraft-specific
+      {available_blocks: []},
+      {drop_dropdown_options: []},
+      {if_block_options: []},
+      {place_block_options: []},
+      {play_sound_options: []},
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
-    params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
+    multiselect_params = [
+      :soft_buttons,
+      :available_blocks,
+      :drop_dropdown_options,
+      :if_block_options,
+      :place_block_options,
+      :play_sound_options,
+    ]
+    multiselect_params.each do |param|
+      params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
+    end
+
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)
   end
