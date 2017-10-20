@@ -6175,6 +6175,8 @@ en:
               name: Intro to AppLab - Your First App 3
             Intro to AppLab - Your First App 4:
               name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -6671,3 +6673,17 @@ en:
           description_audience: ''
           description_short: ''
           description: "Place to stage proposed changes and additions to csp3.\r\n***\r\nNOTE: included the SFLP for each lesson to populate the script - but those are the LIVE SFLPs!!!!!.  If you want to change, make a copy first."
+        pwc:
+          stages:
+            new stage:
+              name: new stage
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+          title: PwC Access Your Potential
+          description_audience: ''
+          description_short: ''
+          description: ''
