@@ -40,7 +40,9 @@
       },
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "penUp": null,
+      "penDown": null
     },
     "edit_code": true,
     "embed": "false",
@@ -69,7 +71,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "3iiZVSpcbkKXrwXy1SXLoBJH+gKZibNd/8CCc7xlseSJrwimrLVl5bLVS0Lp\nCqZS\n",
-    "markdown_instructions": "# Do This:\r\n<img src=\"https://images.code.org/5f20ab5fd8b95754e8cfc948a4b41522-image-1441772307480.png\" align=right width=200>\r\nWe are going to continue to build up towards a diamond by **defining** a function that draws one side of the diamond.\r\nIf you look at the whole image we are trying to draw, you'll notice that each of the 4 sides is comprised of 3 calls to `drawStep()`, plus a few extra moves (shown in orange).\r\n\r\nRight now we'll write the code for one of those sides. So...\r\n\r\n**Define** a new function named `drawSide()` which makes three calls in a row to `drawStep()` followed by a `moveForward()` and a `right()`.  \r\n\r\n**Replace** the original function call to `drawStep()` with a call to your newly defined `drawSide()` function. \r\n\r\nThe diagrams below show the intended actions.\r\n<table>\r\n<tr>\r\n<td>![](https://images.code.org/480f6787e4d2daf34d67642e25b29de6-image-1441772552026.png) </td>\r\n<td>![](https://images.code.org/02f52d406854d6f86535adf2f593ccc9-image-1441772709549.gif) </td>\r\n</tr>\r\n</table>\r\n\r\nTo solve this puzzle, you’ll use three subgoals. You’ll **Define the function** (`//Define function`), which will include **calling** 2 different functions (`//Call function`) and **moving the turtle** (`//Move turtle`). Then you'll **call the function** (`//Call function`) that you defined.\r\n",
+    "markdown_instructions": "# Do This:\r\n<img src=\"https://images.code.org/5f20ab5fd8b95754e8cfc948a4b41522-image-1441772307480.png\" align=right width=200>\r\nWe are going to continue to build up towards a diamond by **defining** a function that draws one side of the diamond.\r\nIf you look at the whole image we are trying to draw, you'll notice that each of the 4 sides is comprised of 3 calls to `drawStep()`, plus a few extra moves (shown in orange).\r\n\r\nRight now we'll write the code for one of those sides. So...\r\n\r\n**Define** a new function named `drawSide()` which makes three calls in a row to `drawStep()` followed by a `moveForward()` and a `right()`.  \r\n\r\n**Replace** the original function call to `drawStep()` with a call to your newly defined `drawSide()` function. \r\n\r\nThe diagrams below show the intended actions.\r\n<table>\r\n<tr>\r\n<td>![](https://images.code.org/480f6787e4d2daf34d67642e25b29de6-image-1441772552026.png) </td>\r\n<td>![](https://images.code.org/02f52d406854d6f86535adf2f593ccc9-image-1441772709549.gif) </td>\r\n</tr>\r\n</table>\r\n\r\nTo solve this puzzle, you’ll use three subgoals. You’ll **Define the function** (`//Define function`), which will include **calling** 2 different functions (`//Call function`) and **moving the turtle** (`//Move turtle`). Then you'll **call the function** (`//Call function`) that you defined.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "submittable": "false",
@@ -170,7 +172,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 15:27:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-10 17:12:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-12 17:16:19 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 15:27:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-10 17:12:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-12 17:16:19 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-20 19:18:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
