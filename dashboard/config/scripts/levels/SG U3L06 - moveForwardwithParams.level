@@ -7,12 +7,22 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "moveForward": null
+      "moveForward": {
+        "params": [
+          "100"
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      }
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Use a single command to move the turtle to the edge of the screen. (Click to see full instructions)",
-    "markdown_instructions": "# A New Way to Move\r\nThe `moveForward()` turtle command that we've used so far moves the turtle the same amount every time (25 pixels in fact). Similarly, `turnLeft()` turns the turtle to the left exactly 90 degrees. Today we are going to see how some functions can **accept input**, such as a number, to be used more flexibly. For example, you can write `moveForward(103)` to move the turtle exactly 103 pixels if you like.\r\n\r\n# Do This:\r\n\r\n**How far is it to the top edge of the screen?**\r\n\r\nRun the program to see the new version of `moveForward()` in action. Then **changing only the number supplied to `moveForward()`**, move the turtle to the top edge of the screen. Experiment to find out the distance in pixels between where the turtle starts and the top edge of the screen.\r\n\r\nOnce you've found it, compare with a neighbor to see that you're seeing the same thing and click **Finish** to move on.\r\n\r\nYou'll only use one subgoal- Move turtle -but now you have more flexibility in how this subgoal is achieved.\r\n\r\n**Note:** There might be slight differences depending on whether you get the turtle to just touch the edge, or go off the screen entirely.\r\n\r\nIn workspace -prepopulate with\r\n\r\nmoveForward(100)",
+    "markdown_instructions": "# A New Way to Move the Turtle\r\nThe `moveForward()` turtle command that we've used so far moves the turtle the same amount every time (25 pixels in fact). Similarly, `turnLeft()` turns the turtle to the left exactly 90 degrees. Today we are going to see how some functions can **accept input**, such as a number, to be used more flexibly. For example, you can write `moveForward(103)` to move the turtle forward exactly 103 pixels if you like.\r\n\r\n# Do This:\r\n\r\n**How far is it to the top edge of the screen?**\r\n\r\nRun the program to see the new version of `moveForward()` in action. Then **changing only the number supplied to `moveForward()`**, move the turtle to the top edge of the screen. Experiment to find out the distance in pixels between where the turtle starts and the top edge of the screen.\r\n\r\nOnce you've found it, compare with a neighbor to see that you're seeing the same thing and click **Finish** to move on.\r\n\r\nYou'll only use one subgoal - `//Move turtle` -but now you have more flexibility in how this subgoal is achieved.\r\n\r\n**Note:** There might be slight differences depending on whether you get the turtle to just touch the edge, or go off the screen entirely.",
     "start_blocks": "moveForward(100);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -35,7 +45,7 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -77,7 +87,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:25:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-31 20:28:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\",\"teacher_markdown\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-25 20:50:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 21:14:01 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:25:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-31 20:28:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\",\"teacher_markdown\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-25 20:50:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 21:14:01 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-15 13:12:47 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 13:17:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

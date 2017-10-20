@@ -519,13 +519,12 @@ designMode.readProperty = function (element, name) {
 };
 
 designMode.onDuplicate = function (element, event) {
-  var isScreen = $(element).hasClass('screen');
+  let isScreen = $(element).hasClass('screen');
   if (isScreen) {
-    // Not duplicating screens for now
-    return;
+    return duplicateScreen(element);
   }
 
-  var duplicateElement = element.cloneNode(true);
+  var duplicateElement = $(element).clone(true)[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
   var dupTop = parseInt(element.style.top, 10) + 10;
   var dupWidth = parseInt(element.style.width, 10);
@@ -548,6 +547,30 @@ designMode.onDuplicate = function (element, event) {
 
   return duplicateElement;
 };
+
+function duplicateScreen(element) {
+  const sourceScreen = $(element);
+  const newScreen = designMode.createScreen();
+  designMode.changeScreen(newScreen);
+
+  // Unwrap the draggable wrappers around the elements in the source screen:
+  const madeUndraggable = makeUndraggable(sourceScreen.children());
+
+  // Clone each child of the source screen into the new screen (with new ids):
+  sourceScreen.children().each(function () {
+    const clonedChild = $(this).clone(true)[0];
+    const elementType = elementLibrary.getElementType(clonedChild);
+    elementUtils.setId(clonedChild, elementLibrary.getUnusedElementId(elementType.toLowerCase()));
+    designMode.attachElement(clonedChild);
+  });
+
+  // Restore the draggable wrappers on the elements in the source screen:
+  if (madeUndraggable) {
+    makeDraggable(sourceScreen.children());
+  }
+
+  return newScreen;
+}
 
 designMode.onDeletePropertiesButton = function (element, event) {
   deleteElement(element);
@@ -1236,16 +1259,15 @@ designMode.addKeyboardHandlers = function () {
         case KeyCodes.COPY:
           if (currentlyEditedElement) {
             // Remember the current element on the clipboard
-            clipboardElement = currentlyEditedElement.cloneNode(true);
+            clipboardElement = $(currentlyEditedElement).clone(true)[0];
           }
           break;
         case KeyCodes.PASTE:
           // Paste the clipboard element with updated position and ID
           if (clipboardElement) {
-            var duplicateElement = designMode.onDuplicate(clipboardElement);
-            // For now, screens can't be duplicated, so duplicate element could be null
+            let duplicateElement = designMode.onDuplicate(clipboardElement);
             if (duplicateElement) {
-              clipboardElement = duplicateElement.cloneNode(true);
+              clipboardElement = $(duplicateElement).clone(true)[0];
             }
           }
           break;

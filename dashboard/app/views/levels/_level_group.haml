@@ -1,11 +1,6 @@
 - app = 'level_group'
 - data = @level.properties
-
-- content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/levelGroup.js')}
-
-:javascript
-  window.levelData = #{data.to_json};
+- parsed_last_attempt = JSON.parse(@last_attempt || '{}')
 
 = render partial: 'levels/common_audio'
 
@@ -41,15 +36,7 @@
           %br/
 
         - page.levels.each_with_index do |level, index|
-          -# Fall back to retrieving the last_attempt from the parsed levelgroup last_attempt
-          - parsed = JSON.parse(@last_attempt || '{}')
-          - sublevel_last_attempt = parsed[level.id.to_s].try(:[], 'result')
-          - if @user && current_user && @user != current_user
-            -# load other user's solution for teachers viewing their students' solution
-            - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
-          - elsif current_user
-            -# load user's previous attempt at this puzzle.
-            - sublevel_last_attempt = current_user.last_attempt(level).try(:level_source).try(:data)
+          - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level)
 
           -# Show any text from an external level.
           - if data["texts"]
@@ -77,12 +64,10 @@
         - unless @script_level.nil?
           = render partial: 'levels/dialog', locals: {app: app, data: data, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
 
-- unless @script_level.nil?
-  :javascript
-    $(document).ready(function() {
-      window.initLevelGroup(
-        #{@total_level_count},
-        #{current_page || -1},
-        #{@last_attempt || {}}
-      );
-    });
+- content_for(:head) do
+  - level_data = data
+  - init_data = nil
+  - unless @script_level.nil?
+    - init_data = { total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt}
+
+  %script{src: minifiable_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}

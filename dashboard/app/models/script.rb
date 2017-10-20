@@ -124,6 +124,7 @@ class Script < ActiveRecord::Base
     teacher_resources
     stage_extras_available
     has_verified_resources
+    script_announcements
   )
 
   def self.twenty_hour_script
@@ -426,7 +427,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd6'
   end
 
   def k1?
@@ -503,7 +504,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csp3-research-mxghyt csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_lesson_pdf?
@@ -529,6 +530,22 @@ class Script < ActiveRecord::Base
 
   def has_peer_reviews?
     peer_reviews_to_complete.try(:>, 0)
+  end
+
+  # Is age 13+ required for logged out users
+  # @return {bool}
+  def logged_out_age_13_required?
+    return false if login_required
+
+    # hard code some exceptions. ideally we'd get rid of these and just make our
+    # UI tests deal with the 13+ requirement
+    return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
+
+    # these are Games where if you're not logged in, we want to prompt to ask if
+    # you're at least 13 years old.
+    thirteen_plus_apps = [Game.applab, Game.gamelab, Game.weblab]
+
+    script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
   end
 
   def self.setup(custom_files)
@@ -625,14 +642,6 @@ class Script < ActiveRecord::Base
           raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
         end
 
-        if [Game.applab, Game.gamelab].include? level.game
-          unless script.hidden || script.login_required
-            raise <<-ERROR.gsub(/^\s+/, '')
-              Applab and Gamelab levels can only be added to scripts that are hidden or require login
-              (while adding level "#{level.name}" to script "#{script.name}")
-            ERROR
-          end
-        end
         level
       end
 
@@ -876,7 +885,9 @@ class Script < ActiveRecord::Base
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
-      has_verified_resources: has_verified_resources?
+      has_verified_resources: has_verified_resources?,
+      script_announcements: script_announcements,
+      age_13_required: logged_out_age_13_required?,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -894,7 +905,8 @@ class Script < ActiveRecord::Base
       name: name,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      student_detail_progress_view: student_detail_progress_view?
+      student_detail_progress_view: student_detail_progress_view?,
+      age_13_required: logged_out_age_13_required?
     }
   end
 
@@ -940,7 +952,8 @@ class Script < ActiveRecord::Base
       project_widget_types: script_data[:project_widget_types],
       teacher_resources: script_data[:teacher_resources],
       stage_extras_available: script_data[:stage_extras_available] || false,
-      has_verified_resources: !!script_data[:has_verified_resources]
+      has_verified_resources: !!script_data[:has_verified_resources],
+      script_announcements: script_data[:script_announcements],
     }.compact
   end
 

@@ -1236,6 +1236,14 @@ var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
 }, 10);
 
+/**
+ * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
+ * to be static so it can be statically debounced as onResizeSmallFooter
+ */
+StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
+  resizePinnedBelowVisualizationArea();
+};
+
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 
@@ -2852,6 +2860,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    userType: config.userType,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

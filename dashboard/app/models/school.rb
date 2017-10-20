@@ -11,7 +11,7 @@
 #  school_type        :string(255)      not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
-#  address_line1      :string(30)
+#  address_line1      :string(50)
 #  address_line2      :string(30)
 #  address_line3      :string(30)
 #
@@ -30,48 +30,45 @@ class School < ActiveRecord::Base
 
   belongs_to :school_district
 
-  # The listing of all US schools comes from http://nces.ed.gov/ccd/pubagency.asp
-  # and is then exported into a tab-separated file.
-  # The data format is described at http://nces.ed.gov/ccd/pdf/2015150_sc132a_Documentation_052716.pdf
-  CSV_HEADERS = {
-    id: 'NCESSCH',
-    school_district_id: 'LEAID',
-    name: 'SCHNAM',
-    city: 'LCITY',
-    state: 'LSTATE',
-    zip: 'LZIP',
-    charter_status: 'CHARTR',
-  }.freeze
-
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
   def self.find_or_create_all_from_tsv(filename)
-    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      first_or_create_from_tsv_row(row)
+    School.merge_from_csv(filename) do |row|
+      row.to_hash.symbolize_keys
     end
   end
 
-  SCHOOL_TYPE = {
-    public: 'public',
-    charter: 'charter'
-  }.freeze
-
-  private_class_method def self.school_type(charter_status)
-    charter_status == '1' ? SCHOOL_TYPE[:charter] : SCHOOL_TYPE[:public]
+  # Loads/merges the data from a CSV into the schools table.
+  # Requires a block to parse the row.
+  # @param filename [String] The CSV file name.
+  # @param options [Hash] The CSV file parsing options.
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
+    CSV.read(filename, options).each do |row|
+      parsed = yield row
+      loaded = School.find_by_id(parsed[:id])
+      if loaded.nil?
+        School.new(parsed).save!
+      else
+        loaded.assign_attributes(parsed)
+        loaded.update!(parsed) if loaded.changed?
+      end
+    end
   end
 
-  private_class_method def self.first_or_create_from_tsv_row(row_data)
-    params = {
-      id: row_data[CSV_HEADERS[:id]],
-      school_district_id: row_data[CSV_HEADERS[:school_district_id]],
-      name: row_data[CSV_HEADERS[:name]],
-      city: row_data[CSV_HEADERS[:city]],
-      state: row_data[CSV_HEADERS[:state]],
-      zip: row_data[CSV_HEADERS[:zip]],
-      school_type: school_type(row_data[CSV_HEADERS[:charter_status]]),
-    }
-    School.where(params).first_or_create!
+  # Download the data in the table to a CSV file.
+  # @param filename [String] The CSV file name.
+  # @param options [Hash] The CSV file parsing options.
+  # @return [String] The CSV file name.
+  def self.write_to_csv(filename, options = CSV_IMPORT_OPTIONS)
+    cols = %w(id school_district_id name address_line1 address_line2 address_line3 city state zip school_type)
+    CSV.open(filename, 'w', options) do |csv|
+      csv << cols
+      School.order(:id).map do |row|
+        csv << cols.map {|col| row[col]}
+      end
+    end
+    return filename
   end
 end

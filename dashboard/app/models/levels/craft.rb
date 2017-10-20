@@ -58,7 +58,8 @@ class Craft < Blockly
     :day_night_cycle_time,
     :level_verification_timeout,
     :use_player,
-    :free_play
+    :free_play,
+    :songs
   )
 
   JSON_LEVEL_MAPS = [
@@ -233,10 +234,6 @@ class Craft < Blockly
     zombieHurt2: true,
   }.freeze
 
-  ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]".freeze
-  ALL_MINIBLOCKS_ARRAY = "[\"#{ALL_MINIBLOCKS.keys[1..-1].join('", "')}\"]".freeze
-  ALL_SOUNDS_ARRAY = "[\"#{ALL_SOUNDS.keys[1..-1].join('", "')}\"]".freeze
-
   KNOWN_TILE_TYPES = {
     ground_plane: ALL_BLOCKS,
     ground_decoration_plane: {
@@ -405,6 +402,19 @@ class Craft < Blockly
     [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
   end
 
+  def self.song_options
+    %w(
+      vignette1
+      vignette2-quiet
+      vignette3
+      vignette4-intro
+      vignette5-shortpiano
+      vignette7-funky-chirps-short
+      vignette8-free-play
+      nether2
+    )
+  end
+
   def self.show_popup_options
     [['Player Select Popup', 'playerSelection'],
      ['House Layout Select Popup', 'houseLayoutSelection']]
@@ -471,6 +481,7 @@ class Craft < Blockly
       place_block_options
       drop_dropdown_options
       play_sound_options
+      songs
     ).map {|x| x.camelize(:lower)}
   end
 

@@ -49,9 +49,10 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
      * @name MakerBoard#destroy
      */
     describe('destroy()', () => {
-      it(`doesn't return anything`, () => {
+      it(`returns a promise`, () => {
         const retVal = board.destroy();
-        expect(retVal).to.be.undefined;
+        expect(retVal).to.be.an.instanceOf(Promise);
+        return retVal;
       });
     });
 

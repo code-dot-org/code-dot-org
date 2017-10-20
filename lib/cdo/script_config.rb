@@ -25,6 +25,14 @@ class ScriptConfig
       course2
       course3
       course4
+      coursea
+      courseb
+      coursec
+      coursed
+      coursee
+      coursef
+      express
+      pre-express
       playlab
       artist
       infinity

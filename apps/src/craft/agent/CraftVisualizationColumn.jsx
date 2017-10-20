@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import React, {PropTypes} from 'react';
 var msg = require('@cdo/locale');
 
@@ -17,7 +15,7 @@ var CraftVisualizationColumn = function (props) {
           </div>
         </div>
       </ProtectedVisualizationDiv>
-      <GameButtons agent={appOptions.levelPosition !== 1}>
+      <GameButtons>
         <ArrowButtons />
 
         {props.showFinishButton && <div id="right-button-cell">

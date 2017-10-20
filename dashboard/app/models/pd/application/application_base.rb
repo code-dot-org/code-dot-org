@@ -14,11 +14,13 @@
 #  form_data           :text(65535)      not null
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  course              :string(255)
 #
 # Indexes
 #
 #  index_pd_applications_on_application_type     (application_type)
 #  index_pd_applications_on_application_year     (application_year)
+#  index_pd_applications_on_course               (course)
 #  index_pd_applications_on_regional_partner_id  (regional_partner_id)
 #  index_pd_applications_on_status               (status)
 #  index_pd_applications_on_type                 (type)
@@ -53,6 +55,12 @@ module Pd::Application
       waitlisted
     ).index_by(&:to_sym).freeze
 
+    enum course: %w(
+      csf
+      csd
+      csp
+    ).index_by(&:to_sym).freeze
+
     belongs_to :user
     belongs_to :regional_partner
 
@@ -74,6 +82,10 @@ module Pd::Application
     def unlock!
       return unless locked?
       update! locked_at: nil
+    end
+
+    def regional_partner_name
+      regional_partner.try(:name)
     end
   end
 end
