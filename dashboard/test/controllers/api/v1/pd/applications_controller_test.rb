@@ -3,8 +3,7 @@ require 'test_helper'
 module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
     setup_all do
-      regional_partner = create :regional_partner
-      application = create :pd_facilitator1819_application, regional_partner_id: regional_partner.id
+      application = create :pd_facilitator1819_application
       @test_params = {
         id: application.id
       }

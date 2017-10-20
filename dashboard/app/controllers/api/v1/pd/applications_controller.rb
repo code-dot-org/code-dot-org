@@ -4,51 +4,17 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   # GET /api/v1/pd/applications
   def index
     application_data = {}
-    application_types = [
-      {
-        course: :csf,
-        role: :csf_facilitator,
-        klass: 'Pd::Application::Facilitator1819Application'
-
-      },
-      {
-        course: :csd,
-        role: :csd_facilitator,
-        klass: 'Pd::Application::Facilitator1819Application'
-
-      },
-      {
-        course: :csp,
-        role: :csp_facilitator,
-        klass: 'Pd::Application::Facilitator1819Application'
-
-      },
-      {
-        course: :csd,
-        role: :csd_teacher,
-        klass: 'Pd::Application::Teacher1819Application'
-
-      },
-      {
-        course: :csp,
-        role: :csp_teacher,
-        klass: 'Pd::Application::Teacher1819Application'
-      },
-    ]
-
     regional_partner_id = params[:regional_partner]
 
-    application_types.each do |app_type|
-      klass = app_type[:klass]
-      course = app_type[:course]
-      role = app_type[:role]
+    {
+      csf_facilitator: Pd::Application::Facilitator1819Application.csf,
+      csd_facilitator: Pd::Application::Facilitator1819Application.csd,
+      csp_facilitator: Pd::Application::Facilitator1819Application.csp,
+      csd_teacher: Pd::Application::Teacher1819Application.csd,
+      csp_teacher: Pd::Application::Teacher1819Application.csp,
+    }.each do |role, applications|
       application_data[role] = {}
-      applications = Object.const_get(klass).send(course)
-
-      if regional_partner_id
-        applications = applications.where(regional_partner: regional_partner_id)
-      end
-
+      applications = applications.where(regional_partner: regional_partner_id) if regional_partner_id
       apps_by_status = applications.group_by(&:status)
       apps_by_status.each do |status, apps_with_status|
         application_data[role][status] = {}
