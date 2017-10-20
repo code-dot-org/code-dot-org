@@ -15,7 +15,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     }.each do |role, applications|
       application_data[role] = {}
       applications = applications.where(regional_partner: regional_partner_id) if regional_partner_id
-      apps_by_status = applications.group_by(&:status)
+      apps_by_status = applications.select(:status, :locked_at).group_by(&:status)
       apps_by_status.each do |status, apps_with_status|
         application_data[role][status] = {}
         grouped_apps = apps_with_status.group_by {|app| app.locked? ? 'locked' : 'unlocked'}
