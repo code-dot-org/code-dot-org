@@ -119,8 +119,6 @@ describe("ButtonList", () => {
       checkboxList.setProps({selectItems: ["Cat"]});
       checkboxList.find("Checkbox[value='Cat']").simulate("change", {target: {value: "Cat", checked: false}});
       expect(onChangeCallback).to.have.been.calledOnce;
-
-      console.log(onChangeCallback.args);
       expect(onChangeCallback).to.have.been.calledWith({favoritePet: null});
     });
   });
