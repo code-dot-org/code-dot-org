@@ -12,7 +12,7 @@ import {
 import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
-import DetailView from './detail_view';
+import {DetailView} from './detail_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';

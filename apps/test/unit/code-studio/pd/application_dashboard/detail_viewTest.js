@@ -8,40 +8,44 @@ describe("DetailView", () => {
     it("is disabled until the Edit button is clicked", () => {
       let detailView = mount(
         <DetailViewContents
+          applicationId="1"
           applicationData={{
-          name: '',
-          acceptance: 'accepted',
-          accountEmail: 'email',
-          phone: 'phone',
-          course: 'course',
-          regionalPartner: 'partner',
-          program: 'program',
-          planToTeachThisYear: 'Yes',
-          rateAbility: '10',
-          canAttendFIT: 'Yes',
-          responsesForSections: [{
-            sectionName: 'section',
-            responses: [{
-              question: (<span>Question</span>),
-              answer: 'Answer',
-              score: 1
-            }]
-          }]
+            regionalPartner: 'partner',
+            notes: 'notes',
+            status: 'accepted',
+            school_name: 'School Name',
+            district_name: 'District Name',
+            email: 'email',
+            formData: {
+              firstName: 'First Name',
+              lastName: 'Last Name',
+              title: 'Title',
+              phone: 'Phone',
+              preferredFirstName: 'Preferred First Name',
+              accountEmail: 'accountEmail',
+              alternateEmail: 'alternateEmail',
+              program: 'program',
+              planOnTeachering: ['Yes'],
+              abilityToMeetRequirements: '10'
+            }
         }}
         />
       );
 
       expect(detailView.find('#DetailViewHeader Button')).to.have.length(1);
       expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
+      expect(detailView.find('#Notes').prop('disabled')).to.be.true;
 
       detailView.find('#DetailViewHeader Button').simulate('click');
       expect(detailView.find('#DetailViewHeader Button').map((button) => {
         return button.text();
       })).to.deep.equal(['Save', 'Cancel']);
       expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.false;
+      expect(detailView.find('#Notes').prop('disabled')).to.be.false;
 
       detailView.find('#DetailViewHeader Button').last().simulate('click');
       expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
+      expect(detailView.find('#Notes').prop('disabled')).to.be.true;
     });
   });
 });

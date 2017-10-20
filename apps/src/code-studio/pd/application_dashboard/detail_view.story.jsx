@@ -12,51 +12,24 @@ export default storybook => {
         story: () => (
           <DetailViewContents
             applicationData={{
-              name: 'Rubeus Hagrid',
-              totalScore: 42,
-              acceptance: 'accepted',
-              title: 'Groundskeeper',
-              accountEmail: 'hagrid@hogwarts.edu',
-              phone: '867-5309',
-              district: 'Ministry of Magic Department of Education',
-              school: 'Hogwarts',
-              course: 'CS Principles',
-              regionalPartner: 'Order of the Phoenix',
-              program: 'Advanced Expelliarmus',
-              planToTeachThisYear: 'Yes',
-              rateAbility: '6',
-              canAttendFIT: 'Yes',
-              responsesForSections: [{
-                sectionName: 'Keeping Students Safe',
-                responses: [{
-                  question: (
-                    <div>
-                      Do you believe that dangerous creatures like <i>Acromantulas</i> should be kept away from students?
-                    </div>
-                  ),
-                  answer: 'Now wait der justa minute - Aragog would never hurt a fly! Misunderstood, thats all',
-                  score: 1
-                }, {
-                  question: (
-                    <div>
-                      Are giants dangerous?
-                    </div>
-                  ),
-                  answer: 'No! Grawp is as gentle as can be, just needs a firm hand every now and then is all',
-                  score: 1
-                }]
-              }, {
-                sectionName: 'Equipment',
-                responses: [{
-                  question: (
-                    <div>
-                      Describe your wand
-                    </div>
-                  ),
-                  answer: 'Well, yer see, it looks like kind of an umbrella sorta thing'
-                }]
-              }],
-              notes: 'Will require a large bed'
+              regionalPartner: 'partner',
+              notes: 'notes',
+              status: 'unreviewed',
+              school_name: 'School Name',
+              district_name: 'District Name',
+              email: 'email',
+              formData: {
+                firstName: 'First Name',
+                lastName: 'Last Name',
+                title: 'Title',
+                phone: 'Phone',
+                preferredFirstName: 'Preferred First Name',
+                accountEmail: 'accountEmail',
+                alternateEmail: 'alternateEmail',
+                program: 'program',
+                planOnTeachering: ['Yes'],
+                abilityToMeetRequirements: '10'
+              }
             }}
           />
         )
