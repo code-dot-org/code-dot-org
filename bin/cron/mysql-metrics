@@ -20,7 +20,6 @@ const_keys = %w(
   Innodb_buffer_pool_bytes_dirty
   Innodb_buffer_pool_pages_data
   Innodb_buffer_pool_pages_dirty
-  Innodb_buffer_pool_pages_flushed
   Innodb_buffer_pool_pages_free
   Innodb_buffer_pool_pages_misc
   Innodb_buffer_pool_pages_total
@@ -258,6 +257,7 @@ interval_keys = %w(
   Handler_savepoint_rollback
   Handler_update
   Handler_write
+  Innodb_buffer_pool_pages_flushed
   Innodb_buffer_pool_read_ahead
   Innodb_buffer_pool_read_ahead_evicted
   Innodb_buffer_pool_read_ahead_rnd
@@ -320,7 +320,22 @@ intervals = interval_keys.map do |key|
   [key, (status[key].to_i - old_status[key].to_i)]
 end.to_h
 
-metrics = (constants.merge(intervals)).map do |key, value|
+innodb_status = PEGASUS_DB.fetch('SHOW ENGINE INNODB STATUS').first[:Status]
+
+history_list_length = innodb_status.match(/History list length (\d+)/)[1].to_i
+log_sequence = innodb_status.match(/Log sequence number\s+(\d+)/)[1].to_i
+log_flushed = innodb_status.match(/Log flushed up to\s+(\d+)/)[1].to_i
+log_pages_flushed = innodb_status.match(/Pages flushed up to\s+(\d+)/)[1].to_i
+log_last_checkpoint = innodb_status.match(/Last checkpoint at\s+(\d+)/)[1].to_i
+
+innodb_stats = {
+  Innodb_history_list_length: history_list_length,
+  Innodb_log_flush_behind: log_sequence - log_flushed,
+  Innodb_log_pages_flush_behind: log_sequence - log_pages_flushed,
+  Innodb_log_checkpoint_behind: log_sequence - log_last_checkpoint
+}
+
+metrics = (constants.merge(intervals).merge(innodb_stats)).map do |key, value|
   {
     metric_name: key,
     dimensions: [
