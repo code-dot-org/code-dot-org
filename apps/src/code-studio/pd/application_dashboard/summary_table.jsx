@@ -7,8 +7,20 @@ import color from '@cdo/apps/util/color';
 
 export default class SummaryTable extends React.Component {
   static propTypes = {
-    caption: PropTypes.string.isRequired
+    caption: PropTypes.string.isRequired,
+    data: PropTypes.object
   }
+
+  tableRow = (label, bgColor, data) =>  {
+    return (
+      <tr>
+        <td style={{backgroundColor: bgColor}}>{label}</td>
+        <td>{label}</td>
+        <td>{label}</td>
+        <td>{label}</td>
+      </tr>
+    );
+  };
 
   render() {
     return (
@@ -23,36 +35,11 @@ export default class SummaryTable extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td style={{backgroundColor: color.level_perfect}}>Accepted</td>
-            <td>accepted && locked</td>
-            <td>accepted && unlocked</td>
-            <td>accepted total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.level_passed}}>Waitlisted</td>
-            <td>waitlisted && locked</td>
-            <td>waitlisted && unlocked</td>
-            <td>waitlisted total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.orange}}>Pending</td>
-            <td>pending && locked</td>
-            <td>pending && unlocked</td>
-            <td>pending total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.red}}>Declined</td>
-            <td>declined && locked</td>
-            <td>declined && unlocked</td>
-            <td>declined total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.charcoal}}>Unreviewed</td>
-            <td>unreviewed && locked</td>
-            <td>unreviewed && unlocked</td>
-            <td>unreviewed total</td>
-          </tr>
+          {this.tableRow('Accepted', color.level_perfect, this.props.data)}
+          {this.tableRow('Waitlisted', color.level_passed, this.props.data)}
+          {this.tableRow('Pending', color.orange, this.props.data)}
+          {this.tableRow('Declined', color.red, this.props.data)}
+          {this.tableRow('Unreviewed', color.charcoal, this.props.data)}
         </tbody>
       </Table>
     );

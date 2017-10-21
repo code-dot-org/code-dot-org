@@ -41,10 +41,11 @@ export default class Summary extends React.Component {
       return (
         <div>
           <h1>All Regional Partner Applications</h1>
-          <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitators"]}/>
-          <SummaryTable caption="CSP Facilitators"/>
-          <SummaryTable caption="CSD Teachers"/>
-          <SummaryTable caption="CSP Teachers"/>
+          <SummaryTable caption="CSF Facilitators" data={this.state.applications["csf_facilitator"]}/>
+          <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitator"]}/>
+          <SummaryTable caption="CSP Facilitators" data={this.state.applications["csp_facilitator"]}/>
+          <SummaryTable caption="CSD Teachers" data={this.state.applications["csd_teacher"]}/>
+          <SummaryTable caption="CSP Teachers" data={this.state.applications["csp_teacher"]}/>
         </div>
       );
     }
