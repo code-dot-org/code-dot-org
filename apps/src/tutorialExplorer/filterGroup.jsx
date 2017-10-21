@@ -12,7 +12,8 @@ export default class FilterGroup extends React.Component {
     text: PropTypes.string.isRequired,
     filterEntries: PropTypes.array.isRequired,
     selection: PropTypes.array.isRequired,
-    onUserInput: PropTypes.func.isRequired
+    onUserInput: PropTypes.func.isRequired,
+    singleEntry: PropTypes.bool.isRequired
   };
 
   render() {
@@ -25,6 +26,7 @@ export default class FilterGroup extends React.Component {
             text={item.text}
             selected={this.props.selection && this.props.selection.indexOf(item.name) !== -1}
             onUserInput={this.props.onUserInput}
+            singleEntry={this.props.singleEntry}
             key={item.name}
           />
         ))}
