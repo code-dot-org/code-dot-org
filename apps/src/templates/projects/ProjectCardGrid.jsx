@@ -80,6 +80,16 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
             />
             <ProjectAppTypeArea
+              labKey="minecraft"
+              labName={i18n.projectGroupMinecraft()}
+              labViewMoreString={i18n.projectTypeMinecraftViewMore()}
+              projectList={projectLists.minecraft}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+            />
+            <ProjectAppTypeArea
               labKey="applab"
               labName={i18n.projectTypeApplab()}
               labViewMoreString={i18n.projectTypeApplabViewMore()}
@@ -128,6 +138,18 @@ const ProjectCardGrid = React.createClass({
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
               />
+            }
+            {this.state.showApp === 'minecraft' &&
+            <ProjectAppTypeArea
+              labKey="minecraft"
+              labName={i18n.projectTypeAllProjectsMinecraft()}
+              labViewMoreString={i18n.projectsViewAll()}
+              projectList={projectLists.minecraft}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.viewAllProjects}
+              isDetailView={true}
+            />
             }
             {this.state.showApp === 'applab' &&
               <ProjectAppTypeArea
