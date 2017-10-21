@@ -98,28 +98,7 @@ const MIN_CONSOLE_WIDTH = 345;
 /**
  * The parent JsDebugger component.
  */
-export default connect(
-  (state) => ({
-    debugButtons: !!state.pageConstants.showDebugButtons,
-    debugConsole: !!state.pageConstants.showDebugConsole,
-    debugWatch: !!state.pageConstants.showDebugWatch,
-    debugSlider: !!state.pageConstants.showDebugSlider,
-    isDebuggerPaused: state.runState.isDebuggerPaused,
-    stepSpeed: state.runState.stepSpeed,
-    isOpen: isOpen(state),
-    isAttached: isAttached(state),
-    canRunNext: canRunNext(state),
-    commandHistory: getCommandHistory(state),
-  }),
-  {
-    setStepSpeed,
-    addWatchExpression,
-    removeWatchExpression,
-    clearLog,
-    open,
-    close,
-  }
-)(Radium(class JsDebugger extends React.Component {
+class JsDebugger extends React.Component {
   static propTypes = {
     // from redux
     debugButtons: PropTypes.bool.isRequired,
@@ -562,4 +541,27 @@ export default connect(
       </div>
     );
   }
-}));
+}
+
+export default connect(
+  (state) => ({
+    debugButtons: !!state.pageConstants.showDebugButtons,
+    debugConsole: !!state.pageConstants.showDebugConsole,
+    debugWatch: !!state.pageConstants.showDebugWatch,
+    debugSlider: !!state.pageConstants.showDebugSlider,
+    isDebuggerPaused: state.runState.isDebuggerPaused,
+    stepSpeed: state.runState.stepSpeed,
+    isOpen: isOpen(state),
+    isAttached: isAttached(state),
+    canRunNext: canRunNext(state),
+    commandHistory: getCommandHistory(state),
+  }),
+  {
+    setStepSpeed,
+    addWatchExpression,
+    removeWatchExpression,
+    clearLog,
+    open,
+    close,
+  }
+)(Radium(JsDebugger));
