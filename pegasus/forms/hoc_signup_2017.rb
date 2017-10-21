@@ -5,6 +5,7 @@ class HocSignup2017 < HocSignup2014
     result = super
     result[:nces_school_s] = data[:nces_school_s]
     result[:school_name_s] = data[:school_name_s]
+    result[:hoc_event_country_s] = data[:hoc_event_country_s]
 
     result
   end

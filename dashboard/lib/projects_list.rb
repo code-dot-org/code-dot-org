@@ -9,7 +9,7 @@ module ProjectsList
   PUBLISHED_PROJECT_TYPE_GROUPS = {
     applab: ['applab'],
     gamelab: ['gamelab'],
-    playlab: ['playlab', 'gumball'],
+    playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist']
   }.freeze
 
