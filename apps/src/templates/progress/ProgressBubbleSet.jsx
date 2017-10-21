@@ -54,7 +54,7 @@ const styles = {
   }
 };
 
-export default Radium(class ProgressBubbleSet extends React.Component {
+class ProgressBubbleSet extends React.Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
@@ -98,4 +98,6 @@ export default Radium(class ProgressBubbleSet extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(ProgressBubbleSet);

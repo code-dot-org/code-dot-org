@@ -25,7 +25,7 @@ const styles = {
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
-const TeacherContentToggle = Radium(class extends React.Component {
+class TeacherContentToggle extends React.Component {
   static propTypes = {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
@@ -103,9 +103,9 @@ const TeacherContentToggle = Radium(class extends React.Component {
       </div>
     );
   }
-});
+}
 
-export const UnconnectedTeacherContentToggle = TeacherContentToggle;
+export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
 
 // Exported so that it can be tested
 export const mapStateToProps = state => {
@@ -134,4 +134,4 @@ export const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(TeacherContentToggle);
+export default connect(mapStateToProps)(UnconnectedTeacherContentToggle);

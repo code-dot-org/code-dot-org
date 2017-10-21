@@ -44,7 +44,7 @@ const style = {
   },
 };
 
-const AdvancedShareOptions = Radium(class extends React.Component {
+class AdvancedShareOptions extends React.Component {
   static propTypes = {
     shareUrl: PropTypes.string.isRequired,
     onClickExport: PropTypes.func,
@@ -213,6 +213,6 @@ const AdvancedShareOptions = Radium(class extends React.Component {
       </div>
     );
   }
-});
+}
 
-export default AdvancedShareOptions;
+export default Radium(AdvancedShareOptions);

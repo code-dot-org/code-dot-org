@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {AnyChildren} from './types';
 
-export default Radium(class EqualColumns extends React.Component {
+class EqualColumns extends React.Component {
   static propTypes = {
     // Space between columns, in pixels
     intercolumnarDistance: PropTypes.number,
@@ -37,4 +37,6 @@ export default Radium(class EqualColumns extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(EqualColumns);

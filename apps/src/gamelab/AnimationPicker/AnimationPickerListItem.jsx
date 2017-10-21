@@ -53,7 +53,7 @@ const styles = {
   }
 };
 
-export default Radium(class AnimationPickerListItem extends React.Component {
+class AnimationPickerListItem extends React.Component {
   static propTypes = {
     animationProps: shapes.AnimationProps,
     icon: PropTypes.string,
@@ -99,4 +99,6 @@ export default Radium(class AnimationPickerListItem extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(AnimationPickerListItem);

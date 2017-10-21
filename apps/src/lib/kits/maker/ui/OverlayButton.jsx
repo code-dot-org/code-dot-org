@@ -35,7 +35,7 @@ const primaryStyle = {
   color: color.lighter_gray,
 };
 
-export default Radium(class OverlayButton extends Component {
+class OverlayButton extends Component {
   static propTypes = {
     className: PropTypes.string,
     primary: PropTypes.bool,
@@ -59,4 +59,6 @@ export default Radium(class OverlayButton extends Component {
       </button>
     );
   }
-});
+}
+
+export default Radium(OverlayButton);
