@@ -93,7 +93,7 @@ const TutorialExplorer = React.createClass({
 
     let newState = {};
 
-    if (this.props.filterGroups.find(name => filterGroup).singleEntry) {
+    if (this.props.filterGroups.find(item => item.name === filterGroup).singleEntry) {
       newState = state.updateIn(['filters', filterGroup], arr => [filterEntry]);
     } else if (value) {
       // Add value to end of array.
