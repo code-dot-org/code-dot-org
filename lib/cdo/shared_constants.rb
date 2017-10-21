@@ -52,6 +52,8 @@ module SharedConstants
     artist
     playlab
     gumball
+    iceage
+    infinity
   ).freeze
 
   PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(
