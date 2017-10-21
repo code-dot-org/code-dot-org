@@ -50,7 +50,7 @@ const styles = {
  * List item control (usable in animation or frame lists) for adding
  * a new item - displays as a plus sign in a dashed box.
  */
-export default Radium(class NewListItem extends React.Component {
+class NewListItem extends React.Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
@@ -71,4 +71,6 @@ export default Radium(class NewListItem extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(NewListItem);

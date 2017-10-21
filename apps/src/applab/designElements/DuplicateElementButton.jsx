@@ -13,7 +13,7 @@ const styles = {
 /**
  * A duplicate button that helps replicate elements
  */
-export default Radium(class DuplicateElementButton extends React.Component {
+class DuplicateElementButton extends React.Component {
   static propTypes = {
     handleDuplicate: PropTypes.func.isRequired
   };
@@ -32,4 +32,6 @@ export default Radium(class DuplicateElementButton extends React.Component {
     </div>
     );
   }
-});
+}
+
+export default Radium(DuplicateElementButton);

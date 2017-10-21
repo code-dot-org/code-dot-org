@@ -14,7 +14,7 @@ const styles = {
  * The toggle that controls whether the animation loops frames.
  */
 
-export default Radium(class ItemLoopToggle extends React.Component {
+class ItemLoopToggle extends React.Component {
   static defaultProps = {looping: true};
 
   static propTypes = {
@@ -39,4 +39,6 @@ export default Radium(class ItemLoopToggle extends React.Component {
       </OverlayTrigger>
     );
   }
-});
+}
+
+export default Radium(ItemLoopToggle);
