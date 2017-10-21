@@ -4,8 +4,8 @@
 
 import React, {PropTypes} from 'react';
 import BackButton from './backButton';
-import FilterGroupHeaderStudentExperience from './FilterGroupHeaderStudentExperience';
-import FilterGroupHeaderGrade from './FilterGroupHeaderGrade';
+import FilterGroupHeaderStudentExperience from './filterGroupHeaderStudentExperience';
+import FilterGroupHeaderGrade from './filterGroupHeaderGrade';
 import { getResponsiveValue } from './responsive';
 import { Sticky } from 'react-sticky';
 import i18n from '@cdo/tutorialExplorer/locale';
