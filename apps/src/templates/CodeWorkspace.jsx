@@ -13,6 +13,7 @@ import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
+import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
 
 var styles = {
   headerIcon: {
@@ -38,6 +39,7 @@ var CodeWorkspace = React.createClass({
     style: PropTypes.bool,
     isRunning: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
@@ -186,6 +188,7 @@ var CodeWorkspace = React.createClass({
               isMinecraft={props.isMinecraft}
             />
             <PaneSection id="workspace-header">
+              {props.showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon/>}
               <span id="workspace-header-span">
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
@@ -223,6 +226,7 @@ module.exports = connect(state => ({
   isRunning: !!state.runState.isRunning,
   showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
+  showProjectTemplateWorkspaceIcon: !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   isMinecraft: !!state.pageConstants.isMinecraft,
   runModeIndicators: shouldUseRunModeIndicators(state),
 }))(Radium(CodeWorkspace));

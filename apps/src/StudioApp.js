@@ -378,9 +378,8 @@ StudioApp.prototype.init = function (config) {
     showWarnings(config);
   }
 
-  if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
-      !config.readonlyWorkspace) {
-    this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
+  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
+    // this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
   this.alertIfCompletedWhilePairing(config);
@@ -2865,6 +2864,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isK1: config.level.isK1,
     appType: config.app,
     nextLevelUrl: config.nextLevelUrl,
+    showProjectTemplateWorkspaceIcon: !!config.level.projectTemplateLevelName &&
+      !config.level.isK1 &&
+      !config.readonlyWorkspace,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));
