@@ -69,7 +69,7 @@ export default class PopUpMenu extends Component {
   }
 }
 
-export const MenuBubble = Radium(class extends Component {
+class MenuBubbleUnwrapped extends Component {
   static propTypes = {
     targetPoint: PropTypes.shape({
       top: PropTypes.number.isRequired,
@@ -121,9 +121,10 @@ export const MenuBubble = Radium(class extends Component {
       </div>
     );
   }
-});
+}
+export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
-PopUpMenu.Item = Radium(class extends Component {
+class Item extends Component {
   static propTypes = {
     children: PropTypes.string.isRequired,
     onClick: PropTypes.func,
@@ -158,4 +159,6 @@ PopUpMenu.Item = Radium(class extends Component {
       </div>
     );
   }
-});
+}
+
+PopUpMenu.Item = Radium(Item);
