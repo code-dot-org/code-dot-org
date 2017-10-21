@@ -9,7 +9,7 @@ import {
   Button
 } from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
-import Spinner from '../components/spinner';
+import Spinner from '../../components/spinner';
 
 const FACILITATOR_DETAILS_COUNT = 6;
 const ATTENDANCE_DAYS_COUNT = 5;

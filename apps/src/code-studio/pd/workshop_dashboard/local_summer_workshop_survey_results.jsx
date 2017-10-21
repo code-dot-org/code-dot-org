@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
-import Spinner from './components/spinner';
+import Spinner from '../components/spinner';
 
 const rowOrder = [
   {text: 'Number of enrollments', key: 'num_enrollments'},
