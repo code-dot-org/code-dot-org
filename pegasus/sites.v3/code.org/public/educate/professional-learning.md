@@ -1,6 +1,5 @@
 ---
 title: Professional Learning
-nav: educate_nav
 theme: responsive
 ---
 # Professional Learning #
