@@ -8,7 +8,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
-import ProjectActionBox from './ProjectActionBox';
+import QuickAction from '../tables/QuickAction';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
@@ -89,7 +89,20 @@ const isPublishedFormatter = function (isPublished) {
 const actionsFormatter = function (actions, {rowData}) {
   return (
     <QuickActionsCell>
-      <ProjectActionBox isPublished={rowData.isPublished}/>
+      <QuickAction
+        text={i18n.rename()}
+        action={()=>{}}
+      />
+      <QuickAction
+        text={i18n.remix()}
+        action={()=>{}}
+      />
+      <QuickAction
+        text={i18n.deleteProject()}
+        action={()=>{}}
+        hasLineAbove={true}
+        isDelete={true}
+      />
     </QuickActionsCell>
   );
 };

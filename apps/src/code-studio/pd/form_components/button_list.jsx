@@ -58,7 +58,7 @@ const ButtonList = React.createClass({
       } else {
         currentSelection.delete(event.target.value);
       }
-      value = Array.from(currentSelection);
+      value = currentSelection.size > 0 ? Array.from(currentSelection) : null;
     }
     this.props.onChange({
       [this.props.groupName]: value

@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 import SessionAttendance from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance';
-import Spinner from "@cdo/apps/code-studio/pd/workshop_dashboard/components/spinner";
+import Spinner from "@cdo/apps/code-studio/pd/components/spinner";
 import {COURSE_CSF} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 
 const FAKE_WORKSHOP_ID = 11;

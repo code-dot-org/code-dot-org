@@ -79,7 +79,7 @@ class Craft < Blockly
     bricks: true,
     cactus: true,
     clay: true,
-    clayHardened: true,
+    terracotta: true,
     cobblestone: true,
     deadBush: true,
     dirt: true,
