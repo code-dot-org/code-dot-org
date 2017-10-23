@@ -28,7 +28,7 @@ describe('SectionsTable', () => {
             {headerText}
           </div>
         </td>
-      )
+      );
     });
   });
 
@@ -53,7 +53,7 @@ describe('SectionsTable', () => {
             {headerText}
           </div>
         </td>
-      )
+      );
     });
   });
 
