@@ -1,6 +1,5 @@
 ---
 title: CS Principles Professional Learning Program
-nav: plc_csp_nav
 theme: responsive
 ---
 # CS Principles Professional Learning Program

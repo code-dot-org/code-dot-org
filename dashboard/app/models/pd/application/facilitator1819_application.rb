@@ -34,16 +34,37 @@ module Pd::Application
       self.application_type = FACILITATOR_APPLICATION
     end
 
+    validates_uniqueness_of :user_id
+
     validates_presence_of :course
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
     end
 
+    before_save :match_partner, if: :form_data_changed?
+    def match_partner
+      self.regional_partner = RegionalPartner.find_by_region(zip_code, state)
+    end
+
+    # Are we still accepting applications?
+    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 1)
+    def self.open?
+      Time.zone.now < APPLICATION_CLOSE_DATE
+    end
+
     OTHER = 'Other'.freeze
+    OTHER_WITH_TEXT = 'Other:'.freeze
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
+    GRADES = [
+      'Pre-K'.freeze,
+      'Kindergarten'.freeze,
+      *(1..12).map {|n| "Grade #{n}".freeze},
+      'Community college, college, or university',
+      'Participants in a tech bootcamp or professional development program'
+    ].freeze
 
     PROGRAMS = {
       csf: 'CS Fundamentals (Pre-K - 5th grade)',
@@ -81,7 +102,7 @@ module Pd::Application
           'Non-profit',
           'Institute of higher education',
           'Tech company',
-          OTHER
+          OTHER_WITH_TEXT
         ],
 
         worked_in_cs_job: [YES, NO],
@@ -92,10 +113,10 @@ module Pd::Application
           'Advanced CS in HS or College',
           'Online (Udacity, Coursera, etc.)',
           'Attended a coding or CS camp',
-          'Attended a computer science professional development workshop',
+          'Attended a CS professional development workshop',
           'I have a minor, major, certificate',
           NONE,
-          OTHER
+          OTHER_WITH_TEXT
         ],
 
         diversity_training: [YES, NO],
@@ -103,10 +124,11 @@ module Pd::Application
         how_heard: [
           'Code.org email',
           'Code.org social media post',
-          'A current Code.org facilitator (please share name)',
-          'A Code.org staff member (please share name)',
+          'A Code.org facilitator (please share name):',
+          'A Code.org staff member (please share name):',
+          'A Code.org Regional Partner (please share name):',
           'My employer',
-          OTHER
+          OTHER_WITH_TEXT
         ],
 
         program: PROGRAM_OPTIONS,
@@ -115,10 +137,14 @@ module Pd::Application
           YES,
           NO,
           "I don’t know yet",
-          OTHER
+          OTHER_WITH_TEXT
         ],
 
-        ability_to_meet_requirements: (1..10).map(&:to_s),
+        ability_to_meet_requirements: [
+          '1 = Unlikely, I have limited capacity in 2018-19',
+          *(2..4).map(&:to_s),
+          '5 = Very likely, I am committed to success'
+        ],
 
         csf_availability: [
           YES,
@@ -129,46 +155,32 @@ module Pd::Application
         csd_csp_teachercon_availability: [
           'TeacherCon 1: June 17 - 22, 2018',
           'TeacherCon 2: July 22 - 27, 2018',
-          "I'm not available for either TeacherCon. (Please Explain)"
+          "I'm not available for either TeacherCon. (Please Explain):"
         ],
 
         csd_csp_fit_availability: [
           'June 23 - 24, 2018 (immediately following TeacherCon 1)',
           'July 28 - 29, 2018 (immediately following TeacherCon 2)',
-          "I'm not available for either Facilitator-in-Training workshop. (Please Explain)"
+          "I'm not available for either Facilitator-in-Training workshop. (Please Explain):"
         ],
 
         led_cs_extracurriculars: [
           'Hour of Code',
           'After-school or lunchtime computer science clubs',
           'Computer science-focused summer camps',
-          'Other (please list)',
+          'Other (Please List):',
         ],
 
         teaching_experience: [YES, NO],
 
         grades_taught: [
-          'Pre-K-2',
-          '3-4',
-          '5-6',
-          '7-8',
-          '9-10',
-          '11-12',
-          'Community college, college, or university',
-          'Participants in a tech bootcamp or professional development program',
-          'Other'
+          *GRADES,
+          OTHER_WITH_TEXT
         ],
 
         grades_currently_teaching: [
-          'K-2',
-          '3-4',
-          '5-6',
-          '7-8',
-          '9-10',
-          '11-12',
-          'Community college, college, or university',
-          'Participants in a tech bootcamp or professional development program',
-          'Other',
+          *GRADES,
+          OTHER_WITH_TEXT,
           'None - I don’t currently teach'
         ],
 
@@ -181,7 +193,7 @@ module Pd::Application
           'History',
           'Art',
           'Foreign Language',
-          'Other'
+          OTHER_WITH_TEXT
         ],
 
         years_experience: [
@@ -207,7 +219,7 @@ module Pd::Application
           'NMSI',
           'Project Lead the Way',
           'ScratchEd',
-          'Other',
+          OTHER_WITH_TEXT,
           "I don't have experience teaching any of these courses",
         ],
 
@@ -243,15 +255,19 @@ module Pd::Application
           'School year Exploring Computer Science workshops'
         ],
 
+        have_led_pd: [YES, NO],
+
         groups_led_pd: [
           'K-12 teachers',
           'Other types of adult professional development',
           'None'
         ],
 
-        # Every hour, "7am PT / 10am ET" to "5pm PT / 8pm ET"
-        weekly_availability: (7..17).map do |hour|
-          "#{format_hour(hour)} PT / #{format_hour(hour + 3)} ET"
+        available_during_week: [YES, NO],
+
+        # Every hour, "8am ET / 5am PT" to "10pm ET / 7pm PT"
+        weekly_availability: (5..19).map do |hour|
+          "#{format_hour(hour + 3)} ET / #{format_hour(hour)} PT"
         end,
 
         travel_distance: [
@@ -287,9 +303,11 @@ module Pd::Application
         plan_on_teaching
         ability_to_meet_requirements
 
+        led_cs_extracurriculars
+        teaching_experience
+
         code_org_facilitator
-        groups_led_pd
-        describe_prior_pd
+        have_led_pd
 
         who_should_have_opportunity
         how_support_equity
@@ -300,10 +318,9 @@ module Pd::Application
         example_how_provided_feedback
         hope_to_learn
 
-        weekly_availability
+        available_during_week
         travel_distance
 
-        additional_info
         agree
       )
     end
@@ -343,11 +360,34 @@ module Pd::Application
             :code_org_facilitator_programs
           ]
         end
+
+        if hash[:have_led_pd] == YES
+          required.concat [
+            :groups_led_pd,
+            :describe_prior_pd
+          ]
+        elsif hash[:have_led_pd] == NO
+          required.concat [
+            :why_no_pd
+          ]
+        end
+
+        if hash[:available_during_week] == YES
+          required << :weekly_availability
+        end
       end
     end
 
     def program
       sanitize_form_data_hash[:program]
+    end
+
+    def zip_code
+      sanitize_form_data_hash[:zip_code]
+    end
+
+    def state
+      sanitize_form_data_hash[:state]
     end
 
     # Formats hour as 0-12(am|pm)
