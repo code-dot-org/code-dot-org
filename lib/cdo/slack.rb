@@ -83,8 +83,17 @@ class Slack
       "&channel=#{channel_id}"\
       "&topic=#{new_topic}"
     )
+    result = JSON.parse(response.read)
+    error = result['error']
+    if error
+      if error == 'not_in_channel'
+        raise "Must join room #{channel_name} to be able to update topic"
+      else
+        raise "Failed to update topic, with error: #{result['error']}"
+      end
+    end
 
-    JSON.parse(response.read)['ok']
+    result['ok']
   end
 
   def self.replace_user_links(message)
