@@ -9,24 +9,24 @@ describe("DetailView", () => {
       let detailView = mount(
         <DetailViewContents
           applicationData={{
-          name: '',
-          acceptance: 'accepted',
-          accountEmail: 'email',
-          phone: 'phone',
-          course: 'course',
-          regionalPartner: 'partner',
-          program: 'program',
-          planToTeachThisYear: 'Yes',
-          rateAbility: '10',
-          canAttendFIT: 'Yes',
-          responsesForSections: [{
-            sectionName: 'section',
-            responses: [{
-              question: (<span>Question</span>),
-              answer: 'Answer',
-              score: 1
-            }]
-          }]
+            regionalPartner: 'partner',
+            notes: 'notes',
+            status: 'accepted',
+            school_name: 'School Name',
+            district_name: 'District Name',
+            email: 'email',
+            formData: {
+              firstName: 'First Name',
+              lastName: 'Last Name',
+              title: 'Title',
+              phone: 'Phone',
+              preferredFirstName: 'Preferred First Name',
+              accountEmail: 'accountEmail',
+              alternateEmail: 'alternateEmail',
+              program: 'program',
+              planOnTeachering: ['Yes'],
+              abilityToMeetRequirements: '10'
+            }
         }}
         />
       );
