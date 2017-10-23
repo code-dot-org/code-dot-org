@@ -84,15 +84,7 @@ class Slack
       "&topic=#{new_topic}"
     )
     result = JSON.parse(response.read)
-    error = result['error']
-    if error
-      if error == 'not_in_channel'
-        raise "Must join room #{channel_name} to be able to update topic"
-      else
-        raise "Failed to update topic, with error: #{result['error']}"
-      end
-    end
-
+    raise "Failed to update_topic, with error: #{result['error']}" if result['error']
     result['ok']
   end
 
@@ -154,6 +146,18 @@ class Slack
     rescue
       return false
     end
+  end
+
+  def self.join_room(name)
+    response = open(
+      'https://slack.com/api/channels.join'\
+      "?token=#{SLACK_TOKEN}"\
+      "&name=#{name}"\
+    )
+
+    result = JSON.parse(response.read)
+    raise "Failed to join_room, with error: #{result['error']}" if result['error']
+    result['ok']
   end
 
   # Returns the channel ID for the channel with the requested channel_name.
