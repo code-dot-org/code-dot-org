@@ -33,8 +33,6 @@ const styles = {
     justifyContent: 'space-between',
   }
 };
-// TODO: i18n
-
 class ShareDialogSignedOut extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -50,12 +48,10 @@ class ShareDialogSignedOut extends Component {
       >
         <div style={styles.container}>
           <div style={styles.heading}>
-            Create a Code.org account to share your project
+            {i18n.createAccountToShare()}
           </div>
           <div style={styles.middle}>
-            You must create a Code.org account before you can share and publish
-            your project. Creating an account will also let you save your progress
-            and continue to work on your project later.
+            {i18n.createAccountToShareDescription()}
           </div>
           <div style={styles.bottom}>
             <Button
@@ -65,7 +61,7 @@ class ShareDialogSignedOut extends Component {
             />
             <Button
               href={`/users/sign_up?user_return_to=${location.pathname}`}
-              text={"Create an account"}
+              text={i18n.createAccount()}
               color={Button.ButtonColor.orange}
             />
           </div>
