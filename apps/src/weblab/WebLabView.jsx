@@ -7,6 +7,7 @@ import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
 import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
 import CompletionButton from '../templates/CompletionButton';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 /**
  * Top-level React wrapper for WebLab
@@ -23,7 +24,8 @@ class WebLabView extends React.Component {
     onAddFileHTML: PropTypes.func.isRequired,
     onAddFileCSS: PropTypes.func.isRequired,
     onAddFileImage: PropTypes.func.isRequired,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -102,6 +104,11 @@ class WebLabView extends React.Component {
                   onClick={this.props.onToggleInspector}
                   label={weblabMsg.toggleInspectorOn()}
                 />
+                {this.props.showProjectTemplateWorkspaceIcon &&
+                  <PaneSection>
+                    <ProjectTemplateWorkspaceIcon/>
+                  </PaneSection>
+                }
                 {this.props.isReadOnlyWorkspace &&
                   <PaneSection id="workspace-header">
                     <span id="workspace-header-span">
@@ -132,4 +139,5 @@ export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isInspectorOn: state.inspectorOn,
+  showProjectTemplateWorkspaceIcon: !!state.pageConstants.showProjectTemplateWorkspaceIcon,
 }))(WebLabView);
