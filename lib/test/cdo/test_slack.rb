@@ -40,6 +40,11 @@ class SlackTest < Minitest::Test
     assert Slack.update_topic(FAKE_CHANNEL, FAKE_TOPIC)
   end
 
+  def test_join_room
+    Slack.expects(:open).returns(stub(read: {'ok' => true}.to_json))
+    assert Slack.join_room(FAKE_CHANNEL)
+  end
+
   def test_update_topic_with_error_response
     Slack.expects(:open).returns(stub(read: {'ok' => false}.to_json))
     refute Slack.update_topic(FAKE_CHANNEL, FAKE_TOPIC)
