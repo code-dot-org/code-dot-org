@@ -58,6 +58,7 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import { addCallouts } from '@cdo/apps/code-studio/callouts';
 
 var copyrightStrings;
 
@@ -378,9 +379,7 @@ StudioApp.prototype.init = function (config) {
     showWarnings(config);
   }
 
-  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
-    // this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
-  }
+  this.initProjectTemplateWorkspaceIconCallout();
 
   this.alertIfCompletedWhilePairing(config);
 
@@ -495,6 +494,22 @@ StudioApp.prototype.init = function (config) {
   }
 
   this.emit('afterInit');
+};
+
+StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
+  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
+    addCallouts([{
+      id: 'projectTemplateWorkspaceIconCallout',
+      element_id: '#projectTemplateWorkspaceIcon',
+      localized_text: msg.workspaceProjectTemplateLevel(),
+      qtip_config: {
+        position: {
+          my: 'bottom center',
+          at: 'top center',
+        },
+      },
+    }]);
+  }
 };
 
 StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {

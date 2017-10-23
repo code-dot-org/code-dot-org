@@ -20,7 +20,7 @@ const styles = {
   },
 };
 
-const ProjectTemplateWorkspaceIcon = React.createClass({
+export default class ProjectTemplateWorkspaceIcon extends React.Component {
 
   render() {
     const tooltipId = _.uniqueId();
@@ -31,6 +31,7 @@ const ProjectTemplateWorkspaceIcon = React.createClass({
       >
         <img
           style={styles.projectTemplateIcon}
+          id={'projectTemplateWorkspaceIcon'}
           src={IMAGE_BASE_URL + 'connect.svg'}
           data-tip data-for={tooltipId}
           aria-describedby={tooltipId}
@@ -48,6 +49,4 @@ const ProjectTemplateWorkspaceIcon = React.createClass({
       </div>
     );
   }
-});
-
-export default ProjectTemplateWorkspaceIcon;
+}
