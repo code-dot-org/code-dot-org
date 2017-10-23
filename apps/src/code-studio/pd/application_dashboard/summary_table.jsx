@@ -12,12 +12,16 @@ export default class SummaryTable extends React.Component {
   }
 
   tableRow = (label, bgColor, data) =>  {
+    const status = label.toLowerCase();
+    const num_locked = data[status]['locked'];
+    const num_unlocked = data[status]['unlocked'];
+
     return (
       <tr>
         <td style={{backgroundColor: bgColor}}>{label}</td>
-        <td>{label}</td>
-        <td>{label}</td>
-        <td>{label}</td>
+        <td>{num_locked}</td>
+        <td>{num_unlocked}</td>
+        <td>{num_locked + num_unlocked}</td>
       </tr>
     );
   };
