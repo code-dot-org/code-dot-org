@@ -12,7 +12,8 @@ const DEFAULT_PROPS = {
   groupName: TEST_GROUP_NAME,
   name: TEST_NAME,
   selected: false,
-  text: TEST_TEXT
+  text: TEST_TEXT,
+  singleEntry: false
 };
 
 describe('FilterChoice', () => {

@@ -14,29 +14,33 @@ const FAKE_UNIQUE_ORG_NAMES = ['Acme', 'Buy N Large'];
 const FAKE_ON_ORG_NAME = () => {};
 const FAKE_ON_SORT_BY = () => {};
 const DEFAULT_PROPS = {
+  mobileLayout: false,
+  uniqueOrgNames: FAKE_UNIQUE_ORG_NAMES,
+  orgName: FAKE_ORG_NAME,
+  showSortDropdown: true,
+  defaultSortBy: TutorialsSortBy.popularityrank,
+  sortBy: TutorialsSortBy.popularityrank,
   filterGroups: [
     {
       name: 'group-1',
       text: 'Group 1',
       entries: [],
+      singleEntry: false
     },
     {
       name: 'group-2',
       text: 'Group 2',
       entries: ['byzanz', 'frobozz', 'xyzzy'],
+      singleEntry: false
     }
   ],
-  onUserInputFilter: FAKE_ON_USER_INPUT,
   selection: {
     'group-1': [],
     'group-2': ['xyzzy'],
   },
-  orgName: FAKE_ORG_NAME,
-  uniqueOrgNames: FAKE_UNIQUE_ORG_NAMES,
+  filteredTutorialsCount: 2,
+  onUserInputFilter: FAKE_ON_USER_INPUT,
   onUserInputOrgName: FAKE_ON_ORG_NAME,
-  showSortDropdown: true,
-  defaultSortBy: TutorialsSortBy.popularityrank,
-  sortBy: TutorialsSortBy.popularityrank,
   onUserInputSortBy: FAKE_ON_SORT_BY
 };
 
@@ -44,34 +48,40 @@ describe('FilterSet', () => {
   it('renders the provided filter groups', () => {
     const wrapper = shallow(<FilterSet {...DEFAULT_PROPS}/>);
     expect(wrapper).to.containMatchingElement(
-      <div>
-        <FilterGroupSortBy
-          defaultSortBy={TutorialsSortBy.popularityrank}
-          sortBy={TutorialsSortBy.popularityrank}
-          onUserInput={FAKE_ON_SORT_BY}
-        />
-        <FilterGroupOrgNames
-          orgName={FAKE_ORG_NAME}
-          uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
-          onUserInput={FAKE_ON_ORG_NAME}
-        />
-        <FilterGroup
-          key="group-1"
-          name="group-1"
-          text="Group 1"
-          filterEntries={[]}
-          onUserInput={FAKE_ON_USER_INPUT}
-          selection={[]}
-        />
-        <FilterGroup
-          key="group-2"
-          name="group-2"
-          text="Group 2"
-          filterEntries={['byzanz', 'frobozz', 'xyzzy']}
-          onUserInput={FAKE_ON_USER_INPUT}
-          selection={['xyzzy']}
-        />
-      </div>
+      <FilterGroupSortBy
+        defaultSortBy={TutorialsSortBy.popularityrank}
+        sortBy={TutorialsSortBy.popularityrank}
+        onUserInput={FAKE_ON_SORT_BY}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroupOrgNames
+        orgName={FAKE_ORG_NAME}
+        uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
+        onUserInput={FAKE_ON_ORG_NAME}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroup
+        key="group-1"
+        name="group-1"
+        text="Group 1"
+        filterEntries={[]}
+        onUserInput={FAKE_ON_USER_INPUT}
+        selection={[]}
+        singleEntry={false}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroup
+        key="group-2"
+        name="group-2"
+        text="Group 2"
+        filterEntries={['byzanz', 'frobozz', 'xyzzy']}
+        onUserInput={FAKE_ON_USER_INPUT}
+        selection={['xyzzy']}
+        singleEntry={false}
+      />
     );
   });
 
