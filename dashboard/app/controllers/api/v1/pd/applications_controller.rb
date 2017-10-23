@@ -36,6 +36,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   # PATCH /api/v1/pd/applications/1
   def update
     @application.update(application_params)
+
+    render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
   end
 
   private
