@@ -19,22 +19,22 @@ describe('StageExtrasProgressBubble', () => {
     assert.equal(wrapper.props().href, '/extras');
   });
 
-  it('has a flag icon when not current level', () => {
+  it('has a grey flag icon when not current level', () => {
     const wrapper = shallow(
       <StageExtrasProgressBubble
         {...defaultProps}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').props().icon, 'flag');
+    assert.match(wrapper.find('a').props().style.backgroundImage, /flag_inactive.png/);
   });
 
-  it('has a checkered flag icon when not current level', () => {
+  it('has a green flag icon when on stage extras', () => {
     const wrapper = shallow(
       <StageExtrasProgressBubble
         {...defaultProps}
         onStageExtras={true}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').props().icon, 'flag-checkered');
+    assert.match(wrapper.find('a').props().style.backgroundImage, /flag_active.png/);
   });
 });
