@@ -1,4 +1,4 @@
-import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view';
+import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme';

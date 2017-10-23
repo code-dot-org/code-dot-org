@@ -42,7 +42,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status
+      :status, :notes
     )
   end
 end

@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {renderLineItem} from './detail_view';
+import {renderLineItem} from './detail_view_contents';
 import _ from 'lodash';
 
 const lineItemKeys = {
