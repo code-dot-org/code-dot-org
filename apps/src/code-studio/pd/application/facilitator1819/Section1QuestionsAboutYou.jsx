@@ -1,11 +1,13 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
+import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {pageLabels} from './Facilitator1819Labels';
 import {YES} from '../ApplicationConstants';
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
 const FACILITATOR_EMAIL = "facilitators@code.org";
+const ZIP_CODE_REGEX = /^\d{5}([\W-]?\d{4})?$/;
 
 export default class Section1QuestionsAboutYou extends Facilitator1819FormComponent {
   static propTypes = {
@@ -60,10 +62,12 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
         })}
 
         {this.inputFor("alternateEmail", {required: false})}
-        {this.inputFor("phone")}
+
+        {this.usPhoneNumberInputFor("phone")}
+
         {this.inputFor("address")}
         {this.inputFor("city")}
-        {this.inputFor("state")}
+        {this.selectFor("state", {placeholder: "Select a state"})}
         {this.inputFor("zipCode")}
 
         {this.radioButtonsFor("genderIdentity")}
@@ -118,5 +122,22 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
 
     return requiredFields;
   }
-}
 
+  /**
+   * @override
+   */
+  static getErrorMessages(data) {
+    const formatErrors = {};
+
+    if (data.zipCode && !ZIP_CODE_REGEX.exec(data.zipCode)) {
+      formatErrors.zipCode = "Must be a valid zip code";
+    }
+
+    if (!UsPhoneNumberInput.isValid(data.phone)) {
+      formatErrors.phone = "Must be a valid US phone number";
+    }
+
+    return formatErrors;
+  }
+
+}

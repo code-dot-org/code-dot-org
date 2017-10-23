@@ -28,7 +28,7 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
         {this.radioButtonsFor("teachingExperience")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
-          "Other (please list):" : "other"
+          "Other (Please List):" : "other"
         })}
 
         {this.props.data.teachingExperience === YES &&
@@ -50,7 +50,7 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
             {this.props.data.yearsExperience && this.props.data.yearsExperience !== NONE &&
               <div>
                 {this.checkBoxesWithAdditionalTextFieldsFor("experienceLeading", {
-                  "Other:" : "other"
+                  "Other" : "other"
                 })}
 
                 {this.checkBoxesFor("completedPd")}

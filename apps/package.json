@@ -188,6 +188,7 @@
     "seedrandom": "2.4.2",
     "sinon": "^3.0.0",
     "sinon-chai": "^2.13.0",
+    "sinon-chai-in-order": "^0.1.0",
     "sprintf-js": "^1.0.3",
     "stream-http": "2.7.2",
     "style-loader": "^0.13.1",
