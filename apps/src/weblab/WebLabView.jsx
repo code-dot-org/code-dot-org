@@ -104,18 +104,16 @@ class WebLabView extends React.Component {
                   onClick={this.props.onToggleInspector}
                   label={weblabMsg.toggleInspectorOn()}
                 />
-                {this.props.showProjectTemplateWorkspaceIcon &&
-                  <PaneSection>
+                <PaneSection id="workspace-header">
+                  {this.props.showProjectTemplateWorkspaceIcon &&
                     <ProjectTemplateWorkspaceIcon/>
-                  </PaneSection>
-                }
-                {this.props.isReadOnlyWorkspace &&
-                  <PaneSection id="workspace-header">
+                  }
+                  {this.props.isReadOnlyWorkspace &&
                     <span id="workspace-header-span">
                       {msg.readonlyWorkspaceHeader()}
                     </span>
-                  </PaneSection>
-                }
+                  }
+                </PaneSection>
               </div>
             </PaneHeader>
             <iframe
