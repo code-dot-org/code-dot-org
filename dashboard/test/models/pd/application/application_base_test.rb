@@ -36,5 +36,16 @@ module Pd::Application
       assert_equal 'unreviewed', application.status
       assert application.unreviewed?
     end
+
+    test 'can update status' do
+      application = create :pd_facilitator1819_application
+      assert application.unreviewed?
+
+      application.update(status: 'pending')
+      assert application.pending?
+
+      application.reload
+      assert application.pending?
+    end
   end
 end
