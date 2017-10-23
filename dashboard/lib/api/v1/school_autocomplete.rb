@@ -49,8 +49,12 @@ class Api::V1::SchoolAutocomplete
   def to_search_string(query)
     words = query.strip.split(/\s+/).map do |w|
       w.gsub(/\W/, '').upcase
-    end.map(&:presence).compact
-    return words.empty? ? "" : "+#{words.join(' +')}*"
+    end.map(&:presence).compact #.map {|w| "\\\"ST.\\\""} #"\"#{w}\""}
+    # Words can contain periods (e..g, "St. Paul" and we need to put the term
+    # quotes to make the search work properly and to get those quotes through
+    # to the DB we need to escape them. (e.g., St. --> \"St.\")
+    # See https://stackoverflow.com/questions/12076780/match-against-foo-bar-with-a-full-stop-period
+    return words.empty? ? "" : "+\\\"#{words.join('\\\" +\\\"')}*\\\""
   end
 
   # JSON serializer used by get_matches.
