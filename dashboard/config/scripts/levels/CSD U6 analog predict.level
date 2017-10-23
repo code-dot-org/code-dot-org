@@ -178,7 +178,7 @@
     ],
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "var redness;\r\nlightSensor.setScale(0, 255);\r\nonBoardEvent(lightSensor, \"data\", function() {\r\n  redness = Math.round(lightSensor.value);\r\n  setProperty(\"screen1\", \"background-color\", rgb(redness, 0, 0));\r\n});\r\n",
+    "start_blocks": "var redness;\r\nsoundSensor.setScale(0, 255);\r\nonBoardEvent(soundSensor, \"data\", function() {\r\n  redness = Math.round(soundSensor.value);\r\n  setProperty(\"screen1\", \"background-color\", rgb(redness, 0, 0));\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -217,7 +217,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 19:43:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 19:43:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-20 22:47:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
