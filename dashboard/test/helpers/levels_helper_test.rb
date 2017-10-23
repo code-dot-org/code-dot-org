@@ -421,7 +421,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages]
     )
 
     stage = script.stages[0]
@@ -473,7 +473,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'my_cool_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages]
     )
 
     stage = script.stages[0]
