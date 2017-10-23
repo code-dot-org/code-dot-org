@@ -43,8 +43,8 @@ const styles = {
  * A component that shows a group of lessons. That group has a name and is
  * collapsible. It can show the lessons in either a detail or a summary view.
  */
-const ProgressGroup = React.createClass({
-  propTypes: {
+export default Radium(class ProgressGroup extends React.Component {
+  static propTypes = {
     groupName: PropTypes.string.isRequired,
     lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(
@@ -52,19 +52,15 @@ const ProgressGroup = React.createClass({
     ).isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      collapsed: false
-    };
-  },
+  state = {
+    collapsed: false
+  };
 
-  toggleCollapsed() {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  },
+  toggleCollapsed = () => this.setState({
+    collapsed: !this.state.collapsed
+  });
 
   render() {
     const { groupName, lessons, levelsByLesson, isSummaryView, isPlc } = this.props;
@@ -105,5 +101,3 @@ const ProgressGroup = React.createClass({
     );
   }
 });
-
-export default Radium(ProgressGroup);
