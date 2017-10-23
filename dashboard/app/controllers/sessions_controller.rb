@@ -40,12 +40,8 @@ class SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    if cookies['pm'] == 'clever_takeover'
-      super do |user|
-        check_and_apply_clever_takeover(user)
-      end
-    else
-      super
+    super do |user|
+      check_and_apply_clever_takeover(user)
     end
   end
 
