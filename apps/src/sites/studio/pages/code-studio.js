@@ -10,6 +10,9 @@ import $ from 'jquery';
 
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
+import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
+import cookies from 'js-cookie';
+
 const store = getStore();
 store.dispatch(setRtlFromDOM());
 
@@ -105,3 +108,12 @@ window.CDOSounds = Sounds.getSingleton();
 
 checkForUnsupportedBrowsersOnLoad();
 initHamburger();
+
+$(document).ready(() => {
+  if (window.userNameCookieKey) {
+    const val = cookies.get(window.cookieKey);
+    if (val) {
+      store.dispatch(setUserSignedIn(true));
+    }
+  }
+});
