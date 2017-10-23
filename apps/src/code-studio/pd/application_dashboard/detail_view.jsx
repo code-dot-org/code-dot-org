@@ -7,9 +7,11 @@
  */
 
 import React, {PropTypes} from 'react';
-import {Button, FormControl, Table} from 'react-bootstrap';
+import {Button, FormControl} from 'react-bootstrap';
 import {Facilitator1819Program} from './detail_view_facilitator_specific_components';
-import _ from 'lodash';
+import Spinner from '../workshop_dashboard/components/spinner';
+import $ from 'jquery';
+
 
 const renderLineItem = (key, value) => {
   return value && (
@@ -22,45 +24,81 @@ const renderLineItem = (key, value) => {
   );
 };
 
-class DetailViewContents extends React.Component {
+class DetailView extends React.Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   static propTypes = {
-    applicationData: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      totalScore: PropTypes.number,
-      acceptance: PropTypes.oneOf(['accepted', 'rejected']).isRequired,
-      title: PropTypes.string,
-      preferredFirstName: PropTypes.string,
-      accountEmail: PropTypes.string.isRequired,
-      alternateEmail: PropTypes.string,
-      phone: PropTypes.string.isRequired,
-      district: PropTypes.string,
-      school: PropTypes.string,
-      course: PropTypes.string.isRequired,
-      regionalPartner: PropTypes.string,
-      program: PropTypes.string.isRequired,
-      planToTeachThisYear: PropTypes.string.isRequired,
-      rateAbility: PropTypes.string.isRequired,
-      canAttendFIT: PropTypes.string.isRequired,
-      responsesForSections: PropTypes.arrayOf(PropTypes.shape({
-        sectionName: PropTypes.string.isRequired,
-        responses: PropTypes.arrayOf(PropTypes.shape({
-          question: PropTypes.element.isRequired,
-          answer: PropTypes.string.isRequired,
-          score: PropTypes.number.isRequired
-        }))
-      })),
-      notes: PropTypes.string
-    })
+    params: PropTypes.shape({
+      applicationId: PropTypes.string.isRequired
+    }).isRequired
   }
 
   state = {
-    acceptance: this.props.applicationData.acceptance
+    loading: true
+  }
+
+  componentWillMount() {
+    this.loadRequest = $.ajax({
+      method: 'GET',
+      url: `/api/v1/pd/applications/${this.props.params.applicationId}`
+    }).done(data => {
+      const formData = JSON.parse(data.form_data);
+      this.setState({
+        data: Object.assign({}, data, {formData: formData}),
+        loading: false
+      });
+    });
+  }
+
+  render() {
+    if (this.state.loading) {
+      return (<Spinner/>);
+    } else {
+      return (
+        (
+          <DetailViewContents
+            applicationData={this.state.data}
+          />
+        )
+      );
+    }
+  }
+}
+
+class DetailViewContents extends React.Component {
+  static propTypes = {
+    applicationData: PropTypes.shape({
+      regional_partner_name: PropTypes.string,
+      notes: PropTypes.string,
+      status: PropTypes.string.isRequired,
+      school_name: PropTypes.string,
+      district_name: PropTypes.string,
+      email: PropTypes.string,
+      formData: PropTypes.shape({
+        firstName: PropTypes.string.isRequired,
+        lastName: PropTypes.string.isRequired,
+        title: PropTypes.string,
+        phone: PropTypes.string,
+        preferredFirstName: PropTypes.string,
+        accountEmail: PropTypes.string,
+        alternateEmail: PropTypes.string,
+        program: PropTypes.string.isRequired,
+        planOnTeaching: PropTypes.arrayOf(PropTypes.string.isRequired),
+        abilityToMeetRequirements: PropTypes.string.isRequired,
+      })
+    }),
+  }
+
+  state = {
+    status: this.props.applicationData.status
   }
 
   handleCancelEditClick = () => {
     this.setState({
       editing: false,
-      acceptance: this.props.applicationData.acceptance
+      status: this.props.applicationData.status
     });
   }
 
@@ -70,9 +108,9 @@ class DetailViewContents extends React.Component {
     });
   }
 
-  handleAcceptanceChange = (event) => {
+  handleStatusChange = (event) => {
     this.setState({
-      acceptance: event.target.value
+      status: event.target.value
     });
   }
 
@@ -101,15 +139,15 @@ class DetailViewContents extends React.Component {
     return (
       <div style={{display: 'flex', alignItems: 'baseline'}}>
         <h1>
-          {this.props.applicationData.name}
+          {`${this.props.applicationData.formData.firstName} ${this.props.applicationData.formData.lastName}`}
         </h1>
 
         <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
           <FormControl
             componentClass="select"
             disabled={!this.state.editing}
-            value={this.state.acceptance}
-            onChange={this.handleAcceptanceChange}
+            value={this.state.status}
+            onChange={this.handleStatusChange}
           >
             <option value="accepted">
               Accepted
@@ -145,16 +183,16 @@ class DetailViewContents extends React.Component {
         <h3>
           About You
         </h3>
-        {renderLineItem('Title', this.props.applicationData.title)}
-        {renderLineItem('Preferred First Name', this.props.applicationData.preferredFirstName)}
-        {renderLineItem('Account Email', this.props.applicationData.accountEmail)}
-        {renderLineItem('Alternate Email', this.props.applicationData.alternateEmail)}
-        {renderLineItem('Phone', this.props.applicationData.phone)}
+        {renderLineItem('Title', this.props.applicationData.formData.title)}
+        {renderLineItem('Preferred First Name', this.props.applicationData.formData.preferredFirstName)}
+        {renderLineItem('Account Email', this.props.applicationData.email)}
+        {renderLineItem('Alternate Email', this.props.applicationData.formData.alternateEmail)}
+        {renderLineItem('Phone', this.props.applicationData.formData.phone)}
         <br/>
-        {renderLineItem('District', this.props.applicationData.district)}
-        {renderLineItem('School', this.props.applicationData.school)}
-        {renderLineItem('Course', this.props.applicationData.course)}
-        {renderLineItem('Regional Partner', this.props.applicationData.regionalPartner)}
+        {renderLineItem('District', this.props.applicationData.district_name)}
+        {renderLineItem('School', this.props.applicationData.school_name)}
+        {renderLineItem('Course', this.props.applicationData.formData.program)}
+        {renderLineItem('Regional Partner', this.props.applicationData.regional_partner_name)}
       </div>
     );
   }
@@ -165,66 +203,13 @@ class DetailViewContents extends React.Component {
         <h3>
           Choose Your Program
         </h3>
-        {renderLineItem('Program', this.props.applicationData.program)}
+        {renderLineItem('Program', this.props.applicationData.formData.program)}
         <Facilitator1819Program
-          planToTeachThisYear1819={this.props.applicationData.planToTeachThisYear}
-          rateAbility={this.props.applicationData.rateAbility}
-          canAttendFIT={this.props.applicationData.canAttendFIT}
+          planToTeachThisYear1819={this.props.applicationData.formData.planOnTeaching}
+          abilityToMeetRequirements={this.props.applicationData.formData.abilityToMeetRequirements}
         />
       </div>
     );
-  }
-
-  renderQuestionResponses = () => {
-    return this.props.applicationData.responsesForSections.map((section, i) => {
-      return (
-        <div key={i}>
-          <h4>
-            {section.sectionName}
-          </h4>
-          <Table bordered hover>
-            <thead>
-              <tr>
-                <th>
-                  Question
-                </th>
-                <th style={{width: '15%'}}>
-                  Score
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                section.responses.map((response, j) => {
-                  return (
-                    <tr key={j}>
-                      <td>
-                        {response.question}
-                        <br/>
-                        {response.answer}
-                      </td>
-                      <td>
-                        <FormControl disabled componentClass="select" value={response.score}>
-                          {
-                            _.range(1,6).map((score) => {
-                              return (
-                                <option key={score} value={score}>
-                                  {score}
-                                </option>
-                              );
-                            })
-                          }
-                        </FormControl>
-                      </td>
-                    </tr>
-                  );
-                })
-              }
-            </tbody>
-          </Table>
-        </div>
-      );
-    });
   }
 
   renderNotes() {
@@ -233,7 +218,7 @@ class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <FormControl disabled={true} componentClass="textarea" value={this.props.applicationData.notes}/>
+        <FormControl disabled={true} componentClass="textarea" value={this.props.applicationData.notes || ''}/>
       </div>
     );
   }
@@ -242,20 +227,12 @@ class DetailViewContents extends React.Component {
     return (
       <div>
         {this.renderHeader()}
-        {
-          this.props.applicationData.totalScore && (
-            <h2>
-              {`Total Score: ${this.props.applicationData.totalScore}`}
-            </h2>
-          )
-        }
         {this.renderAboutSection()}
         {this.renderChooseYourProgram()}
-        {this.renderQuestionResponses()}
         {this.renderNotes()}
       </div>
     );
   }
 }
 
-export {DetailViewContents, renderLineItem};
+export {DetailView, DetailViewContents, renderLineItem};
