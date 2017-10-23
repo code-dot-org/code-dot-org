@@ -832,7 +832,7 @@ $height-to-width: 434 / 477;
   }
 }
 
-.dash_modal button, .minecraft button {
+.dash_modal button:not(.no-mc), .minecraft button:not(.no-mc) {
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
   @include pixelated();
