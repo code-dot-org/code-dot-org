@@ -28,18 +28,21 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **We are currently hiring for:**
 
 - **Administration**
-	- [Director of Accounting](#accounting)
+	- [Director of Finance & Accounting](#accounting)
+	
+- **Internships**
+	- [Education Team intern (Chicago, IL)](#edintern)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="accounting"href="#accounting">Director of Accounting (Seattle, WA)</a>
+## <a name="accounting"href="#accounting">Director of Accounting & Finance (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is looking for an experienced Director of Accounting to oversee all finance and accounting workflows, including regulatory and financial reporting, budget and forecast preparation, contract administration, and the development of internal control policies and procedures.
+Code.org is looking for an experienced Director of Accounting & Finance to oversee all finance and accounting workflows, including regulatory and financial reporting, budget and forecast preparation, contract administration, and the development of internal control policies and procedures.
 
 Responsibilities of the position include:
 
@@ -77,6 +80,40 @@ The ideal candidate has at least a Bachelor’s degree in Accounting, Finance, o
 Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL strongly preferred)</a>
+
+**Internship Summary:**
+
+Code.org is looking for an intern to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+
+Responsibilities of the position include: 
+
+- working closely with the Education team to assist in designing, developing, and writing original curricular materials:
+	- lesson plans
+	- formative/summative assessments
+	- videos
+	- answer keys
+	- project exemplars
+	- using in-house content management tools to structure resources
+
+**Experience and Qualifications:**
+
+The ideal candidate has experience in computer science and a background in education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
+
+The candidate should also have: 
+
+- Basic to comprehensive knowledge of computer science (required) 
+- Prior curriculum writing experience / activity design (required)
+- Proficiency in working with Microsoft Office and Google Docs (required) 
+- a Bachelor’s degree or higher in Education or Computer Science (preferred)
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
+
+You may also choose to include a LinkedIn or related online profile.
+
 
 
 ## <a name="info" href="#info">Working at Code.org</a>
