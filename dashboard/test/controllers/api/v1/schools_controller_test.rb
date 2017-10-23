@@ -31,6 +31,12 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     assert_equal [GLADYS_JUNG_ELEMENTARY], JSON.parse(@response.body)
   end
 
+  test 'search by short school name prefix' do
+    get :search, params: {q: 'elementary ju', limit: 40}
+    assert_response :success
+    assert_equal [GLADYS_JUNG_ELEMENTARY], JSON.parse(@response.body)
+  end
+
   test 'search by school name substring' do
     get :search, params: {q: 'jung', limit: 40}
     assert_response :success
