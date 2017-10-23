@@ -26,6 +26,7 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+require 'state_abbr'
 
 module Pd::Application
   class Facilitator1819Application < ApplicationBase
@@ -78,6 +79,8 @@ module Pd::Application
     def self.options
       {
         title: %w(Mr. Mrs. Ms. Dr.),
+
+        state: get_all_states_with_dc.to_h.values,
 
         gender_identity: [
           'Female',

@@ -19,7 +19,8 @@ const pageLabels = {
     institutionType: "What type of institution do you work for?",
     currentEmployer: "Current employer",
     jobTitle: "What is your job title?",
-    resumeLink: "Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.",
+    resumeLink:
+      "Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience. (500 characters max)",
     workedInCsJob: "Have you worked in a job that requires computer science knowledge?",
     csRelatedJobRequirements: "What were your CS-related job requirements?",
     completedCsCoursesAndActivities: "Which of the following computer science education courses or activities have you completed?",

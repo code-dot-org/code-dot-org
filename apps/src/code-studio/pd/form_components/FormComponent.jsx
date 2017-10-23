@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {ButtonList} from '../form_components/button_list.jsx';
 import FieldGroup from '../form_components/FieldGroup';
+import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 
 /**
  * Helper class for dashboard forms. Provides helper methods for easily
@@ -93,6 +94,7 @@ export default class FormComponent extends React.Component {
         componentClass="select"
         label={label}
         validationState={this.getValidationState(name)}
+        errorMessage={this.props.errorMessages[name]}
         onChange={this.handleChange}
         value={this.props.data[name] || ''}
         required={required}
@@ -122,9 +124,34 @@ export default class FormComponent extends React.Component {
         type={type}
         label={label}
         validationState={this.getValidationState(name)}
+        errorMessage={this.props.errorMessages[name]}
         onChange={this.handleChange}
         value={this.props.data[name] || ''}
         required={required}
+        {...props}
+      />
+    );
+  }
+
+  /**
+   * Construct a controlled US phone number input
+   *
+   * @param {String} name
+   * @param {String} label
+   * @param {boolean} [required=false]
+   *
+   * @returns {UsPhoneNumberInput}
+   */
+   buildUsPhoneNumberInput({name, label, required, ...props}) {
+    return (
+      <UsPhoneNumberInput
+        name={name}
+        label={label}
+        required={required}
+        validationState={this.getValidationState(name)}
+        errorMessage={this.props.errorMessages[name]}
+        onChange={this.handleChange}
+        value={this.props.data[name]}
         {...props}
       />
     );
@@ -231,11 +258,21 @@ export default class FormComponent extends React.Component {
   static getDynamicallyRequiredFields(data) {
     return [];
   }
+
+  /**
+   * Override in derived classes
+   * @param {Object} data - form data for this page
+   * @returns {Object} - custom error messages per field
+   */
+  static getErrorMessages(data) {
+    return {};
+  }
 }
 
 FormComponent.propTypes = {
   options: PropTypes.object.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired
 };
