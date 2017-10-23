@@ -95,11 +95,11 @@
 #   https://docs.google.com/spreadsheets/d/12zZB003jXAivY9Dnh1VEIBdvaZXAkj0H4NU2i0bAFY8
 # and exported via the mysqldump command
 #
-#   mysqldump dashboard_production proficiencies_20160101_20160201
-#     --host=reporting.ceidnfhvpbck.us-east-1.rds.amazonaws.com
+#   mysqldump dashboard_production user_proficiencies_20170601_20170701
+#     --host=db-reporting.code.org
 #     --user=db
 #     --password
-#     --result-file=proficiencies_20160101_20160201
+#     --result-file=user_proficiencies_20170601_20170701
 #
 # and combined and imported by this script.
 
