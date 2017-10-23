@@ -35,9 +35,10 @@ module Pd::Application
     include ApplicationConstants
     include Pd::Form
 
-    after_initialize -> {self.status = :unreviewed}
+    after_initialize -> {self.status = :unreviewed}, if: :new_record?
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
+
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
