@@ -17,6 +17,14 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     zip: '99559'
   }.deep_stringify_keys.freeze
 
+  JOANN_A_ALEXIE_MEMORIAL_SCHOOL = {
+    nces_id: '020000100206',
+    name: 'Joann A. Alexie Memorial School',
+    city: 'Atmautluak',
+    state: 'AK',
+    zip: '99559'
+  }.deep_stringify_keys.freeze
+
   test 'search by school name prefix' do
     get :search, params: {q: 'glad', limit: 40}
     assert_response :success
@@ -57,5 +65,11 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     get :search, params: {q: 'glad', limit: 0}
     assert_response :success
     assert_equal [GLADYS_JUNG_ELEMENTARY], JSON.parse(@response.body)
+  end
+
+  test 'search with short string' do
+    get :search, params: {q: 'JOANN A. ALEXIE', limit: 40}
+    assert_response :success
+    assert_equal [JOANN_A_ALEXIE_MEMORIAL_SCHOOL], JSON.parse(@response.body)
   end
 end
