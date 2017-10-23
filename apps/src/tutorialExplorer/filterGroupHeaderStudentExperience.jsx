@@ -8,7 +8,8 @@ const styles = {
     backgroundColor: "white",
     color: "dimgrey",
     borderColor: "white",
-    height: 34
+    height: 34,
+    fontSize: 16
   }
 };
 

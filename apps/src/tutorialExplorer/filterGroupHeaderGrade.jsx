@@ -18,7 +18,7 @@ const styles = {
     paddingLeft: 30,
     paddingRight: 30,
     fontFamily: "'Gotham 4r', sans-serif",
-    fontSize: 14,
+    fontSize: 16,
     cursor: 'pointer',
     float: 'left'
   },
