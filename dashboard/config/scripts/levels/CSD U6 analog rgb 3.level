@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-10-20T19:42:01.000Z",
+  "created_at": "2017-10-20T23:00:49.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -173,12 +173,9 @@
       "onBoardEvent": null
     },
     "edit_code": true,
-    "contained_level_names": [
-      "CSDU6 - sensors predict question"
-    ],
     "embed": "false",
+    "markdown_instructions": "# Continuous Updates\r\n\r\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\r\n\r\nMove your `setScale()` blocks into a an event handler for one of the sensors to make the app update continually.",
     "instructions_important": "false",
-    "start_blocks": "var redness;\r\nsoundSensor.setScale(0, 255);\r\nonBoardEvent(soundSensor, \"data\", function() {\r\n  redness = Math.round(soundSensor.value);\r\n  setProperty(\"screen1\", \"background-color\", rgb(redness, 0, 0));\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -206,18 +203,20 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "disable_procedure_autopopulate": "false"
+    "project_template_level_name": "CSD U6 analog data template",
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 19:43:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-20 22:47:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 23:01:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:10:46 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
