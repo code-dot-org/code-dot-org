@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-10-20T19:42:01.000Z",
+  "created_at": "2017-10-20T22:58:31.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -173,12 +173,9 @@
       "onBoardEvent": null
     },
     "edit_code": true,
-    "contained_level_names": [
-      "CSDU6 - sensors predict question"
-    ],
     "embed": "false",
+    "markdown_instructions": "# Putting Color on the Screen\r\n\r\nNow that your sensor data is in a scale that works for RGB, you can go about setting the screen color.\r\n\r\n# Do This\r\n\r\n* Add a `setProperty()` block and set it to change the \"background-color\" property of \"screen1\".\r\n* Add an `rgb()` block to the last parameter of `setProperty()`.\r\n* Use the three color variables you created as inputs to the `rgb()` block.",
     "instructions_important": "false",
-    "start_blocks": "var redness;\r\nsoundSensor.setScale(0, 255);\r\nonBoardEvent(soundSensor, \"data\", function() {\r\n  redness = Math.round(soundSensor.value);\r\n  setProperty(\"screen1\", \"background-color\", rgb(redness, 0, 0));\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -208,16 +205,18 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "disable_procedure_autopopulate": "false"
+    "project_template_level_name": "CSD U6 analog data template",
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 19:43:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-20 22:47:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:58:54 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
