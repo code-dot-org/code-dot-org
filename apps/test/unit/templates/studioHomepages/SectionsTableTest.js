@@ -7,7 +7,7 @@ import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
 
 describe('SectionsTable', () => {
 
-  it('shows column headers for students with teacher-managed accounts', () => {
+  it('shows column headers for students', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
@@ -16,80 +16,23 @@ describe('SectionsTable', () => {
         canLeave={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.section()}
-        </div>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.course()}
-        </div>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.teacher()}
-        </div>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.sectionCode()}
-        </div>
-      </td>
-    );
-    // Students with teacher-managed accounts should not see a button to leave the section.
-    expect(wrapper.find('Button').exists()).to.be.false;
+    [
+      i18n.section(),
+      i18n.course(),
+      i18n.teacher(),
+      i18n.sectionCode(),
+    ].forEach((headerText) => {
+      expect(wrapper).to.containMatchingElement(
+        <td>
+          <div>
+            {headerText}
+          </div>
+        </td>
+      )
+    });
   });
 
-  it('shows column headers for students who do not have teacher-managed accounts', () => {
-    const wrapper = shallow(
-      <SectionsTable
-        sections={joinedSections}
-        isRtl={false}
-        isTeacher={false}
-        canLeave={true}
-      />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.section()}
-        </div>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.course()}
-        </div>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.teacher()}
-        </div>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.sectionCode()}
-        </div>
-      </td>
-    );
-    // Students who do not have teacher-managed accounts should see a button to leave the section.
-    expect(wrapper.find('Button').exists()).to.be.true;
-  });
-
-  it('shows column headers for students teachers', () => {
+  it('shows column headers for teachers', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
@@ -98,35 +41,55 @@ describe('SectionsTable', () => {
         canLeave={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.section()}
-        </div>
-      </td>
+    [
+      i18n.section(),
+      i18n.course(),
+      i18n.students(),
+      i18n.sectionCode(),
+    ].forEach((headerText) => {
+      expect(wrapper).to.containMatchingElement(
+        <td>
+          <div>
+            {headerText}
+          </div>
+        </td>
+      )
+    });
+  });
+
+  it('does not show a leave section button for teacher-managed student accounts', () => {
+    const wrapper = shallow(
+      <SectionsTable
+        sections={joinedSections}
+        isRtl={false}
+        isTeacher={false}
+        canLeave={false}
+      />
     );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.course()}
-        </div>
-      </td>
+    expect(wrapper.find('Button').exists()).to.be.false;
+  });
+
+  it('shows a leave section button for students who do not have teacher-managed accounts', () => {
+    const wrapper = shallow(
+      <SectionsTable
+        sections={joinedSections}
+        isRtl={false}
+        isTeacher={false}
+        canLeave={true}
+      />
     );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.students()}
-        </div>
-      </td>
+    expect(wrapper.find('Button').exists()).to.be.true;
+  });
+
+  it('does not show a leave section button for teacher accounts', () => {
+    const wrapper = shallow(
+      <SectionsTable
+        sections={joinedSections}
+        isRtl={false}
+        isTeacher={true}
+        canLeave={false}
+      />
     );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {i18n.sectionCode()}
-        </div>
-      </td>
-    );
-    // Teachers can't be students in their own sections, therefore do not see a button to leave the section.
     expect(wrapper.find('Button').exists()).to.be.false;
   });
 
@@ -139,26 +102,27 @@ describe('SectionsTable', () => {
         canLeave={false}
       />
     );
-    const randomJoinedSectionIndex = Math.floor(Math.random() * 4);
     expect(wrapper.find('.row')).to.have.length(4);
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <div>
-          {joinedSections[randomJoinedSectionIndex].name}
-        </div>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        <a>
-          {joinedSections[randomJoinedSectionIndex].assignedTitle}
-        </a>
-      </td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>
-        {joinedSections[randomJoinedSectionIndex].teacherName}
-      </td>
-    );
+    joinedSections.forEach((section) => {
+      expect(wrapper).to.containMatchingElement(
+        <td>
+          <div>
+            {section.name}
+          </div>
+        </td>
+      );
+      expect(wrapper).to.containMatchingElement(
+        <td>
+          <a>
+            {section.assignedTitle}
+          </a>
+        </td>
+      );
+      expect(wrapper).to.containMatchingElement(
+        <td>
+          {section.teacherName}
+        </td>
+      );
+    });
   });
 });
