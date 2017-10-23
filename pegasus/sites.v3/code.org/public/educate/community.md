@@ -1,6 +1,5 @@
 ---
 title: Community and Support
-nav: educate_nav
 theme: responsive
 style_min: true
 ---
