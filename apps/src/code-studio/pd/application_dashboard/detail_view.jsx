@@ -9,7 +9,7 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl} from 'react-bootstrap';
 import {Facilitator1819Program} from './detail_view_facilitator_specific_components';
-import Spinner from '../workshop_dashboard/components/spinner';
+import Spinner from '../components/spinner';
 import $ from 'jquery';
 
 

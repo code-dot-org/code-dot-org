@@ -11,6 +11,7 @@ export default storybook => {
         name: 'Detail view for applications',
         story: () => (
           <DetailViewContents
+            applicationId="1"
             applicationData={{
               regionalPartner: 'partner',
               notes: 'notes',
