@@ -52,9 +52,7 @@ const pageLabels = {
         >
         Program Description
       </a>{' '}
-        how would you rate your ability to meet the requirements for your focus area?
-      <br />
-      (1=unlikely, I have limited capacity in 2018-19; 10=very likely, I am committed to success)
+        how would you rate your ability to meet the requirements and commitments for this program?
     </span>
     ),
     csfAvailability: "Are you available to attend the three-day Facilitator-in-Training workshop from Saturday, March 3 - Monday, March 5, 2018?",
@@ -65,7 +63,7 @@ const pageLabels = {
 
   Section3LeadingStudents: {
     ledCsExtracurriculars: "Have you led or organized extracurricular computer science learning experiences? Please mark all that apply.",
-    teachingExperience: "Do you have classroom teaching experience?",
+    teachingExperience: "Do you have classroom teaching experience for K-12 students or adults?",
     gradesTaught: (
       <span>
       What grade levels have you taught
@@ -81,7 +79,7 @@ const pageLabels = {
     </span>
     ),
     subjectsTaught: "Which subjects do you currently or have you previously taught? Check all that apply.",
-    yearsExperience: "How many years of experience do you have teaching computer science education?",
+    yearsExperience: "How many years of experience do you have teaching computer science for K-12 students or adults?",
     experienceLeading: (
       <span>
       Which of the following do you have experience leading
@@ -102,8 +100,10 @@ const pageLabels = {
     codeOrgFacilitator: "Are you currently or have you been a Code.org facilitator in the past?",
     codeOrgFacilitatorYears: "In which years did you work as a Code.org facilitator (mark all that apply)?",
     codeOrgFacilitatorPrograms: "Please check the Code.org programs you’ve facilitated for us in the past (mark all that apply):",
+    haveLedPd: "Have you led professional development in the past?",
     groupsLedPd: "What groups have you led professional development for in the past? (check all that apply)",
-    describePriorPd: "Please describe your prior experience leading professional development experiences. (500 characters max)"
+    describePriorPd: "Please describe your prior experience leading professional development experiences. (500 characters max)",
+    whyNoPd: "Please give more context as to why you haven’t had prior experience leading professional development experiences. (500 characters max)"
   },
 
   Section5YourApproachToLearningAndLeading: {
@@ -112,7 +112,7 @@ const pageLabels = {
 
     expectedTeacherNeeds:
       "Teachers in Code.org’s Professional Learning Program join us with a wide range of experiences \
-      or lack thereof) in computer science education. What are some of the unique needs you’d expect \
+      (or lack thereof) in computer science education. What are some of the unique needs you’d expect \
       to find in a cohort of these teachers?",
 
     describeAdaptingLessonPlan:
@@ -142,6 +142,9 @@ const pageLabels = {
   },
 
   Section6Logistics: {
+    availableDuringWeek:
+      "During the school year, are you available during the week (Monday - Friday) to attend phone calls or virtual meetings?",
+
     weeklyAvailability:
       "During the school year, what times during the week (Monday - Friday) \
       are you available to attend phone calls or virtual meetings? (mark all that apply)",
