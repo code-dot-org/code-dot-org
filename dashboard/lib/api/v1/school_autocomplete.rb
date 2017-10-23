@@ -48,7 +48,17 @@ class Api::V1::SchoolAutocomplete
   # @param query [String] the user-defined query string
   # @return [String] the formatted query string
   def to_search_string(query)
-    words = query.strip.split(/\s+/).map {|w| w.gsub(/\W/, '').upcase}.map(&:presence).select {|w| w.length >= 3}.compact
+    words = query.strip.split(/\s+/).map do |w|
+      w.gsub(/\W/, '').upcase
+    end.map(&:presence).compact
+
+    # Don't filter the last word if it is short since we will
+    # append it with * for a wildcard search.
+    if words.length > 1
+      last_word = words.pop
+      words = words.select {|w| w.length >= 3}.compact
+      words.push(last_word)
+    end
 
     return words.empty? ? "" : "+#{words.join(' +')}*"
   end
