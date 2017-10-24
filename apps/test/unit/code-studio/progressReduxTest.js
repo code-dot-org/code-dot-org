@@ -1097,6 +1097,7 @@ describe('progressReduxTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
     allowConsoleErrors();
     let headerDiv;
+    let stashedCookieKey;
 
     function createHeaderDom(dataId) {
       headerDiv = document.createElement('div');
@@ -1114,6 +1115,7 @@ describe('progressReduxTest', () => {
     const cookieName = '__testcookie__';
     beforeEach(() => {
       cookies.remove(cookieName);
+      stashedCookieKey = window.userNameCookieKey;
       delete window.userNameCookieKey;
     });
 
@@ -1122,6 +1124,7 @@ describe('progressReduxTest', () => {
         document.body.removeChild(headerDiv);
         headerDiv = null;
       }
+      window.userNameCookieKey = stashedCookieKey;
     });
 
     it('does not work if userNameCookieKey is not set', () => {
