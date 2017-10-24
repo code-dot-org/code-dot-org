@@ -512,7 +512,6 @@ const TutorialExplorer = React.createClass({
                     sortBy={this.state.sortBy}
                     filterGroups={this.props.filterGroups}
                     selection={this.state.filters}
-                    filteredTutorialsCount={this.state.filteredTutorialsCount}
                     onUserInputFilter={this.handleUserInputFilter}
                     onUserInputOrgName={this.handleUserInputOrgName}
                     onUserInputSortBy={this.handleUserInputSortBy}

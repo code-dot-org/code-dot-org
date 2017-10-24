@@ -30,12 +30,11 @@ describe('FilterHeader', () => {
         mobileLayout={true}
       />
     );
-/*    expect(wrapper).to.containMatchingElement(
+    expect(wrapper).to.containMatchingElement(
       <span>
         {i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}
       </span>
     );
-*/
     expect(wrapper).to.containMatchingElement(
       <button onClick={FAKE_SHOW_MODAL_FILTERS}>
         {i18n.filterHeaderShowFilters()}
@@ -75,10 +74,11 @@ describe('FilterHeader', () => {
     );
   });
 
-  /*it('pluralizes result summary correctly', () => {
+  it('pluralizes result summary correctly', () => {
     const noResults = shallow(
       <FilterHeader
         {...DEFAULT_PROPS}
+        mobileLayout={true}
         filteredTutorialsCount={0}
       />
     );
@@ -92,6 +92,7 @@ describe('FilterHeader', () => {
       <FilterHeader
         {...DEFAULT_PROPS}
         filteredTutorialsCount={1}
+        mobileLayout={true}
       />
     );
     expect(oneResult).to.containMatchingElement(
@@ -104,6 +105,7 @@ describe('FilterHeader', () => {
       <FilterHeader
         {...DEFAULT_PROPS}
         filteredTutorialsCount={2}
+        mobileLayout={true}
       />
     );
     expect(twoResults).to.containMatchingElement(
@@ -112,5 +114,5 @@ describe('FilterHeader', () => {
       </span>
     );
   });
-  */
+
 });

@@ -58,6 +58,34 @@ describe('FilterGroup', () => {
     );
   });
 
+  it('renders radio buttons', () => {
+    const wrapper = shallow(
+      <FilterGroup
+        {...DEFAULT_PROPS}
+        filterEntries={[
+          {
+            name: 'Martin the Warrior',
+            text: 'The Bellmaker'
+          }
+        ]}
+        singleEntry={true}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroupContainer text={TEST_TEXT}>
+        <FilterChoice
+          groupName={TEST_GROUP_NAME}
+          name="Martin the Warrior"
+          text="The Bellmaker"
+          selected={false}
+          onUserInput={TEST_CALLBACK}
+          key="Martin the Warrior"
+          singleEntry={true}
+        />
+      </FilterGroupContainer>
+    );
+  });
+
   it('selects choices by name', () => {
     const wrapper = shallow(
       <FilterGroup

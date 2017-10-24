@@ -51,6 +51,24 @@ describe('FilterChoice', () => {
     );
   });
 
+  it('renders unchecked radio button without error', () => {
+    const wrapper = shallow(
+      <FilterChoice
+        {...DEFAULT_PROPS}
+        selected={false}
+        singleEntry={true}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <label>
+          <input type="radio" checked={false}/>
+          {TEST_TEXT}
+        </label>
+      </div>
+    );
+  });
+
   it('Calls provided handler on change', () => {
     const callback = sinon.spy();
     const testNewCheckedValue = Math.random() < 0.5;
