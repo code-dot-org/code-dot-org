@@ -174,7 +174,7 @@ class ActivitiesController < ApplicationController
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
     if synchronous_save
-      @activity = Activity.create!(attributes)
+      @activity = Activity.new(attributes).tap(&:atomic_save!)
     else
       @activity = Activity.create_async!(attributes)
     end

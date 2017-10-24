@@ -8,7 +8,7 @@ litmus_tracking_id: "5g5lyi1a"
   <% storedotcodedotorg = CDO.canonical_hostname('store.code.org') %>
 
 ### Thanks for signing up to host an Hour of Code!
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a [free set of 12 professionally printed posters featuring diverse role models for your classroom](https://<%= storedotcodedotorg %>/products/code-org-posters-set-of-12). Use offer code FREEPOSTERS at checkout. (This code is good through 12/31 while supplies last. You'll need to cover shipping costs. If that is not in your budget, the [PDF files](https://<%= hourofcode %>/promote/resources#posters) are available to print yourself.)
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a [free set of 12 professionally printed posters featuring diverse role models for your classroom](https://<%= storedotcodedotorg %>/products/code-org-posters-set-of-12). Use offer code FREEPOSTERS at checkout. (This code is good through 12/31 while supplies last. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://<%= hourofcode %>/promote/resources#posters) for your classroom.)
 
 Hour of Code runs December 4-10. We'll be in touch about new tutorials and other exciting updates as they come out. **In the meantime, what can you do now?**
 

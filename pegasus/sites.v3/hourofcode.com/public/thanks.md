@@ -27,7 +27,7 @@ social:
 
 # Thanks for signing up to host an Hour of Code!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. If that is not in your budget, the [PDF files](https://code.org/inspire) are available to print yourself.)<br>
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)<br>
 <br>
 [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 

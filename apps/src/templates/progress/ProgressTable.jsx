@@ -6,14 +6,14 @@ import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
 import { levelType, lessonType } from './progressTypes';
 
-const styles = {
+export const styles = {
   hidden: {
     display: 'none'
   }
 };
 
-const ProgressTable = React.createClass({
-  propTypes: {
+class ProgressTable extends React.Component {
+  static propTypes = {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
     categorizedLessons: PropTypes.arrayOf(
@@ -25,7 +25,7 @@ const ProgressTable = React.createClass({
         ).isRequired
       })
     ).isRequired,
-  },
+  };
 
   componentDidMount() {
     // TODO - This modifies things outside of our scope. This is done right now
@@ -40,7 +40,7 @@ const ProgressTable = React.createClass({
       paddingLeft: padding,
       paddingRight:padding
     });
-  },
+  }
 
   render() {
     const { isSummaryView, isPlc, categorizedLessons } = this.props;
@@ -81,8 +81,9 @@ const ProgressTable = React.createClass({
       );
     }
   }
-});
+}
 
+export const UnconnectedProgressTable = ProgressTable;
 export default connect(state => ({
   isPlc: state.progress.professionalLearningCourse,
   isSummaryView: state.progress.isSummaryView,
