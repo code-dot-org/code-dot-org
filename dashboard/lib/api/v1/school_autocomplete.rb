@@ -54,11 +54,7 @@ class Api::V1::SchoolAutocomplete
 
     # Don't filter the last word if it is short since we will
     # append it with * for a wildcard search.
-    if words.length > 1
-      last_word = words.pop
-      words = words.select {|w| w.length >= 3}.compact
-      words.push(last_word)
-    end
+    words = words.select.with_index {|w, i| i == words.length - 1 || w.length >= 3}
 
     return words.empty? ? "" : "+#{words.join(' +')}*"
   end
