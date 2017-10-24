@@ -15,6 +15,7 @@ mysql_defaults: &mysql_defaults
   encoding: utf8
   collation: utf8_unicode_ci
   pool: 5
+  reconnect: true
   connect_timeout: 2
   default_group: 'cdo'
   master:
@@ -22,7 +23,7 @@ mysql_defaults: &mysql_defaults
     password: <%= writer.password || '' %>
     host: <%= writer.host || 'localhost' %>
     database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
-  <% if reader && reader.host != writer.host %>
+  <% if reader && reader != writer %>
     # When there is a separate read-only database configured, do NOT
     # include the master database in the read pool.
     # Ref: https://github.com/bdurand/seamless_database_pool#the-master-connection

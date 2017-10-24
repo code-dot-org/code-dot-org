@@ -5,10 +5,21 @@ def sequel_connect(writer, reader)
   writer = writer.gsub 'mysql:', 'mysql2:'
 
   reader_uri = URI(reader)
-  if reader_uri.host != URI(writer).host
-    db = Sequel.connect writer, servers: {read_only: {host: reader_uri.host}}, encoding: 'utf8mb4', default_group: 'cdo'
+  writer_uri = URI(writer)
+  if reader_uri != writer_uri
+    db = Sequel.connect writer,
+      servers: {fallback: Sequel::Database.send(:uri_to_options, reader_uri)},
+      encoding: 'utf8mb4',
+      reconnect: true,
+      connect_timeout: 2,
+      default_group: 'cdo'
+    db.extension :server_fallback
   else
-    db = Sequel.connect writer, encoding: 'utf8mb4', default_group: 'cdo'
+    db = Sequel.connect writer,
+      encoding: 'utf8mb4',
+      reconnect: true,
+      connect_timeout: 2,
+      default_group: 'cdo'
   end
 
   db.extension :server_block
@@ -20,6 +31,6 @@ def sequel_connect(writer, reader)
   db
 end
 
-PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
+PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_reporting_db_reader
 POSTE_DB = PEGASUS_DB
-DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader
+DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_reporting_db_reader
