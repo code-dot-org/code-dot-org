@@ -134,7 +134,7 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
     }
 
     if (!UsPhoneNumberInput.isValid(data.phone)) {
-      formatErrors.phone = "Must be a valid US phone number";
+      formatErrors.phone = "Must be a valid phone number including area code";
     }
 
     return formatErrors;
