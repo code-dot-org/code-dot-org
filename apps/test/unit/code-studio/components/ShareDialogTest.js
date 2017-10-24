@@ -9,6 +9,21 @@ describe('ShareDialog', () => {
     const wrapper = shallow(
       <ShareDialog
         signInState={SignInState.SignedIn}
+        isProjectLevel={false}
+        appType={'applab'}
+      />
+    );
+    const dialog = wrapper.find('Connect(ShareDialogSignedIn)');
+    assert.equal(dialog.length, 1);
+    // Make sure props get passed through
+    assert.equal(wrapper.props().appType, 'applab');
+  });
+
+  it('renders our signed in version when signed out on project page', () => {
+    const wrapper = shallow(
+      <ShareDialog
+        signInState={SignInState.SignedOut}
+        isProjectLevel={true}
         appType={'applab'}
       />
     );
@@ -22,6 +37,7 @@ describe('ShareDialog', () => {
     const wrapper = shallow(
       <ShareDialog
         signInState={SignInState.SignedOut}
+        isProjectLevel={false}
         appType={'applab'}
       />
     );
