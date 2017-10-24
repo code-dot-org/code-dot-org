@@ -42,6 +42,8 @@ assessment 'U3-AP-Practice-FR-score-abstraction-response', progression: '(new)AP
 
 stage 'Creating functions with Parameters', flex_category: 'csp3_1'
 named_level 'v2 U3L08 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+named_level 'U3L08 how to add comments', progression: '(new) How to add comments to code'
+named_level 'U3L08 - introUnderTheSea with comments', progression: '(modification only) Intro to under the sea (instruction, and template change only)'
 assessment 'U3-AP-Practice-FR-manage-complexity', progression: '(new)AP Practice Response - Managing Complexity'
 
 stage 'Looping and Random Numbers', flex_category: 'csp3_1'
