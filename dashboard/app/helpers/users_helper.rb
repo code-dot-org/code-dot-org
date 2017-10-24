@@ -10,10 +10,10 @@ module UsersHelper
     if session['clever_link_flag'].present? && session['clever_takeover_id'].present? && session['clever_takeover_token'].present?
       uid = session['clever_takeover_id']
       # TODO: validate that we're not destroying an active account?
-      existing_clever_account = User.where(uid: uid).first
+      existing_clever_account = User.where(uid: uid, provider: 'clever').first
 
       # Move over sections that students follow
-      if user.student?
+      if user.student? && existing_clever_account
         Follower.where(student_user_id: existing_clever_account.id).each do |follower|
           follower.update(student_user_id: user.id)
         end
