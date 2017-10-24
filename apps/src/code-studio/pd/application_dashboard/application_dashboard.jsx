@@ -30,9 +30,7 @@ const ApplicationDashboardHeader = (props) => (
 const paths = {
   'csf_facilitators': 'CS Fundamentals Facilitators',
   'csd_facilitators': 'CS Discoveries Facilitators',
-  'csp_facilitators': 'CS Principles Facilitators',
-  'csd_teachers': 'CS Discoveries Teachers',
-  'csp_teachers': 'CS Principles Teachers'
+  'csp_facilitators': 'CS Principles Facilitators'
 };
 
 const ApplicationDashboard = ()=> (
