@@ -22,10 +22,25 @@ export default class UsPhoneNumberInput extends React.Component {
     };
   }
 
+  /**
+   * Returns true if the value is exactly 10 digits and no other characters, otherwise false.
+   * @param {string} value - to inspect
+   * @returns {boolean}
+   */
   static isValid(value) {
     return /^\d{10}$/.test(value);
   }
 
+  /**
+   * Coerce raw value into the nearest properly formatted phone number
+   * This is to make the typing more natural and flexible.
+   * If we instead validate the format explicitly, then it will require entering in the parentheses, space, and dash.
+   * On the other hand, if we only accept numbers and reformat ourselves, then editing and deleting become awkward.
+   *
+   * See the unit tests for examples.
+   * @param {String} value - raw value to coerce into a phone number
+   * @returns {string} best effort formatted phone number from the supplied value
+   */
   static coercePhoneNumber(value) {
     const match = PHONE_NUMBER_REGEX.exec(value);
     let phoneNumber = "";
@@ -60,6 +75,11 @@ export default class UsPhoneNumberInput extends React.Component {
     return phoneNumber;
   }
 
+  /**
+   * Return only digits from the supplied string
+   * @param {string} value - supplied string
+   * @returns {string} - all digits from the supplied string
+   */
   static toJustNumbers(value) {
     return typeof value === "string" ? value.replace(/[^\d]/g, '') : "";
   }
