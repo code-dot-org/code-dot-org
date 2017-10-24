@@ -128,7 +128,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/seamless_database_pool.git
-  revision: a2ce938ffe9356802bffdd712c02e1ef259aeba4
+  revision: f6ac06becd69bcb2ed958cf0ae79b98c96a48d6f
   ref: fallback
   specs:
     seamless_database_pool (1.0.19)
