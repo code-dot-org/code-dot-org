@@ -6,25 +6,25 @@ import React, {PropTypes} from 'react';
 const styles = {
   container: {
     display: 'inline-block',
-    borderRadius: 6,
     marginTop: 6,
     overflow: 'hidden',
     height: 34,
-    lineHeight: '34px'
+    lineHeight: '34px',
+    width: "100%"
   },
   item: {
-    backgroundColor: 'rgb(101, 205, 214)',
-    color: 'white',
-    paddingLeft: 30,
-    paddingRight: 30,
+    backgroundColor: "white",
+    color: "dimgrey",
+    width: "20%",
     fontFamily: "'Gotham 4r', sans-serif",
     fontSize: 16,
     cursor: 'pointer',
-    float: 'left'
+    float: 'left',
+    textAlign: "center"
   },
   select: {
-    backgroundColor: "white",
-    color: "dimgrey"
+    backgroundColor: '#2799a4',
+    color: 'white',
   }
 };
 

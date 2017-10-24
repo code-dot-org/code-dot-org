@@ -5,9 +5,8 @@ import React, {PropTypes} from 'react';
 
 const styles = {
   select: {
-    backgroundColor: "white",
-    color: "dimgrey",
-    borderColor: "white",
+    backgroundColor: 'rgb(101, 205, 214)',
+    color: 'white',
     height: 34,
     fontSize: 16
   }
