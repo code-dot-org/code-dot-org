@@ -1,5 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 9-28-hoc-past-organizers-1 hoc-2015-mailing/test-params.csv
-
-
