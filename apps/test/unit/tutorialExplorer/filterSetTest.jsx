@@ -29,7 +29,7 @@ const DEFAULT_PROPS = {
     {
       name: 'group-2',
       text: 'Group 2',
-      entries: ['byzanz', 'frobozz', 'xyzzy'],
+      entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
       singleEntry: false
     }
   ],
@@ -37,7 +37,6 @@ const DEFAULT_PROPS = {
     'group-1': [],
     'group-2': ['xyzzy'],
   },
-  filteredTutorialsCount: 2,
   onUserInputFilter: FAKE_ON_USER_INPUT,
   onUserInputOrgName: FAKE_ON_ORG_NAME,
   onUserInputSortBy: FAKE_ON_SORT_BY
@@ -46,13 +45,6 @@ const DEFAULT_PROPS = {
 describe('FilterSet', () => {
   it('renders the provided filter groups', () => {
     const wrapper = shallow(<FilterSet {...DEFAULT_PROPS}/>);
-    /*expect(wrapper).to.containMatchingElement(
-      <FilterGroupSortBy
-        defaultSortBy={TutorialsSortBy.popularityrank}
-        sortBy={TutorialsSortBy.popularityrank}
-        onUserInput={FAKE_ON_SORT_BY}
-      />
-    );*/
     expect(wrapper).to.containMatchingElement(
       <FilterGroupOrgNames
         orgName={FAKE_ORG_NAME}
@@ -76,7 +68,7 @@ describe('FilterSet', () => {
         key="group-2"
         name="group-2"
         text="Group 2"
-        filterEntries={['byzanz', 'frobozz', 'xyzzy']}
+        filterEntries={[{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}]}
         onUserInput={FAKE_ON_USER_INPUT}
         selection={['xyzzy']}
         singleEntry={false}
@@ -95,4 +87,62 @@ describe('FilterSet', () => {
       <RoboticsButton url="https://example.com"/>
     );
   });
+
+  it('hides items when they should not be displayed', () => {
+    const wrapper = shallow(
+      <FilterSet
+        {...DEFAULT_PROPS}
+        filterGroups={[
+          {
+            name: 'group-1',
+            text: 'Group 1',
+            entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
+            singleEntry: false,
+            display: false
+          }
+        ]}
+      />
+    );
+    expect(wrapper.children()).to.have.length(1);
+  });
+
+  it('shows all items when using mobile layout', () => {
+    const wrapper = shallow(
+      <FilterSet
+        {...DEFAULT_PROPS}
+        mobileLayout={true}
+        filterGroups={[
+          {
+            name: 'group-1',
+            text: 'Group 1',
+            entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
+            singleEntry: false,
+            headerOnDesktop: true
+          }
+        ]}
+      />
+    );
+    expect(wrapper.children()).to.have.length(2);
+  });
+
+
+  it('hides desktop items when using mobile layout', () => {
+    const wrapper = shallow(
+      <FilterSet
+        {...DEFAULT_PROPS}
+        mobileLayout={false}
+        filterGroups={[
+          {
+            name: 'group-1',
+            text: 'Group 1',
+            entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
+            singleEntry: false,
+            headerOnDesktop: true
+          }
+        ]}
+      />
+    );
+    expect(wrapper.children()).to.have.length(1);
+  });
+
 });
