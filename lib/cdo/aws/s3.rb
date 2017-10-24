@@ -80,9 +80,10 @@ module AWS
     end
 
     # Downloads a file in an S3 bucket to a specified location.
-    # @param bucket [String] The S3 buckt name.
+    # @param bucket [String] The S3 bucket name.
     # @param key [String] The S3 key.
-    # @param filename [String] The file to write to.
+    # @param filename [String] The filename to write to.
+    # @return [String] The filename written to.
     def self.download_to_file(bucket, key, filename)
       open(filename, 'wb') do |file|
         create_client.get_object(bucket: bucket, key: key) do |chunk|
@@ -94,7 +95,7 @@ module AWS
 
     # Processes an S3 file, requires a block to be executed after the data has
     # been downloaded to the temporary file (passed as argument to the block).
-    # @param bucket [String] The S3 buckt name.
+    # @param bucket [String] The S3 bucket name.
     # @param key [String] The S3 key.
     def self.process_file(bucket, key)
       CDO.log.debug "Processing #{key} from #{bucket}..."
