@@ -1,6 +1,5 @@
 ---
 title: Tools and videos
-nav: educate_nav
 video_player: true
 theme: responsive
 style_min: true

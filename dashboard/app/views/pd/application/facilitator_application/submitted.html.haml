@@ -9,6 +9,16 @@
     and will provide a status update to all applicants by Jan. 15, 2018.
 
   %p
+    - if @application.regional_partner
+      Your Code.org Regional Partner is:
+      = @application.regional_partner.name
+    - else
+      Your application is not yet matched to a Code.org Regional Partner.
+      If there is a partner in your area, we will send your application to the partner for review.
+      If there isn’t yet a partner in your area, we will consider your application as space becomes
+      available in the Facilitator Development Program.
+
+  %p
     Due to the volume of applications we will receive, we are not able to respond to individual requests for status updates.
     Please contact
     =link_to('facilitators@code.org', 'mailto:facilitators@code.org')

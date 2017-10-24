@@ -9,7 +9,7 @@ import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
-import Spinner from '../components/spinner';
+import Spinner from '../../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import {

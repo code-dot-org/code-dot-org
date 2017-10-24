@@ -27,11 +27,11 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
 
         {this.radioButtonsFor("program")}
 
-        {this.checkBoxesWithAdditionalTextFieldsFor("planOnTeaching", {
-          "Other": "other"
+        {this.radioButtonsWithAdditionalTextFieldsFor("planOnTeaching", {
+          "Other:": "other"
         })}
 
-        {this.selectFor("abilityToMeetRequirements", {controlWidth: {md: 2}, placeholder: true})}
+        {this.radioButtonsFor("abilityToMeetRequirements")}
 
         <br/>
         {this.props.data.program === PROGRAM_CSF &&
@@ -51,11 +51,11 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
             <h4>If selected for the program, you will be required to attend TeacherCon and a Facilitator-in-Training Weekend in the summer of 2018.</h4>
 
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspTeacherconAvailability", {
-              "I'm not available for either TeacherCon. (Please Explain)" : "unavailableReason"
+              "I'm not available for either TeacherCon. (Please Explain):" : "unavailableReason"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspFitAvailability", {
-              "I'm not available for either Facilitator-in-Training workshop. (Please Explain)" : "unavailableReason"
+              "I'm not available for either Facilitator-in-Training workshop. (Please Explain):" : "unavailableReason"
             })}
           </div>
         }

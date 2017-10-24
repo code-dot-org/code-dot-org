@@ -310,6 +310,7 @@ class ActionController::TestCase
   #   Otherwise it will be generated based on parameter values.
   #   Note: It is recommended to supply a name when varying params or user procs,
   #     as the default generated names may be ambiguous and may conflict.
+  # @param queries [Number] optional number of expected ActiveRecord database queries.
   # @yield runs an optional block of additional test logic after asserting the response
   #   Note: name is required when providing a block.
   #
@@ -335,7 +336,7 @@ class ActionController::TestCase
   #     assert_equal :admin, assigns(:permission)
   #   end
   def self.test_user_gets_response_for(action, method: :get, response: :success,
-    user: nil, params: {}, name: nil, &block)
+    user: nil, params: {}, name: nil, queries: nil, &block)
 
     unless name.present?
       raise 'name is required when a block is provided' if block
@@ -364,8 +365,10 @@ class ActionController::TestCase
         sign_out :user
       end
 
-      send method, action, params: params
-      assert_response response
+      assert_queries queries do
+        send method, action, params: params
+        assert_response response
+      end
 
       # Run additional test logic, if supplied
       instance_exec(&block) if block

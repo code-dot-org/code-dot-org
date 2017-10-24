@@ -55,6 +55,15 @@ export default class Facilitator1819FormComponent extends FormComponent {
     });
   }
 
+  radioButtonsWithAdditionalTextFieldsFor(name, textFieldMap, props = {}) {
+    return this.buildButtonsWithAdditionalTextFieldsFromOptions({
+      ...this.defaultOptions(name),
+      type: "radio",
+      textFieldMap,
+      ...props
+    });
+  }
+
   radioButtonsFor(name, props = {}) {
     return this.buildButtonsFromOptions({
       ...this.defaultOptions(name),

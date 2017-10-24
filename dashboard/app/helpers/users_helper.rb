@@ -6,11 +6,18 @@ module UsersHelper
   include SharedConstants
 
   def check_and_apply_clever_takeover(user)
-    raise 'Pagemode should be set to clever_takeover to enable feature' unless cookies['pm'] == 'clever_takeover'
     if session['clever_link_flag'].present? && session['clever_takeover_id'].present? && session['clever_takeover_token'].present?
       uid = session['clever_takeover_id']
       # TODO: validate that we're not destroying an active account?
-      existing_clever_account = User.where(uid: uid).first
+      existing_clever_account = User.where(uid: uid, provider: 'clever').first
+
+      # Move over sections that students follow
+      if user.student? && existing_clever_account
+        Follower.where(student_user_id: existing_clever_account.id).each do |follower|
+          follower.update(student_user_id: user.id)
+        end
+      end
+
       existing_clever_account.destroy! if existing_clever_account
       user.provider = 'clever'
       user.uid = uid
