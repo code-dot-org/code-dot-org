@@ -254,28 +254,6 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
 }
 
 /**
- * Cache the user sign-in state into sessionStorage
- * @param {boolean} isSignedIn
- */
-clientState.cacheUserSignedIn = function (isSignedIn) {
-  trySetSessionStorage('isSignedIn', isSignedIn);
-};
-
-/**
- * Get the cached user sign-in state from sessionStorage
- * @returns {boolean} True if the user is signed in (null if we don't know).
- */
-clientState.getUserSignedIn = function () {
-  let isSignedIn;
-  try {
-    isSignedIn = JSON.parse(sessionStorage.getItem('isSignedIn'));
-  } catch (e) {
-    isSignedIn = null;
-  }
-  return isSignedIn;
-};
-
-/**
  * Cache whether the user is a teacher, so that we can appropriately update the
  * UI on future pageloads without waiting on API
  * @param {boolean} isTeacher

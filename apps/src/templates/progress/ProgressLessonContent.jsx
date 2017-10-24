@@ -16,12 +16,12 @@ const styles = {
   }
 };
 
-const ProgressLessonContent = React.createClass({
-  propTypes: {
+export default class ProgressLessonContent extends React.Component {
+  static propTypes = {
     description: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired
-  },
+  };
 
   render() {
     const { description, levels, disabled } = this.props;
@@ -62,6 +62,4 @@ const ProgressLessonContent = React.createClass({
       </div>
     );
   }
-});
-
-export default ProgressLessonContent;
+}

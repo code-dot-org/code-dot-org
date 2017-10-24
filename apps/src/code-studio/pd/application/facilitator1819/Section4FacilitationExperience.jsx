@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import {pageLabels} from './Facilitator1819Labels';
-import {YES} from '../ApplicationConstants';
+import {YES, NO} from '../ApplicationConstants';
 
 export default class Section4FacilitationExperience extends Facilitator1819FormComponent {
   static propTypes = {
@@ -24,14 +24,23 @@ export default class Section4FacilitationExperience extends Facilitator1819FormC
         {this.radioButtonsFor("codeOrgFacilitator")}
 
         {this.props.data.codeOrgFacilitator === YES &&
-        <div>
-          {this.checkBoxesFor("codeOrgFacilitatorYears")}
-          {this.checkBoxesFor("codeOrgFacilitatorPrograms")}
-        </div>
+          <div>
+            {this.checkBoxesFor("codeOrgFacilitatorYears")}
+            {this.checkBoxesFor("codeOrgFacilitatorPrograms")}
+          </div>
         }
 
-        {this.checkBoxesFor("groupsLedPd")}
-        {this.largeInputFor("describePriorPd")}
+        {this.radioButtonsFor("haveLedPd")}
+
+        {this.props.data.haveLedPd === YES &&
+          <div>
+            {this.checkBoxesFor("groupsLedPd")}
+            {this.largeInputFor("describePriorPd")}
+          </div>
+        }
+        {this.props.data.haveLedPd === NO &&
+          this.largeInputFor("whyNoPd")
+        }
       </FormGroup>
     );
   }
@@ -46,6 +55,17 @@ export default class Section4FacilitationExperience extends Facilitator1819FormC
       requiredFields.push(
         "codeOrgFacilitatorYears",
         "codeOrgFacilitatorPrograms"
+      );
+    }
+
+    if (data.haveLedPd === YES) {
+      requiredFields.push(
+        "groupsLedPd",
+        "describePriorPd"
+      );
+    } else if (data.haveLedPd === NO) {
+      requiredFields.push(
+        "whyNoPd"
       );
     }
 

@@ -4,6 +4,9 @@ import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import {pageLabels} from './Facilitator1819Labels';
 import {YES} from '../ApplicationConstants';
 
+const FACILITATOR_URL = "https://code.org/educate/facilitator";
+const FACILITATOR_EMAIL = "facilitators@code.org";
+
 export default class Section1QuestionsAboutYou extends Facilitator1819FormComponent {
   static propTypes = {
     ...Facilitator1819FormComponent.propTypes,
@@ -24,10 +27,28 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
   render() {
     return (
       <FormGroup>
+        <p>
+          Thanks for your interest in the Code.org Facilitator Development Program!
+        </p>
+        <p>
+          This application should take 30 - 45 minutes to complete and includes both multiple choice and free response questions.
+          Fields marked with a
+          {' '}<span style={{color: "red"}}>*</span>{' '}
+          are required. If you need more information on the program before you apply, please visit
+          {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}
+          If you have questions regarding the Facilitator program or application, please contact
+          {' '}<a href={`mailto:${FACILITATOR_EMAIL}`}>{FACILITATOR_EMAIL}</a>.
+        </p>
+        <p>
+          <strong>
+            The deadline to apply is Dec. 1, 2017.
+          </strong>
+        </p>
+
         <h3>Section 1: About You</h3>
         {this.selectFor("title", {
           required: false,
-          placeholder: "Select a title (Optional)"
+          placeholder: "Select a title"
         })}
         {this.inputFor("firstName")}
         {this.inputFor("preferredFirstName", {required: false})}
@@ -49,7 +70,7 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
         {this.checkBoxesFor("race")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("institutionType", {
-          "Other" : "other"
+          "Other:" : "other"
         })}
 
         {this.inputFor("currentEmployer")}
@@ -64,7 +85,7 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("completedCsCoursesAndActivities", {
-          "Other" : "other"
+          "Other:" : "other"
         })}
 
         {this.radioButtonsFor("diversityTraining")}
@@ -73,9 +94,10 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("howHeard", {
-          "A current Code.org facilitator (please share name)": "facilitator",
-          "A Code.org staff member (please share name)": "codeOrgStaff",
-          "Other": "other"
+          "A Code.org facilitator (please share name):": "facilitator",
+          "A Code.org staff member (please share name):": "codeOrgStaff",
+          "A Code.org Regional Partner (please share name):": "regionalPartner",
+          "Other:": "other"
         })}
       </FormGroup>
     );
