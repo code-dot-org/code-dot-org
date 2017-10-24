@@ -16,7 +16,7 @@ module ServerFallback
       opts[:server] = :fallback
     end
     super
-  rescue Sequel::DatabaseDisconnectError, *database_error_classes => e
+  rescue Sequel::DatabaseConnectionError, Sequel::DatabaseDisconnectError, *database_error_classes => e
     if opts[:server] == :read_only && disconnect_error?(e, opts)
       @suppress_master_until = 10.seconds.from_now
       retry
@@ -36,7 +36,7 @@ module ServerFallback
     def literal_string_append(sql, v)
       @opts[:server] = :fallback if db.suppress_master_until > Time.now
       super
-    rescue Sequel::DatabaseDisconnectError => e
+    rescue Sequel::DatabaseConnectionError, Sequel::DatabaseDisconnectError, *db.send(:database_error_classes) => e
       if @opts[:server] != :fallback
         db.suppress_master_until = 10.seconds.from_now
         retry
