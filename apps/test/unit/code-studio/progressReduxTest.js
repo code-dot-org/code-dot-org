@@ -22,8 +22,11 @@ import reducer, {
   setCurrentStageId,
   stageExtrasUrl,
   setStageExtrasEnabled,
+  getUserSignedInFromCookieAndDom,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
+import { allowConsoleErrors } from '../../util/testUtils';
+import cookies from 'js-cookie';
 
 // This is some sample stage data taken a course. I truncated to the first two
 // stages, and also truncated the second stage to the first 3 levels
@@ -1088,6 +1091,67 @@ describe('progressReduxTest', () => {
       assert.equal(levels[0].url, '/peer_reviews/1');
       assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
       assert.equal(levels[0].icon, undefined);
+    });
+  });
+
+  describe('getUserSignedInFromCookieAndDom', () => {
+    allowConsoleErrors();
+    let headerDiv;
+
+    function createHeaderDom(dataId) {
+      headerDiv = document.createElement('div');
+      headerDiv.setAttribute('class', 'header_button header_user user_menu');
+      document.body.appendChild(headerDiv);
+
+      const name = document.createElement('div');
+      name.setAttribute('class', 'user_name');
+      if (dataId) {
+        name.setAttribute('data-id', dataId);
+      }
+      headerDiv.appendChild(name);
+    }
+
+    const cookieName = '__testcookie__';
+    beforeEach(() => {
+      cookies.remove(cookieName);
+      delete window.userNameCookieKey;
+    });
+
+    afterEach(() => {
+      if (headerDiv) {
+        document.body.removeChild(headerDiv);
+        headerDiv = null;
+      }
+    });
+
+    it('does not work if userNameCookieKey is not set', () => {
+      assert.strictEqual(getUserSignedInFromCookieAndDom(), undefined);
+    });
+
+    it('returns true if cookie is defined', () => {
+      window.userNameCookieKey = cookieName;
+      cookies.set(cookieName, 'CoolUser');
+      assert.strictEqual(getUserSignedInFromCookieAndDom(), true);
+    });
+
+    it('returns true if cookie is not defined but DOM contains id', () => {
+      window.userNameCookieKey = cookieName;
+
+      // Make sure this DOM didn't leak in from some other test
+      assert.equal(document.querySelector('.header_button.header_user.user_menu .user_name'), null);
+
+      createHeaderDom(123);
+      assert.strictEqual(getUserSignedInFromCookieAndDom(), true);
+    });
+
+    it('returns false if cookie is not defined and DOM does not contain id', () => {
+      window.userNameCookieKey = cookieName;
+
+      // Make sure this DOM didn't leak in from some other test
+      assert.equal(document.querySelector('.header_button.header_user.user_menu .user_name'), null);
+
+      createHeaderDom();
+      assert.strictEqual(getUserSignedInFromCookieAndDom(), false);
     });
   });
 });

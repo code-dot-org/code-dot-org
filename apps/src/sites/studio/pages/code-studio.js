@@ -10,8 +10,7 @@ import $ from 'jquery';
 
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
-import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
-import cookies from 'js-cookie';
+import { setUserSignedIn, getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/progressRedux';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
@@ -110,18 +109,5 @@ checkForUnsupportedBrowsersOnLoad();
 initHamburger();
 
 $(document).ready(() => {
-  // Attempt to replicate logic used by user_header.haml to populate the name
-  // in our Sign In button.
-  if (window.userNameCookieKey) {
-    const val = cookies.get(window.cookieKey);
-    if (val) {
-      store.dispatch(setUserSignedIn(true));
-    } else {
-      // We did not have a cookie, meaning we're probably not signed in. For scripts
-      // that are not cached, the server will set the user id in the DOM if you're
-      // signed in so check that as well.
-      const nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
-      store.dispatch(setUserSignedIn(nameSpan && nameSpan.dataset.id));
-    }
-  }
+  store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 });

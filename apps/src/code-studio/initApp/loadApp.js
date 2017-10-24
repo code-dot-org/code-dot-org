@@ -397,15 +397,8 @@ function loadAppAsync(appOptions) {
 
       const store = getStore();
       const signInState = store.getState().progress.signInState;
-      if (signInState === SignInState.Unknown) {
-        // if script was cached, we won't have signin state until we've made
-        // our user_progress call
-        // Depend on the fact that even if we have no levelProgress, our progress
-        // data will have other keys
-        const signedInUser = Object.keys(data).length > 0;
-        if (signedInUser) {
-          progress.showDisabledBubblesAlert();
-        }
+      if (signInState === SignInState.SignedIn) {
+        progress.showDisabledBubblesAlert();
       }
       if (data.isVerifiedTeacher) {
         store.dispatch(setVerified());
