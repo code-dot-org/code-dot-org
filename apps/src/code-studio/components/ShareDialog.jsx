@@ -6,12 +6,15 @@ import ShareDialogSignedOut from './ShareDialogSignedOut';
 
 class ShareDialog extends Component {
   static propTypes = {
-    signInState: PropTypes.oneOf(Object.values(SignInState))
+    signInState: PropTypes.oneOf(Object.values(SignInState)),
+    isProjectLevel: PropTypes.bool.isRequired
   };
 
   render() {
-    const { signInState, ...otherProps } = this.props;
-    if (signInState === SignInState.SignedIn) {
+    const { signInState, isProjectLevel, ...otherProps } = this.props;
+    // If we're on a project level (i.e. /projects/appname), always show signed
+    // in version of the dialog
+    if (signInState === SignInState.SignedIn || isProjectLevel) {
       return (
         <ShareDialogSignedIn {...otherProps}/>
       );
