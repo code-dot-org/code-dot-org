@@ -1,0 +1,15 @@
+name 'brad-test-continue-buttons-in-markdown'
+title '(Brad) Test continue buttons in markdown'
+description 'description here'
+markdown <<MARKDOWN
+# Title of level
+Here's a simple markdown level.
+
+- With a list
+- That has
+- Three items.
+
+I expect a continue button to be generated.
+
+<span style="display:none">submitButton next-stage</span>
+MARKDOWN

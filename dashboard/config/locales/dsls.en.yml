@@ -487,6 +487,10 @@ en:
       AppLab Intro 5 - Video Share Keep Going: {}
       AppLab Intro 5 - Video Videos Sound: {}
       AppLab Intro 5 - Video Welcome to App Lab: {}
+      AppLab Intro 6 - Video Design Mode and Screens: {}
+      AppLab Intro 6 - Video Images and Sounds: {}
+      AppLab Intro 6 - Video Keep Going: {}
+      AppLab Intro 6 - Video Welcome SetProperty: {}
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
@@ -1983,6 +1987,8 @@ en:
         title: title
       Rating Websites: {}
       Recipe Page Example: {}
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
       Responding to User Input: {}
       Rules About Choosing Good IDs:
         description here: description here
@@ -2718,6 +2724,12 @@ en:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
       boolean logic and expressions overview: {}
+      brad-repro-bug-000:
+        Brad Repro Bug 000: Brad Repro Bug 000
+        description here: description here
+      brad-test-continue-buttons-in-markdown:
+        "(Brad) Test continue buttons in markdown": "(Brad) Test continue buttons in markdown"
+        description here: description here
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -2845,11 +2857,14 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csd-novice-congrats: {}
+      csd-post-survey-2017-implementation-student: {}
+      csd-post-survey-2017-implementation-teacher: {}
       csd-pulse-check-survey-preamble: {}
       csp deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csp-novice-congrats: {}
+      csp-post-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 3 this class: {}
@@ -3286,6 +3301,8 @@ en:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       swipeRightPassThrough:
         Recruitment Scenarios Session: Recruitment Scenarios Session
+      swipeRightPassThrough-test123:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
       test cb level:
         description here: description here
         test cb level: test cb level
@@ -3455,6 +3472,7 @@ en:
         Unit 4 Self-Assessment: {}
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
+        csd-post-survey-2017-levelgroup: {}
         csd-pre-survey-2017-levelgroup: {}
         csd-pulse-check-survey-1-levelgroup: {}
         csd-pulse-check-survey-1-levelgroup U1Ch2: {}
@@ -3702,6 +3720,19 @@ en:
         Answer 1: Answer 1
         CSD U3 keyinput match: CSD U3 keyinput match
         Question: Question
+      CSD U6 LED match:
+        <img src="https://images.code.org/557b25702c7c3fbef1ce625030d68778-image-1508454410109.gif">: <img src="https://images.code.org/557b25702c7c3fbef1ce625030d68778-image-1508454410109.gif">
+        <img src="https://images.code.org/71cd707de8e60c80e5347edafaab18a2-image-1508454429445.gif">: <img src="https://images.code.org/71cd707de8e60c80e5347edafaab18a2-image-1508454429445.gif">
+        <img src="https://images.code.org/a351756cbed7972f759129a42e71c745-image-1508454442597.gif">: <img src="https://images.code.org/a351756cbed7972f759129a42e71c745-image-1508454442597.gif">
+        <img src="https://images.code.org/afebdad5266eadef03515e74bd289d1e-image-1508454435044.gif">: <img src="https://images.code.org/afebdad5266eadef03515e74bd289d1e-image-1508454435044.gif">
+        <img src="https://images.code.org/e9758bc0f748cda626087e6cd6447e2a-image-1508454431880.gif">: <img src="https://images.code.org/e9758bc0f748cda626087e6cd6447e2a-image-1508454431880.gif">
+        Match the Block: Match the Block
+        Match the block to the picture of what it does.: Match the block to the picture of what it does.
+        blink: blink
+        'off': 'off'
+        'on': 'on'
+        pulse: pulse
+        toggle: toggle
       CSD validator Matching:
         "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
         "&lt;head&gt;": "&lt;head&gt;"
@@ -7974,6 +8005,57 @@ en:
         The artist will draw only one line of squares.: The artist will draw only one line of squares.
         The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
         What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      csd-post-survey-q26:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q27:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        : 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q28:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked me problem solve when something didn't work the way I wanted it to work.: Asked me problem solve when something didn't work the way I wanted it to work.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q29:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked me to explain the logic and reasoning supporting my solutions to problems.: Asked me to explain the logic and reasoning supporting my solutions to problems.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q30:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Worked collaboratively with other students in a small group.: Worked collaboratively with other students in a small group.
+      csd-post-survey-q31:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Shared responsibility for activity and project work with group members.: Shared responsibility for activity and project work with group members.
+      csd-post-survey-q32:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Made my own choices about assignments in computer science class.: Made my own choices about assignments in computer science class.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csd-pulse-check-survey-1-q1:
         Agree: Agree
         Disagree: Disagree
@@ -8509,6 +8591,231 @@ en:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q1:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q10:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q11:
+        Agree: Agree
+        Disagree: Disagree
+        'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q12:
+        Agree: Agree
+        Disagree: Disagree
+        'I have the ability to learn computer science. ': 'I have the ability to learn computer science. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q13:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at computer science than other kids at my school.: I am better at computer science than other kids at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q14:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.
+      csp-post-survey-2017-q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q17:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People like me do computer science.: People like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q18:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q19:
+        Agree: Agree
+        Disagree: Disagree
+        I am going to like this computer science class.: I am going to like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q2:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
+      csp-post-survey-2017-q20:
+        Agree: Agree
+        Disagree: Disagree
+        I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q22:
+        Agree: Agree
+        At times I felt unsure whether I belong in this class.: At times I felt unsure whether I belong in this class.
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q23:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students in this computer science class.: I am treated with as much respect as other students in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q24:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like I can be myself in this computer science class.: I feel like I can be myself in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q26:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like it is hard for people like me to to be accepted in this computer science class.: I feel like it is hard for people like me to to be accepted in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q28:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q29:
+        Agree: Agree
+        Computer science is important for my future.: Computer science is important for my future.
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q3:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q30:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that I will use computer science in my job.: I expect that I will use computer science in my job.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q31:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q4:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q6:
+        Agree: Agree
+        Disagree: Disagree
+        It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q8:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students at my school.: I am treated with as much respect as other students at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q9:
+        Agree: Agree
+        Disagree: Disagree
+        I can really be myself at school.: I can really be myself at school.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -9194,6 +9501,7 @@ en:
         Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
       csp_U3_turtle_subgoal_q1_mc:
         <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
+        <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
         <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
         <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
         <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">: <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">

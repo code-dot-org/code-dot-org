@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -19,7 +19,7 @@ const styles = {
   }
 };
 
-export default class TeacherHomepage extends React.Component {
+export default class TeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
     courses: shapes.courses,

@@ -43,6 +43,7 @@ class Api::V1::SchoolAutocomplete
   # Formats the query string for boolean full-text search.
   # For instance, if the user-defined query string is 'abc def',
   # the string is reformatted to '+ABC +DEF*'.
+  # Strings shorter than 3 characters aren't indexed so those are filtered out.
   # @see https://dev.mysql.com/doc/refman/5.6/en/fulltext-boolean.html
   # @param query [String] the user-defined query string
   # @return [String] the formatted query string
@@ -50,6 +51,11 @@ class Api::V1::SchoolAutocomplete
     words = query.strip.split(/\s+/).map do |w|
       w.gsub(/\W/, '').upcase
     end.map(&:presence).compact
+
+    # Don't filter the last word if it is short since we will
+    # append it with * for a wildcard search.
+    words = words.select.with_index {|w, i| i == words.length - 1 || w.length >= 3}
+
     return words.empty? ? "" : "+#{words.join(' +')}*"
   end
 

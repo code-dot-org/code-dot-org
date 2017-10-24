@@ -27,7 +27,7 @@ class Pardot
   # Max # of prospects allowed in one batch
   MAX_PROSPECT_BATCH_SIZE = 50
   # Empirically determined safe max URL length for batch operations
-  URL_LENGTH_SEND_THRESHOLD = 6200
+  URL_LENGTH_SEND_THRESHOLD = 6000
 
   # Map of database fields to Pardot field names. "multi" refers to if the field
   # is a multi-valued type (such as checkbox list)

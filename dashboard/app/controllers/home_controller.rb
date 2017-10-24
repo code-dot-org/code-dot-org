@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  include UsersHelper
   before_action :authenticate_user!, only: :gallery_activities
 
   # Don't require an authenticity token on set_locale because we post to that
@@ -34,17 +35,20 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
-  # Signed in student with course progress: redirect course overview page
-  # Signed in, not student with assigned course: redirect to /home
+  # Signed in student, with an assigned course/script: redirect to course overview page
+  # Note: the student will be redirected to the course or script in which they
+  # most recently made progress, which may not be an assigned course or script.
+  # Signed in student or teacher, without an assigned course/script: redirect to /home
   # Signed out: redirect to /courses
   def index
     if current_user
-      if current_user.student? && current_user.primary_script
+      if current_user.student? && current_user.assigned_course_or_script? && !session['clever_link_flag'] && current_user.primary_script
         redirect_to script_path(current_user.primary_script)
       else
         redirect_to '/home'
       end
     else
+      clear_clever_session_variables
       redirect_to '/courses'
     end
   end

@@ -32,7 +32,7 @@
         %label.control-label{for: "hoc-event-country"}
           = hoc_s(:signup_event_country_label)
           %span.required*
-        %select#country.form-control{name: "hoc_country_s", type: "select"}
+        %select#country.form-control{name: "hoc_event_country_s", type: "select"}
           %option{value: "", selected: true, disabled: true}
           - get_all_countries().each do |code, name|
             %option{value: code}= name
@@ -105,9 +105,10 @@
             %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
             = hoc_s(:signup_match_volunteer)
 
-    #submit
       %input{name:'hoc_country_s', type:'hidden', value:@country}
       %input{name:'hoc_company_s', type:'hidden', value:@company}
+
+    #submit
       %p.footnote
         = hoc_s(:signup_multiple_event_warning)
         %strong= hoc_s(:signup_registration_deadline)

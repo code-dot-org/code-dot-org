@@ -2024,6 +2024,72 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  class AssignedCoursesAndScripts < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @course = create :course, name: 'course'
+    end
+
+    test "it returns assigned courses" do
+      teacher = create :teacher
+      section = create :section, user_id: teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+
+      assigned_courses = @student.assigned_courses
+      assert_equal 1, assigned_courses.length
+
+      assert_equal 'course', assigned_courses[0][:name]
+    end
+
+    test "it checks for assigned scripts, no assigned scripts" do
+      refute @student.any_visible_assigned_scripts?
+    end
+
+    test "it checks for assigned scripts, assigned hidden script" do
+      hidden_script = create :script, name: 'hidden-script', hidden: true
+      @student.assign_script(hidden_script)
+      refute @student.any_visible_assigned_scripts?
+    end
+
+    test "it checks for assigned scripts, assigned visible script" do
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.any_visible_assigned_scripts?
+    end
+
+    test "it checks for assigned courses and scripts, no course, no script" do
+      refute @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned hidden script" do
+      hidden_script = create :script, name: 'hidden-script', hidden: true
+      @student.assign_script(hidden_script)
+      refute @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned visible script" do
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned course" do
+      teacher = create :teacher
+      section = create :section, user_id: teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+      assert @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
+      teacher = create :teacher
+      section = create :section, user_id: teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.assigned_course_or_script?
+    end
+  end
+
   class RecentCoursesAndScripts < ActiveSupport::TestCase
     setup do
       test_locale = :"te-ST"

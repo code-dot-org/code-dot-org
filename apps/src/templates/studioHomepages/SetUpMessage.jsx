@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import Radium from 'radium';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
@@ -48,8 +48,8 @@ const styles = {
   }
 };
 
-const SetUpMessage = React.createClass({
-  propTypes: {
+export default Radium(class SetUpMessage extends Component {
+  static propTypes = {
     isRtl: PropTypes.bool,
     headingText: PropTypes.string.isRequired,
     descriptionText: PropTypes.string.isRequired,
@@ -58,7 +58,7 @@ const SetUpMessage = React.createClass({
     buttonUrl: PropTypes.string,
     buttonClass: PropTypes.string,
     onClick: PropTypes.func,
-  },
+  };
 
   render() {
     const { isRtl, headingText, descriptionText, className, buttonText, buttonUrl, buttonClass, onClick } = this.props;
@@ -88,5 +88,3 @@ const SetUpMessage = React.createClass({
     );
   }
 });
-
-export default Radium(SetUpMessage);

@@ -42,6 +42,8 @@
     var cookieMeta = "path=/;domain=" + topLevelDomain;
 
     // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
     var nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
     if (nameSpan) {
       var dataName = nameSpan.dataset.shortname;
