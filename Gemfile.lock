@@ -128,8 +128,8 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/seamless_database_pool.git
-  revision: c9a5c2bc92efc1f87a2aa065283e15283dbb9425
-  ref: cdo
+  revision: a2ce938ffe9356802bffdd712c02e1ef259aeba4
+  ref: fallback
   specs:
     seamless_database_pool (1.0.19)
       activerecord (>= 3.2.0)
