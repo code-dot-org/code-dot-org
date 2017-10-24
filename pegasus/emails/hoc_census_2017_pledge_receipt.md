@@ -15,7 +15,7 @@ If you’re a district or school administrator, see our [Administrator Guide](ht
 ### Teachers
 If you’re a teacher, view our curriculum and professional learning options for [teaching computer science](https://<%= studiodotcodedotorg %>/courses?view=teacher) to your students - no computer science experience necessary.
 
-We also have [resources to help you advocate](https://<%= codedororg %>/promote) for the need for computer science in your area.
+We also have [resources to help you advocate](https://<%= codedotorg %>/promote) for the need for computer science in your area.
 
 Thank you for being a leader in pledging to expand offerings at your school. You will make real lasting change in students’ lives by giving them the opportunity to take these courses. 
  
