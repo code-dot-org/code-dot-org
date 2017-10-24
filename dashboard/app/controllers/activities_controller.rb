@@ -173,10 +173,14 @@ class ActivitiesController < ApplicationController
     synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-    if synchronous_save
-      @activity = Activity.new(attributes).tap(&:atomic_save!)
-    else
-      @activity = Activity.create_async!(attributes)
+
+    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
+    if allow_activity_writes
+      if synchronous_save
+        @activity = Activity.new(attributes).tap(&:atomic_save!)
+      else
+        @activity = Activity.create_async!(attributes)
+      end
     end
     if @script_level
       if synchronous_save
