@@ -64,6 +64,9 @@ class ContactRollups
     coursed
     coursee
     coursef
+    20-hour
+    express
+    pre-express
   ).freeze
 
   CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
