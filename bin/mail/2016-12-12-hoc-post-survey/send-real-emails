@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# 83372 US organizers
-../send-to-mailing-list --limit 84000 2016-12-12-hoc-post-survey-US ./organizers-us.csv
-
-# 69431 international organizers
-../send-to-mailing-list --limit 70000 2016-12-12-hoc-post-survey-intl ./organizers-intl.csv

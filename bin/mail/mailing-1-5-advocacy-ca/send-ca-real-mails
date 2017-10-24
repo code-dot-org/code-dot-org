@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# 136k contacts
-
-./send-to-mailing-list --start      0 --limit 100000 1-5-advocacy-ca mailing-1-5-advocacy-ca/ca.csv
-./send-to-mailing-list --start 100000 --limit 100000 1-5-advocacy-ca mailing-1-5-advocacy-ca/ca.csv

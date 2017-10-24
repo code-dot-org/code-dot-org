@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 777825 teachers
-../send-to-mailing-list --limit 780000 2016-11-30-hoc-global-tutorial-suggestions ./teachers.csv
