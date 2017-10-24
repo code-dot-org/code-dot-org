@@ -258,3 +258,7 @@ end
 def get_all_countries
   return COUNTRY_CODE_TO_COUNTRY_NAME.sort_alphabetical_by {|_code, name| name}
 end
+
+def valid_country_code?(code)
+  return COUNTRY_CODE_TO_COUNTRY_NAME[code.to_s.strip.upcase].present?
+end
