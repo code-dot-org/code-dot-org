@@ -23,6 +23,7 @@ nav: events_nav
 -splat = request.splat_path_info[1..-1].split("/").map{ |a| Rack::Utils.escape_html(a) }
 -country_code = splat.first
 -# must sanitize country_code, which is untrusted user input from URL
+-pass unless valid_country_code?(country_code)
 -country = country_name_from_code(country_code)
 -country = 'United States' if country == 'us'
 -state_code = splat.last unless country_code == splat.last
