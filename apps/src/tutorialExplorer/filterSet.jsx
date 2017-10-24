@@ -63,7 +63,7 @@ export default class FilterSet extends React.Component {
 
     return (
       <div>
-        {!this.props.mobileLayout && (
+        {false && !this.props.mobileLayout && (
           <div style={countContainerStyle}>
             <div style={styles.countBar}>
               {tutorialCountString}
@@ -71,7 +71,7 @@ export default class FilterSet extends React.Component {
           </div>
         )}
 
-        {this.props.showSortDropdown && (
+        {false && this.props.showSortDropdown && (
           <FilterGroupSortBy
             defaultSortBy={this.props.defaultSortBy}
             sortBy={this.props.sortBy}

@@ -4,7 +4,6 @@
 
 import React, {PropTypes} from 'react';
 import BackButton from './backButton';
-import FilterGroupHeaderStudentExperience from './filterGroupHeaderStudentExperience';
 import FilterGroupHeaderGrade from './filterGroupHeaderGrade';
 import { getResponsiveValue } from './responsive';
 import { Sticky } from 'react-sticky';
@@ -18,26 +17,36 @@ const styles = {
     paddingRight: 7,
     backgroundColor: 'white'
   },
+  sticky: {
+    boxShadow: "0 8px 6px -6px #999"
+  },
   barDesktop: {
     color: "dimgrey",
     height: 46,
     overflow: "hidden",
-    backgroundColor: "rgb(0, 178, 192)"
+    backgroundColor: "white",
+    boxShadow: "0 8px 6px -6px #ccc"
   },
   barMobile: {
     color: "white",
     height: 46,
     overflow: "hidden",
-    backgroundColor: "rgb(0, 178, 192)",
+    backgroundColor: "white",
+    boxShadow: "0 8px 6px -6px #ccc"
   },
   button: {
-    backgroundColor: "rgb(101, 205, 214)",
+    backgroundColor: "#2799a4",
     color: "white",
     borderColor: "white",
     height: 34
   },
   filterBy: {
     float: "left",
+    width: "100%"
+  },
+  full: {
+    float: "left",
+    width: "100%"
   },
   left: {
     float: "left",
@@ -50,7 +59,8 @@ const styles = {
   },
   mobileCount: {
     lineHeight: '46px',
-    paddingLeft: 6
+    paddingLeft: 6,
+    color: 'dimgrey'
   }
 };
 
@@ -82,13 +92,11 @@ export default class FilterHeader extends React.Component {
       i18n.filterHeaderTutorialCountSingle() :
       i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
 
-    // There are two filters which can appear in this header at desktop width.
-    // Check explicitly for each of them.
+    // There is one filter which can appear in this header at desktop width.
+    // Check explicitly for it.
     let filterGroupGrade = null;
-    let filterGroupStudentExperience = null;
     if (!this.props.mobileLayout) {
       filterGroupGrade = this.props.filterGroups.find(item => item.name === "grade");
-      filterGroupStudentExperience = this.props.filterGroups.find(item => item.name === "student_experience");
     }
 
     return (
@@ -97,14 +105,9 @@ export default class FilterHeader extends React.Component {
 
         <Sticky style={{zIndex: 1}}>
           <div style={getResponsiveValue({xs: styles.barMobile, md: styles.barDesktop})}>
-            <div style={styles.left}>
-              {this.props.mobileLayout && (
-                <span style={styles.mobileCount}>
-                  {tutorialCountString}
-                </span>
-              )}
 
-              {!this.props.mobileLayout && (
+            {!this.props.mobileLayout && (
+              <div style={styles.full}>
                 <div style={styles.filterBy}>
                   {filterGroupGrade && (
                     <FilterGroupHeaderGrade
@@ -114,46 +117,44 @@ export default class FilterHeader extends React.Component {
                     />
                   )}
                 </div>
-              )}
-            </div>
+              </div>
+            )}
 
-            <div style={styles.right}>
-              {!this.props.mobileLayout && (
-                <div>
-                  {filterGroupStudentExperience && (
-                    <FilterGroupHeaderStudentExperience
-                      filterGroup={filterGroupStudentExperience}
-                      selection={this.props.selection["student_experience"]}
-                      onUserInput={this.props.onUserInputFilter}
-                    />
+            {this.props.mobileLayout && (
+              <div>
+                <div style={styles.left}>
+                  <span style={styles.mobileCount}>
+                    {tutorialCountString}
+                  </span>
+                </div>
+
+                <div style={styles.right}>
+                  {this.shouldShowOpenFiltersButton() && (
+                    <span>
+                      <button
+                        onClick={this.props.showModalFilters}
+                        style={styles.button}
+                        className="noFocusButton"
+                      >
+                        {i18n.filterHeaderShowFilters()}
+                      </button>
+                    </span>
+                  )}
+
+                  {this.shouldShowCloseFiltersButton() && (
+                    <span>
+                      <button
+                        onClick={this.props.hideModalFilters}
+                        style={styles.button}
+                        className="noFocusButton"
+                      >
+                        {i18n.filterHeaderHideFilters()}
+                      </button>
+                    </span>
                   )}
                 </div>
-              )}
-
-              {this.shouldShowOpenFiltersButton() && (
-                <span>
-                  <button
-                    onClick={this.props.showModalFilters}
-                    style={styles.button}
-                    className="noFocusButton"
-                  >
-                    {i18n.filterHeaderShowFilters()}
-                  </button>
-                </span>
-              )}
-
-              {this.shouldShowCloseFiltersButton() && (
-                <span>
-                  <button
-                    onClick={this.props.hideModalFilters}
-                    style={styles.button}
-                    className="noFocusButton"
-                  >
-                    {i18n.filterHeaderHideFilters()}
-                  </button>
-                </span>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </Sticky>
       </div>

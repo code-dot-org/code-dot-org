@@ -5,7 +5,6 @@ import {TutorialsSortBy} from '@cdo/apps/tutorialExplorer/util';
 import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
-import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
 import RoboticsButton from '@cdo/apps/tutorialExplorer/roboticsButton';
 
 const FAKE_ON_USER_INPUT = () => {};
@@ -47,13 +46,13 @@ const DEFAULT_PROPS = {
 describe('FilterSet', () => {
   it('renders the provided filter groups', () => {
     const wrapper = shallow(<FilterSet {...DEFAULT_PROPS}/>);
-    expect(wrapper).to.containMatchingElement(
+    /*expect(wrapper).to.containMatchingElement(
       <FilterGroupSortBy
         defaultSortBy={TutorialsSortBy.popularityrank}
         sortBy={TutorialsSortBy.popularityrank}
         onUserInput={FAKE_ON_SORT_BY}
       />
-    );
+    );*/
     expect(wrapper).to.containMatchingElement(
       <FilterGroupOrgNames
         orgName={FAKE_ORG_NAME}
