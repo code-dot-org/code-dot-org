@@ -62,5 +62,8 @@
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
   "filterSortByDisplayWeight": "Recommended",
-  "filterSortByPopularityRank": "Most popular"
+  "filterSortByPopularityRank": "Most popular",
+  "filterGradesAll": "All ages",
+  "filterTeacherExperienceExperienced": "Experienced",
+  "filterStudentExperienceExperienced": "Experienced"
 }

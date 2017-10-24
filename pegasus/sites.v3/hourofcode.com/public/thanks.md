@@ -32,7 +32,7 @@ As a thank you for helping make it possible for students to start learning compu
 [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
 <br>
-**Hour of Code runs during <%= campaign_date('full') %> We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+**Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 
 ## 1. Spread the word in your school and community
