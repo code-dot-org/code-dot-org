@@ -3,8 +3,11 @@ require 'cdo/sinatra'
 require 'base64'
 require 'cdo/db'
 require 'cdo/rack/request'
+require 'cdo/shared_constants'
 
 class ChannelsApi < Sinatra::Base
+  include SharedConstants
+
   helpers do
     %w(
       core.rb
@@ -173,8 +176,8 @@ class ChannelsApi < Sinatra::Base
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
-    bad_request unless %w(artist playlab applab gamelab).include?(project_type)
-    forbidden if under_13? && !%w(artist playlab).include?(project_type)
+    bad_request unless PUBLISHABLE_PROJECT_TYPES_OVER_13.include?(project_type)
+    forbidden if under_13? && !PUBLISHABLE_PROJECT_TYPES_UNDER_13.include?(project_type)
 
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.

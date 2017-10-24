@@ -14,9 +14,8 @@ def main
   to_geolocate = DASHBOARD_DB[:user_geos].where(indexed_at: nil).limit(1000)
 
   to_geolocate.each do |user_geo|
-    location = nil
-    Retryable.retryable(on: [Redis::TimeoutError, Redis::CannotConnectError], tries: 2) do
-      location = Geocoder.search(user_geo[:ip_address]).first
+    location = Retryable.retryable(on: [Redis::CannotConnectError], tries: 2) do
+      Geocoder.search(user_geo[:ip_address]).first
     end
     DASHBOARD_DB[:user_geos].where(id: user_geo[:id]).update(
       updated_at: time_now,

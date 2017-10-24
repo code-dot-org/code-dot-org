@@ -20,7 +20,7 @@ class DslTest < ActiveSupport::TestCase
     has_verified_resources: false,
     project_widget_visible: false,
     project_widget_types: [],
-    script_announcements: nil
+    script_announcements: nil,
   }
 
   test 'test Script DSL' do

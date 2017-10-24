@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
@@ -20,13 +20,13 @@ const styles = {
   },
 };
 
-const RecentCourses = React.createClass({
-  propTypes: {
+export default class RecentCourses extends Component {
+  static propTypes = {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired
-  },
+  };
 
   render() {
     const { courses, topCourse, isTeacher, isRtl } = this.props;
@@ -92,6 +92,4 @@ const RecentCourses = React.createClass({
       </div>
     );
   }
-});
-
-export default RecentCourses;
+}

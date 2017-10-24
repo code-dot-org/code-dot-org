@@ -241,7 +241,7 @@ module LevelsHelper
 
     if current_user
       if @script
-        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+        section = current_user.sections_as_student.detect {|s| s.script_id == @script.id} ||
           current_user.sections_as_student.first
       else
         section = current_user.sections_as_student.first
@@ -547,6 +547,7 @@ module LevelsHelper
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
+    app_options[:userType] = user_type_from_cookie
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
@@ -582,6 +583,11 @@ module LevelsHelper
     end
 
     app_options
+  end
+
+  private def user_type_from_cookie
+    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    request && request.cookies && request.cookies[cookie_key]
   end
 
   def build_copyright_strings

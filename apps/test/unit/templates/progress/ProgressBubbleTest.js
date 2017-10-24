@@ -170,6 +170,22 @@ describe('ProgressBubble', () => {
     assert.equal(div.props().style.transform, 'rotate(45deg)');
   });
 
+  it('renders a small diamond for concept levels when smallBubble is true ', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        smallBubble={true}
+        level={{
+          ...defaultProps.level,
+          isConceptLevel: true
+        }}
+      />
+    );
+    const div = wrapper.find('div').at(1);
+    assert.equal(div.props().style.transform, 'rotate(45deg)');
+    assert.equal(div.props().style.borderRadius, 2);
+  });
+
   it('uses name when specified', () => {
     const wrapper = shallow(
       <ProgressBubble

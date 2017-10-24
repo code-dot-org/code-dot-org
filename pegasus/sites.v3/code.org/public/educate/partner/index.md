@@ -1,6 +1,5 @@
 ---
 title: Partner with us
-nav: educate_nav
 theme: responsive
 ---
 # What is a Regional Partner?

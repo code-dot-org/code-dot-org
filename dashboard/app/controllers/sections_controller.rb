@@ -27,7 +27,7 @@ class SectionsController < ApplicationController
     section.update!(course_id: course_id, script_id: script_id)
     if script_id
       section.students.each do |student|
-        User.track_script_progress(student.id, script_id)
+        student.assign_script(script)
       end
     end
     render json: {}
@@ -38,7 +38,7 @@ class SectionsController < ApplicationController
       bypass_sign_in user
       user.update_tracked_fields!(request)
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
-      check_and_apply_clever_takeover(user) if cookies['pm'] == 'clever_takeover'
+      check_and_apply_clever_takeover(user)
       redirect_to_section_script_or_course
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')

@@ -203,7 +203,6 @@ class ApplicationController < ActionController::Base
       # which levels are worth saving)
       if options[:level_source].try(:id) &&
           options[:solved?] &&
-          options[:activity] &&
           options[:level_source_image]
         response[:save_to_gallery_url] = gallery_activities_path(
           gallery_activity: {

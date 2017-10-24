@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <h1>How to teach one Hour of Code</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. And check out our [participation guide](<%= resolve_url('/files/participation-guide.pdf')%>) for more info!
+Join the movement and introduce a group of students to their first hour of computer science with these steps. 
 
 ## 1. Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>

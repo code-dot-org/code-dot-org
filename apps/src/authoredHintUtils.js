@@ -310,6 +310,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
+      hintPath: JSON.parse(hint.hint_path || '[]'),
       ttsUrl: hint.tts_url,
       alreadySeen: false
     };
