@@ -1,5 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 8 2016-11-03-hoc-global-site-refresh-teachers-final ./test-params-teacher.csv
-
-../send-to-mailing-list --limit 4 2016-11-03-hoc-global-site-refresh-non-teachers-final ../mailing-common/test-params-all.csv
