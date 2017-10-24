@@ -6,7 +6,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import SessionAttendanceRow from './session_attendance_row';
 import VisibilitySensor from '../components/visibility_sensor';
-import Spinner from '../components/spinner';
+import Spinner from '../../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
