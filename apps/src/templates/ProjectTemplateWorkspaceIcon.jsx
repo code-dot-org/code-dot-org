@@ -22,8 +22,12 @@ const styles = {
 
 export default class ProjectTemplateWorkspaceIcon extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.tooltipId = _.uniqueId();
+  }
+
   render() {
-    const tooltipId = _.uniqueId();
 
     return (
       <div
@@ -31,13 +35,13 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
       >
         <img
           style={styles.projectTemplateIcon}
-          id={'projectTemplateWorkspaceIcon'}
+          id="projectTemplateWorkspaceIcon"
           src={IMAGE_BASE_URL + 'connect.svg'}
-          data-tip data-for={tooltipId}
-          aria-describedby={tooltipId}
+          data-tip data-for={this.tooltipId}
+          aria-describedby={this.tooltipId}
         />
         <ReactTooltip
-          id={tooltipId}
+          id={this.tooltipId}
           role="tooltip"
           wrapper="div"
           effect="solid"
