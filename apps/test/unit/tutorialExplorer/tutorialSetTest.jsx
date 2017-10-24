@@ -21,7 +21,6 @@ const DEFAULT_PROPS = {
   filters: {},
   localeEnglish: true,
   disabledTutorials: [],
-  grade: "all"
 };
 
 describe('TutorialSet', () => {
@@ -39,7 +38,6 @@ describe('TutorialSet', () => {
           localeEnglish={true}
           disabledTutorial={false}
           changeTutorial={instance.changeTutorial}
-          grade={"all"}
         />
         <div>
           {i18n.tutorialSetNoTutorials()}
@@ -65,7 +63,6 @@ describe('TutorialSet', () => {
           localeEnglish={true}
           disabledTutorial={false}
           changeTutorial={instance.changeTutorial}
-          grade={"all"}
         />
         <Tutorial
           item={TUTORIAL_1}
@@ -103,7 +100,6 @@ describe('TutorialSet', () => {
         localeEnglish={true}
         disabledTutorial={false}
         changeTutorial={instance.changeTutorial}
-        grade={"all"}
       />
     );
   });
@@ -127,7 +123,6 @@ describe('TutorialSet', () => {
         localeEnglish={true}
         disabledTutorial={false}
         changeTutorial={instance.changeTutorial}
-        grade={"all"}
       />
     );
 
@@ -141,7 +136,6 @@ describe('TutorialSet', () => {
         localeEnglish={true}
         disabledTutorial={false}
         changeTutorial={instance.changeTutorial}
-        grade={"all"}
       />
     );
   });
@@ -165,8 +159,6 @@ describe('TutorialSet', () => {
         localeEnglish={true}
         disabledTutorial={false}
         changeTutorial={instance.changeTutorial}
-        grade={"all"}
-
       />
     );
 
@@ -180,7 +172,6 @@ describe('TutorialSet', () => {
         localeEnglish={true}
         disabledTutorial={false}
         changeTutorial={instance.changeTutorial}
-        grade={"all"}
       />
     );
 
@@ -194,7 +185,6 @@ describe('TutorialSet', () => {
         localeEnglish={true}
         disabledTutorial={false}
         changeTutorial={instance.changeTutorial}
-        grade={"all"}
       />
     );
   });
@@ -219,7 +209,6 @@ describe('TutorialSet', () => {
         localeEnglish={true}
         disabledTutorial={true}
         changeTutorial={instance.changeTutorial}
-        grade={"all"}
       />
     );
   });

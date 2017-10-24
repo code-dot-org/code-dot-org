@@ -454,8 +454,6 @@ const TutorialExplorer = React.createClass({
       visibility: this.shouldShowTutorials() ? "visible" : "hidden"
     };
 
-    const grade = this.state.filters["grade"][0];
-
     return (
       <StickyContainer>
         <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
@@ -475,7 +473,6 @@ const TutorialExplorer = React.createClass({
                   specificLocale={true}
                   localeEnglish={this.isLocaleEnglish()}
                   disabledTutorials={this.props.disabledTutorials}
-                  grade={grade}
                 />
               )}
             </div>
@@ -531,7 +528,6 @@ const TutorialExplorer = React.createClass({
                     locale={this.props.locale}
                     localeEnglish={this.isLocaleEnglish()}
                     disabledTutorials={this.props.disabledTutorials}
-                    grade={grade}
                   />
                 )}
               </div>

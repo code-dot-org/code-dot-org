@@ -111,8 +111,7 @@ const TutorialDetail = React.createClass({
     closeClicked: PropTypes.func.isRequired,
     changeTutorial: PropTypes.func.isRequired,
     localeEnglish: PropTypes.bool.isRequired,
-    disabledTutorial: PropTypes.bool.isRequired,
-    grade: PropTypes.string.isRequired
+    disabledTutorial: PropTypes.bool.isRequired
   },
 
   componentDidMount() {
@@ -139,7 +138,6 @@ const TutorialDetail = React.createClass({
 
   startTutorialClicked(shortCode) {
     ga('send', 'event', 'learn', 'start', shortCode);
-    ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
   },
 
   render() {
