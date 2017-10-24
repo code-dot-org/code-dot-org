@@ -11,11 +11,14 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "height": "100",
+    "placeholder": "Write your response here",
+    "encrypted_solution": "6b9CBMJxIVrsrZrPZ/0WEkog73TqHCmhvzPdN35hKW0FO1bTj0WQJSBI1Qfn\nBRgUdjtISRJz8HSpxJvCuCqQhYH4mkdTCVe7nf9LObEPamjfDnAtE8hdQyYD\n7o66+sBNOZjF2oHFNCa3LRq7DUTmnk64PP7UEVhf1xaeyKjfBg8bigBWcePS\nXT6BpGK12DWjjd3FTmFuPQLPce2/ZcPFj0vqcNjOYIV4lNyJkedoqbuVPMl/\n52FciNplgePkgP6L1FhRi8+TIDxJPgRzXBvIxuFGbwnGJtFCRkLwiO5BWK0P\nvli/vCcEIqcuYYIEXWvQfFu5hgywYK3wHXTiPH0zzgCrFj5w8iJoDXP3FpBA\n7KTCGN+FuxRCXxx2ow3aHc4Jdh1nbE48O93uNjeIuTEkw5X1PCyuLkfjn86t\nlu8/T1h7/F9SsERGvSytBW9UA2gynbLLWm+TFt4meJkdCN84cRtBJg6pWTnh\nY3mCounca3HbXGD0y7WascIGJPerOaPG4PcvLia4uA+irnN/XPZ/a3EtG3NX\npAyHR3vHB5b7EPo1eUQPQkKljcXrWys5T0BWbecjLCKAumFcpKOj590UdYa+\n6on7oz8z7K+qyPXrbdz4h5dcUtP2ry1rvxASubo/dI0DS/88kJVhTGhfcjJc\ncuPtDreSG73FaeOc0A5yHy60vwzwKZgG1mgldshM5TnTut8obeQGKoWNbz78\nZQ+2YokK/cJP7ft+1N1n9G1mrTUe38zyOWCGpgpD325rLuo/e1XQz0Z0ORWP\nBm7EGLBgvUTHX/NIyv4CxP6a6cV2WYTToKBdBq0DLFp0U4kQQF1JKQOO31LG\nJoI54rAF2x+0lQSdydRVPjJJWLJ39/bkvaKxNPNETgSpJyMciWgpwfaDm0oD\ncIH8QJn+aS+zlmr0RSKpnIz5E6vtnGfdTsFwaCxVf3UMQcikm29+vFd9HMBf\nYVt77suwcP3VF1i/znFx+6D4+qjqwNG/N+dS5eoodeYTtPjEplcvh3G71xUK\nhtGZ75C7xZOJWTk/qNiCmGpUuVfLBnbZipPn+i9c72dPrv+kPK+tIoJO4lXK\njfLzMi2BvgSviZZHQuEAWiXA6Cq8lMgATRn839msuKTcWr5XeL+O7NSjvl/J\n0uBhU9XHuMZN0VEwpDo6iEQ+Zv4XxxKxv9K1xlOMSTiL6UbZ3vEMHDBcya05\ntHyS/oSwAtsfjgGHpl7Lh5tQ7O0z7vRa03cvrL76QRb0BzeMKO3M8zJoFKOR\nh17Lyqm36brsXqKGOHed4t30b9i3wMKnkU7Ue4vnoQ==\n"
   },
   "published": true,
   "notes": "\r\n",
-  "audit_log": "[{\"changed_at\":\"2017-10-13 17:08:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-13 19:51:55 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-13 17:08:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-13 19:51:55 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-24 21:27:34 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
