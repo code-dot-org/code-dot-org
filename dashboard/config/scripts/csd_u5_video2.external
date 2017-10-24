@@ -8,3 +8,10 @@ Watch this video to learn how this problem is solved by Netflix. As you watch th
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hqFHAnkSP2U" frameborder="0" allowfullscreen></iframe>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Check that students have answered the first two "Web Pix" questions on their activity guide before showing this video.  After the video, they should answer the third question.
+
+*You can hide the "For Teachers Only" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the "View as Student" option.*
+
+MARKDOWN
