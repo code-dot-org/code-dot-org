@@ -7,7 +7,7 @@ import { getStore } from '@cdo/apps/code-studio/redux';
 import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { setUserSignedIn, SignInState } from '@cdo/apps/code-studio/progressRedux';
+import { setUserSignedIn, getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/progressRedux';
 import { setVerified, setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(showCourseOverview);
@@ -26,10 +26,11 @@ function showCourseOverview() {
     store.dispatch(setVerifiedResources());
   }
 
+  store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
+
   if (isTeacher) {
     store.dispatch(setViewType(ViewType.Teacher));
     store.dispatch(setSections(scriptData.sections));
-    store.dispatch(setUserSignedIn(SignInState.SignedIn));
 
     if (scriptData.is_verified_teacher) {
       store.dispatch(setVerified());
