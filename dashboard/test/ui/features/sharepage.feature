@@ -43,6 +43,8 @@ Scenario: Share and save an artist level to the project gallery
   And I drag block "1" to block "12"
 
   When I press "runButton"
+  And I wait until "#finishButton" is enabled
+
   Then I press "finishButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
   And I reopen the congrats dialog unless I see the sharing input
@@ -73,7 +75,9 @@ Scenario: Share and save a playlab level to the project gallery
   And I close the instructions overlay if it exists
 
   When I press "runButton"
-  And I press "finishButton"
+  And I wait until "#finishButton" is enabled
+
+  Then I press "finishButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
   And I reopen the congrats dialog unless I see the sharing input
   And I press "publish-to-project-gallery-button"

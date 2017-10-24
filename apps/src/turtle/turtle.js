@@ -390,7 +390,9 @@ Artist.prototype.init = function (config) {
     this.studioApp_.init(config);
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
+      // finish button is initially disabled until onReportComplete is called
+      finishButton.disabled = true;
+      dom.addClickTouchEvent(finishButton, this.displayFeedback_.bind(this));
     }
   }
 
@@ -1150,11 +1152,8 @@ Artist.prototype.finishExecution_ = function () {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
 
-  if (this.level.freePlay) {
-    window.dispatchEvent(new Event('artistDrawingComplete'));
-  } else {
-    this.checkAnswer();
-  }
+  window.dispatchEvent(new Event('artistDrawingComplete'));
+  this.checkAnswer();
 };
 
 /**
@@ -1706,8 +1705,17 @@ Artist.prototype.onReportComplete = function (response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
+  // Disable the finish button until onReportComplete is called.
+  var finishButton = document.getElementById('finishButton');
+  finishButton.disabled = false;
   this.studioApp_.onReportComplete(response);
-  this.displayFeedback_();
+
+  // Free play levels send the /milestone post as soon as the user clicks "Run",
+  // not when the drawing is completed. The "Finish" button will display
+  // feedback instead.
+  if (!this.level.freePlay) {
+    this.displayFeedback_();
+  }
 };
 
 // This removes lengths from the text version of the XML of programs.
@@ -1854,6 +1862,7 @@ Artist.prototype.checkAnswer = function () {
   }
 
   // The call to displayFeedback() will happen later in onReportComplete()
+  // or when the user clicks the "Finish" button (for free play levels)
 };
 
 /**
