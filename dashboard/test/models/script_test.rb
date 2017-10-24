@@ -221,7 +221,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
     Script.add_script(
       {name: 'test script', hidden: true},
-      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
@@ -232,7 +232,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
