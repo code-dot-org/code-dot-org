@@ -21,6 +21,8 @@ end
 def element_stale?(element)
   element.enabled?
   false
+rescue Selenium::WebDriver::Error::JavascriptError => e
+  e.message.starts_with? 'Element does not exist in cache'
 rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
@@ -112,12 +114,6 @@ When /^I close the dialog$/ do
   steps <<-STEPS
     When I press "x-close"
     And I wait for 0.75 seconds
-  STEPS
-end
-
-When /^I close the React alert$/ do
-  steps <<-STEPS
-    When I click selector ".react-alert button"
   STEPS
 end
 

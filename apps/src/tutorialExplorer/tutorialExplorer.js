@@ -92,7 +92,10 @@ const TutorialExplorer = React.createClass({
     const state = Immutable.fromJS(this.state);
 
     let newState = {};
-    if (value) {
+
+    if (this.props.filterGroups.find(item => item.name === filterGroup).singleEntry) {
+      newState = state.updateIn(['filters', filterGroup], arr => [filterEntry]);
+    } else if (value) {
       // Add value to end of array.
       newState = state.updateIn(['filters', filterGroup], arr => arr.push(filterEntry));
     } else {
@@ -451,6 +454,8 @@ const TutorialExplorer = React.createClass({
       visibility: this.shouldShowTutorials() ? "visible" : "hidden"
     };
 
+    const grade = this.state.filters["grade"][0];
+
     return (
       <StickyContainer>
         <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
@@ -470,6 +475,7 @@ const TutorialExplorer = React.createClass({
                   specificLocale={true}
                   localeEnglish={this.isLocaleEnglish()}
                   disabledTutorials={this.props.disabledTutorials}
+                  grade={grade}
                 />
               )}
             </div>
@@ -486,9 +492,12 @@ const TutorialExplorer = React.createClass({
           {this.state.showingAllTutorials && (
             <div ref={allTutorials => this.allTutorials = allTutorials}>
               <FilterHeader
+                mobileLayout={this.state.mobileLayout}
+                filterGroups={this.props.filterGroups}
+                selection={this.state.filters}
+                onUserInputFilter={this.handleUserInputFilter}
                 backButton={this.props.backButton}
                 filteredTutorialsCount={this.state.filteredTutorialsCount}
-                mobileLayout={this.state.mobileLayout}
                 showingModalFilters={this.state.showingModalFilters}
                 showModalFilters={this.showModalFilters}
                 hideModalFilters={this.hideModalFilters}
@@ -498,6 +507,7 @@ const TutorialExplorer = React.createClass({
               {this.shouldShowFilters() && (
                 <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
                   <FilterSet
+                    mobileLayout={this.state.mobileLayout}
                     uniqueOrgNames={this.getUniqueOrgNames()}
                     orgName={this.state.orgName}
                     showSortDropdown={this.props.showSortDropdown}
@@ -521,6 +531,7 @@ const TutorialExplorer = React.createClass({
                     locale={this.props.locale}
                     localeEnglish={this.isLocaleEnglish()}
                     disabledTutorials={this.props.disabledTutorials}
+                    grade={grade}
                   />
                 )}
               </div>
@@ -548,22 +559,30 @@ const TutorialExplorer = React.createClass({
 function getFilters({robotics, mobile}) {
   const filters = [
     { name: "grade",
-      text: i18n.filterGrades(), //"Grades",
+      text: i18n.filterGrades(),
+      headerOnDesktop: true,
+      singleEntry: true,
       entries: [
+        {name: "all",             text: i18n.filterGradesAll()},
         {name: "pre",             text: i18n.filterGradesPre()},
         {name: "2-5",             text: i18n.filterGrades25()},
         {name: "6-8",             text: i18n.filterGrades68()},
         {name: "9+",              text: i18n.filterGrades9()}]},
-    { name: "teacher_experience",
-      text: i18n.filterTeacherExperience(),
-      entries: [
-        {name: "beginner",        text: i18n.filterTeacherExperienceBeginner()},
-        {name: "comfortable",     text: i18n.filterTeacherExperienceComfortable()}]},
     { name: "student_experience",
       text: i18n.filterStudentExperience(),
+      headerOnDesktop: false,
+      singleEntry: false,
       entries: [
         {name: "beginner",        text: i18n.filterStudentExperienceBeginner()},
-        {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()}]},
+        {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()},
+        {name: "experienced",     text: i18n.filterStudentExperienceExperienced()}]},
+    { name: "teacher_experience",
+      text: i18n.filterTeacherExperience(),
+      singleEntry: false,
+      entries: [
+        {name: "beginner",        text: i18n.filterTeacherExperienceBeginner()},
+        {name: "comfortable",     text: i18n.filterTeacherExperienceComfortable()},
+        {name: "experienced",     text: i18n.filterTeacherExperienceExperienced()}]},
     { name: "platform",
       text: i18n.filterPlatform(),
       entries: [
@@ -601,7 +620,8 @@ function getFilters({robotics, mobile}) {
 
   const initialFilters = {
     teacher_experience: ["beginner"],
-    student_experience: ["beginner"]
+    student_experience: ["beginner"],
+    grade: ["all"]
   };
 
   const hideFilters = {
@@ -617,8 +637,6 @@ function getFilters({robotics, mobile}) {
     });
 
     initialFilters.activity_type = ["robotics"];
-    initialFilters.teacher_experience = [];
-    initialFilters.student_experience = [];
 
     hideFilters.activity_type = [];
   }
@@ -678,6 +696,9 @@ function getUrlParameters(filters, robotics) {
   if (robotics) {
     // The robotics page remains dedicated to robotics activities.
     parametersObject.activity_type = ["robotics"];
+    parametersObject.teacher_experience = ["beginner"];
+    parametersObject.student_experience = ["beginner"];
+    parametersObject.grade = ["all"];
   }
 
   return parametersObject;

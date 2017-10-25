@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 8-22-updated-terms ../mailing-common/test-params-us.csv
