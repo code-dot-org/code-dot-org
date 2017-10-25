@@ -118,6 +118,7 @@ export default storybook => {
           }}
           onChange={storybook.action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )
@@ -130,6 +131,7 @@ export default storybook => {
           }}
           onChange={storybook.action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )
@@ -142,6 +144,7 @@ export default storybook => {
           }}
           onChange={storybook.action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )
@@ -152,6 +155,7 @@ export default storybook => {
           options={{}}
           onChange={storybook.action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )

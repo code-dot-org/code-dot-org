@@ -535,7 +535,7 @@ FactoryGirl.define do
   factory :pd_facilitator1819_application_hash, class: 'Hash' do
     transient do
       program Pd::Application::Facilitator1819Application::PROGRAM_OPTIONS.first
-      state 'WA'
+      state 'Washington'
       add_attribute :zip_code, '98101'
     end
 
