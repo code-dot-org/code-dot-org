@@ -1,4 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 10-5-latam-hoc hoc-2015-latam-mailing/test.csv
-./send-to-mailing-list 10-5-brazil-hoc hoc-2015-latam-mailing/test.csv

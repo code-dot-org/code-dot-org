@@ -217,7 +217,7 @@
   "disabledButtonsInfo": "El teu progrés i codi no és grabarà durant l'hora de codi.",
   "disabledButtonsWarning": "Warning:",
   "disabledButtonsWhy": "Why are my bubbles gray?",
-  "disabledProgress1": "Any progress you make this week on your course will not be saved due to the level of traffic our site receives for the Hour of Code week.",
+  "disabledProgress1": "Any progress you make on your course will not be saved from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.",
   "disabledProgress2": "This is why all your bubbles are displayed as gray (don’t worry, your progress from before this week is still safe).",
   "disabledProgress3": "We encourage you to try Hour of Code tutorials instead this week.",
   "disableMaker": "Disable Maker Toolkit",
@@ -812,6 +812,8 @@
   "cancel": "Cancel",
   "commentPrefix": "Comment:",
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
+  "createAccountToShare": "Create a Code.org account to share your project",
+  "createAccountToShareDescription": "You must create a Code.org account before you can share and publish your project. Creating an account will also let you save your progress and continue to work on your project later.",
   "gender": "Gender",
   "genderMale": "Male",
   "genderFemale": "Female",
@@ -843,5 +845,6 @@
   "signinCodeOrg": "Sign in to Code.org",
   "signinForProgress": "If you want to be able to save your progress, sign in to Code.org.",
   "signinOrAge": "Sign in or provide your age to continue",
-  "usernameLabel": "Username: "
+  "usernameLabel": "Username: ",
+  "workspaceProjectTemplateLevel": "This icon means that this level is part of a larger project. Changes will be saved across these levels."
 }
