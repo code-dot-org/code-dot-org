@@ -1,15 +1,11 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promova a Hora de Código
 
@@ -41,13 +37,13 @@ nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. Calquera referencia á marca "Hour of Code" debe ser feita de forma que non suxira que é unha marca da súa propiedade, senón unha referencia á Hora do Código como un movemento popular. Un bo exemplo: "Participe da Hora do Código no ACMECorp.com". Exemplo de uso errado: "Experimente a Hora de Código promovida pola empresa ACME".
-  2. Use "TM" como superíndice nos textos de maior destaque cando mencione "Hour of Code", tanto no seu website como en descricións de aplicativos.
-  3. Use o seguinte texto na páxina (ou no rodapé), con ligazóns para as páxinas da Semana da Educación en Informática e Code.org:
+1. Calquera referencia á marca "Hour of Code" debe ser feita de forma que non suxira que é unha marca da súa propiedade, senón unha referencia á Hora do Código como un movemento popular. Un bo exemplo: "Participe da Hora do Código no ACMECorp.com". Exemplo de uso errado: "Experimente a Hora de Código promovida pola empresa ACME".
+2. Use "TM" como superíndice nos textos de maior destaque cando mencione "Hour of Code", tanto no seu website como en descricións de aplicativos.
+3. Use o seguinte texto na páxina (ou no rodapé), con ligazóns para as páxinas da Semana da Educación en Informática e Code.org:
     
     *"A 'Hora do Código' é unha iniciativa nacional da Semana da Educación en Informática[csedweek.org] e da Code.org[code.org] para proporcionar a experiencia de unha hora de informática e programación de computadores a millóns de estudantes."*
 
-  4. Está prohibido o uso de "Hour of Code" en nomes de aplicacións.
+4. Está prohibido o uso de "Hour of Code" en nomes de aplicacións.
 
 <a id="stickers"></a>
 

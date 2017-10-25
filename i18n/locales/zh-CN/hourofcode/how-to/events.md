@@ -1,58 +1,61 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_events) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # 如何组织代码一小时活动
 
-## 1) 你的活动准备
+## 1. Prepare for your event
 
-  * 确定地点，日期和时间
-  * 发送 [一封邮件](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit)，邀请当地的市长， 国会议员、，州长或其他有影响力的商业人士发言。
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+- Determine a venue, date, and time.
+- 发送 [一封邮件](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit)，邀请当地的市长， 国会议员、，州长或其他有影响力的商业人士发言。
+- 邀请新闻媒体，比如本地的新闻社，报纸，教育或技术博客。查看我们的[新闻工具包](%= resolve_url('/promote/press-kit') %)以获得帮助。
 
-## 2) 活动期间
+## 2. During your event
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
+- 利用这些[数据和信息图表](%= resolve_url('/promote/stats') %)简单介绍计算机科学的重要性   
       
     
-  * 其他活动构思： 
-      * 邀请当地的行业领导者，讨论他或她的涉及到计算机科学的工作
-      * 邀请当地的政治家并让学生都教他或她如何编程
-      * 组织学生展示不插电活动
-      * 组织学生教校长或老师如何编程
-      * 如果你的学校已经教过计算机科学，让学生来进行演示
+- 其他活动构思： 
+    - Invite a local industry leader to discuss his or her work involving computer science.
+    - Invite a local politician and have students teach him or her how to code.
+    - Have a group of students demonstrate an unplugged activity.
+    - Have a group of students teach the principal or a group of teachers how to code.
+    - If your school already teaches computer science, have students demo projects.
 
-## 3) 分享活动进程
+## 3. Share how it went
 
-  * 在Facebook和Twitter上分享此次活动的照片。 
-  * 使用＃标签**#HourofCode**
+- 在Facebook和Twitter上分享此次活动的照片。 
+- Use the hashtag **#HourOfCode**
+
+## Host a Family Code Night with the Hour of Code and invite parents to participate
+
+Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## 活动计划示例
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**活动：**学校范围内的计算机科学教育周启动集会
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Date:** Dec. 5th (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**时间：**上学日期间。推荐早中午活动。大约 1 小时。
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**地点：**学校礼堂（如剧院，体育馆，食堂）   
   
 
 
 ## 流程演示
 
-| 时间               | 活动                                                                                                                                              |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %) |
-| 10:15 - 10:30 am | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                                                                                                         |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                                                                                                              |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+| 时间            | 活动                                                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 上午10:00-10:05 | 以我们的一个[励志视频](%= resolve_url('/promote/resources#videos') %)开始                                                                                    |
+| 上午10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %). |
+| 上午10:15-10:30 | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                                                                                                          |
+| 上午10:30-10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
+| 上午10:40-11:00 | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                                                                                                               |
+| 上午11:00-11:05 | 组织学校范围内活动的老师致闭幕词。                                                                                                                                |
 
 <%= view :signup_button %>
