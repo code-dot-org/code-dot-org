@@ -4,8 +4,8 @@ import {Panel} from 'react-bootstrap';
 
 export default class DetailViewResponse extends React.Component {
   static propTypes = {
-    question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    answer: PropTypes.any,
+    question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool]),
     layout: PropTypes.oneOf(['lineItem', 'panel'])
   }
 
@@ -20,7 +20,12 @@ export default class DetailViewResponse extends React.Component {
         return (
           <div>
             <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
-              {`${this.props.question}${'?:.'.indexOf(this.props.question[this.props.question.length - 1]) >= 0 ? '' : ':'}`}
+              {
+                this.props.question
+              }
+              {
+                '?:.'.indexOf(this.props.question[this.props.question.length - 1]) >= 0 ? '' : ':'
+              }
             </span>
             {renderedValue}
           </div>
