@@ -48,7 +48,7 @@ const styles = {
   }
 };
 
-export default Radium(class SetUpMessage extends Component {
+class SetUpMessage extends Component {
   static propTypes = {
     isRtl: PropTypes.bool,
     headingText: PropTypes.string.isRequired,
@@ -87,4 +87,6 @@ export default Radium(class SetUpMessage extends Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(SetUpMessage);

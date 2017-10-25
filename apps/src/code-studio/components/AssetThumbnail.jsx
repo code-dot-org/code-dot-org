@@ -38,7 +38,7 @@ export const styles = {
   },
 };
 
-const AssetThumbnail = Radium(class extends React.Component {
+class AssetThumbnail extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
@@ -63,5 +63,6 @@ const AssetThumbnail = Radium(class extends React.Component {
       </div>
     );
   }
-});
-export default AssetThumbnail;
+}
+
+export default Radium(AssetThumbnail);
