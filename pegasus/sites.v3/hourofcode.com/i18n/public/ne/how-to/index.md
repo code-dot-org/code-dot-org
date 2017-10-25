@@ -12,7 +12,8 @@ nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## १) यो कसरी-गर्ने भिडियो हेर्नुहोस् <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## १) यो कसरी-गर्ने भिडियो हेर्नुहोस् <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.

@@ -1,21 +1,19 @@
 ---
-
-title: <%= hoc_s(:title_how_to_parents) %>
+title: '<%= hoc_s(:title_how_to_parents) %>'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# Korleis du fullfører ein Hour of Code med barnet ditt
+# Slik fullfører du ein Kodetime med barnet ditt
 
-Fullføre ein Hour of Code heime, eller viderføre dette til ditt barns klasserom! Her er korleis:
+Fullføre ein Kodetime heime, eller meld deg som frivillig til å rettleie i klasserommet til barnet ditt! Slik gjer du det:
 
-## 2) Sjå denne Korleis gjer ein det videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Sjå denne Korleis gjer ein det videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 3) Vel ein videoguide:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+Vi tilbyr en rekke morsomme, timelange innføringer for studenter i alle aldre, laget av mange ulike partnere. [Prøv dem ut!](<%= resolve_url('/learn') %>)
 
 **Alle timar av kodetimen er sjølvinstruerande- slik at barnet ditt kan lære i si eiga takt og på sitt eige kunnskapsnivå**
 
@@ -32,7 +30,7 @@ Den beste opplevinga av Kodetimen vil vere med datamaskinar kobla til internett.
 
 Start Kodetimen med å diskutere korleis informasjonsteknologi påverkar oss i dagleglivet.
 
-**Vis en inspirerande video:**
+**Vis ein inspirerande video:**
 
 - Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eit minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - [Lanseringsvideoen til Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
