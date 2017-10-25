@@ -10,8 +10,6 @@ const styles = {
     backgroundImage: `url('${assetUrl("media/common_images/flag_inactive.png")}')`,
     width: 21,
     height: 24,
-    position: 'relative',
-    top: -1,
   },
   focused: {
     backgroundImage: `url('${assetUrl("media/common_images/flag_active.png")}')`,
