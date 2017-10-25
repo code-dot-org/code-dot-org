@@ -160,7 +160,7 @@ For a small minority of our Students, and only if they are over the age of 18, w
 
 ## Children Under the Age 13
 
-Code.org courses are designed to be used by Users of all ages, including children under the age of 13 with the involvement of and pre-authorization by their school, teacher, parent or legal guardian. In order to use features that involve uploading custom media files or sending messages within the school, we obtain prior consent from the student’s teacher, other authorized school representative, or, in some cases, the parent or legal guardian.
+Code.org courses are designed to be used by Users of all ages, including children under the age of 13 with the involvement of and pre-authorization by their school, teacher, parent or legal guardian. In order to use features that involve uploading custom media files or sending messages within the school, we obtain prior consent from the Student’s teacher, other authorized school representative, or, in some cases, the parent or legal guardian.
 
 When children under the age of 13 attempt to sign our online petition supporting Code.org’s mission, the email addresses and names are discarded and are not stored on our server.
 
