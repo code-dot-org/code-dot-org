@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# 192075 2015-organizers
-
-./send-to-mailing-list --start      0 --limit 100000 12-18-hoc-organizer-survey hoc-2015-survey/organizers.csv
-./send-to-mailing-list --start 100000 --limit 100000 12-18-hoc-organizer-survey hoc-2015-survey/organizers.csv

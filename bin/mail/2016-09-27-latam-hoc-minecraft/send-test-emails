@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2016-09-27-latam-hoc-minecraft ../mailing-common/test-params-international.csv

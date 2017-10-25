@@ -20,6 +20,7 @@ social:
   "og:video:type": ""
 style_min: false
 ---
+%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -117,8 +118,7 @@ style_min: false
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
-      defaultSortByPopularity: #{request.site == 'code.org'}
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 

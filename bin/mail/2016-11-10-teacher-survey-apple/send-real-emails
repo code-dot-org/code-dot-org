@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 480 teachers claimed prizes
-../send-to-mailing-list --limit 480 2016-11-10-teacher-survey-apple ./claimed-prizes.csv
