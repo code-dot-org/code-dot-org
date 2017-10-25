@@ -189,7 +189,8 @@ const allLabels = Object.keys(pageLabels).reduce((allLabels, page) =>
   Object.assign(allLabels, pageLabels[page]), {});
 
 const scoredQuestions = [
-  'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo'
-] + Object.keys(pageLabels['Section5YourApproachToLearningAndLeading']);
+  'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo',
+  ...Object.keys(pageLabels.Section5YourApproachToLearningAndLeading)
+];
 
 export {pageLabels, allLabels, scoredQuestions, sectionLabels, detailPageLabelOverrides};

@@ -1,48 +1,12 @@
 import React, {PropTypes} from 'react';
-import {Button, FormControl, Panel} from 'react-bootstrap';
+import {Button, FormControl} from 'react-bootstrap';
 import Facilitator1819Questions from './detail_view_facilitator_specific_components';
 import $ from 'jquery';
-import _ from 'lodash';
+import DetailViewResponse from './detail_view_response';
 
-// Public function to render a question/answer pair as either a line item or a panel
-// depending on whether the question will be assigned score
-const renderItem = (key, value, layout, iteratorKey) => {
-  if (typeof value === 'string' || typeof value === 'object') {
-    let renderedValue = value;
-    if (Array.isArray(value)) {
-      renderedValue = _.join(value, ', ');
-    }
+const STATUSES = ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Withdrawn', 'Unreviewed'];
 
-    if (layout === 'lineItem') {
-      return renderLineItem(key, renderedValue, iteratorKey);
-    } else {
-      return renderQuestionBox(key, renderedValue, iteratorKey);
-    }
-  }
-};
-
-const renderLineItem = (key, value, iteratorKey) => {
-  // If there is a value to this line item, render the question. Then optionally
-  // render a : if the question does not end in ?, :, or . Then render the answer.
-  return value && (
-      <div key={iteratorKey}>
-        <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
-          {`${key}${'?:.'.indexOf(key[key.length - 1]) >= 0 ? '' : ':'}`}
-        </span>
-        {value}
-      </div>
-    );
-};
-
-const renderQuestionBox = (key, value, iteratorKey) => {
-  return value && (
-    <Panel key={iteratorKey} header={key} style={{display: 'table'}}>
-      {value}
-    </Panel>
-  );
-};
-
-class DetailViewContents extends React.Component {
+export default class DetailViewContents extends React.Component {
   static propTypes = {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
@@ -136,13 +100,11 @@ class DetailViewContents extends React.Component {
             onChange={this.handleStatusChange}
           >
             {
-              ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Withdrawn', 'Unreviewed'].map((status, i) => {
-                return (
-                  <option value={status} key={i}>
-                    {status}
-                  </option>
-                );
-              })
+              STATUSES.map((status, i) => (
+                <option value={status} key={i}>
+                  {status}
+                </option>
+              ))
             }
           </FormControl>
           {
@@ -168,11 +130,27 @@ class DetailViewContents extends React.Component {
 
   renderTopSection = () => {
     return (
-      <div>
-        {renderItem('Email', this.props.applicationData.email, 'lineItem')}
-        {renderItem('Regional Partner', this.props.applicationData.regional_partner_name, 'lineItem')}
-        {renderItem('School Name', this.props.applicationData.school_name, 'lineItem')}
-        {renderItem('District Name', this.props.applicationData.district_name, 'lineItem')}
+      <div id="TopSection">
+        <DetailViewResponse
+          question="Email"
+          answer={this.props.applicationData.email}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="Regional Partner"
+          answer={this.props.applicationData.regional_partner_name}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="School Name"
+          answer={this.props.applicationData.school_name}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="District Name"
+          answer={this.props.applicationData.district_name}
+          layout="lineItem"
+        />
       </div>
     );
   }
@@ -213,5 +191,3 @@ class DetailViewContents extends React.Component {
     );
   }
 }
-
-export {DetailViewContents, renderItem};

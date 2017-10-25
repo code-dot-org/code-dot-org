@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {renderItem} from './detail_view_contents';
+import DetailViewResponse from './detail_view_response';
 import {sectionLabels, pageLabels, scoredQuestions, detailPageLabelOverrides} from '../application/facilitator1819/Facilitator1819Labels';
 
 export default class Facilitator1819Questions extends React.Component {
@@ -20,11 +20,13 @@ export default class Facilitator1819Questions extends React.Component {
                 </h3>
                 {
                   Object.keys(pageLabels[section]).map((question, j) => {
-                    return renderItem(
-                      detailPageLabelOverrides[question] || pageLabels[section][question],
-                      this.props.formResponses[question],
-                      scoredQuestions.indexOf(question) >= 0 ? 'questionBox' : 'lineItem',
-                      j
+                    return (
+                      <DetailViewResponse
+                        question={detailPageLabelOverrides[question] || pageLabels[section][question]}
+                        answer={this.props.formResponses[question]}
+                        key={j}
+                        layout={scoredQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
+                      />
                     );
                   })
                 }
