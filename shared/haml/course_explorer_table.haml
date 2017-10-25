@@ -215,6 +215,14 @@
                 = course[:range]
           = detail_containers[course[:regular_order]]
           .cleardiv{style: "clear: both"}
+      .professional-learning{style: "width: 100%; height: 56px"}
+        .left
+          .title
+            Professional Learning
+        .right{style: 'float:right; margin-top: -26px;'}
+          %a{:href => CDO.code_org_url('/educate/professional-learning')}
+            .course-explorer-gray-button.professional-learning-button.mobile-button
+              Learn more
     .cleardiv{style: "clear: both"}
 
 
@@ -268,4 +276,12 @@
 
           - unless course_index == index_course_first_same_line
             .cleardiv{style: "clear: both"}
+    .professional-learning{style: "width: 100%"}
+      .left
+        .title
+          Professional Learning for all grade levels
+      .right{style: 'float:right; margin-top: -26px;'}
+        %a{:href => CDO.code_org_url('/educate/professional-learning')}
+          .course-explorer-gray-button.professional-learning-button
+            Learn more
   .cleardiv{style: "clear: both"}

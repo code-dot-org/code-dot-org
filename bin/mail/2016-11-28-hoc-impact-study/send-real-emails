@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 2786 rows in hoc_impact_study.
-../send-to-mailing-list --limit 2786 2016-11-28-hoc-impact-study ./hoc_impact_study.csv

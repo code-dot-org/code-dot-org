@@ -36,6 +36,7 @@ export default class FormController extends React.Component {
     this.state = {
       data: {},
       errors: [],
+      errorMessages: {},
       errorHeader: null,
       globalError: false,
       currentPage: 0,
@@ -251,6 +252,7 @@ export default class FormController extends React.Component {
       options: this.props.options,
       onChange: this.handleChange,
       errors: this.state.errors,
+      errorMessages: this.state.errorMessages,
       data: this.state.data
     };
   }
@@ -288,8 +290,9 @@ export default class FormController extends React.Component {
    *         are missing
    */
   validateCurrentPageRequiredFields() {
+    const currentPage = this.getCurrentPageComponent();
     const requiredFields = this.getRequiredFields();
-    const pageFields = this.getCurrentPageComponent().associatedFields;
+    const pageFields = currentPage.associatedFields;
 
     // Trim string values on page, and set empty strings to null
     const pageData = {};
@@ -311,10 +314,12 @@ export default class FormController extends React.Component {
 
     const pageRequiredFields = pageFields.filter(f => requiredFields.includes(f));
     const missingRequiredFields = pageRequiredFields.filter(f => !pageData[f]);
+    const formatErrors = currentPage.getErrorMessages(pageData);
 
-    if (missingRequiredFields.length) {
+    if (missingRequiredFields.length || Object.keys(formatErrors).length) {
       this.setState({
-        errors: missingRequiredFields,
+        errors: [...missingRequiredFields, ...Object.keys(formatErrors)],
+        errorMessages: formatErrors,
         errorHeader:
           "Please fill out all required fields. You must completely fill out this section before moving \
           on to the next section or going back to edit a previous section."

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 3 2017-01-17-csd-facilitators ./test-params.csv
