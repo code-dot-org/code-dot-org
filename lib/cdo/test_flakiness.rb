@@ -14,12 +14,12 @@ class TestFlakiness
   MIN_SAMPLES = 10
   TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
 
-  def self.get_jobs
+  def self.summarize_by_job(numRequests = NUM_REQUESTS, perRequest = PER_REQUEST)
     jobs = []
-    NUM_REQUESTS.times do
+    numRequests.times do
       # docs for this API: https://wiki.saucelabs.com/display/DOCS/Job+Methods
       url =  "https://saucelabs.com/rest/v1/#{TEST_ACCOUNT_USERNAME}/jobs"
-      url += "?" + URI.encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
+      url += "?" + URI.encode_www_form(limit: perRequest, full: 'true', skip: jobs.count)
       response = RestClient::Request.execute(
         method: :get,
         url: url,
@@ -28,29 +28,23 @@ class TestFlakiness
       )
       jobs += JSON.parse(response.body)
     end
-    return jobs
-  end
-
-  def self.summarize_by_job
-    results = []
-    get_jobs.group_by {|job| job['name']}.each do |name, samples|
-      results << {
+    jobs.group_by {|job| job['name']}.map do |name, samples|
+      {
         name: name,
         total: samples.count,
         failed: samples.count {|job| !job["passed"]}
       }
     end
-    return results
   end
 
   def self.calculate_test_flakiness
-    results = {}
+    name_to_flakiness = {}
     summarize_by_job.each do |summary|
       if summary[:total] > MIN_SAMPLES
-        results[summary[:name]] = (1.0 * summary[:failed] / summary[:total]).round(2)
+        name_to_flakiness[summary[:name]] = (1.0 * summary[:failed] / summary[:total]).round(2)
       end
     end
-    return results
+    name_to_flakiness
   end
 
   CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/flakiness.json").freeze
