@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 3 2016-12-15-volunteers ./test-params.csv
