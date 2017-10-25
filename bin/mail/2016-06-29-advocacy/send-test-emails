@@ -1,5 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2016-6-29-CA-Congress ../mailing-common/test-params-us.csv
-../send-to-mailing-list 2016-6-29-PA-Congress ../mailing-common/test-params-us.csv
-../send-to-mailing-list 2016-6-29-IA-Congress ../mailing-common/test-params-us.csv

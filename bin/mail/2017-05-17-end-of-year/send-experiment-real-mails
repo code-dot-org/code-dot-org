@@ -1,4 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2017-05-17-endofyear-k5nopdA ./email_2_csf_no_pd-experiment-1.csv
-../send-to-mailing-list 2017-05-17-endofyear-k5nopdB ./email_2_csf_no_pd-experiment-2.csv

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 8 2016-11-03-hoc-global-site-refresh-teachers-1 ./test-params-teacher.csv
-../send-to-mailing-list --limit 8 2016-11-03-hoc-global-site-refresh-teachers-2 ./test-params-teacher.csv
-../send-to-mailing-list --limit 8 2016-11-03-hoc-global-site-refresh-teachers-3 ./test-params-teacher.csv
-
-../send-to-mailing-list --limit 4 2016-11-03-hoc-global-site-refresh-non-teachers-1 ../mailing-common/test-params-all.csv
-../send-to-mailing-list --limit 4 2016-11-03-hoc-global-site-refresh-non-teachers-2 ../mailing-common/test-params-all.csv
-../send-to-mailing-list --limit 4 2016-11-03-hoc-global-site-refresh-non-teachers-3 ../mailing-common/test-params-all.csv
