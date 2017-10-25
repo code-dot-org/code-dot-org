@@ -1,20 +1,38 @@
 import React from 'react';
 import {Table} from 'reactabular';
 
-export default class QuickViewTable extends React.Component {
+const styles = {
+  table: {
+    width: '100%',
+  }
+};
 
+export default class QuickViewTable extends React.Component {
   render() {
     const rows = [
       {
         id: 1,
-        created_at: "2017-10-10 14:06:04 -0700",
+        created_at: "October 17",
         name: "Minerva McGonagall",
-        district: "Hogsmeade Central School District",
-        school: "Hogwarts School of Witchcraft and Wizardry",
-        principal: "Albus Dumbledore",
-        status: "unreviewed",
-        locked_at: null,
-        notes: "Animagus"
+        district_name: "Hogsmeade Central School District",
+        school_name: "Hogwarts School of Witchcraft and Wizardry",
+        status: "accepted"
+      },
+      {
+        id: 2,
+        created_at: "October 23",
+        name: "Severus Snape",
+        district_name: "Hogsmeade Central School District",
+        school_name: "Hogwarts School of Witchcraft and Wizardry",
+        status: "unreviewed"
+      },
+      {
+        id: 3,
+        created_at: "October 19",
+        name: "Argus Filch",
+        district_name: "Hogsmeade Central School District",
+        school_name: "Hogwarts School of Witchcraft and Wizardry",
+        status: "declined"
       }
     ];
 
@@ -22,7 +40,7 @@ export default class QuickViewTable extends React.Component {
       {
         property: 'created_at',
         header: {
-          label: 'Date Submitted',
+          label: 'Submitted',
         },
       },
       {
@@ -32,21 +50,15 @@ export default class QuickViewTable extends React.Component {
         },
       },
       {
-        property: 'district',
+        property: 'district_name',
         header: {
-          label: 'District',
+          label: 'School District',
         },
       },
       {
-        property: 'school',
+        property: 'school_name',
         header: {
-          label: 'School',
-        },
-      },
-      {
-        property: 'principal',
-        header: {
-          label: 'Principal',
+          label: 'School Name',
         },
       },
       {
@@ -56,25 +68,8 @@ export default class QuickViewTable extends React.Component {
         },
       },
       {
-        property: 'locked_at',
         header: {
-          label: 'Locked',
-        },
-        cell: {
-          formatters: [
-            locked_at => locked_at ? 'Yes' : 'No'
-          ]
-        }
-      },
-      {
-        property: 'notes',
-        header: {
-          label: 'Notes',
-        }
-      },
-      {
-        header: {
-          label: 'Button',
+          label: '',
         }
       }
     ];
@@ -83,9 +78,9 @@ export default class QuickViewTable extends React.Component {
       <Table.Provider
         className="pure-table pure-table-striped"
         columns={columns}
+        style={styles.table}
       >
         <Table.Header />
-
         <Table.Body rows={rows} rowKey="id" />
       </Table.Provider>
     );
