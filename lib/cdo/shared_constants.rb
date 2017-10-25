@@ -54,6 +54,8 @@ module SharedConstants
     gumball
     iceage
     infinity
+    minecraft_adventurer
+    minecraft_designer
   ).freeze
 
   PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(
