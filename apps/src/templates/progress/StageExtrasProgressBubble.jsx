@@ -8,8 +8,8 @@ import TooltipWithIcon from './TooltipWithIcon';
 const styles = {
   main: {
     backgroundImage: `url('${assetUrl("media/common_images/flag_inactive.png")}')`,
-    width: 18,
-    height: 21,
+    width: 21,
+    height: 24,
     position: 'relative',
     top: -1,
   },
