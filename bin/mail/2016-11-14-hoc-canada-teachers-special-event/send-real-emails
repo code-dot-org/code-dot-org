@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 25880 teachers
-../send-to-mailing-list --limit 26000 2016-11-14-hoc-canada-teachers-special-event ./teachers.csv

@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { TestResults } from '@cdo/apps/constants';
 import { getStore } from '../redux';
-import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { SignInState, mergeProgress } from '../progressRedux';
 import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
@@ -397,17 +397,8 @@ function loadAppAsync(appOptions) {
 
       const store = getStore();
       const signInState = store.getState().progress.signInState;
-      if (signInState === SignInState.Unknown) {
-        // if script was cached, we won't have signin state until we've made
-        // our user_progress call
-        // Depend on the fact that even if we have no levelProgress, our progress
-        // data will have other keys
-        const signedInUser = Object.keys(data).length > 0;
-        store.dispatch(setUserSignedIn(signedInUser));
-        clientState.cacheUserSignedIn(signedInUser);
-        if (signedInUser) {
-          progress.showDisabledBubblesAlert();
-        }
+      if (signInState === SignInState.SignedIn) {
+        progress.showDisabledBubblesAlert();
       }
       if (data.isVerifiedTeacher) {
         store.dispatch(setVerified());

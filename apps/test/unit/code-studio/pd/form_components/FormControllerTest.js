@@ -202,22 +202,20 @@ describe("FormController", () => {
       });
 
       let getRequiredFields;
-      let getCurrentPageComponent;
-      let currentPageAssociatedFields = [];
-      beforeEach(() => {
+      const stubRequiedFields = (requriredFields) => {
         getRequiredFields = sinon.stub(DummyForm.prototype, "getRequiredFields");
-        getCurrentPageComponent = sinon.stub(DummyForm.prototype, "getCurrentPageComponent");
-        getCurrentPageComponent.callsFake(() => ({associatedFields: currentPageAssociatedFields}));
-      });
+        getRequiredFields.returns(requriredFields);
+      };
       afterEach(() => {
-        getRequiredFields.restore();
-        getCurrentPageComponent.restore();
+        if (getRequiredFields) {
+          getRequiredFields.restore();
+        }
       });
 
       it("Generates errors for missing required fields on the current page", () => {
         // No data provided, so all required fields are missing
-        getRequiredFields.returns(["included", "excluded"]);
-        currentPageAssociatedFields = ["included"];
+        stubRequiedFields(["included", "excluded"]);
+        DummyPage1.associatedFields = (["included"]);
 
         const validated = form.getNode().validateCurrentPageRequiredFields();
         expect(validated).to.be.false;
@@ -233,8 +231,8 @@ describe("FormController", () => {
           otherPageTextFieldWithSpace: "   no trim   ",
           otherPageArrayField: ["  still no trim in array  "]
         }});
-        getRequiredFields.returns([]);
-        currentPageAssociatedFields = [
+        stubRequiedFields([]);
+        DummyPage1.associatedFields = [
           "textFieldWithSpace",
           "textFieldWithNoSpace",
           "arrayField",

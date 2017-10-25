@@ -843,5 +843,6 @@
   "signinCodeOrg": "Sign in to Code.org",
   "signinForProgress": "If you want to be able to save your progress, sign in to Code.org.",
   "signinOrAge": "Sign in or provide your age to continue",
-  "usernameLabel": "Username: "
+  "usernameLabel": "Username: ",
+  "workspaceProjectTemplateLevel": "This icon means that this level is part of a larger project. Changes will be saved across these levels."
 }

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 9-28-hoc-past-organizers-1 hoc-2015-mailing/hoc-2015-general-deduped-test-1.csv
-./send-to-mailing-list 9-28-hoc-past-organizers-2 hoc-2015-mailing/hoc-2015-general-deduped-test-2.csv
-./send-to-mailing-list 9-28-hoc-past-organizers-3 hoc-2015-mailing/hoc-2015-general-deduped-test-3.csv
-./send-to-mailing-list 09-29-brazil-hoc hoc-2015-mailing/hoc-2015-brazil.csv
-./send-to-mailing-list 09-29-latam-hoc hoc-2015-mailing/hoc-2015-latam.csv
-
-
