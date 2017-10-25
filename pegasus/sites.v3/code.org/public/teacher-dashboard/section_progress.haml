@@ -15,13 +15,13 @@ content-type: text/ng-template
   = I18n.t('dashboard_progress_view')
   %select{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(script_id)'}
 
--# This is meant to be similar to teacher-announcements.haml and can be removed after HOC
+-# This is meant to alert users to progress being disabled for this script
 %div{'ng-show' => 'progress_disabled'}
   .teacher-announce
     .announce-content{style: "min-height: 0px"}
       = I18n.t('dashboard_announce_hoc_scaling_progress')
       .announce-learn-more{style: "margin-top: 10px"}
-        %a{"ng-href" => "/saving-progress-{{is_hoc_course ? 'hoc' : 'csf'}}", target: '_blank'}
+        %a{"ng-href" => "/saving-progress-hoc", target: '_blank'}
           %button.primary
             = I18n.t('dashboard_announce_learn_more_button')
 

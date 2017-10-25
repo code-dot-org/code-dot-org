@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from "../../util/color";
 import $ from 'jquery';
+import QuickActionsBox from "./QuickActionsBox";
 
 const styles = {
   selected: {
@@ -17,7 +18,7 @@ const styles = {
   actionBox: {
     position: 'absolute',
     marginTop: 32,
-    marginLeft: 96
+    marginLeft: 32
   },
   cellContainer: {
     display: 'flex',
@@ -27,7 +28,7 @@ const styles = {
 
 class QuickActionsCell extends Component {
   static propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.arrayOf(PropTypes.element).isRequired
   };
 
   state = {actionsOpen: false};
@@ -64,7 +65,9 @@ class QuickActionsCell extends Component {
             style={styles.actionBox}
             ref={actionBox => this.actionBox = actionBox}
           >
-            {this.props.children}
+            <QuickActionsBox>
+              {this.props.children}
+            </QuickActionsBox>
           </div>
         }
       </div>

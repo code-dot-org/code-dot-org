@@ -1,8 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2017-05-17-endofyear-k5pd ./test-params.csv
-../send-to-mailing-list 2017-05-17-endofyear-k5nopd ./test-params.csv
-../send-to-mailing-list 2017-05-17-endofyear-high ./test-params.csv
-../send-to-mailing-list 2017-05-17-endofyear-middle ./test-params.csv
-../send-to-mailing-list 2017-05-17-endofyear-unknownage ./test-params.csv
-../send-to-mailing-list 2017-05-17-endofyear-international ./test-params.csv

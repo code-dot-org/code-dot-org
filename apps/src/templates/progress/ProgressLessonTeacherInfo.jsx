@@ -26,8 +26,8 @@ const styles = {
   }
 };
 
-const ProgressLessonTeacherInfo = React.createClass({
-  propTypes: {
+class ProgressLessonTeacherInfo extends React.Component {
+  static propTypes = {
     lesson: lessonType.isRequired,
 
     // redux provided
@@ -37,12 +37,12 @@ const ProgressLessonTeacherInfo = React.createClass({
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenStage: PropTypes.func.isRequired
-  },
+  };
 
-  onClickHiddenToggle(value) {
+  onClickHiddenToggle = (value) => {
     const { scriptName, sectionId, lesson, toggleHiddenStage } = this.props;
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
-  },
+  };
 
   render() {
     const { sectionId, scriptAllowsHiddenStages, hiddenStageState, hasNoSections, lesson } = this.props;
@@ -77,7 +77,7 @@ const ProgressLessonTeacherInfo = React.createClass({
       </TeacherInfoBox>
     );
   }
-});
+}
 
 export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 

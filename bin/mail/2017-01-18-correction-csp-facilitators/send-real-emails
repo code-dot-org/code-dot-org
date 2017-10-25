@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 6000 2017-01-18-correction-csp-facilitators ./contacts.csv

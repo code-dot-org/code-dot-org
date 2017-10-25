@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# 214679 entries, send 3 times with --limit 100000
-./send-to-mailing-list 10-20-hoc-past-organizers hoc-2015-oct-15-mailing/past-organizers-deduped.csv --limit 100000 --start 0
-./send-to-mailing-list 10-20-hoc-past-organizers hoc-2015-oct-15-mailing/past-organizers-deduped.csv --limit 100000 --start 100000
-./send-to-mailing-list 10-20-hoc-past-organizers hoc-2015-oct-15-mailing/past-organizers-deduped.csv --limit 100000 --start 200000
