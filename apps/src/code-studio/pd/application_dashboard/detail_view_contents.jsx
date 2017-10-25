@@ -1,17 +1,43 @@
 import React, {PropTypes} from 'react';
-import {Button, FormControl} from 'react-bootstrap';
-import {Facilitator1819Program} from './detail_view_facilitator_specific_components';
+import {Button, FormControl, Panel} from 'react-bootstrap';
+import Facilitator1819Questions from './detail_view_facilitator_specific_components';
 import $ from 'jquery';
+import _ from 'lodash';
 
-const renderLineItem = (key, value) => {
+const renderItem = (key, value, layout, iteratorKey) => {
+  if (typeof value === 'string' || typeof value === 'object') {
+    let renderedValue = value;
+    if (Array.isArray(value)) {
+      renderedValue = _.join(value, ', ');
+    }
+
+    if (layout === 'lineItem') {
+      return renderLineItem(key, renderedValue, iteratorKey);
+    } else {
+      return renderQuestionBox(key, renderedValue, iteratorKey);
+    }
+  }
+};
+
+const renderLineItem = (key, value, iteratorKey) => {
+  let renderedValue = value;
+
   return value && (
-      <div>
-      <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
-        {key}:
-      </span>
-        {value}
+      <div key={iteratorKey}>
+        <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
+          {`${key}${'?:.'.indexOf(key[key.length - 1]) >= 0 ? '' : ':'}`}
+        </span>
+        {renderedValue}
       </div>
     );
+};
+
+const renderQuestionBox = (question, answer, iteratorKey) => {
+  return answer && (
+    <Panel key={iteratorKey} header={question} style={{display: 'table'}}>
+      {answer}
+    </Panel>
+  );
 };
 
 class DetailViewContents extends React.Component {
@@ -24,18 +50,7 @@ class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      formData: PropTypes.shape({
-        firstName: PropTypes.string.isRequired,
-        lastName: PropTypes.string.isRequired,
-        title: PropTypes.string,
-        phone: PropTypes.string,
-        preferredFirstName: PropTypes.string,
-        accountEmail: PropTypes.string,
-        alternateEmail: PropTypes.string,
-        program: PropTypes.string.isRequired,
-        planOnTeaching: PropTypes.arrayOf(PropTypes.string.isRequired),
-        abilityToMeetRequirements: PropTypes.string.isRequired,
-      })
+      formData: PropTypes.object
     }),
   }
 
@@ -149,42 +164,26 @@ class DetailViewContents extends React.Component {
     );
   }
 
-  renderAboutSection = () => {
+  renderTopSection = () => {
     return (
       <div>
-        <h3>
-          About You
-        </h3>
-        {renderLineItem('Title', this.props.applicationData.formData.title)}
-        {renderLineItem('Preferred First Name', this.props.applicationData.formData.preferredFirstName)}
-        {renderLineItem('Account Email', this.props.applicationData.email)}
-        {renderLineItem('Alternate Email', this.props.applicationData.formData.alternateEmail)}
-        {renderLineItem('Phone', this.props.applicationData.formData.phone)}
-        <br/>
-        {renderLineItem('District', this.props.applicationData.district_name)}
-        {renderLineItem('School', this.props.applicationData.school_name)}
-        {renderLineItem('Course', this.props.applicationData.formData.program)}
-        {renderLineItem('Regional Partner', this.props.applicationData.regional_partner_name)}
+        {renderItem('Email', this.props.applicationData.email, 'lineItem')}
+        {renderItem('Regional Partner', this.props.applicationData.regional_partner_name, 'lineItem')}
+        {renderItem('School Name', this.props.applicationData.school_name, 'lineItem')}
+        {renderItem('District Name', this.props.applicationData.district_name, 'lineItem')}
       </div>
     );
   }
 
-  renderChooseYourProgram = () => {
+  renderQuestions = () => {
     return (
-      <div>
-        <h3>
-          Choose Your Program
-        </h3>
-        {renderLineItem('Program', this.props.applicationData.formData.program)}
-        <Facilitator1819Program
-          planToTeachThisYear1819={this.props.applicationData.formData.planOnTeaching}
-          abilityToMeetRequirements={this.props.applicationData.formData.abilityToMeetRequirements}
-        />
-      </div>
+      <Facilitator1819Questions
+        formResponses={this.props.applicationData.formData}
+      />
     );
   }
 
-  renderNotes() {
+  renderNotes = () => {
     return (
       <div>
         <h4>
@@ -205,12 +204,12 @@ class DetailViewContents extends React.Component {
     return (
       <div>
         {this.renderHeader()}
-        {this.renderAboutSection()}
-        {this.renderChooseYourProgram()}
+        {this.renderTopSection()}
+        {this.renderQuestions()}
         {this.renderNotes()}
       </div>
     );
   }
 }
 
-export {renderLineItem, DetailViewContents};
+export {DetailViewContents, renderItem};
