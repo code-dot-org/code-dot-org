@@ -72,7 +72,7 @@ const styles = {
   },
 };
 
-export default Radium(class ProgressBubble extends React.Component {
+class ProgressBubble extends React.Component {
   static propTypes = {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
@@ -176,4 +176,6 @@ export default Radium(class ProgressBubble extends React.Component {
 
     return bubble;
   }
-});
+}
+
+export default Radium(ProgressBubble);
