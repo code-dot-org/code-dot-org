@@ -11,16 +11,25 @@ import QuickViewTable from './quick_view_table';
 export default class QuickView extends React.Component {
   static propTypes = {
     route: PropTypes.shape({
-      title: PropTypes.string.isRequired
+      title: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired
     })
+  };
+
+  static contextTypes = {
+    router: PropTypes.object.isRequired
   };
 
   render() {
     return (
       <div>
         <h1>{this.props.route.title}</h1>
-        <QuickViewTable />
+        <QuickViewTable path={this.props.route.path}/>
       </div>
     );
   }
 }
+
+QuickView.childContextTypes = {
+  router: PropTypes.object
+};
