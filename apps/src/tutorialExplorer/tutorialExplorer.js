@@ -176,23 +176,49 @@ const TutorialExplorer = React.createClass({
     }
   },
 
+  /**
+   * Given a sort by choice (popularityrank or displayweight) and a grade range,
+   * return the field name from the tutorials data that should used for sorting.
+   */
+  getSortByFieldName(sortBy, grade) {
+    let sortByFieldName;
+
+    // If we're sorting by recommendation (a.k.a. displayweight) then find the
+    // right set of data to match the currently-selected grade.
+    if (sortBy === TutorialsSortBy.displayweight) {
+
+      if (grade === "all") {
+        sortByFieldName = "displayweight";
+      } else if (grade === "pre" || grade === "2-5") {
+        sortByFieldName = "displayweight_k5";
+      } else if (grade === "6-8") {
+        sortByFieldName = "displayweight_middle";
+      } else {
+        sortByFieldName = "displayweight_high";
+      }
+    } else {
+      sortByFieldName = "popularityrank";
+    }
+
+    return sortByFieldName;
+  },
+
   /*
    * The main tutorial set is returned with the given filters and sort order.
    *
    * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
   filterTutorialSet(filters, sortBy, orgName) {
+    const grade = filters["grade"][0];
+
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
       locale: "en-US",
-      orgName: orgName
+      orgName: orgName,
+      sortByFieldName: this.getSortByFieldName(sortBy, grade)
     };
 
-    // If the user hasn't chosen a sorting option yet (and the dropdown is still in its
-    // default state) then use whatever we know to be the default sort criteria.
-    // But if the user has chosen a sorting option, then use that.
-    filterProps.sortBy = sortBy === TutorialsSortBy.default ? this.props.defaultSortBy : sortBy;
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
   },
@@ -205,7 +231,7 @@ const TutorialExplorer = React.createClass({
    */
   filterTutorialSetForLocale() {
     const filterProps = {
-      sortBy: this.props.defaultSortBy
+      sortByFieldName: TutorialsSortBy.displayweight
     };
 
     if (this.isRobotics()) {
@@ -328,7 +354,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, orgName, filters, hideFilters, sortBy } = filterProps;
+      const { locale, specificLocale, orgName, filters, hideFilters, sortByFieldName } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as DoNotShow.  If it does,
@@ -391,10 +417,10 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        if (sortBy === TutorialsSortBy.popularityrank) {
+        if (sortByFieldName === TutorialsSortBy.popularityrank) {
           return tutorial1.popularityrank - tutorial2.popularityrank;
         } else {
-          return tutorial2.displayweight - tutorial1.displayweight;
+          return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
         }
       });
 
