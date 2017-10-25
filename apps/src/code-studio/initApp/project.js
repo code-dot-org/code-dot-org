@@ -517,6 +517,8 @@ var projects = module.exports = {
             return msg.defaultProjectNameGumball();
           case 'iceage':
             return msg.defaultProjectNameIceAge();
+          case 'hoc2015':
+            return msg.defaultProjectNameStarWars();
         }
         break;
       case 'craft':
