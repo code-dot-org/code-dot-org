@@ -3,7 +3,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
 
-describe("DetailView", () => {
+describe("DetailViewContents", () => {
   describe("Edit controls behavior", () => {
     it("is disabled until the Edit button is clicked", () => {
       let detailView = mount(
