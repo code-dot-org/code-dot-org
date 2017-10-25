@@ -6,7 +6,7 @@ export default class DetailViewResponse extends React.Component {
   static propTypes = {
     question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool]),
-    layout: PropTypes.oneOf(['lineItem', 'panel'])
+    layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired
   }
 
   render() {
