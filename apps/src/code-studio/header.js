@@ -185,6 +185,7 @@ function shareProject() {
     ReactDOM.render(
       <Provider store={getStore()}>
         <ShareDialog
+          isProjectLevel={!!dashboard.project.isProjectLevel()}
           i18n={i18n}
           shareUrl={shareUrl}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}

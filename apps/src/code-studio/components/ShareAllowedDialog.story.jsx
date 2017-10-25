@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import { UnconnectedShareDialog as ShareDialog } from './ShareDialog';
+import { UnconnectedShareAllowedDialog as ShareAllowedDialog } from './ShareAllowedDialog';
 import publishDialogReducer from '../../templates/publishDialog/publishDialogRedux';
 
 const fakei18n = {
@@ -20,7 +20,7 @@ const fakei18n = {
     }
   };
 
-// Provide the redux store because the unconnected ShareDialog renders a
+// Provide the redux store because the unconnected ShareAllowedDialog renders a
 // connected PublishDialog.
 
 function configureStore() {
@@ -31,7 +31,7 @@ function configureStore() {
 
 export default storybook => {
   storybook
-    .storiesOf('ShareDialog', module)
+    .storiesOf('ShareAllowedDialog', module)
     .addStoryTable([
       {
         name: 'basic example',
@@ -39,7 +39,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -65,7 +65,7 @@ export default storybook => {
         const store = configureStore();
         return (
           <Provider store={store}>
-            <ShareDialog
+            <ShareAllowedDialog
               isOpen={true}
               canPublish={false}
               isPublished={false}
@@ -93,7 +93,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -120,7 +120,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -148,7 +148,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -175,7 +175,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -202,7 +202,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -229,7 +229,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={true}
                 isPublished={false}
@@ -256,7 +256,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={true}
                 isPublished={false}
@@ -282,7 +282,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={true}
                 isPublished={true}
@@ -308,7 +308,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={true}
                 isPublished={true}
@@ -334,7 +334,7 @@ export default storybook => {
           const store = configureStore();
           return (
             <Provider store={store}>
-              <ShareDialog
+              <ShareAllowedDialog
                 isOpen={true}
                 canPublish={true}
                 isPublished={true}
