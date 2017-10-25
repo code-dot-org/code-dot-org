@@ -1383,7 +1383,7 @@ class User < ActiveRecord::Base
       end
 
       script = Script.get_from_cache(script_id)
-      script_valid = script.csf? && !script.k1?
+      script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         script_valid &&
