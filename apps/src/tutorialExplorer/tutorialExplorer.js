@@ -186,7 +186,6 @@ const TutorialExplorer = React.createClass({
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
     // right set of data to match the currently-selected grade.
     if (sortBy === TutorialsSortBy.displayweight) {
-
       if (grade === "all") {
         sortByFieldName = "displayweight";
       } else if (grade === "pre" || grade === "2-5") {
