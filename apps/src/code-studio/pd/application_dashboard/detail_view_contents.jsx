@@ -135,15 +135,15 @@ class DetailViewContents extends React.Component {
             value={this.state.status}
             onChange={this.handleStatusChange}
           >
-            <option value="unreviewed">
-              Unreviewed
-            </option>
-            <option value="accepted">
-              Accepted
-            </option>
-            <option value="declined">
-              Declined
-            </option>
+            {
+              ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Withdrawn', 'Unreviewed'].map((status, i) => {
+                return (
+                  <option value={status} key={i}>
+                    {status}
+                  </option>
+                );
+              })
+            }
           </FormControl>
           {
             this.state.editing ? [(
