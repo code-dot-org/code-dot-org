@@ -6714,3 +6714,11 @@ en:
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
           description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
