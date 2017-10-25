@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 10-15-hoc-engineers hoc-2015-oct-15-mailing/engineers-deduped.csv
