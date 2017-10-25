@@ -1,4 +1,9 @@
 {
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "Alla",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular",
   "filterGrades": "Årskurser",
   "filterGradesPre": "Icke-läsare",
   "filterGrades25": "Årskurs 2-5",
@@ -41,9 +46,6 @@
   "filterHeaderHideFilters": "Applicera",
   "filterHeaderTutorialCountSingle": "1 resultat",
   "filterHeaderTutorialCountPlural": "{tutorial_count} resultat",
-  "filterHeaderDefault": "Sortera",
-  "filterHeaderDisplayWeight": "Topprankade",
-  "filterHeaderPopularityRank": "Mest populära",
   "roboticsButtonText": "Visa robotaktiviteter",
   "roboticsText": "Har ni robotar? Använd dessa aktiviteter och gör en fysisk Hour of Code för studenter i alla åldrar!",
   "tutorialSetNoTutorials": "Din sökning gav inga resultat. Försök att ta bort några filter för att se fler aktiviteter.",
@@ -57,10 +59,5 @@
   "hideAllTutorialsButton": "Dölj aktiviteter för många språk",
   "noTutorialsYourLanguage": "Det finns inga aktiviteter på ditt språk. Prova aktiviteter på andra språk genom att klicka på knappen nedan.",
   "bottomGuidelinesLink": "Klicka här för att se våra kriterier och inlämnings riktlinjer för Hour of Code övningar.",
-  "bottomSpecialNeedsLink": "Klicka här för mer information på att stödja elever med särskilda behov.",
-  "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All",
-  "filterSortBy": "Sort by",
-  "filterSortByDisplayWeight": "Recommended",
-  "filterSortByPopularityRank": "Most popular"
+  "bottomSpecialNeedsLink": "Klicka här för mer information på att stödja elever med särskilda behov."
 }

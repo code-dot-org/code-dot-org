@@ -1,4 +1,9 @@
 {
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "All",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular",
   "filterGrades": "Vanuseastmed",
   "filterGradesPre": "Veel ei loe",
   "filterGrades25": "2.-5. klassid",
@@ -41,9 +46,6 @@
   "filterHeaderHideFilters": "Rakenda",
   "filterHeaderTutorialCountSingle": "1 tulemus",
   "filterHeaderTutorialCountPlural": "{tutorial_count} tulemused",
-  "filterHeaderDefault": "Sorteeri",
-  "filterHeaderDisplayWeight": "Soovitatav",
-  "filterHeaderPopularityRank": "Kõige populaarsemad",
   "roboticsButtonText": "Vaata robootika tegevusi",
   "roboticsText": "Sul on robotid? Kasuta neid tegevusi ja tee igas vanuses õpilastele jõukohane KoodiTund!",
   "tutorialSetNoTutorials": "Sinu otsing ei andnud tulemusi.\nProovi mõnede filtrite eemaldamist, et leida rohkem tegevusi.",
@@ -57,10 +59,5 @@
   "hideAllTutorialsButton": "Peida paljudes keeltes tegevused",
   "noTutorialsYourLanguage": "Sinu keeles ei ole tegevusi. Proovi tegevusi teistes keeltes klõpsates alumisel nupul.",
   "bottomGuidelinesLink": "Klõpsa siia, et näha meie nõudmisi KoodiTunni juhenditele ja juhiseid nende esitamiseks.",
-  "bottomSpecialNeedsLink": "Siin klõpsates leiad rohkem informatsiooni erivajadusega õpilaste toetamisest.",
-  "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All",
-  "filterSortBy": "Sort by",
-  "filterSortByDisplayWeight": "Recommended",
-  "filterSortByPopularityRank": "Most popular"
+  "bottomSpecialNeedsLink": "Siin klõpsates leiad rohkem informatsiooni erivajadusega õpilaste toetamisest."
 }

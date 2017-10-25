@@ -1,4 +1,9 @@
 {
+  "filterOrgNames": "Laget av",
+  "filterOrgNamesAll": "Alle",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular",
   "filterGrades": "Klassetrinn",
   "filterGradesPre": "Ikke-lesere",
   "filterGrades25": "2.-5. klasse",
@@ -41,9 +46,6 @@
   "filterHeaderHideFilters": "Bruk",
   "filterHeaderTutorialCountSingle": "1 resultat",
   "filterHeaderTutorialCountPlural": "{tutorial_count} resultater",
-  "filterHeaderDefault": "Sorter",
-  "filterHeaderDisplayWeight": "Anbefalte",
-  "filterHeaderPopularityRank": "Mest populære",
   "roboticsButtonText": "Vis robotikk-aktiviteter",
   "roboticsText": "Har du roboter? Bruk disse aktivitetene og sett sammen en Kodetime for elever i alle aldre!",
   "tutorialSetNoTutorials": "Søket ga ingen treff. Prøv å fjerne noen filtre hvis du vil se flere aktiviteter.",
@@ -57,10 +59,5 @@
   "hideAllTutorialsButton": "Skjul aktiviteter på mange språk",
   "noTutorialsYourLanguage": "Det finnes ikke noen aktiviteter på ditt språk. Prøv aktiviteter på andre språk ved å klikke på knappen under.",
   "bottomGuidelinesLink": "Klikk her for å se våre vilkår og retningslinjer for innsending av opplæring til Kodetimen.",
-  "bottomSpecialNeedsLink": "Klikk her for mer informasjon om å støtte elever med spesielle behov.",
-  "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All",
-  "filterSortBy": "Sort by",
-  "filterSortByDisplayWeight": "Recommended",
-  "filterSortByPopularityRank": "Most popular"
+  "bottomSpecialNeedsLink": "Klikk her for mer informasjon om å støtte elever med spesielle behov."
 }

@@ -173,7 +173,7 @@ it:
         'bounce_7_sports': "https://studio.code.org/s/sports/stage/1/puzzle/5\n\nAttacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>\nFar rimbalzare la palla fino a quando non colpisce la bandiera."
         'bounce_10_sports': "https://studio.code.org/s/sports/stage/1/puzzle/6\n\nOra in alto c'è la meta! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca il giocatore`.<br>\nOsserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio."
         'bounce_11_sports': "https://studio.code.org/s/sports/stage/1/puzzle/7\n\nAdesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su \"Esegui\"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>\nProva anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!"
-        'bounce_12_sports': "https://studio.code.org/s/sports/stage/1/puzzle/8\n\nOra comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni."
+        'bounce_12_sports': "Ora comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni."
         'bounce_1': "Attacca un blocco al blocco verde `quando si preme la freccia verso sinistra` e premi \"Esegui\". Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina."
         'bounce_2': "Attacca un blocco ai blocchi verdi `quando si preme la freccia verso destra` e `quando si preme la freccia verso sinistra`. Poi sposta la racchetta per raggiungere entrambe le bandierine."
         'bounce_3': "Ora fai qualcosa di simile con il blocco `quando si preme la freccia verso l'alto`. Poi sposta la racchetta verso la bandierina in alto."
@@ -530,6 +530,9 @@ it:
         'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
         'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
         'applab_hoc_share': 'AppLab Hour of Code - Share'
+        'mc_2017_agent_intro': 'Minecraft Hour of Code - The Agent'
+        'mc_2017_repeat': 'Minecraft Hour of Code - Repeat Loops'
+        'mc_2017_functions': 'Minecraft Hour of Code - Functions'
     callout:
       text:
         drag_blocks: 'Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l''altro blocco qua sopra'

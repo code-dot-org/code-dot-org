@@ -1,4 +1,9 @@
 {
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "全部",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular",
   "filterGrades": "年級",
   "filterGradesPre": "學齡前",
   "filterGrades25": "年級 2-5",
@@ -41,9 +46,6 @@
   "filterHeaderHideFilters": "套用",
   "filterHeaderTutorialCountSingle": "1 個結果",
   "filterHeaderTutorialCountPlural": "{tutorial_count} 個結果",
-  "filterHeaderDefault": "排序方式",
-  "filterHeaderDisplayWeight": "最被推薦的",
-  "filterHeaderPopularityRank": "最受歡迎的",
   "roboticsButtonText": "查看機器人相關活動",
   "roboticsText": "你有機器人？運用這些活動，讓學生們一小時玩「有形的」程式（適用各年齡層）！",
   "tutorialSetNoTutorials": "找不到相符結果，請刪除一些篩選條件後再試一次。",
@@ -57,10 +59,5 @@
   "hideAllTutorialsButton": "隱藏各種語言的活動",
   "noTutorialsYourLanguage": "目前沒有任何使用你的語言的活動。點擊下方按鈕以觀看其他語言的活動。",
   "bottomGuidelinesLink": "點擊此處查看如何將課程提交給一小時玩程式。",
-  "bottomSpecialNeedsLink": "點擊此處以取得特殊需求學生支援的相關資訊。",
-  "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All",
-  "filterSortBy": "Sort by",
-  "filterSortByDisplayWeight": "Recommended",
-  "filterSortByPopularityRank": "Most popular"
+  "bottomSpecialNeedsLink": "點擊此處以取得特殊需求學生支援的相關資訊。"
 }
