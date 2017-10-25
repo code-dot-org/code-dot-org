@@ -1,6 +1,9 @@
 {
   "absolute": "絕對值",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "在",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "添加",
   "blockActionAttack": "攻擊",
   "blockActionClone": "clone blocks",
@@ -153,7 +156,7 @@
   "houseSelectHard": "困難",
   "houseSelectLetsBuild": "我們來蓋幢房子吧。",
   "houseSelectMedium": "中",
-  "import": "Import",
+  "import": "匯入",
   "importShareLinkBody": "Type your Hour of Code share link here and click \"Import\" to copy your code into Minecraft",
   "importShareLinkHeader": "Import a share link",
   "inSlotNumber": "在插槽序號",
@@ -231,6 +234,7 @@
   "quantity": "數量",
   "reinfFeedbackMsg": "你可以點擊「再玩一會兒」返回遊戲畫面。",
   "relative": "相對",
+  "runAgent": "Run Agent",
   "score": "分數",
   "seconds": "秒",
   "selectChooseButton": "選擇",
@@ -286,9 +290,5 @@
   "weather": "天氣",
   "weatherTypeClear": "清除",
   "weatherTypeRain": "下雨",
-  "weatherTypeThunder": "打雷",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "打雷"
 }

@@ -1,6 +1,9 @@
 {
   "absolute": "절댓값",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "다음 장소에서 : ",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "추가",
   "blockActionAttack": "공격",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "수량",
   "reinfFeedbackMsg": "'계속 플레이하기'를 눌러 게임을 계속 플레이하세요.",
   "relative": "상대적인",
+  "runAgent": "Run Agent",
   "score": "점수",
   "seconds": "초",
   "selectChooseButton": "선택",
@@ -286,9 +290,5 @@
   "weather": "날씨",
   "weatherTypeClear": "맑음",
   "weatherTypeRain": "비",
-  "weatherTypeThunder": "천둥번개",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "천둥번개"
 }

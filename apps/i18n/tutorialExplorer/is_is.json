@@ -1,4 +1,9 @@
 {
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "Allt",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular",
   "filterGrades": "Bekkir",
   "filterGradesPre": "Ekki læs",
   "filterGrades25": "2. - 5. bekkur",
@@ -41,9 +46,6 @@
   "filterHeaderHideFilters": "Nota",
   "filterHeaderTutorialCountSingle": "1 útkoma",
   "filterHeaderTutorialCountPlural": "{tutorial_count} útkomur",
-  "filterHeaderDefault": "Raða",
-  "filterHeaderDisplayWeight": "Hæst metnar",
-  "filterHeaderPopularityRank": "Vinsælastar",
   "roboticsButtonText": "Sjá verkefni í þjarkafræðum",
   "roboticsText": "Eru vélmenni til staðar? Notaðu þessi verkefni og búðu til áþreifanlega Klukkustund kóðunar fyrir nemendur á öllum aldri!",
   "tutorialSetNoTutorials": "Leit þín skilaði engri útkomu.\nPrófaðu að fjarlægja síur til að sjá fleiri verkefni.",
@@ -57,10 +59,5 @@
   "hideAllTutorialsButton": "Fela verkefni á mörgum tungumálum",
   "noTutorialsYourLanguage": "Það eru engin verkefni á þínu tungumáli. Prófaðu verkefni á öðrum tungumálum með því að smella á hnappinn hér fyrir neðan.",
   "bottomGuidelinesLink": "Smelltu hér til að sjá leiðsögn og viðmið sem verkefni fyrir Klukkustund kóðunar þurfa að uppfylla.",
-  "bottomSpecialNeedsLink": "Smelltu hér til að fá meiri upplýsingar um stuðning við nemendur með sérþarfir.",
-  "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All",
-  "filterSortBy": "Sort by",
-  "filterSortByDisplayWeight": "Recommended",
-  "filterSortByPopularityRank": "Most popular"
+  "bottomSpecialNeedsLink": "Smelltu hér til að fá meiri upplýsingar um stuðning við nemendur með sérþarfir."
 }

@@ -1,4 +1,9 @@
 {
+  "filterOrgNames": "Created by",
+  "filterOrgNamesAll": "全て",
+  "filterSortBy": "Sort by",
+  "filterSortByDisplayWeight": "Recommended",
+  "filterSortByPopularityRank": "Most popular",
   "filterGrades": "学年",
   "filterGradesPre": "就学前",
   "filterGrades25": "小学2年～5年生向け",
@@ -41,9 +46,6 @@
   "filterHeaderHideFilters": "摘要",
   "filterHeaderTutorialCountSingle": "1 結果",
   "filterHeaderTutorialCountPlural": "{tutorial_count} 結果",
-  "filterHeaderDefault": "並べ替え",
-  "filterHeaderDisplayWeight": "推奨",
-  "filterHeaderPopularityRank": "最も人気",
   "roboticsButtonText": "ロボットの活動を表示",
   "roboticsText": "ロボットがある? これらのアクティビティを使用して、全年齢の学生用に実際のHour of Code を作ろう!",
   "tutorialSetNoTutorials": "検索結果がありません。多くのアクティビティを見るために、いくつかのフィルターを削除してください。",
@@ -57,10 +59,5 @@
   "hideAllTutorialsButton": "多くの言語用のアクティビティを隠します。",
   "noTutorialsYourLanguage": "あなたの言語でサポートされるアクティビティはありません。下のボタンをクリックして他の言語のアクティビティを試してください。",
   "bottomGuidelinesLink": "ここをクリックして、Hour of Code チュートリアルの条件と提出ガイドラインを参照してください。",
-  "bottomSpecialNeedsLink": "特別なニーズの学生をサポートするための情報は、こちらをクリック",
-  "filterOrgNames": "Created by",
-  "filterOrgNamesAll": "All",
-  "filterSortBy": "Sort by",
-  "filterSortByDisplayWeight": "Recommended",
-  "filterSortByPopularityRank": "Most popular"
+  "bottomSpecialNeedsLink": "特別なニーズの学生をサポートするための情報は、こちらをクリック"
 }

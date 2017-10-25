@@ -1,6 +1,9 @@
 {
   "absolute": "algildi",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "hjá",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "bæta við",
   "blockActionAttack": "ráðast á",
   "blockActionClone": "klóna blokkir",
@@ -231,6 +234,7 @@
   "quantity": "magn",
   "reinfFeedbackMsg": "Þú getur ýtt á \"Spila áfram\" til að fara aftur í að spila leikinn þinn.",
   "relative": "afstætt",
+  "runAgent": "Run Agent",
   "score": "Stig",
   "seconds": "sekúnda/ur",
   "selectChooseButton": "Velja",
@@ -286,9 +290,5 @@
   "weather": "veður",
   "weatherTypeClear": "heiðskírt",
   "weatherTypeRain": "regn",
-  "weatherTypeThunder": "þrumur",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "þrumur"
 }
