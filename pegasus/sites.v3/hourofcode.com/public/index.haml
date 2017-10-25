@@ -203,6 +203,9 @@ social:
   %a#hocsignupform{name: 'signup'}
   #join
     %h1#join-us-header=hoc_s(:front_join_us_button)
+    -if ["post-hoc", false].include?(hoc_mode)
+      %h3#signup-closed
+        Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.
     %h1#thanks-header{style: "display:none;"}=hoc_s(:census_thanks)
     %div
       .row
