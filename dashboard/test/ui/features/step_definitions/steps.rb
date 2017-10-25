@@ -117,12 +117,6 @@ When /^I close the dialog$/ do
   STEPS
 end
 
-When /^I close the React alert$/ do
-  steps <<-STEPS
-    When I click selector ".react-alert button"
-  STEPS
-end
-
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end

@@ -1,3 +1,5 @@
+login_required true
+
 stage 'CSP3A: Using Simple Commands', flex_category: 'csp3_1'
 level 'subgoal v2 U3L04 Student Lesson Introduction'
 level 'subgoal U3L2 Using Simple Commands'

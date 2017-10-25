@@ -27,7 +27,12 @@ class HocCensus2017 < HocSignup2017
     result
   end
 
-  def self.receipt
-    'census_form_receipt'
+  def self.receipt(data)
+    # Only send an email if the submitter pledged.
+    if data['pledge_b']
+      'hoc_census_2017_pledge_receipt'
+    else
+      []
+    end
   end
 end

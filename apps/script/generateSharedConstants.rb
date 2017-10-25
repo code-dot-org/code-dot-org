@@ -26,15 +26,32 @@ end
 # name in shared_constants
 def generate_constants(shared_const_name)
   raw = SharedConstants.const_get(shared_const_name)
-  hash = raw.is_a?(OpenStruct) ? raw.marshal_dump : JSON.parse(raw)
-  "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash)};"
+  hash_or_array =  parse_raw(raw)
+  "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash_or_array)};"
+end
+
+# @param raw [Hash|Array|OpenStruct|String] A hash, array, OpenStruct, or
+# JSON-encoded string representing an object or array.
+# @returns [Hash|Array] A hash or array representation of the input.
+def parse_raw(raw)
+  if raw.is_a?(OpenStruct)
+    raw.marshal_dump
+  elsif raw.is_a?(Hash) || raw.is_a?(Array)
+    raw
+  elsif raw.is_a?(String)
+    JSON.parse(raw)
+  else
+    raise "unrecognized raw type: #{raw.class}"
+  end
 end
 
 def main
   shared_content = [
     generate_constants('LEVEL_KIND'),
     generate_constants('LEVEL_STATUS'),
-    generate_constants('SECTION_LOGIN_TYPE')
+    generate_constants('SECTION_LOGIN_TYPE'),
+    generate_constants('PUBLISHABLE_PROJECT_TYPES_UNDER_13'),
+    generate_constants('PUBLISHABLE_PROJECT_TYPES_OVER_13')
   ].join("\n\n")
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")

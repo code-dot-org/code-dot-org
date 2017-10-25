@@ -27,6 +27,12 @@ Computer Science Discoveries (CS Discoveries) is an introductory computer scienc
 
 <div style="clear:both"></div>
 
+## Professional learning program
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
+
+[<button>Learn more</button>](https://code.org/educate/professional-learning/cs-discoveries) [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+
+## Course Design
 ### <a name="equity"></a>Designed with equity in mind
 
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. It provides students opportunities to engage with culturally and personally relevant topics in a wide variety of contexts and aims to show all students that CS is for them.

@@ -22,13 +22,13 @@ This unit is largely about:
 
 ## What does *abstraction* mean when it comes to computer science?
 
-**Computer science deals with lots of complex systems.** 
+**Computer science deals with complex systems.** 
 
-These complex systems have lots and lots of tiny details that can quickly grow overwhelming making things hard for humans to manage and keep track of.  For a complex system like the Internet, it is simply not possible to see and understand every detail all at once.
+These complex systems have lots of tiny details that can quickly grow overwhelming, making things hard for humans to manage and keep track of.  For a complex system like the Internet, it is simply not possible to see and understand every detail all at once.
 
 **It's about compartmentalization.** 
 
-The human brain needs ways to compartmentalize ideas so you can focus on problems at a higher level. Everyone uses abstraction on a daily basis to effectively manage complexity. 
+The human brain needs ways to compartmentalize ideas so you can focus on problems at a higher level. In fact, everyone uses abstraction on a daily basis to effectively manage complexity. 
 
 **For an everyday example, think about driving a car.** 
 
@@ -42,7 +42,7 @@ Abstraction is a central problem-solving technique for managing the complexity o
 
 **Typically, abstraction means compartmentalizing solutions to coding problems in functions or procedures.** 
 
-From this lesson you have learned how to write a function to encapsulate a solution to a turtle drawing problem. By writing a functions called `drawRectangle()`, for example, you have compartmentalized the code necessary to complete that task. If you've tested that function and it works, you don't need to worry about it anymore.  You can move on to thinking about a program that requires multiple rectangles or other shapes. You have only seen a small simple example so far, but the idea is quite powerful.
+From this lesson you have learned how to write a function to compartmentalize a solution to a turtle drawing problem. By writing a functions called `drawRectangle()`, for example, you have compartmentalized the code necessary to complete that task. If you've tested that function and it works, you don't need to worry about it anymore.  You can move on to thinking about a program that requires multiple rectangles or other shapes. You have only seen a small simple example so far, but the idea is quite powerful.
 
 **Finally, here it is in a nutshell:** 
 

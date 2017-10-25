@@ -44,9 +44,8 @@ class Slack
     channel_id = get_channel_id(channel_name)
     return nil unless channel_id
 
-    response = nil
-    Retryable.retryable(on: [Errno::ETIMEDOUT, OpenURI::HTTPError], tries: 2) do
-      response = open(
+    response = Retryable.retryable(on: [Errno::ETIMEDOUT, OpenURI::HTTPError], tries: 2) do
+      open(
         'https://slack.com/api/channels.info'\
         "?token=#{SLACK_TOKEN}"\
         "&channel=#{channel_id}"\
@@ -84,8 +83,9 @@ class Slack
       "&channel=#{channel_id}"\
       "&topic=#{new_topic}"
     )
-
-    JSON.parse(response.read)['ok']
+    result = JSON.parse(response.read)
+    raise "Failed to update_topic, with error: #{result['error']}" if result['error']
+    result['ok']
   end
 
   def self.replace_user_links(message)
@@ -146,6 +146,18 @@ class Slack
     rescue
       return false
     end
+  end
+
+  def self.join_room(name)
+    response = open(
+      'https://slack.com/api/channels.join'\
+      "?token=#{SLACK_TOKEN}"\
+      "&name=#{name}"\
+    )
+
+    result = JSON.parse(response.read)
+    raise "Failed to join_room, with error: #{result['error']}" if result['error']
+    result['ok']
   end
 
   # Returns the channel ID for the channel with the requested channel_name.

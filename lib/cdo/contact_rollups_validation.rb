@@ -26,6 +26,27 @@ class ContactRollupsValidation
       max: 2_000_000
     },
     {
+      name: "CSF Teacher count",
+      query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
+              LIKE '%CSF Teacher%'",
+      min: 50_000,
+      max: 500_000
+    },
+    {
+      name: "CSD Teacher count",
+      query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
+              LIKE '%CSD Teacher%'",
+      min: 1_000,
+      max: 50_000
+    },
+    {
+      name: "CSP Teacher count",
+      query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
+              LIKE '%CSP Teacher%'",
+      min: 5_000,
+      max: 100_000
+    },
+    {
       name: "Facilitator count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Facilitator%'",

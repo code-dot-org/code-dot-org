@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 161 teachers claimed prizes
-../send-to-mailing-list --limit 161 2017-02-22-hoc-impact-apple ./claimed_prizes.csv
