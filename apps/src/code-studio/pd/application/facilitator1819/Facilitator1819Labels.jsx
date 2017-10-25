@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Section labels that show up on the detail view
 const sectionLabels = {
   Section1QuestionsAboutYou: 'About You',
   Section2ChooseYourProgram: 'Choose Your Program',
@@ -10,7 +11,8 @@ const sectionLabels = {
   Section7Submission: 'Submission'
 };
 
-// Override for labels on the detail page
+// Override for labels - we don't always want to render the full text in the detail view
+// so this lets us render a truncated version of it
 const detailPageLabelOverrides = {
   program: 'Please choose one curriculum for which you would like to become a facilitator this year.',
   abilityToMeetRequirements: 'How would you rate your ability to meet the requirements and commitments for this program?',
