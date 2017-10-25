@@ -105,7 +105,7 @@ function sharingDisabled(userSharingDisabled, appType) {
 /**
  * Share Dialog used by projects
  */
-class ShareDialogSignedIn extends React.Component {
+class ShareAllowedDialog extends React.Component {
   static propTypes = {
     i18n: PropTypes.shape({
       t: PropTypes.func.isRequired,
@@ -384,7 +384,7 @@ class ShareDialogSignedIn extends React.Component {
   }
 }
 
-export const UnconnectedShareDialogSignedIn = ShareDialogSignedIn;
+export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
@@ -398,4 +398,4 @@ export default connect(state => ({
   onUnpublish(projectId) {
     dispatch(unpublishProject(projectId));
   },
-}))(ShareDialogSignedIn);
+}))(ShareAllowedDialog);

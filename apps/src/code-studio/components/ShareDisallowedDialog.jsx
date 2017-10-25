@@ -33,7 +33,7 @@ const styles = {
     justifyContent: 'space-between',
   }
 };
-class ShareDialogSignedOut extends Component {
+class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     hideShareDialog: PropTypes.func.isRequired,
@@ -71,8 +71,8 @@ class ShareDialogSignedOut extends Component {
   }
 }
 
-export const UnconnectedShareDialogSignedOut = ShareDialogSignedOut;
+export const UnconnectedShareDisallowedDialog = ShareDisallowedDialog;
 
 export default connect(state => ({
   isOpen: state.shareDialog.isOpen
-}), { hideShareDialog })(ShareDialogSignedOut);
+}), { hideShareDialog })(ShareDisallowedDialog);

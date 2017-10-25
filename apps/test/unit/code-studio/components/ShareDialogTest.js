@@ -13,7 +13,7 @@ describe('ShareDialog', () => {
         appType={'applab'}
       />
     );
-    const dialog = wrapper.find('Connect(ShareDialogSignedIn)');
+    const dialog = wrapper.find('Connect(ShareAllowedDialog)');
     assert.equal(dialog.length, 1);
     // Make sure props get passed through
     assert.equal(wrapper.props().appType, 'applab');
@@ -27,7 +27,7 @@ describe('ShareDialog', () => {
         appType={'applab'}
       />
     );
-    const dialog = wrapper.find('Connect(ShareDialogSignedIn)');
+    const dialog = wrapper.find('Connect(ShareAllowedDialog)');
     assert.equal(dialog.length, 1);
     // Make sure props get passed through
     assert.equal(wrapper.props().appType, 'applab');
@@ -41,7 +41,7 @@ describe('ShareDialog', () => {
         appType={'applab'}
       />
     );
-    const dialog = wrapper.find('Connect(ShareDialogSignedOut)');
+    const dialog = wrapper.find('Connect(ShareDisallowedDialog)');
     assert.equal(dialog.length, 1);
   });
 });

@@ -1,8 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
-import ShareDialogSignedIn from './ShareDialogSignedIn';
-import ShareDialogSignedOut from './ShareDialogSignedOut';
+import ShareAllowedDialog from './ShareAllowedDialog';
+import ShareDisallowedDialog from './ShareDisallowedDialog';
 
 class ShareDialog extends Component {
   static propTypes = {
@@ -16,11 +16,11 @@ class ShareDialog extends Component {
     // in version of the dialog
     if (signInState === SignInState.SignedIn || isProjectLevel) {
       return (
-        <ShareDialogSignedIn {...otherProps}/>
+        <ShareAllowedDialog {...otherProps}/>
       );
     }
 
-    return <ShareDialogSignedOut/>;
+    return <ShareDisallowedDialog/>;
   }
 }
 
