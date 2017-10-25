@@ -232,7 +232,7 @@ class CDOImpl < OpenStruct
   end
 
   def default_scheme
-    rack_env?(:development) ? 'http:' : 'https:'
+    rack_env?(:development) || ENV['CI'] ? 'http:' : 'https:'
   end
 
   def dir(*dirs)
