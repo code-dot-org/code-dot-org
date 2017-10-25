@@ -8,6 +8,7 @@ export default class Facilitator1819Questions extends React.Component {
   }
 
   render() {
+    // Render all the answers to the facilitator application grouped by the seven sections
     return (
       <div>
         {

@@ -4,6 +4,8 @@ import Facilitator1819Questions from './detail_view_facilitator_specific_compone
 import $ from 'jquery';
 import _ from 'lodash';
 
+// Public function to render a question/answer pair as either a line item or a panel
+// depending on whether the question will be assigned score
 const renderItem = (key, value, layout, iteratorKey) => {
   if (typeof value === 'string' || typeof value === 'object') {
     let renderedValue = value;
@@ -20,22 +22,22 @@ const renderItem = (key, value, layout, iteratorKey) => {
 };
 
 const renderLineItem = (key, value, iteratorKey) => {
-  let renderedValue = value;
-
+  // If there is a value to this line item, render the question. Then optionally
+  // render a : if the question does not end in ?, :, or . Then render the answer.
   return value && (
       <div key={iteratorKey}>
         <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
           {`${key}${'?:.'.indexOf(key[key.length - 1]) >= 0 ? '' : ':'}`}
         </span>
-        {renderedValue}
+        {value}
       </div>
     );
 };
 
-const renderQuestionBox = (question, answer, iteratorKey) => {
-  return answer && (
-    <Panel key={iteratorKey} header={question} style={{display: 'table'}}>
-      {answer}
+const renderQuestionBox = (key, value, iteratorKey) => {
+  return value && (
+    <Panel key={iteratorKey} header={key} style={{display: 'table'}}>
+      {value}
     </Panel>
   );
 };
