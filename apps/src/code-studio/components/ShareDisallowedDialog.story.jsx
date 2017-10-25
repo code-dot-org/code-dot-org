@@ -1,14 +1,14 @@
 import React from 'react';
-import { UnconnectedShareDialogSignedOut as ShareDialogSignedOut } from './ShareDialogSignedOut';
+import { UnconnectedShareDisallowedDialog as ShareDisallowedDialog } from './ShareDisallowedDialog';
 
 export default storybook => {
   storybook
-    .storiesOf('ShareDialogSignedOut', module)
+    .storiesOf('ShareDisallowedDialog', module)
     .addStoryTable([
       {
         name: 'basic example',
         story: () => (
-          <ShareDialogSignedOut
+          <ShareDisallowedDialog
             isOpen={true}
             hideShareDialog={() => {}}
           />
