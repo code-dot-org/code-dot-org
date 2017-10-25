@@ -1474,9 +1474,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "主頁"
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: "我的儀表板"
   header_courses: "課程"
-  header_course_catalog: Course Catalog
+  header_course_catalog: "課程目錄"
   header_project_gallery: "所有專案"
   header_sections: "學習小組"
   header_professional_learning: "專業學習"

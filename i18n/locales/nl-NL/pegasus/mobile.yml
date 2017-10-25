@@ -1385,7 +1385,7 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Home"
-  header_my_dashboard: "My Dashboard"
+  header_my_dashboard: "Mijn Dashboard"
   header_courses: "Cursussen"
   header_course_catalog: "Cursuscatalogus"
   header_project_gallery: "Projecten"
