@@ -77,6 +77,7 @@ level 'U3L07 - createTriangleParam', progression: 'Drawing Shapes With Parameter
 level 'U3L08 - squareTwoParams', progression: 'Drawing Shapes With Parameters'
 level 'U3L08 - createTwoParamTriangle', progression: 'Drawing Shapes With Parameters'
 assessment 'csp_U3_turtle_subgoal_q3_mc', progression: 'Check Your Understanding: Defining Functions'
+named_level 'U3 whats a comment', progression: '(new) How to add comments to code'
 named_level 'U3L08 how to add comments', progression: '(new) How to add comments to code'
 named_level 'U3L08 - introUnderTheSea with comments', progression: '(modification only) Intro to under the sea (instruction, and template change only)'
 level 'U3L08 - paramsToStarfish', progression: 'Under the Sea Drawing with Parameters'
