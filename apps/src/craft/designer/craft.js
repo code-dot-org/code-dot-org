@@ -22,6 +22,7 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
+import experiments from '../../util/experiments';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -826,6 +827,7 @@ Craft.reportResult = function (success) {
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
+  const saveToProjectGallery = experiments.isEnabled('publishMinecraft');
 
   studioApp().report({
     app: 'craft',
@@ -857,7 +859,7 @@ Craft.reportResult = function (success) {
         },
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
-        saveToProjectGallery: true,
+        saveToProjectGallery,
       });
     }
   });
