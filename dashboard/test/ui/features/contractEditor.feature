@@ -11,8 +11,7 @@ Scenario: Testing the contract variable editor
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  When I close the React alert
-  And I open the topmost blockly category "Variables"
+  When I open the topmost blockly category "Variables"
   And I see no difference for "category view"
   And I press the SVG text "Create a Variable"
   And I wait to see "#modalEditorClose"
@@ -33,8 +32,7 @@ Scenario: Creating and modifying a new contract
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  When I close the React alert
-  And I open the topmost blockly category "Functions"
+  When I open the topmost blockly category "Functions"
   And I see no difference for "category view"
   And I press the SVG text "Create a Function"
   And I wait to see "#modalEditorClose"

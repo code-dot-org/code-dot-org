@@ -55,6 +55,15 @@ export default class Facilitator1819FormComponent extends FormComponent {
     });
   }
 
+  radioButtonsWithAdditionalTextFieldsFor(name, textFieldMap, props = {}) {
+    return this.buildButtonsWithAdditionalTextFieldsFromOptions({
+      ...this.defaultOptions(name),
+      type: "radio",
+      textFieldMap,
+      ...props
+    });
+  }
+
   radioButtonsFor(name, props = {}) {
     return this.buildButtonsFromOptions({
       ...this.defaultOptions(name),
@@ -85,6 +94,13 @@ export default class Facilitator1819FormComponent extends FormComponent {
       controlWidth: {md: 12},
       rows: 4,
       maxLength: 500,
+      ...props
+    });
+  }
+
+  usPhoneNumberInputFor(name, props={}) {
+    return this.buildUsPhoneNumberInput({
+      ...this.defaultOptions(name),
       ...props
     });
   }

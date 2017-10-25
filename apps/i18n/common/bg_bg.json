@@ -812,6 +812,8 @@
   "cancel": "Cancel",
   "commentPrefix": "Comment:",
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
+  "createAccountToShare": "Create a Code.org account to share your project",
+  "createAccountToShareDescription": "You must create a Code.org account before you can share and publish your project. Creating an account will also let you save your progress and continue to work on your project later.",
   "gender": "Gender",
   "genderMale": "Male",
   "genderFemale": "Female",
@@ -843,5 +845,6 @@
   "signinCodeOrg": "Sign in to Code.org",
   "signinForProgress": "If you want to be able to save your progress, sign in to Code.org.",
   "signinOrAge": "Sign in or provide your age to continue",
-  "usernameLabel": "Username: "
+  "usernameLabel": "Username: ",
+  "workspaceProjectTemplateLevel": "This icon means that this level is part of a larger project. Changes will be saved across these levels."
 }

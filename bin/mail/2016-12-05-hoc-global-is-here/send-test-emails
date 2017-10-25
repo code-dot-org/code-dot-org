@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 4 2016-12-05-hoc-global-is-here ./test-params.csv

@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#dc7d1090bfc4efc8a8dcb138d8a437ff18168dc3":
-  version "0.0.11"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/dc7d1090bfc4efc8a8dcb138d8a437ff18168dc3"
+"@code-dot-org/craft@github:code-dot-org/craft#42da44bf33e63b95baabd81636f4de4767188652":
+  version "0.0.12"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/42da44bf33e63b95baabd81636f4de4767188652"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.0":
   version "0.11.1-cdo.0"
@@ -8540,7 +8540,13 @@ signal-exit@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.1.tgz#5a4c884992b63a7acd9badb7894c3ee9cfccad81"
 
-sinon-chai@^2.13.0:
+sinon-chai-in-order@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/sinon-chai-in-order/-/sinon-chai-in-order-0.1.0.tgz#6c4a95189713ff3349f99f83b24dcac69ad32ab2"
+  dependencies:
+    sinon-chai "^2.8.0"
+
+sinon-chai@^2.13.0, sinon-chai@^2.8.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-2.13.0.tgz#b9a42e801c20234bfc2f43b29e6f4f61b60990c4"
 

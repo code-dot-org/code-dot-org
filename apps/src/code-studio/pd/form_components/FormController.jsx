@@ -36,6 +36,7 @@ export default class FormController extends React.Component {
     this.state = {
       data: {},
       errors: [],
+      errorMessages: {},
       errorHeader: null,
       globalError: false,
       currentPage: 0,
@@ -140,6 +141,11 @@ export default class FormController extends React.Component {
    * @param {Event} event
    */
   handleSubmit(event) {
+    event.preventDefault();
+    if (!this.validateCurrentPageRequiredFields()) {
+      return;
+    }
+
     // clear errors so we can more clearly detect "new" errors and toggle
     // submitting flag so we can prevent duplicate submission
     this.setState({
@@ -246,6 +252,7 @@ export default class FormController extends React.Component {
       options: this.props.options,
       onChange: this.handleChange,
       errors: this.state.errors,
+      errorMessages: this.state.errorMessages,
       data: this.state.data
     };
   }
@@ -283,15 +290,39 @@ export default class FormController extends React.Component {
    *         are missing
    */
   validateCurrentPageRequiredFields() {
+    const currentPage = this.getCurrentPageComponent();
     const requiredFields = this.getRequiredFields();
-    const pageFields = this.getCurrentPageComponent().associatedFields;
-    const pageRequiredFields = pageFields.filter(f => requiredFields.includes(f));
-    const missingRequiredFields = pageRequiredFields.filter(f => !this.state.data[f]);
+    const pageFields = currentPage.associatedFields;
 
-    if (missingRequiredFields.length) {
+    // Trim string values on page, and set empty strings to null
+    const pageData = {};
+    pageFields.forEach(field => {
+      let value = this.state.data[field];
+      if (typeof value === "string") {
+        const trimmedValue = value.trim();
+        pageData[field] = trimmedValue.length > 0 ? trimmedValue : null;
+      } else {
+        pageData[field] = value;
+      }
+    });
+    this.setState({
+      data: {
+        ...this.state.data,
+        ...pageData
+      }
+    });
+
+    const pageRequiredFields = pageFields.filter(f => requiredFields.includes(f));
+    const missingRequiredFields = pageRequiredFields.filter(f => !pageData[f]);
+    const formatErrors = currentPage.getErrorMessages(pageData);
+
+    if (missingRequiredFields.length || Object.keys(formatErrors).length) {
       this.setState({
-        errors: missingRequiredFields,
-        errorHeader: "Please fill out all required fields"
+        errors: [...missingRequiredFields, ...Object.keys(formatErrors)],
+        errorMessages: formatErrors,
+        errorHeader:
+          "Please fill out all required fields. You must completely fill out this section before moving \
+          on to the next section or going back to edit a previous section."
       });
 
       return false;

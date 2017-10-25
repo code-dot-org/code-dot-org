@@ -1,4 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 12-07-hoc-general mailing-common/test-params-all.csv
-
