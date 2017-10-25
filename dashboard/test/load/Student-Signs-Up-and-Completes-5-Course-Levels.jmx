@@ -50,15 +50,20 @@
         <stringProp name="ThreadGroup.delay">0</stringProp>
       </ThreadGroup>
       <hashTree>
-        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
-          <stringProp name="TestPlan.comments">Generate random integer (Java long)</stringProp>
-          <stringProp name="maximumValue">9223372036854775807</stringProp>
-          <stringProp name="minimumValue">1</stringProp>
-          <stringProp name="outputFormat"></stringProp>
-          <boolProp name="perThread">false</boolProp>
-          <stringProp name="randomSeed"></stringProp>
-          <stringProp name="variableName">username</stringProp>
-        </RandomVariableConfig>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+          <stringProp name="cacheKey"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">def userNameSuffix = UUID.randomUUID().toString()
+def userName = &quot;LoadTest.Student.&quot; + userNameSuffix
+def userEmail = userName + &quot;@example.net&quot;
+ 
+vars.put(&quot;userName&quot;,userName)
+vars.put(&quot;userEmail&quot;,userEmail)
+
+</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/users/sign_in" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -299,7 +304,7 @@
               <elementProp name="user[name]" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">true</boolProp>
                 <stringProp name="Argument.name">user[name]</stringProp>
-                <stringProp name="Argument.value">LoadTestStudent.${username}</stringProp>
+                <stringProp name="Argument.value">${userName}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
@@ -327,7 +332,7 @@
               <elementProp name="user[email]" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">true</boolProp>
                 <stringProp name="Argument.name">user[email]</stringProp>
-                <stringProp name="Argument.value">loadtest.${username}@example.net</stringProp>
+                <stringProp name="Argument.value">${userEmail}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
