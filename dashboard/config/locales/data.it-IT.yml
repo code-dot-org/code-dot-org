@@ -395,10 +395,9 @@
 
           Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
           Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
-        bounce_12_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/8
-
-          Ora comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
+        bounce_12_sports: 'Ora comandi tu. Puoi modificare tutte le regole, combinando
+          i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per
+          consentire agli amici di provare il tuo gioco sui loro telefoni.'
         bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso
           sinistra` e premi "Esegui". Poi sposta la racchetta usando la freccia verso
           sinistra per raggiungere la bandierina.
@@ -952,6 +951,9 @@
         applab_hoc_onevent: App Lab Hour of Code - onEvent
         applab_hoc_designmode: AppLab Hour of Code - Design Mode
         applab_hoc_share: AppLab Hour of Code - Share
+        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
+        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
+        mc_2017_functions: Minecraft Hour of Code - Functions
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

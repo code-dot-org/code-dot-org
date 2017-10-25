@@ -406,6 +406,8 @@
       AppLab Intro 3 - Change Screen Color_authored_hint: []
       AppLab Intro 4 - Change Screen Color_authored_hint: []
       AppLab Intro 5 - Change Screen Color_authored_hint: []
+      AppLab Intro 6 - Change Screen Color_authored_hint: []
+      AppLab Intro 7 - Change Screen Color_authored_hint: []
       Artist Inspiration_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo
           colore a blu.
@@ -886,6 +888,9 @@
 
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: This is the third and final hint. It doesn't have anything special.
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
+          calling it twice to solve this puzzle.
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and
           make a decision?
@@ -946,6 +951,92 @@
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
+          End up on the orange square to win.
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
+          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_b: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
+          to move the player to the orange square.
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
+          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_b: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
+          to move the player to the orange square.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
+          use your arrow keys to walk the player to the compass!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
+          plate to let Alex or Steve through to the axe.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
+          you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
+          open the door for the player.
+        MC_HOC_2017_04_Cole_c: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          of a `repeat` to complete this puzzle.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          of a `repeat` to complete this puzzle.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
+          loop!
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
+          loop!
+      MC_HOC_2017_07_Cole_authored_hint: []
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -4526,6 +4617,9 @@
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
           square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
+        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move
+          **before** you turn, or else your circles will be off by the tiniest little
+          amount!
         courseD_artist_nestedLoops4_a: |-
           To make a circle:
           - Repeat 360 times
@@ -6027,7 +6121,22 @@
           Don't forget to turn afterward!
         courseE_artist_ramp8_c: Your loop should have two blocks inside of it, the
           `move forward` and the `turn right by 90 degrees`.
+      courseE_artist_ramp8_2_authored_hint:
+        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
+          block, and change the 100 to a 200.
+        courseE_artist_ramp8_b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move
+          forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
+        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks
+          to see which angle you need!
+        courseD_artist_ramp12_c: To draw each side, you will need to move forward
+          100 pixels, then turn right 120 degrees. How many sides do you need?
+      courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
         courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks
           to see which angle you need!
@@ -6599,54 +6708,58 @@
 
           Have a friend try your app when it is finished!
       courseF_IceAge_1_authored_hint:
-        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag
-          the `actor 1 say` block out from the toolbar and connect it to the `when
-          run` event block that is already in the workspace. Next, type "Hello!" inside.
+        iceage_hello1_a: Devi aggiungere solo un blocco per risolvere questo esercizio.
+          Trascina il blocco `il personaggio 1 dice ...` dalla cassetta degli attrezzi
+          e attaccalo all'evento`quando si clicca su "Esegui"` già presente nell'area
+          di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
       courseF_IceAge_10_authored_hint:
-        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an
-          arrow is pressed? When you click on Sid?  When you click on Granny?  The
-          choice is yours!
-        iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
-          you will need to connect the `set actor 2 mood to happy` block beneath the
-          `when actor 2 touches projectile` event.
+        iceage_throw_hearts_a: Quando vuoi lanciare i cuori alla nonna? Quando si
+          preme una freccia? Quando clicchi su Sid? Quando clicchi sulla Nonnina?
+          La scelta è tua!
+        iceage_throw_hearts_b: Per fare in modo che la nonna sia felice quando riceve
+          i cuori, devi collegare il blocco `imposta il personaggio 2 ad umore felice`
+          sotto all'evento `quando il personaggio 2 tocca dei cuori`.
       courseF_IceAge_11_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
-          catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
-          get bigger each time one hits?  End the game as a win if Diego gets hit
-          5 times.
+        iceage_free_play_a: Puoi fare in modo che Sid e Manny si sfidino a palle di
+          neve?
+        iceage_free_play_b: Fai in modo che la Nonnina debba inseguire Diego. Si vince
+          se lei riesce a prenderlo.
+        iceage_free_play_c: Riesci a fare in modo che Sid tiri fiocchi di neve a Diego
+          e far sì che Diego diventi più grande ogni volta che viene colpito? Si vince
+          quando Diego viene colpito 5 volte.
       courseF_IceAge_2_authored_hint:
         iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
           using the `actor 1 say` block.  You will also need to have Manny say something
           with the `actor 2 say` block. '
       courseF_IceAge_3_authored_hint:
-        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve
-          this puzzle.
+        iceage_hello3_a: Usa il blocco `sposta il personaggio 1 a destra 200 pixel`
+          per risolvere l'esercizio.
       courseF_IceAge_4_authored_hint:
-        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by
-          200 pixels, or move Manny up by 200 pixels.
-        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor
-          1 touches actor 2` event to finish this challenge.
+        iceage_move_to_actor_a: Per risolvere questo esercizio, puoi sia muovere Diego
+          in basso di 200 pixel, sia muovere Manny in alto di 200 pixel.
+        iceage_move_to_actor_b: Collega il blocco `riproduci il suono di ...` all'evento
+          `quando il personaggio 1 tocca il personaggio 2` per terminare questa sfida.
       courseF_IceAge_5_authored_hint:
-        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right`
-          blocks to solve this puzzle.
+        iceage_repeat_a: Usa entrambi i blocchi `sposta il personaggio 1 a destra`
+          e `sposta il personaggio 1 a sinistra` per risolvere questo esercizio.
       courseF_IceAge_6_authored_hint:
-        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked`
-          event to complete this puzzle.
+        iceage_click_hello_a: Per completare l'esercizio aggiungi uno o più blocchi
+          `il personaggio 1 dice` all'evento `quando si clicca sul personaggio 1`.
       courseF_IceAge_7_authored_hint:
-        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have
-          a different `move actor 1` command connected to it to solve this puzzle. '
+        iceage_move_events_a: Per risolvere l'esercizio, ogni evento `quando si preme
+          sulla freccia ...` ha bisogno di avere collegato un diverso comando `sposta
+          il personaggio ...`.
       courseF_IceAge_8_authored_hint:
-        iceage_sound_and_points_a: You will need to add two blocks beneath the `when
-          actor 1 touches actor 2` event.
-        iceage_sound_and_points_b: You will need both the `score a point` block and
-          the 'play ____ sound` block to pass this level.
+        iceage_sound_and_points_a: Dovrai aggiungere due blocchi sotto all'evento
+          `quando il personaggio 1 tocca il personaggio 2`.
+        iceage_sound_and_points_b: Avrai bisogno sia del blocco `aggiungi un punto`
+          sia di quello `riproduci il suono di ...` per completare questo esercizio.
       courseF_IceAge_9_authored_hint:
-        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
-          puzzle where it needs to be. '
-        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
-          have them happen immediately after the program starts.
+        iceage_warn_ice_age_a: Devi semplicemente aggiungere due blocchi per risolvere
+          questo esercizio.
+        iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento
+          `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
+          del programma.
       courseF_IceAge_template_authored_hint: []
       courseF_artist_embed_for7_authored_hint: []
       courseF_artist_for1_authored_hint:
@@ -6837,13 +6950,9 @@
           uguale a quello del contatore `counter` ed il blu è uguale a `255`–`counter`.
         courseF_artist_for_challenge2_a: La figura è una spirale di colore mutevole
           e tratti rettilinei progressivamente più lunghi.
-        courseF_artist_for_challenge2_b: |-
-          https://studio.code.org/s/course4/stage/20/puzzle/7
-          (NDT: era sfuggita la copia dell'URL nel context)
-
-          Il primo segmento è lungo 5 pixel ed ogni successivo segmento è 2 pixel più lungo, fino a 250.<br>
-          <br>
-          Al termine di ogni segmento l'artista gira di 80 gradi.
+        courseF_artist_for_challenge2_b: La soluzione di questo esercizio è più semplice
+          di quanto pensi. Basta impostare il colore all'interno del ciclo, andare
+          avanti e girare.
         courseF_artist_for_challenge2_d: |-
           **Solution:**
 
@@ -6960,12 +7069,13 @@
         courseF_artist_fwp4_c: You will need to call your function three times to
           draw the shapes.
       courseF_artist_fwp5_authored_hint:
-        courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
-          of sides it has.
-        courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
+        courseF_artist_fwp5_d: A `for` loop would really help you out here!
         courseF_artist_fwp5_c: You will need to edit the function a little bit, since
           your previous function turned the artist to the right after each side, and
           this image needs a turn to the left.
+        courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
+          of sides it has.
+        courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
       courseF_artist_fwp6_authored_hint:
         courseF_artist_fwp6_a: It's okay to run the program a few times to figure
           out how the function works with different parameters.
@@ -9494,62 +9604,66 @@
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       iceage_click_hello_authored_hint:
-        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked`
-          event to complete this puzzle.
+        iceage_click_hello_a: Per completare l'esercizio aggiungi uno o più blocchi
+          `il personaggio 1 dice` all'evento `quando si clicca sul personaggio 1`.
       iceage_free_play_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
-          catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
-          get bigger each time one hits?  End the game as a win if Diego gets hit
-          5 times.
+        iceage_free_play_a: Puoi fare in modo che Sid e Manny si sfidino a palle di
+          neve?
+        iceage_free_play_b: Fai in modo che la Nonnina debba inseguire Diego. Si vince
+          se lei riesce a prenderlo.
+        iceage_free_play_c: Riesci a fare in modo che Sid tiri fiocchi di neve a Diego
+          e far sì che Diego diventi più grande ogni volta che viene colpito? Si vince
+          quando Diego viene colpito 5 volte.
       iceage_free_playcourseF_IceAge_11_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
-          catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
-          get bigger each time one hits?  End the game as a win if Diego gets hit
-          5 times.
+        iceage_free_play_a: Puoi fare in modo che Sid e Manny si sfidino a palle di
+          neve?
+        iceage_free_play_b: Fai in modo che la Nonnina debba inseguire Diego. Si vince
+          se lei riesce a prenderlo.
+        iceage_free_play_c: Riesci a fare in modo che Sid tiri fiocchi di neve a Diego
+          e far sì che Diego diventi più grande ogni volta che viene colpito? Si vince
+          quando Diego viene colpito 5 volte.
       iceage_hello1_authored_hint:
-        iceage_hello1_a: |-
-          https://studio.code.org/s/iceage/stage/1/puzzle/1
-
-          Devi aggiungere solo un blocco per risolvere questo esercizio. Trascina il blocco `il personaggio dice ...` dalla cassetta degli attrezzi e attaccalo al blocco `quando si clicca su "Esegui"` già presente nell'area di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
+        iceage_hello1_a: Devi aggiungere solo un blocco per risolvere questo esercizio.
+          Trascina il blocco `il personaggio 1 dice ...` dalla cassetta degli attrezzi
+          e attaccalo all'evento`quando si clicca su "Esegui"` già presente nell'area
+          di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
       iceage_hello2_authored_hint:
         iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
           using the `actor 1 say` block.  You will also need to have Manny say something
           with the `actor 2 say` block. '
       iceage_move_events_authored_hint:
-        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have
-          a different `move actor 1` command connected to it to solve this puzzle. '
+        iceage_move_events_a: Per risolvere l'esercizio, ogni evento `quando si preme
+          sulla freccia ...` ha bisogno di avere collegato un diverso comando `sposta
+          il personaggio ...`.
       iceage_move_to_actor_authored_hint:
-        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by
-          200 pixels, or move Manny up by 200 pixels.
-        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor
-          1 touches actor 2` event to finish this challenge.
+        iceage_move_to_actor_a: Per risolvere questo esercizio, puoi sia muovere Diego
+          in basso di 200 pixel, sia muovere Manny in alto di 200 pixel.
+        iceage_move_to_actor_b: Collega il blocco `riproduci il suono di ...` all'evento
+          `quando il personaggio 1 tocca il personaggio 2` per terminare questa sfida.
       iceage_move_to_flag_authored_hint:
-        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve
-          this puzzle.
+        iceage_hello3_a: Usa il blocco `sposta il personaggio 1 a destra 200 pixel`
+          per risolvere l'esercizio.
       iceage_repeat_authored_hint:
-        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right`
-          blocks to solve this puzzle.
+        iceage_repeat_a: Usa entrambi i blocchi `sposta il personaggio 1 a destra`
+          e `sposta il personaggio 1 a sinistra` per risolvere questo esercizio.
       iceage_sound_and_points_authored_hint:
-        iceage_sound_and_points_a: You will need to add two blocks beneath the `when
-          actor 1 touches actor 2` event.
-        iceage_sound_and_points_b: You will need both the `score a point` block and
-          the 'play ____ sound` block to pass this level.
+        iceage_sound_and_points_a: Dovrai aggiungere due blocchi sotto all'evento
+          `quando il personaggio 1 tocca il personaggio 2`.
+        iceage_sound_and_points_b: Avrai bisogno sia del blocco `aggiungi un punto`
+          sia di quello `riproduci il suono di ...` per completare questo esercizio.
       iceage_throw_hearts_authored_hint:
-        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an
-          arrow is pressed? When you click on Sid?  When you click on Granny?  The
-          choice is yours!
-        iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
-          you will need to connect the `set actor 2 mood to happy` block beneath the
-          `when actor 2 touches projectile` event.
+        iceage_throw_hearts_a: Quando vuoi lanciare i cuori alla nonna? Quando si
+          preme una freccia? Quando clicchi su Sid? Quando clicchi sulla Nonnina?
+          La scelta è tua!
+        iceage_throw_hearts_b: Per fare in modo che la nonna sia felice quando riceve
+          i cuori, devi collegare il blocco `imposta il personaggio 2 ad umore felice`
+          sotto all'evento `quando il personaggio 2 tocca dei cuori`.
       iceage_warn_ice_age_authored_hint:
-        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
-          puzzle where it needs to be. '
-        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
-          have them happen immediately after the program starts.
+        iceage_warn_ice_age_a: Devi semplicemente aggiungere due blocchi per risolvere
+          questo esercizio.
+        iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento
+          `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
+          del programma.
       k1stickerfreeplay_authored_hint: []
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Alla fine dovresti avere cinque blocchi nel <i>ciclo</i>
