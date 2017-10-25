@@ -812,6 +812,8 @@
   "cancel": "Cancel",
   "commentPrefix": "Comment:",
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
+  "createAccountToShare": "Create a Code.org account to share your project",
+  "createAccountToShareDescription": "You must create a Code.org account before you can share and publish your project. Creating an account will also let you save your progress and continue to work on your project later.",
   "gender": "Gender",
   "genderMale": "Male",
   "genderFemale": "Female",
