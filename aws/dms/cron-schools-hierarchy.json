@@ -29,6 +29,16 @@
         "table-name": "school_districts"
       },
       "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "4",
+      "rule-name": "4",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "school_stats_by_years"
+      },
+      "rule-action": "include"
     }
   ]
 }

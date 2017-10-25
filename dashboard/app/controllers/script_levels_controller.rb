@@ -63,6 +63,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def show
+    @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 

@@ -58,7 +58,7 @@
         #name-block.itemblock
           #name-student.labelblock!= t('activerecord.attributes.user.name_example')
           #name-teacher.labelblock{style: "display: none"}= t('activerecord.attributes.user.name')
-          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          = f.text_field :name, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
         #schooldropdown-block.itemblock{style: "display: none;"}

@@ -531,4 +531,71 @@ FactoryGirl.define do
     association :regional_partner
     state 'WA'
   end
+
+  factory :pd_facilitator1819_application_hash, class: 'Hash' do
+    transient do
+      program Pd::Application::Facilitator1819Application::PROGRAM_OPTIONS.first
+      state 'WA'
+      add_attribute :zip_code, '98101'
+    end
+
+    initialize_with do
+      {
+        firstName: 'Rubeus',
+        lastName: 'Hagrid',
+        phone: '555-555-5555',
+        address: '101 Hogwarts Ave',
+        city: 'Seattle',
+        state: state,
+        zipCode: zip_code,
+        genderIdentity: 'Male',
+        race: ['Other'],
+        institutionType: ['Institute of higher education'],
+        currentEmployer: 'Gryffindor House',
+        jobTitle: 'Keeper of Keys and Grounds of Hogwarts',
+        resumeLink: 'linkedin.com/rubeus_hagrid',
+        workedInCsJob: 'No',
+        completedCsCoursesAndActivities: ['Advanced CS in HS or College'],
+        diversityTraining: 'No',
+        howHeard: ['Code.org email'],
+        program: program,
+        planOnTeaching: ['Yes'],
+        abilityToMeetRequirements: '4',
+        led_cs_extracurriculars: ['Hour of Code'],
+        teaching_experience: 'No',
+        codeOrgFacilitator: 'No',
+        haveLedPd: 'Yes',
+        groupsLedPd: ['None'],
+        describePriorPd: 'PD description',
+        whoShouldHaveOpportunity: 'all students',
+        howSupportEquity: 'support equity',
+        expectedTeacherNeeds: 'teacher needs',
+        describeAdaptingLessonPlan: 'adapt lesson plan',
+        describeStrategies: 'strategies',
+        exampleHowUsedFeedback: 'used feedback',
+        exampleHowProvidedFeedback: 'provided feedback',
+        hopeToLearn: 'many things',
+        availableDuringWeek: 'Yes',
+        weeklyAvailability: ['10am ET / 7am PT'],
+        travelDistance: 'Within my city',
+        additionalInfo: 'none',
+        agree: true
+      }.tap do |hash|
+        if program == Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
+          hash[:csfAvailability] = 'Yes'
+        else
+          hash[:csd_csp_teachercon_availability] = 'TeacherCon 1: June 17 - 22, 2018'
+          hash[:csd_csp_fit_availability] = 'June 23 - 24, 2018 (immediately following TeacherCon 1)'
+        end
+      end.stringify_keys
+    end
+  end
+
+  factory :pd_facilitator1819_application, class: 'Pd::Application::Facilitator1819Application' do
+    association :user, factory: :teacher, strategy: :create
+    transient do
+      form_data_hash {build :pd_facilitator1819_application_hash}
+    end
+    form_data {form_data_hash.to_json}
+  end
 end

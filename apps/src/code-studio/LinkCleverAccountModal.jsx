@@ -93,7 +93,7 @@ export default class LinkCleverAccountModal extends React.Component {
         fixedWidth={600}
         fixedHeight={310}
         isOpen={this.props.isOpen}
-        handleClose={this.cancel}
+        uncloseable
         assetUrl={() => ''}
         {...this.props}
       >

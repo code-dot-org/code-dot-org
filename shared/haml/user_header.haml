@@ -37,11 +37,16 @@
   // Use function closure to avoid cluttering global namespace.
   (function() {
     var cookieKey = '#{'_shortName' + (rack_env?(:production) ? '' : "_#{rack_env}")}';
+    // Because we use rack_env in our cookie key, the client has no way of knowing
+    // what key to look for. Stash it on window so that clients can access this.
+    window.userNameCookieKey = cookieKey;
     // Share cookie with top-level domain.
     var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
     var cookieMeta = "path=/;domain=" + topLevelDomain;
 
     // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
     var nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
     if (nameSpan) {
       var dataName = nameSpan.dataset.shortname;

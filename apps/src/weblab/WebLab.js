@@ -163,6 +163,12 @@ WebLab.prototype.init = function (config) {
       onPuzzleComplete: this.onFinish.bind(this),
       unsubmitUrl: this.level.unsubmitUrl
     });
+
+    // The project template workspace icon callout appears too far to the left
+    // if we don't delay this slightly (currently 0.1 seconds)
+    setTimeout(() => {
+      this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+    }, 100);
   };
 
   // Push initial level properties into the Redux store

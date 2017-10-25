@@ -138,8 +138,7 @@ const ScriptEditor = React.createClass({
             style={styles.checkbox}
           />
           <p>
-            Require users to log in before viewing this script. This should be
-            enabled on scripts that contain App Lab or Game Lab levels.
+            Require users to log in before viewing this script.
           </p>
         </label>
         <label>

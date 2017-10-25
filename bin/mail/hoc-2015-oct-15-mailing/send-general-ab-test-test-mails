@@ -1,6 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 10-15-hoc-general-1 hoc-2015-oct-15-mailing/test-params.csv
-./send-to-mailing-list 10-15-hoc-general-2 hoc-2015-oct-15-mailing/test-params.csv
-./send-to-mailing-list 10-15-hoc-general-3 hoc-2015-oct-15-mailing/test-params.csv
-./send-to-mailing-list 10-15-hoc-general-4 hoc-2015-oct-15-mailing/test-params.csv

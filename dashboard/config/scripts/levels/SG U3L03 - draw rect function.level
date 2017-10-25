@@ -40,12 +40,14 @@
       },
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "penUp": null,
+      "penDown": null
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Write a function called drawRectangle().\r\n(Click to see full instructions)",
-    "markdown_instructions": "This is your code from the previous level.  Did you know that you can write functions that call your other functions?\r\n\r\nTake the code that draws the rectangle and move it into a new function called `drawRectangle()`. The first line of your program should be a single call to `drawRectangle()`. The rest of the code should just be function definitions, including your definition for **right**.\r\n\r\nYou'll only need one subgoal for this, `\\\\Define function`.\r\n\r\nNOTE: your program will still do the same thing.  We are just changing the way it is written to demonstrate that you can use functions you've already written as building blocks in new functions.\r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)",
+    "markdown_instructions": "This is your code from the previous level.  Did you know that you can write functions that call your other functions?\r\n\r\nTake the code that draws the rectangle and move it into a new function called `drawRectangle()`. The first line of your program should be a single call to `drawRectangle()`. The rest of the code should just be function definitions, including your definition for **right**.\r\n\r\nYou'll only need one subgoal for this, `//Define function`.\r\n\r\nNOTE: your program will still do the same thing.  We are just changing the way it is written to demonstrate that you can use functions you've already written as building blocks in new functions.\r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -159,7 +161,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 15:19:46 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-10 17:07:11 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-12 16:58:28 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-12 16:59:26 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 15:19:46 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-10 17:07:11 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-12 16:58:28 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-12 16:59:26 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-20 13:17:48 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-20 19:17:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

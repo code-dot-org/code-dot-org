@@ -79,7 +79,7 @@ class Craft < Blockly
     bricks: true,
     cactus: true,
     clay: true,
-    clayHardened: true,
+    terracotta: true,
     cobblestone: true,
     deadBush: true,
     dirt: true,
@@ -233,10 +233,6 @@ class Craft < Blockly
     zombieHurt: true,
     zombieHurt2: true,
   }.freeze
-
-  ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]".freeze
-  ALL_MINIBLOCKS_ARRAY = "[\"#{ALL_MINIBLOCKS.keys[1..-1].join('", "')}\"]".freeze
-  ALL_SOUNDS_ARRAY = "[\"#{ALL_SOUNDS.keys[1..-1].join('", "')}\"]".freeze
 
   KNOWN_TILE_TYPES = {
     ground_plane: ALL_BLOCKS,

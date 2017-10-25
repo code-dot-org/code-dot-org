@@ -6,7 +6,6 @@ Feature: Big Game Versions
     Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/6?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    Then I close the React alert
     And element "#runButton" is visible
 
   @no_safari
