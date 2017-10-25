@@ -30,7 +30,20 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications/1
   def show
-    render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
+    render json: @application, each_serializer: Api::V1::Pd::ApplicationSerializer
+  end
+
+  # GET /api/v1/pd/applications/quick_view/csf/facilitator
+  def quick_view
+    course = params[:course]
+    role = params[:role]
+    applications = if role == 'facilitator'
+                     Pd::Application::Facilitator1819Application.send(course)
+                   else
+                     Pd::Application::Teacher1819Application.send(course)
+                   end
+
+    render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
   end
 
   # PATCH /api/v1/pd/applications/1
