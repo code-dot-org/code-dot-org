@@ -1,27 +1,40 @@
 import React, {PropTypes} from 'react';
-import {renderLineItem} from './detail_view_contents';
-import _ from 'lodash';
+import DetailViewResponse from './detail_view_response';
+import {sectionLabels, pageLabels, scoredQuestions, detailPageLabelOverrides} from '../application/facilitator1819/Facilitator1819Labels';
 
-const lineItemKeys = {
-  planToTeachThisYear1819: 'Do you plan on teaching this course in the 2018-19 school year?',
-  rateAbility: 'How would you rate your ability to meet the requirements for your focus area?',
-  canAttendFIT: 'Can attend FIT Training?'
-};
-
-class Facilitator1819Program extends React.Component {
+export default class Facilitator1819Questions extends React.Component {
   static propTypes = {
-    planToTeachThisYear1819: PropTypes.arrayOf(PropTypes.string.isRequired),
-    abilityToMeetRequirements: PropTypes.string.isRequired
+    formResponses: PropTypes.object.isRequired
   }
 
   render() {
-    return  (
+    // Render all the answers to the facilitator application grouped by the seven sections
+    return (
       <div>
-        {renderLineItem(lineItemKeys['planToTeachThisYear1819'], _.join(this.props.planToTeachThisYear1819, ','))}
-        {renderLineItem(lineItemKeys['rateAbility'], this.props.abilityToMeetRequirements)}
+        {
+          Object.keys(sectionLabels).map((section, i) => {
+            return (
+              <div key={i}>
+                <h3>
+                  {sectionLabels[section]}
+                </h3>
+                {
+                  Object.keys(pageLabels[section]).map((question, j) => {
+                    return (
+                      <DetailViewResponse
+                        question={detailPageLabelOverrides[question] || pageLabels[section][question]}
+                        answer={this.props.formResponses[question]}
+                        key={j}
+                        layout={scoredQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
+                      />
+                    );
+                  })
+                }
+              </div>
+            );
+          })
+        }
       </div>
     );
   }
 }
-
-export {Facilitator1819Program};
