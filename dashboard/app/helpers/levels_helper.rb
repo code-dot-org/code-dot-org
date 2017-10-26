@@ -1,7 +1,8 @@
 require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
-require "firebase_token_generator"
+require 'firebase_token_generator'
+require 'image_size'
 
 module LevelsHelper
   include ApplicationHelper
@@ -808,14 +809,24 @@ module LevelsHelper
   #
   # @param level_image [String] A base64-encoded image.
   # @param level_source_id [Integer, nil] The id of a LevelSource or nil.
+  # @param upgrade [Boolean] Whether to replace the saved image if level_image
+  #   is higher resolution
   # @returns [LevelSourceImage] A level source image, or nil if one was not
   # created or found.
-  def find_or_create_level_source_image(level_image, level_source_id)
+  def find_or_create_level_source_image(level_image, level_source_id, upgrade=false)
     level_source_image = nil
-    # Store the image only if the image is set, and the image has not been saved
+    # Store the image only if the image is set, and either the image has not been
+    # saved or the saved image is smaller than the provided image
     if level_image && level_source_id
       level_source_image = LevelSourceImage.find_by(level_source_id: level_source_id)
-      unless level_source_image
+      upgradable = false
+      if upgrade && level_source_image
+        old_image_size = ImageSize.path(level_source_image.s3_url)
+        new_image_size = ImageSize.new(Base64.decode64(level_image))
+        upgradable = new_image_size.width > old_image_size.width &&
+          new_image_size.height > old_image_size.height
+      end
+      if !level_source_image || upgradable
         level_source_image = LevelSourceImage.new(level_source_id: level_source_id)
         unless level_source_image.save_to_s3(Base64.decode64(level_image))
           level_source_image = nil
