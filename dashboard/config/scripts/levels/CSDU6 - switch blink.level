@@ -212,11 +212,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
