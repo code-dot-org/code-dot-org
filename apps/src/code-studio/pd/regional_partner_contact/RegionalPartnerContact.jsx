@@ -111,7 +111,7 @@ class RegionalPartnerContactComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'program',
-            label: 'What program are you interested in?',
+            label: 'Which programs are you interested in?',
             type: 'check',
             required: true
           })
