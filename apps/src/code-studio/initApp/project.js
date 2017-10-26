@@ -518,6 +518,9 @@ var projects = module.exports = {
           case 'iceage':
             return msg.defaultProjectNameIceAge();
         }
+        break;
+      case 'craft':
+        return msg.defaultProjectNameMinecraft();
     }
     return msg.defaultProjectName();
   },
