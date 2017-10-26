@@ -535,7 +535,7 @@ FactoryGirl.define do
   factory :pd_facilitator1819_application_hash, class: 'Hash' do
     transient do
       program Pd::Application::Facilitator1819Application::PROGRAM_OPTIONS.first
-      state 'WA'
+      state 'Washington'
       add_attribute :zip_code, '98101'
     end
 
@@ -561,8 +561,14 @@ FactoryGirl.define do
         program: program,
         planOnTeaching: ['Yes'],
         abilityToMeetRequirements: '4',
-        led_cs_extracurriculars: ['Hour of Code'],
-        teaching_experience: 'No',
+        ledCsExtracurriculars: ['Hour of Code'],
+        teachingExperience: 'No',
+        gradesTaught: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'],
+        gradesCurrentlyTeaching: ['Grade 7'],
+        subjects_taught: ['Computer Science'],
+        yearsExperience: 'None',
+        experienceLeading: ['AP CS A', 'Hour of Code'],
+        completedPd: ['CS Fundamentals (1 day workshop)'],
         codeOrgFacilitator: 'No',
         haveLedPd: 'Yes',
         groupsLedPd: ['None'],

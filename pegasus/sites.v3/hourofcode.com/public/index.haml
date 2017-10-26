@@ -22,7 +22,6 @@ social:
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 ---
-%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -facebook = {:u=>"http://#{request.host}/us"}
@@ -203,6 +202,8 @@ social:
   %a#hocsignupform{name: 'signup'}
   #join
     %h1#join-us-header=hoc_s(:front_join_us_button)
+    -if ["post-hoc", false].include?(hoc_mode)
+      %h3#signup-closed=hoc_s(:signup_closed)
     %h1#thanks-header{style: "display:none;"}=hoc_s(:census_thanks)
     %div
       .row

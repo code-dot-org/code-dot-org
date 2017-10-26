@@ -21,6 +21,8 @@ end
 def element_stale?(element)
   element.enabled?
   false
+rescue Selenium::WebDriver::Error::JavascriptError => e
+  e.message.starts_with? 'Element does not exist in cache'
 rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
