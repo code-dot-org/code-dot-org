@@ -48,16 +48,16 @@ export default class QuickViewTable extends React.Component {
     },{
       property: 'id',
       header: {
-        label: '',
+        label: 'View Application',
       },
       cell: {
-        format: this.formatStatus
+        format: this.formatViewButton
       }
     });
     return columns;
   }
 
-  formatStatus = (id) => {
+  formatViewButton = (id) => {
     return (
       <Button
         bsSize="xsmall"
@@ -67,7 +67,7 @@ export default class QuickViewTable extends React.Component {
         View Application
       </Button>
     );
-  };
+  }
 
   render() {
     const rows = this.props.data;
