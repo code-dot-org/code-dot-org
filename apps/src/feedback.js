@@ -590,6 +590,9 @@ FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
  * @returns {Promise} A promise which resolves if successful.
  */
 FeedbackUtils.saveThumbnail = function (image) {
+  if (!image) {
+    return Promise.resolve();
+  }
   return dataURIToBlob(image)
     .then(project.saveThumbnail)
     // Don't pass any arguments to project.save().

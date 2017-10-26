@@ -32,9 +32,10 @@ class HomeControllerTest < ActionController::TestCase
   test "student without progress or assigned course/script redirected to index" do
     user = create(:user)
     sign_in user
-    get :index
-
-    assert_redirected_to '/home'
+    assert_queries 4 do
+      get :index
+      assert_redirected_to '/home'
+    end
   end
 
   test "student with progress but not an assigned course/script will go to index" do
@@ -71,7 +72,9 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "redirect index when signed out" do
-    get :index
+    assert_queries 0 do
+      get :index
+    end
 
     assert_redirected_to '/courses'
   end
@@ -153,14 +156,18 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "do not show gallery activity pagination when not signed in" do
-    get :gallery_activities
+    assert_queries 0 do
+      get :gallery_activities
+    end
     assert_redirected_to_sign_in
   end
 
   test "show gallery activity pagination when signed in" do
     setup_user_with_gallery
 
-    get :gallery_activities
+    assert_queries 13 do
+      get :gallery_activities
+    end
     assert_response :success
 
     assert_select 'div.gallery_activity img', 5
@@ -260,14 +267,18 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop organizers see only new dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    get :home
+    assert_queries 9 do
+      get :home
+    end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
     assert_select 'h1', count: 0, text: 'Old CSF Workshop Dashboard'
   end
 
   test 'workshop admins see new and old dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    get :home
+    assert_queries 9 do
+      get :home
+    end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
     assert_select 'h1', count: 1, text: 'Old CSF Workshop Dashboard'
   end
@@ -275,7 +286,9 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see only new dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    get :home
+    assert_queries 9 do
+      get :home
+    end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
     assert_select 'h1', count: 0, text: 'Old CSF Workshop Dashboard'
   end
@@ -284,14 +297,18 @@ class HomeControllerTest < ActionController::TestCase
     teacher = create :terms_of_service_teacher
     teacher.permission = UserPermission::CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP
     sign_in teacher
-    get :home
+    assert_queries 9 do
+      get :home
+    end
     assert_select 'h1', count: 0, text: 'Workshop Dashboard'
     assert_select 'h1', count: 1, text: 'Old CSF Workshop Dashboard'
   end
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    get :home
+    assert_queries 9 do
+      get :home
+    end
     assert_select 'h1', count: 0, text: 'Workshop Dashboard'
     assert_select 'h1', count: 0, text: 'Old CSF Workshop Dashboard'
   end

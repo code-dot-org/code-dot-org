@@ -25,24 +25,24 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
       <FormGroup>
         <h3>Section 3: Leading Students</h3>
 
-        {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
-          "Other (please list)" : "other"
-        })}
-
         {this.radioButtonsFor("teachingExperience")}
+
+        {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
+          "Other (Please List):" : "other"
+        })}
 
         {this.props.data.teachingExperience === YES &&
           <div>
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesTaught", {
-              "Other" : "other"
+              "Other:" : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesCurrentlyTeaching", {
-              "Other" : "other"
+              "Other:" : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTaught", {
-              "Other" : "other"
+              "Other:" : "other"
             })}
 
             {this.radioButtonsFor("yearsExperience")}

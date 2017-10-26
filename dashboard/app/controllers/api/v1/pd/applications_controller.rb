@@ -32,4 +32,19 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   def show
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
   end
+
+  # PATCH /api/v1/pd/applications/1
+  def update
+    @application.update(application_params)
+
+    render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
+  end
+
+  private
+
+  def application_params
+    params.require(:application).permit(
+      :status, :notes
+    )
+  end
 end

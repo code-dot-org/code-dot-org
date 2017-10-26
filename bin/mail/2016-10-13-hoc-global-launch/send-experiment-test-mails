@@ -1,5 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2016-10-13-hoc-global-launch-1 ./test-params.csv
-../send-to-mailing-list 2016-10-13-hoc-global-launch-2 ./test-params.csv
-../send-to-mailing-list 2016-10-13-hoc-global-launch-3 ./test-params.csv

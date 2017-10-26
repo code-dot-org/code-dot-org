@@ -13,7 +13,6 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
-import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -72,7 +71,6 @@ const ScriptOverview = React.createClass({
       <div>
         {onOverviewPage && (
           <div>
-            <SignInOrAgeDialog/>
             <ScriptOverviewHeader/>
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}

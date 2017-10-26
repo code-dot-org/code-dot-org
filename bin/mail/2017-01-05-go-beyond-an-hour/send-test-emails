@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 6  2017-01-05-go-beyond-an-hour ./test-params.csv

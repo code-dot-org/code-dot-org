@@ -23,7 +23,7 @@ Tell your friends and co-workers about the Hour of Code. We have thousands of te
 Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## How you get selected
-- Teachers will be searching for volunteers on our [volunteer map](/volunteer/local).
+- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
 - Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
 - A teacher will contact you through this form (your email address will never be shared with the teacher). 
   - If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 

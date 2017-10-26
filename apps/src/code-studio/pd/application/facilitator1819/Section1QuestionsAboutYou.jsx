@@ -1,8 +1,13 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
+import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {pageLabels} from './Facilitator1819Labels';
 import {YES} from '../ApplicationConstants';
+
+const FACILITATOR_URL = "https://code.org/educate/facilitator";
+const FACILITATOR_EMAIL = "facilitators@code.org";
+const ZIP_CODE_REGEX = /^\d{5}([\W-]?\d{4})?$/;
 
 export default class Section1QuestionsAboutYou extends Facilitator1819FormComponent {
   static propTypes = {
@@ -24,10 +29,28 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
   render() {
     return (
       <FormGroup>
+        <p>
+          Thanks for your interest in the Code.org Facilitator Development Program!
+        </p>
+        <p>
+          This application should take 30 - 45 minutes to complete and includes both multiple choice and free response questions.
+          Fields marked with a
+          {' '}<span style={{color: "red"}}>*</span>{' '}
+          are required. If you need more information on the program before you apply, please visit
+          {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}
+          If you have questions regarding the Facilitator program or application, please contact
+          {' '}<a href={`mailto:${FACILITATOR_EMAIL}`}>{FACILITATOR_EMAIL}</a>.
+        </p>
+        <p>
+          <strong>
+            The deadline to apply is Dec. 1, 2017.
+          </strong>
+        </p>
+
         <h3>Section 1: About You</h3>
         {this.selectFor("title", {
           required: false,
-          placeholder: "Select a title (Optional)"
+          placeholder: "Select a title"
         })}
         {this.inputFor("firstName")}
         {this.inputFor("preferredFirstName", {required: false})}
@@ -39,17 +62,19 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
         })}
 
         {this.inputFor("alternateEmail", {required: false})}
-        {this.inputFor("phone")}
+
+        {this.usPhoneNumberInputFor("phone")}
+
         {this.inputFor("address")}
         {this.inputFor("city")}
-        {this.inputFor("state")}
+        {this.selectFor("state", {placeholder: "Select a state"})}
         {this.inputFor("zipCode")}
 
         {this.radioButtonsFor("genderIdentity")}
         {this.checkBoxesFor("race")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("institutionType", {
-          "Other" : "other"
+          "Other:" : "other"
         })}
 
         {this.inputFor("currentEmployer")}
@@ -64,7 +89,7 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("completedCsCoursesAndActivities", {
-          "Other" : "other"
+          "Other:" : "other"
         })}
 
         {this.radioButtonsFor("diversityTraining")}
@@ -73,9 +98,10 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("howHeard", {
-          "A current Code.org facilitator (please share name)": "facilitator",
-          "A Code.org staff member (please share name)": "codeOrgStaff",
-          "Other": "other"
+          "A Code.org facilitator (please share name):": "facilitator",
+          "A Code.org staff member (please share name):": "codeOrgStaff",
+          "A Code.org Regional Partner (please share name):": "regionalPartner",
+          "Other:": "other"
         })}
       </FormGroup>
     );
@@ -96,5 +122,22 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
 
     return requiredFields;
   }
-}
 
+  /**
+   * @override
+   */
+  static getErrorMessages(data) {
+    const formatErrors = {};
+
+    if (data.zipCode && !ZIP_CODE_REGEX.exec(data.zipCode)) {
+      formatErrors.zipCode = "Must be a valid zip code";
+    }
+
+    if (!UsPhoneNumberInput.isValid(data.phone)) {
+      formatErrors.phone = "Must be a valid phone number including area code";
+    }
+
+    return formatErrors;
+  }
+
+}

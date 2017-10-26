@@ -89,7 +89,7 @@ const styles = {
 
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
-export const AssetListItem = Radium(class extends React.Component {
+class AssetListItemUnwrapped extends React.Component {
   static propTypes = {
     asset: importableAssetShape,
   };
@@ -114,13 +114,14 @@ export const AssetListItem = Radium(class extends React.Component {
       </div>
     );
   }
-});
+}
+export const AssetListItem = Radium(AssetListItemUnwrapped);
 
 function quotedCommaJoin(strings) {
   return strings.map(s => `"${s}"`).join(', ');
 }
 
-export const ScreenListItem = Radium(class extends React.Component {
+class ScreenListItemUnwrapped extends React.Component {
   static propTypes = {
     screen: importableScreenShape,
   };
@@ -160,7 +161,8 @@ export const ScreenListItem = Radium(class extends React.Component {
       </div>
     );
   }
-});
+}
+export const ScreenListItem = Radium(ScreenListItemUnwrapped);
 
 export class ImportScreensDialog extends React.Component {
   static propTypes = {

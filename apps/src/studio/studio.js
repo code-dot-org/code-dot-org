@@ -72,6 +72,7 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
+import experiments from '../util/experiments';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -119,7 +120,9 @@ let level;
 let skin;
 
 // These skins can be published as projects.
-const PUBLISHABLE_SKINS = ['gumball', 'studio', 'iceage', 'infinity'];
+const PUBLISHABLE_SKINS = [
+  'gumball', 'studio', 'iceage', 'infinity'
+].concat(experiments.isEnabled('publishMoreProjects') ? 'hoc2015' : undefined);
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -2804,7 +2807,7 @@ Studio.displayFeedback = function () {
       // The rails session cookie is blocked on some playlab level types,
       // causing isSignedIn to be null. In this case, use the userType (based on
       // a different cookie) to determine if the user is signed in.
-      disableSaveToGallery: level.disableSaveToGallery || !(isSignedIn || userType),
+      disableSaveToGallery: !(isSignedIn || userType),
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
