@@ -517,10 +517,21 @@ var projects = module.exports = {
             return msg.defaultProjectNameGumball();
           case 'iceage':
             return msg.defaultProjectNameIceAge();
+          case 'hoc2015':
+            return msg.defaultProjectNameStarWars();
         }
         break;
       case 'craft':
         return msg.defaultProjectNameMinecraft();
+      case 'flappy':
+        return msg.defaultProjectNameFlappy();
+      case 'bounce':
+        if (appOptions.skinId === 'sports') {
+          return msg.defaultProjectNameSports();
+        } else if (appOptions.skinId === 'basketball') {
+          return msg.defaultProjectNameBasketball();
+        }
+        return msg.defaultProjectNameBounce();
     }
     return msg.defaultProjectName();
   },
