@@ -23,6 +23,10 @@ export default class SummaryTable extends React.Component {
     path: PropTypes.string.isRequired
   }
 
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   tableRow = (label, bgColor, data) =>  {
     const status = label.toLowerCase();
     const num_locked = data[status]['locked'];
@@ -37,10 +41,6 @@ export default class SummaryTable extends React.Component {
       </tr>
     );
   };
-
-  handleQuickViewClick = () => {
-    window.location = '/pd/application_dashboard/' + this.props.path;
-  }
 
   render() {
     return (
@@ -63,7 +63,7 @@ export default class SummaryTable extends React.Component {
             {this.tableRow('Unreviewed', color.charcoal, this.props.data)}
           </tbody>
         </Table>
-        <Button onClick={this.handleQuickViewClick}>
+        <Button href={this.context.router.createHref(`/${this.props.path}`)}>
           View all applications
         </Button>
       </div>

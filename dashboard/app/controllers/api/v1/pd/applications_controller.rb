@@ -38,8 +38,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     params.require(:application).permit(
       :status, :notes
     )
-
-  private
+  end
 
   APPLICATION_TYPES = {
     csf_facilitators: Pd::Application::Facilitator1819Application.csf,
