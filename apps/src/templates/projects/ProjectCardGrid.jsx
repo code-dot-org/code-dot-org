@@ -57,8 +57,7 @@ const ProjectCardGrid = React.createClass({
   render() {
     const { projectLists } = this.props;
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
-    const showMinecraft = experiments.isEnabled('publishMinecraft');
-    const showEvents = experiments.isEnabled('publishEvents');
+    const showMoreProjects = experiments.isEnabled('publishMoreProjects');
 
     return (
       <div style={styles.grid}>
@@ -74,7 +73,7 @@ const ProjectCardGrid = React.createClass({
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
-            {showEvents &&
+            {showMoreProjects &&
               <ProjectAppTypeArea
                 labKey="events"
                 labName={i18n.projectGroupEvents()}
@@ -96,7 +95,7 @@ const ProjectCardGrid = React.createClass({
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
-            {showMinecraft &&
+            {showMoreProjects &&
               <ProjectAppTypeArea
                 labKey="minecraft"
                 labName={i18n.projectGroupMinecraft()}
