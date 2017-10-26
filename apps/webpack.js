@@ -37,6 +37,7 @@ var baseConfig = {
       // of `http` via `node-libs-browser`. While we're still on Webpack 1,
       // override resolving of `http` to point to the newer implementation.
       http: 'stream-http',
+      temporal: path.resolve(__dirname, 'src', 'lib', 'util', 'temporalShim.js'),
     }
   },
   sassLoader: {
