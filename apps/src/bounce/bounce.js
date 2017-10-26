@@ -1015,7 +1015,8 @@ var displayFeedback = function () {
       appStrings: {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
         sharingText: bounceMsg.shareGame()
-      }
+      },
+      saveToProjectGallery: true,
     });
   }
 };

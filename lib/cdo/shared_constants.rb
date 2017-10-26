@@ -59,6 +59,9 @@ module SharedConstants
     starwars
     starwarsblocks_hour
     flappy
+    bounce
+    sports
+    basketball
   ).freeze
 
   PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(
