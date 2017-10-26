@@ -54,6 +54,16 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
 
   subtype.drawMapTiles(svg);
 
+  // Add hint path.
+  const hintPath = document.createElementNS(SVG_NS, 'path');
+  hintPath.setAttribute('id', 'hintPath');
+  hintPath.setAttribute('stroke', '#c00');
+  hintPath.setAttribute('stroke-width', '5');
+  hintPath.setAttribute('fill', 'none');
+  hintPath.setAttribute('stroke-linecap', 'round');
+  hintPath.setAttribute('stroke-linejoin', 'round');
+  svg.appendChild(hintPath);
+
   if (subtype.start) {
     // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
     const pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
@@ -135,9 +145,4 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
       }
     }
   }
-
-  // Add hint path.
-  const hintPath = document.createElementNS(SVG_NS, 'g');
-  hintPath.setAttribute('id', 'hintPath');
-  svg.appendChild(hintPath);
 }
