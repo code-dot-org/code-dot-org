@@ -26,6 +26,8 @@ const ProjectCardGrid = React.createClass({
       gamelab: PropTypes.arrayOf(projectPropType),
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
+      minecraft: PropTypes.arrayOf(projectPropType),
+      bounce: PropTypes.arrayOf(projectPropType),
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired
@@ -56,6 +58,7 @@ const ProjectCardGrid = React.createClass({
     const { projectLists } = this.props;
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
     const showMinecraft = experiments.isEnabled('publishMinecraft');
+    const showEvents = experiments.isEnabled('publishEvents');
 
     return (
       <div style={styles.grid}>
@@ -71,6 +74,18 @@ const ProjectCardGrid = React.createClass({
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
+            {showEvents &&
+              <ProjectAppTypeArea
+                labKey="events"
+                labName={i18n.projectGroupEvents()}
+                labViewMoreString={i18n.projectGroupEventsViewMore()}
+                projectList={projectLists.events}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.onSelectApp}
+                isDetailView={false}
+              />
+            }
             <ProjectAppTypeArea
               labKey="artist"
               labName={i18n.projectTypeArtist()}
