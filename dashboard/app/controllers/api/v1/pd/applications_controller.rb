@@ -1,4 +1,6 @@
 class Api::V1::Pd::ApplicationsController < ::ApplicationController
+  include Api::CsvDownload
+
   load_and_authorize_resource class: 'Pd::Application::ApplicationBase'
 
   # GET /api/v1/pd/applications

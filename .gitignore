@@ -23,6 +23,7 @@ npm-debug.log
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log
+/apps/src/code-studio/pd/application/facilitator1819/sharedConstants.js
 /apps/src/util/color.js
 /apps/src/util/sharedConstants.js
 /apps/src/applab/sharedApplabBlocks.js
