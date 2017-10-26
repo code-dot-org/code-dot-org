@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-10-24T23:26:31.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "markdown_instructions": "# Put on a Light Show\r\n\r\nThis app lets you put on a light show with the LED.\r\n\r\nLook at the code with your partner and answer the following questions:\r\n\r\n* What does this line of code do: `  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r\n});`?\r\n* Why does the program need this line: `var newNumber = randomNumber(1,4);`?\r\n\r\nOnce you have answered the questions, run the code and click the buttons to see what happens.",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 23:26:36 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 23:27:12 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

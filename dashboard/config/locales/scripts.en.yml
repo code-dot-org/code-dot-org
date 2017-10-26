@@ -4580,6 +4580,12 @@ en:
               name: 'Project: Make a Game'
             Getting and Setting Properties:
               name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6668,10 +6674,10 @@ en:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Chapter 1 Assessment
-          title: CSP 3 New Stuff
+          title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
-          description_short: ''
-          description: "Place to stage proposed changes and additions to csp3.\r\n***\r\nNOTE: included the SFLP for each lesson to populate the script - but those are the LIVE SFLPs!!!!!.  If you want to change, make a copy first."
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
         pwc:
           stages:
             new stage:
@@ -6711,4 +6717,12 @@ en:
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
           description: ''
