@@ -22,6 +22,7 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
+import experiments from '../util/experiments';
 
 /**
  * Create a namespace for the application.
@@ -708,7 +709,8 @@ var displayFeedback = function () {
       appStrings: {
         reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
         sharingText: flappyMsg.shareGame()
-      }
+      },
+      saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
     });
   }
 };
@@ -800,21 +802,25 @@ Flappy.onPuzzleComplete = function () {
       TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  sendReport();
+};
+
+function sendReport() {
+  const xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const textBlocks = Blockly.Xml.domToText(xml);
 
   Flappy.waitingForReport = true;
 
   // Report result to server.
   studioApp().report({
-                     app: 'flappy',
-                     level: level.id,
-                     result: Flappy.result === ResultType.SUCCESS,
-                     testResult: Flappy.testResults,
-                     program: encodeURIComponent(textBlocks),
-                     onComplete: Flappy.onReportComplete
-                     });
-};
+    app: 'flappy',
+    level: level.id,
+    result: Flappy.result === ResultType.SUCCESS,
+    testResult: Flappy.testResults,
+    program: encodeURIComponent(textBlocks),
+    onComplete: Flappy.onReportComplete
+  });
+}
 
 /**
  * Display Avatar at the specified location
