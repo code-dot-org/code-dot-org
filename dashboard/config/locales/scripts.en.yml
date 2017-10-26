@@ -4586,6 +4586,8 @@ en:
               name: Getters
             Getting Properties:
               name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop

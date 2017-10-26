@@ -8,7 +8,7 @@ project_widget_types ["applab"]
 stage 'Computing Innovations', flex_category: 'csd6_1'
 named_level 'CSDU6 Innovation'
 
-stage 'Getting and Setting Properties', flex_category: 'csd6_1'
+stage 'Designing Screens with Code', flex_category: 'csd6_1'
 named_level 'CSD U6 setProperty Map'
 level 'CSD U6 setProperty predict app', progression: 'Setting Properties'
 level 'CSD U6 setProperty Text', progression: 'Setting Properties'
