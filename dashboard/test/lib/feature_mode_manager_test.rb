@@ -127,10 +127,10 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     refute @gatekeeper.allows('hint_view_request')
     scripts.each do |script|
       refute @gatekeeper.allows('postMilestone', where: {script_name: script})
-      refute @gatekeeper.allows('shareEnabled', where: {script_name: script})
+      assert @gatekeeper.allows('shareEnabled', where: {script_name: script})
     end
     assert @gatekeeper.allows('postMilestone')
-    refute @gatekeeper.allows('shareEnabled')
+    assert @gatekeeper.allows('shareEnabled')
     refute @gatekeeper.allows('slogging')
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 86400, @dcdo.get('public_proxy_max_age', nil)
