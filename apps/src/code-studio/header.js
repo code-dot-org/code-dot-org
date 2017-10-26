@@ -183,7 +183,7 @@ function shareProject() {
     const canPublish = !!appOptions.isSignedIn &&
       PublishableProjectTypesOver13.includes(appType) &&
       // Temporarily gate publishing minecraft projects on an experiment.
-      !(appType.includes('minecraft') && !experiments.isEnabled('publishMinecraft'));
+      !(appType.includes('minecraft') && !experiments.isEnabled('publishMoreProjects'));
 
     ReactDOM.render(
       <Provider store={getStore()}>
