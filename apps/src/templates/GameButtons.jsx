@@ -76,7 +76,6 @@ export const UnconnectedGameButtons = props => (
       {!props.playspacePhoneFrame &&
         <RunButton
           hidden={props.hideRunButton}
-          runButtonText={props.runButtonText}
         />
       }
       {!props.playspacePhoneFrame &&
