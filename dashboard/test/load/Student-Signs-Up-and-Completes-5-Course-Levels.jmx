@@ -51,18 +51,24 @@
       </ThreadGroup>
       <hashTree>
         <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
-          <stringProp name="cacheKey"></stringProp>
+          <stringProp name="cacheKey">7c0dfd4c-e0a1-4410-bb87-c531249e4f1b</stringProp>
           <stringProp name="filename"></stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="script">def userNameSuffix = UUID.randomUUID().toString()
 def userName = &quot;LoadTest.Student.&quot; + userNameSuffix
 def userEmail = userName + &quot;@example.net&quot;
- 
+
 vars.put(&quot;userName&quot;,userName)
 vars.put(&quot;userEmail&quot;,userEmail)
 
+import java.security.MessageDigest
+ 
+def digest = MessageDigest.getInstance(&quot;MD5&quot;)
+def hashedUserEmail = new BigInteger(1,digest.digest(userEmail.toLowerCase().getBytes())).toString(16).padLeft(32,&quot;0&quot;)
+vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
 </stringProp>
           <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="TestPlan.comments">Generate random username with Groovy</stringProp>
         </JSR223PreProcessor>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/users/sign_in" enabled="true">
@@ -332,9 +338,16 @@ vars.put(&quot;userEmail&quot;,userEmail)
               <elementProp name="user[email]" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">true</boolProp>
                 <stringProp name="Argument.name">user[email]</stringProp>
-                <stringProp name="Argument.value">${userEmail}</stringProp>
+                <stringProp name="Argument.value"></stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="user[hashed_email]" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">${hashedUserEmail}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">user[hashed_email]</stringProp>
               </elementProp>
               <elementProp name="user[user_type]" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">true</boolProp>
@@ -365,7 +378,7 @@ vars.put(&quot;userEmail&quot;,userEmail)
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
               <elementProp name="user[terms_of_service_version]" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
                 <stringProp name="Argument.value">1</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
