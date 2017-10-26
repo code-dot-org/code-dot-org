@@ -65,8 +65,8 @@ const ProjectCardGrid = React.createClass({
           <div>
             <ProjectAppTypeArea
               labKey="playlab"
-              labName={i18n.projectTypePlaylab()}
-              labViewMoreString={i18n.projectTypePlaylabViewMore()}
+              labName={showMoreProjects ? i18n.projectGroupPlaylab() : i18n.projectTypePlaylab()}
+              labViewMoreString={showMoreProjects ? i18n.projectGroupPlaylabViewMore() : i18n.projectTypePlaylabViewMore()}
               projectList={projectLists.playlab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -87,8 +87,8 @@ const ProjectCardGrid = React.createClass({
             }
             <ProjectAppTypeArea
               labKey="artist"
-              labName={i18n.projectTypeArtist()}
-              labViewMoreString={i18n.projectTypeArtistViewMore()}
+              labName={showMoreProjects ? i18n.projectGroupArtist() : i18n.projectTypeArtist()}
+              labViewMoreString={showMoreProjects ? i18n.projectGroupArtistViewMore() : i18n.projectTypeArtistViewMore()}
               projectList={projectLists.artist}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
