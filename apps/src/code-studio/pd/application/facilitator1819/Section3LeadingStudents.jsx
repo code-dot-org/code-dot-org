@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {PageLabels, SectionHeaders} from './sharedConstants';
+import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES, NONE} from '../ApplicationConstants';
 
 export default class Section3LeadingStudents extends Facilitator1819FormComponent {

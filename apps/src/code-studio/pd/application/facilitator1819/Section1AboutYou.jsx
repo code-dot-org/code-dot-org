@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
-import {PageLabels, SectionHeaders} from './sharedConstants';
+import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES} from '../ApplicationConstants';
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
