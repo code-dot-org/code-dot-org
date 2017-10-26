@@ -10,12 +10,13 @@ const styles = {
 
 export default class QuickViewTable extends React.Component {
   static propTypes = {
-    path: PropTypes.string.isRequired
-  }
+    path: PropTypes.string.isRequired,
+    data: PropTypes.array.isRequired
+  };
 
   static contextTypes = {
     router: PropTypes.object.isRequired
-  }
+  };
 
   constructColumns() {
     let columns = [];
@@ -60,47 +61,22 @@ export default class QuickViewTable extends React.Component {
     return (
       <Button
         bsSize="xsmall"
-        href={this.context.router.createHref(`/application_dashboard/${this.props.path}/${id}`)}
+        href={this.context.router.createHref(`/${this.props.path}/${id}`)}
         onClick={this.handleViewClick}
       >
         View Application
       </Button>
     );
-  }
+  };
 
   render() {
-    const rows = [
-      {
-        id: 1,
-        created_at: "October 17",
-        name: "Minerva McGonagall",
-        district_name: "Hogsmeade Central School District",
-        school_name: "Hogwarts School of Witchcraft and Wizardry",
-        status: "accepted",
-      },
-      {
-        id: 2,
-        created_at: "October 23",
-        name: "Severus Snape",
-        district_name: "Hogsmeade Central School District",
-        school_name: "Hogwarts School of Witchcraft and Wizardry",
-        status: "unreviewed"
-      },
-      {
-        id: 3,
-        created_at: "October 19",
-        name: "Argus Filch",
-        district_name: "Hogsmeade Central School District",
-        school_name: "Hogwarts School of Witchcraft and Wizardry",
-        status: "declined"
-      }
-    ];
-
+    const rows = this.props.data;
+    const columns = this.constructColumns();
 
     return (
       <Table.Provider
         className="pure-table pure-table-striped"
-        columns={this.constructColumns()}
+        columns={columns}
         style={styles.table}
       >
         <Table.Header />
@@ -108,5 +84,4 @@ export default class QuickViewTable extends React.Component {
       </Table.Provider>
     );
   }
-
 }

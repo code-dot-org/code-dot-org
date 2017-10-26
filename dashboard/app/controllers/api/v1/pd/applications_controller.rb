@@ -33,16 +33,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     render json: @application, each_serializer: Api::V1::Pd::ApplicationSerializer
   end
 
-  # GET /api/v1/pd/applications/quick_view/csf/facilitator
+  # GET /api/v1/pd/applications/quick_view/csf_facilitators
   def quick_view
-    course = params[:course]
-    role = params[:role]
-    applications = if role == 'facilitator'
-                     Pd::Application::Facilitator1819Application.send(course)
-                   else
-                     Pd::Application::Teacher1819Application.send(course)
-                   end
-
+    role = params[:role].to_sym
+    applications = APPLICATION_TYPES[role]
     render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
   end
 
@@ -54,6 +48,14 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   end
 
   private
+
+  APPLICATION_TYPES = {
+    csf_facilitators: Pd::Application::Facilitator1819Application.csf,
+    csd_facilitators: Pd::Application::Facilitator1819Application.csd,
+    csp_facilitators: Pd::Application::Facilitator1819Application.csp,
+    csd_teachers: Pd::Application::Teacher1819Application.csd,
+    csp_teachers: Pd::Application::Teacher1819Application.csp,
+  }
 
   def application_params
     params.require(:application).permit(
