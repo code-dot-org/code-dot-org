@@ -58,6 +58,7 @@ module SharedConstants
     minecraft_designer
     starwars
     starwarsblocks_hour
+    flappy
   ).freeze
 
   PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(

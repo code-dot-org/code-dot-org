@@ -708,7 +708,8 @@ var displayFeedback = function () {
       appStrings: {
         reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
         sharingText: flappyMsg.shareGame()
-      }
+      },
+      saveToProjectGallery: true,
     });
   }
 };
