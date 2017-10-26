@@ -99,7 +99,7 @@ const ProjectCardGrid = React.createClass({
               <ProjectAppTypeArea
                 labKey="minecraft"
                 labName={i18n.projectGroupMinecraft()}
-                labViewMoreString={i18n.projectTypeMinecraftViewMore()}
+                labViewMoreString={i18n.projectGroupMinecraftViewMore()}
                 projectList={projectLists.minecraft}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
