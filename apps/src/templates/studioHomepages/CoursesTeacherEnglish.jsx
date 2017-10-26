@@ -82,13 +82,13 @@ class CoursesTeacherEnglish extends Component {
             <CourseBlocksHoc rowCount={1}/>
           </ContentContainer>
 
-          <AdministratorResourcesActionBlock
+          <CourseBlocksTools
+            isEnglish={true}
             isRtl={isRtl}
             responsive={responsive}
           />
 
-          <CourseBlocksTools
-            isEnglish={true}
+          <AdministratorResourcesActionBlock
             isRtl={isRtl}
             responsive={responsive}
           />

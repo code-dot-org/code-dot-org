@@ -1,5 +1,27 @@
 import React from 'react';
 
+// Section labels that show up on the detail view
+const sectionLabels = {
+  Section1QuestionsAboutYou: 'About You',
+  Section2ChooseYourProgram: 'Choose Your Program',
+  Section3LeadingStudents: 'Leading Students',
+  Section4FacilitationExperience: 'Facilitator Experience',
+  Section5YourApproachToLearningAndLeading: 'Your Approach To Learning And Leading',
+  Section6Logistics: 'Logistics',
+  Section7Submission: 'Submission'
+};
+
+// Override for labels - we don't always want to render the full text in the detail view
+// so this lets us render a truncated version of it
+const detailPageLabelOverrides = {
+  program: 'Please choose one curriculum for which you would like to become a facilitator this year.',
+  abilityToMeetRequirements: 'How would you rate your ability to meet the requirements and commitments for this program?',
+  gradesTaught: 'What grade levels have you taught in the past?',
+  gradesCurrentlyTeaching: 'What grade levels do you teach?',
+  experienceLeading: 'Which of the following do you have experience leading as a teacher?',
+  completedPd: 'Which of the following Code.org professional learning programs did you complete as a teacher?'
+};
+
 // Labels by page name
 const pageLabels = {
   Section1QuestionsAboutYou: {
@@ -166,4 +188,9 @@ const pageLabels = {
 const allLabels = Object.keys(pageLabels).reduce((allLabels, page) =>
   Object.assign(allLabels, pageLabels[page]), {});
 
-export {pageLabels, allLabels};
+const scoredQuestions = [
+  'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo',
+  ...Object.keys(pageLabels.Section5YourApproachToLearningAndLeading)
+];
+
+export {pageLabels, allLabels, scoredQuestions, sectionLabels, detailPageLabelOverrides};
