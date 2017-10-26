@@ -135,4 +135,9 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
       }
     }
   }
+
+  // Add hint path.
+  const hintPath = document.createElementNS(SVG_NS, 'g');
+  hintPath.setAttribute('id', 'hintPath');
+  svg.appendChild(hintPath);
 }
