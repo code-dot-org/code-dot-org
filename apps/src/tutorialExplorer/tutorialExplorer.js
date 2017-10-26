@@ -10,7 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortBy, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
+import { TutorialsSortByOptions, TutorialsSortByFieldNames, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
@@ -43,7 +43,7 @@ const TutorialExplorer = React.createClass({
     roboticsButtonUrl: PropTypes.string,
     showSortDropdown: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
-    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired
   },
 
   shouldScrollToTop: false,
@@ -185,18 +185,18 @@ const TutorialExplorer = React.createClass({
 
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
     // right set of data to match the currently-selected grade.
-    if (sortBy === TutorialsSortBy.displayweight) {
+    if (sortBy === TutorialsSortByOptions.displayweight) {
       if (grade === "all") {
-        sortByFieldName = "displayweight";
+        sortByFieldName = TutorialsSortByFieldNames.displayweight;
       } else if (grade === "pre" || grade === "2-5") {
-        sortByFieldName = "displayweight_k5";
+        sortByFieldName = TutorialsSortByFieldNames.displayweight_k5;
       } else if (grade === "6-8") {
-        sortByFieldName = "displayweight_middle";
+        sortByFieldName = TutorialsSortByFieldNames.displayweight_middle;
       } else {
-        sortByFieldName = "displayweight_high";
+        sortByFieldName = TutorialsSortByFieldNames.displayweight_high;
       }
     } else {
-      sortByFieldName = "popularityrank";
+      sortByFieldName = TutorialsSortByFieldNames.popularityrank;
     }
 
     return sortByFieldName;
@@ -208,7 +208,7 @@ const TutorialExplorer = React.createClass({
    * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
   filterTutorialSet(filters, sortBy, orgName) {
-    const grade = filters["grade"][0];
+    const grade = filters.grade[0];
 
     const filterProps = {
       filters: filters,
@@ -230,7 +230,7 @@ const TutorialExplorer = React.createClass({
    */
   filterTutorialSetForLocale() {
     const filterProps = {
-      sortByFieldName: TutorialsSortBy.displayweight
+      sortByFieldName: this.props.defaultSortBy
     };
 
     if (this.isRobotics()) {
@@ -416,7 +416,7 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        if (sortByFieldName === TutorialsSortBy.popularityrank) {
+        if (sortByFieldName === TutorialsSortByFieldNames.popularityrank) {
           return tutorial1.popularityrank - tutorial2.popularityrank;
         } else {
           return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
@@ -479,7 +479,7 @@ const TutorialExplorer = React.createClass({
       visibility: this.shouldShowTutorials() ? "visible" : "hidden"
     };
 
-    const grade = this.state.filters["grade"][0];
+    const grade = this.state.filters.grade[0];
 
     return (
       <StickyContainer>
@@ -742,7 +742,9 @@ window.TutorialExplorerManager = function (options) {
 
   // The caller can provide defaultSortByPopularity, and when true, the default sort will
   // be by popularity.  Otherwise, the default sort will be by display weight.
-  const defaultSortBy = options.defaultSortByPopularity ? TutorialsSortBy.popularityrank : TutorialsSortBy.displayweight;
+  const defaultSortBy =
+    options.defaultSortByPopularity ? TutorialsSortByOptions.popularityrank :
+    TutorialsSortByOptions.displayweight;
 
   this.renderToElement = function (element) {
     ReactDOM.render(
