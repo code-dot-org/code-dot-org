@@ -525,6 +525,13 @@ var projects = module.exports = {
         return msg.defaultProjectNameMinecraft();
       case 'flappy':
         return msg.defaultProjectNameFlappy();
+      case 'bounce':
+        if (appOptions.skinId === 'sports') {
+          return msg.defaultProjectNameSports();
+        } else if (appOptions.skinId === 'basketball') {
+          return msg.defaultProjectNameBasketball();
+        }
+        return msg.defaultProjectNameBounce();
     }
     return msg.defaultProjectName();
   },
