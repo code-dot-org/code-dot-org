@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {pageLabels} from './Facilitator1819Labels';
+import {PageLabels, SectionHeaders} from './sharedConstants';
 import {YES, NO} from '../ApplicationConstants';
 
 export default class Section4FacilitationExperience extends Facilitator1819FormComponent {
@@ -10,16 +10,16 @@ export default class Section4FacilitationExperience extends Facilitator1819FormC
     accountEmail: PropTypes.string.isRequired
   };
 
-  static labels = pageLabels.Section4FacilitationExperience;
+  static labels = PageLabels.section4FacilitationExperience;
 
   static associatedFields = [
-    ...Object.keys(pageLabels.Section4FacilitationExperience)
+    ...Object.keys(PageLabels.section4FacilitationExperience)
   ];
 
   render() {
     return (
       <FormGroup>
-        <h3>Section 4: Facilitation Experience</h3>
+        <h3>Section 4: {SectionHeaders.section4FacilitationExperience}</h3>
 
         {this.radioButtonsFor("codeOrgFacilitator")}
 

@@ -2,23 +2,23 @@ import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
-import {pageLabels} from './Facilitator1819Labels';
+import {PageLabels, SectionHeaders} from './sharedConstants';
 import {YES} from '../ApplicationConstants';
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
 const FACILITATOR_EMAIL = "facilitators@code.org";
 const ZIP_CODE_REGEX = /^\d{5}([\W-]?\d{4})?$/;
 
-export default class Section1QuestionsAboutYou extends Facilitator1819FormComponent {
+export default class Section1AboutYou extends Facilitator1819FormComponent {
   static propTypes = {
     ...Facilitator1819FormComponent.propTypes,
     accountEmail: PropTypes.string.isRequired
   };
 
-  static labels = pageLabels.Section1QuestionsAboutYou;
+  static labels = PageLabels.section1AboutYou;
 
   static associatedFields = [
-    ...Object.keys(pageLabels.Section1QuestionsAboutYou),
+    ...Object.keys(PageLabels.section1AboutYou),
     "institutionType_other",
     "completedCsCoursesAndActivities_other",
     "howHeard_facilitator",
@@ -47,7 +47,7 @@ export default class Section1QuestionsAboutYou extends Facilitator1819FormCompon
           </strong>
         </p>
 
-        <h3>Section 1: About You</h3>
+        <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>
         {this.selectFor("title", {
           required: false,
           placeholder: "Select a title"

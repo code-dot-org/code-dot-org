@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {pageLabels} from './Facilitator1819Labels';
+import {PageLabels, SectionHeaders} from './sharedConstants';
 
 const PROGRAM_CSF = "CS Fundamentals (Pre-K - 5th grade)";
 const CSF_AVAILABILITY_ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training";
@@ -12,10 +12,10 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
     accountEmail: PropTypes.string.isRequired
   };
 
-  static labels = pageLabels.Section2ChooseYourProgram;
+  static labels = PageLabels.section2ChooseYourProgram;
 
   static associatedFields = [
-    ...Object.keys(pageLabels.Section2ChooseYourProgram),
+    ...Object.keys(PageLabels.section2ChooseYourProgram),
     "csdCspTeacherconAvailability_unavailableReason",
     "csdCspFitAvailability_unavailableReason"
   ];
@@ -23,7 +23,7 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
   render() {
     return (
       <FormGroup>
-        <h3>Section 2: Choose Your Program</h3>
+        <h3>Section 2: {SectionHeaders.section2ChooseYourProgram}</h3>
 
         {this.radioButtonsFor("program")}
 
