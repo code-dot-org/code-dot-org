@@ -34,10 +34,10 @@ module Facilitator1819ApplicationConstants
       job_title: 'What is your job title?',
       resume_link: 'Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.',
       worked_in_cs_job: 'Have you worked in a job that requires computer science knowledge?',
-      cs_related_job_requirements: 'What were your CS-related job requirements?',
+      cs_related_job_requirements: 'What were your CS-related job requirements? (500 characters max)',
       completed_cs_courses_and_activities: 'Which of the following computer science education courses or activities have you completed?',
       diversity_training: 'Have you engaged in training and development focused on diversity, equity, and/or inclusion?',
-      diversity_training_description: 'Please briefly describe',
+      diversity_training_description: 'Please briefly describe (500 characters max)',
       how_heard: 'How did you hear about this opportunity?'
     },
 
@@ -86,29 +86,36 @@ module Facilitator1819ApplicationConstants
     },
 
     section_5_your_approach_to_learning_and_leading: {
-      who_should_have_opportunity: 'Who should have the opportunity to learn computer science? Why?',
-      how_support_equity: 'How do you support equity in your own classroom or role?',
+      who_should_have_opportunity: 'Who should have the opportunity to learn computer science? Why? (750 characters max)',
+      how_support_equity: 'How do you support equity in your own classroom or role? (750 characters max)',
 
       expected_teacher_needs: clean_multiline(
         'Teachers in Code.org’s Professional Learning Program join us with a wide range of experiences
-         (or lack thereof) in computer science education. What are some of the unique needs you’d expect
-         to find in a cohort of these teachers?'
+         (ex: from brand new teachers to teachers who have taught CS for 10+ years)
+         in computer science education. What are some of the unique needs you’d expect
+         to find in a cohort of these teachers? (750 characters max)'
       ),
-      describe_adapting_lesson_plan:
-        'Describe a time when you’ve had to adapt a lesson plan in the moment to meet the needs of your students or participants.',
+      describe_adapting_lesson_plan: clean_multiline(
+        'Describe a time when you’ve had to adapt a lesson plan in the moment to meet the needs of your
+         students or participants. (750 characters max)'
+      ),
 
       describe_strategies: clean_multiline(
         'Have you used “lead learner” or “inquiry-based” strategies in your work with youth and/or adults?
-         If so, briefly describe how you have used these strategies.'
+         If so, briefly describe how you have used these strategies. (750 characters max)'
       ),
 
-      example_how_used_feedback:
-        'Please provide a brief example of how you’ve used feedback __you’ve received from a colleague__ to improve your performance.',
+      example_how_used_feedback: clean_multiline(
+        'Please provide a brief example of how you’ve used feedback __you’ve received from a colleague__
+         to improve your performance. (750 characters max)'
+      ),
 
-      example_how_provided_feedback:
-        'Please provide a brief example of how __you’ve provided feedback to a colleague__ and how that person responded to your feedback.',
+      example_how_provided_feedback: clean_multiline(
+        'Please provide a brief example of how __you’ve provided feedback to a colleague__
+         and how that person responded to your feedback. (750 characters max)'
+      ),
 
-      hope_to_learn: 'What do you hope to learn from the facilitator development program?'
+      hope_to_learn: 'What do you hope to learn from the facilitator development program? (750 characters max)'
     },
 
     section_6_logistics: {
