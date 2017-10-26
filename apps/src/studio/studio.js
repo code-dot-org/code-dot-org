@@ -72,6 +72,7 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
+import experiments from '../util/experiments';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -120,8 +121,8 @@ let skin;
 
 // These skins can be published as projects.
 const PUBLISHABLE_SKINS = [
-  'gumball', 'studio', 'iceage', 'infinity', 'hoc2015'
-];
+  'gumball', 'studio', 'iceage', 'infinity'
+].concat(experiments.isEnabled('publishMoreProjects') ? 'hoc2015' : undefined);
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
