@@ -33,7 +33,6 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       :role,
       :job_title,
       :grade_levels,
-      :program,
     ]
   end
 
