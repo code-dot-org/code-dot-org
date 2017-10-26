@@ -37,7 +37,7 @@ export default class SoundPicker extends React.Component {
     useFilesApi: PropTypes.bool.isRequired
   };
 
-  state = {mode: MODE.files};
+  state = {mode: MODE.sounds};
 
   getAssetNameWithPrefix = (sound) => {
     const soundName = sound.replace(DEFAULT_SOUND_PATH_PREFIX, SOUND_PREFIX);
