@@ -2,11 +2,15 @@
  * Application Dashboard summary view.
  * Route: /summary
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import SummaryTable from './summary_table';
 import Spinner from '../components/spinner';
 
 export default class Summary extends React.Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+
   state = {
     loading: true,
     applications: null
@@ -49,3 +53,7 @@ export default class Summary extends React.Component {
     }
   }
 }
+
+Summary.childContextTypes = {
+  router: PropTypes.object
+};
