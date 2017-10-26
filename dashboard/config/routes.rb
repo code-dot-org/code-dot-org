@@ -395,8 +395,11 @@ Dashboard::Application.routes.draw do
         post :facilitator, to: 'facilitator_applications#create'
       end
 
-      get 'applications/quick_view/:role',  action: 'quick_view', controller: 'applications'
-      resources :applications, controller: 'applications', only: [:index, :show, :update]
+      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+        collection do
+          get :quick_view
+        end
+      end
     end
   end
 

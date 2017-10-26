@@ -34,7 +34,7 @@ export default class QuickView extends React.Component {
   load = (props = this.props) => {
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: '/api/v1/pd/applications/quick_view/' + this.props.route.path,
+      url: '/api/v1/pd/applications/quick_view?role=' + this.props.route.path,
       dataType: 'json'
     })
     .done(data => {
@@ -47,19 +47,15 @@ export default class QuickView extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return (
-        <div>
-          <Spinner/>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <h1>{this.props.route.title}</h1>
-          <QuickViewTable path={this.props.route.path} data={this.state.applications}/>
-        </div>
-      );
+      return <Spinner/>;
     }
+
+    return (
+      <div>
+        <h1>{this.props.route.title}</h1>
+        <QuickViewTable path={this.props.route.path} data={this.state.applications}/>
+      </div>
+    );
   }
 }
 

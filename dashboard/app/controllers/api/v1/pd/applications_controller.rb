@@ -30,13 +30,14 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications/1
   def show
-    render json: @application, each_serializer: Api::V1::Pd::ApplicationSerializer
+    render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
   end
 
   # GET /api/v1/pd/applications/quick_view/csf_facilitators
   def quick_view
     role = params[:role].to_sym
-    applications = APPLICATION_TYPES[role]
+    return render_404 unless SCOPE_BY_ROLE.key?(role)
+    applications = get_applications_by_role(role)
     render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
   end
 
@@ -49,13 +50,17 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   private
 
-  APPLICATION_TYPES = {
-    csf_facilitators: Pd::Application::Facilitator1819Application.csf,
-    csd_facilitators: Pd::Application::Facilitator1819Application.csd,
-    csp_facilitators: Pd::Application::Facilitator1819Application.csp,
-    csd_teachers: Pd::Application::Teacher1819Application.csd,
-    csp_teachers: Pd::Application::Teacher1819Application.csp,
+  SCOPE_BY_ROLE = {
+    csf_facilitators: 'csf',
+    csd_facilitators: 'csd',
+    csp_facilitators: 'csp',
+    csd_teachers: 'csd',
+    csp_teachers: 'csp'
   }
+
+  def get_applications_by_role(role)
+    @applications.send(SCOPE_BY_ROLE[role])
+  end
 
   def application_params
     params.require(:application).permit(
