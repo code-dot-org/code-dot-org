@@ -29,15 +29,12 @@ export default class SummaryTable extends React.Component {
 
   tableRow = (label, bgColor, data) =>  {
     const status = label.toLowerCase();
-    const num_locked = data[status]['locked'];
-    const num_unlocked = data[status]['unlocked'];
+    const total = data[status]['locked'] + data[status]['unlocked'];
 
     return (
       <tr>
         <td style={{backgroundColor: bgColor}}>{label}</td>
-        <td>{num_locked}</td>
-        <td>{num_unlocked}</td>
-        <td>{num_locked + num_unlocked}</td>
+        <td>{total}</td>
       </tr>
     );
   };
@@ -50,8 +47,6 @@ export default class SummaryTable extends React.Component {
           <thead>
             <tr>
               <th>Status</th>
-              <th>Locked</th>
-              <th>Unlocked</th>
               <th>Total</th>
             </tr>
           </thead>
