@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-10-25T19:47:44.000Z",
+  "created_at": "2017-10-26T18:10:42.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -186,9 +186,9 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Tracking the Score\r\n\r\nYour `score` variable should keep track of how many times each user has clicked their button. Instead of just going up, `score` should _decrease_ if the player 1 clicks `buttonL` and _increase_ if player 2 clicks `buttonR`.\r\n\r\n# Do This\r\n\r\nInside each `onBoardEvent`, use the counter pattern to increase or decrease `score`. The amount that you change `score` will change how difficult the game is to win. Start with changing by 10 - you can always experiment with different values when the program is more complete.\r\n\r\n_Tip: Add `score` to your watchers in the debug drawer to you can see the variable increase and decrease when the buttons are clicked._",
+    "markdown_instructions": "# Make It Your Own\r\n\r\nYou just walked through someone else's plan for creating a program, so now it's time to make it your own. What additional features or challenges do you want to create?\r\n\r\n# Do This\r\n\r\nSelect one of the challenges below to add to the game or come up with a challenge of your own.\r\n\r\n* Change the look and layout of the screens\r\n* Use the buzzer or the led to show when one of the buttons has been clicked\r\n* Add a difficulty slider to change how much the bug moves each click\r\n* Use functions to make your code cleaner and more readable",
     "instructions_important": "false",
-    "submittable": "false",
+    "submittable": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -223,11 +223,12 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
+    "display_name": "Make it Your Own",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:22:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:56:50 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:44:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:59:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:06:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:09:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:13:56 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-10-25T19:47:44.000Z",
+  "created_at": "2017-10-26T17:35:48.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Tracking the Score\r\n\r\nYour `score` variable should keep track of how many times each user has clicked their button. Instead of just going up, `score` should _decrease_ if the player 1 clicks `buttonL` and _increase_ if player 2 clicks `buttonR`.\r\n\r\n# Do This\r\n\r\nInside each `onBoardEvent`, use the counter pattern to increase or decrease `score`. The amount that you change `score` will change how difficult the game is to win. Start with changing by 10 - you can always experiment with different values when the program is more complete.\r\n\r\n_Tip: Add `score` to your watchers in the debug drawer to you can see the variable increase and decrease when the buttons are clicked._",
+    "markdown_instructions": "# Check for a Winner\r\n\r\nYour game should be pretty playable by now. Two players can click their respective buttons, and the bug will move to one side or the other depending on who is clicking faster. We still need a way for a player to win though.\r\n\r\n# Do This\r\n\r\nUsing conditionals, you want to check if a player has won each time they click. For now, we can just use `console.log` to report the winner\r\n\r\n* In the `buttonL` event handler, use a conditional to check if the score is less than -100\r\n* In the `buttonR` event handler, use a conditional to check if the score is greater than 100\r\n* In each of your new conditionals, add a `console.log` that reports which player won\r\n* Test your program to make sure that it reports a winner when the bug makes it all the way to one side.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -227,7 +227,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:22:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:56:50 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:44:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

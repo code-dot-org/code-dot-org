@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ## Vocabulary
 
-* **Abstraction:** Pulling out specific differences to make one solution work for multiple problems.
+* **Abstraction** - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
 
 ## Resources
 
@@ -46,16 +46,23 @@ teacher_markdown <<MARKDOWN
 
 **AP-style student submission**
 
+[key]
+
 * [Student Sample Submission for writing](https://docs.google.com/document/d/1_BwS1RF6vG7tsWAE2wqT7I55cVdBC_oFKi4Dl4rHG6s) -  Document showing student writing sample side by side with scoring guide and suggested scoring.
 * [Sample student code PDF](https://drive.google.com/open?id=0B2QFqkDgv9LjZ0pDUFRvYlo3V1k) - linked to in sample submission doc as well.
+
+[/key]
 
 **Exemplar programming projects**
 
 These sample App Lab projects contain inline comments explaining how they might be scored against the Project Programming Rubic.
 
+[key]
+
 * [Full credit sample](https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q) - Beach Scene
 * [Partial credit sample](https://studio.code.org/projects/applab/sSdQJEeupZeUvMWiLZKpaA) - Desert Scene
 
+[/key]
 
 ---
 
