@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import DetailViewResponse from './detail_view_response';
-import {SectionHeaders, PageLabels, LabelOverrides} from '../application/facilitator1819/sharedConstants';
+import {SectionHeaders, PageLabels, LabelOverrides} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
 const scoredQuestions = [
   'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo',

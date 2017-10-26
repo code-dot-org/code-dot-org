@@ -7,6 +7,7 @@
 require 'json'
 require 'active_support/inflector'
 require 'active_support/core_ext/hash'
+require 'fileutils'
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/pd/facilitator1819_application_constants'
 
@@ -21,6 +22,7 @@ def generate_shared_js_file(content, path)
 #{content}
 CONTENT
 
+  FileUtils.mkdir_p File.dirname(path)
   File.open(path, 'w') {|f| f.write(output)}
 end
 
@@ -80,7 +82,7 @@ def main
       source_module: Facilitator1819ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/code-studio/pd/application/facilitator1819/sharedConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/facilitator1819ApplicationConstants.js"
   )
 end
 
