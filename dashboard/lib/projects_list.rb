@@ -10,7 +10,8 @@ module ProjectsList
     applab: ['applab'],
     gamelab: ['gamelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
-    artist: ['artist']
+    artist: ['artist'],
+    minecraft: ['minecraft_adventurer', 'minecraft_designer']
   }.freeze
 
   class << self

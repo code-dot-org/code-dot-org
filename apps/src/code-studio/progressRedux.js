@@ -7,7 +7,6 @@ import { mergeActivityResult, activityCssClass } from './activityUtils';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 import { ViewType, SET_VIEW_TYPE } from './viewAsRedux';
-import cookies from 'js-cookie';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -263,31 +262,6 @@ export function processedStages(stages, isPlc) {
     };
   });
 }
-
-/**
- * Attempt to replicate logic used that user_header.haml uses to populate the
- * name in our Sign In button.
- * @returns {boolean}
- */
-export function getUserSignedInFromCookieAndDom() {
-  // Depend on user_header to set userNameCookieKey
-  if (!window.userNameCookieKey) {
-    console.error('userNameCookieKey not set');
-    return;
-  }
-
-  const val = cookies.get(window.userNameCookieKey);
-  if (val) {
-    return true;
-  } else {
-    // We did not have a cookie, meaning we're probably not signed in. Because
-    // we want ot replicate the logic in user_header.haml, also check to see if
-    // the server had populated our DOM with a user id.
-    const nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
-    return !!(nameSpan && nameSpan.dataset.id);
-  }
-}
-
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,

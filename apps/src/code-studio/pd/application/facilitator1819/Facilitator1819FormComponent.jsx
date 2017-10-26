@@ -97,4 +97,11 @@ export default class Facilitator1819FormComponent extends FormComponent {
       ...props
     });
   }
+
+  usPhoneNumberInputFor(name, props={}) {
+    return this.buildUsPhoneNumberInput({
+      ...this.defaultOptions(name),
+      ...props
+    });
+  }
 }
