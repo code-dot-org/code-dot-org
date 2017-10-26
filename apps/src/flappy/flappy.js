@@ -22,6 +22,7 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
+import experiments from '../util/experiments';
 
 /**
  * Create a namespace for the application.
@@ -709,7 +710,7 @@ var displayFeedback = function () {
         reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
         sharingText: flappyMsg.shareGame()
       },
-      saveToProjectGallery: true,
+      saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
     });
   }
 };

@@ -177,13 +177,19 @@ function shareProject() {
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
+    // Only show the publish button for non-experimental project types in the
+    // project share dialog. this list can go away once the publishMoreProjects
+    // experiment is launched.
+    const nonExperimentalProjectTypes = [
+      'artist', 'playlab', 'gumball', 'iceage', 'infinity', 'applab', 'gamelab',
+    ];
+    const projectTypes = experiments.isEnabled('publishMoreProjects') ?
+      PublishableProjectTypesOver13 : nonExperimentalProjectTypes;
+
     // Allow publishing for any project type that older students can publish.
     // Younger students should never be able to get to the share dialog in the
     // first place, so there's no need to check age against project types here.
-    const canPublish = !!appOptions.isSignedIn &&
-      PublishableProjectTypesOver13.includes(appType) &&
-      // Temporarily gate publishing minecraft projects on an experiment.
-      !(appType.includes('minecraft') && !experiments.isEnabled('publishMoreProjects'));
+    const canPublish = !!appOptions.isSignedIn && projectTypes.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
