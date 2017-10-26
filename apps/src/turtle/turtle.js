@@ -1878,10 +1878,13 @@ Artist.prototype.setReportDataImage_ = function (level, reportData) {
     isEditingSolution ||
     (didPassLevel && !isFrozen && (level.freePlay || level.impressive))
   ) {
-    const image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    const image = isEditingSolution ?
+      this.getFeedbackImage_(CANVAS_WIDTH, CANVAS_HEIGHT) :
+      this.getFeedbackImage_();
+    const encodedImage = encodeURIComponent(image.split(',')[1]);
     return {
       ...reportData,
-      image,
+      image: encodedImage,
     };
   }
   return reportData;
