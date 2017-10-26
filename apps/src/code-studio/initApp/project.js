@@ -523,6 +523,8 @@ var projects = module.exports = {
         break;
       case 'craft':
         return msg.defaultProjectNameMinecraft();
+      case 'flappy':
+        return msg.defaultProjectNameFlappy();
     }
     return msg.defaultProjectName();
   },
