@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Board Events\r\n\r\nThe `onBoardEvent()` block allows you to start taking input from your Circuit Playground. Look at the program with a partner and discuss what you think it'll do. Once you've come up with an answer, click \"Run\" to check your answer.\r\n\r\n* What does the button do?\r\n* Does the light turn on once the program is run?",
+    "markdown_instructions": "See contained level for markdown",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -46,11 +46,16 @@
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "start_blocks": "onBoardEvent(buttonL, \"press\", function(event) {\r\n  led.on();\r\n});",
-    "contained_level_names": null
+    "contained_level_names": [
+      "CSDU6 - button_LED_prediction"
+    ],
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-24 18:19:20 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:36:28 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:38:59 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:39:45 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:43:25 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 18:19:20 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:36:28 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:38:59 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:39:45 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 17:43:25 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-10-26 19:26:21 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -16,10 +16,10 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Dropdowns\r\n\r\nText Inputs are nice when you want users to be able to enter _anything_ they want, but often you want to restrict them to just a few choices. For example, if you want your user to pick a color, you probably want to make sure they can only choose colors that will actually work.\r\n\r\n# Do This\r\n\r\nThe provided dropdown with the ID \"color_input\" allows a use to choose from a handful of background colors. When the \"Set Color\" button is clicked. To make this work, you'll need to do the following inside the provided `onEvent` block:\r\n\r\n* Create a variable called `color` and assign it a value using the `getProperty` block\r\n* Use the `setProperty` block to set the \"background-color\" property of \"screen1\" to your variable `color`\r\n* Test your program by picking a color and clicking \"Set Color\"",
+    "markdown_instructions": "Predict Level (See contained level for markdown)",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onEvent(\"set_color\", \"click\", function(event) {\r\n  \r\n});\r\n",
+    "start_blocks": "onEvent(\"startLED\", \"click\", function(event) {\r\n  LEDtype = getProperty(\"LEDinput\", \"text\");\r\n  if (LEDtype == \"blink\") {\r\n    led.blink(200);\r\n  }\r\n  if (LEDtype == \"pulse\") {\r\n    led.pulse(200);\r\n  }\r\n}\r\nonEvent(\"startLED\", \"click\", function(event) {\r\n  led.off();\r\n}\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,18 +47,23 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><select id=\"color_input\" style=\"width: 200px; height: 30px; font-size: 14px; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 15px;\"><option>CadetBlue</option><option>LawnGreen</option><option>Thistle</option><option>Chocolate</option><option>Orchid</option></select><button id=\"set_color\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 225px; top: 15px;\">Set Color</button></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><select id=\"LEDinput\" style=\"width: 200px; height: 30px; font-size: 14px; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 55px;\"><option>blink</option><option>pulse</option></select><button id=\"startLED\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 225px; top: 35px;\">Start LED</button><button id=\"stopLED\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 225px; top: 85px;\">Stop LED</button></div></div>",
     "hide_view_data_button": "true",
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-17 19:16:50 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:39:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:40:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 22:05:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 22:11:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 23:00:45 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-17 19:16:50 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:39:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:40:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 22:05:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 22:11:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 23:00:45 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 19:00:53 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
