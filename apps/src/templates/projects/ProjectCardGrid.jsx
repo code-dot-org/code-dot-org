@@ -26,6 +26,8 @@ const ProjectCardGrid = React.createClass({
       gamelab: PropTypes.arrayOf(projectPropType),
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
+      minecraft: PropTypes.arrayOf(projectPropType),
+      bounce: PropTypes.arrayOf(projectPropType),
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired
@@ -55,7 +57,7 @@ const ProjectCardGrid = React.createClass({
   render() {
     const { projectLists } = this.props;
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
-    const showMinecraft = experiments.isEnabled('publishMinecraft');
+    const showMoreProjects = experiments.isEnabled('publishMoreProjects');
 
     return (
       <div style={styles.grid}>
@@ -63,29 +65,41 @@ const ProjectCardGrid = React.createClass({
           <div>
             <ProjectAppTypeArea
               labKey="playlab"
-              labName={i18n.projectTypePlaylab()}
-              labViewMoreString={i18n.projectTypePlaylabViewMore()}
+              labName={showMoreProjects ? i18n.projectGroupPlaylab() : i18n.projectTypePlaylab()}
+              labViewMoreString={showMoreProjects ? i18n.projectGroupPlaylabViewMore() : i18n.projectTypePlaylabViewMore()}
               projectList={projectLists.playlab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
+            {showMoreProjects &&
+              <ProjectAppTypeArea
+                labKey="events"
+                labName={i18n.projectGroupEvents()}
+                labViewMoreString={i18n.projectGroupEventsViewMore()}
+                projectList={projectLists.events}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.onSelectApp}
+                isDetailView={false}
+              />
+            }
             <ProjectAppTypeArea
               labKey="artist"
-              labName={i18n.projectTypeArtist()}
-              labViewMoreString={i18n.projectTypeArtistViewMore()}
+              labName={showMoreProjects ? i18n.projectGroupArtist() : i18n.projectTypeArtist()}
+              labViewMoreString={showMoreProjects ? i18n.projectGroupArtistViewMore() : i18n.projectTypeArtistViewMore()}
               projectList={projectLists.artist}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
-            {showMinecraft &&
+            {showMoreProjects &&
               <ProjectAppTypeArea
                 labKey="minecraft"
                 labName={i18n.projectGroupMinecraft()}
-                labViewMoreString={i18n.projectTypeMinecraftViewMore()}
+                labViewMoreString={i18n.projectGroupMinecraftViewMore()}
                 projectList={projectLists.minecraft}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
