@@ -4582,6 +4582,10 @@ en:
               name: Getting and Setting Properties
             The Program Design Process:
               name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop

@@ -34,8 +34,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need to go two different directions to get even one gem!\",\"hint_id\":\"courseA_collector_preLoops5_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/918b13a59138e95c745925d1fb8059e4/courseA_collector_preLoops5.mp3\"}]",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "min_collected": "1"
+    "min_collected": "1",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -65,8 +65,8 @@
       "redstoneWire",
       "stone"
     ],
-    "contained_level_names": null,
-    "level_verification_timeout": "0"
+    "level_verification_timeout": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-10-25T19:47:44.000Z",
+  "created_at": "2017-10-26T17:56:31.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Tracking the Score\r\n\r\nYour `score` variable should keep track of how many times each user has clicked their button. Instead of just going up, `score` should _decrease_ if the player 1 clicks `buttonL` and _increase_ if player 2 clicks `buttonR`.\r\n\r\n# Do This\r\n\r\nInside each `onBoardEvent`, use the counter pattern to increase or decrease `score`. The amount that you change `score` will change how difficult the game is to win. Start with changing by 10 - you can always experiment with different values when the program is more complete.\r\n\r\n_Tip: Add `score` to your watchers in the debug drawer to you can see the variable increase and decrease when the buttons are clicked._",
+    "markdown_instructions": "# Change to the Win Screen\r\n\r\nNow that we have conditionals to check which player won, let's switch to the \"win_screen\" when a player wins.\r\n\r\n# Do This\r\n\r\nIn each conditional that you've created to check the score, add a `setScreen` block to change to the \"win_screen\" screen. Make sure you test that your new code works before moving on!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -227,7 +227,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:22:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:56:50 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:44:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:59:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
