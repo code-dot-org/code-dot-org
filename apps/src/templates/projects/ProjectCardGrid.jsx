@@ -5,6 +5,7 @@ import i18n from "@cdo/locale";
 import {connect} from 'react-redux';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
+import experiments from '../../util/experiments';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
@@ -54,6 +55,7 @@ const ProjectCardGrid = React.createClass({
   render() {
     const { projectLists } = this.props;
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
+    const showMinecraft = experiments.isEnabled('publishMinecraft');
 
     return (
       <div style={styles.grid}>
@@ -79,6 +81,18 @@ const ProjectCardGrid = React.createClass({
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
+            {showMinecraft &&
+              <ProjectAppTypeArea
+                labKey="minecraft"
+                labName={i18n.projectGroupMinecraft()}
+                labViewMoreString={i18n.projectTypeMinecraftViewMore()}
+                projectList={projectLists.minecraft}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.onSelectApp}
+                isDetailView={false}
+              />
+            }
             <ProjectAppTypeArea
               labKey="applab"
               labName={i18n.projectTypeApplab()}
@@ -128,6 +142,18 @@ const ProjectCardGrid = React.createClass({
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
               />
+            }
+            {this.state.showApp === 'minecraft' &&
+            <ProjectAppTypeArea
+              labKey="minecraft"
+              labName={i18n.projectTypeAllProjectsMinecraft()}
+              labViewMoreString={i18n.projectsViewAll()}
+              projectList={projectLists.minecraft}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.viewAllProjects}
+              isDetailView={true}
+            />
             }
             {this.state.showApp === 'applab' &&
               <ProjectAppTypeArea

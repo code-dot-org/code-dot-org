@@ -14,6 +14,7 @@ import { showShareDialog } from './components/shareDialogRedux';
 import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
 
 import { convertBlocksXml } from '../craft/code-connection/utils';
+import experiments from '../util/experiments';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -180,7 +181,9 @@ function shareProject() {
     // Younger students should never be able to get to the share dialog in the
     // first place, so there's no need to check age against project types here.
     const canPublish = !!appOptions.isSignedIn &&
-      PublishableProjectTypesOver13.includes(appType);
+      PublishableProjectTypesOver13.includes(appType) &&
+      // Temporarily gate publishing minecraft projects on an experiment.
+      !(appType.includes('minecraft') && !experiments.isEnabled('publishMinecraft'));
 
     ReactDOM.render(
       <Provider store={getStore()}>
