@@ -1,7 +1,44 @@
 name 'CSP Abstraction in Programming'
 css 'unplugged'
 markdown <<MARKDOWN
-# Abstraction in Programming
+# Abstraction - Managing Complexity
+
+**What is an abstraction?**
+
+An abstraction is a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+
+## What does *abstraction* mean when it comes to computer science?
+
+**Computer science deals with complex systems.** 
+
+These complex systems have lots of tiny details that can quickly grow overwhelming, making things hard for humans to manage and keep track of.  For a complex system like the Internet, it is simply not possible to see and understand every detail all at once.
+
+<div style="float: right; width: 250px; padding: 10px; margin: 10px; background-color: #FFFFFF;  box-shadow: 2px 2px 10px #999999">
+  <img src="https://images.code.org/d872c6ecd8cf6eefeab3c2a293f93246-image-1508249463002.png" style="width: 90%; margin: auto;">    
+  <br><br>
+  <em>In this code the functions <code>drawRectangle()</code> and <code>right()</code> are examples of abstraction because they capture the code for drawing a rectangle and turning right, and give each idea a single name - making them simplified representations of something more complex.</em>
+</div>
+
+**It's about compartmentalization.**
+
+The human brain needs ways to compartmentalize ideas so you can focus on problems at a higher level. In fact, everyone uses abstraction on a daily basis to effectively manage complexity. 
+
+**For an everyday example, think about driving a car.** 
+
+You don't need to know all of the complex things that happen when you push the gas pedal. All you need to know is that pushing the pedal makes the car go forward. This frees up you brain to focus on other problems like steering correctly so you don't crash. In some cars you have to manually shift the gears to get the car to operate efficiently, while cars with an automatic transmission "abstract away" the problem of shifting gears.
+
+**Abstractions help manage complexity in programs too** 
+
+When you write a computer program, even a small one, there are lots of tiny details that can quickly grow overwhelming. You need abstractions in your program code to let you compartmentalize these details so that you can focus on the bigger problem you're trying to solve. 
+
+The code at right is also an example of using abstraction to manage complexity because it builds up <em>layers of abstraction</em> to achieve the task. The turtle needs to turn right multiple times and the code for that has been broken out into the <code>function right(){...}</code>. The code for <code>drawRectangle</code> relies on the simplified representation (abstraction) for turning right. Layers can build up over time, with each one combining previous abstractions to make new ones that represent something even more complex.  For example, you might create a new function that relies on `drawRectangle()`, which relies on `right()`, and so on.
+
+
+**Typically, abstraction means compartmentalizing solutions to coding problems in procedures (functions)** 
+
+From this lesson you have learned how to write a function to compartmentalize a solution for a turtle drawing problem. By writing a function called `drawRectangle()`, for example, you have compartmentalized the code necessary to complete that task. Once you have tested that function and it works, you don't need to worry about it anymore.  You can move on to thinking about a program that requires multiple rectangles or other shapes. 
+
+You have only seen a small simple example of abstraction in programming so far, but the idea is quite powerful.
 
 ## Why you need to know about *Abstraction* for AP
 
@@ -9,46 +46,24 @@ markdown <<MARKDOWN
 
 (2) For the AP Create Performance Task you need to...
 
-<div style="width: 70%; margin: auto; background-color: #EEEEEE; font-family: serif; font-size: 12pt; padding: 10px">
+<div style="width: 50%; margin-left: 40px; background-color: #EEEEEE; font-family: serif; font-size: 12pt; padding: 10px">
 [identify] a code segment that contains an abstraction you developed...[and]...explain how the abstraction helped manage the complexity of your program.
 </div>
 <br>
 
-This unit is largely about:
+This unit is largely about teaching you:
 
-* teaching you to use abstraction as a problem solving technique
-* to create and use abstractions in programs you write
-* to be able to communicate about how abstraction helps you manage complexity
-
-## What does *abstraction* mean when it comes to computer science?
-
-**Computer science deals with lots of complex systems.** 
-
-These complex systems have lots and lots of tiny details that can quickly grow overwhelming making things hard for humans to manage and keep track of.  For a complex system like the Internet, it is simply not possible to see and understand every detail all at once.
-
-**It's about compartmentalization.** 
-
-The human brain needs ways to compartmentalize ideas so you can focus on problems at a higher level. Everyone uses abstraction on a daily basis to effectively manage complexity. 
-
-**For an everyday example, think about driving a car.** 
-
-You don't need to know all of the complex things that happen when you push the gas pedal. All you need to know is that pushing the pedal makes the car go forward. This frees up you brain to focus on other problems like steering correctly so you don't crash.  In some cars you have to manually shift the gears to get the car to operate efficiently, while cars with an automatic transmission "abstract away" the problem of shifting gears.
-
-**Abstraction in computer programming is also about managing complexity.** 
-
-Abstraction is a central problem-solving technique for managing the complexity of your own program code. When you write a computer program, even a small one, there are lots of tiny details that start to accumulate and it can grow overwhelming. The technique of abstraction means identifying portions of your problem that can be compartmentalized so that you can solve one small part allowing you to put those details out of mind to focus on something bigger.
-
-<img src="https://images.code.org/d872c6ecd8cf6eefeab3c2a293f93246-image-1508249463002.png" style="float: right; width: 150px">
-
-**Typically, abstraction means compartmentalizing solutions to coding problems in functions or procedures.** 
-
-From this lesson you have learned how to write a function to encapsulate a solution to a turtle drawing problem. By writing a functions called `drawRectangle()`, for example, you have compartmentalized the code necessary to complete that task. If you've tested that function and it works, you don't need to worry about it anymore.  You can move on to thinking about a program that requires multiple rectangles or other shapes. You have only seen a small simple example so far, but the idea is quite powerful.
-
-**Finally, here it is in a nutshell:** 
-
-Abstractions simplify the representation of something more complex. They allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+* to use **abstraction as a problem solving technique**
+* to **create and use abstractions** in programs you write
+* to communicate about how abstraction helps you **manage complexity**
 
 ## Next: we'll practice using abstraction to write a more complicated program
 
+**Complexity is the Problem**
+Humans have limitations when trying to work with complex systems. We can only keep so many little details in our heads before we get overwhelmed and can no longer see what's important or make progress in solving problems. In computer science we deal with networks, programs, and hardware. In life, however, we deal with complex social, physical, and economic systems. The details of all of these systems are important and matter, but as humans we need a way to think about them without getting overwhelmed.
 
+**Abstraction is the Solution**
+The solution to this problem is to represent our systems in more simplified ways. 
+
+**For an everyday example, think about driving a car
 MARKDOWN

@@ -79,10 +79,7 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,5 +1,27 @@
 import React from 'react';
 
+// Section labels that show up on the detail view
+const sectionLabels = {
+  Section1QuestionsAboutYou: 'About You',
+  Section2ChooseYourProgram: 'Choose Your Program',
+  Section3LeadingStudents: 'Leading Students',
+  Section4FacilitationExperience: 'Facilitator Experience',
+  Section5YourApproachToLearningAndLeading: 'Your Approach To Learning And Leading',
+  Section6Logistics: 'Logistics',
+  Section7Submission: 'Submission'
+};
+
+// Override for labels - we don't always want to render the full text in the detail view
+// so this lets us render a truncated version of it
+const detailPageLabelOverrides = {
+  program: 'Please choose one curriculum for which you would like to become a facilitator this year.',
+  abilityToMeetRequirements: 'How would you rate your ability to meet the requirements and commitments for this program?',
+  gradesTaught: 'What grade levels have you taught in the past?',
+  gradesCurrentlyTeaching: 'What grade levels do you teach?',
+  experienceLeading: 'Which of the following do you have experience leading as a teacher?',
+  completedPd: 'Which of the following Code.org professional learning programs did you complete as a teacher?'
+};
+
 // Labels by page name
 const pageLabels = {
   Section1QuestionsAboutYou: {
@@ -19,7 +41,8 @@ const pageLabels = {
     institutionType: "What type of institution do you work for?",
     currentEmployer: "Current employer",
     jobTitle: "What is your job title?",
-    resumeLink: "Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.",
+    resumeLink:
+      "Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience. (500 characters max)",
     workedInCsJob: "Have you worked in a job that requires computer science knowledge?",
     csRelatedJobRequirements: "What were your CS-related job requirements?",
     completedCsCoursesAndActivities: "Which of the following computer science education courses or activities have you completed?",
@@ -52,9 +75,7 @@ const pageLabels = {
         >
         Program Description
       </a>{' '}
-        how would you rate your ability to meet the requirements for your focus area?
-      <br />
-      (1=unlikely, I have limited capacity in 2018-19; 10=very likely, I am committed to success)
+        how would you rate your ability to meet the requirements and commitments for this program?
     </span>
     ),
     csfAvailability: "Are you available to attend the three-day Facilitator-in-Training workshop from Saturday, March 3 - Monday, March 5, 2018?",
@@ -65,7 +86,7 @@ const pageLabels = {
 
   Section3LeadingStudents: {
     ledCsExtracurriculars: "Have you led or organized extracurricular computer science learning experiences? Please mark all that apply.",
-    teachingExperience: "Do you have classroom teaching experience?",
+    teachingExperience: "Do you have classroom teaching experience for K-12 students or adults?",
     gradesTaught: (
       <span>
       What grade levels have you taught
@@ -81,7 +102,7 @@ const pageLabels = {
     </span>
     ),
     subjectsTaught: "Which subjects do you currently or have you previously taught? Check all that apply.",
-    yearsExperience: "How many years of experience do you have teaching computer science education?",
+    yearsExperience: "How many years of experience do you have teaching computer science for K-12 students or adults?",
     experienceLeading: (
       <span>
       Which of the following do you have experience leading
@@ -102,8 +123,10 @@ const pageLabels = {
     codeOrgFacilitator: "Are you currently or have you been a Code.org facilitator in the past?",
     codeOrgFacilitatorYears: "In which years did you work as a Code.org facilitator (mark all that apply)?",
     codeOrgFacilitatorPrograms: "Please check the Code.org programs you’ve facilitated for us in the past (mark all that apply):",
+    haveLedPd: "Have you led professional development in the past?",
     groupsLedPd: "What groups have you led professional development for in the past? (check all that apply)",
-    describePriorPd: "Please describe your prior experience leading professional development experiences. (500 characters max)"
+    describePriorPd: "Please describe your prior experience leading professional development experiences. (500 characters max)",
+    whyNoPd: "Please give more context as to why you haven’t had prior experience leading professional development experiences. (500 characters max)"
   },
 
   Section5YourApproachToLearningAndLeading: {
@@ -112,7 +135,7 @@ const pageLabels = {
 
     expectedTeacherNeeds:
       "Teachers in Code.org’s Professional Learning Program join us with a wide range of experiences \
-      or lack thereof) in computer science education. What are some of the unique needs you’d expect \
+      (or lack thereof) in computer science education. What are some of the unique needs you’d expect \
       to find in a cohort of these teachers?",
 
     describeAdaptingLessonPlan:
@@ -142,6 +165,9 @@ const pageLabels = {
   },
 
   Section6Logistics: {
+    availableDuringWeek:
+      "During the school year, are you available during the week (Monday - Friday) to attend phone calls or virtual meetings?",
+
     weeklyAvailability:
       "During the school year, what times during the week (Monday - Friday) \
       are you available to attend phone calls or virtual meetings? (mark all that apply)",
@@ -162,4 +188,9 @@ const pageLabels = {
 const allLabels = Object.keys(pageLabels).reduce((allLabels, page) =>
   Object.assign(allLabels, pageLabels[page]), {});
 
-export {pageLabels, allLabels};
+const scoredQuestions = [
+  'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo',
+  ...Object.keys(pageLabels.Section5YourApproachToLearningAndLeading)
+];
+
+export {pageLabels, allLabels, scoredQuestions, sectionLabels, detailPageLabelOverrides};

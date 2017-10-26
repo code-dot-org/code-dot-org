@@ -592,3 +592,8 @@
 .counter-title a {
   color: #00adbc;
 }
+
+#signup-closed {
+  font-weight: 900;
+  margin-bottom: 25px;
+}

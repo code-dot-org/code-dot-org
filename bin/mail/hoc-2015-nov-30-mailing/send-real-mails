@@ -1,5 +1,0 @@
-#!/bin/sh
-# From solr: "numFound": 164814
-
-./send-to-mailing-list --start      0 --limit 100000 11-30-hoc-organizers hoc-2015-nov-30-mailing/hoc-organizers.csv
-./send-to-mailing-list --start 100000 --limit 100000 11-30-hoc-organizers hoc-2015-nov-30-mailing/hoc-organizers.csv

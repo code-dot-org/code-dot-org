@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171018203624) do
+ActiveRecord::Schema.define(version: 20171024173710) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -66,9 +66,7 @@ ActiveRecord::Schema.define(version: 20171018203624) do
   end
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "channel"
     t.integer  "storage_app_id", null: false
-    t.integer  "user_id"
     t.integer  "level_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -76,7 +74,6 @@ ActiveRecord::Schema.define(version: 20171018203624) do
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
     t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true, using: :btree
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
-    t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
 
   create_table "cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -960,14 +957,15 @@ ActiveRecord::Schema.define(version: 20171018203624) do
   end
 
   create_table "stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",                              null: false
+    t.string   "name",                                            null: false
     t.integer  "absolute_position"
-    t.integer  "script_id",                         null: false
+    t.integer  "script_id",                                       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "flex_category"
-    t.boolean  "lockable",          default: false, null: false
-    t.integer  "relative_position",                 null: false
+    t.boolean  "lockable",                        default: false, null: false
+    t.integer  "relative_position",                               null: false
+    t.text     "properties",        limit: 65535
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 

@@ -1,6 +1,5 @@
 ---
 title: CS Principles Professional Learning Program
-nav: plc_csp_nav
 theme: responsive
 ---
 # CS Principles Professional Learning Program
@@ -64,3 +63,11 @@ The CS Principles Professional Learning Program is available in regions served b
 **Applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+
+## <a name="facilitate"></a>Become a CS Principles Facilitator
+
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum. 
+
+Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
+
+<a href="/educate/professional-learning/facilitator"><button>Learn more</button>
