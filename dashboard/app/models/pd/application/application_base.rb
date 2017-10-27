@@ -15,6 +15,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  course              :string(255)
+#  response_scores     :text(65535)
 #
 # Indexes
 #
@@ -99,6 +100,10 @@ module Pd::Application
 
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
+    end
+
+    def response_scores_hash
+      response_scores ? JSON.parse(response_scores) : {}
     end
   end
 end
