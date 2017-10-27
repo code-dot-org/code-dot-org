@@ -1,4 +1,6 @@
-stage 'craft17 stage'
+login_required true
+
+stage 'Minecraft Hour of Code'
 level 'MC_HOC_2017_01_RETRY'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'
@@ -10,4 +12,4 @@ level 'Function intro Ryan'
 level 'MC_HOC_2017_07_Cole'
 level 'MC_HOC_2017_10_RETRY'
 level 'MC_HOC_2017_Ali'
-level 'MC_HOC_2017_FP10x10'
+level 'MC_HOC_2017_13_Cole'
