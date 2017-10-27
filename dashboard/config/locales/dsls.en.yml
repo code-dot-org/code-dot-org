@@ -2005,6 +2005,10 @@ en:
       SFLP - Web - Images on the Web: {}
       SFLP - Web - Quality Websites: {}
       SFLP - Web - Text on the Web: {}
+      SG CSP Abstraction in Programming 2: {}
+      SG U3 whats a comment:
+        description here: description here
+        title: title
       SG U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       SG v2 U3L01 Student Lesson Introduction:
@@ -2857,7 +2861,13 @@ en:
         Good Job!: Good Job!
       courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
+      courseF_firstFunctions_map:
+        description here: description here
+        title: title
       coursee-privateandpersonalinformation: {}
+      coursef_functionsSummary_map:
+        description here: description here
+        title: title
       coursef_powerofwords:
         description here: description here
         title: title
@@ -2865,6 +2875,7 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csd-novice-congrats: {}
+      csd-post-survey-2017 preamble 1: {}
       csd-post-survey-2017-implementation-student: {}
       csd-post-survey-2017-implementation-teacher: {}
       csd-pulse-check-survey-preamble: {}
@@ -8659,7 +8670,7 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
-        When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.
+        When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-post-survey-2017-q16:
         Agree: Agree
         Disagree: Disagree
