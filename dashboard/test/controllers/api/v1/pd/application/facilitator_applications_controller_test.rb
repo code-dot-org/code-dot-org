@@ -9,7 +9,9 @@ module Api::V1::Pd::Application
     end
 
     setup do
-      Pd::Application::Facilitator1819ApplicationMailer.stubs(:confirmation)
+      Pd::Application::Facilitator1819ApplicationMailer.stubs(:confirmation).returns(
+        mock {|mail| mail.stubs(:deliver_now)}
+      )
     end
 
     test_redirect_to_sign_in_for :create
