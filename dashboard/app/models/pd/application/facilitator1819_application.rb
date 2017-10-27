@@ -377,10 +377,6 @@ module Pd::Application
             :groups_led_pd,
             :describe_prior_pd
           ]
-        elsif hash[:have_led_pd] == NO
-          required.concat [
-            :why_no_pd
-          ]
         end
 
         if hash[:available_during_week] == YES
