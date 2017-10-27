@@ -30,11 +30,11 @@ begin
       data = JSON.parse(form[:data])
 
       # Was a pledge made?
-      pledged = ["on", "1"].any {|s| s.casecmp(data["pledge_b"]).zero?}
+      pledged = ["on", "1"].any? {|s| s.casecmp(data["pledge_b"]).zero?}
 
       # Does the school teach some kind of CS?
       teaches_cs = ["some", "all"].any? {|s| s.casecmp(data["ten_hours_s"]).zero?} ||
-          ["some", "all"].any {|s| s.casecmp(data["twenty_hours_s"]).zero?}
+          ["some", "all"].any? {|s| s.casecmp(data["twenty_hours_s"]).zero?}
 
       # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
       next unless pledged || teaches_cs
