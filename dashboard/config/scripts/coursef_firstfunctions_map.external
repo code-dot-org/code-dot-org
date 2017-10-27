@@ -1,4 +1,4 @@
-name 'unique level name here'
+name 'courseF_firstFunctions_map'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
@@ -14,5 +14,4 @@ Creating a function lets you make your own blocks! There are two parts to a func
 -xml of function call-
 
 Prepare to get familiar with functions, learn how to edit them, and create your own!
-
 MARKDOWN

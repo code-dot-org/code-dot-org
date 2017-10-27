@@ -6584,6 +6584,8 @@ en:
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
