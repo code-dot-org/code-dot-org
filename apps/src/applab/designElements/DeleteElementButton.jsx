@@ -20,7 +20,7 @@ const styles = {
  * A delete button that will also ask for confirmation when shouldConfirm is
  * true.
  */
-export default Radium(class DeleteElementButton extends React.Component {
+class DeleteElementButton extends React.Component {
   static propTypes = {
     shouldConfirm: PropTypes.bool.isRequired,
     handleDelete: PropTypes.func.isRequired
@@ -73,4 +73,6 @@ export default Radium(class DeleteElementButton extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(DeleteElementButton);

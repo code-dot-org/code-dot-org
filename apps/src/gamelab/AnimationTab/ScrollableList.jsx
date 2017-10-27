@@ -16,7 +16,7 @@ const staticStyles = {
  * Component displaying a vertical list of tiles that scrolls if it grows
  * beyond its natural height.
  */
-export default Radium(class ScrollableList extends React.Component {
+class ScrollableList extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
@@ -32,4 +32,6 @@ export default Radium(class ScrollableList extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(ScrollableList);

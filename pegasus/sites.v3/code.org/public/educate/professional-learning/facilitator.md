@@ -1,6 +1,5 @@
 ---
 title: Facilitator Development Program
-nav: educate_nav
 theme: responsive
 ---
 
@@ -8,7 +7,7 @@ theme: responsive
 
 Code.org partners with individuals interested in developing facilitation capacity in computer science (CS) education to deliver high-quality professional development to teachers in a format that's fun and accessible.
 
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum. 
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
 
 The ideal facilitator is an enthusiastic supporter of CS education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through teaching experience. 
 
@@ -74,13 +73,13 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div class="col-50" style="padding-right: 20px;">
 
-<img src="/images/fit-370/facilitator_laura.jpg">
+<img src="/images/fit-450/facilitator_laura.jpg">
 
 </div>
 
 <div class="col-50" style="padding-right: 20px;">
 
-<img src="/images/fit-370/facilitator_kevin.jpg">
+<img src="/images/fit-450/facilitator_kevin.jpg">
 
 </div>
 

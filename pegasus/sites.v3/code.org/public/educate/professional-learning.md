@@ -46,7 +46,7 @@ For educators in 6th - 10th grade classrooms, our Computer Science Discoveries c
 
 <h4>9 - 12th grade: Computer Science Principles</h4>
 
-If you're teaching 9 - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course. Either way, there are no prerequisites required. The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course. It explores many of the big, foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
+If you're teaching 9th - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course -- no prerequisites required. The course is designed to be far more than a traditional introduction to programming. It is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
 <br>
 <a href="/educate/professional-learning/cs-principles"><button>Learn more</button>
@@ -55,10 +55,18 @@ If you're teaching 9 - 12th grade students, our Computer Science Principles cour
 
 <div style="clear: both;"></div>
 <br>
-<br>
+
 Not sure which Code.org program is right for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your teaching situation.
 
 **Applications to join our Professional Learning Program for the 2018-19 academic year will open in January 2018.** In the meantime, [sign up on our interest form](https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1) if you'd like to apply.
+
+### Facilitate with Code.org
+
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
+
+Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
+
+<a href="/educate/professional-learning/facilitator"><button>Learn more</button>
 
 ## International
 

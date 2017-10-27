@@ -1,6 +1,9 @@
 class Api::V1::Pd::ApplicationsController < ::ApplicationController
   load_and_authorize_resource class: 'Pd::Application::ApplicationBase'
 
+  # This must be included after load_and_authorize_resource so the auth callback runs first
+  include Api::CsvDownload
+
   # GET /api/v1/pd/applications
   def index
     application_data = {}

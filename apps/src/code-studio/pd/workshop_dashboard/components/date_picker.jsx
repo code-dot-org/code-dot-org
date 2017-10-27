@@ -35,7 +35,7 @@ const styles = {
   }
 };
 
-const DateInputWithIcon = Radium(class extends React.Component {
+class DateInputWithIconUnwrapped extends React.Component {
   static propTypes = {
     disabled: PropTypes.bool,
     onClear: PropTypes.func,
@@ -95,7 +95,8 @@ const DateInputWithIcon = Radium(class extends React.Component {
       </InputGroup>
     );
   }
-});
+}
+const DateInputWithIcon = Radium(DateInputWithIconUnwrapped);
 
 export default class DatePicker extends React.Component {
   static propTypes = {

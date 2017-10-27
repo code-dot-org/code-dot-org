@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {pageLabels} from './Facilitator1819Labels';
+import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
 export default class Section5YourApproachToLearningAndLeading extends Facilitator1819FormComponent {
   static propTypes = {
@@ -9,10 +9,10 @@ export default class Section5YourApproachToLearningAndLeading extends Facilitato
     accountEmail: PropTypes.string.isRequired
   };
 
-  static labels = pageLabels.Section5YourApproachToLearningAndLeading;
+  static labels = PageLabels.section5YourApproachToLearningAndLeading;
 
   static associatedFields = [
-    ...Object.keys(pageLabels.Section5YourApproachToLearningAndLeading)
+    ...Object.keys(PageLabels.section5YourApproachToLearningAndLeading)
   ];
 
   largeInputFor(name, props = {}) {
@@ -26,7 +26,7 @@ export default class Section5YourApproachToLearningAndLeading extends Facilitato
   render() {
     return (
       <FormGroup>
-        <h3>Section 5: Your Approach to Learning and Leading</h3>
+        <h3>Section 5: {SectionHeaders.section5YourApproachToLearningAndLeading}</h3>
 
         {this.largeInputFor("whoShouldHaveOpportunity")}
         {this.largeInputFor("howSupportEquity")}

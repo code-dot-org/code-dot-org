@@ -42,7 +42,7 @@ class PublishDialog extends Component {
           <div style={[dialogStyles.body, {marginBottom: 10}]}>
             {i18n.publishToPublicGalleryWarning()}
           </div>
-          <LegacyButton type="cancel" onClick={this.close}>
+          <LegacyButton type="cancel" onClick={this.close} className="no-mc">
             {i18n.dialogCancel()}
           </LegacyButton>
           <PendingButton
@@ -52,6 +52,7 @@ class PublishDialog extends Component {
             pendingText={i18n.publishPending()}
             style={[BUTTON_TYPES.primary.style, {float: 'right'}]}
             text={i18n.publish()}
+            className="no-mc"
           />
         </Body>
       </Dialog>
