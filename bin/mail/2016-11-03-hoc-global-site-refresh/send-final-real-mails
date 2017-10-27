@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# 664948 remaining teachers
-../send-to-mailing-list --limit 665000 2016-11-03-hoc-global-site-refresh-teachers-final ./teachers-deduped-remainder.csv
-
-# 1340393 remaining non-teachers
-../send-to-mailing-list --limit 1341000 2016-11-03-hoc-global-site-refresh-non-teachers-final ./non-teachers-deduped-remainder.csv

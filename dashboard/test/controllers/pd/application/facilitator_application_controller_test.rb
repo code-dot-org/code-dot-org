@@ -42,7 +42,7 @@ module Pd::Application
         get :new
         assert_response :success
         assert_template :closed
-        assert_select 'p', /Applications to join the facilitator development program are no longer being accepted this year\./
+        assert_select 'p', /Applications to join the Facilitator Development Program are no longer being accepted this year\./
       end
     end
 

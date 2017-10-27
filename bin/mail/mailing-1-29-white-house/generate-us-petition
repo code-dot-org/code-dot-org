@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
-require 'set'
-
-# ALL U.S. petition signers
-us_petition = query_subscribed_contacts(q: 'kind_s:Petition').select {|_, contact| contact[:international] == 'false'}
-
-puts "#{us_petition.count} US petition signers"
-export_contacts_to_csv us_petition, 'us-petition.csv'

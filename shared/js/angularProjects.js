@@ -60,7 +60,7 @@ services.factory('projectsService', ['$resource',
       // Until projectType is back-filled, check level when projectType is missing.
       return this.projectType ?
         this.projectType :
-        this.level.substr('/projects/'.length);
+        this.level && this.level.substr('/projects/'.length);
     };
 
     Project.prototype.isPublishableProjectType = function () {

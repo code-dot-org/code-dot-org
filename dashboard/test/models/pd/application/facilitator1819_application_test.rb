@@ -17,13 +17,13 @@ module Pd::Application
       # match
       regional_partner = create :regional_partner
       RegionalPartner.expects(:find_by_region).with('11111', 'WA').returns(regional_partner)
-      application_hash = build :pd_facilitator1819_application_hash, zip_code: '11111', state: 'WA'
+      application_hash = build :pd_facilitator1819_application_hash, zip_code: '11111', state: 'Washington'
       application = create :pd_facilitator1819_application, form_data_hash: application_hash
       assert_equal regional_partner, application.regional_partner
 
       # No match
       RegionalPartner.expects(:find_by_region).with('22222', 'WA').returns(nil)
-      application_hash = build :pd_facilitator1819_application_hash, zip_code: '22222', state: 'WA'
+      application_hash = build :pd_facilitator1819_application_hash, zip_code: '22222', state: 'Washington'
       application.form_data_hash = application_hash
       application.save!
       assert_nil application.regional_partner
@@ -46,6 +46,43 @@ module Pd::Application
         create :pd_facilitator1819_application, user: teacher
       end
       assert_equal 'Validation failed: User has already been taken', e.message
+    end
+
+    test 'state_code and state_name' do
+      application_hash = build :pd_facilitator1819_application_hash, state: 'Washington'
+      application = build :pd_facilitator1819_application, form_data_hash: application_hash
+      assert_equal 'Washington', application.state_name
+      assert_equal 'WA', application.state_code
+    end
+
+    test 'answer_with_additional_text with defaults' do
+      application_hash = build :pd_facilitator1819_application_hash
+      application_hash[:institution_type] = ['School district', 'Other:']
+      application_hash[:institution_type_other] = 'School of Witchcraft and Wizardry'
+      application = build :pd_facilitator1819_application, form_data_hash: application_hash
+
+      assert_equal(
+        [
+          'School district',
+          'Other: School of Witchcraft and Wizardry'
+        ],
+        application.answer_with_additional_text(application_hash, :institution_type)
+      )
+    end
+
+    test 'answer_with_additional_text with custom field' do
+      OPTION = 'A Code.org Regional Partner (please share name):'
+      application_hash = build :pd_facilitator1819_application_hash
+      application_hash[:how_heard] = [OPTION]
+      application_hash[:how_heard_regional_partner] = 'Hogwarts Coding Wizards'
+      application = build :pd_facilitator1819_application, form_data_hash: application_hash
+
+      assert_equal(
+        [
+          "#{OPTION} Hogwarts Coding Wizards"
+        ],
+        application.answer_with_additional_text(application_hash, :how_heard, OPTION, :how_heard_regional_partner)
+      )
     end
   end
 end
