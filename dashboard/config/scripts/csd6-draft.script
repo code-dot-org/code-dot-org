@@ -8,7 +8,7 @@ project_widget_types ["applab"]
 stage 'Computing Innovations', flex_category: 'csd6_1'
 named_level 'CSDU6 Innovation'
 
-stage 'Getting and Setting Properties', flex_category: 'csd6_1'
+stage 'Designing Screens with Code', flex_category: 'csd6_1'
 named_level 'CSD U6 setProperty Map'
 level 'CSD U6 setProperty predict app', progression: 'Setting Properties'
 level 'CSD U6 setProperty Text', progression: 'Setting Properties'
@@ -77,6 +77,8 @@ named_level 'CSD U6 getProperty Map'
 level 'CSD U6 getProperty Demo', progression: 'Getting and Setting'
 level 'CSD U6 getProperty input', progression: 'Getting and Setting'
 level 'CSD U6 getProperty dropdown', progression: 'Getting and Setting'
+level 'CSD U6 getProperty board predict', progression: 'Getting and Setting'
+level 'CSD U6 getProperty buzzer', progression: 'Getting and Setting'
 
 stage 'Analog Input', flex_category: 'csd6_1'
 named_level 'CSDU6 - sensors experiment'
