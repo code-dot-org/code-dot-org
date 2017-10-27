@@ -32,6 +32,14 @@ social:
     outline: 0;
   }
 
+  #fullwidth {
+    background: #0094a3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#0094a3, #00adbc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0094a3, #00adbc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0094a3, #00adbc); /* For Firefox 3.6 to 15 */
+    background: background: linear-gradient(#0094a3, #00adbc); /* Standard syntax */
+    overflow: hidden;
+  }
   .banner {
     color: white;
     text-align: center;
@@ -64,7 +72,7 @@ social:
     height: 278px;
   }
 
-#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+#fullwidth
   = view :header
 
   .banner.container{style: "color: white"}
@@ -117,10 +125,7 @@ social:
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
-    // Pick a random student image (1-2 inclusive) and fade it in.
-    var studentImageIndex = Math.floor(Math.random() * 2) + 1;
-    var studentImage = "#{CDO.code_org_url('/images/learn/student')}" + studentImageIndex + '.png';
-
+    var studentImage = "#{CDO.code_org_url('/images/learn/students.png')}";
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');
