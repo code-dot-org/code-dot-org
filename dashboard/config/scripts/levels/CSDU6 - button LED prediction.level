@@ -48,9 +48,6 @@
     "start_blocks": "onBoardEvent(buttonL, \"press\", function(event) {\r\n  led.on();\r\n});",
     "contained_level_names": [
       "CSDU6 - button_LED_prediction"
-    ],
-    "encrypted_examples": [
-
     ]
   },
   "published": true,

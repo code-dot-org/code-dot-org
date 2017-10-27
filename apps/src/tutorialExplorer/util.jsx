@@ -2,8 +2,17 @@ import i18n from '@cdo/tutorialExplorer/locale';
 import * as utils from '../utils';
 
 
-// Sorting for tutorials.
-export const TutorialsSortBy = utils.makeEnum('popularityrank', 'displayweight');
+// Sort By dropdown choices for tutorials.
+export const TutorialsSortByOptions = utils.makeEnum('popularityrank', 'displayweight');
+
+// Sort By source data field names (from gsheet) for tutorials.
+export const TutorialsSortByFieldNames = utils.makeEnum(
+  'popularityrank',
+  'displayweight',
+  'displayweight_k5',
+  'displayweight_middle',
+  'displayweight_high'
+);
 
 // Orgname value.
 export const TutorialsOrgName = utils.makeEnum('all');

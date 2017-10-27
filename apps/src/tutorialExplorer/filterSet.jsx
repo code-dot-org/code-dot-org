@@ -5,7 +5,7 @@ import React, {PropTypes} from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
 import FilterGroupOrgNames from './filterGroupOrgNames';
-import { TutorialsSortBy } from './util';
+import { TutorialsSortByOptions } from './util';
 
 export default class FilterSet extends React.Component {
   static propTypes = {
@@ -13,8 +13,8 @@ export default class FilterSet extends React.Component {
     uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     orgName: PropTypes.string,
     showSortDropdown: PropTypes.bool.isRequired,
-    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
-    sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired,
+    sortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired,
     filterGroups: PropTypes.array.isRequired,
     selection: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     onUserInputFilter: PropTypes.func.isRequired,
