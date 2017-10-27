@@ -52,11 +52,11 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingHOCiscoming();
-  let announcementDescription = i18n.announcementDescriptionHOCiscoming();
+  let announcementHeading = i18n.announcementHeadingFacilitatorApp();
+  let announcementDescription = i18n.announcementDescriptionFacilitatorApp();
   let announcementLink =
-    "https://hourofcode.com/#join";
-  let announcementId = "hoc_is_coming";
+    "https://code.org/facilitator";
+  let announcementId = "facilitator_app";
 
   // Optional override of teacher announcement.
   if (isEnglish &&
