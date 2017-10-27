@@ -28,6 +28,7 @@ const ApplicationDashboardHeader = (props) => (
 );
 
 const paths = {
+  'csf_facilitators': 'CSF Facilitators',
   'csd_facilitators': 'CSD Facilitator Applications',
   'csd_teachers': 'CSD Teacher Applications',
   'csp_facilitators': 'CSP Facilitator Applications',
@@ -50,7 +51,10 @@ const ApplicationDashboard = ()=> (
               <Route
                 key={`detail_${i}`}
                 path={`${path}/(:applicationId)`}
-                breadcrumb={`${paths[path]},Application Details`}
+                breadcrumbs={[
+                  {name: paths[path], path: path},
+                  {name: 'Application Details', path: ''}
+                ]}
                 component={DetailView}
                 title={'Application Detail'}
               />

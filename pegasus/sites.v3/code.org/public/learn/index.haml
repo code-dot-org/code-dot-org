@@ -30,6 +30,13 @@ style_min: false
     margin-top: 0px;
   }
 
+  #fullwidth {
+    background: #0094a3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#0094a3, #00adbc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0094a3, #00adbc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0094a3, #00adbc); /* For Firefox 3.6 to 15 */
+    background: background: linear-gradient(#0094a3, #00adbc); /* Standard syntax */
+  }
   .banner {
     color: white;
     text-align: center;
@@ -64,7 +71,7 @@ style_min: false
     height: 278px;
   }
 
-#fullwidth{style: "background-color: #2799a4"}
+#fullwidth
   - if request.site == 'code.org'
     = view :header2
   - else
@@ -122,10 +129,7 @@ style_min: false
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
-    // Pick a random student image (1-2 inclusive) and fade it in.
-    var studentImageIndex = Math.floor(Math.random() * 2) + 1;
-    var studentImage = '/images/learn/student' + studentImageIndex + '.png';
-
+    var studentImage = '/images/learn/students.png';
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');

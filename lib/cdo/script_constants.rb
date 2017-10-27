@@ -56,6 +56,7 @@ module ScriptConstants
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
+      APPLAB_INTRO = 'applab-intro'.freeze,
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
@@ -120,9 +121,6 @@ module ScriptConstants
     ],
     tts: [
       TTS_NAME = 'allthettsthings'.freeze
-    ],
-    applab_intro: [
-      APPLAB_INTRO = 'applab-intro'.freeze,
     ],
   }.freeze
 

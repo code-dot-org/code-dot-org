@@ -66,5 +66,5 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
        AND school_stats_by_years.school_year = max_survey_years.survey_year
 WITH NO SCHEMA BINDING;
 
-GRANT SELECT ON analysis.school_stats
-   TO GROUP reader, GROUP reader_pii, GROUP admin;
+GRANT ALL PRIVILEGES ON analysis.school_stats TO GROUP admin;
+GRANT SELECT ON analysis.school_stats TO GROUP reader, GROUP reader_pii;

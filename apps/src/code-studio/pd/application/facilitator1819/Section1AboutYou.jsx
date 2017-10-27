@@ -38,7 +38,7 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
           {' '}<span style={{color: "red"}}>*</span>{' '}
           are required. If you need more information on the program before you apply, please visit
           {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}
-          If you have questions regarding the Facilitator program or application, please contact
+          If you have questions regarding the Facilitator Development Program or application, please contact
           {' '}<a href={`mailto:${FACILITATOR_EMAIL}`}>{FACILITATOR_EMAIL}</a>.
         </p>
         <p>

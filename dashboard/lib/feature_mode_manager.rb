@@ -65,12 +65,12 @@ class FeatureModeManager
         puzzle_rating: false,
         hint_view_request: false,
         postMilestone: true,
-        shareEnabled: false,
+        shareEnabled: true,
         slogging: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
-        shareEnabled: false,
+        shareEnabled: true,
       },
       dcdo_settings: {
         hoc_activity_sample_weight: 10,
