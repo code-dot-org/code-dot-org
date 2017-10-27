@@ -54,5 +54,35 @@ module Pd::Application
       assert_equal 'Washington', application.state_name
       assert_equal 'WA', application.state_code
     end
+
+    test 'answer_with_additional_text with defaults' do
+      application_hash = build :pd_facilitator1819_application_hash
+      application_hash[:institution_type] = ['School district', 'Other:']
+      application_hash[:institution_type_other] = 'School of Witchcraft and Wizardry'
+      application = build :pd_facilitator1819_application, form_data_hash: application_hash
+
+      assert_equal(
+        [
+          'School district',
+          'Other: School of Witchcraft and Wizardry'
+        ],
+        application.answer_with_additional_text(application_hash, :institution_type)
+      )
+    end
+
+    test 'answer_with_additional_text with custom field' do
+      OPTION = 'A Code.org Regional Partner (please share name):'
+      application_hash = build :pd_facilitator1819_application_hash
+      application_hash[:how_heard] = [OPTION]
+      application_hash[:how_heard_regional_partner] = 'Hogwarts Coding Wizards'
+      application = build :pd_facilitator1819_application, form_data_hash: application_hash
+
+      assert_equal(
+        [
+          "#{OPTION} Hogwarts Coding Wizards"
+        ],
+        application.answer_with_additional_text(application_hash, :how_heard, OPTION, :how_heard_regional_partner)
+      )
+    end
   end
 end

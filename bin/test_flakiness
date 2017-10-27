@@ -6,7 +6,35 @@
 
 require_relative '../deployment'
 require 'cdo/test_flakiness'
+require 'optparse'
 
-limit = ARGV[0] ? ARGV[0].to_i : -1
+options = {limit: -1, reruns: false, recalc: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-n', '--limit N', 'Top N flakiest tests.') do |n|
+    options[:limit] = Integer(n)
+  end
+  opts.on('-r', '--reruns', 'Show recommended reruns/confidence.') do
+    options[:reruns] = true
+  end
+  opts.on('-c', '--recalc', 'Re-calculate from SauceLabs API.') do
+    options[:recalc] = true
+  end
+  opts.on('-h', '--help', 'Prints this help') do
+    puts opts
+    exit
+  end
+end.parse!
 
-puts TestFlakiness.test_flakiness.to_a.sort_by(&:last).reverse[0..limit].map {|pair| pair.reverse.join("\t")}.join("\n")
+results = options[:recalc] ?
+  TestFlakiness.calculate_test_flakiness :
+  TestFlakiness.test_flakiness
+
+results.to_a.sort_by(&:last).reverse[0..options[:limit]].map do |name, flakiness|
+  if options[:reruns]
+    max_reruns, confidence = TestFlakiness.recommend_reruns(flakiness)
+    puts "#{flakiness}\t#{max_reruns}\t#{confidence}\t#{name}"
+  else
+    puts "#{flakiness}\t#{name}"
+  end
+end

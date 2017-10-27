@@ -7,7 +7,8 @@ import { getStore } from '@cdo/apps/code-studio/redux';
 import { setSections, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { setUserSignedIn, getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/progressRedux';
+import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
+import { getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/initSigninState';
 import { setVerified, setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(showCourseOverview);

@@ -178,7 +178,7 @@ export default class SectionsTable extends React.Component {
                 ...styles.row
               }}
               key={index}
-              className="row"
+              className="test-row"
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
                 {isTeacher && (

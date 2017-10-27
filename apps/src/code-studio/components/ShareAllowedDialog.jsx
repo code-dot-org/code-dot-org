@@ -310,6 +310,7 @@ class ShareAllowedDialog extends React.Component {
                     style={hasThumbnail ? styles.button : styles.buttonDisabled}
                     onClick={this.publish}
                     disabled={!hasThumbnail}
+                    className="no-mc"
                   >
                     {i18n.publish()}
                   </button>
@@ -322,6 +323,7 @@ class ShareAllowedDialog extends React.Component {
                     pendingText={i18n.unpublishPending()}
                     style={styles.button}
                     text={i18n.unpublish()}
+                    className="no-mc"
                   />
                   }
                   {/* prevent buttons from overlapping when unpublish is pending */}

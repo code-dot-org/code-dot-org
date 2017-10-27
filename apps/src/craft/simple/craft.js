@@ -17,6 +17,7 @@ var AppView = require('../../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
+import experiments from '../../util/experiments';
 
 import {TestResults} from '../../constants';
 
@@ -741,6 +742,7 @@ Craft.reportResult = function (success) {
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
+  const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
   studioApp().report({
     app: 'craft',
@@ -771,7 +773,8 @@ Craft.reportResult = function (success) {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: image,
-        showingSharing: Craft.initialConfig.level.freePlay
+        showingSharing: Craft.initialConfig.level.freePlay,
+        saveToProjectGallery,
       });
     }
   });
