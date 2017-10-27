@@ -532,7 +532,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="X-CSRF-Token" elementType="Header">
                 <stringProp name="Header.name">X-CSRF-Token</stringProp>
-                <stringProp name="Header.value">I+SnS1HyT84UcuZFsrm8qd6X/MYrEhoy53HGyBzDEIVFm0wl5sy/r+APziQz+1q8RGdF8RnXHxOb6PfyexMdkw==</stringProp>
+                <stringProp name="Header.value">${csrfToken}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -589,7 +589,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="X-CSRF-Token" elementType="Header">
                 <stringProp name="Header.name">X-CSRF-Token</stringProp>
-                <stringProp name="Header.value">I+SnS1HyT84UcuZFsrm8qd6X/MYrEhoy53HGyBzDEIVFm0wl5sy/r+APziQz+1q8RGdF8RnXHxOb6PfyexMdkw==</stringProp>
+                <stringProp name="Header.value">${csrfToken}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -752,7 +752,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="X-CSRF-Token" elementType="Header">
                 <stringProp name="Header.name">X-CSRF-Token</stringProp>
-                <stringProp name="Header.value">VgfHZC5joCs0VtxJ+VX3U7j7+E6rTlmGKwava5Hqg1cweCwKmV1QSsAr9Ch4FxFGIgtBeZmLXKdXn55R9jqOQQ==</stringProp>
+                <stringProp name="Header.value">${csrfToken}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
