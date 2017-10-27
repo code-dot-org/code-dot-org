@@ -55,7 +55,7 @@ namespace :test do
 
   task :ui_test_flakiness do
     Dir.chdir(deploy_dir) do
-      flakiness_output = `./bin/test_flakiness 5`
+      flakiness_output = `./bin/test_flakiness -n 5`
       ChatClient.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
     end
   end
