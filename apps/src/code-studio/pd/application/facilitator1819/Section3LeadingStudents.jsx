@@ -50,7 +50,7 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
             {this.props.data.yearsExperience && this.props.data.yearsExperience !== NONE &&
               <div>
                 {this.checkBoxesWithAdditionalTextFieldsFor("experienceLeading", {
-                  "Other" : "other"
+                  "Other:" : "other"
                 })}
 
                 {this.checkBoxesFor("completedPd")}
