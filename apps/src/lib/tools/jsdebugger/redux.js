@@ -102,7 +102,7 @@ export function initialize({runApp}) {
  */
 export function appendLog(output, level) {
   return (dispatch, getState) => {
-    const logLevel = level.toLowerCase();
+    const logLevel = level && level.toLowerCase();
     dispatch({type: APPEND_LOG, output, logLevel});
     if (!isOpen(getState())) {
       dispatch(open());
