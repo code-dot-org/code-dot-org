@@ -14,22 +14,18 @@ FactoryGirl.define do
     sequence(:name) {|n| "fancyFeature#{n}"}
 
     factory :user_based_experiment, class: 'UserBasedExperiment' do
-      type "UserBasedExperiment"
       percentage 50
     end
     factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
-      type "TeacherBasedExperiment"
       min_user_id 0
       max_user_id 0
       overflow_max_user_id 0
       script nil
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
-      type "SingleSectionExperiment"
       section
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
-      type "SingleUserExperiment"
     end
   end
 
