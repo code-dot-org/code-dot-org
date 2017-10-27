@@ -28,13 +28,9 @@ export default class QuickView extends React.Component {
   };
 
   componentWillMount() {
-    this.load();
-  }
-
-  load = (props = this.props) => {
-    this.loadRequest = $.ajax({
+    $.ajax({
       method: 'GET',
-      url: '/api/v1/pd/applications/quick_view?role=' + this.props.route.path,
+      url: `/api/v1/pd/applications/quick_view?role=${this.props.route.path}`,
       dataType: 'json'
     })
     .done(data => {
@@ -43,7 +39,7 @@ export default class QuickView extends React.Component {
         applications: data
       });
     });
-  };
+  }
 
   render() {
     if (this.state.loading) {
@@ -58,7 +54,3 @@ export default class QuickView extends React.Component {
     );
   }
 }
-
-QuickView.childContextTypes = {
-  router: PropTypes.object
-};

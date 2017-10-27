@@ -96,5 +96,9 @@ module Pd::Application
     def district_name
       user.school_info.try(:effective_school_district_name).try(:titleize)
     end
+
+    def applicant_name
+      "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
+    end
   end
 end

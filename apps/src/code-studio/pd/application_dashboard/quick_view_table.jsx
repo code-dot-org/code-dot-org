@@ -26,7 +26,7 @@ export default class QuickViewTable extends React.Component {
         label: 'Submitted',
       },
     },{
-      property: 'name',
+      property: 'applicant_name',
       header: {
         label: 'Name',
       },
