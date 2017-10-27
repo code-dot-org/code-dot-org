@@ -80,9 +80,7 @@ module Facilitator1819ApplicationConstants
       code_org_facilitator_programs: 'Please check the Code.org programs you’ve facilitated for us in the past (mark all that apply):',
       have_led_pd: 'Have you led professional development in the past?',
       groups_led_pd: 'What groups have you led professional development for in the past? (check all that apply)',
-      describe_prior_pd: 'Please describe your prior experience leading professional development experiences. (500 characters max)',
-      why_no_pd:
-        'Please give more context as to why you haven’t had prior experience leading professional development experiences. (500 characters max)'
+      describe_prior_pd: 'Please describe your prior experience leading professional development experiences. (500 characters max)'
     },
 
     section_5_your_approach_to_learning_and_leading: {
