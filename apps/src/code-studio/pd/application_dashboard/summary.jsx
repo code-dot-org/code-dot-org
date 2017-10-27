@@ -33,20 +33,15 @@ export default class Summary extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return (
-        <div>
-          <Spinner/>
-        </div>
-      );
-    } else {
-      return (
-        <div className="row">
-          <h1>All Regional Partner Applications</h1>
-          <SummaryTable caption="CSF Facilitators" data={this.state.applications["csf_facilitators"]} path="csf_facilitators"/>
-          <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitators"]} path="csd_facilitators"/>
-          <SummaryTable caption="CSP Facilitators" data={this.state.applications["csp_facilitators"]} path="csp_facilitators"/>
-        </div>
-      );
+      return <Spinner/>;
     }
+    return (
+      <div className="row">
+        <h1>All Regional Partner Applications</h1>
+        <SummaryTable caption="CSF Facilitators" data={this.state.applications["csf_facilitators"]} path="csf_facilitators"/>
+        <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitators"]} path="csd_facilitators"/>
+        <SummaryTable caption="CSP Facilitators" data={this.state.applications["csp_facilitators"]} path="csp_facilitators"/>
+      </div>
+    );
   }
 }
