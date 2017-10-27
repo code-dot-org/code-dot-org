@@ -568,7 +568,7 @@ class Script < ActiveRecord::Base
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
-        }, stages]
+        }, stages.map {|stage| stage[:scriptlevels]}.flatten]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
@@ -579,8 +579,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.add_script(options, raw_stages)
-    raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
+  def self.add_script(options, raw_script_levels)
     script = fetch_script(options)
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
@@ -717,10 +716,6 @@ class Script < ActiveRecord::Base
       if stage.lockable && !stage.script_levels.last.assessment?
         raise 'Expect lockable stages to have an assessment as their last level'
       end
-
-      raw_stage = raw_stages.find {|rs| rs[:stage] == stage.name}
-      stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
-      stage.save! if stage.changed?
     end
 
     script.stages = script_stages
@@ -755,7 +750,7 @@ class Script < ActiveRecord::Base
             wrapup_video: general_params[:wrapup_video],
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:stages],
+          script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
         )
         Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end

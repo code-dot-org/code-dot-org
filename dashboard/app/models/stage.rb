@@ -26,15 +26,10 @@ class Stage < ActiveRecord::Base
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
-  include SerializedProperties
 
   has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
-
-  serialized_attrs %w(
-    stage_extras_disabled
-  )
 
   # A stage has an absolute position and a relative position. The difference between the two is that relative_position
   # only accounts for other stages that have the same lockable setting, so if we have two lockable stages followed
@@ -120,6 +115,7 @@ class Stage < ActiveRecord::Base
         flex_category: localized_category,
         lockable: !!lockable,
         levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
+        stage_extras_level_url: script_stage_extras_url(script.name, stage_position: relative_position),
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
@@ -148,10 +144,6 @@ class Stage < ActiveRecord::Base
       if script.hoc?
         stage_data[:finishLink] = script.hoc_finish_url
         stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
-      end
-
-      if !unplugged? && !stage_extras_disabled
-        stage_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
       end
 
       stage_data
