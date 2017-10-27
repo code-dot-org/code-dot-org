@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
-import {TutorialsSortBy} from '@cdo/apps/tutorialExplorer/util';
+import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
@@ -17,8 +17,8 @@ const DEFAULT_PROPS = {
   uniqueOrgNames: FAKE_UNIQUE_ORG_NAMES,
   orgName: FAKE_ORG_NAME,
   showSortDropdown: true,
-  defaultSortBy: TutorialsSortBy.popularityrank,
-  sortBy: TutorialsSortBy.popularityrank,
+  defaultSortBy: TutorialsSortByOptions.popularityrank,
+  sortBy: TutorialsSortByOptions.popularityrank,
   filterGroups: [
     {
       name: 'group-1',
