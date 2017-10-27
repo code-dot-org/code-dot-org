@@ -28,7 +28,6 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   def quick_view
     role = params[:role].to_sym
     applications = get_applications_by_role(role)
-    return render_404 unless applications
     render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
   end
 
@@ -54,7 +53,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     when :csp_teachers
       return @applications.csp.where(type: Pd::Application::Teacher1819Application.name)
     else
-      nil
+      raise ActiveRecord::RecordNotFound
     end
   end
 
