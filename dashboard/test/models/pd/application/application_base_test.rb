@@ -60,7 +60,7 @@ module Pd::Application
       teacher = build :teacher, school_info: school_info
       application = build :pd_facilitator1819_application, user: teacher
 
-      assert_equal school_info.effective_school_name.downcase, application.school_name.downcase
+      assert_equal school_info.effective_school_name.titleize, application.school_name
     end
 
     test 'district name' do
@@ -68,7 +68,7 @@ module Pd::Application
       teacher = build :teacher, school_info: school_info
       application = build :pd_facilitator1819_application, user: teacher
 
-      assert_equal school_info.effective_school_district_name.downcase, application.district_name.downcase
+      assert_equal school_info.effective_school_district_name.titleize, application.district_name
     end
   end
 end
