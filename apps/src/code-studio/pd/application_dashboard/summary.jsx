@@ -18,11 +18,7 @@ export default class Summary extends React.Component {
   };
 
   componentWillMount() {
-    this.load();
-  }
-
-  load = (props = this.props) => {
-    this.loadRequest = $.ajax({
+    $.ajax({
       method: 'GET',
       url: '/api/v1/pd/applications',
       dataType: 'json'
@@ -33,7 +29,7 @@ export default class Summary extends React.Component {
         applications: data
       });
     });
-  };
+  }
 
   render() {
     if (this.state.loading) {
@@ -54,7 +50,3 @@ export default class Summary extends React.Component {
     }
   }
 }
-
-Summary.childContextTypes = {
-  router: PropTypes.object
-};

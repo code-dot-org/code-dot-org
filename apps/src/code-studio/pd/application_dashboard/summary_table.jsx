@@ -39,6 +39,11 @@ export default class SummaryTable extends React.Component {
     );
   };
 
+  handleViewClick = (event) => {
+    event.preventDefault();
+    this.context.router.push(`/${this.props.path}`);
+  };
+
   render() {
     return (
       <div className="col-xs-4" style={styles.tableWrapper}>
@@ -58,7 +63,10 @@ export default class SummaryTable extends React.Component {
             {this.tableRow('Unreviewed', color.charcoal, this.props.data)}
           </tbody>
         </Table>
-        <Button href={this.context.router.createHref(`/${this.props.path}`)}>
+        <Button
+          href={this.context.router.createHref(`/${this.props.path}`)}
+          onClick={this.handleViewClick}
+        >
           View all applications
         </Button>
       </div>
