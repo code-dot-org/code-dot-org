@@ -22,7 +22,7 @@ post '/forms/:kind' do |kind|
   rescue Sequel::UniqueConstraintViolation
     halt 409
   rescue NameError
-    halt 404
+    halt 400
   end
 end
 
