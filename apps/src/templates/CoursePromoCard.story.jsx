@@ -2,7 +2,7 @@ import React from 'react';
 import CoursePromoCard from './CoursePromoCard';
 
 const exampleCard = {
-  title: "CS Fundamental Express",
+  title: "CS Fundamentals Express",
   description: "All the core concepts from the elementary school curriculum, but at an accelerated pace designed for older students.",
   buttonText: "Start the course",
   link: "/s/express",
@@ -35,6 +35,20 @@ export default storybook => {
             buttonText={exampleCard.buttonText}
             link={exampleCard.link}
             isRtl={true}
+          />
+        )
+      },
+      {
+        name: 'Minecraft Promo Card',
+        description: `This is an example Minecraft promo card, includes share link`,
+        story: () => (
+          <CoursePromoCard
+            title="Minecraft Education"
+            description="Copy the link below to continue programming with Minecraft."
+            buttonText="Go to Minecraft"
+            link="https://minecraft.net/en-us/"
+            isRtl={false}
+            MCShareLink="code.org/sharelink"
           />
         )
       }

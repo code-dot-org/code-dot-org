@@ -12,7 +12,8 @@ const styles = {
     position: 'relative',
     height: 440,
     width: 310,
-    marginBottom: 20
+    marginBottom: 20,
+    backgroundColor: color.white
   },
   image: {
     width: 310,
@@ -36,6 +37,17 @@ const styles = {
     fontSize: 14,
     lineHeight: 1.5,
   },
+  shareLink: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    fontSize: 16,
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10,
+    padding: 5,
+    width: 258,
+  },
   ltr: {
     float: 'left',
   },
@@ -55,11 +67,12 @@ class CoursePromoCard extends Component {
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    MCShareLink: PropTypes.string
   };
 
   render() {
-    const { title, description, link, buttonText, isRtl } = this.props;
+    const { title, description, link, buttonText, isRtl, MCShareLink } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
 
     return (
@@ -72,6 +85,11 @@ class CoursePromoCard extends Component {
           <div style={[styles.text, styles.description, localeStyle]}>
            {description}
           </div>
+          {MCShareLink && (
+            <div style={[styles.text, styles.shareLink, localeStyle]}>
+             {MCShareLink}
+            </div>
+          )}
           <Button
             href={link}
             color={Button.ButtonColor.gray}
