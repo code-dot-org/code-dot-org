@@ -130,4 +130,19 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script_level_solved_response(response, script_level)
     refute response[:redirect].end_with?('extras')
   end
+
+  test 'do not get End-of-Stage experience if disabled for stage' do
+    stubs(:current_user).returns(@student)
+    script = @section.script
+    script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 14, false
+    script_level.stage.stage_extras_disabled = true
+    script_level.stage.save!
+    assert script_level.end_of_stage?, 'bad script_level selected for test'
+    @section.stage_extras = true
+    @section.save
+    response = {}
+
+    script_level_solved_response(response, script_level)
+    refute response[:redirect].end_with?('extras')
+  end
 end
