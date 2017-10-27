@@ -32,8 +32,8 @@ results = options[:recalc] ?
 
 results.to_a.sort_by(&:last).reverse[0..options[:limit]].map do |name, flakiness|
   if options[:reruns]
-    r, c = TestFlakiness.recommend_reruns(flakiness)
-    puts "#{flakiness}\t#{r}\t#{c}\t#{name}"
+    max_reruns, confidence = TestFlakiness.recommend_reruns(flakiness)
+    puts "#{flakiness}\t#{max_reruns}\t#{confidence}\t#{name}"
   else
     puts "#{flakiness}\t#{name}"
   end
