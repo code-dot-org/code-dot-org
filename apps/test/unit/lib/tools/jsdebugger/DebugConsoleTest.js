@@ -220,7 +220,7 @@ describe('The DebugConsole component', () => {
       expect(debugOutput().get(0).style.backgroundColor).to.equal('rgb(255, 247, 223)');
     });
 
-    it("warning debug output will change background color to lightest red", () => {
+    it("error debug output will change background color to lightest red", () => {
       getStore().dispatch(actions.appendLog('test normal text'));
       getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
       getStore().dispatch(actions.appendLog('test error text', 'ERROR'));
