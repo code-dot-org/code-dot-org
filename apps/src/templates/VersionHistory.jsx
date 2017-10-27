@@ -132,7 +132,7 @@ var VersionHistory = React.createClass({
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
                   <button className="btn-danger" onClick={this.onConfirmClearPuzzle} style={{float: 'right'}}>
-                    Delete Progress
+                    Start over
                   </button>
                   </td>
                 </tr>
