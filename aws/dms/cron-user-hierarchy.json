@@ -421,6 +421,18 @@
         "table-name": "studio_people",
         "column-name": "emails"
       }
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "37",
+      "rule-name": "37",
+      "rule-action": "remove-column",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "users",
+        "column-name": "parent_email"
+      }
     }
   ]
 }

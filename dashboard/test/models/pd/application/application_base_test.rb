@@ -47,5 +47,28 @@ module Pd::Application
       application.reload
       assert application.pending?
     end
+
+    test 'regional partner name' do
+      partner = build :regional_partner
+      application = build :pd_facilitator1819_application, regional_partner: partner
+
+      assert_equal partner.name, application.regional_partner_name
+    end
+
+    test 'school name' do
+      school_info = build :school_info
+      teacher = build :teacher, school_info: school_info
+      application = build :pd_facilitator1819_application, user: teacher
+
+      assert_equal school_info.effective_school_name.titleize, application.school_name
+    end
+
+    test 'district name' do
+      school_info = build :school_info
+      teacher = build :teacher, school_info: school_info
+      application = build :pd_facilitator1819_application, user: teacher
+
+      assert_equal school_info.effective_school_district_name.titleize, application.district_name
+    end
   end
 end

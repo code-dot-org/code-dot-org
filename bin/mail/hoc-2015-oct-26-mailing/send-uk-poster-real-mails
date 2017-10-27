@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 10-26-hoc-uk-posters hoc-2015-oct-26-mailing/uk-posters.csv

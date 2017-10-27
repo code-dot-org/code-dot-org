@@ -58,6 +58,7 @@ var ALLOWED_KEYS = new Set([
   'documentationUrl',
   'appType',
   'nextLevelUrl',
+  'showProjectTemplateWorkspaceIcon',
 ]);
 
 const initialState = {

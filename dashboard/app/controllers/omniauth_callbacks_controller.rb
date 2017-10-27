@@ -19,11 +19,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif @user.provider == 'clever' && cookies['pm'] == 'clever_takeover'
+    elsif @user.provider == 'clever' && @user.persisted?
       handle_clever_signin(@user)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_clever_takeover(@user) if cookies['pm'] == 'clever_takeover'
+      check_and_apply_clever_takeover(@user)
       sign_in_user
     elsif allows_silent_takeover(@user)
       silent_takeover(@user)
@@ -114,10 +114,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
     # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
-    if cookies['pm'] == 'clever_takeover'
-      allow_takeover && lookup_user
-    else
-      allow_takeover && lookup_user && lookup_user.provider != 'clever' # do *not* allow silent takeover of Clever accounts!
-    end
+    allow_takeover && lookup_user
   end
 end
