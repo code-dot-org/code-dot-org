@@ -9,7 +9,7 @@
 import React, {PropTypes} from 'react';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import {DetailViewContents} from './detail_view_contents';
+import DetailViewContents from './detail_view_contents';
 
 export default class DetailView extends React.Component {
   static contextTypes = {
