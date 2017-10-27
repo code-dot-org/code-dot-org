@@ -87,13 +87,14 @@ var jsInterpreterLogger = null;
  * Eventually, I'd like to replace this with window events that the debugger
  * UI listens to, so that the Applab global is not involved.
  * @param {*} object
+ * @param {string} logLevel
  */
-Applab.log = function (object) {
+Applab.log = function (object, logLevel) {
   if (jsInterpreterLogger) {
     jsInterpreterLogger.log(object);
   }
 
-  getStore().dispatch(jsDebugger.appendLog(object));
+  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
 };
 consoleApi.setLogMethod(Applab.log);
 
