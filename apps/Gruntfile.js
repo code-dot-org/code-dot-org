@@ -459,6 +459,7 @@ describe('entry tests', () => {
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
+    'congrats/_congrats': './src/sites/studio/pages/congrats/_congrats.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
     'courses/show':                 './src/sites/studio/pages/courses/show.js',
     'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
