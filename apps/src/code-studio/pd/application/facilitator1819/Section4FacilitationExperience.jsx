@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
-import {YES, NO} from '../ApplicationConstants';
+import {YES} from '../ApplicationConstants';
 
 export default class Section4FacilitationExperience extends Facilitator1819FormComponent {
   static propTypes = {
@@ -38,9 +38,6 @@ export default class Section4FacilitationExperience extends Facilitator1819FormC
             {this.largeInputFor("describePriorPd")}
           </div>
         }
-        {this.props.data.haveLedPd === NO &&
-          this.largeInputFor("whyNoPd")
-        }
       </FormGroup>
     );
   }
@@ -62,10 +59,6 @@ export default class Section4FacilitationExperience extends Facilitator1819FormC
       requiredFields.push(
         "groupsLedPd",
         "describePriorPd"
-      );
-    } else if (data.haveLedPd === NO) {
-      requiredFields.push(
-        "whyNoPd"
       );
     }
 
