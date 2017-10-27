@@ -36,11 +36,13 @@ export default class Summary extends React.Component {
       return <Spinner/>;
     }
     return (
-      <div className="row">
+      <div>
         <h1>All Regional Partner Applications</h1>
-        <SummaryTable caption="CSF Facilitators" data={this.state.applications["csf_facilitators"]} path="csf_facilitators"/>
-        <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitators"]} path="csd_facilitators"/>
-        <SummaryTable caption="CSP Facilitators" data={this.state.applications["csp_facilitators"]} path="csp_facilitators"/>
+        <div className="row">
+          <SummaryTable caption="CSF Facilitators" data={this.state.applications["csf_facilitators"]} path="csf_facilitators"/>
+          <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitators"]} path="csd_facilitators"/>
+          <SummaryTable caption="CSP Facilitators" data={this.state.applications["csp_facilitators"]} path="csp_facilitators"/>
+        </div>
       </div>
     );
   }
