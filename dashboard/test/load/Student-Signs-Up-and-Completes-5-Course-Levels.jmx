@@ -25,11 +25,12 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">staging-studio.code.org</stringProp>
+        <stringProp name="HTTPSampler.domain">${__property(servername,serverName, staging-studio.code.org)}</stringProp>
         <stringProp name="HTTPSampler.port"></stringProp>
-        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.protocol">${__property(protocol,protocol, https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="TestPlan.comments">Retrieve custom jmeter property entries &quot;servername&quot; and &quot;protocol&quot;, defaulting to &quot;staging-studio.code.org&quot; and &quot;https&quot; if they are not present in the property file.</stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -771,7 +772,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">https://staging-studio.code.org/s/coursec</stringProp>
+                <stringProp name="Header.value">https://${serverName}/s/coursec</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
