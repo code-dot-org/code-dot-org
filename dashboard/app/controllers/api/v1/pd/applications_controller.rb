@@ -10,10 +10,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       applications = applications.where(regional_partner: regional_partner_id) if regional_partner_id
       apps_by_status = applications.group_by(&:status)
       apps_by_status.each do |status, apps_with_status|
-        grouped_apps = apps_with_status.group_by {|app| app.locked? ? :locked : :unlocked}
-        grouped_apps.each do |locked_state, apps|
-          application_data[role][status][locked_state] = apps.size
-        end
+        application_data[role][status] = apps_with_status.size
       end
     end
 
@@ -47,17 +44,13 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     csd_teachers: Pd::Application::Teacher1819Application.csd,
     csp_teachers: Pd::Application::Teacher1819Application.csp,
   }
-  LOCKED_STATE = [:locked, :unlocked]
 
   def empty_application_data
     {}.tap do |app_data|
       APPLICATION_TYPES.keys.each do |role|
         app_data[role] = {}
         Pd::Application::ApplicationBase.statuses.keys.each do |status|
-          app_data[role][status] = {}
-          LOCKED_STATE.each do |locked_state|
-            app_data[role][status][locked_state] = 0
-          end
+          app_data[role][status] = 0
         end
       end
     end
