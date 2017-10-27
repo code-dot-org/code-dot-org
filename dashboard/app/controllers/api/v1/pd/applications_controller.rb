@@ -9,10 +9,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_data = empty_application_data
 
     ROLES.each do |role|
-      applications = get_applications_by_role(role)
-      apps_by_status = applications.group_by(&:status)
-      apps_by_status.each do |status, apps_with_status|
-        application_data[role][status] = apps_with_status.size
+      get_applications_by_role(role).group(:status).count.each do |status, count|
+        application_data[role][status] = count
       end
     end
 
