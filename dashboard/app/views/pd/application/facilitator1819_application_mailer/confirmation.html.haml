@@ -1,7 +1,7 @@
 %p
   Hello! Thank you for applying to Code.org’s Facilitator Development Program.
   We have received your application, and will review it with our Regional Partners soon.
-  We will provide a status update to all applicants in January, 2018.
+  We will provide a status update to all applicants in January 2018.
 
 %p
   Due to the volume of applications we will receive, we are not able to respond to individual
@@ -9,14 +9,14 @@
 
 %p
   As a reminder, your Code.org account email is currently
-  = @application.user.email
+  = "#{@application.user.email}."
   If you would like to update your email, please
   = link_to('visit your account settings', CDO.studio_url('/users/edit', CDO.default_scheme)) + '.'
 
 %p
   Do you know someone who would be a great fit for the Facilitator Development Program?
   Please encourage them to join us! Here is the
-  = link_to('link to apply', pd_application_facilitator_url) + '.'
+  = link_to('link to apply', CDO.code_org_url('/facilitator', CDO.default_scheme)) + '.'
 
 %p
   Have a few minutes to spare? Please visit
@@ -29,4 +29,4 @@
   %br
   = @signed
   %br
-  Code.org
+  Education Program Manager, Code.org
