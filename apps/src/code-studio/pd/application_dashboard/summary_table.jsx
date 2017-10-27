@@ -29,7 +29,7 @@ export default class SummaryTable extends React.Component {
 
   tableRow = (label, bgColor, data) =>  {
     const status = label.toLowerCase();
-    const total = data[status]['locked'] + data[status]['unlocked'];
+    const total = data[status];
 
     return (
       <tr>
