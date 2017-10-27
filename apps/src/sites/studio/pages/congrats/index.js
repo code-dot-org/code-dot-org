@@ -3,11 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Notification from '@cdo/apps/templates/Notification';
 
-$(document).ready(showContent);
-
-function showContent() {
-
-  ReactDOM.render (
+$(document).ready(function () {
+  ReactDOM.render(
     <Notification
       type="bullhorn"
       notice="There's a new congrats page!"
@@ -17,4 +14,4 @@ function showContent() {
     />,
     document.getElementById('congrats-container')
   );
-}
+});
