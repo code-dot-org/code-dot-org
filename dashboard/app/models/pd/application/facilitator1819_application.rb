@@ -152,9 +152,9 @@ module Pd::Application
         ],
 
         ability_to_meet_requirements: [
-          '1 = Unlikely, I have limited capacity in 2018-19',
+          '1 = Unlikely: I have limited capacity to meet program expectations in 2018-19',
           *(2..4).map(&:to_s),
-          '5 = Very likely, I am committed to success'
+          '5 = Very likely: I can successfully meet all the expectations of the program'
         ],
 
         csf_availability: [
@@ -239,7 +239,7 @@ module Pd::Application
           'CS in Algebra (one year professional learning program)',
           'CS in Science (one year professional learning program)',
           'CS Discoveries (pilot program)',
-          'CS Discoveries (one year professional learning program)',
+          'CS Discoveries (currently completing one year professional learning program)',
           'CS Principles (one year professional learning program)',
           'Exploring Computer Science (one year professional learning program)',
           "I haven't completed a Code.org Professional Learning Program as a teacher"
@@ -376,10 +376,6 @@ module Pd::Application
           required.concat [
             :groups_led_pd,
             :describe_prior_pd
-          ]
-        elsif hash[:have_led_pd] == NO
-          required.concat [
-            :why_no_pd
           ]
         end
 

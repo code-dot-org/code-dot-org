@@ -357,7 +357,6 @@ export default class Craft {
     studioApp().setPageConstants(config, {
       isMinecraft: true,
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
-      runButtonText: config.level.agentStartPosition ? craftMsg.runAgent() : undefined,
     });
 
     ReactDOM.render(
