@@ -50,7 +50,10 @@ const ApplicationDashboard = ()=> (
               <Route
                 key={`detail_${i}`}
                 path={`${path}/(:applicationId)`}
-                breadcrumb={`${paths[path]},Application Details`}
+                breadcrumbs={[
+                  {name: paths[path], path: path},
+                  {name: 'Application Details', path: ''}
+                ]}
                 component={DetailView}
                 title={'Application Detail'}
               />
