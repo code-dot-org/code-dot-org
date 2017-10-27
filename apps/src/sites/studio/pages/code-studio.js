@@ -10,7 +10,7 @@ import $ from 'jquery';
 
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
-import { setUserSignedIn, getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/progressRedux';
+import initSigninState from '@cdo/apps/code-studio/initSigninState';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
@@ -107,7 +107,4 @@ window.CDOSounds = Sounds.getSingleton();
 
 checkForUnsupportedBrowsersOnLoad();
 initHamburger();
-
-$(document).ready(() => {
-  store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
-});
+initSigninState();

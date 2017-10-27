@@ -102,7 +102,7 @@ describe('SectionsTable', () => {
         canLeave={false}
       />
     );
-    expect(wrapper.find('.row')).to.have.length(4);
+    expect(wrapper.find('.test-row')).to.have.length(4);
     joinedSections.forEach((section) => {
       expect(wrapper).to.containMatchingElement(
         <td>

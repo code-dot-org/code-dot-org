@@ -12,18 +12,24 @@ theme: responsive
 
 Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
-<div class="col-50" style="padding-right: 20px">
+<div class="col-33" style="padding-right: 20px">
 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
 <i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
 
 </div>
 
-[col-50]
+[col-33]
 
 <%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csd'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csd', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Discoveries', ages: 'Recommended for Grades 6-10', description: 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'%>
 
-[/col-50]
+[/col-33]
+
+[col-33]
+
+[<center><img src="/images/csd/CSD-cover.png" width="70%"></center>](/files/CSDiscoveries_1-pager.pdf)
+
+[/col-33]
 
 <div style="clear:both"></div>
 

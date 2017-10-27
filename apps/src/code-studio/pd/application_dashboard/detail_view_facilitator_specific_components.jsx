@@ -1,27 +1,45 @@
 import React, {PropTypes} from 'react';
-import {renderLineItem} from './detail_view_contents';
-import _ from 'lodash';
+import DetailViewResponse from './detail_view_response';
+import {SectionHeaders, PageLabels, LabelOverrides} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
-const lineItemKeys = {
-  planToTeachThisYear1819: 'Do you plan on teaching this course in the 2018-19 school year?',
-  rateAbility: 'How would you rate your ability to meet the requirements for your focus area?',
-  canAttendFIT: 'Can attend FIT Training?'
-};
+const scoredQuestions = [
+  'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo',
+  ...Object.keys(PageLabels.section5YourApproachToLearningAndLeading)
+];
 
-class Facilitator1819Program extends React.Component {
+export default class Facilitator1819Questions extends React.Component {
   static propTypes = {
-    planToTeachThisYear1819: PropTypes.arrayOf(PropTypes.string.isRequired),
-    abilityToMeetRequirements: PropTypes.string.isRequired
-  }
+    formResponses: PropTypes.object.isRequired
+  };
 
   render() {
-    return  (
+    // Render all the answers to the facilitator application grouped by the seven sections
+    return (
       <div>
-        {renderLineItem(lineItemKeys['planToTeachThisYear1819'], _.join(this.props.planToTeachThisYear1819, ','))}
-        {renderLineItem(lineItemKeys['rateAbility'], this.props.abilityToMeetRequirements)}
+        {
+          Object.keys(SectionHeaders).map((section, i) => {
+            return (
+              <div key={i}>
+                <h3>
+                  {SectionHeaders[section]}
+                </h3>
+                {
+                  Object.keys(PageLabels[section]).map((question, j) => {
+                    return (
+                      <DetailViewResponse
+                        question={LabelOverrides[question] || PageLabels[section][question]}
+                        answer={this.props.formResponses[question]}
+                        key={j}
+                        layout={scoredQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
+                      />
+                    );
+                  })
+                }
+              </div>
+            );
+          })
+        }
       </div>
     );
   }
 }
-
-export {Facilitator1819Program};
