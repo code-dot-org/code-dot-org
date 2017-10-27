@@ -28,7 +28,6 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
-  const isEnglish = homepageData.isEnglish;
   const query = queryString.parse(window.location.search);
 
   const store = getStore();
@@ -59,7 +58,7 @@ function showHomepage() {
   let announcementId = "courses_e_f_improvements";
 
   // Optional override of teacher announcement.
-  if (isEnglish &&
+  if (
     announcementOverride &&
     announcementOverride.teacher_announce_heading &&
     announcementOverride.teacher_announce_description &&
