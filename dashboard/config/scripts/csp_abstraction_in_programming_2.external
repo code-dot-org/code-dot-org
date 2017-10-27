@@ -64,3 +64,15 @@ As you'll see in this unit, the best way to build complex programs is to build a
 </div>
 <br>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### How to use this level
+
+This level has a lot of text. Ways you might use it / incorporate it into your class:
+
+* Assign as reading for students the day before
+* Have students stop at this level during the normal progression and read as a group - discuss key points.
+* Read and summarize for your students
+* Make note of it as a reference for students that explains "abstraction"
+* Use in conjunction with a preview of the AP Create Performance Task
+MARKDOWN
