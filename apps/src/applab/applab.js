@@ -253,8 +253,8 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function handleExecutionError(err, lineNumber) {
-  outputError(String(err), lineNumber);
+function handleExecutionError(err, lineNumber, outputString) {
+  outputError(outputString, lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
   // prevent further execution
