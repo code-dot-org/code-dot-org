@@ -46,7 +46,7 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_save :match_partner, if: :form_data_changed?
+    before_create :match_partner, if: -> {regional_partner.nil?}
     def match_partner
       self.regional_partner = RegionalPartner.find_by_region(zip_code, state_code)
     end
