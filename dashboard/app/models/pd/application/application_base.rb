@@ -71,6 +71,19 @@ module Pd::Application
     validates_presence_of :type
     validates_presence_of :status
 
+    # Override in derived class to provide headers
+    # @return [String] csv text row of column headers, ending in a newline
+    def self.csv_header
+      ''
+    end
+
+    # Override in derived class to provide the relevant csv data
+    # @return [String] csv text row of values, ending in a newline
+    #         The order of fields must be consistent between this and #self.csv_header
+    def to_csv_row
+      ''
+    end
+
     def locked?
       locked_at.present?
     end

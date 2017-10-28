@@ -422,6 +422,7 @@ module Pd::Application
       end
     end
 
+    # @override
     def self.csv_header
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
@@ -430,6 +431,7 @@ module Pd::Application
       end
     end
 
+    # @override
     def to_csv_row
       hash = sanitize_form_data_hash
       CSV.generate do |csv|
