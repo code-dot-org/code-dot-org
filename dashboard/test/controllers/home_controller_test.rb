@@ -267,7 +267,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop organizers see only new dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 9 do
+    assert_queries 10 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
