@@ -207,4 +207,25 @@ describe('The DebugConsole component', () => {
     });
   });
 
+  describe("debug output highlighting behavior", () => {
+
+    it("normal debug output will not change background color", () => {
+      getStore().dispatch(actions.appendLog('test normal text'));
+      expect(debugOutput().get(0).style.backgroundColor).to.equal('');
+    });
+
+    it("warning debug output will change background color to lightest yellow", () => {
+      getStore().dispatch(actions.appendLog('test normal text'));
+      getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
+      expect(debugOutput().get(0).style.backgroundColor).to.equal('rgb(255, 247, 223)');
+    });
+
+    it("error debug output will change background color to lightest red", () => {
+      getStore().dispatch(actions.appendLog('test normal text'));
+      getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
+      getStore().dispatch(actions.appendLog('test error text', 'ERROR'));
+      expect(debugOutput().get(0).style.backgroundColor).to.equal('rgb(255, 204, 204)');
+    });
+  });
+
 });
