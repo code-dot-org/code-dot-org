@@ -267,7 +267,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop organizers see only new dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 10 do
+    assert_queries 9 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -276,7 +276,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see new and old dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    assert_queries 9 do
+    assert_queries 8 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -286,7 +286,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see only new dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    assert_queries 9 do
+    assert_queries 8 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -297,7 +297,7 @@ class HomeControllerTest < ActionController::TestCase
     teacher = create :terms_of_service_teacher
     teacher.permission = UserPermission::CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP
     sign_in teacher
-    assert_queries 9 do
+    assert_queries 8 do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Workshop Dashboard'
@@ -306,7 +306,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    assert_queries 9 do
+    assert_queries 8 do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Workshop Dashboard'
