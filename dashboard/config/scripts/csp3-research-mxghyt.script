@@ -3,7 +3,7 @@ login_required true
 hideable_stages true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
-script_announcements [{"notice"=>"Teacher notice: Updates still in progress", "details"=>"Hi we're working feverishly to land these lessons by Oct. 20.  We'll post status updates in this space as we have them.  RIght now we're working to make sure lesson plan links exist in the sidebar and to activate the hide/show button for lessons.", "link"=>"", "type"=>"information"}]
+script_announcements [{"notice"=>"Updates to Unit 3", "details"=>"On Monday Oct. 30 we published some updates to Unit 3. This subgoals research version of the course was updated in the same way as the \"everyone\" version - in some cases extra subgoal supports were added.  Most notably, we've updated the practice performance task guidelines and rubric in Lesson 10 to better align with the AP Create Performance Task. You'll also notice a few new \"bubbles\" for AP prep in lessons 5-9. Click \"Learn more\" for details.  ", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/29", "type"=>"bullhorn"}]
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
