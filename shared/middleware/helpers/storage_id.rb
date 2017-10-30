@@ -94,11 +94,6 @@ def storage_id_for_user_id(user_id)
   row[:id] if row
 end
 
-def user_id_for_storage_id(storage_id)
-  row = user_storage_ids_table.where(id: storage_id).first
-  row[:user_id] if row
-end
-
 def storage_id_for_current_user
   user_id = request.user_id
   return nil unless user_id
