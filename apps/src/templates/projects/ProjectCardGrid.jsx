@@ -136,9 +136,21 @@ const ProjectCardGrid = React.createClass({
             {this.state.showApp === 'playlab' &&
               <ProjectAppTypeArea
                 labKey="playlab"
-                labName={i18n.projectTypeAllProjectsPlaylab()}
+                labName={i18n.projectGroupPlaylabAllProjects()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.playlab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
+              />
+            }
+            {this.state.showApp === 'events' &&
+              <ProjectAppTypeArea
+                labKey="events"
+                labName={i18n.projectGroupEventsAllProjects()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.events}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
@@ -148,7 +160,7 @@ const ProjectCardGrid = React.createClass({
             {this.state.showApp === 'artist' &&
               <ProjectAppTypeArea
                 labKey="artist"
-                labName={i18n.projectTypeAllProjectsArtist()}
+                labName={showMoreProjects ? i18n.projectGroupArtistAllProjects() : i18n.projectTypeAllProjectsArtist()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.artist}
                 numProjectsToShow={numProjects}
@@ -158,16 +170,16 @@ const ProjectCardGrid = React.createClass({
               />
             }
             {this.state.showApp === 'minecraft' &&
-            <ProjectAppTypeArea
-              labKey="minecraft"
-              labName={i18n.projectTypeAllProjectsMinecraft()}
-              labViewMoreString={i18n.projectsViewAll()}
-              projectList={projectLists.minecraft}
-              numProjectsToShow={numProjects}
-              galleryType={this.props.galleryType}
-              navigateFunction={this.viewAllProjects}
-              isDetailView={true}
-            />
+              <ProjectAppTypeArea
+                labKey="minecraft"
+                labName={i18n.projectGroupMinecraftAllProjects()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.minecraft}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
+              />
             }
             {this.state.showApp === 'applab' &&
               <ProjectAppTypeArea
