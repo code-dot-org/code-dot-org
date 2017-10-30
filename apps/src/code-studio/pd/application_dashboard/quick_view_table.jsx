@@ -87,12 +87,17 @@ export default class QuickViewTable extends React.Component {
       <Button
         bsSize="xsmall"
         href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-        onClick={this.handleViewClick}
+        onClick={this.handleViewClick.bind(this, id)}
       >
         View Application
       </Button>
     );
-  }
+  };
+
+  handleViewClick = (id, event) => {
+    event.preventDefault();
+    this.context.router.push(`/${this.props.path}/${id}`);
+  };
 
   render() {
     const rows = this.props.data;

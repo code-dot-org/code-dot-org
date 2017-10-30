@@ -4,10 +4,25 @@ theme: responsive
 ---
 # CS Principles Professional Learning Program
 
-<iframe style="max-width: 100%" width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
-<br />
+<div class="col-50" style="padding-right: 20px">
 
-The [Code.org Computer Science Principles Professional Learning Program](/files/PLProgramsOverview_1-pager.pdf) is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. 
+<%=view :display_video_thumbnail, id: "professional-learning_csp", video_code: "DMr1iFYacGQ", play_button: 'center' %>
+
+[/col-50]
+
+[col-50]
+
+Our CS Principles Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
+
+The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp) Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. 
+
+**Applications for the 2018-19 [CS Principles Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
+
+<a href="https://goo.gl/forms/jBWAHg5jvEV8lSV52"><button>Tell me when applications open!</button>
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
@@ -60,9 +75,9 @@ The CS Principles Professional Learning Program is available in regions served b
 
 ## <a name="apply"></a>How to apply?
 
-**Applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## <a name="facilitate"></a>Become a CS Principles Facilitator
 
