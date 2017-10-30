@@ -3,7 +3,7 @@
 
 import React, {PropTypes} from 'react';
 import FilterGroupContainer from './filterGroupContainer';
-import { TutorialsSortBy } from './util';
+import { TutorialsSortByOptions } from './util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
@@ -17,8 +17,8 @@ const styles = {
 
 export default class FilterGroupSortBy extends React.Component {
   static propTypes = {
-    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
-    sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired,
+    sortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired,
     onUserInput: PropTypes.func.isRequired
   };
 
@@ -34,7 +34,7 @@ export default class FilterGroupSortBy extends React.Component {
     // will be first and will get the checkmark that seems to be always shown
     // next to the first option.
     let sortOptions;
-    if (this.props.defaultSortBy === TutorialsSortBy.popularityrank) {
+    if (this.props.defaultSortBy === TutorialsSortByOptions.popularityrank) {
       sortOptions = [
         {value: "popularityrank", text: i18n.filterSortByPopularityRank()},
         {value: "displayweight", text: i18n.filterSortByDisplayWeight()}

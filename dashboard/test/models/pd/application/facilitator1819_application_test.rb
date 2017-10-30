@@ -3,6 +3,11 @@ require 'state_abbr'
 
 module Pd::Application
   class Facilitator1819ApplicationTest < ActiveSupport::TestCase
+    self.use_transactional_test_case = true
+    setup_all do
+      @regional_partner = create :regional_partner
+    end
+
     test 'course is filled in from the form program before validation' do
       [:csf, :csd, :csp].each do |program|
         program_name = Facilitator1819Application::PROGRAMS[program]
@@ -15,18 +20,24 @@ module Pd::Application
 
     test 'match regional partner' do
       # match
-      regional_partner = create :regional_partner
-      RegionalPartner.expects(:find_by_region).with('11111', 'WA').returns(regional_partner)
+      RegionalPartner.expects(:find_by_region).with('11111', 'WA').returns(@regional_partner)
       application_hash = build :pd_facilitator1819_application_hash, zip_code: '11111', state: 'Washington'
-      application = create :pd_facilitator1819_application, form_data_hash: application_hash
-      assert_equal regional_partner, application.regional_partner
+      application_with_match = create :pd_facilitator1819_application, form_data_hash: application_hash
+      assert_equal @regional_partner, application_with_match.regional_partner
 
       # No match
       RegionalPartner.expects(:find_by_region).with('22222', 'WA').returns(nil)
       application_hash = build :pd_facilitator1819_application_hash, zip_code: '22222', state: 'Washington'
-      application.form_data_hash = application_hash
-      application.save!
-      assert_nil application.regional_partner
+      application_without_match = create :pd_facilitator1819_application, form_data_hash: application_hash
+      assert_nil application_without_match.regional_partner
+    end
+
+    test 'matched regional partner is not overridden by later form data' do
+      RegionalPartner.expects(:find_by_region).never
+      application = create :pd_facilitator1819_application, regional_partner: @regional_partner
+
+      application.form_data = build(:pd_facilitator1819_application_hash)
+      assert_equal @regional_partner, application.regional_partner
     end
 
     test 'open until Dec 1, 2017' do
