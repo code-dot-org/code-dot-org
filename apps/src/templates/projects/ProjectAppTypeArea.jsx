@@ -87,8 +87,11 @@ const ProjectAppTypeArea = React.createClass({
   },
 
   renderProjectCardList(projectList, max) {
-    const filteredList = this.props.hideWithoutThumbnails ?
+    let filteredList;
+    if (projectList) {
+      filteredList = this.props.hideWithoutThumbnails ?
       projectList.filter(project => project.projectData.thumbnailUrl !== null) : projectList;
+    }
     const { galleryType } = this.props;
     return  (
       <div style={styles.cardGrid}>
