@@ -33,11 +33,12 @@ export default class SetupStep extends Component {
   static propTypes = {
     children: PropTypes.node,
     stepName: PropTypes.string.isRequired,
-    stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired
+    stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired,
+    displayExplanation: PropTypes.bool,
   };
 
   render() {
-    const {stepName, stepStatus, children} = this.props;
+    const {stepName, stepStatus, children, displayExplanation} = this.props;
     if (stepStatus === HIDDEN) {
       return null;
     }
@@ -47,7 +48,7 @@ export default class SetupStep extends Component {
           {iconFor(stepStatus)}
           <span>{stepName}</span>
         </div>
-        {stepStatus === FAILED &&
+        {(stepStatus === FAILED || displayExplanation) &&
         <div style={style.body}>
           {children}
         </div>
