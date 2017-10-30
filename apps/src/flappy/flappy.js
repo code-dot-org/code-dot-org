@@ -699,6 +699,7 @@ Flappy.runButtonClick = function () {
  * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
+  const {isSignedIn, userType} = getStore().getState().pageConstants;
   if (!Flappy.waitingForReport) {
     dataURIFromURI(placeholder).then(feedbackImageUri => {
       studioApp().displayFeedback({
@@ -715,6 +716,7 @@ var displayFeedback = function () {
         },
         saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
         feedbackImage: feedbackImageUri,
+        disableSaveToGallery: !isSignedIn && !userType,
       });
     });
   }
