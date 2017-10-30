@@ -9,7 +9,14 @@
 import React, {PropTypes} from 'react';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
+import {Button} from 'react-bootstrap';
 import $ from 'jquery';
+
+const styles = {
+  button: {
+    margin: '20px auto'
+  }
+};
 
 export default class QuickView extends React.Component {
   static propTypes = {
@@ -28,10 +35,14 @@ export default class QuickView extends React.Component {
     applications: null
   };
 
+  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
+  getJsonUrl = () => this.getApiUrl();
+  getCsvUrl = () => this.getApiUrl('.csv');
+
   componentWillMount() {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/applications/quick_view?role=${this.props.route.path}`,
+      url: this.getJsonUrl(),
       dataType: 'json'
     })
     .done(data => {
@@ -42,6 +53,10 @@ export default class QuickView extends React.Component {
     });
   }
 
+  handleDownloadCsvClick = event => {
+    window.open(this.getCsvUrl());
+  };
+
   render() {
     if (this.state.loading) {
       return <Spinner/>;
@@ -50,6 +65,12 @@ export default class QuickView extends React.Component {
     return (
       <div>
         <h1>{this.props.route.title}</h1>
+        <Button
+          style={styles.button}
+          onClick={this.handleDownloadCsvClick}
+        >
+          Download CSV
+        </Button>
         <QuickViewTable path={this.props.route.path} data={this.state.applications}/>
       </div>
     );
