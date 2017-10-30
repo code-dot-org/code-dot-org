@@ -1,7 +1,9 @@
 ---
+
 title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
+
 ---
 
 <%= view :signup_button %>
@@ -10,7 +12,8 @@ nav: how_to_nav
 
 Bashkohu me lëvizjen dhe prezanto një grup studentësh me orën e tij të parë në shkenca kompjuterike me këto hapa:
 
-## 1) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Zgjidh një tutorial për orën tënde:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.

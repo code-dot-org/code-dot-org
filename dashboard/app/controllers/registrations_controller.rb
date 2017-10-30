@@ -34,10 +34,6 @@ class RegistrationsController < Devise::RegistrationsController
     end
     should_send_new_teacher_email = current_user && current_user.teacher?
     TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
-    if current_user
-      storage_id = take_storage_id_ownership_from_cookie(current_user.id)
-      current_user.generate_progress_from_storage_id(storage_id) if storage_id
-    end
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called

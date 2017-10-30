@@ -203,11 +203,11 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "Validation note: we don't check to see if the student actually drew an under-the-sea scene.  \r\n\r\nTo promote free play here we've reduced what we check to a bare minimum only to ensure the student doesn't have a blank project. We check that the student:\r\n\r\n* has at least one call to each of the draw functions: `drawFish`, `drawSeagrass`, `drawStarFish`\r\n* uses `randomNumber(min,max)` at least 3 times in the program.",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

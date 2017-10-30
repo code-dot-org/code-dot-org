@@ -12,7 +12,8 @@ nav: how_to_nav
 
 이 운동에 참여 하시고, 학생 그룹의 첫번째 컴퓨터 과학 시간에 이 절차대로 소개해보세요.
 
-## 1) 이 설명 동영상을 시청하십시오. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) 이 설명 동영상을 살펴보세요. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) 튜토리얼을 선택하세요:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
@@ -29,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) 당신의 Hour of Code를 알려주세요.
+## 3) 여러분의 Hour of Code 행사를 홍보해주세요.
 
 [이 도구들을 이용하여](<%= resolve_url('/promote') %>) 여러분의 Hour of Code를 알리고 다른 친구들이 자신만의 이벤트를 진행할 수 있도록 응원해주세요.
 
