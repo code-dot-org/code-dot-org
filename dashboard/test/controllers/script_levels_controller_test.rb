@@ -163,7 +163,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level]
-    assert_queries 5 do
+    assert_queries 4 do
       get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
     end
 
