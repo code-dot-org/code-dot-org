@@ -1,5 +1,12 @@
 import React from 'react';
-import SetupStep from './SetupStep';
+import SetupStep, {
+  FAILED,
+  SUCCEEDED,
+  ATTEMPTING,
+  WAITING,
+  CELEBRATING,
+  HIDDEN
+} from './SetupStep';
 
 export default storybook => {
   return storybook
@@ -11,7 +18,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is successful"
-            stepStatus="SUCCEEDED"
+            stepStatus={SUCCEEDED}
           />
         )
       },
@@ -21,7 +28,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step has failed"
-            stepStatus="FAILED"
+            stepStatus={FAILED}
           />
         )
       },
@@ -31,7 +38,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step has failed"
-            stepStatus="FAILED"
+            stepStatus={FAILED}
           >
             Here is an explanation of why this step failed.
           </SetupStep>
@@ -43,7 +50,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is celebrating"
-            stepStatus="CELEBRATING"
+            stepStatus={CELEBRATING}
           />
         )
       },
@@ -53,7 +60,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is hidden"
-            stepStatus="HIDDEN"
+            stepStatus={HIDDEN}
           />
         )
       },
@@ -63,7 +70,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is waiting"
-            stepStatus="WAITING"
+            stepStatus={WAITING}
           />
         )
       },
@@ -73,7 +80,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is attempting"
-            stepStatus="ATTEMPTING"
+            stepStatus={ATTEMPTING}
           />
         )
       },
