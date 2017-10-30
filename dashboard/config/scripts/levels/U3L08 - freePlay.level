@@ -147,7 +147,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "U3L08 - underTheSeaTemplate",
+    "project_template_level_name": "U3L08 - underTheSeaTemplateCommented",
     "app_width": "320",
     "app_height": "480",
     "free_play": "true",
@@ -203,10 +203,15 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "Validation note: we don't check to see if the student actually drew an under-the-sea scene.  \r\n\r\nTo promote free play here we've reduced what we check to a bare minimum only to ensure the student doesn't have a blank project. We check that the student:\r\n\r\n* has at least one call to each of the draw functions: `drawFish`, `drawSeagrass`, `drawStarFish`\r\n* uses `randomNumber(min,max)` at least 3 times in the program.",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-30 14:47:04 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

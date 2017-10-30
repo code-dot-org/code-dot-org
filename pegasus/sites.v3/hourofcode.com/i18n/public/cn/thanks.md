@@ -28,40 +28,38 @@ social:
 
 # 感谢注册并组织编程一小时活动！
 
-你在<%= campaign_date('full') %>的帮助会让全世界的学生了解编程一小时，这有可能*改变他们的一生*。 我们会保持联系，提供新的课程和其他令人兴奋的更新。 现在你能做什么？
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+  
+[<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-## 1. 帮助宣传这个活动
+  
+**Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-你刚刚加入了编程一小时活动。告诉你的朋友关于**#HourOfCode**!
+## 1. Spread the word in your school and community
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>   
+Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 你不必在学校学习新的技能。 Invite a local politician or policy maker to visit your school for the Hour of Code. 它能为你在你领域的计算机科学找到一小时之外的支持。
+
+为你的活动使用这些[海报、 横幅、 贴纸、 视频以及更多](<%= resolve_url('/promote/resources') %>)。
 
 ## 2. 找当地的志愿者来帮助你的活动
 
-[搜索我们的志愿者分布图](<%= resolve_url('https://code.org/volunteer/local') %>)。志愿者可以到访您的教室或者通过远程视频聊天，激发你的学生了解计算机科学所能带来的广泛可能性。
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. 邀请全校师生尝试编程一小时
+## 3. Plan your Hour of Code
 
-[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给你的校长并让学校的每个班级来报名。
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
-## 3.邀请你的上级参加
+# Go beyond an Hour of Code
 
-[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给您的经理或公司的首席执行官。
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-## 5. 在你的社区推广《编程一小时》
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-[招聘本地小组](<%= resolve_url('/promote/resources#sample-emails') %>) — — 男孩/女孩童子军俱乐部、 教会、 大学、 退伍军人团体、 工会或甚至一些朋友。 你不必在学校学习新的技能。 为你的活动使用这些[海报、 横幅、 贴纸、 视频以及更多](<%= resolve_url('/promote/resources') %>)。
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## 6. 邀请当地官员支持编程一小时活动
-
-[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给您当地的代表、 市议会或学校董事会，并邀请他们来你们学校参观编程一小时。 它能为你在你领域的计算机科学找到一小时之外的支持。
-
-## 7. 计划你的编程一小时
-
-选择一个编程一小时活动并且[回顾本操作指南](<%= resolve_url('/how-to') %>).
-
-## 编程一小时以后
-
-想要参与比一小时更多的活动？ 看看[我们的完整课程和教师资源](<%= resolve_url('https://code.org/teach')%>)。这其中有各种面向小学，中学和高中教师的专业学习机会。
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>
