@@ -2555,4 +2555,36 @@ class UserTest < ActiveSupport::TestCase
       assert_equal false, teacher.script_hidden?(@script)
     end
   end
+
+  test 'generate_progress_from_storage_id' do
+    # construct our fake applab-intro script
+    script = create :script
+    stage = create :stage, script: script
+    regular_level = create :level
+    create :script_level, script: script, stage: stage, levels: [regular_level]
+
+    template_level = create :level
+    template_backed_level = create :level, project_template_level_name: template_level.name
+    create :script_level, script: script, stage: stage, levels: [template_backed_level]
+
+    # Whether we have a channel for a regular level in the script, or a template
+    # level, we generate a UserScript
+    [regular_level, template_level].each do |level|
+      user = create :student
+      channel_token = create :channel_token, level: level, storage_user: user
+      user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
+
+      user_scripts = UserScript.where(user: user)
+      assert_equal 1, user_scripts.length
+      assert_equal script, user_scripts.first.script
+    end
+
+    # No UserScript if we only have channel tokens elsewhere
+    user = create :student
+    channel_token = create :channel_token, level: Script.twenty_hour_script.levels.first, storage_user: user
+    user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
+
+    user_scripts = UserScript.where(user: user)
+    assert_equal 0, user_scripts.length
+  end
 end
