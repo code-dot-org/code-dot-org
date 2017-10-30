@@ -2,6 +2,8 @@ require_relative '../../test_helper'
 require_relative '../../../middleware/helpers/storage_id'
 
 class StorageIdTest < Minitest::Test
+  include SetupTest
+
   def setup
     @user_storage_ids_table = PEGASUS_DB[:user_storage_ids]
   end
@@ -14,7 +16,7 @@ class StorageIdTest < Minitest::Test
     request.stubs(:user_id).returns(nil)
     assert_nil storage_id_for_current_user
 
-    # Gets value from table if it exists
+    # # Gets value from table if it exists
     request.stubs(:user_id).returns(2)
     table_storage_id = @user_storage_ids_table.insert(user_id: 2)
     assert_equal table_storage_id, storage_id_for_current_user
