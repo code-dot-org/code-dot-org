@@ -2807,7 +2807,7 @@ Studio.displayFeedback = function () {
       // The rails session cookie is blocked on some playlab level types,
       // causing isSignedIn to be null. In this case, use the userType (based on
       // a different cookie) to determine if the user is signed in.
-      disableSaveToGallery: !(isSignedIn || userType),
+      disableSaveToGallery: !isSignedIn && !userType,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
