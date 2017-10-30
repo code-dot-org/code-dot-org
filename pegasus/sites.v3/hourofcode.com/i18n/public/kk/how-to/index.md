@@ -8,59 +8,60 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code
+# "Кодтау Сағатын" қалай өткізу керек?
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+Қатысушылар тобына олардың бірінші ифнорматика саласындағы сабағын мына қадамдармен таныстырыңыз:
 
-## 1) Әдістеме үшін мына бейнероликті көріңіз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial for your hour:
+## 1) Әдістеме үшін мына бейнероликті көріңіз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
+## 2) Әдістеме сабағын таңдаңыз:
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url('/learn') %>)**
+Қызығушылық білдірген әр түрлі жастағы қатысушыларға серіктестерімізбен дайындаған көптеген [көңілді мағлұматтар беріп, ұзақ та тартымды дәрістер](<%= resolve_url('/learn') %>) ұсынамыз.
 
-  * Require minimal prep-time for teachers
+**[Студенттер үшін "Кодтау Сағаты" әдістемелері:](<%= resolve_url('/learn') %>)**
+
+  * Мұғалімдерден дайындық үшін көп уақыт талап етілмейді
   * Are self-guided - allowing students to work at their own pace and skill-level
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
+**[Мұғалімдер үшін "Кодтау Сағаты" әдістемелері:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
-  * Are lesson plans that require some advance teacher preparation
-  * Are categorized by grade level *and* by subject area (eg Math, English, etc)
+  * Ілгерілеу мұғалімдік дайындықты қажет ететін сабақ жоспарлары
+  * Пән саласына (математика, ағылшын т. б.) және де *баға деңгейіне* байланысты топтастырылады
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) "Кодтау Cағатын" жарнамалауға көмектесу
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+Өзіңіздің "Кодтау Сағатын" [мына жабдықтармен](<%= resolve_url('/promote') %>) жарнамалаңыз. Айналаңыздағы адамдарды да тартып, осындай шара ұйымдастыруларына шабыт беріңіз.
 
 ## 4) Технологиялық қажеттіліктерді жоспарлаңыз - компьютерлер міндетті емес
 
-Ең үздік "Кодтау Сағатының" тәжиребесі интернетке байланған компьютерлерді қамтиды. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Ең үздік "Кодтау Сағатының" тәжиребесі интернетке байланған компьютерлерді қамтиды. Бірақ та компьютерлер әрбір оқушыда болуы **міндетті емес**, тіпті ешбір компьютерді қолданбай-ақ та сабақты өткізуіңізге болады.
 
 **Алдын - ала жоспар жасаңыз!** Сабағыңыз басталмай тұрып, мына пункттерді ұмытпаңыз:
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Компьютер немесе басқа да электроникалық жабдық жетпей жатыр ма?</a> Ол кезде, оқушыларыңызды жұп жұппен отырғызып сабақ өткізіңіз. When students partner up, they help each other and rely less on the teacher. Олар компьютерлік саланың жағымды да басқа адамдармен араласу мүмкінділігін көреді.</li> 
+  * Барлық компьютер-гаджеттарыңызда сабақ бейнероликтерін алдын-ала тексеріп қойыңыз. Бейнероликтердің оңай қосылып, дыбысы жақсы шығуын қадағалап қойыңыз.
+  * Егер де, сіздің көрсететін сабақ бейнеролигіңіз жақсы сапалы дыбысты талап етсе, құлаққаптарды таратып немесе қатысушыларға алдын-ала өздерінің құлаққаптарын әкелулерін сұраңыз.
+  * **Компьютер немесе басқа да электроникалық жабдық жетпей жатыр ма?</a> Ол кезде, оқушыларыңызды жұп жұппен отырғызып сабақ өткізіңіз. Қатысушылар бір-бірлерімен жұптасқанда, бір-бірлеріне көмек көрсетіп, ұйымдастырушыға көп жүк түсірмейді. Олар компьютерлік саланың жағымды да басқа адамдармен араласу мүмкінділігін көреді.</li> 
     
       * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.</ul> 
     
     ![](/images/fit-350/group_ipad.jpg)
     
-    ## 5) "Кодтау Сағатын" жігерлендіруші бейнероликтен бастаңыз
+    ## 5) "Кодтау Сағатын" жігерлендіруші сөз сөйлеушіден немесе бейнероликтен бастаңыз
     
-    **Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+    **Информатика саласы туралы айтып бере алатын, қатысушыларды рухтандыратын әңгіме айта алатын [жергілікті еріктілерді](https://code.org/volunteer/local) шақырыңыз.** [Мына карта бойынша](https://code.org/volunteer/local) сіздің сабағыңызға қатыса алатын немесе де онлайн түрде бейнечат бойынша сұхбат бере алатын жергілікті еріктілерді тауып ала аласыз.
     
     [![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
     
     **Жігерлендіруші бейнероликті көрсетіңіз:**
     
       * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-      * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+      * ["2013 Кодтау Сағаты" бейнеролигін қосу](https://www.youtube.com/watch?v=FC5FbmsH4fw), немесе <% if @country == 'uk' %> ["2015 Кодтау Сағаты" бейнеролигін қосу](https://www.youtube.com/watch?v=7L97YMYqLHc), немесе ["2015 Кодтау Сағаты" бейнеролигі](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
       * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-      * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+      * Көбірек шабыттандырушы [ресурстар](<%= resolve_url('https://code.org/inspire') %>) мен [бейнероликтер](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
     
-    **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+    **Компьютерлік салада қабілетіңіз мүлде жоқ болса да, уайымдамаңыз. Мына "Кодтау Сағатымен" таныстыратын бірнеше пікірлерге көз жүгіртіп шығыңыз:**
     
       * Балаларға тән ұғымды мысалдар келтіріп, қазіргі таңдағы технологияның өмірімізге деген ықпалын түсінідіріңіз. (Кейбір адамдардың өмірлерін құтқарған, көмек көрсеткен, жақындастырған, т.б. қосымшалар туралы айтып берсеңіз болады)
       * "Кодтауды" қажет ететін күнделікті қолданыстағы керек - жарақтар тізімін жасап көрсетіңіз.
@@ -68,13 +69,13 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
     
     Көбірек **нұсқаулық** қажет пе? [Мына сабақ жоспары үлгісін](/files/EducatorHourofCodeLessonPlanOutline.docx) жүктеп алсаңыз болады.
     
-    **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+    **Үйрету әдістемеге қатысты көбірек ой-пікірлер керек пе?** Тәжірибелі мұғалімдердің [ең үздік деген көрсеткіш сабақтарына](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) көз жүгіртіп шығыңыз.
     
     ## 6) "Кодтау" барысын бастаңыз! 
     
-    **Direct students to the activity**
+    **Шараға тікелей қатысушылар**
     
-      * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+      * Сабаққа кіру үшін арналған сілтемені тақтаға жазыңыз. Сілтемені табу үшін [таңдаған сабаққа қатысты мәлімет тізімінде, қатысушылар санынан кейінгі жерге](<%= resolve_url('https://code.org/learn') %>) көңіл бөліңіз.
     
     [col-33]
     
@@ -88,12 +89,12 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
       * "Технология әрқашан біздің қалағанымыздай болмауы мүмкін."
       * "Жаңа бағдарламаны үйрену жаңа бір тіл үйренгенмен бірдей; бірден бәрі кемшіліксіз болмайды."
     
-    **[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+    **[Мына үйретуге қатысты көмекші кеңестерге көңіл бөліңіз](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
     
-    **What to do if a student finishes early?**
+    **Егер де қатысушылардың бірі ертерек бітіріп қойса?**
     
-      * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-      * Or, ask students who finish early to help classmates who are having trouble with the activity.
+      * Қатысушыларды [hourofcode.com/learn](<%= resolve_url('/learn') %>) сайт бойынша өтіп, басқа да қызықты сабақтармен шұғылдануы үшін шабыттандырыңыз.
+      * Әлде де, түсінбей жатқан достарына көмек көрсетуін сұрап көріңіз.
     
     [col-33]
     
@@ -130,18 +131,18 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
     
     ## "Кодтау сағатының" оқытушылары үшін арналған басқа да керекті ресурстар: 
     
-      * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
+      * Өзіңіздің "Кодтау Сағаты" шарасын өткізу үшін мына [сабақ жоспары үлгісін](/files/EducatorHourofCodeLessonPlanOutline.docx) қолданыңыз.
       * Алдыңғы "Кодтау Сағаты" ұйымдастырушыларының [ең үздік тәжірибелері](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). 
-      * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-      * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
+      * Біздің ["Мұғалімнің Кодтау Сағатына әдістемесі" деген вебинар](https://youtu.be/EJeMeSW2-Mw) түріндегі бейнероликті көріңіз.
+      * "Кодтау Сағатына" дайындық үшін біздің құрушымыз, Хади Партовимен өтетін [тікелей кездесуге&](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) қатысыңыз.
       * Кеңес пен қолдау алып, ой - пікірмен бөлісу үшін ["Кодтау Сағаты Форумына"](http://forum.code.org/c/plc/hour-of-code) кіріп көріңіз. <% if @country == 'us' %>
-      * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+      * ["Кодтау Сағаты" FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) қайтадан қарап шығыңыз. <% end %>
     
     ## "Кодтау Cағаты" - ол не?
     
-    The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+    "Кодтау Сағаты" - технологияны біліп, танып, үйретуге және де ойындар мен қосымшалар жасалу жолдарына апарар ең бірінші жол.
     
-      * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-      * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+      * Оқушыларды [онлайн білім алуға](<%= resolve_url('https://code.org/learn/beyond') %>) тартып рухтандырыңыз.
+      * Дұрыс мағлұмат алып, оқыту жолдарын меңгеру үшін информатика саласында тәжірибелі бір маманнан жекеше [1 күндік сабағына қатысыңыз.](<%= resolve_url('https://code.org/professional-development-workshops') %>) (Тек қана АҚШ мұғалімдері үшін)
     
     <%= view :signup_button %>

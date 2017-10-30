@@ -1,8 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2017-05-17-endofyear-k5pd ./email_1_csf_pd.csv
-../send-to-mailing-list 2017-05-17-endofyear-k5nopd ./email_2_csf_no_pd-remainder.csv
-../send-to-mailing-list 2017-05-17-endofyear-high ./email_3_csp.csv
-../send-to-mailing-list 2017-05-17-endofyear-middle ./email_4_csd.csv
-../send-to-mailing-list 2017-05-17-endofyear-unknownage ./email_5_unknown.csv
-../send-to-mailing-list 2017-05-17-endofyear-international ./email_6_international.csv

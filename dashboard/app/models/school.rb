@@ -14,6 +14,8 @@
 #  address_line1      :string(50)
 #  address_line2      :string(30)
 #  address_line3      :string(30)
+#  latitude           :decimal(8, 6)
+#  longitude          :decimal(9, 6)
 #
 # Indexes
 #

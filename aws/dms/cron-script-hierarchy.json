@@ -59,6 +59,16 @@
         "table-name": "courses"
       },
       "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "7",
+      "rule-name": "7",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "course_scripts"
+      },
+      "rule-action": "include"
     }
   ]
 }

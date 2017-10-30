@@ -26,9 +26,13 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+require 'state_abbr'
+require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 
 module Pd::Application
   class Facilitator1819Application < ApplicationBase
+    include Facilitator1819ApplicationConstants
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = FACILITATOR_APPLICATION
@@ -42,9 +46,9 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_save :match_partner, if: :form_data_changed?
+    before_create :match_partner, if: -> {regional_partner.nil?}
     def match_partner
-      self.regional_partner = RegionalPartner.find_by_region(zip_code, state)
+      self.regional_partner = RegionalPartner.find_by_region(zip_code, state_code)
     end
 
     # Are we still accepting applications?
@@ -55,6 +59,7 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
+    OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
@@ -65,6 +70,10 @@ module Pd::Application
       'Community college, college, or university',
       'Participants in a tech bootcamp or professional development program'
     ].freeze
+
+    HOW_HEARD_FACILITATOR = 'A Code.org facilitator (please share name):'
+    HOW_HEARD_CODE_ORG_STAFF = 'A Code.org staff member (please share name):'
+    HOW_HEARD_REGIONAL_PARTNER = 'A Code.org Regional Partner (please share name):'
 
     PROGRAMS = {
       csf: 'CS Fundamentals (Pre-K - 5th grade)',
@@ -78,6 +87,8 @@ module Pd::Application
     def self.options
       {
         title: %w(Mr. Mrs. Ms. Dr.),
+
+        state: get_all_states_with_dc.to_h.values,
 
         gender_identity: [
           'Female',
@@ -124,9 +135,9 @@ module Pd::Application
         how_heard: [
           'Code.org email',
           'Code.org social media post',
-          'A Code.org facilitator (please share name):',
-          'A Code.org staff member (please share name):',
-          'A Code.org Regional Partner (please share name):',
+          HOW_HEARD_FACILITATOR,
+          HOW_HEARD_CODE_ORG_STAFF,
+          HOW_HEARD_REGIONAL_PARTNER,
           'My employer',
           OTHER_WITH_TEXT
         ],
@@ -141,9 +152,9 @@ module Pd::Application
         ],
 
         ability_to_meet_requirements: [
-          '1 = Unlikely, I have limited capacity in 2018-19',
+          '1 = Unlikely: I have limited capacity to meet program expectations in 2018-19',
           *(2..4).map(&:to_s),
-          '5 = Very likely, I am committed to success'
+          '5 = Very likely: I can successfully meet all the expectations of the program'
         ],
 
         csf_availability: [
@@ -168,7 +179,7 @@ module Pd::Application
           'Hour of Code',
           'After-school or lunchtime computer science clubs',
           'Computer science-focused summer camps',
-          'Other (Please List):',
+          OTHER_PLEASE_LIST
         ],
 
         teaching_experience: [YES, NO],
@@ -228,7 +239,7 @@ module Pd::Application
           'CS in Algebra (one year professional learning program)',
           'CS in Science (one year professional learning program)',
           'CS Discoveries (pilot program)',
-          'CS Discoveries (one year professional learning program)',
+          'CS Discoveries (currently completing one year professional learning program)',
           'CS Principles (one year professional learning program)',
           'Exploring Computer Science (one year professional learning program)',
           "I haven't completed a Code.org Professional Learning Program as a teacher"
@@ -366,10 +377,6 @@ module Pd::Application
             :groups_led_pd,
             :describe_prior_pd
           ]
-        elsif hash[:have_led_pd] == NO
-          required.concat [
-            :why_no_pd
-          ]
         end
 
         if hash[:available_during_week] == YES
@@ -386,8 +393,73 @@ module Pd::Application
       sanitize_form_data_hash[:zip_code]
     end
 
-    def state
+    def state_name
       sanitize_form_data_hash[:state]
+    end
+
+    def state_code
+      STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
+
+    # Include additional text for all the multi-select fields that have the option
+    def full_answers
+      sanitize_form_data_hash.tap do |hash|
+        [
+          [:institution_type],
+          [:completed_cs_courses_and_activities],
+          [:how_heard, HOW_HEARD_FACILITATOR, :how_heard_facilitator],
+          [:how_heard, HOW_HEARD_CODE_ORG_STAFF, :how_heard_code_org_staff],
+          [:how_heard, HOW_HEARD_REGIONAL_PARTNER, :how_heard_regional_partner],
+          [:plan_on_teaching],
+          [:led_cs_extracurriculars, OTHER_PLEASE_LIST],
+          [:grades_taught],
+          [:grades_currently_teaching],
+          [:subjects_taught],
+          [:experience_leading]
+        ].each do |additional_text_params|
+          answer_with_additional_text hash, *additional_text_params
+        end
+      end
+    end
+
+    def self.csv_header
+      # strip all markdown formatting out of the labels
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+      CSV.generate do |csv|
+        csv << ALL_LABELS_WITH_OVERRIDES.values.map {|l| markdown.render(l)}
+      end
+    end
+
+    def to_csv_row
+      hash = sanitize_form_data_hash
+      CSV.generate do |csv|
+        csv << ALL_LABELS.keys.map {|k| hash[k]}
+      end
+    end
+
+    # Get the answers from form_data with additional text appended
+    # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
+    # @param [Symbol] field_name - name of the multi-choice option
+    # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
+    # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
+    #                 Field name for the additional text field associated with this option.
+    # @returns [Array] - adjusted array of user responses with additional text appended in place
+    def answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
+      additional_text_field_name ||= "#{field_name}_other".to_sym
+      hash[field_name].tap do |answer|
+        if answer
+          index = answer.index(option)
+          if index
+            answer[index] = [option, hash[additional_text_field_name.to_sym]].flatten.join(' ')
+          end
+        end
+      end
+    end
+
+    private
+
+    def include_additional_text(hash, field_name, *options)
+      hash[field_name] = answer_with_additional_text hash, field_name, *options
     end
 
     # Formats hour as 0-12(am|pm)

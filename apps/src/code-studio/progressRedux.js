@@ -263,7 +263,6 @@ export function processedStages(stages, isPlc) {
   });
 }
 
-
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
     saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,

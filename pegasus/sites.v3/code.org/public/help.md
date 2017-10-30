@@ -6,13 +6,6 @@ style_min: true
 
 # How to Help
 
-## Help us spread the word
-Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share our posts.  Or stay in touch with our [quarterly email updates](http://eepurl.com/wL0XL).
-
-Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
-
-[<button>Add your support</button>](/promote)
-
 ## Ask your school to teach computer science
 Encourage local elementary schools to teach our [elementary curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
 
@@ -27,6 +20,14 @@ Millions of people of all ages have learned an [Hour of Code](https://hourofcode
 Volunteer to teach the Hour of Code or our [Code Studio courses](http://studio.code.org) to local students. Sign up to hear about volunteer opportunities near you.
 
 [<button>Volunteer in a classroom</button>](/volunteer)
+
+## Help us spread the word
+Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share our posts.  Or stay in touch with our [quarterly email updates](http://eepurl.com/wL0XL).
+
+Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
+
+[<button>Add your support</button>](/promote)
+
 
 ## Buy a CODE hat or t-shirt
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too.
@@ -53,6 +54,13 @@ Volunteers have translated our tutorials in over 40 languages. Help us continue 
 Code.org's online platform [Code Studio](https://studio.code.org/courses?view=teacher) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
 [<button>Learn more</button>](https://studio.code.org/courses?view=teacher)
+
+## Facilitate with Code.org
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
+
+Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
+
+<a href="/educate/professional-learning/facilitator"><button>Learn more</button>
 
 ## Are you a software engineer? Volunteer with one of these organizations
 

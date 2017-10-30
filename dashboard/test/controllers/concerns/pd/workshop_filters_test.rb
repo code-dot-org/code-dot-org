@@ -4,7 +4,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   freeze_time
 
   class FakeController < ::ApplicationController
-    include Pd::WorkshopFilters
+    include ::Pd::WorkshopFilters
   end
 
   setup do

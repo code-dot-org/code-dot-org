@@ -4580,6 +4580,14 @@ en:
               name: 'Project: Make a Game'
             Getting and Setting Properties:
               name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5387,8 +5395,8 @@ en:
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              name: Nested Loops in Artist
+              description_student: Here you will be using nested loops to make cool drawings to show to your family and friends.
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
@@ -5923,7 +5931,7 @@ en:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist (UPDATED)
+              name: Loops in Artist
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -6576,6 +6584,8 @@ en:
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -6668,10 +6678,10 @@ en:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Chapter 1 Assessment
-          title: CSP 3 New Stuff
+          title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
-          description_short: ''
-          description: "Place to stage proposed changes and additions to csp3.\r\n***\r\nNOTE: included the SFLP for each lesson to populate the script - but those are the LIVE SFLPs!!!!!.  If you want to change, make a copy first."
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
         pwc:
           stages:
             new stage:
@@ -6711,4 +6721,22 @@ en:
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
+          title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
           description: ''
