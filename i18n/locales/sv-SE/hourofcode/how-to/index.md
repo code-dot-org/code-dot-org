@@ -10,10 +10,11 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Gå med i rörelsen och introducera med dessa steg en grupp elever till deras första programmeringstimme:
 
-## 1) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Välj en övning för din timme:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
+Vi erbjuder en mängd av [ roliga, timslånga guider](%= resolve_url('/learn') %) för deltagare i alla åldrar, skapade av en mängd partners.
 
 **[Elevledda Hour of Code guider:](%= resolve_url('/learn') %)**
 
@@ -55,7 +56,7 @@ Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behö
   * Originalvideon från lanseringen av Code.org, där bland annat Bill Gates, Mark Zuckerberg och basketstjärnan Chris Bosh är med (det finns olika versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuter](https://www.youtube.com/watch?v=dU1xS07N-FA) långa)
   * [Lanseringsvideon från Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) eller <% if @country == 'uk' %> [ videon för Hour of Code 2014](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %>[ Hour of Code 2015 videon](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama uppmanar alla elever att lära sig datavetenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Hitta fler inspirerande [resurser](%= resolve_url('https://code.org/inspire') %) och [videor](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Det är okej om du är alla helt ny med datavetenskap. Här är några idéer för hur du introducerar din Hour of Code aktivitet:**
 
@@ -71,7 +72,7 @@ Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behö
 
 **Visa hur eleverna kan hitta aktiviteten**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+  * Skriv länken till guiden på en whiteboard. Länken finns på [informationen för din valda handledning](%= resolve_url('/learn') %) under antalet deltagare.
 
 [col-33]
 
@@ -85,11 +86,11 @@ Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behö
   * "Tekniken fungerar inte alltid som vi vill."
   * "Att lära sig programmera är som att lära sig ett nytt språk: Du blir inte flytande på en gång."
 
-**[Kolla in dessa undervisning tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**[Kolla in dessa undervisningstips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
 **Vad gör man om en elev blir färdig tidigare?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
+  * Uppmuntra deltagarna att prova en annan Hour Of Code aktivitet på [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Eller, be elever som blir snabbt färdiga att hjälpa klasskamrater som behöver hjälp.
 
 [col-33]
@@ -112,7 +113,7 @@ Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behö
 
   * [Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) för dina elever.
   * [Skriva ut "Jag gjorde en timme av kod!"](%= resolve_url('/promote/resources#stickers') %) klistermärken för dina elever.
-  * [Beställ t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) för din skola.
+  * [Beställ specialgjorda t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) till din skola.
   * Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 
 [col-33]

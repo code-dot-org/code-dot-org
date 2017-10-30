@@ -10,7 +10,8 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Zibandakanye nomnyakazo ubese wazisa iqembu labafundi kuhora labo lokuqala lwekhompyutha sayensi ngalezi zigxathi:
 
-## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Khetha imfundiso yelakho ihora:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
@@ -53,7 +54,7 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
 **Bonisa ngevidiyo ekhuthazayo:**
 
   * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * I [Ividiyo yokwethulwa kweHora loKufingqwa 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), okanye i <% uma @izwe== 'uk' %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% okanye %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * I [Ividiyo yokwethulwa kweHora loKufingqwa 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), okanye i <% if @country == 'uk' %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Thola kabanzi okukhuthazayo [izinsiza](%= resolve_url('https://code.org/inspire') %) kanye [amavidiyo](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

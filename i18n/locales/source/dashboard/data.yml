@@ -547,6 +547,9 @@ en:
         'applab_hoc_onevent' : 'App Lab Hour of Code - onEvent'
         'applab_hoc_designmode' : 'AppLab Hour of Code - Design Mode'
         'applab_hoc_share' : 'AppLab Hour of Code - Share'
+        'mc_2017_agent_intro' : 'Minecraft Hour of Code - The Agent'
+        'mc_2017_repeat' : 'Minecraft Hour of Code - Repeat Loops'
+        'mc_2017_functions' : 'Minecraft Hour of Code - Functions'
     callout:
       text:
         # Keyed by #{callout.localization_key}

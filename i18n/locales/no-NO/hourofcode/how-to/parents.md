@@ -1,19 +1,19 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_parents) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # Hvordan gjennomføre en Kodetime med ditt barn
 
 Ta en Kodetime hjemme, eller tilby å ta en Kodetime i ditt barns klasserom! Her ser du hvordan:
 
-## 1) Se denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Se denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) Velg en oppgave:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+Vi tilbyr en rekke morsomme, timelange innføringer for studenter i alle aldre, laget av mange ulike partnere. [Prøv dem ut!](%= resolve_url('/learn') %)
 
 **Alle Kodetime-innføringer gjennomføres på egenhånd. På den måten kan barnet ditt jobbe i eget tempo og ut fra sitt ferdighetsnivå**
 
@@ -33,7 +33,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 **Vis en inspirerende video:**
 
 - Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh var med i den opprinnelige lanseringsvideoen for Code.org (Det finnes versjoner på [ett minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [Kodetimen 2013 lansering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
 - [President Obama oppfordrer alle elever til å lære datavitenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Finn flere inspirerende [ressurser](%= resolve_url('https://code.org/inspire') %) og [videoer](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Kod Saatını təbliğ edin
 
@@ -31,21 +29,21 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Təbliğat üçün Kod Saatının loqosunu istifadə edin
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Yüksək ölçülü versiyasını endir](http://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names.
+4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -106,13 +104,13 @@ We live in a world surrounded by technology. And we know that whatever field our
 
 But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). Dünyada 100 milyondan artıq tələbə artıq Kod Saatını sınıyıblar.
 
-Kod Saatı ilə bəyan edirik ki, [MƏKTƏBİN ADI] 21-ci əsrin bu təməl bacarıqlarını öyrətməyə hazırdır. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Kod Saatı ilə bəyan edirik ki, [MƏKTƏBİN ADI] 21-ci əsrin bu təməl bacarıqlarını öyrətməyə hazırdır. Proqramlaşdırma fəallıqlarını şagirdlərinizə təqdim etməyi davam etdirmək üçün biz Kod Saatı tədbirimizi daha böyük etmək istəyirik. Mən sizi könüllü kimi iştirak etməyə, yerli mətbuata xəbər verməyə, öz sosial media kanallarınızda xəbərləri bölüşməyə və icmalarda əlavə Kod Saatı tədbirləri keçirmək imkanları barədə düşünməyə dəvət edirəm.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+Bu, [QƏSƏBƏ/ŞƏHƏR ADI] üçün təhsilin gələcəyini dəyişmək fürsətidir.
 
-See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+Daha ətraflı http://hourofcode.com/<%= @country %> ünvanında oxuyun və bu xəbəri yaymağa kömək edin.
 
 Ən xoş arzularla,
 
@@ -122,15 +120,15 @@ Məktəb direktorunuz
 
 ## Yerli siyasət adamını məktəbinizin tədbirinə dəvət edin:
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+Hörmətli [şəhər meri/icra hakimiyyəti başçısı/millət vəkili SOYADI]:
 
 Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
 Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). Dünyada 100 milyondan artıq tələbə artıq Kod Saatını sınıyıblar.
 
-I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+Yazıb, Sizi bizim Kod Saatı tədbirimizdə iştirak edərək, açılış toplantısında çıxış etməyə dəvət edirəm. Tədbir [TARİX, SAAT, MƏKAN] baş tutacaq və güclü bir bəyanat olacaq ki, [ÖLKƏ VƏ YA ŞƏHƏRİN ADI] şagirdlərimizə 21-ci əsrin mühüm əhəmiyyətli bilik və bacarıqlarını öyrətməyə hazırdır. Biz əmin olmaq istəyirik ki, şagirdlərimiz gələcəyin texnologiyalarını yaradanların ön cəbhəsində olsunlar - sadəcə onun istifadəçisi olmasınlar.
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 

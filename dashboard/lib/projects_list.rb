@@ -10,7 +10,7 @@ module ProjectsList
     applab: ['applab'],
     gamelab: ['gamelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
-    artist: ['artist'],
+    artist: ['artist', 'frozen'],
     minecraft: ['minecraft_adventurer', 'minecraft_designer'],
     events: %w(starwars starwarsblocks flappy bounce sports basketball)
   }.freeze

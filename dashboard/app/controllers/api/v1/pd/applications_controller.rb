@@ -6,25 +6,11 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications
   def index
-    application_data = {}
-    regional_partner_id = params[:regional_partner]
+    application_data = empty_application_data
 
-    {
-      csf_facilitator: Pd::Application::Facilitator1819Application.csf,
-      csd_facilitator: Pd::Application::Facilitator1819Application.csd,
-      csp_facilitator: Pd::Application::Facilitator1819Application.csp,
-      csd_teacher: Pd::Application::Teacher1819Application.csd,
-      csp_teacher: Pd::Application::Teacher1819Application.csp,
-    }.each do |role, applications|
-      application_data[role] = {}
-      applications = applications.where(regional_partner: regional_partner_id) if regional_partner_id
-      apps_by_status = applications.group_by(&:status)
-      apps_by_status.each do |status, apps_with_status|
-        application_data[role][status] = {}
-        grouped_apps = apps_with_status.group_by {|app| app.locked? ? 'locked' : 'unlocked'}
-        grouped_apps.each do |locked_state, apps|
-          application_data[role][status][locked_state] = apps.size
-        end
+    ROLES.each do |role|
+      get_applications_by_role(role).group(:status).count.each do |status, count|
+        application_data[role][status] = count
       end
     end
 
@@ -39,7 +25,6 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   # GET /api/v1/pd/applications/quick_view/csf_facilitators
   def quick_view
     role = params[:role].to_sym
-    return render_404 unless SCOPE_BY_ROLE.key?(role)
     applications = get_applications_by_role(role)
     render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
   end
@@ -53,21 +38,45 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   private
 
-  SCOPE_BY_ROLE = {
-    csf_facilitators: 'csf',
-    csd_facilitators: 'csd',
-    csp_facilitators: 'csp',
-    csd_teachers: 'csd',
-    csp_teachers: 'csp'
-  }
-
   def get_applications_by_role(role)
-    @applications.send(SCOPE_BY_ROLE[role])
+    case role
+    when :csf_facilitators
+      return @applications.csf.where(type: Pd::Application::Facilitator1819Application.name)
+    when :csd_facilitators
+      return @applications.csd.where(type: Pd::Application::Facilitator1819Application.name)
+    when :csp_facilitators
+      return @applications.csp.where(type: Pd::Application::Facilitator1819Application.name)
+    when :csd_teachers
+      return @applications.csd.where(type: Pd::Application::Teacher1819Application.name)
+    when :csp_teachers
+      return @applications.csp.where(type: Pd::Application::Teacher1819Application.name)
+    else
+      raise ActiveRecord::RecordNotFound
+    end
   end
 
   def application_params
     params.require(:application).permit(
       :status, :notes
     )
+  end
+
+  ROLES = [
+    :csf_facilitators,
+    :csd_facilitators,
+    :csp_facilitators,
+    :csd_teachers,
+    :csp_teachers
+  ]
+
+  def empty_application_data
+    {}.tap do |app_data|
+      ROLES.each do |role|
+        app_data[role] = {}
+        Pd::Application::ApplicationBase.statuses.keys.each do |status|
+          app_data[role][status] = 0
+        end
+      end
+    end
   end
 end

@@ -6,72 +6,73 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Як провести Годину коду
+# Як вчити Години коду
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+Приєднайтесь до цього руху, і познайомте групу учнів з їхньою першою годиною інформатики за допомогою наступних кроків:
 
-## 1) Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial for your hour:
+## 1) Перегляньте цю відеоінструкцію <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
+## 2) Оберіть підручник для своєї години:
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
+Ми пропонуємо спектр [веселих одногодинних підручників](%= resolve_url('/learn') %), створених низкою партнерів, для учнів усіх вікових категорій.
+
+**[Підручники для самостійної Години коду:](%= resolve_url('/learn') %)**
 
   * Вимагають мінімального підготовчого часу вчителів
   * Призначені для самостійного навчання - дозволяючи учням працювати у власному темпі відповідно до свого рівня знань
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
+**[Підручники для Години коду під проводом учителя:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
-  * Are lesson plans that require some advance teacher preparation
-  * Are categorized by grade level *and* by subject area (eg Math, English, etc)
+  * Є планами уроків, які вимагають деякої попередньої підготовки вчителів
+  * Категоризовані за класами *та* предметами (наприклад, математика, англійська тощо)
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Promote your Hour of Code
+## 3) Просувайте свою Годину коду
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+Просувайте свою Годину коду [за допомогою цих інструментів](%= resolve_url('/promote') %), та заохочуйте інших проводити свої власні заходи.
 
-## 4) Plan your technology needs - computers are optional
+## 4) Плануйте свої технологічні потреби — комп'ютери не обов'язкові
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Найкращий варіант Години коду включає підключені до Інтернету комп'ютери. Але вам **не** потрібен комп'ютер для кожної дитини, і ви навіть можете робити Годину коду без комп'ютера взагалі.
 
-**Plan Ahead!** Do the following before your event starts:
+**Плануйте заздалегідь!** До початку вашого заходу виконайте наступні дії:
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Коли учні працюють в парах, вони вчаться допомагати один одному і менше покладатись на вчителя. Таким чином вони дізнаються, що інформатика є соціальною та груповою діяльністю.
+  * Перевірте підручники на учнівських комп'ютерах або пристроях. Переконайтеся, що вони працюють як слід у браузерах зі звуком та відео.
+  * Забезпечте навушники своєму класові, або попросіть учнів принести власні, якщо обраний вами підручник працює найкраще зі звуком.
+  * **Не маєте достатньо пристроїв?** Застосовуйте [парне програмування](https://www.youtube.com/watch?v=vgkahOzFH2Q). Коли учні працюють спільно, вони допомагають один одному і менше покладаються на вчителя. Таким чином вони дізнаються, що інформатика є соціальною та груповою діяльністю.
   * **Поганий Інтернет?** Сплануйте фронтальний перегляд відео-роликів, щоб зменшити завантаження учнівських комп'ютерів. Або спробуйте безмашинні чи оффлайнові вправи.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring speaker or video
+## 5) Розпочніть свою Годину коду надихальним виступом або відео
 
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+**Запросіть [місцевого волонтера](https://code.org/volunteer/local) надихнути ваших учнів, розповівши про широту можливостей в інформатиці.** У світі є тисячі волонтерів, готових допомоги з вашою Годиною коду. [Скористайтеся цією картою](https://code.org/volunteer/local) для пошуку місцевих волонтерів, які можуть відвідати ваш клас, або приєднатися до відеочату з вашими учнями.
 
 [![](/images/fit-300/volunteer-map.png)](%= resolve_url('https://code.org/volunteer/local') %)
 
-**Show an inspirational video:**
+**Покажіть надихальні відео:**
 
   * Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукерберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Відео запуску Години коду 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), або <% if @country == 'uk' %> [відео Години коду 2015](https://www.youtube.com/watch?v=7L97YMYqLHc)<% else %> [відео Години коду 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Знайдіть ще надихальні [ресурси](%= resolve_url('https://code.org/inspire') %) та [відео](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Не біда, якщо як ви, так і ваші учні є повними новачками в інформатиці. Ось деякі ідеї, як представити ваш захід Години коду:**
 
-  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-  * As a class, list things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+  * Поясніть шляхи, якими технології впливають на наше життя, з прикладами, які хвилюватимуть як хлопчиків, так і дівчаток (розкажіть про рятування життя, допомогу людям, забезпечення зв'язку між людьми тощо).
+  * Разом з класом перелічіть повсякденні речі, які використовують код.
+  * Поради для зацікавлення інформатикою дівчаток можна знайти [тут](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Потрібен додатковий провід?** Завантажте цей [шаблон плану уроку](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+**Хочете більше ідей для навчання?** Гляньте [передовий досвід](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) досвідчених педагогів.
 
-## 6) Code!
+## 6) Кодуйте!
 
-**Direct students to the activity**
+**Скеруйте учнів до заняття**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+  * Напишіть посилання на підручник на дошці. Знайдіть це посилання в переліку [інформації про обраний вами підручник](%= resolve_url('/learn') %) нижче числа учасників.
 
 [col-33]
 
@@ -79,18 +80,18 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-**When your students come across difficulties it's okay to respond:**
+**Коли ваші учні стикаються з труднощами, є нормальним відповідати:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * «Я не знаю. З'ясуймо це разом.»
+  * «Технології не завжди дають такий результат, як ми хочемо.»
+  * «Вчитися програмування — це як вчитися нової мови: ви не будете володіти цим вільно одразу.»
 
-**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**[Гляньте ці навчальні підказки](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-**What to do if a student finishes early?**
+**Що робити, якщо учень впорався раніше?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
-  * Або попросіть учнів, котрі справились швидше, допомогти однокласникам, у яких виникли труднощі з вправами.
+  * Учні можуть подивитися всі підручники й спробувати інше заняття Години коду на [hourofcode.com/learn](%= resolve_url('/learn') %)
+  * Або попросіть учнів, котрі впоралися швидше, допомогти однокласникам, у яких виникли труднощі з вправами.
 
 [col-33]
 
@@ -102,7 +103,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Урочисто відзначте
 
 [col-33]
 
@@ -110,10 +111,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * [Надрукуйте сертифікати](%= resolve_url('https://code.org/certificates') %) для своїх учнів.
+  * Надрукуйте для своїх учнів [наліпки «Я зробив Годину коду!»](%= resolve_url('/promote/resources#stickers') %)
+  * [Замовте спеціальні футболки](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для своєї школи.
+  * Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
 
 [col-33]
 
@@ -125,20 +126,20 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   &nbsp;
 </p>
 
-## Other Hour of Code resources for educators:
+## Інші ресурси Години коду для педагогів:
 
-  * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
-  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+  * Скористайтеся цим [шаблоном плану уроку](/files/EducatorHourofCodeLessonPlanOutline.docx), щоби організувати свою Годину коду.
+  * Подивіться [найкращі прийоми](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) від вчителів минулих Годин коду. 
+  * Подивіться запис нашого [вебінару-керівництва для педагогів з Години коду](https://youtu.be/EJeMeSW2-Mw).
+  * [Відвідайте живі Запитання й відповіді](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) з нашим засновником, Гаді Партові, для підготовки до Години коду.
+  * Відвідайте [вчительський форум Години коду](http://forum.code.org/c/plc/hour-of-code), щоби отримати пораду, роз'яснення та підтримку від інших педагогів. <% if @country == 'us' %>
+  * Відвідайте [ЧаПи Години коду](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Що після Години коду?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Година коду є лише першим кроком на шляху вивчення того, як працюють технології, і як створювати власні програмні застосунки. Для продовження цього шляху:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+  * Заохотьте учнів продовжити [вчитися через Інтернет](%= resolve_url('https://code.org/learn/beyond') %).
+  * [Відвідайте](%= resolve_url('https://code.org/professional-development-workshops') %) одноденний особистий семінар для отримання інструктажу від досвідченого інструктора з інформатики. (лише педагоги США)
 
 <%= view :signup_button %>
