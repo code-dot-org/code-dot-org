@@ -1003,6 +1003,7 @@ Bounce.runButtonClick = function () {
  * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
+  const {isSignedIn, userType} = getStore().getState().pageConstants;
   if (!Bounce.waitingForReport) {
     studioApp().displayFeedback({
       app: 'bounce', //XXX
@@ -1018,6 +1019,7 @@ var displayFeedback = function () {
         sharingText: bounceMsg.shareGame()
       },
       saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+      disableSaveToGallery: !isSignedIn && !userType,
     });
   }
 };
