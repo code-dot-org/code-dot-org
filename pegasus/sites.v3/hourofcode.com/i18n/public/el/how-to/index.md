@@ -12,7 +12,8 @@ nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Παρακολουθήστε το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
@@ -29,15 +30,15 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Promote your Hour of Code
+## 1) Προωθήστε τη δική σας Ώρα του Κώδικα
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
 ## 4) Σχεδίασε τις τεχνολογικές σου ανάγκες - οι υπολογιστές είναι προαιρετικοί
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Για την καλύτερη εμπειρία στην Ώρα του Κώδικα απαιτούνται υπολογιστές που συνδέονται στο διαδίκτυο. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**Προετοιμαστείτε!** Πριν από την έναρξη της εκδήλωσής σας, κάντε τα εξής:
 
   * Δοκίμασε τα φροντιστήρια σε υπολογιστές ή άλλες συσκευές. Βεβαιώσου ότι δουλεύουν σωστά σε προγράμματα περιήγησης με ήχο και βίντεο.
   * Παρέχετε ακουστικά για την τάξη σας, ή ζητήστε από τους μαθητές να φέρουν μόνοι τους, αν το μάθημα που επιλέγετε λειτουργεί καλύτερα με ήχο.
@@ -52,7 +53,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
 
-**Δείξε ένα βίντεο που να εμπνέει:**
+**Δείξτε ένα βίντεο που να εμπνέει:**
 
   * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * Το [βίντεο που εξηγεί για την ώρα του Κώδικα 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ή το <% if @country == 'uk' %> [Ώρα του Κώδικα 2015 βίντεο](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ώρα Κώδικα 2015 βίντεο](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
@@ -73,7 +74,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+  * Γράψτε τον σύνδεσμο του εκπαιδευτικού οδηγού στον πίνακα. Τον σύνδεσμο θα τον βρείτε στις [πληροφορίες για τον εκπαιδευτικό οδηγό της επιλογής σας](<%= resolve_url('/learn') %>) κάτω από τον αριθμό των συμμετεχόντων.
 
 [col-33]
 
@@ -141,6 +142,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
   * Ενθαρρύνετε τους μαθητές να συνεχίσουν να [μαθαίνουν online](<%= resolve_url('https://code.org/learn/beyond') %>).
-  * [Συμμετέχετε](<%= resolve_url('https://code.org/professional-development-workshops') %>) σε ημερήσια workshop διαζώσης ώστε να λάβετε οδηγίες από κάποιο έμπειρο εισηγήτη της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές Η.Π.Α.)
+  * [Συμμετέχετε](<%= resolve_url('https://code.org/professional-development-workshops') %>) σε ημερήσια workshop δια ζώσης ώστε να λάβετε οδηγίες από έναν έμπειρο εισηγητή της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές Η.Π.Α.)
 
 <%= view :signup_button %>
