@@ -182,7 +182,7 @@ class ApiController < ApplicationController
       }
     end
 
-    script_levels = script.script_levels.where(bonus: nil)
+    script_levels = script.script_levels.select {|sl| sl.bonus.nil?}
 
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
