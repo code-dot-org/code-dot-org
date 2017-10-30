@@ -198,11 +198,11 @@
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "Validation note: here we only check to see if `randomNumber(min,max)` is used as a parameter in calls to the functions.",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
