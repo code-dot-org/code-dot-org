@@ -23,8 +23,9 @@ class Game < ActiveRecord::Base
   has_many :levels
   belongs_to :intro_video, foreign_key: 'intro_video_id', class_name: 'Video'
 
-  def self.by_name(name)
-    (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
+  def self.find_by_name(name)
+    # Downcase name to match case-insensitive table schema.
+    (@@game_cache ||= Game.all.index_by{|game| game.name.downcase})[name.downcase] || super
   end
 
   def self.custom_maze
