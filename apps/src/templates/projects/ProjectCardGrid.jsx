@@ -72,6 +72,7 @@ const ProjectCardGrid = React.createClass({
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
+              hideWithoutThumbnails={true}
             />
             {showMoreProjects &&
               <ProjectAppTypeArea
@@ -83,6 +84,7 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.onSelectApp}
                 isDetailView={false}
+                hideWithoutThumbnails={true}
               />
             }
             <ProjectAppTypeArea
@@ -94,6 +96,7 @@ const ProjectCardGrid = React.createClass({
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
+              hideWithoutThumbnails={true}
             />
             {showMoreProjects &&
               <ProjectAppTypeArea
@@ -105,6 +108,7 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.onSelectApp}
                 isDetailView={false}
+                hideWithoutThumbnails={true}
               />
             }
             <ProjectAppTypeArea
@@ -116,6 +120,7 @@ const ProjectCardGrid = React.createClass({
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
+              hideWithoutThumbnails={true}
             />
             <ProjectAppTypeArea
               labKey="gamelab"
@@ -126,6 +131,7 @@ const ProjectCardGrid = React.createClass({
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
+              hideWithoutThumbnails={true}
             />
             <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
           </div>
