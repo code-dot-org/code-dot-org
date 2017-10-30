@@ -1696,6 +1696,9 @@ Artist.prototype.displayFeedback_ = function () {
     saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     // save to the project gallery instead of the legacy gallery
     saveToProjectGallery: saveToProjectGallery,
+    // The rails session cookie is blocked on some playlab level types,
+    // causing isSignedIn to be null. In this case, use the userType (based on
+    // a different cookie) to determine if the user is signed in.
     disableSaveToGallery: !isSignedIn && !userType,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
