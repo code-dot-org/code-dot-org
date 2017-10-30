@@ -11,6 +11,7 @@ export default storybook => {
         story: () => (
           <Congrats
             completedTutorialType="applab"
+            isRtl={false}
           />
         )
       },
@@ -20,6 +21,7 @@ export default storybook => {
         story: () => (
           <Congrats
             completedTutorialType="oldMinecraft"
+            isRtl={false}
           />
         )
       },
@@ -29,6 +31,7 @@ export default storybook => {
         story: () => (
           <Congrats
             completedTutorialType="newMinecraft"
+            isRtl={false}
           />
         )
       },
@@ -38,6 +41,7 @@ export default storybook => {
         story: () => (
           <Congrats
             completedTutorialType="other"
+            isRtl={false}
           />
         )
       }
