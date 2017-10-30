@@ -1108,7 +1108,7 @@ applabCommands.setProperty = function (opts) {
 
   var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
   if (!info) {
-    outputError('There is no property "' + property + '" for element "' + elementId +
+    outputError('There is no property named "' + property + '" for element "' + elementId +
       '". Make sure you choose a property from the dropdown.');
     return;
   }
