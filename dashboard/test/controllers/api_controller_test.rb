@@ -1193,7 +1193,11 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get progress for section with section script" do
-    get :section_progress, params: {section_id: @flappy_section.id}
+    Script.stubs(:should_cache?).returns true
+
+    assert_queries 8 do
+      get :section_progress, params: {section_id: @flappy_section.id}
+    end
     assert_response :success
 
     data = JSON.parse(@response.body)
