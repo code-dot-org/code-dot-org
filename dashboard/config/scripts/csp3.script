@@ -5,7 +5,7 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 has_verified_resources true
-script_announcements [{"notice"=>"Updates to Unit 3!", "details"=>"On Monday Oct. 30 we published some updates to Unit 3. Most notably, we've updated the practice performance task guidelines and rubric in Lesson 10 to better align with the AP Create Performance Task.  You'll also notice a few new \"bubbles\" for AP prep in lessons 5-9.  Click \"Learn more\" for details.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/29", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Updates to Unit 3!", "details"=>"On Oct 30th we published updates to this unit that more closely align the lessons and Practice PT in Lesson 10 to the AP Create PT. Click \"Learn more\" for details.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/29", "type"=>"bullhorn"}]
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -20,8 +20,7 @@ stage 'Creativity in Algorithms', flex_category: 'csp3_1'
 level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
 stage 'Using Simple Commands', flex_category: 'csp3_1'
-named_level 'v2 U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'csp_applab_turtle', progression: 'Turtle Programming'
+named_level 'csp_applab_turtle'
 level 'U3L2 Using Simple Commands', progression: 'Using Simple Turtle Commands'
 level 'U3L2_TurtleSquare_right', progression: 'Using Simple Turtle Commands'
 level 'U3L2_Turtle3by3Grid', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'
