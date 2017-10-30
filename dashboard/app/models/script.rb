@@ -718,7 +718,7 @@ class Script < ActiveRecord::Base
         raise 'Expect lockable stages to have an assessment as their last level'
       end
 
-      raw_stage = raw_stages.find {|rs| rs[:stage] == stage.name}
+      raw_stage = raw_stages.find {|rs| rs[:stage].downcase == stage.name.downcase}
       stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
       stage.save! if stage.changed?
     end
