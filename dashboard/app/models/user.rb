@@ -1652,8 +1652,8 @@ class User < ActiveRecord::Base
   def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
     # applab-intro is not seeded in our minimal test env used on test/circle. We
     # should be able to handle this gracefully
-    begin
-      script = Script.get_from_cache(script_name)
+    script = begin
+      Script.get_from_cache(script_name)
     rescue ActiveRecord::RecordNotFound
       nil
     end
