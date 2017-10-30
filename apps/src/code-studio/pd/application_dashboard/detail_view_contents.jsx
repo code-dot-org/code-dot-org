@@ -67,15 +67,14 @@ export default class DetailViewContents extends React.Component {
   renderEditButtons = () => {
     if (this.state.editing) {
       return [(
-        <Button bsStyle="primary">
+        <Button onClick={this.handleSaveClick} bsStyle="primary" key="save">
           Save
         </Button>
       ), (
-        <Button onClick={this.handleCancelEditClick}>
+        <Button onClick={this.handleCancelEditClick} key="cancel">
           Cancel
         </Button>
-      )
-      ];
+      )];
     } else {
       return (
         <Button onClick={this.handleEditClick}>
@@ -107,22 +106,7 @@ export default class DetailViewContents extends React.Component {
               ))
             }
           </FormControl>
-          {
-            this.state.editing ? [(
-              <Button onClick={this.handleSaveClick} bsStyle="primary" key="save">
-                Save
-              </Button>
-            ), (
-              <Button onClick={this.handleCancelEditClick} key="cancel">
-                Cancel
-              </Button>
-            )
-            ] : (
-              <Button onClick={this.handleEditClick}>
-                Edit
-              </Button>
-            )
-          }
+          {this.renderEditButtons()}
         </div>
       </div>
     );
@@ -176,6 +160,8 @@ export default class DetailViewContents extends React.Component {
           value={this.state.notes || ''}
           onChange={this.handleNotesChange}
         />
+        <br/>
+        {this.renderEditButtons()}
       </div>
     );
   }
