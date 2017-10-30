@@ -78,14 +78,18 @@
       "accelerometer.getAcceleration": null,
       "holdtime": null,
       "soundSensor.start": null,
-      "lightSensor.start": null
+      "lightSensor.start": null,
+      "functionParams_n": null,
+      "callMyFunction_n": null
     },
     "edit_code": true,
-    "encrypted_examples": "uq7LuPN3nPuypYsT7ubuLQuVx+aqTbDitiYnv0XRaF12mxEoD4+Wq5Dkp+Pe\nu3cJ\n",
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "// Variables\r\nvar score = 0;\r\nvar starting_x = __;\r\n\r\n// Events\r\nonBoardEvent(buttonL, \"press\", function() {\r\n  // Update score\r\n  \r\n  // Move bug\r\n  \r\n  // Check if player won\r\n  \r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function() {\r\n  // Update score\r\n  \r\n  // Move bug\r\n  \r\n  // Check if player won\r\n  \r\n});",
+    "start_blocks": "onEvent(\"play\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonEvent(\"replay\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  movePlayer(\"red\");\r\n  checkWin(\"red\");\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  movePlayer(\"blue\");\r\n  checkWin(\"blue\");\r\n});\r\n\r\nfunction startGame() {\r\n  // Move both players to the top of the screen\r\n  \r\n  // Switch to the \"game\" screen\r\n  \r\n}\r\n\r\nfunction movePlayer(player) {\r\n  // Create a variable called player_y and set it\r\n  // to the current y value of the image with the\r\n  // id represented by the paramater player\r\n  \r\n  // Increase the variable player_y by 10\r\n  \r\n  // Set the player's y property to the\r\n  // new player_y value\r\n  \r\n}\r\n\r\nfunction checkWin(player) {\r\n  // Create a variable called player_y and set it\r\n  // to the current y value of the image with the\r\n  // id represented by the paramater player\r\n  \r\n  // Check if player_y is greater than 350,\r\n  // meaning that it's reached the bottom.\r\n  // If it is, change the text property of\r\n  // \"winner\" to the player and switch to\r\n  // the \"win\" screen\r\n  \r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -113,7 +117,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"game_screen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-bug\" id=\"bug\" style=\"height: 100px; width: 100px; position: absolute; left: 110px; top: 140px; margin: 0px;\" data-icon-color=\"#860000\"></div><div class=\"screen\" tabindex=\"1\" id=\"win_screen\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; display: none;\"></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"start\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 52px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 70px; position: absolute; left: -4.44089e-16px; top: 25px; text-align: center;\" id=\"title\">Title</label><button id=\"play\" style=\"padding: 0px; margin: 0px; height: 110px; width: 270px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 315px;\">Play!</button></div><div class=\"screen\" tabindex=\"1\" id=\"game\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"red\" style=\"height: 100px; width: 100px; position: absolute; left: 40px; top: 0px; margin: 0px;\" data-icon-color=\"\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"blue\" style=\"height: 100px; width: 100px; position: absolute; left: 180px; top: 0px; margin: 0px;\" data-icon-color=\"\"></div></div>",
     "hide_view_data_button": "true",
     "show_debug_watch": "true",
     "expand_debugger": "false",
@@ -124,7 +128,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:29:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 19:29:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 20:25:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
