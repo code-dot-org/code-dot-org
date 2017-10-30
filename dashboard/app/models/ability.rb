@@ -123,6 +123,7 @@ class Ability
         can :index, :workshop_organizer_survey_report
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
+        can [:read, :quick_view], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
       end
 
       if user.permission?(UserPermission::WORKSHOP_ADMIN)

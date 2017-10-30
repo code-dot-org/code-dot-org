@@ -10,26 +10,19 @@ theme: responsive
 
 ## <a name="what"></a>What is CS Discoveries?
 
-Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
+Computer Science Discoveries is appropriate for 6 - 10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
-<div class="col-33" style="padding-right: 20px">
-
+<div class="col-50" style="padding-right: 20px">
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
 <i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
 
 </div>
 
-[col-33]
+[col-50]
 
 <%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csd'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csd', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Discoveries', ages: 'Recommended for Grades 6-10', description: 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'%>
 
-[/col-33]
-
-[col-33]
-
-[<center><img src="/images/csd/CSD-cover.png" width="70%"></center>](/files/CSDiscoveries_1-pager.pdf)
-
-[/col-33]
+[/col-50]
 
 <div style="clear:both"></div>
 
@@ -40,23 +33,18 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 **General applications for the 2018-19 [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) will open in January, 2018.** 
 
-If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52) [<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52) [<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
 
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
 
-* [**One-pager**](/files/CSDiscoveries_1-pager.pdf) describing the course
-* [**Curriculum Guide**](/files/CS-Discoveries-Curriculum-Guide.pdf) for teachers
-* [**Course Materials List**](#supplies)
-* [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
-
 [col-25]
 
-<center><img src="/images/animated-examples/lessonplans_csd.png" width="90%"></center>
+<center><img src="/images/csd/CSD-crop-cover.png" width="90%"></center>
 
-<div style="margin-top: 5px;">Daily lesson plans come with detailed instructions, activity guides, and assessments</div>
+<div style="margin-top: 5px;">Want to learn more? Dive into the <a href="/files/CS-Discoveries-Curriculum-Guide.pdf">Curriculum Guide</a></div>
 
 [/col-25]
 
@@ -85,6 +73,11 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 [/col-25]
 
 <p style="clear:both"></p>
+<br>
+**Don't miss these additional resources:**
+
+* [**Course Materials List**](#supplies)
+* [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
 
 <hr/>
 
@@ -166,8 +159,11 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 ## Spread the word about CS Discoveries
 
-* [One-pager](/files/CSDiscoveries_1-pager.pdf) describing the course
-* [Student flyer](/files/programs/csd-student-flyer.pdf): Print 2-sided flyer or just the details. Consider sending home to parents.
+* Hand out these fliers around your school and consider sending home to parents.
+
+[![image](/images/fit-200/CSDiscoveries_1-pager.png)](/files/CSDiscoveries_1-pager.pdf) 
+[![image](/images/fit-200/csd-student-flyer.png)](/files/programs/csd-student-flyer.pdf) 
+
 * Hang these posters in your classroom and around your school:
 
 [![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)

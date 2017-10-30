@@ -9,6 +9,7 @@
 import React, {PropTypes} from 'react';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
+import $ from 'jquery';
 
 export default class QuickView extends React.Component {
   static propTypes = {

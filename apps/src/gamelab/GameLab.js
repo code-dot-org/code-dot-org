@@ -127,10 +127,11 @@ module.exports = GameLab;
 /**
  * Forward a log message to both logger objects.
  * @param {?} object
+ * @param {string} logLevel
  */
-GameLab.prototype.log = function (object) {
+GameLab.prototype.log = function (object, logLevel) {
   this.consoleLogger_.log(object);
-  getStore().dispatch(jsDebugger.appendLog(object));
+  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
 };
 
 /**
