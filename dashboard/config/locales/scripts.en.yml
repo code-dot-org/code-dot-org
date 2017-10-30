@@ -6730,3 +6730,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
+          title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''

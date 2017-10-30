@@ -13,6 +13,7 @@ class Api::V1::Pd::FormsController < ::ApplicationController
 
     if form.valid?
       render json: {id: form.id}, status: :created
+      on_successful_create
     else
       return_data = {
         errors: form.errors.messages
@@ -25,5 +26,12 @@ class Api::V1::Pd::FormsController < ::ApplicationController
 
   rescue_from 'ActiveRecord::RecordNotUnique' do
     head :conflict
+  end
+
+  protected
+
+  # Override to perform custom actions after a successful form creation,
+  # e.g. sending confirmation email
+  def on_successful_create
   end
 end

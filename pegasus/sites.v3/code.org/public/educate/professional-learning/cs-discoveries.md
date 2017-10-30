@@ -4,16 +4,20 @@ theme: responsive
 ---
 # CS Discoveries Professional Learning Program
 
-Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support and 1-day quarterly workshops. You don't need any prior computer science experience to get started. 
+Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started! 
 <br>
+
+<hr/>
 
 [col-50]
 
+The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
+
 This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
 
-**Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 [/col-50]
 
@@ -82,9 +86,9 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="apply"></a>How to apply?
 
-**Applications for the 2018-19 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2018-19 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## <a name="facilitate"></a>Become a CS Discoveries Facilitator
 
