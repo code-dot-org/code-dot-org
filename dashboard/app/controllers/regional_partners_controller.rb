@@ -74,9 +74,7 @@ class RegionalPartnersController < ApplicationController
 
   # GET /regional_partners/:id/search_program_manager
   def search_program_manager
-    search_term = params[:search_term]
-    teachers = restricted_users.where(user_type: 'teacher')
-    @users = teachers.where("email LIKE :partial_email", {partial_email: "%#{search_term}%"}).or(teachers.where("name LIKE :partial_name", {partial_name: "%#{search_term}%"}))
+    @users = restricted_users.where(user_type: 'teacher', hashed_email: restricted_users.hash_email(params[:search_term]))
     render :show
   end
 
