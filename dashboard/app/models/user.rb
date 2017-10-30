@@ -1650,6 +1650,15 @@ class User < ActiveRecord::Base
   # for this user before they signed in, and if any of them are in our Applab HOC
   # course, we will create a UserScript entry so that they get a course card
   def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # should be able to handle this gracefully
+    begin
+      script = Script.get_from_cache(script_name)
+    rescue ActiveRecord::RecordNotFound
+      nil
+    end
+    return unless script
+
     # Find the set of levels this user started
     # Worth noting that because ChannelToken uses levels (rather than script_levels)
     # if a level is used in multiple scripts, we have no way to disambiguate which
@@ -1657,7 +1666,7 @@ class User < ActiveRecord::Base
     # this beyond our applab-intro script.
     channel_level_ids = ChannelToken.where(storage_id: storage_id).map(&:level_id)
 
-    levels_in_script = Script.get_from_cache(script_name).levels
+    levels_in_script = script.levels
 
     # host_level will be self if we don't have a template level
     # Expanding the scope beyond applab-intro would also be a challenge for template
