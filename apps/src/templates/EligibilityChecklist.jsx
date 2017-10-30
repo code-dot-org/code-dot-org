@@ -1,45 +1,30 @@
 /** @file Maker Board setup checker */
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import Button from "./Button";
 
-import SetupStep, {
-  WAITING,
-  SUCCEEDED,
-} from '../lib/kits/maker/ui/SetupStep';
+import SetupStep, {SUCCEEDED, WAITING, FAILED, STEP_STATUSES} from '../lib/kits/maker/ui/SetupStep';
 
 export default class EligibilityChecklist extends Component {
+  static propTypes = {
+    statusPD: PropTypes.oneOf(STEP_STATUSES).isRequired,
+    statusStudentCount: PropTypes.oneOf(STEP_STATUSES).isRequired,
+  };
+
   state = {
-    isDetecting: false,
-    caughtError: null,
-    statusPD: WAITING,
-    statusStudentCount: WAITING,
     statusYear: WAITING,
-    yearDecline: false,
     displayDecline: false,
     displayDiscountAmount: false,
   };
 
   handleSubmit = () => {
-    this.setState({displayDecline : true});
+    if (this.state.statusYear === FAILED){
+      this.setState({displayDecline : true});
+    }
   }
 
-  handleChange = (field, event) => {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        [field]: event.target.value
-      }
-    });
-  }
-
-  handleDropdownChange = (field, event) => {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        [field]: event ? event.value : ''
-      }
-    });
+  handleYearChange = (accept) => {
+    this.setState({ statusYear: (accept ? SUCCEEDED : FAILED )});
   }
 
   render() {
@@ -53,47 +38,45 @@ export default class EligibilityChecklist extends Component {
         </div>
         <SetupStep
           stepName={i18n.eligibilityReqPD()}
-          stepStatus={this.state.statusPD}
+          stepStatus={this.props.statusPD}
         >
           {i18n.eligibilityReqPDFail()}
         </SetupStep>
         <SetupStep
           stepName={i18n.eligibilityReqStudentCount()}
-          stepStatus={this.state.statusStudentCount}
-          subtleStyle={true}
+          stepStatus={this.props.statusStudentCount}
         >
           {i18n.eligibilityReqStudentCountFail()}
         </SetupStep>
         <SetupStep
           stepName={i18n.eligibilityReqYear()}
-          stepStatus={WAITING}
-          subtleStyle={true}
+          stepStatus={this.state.statusYear}
         >
           {i18n.eligibilityReqYearFail()}
         </SetupStep>
-        {this.state.statusStudentCount === SUCCEEDED &&
+        {this.props.statusStudentCount === SUCCEEDED &&
           <div>
             {i18n.eligibilityReqYearConfirmInstructions()}
             <div>
               <form>
                 <label>
-                  <input type="radio" name="year" value="no" onChange={() => {this.handleChange(false);}} disabled={this.state.displayDecline ? false : true}/>
+                  <input type="radio" name="year" value="no" onChange={() => {this.handleYearChange(false);}} disabled={this.state.displayDecline ? true : false}/>
                   {i18n.eligibilityYearNo()}
                 </label>
                 <label>
-                  <input type="radio" name="year" value="yes1718" onChange={() => {this.handleChange(true);}} disabled={this.state.displayDecline ? false : true}/>
+                  <input type="radio" name="year" value="yes1718" onChange={() => {this.handleYearChange(true);}} disabled={this.state.displayDecline ? true : false}/>
                   {i18n.eligibilityYearYes1718()}
                 </label>
                 <label>
-                  <input type="radio" name="year" value="yes1819" onChange={() => {this.handleChange(true);}} disabled={this.state.displayDecline ? false : true}/>
+                  <input type="radio" name="year" value="yes1819" onChange={() => {this.handleYearChange(true);}} disabled={this.state.displayDecline ? true : false}/>
                   {i18n.eligibilityYearYes1819()}
                 </label>
                 <label>
-                  <input type="radio" name="year" value="yesAfter" onChange={() => {this.handleChange(false);}} disabled={this.state.displayDecline ? false : true}/>
+                  <input type="radio" name="year" value="yesAfter" onChange={() => {this.handleYearChange(false);}} disabled={this.state.displayDecline ? true : false}/>
                   {i18n.eligibilityYearAfter()}
                 </label>
                 <label>
-                  <input type="radio" name="year" value="unsure" onChange={() => {this.handleChange(false);}} disabled={this.state.displayDecline ? false : true}/>
+                  <input type="radio" name="year" value="unsure" onChange={() => {this.handleYearChange(false);}} disabled={this.state.displayDecline ? true : false}/>
                   {i18n.eligibilityYearUnknown()}
                 </label>
                 <Button
