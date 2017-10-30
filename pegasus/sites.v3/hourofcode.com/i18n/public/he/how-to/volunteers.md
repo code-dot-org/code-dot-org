@@ -21,16 +21,16 @@ Visit a local classroom to inspire students to keep learning computer science. [
 
 Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
-## How you get selected
+## כיצד להיבחר
 
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
+- מורים יחפשו מתנדבים באמצעות [מפת המתנדבים](https://code.org/volunteer/local) שלנו.
 - Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
 - A teacher will contact you through this form (your email address will never be shared with the teacher). 
   - If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
 
-## How to prepare
+## כיצד להתכונן
 
-[Try out tutorials](hourofcode.com/learn) before heading to the classroom.
+[נסו את מערכי השיעור](hourofcode.com/learn) לפני שאתם מגיעים לכיתה.
 
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 

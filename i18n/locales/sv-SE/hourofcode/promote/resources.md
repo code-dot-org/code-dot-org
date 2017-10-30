@@ -35,9 +35,12 @@ nav: promote_nav
 
 [Ladda ner högupplösta versioner](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" är varumärkesskyddat. Vi vill inte förhindra denna användning, men vi vill se till att det passar inom några gränser:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Alla hänvisningar till "Hour of Code" bör användas på ett sätt som inte tyder på att det är ditt eget varumärke, hänvisa hellre till Hour of Code som en gräsrotsrörelse. Bra exempel: "Delta i Hour of Code™ på ACMECorp.com". Dåligt exempel: "Prova Hour of Code av ACME Corp".
+1. Alla hänvisningar till "Hour of Code" bör användas på ett sätt som inte tyder på att det är ditt eget varumärke, hänvisa hellre till Hour of Code som en gräsrotsrörelse.
+    
+    - Bra exempel: "Delta i Hour of Code™ på ACMECorp.com". 
+    - Dåligt exempel: "Prova Hour of Code av ACME Corp".
 2. Använd en "TM" upphöjd i de mest framträdande platser du nämner "Hour of Code", både på webbplatsen och i appbeskrivningar.
 3. Inkludera språk på sidan (eller i sidfoten), inklusive länkar till webbplatserna CSEdWeek och Code.org, som säger följande:
     
@@ -58,13 +61,15 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## Be din skola, arbetsgivare eller vänner att registrera sig:
+### Ask your school, employer, or friends to sign up:
 
-Datorer finns överallt, och förändrar varje industri på planeten. But fewer than half of all schools teach computer science. Goda nyheter är, vi är på väg att ändra detta. Om du hört talas om Hour of Code, kanske du vet det gjorde historia förra året. Över 100 miljoner elever har provat på Hour of Code.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-Med Hour of Code, har datavetenskap har varit på startsidan på Google, MSN, Yahoo! och Disney. Över 100 partners har gått samman för att stödja denna rörelse. Varje Apple Store i världen har varit värd för Hour of Code. President Obama skrev sina första rader kod som en del av kampanjen.
+Datorer finns överallt, och förändrar varje industri på planeten. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! Om du hört talas om Hour of Code, kanske du vet det gjorde historia förra året. Över 100 miljoner elever har provat på Hour of Code.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Över 100 partners har gått samman för att stödja denna rörelse. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Berätta om det. Håll ett evenemang. Be din lokala skola att registera sig. Eller prova en Hour of Code själv - alla har nytta av att kunna grunderna.
 
@@ -72,31 +77,29 @@ Kom igång på http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
-## Bjud in media att närvara vid evenemanget:
+### Bjud in media att närvara vid evenemanget:
 
 **Ämnesrad:** Lokala skolan går med rörelsen att introducera eleverna till datavetenskap
 
 Dator finns överallt och förändrar allt i vår värld, men färre än hälften av alla skolor lär ut datavetenskap. Tjejer och minoriteter är kraftigt underrepresenterade inom datavetenskap och i den tekniska branschen. Goda nyheter är, vi är på väg att ändra detta.
 
-Med Hour of Code, har datavetenskap har varit på startsidan på Google, MSN, Yahoo! och Disney. Över 100 partners har gått samman för att stödja denna rörelse. Varje Apple Store i världen har varit värd för Hour of Code. President Obama skrev sina första rader kod som en del av kampanjen.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Över 100 partners har gått samman för att stödja denna rörelse. Varje Apple Store i världen har varit värd för Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Jag skriver för att bjuda in dig till vår kick-off och att se när våra elever påbörjar aktiviteterna på [datum].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-Hour of Code som organiseras av den ideella föreningen Code.org och över 100 andra partners, är en global rörelse som drivs av övertygelsen att elever är redo för att lära sig de kunskaper som utvecklar dagens samhälle. Please join us.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
 
-**Kontakt:** [DITT NAMN], [TITLE], telefon: 212-555 55 55
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**När:**[DATUM och TID för ditt event]
-
-**Var:** [ADDRESS and VÄGBESKRIVNING]
-
-I look forward to being in touch.
+I look forward to being in touch. [YOUR NAME]
 
 <a id="parents"></a>
 
-## Berätta för föräldrar om din skolas evenemang:
+### Berätta för föräldrar om din skolas evenemang:
+
+**Subject line:** Our students are changing the future with an Hour of Code
 
 Kära föräldrar,
 
@@ -106,7 +109,7 @@ But only a tiny fraction of us are learning **how** technology works. Fewer than
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
@@ -118,20 +121,24 @@ Er rektor
 
 <a id="politicians"></a>
 
-## Invite a local politician to your school's event:
+### Invite a local politician to your school's event:
+
+**Subject line:** Join our school as we change the future with an Hour of Code
 
 Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
 Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-Sincerely, [NAME], [TITLE]
+Vänliga hälsningar,
+
+[NAME], [TITLE]
 
 <%= view :signup_button %>

@@ -8,7 +8,7 @@ La hora del código es conducido por la hora del código ordenador ciencia educa
 
 El [Comité Consultivo](<%= resolve_url('/advisory-committee') %>) está integrado por representantes de K-12, academia, sin fines de lucro, con fines de lucro y organizaciones internacionales. Este Comité de guías de la estrategia de la campaña hora de código.
 
-El [Comité de examen](<%= resolve_url('/review-committee') %>) se compone de 15 educadores a través de bandas de grado K-12 que evaluación y recomiendan las actividades mediante la rúbrica de la Comisión Consultiva. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+El [Comité de examen](<%= resolve_url('/review-committee') %>) se compone de 15 educadores a través de bandas de grado K-12 que evaluación y recomiendan las actividades mediante la rúbrica de la Comisión Consultiva. Estos educadores revisan las actividades dirigidas por los estudiantes y planes de lecciones dirigidas por los maestros presentados por cientos de compañeros de actividades, la evaluación de las actividades de valor educativo, capacidad para involucrar a los estudiantes, y el potencial atractivo para diversos conjuntos de los estudiantes.
 
 Trabajo y dedicación comités han contribuido al éxito de la hora del código y su visión de ofrecer una introducción a la informática para todos los estudiantes.
 
@@ -134,13 +134,13 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 ---
 
-# Activity Partners
+# Socios afiliados
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure Partners and Tools
+# Socios de infraestructura y herramientas
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

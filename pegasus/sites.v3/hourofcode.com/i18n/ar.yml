@@ -189,11 +189,11 @@
   front_join_us_tutorials: "اختر درسك من \"ساعة برمجية\"!"
   front_join_us_tutorials_link: 'تصفية وتصفح <i>أكثر من 200 من دروس وخطط الدروس</i>! البحث عن أنشطة في مجالات مختلفة، واحتياجات الأجهزة متعددة، والطلاب على أي مستوى من الخبرة.'
   front_join_us_robotics: 'حصلت على الروبوتات؟'
-  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_robotics_link: 'شكراً لشركائنا الروبوتات ادناه لدعمهم في ساعة البرمجة! اذا كان صفك يحتوي روبوتات, انقر فوق الشعارات لتجد قائمة من الروبوتات ذات صلة بالانشطة!'
   front_join_us_teacher: 'هل أنت معلم؟'
   front_join_us_inspire: 'الهام الطلاب مع'
-  front_join_us_inspire_link: 'an Hour of Code in the classroom.'
-  front_join_us_teacher_link: "Inspire students with an Hour of Code in the classroom"
+  front_join_us_inspire_link: 'ساعة من البرمجة في فصلك الدراسي.'
+  front_join_us_teacher_link: "قم بالهام الطلبة بساعة البرمجة في فصلك الدراسي"
   front_join_us_teacher_volunteer: "البحث عن متطوعين في نفس نطاقك الجغرافي والذين يمكنهم زيارة فصلك الدراسي أو إلهام طلابك عن بعد (عن طريق الإنترنت)"
   front_join_us_parent: 'هل انت أب أو أم؟'
   front_join_us_ask_link: 'اسأل المدرسة الموجودة بمنطقتك'
@@ -202,8 +202,8 @@
   front_join_us_computer_science: 'هل تحب علوم الحاسوب؟'
   front_join_us_cs_volunteer: 'متحمساً لتدريس علوم الحاسب؟'
   front_join_us_spread: 'أنشر كلمة.'
-  front_join_us_spread_word: "Spread the word in your community"
-  front_join_us_spread_word_work: "Spread the word in your community or workplace"
+  front_join_us_spread_word: "انشر الامر في محيطك"
+  front_join_us_spread_word_work: "انشر الامر في محيطك او مكان عملك"
   front_join_us_sign_up_volunteer: 'قم بالتسجيل للتطوع في أحد الفصول القريبة منك جغرافياً أو من خلال محادثة فيديو'
   front_join_us_organize: 'أو نظم حدث ساعة من البرمجة بنفسك.'
   front_join_us_how_to_run: "إليك كيفية تنظيم ساعة من البرمجة"
@@ -215,43 +215,44 @@
   front_join_us_sign_up: "التسجيل"
   front_join_us_host: "قم باستضافتها"
   front_join_us_support: "ادعمها"
-  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: "For more information, please visit code.org"
-  front_join_us_n_students_served: "# served"
+  front_join_us_more_info: "لمزيد من المعلومات قم بزيارة الرابط التالي <a href='https://code.org'>code.org</a>."
+  front_join_us_code_info: "لمزيد من المعلومات قم بزيارة موقع ساعة من البرمجة code.org"
+  front_join_us_n_students_served: "# تمت_الخدامة"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'قم بتنظيم ساعة برمجة في الفترة %{campaign_date}، وسَجِّلها هنا.'
   signup_name_label: 'اسمُكَ'
-  signup_name_error: 'Name is required.'
+  signup_name_error: 'الاسم مطلوب.'
   signup_email_label: 'بريدك الإلكتروني'
-  signup_email_error: 'Email is required'
+  signup_email_error: 'البريد الالكتروني مطلوب'
   signup_organization_name_label: 'اسم المدرسة أو المنظمة'
   signup_organization_name_error: 'مطلوب اسم المنظمة.'
   signup_event_type_label: 'نوع الحدث'
   signup_event_type_error: 'مطلوب نوع الحدث.'
   signup_event_entire_school_label: 'مدرستي مشاركة بالكامل'
   signup_event_location_label: 'مكان الحدث (اختياري)'
-  signup_event_location_error: 'Event location is required.'
+  signup_event_location_error: 'موقع الحدث مطلوب.'
   signup_special_event_flag_label: 'تسليط الضوء على حدثي المميز'
   signup_special_event_details_label: 'تفاصيل الحدث المميز'
   signup_send_posters_flag_label: 'إرسال <a href= "/resources#posters"> ملصقات</a> لمدرستي أومنظمتي'
   signup_send_posters_address_label: 'عنوان المدرسة أو المنظمة'
   signup_whole_school_flag_label: 'هذا الحدث لمدرسة كاملة'
   signup_your_event: 'سجل وشارك الحدث الخاص بك'
-  signup_host_an_hour: 'Host an hour'
+  signup_host_an_hour: 'تبنى ساعة'
   signup_match_volunteer: 'أرجو مساعدتي في العثور على مهندس برمجيات في نفس نطاقي الجغرافي ليساعدني في إلهام طلابي'
-  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
+  signup_multiple_event_warning: "اذا تبنيت عدة احداث, من فضلك سلم اسم وبريد الكتروني نادر لكل منهما, نحن نقوم بعد حدث واحد لكل اسم وبريد الكتروني معا."
   signup_registration_deadline: "التسجيل على\"ساعة من البرمجة\" ينتهي يوم 11 كانون الأول/ديسمبر."
   signup_name_placeholder: 'اسمُك'
   signup_email_placeholder: 'بريدك الإلكتروني'
   signup_organization_name_placeholder: "على سبيل المثال ، مدرسة لينكولن الثانوية"
   signup_event_country_label: "بلد الحدث"
-  signup_event_country_error: "Country is required."
+  signup_event_country_error: "البلد مطلوب."
   signup_event_location_placeholder: "الرمز البريدي والبلد أو العنوان الكامل.\\r\n(سوف نستعمل هذا العنوان لوضع دبوس على الخريطة)"
   signup_special_event_details_placeholder: 'صِف ما يجعل هذا الحدث مميزاً'
   signup_send_posters_address_placeholder: 'لن تتم مشاركة هذا العنوان على خارطتنا'
   signup_event_type_in_school: 'في مدرسة'
   signup_event_type_out_of_school: 'خارج المدرسة'
   signup_submit_census_label: 'أرسل'
-  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
+  signup_submit_census_error_message: "نحن آسفون. وقع خطأ ما. من فضلك قم باعادة تسليم النموذج مرة اخرى."
   signup_submit_label: 'التسجيل'
   signup_submit_error_message: "حدث خطأ ما. رجاءً تأكد أنه قد تم ملء كل الحقول المطلوبة بشكل صحيح."
   signup_submit_and_continue_label: 'حفظ و إستمرار'
@@ -265,10 +266,10 @@
   map_header_country: '# في %{country}'
   map_search_placeholder: 'البحث عن فعاليات "ساعة البرمجة"'
   map_search_search: 'بحث'
-  map_search_reset: 'Reset'
-  map_legend_title: 'Legend'
-  map_legend_hoc_events: 'Hour of Code Event'
-  map_legend_cs_tech_jam: 'Special Event'
+  map_search_reset: 'اعد التشغيل من البداية'
+  map_legend_title: 'اسطورة'
+  map_legend_hoc_events: 'حدث لساعة من البرمجة'
+  map_legend_cs_tech_jam: 'حدث خاص'
   map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
   meta_tag_og_title: ساعة من البرمجة قادمة
   meta_tag_og_description: 'ساعة البرمجة حركة عالمية تضم عشرات ملايين طلاب في 200 دولة وما يزيد على 30 لغة. تتراوح الأعمارهم من 4 إلى 104.'

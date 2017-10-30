@@ -14,7 +14,7 @@ nav: promote_nav
 
 # Get your community involved in the Hour of Code
 
-## Spre bodskapet
+## Spre bodskapen
 
 Tell your friends about the **#HourOfCode**!
 

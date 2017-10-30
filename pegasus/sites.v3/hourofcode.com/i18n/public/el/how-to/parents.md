@@ -5,28 +5,28 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Πώς να συμπληρώσετε την Ώρα του Κώδικα μαζί με το παιδί σας
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Συμπληρώστε την Ώρα του Κώδικα στο σπίτι, ή γίνε εθελοντής για να το φέρεις στην τάξη του παιδιού σου! Δες εδώ πώς:
 
 ## 1) Παρακολουθήστε το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2) Επιλέξτε έναν εκπαιδευτικό οδηγό:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+Παρέχουμε μια ποικιλία από διασκέδαση, ωριαία εκπαιδευτικά βίντεο για μαθητές όλων των ηλικιών, που δημιουργήθηκαν από μια πληθώρα των συνεταίρων. [Δοκιμάστε τα τώρα!](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Όλα τα εκπαιδευτικά βιντεάκια της Ώρας του Κώδικα είναι αυτό-καθοδηγούμενα, επιτρέποντας στο παιδί σας να προχωρεί με το δικό του ρυθμό και επίπεδο δεξιοτήτων**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Plan your technology needs
+## 3) Σχεδίασε τις τεχνολογικές σου ανάγκες
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+Η καλύτερη εμπειρία της Ώρας του Κώδικα θα είναι με υπολογιστές συνδεδεμένους στο Internet. Αλλά εσείς **δεν** χρειάζεστε έναν υπολογιστή. There are many activities that are "unplugged" and can be done without any technology at all.
 
 - Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- **Θέλετε να μάθετε μαζί με το παιδί σας;** Δοκιμάστε [ζεύγος προγραμματισμού.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Επιστήμη των υπολογιστών είναι κοινωνική και συλλογική.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 5) Ξεκινήστε την δική σας Ώρα του Κώδικα με ένα βίντεο που θα σας εμπνεύσει
 
 Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
 

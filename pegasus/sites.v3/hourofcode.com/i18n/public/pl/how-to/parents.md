@@ -15,7 +15,7 @@ Ukończ Godzinę Kodowania w domu lub zaoferuj, że zorganizujesz ją w klasie s
 
 Oferujemy różne zabawy, godzinne samouczki dla uczniów w każdym wieku, utworzone przez różnych partnerów. [ Wypróbuj je!](<%= resolve_url('/learn') %>)
 
-**Wszystkie samouczki Godziny Kodowania nie wymagają pomocy - umożliwiają Twojemu dziecku pracę w swoim tempie i na poziomie swoich umiejętności**
+**Samouczki Godziny Kodowania nie wymagają pomocy - umożliwiają Twojemu dziecku pracę w swoim tempie i na poziomie swoich umiejętności**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
@@ -23,57 +23,57 @@ Oferujemy różne zabawy, godzinne samouczki dla uczniów w każdym wieku, utwor
 
 Najlepsze doświadczenia z Godziną Kodowania zapewnią komputery z dostępem do Internetu. Ale Ty **nie** potrzebujesz komputera. Istnieje wiele aktywności, które są "unplugged", można je przeprowadzić bez jakiejkolwiek technologii.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Przetestuj samouczki na swoim komputerze lub innym urządzeniu. Upewnij się, że działają poprawnie w przeglądarkach z dźwiękiem i wideo.
+- **Czy chcesz uczyć się wraz ze swoim dzieckiem?** Spróbuj [ programowanie w parach.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Informatyka wnosi aspekty społeczne i współpracę.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 5) Rozpocznij swoją Godzinę Kodowania od obejrzenia inspirującego filmu
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Rozpocznij Godzinę Kodowania inspirując swoje dziecko i dyskutując, jaki jest wpływ informatyki na każdą sferę naszego życia.
 
 **Pokaż inspirujący film:**
 
 - Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - [Film inaugurujący Godzinę Kodowania w 2013 roku](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub <% if @country == 'uk' %> [film Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [film Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
 - [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Znajdź więcej inspirujących [zasobów](<%= resolve_url('https://code.org/inspire') %>) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Jeśli Ty i Twoje dziecko jesteście nowicjuszami w informatyce, to nie problem. Oto kilka pomysłów na rozpoczęcie Godziny Kodowania:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- Wyjaśnij, jak technologia wpływa na nasze życie, używając przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (opowiedz o ratowaniu życia, pomaganiu ludziom, łączeniu ludzi itp.).
 - Wymień rzeczy, które używają kodu w codziennym życiu.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- Zobacz [tutaj](<%= resolve_url('https://code.org/girls') %>) porady, jak zainteresować dziewczęta informatyką.
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Potrzebujesz więcej pomysłów? Zajrzyj do naszego [ szablonu planu lekcji](/files/AfterschoolEducatorLessonPlanOutline.docx), po najlepsze praktyki od doświadczonych pedagogów.
 
-## 5) Code!
+## 6) Programuj!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Po wybraniu samouczka, który chcesz przerobić, możesz zaznaczyć krótki link do niego.
 
-**When your child come across difficulties**
+**Kiedy Twoje dziecko napotka trudności**
 
-It’s okay to respond:
+To dobrze powiedzieć:
 
 - "Nie wiem. Sprawdźmy to razem."
 - "Technologia nie zawsze działa w sposób, jaki chcemy."
 - "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
 
-## 6) Celebrate
+## 7) Świętuj
 
-[Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
+[Wydrukuj świadectwa](<%= resolve_url('https://code.org/certificates') %>) dla Twojego dziecka (i dla siebie).
 
 Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
-**Other Hour of Code resources:**
+**Inne zasoby Godziny Kodowania:**
 
 - Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 **Co będzie się działo po Godzinie Kodowania?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Encourage your child to continue [to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
+- Zachęć swoje dziecko do kontynuowania [nauki online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Pomóż [ promować](<%= resolve_url('/promote') %>) edukację informatyczną w okręgu szkolnym Twojego dziecka.
 
 <%= view :signup_button %>

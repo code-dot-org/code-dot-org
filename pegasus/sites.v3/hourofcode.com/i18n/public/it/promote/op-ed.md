@@ -10,11 +10,11 @@ nav: promote_nav
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
+Vai a [programmailfuturo.it](<%= resolve_url('https://code.org/promote') %>) per avere informazioni sull'insegnamento dell'informatica nelle scuole italiane.
 
-**Title: Computing…Where the Jobs Are**
+**Titolo: informatica... Dove sono i posti di lavoro**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**Di [NAME] e [CONSIDERA LA POSSIBILITà DI AVERE COME CO-AUTORI EDUCATORi, DIRIGENTI O IMPRENDITORI DI SUCCESSO]**
 
 I computer sono dovunque. Sono nelle nostre tasche. Sono attaccati ai nostri muri. Sono nelle nostre automobili. Sono una componente critica della nostra infrastruttura, a partire dalle reti elettriche fino ai semafori fino agli strumenti che permettono il funzionamento dei nostri mercati finanziari. E tutti questi computer hanno una cosa in comune. Hanno bisogno del software che dica loro cosa fare.
 

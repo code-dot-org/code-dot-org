@@ -218,7 +218,8 @@
   front_join_us_more_info: "Để biết thêm chi tiết, vui lòng truy cập <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "Để biết thêm thông tin chi tiết, vui lòng truy cập code.org"
   front_join_us_n_students_served: "# served"
-  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_header: 'Tổ chức một sự kiện Hour of Code vào %{campaign_date}, và đăng ký nó ở đây.'
   signup_name_label: 'Tên của bạn'
   signup_name_error: 'Tên là bắt buộc.'
   signup_email_label: 'Email của bạn'
@@ -226,24 +227,24 @@
   signup_organization_name_label: 'Tên trường hoặc tổ chức bạn đang học hoặc làm việc'
   signup_organization_name_error: 'Tên tổ chức là bắt buộc.'
   signup_event_type_label: 'Kiểu sự kiện'
-  signup_event_type_error: 'Event type is required.'
+  signup_event_type_error: 'Bạn chưa nhập loại sự kiện.'
   signup_event_entire_school_label: 'Toàn bộ học sinh trường tôi đã tham gia vào'
   signup_event_location_label: 'Địa điểm sự kiện (tuỳ chọn)'
-  signup_event_location_error: 'Event location is required.'
+  signup_event_location_error: 'Bạn chưa nhập địa điểm của sự kiện.'
   signup_special_event_flag_label: 'Làm nổi bật sự kiện của tôi lên'
   signup_special_event_details_label: 'Chi tiết về sự kiện đặc biệt'
   signup_send_posters_flag_label: 'Gửi <a href= "/resources#posters"> áp phích</a> cho trường học hoặc tổ chức của tôi'
   signup_send_posters_address_label: 'Địa chỉ trường hoặc tổ chức của bạn'
   signup_whole_school_flag_label: 'Sự kiện này dành cho một trường'
   signup_your_event: 'Đăng ký sự kiện của bạn'
-  signup_host_an_hour: 'Host an hour'
-  signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
-  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 11."
+  signup_host_an_hour: 'Tổ chức một giờ'
+  signup_match_volunteer: 'Hãy giúp tôi tìm một kỹ sư phần mềm tại địa phương để truyền cảm hứng cho học sinh của tôi'
+  signup_multiple_event_warning: "Nếu bạn đang tổ chức nhiều sự kiện, xin vui lòng gửi một tên sự kiện riêng biệt cho mỗi sự kiện hoặc gửi email riêng biệt cho mỗi sự kiện. Chúng tôi chỉ tính một sự kiện dựa vào sự kết hợp của tên sự kiện và email."
+  signup_registration_deadline: "Hạn đăng ký cho sự kiện Hour of Code là ngày 11 tháng 12."
   signup_name_placeholder: 'Tên của bạn'
   signup_email_placeholder: 'You@example.com'
   signup_organization_name_placeholder: "Ví dụ, Trường THPT Phan Châu Trinh / Tổ chức AIESEC"
-  signup_event_country_label: "Event country"
+  signup_event_country_label: "Quốc gia nơi tổ chức sự kiện"
   signup_event_country_error: "Quốc tịch là bắt buộc."
   signup_event_location_placeholder: "Mã bưu chính và đất nước OR đầy đủ địa chỉ. \\r (chúng tôi sẽ sử dụng điều này để đặt một pin trên bản đồ của chúng tôi)"
   signup_special_event_details_placeholder: 'Hãy mô tả điều gì khiến cho sự kiện này trở nên đặc biệt'

@@ -218,6 +218,7 @@
   front_join_us_more_info: "Për më shumë informata. luteni të vizitoni faqen <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Për më shumë informacione, ju lutem vizitoni code.org"
   front_join_us_n_students_served: "# pjesëmarrës"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Organizoni një Orë Kodim gjatë %{campaign_date} dhe regjistroheni këtu.'
   signup_name_label: 'Emri juaj'
   signup_name_error: 'Name is required.'

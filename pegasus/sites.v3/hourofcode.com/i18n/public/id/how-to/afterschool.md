@@ -60,7 +60,7 @@ Mulai Hour of Code Anda dengan peserta yang menginspirasi dan diskusikan bagaima
 
 - Menjelaskan bagaimana caranya teknologi mempengaruhi kehidupan kita, dengan memberikan contoh dimana baik anak laki-laki dan perempuan akan perduli (Mendisuksikan bagaimana aplikasi dan teknologi digunakan untuk menyelamatkan jiwa seseorang, menolong orang, meperhubungkan orang dan lain lain).
 - Daftar hal-hal yang menggunakan pemrograman dalam kehidupan sehari-hari.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- Lihat tips agar anak gadis tertarik dalam ilmu komputer [di sini](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 

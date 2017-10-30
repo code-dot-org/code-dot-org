@@ -28,16 +28,16 @@ social:
 
 # Bir saat kodu oluşturduğunuz için teşekkürler!
 
-Bilgisayar eğitimini öğrenmek isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. </strong>FREEPOSTERS</0> Promosyon kuponunuzdur ücretsiz posterinizi almak için kodu kullanınız. (Not: gönderdiğimiz posterleri ücretsiz kullana bilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+Bilgisayar eğitimini öğrenmek isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. </strong>FREEPOSTERS</0> Promosyon kuponunuzdur ücretsiz posterinizi almak için kodu kullanınız. (Not: gönderdiğimiz posterleri ücretsiz kullana bilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Posterler Amerika'dan kargolandığı için, Kanada ve diğer ülkelere kargo ücreti oldukça fazla olabilir. Posterleri alacak bütçeniz yoksa, [PDF](https://code.org/inspire) dosyalarının çıktısını alıp kullanabilirsiniz)  
   
-[<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+[<button>Poster Al </button>](https://store.code.org/products/code-org-posters-set-of-12) Ücretsiz poster almak için bu butonu kullanabilirsiniz. Kupon kodunuz FREEPOSTERS
 
   
-**Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+**Kod Saati projesi <%= campaign_date('full')%> tarihine kadar sürecektir. Yeni uygulamalar ve diğer güncellemeler hakkında sizinle irtibat halinde olacağız. Bu arada, şimdi neler yapabilirsiniz? **
 
-## 1. Spread the word in your school and community
+## 1. Okuldakilere ve tanıdıklarınıza Kod Saati'ni duyurun
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Kodlama Saati hareketine katıldın. Arkadaşlarına **#HourOfCode** etiketi ile haber ver!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>   
 Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Yeni beceriler öğrenmek için okulda olmana gerek yok. Invite a local politician or policy maker to visit your school for the Hour of Code. Bu senin bölgenin bir saat mesafesinde bilgisayar bilimleri desteği oluşturmana yardım edebilir.

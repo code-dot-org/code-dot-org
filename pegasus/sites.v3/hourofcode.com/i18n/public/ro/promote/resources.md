@@ -1,6 +1,6 @@
 ---
-title: '<%= hoc_s(:title_resources) %>'
-layout: wide
+title: '<%= hoc_s(:titlu_resurse) %>'
+layout: larg
 nav: promote_nav
 ---
 <%= view :signup_button %>
@@ -35,9 +35,12 @@ nav: promote_nav
 
 [Descarcati variantele cu rezoluție mare](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Ora de Programare" este marcă înregistrată. Nu vrem să prevenim utilizarea acesteia, dar vrem să ne asigurăm că se plasează în câteva limite:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Exemplu negativ: "Încercaţi Ora de Programare de ACME Corp".
+1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază.
+    
+    - Exemplu corect: "Participa la Hour of Code la ACMECorp.com". 
+    - Exemplu negativ: "Încercaţi Ora de Programare de ACME Corp".
 2. Utilizează un exponent "TM" în locurile cele mai proeminente în care menționezi "Hour of Code", atât pe site-ul tău de web cât şi în descrierea aplicației.
 3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
     
@@ -58,13 +61,15 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## Cereți școlii, angajaților sau prietenilor să se înscrie:
+### Ask your school, employer, or friends to sign up:
 
-Computerele sunt peste tot, schimbă fiecare industrie pe planeta. Dar mai puţin de jumătate din toate şcolile predau astazi stiinta calculatoarelor. Vestea bună e că suntem pe cale să schimbăm acest lucru. Daca ati auzit şi inainte de Hour of Code, atunci stiti ca a facut istorie. Mai mult de 100 de milioane de studenţi au încercat o Ora de Programare.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Preşedintele Obama a scris lui prima linie de cod ca parte a campaniei.
+Computerele sunt peste tot, schimbă fiecare industrie pe planeta. Dar mai puţin de jumătate din toate şcolile predau astazi stiinta calculatoarelor. Good news is, we’re on our way to change this! Daca ati auzit şi inainte de Hour of Code, atunci stiti ca a facut istorie. Mai mult de 100 de milioane de studenţi au încercat o Ora de Programare.
 
-Hai sa facem mai mult in acest an. Vă cer să va alăturati pentru ora de cod 2016. Vă rugăm să va implicati cu un eveniment o oră de cod în Saptamana Educatia in Stiinta Calculatoarelor, < % = campaign_date('full') % >.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Împăștiați vestea. Găzduiți un eveniment. Cereți unei școli locale să se înscrie. Sau încercați chiar dvs. Ora de Programare -- oricine poate beneficia din învățarea noțiunilor de bază.
 
@@ -72,31 +77,29 @@ Hai sa facem mai mult in acest an. Vă cer să va alăturati pentru ora de cod 2
 
 <a id="media-pitch"></a>
 
-## Invitați mass-media la evenimentul dvs:
+### Invitați mass-media la evenimentul dvs:
 
 **Linia de titlu:** O școală se alătură misiunii de a iniția 100 milioane de elevi în Informatică
 
 Computerele sunt peste tot, schimbă fiecare industrie pe planetă, dar mai putin de jumătate dintre şcoli predau informatica. Fete şi minorităţile sunt grav slab reprezentate în clasele de ştiinţă calculator şi în industria de tehnologie. Vestea bună e că suntem pe cale să schimbăm acest lucru.
 
-In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Preşedintele Obama a scris lui prima linie de cod ca parte a campaniei.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Even President Obama wrote his first line of code as part of the campaign.
 
-De aceea, fiecare dintre cei [X] elevi de la [numele şcolii] se alatură celui mai mare eveniment educativ din istorie: Ora de Programare, în săptămâna 5-11 Decembrie 2016.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Vă scriu pentru a vă invita să participați la reuniunea noastră de impact și să vedeți cum încep copiii această activitate pe data de [DATA].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-"Ora de Programare" (Hour of Code), organizată de Code.org (o organizaţie non-profit) şi peste 100 alte organizaţii, este o mărturie că generaţia de astăzi este gata să își formeze deprinderi esenţiale pentru a avea succes în secolul 21. Vă rugăm să vă alăturaţi.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Vă rugăm să vă alăturaţi.
 
-**Contact:** [NUMELE DVS.], [TITLE], telefon: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**Când:** [DATA şi TIMPUL pentru evenimentul dvs.]
-
-**Unde:** [ADDRESA și DIRECTII]
-
-Aştept cu nerăbdare să comunicăm.
+I look forward to being in touch. [YOUR NAME]
 
 <a id="parents"></a>
 
-## Spuneți-le părinţilor despre evenimentul şcolii dumneavoastră:
+### Spuneți-le părinţilor despre evenimentul şcolii dumneavoastră:
+
+**Subject line:** Our students are changing the future with an Hour of Code
 
 Dragi părinți,
 
@@ -106,7 +109,7 @@ Dar numai o mica parte dintre noi suntem învațați **cum** funcţionează tehn
 
 Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 
-Ora noastră de Programare este o declaraţie că [numele şcolii] este gata să ne formeze aceste abilităţi fundamentale ale secolului 21. Pentru a continua aducerea unor activități de programare pentru elevi, vrem să avem propriul nostru eveniment uriaș Ora de Programare. Vă incurajez sa fiți voluntari, să ajungeți catre mass-media locală si sa distribuiti veştile pe canalele social media. Luați in considerare si organizarea unor evenimente adiționale în comunitate.
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. Pentru a continua aducerea unor activități de programare pentru elevi, vrem să avem propriul nostru eveniment uriaș Ora de Programare. Vă incurajez sa fiți voluntari, să ajungeți catre mass-media locală si sa distribuiti veştile pe canalele social media. Luați in considerare si organizarea unor evenimente adiționale în comunitate.
 
 Aceasta este o şansă de a schimba viitorul educaţiei în [nume oraş/oraş].
 
@@ -118,20 +121,24 @@ Cu stimă,
 
 <a id="politicians"></a>
 
-## Invitați un politician local la evenimentul şcolii dumneavoastră:
+### Invitați un politician local la evenimentul şcolii dumneavoastră:
+
+**Subject line:** Join our school as we change the future with an Hour of Code
 
 Stimate [numele primarului/consilierului/senatorului]:
 
 Ştiai că tehnologia computerelor este sursa #1 a salariilor în Statele Unite.? Există mai mult de 500.000 de joburi deschise in It la nivel national, dar anul trecut doar 42.969 de studenţi au absolvit în forţa de muncă.
 
-Informatica este fundamentală pentru *fiecare* industrie astăzi. Însă cele mai multe nu o predau. La [numele scolii], încercăm să schimbam asta.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 
-Vă scriu pentru a vă invita să luați parte la evenimentul nostru Ora de Programare pentru a vorbi despre impactul tehnologiei. Acesta va avea loc pe [data, ora, locul] şi va face o declaraţie puternică, că [nume de stat sau un oraş] este gata să le formeze elevilor noştri abilităţi esențiale pentru secolul 21. Vrem să ne asiguram că elevii noştri sunt în primul plan prvind crearea tehnologiei de viitor--nu doar consumatorii ei.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. Vrem să ne asiguram că elevii noştri sunt în primul plan prvind crearea tehnologiei de viitor--nu doar consumatorii ei.
 
 Vă rugăm să mă contactaţi la [telefon număr sau adresă de E-mail]. Aştept cu nerăbdare răspunsul dumneavoastră.
 
-Cu sinceritate, [NAME], [TITLE]
+Cu stimă,
+
+[NAME], [TITLE]
 
 <%= view :signup_button %>

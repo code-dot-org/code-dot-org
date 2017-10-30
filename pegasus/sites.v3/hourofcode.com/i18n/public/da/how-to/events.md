@@ -7,39 +7,39 @@ nav: how_to_nav
 
 # Sådan organiserer du en Hour of Code
 
-## 1. Prepare for your event
+## 1. Forbered dit arrangement
 
-- Determine a venue, date, and time.
+- Bestem sted, dato og tidspunkt.
 - Send [et brev](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) for at invitere din lokale borgmester eller en indflydelsesrig forretningsmand til at komme og tale.
 - Inviter medier/presse dvs. lokale nyhedsstationer, aviser, uddannelses-/it-bloggere. Se vores [pressekit](<%= resolve_url('/promote/press-kit') %>) for at få hjælp.
 
-## 2. During your event
+## 2. Under dit arrangement
 
-- Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
+- Start dit arrangement med en af vores [inspirerende videoer](<%= resolve_url('/promote/resources#videos') %>).
 - Giv en intro, hvor du giver et overblik over vigtigheden af programmering ved brug af disse [statistikker og intrografikker](<%= resolve_url('/promote/stats') %>).   
       
     
 - Andre event ideer: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Inviter en lokal fagekspert eller ildsjæl til at fortælle om hvordan programmering indgår i hans eller hendes arbejde.
+    - Inviter en lokalpolitiker og få eleverne til at lære ham eller hende hvordan man programmerer.
+    - Få en gruppe af elever til at vise en øvelse uden brug af computer.
+    - Få en gruppe af elever til at lære skolelederen, eller en gruppe af lærere, hvordan man programmerer.
+    - Hvis din skole allerede afholder undervisning i programmering, så få eleverne til at vise deres projekter frem.
 
-## 3. Share how it went
+## 3. Del hvordan det gik
 
 - Dele billeder af dit arrangement på Facebook og Twitter. 
-- Use the hashtag **#HourOfCode**
+- Brug hashtag **#HourOfCode**
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Afhold en programmeringsaften for hele familien med Hour of Code, og inviter forældrene med
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Overvej af afholde et arrangement for børn fra 0.-5. klasse og invitér forældrene med til en times programmering sammen med eleverne. Dette er en fantastisk måde, at få engageret lokalsamfundet og fremme forældrenes støtte til datalogi på din skole. Vores samarbejdspartnere Family Code Night har udarbejdet en arrangementspakke med tjeklister, præsentationer, invitationer, plakater m. m. så du kan afholde dit eget arrangement. [ Klik her for at hente arrangementspakken](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## Eksempel på arrangementsplan
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Dato:** Den 5. december (starten på datalogi-uddannelsesuge)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -49,13 +49,13 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 ## Kør et Show
 
-| Tidspunkt   | Hændelse                                                                                                                                         |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00-10:05 | Indled med en af vores [inspirerende videoer](<%= resolve_url('/promote/resources#videos') %>)                                                     |
-| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
-| 10:15-10:30 | Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.            |
-| 10:30-10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                       |
-| 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                   |
+| Tidspunkt   | Hændelse                                                                                                                                                        |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 | Indled med en af vores [inspirerende videoer](<%= resolve_url('/promote/resources#videos') %>)                                                                    |
+| 10:05-10:15 | Skolelederen giver en introduktion til datalogi med fokus på vigtigheden af faget. Brug disse [statistikker og diagrammer](<%= resolve_url('/promote/stats') %>). |
+| 10:15-10:30 | Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.                           |
+| 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokalpolitiker eller andre elever!        |
+| 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                      |
+| 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                                  |
 
 <%= view :signup_button %>

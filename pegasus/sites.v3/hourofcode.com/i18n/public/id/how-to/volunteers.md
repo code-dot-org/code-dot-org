@@ -34,17 +34,17 @@ Mencoba panduan sebelum masuk kelas.
 
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
-- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-- If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>).
-- If you're visiting a school, complete any background checks or required paperwork.
-- [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students.
-- Join the conversation on FB, Twitter, Instagram, and Tumblr with #HourOfCode.
-- Connect with the teacher to discuss what you plan to speak about during your session.
-- If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+- Periksalah [ Toolkit Sukarelawan "Hour of Code" ](/files/hoc-volunteer-toolkit.pdf) yang mencakup ikhtisar, linimasa, serta persiapan bahan dan materi pemasaran. Apa pun yang Anda butuhkan agar siap untuk menjadi relawan
+- Jika Anda belum membutuhkan tutorial selama sesi, cobalah tutorial, setidaknya 1 kali dalam 30 menit <a href="%= resolve_url('/learn') %".
+- Jika Anda mengunjungi sekolah, periksa dan lengkapi semua dokumen yang diperlukan.
+- [ meninjau tips](https://code.org/files/CSTT_Volunteers.pdf) tentang cara berinteraksi dengan siswa.
+- Bergabung dalam percakapan di FB, Twitter, Instagram, dan Tumblr bersama #HourOfCode.
+- Hubungi guru untuk mendiskusikan rencana apa yang akan Anda sampaikan selama sesi Anda berlangsung.
+- Jika Anda seorang sukarelawan virtual, sebelumnya, ujilah terlebih dahulu A / V Anda dan kemampuan Anda dalam berbagi tampilan layar.
 
-## Day-of Hour of Code Event
+## Susunan Acara "Hour of Code"
 
-When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+Ketika Anda menjadi penyelenggara acara "Hour of Code", ikuti contoh susunan acara berikut ini sebagai referensi. Sebelumnya, pastikan Anda hadir di sekolah dan menemui guru yang bersangkutan pada hari acara berlangsung. Pastikan Anda telah berdiskusi dengannya dan menyetujui susunan acara untuk hari itu.
 
 ### **Contoh Jadwal Acara:**
 
@@ -52,9 +52,9 @@ Perkenalkan dirimu: </ul>
 
 - Apa pekerjaan kamu, apa yang kamu lakukan, dan apa yang paling kamu suka dari pekerjaanmu?
 - What or who inspired you?
-- How did you get interested in computer science?
+- Bagaimana Anda bisa tertarik pada ilmu komputer?
 - Apakah kamu memiliki seorang pembimbing?
-- Share a story about how tech affects everyone.</ul></td> </tr> 
+- Bagikan pengalaman Anda tentang bagaimana teknologi memberi dampak bagi banyak orang.</ul></td> </tr> 
   Ask the students questions and leave time for Q&A. </ul>
   
   - What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 

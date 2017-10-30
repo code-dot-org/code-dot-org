@@ -1,7 +1,7 @@
 ---
-title: '<%= hoc_s(:title_op_ed) %>'
-layout: wide
-nav: promote_nav
+title: <%=hoc_s(titre_ed_op) %>
+layout: large
+nav: promotion_nav
 ---
 <%= view :signup_button %>
 
@@ -42,6 +42,6 @@ Nous devons recruter plus d'enseignant(e)s d'informatique et encourager le déve
 
 Selon l'organizarion Amèricain Bureau of Labor Statistics (Bureau de Statistiques du travail), en 2020, il y aura 9.2 millions d'emplois en domaines STEM (Science, technologie, ingénierie et mathématiques). La moitié de ces emplois-4.6 millions- sera en informatique ou techonologies d'information. Et l'informatique est de l'information de plus en plus essentiek pour l'XXIe siècle. Qui remplira ces emplois, si nos enfants ne sont pas donnés la chance d'obtenir les compétence nécessaires?
 
-Cette semaine, <%=campaign_date('full') %>, est la Semaine d'Éducation Informatique. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. Je me joindrai à eux et je vous invite à en faire de même. Tout le monde devrait apprendre à programmer. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Cette semaine, <%=campaign_date('full') %>, est la Semaine d'Éducation Informatique. Dans les écoles partout en **[STATE]**, nos étudiants participeront à l'Heure du Code au niveau national, en démystifiant l'informatique et en aiguisant leur appétit d’apprendre encore plus. Je me joindrai à eux et je vous invite à en faire de même. Tout le monde devrait apprendre à programmer. Visitez https://hourofcode.com/ < % = @country %> pour en savoir plus et lancez-vous. Et supportez nos efforts à introduire l'informatique à plus d'écoles en **[STATE]**.
 
 <%= view :signup_button %>

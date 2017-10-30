@@ -1,32 +1,32 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: Sprijinirea studenților cu nevoi speciale pentru Ora de Cod
 ---
-# Supporting special needs students for the Hour of Code
+# Sprijinirea studenților cu nevoi speciale pentru Ora de Cod
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other special needs find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate](%= resolve_url('https://code.org/certificates') %) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Oricine poate încerca Ora de Cod în cursul săptămânii de educație a științei calculatoarelor. Adesea, elevii cu autism, ADHD sau alte nevoi speciale realizează că iubesc programarea. Încurajează toți elevii din clasa ta pentru a le da o șansă! În stabilirea experientei clasei tale, recompensează participarea mai degrabă decât competiția. Poti sa oferi fiecaruia un [certificate](%= resolve_url('https://code.org/certificates') %)necontand cat de multe puzzele ori provocari completeaza intr-o ora. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) este o alta minunata metoda de a invata colaborarea si studentii sa lucreze impreuna sa rezolve probleme.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Potriveste o varietate de nevoi cu tutoriale deconectate si online
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+În găsirea activității potrivite pentru fiecare din clasa ta, ia în considerare ambele opțiuni, online și offline care nu necesita calculatoare. Activitati deconectate permit studentiilor obtinerea conceptelor stiintifice ale comuputarelor. [Marele event](https://studio.code.org/s/course1/stage/15/puzzle/1)pun profesori in control pe actiunile studentilor, oferind pentru o minunata sansa de a adapta continutul la abilitatile fiecarui student.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students with hearing impairments can participate fully in the online tutorials.
+Pentru alți elevi, acomodarea disponibila pe calculator le-ar putea permite să participe mai bine decât o alegere offline. De exemplu, studenții cu deficiențe de auz pot participa deplin la tutorialele online.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+Cele mai inclusive alegeri ar putea de asemenea să depindă de existenta unui laborator de calculatoare sau laptop-uri.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+De exemplu, elevii tăi au redus mobilitatea sau dexteritatea? Dacă toți elevii tăi au acces la tehnologie la școală, întreabă elevii sau profesorul de informatică ce moduri de acomodare folosesc elevii tăi de obicei pe calculatoarele disponibile.
 
-## Sensory Impairments
+## Deficiențe senzoriale
 
-### Blind or visually impaired students
+### Elevi nevăzători sau cu deficiențe de vedere
 
-For students who need a screen reader, the [Quorum tutorial](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. It started as an interpreted language originally designed to be easier to hear through screen readers for blind or visually impaired users. Eventually, Quorum became a general purpose programming language designed for any user. You can use this Hour of Code tutorial with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Pentru studenti ce au nevoie de un cititor de ecran, acesta [Quorum tutorial](https://quorumlanguage.com/hourofcode/part1.html) este un loc perfect de inceput. A început ca o limbă interpretată concepută inițial pentru a fi mai ușor să auzi decât să citești ecranul pentru utilizatorii nevăzători sau cu deficiențe de vedere. În cele din urmă, cvorum a devenit un limbaj conceput pentru orice utilizator de programare de uz general. Poți folosi acest tutorial al Orei de Cod cu întreaga ta clasă. Și dacă vreți să mergeți dincolo de Ora de Cod, echipa Cvorum are instrumente suplimentare și curriculum.
 
-Students can have a range of vision impairments. If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+Elevii pot avea o serie de probleme de vedere. Daca studentul tau foloseste o alta acomodare in tehnologie clase, poti folosi acestea sa te ajute cu Ora de Cod deasemenea. Acestea pot include monitoare mai mari, modificarea ecranelor software, setări de contrast ridicat în sistemul lor de operare, control vocal și mai mult.
 
-### Deaf or hard of hearing students
+### Elevi surzi sau cu deficiențe de auz
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+[Code.org tutorials](https://studio.code.org/) sunt toate create sa fie folosite cu sau fara sunet. Toate videoclipurile au legende. Unii elevi pot beneficia, de asemenea, de căşti setate la un volum mai mare.
 
-## Learn more
+## Aflați mai multe
 
-To learn more about computer science education and special needs students, we recommend this [online book](%= localized_file('/files/accommodating-students-with-disabilities.pdf') %).
+Sa inveti mai multe despre educatia stiintei computarelor si nevoile speciale ale studentiilor, va recomanda aceasta [carti online](%= localized_file('/files/accommodating-students-with-disabilities.pdf') %).

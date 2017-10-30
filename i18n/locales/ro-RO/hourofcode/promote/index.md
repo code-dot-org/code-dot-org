@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_how_to_promote) %>'
-layout: wide
+layout: larg
 nav: promote_nav
 ---
 <%= view :signup_button %>

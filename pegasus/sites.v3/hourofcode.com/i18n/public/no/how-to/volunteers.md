@@ -23,7 +23,7 @@ Fortell venner og kolleger om Kodetimen. Tusenvis av lærere har meldt seg på o
 
 ## Hvordan blir du valgt
 
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
+- Lærere vil lete etter frivillige på vårt [kart over frivillige](/volunteer/local).
 - Lærere vil gå gjennom profiler på kartet, så prøv å gjøre din profil så komplett som mulig for å øke sjansen for at en lærer velger deg.
 - En lærer vil kontakte deg gjennom dette skjemaet (din epostadresse vil aldri bli delt med læreren). 
   - Hvis du får for mange forespørsler fra lærere, kan du oppdatere dine preferanser ved å klikke på koblingen for å redigere informasjonen eller melde deg av nederst på alle epostene fra en lærer. 
@@ -34,7 +34,7 @@ Fortell venner og kolleger om Kodetimen. Tusenvis av lærere har meldt seg på o
 
 Engasjer elevene! Velg en video du kan vise klassen og få de til å bli positive til å gjennomføre en Kodetime.
 
-- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+- Sjekk ut [ verktøykassa til Kodetimen](/files/hoc-volunteer-toolkit.pdf). Den inneholder en oversikt, tidslinje, forberedelse materiale og markedsføringsmateriell. Alt du trenger å bli klar til å bidra som frivillig!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>).
 - Hvis du besøker en skole, fullfør alle bakgrunnssjekker og/eller nødvendige papirer.
 - [Vurdere disse tipsene](https://code.org/files/CSTT_Volunteers.pdf) om hvordan du arbeider med elevene.

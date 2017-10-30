@@ -19,7 +19,7 @@ nav: how_to_nav
 
 5. **Host a district Hour of Code event.** See our [event how to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other supports.
 
-## What comes after the Hour of Code?
+## अवर ओफ कोड के बाद क्या?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

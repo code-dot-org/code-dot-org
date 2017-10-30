@@ -100,7 +100,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**एक घंटा कोड का अभ्यासिकाओंकी विशेषताए:**
+**अवर ओफ कोड की सभी शिक्षाविधियाँ:**
 
 - Require minimal prep-time for organizers
 - छात्र स्वअध्ययन से अपनी गतिसे काम कर सकते है

@@ -11,12 +11,12 @@ nav: how_to_nav
 
 ## 2. Choose a tutorial
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+Pružamo razne [zabave, jednosatnog tutoriali](<%= resolve_url('/learn') %>) za sudionike svih uzrasta, stvorio niz partnera. [ Isprobajte ih!](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials:**
+**Svi tutoriali sata-koda:**
 
 - Require minimal prep-time for organizers
-- Are self-guided - allowing kids to work at their own pace and skill-level
+- Su samonavodeci - Sto dopusta djeci da rade na svom vlastitom miru I levelu vjestine
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
@@ -56,7 +56,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**U redu je ako ste svi potpuno novi u računarstvu. Ovdje su neke ideje da predstavitie sat koda aktivnosti:**
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
 - List things that use code in everyday life.

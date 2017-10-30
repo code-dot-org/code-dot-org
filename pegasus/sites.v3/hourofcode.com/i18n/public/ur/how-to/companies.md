@@ -5,20 +5,20 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# آوور-آف-خوڈ کو آپ اپنی کمپنی میں کس طرح لا سکتے ہیں
 
-## Inspire students and volunteer for the Hour of Code
+## طلباء اور رضاکاروں کو آوور-آف-کوڈ کے بارے میں حوصلہ افزائی کریں
 
 Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
+- رضاکارانہ کام کے لئے [سائن اپ کریں](<%= resolve_url('https://code.org/volunteer') %>) ۔.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
-## Additional ways companies can support the Hour of Code:
+## کمپنیوں کے کوڈ کے گھنٹے کی معاونت کرنے کے اضافی طریقے:
 
 - Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- کسی مقامی کلاسروم کے طلبا یا نان پرافٹ پاٹنر کے ساتھ اپنے کمپنی افس مین Hour of code منعقد کراین. ایونٹhow-to گائڈ نیچے دیکھین.
 
 # How to host an Hour of Code event with students
 
@@ -101,12 +101,12 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 <p style="clear:both">&nbsp;</p>
 
-## 7) Celebrate
+## 7) جشن منائیں
 
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-- !سوشل میڈیا پر اپنے آور-آف-کوڈ کے ایونٹ کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم بھی آپ کی کامیابی کو اجاگر کرسکیں
+- ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 
 [col-33]
 

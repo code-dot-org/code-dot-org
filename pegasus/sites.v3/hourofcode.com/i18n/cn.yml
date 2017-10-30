@@ -142,7 +142,7 @@
   company_strongnet: Strongsville School District
   company_TukwilaSchoolDistrict: Tukwila School District
   company_vermilionschools: Vermilion Local School District
-  company_vista-equity-partners: "Vista Equity Partners"
+  company_vista-equity-partners: "Vista 股权合作伙伴"
   company_walthampublicschools: Waltham Public Schools
   company_warrencountyschools: Warren County Schools
   company_WaynesboroPublicSchools: Waynesboro Public Schools
@@ -218,6 +218,7 @@
   front_join_us_more_info: "更多信息，请访问<a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "有关详细信息，请访问 code.org"
   front_join_us_n_students_served: "#次使用"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: '在%{campaign_date} 期间主持编程一小时，并在这里登记。'
   signup_name_label: '您的姓名'
   signup_name_error: '名称是必填的。'
@@ -404,18 +405,18 @@
   highlights_readmore: 了解更多
   highlights_watchvideo: 观看视频
   highlights_facebook: 分享到Facebook
-  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
-  highlights_constant_obama_short_heading: Coder in Chief
-  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
-  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
-  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
-  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
-  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
-  highlights_constant_ny_short_heading: Brooklyn beats Chicago
-  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
-  highlights_constant_athletes_short_heading: Push yourself
+  highlights_constant_alba_heading: 这位女演员、维权人士、企业家在Honest公司为全体员工中主持了一场编程一小时活动。
+  highlights_constant_alba_short_heading: Jessica Alba参与了编程一小时
+  highlights_constant_obama_heading: 奥巴马总统是写下代码的首位总统, 为学生在白宫举办了一个历史性的编程一小时活动。
+  highlights_constant_obama_short_heading: 首席程序员
+  highlights_constant_malala_heading: "“每个女孩应带参与进来，创造这能够改变世界的技术。”"
+  highlights_constant_malala_short_heading: 诺贝尔和平奖得主马莱拉
+  highlights_constant_trudeau_heading: 加拿大总理贾斯汀·特鲁多以他最喜欢的运动为特色编写了一个简单的游戏。
+  highlights_constant_trudeau_short_heading: 加拿大总理贾斯汀·特鲁多编写了一个游戏。
+  highlights_constant_ny_heading: 在一场史诗般的战役之后, 布鲁克林的学校以80%的编程一小时比例打败了芝加哥(仅60%)。还不错！
+  highlights_constant_ny_short_heading: 布鲁克林击败芝加哥
+  highlights_constant_athletes_heading: 冠军和金牌获得者Serena Williams，Neymar Jr，Carmelo Anthony等人激励学生超越自己。
+  highlights_constant_athletes_short_heading: 超越自己
   footer_copyright_message: '版权所有 2015 Code.org。保留所有的权利。'
   footer_trademark_message: 'Hour of Code ™ 是 Code.org 的注册商标。'
   footer_menu_partners: '合作伙伴'
@@ -429,7 +430,7 @@
   learn_banner_teachers: 教师： <a id='teacher_banner_host'> 主办一个小时</a> 或 <a id='teacher_banner_howto'> 阅读操作指南</a>
   learn_robotics_banner_heading: '机器人'
   learn_robotics_banner_blurb: '已有机器人？在下列活动中使用他们，并制作一个可触摸的代码一小时给所有年龄的学生！'
-  tutorial_athlete_name: "Code your own sports game"
+  tutorial_athlete_name: "编写你自己的体育游戏"
   tutorial_moana_name: 莫阿娜：代码给我指路
   tutorial_star-wars_name: 星球大战：用代码建设一个星系
   tutorial_gumadventure_name: "阿甘编程大冒险"
@@ -454,7 +455,7 @@
   tutorial_lightbot_name: "点灯机器人"
   tutorial_hoc_name: "新 code.org/hoc 的占位符"
   tutorial_code_name: "写下你的第一个计算机程序"
-  tutorial_tinspire_name: "10 Minutes of Code for the TI-Nspire CX"
+  tutorial_tinspire_name: "TI-Nspire CX编程的10分钟"
   tutorial_itchbounceball_name: "ITCH 弹珠游戏(用Scratch)"
   tutorial_vidclim_name: Vidcode： 气候科学与代码
   tutorial_matlab_name: "学会用 MATLAB 编程"
@@ -704,7 +705,7 @@
   tutorial_robomeshiq_name: "用Blockly来创建VEX IQ 机器人"
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "勇敢无畏的Moana决心要找到她自己的路"
-  tutorial_star-wars_shortdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
+  tutorial_star-wars_shortdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
   tutorial_gumadventure_shortdescription: "使用代码来续写一集《口香糖的神奇世界》吧。"
   tutorial_mchoc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
   tutorial_vidnews_shortdescription: "Code effects and graphics to make a news story all about tech, diversity, kids, and coding."
@@ -920,10 +921,10 @@
   tutorial_pirates_shortdescription: "Navigate the crystal waters of the southern hemisphere, code your treasure maps and discover the riches that lie on the golden shores. A fun way to learn the basic concepts of coding."
   tutorial_csfirst_shortdescription: "Animate a story about two characters on the ocean. Add your own style!"
   tutorial_loopedy_shortdescription: "Make a dance using loops!"
-  tutorial_dsw_shortdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_dswb_shortdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_ssw_shortdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_sswb_shortdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
+  tutorial_dsw_shortdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_dswb_shortdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_ssw_shortdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_sswb_shortdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
   tutorial_kodable-unplugged_shortdescription: "A fun unplugged exercise"
   tutorial_scratch_shortdescription: "Create your own interactive games, stories, and animations with Scratch!"
   tutorial_bayes_shortdescription: "Grandes Heroes"
@@ -942,8 +943,8 @@
   tutorial_spheroi_shortdescription: "Introduction to Lightning Lab, The Sphero App for programming Sphero robots."
   tutorial_spherol_shortdescription: "Learn how to control Sphero’s lights and get creative with programming."
   tutorial_spherov_shortdescription: "Learn about Variables and Operators to program Sphero to simulate a speeding car, a hot potato game, and a fortune teller."
-  tutorial_swb_shortdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_build-a-galaxy_shortdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
+  tutorial_swb_shortdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_build-a-galaxy_shortdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
   tutorial_alicesims_shortdescription: "Tell stories and be creative while learning to code. "
   tutorial_tchr_shortdescription: "Be inspired to design your own Hour of Code event with these lesson plans."
   tutorial_robogame_shortdescription: "The grit, the games, the fun!"
@@ -977,7 +978,7 @@
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
-  tutorial_star-wars_longdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
+  tutorial_star-wars_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
   tutorial_mchoc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
   tutorial_vidnews_longdescription: 'It’s the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. “Breaking News: 400 students at Roosevelt participate in the Hour of Code”'
@@ -1193,10 +1194,10 @@
   tutorial_pirates_longdescription: "Captain Hack is a pirate looking for treasure. He also writes treasure maps, and writing those like writing code. He (the player) uses \"pirate code\" for this. It is a symbol-based programming language, used for instructions and even AI behaviors. movements, loops, GO-TO's, true/false-statements are all core parts of the game. The players are guided through a tutorial and presented for the posibilities, step by step. There are no correct solution for the tutorial levels, so the user can chose whatever solution they like. "
   tutorial_csfirst_longdescription: "Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!"
   tutorial_loopedy_longdescription: "The goal of a good programmer is to write a program that is a short, clear, and effective as possible. In this lesson, students will learn how write programs using loops."
-  tutorial_dsw_longdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_dswb_longdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_ssw_longdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_sswb_longdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
+  tutorial_dsw_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_dswb_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_ssw_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_sswb_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
   tutorial_kodable-unplugged_longdescription: "Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. "
   tutorial_scratch_longdescription: "With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. To get started, animate your name, create a dance scene, or make a hide-and-seek game featuring Cartoon Network’s We Bare Bears!"
   tutorial_bayes_longdescription: "Grandes Heroes"
@@ -1215,8 +1216,8 @@
   tutorial_spheroi_longdescription: "Everyone starts somewhere. Welcome to your first Lightning Lab activity!\n\nFollow the steps to get a quick video overview of the app, learn how to create programs using the block-based interface, and gain an understanding of loops. After that, test your skills and curiosity by playing a game with your robot and the app.\n"
   tutorial_spherol_longdescription: "Dive into the power of lights in this activity. You will discover different methods to control Sphero’s lights and then build programs to put the lights to work. You will create a program that powers a robotic Jack-o’-Lantern, turns Sphero into a sensor-based spinning top, and also get creative with long exposure light art."
   tutorial_spherov_longdescription: "In this Sphero Lightning Lab activity you will learn about powerful programming commands. This activity will simulate Sphero getting pulled over by a police officer for speeding. You will also build a hot potato game program, and turn Sphero into a fortune teller to predict the future. All of this will be accomplished with variables that let you set conditional values in the Lightning Lab app. "
-  tutorial_swb_longdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
-  tutorial_build-a-galaxy_longdescription: "学习写程序控制机器人，并在很遥远很遥远的星系中创造自己的星球大战游戏。"
+  tutorial_swb_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
+  tutorial_build-a-galaxy_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
   tutorial_alicesims_longdescription: "Follow the animation production process from storyboarding to programming with Alice and The Sims.  Let creativity and storytelling drive your learning in a drag and drop coding environment.  The project will guide you through what is a storyboard, translating a storyboard into a programmable script, and how to program a short 3D animation. "
   tutorial_tchr_longdescription: "Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans."
   tutorial_robogame_longdescription: "Challenge your school to compete in the Robot Games! Students will compete in a series of mathematics themed activities where they use Dash and Dot to solve a problem and earn points for themselves, their grade, and/or their school."
@@ -1803,9 +1804,9 @@
   tutorial_kodable-pre_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，无需插件"
   tutorial_highseas_string_platforms: "IE 11，微软Edge、 Chrome、 火狐、 Safari"
   tutorial_capython_string_platforms: "IE 11，微软Edge、 Chrome、 火狐、 Safari"
-  tutorial_frzn_string_platforms: "所有较新浏览器，安卓，iOS"
+  tutorial_frzn_string_platforms: "所有现代网页浏览器，安卓，iOS"
   tutorial_cocom_string_platforms: "所有较新的浏览器"
-  tutorial_play-lab_string_platforms: "所有较新浏览器，安卓，iOS"
+  tutorial_play-lab_string_platforms: "所有现代网页浏览器，安卓，iOS"
   tutorial_boxisland2016_string_platforms: "安卓平板电脑，iPad，Android 手机 iPhone"
   tutorial_textcomp_string_platforms: "所有较新的浏览器"
   tutorial_encryption_string_platforms: "所有较新的浏览器"
@@ -1818,12 +1819,12 @@
   tutorial_tynkerch_string_platforms: "IE 11，微软Edge、 Chrome、 火狐、 Safari"
   tutorial_lightbot_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone"
   tutorial_hoc_string_platforms: "不显示"
-  tutorial_code_string_platforms: "所有较新浏览器，安卓，iOS"
+  tutorial_code_string_platforms: "所有现代网页浏览器，安卓，iOS"
   tutorial_tinspire_string_platforms: "手持式TI-Nspire"
   tutorial_itchbounceball_string_platforms: "Chrome，火狐，安卓平板"
   tutorial_vidclim_string_platforms: "Chrome、 火狐、 Safari"
   tutorial_matlab_string_platforms: "所有较新的浏览器"
-  tutorial_flap_string_platforms: "所有较新浏览器，安卓，iOS"
+  tutorial_flap_string_platforms: "所有现代网页浏览器，安卓，iOS"
   tutorial_galaxy_string_platforms: "安卓平板电脑，Android 手机"
   tutorial_inf_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone"
   tutorial_tynkersol_string_platforms: "IE 11，微软Edge，Chrome，火狐， Safari，安卓平板，iPad"

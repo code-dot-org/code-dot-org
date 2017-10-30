@@ -1,7 +1,7 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
-layout: wide
-nav: how_to_nav
+title: '<%=hoc_s(:titlu_cum_sa)%>'
+layout: larg
+nav: cum_sa_navighezi
 ---
 <%= view :signup_button %>
 
@@ -127,7 +127,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 Hour of Code este doar primul pas într-o călătorie pentru a afla mai multe despre modul în care tehnologia funcționează şi cum se creează aplicațiile software. Pentru a continua această călătorie:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
+- Incurajeaza studentii sa continuie la [invata online](%= rezolvare_url('https://cod.org/invat/dincolo') %).
 - [Participați](%= resolve_url('https://code.org/professional-development-workshops') %) la un atelier de lucru de o zi, în persoană, pentru a primi instrucțiuni de la un facilitator experimentat în informatică. (Numai pentru educatori din SUA)
 
 <%= view :signup_button %>

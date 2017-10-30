@@ -72,7 +72,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+  * سبق کا لنک ایک سفید تختی پر لکھیں۔ لنک ڈھونڈیں جو [آپ کے منتخب سبق کی معلومات](%= resolve_url('/learn') %) والی فہرست میں شرکاء کی تعداد کے ذیل میں ہے۔
 
 [col-33]
 
@@ -103,7 +103,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) جشن منائیں
 
 [col-33]
 

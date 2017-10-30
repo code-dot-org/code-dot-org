@@ -11,7 +11,7 @@ Completa un'Ora del Codice a casa o fai volontariato per proporlo nella scuola d
 
 ## 1) Guarda questo video tutorial <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Scegli un tutorial:
+## 2) Scegli un corso:
 
 Ti forniamo una ambia scelta di esercitazioni divertenti della durata di un'ora adatti per studenti di tutte le età, creati da diversi partner. [Provali!](<%= resolve_url('/learn') %>)  
   

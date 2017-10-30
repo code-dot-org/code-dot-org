@@ -7,26 +7,26 @@ nav: how_to_nav
 
 # Rettleing for frivillige
 
-## Kvifor være frivillig?
+## Kvifor vere frivillig?
 
-Sjekk ut nokre utsagn frå tidlegare frivillige:
+Sjekk ut nokre utsegn frå tidlegare frivillige:
 
-- "Den beste delen av erfaringa var at heile klassa var kvinner og mennesker med forskjellige personligheite. Det lovar godt for framtida i vår bransje, at vi har sjansen til og nå og inspirere disse borna."
-- "Likte spesielt moglegheita til og kunne få oppfordre unge jenter i teknologi. Følte det som om at eg hjelpte den neste generasjonen i mitt nærmiljø."
-- "Eg ELSKA og sjå kor begeistra barna var. Ein fantastisk ting var at lærerane la merke til at nokre av dei studentane som ikkje var so fagleg sterke, likavel blei inspirerte til og tenkje som ein utviklarar og hjelpte dei andre i same situasjon slik at dei også følte at dei lærte i tryggje rammer."
+- "Den beste delen av erfaringa var at heile klassen var kvinner og ulike menneske. Det lovar godt for framtida i bransjen vår, at vi har sjansen til å nå og inspirere desse borna."
+- "Likte spesielt moglegheita til å oppmuntre unge jenter til å lære teknologi. Følte at eg hjalp den neste generasjonen i lokalmiljøet mitt."
+- "Eg ELSKA og sjå kor begeistra barna var. Ein fantastisk ting var at lærarane la merke til at nokre av dei elevane som ikkje var så fagleg sterke, var gode i å tenke som ein utviklar og hjelpe andre - gir dei ein stad kor dei kan kjenne seg sjølvsikre."
 
 Besøk et klasserom i nærmiljøet for å oppmuntre elevene til å fortsette med å lære informatikk. [Registrer deg nå!](https://code.org/volunteer/engineer).
 
 ## Verv kollegaene dine som frivillige
 
-Fortel venner og kollegaer om Kodetimen. Tusenvis av lærarar har meld seg på og ser etter frivillige, så be dem [melde seg som frivillig](https://code.org/volunteer). Spør din arbeidsgivar om dei ønskjer å bidra. [Send denne eposten ](https://hourofcode.com/promote/resources#email)til din leiar, eller administrerande direktør.
+Fortel venner og kollegaer om Kodetimen. Tusenvis av lærarar har registrert seg og ser etter frivillige, så be dei [melde seg som frivillige](https://code.org/volunteer). Spør arbeidsgjevaren din om bli med. [Send denne eposten](https://hourofcode.com/promote/resources#email)til leiaren din eller administrerande direktør.
 
 ## Hvordan blir du valgt
 
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
+- Lærere vil lete etter frivillige på vårt [kart over frivillige](/volunteer/local).
 - Lærarar vil gå gjennom profilar på kartet, så prøv å gjere din profil så komplett som mogleg for å auke sjansen for at ein lærar vel deg.
-- Ein lærar vil kontakte deg gjennom dette skjemaet (din epostadresse vil aldri bli delt med læraren). 
-  - Om du får for mange førespurnader frå lærarar, kan du oppdatere dine preferansar ved å klikke på koblinga for å redigere informasjonen eller melde deg av nedst på alle epostane frå ein lærar. 
+- Ein lærar vil kontakte deg gjennom dette skjemaet (epostadressa di vil aldri bli delt med læraren). 
+  - Om du får for mange førespurnader frå lærarar, kan du oppdatere preferansane dine ved å klikke på lenka for å redigere informasjonen eller melde deg av nedst på alle epostane frå ein lærar. 
 
 ## Hvordan forberede
 
@@ -34,7 +34,7 @@ Fortel venner og kollegaer om Kodetimen. Tusenvis av lærarar har meld seg på o
 
 Engasjer elevene! Velg en video du kan vise klassen og få de til å bli positive til å gjennomføre en Kodetime.
 
-- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+- Sjekk ut [ verktøykassa til Kodetimen](/files/hoc-volunteer-toolkit.pdf). Den inneholder en oversikt, tidslinje, forberedelse materiale og markedsføringsmateriell. Alt du trenger å bli klar til å bidra som frivillig!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](%= resolve_url('/learn') %).
 - Hvis du besøker en skole, fullfør alle bakgrunnssjekker og/eller nødvendige papirer.
 - [Vurdere disse tipsene](https://code.org/files/CSTT_Volunteers.pdf) om hvordan du arbeider med elevene.

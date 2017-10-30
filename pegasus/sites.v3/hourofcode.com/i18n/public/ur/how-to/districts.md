@@ -19,7 +19,7 @@ nav: how_to_nav
 
 5. ** ڈسٹرکٹ آور-آف-کوڈ کے ایونٹ کو ھوسٹ کریں۔** ہمارے ایونٹ [ ھاؤ ٹو گائیڈ](<%= resolve_url('/how-to/events') %>) بطور ایک سیمپل شو رَن، میڈیا آؤٹریچ کٹ اور دیگر معاونتیں دیکھیں۔
 
-## آور-آف-کوڈ کے بعد کیا آتا ہے؟
+## آور-آف-کوڈ کے بعد کیا ہو گا؟
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

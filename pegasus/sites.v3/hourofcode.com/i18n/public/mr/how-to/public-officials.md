@@ -15,7 +15,7 @@ nav: how_to_nav
 
 <p style="clear:both">&nbsp;</p>
 
-## Get every school participating, every student learning!
+## सर्व शाळांचा, तसेच सर्व विद्यार्थ्यांचा सहभाग घ्यावा!
 
 1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
 

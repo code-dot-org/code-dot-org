@@ -218,6 +218,7 @@
   front_join_us_more_info: "Барои маълумоти бештар, лутфан ба <a href='https://code.org'>code.org</a> гузаред."
   front_join_us_code_info: "Барои маълумоти бештар, лутфан ба code.org гузаред"
   front_join_us_n_students_served: "# served"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Соати рамзро санаи %{campaign_date} ташкил кунед ва онро дар ин ҷо ба қайд гиред.'
   signup_name_label: 'Номи шумо'
   signup_name_error: 'Name is required.'

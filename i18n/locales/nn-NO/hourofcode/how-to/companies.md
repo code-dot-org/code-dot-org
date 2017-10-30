@@ -76,7 +76,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
 - For younger students, load the activity page ahead of time or save it as a bookmark.
 
-**Når deltakarar kjem opp i vanskar, er det greit å svara:**
+**Når deltakarar kjem opp i vanskar, er det greit å svare:**
 
 - "Eg veit ikkje. Lat oss finne det ut i lag."
 - «Det er ikkje alltid teknologien gjer seg slik vi vil.»

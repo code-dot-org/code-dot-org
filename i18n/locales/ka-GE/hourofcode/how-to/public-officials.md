@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_how_to_officials) %>'
-layout: wide
+layout: ფართო
 nav: how_to_nav
 ---
 <%= view :signup_button %>
@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## ყველა სკოლამ უნდა მიიღოს მონაწილეობა, ყველა მოსწავლემ - ისწავლოს!
 
-1. **წაიკითხეთ ჩვენი ერთგვერდიანი** იმის შესახებ, რატომ არის კომპიუტერული მეცნიერების განათლება მნიშვნელოვანი და როგორ შეგიძლიათ წვილილის შეტანა კოდის ერთი საათის მხარდაჭერით. [მიიღეთ ერთგვერდიანი აქ.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **წაიკითხეთ ჩვენი ერთგვერდიანი შეჯამება** იმის შესახებ, რატომ არის კომპიუტერული მეცნიერების განათლება მნიშვნელოვანი და როგორ შეგიძლიათ წვილილის შეტანა კოდის ერთი საათის მხარდაჭერით. [მიიღეთ ერთგვერდიანი შეჯამება აქ.](/files/hoc-one-pager-public-officials-2016.pdf)
 
 2. **დააინტერესეთ ადგილობრივი სკოლები და უბნები.** დასაწყისისთვის, გამოიყენეთ [ეს ელ. ფოსტა](%= resolve_url('/promote/resources#sample-emails') %) ან [ეს რეზიუმე](%= resolve_url('/promote/stats') %) და იხილეთ ეს [ინსტრუქცია](%= resolve_url('/how-to') %) სკოლებისა და უბნებისთვის.
 
@@ -27,9 +27,9 @@ nav: how_to_nav
 
 5. **მიმართეთ მთავრობას განცხადებით.** იხილეთ [განცხადების მაგალითი,](%= resolve_url('resources/proclamation') %) რომელიც განმარტავს კომპიუტერული მეცნიერების საგანმანათლებლო მიზნებს და შეიძლება გამოყენებულ იქნას შტატის ან ადგილობრივი წარმომადგენლობის მიერ.
 
-6. **მოამზადეთ სტატია**. გამოაქვეყნეთ მიმოხილვა ადგილობრივ გაზეთში. ნახეთ [სტატიის მაგალითი](%= resolve_url('/promote/op-ed') %), რომელიც ხსნის კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის მიზნების.
+6. **მოამზადეთ სტატია**. გამოაქვეყნეთ მიმოხილვა ადგილობრივ გაზეთში. ნახეთ [სტატიის მაგალითი](%= resolve_url('/promote/op-ed') %), რომელიც ხსნის კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის მიზნებს.
 
-7. **გაავრცელეთ ინფორმაცია.** [გააზიარეთ კოდის ერთი საათის ვიდეო Facebook-ზე](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) და [დაუჭირეთ ღონისძიებას მხარი Twitter-ზე](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). გააზიარეთ ღონისძიების სურათები და ვიდეობი. გამოიყენეთ ჰეშთეგი **#HourOfCode** - ასე Code.org(@code.org) შეძლებს ნახოს თქვენი ინიციატივა და მხარი დაუჭიროს მას. შეგიძლიათ ამ სამაგალითო ტვიტების გამოყენება:
+7. **გაავრცელეთ ინფორმაცია.** [გააზიარეთ კოდის ერთი საათის ვიდეო Facebook-ზე](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) და [დაუჭირეთ ღონისძიებას მხარი Twitter-ზე](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). გააზიარეთ ღონისძიების სურათები და ვიდეოები. გამოიყენეთ ჰეშთეგი **#HourOfCode** - ასე Code.org(@code.org) შეძლებს, ნახოს თქვენი ინიციატივა და მხარი დაუჭიროს მას. შეგიძლიათ ამ სამაგალითო ტვიტების გამოყენება:
     
     - თითოეულ მოსწავლეს, ბიჭსა თუ გოგოს, უნდა ჰქონდეს კომპიუტერული მეცნიერების შესწავლის შანსი. შემოგვიერთდით ერთი #HourOfCode <% if @country != 'us' %>-ის დაწყებაში [https://hourofcode.com/<%= @country %>](%= resolve_url('/') %) <% else %> [https://hourofcode.com](%= resolve_url('/') %) <% end %>
     - დღეს სიამაყით ვუერთდებით კოდის ერთი საათის მოძრაობას. მიიღებთ მონაწილეობას? #HourOfCode <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](%= resolve_url('/') %) <% else %> [https://hourofcode.com](%= resolve_url('/') %) <% end %>   

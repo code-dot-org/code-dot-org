@@ -1,7 +1,7 @@
 ---
-title: '<%= hoc_s(:title_how_to_companies) %>'
-layout: wide
-nav: how_to_nav
+title: '<%= hoc_s(:titlu_cum_sa_companii) %>'
+layout: larg
+nav: cum_sa_navighezi
 ---
 <%= view :signup_button %>
 
@@ -74,7 +74,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 **Directionati participanţii catre activitate**
 
 - Scrieți link-ul lectiei pe tablă. Găsiți link-ul scris în secțiunea [informații pentru lectia selectata](%= resolve_url('/learn') %) sub numărul de participanți.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Pentru studentii mai tineri, incarca pagina de activitate inainte sau salveaza-l ca pe un semn de carte.
 
 **Atunci când participanţii întâmpina dificultăţi este bine să se răspundă:**
 

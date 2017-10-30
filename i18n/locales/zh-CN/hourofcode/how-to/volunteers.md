@@ -23,7 +23,7 @@ nav: how_to_nav
 
 ## 你将怎样被选中
 
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
+- 老师们将会在我们的[志愿者地图](/volunteer/local)上寻找志愿者。
 - 老师们将查阅你在地图上的资料，所以尽可能地完整填写你的资料来增加被老师们选择的可能性。
 - 老师将会通过这种形式联系你 (你的电子邮件地址将不会被透露给老师)。 
   - 如果你收到太多老师的请求，你总是可以通过单击老师发来的电子邮件底部的链接来编辑的信息或者取消订阅。 
@@ -62,10 +62,10 @@ nav: how_to_nav
     </tbody> </table> 
     ### **课程结束后**
     
-    - Share your photos and stories with Code.org at giving@code.org.
-    - Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
-    - Share about your experience on social media #HourOfCode! See below for tips. 
-    - If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
+    - 通过@code.org和Code.org分享你的照片和故事。
+    - 记得在你公司的志愿登记入口输入你的志愿时长。
+    - 在社交网站#Hourofcode上分享你的经历吧！往下看以获取小贴士。 
+    - 如果你在活动中拍摄照片或视频，并希望将你的故事发布在社交媒体，**尤其是有关于学生们的**，确保你已经得到了老师或家长的允许。
     ## 在编程一小时中做志愿者服务的常见问题
     
     ### **我还没有被老师联系过。我如何继续志愿？**
@@ -74,7 +74,7 @@ nav: how_to_nav
     
     ### **教室访问大约持续多长时间？**
     
-    An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+    面对面课堂访问通常为60-90分钟，而网络课堂通常为20-30分钟。
     
     ### **编程一小时教程适合哪个年龄层？**
     
