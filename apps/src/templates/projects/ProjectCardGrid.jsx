@@ -136,7 +136,7 @@ const ProjectCardGrid = React.createClass({
             {this.state.showApp === 'playlab' &&
               <ProjectAppTypeArea
                 labKey="playlab"
-                labName={showMoreProjects ? i18n.projectGroupPlaylabAllProjects() : i18n.projectTypeAllProjectsPlaylab()}
+                labName={i18n.projectGroupPlaylabAllProjects()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.playlab}
                 numProjectsToShow={numProjects}
