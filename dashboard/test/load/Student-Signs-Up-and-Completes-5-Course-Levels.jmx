@@ -25,7 +25,7 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__property(servername,serverName, staging-studio.code.org)}</stringProp>
+        <stringProp name="HTTPSampler.domain">${__property(servername,serverName, dashboard-adhoc-feature-mode-manager.cdn-code.org)}</stringProp>
         <stringProp name="HTTPSampler.port"></stringProp>
         <stringProp name="HTTPSampler.protocol">${__property(protocol,protocol, https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
@@ -663,8 +663,28 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
+            <stringProp name="TestPlan.comments">Get JSON data from script tag data-appoptions attribute to retrieve dynamic information for subsequent milestone post such as script_level_id and level_id</stringProp>
+            <stringProp name="HtmlExtractor.refname">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="HtmlExtractor.expr">body &gt; script[data-appoptions]</stringProp>
+            <stringProp name="HtmlExtractor.attribute">data-appoptions</stringProp>
+            <stringProp name="HtmlExtractor.default">{}</stringProp>
+            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+            <stringProp name="HtmlExtractor.match_number">1</stringProp>
+            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+          </HtmlExtractor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get next milestone post URL" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">milestoneURL</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">dialog.callback</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">milestoneURLNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/103476/6672" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/:script_level_id/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="app" elementType="HTTPArgument">
@@ -708,7 +728,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">milestone/${userId}/103476/6672</stringProp>
+          <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
