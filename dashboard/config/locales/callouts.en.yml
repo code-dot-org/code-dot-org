@@ -451,8 +451,7 @@ en:
       MC_HOC_2017_01_Cole_callout:
         MC_HOC_2017_01_Cole_2: Use the arrow keys or click here to start moving the player.
       MC_HOC_2017_01_Kiki_callout: {}
-      MC_HOC_2017_02_Cole_callout:
-        MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for the Agent to help get you through the levels.
+      MC_HOC_2017_02_Cole_callout: {}
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for the Agent to help get you through the levels.
       MC_HOC_2017_03_Cole_callout:
@@ -461,6 +460,8 @@ en:
         MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to repeat it over and over again!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit them!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MC_HOC_2017_08_Will_callout:
@@ -568,6 +569,8 @@ en:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
       SG Add Subgoals practice_callout: {}
+      SG U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
       SG U3L2 Using Simple Commands part 1_callout: {}
       SG U3L2 Using Simple Commands_callout: {}
       SG U3L2_Add-subgoals_callout: {}
@@ -603,6 +606,8 @@ en:
       U3 Variables make a square_callout: {}
       U3L05_3x3GridEfficiencyChallenge_callout: {}
       U3L05_draw3x3GridEfficiently_callout: {}
+      U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
       U3L2 Using Simple Commands (no tooltips)_callout: {}
       U3L2 Using Simple Commands_callout: {}
       U3L2_Turtle3by3Grid_callout: {}
@@ -680,6 +685,18 @@ en:
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: {}
+      courseA_collector_preLoops1_callout:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
+      courseA_collector_preLoops2_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops3_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops4_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops5_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops6_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_forVideoTest_artist_callout: {}
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
