@@ -28,40 +28,38 @@ social:
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-Usted está haciendo posible que los estudiantes de todo el mundo aprendan una Hora del Código que puede *cambiar el resto de sus vidas*, durante <%= campaign_date('full') %>. Estaremos en contacto sobre nuevos tutoriales y otras noticias interesantes. ¿Qué puedes hacer ahora?
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+  
+[<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-## 1. Corre la voz
+  
+**Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-Se acaba de unir al movimiento de la Hora del Código. Díselo a tus amigos con **#HourOfCode**!
+## 1. Spread the word in your school and community
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>   
+Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. No tienes que estar en la escuela para aprender nuevas habilidades. Invite a local politician or policy maker to visit your school for the Hour of Code. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
+
+Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](<%= resolve_url('/promote/resources') %>) para su propio evento.
 
 ## 2. Encuentre un voluntario local para ayudarte con tu evento.
 
-[Buscar en nuestro mapa del voluntariado](<%= resolve_url('https://code.org/volunteer/local') %>) para que los voluntarios puedan visitar tu aula o hagan un videochat remotamente para inspirar a tus estudiantes acerca de la amplitud de posibilidades con las Ciencias de la Computación.
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Pídale a toda su escuela que ofrezca una Hora del Código
+## 3. Plan your Hour of Code
 
-[Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a su director y desafíe a cada clase de su escuela para que se inscriba.
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
-## 4. Pídele a tu compañía que se involucre
+# Go beyond an Hour of Code
 
-[Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a su gerente o director general de la compañía.
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-## 5. Promociona la Hora de Código en tu comunidad
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-[Recluta a un grupo local](<%= resolve_url('/promote/resources#sample-emails') %>): niños /niñas del club scouts, iglesia, Universidad, grupo de veteranos, sindicato o incluso algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](<%= resolve_url('/promote/resources') %>) para su propio evento.
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## 5. Pídale a un funcionario electo local que apoye la Hora de Código
-
-[Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a sus representantes locales, Concejo Municipal o junta escolar e invítelos a visitar su escuela para la Hora de Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
-
-## 7. Planifica tu Hora del Código
-
-Elija una actividad de la Hora del Código y [revise esta guía](<%= resolve_url('/how-to') %>).
-
-## 8. Go beyond an Hour of Code
-
-Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

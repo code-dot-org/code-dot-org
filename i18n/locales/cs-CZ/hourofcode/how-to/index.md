@@ -10,7 +10,8 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
@@ -27,13 +28,13 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Propagujte vaši Hodinu kódu
+## 3) Propagujte Vaši Hodinu kódu
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
 ## 4) Plánuj potřeby technologie - počítače nejsou povinné
 
-The best Hour of Code experience includes Internet-connected computers. Ale **nepotřebujete** počítač pro každé dítě a Hodinu Kódu můžete provozovat i bez počítače.
+Nejlepší zkušenost s Hodinou kódu je na počítačích připojených na Internet. Ale **nepotřebujete** počítač pro každé dítě a Hodinu Kódu můžete provozovat i bez počítače.
 
 **Plánujte dopředu!** Udělejte následující kroky než akce započne:
 
@@ -71,7 +72,7 @@ The best Hour of Code experience includes Internet-connected computers. Ale **ne
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+  * Napište na tabuli odkaz na výukový kurz. Odkaz najdete v seznamu na [informace pro vybraný výukový kurz](%= resolve_url('https://code. org/learn') %) pod počtem účastníků.
 
 [col-33]
 

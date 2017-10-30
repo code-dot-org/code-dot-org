@@ -1,42 +1,45 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_events) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # როგორ გავუწიოთ ორგანიზება კოდის ერთ საათს
 
-## 1) მოემზადეთ ღონისძიებისთვის
+## 1. Prepare for your event
 
-  * განსაზღვრეთ ადგილი, თარიღი და დრო
-  * გაუგზავნეთ [წერილი](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) და მოიწვიეთ სპიკერად ქალაქის მერი, მთავრობის სხვა წარმომადგენელი ან გავლენიანი ბიზნესმენი.
-  * დაპატიჟეთ მედია/პრესა. მაგალითად ადგილობრივი რადიო, გაზეთი, ბლოგერები. ნახეთ ჩვენი [დანართი პრესისთვის](%= resolve_url('/promote/press-kit') %).
+- Determine a venue, date, and time.
+- გაუგზავნეთ [წერილი](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) და მოიწვიეთ სპიკერად ქალაქის მერი, მთავრობის სხვა წარმომადგენელი ან გავლენიანი ბიზნესმენი.
+- დაპატიჟეთ მედია/პრესა. მაგალითად ადგილობრივი რადიო, გაზეთი, ბლოგერები. ნახეთ ჩვენი [დანართი პრესისთვის](%= resolve_url('/promote/press-kit') %).
 
-## 2) ღონისძიების დროს
+## 2. During your event
 
-  * დაიწყეთ ღონისძიება ჩვენი [შთამაგონებელი ვიდეოებიდან](%= resolve_url('/promote/resources#videos') %) რომელიმეთი.
-  * გააცანით საზოგადოებას კომპიუტერული მეცნიერების მნიშვნელობა, ამ [სტატისტიკისა და ინფოგრაფიკის](%= resolve_url('/promote/stats') %) გამოყენებით.   
+- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
+- გააცანით საზოგადოებას კომპიუტერული მეცნიერების მნიშვნელობა, ამ [სტატისტიკისა და ინფოგრაფიკის](%= resolve_url('/promote/stats') %) გამოყენებით.   
       
     
-  * სხვა იდეები: 
-      * მოიწვიეთ ადგილობრივი ინდუსტრიის ლიდერი და ასაუბრეთ ინფორმატიკის მნიშვნელობაზე მის სფეროში
-      * მოიწვიეთ პოლიტიკოსი და მიეცით მოსწავლეებს შესაძლებლობა, ასწავლონ მას პროგრამირება
-      * მოსწავლეების ჯგუფს შეუძლია ოფლაინ-აქტივობის დემონსტრირება
-      * მოსწავლეებს შეუძლიათ ასწავლონ პროგრამირება დირექტორს ან მასწავლებლების ჯგუფს
-      * თუ თქვენს სკოლაში ინფორმატიკას უკვე ასწავლიან, გამოფინეთ მოსწავლეების პროექტები
+- სხვა იდეები: 
+    - Invite a local industry leader to discuss his or her work involving computer science.
+    - Invite a local politician and have students teach him or her how to code.
+    - Have a group of students demonstrate an unplugged activity.
+    - Have a group of students teach the principal or a group of teachers how to code.
+    - If your school already teaches computer science, have students demo projects.
 
-## 3) გაგვიზიარეთ შედეგები
+## 3. Share how it went
 
-  * გააზიარეთ ღონისძიების სურათები Facebook-სა და Twitter-ზე. 
-  * გამოიყენეთ ჰეშთეგი **#HourofCode**
+- გააზიარეთ ღონისძიების სურათები Facebook-სა და Twitter-ზე. 
+- Use the hashtag **#HourOfCode**
+
+## Host a Family Code Night with the Hour of Code and invite parents to participate
+
+Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## ღონისძიების გეგმის მაგალითი
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Date:** Dec. 5th (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -46,13 +49,13 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## ღონისძიების დღის წესრიგი
 
-| დრო           | მოქმედება                                                                                                                                                                        |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | დაიწყეთ ჩვენი ერთ-ერთი [შთამაგონებელი ვიდეოთი](%= resolve_url('/promote/resources#videos') %)                                                                                    |
-| 10:05 - 10:15 | დირექტორი შესავალში მიმოხილვას აკეთებს, რომელიც კომპიუტერული მეცნიერების აუცილებლობას უსვამს ხაზს. გამოიყენეთ ეს [სტატისტიკა და ინფოგრაფიკა](%= resolve_url('/promote/stats') %) |
-| 10:15 - 10:30 | სპეციალურად მოწვეული სტუმარი ყვება თავის გამოცდილებაზე და იმაზე, თუ რა ადგილი უკავია ტექნოლოგიასა და ინფორმატიკას ყოველდღიურ ცხოვრებაში.                                         |
-| 10:30 - 10:40 | მოსწავლეები ატარებენ კოდის ერთი საათის პრეზენტაციას. მინიშნება: მათ შეუძლიათ ასწავლონ პროგრამირება სკოლის დირექტორს, პოლიტიკოსს ან სხვა მოსწავლეებს.                             |
-| 10:40 - 11:00 | მოსწავლეები ყვებიან იმაზე, როგორ შეიძლება ვასწავლოთ ინფორმატიკა კომპიუტერების გარეშე და აჩვენებენ სამაგალითო აქტივობას.                                                          |
-| 11:00 - 11:05 | მასწავლებელი-ორგანიზატორი ასრულებს საღამოს.                                                                                                                                      |
+| დრო           | მოქმედება                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 | დაიწყეთ ჩვენი ერთ-ერთი [შთამაგონებელი ვიდეოთი](%= resolve_url('/promote/resources#videos') %)                                                    |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %). |
+| 10:15 - 10:30 | სპეციალურად მოწვეული სტუმარი ყვება თავის გამოცდილებაზე და იმაზე, თუ რა ადგილი უკავია ტექნოლოგიასა და ინფორმატიკას ყოველდღიურ ცხოვრებაში.         |
+| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
+| 10:40 - 11:00 | მოსწავლეები ყვებიან იმაზე, როგორ შეიძლება ვასწავლოთ ინფორმატიკა კომპიუტერების გარეშე და აჩვენებენ სამაგალითო აქტივობას.                          |
+| 11:00 - 11:05 | მასწავლებელი-ორგანიზატორი ასრულებს საღამოს.                                                                                                      |
 
 <%= view :signup_button %>

@@ -1,27 +1,27 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_parents) %>'
+layout: szeroki
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Jak przeprowadzić Godzinę Kodowania ze swoim dzieckiem
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Ukończ Godzinę Kodowania w domu lub zaoferuj, że zorganizujesz ją w klasie swojego dziecka! Oto, jak to zrobić:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Obejrzyj ten filmik <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 2) Wybierz samouczek:
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Oferujemy różne zabawy, godzinne samouczki dla uczniów w każdym wieku, utworzone przez różnych partnerów. [ Wypróbuj je!](%= resolve_url('/learn') %)
+
+**Wszystkie samouczki Godziny Kodowania nie wymagają pomocy - umożliwiają Twojemu dziecku pracę w swoim tempie i na poziomie swoich umiejętności**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Plan your technology needs
+## 3) Zaplanuj swoje potrzeby technologiczne
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+Najlepsze doświadczenia z Godziną Kodowania zapewnią komputery z dostępem do Internetu. Ale Ty **nie** potrzebujesz komputera. Istnieje wiele aktywności, które są "unplugged", można je przeprowadzić bez jakiejkolwiek technologii.
 
 - Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 - **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
@@ -33,7 +33,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 **Pokaż inspirujący film:**
 
 - Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [Film inaugurujący Godzinę Kodowania w 2013 roku](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub <% if @country == 'uk' %> [film Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [film Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
 - [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -56,7 +56,7 @@ When you've chosen the tutorial you would like to do, you can bookmark the tutor
 It’s okay to respond:
 
 - "Nie wiem. Sprawdźmy to razem."
-- "Technologia nie zawsze działa na sposób, w jaki chcemy."
+- "Technologia nie zawsze działa w sposób, jaki chcemy."
 - "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
 
 ## 6) Celebrate

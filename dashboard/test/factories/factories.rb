@@ -746,10 +746,9 @@ FactoryGirl.define do
   end
 
   factory :channel_token do
-    transient {storage_user nil}
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
-    storage_id {storage_user.try(:id) || 2}
+    storage_id 2
   end
 end

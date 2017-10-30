@@ -12,7 +12,8 @@ nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
@@ -29,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Quảng bá lớp Một Giờ Lập Trình của bạn
+## 3) Quảng cáo Giờ Lập Trình của bạn
 
 Quảng bá lớp Một Giờ Lập Trình của bạn [ với các công cụ này ](<%= resolve_url('/promote') %>) và khuyến khích những người khác mở chương trình của riêng họ.
 
@@ -69,11 +70,11 @@ Trải nghiệm Một Giờ Lập Trình tốt nhất cần có máy tính đư�
 
 ** Muốn có thêm ý tưởng giảng dạy?** Xem thử [ bài giảng thực tiễn hay nhất ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) từ những người đào tạo có kinh nghiệm.
 
-## 6) Lập Trình!
+## 6) Mã nguồn!
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+  * Viết địa chỉ bài hướng dẫn lên bảng. Tìm địa chỉ được liệt kê trên [ thông tin cho bài hướng dẫn đã lựa chọn ](<%= resolve_url('https://code. org/learn') %>) theo số lượng người tham gia.
 
 [col-33]
 
@@ -112,7 +113,7 @@ Trải nghiệm Một Giờ Lập Trình tốt nhất cần có máy tính đư�
 
 [/col-33]
 
-  * [In giấy chứng nhận ](<%= resolve_url('https://code.org/certificates') %>) cho học sinh của bạn.
+  * [In giấy chứng nhận](<%= resolve_url('https://code.org/certificates') %>) cho học sinh của bạn.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
   * Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
@@ -127,7 +128,7 @@ Trải nghiệm Một Giờ Lập Trình tốt nhất cần có máy tính đư�
   &nbsp;
 </p>
 
-## Tài liệu Một Giờ Lập Trình khác cho người đào tạo:
+## Tài liệu Giờ Lập Trình khác cho người đào tạo:
 
   * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
