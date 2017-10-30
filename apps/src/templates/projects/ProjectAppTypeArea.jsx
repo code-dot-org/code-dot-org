@@ -55,6 +55,9 @@ const ProjectAppTypeArea = React.createClass({
     // Only show one project type.
     isDetailView: PropTypes.bool.isRequired,
 
+    // Hide projects that don't have thumbnails
+    hideWithoutThumbnails: PropTypes.bool,
+
     // from redux state
     hasOlderProjects: PropTypes.bool.isRequired,
 
@@ -84,11 +87,13 @@ const ProjectAppTypeArea = React.createClass({
   },
 
   renderProjectCardList(projectList, max) {
+    const filteredList = this.props.hideWithoutThumbnails ?
+      projectList.filter(project => project.projectData.thumbnailUrl !== null) : projectList;
     const { galleryType } = this.props;
     return  (
       <div style={styles.cardGrid}>
         {
-          projectList && projectList.slice(0,max).map(project => (
+          filteredList && filteredList.slice(0,max).map(project => (
             <div key={project.projectData.channel} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
