@@ -1,16 +1,16 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_parents) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Làm thế nào để hoàn thành một Giờ Mã hoá với con của bạn
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) Chọn bài hướng dẫn:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
@@ -69,7 +69,7 @@ Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn
 
 - Xem lại [ câu hỏi thường gặp (FAQ) của Một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**Tiếp sau Một Giờ Lập Trình sẽ là gì?**
+**Tiếp theo Hour of Code sẽ là gì?**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

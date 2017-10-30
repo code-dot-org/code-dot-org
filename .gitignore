@@ -23,6 +23,8 @@ npm-debug.log
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log
+/apps/src/generated/*
+!/apps/src/generated/README.md
 /apps/src/util/color.js
 /apps/src/util/sharedConstants.js
 /apps/src/applab/sharedApplabBlocks.js

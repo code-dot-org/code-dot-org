@@ -2,59 +2,74 @@
  * Table displaying a summary of application statuses
  */
 import React, {PropTypes} from 'react';
-import {Table} from 'react-bootstrap';
+import {Table, Button} from 'react-bootstrap';
 import color from '@cdo/apps/util/color';
+
+const styles = {
+  table: {
+    paddingLeft: '15px',
+    paddingRight: '15px'
+  },
+  tableWrapper: {
+    width: '33.3%',
+    paddingBottom: '30px'
+  }
+};
 
 export default class SummaryTable extends React.Component {
   static propTypes = {
-    caption: PropTypes.string.isRequired
+    caption: PropTypes.string.isRequired,
+    data: PropTypes.object,
+    path: PropTypes.string.isRequired
   }
+
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
+  tableRow = (label, bgColor, data) =>  {
+    const status = label.toLowerCase();
+    const total = data[status];
+
+    return (
+      <tr>
+        <td style={{backgroundColor: bgColor}}>{label}</td>
+        <td>{total}</td>
+      </tr>
+    );
+  };
+
+  handleViewClick = (event) => {
+    event.preventDefault();
+    this.context.router.push(`/${this.props.path}`);
+  };
 
   render() {
     return (
-      <Table striped condensed>
-        <caption>{this.props.caption}</caption>
-        <thead>
-          <tr>
-            <th>Status</th>
-            <th>Locked</th>
-            <th>Unlocked</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style={{backgroundColor: color.level_perfect}}>Accepted</td>
-            <td>accepted && locked</td>
-            <td>accepted && unlocked</td>
-            <td>accepted total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.level_passed}}>Waitlisted</td>
-            <td>waitlisted && locked</td>
-            <td>waitlisted && unlocked</td>
-            <td>waitlisted total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.orange}}>Pending</td>
-            <td>pending && locked</td>
-            <td>pending && unlocked</td>
-            <td>pending total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.red}}>Declined</td>
-            <td>declined && locked</td>
-            <td>declined && unlocked</td>
-            <td>declined total</td>
-          </tr>
-          <tr>
-            <td style={{backgroundColor: color.charcoal}}>Unreviewed</td>
-            <td>unreviewed && locked</td>
-            <td>unreviewed && unlocked</td>
-            <td>unreviewed total</td>
-          </tr>
-        </tbody>
-      </Table>
+      <div className="col-xs-4" style={styles.tableWrapper}>
+        <Table striped condensed style={styles.table}>
+          <caption>{this.props.caption}</caption>
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.tableRow('Accepted', color.level_perfect, this.props.data)}
+            {this.tableRow('Waitlisted', color.level_passed, this.props.data)}
+            {this.tableRow('Pending', color.orange, this.props.data)}
+            {this.tableRow('Declined', color.red, this.props.data)}
+            {this.tableRow('Unreviewed', color.charcoal, this.props.data)}
+          </tbody>
+        </Table>
+        <Button
+          href={this.context.router.createHref(`/${this.props.path}`)}
+          onClick={this.handleViewClick}
+        >
+          View all applications
+        </Button>
+      </div>
     );
   }
 }

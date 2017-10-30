@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 10-28-hoc-engineers hoc-2015-oct-26-mailing/hoc-engineers.csv

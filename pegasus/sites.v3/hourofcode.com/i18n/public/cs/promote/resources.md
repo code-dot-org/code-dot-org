@@ -1,15 +1,11 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promujte Hodinu kódu
 
@@ -41,13 +37,13 @@ nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. Jakýkoliv odkaz na "Hodinu kódu" by se měl používat způsobem, který nenaznačuje, že je to vaše vlastní značka, ale spíše odkazuje na Hodinu kódu jako základní hnutí. Dobrý příklad: "Účastněte se Hodiny kódu v ACMECorp.com". Špatný příklad: " Vyzkoušejte Hodina Kódu od ACME korporace".
-  2. Použijte "TM" v místech kde nejvíce jde vidět "Hodina kódu", jak na vaší webové stránce, tak v popisu aplikace.
-  3. Dodržte styl na stránce (nebo zápatí), včetně odkazů na webové stránky CSEdWeek a Code.org s následujícím obsahem:
+1. Jakýkoliv odkaz na "Hodinu kódu" by se měl používat způsobem, který nenaznačuje, že je to vaše vlastní značka, ale spíše odkazuje na Hodinu kódu jako základní hnutí. Dobrý příklad: "Účastněte se Hodiny kódu v ACMECorp.com". Špatný příklad: " Vyzkoušejte Hodina Kódu od ACME korporace".
+2. Použijte "TM" v místech kde nejvíce jde vidět "Hodina kódu", jak na vaší webové stránce, tak v popisu aplikace.
+3. Dodržte styl na stránce (nebo zápatí), včetně odkazů na webové stránky CSEdWeek a Code.org s následujícím obsahem:
     
     *“'Hour of Code™' (hodina kódu) je národní iniciativa utvořená z Computer Science Education Week\[csedweek.org\] (Týden informatiky) a Code.org[code.org] za účelem úvodu do jedné hodiny informatiky a programování pro miliony studentů.”*
 
-  4. Zákaz používání "Hodina kódu" v názvech aplikace.
+4. Zákaz používání "Hodina kódu" v názvech aplikace.
 
 <a id="stickers"></a>
 

@@ -111,6 +111,8 @@ export function getResponsiveValue(values) {
       return `${value}%`;
     } else if (typeof(value) === "string") {
       return value;
+    } else if (typeof(value) === "object") {
+      return value;
     }
   }
 }

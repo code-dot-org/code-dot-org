@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019204123) do
+ActiveRecord::Schema.define(version: 20171027223742) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -66,9 +66,7 @@ ActiveRecord::Schema.define(version: 20171019204123) do
   end
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "channel"
     t.integer  "storage_app_id", null: false
-    t.integer  "user_id"
     t.integer  "level_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -76,7 +74,6 @@ ActiveRecord::Schema.define(version: 20171019204123) do
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
     t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true, using: :btree
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
-    t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
 
   create_table "cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -842,18 +839,20 @@ ActiveRecord::Schema.define(version: 20171019204123) do
   end
 
   create_table "schools", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "id",                 limit: 12, null: false, comment: "NCES public school ID"
+    t.string   "id",                 limit: 12,                         null: false, comment: "NCES public school ID"
     t.integer  "school_district_id"
-    t.string   "name",                          null: false
-    t.string   "city",                          null: false
-    t.string   "state",                         null: false
-    t.string   "zip",                           null: false
-    t.string   "school_type",                   null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.string   "address_line1",      limit: 50,              comment: "Location address, street 1"
-    t.string   "address_line2",      limit: 30,              comment: "Location address, street 2"
-    t.string   "address_line3",      limit: 30,              comment: "Location address, street 3"
+    t.string   "name",                                                  null: false
+    t.string   "city",                                                  null: false
+    t.string   "state",                                                 null: false
+    t.string   "zip",                                                   null: false
+    t.string   "school_type",                                           null: false
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
+    t.string   "address_line1",      limit: 50,                                      comment: "Location address, street 1"
+    t.string   "address_line2",      limit: 30,                                      comment: "Location address, street 2"
+    t.string   "address_line3",      limit: 30,                                      comment: "Location address, street 3"
+    t.decimal  "latitude",                      precision: 8, scale: 6,              comment: "Location latitude"
+    t.decimal  "longitude",                     precision: 9, scale: 6,              comment: "Location longitude"
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree

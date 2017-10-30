@@ -104,17 +104,18 @@
       }
     ],
     "instructions_important": "false",
-    "teacher_markdown": "Validation note: we don't check to see if the student actually drew a bullseye.  We checks that the student: \r\n* set the `penColor` three times\r\n* made 3 dots",
+    "teacher_markdown": "Validation note: we don't check to see if the student actually drew a bullseye.  We check that the student: \r\n* set the `penColor` three times\r\n* made 3 dots",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:34:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:34:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-24 15:45:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

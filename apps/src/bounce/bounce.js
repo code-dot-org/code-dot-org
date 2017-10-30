@@ -26,6 +26,7 @@ var SquareType = tiles.SquareType;
 import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
+import experiments from '../util/experiments';
 
 /**
  * Create a namespace for the application.
@@ -1015,7 +1016,8 @@ var displayFeedback = function () {
       appStrings: {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
         sharingText: bounceMsg.shareGame()
-      }
+      },
+      saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
     });
   }
 };

@@ -4,10 +4,25 @@ theme: responsive
 ---
 # CS Principles Professional Learning Program
 
-<iframe style="max-width: 100%" width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
-<br />
+<div class="col-50" style="padding-right: 20px">
 
-The [Code.org Computer Science Principles Professional Learning Program](/files/PLProgramsOverview_1-pager.pdf) is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. 
+<%=view :display_video_thumbnail, id: "professional-learning_csp", video_code: "DMr1iFYacGQ", play_button: 'center' %>
+
+[/col-50]
+
+[col-50]
+
+Our CS Principles Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
+
+The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp) Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. 
+
+**Applications for the 2018-19 [CS Principles Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
+
+<a href="https://goo.gl/forms/jBWAHg5jvEV8lSV52"><button>Tell me when applications open!</button>
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
@@ -25,7 +40,7 @@ If accepted into the Code.org CS Principles Professional Learning Program, you w
 ## <a name="components"></a>How does it work?
 The program has two components: 
 
-- **Code.org TeacherCon (Summer Workshop)** - An intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
+- **5-day Summer Workshop** - An intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
 - **Continuing Professional Development** - A menu of online and local in-person professional development options from which educators can build a customized personal learning pathway. This phase of the program is blended, with ongoing in-person meetings as well as online activities.
   - The in-person meetings are run by local facilitators. They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continuing to build pedagogical strategies.
   - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further exploring the curriculum.
@@ -60,6 +75,14 @@ The CS Principles Professional Learning Program is available in regions served b
 
 ## <a name="apply"></a>How to apply?
 
-**Applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+
+## <a name="facilitate"></a>Become a CS Principles Facilitator
+
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum. 
+
+Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
+
+<a href="/educate/professional-learning/facilitator"><button>Learn more</button>

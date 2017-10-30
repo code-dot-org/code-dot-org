@@ -21,25 +21,26 @@ require 'googleauth'
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
 TABLE_ID = CDO.pledge_map_table_id.freeze
-CURRENT_CENSUS_SIGNUP = "Census2017".freeze
+CENSUS_FORM_KINDS = "'Census2017','HocCensus2017'".freeze
 
 file = Tempfile.new(['data', '.csv'])
 begin
   CSV.open(file.path, 'w') do |csv|
-    DB_READONLY[:forms].where(kind: CURRENT_CENSUS_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
+    DB_READONLY[:forms].where("kind in (#{CENSUS_FORM_KINDS})").paged_each(rows_per_fetch: 10_000) do |form|
       data = JSON.parse(form[:data])
 
       # Was a pledge made?
-      pledged = data["pledge_b"] == "on"
+      pledged = ["on", "1"].any? {|s| s.casecmp(data["pledge_b"].to_s).zero?}
 
       # Does the school teach some kind of CS?
-      teaches_cs = ["Some", "All"].include?(data["ten_hours_s"]) || ["Some", "All"].include?(data["twenty_hours_s"])
+      teaches_cs = ["some", "all"].any? {|s| s.casecmp(data["ten_hours_s"].to_s).zero?} ||
+          ["some", "all"].any? {|s| s.casecmp(data["twenty_hours_s"].to_s).zero?}
 
       # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
       next unless pledged || teaches_cs
 
       # Use the school ID in the form.
-      school_id = data["school_id_s"]
+      school_id = data["school_id_s"] || data["nces_school_s"]
 
       # Retrieve the ZIP and city for this school district from the dashboard's database.
       school = DASHBOARD_DB[:schools].where(id: school_id).first

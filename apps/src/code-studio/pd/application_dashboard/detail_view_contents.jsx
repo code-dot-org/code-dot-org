@@ -1,20 +1,12 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl} from 'react-bootstrap';
-import {Facilitator1819Program} from './detail_view_facilitator_specific_components';
+import Facilitator1819Questions from './detail_view_facilitator_specific_components';
 import $ from 'jquery';
+import DetailViewResponse from './detail_view_response';
 
-const renderLineItem = (key, value) => {
-  return value && (
-      <div>
-      <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
-        {key}:
-      </span>
-        {value}
-      </div>
-    );
-};
+const STATUSES = ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Withdrawn', 'Unreviewed'];
 
-class DetailViewContents extends React.Component {
+export default class DetailViewContents extends React.Component {
   static propTypes = {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
@@ -24,18 +16,7 @@ class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      formData: PropTypes.shape({
-        firstName: PropTypes.string.isRequired,
-        lastName: PropTypes.string.isRequired,
-        title: PropTypes.string,
-        phone: PropTypes.string,
-        preferredFirstName: PropTypes.string,
-        accountEmail: PropTypes.string,
-        alternateEmail: PropTypes.string,
-        program: PropTypes.string.isRequired,
-        planOnTeaching: PropTypes.arrayOf(PropTypes.string.isRequired),
-        abilityToMeetRequirements: PropTypes.string.isRequired,
-      })
+      formData: PropTypes.object
     }),
   }
 
@@ -118,15 +99,13 @@ class DetailViewContents extends React.Component {
             value={this.state.status}
             onChange={this.handleStatusChange}
           >
-            <option value="unreviewed">
-              Unreviewed
-            </option>
-            <option value="accepted">
-              Accepted
-            </option>
-            <option value="declined">
-              Declined
-            </option>
+            {
+              STATUSES.map((status, i) => (
+                <option value={status} key={i}>
+                  {status}
+                </option>
+              ))
+            }
           </FormControl>
           {
             this.state.editing ? [(
@@ -149,42 +128,42 @@ class DetailViewContents extends React.Component {
     );
   }
 
-  renderAboutSection = () => {
+  renderTopSection = () => {
     return (
-      <div>
-        <h3>
-          About You
-        </h3>
-        {renderLineItem('Title', this.props.applicationData.formData.title)}
-        {renderLineItem('Preferred First Name', this.props.applicationData.formData.preferredFirstName)}
-        {renderLineItem('Account Email', this.props.applicationData.email)}
-        {renderLineItem('Alternate Email', this.props.applicationData.formData.alternateEmail)}
-        {renderLineItem('Phone', this.props.applicationData.formData.phone)}
-        <br/>
-        {renderLineItem('District', this.props.applicationData.district_name)}
-        {renderLineItem('School', this.props.applicationData.school_name)}
-        {renderLineItem('Course', this.props.applicationData.formData.program)}
-        {renderLineItem('Regional Partner', this.props.applicationData.regional_partner_name)}
-      </div>
-    );
-  }
-
-  renderChooseYourProgram = () => {
-    return (
-      <div>
-        <h3>
-          Choose Your Program
-        </h3>
-        {renderLineItem('Program', this.props.applicationData.formData.program)}
-        <Facilitator1819Program
-          planToTeachThisYear1819={this.props.applicationData.formData.planOnTeaching}
-          abilityToMeetRequirements={this.props.applicationData.formData.abilityToMeetRequirements}
+      <div id="TopSection">
+        <DetailViewResponse
+          question="Email"
+          answer={this.props.applicationData.email}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="Regional Partner"
+          answer={this.props.applicationData.regional_partner_name}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="School Name"
+          answer={this.props.applicationData.school_name}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="District Name"
+          answer={this.props.applicationData.district_name}
+          layout="lineItem"
         />
       </div>
     );
   }
 
-  renderNotes() {
+  renderQuestions = () => {
+    return (
+      <Facilitator1819Questions
+        formResponses={this.props.applicationData.formData}
+      />
+    );
+  }
+
+  renderNotes = () => {
     return (
       <div>
         <h4>
@@ -205,12 +184,10 @@ class DetailViewContents extends React.Component {
     return (
       <div>
         {this.renderHeader()}
-        {this.renderAboutSection()}
-        {this.renderChooseYourProgram()}
+        {this.renderTopSection()}
+        {this.renderQuestions()}
         {this.renderNotes()}
       </div>
     );
   }
 }
-
-export {renderLineItem, DetailViewContents};

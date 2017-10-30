@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+#
+# Script to update the last_seen_school_info_interstitial in users.
+#
+
+require_relative '../../../dashboard/config/environment'
+require 'optparse'
+
+CDO.log = Logger.new(STDOUT)
+ActiveRecord::Base.record_timestamps = false
+
+options = {interstitial_days: nil, csv_file: '/tmp/fix_bad_school_info_in_users.201710112304.csv'}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-d', '--interstitial-days DAYS', 'Number of days before showing the interstitial dialog.') do |d|
+    options[:interstitial_days] = Integer(d)
+  end
+  opts.on('-f', '--csv-file FILE', 'CSV file to load the user IDs.') do |f|
+    options[:csv_file] = f
+  end
+  opts.on('-h', '--help', 'Prints this help') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Called with options: #{options}"
+
+counts = {records: 0, updates: 0}
+
+CSV.read(options[:csv_file], {headers: true}).each do |row|
+  user = User.find_by_id(row['id'])
+  next if user.nil? || user.last_seen_school_info_interstitial < DateTime.now
+
+  unless options[:interstitial_days].nil?
+    user.last_seen_school_info_interstitial = DateTime.now + options[:interstitial_days]
+    user.save!(validate: false)
+    counts[:updates] += 1
+  end
+
+  counts[:records] += 1
+end
+
+CDO.log.info "Updated #{counts[:updates]} of #{counts[:records]} user(s)."

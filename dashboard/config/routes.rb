@@ -21,6 +21,8 @@ Dashboard::Application.routes.draw do
 
   get "/home", to: "home#home"
 
+  get "/congrats", to: "congrats#index"
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -395,7 +397,11 @@ Dashboard::Application.routes.draw do
         post :facilitator, to: 'facilitator_applications#create'
       end
 
-      resources :applications, controller: 'applications', only: [:index, :show, :update]
+      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+        collection do
+          get :quick_view
+        end
+      end
     end
   end
 

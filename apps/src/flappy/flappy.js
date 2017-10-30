@@ -22,6 +22,9 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
+import experiments from '../util/experiments';
+import placeholder from '../../static/flappy/placeholder.jpg';
+import {dataURIFromURI} from '../imageUtils';
 
 /**
  * Create a namespace for the application.
@@ -697,18 +700,22 @@ Flappy.runButtonClick = function () {
  */
 var displayFeedback = function () {
   if (!Flappy.waitingForReport) {
-    studioApp().displayFeedback({
-      app: 'flappy', //XXX
-      skin: skin.id,
-      feedbackType: Flappy.testResults,
-      response: Flappy.response,
-      level: level,
-      showingSharing: level.freePlay && level.shareable,
-      twitter: twitterOptions,
-      appStrings: {
-        reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
-        sharingText: flappyMsg.shareGame()
-      }
+    dataURIFromURI(placeholder).then(feedbackImageUri => {
+      studioApp().displayFeedback({
+        app: 'flappy', //XXX
+        skin: skin.id,
+        feedbackType: Flappy.testResults,
+        response: Flappy.response,
+        level: level,
+        showingSharing: level.freePlay && level.shareable,
+        twitter: twitterOptions,
+        appStrings: {
+          reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
+          sharingText: flappyMsg.shareGame()
+        },
+        saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+        feedbackImage: feedbackImageUri,
+      });
     });
   }
 };
@@ -800,21 +807,25 @@ Flappy.onPuzzleComplete = function () {
       TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  sendReport();
+};
+
+function sendReport() {
+  const xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const textBlocks = Blockly.Xml.domToText(xml);
 
   Flappy.waitingForReport = true;
 
   // Report result to server.
   studioApp().report({
-                     app: 'flappy',
-                     level: level.id,
-                     result: Flappy.result === ResultType.SUCCESS,
-                     testResult: Flappy.testResults,
-                     program: encodeURIComponent(textBlocks),
-                     onComplete: Flappy.onReportComplete
-                     });
-};
+    app: 'flappy',
+    level: level.id,
+    result: Flappy.result === ResultType.SUCCESS,
+    testResult: Flappy.testResults,
+    program: encodeURIComponent(textBlocks),
+    onComplete: Flappy.onReportComplete
+  });
+}
 
 /**
  * Display Avatar at the specified location

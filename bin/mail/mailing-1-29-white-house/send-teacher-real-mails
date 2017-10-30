@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# 276k contacts
-
-TEMPLATE_NAME=2016-1-30-CSforAll
-
-../send-to-mailing-list --start      0 --limit 100000 $TEMPLATE_NAME us-teacher.csv
-../send-to-mailing-list --start 100000 --limit 100000 $TEMPLATE_NAME us-teacher.csv
-../send-to-mailing-list --start 200000 --limit 100000 $TEMPLATE_NAME us-teacher.csv
