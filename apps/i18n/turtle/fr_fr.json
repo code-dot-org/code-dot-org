@@ -75,7 +75,7 @@
   "penUp": "prend le crayon",
   "reinfFeedbackMsg": "Voici ton dessin ! Continue à travailler sur ton dessin ou passe au prochain puzzle.",
   "setAlpha": "définis alpha",
-  "setCharacter": "set character to {character}",
+  "setCharacter": "configurer le personnage à {character}",
   "setColour": "définis la couleur",
   "setPattern": "définis le modèle",
   "setWidth": "définis la largeur",

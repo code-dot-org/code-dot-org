@@ -1,10 +1,10 @@
 {
-  "continue":"Jätka",
-  "nextLevel":"Palju õnne! See ülesanne on lahendatud.",
-  "no":"Ei",
-  "numBlocksNeeded":"Selle ülesande saab lahendada %1 pusletükiga.",
-  "reinfFeedbackMsg":"Te võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi mängu mängima.",
-  "share":"Jaga",
-  "shareGame":"Jaga oma mängu:",
-  "yes":"Jah"
+  "continue": "Jätka",
+  "nextLevel": "Palju õnne! See ülesanne on lahendatud.",
+  "no": "Ei",
+  "numBlocksNeeded": "Selle ülesande saab lahendada %1 pusletükiga.",
+  "reinfFeedbackMsg": "Te võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi mängu mängima.",
+  "share": "Jaga",
+  "shareGame": "Jaga oma mängu:",
+  "yes": "Jah"
 }

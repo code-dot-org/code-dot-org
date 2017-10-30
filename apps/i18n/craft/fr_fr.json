@@ -1,6 +1,9 @@
 {
   "absolute": "absolu",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "à",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "ajouter",
   "blockActionAttack": "attaquer",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "quantité",
   "reinfFeedbackMsg": "Vous pouvez choisir « Continuer à jouer » pour reprendre votre partie.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Score",
   "seconds": "seconde (s)",
   "selectChooseButton": "Sélectionner",
@@ -286,9 +290,5 @@
   "weather": "météo",
   "weatherTypeClear": "dégagé",
   "weatherTypeRain": "pluie",
-  "weatherTypeThunder": "tonnerre",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "tonnerre"
 }

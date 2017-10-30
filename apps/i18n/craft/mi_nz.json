@@ -1,6 +1,9 @@
 {
   "absolute": "pūmau",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "ki",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "tāpiri",
   "blockActionAttack": "whakaeke",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "Ki te hoki atu ki tō kēmu tākaro anō ai me pēhi i te \"Tākaro Tonu\".",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Tapeke piro",
   "seconds": "second(s)",
   "selectChooseButton": "Tīpako",
@@ -286,9 +290,5 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "thunder"
 }
