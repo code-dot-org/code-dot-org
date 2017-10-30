@@ -10,7 +10,8 @@ class StorageAppsTest < Minitest::Test
     signedout_storage_id = @user_storage_ids_table.insert(user_id: nil)
     signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
 
-    # create an applab project
+    # Create an applab project as signed out user
+    # Other users should not be able to access app
     channel_id = StorageApps.new(signedout_storage_id).create({projectType: 'applab'}, ip: 123)
     assert_raises StorageApps::NotFound do
       StorageApps.new(signedin_storage_id).get(channel_id)
@@ -19,11 +20,13 @@ class StorageAppsTest < Minitest::Test
     # can still get your own channel
     StorageApps.new(signedout_storage_id).get(channel_id)
 
-    # create an artist project - should not raise an exception
+    # Create an artist project as signed out user
+    # Other users should be able to access it
     channel_id = StorageApps.new(signedout_storage_id).create({projectType: 'artist'}, ip: 123)
     StorageApps.new(signedin_storage_id).get(channel_id)
 
-    # if the signedin user created the app, others should be able to access
+    # Create an applab project as a signed in user
+    # Other users should be able to access app
     channel_id = StorageApps.new(signedin_storage_id).create({projectType: 'applab'}, ip: 123)
     StorageApps.new(signedout_storage_id).get(channel_id)
   end
