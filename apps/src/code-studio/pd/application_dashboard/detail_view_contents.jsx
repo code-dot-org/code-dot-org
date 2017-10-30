@@ -16,39 +16,39 @@ export default class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      formData: PropTypes.object
+      form_data: PropTypes.object
     }),
-  }
+  };
 
   state = {
     status: this.props.applicationData.status,
     notes: this.props.applicationData.notes
-  }
+  };
 
   handleCancelEditClick = () => {
     this.setState({
       editing: false,
       status: this.props.applicationData.status
     });
-  }
+  };
 
   handleEditClick = () => {
     this.setState({
       editing: true
     });
-  }
+  };
 
   handleStatusChange = (event) => {
     this.setState({
       status: event.target.value
     });
-  }
+  };
 
   handleNotesChange = (event) => {
     this.setState({
       notes: event.target.value
     });
-  }
+  };
 
   handleSaveClick = () => {
     $.ajax({
@@ -62,7 +62,7 @@ export default class DetailViewContents extends React.Component {
         editing: false
       });
     });
-  }
+  };
 
   renderEditButtons = () => {
     if (this.state.editing) {
@@ -83,13 +83,13 @@ export default class DetailViewContents extends React.Component {
         </Button>
       );
     }
-  }
+  };
 
   renderHeader = () => {
     return (
       <div style={{display: 'flex', alignItems: 'baseline'}}>
         <h1>
-          {`${this.props.applicationData.formData.firstName} ${this.props.applicationData.formData.lastName}`}
+          {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
         </h1>
 
         <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
@@ -126,7 +126,7 @@ export default class DetailViewContents extends React.Component {
         </div>
       </div>
     );
-  }
+  };
 
   renderTopSection = () => {
     return (
@@ -153,15 +153,15 @@ export default class DetailViewContents extends React.Component {
         />
       </div>
     );
-  }
+  };
 
   renderQuestions = () => {
     return (
       <Facilitator1819Questions
-        formResponses={this.props.applicationData.formData}
+        formResponses={this.props.applicationData.form_data}
       />
     );
-  }
+  };
 
   renderNotes = () => {
     return (
@@ -178,7 +178,7 @@ export default class DetailViewContents extends React.Component {
         />
       </div>
     );
-  }
+  };
 
   render() {
     return (
