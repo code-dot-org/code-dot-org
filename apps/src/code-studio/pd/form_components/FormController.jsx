@@ -49,6 +49,13 @@ export default class FormController extends React.Component {
     this.prevPage = this.prevPage.bind(this);
   }
 
+  componentWillMount() {
+    if (this.props.saveProgressInSession && sessionStorage[this.getStorageKey()]) {
+      const reloadedState = JSON.parse(sessionStorage[this.getStorageKey()]);
+      this.setState(reloadedState);
+    }
+  }
+
   /**
    * @override
    */
@@ -114,7 +121,22 @@ export default class FormController extends React.Component {
       data,
       errors
     });
+
+    this.saveToSessionStorage({data});
   }
+
+  /**
+   * Save currentPage and form data to the session storage
+   * @param {Object} newState - data and/or currentPage to override the value in this.state
+   */
+  saveToSessionStorage = (newState) => {
+    if (this.props.saveProgressInSession) {
+      const mergedData = {...{currentPage: this.state.currentPage, data: this.state.data}, ...newState};
+      sessionStorage.setItem(this.getStorageKey(), JSON.stringify(mergedData));
+    }
+  };
+
+  getStorageKey = () => `${this.constructor.name}`;
 
   /**
    * Assemble all data to be submitted
@@ -162,6 +184,7 @@ export default class FormController extends React.Component {
       dataType: "json",
       data: JSON.stringify(this.serializeFormData())
     }).done(data => {
+      sessionStorage.removeItem(this.getStorageKey());
       this.onSuccessfulSubmit(data);
     }).fail(data => {
       if (data.responseJSON &&
@@ -360,6 +383,8 @@ export default class FormController extends React.Component {
         currentPage: newPage
       });
     }
+
+    this.saveToSessionStorage({currentPage: newPage});
   }
 
   /**
@@ -448,8 +473,10 @@ FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+  saveProgressInSession: PropTypes.bool.isRequired
 };
 
 FormController.defaultProps = {
-  requiredFields: []
+  requiredFields: [],
+  saveProgressInSession: false
 };

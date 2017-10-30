@@ -5,6 +5,38 @@ import {expect} from 'chai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 
+class DummyPage1 extends FormComponent {
+  static associatedFields = [];
+  render() {
+    return <div>Page 1</div>;
+  }
+}
+
+class DummyPage2 extends FormComponent {
+  static associatedFields = [];
+  render() {
+    return <div>Page 2</div>;
+  }
+}
+
+class DummyPage3 extends FormComponent {
+  static associatedFields = [];
+  render() {
+    return <div>Page 3</div>;
+  }
+}
+
+class DummyForm extends FormController {
+  getPageComponents() {
+    return [
+      DummyPage1,
+      DummyPage2,
+      DummyPage3
+    ];
+  }
+  onSuccessfulSubmit() {}
+}
+
 describe("FormController", () => {
   it("Can not be instantiated directly", () => {
     const constructor = () => new FormController();
@@ -16,46 +48,14 @@ describe("FormController", () => {
     expect(new EmptyForm().getPageComponents).to.throw(TypeError, "must override FormController.getPageComponents");
   });
 
-  describe("Derived form with pages", () => {
-    class DummyPage1 extends FormComponent {
-      static associatedFields = [];
-      render() {
-        return <div>Page 1</div>;
-      }
-    }
-
-    class DummyPage2 extends FormComponent {
-      static associatedFields = [];
-      render() {
-        return <div>Page 2</div>;
-      }
-    }
-
-    class DummyPage3 extends FormComponent {
-      static associatedFields = [];
-      render() {
-        return <div>Page 3</div>;
-      }
-    }
-
-    class DummyForm extends FormController {
-      getPageComponents() {
-        return [
-          DummyPage1,
-          DummyPage2,
-          DummyPage3
-        ];
-      }
-      onSuccessfulSubmit() {}
-    }
-
+  describe("Standard usage", () => {
     let form;
     beforeEach(() => {
       form = mount(
         <DummyForm
-          apiEndpoint = "fake endpoint"
-          options = {{}}
-          requiredFields = {[]}
+          apiEndpoint="fake endpoint"
+          options={{}}
+          requiredFields={[]}
         />
       );
     });
@@ -71,10 +71,10 @@ describe("FormController", () => {
       const validatePageButtons = () => {
         const pageButtons = form.find("Pagination PaginationButton");
         expect(pageButtons).to.have.length(3);
-        expect(pageButtons.map(button => button.text())).to.eql(["1","2","3"]);
+        expect(pageButtons.map(button => button.text())).to.eql(["1", "2", "3"]);
       };
 
-      for (let i=0; i<3; i++) {
+      for (let i = 0; i < 3; i++) {
         form.setState({currentPage: i});
         validatePageButtons();
       }
@@ -165,7 +165,7 @@ describe("FormController", () => {
 
         it("Re-enables the submit button on error", () => {
           validateCurrentPageRequiredFields.returns(true);
-          server.respondWith([400, { "Content-Type": "application/json" }, JSON.stringify({
+          server.respondWith([400, {"Content-Type": "application/json"}, JSON.stringify({
             errors: {form_data: ["an error"]}
           })]);
 
@@ -177,7 +177,7 @@ describe("FormController", () => {
 
         it("Keeps the submit button disabled and calls onSuccessfulSubmit on success", () => {
           validateCurrentPageRequiredFields.returns(true);
-          server.respondWith([200, { "Content-Type": "application/json" }, JSON.stringify({})]);
+          server.respondWith([200, {"Content-Type": "application/json"}, JSON.stringify({})]);
           const onSuccessfulSubmit = sinon.stub(DummyForm.prototype, "onSuccessfulSubmit");
 
           submitButton.simulate("submit");
@@ -249,6 +249,65 @@ describe("FormController", () => {
           otherPageArrayField: ["  still no trim in array  "]
         });
       });
+    });
+  });
+
+  describe("With saveProgressInSession=true", () => {
+    let form;
+
+    beforeEach(() => {
+      form = mount(
+        <DummyForm
+          apiEndpoint="fake endpoint"
+          options={{}}
+          requiredFields={[]}
+          saveProgressInSession={true}
+        />
+      );
+    });
+    afterEach(() => {
+      sessionStorage.removeItem("DummyForm");
+    });
+
+    it("Saves form data to session storage", () => {
+      form.setState({data: {
+        existingField1: 'existing value 1'
+      }});
+      form.instance().handleChange({updatedField1: 'updated value 1'});
+      expect(sessionStorage["DummyForm"]).to.eql(JSON.stringify({
+        currentPage: 0,
+        data: {
+          existingField1: 'existing value 1',
+          updatedField1: 'updated value 1'
+        }
+      }));
+    });
+
+    it("Saves current page to session storage", () => {
+      form.setState({data: {
+        existingField1: 'existing value 1'
+      }});
+      form.instance().nextPage();
+      expect(sessionStorage["DummyForm"]).to.eql(JSON.stringify({
+        currentPage: 1,
+        data: {existingField1: 'existing value 1'}
+      }));
+    });
+
+    it("Loads current page and form data from session storage on mount", () => {
+      const testData = {
+        field1: 'value 1',
+        field2: 'value 2'
+      };
+      sessionStorage["DummyForm"] = JSON.stringify({
+        currentPage: 2,
+        data: testData
+      });
+
+      form.unmount();
+      form.mount();
+      expect(form.state("currentPage")).to.equal(2);
+      expect(form.state("data")).to.eql(testData);
     });
   });
 });
