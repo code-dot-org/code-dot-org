@@ -44,7 +44,7 @@ If you are interested in joining in 2018-19, sign up below.
 
 <center><img src="/images/csd/CSD-crop-cover.png" width="90%"></center>
 
-<div style="margin-top: 5px;">Want to learn more? Dive into the <a href="/files/CS-Discoveries-Curriculum-Guide.pdf">Curriculum Guide</a></div>
+<div style="margin-top: 5px;">Want to learn more? Dive into the <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a></div>
 
 [/col-25]
 
