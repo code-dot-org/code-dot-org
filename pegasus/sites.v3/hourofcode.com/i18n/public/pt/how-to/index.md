@@ -12,10 +12,11 @@ nav: how_to_nav
 
 Junte-se ao movimento e proporcione a um grupo de alunos sua primeira hora de ciência da computação seguindo estas etapas:
 
-## 1) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
 ## 2) Escolha um tutorial para sua hora:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
+Oferecemos vários [tutoriais divertidos de uma hora de duração](<%= resolve_url('/learn') %>), criados por vários parceiros, para participantes de todas as idades.
 
 **[Tutoriais autoexplicativos da Hora do Código:](<%= resolve_url('/learn') %>)**
 
@@ -73,7 +74,7 @@ A melhor experiência da Hora do Código inclui computadores conectados à Inter
 
 **Direcione os alunos para a atividade**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+  * Escreva o link para o tutorial em um quadro. Encontre o link relacionado nas [informações de seu tutorial selecionado,](<%= resolve_url('/learn') %>) abaixo do número de participantes.
 
 [col-33]
 
@@ -91,7 +92,7 @@ A melhor experiência da Hora do Código inclui computadores conectados à Inter
 
 **O que fazer se um aluno terminar mais cedo?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+  * Os alunos podem ver todos os tutoriais e tentar fazer outra atividade da Hora do Código em [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Ou, peça aos alunos que terminarem mais cedo para que ajudem os colegas que estão tendo problemas com a atividade.
 
 [col-33]
