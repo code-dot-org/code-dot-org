@@ -339,7 +339,9 @@ class Level < ActiveRecord::Base
     # blockly levels.js. for example, from hourofcode.script:
     # level 'blockly:Maze:2_14'
     # level 'scrat 16'
-    find_by(key_to_params(key))
+    key_hash = key_to_params(key)
+    key_hash.include?(:name) ? cache_find(key_hash[:name]) :
+      find_by(key_hash)
   end
 
   def self.key_to_params(key)
