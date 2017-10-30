@@ -94,14 +94,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft  ანგარიში
-    clever: Clever Account
+    clever: Clever-ის ანგარიში
     forgot_password: "დაგავიწყდათ თქვენი პაროლი?"
     need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
     need_unlock: "არ მოგსვლიათ განბლოკვის ინსტრუქციები?"
     not_linked: "ბოდიში, თქვენი Code.org-ის ანგარიში არაა დაკავშირებული თქვენს %{provider}-თან.
       ქვემოთ პაროლის შეყვანით თქვენ შეძლებთ ანგარიშში შესვლა."
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "ბოდიშ გიხდით, მაგრამ თქვენი Code.org-ის ანგარიში არ არის დაკავშირებული
+      თქვენს %{provider}-თან. გთხოვთ შეხვიდეთ Clever-ის პორტალიდან."
   signup_form:
     student_count: "უკვე დარეგისტრირდა %{count} სტუდენტი."
     teacher_count: "უკვე დარეგისტრირდა %{count} მასწავლებელი."
@@ -155,6 +155,7 @@
     user_type_student: "მოსწავლე"
     field_is_required: "სავალდებულოა"
     accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
+    error: "მოხდა შეცდომა."
   school_info:
     title: "სასკოლო ინფორმაცია (არასავალდებულო)"
     school_country: "სკოლის ქვეყანა"
@@ -1011,7 +1012,14 @@
     rename: "სახელის შეცვლა"
     save: "შენახვა"
     delete: "წაშლა"
-    import: Import
+    import: "შემოტანა"
+    share_link_import_bad_link_header: "გასაზიარებელი ბმულის ამოცნობა ვერ მოხერხდა"
+    share_link_import_bad_link_body: "ჩვენ ვერ შემოვიტანეთ ეს გასაზიარებელი ბმული.
+      დარწმუნდით, რომ იყენებთ ბმულს მაინკრაფტი: აგენტის თავსატეხიდან და ბმული სრულად
+      გადააკოპირეთ."
+    share_link_import_error_header: "მოხდა შეცდომა."
+    share_link_import_error_body: "ამ გასაზიარებელი ბმულის შემოტანის დროს მოხდა შეცდომა.
+      გთხოვთ გაიმეოროთ თავიდან."
     exit: "დავუბრუნდეთ კურსს"
     my_projects: "ჩემი პროექტები"
     project_gallery: "პროექტები"
