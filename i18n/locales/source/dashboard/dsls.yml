@@ -752,6 +752,10 @@ en:
       CSD U5 video2:
         description here: description here
         title: title
+      CSD U6 LED create intro:
+        Make an App Using the LED: Make an App Using the LED
+        description here: description here
+      CSD U6 tugowar stop: {}
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
@@ -817,6 +821,7 @@ en:
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Abstraction in Programming: {}
+      CSP Abstraction in Programming 2: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -2000,6 +2005,10 @@ en:
       SFLP - Web - Images on the Web: {}
       SFLP - Web - Quality Websites: {}
       SFLP - Web - Text on the Web: {}
+      SG CSP Abstraction in Programming 2: {}
+      SG U3 whats a comment:
+        description here: description here
+        title: title
       SG U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       SG v2 U3L01 Student Lesson Introduction:
@@ -2206,6 +2215,9 @@ en:
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
+      U3 whats a comment:
+        description here: description here
+        title: title
       U3- L12 -Design Mode SFLP: {}
       U3- Loops - Intro: {}
       U3-Variables 2 - SFLP: {}
@@ -2849,7 +2861,13 @@ en:
         Good Job!: Good Job!
       courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
+      courseF_firstFunctions_map:
+        description here: description here
+        title: title
       coursee-privateandpersonalinformation: {}
+      coursef_functionsSummary_map:
+        description here: description here
+        title: title
       coursef_powerofwords:
         description here: description here
         title: title
@@ -2857,6 +2875,7 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csd-novice-congrats: {}
+      csd-post-survey-2017 preamble 1: {}
       csd-post-survey-2017-implementation-student: {}
       csd-post-survey-2017-implementation-teacher: {}
       csd-pulse-check-survey-preamble: {}
@@ -3410,8 +3429,6 @@ en:
         The Need for Algorithms: The Need for Algorithms
       v2 U3L03 Student Lesson Introduction:
         Creativity in Algorithms: Creativity in Algorithms
-      v2 U3L04 Student Lesson Introduction:
-        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       v2 U3L05 Student Lesson Introduction:
         Creating Functions: Creating Functions
       v2 U3L07 Student Lesson Introduction:
@@ -3421,6 +3438,8 @@ en:
       v2 U3L09 Student Lesson Introduction:
         Looping and Random Numbers: Looping and Random Numbers
       v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      v2 U3L10 Student Lesson Introduction - stage mods only:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
@@ -8649,7 +8668,7 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
-        When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.
+        When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-post-survey-2017-q16:
         Agree: Agree
         Disagree: Disagree
@@ -9501,9 +9520,9 @@ en:
         Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
       csp_U3_turtle_subgoal_q1_mc:
         <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
+        <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
         <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
         <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
-        <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">: <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">
       csp_U3_turtle_subgoal_q2_mc:
         <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">: <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">
         <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
