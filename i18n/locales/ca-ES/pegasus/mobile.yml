@@ -26,7 +26,7 @@
   twentyhours_heading: "Prova el nostre curs d'introducció a la programació"
   twentyhours_text: "Heu acabat la primera Hora del Codi? Apreneu més informàtica i programació en el curs següent."
   og_title: Cada nen mereix oportunitat
-  og_description: "Every student in every school deserves the opportunity to study computer science."
+  og_description: "Cada alumne de cada escola es mereix l'oportunitat d'estudiar informàtica."
   csedweek_og_title: "Setmana de l'Educació en Informàtica"
   csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
   hoc2014_heading: "Uniu-vos a<a href=\"http://hourofcode.com\">Hora del Codi</a><br/>Desembre 8 - 14, 2014<br/>"
@@ -545,6 +545,8 @@
   volunteer_engineer_submission_type_task_remote: "I want you to Skype into my classroom to say a few words of inspiration to the kids"
   volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: "Edat"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Aprèn més"
   dashboard_landing_title: "Pàgina d'inici de mestre"
   dashboard_landing_welcome: "Benvinguts al nou i millorat escriptori del mestre."
   dashboard_landing_video: "Mira aquest vídeo"
