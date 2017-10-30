@@ -2,6 +2,8 @@ require_relative '../../test_helper'
 require_relative '../../../middleware/helpers/storage_apps'
 
 class StorageAppsTest < Minitest::Test
+  include SetupTest
+
   def setup
     @user_storage_ids_table = PEGASUS_DB[:user_storage_ids]
   end
