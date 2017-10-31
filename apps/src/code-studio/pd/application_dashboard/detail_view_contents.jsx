@@ -67,7 +67,12 @@ export default class DetailViewContents extends React.Component {
   renderEditButtons = () => {
     if (this.state.editing) {
       return [(
-        <Button onClick={this.handleSaveClick} bsStyle="primary" key="save">
+        <Button
+          onClick={this.handleSaveClick}
+          bsStyle="primary"
+          key="save"
+          style={{marginRight: '5px'}}
+        >
           Save
         </Button>
       ), (
@@ -97,6 +102,7 @@ export default class DetailViewContents extends React.Component {
             disabled={!this.state.editing}
             value={this.state.status}
             onChange={this.handleStatusChange}
+            style={{marginRight: '5px'}}
           >
             {
               STATUSES.map((status, i) => (
