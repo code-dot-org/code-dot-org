@@ -1,15 +1,17 @@
----
-title: '<%= hoc_s(:title_resources) %>'
-layout: geniş
-nav: promote_nav
----
+* * *
+
+title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
+
+* * *
+
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
+</link>
 
-# Kodlama Saatini tanıtın
+# Promote the Hour of Code
 
-## Bir Kodlama Saatine ev sahipliği mi yapacaksınız? <a href="<%= hoc_uri('/resources/how-to') %>Nasıl yapılır rehberimize bir göz atın</a>
+## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -21,7 +23,7 @@ nav: promote_nav
 
 <a id="social"></a>
 
-## Bunları sosyal medyada paylaşın
+## Post these on social media
 
 [![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -29,21 +31,21 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Kodlama saati logosunu haberi yaymak için kullanın
+## Use the Hour of Code logo to spread the word
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Yüksek çözünürlüklü versiyonu indirin](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"kodlama saati" ticari bir marka. Bu kullanımın önüne geçmek istemiyoruz, ancak bir kaç sınır dahilinde olduğundan emin olmak istiyoruz:**
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-3. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Bilgisayar Bilimi Eğitimi Haftası ve Code.org web sitelerinin linklerini paylaşın ve onlardan şu şekilde bahsedin:
+  1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Bilgisayar Bilimi Eğitimi Haftası ve Code.org web sitelerinin linklerini paylaşın ve onlardan şu şekilde bahsedin:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-4. No use of "Hour of Code" in app names.
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -64,7 +66,7 @@ Computers are everywhere, changing every industry on the planet. But fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! anasayfalarındaydı. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-Bu yıl daha da büyütelim. "Kodlama Saati" ne katılmak ister misin? <%= campaign_date('full') %>, Computer Science Education Week süresince, "Kodlama Saati" etkinliklerinden birine katıl.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
@@ -80,7 +82,7 @@ Computers are everywhere, changing every industry on the planet, but fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! anasayfalarındaydı. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-Gelmiş geçmiş en geniş çaplı öğrenme etkinliği olan Computer Science Education Week, (<%= campaign_date('full') %>) - "Kodlama Saati"ne, [SCHOOL NAME] öğrencilerinden [X number] kişinin katılmasının nedeni işte bu.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 

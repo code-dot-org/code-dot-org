@@ -10,8 +10,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) このビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
@@ -28,7 +27,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Hour of Codeを多くの人に知ってもらう
+## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
@@ -72,7 +71,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * 黒板に、チュートリアルへのリンクを書きましょう。リンクは[こちら](%= resolve_url('/learn') %)から取得できます。
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
