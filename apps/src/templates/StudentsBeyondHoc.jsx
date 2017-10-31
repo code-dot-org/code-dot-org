@@ -3,20 +3,21 @@ import i18n from '@cdo/locale';
 import color from '../util/color';
 import Responsive from '../responsive';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
+import { tutorialTypes } from './tutorialTypes.js';
 
 const styles = {
   heading: {
     color: color.teal,
-    width: '100%'
+    width: '100%',
   },
 };
 
 export default class StudentsBeyondHoc extends Component {
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(['applab', 'newMinecraft', 'oldMinecraft', 'other']).isRequired,
+    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsive: PropTypes.instanceOf(Responsive).isRequired,
   };
 
   render() {

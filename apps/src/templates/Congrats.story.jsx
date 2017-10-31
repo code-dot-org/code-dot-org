@@ -16,21 +16,21 @@ export default storybook => {
         )
       },
       {
-        name: 'Congrats - old Minecraft',
-        description: `Congrats component if old Minecraft tutorial completed`,
+        name: 'Congrats - pre-2017 Minecraft',
+        description: `Congrats component if either pre-2017 Minecraft tutorial completed`,
         story: () => (
           <Congrats
-            completedTutorialType="oldMinecraft"
+            completedTutorialType="pre2017Minecraft"
             isRtl={false}
           />
         )
       },
       {
-        name: 'Congrats - new Minecraft',
-        description: `Congrats component if new Minecraft tutorial completed`,
+        name: 'Congrats - 2017 Minecraft',
+        description: `Congrats component if 2017 Minecraft tutorial completed`,
         story: () => (
           <Congrats
-            completedTutorialType="newMinecraft"
+            completedTutorialType="2017Minecraft"
             isRtl={false}
           />
         )
@@ -44,6 +44,6 @@ export default storybook => {
             isRtl={false}
           />
         )
-      }
+      },
     ]);
 };
