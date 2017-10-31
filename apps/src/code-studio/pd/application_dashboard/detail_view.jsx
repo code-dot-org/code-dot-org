@@ -38,6 +38,12 @@ export default class DetailView extends React.Component {
     });
   }
 
+  updateProps = (newProps) => {
+    this.setState({
+      data: Object.assign(this.state.data, newProps)
+    });
+  };
+
   render() {
     if (this.state.loading) {
       return (<Spinner/>);
@@ -47,6 +53,7 @@ export default class DetailView extends React.Component {
           <DetailViewContents
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
+            updateProps={this.updateProps}
           />
         )
       );

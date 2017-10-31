@@ -28,11 +28,11 @@ const ApplicationDashboardHeader = (props) => (
 );
 
 const paths = {
-  'csf_facilitators': 'CSF Facilitators',
-  'csd_facilitators': 'CSD Facilitator Applications',
-  'csp_facilitators': 'CSP Facilitator Applications',
-  'csd_teachers': 'CSD Teacher Applications',
-  'csp_teachers': 'CSP Teacher Applications'
+  'csf_facilitators': 'CS Fundamentals Facilitator Applications',
+  'csd_facilitators': 'CS Discoveries Facilitator Applications',
+  'csp_facilitators': 'CS Principles Facilitator Applications',
+  'csd_teachers': 'CS Discoveries Teacher Applications',
+  'csp_teachers': 'CS Principles Teacher Applications'
 };
 
 const ApplicationDashboard = ()=> (
