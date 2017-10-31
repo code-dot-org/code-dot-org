@@ -6,6 +6,7 @@ import { tutorialTypes } from './tutorialTypes.js';
 const styles = {
   heading: {
     color: color.teal,
+    width: '100%',
   },
 };
 
