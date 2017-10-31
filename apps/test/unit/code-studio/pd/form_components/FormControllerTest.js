@@ -250,64 +250,55 @@ describe("FormController", () => {
         });
       });
     });
-  });
 
-  describe("With saveProgressInSession=true", () => {
-    let form;
-
-    beforeEach(() => {
-      form = mount(
-        <DummyForm
-          apiEndpoint="fake endpoint"
-          options={{}}
-          requiredFields={[]}
-          saveProgressInSession={true}
-        />
-      );
-    });
-    afterEach(() => {
-      sessionStorage.removeItem("DummyForm");
-    });
-
-    it("Saves form data to session storage", () => {
-      form.setState({data: {
-        existingField1: 'existing value 1'
-      }});
-      form.instance().handleChange({updatedField1: 'updated value 1'});
-      expect(sessionStorage["DummyForm"]).to.eql(JSON.stringify({
-        currentPage: 0,
-        data: {
-          existingField1: 'existing value 1',
-          updatedField1: 'updated value 1'
-        }
-      }));
-    });
-
-    it("Saves current page to session storage", () => {
-      form.setState({data: {
-        existingField1: 'existing value 1'
-      }});
-      form.instance().nextPage();
-      expect(sessionStorage["DummyForm"]).to.eql(JSON.stringify({
-        currentPage: 1,
-        data: {existingField1: 'existing value 1'}
-      }));
-    });
-
-    it("Loads current page and form data from session storage on mount", () => {
-      const testData = {
-        field1: 'value 1',
-        field2: 'value 2'
-      };
-      sessionStorage["DummyForm"] = JSON.stringify({
-        currentPage: 2,
-        data: testData
+    describe("With session storage", () => {
+      beforeEach(() => {
+        DummyForm.sessionStorageKey = "DummyForm";
+      });
+      afterEach(() => {
+        sessionStorage.removeItem("DummyForm");
       });
 
-      form.unmount();
-      form.mount();
-      expect(form.state("currentPage")).to.equal(2);
-      expect(form.state("data")).to.eql(testData);
+      it("Saves form data to session storage", () => {
+        form.setState({data: {
+          existingField1: 'existing value 1'
+        }});
+        form.instance().handleChange({updatedField1: 'updated value 1'});
+        expect(sessionStorage["DummyForm"]).to.eql(JSON.stringify({
+          currentPage: 0,
+          data: {
+            existingField1: 'existing value 1',
+            updatedField1: 'updated value 1'
+          }
+        }));
+      });
+
+      it("Saves current page to session storage", () => {
+        form.setState({data: {
+          existingField1: 'existing value 1'
+        }});
+        form.instance().nextPage();
+        expect(sessionStorage["DummyForm"]).to.eql(JSON.stringify({
+          currentPage: 1,
+          data: {existingField1: 'existing value 1'}
+        }));
+      });
+
+      it("Loads current page and form data from session storage on mount", () => {
+        const testData = {
+          field1: 'value 1',
+          field2: 'value 2'
+        };
+        sessionStorage["DummyForm"] = JSON.stringify({
+          currentPage: 2,
+          data: testData
+        });
+
+        form.unmount();
+        form.mount();
+        expect(form.state("currentPage")).to.equal(2);
+        expect(form.state("data")).to.eql(testData);
+      });
     });
   });
 });

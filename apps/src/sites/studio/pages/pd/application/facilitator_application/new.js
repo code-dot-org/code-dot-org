@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   ReactDOM.render(
     <Facilitator1819Application
       {...getScriptData('props')}
-      saveProgressInSession={true}
     />,
     document.getElementById('application-container')
   );

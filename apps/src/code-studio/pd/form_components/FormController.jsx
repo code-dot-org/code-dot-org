@@ -50,8 +50,8 @@ export default class FormController extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.saveProgressInSession && sessionStorage[this.getStorageKey()]) {
-      const reloadedState = JSON.parse(sessionStorage[this.getStorageKey()]);
+    if (this.constructor.sessionStorageKey && sessionStorage[this.constructor.sessionStorageKey]) {
+      const reloadedState = JSON.parse(sessionStorage[this.constructor.sessionStorageKey]);
       this.setState(reloadedState);
     }
   }
@@ -126,17 +126,27 @@ export default class FormController extends React.Component {
   }
 
   /**
-   * Save currentPage and form data to the session storage
+   * Override in derived classes with a key name (e.g. the class name)
+   * to save session storage in that key. Otherwise, no session storage will be saved.
+   */
+  static sessionStorageKey = null;
+
+  /**
+   * Save currentPage and form data to the session storage, if a sessionStorageKey is specified on this class
    * @param {Object} newState - data and/or currentPage to override the value in this.state
    */
   saveToSessionStorage = (newState) => {
-    if (this.props.saveProgressInSession) {
-      const mergedData = {...{currentPage: this.state.currentPage, data: this.state.data}, ...newState};
-      sessionStorage.setItem(this.getStorageKey(), JSON.stringify(mergedData));
+    if (this.constructor.sessionStorageKey) {
+      const mergedData = {
+        ...{
+          currentPage: this.state.currentPage,
+          data: this.state.data
+        },
+        ...newState
+      };
+      sessionStorage.setItem(this.constructor.sessionStorageKey, JSON.stringify(mergedData));
     }
   };
-
-  getStorageKey = () => `${this.constructor.name}`;
 
   /**
    * Assemble all data to be submitted
@@ -184,7 +194,7 @@ export default class FormController extends React.Component {
       dataType: "json",
       data: JSON.stringify(this.serializeFormData())
     }).done(data => {
-      sessionStorage.removeItem(this.getStorageKey());
+      sessionStorage.removeItem(this.constructor.sessionStorageKey);
       this.onSuccessfulSubmit(data);
     }).fail(data => {
       if (data.responseJSON &&
@@ -472,11 +482,9 @@ export default class FormController extends React.Component {
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
   options: PropTypes.object.isRequired,
-  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
-  saveProgressInSession: PropTypes.bool.isRequired
+  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 FormController.defaultProps = {
-  requiredFields: [],
-  saveProgressInSession: false
+  requiredFields: []
 };
