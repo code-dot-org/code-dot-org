@@ -8,6 +8,7 @@
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
+      "setScreen": null,
       "setProperty": null,
       "getProperty": null,
       "rgb": null,
@@ -38,7 +39,6 @@
       "callMyFunction": null,
       "comment": null,
       "console.log": null,
-      "declareAssign_x_prompt": null,
       "led.on": null,
       "led.off": null,
       "led.blink": null,
@@ -57,39 +57,18 @@
       "lightSensor.setScale": null,
       "tempSensor.F": null,
       "tempSensor.C": null,
-      "textInput": null,
-      "pinMode": null,
-      "digitalWrite": null,
-      "digitalRead": null,
-      "analogWrite": null,
-      "analogRead": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "stop": null,
-      "color": null,
-      "intensity": null,
       "buzzer.note": null,
       "buzzer.off": null,
       "buzzer.play": null,
-      "accelerometer.getOrientation": null,
-      "accelerometer.start": null,
-      "accelerometer.getAcceleration": null,
-      "holdtime": null,
-      "soundSensor.start": null,
-      "lightSensor.start": null,
       "functionParams_n": null,
-      "callMyFunction_n": null
+      "callMyFunction_n": null,
+      "assign_x": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onEvent(\"play\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonEvent(\"replay\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  movePlayer(\"red\");\r\n  checkWin(\"red\");\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  movePlayer(\"blue\");\r\n  checkWin(\"blue\");\r\n});\r\n\r\nfunction startGame() {\r\n  // Move both players to the top of the screen\r\n  \r\n  // Switch to the \"game\" screen\r\n  \r\n}\r\n\r\nfunction movePlayer(player) {\r\n  // Create a variable called player_y and set it\r\n  // to the current y value of the image with the\r\n  // id represented by the paramater player\r\n  \r\n  // Increase the variable player_y by 10\r\n  \r\n  // Set the player's y property to the\r\n  // new player_y value\r\n  \r\n}\r\n\r\nfunction checkWin(player) {\r\n  // Create a variable called player_y and set it\r\n  // to the current y value of the image with the\r\n  // id represented by the paramater player\r\n  \r\n  // Check if player_y is greater than 350,\r\n  // meaning that it's reached the bottom.\r\n  // If it is, change the text property of\r\n  // \"winner\" to the player and switch to\r\n  // the \"win\" screen\r\n  \r\n}\r\n",
+    "start_blocks": "onEvent(\"play\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonEvent(\"replay\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  movePlayer(\"red\");\r\n  checkWin(\"red\");\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  movePlayer(\"blue\");\r\n  checkWin(\"blue\");\r\n});\r\n\r\nfunction startGame() {\r\n  // Move both players to the top of the screen\r\n  \r\n  // Switch to the \"game\" screen\r\n  \r\n}\r\n\r\nfunction movePlayer(player) {\r\n  // Get the \"y\" property of the player\r\n  // and assign it to the variable player_y\r\n  var player_y = __;\r\n  \r\n  // Increase the variable player_y by 10\r\n  \r\n  // Set the player's y property to the\r\n  // new player_y value\r\n  \r\n}\r\n\r\nfunction checkWin(player) {\r\n  // Create a variable called player_y and set it\r\n  // to the current y value of the image with the\r\n  // id represented by the paramater player\r\n  \r\n  // Check if player_y is greater than 350,\r\n  // meaning that it's reached the bottom.\r\n  // If it is, change the text property of\r\n  // \"winner\" to the player and switch to\r\n  // the \"win\" screen\r\n  \r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -117,18 +96,21 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"start\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 52px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 70px; position: absolute; left: -4.44089e-16px; top: 25px; text-align: center;\" id=\"title\">Title</label><button id=\"play\" style=\"padding: 0px; margin: 0px; height: 110px; width: 270px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 315px;\">Play!</button></div><div class=\"screen\" tabindex=\"1\" id=\"game\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"red\" style=\"height: 100px; width: 100px; position: absolute; left: 40px; top: 0px; margin: 0px;\" data-icon-color=\"\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"blue\" style=\"height: 100px; width: 100px; position: absolute; left: 180px; top: 0px; margin: 0px;\" data-icon-color=\"\"></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px; transform: scale(0.9375);\"><div class=\"screen\" tabindex=\"1\" id=\"start\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 52px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 70px; position: absolute; left: -4.44089e-16px; top: 25px; text-align: center;\" id=\"title\">Title</label><button id=\"play\" style=\"padding: 0px; margin: 0px; height: 110px; width: 270px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 315px;\">Play!</button></div><div class=\"screen\" tabindex=\"1\" id=\"game\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; display: none;\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"red\" style=\"height: 100px; width: 100px; position: absolute; left: 40px; top: 0px; margin: 0px;\" data-icon-color=\"\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"blue\" style=\"height: 100px; width: 100px; position: absolute; left: 180px; top: 0px; margin: 0px;\" data-icon-color=\"\"></div><div class=\"screen\" tabindex=\"1\" id=\"win\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"></div></div>",
     "hide_view_data_button": "true",
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:29:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 20:25:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 19:29:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 20:25:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:38:38 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:50:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:59:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
