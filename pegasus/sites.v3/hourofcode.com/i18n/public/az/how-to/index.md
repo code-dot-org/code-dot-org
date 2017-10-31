@@ -12,8 +12,7 @@ nav: how_to_nav
 
 Hərəkata qoşulun və bir qrup şagirdi ilk informatika saatına dəvət etmək üçün növbəti addımları atın:
 
-## 1) Bu təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Bu təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Saatınız üçün bir dərslik seçin:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
@@ -70,7 +69,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Kod yazın!
+## 6) Kod!
 
 **Direct students to the activity**
 

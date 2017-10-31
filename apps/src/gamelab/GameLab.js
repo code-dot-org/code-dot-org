@@ -1081,8 +1081,8 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
   }
 };
 
-GameLab.prototype.handleExecutionError = function (err, lineNumber) {
-  outputError(String(err), lineNumber);
+GameLab.prototype.handleExecutionError = function (err, lineNumber, outputString) {
+  outputError(outputString, lineNumber);
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
 };

@@ -94,7 +94,7 @@
   congratulations_on_completing_course2: Parabéns por ter concluído o Curso 2
   congratulations_on_completing_course3: Parabéns por ter concluído o Curso 3
   congratulations_on_completing_course4: Parabéns por ter concluído o Curso 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_coursea: Parabéns por ter concluído o curso A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
@@ -748,6 +748,10 @@
   volunteer_engineer_submission_type_task_mentor: Estou em busca de um mentor para
     me ajudar a me preparar para trabalhar com programação com meus alunos
   petition_age: Idade
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Saiba mais
   dashboard_landing_title: Página inicial do professor
   dashboard_landing_welcome: Bem-vindo ao novo painel do professor.
   dashboard_landing_video: Assista ao vídeo
@@ -2056,38 +2060,38 @@
   header_home: Início
   header_my_dashboard: My Dashboard
   header_courses: percursos
-  header_course_catalog: Course Catalog
+  header_course_catalog: Catálogo do Curso
   header_project_gallery: Projetos
-  header_sections: Turmas
+  header_sections: Seções
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_overview: Visão Geral do Educador
+  header_educate_elementary: Ensino Fundamental
+  header_educate_middle: Ensino Fundamental II
+  header_educate_high: Ensino Médio
   header_educate_hoc: Hora do Código
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
+  header_educate_partner: Envolva-se Conosco
+  header_educate_beyond: Além do Code.org
+  header_educate_inspire: Inspire um Estudante
+  header_educate_community: Comunidade On-Line
   header_educate_tools: Vídeos e ferramentas
   header_about_us: Quem Somos
-  header_about_leadership: Administração
+  header_about_leadership: Liderança
   header_about_donors: Doadores
   header_about_partners: Parceiros
-  header_about_team: Toda a equipa
-  header_about_news: Imprensa
+  header_about_team: Equipe Completa
+  header_about_news: Sala de Imprensa
   header_about_evaluation: Avaliação
-  header_about_jobs: Empregos
-  header_about_contact: Contacte-nos
+  header_about_jobs: Postos de Trabalho
+  header_about_contact: Fale Conosco
   header_about_faqs: Perguntas Frequentes (FAQ)
   header_learn: Aprenda
-  header_teach: Teach
+  header_teach: Ensinar
   header_stats: Estatísticas
-  header_help_us: Help Us
-  header_about: About
+  header_help_us: Ajude-nos
+  header_about: Sobre
   header_teacher_community: Comunidade de professores
   header_help_support: Ajuda e suporte
-  header_report_bug: Comunicar um problema
+  header_report_bug: Reportar um erro
   header_tutorials: Tutoriais
   header_documentation: Documentação
   csp_name: Princípios da CC - 16-17

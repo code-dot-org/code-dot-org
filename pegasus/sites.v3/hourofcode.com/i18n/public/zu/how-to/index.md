@@ -12,8 +12,7 @@ nav: how_to_nav
 
 Zibandakanye nomnyakazo ubese wazisa iqembu labafundi kuhora labo lokuqala lwekhompyutha sayensi ngalezi zigxathi:
 
-## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Khetha imfundiso yelakho ihora:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
