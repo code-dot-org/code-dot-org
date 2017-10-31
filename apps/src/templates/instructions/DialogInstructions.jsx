@@ -41,6 +41,7 @@ const DialogInstructions = React.createClass({
   }
 });
 
+export const UnconnectedDialogInstructions = DialogInstructions;
 export default connect(state => ({
   puzzleNumber: state.pageConstants.puzzleNumber,
   stageTotal: state.pageConstants.stageTotal,
