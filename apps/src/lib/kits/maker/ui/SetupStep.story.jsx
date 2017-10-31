@@ -5,7 +5,8 @@ import SetupStep, {
   ATTEMPTING,
   WAITING,
   CELEBRATING,
-  HIDDEN
+  HIDDEN,
+  UNKNOWN
 } from './SetupStep';
 
 export default storybook => {
@@ -81,6 +82,16 @@ export default storybook => {
           <SetupStep
             stepName="This step is attempting"
             stepStatus={ATTEMPTING}
+          />
+        )
+      },
+      {
+        name: 'UNKNOWN Step',
+        description: 'Step in unknown state',
+        story: () => (
+          <SetupStep
+            stepName="This step is unknown"
+            stepStatus={UNKNOWN}
           />
         )
       },
