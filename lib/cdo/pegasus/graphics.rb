@@ -49,7 +49,7 @@ def process_image(path, ext_names, language=nil, site=nil)
   manipulated = false
 
   # Manipulated?
-  if (m = dirname.match /^(?<basedir>.*)\/(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)(\/(?<dir>.*))?$/m)
+  if (m = dirname.match /^(?<basedir>.*?)\/(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)(\/(?<dir>.*))?$/m)
     mode = m[:mode][0..-2].to_sym unless m[:mode].nil_or_empty?
     width = m[:width].to_i unless m[:width].nil_or_empty?
     height = m[:height].to_i unless m[:height].nil_or_empty?
