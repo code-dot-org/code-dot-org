@@ -1,21 +1,19 @@
 ---
-
-title: <%= hoc_s(:title_how_to_parents) %>
+title: '<%= hoc_s(:title_how_to_parents) %>'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Как да извършите часът на код с вашето дете
 
 Използвайте часът на кода у дома, или станете доброволец, за да го проведете в класната стая на детето си! Ето как:
 
-## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Изберете урок:
+## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+## 3) Избор на урок:
+
+Ние предлагаме разнообразие от забавни, продължаващи час уроци за ученици от всички възрасти, създадени от различни партньори. [ Изпробвайте ги!](<%= resolve_url('https://code. org/learn') %>)
 
 **Всички часът на кода уроци са самостоятелно ръководи-което позволява на децата да работят в техните собствени темпове и ниво на умение**
 
@@ -42,7 +40,7 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 Не е лошо ако Вие и детето сте новаци в компютърните науки. Ето някои идеи, за да въведете дейността Hour of Code:
 
 - Обяснете начина как технологията въздейства на живота ни, с примери, които ще впечатлят момчета и момичета (спасяване на живот, помощ за хората, свързване на хора и др.).
-- Съставете списък с вещи, които използват код в ежедневния живот.
+- Съставете списък с неща, които използват код в ежедневния живот.
 - Вижте съвети за въвличане на момичета в компютърните науки [тук](<%= resolve_url('https://code.org/girls') %>).
 
 Искате повече идеи? Вижте нашия [ шаблон урок план](/files/AfterschoolEducatorLessonPlanOutline.docx) за най-добрите практики от опитни педагози.
