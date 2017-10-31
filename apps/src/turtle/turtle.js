@@ -1002,8 +1002,8 @@ Artist.prototype.initInterpreter = function () {
 /**
  * Handle an execution error from the interpreter
  */
-Artist.prototype.handleExecutionError = function (err, lineNumber) {
-  this.consoleLogger_.log(err);
+Artist.prototype.handleExecutionError = function (err, lineNumber, outputString) {
+  this.consoleLogger_.log(outputString);
 
   this.executionError = { err: err, lineNumber: lineNumber };
 
