@@ -1,10 +1,10 @@
 {
-  "continue":"Haere tonu",
-  "nextLevel":"Hūrō! Kua oti i a koe tēnei panga.",
-  "no":"Kāore",
-  "numBlocksNeeded":"E āhei ana tēnei panga te whakaoti me ngā paraka e %1.",
-  "reinfFeedbackMsg":"Pāwhiringia te pātene “Whakamātau anō” kia hoki ki te purei i tō kēmu.",
-  "share":"Tiri",
-  "shareGame":"Tiria tō kēmu:",
-  "yes":"Āe"
+  "continue": "Haere tonu",
+  "nextLevel": "Hūrō! Kua oti i a koe tēnei panga.",
+  "no": "Kāore",
+  "numBlocksNeeded": "E āhei ana tēnei panga te whakaoti me ngā paraka e %1.",
+  "reinfFeedbackMsg": "Pāwhiringia te pātene “Whakamātau anō” kia hoki ki te purei i tō kēmu.",
+  "share": "Tiri",
+  "shareGame": "Tiria tō kēmu:",
+  "yes": "Āe"
 }

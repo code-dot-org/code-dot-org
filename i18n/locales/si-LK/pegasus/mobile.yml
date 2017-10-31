@@ -553,6 +553,8 @@
   volunteer_engineer_submission_type_task_remote: "මට අවශ්‍යයි ශිෂ්‍යන්ගේ ආශ්වාදය සඳහා, මගේ පන්ති කාමරයට SKYPE ඇමතුමක් ගෙන ඔබට වචන කිහිපයක් කතාකිරීමට සැලස්වීමට"
   volunteer_engineer_submission_type_task_mentor: "මගේ සිසුන් සමඟ කේතනය මට උදව් කිරීමට සූදානම් උපදේශකක් මම සොයමි"
   petition_age: "වයස"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "වැඩිදුර ඉගෙන ගන්න"
   dashboard_landing_title: "ගුරු මුල් පිටුව"
   dashboard_landing_welcome: "නවීකරණය කරන ලද ගුරුවරුන්ගේ ඩෑශ්බෝඩය වෙත සාදරයෙන් පිලිගනිමු."
   dashboard_landing_video: "මෙම වීඩියෝව නරඹන්න"

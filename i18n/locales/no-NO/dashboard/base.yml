@@ -122,6 +122,7 @@
     user_type_student: "elev"
     field_is_required: "må fylles ut"
     accept_terms: "Du må gå med på å opprette en konto"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -202,8 +203,8 @@
       picture: 'Picture Password'
       word: 'Secret Words'
       email: 'E-post'
-      google_classroom: 'Google Classroom'
-      clever: 'Clever'
+      google_classroom: 'Google Klasserom'
+      clever: 'Lur'
   follower:
     invite_sent: 'Invitasjon er sendt'
     added_teacher: '%{name} er lagt til som din lærer'
@@ -255,7 +256,7 @@
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Mitt Kontrollpanel"
       courses: "kurs"
       course_catalog: "Course Catalog"
       project_gallery: "Prosjekter"
@@ -263,7 +264,7 @@
       help_support: "Help and support"
       report_bug: "Report bug"
       teacher_community: "Teacher community"
-      professional_learning: "Professional Learning"
+      professional_learning: "Profesjonell opplæring"
       documentation: "Documentation"
       tutorials: "Tutorials"
       educate_overview: "Educator Overview"
@@ -753,6 +754,10 @@
     save: "Lagre"
     delete: "Slett"
     import: "Import"
+    share_link_import_bad_link_header: "Share link not recognized"
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_error_header: "Something went wrong."
+    share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Tilbake til kurset"
     my_projects: "Mine prosjekter"
     project_gallery: "Prosjekter"
