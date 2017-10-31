@@ -7,7 +7,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener("DOMContentLoaded", function (event) {
   ReactDOM.render(
     <ApplicationDashboard
-      partnerName={getScriptData("props")['partnerName']}
+      regionalPartnerName={getScriptData("props")['regionalPartnerName']}
     />,
     document.getElementById('application-container')
   );

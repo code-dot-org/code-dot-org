@@ -10,7 +10,7 @@ import $ from 'jquery';
 export default class Summary extends React.Component {
 static propTypes = {
   route: PropTypes.shape({
-      regionalPartner: PropTypes.string.isRequired
+      regionalPartnerName: PropTypes.string.isRequired
     })
 }
 
@@ -43,7 +43,7 @@ static propTypes = {
     }
     return (
       <div>
-        <h1>{this.props.route.regionalPartner}</h1>
+        <h1>{this.props.route.regionalPartnerName}</h1>
         <div className="row">
           <SummaryTable caption="CSF Facilitators" data={this.state.applications["csf_facilitators"]} path="csf_facilitators"/>
           <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitators"]} path="csd_facilitators"/>
