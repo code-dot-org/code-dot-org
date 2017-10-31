@@ -861,5 +861,12 @@
   "yourSchoolParentDesc": "Gakktu í málið að efla tölvufræðinám í skólanum þínum eða á staðnum",
   "yourSchoolTeacherButton": "Byrjaðu að kenna",
   "yourSchoolTeacherDesc": "Byrjaðu að kenna í dag, það þarf enga reynslu af tölvunarfræði",
-  "yourSchoolTellUs": "Segðu okkur frá skóla þínum"
+  "yourSchoolTellUs": "Segðu okkur frá skóla þínum",
+  "congratsCertificateHeading": "You Earned a Certificate of Completion",
+  "congratsStudentHeading": "Students: Continue Learning Beyond an Hour",
+  "congratsTeacherHeading": "Teachers: Bring Computer Science to Your Classroom",
+  "projectGroupArtistAllProjects": "All Drawing Projects",
+  "projectGroupEventsAllProjects": "All Games with Events",
+  "projectGroupMinecraftAllProjects": "All Minecraft Projects",
+  "projectGroupPlaylabAllProjects": "All Play Lab Projects"
 }

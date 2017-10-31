@@ -861,5 +861,12 @@
   "yourSchoolParentDesc": "请采取行动在您的学校或地区推广计算机科学",
   "yourSchoolTeacherButton": "开始教学",
   "yourSchoolTeacherDesc": "今天就开始教学，无需计算机科学经验",
-  "yourSchoolTellUs": "告诉我们你的学校"
+  "yourSchoolTellUs": "告诉我们你的学校",
+  "congratsCertificateHeading": "You Earned a Certificate of Completion",
+  "congratsStudentHeading": "Students: Continue Learning Beyond an Hour",
+  "congratsTeacherHeading": "Teachers: Bring Computer Science to Your Classroom",
+  "projectGroupArtistAllProjects": "All Drawing Projects",
+  "projectGroupEventsAllProjects": "All Games with Events",
+  "projectGroupMinecraftAllProjects": "All Minecraft Projects",
+  "projectGroupPlaylabAllProjects": "All Play Lab Projects"
 }
