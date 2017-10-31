@@ -4,7 +4,8 @@ import color from "../util/color";
 
 const styles = {
   heading: {
-    color: color.teal
+    color: color.teal,
+    width: '100%'
   }
 };
 
