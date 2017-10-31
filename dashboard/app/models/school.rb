@@ -44,6 +44,12 @@ class School < ActiveRecord::Base
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
+  # Gets the seeding file name.
+  # @param stub_school_data [Boolean] True for stub file.
+  def self.get_seed_filename(stub_school_data)
+    stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+  end
+
   # Seeds all the data from the source file.
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
@@ -51,7 +57,7 @@ class School < ActiveRecord::Base
     options[:force] ||= false
 
     # use a much smaller dataset in environments that reseed data frequently.
-    schools_tsv = options[:stub_school_data] ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+    schools_tsv = get_seed_filename(options[:stub_school_data])
     expected_count = `wc -l #{schools_tsv}`.to_i - 1
     raise "#{schools_tsv} contains no data" unless expected_count > 0
 
@@ -62,7 +68,7 @@ class School < ActiveRecord::Base
     if options[:force] || School.count < expected_count
       CDO.log.debug "seeding schools (#{expected_count} rows)"
       School.transaction do
-        School.merge_from_csv(schools_tsv)
+        merge_from_csv(schools_tsv)
       end
     end
   end
@@ -74,7 +80,7 @@ class School < ActiveRecord::Base
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
     CSV.read(filename, options).each do |row|
       parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
-      loaded = School.find_by_id(parsed[:id])
+      loaded = find_by_id(parsed[:id])
       if loaded.nil?
         School.new(parsed).save!
       else
@@ -92,7 +98,7 @@ class School < ActiveRecord::Base
     cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id)
     CSV.open(filename, 'w', options) do |csv|
       csv << cols
-      rows = block_given? ? yield : School.order(:id)
+      rows = block_given? ? yield : order(:id)
       rows.map do |row|
         csv << cols.map {|col| row[col]}
       end

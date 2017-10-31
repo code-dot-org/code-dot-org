@@ -25,6 +25,12 @@ class SchoolDistrict < ActiveRecord::Base
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
+  # Gets the seeding file name.
+  # @param stub_school_data [Boolean] True for stub file.
+  def self.get_seed_filename(stub_school_data)
+    stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+  end
+
   # Seeds all the data from the source file.
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
@@ -32,7 +38,7 @@ class SchoolDistrict < ActiveRecord::Base
     options[:force] ||= false
 
     # use a much smaller dataset in environments that reseed data frequently.
-    school_districts_tsv = options[:stub_school_data] ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+    school_districts_tsv = get_seed_filename(options[:stub_school_data])
     expected_count = `wc -l #{school_districts_tsv}`.to_i - 1
     raise "#{school_districts_tsv} contains no data" unless expected_count > 0
 
@@ -43,7 +49,7 @@ class SchoolDistrict < ActiveRecord::Base
     if options[:force] || SchoolDistrict.count < expected_count
       CDO.log.debug "seeding school districts (#{expected_count} rows)"
       SchoolDistrict.transaction do
-        SchoolDistrict.merge_from_csv(school_districts_tsv)
+        merge_from_csv(school_districts_tsv)
       end
     end
   end
@@ -55,7 +61,7 @@ class SchoolDistrict < ActiveRecord::Base
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
     CSV.read(filename, options).each do |row|
       parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
-      loaded = SchoolDistrict.find_by_id(parsed[:id])
+      loaded = find_by_id(parsed[:id])
       if loaded.nil?
         SchoolDistrict.new(parsed).save!
       else
@@ -73,7 +79,7 @@ class SchoolDistrict < ActiveRecord::Base
     cols = %w(id name city state zip)
     CSV.open(filename, 'w', options) do |csv|
       csv << cols
-      rows = block_given? ? yield : SchoolDistrict.order(:id)
+      rows = block_given? ? yield : order(:id)
       rows.map do |row|
         csv << cols.map {|col| row[col]}
       end
