@@ -8,7 +8,8 @@ export const ATTEMPTING = 'ATTEMPTING';
 export const SUCCEEDED = 'SUCCEEDED';
 export const FAILED = 'FAILED';
 export const CELEBRATING = 'CELEBRATING';
-export const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
+export const UNKNOWN = 'UNKNOWN';
+export const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING, UNKNOWN];
 
 const style = {
   root: {
@@ -72,6 +73,8 @@ function styleFor(stepStatus) {
       return {color: color.realgreen};
     case HIDDEN:
       return {display: 'none'};
+    case UNKNOWN:
+      return {color: color.light_gray};
     default:
       return {
         color: color.red,
@@ -99,6 +102,8 @@ function iconFor(stepStatus) {
       return <FontAwesome icon="thumbs-o-up" className="fa-fw" style={iconStyle}/>;
     case FAILED:
       return <FontAwesome icon="times-circle" className="fa-fw" style={iconStyle}/>;
+    case UNKNOWN:
+      return <FontAwesome icon="question-circle" className="fa-fw" style={iconStyle}/>;
     default:
       throw new Error('Unknown step status.');
   }
