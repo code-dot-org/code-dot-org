@@ -3,6 +3,7 @@ import i18n from '@cdo/locale';
 import color from '../util/color';
 import Responsive from '../responsive';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
+import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
 
 const styles = {
@@ -32,6 +33,11 @@ export default class StudentsBeyondHoc extends Component {
           isRtl={isRtl}
           responsive={responsive}
           showContainer={false}
+        />
+        <LocalClassActionBlock
+          isRtl={isRtl}
+          responsive={responsive}
+          showHeading={false}
         />
       </div>
     );
