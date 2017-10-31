@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_stats) %>'
+title: '< % = hoc_s(:title_stats) % >'
 layout: wide
 nav: promote_nav
 ---
@@ -13,7 +13,7 @@ nav: promote_nav
 
 ## Bruk denne korte teksten i nyhetsbrevet.
 
-### Bring computer science to your school. Start with an Hour of Code!
+### Få informatikk inn i skolen din. Begynn med Kodetimen!
 
 Med teknologi som endrer alle bransje på planeten, har kunnskap om databehandling blitt en del av et helhetlig kunnskapsfundament. Men mindre enn halvparten av alle skoler underviser i informatikk! De gode nyhetene er at vi jobber for å endre dette. Hvis du hørte om Kodetimen i fjor, vet du kanskje at den ble historisk. 100 millioner elever har nå oppdaget hvor tilgjengelig og morsomt informatikk kan være bare ved å delta på en Kodetime.
 

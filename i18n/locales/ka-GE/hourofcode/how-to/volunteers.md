@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_how_to_volunteers) %>'
-layout: wide
+layout: ფართო
 nav: how_to_nav
 ---
 <%= view :signup_button %>
@@ -28,13 +28,13 @@ Tell your friends and co-workers about the Hour of Code. We have thousands of te
 - A teacher will contact you through this form (your email address will never be shared with the teacher). 
   - If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
 
-## How to prepare
+## როგორ მოვემზადოთ
 
-[Try out tutorials](hourofcode.com/learn) before heading to the classroom.
+საკლასო ოთახში მისვლამდე [გადახედეთ გაკვეთილებს](hourofcode.com/learn).
 
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
-- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+- შეამოწმეთ [კოდის ერთი საათის მოხალისეთა გზამკვლევი](/files/hoc-volunteer-toolkit.pdf)რომელშიც შედის მიმოხილვა, დროის ხაზი, მოსამზადებელი მასალები და სარეკლამო რესურსები. ყველაფერი, რაც მოხალისეობრივი გამოცდილებისთვის გჭირდება!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](%= resolve_url('/learn') %).
 - If you're visiting a school, complete any background checks or required paperwork.
 - [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students.

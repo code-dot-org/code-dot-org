@@ -1,6 +1,6 @@
 'hi':
   site_name: 'एक घंटा कोड का'
-  hour_of_code: 'Ek Gante Ka Computer Code '
+  hour_of_code: 'एक घंटा कोड का'
   language: 'हिन्दी'
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'जल्द आ रहा है'
@@ -12,7 +12,7 @@
   campaign_date_year: "2017"
   campaign_date_full_year: "December 4-10, 2017"
   front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default: 'द ऑवर ऑफ़ कोड एक वैश्विक आन्दोलन है जो 180+ से अधिक देशों में लाखों करोड़ों क्षत्रों तक पहुंचा हुआ है। कोई भी कहीं भी ऑवर ऑफ़ कोड का आयोजन कर सकता है। एक घंटे के टुटोरिअल 45 भाषाओं में उपलब्ध है। कोई भी अनुभव की आवश्यकता नहीं। <strong>4 से 104 की उम्र के लिए।</strong>'
   front_watch_video: 'नया वीडियो देखें'
   front_watch_regular_video: 'वीडियो देखें'
   front_volunteers: 'तकनीकी स्वयंसेवकों चाहते थे'
@@ -20,8 +20,8 @@
   header_menu_resources: 'संसाधन'
   header_menu_faq: 'आम सवाल'
   header_menu_how_to: 'कैसे-करें'
-  header_menu_promote: 'Promote'
-  header_menu_activities: 'Activate'
+  header_menu_promote: 'बढ़ावा दें'
+  header_menu_activities: 'गतिविधियाँ'
   not_found_title: 'अप्राप्त पृष्ठ'
   not_found_desc: 'अनुरोधित पृष्ठ नहीं मिला'
   not_found_instructions: 'वेब पता जांचें और पुनः सबमिट करें या नीचे दी गई सूची में से कोई लिंक चुनें ।'
@@ -218,6 +218,7 @@
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "For more information, please visit code.org"
   front_join_us_n_students_served: "# served"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'आपका नाम'
   signup_name_error: 'Name is required.'
@@ -243,9 +244,9 @@
   signup_name_placeholder: 'आपका नाम'
   signup_email_placeholder: 'आप@नमूना.com'
   signup_organization_name_placeholder: "उदाहरण के लिए, लिंकन हाई स्कूल"
-  signup_event_country_label: "Event country"
-  signup_event_country_error: "Country is required."
-  signup_event_location_placeholder: "पोस्टल कोड और देश या पूर्ण पते। \\r\n(इस्का इस्तमॉल हम नक़्शेपे पिन के रूप में दिखनेके लिए करेंगे)"
+  signup_event_country_label: "घटना का देश"
+  signup_event_country_error: "देश की आवश्यकता है ।"
+  signup_event_location_placeholder: "पोस्टल कोड और देश या पूरा पता।"
   signup_special_event_details_placeholder: 'इस कार्यक्रम की विशेषताए बताये'
   signup_send_posters_address_placeholder: 'पता नक़्शे पे लिखा नहीं जायेगा'
   signup_event_type_in_school: 'प्रशाला में'
@@ -349,13 +350,13 @@
   resources_country_resources: देश विशिष्ट संसाधन
   resources_stickers: स्टिकर्स
   resources_how_to_guides: 'कैसे-करें मार्गदर्शिकाएं'
-  resources_promote: 'Promote'
+  resources_promote: 'बढ़ावा दें'
   resources_nav_tutorials: 'ट्यूटोरियल की कोशिश करो'
   resources_nav_promote: 'प्रचार कीजिये'
   resources_nav_spread_word: 'कैसे शामिल हो'
-  resources_banner_promote_text: "Promote"
+  resources_banner_promote_text: "बढ़ावा दें"
   resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
-  resources_banner_howto_text: "How-to"
+  resources_banner_howto_text: "कैसे-करें"
   resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
   handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout

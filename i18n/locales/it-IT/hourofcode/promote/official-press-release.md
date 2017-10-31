@@ -38,19 +38,19 @@ Contatti: [**CONTATTI**]
 </p>
 
 <p>
-  [<strong>INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “We need to encourage and embrace our students’ interest in computer science,” said [<strong>INSERT NAME</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+  [<strong>INSERISCI CITAZIONE DA PORTAVOCE, ESEMPIO RIPORTATO DI SEGUITO:</strong>] <br /> "Abbiamo bisogno di incoraggiare e abbracciare l'interesse dei nostri studenti in informatica," ha detto [<strong>Inserire nome</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
 </p>
 
 <p>
-  [<strong>INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION</strong>]
+  [<strong>INSERIRE ULTERIORI INFORMAZIONI PER IL VOSTRO EVENTO E/O ORGANIZZAZIONE</strong>]
 </p>
 
 <p>
-  [<strong>INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT</strong>]
+  [<strong>INSERIRE LA CITAZIONE DA UN'ALTRA ORGANIZZAZIONE O QUALCUNO CHE HA PARTECIPATO ALL'EVENTO</strong>]
 </p>
 
 <p>
-  For more information about [<strong>EVENT/PROGRAM/ETC</strong>], visit [<strong>INSERT WEBSITE</strong>] or contact [<strong>INSERT CONTACT INFORMATION</strong>]
+  Per ulteriori informazioni su [<strong>Evento/programma/ETC</strong>], visitare [<strong>Inserisci sito</strong> o contattare [<strong>Inserire informazioni di contatto</strong>]
 </p>
 
 <p>

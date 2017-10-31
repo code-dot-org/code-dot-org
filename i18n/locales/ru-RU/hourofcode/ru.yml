@@ -218,6 +218,7 @@
   front_join_us_more_info: "Чтобы узнать больше, посетите<a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "Чтобы узнать больше, зайдите на code.org"
   front_join_us_n_students_served: "# уже попробовали"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Организуйте Час Кода в течение%{campaign_date} и зарегистрируйте его здесь.'
   signup_name_label: 'Ваше имя'
   signup_name_error: 'Name is required.'

@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Bagaimana untuk membawa Hour of Code ke seluruh komunitas Anda.
+# Bagaimana membawa Sejam Memprogram ke seluruh komunitas Anda.
 
 [col-33]
 
@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Buat semua sekolah berpartisipasi, setiap pelajar harus mempelajarinya!
 
-1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Baca versi satu-halaman kami** tentang Mengapa pendidikan ilmu komputer itu penting, dan bagaimana Anda dapat membantu upaya mendukung Sejam Memprogram. [Ambil si satu-halaman di sini.](/files/hoc-one-pager-public-officials-2016.pdf)
 
 2. **Recruit local schools and districts.** Use [this email](%= resolve_url('/promote/resources#sample-emails') %) or [this blurb](%= resolve_url('/promote/stats') %) as a starting point, and take a look at this [how-to](%= resolve_url('/how-to') %) for schools and districts.
 

@@ -11,7 +11,7 @@ nav: how_to_nav
 
 ## 2. Elige un tutorial
 
-Contamos con una variedad de [tutoriales divertidos de una hora](<%= resolve_url('https://code.org/learn') %>) para participantes de todas las edades, creados por una variedad de socios. [¡Probadlos!](<%= resolve_url('/learn') %>)
+Contamos con una variedad de [tutoriales divertidos de una hora](<%= resolve_url('https://code.org/learn') %>) para participantes de todas las edades, creados por una variedad de socios. [¡Pruébalos!](<%= resolve_url('/learn') %>)
 
 **Todos los tutoriales de la Hora de Código:**
 
@@ -26,7 +26,7 @@ Contamos con una variedad de [tutoriales divertidos de una hora](<%= resolve_url
 
 Promociona tu Hora de Código [con estas herramientas](<%= resolve_url('/promote') %>) y anima a otros a organizar sus propios eventos.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planifica tus necesidades tecnológicas - los ordenadores son opcionales
 
 <div class="col-66" style="padding-right: 20px;">
   Para una mejor experiencia de la Hora de Código necesitas ordenadores conectados a Internet. Pero no necesitas un ordenador por cada estudiante, incluso puedes hacer la Hora de Código sin ordenadores.
@@ -53,18 +53,18 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 
 - El vídeo original del lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
 - El [vídeo de lanzamiento de la Hora del Código 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o el <% if @country == 'uk' %> [vídeo de la Hora del Código 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vídeo de la Hora del Código 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [El presidente Obama llama a todos los estudiantes a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encuentra más videos motivadores [aquí](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **No hay problema si es nuevo en Ciencas de la Computación. Aquí tiene algunas ideas para presentar su actividad de Hora del Código:**
 
-- Explique algunas formas en las que la tecnología hace impacto en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (hable acerca de las tecnologías que salvan vidas, ayudando a las personas o conectándolas).
+- Explique como la tecnología impacta nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (hable acerca de las aplicacioned y tecnología que se usan para salver vidas, ayudar a la gente, contectar a la gente, etc.).
 - Haga una lista de las cosas que utilizan código en la vida cotidiana.
 - - Vea consejos para que las niñas se interesen en la Informática [aquí](<%= resolve_url('https://code.org/girls') %>).
 
 **¿Necesitas más orientación?** Descarga esta [plantilla de planificación de la lección](/files/EducatorHourofCodeLessonPlanOutline. docx).
 
-## 6. Code!
+## 6. ¡A Programar!
 
 **Dirige a los participantes en la actividad**
 
@@ -73,7 +73,7 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 **Cuando alguien se encuentra con dificultades, lo ideal es responder:**
 
 - "No sé. Vamos a averiguarlo juntos."
-- "La tecnología no siempre funciona de la manera que queremos."
+- "La tecnología no siempre funciona como queremos."
 - "Aprender a programar es como aprender un nuevo idioma; usted no tendrá fluidez inmediatamente."
 
 **¿Qué hacer si alguien termina antes?**
@@ -118,7 +118,7 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 
 ## Otros recursos de Hora del Código para educadores:
 
-- Revisa [las mejores prácticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de los últimos organizadores de la hora del código. 
+- Revisa [las mejores prácticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de los organizadores previos de la hora del código. 
 - Vea la grabación de nuestra webinar [Guía del educador para la Hora de Código](https://youtu.be/EJeMeSW2-Mw).
 - Visite el [Foro de la Hora del Código](http://forum.code.org/c/plc/hour-of-code) para obtener consejos y apoyo de otros organizadores. <% if @country == 'us' %>
 - Revise las [ FAQS de Hora de Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -127,7 +127,7 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 
 La Hora del Código es sólo el primer paso de un viaje para aprender más de cómo funciona la tecnología y cómo crear aplicaciones de software. Para continuar este viaje:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Anime a los estudiantes a seguir [aprendiendo online](<%= resolve_url('https://code.org/learn/beyond') %>).
 - [Asista a](<%= resolve_url('https://code.org/professional-development-workshops') %>) un taller presencial de 1 día, para recibir entrenamiento por un facilitador experimentado en Ciencias de la Computación. (Sólo para educadores de Estados Unidos)
 
 <%= view :signup_button %>

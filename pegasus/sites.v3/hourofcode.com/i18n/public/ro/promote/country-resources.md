@@ -1,6 +1,6 @@
 ---
-title: '<%= hoc_s(:title_country_resources) %>'
-layout: wide
+title: <%=hoc_s(titlu_tara_resurse)%>
+layout: larg
 nav: promote_nav
 ---
 <%= view :signup_button %>
@@ -9,18 +9,18 @@ nav: promote_nav
 
 # Recursos
 
-## ¿Qué hacemos cuando hacemos la Hora del Código?
+## ¿Ce facem atunci cand facem Timpul Codului?
 
 <div class="handout" style="width: 50%; float: left;">
   
 <a href="/la/files/hacemos-la-Hora-del-Codigo.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo.png"></a>
-<br />En Español
+<br />In Spaniola
 </div>
 
 <div class="handout" style="width: 50%; float: left;">
   
 <a href="/la/files/hacemos-la-Hora-del-Codigo-Ingles.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo-Ingles.png"></a>
-<br />En Inglés
+<br />In Engleza
 </div>
 
 <div style="clear:both"></div>
@@ -30,14 +30,14 @@ nav: promote_nav
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)</strong></a>
+<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>De ce toată lumea trebuie să învețe să programeze? Participați la Ora de cod în Argentina (5 min)</strong></a>
 
   
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
   
-[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=_vq6Wpb-WyQ)
+[ <puternic> Timp de cod în Chile (2 min) </ puternic> ](https://www.youtube.com/watch?v=_vq6Wpb-WyQ)
 
 <% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -98,7 +98,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 ## 1) Încercaţi Tutorialele:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+O sa gazduim varietati de distractie, tutoriale lungi, create de o varietate de parteneri. Noi tutoriale vin pentru a da startul Orei Codulyi inante<%= data_campaniei('plin')%>.
 
 **Toate tutorialele Hour of Code:**
 
@@ -132,11 +132,11 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% elsif @country == 'pe' %>
 
-# La Hora del Código Perú <iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+# Ora de cod Peru <iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 <
 
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
+p> [ <puternic> Pedro Pablo Kuczynski. Președintele Peru 2016-2021 </ puternic> ](https://www.youtube.com/watch?v=whSt53kn0lM)
 
 <% else %>
 

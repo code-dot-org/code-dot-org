@@ -218,6 +218,7 @@
   front_join_us_more_info: "Za više informacija, molimo posjetite <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "Za više informacija, molimo posjetite code.org"
   front_join_us_n_students_served: "# posluženo"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Organizirajte Sat kodiranja tijekom %{campaign_date} i prijavite ga ovdje.'
   signup_name_label: 'Ime'
   signup_name_error: 'Name is required.'

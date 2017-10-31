@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_how_to_parents) %>'
-layout: wide
+layout: ფართო
 nav: how_to_nav
 ---
 <%= view :signup_button %>
@@ -9,7 +9,7 @@ nav: how_to_nav
 
 შეასრულეთ კოდის ერთი საათი სახლში, ან გამოთქვით სურვილი განახორციელოთ იგი თქვენი შვილის კლასში! ამისთვის:
 
-## 1) უყურეთ ამ ინსტრუქციის ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2) აირჩიეთ ტუტორიალი:
 

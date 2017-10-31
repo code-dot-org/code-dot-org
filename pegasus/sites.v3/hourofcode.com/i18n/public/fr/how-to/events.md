@@ -1,35 +1,35 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
-layout: wide
-nav: how_to_nav
+title: <%=hoc_s(title_comment_faire_événements) %>
+layout: large
+nav: comment_faire_nav
 ---
 <%= view :signup_button %>
 
 # Comment organiser une session l'Heure de Code
 
-## 1. Prepare for your event
+## 1. Préparez pour votre prochaine événement
 
-- Determine a venue, date, and time.
+- Choisissez un lieu, une date et une heure.
 - Envoyez [une lettre](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) pour inviter votre maire, votre député, le président de votre région ou un homme d'affaires influent à prendre la parole.
 - Invitez les médias, comme par exemple une station de radio ou une télé locale, un journal, des blogueurs spécialisés dans l'éducation ou les nouvelles technologies. Regardez notre [dossier de presse](<%= resolve_url('/promote/press-kit') %>) pour plus de conseils.
 
-## 2. During your event
+## 2. Pendant votre événement
 
-- Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
+- Commencez votre événement avec un de nos [vidéos encourageants](<%= resolve_url('/promote/resources#videos') %>).
 - Faites une présentation pour montrer quelle est l'importance de l'informatique, en utilisant des [statistiques et des graphiques](<%= resolve_url('/promote/stats') %>).   
       
     
 - Autres idées d'événements : 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Invitez un chef d'industrie locale à discuter de ses travails liés à l'informatique.
+    - Invitez un politicien locale et demandez aux élèves de lui apprendre le codage.
+    - Demandez un groupe d'élèves de faire une démonstration d'une activité hors ligne.
+    - Demandez un groupe d'étudiamts d'apprendrele le codage à un directeur ou un group d'enseignants.
+    - Si votre école enseigne déjà l'informatique, demandez les élève de faire démonstration de quelques projets.
 
-## 3. Share how it went
+## 3. Montrez comment ça c'est passé
 
 - Partagez les photos de votre événement sur Facebook et Twitter. 
-- Use the hashtag **#HourOfCode**
+- Utilisez le hastag **#HeuredeCode**
 
 ## Host a Family Code Night with the Hour of Code and invite parents to participate
 

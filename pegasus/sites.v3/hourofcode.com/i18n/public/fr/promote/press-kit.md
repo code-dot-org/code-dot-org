@@ -1,7 +1,7 @@
 ---
 title: '<%= hoc_s(:title_press_kit) %>'
-layout: wide
-nav: promote_nav
+layout: large
+nav: promotion_nav
 ---
 <%= view :signup_button %>
 
@@ -38,17 +38,17 @@ La meilleure façon d'établir un contact, c'est le courriel. Ce devrait être c
 
 **4. Préparez des réponses aux questions sur votre évènement scolaire. Voici quelques exemples:**
 
-*Pouqui votre école participe-t-elle à l'Heure du Code?*
+*Pourquoi votre école participe-t-elle à l'Heure du Code?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Alors que nous savons tous qu'il est important pour les étudiants d'apprendre à naviguer dans notre mode hyper-technologique, de nombreux enseignants n'ont pas d'expérience en informatique et ne savent pas par où commencer. Cet événement est une chance pour tous de voir ce qu'est l'informatique.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Nous espérons que cette initiative va susciter l'intérêt de nos élèves et qu'ils souhaiteront poursuivre cet apprentissage. Des recherches montrent également que les enfants assimilent des concepts de programmation avant même de savoir lire ou écrire. En fait, leurs jeunes cerveaux sont bien plus réceptifs, comme pour l'apprentissage des langues étrangères.
 
-*Why is this important?*
+*Pourquoi est-ce important?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+La technologie transforme tous les secteurs de la planète. En 2015, 7 millions d'offres d'emplois aux Usa se situaient dans des métiers qui requièrent des capacités de programmation, y compris dans les secteurs de l'art et du design. Mais 75 % des écoles aux USA n'enseignent pas l'informatique. Il est temps pour nous de rentrer dans le 21e siècle. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
-**More details and a quote you can use in materials**
+**Plus d'informations et une citation que vous pouvez utiliser dans vos outils promotionnels**
 
 "The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 

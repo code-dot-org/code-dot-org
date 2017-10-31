@@ -35,9 +35,12 @@ nav: promote_nav
 
 [Thwebula ukuhumushelwa kwehi-res](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"iHora loKufingqwa" limakelwe uhwebo. Asifuni ukuvimba ukusetshenziswa, kodwa sifuna ukwenza isiqiniseko sokuba kufanelana ngaphakathi kwemigcele embalwa:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Nayiphi na inkomba ku "Hora loKufingqwa" kufanele isetshenziswe ngomkhuba ongakhombi ukuba umkhiqizo wakho, kodwa ekhombisa iHora loKufingqwa njengesisekelo somnyakazo. Isibonelo esihle: "Hlanganyela kuHora loKufingqwa ku ACMECorp.com". Isibonakaliso esibi: "Zama iHora loKufingqwa ngenkampani yeACME".
+1. Nayiphi na inkomba ku "Hora loKufingqwa" kufanele isetshenziswe ngomkhuba ongakhombi ukuba umkhiqizo wakho, kodwa ekhombisa iHora loKufingqwa njengesisekelo somnyakazo.
+    
+    - Isibonelo esihle: "Hlanganyela kuHora loKufingqwa ku ACMECorp.com". 
+    - Isibonakaliso esibi: "Zama iHora loKufingqwa ngenkampani yeACME".
 2. Sebenzisa umbhalo ongezansi we"TM" kuzindawo eziqavileyo lapho ukhuluma ngeHora loKufingqwa, kuwebhisayithi yakho kanye nakuncazelo yehlelo lakho.
 3. Hlanganisa ulwimi kukhasi (noma kunyaweni wekhasi), okubala izixhumaniso kumawebhusayithi eCSEdWeek kanye neCode.org, akhuluma lokhu okulandelayo:
     
@@ -58,13 +61,15 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## Cela isikole sakho, umcashi okanye izihlobo ukuba zibhalise:
+### Ask your school, employer, or friends to sign up:
 
-Amakhompyutha atholakala kuyo yonke indawo, ekushintsheni imboni zonke mhlaba wonke jikelele. Kodwa zingaphansi kwengxenye izikole ezifundisa ikhompyutha sayensi. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu. Uma uzwile ngeHora loKufingqwa ngaphambilini, kungenzeka uyazi ukuthi yenza umlando. Badlulele kukhulu lezigidi abafundi abasebezame iHora loKufingqwa.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
+Amakhompyutha atholakala kuyo yonke indawo, ekushintsheni imboni zonke mhlaba wonke jikelele. Kodwa zingaphansi kwengxenye izikole ezifundisa ikhompyutha sayensi. Good news is, we’re on our way to change this! Uma uzwile ngeHora loKufingqwa ngaphambilini, kungenzeka uyazi ukuthi yenza umlando. Badlulele kukhulu lezigidi abafundi abasebezame iHora loKufingqwa.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Yazisa abantu. Hlela umcimbi. Cela isikole esigodini ukuba sibhalise. Okanye zama iHora loKufingqwa ngokwakho-wonke umuntu angazuza ngokufunda izisekelo.
 
@@ -72,31 +77,29 @@ Qalisa ku http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
-## Mema abezindaba/abokusasaza ukuba babekhona kumcimbi wakho:
+### Mema abezindaba/abokusasaza ukuba babekhona kumcimbi wakho:
 
 **Umugqa kuncike:** Isokole sendawo sizibandakanya kumsebenzi wokwenziwa ukwazisa abafundi kukhompyutha sayensi
 
 Amakhompyutha akhona kuyonke indawo, ashinstha kumabhizinisi umhlaba wonke, kodwa ayicosana kusigamu sezikole ezifundisa ikhompwutha sayensi. Amantombazane kanye nabangamelwanga abamelwanga kumakilasi ekhompyutha sayensi ngendlela efanele, kanye nakumbhoni yethekhi. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu.
 
-NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Ngibhalela ukukumema ukuba ubekhona kumhlangano wethu wokuqala, ubese ubona izingane ziqala umsebenzi ngo [USUKU].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-IHora loKufingqwa, elihlelwe nguCode.org ongananzuzo kanye nabanye abadlulela ngale kukhulu, ingumnyakazo oyimbulunga okholwa ukuba abafundi banamhlanje bakulungele ukufunda amakhono abucayi ukuze baphumelele esikhathini samanje. Sicela uhlanganyele nathi.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Sicela uhlanganyele nathi.
 
-**Xhumana:** [IGAMA LAKHO], [ISIHLOKO], umakhalekhukhwini: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**Nini:** [USUKU kanye NESIKHATHI somcimbi wakho]
-
-**Kuphi:** [IKHELI kanye INDLELA]
-
-Ngithokozela ukuxhumana njalo.
+I look forward to being in touch. [YOUR NAME]
 
 <a id="parents"></a>
 
-## Xoxela abazali ngomcimbi wesikole sakho:
+### Xoxela abazali ngomcimbi wesikole sakho:
+
+**Subject line:** Our students are changing the future with an Hour of Code
 
 Bazali abathandekayo,
 
@@ -106,7 +109,7 @@ Kodwa kungabambalwa kithi abafundayo **indlela** ithekhinoloji iyasebenza. Kunge
 
 Yingakho isikole sethu sonke bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (%=usuku_umkhankaso('olugcwele') %>). Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa.
 
-IHora loKufingqwa lwethu lwenza isitatimende ukuba [IGAMA LESIKOLE] sikulungele ukufundisa lamakhona ayisisekelo esikhathini samanje. Ukuqhubeka ukuletha imisebenzi yokuphrogrema kubafundi bakho, sifuna ukwenza umcimbi wethu weHora loKufingqwa ubemkhulu. Ngiyakukhuthaza ukuba uvolontiye, finyelela kwezokusasa zendawo, yabelana lezindaba kwezokusasaza zokuxhumana uphinde ucabangisise ukuhlela eminye imicimbi yeHora loKufingqwa kumpthakathi.
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. Ukuqhubeka ukuletha imisebenzi yokuphrogrema kubafundi bakho, sifuna ukwenza umcimbi wethu weHora loKufingqwa ubemkhulu. Ngiyakukhuthaza ukuba uvolontiye, finyelela kwezokusasa zendawo, yabelana lezindaba kwezokusasaza zokuxhumana uphinde ucabangisise ukuhlela eminye imicimbi yeHora loKufingqwa kumpthakathi.
 
 Leli ithuba lokushintsha ikusasa lemfundo ku [IGAMA LEDOLOBHA].
 
@@ -118,20 +121,24 @@ Ithisha Nhloko Wakho
 
 <a id="politicians"></a>
 
-## Mema owezepolotiki wendawo kumcimbi wesikole sakho:
+### Mema owezepolotiki wendawo kumcimbi wesikole sakho:
+
+**Subject line:** Join our school as we change the future with an Hour of Code
 
 Othandekayo [Mphathi Dolobha/Umkhulumeli/Umbusi ISIBONGO]:
 
 Uthi bewazi ukuba ezekhompyutha #1 umthombo wezenkokhelo eU.S.? Idlulele ku 500,000 imisebenzi yezekhompyutha evulekile izwe lonke, kodwa unyaka odlule abafundi abatheswe iziqu zokuba basebenze bangu 42,969 kuphela.
 
-Ikhompyutha sayensi iyisisekelo yawo *wonke* umkhakha namhlanje. Kodwa 75% yezikole ziyayifundisa. Ku [IGAMA LESIKOLE], sizama ukushintsha lokho.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 Yingakho isikole sethu sonke bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (%=usuku_umkhankaso('olugcwele') %>). Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa.
 
-Ngibhalela ukukumema ukuba ubambe ichaza kumcimbi wethu weHora loKufingqwa nokuba ukhulume kumhlangano wethu wokuqala. Uzothatha indawo ngo [USUKU, ISIKHATHI, INDAWO], sizophinda senze isitatimende esiqinile ukuthi [igama leNdawo, Dolobha] ikulungele ukufundisa abafundi bethu amakhono abucayi esikhathini samanje. Sifuna ukuqinisekisa ukuba abafundi bethu baphambili ekudaleni ithekhinoloji yakusasa-hhayi ukuyithenga.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. Sifuna ukuqinisekisa ukuba abafundi bethu baphambili ekudaleni ithekhinoloji yakusasa-hhayi ukuyithenga.
 
 Ngicela uxhumane nami ku [INOMBOLO ZOCINGO OKAYE IKHELI LE IMEYILI]. Ngiyothokozela ukuzwa impendulo yakho.
 
-Ngokuzithoba, [IGAMA], [ISIHLOKO]
+Ngokuzithoba,
+
+[NAME], [TITLE]
 
 <%= view :signup_button %>

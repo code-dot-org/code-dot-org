@@ -20,9 +20,9 @@ nav: how_to_nav
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Tanítási útmutatóra van szükséged a "Kódolás Órájához"? **Próbál ki [ezt a mintát](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Népszerűsítsd a Kódolás Órája eseményedet!
 
 Népszerűsítsd a Kódolás Óráját [ezekkel az eszközökkel](<%= resolve_url('/promote') %>), és biztass arra másokat is, hogy szervezzék meg saját eseményüket.
 

@@ -34,13 +34,13 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and e
 
 ## 4) Rancangkan keperluan teknologi anda - komputer adalah pilihan
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Pengalaman jam mengenai Hour of code amalan terbaik termasuk komputer yang disambungkan kepada Internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**Pelan!** Perkara-perkara berikut sebelum Majlis anda bermula:
 
   * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan melihat bahawa sains komputer adalah berkaitan sosial dan usaha sama juga.
+  * **Tidak mempunyai komputer cukup?** Menggunakan [programing pasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan melihat bahawa sains komputer adalah berkaitan sosial dan usaha sama juga.
   * **Mempunyai jalur lebar yang rendah?** Rancang supaya video ditayangkan di hadapan kelas, agar setiap pelajar tidak perlu untuk memuat turun video sendiri. Atau cuba tutorial tanpa/luar talian.
 
 ![](/images/fit-350/group_ipad.jpg)

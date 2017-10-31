@@ -51,7 +51,7 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 自我介紹: </ul>
 
 - What do you work, what do you do, and what do you love most about your job?
-- What or who inspired you?
+- 什麼或誰激勵了你
 - How did you get interested in computer science?
 - Did you have a mentor?
 - Share a story about how tech affects everyone.</ul></td> </tr> 

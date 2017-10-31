@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_stats) %>'
-layout: wide
+layout: ფართო
 nav: promote_nav
 ---
 

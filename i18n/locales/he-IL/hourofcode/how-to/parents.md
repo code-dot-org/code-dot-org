@@ -11,7 +11,7 @@ nav: how_to_nav
 
 ## 1) צפו בסרטון ההדרכה <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) בחרו מדריך:
+## 2) בחרו בסרטון ההדרכה:
 
 אנו מספקים מגוון רחב של הדרכות מהנות שאורכם כשעה, לתלמידים בכל הגילאים, שנוצרו על ידי מגוון של שותפים. [נסה אותם!](%= resolve_url('/learn') %)
 
@@ -40,7 +40,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
+- ערכו רשימה של דברים שמשתמשים בקוד בחיי היום יום.
 - See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
@@ -55,9 +55,9 @@ When you've chosen the tutorial you would like to do, you can bookmark the tutor
 
 It’s okay to respond:
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "אני לא יודע.. בוא נפתור את זה יחד."
+- "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
+- "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
 
 ## 6) Celebrate
 

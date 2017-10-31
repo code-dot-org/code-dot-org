@@ -56,10 +56,10 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**זה לגמרי בסדר אם אתה חדש לגמרי במדעי המחשב. הנה כמה רעיונות כדי להציג בפניך את הפעילות של "שעה של קוד":**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-- List things that use code in everyday life.
+- הסבירו את הדרכים בהם הטכנולוגיה משפיעה על חיינו, עם דוגמאות שיענינו גם בנים וגם בנות ( דברו על אפליקציות וטכנולוגיה שמסיעים בהצלת חיים, לסייע לאנשים, לחבר בין אנשים וכו).
+- ערכו רשימה של דברים שמשתמשים בקוד בחיי היום יום.
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
@@ -70,16 +70,16 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**כאשר מישהו נתקל בקשיים זה בסדר להגיב:**
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "אני לא יודע.. בוא נפתור את זה יחד."
+- "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
+- "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
 
-**What to do if someone finishes early?**
+**מה לעשות אם מישהו מסיים מוקדם?**
 
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
+- עודדו את המשתתפים לנסות עוד פעילויות של "שעה של קוד" ב- [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+- או, הציעו למי שסיים מוקדם לעזור לאחרים שמתקשים.
 
 [col-33]
 
@@ -118,9 +118,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- בדוק [שיטות עבודה מומלצות](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) מאת המארגנים של "שעה של קוד" מן העבר. 
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+- בקרו ב [שעה של קוד הפורום](http://forum.code.org/c/plc/hour-of-code) כדי לקבל עצות, תובנה ותמיכה של המארגנים אחרים. <% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## איך ממשיכים אחרי "שעה של קוד"?

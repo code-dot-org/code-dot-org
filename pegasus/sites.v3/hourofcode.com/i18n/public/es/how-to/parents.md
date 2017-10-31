@@ -56,7 +56,7 @@ Cuando hayas elegido el tutorial que quiere hacer, puede marcar el enlace corto 
 Está bien responder:
 
 - "No sé. Vamos a averiguarlo juntos."
-- "La tecnología no siempre funciona de la manera que queremos."
+- "La tecnología no siempre funciona como queremos."
 - "Aprender a programar es como aprender un nuevo idioma; usted no tendrá fluidez inmediatamente."
 
 ## 6) Celébralo

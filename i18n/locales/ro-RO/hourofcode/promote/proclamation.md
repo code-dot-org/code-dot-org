@@ -1,6 +1,6 @@
 ---
-title: '<%= hoc_s(:title_proclamation) %>'
-layout: wide
+title: '<%= hoc_s(:titlu_proclamatie) %>'
+layout: larg
 nav: promote_nav
 ---
 <%= view :signup_button %>

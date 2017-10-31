@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # כיצד להביא את "שעה של קוד" לחברה שלך
 
-## Inspire students and volunteer for the Hour of Code
+## עודדו לסטודנטים והנתנדבו עבור "שעה של קוד"
 
 Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
@@ -78,11 +78,11 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **When participants come across difficulties it's okay to respond:**
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "אני לא יודע.. בוא נפתור את זה יחד."
+- "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
+- "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
 
-**What to do if someone finishes early?**
+**מה לעשות אם מישהו מסיים מוקדם?**
 
 - They can try another Hour of Code activity at hourofcode.com/learn
 - Or, ask them to help a friend who are having trouble with the activity.

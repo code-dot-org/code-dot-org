@@ -14,38 +14,38 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # 感谢注册并组织编程一小时活动！
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+为了感谢的你帮助，使学生们开始学习计算机成为可能，我们想为你的课堂提供一套免费的具有各种重要例题的专业印刷海报。 在结账时使用**免单劵**。 （注意：这只能用于最后的物品清单，而你需要支付运费。 因为这些海报从美国出口，如果发往加拿大或者世界各地运费将会相当高。 我们能理解这可能不在的预算之中，所以我们鼓励你打印[PDF文档](https://code.org/inspire)作为你课堂的资料。  
   
-[<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+[<button>获取海报</button>](https://store.code.org/products/code-org-posters-set-of-12)使用免单劵。
 
   
-**Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+**在编程一小时项目运行期间。新的课程和其它令人兴奋的更新推出时我们将与你联系。在这期间，你可以做些什么呢？**
 
-## 1. Spread the word in your school and community
+## 1. 传递你在社会和学校中学习的信息。
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+告诉你的朋友们你刚刚加入了**编程一小时活动**，告诉他们相关的信息。!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>   
-Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 你不必在学校学习新的技能。 Invite a local politician or policy maker to visit your school for the Hour of Code. 它能为你在你领域的计算机科学找到一小时之外的支持。
+[发送这封电子邮件](%= resolve_url('/promote/resources#sample-emails') %)鼓励他人来参与活动。联系的校长并邀请你学校里的每个班级来报名参与。 从本地组织招募 — — 男孩/女孩童子军俱乐部、 教会、 大学、 退伍军人团体、 工会或甚至一些朋友。 你不必在学校学习新的技能。 邀请当地的政治家或者决策者来参观你们学校的编程一小时活动。 它能为你在你领域的计算机科学找到一小时之外的支持。
 
 为你的活动使用这些[海报、 横幅、 贴纸、 视频以及更多](%= resolve_url('/promote/resources') %)。
 
 ## 2. 找当地的志愿者来帮助你的活动
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[搜索我们的志愿者分布图](%= resolve_url('https://code.org/volunteer/local') %)寻找可以参观你的课堂或者远程视频聊天的志愿者来激励你的学生们了解到计算机科学带来的多样的可能性。
 
 ## 3. Plan your Hour of Code
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
+为你的课堂选择一项[编程一小时活动](https://hourofcode.com/learn)并[回顾基本指南](%= resolve_url('/how-to') %)。.
 
-# Go beyond an Hour of Code
+# 编程一小时以外的更多内容
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> 编程一小时活动只是一个开始。 无论你是管理者、老师或是发起者，我们都有[专业发展、课程以及一些其他资源来帮助你将计算机科学课堂带入你的学校或者推广你的宣传。](https://code.org/yourschool)如果你已经从事计算机科学教育，在CS教育周期间使用这些资源来整合你从政府、家长和社区得到的支持。
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+你有很多选择，以适合你的学校。 大多数的机构提供编程一小时教程包括课程和专业发展方向可用。 如果你发现一个你喜欢的课程，去了解更多。 为了帮助你入门，我们图书了大量的[能帮助你或者你的学生们超越编程一小时的课程提供者](https://hourofcode.com/beyond)。
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> 编程一小时活动只是一个开始。 大多数机构也提供一些可以让你学得更多的编程一小时课程。 为了帮助你入门，我们图书了大量的[能帮助你或者你的学生们超越编程一小时的课程提供者](https://hourofcode.com/beyond)。
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org 也免费为您和您的学校提供超过25种语言的全面的[计算机科学介绍](https://code.org/educate/curriculum/cs-fundamentals-international)。 <% end %>
 
 <%= view 'popup_window.js' %>

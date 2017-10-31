@@ -218,6 +218,7 @@
   front_join_us_more_info: "Толық мәлімет үшін <a href='https://code.org'>code.org</a> бетіне өтіңіз."
   front_join_us_code_info: "Толық мәлімет үшін code.org бетіне өтіңіз"
   front_join_us_n_students_served: "Қызмет етілген саны"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: '%{campaign_date} аралығында өтетін Кодтау сағатын ұйымдастыр және оны осында тіркеп қой.'
   signup_name_label: 'Аты-жөніңіз'
   signup_name_error: 'Name is required.'

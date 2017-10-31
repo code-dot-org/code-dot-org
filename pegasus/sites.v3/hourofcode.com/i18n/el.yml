@@ -218,6 +218,7 @@
   front_join_us_more_info: "Για περισσότερες πληροφορίες, παρακαλώ επισκεφθείτε το <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "Για περισσότερες πληροφορίες, παρακαλώ επισκεφθείτε το code.org"
   front_join_us_n_students_served: "#εξυπηρετείτε"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Οργανώστε μία Ώρα του Κώδικα στις %{campaign_date}, και εγγράψτε την εδώ.'
   signup_name_label: 'Το όνομά σου'
   signup_name_error: 'Απαιτείται όνομα.'
@@ -266,10 +267,10 @@
   map_search_placeholder: 'Αναζήτηση εκδηλώσεων για την Ώρα του Κώδικα'
   map_search_search: 'Αναζήτηση'
   map_search_reset: 'Επαναφορά'
-  map_legend_title: 'Θρύλος'
+  map_legend_title: 'Υπόμνημα'
   map_legend_hoc_events: 'Εκδήλωση ώρας του Κώδικα'
   map_legend_cs_tech_jam: 'CS Tech κόμβος'
-  map_warning: "Ο χάρτης της Ώρας του Κώδικα δείχνει μόνο τις πρώτες 200.000 καταχωριμένες εκδηλώσεις. Όλες οι καταχωριμένες εκδηλώσεις που έχουν έγκυρη διεύθυνση μπορούν να προβληθούν στην σελίδα εκδηλώσεων <a href='%{events_url}'>.</a>"
+  map_warning: "Ο χάρτης της Ώρας του Κώδικα δείχνει μόνο τις πρώτες 200.000 καταχωρηιμένες εκδηλώσεις. Όλες οι καταχωρημένες εκδηλώσεις που έχουν έγκυρη διεύθυνση μπορούν να προβληθούν στην σελίδα εκδηλώσεων <a href='%{events_url}'>.</a>"
   meta_tag_og_title: Η Ώρα του Κώδικα πλησιάζει
   meta_tag_og_description: 'Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.'
   meta_tag_twitter_title: Η Ώρα του Κώδικα είναι εδώ
@@ -312,11 +313,11 @@
   hoc_faq_more_questions_q: "Έχετε ακόμα ερωτήσεις;"
   hoc_faq_more_questions_a: "Προσπαθείστε να βρείτε μια απάντηση στο <a href='http://support.code.org'>φόρουμ υποστήριξης</a>."
   hoc_faq_keep_learning_q: "Πώς θα συνεχίσω να μαθαίνω μετά την Ώρα του Κώδικα;"
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_keep_learning_a: "Καθένας μπορεί να φιλοξενήσει μια Ώρα του Κώδικα οποτεδήποτε. Το εκπαιδευτικό υλικό μένει ανεβασμένο όλο το χρόνο. Μπορείτε να αναμένετε όλο το εκπαιδευτικό υλικό μας και τα μαθήματα ύλη για να είναι διαθέσιμα στην ιστοσελίδα μας συνεχώς. Παρακαλώ πηγαίνετε στην <a href='/προώθηση'> πόρων μας</a> για το γεγονός \"πώς-να\" κατευθύνει και άλλους πόρους προς βοήθεια να γίνει επιτυχής εκδήλωση η Ώρα του Κώδικα."
   hoc_faq_certificates_q: "Πού μπορώ να εκτυπώσω πιστοποιητικά για τους μαθητές μου;"
   hoc_faq_certificates_a: "Μεταβείτε στη <a href='%{codeorg_url}/certificates'> σελίδα πιστοποιητικών</a> όπου μπορείτε να εκτυπώσετε τα πιστοποιητικά για ολόκληρη την τάξη σας εκ των προτέρων. Μπορείτε να εκτυπώσετε επίσης <a href='%{codeorg_url}/certificates?course=mc'> ειδικά πιστοποιητικά</a> για τους μαθητές που κάνουν το μάθημα Ναρκαλιευτή (Minecraft)."
   hoc_faq_logo_q: "Υπάρχουν περιορισμοί πώς μπορώ να χρησιμοποιήσω το όνομα ή το λογότυπο της Ώρας του Κώδικα;"
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
+  hoc_faq_logo_a: "Η Ώρα του Κώδικα είναι εμπορικό σήμα. Δεν θέλουμε να αποτρέψουμε τη χρήση του, αλλά θέλουμε να βεβαιωθείτε ότι ταιριάζει με τη χρήση του εντός των ελαχίστων ορίων. Παρακαλούμε δείτε <a href='https://support.code.org/hc/en-us/articles/215831637-Υπάρχουν-περιορισμοί-του-πως -μπορώ -να-χρησιμοποιήσω-το Λογότυπο-της-Ώρα-του-Κώδικα-'> αυτές τις οδηγίες χρήσης</a>."
   stats_hoc_2013_image_alt: 'Στατιστικά στοιχεία από την ώρα του κώδικα του 2013'
   stats_growth: "Φτάσαμε στους 15 εκατομμύρια χρήστες πιο γρήγορα από όλους."
   stats_i18n: "Οι μαθητές μαθαίνουν σε 40 γλώσσες"
@@ -397,25 +398,25 @@
   events_orgs_title: Όλες οι εκδηλώσεις Ώρας του Κώδικα που έχουν διοργανώσει οι Συνεργαζόμενοι Οργανισμοί
   event: εκδήλωση
   events: εκδηλώσεις
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  higlights_see_more: See more highlights
+  highlights_title: Κυριότερα σημεία
+  highlights_header: Επισημάνσεις της Ώρας του Κώδικα
+  highlights_description: Μερικές από τις αγαπημένες μας στιγμές από την εξόρμηση της Ώρας του Κώδικα.
+  higlights_see_more: Δες περισσότερες επισημάνσεις
   highlights_readmore: Διαβάστε περισσότερα
   highlights_watchvideo: Δείτε το βίντεο
   highlights_facebook: Κοινή χρήση στο Facebook
-  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
-  highlights_constant_obama_short_heading: Coder in Chief
-  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
-  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
-  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
-  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
-  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_alba_heading: Η ηθοποιός, ακτιβίστρια και επιχειρηματίας φιλοξένησε την Ώρα του Κώδικα, με όλο το προσωπικό στην εταιρία "The Honest Company".
+  highlights_constant_alba_short_heading: Η Τζέσικα Άλμπα μαθαίνει μια Ώρα του Κώδικα
+  highlights_constant_obama_heading: Πρόεδρος Ομπάμα είναι ο πρώτος Πρόεδρος που γράψει μια γραμμή κώδικα, φιλοξενώντας μια ιστορική Ώρα του Κώδικα για μαθητές στον Λευκό Οίκο.
+  highlights_constant_obama_short_heading: Επικεφαλής Προγραμματιστής
+  highlights_constant_malala_heading: "\"Κάθε κορίτσι αξίζει να πάρει μέρος στην δημιουργία εκείνης της τεχνολογίας που θα αλλάξει τον κόσμο μας, και να αλλάξει το ποιος διοικεί τον κόσμο αυτό.\""
+  highlights_constant_malala_short_heading: Η Μαλάλα που πήρε το Βραβείο Νόμπελ Ειρήνης
+  highlights_constant_trudeau_heading: Ο Καναδός Πρωθυπουργός Τζάστιν Τρουντό έγραψε σε κώδικα ένα απλό παιχνίδι που χαρακτηρίζει το αγαπημένο του σπορ.
+  highlights_constant_trudeau_short_heading: Ο Πρωθυπουργός Τζάστιν Τρουντό γράφει κώδικα ένα παιχνίδι
+  highlights_constant_ny_heading: Μετά από μια επική μάχη, το 80% των σχολείων του Μπρούκλιν έκανε την Ώρα του Κώδικα, έναντι του 60% στο Σικάγο. Όχι κι άσχημα!
   highlights_constant_ny_short_heading: Το Μπρούκλιν νικά το Σικάγο
   highlights_constant_athletes_heading: Πρωταθλητές και Ολυμπιονίκες Σερένα Γουίλιαμς, Neymar Jr, Carmelo Anthony και άλλοι εμπνέουν τους μαθητές να κάνου την μέγιστη προσπάθεια.
-  highlights_constant_athletes_short_heading: Push yourself
+  highlights_constant_athletes_short_heading: Ώθησε τον εαυτό σου
   footer_copyright_message: 'Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα είναι κατοχυρωμένα.'
   footer_trademark_message: 'Η Ώρα του κώδικα ™ είναι εμπορικό σήμα της Code.org.'
   footer_menu_partners: 'Συνεργάτες'
@@ -425,21 +426,21 @@
   footer_menu_privacy: 'Πολιτική Απορρήτου'
   learn_banner_heading: 'Ώρα του Κώδικα'
   learn_banner_blurb: "Δοκιμάστε έναν οδηγό εκμάθησης διάρκειας μιας ώρας σχεδιασμένο για όλες τις ηλικίες σε περισσότερες από 45 γλώσσες. Γίνετε μέλος ενός δικτύου εκατομμυρίων φοιτητών και καθηγητών σε περισσότερες από 180 χώρες ξεκινώντας από μία Ώρα του Κώδικα."
-  learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_robotics_banner_heading: 'ROBOTICS'
-  learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
+  learn_banner_beyond: "Θέλεις να συνεχίσεις να μαθαίνεις;  <a id='learn_banner_beyond'> Προχώρα πέρα από μία ώρα</a>"
+  learn_banner_teachers: 'Εκπαιδευτικοί: <a id=''teacher_banner_host''> Φιλοξένησε μια ώρα</a> ή <a id=''teacher_banner_howto''> συμβουλεύσου τον τον οδηγό "Πως-Να"</a>'
+  learn_robotics_banner_heading: 'ΡΟΜΠΟΤΙΚΉ'
+  learn_robotics_banner_blurb: 'Πήρες ρομπότ; Χρησιμοποίησε τα στις παρακάτω δραστηριότητες και κάνε μια απτή Ώρα του Κώδικα για σπουδαστές κάθε ηλικίας!'
   tutorial_athlete_name: "Κωδικοποιήστε το δικό σας αθλητικό παιχνίδι"
-  tutorial_moana_name: 'Moana: Wayfinding with Code'
+  tutorial_moana_name: 'Η Μοάνα: Πλοηγείται γράφοντας κώδικα'
   tutorial_star-wars_name: 'Πόλεμος των Αστρων: Οικοδόμηση ενός γαλαξία με χρήση της εφαρμογής Code'
-  tutorial_gumadventure_name: "Gumball's Coding Adventure"
-  tutorial_mchoc_name: "Minecraft Hour of Code"
-  tutorial_vidnews_name: 'Vidcode: Code the News'
-  tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
-  tutorial_highseas_name: "Adventure on the High Seas"
-  tutorial_capython_name: "Python Turtle Graphics"
-  tutorial_frzn_name: "Code with Anna and Elsa"
-  tutorial_cocom_name: "CodeCombat"
+  tutorial_gumadventure_name: "\"Η Περιπέτεια της Κωδικοποίησης\" του Gumball"
+  tutorial_mchoc_name: "Minecraft Ώρα του Κώδικα"
+  tutorial_vidnews_name: 'Vidcode: Κωδικοποιώντας τις Ειδήσεις'
+  tutorial_kodable-pre_name: "Κωδικοποιήσιμο (ευπρόσδεκτοι οι κριτικοί αναγνώστες)"
+  tutorial_highseas_name: "Περιπέτεια στις Ανοιχτές Θάλασσες"
+  tutorial_capython_name: "Γραφικά χελώνας Python"
+  tutorial_frzn_name: "Κώδικας με την Άννα και την Έλσα"
+  tutorial_cocom_name: "ΚωδικοΜάχη"
   tutorial_play-lab_name: "Play Lab"
   tutorial_boxisland2016_name: "Box Island"
   tutorial_textcomp_name: "Συμπίεση κειμένου"
@@ -454,65 +455,65 @@
   tutorial_lightbot_name: "Lightbot"
   tutorial_hoc_name: "Σύμβολο κράτησης θέσης για το νέο code.org/hoc"
   tutorial_code_name: "Γράψτε το πρώτο πρόγραμμα στον υπολογιστή σας"
-  tutorial_tinspire_name: "10 Minutes of Code for the TI-Nspire CX"
-  tutorial_itchbounceball_name: "ITCH Bouncing Ball (in Scratch)"
+  tutorial_tinspire_name: "10 λεπτά του Κώδικα για το CX Tj-Nspire"
+  tutorial_itchbounceball_name: "ITCH Bouncing Ball (στο Scratch)"
   tutorial_vidclim_name: 'Vidcode: Climate Science & Code'
-  tutorial_matlab_name: "Learn to Code with MATLAB"
+  tutorial_matlab_name: "Μαθαίνοντας να γράφετε κώδικα με το MATLAB"
   tutorial_flap_name: "Δημιουργήστε ένα παιχνίδι Flappy"
   tutorial_galaxy_name: "Galaxy Game Jam"
   tutorial_inf_name: "Άπειρο Play Lab"
-  tutorial_tynkersol_name: "Solar System STEM Kit"
+  tutorial_tynkersol_name: "Εργαλειοθήκη \"Ηλιακό Σύστημα\" - Φυσικών Επιστημών Τεχνολογίας Μηχανικής και Μαθηματικών"
   tutorial_itchg_name: "ITCH Name IT - Geography"
-  tutorial_como_name: "CodeMonkey"
-  tutorial_processfound_name: "The Processing Foundation - Hello Processing"
-  tutorial_tynkerhomo_name: "Homophones STEM Kit"
+  tutorial_como_name: "ΚωδικοΜαϊμού"
+  tutorial_processfound_name: "Το Ίδρυμα Επεξεργασίας - Γεια σου Επεξεργασία"
+  tutorial_tynkerhomo_name: "Σετ Ομόφωνων Φυσικών Επιστημών Τεχνολογίας Μηχανικής και Μαθηματικών"
   tutorial_art_name: "Καλλιτέχνης"
   tutorial_tynkerbrick_name: "Brick Breaker Game Kit"
   tutorial_itchbio_name: "ITCH Name IT - Parts of the Biological Cell"
   tutorial_itchj_name: "ITCH Jumping (in Scratch)"
-  tutorial_tickleo_name: "Swimming Orca - by Tickle App"
+  tutorial_tickleo_name: "Η Φάλαινα που κολυμπά (Swimming Orca) - από Tickle App"
   tutorial_hopgeo_name: "Geometry Jumper"
   tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
   tutorial_monster_name: "Mystery Island Coding Quest"
-  tutorial_tynkerapp_name: "Build an App"
-  tutorial_tynkerpup_name: "Puppy Adventure"
+  tutorial_tynkerapp_name: "Δημιουργία μιας εφαρμογής"
+  tutorial_tynkerpup_name: "Η περοπέτεια ενός Κουταβιού"
   tutorial_livecode_name: "LiveCode Sound Boards"
   tutorial_cocomgame_name: 'CodeCombat: Game Development'
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "Δημιουργήστε ένα παιχνίδι με JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
-  tutorial_makeschool_name: "Build an iPhone game in your browser!"
+  tutorial_makeschool_name: "Δημιουργήστε ένα παιχνίδι iPhone παιχνίδι στον φυλομετρητή σας (browser)!"
   tutorial_cmgame_name: "CodeMonkey's Game Builder"
   tutorial_codesters_name: "Κωδικοποιητές"
   tutorial_qrm_name: "Accessible programming (with screenreader support)"
-  tutorial_texas-instruments_name: "10 Minutes of Code"
-  tutorial_cajava_name: "Drawing Flags with JavaScript"
+  tutorial_texas-instruments_name: "10 λεπτά Κώδικα"
+  tutorial_cajava_name: "Σχεδιάστε σημαίες με JavaScript"
   tutorial_codehs_name: "Μάθετε να γράφετε κώδικα με την Καρελ τον σκύλο"
   tutorial_hopemo_name: "Emoji Draw"
-  tutorial_tynkercm_name: "Code Monsters"
+  tutorial_tynkercm_name: "Τέρατα του Κώδικα"
   tutorial_codesterswintergreet_name: "Χειμωνιάτικους χαιρετισμούς"
-  tutorial_codestersc_name: "The Coordinate Plane"
+  tutorial_codestersc_name: "Πεδίο συντεταγμένων"
   tutorial_codestersturtle_name: "Σχέδιο με τη χελώνα"
-  tutorial_penjee_name: "Learn Python with Penjee the Penguin"
+  tutorial_penjee_name: "Μάθετε Python με τον πιγκουίνο Penjee"
   tutorial_trinket_name: "Ώρα της Python"
   tutorial_frogger_name: "Δημιούργησε το δικό σου 3Δ παιχνίδι"
   tutorial_tynkereco_name: "Ecological Pyramid STEM Kit"
   tutorial_mitedarc_name: "MIT Education Arcade"
-  tutorial_khan_name: 'Khan Academy: Drawing with Code'
-  tutorial_tynkerd_name: "Debugger"
+  tutorial_khan_name: 'Ακαδημία Khan: Ζωγραφίζοντας με τον Κώδικα'
+  tutorial_tynkerd_name: "Πρόγραμμα εντοπισμού σφαλμάτων (debugger)"
   tutorial_cdmy_name: "Codecademy"
   tutorial_codestersdance_name: "Χορευτικές κινήσεις"
   tutorial_codestersbasketball_name: "Μπάσκετ"
-  tutorial_nclkarel_name: "Learn How to Code with Karel the Robot"
+  tutorial_nclkarel_name: "Μάθετε να γράφετε κώδικα με την Καρελ τον σκύλο"
   tutorial_buildpong_name: "Build Pong with AI"
-  tutorial_tynkerdrones_name: "Program Drones and Robots"
-  tutorial_carla_name: "Programming with Carla"
+  tutorial_tynkerdrones_name: "Προγραμματίστε με Drones και Ρομπότ"
+  tutorial_carla_name: "Προγραμματισμός με την Κάρλα"
   tutorial_globaloria_name: "Globaloria MakeQuest"
-  tutorial_capost_name: "Build a Digital Postcard with HTML and CSS"
-  tutorial_marco_name: "Run Marco!"
+  tutorial_capost_name: "Δημιουργήστε μία ψηφιακή κάρτα με HTML και CSS"
+  tutorial_marco_name: "Τρέξε Μάρκο!"
   tutorial_codestersflappybike_name: "Ποδήλατο Φλάπυ"
   tutorial_kanopong_name: "Kano Computing - Make Pong"
-  tutorial_tynkerright_name: "Bill of Rights STEM Kit"
+  tutorial_tynkerright_name: "Εργαλειοθήκη Χάρτας Δικαιωμάτων Φυσικών Επιστημών Τεχνολογίας Μηχανικής και Μαθηματικών"
   tutorial_flatverse_name: "Flatverse"
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "Code Commander"
@@ -641,8 +642,8 @@
   tutorial_blockly_name: "Blockly"
   tutorial_tynker_name: "Build your own game"
   tutorial_baypt_name: "Code Baymax"
-  tutorial_code-combat_name: "CodeCombat"
-  tutorial_mky_name: "CodeMonkey"
+  tutorial_code-combat_name: "ΚωδικοΜάχη"
+  tutorial_mky_name: "ΚωδικοΜαϊμού"
   tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
   tutorial_pirates_name: "Coding Pirates"
   tutorial_csfirst_name: "CS First"
@@ -657,11 +658,11 @@
   tutorial_gumball_name: "Gumball Play Lab"
   tutorial_hrm_name: "Human Resource Machine"
   tutorial_ice-age_name: "Ice Age Play Lab"
-  tutorial_koapp_name: "Kodable (pre-readers welcome)"
+  tutorial_koapp_name: "Κωδικοποιήσιμο (ευπρόσδεκτοι οι κριτικοί αναγνώστες)"
   tutorial_lightbot-intl_name: "Lightbot"
-  tutorial_rmc_name: "Minecraft Hour of Code"
-  tutorial_smc_name: "Minecraft Hour of Code"
-  tutorial_minecraft-2016_name: "Minecraft Hour of Code"
+  tutorial_rmc_name: "Minecraft Ώρα του Κώδικα"
+  tutorial_smc_name: "Minecraft Ώρα του Κώδικα"
+  tutorial_minecraft-2016_name: "Minecraft Ώρα του Κώδικα"
   tutorial_thinkersmith-es_name: "Mis Amigos Roboticos"
   tutorial_pixie_name: "PIXIE Challenges"
   tutorial_play_name: "Play Lab"
@@ -721,23 +722,23 @@
   tutorial_foos_shortdescription: "\"The Foos\" is a fun, pre-reader friendly game to learn about programming."
   tutorial_tynkerdd_shortdescription: "Go on an epic quest for treasure."
   tutorial_tynkerana_shortdescription: "Create a working analog clock."
-  tutorial_vidcard_shortdescription: "Learn how to make a greeting card with JavaScript!"
+  tutorial_vidcard_shortdescription: "Μάθετε πώς να κάνει μια ευχετήρια κάρτα με JavaScript!"
   tutorial_spritebox_shortdescription: "Τρέξτε, πηδήξτε και γράψτε κώδικα για τη διαδρομή σας μέσα από τρεις διαφορετικούς κόσμους, με σκοπό να συλλέξετε τα αστέρια και να φτάσετε στη γραμμή τερματισμού! Μάθετε την ακολουθία, τον εντοπισμό σφαλμάτων και τους βρόχους και γράψτε κώδικα σε Swift, Java ή με εικονίδια."
-  tutorial_tynkerch_shortdescription: "Learn Javascript as you defeat viruses!"
-  tutorial_lightbot_shortdescription: "Program Lightbot to solve puzzles using procedures and loops!"
+  tutorial_tynkerch_shortdescription: "Μάθετε Javascript, καταπολεμάτε τους ιούς!"
+  tutorial_lightbot_shortdescription: "Προγραμματίστ σε Lightbot για να ύσετε γρίφους χρησιμοποιώντας διαδικασίες και βρόγχους!"
   tutorial_hoc_shortdescription: "Σύμβολο κράτησης θέσης για το νέο code.org/hoc"
   tutorial_code_shortdescription: "Μάθετε να γράφετε κώδικα με Mark Zuckerberg και Angry Birds!"
   tutorial_tinspire_shortdescription: "Κάντε τους μαθητές να ξεκινήσουν τη συγγραφή κώδικα στο φορητό TI-Nspire CX μέσα σε μόνο 10 λεπτά τη φορά."
-  tutorial_itchbounceball_shortdescription: "Use ITCH - Scratch integrated with a video lesson to make your own bouncing ball project"
-  tutorial_vidclim_shortdescription: "Combine CS & Environmental Science, and record a video about climate."
-  tutorial_matlab_shortdescription: "Find the closest location to meet your friends using MATLAB!"
+  tutorial_itchbounceball_shortdescription: "Χρησιμοποιείστε το ITCH - Scratch ολοκληρωμένο με ένα μάθημα βίντεο για να κάνετε το δικό σας έργο μπάλας που χοροπηδά"
+  tutorial_vidclim_shortdescription: "Συνδυάστε CS & περιβαλλοντική επιστήμη, και καταγράψτε ένα βίντεο σχετικό με το κλίμα."
+  tutorial_matlab_shortdescription: "Βρείτε την κοντινότερη τοποθεσία για να συναντήσετε τους φίλους σας χρησιμοποιώντας το MATLAB!"
   tutorial_flap_shortdescription: "Δημιουργήστε το δικό σας παιχνίδι - Flappy Bird, Shark ή Submarine"
-  tutorial_galaxy_shortdescription: "Create your own Android Galaxy games, animations, and interactive stories!"
+  tutorial_galaxy_shortdescription: "Δημιουργήστε το δικό σας παιχνίδια, Android Galaxy, κινούμενα σχέδια και διαδραστικές ιστορίες!"
   tutorial_inf_shortdescription: "Χρησιμοποιήστε το Εργαστήριο Παιχνιδιού (Play Lab) για να δημιουργήσετε μια ιστορία ή παιχνίδι με πρωταγωνιστές χαρακτήρες Disney Infinity."
-  tutorial_tynkersol_shortdescription: "Program a moving model of the Solar System."
-  tutorial_itchg_shortdescription: "Create an interactive naming game for the States of Australia (Geography) with Itch (Scratch for Teachers)"
-  tutorial_como_shortdescription: "Learn and teach coding in CoffeeScript, a real-world programming language. "
-  tutorial_processfound_shortdescription: "Take look at programming in the context of the visual arts. "
+  tutorial_tynkersol_shortdescription: "Προγραμματίστε ένα κινητό μοντέλο του ηλιακού συστήματος."
+  tutorial_itchg_shortdescription: "Δημιουργήστε ένα διαδραστικό παιχνίδι ονομασίας των πολιτειών της Αυστραλίας (γεωγραφία) με το Itch (Scratch για δασκάλους)"
+  tutorial_como_shortdescription: "Μάθετε και διδάξτε κωδικοποίηση σε CoffeeScript, μια γλώσσα προγραμματισμού του πραγματικού κόσμου. "
+  tutorial_processfound_shortdescription: "Ρίξτε μια ματιά σε προγραμματισμό στο πλαίσιο των εικαστικών τεχνών. "
   tutorial_tynkerhomo_shortdescription: "Make a storytelling game about homophones!"
   tutorial_art_shortdescription: "Ζωγραφίστε πρωτότυπες εικόνες και σχέδια με τον Καλλιτέχνη (Artist)!"
   tutorial_tynkerbrick_shortdescription: "Make your own version of this arcade classic."
@@ -748,8 +749,8 @@
   tutorial_tynkermult_shortdescription: "Make a fun multiplication game!"
   tutorial_monster_shortdescription: "A colorful self-guided programming adventure for children."
   tutorial_tynkerapp_shortdescription: "Program a custom version of your favorite game!"
-  tutorial_tynkerpup_shortdescription: "Help Pixel the puppy get home!"
-  tutorial_livecode_shortdescription: "Make some noise!"
+  tutorial_tynkerpup_shortdescription: "Βοήθησε το κουτάβι Pixel φτάσω στο σπίτι!"
+  tutorial_livecode_shortdescription: "Κάνε λίγο θόρυβο!"
   tutorial_cocomgame_shortdescription: "Code up your own game with CodeCombat's heroes, ogres, pugicorns, and more!"
   tutorial_tynkerspin_shortdescription: "Create a fun pen that draws a rotating image."
   tutorial_code-avengers_shortdescription: "Μάθετε να προγραμματίζετε  «JavaScript», σε ένα φυλλομετρητή διαδικτύου (web-browser)."

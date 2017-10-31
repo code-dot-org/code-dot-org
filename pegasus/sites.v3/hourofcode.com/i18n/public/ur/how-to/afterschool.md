@@ -58,7 +58,7 @@ nav: how_to_nav
 
 **اگر آپ سب کمپیوٹر سائنس سے ناواقف ہیں تو اس میں کوئی حرج نہیں. یہاں آپ کو ایک-گھنٹے-کوڈ کی سرگرمی سےمتعلق کچھ تعارفی معلومات دی جائے گی:**
 
-- ہماری زندگیوں پر ٹیکنالوجی کے اثرات کی وضاحت کریں، ایسی مثالوں کے ساتھ جو لڑکے اور لڑکیاں دونوں پسند کریں گے (ٹیکنالوجی پر بات چیت کریں کہ کس طرح یہ ہماری زندگیوں کو بچانے، لوگوں کی مدد کرنے اور لوگوں کو منسلک کرسکتی ہے، وغیرہ).
+- وضاحت کریں کہ ہماری زندگیوں پر ٹیکنالوجی کن طریقوں سے اثر اندازہوتی ہے، ایسی مثالوں کے ساتھ جو لڑکے اور لڑکیاں دونوں پسند کریں گے (ان ایپلیکیشن اور ٹیکنالوجی پر بات چیت کریں جو ہماری زندگیوں کو بچانے، لوگوں کی مدد کرنے، لوگوں کو منسلک کرنے وغیرہ کے کام آتی ہیں).
 - روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
@@ -68,9 +68,9 @@ nav: how_to_nav
 
 **ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+- سبق کا لنک ایک سفید تختی پر لکھیں۔ لنک ڈھونڈیں جو [آپ کے منتخب سبق کی معلومات](<%= resolve_url('/learn') %>) والی فہرست میں شرکاء کی تعداد کے ذیل میں ہے۔
 
-**When someone comes across difficulties it's okay to respond:**
+**: اگر کسی کو مشکلات پیش آئیں تو درج ذیل میں سے جواب دیں:**
 
 - مجھے معلوم نہیں۔ آئیں مل کر اس کا پتہ لگاتے ہیں"۔"
 - ٹیکنالوجی ہمیشہ اس طرح کام نہیں کرتی جیسا کہ ہم چاہتے ہیں"۔"
@@ -78,8 +78,8 @@ nav: how_to_nav
 
 **اگر کوئی اسے قبل از وقت ختم کر لے تو؟**
 
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- یا، جنہوں نے پہلے ہی ختم کر لیا ہے تو ان سے کہیں کہ وہ اُن دیگر کی مدد کریں جن کو مشکل پیش آ رہی ہے۔
+- شرکاء کی حوصلہ افزائی کریں کہ وہ ایک گھنٹہ کوڈ کی یہاں [hourofcode.com/learn](<%= resolve_url('/learn') %>) دوسری سرگرمی کو آزمائیں
+- یا، جنہوں نے پہلے ہی ختم کر لیا ہے تو ان سے کہیں کہ وہ اُن دیگر کی مدد کریں جن کو مشکل پیش آ رہی ہے۔.
 
 [col-33]
 
@@ -103,10 +103,10 @@ nav: how_to_nav
 
 [/col-33]
 
-- [ سرٹیفیکیٹس پرنٹ کریں](<%= resolve_url('https://code.org/certificates') %>) اپنے اسٹوڈینٹس کے لیے۔
+- اپنے اسٹوڈینٹس کے لیے [ سندیں پرنٹ کریں](<%= resolve_url('https://code.org/certificates') %>)۔.
 - ["میں نے اپنا آور-آف-کوڈ مکمل کرلیا ہے"](<%= resolve_url('/promote/resources#stickers') %>) اپنے اسٹوڈینٹس کے لیے اسٹیکرز پرنٹ کریں۔
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-- !سوشل میڈیا پر اپنے آور-آف-کوڈ کے ایونٹ کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم بھی آپ کی کامیابی کو اجاگر کرسکیں
+- ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 
 [col-33]
 
@@ -118,12 +118,12 @@ nav: how_to_nav
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- پرانے آور-آف-کوڈ کے منتظمین کے [بہترین طریقے](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) دیکھیں. 
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+- دیگر منتظمین سے مشاورت، بصیرت اور معاونت حاصل کرنے کے لیے [آور-آف-کوڈ فورم](http://forum.code.org/c/plc/hour-of-code) پر وزٹ کریں. <% if @country == 'us' %>
 - [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔ <% end %>
 
-## آور-آف-کوڈ کے بعد کیا آتا ہے؟
+## آور-آف-کوڈ کے بعد کیا ہو گا؟
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

@@ -4,13 +4,13 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+კოდის საათს მართავს კოდის საათისა და კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის საკონსულტაციო და სამეთვალყურეო კომიტეტები.
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Advisory Committee](<%= resolve_url('/advisory-committee') %>) შედგება წარმომადგენლებისაგან 1-დან 12-მდე ჩათვლით კლასებიდან, კომერციული, არაკომერციული და საერთაშორისო ორგანიზაციებიდან. კოდის საათის კამპანიის სტრატეგიას ხელმძღვანელობს ეს კომიტეტი.
 
 The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+ორივე კომიტეტის მუშაობა და საქმისადმი თავდადება დაეხმარა კოდის საათს წარმატების მიღწევასა და მისიის განხორციელებაში, ჩვენ ყველა მოსწავლეს ვთავაზობთ კომპიუტერული მეცნიერების შესავალს.
 
 <% if @country == 'la' %>
 
@@ -134,13 +134,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 ---
 
-# Activity Partners
+# ღონისძიების პარტნიორები
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure Partners and Tools
+# ინფრასტრუქტურის პარტნიორები და ინსტრუმენტები
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

@@ -5,16 +5,16 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Ako priniesť Hodinu Kódu do vašej spoločnosti
+# Ako priniesť Hodinu Kódovania do vašej spoločnosti
 
-## Inšpirujte študentov a dobrovoľníkov prostredníctvom Hodiny Kódu
+## Inšpirujte študentov a dobrovoľníkov prostredníctvom Hodiny Kódovania
 
 Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
 - [Prihlás sa](%= resolve_url('https://code.org/volunteer') %) ako dobrovoľník.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
-## Additional ways companies can support the Hour of Code:
+## Dodatočné možnosti spoločností môžu podporiť Hodinu kódovania:
 
 - Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
@@ -24,8 +24,8 @@ Code.org offers the opportunity for your employees to [connect](%= resolve_url('
 
 ## 1. Promote your Hour of Code
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+- Podporte Vašu [Hodinu Kódu](%= resolve_url('/promote') %) a podporte ďalších účastníkov.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Môžu [sa prihlásiť](%= resolve_url('https://code.org/volunteer/engineer') %) a byť v spojení s triedou.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

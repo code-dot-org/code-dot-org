@@ -26,7 +26,7 @@ Wij bieden een verscheidenheid van [leuke, urenlange tutorials](%= resolve_url('
 
 Promoot uw CodeUur [met deze tools](%= resolve_url('/promote') %) en moedig anderen aan hun eigen evenementen te organiseren.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Bereid de techniek voor - computers zijn optioneel
 
 <div class="col-66" style="padding-right: 20px;">
   The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
@@ -53,7 +53,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
 - De [CodeUur 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de <% if @country == 'uk' %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [President Obama roept alle leerlingen op om zich te verdiepen in computerwetenschappen](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Het maakt niet uit als programmeren ook voor u nog nieuw is. Hier zijn enkele ideeën om uw CodeUur te introduceren:**

@@ -34,7 +34,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4) Plan your technology needs - computers are optional
+## 4) תכננו את הצרכים הטכונולוגיים שלכם - מחשבים הם לא חובה
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
@@ -64,13 +64,13 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
   * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * As a class, list things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * ראו עצות איך לעודד בנות להתעניינות במדעי המחשב [כאן](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) קודד!
+## 6) קודדדו!
 
 **Direct students to the activity**
 
@@ -84,9 +84,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **When your students come across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "אני לא יודע.. בוא נפתור את זה יחד."
+  * "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
+  * "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
 
 **[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 

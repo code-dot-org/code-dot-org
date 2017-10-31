@@ -53,9 +53,9 @@ En iyi Kodlama Saati deneyimi internete bağlı olan bilgisayarları içerir. Am
 
 **İlham verici bir video gösterin:**
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * Orjinal Code.org videosu başlatın, Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh ([1 dakika](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakika](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakika](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları vardır)
   * [2013 Kodlama Saati başlangıç videosu](https://www.youtube.com/watch?v=FC5FbmsH4fw), ya da <% if @country == 'uk' %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [Başkan Obama tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Daha fazla ilham verici [kaynaklar](%= resolve_url('https://code.org/inspire') %) ve[videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.
 
 **Öğrencileriniz ve siz bilgisayar bilimine karşı yeniyseniz, bu hiç sorun değil. İşte size Kodlama Saati'ni tanıtacak birkaç aktivite:**

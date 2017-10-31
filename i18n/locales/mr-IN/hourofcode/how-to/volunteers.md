@@ -5,28 +5,28 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# स्वयंसेवकांसाठी मार्गदर्शक पुस्तिका
 
-## Why volunteer?
+## स्वयंसेवा कशासाठी?
 
-Check out some testimony from past volunteers:
+पूर्वस्वयंसेवकांचे अनुभव वाचा
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+- "माझ्या अनुभवाचा सर्वोत्कृष्ट भाग असा होता की वर्गामध्ये स्त्रिया आणि अश्वेत व्यक्तींचा सहभाग होता. संगणकीय उद्योगाच्या उज्वल भवितव्यासाठी या सगळ्या व्यक्तींना सामावून घेणे आणि या विषयाविषयी त्यांच्या मध्ये रुची निर्माण करणे महत्वाचे आहे"
+- "लहान मुलींना तंत्रज्ञानाविषयी प्रोत्साहित करताना मला फार मौज वाटत होती. असे प्रतीत होत होते की मी माझ्या आजूबाजूच्याच पुढच्या पिढीला मदत करत आहे"
+- " सगळी मुले अतिशय उत्तेजित झाली आहेत हे पाहून मला फार आनंद होत होता. शिक्षकांच्या लक्षात असे आले की अभ्यासात चांगली नसलेली मुले अतिशय चांगल्या प्रकारे संगणक अभ्यांता प्रमाणे विचार करू शकत होती, इतरांना मदत करत होती - ज्यामुळे त्यांचा आत्मविश्वास वाढीस लागायला मदत होत होती."
 
 Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
 
-## Recruit your co-workers to volunteer
+## आपल्या सहकार्यांना स्वयंसेवेसाठी नियुक्त करा
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+आपल्या सहकार्यांना आणि मित्रांना अवर ऑफ कोड बद्दल सांगा. आमच्याकडे हजारो शिक्षक पंजीकरण करतात आणि स्वयंसेवकांची मदत घेऊ इच्छितात. त्यामुळे, त्यांना [स्वयंसेवका साठी पंजीकरण](https://code.org/volunteer) करण्यास सांगा. आपल्या नियोक्त्या सहभागी होण्यास सांगा. आपल्या व्यवस्थापकाला अथवा CEO ला [mail](https://hourofcode.com/promote/resources#email) पाठवा.
 
 ## How you get selected
 
 - Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-- A teacher will contact you through this form (your email address will never be shared with the teacher). 
-  - If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+- शिक्षक आपली माहिती स्वयंसेवक सूची मधून पडताळून पाहत असतात. आपली माहिती जितकी जास्त पूर्ण असेल, तितकी तुमची निवड होण्याची शक्यता जास्त असते.
+- या अर्ज द्वारे शिक्षक तुमच्याशी संपर्क साधतील(आपला mail id कधीच शिक्षकांना दिला जात नाही). 
+  - जर तुम्हाला अनेक शिक्षकांकडून विनंती येत असतील तर तुम्ही कधीही आपल्या माहिती संपादित करून प्प्रधान्यांमध्ये बदल करू शकता. किंवा शिक्षकाच्या email मध्ये सर्वात खाली नमूद केलेल्या संकेतस्थळावर जाऊन सदस्यता रद्द करू शकता. 
 
 ## How to prepare
 

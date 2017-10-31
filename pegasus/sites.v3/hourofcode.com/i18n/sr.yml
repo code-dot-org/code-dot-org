@@ -218,6 +218,7 @@
   front_join_us_more_info: "За више информација посетите <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "За више информација посетите code.org"
   front_join_us_n_students_served: "# услужених"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Organizujte Sat Programiranja tokom %{campaign_date} и региструјте га овде.'
   signup_name_label: 'Ваш име'
   signup_name_error: 'Обавезно унесите име.'
@@ -304,7 +305,7 @@
   hoc_faq_scratch_q: "Користим Scratch за Hour of Code, али шта ако моји ученици имају iPad-ове а не лаптопове?"
   hoc_faq_scratch_a: "Scratch не ради на таблетима. Ако су вам ученици млади, могу користити апликацију ScratchJR за iPad (за почетнике у читању). Ако сте тражили упутства на <a href='http://code.org/learn'>Code.org/learn</a>, можете наћи друга упутства која раде на iPad-овима на Code.org, Tynker, Lightbot или CodeSpark."
   hoc_faq_count_hoc_q: "Како бројите Сате Програмирања?"
-  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_q: "Зашто не видим моју тачку на мапи?"
   hoc_faq_map_a: "We're so sorry you aren't seeing your event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   hoc_faq_one_hour_q: "Колико један ученик може да научи за један сат?"

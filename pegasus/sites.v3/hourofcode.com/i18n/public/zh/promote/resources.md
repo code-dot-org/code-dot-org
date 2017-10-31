@@ -35,9 +35,12 @@ nav: promote_nav
 
 [下載高解析度版本](http://images.code.org/share/hour-of-code-logo.zip)
 
-**Hour of Code 是個商標。我們不想限制使用，但我們必須確保它被使用時符合一些條件：**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. 任何參考自「一小時玩程式」的內容都不應該標榜是你自己的，因為一小時玩程式是個草根運動（grassroots movement）。 正例：「加入在 ACMECorp.com 的一小時玩程式™ 活動」。 反例：「試試 ACME 公司的一小時玩程式」。
+1. 任何參考自「一小時玩程式」的內容都不應該標榜是你自己的，因為一小時玩程式是個草根運動（grassroots movement）。
+    
+    - 正例：「加入在 ACMECorp.com 的一小時玩程式™ 活動」。 
+    - 反例：「試試 ACME 公司的一小時玩程式」。
 2. 當你的網站或是應用程式提到「一小時玩程式」時，在最顯眼的地方使用「TM」上標字。
 3. 在頁面（或在頁腳）加入以下的文字，包括 CSEdWeek 和 Code.org 的 web 網站︰
     
@@ -58,13 +61,15 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## 邀請您的學校、校長或朋友進行註冊：
+### Ask your school, employer, or friends to sign up:
 
-電腦到處都是，正在改變這個星球上的每個行業。 但不到 50% 的學校有計算機科學課程。 好消息是我們正在改變此狀況。 如果你去年聽說過一小時玩程式（Hour of Code）活動，你也許知道它創下了些紀錄。 超過 1 億名學生已經體驗過一小時玩程式課程。
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-透過一小時玩程式活動，計算機科學（computer science）在 Google、MSN、Yahoo 愈來愈普及了！ 與迪士尼。 100 多個夥伴加入共同支持此運動。 世界上的每個 Apple 商店都舉辦過一小時玩程式活動。 歐巴馬總統寫下他的第一行程式碼，成為這個運動的一份子。
+電腦到處都是，正在改變這個星球上的每個行業。 但不到 50% 的學校有計算機科學課程。 Good news is, we’re on our way to change this! 如果你去年聽說過一小時玩程式（Hour of Code）活動，你也許知道它創下了些紀錄。 超過 1 億名學生已經體驗過一小時玩程式課程。
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 100 多個夥伴加入共同支持此運動。 Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 讓活動傳承下去，舉辦一場活動，邀請當地學校加入，或者你自己試試一小時玩程式課程 — 每個人都能在學習這些基礎中得到些什麼。
 
@@ -72,31 +77,29 @@ This year, let's make it even bigger. I’m asking you to join in for the Hour o
 
 <a id="media-pitch"></a>
 
-## 邀請大眾媒體參加您的活動：
+### 邀請大眾媒體參加您的活動：
 
 **標題** 本地學校參與讓學生認識計算機科學的任務。
 
 電腦到處都有，正在改變地球上的任何產業，但只有不到一半的學校有教電腦科學。 在計算機科學課堂和科技產業中女孩和少數族群的人數嚴重偏低。 好消息是我們正在改變此狀況。
 
-透過一小時玩程式活動，計算機科學（computer science）在 Google、MSN、Yahoo 愈來愈普及了！ 與迪士尼。 100 多個夥伴加入共同支持此運動。 世界上的每個 Apple 商店都舉辦過一小時玩程式活動。 歐巴馬總統寫下他的第一行程式碼，成為這個運動的一份子。
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 100 多個夥伴加入共同支持此運動。 世界上的每個 Apple 商店都舉辦過一小時玩程式活動。 Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-我邀請您參加我們的開幕大會，來看孩子們在 [DATE] 這一天開始寫程式的活動。
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-一小時玩程式是由非營利團體 Code.org 其他的 100 多個單位所共同組織，是個全球運動，宗旨是讓現在的學生具備 21 世紀的關鍵技能。 請加入我們的行列。
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. 請加入我們的行列。
 
-**聯絡人：** [您的名字],[職稱], [電話]
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**時間：** [您的活動日期和時間]
-
-**地點：** [地址和方向]
-
-保持聯繫、隨時候教。
+I look forward to being in touch. [YOUR NAME]
 
 <a id="parents"></a>
 
-## 告訴家長關於您學校的活動：
+### 告訴家長關於您學校的活動：
+
+**Subject line:** Our students are changing the future with an Hour of Code
 
 親愛的家長們，
 
@@ -106,7 +109,7 @@ That’s why every one of the [X number] students at [SCHOOL NAME] are joining i
 
 這就是為什麼我們整個的學校加入史上最大的學習活動： 在計算機科學教育週期間 (<%= campaign_date('full') %>) 的一小時玩程式活動。 全世界已經有超過 1 億名學生體驗了一小時玩程式課程。
 
-透過一小時玩程式活動，也等於是向大家宣告，[SCHOOL NAME] 已經準備好要教授這些 21 世紀的基礎技能。 持續為學生引進編程活動，我們希望一小時玩程式活動愈來愈茁壯。 我鼓勵你擔任志工，透過社群平台傳播這個消息。並請考慮在社群內舉辦更多的一小時玩程式活動。
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. 持續為學生引進編程活動，我們希望一小時玩程式活動愈來愈茁壯。 我鼓勵你擔任志工，透過社群平台傳播這個消息。並請考慮在社群內舉辦更多的一小時玩程式活動。
 
 這是一個改變 [城市名稱] 教育未來的機會。
 
@@ -118,20 +121,24 @@ That’s why every one of the [X number] students at [SCHOOL NAME] are joining i
 
 <a id="politicians"></a>
 
-## 邀請當地行政長官參加您的學校活動：
+### 邀請當地行政長官參加您的學校活動：
+
+**Subject line:** Join our school as we change the future with an Hour of Code
 
 親愛的 [市長/縣長/代表/議員姓氏]：
 
 你知道在美國電腦工作的薪資是排名第1嗎？ 全美國有超過 500,000 個電腦工作職缺，但去年只有 42,969 個計算機科學畢業生進入工作職場。
 
-電腦科學今天是 *每個* 行業的基礎。然而大多數學校不會教它。在 [學校名稱]，我們正在嘗試去改變它。
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 這就是為什麼我們整個的學校加入史上最大的學習活動： 在計算機科學教育週期間 (<%= campaign_date('full') %>) 的一小時玩程式活動。 全世界已經有超過 1 億名學生體驗了一小時玩程式課程。
 
-這封信是想邀請你加入我們的一小時玩程式活動，並為我們做些開場白。 活動預訂於[日期、 時間、 地點] 舉辦，並將作出強力的宣示：[縣或城市名稱] 準備好教導我們的學生21 世紀的關鍵技能了。 我們要確保我們的學生都在創造技術的未來 — 而不只是消費它。
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. 我們要確保我們的學生都在創造技術的未來 — 而不只是消費它。
 
 請聯繫我：[電話號碼或電子郵件地址]。靜候佳音。
 
-誠摯地邀請您，[NAME], [TITLE]
+誠摯地邀請您，
+
+[NAME], [TITLE]
 
 <%= view :signup_button %>

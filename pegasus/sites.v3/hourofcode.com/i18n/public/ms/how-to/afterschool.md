@@ -38,16 +38,16 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
 
 <div style="clear: both;"></div>
 
-**Plan Ahead!** Do the following before your event starts:
+**Pelan!** Perkara-perkara berikut sebelum Majlis anda bermula:
 
 - Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
 - Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan melihat bahawa sains komputer adalah berkaitan sosial dan usaha sama juga.
+- **Tidak mempunyai komputer cukup?** Menggunakan [programing pasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan melihat bahawa sains komputer adalah berkaitan sosial dan usaha sama juga.
 - **Mempunyai jalur lebar yang rendah?** Rancang supaya video ditayangkan di hadapan kelas, agar setiap pelajar tidak perlu untuk memuat turun video sendiri. Atau cuba tutorial tanpa/luar talian.
 
 ## 5. Start your Hour of Code off with an inspiring video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Memulakan jam kod anda inspirasi peserta dan membincangkan bagaimana Sains Komputer memberi kesan setiap bahagian kehidupan kita.
 
 **Show an inspirational video:**
 

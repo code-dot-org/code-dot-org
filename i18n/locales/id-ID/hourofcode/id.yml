@@ -188,7 +188,7 @@
   front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
   front_join_us_tutorials: "Choose your Hour of Code tutorial!"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
-  front_join_us_robotics: 'Got robots?'
+  front_join_us_robotics: 'Punya robot?'
   front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
   front_join_us_teacher: 'Apaka anda guru?'
   front_join_us_inspire: 'Inspirasi murid dengan'
@@ -218,9 +218,10 @@
   front_join_us_more_info: "Untuk informasi lebih lanjut, silakan kunjungi <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "Untuk informasi lebih lanjut, silakan kunjungi code.org"
   front_join_us_n_students_served: "# tersaji"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Selenggarakan Hour of Code selama %{campaign_date}, dan daftar di sini.'
   signup_name_label: 'Nama anda'
-  signup_name_error: 'Name is required.'
+  signup_name_error: 'Nama diperlukan.'
   signup_email_label: 'Email Anda'
   signup_email_error: 'Email is required'
   signup_organization_name_label: 'Nama sekolah atau organisasi'
@@ -251,11 +252,11 @@
   signup_event_type_in_school: 'Di sekolah'
   signup_event_type_out_of_school: 'Di luar sekolah'
   signup_submit_census_label: 'Submit'
-  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
+  signup_submit_census_error_message: "Mohon maaf. Terjadi kesalahan. Silakan coba menyerahkan formulir kembali."
   signup_submit_label: 'Daftar'
   signup_submit_error_message: "Terjadi sebuah kesalahan. Silahkan periksa kembali apakah semua kolom isian yang diperlukan telah diisi secara benar."
-  signup_submit_and_continue_label: 'Submit and Continue'
-  signup_continue_label: 'Continue'
+  signup_submit_and_continue_label: 'Kirim dan Lanjutkan'
+  signup_continue_label: 'Lanjutkan'
   signup_thank_you_header: "Terimakasih telah mendaftar sebagai penyelenggara acara Hour of Code."
   signup_thank_you_message: 'Kami telah mengirimkan email konfirmasi dengan informasi untuk membantu anda memulai.'
   map_title: "Hour of Code map"

@@ -28,38 +28,38 @@ social:
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+Ca un mulțumesc pentru ajutorul oferit de a face posibil pentru studenți sa înceapă să învețe ștința computărelor, ne-ar plăcea să va oferim un set gratis ds postere printate profesionist oferind diverse modele de urmat pentru clasa dumneavoastra. Foloseste codul oferit **POSTEREGRATUITE** la verificare. (Nota: aceasta este valabila doar in timp ce resursele dureaza si o sa ai nevoie sa acopere costurile de livrare. Intru-cat aceste postere sunt transportate din Statele Unite, costurile de transport pot fi destul de ridicate daca sunt transportate in Canada si international. Intelegem ca acestea s-ar putea sa nu se afle in bugetul vostru, si va incurajam sa inserati [Pdf file](https://code.org/inspire)pentru clasa ta.)  
   
-[<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+[<button>Obtineti postere</button>](https://store.code.org/products/code-org-posters-set-of-12) Foloseste codul oferit POSTEREGRATUITE
 
   
-**Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+**Ora codului ruleaza pe parcursul <%=campanie_date('plin')%>. O sa tinem legatura cu noile tutoriale si alte captivante actualizarii dupa cum apar. In tmpul acesta, ce poti face acum?**
 
-## 1. Spread the word in your school and community
+## 1. Imprastie vestea in scoala si comunitatea ta
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Tocamai te-ai alaturat miscarii Ora Codului. Anuntati prietenii cu **#OraCodului**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>   
-Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nu trebuie să fii in şcoală ca să înveţi noi competenţe. Invite a local politician or policy maker to visit your school for the Hour of Code. Acestea te pot ajuta in construirea unei sustineri pentru tehnologia computerelor si programare si dincolo de tutorialele de o ora.
+Incurajeaza alte persoane sa participe[cu e-mailuri esantion.](<%= resolve_url('/promote/resources#sample-emails') %>)Contacteaza-ti directorul si provoaca fiecare clasa la scoala ta sa se inscrie. Recruteaza un grup local-baiat/fata cercetasi club, biserica, universitate, grup de veterani, sindicat sau chiar si cativa prieteni. Nu trebuie să fii in şcoală ca să înveţi noi competenţe. Invita un politician sau legislator sa iti viziteze scoala pentru Ora Codului. Acestea te pot ajuta in construirea unei sustineri pentru tehnologia computerelor si programare si dincolo de tutorialele de o ora.
 
 Foloseşte aceste [postere, bannere, stickere, videoclipuri si multe altele](<%= resolve_url('/promote/resources') %>) pentru evenimentul tau.
 
 ## 2. Găsiți un voluntar pe plan local pentru a vă ajuta în organizarea evenimentului dumneavoastră.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Cauta harta noastra cu voluntari](<%= resolve_url('https://code.org/volunteer/local') %>) pentru voluntari care pot sa iti viziteze clasa sau video chatul de la distanta sa iti inspire studenti despre multitudinea de posibilitati cu stiinta computarelor.
 
-## 3. Plan your Hour of Code
+## 3. Planoficati Ora Codului
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Alege un [Activitatea Ora Codului](https://hourofcode.com/learn) pentru clasa si[ revizuieste cum sa ghideze](<%= resolve_url('/how-to') %>).
 
-# Go beyond an Hour of Code
+# Mergi mai departe de Ora Codului
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> O Ora a Codului este doar inceputul. Fie ca esti un administrator, profesor, sau avocat, avem[ dezvoltare profesionala, curriculum, si resurse sa te ajute sa aduci clasele de stiinta a computarelor la scoala ta sau sa iti extinda ofertele.](https://code.org/yourschool) Daca deja predai stiinta computarelor, foloseste aceste resurse pe parcursul CS Saptamana Educatiei sa aduni suport de la adminostratia, parinti, si comunitate.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+Ai multe alegeri sa se potriveasca scolii tale. Multele organizatii ce ofera tutoriale Ora Codului au deasemenea curriculm si dezvoltare personala disponibila. Daca gasesti o lectie ce iti place, intreaba de mersul mai departe. Sa te ajutam sa mergi mao departe, ti-am evidentiant un numar defurnizorii de curriculm care sa te ajute ori studentii tai peste o ora</p> 
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> O Ora a Codului este doar inceputul. Multele din organizatii ce ofera lectii Ora Codului au deasemenea curriculume disponibile sa se duca mai departe. Sa te ajutam sa mergi mao departe, ti-am evidentiant un numar defurnizorii de curriculm care sa te ajute ori studentii tai peste o ora</p> 
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Cod.org ofera deasemenea tot [introducerea cursurilor in stiintele computarelor](https://code.org/educate/curriculum/cs-fundamentals-international) traduse in peste 25 de limbi fara nici un cost pentru tine si scoala ta. <% end %>
 
 <%= view 'popup_window.js' %>

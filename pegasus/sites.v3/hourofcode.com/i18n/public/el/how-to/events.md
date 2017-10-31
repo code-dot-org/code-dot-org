@@ -37,13 +37,13 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 ## Ενδεικτικό πρόγραμμα εκδήλωσης
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Εκδήλωση:** Συνάντηση Ενημέρωσης για την Επιστήμη των Υπολογιστών για όλο το σχολείο
 
 **Date:** Dec. 5th (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Χρόνος:** Κατά τη διάρκεια του σχολικού ωραρίου. Προτιμότερες οι εκδηλώσεις μέχρι το μεσημέρι. Περίπου 1 ώρα.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Τοποθεσία:** Αίθουσα εκδηλώσεων του σχολείου (π.χ. θέατρο, γυμναστήριο, κυλικείο)   
   
 
 

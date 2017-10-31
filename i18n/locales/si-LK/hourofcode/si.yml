@@ -218,6 +218,7 @@
   front_join_us_more_info: "වැඩිදුර තොරතුරු සඳහා, පිවිසෙන්න <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "වැඩිදුර තොරතුරු සඳහා, පිවිසෙන්න code.org"
   front_join_us_n_students_served: "# සේවයකරනලදී"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: '%{campaign_date} යන දින කීපය තුලදී Hour of Code වැඩසටහණක් සංවිධානය කරන්න, සහ මෙතනින් ලියාපදිංචිවන්න.'
   signup_name_label: 'ඔබේ නම'
   signup_name_error: 'Name is required.'

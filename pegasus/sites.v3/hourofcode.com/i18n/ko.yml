@@ -218,6 +218,7 @@
   front_join_us_more_info: "더 많은 정보가 필요하시다면, <a href ='https://code.org'>code.org</a>를 방문하세요."
   front_join_us_code_info: "더 많은 정보가 필요하시다면, code.org를 방문하세요."
   front_join_us_n_students_served: "# 명에게 제공됨"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: '%{campaign_date} 동안 Hour of code를 운영하시고, 이곳에서 등록하세요.'
   signup_name_label: '이름'
   signup_name_error: 'Name is required.'

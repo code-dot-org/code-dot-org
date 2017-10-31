@@ -218,6 +218,7 @@
   front_join_us_more_info: "要了解更詳細的資訊，請到 <a href='https://code.org'> code.org</a>。"
   front_join_us_code_info: "要了解更詳細的資訊，請到 code.org"
   front_join_us_n_students_served: "# 人已體驗"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: '在 %{campaign_date} 舉辦一場一小時的程式設計課程活動，並在這裡註冊。'
   signup_name_label: '您的姓名'
   signup_name_error: '須填寫名稱'

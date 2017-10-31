@@ -125,9 +125,9 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and e
 
 ## Τι γίνεται μετά την Ώρα του Κώδικα;
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Την ώρα του κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι για να μάθετε περισσότερα σχετικά με το πώς λειτουργεί η τεχνολογία και πώς μπορείτε να δημιουργήσετε εφαρμογές λογισμικού. Για να συνεχίσετε αυτό το ταξίδι:
 
 - Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Συμμετέχετε](%= resolve_url('https://code.org/professional-development-workshops') %) σε ημερήσια workshop δια ζώσης ώστε να λάβετε οδηγίες από έναν έμπειρο εισηγητή της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές Η.Π.Α.)
+- [Συμμετέχετε](%= resolve_url('https://code.org/professional-development-workshops') %) σε ημερήσιο εργαστήριο προσωπικά ώστε να λάβετε οδηγίες από έναν έμπειρο εισηγητή της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές από Η.Π.Α.)
 
 <%= view :signup_button %>

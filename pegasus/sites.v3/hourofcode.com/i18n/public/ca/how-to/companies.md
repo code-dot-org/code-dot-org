@@ -24,8 +24,8 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
 
 ## 1. Promote your Hour of Code
 
-- Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+- Promoure el seu esdeveniment [d'Hores de codi](<%= resolve_url('/promote') %>) i animar altres per acollir un.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Poden [inscriure's](<%= resolve_url('https://code.org/volunteer/engineer') %>) per estar connectat amb una aula.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

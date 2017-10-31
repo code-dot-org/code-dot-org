@@ -1,7 +1,7 @@
 ---
-title: '<%= hoc_s(:title_how_to_volunteers) %>'
-layout: wide
-nav: how_to_nav
+title: <%=hoc_(title_comment_faire_bénévoles) %>
+layout: large
+nav: comment_faire_nav
 ---
 <%= view :signup_button %>
 
@@ -15,20 +15,20 @@ Découvrez quelques témoignages de volontaires :
 - "J'ai particulièrement aimé la chance qui m'était donné, d'encourager les jeunes filles en technologie. Je sentais que j'aidais la prochaine génération près de chez moi."
 - "J'ai ADORÉ voir les enfants pleins de joie. Une chose étonnante était que les enseignant(e)s ont vu que quelques élèves, pour qui ça n'allait pas aussi bien sur le plan scolaire, étaient excellents à se mettre dans les pieds d'un développeur et à aider les autres autour d'eux- leur donnant une chance d'avoir confiance
 
-Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
+VIsitez une classe locale afin d'encourager les élèves à continuer à apprendre l'informatique.[Inscrivez-vous tout de suite!](https://code.org/volunteer/engineer).
 
 ## Recrutez vos collègues pour devenir bénévoles. 
 
 Parlez à vos ami(e)s et vos camarades de l'Heure du Code. Nous avons toujours des milliers de professeur(e)s s'inscrivant et cherchant des bénévoles, alors demandez de [vous inscrire comme bénévole](https://code.org/volunteer). Demandez à votre patron de s'impliquer. [Envoyez ce couriel](https://hourofcode.com/promote/resources#email) à votre chef, ou au directeur général.
 
-## How you get selected
+## Comment on vous sélectionne
 
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
+- Les enseignants chercheront des bénévoles pour notre [carte bénévole](https://code.org/volunteer/local).
 - Les professeur(e)s regarderont vos profils sur la carte, alors essayez de rendre votre profil aussi complet possible pour augmenter la chance q'un(e) professeur(e) vous choisisse.
 - Un(e) professeur(e) vous fera contact via ce formulaire (votre addresse couriel ne sera jamais partagé avec le/la professeur(e). 
   - Si vous recevez trop de demandes provenants de professeur(e)s, vous pouvez toujours changer vos préférence en cliquant sur le lien pour changer vos informations ou désabonner, fournis au bas de n'importe quel couriel d'un(e) professeur(e). 
 
-## How to prepare
+## Comment se préparer
 
 [Try out tutorials](hourofcode.com/learn) before heading to the classroom.
 

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Làm thế nào để tổ chức một sự kiện Giờ Mã hoá
 
-## 1. Prepare for your event
+## 1. Chuẩn bị cho sự kiện
 
 - Determine a venue, date, and time.
 - Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
@@ -39,7 +39,7 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Ngày:** 5 tháng 12 (ngày bắt đầu sự kiện Tuần lễ Giáo dục Khoa học máy tính)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 

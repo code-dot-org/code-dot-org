@@ -5,28 +5,28 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# Poradnik dla wolontariuszy
 
-## Why volunteer?
+## Czemu wziąć udział?
 
-Check out some testimony from past volunteers:
+Przeczytaj niektóre relacje innych wolontariuszy:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+- "Najlepsze, że cała klasa składała się z dziewcząt wszelkich ras. To, że mamy szansę dotrzeć do tych dzieciaków i zainteresować je, dobrze wróży przyszłości naszego przemysłu."
+- "Radość sprawiło mi zwłaszcza zachęcanie dziewcząt do zainteresowania się technologią. Czułam, że pomagam kolejnemu pokoleniu w mojej okolicy."
+- "Uwielbiałem patrzeć na podekscytowane dzieci. Jedną z niesamowitych rzeczy było to, że nauczyciele zauważyli jak niektórzy słabi w nauce uczniowie doskonale sobie radzili z mysleniem programistycznym i nawet pomagali innym - co budowało ich wiarę w siebie."
 
 Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
 
-## Recruit your co-workers to volunteer
+## Namów współpracowników aby także zostali wolontariuszami
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+Powiedz swoim przyjaciołom i współpracownikom o Godzinie Kodowania. Mamy tysiące nauczycieli szukających wolontariuszy, więc poproś ich aby [zarejestrowali się jako wolontariusze](https://code.org/volunteer). Poproś swojego pracodawcę o przyłączenie się do akcji. Wyślij [tą wiadomość](https://hourofcode.com/promote/resources#email) do swojego przełożonego albo prezesa firmy.
 
 ## How you get selected
 
 - Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-- A teacher will contact you through this form (your email address will never be shared with the teacher). 
-  - If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+- Nauczyciele będą przeglądać profile na mapie, więc postaraj się, aby twój profil był możliwie kompletny - to zwiększa szansę, że nauczyciel wybierze właśnie ciebie.
+- Nauczyciel skontaktuje się z tobą poprzez ten formularz (twój adres email nie zostanie nigdy udostępniony). 
+  - Jeśli otrzymujesz za dużo zapytań od nauczycieli, możesz uaktualnić swoje preferencje. Kliknij link umieszczony na dole każdej wiadomości od nauczyciela, aby zmienić swoje informacje albo wypisać się. 
 
 ## How to prepare
 

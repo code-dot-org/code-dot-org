@@ -218,6 +218,7 @@
   front_join_us_more_info: "Pour plus d'informations, visitez <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Pour plus d'informations, visitez code.org"
   front_join_us_n_students_served: "# d'élèves l'ont essayé"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Organisez un évènement Un Heure de Code durant %{campaign_date}, et inscrivez-le ici.'
   signup_name_label: 'Votre Nom'
   signup_name_error: 'Le nom est requis.'
@@ -910,15 +911,15 @@
   tutorial_khe_shortdescription: "Apprendre à dessiner en JavaScript"
   tutorial_kfr_shortdescription: "Apprendre à dessiner en JavaScript"
   tutorial_app-inventor_shortdescription: "Faire votre propre App (Android uniquement)"
-  tutorial_bits_shortdescription: "Move Bit by bit!"
+  tutorial_bits_shortdescription: "Déplace point par point !"
   tutorial_blockly_shortdescription: "Télécharger le zip pour apprendre en mode hors connexion"
-  tutorial_tynker_shortdescription: "Learn to code by solving fun puzzles and build your own games."
+  tutorial_tynker_shortdescription: "Apprenez à coder en résolvant des énigmes amusantes et en construisant vos propres jeux."
   tutorial_baypt_shortdescription: "Code Baymax"
   tutorial_code-combat_shortdescription: "Vaincs les ogres pour apprendre Python ou JavaScript dans cet épique jeu de programmation !"
   tutorial_mky_shortdescription: "Les élèves programment un singe pour attraper les bananes."
-  tutorial_spellcraft_shortdescription: "Learn about Event-Driven programming using the power of CodeSpells!"
-  tutorial_pirates_shortdescription: "Navigate the crystal waters of the southern hemisphere, code your treasure maps and discover the riches that lie on the golden shores. A fun way to learn the basic concepts of coding."
-  tutorial_csfirst_shortdescription: "Animate a story about two characters on the ocean. Add your own style!"
+  tutorial_spellcraft_shortdescription: "Découvrez la programmation évènementielle en utilisant la puissance de CodeSpells !"
+  tutorial_pirates_shortdescription: "Naviguez sur les eaux de cristal de l'hémisphère Sud, codez vos cartes au trésor et découvrez les richesses qui s'étendent sur les rives d'or. Une manière amusante d'apprendre les concepts de base du code."
+  tutorial_csfirst_shortdescription: "Anime une histoire à propos de deux personnages sur l’océan. Ajoute ton propre style !"
   tutorial_loopedy_shortdescription: "Faire une danse à l’aide de boucles !"
   tutorial_dsw_shortdescription: "Apprends à programmer les droïdes et crée ton propre jeu de Star Wars dans une galaxie lointaine, très lointaine."
   tutorial_dswb_shortdescription: "Apprends à programmer les droïdes et crée ton propre jeu de Star Wars dans une galaxie lointaine, très lointaine."

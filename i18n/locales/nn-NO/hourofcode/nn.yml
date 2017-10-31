@@ -5,12 +5,12 @@
   front_title: 'Bli med på det største læringsarrangementet i historia, %{campaign_date}'
   coming_soon: 'Kjem snart'
   compatibility_unsupported_browser: "Nettlesaren din er ikkje støtta. Ver venleg å oppgradere nettlesaren din til <a href='%{supported_browsers_url}', target='_blank'>ein av dei nettlesarane vi støttar</a>. Du kan prøve å sjå sida, men du må rekne med at ikkje alt fungerer."
-  campaign_date_start_short: "5. des"
-  campaign_date_start_long: "5. desember"
-  campaign_date_short: "5-11 des"
-  campaign_date_full: "5-11 desember"
-  campaign_date_year: "2016"
-  campaign_date_full_year: "5.-11. desember 2016"
+  campaign_date_start_short: "4. des"
+  campaign_date_start_long: "4. desember"
+  campaign_date_short: "4.-10. des"
+  campaign_date_full: "4.-10. desember"
+  campaign_date_year: "2017"
+  campaign_date_full_year: "4.-10. desember, 2017"
   front_header_banner: 'Bli med på det største læringsarrangementet i historia, %{campaign_date}'
   front_intro_default: 'Kodetimen er ei global rørsle som når ut til eit titalls millionar elever i over 180 land. Kven som helst kan organisere ein kodetime kvar som helst. Timeslange leksjonar er tilgjengelege på over 45 språk. Det trengs inga erfaring. <strong>Alder: frå 4 til 104.</strong>'
   front_watch_video: 'Sjå den nye videoen'
@@ -186,8 +186,8 @@
   front_what_is_hoc: 'Kva er Kodetimen? '
   front_join_us_header: 'Alle kan lære det grunnleggjande, og har det gøy medan dei gjer det!'
   front_join_us_volunteer_header: 'Frivillege til Kodetimen'
-  front_join_us_tutorials: "Prøv årets nye oppgåver!"
-  front_join_us_tutorials_link: 'Filtrer og sjå igjennom ei utvida liste med <i> over 200 opplæringsprogram og leksjonar</i>! Finn aktivitetar for ulike fagområde, ulike plattformar og elevar på alle erfaringsnivå.'
+  front_join_us_tutorials: "Vel Kodetime-opplegg!"
+  front_join_us_tutorials_link: 'Filtrer og sjå igjennom ei utvida liste med <i>over 200 opplæringsprogram og leksjonar</i>! Finn aktivitetar for ulike fagområde, ulike plattformar og elevar på alle erfaringsnivå.'
   front_join_us_robotics: 'Har du roboter?'
   front_join_us_robotics_link: 'Takk til våre samarbeidspartnere innen automasjon og robotikk for å støtte Kodetimen! Om klasserommet ditt har roboter, klikk på logoane for å finne ein robot-aktivitet!'
   front_join_us_teacher: 'Er du ein lærar?'
@@ -218,18 +218,19 @@
   front_join_us_more_info: "For meir informasjon, besøk <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "For meir informasjon, besøk code.org"
   front_join_us_n_students_served: "# har prøvd"
+  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Organiser ein Kodetime i perioda %{campaign_date}, og registrer den her.'
   signup_name_label: 'Namnet ditt'
   signup_name_error: 'Navnet er påkrevd.'
   signup_email_label: 'E-post'
   signup_email_error: 'E-post er påkrevd'
   signup_organization_name_label: 'Skule eller organisasjon'
-  signup_organization_name_error: 'Organisasjonsnavnet er påkrevd.'
+  signup_organization_name_error: 'Namn på organisasjon er obligatorisk.'
   signup_event_type_label: 'Type arrangement'
-  signup_event_type_error: 'Arrangementstype er påkrevd.'
+  signup_event_type_error: 'Arrangementstype er obligatorisk.'
   signup_event_entire_school_label: 'Heile skulen min skal vere med'
-  signup_event_location_label: 'Stad for arrangementet (valfritt)'
-  signup_event_location_error: 'Arrangementsted er påkrevd.'
+  signup_event_location_label: 'Arrangementstad'
+  signup_event_location_error: 'Arrangementstad er obligatorisk.'
   signup_special_event_flag_label: 'Arrangementet mitt vil ha med ein heil kommune, mykje folk eller andre spesielle planer som gjer at det vil ta meir enn ein time'
   signup_special_event_details_label: 'Søk om å framheve dette arrangementet som eit spesielt arrangement'
   signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">plakatar</a> til skulen eller organisasjonen min (gjeld berre i USA)'
@@ -239,12 +240,12 @@
   signup_host_an_hour: 'Ver vert for ein Kodetime'
   signup_match_volunteer: 'Hjelp meg å finne ein lokal programmerar til å inspirere elevane mine'
   signup_multiple_event_warning: "Hvis du held flere arrangementer, gjer vel å registrere unike namn og epostadresser for kvart av dei. Vi tel berre eitt arrangement per namn og epost i kombinasjon."
-  signup_registration_deadline: "Registrering til Kodetimen lukker 12. desember."
+  signup_registration_deadline: "Registreringa til Kodetimen lukkar 11. desember."
   signup_name_placeholder: 'Namnet ditt'
   signup_email_placeholder: 'deg@eksempel.no'
   signup_organization_name_placeholder: "For eksempel Lillevik skule"
   signup_event_country_label: "Land"
-  signup_event_country_error: "Land er påkrevd."
+  signup_event_country_error: "Land er obligatorisk."
   signup_event_location_placeholder: "Postnr og land eller full adresse."
   signup_special_event_details_placeholder: 'Kva er spesielt med dette arrangementet'
   signup_send_posters_address_placeholder: 'Denne adressa vil ikkje bli vist på kartet'
@@ -259,7 +260,7 @@
   signup_thank_you_header: "Takk for at du registrerte deg som arrangør av ein kodetime."
   signup_thank_you_message: 'Vi har sendt deg bekreftelse på e-post med informasjon for å hjelpe deg i gong.'
   map_title: "Kodetimekartet"
-  map_header: 'Talet på Kodetime-arrangementer over heile verda'
+  map_header: '# arrangement som er registrert for Kodetimen 2017'
   see_all_events: 'Sjå alle arrangement'
   map_header_company: '# by company organizers'
   map_header_country: '# i %{country}'
@@ -269,54 +270,54 @@
   map_legend_title: 'Tegnforklaring'
   map_legend_hoc_events: 'Kodetimearrangement'
   map_legend_cs_tech_jam: 'Spesialarrangement'
-  map_warning: "Kodetimen-kartet viser berre dei 200 000 første registrerte arrangementa. Alle registrerte arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida.</a>"
-  meta_tag_og_title: Kodetimen kjem
+  map_warning: "Kodetimen-kartet viser berre dei 200.000 første registrerte arrangementa. Alle registrerte arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida.</a>"
+  meta_tag_og_title: 'Kodetimen: Alle kan lære'
   meta_tag_og_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 45 språk.'
   meta_tag_twitter_title: Kodetimen kjem
   meta_tag_twitter_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 30 språk.'
   twitter_default_text: "Eg skal vera med på #kodetime #HourOfCode i år, skal du? @codeorg"
   hoc_faq_title: 'Vanlege spørsmål'
   hoc_faq_what_is_hoc_q: 'Kva er Kodetimen? '
-  hoc_faq_what_is_hoc_a: "Kodetimen er ein timeslang introduksjon til datavitskap, designe for å avmystifisere kode og vise at alle kan læra det grunnleggande.<a href='http://code.org/learn'>Sjekk ut oppgåvene</a>."
+  hoc_faq_what_is_hoc_a: "Kodetimen starta som ein timeslang introduksjon til datavitskap, designa for å avmystifisere koding og vise at alle kan lære det grunnleggande og for å auka deltaking innan dataprogrammering.\n Det har sidan blitt ein verdsomfattande innsatsi å feire dataprogrammering, som starta som aktivitetar på ein time, men som har utvida seg til all slags engasjement i samfunnet. Sjekk ut <a href='%{tutorials}'>øvingar og aktivitetar</a>. Denne grasrotkampanjen er støtta av over <a href='%{partners}'>400 partnarar</a> og 200.000 lærarar og pedagogar over heile verda."
   hoc_faq_last_year: "Prøv oppgåvene"
   hoc_faq_when_is_hoc_q: 'Når er kodetimen?'
-  hoc_faq_when_is_hoc_a: "Kodetimen vert halde kvart år i %{campaign_date_year}<a href='%{csedweek_url}'>Computer Science Education Week</a>. Computer Science Education Week vil foregå %{campaign_date_full}, men du kan arrangere Kodetimen når som helst på året. Computer Science Education Week vert halde årleg til minne om datapioneren <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
+  hoc_faq_when_is_hoc_a: "Kodetimen skjer kvart år i løpet av <a href='%{csedweek_url}'>Kodeveka: Computer Science Education Week</a>. Computer Science Education Week i %{campaign_date_year} vil skje %{campaign_date_full}, men du kan arrangere Kodetimen når som helst i løpet av året. Computer Science Education Week vert halde årleg til minne om datapioneren <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (9. desember, 1906)."
   hoc_faq_why_cs_q: 'Kvifor informatikk?'
   hoc_faq_why_cs_a: "<i>Alle</i> studentar burde ha mogelegheita til å lære datavitskap. Det fostrar problemløysingseigenskaper, logikk og kreativitet. Ved å byrje tidleg får elevane eit grunnlag for suksess i kva som helst karrieresti for det 21. århundret. Sjå meir statistikk på <a href='%{stats_url}'>her</a>."
   hoc_faq_how_participate_q: 'Korleis deltek eg i ein Kodetime?'
   hoc_faq_how_participate_a: "<a href='/how-to'>start planlegginga</a>. Du kan organisere en kodetime for skulen din eller for nærmiljøet &mdash; til dømes ein fritidsklubb, ein veldedig organisasjon eller på arbeidsplassen din. Eller, bare prøv det på eiga hand når vi kjem til %{campaign_date}."
   hoc_faq_behind_hoc_q: 'Kven står bak Kodetimen?'
-  hoc_faq_behind_hoc_a: "Kodetimen er organisert av  <a href='http://code.org'>Code.org</a>, ein non-profittorganisasjon som søkjer å utvide deltaking i datavitskap ved å gjere den tilgjengeleg i fleire skular, og ved å auke deltakinga blant kvinner og minoritetselevar. Ei <a href='http://code.org/about/partners'>stor gruppe bedrifter</a> har gått saman for å støtte Kodetimen &mdash; inkludert Microsoft, Apple, Amazon, Boys and Girls Clubs of America og College Board."
+  hoc_faq_behind_hoc_a: "Kodetimen er organisert av Hour of Code og Computer Science Education Week<a href='%{partner_url}'>Rådgjevings- og vurderingskomitear</a>, samt ei stor gruppe bedrifter som har gått saman for å støtte Kodetimen &mdash; inkludert Microsoft, Apple, Amazon, Boys and Girls Clubs of America og College Board."
   hoc_faq_host_q: "Eg veit ingenting om koding. Kan eg framleis vere vert for ein Kodetime?"
   hoc_faq_host_a: "Sjølvsagt! Kodetimeaktivitetar er brukarstyrte. Alt du treng er å <a href='%{codeorg_url}/learn'>sjå på våre oppdaterte rettleiingar</a>, plukke den du ynskjer, og velgje ein &mdash; me gjer resten. Me har også val for alle aldre og erfaringsnivå, frå barnehagen og opp. Start hendingsplanleggjinga ved å lese vår <a href='/how-to'>veiledning</a>."
   hoc_faq_devices_q: "Kva slags datamaskiner/einingar bør eg bruke for elevane mine?"
-  hoc_faq_devices_a: "Code.org sine rettleiingar fungerer på alle einingar og nettlesarar. Du finn meir informasjon om tekniske behov <a href='%{codeorg_url}/educate/it'> her</a>. Tekniske behov for opplæring som utanfor Code.org finn du <a href='%{codeorg_url}/learn'>%{partner_url}/lære>her</a> i introduksjonen til opplegget. Ikkje gløym at vi også tilbyr <a href='%{unplugged_url}'>opplegg utan datamaskiner</a> dersom skulen ikkje kan tilrettelegge med utstyr!"
+  hoc_faq_devices_a: "Code.org sine rettleiingar fungerer på alle einingar og nettlesarar. Du finn meir informasjon om tekniske behov <a href='%{codeorg_url}/educate/it'>her</a>. Tekniske behov for opplæring utanfor Code.org finn du <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> i skildringa av kvar enkelt rettleiing. Ikkje gløym at vi også tilbyr <a href='%{unplugged_url}'>opplegg utan datamaskiner</a> dersom skulen ikkje kan tilrettelegge med utstyr!"
   hoc_faq_need_computers_q: 'Treng eg datamaskiner til kvar deltakar?'
-  hoc_faq_need_computers_a: "Nei. Me har Kodetime-veiledningar som fungerar på PC, smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke. Du kan delta uansett kvar du er, med det du har. <p><i>Her er nokre val:</i><br><ul><li><b>Arbeid i par.</b> Forsking viser at elevar lærer best ved <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>parprogrammering</a>, ved å dele ei datamaskin og arbeide saman. Oppfordre elevane til å gå i par.</li><li><b>Bruk ei videokanon.</b> Om du har ein prosjektør og ein skjerm for ei datamaskin tilknytta internett, kan heile gruppa gjere ein Kodetime saman. Sjå videoar saman og ta runder der kvar og ein løyser gåter eller svarer på spørsmål</li><li><b>Heilt utan straum.</b> Me har også veiledningar som ikkje krev datamaskiner i det heile teke.</li></ul>"
+  hoc_faq_need_computers_a: "Nei. Vi har Kodetime-rettleiingar som fungerar på PC, smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke. Du kan delta uansett kvar du er, med det du har. <p><i>Her er nokre val:</i><br><ul><li><b>Arbeid i par.</b> <a href='%{pair_programming_research}'>Forsking viser at elevar lærer best gjennom <a href='%{pair_programming_video}'>par-programmering</a>, ved å dele ei datamaskin og arbeide saman. Oppfordre elevane til å gå i par.<li><b>Bruk ei videokanon.</b> Om du har ein prosjektør og ein skjerm for ei datamaskin tilknytta internett, kan heile gruppa gjere ein Kodetime saman. Sjå videoar saman og ta runder der kvar og ein løyser gåter eller svarar på spørsmål<li><b>Heilt utan straum.</b> VI har også <a href='%{unplugged_url}'>rettleiingar som ikkje krev datamaskiner</a> i det heile teke.</ul>"
   hoc_faq_international_q: "Eg er i <country>. Korleis kan eg delta internasjonalt?"
   hoc_faq_international_a: "Kven som helst kan organisere eit Kodetime-arrangement, kor som helst i verda. I fjor deltok elevar over heile verda saman i Kodetimen. Finn ut meir <a href='/promote'> her</a>."
   hoc_faq_tutorial_q: 'Korleis kan eg lage ei veiledning for Kodetimen?'
-  hoc_faq_tutorial_a: "Om du er interessert i å bli ein veiledningspartner, <a href='target-tutorial-guidelines'>sjå våre retningslinjer og instruksjonar</a>. Me ynskjer å skape mange ulike mogelegheiter, men primærmålet er å optimalisere erfaringa for elevane og lærarane som er nye innan datavitskap."
+  hoc_faq_tutorial_a: "Om du er interessert i å bli ein rettleiingsspartner, <a href='target-tutorial-guidelines'>sjå våre retningslinjer og instruksjonar</a>. Vi ynskjer å skape mange ulike mogelegheiter, men primærmålet er å optimalisere erfaringa for elevane og lærarane som er nye innan datavitskap."
   hoc_faq_account_q: "Må elevane logge på med ein konto?"
-  hoc_faq_account_a: "Nei. Registrering eller innlogging er ikkje naudsynt for at elevar skal prøve Kodetimen. Dei fleste <a href='http://code.org/learn/beyond'>oppfølgingskursa</a>krev ein konto for å lagre elevanes framgong."
+  hoc_faq_account_a: "Nei. Registrering eller innlogging er ikkje naudsynt for at elevar skal prøve Kodetimen. Dei fleste <a href='%{codeorg_url}/learn/beyond'>kursa for viderekommande</a> krev ein konto for å kunne lagre framgangen til eleven. Når du registrerer deg for Kodetimen lagar IKKJE automatisk ein Code Studio-konto. Dersom du ønsker å lage kontoar for elevande dine, følg desse <a href='https://youtu.be/_smelV_KISE'>instruksjonane</a>."
   hoc_faq_high_school_q: "Kva for aktivitet bør eg gjere med elevar i vidaregåande skule?"
-  hoc_faq_high_school_a: "Me anbefaler å starte med begynneroppgåvene på <a href='http://code.org/learn'>Code.org/learn</a>for alle aldersgrupper, for eksempel oppgåva med Angry Birds eller med Anna og Elsa frå Frost. Ein elev i vidaregåande skule bør klare desse på 30 minutt og kan gå vidare til ei meir avansert oppgåve i JavaScript, frå for eksempel Khan Academy eller CodeHS."
+  hoc_faq_high_school_a: "Oppgåvene på Star Wars og Minecraft er bra for vidaregåande, særleg Star Wars JavaScript-versjonen og gratisnivået i begge oppgåvene. Alternativt tilrår vi å starte med nybyrbegynneroppgåvene på <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> for å starte, til dømes oppgåva med Angry Birds eller med Anna og Elsa frå Frost. Ein elev i vidaregåande skule bør klare desse på 30 minutt og kan gå vidare til ei meir avansert oppgåve i JavaScript, frå for eksempel Khan Academy eller CodeHS."
   hoc_faq_scratch_q: "Eg skal bruke Scratch i Kodetimen, men kva om elevane har iPads i staden for laptops?"
-  hoc_faq_scratch_a: "Scratch kjøyrer ikkje på nettbrett. Om elvane er små kan dei bruke appen ScratchJR for iPad(for dei som kan lese). Om du ser på oppgåvene på<a href='http://code.org/learn'>Code.org/learn</a>kan du finne andre oppgåver som passar for iPad - frå Code.org, Tynker, Lightbot eller CodeSpark."
+  hoc_faq_scratch_a: "Scratch køyrer ikkje på nettbrett. Om elvane er unge, kan dei bruke appen ScratchJR for iPad (for dei som kan lese). Om du ser på oppgåvene på<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> kan du finne andre oppgåver som passar for iPad - frå Code.org, Tynker, Lightbot eller CodeSpark."
   hoc_faq_count_hoc_q: "Hvordan tel de kodetimar?"
   hoc_faq_map_q: "Kvifor ser eg ikkje min prikk på kartet?"
-  hoc_faq_map_a: "Vi er veldig lei oss for at du ikkje ser ditt arrangement på Kodetimekartet. Fordi titusenvis av organisatorar melder seg på vil kartet samle fleire arrangement under kvar prikk. Viss du klikkar på nummeret over kartet vil du få opp ei liste over alle arrangement for kvar region og finne arrangementet ditt der. I tillegg vil det ofte ta opp til 48 timar før kartet oppdaterar seg på grunn av det er tusenvis av påmeldingar. Sjekk igjen om nokre få dagar!"
+  hoc_faq_map_a: "Vi er veldig lei oss for at du ikkje ser arrangementet ditt på kartet over Kodetimen. Fordi titusenvis av organisatorar melder seg på vil kartet samle fleire arrangement under kvar prikk. Viss du klikkar på nummeret over kartet vil du få opp ei liste over alle arrangement for kvar region og finne arrangementet ditt der. I tillegg vil det ofte ta opp til 48 timar før kartet oppdaterar seg på grunn av det er tusenvis av påmeldingar. Sjekk igjen om nokre få dagar!"
   hoc_faq_count_hoc_a: "Teljaren for Kodetimen er ikkje heilt nøyaktig. Vi tel ikkje unike elevar eksakt når vi måler deltakinga på Kodetimen, særskilt kjem dette av at vi ikkje krev innlogging eller registrering. Dette fører til at vi både tel for mange og for få heile tida. Les fleire detaljar om dette <a href='%{codeorg_url}/loc'>her</a>."
   hoc_faq_one_hour_q: "Hvor mye kan ein lære i ein time?"
-  hoc_faq_one_hour_a: 'Målet til Kodetimen er ikkje at nokon skal bli ekspert i informatikk eller koding på ein time. Ein time er berre nok til å lære at informatikk er moro og kreativt, tilgjengeleg for alle aldrar og alle elevar uansett bakgrunn. Suksess for kampanja blir ikkje målt i kor mykje informatikk elevane lærer - suksessen blir vist gjennom brei deltaking på tvers av kjønn, etnisitet og sosioøkonomisk gruppe, og i auken av påmeldingar til informatikk-kurs på alle nivå. Millionar av deltakande lærarar og elevar har vald å gå utover den eine timen - for å fortsetje læringa i dagar og veker, og mange elevar har meldt seg på større kurs (til og med på høgskule og universitetsnivå) som eit resultat.<br></br>I tillegg får også læraren sjøv verdifull læring. Etter ein kodetime får ho tryggleik på at ein kan lære vekk koding sjølv utan å ha høgare utdanning i informatikk. Titusenvis av lærarar har vald å gå vidare med informatikk og teke etterutdanning og/eller nettbaserte kurs. Dette gjeld også for skulesjefar som vil forstå at informatikk er noko elevane ønskjer og lærarane meistrar.<br/><br/>Det viktigaste av alt er at alle deltakarane i løpet av den timen skjønar at dette får vi til.'
+  hoc_faq_one_hour_a: 'Målet til Kodetimen er ikkje at nokon skal bli ekspert i informatikk eller koding på ein time. Ein time er berre nok til å lære at informatikk er moro og kreativt, tilgjengeleg for alle aldrar og alle elevar uansett bakgrunn. Suksess for kampanja blir ikkje målt i kor mykje informatikk elevane lærer - suksessen blir vist gjennom brei deltaking på tvers av kjønn, etnisitet og sosioøkonomisk gruppe, og i auken av påmeldingar til informatikk-kurs på alle nivå. Millionar av deltakande lærarar og elevar har vald å gå utover den eine timen - for å fortsetje læringa i dagar og veker, og mange elevar har meldt seg på større kurs (til og med på høgskule og universitetsnivå) som eit resultat.<br/><br/>I tillegg får også læraren sjøv verdifull læring. Etter ein kodetime er ein trygg på at ein kan lære vekk koding sjølv utan å ha høgare utdanning i informatikk. Titusenvis av lærarar har vald å gå vidare med informatikk og teke etterutdanning og/eller nettbaserte kurs. Dette gjeld også for skulesjefar som vil forstå at informatikk er noko elevane ønskjer og lærarane meistrar.<br/><br/>Det viktigaste av alt er at alle deltakarane i løpet av den timen skjønar at dette får vi til.'
   hoc_faq_more_questions_q: "Har du framleis fleire spørsmål?"
   hoc_faq_more_questions_a: "Sjå om du finn eit svar i vårt <a href='http://support.code.org'>brukarstøtteforum</a>."
   hoc_faq_keep_learning_q: "Korleis held eg fram med læringa etter Kodetimen?"
   hoc_faq_keep_learning_a: "Kven som helst kan halde ein Kodetime når som helst. Rettleiingane vert haldne oppdatert heile året. Du kan forvente at alle rettleiingar og oppgåver er tilgjengelege på nettsida vår i overskueleg framtid. Besøk <a href='/promote'>ressurssida vår</a> for rettleiing om korleis halde ein Kodetime eller andre ressursar for å hjelpe deg å gjere Kodetimen til ein suksess."
   hoc_faq_certificates_q: "Korleis kan eg skrive ut kursbevisa for elevane mine?"
-  hoc_faq_certificates_a: "Gå til sida vår for <a href='%{codeorg_url}/certificates'>kursbevis</a> der du kan skrive ut kursbevis for heile klassa på førehand. Du kan også skrive ut <a href='%{codeorg_url}/certificates?course=mc'> spesielle kursbevis</a> for elevar på Minecraftopplæringa."
+  hoc_faq_certificates_a: "Gå til sida vår for <a href='%{codeorg_url}/certificates'>kursbevis</a> der du kan skrive ut kursbevis for heile klassa på førehand. Du kan også skrive ut <a href='%{codeorg_url}/certificates?course=mc'> spesielle kursbevis</a> for elevar på Minecraft-opplæringa."
   hoc_faq_logo_q: "Er der avgrensningar på korleis eg kan nytte Kodtimen sitt namn og logo?"
-  hoc_faq_logo_a: "Kodetimen er eit varemerke. Vi ønskjer ikkje å hindre bruken av det, men vi vil sikre oss at bruken er innanfor visse avgrensingar. Venlegst sjå <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>desse retningslinjene</a>."
+  hoc_faq_logo_a: "Kodetimen er eit varemerke. Vi ønskjer ikkje å hindre bruken av det, men vi vil sikre oss at bruken er innanfor visse avgrensingar. Vær venleg og sjå <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>desse retningslinjene for bruk</a>."
   stats_hoc_2013_image_alt: 'Tal frå Kodetimen 2013'
   stats_growth: "Det var den raskaste til å oppnå 15 millionar brukarar."
   stats_i18n: "Elevene lærer på over 45 språk"
@@ -404,18 +405,18 @@
   highlights_readmore: Les meir
   highlights_watchvideo: Sjå videoen
   highlights_facebook: Del på Facebook
-  highlights_constant_alba_heading: Skodespelaren, aktivisten og entreprenøren heldt ein Kodetime for alle dei ansatte i Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
-  highlights_constant_obama_short_heading: Coder in Chief
-  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
-  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
-  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
-  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
-  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
-  highlights_constant_ny_short_heading: Brooklyn beats Chicago
-  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
-  highlights_constant_athletes_short_heading: Push yourself
+  highlights_constant_alba_heading: Skodespelaren, aktivisten og entreprenøren hadde ein Kodetime for alle dei tilsette i Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba lærer seg å kode med Kodetimen
+  highlights_constant_obama_heading: President Obama er den første presidenten som skriver en linje kode når han er vert for en historisk Kodetime i det hvite hus.
+  highlights_constant_obama_short_heading: Øverstkommanderende koder
+  highlights_constant_malala_heading: "\"Alle jenter fortjener å delta i skapelsen av teknologien som vil endre verden, og endre hvem som styrer den.\""
+  highlights_constant_malala_short_heading: Malala, vinner av Nobels fredspris
+  highlights_constant_trudeau_heading: Canadas statsminister Justin Trudeau kodet et enkelt spill med sin favorittsport.
+  highlights_constant_trudeau_short_heading: Statsminister Justin Trudeau koder et spill
+  highlights_constant_ny_heading: Efter en episk kamp har 80% av Brooklyns skoler deltatt i Kodetimen vs 60% i Chicago. Ikke dårlig!
+  highlights_constant_ny_short_heading: Brooklyn slår Chicago
+  highlights_constant_athletes_heading: Mestere og gullmedaljevinnere Serena Williams, Neymar Jr og Carmelo Anthony inspirerer elevene til å presse seg selv.
+  highlights_constant_athletes_short_heading: Press deg selv
   footer_copyright_message: 'Copyright %{current_year} Code.org. Alle rettigheiter reservert.'
   footer_trademark_message: 'Varemerket Hour of Code™ høyrer til Code.org.'
   footer_menu_partners: 'Partnarar'
@@ -429,7 +430,7 @@
   learn_banner_teachers: 'Lærarar:<a id=''teacher_banner_host''>Vær vert for ein time</a>eller<a id=''teacher_banner_howto''>les slik-gjer-du-guiden</a>'
   learn_robotics_banner_heading: 'ROBOTIKK'
   learn_robotics_banner_blurb: 'Har du robotar? Bruk dei i aktivitetane nedanfor og lag ein handfast Kodetime for alle aldrar!'
-  tutorial_athlete_name: "Code your own sports game"
+  tutorial_athlete_name: "Kod ditt eget sportsspill"
   tutorial_moana_name: 'Moana: navigasjon med kode'
   tutorial_star-wars_name: 'Star Wars: Bygg ein galakse med kode'
   tutorial_gumadventure_name: "Gumball's kodeeventyr"
@@ -472,33 +473,33 @@
   tutorial_itchj_name: "KLØE hopping (i Scratch)"
   tutorial_tickleo_name: "Swimming Orca - av Tickle App"
   tutorial_hopgeo_name: "Geometri-hopper"
-  tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
-  tutorial_monster_name: "Mystery Island Coding Quest"
+  tutorial_tynkermult_name: "Multiplikasjons-flukt STEM Kit"
+  tutorial_monster_name: "Mystery Island Kodeoppdrag"
   tutorial_tynkerapp_name: "Bygg ein app"
-  tutorial_tynkerpup_name: "Puppy Adventure"
-  tutorial_livecode_name: "LiveCode Sound Boards"
-  tutorial_cocomgame_name: 'CodeCombat: Game Development'
+  tutorial_tynkerpup_name: "Hundevalpens eventyr"
+  tutorial_livecode_name: "LiveCode Lydkort"
+  tutorial_cocomgame_name: 'CodeCombat: Spillutvikling'
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
-  tutorial_code-avengers_name: "Build a Game with JavaScript"
+  tutorial_code-avengers_name: "Bygg et spill med JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
-  tutorial_makeschool_name: "Build an iPhone game in your browser!"
-  tutorial_cmgame_name: "CodeMonkey's Game Builder"
+  tutorial_makeschool_name: "Bygg et iPhone-spill i din nettleser!"
+  tutorial_cmgame_name: "Codemonkeys Spillbygger"
   tutorial_codesters_name: "Codesters"
-  tutorial_qrm_name: "Accessible programming (with screenreader support)"
+  tutorial_qrm_name: "Tilgjengelig programmering (med screenreader støtte)"
   tutorial_texas-instruments_name: "10 minutter med koding"
   tutorial_cajava_name: "Teikn flagg med JavaScript"
   tutorial_codehs_name: "Lær å kode med hunden Karel"
-  tutorial_hopemo_name: "Teikn emoji"
-  tutorial_tynkercm_name: "Kodemonsterar"
+  tutorial_hopemo_name: "Teikn emojis"
+  tutorial_tynkercm_name: "Kode-monsterar"
   tutorial_codesterswintergreet_name: "Julehelsingar"
-  tutorial_codestersc_name: "The Coordinate Plane"
+  tutorial_codestersc_name: "Koordinatsystemet"
   tutorial_codestersturtle_name: "Teikn ei skilpadde"
   tutorial_penjee_name: "Lær Python med pingvinen Penjee"
-  tutorial_trinket_name: "Trinket's Hour of Python"
-  tutorial_frogger_name: "Make your own 3D Frogger game"
-  tutorial_tynkereco_name: "Ecological Pyramid STEM Kit"
+  tutorial_trinket_name: "Trinkets Python-time"
+  tutorial_frogger_name: "Lag ditt eget 3D Frogger spill"
+  tutorial_tynkereco_name: "Økologisk Pyramide STEM Kit"
   tutorial_mitedarc_name: "MIT Education Arcade"
-  tutorial_khan_name: 'Khan Academy: Drawing with Code'
+  tutorial_khan_name: 'Khan Academy: Tegn med kode'
   tutorial_tynkerd_name: "Debugger"
   tutorial_cdmy_name: "Codecademy"
   tutorial_codestersdance_name: "Dansetrinn"
@@ -508,63 +509,63 @@
   tutorial_tynkerdrones_name: "Programmér dronar og robotar"
   tutorial_carla_name: "Programmering med Carla"
   tutorial_globaloria_name: "Globaloria MakeQuest"
-  tutorial_capost_name: "Build a Digital Postcard with HTML and CSS"
-  tutorial_marco_name: "Run Marco!"
+  tutorial_capost_name: "Bygg et digitalt postkort med HTML og CSS"
+  tutorial_marco_name: "Løp Marco!"
   tutorial_codestersflappybike_name: "Flappy Bike"
-  tutorial_kanopong_name: "Kano Computing - Make Pong"
+  tutorial_kanopong_name: "Kano Computing - Lag Pong"
   tutorial_tynkerright_name: "Bill of Rights STEM Kit"
   tutorial_flatverse_name: "Flatverse"
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "Code Commander"
   tutorial_bamboo_name: "Bamboo JS"
-  tutorial_robojav_name: 'Robots and Java: An introduction to Java'
-  tutorial_roboba_name: "Learn Algebra with RoboBlockly"
+  tutorial_robojav_name: 'Roboter og Java: en introduksjon til Java'
+  tutorial_roboba_name: "Lær Algebra med RoboBlockly"
   tutorial_knodsnake_name: "JavaScript Snake"
-  tutorial_soccharater_name: "Character Building"
-  tutorial_silent_name: "Silent Teacher"
+  tutorial_soccharater_name: "Karakteroppbygging"
+  tutorial_silent_name: "Stille lærer"
   tutorial_robomesh_name: "Programmer VEX IQ roboter med Blockly"
   tutorial_amaze_name: "A-Maze-thing"
-  tutorial_codestersds_name: "Dream Sequence"
-  tutorial_knodtext_name: 'Text Adventure: Python'
-  tutorial_alicegar_name: "Animating with Alice and Garfield"
-  tutorial_codesterstransform_name: "Transformation Puzzles"
+  tutorial_codestersds_name: "Drømmesekvens"
+  tutorial_knodtext_name: 'Tekst-eventyr: Python'
+  tutorial_alicegar_name: "Animering med Alice og Garfield"
+  tutorial_codesterstransform_name: "Forvandlings-puslespill"
   tutorial_flexfrog_name: "Flexbox Froggy"
   tutorial_codemoji_name: "Codemoji"
-  tutorial_robobii_name: "Learn Coding with RoboBlockly"
-  tutorial_robobm_name: "Learn Math with RoboBlockly"
-  tutorial_codingrobots_name: "Learn One Hour Coding with RoboBlockly"
-  tutorial_robob_name: "Learn Robotics with RoboBlockly"
-  tutorial_coders_name: 'Coders Strike Back: an introduction to bot programming'
-  tutorial_tynkerhw_name: "Learn to Code with Hot Wheels"
-  tutorial_tynkermh_name: "Learn to Code with Monster High"
-  tutorial_caphoto_name: "Build a Photo Booth App"
-  tutorial_mozillahw_name: "Mozilla Homework Excuse Generator"
-  tutorial_ticklep_name: "Parrot Wonder"
-  tutorial_bbot_name: "Bomberbot Fun and Easy Coding Activities"
-  tutorial_scratchg_name: "Programming Games in Scratch"
+  tutorial_robobii_name: "Lær å kode med RoboBlockly"
+  tutorial_robobm_name: "Lær matematikk med RoboBlockly"
+  tutorial_codingrobots_name: "Lær deg en Kodetime med RoboBlockly"
+  tutorial_robob_name: "Lær roboter med RoboBlockly"
+  tutorial_coders_name: 'Coders Strike Back: en introduksjon til robot-programmering'
+  tutorial_tynkerhw_name: "Lær å kode med Hot Wheels"
+  tutorial_tynkermh_name: "Lär å kode med Monster High"
+  tutorial_caphoto_name: "Bygg en Fotostudio App"
+  tutorial_mozillahw_name: "Mozillas lekse-unnskyldnings-generator"
+  tutorial_ticklep_name: "Papegøye-under"
+  tutorial_bbot_name: "Bomberbot morsomme og enkle programmeringsaktiviteter"
+  tutorial_scratchg_name: "Programmere spill i Scratch"
   tutorial_roboticfriends_name: "Mine robot-vener"
   tutorial_sjforest_name: 'ScratchJr: Kan eg lage ein skummel skog?'
-  tutorial_sjgreet_name: 'ScratchJr: Can I Make My Characters Greet Each Other?'
+  tutorial_sjgreet_name: 'Scratchjr: Kan jeg få mine figurer til å hilse på hverandre?'
   tutorial_sjsunset_name: 'ScratchJr: Kan eg lage ein solnedgang?'
   tutorial_fufafrenz_name: "fuzzFamily Frenzy"
-  tutorial_bbcgeo_name: "Bitsbox Coding + Geometry"
+  tutorial_bbcgeo_name: "Bitsbox Programmering + geometri"
   tutorial_chspixel_name: "CodeHS Pixel Art"
-  tutorial_hummingbird_name: "Creating a Game with Hummingbird"
-  tutorial_recoloring_name: "Recoloring the Universe"
-  tutorial_bbcchem_name: "Bitsbox Coding + Chemistry"
-  tutorial_floalgo_name: 'Coding: Algorithms Lesson Plan'
-  tutorial_flocond_name: 'Coding: Conditionals Lesson Plan'
-  tutorial_floloops_name: 'Coding: For Loops Lesson Plan'
-  tutorial_pgts_name: "Rock, Paper, Scissors"
-  tutorial_ozo_name: "The Ozobot Tutorial"
-  tutorial_bbcla_name: "Bitsbox Coding + Language Arts"
-  tutorial_bbcsci_name: "Bitsbox Coding + Science"
-  tutorial_tlctour_name: "Tour Guide Activity"
-  tutorial_codesterstj_name: "CS Tech Jam"
-  tutorial_tlclocked_name: "Locked-In"
-  tutorial_baubles_name: "Binary Baubles"
-  tutorial_bbcart_name: "Bitsbox Coding + Art"
-  tutorial_tlcknight_name: "Knight's Tour Activity"
+  tutorial_hummingbird_name: "Skap et spill med kolibrien"
+  tutorial_recoloring_name: "Mal om universet"
+  tutorial_bbcchem_name: "Bitsbox programmering + Kjemi"
+  tutorial_floalgo_name: 'Programmering: Timeplan for Algoritmer'
+  tutorial_flocond_name: 'Programmering: Timeplan for Betingelser'
+  tutorial_floloops_name: 'Programmering: Timeplan for For-løkke'
+  tutorial_pgts_name: "Stein, saks, papir"
+  tutorial_ozo_name: "The Ozobot guide"
+  tutorial_bbcla_name: "Bitsbox programmering + språk"
+  tutorial_bbcsci_name: "Bitsbox programmering + Vitenskap"
+  tutorial_tlctour_name: "Tour Guide aktivitet"
+  tutorial_codesterstj_name: "CS Tech jam"
+  tutorial_tlclocked_name: "Innelåst"
+  tutorial_baubles_name: "Binære småsaker"
+  tutorial_bbcart_name: "Bitsbox programmering + kunst"
+  tutorial_tlcknight_name: "Ridderens guidede aktiviteter"
   tutorial_fufafit_name: "fuzzFamily Fitness"
   tutorial_ozodance_name: "Ozobot Dance-Off"
   tutorial_codingrobotics_name: "Intro to Coding through Robotics (ft. Wonder Workshop)"
@@ -617,43 +618,43 @@
   tutorial_tlcaus_name: "Australian Magician's Dream Activity"
   tutorial_oralhist_name: "Oral History Project"
   tutorial_tlcmicro_name: "Microwave Racing Video Activity"
-  tutorial_imathematician_name: "iMathematician"
-  tutorial_tlcmagic_name: "Magical Book Magic"
-  tutorial_scratchmus_name: "Make Music with Scratch"
-  tutorial_scratchanim_name: "Animate Your Name with Scratch"
-  tutorial_scratchfly_name: "Make it Fly with Scratch"
-  tutorial_tynkerarc_name: "Undersea Arcade Game Kit"
-  tutorial_grokffpython_name: "Frozen Fractals (Python Turtle)"
-  tutorial_grokffblock_name: "Frozen Fractals (Blockly Turtle)"
-  tutorial_grokeliza_name: "Is Eliza Human? (Python)"
-  tutorial_tynkercan_name: "Physics Cannon 2-Player Game Kit"
-  tutorial_grokflags_name: "Flags of the World (Python Turtle)"
-  tutorial_robomind_name: "Program a virtual robot with RoboMind"
-  tutorial_scratchanimwork_name: 'Animate Your Name: Educator Guide'
-  tutorial_adventureq_name: "Adventure with Q"
-  tutorial_khan-es_name: "An introduction to JavaScript"
-  tutorial_kpt_name: "An introduction to JavaScript"
-  tutorial_kpl_name: "An introduction to JavaScript"
-  tutorial_khe_name: "An introduction to JavaScript"
-  tutorial_kfr_name: "An introduction to JavaScript"
-  tutorial_app-inventor_name: "AppInventor Hour of Code"
-  tutorial_bits_name: "Bits and bricks"
+  tutorial_imathematician_name: "iMatemagiker"
+  tutorial_tlcmagic_name: "Magisk bok-magi"
+  tutorial_scratchmus_name: "Lav musikk med Scratch"
+  tutorial_scratchanim_name: "Animer ditt navn med Scratch"
+  tutorial_scratchfly_name: "Få det til å fly med Scratch"
+  tutorial_tynkerarc_name: "Undersjøiske arkade spill Kit"
+  tutorial_grokffpython_name: "Frosne fraktaler (Python skilpadde)"
+  tutorial_grokffblock_name: "Frosne fraktaler (Blockly skilpadde)"
+  tutorial_grokeliza_name: "Er Eliza et menneske? (Python)"
+  tutorial_tynkercan_name: "Fysikkanonen 2-spiller spill Kit"
+  tutorial_grokflags_name: "Verdens-flaggene (Python skilpadde)"
+  tutorial_robomind_name: "Programmer en virtuell robot med RoboMind"
+  tutorial_scratchanimwork_name: 'Animer ditt navn: Pedagog Guide'
+  tutorial_adventureq_name: "Eventyr med Q"
+  tutorial_khan-es_name: "En introduksjon til JavaScript"
+  tutorial_kpt_name: "En introduksjon til JavaScript"
+  tutorial_kpl_name: "En introduksjon til JavaScript"
+  tutorial_khe_name: "En introduksjon til JavaScript"
+  tutorial_kfr_name: "En introduksjon til JavaScript"
+  tutorial_app-inventor_name: "AppInventor Kodetimen"
+  tutorial_bits_name: "Bits og brikker"
   tutorial_blockly_name: "Blockly"
   tutorial_tynker_name: "Bygg ditt eige spel"
-  tutorial_baypt_name: "Code Baymax"
+  tutorial_baypt_name: "Programmer Baymax"
   tutorial_code-combat_name: "CodeCombat"
   tutorial_mky_name: "CodeMonkey"
   tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
-  tutorial_pirates_name: "Coding Pirates"
+  tutorial_pirates_name: "Programmer pirater"
   tutorial_csfirst_name: "CS First"
-  tutorial_loopedy_name: "Dance the Loopedy-Loop"
+  tutorial_loopedy_name: "Dans Loopedy-Loop"
   tutorial_dsw_name: "Disney Star Wars"
   tutorial_dswb_name: "Disney Star Wars"
   tutorial_ssw_name: "Disney Star Wars"
   tutorial_sswb_name: "Disney Star Wars"
   tutorial_kodable-unplugged_name: "fuzzFamily Frenzy"
-  tutorial_scratch_name: "Get creative with coding"
-  tutorial_bayes_name: "Grandes Heroes"
+  tutorial_scratch_name: "Bli kreativ med programmering"
+  tutorial_bayes_name: "Grandes helter"
   tutorial_gumball_name: "Gumball Play Lab"
   tutorial_hrm_name: "Human Resource Machine"
   tutorial_ice-age_name: "Ice Age Play Lab"
@@ -913,7 +914,7 @@
   tutorial_bits_shortdescription: "Move Bit by bit!"
   tutorial_blockly_shortdescription: "Download a ZIP file to learn offline"
   tutorial_tynker_shortdescription: "Learn to code by solving fun puzzles and build your own games."
-  tutorial_baypt_shortdescription: "Code Baymax"
+  tutorial_baypt_shortdescription: "Programmer Baymax"
   tutorial_code-combat_shortdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
   tutorial_mky_shortdescription: "Students program a monkey to catch bananas."
   tutorial_spellcraft_shortdescription: "Learn about Event-Driven programming using the power of CodeSpells!"
@@ -926,7 +927,7 @@
   tutorial_sswb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_kodable-unplugged_shortdescription: "A fun unplugged exercise"
   tutorial_scratch_shortdescription: "Create your own interactive games, stories, and animations with Scratch!"
-  tutorial_bayes_shortdescription: "Grandes Heroes"
+  tutorial_bayes_shortdescription: "Grandes helter"
   tutorial_gumball_shortdescription: "Create a Gumball story or make a game with Play Lab!"
   tutorial_hrm_shortdescription: "Program little office workers to solve puzzles. Be a good employee! The machines are coming... for your job."
   tutorial_ice-age_shortdescription: "Create an Ice Age story or make a game with Play Lab!"
@@ -1186,7 +1187,7 @@
   tutorial_bits_longdescription: "Bit is a little, very adventurous LEGO® robot, but as with all small creatures, sometimes Bit cannot get its programs right. You can help Bit solve the challenges by figuring out which programs are needed. You do this by creating a sequence of small behavior blocks that tells Bit what to do."
   tutorial_blockly_longdescription: "Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick"
   tutorial_tynker_longdescription: "Play fun coding games to learn to code. Use programming to complete a spooktacular Monster High scavenger hunt, program a Hot Wheels car, plan your war strategy against invading goblins, and even battle monsters. Learn key programming concepts and computational thinking skills as you play. Then build your own games and share them with friends!"
-  tutorial_baypt_longdescription: "Code Baymax"
+  tutorial_baypt_longdescription: "Programmer Baymax"
   tutorial_code-combat_longdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
   tutorial_mky_longdescription: "Learn and teach coding in CoffeeScript, a real-world programming language. CodeMonkey is a fun, award-winning game, suitable for everybody, with or without any coding experience. CodeMonkey's adaptive platform will give you all the instructions and hints you need, and will reward you star scores. Write code. Catch Bananas. Save the world."
   tutorial_spellcraft_longdescription: "Learn about Event-Driven programming using the power of spells! With CodeSpells, you can design and create your very own wizarding spells using Google’s easy-to-use Blockly coding interface or a built-in JavaScript text editor. Through spell creation, students will learn how to write code based around events and become familiar with Event-Driven coding concepts."
@@ -1199,7 +1200,7 @@
   tutorial_sswb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_kodable-unplugged_longdescription: "Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. "
   tutorial_scratch_longdescription: "With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. To get started, animate your name, create a dance scene, or make a hide-and-seek game featuring Cartoon Network’s We Bare Bears!"
-  tutorial_bayes_longdescription: "Grandes Heroes"
+  tutorial_bayes_longdescription: "Grandes helter"
   tutorial_gumball_longdescription: "Create a story or make a game with Play Lab! Make Gumball characters move, make sounds, score points, and even throw bananas!"
   tutorial_hrm_longdescription: "Human Resource Machine is a puzzle game. In each level, your boss gives you a job. Automate it by programming your little office worker! If you succeed, you'll be promoted up to the next level for another year of work in the vast office building. Congratulations!\n\nDon't worry if you've never programmed before - programming is just puzzle solving. If you strip away all the 1's and 0's and scary squiggly brackets, programming is actually simple, logical, beautiful, and something that anyone can understand and have fun with!"
   tutorial_ice-age_longdescription: "Create a story or make a game with Play Lab! Make Ice Age characters move, make sounds, score points, and even throw snow flakes!"
