@@ -27,6 +27,7 @@ import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
 import experiments from '../util/experiments';
+import {SignInState} from '../code-studio/progressRedux';
 
 /**
  * Create a namespace for the application.
@@ -1003,7 +1004,7 @@ Bounce.runButtonClick = function () {
  * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
-  const {isSignedIn, userType} = getStore().getState().pageConstants;
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   if (!Bounce.waitingForReport) {
     studioApp().displayFeedback({
       app: 'bounce', //XXX
@@ -1019,7 +1020,7 @@ var displayFeedback = function () {
         sharingText: bounceMsg.shareGame()
       },
       saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
-      disableSaveToGallery: !isSignedIn && !userType,
+      disableSaveToGallery: !isSignedIn,
     });
   }
 };
