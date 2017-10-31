@@ -35,6 +35,8 @@ module Pd::Application
     include ApplicationConstants
     include Pd::Form
 
+    OTHER_WITH_TEXT = 'Other:'.freeze
+
     after_initialize -> {self.status = :unreviewed}, if: :new_record?
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
@@ -71,6 +73,22 @@ module Pd::Application
     validates_presence_of :type
     validates_presence_of :status
 
+    # Override in derived class, if relevant, to specify which multiple choice answers
+    # have additional text fields, e.g. "Other (please specify): ______"
+    # @return [Array<Array>] - list of fields with additional text. Each field is specified as an array of
+    #         params to send to #answer_with_additional_text. See that description for more details.
+    # @example
+    #         [
+    #           # Simple - this maps `field1_other` to the "Other:" option in field1's answer
+    #           [:field1],
+    #
+    #           # Complex - this maps `field2_custom` to the "Custom answer:" option in field2's answer
+    #           [:field2, "Custom answer", :field2_custom]
+    #         ]
+    def additional_text_fields
+      []
+    end
+
     # Override in derived class to provide headers
     # @return [String] csv text row of column headers, ending in a newline
     def self.csv_header
@@ -82,6 +100,39 @@ module Pd::Application
     #         The order of fields must be consistent between this and #self.csv_header
     def to_csv_row
       raise 'Abstract method must be overridden by inheriting class'
+    end
+
+    # Get the answers from form_data with additional text appended
+    # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
+    # @param [Symbol] field_name - name of the multi-choice option
+    # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
+    # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
+    #                 Field name for the additional text field associated with this option.
+    # @returns [Array] - adjusted array of user responses with additional text appended in place
+    def answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
+      additional_text_field_name ||= "#{field_name}_other".to_sym
+      hash[field_name].tap do |answer|
+        if answer
+          index = answer.index(option)
+          if index
+            answer[index] = [option, hash[additional_text_field_name.to_sym]].flatten.join(' ')
+          end
+        end
+      end
+    end
+
+    # Include additional text for all the multi-select fields that have the option
+    def full_answers
+      sanitize_form_data_hash.tap do |hash|
+        additional_text_fields.each do |additional_text_field|
+          answer_with_additional_text hash, *additional_text_field
+        end
+      end
+    end
+
+    # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
+    def full_answers_camelized
+      full_answers.transform_keys {|k| k.to_s.camelize(:lower)}
     end
 
     def locked?
@@ -112,6 +163,12 @@ module Pd::Application
 
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
+    end
+
+    protected
+
+    def include_additional_text(hash, field_name, *options)
+      hash[field_name] = answer_with_additional_text hash, field_name, *options
     end
   end
 end
