@@ -13,6 +13,10 @@ describe("Summary", () => {
     router: fakeRouter
   };
 
+  const routeProps = {
+    regionalPartnerName: 'A Great Organization'
+  };
+
   it("Initially renders a spinner", () => {
     let summary = shallow(
       <Summary/>, {context}
@@ -33,7 +37,7 @@ describe("Summary", () => {
     );
 
     let summary = shallow(
-      <Summary/>, {context}
+      <Summary route={routeProps}/>, {context}
     );
 
     server.respond();
