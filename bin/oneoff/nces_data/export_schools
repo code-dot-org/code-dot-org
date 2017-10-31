@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+require 'optparse'
+
+CDO.log = Logger.new(STDOUT)
+
+options = {file: nil, test: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-f', '--file FILE', 'The TSV filename.') do |file|
+    options[:file] = file
+  end
+  opts.on('-t', '--test', 'True for test/stub file.') do
+    options[:test] = true
+  end
+  opts.on('-h', '--help', 'Prints this help') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Called with options: #{options}"
+
+if options[:test]
+  School.write_to_csv(options[:file]) do
+    ids = %w(
+      10000200277
+      10000201402
+      10000500870
+      10000500871
+      20000100206
+      20000100207
+      20000300216
+      20000300217
+      60000113121
+      60000113717
+      60001411118
+      60001411746
+      480000407173
+      480000409116
+      480001407174
+      480001410415
+    )
+    School.order(:id).where(id: ids)
+  end
+else
+  School.write_to_csv(options[:file])
+end
+CDO.log.info "Downloaded to: #{options[:file]}"

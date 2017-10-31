@@ -45,10 +45,13 @@ class School < ActiveRecord::Base
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
   # Seeds all the data from the source file.
-  # @param force [Boolean] True to force seed, false otherwise.
-  def self.seed_all(force = false)
+  # @param options [Hash] Optional map of options.
+  def self.seed_all(options = {})
+    options[:stub_school_data] ||= CDO.stub_school_data
+    options[:force] ||= false
+
     # use a much smaller dataset in environments that reseed data frequently.
-    schools_tsv = CDO.stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+    schools_tsv = options[:stub_school_data] ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
     expected_count = `wc -l #{schools_tsv}`.to_i - 1
     raise "#{schools_tsv} contains no data" unless expected_count > 0
 
@@ -56,19 +59,11 @@ class School < ActiveRecord::Base
     # Skip seeding if the data is already present. Note that this logic will
     # not re-seed data if the number of records in the DB is greater than or
     # equal to that in the TSV file, even if the data is different.
-    if force || School.count < expected_count
+    if options[:force] || School.count < expected_count
       CDO.log.debug "seeding schools (#{expected_count} rows)"
       School.transaction do
-        School.find_or_create_all_from_tsv(schools_tsv)
+        School.merge_from_csv(schools_tsv)
       end
-    end
-  end
-
-  # Seeds the data from the specified TSV file.
-  # @param filename [String] The TSV file.
-  def self.find_or_create_all_from_tsv(filename)
-    School.merge_from_csv(filename) do |row|
-      row.to_hash.symbolize_keys
     end
   end
 
@@ -78,7 +73,7 @@ class School < ActiveRecord::Base
   # @param options [Hash] The CSV file parsing options.
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
     CSV.read(filename, options).each do |row|
-      parsed = yield row
+      parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
       loaded = School.find_by_id(parsed[:id])
       if loaded.nil?
         School.new(parsed).save!
@@ -97,7 +92,8 @@ class School < ActiveRecord::Base
     cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id)
     CSV.open(filename, 'w', options) do |csv|
       csv << cols
-      School.order(:id).map do |row|
+      rows = block_given? ? yield : School.order(:id)
+      rows.map do |row|
         csv << cols.map {|col| row[col]}
       end
     end
