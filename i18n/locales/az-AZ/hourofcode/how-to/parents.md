@@ -1,16 +1,16 @@
----
-title: '<%= hoc_s(:title_how_to_parents) %>'
-layout: wide
-nav: how_to_nav
----
+* * *
+
+title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
+
+* * *
+
 <%= view :signup_button %>
 
 # Kod Saatını öz uşağınızla necə keçirə bilərsiniz
 
 Kod Saatını evdə başa vurun və ya uşağınızın sinfində keçirmək üçün könüllü olun! "Necə"si burada:
 
-## 1) Bu təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
+## 1) Bu təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Bir dərslik seçin:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
@@ -19,9 +19,9 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Texnoloji ehtiyaclarınız üçün plan qurun
+## 3) Plan your technology needs
 
-Ən yaxşı Kod Saatı təcrübəsi internet bağlantısı olan komputerlə həyata keçər. Ancaq komputerə ehtiyacınız **yoxdur**. There are many activities that are "unplugged" and can be done without any technology at all.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
 
 - Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 - **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
@@ -45,15 +45,15 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
 
-## 5) Kod yazın!
+## 5) Kod!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
 When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
 
-**Övladınız çətinliklərlə rastlaşanda**
+**When your child come across difficulties**
 
-Cavablamaq problem deyil:
+It’s okay to respond:
 
 - “I don’t know. Let’s figure this out together.”
 - “Technology doesn’t always work out the way we want.”
@@ -61,11 +61,11 @@ Cavablamaq problem deyil:
 
 ## 6) Bayram etmək
 
-Oğlunuz (və özünüz) üçün [Sertikifat çap edin](%= resolve_url('https://code.org/certificates') %).
+[Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 
 Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
-**Digər Kod Saatı mənbələri:**
+**Other Hour of Code resources:**
 
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 

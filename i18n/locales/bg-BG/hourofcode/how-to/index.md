@@ -10,11 +10,10 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Присъединете се към движението и въведете група от ученици в първия им час по компютърни науки с тези стъпки:
 
-## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) изберете настойнически за вашия час:
 
-Ние предлагаме разнообразие от [ забавни, дълги около час уроци](%= resolve_url('https://code. org/learn') %) за участници от всички възрасти, създадени от различни партньори.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
 **[Самонасочващи Hour of Code уроци:](%= resolve_url('/learn') %)**
 
@@ -34,7 +33,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 ## 4) планирай нужните ти технологии - компютрите не са задължителни
 
-Най-добрият Hour of Code се провежда с Интернет свързани компютри. Но вие **не** се нуждаете от компютър за всяко дете, и можете дори да проведете часът на кода без компютър за всички.
+Най-добрият Час на кодирането се провежда с Интернет свързани компютри. Но вие **не** се нуждаете от компютър за всяко дете, и можете дори да проведете часът на кода без компютър за всички.
 
 **Предварителен план!** Направете следното, преди вашето събитие да започне:
 
@@ -72,7 +71,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **Въвеждане на учениците в дейността**
 
-  * Напишете линка към урока на бялата дъска. Намерете връзката в списъка на [ и информация за избраните уроци](%= resolve_url('https://code. org/learn') %) под броя на участниците.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -90,7 +89,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **Какво да направя ако ученик завърши по-рано?**
 
-  * Учениците могат да видят всички уроци и опитат други дейности от Часът на кодирането в [ code.org/learn](http://code.org/learn)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Или помолете учениците, които са завършили по- рано да помогнат на съучениците си, които имат проблеми с дейността.
 
 [col-33]

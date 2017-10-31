@@ -10,8 +10,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## ١) ہدایات کے لیے یہ ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## ١) اس ویڈیو کو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
@@ -28,7 +27,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## ٣) اپنے ایک گھنٹے کوڈ کو پھلائیں
+## ٣) اپنے آور-آف-کوڈ کو پروموٹ کریں
 
 اپنے آور-آف-کوڈ کو [ان ٹولز کے ساتھ](%= resolve_url('/promote') %) فروغ دیں اور دوسروں کو اپنی تقریبات ہوسٹ کرنے پر حوصلہ افزائی کریں.
 
@@ -62,7 +61,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
 
   * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * بطور ایک کلاس، روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔
-  * کمپیوٹر سائنس میں لڑکیوں کی دلچسپی بڑھانے کے لیے تجاویز دیکھیں [ یہاں](%= resolve_url('https://code.org/girls') %).
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
