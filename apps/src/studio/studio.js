@@ -73,6 +73,7 @@ const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 import experiments from '../util/experiments';
+import {SignInState} from '../code-studio/progressRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -2785,7 +2786,7 @@ Studio.displayFeedback = function () {
 
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
-    const {isSignedIn, userType} = getStore().getState().pageConstants;
+    const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2804,10 +2805,7 @@ Studio.displayFeedback = function () {
       saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
-      // The rails session cookie is blocked on some playlab level types,
-      // causing isSignedIn to be null. In this case, use the userType (based on
-      // a different cookie) to determine if the user is signed in.
-      disableSaveToGallery: !isSignedIn && !userType,
+      disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
