@@ -15,6 +15,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  course              :string(255)
+#  response_scores     :text(65535)
 #
 # Indexes
 #
@@ -26,6 +27,7 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+
 require 'state_abbr'
 require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 
