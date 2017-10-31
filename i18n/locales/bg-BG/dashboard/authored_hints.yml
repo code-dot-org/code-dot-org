@@ -5,39 +5,37 @@ bg:
         2-3_Artist_1_new_a: Ако използваш блок "премести се напред 100 пиксела", аз ще начертая линия автоматично.
         2-3_Artist_1_new_b: Имате проблеми със завъртането под ъгъл? Използвайте "завърти надясно на 90 градуса" блок.
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: 'Имате ли проблеми с ъглите? Вие трябва да направите 360 градуса с 8 завоя.  Колко е 360:8? '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns 1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: Има 360 градуса в кръга, така че ако художникът се завърта 1 градус всеки път с цикъл, той ще трябва да повтаря това 360 пъти.
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: Художникът не изглежда да е насочен в правилната посока. Можете ли да го завъртите първо преди чертаенето на линията?
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: Калко е 100-70?  Въз основа на историята, колко трябва да е висока шапката?
+        2-3_Artist_3new_b: Художникът не изглежда да е насочен в правилната посока. Можете ли да го завъртите първо преди чертаенето на линията?
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: За да завършите къщата, всичко, което трябва да направите е да нарисувате квадрат!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: 'За да направите тези малки ъгли, трябва да се завъртате * по-дълго * всеки път, отколкото при квадрата.   '
+        2-3_Artist_6_b: Тъй като аз вече съм обърнат надясно, по-лесно е да започна да се движа напред, след това да направя ляв завой и да създам триъгълник.
+        2-3_Artist_6_c: Всяка страна на триъгълника е със същата дължина като всяка страна на квадрата... 100 пиксела!
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square.
+        2-3_Artist_7_a: Най-лесният начин за решаване на този пъзел е да се начертае първия квадрат, така че художника да завършва насочен надолу, преди да започне втория квадрат.
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: If you cut 200 in half, how many pixels wide does each square need to be?
+        2-3_Artist_8_a: Ако се разделите 200 на половина, колко пиксела ще бъде квадрата тогава?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: Този диамант е като един квадрат- с равни страни
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: Всяка стъпка е 100 пиксела широка и 100 пиксела висока.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: Този диамант е наистина като един квадрат, обърнат на 45 градуса.
         2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
-          
-          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+          Не забравяйте да завъртите художника наляво с 45 градуса, преди да започнете да чертаете вашите квадратни! ! [] (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Remember, you want the control panel 10 pixels *wider*...so be sure to **add** 10 to whatever number you change.
-        2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
+        2-3_Artist_Debugging_10_a: Не забравяйте, че вие искате контролния панел да е 10 пиксела * широк *... така че ** добавете ** 10 към числото, което трябва да се променя.
+        2-3_Artist_Debugging_10_b: "**Проба и грешка е нещо нормално тук!**\n\nЗапочнете с промяна на едно число за определено време.\n\nКои числа, какво правят?\n\nАко се изгубите твърде много, просто натиснете \"Започни отново\" и вашия код ще бъде възстановен."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Подсказка: Всеки мустак е дълъг 75 пиксела.'
       2-3 Artist Debugging 3_authored_hint:
         2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
         2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening, try slowing it down with the slider.
@@ -298,6 +296,8 @@ bg:
       AppLab Intro 3 - Change Screen Color_authored_hint: [ ]
       AppLab Intro 4 - Change Screen Color_authored_hint: [ ]
       AppLab Intro 5 - Change Screen Color_authored_hint: [ ]
+      AppLab Intro 6 - Change Screen Color_authored_hint: [ ]
+      AppLab Intro 7 - Change Screen Color_authored_hint: [ ]
       Artist Inspiration_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
         double_loop: Try putting a `for loop` inside of a `repeat` loop.
@@ -3467,6 +3467,8 @@ bg:
           
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: This is the third and final hint. It doesn't have anything special.
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try calling it twice to solve this puzzle.
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and make a decision?
       Inspirational Artwork_authored_hint:
@@ -3509,6 +3511,87 @@ bg:
         K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house. End up on the orange square to win.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to the workspace, and snap it into place beneath the `when run` block.
+        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the Agent.
+        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move the player with the arrow keys!
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_b: |-
+          Press "Run"!
+          
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys to move the player to the map!
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_b: |-
+          Press "Run Agent"!
+          
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys to move the player to the orange square.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can use your arrow keys to walk the player to the compass!
+        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat` loop and see if you can figure out how to make it shorter!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+          
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s direction '
+        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will open the door for the player.
+        MC_HOC_2017_04_Cole_c: |-
+          Press "Run"!
+          
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times *should* it run?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat` loop!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.
+        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run Agent"!
+          
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run Agent"!
+          
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+          
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run"!
+          
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_FP10x10_authored_hint: [ ]
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -5088,6 +5171,20 @@ bg:
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: You only need to use 1 block to solve this.
         courseA_collector_loops_challenge2_a: You can move back over the path a second time before moving south.
+      courseA_collector_preLoops1_authored_hint: [ ]
+      courseA_collector_preLoops2_authored_hint: [ ]
+      courseA_collector_preLoops3_authored_hint: [ ]
+      courseA_collector_preLoops4_authored_hint:
+        courseA_collector_preLoops4_a: |+
+          To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click "Run"!
+      courseA_collector_preLoops5_authored_hint:
+        courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
+      courseA_collector_preLoops6_authored_hint:
+        courseA_collector_preLoops6_a: 'You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.'
+      courseA_collector_preLoops7_authored_hint:
+        courseA_collector_loops2_b: |-
+          After you have moved to a square with treasure, use this block to pick it up.
+          <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: [ ]
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
@@ -6477,6 +6574,7 @@ bg:
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
+        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move **before** you turn, or else your circles will be off by the tiniest little amount!
         courseD_artist_nestedLoops4_a: |-
           To make a circle:
           - Repeat 360 times
@@ -7537,7 +7635,18 @@ bg:
           
           Don't forget to turn afterward!
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
+      courseE_artist_ramp8_2_authored_hint:
+        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseE_artist_ramp8_b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          
+          Don't forget to turn afterward!
+        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
+        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
+      courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
         courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
@@ -8320,9 +8429,10 @@ bg:
         courseF_artist_fwp4_b: Remember to **add** a parameter.  Don't remove the one that is already there!
         courseF_artist_fwp4_c: You will need to call your function three times to draw the shapes.
       courseF_artist_fwp5_authored_hint:
+        courseF_artist_fwp5_d: A `for` loop would really help you out here!
+        courseF_artist_fwp5_c: You will need to edit the function a little bit, since your previous function turned the artist to the right after each side, and this image needs a turn to the left.
         courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number of sides it has.
         courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
-        courseF_artist_fwp5_c: You will need to edit the function a little bit, since your previous function turned the artist to the right after each side, and this image needs a turn to the left.
       courseF_artist_fwp6_authored_hint:
         courseF_artist_fwp6_a: It's okay to run the program a few times to figure out how the function works with different parameters.
         courseF_artist_fwp6_b: You don't need to add any `move` or `turn` blocks to finish this code.
@@ -9859,7 +9969,7 @@ bg:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Подсказка: Всеки мустак е дълъг 75 пиксела.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
       grade2_collector_2_authored_hint:
@@ -10242,9 +10352,9 @@ bg:
         2-3_Artist_1_new_a: Ако използваш блок "премести се напред 100 пиксела", аз ще начертая линия автоматично.
         2-3_Artist_1_new_b: Имате проблеми със завъртането под ъгъл? Използвайте "завърти надясно на 90 градуса" блок.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: 'За да направите тези малки ъгли, трябва да се завъртате * по-дълго * всеки път, отколкото при квадрата.   '
+        2-3_Artist_6_b: Тъй като аз вече съм обърнат надясно, по-лесно е да започна да се движа напред, след това да направя ляв завой и да създам триъгълник.
+        2-3_Artist_6_c: Всяка страна на триъгълника е със същата дължина като всяка страна на квадрата... 100 пиксела!
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       grade4_review_bee2_authored_hint:

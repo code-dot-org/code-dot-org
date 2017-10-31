@@ -26,40 +26,42 @@ social:
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Bir saat kodu oluşturduğunuz için teşekkürler!
+# Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler!
 
-Bilgisayar eğitimini öğrenmek isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. </strong>FREEPOSTERS</0> Promosyon kuponunuzdur ücretsiz posterinizi almak için kodu kullanınız. (Not: gönderdiğimiz posterleri ücretsiz kullana bilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-  
-[<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Dünya'nın her yerinden öğrencilerin *tüm hayatlarını değiştirebilecek* bir Kodlama Saati öğrenmelerini sağlayabilirsiniz. Yeni öğreticiler ve diğer ilginç güncellemeler hakkında sizi haberdar edeceğiz. Şimdi neler yapabilirsin?
 
-  
-**Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+## 1. Organizasyonu yayın
 
-## 1. Spread the word in your school and community
+Sen Kodlama Saati hareketine katıldın. Arkadaşlarına **#HourOfCode** etiketi ile haber ver!
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>   
-Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Yeni beceriler öğrenmek için okulda olmana gerek yok. Invite a local politician or policy maker to visit your school for the Hour of Code. Bu senin bölgenin bir saat mesafesinde bilgisayar bilimleri desteği oluşturmana yardım edebilir.
+## 1. Etkinliğiniz için size yardımcı olacak yerel gönüllüler bulun.
 
-Kendi etkinliklerin için posterler, afişler, çıkartmalar, videolar ve daha fazlasını kullan.
+Öğrencilerinize bilgisayar bilimindeki tüm olasılıklar hakkında ilham verebilecek, sınıfınızı ziyaret edebilecek veya uzaktan video chat yapabilecek gönüllüleri bulmak için [gönüllü haritamızda arama yapın](https://code. org/volunteer/local).
 
-## 1. Size yardımcı olacak kendi dilinizde konuşan yerel gönüllüler bulun.
+## Tüm okulun Kodlama Saati'ne katılmasını isteyin
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+Müdürünüze [bu maili gönderin](<%= resolve_url('/promote/resources#sample-emails') %>) ve tüm sınıfların kayıt olması için mücadele edin.
 
-## Kodlama yapmak istediğiniz saatinizi planlayın
+## İş vereninizden de etkinliğe dahil olmasını rica edin
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Şirket CEO'nuza veya yöneticinize [bu maili gönderin.](<%= resolve_url('/promote/resources#sample-emails') %>).
 
-# Go beyond an Hour of Code
+## 5. Kodlama Saati'ni çevrenize tanıtın
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini isteyin
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
-Code.org sitesi hiçbir ücret ödemeden size, okulunuza veya öğrencilere 25 bilgisayar dillerinin tam eğitimini[bilgisayar giriş dili dersi](https://code.org/educate/curriculum/cs-fundamentals-international)size ücretsiz sunuyor. <% end %>
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

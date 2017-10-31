@@ -1,19 +1,19 @@
----
-title: '<%= hoc_s(:title_how_to_parents) %>'
-layout: wide
-nav: how_to_nav
----
+* * *
+
+title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
+
+* * *
+
 <%= view :signup_button %>
 
-# כיצד להשלים שעה של קוד עם ילדך
+# How to complete an Hour of Code with your child
 
-השלם שעה של קוד בבית, או התנדב להביא את זה לכיתה של ילדכם! הנה איך:
+Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) צפו בסרטון ההדרכה <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial:
 
-## 2) בחרו מדריך:
-
-אנו מספקים מגוון רחב של הדרכות מהנות שאורכם כשעה, לתלמידים בכל הגילאים, שנוצרו על ידי מגוון של שותפים. [נסה אותם!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
@@ -63,13 +63,13 @@ It’s okay to respond:
 
 [Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 
-שתפו תמונות וסרטוני וידאו של אירוע "שעה של קוד" ברשתות החברתיות. השתמשו בתג #HourOfCode ו@codeorg כדי שנוכל גם אנחנו להדגיש את הצלחתכם!
+Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 **Other Hour of Code resources:**
 
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**איך ממשיכים אחרי "שעה של קוד"?**
+**What comes after the Hour of Code?**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

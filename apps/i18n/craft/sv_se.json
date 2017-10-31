@@ -1,6 +1,9 @@
 {
   "absolute": "absolut",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "på",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "lägg till",
   "blockActionAttack": "attackera",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "Du kan trycka på \"Fortsätt spela\" för att återgå till spelet.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Poäng",
   "seconds": "second(s)",
   "selectChooseButton": "Välj",
@@ -286,9 +290,5 @@
   "weather": "weather",
   "weatherTypeClear": "rensa",
   "weatherTypeRain": "regn",
-  "weatherTypeThunder": "thunder",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "thunder"
 }

@@ -10,8 +10,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Visualitza aquest vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Visualitza aquest vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
@@ -72,7 +71,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Escrigui l'enllaç del tutorial a la pissarra. Trobi l'enllaç que apareix a la [ informació del tutorial ](%= resolve_url('https://code.org/learn') %) sota el nombre de participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 

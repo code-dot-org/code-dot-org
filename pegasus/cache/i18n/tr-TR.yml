@@ -35,12 +35,11 @@
   twentyhours_heading: Bilgisayar Bilimlerine Giriş kursumuzu deneyin
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar
     bilimleri ve programlama kavramlarını öğrenebilirsin."
-  og_title: Her çocuk uygun fırsatı hak ediyor
-  og_description: Her okulda bütün öğrenciler bilgisayar bilimi çalışma fırsatına
-    kavuşuyor. Bu her şeyi değiştirir.
+  og_title: 'Code.org: Herkes öğrenebilir'
+  og_description: 'Her okulda her öğrenci bilgisayar bilimi öğrenme fırsatını hakkediyor. '
   csedweek_og_title: Kodlama Saati geliyor
-  csedweek_og_description: Kodlama saati 180'den fazla ülke ve 45'in üzerinde dilde
-    her yaştaki on milyonlarca öğrenciye ulaşan küresel bir harekettir.
+  csedweek_og_description: ARALIK 4-10, 2017. Bilgisayar bilimleri her öğrencinin
+    öğrenmesi gereken bir temeldir.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatine </a><br/> katılın  8
     - 14 Aralık, 2014<br/>
   hoc2014_students: "Öğrenciler"
@@ -57,7 +56,7 @@
   csedweek_map_search_reset: Varsayılana sıfırla
   csedweek_map_legend_title: Açıklama
   csedweek_map_legend_event: Kod Saati Etkinliği
-  csedweek_map_legend_cs_tech_jam: Bilgisayar Bilimi Teknolojisi Yarışı
+  csedweek_map_legend_cs_tech_jam: "Özel Etkinlik"
   cded_sign_up: Kaydol
   cded_try_it: Deneyin
   try_now: "Şimdi dene"
@@ -120,7 +119,7 @@
     kullan
   third_party_gradelevel_kto8: K-8 sınıfları
   third_party_gradelevel_kto2: K-2 sınıfları
-  third_party_gradelevel_2to8: 2-8 sınıfları
+  third_party_gradelevel_2to8: 2-8. sınıflar
   third_party_gradelevel_4to12: 4-12 sınıfları
   third_party_gradelevel_5to12: 5-12 sınıfları
   third_party_gradelevel_6plus: 6+ sınıfları
@@ -250,7 +249,7 @@
   i_agree: Kabul ediyorum
   participant_select: "-Seçiniz-"
   participant_student: "öğrenci"
-  participant_parent: "Üst"
+  participant_parent: Veli
   participant_educator: Eğitmen
   participant_engineer: Yazılım Mühendisi
   participant_other: Yukarıdakilerden Hiçbiri
@@ -461,7 +460,7 @@
   homepage_slot_text_link_buy: Dahil olun
   homepage_slot_text_link_donate: Bağış yap
   homepage_slot_text_link_shop: Tişörtler, şapkalar ve daha fazlası
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Okul veya bölgenizde düzenleyin
   homepage_header_codestudio: Code Studio öğrencilerinin yaptıkları
   homepage_header_donors: Code.org destekleyenlere teşekkürler
   homepage_donors_seall: Tümünü göster
@@ -713,6 +712,10 @@
   volunteer_engineer_submission_type_task_mentor: "Öğrencilerime kodlama öğretebilmem
     için bana yardımcı olabilecek rehber arıyorum"
   petition_age: Yaş
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Daha fazlasını öğren
   dashboard_landing_title: "Öğretmen ana sayfa"
   dashboard_landing_welcome: Yeni ve geliştirilmiş öğretmen panosuna hoş geldiniz.
   dashboard_landing_video: Bu videoyu izleyin
@@ -856,11 +859,11 @@
   dashboard_sections_name: Bölüm İsmi
   dashboard_sections_choose_secret: "Öğrencilerinize hesap açmak istiyorsanız, o bölüm
     için gizli bir \n<b>kelime</b> veya <b>resim</b> seçin."
-  dashboard_sections_secret_word: Bir <b>kelime</b> her bir öğrenci için gizli bir
-    kelime ayarlamanızı sağlar.
-  dashboard_sections_secret_picture: Bir <b>resim</b> size her bir öğrenci için gizli
-    bir resim belirlemenizi sağlar. Bu özellikle yazmayı henüz bilmeyen öğrenciler
-    idealdir.
+  dashboard_sections_secret_word: "<b>kelime</b> her bir öğrenci için gizli bir kelime
+    ayarlamanızı sağlar."
+  dashboard_sections_secret_picture: "<b>resim</b> size her bir öğrenci için gizli
+    resim ayarlamanızı sağlar. Bu özellikle klavyeyle yazmayı henüz bilmeyen öğrenciler
+    için idealdir."
   dashboard_sections_secret_none: Eğer öğrencilerinizin kendi hesaplarını yönetmelerini
     ve kendi şifrelerini seçmelerini istiyorsanız. Gizlilik şeklini <b>Hiçbiri</b>
     olarak seçiniz.
@@ -1015,7 +1018,7 @@
   dashboard_sections_account_creation_question: "Öğrencinin hesabını kim oluşturuyor?"
   dashboard_sections_password_question: Öğrenciler "parola" olarak ne kullanıyor?
   dashboard_sections_picture_account_creation: Code.org tarafından atanan bir resim
-  dashboard_sections_word_account_creation: Code.org tarafından atanan basit bir kelime
+  dashboard_sections_word_account_creation: Code.org tarafından atanan basit iki kelime
   dashboard_sections_sign_in_question: "Öğrenciler nerede oturum açıyor?"
   dashboard_sections_sign_in_unique: '"Öğrencileri Yönet" sekmesinde listelenen benzersiz
     web sayfası'
@@ -1084,11 +1087,12 @@
   carousel_heading_webpages: Nasıl web sayfası yapılacağını öğrenin
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: "Öğretmenler arasında popüler platformlar"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  carousel_heading_desktop: Bilgisayarda kodlamayı öğren
+  carousel_heading_mobtabelem: Telefon veya tabletler için
+  carousel_heading_prereader: Okul-öncesi için
+  carousel_heading_beyondblocks: Blokların ötesine git- bir programlama dili öğren
+  carousel_heading_nointernet: "İnternetiniz zayıf mı? Bu uygulamaları bilgisayarına
+    yükle"
   educator_notes: Eğitimci notları
   teach_led_lesson_plans: "Öğretmenler Ders Planlarını Hazırlar"
   learn_footer_all_tutorials: <a href="https://code.org/educate/allhourofcode"> adresinden
@@ -1195,7 +1199,7 @@
   csp1_name: "Ünite 1: Internet"
   csp2_name: "Ünite 2: Sayısal bilgi"
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-a_name: "Ünite 3: Programlamaya Giriş (A versiyonu)"
   csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
@@ -1971,13 +1975,11 @@
   view_named_section: "%{section_name} Görüntüle"
   privacy_doc_explanation: Click here for our privacy document that can be shared
     or printed for your students.
-  signing_in: Signing In
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
-    these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  signing_in: Oturum Açma
+  sign_in_overview: "Öğrencileriniz aşağıdaki adımları takip ederek code.org hesaplarına
+    giriş yapabilir:"
+  sign_in_instruct_website: "%{code_org_url}'sine git."
+  sign_in_instruct_code: 'Sınıf Kodunu gir: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.

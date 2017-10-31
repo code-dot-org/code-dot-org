@@ -1,17 +1,19 @@
 ---
-title: '<%= hoc_s(:title_how_to_parents) %>'
+
+title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
+
 ---
+
 <%= view :signup_button %>
 
-# 子供と一緒にHour of Codeを学習する方法
+# How to complete an Hour of Code with your child
 
-家でHour of Codeを学習する。または子供の学校へHour of Codeを紹介する。その方法は、
+Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) このビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
-## 2) チュートリアルを選択する:
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
@@ -40,7 +42,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- コンピュータが使われているシーンをリストアップしてみましょう。
+- List things that use code in everyday life.
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
@@ -51,21 +53,21 @@ Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducator
 
 When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
 
-**子供が困っている時には**
+**When your child come across difficulties**
 
-このようにしてあげてください。
+It’s okay to respond:
 
 - 私もわからないから、一緒にやってみよう。
 - コンピュータは、思った通りに動くとは限らないんだよ
 - プログラミングを学ぶということは、新しい言葉を学ぶことと同じなんだ。すぐにペラペラにはなれないよ。
 
-## 6) ほめてあげる
+## 6) Celebrate
 
 [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
 
 Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 
-**Hour of Codeに関するその他の資料**
+**Other Hour of Code resources:**
 
 - Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。
 

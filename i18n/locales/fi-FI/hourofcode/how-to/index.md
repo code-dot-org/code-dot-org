@@ -6,12 +6,11 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Näin opetat koodaustuntia
+# How to teach one Hour of Code
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Katso tämä opetusvideo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
@@ -28,11 +27,11 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Lähetä sinun oma Koodaustuntisi
+## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
-## 4) Suunnittele mitä laitteita tarvitset - tietokoneet ovat vapaaehtoisia
+## 4) Plan your technology needs - computers are optional
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
@@ -62,17 +61,17 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
   * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * As a class, list things that use code in everyday life.
-  * Katso vinkkejä saadaksesi tytöt innostumaan tietotekniikasta [täältä](%= resolve_url('https://code.org/girls') %).
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Koodaa!
+## 6) Code!
 
 **Direct students to the activity**
 
-  * Kirjoita ohjeen linkki valkotaululle. Etsi linkki listasta [tietoa sinun valitsemasta oppaasta](%= resolve_url('/learn') %)osallistujien määrän alapuolella.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -82,9 +81,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **When your students come across difficulties it's okay to respond:**
 
-  * "En tiedä. Katsotaan yhdessä."
-  * "Laitteet eivät aina toimi niin kuin haluamme niiden toimivan."
-  * "Koodamisen opettelu on, kuin uuden kielen opettelu joten et opi sitä heti"
+  * “I don’t know. Let’s figure this out together.”
+  * “Technology doesn’t always work out the way we want.”
+  * “Learning to program is like learning a new language; you won’t be fluent right away.”
 
 **[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
@@ -103,7 +102,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   &nbsp;
 </p>
 
-## 7) Juhli
+## 7) Celebrate
 
 [col-33]
 
@@ -111,10 +110,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-  * [Tulosta todistukset](%= resolve_url('https://code.org/certificates') %) oppilaillesi.
+  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
   * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Jaa kuvia ja videoita sinun koodaustunnistasi sosiaalisessa mediassa. Kaytä #HourOfCode ja @codeorg jotta voimme korostaa sinun onnistumista, myös!
+  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
 
@@ -126,7 +125,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   &nbsp;
 </p>
 
-## Muut koodaustunti resurssit opettajille:
+## Other Hour of Code resources for educators:
 
   * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
@@ -135,7 +134,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
   * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## Mitä koodaustunnin jälkeen?
+## What comes after the Hour of Code?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

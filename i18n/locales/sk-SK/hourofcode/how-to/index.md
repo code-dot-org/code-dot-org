@@ -6,13 +6,12 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Ako učiť hodinu kódovania
+# How to teach one Hour of Code
 
-Pokračuj v prúde a predstav skupine žiakov ich prvú hodinu počítačových vied pomocou týchto krokov:
+Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
-## 2) Vyber si návod na tvoju hodinu:
+## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
@@ -72,7 +71,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
 
 **Direct students to the activity**
 
-  * Napíšte na tabuľu odkaz na návod. Nájdi odkaz na [informácie pre vybrané návody](%= resolve_url('/learn') %) na základe počtu účastníkov.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 

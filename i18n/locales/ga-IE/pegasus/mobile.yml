@@ -553,6 +553,8 @@
   volunteer_engineer_submission_type_task_remote: "Ba mhaith liom thú físchomhrá a dhéanamh agus óráid spreagúil a thabhairt do na daltaí"
   volunteer_engineer_submission_type_task_mentor: "Tá mé ag lorg meantóra chun cabhrú liom an chódáil a mhúineadh do na daltaí"
   petition_age: "Aois"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Tuilleadh eolais"
   dashboard_landing_title: "Leathanach Baile do Mhúinteoirí"
   dashboard_landing_welcome: "Fáilte go dtí an painéal úrnua do mhúinteoirí."
   dashboard_landing_video: "Féach ar an bhfíseán seo"
