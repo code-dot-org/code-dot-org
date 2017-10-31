@@ -935,6 +935,8 @@ class Script < ActiveRecord::Base
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
     @@script_cache = nil
+    @@script_level_cache = nil
+    @@level_cache = nil
     Rails.cache.delete SCRIPT_CACHE_KEY
   end
 
