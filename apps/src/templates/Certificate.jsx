@@ -4,13 +4,20 @@ import color from "../util/color";
 
 const styles = {
   heading: {
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };
+
+const tutorialTypes = [
+  'applab',
+  '2017Minecraft',
+  'pre2017Minecraft',
+  'other',
+];
 
 export default class Certificate extends Component {
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(['applab', 'newMinecraft', 'oldMinecraft', 'other']).isRequired
+    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired
   };
 
   render() {
