@@ -529,6 +529,10 @@ Applab.init = function (config) {
   // to starting code by levelbuilders will be shown.
   config.ignoreLastAttempt = config.embed;
 
+  // Tell droplet to only allow dropping anonymous functions into known function
+  // call params when we have marked that param with allowFunctionDrop
+  config.lockFunctionDropIntoKnownParams = true;
+
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
