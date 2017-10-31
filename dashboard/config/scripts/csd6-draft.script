@@ -88,6 +88,7 @@ level 'CSD U6 interval', progression: 'Getting Properties'
 level 'CSD U6 onChange', progression: 'Getting Properties'
 level 'CSD U6 get toggle', progression: 'Getting Properties'
 level 'CSD U6 getters debug', progression: 'Getting Properties'
+level 'CSD U6 move motorcycle', progression: 'Getting Properties'
 
 stage 'Analog Input', flex_category: 'csd6_1'
 named_level 'CSDU6 - sensors experiment'

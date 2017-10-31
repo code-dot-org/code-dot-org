@@ -14,5 +14,5 @@ level 'AppLab Intro 6 - Video Design Mode and Screens', progression: 'Design Mod
 level 'AppLab Intro 7 - thisOrThatAddButton', progression: 'Design Mode'
 level 'AppLab Intro 7 - thisOrThatAddScreen', progression: 'Design Mode'
 level 'AppLab Intro 7 - thisOrThatSetScreen', progression: 'Design Mode'
-level 'AppLab Intro 6 - Video Keep Going', progression: 'Create Your App'
-level 'AppLab Intro 7 - thisOrThatPersonalize', progression: 'Create Your App'
+level 'AppLab Intro 6 - Video Keep Going', progression: 'Share Your App'
+level 'AppLab Intro 7 - thisOrThatPersonalize', progression: 'Share Your App'
