@@ -59,6 +59,11 @@ class ScriptLevel < ActiveRecord::Base
     super
   end
 
+  def stage
+    return script.stages.detect{|s| s.id == stage_id} if Script.should_cache?
+    super
+  end
+
   # TODO(ram): stop using and delete these four convenience methods
   def level
     levels[0]

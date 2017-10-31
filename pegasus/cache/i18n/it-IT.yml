@@ -579,10 +579,7 @@
   sports_og_title: Forza! Chiunque può imparare...
   sports_og_description: Campioni e medaglie d'oro vi incoraggiamo a provare l'Ora
     del Codice. Inventa e programma il tuo nuovo sport.
-  sports_title: |-
-    https://studio.code.org/s/basketball/stage/
-
-    Programma il tuo sport
+  sports_title: Programma il tuo sport
   sports_watch_video: Guarda il video
   sports_video_title: Forza! Chiunque può imparare...
   sports_select_theme: Seleziona il tuo tema tutorial
@@ -752,6 +749,10 @@
   volunteer_engineer_submission_type_task_mentor: Sto cercando un mentore che mi aiuti
     a prepararmi per poter scrivere il codice con i miei studenti
   petition_age: Età
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Ulteriori informazioni
   dashboard_landing_title: Cruscotto di Controllo dell'insegnante
   dashboard_landing_welcome: Benvenuti al nuovo cruscotto di controllo dell'insegnante.
   dashboard_landing_video: Guarda questo video
@@ -975,8 +976,8 @@
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
   dashboard_students_new_section: Hai creato una nuova classe! Ora aggiungi gli studenti
-    utilizzando i pulsanti <b>Aggiungi uno studente</b> e <b>Aggiungi più studenti</b>qui
-    sopra.
+    utilizzando i pulsanti <b>Aggiungi uno studente</b> e <b>Aggiungi più studenti</b>
+    qui sopra.
   dashboard_students_placeholder_name: Nome dello studente
   dashboard_students_name: Nome
   dashboard_students_progress: Avanzamento
@@ -1321,10 +1322,7 @@
   research_studies_category_name: Research Studies
   applab_name: Sviluppo App
   basketball_name: Crea una partita di basket
-  sports_name: |-
-    https://studio.code.org/s/basketball/stage/
-
-    Programma il tuo sport
+  sports_name: Programma il tuo sport
   applab_gradelevel: Eta' 13+
   applab_shortdescription_congrats: App Lab è un programma ambientale con cui puoi
     fare semplici app. Fare il design, scrivere il codice con blocchi o JavaScript

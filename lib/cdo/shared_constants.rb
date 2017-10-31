@@ -50,6 +50,7 @@ module SharedConstants
 
   PUBLISHABLE_PROJECT_TYPES_UNDER_13 = %w(
     artist
+    frozen
     playlab
     gumball
     iceage

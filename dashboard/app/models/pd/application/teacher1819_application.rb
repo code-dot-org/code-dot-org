@@ -15,6 +15,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  course              :string(255)
+#  response_scores     :text(65535)
 #
 # Indexes
 #

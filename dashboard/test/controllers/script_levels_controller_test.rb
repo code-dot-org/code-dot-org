@@ -152,6 +152,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets start blocks when defined' do
+    setup_script_cache
     template_level = create :level
     template_level.start_blocks = '<xml/>'
     template_level.save!
@@ -162,7 +163,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    assert_queries 4 do
+      get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    end
 
     assert_response :success
     # start blocks comes from project_level not real_level

@@ -535,6 +535,8 @@
   volunteer_engineer_submission_type_task_remote: "J'aimerais que vous échangiez avec ma classe par Skype pour donner quelques mots d’encouragement aux enfants."
   volunteer_engineer_submission_type_task_mentor: "Je recherche un conseiller pour m'aider à me préparer à coder avec mes élèves."
   petition_age: "Age"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Pour en savoir plus"
   dashboard_landing_title: "Page d'accueil de l'enseignant"
   dashboard_landing_welcome: "Bienvenue dans la nouvelle version améliorée du tableau de bord des enseignants."
   dashboard_landing_video: "Regarde cette vidéo"

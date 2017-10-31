@@ -546,6 +546,8 @@
   volunteer_engineer_submission_type_task_remote: "Chci, abys pomocí Skype řekl mé třídě pár slov k inspiraci dětí"
   volunteer_engineer_submission_type_task_mentor: "Hledám mentora, aby mne pomohl připravit na kódování s mvými studenty"
   petition_age: "Věk"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Zjisti více"
   dashboard_landing_title: "Učitelská domovská stránka"
   dashboard_landing_welcome: "Vítáme vás na novém a vylepšeném řídicím panelu pro učitele."
   dashboard_landing_video: "Podívejte se na toto video"

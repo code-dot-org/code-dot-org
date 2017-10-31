@@ -1,10 +1,10 @@
 {
-  "continue":"Vazhdo",
-  "nextLevel":"Urime! Ju keni perfunduar kete enigme.",
-  "no":"Jo",
-  "numBlocksNeeded":"Kjo enigme mund te zgjidhet me %1 rreshta.",
-  "reinfFeedbackMsg":"Ju mund të shtypni butonin \"Provo Përsëri\" për tu kthyer mbrapa dhe për të luajtur lojën tuaj.",
-  "share":"Shpërndaje",
-  "shareGame":"Shpërndaj lojën tënde:",
-  "yes":"Po"
+  "continue": "Vazhdo",
+  "nextLevel": "Urime! Ju keni perfunduar kete enigme.",
+  "no": "Jo",
+  "numBlocksNeeded": "Kjo enigme mund te zgjidhet me %1 rreshta.",
+  "reinfFeedbackMsg": "Ju mund të shtypni butonin \"Provo Përsëri\" për tu kthyer mbrapa dhe për të luajtur lojën tuaj.",
+  "share": "Shpërndaje",
+  "shareGame": "Shpërndaj lojën tënde:",
+  "yes": "Po"
 }

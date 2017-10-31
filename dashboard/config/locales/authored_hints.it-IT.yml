@@ -24,12 +24,11 @@
         2-3_Artist_4_a: Per completare la casa, tutto quello che devi fare è disegnare
           un quadrato!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
+        2-3_Artist_6_a: 'Per gli angoli piccoli, dovete girare intorno * più * volte.   '
         2-3_Artist_6_b: Visto che sono già rivolto verso destra, disegnare il triangolo
           è più facile se inizi andando avanti e poi giri a sinistra.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side
-          of the square...100 pixels!
+        2-3_Artist_6_c: Ogni lato del triangolo è la stessa lunghezza di ciascun lato
+          del quadrato... 100 pixel!
       2-3 Artist 7_authored_hint:
         2-3_Artist_7_a: Il modo più facile per risolvere questo esercizio è di disegnare
           i primi tre lati del quadratino superiore, poi in un tratto solo l'ultimo
@@ -43,10 +42,8 @@
         step_size: Ogni passo è 100 pixel di larghezza e 100 pixel di altezza.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Questo diamante è solo un quadrato ruotato di 45 gradi.
-        2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
-
-          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+        2-3_Artist_9_b: Non dimenticate di girare l'artista di 45 gradi a sinistra
+          prima di iniziare a disegnare il vostro quadrato! ! [] (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Prova ad eseguire il codice così com'è per capire
           dov'è l'errore.
@@ -309,8 +306,8 @@
           Fare delle prove può funzionare, ma osserva che in totale devi fare un angolo di 90 gradi in 3 passi.<br>
           Quanto fa 90 diviso 3?
       4-5 Artist 7_authored_hint:
-        4-5_Artist_7_a: 'Which angle is the smallest?  At which angle is the artist
-          standing? '
+        4-5_Artist_7_a: 'Quale angolo è il più piccolo?  In quale angolo è collocato
+          l''artista? '
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "Ogni lato lungo è di 240 pixel. Questo significa che la somma
           di quelli corti vale:<br>\n <b>800 - 240 - 240 = 320</b><br>\nChe cosa rappresenta
@@ -406,6 +403,8 @@
       AppLab Intro 3 - Change Screen Color_authored_hint: []
       AppLab Intro 4 - Change Screen Color_authored_hint: []
       AppLab Intro 5 - Change Screen Color_authored_hint: []
+      AppLab Intro 6 - Change Screen Color_authored_hint: []
+      AppLab Intro 7 - Change Screen Color_authored_hint: []
       Artist Inspiration_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo
           colore a blu.
@@ -466,28 +465,21 @@
           <b>Nota</b>: è possibile definire una soluzione alternativa che usa solo 3 "cicli" all'interno di ogni "ciclo con contatore".<br><br>
           Se vuoi conoscerla <a href="https://studio.code.org/c/118205099" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist For Loops 11_authored_hint:
-        Course_4_Artist_For_Loops_11_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/8
-
-          Il numero di gradi di cui girare deve cambiare per ogni poligono. 360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo: usa un blocco matematico per calcolarlo.
+        Course_4_Artist_For_Loops_11_a: 'Il numero di gradi di cui girare deve cambiare
+          per ogni poligono. 360 diviso il numero di lati del poligono ti restituisce
+          il numero di gradi di cui devi girare per disegnarlo: usa un blocco matematico
+          per calcolarlo.'
       Course 4 Artist For Loops 11a_authored_hint:
-        Course_4_Artist_For_Loops_11a_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/9
-
-          360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo.
-        Course_4_Artist_For_Loops_11a_b: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/9
-
-          In ogni poligono devi avanzare di quantità pari a 10 volte il numero di lati del poligono stesso.
+        Course_4_Artist_For_Loops_11a_a: 360 diviso il numero di lati del poligono
+          ti restituisce il numero di gradi di cui devi girare per disegnarlo.
+        Course_4_Artist_For_Loops_11a_b: In ogni poligono devi avanzare di quantità
+          pari a 10 volte il numero di lati del poligono stesso.
       Course 4 Artist For Loops 3_authored_hint:
-        Course_4_Artist_For_Loops_3_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/3
-
-          Per risolvere l'esercizio con il ciclo `ripeti con counter`, devi rappresentare la distanza con la variabile `counter` (<i>contatore</i>).
+        Course_4_Artist_For_Loops_3_a: Per risolvere l'esercizio con il ciclo `ripeti
+          con counter`, devi rappresentare la distanza con la variabile `counter`
+          (<i>contatore</i>).
       Course 4 Artist For Loops 4_authored_hint:
         Course_4_Artist_For_Loops_4_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/4
-
           Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>
           Qual è il valore più piccolo che serve? <br>
           Qual è il più grande?<br>
@@ -563,58 +555,42 @@
           lato per il numero dei lati, la lunghezza del lato del poligono disegnato
           si accorcia man mano che il numero dei lati cresce.
       Course 4 Bee Params 7_authored_hint:
-        notice_pattern: |-
-          https://studio.code.org/s/course4/stage/16/puzzle/7
-
-          Riesci ad individuare uno schema, una regola, in come cambiano le quantità di nettare da raccogliere?
+        notice_pattern: Riesci ad individuare uno schema, una regola, in come cambiano
+          le quantità di nettare da raccogliere?
         count_with_for: |-
-          https://studio.code.org/s/course4/stage/16/puzzle/7
-
           La quantità di nettare da raccogliere cresce ogni volta. Quale blocco ti permette di ripetere una serie di azioni mentre conta "a salire"? <br>
           <br>
           Prova ad usare un <i>ciclo con contatore</i>.
       Course 4 Bee Params 8_authored_hint:
         Course_4_Bee_Params_8_a: |-
-          https://studio.code.org/s/course4/stage/16/puzzle/8
-
           All'interno della funzione la quantità di dosi da raccogliere può essere usata per decidere quale azione svolgere.<br>
           Quando l'ape è su un favo, il numero di dosi di nettare da raccogliere è 0, mentre se è su un fiore, è 0 il numero di dosi di miele da produrre.
       Course 4 Play Lab Params 2_authored_hint:
-        Course_4_Play_Lab_Params_2_a: You will need to click "edit" on the jump function
-          and update it so that it uses the `height` parameter.
+        Course_4_Play_Lab_Params_2_a: Sarà necessario fare clic su "modifica" la funzione
+          di salto e aggiornarla in modo da utilizzare il parametro 'altezza'.
       Course 4 Play Lab Vars 2_authored_hint:
-        Course_4_Play_Lab_Vars_2_a: |-
-          https://studio.code.org/s/course4/stage/7/puzzle/2
-
-          Assicurati di impostare un valore di `dog_speed` (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità del gatto</i>).
+        Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed`
+          (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità
+          del gatto</i>).
       Course 4 Play Labs For Loops 2_authored_hint:
-        Course_4_Play_Labs_For_Loops_2_a: |-
-          https://studio.code.org/s/course4/stage/11/puzzle/2
-
-          Quale deve essere l'incremento ad ogni passo della variabile `counter` (<i>contatore</i>) per saltare i numeri pari?
+        Course_4_Play_Labs_For_Loops_2_a: Quale deve essere l'incremento ad ogni passo
+          della variabile `counter` (<i>contatore</i>) per saltare i numeri pari?
       Course 4 Playlab For Loop Freeplay_authored_hint: []
       Course 4 Playlab For Loops 4b_authored_hint:
-        Course_4_Playlab_For_Loops_4b_a: |-
-          https://studio.code.org/s/course4/stage/11/puzzle/4
-
-          I personaggi sono distanti 330 pixel dalle bandierine.
-        Course_4_Playlab_For_Loops_4b_b: |-
-          https://studio.code.org/s/course4/stage/11/puzzle/4
-
-          Come puoi far sì che alla fine del <i>ciclo con contatore</i> ogni personaggio abbia percorso la stessa distanza totale, nonostante i valori iniziali e finali del ciclo siano diversi?
-        Course_4_Playlab_For_Loops_4b_c: |-
-          https://studio.code.org/s/course4/stage/11/puzzle/4
-
-          Ricorda che non importa di quanto un personaggio supera la bandierina nell'ultima ripetizione, ciò che conta è il numero di ripetizioni.
+        Course_4_Playlab_For_Loops_4b_a: I personaggi sono distanti 330 pixel dalle
+          bandierine.
+        Course_4_Playlab_For_Loops_4b_b: Come puoi far sì che alla fine del <i>ciclo
+          con contatore</i> ogni personaggio abbia percorso la stessa distanza totale,
+          nonostante i valori iniziali e finali del ciclo siano diversi?
+        Course_4_Playlab_For_Loops_4b_c: Ricorda che non importa di quanto un personaggio
+          supera la bandierina nell'ultima ripetizione, ciò che conta è il numero
+          di ripetizioni.
       Course 4 Playlab For Loops 5b_authored_hint:
-        Course_4_Playlab_For_Loops_5b_a: |-
-          https://studio.code.org/s/course4/stage/11/puzzle/5
-
-          I personaggi sono distanti 350 pixel l'uno dall'altro.
-        Course_4_Playlab_For_Loops_5b_b: |-
-          https://studio.code.org/s/course4/stage/11/puzzle/5
-
-          Ricorda che ad ogni ripetizione del <i>ciclo con contatore</i> un personaggio si muove di una quantità maggiore, perché il contatore viene incrementato ad ogni ripetizione.
+        Course_4_Playlab_For_Loops_5b_a: I personaggi sono distanti 350 pixel l'uno
+          dall'altro.
+        Course_4_Playlab_For_Loops_5b_b: Ricorda che ad ogni ripetizione del <i>ciclo
+          con contatore</i> un personaggio si muove di una quantità maggiore, perché
+          il contatore viene incrementato ad ogni ripetizione.
       Course 4 Playlab For Loops 6b_authored_hint: []
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Ogni esagono ha il lato di 40 pixel.
@@ -803,10 +779,9 @@
           ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: Sono quindi necessari 3 "cicli annidati" ognuno dei quali
           esegue 10 ripetizioni, pari al numero dei lati (`sides`) del decagono.
-        Course_4_SCV_2_c: |-
-          https://studio.code.org/s/course4/stage/19/puzzle/5
-
-          Alla fine del ciclo più interno (quello che disegna il singolo decagono) l'artista gira un po' a sinistra, mentre gira a destra alla fine degli altri due cicli.
+        Course_4_SCV_2_c: Alla fine del ciclo più interno (quello che disegna il singolo
+          decagono) l'artista gira un po' a sinistra, mentre gira a destra alla fine
+          degli altri due cicli.
         Course_4_SCV_2_d: |-
           Come nel disegno del decagono, anche qui, sia per disegnare un fiore, che tutta la figura, l'artista svolge un giro completo di 360 gradi.<br>
           Dopo aver disegnato un fiore è necessario spostarsi un po' in avanti prima di girare a destra, per evitare di disegnare le varie ripetizioni del fiore tutte nello stesso punto.
@@ -867,28 +842,19 @@
           <b>Soluzione:</b>
           Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/398175955" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Farmer for Authored Hint testing_authored_hint:
-        first_hint: |-
-          This is the first hint.
-
-          It has *some* **basic** `markup`
-        second_hint: |-
-          This is the second hint. It has an image.
-
-          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: This is the third and final hint. It doesn't have anything special.
+        first_hint: Questo è il primo indizio. Ha * alcuni * * * basic * * 'markup'
+        second_hint: Questo è il secondo suggerimento. Ha un'immagine. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        last_hint: Questo è il terzo e ultimo suggerimento. Non ha nulla di speciale.
       Farmer for TTS testing_authored_hint:
-        first_hint: |-
-          This is the first hint.
-
-          It has *some* **basic** `markup`
-        second_hint: |-
-          This is the second hint. It has an image.
-
-          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: This is the third and final hint. It doesn't have anything special.
+        first_hint: Questo è il primo indizio. Ha * alcuni * * * basic * * 'markup'
+        second_hint: Questo è il secondo suggerimento. Ha un'immagine. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        last_hint: Questo è il terzo e ultimo suggerimento. Non ha nulla di speciale.
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: "È possibile richiamare una funzione più volte all'interno
+          del vostro programma!  Provatela due volte per risolvere il puzzle."
       Harvesting_authored_hint:
-        pointer_harvester_test: What kind of block can I use to check something and
-          make a decision?
+        pointer_harvester_test: Che tipo di blocco è possibile utilizzare per controllare
+          qualcosa e prendere una decisione?
       Inspirational Artwork_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo
           colore a blu.
@@ -946,6 +912,106 @@
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Utilizzare i tasti freccia per dirigere il giocatore
+          nella casa. Terminare il quadrato arancione per vincere.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
+          the workspace, and snap it into place beneath the `when run` block.
+        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
+          Agent.
+        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
+          the player with the arrow keys!
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Spostate l'agente avanti di due spazi sul piano di
+          pressione.  Questo aprirà la porta al vostro giocatore.
+        MC_HOC_2017_02_Cole_b: Premere "Esegui agente"!  Anche se non è corretto,
+          è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e
+          più volte fino a capire che cosa sta andando storto.
+        MC_HOC_2017_02_Cole_c: Una volta che l'agente avrà aperto la porta, sarà possibile
+          utilizzare i tasti freccia per muovere il giocatore nel quadrato arancione.
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Spostate l'agente avanti di due spazi sul piano di
+          pressione.  Questo aprirà la porta al vostro giocatore.
+        MC_HOC_2017_02_Cole_b: Premere "Esegui agente"!  Anche se non è corretto,
+          è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e
+          più volte fino a capire che cosa sta andando storto.
+        MC_HOC_2017_02_Cole_c: Una volta che l'agente avrà aperto la porta, sarà possibile
+          utilizzare i tasti freccia per muovere il giocatore nel quadrato arancione.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
+          use your arrow keys to walk the player to the compass!
+        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
+          loop and see if you can figure out how to make it shorter!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
+          direction '
+        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
+          plate to let Alex or Steve through to the axe.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
+          you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
+          open the door for the player.
+        MC_HOC_2017_04_Cole_c: Premere "Esegui agente"!  Anche se non è corretto,
+          è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e
+          più volte fino a capire che cosa sta andando storto.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          of a `repeat` to complete this puzzle.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          of a `repeat` to complete this puzzle.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
+          *should* it run?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
+          loop!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
+          function does and call it as many times as you need using the small green
+          `clear path` block from the toolbox.
+        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
+          the toolbox to help you solve this puzzle.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: Premere "Esegui agente"!  Anche se non è corretto, è
+          possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più
+          volte fino a capire che cosa sta andando storto.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: Premere "Esegui agente"!  Anche se non è corretto, è
+          possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più
+          volte fino a capire che cosa sta andando storto.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: Premere "Esegui agente"!  Anche se non è corretto, è
+          possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più
+          volte fino a capire che cosa sta andando storto.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_FP10x10_authored_hint: []
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -953,40 +1019,31 @@
       MikeStarNested_authored_hint:
         hint1: Don't give up!
       NEW Course 4 Artist Functions 13_authored_hint:
-        NEW_Course_4_Artist_Functions_13_a: |-
-          https://studio.code.org/s/course4/stage/12/puzzle/10
-
-          Modifica la funzione `draw a line of squares` (<i>disegna una fila di quadrati</i>) in modo da non doverla richiamare due volte.
-        NEW_Course_4_Artist_Functions_13_c: |-
-          https://studio.code.org/s/course4/stage/12/puzzle/10
-
-          Come dovresti modificare il codice per disegnare una stella con linee normali invece che file di quadrati?
+        NEW_Course_4_Artist_Functions_13_a: Modifica la funzione `draw a line of squares`
+          (<i>disegna una fila di quadrati</i>) in modo da non doverla richiamare
+          due volte.
+        NEW_Course_4_Artist_Functions_13_c: Come dovresti modificare il codice per
+          disegnare una stella con linee normali invece che file di quadrati?
       NEW Course 4 Artist Functions 4_authored_hint:
-        NEW_Course_4_Artist_Functions_4_a: |-
-          https://studio.code.org/s/course4/stage/12/puzzle/4
-
-          Devi utilizzare un blocco `gira a destra di 120 gradi` dopo ogni quadrato.
+        NEW_Course_4_Artist_Functions_4_a: Devi utilizzare un blocco `gira a destra
+          di 120 gradi` dopo ogni quadrato.
       NEW Course 4 Artist Functions 9_authored_hint:
-        NEW_Course_4_Artist_Functions_9_a: |
-          https://studio.code.org/s/course4/stage/12/puzzle/7
-
+        NEW_Course_4_Artist_Functions_9_a: |-
           Prova ad eseguire il codice prima di aggiungere qualunque blocco. Riesci a capire cos'è che fa disegnare il quadrato nel posto sbagliato?<br>
           <br>
           Se non riesci a capire in che punto il codice è sbagliato, prova a rallentare il movimento dell'artista spostando il regolatore di velocità verso il simbolo della tartaruga.
-        NEW_Course_4_Artist_Functions_9_b: |-
-          https://studio.code.org/s/course4/stage/12/puzzle/7
-
-          Prova ad usare un blocco `gira a ... di ... gradi`.
+        NEW_Course_4_Artist_Functions_9_b: Prova ad usare un blocco `gira a ... di
+          ... gradi`.
       NEW Course 4 Artist Params 11_authored_hint:
-        NEW_Course_4_Artist_Params_11_a: |-
-          https://studio.code.org/s/course4/stage/14/puzzle/11
-
-          Clicca su "Esegui" per vedere cosa fa la funzione. Nota che la funzione è stata definita con due parametri, ma il suo codice ne usa uno solo.
+        NEW_Course_4_Artist_Params_11_a: Clicca su "Esegui" per vedere cosa fa la
+          funzione. Nota che la funzione è stata definita con due parametri, ma il
+          suo codice ne usa uno solo.
       NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: |-
-          https://studio.code.org/s/course4/stage/14/puzzle/14
-
-          Nella funzione `draw a polygon` (<i>disegna un poligono</i>) devi dividere il valore del perimetro per il numero di lati del poligono per ottenere la lunghezza di ogni lato. In questo modo riesci a disegnare una figura il cui perimetro ha sempre la stessa lunghezza indipendentemente dal numero dei lati.
+        NEW_Course_4_Artist_Params_13_a: Nella funzione `draw a polygon` (<i>disegna
+          un poligono</i>) devi dividere il valore del perimetro per il numero di
+          lati del poligono per ottenere la lunghezza di ogni lato. In questo modo
+          riesci a disegnare una figura il cui perimetro ha sempre la stessa lunghezza
+          indipendentemente dal numero dei lati.
       NEW Course 4 Artist Params 14_authored_hint:
         NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times
           to figure out how the function works with different parameters.
@@ -1015,10 +1072,10 @@
 
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
       NEW Course 4 Bee For Loops 8_authored_hint:
-        NEW_Course_4_Bee_For_Loops_8_a: |-
-          https://studio.code.org/s/course4/stage/9/puzzle/8
-
-          Se il ciclo deve contare "a crescere" il valore del passo deve corrispondere ad un incremento (quindi un numero positivo). Quanto bisogna aggiungere in questo caso ad ogni valore per ottenere il valore successivo nella sequenza?
+        NEW_Course_4_Bee_For_Loops_8_a: Se il ciclo deve contare "a crescere" il valore
+          del passo deve corrispondere ad un incremento (quindi un numero positivo).
+          Quanto bisogna aggiungere in questo caso ad ogni valore per ottenere il
+          valore successivo nella sequenza?
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
@@ -2713,6 +2770,22 @@
           You can move back over the path a second time before moving south.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      courseA_collector_preLoops1_authored_hint: []
+      courseA_collector_preLoops2_authored_hint: []
+      courseA_collector_preLoops3_authored_hint: []
+      courseA_collector_preLoops4_authored_hint:
+        courseA_collector_preLoops4_a: |
+          To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click "Run"!
+      courseA_collector_preLoops5_authored_hint:
+        courseA_collector_preLoops5_a: You'll need to go two different directions
+          to get even one gem!
+      courseA_collector_preLoops6_authored_hint:
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          blocks to solve this puzzle.
+      courseA_collector_preLoops7_authored_hint:
+        courseA_collector_loops2_b: |-
+          After you have moved to a square with treasure, use this block to pick it up.
+          <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: []
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
@@ -4526,6 +4599,9 @@
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
           square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
+        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move
+          **before** you turn, or else your circles will be off by the tiniest little
+          amount!
         courseD_artist_nestedLoops4_a: |-
           To make a circle:
           - Repeat 360 times
@@ -6027,7 +6103,22 @@
           Don't forget to turn afterward!
         courseE_artist_ramp8_c: Your loop should have two blocks inside of it, the
           `move forward` and the `turn right by 90 degrees`.
+      courseE_artist_ramp8_2_authored_hint:
+        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
+          block, and change the 100 to a 200.
+        courseE_artist_ramp8_b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move
+          forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
+        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks
+          to see which angle you need!
+        courseD_artist_ramp12_c: To draw each side, you will need to move forward
+          100 pixels, then turn right 120 degrees. How many sides do you need?
+      courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
         courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks
           to see which angle you need!
@@ -6599,54 +6690,58 @@
 
           Have a friend try your app when it is finished!
       courseF_IceAge_1_authored_hint:
-        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag
-          the `actor 1 say` block out from the toolbar and connect it to the `when
-          run` event block that is already in the workspace. Next, type "Hello!" inside.
+        iceage_hello1_a: Devi aggiungere solo un blocco per risolvere questo esercizio.
+          Trascina il blocco `il personaggio 1 dice ...` dalla cassetta degli attrezzi
+          e attaccalo all'evento`quando si clicca su "Esegui"` già presente nell'area
+          di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
       courseF_IceAge_10_authored_hint:
-        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an
-          arrow is pressed? When you click on Sid?  When you click on Granny?  The
-          choice is yours!
-        iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
-          you will need to connect the `set actor 2 mood to happy` block beneath the
-          `when actor 2 touches projectile` event.
+        iceage_throw_hearts_a: Quando vuoi lanciare i cuori alla nonna? Quando si
+          preme una freccia? Quando clicchi su Sid? Quando clicchi sulla Nonnina?
+          La scelta è tua!
+        iceage_throw_hearts_b: Per fare in modo che la nonna sia felice quando riceve
+          i cuori, devi collegare il blocco `imposta il personaggio 2 ad umore felice`
+          sotto all'evento `quando il personaggio 2 tocca dei cuori`.
       courseF_IceAge_11_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
-          catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
-          get bigger each time one hits?  End the game as a win if Diego gets hit
-          5 times.
+        iceage_free_play_a: Puoi fare in modo che Sid e Manny si sfidino a palle di
+          neve?
+        iceage_free_play_b: Fai in modo che la Nonnina debba inseguire Diego. Si vince
+          se lei riesce a prenderlo.
+        iceage_free_play_c: Riesci a fare in modo che Sid tiri fiocchi di neve a Diego
+          e far sì che Diego diventi più grande ogni volta che viene colpito? Si vince
+          quando Diego viene colpito 5 volte.
       courseF_IceAge_2_authored_hint:
         iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
           using the `actor 1 say` block.  You will also need to have Manny say something
           with the `actor 2 say` block. '
       courseF_IceAge_3_authored_hint:
-        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve
-          this puzzle.
+        iceage_hello3_a: Usa il blocco `sposta il personaggio 1 a destra 200 pixel`
+          per risolvere l'esercizio.
       courseF_IceAge_4_authored_hint:
-        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by
-          200 pixels, or move Manny up by 200 pixels.
-        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor
-          1 touches actor 2` event to finish this challenge.
+        iceage_move_to_actor_a: Per risolvere questo esercizio, puoi sia muovere Diego
+          in basso di 200 pixel, sia muovere Manny in alto di 200 pixel.
+        iceage_move_to_actor_b: Collega il blocco `riproduci il suono di ...` all'evento
+          `quando il personaggio 1 tocca il personaggio 2` per terminare questa sfida.
       courseF_IceAge_5_authored_hint:
-        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right`
-          blocks to solve this puzzle.
+        iceage_repeat_a: Usa entrambi i blocchi `sposta il personaggio 1 a destra`
+          e `sposta il personaggio 1 a sinistra` per risolvere questo esercizio.
       courseF_IceAge_6_authored_hint:
-        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked`
-          event to complete this puzzle.
+        iceage_click_hello_a: Per completare l'esercizio aggiungi uno o più blocchi
+          `il personaggio 1 dice` all'evento `quando si clicca sul personaggio 1`.
       courseF_IceAge_7_authored_hint:
-        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have
-          a different `move actor 1` command connected to it to solve this puzzle. '
+        iceage_move_events_a: Per risolvere l'esercizio, ogni evento `quando si preme
+          sulla freccia ...` ha bisogno di avere collegato un diverso comando `sposta
+          il personaggio ...`.
       courseF_IceAge_8_authored_hint:
-        iceage_sound_and_points_a: You will need to add two blocks beneath the `when
-          actor 1 touches actor 2` event.
-        iceage_sound_and_points_b: You will need both the `score a point` block and
-          the 'play ____ sound` block to pass this level.
+        iceage_sound_and_points_a: Dovrai aggiungere due blocchi sotto all'evento
+          `quando il personaggio 1 tocca il personaggio 2`.
+        iceage_sound_and_points_b: Avrai bisogno sia del blocco `aggiungi un punto`
+          sia di quello `riproduci il suono di ...` per completare questo esercizio.
       courseF_IceAge_9_authored_hint:
-        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
-          puzzle where it needs to be. '
-        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
-          have them happen immediately after the program starts.
+        iceage_warn_ice_age_a: Devi semplicemente aggiungere due blocchi per risolvere
+          questo esercizio.
+        iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento
+          `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
+          del programma.
       courseF_IceAge_template_authored_hint: []
       courseF_artist_embed_for7_authored_hint: []
       courseF_artist_for1_authored_hint:
@@ -6780,8 +6875,6 @@
           the puzzle yet.
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/4
-
           Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>
           Qual è il valore più piccolo che serve? <br>
           Qual è il più grande?<br>
@@ -6837,13 +6930,9 @@
           uguale a quello del contatore `counter` ed il blu è uguale a `255`–`counter`.
         courseF_artist_for_challenge2_a: La figura è una spirale di colore mutevole
           e tratti rettilinei progressivamente più lunghi.
-        courseF_artist_for_challenge2_b: |-
-          https://studio.code.org/s/course4/stage/20/puzzle/7
-          (NDT: era sfuggita la copia dell'URL nel context)
-
-          Il primo segmento è lungo 5 pixel ed ogni successivo segmento è 2 pixel più lungo, fino a 250.<br>
-          <br>
-          Al termine di ogni segmento l'artista gira di 80 gradi.
+        courseF_artist_for_challenge2_b: La soluzione di questo esercizio è più semplice
+          di quanto pensi. Basta impostare il colore all'interno del ciclo, andare
+          avanti e girare.
         courseF_artist_for_challenge2_d: |-
           **Solution:**
 
@@ -6960,12 +7049,13 @@
         courseF_artist_fwp4_c: You will need to call your function three times to
           draw the shapes.
       courseF_artist_fwp5_authored_hint:
-        courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
-          of sides it has.
-        courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
+        courseF_artist_fwp5_d: A `for` loop would really help you out here!
         courseF_artist_fwp5_c: You will need to edit the function a little bit, since
           your previous function turned the artist to the right after each side, and
           this image needs a turn to the left.
+        courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
+          of sides it has.
+        courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
       courseF_artist_fwp6_authored_hint:
         courseF_artist_fwp6_a: It's okay to run the program a few times to figure
           out how the function works with different parameters.
@@ -9107,12 +9197,11 @@
         2-3_Artist_1_new_b: Problemi a girare? Utilizza il blocco `gira a destra di
           90 gradi`.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
+        2-3_Artist_6_a: 'Per gli angoli piccoli, dovete girare intorno * più * volte.   '
         2-3_Artist_6_b: Visto che sono già rivolto verso destra, disegnare il triangolo
           è più facile se inizi andando avanti e poi giri a sinistra.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side
-          of the square...100 pixels!
+        2-3_Artist_6_c: Ogni lato del triangolo è la stessa lunghezza di ciascun lato
+          del quadrato... 100 pixel!
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: Avrai bisogno di due diversi <i>cicli</i> `ripeti ...
           volte`, uno dopo l'altro.
@@ -9163,8 +9252,6 @@
           ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
       grade5_artist_for_loops4_authored_hint:
         Course_4_Artist_For_Loops_4_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/4
-
           Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>
           Qual è il valore più piccolo che serve? <br>
           Qual è il più grande?<br>
@@ -9181,19 +9268,15 @@
       grade5_artist_for_loops7a_authored_hint: []
       grade5_artist_for_loops7b_authored_hint: []
       grade5_artist_for_loops8_authored_hint:
-        Course_4_Artist_For_Loops_11_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/8
-
-          Il numero di gradi di cui girare deve cambiare per ogni poligono. 360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo: usa un blocco matematico per calcolarlo.
+        Course_4_Artist_For_Loops_11_a: 'Il numero di gradi di cui girare deve cambiare
+          per ogni poligono. 360 diviso il numero di lati del poligono ti restituisce
+          il numero di gradi di cui devi girare per disegnarlo: usa un blocco matematico
+          per calcolarlo.'
       grade5_artist_for_loops9_authored_hint:
-        Course_4_Artist_For_Loops_11a_a: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/9
-
-          360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo.
-        Course_4_Artist_For_Loops_11a_b: |-
-          https://studio.code.org/s/course4/stage/10/puzzle/9
-
-          In ogni poligono devi avanzare di quantità pari a 10 volte il numero di lati del poligono stesso.
+        Course_4_Artist_For_Loops_11a_a: 360 diviso il numero di lati del poligono
+          ti restituisce il numero di gradi di cui devi girare per disegnarlo.
+        Course_4_Artist_For_Loops_11a_b: In ogni poligono devi avanzare di quantità
+          pari a 10 volte il numero di lati del poligono stesso.
       grade5_artist_for_loopsfreeplay11_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: La soluzione di questo esercizio è quasi
           uguale a quella dell'esercizio precedente... con un paio di cambiamenti.
@@ -9378,10 +9461,9 @@
         grade5_bee_parameters_new9a_b: For each stair, you'll need to call the function
           once, turn right, call the function again, then turn left.
       grade5_playlab_variables2_authored_hint:
-        Course_4_Play_Lab_Vars_2_a: |-
-          https://studio.code.org/s/course4/stage/7/puzzle/2
-
-          Assicurati di impostare un valore di `dog_speed` (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità del gatto</i>).
+        Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed`
+          (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità
+          del gatto</i>).
       gradeK_sequence_4_authored_hint:
         gradeK_sequence_4_a: Try writing down the steps on paper to find a solution!
       gradek_adventurer_loops3_authored_hint:
@@ -9494,62 +9576,66 @@
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       iceage_click_hello_authored_hint:
-        iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked`
-          event to complete this puzzle.
+        iceage_click_hello_a: Per completare l'esercizio aggiungi uno o più blocchi
+          `il personaggio 1 dice` all'evento `quando si clicca sul personaggio 1`.
       iceage_free_play_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
-          catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
-          get bigger each time one hits?  End the game as a win if Diego gets hit
-          5 times.
+        iceage_free_play_a: Puoi fare in modo che Sid e Manny si sfidino a palle di
+          neve?
+        iceage_free_play_b: Fai in modo che la Nonnina debba inseguire Diego. Si vince
+          se lei riesce a prenderlo.
+        iceage_free_play_c: Riesci a fare in modo che Sid tiri fiocchi di neve a Diego
+          e far sì che Diego diventi più grande ogni volta che viene colpito? Si vince
+          quando Diego viene colpito 5 volte.
       iceage_free_playcourseF_IceAge_11_authored_hint:
-        iceage_free_play_a: 'Can you make Sid and Manny have an Ice Crystal fight?  '
-        iceage_free_play_b: Make Granny chase Diego.  End the game as a win if she
-          catches him.
-        iceage_free_play_c: Can you have Sid throw snowflakes at Diego and have Diego
-          get bigger each time one hits?  End the game as a win if Diego gets hit
-          5 times.
+        iceage_free_play_a: Puoi fare in modo che Sid e Manny si sfidino a palle di
+          neve?
+        iceage_free_play_b: Fai in modo che la Nonnina debba inseguire Diego. Si vince
+          se lei riesce a prenderlo.
+        iceage_free_play_c: Riesci a fare in modo che Sid tiri fiocchi di neve a Diego
+          e far sì che Diego diventi più grande ogni volta che viene colpito? Si vince
+          quando Diego viene colpito 5 volte.
       iceage_hello1_authored_hint:
-        iceage_hello1_a: |-
-          https://studio.code.org/s/iceage/stage/1/puzzle/1
-
-          Devi aggiungere solo un blocco per risolvere questo esercizio. Trascina il blocco `il personaggio dice ...` dalla cassetta degli attrezzi e attaccalo al blocco `quando si clicca su "Esegui"` già presente nell'area di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
+        iceage_hello1_a: Devi aggiungere solo un blocco per risolvere questo esercizio.
+          Trascina il blocco `il personaggio 1 dice ...` dalla cassetta degli attrezzi
+          e attaccalo all'evento`quando si clicca su "Esegui"` già presente nell'area
+          di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
       iceage_hello2_authored_hint:
         iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
           using the `actor 1 say` block.  You will also need to have Manny say something
           with the `actor 2 say` block. '
       iceage_move_events_authored_hint:
-        iceage_move_events_a: 'Each of the `when ___ arrow` events will need to have
-          a different `move actor 1` command connected to it to solve this puzzle. '
+        iceage_move_events_a: Per risolvere l'esercizio, ogni evento `quando si preme
+          sulla freccia ...` ha bisogno di avere collegato un diverso comando `sposta
+          il personaggio ...`.
       iceage_move_to_actor_authored_hint:
-        iceage_move_to_actor_a: For this puzzle, you can either move Diego down by
-          200 pixels, or move Manny up by 200 pixels.
-        iceage_move_to_actor_b: Connect the `play ___ sound` block to the `when actor
-          1 touches actor 2` event to finish this challenge.
+        iceage_move_to_actor_a: Per risolvere questo esercizio, puoi sia muovere Diego
+          in basso di 200 pixel, sia muovere Manny in alto di 200 pixel.
+        iceage_move_to_actor_b: Collega il blocco `riproduci il suono di ...` all'evento
+          `quando il personaggio 1 tocca il personaggio 2` per terminare questa sfida.
       iceage_move_to_flag_authored_hint:
-        iceage_hello3_a: Use the `move actor 1 right by 200 pixels` block to solve
-          this puzzle.
+        iceage_hello3_a: Usa il blocco `sposta il personaggio 1 a destra 200 pixel`
+          per risolvere l'esercizio.
       iceage_repeat_authored_hint:
-        iceage_repeat_a: Use both the `move actor 1 left` and `move actor 1 right`
-          blocks to solve this puzzle.
+        iceage_repeat_a: Usa entrambi i blocchi `sposta il personaggio 1 a destra`
+          e `sposta il personaggio 1 a sinistra` per risolvere questo esercizio.
       iceage_sound_and_points_authored_hint:
-        iceage_sound_and_points_a: You will need to add two blocks beneath the `when
-          actor 1 touches actor 2` event.
-        iceage_sound_and_points_b: You will need both the `score a point` block and
-          the 'play ____ sound` block to pass this level.
+        iceage_sound_and_points_a: Dovrai aggiungere due blocchi sotto all'evento
+          `quando il personaggio 1 tocca il personaggio 2`.
+        iceage_sound_and_points_b: Avrai bisogno sia del blocco `aggiungi un punto`
+          sia di quello `riproduci il suono di ...` per completare questo esercizio.
       iceage_throw_hearts_authored_hint:
-        iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an
-          arrow is pressed? When you click on Sid?  When you click on Granny?  The
-          choice is yours!
-        iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
-          you will need to connect the `set actor 2 mood to happy` block beneath the
-          `when actor 2 touches projectile` event.
+        iceage_throw_hearts_a: Quando vuoi lanciare i cuori alla nonna? Quando si
+          preme una freccia? Quando clicchi su Sid? Quando clicchi sulla Nonnina?
+          La scelta è tua!
+        iceage_throw_hearts_b: Per fare in modo che la nonna sia felice quando riceve
+          i cuori, devi collegare il blocco `imposta il personaggio 2 ad umore felice`
+          sotto all'evento `quando il personaggio 2 tocca dei cuori`.
       iceage_warn_ice_age_authored_hint:
-        iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
-          puzzle where it needs to be. '
-        iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to
-          have them happen immediately after the program starts.
+        iceage_warn_ice_age_a: Devi semplicemente aggiungere due blocchi per risolvere
+          questo esercizio.
+        iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento
+          `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
+          del programma.
       k1stickerfreeplay_authored_hint: []
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Alla fine dovresti avere cinque blocchi nel <i>ciclo</i>
