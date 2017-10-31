@@ -752,6 +752,10 @@
   volunteer_engineer_submission_type_task_mentor: "Ψάχνω για έναν σύμβουλο για να
     με βοηθήσει να προετοιμαστώ για την κωδικοποίηση με τους μαθητές μου"
   petition_age: "Ηλικία"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "Μάθετε περισσότερα"
   dashboard_landing_title: "Αρχική Σελίδα Εκπαιδευτή"
   dashboard_landing_welcome: "Καλώς ήλθατε στο νέο και βελτιωμένο πίνακα εκπαιδευτικού."
   dashboard_landing_video: "Παρακολουθήστε αυτό το βίντεο"

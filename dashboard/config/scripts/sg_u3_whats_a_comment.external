@@ -1,0 +1,66 @@
+name 'SG U3 whats a comment'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# What are "Comments" in code?
+
+You have a new type of block in the toolbox that looks like this: ![](https://images.code.org/e8dd8a644e33f2037fef87b1bc7b9622-image-1508962098287.png)  
+
+A "Comment" block doesn't do anything when you run the code. It is simply a way to leave notes in code. 
+
+Programmers write comments into their code for two main reasons:
+
+1. sharing code with other programmers
+2. remembering their own thoughts or plans for code they write. 
+
+For both cases a **programmers write comments into their code to explain their thinking to a human reader.** 
+Writing your own comments is a skill you'll develop over time.
+
+# Subgoals are just comments!
+
+The subgoal labels you've been seeing and using so far are just comments, but they are ones that we provided to you to help you see the similarities between puzzles. Just like subgoals, other comments are very useful for organizing your thoughts (see below). As you work on more complex problems, you should add comments and/or make your own additions to the subgoals. 
+
+For example, if you need to make 4 functions in a problem, you might add specific details about each function to the `//define function` subgoal. As you get more experience you might find yourself coming up with your own subgoals for the task at hand, and jotting them down in comments.
+
+Click continue to see how to add your own comments, or keep reading below about how and why to write comments.
+
+<a class="btn btn-large btn-primary next-stage submitButton pull-right"> Continue </a>
+
+<br><br><br><br><br>
+<hr style="clear: both"/>
+
+### Why write comments?
+
+**For others - collaborating:**
+
+When sharing code with others, comments are useful to point out sections of code you might want help with, or to explain a complicated section of code that's hard to reason about.  It's useful for example to write a comment like: 
+
+<table>
+<tr>
+ <td style="text-align: center; background-color: #d9eff7; border: solid 2px white"><i>Block version</i></td>
+ <td style="text-align: center; background-color: #d9eff7; border: solid 2px white"><i>Text version</i></td>
+</tr>
+<tr>
+  <td width=50%><img src="https://images.code.org/31d340547e567ee72dc8b6e68c50909d-image-1509376166749.png"/></td>
+  <td><img src="https://images.code.org/4558fb3a8d916d31d349cd3f5b982d4e-image-1509376182782.png"/></td>
+</tr>
+
+</table>
+    
+because it helps the reader understand when, where, why that section of code might be executed.
+
+**For yourself**
+
+When writing comments for yourself, it might be a note about how you plan to solve a problem, or jotting down the reason you did something to remind yourself later when you come back to it.  For example you might write a comment like:
+
+![](https://images.code.org/ceec3486cdb014cc7f1e475b6c1c8787-image-1508965033865.56.26 PM.png)
+
+**For planning**
+
+Many programmers, when starting from scratch, like to write out a high level plan for the code they want to write in comments, and then go in starting writing code to fill in the plan. This is particularly useful if you're facing a large problem that needs to be broken down into parts.  A plan for drawing an under the sea scene might look like this:
+
+![](https://images.code.org/7b84440cbf9a3286d3bd05bdff67d3eb-image-1509375733512.png)    
+
+Once you have written out a strategy in comments you'll be able to remember the big picture, after you inevitably run into lots of sub-problems that require your time and brain to solve, or debug.
+
+MARKDOWN

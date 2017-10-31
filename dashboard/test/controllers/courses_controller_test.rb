@@ -55,9 +55,9 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 9
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 8
 
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 4
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 3
 
   # Tests for create
 

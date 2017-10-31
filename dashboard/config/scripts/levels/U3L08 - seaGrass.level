@@ -147,7 +147,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "U3L08 - underTheSeaTemplate",
+    "project_template_level_name": "U3L08 - underTheSeaTemplateCommented",
     "free_play": "true",
     "app_width": "320",
     "app_height": "480",
@@ -185,10 +185,15 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "So all of the starter code has `drawSeaGrass` but persnickety marine enthusiasts complain that it should be `drawSeagrass`  At some point we can change, but you'd have to change \r\n\r\n1. all intstructions\r\n2. starter code\r\n3. all log conditions.",
+  "audit_log": "[{\"changed_at\":\"2017-10-30 14:45:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

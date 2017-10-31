@@ -5,4 +5,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   def email
     object.user.email
   end
+
+  # Include the full answers here
+  def form_data
+    object.full_answers_camelized
+  end
 end

@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
+import color from '@cdo/apps/util/color';
+import _ from 'lodash';
 
 const styles = {
   table: {
@@ -25,6 +27,11 @@ export default class QuickViewTable extends React.Component {
       header: {
         label: 'Submitted',
       },
+      cell: {
+        format: (created_at) => {
+          return new Date(created_at).toLocaleDateString('en-us', {month: 'long', day: 'numeric'});
+        }
+      }
     },{
       property: 'applicant_name',
       header: {
@@ -45,6 +52,19 @@ export default class QuickViewTable extends React.Component {
       header: {
         label: 'Status',
       },
+      cell: {
+        format: (status) => {
+          return _.upperFirst(status);
+        },
+        transforms: [
+          (status) => ({
+            style: {
+              backgroundColor: this.getViewColor(status),
+              padding: '5px'
+            }
+          })
+        ]
+      }
     },{
       property: 'id',
       header: {
@@ -57,17 +77,32 @@ export default class QuickViewTable extends React.Component {
     return columns;
   }
 
+  getViewColor = (status) => {
+    switch (status) {
+      case 'unreviewed': return color.charcoal;
+      case 'pending': return color.orange;
+      case 'accepted': return color.level_perfect;
+      case 'declined': return color.red;
+      case 'waitlisted': return color.level_passed;
+    }
+  }
+
   formatViewButton = (id) => {
     return (
       <Button
         bsSize="xsmall"
         href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-        onClick={this.handleViewClick}
+        onClick={this.handleViewClick.bind(this, id)}
       >
         View Application
       </Button>
     );
-  }
+  };
+
+  handleViewClick = (id, event) => {
+    event.preventDefault();
+    this.context.router.push(`/${this.props.path}/${id}`);
+  };
 
   render() {
     const rows = this.props.data;

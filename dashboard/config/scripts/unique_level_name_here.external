@@ -2,7 +2,17 @@ name 'unique level name here'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xlbRL5eOgkI?rel=0&amp;start=169&amp;end=368" frameborder="0" allowfullscreen></iframe>
 
-Nice job changing your first screen. Now watch a bit of this video to learn a little bit more about how App Lab works. You'll be using these skills to keep building your adventure!
+## Today you’re going to learn how to use and create: **functions**
+
+Creating a function lets you make your own blocks! There are two parts to a function: 
+
+* Making a newly named block that has all of the code you want to run inside of it. 
+-xml of function definition- 
+
+* The single green block itself that you use, or call, to run the function you created.
+-xml of function call-
+
+Prepare to get familiar with functions, learn how to edit them, and create your own!
+
 MARKDOWN

@@ -54,9 +54,9 @@ function showHomepage() {
   // Default teacher announcement.
   let announcementHeading = i18n.announcementHeadingFacilitatorApp();
   let announcementDescription = i18n.announcementDescriptionFacilitatorApp();
-  let announcementLink =
-    "https://code.org/facilitator";
+  let announcementLink = CDO.code_org_url("/facilitator");
   let announcementId = "facilitator_app";
+  let announcementType = "";
 
   // Optional override of teacher announcement.
   if (isEnglish &&
@@ -71,6 +71,7 @@ function showHomepage() {
     announcementDescription = announcementOverride.teacher_announce_description;
     announcementLink = announcementOverride.teacher_announce_url;
     announcementId = announcementOverride.teacher_announce_id;
+    announcementType = announcementOverride.teacher_announce_type;
   }
 
   ReactDOM.render (
@@ -142,6 +143,7 @@ function showHomepage() {
                 description: announcementDescription,
                 link: announcementLink,
                 image: "",
+                type: announcementType,
                 id: announcementId
               }
             ]}
