@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-10-26T17:35:48.000Z",
+  "created_at": "2017-10-30T20:06:18.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -185,10 +185,11 @@
       "lightSensor.start": null
     },
     "edit_code": true,
-    "embed": "false",
-    "markdown_instructions": "# Check for a Winner\r\n\r\nYour game should be pretty playable by now. Two players can click their respective buttons, and their emojies will race down the screen. We still need a way for a player to win though.\r\n\r\n# Do This\r\n\r\nUsing a conditional inside the `checkWin()` function, you want to check if a player has won each time they click. For now, we can just use `console.log` to report the winner.\r\n\r\n* Add an if statement to the bottom of `checkWin()`\r\n* For the condition of your if statement, check if `player_y` is greater than 350 (or use the bottom of screen value you decided on in the last level)\r\n* In each of your new conditionals, add a `console.log` that reports which player won\r\n* Test your program to make sure that it reports a winner when one of the emojis makes it to the bottom of the screen",
+    "embed": "true",
+    "markdown_instructions": "# Emoji Race!\r\n\r\nThis is an example of a race game that you'll build by the end of this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get their emoji to the bottom of the screen first wins.\r\n\r\n# Do This\r\n\r\nTurn to a classmate and make a list of the following information.\r\n\r\n* What components of the board does this program use?\r\n* What events is this program responding to?\r\n* What functions might you create to make this program work?",
     "instructions_important": "false",
     "submittable": "false",
+    "start_blocks": "onEvent(\"play\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonEvent(\"replay\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  movePlayer(\"red\");\r\n  checkWin(\"red\");\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  movePlayer(\"blue\");\r\n  checkWin(\"blue\");\r\n});\r\n\r\nfunction startGame() {\r\n  setProperty(\"blue\", \"y\", 1);\r\n  setProperty(\"red\", \"y\", 1);\r\n  setScreen(\"game\");\r\n}\r\n\r\nfunction movePlayer(player) {\r\n  var player_y = getProperty(player, \"y\");\r\n  setProperty(player, \"y\", player_y + 10);\r\n}\r\n\r\nfunction checkWin(player) {\r\n  var player_y = getProperty(player, \"y\");\r\n  if (player_y > 350) {\r\n    setProperty(\"winner\", \"text\", player);\r\n    setScreen(\"win\");\r\n    if (player == \"red\") {\r\n      buzzer.frequency(900, 1000);\r\n    } else {\r\n      buzzer.frequency(200, 1000);\r\n    }\r\n  }\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -205,7 +206,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "CSD U6 tugowar template",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -217,12 +217,14 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "hide_view_data_button": "true",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"start\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 52px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 70px; position: absolute; left: -4.44089e-16px; top: 25px; text-align: center;\" id=\"title\">Emoji Race</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 270px; height: 140px; position: absolute; left: 25px; top: 150px;\" id=\"instructions\">Click your button as fast as you can to get your emoji to the bottom&nbsp;first. The left player controls the red emoji, right controls the blue.</label><button id=\"play\" style=\"padding: 0px; margin: 0px; height: 110px; width: 270px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 315px;\">Play!</button></div><div class=\"screen\" tabindex=\"1\" id=\"game\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"red\" style=\"height: 100px; width: 100px; position: absolute; left: 40px; top: 0px; margin: 0px;\" data-icon-color=\"red\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"blue\" style=\"height: 100px; width: 100px; position: absolute; left: 180px; top: 0px; margin: 0px;\" data-icon-color=\"blue\"></div><div class=\"screen\" tabindex=\"1\" id=\"win\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-smile-o\" id=\"winner_image\" style=\"height: 200px; width: 200px; position: absolute; left: 60px; top: 0px; margin: 0px;\" data-icon-color=\"black\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 35px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 280px; height: 75px; position: absolute; left: 20px; top: 280px; text-align: center;\" id=\"win_text\">wins!</label><button id=\"replay\" style=\"padding: 0px; margin: 0px; height: 70px; width: 270px; font-size: 20px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 355px;\">Play Again!</button><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 49px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 270px; height: 60px; position: absolute; left: 25px; top: 215px; text-align: center;\" id=\"winner\">winner</label></div></div>",
+    "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
+    "display_name": "Sample Program",
     "contained_level_names": null,
     "encrypted_examples": [
 
@@ -230,7 +232,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:56:50 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:44:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 22:41:32 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 19:53:29 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-24 19:56:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 20:09:14 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 20:17:00 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 22:31:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 22:32:35 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 22:45:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 15:25:19 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
