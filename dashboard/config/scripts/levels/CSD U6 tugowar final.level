@@ -224,10 +224,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "display_name": "Make it Your Own",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
