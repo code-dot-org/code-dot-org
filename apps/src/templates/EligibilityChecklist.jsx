@@ -5,7 +5,7 @@ import Button from "./Button";
 import SchoolAutocompleteDropdown from './SchoolAutocompleteDropdown';
 import SchoolNotFound from './SchoolNotFound';
 
-import SetupStep, {SUCCEEDED, WAITING, FAILED, STEP_STATUSES} from '../lib/kits/maker/ui/SetupStep';
+import SetupStep, {SUCCEEDED, FAILED, STEP_STATUSES, UNKNOWN} from '../lib/kits/maker/ui/SetupStep';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ export default class EligibilityChecklist extends Component {
   };
 
   state = {
-    statusYear: WAITING,
+    statusYear: UNKNOWN,
     yearChoice: false, // stores the teaching-year choice until submitted
     displayDiscountAmount: false,
     submission: {
@@ -115,27 +115,27 @@ export default class EligibilityChecklist extends Component {
               <div>
                 <form>
                   <label>
-                    <input type="radio" name="year" value="no" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== WAITING ? true : false}/>
+                    <input type="radio" name="year" value="no" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
                     {i18n.eligibilityYearNo()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="yes1718" onChange={() => {this.handleYearChange(true);}} disabled={this.state.statusYear !== WAITING ? true : false}/>
+                    <input type="radio" name="year" value="yes1718" onChange={() => {this.handleYearChange(true);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
                     {i18n.eligibilityYearYes1718()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="yes1819" onChange={() => {this.handleYearChange(true);}} disabled={this.state.statusYear !== WAITING ? true : false}/>
+                    <input type="radio" name="year" value="yes1819" onChange={() => {this.handleYearChange(true);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
                     {i18n.eligibilityYearYes1819()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="yesAfter" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== WAITING ? true : false}/>
+                    <input type="radio" name="year" value="yesAfter" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
                     {i18n.eligibilityYearAfter()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="unsure" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== WAITING ? true : false}/>
+                    <input type="radio" name="year" value="unsure" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
                     {i18n.eligibilityYearUnknown()}
                   </label>
                   {/* Remove button after choice is made */}
-                  {this.state.statusYear === WAITING &&
+                  {this.state.statusYear === UNKNOWN &&
                     <Button
                       color="orange"
                       text={i18n.submit()}
