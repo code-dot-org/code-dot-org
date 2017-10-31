@@ -36,12 +36,9 @@ nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. 
-
-    - Good example: "Participate in the Hour of Code™ at ACMECorp.com". 
-    - Bad example: "Try Hour of Code by ACME Corp".
-3. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
 
 	*“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 4. No use of "Hour of Code" in app names.
@@ -68,6 +65,28 @@ Get the word out. Host an event. Ask a local school to sign up. Or try the Hour 
 
 Get started at http://hourofcode.com/<%= @country %>
 
+<a id="help-schools"></a>
+### Volunteer at a school:
+
+**Subject line:** Can we help you host and Hour of Code?
+
+Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer. 
+
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way. 
+
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+
+Thanks!
+
+[Your name], [Your organization]
+
+
 <a id="media-pitch"></a>
 ### Invite media to attend your event:
 
@@ -88,7 +107,8 @@ The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a 
 **Where:** [ADDRESS and DIRECTIONS]
 
 I look forward to being in touch.
-[YOUR NAME]
+
+[Your Name]
 
 
 <a id="parents"></a>
@@ -135,6 +155,6 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 
 Sincerely,
 
-[NAME], [TITLE]
+[Your Name], [Title]
 
 <%= view :signup_button %>
