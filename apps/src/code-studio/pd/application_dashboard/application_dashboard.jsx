@@ -37,11 +37,11 @@ const paths = {
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
-    partnerName: PropTypes.string
+    regionalPartnerName: PropTypes.string
   };
 
   render() {
-    const allPartners = "All Regional Partner Applications";
+    const regionalPartnerName = this.props.regionalPartnerName || "All Regional Partner Applications";
     return (
       <Router history={browserHistory} >
         <Route path="/" component={ApplicationDashboardHeader}>
@@ -50,7 +50,7 @@ export default class ApplicationDashboard extends React.Component {
             path="summary"
             breadcrumbs="Summary"
             component={Summary}
-            regionalPartner={this.props.partnerName || allPartners}
+            regionalPartnerName={regionalPartnerName}
           />
           {
             _.flatten(Object.keys(paths).map((path, i) => {
@@ -72,7 +72,7 @@ export default class ApplicationDashboard extends React.Component {
                     path={path}
                     breadcrumbs={paths[path]}
                     component={QuickView}
-                    regionalPartner={this.props.partnerName || allPartners}
+                    regionalPartnerName={regionalPartnerName}
                     applicationType={paths[path]}
                   />
                 )

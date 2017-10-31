@@ -7,7 +7,7 @@ module Pd
 
       @script_data = {
         props: {
-          partnerName: current_user.regional_partners.first.try(:name)
+          regionalPartnerName: current_user.regional_partners.first.try(:name)
         }.to_json
       }
     end

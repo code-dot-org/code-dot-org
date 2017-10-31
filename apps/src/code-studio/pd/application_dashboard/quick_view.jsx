@@ -21,7 +21,7 @@ const styles = {
 export default class QuickView extends React.Component {
   static propTypes = {
     route: PropTypes.shape({
-      regionalPartner: PropTypes.string.isRequired,
+      regionalPartnerName: PropTypes.string.isRequired,
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired
     })
@@ -65,7 +65,7 @@ export default class QuickView extends React.Component {
 
     return (
       <div>
-        <h1>{this.props.route.regionalPartner}</h1>
+        <h1>{this.props.route.regionalPartnerName}</h1>
         <h2>{this.props.route.applicationType}</h2>
         <Button
           style={styles.button}
