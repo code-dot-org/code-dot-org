@@ -173,7 +173,7 @@ describe('The DebugConsole component', () => {
       });
 
       it("the error gets appended to the output", () => {
-        expect(debugOutput().text()).to.contain("< Unknown identifier: a");
+        expect(debugOutput().text()).to.contain("< ReferenceError: a is not defined");
       });
 
     });
