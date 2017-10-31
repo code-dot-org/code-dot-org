@@ -25,7 +25,7 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__property(servername,serverName, dashboard-adhoc-feature-mode-manager.cdn-code.org)}</stringProp>
+        <stringProp name="HTTPSampler.domain">${__property(servername,serverName, staging-studio.code.org)}</stringProp>
         <stringProp name="HTTPSampler.port"></stringProp>
         <stringProp name="HTTPSampler.protocol">${__property(protocol,protocol, https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
@@ -676,7 +676,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get next milestone post URL" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">milestoneURL</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">dialog.callback</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">report.callback</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="Sample.scope">variable</stringProp>
             <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
@@ -684,7 +684,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </JSONPostProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/:script_level_id/:level_id" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${JSONDataOnCourseLevelPage}" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="app" elementType="HTTPArgument">
