@@ -27,7 +27,7 @@ def rename_downloads_from_crowdin_code_to_locale
 
     File.rename(old_path, new_path)
     file = "i18n/locales/#{prop[:locale_s]}/hourofcode/#{prop[:unique_language_s]}.yml"
-    File.write(file, File.read(file).gsub(/#{prop[:crowdin_code_s]}:/, "#{prop[:unique_language_s]}:"))
+    File.write(file, File.read(file).gsub(/'#{prop[:crowdin_code_s]}':/, "#{prop[:unique_language_s]}:"))
     puts "Renaming #{prop[:locale_s]}.yml to #{prop[:unique_language_s]}.yml"
   end
 end
