@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Make It Your Own\r\n\r\nYou just walked through someone else's plan for creating a program, so now it's time to make it your own. What additional features or challenges do you want to create?\r\n\r\n# Do This\r\n\r\nSelect one of the challenges below to add to the game or come up with a challenge of your own.\r\n\r\n* Change the look and layout of the screens\r\n* Use the buzzer or the led to show when one of the buttons has been clicked\r\n* Add a difficulty slider to change how much the bug moves each click\r\n* Use functions to make your code cleaner and more readable",
+    "markdown_instructions": "# Make It Your Own\r\n\r\nYou just walked through someone else's plan for creating a program, so now it's time to make it your own. What additional features or challenges do you want to create?\r\n\r\n# Do This\r\n\r\nSelect one of the challenges below to add to the game or come up with a challenge of your own.\r\n\r\n* Change the look and layout of the screens\r\n* Use the buzzer or the led to show when one of the buttons has been clicked\r\n* Set the \"icon-color\" property of \"winner_image\" to the winning color\r\n* Make the emojis start out sad, change to meh halfway, and end up happy\r\n* Use a variable and conditionals to make sure that players can only move their emojis when the \"game\" screen is showing",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",
@@ -224,11 +224,14 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "display_name": "Make it Your Own",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:56:50 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:44:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:59:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:06:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:09:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:13:56 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 19:44:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 20:00:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-25 21:56:50 +0000\",\"changed\":[\"name\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:44:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 17:59:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:06:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:09:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 18:13:56 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 22:50:12 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
