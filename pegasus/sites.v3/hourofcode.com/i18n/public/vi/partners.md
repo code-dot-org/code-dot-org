@@ -4,13 +4,13 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-Hour of Code được phát triển bởi Hour of Code và máy tính khoa học giáo dục tuần tư vấn và xem xét các ủy ban.
+The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
-[Ủy ban tư vấn](<%= resolve_url('/advisory-committee') %>) bao gồm các đại diện từ K-12, học viện, nonprofits, cho lợi nhuận và tổ chức quốc tế. Ủy ban này sẽ hướng dẫn các chiến lược cho các chiến dịch Hour of Code.
+The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
 
-[Ủy ban xem xét](<%= resolve_url('/review-committee') %>) bao gồm 15 nhà giáo dục trên toàn K-12 lớp ban nhạc mà đánh giá và đề nghị các hoạt động sử dụng phiếu tự đánh giá của Ủy ban tư vấn. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự thành công của Hour of Code và tầm nhìn của nó cung cấp một giới thiệu về khoa học máy tính cho mỗi học sinh.
+Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 <% if @country == 'la' %>
 
@@ -116,37 +116,37 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% end %>
 
-# Đối tác chính và những nhà tài trợ
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Đối tác quảng cáo chính
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# Đối tác quốc tế
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Activity Partners
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure Partners and Tools
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Các đối tác khác
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
