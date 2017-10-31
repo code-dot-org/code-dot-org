@@ -2,6 +2,8 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import Button from "./Button";
+import SchoolAutocompleteDropdown from './SchoolAutocompleteDropdown';
+import SchoolNotFound from './SchoolNotFound';
 
 import SetupStep, {SUCCEEDED, WAITING, FAILED, STEP_STATUSES} from '../lib/kits/maker/ui/SetupStep';
 
@@ -15,6 +17,29 @@ export default class EligibilityChecklist extends Component {
     statusYear: WAITING,
     yearChoice: false, // stores the teaching-year choice until submitted
     displayDiscountAmount: false,
+    submission: {
+      name: '',
+      email: '',
+      role: '',
+      country: 'United States',
+      hoc: '',
+      nces: '',
+      schoolName: '',
+      schoolCity: '',
+      schoolState: '',
+      schoolZip: '',
+      schoolType: '',
+      afterSchool: '',
+      tenHours: '',
+      twentyHours: '',
+      otherCS: false,
+      followUpFrequency: '',
+      followUpMore: '',
+      acceptedPledge: false
+    },
+    errors: {
+      invalidEmail: false
+    }
   };
 
   // Saves the teaching-year choice to trigger next step of actions
@@ -28,7 +53,26 @@ export default class EligibilityChecklist extends Component {
     this.setState({yearChoice : accept});
   }
 
+  handleDropdownChange = (field, event) => {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        [field]: event ? event.value : ''
+      }
+    });
+  }
+
+  handleNotFoundChange = (field, event) => {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        [field]: event.target.value
+      }
+    }, this.checkShowFollowUp);
+  }
+
   render() {
+    const {submission, errors} = this.state;
     return (
       <div>
         <h2>
@@ -108,23 +152,44 @@ export default class EligibilityChecklist extends Component {
         }
         {this.state.statusYear === SUCCEEDED &&
           <div>
-            <div>School Dropdown</div>
-            <Button
-              color="orange"
-              text={i18n.confirmSchool()}
-              onClick={() => {this.setState({displayDiscountAmount: true});}}
-              hidden={this.state.displayDiscountAmount ? true : false}
+            <SchoolAutocompleteDropdown
+              setField={this.handleDropdownChange}
+              value={submission.nces}
+              showErrorMsg={errors.nces}
             />
-          {this.state.displayDiscountAmount  &&
-            <div>
-              TEMP:Discount Amount for your school
+            {this.state.submission.nces !== "-1" && (
               <Button
                 color="orange"
-                text={i18n.getCode()}
-                onClick={() => {}}
+                text={i18n.confirmSchool()}
+                onClick={() => {this.setState({displayDiscountAmount: true});}}
+                hidden={this.state.displayDiscountAmount ? true : false}
               />
-            </div>
-          }
+            )}
+            {this.state.submission.nces === "-1" && (
+              <div>
+                <SchoolNotFound
+                  onChange={this.handleChange}
+                  schoolName={submission.schoolName}
+                  schoolType={submission.schoolType}
+                  schoolCity={submission.schoolCity}
+                  schoolState={submission.schoolState}
+                  schoolZip={submission.schoolZip}
+                  showErrorMsg={errors.school}
+                />
+                <br/>
+                <div>{i18n.eligibilitySchoolUnknown()} <b>{i18n.contactToContinue()}</b></div>
+              </div>
+            )}
+            {this.state.displayDiscountAmount  &&
+              <div>
+                TEMP:Discount Amount for your school
+                <Button
+                  color="orange"
+                  text={i18n.getCode()}
+                  onClick={() => {}}
+                />
+              </div>
+            }
           </div>
         }
       </div>
