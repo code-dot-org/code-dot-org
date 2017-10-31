@@ -3122,8 +3122,8 @@ Studio.hasUnexpectedLocalFunction_ = function () {
   }
 };
 
-function handleExecutionError(err, lineNumber) {
-  outputError(String(err), lineNumber);
+function handleExecutionError(err, lineNumber, outputString) {
+  outputError(outputString, lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
   // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:

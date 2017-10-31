@@ -32,6 +32,14 @@ class School < ActiveRecord::Base
 
   belongs_to :school_district
 
+  # Gets the full address of the school.
+  # @return [String] The full address.
+  def full_address
+    %w(address_line1 address_line2 address_line3 city state zip).map do |col|
+      attributes[col].presence
+    end.compact.join(' ')
+  end
+
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
@@ -64,7 +72,7 @@ class School < ActiveRecord::Base
   # @param options [Hash] The CSV file parsing options.
   # @return [String] The CSV file name.
   def self.write_to_csv(filename, options = CSV_IMPORT_OPTIONS)
-    cols = %w(id school_district_id name address_line1 address_line2 address_line3 city state zip school_type)
+    cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id)
     CSV.open(filename, 'w', options) do |csv|
       csv << cols
       School.order(:id).map do |row|

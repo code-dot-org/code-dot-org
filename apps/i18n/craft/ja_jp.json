@@ -1,6 +1,9 @@
 {
   "absolute": "絶対値",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "で",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "ふやす",
   "blockActionAttack": "攻撃(こうげき)",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "数量",
   "reinfFeedbackMsg": "「プレイを続ける」を押してゲームプレイを続けましょう。",
   "relative": "関係",
+  "runAgent": "Run Agent",
   "score": "スコア",
   "seconds": "秒",
   "selectChooseButton": "選択",
@@ -286,9 +290,5 @@
   "weather": "天気",
   "weatherTypeClear": "クリア",
   "weatherTypeRain": "雨",
-  "weatherTypeThunder": "雷",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "雷"
 }

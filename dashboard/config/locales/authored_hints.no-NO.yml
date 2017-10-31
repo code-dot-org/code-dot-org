@@ -10,46 +10,49 @@
           360 grader. Hva er 360/8? '
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: Det er 360 grader i en sirkel. Hvis kunstneren skal dreie
-          1 grad for hver løkke, må han gå gjennom 360 løkker.
+          1 grad for hver løkke, må han gå gjennom løkken 360 ganger.
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: Det ser ut til at tegneren ikke peker i riktig retning.
+        2-3_Artist_2_new_a: Det ser ut til at kunstneren ikke peker i riktig retning.
           Kan du få snudd ham før du tegner linjen?
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how
-          tall the hat needs to be!
-        2-3_Artist_3new_b: Det ser ut til at tegneren ikke peker i riktig retning.
+        2-3_Artist_3new_a: Hva er 100 - 70? Basert på historiens problem, så høy må
+          hatten være!
+        2-3_Artist_3new_b: Det ser ut til at kunstneren ikke peker i riktig retning.
           Kan du få snudd ham før du tegner linjen?
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Alt vi trenger å gjøre for å fullføre huset er å tegne et
           kvadrat.
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
+        2-3_Artist_6_a: 'For å lage de små vinklene, må du vri *lenger* hver gang
+          enn når du gjorde det med firkanten.   '
         2-3_Artist_6_b: Siden jeg allerede ser mot høyre er det enklest å starte ved
           å bevege meg fremover og deretter snu meg mot venstre for å lage trekanten.
         2-3_Artist_6_c: Hver side av trekanten har samme lengde som hver side av kvadratet,
           100 piksler.
       2-3 Artist 7_authored_hint:
         2-3_Artist_7_a: Den enkleste måten å løse denne oppgaven på er å tegne det
-          første kvadratet slik at tegneren peker nedover før du starter med det andre
-          kvadratet.
+          første kvadratet slik at kunstneren peker nedover før du starter med det
+          andre kvadratet.
       2-3 Artist 8_authored_hint:
         2-3_Artist_8_a: Hvis du deler 200 i to, hvor mange piksler bred må hvert kvadrat
           være?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: Denne firkanten er egentlig bare en kvadrat som er snudd 45
+          grader
       2-3 Artist 9 REPLACEMENT_authored_hint:
         step_size: Hvert steg er 100 piksler bredt og 100 piksler høyt.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Denne firkanten er egentlig bare et kvadrat snudd 45 grader.
-        2-3_Artist_9_b: Ikke glem å snu tegneren 45 grader mot venstre før du begynner
-          å tegne kvadratet ditt.
+        2-3_Artist_9_b: |-
+          Ikke glem å snu kunstneren 45 grader mot venstre før du begynner å tegne kvadratet ditt!
+
+          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Husk, du ønsker at kontrollpanelet skal være 10
           piksler bredere, så ikke glem å legge til 10 uansett hvilket tall du endrer.
-        2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart
-          by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you
-          get too lost, just click \"Start over\" and your code will be reset."
+        2-3_Artist_Debugging_10_b: "Prøving og feiling er helt greit her! \nStart
+          med å endre ett tall av gangen. \nHvilke numre gjør hva?\nHvis du går deg
+          helt vill, klikk på \"Start over\" og koden vil bli tilbakestilt."
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 'Hint: Hvert værhår er 75 piksler langt.'
       2-3 Artist Debugging 3_authored_hint:
@@ -61,55 +64,53 @@
           eller hoppe bakover etter at han har tegnet den første linjen?
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-
-          How many times *should* the shape repeat?
-
-          Where can you change that in the program?
+          Hvor mange ganger gjentok min figur seg?
+          Hvor mange ganger "skal" figuren gjenta seg?
+          Hvor kan du endre det i programmet?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left
-          before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full
-          turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: Kunstneren må dreie 60 grader lenger til venstre
+          før tegningen kan starte!
+        2-3_Artist_Debugging_9_b: Du trenger ikke å legge til en ny blokk for å få
+          full dreining, bare legg 60 grader til "snu til venstre"-blokken som allerede
+          er der!
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: Sidene på hver firkant er på 100 pixler. Det betyr
+          at du må flytte 175 pixler fram før du kan tegne den andre firkanten.
+        2-3_Artist_Functions_1_b: Det er OK å la linjene overlappe hverandre for å
+          tegne brillene.
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and
-          length of sides within the function, but also the angle the artist turns
-          between each side.
+        2-3_Artist_Functions_11_a: Du må i tillegg til å endre antall og lengde av
+          sidene i funksjonen, også endre vinkelen artisten snur seg mellom hver side.
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: Prøv å kjøre koden først for å se hva du trenger
           å legge til.
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Ditt program skal:
+          - Bruke Funksjon
+          - Flytte seg fremover 100 + 75 piksler
+          - Bruke Funksjon
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
-          square to complete this design.
+        2-3_Artist_Functions_4_a: For å ferdigstille designet må artisten  rotere
+          120 grader mellom hver firkant.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: "Husk at koden fra den siste oppgaven var: \n\n![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)"
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: Ditt neste tur/trekk burde gå på **slutten** av
+          koden og ikke inne i løkken.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Før han starter med diamanten må tegneren snu 60
           grader mot venstre for å komme på riktig vei.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will
-          need to turn right 120 degrees to make the sharp corner.
+        2-3_Artist Loops_New_12_b: Etter at artisten har gått fremover 100 piksler,
+          vil han trenge å snu ot høyre 120 grader for å klare å runde hjørnet.
         2-3_Artist Loops_New_12_c: Tegneren trenger bare å snu 60 grader mot høyre
           for å lage et bredt hjørne.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already
-          facing the right direction to start the next one.  \n\nBecause of this,
-          we don't need to add an extra `turn left by` block before we start again."
+        2-3_Artist_Loops_New_13_a: |-
+          På slutten av hver diamant så peker artisten allerede i riktig retning for å starte den neste.
+
+          På grunn av dette trenger vi ikke å legge på en ekstra 'snu deg mot venstre' blokk før vi starter igjen.
         2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n-
           move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen
           do it all again!"
@@ -370,6 +371,8 @@
       AppLab Intro 3 - Change Screen Color_authored_hint: []
       AppLab Intro 4 - Change Screen Color_authored_hint: []
       AppLab Intro 5 - Change Screen Color_authored_hint: []
+      AppLab Intro 6 - Change Screen Color_authored_hint: []
+      AppLab Intro 7 - Change Screen Color_authored_hint: []
       Artist Inspiration_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we
           did anything else.
@@ -3676,6 +3679,9 @@
 
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: This is the third and final hint. It doesn't have anything special.
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
+          calling it twice to solve this puzzle.
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and
           make a decision?
@@ -3737,6 +3743,112 @@
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
+          End up on the orange square to win.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
+          the workspace, and snap it into place beneath the `when run` block.
+        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
+          Agent.
+        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
+          the player with the arrow keys!
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
+          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_b: |-
+          Press "Run"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
+          to move the player to the map!
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
+          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_b: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
+          to move the player to the orange square.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
+          use your arrow keys to walk the player to the compass!
+        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
+          loop and see if you can figure out how to make it shorter!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
+          direction '
+        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
+          plate to let Alex or Steve through to the axe.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
+          you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
+          open the door for the player.
+        MC_HOC_2017_04_Cole_c: |-
+          Press "Run"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          of a `repeat` to complete this puzzle.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          of a `repeat` to complete this puzzle.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
+          *should* it run?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
+          loop!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
+          function does and call it as many times as you need using the small green
+          `clear path` block from the toolbox.
+        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
+          the toolbox to help you solve this puzzle.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run Agent"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: |-
+          Crossing these two pressure plates will open the path for the player.
+
+          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Press "Run"!
+
+          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+      MC_HOC_2017_FP10x10_authored_hint: []
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -5601,6 +5713,22 @@
           Du kan flytte tilbake over veien en andre gang før du går sydover.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      courseA_collector_preLoops1_authored_hint: []
+      courseA_collector_preLoops2_authored_hint: []
+      courseA_collector_preLoops3_authored_hint: []
+      courseA_collector_preLoops4_authored_hint:
+        courseA_collector_preLoops4_a: |
+          To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click "Run"!
+      courseA_collector_preLoops5_authored_hint:
+        courseA_collector_preLoops5_a: You'll need to go two different directions
+          to get even one gem!
+      courseA_collector_preLoops6_authored_hint:
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          blocks to solve this puzzle.
+      courseA_collector_preLoops7_authored_hint:
+        courseA_collector_loops2_b: |-
+          After you have moved to a square with treasure, use this block to pick it up.
+          <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: []
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
@@ -7341,10 +7469,10 @@
           blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Ditt program skal:
+          - Bruke Funksjon
+          - Flytte seg fremover 100 + 75 piksler
+          - Bruke Funksjon
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -7414,6 +7542,9 @@
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
           square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
+        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move
+          **before** you turn, or else your circles will be off by the tiniest little
+          amount!
         courseD_artist_nestedLoops4_a: |-
           To make a circle:
           - Repeat 360 times
@@ -8757,11 +8888,10 @@
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: []
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make
-          your glasses.
+        courseE_artist_functions1_a: Sidene på hver firkant er på 100 pixler. Det
+          betyr at du må flytte 175 pixler fram før du kan tegne den andre firkanten.
+        courseE_artist_functions1_b: Det er OK å la linjene overlappe hverandre for
+          å tegne brillene.
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
           draw the square frames of the glasses.
       courseE_artist_functions10_authored_hint:
@@ -8780,10 +8910,10 @@
           your function under the `when run` block. Otherwise, the code in your function
           will not run.
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Ditt program skal:
+          - Bruke Funksjon
+          - Flytte seg fremover 100 + 75 piksler
+          - Bruke Funksjon
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -8910,7 +9040,22 @@
           Don't forget to turn afterward!
         courseE_artist_ramp8_c: Your loop should have two blocks inside of it, the
           `move forward` and the `turn right by 90 degrees`.
+      courseE_artist_ramp8_2_authored_hint:
+        courseE_artist_ramp8_a: For å tegne en side må du bruke "gå 100 piksler fremover"-blokken
+          og endre 100 til 200.
+        courseE_artist_ramp8_b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move
+          forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
+        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks
+          to see which angle you need!
+        courseD_artist_ramp12_c: To draw each side, you will need to move forward
+          100 pixels, then turn right 120 degrees. How many sides do you need?
+      courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
         courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks
           to see which angle you need!
@@ -9953,12 +10098,13 @@
         courseF_artist_fwp4_c: You will need to call your function three times to
           draw the shapes.
       courseF_artist_fwp5_authored_hint:
-        courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
-          of sides it has.
-        courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
+        courseF_artist_fwp5_d: A `for` loop would really help you out here!
         courseF_artist_fwp5_c: You will need to edit the function a little bit, since
           your previous function turned the artist to the right after each side, and
           this image needs a turn to the left.
+        courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
+          of sides it has.
+        courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
       courseF_artist_fwp6_authored_hint:
         courseF_artist_fwp6_a: It's okay to run the program a few times to figure
           out how the function works with different parameters.
@@ -11770,16 +11916,14 @@
           Remember that the code from the last puzzle was:
 
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: Ditt neste tur/trekk burde gå på **slutten** av
+          koden og ikke inne i løkken.
       grade2_MakeDogTag_BFP_authored_hint: []
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-
-          How many times *should* the shape repeat?
-
-          Where can you change that in the program?
+          Hvor mange ganger gjentok min figur seg?
+          Hvor mange ganger "skal" figuren gjenta seg?
+          Hvor kan du endre det i programmet?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -12128,17 +12272,16 @@
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: Sidene på hver firkant er på 100 pixler. Det betyr
+          at du må flytte 175 pixler fram før du kan tegne den andre firkanten.
+        2-3_Artist_Functions_1_b: Det er OK å la linjene overlappe hverandre for å
+          tegne brillene.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Ditt program skal:
+          - Bruke Funksjon
+          - Flytte seg fremover 100 + 75 piksler
+          - Bruke Funksjon
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
           create a `draw triangle` function and call that multiple times.
@@ -12337,8 +12480,8 @@
           100 piksler", vil jeg tegne en linje automatisk.
         2-3_Artist_1_new_b: Vanskelig å runde hjørnet? Bruk "Snu 90 grader mot høyre"-blokka.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
+        2-3_Artist_6_a: 'For å lage de små vinklene, må du vri *lenger* hver gang
+          enn når du gjorde det med firkanten.   '
         2-3_Artist_6_b: Siden jeg allerede ser mot høyre er det enklest å starte ved
           å bevege meg fremover og deretter snu meg mot venstre for å lage trekanten.
         2-3_Artist_6_c: Hver side av trekanten har samme lengde som hver side av kvadratet,

@@ -412,10 +412,8 @@
       Course 4 Maze 4_callout:
         repeat: Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: |-
-          https://studio.code.org/s/course4/stage/15/puzzle/2
-
-          Clicca su "modifica" per completare questa funzione in modo che possa usare il parametro height.
+        Course_4 _Play_Lab_Params_2_1: Clicca su "modifica" per completare questa
+          funzione in modo che possa usare il parametro height.
       Course 4 Play Lab Params 3_callout:
         edit_function: Clicca qui per modificare la tua funzione.
       Course 4 Play Lab Params 5_callout: []
@@ -426,19 +424,17 @@
         arrows_move_actor: Usa le frecce per muovere il personaggio
       Course 4 Play Lab Vars 6_callout: []
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: |-
-          https://studio.code.org/s/course4/stage/7/puzzle/8
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        Course_4_Play_Lab_Vars_9_1: I blocchi della cassetta degli attrezzi ora sono
+          stati organizzati in categorie. Clicca su queste parole per scoprire dove
+          sono finiti!
       Course 4 Play Labs For Loops 5_callout:
         Course_4_Play_Labs_For_Loops_5: Aiuto! Il mio programma è esploso! Puoi metterlo
           di nuovo insieme per risolvere l'esercizio?
       Course 4 Playlab For Loop Freeplay_callout: []
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: |-
-          https://studio.code.org/s/course4/stage/11/puzzle/4
-
-          Hai notato che la variabile `counter` ha nomi diversi per ogni personaggio? In questo modo ogni ciclo può lavorare con il proprio contatore.
+        Course_4_Playlab_For_Loops_4b_1: Hai notato che la variabile `counter` ha
+          nomi diversi per ogni personaggio? In questo modo ogni ciclo può lavorare
+          con il proprio contatore.
         Course_4_Playlab_For_Loops_4b_2: In questo esercizio puoi solo cambiare il
           "passo" dei cicli `ripeti con counter`.
       Course 4 Playlab For Loops 5b_callout: []
@@ -486,6 +482,9 @@
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: This little instruction tells the computer to run the
+          BIG chunk of code with the same name in the workspace.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
           sono stati organizzati in categorie. Clicca su queste parole per scoprire
@@ -525,11 +524,31 @@
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Clicca su "Esegui" per iniziare a muoverti.
-      MC_HOC_2017_01_Cole_callout: []
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Use the arrow keys or click here to start moving the
+          player.
       MC_HOC_2017_01_Kiki_callout: []
+      MC_HOC_2017_02_Cole_callout: []
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for
+          the Agent to help get you through the levels.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace
+          and add code that you want to run over and over.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to
           repeat it over and over again!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit
+          them!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -547,10 +566,8 @@
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: |-
-          https://studio.code.org/s/course4/stage/12/puzzle/3
-
-          Clicca qui per creare un nuova funzione che costruisca un quadrato.
+        NEW_Course_4_Artist_Functions_3_1: Clicca qui per creare un nuova funzione
+          che costruisca un quadrato.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Clicca qui per modificare la tua funzione.
         function_editor_draw_square: Questa è la definizione della tua funzione. Questi
@@ -684,10 +701,19 @@
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
+      SG Add Subgoals practice_callout: []
+      SG U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
+      SG U3L2 Using Simple Commands part 1_callout: []
       SG U3L2 Using Simple Commands_callout: []
-      SG U3L2_Turtle3by3Grid_callout: []
+      SG U3L2_Add-subgoals_callout: []
+      SG U3L2_Turtle3by3Grid_callout:
+        pen_functions: penUp and penDown are here now if you want to use them.
+        goals_tab: drag goals out from here
       SG U3L2_TurtleSquare_right_callout: []
-      SGU3L2A Introducing Subgoals_callout: []
+      SGU3L2A Introducing Subgoals_callout:
+        goals_palette_show: Here is a list of subgoals
+        goals_workspace: Example of code with subgoals in it
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Modifica questa funzione per impedire a Sam di andare
           via dal lato giusto
@@ -718,6 +744,8 @@
       U3 Variables make a square_callout: []
       U3L05_3x3GridEfficiencyChallenge_callout: []
       U3L05_draw3x3GridEfficiently_callout: []
+      U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
       U3L2 Using Simple Commands (no tooltips)_callout: []
       U3L2 Using Simple Commands_callout: []
       U3L2_Turtle3by3Grid_callout: []
@@ -817,6 +845,23 @@
         gradek_adventurer_loops2_1: Questo numero dice quanti di questi blocchi puoi
           usare in questo puzzle.
       courseA_collector_loops3_predict1_callout: []
+      courseA_collector_preLoops1_callout:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
+      courseA_collector_preLoops2_callout:
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli
+          strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+      courseA_collector_preLoops3_callout:
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli
+          strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+      courseA_collector_preLoops4_callout:
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli
+          strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+      courseA_collector_preLoops5_callout:
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli
+          strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+      courseA_collector_preLoops6_callout:
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli
+          strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
       courseA_forVideoTest_artist_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clicca la lampadina quando hai bisogno di un indizio!
@@ -824,8 +869,8 @@
         courseA_maze_seqA_callout1: Usa il bottone passo per andare passo dopo passo
           nel programma. Ti aiuterà a trovare il bug!
       courseA_maze_seq4_callout:
-        courseA_maze_seq4_1: Questi blocchi sono fatti di pietra. Puoi muoverli, ma
-          non puoi cancellarli!
+        made_of_stone: These blocks are made of stone.  You can move them, but you
+          can't delete them!
       courseA_maze_seq4a_callout: []
       courseA_playLab_events2_callout: []
       courseA_playLab_events3_callout: []
@@ -899,8 +944,7 @@
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
-        courseC_maze_programming3_callout2: Usa il bottone passo per andare passo
-          dopo passo nel programma. Ti aiuterà a trovare il bug!
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -975,8 +1019,7 @@
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
-        courseC_maze_programming3_callout2: Usa il bottone passo per andare passo
-          dopo passo nel programma. Ti aiuterà a trovare il bug!
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1057,7 +1100,12 @@
         courseE_artist_ramp8_1: Puoi cambiare questo numero.
         courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
           il tuo codice.
+      courseE_artist_ramp8_2_callout:
+        courseE_artist_ramp8_1: Puoi cambiare questo numero.
+        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
+          il tuo codice.
       courseE_artist_ramp9_callout: []
+      courseE_artist_ramp9_2_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un singolo pezzo
@@ -1212,7 +1260,8 @@
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
           into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: []
-      courseF_bee_for4_callout: []
+      courseF_bee_for4_callout:
+        courseF_bee_for4_1: You will find the `for` loop in here!
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
@@ -1231,6 +1280,8 @@
       courseF_bee_functions_challenge2_callout: []
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp2_callout:
+        courseF_bee_fwp2_a: The block that calls your function lives in here.
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty
           spaces as well as clouds.
@@ -1286,7 +1337,8 @@
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       courseF_playlab_variables6c_callout:
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
-      courseF_playlab_variables7c_callout: []
+      courseF_playlab_variables7c_callout:
+        courseF_playlab_variables7c_1: Find the `ask` block here!
       courseF_playlab_variables8c_callout: []
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
@@ -1554,15 +1606,13 @@
       grade5_playlab_variables6_callout: []
       grade5_playlab_variables6ask_callout: []
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: |-
-          https://studio.code.org/s/course4/stage/7/puzzle/8
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        Course_4_Play_Lab_Vars_9_1: I blocchi della cassetta degli attrezzi ora sono
+          stati organizzati in categorie. Clicca su queste parole per scoprire dove
+          sono finiti!
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: |-
-          https://studio.code.org/s/course4/stage/7/puzzle/8
-
-          I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        Course_4_Play_Lab_Vars_9_1: I blocchi della cassetta degli attrezzi ora sono
+          stati organizzati in categorie. Clicca su queste parole per scoprire dove
+          sono finiti!
       gradek_adventurer_loops2_callout:
         gradek_adventurer_loops2_1: Questo numero dice quanti di questi blocchi puoi
           usare in questo puzzle.

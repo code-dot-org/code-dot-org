@@ -686,6 +686,10 @@
   volunteer_engineer_submission_type_task_mentor: "أنا ابحث عن مؤطر لمساعدتي في إعدادي
     للبرمجة مع طلابي"
   petition_age: "العمر"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "اعرف المزيد"
   dashboard_landing_title: "الصفحة الرئيسية المعلم"
   dashboard_landing_welcome: "مرحبا بكم في لوحة المعلم الجديدة والمحسنة."
   dashboard_landing_video: "شاهد هذا الفيديو"

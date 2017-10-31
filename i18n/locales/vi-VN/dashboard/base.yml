@@ -122,6 +122,7 @@ vi:
     user_type_student: "học sinh"
     field_is_required: "là bắt buộc"
     accept_terms: "Bạn phải đồng ý để tạo một tài khoản"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -753,6 +754,10 @@ vi:
     save: "Lưu"
     delete: "Xóa"
     import: "Import"
+    share_link_import_bad_link_header: "Share link not recognized"
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_error_header: "Something went wrong."
+    share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Trở về khóa học"
     my_projects: "chương trình của tôi"
     project_gallery: "chương trình"

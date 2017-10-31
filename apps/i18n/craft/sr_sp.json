@@ -1,6 +1,9 @@
 {
   "absolute": "апсолутна вредност",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "at",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "add",
   "blockActionAttack": "нападни",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "количина",
   "reinfFeedbackMsg": "Притисни \"Настави игру\" да се вратиш на играње игре.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Резултат",
   "seconds": "секунде",
   "selectChooseButton": "Изабери",
@@ -286,9 +290,5 @@
   "weather": "време",
   "weatherTypeClear": "ведро",
   "weatherTypeRain": "киша",
-  "weatherTypeThunder": "грмљавина",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "грмљавина"
 }

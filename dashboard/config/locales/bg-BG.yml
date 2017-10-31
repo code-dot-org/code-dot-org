@@ -158,6 +158,7 @@
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
+    error: An error occurred.
   school_info:
     title: "Информацшя за училището (по избор)"
     school_country: "Училищен район"
@@ -238,7 +239,7 @@
       picture: Picture Password
       word: Secret Words
       email: "Имейл"
-      google_classroom: Google Classroom
+      google_classroom: Google класна стая
       clever: Clever
   follower:
     invite_sent: "Поканата изпратена"
@@ -298,7 +299,7 @@
         gamelab: "Направи Game Lab проект"
         weblab: Make a Web Lab (beta) project
       home: "Начало"
-      my_dashboard: My Dashboard
+      my_dashboard: "Моето табло"
       courses: "Курсове"
       course_catalog: Course Catalog
       project_gallery: "Проекти"
@@ -1003,6 +1004,13 @@
     save: "Запазване"
     delete: "Изтриване"
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: "Връщане към курса"
     my_projects: "Моите проекти"
     project_gallery: "Проекти"
