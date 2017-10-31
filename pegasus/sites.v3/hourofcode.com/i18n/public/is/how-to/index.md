@@ -12,8 +12,7 @@ nav: how_to_nav
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Horfðu á þetta kennslumyndband <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
@@ -30,11 +29,11 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Komdu "Klukkutími af forritun" á framfæri
+## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4) Skipulegðu tækniþörf þína - tölvur er valkostur en ekki nauðsynlegar
+## 4) Plan your technology needs - computers are optional
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
@@ -64,17 +63,17 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
   * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * As a class, list things that use code in everyday life.
-  * Fáðu tillögur um hvernig hægt er að vekja áhuga stúlkna á tölvuvísindum [hér](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Forritun!
+## 6) Code!
 
 **Direct students to the activity**
 
-  * Skrifaðu krækjuna á æfinguna upp á töflu. Þú finnur krækjuna á [upplýsingunum fyrir valda æfingu](<%= resolve_url('/learn') %>) undir fjölda þátttakenda.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -84,9 +83,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **When your students come across difficulties it's okay to respond:**
 
-  * "Ég veit það ekki. Reynum að leysa þetta saman."
-  * "Tæknin virkar ekki alltaf eins og við viljum"
-  * "Að læra að forrita er líkt og að læra nýtt tungumál; þú verður ekki fullnuma strax."
+  * “I don’t know. Let’s figure this out together.”
+  * “Technology doesn’t always work out the way we want.”
+  * “Learning to program is like learning a new language; you won’t be fluent right away.”
 
 **[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
@@ -105,7 +104,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   &nbsp;
 </p>
 
-## 7) Fagna
+## 7) Celebrate
 
 [col-33]
 
@@ -113,10 +112,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-  * [Prenta skírteini](<%= resolve_url('https://code.org/certificates') %>) fyrir nemendur.
+  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Deildu myndum og myndböndum af þínum "Klukkutíma af forritun" á samfélagsmiðlum. Notaðu #HourOfCode og @codeorg svo að við getum fylgst með góðu gengi ykkar líka!
+  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
 
@@ -128,7 +127,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   &nbsp;
 </p>
 
-## Aðrar "Klukkutími af forritun" bjargir fyrir kennara:
+## Other Hour of Code resources for educators:
 
   * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
