@@ -474,7 +474,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} მასწავლებელს სჭირდება მოხალისე. <br>%{num_volunteers} მოხალისე უკვე დარეგისტრირდა."
   volunteer_engineer_submission_intro_background: "კოდის ერთი საათი არის გლობალური მოძრაობა, რომლის მიზანია ინფორმატიკისა და პროგრამირების გავრცელება 180+ ქვეყენაში ათობით მილიონი მოსწავლისთვის. თქვენც ჩაერთეთ ინფორმატიკის საგანმანათლებლო კვირეულში, რომელიც დეკემბრის 7-13 რიცხვებში ტარდება."
   volunteer_engineer_submission_intro_recruit: 'მასწავლებლებს გაუხარდებოდათ, რომ ჰყავდეთ <span style="font-family: ''Gotham 7r'', sans-serif;">ვინმე, ვისაც უყვარს პროგრამირება და ინფორმატიკა</span> და შეუძლია დაეხმაროს მათ კლასსში, ან ვინმე, <span style="font-family: ''Gotham 7r'', sans-serif;"> ვინც შეძლებდა, შთაეგონებინა</span> მოსწავლეები, მოეყოლა ინფორმატიკის უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო-ჩატით).'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "შეისწავლეთ მეტი ჩვენი <a href=\"%{volunteer_guide}\">სამოხალისეო პროგრამის შესახებ აქ</a>."
   volunteer_engineer_submission_intro_signup: "შეავსეთ შემდეგი ველები, თუ ხართ კომპიუტერული მეცნიერების სტუდენტი ან დეველოპერი. ველები, რომლებიც მონიშნულია ასე <span class=\"form-required-field\">*</span> სავალდებულოა."
   volunteer_engineer_submission_intro_links: "მასწავლებელი ხართ და მოხალისეებს ეძებთ? იპოვეთ ადგილობრივი მოხალისე <a href=\"%{volunteer_local}\">მოხალისეთა რუკაზე</a>."
   volunteer_engineer_submission_update_information: "თქვენი ინფორმაციის განახლება"
@@ -534,6 +534,8 @@
   volunteer_engineer_submission_type_task_remote: "მინდა, რომ სკაიპით ჩაგვერთოთ კლასში და მოსწავლეებს შთააგონოთ პროგრამირების სწავლა"
   volunteer_engineer_submission_type_task_mentor: "ვეძებ მენტორს, რომელიც მომაზადებს კლასში პროგრმირების სწავლისთვის"
   petition_age: "ასაკი"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "გაიგეთ მეტი"
   dashboard_landing_title: "მასწავლებლის მთავარი გვერდი"
   dashboard_landing_welcome: "მოგესალმებით მასწავლებლის განახლებულ სამართავ პანელზე."
   dashboard_landing_video: "უყურეთ ამ ვიდეოს"
@@ -820,7 +822,7 @@
   carousel_heading_ide: "მასწავლებლებს შორის პოპულარული პლატფორმები"
   carousel_heading_desktop: "ისწავლეთ კომპიუტერში კოდის წერა"
   carousel_heading_mobtabelem: "ტელეფონებისთვის და ტაბლეტებისთვის"
-  carousel_heading_prereader: "For pre-readers"
+  carousel_heading_prereader: "კითხვამდელი ასაკებისთვის"
   carousel_heading_beyondblocks: "გასცდით ბლოკებს - შეისწავლეთ პროგრამირების ენა"
   carousel_heading_nointernet: "ნელი ინტერნეტი გაქვთ? დააყენეთ ეს აპლიკაციები თქვენს კომპიუტერზე"
   educator_notes: "მასწავლებლის ჩანაწერები"
@@ -829,7 +831,7 @@
   how_to_teach_hoc: "როგორ გავუძღვეთ კოდის ერთ საათს"
   more_resources_educators: "მეტი რესურსი მასწავლებლებისთვის"
   beyond_submission: "გინდათ კოდის ერთი საათის შემდგომი ტუტორიალის გამოგზავნა? ნახეთ კრიტერიუმები და გაგზავნის ფორმა."
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
+  third_party_submission: "გსურთ მონაწილეობა მიიღოთ აქ ჩამოთვლილ კურსებში? <a href=\"%{submission_url}\">იხილეთ კრიტერიუმები და შესავსები ფორმა.</a>"
   participants: "მონაწილეები"
   teachers_notes: "მასწავლებლის ჩანაწერები"
   teachers_notes_hoc: 'მასწავლებლებო: გაეცანით მნიშვნელოვან მინიშნებებს აქ'
@@ -922,8 +924,8 @@
   csp1_name: 'სექცია 1: ინტერნეტი'
   csp2_name: 'სექცია 2: ციფრული ინფორმაცია'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'თავი 3: შესავალი პროგრამირებაში (ვერსია A)'
+  csp3-research-mxghyt_name: 'თავი 3: შესავალი პროგრამირებაში (ქვემიზნები)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'

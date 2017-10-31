@@ -1,6 +1,9 @@
 {
   "absolute": "absoluut",
+  "agentGenericFailureMessage": "Blijf coderen! onthou om de agent te gebruiken voor hulp.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "bij",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "toevoegen",
   "blockActionAttack": "aanval",
   "blockActionClone": "blokken klonen",
@@ -74,7 +77,7 @@
   "blockTypeCobblestone": "keien",
   "blockTypeDirt": "aarde",
   "blockTypeDirtCoarse": "ruwe aarde",
-  "blockTypeDoorIron": "iron door",
+  "blockTypeDoorIron": "ijzeren deur",
   "blockTypeEmpty": "leeg",
   "blockTypeFarmlandWet": "akkerland",
   "blockTypeGlass": "glas",
@@ -231,6 +234,7 @@
   "quantity": "hoeveelheid",
   "reinfFeedbackMsg": "Druk op \"Verder spelen\" om verder te gaan met je spel.",
   "relative": "relatief",
+  "runAgent": "Run Agent",
   "score": "Punt maken",
   "seconds": "seconde(n)",
   "selectChooseButton": "Selecteren",
@@ -286,9 +290,5 @@
   "weather": "weer",
   "weatherTypeClear": "wissen",
   "weatherTypeRain": "regen",
-  "weatherTypeThunder": "onweer",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "onweer"
 }

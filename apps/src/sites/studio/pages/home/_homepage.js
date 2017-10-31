@@ -57,6 +57,7 @@ function showHomepage() {
   let announcementLink =
     "https://hourofcode.com/#join";
   let announcementId = "hoc_is_coming";
+  let announcementType = "";
 
   // Optional override of teacher announcement.
   if (isEnglish &&
@@ -71,6 +72,7 @@ function showHomepage() {
     announcementDescription = announcementOverride.teacher_announce_description;
     announcementLink = announcementOverride.teacher_announce_url;
     announcementId = announcementOverride.teacher_announce_id;
+    announcementType = announcementOverride.teacher_announce_type;
   }
 
   ReactDOM.render (
@@ -142,6 +144,7 @@ function showHomepage() {
                 description: announcementDescription,
                 link: announcementLink,
                 image: "",
+                type: announcementType,
                 id: announcementId
               }
             ]}

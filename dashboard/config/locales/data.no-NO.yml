@@ -712,7 +712,7 @@
         CSF_my_robotic_friends: Mine robotliknende venner
         CSF_Power_of_Words: Ordenes kraft
         CSF_Super_Digital_Citizen: Superdigital innbygger
-        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_stevie_big_project: Stevie og det Store Prosjektet
         CSF_unspotted_bugs: Uoppdagede feil
         CSF_zuck_loops_short: Gjenta-løkker
         frozen_intro: Kodetimen Intro
@@ -725,9 +725,12 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'Hvordan datamaskiner fungerer: Hva gjør en datamaskin
+          til en datamaskin?'
         csd_concept_binary_data: 'Hvordan datamaskiner fungerer: Binær og data'
         csd_concept_search: Hvordan søk fungerer
+        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
+          To Change Our Lives
         csd_gamelab_animation_tab: Animasjons-lab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -829,11 +832,14 @@
         mc_2016_events: Minecraft Kodetimen - Hendelser
         mc_2016_spawn: Minecraft Kodetimen - Sett ut
         mc_2016_congrats: Minecraft Kodetimen - Gratulerer!
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_welcome: App Lab Kodetimen - Velkommen
         applab_hoc_setproperty: App Lab Hour of Code - setProperty
         applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
+        applab_hoc_designmode: AppLab Kodetimen - Utformingsmodus
+        applab_hoc_share: AppLab Kodetimen - Del
+        mc_2017_agent_intro: Minecraft Kodetimen - Agenten
+        mc_2017_repeat: Minecraft Kodetimen - Løkker
+        mc_2017_functions: Minecraft Kodetimen - Funksjoner
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

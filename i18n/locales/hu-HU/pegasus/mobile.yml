@@ -548,6 +548,8 @@
   volunteer_engineer_submission_type_task_remote: "Szeretném, ha Skype-on mondanál pár inspiráló mondatot a diákjaimnak a tanórán"
   volunteer_engineer_submission_type_task_mentor: "Mentort keresek, aki segítene felkészülni, hogy a diákjaimat kódolásra taníthassam"
   petition_age: "Kor"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Tudj meg többet"
   dashboard_landing_title: "Tanári kezdőlap"
   dashboard_landing_welcome: "Üdvözlünk az új és továbbfejlesztett tanári felületen."
   dashboard_landing_video: "Nézd meg ezt a videót"

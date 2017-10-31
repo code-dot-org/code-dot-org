@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Anthony Bau.
  * MIT License.
  *
- * Date: 2017-10-09
+ * Date: 2017-10-30
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -6670,7 +6670,7 @@ Editor.prototype.computeMainCanvasWidth = function() {
 };
 
 Editor.prototype.redrawMain = function(opts) {
-  var binding, el, element, endWidth, i, j, k, l, layoutResult, len, len1, len2, options, record, rect, ref1, ref2, ref3, ref4, ref5, startWidth;
+  var binding, el, element, endWidth, i, j, k, l, layoutResult, len, len1, len2, options, record, rect, ref1, ref2, ref3, ref4, ref5, ref6, startWidth;
   if (opts == null) {
     opts = {};
   }
@@ -6721,6 +6721,9 @@ Editor.prototype.redrawMain = function(opts) {
     }
     if (this.session.changeEventVersion !== this.session.tree.version) {
       this.session.changeEventVersion = this.session.tree.version;
+      if ((ref6 = this.session) != null ? ref6.currentlyUsingBlocks : void 0) {
+        this.setAceValue(this.getValue());
+      }
       this.fireEvent('change', []);
     }
     this.session.view.cleanupDraw();
@@ -12352,8 +12355,9 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         } else {
           return [node.type, 'mostly-block'];
         }
-      }
-      if (node.type.match(/Expression$/) != null) {
+      } else if (node.type === 'FunctionExpression') {
+        return [node.type, 'mostly-value', 'function-value'];
+      } else if (node.type.match(/Expression$/) != null) {
         return [node.type, 'mostly-value'];
       } else if (node.type.match(/Declaration$/) != null) {
         return [node.type, 'block-only'];
@@ -12662,7 +12666,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
   };
 
   JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-    var argCount, argument, block, buttons, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, len9, m, match, maxArgs, minArgs, n, nodeBoundsStart, o, p, param, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, results9, s, showButtons, space, statement, string, switchCase;
+    var argCount, argument, block, buttons, classes, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, len9, m, match, maxArgs, minArgs, n, noFunctionDrop, nodeBoundsStart, o, p, param, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, results9, s, showButtons, space, statement, string, switchCase;
     switch (node.type) {
       case 'Program':
         ref = node.body;
@@ -12891,7 +12895,9 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         ref9 = node["arguments"];
         for (i = n = 0, len4 = ref9.length; n < len4; i = ++n) {
           argument = ref9[i];
-          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref10 = known.fn) != null ? (ref11 = ref10.dropdown) != null ? ref11[i] : void 0 : void 0 : void 0);
+          noFunctionDrop = this.opts.lockFunctionDropIntoKnownParams && (known != null ? known.fn : void 0) && !(known != null ? (ref10 = known.fn) != null ? (ref11 = ref10.allowFunctionDrop) != null ? ref11[i] : void 0 : void 0 : void 0);
+          classes = noFunctionDrop ? ['no-function-drop'] : null;
+          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, classes, known != null ? (ref12 = known.fn) != null ? (ref13 = ref12.dropdown) != null ? ref13[i] : void 0 : void 0 : void 0);
         }
         if (!known && argCount === 0 && !this.opts.lockZeroParamFunctions) {
           position = {
@@ -12936,10 +12942,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.argument, depth + 1);
       case 'VariableDeclaration':
         this.jsBlock(node, depth, bounds);
-        ref12 = node.declarations;
+        ref14 = node.declarations;
         results5 = [];
-        for (o = 0, len5 = ref12.length; o < len5; o++) {
-          declaration = ref12[o];
+        for (o = 0, len5 = ref14.length; o < len5; o++) {
+          declaration = ref14[o];
           results5.push(this.mark(indentDepth, declaration, depth + 1));
         }
         return results5;
@@ -12961,10 +12967,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.test, depth + 1);
       case 'ObjectExpression':
         this.jsBlock(node, depth, bounds);
-        ref13 = node.properties;
+        ref15 = node.properties;
         results6 = [];
-        for (p = 0, len6 = ref13.length; p < len6; p++) {
-          property = ref13[p];
+        for (p = 0, len6 = ref15.length; p < len6; p++) {
+          property = ref15[p];
           this.jsSocketAndMark(indentDepth, property.key, depth + 1);
           results6.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
         }
@@ -12973,10 +12979,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'SwitchStatement':
         this.jsBlock(node, depth, bounds);
         this.jsSocketAndMark(indentDepth, node.discriminant, depth + 1);
-        ref14 = node.cases;
+        ref16 = node.cases;
         results7 = [];
-        for (q = 0, len7 = ref14.length; q < len7; q++) {
-          switchCase = ref14[q];
+        for (q = 0, len7 = ref16.length; q < len7; q++) {
+          switchCase = ref16[q];
           results7.push(this.mark(indentDepth, switchCase, depth + 1, null));
         }
         return results7;
@@ -12994,10 +13000,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             depth: depth + 1,
             prefix: prefix
           });
-          ref15 = node.consequent;
+          ref17 = node.consequent;
           results8 = [];
-          for (r = 0, len8 = ref15.length; r < len8; r++) {
-            statement = ref15[r];
+          for (r = 0, len8 = ref17.length; r < len8; r++) {
+            statement = ref17[r];
             results8.push(this.mark(indentDepth, statement, depth + 2));
           }
           return results8;
@@ -13027,10 +13033,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           buttons.subtractButton = '\u2190';
         }
         this.jsBlock(node, depth, bounds, buttons);
-        ref16 = node.elements;
+        ref18 = node.elements;
         results9 = [];
-        for (s = 0, len9 = ref16.length; s < len9; s++) {
-          element = ref16[s];
+        for (s = 0, len9 = ref18.length; s < len9; s++) {
+          element = ref18[s];
           if (element != null) {
             results9.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
           } else {
@@ -13109,6 +13115,8 @@ JavaScriptParser.drop = function(block, context, pred) {
         return helper.FORBID;
       }
     } else if (indexOf.call(context.classes, 'no-drop') >= 0) {
+      return helper.FORBID;
+    } else if (indexOf.call(context.classes, 'no-function-drop') >= 0 && indexOf.call(block.classes, 'function-value') >= 0) {
       return helper.FORBID;
     } else if (indexOf.call(context.classes, 'property-access') >= 0) {
       if (indexOf.call(block.classes, 'works-as-method-call') >= 0) {

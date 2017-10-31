@@ -3988,6 +3988,9 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: |-
+        Use the `build bridge` function twice to
+        make a path to the torch.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4412,37 +4415,49 @@
         Click "Run" to move the player to the orange
         square inside of the house.
       MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+        You need to collect all the tools on this
+        journey. Move around using the **arrow keys**, and get to the chest on the
+        path to win
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
+      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
+        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
+        the chest. "
       MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
+        can get to the map. "
       MC_HOC_2017_02_Kiki_instruction: |-
         Get the Agent to the pressure plate, then
         get the player to the orange square.
+      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_04_instruction: |-
         Change the loop from the last puzzle to help the
         Agent make a path over the wider part of this river.
+      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_05_instruction: |-
         Use a function to help the Agent get to the pressure
         plate.
       MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
+      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
       MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
       MC_HOC_2017_06_Cole_instruction: |-
+        Fix this code to get the Agent to build a
+        bridge across this river.
+      MC_HOC_2017_06_Josh_instruction: |-
         Fix this code to help the Agent build a bridge
         across this river.
       MC_HOC_2017_06_Kiki_instruction: |-
         Fix this code to help the Agent build a bridge
         across this river.
       MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
+        Destroy the ice and get {currentPlayerName}
+        to the Minecart.
       MC_HOC_2017_07_Kiki_instruction: |-
         Use a function to clear the path to the orange
         square.
@@ -4451,6 +4466,12 @@
         Change the provided function to work for
         this biome.
       MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
+      MC_HOC_2017_08_RY_instruction: |-
+        Use the functions to find a way across the
+        lava.
+      MC_HOC_2017_08_Will_instruction: |-
+        Use the functions to find a way across the
+        lava.
       MC_HOC_2017_09_Cole_instruction: |-
         Program the Agent to clear the player's
         path.
@@ -4466,6 +4487,21 @@
       MC_HOC_2017_10_Kiki_instruction: |-
         Create a function to help you finish this
         minecart.
+      MC_HOC_2017_10_RETRY_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_RYAN_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_RYAN2_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
+      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
+        collect all of the diamonds in this level? "
+      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
       MC_HOC_2017_Ryan_03_instruction: |-
         Now use loops to help The Agent build a bridge
         over the river by placing blocks in the water.
@@ -5236,6 +5272,10 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG Add Subgoals practice_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -5382,9 +5422,19 @@
       SG U3L08 comments_instruction: |-
         Use the randomNumber() blocks to test the functions
         you designed with random input. (Click to see full instructions)
+      SG U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to
+        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       SG U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above and to
         the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Add-subgoals_instruction: |-
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L2_Turtle3by3Grid_instruction: |-
         Draw a 3x3 grid to the front and right
         of the turtle as efficiently as possible. The turtle should end at its original
@@ -6466,6 +6516,10 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -6496,6 +6550,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -7952,6 +8009,31 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_preLoops1_instruction: |-
+        This is Laurel the Adventurer! \r
+        \r
+        Press
+        "Run" to see her walk up to the treasure and grab it.
+      courseA_collector_preLoops2_instruction: |-
+        Great!  Now you get to add code yourself!  \r
+        \r
+        Snap
+        a `get treasure` block to the bottom of the program and click "Run".
+      courseA_collector_preLoops3_instruction: |-
+        Snap two `E -->` blocks and one `get
+        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4_instruction: |-
+        Can you figure out how to solve this
+        puzzle?
+      courseA_collector_preLoops5_instruction: |-
+        Get 1 of these 2 gems to solve this
+        puzzle.
+      courseA_collector_preLoops6_instruction: |-
+        Get both pieces of treasure to solve
+        this puzzle.
+      courseA_collector_preLoops7_instruction: |-
+        Get all three piles to pass this
+        level.
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
@@ -8687,9 +8769,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -9213,10 +9295,10 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
         If the pirate is in the safe zone, wait
         one second, then deduct a point as long as he stays beneath the octopus line.
@@ -9315,7 +9397,11 @@
         Use what you've learned to draw this triangle
         inside of a square.
       courseE_artist_ramp8_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseE_artist_ramp9_2_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseE_bee_concept1_instruction: Collect all of the nectar from each flower.
       courseE_bee_concept2_instruction: |-
         Help the bee make all of the honey. You
@@ -9588,6 +9674,9 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_IceAge_1_instruction: |-
         Help Sid say "Hello!" by dragging the `actor
         1 say` block out and connecting it to the bottom of the `when run` event.
@@ -9798,7 +9887,6 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.

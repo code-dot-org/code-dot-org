@@ -1400,7 +1400,7 @@ nn:
         text: "Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller et trykk på skjermen."
       5:
         image: 'notes/starwars_events_5.JPG'
-        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed til en opprørspilot og så bevege seg ned til en annen opprørspilot. Vi bruker hendelser for å få ham til å flytte på seg. Når spilleren bruker piltastene opp/ned eller opp/ned-knappene."
+        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker piltastene opp/ned eller opp/ned-knappene."
       6:
         image: 'notes/starwars_events_6.JPG'
         text: "Vi bruker whenUp() hendelsesblokken og kobler goUp() blokken til den. Når spilleren trykker pil opp tasten, kjøres koden knyttet til whenUp() blokken. Og vi gjør tilsvarende for å få R2-D2 til å flytte ned."
@@ -1475,7 +1475,7 @@ nn:
         text: "Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller et trykk på skjermen."
       5:
         image: 'notes/starwars_blocks_events_5.JPG'
-        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed til en opprørspilot og så bevege seg ned til en annen opprørspilot. Vi bruker hendelser for å få ham til å flytte på seg. Når spilleren bruker piltastene opp/ned eller opp/ned-knappene."
+        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker piltastene opp/ned eller opp/ned-knappene."
       6:
         image: 'notes/starwars_blocks_events_6.JPG'
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."

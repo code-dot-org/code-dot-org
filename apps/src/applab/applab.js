@@ -87,13 +87,14 @@ var jsInterpreterLogger = null;
  * Eventually, I'd like to replace this with window events that the debugger
  * UI listens to, so that the Applab global is not involved.
  * @param {*} object
+ * @param {string} logLevel
  */
-Applab.log = function (object) {
+Applab.log = function (object, logLevel) {
   if (jsInterpreterLogger) {
     jsInterpreterLogger.log(object);
   }
 
-  getStore().dispatch(jsDebugger.appendLog(object));
+  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
 };
 consoleApi.setLogMethod(Applab.log);
 
@@ -252,8 +253,8 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function handleExecutionError(err, lineNumber) {
-  outputError(String(err), lineNumber);
+function handleExecutionError(err, lineNumber, outputString) {
+  outputError(outputString, lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
   // prevent further execution
@@ -527,6 +528,10 @@ Applab.init = function (config) {
   // Ignore user's code on embedded levels, so that changes made
   // to starting code by levelbuilders will be shown.
   config.ignoreLastAttempt = config.embed;
+
+  // Tell droplet to only allow dropping anonymous functions into known function
+  // call params when we have marked that param with allowFunctionDrop
+  config.lockFunctionDropIntoKnownParams = true;
 
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console

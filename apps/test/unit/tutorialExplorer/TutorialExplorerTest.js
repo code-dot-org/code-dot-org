@@ -23,7 +23,8 @@ describe("TutorialExplorer filterTutorials tests", function () {
       },
       locale: "en-us",
       sortBy: "displayweight",
-      orgname: "all"
+      orgname: "all",
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -37,7 +38,8 @@ describe("TutorialExplorer filterTutorials tests", function () {
       },
       locale: "en-us",
       sortBy: "displayweight",
-      orgName: "code"
+      orgName: "code",
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -55,7 +57,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
         platform: ["mac"]
       },
       locale: "en-us",
-      sortBy: "displayweight"
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -71,7 +73,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
         subject: ["science"]
       },
       locale: "en-us",
-      sortBy: "displayweight"
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -86,7 +88,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
         platform: ["iphone"]
       },
       locale: null,
-      sortBy: "displayweight"
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -105,7 +107,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
         platform: ["android"]
       },
       locale: "gr-gr",
-      sortBy: "displayweight"
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -121,7 +123,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
         subject: ["history"]
       },
       locale: "gr-gr",
-      sortBy: "displayweight"
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -138,7 +140,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
         subject: ["history"]
       },
       locale: "gr-gr",
-      sortBy: "popularityrank"
+      sortByFieldName: "popularityrank"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -155,7 +157,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
       },
       locale: "gr-gr",
       specificLocale: true,
-      sortBy: "displayweight"
+      sortByFieldName: "displayweight"
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);

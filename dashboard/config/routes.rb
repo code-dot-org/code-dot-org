@@ -21,6 +21,8 @@ Dashboard::Application.routes.draw do
 
   get "/home", to: "home#home"
 
+  get "/congrats", to: "congrats#index"
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -238,9 +240,8 @@ Dashboard::Application.routes.draw do
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
   resources :regional_partners
-  get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  post 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
   get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
-  get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
   post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
   get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
 
