@@ -20,12 +20,12 @@ const styles = {
   }
 };
 
-export const ImagePreview = Radium(React.createClass({
-  propTypes: {
+class ImagePreviewUnwrapped extends React.Component {
+  static propTypes = {
     url: PropTypes.string.isRequired,
     showInstructionsDialog: PropTypes.func.isRequired,
     noVisualization: PropTypes.bool.isRequired,
-  },
+  };
 
   render() {
     return (
@@ -44,8 +44,9 @@ export const ImagePreview = Radium(React.createClass({
       </div>
     );
   }
-}));
+}
 
+export const ImagePreview = Radium(ImagePreviewUnwrapped);
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,
   noVisualization: state.pageConstants.noVisualization,
