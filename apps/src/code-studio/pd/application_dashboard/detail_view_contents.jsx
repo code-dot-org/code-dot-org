@@ -162,13 +162,17 @@ export default class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <FormControl
-          id="Notes"
-          disabled={!this.state.editing}
-          componentClass="textarea"
-          value={this.state.notes || ''}
-          onChange={this.handleNotesChange}
-        />
+        <div className="row">
+          <div className="col-md-8">
+            <FormControl
+              id="Notes"
+              disabled={!this.state.editing}
+              componentClass="textarea"
+              value={this.state.notes || ''}
+              onChange={this.handleNotesChange}
+            />
+          </div>
+        </div>
         <br/>
         {this.renderEditButtons()}
       </div>
