@@ -1,15 +1,17 @@
----
-title: '<%= hoc_s(:title_resources) %>'
-layout: wide
-nav: promote_nav
----
+* * *
+
+title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
+
+* * *
+
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
+</link>
 
 # გაუწიეთ პოპულარიზაცია კოდის ერთ საათს
 
-## ატარებთ "კოდის ერთ საათს"? <a href="<%= resolve_url('/how-to') %>იხილეთ გზამკვლევი</a>
+## ატარებთ "კოდის ერთ საათს"? <a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -37,13 +39,13 @@ nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-1. ნებისმიერი მითითება "კოდის ერთ საათზე" უნდა გამოყენებულ იქნეს ისე, რომ გამოჩნდეს არა როგორც თქვენი ბრენდის სახელი, არამედ როგორც მითითება კოდის ერთ საათზე, როგორც საერთაშორისო მოძრაობაზე. კარგი მაგალითი: "მიიღეთ მონაწილეობა კოდის ერთი საათში™ ACMECorp.com-ზე". ცუდი მაგალითი: "სცადეთ კოდის ერთი საათი ACME Corp-ის მეშვეობით".
-2. გამოიყენეთ "TM" ზედა ინდექსი ყველაზე გამოსაჩენ ადგილებში სადაც ახსენებთ "კოდის ერთ საათს", თქვენს ვებგვერდზეც და აპლიკაციის აღწერილობაშიც.
-3. ჩასვით ტექსტი თქვენს გვერდზე, CSEdWeek-ის ბმულებისა და Code.org-ის ვებგვერდების ჩათვლით, რომელშიც შემდეგი რამ იქნება გადმოცემული:
+  1. ნებისმიერი მითითება "კოდის ერთ საათზე" უნდა გამოყენებულ იქნეს ისე, რომ გამოჩნდეს არა როგორც თქვენი ბრენდის სახელი, არამედ როგორც მითითება კოდის ერთ საათზე, როგორც საერთაშორისო მოძრაობაზე. კარგი მაგალითი: "მიიღეთ მონაწილეობა კოდის ერთი საათში™ ACMECorp.com-ზე". ცუდი მაგალითი: "სცადეთ კოდის ერთი საათი ACME Corp-ის მეშვეობით".
+  2. გამოიყენეთ "TM" ზედა ინდექსი ყველაზე გამოსაჩენ ადგილებში სადაც ახსენებთ "კოდის ერთ საათს", თქვენს ვებგვერდზეც და აპლიკაციის აღწერილობაშიც.
+  3. ჩასვით ტექსტი თქვენს გვერდზე, CSEdWeek-ის ბმულებისა და Code.org-ის ვებგვერდების ჩათვლით, რომელშიც შემდეგი რამ იქნება გადმოცემული:
     
     *"'კოდის ერთი საათი™' არის ქვეყნის მასშტაბის ინიციატივა, წარდგენილი კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის[csedweek.org] და Code.org-ის[code.org] მიერ, რომლის მიზანია წარვუდგნოთ მილიონობით მოსწავლეს კომპიუტერული მეცნიერების და კომპიუტერული პროგრამირების ერთი საათი."*
 
-4. არ შეიძლება "Hour of Code"-ის გამოყენება აპლიკაციების სახელებში.
+  4. არ შეიძლება "Hour of Code"-ის გამოყენება აპლიკაციების სახელებში.
 
 <a id="stickers"></a>
 
@@ -64,7 +66,7 @@ Computers are everywhere, changing every industry on the planet. But fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! და Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-ამ წელს, მოდით გავხადოთ ის უფრო დიდი. გთხოვთ, მომცეთ უფლება, შემოვუერთდე პროექტს, კოდის ერთი საათი 2016. მოხარულები ვიქნებით, კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის განმავლობაში თუ კოდის ერთი საათის ღონისძიებას შემოუერთდებით <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
@@ -80,7 +82,7 @@ Computers are everywhere, changing every industry on the planet, but fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! და Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-სწორედ ამიტომ [სკოლის სახელი] სკოლის [X რაოდენობა] მოსწავლიდან ყველა იღებს მონაწილეობას ისტორიის უდიდეს ღონისძიებაში: კოდის ერთ საათში, კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულის ფარგლებში (<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 

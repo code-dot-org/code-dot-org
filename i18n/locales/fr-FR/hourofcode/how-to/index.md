@@ -10,11 +10,10 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Rejoignez le mouvement et faites faire à un groupe d’élèves leur première heure d'informatique, en suivant les étapes suivantes :
 
-## Regardez cette vidéo qui explique comment faire. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## Regardez cette vidéo qui explique comment faire. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choisissez un didacticiel pour votre session :
 
-Nous mettons à votre disposition toute une série de tutoriels, [sympas et d'une durée ne dépassant pas l'heure](%= resolve_url('/learn') %), adaptés à tous les âges et créés par différents partenaires.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
 **[Les tutoriels de l'Heure de Code guidant les élèves :](%= resolve_url('/learn') %)**
 
@@ -56,7 +55,7 @@ Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer
   * La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) disponible )
   * La [vidéo de lancement de Une Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou le <% if @country == 'uk' %> [la vidéo Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Le président Obama a lancé un appel, invitant tous les étudiants à apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Retrouvez ici d'autres [ressources](%= resolve_url('https://code.org/inspire') %) et [vidéos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspirantes.
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Si vous ou vos élèves débutez en informatique, ce n'est pas bien grave. Voici quelques idées pour présenter votre Heure de Code :**
 
@@ -72,7 +71,7 @@ Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer
 
 **Guidez les participants pendant l'activité**
 
-  * Notez sur un tableau le lien vers le tutoriel. Vous pouvez trouver ce lien sur la [fiche d'information du tutoriel choisi](%= resolve_url('/learn') %), en dessous du nombre de participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -90,7 +89,7 @@ Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer
 
 **Que faire si un élève termine en avance ?**
 
-  * Les étudiants peuvent voir le catalogue des tutoriels et essayer une autre activité de l'Heure de Code sur [hourofcode.com/learn](%= resolve_url('/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Ou encore, demandez aux élèves qui ont terminé plus tôt d'aider les camarades qui rencontrent des difficultés avec l'activité.
 
 [col-33]

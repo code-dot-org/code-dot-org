@@ -8,15 +8,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 # एक घंटा कोड का कैसे पढ़ानेकी तकनीक
 
-आंदोलन में शामिल होने और छात्रों के एक समूह इन चरणों के साथ कंप्यूटर विज्ञान के अपने पहले घंटे के लिए परिचय:
+Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) यह कैसे करने के लिए वीडियो देखें <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
-## 2) एक ट्यूटोरियल के लिए अपने घंटे चुनें:
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[घंटे के कोड ट्यूटोरियल: छात्र मार्गदर्शन](%= resolve_url('/learn') %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * प्रशिक्षकोंको कम से कम तैयारी की आवश्यकता
   * छात्र स्वअध्ययन से अपनी गतिसे काम कर सकते है
@@ -28,11 +27,11 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) f
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) को बढ़ावा देने के अपने घंटे कोड
+## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
-## 4) अपनी प्रौद्योगिकी आवश्यकताओं की योजना - कंप्यूटर वैकल्पिक हैं
+## 4) Plan your technology needs - computers are optional
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
@@ -90,7 +89,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **What to do if a student finishes early?**
 
-  * छात्र सभी ट्यूटोरियल देख सकते हैं और [hourofcode.com/learn](%= resolve_url('/learn') %) में एक और घंटा कोड की गतिविधि का प्रयास करें
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 [col-33]

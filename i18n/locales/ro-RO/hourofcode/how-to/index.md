@@ -10,11 +10,10 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de tehnologia computerelor si programare urmand aceşti paşi:
 
-## 1) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
+## 1) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Alegeți un tutorial pentru ora dumneavoastră:
 
-Vă oferim o varietate de [tutoriale distractive, cu durata de o oră ](%= resolve_url('/learn') %) pentru elevi de toate vârstele, create de către o varietate de parteneri.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
 **[Tutoriale Hour of Code ghidate de catre elev:](%= resolve_url('/learn') %)**
 
@@ -72,7 +71,7 @@ Cea mai buna experienta Hour of Code include calculatoare care au conexiune la I
 
 **Indruma elevii catre activitate**
 
-  * Scrieți link-ul tutorialului pe tablă. Găsiți link-ul scris în secțiunea [informații pentru tutorialul selectat](%= resolve_url('/learn') %) sub numărul de participanți.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -90,7 +89,7 @@ Cea mai buna experienta Hour of Code include calculatoare care au conexiune la I
 
 **Ce sa fac in cazul in care un elev termina mai devreme?**
 
-  * Elevii pot vedea toate tutorialele și încerca o altă activitate Hour of Code pe site-ul [hourofcode.com/learn](%= resolve_url('/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Sau îi puteți îndemna pe elevii ce au terminat prea devreme să îi ajute pe cei ce întâmpină probleme cu activitatea.
 
 [col-33]

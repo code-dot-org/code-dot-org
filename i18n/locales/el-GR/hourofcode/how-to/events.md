@@ -1,45 +1,42 @@
----
-title: '<%= hoc_s(:title_how_to_events) %>'
-layout: wide
-nav: how_to_nav
----
+* * *
+
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+
+* * *
+
 <%= view :signup_button %>
 
 # Πώς να οργανώσετε μία εκδήλωση για την Ώρα του Κώδικα
 
-## 1. Prepare for your event
+## 1) Προετοιμασίες για την εκδήλωσή σας
 
-- Determine a venue, date, and time.
-- Στείλτε [ένα γράμμα](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) για να προσκαλέσετε τον Δήμαρχο, τον τοπικό πολιτικό ή έναν επιχειρηματία με επιρροή για να μιλήσουν.
-- Προσκαλέστε μέσα/τύπο. Δηλαδή τοπικούς σταθμούς ειδήσεων, εφημερίδες, bloggers με θέματα εκπαίδευσης/τεχνολογίας. Δείτε το [πακέτο τύπου](%= resolve_url('/promote/press-kit') %) για βοήθεια.
+  * Προσδιορίστε τον χώρο, την ημέρα και την ώρα
+  * Στείλτε [ένα γράμμα](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) για να προσκαλέσετε τον Δήμαρχο, τον τοπικό πολιτικό ή έναν επιχειρηματία με επιρροή για να μιλήσουν.
+  * Προσκαλέστε μέσα/τύπο. Δηλαδή τοπικούς σταθμούς ειδήσεων, εφημερίδες, bloggers με θέματα εκπαίδευσης/τεχνολογίας. Δείτε το [πακέτο τύπου](%= resolve_url('/promote/press-kit') %) για βοήθεια.
 
-## 2. During your event
+## 2) Κατά τη διάρκεια της εκδήλωσης
 
-- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-- Κάντε μία εισαγωγή τονίζοντας τη σημασία της επιστήμης των υπολογιστών, χρησιμοποιώντας αυτές τις [στατιστικές και γραφήματα](%= resolve_url('/promote/stats') %).   
+  * Ξεκινήστε την εκδήλωσή σας με κάποιο από τα [εμπνευσμένα μας βίντεο](%= resolve_url('/promote/resources#videos') %).
+  * Κάντε μία εισαγωγή τονίζοντας τη σημασία της επιστήμης των υπολογιστών, χρησιμοποιώντας αυτές τις [στατιστικές και γραφήματα](%= resolve_url('/promote/stats') %).   
       
     
-- Άλλες ιδέες για την εκδήλωση: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+  * Άλλες ιδέες για την εκδήλωση: 
+      * Προσκάλεσε κάποιο πρόσωπο από μια τοπική βιομηχανία για να μιλήσει για την δουλειά της σε σχέση με την Επιστήμη των Υπολογιστών
+      * Προσκάλεσε έναν πολιτικό και βάλε τους μαθητές να του μάθουν να προγραμματίζει
+      * Μια ομάδα μαθητών παρουσιάζουν μια δραστηριότητα χωρίς τη χρήση υπολογιστών
+      * Μια ομάδα μαθητών δείχνουν στον διευθυντή ή σε μια ομάδα καθηγητών πώς να προγραμματίζουν
+      * Αν διδάσκεται ήδη η Επιστήμη των Υπολογιστών στο σχολείο σου, μπορούν μερικοί μαθητές να κάνουν παρουσίαση των εργασιών τους
 
-## 3. Share how it went
+## 3) Μοιράσου τα αποτελέσματα της εκδήλωσης
 
-- Ανέβασε φωτογραφίες από την εκδήλωση στο Facebook και το Twitter. 
-- Use the hashtag **#HourOfCode**
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+  * Ανέβασε φωτογραφίες από την εκδήλωση στο Facebook και το Twitter. 
+  * Χρησιμοποίησε την ετικέτα **#HourofCode**
 
 ## Ενδεικτικό πρόγραμμα εκδήλωσης
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -49,13 +46,13 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 ## Πρόγραμμα της εκδήλωσης
 
-| Ώρα             | Δράσεις                                                                                                                                                                    |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 π.μ | Ξεκινήστε με κάποιο από τα [εμπνευστικά μας βίντεο](%= resolve_url('/promote/resources#videos') %)                                                                         |
-| 10:05-10:15 π.μ | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %).                           |
-| 10:15-10:30 π.μ | Ειδικοί προσκεκλημένοι για να μιλήσουν για τους υπόβαθρό τους και πώς η τεχνολογία και η επιστήμη των υπολογιστών διαδραματίζει σημαντικό ρόλο στην καθημερινότητά τους.   |
-| 10:30-10:40 π.μ | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                                                  |
-| 10:40-11:00 π.μ | Οι μαθητές κάνουν επίδειξη μιας δραστηριότητας χωρίς σύνδεση και δείχνουν πως μπορεί να γίνει εκμάθηση της επιστήμης των υπολογιστών χωρίς να χρησιμοποιηθούν υπολογιστές. |
-| 11:00-11:05 π.μ | Ο εκπαιδευτικός που βοήθησε να πραγματοποιηθεί η εκδήλωση για όλο το σχολείο, αναφέρει μερικά πράγματα γι αυτήν κλείνοντας την εκδήλωση.                                   |
+| Ώρα             | Δράσεις                                                                                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 π.μ | Ξεκινήστε με κάποιο από τα [εμπνευστικά μας βίντεο](%= resolve_url('/promote/resources#videos') %)                                                                            |
+| 10:05-10:15 π.μ | Ο διευθυντής κάνει μία εισαγωγή τονίζοντας τη σημασία της επιστήμης των υπολογιστών. Χρησιμοποιήστε αυτές τις [στατιστικές και γραφήματα](%= resolve_url('/promote/stats') %) |
+| 10:15-10:30 π.μ | Ειδικοί προσκεκλημένοι για να μιλήσουν για τους υπόβαθρό τους και πώς η τεχνολογία και η επιστήμη των υπολογιστών διαδραματίζει σημαντικό ρόλο στην καθημερινότητά τους.      |
+| 10:30-10:40 π.μ | Οι μαθητές κάνουν μια επίδειξη της Ώρας του Κώδικα για το σχολείο. Διασκεδαστική παραλλαγή: βάλτε τους να διδάξουν τον Διευθυντή, έναν πολιτικό ή άλλους μαθητές.             |
+| 10:40-11:00 π.μ | Οι μαθητές κάνουν επίδειξη μιας δραστηριότητας χωρίς σύνδεση και δείχνουν πως μπορεί να γίνει εκμάθηση της επιστήμης των υπολογιστών χωρίς να χρησιμοποιηθούν υπολογιστές.    |
+| 11:00-11:05 π.μ | Ο εκπαιδευτικός που βοήθησε να πραγματοποιηθεί η εκδήλωση για όλο το σχολείο, αναφέρει μερικά πράγματα γι αυτήν κλείνοντας την εκδήλωση.                                      |
 
 <%= view :signup_button %>
