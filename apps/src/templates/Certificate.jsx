@@ -1,19 +1,13 @@
 import React, { PropTypes, Component } from 'react';
-import i18n from "@cdo/locale";
-import color from "../util/color";
+import i18n from '@cdo/locale';
+import color from '../util/color';
+import { tutorialTypes } from './tutorialTypes.js';
 
 const styles = {
   heading: {
     color: color.teal,
   },
 };
-
-const tutorialTypes = [
-  'applab',
-  '2017Minecraft',
-  'pre2017Minecraft',
-  'other',
-];
 
 export default class Certificate extends Component {
   static propTypes = {
