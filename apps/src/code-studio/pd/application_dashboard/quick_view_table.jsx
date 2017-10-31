@@ -27,6 +27,11 @@ export default class QuickViewTable extends React.Component {
       header: {
         label: 'Submitted',
       },
+      cell: {
+        format: (created_at) => {
+          return new Date(created_at).toLocaleDateString('en-us', {month: 'long', day: 'numeric'});
+        }
+      }
     },{
       property: 'applicant_name',
       header: {
