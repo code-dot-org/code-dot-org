@@ -1,94 +1,83 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:titulo_como_se_voluntariar) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # Guia prático para voluntários
 
 ## Por que ser voluntário?
 
-Confira alguns testemunhos dos últimos voluntários:
+Confira alguns depoimentos de antigos voluntários:
 
-  * "A melhor parte da minha experiência foi que toda a classe eram mulheres e pessoas de cor. É um bom presságio para o futuro da nossa indústria ter a chance de alcançar e incitar essas crianças."
-  * Gostei especialmente de incentivar as meninas na tecnologia. Senti como se eu estivesse ajudando a próxima geração em minha região
-  * "ADOREI ver como as crianças estavam animadas. Uma coisa incrível foi que os professores notaram que alguns dos alunos que não foram tão bem academicamente estavam se destacando em pensar como um desenvolvedor e ajudar os outros como eles - dando-lhes um lugar para se sentir confiante."
+- "A melhor parte da minha experiência foi que toda a turma era composta de pessoas do sexo feminino e pessoas de cor. É um bom presságio para o futuro do nosso setor ter a chance de alcançar e incitar essas crianças".
+- "Gostei principalmente de incentivar as meninas na tecnologia. Senti como se eu estivesse ajudando a próxima geração de minha região".
+- "ADOREI ver como as crianças estavam animadas. Uma coisa incrível foi que os professores notaram que alguns dos alunos que não iam tão bem academicamente estavam se destacando em pensar como um desenvolvedor e ajudando outros como eles - dando-lhes um lugar para se sentirem confiantes."
 
 Visite uma sala de aula da sua região para inspirar os alunos a continuar aprendendo ciência da computação. [Cadastre-se agora!](https://code.org/volunteer/engineer).
 
 ## Recrute seus colegas de trabalho para se voluntariarem
 
-Diga a seus amigos e colegas de trabalho sobre a Hora do Código. Temos milhares de professores cadastrados procurando por voluntários, então peça a eles para se [cadastrarem como voluntários](https://code.org/volunteer). Peça para seu empregador para participar. [Envie este e-mail](https://hourofcode.com/promote/resources#email) para seu gerente ou Diretor executivo.
+Conte a seus amigos e colegas de trabalho sobre a Hora do Código. Temos milhares de professores fazendo o cadastro e procurando por voluntários, então peça a eles para se [cadastrar como um voluntário](https://code.org/volunteer). Convide seu chefe para participar. [Envie este e-mail](https://hourofcode.com/promote/resources#email) para seu gerente ou diretor executivo.
 
-## Como você é selecionado:
+## Como você é selecionado
 
-  * Os professores estarão procurando voluntários no nosso [mapa voluntário](/volunteer/local) 
-  * Os professores estarão revendo seus perfis no mapa, então tente tornar seu perfil o mais completo possível para aumentar a chance de que um professor selecione você.
-  * Um professor irá contactá-lo através deste formulário (seu endereço de e-mail nunca será compartilhado com o professor). 
-      * Se você estiver recebendo muitas solicitações de professores, você pode sempre atualizar suas preferências clicando no link para editar suas informações ou cancelar sua inscrição, fornecido na parte inferior de qualquer e-mail de um professor. 
+- Os professores procurarão voluntários em nosso [mapa de voluntários](https://code.org/volunteer/local).
+- Os professores examinarão seus perfis no mapa, então tente tornar seu perfil o mais completo possível para aumentar suas chances de ser selecionado.
+- Um professor entrará em contato com você por meio deste formulário (seu endereço de e-mail nunca será fornecido ao professor). 
+  - Se estiver recebendo muitas solicitações de professores, em qualquer momento você pode atualizar suas preferências clicando no link para editar suas informações ou cancelar sua inscrição (fornecido na parte inferior de todos os e-mails dos professores). 
 
-## Como se preparar:
+## Como se preparar
 
-Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Escolha um vídeo para mostrar para ajudar a focar a classe e anima-los a fazer uma Hora do Código.
+[ Tente os tutoriais](hourofcode.com/learn) antes de ir para a sala de aula.
 
-  * Assista ao [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) e ao [conjunto de slides](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing) do Treinamento de Voluntários deste ano
-  * Confira o [Toolkit do Voluntário da Hora do Código](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Inclui uma visão geral, cronograma, material de preparação e material de marketing. Tudo o que você precisa que esteja pronto para sua experiência de voluntariado!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](%= resolve_url('/learn') %)
-  * Se você está visitando uma escola, complete quaisquer antecedentes ou documentos exigidos
-  * [Reveja estas dicas](https://code.org/files/CSTT_Volunteers.pdf) sobre como interagir com os alunos
-  * Prepare uma introdução: 
-      * Compartilhe uma história inspiradora: Como você se envolveu em uma carreira em tecnologia ou porque a tecnologia é importante para você
-      * Deixe os alunos animados! Escolha um vídeo para mostrar para ajudar a focar a classe e anima-los a fazer uma Hora do Código.
-  * Junte-se à conversa no FB, Instagram, Twitter, Tumblr, com #Hourofcode
-  * Conecte-se com o professor para discutir sobre o que você pretende falar durante sua sessão
-  * Se você é um voluntário virtual, teste áudio, vídeo e recursos de compartilhamento de tela de antemão
+Faça os alunos ficarem entusiasmados! Escolha um vídeo a ser mostrado para ajudar a turma a se concentrar e animá-los a trabalhar uma Hora do Código.
 
-### **Dia-D Evento Hora do Código:**
+- Confira o [ Conjunto de ferramentas do voluntário da Hora do código](/files/hoc-volunteer-toolkit.pdf), que inclui uma visão geral, cronograma, material de preparação e material de marketing. Tudo que você precisa estar pronto para sua experiência de voluntariado!
+- Se você irá fazer algum tutorial durante sua sessão, gaste 30 minutos experimentando um [Tutorial da Hora do Código](%= resolve_url('/learn') %).
+- Se estiver visitando uma escola, complete quaisquer cadastros ou documentos exigidos.
+- [Reveja estas dicas](https://code.org/files/CSTT_Volunteers.pdf) sobre como interagir com os alunos.
+- Junte-se às discussões no FB, Twitter, Instagram e Tumblr com #HoraDoCodigo.
+- Entre em contato com o professor para discutir sobre o que você pretende falar durante sua sessão.
+- Se você é um voluntário virtual, teste com antecedência recursos de áudio, vídeo e de compartilhamento de tela.
 
-  * Entre na escola e cumprimente o professor. Confirme o cronograma combinado e discuta quaisquer assuntos.
-  * Passe 5 minutos falando sobre si mesmo, quem o inspirou a prosseguir numa carreira em ciência da computação e/ou tecnologia. 
-      * Apresente-se: quem você é e o que você faz
-      * Escolha um vídeo inspirador e mostre-o para a sala de aula inteira juntos. Responda a quaisquer perguntas dos alunos.
-      * Compartilhe uma história curta sobre como você se interessou por ciência da computação. O que ou quem te inspirou? O que você mais ama sobre seu trabalho? Mantenha-a curta! ;) O ponto é deixar as crianças codificarem, reserve tempo para mais perguntas no final.
-      * Compartilhe como ciência da computação tem amplo impacto em todo o mundo.
-  * Deixe os alunos mergulharem nos tutoriais. Ande pela sala, respondendo a perguntas e orientando os alunos em seus desafios. Tente não dar a solução para os alunos diretamente, ao invés disso, faça perguntas para que eles mesmos descubram o que deu errado.
-  * Incentive os alunos a perguntar uns aos outros se eles têm dúvidas. Aprender um com o outro é uma grande oportunidade de aprendizagem. Muitas vezes as crianças podem resolver os problemas elas mesmas e através do trabalho em equipe. 
-  * Após a conclusão da Hora do Código, distribua suvenires de sua empresa (adesivos são fantásticos) e responda a quaisquer perguntas restantes.
-  * Também é importante mencionar que se tirar fotos e vídeos durante o evento -- especialmente com os alunos -- que você peça permissão do pai/professor se você gostaria de postar suas histórias em mídia social.
+## Dia do evento da Hora do Código
 
-### **Agenda de amostra:**
+Quando estiver hospedando um evento da Hora do Código, siga a agenda do exemplo abaixo para ajudar a guiar o seu dia. Antes disso, certifique-se de entrar na escola e cumprimentar o professor no dia do evento. Confirme o cronograma acordado para o dia e discuta quaisquer pontos de discussão.
+
+### **Modelo de agenda:**
 
 Apresente-se: </ul>
 
-  * Em que você trabalha, o que você faz e o que você gosta mais do seu trabalho?
-  * O que ou quem o inspirou
-  * Você tem um mentor?
-  * Compartilhe uma história sobre como a tecnologia afeta a todos</ul></td> </tr> 
-    Faça as perguntas aos alunos e deixar o tempo para Perguntas & Respostas </ul>
+- Em que você trabalha, o que você faz e o que você gosta mais do seu trabalho?
+- O que ou quem o inspirou?
+- Como surgiu seu interesse por ciência da computação?
+- Você tem um mentor?
+- Compartilhe um exemplo sobre como a tecnologia afeta a vida de todos.</ul></td> </tr> 
+  Faça perguntas aos alunos e reserve um tempo para uma sessão de perguntas e respostas. </ul>
+  
+  - Pergunte aos alunos quais são os tipos de trabalhos que mais os interessam; quais são seus dispositivos eletrônicos ou aplicativos favoritos e como eles acham que esses equipamentos foram construídos. 
+  - Os alunos têm alguma pergunta para você?</ul></td> </tr> 
+    </tbody> </table> 
+    ### **Após o evento:**
     
-      * Em que trabalhos eles estão interessados, quais são seus gadgets ou apps favoritos, e como acham que eles são criados? 
-      * Os alunos têm alguma pergunta para você?</ul></td> </tr> 
-        </tbody> </table> 
-        ### **Após o evento:**
-        
-          * Compartilhe suas fotos e histórias com Code.org em giving@code.org
-          * Lembre-se de adicionar suas horas de voluntariado no portal de controle de voluntáriado de sua empresa 
-          * Compartilhar sobre sua experiência em mídias sociais #Hourofcode! Veja dicas abaixo. 
-        ## FAQ Voluntariando-se durante a Hora do Código
-        
-        ### **Ainda não fui contactado por um professor. Como ainda pode ser voluntário?**
-        
-        Tente procurar por escolas locais e ligar para o escritório do diretor/professor e perguntar como você pode ajudar.
-        
-        ### **Quanto tempo duram as visitas à sala de aula?**
-        
-        Uma visita em pessoa a um sala de aula geralmente dura de 60 a 90 minutos, enquanto uma visita virtual geralmente dura de 20 a 30 minutos
-        
-        ### **Para que faixa etária o tutorial da Hora do Código é apropriado?**
-        
-        Code.org projeta os tutoriais de hora de código como jogos e quebra-cabeças para envolver os alunos de todos os níveis de classe (K-12), meninos e meninas, de todas as origens. Todos, mesmo os adultos podem se divertir jogando nossos tutoriais!
-        
-        <%= view :signup_button %>
+    - Compartilhe suas fotos e histórias com a Code.org pelo email giving@code.org.
+    - Lembre-se de registrar suas horas como voluntário no portal de acompanhamento de voluntariado da sua empresa.
+    - Compartilhe sua experiência nas mídias sociais usando #HourOfCode! Veja as dicas abaixo. 
+    - Se você fizer fotos ou vídeos durante o evento, **especialmente com alunos**, não esqueça de pedir autorização a professores/pais antes de publicar esse conteúdo nas mídias sociais.
+    ## Perguntas frequentes sobre o trabalho de voluntariado na Hora do Código
+    
+    ### **Até agora não fui contactado por um professor. Como ainda posso ser um voluntário?**
+    
+    Tente procurar por escolas de sua região, ligar para o diretor/professor/secretaria e perguntar como você pode ajudar.
+    
+    ### **Quanto tempo duram as visitas à sala de aula?**
+    
+    Uma visita presencial à sala de aula geralmente tem duração de 60-90 minutos, enquanto uma virtual tem aproximadamente de 20 a 30 minutos.
+    
+    ### **Para que faixa etária o tutorial da Hora do Código é apropriado?**
+    
+    A Code.org projeta os tutoriais da Hora do Código na forma de jogos e desafios a fim de envolver alunos de todos os níveis escolares ( fundamental e médio), meninos e meninas, com diferentes níveis de conhecimento. Todos, mesmo os adultos, podem se divertir com nossos tutoriais!
+    
+    <%= view :signup_button %>

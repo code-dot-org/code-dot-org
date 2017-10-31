@@ -1,16 +1,16 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_parents) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Ako splniť Hodinu kódu s svojim dieťaťom
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Dokončenie Hour of Code doma, alebo dobrovoľne tak, aby bol k výučbe vášho dieťaťa! Tu je návod:
 
-## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) Vyber si návod:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
