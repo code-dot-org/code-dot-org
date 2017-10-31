@@ -38,7 +38,7 @@ export default class DetailView extends React.Component {
     });
   }
 
-  updateProps = (newProps) => {
+  updateData = (newProps) => {
     this.setState({
       data: Object.assign(this.state.data, newProps)
     });
@@ -53,7 +53,7 @@ export default class DetailView extends React.Component {
           <DetailViewContents
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
-            updateProps={this.updateProps}
+            updateProps={this.updateData}
           />
         )
       );
