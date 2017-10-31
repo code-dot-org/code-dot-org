@@ -1,9 +1,10 @@
 ---
-title: '<%= hoc_s(:title_stats) %>'
+
+title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
----
 
+---
 
 <a id="blurb"></a>
 
@@ -13,7 +14,7 @@ nav: promote_nav
 
 ## Bu məlumatlardan bülletenlərdə istifadə edin
 
-### Bring computer science to your school. Start with an Hour of Code!
+### İnformatikanı məktəbinizə gətirin. Bu işə Kod Saatı ilə başlayın
 
 Texnologiyanın planetdəki hər bir sənayeni dəyişdirdiyi bir zaman, informatika bilikləri zəruri iş bacarıqlarının bir hissəsinə çevrilib. Amma bütün məktəblərin yarısından azı kompyuter elmini öyrədir! Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik. Əgər keçən il Kod Saatı haqqında eşitmisinizsə, bunun tarix yazdığını bilərsiniz. 100 milyon şagird indi sadəcə bir Kod Saatı ilə kompyuter elmlərinin nə qədər əlçatan və əyləncəli ola biləcəyini kəşf etdi.
 
