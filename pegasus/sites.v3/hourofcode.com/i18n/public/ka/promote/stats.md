@@ -1,9 +1,10 @@
 ---
-title: '<%= hoc_s(:title_stats) %>'
+
+title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
----
 
+---
 
 <a id="blurb"></a>
 
@@ -13,7 +14,7 @@ nav: promote_nav
 
 ## გამოიყენეთ ეს მოკლე რეკლამა საინფორმაციო წერილებში
 
-### ჩართეთ კომპიუტერული მეცნიერება სასკოლო განათლებაში. დაიწყეთ კოდის ერთი საათით!
+### შეიტანეთ კომპიუტერული მეცნიერება სკოლაში. დაიწყეთ კოდის ერთი საათით
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 

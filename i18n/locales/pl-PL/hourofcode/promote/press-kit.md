@@ -1,8 +1,9 @@
----
-title: '<%= hoc_s(:title_press_kit) %>'
-layout: wide
-nav: promote_nav
----
+* * *
+
+title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
+
+* * *
+
 <%= view :signup_button %>
 
 ## Jak przyciągnąć uwagę mediów do twojej akcji "Godzina Kodowania"
@@ -11,20 +12,20 @@ nav: promote_nav
 
 ### Najważniejsze wskazówki
 
-- Skontaktuj się z mediami na dwa tygodnie przed wydarzeniem za pośrednictwem poczty elektronicznej. Ponów kontakt e-mailowy oraz telefoniczny, jeśli nie otrzymałeś(aś) wstępnej odpowiedzi.
-- Poproś pracownika szkoły lub wolontariusza by robił zdjęcia, które będzie można opublikować online lub wysłać do prasy.
-- Napisz o Godzinie Kodowania na swojej stronie internetowej i w gazetce szkolnej. Opublikuj szczegóły wydarzenia i zdjęcia.
-- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Skontaktuj się z mediami na dwa tygodnie przed wydarzeniem za pośrednictwem poczty elektronicznej. Ponów kontakt e-mailowy oraz telefoniczny, jeśli nie otrzymałeś(aś) wstępnej odpowiedzi.
+  * Poproś pracownika szkoły lub wolontariusza by robił zdjęcia, które będzie można opublikować online lub wysłać do prasy.
+  * Napisz o Godzinie Kodowania na swojej stronie internetowej i w gazetce szkolnej. Opublikuj szczegóły wydarzenia i zdjęcia.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Instrukcja krok po kroku:
 
 **1. Plan your event**
 
-- Zaplanuj zebranie, by wystartować z Hour of Code.
-- Wyślij rodzicom [list](%= resolve_url('/promote/resources#sample-emails') %). Poproś, aby rozpowszechnili wydarzenie.
-- Wyślij [zaproszenie](%= resolve_url('/promote/resources#sample-emails') %) do burmistrza, kongresmana, gubernatora czy wpływowych biznesmenów, by przybyła i przemówiła do twoich studentów.
-- Zorganizuj działania grupowe (jak pokaz programowania bez prądu) lub wyeksponuj aktywności wymyślone i przeprowadzone przez uczniów.
-- Pokaż [wideo Godziny Kodowania](%= resolve_url('/') %) autorstwa Code.org lub użyj [tych](%= resolve_url('/promote/resources#videos') %) do inspiracji.
+  * Zaplanuj zebranie, by wystartować z Hour of Code.
+  * Wyślij rodzicom [list](%= resolve_url('/promote/resources#sample-emails') %). Poproś, aby rozpowszechnili wydarzenie.
+  * Wyślij [zaproszenie](%= resolve_url('/promote/resources#sample-emails') %) do burmistrza, kongresmana, gubernatora czy wpływowych biznesmenów, by przybyła i przemówiła do twoich studentów.
+  * Zorganizuj działania grupowe (jak pokaz programowania bez prądu) lub wyeksponuj aktywności wymyślone i przeprowadzone przez uczniów.
+  * Pokaż [wideo Godziny Kodowania](%= resolve_url('/') %) autorstwa Code.org lub użyj [tych](%= resolve_url('/promote/resources#videos') %) do inspiracji.
 
 **2. Identify specific local reporters that cover education or local events.**
 
