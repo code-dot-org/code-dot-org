@@ -584,6 +584,10 @@
   volunteer_engineer_submission_type_task_remote: "子供たちを励ますために、私の教室に Skype のビデオ通話をして欲しいです。"
   volunteer_engineer_submission_type_task_mentor: "生徒とのプログラミング授業のために、私の準備を手伝って指導していただける方を探しています。"
   petition_age: "年齢"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "もっと詳しく知る"
   dashboard_landing_title: "先生用ホームページ"
   dashboard_landing_welcome: "新しく改良された先生用ダッシュ ボードへようこそ"
   dashboard_landing_video: "ビデオを見る"
