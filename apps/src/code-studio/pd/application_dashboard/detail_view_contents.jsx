@@ -18,6 +18,7 @@ export default class DetailViewContents extends React.Component {
       email: PropTypes.string,
       form_data: PropTypes.object
     }),
+    updateProps: PropTypes.func.isRequired
   };
 
   state = {
@@ -28,7 +29,8 @@ export default class DetailViewContents extends React.Component {
   handleCancelEditClick = () => {
     this.setState({
       editing: false,
-      status: this.props.applicationData.status
+      status: this.props.applicationData.status,
+      notes: this.props.applicationData.notes
     });
   };
 
@@ -61,6 +63,7 @@ export default class DetailViewContents extends React.Component {
       this.setState({
         editing: false
       });
+      this.props.updateProps({notes: this.state.notes, status: this.state.status});
     });
   };
 
