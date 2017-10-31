@@ -1,17 +1,18 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from "@cdo/locale";
 import color from "../util/color";
+import { tutorialTypes } from './tutorialTypes.js';
 
 const styles = {
   heading: {
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };
 
 export default class StudentsBeyondHoc extends Component {
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(['applab', 'newMinecraft', 'oldMinecraft', 'other']).isRequired,
-    MCShareLink: PropTypes.string
+    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
+    MCShareLink: PropTypes.string,
   };
 
   render() {
