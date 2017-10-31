@@ -62,7 +62,13 @@ class RegionalPartnersController < ApplicationController
 
   # POST /regional_partners/:id/assign_program_manager
   def assign_program_manager
-    @regional_partner.program_manager = params[:program_manager_id]
+    email = params[:email]
+    user = restricted_users.find_by(user_type: 'teacher', hashed_email: User.hash_email(email))
+    if user
+      @regional_partner.program_manager = user.id
+    else
+      flash[:notice] = "No teacher with email <#{email}> found. Program Manager not assigned to Regional Partner."
+    end
     redirect_to @regional_partner
   end
 
@@ -70,14 +76,6 @@ class RegionalPartnersController < ApplicationController
   def remove_program_manager
     @regional_partner.program_managers.delete(params[:program_manager_id])
     redirect_to @regional_partner
-  end
-
-  # GET /regional_partners/:id/search_program_manager
-  def search_program_manager
-    search_term = params[:search_term]
-    teachers = restricted_users.where(user_type: 'teacher')
-    @users = teachers.where("email LIKE :partial_email", {partial_email: "%#{search_term}%"}).or(teachers.where("name LIKE :partial_name", {partial_name: "%#{search_term}%"}))
-    render :show
   end
 
   # POST /regional_partners/:id/add_mapping
