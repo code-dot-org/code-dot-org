@@ -12,7 +12,8 @@ nav: how_to_nav
 
 Únete al movimiento e introduce a un grupo de estudiantes en su primera hora de ciencias de la computación con los siguientes pasos:
 
-## 1) Mira este video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1) Mira este video
+<iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2) Elige un tutorial par tu Hora del Código
 
@@ -26,7 +27,7 @@ Proveemos una variedad de [entretenidos tutoriales de una hora de duración](<%=
 **[Tutoriales de La Hora del Código dirigido a los profesores:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Son planes de lección que requieren de cierta preparación del profesor o docente
-  * Están clasificados por grado *y* por materia (por ejemplo, metemáticas, inglés, etc)
+  * Están clasificados por grado *y*por materia (por ejemplo, metemáticas, inglés, etc)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
@@ -42,7 +43,7 @@ La mejor experiencia de Hora Code incluye computadoras con conexión a internet.
 
   * Pruebe los tutoriales en computadores o dispositivos móviles de los estudiantes. Asegúrese de que funcionan de manera adecuada en los navegadores, con sonido y video.
   * Proporcione audífonos o auriculares, o pida a los estudiantes que traigan los suyos, en caso de que el tutorial funcione mejor con sonido.
-  * **¿No cuenta con suficientes dispositivos?** Utilice [programación en pareja](https://www.youtube.com/watch?v=vgkahOzFH2Q). Cuando los estudiantes trabajan en parejas, se ayudan mutuamente y dependen menos del profesor. También observarán que las ciencias de la computación es sociable y cooperativa.
+  * **¿No cuenta con suficientes dispositivos? ** Utilice [programación en pareja](https://www.youtube.com/watch?v=vgkahOzFH2Q). Cuando los estudiantes trabajan en parejas, se ayudan mutuamente y dependen menos del profesor. También observarán que las ciencias de la computación es sociable y cooperativa.
   * **¿Tiene un ancho de banda limitado?** Muestre los vídeos en el proyector a toda la clase, para evitar que cada estudiante descargue el vídeo. O pruebe con los tutoriales sin conexión/fuera de línea.
 
 ![](/images/fit-350/group_ipad.jpg)

@@ -10,11 +10,10 @@ nav: how_to_nav
 
 # Como ensinar uma Hour of Code
 
-Junte-se ao movimento e introduza um grupo de estudantes à sua primeira hora de ciência computacional com estes passos:
+Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Assista a este vídeo prático <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
-
-## 2) Escolha um tutorial para a sua hora:
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial for your hour:
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
