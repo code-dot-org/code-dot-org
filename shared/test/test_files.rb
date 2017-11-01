@@ -1,11 +1,14 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
+require 'cdo/aws/s3'
 
 class FilesTest < FilesApiTestBase
   def setup
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
     @api.ensure_aws_credentials
+    AWS::S3.create_client
+    Aws::S3::Client.expects(:new).never
   end
 
   def teardown
