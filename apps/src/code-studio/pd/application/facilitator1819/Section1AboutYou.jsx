@@ -33,8 +33,8 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
           Thanks for your interest in the Code.org Facilitator Development Program!
         </p>
         <p>
-          This application should take 30 - 45 minutes to complete and includes both multiple choice and free response questions.
-          Fields marked with a
+          This application should take 30 - 45 minutes to complete and includes both multiple choice and
+          free response questions. Fields marked with a
           {' '}<span style={{color: "red"}}>*</span>{' '}
           are required. If you need more information on the program before you apply, please visit
           {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}
@@ -140,4 +140,19 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
     return formatErrors;
   }
 
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.workedInCsJob !== YES) {
+      changes.csRelatedJobRequirements = undefined;
+    }
+    if (data.diversityTraining !== YES) {
+      changes.diversityTrainingDescription = undefined;
+    }
+
+    return changes;
+  }
 }
