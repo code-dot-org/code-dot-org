@@ -35,10 +35,5 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-class Census2017v2 < Census2017v1
-  validates :topic_other_description, presence: true, if: :require_other_description
-
-  def require_other_description
-    show_followup? && topic_other
-  end
+class Census::HocCensus2017v3 < Census::HocCensus2017v2
 end

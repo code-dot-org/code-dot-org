@@ -35,7 +35,7 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-class Census2017v1 < CensusSubmission
+class Census::Census2017v1 < Census::CensusSubmission
   def validate_pledge?
     submitter_role_teacher? || submitter_role_administrator?
   end

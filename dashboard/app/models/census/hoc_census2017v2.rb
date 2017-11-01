@@ -35,5 +35,5 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-class Census2017v3 < Census2017v2
+class Census::HocCensus2017v2 < Census::HocCensus2017v1
 end

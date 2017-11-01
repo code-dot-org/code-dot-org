@@ -35,7 +35,10 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-class HocCensus2017v1 < CensusSubmission
-  validates :submitter_email_address, presence: true
-  validates :submitter_name, presence: true
+class Census::Census2017v2 < Census::Census2017v1
+  validates :topic_other_description, presence: true, if: :require_other_description
+
+  def require_other_description
+    show_followup? && topic_other
+  end
 end

@@ -1,3 +1,4 @@
+# coding: utf-8
 # == Schema Information
 #
 # Table name: census_submissions
@@ -35,5 +36,44 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-class HocCensus2017v2 < HocCensus2017v1
+class Census::CensusSubmission < ApplicationRecord
+  has_and_belongs_to_many :school_infos
+  validates :school_infos, presence: true
+
+  HOW_MANY_OPTIONS = {
+    none: "NONE",
+    some: "SOME",
+    all: "ALL",
+    dont_know:  "I DON’T KNOW"
+  }.freeze
+
+  enum how_many_do_hoc: HOW_MANY_OPTIONS, _prefix: true
+  enum how_many_after_school: HOW_MANY_OPTIONS, _prefix: true
+  enum how_many_10_hours: HOW_MANY_OPTIONS, _prefix: true
+  enum how_many_20_hours: HOW_MANY_OPTIONS, _prefix: true
+
+  ROLES = {
+    teacher: "TEACHER",
+    administrator: "ADMINISTRATOR",
+    parent: "PARENT",
+    volunteer: "VOLUNTEER",
+    other: "OTHER"
+  }.freeze
+
+  enum submitter_role: ROLES, _prefix: true
+
+  CLASS_FREQUENCIES = {
+    one_hour_per_week: 'ONE HOUR PER WEEK',
+    one_to_three_hours_per_week: 'ONE TO THREE HOURS PER WEEK',
+    three_plus_hours_per_week: 'THREE PLUS HOURS PER WEEK',
+    dont_know: "I DON'T KNOW"
+  }.freeze
+
+  enum class_frequency: CLASS_FREQUENCIES, _prefix: true
+
+  validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2017, less_than_or_equal_to: 2030}
+  validates :submitter_email_address, length: {maximum: 255}
+  validates :submitter_name, length: {maximum: 255}
+  validates :topic_other_description, length: {maximum: 255}
+  validates :tell_us_more, length: {maximum: 255}
 end
