@@ -35,5 +35,7 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-class HocCensus2017v3 < HocCensus2017v2
+class Census::HocCensus2017v1 < Census::CensusSubmission
+  validates :submitter_email_address, presence: true
+  validates :submitter_name, presence: true
 end

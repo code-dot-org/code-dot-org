@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CensusSubmissionTest < ActiveSupport::TestCase
+class Census::CensusSubmissionTest < ActiveSupport::TestCase
   test "basic census submission" do
     submission = build(:census_submission)
     assert submission.valid?, submission.errors.full_messages
