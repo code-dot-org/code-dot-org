@@ -26,6 +26,7 @@ class CoursesStudentEnglish extends Component {
           isRtl={isRtl}
           responsive={responsive}
           showContainer={true}
+          hideBottomMargin={false}
         />
 
         <ContentContainer
