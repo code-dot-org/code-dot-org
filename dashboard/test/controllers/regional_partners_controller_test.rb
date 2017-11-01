@@ -65,4 +65,13 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     patch :update, params: {id: @regional_partner.id, regional_partner: {name: 'Updated Name'}}
     assert_equal @regional_partner.reload.name, 'Updated Name'
   end
+
+  test 'assign program manager creates regional partner program manager' do
+    workshop_organizer = create :workshop_organizer
+    sign_in @workshop_admin
+    assert_creates RegionalPartnerProgramManager do
+      post :assign_program_manager, params: {id: @regional_partner.id, email: workshop_organizer.email}
+    end
+    assert @regional_partner.program_managers.exists?(workshop_organizer.id)
+  end
 end

@@ -406,6 +406,7 @@ ActiveRecord::Schema.define(version: 20171026213234) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "course"
+    t.text     "response_scores",     limit: 65535,              comment: "Scores given to certain responses"
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
     t.index ["course"], name: "index_pd_applications_on_course", using: :btree
@@ -878,18 +879,20 @@ ActiveRecord::Schema.define(version: 20171026213234) do
   end
 
   create_table "schools", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "id",                 limit: 12, null: false, comment: "NCES public school ID"
+    t.string   "id",                 limit: 12,                         null: false, comment: "NCES public school ID"
     t.integer  "school_district_id"
-    t.string   "name",                          null: false
-    t.string   "city",                          null: false
-    t.string   "state",                         null: false
-    t.string   "zip",                           null: false
-    t.string   "school_type",                   null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.string   "address_line1",      limit: 50,              comment: "Location address, street 1"
-    t.string   "address_line2",      limit: 30,              comment: "Location address, street 2"
-    t.string   "address_line3",      limit: 30,              comment: "Location address, street 3"
+    t.string   "name",                                                  null: false
+    t.string   "city",                                                  null: false
+    t.string   "state",                                                 null: false
+    t.string   "zip",                                                   null: false
+    t.string   "school_type",                                           null: false
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
+    t.string   "address_line1",      limit: 50,                                      comment: "Location address, street 1"
+    t.string   "address_line2",      limit: 30,                                      comment: "Location address, street 2"
+    t.string   "address_line3",      limit: 30,                                      comment: "Location address, street 3"
+    t.decimal  "latitude",                      precision: 8, scale: 6,              comment: "Location latitude"
+    t.decimal  "longitude",                     precision: 9, scale: 6,              comment: "Location longitude"
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree

@@ -3730,7 +3730,7 @@ en:
             Clean Code and Debugging:
               name: Clean Code and Debugging
               description_student: In this lesson covers common issues that arise when designing web pages in HTML. The class will correct errors in a sequence of increasingly complex web pages found on Code Studio and learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read.
-              description_teacher: In this lesson students will deal with common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages found on Code Studio. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
+              description_teacher: Students deal with common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             Multi-Page Websites:
@@ -3764,9 +3764,7 @@ en:
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: This lesson introduces CSS as a way to style elements on the page. The class learns the basic syntax for CSS rule-sets and then explores properties that impact HTML text elements.  Finally, everyone applies text styles to their personal websites.
-              description_teacher: |+
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.
-
+              description_teacher: "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r\n\r\n"
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.
@@ -3794,11 +3792,11 @@ en:
             Intellectual Property and Images:
               name: Intellectual Property and Images
               description_student: This lesson covers how to use media such as images, video, or music created by others a website while respecting the rights of the creator of that media. After first studying Creative Commons licensing, the class learns how to add images to web pages, and how to give proper attribution when doing so.
-              description_teacher: "Starting with an exploration of the song \"Happy Birthday\" and its history of copyright protection, the class explores the purpose and role of copyright for both creators and users of creative content. After a brief discussion about the purpose of copyright, we move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \n\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students will learn how to add images to their web pages using the &lt;img&gt; tag."
+              description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r\n\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web developers to connect pages together into one website.  The class will link together all the previous pages into one project, and create navigation bars for each page before publishing the entire site to the Web.  '
-              description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \n\n"
+              description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r\n\r\n"
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
@@ -3806,10 +3804,11 @@ en:
             Project - Personal Portfolio Website:
               name: Project - Personal Portfolio Website
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+              description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
             Headings:
               name: Headings
+              description_student: This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -4579,6 +4578,16 @@ en:
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5386,8 +5395,8 @@ en:
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              name: Nested Loops in Artist
+              description_student: Here you will be using nested loops to make cool drawings to show to your family and friends.
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
@@ -5922,7 +5931,7 @@ en:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist (UPDATED)
+              name: Loops in Artist
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -6171,6 +6180,10 @@ en:
               name: Intro to AppLab - Your First App 2
             Intro to AppLab - Your First App 3:
               name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -6571,6 +6584,8 @@ en:
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -6663,7 +6678,65 @@ en:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Chapter 1 Assessment
-          title: CSP 3 New Stuff
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
+        pwc:
+          stages:
+            new stage:
+              name: new stage
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+          title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
-          description: "Place to stage proposed changes and additions to csp3.\r\n***\r\nNOTE: included the SFLP for each lesson to populate the script - but those are the LIVE SFLPs!!!!!.  If you want to change, make a copy first."
+          description: ''
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
+          title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''

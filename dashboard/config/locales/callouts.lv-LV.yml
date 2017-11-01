@@ -471,6 +471,9 @@
         snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: This little instruction tells the computer to run the
+          BIG chunk of code with the same name in the workspace.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
           into categories.  Click on these words to see where everything went!
@@ -505,11 +508,31 @@
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
-      MC_HOC_2017_01_Cole_callout: []
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Use the arrow keys or click here to start moving the
+          player.
       MC_HOC_2017_01_Kiki_callout: []
+      MC_HOC_2017_02_Cole_callout: []
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for
+          the Agent to help get you through the levels.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace
+          and add code that you want to run over and over.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to
           repeat it over and over again!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit
+          them!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -645,10 +668,19 @@
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
           You don't have to check for honeycombs at all.
+      SG Add Subgoals practice_callout: []
+      SG U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
+      SG U3L2 Using Simple Commands part 1_callout: []
       SG U3L2 Using Simple Commands_callout: []
-      SG U3L2_Turtle3by3Grid_callout: []
+      SG U3L2_Add-subgoals_callout: []
+      SG U3L2_Turtle3by3Grid_callout:
+        pen_functions: penUp and penDown are here now if you want to use them.
+        goals_tab: drag goals out from here
       SG U3L2_TurtleSquare_right_callout: []
-      SGU3L2A Introducing Subgoals_callout: []
+      SGU3L2A Introducing Subgoals_callout:
+        goals_palette_show: Here is a list of subgoals
+        goals_workspace: Example of code with subgoals in it
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right
           side
@@ -677,6 +709,8 @@
       U3 Variables make a square_callout: []
       U3L05_3x3GridEfficiencyChallenge_callout: []
       U3L05_draw3x3GridEfficiently_callout: []
+      U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
       U3L2 Using Simple Commands (no tooltips)_callout: []
       U3L2 Using Simple Commands_callout: []
       U3L2_Turtle3by3Grid_callout: []
@@ -774,6 +808,23 @@
         gradek_adventurer_loops2_1: This number tells you how many of these blocks
           you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: []
+      courseA_collector_preLoops1_callout:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
+      courseA_collector_preLoops2_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops3_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops4_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops5_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops6_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
       courseA_forVideoTest_artist_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
@@ -781,8 +832,8 @@
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseA_maze_seq4_callout:
-        courseA_maze_seq4_1: These blocks are made of stone.  You can move them, but
-          you can't delete them!
+        made_of_stone: These blocks are made of stone.  You can move them, but you
+          can't delete them!
       courseA_maze_seq4a_callout: []
       courseA_playLab_events2_callout: []
       courseA_playLab_events3_callout: []
@@ -855,8 +906,7 @@
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step
-          through the program. This will help you find the bug!
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -930,8 +980,7 @@
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step
-          through the program. This will help you find the bug!
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1012,7 +1061,12 @@
         courseE_artist_ramp8_1: You can change this number.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
+      courseE_artist_ramp8_2_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
+          your code.
       courseE_artist_ramp9_callout: []
+      courseE_artist_ramp9_2_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -1165,7 +1219,8 @@
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
           into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: []
-      courseF_bee_for4_callout: []
+      courseF_bee_for4_callout:
+        courseF_bee_for4_1: You will find the `for` loop in here!
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
@@ -1183,6 +1238,8 @@
       courseF_bee_functions_challenge2_callout: []
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp2_callout:
+        courseF_bee_fwp2_a: The block that calls your function lives in here.
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty
           spaces as well as clouds.
@@ -1235,7 +1292,8 @@
         courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_variables6c_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
-      courseF_playlab_variables7c_callout: []
+      courseF_playlab_variables7c_callout:
+        courseF_playlab_variables7c_1: Find the `ask` block here!
       courseF_playlab_variables8c_callout: []
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.

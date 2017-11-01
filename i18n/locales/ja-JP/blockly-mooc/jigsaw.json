@@ -1,10 +1,10 @@
 {
-  "continue":"続行",
-  "nextLevel":"おめでとうございます ！このパズルを完了しました。",
-  "no":"いいえ",
-  "numBlocksNeeded":"このパズルは%1個のブロックで解けます。",
-  "reinfFeedbackMsg":"\"やり直す\" ボタンを押すと、ゲームに戻ります。",
-  "share":"シェアする",
-  "shareGame":"あなたのゲームを共有：",
-  "yes":"はい"
+  "continue": "続行",
+  "nextLevel": "おめでとうございます ！このパズルを完了しました。",
+  "no": "いいえ",
+  "numBlocksNeeded": "このパズルは%1個のブロックで解けます。",
+  "reinfFeedbackMsg": "\"やり直す\" ボタンを押すと、ゲームに戻ります。",
+  "share": "シェアする",
+  "shareGame": "あなたのゲームを共有：",
+  "yes": "はい"
 }
