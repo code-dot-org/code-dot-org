@@ -9,15 +9,15 @@ nn:
     errors:
       messages:
         blank: "er påkreva"
-        blank_plural: "må fylles ut"
+        blank_plural: "må fyllast ut"
         invalid_plural: "er ugyldig"
     attributes:
       user:
         name: 'Vis namn'
-        name_example: 'Kallenavn<br/>(f.eks Kule Knut eller Tøffe Trine)'
+        name_example: 'Kallenamn<br/>(f.eks Kule Knut eller Tøffe Trine)'
         email: 'E-post'
-        parent_email: 'Foreldre/foresatt epost'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Epost til foreldre/føresette'
+        personal_email: "Personleg epostadresse<a href=\"%{url}\">(klikk her om du ikkje har ei epostadresse)</a>"
         username: 'Brukarnamn'
         password: 'Passord'
         password_confirmation: 'Stadfesting av passord'
@@ -32,7 +32,7 @@ nn:
   welcome_back: "Velkommen attende, %{name}"
   your_professional_learning_plan: "Læringsplanen din"
   see_your_learning_plan: "Sjå læringsplanen din"
-  submit: Send
+  submit: Send inn
   unsubmit: Trekk tilbake
   previous_page: Forrige side
   next_page: Neste side
@@ -59,7 +59,7 @@ nn:
   courses: 'Kurs'
   courses_page:
     title_student: "Lær i Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Undervis med Code Studio"
   unplugged_activity: 'Aktivitet utan datamaskinar'
   of: "av"
   more: "MEIR"
@@ -84,7 +84,7 @@ nn:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
-    clever: 'Clever Account'
+    clever: 'Smartkonto'
     forgot_password: 'Har du gløymt passordet ditt?'
     need_confirmation: "Har du ikkje motteke instruksjonar om korleis du stadfester?"
     need_unlock: "Har du ikkje motteke instruksjonar om korleis du låser opp?"
@@ -95,7 +95,7 @@ nn:
     teacher_count: '%{count} lærarar har allereie registrert seg.'
     overview: 'Registrer deg for å følgje fremdrifta din eller administrere klasserommet. <a href="/">Du kan bla gjennom dei ulike scenane og oppgåvene</a> utan ein konto, men du må registrere deg for å lagre framgang og prosjekt.'
     hoc_already_signed_up_heading: 'Kom i gong utan å logge inn'
-    hoc_already_signed_up_content: 'Du er påmeldt Kodetimen! De treng ikkje å logge inn i Code Studio for å delta. For å kome i gong, <a href="https://code.org/learn">velg eit oppgåvesett</a> til klasserommet ditt, og del lenkja med elevane.<br/><br/>Om de likte Kodetimen og ønskjer å kode meir, kan de opprette kontoar i Code Studio og la elevane jobbe med dei <a href="https://code.org/educate">lengre kursa</a>.'
+    hoc_already_signed_up_content: 'Du er påmeldt til Kodetimen! De treng ikkje å logge inn i Code Studio for å delta. For å komme i gang, <a href="%{learn_url}">velg eit oppgåvesett</a> til klasserommet ditt, og del lenkja med elevane.<br/><br/>Om de likte Kodetimen og ønskjer å kode meir, kan de opprette kontoar i Code Studio og la elevane jobbe med dei <a href="%{educate_url}">lengre kursa</a>.'
     hoc_already_signed_up_content_post_hoc: 'Takk for at du arrangerer Kodetimen. For å logge inn på Code Studio, trenger du å lage et passord til kontoen din. Dette vil la deg lagre fremgangen din og styre klasserommet. Du vil ha mulighet til å tilordne kurs til elever og se fremgangen. <a href="%{studio_url}">Du kan også fortsette å bla i de forskjellige nivåene og oppgavene</a> uten å lage en konto.'
     teacher_educator_guide: 'Sjå veiledning for lærar'
     title: "Registrer deg på Code.org"
@@ -122,31 +122,32 @@ nn:
     user_type_student: "Elev"
     field_is_required: "er påkreva"
     accept_terms: "Du må gå med på å opprette ein konto"
+    error: "An error occurred."
   school_info:
-    title: 'School Information (optional)'
-    school_country: 'School Country'
-    select_school_type: 'School Type'
+    title: 'Informasjon til skulen (valfritt)'
+    school_country: 'Landet til skulen'
+    select_school_type: 'Type skule'
     charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
+    private: 'Privat'
+    public: 'Offentleg'
     homeschool: 'Homeschool'
     after_school: 'After School'
     other: 'Anna'
-    state: 'State'
-    district: 'District'
+    state: 'Fylke'
+    district: 'Distrikt'
     other_district_not_listed: 'Other district not listed above'
     district_name: 'District Name'
-    school: 'School'
-    other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
-    school_zip: 'School Zip Code'
-    school_address: 'School Address'
-    school_organization_name: 'School/Organization Name'
+    school: 'Skule'
+    other_school_not_listed: 'Anna skule som ikkje er lista opp'
+    school_name: 'Namn på skule'
+    school_zip: 'Postnummer til skulen'
+    school_address: 'Adressa til skulen'
+    school_organization_name: 'Namn på skule eller organisasjon'
     school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Har du alt ein konto? Logg på'
     login: 'E-post'
-    login_username: 'Email or Username'
+    login_username: 'Epost eller brukarnamn'
     password: 'Passord'
     remember: 'Hugs meg'
     submit: 'Logg inn'
@@ -166,9 +167,9 @@ nn:
   password:
     reset_form:
       title: 'Har du gløymt passordet ditt?'
-      instructions: "Legg inn epostadressen din nedanfor, så sender vi instruksar om korleis du lagar nytt passord."
+      instructions: "Legg inn epostadressa di nedanfor, så sender vi instruksar om korleis du lagar nytt passord."
       email: 'E-postadresse'
-      submit: 'Send'
+      submit: 'Send inn'
     reset_errors:
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
@@ -189,7 +190,7 @@ nn:
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Velkommen til Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -202,8 +203,8 @@ nn:
       picture: 'Picture Password'
       word: 'Secret Words'
       email: 'E-post'
-      google_classroom: 'Google Classroom'
-      clever: 'Clever'
+      google_classroom: 'Google Klasserom'
+      clever: 'Lur'
   follower:
     invite_sent: 'Invitasjon er sendt'
     added_teacher: '%{name} er lagt til som læraren din'
@@ -229,7 +230,7 @@ nn:
     edit: 'Rediger'
     edit_model: 'Rediger %{model}'
     update: 'Oppdater'
-    submit: 'Send'
+    submit: 'Send inn'
     destroy: 'Ødelegg'
     back: 'Tilbake'
     confirm: 'Er du sikker?'
@@ -254,49 +255,49 @@ nn:
         applab: 'Lag ein app'
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
-      home: "Home"
-      my_dashboard: "My Dashboard"
+      home: "Heim"
+      my_dashboard: "Kontrollpanel"
       courses: "Kurs"
-      course_catalog: "Course Catalog"
+      course_catalog: "Kurskatalog"
       project_gallery: "Prosjekt"
-      sections: "Sections"
-      help_support: "Help and support"
-      report_bug: "Report bug"
-      teacher_community: "Teacher community"
-      professional_learning: "Professional Learning"
-      documentation: "Documentation"
+      sections: "Seksjonar"
+      help_support: "Hjelp og støtte"
+      report_bug: "Rapporter feil"
+      teacher_community: "Lærarforum"
+      professional_learning: "Profesjonell opplæring"
+      documentation: "Dokumentasjon"
       tutorials: "Tutorials"
       educate_overview: "Educator Overview"
-      educate_elementary: "Elementary School"
-      educate_middle: "Middle School"
-      educate_high: "High School"
+      educate_elementary: "Grunnskule"
+      educate_middle: "Ungdomsskule"
+      educate_high: "Vidaregåande skule"
       educate_hoc: "Kodetimen"
       educate_partner: "Partner with Us"
-      educate_beyond: "Beyond Code.org"
+      educate_beyond: "Utover Code.org"
       educate_inspire: "Inspire a Student"
-      educate_community: "Online Community"
-      educate_tools: "Tools and Videos"
-      about_us: "About Us"
-      about_leadership: "Leadership"
-      about_donors: "Donors"
-      about_partners: "Partners"
+      educate_community: "Nettforum"
+      educate_tools: "Verktøy og videoar"
+      about_us: "Om oss"
+      about_leadership: "Leiarskap"
+      about_donors: "Givarar"
+      about_partners: "Partnarar"
       about_team: "Full Team"
       about_news: "Newsroom"
-      about_evaluation: "Evaluation"
+      about_evaluation: "Evaluering"
       about_jobs: "Jobs"
-      about_contact: "Contact Us"
-      about_faqs: "FAQs"
+      about_contact: "Kontakt oss"
+      about_faqs: "Vanlege spørsmål"
       learn: "Learn"
       stats: "Statistikk"
-      help_us: "Help Us"
+      help_us: "Hjelp oss"
       teach: "Teach"
-      about: "About"
+      about: "Om"
     user:
-      classroom: 'Lærar heimeside'
+      classroom: 'Side for lærarar'
       district_dashboard: 'Distrikt dashboard'
       label: 'Hei %{username}'
       stats: 'Framgangen min'
-      settings: 'Kontoen min'
+      settings: 'Kontoinnstillingar'
       logout: 'Logg ut'
       signin: 'Logg inn'
       signup: 'Opprett ein konto'
@@ -328,7 +329,7 @@ nn:
     students:
       dashboard: 'Gå til læraren sitt oversyn'
     user_not_found: 'Læraren blei ikkje funnen.'
-    student_teacher_disassociated: 'Du har fjerna %{teacher_name} som din lærar.'
+    student_teacher_disassociated: 'Du har fjerna seksjonen %{section_code} frå %{teacher_name}.'
     panel:
       answer_viewer: 'Lærarpanel'
       student: 'Elev'
@@ -353,13 +354,13 @@ nn:
     delete_text: "Klikk på knappen under for å sletta kontoen din."
     delete_text_teacher_note: 'Merk: Du vil ikkje slette nokon av elevane dine sine kontoar ved å slette din eigen konto.'
     delete_confirm: 'Er du sikker på at du vil sletta kontoen din?'
-    deleted_user: 'slettet bruker'
+    deleted_user: 'sletta brukar'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
+    create_personal_login_under_13_username: "Brukarnamn (ikkje bruk ditt verkelege namn!)"
+    create_personal_login_under_13_parent_email: 'Epost til foreldre/føresette'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
@@ -406,7 +407,7 @@ nn:
     heading_hoc2014: "<h2>Kodetimen for</h2><h1>Alle aldre</h1>"
     heading_elementary: "<h2>20-timers kurs for</h2><h1>nybyrjarar (alle aldre)</h1>"
     heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Klar for neste trinn?</h2><h1>JavaScript-verktøy for vidaregåande skule</h1>"
+    heading_tools: "<h2>Klar for neste trinn?</h2><h1>Verktøy for vidaregåande skule</h1>"
     heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>"
     your_gallery: Galleri
     no_primary_course: "Prøv eit kurs frå Code Studio"
@@ -446,7 +447,7 @@ nn:
     student_ids_not_entered: "Ver vennleg å oppgi student_ids."
     student_not_found: "Kunne ikkje finne ein eller fleire elevar."
     all_students_must_be_in_current_section: "Alle elevar må vere registert i di gruppe."
-    already_enrolled_in_new_section: "Du kan ikkje flytte desse elevane fordi denne læraren allereie har dei i ei anna gruppe."
+    already_enrolled_in_new_section: "Du kan ikkje flytte desse elevane fordi dei allereie er i den nye seksjonen."
   share:
     title: "Lær i Code Studio"
     description: "Alle kan lære programmering. Lag spel, appar og kunst med kode."
@@ -470,7 +471,7 @@ nn:
     copyright: 'Opphavsrett'
     more: 'Meir'
     feedback: 'Gi tilbakemelding'
-    translate: 'Hjelp oss med å omsetje til ditt språk'
+    translate: 'Meld deg som frivillig til å omsette innhaldet vårt'
     support: 'Brukarstøtte'
     support_url: 'http://support.code.org/'
     tos_short: 'Vilkår for bruk'
@@ -480,13 +481,13 @@ nn:
     report_abuse: 'Rapporter misbruk'
     built_on_code_studio: 'Bygd i Code Studio'
     make_my_own_app: 'Lag min eigen app'
-    how_it_works: 'Slik virker det'
+    how_it_works: 'Slik fungerer det (vis kode)'
     try_hour_of_code: 'Prøv en Kodetime!'
   reference_area:
     title: 'Trenger du hjelp?'
     subtitle: 'Sjå desse videoane og tipsa'
     teacher: 'Sjå løysinga'
-    teacher_no_solution: 'Stop seeing solution'
+    teacher_no_solution: 'Slutt å sjå løysinga'
     auth_error: 'Du er ikkje autorisert til å sjå løysinga.'
     submit: 'Endre startposisjonen for artisten'
     direction: 'Startkurs (i grader)'
@@ -496,8 +497,8 @@ nn:
     notes_coming_soon: 'Forklaringar til denne videoen kjem snart.'
     autoplay_option: 'Automatisk visning av videoar'
     download: 'Last ned video'
-    show_notes: 'Show Notes'
-    show_video: 'Show Video'
+    show_notes: 'Vis notat'
+    show_video: 'Vis video'
   compatibility:
     upgrade:
       unsupported_message: "Nettleseran din blir ikkje støtta. Ver vennleg å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein nettlesar vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at noko ikkje vil virke slik det er meint."
@@ -562,7 +563,7 @@ nn:
       title: "Galleri"
       body: "Sjå eit galleri av app- og artist-bilder laga av brukarane våre"
     gamelab:
-      title: "Spill-lab"
+      title: "Spel lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Alder 13+"
       cta: "Lær korleis"
@@ -624,8 +625,8 @@ nn:
     support: "Få hjelp"
     support_url: "//support.code.org"
     help_resources: "Hjelp og oppslagsverk"
-    help_support: "Help and support"
-    documentation: "Documentation"
+    help_support: "Hjelp og støtte"
+    documentation: "Dokumentasjon"
     tutorials: "Tutorials"
   multi:
     wrong_title: "Feil svar"
@@ -729,7 +730,7 @@ nn:
         other: Anna
       - 
         opt_out: Ynskjer ikkje å svare
-    submit: "Send"
+    submit: "Send inn"
     decline: "Lukk"
   zendesk_too_young_message: 'Beklager, yngre brukarar kan ikkje logge inn på nettstaden for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be ein forelder eller lærer om å kontakte oss for deg.'
   progress:
@@ -752,11 +753,15 @@ nn:
     rename: "Gje nytt navn"
     save: "Lagre"
     delete: "Slett"
-    import: "Import"
+    import: "Importér"
+    share_link_import_bad_link_header: "Share link not recognized"
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_error_header: "Something went wrong."
+    share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Attende til kurset"
     my_projects: "Mine prosjekt"
     project_gallery: "Prosjekt"
-    publish: "Publish"
+    publish: "Publisér"
     unpublish: "Unpublish"
     share: "Del"
     share_title: Del prosjektet ditt
@@ -837,12 +842,12 @@ nn:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: 'Hovedkurs'
+    extra_course_content: 'Ekstra kursinnhald'
     csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
+    csf_e_2: 'Kursinnhald E'
     csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
+    csf_f_2: 'Kursinnhald F'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
@@ -856,16 +861,16 @@ nn:
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
     csp2_2: 'Chapter 2: Manipulating and Visualing Data'
     csp3_1: 'Chapter 1: Programming Languages and Algorithms'
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    cspSurvey: 'Undersøking'
+    cspAssessment: 'Vurdering av kapittel'
+    csp_ap_1: 'Kapittel 1: AP Tech oppsett'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
     dlp: 'Reflection Prompts'
@@ -895,7 +900,7 @@ nn:
     download_in_Croatian: 'Last ned på kroatisk:'
     download_in_Czech: 'Last ned på tsjekkisk:'
     download_in_Danish: 'Last ned på dansk:'
-    download_in_Dutch: 'Last ned på nederlansk:'
+    download_in_Dutch: 'Last ned på nederlandsk:'
     download_in_English: 'Last ned på engelsk:'
     download_in_Finnish: 'Last ned på finsk:'
     download_in_French: 'Last ned på fransk:'
@@ -938,10 +943,10 @@ nn:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Innhaldet på dette nivået er ikkje synleg fordi dette nivået er låst. Læraren kan låse opp dette stadiet når det er tid for å arbeide med den eller sjå på svara.'
   hidden_stage: "Læreraren din forventa ikkje at du kom hit. Ver vennleg og spør læraren din kva leksjon du skal vere på."
-  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
-  return_unit_overview: 'Go to unit overview'
+  hidden_script: "Læreraren din forventa ikkje at du kom hit. Ver venleg og spør læraren din kva leksjon du skal vere på."
+  return_unit_overview: 'Gå til oversikt over eininga'
   return_course_overview: 'Gå til oversikt over eininga'
-  view_all_units: 'View all units'
+  view_all_units: 'Sjå alle einingane'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -971,4 +976,4 @@ nn:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Alle kurs'

@@ -550,6 +550,7 @@ function getModeOptionFunctionsFromConfig(config, codeFunctions) {
 
     newFunc.dropdown = block.dropdown;
     newFunc.objectDropdown = block.objectDropdown;
+    newFunc.allowFunctionDrop = block.allowFunctionDrop;
     if (block.paramButtons) {
       newFunc.minArgs = block.paramButtons.minArgs;
       newFunc.maxArgs = block.paramButtons.maxArgs;
@@ -594,6 +595,7 @@ export function generateDropletModeOptions(config) {
       // errors: { },
     },
     lockZeroParamFunctions: config.level.lockZeroParamFunctions,
+    lockFunctionDropIntoKnownParams: config.lockFunctionDropIntoKnownParams,
     paramButtonsForUnknownFunctions: true
   };
 }

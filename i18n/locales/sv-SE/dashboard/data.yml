@@ -425,6 +425,7 @@ sv:
         'csd_concept_computer': 'How Computers Work: What Makes a Computer, a Computer?'
         'csd_concept_binary_data': 'How Computers Work: Binary & Data'
         'csd_concept_search': 'How Search Works'
+        'csd_external_amazon_data': 'How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives'
         'csd_gamelab_animation_tab': 'The Animation Tab'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
@@ -530,6 +531,9 @@ sv:
         'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
         'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
         'applab_hoc_share': 'AppLab Hour of Code - Share'
+        'mc_2017_agent_intro': 'Minecraft Hour of Code - The Agent'
+        'mc_2017_repeat': 'Minecraft Hour of Code - Repeat Loops'
+        'mc_2017_functions': 'Minecraft Hour of Code - Functions'
     callout:
       text:
         drag_blocks: 'Dra ett "gå framåt" block och fäst det under det andra blocket'

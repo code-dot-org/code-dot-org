@@ -154,6 +154,7 @@
     user_type_student: "учень"
     field_is_required: "необхідне"
     accept_terms: "Потрібно погодитись, щоб створити обліковий запис"
+    error: An error occurred.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -754,7 +755,7 @@
       title: "Галерея"
       body: "Переглянути галерею програм та художніх зображень, створених нашими користувачами"
     gamelab:
-      title: Game Lab (beta)
+      title: "Ігрова лабораторія"
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: "Вік 13+"
@@ -987,6 +988,13 @@
     save: "зберегти"
     delete: "Видалити"
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: "Повернутися до курсу"
     my_projects: "Мої проекти"
     project_gallery: "Проекти"

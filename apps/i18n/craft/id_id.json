@@ -1,6 +1,9 @@
 {
   "absolute": "mutlak",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "di",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "tambah",
   "blockActionAttack": "serangan",
   "blockActionClone": "duplikat blok",
@@ -231,6 +234,7 @@
   "quantity": "kuantitas",
   "reinfFeedbackMsg": "Kamu bisa menekan \"Tetap Main\" untuk kembali memainkan permainan kamu.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Skor",
   "seconds": "detik",
   "selectChooseButton": "Pilih",
@@ -286,9 +290,5 @@
   "weather": "cuaca",
   "weatherTypeClear": "cerah",
   "weatherTypeRain": "hujan",
-  "weatherTypeThunder": "guntur",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "guntur"
 }

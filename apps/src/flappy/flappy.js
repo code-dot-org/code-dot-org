@@ -23,6 +23,9 @@ import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
 import experiments from '../util/experiments';
+import placeholder from '../../static/flappy/placeholder.jpg';
+import {dataURIFromURI} from '../imageUtils';
+import {SignInState} from '../code-studio/progressRedux';
 
 /**
  * Create a namespace for the application.
@@ -697,20 +700,25 @@ Flappy.runButtonClick = function () {
  * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   if (!Flappy.waitingForReport) {
-    studioApp().displayFeedback({
-      app: 'flappy', //XXX
-      skin: skin.id,
-      feedbackType: Flappy.testResults,
-      response: Flappy.response,
-      level: level,
-      showingSharing: level.freePlay && level.shareable,
-      twitter: twitterOptions,
-      appStrings: {
-        reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
-        sharingText: flappyMsg.shareGame()
-      },
-      saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+    dataURIFromURI(placeholder).then(feedbackImageUri => {
+      studioApp().displayFeedback({
+        app: 'flappy', //XXX
+        skin: skin.id,
+        feedbackType: Flappy.testResults,
+        response: Flappy.response,
+        level: level,
+        showingSharing: level.freePlay && level.shareable,
+        twitter: twitterOptions,
+        appStrings: {
+          reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
+          sharingText: flappyMsg.shareGame()
+        },
+        saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+        feedbackImage: feedbackImageUri,
+        disableSaveToGallery: !isSignedIn,
+      });
     });
   }
 };
