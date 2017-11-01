@@ -4,6 +4,7 @@ import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES} from '../ApplicationConstants';
+import {isEmail} from '@cdo/apps/util/validator'
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
 const FACILITATOR_EMAIL = "facilitators@code.org";
@@ -133,9 +134,18 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
       formatErrors.zipCode = "Must be a valid zip code";
     }
 
+    console.log(data.alternateEmail);
+    console.log(isEmail(data.alternateEmail));
+
+    if (data.alternateEmail && isEmail(data.alternateEmail)) {
+      formatErrors.alternateEmail = "Must be valid email address";
+    }
+
     if (!UsPhoneNumberInput.isValid(data.phone)) {
       formatErrors.phone = "Must be a valid phone number including area code";
     }
+
+    console.log(formatErrors);
 
     return formatErrors;
   }
