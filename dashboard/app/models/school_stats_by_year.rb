@@ -47,6 +47,7 @@ class SchoolStatsByYear < ActiveRecord::Base
   belongs_to :school
 
   # Mapping of urban-centric locale code to community type.
+  # @see https://nces.ed.gov/programs/edge/geographicZCTA.aspx
   COMMUNITY_TYPE_MAP = {
     '11' => 'city_large',
     '12' => 'city_midsize',
