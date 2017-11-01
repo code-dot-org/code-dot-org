@@ -861,5 +861,14 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "開始教學",
   "yourSchoolTeacherDesc": "今天就開始教學，不需要電腦科學的經驗",
-  "yourSchoolTellUs": "告訴我們關於你的學校"
+  "yourSchoolTellUs": "告訴我們關於你的學校",
+  "announcementHeadingHOCiscoming": "The Hour of Code is coming",
+  "announcementDescriptionHOCiscoming": "Join us! Sign up your classroom for the Hour of Code, December 4-10.",
+  "congratsCertificateHeading": "You Earned a Certificate of Completion",
+  "congratsStudentHeading": "Students: Continue Learning Beyond an Hour",
+  "congratsTeacherHeading": "Teachers: Bring Computer Science to Your Classroom",
+  "projectGroupArtistAllProjects": "All Drawing Projects",
+  "projectGroupEventsAllProjects": "All Games with Events",
+  "projectGroupMinecraftAllProjects": "All Minecraft Projects",
+  "projectGroupPlaylabAllProjects": "All Play Lab Projects"
 }

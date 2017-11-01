@@ -861,5 +861,14 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Fortell oss om skolen din"
+  "yourSchoolTellUs": "Fortell oss om skolen din",
+  "announcementHeadingHOCiscoming": "The Hour of Code is coming",
+  "announcementDescriptionHOCiscoming": "Join us! Sign up your classroom for the Hour of Code, December 4-10.",
+  "congratsCertificateHeading": "You Earned a Certificate of Completion",
+  "congratsStudentHeading": "Students: Continue Learning Beyond an Hour",
+  "congratsTeacherHeading": "Teachers: Bring Computer Science to Your Classroom",
+  "projectGroupArtistAllProjects": "All Drawing Projects",
+  "projectGroupEventsAllProjects": "All Games with Events",
+  "projectGroupMinecraftAllProjects": "All Minecraft Projects",
+  "projectGroupPlaylabAllProjects": "All Play Lab Projects"
 }
