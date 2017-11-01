@@ -259,7 +259,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // Code.org Browser case: Native Node SerialPort>=4 is available on window.
     if (isNodeSerialAvailable()) {
      return new SerialPort(portName, {
-       autoOpen: true,
        baudRate: SERIAL_BAUD,
      });
     }
@@ -268,7 +267,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // app, implements SerialPort<4 API.
     return new ChromeSerialPort.SerialPort(portName, {
       baudRate: SERIAL_BAUD
-    }, true);
+    });
   }
 
   /**
