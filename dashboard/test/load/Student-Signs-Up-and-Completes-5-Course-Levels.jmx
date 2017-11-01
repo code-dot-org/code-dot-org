@@ -56,7 +56,7 @@
           <stringProp name="filename"></stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="script">def userNameSuffix = UUID.randomUUID().toString()
-def userName = &quot;LoadTest.Student.&quot; + userNameSuffix
+def userName = &quot;LoadTest.&quot; + userNameSuffix
 def userEmail = userName + &quot;@example.net&quot;
 
 vars.put(&quot;userName&quot;,userName)
