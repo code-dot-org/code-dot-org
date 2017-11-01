@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101011712) do
+ActiveRecord::Schema.define(version: 20171101014056) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -837,6 +837,7 @@ ActiveRecord::Schema.define(version: 20171101011712) do
     t.integer  "frl_eligible_total",                         comment: "Total of free and reduced-price lunch eligible"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "community_type",     limit: 16,              comment: "Urban-centric community type"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id", using: :btree
   end
 
