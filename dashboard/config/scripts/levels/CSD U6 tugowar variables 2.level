@@ -223,11 +223,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U6_movePlayer\",\r\n  \"callout_text\": \"Define movePlayer() here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"block_trigger\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"function movePlayer\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U6_movePlayer\",\r\n  \"callout_text\": \"Define movePlayer() here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"block_trigger\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"function movePlayer\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -225,10 +225,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "display_name": "Sample Program",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -861,5 +861,14 @@
   "yourSchoolParentDesc": "მოიმოქმედეთ რამე, რათა განავრცოთ კომპიუტერული მეცნიერება თქვენს სკოლასა ან უბანში",
   "yourSchoolTeacherButton": "სწავლების დაწყება",
   "yourSchoolTeacherDesc": "დაიწყეთ სწავლება დღესვე, გამოცდილება კომპიუტერულ მეცნიერებაში საჭირო არაა",
-  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება"
+  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება",
+  "announcementHeadingHOCiscoming": "The Hour of Code is coming",
+  "announcementDescriptionHOCiscoming": "Join us! Sign up your classroom for the Hour of Code, December 4-10.",
+  "congratsCertificateHeading": "You Earned a Certificate of Completion",
+  "congratsStudentHeading": "Students: Continue Learning Beyond an Hour",
+  "congratsTeacherHeading": "Teachers: Bring Computer Science to Your Classroom",
+  "projectGroupArtistAllProjects": "All Drawing Projects",
+  "projectGroupEventsAllProjects": "All Games with Events",
+  "projectGroupMinecraftAllProjects": "All Minecraft Projects",
+  "projectGroupPlaylabAllProjects": "All Play Lab Projects"
 }

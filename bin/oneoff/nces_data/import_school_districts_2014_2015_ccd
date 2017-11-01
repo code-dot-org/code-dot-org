@@ -17,6 +17,3 @@ AWS::S3.process_file('cdo-nces', '2014-2015/ccd/ccd_lea_029_1415_w_0216161ar.txt
     end
   end
 end
-
-tsv_file = SchoolDistrict.write_to_csv("#{Dir.tmpdir}/school_districts.tsv")
-CDO.log.info "Downloaded to: #{tsv_file}"

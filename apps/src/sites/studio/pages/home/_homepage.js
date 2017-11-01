@@ -52,11 +52,11 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingCoursesEFImprovements();
-  let announcementDescription = i18n.announcementDescriptionCoursesEFImprovements();
+  let announcementHeading = i18n.announcementHeadingHOCiscoming();
+  let announcementDescription = i18n.announcementDescriptionHOCiscoming();
   let announcementLink =
-    "http://teacherblog.code.org/post/165559168804/new-improvements-to-cs-fundamentals-courses-e-and";
-  let announcementId = "courses_e_f_improvements";
+    "https://hourofcode.com/#join";
+  let announcementId = "hoc_is_coming";
   let announcementType = "";
 
   // Optional override of teacher announcement.
