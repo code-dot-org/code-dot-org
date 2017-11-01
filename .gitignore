@@ -10,7 +10,7 @@
 .dropbox
 .tmputils
 .idea/
-/bin/i18n/crowdin_credentials.yml
+/bin/i18n/*_credentials.yml
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session

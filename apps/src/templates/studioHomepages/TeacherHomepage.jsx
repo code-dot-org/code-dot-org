@@ -53,7 +53,7 @@ export default class TeacherHomepage extends Component {
         {announcements.length > 0 && (
           <div>
             <Notification
-              type="bullhorn"
+              type={announcements[0].type || "bullhorn"}
               notice={announcements[0].heading}
               details={announcements[0].description}
               dismissible={false}

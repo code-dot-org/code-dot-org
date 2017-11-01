@@ -6,8 +6,10 @@ module Pd::Application
 
     def new
       # Block on production until we're ready to release and publicize the url
-      # TODO: Andrew - remove this line when we want to go live
-      return head :not_found if Rails.env.production?
+      # TODO: Andrew - remove this, and the associated Gatekeeper key, after we go live
+      if Rails.env.production? && !current_user.workshop_admin? && Gatekeeper.disallows('pd_facilitator_application')
+        return head :not_found
+      end
 
       return render :logged_out unless current_user
       return render :not_teacher unless current_user.teacher?

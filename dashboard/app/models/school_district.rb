@@ -25,6 +25,28 @@ class SchoolDistrict < ActiveRecord::Base
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
+  # Seeds all the data from the source file.
+  # @param force [Boolean] True to force seed, false otherwise.
+  def self.seed_all(force = false)
+    # use a much smaller dataset in environments that reseed data frequently.
+    school_districts_tsv = CDO.stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+    expected_count = `wc -l #{school_districts_tsv}`.to_i - 1
+    raise "#{school_districts_tsv} contains no data" unless expected_count > 0
+
+    # It takes approximately 30 seconds to seed config/school_districts.tsv.
+    # Skip seeding if the data is already present. Note that this logic will
+    # not re-seed data if the number of records in the DB is greater than or
+    # equal to that in the TSV file, even if the data is different.
+    if force || SchoolDistrict.count < expected_count
+      CDO.log.debug "seeding school districts (#{expected_count} rows)"
+      SchoolDistrict.transaction do
+        SchoolDistrict.find_or_create_all_from_tsv(school_districts_tsv)
+      end
+    end
+  end
+
+  # Seeds the data from the specified TSV file.
+  # @param filename [String] The TSV file.
   def self.find_or_create_all_from_tsv(filename)
     SchoolDistrict.merge_from_csv(filename) do |row|
       row.to_hash.symbolize_keys
