@@ -365,7 +365,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     icon: icon,
     defaultBtnSelector: defaultBtnSelector,
     onHidden: onHidden,
-    id: 'feedback-dialog'
+    id: 'feedback-dialog',
+    showXButton: !(options.app === 'gamelab' || options.app === 'applab'),
   });
 
   // Update the background color if it is set to be in special design.
@@ -1794,6 +1795,7 @@ function simulateClick(element) {
  * @param {function} options.onHidden
  * @param {string} options.id
  * @param {HTMLElement} options.header
+ * @param {boolean} options.showXButton
  */
 FeedbackUtils.prototype.createModalDialog = function (options) {
   var modalBody = document.createElement('div');
@@ -1832,7 +1834,8 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
     onKeydown: btn ? keydownHandler : undefined,
     autoResizeScrollableElement: elementToScroll,
     id: options.id,
-    header: options.header
+    header: options.header,
+    close: options.showXButton,
   });
 };
 
