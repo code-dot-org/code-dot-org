@@ -781,6 +781,7 @@ ActiveRecord::Schema.define(version: 20171101014056) do
     t.string   "zip",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name", "city"], name: "index_school_districts_on_name_and_city", type: :fulltext
     t.index ["state"], name: "index_school_districts_on_state", using: :btree
   end
 
