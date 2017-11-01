@@ -260,14 +260,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     if (isNodeSerialAvailable()) {
      return new SerialPort(portName, {
        autoOpen: true,
-       bitrate: SERIAL_BAUD,
+       baudRate: SERIAL_BAUD,
      });
     }
 
     // Code.org connector app case: ChromeSerialPort bridges through the Chrome
     // app, implements SerialPort<4 API.
     return new ChromeSerialPort.SerialPort(portName, {
-      bitrate: SERIAL_BAUD
+      baudRate: SERIAL_BAUD
     }, true);
   }
 
