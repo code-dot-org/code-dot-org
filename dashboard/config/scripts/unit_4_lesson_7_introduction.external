@@ -32,18 +32,18 @@ The modulo operation (or "clock arithmetic" as we call it in the lesson) is a re
 * (Optional) Video: Encryption & Public Keys (click through on Code Studio)
 	* You may have watched this video in another lesson.
 
-* (Optional)Activity Guide: [Public Key Bean Counting](https://docs.google.com/document/d/1l0KDF33-gWIssZGqfuHgD0QpF50Pdyqras46FeuNLgc)
+* (Optional) Public Key Bean Counting - Activity Guide ([PDF](https://docs.google.com/document/d/1l0KDF33-gWIssZGqfuHgD0QpF50Pdyqras46FeuNLgc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1l0KDF33-gWIssZGqfuHgD0QpF50Pdyqras46FeuNLgc/export?format=doc))
     * Use this if your teacher directs you to.
 
 * Widget: Modulo Clock (click through on code studio)
 
-* Activity Guide: [Multiplication + Modulo](https://docs.google.com/document/d/1JRWUKPl_3Pd6UUDub6aQ3hhUbb5HPioqJl2K4ipbRe0)
+* Multiplication + Modulo ([PDF](https://docs.google.com/document/d/1JRWUKPl_3Pd6UUDub6aQ3hhUbb5HPioqJl2K4ipbRe0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1JRWUKPl_3Pd6UUDub6aQ3hhUbb5HPioqJl2K4ipbRe0/export?format=doc))
+
 
 * Widget: Public Key Crypto Widget (click through on code studio)
 
-* (Optional)[Public Key Cryptography Recap](https://docs.google.com/document/d/1JpOnfsr4wZbEUXvpsN_b520NBt8Py6rSwp-uiDCa-VU)
-
-* Optional: <a href="https://docs.google.com/document/d/1c7UGv3Bc0GD0C1EhgSsXzKvzPRj41DcYpUjH8nK0O2c" target="_top">Handout: How Does Public Key Crypto Really Work?</a>
+* (Optional) Public Key Cryptography Recap - Handout ([PDF](https://docs.google.com/document/d/1JpOnfsr4wZbEUXvpsN_b520NBt8Py6rSwp-uiDCa-VU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1JpOnfsr4wZbEUXvpsN_b520NBt8Py6rSwp-uiDCa-VU/export?format=doc))
+* (Optional) How and Why Does the Public Key Crypto Really Work? - Resource ([PDF](https://docs.google.com/document/d/1c7UGv3Bc0GD0C1EhgSsXzKvzPRj41DcYpUjH8nK0O2c/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1c7UGv3Bc0GD0C1EhgSsXzKvzPRj41DcYpUjH8nK0O2c/export?format=doc))
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
