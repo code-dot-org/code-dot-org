@@ -6,6 +6,7 @@ import cookies from 'js-cookie';
 import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 import { getStore } from './redux';
 import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
+import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 
 /**
  * Attempt to replicate logic used that user_header.haml uses to populate the
@@ -13,13 +14,7 @@ import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
  * @returns {boolean}
  */
 export function getUserSignedInFromCookieAndDom() {
-  // Depend on user_header to set userNameCookieKey
-  if (!window.userNameCookieKey) {
-    console.error('userNameCookieKey not set');
-    return;
-  }
-
-  const val = cookies.get(window.userNameCookieKey);
+  const val = cookies.get(environmentSpecificCookieName('_shortName'));
   if (val) {
     return true;
   } else {
