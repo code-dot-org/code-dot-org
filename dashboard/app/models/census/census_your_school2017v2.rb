@@ -35,9 +35,13 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-# This version of the /yourschool census form added the school autocomplete dropdown.
-# There were no changes to the census questions so there is no additional logic here.
-# We just use this class the get a different type in the DB for tracking purposes.
+# This version of the /yourschool census form added a text field to describe what
+# you meant if you selected the "other" topic.
 #
-class Census::Census2017v3 < Census::Census2017v2
+class Census::CensusYourSchool2017v2 < Census::CensusYourSchool2017v1
+  validates :topic_other_description, presence: true, if: :require_other_description
+
+  def require_other_description
+    show_followup? && topic_other
+  end
 end

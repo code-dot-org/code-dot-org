@@ -35,13 +35,10 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-# This version of the /yourschool census form added a text field to describe what
-# you meant if you selected the "other" topic.
+# This class represents submissions from the Hour of Code signup page
+# after the school autocomplete dropdown was added. Census questions were
+# not modified so no new logic is needed. We just need a new class to get
+# a new type in the DB.
 #
-class Census::Census2017v2 < Census::Census2017v1
-  validates :topic_other_description, presence: true, if: :require_other_description
-
-  def require_other_description
-    show_followup? && topic_other
-  end
+class Census::CensusHoc2017v3 < Census::CensusHoc2017v2
 end

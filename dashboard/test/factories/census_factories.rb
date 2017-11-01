@@ -77,7 +77,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :census2017v1, parent: :census_submission, class: Census::Census2017v1 do
+  factory :census_your_school2017v1, parent: :census_submission, class: Census::CensusYourSchool2017v1 do
     submitter_email_address "parent@school.edu"
 
     trait :requiring_followup do
@@ -85,24 +85,24 @@ FactoryGirl.define do
     end
   end
 
-  factory :census2017v2, parent: :census2017v1, class: Census::Census2017v2 do
+  factory :census_your_school2017v2, parent: :census_your_school2017v1, class: Census::CensusYourSchool2017v2 do
     trait :requiring_other_description do
       topic_other true
       requiring_followup
     end
   end
 
-  factory :census2017v3, parent: :census2017v2, class: Census::Census2017v3 do
+  factory :census_your_school2017v3, parent: :census_your_school2017v2, class: Census::CensusYourSchool2017v3 do
   end
 
-  factory :hoc_census2017v1, parent: :census_submission, class: Census::HocCensus2017v1 do
+  factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
     submitter_email_address "hoc@email.address"
     submitter_name "Hoc Submitter"
   end
 
-  factory :hoc_census2017v2, parent: :hoc_census2017v1, class: Census::HocCensus2017v2 do
+  factory :census_hoc2017v2, parent: :census_hoc2017v1, class: Census::CensusHoc2017v2 do
   end
 
-  factory :hoc_census2017v3, parent: :hoc_census2017v2, class: Census::HocCensus2017v3 do
+  factory :census_hoc2017v3, parent: :census_hoc2017v2, class: Census::CensusHoc2017v3 do
   end
 end
