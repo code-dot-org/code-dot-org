@@ -551,7 +551,6 @@ module LevelsHelper
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
-    app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
       fallback_response: @fallback_response,
       callback: @callback,
