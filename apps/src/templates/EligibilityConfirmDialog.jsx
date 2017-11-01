@@ -1,4 +1,4 @@
-/** @file Maker Board setup checker */
+/** @file Confirm Dialog for Maker Discount Codes */
 import React, {Component} from 'react';
 import i18n from "@cdo/locale";
 import BaseDialog from "./BaseDialog";
