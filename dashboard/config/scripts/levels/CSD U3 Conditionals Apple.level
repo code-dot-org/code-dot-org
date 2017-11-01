@@ -91,8 +91,8 @@
     "expand_debugger": "true",
     "watchers_prepopulated": "[\"apple.scale\"]",
     "encrypted_examples": "RbHUch7BxbgkpSrOJH5P3HUPGx5t/YPfRzfVUJlbcCKeJzXs2VoXx+bWYsZu\ncnZLm5YlNHzhukTsXsV+rTKOBA==\n",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
