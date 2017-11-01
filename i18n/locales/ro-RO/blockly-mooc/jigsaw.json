@@ -1,10 +1,10 @@
 {
-  "continue":"Continuă",
-  "nextLevel":"Felicitări! Ai finalizat acest puzzle.",
-  "no":"Nu",
-  "numBlocksNeeded":"Acest puzzle poate fi rezolvat cu %1 blocuri.",
-  "reinfFeedbackMsg":"Poţi apăsa butonul \"Încercați din nou\" pentru a reveni să joci jocul tău.",
-  "share":"Distribuie",
-  "shareGame":"condivide jocul tău:",
-  "yes":"Da"
+  "continue": "Continuă",
+  "nextLevel": "Felicitări! Ai finalizat acest puzzle.",
+  "no": "Nu",
+  "numBlocksNeeded": "Acest puzzle poate fi rezolvat cu %1 blocuri.",
+  "reinfFeedbackMsg": "Poţi apăsa butonul \"Încercați din nou\" pentru a reveni să joci jocul tău.",
+  "share": "Distribuie",
+  "shareGame": "condivide jocul tău:",
+  "yes": "Da"
 }

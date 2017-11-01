@@ -158,6 +158,7 @@
     user_type_student: Schüler
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
+    error: An error occurred.
   school_info:
     title: Schulinformationen (optional)
     school_country: Land der Schule
@@ -1018,6 +1019,13 @@
     save: Speichern
     delete: Löschen
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: Zurück zum Kurs
     my_projects: Meine Projekte
     project_gallery: Projekte

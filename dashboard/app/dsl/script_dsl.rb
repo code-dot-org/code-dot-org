@@ -50,13 +50,20 @@ class ScriptDSL < BaseDSL
   end
 
   def stage(name, properties = {})
-    @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
+    if @stage
+      @stages << {
+        stage: @stage,
+        scriptlevels: @scriptlevels,
+        stage_extras_disabled: @stage_extras_disabled,
+      }.compact
+    end
     @stage = name
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
     @scriptlevels = []
     @concepts = []
     @skin = nil
+    @stage_extras_disabled = nil
   end
 
   def parse_output
@@ -180,6 +187,10 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel = nil
   end
 
+  def no_extras
+    @stage_extras_disabled = true
+  end
+
   def i18n_strings
     i18n_strings = {}
     @stages.each do |stage|
@@ -264,6 +275,7 @@ class ScriptDSL < BaseDSL
           s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
         end
       end
+      s << 'no_extras' if stage.stage_extras_disabled
       s << ''
     end
     s.join("\n")

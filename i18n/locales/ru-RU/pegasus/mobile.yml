@@ -535,6 +535,8 @@
   volunteer_engineer_submission_type_task_remote: "Я хочу пригласить вас на конференцию в Skype со своим классом для воодушевление учеников"
   volunteer_engineer_submission_type_task_mentor: "Я ищу наставника, который поможет мне подготовиться к программированию с моими учениками"
   petition_age: "Возраст"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Узнать больше"
   dashboard_landing_title: "Домашняя страница преподавателя"
   dashboard_landing_welcome: "Добро пожаловать в новый, улучшенный личный кабинет преподавателя."
   dashboard_landing_video: "Посмотрите это видео"

@@ -1,6 +1,9 @@
 {
   "absolute": "модуль",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "в",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "добавить",
   "blockActionAttack": "атакует",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "количество",
   "reinfFeedbackMsg": "Вы можете нажать \"Продолжаем играть\" и вернуться к игре.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Счет",
   "seconds": "second(s)",
   "selectChooseButton": "Выбрать",
@@ -286,9 +290,5 @@
   "weather": "погода",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "дождь",
-  "weatherTypeThunder": "гром",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "гром"
 }

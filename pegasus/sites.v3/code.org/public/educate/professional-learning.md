@@ -38,7 +38,7 @@ Our [middle and high school programs](/files/PLProgramsOverview_1-Pager.pdf) off
 For educators in 6th - 10th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.
 
 <br>
-<a href="/educate/professional-learning/cs-discoveries"><button>Learn more</button>
+<a href="/educate/professional-learning/cs-discoveries"><button>Professional Development for 6-10th grade</button>
 
 </div>
 
@@ -49,7 +49,7 @@ For educators in 6th - 10th grade classrooms, our Computer Science Discoveries c
 If you're teaching 9th - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course -- no prerequisites required. The course is designed to be far more than a traditional introduction to programming. It is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
 <br>
-<a href="/educate/professional-learning/cs-principles"><button>Learn more</button>
+<a href="/educate/professional-learning/cs-principles"><button>Professional Development for 9-12th gade</button>
 
 </div>
 

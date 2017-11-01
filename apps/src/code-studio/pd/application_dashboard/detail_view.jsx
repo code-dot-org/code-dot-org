@@ -14,30 +14,35 @@ import DetailViewContents from './detail_view_contents';
 export default class DetailView extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
-  }
+  };
 
   static propTypes = {
     params: PropTypes.shape({
       applicationId: PropTypes.string.isRequired
     }).isRequired
-  }
+  };
 
   state = {
     loading: true
-  }
+  };
 
   componentWillMount() {
     this.loadRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/pd/applications/${this.props.params.applicationId}`
     }).done(data => {
-      const formData = JSON.parse(data.form_data);
       this.setState({
-        data: Object.assign({}, data, {formData: formData}),
+        data,
         loading: false
       });
     });
   }
+
+  updateData = (newProps) => {
+    this.setState({
+      data: Object.assign(this.state.data, newProps)
+    });
+  };
 
   render() {
     if (this.state.loading) {
@@ -48,6 +53,7 @@ export default class DetailView extends React.Component {
           <DetailViewContents
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
+            updateProps={this.updateData}
           />
         )
       );

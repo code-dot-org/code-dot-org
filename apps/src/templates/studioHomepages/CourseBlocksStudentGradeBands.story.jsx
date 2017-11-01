@@ -14,6 +14,7 @@ export default storybook => storybook
         <CourseBlocksStudentGradeBands
           isRtl={false}
           responsive={responsive}
+          showContainer={true}
         />
       )
     },

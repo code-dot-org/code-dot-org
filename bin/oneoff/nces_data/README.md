@@ -5,9 +5,9 @@ collects survery results for schools and districts.
 
 ## What tables need updating?
 
-* `school_districts`, contains the directory of public/charter school districts
-* `schools`, contains the directory of public/charter/private schools
-* `school_stats_by_years`, contains data regarding enrollment and grade levels
+* [school_districts](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/models/school_district.rb), contains the directory of public/charter school districts
+* [schools](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/models/school.rb), contains the directory of public/charter/private schools
+* [school_stats_by_years](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/models/school_stats_by_year.rb), contains data regarding enrollment and grade levels
 
 ## NCES Data Directories
 

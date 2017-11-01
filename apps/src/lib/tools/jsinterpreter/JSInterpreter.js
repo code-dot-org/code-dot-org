@@ -768,7 +768,23 @@ export default class JSInterpreter {
       lineNumber = 1 + this.getNearestUserCodeLine();
     }
 
-    this.onExecutionError.notifyObservers(this.executionError, lineNumber);
+    var msg = String(this.executionError);
+    if (this.executionError instanceof ReferenceError && this.executionError.message) {
+      const re = /(.*) is not defined/;
+      const execResult = re.exec(this.executionError.message);
+      if (execResult && execResult[1]) {
+        const varName = execResult[1];
+        if (varName === '__') {
+          msg = 'It looks like you left one of the parameters empty.';
+        } else {
+          msg = `Oops, we can’t figure out what ${varName} is - perhaps you ` +
+            `meant the string “${varName}” with quotes? If this is meant to be a ` +
+            `variable, make sure you declared a variable: var ${varName}`;
+        }
+      }
+    }
+
+    this.onExecutionError.notifyObservers(this.executionError, lineNumber, msg);
   }
 
   /**

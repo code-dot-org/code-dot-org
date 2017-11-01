@@ -555,7 +555,7 @@ step: 3`);
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
-          'ERROR: Line: 1: Cannot set property "cant_set_this" on element "my_image".');
+          'ERROR: Line: 1: There is no property named "cant_set_this" for element "my_image". Make sure you choose a property from the dropdown.');
         return true;
       },
       expected: {

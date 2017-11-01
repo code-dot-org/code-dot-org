@@ -19,7 +19,7 @@ export default storybook => {
               school_name: 'School Name',
               district_name: 'District Name',
               email: 'email',
-              formData: {
+              form_data: {
                 firstName: 'First Name',
                 lastName: 'Last Name',
                 title: 'Title',
@@ -32,6 +32,7 @@ export default storybook => {
                 abilityToMeetRequirements: '10'
               }
             }}
+            updateProps={() => {}}
           />
         )
       }

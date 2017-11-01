@@ -544,6 +544,8 @@
   volunteer_engineer_submission_type_task_remote: "Jeg ønsker du at Skyper til min klasse for at give inspiration til børnene"
   volunteer_engineer_submission_type_task_mentor: "Jeg leder efter en mentor til at lære mig kodning med mine elever"
   petition_age: "Alder"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Lær mere"
   dashboard_landing_title: "Lærerens startside"
   dashboard_landing_welcome: "Velkommen til den nye og forbedrede startside for undervisere."
   dashboard_landing_video: "Se denne video"

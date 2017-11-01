@@ -4,7 +4,7 @@ class RegionalPartnersSchoolDistrictTest < ActiveSupport::TestCase
   test "regional partners school districts initialized from tsv" do
     # populate school_districts and regional_partners, which we depend on as foreign keys
     RegionalPartner.find_or_create_all_from_tsv('test/fixtures/regional_partners.tsv')
-    SchoolDistrict.find_or_create_all_from_tsv('test/fixtures/school_districts.tsv')
+    SchoolDistrict.seed_all(stub_school_data: true, force: true)
 
     RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv('test/fixtures/regional_partners_school_districts.tsv')
 

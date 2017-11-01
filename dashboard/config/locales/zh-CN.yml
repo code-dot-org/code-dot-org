@@ -84,13 +84,12 @@
     twitter: "推特"
     facebook: "脸谱"
     windowslive: "微软账户"
-    clever: Clever Account
+    clever: Clever 账号
     forgot_password: "忘记密码？"
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
     not_linked: "对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。"
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "对不起，您的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。"
   signup_form:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
@@ -129,6 +128,7 @@
     user_type_student: "学生"
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
+    error: "发生错误。"
   school_info:
     title: "学校信息（选填）"
     school_country: "学校所在国家"
@@ -784,7 +784,13 @@
     rename: "重命名"
     save: "保存​​"
     delete: "刪除"
-    import: Import
+    import: "导入"
+    share_link_import_bad_link_header: "分享的链接无法识别"
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: "出错了。"
+    share_link_import_error_body: "导入该共享链接时出错。请再试一次。"
     exit: "返回课程"
     my_projects: "我的项目"
     project_gallery: "项目"
