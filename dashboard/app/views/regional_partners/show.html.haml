@@ -100,32 +100,8 @@
         %td= program_manager.current_sign_in_at.try(:strftime, '%F')
         %td= program_manager.sign_in_count
         %td= program_manager.created_at.strftime('%F')
-%p Enter a User Name or Email to Assign a Program Manager
-= form_tag url_for(action: 'search_program_manager'), method: 'get', class: 'form-inline', enforce_utf8: false do
-  = text_field_tag :search_term, params[:search_term], class: 'form-control'
+%p Enter an Email to Assign a Program Manager
+= form_tag url_for(action: 'assign_program_manager'), method: 'post', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :email, nil, class: 'form-control'
   %button.btn{type: 'submit'}
     %i.fa.fa-search
-  - if params[:search_term]
-    %h4
-      Filter:
-      = params[:search_term]
--if @users
-  %table.table.table-hover.table-condensed.table-auto-width{:id => 'assign-program-managers-table'}
-    %thead
-      %th Action
-      %th ID
-      %th Name
-      %th Email
-      %th Recent Sign In
-      %th Sign In Count
-      %th Registered Account At
-    %tbody
-      - @users.each do |user|
-        %tr
-          %td= link_to 'Assign', action: :assign_program_manager, program_manager_id: user.id
-          %td= user.id
-          %td= user.name
-          %td= user.email
-          %td= user.current_sign_in_at.try(:strftime, '%F')
-          %td= user.sign_in_count
-          %td= user.created_at.strftime('%F')

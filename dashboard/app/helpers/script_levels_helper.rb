@@ -10,7 +10,9 @@ module ScriptLevelsHelper
         # scripts with the stage_extras_available property
         # stages except for the last stage of a script
         # users in or teaching sections with an enabled "stage extras" flag
-        enabled_for_stage = script_level.script.stage_extras_available && !script_level.end_of_script?
+        enabled_for_stage = script_level.script.stage_extras_available &&
+          !script_level.end_of_script? &&
+          !script_level.stage.stage_extras_disabled
         enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
             current_user.section_for_script(script_level.script).stage_extras
         enabled_for_teacher = current_user.try(:teacher?) &&

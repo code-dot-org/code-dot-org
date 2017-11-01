@@ -71,7 +71,9 @@ class Ability
       if user.teacher?
         can :manage, Section, user_id: user.id
         can :manage, :teacher
-        can :manage, user.students
+        can :manage, User do |u|
+          user.students.include?(u)
+        end
         can :manage, Follower
         can :read, Workshop
         can :manage, UserLevel do |user_level|

@@ -535,6 +535,8 @@
   volunteer_engineer_submission_type_task_remote: "Мен сізді өз оқушыларымды ынталандыру үшн Skype-қоңырауға шақырғым келеді"
   volunteer_engineer_submission_type_task_mentor: "Мен өзімнің оқушыларыма бірге бағдарламалауды үйретуге көмегін тигізетін тәлімгер іздеудемін"
   petition_age: "Жасы"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "толығырақ білу"
   dashboard_landing_title: "Оқытушының жеке парақшасы"
   dashboard_landing_welcome: "Оқытушының жетілдірілген басқару панеліне қош келдіңіз."
   dashboard_landing_video: "мына видеоны көріңіз!"

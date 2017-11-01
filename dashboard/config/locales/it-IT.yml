@@ -160,6 +160,7 @@
     user_type_student: Studente
     field_is_required: "è un dato obbligatorio"
     accept_terms: Devi accettare le condizioni per creare un account
+    error: An error occurred.
   school_info:
     title: Informazioni sulla scuola (opzionale)
     school_country: Paese della Scuola
@@ -680,7 +681,7 @@
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
     teacher: Vedi la soluzione
-    teacher_no_solution: Stop seeing solution
+    teacher_no_solution: Smetti di vedere la soluzione
     auth_error: Non sei autorizzato a vedere la soluzione.
     submit: Aggiorna la posizione dell'Artista
     direction: Direzione di inizio (in gradi)
@@ -781,7 +782,7 @@
       title: La tua collezione
       body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
     gamelab:
-      title: Game Lab (beta)
+      title: Laboratorio di gioco
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Eta' 13+
@@ -809,7 +810,7 @@
         nella tua versione di questo gioco.
     sports:
       title: Sports
-      body: Make a basketball game or mix and match across sports.
+      body: Crea una partita di basket o abbina diversi sport.
     text-compression:
       title: Text Compression
       body: In questa lezione puoi imparare come si comprime un testo sostituendo
@@ -1017,6 +1018,13 @@
     save: Salva
     delete: Elimina
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: Ritorna al corso
     my_projects: Collezione Privata
     project_gallery: Progetti

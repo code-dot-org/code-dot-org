@@ -916,7 +916,7 @@
       4-5 Maze Conditionals 6_instruction: |-
         Me ... volere ... girasole!
 
-        Usa un blocco "se c'è strada" per farmi arrivare là utilizzando il minor numero possibile di blocchi.
+        Usa un blocco `se c'è strada` per farmi arrivare là utilizzando il minor numero possibile di blocchi.
       4-5 Maze Conditionals 7_instruction: 'Ok, esercitiamoci di nuovo per far pratica:
         questo esercizio non è molto diverso, ma stai attento alle piante carnivore!'
       4-5 Maze Conditionals 8_instruction: |-
@@ -2695,7 +2695,10 @@
       Course 4 Artist 11_instruction: |-
         Clicca qui per vedere le istruzioni complete.<br>
         Per ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo.
-      Course 4 Artist 12_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 Artist 12_instruction: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist 13_instruction: Hai ancora voglia di giocare? Ecco una tela
         bianca su cui puoi disegnare qualunque cosa tu voglia!
       Course 4 Artist 2_instruction: Riesci ad inserire questo codice in un ciclo
@@ -2751,7 +2754,10 @@
       Course 4 Artist Binary Free Play 2a_instruction: |-
         Ecco una griglia 16 x 16 di quadrati per disegnare con una risoluzione superiore!<br><br>
         Clicca su "Esegui" e guarda cosa succede quando cominciamo a essere creativi con i bit.
-      Course 4 Artist Binary Free Play 2b_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 Artist Binary Free Play 2b_instruction: |-
+        <img src="https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist Binary Free Play_instruction: 'Tempo di giocare: disegna qualunque
         cosa ti piaccia usando le stringhe binarie!'
       Course 4 Artist Binary pre1_instruction: |-
@@ -2834,14 +2840,21 @@
         di quale cambiamento si tratta?
       Course 4 Artist For Loops 9_instruction: Riesci a disegnare una spirale? Sposa
         in avanti da 1 a 75 pixels incrementando di 1 pixel ogni volta.
-      Course 4 Artist For Loops Challenge_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 Artist For Loops Challenge_instruction: |
+        <b>Sfida:</b> Riesci a capire come utilizzare tutte le cose che hai imparato finora per disegnare questa immagine composta di poligoni, tutti con lato di 40 pixel?<br>
+        <br>
+        Ricorda che per creare una spirale non devi chiudere il poligono. Questo significa che ogni forma deve avere un lato in meno del solito.
       Course 4 Artist For Loops Challenge_a_instruction: |-
         Can you figure out how
         to use all of the things you've learned to create this image?\r
         \r
         Need
         a hint? Click here.
-      Course 4 Artist For Loops inspire_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 Artist For Loops inspire_instruction: |-
+        <img
+        src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist Functions 1_instruction: Riesci a disegnare un quadrato con
         lato di 100 pixels, usando un CICLO?
       Course 4 Artist Functions 10_instruction: Quale blocco è necessario aggiungere
@@ -2901,8 +2914,14 @@
       Course 4 Artist Functions 9_instruction: Vi abbiamo fornito la maggior parte
         del codice ncessario per creare una funzione. Tuttavia ci sembra ci sia qualcosa
         che manca. Riouscite a fare in modo che questa funzione sia completa?
-      Course 4 Artist Functions Inspiration_instruction: Clicca qua per vedere i suggerimenti.
-      Course 4 Artist Functions challenge_instruction: Clicca qua per vedere i suggerimenti.
+      Course 4 Artist Functions Inspiration_instruction: |-
+        <img src="https://images.code.org/cf373e03bede480ae54aec72ce823454-image-1442951867535.54.11.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
+      Course 4 Artist Functions challenge_instruction: |-
+        <img src="https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo.
       Course 4 Artist Functions inspire_instruction: "Tempo di giocare: guarda la
         figura che trovi al link https://studio.code.org/c/110671172. Ora hai imparato
         tutto quello che devi sapere per realizzare un disegno come questo! Se questa
@@ -2917,7 +2936,10 @@
         il link https://studio.code.org/c/110671172/edit per scoprirlo.\n\nCosa succede
         se disegni i quadrati un po' più piccoli o un po' più grandi? E cosa succede
         se invece di girare a sinistra giri a destra?"
-      Course 4 Artist Inspire_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 Artist Inspire_instruction: |-
+        <img src="https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist Params 1_instruction: Modifichiamo ora una funzione che disegna
         un quadrato con lati di 50 pixel
       Course 4 Artist Params 10_instruction: 'Puoi chiamare funzioni dall''interno
@@ -3397,32 +3419,80 @@
         i valori usati nel \"ciclo con contatore\" (e, se vuoi, anche il personaggio)
         per creare il gioco che preferisci! <br>\nPremi \"Esegui\" e clicca più volte
         possibile sul personaggio. Ce la fai a raggiungere il nostro record di 24? "
-      Course 4 SCF 1_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCF 1a_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCF 1b_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCF 2_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 SCF 1_instruction: |-
+        <b>Super Sfida sulle funzioni:</b> Usa le funzioni suggerite per disegnare quattro file di tre esagoni l'una (`draw a line of hexagons` = "disegna una fila di esagoni"). Osserva che le file di numero pari vengono disegnate spostate a destra.<br>
+        <b>Nota</b>: `shift down/forward` = "scivola in basso e avanti"; `shift down/backward` = "scivola in basso e indietro".
+      Course 4 SCF 1a_instruction: "<b>Super Sfida sulle funzioni:</b> Riesci a capire
+        come raccogliere tutto questo nettare con il minor numero possibile di blocchi?"
+      Course 4 SCF 1b_instruction: "<b>Super Sfida sulle funzioni:</b> Riesci a capire
+        come produrre tutto questo miele?"
+      Course 4 SCF 2_instruction: |-
+        <b>Super Sfida sulle funzioni:</b> Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come quella mostrata in questo esercizio.<br>
+        <b>Nota</b>: Il codice diventa più semplice se usi le funzioni con parametri.
       Course 4 SCF 3 Fail 1_instruction: Riesci a capire come...
       Course 4 SCF 3 Fail 2_instruction: Riesci a capire come...
-      Course 4 SCF 3_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 1_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 1a_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 SCF 3_instruction: |-
+        <b>Super Sfida sulle funzioni:</b> Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa.<br>
+        <br><i>Nota: Il codice diventa più semplice se usi le funzioni con parametri.</i><br>
+        <img
+        src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png"
+        width="300px"/>
+      Course 4 SCFL 1_instruction: "<b>Super Sfida sui cicli con contatore:</b> Risolvi
+        questo esercizio usando il minor numero possibile di blocchi."
+      Course 4 SCFL 1a_instruction: "<b>Super Sfida sui cicli con contatore:</b> Puoi
+        far arrivare Scrat alla sua ghianda usando il minor numero possibile di blocchi?"
       Course 4 SCFL 1b_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 2_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 3_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 4_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 5_instruction: "<b>Super Sfida con i cicli con contatore:</b>
-        Riesci a ricreare questo disegno?"
-      Course 4 SCFL 6_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCFL 7_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 SCFL 2_instruction: "<b>Super Sfida sui cicli con contatore:</b> Risolvi
+        questo esercizio usando il minor numero di blocchi possibile."
+      Course 4 SCFL 3_instruction: |-
+        <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno?<br>
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
+        width="350px"/>
+      Course 4 SCFL 4_instruction: |-
+        <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno?<br>
+        <img src="https://images.code.org/407f502735beec686187451bdf67aada-image-1446002848700.59.34.png"
+        width="350px"/>
+      Course 4 SCFL 5_instruction: |-
+        <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno?<br>
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
+        width="350px"/>
+      Course 4 SCFL 6_instruction: |-
+        <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno usando un solo ciclo?<br>
+        <img
+        src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png"
+        width="350px"/>
+      Course 4 SCFL 7_instruction: |-
+        <b>Super Sfida sui cicli con contatore:</b> L'artista vuole disegnare qualche onda! Riesci ad aiutarlo ricreando questo disegno?<br>
+        <img src="https://images.code.org/fba3423f2e9a405d4d3859de32cdb0f3-image-1446102880655.13.36.png"
+        width="350px"/>
       Course 4 SCFP 1_instruction: Crea una funzione con parametri che permetta all'artista
         di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel
         (con numeri positivi e negativi).
-      Course 4 SCV 1_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCV 2_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCV 3_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCV 4_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCV 5_instruction: Clicca qui per vedere i suggerimenti.
-      Course 4 SCV 6_instruction: Clicca qui per vedere i suggerimenti.
+      Course 4 SCV 1_instruction: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/><br>
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
+      Course 4 SCV 2_instruction: |-
+        <img src="https://images.code.org/85f0b27009edd86eff78692004b9ed52-image-1444712655590.02.32.png"
+        width="250px"/><br>
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
+      Course 4 SCV 3_instruction: |-
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per risolvere un esercizio difficile come questo! Il gioco che ti proponiamo di realizzare è complicato. Ce la fai a perseverare fino a trovare la soluzione?<br>
+        <hr>
+        Questo è un gioco di inseguimenti!  Muovendo il cane, tocca il gatto per ottenere 2 punti, e il pinguino per ottenere 3 punti.  Arriva <u>esattamente</u> a 10 punti per vincere! Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br>
+        <b>
+        Aggiungi i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.<br>
+        - Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando i tasti freccia?<br>
+        - Come puoi aggiungere punti quando il cane tocca il gatto (personaggio 2) o il pinguino (personaggio 3)?<br>
+        - Come puoi togliere un punto quando il gatto ed il pinguino si toccano?</b>
+      Course 4 SCV 4_instruction: "<b>Super Sfida sulle variabili:</b> risolvi questo
+        esercizio con il minore numero possibile di blocchi!"
+      Course 4 SCV 5_instruction: "<b>Super Sfida sulle variabili:</b> risolvi questo
+        esercizio con il minore numero possibile di blocchi!"
+      Course 4 SCV 6_instruction: |-
+        <img src="https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png"
+        width="250px"/><br>
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
       Course 4 SCVP 1_instruction: Crea una funzione con parametri che permetta all'artista
         di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel
         (con numeri positivi e negativi).
@@ -3719,6 +3789,9 @@
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: |-
+        Use the `build bridge` function twice to
+        make a path to the torch.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4156,37 +4229,49 @@
         Click "Run" to move the player to the orange
         square inside of the house.
       MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+        You need to collect all the tools on this
+        journey. Move around using the **arrow keys**, and get to the chest on the
+        path to win
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
+      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
+        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
+        the chest. "
       MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
+        can get to the map. "
       MC_HOC_2017_02_Kiki_instruction: |-
         Get the Agent to the pressure plate, then
         get the player to the orange square.
+      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_04_instruction: |-
         Change the loop from the last puzzle to help the
         Agent make a path over the wider part of this river.
+      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_05_instruction: |-
         Use a function to help the Agent get to the pressure
         plate.
       MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
+      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
       MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
       MC_HOC_2017_06_Cole_instruction: |-
+        Fix this code to get the Agent to build a
+        bridge across this river.
+      MC_HOC_2017_06_Josh_instruction: |-
         Fix this code to help the Agent build a bridge
         across this river.
       MC_HOC_2017_06_Kiki_instruction: |-
         Fix this code to help the Agent build a bridge
         across this river.
       MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
+        Destroy the ice and get {currentPlayerName}
+        to the Minecart.
       MC_HOC_2017_07_Kiki_instruction: |-
         Use a function to clear the path to the orange
         square.
@@ -4195,6 +4280,12 @@
         Change the provided function to work for
         this biome.
       MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
+      MC_HOC_2017_08_RY_instruction: |-
+        Use the functions to find a way across the
+        lava.
+      MC_HOC_2017_08_Will_instruction: |-
+        Use the functions to find a way across the
+        lava.
       MC_HOC_2017_09_Cole_instruction: |-
         Program the Agent to clear the player's
         path.
@@ -4210,6 +4301,21 @@
       MC_HOC_2017_10_Kiki_instruction: |-
         Create a function to help you finish this
         minecart.
+      MC_HOC_2017_10_RETRY_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_RYAN_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_RYAN2_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
+      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
+        collect all of the diamonds in this level? "
+      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
       MC_HOC_2017_Ryan_03_instruction: |-
         Now use loops to help The Agent build a bridge
         over the river by placing blocks in the water.
@@ -4293,7 +4399,7 @@
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
       NEW Course 4 Artist Functions 1_instruction: Riesci a disegnare un quadrato
-        con i lati di 100 pixel, usando un ciclo?
+        con i lati di 100 pixel, usando un ciclo `ripeti ... volte`?
       NEW Course 4 Artist Functions 10.1_instruction: "Utilizzate le funzioni i puzzle
         precedente \nper disegnare questo modello."
       NEW Course 4 Artist Functions 10_instruction: Clicca su "modifica" per inserire
@@ -4420,7 +4526,10 @@
         Clicca su "modifica" per completare la definizione della funzione "disegna un quadrato" (<i>draw a square</i>) ed aggiungere un parametro alla sua definizione. Come per il triangolo, il parametro da aggiungere rappresenta la lunghezza dei lati: puoi dargli il nome che preferisci (devi cliccare sul triangolino con la punta verso il basso) e puoi cambiare anche il nome della funzione.<br><br>
         Poi usa la funzione così definita per disegnare 3 quadrati con i lati di 25, 50 e 75 pixel: in ognuno di essi l'angolo in basso a sinistra è a distanza di 100 pixel da quello del precedente.<br><br>
         <b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 15 blocchi in totale?
-      NEW Course 4 Artist Params inspire_instruction: Clicca qui per vedere i suggerimenti.
+      NEW Course 4 Artist Params inspire_instruction: |-
+        <img src="https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       NEW Course 4 Artist Vars 1.5_instruction: 'Date un''occhiata al codice. Potete
         vedere come il blocco "imposta lunghezza" e il blocco "lunghezza" lavorano
         insieme? Clicca su "Esegui" per vederlo in azione. '
@@ -4601,10 +4710,9 @@
         with a router, and explores issues in routing and DNS
       New Artist Project_instruction: Disegna ciò che vuoi! Il tuo codice viene salvato
         come progetto su cui puoi tornare a lavorare in qualunque momento.
-      New Basketball Project_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/8
-
-        Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
+      New Basketball Project_instruction: Crea il tuo gioco di basket. Puoi modificare
+        tutte le regole. Quando hai finito, clicca su `Termina` per consentire agli
+        amici di provare il tuo gioco sui loro telefoni.
       New Bounce Project_instruction: |-
         Create your own Bounce game. You can change
         all the visuals and the rules. When you're done, click Finish to let friends
@@ -4972,6 +5080,10 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG Add Subgoals practice_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -5118,9 +5230,19 @@
       SG U3L08 comments_instruction: |-
         Use the randomNumber() blocks to test the functions
         you designed with random input. (Click to see full instructions)
+      SG U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to
+        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       SG U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above and to
         the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Add-subgoals_instruction: |-
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L2_Turtle3by3Grid_instruction: |-
         Draw a 3x3 grid to the front and right
         of the turtle as efficiently as possible. The turtle should end at its original
@@ -6205,6 +6327,10 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -6235,6 +6361,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -7243,62 +7372,45 @@
         la palla manca la racchetta`. Vedi quanti punti riesci a raggiungere prima
         che il tuo avversario ne faccia due.
       bounce_10_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/6
-
         Ora in alto c'è il canestro! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca la mano`.<br>
-        Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio.
+        Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due.
       bounce_10_sports_instruction: |-
-        https://studio.code.org/s/sports/stage/1/puzzle/6
-
         Ora in alto c'è la meta! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca il giocatore`.<br>
-        Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio.
+        Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due!
       bounce_11_instruction: Adesso puoi predisporre il gioco come vuoi attaccando
         dei blocchi `imposta ...` al blocco `quando si clicca su "Esegui" `. Devi
         poi attaccare a quest'ultimo il blocco `lancia una nuova palla`, che devi
         attaccare anche ad altri blocchi verdi `quando ...`. Quanti punti riesci a
         raggiungere prima che il tuo avversario ne faccia due?
       bounce_11_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/7
-
         Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
-        Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
+        Prova anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!
       bounce_11_sports_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/7
-
         Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
-        Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
+        Prova anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!
       bounce_12_instruction: Crea la tua versione del Ping-Pong. È possibile modificare
         tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi
         per far provare agli amici il gioco sui loro smartphone.
-      bounce_12_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/8
-
-        Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito di giocare, clicca su "Termina" per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco.
-      bounce_12_sports_instruction: |-
-        https://studio.code.org/s/sports/stage/1/puzzle/8
-
-        Ora comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
+      bounce_12_basketball_instruction: Crea il tuo gioco di basket. Puoi modificare
+        tutte le regole. Quando hai finito di giocare, clicca su "Termina" per ottenere
+        un link da condividere con i tuoi amici o per giocare sul tuo telefono con
+        la tua versione del gioco.
+      bounce_12_sports_instruction: 'Ora comandi tu. Puoi modificare tutte le regole,
+        combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina`
+        per consentire agli amici di provare il tuo gioco sui loro telefoni.'
       bounce_1_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/1
-
         Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
         Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.
       bounce_1_sports_instruction: |-
-        https://studio.code.org/s/sports/stage/1/puzzle/1
-
         Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
         Poi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina.
       bounce_2_instruction: Attacca un blocco ai blocchi verdi `quando si preme la
         freccia verso destra` e `quando si preme la freccia verso sinistra`. Poi sposta
         la racchetta per raggiungere entrambe le bandierine.
       bounce_2_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/2
-
         Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
         Poi sposta la racchetta usando entrambe le frecce orizzontali per raggiungere le due bandierine.
       bounce_2_sports_instruction: |-
-        https://studio.code.org/s/sports/stage/1/puzzle/2
-
         Ora ci sono due bandiere! Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
         Poi sposta il giocatore usando entrambe le frecce orizzontali per raggiungere le due bandierine.
       bounce_3_instruction: Ora fai qualcosa di simile con il blocco `quando si preme
@@ -7308,35 +7420,27 @@
       bounce_5_instruction: Faremo volare una palla verso il basso incontro alla racchetta.
         Attacca un blocco al blocco verde `quando la palla colpisce la racchetta`
         per far sì che la palla raggiunga la bandierina.
-      bounce_5_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/3
-
-        Stiamo per lanciarti una palla verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce la mano` per permettere alla palla di raggiungere la bandierina.
-      bounce_5_sports_instruction: |-
-        https://studio.code.org/s/sports/stage/1/puzzle/3
-
-        Il disco da hockey sta per arrivare al giocatore! Attacca un blocco al blocco verde `quando la palla colpisce il giocatore` per permettere alla palla di raggiungere la bandierina.
+      bounce_5_basketball_instruction: Stiamo per lanciarti una palla verso la mano.
+        Attacca un blocco al blocco verde `quando la palla colpisce la mano` per permettere
+        alla palla di raggiungere la bandierina.
+      bounce_5_sports_instruction: Il disco da hockey sta per arrivare al giocatore!
+        Attacca un blocco al blocco verde `quando la palla colpisce il giocatore`
+        per permettere alla palla di raggiungere la bandierina.
       bounce_6_instruction: Ora la bandierina è in alto. Per risolvere questo esercizio
         è necessario attaccare dei blocchi ad entrambi i blocchi verdi `quando la
         palla colpisce`.
-      bounce_6_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/4
-
-        Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce la mano` e `quando la palla colpisce il muro`.
-      bounce_6_sports_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/4
-
-        Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce la mano` e `quando la palla colpisce il muro`.
+      bounce_6_basketball_instruction: Ora la bandierina è in alto. Per risolvere
+        questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando
+        la palla colpisce il giocatore` e `quando la palla colpisce il muro`.
+      bounce_6_sports_instruction: Ora la bandierina è in alto. Per risolvere questo
+        esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la
+        palla colpisce il giocatore` e `quando la palla colpisce il muro`.
       bounce_7_instruction: Attacca dei blocchi a ciascuno dei blocchi verdi `quando
         ...`. Poi fai rimbalzare la palla fino a quando colpisce la bandierina.
       bounce_7_basketball_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/5
-
         Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
         Far rimbalzare la palla fino a quando non colpisce la bandiera.
       bounce_7_sports_instruction: |-
-        https://studio.code.org/s/basketball/stage/1/puzzle/5
-
         Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
         Far rimbalzare la palla fino a quando non colpisce la bandiera.
       brendan hackathon level_instruction: |-
@@ -7684,6 +7788,31 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_preLoops1_instruction: |-
+        This is Laurel the Adventurer! \r
+        \r
+        Press
+        "Run" to see her walk up to the treasure and grab it.
+      courseA_collector_preLoops2_instruction: |-
+        Great!  Now you get to add code yourself!  \r
+        \r
+        Snap
+        a `get treasure` block to the bottom of the program and click "Run".
+      courseA_collector_preLoops3_instruction: |-
+        Snap two `E -->` blocks and one `get
+        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4_instruction: |-
+        Can you figure out how to solve this
+        puzzle?
+      courseA_collector_preLoops5_instruction: |-
+        Get 1 of these 2 gems to solve this
+        puzzle.
+      courseA_collector_preLoops6_instruction: |-
+        Get both pieces of treasure to solve
+        this puzzle.
+      courseA_collector_preLoops7_instruction: |-
+        Get all three piles to pass this
+        level.
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
@@ -8411,9 +8540,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -8921,10 +9050,10 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
         If the pirate is in the safe zone, wait
         one second, then deduct a point as long as he stays beneath the octopus line.
@@ -9023,7 +9152,11 @@
         Use what you've learned to draw this triangle
         inside of a square.
       courseE_artist_ramp8_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseE_artist_ramp9_2_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseE_bee_concept1_instruction: Raccogli tutto il nettare da ogni fiore. Usa
         un ciclo annidato.
       courseE_bee_concept2_instruction: |-
@@ -9299,40 +9432,36 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
-      courseF_IceAge_1_instruction: |-
-        Help Sid say "Hello!" by dragging the `actor
-        1 say` block out and connecting it to the bottom of the `when run` event.
-      courseF_IceAge_10_instruction: |-
-        Use the `actor __ throw` command to have Sid
-        (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
-        when she gets hit with them.
-      courseF_IceAge_11_instruction: 'Time to create your own game or story! '
-      courseF_IceAge_2_instruction: |-
-        Help Manny and Sid greet each other by using
-        the the `actor ___ say` block twice.
-      courseF_IceAge_3_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
-      courseF_IceAge_4_instruction: |-
-        Connect a block to the `when actor touches`
-        event to play a sound when Diego finds Manny.
-      courseF_IceAge_5_instruction: |-
-        Help Granny get some exercise by moving left
-        and right repeatedly.
-      courseF_IceAge_6_instruction: "Can you help Sid call for his friends when you\nclick
-        on him? "
-      courseF_IceAge_7_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
-      courseF_IceAge_8_instruction: |
-        Can you finish this program to make it so that
-        you both **play a sound** and **score a point** when Sid and Granny collide?
-      courseF_IceAge_9_instruction: |-
-        Change the scene to an icy background and set
-        Sid’s (actor 1) speed to fast.
-      courseF_IceAge_template_instruction: |-
-        Write the code to help Scrat get all
-        of the acorns!
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
+      courseF_IceAge_1_instruction: Aiuta Sid a dire "Ciao" trascinando il blocco
+        `il personaggio 1 dice ...` nell'area di lavoro e collegandolo sotto all'evento
+        `quando si clicca su "Esegui"`
+      courseF_IceAge_10_instruction: Usa il comando `il personaggio ... lancia` per
+        far in modo che Sid (il personaggio 1) lanci dei cuori alla Nonnina (il personaggio
+        2) e imposta l'umore della Nonnina a felice quando viene colpita dai cuori.
+      courseF_IceAge_11_instruction: "È il momento di creare un gioco o una storia
+        per conto tuo."
+      courseF_IceAge_2_instruction: Aiuta Manny e Sid a salutarsi a vicenda usando
+        due volte il blocco `il personaggio ... dice`.
+      courseF_IceAge_3_instruction: Scrat è alla ricerca della sua ghianda! Puoi aiutarlo
+        a percorrere gli ultimi 200 pixel?
+      courseF_IceAge_4_instruction: Collega un blocco all'evento `quando il personaggio
+        tocca` per emettere un suono quando Diego incontra Manny.
+      courseF_IceAge_5_instruction: Aiuta la Nonnina a fare un po' di esercizio muovendosi
+        in continuazione a destra e a sinistra.
+      courseF_IceAge_6_instruction: Puoi aiutare Sid a chiamare i suoi amici quando
+        si clicca su di lui?
+      courseF_IceAge_7_instruction: Scrivi il codice per aiutare Scrat a raccogliere
+        tutte le ghiande!
+      courseF_IceAge_8_instruction: Puoi completare questo codice per fare in modo
+        che si riproduca un suono e si guadagni un punto quando Sid e la Nonnina si
+        scontrano?
+      courseF_IceAge_9_instruction: Cambia lo sfondo impostandone uno con ghiaccio
+        e imposta la velocità di Sid (personaggio 1) a veloce.
+      courseF_IceAge_template_instruction: Scrivi il codice per aiutare Scrat a raccogliere
+        tutte le ghiande!
       courseF_artist_embed_for7_instruction: |-
         Press Run to see a program in action!
         This one uses for loops.
@@ -9509,7 +9638,6 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -9780,9 +9908,9 @@
       flappy_2_instruction: Ora nello scenario c'è anche il terreno.  Attacca un blocco
         di azione al blocco di evento `quando precipita a terra`.  Inoltre, il tuo
         codice ha bisogno del blocco `fine del gioco` quando Flappy precipita a terra.
-      flappy_3_instruction: Il blocco "quando si clicca su 'Esegui' " permette di
-        eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare
-        la velocità con cui Flappy vola verso il bersaglio.
+      flappy_3_instruction: Il blocco `quando si clicca su "Esegui"` permette di eseguire
+        delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità
+        con cui Flappy vola verso il bersaglio.
       flappy_4_instruction: Scrivi del codice per aiutare Flappy a volare attraverso
         i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco `fine del
         gioco` quando Flappy si schianta contro i tubi.
@@ -11083,7 +11211,10 @@
         La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori.  In questa lezione usiamo i valori "spento" (rappresentato dal numero 0) e "acceso" (rappresentato dal numero 1).<br><br>
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br><br>
         Riesci a far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101"?
-      grade5_artist_binary10_instruction: Clicca qui per vedere i suggerimenti.
+      grade5_artist_binary10_instruction: |-
+        <img src="https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       grade5_artist_binary11_instruction: |-
         Free Play: Here's a blank canvas for
         you to draw on.  Have fun!
@@ -11171,7 +11302,11 @@
         \r
         Very little
         of the code has been provided for you.
-      grade5_artist_for_loopsfreeplay11_instruction: Clicca qui per vedere i suggerimenti.
+      grade5_artist_for_loopsfreeplay11_instruction: |-
+        <img
+        src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       grade5_artist_for_loopsfreeplay12_instruction: |-
         Free Play: Try using the `counter`
         variable with other drawing elements to make magical images like this one.
@@ -11179,7 +11314,10 @@
         Create your own project! This creation
         will be saved to your Projects dashboard so that you can easily edit it any
         time!
-      grade5_artist_functionparameters10_instruction: Clicca qui per vedere i suggerimenti.
+      grade5_artist_functionparameters10_instruction: |-
+        <img src="https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png"
+        width="250px"/><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       grade5_artist_functionparameters11_instruction: |-
         Tempo di giocare: qui ci sono tutte le funzioni che hai scritto, e anche qualcuna in più con cui puoi giocare ("</i>draw a pinwheel</i>" disegna una girandola, "<i>draw a shape</i>" un poligono).<br><br>
         Disegna qualcosa di incredibile!<br><br>
@@ -11637,39 +11775,34 @@
       harvey_tictactoe_instruction: |-
         Let's play a game! Draw as many X's as you
         can! Can you get 3 in a row?
-      iceage_click_hello_instruction: "Can you help Sid call for his friends when\nyou
-        click on him? "
-      iceage_free_play_instruction: 'Time to create your own game or story! '
-      iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
-        story! "
-      iceage_hello1_instruction: |-
-        https://studio.code.org/s/iceage/stage/1/puzzle/1
-
-        Aiuta Sid a dire "Ciao" trascinando il blocco `il personaggio dice ...` nell'area di lavoro e collegandolo sotto al blocco `quando si clicca su "Esegui"`
-      iceage_hello2_instruction: |-
-        Help Manny and Sid greet each other by using the
-        the `actor ___ say` block twice.
-      iceage_move_events_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
-      iceage_move_to_actor_instruction: |-
-        Connect a block to the `when actor touches`
-        event to play a sound when Diego finds Manny.
-      iceage_move_to_flag_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
-      iceage_repeat_instruction: |-
-        Help Granny get some exercise by moving left and
-        right repeatedly.
-      iceage_sound_and_points_instruction: "Can you finish this program to make it\nso
-        that you both **play a sound** and **score a point** when Sid and Granny\ncollide? "
-      iceage_throw_hearts_instruction: |-
-        Use the `actor __ throw` command to have
-        Sid (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
-        when she gets hit with them.
-      iceage_warn_ice_age_instruction: |-
-        Change the scene to an icy background and
-        set Sid’s (actor 1) speed to fast.
+      iceage_click_hello_instruction: Puoi aiutare Sid a chiamare i suoi amici quando
+        si clicca su di lui?
+      iceage_free_play_instruction: "È il momento di creare un gioco o una storia
+        per conto tuo."
+      iceage_free_playcourseF_IceAge_11_instruction: "È il momento di creare un gioco
+        o una storia per conto tuo."
+      iceage_hello1_instruction: Aiuta Sid a dire "Ciao" trascinando il blocco `il
+        personaggio 1 dice ...` nell'area di lavoro e collegandolo sotto all'evento
+        `quando si clicca su "Esegui"`
+      iceage_hello2_instruction: Aiuta Manny e Sid a salutarsi a vicenda usando due
+        volte il blocco `il personaggio ... dice`.
+      iceage_move_events_instruction: Scrivi il codice per aiutare Scrat a raccogliere
+        tutte le ghiande!
+      iceage_move_to_actor_instruction: Collega un blocco all'evento `quando il personaggio
+        tocca` per emettere un suono quando Diego incontra Manny.
+      iceage_move_to_flag_instruction: Scrat è alla ricerca della sua ghianda! Puoi
+        aiutarlo a percorrere gli ultimi 200 pixel?
+      iceage_repeat_instruction: Aiuta la Nonnina a fare un po' di esercizio muovendosi
+        in continuazione a destra e a sinistra.
+      iceage_sound_and_points_instruction: Puoi completare questo codice per fare
+        in modo che si riproduca un suono e si guadagni un punto quando Sid e la Nonnina
+        si scontrano?
+      iceage_throw_hearts_instruction: Usa il comando `il personaggio ... lancia`
+        per far in modo che Sid (il personaggio 1) lanci dei cuori alla Nonnina (il
+        personaggio 2) e imposta l'umore della Nonnina a felice quando viene colpita
+        dai cuori.
+      iceage_warn_ice_age_instruction: Cambia lo sfondo impostandone uno con ghiaccio
+        e imposta la velocità di Sid (personaggio 1) a veloce.
       jessie-test_instruction: Lots of instructions
       k-1 maze 1_instruction: |-
         Riesci a spostarmi verso Ovest per prendere il maialino?<br>
