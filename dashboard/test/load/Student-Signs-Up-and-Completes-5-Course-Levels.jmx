@@ -25,7 +25,7 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__property(servername,serverName, staging-studio.code.org)}</stringProp>
+        <stringProp name="HTTPSampler.domain">${__property(servername,serverName, dashboard-adhoc-feature-mode-manager.cdn-code.org)}</stringProp>
         <stringProp name="HTTPSampler.port"></stringProp>
         <stringProp name="HTTPSampler.protocol">${__property(protocol,protocol, https)}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
@@ -632,6 +632,8 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">The response to this request contains the milestone POST URL in javascript logic that will have to be parsed with a regex.  Skipping the milestone post for this request.
+</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
@@ -651,123 +653,6 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               <elementProp name="DNT" elementType="Header">
                 <stringProp name="Header.name">DNT</stringProp>
                 <stringProp name="Header.value">1</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Language" elementType="Header">
-                <stringProp name="Header.name">Accept-Language</stringProp>
-                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
-            <stringProp name="TestPlan.comments">Get JSON data from script tag data-appoptions attribute to retrieve dynamic information for subsequent milestone post such as script_level_id and level_id</stringProp>
-            <stringProp name="HtmlExtractor.refname">JSONDataOnCourseLevelPage</stringProp>
-            <stringProp name="HtmlExtractor.expr">body &gt; script[data-appoptions]</stringProp>
-            <stringProp name="HtmlExtractor.attribute">data-appoptions</stringProp>
-            <stringProp name="HtmlExtractor.default">{}</stringProp>
-            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
-            <stringProp name="HtmlExtractor.match_number">1</stringProp>
-            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
-          </HtmlExtractor>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get next milestone post URL" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">milestoneURL</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">report.callback</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="Sample.scope">variable</stringProp>
-            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">milestoneURLNotFound</stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${JSONDataOnCourseLevelPage}" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="app" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                <stringProp name="Argument.name">app</stringProp>
-                <stringProp name="Argument.value">standalone_video</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="result" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                <stringProp name="Argument.name">result</stringProp>
-                <stringProp name="Argument.value">true</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="program" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                <stringProp name="Argument.name">program</stringProp>
-                <stringProp name="Argument.value">ok</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="testResult" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                <stringProp name="Argument.name">testResult</stringProp>
-                <stringProp name="Argument.value">100</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="level" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                <stringProp name="Argument.name">level</stringProp>
-                <stringProp name="Argument.value">custom</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
-              </elementProp>
-              <elementProp name="Origin" elementType="Header">
-                <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
-              </elementProp>
-              <elementProp name="X-Requested-With" elementType="Header">
-                <stringProp name="Header.name">X-Requested-With</stringProp>
-                <stringProp name="Header.value">XMLHttpRequest</stringProp>
-              </elementProp>
-              <elementProp name="User-Agent" elementType="Header">
-                <stringProp name="Header.name">User-Agent</stringProp>
-                <stringProp name="Header.value">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
-              </elementProp>
-              <elementProp name="Content-Type" elementType="Header">
-                <stringProp name="Header.name">Content-Type</stringProp>
-                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
-              </elementProp>
-              <elementProp name="DNT" elementType="Header">
-                <stringProp name="Header.name">DNT</stringProp>
-                <stringProp name="Header.value">1</stringProp>
-              </elementProp>
-              <elementProp name="Referer" elementType="Header">
-                <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}/s/coursec/stage/2/puzzle/1</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -833,8 +718,37 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
+            <stringProp name="TestPlan.comments">Get JSON data from script tag data-appoptions attribute to retrieve dynamic information for subsequent milestone post such as script_level_id and level_id</stringProp>
+            <stringProp name="HtmlExtractor.refname">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="HtmlExtractor.expr">body &gt; script[data-appoptions]</stringProp>
+            <stringProp name="HtmlExtractor.attribute">data-appoptions</stringProp>
+            <stringProp name="HtmlExtractor.default">{}</stringProp>
+            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+            <stringProp name="HtmlExtractor.match_number">1</stringProp>
+            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+          </HtmlExtractor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get next milestone post URL" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">milestoneURL</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">report.callback</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">milestoneURLNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get level id" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">levelId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">serverLevelId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">levelIdNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/2/7253" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/2/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -842,7 +756,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/2/7253</stringProp>
+          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/2/${levelId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -887,7 +801,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/103477/7253" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/:script_level_id/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="app" elementType="HTTPArgument">
@@ -952,7 +866,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">milestone/${userId}/103477/7253</stringProp>
+          <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1057,8 +971,37 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
+            <stringProp name="TestPlan.comments">Get JSON data from script tag data-appoptions attribute to retrieve dynamic information for subsequent milestone post such as script_level_id and level_id</stringProp>
+            <stringProp name="HtmlExtractor.refname">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="HtmlExtractor.expr">body &gt; script[data-appoptions]</stringProp>
+            <stringProp name="HtmlExtractor.attribute">data-appoptions</stringProp>
+            <stringProp name="HtmlExtractor.default">{}</stringProp>
+            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+            <stringProp name="HtmlExtractor.match_number">1</stringProp>
+            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+          </HtmlExtractor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get next milestone post URL" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">milestoneURL</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">report.callback</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">milestoneURLNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get level id" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">levelId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">serverLevelId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">levelIdNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/3/7254" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/3/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -1066,7 +1009,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/3/7254</stringProp>
+          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/3/${levelId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1111,7 +1054,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/103478/7254" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/:script_level_id/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="app" elementType="HTTPArgument">
@@ -1176,7 +1119,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">milestone/${userId}/103478/7254</stringProp>
+          <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1281,8 +1224,37 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
+            <stringProp name="TestPlan.comments">Get JSON data from script tag data-appoptions attribute to retrieve dynamic information for subsequent milestone post such as script_level_id and level_id</stringProp>
+            <stringProp name="HtmlExtractor.refname">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="HtmlExtractor.expr">body &gt; script[data-appoptions]</stringProp>
+            <stringProp name="HtmlExtractor.attribute">data-appoptions</stringProp>
+            <stringProp name="HtmlExtractor.default">{}</stringProp>
+            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+            <stringProp name="HtmlExtractor.match_number">1</stringProp>
+            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+          </HtmlExtractor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get next milestone post URL" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">milestoneURL</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">report.callback</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">milestoneURLNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get level id" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">levelId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">serverLevelId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">levelIdNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/4/7255" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/4/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -1290,7 +1262,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/4/7255</stringProp>
+          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/4/${levelId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1335,7 +1307,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/103479/7255" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/:script_level_id/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="app" elementType="HTTPArgument">
@@ -1400,7 +1372,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">milestone/${userId}/103479/7255</stringProp>
+          <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1505,8 +1477,37 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
+            <stringProp name="TestPlan.comments">Get JSON data from script tag data-appoptions attribute to retrieve dynamic information for subsequent milestone post such as script_level_id and level_id</stringProp>
+            <stringProp name="HtmlExtractor.refname">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="HtmlExtractor.expr">body &gt; script[data-appoptions]</stringProp>
+            <stringProp name="HtmlExtractor.attribute">data-appoptions</stringProp>
+            <stringProp name="HtmlExtractor.default">{}</stringProp>
+            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+            <stringProp name="HtmlExtractor.match_number">1</stringProp>
+            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+          </HtmlExtractor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get next milestone post URL" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">milestoneURL</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">report.callback</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">milestoneURLNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get level id" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">levelId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">serverLevelId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">levelIdNotFound</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/5/7256" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/5/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -1514,7 +1515,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/5/7256</stringProp>
+          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/5/${levelId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1559,7 +1560,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/103480/7256" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/milestone/:user_id/:script_level_id/:level_id" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="app" elementType="HTTPArgument">
@@ -1624,7 +1625,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">milestone/${userId}/103480/7256</stringProp>
+          <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1664,112 +1665,6 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
                 <stringProp name="Header.value">${protocol}://${serverName}/s/coursec/stage/2/puzzle/5</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Language" elementType="Header">
-                <stringProp name="Header.name">Accept-Language</stringProp>
-                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/s/coursec/stage/2/puzzle/6" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">s/coursec/stage/2/puzzle/6</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
-                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
-                <stringProp name="Header.value">1</stringProp>
-              </elementProp>
-              <elementProp name="User-Agent" elementType="Header">
-                <stringProp name="Header.name">User-Agent</stringProp>
-                <stringProp name="Header.value">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
-              </elementProp>
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
-              </elementProp>
-              <elementProp name="DNT" elementType="Header">
-                <stringProp name="Header.name">DNT</stringProp>
-                <stringProp name="Header.value">1</stringProp>
-              </elementProp>
-              <elementProp name="Referer" elementType="Header">
-                <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}/s/coursec/stage/2/puzzle/5</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Language" elementType="Header">
-                <stringProp name="Header.name">Accept-Language</stringProp>
-                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/user_progress/coursec/2/6/7257" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">api/user_progress/coursec/2/6/7257</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">*/*</stringProp>
-              </elementProp>
-              <elementProp name="X-Requested-With" elementType="Header">
-                <stringProp name="Header.name">X-Requested-With</stringProp>
-                <stringProp name="Header.value">XMLHttpRequest</stringProp>
-              </elementProp>
-              <elementProp name="User-Agent" elementType="Header">
-                <stringProp name="Header.name">User-Agent</stringProp>
-                <stringProp name="Header.value">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
-              </elementProp>
-              <elementProp name="DNT" elementType="Header">
-                <stringProp name="Header.name">DNT</stringProp>
-                <stringProp name="Header.value">1</stringProp>
-              </elementProp>
-              <elementProp name="Referer" elementType="Header">
-                <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}/s/coursec/stage/2/puzzle/6</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
