@@ -36,7 +36,7 @@
 :javascript
   // Use function closure to avoid cluttering global namespace.
   (function() {
-    var cookieKey = '#{'_shortName' + (rack_env?(:production) ? '' : "_#{rack_env}")}';
+    var cookieKey = "#{environment_specific_cookie_name('_shortName')}";
     // Share cookie with top-level domain.
     var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
     var cookieMeta = "path=/;domain=" + topLevelDomain;
