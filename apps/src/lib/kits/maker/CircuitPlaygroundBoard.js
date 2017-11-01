@@ -256,16 +256,18 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    // Code.org Browser case: Native Node SerialPort>=4 is available on window.
-    if (isNodeSerialAvailable()) {
-     return new SerialPort(portName, {
-       baudRate: SERIAL_BAUD,
-     });
-    }
-
+    // A gotcha here: These two types of SerialPort provide similar, but not
+    // exactly equivalent, interfaces.  When making changes to construction
+    // here maker sure to test both paths:
+    //
+    // Code.org Browser case: Native Node SerialPort 6 is available on window.
+    //
     // Code.org connector app case: ChromeSerialPort bridges through the Chrome
-    // app, implements SerialPort<4 API.
-    return new ChromeSerialPort.SerialPort(portName, {
+    // app, implements SerialPort 3's interface.
+    const SerialPortType = isNodeSerialAvailable() ?
+      SerialPort : ChromeSerialPort.SerialPort;
+
+    return new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
     });
   }
