@@ -35,6 +35,9 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
+# This class represents census submissions coming from the original /yourschool
+# census page.
+#
 class Census::Census2017v1 < Census::CensusSubmission
   def validate_pledge?
     submitter_role_teacher? || submitter_role_administrator?

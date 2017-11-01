@@ -35,5 +35,10 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
+# This class represents submissions from the Hour of Code signup page
+# after the school autocomplete dropdown was added. Census questions were
+# not modified so no new logic is needed. We just need a new class to get
+# a new type in the DB.
+#
 class Census::HocCensus2017v3 < Census::HocCensus2017v2
 end

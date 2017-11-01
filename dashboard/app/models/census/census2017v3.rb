@@ -35,5 +35,9 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
+# This version of the /yourschool census form added the school autocomplete dropdown.
+# There were no changes to the census questions so there is no additional logic here.
+# We just use this class the get a different type in the DB for tracking purposes.
+#
 class Census::Census2017v3 < Census::Census2017v2
 end
