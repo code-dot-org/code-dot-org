@@ -33,6 +33,7 @@ export default class StudentsBeyondHoc extends Component {
           isRtl={isRtl}
           responsive={responsive}
           showContainer={false}
+          hideBottomMargin={true}
         />
         <LocalClassActionBlock
           isRtl={isRtl}
