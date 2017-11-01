@@ -54,8 +54,12 @@ class Census::Census2017v1 < Census::CensusSubmission
   validates :how_many_10_hours, presence: true
   validates :how_many_20_hours, presence: true
 
+  # We only show the pledge checkbox based on other answers.
+  # We expect some value (either true or false) in those cases only.
   validates :pledged, exclusion: {in: [nil], message: "cannot be nil"}, if: :validate_pledge?
 
+  # These questions are shown conditionally based on other answers.
+  # Only validate under those conditions.
   with_options if: :show_followup? do |submission|
     submission.validates :topic_blocks, exclusion: {in: [nil], message: "cannot be nil"}
     submission.validates :topic_text, exclusion: {in: [nil], message: "cannot be nil"}
