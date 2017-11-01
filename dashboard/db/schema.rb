@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027223742) do
+ActiveRecord::Schema.define(version: 20171101014056) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -367,6 +367,7 @@ ActiveRecord::Schema.define(version: 20171027223742) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "course"
+    t.text     "response_scores",     limit: 65535,              comment: "Scores given to certain responses"
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
     t.index ["course"], name: "index_pd_applications_on_course", using: :btree
@@ -780,6 +781,7 @@ ActiveRecord::Schema.define(version: 20171027223742) do
     t.string   "zip",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name", "city"], name: "index_school_districts_on_name_and_city", type: :fulltext
     t.index ["state"], name: "index_school_districts_on_state", using: :btree
   end
 
@@ -835,6 +837,7 @@ ActiveRecord::Schema.define(version: 20171027223742) do
     t.integer  "frl_eligible_total",                         comment: "Total of free and reduced-price lunch eligible"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "community_type",     limit: 16,              comment: "Urban-centric community type"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id", using: :btree
   end
 

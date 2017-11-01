@@ -727,6 +727,10 @@
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
   petition_age: "سن"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "بیشتر بیاموزید"
   dashboard_landing_title: "صفحه اصلی معلم"
   dashboard_landing_welcome: "خوش آمدید به صفحهٔ جدید و بهبود یافته معلم  ."
   dashboard_landing_video: "این ویدیو را مشاهده کنید"

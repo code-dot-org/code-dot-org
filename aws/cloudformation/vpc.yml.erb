@@ -10,6 +10,16 @@ Resources:
   VpcClassicLink: <%= lambda_fn.call 'VpcClassicLink',
     VpcId: {Ref: 'VPC'},
     DnsSupport: true %>
+  S3Endpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      RouteTableIds: <%=
+        azs.map {|az| "PrivateRouteTable#{az}"}.
+          push('PublicRouteTable').
+          map {|ref| {"Ref": ref}}.to_json
+      %>
+      ServiceName: !Sub "com.amazonaws.${AWS::Region}.s3"
+      VpcId: !Ref VPC
   InternetGateway:
     Type: AWS::EC2::InternetGateway
   Internet:
