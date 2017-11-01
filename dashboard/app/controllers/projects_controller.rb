@@ -155,17 +155,27 @@ class ProjectsController < ApplicationController
       return
     end
     return if redirect_under_13_without_tos_teacher(@level)
+    redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
+      request.ip,
+      StorageApps.new(storage_id('user')),
+      data: initial_data,
+      type: params[:key]
+    )
+  end
+
+  private def initial_data
     data = {
       name: 'Untitled Project',
       level: polymorphic_url([params[:key], 'project_projects'])
     }
-    data[:thumbnailUrl] = '/blockly/media/flappy/placeholder.jpg' if params[:key] == 'flappy'
-    redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
-      request.ip,
-      StorageApps.new(storage_id('user')),
-      data: data,
-      type: params[:key]
-    )
+
+    # We do not currently generate thumbnails for flappy, so specify a
+    # placeholder image here. This allows flappy projects to show up in the
+    # public gallery, and to be published from the share dialog.
+    if params[:key] == 'flappy'
+      data[:thumbnailUrl] = '/blockly/media/flappy/placeholder.jpg'
+    end
+    data
   end
 
   def show
