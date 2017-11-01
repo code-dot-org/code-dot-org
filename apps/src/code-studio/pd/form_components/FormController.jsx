@@ -328,7 +328,7 @@ export default class FormController extends React.Component {
     const pageFields = currentPage.associatedFields;
 
     // Trim string values on page, and set empty strings to null
-    const pageData = {};
+    let pageData = {};
     pageFields.forEach(field => {
       let value = this.state.data[field];
       if (typeof value === "string") {
@@ -338,6 +338,8 @@ export default class FormController extends React.Component {
         pageData[field] = value;
       }
     });
+
+    pageData = {...pageData, ...currentPage.processPageData(pageData)};
     this.setState({
       data: {
         ...this.state.data,

@@ -590,10 +590,24 @@ FactoryGirl.define do
         if program == Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
           hash[:csfAvailability] = 'Yes'
         else
-          hash[:csd_csp_teachercon_availability] = 'TeacherCon 1: June 17 - 22, 2018'
-          hash[:csd_csp_fit_availability] = 'June 23 - 24, 2018 (immediately following TeacherCon 1)'
+          hash[:csdCspTeacherconAvailability] = 'TeacherCon 1: June 17 - 22, 2018'
+          hash[:csdCspFitAvailability] = 'June 23 - 24, 2018 (immediately following TeacherCon 1)'
         end
       end.stringify_keys
+    end
+
+    trait :with_csf_specific_fields do
+      after :build do |hash|
+        hash['csfAvailability'] = Pd::Application::Facilitator1819Application::ONLY_WEEKEND
+        hash['csfPartialAttendanceReason'] = 'reasons'
+      end
+    end
+
+    trait :with_csd_csp_specific_fields do
+      after :build do |hash|
+        hash['csdCspFitAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_fit_availability].first
+        hash['csdCspTeacherconAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_teachercon_availability].first
+      end
     end
   end
 
