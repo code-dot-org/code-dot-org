@@ -4,6 +4,8 @@ require_relative '../../../dashboard/config/environment'
 
 CDO.log = Logger.new(STDOUT)
 
+SURVEY_YEAR = '2015-2016'.freeze
+
 GRADES_MAP = {
   '1' => 'UG',
   '2' => 'PK',
@@ -24,12 +26,12 @@ GRADES_MAP = {
   '17' => '12'
 }.freeze
 
-AWS::S3.process_file('cdo-nces', '2015-2016/pss/pss1516_pu.csv') do |filename|
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/pss/pss1516_pu.csv") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
       {
         school_id:          row['ppin'],
-        school_year:        '2015-2016',
+        school_year:        SURVEY_YEAR,
         grades_offered_lo:  row['logr2016'].presence.try {|v| GRADES_MAP[v]},
         grades_offered_hi:  row['higr2016'].presence.try {|v| GRADES_MAP[v]},
         grade_pk_offered:   row['p145'][0] == '1',
@@ -57,7 +59,8 @@ AWS::S3.process_file('cdo-nces', '2015-2016/pss/pss1516_pu.csv') do |filename|
         student_hp_count:   row['p318'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
         student_tr_count:   row['p332'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
         title_i_status:     nil,
-        frl_eligible_total: nil
+        frl_eligible_total: nil,
+        community_type:     SchoolStatsByYear.map_community_type(row['ulocale16'])
       }
     end
   end
