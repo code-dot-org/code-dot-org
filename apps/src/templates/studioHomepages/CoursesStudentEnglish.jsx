@@ -25,6 +25,7 @@ class CoursesStudentEnglish extends Component {
         <CourseBlocksStudentGradeBands
           isRtl={isRtl}
           responsive={responsive}
+          showContainer={true}
         />
 
         <ContentContainer
