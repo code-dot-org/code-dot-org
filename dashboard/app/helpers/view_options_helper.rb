@@ -16,6 +16,7 @@ module ViewOptionsHelper
     :is_legacy_share,
     :is_challenge_level,
     :post_milestone,
+    :post_failed_run_milestone,
     :post_final_milestone,
     :puzzle_ratings_url,
     :authored_hint_view_requests_url,

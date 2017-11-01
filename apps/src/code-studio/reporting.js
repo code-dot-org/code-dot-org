@@ -244,9 +244,22 @@ reporting.sendReport = function (report) {
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  if (appOptions.postMilestone ||
-    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
+  var postMilestone = appOptions.postMilestone;
+  // Don't do this milestone post if postFailedRunMilestone is enabled,
+  // we did not pass, and this is not the final level (which is frequently
+  // free play and worth saving)
+  if (appOptions.postMilestone && !appOptions.postFailedRunMilestone &&
+    !report.pass && !appOptions.level.final_level) {
+    postMilestone = false;
+  }
+  // if this is the final level and postFinalMilestone is turned on, then
+  // do this post (overrides any earlier decision not to post)
+  if (appOptions.postFinalMilestone && report.pass &&
+    appOptions.level.final_level) {
+    postMilestone = true;
+  }
 
+  if (postMilestone) {
     var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,
