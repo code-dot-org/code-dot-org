@@ -36,8 +36,8 @@
     "markdown_instructions": "Using what you have learned in the last couple of puzzles, build this image from the beginning.\r\n\r\n- Each hexagon has **50 pixel sides** and **60 degree turns**",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
