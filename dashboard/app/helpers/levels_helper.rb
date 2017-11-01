@@ -167,6 +167,8 @@ module LevelsHelper
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
+    post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_failed_run_milestone: post_failed_run_milestone)
     post_final_milestone = @script ? Gatekeeper.allows('postFinalMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_final_milestone: post_final_milestone)
 
