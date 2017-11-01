@@ -35,5 +35,11 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
+# This class reprsents submissions from the Hour of Code signup page
+# after the census form was separated out from the main signup form.
+# There were no changes to the questions so no additional logic is needed.
+# We are just using a different class to get a different type in the DB
+# for tracking purposes.
+#
 class Census::HocCensus2017v2 < Census::HocCensus2017v1
 end

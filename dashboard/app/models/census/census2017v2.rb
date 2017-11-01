@@ -35,6 +35,9 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
+# This version of the /yourschool census form added a text field to describe what
+# you meant if you selected the "other" topic.
+#
 class Census::Census2017v2 < Census::Census2017v1
   validates :topic_other_description, presence: true, if: :require_other_description
 

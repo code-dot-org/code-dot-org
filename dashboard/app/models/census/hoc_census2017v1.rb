@@ -35,6 +35,9 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
+# This class represents submissions from the original census questions on
+# the Hour of Code signup page.
+#
 class Census::HocCensus2017v1 < Census::CensusSubmission
   validates :submitter_email_address, presence: true
   validates :submitter_name, presence: true

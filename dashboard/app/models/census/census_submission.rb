@@ -36,6 +36,10 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
+# This is the base class for all census submissions. A base CensusSubmission
+# can never be saved to the DB directly since it will not have the required
+# type field set. Always use one of the derived types to save a submission.
+#
 class Census::CensusSubmission < ApplicationRecord
   has_and_belongs_to_many :school_infos
   validates :school_infos, presence: true
