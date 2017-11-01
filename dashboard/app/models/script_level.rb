@@ -60,7 +60,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def stage
-    return script.stages.detect {|s| s.id == stage_id} if Script.should_cache?
+    return script.stages.detect{|s| s.id == stage_id} if Script.should_cache?
     super
   end
 

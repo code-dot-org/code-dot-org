@@ -25,7 +25,7 @@ class Game < ActiveRecord::Base
 
   def self.find_by_name(name)
     # Downcase name to match case-insensitive table schema.
-    (@@game_cache ||= Game.all.index_by {|game| game.name.downcase})[name.downcase] || super
+    (@@game_cache ||= Game.all.index_by{|game| game.name.downcase})[name.downcase] || super
   end
 
   def self.custom_maze
