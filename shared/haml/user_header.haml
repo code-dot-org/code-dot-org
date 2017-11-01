@@ -36,7 +36,9 @@
 :javascript
   // Use function closure to avoid cluttering global namespace.
   (function() {
-    var cookieKey = "#{environment_specific_cookie_name('_shortName')}";
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '#{'_shortName' + (rack_env?(:production) ? '' : "_#{rack_env}")}';
     // Share cookie with top-level domain.
     var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
     var cookieMeta = "path=/;domain=" + topLevelDomain;

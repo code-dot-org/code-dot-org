@@ -9,6 +9,7 @@ describe('initSigninStateTest', () => {
     allowConsoleErrors();
     let headerDiv;
     let cookieName;
+    let stashedRackEnv;
 
     function createHeaderDom(dataId) {
       headerDiv = document.createElement('div');
@@ -24,8 +25,12 @@ describe('initSigninStateTest', () => {
     }
 
     before(() => {
+      stashedRackEnv = window.dashboard.rack_env;
       window.dashboard.rack_env = 'unit_test';
       cookieName = environmentSpecificCookieName('_shortName');
+    });
+    after(() => {
+      window.dashboard.rack_env = stashedRackEnv;
     });
 
     beforeEach(() => {
