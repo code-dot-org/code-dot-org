@@ -1,7 +1,6 @@
 require 'rack/request'
 require 'ipaddr'
 require 'json'
-require 'cookie_helpers'
 
 module Cdo
   module RequestExtension
@@ -81,7 +80,8 @@ module Cdo
     end
 
     def user_id_from_session_cookie
-      session_cookie_key = environment_specific_cookie_name("_learn_session")
+      session_cookie_key = "_learn_session"
+      session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
 
       message = CGI.unescape(cookies[session_cookie_key].to_s)
 
