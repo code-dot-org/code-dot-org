@@ -34,6 +34,7 @@
 #  frl_eligible_total :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  community_type     :string(16)
 #
 # Indexes
 #
@@ -44,6 +45,22 @@ class SchoolStatsByYear < ActiveRecord::Base
   self.primary_keys = :school_id, :school_year
 
   belongs_to :school
+
+  # Enumeration of urban-centric community types
+  enum community_type: %w(
+    city_large
+    city_midsize
+    city_small
+    suburban_large
+    suburban_midsize
+    suburban_small
+    town_fringe
+    town_distant
+    town_remote
+    rural_fringe
+    rural_distant
+    rural_remote
+  ).index_by(&:to_sym).freeze
 
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.
