@@ -7,13 +7,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   # GET /api/v1/pd/applications
   def index
     application_data = empty_application_data
-    regional_partner_id = params[:regional_partner]
 
-    APPLICATION_TYPES.each do |role, applications|
-      applications = applications.where(regional_partner: regional_partner_id) if regional_partner_id
-      apps_by_status = applications.group_by(&:status)
-      apps_by_status.each do |status, apps_with_status|
-        application_data[role][status] = apps_with_status.size
+    ROLES.each do |role|
+      get_applications_by_role(role).group(:status).count.each do |status, count|
+        application_data[role][status] = count
       end
     end
 
@@ -25,12 +22,20 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
   end
 
-  # GET /api/v1/pd/applications/quick_view/csf_facilitators
+  # GET /api/v1/pd/applications/quick_view?role=:role
   def quick_view
     role = params[:role].to_sym
-    return render_404 unless SCOPE_BY_ROLE.key?(role)
     applications = get_applications_by_role(role)
-    render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
+
+    respond_to do |format|
+      format.json do
+        render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
+      end
+      format.csv do
+        csv_text = [TYPES_BY_ROLE[role].csv_header, *applications.map(&:to_csv_row)].join
+        send_csv_attachment csv_text, "#{role}_applications.csv"
+      end
+    end
   end
 
   # PATCH /api/v1/pd/applications/1
@@ -42,16 +47,22 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   private
 
-  SCOPE_BY_ROLE = {
-    csf_facilitators: 'csf',
-    csd_facilitators: 'csd',
-    csp_facilitators: 'csp',
-    csd_teachers: 'csd',
-    csp_teachers: 'csp'
-  }
-
   def get_applications_by_role(role)
-    @applications.send(SCOPE_BY_ROLE[role])
+    applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
+    case role
+    when :csf_facilitators
+      return applications_of_type.csf
+    when :csd_facilitators
+      return applications_of_type.csd
+    when :csp_facilitators
+      return applications_of_type.csp
+    when :csd_teachers
+      return applications_of_type.csd
+    when :csp_teachers
+      return applications_of_type.csp
+    else
+      raise ActiveRecord::RecordNotFound
+    end
   end
 
   def application_params
@@ -60,17 +71,18 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     )
   end
 
-  APPLICATION_TYPES = {
-    csf_facilitators: Pd::Application::Facilitator1819Application.csf,
-    csd_facilitators: Pd::Application::Facilitator1819Application.csd,
-    csp_facilitators: Pd::Application::Facilitator1819Application.csp,
-    csd_teachers: Pd::Application::Teacher1819Application.csd,
-    csp_teachers: Pd::Application::Teacher1819Application.csp,
+  TYPES_BY_ROLE = {
+    csf_facilitators: Pd::Application::Facilitator1819Application,
+    csd_facilitators: Pd::Application::Facilitator1819Application,
+    csp_facilitators: Pd::Application::Facilitator1819Application,
+    csd_teachers: Pd::Application::Teacher1819Application,
+    csp_teachers: Pd::Application::Teacher1819Application
   }
+  ROLES = TYPES_BY_ROLE.keys
 
   def empty_application_data
     {}.tap do |app_data|
-      APPLICATION_TYPES.keys.each do |role|
+      ROLES.each do |role|
         app_data[role] = {}
         Pd::Application::ApplicationBase.statuses.keys.each do |status|
           app_data[role][status] = 0

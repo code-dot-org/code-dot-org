@@ -35,8 +35,8 @@ When sharing code with others, comments are useful to point out sections of code
  <td style="text-align: center; background-color: #d9eff7; border: solid 2px white"><i>Text version</i></td>
 </tr>
 <tr>
-  <td width=50%><img src="https://images.code.org/e948652b4ae75ec739b24c25930234bb-image-1508964345058.png"/></td>
-  <td><img src="https://images.code.org/e54123c658149d2ad2b3af8406f3bfbe-image-1508964326123.png"/></td>
+  <td width=50%><img src="https://images.code.org/5932bb0ae416f259d2b4e0759935c581-image-1509376121407.png"/></td>
+  <td><img src="https://images.code.org/5bdac2f64e9c50c692edff7af0716715-image-1509376098461.png"/></td>
 </tr>
 
 </table>
@@ -56,7 +56,5 @@ Many programmers, when starting from scratch, like to write out a high level pla
 ![](https://images.code.org/353175cf07d6fe765da03d45da49c266-image-1508965031708.56.55 PM.png)
     
 Once you have written out a strategy in comments you'll be able to remember the big picture, after you inevitably run into lots of sub-problems that require your time and brain to solve, or debug.
-
-
 
 MARKDOWN

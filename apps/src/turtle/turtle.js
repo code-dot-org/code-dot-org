@@ -53,6 +53,7 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
+import {SignInState} from '../code-studio/progressRedux';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -174,6 +175,8 @@ const REMIX_PROPS_BY_SKIN = {
   anna: FROZEN_REMIX_PROPS,
   elsa: FROZEN_REMIX_PROPS,
 };
+
+const PUBLISHABLE_SKINS = ['artist', 'anna', 'elsa'];
 
 /**
  * An instantiable Artist class
@@ -1000,8 +1003,8 @@ Artist.prototype.initInterpreter = function () {
 /**
  * Handle an execution error from the interpreter
  */
-Artist.prototype.handleExecutionError = function (err, lineNumber) {
-  this.consoleLogger_.log(err);
+Artist.prototype.handleExecutionError = function (err, lineNumber, outputString) {
+  this.consoleLogger_.log(outputString);
 
   this.executionError = { err: err, lineNumber: lineNumber };
 
@@ -1670,8 +1673,13 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  */
 Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
-  const saveToProjectGallery = this.skin.id === 'artist' && !level.impressive;
-  const {isSignedIn} = getStore().getState().pageConstants;
+  // Don't save impressive levels as projects, because this would create too
+  // many projects. Instead store them as /c/ links, which are much more
+  // space-efficient since they store only one copy of identical projects made
+  // by different users.
+  const saveToProjectGallery = !level.impressive &&
+    PUBLISHABLE_SKINS.includes(this.skin.id);
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
   this.studioApp_.displayFeedback({
     app: 'turtle',
@@ -1898,13 +1906,15 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   // Clear the feedback layer
   this.clearImage_(this.ctxFeedback);
 
-  if (this.isFrozenSkin()) {
-    // For frozen skins, show everything - including background,
-    // characters, and pattern - along with drawing.
+  if (this.isFrozenSkin() && this.level.impressive) {
+    // For impressive levels in frozen skins, show everything - including
+    // background, characters, and pattern - along with drawing.
     this.ctxFeedback.globalCompositeOperation = 'copy';
     this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
         this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   } else {
+    // Frozen free play levels must not show the character, since we don't know
+    // how the drawing will look, and it could be off-brand.
     this.drawImage_(this.ctxFeedback);
   }
 
