@@ -1,4 +1,4 @@
-/** @file Maker Board setup checker */
+/** @file Maker Discount Code Eligibility Checklist */
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import Button from "./Button";
