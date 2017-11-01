@@ -4,6 +4,11 @@ require 'cdo/aws/s3'
 class AwsS3IntegrationTest < Minitest::Test
   include SetupTest
 
+  def setup
+    AWS::S3.create_client
+    Aws::S3::Client.expects(:new).never
+  end
+
   # A test bucket, only used for these tests.
   TEST_BUCKET = 'cdo-temp'.freeze
 

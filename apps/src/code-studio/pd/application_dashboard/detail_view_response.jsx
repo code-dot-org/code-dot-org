@@ -32,9 +32,13 @@ export default class DetailViewResponse extends React.Component {
         );
       } else {
         return (
-          <Panel header={this.props.question} style={{display: 'table'}}>
-            {renderedValue}
-          </Panel>
+          <div className="row">
+            <div className="col-md-8">
+              <Panel header={this.props.question}>
+                {renderedValue}
+              </Panel>
+            </div>
+          </div>
         );
       }
     } else {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101014056) do
+ActiveRecord::Schema.define(version: 20171101185900) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -807,24 +807,24 @@ ActiveRecord::Schema.define(version: 20171101014056) do
   create_table "school_stats_by_years", primary_key: ["school_id", "school_year"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "school_id",          limit: 12, null: false, comment: "NCES public school ID"
     t.string   "school_year",        limit: 9,  null: false, comment: "School Year"
-    t.string   "grades_offered_lo",  limit: 2,  null: false, comment: "Grades Offered - Lowest"
-    t.string   "grades_offered_hi",  limit: 2,  null: false, comment: "Grades Offered - Highest"
-    t.boolean  "grade_pk_offered",              null: false, comment: "PK Grade Offered"
-    t.boolean  "grade_kg_offered",              null: false, comment: "KG Grade Offered"
-    t.boolean  "grade_01_offered",              null: false, comment: "Grade 01 Offered"
-    t.boolean  "grade_02_offered",              null: false, comment: "Grade 02 Offered"
-    t.boolean  "grade_03_offered",              null: false, comment: "Grade 03 Offered"
-    t.boolean  "grade_04_offered",              null: false, comment: "Grade 04 Offered"
-    t.boolean  "grade_05_offered",              null: false, comment: "Grade 05 Offered"
-    t.boolean  "grade_06_offered",              null: false, comment: "Grade 06 Offered"
-    t.boolean  "grade_07_offered",              null: false, comment: "Grade 07 Offered"
-    t.boolean  "grade_08_offered",              null: false, comment: "Grade 08 Offered"
-    t.boolean  "grade_09_offered",              null: false, comment: "Grade 09 Offered"
-    t.boolean  "grade_10_offered",              null: false, comment: "Grade 10 Offered"
-    t.boolean  "grade_11_offered",              null: false, comment: "Grade 11 Offered"
-    t.boolean  "grade_12_offered",              null: false, comment: "Grade 12 Offered"
-    t.boolean  "grade_13_offered",              null: false, comment: "Grade 13 Offered"
-    t.string   "virtual_status",     limit: 14, null: false, comment: "Virtual School Status"
+    t.string   "grades_offered_lo",  limit: 2,               comment: "Grades Offered - Lowest"
+    t.string   "grades_offered_hi",  limit: 2,               comment: "Grades Offered - Highest"
+    t.boolean  "grade_pk_offered",                           comment: "PK Grade Offered"
+    t.boolean  "grade_kg_offered",                           comment: "KG Grade Offered"
+    t.boolean  "grade_01_offered",                           comment: "Grade 01 Offered"
+    t.boolean  "grade_02_offered",                           comment: "Grade 02 Offered"
+    t.boolean  "grade_03_offered",                           comment: "Grade 03 Offered"
+    t.boolean  "grade_04_offered",                           comment: "Grade 04 Offered"
+    t.boolean  "grade_05_offered",                           comment: "Grade 05 Offered"
+    t.boolean  "grade_06_offered",                           comment: "Grade 06 Offered"
+    t.boolean  "grade_07_offered",                           comment: "Grade 07 Offered"
+    t.boolean  "grade_08_offered",                           comment: "Grade 08 Offered"
+    t.boolean  "grade_09_offered",                           comment: "Grade 09 Offered"
+    t.boolean  "grade_10_offered",                           comment: "Grade 10 Offered"
+    t.boolean  "grade_11_offered",                           comment: "Grade 11 Offered"
+    t.boolean  "grade_12_offered",                           comment: "Grade 12 Offered"
+    t.boolean  "grade_13_offered",                           comment: "Grade 13 Offered"
+    t.string   "virtual_status",     limit: 14,              comment: "Virtual School Status"
     t.integer  "students_total",                             comment: "Total students, all grades (includes AE)"
     t.integer  "student_am_count",                           comment: "All Students - American Indian/Alaska Native"
     t.integer  "student_as_count",                           comment: "All Students - Asian"
