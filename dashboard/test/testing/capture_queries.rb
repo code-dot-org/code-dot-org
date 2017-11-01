@@ -46,8 +46,7 @@ module CaptureQueries
       backtrace = cleaner.clean(caller)
 
       # Script/course-cache related queries don't count.
-      next if backtrace.any? {|line| line =~ /(script|course)\.rb.*(get_from_cache|cache_find_.*level)/}
-      next if backtrace.any? {|line| line =~ /game\.rb.*find_by_name/}
+      next if backtrace.any? {|line| line =~ /(script|course)\.rb.*get_from_cache/}
 
       queries << "#{QueryLogger.log(duration, payload)}\n#{backtrace.join("\n")}"
     end
