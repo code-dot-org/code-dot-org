@@ -6,4 +6,4 @@
 
 require_relative 'i18n_script_utils'
 
-exec "crowdin --config #{HOUROFCODE_CONFIG_FILE} --identity #{IDENTITY_FILE} upload sources"
+exec "crowdin --config #{HOUROFCODE_CONFIG_FILE} --identity #{HOUROFCODE_IDENTITY_FILE} upload sources"

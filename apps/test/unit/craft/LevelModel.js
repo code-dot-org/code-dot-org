@@ -27,6 +27,9 @@ const mockGameController = {
   levelEntity: new LevelEntity({}),
   getIsDirectPlayerControl: () => false,
   levelData: {},
+  levelView: {
+    collectibleItems: [],
+  },
   followingPlayer: () => false,
 };
 

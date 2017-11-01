@@ -59,7 +59,18 @@ function apiValidateActiveCanvas(opts, funcName) {
   }
 }
 
-function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
+/**
+ * Validate that the supplied id exists. If not, output a warning.
+ * @param {object} opts
+ * @param {string} funcName
+ * @param {string} varName
+ * @param {string} id
+ * @param {boolean} shouldExist
+ * @param {function} callback optional, called if a warning is needed with a
+ *  single parameter indicating whether or not the element existsInApplab. If the
+ *  return value is true, the built-in warning is suppressed.
+ */
+function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist, callback) {
   var divApplab = document.getElementById('divApplab');
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedDomKey = 'validated_id_' + varName;
@@ -81,13 +92,15 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     if (!valid) {
       var errorString = "";
       if (existsOutsideApplab) {
-        errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
-            ") which is already in use outside of Applab. Choose a different id.";
+        errorString = funcName + '() ' + varName + ' parameter refers to an id ("' + id +
+            '") which is already being used outside of App Lab. Please use a different id.';
         throw new Error(errorString);
       } else {
-        outputWarning(funcName + "() " + varName +
-            " parameter refers to an id (" + id + ") which " +
-            (existsInApplab ? "already exists." : "does not exist."));
+        if (!callback || !callback(existsInApplab)) {
+          outputWarning(funcName + '() ' + varName +
+              ' parameter refers to an id ("' + id + '") which ' +
+              (existsInApplab ? 'already exists.' : 'does not exist.'));
+        }
       }
     }
     opts[validatedDomKey] = valid;
@@ -1075,7 +1088,13 @@ function setSize_(elementId, width, height) {
 }
 
 applabCommands.setProperty = function (opts) {
-  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true, (exists) => {
+    outputWarning(`The setProperty() id parameter refers to an id (“${opts.elementId}”) ` +
+      `which ${exists ? 'already exists.' : 'does not exist.'} You should be able to ` +
+      'find the list of all the possible ids in the dropdown (unless you created the ' +
+      'element inside your code).');
+    return true;
+  });
   apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
 
   var elementId = opts.elementId;
@@ -1089,7 +1108,8 @@ applabCommands.setProperty = function (opts) {
 
   var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
   if (!info) {
-    outputError('Cannot set property "' + property + '" on element "' + elementId + '".');
+    outputError('There is no property named "' + property + '" for element "' + elementId +
+      '". Make sure you choose a property from the dropdown.');
     return;
   }
 

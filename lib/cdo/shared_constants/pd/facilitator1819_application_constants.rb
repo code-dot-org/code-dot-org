@@ -32,7 +32,7 @@ module Facilitator1819ApplicationConstants
       institution_type: 'What type of institution do you work for?',
       current_employer: 'Current employer',
       job_title: 'What is your job title?',
-      resume_link: 'Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.',
+      resume_link: 'Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience. (500 characters max)',
       worked_in_cs_job: 'Have you worked in a job that requires computer science knowledge?',
       cs_related_job_requirements: 'What were your CS-related job requirements? (500 characters max)',
       completed_cs_courses_and_activities: 'Which of the following computer science education courses or activities have you completed?',

@@ -15,6 +15,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  course              :string(255)
+#  response_scores     :text(65535)
 #
 # Indexes
 #
@@ -26,6 +27,7 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+
 require 'state_abbr'
 require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 
@@ -58,7 +60,6 @@ module Pd::Application
     end
 
     OTHER = 'Other'.freeze
-    OTHER_WITH_TEXT = 'Other:'.freeze
     OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
@@ -119,9 +120,9 @@ module Pd::Application
         worked_in_cs_job: [YES, NO],
 
         completed_cs_courses_and_activities: [
-          'Intro CS in HS',
-          'Intro CS in College',
-          'Advanced CS in HS or College',
+          'Intro CS in high school',
+          'Intro CS in college',
+          'Advanced CS in high school or college',
           'Online (Udacity, Coursera, etc.)',
           'Attended a coding or CS camp',
           'Attended a CS professional development workshop',
@@ -226,7 +227,7 @@ module Pd::Application
           'Code HS',
           'Edhesive',
           'Exploring Computer Science',
-          'Mobile CSP',
+          'Mobile CS Principles',
           'NMSI',
           'Project Lead the Way',
           'ScratchEd',
@@ -402,26 +403,24 @@ module Pd::Application
     end
 
     # Include additional text for all the multi-select fields that have the option
-    def full_answers
-      sanitize_form_data_hash.tap do |hash|
-        [
-          [:institution_type],
-          [:completed_cs_courses_and_activities],
-          [:how_heard, HOW_HEARD_FACILITATOR, :how_heard_facilitator],
-          [:how_heard, HOW_HEARD_CODE_ORG_STAFF, :how_heard_code_org_staff],
-          [:how_heard, HOW_HEARD_REGIONAL_PARTNER, :how_heard_regional_partner],
-          [:plan_on_teaching],
-          [:led_cs_extracurriculars, OTHER_PLEASE_LIST],
-          [:grades_taught],
-          [:grades_currently_teaching],
-          [:subjects_taught],
-          [:experience_leading]
-        ].each do |additional_text_params|
-          answer_with_additional_text hash, *additional_text_params
-        end
-      end
+    def additional_text_fields
+      [
+        [:institution_type],
+        [:completed_cs_courses_and_activities],
+        [:how_heard, HOW_HEARD_FACILITATOR, :how_heard_facilitator],
+        [:how_heard, HOW_HEARD_CODE_ORG_STAFF, :how_heard_code_org_staff],
+        [:how_heard, HOW_HEARD_REGIONAL_PARTNER, :how_heard_regional_partner],
+        [:how_heard],
+        [:plan_on_teaching],
+        [:led_cs_extracurriculars, OTHER_PLEASE_LIST],
+        [:grades_taught],
+        [:grades_currently_teaching],
+        [:subjects_taught],
+        [:experience_leading]
+      ]
     end
 
+    # @override
     def self.csv_header
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
@@ -430,36 +429,12 @@ module Pd::Application
       end
     end
 
+    # @override
     def to_csv_row
-      hash = sanitize_form_data_hash
+      answers = full_answers
       CSV.generate do |csv|
-        csv << ALL_LABELS.keys.map {|k| hash[k]}
+        csv << ALL_LABELS.keys.map {|k| answers[k]}
       end
-    end
-
-    # Get the answers from form_data with additional text appended
-    # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
-    # @param [Symbol] field_name - name of the multi-choice option
-    # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
-    # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
-    #                 Field name for the additional text field associated with this option.
-    # @returns [Array] - adjusted array of user responses with additional text appended in place
-    def answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
-      additional_text_field_name ||= "#{field_name}_other".to_sym
-      hash[field_name].tap do |answer|
-        if answer
-          index = answer.index(option)
-          if index
-            answer[index] = [option, hash[additional_text_field_name.to_sym]].flatten.join(' ')
-          end
-        end
-      end
-    end
-
-    private
-
-    def include_additional_text(hash, field_name, *options)
-      hash[field_name] = answer_with_additional_text hash, field_name, *options
     end
 
     # Formats hour as 0-12(am|pm)

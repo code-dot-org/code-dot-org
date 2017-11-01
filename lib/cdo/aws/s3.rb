@@ -1,8 +1,11 @@
 require 'aws-sdk'
 require 'tempfile'
+require 'active_support/core_ext/module/attribute_accessors'
 
 module AWS
   module S3
+    mattr_accessor :s3
+
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
     class NoSuchKey < Exception
       def initialize(message = nil)
@@ -14,7 +17,7 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      Aws::S3::Client.new
+      self.s3 ||= Aws::S3::Client.new
     end
 
     # A simpler name for connect_v2!
@@ -76,7 +79,12 @@ module AWS
     end
 
     def self.public_url(bucket, filename)
-      Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
+      Aws::S3::Object.new(
+        bucket,
+        filename,
+        client: create_client,
+        region: CDO.aws_region
+      ).public_url
     end
 
     # Downloads a file in an S3 bucket to a specified location.
