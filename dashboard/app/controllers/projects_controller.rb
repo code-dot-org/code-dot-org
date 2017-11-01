@@ -155,13 +155,15 @@ class ProjectsController < ApplicationController
       return
     end
     return if redirect_under_13_without_tos_teacher(@level)
+    data = {
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key], 'project_projects'])
+    }
+    data[:thumbnailUrl] = '/blockly/media/flappy/placeholder.jpg' if params[:key] == 'flappy'
     redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
-      data: {
-        name: 'Untitled Project',
-        level: polymorphic_url([params[:key], 'project_projects'])
-      },
+      data: data,
       type: params[:key]
     )
   end
