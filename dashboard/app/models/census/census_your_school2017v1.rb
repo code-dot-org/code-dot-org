@@ -38,7 +38,7 @@
 # This class represents census submissions coming from the original /yourschool
 # census page.
 #
-class Census::Census2017v1 < Census::CensusSubmission
+class Census::CensusYourSchool2017v1 < Census::CensusSubmission
   def validate_pledge?
     submitter_role_teacher? || submitter_role_administrator?
   end
