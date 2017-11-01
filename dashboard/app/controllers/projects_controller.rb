@@ -9,6 +9,15 @@ class ProjectsController < ApplicationController
 
   TEMPLATES = %w(projects).freeze
 
+  # @type [Hash[Hash]] A map from project type to a hash with the following options
+  # representing properties of this project type:
+  # @option {String} :name The name of the level to use for this project type.
+  # @option {Boolean|nil} :levelbuilder_required Whether you must have
+  #   UserPermission::LEVELBUILDER to access this project type. Default: false.
+  # @option {Boolean|nil} :login_required Whether you must be logged in to
+  #   access this project type. Default: false.
+  # @option {String|nil} :default_image_url If present, set this as the
+  # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
     artist: {
       name: 'New Artist Project'
@@ -44,7 +53,11 @@ class ProjectsController < ApplicationController
       name: 'New Gumball Project'
     },
     flappy: {
-      name: 'New Flappy Project'
+      name: 'New Flappy Project',
+      # We do not currently generate thumbnails for flappy, so specify a
+      # placeholder image here. This allows flappy projects to show up in the
+      # public gallery, and to be published from the share dialog.
+      default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
     scratch: {
       name: 'New Scratch Project',
@@ -168,13 +181,8 @@ class ProjectsController < ApplicationController
       name: 'Untitled Project',
       level: polymorphic_url([params[:key], 'project_projects'])
     }
-
-    # We do not currently generate thumbnails for flappy, so specify a
-    # placeholder image here. This allows flappy projects to show up in the
-    # public gallery, and to be published from the share dialog.
-    if params[:key] == 'flappy'
-      data[:thumbnailUrl] = '/blockly/media/flappy/placeholder.jpg'
-    end
+    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
+    data[:thumbnailUrl] = default_image_url if default_image_url
     data
   end
 
