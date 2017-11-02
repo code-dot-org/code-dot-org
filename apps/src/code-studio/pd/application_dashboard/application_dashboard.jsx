@@ -1,7 +1,7 @@
 /**
  * Main landing page and router for the application dashboard.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Header from '../components/header';
 import {
   Router,
@@ -35,44 +35,53 @@ const paths = {
   'csp_teachers': 'CS Principles Teacher Applications'
 };
 
-const ApplicationDashboard = ()=> (
-  <Router history={browserHistory} >
-    <Route path="/" component={ApplicationDashboardHeader}>
-      <IndexRedirect to="/summary"/>
-      <Route
-        path="summary"
-        breadcrumbs="Summary"
-        component={Summary}
-      />
-      {
-        _.flatten(Object.keys(paths).map((path, i) => {
-          return [
-            (
-              <Route
-                key={`detail_${i}`}
-                path={`${path}/(:applicationId)`}
-                breadcrumbs={[
-                  {name: paths[path], path: path},
-                  {name: 'Application Details', path: ''}
-                ]}
-                component={DetailView}
-                title={'Application Detail'}
-              />
-            ),
-            (
-              <Route
-                key={`quick_view_${i}`}
-                path={path}
-                breadcrumbs={paths[path]}
-                component={QuickView}
-                title={paths[path]}
-              />
-            )
-          ];
-        }))
-      }
-    </Route>
-  </Router>
-);
+export default class ApplicationDashboard extends React.Component {
+  static propTypes = {
+    regionalPartnerName: PropTypes.string
+  };
 
-export default ApplicationDashboard;
+  render() {
+    const regionalPartnerName = this.props.regionalPartnerName || "All Regional Partner Applications";
+    return (
+      <Router history={browserHistory} >
+        <Route path="/" component={ApplicationDashboardHeader}>
+          <IndexRedirect to="/summary"/>
+          <Route
+            path="summary"
+            breadcrumbs="Summary"
+            component={Summary}
+            regionalPartnerName={regionalPartnerName}
+          />
+          {
+            _.flatten(Object.keys(paths).map((path, i) => {
+              return [
+                (
+                  <Route
+                    key={`detail_${i}`}
+                    path={`${path}/(:applicationId)`}
+                    breadcrumbs={[
+                      {name: paths[path], path: path},
+                      {name: 'Application Details', path: ''}
+                    ]}
+                    component={DetailView}
+                  />
+                ),
+                (
+                  <Route
+                    key={`quick_view_${i}`}
+                    path={path}
+                    breadcrumbs={paths[path]}
+                    component={QuickView}
+                    regionalPartnerName={regionalPartnerName}
+                    applicationType={paths[path]}
+                  />
+                )
+              ];
+            }))
+          }
+        </Route>
+      </Router>
+    );
+  }
+}
+
