@@ -1,4 +1,4 @@
-/**
+ /**
  * Table displaying a summary of application statuses
  */
 import React, {PropTypes} from 'react';
@@ -28,7 +28,7 @@ export default class SummaryTable extends React.Component {
   }
 
   tableRow = (label, bgColor, data) =>  {
-    const status = label.toLowerCase();
+    const status = label.toLowerCase().replace(/ /g,'_');
     const total = data[status];
 
     return (
@@ -56,11 +56,13 @@ export default class SummaryTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.tableRow('Accepted', color.level_perfect, this.props.data)}
-            {this.tableRow('Waitlisted', color.level_passed, this.props.data)}
-            {this.tableRow('Pending', color.orange, this.props.data)}
-            {this.tableRow('Declined', color.red, this.props.data)}
             {this.tableRow('Unreviewed', color.charcoal, this.props.data)}
+            {this.tableRow('Pending', color.lighter_orange, this.props.data)}
+            {this.tableRow('Move to Interview', color.orange, this.props.data)}
+            {this.tableRow('Waitlisted', color.level_passed, this.props.data)}
+            {this.tableRow('Accepted', color.level_perfect, this.props.data)}
+            {this.tableRow('Declined', color.red, this.props.data)}
+            {this.tableRow('Withdrawn', color.lightest_red, this.props.data)}
           </tbody>
         </Table>
         <Button
