@@ -5,11 +5,42 @@ theme: responsive
 
 # Facilitating with Code.org
 
+<div class="col-50" style="padding-right: 20px;">
+
+<img src="/images/fit-450/facilitator_laura.jpg">
+
+</div>
+
+[col-50]
+
 Code.org partners with individuals interested in developing facilitation capacity in computer science (CS) education to deliver high-quality professional development to teachers in a format that's fun and accessible.
 
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum.
 
 The ideal facilitator is an enthusiastic supporter of CS education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through teaching experience. 
+
+[/col-50]
+
+<div style="clear: both;"></div>
+
+## Apply to become a Code.org Facilitator
+
+**Applications for the 2018-19 Facilitator Development Program are now available!**
+
+Before you apply, check out the [Facilitator Program Description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) and be sure to visit our curriculum pages for additional information on our three courses.
+
+- [CS Fundamentals (Grades K to 5)](/educate/curriculum/elementary-school)
+- [CS Discoveries (Grades 6 to 10)](/educate/curriculum/middle-school)
+- [CS Principles (Grades 9 to 12)](/educate/curriculum/high-school)
+
+Ready to get started?
+
+[<button>Apply now!</button>](https://studio.code.org/pd/application/facilitator)
+
+<br>
+_The application period will close on Dececember 1, 2017. Applications submitted after Dec. 1st, will only be reviewed at our Regional Partners' discretion._
+
+## Learn more about the program
 
 <details>
  <summary>**What does a Code.org Facilitator do?**</summary>
@@ -70,6 +101,21 @@ In order to be selected for this program, potential Code.org facilitators must d
 </p>
 </details>
 
+<details>
+ <summary>**What are the program-specific commitments?**</summary>
+  <p>
+  
+The [2018-19 Facilitator Development Program description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) contains additional details about program benefits, qualifications, and commitments by curriculum focus area.
+</p>
+</details>
+
+Have a question? Let us know by writing to <facilitators@code.org>
+
+
+<!--
+Check out the [2018-19 Facilitator Development Program description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing)!
+
+Here, you will find additional details about program benefits, qualifications, and commitments by curriculum focus area.
 
 <div class="col-50" style="padding-right: 20px;">
 
@@ -85,16 +131,6 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div style="clear: both;"></div>
 
-## Learn more about the program
-Check out the [2018-19 Facilitator Development Program description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing)!
-
-Here, you will find additional details about program benefits, qualifications, and commitments by curriculum focus area.
-
-Have a question? Let us know by writing to <facilitators@code.org>
-
-
-## Apply to become a Code.org Facilitator
-
 **Applications for the Code.org Facilitator Development Program will be available starting in early November, 2017.** The application will close in December, 2017. 
 
 If you would like to be contacted for the 2018-2019 application cycle please fill out [this interest form](https://goo.gl/forms/5r7Ft8PwkJ45fFmt1). 
@@ -104,6 +140,4 @@ In the meantime, please check out the [Facilitator Program Description](https://
 - [CS Fundamentals (Grades K to 5)](/educate/curriculum/elementary-school)
 - [CS Discoveries (Grades 6 to 10)](/educate/curriculum/middle-school)
 - [CS Principles (Grades 9 to 12)](/educate/curriculum/high-school)
-
-
-
+-->
