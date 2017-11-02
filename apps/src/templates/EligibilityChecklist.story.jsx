@@ -1,6 +1,6 @@
 import React from 'react';
 import EligibilityChecklist from './EligibilityChecklist';
-import {FAILED, SUCCEEDED} from '../lib/kits/maker/ui/SetupStep';
+import {Status} from '../lib/kits/maker/ui/SetupStep';
 
 export default storybook => {
   return storybook
@@ -11,8 +11,8 @@ export default storybook => {
         description: 'EligbilityChecklist where one of first list items failed',
         story: () => (
           <EligibilityChecklist
-            statusPD={SUCCEEDED}
-            statusStudentCount={FAILED}
+            statusPD={Status.SUCCEEDED}
+            statusStudentCount={Status.FAILED}
           />
         )
       },
@@ -21,8 +21,8 @@ export default storybook => {
         description: 'First two items succeeded, third needs to be verified',
         story: () => (
           <EligibilityChecklist
-            statusPD={SUCCEEDED}
-            statusStudentCount={SUCCEEDED}
+            statusPD={Status.SUCCEEDED}
+            statusStudentCount={Status.SUCCEEDED}
           />
         )
       },
