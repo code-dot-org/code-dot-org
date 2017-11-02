@@ -27,13 +27,13 @@ export default class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   }
 
-  tableRow = (label, bgColor, data) =>  {
+  tableRow = (label, bgColor, textColor, data) =>  {
     const status = label.toLowerCase().replace(/ /g,'_');
     const total = data[status];
 
     return (
       <tr>
-        <td style={{backgroundColor: bgColor}}>{label}</td>
+        <td style={{backgroundColor: bgColor, color: textColor}}>{label}</td>
         <td>{total}</td>
       </tr>
     );

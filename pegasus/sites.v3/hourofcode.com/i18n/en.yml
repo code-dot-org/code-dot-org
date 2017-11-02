@@ -351,6 +351,8 @@
   stats_hoc: "The Hour of Code: 5 days"
   stats_global: "Over 100M students have tried an Hour of Code"
   stats_girls_more: "More girls tried computer science than in the last 70 years"
+  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
@@ -498,7 +500,7 @@
   tutorial_inf_name: "Infinity Play Lab"
   tutorial_tynkersol_name: "Solar System STEM Kit"
   tutorial_itchg_name: "ITCH Name IT - Geography"
-  tutorial_como_name: "CodeMonkey"
+  tutorial_como_name: "Coding Adventure"
   tutorial_processfound_name: "The Processing Foundation - Hello Processing"
   tutorial_tynkerhomo_name: "Homophones STEM Kit"
   tutorial_art_name: "Artist"
@@ -1216,7 +1218,7 @@
   tutorial_inf_longdescription: "Use Play Lab to create a story or game starring Disney Infinity characters."
   tutorial_tynkersol_longdescription: "Program an interactive model of our Solar System. This project comes with step-by-step instructions that guide you through creating a simulation with planets orbiting the Sun. Then add facts about each planet that pop up when clicked."
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe ending project has students creating a game to name the States of Australia!\n\nYou'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!\n\nYou can take the activity even further by adding your own image and labels (along with many other extra project options, the fun never ends). Headphones are recommended."
-  tutorial_como_longdescription: "Learn and teach coding in CoffeeScript, a real-world programming language. CodeMonkey is a fun, award-winning game, suitable for everybody, with or without any coding experience. CodeMonkey's adaptive platform will give you all the instructions and hints you need, and will reward you star scores. Write code. Catch Bananas. Save the world."
+  tutorial_como_longdescription: "In 200 Story Mode and Skill Mode challenges, users help the monkey catch bananas through learning and writing code. Coding Adventure Part I teaches objects, loops, variables, array indexing, functions and more. Part II teaches boolean logic (if-else, AND, OR and NOT), comparisons, function return values and triggering events using the mouse and keyboard. Personalized hints and tips are included every step of the way. For ages 8-16."
   tutorial_processfound_longdescription: "What does it mean to write software to do the things that you often do with your hands, with paper, with pencil with paint? Could you use a computer to create drawings? To create animations? To create images?"
   tutorial_tynkerhomo_longdescription: "You'll follow step-by-step instructions to animate an interactive story with a lot of homophones in it! Each time a character says a word that is a homophone, ask the player which homophone is the correct word for that context. The player better know their homophones, or else the dialog won't make any sense!"
   tutorial_art_longdescription: "Draw cool pictures and designs with the Artist!"
