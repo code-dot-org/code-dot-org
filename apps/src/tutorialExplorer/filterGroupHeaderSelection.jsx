@@ -11,7 +11,7 @@ const styles = {
     overflow: 'hidden',
     height: 34,
     lineHeight: '34px',
-    border: "solid 1px #cecece",
+    border: "solid 1px #a2a2a2",
     borderRadius: 5
   },
   flexContainer: {
@@ -37,7 +37,7 @@ const styles = {
     borderLeft: "solid 1px #2799a4"
   },
   borderOnLeft: {
-    borderLeft: "solid 1px #cecece"
+    borderLeft: "solid 1px #a2a2a2"
   }
 };
 

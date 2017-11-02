@@ -44,7 +44,7 @@ describe('FilterGroupHeaderSelection', () => {
 
     const borderLeftSelect = 'solid 1px #2799a4';
     const borderLeftItem = 'solid 1px white';
-    const borderLeftBorder = 'solid 1px #cecece';
+    const borderLeftBorder = 'solid 1px #a2a2a2';
 
     // This item is selected.
     expect(getItemBorderLeft(wrapper, 1)).is.equal(borderLeftSelect);
