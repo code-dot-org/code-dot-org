@@ -1,10 +1,6 @@
 import React, {PropTypes} from 'react';
-import marked from 'marked';
 import FormComponent from '../../form_components/FormComponent';
-
-// Render links to open in a different tab
-const renderer = new marked.Renderer();
-renderer.link = (href, _title, text) => `<a href="${href}" target="_blank">${text}</a>`;
+import MarkdownSpan from '../../components/markdownSpan';
 
 export default class Facilitator1819FormComponent extends FormComponent {
   static propTypes = {
@@ -25,12 +21,9 @@ export default class Facilitator1819FormComponent extends FormComponent {
       return name;
     }
 
-    const label = this.constructor.labels[name];
-    const renderedLabel = marked.inlineLexer(label, [], {renderer});
-
     return (
-      <span
-        dangerouslySetInnerHTML={{__html: renderedLabel}} // eslint-disable-line react/no-danger
+      <MarkdownSpan
+        markdown={this.constructor.labels[name]}
       />
     );
   }
