@@ -555,7 +555,7 @@ FactoryGirl.define do
         jobTitle: 'Keeper of Keys and Grounds of Hogwarts',
         resumeLink: 'linkedin.com/rubeus_hagrid',
         workedInCsJob: 'No',
-        completedCsCoursesAndActivities: ['Advanced CS in HS or College'],
+        completedCsCoursesAndActivities: ['Advanced CS in high school or college'],
         diversityTraining: 'No',
         howHeard: ['Code.org email'],
         program: program,

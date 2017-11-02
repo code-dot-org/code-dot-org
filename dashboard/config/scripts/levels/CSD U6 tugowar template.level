@@ -68,7 +68,7 @@
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onEvent(\"play\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonEvent(\"replay\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  movePlayer(\"red\");\r\n  checkWin(\"red\");\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  movePlayer(\"blue\");\r\n  checkWin(\"blue\");\r\n});\r\n\r\nfunction startGame() {\r\n  // Move both players to the top of the screen\r\n  \r\n  // Switch to the \"game\" screen\r\n  \r\n}\r\n\r\nfunction movePlayer(player) {\r\n  // Get the \"y\" property of the player\r\n  // and assign it to the variable player_y\r\n  var player_y = __;\r\n  \r\n  // Increase the variable player_y by 10\r\n  \r\n  // Set the player's y property to the\r\n  // new player_y value\r\n  \r\n}\r\n\r\nfunction checkWin(player) {\r\n  // Create a variable called player_y and set it\r\n  // to the current y value of the image with the\r\n  // id represented by the paramater player\r\n  \r\n  // Check if player_y is greater than 350,\r\n  // meaning that it's reached the bottom.\r\n  // If it is, change the text property of\r\n  // \"winner\" to the player and switch to\r\n  // the \"win\" screen\r\n  \r\n}\r\n",
+    "start_blocks": "onEvent(\"play\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonEvent(\"replay\", \"click\", function(event) {\r\n  startGame();\r\n});\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  movePlayer(\"red\");\r\n  checkWin(\"red\");\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  movePlayer(\"blue\");\r\n  checkWin(\"blue\");\r\n});\r\n\r\nfunction startGame() {\r\n  // Move both players to the top of the screen\r\n  \r\n  // Switch to the \"game\" screen\r\n  \r\n}\r\n\r\nfunction movePlayer(player) {\r\n  // Get the \"y\" property of the player\r\n  // and assign it to the variable player_y\r\n  var player_y = __;\r\n  \r\n  // Increase player_y by 10\r\n  \r\n  // Set the player's y property to the\r\n  // new player_y value\r\n  \r\n}\r\n\r\nfunction checkWin(player) {\r\n  // Get the \"y\" property of the player\r\n  // and assign it to the variable player_y\r\n  \r\n  // Check if player has reached the bottom.\r\n  // If it has, announce the winner.\r\n  \r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -103,14 +103,11 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-25 19:29:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 20:25:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:38:38 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:50:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:59:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 19:29:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-30 20:25:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:38:38 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:50:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 18:59:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-31 19:00:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

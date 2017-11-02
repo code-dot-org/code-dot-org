@@ -52,7 +52,6 @@ var ALLOWED_KEYS = new Set([
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
-  'userType',
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',

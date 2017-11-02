@@ -52,7 +52,8 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
                  WHEN (frl_eligible_total /
                        students_total::float) > 0.5
                  THEN 1
-                 ELSE 0 END)                      AS high_needs
+                 ELSE 0 END)                      AS high_needs,
+           school_stats_by_years.community_type   AS community_type
       FROM dashboard_production.schools
  LEFT JOIN dashboard_production.school_districts
         ON schools.school_district_id = school_districts.id
