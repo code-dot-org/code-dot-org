@@ -8,6 +8,10 @@ import Button from "./Button";
 const styles = {
   subtitle: {
     fontSize: 16,
+  },
+  signatureBox: {
+    height: 40,
+    width: 98 + '%',
   }
 };
 
@@ -18,18 +22,18 @@ export default class EligibilityConfirmDialog extends Component {
   };
 
   verifyResponse = () => {
-    if (document.getElementById('verify1').checked &&
-        document.getElementById('verify2').checked &&
-        document.getElementById('verify3').checked &&
+    if (this.check1.checked &&
+        this.check2.checked &&
+        this.check3.checked &&
         this.state.signature !== ""){
-      this.setState({activeButton : true});
+      this.setState({activeButton: true});
     } else { // if someone unchecks their responses
       this.setState({activeButton: false});
     }
   }
 
-  setSignature = (value) => {
-    this.setState({signature : value});
+  setSignature = (event) => {
+    this.setState({signature: event.target.value});
     this.verifyResponse();
   }
 
@@ -49,7 +53,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label style={styles.boxStyle}>
             <input
               type="checkbox"
-              id="verify1"
+              ref={input => {this.check1 = input;}}
               onChange={this.verifyResponse}
             />
             {i18n.verifyStudentCount()}
@@ -57,7 +61,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <input
               type="checkbox"
-              id="verify2"
+              ref={input => {this.check2 = input;}}
               onChange={this.verifyResponse}
             />
             {i18n.verifyYear()}
@@ -65,18 +69,18 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <input
               type="checkbox"
-              id="verify3"
+              ref={input => {this.check3 = input;}}
               onChange={this.verifyResponse}
             />
             {i18n.verifySingleCode()}
           </label>
           <br/>
           <label>
-            <div><b>{i18n.verifySignature()}</b>  {i18n.typeName()}</div>
+            <div><b>{i18n.verifySignature()}</b> {i18n.typeName()}</div>
             <input
               value=""
               style={{width: 98 + '%', height: 40}}
-              onChange={() => this.setSignature(this.value)}
+              onChange={this.setSignature}
             />
           </label>
         </form>
