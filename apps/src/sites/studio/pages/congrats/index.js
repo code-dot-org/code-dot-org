@@ -16,13 +16,13 @@ $(document).ready(function () {
         completedTutorialType = 'pre2017Minecraft';
         break;
     // 2017 Minecraft
-    // case :
-    //     completedTutorialType = '2017Minecraft';
-    //     break;
-    // 2017 applab
-    // case :
-    //     completedTutorialType = 'applab';
-    //     break;
+    case 'hero':
+        completedTutorialType = '2017Minecraft';
+        break;
+    // 2017 applab HoC tutorial
+    case 'applab-intro':
+        completedTutorialType = 'applab';
+        break;
     default:
       completedTutorialType = 'other';
 }

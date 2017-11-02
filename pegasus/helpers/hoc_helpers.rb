@@ -122,7 +122,7 @@ def complete_tutorial(tutorial={})
   end
 
   dont_cache
-  redirect destination || CDO.studio_url("/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}", CDO.default_scheme)
+  redirect CDO.studio_url("/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}", CDO.default_scheme)
 end
 
 def complete_tutorial_pixel(tutorial={})
