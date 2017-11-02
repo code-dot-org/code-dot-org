@@ -1122,7 +1122,8 @@ GameLab.prototype.displayFeedback_ = function () {
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()
-    }
+    },
+    hideXButton: true,
   });
 };
 
