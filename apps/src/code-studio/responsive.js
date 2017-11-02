@@ -1,6 +1,6 @@
 import debounce from 'lodash/debounce';
 import { getStore } from './redux';
-import { setResponsiveSize } from './responsiveRedux';
+import { getResponsiveBreakpoint, setResponsiveSize } from './responsiveRedux';
 
 /**
  * Listen for page resize and dispatch events to Redux when if cross a
@@ -10,6 +10,6 @@ export default function initResponsive() {
   const store = getStore();
 
   window.addEventListener('resize', debounce(() => {
-    store.dispatch(setResponsiveSize());
+    store.dispatch(setResponsiveSize(getResponsiveBreakpoint(window.innerWidth)));
   }));
 }

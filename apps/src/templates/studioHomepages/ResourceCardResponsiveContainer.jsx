@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import Responsive from '../../responsive';
+import {connect} from 'react-redux';
 import Radium from 'radium';
 
 const styles = {
@@ -27,11 +27,11 @@ const styles = {
 class ResourceCardResponsiveContainer extends Component {
   static propTypes = {
     children: PropTypes.any,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsiveSize: PropTypes.string.isRequired,
   };
 
   render() {
-    const colCount = this.props.responsive.getResponsiveValue({lg: 3, md: 2, xs: 1});
+    const colCount = ({xl: 3, lg: 3, md: 2, xs: 1})[this.props.responsiveSize];
 
     return (
       <div>
@@ -53,4 +53,6 @@ class ResourceCardResponsiveContainer extends Component {
   }
 }
 
-export default Radium(ResourceCardResponsiveContainer);
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(Radium(ResourceCardResponsiveContainer));
