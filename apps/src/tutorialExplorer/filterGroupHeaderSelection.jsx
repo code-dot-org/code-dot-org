@@ -11,9 +11,8 @@ const styles = {
     overflow: 'hidden',
     height: 34,
     lineHeight: '34px',
-    border: "solid 1px #a2a2a2",
-    borderRadius: 5,
-    width: '100%'
+    border: "solid 1px #cecece",
+    borderRadius: 5
   },
   flexContainer: {
     display: 'flex',
@@ -38,12 +37,13 @@ const styles = {
     borderLeft: "solid 1px #2799a4"
   },
   borderOnLeft: {
-    borderLeft: "solid 1px #a2a2a2"
+    borderLeft: "solid 1px #cecece"
   }
 };
 
 export default class FilterGroupHeaderSelection extends React.Component {
   static propTypes = {
+    containerStyle: PropTypes.object.isRequired,
     filterGroup: PropTypes.object.isRequired,
     selection: PropTypes.array.isRequired,
     onUserInput: PropTypes.func.isRequired
@@ -82,7 +82,7 @@ export default class FilterGroupHeaderSelection extends React.Component {
 
   render() {
     return (
-      <div style={styles.container}>
+      <div style={{...styles.container, ...this.props.containerStyle}}>
         <div style={styles.flexContainer}>
           {this.props.filterGroup.entries.map((item, index) => (
             <div
