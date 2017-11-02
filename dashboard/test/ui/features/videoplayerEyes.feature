@@ -1,9 +1,9 @@
-@eyes
 Feature: The video fallback player works as expected
 
 Background:
   Given I am on "http://studio.code.org/reset_session"
 
+@eyes
 Scenario: Fallback player
   When I open my eyes to test "fallback player"
   Given I am on "http://studio.code.org/flappy/1?force_youtube_fallback"
@@ -13,6 +13,7 @@ Scenario: Fallback player
   And I see no difference for "fallback video player for level"
   And I close my eyes
 
+@eyes
 Scenario: Fallback player for unplugged
   When I open my eyes to test "fallback player for unplugged"
   Given I am on "http://studio.code.org/s/course1/stage/1/puzzle/1?force_youtube_fallback"
@@ -21,6 +22,7 @@ Scenario: Fallback player for unplugged
   And I see no difference for "fallback video player for unplugged"
   And I close my eyes
 
+@eyes
 Scenario: Fallback player for embedded
   When I open my eyes to test "fallback player for embedded"
   Given I am on "http://studio.code.org/s/allthethings/stage/34/puzzle/1?force_youtube_fallback=1"
