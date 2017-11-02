@@ -13,17 +13,14 @@ const styles = {
 
 export default class EligibilityConfirmDialog extends Component {
   state = {
-    checkStudentCount: false,
-    checkYear: false,
-    checkSingleCode: false,
     signature: "",
     activeButton: false,
   };
 
   verifyResponse = () => {
-    if (this.state.checkStudentCount &&
-        this.state.checkYear &&
-        this.state.checkSingleCode &&
+    if (document.getElementById('verify1').checked &&
+        document.getElementById('verify2').checked &&
+        document.getElementById('verify3').checked &&
         this.state.signature !== ""){
       this.setState({activeButton : true});
     } else { // if someone unchecks their responses
@@ -50,21 +47,37 @@ export default class EligibilityConfirmDialog extends Component {
         <br/>
         <form>
           <label style={styles.boxStyle}>
-            <input type="checkbox" value="verify1" onChange={() => {this.setState({checkStudentCount : !this.state.checkStudentCount}); this.verifyResponse();}}/>
+            <input
+              type="checkbox"
+              id="verify1"
+              onChange={this.verifyResponse}
+            />
             {i18n.verifyStudentCount()}
           </label>
           <label>
-            <input type="checkbox" value="verify2" onChange={() => {this.setState({checkYear : !this.state.checkYear}); this.verifyResponse();}}/>
+            <input
+              type="checkbox"
+              id="verify2"
+              onChange={this.verifyResponse}
+            />
             {i18n.verifyYear()}
           </label>
           <label>
-            <input type="checkbox" value="verify3" onChange={() => {this.setState({checkSingleCode : !this.state.checkSingleCode}); this.verifyResponse();}}/>
+            <input
+              type="checkbox"
+              id="verify3"
+              onChange={this.verifyResponse}
+            />
             {i18n.verifySingleCode()}
           </label>
           <br/>
           <label>
             <div><b>{i18n.verifySignature()}</b>  {i18n.typeName()}</div>
-            <input value="" style={{width: 98 + '%', height: 40}} onChange={() => this.setSignature(this.value)}></input>
+            <input
+              value=""
+              style={{width: 98 + '%', height: 40}}
+              onChange={() => this.setSignature(this.value)}
+            />
           </label>
         </form>
         <div>{i18n.contactSupport()}</div>
@@ -76,7 +89,7 @@ export default class EligibilityConfirmDialog extends Component {
           <Button
             text={i18n.getCode()}
             onClick={() => {}}
-            disabled={this.state.activeButton ? false : true}
+            disabled={!this.state.activeButton}
           />
         </DialogFooter>
       </BaseDialog>

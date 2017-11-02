@@ -5,16 +5,16 @@ import Button from "./Button";
 import SchoolAutocompleteDropdown from './SchoolAutocompleteDropdown';
 import SchoolNotFound from './SchoolNotFound';
 
-import SetupStep, {SUCCEEDED, FAILED, STEP_STATUSES, UNKNOWN} from '../lib/kits/maker/ui/SetupStep';
+import SetupStep, {Status} from '../lib/kits/maker/ui/SetupStep';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
-    statusPD: PropTypes.oneOf(STEP_STATUSES).isRequired,
-    statusStudentCount: PropTypes.oneOf(STEP_STATUSES).isRequired,
+    statusPD: PropTypes.oneOf(Object.values(Status)).isRequired,
+    statusStudentCount: PropTypes.oneOf(Object.values(Status)).isRequired,
   };
 
   state = {
-    statusYear: UNKNOWN,
+    statusYear: Status.UNKNOWN,
     yearChoice: false, // stores the teaching-year choice until submitted
     displayDiscountAmount: false,
     submission: {
@@ -44,7 +44,7 @@ export default class EligibilityChecklist extends Component {
 
   // Saves the teaching-year choice to trigger next step of actions
   handleSubmit = () => {
-    this.setState({ statusYear: (this.state.yearChoice ? SUCCEEDED : FAILED )});
+    this.setState({ statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED )});
   }
 
   // Temporarily saves the teaching-year
@@ -94,14 +94,14 @@ export default class EligibilityChecklist extends Component {
           {i18n.eligibilityReqStudentCountFail()}
         </SetupStep>
         {/* Short version - displayed while 'focus' on other eligibility requirements */}
-        {this.props.statusStudentCount !== SUCCEEDED &&
+        {this.props.statusStudentCount !== Status.SUCCEEDED &&
           <SetupStep
             stepName={i18n.eligibilityReqYear()}
             stepStatus={this.state.statusYear}
           />
         }
         {/* Long version - displayed while 'focus' on this eligibility requirements */}
-        {this.props.statusStudentCount === SUCCEEDED &&
+        {this.props.statusStudentCount === Status.SUCCEEDED &&
           <div>
             <SetupStep
               stepName={i18n.eligibilityReqYear()}
@@ -115,27 +115,57 @@ export default class EligibilityChecklist extends Component {
               <div>
                 <form>
                   <label>
-                    <input type="radio" name="year" value="no" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
+                    <input
+                      type="radio"
+                      name="year"
+                      value="no"
+                      onChange={() => {this.handleYearChange(false);}}
+                      disabled={this.state.statusYear !== Status.UNKNOWN}
+                    />
                     {i18n.eligibilityYearNo()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="yes1718" onChange={() => {this.handleYearChange(true);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
+                    <input
+                      type="radio"
+                      name="year"
+                      value="yes1718"
+                      onChange={() => {this.handleYearChange(true);}}
+                      disabled={this.state.statusYear !== Status.UNKNOWN}
+                    />
                     {i18n.eligibilityYearYes1718()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="yes1819" onChange={() => {this.handleYearChange(true);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
+                    <input
+                      type="radio"
+                      name="year"
+                      value="yes1819"
+                      onChange={() => {this.handleYearChange(true);}}
+                      disabled={this.state.statusYear !== Status.UNKNOWN}
+                    />
                     {i18n.eligibilityYearYes1819()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="yesAfter" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
+                    <input
+                      type="radio"
+                      name="year"
+                      value="yesAfter"
+                      onChange={() => {this.handleYearChange(false);}}
+                      disabled={this.state.statusYear !== Status.UNKNOWN}
+                    />
                     {i18n.eligibilityYearAfter()}
                   </label>
                   <label>
-                    <input type="radio" name="year" value="unsure" onChange={() => {this.handleYearChange(false);}} disabled={this.state.statusYear !== UNKNOWN ? true : false}/>
+                    <input
+                      type="radio"
+                      name="year"
+                      value="unsure"
+                      onChange={() => {this.handleYearChange(false);}}
+                      disabled={this.state.statusYear !== Status.UNKNOWN}
+                    />
                     {i18n.eligibilityYearUnknown()}
                   </label>
                   {/* Remove button after choice is made */}
-                  {this.state.statusYear === UNKNOWN &&
+                  {this.state.statusYear === Status.UNKNOWN &&
                     <Button
                       color="orange"
                       text={i18n.submit()}
@@ -147,10 +177,10 @@ export default class EligibilityChecklist extends Component {
             </div>
           </div>
         }
-        {this.state.statusYear === FAILED &&
+        {this.state.statusYear === Status.FAILED &&
           <div>{i18n.eligibilityYearDecline()}</div>
         }
-        {this.state.statusYear === SUCCEEDED &&
+        {this.state.statusYear === Status.SUCCEEDED &&
           <div>
             <SchoolAutocompleteDropdown
               setField={this.handleDropdownChange}
@@ -162,7 +192,7 @@ export default class EligibilityChecklist extends Component {
                 color="orange"
                 text={i18n.confirmSchool()}
                 onClick={() => {this.setState({displayDiscountAmount: true});}}
-                hidden={this.state.displayDiscountAmount ? true : false}
+                hidden={this.state.displayDiscountAmount}
               />
             )}
             {this.state.submission.nces === "-1" && (
