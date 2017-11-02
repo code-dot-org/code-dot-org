@@ -20,6 +20,7 @@ stage 'Creativity in Algorithms', flex_category: 'csp3_1'
 level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
 stage 'Using Simple Commands', flex_category: 'csp3_1'
+named_level 'v2 U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 named_level 'csp_applab_turtle'
 level 'U3L2 Using Simple Commands', progression: 'Using Simple Turtle Commands'
 level 'U3L2_TurtleSquare_right', progression: 'Using Simple Turtle Commands'
