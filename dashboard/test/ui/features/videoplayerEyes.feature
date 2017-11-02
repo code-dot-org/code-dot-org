@@ -31,7 +31,8 @@ Scenario: Fallback player for embedded
   And I see no difference for "fallback video player for embedded"
   And I close my eyes
 
-@chrome
+# Starting in Chrome 62, sites can no longer automatically run plugins.
+@chrome_before_62
 Scenario: Flash fallback player gets injected in Chrome (assuming Flash is available)
   Given I am on "http://studio.code.org/flappy/1?force_youtube_fallback"
   When I rotate to landscape
