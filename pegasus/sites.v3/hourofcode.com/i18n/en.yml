@@ -200,8 +200,8 @@
   front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
   front_join_us_tutorials: "Choose your Hour of Code tutorial!"
   front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
-  front_join_us_robotics: 'Got robots?'
-  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_robotics: 'Win robots or circuits!'
+  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
   front_join_us_teacher: 'Are you a teacher?'
   front_join_us_inspire: 'Inspire students with'
   front_join_us_inspire_link: 'an Hour of Code in the classroom.'
@@ -474,7 +474,7 @@
   tutorial_highseas_name: "Adventure on the High Seas"
   tutorial_capython_name: "Python Turtle Graphics"
   tutorial_frzn_name: "Code with Anna and Elsa"
-  tutorial_cocom_name: "CodeCombat"
+  tutorial_cocom_name: "CodeCombat: Escape the Dungeon!"
   tutorial_play-lab_name: "Play Lab"
   tutorial_boxisland2016_name: "Box Island"
   tutorial_textcomp_name: "Text Compression"
@@ -498,7 +498,7 @@
   tutorial_inf_name: "Infinity Play Lab"
   tutorial_tynkersol_name: "Solar System STEM Kit"
   tutorial_itchg_name: "ITCH Name IT - Geography"
-  tutorial_como_name: "CodeMonkey"
+  tutorial_como_name: "Coding Adventure"
   tutorial_processfound_name: "The Processing Foundation - Hello Processing"
   tutorial_tynkerhomo_name: "Homophones STEM Kit"
   tutorial_art_name: "Artist"
@@ -512,7 +512,7 @@
   tutorial_tynkerapp_name: "Build an App"
   tutorial_tynkerpup_name: "Puppy Adventure"
   tutorial_livecode_name: "LiveCode Sound Boards"
-  tutorial_cocomgame_name: "CodeCombat: Game Development"
+  tutorial_cocomgame_name: "CodeCombat: Build Your Own Game!"
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "Build a Game with JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
@@ -606,7 +606,7 @@
   tutorial_box_name: "Box Island"
   tutorial_hopgame_name: "Hopscotch Game Design Workshop"
   tutorial_icontrol_name: "iControl"
-  tutorial_cocomteach_name: "CodeCombat: Teacher-Led"
+  tutorial_cocomteach_name: "CodeCombat: Teacher-Led Activities"
   tutorial_bbcmathii_name: "Bitsbox Coding + Math (K-2)"
   tutorial_bbcphys_name: "Bitsbox Coding + Physics"
   tutorial_bitsbox_name: "Build Crazy Apps with Bitsbox"
@@ -737,7 +737,7 @@
   tutorial_khanweb_name: "Khan Academy: Webpages"
   tutorial_khandata_name: "Khan Academy: Databases"
   tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
-  tutorial_googlelogo_name: "Create Your Own Google Logo"
+  tutorial_googlelogo_name: "Create your own Google logo"
   tutorial_playtune_name: "Play That Tune App"
   tutorial_computeit_name: "Compute it"
   tutorial_codesterssj_name: "Sprite Jokes"
@@ -833,7 +833,7 @@
   tutorial_highseas_shortdescription: "In this activity, you'll create an adventure story with two characters that takes place on the high seas!"
   tutorial_capython_shortdescription: "Use Python code to draw fun pictures with turtles."
   tutorial_frzn_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
-  tutorial_cocom_shortdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
+  tutorial_cocom_shortdescription: "Learn Python and Javascript by coding your way through Kithgard Dungeon!"
   tutorial_play-lab_shortdescription: "Create a story or make a game with Play Lab!"
   tutorial_boxisland2016_shortdescription: "Take a trip on Box Island and collect all the stars!"
   tutorial_textcomp_shortdescription: "Investigate lossless compression techniques with the Text Compression Widget"
@@ -871,7 +871,7 @@
   tutorial_tynkerapp_shortdescription: "Program a custom version of your favorite game!"
   tutorial_tynkerpup_shortdescription: "Help Pixel the puppy get home!"
   tutorial_livecode_shortdescription: "Make some noise!"
-  tutorial_cocomgame_shortdescription: "Code up your own game with CodeCombat's heroes, ogres, pugicorns, and more!"
+  tutorial_cocomgame_shortdescription: "Build your own game by levelling up your Python and Javascript skills!"
   tutorial_tynkerspin_shortdescription: "Create a fun pen that draws a rotating image."
   tutorial_code-avengers_shortdescription: "Learn \"JavaScript\" programming, in a web-browser."
   tutorial_tynkercq_shortdescription: "Go on a quest for candy!"
@@ -1216,7 +1216,7 @@
   tutorial_inf_longdescription: "Use Play Lab to create a story or game starring Disney Infinity characters."
   tutorial_tynkersol_longdescription: "Program an interactive model of our Solar System. This project comes with step-by-step instructions that guide you through creating a simulation with planets orbiting the Sun. Then add facts about each planet that pop up when clicked."
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe ending project has students creating a game to name the States of Australia!\n\nYou'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!\n\nYou can take the activity even further by adding your own image and labels (along with many other extra project options, the fun never ends). Headphones are recommended."
-  tutorial_como_longdescription: "Learn and teach coding in CoffeeScript, a real-world programming language. CodeMonkey is a fun, award-winning game, suitable for everybody, with or without any coding experience. CodeMonkey's adaptive platform will give you all the instructions and hints you need, and will reward you star scores. Write code. Catch Bananas. Save the world."
+  tutorial_como_longdescription: "In 200 Story Mode and Skill Mode challenges, users help the monkey catch bananas through learning and writing code. Coding Adventure Part I teaches objects, loops, variables, array indexing, functions and more. Part II teaches boolean logic (if-else, AND, OR and NOT), comparisons, function return values and triggering events using the mouse and keyboard. Personalized hints and tips are included every step of the way. For ages 8-16."
   tutorial_processfound_longdescription: "What does it mean to write software to do the things that you often do with your hands, with paper, with pencil with paint? Could you use a computer to create drawings? To create animations? To create images?"
   tutorial_tynkerhomo_longdescription: "You'll follow step-by-step instructions to animate an interactive story with a lot of homophones in it! Each time a character says a word that is a homophone, ask the player which homophone is the correct word for that context. The player better know their homophones, or else the dialog won't make any sense!"
   tutorial_art_longdescription: "Draw cool pictures and designs with the Artist!"
@@ -2197,10 +2197,10 @@
   tutorial_codehsvr_string_detail_grades: "Grades 6+"
   tutorial_codesterstp_string_detail_grades: "Grades 6-8"
   tutorial_codestersbb_string_detail_grades: "Grades 6-8"
-  tutorial_gfcrossyroad_string_detail_grades: "Grades 2-5 (ages 7-10), Grades 6-8 (ages 11-13), Grades 9+ (ages 14+)"
+  tutorial_gfcrossyroad_string_detail_grades: "Grades 9+"
   tutorial_googleww_string_detail_grades: "Grades 9+"
   tutorial_codehsjsapp_string_detail_grades: "Grades 6+"
-  tutorial_gfmihi_string_detail_grades: "Grades 2-5 (ages 7-10), Grades 6-8 (ages 11-13), Grades 9+ (ages 14+)"
+  tutorial_gfmihi_string_detail_grades: "Grades 9+"
   tutorial_hopdropphone_string_detail_grades: "Grades 2-8"
   tutorial_techfaa_string_detail_grades: "Grades 9+"
   tutorial_codehsjsgraph_string_detail_grades: "Grades 9+"
