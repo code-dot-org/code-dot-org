@@ -70,6 +70,7 @@ import StageAchievementDialog from './templates/StageAchievementDialog';
  * @property {boolean} defaultToContinue
  * @property {boolean} preventDialog
  * @property {ExecutionError} executionError
+ * @property {boolean} hideXButton
  */
 
 /**
@@ -366,7 +367,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     defaultBtnSelector: defaultBtnSelector,
     onHidden: onHidden,
     id: 'feedback-dialog',
-    showXButton: !(options.app === 'gamelab' || options.app === 'applab'),
+    showXButton: !options.hideXButton,
   });
 
   // Update the background color if it is set to be in special design.
