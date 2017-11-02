@@ -42,7 +42,7 @@ social:
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: asset_path('js/hourofcode.com/public/index.js')}
+%script{type: "text/javascript", src: minifiable_asset_path('js/hourofcode.com/public/index.js')}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 
