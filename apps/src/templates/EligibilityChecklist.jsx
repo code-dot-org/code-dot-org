@@ -3,7 +3,6 @@ import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import Button from "./Button";
 import SchoolAutocompleteDropdown from './SchoolAutocompleteDropdown';
-import SchoolNotFound from './SchoolNotFound';
 
 import SetupStep, {Status} from '../lib/kits/maker/ui/SetupStep';
 
@@ -194,6 +193,7 @@ export default class EligibilityChecklist extends Component {
               value={submission.nces}
               showErrorMsg={errors.nces}
             />
+            <br/>
             {this.state.submission.nces !== "-1" && (
               <Button
                 color="orange"
@@ -203,19 +203,7 @@ export default class EligibilityChecklist extends Component {
               />
             )}
             {this.state.submission.nces === "-1" && (
-              <div>
-                <SchoolNotFound
-                  onChange={this.handleChange}
-                  schoolName={submission.schoolName}
-                  schoolType={submission.schoolType}
-                  schoolCity={submission.schoolCity}
-                  schoolState={submission.schoolState}
-                  schoolZip={submission.schoolZip}
-                  showErrorMsg={errors.school}
-                />
-                <br/>
-                <div>{i18n.eligibilitySchoolUnknown()} <b>{i18n.contactToContinue()}</b></div>
-              </div>
+              <div>{i18n.eligibilitySchoolUnknown()} <b>{i18n.contactToContinue()}</b></div>
             )}
             {this.state.displayDiscountAmount  &&
               <div>
