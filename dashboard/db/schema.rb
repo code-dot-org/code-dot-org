@@ -65,6 +65,45 @@ ActiveRecord::Schema.define(version: 20171101185900) do
     t.string   "callout_text"
   end
 
+  create_table "census_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "type",                         null: false
+    t.string   "submitter_email_address"
+    t.string   "submitter_name"
+    t.string   "submitter_role"
+    t.integer  "school_year",                  null: false
+    t.string   "how_many_do_hoc"
+    t.string   "how_many_after_school"
+    t.string   "how_many_10_hours"
+    t.string   "how_many_20_hours"
+    t.boolean  "other_classes_under_20_hours"
+    t.boolean  "topic_blocks"
+    t.boolean  "topic_text"
+    t.boolean  "topic_robots"
+    t.boolean  "topic_internet"
+    t.boolean  "topic_security"
+    t.boolean  "topic_data"
+    t.boolean  "topic_web_design"
+    t.boolean  "topic_game_design"
+    t.boolean  "topic_other"
+    t.string   "topic_other_description"
+    t.boolean  "topic_do_not_know"
+    t.string   "class_frequency"
+    t.string   "tell_us_more"
+    t.boolean  "pledged"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["school_year", "id"], name: "index_census_submissions_on_school_year_and_id", using: :btree
+  end
+
+  create_table "census_submissions_school_infos", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "census_submission_id", null: false
+    t.integer  "school_info_id",       null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["census_submission_id", "school_info_id"], name: "census_submission_school_info_id", unique: true, using: :btree
+    t.index ["school_info_id", "census_submission_id"], name: "school_info_id_census_submission", unique: true, using: :btree
+  end
+
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "storage_app_id", null: false
     t.integer  "level_id",       null: false
