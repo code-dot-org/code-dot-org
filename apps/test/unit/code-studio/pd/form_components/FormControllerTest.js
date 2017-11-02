@@ -191,26 +191,26 @@ describe("FormController", () => {
     });
 
     describe("validateCurrentPageRequiredFields()", () => {
+      let sandbox;
+      before(() => {
+        sandbox = sinon.createSandbox();
+      });
+      afterEach(() => {
+        sandbox.restore();
+      });
+
       let render;
       before(() => {
         // Skip rendering
-        render = sinon.stub(DummyForm.prototype, "render");
+        render = sandbox.stub(DummyForm.prototype, "render");
         render.returns(null);
-      });
-      after(() => {
-        render.restore();
       });
 
       let getRequiredFields;
       const stubRequiedFields = (requriredFields) => {
-        getRequiredFields = sinon.stub(DummyForm.prototype, "getRequiredFields");
+        getRequiredFields = sandbox.stub(DummyForm.prototype, "getRequiredFields");
         getRequiredFields.returns(requriredFields);
       };
-      afterEach(() => {
-        if (getRequiredFields) {
-          getRequiredFields.restore();
-        }
-      });
 
       it("Generates errors for missing required fields on the current page", () => {
         // No data provided, so all required fields are missing
@@ -247,6 +247,40 @@ describe("FormController", () => {
           onlySpaces: null,
           otherPageTextFieldWithSpace: "   no trim   ",
           otherPageArrayField: ["  still no trim in array  "]
+        });
+      });
+
+      it("Calls processPageData for the current page", () => {
+        const pageData = {
+          page1Field1: "value1",
+          page1Field2: "will be cleared",
+          page1Field3: "will be modified"
+        };
+
+        const processPageData = sandbox.stub(DummyPage1, "processPageData");
+        processPageData.withArgs(pageData).returns({
+          page1Field2: undefined,
+          page1Field3: "modified"
+        });
+
+        DummyPage1.associatedFields = [
+          "page1Field1",
+          "page1Field2",
+          "page1Field3"
+        ];
+
+        form.setState({data: {
+          ...pageData,
+          page2Field1: "unmodified"
+        }});
+
+        form.getNode().validateCurrentPageRequiredFields();
+        expect(processPageData).to.be.calledOnce;
+        expect(form.state("data")).to.deep.eql({
+          page1Field1: "value1",
+          page1Field2: undefined,
+          page1Field3: "modified",
+          page2Field1: "unmodified"
         });
       });
     });
