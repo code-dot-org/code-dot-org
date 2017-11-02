@@ -600,13 +600,6 @@ function getFilters({robotics, mobile}) {
       entries: [
         {name: "beginner",        text: i18n.filterStudentExperienceBeginner()},
         {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()}]},
-    { name: "teacher_experience",
-      text: i18n.filterTeacherExperience(),
-      singleEntry: true,
-      entries: [
-        {name: "beginner",        text: i18n.filterTeacherExperienceBeginner()},
-        {name: "comfortable",     text: i18n.filterTeacherExperienceComfortable()},
-        {name: "experienced",     text: i18n.filterTeacherExperienceExperienced()}]},
     { name: "platform",
       text: i18n.filterPlatform(),
       entries: [
@@ -643,7 +636,6 @@ function getFilters({robotics, mobile}) {
         {name: "other",           text: i18n.filterProgrammingLanguageOther()}]}];
 
   const initialFilters = {
-    teacher_experience: ["beginner"],
     student_experience: ["beginner"],
     grade: ["all"]
   };
@@ -720,7 +712,6 @@ function getUrlParameters(filters, robotics) {
   if (robotics) {
     // The robotics page remains dedicated to robotics activities.
     parametersObject.activity_type = ["robotics"];
-    parametersObject.teacher_experience = ["beginner"];
     parametersObject.student_experience = ["beginner"];
     parametersObject.grade = ["all"];
   }
