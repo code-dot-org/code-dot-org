@@ -57,6 +57,8 @@ module Pd::Application
       accepted
       declined
       waitlisted
+      withdrawn
+      move_to_interview
     ).index_by(&:to_sym).freeze
 
     enum course: %w(
@@ -148,6 +150,25 @@ module Pd::Application
     def unlock!
       return unless locked?
       update! locked_at: nil
+    end
+
+    def display_status(status)
+      case status
+      when 'unreviewed'
+        "Unreviewed"
+      when 'pending'
+        "Pending"
+      when 'accepted'
+        "Accepted"
+      when 'declined'
+        "Declined"
+      when 'waitlisted'
+        "Waitlisted"
+      when 'withdrawn'
+        "Withdrawn"
+      when 'move_to_interview'
+        "Move to Interview"
+      end
     end
 
     def regional_partner_name
