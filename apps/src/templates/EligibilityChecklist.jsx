@@ -47,12 +47,6 @@ export default class EligibilityChecklist extends Component {
     this.setState({ statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED )});
   }
 
-  // Temporarily saves the teaching-year
-  // Param: accept - boolean - true for years to accept, false for deniable answers
-  handleYearChange = (accept) => {
-    this.setState({yearChoice : accept});
-  }
-
   handleDropdownChange = (field, event) => {
     this.setState({
       submission: {
@@ -69,6 +63,19 @@ export default class EligibilityChecklist extends Component {
         [field]: event.target.value
       }
     }, this.checkShowFollowUp);
+  }
+
+
+  displayDiscountAmount = () => {
+    this.setState({displayDiscountAmount: true});
+  }
+
+  setEligibleYear = () => {
+    this.setState({yearChoice: true});
+  }
+
+  setIneligibleYear = () => {
+    this.setState({yearChoice: false});
   }
 
   render() {
@@ -119,7 +126,7 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="no"
-                      onChange={() => {this.handleYearChange(false);}}
+                      onChange={this.setIneligibleYear}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearNo()}
@@ -129,7 +136,7 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="yes1718"
-                      onChange={() => {this.handleYearChange(true);}}
+                      onChange={this.setEligibleYear}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearYes1718()}
@@ -139,7 +146,7 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="yes1819"
-                      onChange={() => {this.handleYearChange(true);}}
+                      onChange={this.setEligibleYear}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearYes1819()}
@@ -149,7 +156,7 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="yesAfter"
-                      onChange={() => {this.handleYearChange(false);}}
+                      onChange={this.setIneligibleYear}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearAfter()}
@@ -159,7 +166,7 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="unsure"
-                      onChange={() => {this.handleYearChange(false);}}
+                      onChange={this.setIneligibleYear}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearUnknown()}
@@ -191,7 +198,7 @@ export default class EligibilityChecklist extends Component {
               <Button
                 color="orange"
                 text={i18n.confirmSchool()}
-                onClick={() => {this.setState({displayDiscountAmount: true});}}
+                onClick={this.displayDiscountAmount}
                 hidden={this.state.displayDiscountAmount}
               />
             )}
