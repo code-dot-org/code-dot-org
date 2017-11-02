@@ -19,7 +19,7 @@ const styles = {
   },
   barDesktop: {
     color: "dimgrey",
-    height: 46,
+    height: 64,
     overflow: "hidden",
     backgroundColor: "white"
   },
@@ -38,6 +38,12 @@ const styles = {
   full: {
     float: "left",
     width: "100%"
+  },
+  heading: {
+    fontSize: 13,
+    lineHeight: '13px',
+    marginTop: 3,
+    marginLeft: 5
   },
   left: {
     float: "left",
@@ -111,20 +117,28 @@ export default class FilterHeader extends React.Component {
             {!this.props.mobileLayout && (
               <div style={styles.full}>
                 {filterGroupGrade && (
-                  <FilterGroupHeaderSelection
-                    containerStyle={styles.filterGroupGradeContainer}
-                    filterGroup={filterGroupGrade}
-                    selection={this.props.selection["grade"]}
-                    onUserInput={this.props.onUserInputFilter}
-                  />
+                  <div style={styles.filterGroupGradeContainer}>
+                    <div style={styles.heading}>
+                      {i18n.filterGrades()}
+                    </div>
+                    <FilterGroupHeaderSelection
+                      filterGroup={filterGroupGrade}
+                      selection={this.props.selection["grade"]}
+                      onUserInput={this.props.onUserInputFilter}
+                    />
+                  </div>
                 )}
                 {filterGroupHeaderStudentExperience && (
-                  <FilterGroupHeaderSelection
-                    containerStyle={styles.filterGroupStudentExperienceContainer}
-                    filterGroup={filterGroupHeaderStudentExperience}
-                    selection={this.props.selection["student_experience"]}
-                    onUserInput={this.props.onUserInputFilter}
-                  />
+                  <div style={styles.filterGroupStudentExperienceContainer}>
+                    <div style={styles.heading}>
+                      {i18n.filterStudentExperience()}
+                    </div>
+                    <FilterGroupHeaderSelection
+                      filterGroup={filterGroupHeaderStudentExperience}
+                      selection={this.props.selection["student_experience"]}
+                      onUserInput={this.props.onUserInputFilter}
+                    />
+                  </div>
                 )}
               </div>
             )}
