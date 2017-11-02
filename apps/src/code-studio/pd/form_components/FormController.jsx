@@ -392,9 +392,9 @@ export default class FormController extends React.Component {
       this.setState({
         currentPage: newPage
       });
-    }
 
-    this.saveToSessionStorage({currentPage: newPage});
+      this.saveToSessionStorage({currentPage: newPage});
+    }
   }
 
   /**

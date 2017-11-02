@@ -150,4 +150,15 @@ module Facilitator1819ApplicationConstants
 
   ALL_LABELS = PAGE_LABELS.values.reduce(:merge)
   ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h
+
+  NUMBERED_QUESTIONS = %w(
+    workedInCsJob csRelatedJobRequirements diversityTraining program
+    abilityToMeetRequirements csfAvailability csdCspTeacherconAvailability
+    csdCspFitAvailability ledCsExtracurriculars teachingExperience gradesTaught
+    gradesCurrentlyTeaching subjectsTaught yearsExperience experienceLeading completedPd
+    codeOrgFacilitator codeOrgFacilitatorYears codeOrgFacilitatorPrograms haveLedPd
+    groupsLedPd describePriorPd whoShouldHaveOpportunity howSupportEquity
+    expectedTeacherNeeds describeAdaptingLessonPlan describeStrategies
+    exampleHowUsedFeedback exampleHowProvidedFeedback hopeToLearn
+  )
 end
