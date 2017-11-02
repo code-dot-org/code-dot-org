@@ -32,12 +32,24 @@ class School < ActiveRecord::Base
 
   belongs_to :school_district
 
+  has_many :school_stats_by_year
+
   # Gets the full address of the school.
   # @return [String] The full address.
   def full_address
     %w(address_line1 address_line2 address_line3 city state zip).map do |col|
       attributes[col].presence
     end.compact.join(' ')
+  end
+
+  # Determines if this is a high-needs school.
+  # @return [Boolean] True if high-needs, false otherwise.
+  def high_needs?
+    stats = school_stats_by_year.order(school_year: :desc).first
+    if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
+      return false
+    end
+    stats.frl_eligible_total.to_f / stats.students_total.to_f > 0.5
   end
 
   # Use the zero byte as the quote character to allow importing double quotes

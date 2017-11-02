@@ -35,7 +35,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52) [<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new) [<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
 
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
