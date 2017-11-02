@@ -547,12 +547,10 @@ module LevelsHelper
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
-    app_options[:userType] = user_type_from_cookie
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
-    app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
       fallback_response: @fallback_response,
       callback: @callback,
@@ -583,11 +581,6 @@ module LevelsHelper
     end
 
     app_options
-  end
-
-  private def user_type_from_cookie
-    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-    request && request.cookies && request.cookies[cookie_key]
   end
 
   def build_copyright_strings

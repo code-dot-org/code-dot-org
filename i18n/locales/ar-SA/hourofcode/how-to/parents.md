@@ -1,21 +1,21 @@
----
-title: '<%= hoc_s(:title_how_to_parents) %>'
-layout: wide
-nav: how_to_nav
----
+* * *
+
+title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
+
+* * *
+
 <%= view :signup_button %>
 
-# كيف تكمل ساعة الكود مع طفلك
+# How to complete an Hour of Code with your child
 
-اكمل ساعة الكود بالمنزل, او تطوع لتحضرها الي فصل طفلك في المدرسة! اليك كيف:
+Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) شاهد هذا الفيديو "كيف تفعل ذلك" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
+## 1) شاهد هذا الفيديو "كيف تفعل ذلك" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) اختر برنامجاً تعليمياً:
 
-نحن نوفر تشكيلة من الدروس الممتعة, التي تصل لساعة من الزمن, للطلبة من كل الاعمار, مصنوعة بيد مجموعة متنوعة من شركاؤنا. جربها!
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**كل دروس ساعة الكود ذاتية الارشاد - مما يسمح لطفلك ان يكملها علي وتيرته و مستواه الخاص به**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 

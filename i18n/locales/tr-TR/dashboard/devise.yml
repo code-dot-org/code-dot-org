@@ -28,7 +28,7 @@ tr:
       no_token: "Parola sıfırlama epostası dışından bu sayfaya erişemezsin. Eğer parola sıfırlama epostasından geldiysen, lütfen verilen URL'nin tamamını kullandığından emin ol."
       send_instructions: "Birkaç dakika içinde parolanızı nasıl sıfırlayacağınız hakkında talimatlar içeren bir eposta alacaksınız."
       send_paranoid_instructions: "Eğer e-posta adresiniz veritabanımızda kayıtlı ise, birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız."
-      updated: "Parolan başarıyla değiştirildi. Şu anda oturum açtın."
+      updated: "Şifreniz başarıyla değiştirildi. Şu anda oturum açtın."
       updated_not_active: "Şifreniz başarıyla değiştirildi."
     registrations:
       destroyed: "Hoşçakal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi umuyoruz."

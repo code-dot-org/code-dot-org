@@ -398,7 +398,7 @@ tr:
         20-hour:
           title: Hızlandırılmış Bilgisayar Bilimlerine Giriş Kursu
           description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
-          description_short: Bu ders 2, 3 ve 4 de öğretilen 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını içerir.
+          description_short: Bu 20 saatlik kurs, 2, 3 ve 4. derslerdeki temel bilgisayar bilimi ve programlama kavramlarını içerir.
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
           stages:
             Abstraction:
@@ -448,7 +448,7 @@ tr:
           description_audience: ''
           stages:
             Applab:
-              name: Uygulama labaraturarı
+              name: Uygulama laboratuvarı
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
@@ -466,7 +466,7 @@ tr:
             Bounce:
               name: Sıçrama
             Calc:
-              name: Kireç
+              name: Hesaplama
             Eval:
               name: Değerlendir
             Studio:
@@ -3754,8 +3754,7 @@ tr:
             Styling Text with CSS:
               name: CSS ile Metin Biçimlendirme
               description_student: Bu derste, web sayfasındaki ögeleri biçimlendirmenin bir yolu olan CSS tanıtılır. Sınıf temel CSS söz dizimi kurallarını öğrenir sonra HTML metin öğelerini etkileyen özellikleri keşfeder. Son olarak, herkes kendi kişisel web sitesine metin stillerini uygular.
-              description_teacher: |+
-                Bu derste, web sayfasındaki öğeleri biçimlendirmenin bir yolu olan CSS tanıtılır. Öğrenciler temel CSS söz dizimi kurallarını öğrenir sonra HTML metin öğelerini etkileyen özellikleri keşfederler. Öğrenciler Guinness Rekorlar Kitabı hakkkındaki bir HTML sayfası üzerinde çalışırlar, bu sayfadaki metinlere kendi stillerini uygularlar. Son aşamada, öğrenciler, kendi kişisel web sayfalarındaki metinlere öğrendikleri stil özelliklerini uygularlar.
+              description_teacher: "Bu derste, web sayfasındaki öğeleri biçimlendirmenin bir yolu olan CSS tanıtılır. Öğrenciler temel CSS söz dizimi kurallarını öğrenir sonra HTML metin öğelerini etkileyen özellikleri keşfederler. Öğrenciler Guinness Rekorlar Kitabı hakkkındaki bir HTML sayfası üzerinde çalışırlar, bu sayfadaki metinlere kendi stillerini uygularlar. Son aşamada, öğrenciler, kendi kişisel web sayfalarındaki metinlere öğrendikleri stil özelliklerini uygularlar."
             Styling Elements with CSS:
               name: CSS ile Stil Öğeleri
               description_student: Bu ders, CSS stil özelliklerine, daha çok metin olmayan öğelere odaklanarak devam eder. Sınıf, Dünyanın Tatlıları sayfasında yeni CSS stillerini keşfetmeye ve uygulamaya başlar. Daha sonra, herkes bu yeni bilgiyi kişisel web sayfasında uygular.
@@ -3783,11 +3782,11 @@ tr:
             Intellectual Property and Images:
               name: Fikri mülkiyet ve görüntüleri
               description_student: This lesson covers how to use media such as images, video, or music created by others a website while respecting the rights of the creator of that media. After first studying Creative Commons licensing, the class learns how to add images to web pages, and how to give proper attribution when doing so.
-              description_teacher: "Starting with an exploration of the song \"Happy Birthday\" and its history of copyright protection, the class explores the purpose and role of copyright for both creators and users of creative content. After a brief discussion about the purpose of copyright, we move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \n\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students will learn how to add images to their web pages using the &lt;img&gt; tag."
+              description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \\r\n\\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web developers to connect pages together into one website.  The class will link together all the previous pages into one project, and create navigation bars for each page before publishing the entire site to the Web.  '
-              description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \n\n"
+              description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \\r\n\\r\n"
             RGB Colors and Classes:
               name: RGB Renkleri ve Sınıfları
               description_student: This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
@@ -3795,10 +3794,11 @@ tr:
             Project - Personal Portfolio Website:
               name: Project - Personal Portfolio Website
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+              description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
             Headings:
               name: Headings
+              description_student: This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -3840,8 +3840,7 @@ tr:
             Understanding Your User:
               name: Kullanıcınızı anlama
               description_student: Using user profiles, the class explores how different users might react to a variety of products. Role playing as a different person, each member of the class will get to experience designs through someone else's eyes.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.
+              description_teacher: "Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\\r\n"
             Discovering Users:
               name: Kullanıcıları keşfetmek
             User-Centered Design Micro Activity:
@@ -3869,16 +3868,15 @@ tr:
             Paper Prototypes:
               name: Paper Prototypes
               description_student: Paper prototypes allow developers to quickly test ideas before investing a lot of time writing code. In this lesson teams explore some example apps created in App Lab, using those apps to help inform the first paper prototypes of their apps.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+              description_teacher: "Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\\r\n"
             Prototype Testing:
               name: Prototip testi
               description_student: In this lesson teams test out their paper prototypes with other members of the class. With one student role playing the computer, one narrating, and the rest observing, teams will get immediate feedback on their app designs which will inform the next version of their app prototypes.
               description_teacher: The primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.
             Digital Design:
               name: Dijital Tasarım
-              description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now moves to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
-              description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin implementing an interactive digital version of their prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital app wireframes. From there, each group member builds out at least one page of their app in App Lab.
+              description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
+              description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.
             Event Driven Programming:
               name: Olay Temelli Programlama
               description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
@@ -3915,6 +3913,22 @@ tr:
               name: Proje - Kağıt Modeli
               description_student: Using the interview information from the previous lesson, the class comes up with app ideas to address the needs of their users. To express those ideas, and test out their effectiveness, each student creates and tests paper prototypes of their own.
               description_teacher: Based on the peer interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing "screens" on individual notecards. A project guide directs students through the process including building the app and testing it with their user to see if their assumptions about the user interfaces they created are accurate.
+            Linking Screens:
+              name: Linking Screens
+              description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
+              description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they can then link together using code. Students learn basic event driven programming by building up the model app that they started in the previous lesson. In addition to the screen that students designed yesterday, they'll learn how to create additional screens and even import screens made by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and get feedback on software before writing any code. To help out a developer with their idea, the class tests and provides an app prototype made of paper.
+              description_teacher: Following the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called "Txt Ur Grndkdz". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After "using" the provided prototype students begin to identify ways to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots of feedback for the developer. The class needs to sort through all of this feedback, identify the common themes and needs, and start revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Her takım geliştirdiği uygulamayı "sahada göstermek" için bir sunum hazırlar. Şimdi mücadeleyi, zaferi paylaşma ve gelecek için plan yapma zamanı.
+              description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: Minecraft Kodlama Saati Tasarımcısı
           description_audience: ''
@@ -4554,6 +4568,16 @@ tr:
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5361,7 +5385,7 @@ tr:
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops Project in Artist
+              name: Nested Loops in Artist
               description_student: Daha fazla iç içe döngüler! Bu kez iç içe döngüler ile bazı HARİKA çizimler yapacaksınız.
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
@@ -5896,9 +5920,9 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist (UPDATED)
+              name: Loops in Artist
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Sanatçı'da İç İçe Döngüler Projesi
             Internet:
               name: İnternet
             Digital Citizenship:
@@ -6145,6 +6169,10 @@ tr:
               name: Intro to AppLab - Your First App 2
             Intro to AppLab - Your First App 3:
               name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -6228,7 +6256,7 @@ tr:
             Nested Loops in Artist:
               name: Nested Loops in Artist
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Sanatçı'da İç İçe Döngüler Projesi
             'Algorithms: Relay Programming':
               name: 'Algoritmalar: Röle programlama'
             Debugging in Collector:
@@ -6545,6 +6573,8 @@ tr:
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -6570,6 +6600,132 @@ tr:
             craft17 stage:
               name: craft17 stage
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Tasarım analizi
+            Understanding Your User:
+              name: Kullanıcınızı anlama
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: Kullanıcı Arayüzü ve Modeli Test Etme
+            Feedback and Prototypes:
+              name: Geri Bildirim ve Modeller
+            Identifying User Needs:
+              name: Kullanıcı İhtiyaçlarını Tanımlama
+            Project - Paper Prototype:
+              name: Proje - Kağıt Modeli
+            Designing Apps for Good:
+              name: Yararlı uygulamalar tasarlama
+            Market Research:
+              name: Pazar araştırması
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototip testi
+            Digital Design:
+              name: Dijital Tasarım
+            Event Driven Programming:
+              name: Olay Temelli Programlama
+            Basic App Functionality:
+              name: Temel uygulama işlevselliği
+            Testing the App:
+              name: Uygulamayı Test Etmek
+            Improving and Iterating:
+              name: Geliştirme ve Tekrarlama
+            App Presentation:
+              name: Uygulama Sunumu
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: Programlama dilleri ne duyulan ihtiyaç
+            The Need for Algorithms:
+              name: Algoritmalara ihtiyaç
+            Creativity in Algorithms:
+              name: Yaratıcılık ve algoritmalar
+            Using Simple Commands:
+              name: Basit komutları kullanma
+            Creating Functions:
+              name: Fonksiyonları Oluşturma
+            Functions and Top-Down Design:
+              name: Fonksiyonlar ve yukarıdan aşağıya tasarım
+            APIs and Function Parameters:
+              name: API'lar ve fonksiyon parametreleri
+            Creating functions with Parameters:
+              name: Parametreli Fonksiyonlar
+            Looping and Random Numbers:
+              name: Döngü ve rastgele sayılar
+            Practice PT - Design a Digital Scene:
+              name: PT pratik - dijital bir sahne tasarımı
+            Unit 3 Chapter 1 Assessment:
+              name: Ünite 3 Bölüm 1 değerlendirme
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\\r\n"
+        pwc:
+          stages:
+            new stage:
+              name: yeni kademe
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+          title: PwC Access Your Potential
+          description_audience: ''
+          description_short: ''
+          description: ''
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: Minecraft Kod Saati
+          title: 'Minecraft: Hero''s Journey'
           description_audience: ''
           description_short: ''
           description: ''

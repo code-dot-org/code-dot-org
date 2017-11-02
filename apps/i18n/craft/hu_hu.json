@@ -1,6 +1,9 @@
 {
   "absolute": "abszolútérték",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "nál",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "add hozzá",
   "blockActionAttack": "támad",
   "blockActionClone": "clone blocks",
@@ -231,6 +234,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "A \"Folytasd\" gomb megnyomásával tudod folytatni a játékod.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Pontszám",
   "seconds": "second(s)",
   "selectChooseButton": "Válassz",
@@ -286,9 +290,5 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "mennydörgés",
-  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
-  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "mennydörgés"
 }

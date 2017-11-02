@@ -4,7 +4,7 @@ import Facilitator1819Questions from './detail_view_facilitator_specific_compone
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 
-const STATUSES = ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Withdrawn', 'Unreviewed'];
+const STATUSES = ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Unreviewed'];
 
 export default class DetailViewContents extends React.Component {
   static propTypes = {
@@ -16,39 +16,41 @@ export default class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      formData: PropTypes.object
+      form_data: PropTypes.object
     }),
-  }
+    updateProps: PropTypes.func.isRequired
+  };
 
   state = {
     status: this.props.applicationData.status,
     notes: this.props.applicationData.notes
-  }
+  };
 
   handleCancelEditClick = () => {
     this.setState({
       editing: false,
-      status: this.props.applicationData.status
+      status: this.props.applicationData.status,
+      notes: this.props.applicationData.notes
     });
-  }
+  };
 
   handleEditClick = () => {
     this.setState({
       editing: true
     });
-  }
+  };
 
   handleStatusChange = (event) => {
     this.setState({
       status: event.target.value
     });
-  }
+  };
 
   handleNotesChange = (event) => {
     this.setState({
       notes: event.target.value
     });
-  }
+  };
 
   handleSaveClick = () => {
     $.ajax({
@@ -61,21 +63,26 @@ export default class DetailViewContents extends React.Component {
       this.setState({
         editing: false
       });
+      this.props.updateProps({notes: this.state.notes, status: this.state.status});
     });
-  }
+  };
 
   renderEditButtons = () => {
     if (this.state.editing) {
       return [(
-        <Button bsStyle="primary">
+        <Button
+          onClick={this.handleSaveClick}
+          bsStyle="primary"
+          key="save"
+          style={{marginRight: '5px'}}
+        >
           Save
         </Button>
       ), (
-        <Button onClick={this.handleCancelEditClick}>
+        <Button onClick={this.handleCancelEditClick} key="cancel">
           Cancel
         </Button>
-      )
-      ];
+      )];
     } else {
       return (
         <Button onClick={this.handleEditClick}>
@@ -83,13 +90,13 @@ export default class DetailViewContents extends React.Component {
         </Button>
       );
     }
-  }
+  };
 
   renderHeader = () => {
     return (
       <div style={{display: 'flex', alignItems: 'baseline'}}>
         <h1>
-          {`${this.props.applicationData.formData.firstName} ${this.props.applicationData.formData.lastName}`}
+          {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
         </h1>
 
         <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
@@ -98,35 +105,21 @@ export default class DetailViewContents extends React.Component {
             disabled={!this.state.editing}
             value={this.state.status}
             onChange={this.handleStatusChange}
+            style={{marginRight: '5px'}}
           >
             {
               STATUSES.map((status, i) => (
-                <option value={status} key={i}>
+                <option value={status.toLowerCase()} key={i}>
                   {status}
                 </option>
               ))
             }
           </FormControl>
-          {
-            this.state.editing ? [(
-              <Button onClick={this.handleSaveClick} bsStyle="primary" key="save">
-                Save
-              </Button>
-            ), (
-              <Button onClick={this.handleCancelEditClick} key="cancel">
-                Cancel
-              </Button>
-            )
-            ] : (
-              <Button onClick={this.handleEditClick}>
-                Edit
-              </Button>
-            )
-          }
+          {this.renderEditButtons()}
         </div>
       </div>
     );
-  }
+  };
 
   renderTopSection = () => {
     return (
@@ -153,15 +146,15 @@ export default class DetailViewContents extends React.Component {
         />
       </div>
     );
-  }
+  };
 
   renderQuestions = () => {
     return (
       <Facilitator1819Questions
-        formResponses={this.props.applicationData.formData}
+        formResponses={this.props.applicationData.form_data}
       />
     );
-  }
+  };
 
   renderNotes = () => {
     return (
@@ -169,16 +162,22 @@ export default class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <FormControl
-          id="Notes"
-          disabled={!this.state.editing}
-          componentClass="textarea"
-          value={this.state.notes || ''}
-          onChange={this.handleNotesChange}
-        />
+        <div className="row">
+          <div className="col-md-8">
+            <FormControl
+              id="Notes"
+              disabled={!this.state.editing}
+              componentClass="textarea"
+              value={this.state.notes || ''}
+              onChange={this.handleNotesChange}
+            />
+          </div>
+        </div>
+        <br/>
+        {this.renderEditButtons()}
       </div>
     );
-  }
+  };
 
   render() {
     return (

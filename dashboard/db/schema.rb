@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027223742) do
+ActiveRecord::Schema.define(version: 20171101185900) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -63,6 +63,45 @@ ActiveRecord::Schema.define(version: 20171027223742) do
     t.text     "qtip_config",      limit: 65535
     t.string   "on"
     t.string   "callout_text"
+  end
+
+  create_table "census_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "type",                         null: false
+    t.string   "submitter_email_address"
+    t.string   "submitter_name"
+    t.string   "submitter_role"
+    t.integer  "school_year",                  null: false
+    t.string   "how_many_do_hoc"
+    t.string   "how_many_after_school"
+    t.string   "how_many_10_hours"
+    t.string   "how_many_20_hours"
+    t.boolean  "other_classes_under_20_hours"
+    t.boolean  "topic_blocks"
+    t.boolean  "topic_text"
+    t.boolean  "topic_robots"
+    t.boolean  "topic_internet"
+    t.boolean  "topic_security"
+    t.boolean  "topic_data"
+    t.boolean  "topic_web_design"
+    t.boolean  "topic_game_design"
+    t.boolean  "topic_other"
+    t.string   "topic_other_description"
+    t.boolean  "topic_do_not_know"
+    t.string   "class_frequency"
+    t.string   "tell_us_more"
+    t.boolean  "pledged"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["school_year", "id"], name: "index_census_submissions_on_school_year_and_id", using: :btree
+  end
+
+  create_table "census_submissions_school_infos", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "census_submission_id", null: false
+    t.integer  "school_info_id",       null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["census_submission_id", "school_info_id"], name: "census_submission_school_info_id", unique: true, using: :btree
+    t.index ["school_info_id", "census_submission_id"], name: "school_info_id_census_submission", unique: true, using: :btree
   end
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -367,6 +406,7 @@ ActiveRecord::Schema.define(version: 20171027223742) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "course"
+    t.text     "response_scores",     limit: 65535,              comment: "Scores given to certain responses"
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
     t.index ["course"], name: "index_pd_applications_on_course", using: :btree
@@ -780,6 +820,7 @@ ActiveRecord::Schema.define(version: 20171027223742) do
     t.string   "zip",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name", "city"], name: "index_school_districts_on_name_and_city", type: :fulltext
     t.index ["state"], name: "index_school_districts_on_state", using: :btree
   end
 
@@ -805,24 +846,24 @@ ActiveRecord::Schema.define(version: 20171027223742) do
   create_table "school_stats_by_years", primary_key: ["school_id", "school_year"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "school_id",          limit: 12, null: false, comment: "NCES public school ID"
     t.string   "school_year",        limit: 9,  null: false, comment: "School Year"
-    t.string   "grades_offered_lo",  limit: 2,  null: false, comment: "Grades Offered - Lowest"
-    t.string   "grades_offered_hi",  limit: 2,  null: false, comment: "Grades Offered - Highest"
-    t.boolean  "grade_pk_offered",              null: false, comment: "PK Grade Offered"
-    t.boolean  "grade_kg_offered",              null: false, comment: "KG Grade Offered"
-    t.boolean  "grade_01_offered",              null: false, comment: "Grade 01 Offered"
-    t.boolean  "grade_02_offered",              null: false, comment: "Grade 02 Offered"
-    t.boolean  "grade_03_offered",              null: false, comment: "Grade 03 Offered"
-    t.boolean  "grade_04_offered",              null: false, comment: "Grade 04 Offered"
-    t.boolean  "grade_05_offered",              null: false, comment: "Grade 05 Offered"
-    t.boolean  "grade_06_offered",              null: false, comment: "Grade 06 Offered"
-    t.boolean  "grade_07_offered",              null: false, comment: "Grade 07 Offered"
-    t.boolean  "grade_08_offered",              null: false, comment: "Grade 08 Offered"
-    t.boolean  "grade_09_offered",              null: false, comment: "Grade 09 Offered"
-    t.boolean  "grade_10_offered",              null: false, comment: "Grade 10 Offered"
-    t.boolean  "grade_11_offered",              null: false, comment: "Grade 11 Offered"
-    t.boolean  "grade_12_offered",              null: false, comment: "Grade 12 Offered"
-    t.boolean  "grade_13_offered",              null: false, comment: "Grade 13 Offered"
-    t.string   "virtual_status",     limit: 14, null: false, comment: "Virtual School Status"
+    t.string   "grades_offered_lo",  limit: 2,               comment: "Grades Offered - Lowest"
+    t.string   "grades_offered_hi",  limit: 2,               comment: "Grades Offered - Highest"
+    t.boolean  "grade_pk_offered",                           comment: "PK Grade Offered"
+    t.boolean  "grade_kg_offered",                           comment: "KG Grade Offered"
+    t.boolean  "grade_01_offered",                           comment: "Grade 01 Offered"
+    t.boolean  "grade_02_offered",                           comment: "Grade 02 Offered"
+    t.boolean  "grade_03_offered",                           comment: "Grade 03 Offered"
+    t.boolean  "grade_04_offered",                           comment: "Grade 04 Offered"
+    t.boolean  "grade_05_offered",                           comment: "Grade 05 Offered"
+    t.boolean  "grade_06_offered",                           comment: "Grade 06 Offered"
+    t.boolean  "grade_07_offered",                           comment: "Grade 07 Offered"
+    t.boolean  "grade_08_offered",                           comment: "Grade 08 Offered"
+    t.boolean  "grade_09_offered",                           comment: "Grade 09 Offered"
+    t.boolean  "grade_10_offered",                           comment: "Grade 10 Offered"
+    t.boolean  "grade_11_offered",                           comment: "Grade 11 Offered"
+    t.boolean  "grade_12_offered",                           comment: "Grade 12 Offered"
+    t.boolean  "grade_13_offered",                           comment: "Grade 13 Offered"
+    t.string   "virtual_status",     limit: 14,              comment: "Virtual School Status"
     t.integer  "students_total",                             comment: "Total students, all grades (includes AE)"
     t.integer  "student_am_count",                           comment: "All Students - American Indian/Alaska Native"
     t.integer  "student_as_count",                           comment: "All Students - Asian"
@@ -835,6 +876,7 @@ ActiveRecord::Schema.define(version: 20171027223742) do
     t.integer  "frl_eligible_total",                         comment: "Total of free and reduced-price lunch eligible"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "community_type",     limit: 16,              comment: "Urban-centric community type"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id", using: :btree
   end
 

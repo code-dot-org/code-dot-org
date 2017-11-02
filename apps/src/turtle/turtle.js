@@ -53,6 +53,7 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
+import {SignInState} from '../code-studio/progressRedux';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -1002,8 +1003,8 @@ Artist.prototype.initInterpreter = function () {
 /**
  * Handle an execution error from the interpreter
  */
-Artist.prototype.handleExecutionError = function (err, lineNumber) {
-  this.consoleLogger_.log(err);
+Artist.prototype.handleExecutionError = function (err, lineNumber, outputString) {
+  this.consoleLogger_.log(outputString);
 
   this.executionError = { err: err, lineNumber: lineNumber };
 
@@ -1151,6 +1152,8 @@ Artist.prototype.finishExecution_ = function () {
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
+
+  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   if (this.level.freePlay) {
     window.dispatchEvent(new Event('artistDrawingComplete'));
@@ -1678,7 +1681,7 @@ Artist.prototype.displayFeedback_ = function () {
   // by different users.
   const saveToProjectGallery = !level.impressive &&
     PUBLISHABLE_SKINS.includes(this.skin.id);
-  const {isSignedIn, userType} = getStore().getState().pageConstants;
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
   this.studioApp_.displayFeedback({
     app: 'turtle',
@@ -1696,10 +1699,7 @@ Artist.prototype.displayFeedback_ = function () {
     saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     // save to the project gallery instead of the legacy gallery
     saveToProjectGallery: saveToProjectGallery,
-    // The rails session cookie is blocked on some playlab level types,
-    // causing isSignedIn to be null. In this case, use the userType (based on
-    // a different cookie) to determine if the user is signed in.
-    disableSaveToGallery: !isSignedIn && !userType,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
@@ -1825,8 +1825,6 @@ Artist.prototype.checkAnswer = function () {
   if (level.freePlay) {
     this.testResults = TestResults.FREE_PLAY;
   }
-
-  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
   if (this.testResults === TestResults.FREE_PLAY ||

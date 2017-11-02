@@ -15,7 +15,7 @@ describe("DetailViewContents", () => {
           school_name: 'School Name',
           district_name: 'District Name',
           email: 'email',
-          formData: {
+          form_data: {
             firstName: 'First Name',
             lastName: 'Last Name',
             title: 'Title',
@@ -28,6 +28,7 @@ describe("DetailViewContents", () => {
             abilityToMeetRequirements: '10'
           }
         }}
+        updateProps={() => {}}
       />
     );
   };

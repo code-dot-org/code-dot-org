@@ -8,13 +8,12 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 # Hvordan undervise i kodetimen 
 
-Bli med i bevegelsen og introdusere en gruppe elever til deres første time i informatikk med disse trinnene:
+Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-## 1) Se denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1) Se denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial for your hour:
 
-## 2) velge en oppgave for din time:
-
-Vi tilbyr en rekke [morsomme, timelange oppgaver](%= resolve_url('/learn') %) for deltakerne alle aldre, laget av en rekke partnere.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
 **[Elevstyrte kodetimeoppgaver:](%= resolve_url('/learn') %)**
 
@@ -54,9 +53,9 @@ Den beste Kodetimen opplevelsen inkluderer Internett-tilkoblede datamaskiner. Me
 **Vis en inspirerende video:**
 
   * Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh var med i den opprinnelige lanseringsvideoen for Code.org (Det finnes versjoner på [ett minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Kodetimen 2013 lansering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama oppfordrer alle elever til å lære datavitenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Finn flere inspirerende [ressurser](%= resolve_url('https://code.org/inspire') %) og [videoer](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Det er helt greit om du og elevene dine ikke er kjent med datavitenskap fra før. Her er noen ideer til hvordan du kan introdusere kodetimen din:**
 
@@ -72,7 +71,7 @@ Den beste Kodetimen opplevelsen inkluderer Internett-tilkoblede datamaskiner. Me
 
 **Sett i gang elevene med aktiviteten**
 
-  * Skriv oppgavelenken på en tavle. Finn lenken under [informasjon om den valgte oppgaven](%= resolve_url('/learn') %) under antall deltakere.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -90,7 +89,7 @@ Den beste Kodetimen opplevelsen inkluderer Internett-tilkoblede datamaskiner. Me
 
 **Hva kan jeg gjøre hvis en elev blir tidlig ferdig?**
 
-  * Elevene kan se alle leksjonene og prøve en av de andre aktivitetene for Kodetimen på [hourofcode.com/learn](%= resolve_url('/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Eller du kan be de elevene som blir fort ferdige om å hjelpe de som sliter med å få det til.
 
 [col-33]
@@ -131,7 +130,7 @@ Den beste Kodetimen opplevelsen inkluderer Internett-tilkoblede datamaskiner. Me
   * Bruk [denne](/files/EducatorHourofCodeLessonPlanOutline.docx) malen for å organisere din Kodetime.
   * Se hva andre lærere har [lykkes med](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) i tidligere kodetimer. 
   * Se på innspillingen av vår [Lærerens Guide til Kodetimen webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Delta på en live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) med vår grunnlegger, Hadi Partovi å forberede kodetimen.
+  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
   * Besøk [Kodetimens lærerforum](http://forum.code.org/c/plc/hour-of-code) for å få råd, innsikt og støtte fra andre lærere. <% if @country == 'us' %>
   * Se på [Kodetimens ofte stilte spørsmål](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 

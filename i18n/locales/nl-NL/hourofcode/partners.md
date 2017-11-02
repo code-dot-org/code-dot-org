@@ -4,11 +4,11 @@ titel: <%= hoc_s(:title_partners) %>
 
 * * *
 
-CodeUur wordt gedreven door de 'Hour of Code and Computer Science Education Week' adviesraad en beoordelingscommisie.
+The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
-Het [Adviescommissie](%= resolve_url('/advisory-committee') %) bestaat uit vertegenwoordigers van de K-12, universiteiten, non-profitorganisaties, voor-winst en internationale organisaties. Deze commissie helpt met de strategie voor de CodeUur campagne.
+The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
 
-De [Beoordelingscommissie](%= resolve_url('/review-committee') %) bestaat uit 15 leerkrachten uit de K-12 graad die activiteiten beoordelen en adviseren met behulp van het adviescommissie rebriek. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
 Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
@@ -134,13 +134,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Activity Partners
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# Infrastructuur partners en hulpprogramma 's
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

@@ -564,6 +564,10 @@
   volunteer_engineer_submission_type_task_remote: "我希望您能透過 Skype 和我班上的孩子說些話，讓他們得到啟發。"
   volunteer_engineer_submission_type_task_mentor: "我在尋找一個導師，幫助我準備給學生的編程教學。"
   petition_age: "年齡"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "繼續學習"
   dashboard_landing_title: "教師主頁"
   dashboard_landing_welcome: "歡迎來到我們最新改版的教師控制台。"
   dashboard_landing_video: "觀看這個影片"
@@ -1474,9 +1478,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "主頁"
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: "我的儀表板"
   header_courses: "課程"
-  header_course_catalog: Course Catalog
+  header_course_catalog: "課程目錄"
   header_project_gallery: "所有專案"
   header_sections: "學習小組"
   header_professional_learning: "專業學習"

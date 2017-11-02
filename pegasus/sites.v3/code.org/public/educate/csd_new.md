@@ -40,41 +40,52 @@ If you are interested in joining in 2018-19, sign up below.
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
 
-[col-25]
+[col-50]
 
-<center><img src="/images/csd/CSD-crop-cover.png" width="90%"></center>
+[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](/files/CSDiscoveries-Curriculum-Guide.pdf)</center>
 
-<div style="margin-top: 5px;">Want to learn more? Dive into the <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a></div>
+<div style="margin-left: 15px; margin-top: 5px;">The  <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations.</div>
 
-[/col-25]
+[/col-50]
 
-[col-25]
+[col-50]
 
-<center><img src="/images/WebLab.png" width="90%"></center>
+[<center><img src="/images/animated-examples/lessonplans_csd.png" width="90%">](https://curriculum.code.org/csd)</center>
 
-<div style="margin-top: 5px;">Students learn to use HTML and CSS to design web pages in <a href="/weblab">Web Lab</a></div>
+<div style="margin-left: 15px; margin-top: 5px;"><a href="https://curriculum.code.org/csd">Daily lesson plans</a> come with detailed instructions, activity guides, and assessments.</div>
 
-[/col-25]
-
-[col-25]
-
-<center><img src="/images/animated-examples/tennis_jump.gif" width="90%"></center>
-
-<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in <a href="/gamelab">Game Lab</a></div>
-
-[/col-25]
-
-[col-25]
-
-<center><img src="/images/animated-examples/circuitplayground.gif" width="90%"></center>
-
-<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and <a href="/applab">App Lab</a></div>
-
-[/col-25]
+[/col-50]
 
 <p style="clear:both"></p>
 <br>
-**Don't miss these additional resources:**
+
+[col-33]
+
+[<center><img src="/images/WebLab.png" width="90%">](/weblab)</center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students learn to use HTML and CSS to design web pages in <a href="/weblab">Web Lab</a></div>
+
+[/col-33]
+
+[col-33]
+
+[<center><img src="/images/animated-examples/tennis_jump.gif" width="90%">](/gamelab)</center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in <a href="/gamelab">Game Lab</a></div>
+
+[/col-33]
+
+[col-33]
+
+[<center><img src="/images/animated-examples/circuitplayground.gif" width="90%">](/applab)</center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and <a href="/applab">App Lab</a></div>
+
+[/col-33]
+
+<p style="clear:both"></p>
+<br>
+### Don't miss these additional resources:
 
 * [**Course Materials List**](#supplies)
 * [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
@@ -83,8 +94,7 @@ If you are interested in joining in 2018-19, sign up below.
 
 ## <a name="content"></a>Curriculum Overview
 
-The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into lessons. The curriculum guide contains
-details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations. 
+The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into specific units.  
 
 <br>
 
@@ -130,6 +140,8 @@ details on the classroom and student practices that flow throughout the course, 
 
 <div style="clear:both"></div>
 
+<hr/>
+
 ## <a name="involved"></a>Keep up with CS Discoveries
 
 <div style="float:left; padding:25px; width:50%">
@@ -157,14 +169,16 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 <div style="clear:both"></div>
 
+<hr/>
+
 ## Spread the word about CS Discoveries
 
-* Hand out these fliers around your school and consider sending home to parents.
+### Hand out these fliers around your school and consider sending home to parents.
 
 [![image](/images/fit-200/CSDiscoveries_1-pager.png)](/files/CSDiscoveries_1-pager.pdf) 
 [![image](/images/fit-200/csd-student-flyer.png)](/files/programs/csd-student-flyer.pdf) 
 
-* Hang these posters in your classroom and around your school:
+### Hang these posters in your classroom and around your school:
 
 [![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
 [![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
@@ -200,6 +214,10 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 * [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
 
 \*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing or partially subsidizing one classroom kit of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+
+### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
+
+CS Discoveries is designed to fit naturally between our [CS Fundamentals](/educate/curriculum/elementary-school) courses and our [CS Principles](/educate/csp) course. While each of these courses is designed to be an age-appropriate entry point to computer science, students with previous experience will find many new topics to explore, and they will revisit familiar topics in novel and more challenging contexts.
 
 ### <a name="relationship"></a>What is the relationship between CS Discoveries and Exploring Computer Science?
 

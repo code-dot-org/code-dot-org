@@ -25,6 +25,7 @@ import {TestResults, ResultType} from '../constants';
 import experiments from '../util/experiments';
 import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
+import {SignInState} from '../code-studio/progressRedux';
 
 /**
  * Create a namespace for the application.
@@ -699,6 +700,7 @@ Flappy.runButtonClick = function () {
  * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   if (!Flappy.waitingForReport) {
     dataURIFromURI(placeholder).then(feedbackImageUri => {
       studioApp().displayFeedback({
@@ -715,6 +717,7 @@ var displayFeedback = function () {
         },
         saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
         feedbackImage: feedbackImageUri,
+        disableSaveToGallery: !isSignedIn,
       });
     });
   }

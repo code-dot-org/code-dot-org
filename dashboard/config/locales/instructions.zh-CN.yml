@@ -1640,9 +1640,7 @@
       CSPU5_U3 - Loops - 3_instruction: |-
         Change the if statement to a while loop
         so the program will run until it rolls a 6. (Click to see full instructions)
-      CSPU5_U3 - Loops - 4_instruction: |-
-        Use the Debug Commands to make a list of
-        all the values rolled before a 6. (Click to see full instructions)
+      CSPU5_U3 - Loops - 4_instruction: "使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)"
       CSPU5_U3 - Loops - 5_instruction: |-
         Add code inside the while loop which will
         update the variable num so that the condition will eventually become false.
@@ -2736,7 +2734,7 @@
       Course 4 SCV 6_instruction: "点击这里再看一遍介绍。"
       Course 4 SCVP 1_instruction: "创建一个函数，能够让小艺术家往前或者往后跳x像素，而且也能让他往上或者往下跳y个像素。（使用正数和负数）"
       Course 4 Variables Assessment_instruction: "你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。"
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: "获得3个花蜜，然后酿两个蜂蜜。"
       Course1MazeAssessment1_instruction: |-
         This is a test!\r
         Move one way, then
@@ -3009,9 +3007,7 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
-      Find the Wizard_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Find the Wizard_instruction: "随便创造一个东西。这是一个猜数游戏的例子！"
       Food Fight!_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan
         \"if\" statement to program your game to call the \"level_up\" function\nonly
         when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
@@ -3020,8 +3016,9 @@
       Food Fight_instruction: |-
         You can make whatever you want in play lab! This is
         an example of a game you can make in play lab.
-      FoodFight_instruction: This is an example of a game you can make in play lab.
+      FoodFight_instruction: "这是一个游戏的例子。你可以在剧本实验室创造它。"
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: "使用两次“造桥”函数，创建一个能到达火把的路径。"
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3032,9 +3029,7 @@
       Geometric Sun_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
-      Get To The Goal_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Get To The Goal_instruction: "随便创造一个东西。这是一个猜数游戏的例子！"
       'Grade 4 Example PlayLab Project #1_instruction': |-
         Take a look at this project.  Do
         you see how it was made?
@@ -3066,9 +3061,7 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
-      InspirationalArtwork_instruction: |-
-        If this picture inspires you, try to make
-        something similar. Otherwise, create something all your own.
+      InspirationalArtwork_instruction: "如果你喜欢这张图片，试着做一个和它差不多的吧。当然，你也可以做成你自己喜欢的样子。"
       'Internet Simulator: Broadcast Mode_instruction': |
         Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
@@ -3181,7 +3174,7 @@
       K-1 Bee Loops 9_instruction: "采集所有的花蜜，然后酿蜂蜜。"
       K-1 Bee Loops Assessment 1_instruction: "采集花蜜来酿蜂蜜，并且用循环来移动！"
       K-1 Bee Loops Assessment 2_instruction: "用循环采集花蜜，酿蜂蜜！"
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: "获得3个花蜜，然后酿两个蜂蜜。"
       K-1 Building a Foundation Assessment_instruction: "修建一个三层的金字塔。这里没有其它方向，所以用这些模块，直到画出它！"
       K-1 Maze 10_instruction: "绕过炸药，让我到达那只猪！ "
       K-1 Maze 11_instruction: "沿着道路，带我到那只猪那里。躲开炸药，否则我的羽毛会被炸飞！提示：它在我的南边。"
@@ -3271,9 +3264,7 @@
       Kiki_StarWars_Test_4_instruction: "文本"
       Kiki_StarWars_Test_5_instruction: "文本"
       Kiki_StarWars_Test_5_Example_instruction: "文本"
-      LaurelDebugging4Video1_instruction: |-
-        Move Laurel around and get as much gold
-        as you can!
+      LaurelDebugging4Video1_instruction: "任意移动月桂树以获取尽量多的金币！"
       Limited Quantity of Blocks Test_instruction: |-
         Get me to the pig by adding only
         one block
@@ -3319,58 +3310,41 @@
       MC HOC 2016 New Walk_instruction: "我们来探索世界吧！用方向箭移动，按空格键或轻按游戏板使用物品。用门进入房屋。"
       MC HOC 2016 SCORE LEVEL_instruction: "有的游戏会让你保留分数。跟这些铁傀儡玩捉迷藏，用`增加 1 分`方块，让您在标记它们时给自己得一分。达到五分就算赢！"
       MC HOC 2016 Village Test_instruction: "哦不好！僵尸将您困在里面了！编码让铁傀儡追踪并攻击僵尸！"
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
+      MC_2017_Ryan_02_instruction: "使用循环，让特工到达压力板，帮助玩家出去。"
+      MC_HOC_2017 Agent Test_instruction: 单击"运行"将玩家移动到房子里的橙色方块上。
+      MC_HOC_2017_01_instruction: 单击"运行"将玩家移动到房子里的橙色方块上。
+      MC_HOC_2017_01_Cole_instruction: "在路上收集工具。使用方向键左右移动，取到屋里的宝箱。"
+      MC_HOC_2017_01_Kiki_instruction: 单击"运行"将玩家移动到房子里的橙色方块上。
+      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
+        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
+        the chest. "
+      MC_HOC_2017_02_instruction: "让特工到达压力板。"
+      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
+        can get to the map. "
+      MC_HOC_2017_02_Kiki_instruction: "让特工到达压力板，并将玩家移动到橙色方块上。"
+      MC_HOC_2017_02_Will_instruction: "让特工到达压力板。"
       MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
+      MC_HOC_2017_03_Kiki_instruction: "让特工到达压力板。"
+      MC_HOC_2017_04_instruction: "改动上一个关卡的循环，帮助特工找到过河的路。"
+      MC_HOC_2017_04POINT5_Cole_instruction: "让特工到达压力板。"
+      MC_HOC_2017_04POINT5_RYAN_instruction: "让特工到达压力板。"
+      MC_HOC_2017_04_Cole_instruction: "让特工到达压力板。"
+      MC_HOC_2017_04_Kiki_instruction: "让特工到达压力板。"
+      MC_HOC_2017_05_instruction: "利用函数让特工到达压力板。"
+      MC_HOC_2017_05_Cole_instruction: "让玩家到铲子那里。"
+      MC_HOC_2017_05_Josh_instruction: "让玩家到铲子那里。"
+      MC_HOC_2017_05_Kiki_instruction: "让玩家到橙色方块上。"
+      MC_HOC_2017_06_Cole_instruction: "完成代码，帮助特工造一座过河的桥。"
+      MC_HOC_2017_06_Josh_instruction: "完成代码，帮助特工造一座过河的桥。"
+      MC_HOC_2017_06_Kiki_instruction: "完成代码，帮助特工造一座过河的桥。"
+      MC_HOC_2017_07_Cole_instruction: "路上有仙人掌！使用“摧毁”模块摧毁路上的所有仙人掌。"
+      MC_HOC_2017_07_Kiki_instruction: "使用函数清除前往橙色方块的路径。"
+      MC_HOC_2017_07a_Kiki_instruction: "清除前往橙色方块的路径。"
+      MC_HOC_2017_08_Cole_instruction: "更改给出的函数，给这个群落帮忙。"
+      MC_HOC_2017_08_Kiki_instruction: "为这个关卡更改函数。"
+      MC_HOC_2017_08_RY_instruction: "使用函数找到穿过岩浆的方法。"
+      MC_HOC_2017_08_Will_instruction: "使用函数找到穿过岩浆的方法。"
+      MC_HOC_2017_09_Cole_instruction: "给特工编程，让他清除玩家的路径。"
       MC_HOC_2017_09_Kiki_instruction: |-
         Program the Agent to clear the player's
         path and get to the pressure plate.
@@ -3383,6 +3357,21 @@
       MC_HOC_2017_10_Kiki_instruction: |-
         Create a function to help you finish this
         minecart.
+      MC_HOC_2017_10_RETRY_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_RYAN_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_10_RYAN2_instruction: |-
+        Create a function to help you finish this
+        minecart.
+      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_4.5v2_instruction: "让特工到达压力板。"
+      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
+      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
+        collect all of the diamonds in this level? "
+      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
       MC_HOC_2017_Ryan_03_instruction: |-
         Now use loops to help The Agent build a bridge
         over the river by placing blocks in the water.
@@ -3977,6 +3966,10 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG Add Subgoals practice_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -4123,9 +4116,19 @@
       SG U3L08 comments_instruction: |-
         Use the randomNumber() blocks to test the functions
         you designed with random input. (Click to see full instructions)
+      SG U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to
+        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       SG U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above and to
         the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Add-subgoals_instruction: |-
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L2_Turtle3by3Grid_instruction: |-
         Draw a 3x3 grid to the front and right
         of the turtle as efficiently as possible. The turtle should end at its original
@@ -5178,6 +5181,10 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -5208,6 +5215,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -6534,6 +6544,31 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_preLoops1_instruction: |-
+        This is Laurel the Adventurer! \r
+        \r
+        Press
+        "Run" to see her walk up to the treasure and grab it.
+      courseA_collector_preLoops2_instruction: |-
+        Great!  Now you get to add code yourself!  \r
+        \r
+        Snap
+        a `get treasure` block to the bottom of the program and click "Run".
+      courseA_collector_preLoops3_instruction: |-
+        Snap two `E -->` blocks and one `get
+        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4_instruction: |-
+        Can you figure out how to solve this
+        puzzle?
+      courseA_collector_preLoops5_instruction: |-
+        Get 1 of these 2 gems to solve this
+        puzzle.
+      courseA_collector_preLoops6_instruction: |-
+        Get both pieces of treasure to solve
+        this puzzle.
+      courseA_collector_preLoops7_instruction: |-
+        Get all three piles to pass this
+        level.
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
@@ -7262,9 +7297,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -7787,10 +7822,10 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
         If the pirate is in the safe zone, wait
         one second, then deduct a point as long as he stays beneath the octopus line.
@@ -7889,7 +7924,11 @@
         Use what you've learned to draw this triangle
         inside of a square.
       courseE_artist_ramp8_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseE_artist_ramp9_2_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseE_bee_concept1_instruction: "从每朵花里收集所有的花蜜。用嵌套循环。 "
       courseE_bee_concept2_instruction: |-
         Help the bee make all of the honey. You
@@ -8161,6 +8200,9 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_IceAge_1_instruction: |-
         Help Sid say "Hello!" by dragging the `actor
         1 say` block out and connecting it to the bottom of the `when run` event.
@@ -8371,7 +8413,6 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
