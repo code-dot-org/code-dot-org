@@ -80,8 +80,8 @@ level 'courseA_collector_loops9', challenge: true
 level 'courseA_collector_loops10'
 level 'courseA_collector_loops11'
 level 'courseA_collector_loops12'
+bonus 'courseA_collector_loops_challenge2kp'
 bonus 'courseA_collector_loops_challenge1'
-bonus 'courseA_collector_loops_challenge2'
 
 stage 'Loops in Artist'
 level 'courseB_video_ArtistIntro'

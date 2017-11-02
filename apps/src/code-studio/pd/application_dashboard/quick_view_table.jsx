@@ -60,6 +60,7 @@ export default class QuickViewTable extends React.Component {
           (status) => ({
             style: {
               backgroundColor: this.getViewColor(status),
+              color: this.getTextColor(status),
               padding: '5px'
             }
           })
@@ -87,6 +88,13 @@ export default class QuickViewTable extends React.Component {
     }
   }
 
+  getTextColor = (status) => {
+    if (status === 'declined' || status === 'unreviewed') {
+      return color.white;
+    }
+    return color.black;
+  }
+
   formatViewButton = (id) => {
     return (
       <Button
@@ -110,7 +118,7 @@ export default class QuickViewTable extends React.Component {
 
     return (
       <Table.Provider
-        className="pure-table pure-table-striped"
+        className="pure-table table-striped"
         columns={columns}
         style={styles.table}
       >
