@@ -209,14 +209,6 @@ export default class Craft {
                 config.level.puzzle_number,
               ),
               afterAssetsLoaded: function () {
-                // Make the game solvable as soon as it loads.
-                Craft.gameController.codeOrgAPI.startAttempt(success => {
-                  if (Craft.level.freePlay) {
-                    return;
-                  }
-                  Craft.reportResult(success);
-                });
-
                 // Listen for hint events that draw a path in the game.
                 window.addEventListener('displayHintPath', e => {
                   Craft.gameController.levelView.drawHintPath(e.detail);
