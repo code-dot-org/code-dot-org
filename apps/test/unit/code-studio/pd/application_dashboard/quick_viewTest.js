@@ -15,7 +15,8 @@ describe("Quick View", () => {
 
   const routeProps = {
     path:'csf_facilitators',
-    title:'CSF Facilitators'
+    applicationType:'CSF Facilitators',
+    regionalPartnerName: 'A Great Organization'
   };
 
   it("Initially renders a spinner", () => {
