@@ -78,7 +78,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES),
+      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS),
       source_module: Facilitator1819ApplicationConstants,
       transform_keys: true
     ),
