@@ -2,12 +2,14 @@ import { assert } from 'chai';
 import cookies from 'js-cookie';
 import { getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/initSigninState';
 import { allowConsoleErrors } from '../../util/testUtils';
+import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 
 describe('initSigninStateTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
     allowConsoleErrors();
     let headerDiv;
-    let stashedCookieKey;
+    let cookieName;
+    let stashedRackEnv;
 
     function createHeaderDom(dataId) {
       headerDiv = document.createElement('div');
@@ -22,11 +24,17 @@ describe('initSigninStateTest', () => {
       headerDiv.appendChild(name);
     }
 
-    const cookieName = '__testcookie__';
+    before(() => {
+      stashedRackEnv = window.dashboard.rack_env;
+      window.dashboard.rack_env = 'unit_test';
+      cookieName = environmentSpecificCookieName('_shortName');
+    });
+    after(() => {
+      window.dashboard.rack_env = stashedRackEnv;
+    });
+
     beforeEach(() => {
       cookies.remove(cookieName);
-      stashedCookieKey = window.userNameCookieKey;
-      delete window.userNameCookieKey;
     });
 
     afterEach(() => {
@@ -34,22 +42,14 @@ describe('initSigninStateTest', () => {
         document.body.removeChild(headerDiv);
         headerDiv = null;
       }
-      window.userNameCookieKey = stashedCookieKey;
-    });
-
-    it('does not work if userNameCookieKey is not set', () => {
-      assert.strictEqual(getUserSignedInFromCookieAndDom(), undefined);
     });
 
     it('returns true if cookie is defined', () => {
-      window.userNameCookieKey = cookieName;
       cookies.set(cookieName, 'CoolUser');
       assert.strictEqual(getUserSignedInFromCookieAndDom(), true);
     });
 
     it('returns true if cookie is not defined but DOM contains id', () => {
-      window.userNameCookieKey = cookieName;
-
       // Make sure this DOM didn't leak in from some other test
       assert.equal(document.querySelector('.header_button.header_user.user_menu .user_name'), null);
 
@@ -58,8 +58,6 @@ describe('initSigninStateTest', () => {
     });
 
     it('returns false if cookie is not defined and DOM does not contain id', () => {
-      window.userNameCookieKey = cookieName;
-
       // Make sure this DOM didn't leak in from some other test
       assert.equal(document.querySelector('.header_button.header_user.user_menu .user_name'), null);
 

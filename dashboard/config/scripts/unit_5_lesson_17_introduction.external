@@ -11,7 +11,9 @@ Processing arrays of information is much more interesting and powerful when we c
 
 ## Vocabulary
 
-**Canvas:** a user interface element which acts as a digital canvas, allowing the programmatic drawing and manipulation of geometric figures and images.
+* **Canvas** - a user interface element to use in HTML/JavaScript which acts as a digital canvas, allowing the programmatic drawing and manipulation of pixels, basic shapes, figures and images.
+* **Key Event** - in JavaScript an event triggered by pressing or releasing a key on the keyboard.  For example: "keyup" and "keydown" are event types you can specify.  Use event.key - from the "event" parameter of the onEvent callback function - to figure out which key was pressed.
+
 
 ## Lesson
 
@@ -19,6 +21,16 @@ Processing arrays of information is much more interesting and powerful when we c
 * Create a drawing app with the canvas.
 * Store information about the drawing in an array.
 * Process stored information to redraw an image with a variety of visual effects.
+
+
+## Introduced Code
+
+* [circle](//docs.code.org/applab/circle/)
+* [clearCanvas](//docs.code.org/applab/clearCanvas/)
+* [line](//docs.code.org/applab/line/)
+* [setActiveCanvas](//docs.code.org/applab/setActiveCanvas/)
+* [setFillColor](//docs.code.org/applab/setFillColor/)
+* [setStrokeColor](//docs.code.org/applab/setStrokeColor/)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

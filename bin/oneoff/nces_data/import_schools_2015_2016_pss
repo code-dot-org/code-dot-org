@@ -9,7 +9,6 @@ AWS::S3.process_file('cdo-nces', '2015-2016/pss/pss1516_pu.csv') do |filename|
     School.merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
       {
         id:                 row['ppin'],
-        school_district_id: nil,
         name:               row['pinst'].upcase,
         address_line1:      row[row['pl_add'].nil? ? 'paddrs' : 'pl_add'].to_s.upcase.presence,
         address_line2:      nil,
@@ -17,11 +16,11 @@ AWS::S3.process_file('cdo-nces', '2015-2016/pss/pss1516_pu.csv') do |filename|
         city:               row[row['pl_cit'].nil? ? 'pcity' : 'pl_cit'].to_s.upcase.presence,
         state:              row[row['pl_stabb'].nil? ? 'pstabb' : 'pl_stabb'].to_s.upcase.presence,
         zip:                row[row['pl_zip'].nil? ? 'pzip' : 'pl_zip'],
-        school_type:        'private'
+        latitude:           row['latitude16'].to_f,
+        longitude:          row['longitude16'].to_f,
+        school_type:        'private',
+        school_district_id: nil,
       }
     end
   end
 end
-
-tsv_file = School.write_to_csv("#{Dir.tmpdir}/schools.tsv")
-CDO.log.info "Downloaded to: #{tsv_file}"

@@ -1,16 +1,15 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Notification from '@cdo/apps/templates/Notification';
+import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import Congrats from '@cdo/apps/templates/Congrats';
 
 $(document).ready(function () {
+  const isRtl = isRtlFromDOM();
   ReactDOM.render(
-    <Notification
-      type="bullhorn"
-      notice="There's a new congrats page!"
-      details="If you complete a Code.org Hour of Code tutorial, you'll end up here."
-      dismissible={false}
-      isRtl={false}
+    <Congrats
+      completedTutorialType="other"
+      isRtl={isRtl}
     />,
     document.getElementById('congrats-container')
   );

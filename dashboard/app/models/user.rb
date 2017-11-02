@@ -1646,6 +1646,61 @@ class User < ActiveRecord::Base
     end
   end
 
+  # When creating an account, we want to look for any channels that got created
+  # for this user before they signed in, and if any of them are in our Applab HOC
+  # course, we will create a UserScript entry so that they get a course card
+  # In addition, we want to have green bubbles for the levels associated with these
+  # channels, so we create level progress.
+  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # should be able to handle this gracefully
+    script = begin
+      Script.get_from_cache(script_name)
+    rescue ActiveRecord::RecordNotFound
+      nil
+    end
+    return unless script
+
+    # Find the set of levels this user started
+    # Worth noting that because ChannelToken uses levels (rather than script_levels)
+    # if a level is used in multiple scripts, we have no way to disambiguate which
+    # one a user saw it in, which becomes a challenge if we expand the scope of
+    # this beyond our applab-intro script.
+    channel_level_ids = ChannelToken.where(storage_id: storage_id).map(&:level_id)
+
+    levels_in_script = script.levels
+
+    # host_level will be self if we don't have a template level
+    # Expanding the scope beyond applab-intro would also be a challenge for template
+    # levels, as if a template is used in multiple scripts ,we have no way to know
+    # which a user saw it in
+    hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
+
+    unless (channel_level_ids & hoc_level_ids).empty?
+      User.track_script_progress(id, Script.get_from_cache(script_name).id)
+
+      # Create user_level entries for the levels associated with channels. In the
+      # case of template backed levels, a channel for the template level will result
+      # in user_level entries for all levels that use the template
+      script.script_levels.each do |script_level|
+        script_level.levels.each do |level|
+          # When making progress on a template backed level, the channel will be
+          # attached to the template level, thus we look to see if we have a channel
+          # for the host_level
+          next unless channel_level_ids.include?(level.host_level.id)
+          User.track_level_progress_sync(
+            user_id: id,
+            level_id: level.id,
+            script_id: script_level.script_id,
+            new_result: ActivityConstants::BEST_PASS_RESULT,
+            submitted: false,
+            level_source_id: nil
+          )
+        end
+      end
+    end
+  end
+
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
   # @raise [RuntimeError] If the user is purged.

@@ -540,4 +540,30 @@ DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
   end
+
+  test 'Script DSL with skipped extras' do
+    input_dsl = <<DSL
+stage 'Stage1'
+level 'Level 1'
+level 'Level 2'
+no_extras
+DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            stage_extras_disabled: true,
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2"}]},
+            ]
+          }
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
 end
