@@ -120,9 +120,9 @@ module Pd::Application
         worked_in_cs_job: [YES, NO],
 
         completed_cs_courses_and_activities: [
-          'Intro CS in HS',
-          'Intro CS in College',
-          'Advanced CS in HS or College',
+          'Intro CS in high school',
+          'Intro CS in college',
+          'Advanced CS in high school or college',
           'Online (Udacity, Coursera, etc.)',
           'Attended a coding or CS camp',
           'Attended a CS professional development workshop',
@@ -227,7 +227,7 @@ module Pd::Application
           'Code HS',
           'Edhesive',
           'Exploring Computer Science',
-          'Mobile CSP',
+          'Mobile CS Principles',
           'NMSI',
           'Project Lead the Way',
           'ScratchEd',

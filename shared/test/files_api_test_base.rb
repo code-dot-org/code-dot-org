@@ -2,6 +2,7 @@ require_relative 'test_helper' # Must be required first to establish load paths
 require 'mocha/mini_test'
 require 'files_api'
 require 'channels_api'
+require 'cdo/aws/s3'
 
 #
 # Base class for tests against the FilesApi (which include SourcesTest,
@@ -38,7 +39,7 @@ class FilesApiTestBase < Minitest::Test
   # Delete all objects in the specified path from S3.
   def delete_all_objects(bucket, prefix)
     raise "Not a test path: #{prefix}" unless prefix.include?('test')
-    s3 = Aws::S3::Client.new
+    s3 = AWS::S3.create_client
     objects = s3.list_objects(bucket: bucket, prefix: prefix).contents.map do |object|
       {key: object.key}
     end
@@ -55,7 +56,7 @@ class FilesApiTestBase < Minitest::Test
 
   # Delete all versions of the specified file from S3, including all delete markers
   def delete_all_versions(bucket, key)
-    s3 = Aws::S3::Client.new
+    s3 = AWS::S3.create_client
     response = s3.list_object_versions(bucket: bucket, prefix: key)
     objects = response.versions.concat(response.delete_markers).map do |version|
       {
