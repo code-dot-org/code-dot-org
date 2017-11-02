@@ -639,6 +639,18 @@ FactoryGirl.define do
     school_name 'Princeton Day School'
   end
 
+  factory :school_info_with_public_school_only, class: SchoolInfo do
+    association :school, factory: :public_school
+  end
+
+  factory :school_info_with_private_school_only, class: SchoolInfo do
+    association :school, factory: :private_school
+  end
+
+  factory :school_info_with_charter_school_only, class: SchoolInfo do
+    association :school, factory: :charter_school
+  end
+
   factory :school_info_us_public, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
@@ -716,6 +728,16 @@ FactoryGirl.define do
     zip "98122"
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
     association :school_district
+  end
+
+  factory :private_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id {(School.maximum(:id).to_i + 1).to_s}
+    name "A seattle private school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
   end
 
   factory :charter_school, class: School do
