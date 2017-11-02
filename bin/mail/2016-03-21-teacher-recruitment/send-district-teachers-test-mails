@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 3-9-recruit-district-teachers ../mailing-common/test-params-us.csv

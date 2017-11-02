@@ -1,0 +1,13 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 Edit Regional Partner
+
+#application-container
+  = show_flashes.html_safe
+
+= render 'form'
+
+= link_to t('crud.show'), @regional_partner
+\|
+= link_to t('crud.back'), regional_partners_path

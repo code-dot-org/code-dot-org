@@ -631,6 +631,10 @@
   volunteer_engineer_submission_type_task_mentor: "우리 학생들에게 코딩을 가르치기 위해서 저와 함께 준비하는데
     도움을 주실 수 있는 멘토 분들을 찾고 있습니다."
   petition_age: "나이"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "더 알아보기"
   dashboard_landing_title: "선생님 홈페이지"
   dashboard_landing_welcome: "새롭게 개선된 교사용 상황판"
   dashboard_landing_video: "비디오를 보세요."
@@ -1066,6 +1070,8 @@
   csp1_name: "유닛 1: 인터넷"
   csp2_name: "유닛 2: 디지털 정보"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1675,10 +1681,10 @@
   playlab_shortcode: "실행"
   artist_shortcode: art
   header_home: "홈"
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: "대시보드"
   header_courses: courses
   header_course_catalog: Course Catalog
-  header_project_gallery: "프로젝트 갤러리"
+  header_project_gallery: "프로젝트"
   header_sections: "섹션"
   header_professional_learning: "전문 학습"
   header_educate_overview: "교사 개요"

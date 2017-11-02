@@ -1,6 +1,6 @@
 /* A very simple responsive layout system.
  */
-
+import $ from 'jquery';
 import * as utils from '../utils';
 
 /**
@@ -110,6 +110,8 @@ export function getResponsiveValue(values) {
     if (typeof(value) === "number") {
       return `${value}%`;
     } else if (typeof(value) === "string") {
+      return value;
+    } else if (typeof(value) === "object") {
       return value;
     }
   }

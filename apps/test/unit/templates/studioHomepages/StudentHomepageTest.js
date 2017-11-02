@@ -1,6 +1,6 @@
 import React from 'react';
 import { assert, expect } from 'chai';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
 
@@ -89,5 +89,36 @@ describe('StudentHomepage', () => {
       isRtl: false,
       canLeave: false
     });
+  });
+
+  it('shows section codes correctly', () => {
+    const wrapper = mount(
+        <StudentHomepage
+          courses={courses}
+          topCourse={topCourse}
+          sections={joinedSections}
+          codeOrgUrlPrefix="http://localhost:3000/"
+          isRtl={false}
+          canLeave={false}
+        />
+    );
+    expect(wrapper).to.containMatchingElement(
+        <td>ClassOneCode</td>
+    );
+    expect(wrapper).to.containMatchingElement(
+        <td>ClassTwoCode</td>
+    );
+    expect(wrapper).to.containMatchingElement(
+      <td>Google Classroom</td>
+    );
+    expect(wrapper).to.not.containMatchingElement(
+        <td>DoNotShowThis</td>
+    );
+    expect(wrapper).to.containMatchingElement(
+        <td>Clever</td>
+    );
+    expect(wrapper).to.not.containMatchingElement(
+        <td>OrThisEither</td>
+    );
   });
 });

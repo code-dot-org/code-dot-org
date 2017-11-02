@@ -92,7 +92,6 @@ const APP_OPTIONS_WHITELIST = {
   "pinWorkspaceToBottom": true,
   "hasVerticalScrollbars": true,
   "showExampleTestButtons": true,
-  "rackEnv": false,
   "report": {
     "fallback_response": true,
     "callback": true,

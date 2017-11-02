@@ -1,0 +1,11 @@
+name 'SG csp3_U3_turtle_subgoal_mc_levelgroup'
+title 'One of these things is not like the other'
+
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp3_subgoal_mc_levelgroup_preamble'
+level 'SG csp_U3_turtle_subgoal_q1_mc'
+level 'SG csp_U3_turtle_subgoal_q2_mc'
+

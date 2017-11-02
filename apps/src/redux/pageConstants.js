@@ -33,6 +33,7 @@ var ALLOWED_KEYS = new Set([
   'isDroplet',
   'isBlockly',
   'isMinecraft',
+  'runButtonText',
   'visualizationHasPadding',
   'visualizationInWorkspace',
   'hideCoordinateOverlay',
@@ -56,6 +57,7 @@ var ALLOWED_KEYS = new Set([
   'documentationUrl',
   'appType',
   'nextLevelUrl',
+  'showProjectTemplateWorkspaceIcon',
 ]);
 
 const initialState = {

@@ -54,7 +54,6 @@
  * @property {boolean} pinWorkspaceToBottom
  * @property {boolean} hasVerticalScrollbars
  * @property {boolean} showExampleTestButtons
- * @property {string} rackEnv
  * @property {ReportOptions} report
  * @property {boolean} sendToPhone
  * @property {string} send_to_phone_url
@@ -115,6 +114,7 @@
  * @property {?} lastAttempt
  * @property {boolean} submittable
  * @property {boolean} final_level
+ * @property {array} levelVideos
  */
 
 /**

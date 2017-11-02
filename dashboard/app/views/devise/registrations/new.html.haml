@@ -58,7 +58,7 @@
         #name-block.itemblock
           #name-student.labelblock!= t('activerecord.attributes.user.name_example')
           #name-teacher.labelblock{style: "display: none"}= t('activerecord.attributes.user.name')
-          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          = f.text_field :name, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
         #schooldropdown-block.itemblock{style: "display: none;"}
@@ -102,6 +102,7 @@
               = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
 
         %br
+        #signup-error.error{style: 'display: none'}= t('signup_form.error')
         %button#signup-button.primary= t('signup_form.submit')
 
         #student-terms

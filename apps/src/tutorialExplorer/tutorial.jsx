@@ -53,11 +53,11 @@ const styles = {
   }
 };
 
-const Tutorial = React.createClass({
-  propTypes: {
+export default class Tutorial extends React.Component {
+  static propTypes = {
     item: shapes.tutorial.isRequired,
     tutorialClicked: PropTypes.func.isRequired
-  },
+  };
 
   render() {
     const tutorialOuterStyle = {
@@ -90,6 +90,4 @@ const Tutorial = React.createClass({
       </div>
     );
   }
-});
-
-export default Tutorial;
+}

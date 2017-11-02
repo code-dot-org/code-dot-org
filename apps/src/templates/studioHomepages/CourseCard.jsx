@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes, Component } from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -96,13 +96,13 @@ const styles = {
  * A card used on the homepage to display information about a particular course
  * or script for a user.
  */
-const CourseCard = React.createClass({
-  propTypes: {
+export default class CourseCard extends Component {
+  static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired
-  },
+  };
 
   render() {
     const { title, description, link, isRtl } = this.props;
@@ -129,6 +129,4 @@ const CourseCard = React.createClass({
       </a>
     );
   }
-});
-
-export default CourseCard;
+}

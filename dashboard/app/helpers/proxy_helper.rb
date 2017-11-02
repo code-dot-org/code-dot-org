@@ -134,9 +134,9 @@ module ProxyHelper
   def allowed_hostname?(url, allowed_hostname_suffixes)
     return true unless allowed_hostname_suffixes
     return false unless url.hostname
-
+    hostname = url.hostname.downcase
     allowed_hostname_suffixes.find do |suffix|
-      url.hostname.downcase.match(Regexp.new("#{Regexp.escape(suffix)}$"))
+      hostname.match(Regexp.new("(^|\\.)#{Regexp.escape(suffix)}$"))
     end
   end
 

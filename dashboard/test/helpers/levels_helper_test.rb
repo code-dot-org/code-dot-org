@@ -421,7 +421,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages]
     )
 
     stage = script.stages[0]
@@ -473,7 +473,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'my_cool_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages]
     )
 
     stage = script.stages[0]
@@ -536,5 +536,18 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in student
 
     assert_includes app_options[:experiments], experiment.name
+  end
+
+  test 'video data available for levels with associated videos' do
+    @level = create :applab, :with_autoplay_video
+    assert_equal app_options[:level][:levelVideos].length, 1
+    # accounts for the random assignmnet of video data in stub
+    assert_includes app_options[:level][:levelVideos][0][:key], "concept_"
+  end
+
+  test 'video data is empty for levels with no associated videos' do
+    leveldata = []
+    @level = create :applab
+    assert_equal app_options[:level][:levelVideos], leveldata
   end
 end

@@ -95,11 +95,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft профил
+    clever: Clever Account
     forgot_password: "Забравили сте паролата си?"
     need_confirmation: "Не сте получили инструкции за потвърждение ?"
     need_unlock: "Не сте получили инструкции за отключване?"
     not_linked: "За съжаление, твоят Code.org акаунт не е свързан с %{provider}. Ще
       се наложи да влезеш като въведеш паролата си по-долу."
+    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
+      sign in through your Clever Portal instead.
   signup_form:
     student_count: "%{count} ученици вече са се регистрирали."
     teacher_count: "%{count} учители вече са се регистрирали."
@@ -155,6 +158,7 @@
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
+    error: An error occurred.
   school_info:
     title: "Информацшя за училището (по избор)"
     school_country: "Училищен район"
@@ -235,7 +239,7 @@
       picture: Picture Password
       word: Secret Words
       email: "Имейл"
-      google_classroom: Google Classroom
+      google_classroom: Google класна стая
       clever: Clever
   follower:
     invite_sent: "Поканата изпратена"
@@ -295,10 +299,10 @@
         gamelab: "Направи Game Lab проект"
         weblab: Make a Web Lab (beta) project
       home: "Начало"
-      my_dashboard: My Dashboard
+      my_dashboard: "Моето табло"
       courses: "Курсове"
       course_catalog: Course Catalog
-      project_gallery: Project Gallery
+      project_gallery: "Проекти"
       sections: "Раздели"
       help_support: Help and support
       report_bug: "Съобщи за бъгове"
@@ -999,9 +1003,17 @@
     rename: "Преименуване"
     save: "Запазване"
     delete: "Изтриване"
+    import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: "Връщане към курса"
     my_projects: "Моите проекти"
-    project_gallery: Project Gallery
+    project_gallery: "Проекти"
     publish: Publish
     unpublish: Unpublish
     share: "Сподели"
@@ -1044,6 +1056,9 @@
     remix: "Ремикс"
     click_to_remix: Щракнете върху "Ремикс", за да създадете  собствена версия!
     edit_project: "Редактиране на проект"
+    sharing_disabled: Sorry, this project is not available for sharing. If this is
+      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
+      in</a> to your account to view the project.
     abuse:
       tos: "Този проект нарушава Code.org <a href='http://code.org/tos'> Условията
         за ползване</a> и не може да бъде споделен с други потребители."
@@ -1112,6 +1127,10 @@
     optional_stages: Optional Stages
     main_course: Main Course
     extra_course_content: "Допълнително учебно съдържание"
+    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_2: Course E Content
+    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_2: Course F Content
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

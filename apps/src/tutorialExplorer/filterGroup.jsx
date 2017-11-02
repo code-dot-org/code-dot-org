@@ -3,42 +3,22 @@
  */
 
 import React, {PropTypes} from 'react';
+import FilterGroupContainer from './filterGroupContainer';
 import FilterChoice from './filterChoice';
-import { getResponsiveValue } from './responsive';
 
-const styles = {
-  filterGroupOuter: {
-    float: "left",
-    paddingBottom: 20,
-    paddingRight: 40,
-    paddingLeft: 10
-  },
-  filterGroupText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    borderBottom: 'solid grey 1px'
-  }
-};
-
-const FilterGroup = React.createClass({
-  propTypes: {
+export default class FilterGroup extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     filterEntries: PropTypes.array.isRequired,
     selection: PropTypes.array.isRequired,
-    onUserInput: PropTypes.func.isRequired
-  },
+    onUserInput: PropTypes.func.isRequired,
+    singleEntry: PropTypes.bool.isRequired
+  };
 
   render() {
-    const filterGroupOuterStyle = {
-      ...styles.filterGroupOuter,
-      width: getResponsiveValue({xs: 100, sm: 50, md: 100})
-    };
-
     return (
-      <div style={filterGroupOuterStyle}>
-        <div style={styles.filterGroupText}>
-          {this.props.text}
-        </div>
+      <FilterGroupContainer text={this.props.text}>
         {this.props.filterEntries.map(item => (
           <FilterChoice
             groupName={this.props.name}
@@ -46,12 +26,11 @@ const FilterGroup = React.createClass({
             text={item.text}
             selected={this.props.selection && this.props.selection.indexOf(item.name) !== -1}
             onUserInput={this.props.onUserInput}
+            singleEntry={this.props.singleEntry}
             key={item.name}
           />
         ))}
-      </div>
+      </FilterGroupContainer>
     );
   }
-});
-
-export default FilterGroup;
+}

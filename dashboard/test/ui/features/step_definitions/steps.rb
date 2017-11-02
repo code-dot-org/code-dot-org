@@ -21,6 +21,8 @@ end
 def element_stale?(element)
   element.enabled?
   false
+rescue Selenium::WebDriver::Error::JavascriptError => e
+  e.message.starts_with? 'Element does not exist in cache'
 rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
@@ -115,12 +117,6 @@ When /^I close the dialog$/ do
   STEPS
 end
 
-When /^I close the React alert$/ do
-  steps <<-STEPS
-    When I click selector ".react-alert button"
-  STEPS
-end
-
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end
@@ -130,13 +126,13 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
-    And I wait until element "button:contains(Delete Progress)" is visible
+    And I wait until element "button:contains(Start over)" is visible
     And I close the dialog
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
     Then I click selector "#versions-header"
-    And I wait until element "button:contains(Delete Progress)" is visible
-    And I click selector "button:contains(Delete Progress)"
+    And I wait until element "button:contains(Start over)" is visible
+    And I click selector "button:contains(Start over)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
@@ -890,7 +886,31 @@ And /^I create a new section$/ do
     Then I should see the new section dialog
 
     When I select email login
-    And I scroll the save button into view
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
+  }
+end
+
+And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do |primary, secondary|
+  individual_steps %Q{
+    When I press the new section button
+    Then I should see the new section dialog
+
+    When I select email login
+    Then I wait to see "#uitest-primary-assignment"
+
+    When I select the "#{primary}" option in dropdown "uitest-primary-assignment"
+  }
+
+  if secondary
+    individual_steps %Q{
+      And I wait to see "#uitest-secondary-assignment"
+      And I select the "#{secondary}" option in dropdown "uitest-secondary-assignment"
+    }
+  end
+
+  individual_steps %Q{
     And I press the save button to create a new section
     And I wait for the dialog to close
     Then I should see the section table
@@ -1283,6 +1303,13 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
     return document.querySelectorAll('.uitest-owned-sections tbody tr').length;
   SCRIPT
   expect(row_count.to_i).to eq(expected_row_count.to_i)
+end
+
+Then /^the section table row at index (\d+) has script href "([^"]+)"$/ do |row_index, expected_href|
+  actual_href = @browser.execute_script(
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(1)').attr('href');"
+  )
+  expect(actual_href).to eq(expected_href)
 end
 
 Then /^I scroll the save button into view$/ do

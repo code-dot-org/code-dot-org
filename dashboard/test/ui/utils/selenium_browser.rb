@@ -14,7 +14,7 @@ module SeleniumBrowser
 
   def self.ensure_chromedriver_running
     # Verify that chromedriver is actually running
-    unless `ps`.include?('chromedriver')
+    unless `ps x`.include?('chromedriver')
       puts "You cannot run with the --local flag unless you are running chromedriver. Automatically running
 chromedriver found at #{`which chromedriver`}"
       system('chromedriver &')

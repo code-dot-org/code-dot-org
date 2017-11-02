@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
@@ -74,14 +74,14 @@ const styles = {
 // While this is named TopCourse, it really refers to the most recent course
 // or script in which the student or teacher has progress.
 
-const TopCourse = React.createClass({
-  propTypes: {
+class TopCourse extends Component {
+  static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     assignableName: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
     linkToLesson: PropTypes.string.isRequired
-  },
+  };
 
   render() {
     const { assignableName, lessonName, linkToOverview, linkToLesson, isRtl } = this.props;
@@ -117,6 +117,6 @@ const TopCourse = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default Radium(TopCourse);

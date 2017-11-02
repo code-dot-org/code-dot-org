@@ -1,5 +1,9 @@
 import 'babel-polyfill';
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
+import {
+  throwOnConsoleErrorsEverywhere,
+  throwOnConsoleWarningsEverywhere,
+  clearTimeoutsBetweenTests,
+} from './util/testUtils';
 
 
 var integrationContext = require.context("./integration", false, /Tests?\.js$/);
@@ -7,6 +11,7 @@ var integrationContext = require.context("./integration", false, /Tests?\.js$/);
 describe('integration tests', () => {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
+  clearTimeoutsBetweenTests();
   integrationContext.keys()
     .filter(
           key => !process.env.mocha_entry ||

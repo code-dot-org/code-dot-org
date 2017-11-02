@@ -49,7 +49,6 @@ p,pre,span {
 }
 
 body {
-  @include unselectable;
   -webkit-tap-highlight-color: transparent;
   padding: 0;
   font-style: normal;
@@ -254,7 +253,7 @@ img.video_thumbnail {
   }
 
   padding-top: 0;
-  min-height: 85px;
+  min-height: 60px;
   position: relative;
 
   .header {
@@ -1151,7 +1150,7 @@ input.header_input {
 
 #codeApp.pin_bottom {
   position: absolute;
-  top: 85px;
+  top: 60px;
   left: $codeApp-left-margin;
   right: 25px;
   bottom: 10px;
@@ -1742,6 +1741,10 @@ a.download-video {
     display: table-cell;
     padding-left: 10px;
     vertical-align: middle;
+  }
+  .error {
+    color: $red;
+    margin-bottom: 8px;
   }
   select {
     width: 234px;

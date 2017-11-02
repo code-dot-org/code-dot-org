@@ -124,6 +124,7 @@ class Script < ActiveRecord::Base
     teacher_resources
     stage_extras_available
     has_verified_resources
+    script_announcements
   )
 
   def self.twenty_hour_script
@@ -426,7 +427,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd6'
   end
 
   def k1?
@@ -482,10 +483,6 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def logo_image
-    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true) rescue nil
-  end
-
   def k5_course?
     %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
   end
@@ -507,7 +504,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csp3-research-mxghyt csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_lesson_pdf?
@@ -535,6 +532,22 @@ class Script < ActiveRecord::Base
     peer_reviews_to_complete.try(:>, 0)
   end
 
+  # Is age 13+ required for logged out users
+  # @return {bool}
+  def logged_out_age_13_required?
+    return false if login_required
+
+    # hard code some exceptions. ideally we'd get rid of these and just make our
+    # UI tests deal with the 13+ requirement
+    return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
+
+    # these are Games where if you're not logged in, we want to prompt to ask if
+    # you're at least 13 years old.
+    thirteen_plus_apps = [Game.applab, Game.gamelab, Game.weblab]
+
+    script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
+  end
+
   def self.setup(custom_files)
     transaction do
       scripts_to_add = []
@@ -555,7 +568,7 @@ class Script < ActiveRecord::Base
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
-        }, stages.map {|stage| stage[:scriptlevels]}.flatten]
+        }, stages]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
@@ -566,7 +579,8 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.add_script(options, raw_script_levels)
+  def self.add_script(options, raw_stages)
+    raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
@@ -629,14 +643,6 @@ class Script < ActiveRecord::Base
           raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
         end
 
-        if [Game.applab, Game.gamelab].include? level.game
-          unless script.hidden || script.login_required
-            raise <<-ERROR.gsub(/^\s+/, '')
-              Applab and Gamelab levels can only be added to scripts that are hidden or require login
-              (while adding level "#{level.name}" to script "#{script.name}")
-            ERROR
-          end
-        end
         level
       end
 
@@ -654,7 +660,7 @@ class Script < ActiveRecord::Base
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
-      end || ScriptLevel.create(script_level_attributes) do |sl|
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
       # Set/create Stage containing custom ScriptLevel
@@ -692,6 +698,8 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
+      # make sure we have an up to date view
+      stage.reload
       stage.script_levels = script_levels_by_stage[stage.id]
 
       # Go through all the script levels for this stage, except the last one,
@@ -709,6 +717,10 @@ class Script < ActiveRecord::Base
       if stage.lockable && !stage.script_levels.last.assessment?
         raise 'Expect lockable stages to have an assessment as their last level'
       end
+
+      raw_stage = raw_stages.find {|rs| rs[:stage].downcase == stage.name.downcase}
+      stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
+      stage.save! if stage.changed?
     end
 
     script.stages = script_stages
@@ -743,7 +755,7 @@ class Script < ActiveRecord::Base
             wrapup_video: general_params[:wrapup_video],
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+          script_data[:stages],
         )
         Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
@@ -878,7 +890,9 @@ class Script < ActiveRecord::Base
       excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
-      has_verified_resources: has_verified_resources?
+      has_verified_resources: has_verified_resources?,
+      script_announcements: script_announcements,
+      age_13_required: logged_out_age_13_required?,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -896,7 +910,8 @@ class Script < ActiveRecord::Base
       name: name,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      student_detail_progress_view: student_detail_progress_view?
+      student_detail_progress_view: student_detail_progress_view?,
+      age_13_required: logged_out_age_13_required?
     }
   end
 
@@ -942,7 +957,8 @@ class Script < ActiveRecord::Base
       project_widget_types: script_data[:project_widget_types],
       teacher_resources: script_data[:teacher_resources],
       stage_extras_available: script_data[:stage_extras_available] || false,
-      has_verified_resources: !!script_data[:has_verified_resources]
+      has_verified_resources: !!script_data[:has_verified_resources],
+      script_announcements: script_data[:script_announcements],
     }.compact
   end
 

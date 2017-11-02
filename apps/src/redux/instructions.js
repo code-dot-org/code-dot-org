@@ -50,7 +50,8 @@ const instructionsInitialState = {
   // part off of the size of the code workspace.
   maxAvailableHeight: Infinity,
   hasAuthoredHints: false,
-  overlayVisible: false
+  overlayVisible: false,
+  levelVideos: []
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -67,6 +68,7 @@ export default function reducer(state = instructionsInitialState, action) {
       hasContainedLevels,
       overlayVisible,
       teacherMarkdown,
+      levelVideos
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -82,7 +84,8 @@ export default function reducer(state = instructionsInitialState, action) {
       teacherMarkdown,
       hasContainedLevels,
       overlayVisible,
-      collapsed
+      collapsed,
+      levelVideos
     });
   }
 
@@ -138,7 +141,7 @@ export default function reducer(state = instructionsInitialState, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown }) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -148,6 +151,7 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
+  levelVideos,
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -236,6 +240,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.level.instructions2
  * @param {string} config.level.markdownInstructions
  * @param {array} config.level.inputOutputTable
+ * @param {array} config.level.levelVideos
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels
@@ -254,7 +259,8 @@ export const determineInstructionsConstants = config => {
     instructions,
     instructions2,
     markdownInstructions,
-    inputOutputTable
+    inputOutputTable,
+    levelVideos
   } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
@@ -297,6 +303,11 @@ export const determineInstructionsConstants = config => {
       shortInstructions2 = substituteInstructionImages(shortInstructions2,
         config.skin.instructions2ImageSubstitutions);
     }
+
+    if (config.skin.replaceInstructions) {
+      longInstructions = config.skin.replaceInstructions(longInstructions);
+      shortInstructions = config.skin.replaceInstructions(shortInstructions);
+    }
   }
 
   // If the level has instructions to show, we will in some situations
@@ -321,6 +332,7 @@ export const determineInstructionsConstants = config => {
     shortInstructions2,
     longInstructions,
     teacherMarkdown,
-    hasContainedLevels
+    hasContainedLevels,
+    levelVideos,
   };
 };

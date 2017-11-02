@@ -43,6 +43,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-14 00:56:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "functions": 2
@@ -113,8 +114,14 @@
           <block type="bee_ifFlower">
             <title name="LOC">atFlower</title>
           </block>
+          <block type="maze_if">
+            <title name="DIR">isPathForward</title>
+          </block>
+          <block type="maze_ifElse">
+            <title name="DIR">isPathForward</title>
+          </block>
         </category>
-        <category name="Functions">
+        <category name="Functions" custom="PROCEDURE">
           <block type="procedures_callnoreturn">
             <mutation name="rowOfNectar"/>
           </block>

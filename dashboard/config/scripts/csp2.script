@@ -5,10 +5,10 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
 has_verified_resources true
+script_announcements [{"notice"=>"Consider Skipping Lessons 11 - 14 of Unit 2", "details"=>"Click to read more about this recommendation as well as our overall strategy for updating CS Principles.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/3", "type"=>"bullhorn"}]
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1'
 level 'v2 U2L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-
 assessment 'U1L12 Reflection Free Response', progression: 'Check Your Understanding'
 assessment 'CSP_U2_Shakespeare_Question', progression: 'Check Your Understanding'
 assessment 'csp-pulse-check-survey-2-levelgroup-U2Ch1', progression: 'Quick Check-In'

@@ -1,115 +1,13 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import Button from '../Button';
-import color from "../../util/color";
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
 import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
-import ProtectedStatefulDiv from '../../templates/ProtectedStatefulDiv';
-
-const styles = {
-  formHeading: {
-    marginTop: 20
-  },
-  question: {
-    fontSize: 16,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.charcoal,
-    paddingTop: 10,
-    paddingBottom: 5
-  },
-  pledgeBox: {
-    marginBottom: 20,
-    marginTop: 20
-  },
-  pledge: {
-    fontSize: 18,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.charcoal,
-    paddingBottom: 10,
-    paddingTop: 10,
-    marginLeft: 18,
-  },
-  otherCS : {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    marginRight: 20,
-    marginLeft: 20
-  },
-  option: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    float: 'left',
-    width: '80%',
-    marginRight: 20,
-    marginLeft: 20
-  },
-  dropdown: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    height: 30,
-    width: 120,
-    marginLeft: 18,
-    marginTop: 5
-  },
-  wideDropdown : {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    height: 30,
-  },
-  dropdownBox: {
-    width: '100%'
-  },
-  options: {
-    marginLeft: 18
-  },
-  checkboxOption: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    marginLeft: 20
-  },
-  input: {
-    height: 40,
-    width: 250,
-    fontFamily: '"Gotham 3r", sans-serif',
-    padding: 5
-  },
-  textArea: {
-    height: 100,
-    width: '100%',
-    fontFamily: '"Gotham 3r", sans-serif',
-    padding: 5
-  },
-  firstQuestion: {
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginTop: 10
-  },
-  grayQuestion: {
-    background: color.background_gray,
-    padding: 15,
-    borderTop: '1px solid gray',
-    borderBottom: '1px solid gray'
-  },
-  errors: {
-    fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.red,
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  asterisk: {
-    fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red,
-  },
-  leftMargin: {
-    leftMargin: 20
-  }
-};
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
+import SchoolNotFound from '../SchoolNotFound';
+import { styles } from './censusFormStyles';
 
 class CensusForm extends Component {
 
@@ -118,11 +16,19 @@ class CensusForm extends Component {
     showPledge: false,
     selectedHowMuchCS: [],
     selectedTopics: [],
+    otherTopicsDesc: '',
     submission: {
       name: '',
       email: '',
       role: '',
+      country: 'United States',
       hoc: '',
+      nces: '',
+      schoolName: '',
+      schoolCity: '',
+      schoolState: '',
+      schoolZip: '',
+      schoolType: '',
       afterSchool: '',
       tenHours: '',
       twentyHours: '',
@@ -136,18 +42,22 @@ class CensusForm extends Component {
     }
   };
 
-  componentDidMount() {
-    // Move the haml-rendered DOM section inside our protected stateful div
-    $('#school-info').appendTo(ReactDOM.findDOMNode(this.refs.schoolInfo)).show();
-  }
-
-  handleChange(propertyName, event) {
+  handleChange = (field, event) => {
     this.setState({
       submission: {
         ...this.state.submission,
-        [propertyName]: event.target.value
+        [field]: event.target.value
       }
     }, this.checkShowFollowUp);
+  }
+
+  handleDropdownChange = (field, event) => {
+    this.setState({
+      submission: {
+        ...this.state.submission,
+        [field]: event ? event.value : ''
+      }
+    });
   }
 
   checkShowFollowUp() {
@@ -183,23 +93,52 @@ class CensusForm extends Component {
   }
 
   toggleTopics(option) {
-     const selected = this.state.selectedTopics.slice(0);
-     if (selected.includes(option)) {
-       this.setState({
-         selectedTopics: _.without(selected, option)
-       });
-     } else {
-       this.setState({
-         selectedTopics: selected.concat(option)
-       });
-     }
-   }
+    if (this.state.selectedTopics.includes(option)) {
+      this.clearOption(option);
+    } else {
+      this.selectOption(option);
+    }
+  }
+
+  selectOption(option) {
+    this.setState({
+      selectedTopics: this.state.selectedTopics.concat(option)
+    });
+  }
+
+  clearOption(option) {
+    this.setState({
+      selectedTopics: _.without(this.state.selectedTopics, option)
+    });
+  }
+
+  updateOtherTopicsDesc(event) {
+    const description = event.target.value;
+    const emptyDescription = ("" === description);
+
+    // Clear the "other topics" checkbox when there is no description.
+    if (emptyDescription) {
+      this.clearOption("topic_other_b");
+    }
+    // Mark the "other topics" checkbox when there is a description.
+    if (!emptyDescription) {
+      this.selectOption("topic_other_b");
+    }
+
+    this.setState({ otherTopicsDesc: description });
+  }
 
   processResponse() {
     window.location.href = "/yourschool/thankyou";
   }
 
-// Here we're using the built-in functionality of pegasus form helpers to validate the email address.  It's the only server-side validation for this form; all other validations are done client-side before the POST request is submitted. This slightly atypical approach because the logic for email validation is more complex and there wasn't a need to duplicate what already exists; the other validations are much more straightforward to simply implement here in the React.
+// Here we're using the built-in functionality of pegasus form helpers to
+// validate the email address.  It's the only server-side validation for this
+// form; all other validations are done client-side before the POST request is
+// submitted. This slightly atypical approach because the logic for email
+// validation is more complex and there wasn't a need to duplicate what already
+// exists; the other validations are much more straightforward to implement
+// here in the React.
   processError(error) {
     if (error.responseJSON.email_s[0] === "invalid") {
       this.setState({
@@ -211,15 +150,25 @@ class CensusForm extends Component {
     }
   }
 
-  validateSchool() {
-    if ($("#school-country").val() === "US") {
-      if (($("#school-id").val()) ||  ($("#school-name").val() && $("#school-zipcode").val())) {
+  validateSchoolDropdown() {
+    if (this.state.submission.country === "United States") {
+      if (this.state.submission.nces) {
         return false;
       } else {
-      return true;
+        return true;
       }
     } else {
-    return false;
+      return false;
+    }
+  }
+
+  validateSchool() {
+    const {submission} = this.state;
+    if (submission.country === "United States" && submission.nces === "-1") {
+      return (this.validateNotBlank(submission.schoolName) || this.validateNotBlank(submission.schoolState) || this.validateNotBlank(submission.schoolCity)
+      || this.validateNotBlank(submission.schoolType) || this.validateNotBlank(submission.schoolZip));
+    } else {
+      return false;
     }
   }
 
@@ -242,6 +191,8 @@ class CensusForm extends Component {
         email: this.validateNotBlank(this.state.submission.email),
         topics: this.validateTopics(),
         frequency: this.validateFrequency(),
+        country: this.validateNotBlank(this.state.submission.country),
+        nces: this.validateSchoolDropdown(),
         school: this.validateSchool(),
         role: this.validateNotBlank(this.state.submission.role),
         hoc: this.validateNotBlank(this.state.submission.hoc),
@@ -254,7 +205,7 @@ class CensusForm extends Component {
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours) {
+    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.nces && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours && !errors.country) {
       $.ajax({
         url: "/forms/Census2017",
         type: "post",
@@ -265,9 +216,26 @@ class CensusForm extends Component {
     }
   }
 
+  topicCheckbox(name, label) {
+    return (
+    <label>
+      <input
+        type="checkbox"
+        name={name}
+        checked={this.state.selectedTopics.includes(name)}
+        onChange={() => this.toggleTopics(name)}
+      />
+      <span style={styles.checkboxOption}>
+        {label}
+      </span>
+    </label>
+    );
+  }
+
   render() {
-    const { showFollowUp, showPledge, submission, selectedTopics, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours);
+    const { showFollowUp, showPledge, submission, errors } = this.state;
+    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours || errors.country || errors.nces);
+    const US = submission.country === "United States";
 
     return (
       <div id="form">
@@ -275,14 +243,47 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-          {errors.school && (
-             <div style={styles.errors}>
-               {i18n.censusRequiredSchool()}
-             </div>
-           )}
-          <ProtectedStatefulDiv
-            ref="schoolInfo"
+          <CountryAutocompleteDropdown
+            onChange={this.handleDropdownChange.bind("country")}
+            value={submission.country}
+            required={true}
+            showErrorMsg={errors.country}
           />
+          {US && (
+            <SchoolAutocompleteDropdown
+              setField={this.handleDropdownChange}
+              value={submission.nces}
+              showErrorMsg={errors.nces}
+            />
+          )}
+          {US && this.state.submission.nces === "-1" && (
+            <SchoolNotFound
+              onChange={this.handleChange}
+              schoolName={submission.schoolName}
+              schoolType={submission.schoolType}
+              schoolCity={submission.schoolCity}
+              schoolState={submission.schoolState}
+              schoolZip={submission.schoolZip}
+              showErrorMsg={errors.school}
+            />
+          )}
+          {!US && (
+            <div>
+              <label>
+                <div style={styles.question}>
+                  {i18n.schoolName()}
+                  <span style={styles.asterisk}> *</span>
+                </div>
+                <input
+                  type="text"
+                  name="school_name_s"
+                  value={this.state.schoolName}
+                  onChange={this.handleChange.bind(this, 'schoolName')}
+                  style={styles.input}
+                />
+              </label>
+            </div>
+          )}
           <div style={styles.question}>
             How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
             <span style={styles.asterisk}> *</span>
@@ -425,19 +426,23 @@ class CensusForm extends Component {
                     key={index}
                     style={styles.leftMargin}
                   >
-                    <label>
-                      <input
-                        type="checkbox"
-                        name={courseTopic.name}
-                        checked={selectedTopics.includes(courseTopic.name)}
-                        onChange={() => this.toggleTopics(courseTopic.name)}
-                      />
-                      <span style={styles.checkboxOption}>
-                        {courseTopic.label}
-                      </span>
-                    </label>
+                    {this.topicCheckbox(courseTopic.name, courseTopic.label)}
                   </div>
                 )}
+                <div style={styles.leftMargin}>
+                  {this.topicCheckbox("topic_other_b", `${i18n.censusOtherDescribeHere()}`)}
+                  &nbsp;
+                  <input
+                    type="text"
+                    name="topic_other_desc_s"
+                    value={this.state.otherTopicsDesc}
+                    onChange={this.updateOtherTopicsDesc.bind(this)}
+                    style={styles.inputInline}
+                  />
+                </div>
+                <div style={styles.leftMargin}>
+                  {this.topicCheckbox("topic_dont_know_b", i18n.iDontKnow())}
+                </div>
               </div>
               <label>
                 <div style={styles.question}>

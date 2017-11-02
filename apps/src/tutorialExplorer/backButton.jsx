@@ -2,12 +2,12 @@
  */
 
 import React from 'react';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   backButton: {
     marginTop: 7,
-    marginBottom: 10
+    marginBottom: 13
   }
 };
 

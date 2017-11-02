@@ -9,6 +9,7 @@ class Census2017 < Form
     result[:role_s] = data[:role_s]
 
     result[:country_s] = data[:country_s]
+    result[:nces_school_s] = data[:nces_school_s]
     result[:school_type_s] = data[:school_type_s]
     result[:school_state_s] = data[:school_state_s]
     result[:school_district_id_s] = data[:school_district_id_s]
@@ -37,6 +38,7 @@ class Census2017 < Form
     result[:topic_web_design_b] = data[:topic_web_design_b]
     result[:topic_game_design_b] = data[:topic_game_design_b]
     result[:topic_other_b] = data[:topic_other_b]
+    result[:topic_other_desc_s] = data[:topic_other_desc_s]
     result[:topic_dont_know_b] = data[:topic_dont_know_b]
 
     result[:pledge_b] = data[:pledge_b]

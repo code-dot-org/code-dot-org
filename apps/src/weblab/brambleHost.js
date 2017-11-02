@@ -337,7 +337,7 @@ function addFileCSS() {
   brambleProxy_.addNewFile({
     basenamePrefix: 'new',
     ext: 'css',
-    contents: 'body {\n  \n}',
+    contents: 'body {\n  background: white;\n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n}',
   }, err => {
     if (err) {
       throw err;

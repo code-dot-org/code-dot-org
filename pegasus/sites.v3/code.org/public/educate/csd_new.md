@@ -6,14 +6,13 @@ theme: responsive
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
-# Our newest course: CS Discoveries
+# CS Discoveries
 
 ## <a name="what"></a>What is CS Discoveries?
 
-Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+Computer Science Discoveries is appropriate for 6 - 10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
 <div class="col-50" style="padding-right: 20px">
-
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
 <i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
 
@@ -27,40 +26,50 @@ Computer Science Discoveries (CS Discoveries) is an introductory computer scienc
 
 <div style="clear:both"></div>
 
+<hr/>
 ## <a name="what"></a>Professional Learning
 
-<%= view :three_circles, circles: [
-{img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
-{img: '/images/testimonials/fit-150/students-1.jpg', text: '"I truly believe that this course may level the playing field for some of my students and very likely give them a break they need to find a path to success."'},
-{img: '/images/testimonials/fit-150/students-2.jpg', text: '"After teaching 27 years, it is refreshing to attend a training that has me energized and enthusiastic about offering new content to my students."'}] %>
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
 **General applications for the 2018-19 [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) will open in January, 2018.** 
 
-If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
-
-[<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52) [<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
 
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
 
-* [**One-pager**](/files/CSDiscoveries_1-pager.pdf) describing the course
-* [**Curriculum Guide**](/files/CS-Discoveries-Curriculum-Guide.pdf) for teachers
-* [**Course Materials List**](#supplies)
-* [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
+[col-50]
+
+[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](/files/CSDiscoveries-Curriculum-Guide.pdf)</center>
+
+<div style="margin-left: 15px; margin-top: 5px;">The  <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations.</div>
+
+[/col-50]
+
+[col-50]
+
+[<center><img src="/images/animated-examples/lessonplans_csd.png" width="90%">](https://curriculum.code.org/csd)</center>
+
+<div style="margin-left: 15px; margin-top: 5px;"><a href="https://curriculum.code.org/csd">Daily lesson plans</a> come with detailed instructions, activity guides, and assessments.</div>
+
+[/col-50]
+
+<p style="clear:both"></p>
+<br>
 
 [col-33]
 
-<center><img src="/images/animated-examples/lessonplans_csd.png" width="90%"></center>
+[<center><img src="/images/WebLab.png" width="90%">](/weblab)</center>
 
-<div style="margin-top: 5px;">Daily lesson plans come with detailed instructions, activity guides, and assessments</div>
+<div style="margin-left: 15px; margin-top: 5px;">Students learn to use HTML and CSS to design web pages in <a href="/weblab">Web Lab</a></div>
 
 [/col-33]
 
 [col-33]
 
-<center><img src="/images/animated-examples/tennis_jump.gif" width="90%"></center>
+[<center><img src="/images/animated-examples/tennis_jump.gif" width="90%">](/gamelab)</center>
 
 <div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in <a href="/gamelab">Game Lab</a></div>
 
@@ -68,42 +77,70 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 [col-33]
 
-<center><img src="/images/animated-examples/circuitplayground.gif" width="90%"></center>
+[<center><img src="/images/animated-examples/circuitplayground.gif" width="90%">](/applab)</center>
 
 <div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and <a href="/applab">App Lab</a></div>
 
 [/col-33]
 
 <p style="clear:both"></p>
+<br>
+### Don't miss these additional resources:
+
+* [**Course Materials List**](#supplies)
+* [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
 
 <hr/>
 
-## <a name="content"></a>Unit Overview
+## <a name="content"></a>Curriculum Overview
 
-![CS Discoveries Unit Overview](/images/fit-800/disco-unit-overview.png)
-
-## <a name="lessons"></a>Lessons
-
-The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into lessons. The curriculum guide contains
-details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations. 
+The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into specific units.  
 
 <br>
 
-|                   Unit                   | Lesson Plans                             | Code Studio                              |
-| :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
-| **Unit 1 - Problem Solving** | [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1) |
-| **Unit 2 - Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
-| **Unit 3 - Animations and Games** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
-| **Unit 4 - The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
-| **Unit 5 - Data and Society** | [Lesson plans](https://curriculum.code.org/csd/unit5) | [Code Studio](https://studio.code.org/s/csd5) |
-| **Unit 6 - Physical Computing** | [Lesson plans](https://curriculum.code.org/csd/unit6) | [Code Studio](https://studio.code.org/s/csd6) |
+<div class="col-50" style="padding-right: 20px">
 
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd1'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'Problem Solving', description: 'Explore the problem-solving process and the different ways humans and computers solve problems.'%>
 
+</div>
 
+[col-50]
 
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd2'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Web Development', description: 'Discover the languages powering the web. Build your own websites in HTML and CSS using Web Lab.'%>
 
-<div style='clear:both'></div>
+[/col-50]
 
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px">
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd3'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Animations and Games', description: 'Learn the powerful constructs underlying programming languages. Build interactive games in JavaScript using Game Lab.'%>
+
+</div>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd4'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'The Design Process', description: 'Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using App Lab.'%>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px">
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd5'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Data and Society', description: 'Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data.'%>
+
+</div>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground."%>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+<hr/>
 
 ## <a name="involved"></a>Keep up with CS Discoveries
 
@@ -111,7 +148,7 @@ details on the classroom and student practices that flow throughout the course, 
 
 <h4>Let us know how we're doing!</h4>
 
-We are always looking for ways to improve our courses. If something's not quite working right, or you have ideas about features that you'd like to see, we'd love to hear from you! 
+We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
 <br><br>
 
 <a href="mailto:support@code.org"><button>Give feedback</button></a>
@@ -134,11 +171,27 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 <hr/>
 
+## Spread the word about CS Discoveries
+
+### Hand out these fliers around your school and consider sending home to parents.
+
+[![image](/images/fit-200/CSDiscoveries_1-pager.png)](/files/CSDiscoveries_1-pager.pdf) 
+[![image](/images/fit-200/csd-student-flyer.png)](/files/programs/csd-student-flyer.pdf) 
+
+### Hang these posters in your classroom and around your school:
+
+[![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
+[![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
+[![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
+[![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
+
+<hr/>
+
 ## <a name="faq"></a>Frequently Asked Questions
 
 ### <a name="timeline"></a>What is the timeline for CS Discoveries?
 
-All units are released at this time and can be used by teachers and classrooms. Throughout Fall 2017, we will be releasing revised versions of Units 4 - 6 to incorporate feedback from our Spring 2017 pilot.
+All units are released at this time and can be used by teachers and classrooms. Throughout Fall 2017, we will be releasing a revised version of Unit 6 to incorporate feedback from our Spring 2017 pilot.
 
 ### <a name="standards"></a>Will CS Discoveries be mapped to standards?
 
@@ -161,6 +214,10 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 * [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
 
 \*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing or partially subsidizing one classroom kit of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+
+### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
+
+CS Discoveries is designed to fit naturally between our [CS Fundamentals](/educate/curriculum/elementary-school) courses and our [CS Principles](/educate/csp) course. While each of these courses is designed to be an age-appropriate entry point to computer science, students with previous experience will find many new topics to explore, and they will revisit familiar topics in novel and more challenging contexts.
 
 ### <a name="relationship"></a>What is the relationship between CS Discoveries and Exploring Computer Science?
 

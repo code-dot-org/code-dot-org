@@ -12,7 +12,7 @@ import Radium from 'radium';
 import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';
 import styleConstants from '../../../styleConstants';
-import {ConnectedWatchers} from '../../../templates/watchers/Watchers';
+import Watchers from '../../../templates/watchers/Watchers';
 import PaneHeader, {PaneSection, PaneButton} from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
@@ -39,7 +39,7 @@ import {
   getCommandHistory,
 } from './redux';
 
-var styles = {
+const styles = {
   debugAreaHeader: {
     position: 'absolute',
     top: styleConstants['resize-bar-width'],
@@ -98,8 +98,8 @@ const MIN_CONSOLE_WIDTH = 345;
 /**
  * The parent JsDebugger component.
  */
-export const UnconnectedJsDebugger = Radium(React.createClass({
-  propTypes: {
+class JsDebugger extends React.Component {
+  static propTypes = {
     // from redux
     debugButtons: PropTypes.bool.isRequired,
     debugConsole: PropTypes.bool.isRequired,
@@ -119,18 +119,19 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     onSlideShut: PropTypes.func,
     onSlideOpen: PropTypes.func,
     style: PropTypes.object,
-  },
+  };
 
-  getInitialState() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       watchersHidden: false,
-      open: this.props.isOpen,
+      open: props.isOpen,
       openedHeight: 120,
       consoleWidth: 0
     };
-  },
+  }
 
-  handleResizeConsole() {
+  handleResizeConsole = () => {
     let debuggerWidth = 0;
     if (document.getElementById('debug-area-header')) {
       debuggerWidth = document.getElementById('debug-area-header').offsetWidth;
@@ -144,8 +145,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       watchersWidth = document.getElementById('debug-watch-header').offsetWidth;
     }
     const consoleWidth = debuggerWidth - commandsWidth - watchersWidth;
-    this.setState({consoleWidth: consoleWidth});
-  },
+    this.setState({consoleWidth});
+  };
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResizeConsole);
@@ -216,10 +217,9 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
 
       watchersReferences = {};
     });
+  }
 
-  },
-
-  onMouseUpDebugResizeBar(e) {
+  onMouseUpDebugResizeBar = () => {
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingDebugResizeBar) {
       document.body.removeEventListener('mousemove', this.onMouseMoveDebugResizeBar);
@@ -232,7 +232,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       }
       this._draggingDebugResizeBar = false;
     }
-  },
+  };
 
   slideShut() {
     const closedHeight = $(this.root).find('#debug-area-header').height() +
@@ -244,7 +244,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       closedHeight,
     });
     this.props.onSlideShut && this.props.onSlideShut(closedHeight);
-  },
+  }
 
   slideOpen() {
     this.setState({
@@ -252,7 +252,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       transitionType: 'opening',
     });
     this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.isOpen && !nextProps.isOpen) {
@@ -260,23 +260,21 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     } else if (!this.props.isOpen && nextProps.isOpen) {
       this.slideOpen();
     }
-  },
+  }
 
-  slideToggle() {
+  slideToggle = () => {
     if (this.props.isOpen) {
       this.props.close();
     } else {
       this.props.open();
     }
-  },
+  };
 
-  onTransitionEnd() {
-    this.setState({transitionType: null});
-  },
+  onTransitionEnd = () => this.setState({transitionType: null});
 
-  onMouseDownDebugResizeBar(event) {
+  onMouseDownDebugResizeBar = (event) => {
     // When we see a mouse down in the resize bar, start tracking mouse moves:
-    var eventSourceElm = event.srcElement || event.target;
+    const eventSourceElm = event.srcElement || event.target;
     if (eventSourceElm.id === 'debugResizeBar') {
       this._draggingDebugResizeBar = true;
       document.body.addEventListener('mousemove', this.onMouseMoveDebugResizeBar);
@@ -290,20 +288,20 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
 
       event.preventDefault();
     }
-  },
+  };
 
   /**
    *  Handle mouse moves while dragging the debug resize bar.
    */
-  onMouseMoveDebugResizeBar(event) {
-    var codeApp = document.getElementById('codeApp');
-    var codeTextbox = document.getElementById('codeTextbox');
+  onMouseMoveDebugResizeBar = (event) => {
+    const codeApp = document.getElementById('codeApp');
+    const codeTextbox = document.getElementById('codeTextbox');
 
-    var resizeBar = this._debugResizeBar;
-    var rect = resizeBar.getBoundingClientRect();
-    var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
-                 rect.height / 2;
-    var newDbgHeight = Math.max(
+    const resizeBar = this._debugResizeBar;
+    const rect = resizeBar.getBoundingClientRect();
+    const offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
+                   rect.height / 2;
+    const newDbgHeight = Math.max(
       MIN_DEBUG_AREA_HEIGHT,
       Math.min(
         MAX_DEBUG_AREA_HEIGHT,
@@ -335,11 +333,11 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
 
     // Fire resize so blockly and droplet handle this type of resize properly:
     utils.fireResizeEvent();
-  },
+  };
 
-  onMouseDownWatchersResizeBar(event) {
+  onMouseDownWatchersResizeBar = (event) => {
     // When we see a mouse down in the resize bar, start tracking mouse moves:
-    var eventSourceElm = event.srcElement || event.target;
+    const eventSourceElm = event.srcElement || event.target;
     if (eventSourceElm.id === 'watchersResizeBar') {
       this._draggingWatchersResizeBar = true;
       document.body.addEventListener('mousemove', this.onMouseMoveWatchersResizeBar);
@@ -353,9 +351,9 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
 
       event.preventDefault();
     }
-  },
+  };
 
-  onMouseUpWatchersResizeBar() {
+  onMouseUpWatchersResizeBar = () => {
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingWatchersResizeBar) {
       document.body.removeEventListener('mousemove', this.onMouseMoveWatchersResizeBar);
@@ -368,12 +366,12 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       }
       this._draggingWatchersResizeBar = false;
     }
-  },
+  };
 
   /**
    *  Handle mouse moves while dragging the debug resize bar.
    */
-  onMouseMoveWatchersResizeBar(event) {
+  onMouseMoveWatchersResizeBar = (event) => {
     const watchers = this._watchers.getWrappedInstance();
     const watchersRect = watchers.scrollableContainer.getBoundingClientRect();
     const movement = watchersRect.left - event.clientX;
@@ -396,17 +394,15 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     this._debugWatchHeader.root.style.width = newWatchersWidth + extraWidthForHeader + 'px';
 
     this.handleResizeConsole();
-  },
+  };
 
-  onClearDebugOutput(event) {
-    this.props.clearLog();
-  },
+  onClearDebugOutput = () => this.props.clearLog();
 
   render() {
     const {isAttached, canRunNext} = this.props;
-    var hasFocus = this.props.isDebuggerPaused;
+    const hasFocus = this.props.isDebuggerPaused;
 
-    var sliderStyle = {
+    const sliderStyle = {
       marginLeft: this.props.debugButtons ? 5 : 45,
       marginRight: 5
     };
@@ -537,7 +533,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
           </ProtectedStatefulDiv>
         </div>
         {showWatchPane &&
-         <ConnectedWatchers
+         <Watchers
            style={openStyle}
            ref={watchers => this._watchers = watchers}
            debugButtons={this.props.debugButtons}
@@ -545,7 +541,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       </div>
     );
   }
-}));
+}
 
 export default connect(
   (state) => ({
@@ -568,4 +564,4 @@ export default connect(
     open,
     close,
   }
-)(UnconnectedJsDebugger);
+)(Radium(JsDebugger));

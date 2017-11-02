@@ -2,6 +2,7 @@ require 'test_helper'
 
 class OmniauthCallbacksControllerTest < ActionController::TestCase
   include Mocha::API
+  include UsersHelper
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
@@ -211,6 +212,34 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal '', user.email
   end
 
+  test "authorizing with known clever student account does not alter email or hashed email" do
+    clever_student = create(:student, provider: 'clever', uid: '111133')
+    student_hashed_email = clever_student.hashed_email
+
+    auth = OmniAuth::AuthHash.new(
+      uid: '111133',
+      provider: 'clever',
+      info: {
+        nickname: '',
+        name: {'first' => 'Hat', 'last' => 'Cat'},
+        email: 'hat.cat@example.com',
+        user_type: 'student',
+        dob: Date.today - 10.years,
+        gender: 'f'
+      },
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :clever
+    end
+
+    user = User.last
+    assert_equal '', user.email
+    assert_equal student_hashed_email, user.hashed_email
+  end
+
   test "adding google classroom permissions redirects to the homepage with a param to open the roster dialog" do
     user = create(:user, provider: 'google_oauth2', uid: '1111')
 
@@ -248,5 +277,97 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user = User.last
     assert_equal auth[:credentials][:token], user.oauth_token
+  end
+
+  # The following tests actually test the user model, but relate specifically to
+  # oauth uniqueness checks so they are included here. These have not been working
+  # in the past for subtle reasons.
+
+  test "omniauth student is checked for email uniqueness against student" do
+    email = 'duplicate@email.com'
+    create(:user, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  test "omniauth teacher is checked for email uniqueness against student" do
+    email = 'duplicate@email.com'
+    create(:user, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  test "omniauth student is checked for email uniqueness against teacher" do
+    email = 'duplicate@email.com'
+    create(:teacher, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  test "omniauth teacher is checked for email uniqueness against teacher" do
+    email = 'duplicate@email.com'
+    create(:teacher, email: email)
+
+    auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :facebook
+    end
+  end
+
+  test 'clever takeover transfers sections to taken over account' do
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'clever'
+    clever_student = create :student, provider: 'clever', uid: '12345'
+    student = create :student
+
+    clever_students = [clever_student]
+    section.set_exact_student_list(clever_students)
+
+    # Pull sections_as_student from the database and store them in an array to compare later
+    sections_as_student = clever_student.sections_as_student.to_ary
+
+    @request.cookies[:pm] = 'clever_takeover'
+    @request.session['clever_link_flag'] = true
+    @request.session['clever_takeover_id'] = clever_student.uid
+    @request.session['clever_takeover_token'] = '54321'
+    check_and_apply_clever_takeover(student)
+
+    assert_equal sections_as_student, student.sections_as_student
+  end
+
+  def generate_auth_user_hash(email, user_type)
+    OmniAuth::AuthHash.new(
+      uid: '1111',
+      provider: 'facebook',
+      info: {
+        name: 'someone',
+        email: email,
+        user_type: user_type,
+        dob: Date.today - 20.years,
+        gender: 'f'
+      }
+    )
   end
 end

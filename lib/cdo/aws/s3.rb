@@ -1,7 +1,11 @@
 require 'aws-sdk'
+require 'tempfile'
+require 'active_support/core_ext/module/attribute_accessors'
 
 module AWS
   module S3
+    mattr_accessor :s3
+
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
     class NoSuchKey < Exception
       def initialize(message = nil)
@@ -13,7 +17,7 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      Aws::S3::Client.new
+      self.s3 ||= Aws::S3::Client.new
     end
 
     # A simpler name for connect_v2!
@@ -75,7 +79,41 @@ module AWS
     end
 
     def self.public_url(bucket, filename)
-      Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
+      Aws::S3::Object.new(
+        bucket,
+        filename,
+        client: create_client,
+        region: CDO.aws_region
+      ).public_url
+    end
+
+    # Downloads a file in an S3 bucket to a specified location.
+    # @param bucket [String] The S3 bucket name.
+    # @param key [String] The S3 key.
+    # @param filename [String] The filename to write to.
+    # @return [String] The filename written to.
+    def self.download_to_file(bucket, key, filename)
+      open(filename, 'wb') do |file|
+        create_client.get_object(bucket: bucket, key: key) do |chunk|
+          file.write(chunk)
+        end
+      end
+      return filename
+    end
+
+    # Processes an S3 file, requires a block to be executed after the data has
+    # been downloaded to the temporary file (passed as argument to the block).
+    # @param bucket [String] The S3 bucket name.
+    # @param key [String] The S3 key.
+    def self.process_file(bucket, key)
+      CDO.log.debug "Processing #{key} from #{bucket}..."
+      temp_file = Tempfile.new(["#{File.basename(key)}."])
+      begin
+        yield download_to_file(bucket, key, temp_file.path)
+      ensure
+        temp_file.close
+        temp_file.unlink
+      end
     end
 
     class LogUploader

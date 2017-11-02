@@ -22,6 +22,7 @@ class ScriptDSL < BaseDSL
     @has_verified_resources = false
     @project_widget_types = []
     @wrapup_video = nil
+    @script_announcements = nil
   end
 
   integer :id
@@ -38,6 +39,7 @@ class ScriptDSL < BaseDSL
   boolean :has_verified_resources
 
   string :wrapup_video
+  string :script_announcements
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -48,13 +50,20 @@ class ScriptDSL < BaseDSL
   end
 
   def stage(name, properties = {})
-    @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
+    if @stage
+      @stages << {
+        stage: @stage,
+        scriptlevels: @scriptlevels,
+        stage_extras_disabled: @stage_extras_disabled,
+      }.compact
+    end
     @stage = name
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
     @scriptlevels = []
     @concepts = []
     @skin = nil
+    @stage_extras_disabled = nil
   end
 
   def parse_output
@@ -75,6 +84,7 @@ class ScriptDSL < BaseDSL
       has_verified_resources: @has_verified_resources,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
+      script_announcements: @script_announcements,
     }
   end
 
@@ -177,6 +187,10 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel = nil
   end
 
+  def no_extras
+    @stage_extras_disabled = true
+  end
+
   def i18n_strings
     i18n_strings = {}
     @stages.each do |stage|
@@ -221,6 +235,7 @@ class ScriptDSL < BaseDSL
     s << 'has_verified_resources true' if script.has_verified_resources
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
+    s << "script_announcements #{script.script_announcements}" if script.script_announcements
 
     s << '' unless s.empty?
     s << serialize_stages(script)
@@ -260,6 +275,7 @@ class ScriptDSL < BaseDSL
           s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
         end
       end
+      s << 'no_extras' if stage.stage_extras_disabled
       s << ''
     end
     s.join("\n")

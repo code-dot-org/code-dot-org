@@ -175,17 +175,31 @@ class ApiController < ApplicationController
     script = load_script(section)
 
     # stage data
-    stages = script.script_levels.where(bonus: nil).group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:stage).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
       }
     end
 
-    script_levels = script.script_levels.where(bonus: nil)
+    script_levels = script.script_levels.select {|sl| sl.bonus.nil?}
+
+    # Clients are seeing requests time out for large sections as we attempt to
+    # send back all of this data. Allow them to instead request paginated data
+    if params[:page] && params[:per]
+      paged_students = section.students.page(params[:page]).per(params[:per])
+      # As designed, if there are 50 students, the client will ask for both
+      # page 1 and page 2, even though page 2 is out of range. However, it should
+      # never ask for page 3
+      if params[:page].to_i > paged_students.total_pages + 1
+        return head :range_not_satisfiable
+      end
+    else
+      paged_students = section.students
+    end
 
     # student level completion data
-    students = section.students.map do |student|
+    students = paged_students.map do |student|
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
@@ -202,11 +216,17 @@ class ApiController < ApplicationController
         paired = (paired_user_level_ids & user_levels_ids).any?
         level_class << ' paired' if paired
         title = paired ? '' : script_level.position
-        {
-          class: level_class,
-          title: title,
-          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id)
-        }
+        # We use a list rather than a hash here to save ourselves from sending
+        # the field names over the wire (which adds up to a lot of bytes when
+        # multiplied across all the levels)
+        [
+          level_class,
+          title,
+          # we use to build a path that included section_id/user_id. We now let
+          # the client adds these params itself, thus saving ourselves many bytes
+          # over the wire again
+          build_script_level_path(script_level)
+        ]
       end
       {id: student.id, levels: student_levels}
     end
@@ -217,7 +237,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: stages
+        stages: stages,
       }
     }
 
@@ -248,7 +268,7 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Script.get_from_cache(params[:script_name])
+    script = Script.get_from_cache(params[:script])
     render json: script.summarize
   end
 
@@ -262,10 +282,10 @@ class ApiController < ApplicationController
     end
   end
 
-  # Return a JSON summary of the user's progress for params[:script_name].
+  # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     if current_user
-      script = Script.get_from_cache(params[:script_name])
+      script = Script.get_from_cache(params[:script])
       user = params[:user_id] ? User.find(params[:user_id]) : current_user
       render json: summarize_user_progress(script, user)
     else
@@ -281,7 +301,7 @@ class ApiController < ApplicationController
   def user_progress_for_stage
     response = user_summary(current_user)
 
-    script = Script.get_from_cache(params[:script_name])
+    script = Script.get_from_cache(params[:script])
     stage = script.stages[params[:stage_position].to_i - 1]
     script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
@@ -306,7 +326,7 @@ class ApiController < ApplicationController
           response[:pairingAttempt] = edit_level_source_path(recent_attempt)
         elsif level.channel_backed?
           @level = level
-          recent_channel = safe_get_channel_for(level, recent_user) if recent_user
+          recent_channel = get_channel_for(level, recent_user) if recent_user
           response[:pairingChannelId] = recent_channel if recent_channel
         end
       end

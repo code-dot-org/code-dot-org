@@ -21,7 +21,8 @@ $(document).ready(() => {
     ReactDOM.render(
       <div>
         <HeaderBanner
-          headingText={i18n.projectGalleryHeader()}
+          headingText={i18n.projects()}
+          subHeadingText={i18n.projectsSubHeading()}
           short={true}
         />
         <Provider store={getStore()}>

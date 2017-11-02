@@ -3,6 +3,7 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/chat_client'
 require 'cdo/only_one'
 require 'cdo/solr'
+require 'retryable'
 require src_dir 'forms'
 
 SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
@@ -102,7 +103,9 @@ def index_batch_of_forms
         address_to_search = index_data['zip_code_s'].to_s.strip if address_to_search.empty?
         sleep(0.03) unless address_to_search.empty?
         address_to_search = form[:created_ip].to_s.strip if address_to_search.empty?
-        location = Geocoder.search(address_to_search).first
+        location = Retryable.retryable(on: [Redis::CannotConnectError], tries: 2) do
+          Geocoder.search(address_to_search).first
+        end
         if location
           index_data['create_ip_city_s'] = location.city
           index_data['create_ip_state_s'] = location.state

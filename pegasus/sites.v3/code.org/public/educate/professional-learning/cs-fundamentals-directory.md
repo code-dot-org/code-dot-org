@@ -160,6 +160,47 @@ style="clear:both"&nbsp;
 <br />
 <a id="ca"></a>
 ## California
+### **Northern California**
+[col-33]
+
+### Brian Packham
+Anderson, CA
+
+packham@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+### **Sacramento Area**
+[col-33]
+### Matthew Rowland
+Sacramento, CA
+
+rowland@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Mike Gargiulo
+Elk Grove, CA
+
+gargiulo@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Sandy Feder
+Fair Oaks, CA
+
+feder@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 ### **Bay Area**
 [col-33]
 
@@ -243,44 +284,6 @@ carter@pd.code.org
 Pleasant Hill, CA
 
 schwartz@pd.code.org
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-### **Sacramento Area**
-[col-33]
-### Matthew Rowland
-Sacramento, CA
-
-rowland@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Mike Gargiulo
-Elk Grove, CA
-
-gargiulo@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Sandy Feder
-Fair Oaks, CA
-
-feder@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Brian Packham
-Anderson, CA
-
-packham@pd.code.org
 
 [/col-33]
 
@@ -747,14 +750,6 @@ schafer@pd.code.org
 [/col-33]
 
 [col-33]
-### Meredith Allen
-Fort Dodge, IA
-
-allen@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Cindy Herren
 Waukee, IA
 
@@ -917,9 +912,9 @@ keskimaki@pd.code.org
 
 [col-33]
 ### Monica Wheat
-Detroit, MI / Southfield, MI
+Southfield, MI
 
-mwheat@pd.code.org
+wheat@pd.code.org
 
 [/col-33]
 
@@ -1476,14 +1471,6 @@ reeves@pd.code.org
 <br />
 ### **Houston**
 [col-33]
-### Erica Deakins
-Houston, TX
-
-deakins@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Karen North
 Houston, TX
 
@@ -1496,14 +1483,6 @@ north@pd.code.org
 Houston, TX
 
 hanson@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Sabrina Provencher
-Houston, TX
-
-provencher@pd.code.org
 
 [/col-33]
 
@@ -1521,14 +1500,6 @@ style="clear:both">&nbsp;
 
 <a id="ut"></a>
 ## Utah
-[col-33]
-### Grant Smith
-Park City, UT
-
-gsmith@pd.code.org
-
-[/col-33]
-
 [col-33]
 ### Nicole Reitz-Larsen
 Salt Lake City, UT
@@ -1603,14 +1574,6 @@ dovi@pd.code.org
 
 <a id="wa"></a>
 ## Washington
-[col-33]
-### Cheri Bortleson
-Bellevue, WA
-
-bortleson@pd.code.org
-
-[/col-33]
-
 [col-33]
 ### Valerie Buck
 Issaquah, WA

@@ -29,43 +29,39 @@ const filterParams = {
   }
 };
 
-const WorkshopIndex = React.createClass({
-  contextTypes: {
+export default class WorkshopIndex extends React.Component {
+  static contextTypes = {
     router: PropTypes.object.isRequired
-  },
+  };
 
   componentWillMount() {
     this.permission = new Permission();
-  },
+  }
 
-  handleNewWorkshopClick() {
+  handleNewWorkshopClick = () => {
     this.context.router.push('/workshops/new');
-  },
+  };
 
-  handleAttendanceReportsClick() {
+  handleAttendanceReportsClick = () => {
     this.context.router.push('/reports');
-  },
+  };
 
-  handleOrganizerSurveyResultsClick() {
+  handleOrganizerSurveyResultsClick = () => {
     this.context.router.push('/organizer_survey_results');
-  },
+  };
 
-  handleSurveyResultsClick() {
+  handleSurveyResultsClick = () => {
     this.context.router.push('/survey_results');
-  },
+  };
 
-  handleUserManagementClick(e) {
-    this.context.router.push('../workshop_user_management/facilitator_courses');
-  },
-
-  handleFilterClick(e) {
+  handleFilterClick = (e) => {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
-  },
+  };
 
   generateFilterUrl(state) {
     return `/workshops/filter?${$.param({state})}`;
-  },
+  }
 
   render() {
     const showOrganizer = this.permission.isWorkshopAdmin;
@@ -84,13 +80,6 @@ const WorkshopIndex = React.createClass({
           {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
           {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
-          {this.permission.isWorkshopAdmin &&
-            <Button
-              href={this.context.router.createHref("../workshop_user_management/facilitator_courses")}
-              onClick={this.handleUserManagementClick}
-            >
-              User Management
-            </Button>}
           <Button
             href={this.context.router.createHref("/workshops/filter")}
             onClick={this.handleFilterClick}
@@ -128,5 +117,4 @@ const WorkshopIndex = React.createClass({
       </div>
     );
   }
-});
-export default WorkshopIndex;
+}

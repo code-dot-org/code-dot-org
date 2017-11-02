@@ -1,10 +1,5 @@
 require 'test_helper'
 
-# Define this here to ensure that we don't incorrectly use the :pegasus version.
-def slog(h)
-  CDO.slog ({application: :dashboard}).merge(h)
-end
-
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
@@ -1031,7 +1026,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
 
     # Test user progress.
-    get :user_progress, params: {script_name: script.name}
+    get :user_progress, params: {script: script.name}
     assert_response :success
 
     body = JSON.parse(response.body)
@@ -1067,7 +1062,7 @@ class ApiControllerTest < ActionController::TestCase
     create :activity, user: user, level: level, level_source: level_source
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1105,7 +1100,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1124,7 +1119,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out user
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1152,7 +1147,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in young_student
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1169,7 +1164,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1
     }
@@ -1188,7 +1183,7 @@ class ApiControllerTest < ActionController::TestCase
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
     get :user_progress_for_stage, params: {
-      script_name: script.name,
+      script: script.name,
       stage_position: 1,
       level_position: 1,
       level: level1a.id
@@ -1198,10 +1193,56 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get progress for section with section script" do
-    get :section_progress, params: {section_id: @flappy_section.id}
+    Script.stubs(:should_cache?).returns true
+
+    assert_queries 8 do
+      get :section_progress, params: {section_id: @flappy_section.id}
+    end
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
+    data = JSON.parse(@response.body)
+    expected = {
+      'script' => {
+        'id' => Script.get_from_cache(Script::FLAPPY_NAME).id,
+        'name' => 'Flappy Code',
+        'levels_count' => 10,
+        'stages' => [{
+          'length' => 10,
+          'title' => 'Flappy Code'
+        }]
+      },
+      'students' => [{
+        'id' => @student_flappy_1.id,
+        'levels' => (1..10).map {|level_num| ['not_tried', level_num, "/flappy/#{level_num}"]}
+      }]
+    }
+
+    assert_equal expected, data
+  end
+
+  test "should get paginated progress" do
+    get :section_progress, params: {section_id: @section.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    get :section_progress, params: {section_id: @section.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    # third page has only one student (of 5 total)
+    get :section_progress, params: {section_id: @section.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].length
+
+    # if we request 1 per page, page 6 should still work (because page 5 gave
+    # us a full page of data), but page 7 should fail
+    get :section_progress, params: {section_id: @section.id, page: 6, per: 1}
+    assert_response :success
+    get :section_progress, params: {section_id: @section.id, page: 7, per: 1}
+    assert_response 416
   end
 
   test "should get progress for section with specific script" do
@@ -1214,6 +1255,27 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal script.id, JSON.parse(@response.body)['script']['id']
+  end
+
+  test "should get paginated progress with specific script" do
+    script = Script.find_by_name('algebra')
+
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+    assert_equal script.id, data['script']['id']
+
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].length
+
+    # third page has only one student (of 5 total)
+    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].length
   end
 
   test "should get paired icons for paired user levels" do
@@ -1241,8 +1303,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     parsed = JSON.parse(response.body)
 
-    assert_match /paired/, parsed['students'][3]['levels'].first['class']
-    assert_match /paired/, parsed['students'][4]['levels'].first['class']
+    assert_match /paired/, parsed['students'][3]['levels'].first[0]
+    assert_match /paired/, parsed['students'][4]['levels'].first[0]
   end
 
   test "should get progress for section with section script when blank script is specified" do

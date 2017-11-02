@@ -7,9 +7,9 @@ theme: responsive
 
 # K-12 Professional Development (PD) Philosophy and Goals
 
-Code.org has worked with partners and experts in the field to develop a blended PD model that embraces the importance of in-person, cooperative workshops and uses online and asynchronous components to provide an ongoing community and support when teachers are in the classroom. This PD experience builds on the work of others and recognizes that one size does not fit all, therefore the PD is tailored for each course and curriculum developed or selected by Code.org. These PD opportunities are based on the following principles.
+Code.org has worked with partners and experts in the field to develop a PD model that embraces the importance of in-person, cooperative workshops and uses online and asynchronous components to provide an ongoing community and support when teachers are in the classroom. This PD experience builds on the work of others and recognizes that one size does not fit all, therefore the PD is tailored for each course and curriculum developed by Code.org. These PD opportunities are based on the following principles.
 
-These PD programs are supported by high-quality curricula, which are detailed [here](/educate/curriculum-philosophy).
+These PD programs are supported by high-quality curricula, which are guided by our [philosophy and goals](/educate/curriculum-philosophy).
 
 ## K-12 Professional Development Philosophy
 
@@ -83,5 +83,3 @@ Much like a classroom, the professional learning environment should be structure
 It’s important that teachers experience firsthand the teaching and learning that will happen in their classrooms. Modeling teaching practice grounds the need for all learners to be engaged in classroom activities, and provides opportunities for teachers to consider how particular practices and approaches to teaching computer science advantages some learners and might disadvantage others, especially those who are traditionally underrepresented in CS.
 
 From this PD experience, teachers will better understand the need for an equitable learning environment and be able to reproduce those environments in their own classroom. Building an equitable classroom requires time and persistence; the goal is to prepare  teachers with strategies to support all learners and to provide a support system as they work at building an equitable learning environment.
-
-The professional development philosophy for our partner, Exploring Computer Science, can be found at [www.exploringcs.org](http://www.exploringcs.org)

@@ -39,9 +39,14 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-TEST_TABLES = %w(storage_apps user_storage_ids).freeze
-TEST_TABLES.each do |table|
+PEGASUS_TEST_TABLES = %w(storage_apps user_storage_ids).freeze
+PEGASUS_TEST_TABLES.each do |table|
   PEGASUS_DB[table.to_sym].truncate
+end.freeze
+
+DASHBOARD_TEST_TABLES = %w(channel_tokens).freeze
+DASHBOARD_TEST_TABLES.each do |table|
+  DASHBOARD_DB[table.to_sym].truncate
 end.freeze
 
 module SetupTest
@@ -68,8 +73,11 @@ module SetupTest
       end
     end
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    TEST_TABLES.each do |table|
+    PEGASUS_TEST_TABLES.each do |table|
       PEGASUS_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
+    end
+    DASHBOARD_TEST_TABLES.each do |table|
+      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
     end
   end
 end

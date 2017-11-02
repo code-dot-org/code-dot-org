@@ -15,6 +15,7 @@ import {
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
 
@@ -27,7 +28,6 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
-  const isEnglish = homepageData.isEnglish;
   const query = queryString.parse(window.location.search);
 
   const store = getStore();
@@ -51,14 +51,15 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingCoursesEFImprovements();
-  let announcementDescription = i18n.announcementDescriptionCoursesEFImprovements();
+  let announcementHeading = i18n.announcementHeadingHOCiscoming();
+  let announcementDescription = i18n.announcementDescriptionHOCiscoming();
   let announcementLink =
-    "http://teacherblog.code.org/post/165559168804/new-improvements-to-cs-fundamentals-courses-e-and";
-  let announcementId = "courses_e_f_improvements";
+    "https://hourofcode.com/#join";
+  let announcementId = "hoc_is_coming";
+  let announcementType = "";
 
   // Optional override of teacher announcement.
-  if (isEnglish &&
+  if (
     announcementOverride &&
     announcementOverride.teacher_announce_heading &&
     announcementOverride.teacher_announce_description &&
@@ -70,6 +71,7 @@ function showHomepage() {
     announcementDescription = announcementOverride.teacher_announce_description;
     announcementLink = announcementOverride.teacher_announce_url;
     announcementId = announcementOverride.teacher_announce_id;
+    announcementType = announcementOverride.teacher_announce_type;
   }
 
   ReactDOM.render (
@@ -141,6 +143,7 @@ function showHomepage() {
                 description: announcementDescription,
                 link: announcementLink,
                 image: "",
+                type: announcementType,
                 id: announcementId
               }
             ]}
@@ -165,3 +168,40 @@ function showHomepage() {
     document.getElementById('homepage-container')
   );
 }
+
+window.CleverTakeoverManager = function (options) {
+  this.options = options;
+  const self = this;
+
+  const linkCleverDiv = $('<div>');
+  function showLinkCleverModal(cancel, submit) {
+    $(document.body).append(linkCleverDiv);
+
+    ReactDOM.render(
+      <LinkCleverAccountModal
+        isOpen={true}
+        handleCancel={cancel}
+        handleSubmit={submit}
+      />,
+      linkCleverDiv[0]
+    );
+  }
+
+  if (self.options.cleverLinkFlag) {
+    showLinkCleverModal(onCancelModal, onConfirmLink);
+  }
+
+  function closeLinkCleverModal() {
+    ReactDOM.unmountComponentAtNode(linkCleverDiv[0]);
+  }
+
+  function onCancelModal() {
+    $("#user_user_type").val("student");
+    $.get("/users/clever_modal_dismissed");
+    closeLinkCleverModal();
+  }
+
+  function onConfirmLink() {
+    window.location.href = "/users/clever_takeover?mergeID=" + self.options.userIDToMerge + "&token=" + self.options.mergeAuthToken;
+  }
+};

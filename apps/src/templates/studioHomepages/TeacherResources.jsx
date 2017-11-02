@@ -1,5 +1,4 @@
-import React, {PropTypes} from 'react';
-import Radium from 'radium';
+import React, {PropTypes, Component} from 'react';
 import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
@@ -18,10 +17,10 @@ const styles = {
 };
 
 
-const TeacherResources = React.createClass({
-  propTypes: {
+export default class TeacherResources extends Component {
+  static propTypes = {
     isRtl: PropTypes.bool.isRequired
-  },
+  };
 
   render() {
     const { isRtl } = this.props;
@@ -70,6 +69,4 @@ const TeacherResources = React.createClass({
       </ContentContainer>
     );
   }
-});
-
-export default Radium(TeacherResources);
+}

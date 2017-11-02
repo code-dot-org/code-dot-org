@@ -1,6 +1,5 @@
 ---
 title: Inspire students
-nav: educate_nav
 video_player: true
 theme: responsive
 ---
@@ -45,7 +44,6 @@ Watch videos and read interviews with inspirational people working in a variety 
 [![image](/images/fit-260/obama-new.png)](/files/obama-poster-new.pdf)
 [![image](/images/fit-260/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
 [![image](/images/fit-260/mark-poster.png)](/files/mark-poster.pdf)
-[![image](/images/fit-260/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
 [![image](/images/fit-260/chris-poster.png)](/files/chris-poster.pdf)
 [![image](/images/fit-260/susan-poster.png)](/files/susan-poster.pdf)
 [![image](/images/fit-260/ashton-poster.png)](/files/ashton-poster.pdf)

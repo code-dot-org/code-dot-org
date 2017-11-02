@@ -1,6 +1,6 @@
 import React from 'react';
 import Immutable from 'immutable';
-import {Watchers} from './Watchers';
+import {UnconnectedWatchers as Watchers} from './Watchers';
 
 export default storybook => {
   const defaultProps = {

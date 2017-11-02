@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.25":
-  version "1.6.25"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.25.tgz#b411dd21f01e6f2b174650e48c3de339b2dd752a"
+"@code-dot-org/blockly@1.6.26":
+  version "1.6.26"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.26.tgz#14677c90f5ed6a0ae58ae0c2c9e1ea4cc4f4626e"
 
 "@code-dot-org/bramble@0.1.22":
   version "0.1.22"
@@ -46,13 +46,13 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#6aa07649b3b47218bdbf3b7fc25ba157d4a1b559":
-  version "0.0.5"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/6aa07649b3b47218bdbf3b7fc25ba157d4a1b559"
+"@code-dot-org/craft@github:code-dot-org/craft#3b5a5150afcd282a030dadab2b9775672d303548":
+  version "0.0.16"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/3b5a5150afcd282a030dadab2b9775672d303548"
 
-"@code-dot-org/johnny-five@0.11.1-cdo.0":
-  version "0.11.1-cdo.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.11.1-cdo.0.tgz#54b67b3db0cc2e1471850b5a4b1579f8df222b1d"
+"@code-dot-org/johnny-five@0.11.1-cdo.1":
+  version "0.11.1-cdo.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.11.1-cdo.1.tgz#c1093e5f9d1b4a6b18bdf94dab565f3b0b8cc216"
   dependencies:
     chalk latest
     color-convert "~1.2.2"
@@ -8540,7 +8540,13 @@ signal-exit@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.1.tgz#5a4c884992b63a7acd9badb7894c3ee9cfccad81"
 
-sinon-chai@^2.13.0:
+sinon-chai-in-order@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/sinon-chai-in-order/-/sinon-chai-in-order-0.1.0.tgz#6c4a95189713ff3349f99f83b24dcac69ad32ab2"
+  dependencies:
+    sinon-chai "^2.8.0"
+
+sinon-chai@^2.13.0, sinon-chai@^2.8.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-2.13.0.tgz#b9a42e801c20234bfc2f43b29e6f4f61b60990c4"
 
@@ -9692,9 +9698,9 @@ websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
 
-whatwg-fetch@>=0.10.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz#01c2ac4df40e236aaa18480e3be74bd5c8eb798e"
+whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
 whet.extend@~0.9.9:
   version "0.9.9"

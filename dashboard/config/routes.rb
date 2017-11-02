@@ -21,6 +21,8 @@ Dashboard::Application.routes.draw do
 
   get "/home", to: "home#home"
 
+  get "/congrats", to: "congrats#index"
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -104,6 +106,9 @@ Dashboard::Application.routes.draw do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
+    patch '/users/set_age', to: 'registrations#set_age'
+    get '/users/clever_takeover', to: 'sessions#clever_takeover'
+    get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -234,6 +239,11 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
+  resources :regional_partners
+  post 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
+  post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
+  get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -381,6 +391,16 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+
+      namespace :application do
+        post :facilitator, to: 'facilitator_applications#create'
+      end
+
+      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+        collection do
+          get :quick_view
+        end
+      end
     end
   end
 
@@ -400,6 +420,10 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
+
+    namespace :application do
+      get 'facilitator', to: 'facilitator_application#new'
+    end
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
@@ -428,13 +452,18 @@ Dashboard::Application.routes.draw do
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 
-    get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
-    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
+    get 'workshop_admins', controller: 'workshop_admins', action: 'directory', as: 'workshop_admins'
+    get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form', as: 'facilitator_courses'
+    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course_to_facilitator'
     # TODO: change remove_course to use http delete method
-    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
+    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    # React-router will handle sub-routes on the client.
+    get 'application_dashboard/*path', to: 'application_dashboard#index'
+    get 'application_dashboard', to: 'application_dashboard#index'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -463,12 +492,12 @@ Dashboard::Application.routes.draw do
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
-  get '/api/script_structure/:script_name', to: 'api#script_structure'
+  get '/api/script_structure/:script', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
+  get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   namespace :api do
     api_methods.each do |action|
@@ -503,7 +532,9 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
-  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}
+  # We want to allow school search on things like "St. Paul" so we specify the constraint on :q to match anything but a slash
+  # See http://guides.rubyonrails.org/routing.html#specifying-constraints
+  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}

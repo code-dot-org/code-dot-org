@@ -96,7 +96,6 @@ class PeerReviewSubmissionData extends React.Component {
                 <PeerReviewLinkSection
                   reviews={submission['review_ids']}
                   escalatedReviewId={submission['escalated_review_id']}
-                  filterType={this.props.filterType}
                 />
               </td>
             </tr>

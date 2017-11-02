@@ -605,7 +605,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
@@ -721,6 +721,14 @@ class User < ActiveRecord::Base
     sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
+  # True if the account is teacher-managed, is in at least one picture section, and
+  # is not in any non-picture sections
+  def secret_picture_account_only?
+    return false unless teacher_managed_account?
+    any_sections = !sections_as_student.empty?
+    any_sections && sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
+  end
+
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
@@ -799,22 +807,22 @@ class User < ActiveRecord::Base
     # TODO(brent): Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
-    levels = script.script_levels.map(&:level_ids).flatten
-    user_levels_by_level = user_levels.
-      where(script_id: script.id, level: levels).
-      index_by(&:level_id)
+    sl_level_ids = script.script_levels.map(&:level_ids).flatten
+    ul_with_sl = user_levels_by_level(script).select do |level_id, _ul|
+      sl_level_ids.include? level_id
+    end
 
     # Find the user_level that we've most recently had progress on
-    user_level = user_levels_by_level.values.max_by(&:updated_at)
+    user_level = ul_with_sl.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
-      last_script_level = user_level.level.script_levels.where(script_id: script.id).first
+      last_script_level = user_level.script_level
       script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
     next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
-      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
 
@@ -1151,18 +1159,10 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Return a collection of courses and scripts for the user. First in the list will
-  # be courses enrolled in by the user's sections. Following that will be all scripts
-  # in which the user has made progress that are not in any of the enrolled courses.
-  def recent_courses_and_scripts(exclude_primary_script)
-    courses = section_courses
-    course_scripts_script_ids = courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
-
-    # filter out those that are already covered by a course
-    user_scripts = in_progress_and_completed_scripts.
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
-
-    course_data = courses.map do |course|
+  # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
+  # @return [Array{CourseData}]
+  def assigned_courses
+    section_courses.map do |course|
       {
         name: course[:name],
         title: data_t_suffix('course.name', course[:name], 'title'),
@@ -1170,8 +1170,38 @@ class User < ActiveRecord::Base
         link: course_path(course),
       }
     end
+  end
 
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @return [Boolean]
+  def any_visible_assigned_scripts?
+    user_scripts.where("assigned_at").
+      map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
+      flatten.
+      any?
+  end
+
+  # Checks if there are any non-hidden scripts or courses assigned to the user.
+  # @return [Boolean]
+  def assigned_course_or_script?
+    assigned_courses.any? || any_visible_assigned_scripts?
+  end
+
+  # Return a collection of courses and scripts for the user.
+  # First in the list will be courses enrolled in by the user's sections.
+  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
+  def recent_courses_and_scripts(exclude_primary_script)
     primary_script_id = primary_script.try(:id)
+
+    # Filter out user_scripts that are already covered by a course
+    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+
+    user_scripts = in_progress_and_completed_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
@@ -1190,7 +1220,7 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    course_data + user_script_data
+    assigned_courses + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
@@ -1205,7 +1235,7 @@ class User < ActiveRecord::Base
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
-  # @returns [Section|nil]
+  # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
@@ -1262,6 +1292,8 @@ class User < ActiveRecord::Base
     (DateTime.now - created_at.to_datetime).to_i
   end
 
+  # This method is meant to indicate a user has made progress (i.e. made a milestone
+  # post on a particular level) in a script
   def self.track_script_progress(user_id, script_id)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
@@ -1344,14 +1376,14 @@ class User < ActiveRecord::Base
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
-        first_or_create!
+        first_or_initialize
 
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
 
       script = Script.get_from_cache(script_id)
-      script_valid = script.csf? && !script.k1?
+      script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         script_valid &&
@@ -1369,7 +1401,7 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
-      user_level.save!
+      user_level.atomic_save!
     end
 
     if pairing_user_ids
@@ -1430,7 +1462,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # This method is called when a section the user belongs to is assigned to
+  # a script. We find or create a new UserScript entry, and set assigned_at
+  # if not already set.
   # @param script [Script] The script to assign.
   # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
@@ -1529,6 +1563,13 @@ class User < ActiveRecord::Base
       sections.find {|section| section.script_id == script.id}
   end
 
+  def stage_extras_enabled?(script)
+    sections_to_check = teacher? ? sections : sections_as_student
+    sections_to_check.any? do |section|
+      section.script_id == script.id && section.stage_extras
+    end
+  end
+
   # Returns the version of our Terms of Service we consider the user as having
   # accepted. For teachers, this is the latest major version of the Terms of
   # Service accepted. For students, this is the latest major version accepted by
@@ -1601,6 +1642,61 @@ class User < ActiveRecord::Base
     if teacher?
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
+      end
+    end
+  end
+
+  # When creating an account, we want to look for any channels that got created
+  # for this user before they signed in, and if any of them are in our Applab HOC
+  # course, we will create a UserScript entry so that they get a course card
+  # In addition, we want to have green bubbles for the levels associated with these
+  # channels, so we create level progress.
+  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # should be able to handle this gracefully
+    script = begin
+      Script.get_from_cache(script_name)
+    rescue ActiveRecord::RecordNotFound
+      nil
+    end
+    return unless script
+
+    # Find the set of levels this user started
+    # Worth noting that because ChannelToken uses levels (rather than script_levels)
+    # if a level is used in multiple scripts, we have no way to disambiguate which
+    # one a user saw it in, which becomes a challenge if we expand the scope of
+    # this beyond our applab-intro script.
+    channel_level_ids = ChannelToken.where(storage_id: storage_id).map(&:level_id)
+
+    levels_in_script = script.levels
+
+    # host_level will be self if we don't have a template level
+    # Expanding the scope beyond applab-intro would also be a challenge for template
+    # levels, as if a template is used in multiple scripts ,we have no way to know
+    # which a user saw it in
+    hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
+
+    unless (channel_level_ids & hoc_level_ids).empty?
+      User.track_script_progress(id, Script.get_from_cache(script_name).id)
+
+      # Create user_level entries for the levels associated with channels. In the
+      # case of template backed levels, a channel for the template level will result
+      # in user_level entries for all levels that use the template
+      script.script_levels.each do |script_level|
+        script_level.levels.each do |level|
+          # When making progress on a template backed level, the channel will be
+          # attached to the template level, thus we look to see if we have a channel
+          # for the host_level
+          next unless channel_level_ids.include?(level.host_level.id)
+          User.track_level_progress_sync(
+            user_id: id,
+            level_id: level.id,
+            script_id: script_level.script_id,
+            new_result: ActivityConstants::BEST_PASS_RESULT,
+            submitted: false,
+            level_source_id: nil
+          )
+        end
       end
     end
   end

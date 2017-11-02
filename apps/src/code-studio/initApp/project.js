@@ -517,7 +517,21 @@ var projects = module.exports = {
             return msg.defaultProjectNameGumball();
           case 'iceage':
             return msg.defaultProjectNameIceAge();
+          case 'hoc2015':
+            return msg.defaultProjectNameStarWars();
         }
+        break;
+      case 'craft':
+        return msg.defaultProjectNameMinecraft();
+      case 'flappy':
+        return msg.defaultProjectNameFlappy();
+      case 'bounce':
+        if (appOptions.skinId === 'sports') {
+          return msg.defaultProjectNameSports();
+        } else if (appOptions.skinId === 'basketball') {
+          return msg.defaultProjectNameBasketball();
+        }
+        return msg.defaultProjectNameBounce();
     }
     return msg.defaultProjectName();
   },
@@ -544,6 +558,8 @@ var projects = module.exports = {
       case 'craft':
         if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
+        } else if (appOptions.level.isConnectionLevel || appOptions.level.isAgentLevel) {
+          return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
       case 'eval':
@@ -692,6 +708,19 @@ var projects = module.exports = {
     }.bind(this));
   },
 
+  createNewChannelFromSource(source, callback) {
+    channels.create({
+      name: "New Project",
+    }, (err, channelData) => {
+      sources.put(channelData.id, JSON.stringify({ source }), SOURCE_FILE, (err, sourceData) => {
+        channelData.migratedToS3 = true;
+        channels.update(channelData.id, channelData, (err, finalChannelData) => {
+          executeCallback(callback, finalChannelData);
+        });
+      });
+    });
+  },
+
   /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
@@ -831,6 +860,7 @@ var projects = module.exports = {
       redirectEditView();
     });
   },
+
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.

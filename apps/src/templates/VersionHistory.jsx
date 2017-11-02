@@ -69,8 +69,7 @@ var VersionHistory = React.createClass({
     if (this.props.useFilesApi) {
       filesApi.restorePreviousVersion(versionId, this.onRestoreSuccess, this.onAjaxFailure);
     } else {
-      // TODO: Use Dave's client api when it's finished.
-      sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
+      sourcesApi.restorePreviousFileVersion('main.json', versionId, this.onRestoreSuccess, this.onAjaxFailure);
     }
 
     // Show the spinner.
@@ -133,7 +132,7 @@ var VersionHistory = React.createClass({
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
                   <button className="btn-danger" onClick={this.onConfirmClearPuzzle} style={{float: 'right'}}>
-                    Delete Progress
+                    Start over
                   </button>
                   </td>
                 </tr>

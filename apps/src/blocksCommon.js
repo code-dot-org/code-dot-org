@@ -18,6 +18,7 @@ exports.install = function (blockly, blockInstallOptions) {
   installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
   installJoinBlock(blockly);
+  installCommentBlock(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -247,5 +248,24 @@ function installJoinBlock(blockly) {
     }
     var code = `[${ parts.join(',') }].join('')`;
     return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+}
+
+function installCommentBlock(blockly) {
+  blockly.Blocks.comment = {
+    init: function () {
+      this.setHSV(0, 0, 0.6);
+      this.appendDummyInput()
+        .appendTitle(commonMsg.commentPrefix())
+        .appendTitle(new Blockly.FieldTextInput(''), 'TEXT');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(commonMsg.commentTooltip());
+    }
+  };
+
+  blockly.JavaScript.comment = function () {
+    var comment = this.getTitleValue('TEXT');
+    return `// ${comment}\n`;
   };
 }

@@ -43,7 +43,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-21 18:06:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 15:58:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:42:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 17:58:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 18:06:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 15:58:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:42:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 17:58:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-10-12 20:37:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-12 20:40:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_loops": 1,
@@ -57,14 +57,14 @@
           <next>
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
-                <block type="math_number" movable="false" limit="4">
+                <block type="math_number" movable="false" can_disconnect_from_parent="false">
                   <title name="NUM">3</title>
                 </block>
               </value>
               <statement name="DO">
                 <block type="controls_repeat_ext" inline="true">
                   <value name="TIMES">
-                    <block type="math_number" movable="false" limit="4">
+                    <block type="math_number" movable="false" can_disconnect_from_parent="false">
                       <title name="NUM">3</title>
                     </block>
                   </value>
@@ -75,7 +75,7 @@
                         <block type="draw_turn" inline="true">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
-                            <block type="math_number" movable="false" limit="4">
+                            <block type="math_number" movable="false" can_disconnect_from_parent="false">
                               <title name="NUM">120</title>
                             </block>
                           </value>
@@ -99,12 +99,14 @@
       <xml>
         <block type="variables_set" inline="false" id="callMe">
           <title name="VAR">length</title>
+          <value name="VALUE">
+            <block type="math_number" can_disconnect_from_parent="false">
+              <title name="NUM">50</title>
+            </block>
+          </value>
         </block>
         <block type="variables_get">
           <title name="VAR">length</title>
-        </block>
-        <block type="math_number" limit="4">
-          <title name="NUM">50</title>
         </block>
         <block type="draw_move" inline="true">
           <title name="DIR">moveForward</title>
@@ -112,7 +114,7 @@
         <block type="draw_turn" inline="true">
           <title name="DIR">turnRight</title>
           <value name="VALUE">
-            <block type="math_number" movable="false" limit="4">
+            <block type="math_number" movable="false" can_disconnect_from_parent="false">
               <title name="NUM">120</title>
             </block>
           </value>
@@ -120,14 +122,14 @@
         <block type="draw_turn" inline="true">
           <title name="DIR">turnLeft</title>
           <value name="VALUE">
-            <block type="math_number" movable="false" limit="4">
+            <block type="math_number" movable="false" can_disconnect_from_parent="false">
               <title name="NUM">120</title>
             </block>
           </value>
         </block>
         <block type="controls_repeat_ext" inline="true" limit="2">
           <value name="TIMES">
-            <block type="math_number" movable="false" limit="4">
+            <block type="math_number" movable="false" can_disconnect_from_parent="false">
               <title name="NUM">3</title>
             </block>
           </value>

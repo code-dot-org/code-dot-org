@@ -56,7 +56,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - data[:valid_scripts] = DashboardSection::valid_scripts(request.user_id)
 - data[:valid_login_types] = DashboardSection::valid_login_types
 - data[:valid_grades] = DashboardSection::valid_grades
-- data[:hoc_assign_warning] = Gatekeeper.allows('hoc_assign_warning', default: false)
 - data[:disabled_scripts] = DashboardSection::progress_disabled_scripts(request.user_id)
 
 - provider = dashboard_user[:provider]

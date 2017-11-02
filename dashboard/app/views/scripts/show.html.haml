@@ -1,5 +1,10 @@
 -# This variable will get any data we need to pass along to scriptOverview.js
 - scriptOverviewData = { scriptData: @script.summarize }
+- if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
+  -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
+- content_for(:head) do
+  %script{ src: minifiable_asset_path('js/scriptOverview.js'), data: {scriptoverview: scriptOverviewData.to_json }}
+
 
 - if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
@@ -16,14 +21,11 @@
         %span
           = I18n.t('view_all_units')
   #landingpage
+    #notification
+    -# This div ends up being owned by ScriptOverviewHeader in react
     #lesson
-      - if @script.professional_learning_course? && @current_user
-        - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
-          #breadcrumb
-          -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
       #heading
         %h1
-          = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
           = data_t_suffix('script.name', @script.name, 'title')
           - if @script.beta?
             %span.betatext
@@ -73,6 +75,3 @@
             = level.name
           .span8
             = level.instructions
-
-  - content_for(:head) do
-    %script{ src: minifiable_asset_path('js/scriptOverview.js'), data: {scriptoverview: scriptOverviewData.to_json }}

@@ -27,3 +27,7 @@ level 'ramp_video_artistIntro'
 level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
+
+stage 'Testing Template'
+level 'courseC_artist_loops1a'
+level 'courseC_artist_loops6a'

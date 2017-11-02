@@ -75,13 +75,16 @@ module CdoApps
     service app_name do
       supports reload: true
       reload_command "#{init_script} upgrade"
-      action [:enable, :start]
+      action [:enable]
 
-      # Restart when Ruby is upgraded
+      # Restart when Ruby is upgraded.
       subscribes :reload, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
 
-      # Restart when gem bundle is updated
+      # Restart when gem bundle is updated.
       subscribes :reload, 'execute[bundle-install]', :delayed
+
+      # Restart when application is rebuilt.
+      subscribes :reload, 'execute[build-cdo]', :delayed
 
       # Ensure globals.yml is up-to-date before (re)starting service.
       notifies :create, 'template[globals]', :before

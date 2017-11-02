@@ -564,6 +564,33 @@ class RegistrationsControllerTest < ActionController::TestCase
     refute can_edit_hashed_email_with_password teacher_with_password, 'oldpassword'
   end
 
+  test "display name edit field absent for picture account" do
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    get :edit
+    assert_response :success
+    assert_select '#user_name', false, 'This page should not contain an editable display name field'
+  end
+
+  test "display name edit field present for word account" do
+    word_student = create(:student_in_word_section)
+    sign_in word_student
+
+    get :edit
+    assert_response :success
+    assert_select '#user_name', 1
+  end
+
+  test "display name edit field present for password account" do
+    student = create(:student)
+    sign_in student
+
+    get :edit
+    assert_response :success
+    assert_select '#user_name', 1
+  end
+
   def can_edit_password_without_password(user)
     new_password = 'newpassword'
 

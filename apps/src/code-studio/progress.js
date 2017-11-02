@@ -23,8 +23,8 @@ import {
   updateFocusArea,
   showTeacherInfo,
   disablePostMilestone,
-  setUserSignedIn,
   setIsHocScript,
+  setIsAge13Required,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
   setScriptCompleted,
@@ -82,28 +82,20 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     currentLevelId, saveAnswersBeforeNavigation, signedIn, stageExtrasEnabled) {
   const store = getStore();
 
-  const { name, disablePostMilestone, isHocScript } = scriptData;
+  const { name, disablePostMilestone, isHocScript, age_13_required } = scriptData;
 
   // Depend on the fact that signed in users have a bunch of progress related
   // keys that signed out users do not
   initializeStoreWithProgress(store, {
     name,
     stages: [stageData],
-    disablePostMilestone
+    disablePostMilestone,
+    age_13_required
   }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
     level => level.submitted ? TestResults.SUBMITTED_RESULT : level.result)));
 
-  // If the server didn't tell us about signIn state (i.e. because script is
-  // cached) see if we cached locally
-  if (signedIn === null) {
-    signedIn = clientState.getUserSignedIn();
-  }
-
-  if (signedIn !== null) {
-    store.dispatch(setUserSignedIn(signedIn));
-  }
   store.dispatch(setIsHocScript(isHocScript));
   if (signedIn) {
     progress.showDisabledBubblesAlert();
@@ -131,6 +123,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
  * @param {string} scriptData.name
  * @param {boolean} scriptData.hideable_stages
  * @param {boolean} scriptData.isHocScript
+ * @param {boolean} scriptData.age_13_required
  * Render our progress on the course overview page.
  */
 progress.renderCourseProgress = function (scriptData) {
@@ -218,7 +211,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     // Depend on the fact that even if we have no levelProgress, our progress
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
-    store.dispatch(setUserSignedIn(signedInUser));
     if (data.isVerifiedTeacher) {
       store.dispatch(setVerified());
     }
@@ -286,6 +278,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} [scriptData.plc]
  * @param {object[]} [scriptData.stages]
+ * @param {boolean} scriptData.age_13_required
  * @param {string} currentLevelId
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
@@ -321,6 +314,8 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
   }
+
+  store.dispatch(setIsAge13Required(scriptData.age_13_required));
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.

@@ -36,6 +36,16 @@ class ScriptLevel < ActiveRecord::Base
   has_many :callouts, inverse_of: :script_level
   has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
+  validate :anonymous_must_be_assessment
+
+  # Make sure we never create a level that is not an assessment, but is anonymous,
+  # as in that case it wouldn't actually be treated as anonymous
+  def anonymous_must_be_assessment
+    if anonymous? && !assessment
+      errors.add(:script_level, "Only assessments can be anonymous in \"#{level.try(:name)}\"")
+    end
+  end
+
   serialized_attrs %w(
     variants
     progression
@@ -214,7 +224,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def anonymous?
-    return assessment && level.properties["anonymous"] == "true"
+    return level.properties["anonymous"] == "true"
   end
 
   def name

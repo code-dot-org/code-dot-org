@@ -547,6 +547,10 @@
   volunteer_engineer_submission_type_task_remote: "我邀请你通过 Skype 参与我的课堂，说几句对孩子们富有启示的话"
   volunteer_engineer_submission_type_task_mentor: "我正在寻找一位导师，帮助我备课，以使我能与我的学生写代码。"
   petition_age: "年龄"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "了解详情"
   dashboard_landing_title: "教师主页"
   dashboard_landing_welcome: "欢迎您来到我们最新改进的教师控制台。"
   dashboard_landing_video: "观看此视频"
@@ -953,6 +957,8 @@
   csp1_name: "第1单元：互联网"
   csp2_name: "第2单元︰ 数字信息"
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1452,7 +1458,7 @@
   header_my_dashboard: "我的控制面板"
   header_courses: "课程"
   header_course_catalog: "课程分类"
-  header_project_gallery: "项目集"
+  header_project_gallery: "项目"
   header_sections: "小组"
   header_professional_learning: "专业学习"
   header_educate_overview: "教育工作者概述"

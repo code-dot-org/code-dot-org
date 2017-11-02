@@ -9,6 +9,7 @@ import reducer, {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
+  setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
   SignInState,
@@ -281,6 +282,14 @@ describe('progressReduxTest', () => {
 
       const isNotHocScript = reducer(initialState, setIsHocScript(false));
       assert.equal(isNotHocScript.isHocScript, false);
+    });
+
+    it('can update isAge13Required', () => {
+      const state = reducer(initialState, setIsAge13Required(true));
+      assert.equal(state.isAge13Required, true);
+
+      const nextState = reducer(initialState, setIsHocScript(false));
+      assert.equal(nextState.isAge13Required, false);
     });
 
     it('can update isSummaryView', () => {

@@ -8,6 +8,12 @@ import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import InlineAudio from './InlineAudio';
+import ContainedLevel from '../ContainedLevel';
+import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
+import experiments from '@cdo/apps/util/experiments';
+import InstructionsTab from './InstructionsTab';
+import HelpTabContents from './HelpTabContents';
+
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -17,10 +23,6 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
-import ContainedLevel from '../ContainedLevel';
-import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
-import experiments from '@cdo/apps/util/experiments';
-
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -68,20 +70,11 @@ var styles = {
     float: 'left',
     paddingTop: 6,
     paddingLeft: 30,
-
-  },
-  tab: {
-    marginRight: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 6,
-    fontWeight: "bold",
-    color: color.charcoal,
   },
   highlighted: {
     borderBottom: "2px solid " + color.default_text,
     color: color.default_text,
-  }
+  },
 };
 
 var audioStyle = {
@@ -117,7 +110,8 @@ var TopInstructions = React.createClass({
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string
+    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    levelVideos: PropTypes.array,
   },
 
   state:{
@@ -224,13 +218,14 @@ var TopInstructions = React.createClass({
       this.props.isEmbedView && styles.embedView,
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
-
+    const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
-
           <div style={styles.paneHeaderOverride}>
-            <InlineAudio src={ttsUrl} style={audioStyle}/>
+            {!this.state.helpTabSelected &&
+              <InlineAudio src={ttsUrl} style={audioStyle}/>
+            }
             {this.props.documentationUrl &&
               <PaneButton
                 iconClass="fa fa-book"
@@ -241,20 +236,20 @@ var TopInstructions = React.createClass({
               />}
             {experiments.isEnabled('resourcesTab') &&
               <div style={styles.helpTabs}>
-                <a
+                <InstructionsTab
                   className="uitest-instructionsTab"
                   onClick={this.handleInstructionTabClick}
-                  style={{...styles.tab, ...(!this.state.helpTabSelected && styles.highlighted)}}
-                >
-                  {msg.instructions()}
-                </a>
-                <a
-                  className="uitest-helpTab"
-                  onClick={this.handleHelpTabClick}
-                  style={{...styles.tab, ...(this.state.helpTabSelected && styles.highlighted)}}
-                >
-                  {msg.helpTips()}
-                </a>
+                  style={this.state.helpTabSelected ? null : styles.highlighted}
+                  text={msg.instructions()}
+                />
+                {this.props.levelVideos.length > 0 &&
+                  <InstructionsTab
+                    className="uitest-helpTab"
+                    onClick={this.handleHelpTabClick}
+                    style={this.state.helpTabSelected ? styles.highlighted : null}
+                    text={msg.helpTips()}
+                  />
+                }
               </div>
             }
             {!this.props.isEmbedView &&
@@ -272,12 +267,12 @@ var TopInstructions = React.createClass({
             }
           </div>
         </PaneHeader>
-        {!this.state.helpTabSelected &&
-          <div style={[this.props.collapsed && commonStyles.hidden]}>
-            <div style={styles.body}>
-              {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
-              {!this.props.hasContainedLevels &&
-                <div ref="instructions">
+        <div style={[this.props.collapsed && commonStyles.hidden]}>
+          <div style={styles.body}>
+            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
+            {!this.props.hasContainedLevels &&
+              <div ref="instructions">
+                {!this.state.helpTabSelected &&
                   <Instructions
                     ref="instructions"
                     renderedMarkdown={processMarkdown(this.props.markdown,
@@ -285,24 +280,22 @@ var TopInstructions = React.createClass({
                     onResize={this.adjustMaxNeededHeight}
                     inTopPane
                   />
-                  <TeacherOnlyMarkdown/>
-                </div>
-              }
-            </div>
-            {!this.props.isEmbedView &&
-              <HeightResizer
-                position={this.props.height}
-                onResize={this.handleHeightResize}
-              />}
+                }
+                {this.state.helpTabSelected &&
+                  <HelpTabContents
+                    videoData={videoData}
+                  />
+                }
+                <TeacherOnlyMarkdown/>
+              </div>
+            }
           </div>
-        }
-        {this.state.helpTabSelected &&
-          <div style={[this.props.collapsed && commonStyles.hidden]}>
-            <div style={styles.body}>
-              Help Tab
-            </div>
-          </div>
-        }
+          {!this.props.isEmbedView &&
+            <HeightResizer
+              position={this.props.height}
+              onResize={this.handleHeightResize}
+            />}
+        </div>
       </div>
     );
   }
@@ -321,7 +314,8 @@ module.exports = connect(function propsFromStore(state) {
     noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
-    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+    levelVideos: state.instructions.levelVideos
   };
 }, function propsFromDispatch(dispatch) {
   return {

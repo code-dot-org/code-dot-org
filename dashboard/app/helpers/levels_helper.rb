@@ -43,13 +43,10 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
-  # Returns the channel associated with the given Level and User pair, or
-  # creates a new channel for the pair if one doesn't exist.
+  # If given a user, find the channel associated with the given level/user.
+  # Otherwise, gets the storage_id associated with the (potentially signed out)
+  # current user, and either finds or creates a channel for the level
   def get_channel_for(level, user = nil)
-    # This only works for logged-in users because the storage_id cookie is not
-    # sent back to the client if it is modified by ChannelsApi.
-    return unless current_user
-
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
@@ -237,9 +234,14 @@ module LevelsHelper
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
     }
 
+    # Sets video options for this level
+    if @app_options[:level]
+      @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
+    end
+
     if current_user
       if @script
-        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+        section = current_user.sections_as_student.detect {|s| s.script_id == @script.id} ||
           current_user.sections_as_student.first
       else
         section = current_user.sections_as_student.first
@@ -549,7 +551,6 @@ module LevelsHelper
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
-    app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
       fallback_response: @fallback_response,
       callback: @callback,

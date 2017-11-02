@@ -12,7 +12,8 @@
 #
 # Indexes
 #
-#  index_school_districts_on_state  (state)
+#  index_school_districts_on_name_and_city  (name,city)
+#  index_school_districts_on_state          (state)
 #
 
 class SchoolDistrict < ActiveRecord::Base
@@ -21,37 +22,69 @@ class SchoolDistrict < ActiveRecord::Base
   has_many :regional_partners_school_districts
   has_many :regional_partners, through: :regional_partners_school_districts
 
-  # The listing of all US school districts comes from http://nces.ed.gov/ccd/pubagency.asp
-  # and is then exported into a tab-separated file.
-  # The data format, notably the LEAID, is described at https://nces.ed.gov/ccd/aadd.asp
-  CSV_HEADERS = {
-    id: 'LEAID',
-    name: 'NAME',
-    city: 'LCITY',
-    state: 'LSTATE',
-    zip: 'LZIP'
-  }.freeze
-
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
-  def self.find_or_create_all_from_tsv(filename)
-    created = []
-    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      created << first_or_create_from_tsv_row(row)
-    end
-    created
+  # Gets the seeding file name.
+  # @param stub_school_data [Boolean] True for stub file.
+  def self.get_seed_filename(stub_school_data)
+    stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
   end
 
-  def self.first_or_create_from_tsv_row(row_data)
-    params = {
-      id: row_data[CSV_HEADERS[:id]],
-      name: row_data[CSV_HEADERS[:name]],
-      city: row_data[CSV_HEADERS[:city]],
-      state: row_data[CSV_HEADERS[:state]],
-      zip: row_data[CSV_HEADERS[:zip]]
-    }
-    SchoolDistrict.where(params).first_or_create!
+  # Seeds all the data from the source file.
+  # @param options [Hash] Optional map of options.
+  def self.seed_all(options = {})
+    options[:stub_school_data] ||= CDO.stub_school_data
+    options[:force] ||= false
+
+    # use a much smaller dataset in environments that reseed data frequently.
+    school_districts_tsv = get_seed_filename(options[:stub_school_data])
+    expected_count = `wc -l #{school_districts_tsv}`.to_i - 1
+    raise "#{school_districts_tsv} contains no data" unless expected_count > 0
+
+    # It takes approximately 30 seconds to seed config/school_districts.tsv.
+    # Skip seeding if the data is already present. Note that this logic will
+    # not re-seed data if the number of records in the DB is greater than or
+    # equal to that in the TSV file, even if the data is different.
+    if options[:force] || SchoolDistrict.count < expected_count
+      CDO.log.debug "seeding school districts (#{expected_count} rows)"
+      SchoolDistrict.transaction do
+        merge_from_csv(school_districts_tsv)
+      end
+    end
+  end
+
+  # Loads/merges the data from a CSV into the schools table.
+  # Requires a block to parse the row.
+  # @param filename [String] The CSV file name.
+  # @param options [Hash] The CSV file parsing options.
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
+    CSV.read(filename, options).each do |row|
+      parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
+      loaded = find_by_id(parsed[:id])
+      if loaded.nil?
+        SchoolDistrict.new(parsed).save!
+      else
+        loaded.assign_attributes(parsed)
+        loaded.update!(parsed) if loaded.changed?
+      end
+    end
+  end
+
+  # Download the data in the table to a CSV file.
+  # @param filename [String] The CSV file name.
+  # @param options [Hash] The CSV file parsing options.
+  # @return [String] The CSV file name.
+  def self.write_to_csv(filename, options = CSV_IMPORT_OPTIONS)
+    cols = %w(id name city state zip)
+    CSV.open(filename, 'w', options) do |csv|
+      csv << cols
+      rows = block_given? ? yield : order(:id)
+      rows.map do |row|
+        csv << cols.map {|col| row[col]}
+      end
+    end
+    return filename
   end
 end

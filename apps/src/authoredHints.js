@@ -16,6 +16,7 @@ import {
   tryGetSessionStorage,
   trySetSessionStorage,
   showGenericQtip,
+  createEvent,
 } from './utils';
 import msg from '@cdo/locale';
 
@@ -24,7 +25,6 @@ const ONETIME_HINT_PROMPT_SEEN_LEVELS = 'hint_prompt_seen_levels';
 export default class AuthoredHints {
   constructor(studioApp) {
     this.studioApp_ = studioApp;
-    this.store_ = getStore();
 
     /**
      * @type {number}
@@ -41,14 +41,14 @@ export default class AuthoredHints {
    * @return {AuthoredHints[]}
    */
   getUnseenHints() {
-    return this.store_.getState().authoredHints.unseenHints;
+    return getStore().getState().authoredHints.unseenHints;
   }
 
   /**
    * @return {AuthoredHints[]}
    */
   getSeenHints() {
-    return this.store_.getState().authoredHints.seenHints;
+    return getStore().getState().authoredHints.seenHints;
   }
 
   /**
@@ -59,10 +59,10 @@ export default class AuthoredHints {
    */
   displayMissingBlockHints(blocks) {
     const newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
-    this.store_.dispatch(displayMissingBlockHints(newContextualHints));
+    getStore().dispatch(displayMissingBlockHints(newContextualHints));
 
     if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
-      this.store_.dispatch(setHasAuthoredHints(true));
+      getStore().dispatch(setHasAuthoredHints(true));
     }
   }
 
@@ -97,8 +97,8 @@ export default class AuthoredHints {
     this.levelId_ = levelId;
 
     if (hints && hints.length > 0) {
-      this.store_.dispatch(enqueueHints(hints, hintsUsedIds));
-      this.store_.dispatch(setHasAuthoredHints(true));
+      getStore().dispatch(enqueueHints(hints, hintsUsedIds));
+      getStore().dispatch(setHasAuthoredHints(true));
     }
   }
 
@@ -111,6 +111,15 @@ export default class AuthoredHints {
     }
     const hint = this.getUnseenHints()[0];
     this.recordUserViewedHint_(hint);
+
+    // Notify game types that implement the `displayHintPath` listener to draw
+    // hint paths in the visualization area.
+    if (hint.hintPath) {
+      const event = createEvent('displayHintPath');
+      event.detail = hint.hintPath;
+      window.dispatchEvent(event);
+    }
+
     return hint;
   }
 
@@ -120,7 +129,7 @@ export default class AuthoredHints {
    * @param {AuthoredHint} hint
    */
   recordUserViewedHint_(hint) {
-    this.store_.dispatch(showNextHint(hint));
+    getStore().dispatch(showNextHint(hint));
     authoredHintUtils.recordUnfinishedHint({
       // level info
       scriptId: this.scriptId_,

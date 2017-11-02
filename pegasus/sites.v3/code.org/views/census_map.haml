@@ -82,6 +82,7 @@
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
       event.infoWindowHtml = event.row['organization_name'].value;
+      event.infoWindowHtml += ' (' + event.row['city'].value + ')';
       event.infoWindowHtml += '<br>';
     });
     google.maps.event.addListener(gmap, 'zoom_changed', function(event) {

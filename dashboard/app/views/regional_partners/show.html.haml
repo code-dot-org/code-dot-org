@@ -1,0 +1,107 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 View Regional Partner
+
+#application-container
+  = show_flashes.html_safe
+%p
+  %strong ID:
+  = @regional_partner.id
+%p
+  %strong Name:
+  = @regional_partner.name
+%p
+  %strong Group:
+  = @regional_partner.group
+%p
+  %strong Urban:
+  = @regional_partner.urban? ? 'Yes' : 'No'
+%p
+  %strong Contact Email:
+  = @regional_partner.contact.try(:email)
+%p
+  %strong Contact Name:
+  = @regional_partner.contact.try(:name)
+%p
+  %strong Ship Attention:
+  = @regional_partner.attention
+%p
+  %strong Street:
+  = @regional_partner.street
+%p
+  %strong Apartment/Suite:
+  = @regional_partner.apartment_or_suite
+%p
+  %strong City:
+  = @regional_partner.city
+%p
+  %strong State:
+  = @regional_partner.state
+%p
+  %strong Zip Code:
+  = @regional_partner.zip_code
+%p
+  %strong Ship Phone Number:
+  = @regional_partner.phone_number
+%p
+  %strong Notes:
+  = @regional_partner.notes
+%p
+  %strong Created At:
+  = @regional_partner.created_at.strftime('%F')
+%p
+  %strong Updated At:
+  = @regional_partner.updated_at.strftime('%F')
+- if can? :update, @regional_partner
+  = link_to 'Edit', edit_regional_partner_path(@regional_partner)
+\|
+= link_to 'Back', regional_partners_path
+%br
+%h2 Regions
+= form_tag(action: 'add_mapping') do
+  %table.table.table-hover.table-condensed.table-auto-width{:id => 'mappings-table'}
+    %thead
+      %th Action
+      %th Region
+    %tbody
+      - @regional_partner.mappings.each do |mapping|
+        %tr
+          %td= link_to 'Remove', action: :remove_mapping, mapping_id: mapping.id
+          %td= mapping.state? ? mapping.state : mapping.zip_code
+          %td
+      %tr
+        %td
+          .actions
+            = submit_tag('Add', id: 'submitAddMapping')
+        %td
+          .field
+            Enter a state or zip code:
+            = text_field_tag :region, '', class: 'form-control'
+        %td
+%br
+%h2 Program Managers
+%table.table.table-hover.table-condensed.table-auto-width{:id => 'program-managers-table'}
+  %thead
+    %th Action
+    %th ID
+    %th Name
+    %th Email
+    %th Recent Sign In
+    %th Sign In Count
+    %th Registered Account At
+  %tbody
+    - @regional_partner.program_managers.each do |program_manager|
+      %tr
+        %td= link_to 'Remove', action: :remove_program_manager, program_manager_id: program_manager.id
+        %td= program_manager.id
+        %td= program_manager.name
+        %td= program_manager.email
+        %td= program_manager.current_sign_in_at.try(:strftime, '%F')
+        %td= program_manager.sign_in_count
+        %td= program_manager.created_at.strftime('%F')
+%p Enter an Email to Assign a Program Manager
+= form_tag url_for(action: 'assign_program_manager'), method: 'post', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :email, nil, class: 'form-control'
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search

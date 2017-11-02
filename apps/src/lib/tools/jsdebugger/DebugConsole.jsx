@@ -14,6 +14,7 @@ import {
 } from '../../../redux/watchedExpressions';
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
+import color from '../../../util/color';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -34,6 +35,12 @@ const style = {
     cursor: 'text',
     whiteSpace: 'pre-wrap',
     flexGrow: 1,
+  },
+  debugOutputBackgroundError: {
+    backgroundColor: color.lightest_red,
+  },
+  debugOutputBackgroundWarning: {
+    backgroundColor: color.lightest_yellow,
   },
   debugInputWrapper: {
     flexGrow: 0,
@@ -59,7 +66,6 @@ const style = {
   },
 };
 
-
 const WATCH_COMMAND_PREFIX = "$watch ";
 const UNWATCH_COMMAND_PREFIX = "$unwatch ";
 
@@ -69,7 +75,7 @@ const UNWATCH_COMMAND_PREFIX = "$unwatch ";
  * @param {!HTMLDivElement} element
  */
 function moveCaretToEndOfDiv(element) {
-  var range = document.createRange();
+  const range = document.createRange();
   if (element.childNodes.length === 0) {
     return;
   }
@@ -78,7 +84,7 @@ function moveCaretToEndOfDiv(element) {
   range.collapse(true);
 
   // Change window selection to new range to set cursor position
-  var selection = window.getSelection();
+  const selection = window.getSelection();
   selection.removeAllRanges();
   selection.addRange(range);
 }
@@ -86,11 +92,12 @@ function moveCaretToEndOfDiv(element) {
 /**
  * The console for our debugger UI
  */
-const DebugConsole = connect(
+export default connect(
   state => ({
     commandHistory: selectors.getCommandHistory(state),
     jsInterpreter: selectors.getJSInterpreter(state),
     logOutput: selectors.getLogOutput(state),
+    maxLogLevel: selectors.getMaxLogLevel(state),
     isAttached: selectors.isAttached(state),
   }),
   {
@@ -101,11 +108,12 @@ const DebugConsole = connect(
   },
   null,
   {withRef: true}
-)(React.createClass({
-  propTypes: {
+)(class DebugConsole extends React.Component {
+  static propTypes = {
     // from redux
     commandHistory: PropTypes.instanceOf(CommandHistory),
     logOutput: PropTypes.string.isRequired,
+    maxLogLevel: PropTypes.string.isRequired,
     isAttached: PropTypes.bool.isRequired,
     addWatchExpression: PropTypes.func.isRequired,
     removeWatchExpression: PropTypes.func.isRequired,
@@ -116,10 +124,10 @@ const DebugConsole = connect(
     debugButtons: PropTypes.bool,
     debugWatch: PropTypes.bool,
     style: PropTypes.object,
-  },
+  };
 
-  onInputKeyDown(e) {
-    var input = e.target.value;
+  onInputKeyDown = (e) => {
+    const input = e.target.value;
     if (e.keyCode === KeyCodes.ENTER) {
       e.preventDefault();
       this.props.commandHistory.push(input);
@@ -135,7 +143,7 @@ const DebugConsole = connect(
         );
       } else if (this.props.isAttached) {
         try {
-          var result = this.props.evalInCurrentScope(input);
+          const result = this.props.evalInCurrentScope(input);
           this.appendLog('< ' + String(result));
         } catch (err) {
           this.appendLog('< ' + String(err));
@@ -152,15 +160,15 @@ const DebugConsole = connect(
       moveCaretToEndOfDiv(e.target);
       e.preventDefault(); // Block default Home/End-like behavior in Chrome
     }
-  },
+  };
 
   appendLog(output) {
     this.props.appendLog(output);
-  },
+  }
 
   componentDidUpdate() {
     this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
-  },
+  }
 
   clearDebugInput() {
     // TODO: this needs to get called on ATTACH action being dispatched
@@ -168,7 +176,7 @@ const DebugConsole = connect(
     if (this._debugInput) {
       this._debugInput.value = '';
     }
-  },
+  }
 
 
   /**
@@ -176,19 +184,26 @@ const DebugConsole = connect(
    * text, place the focus in the console input box.
    * @param {MouseEvent} e
    */
-  onDebugOutputMouseUp(e) {
+  onDebugOutputMouseUp = (e) => {
     if (e.target.tagName === "DIV" &&
         window.getSelection().toString().length === 0) {
       this.focus();
     }
-  },
+  };
 
-  focus() {
-    this._debugInput.focus();
-  },
+  focus = () => this._debugInput.focus();
+
+  getDebugOutputBackgroundStyle() {
+    switch (this.props.maxLogLevel) {
+      case 'error':
+        return style.debugOutputBackgroundError;
+      case 'warning':
+        return style.debugOutputBackgroundWarning;
+    }
+  }
 
   render() {
-    var classes = 'debug-console';
+    let classes = 'debug-console';
     if (!this.props.debugButtons) {
       classes += ' no-commands';
     }
@@ -219,7 +234,7 @@ const DebugConsole = connect(
           id="debug-output"
           onMouseUp={this.onDebugOutputMouseUp}
           ref={el => this._debugOutput = el}
-          style={style.debugOutput}
+          style={{...style.debugOutput,...this.getDebugOutputBackgroundStyle()}}
         >
           {this.props.logOutput}
         </div>
@@ -241,7 +256,5 @@ const DebugConsole = connect(
         </div>
       </div>
     );
-  },
-}));
-
-export default DebugConsole;
+  }
+});

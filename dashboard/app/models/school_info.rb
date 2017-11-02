@@ -10,7 +10,7 @@
 #  school_district_id    :integer
 #  school_district_other :boolean          default(FALSE)
 #  school_district_name  :string(255)
-#  school_id             :integer
+#  school_id             :string(12)
 #  school_other          :boolean          default(FALSE)
 #  school_name           :string(255)
 #  full_address          :string(255)

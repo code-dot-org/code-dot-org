@@ -535,6 +535,8 @@
   volunteer_engineer_submission_type_task_remote: "Я хочу пригласить вас на конференцию в Skype со своим классом для воодушевление учеников"
   volunteer_engineer_submission_type_task_mentor: "Я ищу наставника, который поможет мне подготовиться к программированию с моими учениками"
   petition_age: "Возраст"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Узнать больше"
   dashboard_landing_title: "Домашняя страница преподавателя"
   dashboard_landing_welcome: "Добро пожаловать в новый, улучшенный личный кабинет преподавателя."
   dashboard_landing_video: "Посмотрите это видео"
@@ -923,6 +925,8 @@
   csp1_name: 'Урок 1: Интернет'
   csp2_name: 'Урок 2: Цифровая информация'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1376,7 +1380,7 @@
   header_my_dashboard: "My Dashboard"
   header_courses: "курсы"
   header_course_catalog: "Course Catalog"
-  header_project_gallery: "Галерея проектов"
+  header_project_gallery: "Проекты"
   header_sections: "Секции"
   header_professional_learning: "Профессиональное обучение"
   header_educate_overview: "Обзор преподавателя"
@@ -1422,8 +1426,8 @@
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
   signing_in: "Signing In"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to Code.org and click on the 'Sign in' button on the top right."
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of the page: %{section_code}.'
+  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: "Choose their display name."
   sign_in_instruct_secret: "Choose their secret %{secret}."
   sign_in_instruct_button: "Click the “Sign in” button."

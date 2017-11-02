@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+unless ARGV.length == 2
+  puts "Usage: #{$0} user_email experiment_name"
+  exit 1
+end
+
+puts "loading rails environment..."
+require_relative '../dashboard/config/environment'
+
+user_email = ARGV[0]
+experiment_name = ARGV[1]
+
+unless user = User.find_by_email_or_hashed_email(user_email)
+  puts "could not find user with email #{user_email.dump}"
+  exit 1
+end
+
+unless user.teacher?
+  puts "user #{user_email.dump} is not a teacher"
+  exit 1
+end
+
+unless CourseScript.find_by(experiment_name: experiment_name)
+  puts "no course experiment exists with name: #{experiment_name.dump}"
+  exit 1
+end
+
+SingleUserExperiment.find_or_create_by!(min_user_id: user.id, name: experiment_name)
+puts "successfully added user #{user_email.dump} to experiment #{experiment_name.dump}"

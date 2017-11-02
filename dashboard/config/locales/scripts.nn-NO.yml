@@ -169,6 +169,7 @@
           stages:
             Maze:
               name: Labyrint
+          description_audience: ''
         frozen:
           title: Koding med Anna og Elsa
           description: La oss bruke kode og bli med Anna og Elsa når dei utforskar
@@ -374,7 +375,7 @@
             Reflection:
               name: Reflection
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Unplugged lessons:
               name: Unplugged lessons
             Writing computer programs:
@@ -605,7 +606,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algPDmiami:
@@ -816,7 +817,7 @@
             Strings and Images:
               name: Strenger og bilder
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             The Big Game:
               name: The Big Game
             The Design Recipe:
@@ -873,7 +874,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD-iZone:
@@ -892,7 +893,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD-NexTech:
@@ -1150,7 +1151,7 @@
             TextMatch:
               name: TextMatch
             Web Lab:
-              name: Web Lab
+              name: Weblaboratoriet
             Multi page assessment:
               name: Multi page assessment
             Single page assessment:
@@ -1186,7 +1187,7 @@
             Strings and Images:
               name: Strenger og bilder
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Writing Contracts:
               name: Writing Contracts
         cspfacilitator:
@@ -1287,7 +1288,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -2164,7 +2165,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD3c:
@@ -2353,7 +2354,7 @@
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Enkel kryptering
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -2562,7 +2563,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Fart
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2645,7 +2646,7 @@
             Introduction to PD:
               name: Introduction to PD
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD1:
@@ -2755,7 +2756,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: Spel lab
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -3144,7 +3145,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Feil som ikkje er funne
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3421,7 +3422,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Fart
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -3839,7 +3840,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: Lærersider
+              name: Lærarmodus
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -4174,7 +4175,7 @@
             and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Enkel kryptering
         fesbinary:
           title: Binær
           description_audience: ''
@@ -4281,7 +4282,8 @@
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
               description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.
+                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
+                \r
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4380,15 +4382,10 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: "Starting with an exploration of the song \"Happy
-                Birthday\" and its history of copyright protection, the class explores
-                the purpose and role of copyright for both creators and users of creative
-                content. After a brief discussion about the purpose of copyright,
-                we move on to an activity exploring the various Creative Commons licenses
-                as a solution to the difficulty in dealing with copyright. \n\nFinally,
-                with a common understanding of the restrictions of various Creative
-                Commons licenses, students will learn how to add images to their web
-                pages using the &lt;img&gt; tag."
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4396,12 +4393,9 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: "After learning about how to link web pages to
-                one another, students are finally able to publish the website they
-                have been working on.  In this lesson, they link together all the
-                previous pages they have created into one project, create a new page,
-                and add navigation between the pages before publishing the entire
-                site to the Web.  \n\n"
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4424,9 +4418,22 @@
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
             Headings:
               name: Headings
+              description_student: This lesson continues the introduction to HTML
+                tags, this time with headers.  The class practices using header tags
+                to create page and section titles and learns how the different header
+                elements are displayed by default.  Next, the class plans how to organize
+                their content on the personal web pages that will be built across
+                the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to
+                structure text on web pages, this time with headings.  Students learn
+                how the different heading elements are displayed by default and practice
+                using them to create page and section titles.  Students then start
+                to decide how they will organize their content on their own personal
+                web pages.  In the last level, students begin the project that they
+                will continue to work on throughout the unit.
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -4486,7 +4493,7 @@
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
               description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.
+                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4551,7 +4558,7 @@
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
               description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -4713,6 +4720,64 @@
                 project guide directs students through the process including building
                 the app and testing it with their user to see if their assumptions
                 about the user interfaces they created are accurate.
+            Linking Screens:
+              name: Linking Screens
+              description_student: Building on the screens that the class designed
+                in the previous lesson, teams combine screens into a single app. Simple
+                code can then be added to make button clicks change to the appropriate
+                screen.
+              description_teacher: In this lesson teams combine the screens that they
+                designed in the previous lesson into a single app, which they can
+                then link together using code. Students learn basic event driven programming
+                by building up the model app that they started in the previous lesson.
+                In addition to the screen that students designed yesterday, they'll
+                learn how to create additional screens and even import screens made
+                by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and
+                get feedback on software before writing any code. To help out a developer
+                with their idea, the class tests and provides an app prototype made
+                of paper.
+              description_teacher: Following the mini design project, students look
+                towards the next phase of design - prototyping a product that attempts
+                to address user needs. In teams, students examine a paper prototype
+                for a chat app called "Txt Ur Grndkdz". Through using this paper prototype,
+                students get a chance to see how a simple paper prototype can be used
+                to quickly test ideas and assumptions before we ever get to the computer.
+                After "using" the provided prototype students begin to identify ways
+                to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots
+                of feedback for the developer. The class needs to sort through all
+                of this feedback, identify the common themes and needs, and start
+                revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users"
+                of the paper-prototyped app from the previous lesson in order to develop
+                improvements to the user interface of that paper prototype. The lesson
+                begins with a reflection on the fact that designers need to translate
+                human needs with technology into changes to the user interface or
+                experience. Students are then given a collection of feedback and requests
+                from users of the app from the previous lesson. In groups students
+                categorize the feedback and identify ways the needs expressed in the
+                feedback could be met by changes to the interface of the app. Then
+                in groups students will implement some of these changes to meet one
+                of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Each team prepares a presentation to "pitch" the
+                app they've developed. This is the time to share struggles, triumphs,
+                and plans for the future.
+              description_teacher: At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation. Using the provided presentation
+                template, teams prepare to present about their process of app development,
+                including the problem they set out to solve, the ways in which they've
+                incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: Kodetimens Minecraft-designer
           description_audience: ''
@@ -5378,6 +5443,20 @@
               name: 'Project: Prototype an Innovation'
             Map:
               name: Map
+            Board Events:
+              name: Board Events
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5438,6 +5517,10 @@
               name: Representing Numbers
             8-bit Numbers:
               name: 8-bit Numbers
+            Encryption:
+              name: Encryption
+            Structuring Data:
+              name: Structuring Data
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
@@ -5738,7 +5821,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Fart
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6049,6 +6132,38 @@
                 manipulative that will help them to encode and decode 8-bit numbers
                 (0-255).  After practicing with the flippy-do, students discuss how
                 they could extend that standardization to the other types of data.
+            Encryption:
+              name: Encryption
+              description_student: Students have a discussion on the different levels
+                of security they would like for personal data.  Once the class has
+                developed an understanding of the importance of privacy, they learn
+                about the process of encrypting information by enciphering a note
+                for a partner and deciphering the partner's note.  The class concludes
+                with a discussion about the importance of both physical and digital
+                security.
+              description_teacher: Students have a discussion on the different levels
+                of security they would like for personal data.  Once the class has
+                developed an understanding of the importance of privacy, they learn
+                about the process of encrypting information by enciphering a note
+                for a partner and deciphering the partner's note.  The class concludes
+                with a discussion about the importance of both physical and digital
+                security.
+            Structuring Data:
+              name: Structuring Data
+              description_student: This lesson goes further into the interpretation
+                of data, including cleaning and visualizing raw data sets.  The class
+                first looks at the how presenting data in different ways can help
+                people to understand it better.  After seeing how cleaning and visualization
+                can help people make better decisions, the class looks at what parts
+                of this process can be automated, and what need a human.
+              description_teacher: In this lesson, students go further into the collection
+                and interpretation of data, including cleaning and visualizing raw
+                data sets.  Students first look at the how presenting data in different
+                ways can help people to understand it better.  They then visualize
+                their own raw data set, in the context of a pizza topping survey,
+                deciding what to do with data that does not easily fit into the visualization
+                scheme that they have chosen.  Last, students look at what parts of
+                this process can be automated, and what need a human to make decisions.
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6079,7 +6194,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Fart
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6226,7 +6341,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Fart
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6478,7 +6593,7 @@
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: Kurs A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -6518,7 +6633,7 @@
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Kurs B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: |-
@@ -6559,7 +6674,7 @@
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Kurs C
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -6736,7 +6851,7 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: Kurs D
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -6947,7 +7062,27 @@
                 DNA are almost impossible to do as an individual. Adding the power
                 of others makes these tasks manageable. This lesson will show your
                 students how helpful teamwork can be in the industry of computer science.
-          title: 'CS Fundamentals: Course E'
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Bygge eit fundament
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Nested Loops:
+              name: Løkker i løkke
+          title: Kurs E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7167,7 +7302,25 @@
                 using their programs.
             Functions in Bee:
               name: Functions in Bee
-          title: 'CS Fundamentals: Course F'
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Bygge eit fundament
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+          title: Kurs F
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7554,6 +7707,10 @@
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops:
+              name: Løkker i løkke
           title: ''
           description_audience: ''
           description_short: ''
@@ -7694,6 +7851,8 @@
               name: Improving and Iterating
             App Presentation:
               name: App Presentation
+            Linking Screens:
+              name: Linking Screens
           title: CSD Unit 4 Revisions Draft
           description_audience: ''
           description_short: ''
@@ -7712,8 +7871,580 @@
               name: Intro to AppLab - Choose Your Own Adventure
             Intro to AppLab - Choose Your Own Adventure 2:
               name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of
             creative projects.
+        e-f-ramp:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence and Preview in Maze:
+              name: Sequence and Preview in Maze
+            Building a Foundation:
+              name: Bygge eit fundament
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Løkker i løkke
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Intro to Conditionals with Farmer:
+              name: Intro to Conditionals with Farmer
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Course E Introduction:
+              name: Course E Introduction
+            Conditionals:
+              name: Betingelser
+            Private and Personal Information:
+              name: Private and Personal Information
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Sequence in Maze:
+              name: Sequence in Maze
+          title: Course E & F Ramp
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-d:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Introduction:
+              name: Introduksjon
+            Events in Bounce:
+              name: Events in Bounce
+            Nested Loops:
+              name: Løkker i løkke
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Conditionals in Bee:
+              name: Conditionals in Bee
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: Kunstnar binær
+            Building a Foundation:
+              name: Bygge eit fundament
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+          title: New Course D Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-a:
+          stages:
+            new stage:
+              name: new stage
+            'CSP3A: Using Simple Commands':
+              name: 'CSP3A: Using Simple Commands'
+          title: CSP Unit 3 - Subgoals Group A
+          description_audience: ''
+          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment
+            group A.
+          description: This unit introduces the foundational concepts of computer
+            programming, for students in Subgoals Group A.
+        new-express:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Introduction:
+              name: Introduksjon
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Star Wars:
+              name: Events in Star Wars
+            Events with Flappy:
+              name: Events with Flappy
+            Events in Bounce:
+              name: Events in Bounce
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+            Building a Foundation:
+              name: Bygge eit fundament
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Nested Loops:
+              name: Løkker i løkke
+            Loops in Artist (UPDATED!):
+              name: Loops in Artist (UPDATED!)
+            Sarah test stage:
+              name: Sarah test stage
+          title: New Express Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-stages-sept-2017:
+          stages:
+            Loops in Artist:
+              name: Loops in Artist
+            Sequences with Scrat:
+              name: Sequences with Scrat
+            Testing Template:
+              name: Testing Template
+          title: New stages for 9/17
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-e:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Bygge eit fundament
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Course E Introduction:
+              name: Course E Introduction
+            Conditionals:
+              name: Betingelser
+            Private and Personal Information:
+              name: Private and Personal Information
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
+          title: New Script for E
+          description_audience: ''
+          description_short: ''
+          description: ''
+        new-f:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Bygge eit fundament
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Course E Introduction:
+              name: Course E Introduction
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: Istid Spel-lab
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Envelope Variables:
+              name: Konvolutt variabler
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: Morro med for løkker
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Låtskriving med parameter
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+          title: New Script for F
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd5-old:
+          stages:
+            Representation Matters:
+              name: Representation Matters
+            Patterns and Representation:
+              name: Patterns and Representation
+            ASCII and Binary Representation:
+              name: ASCII and Binary Representation
+            Representing Images:
+              name: Representing Images
+            Representing Numbers:
+              name: Representing Numbers
+            8-bit Numbers:
+              name: 8-bit Numbers
+            Combining Representations:
+              name: Combining Representations
+            Project - Create a Representation:
+              name: Project - Create a Representation
+            Problem Solving and Data:
+              name: Problem Solving and Data
+            Making Decisions with Data:
+              name: Making Decisions with Data
+            Interpreting Data:
+              name: Interpreting Data
+            Automating Data Decisions:
+              name: Automating Data Decisions
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Project - Solve a Data Problem:
+              name: Project - Solve a Data Problem
+          title: CSD Unit 5 - Data and Society
+          description_audience: ''
+          description_short: Learn how people use computers to solve data problems.
+          description: Unit 5 is about the importance of data in solving problems
+            and highlights how computers can help in this process. The first chapter
+            explores different systems used to represent information in a computer
+            and the challenges and tradeoffs posed by using them. In the second chapter
+            you’ll learn how collections of data are used to solve problems, and how
+            computers help to automate the steps of this process. The chapter concludes
+            by considering how the data problem solving process can be applied to
+            an area of the your choosing.
+        subgoals-assessment-staging:
+          stages:
+            subgoal assessments:
+              name: subgoal assessments
+            lg by itself:
+              name: lg by itself
+            test of single level lg:
+              name: test of single level lg
+            submittable question at end of lessson:
+              name: submittable question at end of lessson
+            all assessment items as standalone assessment levels:
+              name: all assessment items as standalone assessment levels
+            all assessment items clustered in levelgroup:
+              name: all assessment items clustered in levelgroup
+            submittable if last assessment item:
+              name: submittable if last assessment item
+            assessment sandwiched between app lab levels:
+              name: assessment sandwiched between app lab levels
+            all assessment items clustered in levelgroup as a single "test":
+              name: all assessment items clustered in levelgroup as a single "test"
+            dummy:
+              name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hocali:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        colehoc2017:
+          stages:
+            colehoc2017 stage:
+              name: colehoc2017 stage
+          title: 'HoC 17 - Cole '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft17-kiki:
+          stages:
+            craft17 stage:
+              name: craft17 stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Lag Funksjonar
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: |
+            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+        pwc:
+          stages:
+            new stage:
+              name: new stage
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+          title: PwC Access Your Potential
+          description_audience: ''
+          description_short: ''
+          description: ''
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: Kodetimen med Minecraft
+          title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''

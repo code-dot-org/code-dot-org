@@ -91,6 +91,15 @@ namespace :build do
           ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake 'seed:all'
         end
+
+        # Commit dsls.en.yml changes on staging
+        dsls_file = dashboard_dir('config/locales/dsls.en.yml')
+        if rack_env?(:staging) && GitUtils.file_changed_from_git?(dsls_file)
+          RakeUtils.system 'git', 'add', dsls_file
+          ChatClient.log 'Committing updated dsls.en.yml file...', color: 'purple'
+          RakeUtils.system 'git', 'commit', '-m', '"Update dsls.en.yml"', dsls_file
+          RakeUtils.git_push
+        end
       end
 
       # Skip asset precompile in development where `config.assets.digest = false`.

@@ -142,7 +142,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         tickWrapper.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
-          assert.equal(debugOutput.textContent, "WARNING: Line: 1: button() id parameter refers to an id (button1) which already exists.");
+          assert.equal(debugOutput.textContent, 'WARNING: Line: 1: button() id parameter refers to an id ("button1") which already exists.');
           Applab.onPuzzleComplete();
         });
       },
@@ -163,8 +163,8 @@ module.exports = {
       customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
-            "ERROR: Line: 1: Error: button() id parameter refers to an id " +
-            "(runButton) which is already in use outside of Applab. Choose a different id.");
+            'ERROR: Line: 1: Error: button() id parameter refers to an id ' +
+            '("runButton") which is already being used outside of App Lab. Please use a different id.');
         assert(!$('#divApplab #runButton')[0], 'No button named runButton should appear in applab');
         return true;
       },
@@ -185,8 +185,8 @@ module.exports = {
       customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
-          "ERROR: Line: 1: Error: button() id parameter refers to an id " +
-          "(submitButton) which is already in use outside of Applab. Choose a different id.");
+          'ERROR: Line: 1: Error: button() id parameter refers to an id ' +
+          '("submitButton") which is already being used outside of App Lab. Please use a different id.');
         assert(!$('#divApplab #submitButton')[0], 'No button named submitButton should appear in applab');
         return true;
       },

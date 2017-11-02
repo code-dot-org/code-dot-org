@@ -141,6 +141,7 @@ export default class AssignmentSelector extends Component {
     return (
       <div>
         <select
+          id="uitest-primary-assignment"
           value={selectedPrimaryId}
           onChange={this.onChangePrimary}
           style={dropdownStyle}
@@ -170,6 +171,7 @@ export default class AssignmentSelector extends Component {
           <div style={styles.secondary}>
             <div>Select current unit:</div>
             <select
+              id="uitest-secondary-assignment"
               value={selectedSecondaryId}
               onChange={this.onChangeSecondary}
               style={dropdownStyle}

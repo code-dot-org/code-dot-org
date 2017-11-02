@@ -1,22 +1,6 @@
 import React from 'react';
 import Dialog, {Icon, Title, Body, Buttons, Cancel, Confirm, Footer} from './Dialog';
-
-const ExampleDialogButton = React.createClass({
-  render() {
-    return (
-      <div>
-        <Dialog
-          isOpen={!!this.state && this.state.open}
-          handleClose={() => this.setState({open: false})}
-          {...this.props}
-        />
-        <button onClick={() => this.setState({open: true})}>
-          Open the example dialog
-        </button>
-      </div>
-    );
-  }
-});
+import ExampleDialogButton from '../util/ExampleDialogButton';
 
 export default storybook => {
   return storybook
@@ -121,28 +105,30 @@ export default storybook => {
         description: `In a few cases you'll want a dialog that can grow to
                         fill the browser width.`,
         story: () => (
-          <ExampleDialogButton fullWidth={true}>
-            <Icon src="https://studio.code.org/blockly/media/skins/flappy/static_avatar.png"/>
-            <Title>Puzzle 3 of 10</Title>
-            <Body>
-              <table style={{width: '100%'}}>
-                <tr>
-                  <th>Heading A</th>
-                  <th>Heading B</th>
-                  <th>Heading C</th>
-                  <th>Heading D</th>
-                  <th>Heading E</th>
-                  <th>Heading F</th>
-                </tr>
-              </table>
-            </Body>
-            <Buttons>
-              <Cancel>Go Back</Cancel>
-              <Confirm />
-            </Buttons>
-            <Footer>
-              Try not to become too addicted to flappy bird
-            </Footer>
+          <ExampleDialogButton>
+            <Dialog fullWidth={true}>
+              <Icon src="https://studio.code.org/blockly/media/skins/flappy/static_avatar.png"/>
+              <Title>Puzzle 3 of 10</Title>
+              <Body>
+                <table style={{width: '100%'}}>
+                  <tr>
+                    <th>Heading A</th>
+                    <th>Heading B</th>
+                    <th>Heading C</th>
+                    <th>Heading D</th>
+                    <th>Heading E</th>
+                    <th>Heading F</th>
+                  </tr>
+                </table>
+              </Body>
+              <Buttons>
+                <Cancel>Go Back</Cancel>
+                <Confirm />
+              </Buttons>
+              <Footer>
+                Try not to become too addicted to flappy bird
+              </Footer>
+            </Dialog>
           </ExampleDialogButton>
         )
       }

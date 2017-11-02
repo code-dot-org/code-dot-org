@@ -92,7 +92,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    %w(studio infinity hoc2015 iceage)
+    %w(studio infinity hoc2015 iceage gumball)
   end
 
   def self.default_success_condition
@@ -561,6 +561,9 @@ class Studio < Grid
   <block type="functional_cond_string" />
   <block type="functional_cond_image" />
   <block type="functional_cond_boolean" />
+</category>
+<category name="Comment">
+  <block type="comment" />
 </category>
 
 #{k1_blocks(type) if is_k1 == 'true'}

@@ -106,12 +106,12 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create :peer_review, reviewer: @submitter, script: @course_unit.script
     create :peer_review, reviewer: @submitter
 
-    get :report_csv, params: {plc_course_id: @course_unit.plc_course_id}
+    get :report_csv, params: {plc_course_unit_id: @course_unit.id}
 
     assert_response :success
     response = CSV.parse(@response.body)
 
-    expected_headers = ['Name']
+    expected_headers = ['Name', 'Email']
     expected_headers << [@level_1, @level_2, @level_3, @level_4].map do |level|
       [level.name.titleize, "#{level.name.titleize} Submit Date"]
     end
@@ -121,7 +121,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
     assert_equal [
       expected_headers.flatten,
-      [@submitter.name, 'Unsubmitted', date, 'Unsubmitted', date, 'Accepted', date, 'Unsubmitted', date, '1']
+      [@submitter.name, @submitter.email, 'Unsubmitted', date, 'Unsubmitted', date, 'Accepted', date, 'Unsubmitted', date, '1']
     ], response
   end
 
@@ -129,7 +129,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   [:teacher, :facilitator, :student].each do |user|
     test_user_gets_response_for(
       :report_csv,
-      params: {plc_course_id: 1},
+      params: {plc_course_unit_id: 1},
       user: user,
       response: :forbidden
     )

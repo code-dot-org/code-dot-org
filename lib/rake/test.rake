@@ -37,7 +37,7 @@ namespace :test do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--retry_count', '1', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         ChatClient.log message
@@ -55,7 +55,7 @@ namespace :test do
 
   task :ui_test_flakiness do
     Dir.chdir(deploy_dir) do
-      flakiness_output = `./bin/test_flakiness 5`
+      flakiness_output = `./bin/test_flakiness -n 5`
       ChatClient.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
     end
   end
@@ -144,7 +144,12 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          pipes = Array.new(procs) {|i| ">(mysql -u#{writer.user} dashboard_test#{i + 1})"}.join(' ')
+          databases = procs.times.map {|i| "dashboard_test#{i + 1}"}
+          databases.each do |db|
+            recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
+            RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql -u#{writer.user}"
+          end
+          pipes = databases.map {|db| ">(mysql -u#{writer.user} #{db})"}.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 

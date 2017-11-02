@@ -41,6 +41,14 @@ module Pd::Form
     {}
   end
 
+  # Dynamic require fields are only used for validation on the server.
+  # They are not supplied to the client like #required_fields.
+  # Use for conditionally required fields, such as those that are dependent on other answers
+  def dynamic_required_fields(sanitized_form_data_hash)
+    # should be overridden by including in model
+    []
+  end
+
   def add_key_error(key)
     key = key.to_s.camelize(:lower)
     errors.add(:form_data, :invalid, message: key)
@@ -60,6 +68,10 @@ module Pd::Form
     end
 
     self.class.required_fields.each do |key|
+      add_key_error(key) unless hash.key?(key)
+    end
+
+    dynamic_required_fields(hash).each do |key|
       add_key_error(key) unless hash.key?(key)
     end
   end

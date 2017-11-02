@@ -16,7 +16,14 @@ class PeerReviewsController < ApplicationController
 
   def dashboard
     courses = Plc::Course.all.select {|course| course.plc_course_units.map(&:script).any?(&:peer_reviews_to_complete?)}
+
     @course_list = courses.map {|course| [course.name, course.id]}
+
+    @course_unit_map = {}.tap do |course_unit_map|
+      courses.each do |course|
+        course_unit_map[course.id] = course.plc_course_units.map {|course_unit| [course_unit.name, course_unit.id]}
+      end
+    end
   end
 
   def pull_review
@@ -40,16 +47,20 @@ class PeerReviewsController < ApplicationController
   end
 
   def update
-    if @peer_review.update(peer_review_params.merge(reviewer: current_user, from_instructor: current_user.permission?('plc_reviewer')))
-      flash[:notice] = t('peer_review.review_submitted')
+    begin
+      @peer_review.update!(peer_review_params.merge(reviewer: current_user, from_instructor: current_user.permission?('plc_reviewer')))
+    rescue ActiveRecord::RecordNotSaved, ActiveRecord::RecordInvalid => error
+      Honeybadger.notify(error, error_message: "Error updating peer review", context: {peer_review: @peer_review})
+      redirect_to peer_review_path(@peer_review)
+      return
+    end
 
-      if current_user.permission?('plc_reviewer')
-        redirect_to peer_reviews_dashboard_path
-      else
-        redirect_to script_path(@peer_review.script)
-      end
+    flash[:notice] = t('peer_review.review_submitted')
+
+    if current_user.permission?('plc_reviewer')
+      redirect_to peer_reviews_dashboard_path
     else
-      render action: :show
+      redirect_to script_path(@peer_review.script)
     end
   end
 

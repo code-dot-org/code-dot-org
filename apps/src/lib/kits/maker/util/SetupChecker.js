@@ -64,10 +64,15 @@ export default class SetupChecker {
   }
 
   teardown() {
+    const releaseRefs = () => {
+      this.boardController = null;
+      this.port = null;
+    };
+
     if (this.boardController) {
-      this.boardController.destroy();
+      this.boardController.destroy().then(releaseRefs);
+    } else {
+      releaseRefs();
     }
-    this.boardController = null;
-    this.port = null;
   }
 }

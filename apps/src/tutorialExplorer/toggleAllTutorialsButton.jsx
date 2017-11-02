@@ -3,7 +3,7 @@
  */
 
 import React, {PropTypes} from 'react';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   toggleAllTutorialsBlock: {
@@ -15,12 +15,12 @@ const styles = {
   }
 };
 
-const ToggleAllTutorialsButton = React.createClass({
-  propTypes: {
+export default class ToggleAllTutorialsButton extends React.Component {
+  static propTypes = {
     showAllTutorials: PropTypes.func.isRequired,
     hideAllTutorials: PropTypes.func.isRequired,
     showingAllTutorials: PropTypes.bool
-  },
+  };
 
   render() {
     return (
@@ -43,6 +43,4 @@ const ToggleAllTutorialsButton = React.createClass({
       </div>
     );
   }
-});
-
-export default ToggleAllTutorialsButton;
+}

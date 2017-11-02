@@ -4,7 +4,6 @@
 - homepage_data[:userid] = current_user.id
 - homepage_data[:valid_grades] = Section.valid_grades
 - homepage_data[:topCourse] = @top_course
-- homepage_data[:isEnglish] = @is_english
 
 - if current_user
   - provider = current_user.provider
@@ -48,6 +47,15 @@
     %a{href:'/pd/workshop_dashboard'}
       %h3
         Manage PD Workshops
+    -# TODO: (mehal) Update this include workshop organizer for application dashboard
+    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      = link_to pd_application_dashboard_path do
+        %h3
+          Application Dashboard
+    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      = link_to pd_workshop_admins_path do
+        %h3
+          Directory for Workshop Admins
   -if current_user.permission?(UserPermission::CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
     %h1
       Old CSF Workshop Dashboard
@@ -60,3 +68,13 @@
     %a{href:'https://docs.google.com/a/code.org/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit'}
       %h3
         View Affiliate Playbook
+
+:javascript
+
+  $(document).ready(function() {
+    window.cleverTakeoverManager = new CleverTakeoverManager({
+      cleverLinkFlag: "#{session['clever_link_flag']}",
+      userIDToMerge: "#{session['clever_takeover_id']}",
+      mergeAuthToken: "#{session['clever_takeover_token']}",
+    });
+  });

@@ -35,24 +35,14 @@ const DisabledBubblesAlert = React.createClass({
       return null;
     }
 
-    let type, intro, href;
-    if (this.props.isHocScript) {
-      type = 'warning';
-      intro = i18n.disabledButtonsWhy();
-      href = '/saving-progress-hoc';
-    } else {
-      type = 'error';
-      intro = i18n.disabledButtonsWarning();
-      href = '/saving-progress-csf';
-    }
     return (
-      <Alert onClose={this.onClose} type={type}>
+      <Alert onClose={this.onClose} type={'error'}>
         <div>
-          <span style={styles.bold}>{intro + " "}</span>
+          <span style={styles.bold}>{i18n.disabledButtonsWarning() + " "}</span>
           <span>{i18n.disabledButtonsInfo()  + " "}</span>
           <a
             target="_blank"
-            href={window.dashboard.CODE_ORG_URL + href}
+            href={window.dashboard.CODE_ORG_URL + '/saving-progress-hoc'}
           >
             {i18n.learnMore()}
           </a>

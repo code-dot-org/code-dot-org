@@ -9,6 +9,7 @@ require 'active_support/core_ext/object/blank'
 require 'cdo/db'
 require 'cdo/geocoder'
 require 'cdo/only_one'
+require 'retryable'
 
 BATCH_SIZE = 1000
 
@@ -17,7 +18,9 @@ def main
   to_geolocate = PEGASUS_DB[:form_geos].where(indexed_at: nil).limit(BATCH_SIZE)
 
   to_geolocate.each do |form_geo|
-    location = Geocoder.search(form_geo[:ip_address]).first
+    location = Retryable.retryable(on: [Redis::CannotConnectError], tries: 2) do
+      Geocoder.search(form_geo[:ip_address]).first
+    end
     PEGASUS_DB[:form_geos].where(id: form_geo[:id]).update(
       updated_at: time_now,
       indexed_at: time_now,

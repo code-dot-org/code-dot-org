@@ -142,9 +142,6 @@ end
 
 # @return [String] The text for the DOTD menu prompt.
 def dotd_menu_prompt
-  # We disable rubocop so as to (intentionally) output a space at the end of the user input prompt
-  # (before the user input).
-  # rubocop:disable Style/TrailingWhitespace
   <<-EOS.unindent
 
     #{bold 'DOTD Menu Options'}
@@ -170,16 +167,12 @@ def dotd_menu_prompt
 
         #{bold 'Q'}: #{underline 'Q'}uit.
 
-    Your Choice: 
+    Your Choice:#{' '}
   EOS
-  # rubocop:enable Style/TrailingWhitespace
 end
 
 # @return [String] The text for the DOTD menu prompt, including cronned options.
 def dotd_menu_prompt_all
-  # We disable rubocop so as to (intentionally) output a space at the end of the user input prompt
-  # (before the user input).
-  # rubocop:disable Style/TrailingWhitespace
   <<-EOS.unindent
 
     #{bold 'DOTD Menu Options'}
@@ -217,9 +210,8 @@ def dotd_menu_prompt_all
 
         #{bold 'Q'}: #{underline 'Q'}uit.
 
-    Your Choice: 
+    Your Choice:#{' '}
   EOS
-  # rubocop:enable Style/TrailingWhitespace
 end
 
 # Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
@@ -482,6 +474,9 @@ end
 # The main method of the script, responsible for dispatching control flow to other methods.
 def main
   check_for_cdo_keys
+
+  # auto-join deploy-status room
+  Slack.join_room('deploy-status')
 
   puts_script_intro
   dotd_name = ask_for_name

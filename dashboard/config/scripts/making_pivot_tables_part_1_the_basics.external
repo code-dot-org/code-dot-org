@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 ## Getting Started - Copy the Data
 **To start, make a copy** of <a href="https://drive.google.com/open?id=0B2QFqkDgv9LjZU1sZ0hDdnZ6ck0" target="_blank">Teenage Movie Ratings Subset.csv</a> and open it in a spreadsheet program.  
 
-* The data is a subset of the larger <a href="https://drive.google.com/drive/u/0/folders/0B78N8p4zhHFgZTJMR1J6V1Bnc3c" target="_blank">movie ratings dataset</a> we saw in a previous lesson.
+* The data is a subset of the larger <a href="https://drive.google.com/open?id=1iQDn6eRn5nu0ld1OI9fJ_w6HiHNeqbrUtpzwz6N2y2s" target="_blank">movie ratings dataset</a> we saw in a previous lesson.
 * The dataset contains roughly 300 movie ratings that were collected online in 1997-98.   
 * The data has been filtered so that it only contains movies that were rated by at least 2 females and 2 males in the 14-18 year-old range.
 

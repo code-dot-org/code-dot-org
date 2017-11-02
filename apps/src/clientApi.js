@@ -42,11 +42,18 @@ class CollectionsApi {
     return boundApi;
   }
 
+  // NOTE: path parameter as supplied should not be URI encoded, as it will be
+  // URI encoded in this function...
   basePath(path) {
+    var encodedPath;
+    if (path) {
+      // encode all characters except forward slashes
+      encodedPath = encodeURIComponent(path).replace(/%2F/g,"/");
+    }
     return apiPath(
       this.collectionType,
       this.projectId || project().getCurrentId(),
-      path
+      encodedPath
     );
   }
 
@@ -57,6 +64,21 @@ class CollectionsApi {
       return;
     }
     return ajaxInternal(method, this.basePath(file), success, error, data);
+  }
+
+  /*
+   * Restore this file to the state of a previous version
+   * @param file {String} name of file
+   * @param versionId {String} identifier of previous version
+   * @param success {Function} callback when successful (includes xhr parameter)
+   * @param error {Function} callback when failed (includes xhr parameter)
+   */
+  restorePreviousFileVersion(file, versionId, success, error) {
+    var path = this.basePath(`${file}/restore`);
+    path += '?' + queryString.stringify({
+      version: versionId
+    });
+    return ajaxInternal('PUT', path, success, error);
   }
 }
 

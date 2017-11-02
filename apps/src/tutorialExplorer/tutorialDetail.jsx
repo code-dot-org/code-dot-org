@@ -3,9 +3,9 @@
 
 import React, {PropTypes} from 'react';
 import shapes from './shapes';
-import { getTagString, getTutorialDetailString } from './util';
+import { getTagString, getTutorialDetailString, DoNotShow } from './util';
 import Image from './image';
-import i18n from './locale';
+import i18n from '@cdo/tutorialExplorer/locale';
 /* global ga */
 
 const styles = {
@@ -111,7 +111,8 @@ const TutorialDetail = React.createClass({
     closeClicked: PropTypes.func.isRequired,
     changeTutorial: PropTypes.func.isRequired,
     localeEnglish: PropTypes.bool.isRequired,
-    disabledTutorial: PropTypes.bool.isRequired
+    disabledTutorial: PropTypes.bool.isRequired,
+    grade: PropTypes.string.isRequired
   },
 
   componentDidMount() {
@@ -138,6 +139,7 @@ const TutorialDetail = React.createClass({
 
   startTutorialClicked(shortCode) {
     ga('send', 'event', 'learn', 'start', shortCode);
+    ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
   },
 
   render() {
@@ -232,7 +234,7 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
                   </div>
-                  {this.props.item.orgname !== "do-not-show" &&
+                  {this.props.item.orgname !== DoNotShow &&
                     <div style={styles.tutorialDetailPublisher}>
                       {this.props.item.orgname}
                     </div>}

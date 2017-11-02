@@ -11,7 +11,7 @@
  * | |  error messages about your new entry point not conforming to naming        |-|
  * |-|  conventions.                                                              | |
  * | |                                                                            |-|
- * |-|  But what are the conventions you make ask?                                | |
+ * |-|  But what are the conventions you may ask?                                | |
  * | |                                                                            |-|
  * |-|  1) Entry points should be in the src/sites/<site-name>/pages directory!   | |
  * | |  2) Entry points should only be referenced by one template file!           |-|
@@ -59,14 +59,13 @@ const SILENCED = [
   'jigsaw',
   'levelbuilder',
   'levelbuilder_applab',
+  'levelbuilder_craft',
   'levelbuilder_edit_script',
   'levelbuilder_gamelab',
   'levelbuilder_studio',
   'levelbuilder_pixelation',
   'levels/contract_match',
-  'levels/submissionHelper',
   'levels/external',
-  'levels/levelGroup',
   'levels/multi',
   'levels/textMatch',
   'levels/widget',
@@ -290,7 +289,8 @@ module.exports = function (webpackConfig, options={verbose: false}) {
 
   const entryPromises = Object
     .keys(webpackConfig.entry)
-    .map(entryKey => checkEntryPoint(entryKey, webpackConfig.entry[entryKey][1], stats, options));
-
+    .map(entryKey => checkEntryPoint(entryKey, webpackConfig.entry[entryKey][2], stats, options));
+    // The 2 index above is because the entry array has 3 elements:
+    // [babel-polyfill, whatwg-fetch, JS entry point]
   return Promise.all(entryPromises).then(() => stats);
 };

@@ -14,22 +14,18 @@ FactoryGirl.define do
     sequence(:name) {|n| "fancyFeature#{n}"}
 
     factory :user_based_experiment, class: 'UserBasedExperiment' do
-      type "UserBasedExperiment"
       percentage 50
     end
     factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
-      type "TeacherBasedExperiment"
       min_user_id 0
       max_user_id 0
       overflow_max_user_id 0
       script nil
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
-      type "SingleSectionExperiment"
       section
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
-      type "SingleUserExperiment"
     end
   end
 
@@ -310,6 +306,10 @@ FactoryGirl.define do
 
   factory :applab, parent: :level, class: Applab do
     game {Game.applab}
+
+    trait :with_autoplay_video do
+      video_key {create(:video).key}
+    end
   end
 
   factory :free_response, parent: :level, class: FreeResponse do
@@ -709,7 +709,7 @@ FactoryGirl.define do
 
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {School.maximum(:id) + 1}
+    id {(School.maximum(:id).to_i + 1).to_s}
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -720,7 +720,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {School.maximum(:id) + 1}
+    id {(School.maximum(:id).to_i + 1).to_s}
     name "A seattle charter school"
     city "Seattle"
     state "WA"
@@ -735,15 +735,21 @@ FactoryGirl.define do
     group 1
   end
 
+  factory :regional_partner_program_manager do
+    regional_partner {create :regional_partner}
+    program_manager {create :teacher}
+  end
+
   factory :regional_partners_school_district do
     association :school_district
     association :regional_partner
   end
 
   factory :channel_token do
+    transient {storage_user nil}
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
-    storage_id 2
+    storage_id {storage_user.try(:id) || 2}
   end
 end

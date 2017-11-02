@@ -92,7 +92,7 @@ class GallerySwitcher extends Component {
           ]}
           onClick={this.toggleToGallery}
         >
-          {i18n.publicGallery()}
+          {i18n.publicProjects()}
         </div>
       </div>
     );

@@ -48,14 +48,6 @@ export const courseTopics = [{
 {
   name: "topic_game_design_b",
   label: i18n.censusGameDesign()
-},
-{
-  name: "topic_other_b",
-  label: i18n.censusOtherDescribe()
-},
-{
-  name: "topic_dont_know_b",
-  label: i18n.iDontKnow()
 }
 ];
 

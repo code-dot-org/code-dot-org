@@ -261,7 +261,8 @@ describe('determineInstructionsConstants', () => {
           longInstructions: 'markdown',
           hasContainedLevels,
           overlayVisible,
-          teacherMarkdown: undefined
+          teacherMarkdown: undefined,
+          levelVideos: undefined,
         });
       });
     });
@@ -288,7 +289,8 @@ describe('determineInstructionsConstants', () => {
         longInstructions: undefined,
         hasContainedLevels,
         overlayVisible,
-        teacherMarkdown: undefined
+        teacherMarkdown: undefined,
+        levelVideos: undefined,
       });
     });
 
@@ -315,7 +317,8 @@ describe('determineInstructionsConstants', () => {
         longInstructions: undefined,
         hasContainedLevels,
         overlayVisible,
-        teacherMarkdown: undefined
+        teacherMarkdown: undefined,
+        levelVideos: undefined,
       });
     });
 
@@ -376,6 +379,32 @@ describe('determineInstructionsConstants', () => {
 
       assert(/image1\.png/.test(result.shortInstructions), 'image 1 is replaced');
       assert(/image2\.png/.test(result.shortInstructions2), 'image 2 is replaced');
+    });
+
+    it('instructions outputs levelVideos data when it is associated with the given level', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          levelVideos: ["notEmpty"],
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        hasInlineImages,
+        showInstructionsInTopPane,
+        overlayVisible
+      });
+
+      assert.deepEqual(result, {
+        noInstructionsWhenCollapsed: false,
+        hasInlineImages: false,
+        overlayVisible: false,
+        shortInstructions: undefined,
+        shortInstructions2: undefined,
+        longInstructions: undefined,
+        teacherMarkdown: undefined,
+        hasContainedLevels: undefined,
+        levelVideos: ["notEmpty"],
+      });
     });
   });
 });

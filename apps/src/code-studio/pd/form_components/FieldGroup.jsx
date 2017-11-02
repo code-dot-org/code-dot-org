@@ -3,6 +3,7 @@ import {
   ControlLabel,
   FormControl,
   FormGroup,
+  HelpBlock,
   Row,
   Col
 } from 'react-bootstrap';
@@ -26,6 +27,7 @@ export default class FieldGroup extends React.Component {
     const {
       id,
       validationState,
+      errorMessage,
       label,
       required,
       // we pull onChange out here just so it doesn't get included in ...props
@@ -53,6 +55,7 @@ export default class FieldGroup extends React.Component {
             </FormControl>
           </Col>
         </Row>
+        <HelpBlock>{errorMessage}</HelpBlock>
       </FormGroup>
     );
   }
@@ -65,9 +68,13 @@ FieldGroup.defaultProps = {
 
 FieldGroup.propTypes = {
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
+  ]).isRequired,
   required: PropTypes.bool,
   validationState: PropTypes.string,
+  errorMessage: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.node),
   onChange: PropTypes.func,
   labelWidth: PropTypes.object,

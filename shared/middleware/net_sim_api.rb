@@ -30,6 +30,10 @@ class NetSimApi < Sinatra::Base
 
   DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'
 
+  # Largest request we allow from NetSim clients.
+  # Max request size we've observed in normal traffic: 9KB
+  MAX_REQUEST_SIZE = 50_000 # 50 KB
+
   helpers do
     %w{
       core.rb
@@ -155,6 +159,7 @@ class NetSimApi < Sinatra::Base
     dont_cache
     not_authorized unless allowed_to_delete_shard? shard_id
     RedisTable.reset_shard(shard_id, get_redis_client(shard_id), get_pub_sub_api)
+    record_metric('ResetShard')
     no_content
   end
 
@@ -209,9 +214,17 @@ class NetSimApi < Sinatra::Base
     dont_cache
     unsupported_media_type unless has_json_utf8_headers?(request)
 
+    body_string = request.body.read
+
+    # Block request if payload is unusually large.
+    if body_string.length > MAX_REQUEST_SIZE
+      record_metric("InsertTooLarge_#{table_name}", body_string.length)
+      too_large
+    end
+
     # Parse JSON
     begin
-      body = JSON.parse(request.body.read)
+      body = JSON.parse(body_string)
     rescue JSON::ParserError
       json_bad_request(VALIDATION_ERRORS[:malformed])
     end
@@ -230,6 +243,9 @@ class NetSimApi < Sinatra::Base
     # If we get all the way down here without errors, insert everything
     table = get_table(shard_id, table_name)
     result = values.map {|value| table.insert(value, request.ip)}
+
+    record_metric("InsertBytes_#{table_name}", body_string.length)
+    record_metric("InsertRows_#{table_name}", values.count)
 
     # Finally, if we are not performing a multi-insert, denormalize our
     # return value to a single item
@@ -328,13 +344,23 @@ class NetSimApi < Sinatra::Base
     dont_cache
     unsupported_media_type unless has_json_utf8_headers?(request)
 
+    body_string = request.body.read
+
+    # Block request if payload is unusually large.
+    if body_string.length > MAX_REQUEST_SIZE
+      record_metric("UpdateTooLarge_#{table_name}", body_string.length)
+      too_large
+    end
+
     begin
       table = get_table(shard_id, table_name)
       int_id = id.to_i
-      value = table.update(int_id, JSON.parse(request.body.read), request.ip)
+      value = table.update(int_id, JSON.parse(body_string), request.ip)
     rescue JSON::ParserError
       json_bad_request
     end
+
+    record_metric("UpdateBytes_#{table_name}", body_string.length)
 
     dont_cache
     content_type :json
@@ -462,6 +488,17 @@ class NetSimApi < Sinatra::Base
     end
     message_ids = messages.map {|message| message['id']}
     message_table.delete(message_ids) unless message_ids.empty?
+  end
+
+  # Record a custom metric that will be aggregated and sent to New Relic about
+  # once a minute.
+  # @private
+  # @param [String] event_type - unique metric key within NetSimApi
+  # @param [Number] value (default 1) value of measurement, omit if we only care
+  #   about event counts.
+  def record_metric(event_type, value = 1)
+    return unless CDO.newrelic_logging
+    NewRelic::Agent.record_metric("Custom/NetSimApi/#{event_type}", value)
   end
 end
 

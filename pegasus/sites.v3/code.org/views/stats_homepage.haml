@@ -8,20 +8,37 @@
   top_statistic_number = student_accounts_percent
   top_statistic_phrase = "of US students have accounts on Code.org"
 
-  statistics = {
-    female_students => "of our students are female",
-    teacher_users => "teachers use Code.org",
-    world_students_hoc_percent => "of the world's students have tried the Hour of Code",
-    states_policy_change => "states changed policy to support computer science"
-  }
+  statistics = [
+    {
+      number: female_students,
+      phrase: "of our students are female",
+      link: '/diversity'
+    },
+    {
+      number: teacher_users,
+      phrase: "teachers use Code.org",
+      link: CDO.studio_url('/courses?view=teacher')
+    },
+    {
+      number: world_students_hoc_percent,
+      phrase: "of the world's students have tried the Hour of Code",
+      link: 'https://hourofcode.com'
+    },
+    {
+      number: states_policy_change,
+      phrase: "states changed policy to support computer science",
+      link: '/advocacy'
+    },
+  ]
 
 .make-difference We're making a difference
 
-.col-20.stats-box
-  .jumbo.stats-number= "#{top_statistic_number}"
-  .stats-phrase= "#{top_statistic_phrase}"
+.statistics
+  %a.nounderscorehover.col-20.stats-box{:href => CDO.studio_url('/courses')}
+    .jumbo.stats-number= "#{top_statistic_number}"
+    .stats-phrase= "#{top_statistic_phrase}"
 
-- statistics.each do |number, phrase|
-  .col-20.col-mobile-48.stats-box
-    .jumbo.stats-number= "#{number}"
-    .stats-phrase= "#{phrase}"
+  - statistics.each do |statistic|
+    %a.nounderscorehover.col-20.col-mobile-48.stats-box{:href=> "#{statistic[:link]}"}
+      .jumbo.stats-number= "#{statistic[:number]}"
+      .stats-phrase= "#{statistic[:phrase]}"

@@ -405,6 +405,22 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_not script_level.can_view_last_attempt(teacher, student)
   end
 
+  test 'anonymous levels must be assessments' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    assert_raises do
+      script_level.assessment = false
+      script_level.save!
+    end
+  end
+
   test 'bonus levels do not appear in the normal progression' do
     script_level = create :script_level, bonus: true
     assert_empty script_level.stage.summarize[:levels]

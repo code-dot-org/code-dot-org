@@ -86,14 +86,14 @@ export const blocks = [
   /**
    * Circuit-Playground-specific blocks
    */
-  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
+  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
 
   {func: 'led', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: CIRCUIT_CATEGORY},
   {func: 'led.off', category: CIRCUIT_CATEGORY},
-  {func: 'led.blink', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100']},
+  {func: 'led.blink', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['200']},
   {func: 'led.toggle', category: CIRCUIT_CATEGORY},
-  {func: 'led.pulse', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100']},
+  {func: 'led.pulse', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['200']},
 
   {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
   {func: 'on', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: '*.on', objectDropdown: {options: colorPixelVariables}},

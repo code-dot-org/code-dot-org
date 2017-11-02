@@ -1,6 +1,4 @@
 /** @file Top-level view for GameLab */
-/* global dashboard */
-
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
@@ -9,12 +7,13 @@ import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
 import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
 import CompletionButton from '../templates/CompletionButton';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 /**
  * Top-level React wrapper for WebLab
  */
-const WebLabView = React.createClass({
-  propTypes: {
+class WebLabView extends React.Component {
+  static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     isInspectorOn: PropTypes.bool.isRequired,
@@ -25,25 +24,15 @@ const WebLabView = React.createClass({
     onAddFileHTML: PropTypes.func.isRequired,
     onAddFileCSS: PropTypes.func.isRequired,
     onAddFileImage: PropTypes.func.isRequired,
-    onMount: PropTypes.func.isRequired
-  },
+    onMount: PropTypes.func.isRequired,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+  };
 
-  getChannelId: function () {
-    if (dashboard && dashboard.project) {
-      return dashboard.project.getCurrentId();
-    }
-    return undefined;
-  },
-
-  componentDidMount: function () {
+  componentDidMount() {
     this.props.onMount();
-  },
+  }
 
-  shouldShowHeader: function () {
-    return true;
-  },
-
-  render: function () {
+  render() {
     let iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
     let iframeStyles = {
       position: 'absolute',
@@ -115,13 +104,16 @@ const WebLabView = React.createClass({
                   onClick={this.props.onToggleInspector}
                   label={weblabMsg.toggleInspectorOn()}
                 />
-                {this.props.isReadOnlyWorkspace &&
-                  <PaneSection id="workspace-header">
+                <PaneSection id="workspace-header">
+                  {this.props.showProjectTemplateWorkspaceIcon &&
+                    <ProjectTemplateWorkspaceIcon/>
+                  }
+                  {this.props.isReadOnlyWorkspace &&
                     <span id="workspace-header-span">
                       {msg.readonlyWorkspaceHeader()}
                     </span>
-                  </PaneSection>
-                }
+                  }
+                </PaneSection>
               </div>
             </PaneHeader>
             <iframe
@@ -139,12 +131,11 @@ const WebLabView = React.createClass({
       </StudioAppWrapper>
     );
   }
-});
+}
 
-export default connect(function propsFromStore(state) {
-  return {
-    isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isInspectorOn: state.inspectorOn,
-  };
-})(WebLabView);
+export default connect(state => ({
+  isProjectLevel: state.pageConstants.isProjectLevel,
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+  isInspectorOn: state.inspectorOn,
+  showProjectTemplateWorkspaceIcon: !!state.pageConstants.showProjectTemplateWorkspaceIcon,
+}))(WebLabView);

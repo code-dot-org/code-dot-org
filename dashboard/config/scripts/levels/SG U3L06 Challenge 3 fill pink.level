@@ -8,7 +8,6 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "dot": null,
       "turnLeft": {
         "paramButtons": {
           "maxArgs": 1,
@@ -25,6 +24,22 @@
       "penDown": null,
       "penWidth": null,
       "penColor": null,
+      "dot": null,
+      "comment_Goals_1": {
+        "goal": "Move turtle"
+      },
+      "comment_Goals_2": {
+        "goal": "Orient turtle"
+      },
+      "comment_Goals_3": {
+        "goal": "Define function"
+      },
+      "comment_Goals_4": {
+        "goal": "Call function"
+      },
+      "comment_Goals_5": {
+        "goal": "Set pen properties"
+      },
       "functionParams_none": null,
       "callMyFunction": null,
       "comment": null
@@ -51,8 +66,8 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Drawing with Dots\r\n\r\nWe've added a new command called `dot()`.  \r\n\r\n**Read the documentation** for the `dot()` command.\r\n\r\n**Make a \"snowman\"**\r\n\r\n1. Set the pen color to some new color (we made ours pink)\r\n\t* Note: even if you just want the default dot color - black - explicitly set the color to black here.\r\n\r\n2. Using that color, make a dot so big that it fills the screen.\r\n\r\n3. In a different color, make 3 dots in a row, each one smaller than the next. (We made our dots white to look like a snowman)\r\n\r\nYou might want to go back to the documentation for `penColor()` to look up other colors to use.\r\n\r\n![](https://images.code.org/e63f3cf801abf22c01c475031c46ff66-image-1441992129690.gif)\r\n\r\nYou'll need two subgoals for this: Set pen properties and Move Turtle. Because you need to make two dots at the beginning without moving the turtle, you're really doing \"set pen properties\" twice in a row. Because this problem will take a little bit of experimentation to get the dots the right size, we've already outlined the problem solution with subgoals.\r\n\r\nIn workspace - prepopulate with\r\n* //Set pen properties\r\n* //Set pen properties\r\n* //Move turtle\r\n* //Set pen properties\r\n* //Move turtle\r\n* //Set pen properties",
-    "text_mode_at_start": "false",
+    "markdown_instructions": "# Drawing with Dots\r\n\r\nWe've added a new command called `dot()`.  \r\n\r\n**Read the documentation** for the `dot()` command.\r\n\r\n**Make a \"snowman\"**\r\n\r\n1. Set the pen color to some new color (we made ours pink)\r\n\t* Note: even if you just want the default dot color - black - explicitly set the color to black here.\r\n\r\n2. Using that color, make a dot so big that it fills the screen.\r\n\r\n3. In a different color, make 3 dots in a row, each one smaller than the next. (We made our dots white to look like a snowman)\r\n\r\nYou might want to go back to the documentation for `penColor()` to look up other colors to use.\r\n\r\n![](https://images.code.org/e63f3cf801abf22c01c475031c46ff66-image-1441992129690.gif)\r\n\r\nYou'll need two subgoals for this: `//Set pen properties` and `//Move Turtle`. Because you need to make two dots at the beginning without moving the turtle, you're really doing `//Set pen properties` twice in a row. Because this problem will take a little bit of experimentation to get the dots the right size, we've already outlined the problem solution with subgoals.",
+    "text_mode_at_start": "blocks",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
@@ -109,11 +124,12 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
+    "start_blocks": "//Set pen properties\r\n//Set pen properties\r\n//Move turtle\r\n//Set pen properties\r\n//Move turtle\r\n//Set pen properties",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:31:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-31 20:31:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-25 21:17:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 21:46:13 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 21:48:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:31:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-31 20:31:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-25 21:17:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 21:46:13 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 21:48:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-15 13:41:24 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 14:10:33 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -28,11 +28,3 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   Then I am on "http://studio.code.org/s/allthethings/stage/19/puzzle/1?noautoplay=true"
   And I press "runButton"
   And I wait to see "#submitButton"
-
-Scenario: 'Help & Tips' and 'Instruction' tabs are visible
-  Given I am on "http://studio.code.org/s/allthethings/stage/19/puzzle/3?enableExperiments=resourcesTab"
-  When I click selector ".uitest-helpTab" if I see it
-  And I wait until ".editor-column" contains text "Help Tab"
-  And I click selector ".uitest-instructionsTab" if I see it
-  And I wait until ".editor-column" contains text "Instructions"
-  Then I am on "http://studio.code.org/s/allthethings/stage/19/puzzle/3?disableExperiments=resourcesTab"

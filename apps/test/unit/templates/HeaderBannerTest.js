@@ -15,7 +15,7 @@ describe('HeaderBanner', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <div style={{height: 140, maxWidth: '60%'}}>
+      <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
         <div>
           Home
         </div>
@@ -37,7 +37,7 @@ describe('HeaderBanner', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <div style={{height: 140, maxWidth: '60%'}}>
+      <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
         <div>
           Home
         </div>
@@ -58,7 +58,7 @@ describe('HeaderBanner', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <div style={{height: 260, maxWidth: '60%'}}>
+      <div style={{height: 260, maxWidth: '60%', marginTop: 25}}>
         <div>
           Home
         </div>

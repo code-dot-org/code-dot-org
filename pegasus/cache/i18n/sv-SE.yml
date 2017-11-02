@@ -713,6 +713,10 @@
   volunteer_engineer_submission_type_task_mentor: Jag söker en mentor för att förbereda
     mig för kodning med mina elever
   petition_age: "Ålder"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Lär dig mer
   dashboard_landing_title: Lärare hemsida
   dashboard_landing_welcome: Välkommen till den nya och förbättrade lärarpanelen.
   dashboard_landing_video: Titta på denna video
@@ -1197,6 +1201,8 @@
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp3-a_name: 'Unit 3: Intro Programming (version A)'
+  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1946,7 +1952,7 @@
   header_my_dashboard: My Dashboard
   header_courses: kurser
   header_course_catalog: Course Catalog
-  header_project_gallery: Projektgalleriet
+  header_project_gallery: Projekt
   header_sections: Avsnitt
   header_professional_learning: Kollaborativt lärande
   header_educate_overview: Pedagog översikt

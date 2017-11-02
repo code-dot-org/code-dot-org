@@ -54,12 +54,12 @@ const styles = {
   }
 };
 
-const ProgressBubbleSet = React.createClass({
-  propTypes: {
+class ProgressBubbleSet extends React.Component {
+  static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-  },
+  };
 
   render() {
     const { levels, disabled, style } = this.props;
@@ -98,6 +98,6 @@ const ProgressBubbleSet = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default Radium(ProgressBubbleSet);

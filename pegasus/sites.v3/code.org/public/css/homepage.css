@@ -374,19 +374,6 @@ body.modal-open .supreme-container{
   border: 1px solid rgb(146,147,148);
 }
 
-.stats-number {
-  font-weight: 900;
-  text-align: center;
-  color: rgb(77, 87, 95);
-}
-
-.stats-phrase {
-  font-size: 14px;
-  text-align: center;
-  padding-top: 25px;
-  color: rgb(77, 87, 95);
-}
-
 .stats-box {
   padding: 50px 20px 20px 20px;
 }
@@ -398,4 +385,23 @@ body.modal-open .supreme-container{
   text-align: center;
   margin-top: 20px;
   text-transform: uppercase;
+}
+
+.statistics a .stats-number {
+  text-align: center;
+  color: rgb(77, 87, 95);
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: 900;
+}
+
+.statistics a .stats-phrase {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 25px;
+  color: rgb(77, 87, 95);
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+.statistics a .stats-number:hover {
+  color: rgb(0,173,188);
 }

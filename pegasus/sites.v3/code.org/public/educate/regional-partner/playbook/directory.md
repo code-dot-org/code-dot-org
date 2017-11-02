@@ -8,6 +8,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Colorado](#co)**</br/>
 - **[Florida](#fl)**<br/>
 - **[Georgia](#ga)**<br/>
+- **[Hawaii](#hi)**<br/>
 - **[Idaho](#id)**<br/>
 - **[Illinois](#il)**<br/>
 - **[Indiana](#in)**<br/>
@@ -16,6 +17,8 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Maine](#me)**</br/>
 - **[Maryland](#md)**<br/>
 - **[Michigan](#mi)**<br/>
+- **[Minnesota](#mn)**<br/>
+- **[Missouri](#mo)**<br/>
 - **[Montana](#mt)**</br/>
 - **[Nevada](#nv)**</br/>
 - **[New Jersey](#nj)**</br/>
@@ -30,6 +33,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Utah](#ut)**<br/>
 - **[Virginia](#va)**<br/>
 - **[Washington](#wa)**<br/>
+- **[West Virgina](#wv)**</br/>
 - **[Wisconsin](#wi)**</br/>
 
 ________________
@@ -347,6 +351,30 @@ chris.thompson@ceismc.gatech.edu<br/>
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="hi"></a>
+
+## Hawaii
+### [STEMworks, a Program of Women In Technology](http://www.stemworkshawaii.org)<br/>
+Hawaii<br/>
+
+STEMworks, a program of Women In Technology, provides educational resources, inspiration and cutting edge tools designed to develop critical thinkers while empowering students to improve their local community and world.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Supporting gender equity <br/>
+
+**Contact Information**<br/>
+Mapu Quitazol<br/>
+Mapu@medb.org<br/>
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="id"></a>
 
@@ -455,8 +483,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and co-working<br/>
 
 **Contact Information**<br/>
-Kristine Sorensen<br/>
-Kristine@newbo.co
+Samantha Dahlby, K-12 Education Coordinator<br/>
+Samantha@newbo.co
 
 <br/>
 
@@ -553,6 +581,51 @@ Kathy Surd<br/>
 ksurd@wsesd.org
 
 <br/>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="mn"></a>
+
+## Minnesota
+### [Twin Cities PBS](http://scigirlsconnect.org)<br/>
+Minnesota<br/>
+
+Twin Cities PBS (TPT) mission is to enrich lives and strengthen our community through the power of media. The STEM Department at TPT creates a nationally broadcast PBS television show, creates STEM content for K-12 educators, and runs a national education outreach program.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Gender equity, Adult learning strategies, Creating media<br/>
+
+**Contact Information**<br/>
+Alex Dexheimer<br/>
+adexheimer@tpt.org
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="mo"></a>
+
+## Missouri
+### [Institute for School Partnership at Washington University in St. Louis](https://schoolpartnership.wustl.edu/)<br/>
+Missouri<br/>
+
+The Institute for School Partnership is Washington University in St. Louis’ signature effort to strategically improve teaching and learning within the K-12 education community. Through ISP, local schools are connected with a world-class research university, teachers are inspired with new knowledge, and teachers and students are empowered with the best resources.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Developing partnerships with districts, Building a self-sustaining program<br/>
+
+**Contact Information**<br/>
+Jaime Gilligan<br/>
+gilliganj@wustl.edu
+
 
 [**Back to the top**](#top)
 <br/>
@@ -963,6 +1036,29 @@ CLydon@psesd.org<br/>
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="wv"></a>
+
+## West Virgina
+### [WVU Center for Excellence in STEM Education](http://stemcenter.wvu.edu)<br/>
+West Virgina<br/>
+
+The WVU Center for Excellence in STEM Education's mission is to serve as a cross-college organizational structure that integrates, deepens, and extends the scope, nature, and ultimately, the impact of STEM education research. This Center seeks to promote activities that improve STEM education in West Virginia K-20.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** STEM pre-service teacher preparation; Physics education; STEM Education research
+
+**Contact Information**<br/>
+Amanda Jelsema<br/>
+amanda.jelsema@mail.wvu.edu<br/>
+
+[**Back to the top**](#top)
+<br/>
+
 
 ________________
 <a id="wi"></a>

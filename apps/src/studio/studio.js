@@ -72,6 +72,8 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
+import experiments from '../util/experiments';
+import {SignInState} from '../code-studio/progressRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -117,6 +119,11 @@ const EdgeClassNames = [
 
 let level;
 let skin;
+
+// These skins can be published as projects.
+const PUBLISHABLE_SKINS = [
+  'gumball', 'studio', 'iceage', 'infinity'
+].concat(experiments.isEnabled('publishMoreProjects') ? 'hoc2015' : undefined);
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -788,7 +795,7 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
       if (modifyQueues && (moveDirection.x !== 0 || moveDirection.y !== 0)) {
         cmd.opts.queuedDistance -=  distThisMove;
         if ("0.00" === Math.abs(cmd.opts.queuedDistance).toFixed(2)) {
-          cmd.opts.queuedDistance = 0;
+          handler.cmdQueue.shift();
         }
       }
     }
@@ -2778,8 +2785,8 @@ Studio.displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    const saveToProjectGallery = skin.id === 'studio';
-    const {isSignedIn} = getStore().getState().pageConstants;
+    const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
+    const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2798,7 +2805,7 @@ Studio.displayFeedback = function () {
       saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
-      disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
+      disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
@@ -3113,8 +3120,8 @@ Studio.hasUnexpectedLocalFunction_ = function () {
   }
 };
 
-function handleExecutionError(err, lineNumber) {
-  outputError(String(err), lineNumber);
+function handleExecutionError(err, lineNumber, outputString) {
+  outputError(outputString, lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
   // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
