@@ -1,8 +1,4 @@
-require 'singleton'
-
-class Api::V1::SchoolAutocomplete
-  include Singleton
-
+class Api::V1::SchoolAutocomplete < AutocompleteHelper
   # The minimum query length.
   MIN_QUERY_LENGTH = 4
 
@@ -11,7 +7,7 @@ class Api::V1::SchoolAutocomplete
   # @param query [String] the user-define query string
   # @param limit [int] the maximum number of results to return
   # @return [Array] an array of JSON formatted schools
-  def get_matches(query, limit)
+  def self.get_matches(query, limit)
     query = query.strip
     return [] if query.length < MIN_QUERY_LENGTH
 
@@ -36,27 +32,8 @@ class Api::V1::SchoolAutocomplete
   # name or city.
   # @param query [String] the user-define query string
   # @return [boolean] true if it might be a ZIP, false otherwise
-  def search_by_zip?(query)
+  def self.search_by_zip?(query)
     return !!(query =~ /^(\d{,5}|(\d{5}-\d{,4}))$/)
-  end
-
-  # Formats the query string for boolean full-text search.
-  # For instance, if the user-defined query string is 'abc def',
-  # the string is reformatted to '+ABC +DEF*'.
-  # Strings shorter than 3 characters aren't indexed so those are filtered out.
-  # @see https://dev.mysql.com/doc/refman/5.6/en/fulltext-boolean.html
-  # @param query [String] the user-defined query string
-  # @return [String] the formatted query string
-  def to_search_string(query)
-    words = query.strip.split(/\s+/).map do |w|
-      w.gsub(/\W/, '').upcase
-    end.map(&:presence).compact
-
-    # Don't filter the last word if it is short since we will
-    # append it with * for a wildcard search.
-    words = words.select.with_index {|w, i| i == words.length - 1 || w.length >= 3}
-
-    return words.empty? ? "" : "+#{words.join(' +')}*"
   end
 
   # JSON serializer used by get_matches.
