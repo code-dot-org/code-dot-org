@@ -1153,6 +1153,8 @@ Artist.prototype.finishExecution_ = function () {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
 
+  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
+
   if (this.level.freePlay) {
     window.dispatchEvent(new Event('artistDrawingComplete'));
   } else {
@@ -1823,8 +1825,6 @@ Artist.prototype.checkAnswer = function () {
   if (level.freePlay) {
     this.testResults = TestResults.FREE_PLAY;
   }
-
-  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
   if (this.testResults === TestResults.FREE_PLAY ||
