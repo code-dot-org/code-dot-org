@@ -1,30 +1,28 @@
 import { makeEnum } from '@cdo/apps/utils';
 
-const SET_RESPONSIVE_SIZE = 'isRtl/SET_RESPONSIVE_SIZE';
+const SET_RESPONSIVE_SIZE = 'responsive/SET_RESPONSIVE_SIZE';
 export const setResponsiveSize = responsiveSize => ({ type: SET_RESPONSIVE_SIZE, responsiveSize });
 
 export const ResponsiveSize = makeEnum('lg', 'md', 'sm', 'xs');
 
 // Default window widths that are the starting points for each width category.
-const Breakpoints = {
-  [ResponsiveSize.lg]: 992,
-  [ResponsiveSize.md]: 720,
-  [ResponsiveSize.sm]: 650,
-  [ResponsiveSize.xs]: 0,
-};
+const Breakpoints = [
+  {breakpoint: 992, responsiveSize: ResponsiveSize.lg},
+  {breakpoint: 720, responsiveSize: ResponsiveSize.md},
+  {breakpoint: 650, responsiveSize: ResponsiveSize.sm},
+  {breakpoint: 0, responsiveSize: ResponsiveSize.xs},
+];
 
-export function getResponsiveBreakpoint() {
-  const width = window.innerWidth;
-
-  Object.entries(Breakpoints, ([responsiveSize, breakpointWidth]) => {
-    if (width > breakpointWidth) {
-      return responsiveSize;
+export function getResponsiveBreakpoint(width) {
+  return Breakpoints.find(({breakpoint}) => {
+    if (width > breakpoint) {
+      return true;
     }
-  });
+  }).responsiveSize;
 }
 
 const initialState = {
-  responsiveSize: getResponsiveBreakpoint(),
+  responsiveSize: getResponsiveBreakpoint(window.innerWidth),
 };
 
 /**
