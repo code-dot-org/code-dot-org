@@ -339,7 +339,7 @@ export default class FormController extends React.Component {
       }
     });
 
-    pageData = {...pageData, ...currentPage.processPageData(pageData)};
+    pageData = Object.assign(pageData, currentPage.processPageData(pageData));
     this.setState({
       data: {
         ...this.state.data,
