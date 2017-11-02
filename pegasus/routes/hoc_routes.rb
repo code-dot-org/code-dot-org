@@ -133,6 +133,7 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   end
 end
 
+# I think I'll need to modify this so the partner sites continue to go to old /congrats and code.org tutorials will go to new /congrats ?
 get '/api/hour/finish' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   complete_tutorial
