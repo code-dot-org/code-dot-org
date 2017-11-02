@@ -219,14 +219,20 @@ social:
       %img{src: "/images/fit-300/stats-languages.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
-      %p=hoc_s(:stats_global)
-      %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
+      -if @language == "en"
+        %img{src: "/images/fit-300/stats-400m.jpg", style: "width: 100%;"}
+      -else
+        %p=hoc_s(:stats_global)
+        %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
-      %p=hoc_s(:stats_girls_more)
-      %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
-        %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
-
+      -if @language == "en"
+        %p=hoc_s(:stats_females)
+        %img{src: "/images/fit-300/stats-females.jpg", style: "width: 100%;"}
+        %p=hoc_s(:stats_females_more)
+      -else
+        %p=hoc_s(:stats_girls_more)
+        %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
 
   -# Signup
 
