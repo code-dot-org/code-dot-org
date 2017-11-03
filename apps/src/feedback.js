@@ -361,6 +361,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     return;
   }
 
+  $('#feedback-dialog').remove();
+
   var feedbackDialog = this.createModalDialog({
     contentDiv: feedback,
     icon: icon,
@@ -520,12 +522,21 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       const store = getStore();
       FeedbackUtils.showConfirmPublishDialog(() => {
         store.dispatch({type: PUBLISH_REQUEST});
+        let didPublish = false;
         project.copy(project.getNewProjectName(), {shouldPublish: true})
           .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
-          .catch(err => {
+          .then(() => {
+            store.dispatch({type: PUBLISH_SUCCESS});
+            didPublish = true;
+          }).catch(err => {
             console.log(err);
             store.dispatch({type: PUBLISH_FAILURE});
+          }).then(() => {
+           showFeedbackDialog();
+           if (didPublish) {
+             $(publishButtonSelector).prop('disabled', true).text(msg.published());
+             $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+           }
           });
       });
     });
@@ -556,9 +567,13 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  feedbackDialog.show({
-    backdrop: (options.app === 'flappy' ? 'static' : true)
-  });
+  function showFeedbackDialog() {
+    feedbackDialog.show({
+      backdrop: (options.app === 'flappy' ? 'static' : true)
+    });
+  }
+
+  showFeedbackDialog();
 
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
