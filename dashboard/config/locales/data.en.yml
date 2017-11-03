@@ -554,6 +554,7 @@ en:
         'mc_2017_puzzle_1' : 'Minecraft Hour of Code - The Agent'
         'mc_2017_puzzle_3' : 'Minecraft Hour of Code - Repeat Loops'
         'mc_2017_puzzle_8' : 'Minecraft Hour of Code - Functions'
+        'mc_2017_puzzle_12' : 'Minecraft Hour of Code - Freeplay'
     callout:
       text:
         # Keyed by #{callout.localization_key}
