@@ -2,7 +2,7 @@
 import React from 'react';
 import {expect} from '../../../util/configuredChai';
 import {mount} from 'enzyme';
-import ValidationStep, {Status} from '@cdo/apps/templates/ValidationStep';
+import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 describe('ValidationStep', () => {
   describe('can render every status', () => {
