@@ -118,7 +118,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
-          assert(document.getElementById('idDrop2').value === 'test-value');
+          assert(document.getElementById('idDrop2').value === 'b');
           Applab.onPuzzleComplete();
         });
       },
