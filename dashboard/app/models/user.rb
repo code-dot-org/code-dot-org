@@ -988,7 +988,11 @@ class User < ActiveRecord::Base
   def age
     return @age unless birthday
     age = UserHelpers.age_from_birthday(birthday)
-    age = "21+" if age >= 21
+    if age < 4
+      age = nil
+    elsif age >= 21
+      age = '21+'
+    end
     age
   end
 
