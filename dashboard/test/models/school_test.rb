@@ -21,4 +21,76 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
   end
+
+  test 'high needs false when no stats data' do
+    school = School.find_by_id('20000100206')
+    assert_equal(false, school.high_needs?)
+  end
+
+  test 'high needs false when null students total' do
+    school = School.find_by_id('20000100206')
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999'
+      }
+    )
+    school.save!
+    assert_equal(false, school.high_needs?)
+  end
+
+  test 'high needs false when null frl eligible total' do
+    school = School.find_by_id('20000100206')
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4
+      }
+    )
+    school.save!
+    assert_equal(false, school.high_needs?)
+  end
+
+  test 'high needs false when null frl eligible below 50 percent of students' do
+    school = School.find_by_id('20000100206')
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4,
+        frl_eligible_total: 1
+      }
+    )
+    school.save!
+    assert_equal(false, school.high_needs?)
+  end
+
+  test 'high needs false when null frl eligible equal to 50 percent of students' do
+    school = School.find_by_id('20000100206')
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4,
+        frl_eligible_total: 2
+      }
+    )
+    school.save!
+    assert_equal(false, school.high_needs?)
+  end
+
+  test 'high needs false when null frl eligible above 50 percent of students' do
+    school = School.find_by_id('20000100206')
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4,
+        frl_eligible_total: 3
+      }
+    )
+    school.save!
+    assert_equal(true, school.high_needs?)
+  end
 end
