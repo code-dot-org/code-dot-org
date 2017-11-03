@@ -17,4 +17,17 @@ describe('StudentsBeyondHoc', () => {
     );
     expect(wrapper.find('CourseBlocksStudentGradeBands').exists()).to.be.true;
   });
+
+  it('renders a LocalClassActionBlock component', () => {
+    const responsive = new Responsive();
+    const wrapper = shallow(
+      <StudentsBeyondHoc
+        completedTutorialType="other"
+        MCShareLink="code.org/minecraft/sharelink"
+        responsive={responsive}
+        isRtl={false}
+      />
+    );
+    expect(wrapper.find('LocalClassActionBlock').exists()).to.be.true;
+  });
 });
