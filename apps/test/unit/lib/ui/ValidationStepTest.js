@@ -1,21 +1,21 @@
 /** @file Test SetupStep component */
 import React from 'react';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../../util/configuredChai';
 import {mount} from 'enzyme';
-import ValidateStep, {Status} from '@cdo/apps/templates/ValidateStep';
+import ValidationStep, {Status} from '@cdo/apps/templates/ValidationStep';
 
-describe('ValidateStep', () => {
+describe('ValidationStep', () => {
   describe('can render every status', () => {
     // This is the lazy 100% coverage test :D
     Object.values(Status).forEach(status => {
       it(status, () => {
         const wrapper = mount(
-          <ValidateStep
+          <ValidationStep
             stepName={`${status} step name`}
             stepStatus={status}
           >
             Some help content for a {status} step.
-          </ValidateStep>
+          </ValidationStep>
         );
         expect(wrapper).not.to.be.null;
       });
@@ -24,12 +24,12 @@ describe('ValidateStep', () => {
 
   it('renders nothing when step is hidden', () => {
     const wrapper = mount(
-      <ValidateStep
+      <ValidationStep
         stepName="Hidden step"
         stepStatus={Status.HIDDEN}
       >
         Some help content.
-      </ValidateStep>
+      </ValidationStep>
     );
     expect(wrapper.html()).to.be.null;
   });
@@ -37,12 +37,12 @@ describe('ValidateStep', () => {
   it('renders help text when step is failed', () => {
     const helpString = 'XYZZY help content';
     const wrapper = mount(
-      <ValidateStep
+      <ValidationStep
         stepName="Failed step"
         stepStatus={Status.FAILED}
       >
         {helpString}
-      </ValidateStep>
+      </ValidationStep>
     );
     expect(wrapper.text()).to.include(helpString);
   });
@@ -55,12 +55,12 @@ describe('ValidateStep', () => {
       }
 
       const wrapper = mount(
-          <ValidateStep
+          <ValidationStep
             stepName={`${status} step`}
             stepStatus={status}
           >
             {helpString}
-          </ValidateStep>
+          </ValidationStep>
       );
       expect(wrapper.text()).not.to.include(helpString);
     });

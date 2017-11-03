@@ -9,7 +9,7 @@ import {
   getChromeVersion,
   isCodeOrgBrowser,
 } from '../util/browserChecks';
-import ValidateStep, {Status} from '../../../../templates/ValidateStep';
+import ValidationStep, {Status} from '../../../ui/ValidationStep';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -177,7 +177,7 @@ export default class SetupChecklist extends Component {
           </h2>
           <div className="setup-status">
             {this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED &&
-              <ValidateStep
+              <ValidationStep
                 stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
                 stepName="Using a supported browser"
               >
@@ -185,21 +185,21 @@ export default class SetupChecklist extends Component {
                 Your current browser is not supported at this time.
                 Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
                 <br/><em>Note: We plan to support other browsers including Internet Explorer in Fall 2017.</em>
-              </ValidateStep>
+              </ValidationStep>
             }
             {this.state[STATUS_SUPPORTED_BROWSER] === Status.SUCCEEDED && isCodeOrgBrowser() &&
-              <ValidateStep
+              <ValidationStep
                 stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
                 stepName="Code.org Browser"
               />
             }
             {this.state[STATUS_SUPPORTED_BROWSER] === Status.SUCCEEDED && isChrome() &&
               <div>
-                <ValidateStep
+                <ValidationStep
                   stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
                   stepName="Chrome version 33+"
                 />
-                <ValidateStep
+                <ValidationStep
                   stepStatus={this.state[STATUS_APP_INSTALLED]}
                   stepName="Chrome App installed"
                 >
@@ -216,22 +216,22 @@ export default class SetupChecklist extends Component {
                   <br/>If a prompt asking for permission for Code Studio to connect
                   to the Chrome App pops up, click Accept.
                   {surveyLink}
-                </ValidateStep>
+                </ValidationStep>
               </div>
             }
-            <ValidateStep
+            <ValidationStep
               stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
               stepName="Windows drivers installed? (cannot auto-check)"
             />
-            <ValidateStep
+            <ValidationStep
               stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             >
               We couldn't detect a Circuit Playground board.
               Make sure your board is plugged in, and click <a href="#" onClick={this.redetect.bind(this)}>re-detect</a>.
               {surveyLink}
-            </ValidateStep>
-            <ValidateStep
+            </ValidationStep>
+            <ValidationStep
               stepStatus={this.state[STATUS_BOARD_CONNECT]}
               stepName="Board connectable"
             >
@@ -239,8 +239,8 @@ export default class SetupChecklist extends Component {
               <br/>You should make sure it has the right firmware sketch installed.
               You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
               {surveyLink}
-            </ValidateStep>
-            <ValidateStep
+            </ValidationStep>
+            <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName="Board components usable"
             >
@@ -248,7 +248,7 @@ export default class SetupChecklist extends Component {
               <br/>You should make sure your board has the right firmware sketch installed.
               You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
               {surveyLink}
-            </ValidateStep>
+            </ValidationStep>
           </div>
           <h2>Survey / Support</h2>
           <div>
