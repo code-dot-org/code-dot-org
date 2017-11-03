@@ -1,0 +1,6 @@
+- data = {}
+- data[:eligibility_status] = { statusPD: true, studentCount: false }
+
+%script{src: minifiable_asset_path('js/maker/discountcode.js'), data: {discountcode: data.to_json}}}
+
+#discountcode

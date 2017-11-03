@@ -11,7 +11,6 @@ const FAKE_TUTORIAL = {
   image: '/images/httyd.png',
   tags_length: '001',
   tags_subject: '002',
-  tags_teacher_experience: '003',
   tags_student_experience: '004',
   tags_activity_type: '005',
   tags_international_languages: '006',

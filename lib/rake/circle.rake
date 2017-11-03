@@ -31,6 +31,9 @@ SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 # Run UI tests against ChromeLatestWin7
 SKIP_CHROME_TAG = 'skip chrome'.freeze
 
+# Run UI tests against Chrome44Win7
+TEST_CHROME_44_TAG = 'test chrome 44'.freeze
+
 # Run UI tests against Firefox45Win7
 TEST_FIREFOX_TAG = 'test firefox'.freeze
 
@@ -166,6 +169,7 @@ end
 def browsers_to_run
   browsers = []
   browsers << 'ChromeLatestWin7' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Chrome44Win7' if CircleUtils.tagged?(TEST_CHROME_44_TAG)
   browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
   browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
   browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)

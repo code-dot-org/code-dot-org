@@ -16,11 +16,12 @@ const contentWidth = styleConstants['content-width'];
 const styles = {
   box: {
     width: contentWidth,
-    marginBottom: 60
   },
   boxResponsive: {
     width: '100%',
-    marginBottom: 60
+  },
+  bottomMargin: {
+    marginBottom: 60,
   },
   headingBox: {
     paddingRight: 10,
@@ -125,11 +126,12 @@ class ContentContainer extends Component {
     link: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
-    responsive: PropTypes.instanceOf(Responsive)
+    responsive: PropTypes.instanceOf(Responsive),
+    hideBottomMargin: PropTypes.bool
   };
 
   render() {
-    const { heading, link, linkText, description, isRtl, responsive }= this.props;
+    const { heading, link, linkText, description, isRtl, responsive, hideBottomMargin }= this.props;
 
     const showLinkTop =
       (!responsive || responsive.isResponsiveCategoryActive('lg')) &&
@@ -137,9 +139,11 @@ class ContentContainer extends Component {
     const showLinkBottom =
       responsive && responsive.isResponsiveCategoryInactive('lg') &&
       link && linkText;
+    const boxStyles = responsive ? styles.boxResponsive : styles.box;
+    const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
 
     return (
-      <div style={responsive ? styles.boxResponsive : styles.box}>
+      <div style={[boxStyles, bottomMargin]}>
         {(heading || (link && linkText)) && (
           <div style={styles.headingBox}>
             <div style={isRtl ? styles.headingTextRtl : styles.headingText}>

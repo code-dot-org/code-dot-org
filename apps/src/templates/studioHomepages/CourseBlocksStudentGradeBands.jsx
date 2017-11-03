@@ -8,7 +8,8 @@ class CourseBlocksStudentGradeBands extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
-    showContainer: PropTypes.bool.isRequired
+    showContainer: PropTypes.bool.isRequired,
+    hideBottomMargin: PropTypes.bool.isRequired
   };
 
   cards = [
@@ -30,7 +31,7 @@ class CourseBlocksStudentGradeBands extends Component {
   ];
 
   render() {
-    const { showContainer } = this.props;
+    const { showContainer, hideBottomMargin } = this.props;
     const link = showContainer ? '/home/#recent-courses' : '';
     const linkText = showContainer ? i18n.viewMyRecentCourses() : '';
     const heading = showContainer ? i18n.courseBlocksGradeBandsContainerHeading() : '';
@@ -44,6 +45,7 @@ class CourseBlocksStudentGradeBands extends Component {
         description={description}
         isRtl={this.props.isRtl}
         responsive={this.props.responsive}
+        hideBottomMargin={hideBottomMargin}
       >
         <CourseBlocksGradeBands
           cards={this.cards}

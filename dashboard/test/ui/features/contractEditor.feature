@@ -32,6 +32,10 @@ Scenario: Creating and modifying a new contract
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
+  And element ".tooltip-x-close" is visible
+  And callout "0" is visible
+  And I close callout "0"
+  And callout "0" is hidden
   When I open the topmost blockly category "Functions"
   And I see no difference for "category view"
   And I press the SVG text "Create a Function"

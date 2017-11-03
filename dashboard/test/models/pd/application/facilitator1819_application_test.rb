@@ -95,5 +95,33 @@ module Pd::Application
         application.answer_with_additional_text(application_hash, :how_heard, OPTION, :how_heard_regional_partner)
       )
     end
+
+    test 'csf applications have csd-csp answers filtered out' do
+      application_hash = build :pd_facilitator1819_application_hash,
+        :with_csf_specific_fields, :with_csd_csp_specific_fields,
+        program: Facilitator1819Application::PROGRAMS[:csf]
+      application = build :pd_facilitator1819_application, form_data_hash: application_hash, course: :csf
+
+      answers = application.full_answers
+      assert answers.key? :csf_availability
+      assert answers.key? :csf_partial_attendance_reason
+      refute answers.key? :csd_csp_fit_availability
+      refute answers.key? :csd_csp_teachercon_availability
+    end
+
+    test 'csd and csp applications have csf answers filtered out' do
+      [:csd, :csp].each do |course|
+        application_hash = build :pd_facilitator1819_application_hash,
+          :with_csf_specific_fields, :with_csd_csp_specific_fields,
+          program: Facilitator1819Application::PROGRAMS[course]
+        application = build :pd_facilitator1819_application, form_data_hash: application_hash, course: course
+
+        answers = application.full_answers
+        refute answers.key? :csf_availability
+        refute answers.key? :csf_partial_attendance_reason
+        assert answers.key? :csd_csp_fit_availability
+        assert answers.key? :csd_csp_teachercon_availability
+      end
+    end
   end
 end

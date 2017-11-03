@@ -81,7 +81,7 @@
 .itemblock{style: "display: none;"}
   .school-info-labelblock= t('school_info.school_address')
   %div.controls
-    %textarea#school-address.form-control.fieldblock{name: "#{form_name}[full_address]", required: false, rows: 4, style: "width: calc(100% - 15px); resize: vertical;"}
+    %textarea#school-address.form-control.fieldblock{name: "#{form_name}[full_address]", required: false, rows: 4, maxlength: 255, style: "width: calc(100% - 15px); resize: vertical;"}
 
 :javascript
 
