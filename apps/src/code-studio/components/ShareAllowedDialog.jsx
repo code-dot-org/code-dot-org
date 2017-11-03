@@ -351,7 +351,9 @@ class ShareAllowedDialog extends React.Component {
                 />}
                 {canPublish && !isPublished && !hasThumbnail &&
                   <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}}>{i18n.thumbnailWarning()}</span>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.thumbnailWarning()}
+                      </span>
                   </div>
                 }
                 <div style={{clear: 'both', marginTop: 40}}>
