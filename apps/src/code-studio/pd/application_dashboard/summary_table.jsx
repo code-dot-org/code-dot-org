@@ -1,9 +1,10 @@
- /**
+/**
  * Table displaying a summary of application statuses
  */
 import React, {PropTypes} from 'react';
 import {Table, Button} from 'react-bootstrap';
 import color from '@cdo/apps/util/color';
+import _ from 'lodash';
 
 const styles = {
   table: {
@@ -14,6 +15,16 @@ const styles = {
     width: '33.3%',
     paddingBottom: '30px'
   }
+};
+
+const status_colors = {
+  'unreviewed': color.charcoal,
+  'pending': color.lighter_orange,
+  'interview': color.orange,
+  'waitlisted': color.level_passed,
+  'accepted': color.level_perfect,
+  'declined': color.red,
+  'withdrawn': color.lightest_red
 };
 
 export default class SummaryTable extends React.Component {
@@ -27,22 +38,25 @@ export default class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   }
 
-  tableRow = (label, bgColor, textColor, data) =>  {
-    const status = label.toLowerCase().replace(/ /g,'_');
-    const total = data[status];
-
-    return (
-      <tr>
-        <td style={{backgroundColor: bgColor, color: textColor}}>{label}</td>
-        <td>{total}</td>
-      </tr>
-    );
-  };
+  tableBody = () => {
+    return Object.keys(status_colors).map((status, i) => {
+      if (this.props.data.hasOwnProperty(status)) {
+        return (
+          <tr key={i}>
+            <td style={{backgroundColor: status_colors[status]}}>
+              {_.upperFirst(status)}
+            </td>
+            <td>{this.props.data[status]}</td>
+          </tr>
+        );
+      }
+    });
+  }
 
   handleViewClick = (event) => {
     event.preventDefault();
     this.context.router.push(`/${this.props.path}`);
-  };
+  }
 
   render() {
     return (
@@ -56,13 +70,7 @@ export default class SummaryTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.tableRow('Unreviewed', color.charcoal, color.white, this.props.data)}
-            {this.tableRow('Pending', color.lighter_orange, color.black, this.props.data)}
-            {this.tableRow('Move to Interview', color.orange, color.black, this.props.data)}
-            {this.tableRow('Waitlisted', color.level_passed, color.black, this.props.data)}
-            {this.tableRow('Accepted', color.level_perfect, color.black, this.props.data)}
-            {this.tableRow('Declined', color.red, color.white, this.props.data)}
-            {this.tableRow('Withdrawn', color.lightest_red, color.black, this.props.data)}
+            {this.tableBody()}
           </tbody>
         </Table>
         <Button

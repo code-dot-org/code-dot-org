@@ -4,8 +4,6 @@ import Facilitator1819Questions from './detail_view_facilitator_specific_compone
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 
-const STATUSES = ['Unreviewed', 'Pending', 'Move to Interview', 'Waitlisted', 'Accepted', 'Declined', 'Withdrawn'];
-
 export default class DetailViewContents extends React.Component {
   static propTypes = {
     applicationId: PropTypes.string.isRequired,
@@ -18,7 +16,16 @@ export default class DetailViewContents extends React.Component {
       email: PropTypes.string,
       form_data: PropTypes.object
     }),
-    updateProps: PropTypes.func.isRequired
+    updateProps: PropTypes.func.isRequired,
+    path: PropTypes.string.isRequired
+  };
+
+  statuses = () => {
+    let statuses = ['Unreviewed', 'Pending', 'Waitlisted', 'Accepted', 'Declined', 'Withdrawn'];
+    if (this.props.path.includes('facilitators')) {
+      statuses.splice(2, 0, 'Interview');
+    }
+    return statuses;
   };
 
   state = {
@@ -108,8 +115,8 @@ export default class DetailViewContents extends React.Component {
             style={{marginRight: '5px'}}
           >
             {
-              STATUSES.map((status, i) => (
-                <option value={status.toLowerCase().replace(/ /g, '_')} key={i}>
+              this.statuses().map((status, i) => (
+                <option value={status.toLowerCase()} key={i}>
                   {status}
                 </option>
               ))
