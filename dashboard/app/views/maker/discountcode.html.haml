@@ -1,4 +1,6 @@
-%script{src: minifiable_asset_path('js/maker/discountcode.js')}
+- data = {}
+- data[:something_interesting] = 'Hello there'
 
-#something
-  Here is text
+%script{src: minifiable_asset_path('js/maker/discountcode.js'), data: {discountcode: data.to_json}}}
+
+#discountcode
