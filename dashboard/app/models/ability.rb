@@ -85,10 +85,6 @@ class Ability
         end
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
-
-        if user.regional_partners.any?
-          can [:read, :quick_view], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
-        end
       end
 
       if user.facilitator?
@@ -129,6 +125,9 @@ class Ability
         can :index, :workshop_organizer_survey_report
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
+        if user.regional_partners.any?
+          can [:read, :quick_view], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+        end
       end
 
       if user.permission?(UserPermission::WORKSHOP_ADMIN)
