@@ -20,6 +20,7 @@ $(document).ready(() => {
       {true &&
         <DiscountCodeInstructions
           discountCode="XXX3XXX"
+          discountComplete={true}
         />
       }
     </div>
