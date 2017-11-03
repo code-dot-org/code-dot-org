@@ -4,7 +4,7 @@ ko:
   language: '한국어'
   front_title: '2015년 12월 7일- 12월 13일, 역사상 가장 큰 학습 이벤트에 참여하세요.'
   coming_soon: '곧 시작됩니다.'
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+  compatibility_unsupported_browser: "브라우저가 지원 되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저 중 하나</a>로 귀하의 브라우저를 업그레이드 하시기 바랍니다. 페이지를 볼 수는 있지만 제대로 동작하지 않을 수 있습니다."
   campaign_date_start_short: "12월 7일"
   campaign_date_start_long: "12월 7일"
   campaign_date_short: "12월 7일-13일"
@@ -21,10 +21,10 @@ ko:
   header_menu_faq: '자주 묻는 질문 (FAQ)'
   header_menu_how_to: '방법'
   header_menu_promote: '홍보/지원'
-  header_menu_activities: 'Activities'
-  not_found_title: 'Page Not Found'
-  not_found_desc: 'The requested page was not found'
-  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
+  header_menu_activities: '활동'
+  not_found_title: '페이지를 찾을 수 없습니다.'
+  not_found_desc: '요청한 페이지를 찾을 수 없습니다. 주소를 정확히 입력했는지 확인해보세요.'
+  not_found_instructions: '웹 주소를 확인 하 고 다시 제출 또는 아래 목록에서 링크를 선택하십시오.'
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -142,6 +142,7 @@ ko:
   company_strongnet: Strongsville School District
   company_TukwilaSchoolDistrict: Tukwila School District
   company_vermilionschools: Vermilion Local School District
+  company_vista-equity-partners: "Vista Equity Partners"
   company_walthampublicschools: Waltham Public Schools
   company_warrencountyschools: Warren County Schools
   company_WaynesboroPublicSchools: Waynesboro Public Schools
@@ -177,18 +178,18 @@ ko:
   share_on_facebook: '페이스북에 공유'
   share_on_twitter: '트위터에 공유'
   front_join_us_heading: '모든 학생들을 위한 1시간짜리 Hour of Code'
-  front_join_us_announcements: 'Announcements'
-  front_join_us_anybody_can_learn: 'Anybody can learn'
+  front_join_us_announcements: '공지사항'
+  front_join_us_anybody_can_learn: '누구나 배울 수 있습니다.'
   front_join_us_description: '컴퓨터과학(정보과학) 은 모든 학생들이 배워야하는 기초 교과입니다. 1억명의 학생들에게 소개하기 위해서 함께 도와주세요.'
   front_join_us_description_short: '컴퓨터과학(정보과학) 은 모든 학생들에게 필수적으로 필요한 기초입니다.'
   front_join_us_button: '함께 참여하기'
   front_what_is_hoc: 'Hour of Code 란?'
   front_join_us_header: '누구나 기초/개념/원리들을 배울 수 있고, 재미있게 할 수 있습니다!'
   front_join_us_volunteer_header: 'Hour of Code 자원봉사자'
-  front_join_us_tutorials: "Try this year's new tutorials!"
-  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
-  front_join_us_robotics: 'Got robots?'
-  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_tutorials: "올해의 새로나온 튜토리얼을 따라해보세요."
+  front_join_us_tutorials_link: '필터링 및 <i>200 개 이상의 튜토리얼 및 수업 계획의</i> 확장된 목록을 탐색하십시오! 다른 분야, 다양한 하드웨어 요구사항, 그리고 모든 경험 수준에서 학생들에 대한 활동을 찾을 수 있습니다.'
+  front_join_us_robotics: '로봇이 있다면?'
+  front_join_us_robotics_link: 'Hour of Code 를 지원하는 아래의 로보틱스 파트너들께 감사를 전합니다. 만약 여러분의 교실에 로봇이 있다면 로봇과 관련된 활동 목록을 찾기 위한 로고들을 클릭하십시오.'
   front_join_us_teacher: '선생님이신가요?'
   front_join_us_inspire: '학생들의 열정을 자극해 주세요.'
   front_join_us_inspire_link: '교실 수업에서의 Hour of Code'
@@ -219,34 +220,45 @@ ko:
   front_join_us_n_students_served: "# 명에게 제공됨"
   signup_header: '%{campaign_date} 동안 Hour of code를 운영하시고, 이곳에서 등록하세요.'
   signup_name_label: '이름'
+  signup_name_error: 'Name is required.'
   signup_email_label: '이메일'
+  signup_email_error: 'Email is required'
   signup_organization_name_label: '학교명/소속'
+  signup_organization_name_error: 'Organization name is required.'
   signup_event_type_label: '이벤트형태'
+  signup_event_type_error: 'Event type is required.'
   signup_event_entire_school_label: '우리 학교는 전체가 참여합니다.'
   signup_event_location_label: '행사 장소(선택적)'
+  signup_event_location_error: 'Event location is required.'
   signup_special_event_flag_label: '내 스페셜 이벤트 강조하기'
   signup_special_event_details_label: '스페셜 이벤트 상세사항'
   signup_send_posters_flag_label: '이 <a href= "/resources/promote#posters"> 포스터들을</a> 나의 학교/조직에 발송해 주세요.(미국)'
   signup_send_posters_address_label: '학교/소속 주소'
   signup_whole_school_flag_label: '이 이벤트는 학교 전체 행사로 운영됩니다.'
   signup_your_event: '내 이벤트 행사 등록하기'
-  signup_host_an_hour: 'Host an hour'
+  signup_host_an_hour: '한 시간을 진행해보세요'
   signup_match_volunteer: '저희 학교 학생들에게 영감을 줄 수 있는 소프트웨어 엔지니어를 찾을 수 있도록 도와주세요.'
   signup_multiple_event_warning: "여러 개의 이벤트를 운영하시면, 하나의 이름과 이메일로 등록해 주세요. 이름과 이메일 조합을 하나로 카운팅합니다."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_registration_deadline: "Hour of Code 등록은 12월 12일에 종료됩니다."
   signup_name_placeholder: '이름'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "예를 들어, 링컨 고등학교"
+  signup_event_country_label: "Event country"
+  signup_event_country_error: "Country is required."
   signup_event_location_placeholder: "우편번호와 지역 또는 전체주소\\r\n(이 정보는 지도에 핀으로 나타내기 위해 사용합니다.)"
   signup_special_event_details_placeholder: '이 스페셜 이벤트에 대해서 자세히 설명해주세요.'
   signup_send_posters_address_placeholder: '이 주소가 지도에 나타나지는 않습니다.'
   signup_event_type_in_school: '학교에서'
   signup_event_type_out_of_school: '학교 이외에서'
+  signup_submit_census_label: 'Submit'
+  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: '가입하기'
   signup_submit_error_message: "오류가 발생했습니다. 필수 내용이 정확히 입력되었는지 확인해 주세요."
+  signup_submit_and_continue_label: 'Submit and Continue'
+  signup_continue_label: 'Continue'
   signup_thank_you_header: "Hour of Code 행사 운영을 등록해 주셔서 감사합니다."
   signup_thank_you_message: '이벤트를 시작하는데 도움이되는 정보와 확인 메일을 발송하였습니다.'
-  map_title: "Hour of Code map"
+  map_title: "Hour of Code 참여지역"
   map_header: '# 전세계적으로 운영되는 Hour of Code 이벤트들'
   see_all_events: '모든 이벤트 살펴보기'
   map_header_company: '# 개의 회사들이 행사를 조직/운영하고 있습니다.'
@@ -257,9 +269,10 @@ ko:
   map_legend_title: '찾아보기'
   map_legend_hoc_events: 'Hour of Code 행사'
   map_legend_cs_tech_jam: '특별 이벤트'
-  meta_tag_og_title: 'Hour of Code 가 여기 있습니다.'
+  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
+  meta_tag_og_title: Hour of Code 가 여기 있습니다.
   meta_tag_og_description: 'Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지 수천만 명의 학생들과 함께하려는 전세계적 운동입니다.'
-  meta_tag_twitter_title: 'Hour of Code 가 곧 시작됩니다.'
+  meta_tag_twitter_title: Hour of Code 가 여기 있습니다.
   meta_tag_twitter_description: 'Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지 수천만 명의 학생들과 함께하려는 전세계적 운동입니다.'
   twitter_default_text: "저는 이번 #HourOfCode 행사에 참여합니다. 여러분은요? @codeorg"
   hoc_faq_title: 'FAQs'
@@ -302,8 +315,8 @@ ko:
   hoc_faq_keep_learning_a: "누구나 언제나 Hour of Code 를 운영하실 수 있습니다. 튜토리얼들은 연중 내내 제공됩니다. 모든 튜토리얼과 교육과정들은 본 사이트에서 계속 운영될 것입니다. 다음 <a href='/promote'>각종 자료,</a>를 통해 여러분의 Hour of Code 행사를 성공적으로 운영하는데 도움이 되는 how-to 가이드와 여러 자료들을 살펴보세요."
   hoc_faq_certificates_q: "학생들 인증서를 어디서 출력할 수 있나요?"
   hoc_faq_certificates_a: "<a href='%{codeorg_url}/certificates'>인증서 페이지</a> 에서 전체 학급에 대한 인증서를 출력할 수 있습니다. 마인크래프트 튜토리얼에 대한 특별 인증서는 <a href='%{codeorg_url}/certificates?course=mc'>여기서 출력 </a>할 수 있습니다."
-  hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
+  hoc_faq_logo_q: "Hour of Code 로고나 명칭을 사용함에 있어 제한사항이 있나요?"
+  hoc_faq_logo_a: "Hour of Code는 등록된 상표입니다. 우리는 이 상표의 활용을 금지하길 원하지는 않지만, 활용시 반드시 몇 가지 제한점을 준수하길 원합니다. 다음의 <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>활용상 안내사항</a>을 확인해 주십시오."
   stats_hoc_2013_image_alt: 'Hour of Code 2013 부터의 통계들'
   stats_growth: "가장 빠르게 1천5백만 사용자에 도달하였습니다."
   stats_i18n: "학생들은 40개 언어로 공부하고 있습니다."
@@ -360,7 +373,7 @@ ko:
   title_how_to_companies: Hour of Code 행사 운영 방법 - 회사
   title_how_to_officials: 공무원들을 위한 이벤트 가이드
   title_how_to_volunteers: Hour of Code 자원봉사자를 위한 How-to 가이드
-  title_how_to_parents: How-to guide for parents
+  title_how_to_parents: 학부모들을 위한 활용 가이드
   title_how_to: How-to 가이드
   title_press_release: 선출직 공무원을 위한 Hour of Code 보도 자료
   title_op_ed: 컴퓨터과학 교육주간(Computer Science Education Week) 과 Hour of Code 를 지원하기 위한 샘플 잡지 사설
@@ -387,6 +400,22 @@ ko:
   highlights_title: 하이라이트
   highlights_header: Hour of Code의 하이라이트
   highlights_description: Hour of Code 캠페인에서 우리가 가장 좋아하는 순간들
+  higlights_see_more: See more highlights
+  highlights_readmore: Read more
+  highlights_watchvideo: 동영상 보기
+  highlights_facebook: 페이스북에 공유
+  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
+  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
+  highlights_constant_obama_short_heading: Coder in Chief
+  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
+  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
+  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
+  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
+  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_ny_short_heading: Brooklyn beats Chicago
+  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
+  highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: 'Copyright 2015 Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
   footer_menu_partners: '파트너'
@@ -400,6 +429,7 @@ ko:
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_robotics_banner_heading: 'ROBOTICS'
   learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
+  tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: 'Moana: Wayfinding with Code'
   tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
   tutorial_gumadventure_name: "Gumball's Coding Adventure"
@@ -637,7 +667,7 @@ ko:
   tutorial_play_name: "Play Lab"
   tutorial_robomind-nl_name: "Program a virtual robot"
   tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 2: Lights'
+  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Lights'
   tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
   tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
   tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
@@ -672,6 +702,7 @@ ko:
   tutorial_khanweb_name: 'Khan Academy: Webpages'
   tutorial_khandata_name: 'Khan Academy: Databases'
   tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
+  tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
@@ -944,6 +975,7 @@ ko:
   tutorial_khanweb_shortdescription: "Learn how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
   tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
+  tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
@@ -1014,7 +1046,7 @@ ko:
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
   tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
-  tutorial_cdmy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
   tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
@@ -1216,6 +1248,7 @@ ko:
   tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
   tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
+  tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_gumadventure_language: "English only"
@@ -1223,7 +1256,7 @@ ko:
   tutorial_vidnews_language: "English only"
   tutorial_kodable-pre_language: "English, Arabic, Azerbaijani, German, Greek, Spanish, Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese"
   tutorial_highseas_language: "English only"
-  tutorial_capython_language: "English only"
+  tutorial_capython_language: "English, Dutch, Spanish"
   tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
   tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1265,14 +1298,14 @@ ko:
   tutorial_livecode_language: "English only"
   tutorial_cocomgame_language: "English, Arabic, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 8 more"
   tutorial_tynkerspin_language: "English only"
-  tutorial_code-avengers_language: "English, Spanish, Bulgarian, Danish, Greek, Finnish, Japanese and more"
+  tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
   tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
   tutorial_texas-instruments_language: "English only"
-  tutorial_cajava_language: "English only"
+  tutorial_cajava_language: "English, Dutch, Spanish"
   tutorial_codehs_language: "English only"
   tutorial_hopemo_language: "English only"
   tutorial_tynkercm_language: "English only"
@@ -1286,7 +1319,7 @@ ko:
   tutorial_mitedarc_language: "English only"
   tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
-  tutorial_cdmy_language: "Spanish"
+  tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
   tutorial_codestersbasketball_language: "English, Spanish"
   tutorial_nclkarel_language: "Multiple"
@@ -1294,7 +1327,7 @@ ko:
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
   tutorial_globaloria_language: "English, Spanish"
-  tutorial_capost_language: "English only"
+  tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
   tutorial_kanopong_language: "English only"
@@ -1323,7 +1356,7 @@ ko:
   tutorial_coders_language: "English, French"
   tutorial_tynkerhw_language: "English only"
   tutorial_tynkermh_language: "English only"
-  tutorial_caphoto_language: "English only"
+  tutorial_caphoto_language: "English, Dutch, Spanish"
   tutorial_mozillahw_language: "English only"
   tutorial_ticklep_language: "Chinese (Traditional), Danish, English, French, Japanese"
   tutorial_bbot_language: "Dutch, Suomi, English"
@@ -1488,6 +1521,7 @@ ko:
   tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
   tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
+  tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
@@ -1760,6 +1794,7 @@ ko:
   tutorial_khanweb_string_detail_grades: "Grades 2+"
   tutorial_khandata_string_detail_grades: "Grades 6+"
   tutorial_robomeshiq_string_detail_grades: "Grades 2+"
+  tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
@@ -1779,7 +1814,7 @@ ko:
   tutorial_tynkerdd_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkerana_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_vidcard_string_platforms: "Chrome"
-  tutorial_spritebox_string_platforms: "All modern browsers"
+  tutorial_spritebox_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkerch_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_lightbot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_hoc_string_platforms: "do-not-show"
@@ -1793,7 +1828,7 @@ ko:
   tutorial_inf_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_tynkersol_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_itchg_string_platforms: "Chrome, Firefox, Android Tablet"
-  tutorial_como_string_platforms: "All modern browsers"
+  tutorial_como_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_processfound_string_platforms: "Chrome, Firefox, Safari"
   tutorial_tynkerhomo_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_art_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -2032,6 +2067,7 @@ ko:
   tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
+  tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
@@ -2304,8 +2340,9 @@ ko:
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
+  tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
-  tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_star-wars_string_detail_programming_languages: "블록, 자바 스크립트"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_mchoc_string_detail_programming_languages: "Blocks"
   tutorial_vidnews_string_detail_programming_languages: "JavaScript"
@@ -2470,7 +2507,7 @@ ko:
   tutorial_bbcmathi_string_detail_programming_languages: "do-not-show"
   tutorial_tlcpixel_string_detail_programming_languages: "Language independent"
   tutorial_arduino_string_detail_programming_languages: "Arduino"
-  tutorial_introrobo_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_introrobo_string_detail_programming_languages: "블록, 자바 스크립트"
   tutorial_tlcinvis_string_detail_programming_languages: "Language independent"
   tutorial_tlcjflap_string_detail_programming_languages: "Language independent"
   tutorial_procolor_string_detail_programming_languages: "Language independent"
@@ -2517,7 +2554,7 @@ ko:
   tutorial_baypt_string_detail_programming_languages: "Blocks"
   tutorial_code-combat_string_detail_programming_languages: "do-not-show"
   tutorial_mky_string_detail_programming_languages: "CoffeeScript"
-  tutorial_spellcraft_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_spellcraft_string_detail_programming_languages: "블록, 자바 스크립트"
   tutorial_pirates_string_detail_programming_languages: "Blocks, Pirate code"
   tutorial_csfirst_string_detail_programming_languages: "Scratch"
   tutorial_loopedy_string_detail_programming_languages: "Blocks"
@@ -2576,3 +2613,45 @@ ko:
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_name_error: "School name is required."
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code"
+  school_zip_error: "School postal code is required."
+  census_thanks: 'Thanks for signing up!'
+  census_header: 'Please take a few minutes to tell us about your school (Optional).'
+  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
+  census_how_many_hoc: "How many students will do an Hour of Code?"
+  census_how_many_after_school: "How many students do computer programming in an after-school program?"
+  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
+  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
+  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
+  census_connection: "What is your connection to this school?"
+  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
+  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
+  census_followup_frequency: "How often per week does this class meet?"
+  less_than_one: "< 1 hour per week"
+  one_to_three: "1-3 hours per week"
+  three_plus: "3+ hours per week"
+  census_followup_more: "Please tell us more about this course."
+  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
+  census_topics_blocks: "Block-based programming"
+  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
+  census_topics_robots: "Robotics / Physical Computing"
+  census_topics_internet: "Internet and networking"
+  census_topics_security: "Cybersecurity"
+  census_topics_data: "Data analysis"
+  census_topics_web_design: "Web design using HTML and CSS"
+  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
+  teacher: "Teacher"
+  administrator: "Administrator"
+  parent: "Parent"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
+  other: "Other"
+  other_describe: "Other (please describe below)"
+  none: "None"
+  some: "Some"
+  all: "All"
+  dont_know: "I don't know"

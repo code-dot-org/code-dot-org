@@ -92,6 +92,12 @@ FactoryGirl.define do
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
+
+        trait :as_regional_partner_program_manager do
+          after(:create) do |workshop_organizer|
+            create :regional_partner_program_manager, program_manager: workshop_organizer
+          end
+        end
       end
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}

@@ -5539,6 +5539,13 @@ en:
         rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
         swaps the values of a and b: swaps the values of a and b
         this code doesn't do anything: this code doesn't do anything
+      Commute Assess - comp 1 - block B:
+        This program causes an error: This program causes an error
+        a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
+        makes a and b equal to each other: makes a and b equal to each other
+        rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
+        swaps the values of a and b: swaps the values of a and b
+        this code doesn't do anything: this code doesn't do anything
       Commute Assess - comp 2 - block:
         Randomly returns on of the three numbers: Randomly returns on of the three numbers
         'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
@@ -5584,7 +5591,19 @@ en:
         "<pre>5</pre>": "<pre>5</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
+      Commute Assess - func 2a - block B:
+        "<pre>10</pre>": "<pre>10</pre>"
+        "<pre>55</pre>": "<pre>55</pre>"
+        "<pre>5</pre>": "<pre>5</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
       Commute Assess - func 2b - block:
+        "<pre>21</pre>": "<pre>21</pre>"
+        "<pre>81</pre>": "<pre>81</pre>"
+        "<pre>9</pre>": "<pre>9</pre>"
+        nothing is printed: nothing is printed
+        this script would cause an error: this script would cause an error
+      Commute Assess - func 2b - block B:
         "<pre>21</pre>": "<pre>21</pre>"
         "<pre>81</pre>": "<pre>81</pre>"
         "<pre>9</pre>": "<pre>9</pre>"
@@ -5613,7 +5632,21 @@ en:
         It will be different each time: It will be different each time
         Nothing will be printed: Nothing will be printed
         What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 1 - block B:
+        "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
+        "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
+        "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
+        It will be different each time: It will be different each time
+        Nothing will be printed: Nothing will be printed
+        What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 2 - block:
+        "<pre>All done.</pre>": "<pre>All done.</pre>"
+        "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
+        "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
+        "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
+        "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 2 - block B:
         "<pre>All done.</pre>": "<pre>All done.</pre>"
         "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
         "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
@@ -5664,6 +5697,13 @@ en:
         '6': '6'
         How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
         It will be different each time you run it: It will be different each time you run it
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
+        It will be different each time you run it: It will be different each time you run it
       CommuteAssess - loops 2 - block:
         '0': '0'
         '1': '1'
@@ -5699,7 +5739,22 @@ en:
         x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
         x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
         x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
+      CumulAssess - Var 1 - block B:
+        What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
+        x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
+        x is equal to 10, 15; y is equal to 5, 10: x is equal to 10, 15; y is equal to 5, 10
+        x is equal to 10; y is equal to 5: x is equal to 10; y is equal to 5
+        x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
+        x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
+        x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
       CumulAssess - Var 2 - block:
+        "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
+        "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
+        "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
+        "<pre>sentence</pre>": "<pre>sentence</pre>"
+        <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CumulAssess - Var 2 - block B:
         "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
         "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
         "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"

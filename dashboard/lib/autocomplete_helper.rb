@@ -11,8 +11,8 @@ class AutocompleteHelper
   # Bounds the limit by the mininum and maximum allowed range.
   # @param limit [Integer] The specified limit.
   # @return [Integer] The bounded limit.
-  def self.to_limit(limit)
-    return [MIN_LIMIT, [limit, MAX_LIMIT].min].max
+  def self.format_limit(limit)
+    return [MIN_LIMIT, [limit.to_i, MAX_LIMIT].min].max
   end
 
   # Formats the query string for boolean full-text search.
@@ -22,7 +22,7 @@ class AutocompleteHelper
   # @see https://dev.mysql.com/doc/refman/5.6/en/fulltext-boolean.html
   # @param query [String] the user-defined query string
   # @return [String] the formatted query string
-  def self.to_search_string(query)
+  def self.format_query(query)
     words = query.strip.split(/\s+/).map do |w|
       w.gsub(/\W/, '').upcase.presence
     end.compact

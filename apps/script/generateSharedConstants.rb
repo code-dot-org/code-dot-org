@@ -10,6 +10,7 @@ require 'active_support/core_ext/hash'
 require 'fileutils'
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/pd/facilitator1819_application_constants'
+require_relative '../../lib/cdo/shared_constants/pd/teacher1819_application_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
@@ -83,6 +84,15 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/facilitator1819ApplicationConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(SECTION_HEADERS PAGE_LABELS),
+      source_module: Teacher1819ApplicationConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/teacher1819ApplicationConstants.js"
   )
 end
 

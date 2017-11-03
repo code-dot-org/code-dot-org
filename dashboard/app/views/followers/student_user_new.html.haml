@@ -65,7 +65,7 @@
               .itemblock
                 .labelblock
                   = t('signup_form.school_address')
-                = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4
+                = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 255
               %br/
 
               = f.hidden_field :age, value: '21'

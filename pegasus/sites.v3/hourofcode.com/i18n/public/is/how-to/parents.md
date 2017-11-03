@@ -1,19 +1,17 @@
 ---
-
-title: <%= hoc_s(:title_how_to_parents) %>
+title: '<%= hoc_s(:title_how_to_parents) %>'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # How to complete an Hour of Code with your child
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Horfðu á þetta kennslumyndband <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2) Veldu kennslumyndband
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
@@ -42,7 +40,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
+- Teldu upp hluti sem nota kóða dagsdaglega.
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
@@ -57,15 +55,15 @@ When you've chosen the tutorial you would like to do, you can bookmark the tutor
 
 It’s okay to respond:
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "Ég veit það ekki. Reynum að leysa þetta saman."
+- "Tæknin virkar ekki alltaf eins og við viljum"
+- "Að læra að forrita er líkt og að læra nýtt tungumál; þú verður ekki fullnuma strax."
 
 ## 6) Celebrate
 
 [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
 
-Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+Deildu myndum og myndböndum af þínum "Klukkutíma af forritun" á samfélagsmiðlum. Notaðu #HourOfCode og @codeorg svo að við getum fylgst með góðu gengi ykkar líka!
 
 **Other Hour of Code resources:**
 

@@ -1,19 +1,15 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promote the Hour of Code
+# Kodlama Saatini tanıtın
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Bir Kodlama Saatine ev sahipliği mi yapacaksınız? <a href="<%= hoc_uri('/resources/how-to') %>Nasıl yapılır rehberimize bir göz atın</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -25,7 +21,7 @@ nav: promote_nav
 
 <a id="social"></a>
 
-## Post these on social media
+## Bunları sosyal medyada paylaşın
 
 [![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -33,21 +29,21 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Kodlama saati logosunu haberi yaymak için kullanın
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Yüksek çözünürlüklü versiyonu indirin](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"kodlama saati" ticari bir marka. Bu kullanımın önüne geçmek istemiyoruz, ancak bir kaç sınır dahilinde olduğundan emin olmak istiyoruz:**
 
-  1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Bilgisayar Bilimi Eğitimi Haftası ve Code.org web sitelerinin linklerini paylaşın ve onlardan şu şekilde bahsedin:
+1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+3. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Bilgisayar Bilimi Eğitimi Haftası ve Code.org web sitelerinin linklerini paylaşın ve onlardan şu şekilde bahsedin:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names.
+4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

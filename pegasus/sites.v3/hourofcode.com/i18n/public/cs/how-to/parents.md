@@ -1,18 +1,16 @@
 ---
-
-title: <%= hoc_s(:title_how_to_parents) %>
+title: '<%= hoc_s(:title_how_to_parents) %>'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # How to complete an Hour of Code with your child
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) Zvolte si výukový kurz:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
@@ -59,7 +57,7 @@ It’s okay to respond:
 
 - "Já nevím. Vyřešme to společně."
 - "Technologie nefunguje vždy tak, jak chceme."
-- "Učení programovat je jako se učit nový jazyk; nebudete ihned plynule mluvit."
+- "Učit se programovat je jako učit se nový jazyk; nejde hned mluvit plynule."
 
 ## 6) Celebrate
 
@@ -71,7 +69,7 @@ Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Pou
 
 - Zkontrolujte si [FAQ Hodiny kódu ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**Co přijde po Hodině kódu?**
+**Co následuje po Hodině kódu?**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
