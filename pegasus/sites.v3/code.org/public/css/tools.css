@@ -9,6 +9,10 @@
   max-width: 770px;
 }
 
+.tools-info.green {
+  border-color: #b9bf15;
+}
+
 .tools-img-box {
   float: left;
 }
@@ -16,6 +20,10 @@
 .tools-title-bar {
   background-color: #0094ca;
   padding-left: 15px;
+}
+
+.tools-title-bar.green {
+  background-color: #b9bf15;
 }
 
 h1.tools-title {
