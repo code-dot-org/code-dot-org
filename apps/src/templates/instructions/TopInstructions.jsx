@@ -38,6 +38,7 @@ const TopInstructions = React.createClass({
   }
 });
 
+export const UnconnectedTopInstructions = TopInstructions;
 export default connect(state => ({
   hidden: state.pageConstants.isShareView,
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
