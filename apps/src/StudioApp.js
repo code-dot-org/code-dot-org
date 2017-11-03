@@ -504,8 +504,8 @@ StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
       localized_text: msg.workspaceProjectTemplateLevel(),
       qtip_config: {
         position: {
-          my: 'bottom center',
-          at: 'top center',
+          my: 'top center',
+          at: 'bottom center',
         },
       },
     }]);
