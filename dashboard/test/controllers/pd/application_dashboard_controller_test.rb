@@ -7,7 +7,7 @@ class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
   test_user_gets_response_for(
     :index,
     name: 'Regional Partner program managers can see the application dashboard',
-    user: -> {create(:regional_partner_program_manager).program_manager},
+    user: -> {create :workshop_organizer, :as_regional_partner_program_manager},
     response: :success
   )
 end
