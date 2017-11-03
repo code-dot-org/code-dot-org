@@ -1,11 +1,8 @@
 ---
-
-title: <%= hoc_s(:title_how_to_promote) %>
-layout: wide
+title: '<%= hoc_s(:title_how_to_promote) %>'
+layout: ფართო
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 <%
@@ -15,7 +12,7 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# როგორ მივიღოთ მონაწილეობა
+# Get your community involved in the Hour of Code
 
 ## 1. გაავრცელეთ ხმა
 

@@ -1,81 +1,79 @@
 ---
-
-title: <%= hoc_s(:title_how_to_parents) %>
+title: '<%= hoc_s(:title_how_to_parents) %>'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Bir kodlama saatini çocuklarınızla nasıl tamamlarsınız
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Kodlama saatini evde tamamlayın ya da çocuklarınızın sınıfına götürmek için gönüllü olun. Nasıl olacağı şöyle:
 
-## 1) Bu "Nasıl Yapılır" videosunu izle <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Bir öğretici seç:
+## 1) "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+## 2) Bir öğretici içeriği seçin:
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Çeşitli ortaklar tarafından oluşturulan, her yaştaki öğrenciye yönelik eğlenceli saatlik eğitimler sunuyoruz. [Bunları deneyin](<%= resolve_url('/learn') %>)
+
+**Tüm kodlama saati uygulamaları kendi kendine rehberlik eder. Çocuğunuza kendi temposunda ve beceri seviyesinde çalışmasına izin verir**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Plan your technology needs
+## 3) teknolojik gereksinimlerinizi planlayın
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+En iyi kodlama saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekleşir. Ama bilgisayara ihtiyacınız ** yok**. "fişe takılı olmayan" ve herhangi bir teknolojiye ihtiyacınız olmadan yapılabilen birçok etkinlik var.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Öğreticileri bilgisayarınızda veya cihazınızda test edin. Ses ve video içeren tarayıcılarda düzgün şekilde çalıştığından emin olun.
+- **çocuğunuzla birlikte mi öğrenmek istiyorsunuz? ** [çift programlamayı ](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)deneyin. bilgisayar bilimleri sosyal ve işbirlikçidir.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 5) Kodlama Saati etkinliğinizi ilham verici bir video ile başlatın
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Çocuğunuza ilham vererek ve bilgisayar biliminin hayatımızın her bölümünü nasıl etkilediğini tartışarak Kod Saatinizi başlatın.
 
 **İlham verici bir video gösterin:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
 - [2013 Kodlama Saati başlangıç videosu](https://www.youtube.com/watch?v=FC5FbmsH4fw), ya da <% if @country == 'uk' %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Daha fazla ilham verici [kaynaklar](<%= resolve_url('https://code.org/inspire') %>) ve [videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Eğer bilgisayar biliminde yeniyseniz sorun değil. işte size kodlama saati aktivitelerini tanıtmak için birkaç fikir:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- Teknolojinin hayatımıza etkisini hem kız hemde erkekleri ilgilendirecek şekilde açıklayın.( hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin.).
+- Günlük hayatımızda kod kullanılan şeyleri listeleyin.
+- Kızların bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya](<%= resolve_url('https://code.org/girls') %>) bakın.
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Daha fazla fikir ister misiniz? Deneyimli eğitimcilerin en iyi uygulamaları için  şablon ders planımıza </ 0> bakın.</p> 
 
-## 5) Code!
+## 6) Kod!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Yapmak istediğiniz öğreticiyi seçtiğinizde, öğreticinin kısa bağlantısına yer işareti koyabilirsiniz.
 
-**When your child come across difficulties**
+**Çocuğunuz zorluklarla karşılaştığında**
 
-It’s okay to respond:
+Cevap vermek sorun değil:
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "Bilmiyorum. Buna birlikte bakalım."
+- "Teknoloji her zaman istediğimiz gibi çalışmaz."
+- "Programlama öğrenmek yeni bir dil öğrenmek gibidir; hemen akıcı olmayacaktır."
 
-## 6) Celebrate
+## 6) Kutlama
 
-[Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
+çocuğunuz (ve kendiniz) için [sertifika bastırın.](<%= resolve_url('https://code.org/certificates') %>).
 
-Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
-**Other Hour of Code resources:**
+**Diğer saat kod kaynakları:**
 
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)'u gözden geçirin.
 
-**Kodlama Zamanından sonra ne olacak?**
+**Kod Saati etkinliğinden sonra ne yapmalı?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Kodlama Zamanı, teknolojinin nasıl çalıştığı hakkında daha fazla bilgi edinme ve uygulama yazılımı oluşturmayı öğrenme yolculuğunda sadece ilk basamaktır. Bu yolculuğa devam etmek için:
 
-- Encourage your child to continue [to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
-
-<%= view :signup_button %>
+- Çocuğunuzu[ çevrimiçi](<%= resolve_url('https://code.org/learn/beyond') %>) öğrenmeye devam etmesi için teşvik edin.
+- Çocuğunuzun okul bölgesindeki bilgisayar bilimi eğitimini  teşvik edin </ 0>.</li> </ul> 
+    
+    <%= view :signup_button %>

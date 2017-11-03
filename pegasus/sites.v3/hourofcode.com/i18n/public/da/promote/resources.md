@@ -1,19 +1,15 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promote the Hour of Code
+# Gør reklame for Hour of Code
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Hosting en Hour of Code [Se vores how-to guide](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -33,25 +29,25 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Brug Hour of Code logo til at sprede ordet
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versioner](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"Hour of Code" er trademarked. Vi ønsker ikke at forhindre denne anvendelse, men vi vil sørge for at det passer inden for nogle grænser:**
 
-  1. Enhver reference til "Hour of Code" bør anvendes på en måde, der ikke tyder på, at det er dit eget navn, men snarere henviser til Hour of Code som en græsrodsbevægelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. Inkluder sprog på siden (eller i den sidefod), herunder links til hjemmesiderne CSEdWeek og Code.org, der siger følgende:
+1. Enhver reference til "Hour of Code" bør anvendes på en måde, der ikke tyder på, at det er dit eget navn, men snarere henviser til Hour of Code som en græsrodsbevægelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+3. Inkluder sprog på siden (eller i den sidefod), herunder links til hjemmesiderne CSEdWeek og Code.org, der siger følgende:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names.
+4. Ingen brug af "Hour of Code" i app navne.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Udskrive disse klistermærker til at give dine elever
 
 (Stickers are 1" diameter, 63 per sheet)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
@@ -64,7 +60,7 @@ nav: promote_nav
 
 ## Opfordre din skole, arbejdsgiver eller venner om at tilmelde sig:
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. De gode nyheder er, at vi er på vej til at ændre dette. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. Men færre end halvdelen af alle skoler underviser datalogi. De gode nyheder er, at vi er på vej til at ændre dette. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! og Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
@@ -92,17 +88,17 @@ The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a 
 
 **Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**When:** [DATE and TIME of your event]
+**Hvornår:** [DATE og TIME for din begivenhed]
 
-**Where:** [ADDRESS and DIRECTIONS]
+**Hvor:** [ADRESSE og VEJEDNING]
 
-I look forward to being in touch.
+Jeg ser frem til at høre fra dig.
 
 <a id="parents"></a>
 
 ## Fortæl forældrene om skolens arrangement:
 
-Dear Parents,
+Kære forældre,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
@@ -116,9 +112,9 @@ This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Sincerely,
+Med venlig hilsen.
 
-Your principal
+Din skole inspektør.
 
 <a id="politicians"></a>
 
@@ -136,6 +132,6 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-Sincerely, [NAME], [TITLE]
+Med venlig hilsen, [NAVN], [TITEL]
 
 <%= view :signup_button %>
