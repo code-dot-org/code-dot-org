@@ -43,7 +43,7 @@ export default class EligibilityChecklist extends Component {
 
   // Saves the teaching-year choice to trigger next step of actions
   handleSubmit = () => {
-    this.setState({ statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED )});
+    this.setState({statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED)});
   }
 
   handleDropdownChange = (field, event) => {
@@ -61,7 +61,7 @@ export default class EligibilityChecklist extends Component {
         ...this.state.submission,
         [field]: event.target.value
       }
-    }, this.checkShowFollowUp);
+    });
   }
 
 
