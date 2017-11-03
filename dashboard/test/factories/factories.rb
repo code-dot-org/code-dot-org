@@ -598,7 +598,6 @@ FactoryGirl.define do
   # school info: default to public with district and school
   # Other variations have factories below
   factory :school_info, parent: :school_info_us_public do
-    with_district
     with_school
   end
 
@@ -661,7 +660,7 @@ FactoryGirl.define do
     end
 
     trait :with_school do
-      association :school, factory: :public_school
+      association :school, factory: :public_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC
     end
   end
 
@@ -675,7 +674,7 @@ FactoryGirl.define do
     end
 
     trait :with_school do
-      association :school, factory: :charter_school
+      association :school, factory: :charter_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_CHARTER
     end
   end
 
