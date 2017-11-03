@@ -949,7 +949,8 @@ var displayFeedback = function () {
       appStrings: {
         reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),
         sharingText: applabMsg.shareGame()
-      }
+      },
+      hideXButton: true,
     });
   }
 };

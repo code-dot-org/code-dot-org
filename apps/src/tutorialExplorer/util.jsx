@@ -49,9 +49,6 @@ export function getTagString(prefix, tagString) {
     subject_art:                      i18n.filterTopicsArt(),
     "subject_cs-only":                i18n.filterTopicsCsOnly(),
 
-    teacher_experience_beginner:      i18n.filterTeacherExperienceBeginner(),
-    teacher_experience_comfortable:   i18n.filterTeacherExperienceComfortable(),
-
     student_experience_beginner:      i18n.filterStudentExperienceBeginner(),
     student_experience_comfortable:   i18n.filterStudentExperienceComfortable(),
 
