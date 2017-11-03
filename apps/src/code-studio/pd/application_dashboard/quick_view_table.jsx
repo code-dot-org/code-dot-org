@@ -54,12 +54,16 @@ export default class QuickViewTable extends React.Component {
       },
       cell: {
         format: (status) => {
+          if (status === 'move_to_interview') {
+            return 'Move to Interview';
+          }
           return _.upperFirst(status);
         },
         transforms: [
           (status) => ({
             style: {
               backgroundColor: this.getViewColor(status),
+              color: this.getTextColor(status),
               padding: '5px'
             }
           })
@@ -80,11 +84,20 @@ export default class QuickViewTable extends React.Component {
   getViewColor = (status) => {
     switch (status) {
       case 'unreviewed': return color.charcoal;
-      case 'pending': return color.orange;
+      case 'pending': return color.lighter_orange;
       case 'accepted': return color.level_perfect;
       case 'declined': return color.red;
       case 'waitlisted': return color.level_passed;
+      case 'move_to_interview': return color.orange;
+      case 'withdrawn': return color.lightest_red;
     }
+  }
+
+  getTextColor = (status) => {
+    if (status === 'declined' || status === 'unreviewed') {
+      return color.white;
+    }
+    return color.black;
   }
 
   formatViewButton = (id) => {
@@ -110,7 +123,7 @@ export default class QuickViewTable extends React.Component {
 
     return (
       <Table.Provider
-        className="pure-table pure-table-striped"
+        className="pure-table table-striped"
         columns={columns}
         style={styles.table}
       >
