@@ -1,6 +1,6 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../../util/configuredChai';
 import {mount} from 'enzyme';
-import {setExternalGlobals} from './../../util/testUtils';
+import {setExternalGlobals} from '../../../util/testUtils';
 import React from 'react';
 import {StatelessInlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
 
