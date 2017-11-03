@@ -133,16 +133,24 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   end
 end
 
-# I think I'll need to modify this so the partner sites continue to go to old /congrats and code.org tutorials will go to new /congrats ?
 get '/api/hour/finish' do
-  only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  complete_tutorial
+  # Tutorials from Code.org
+  only_for ['code.org'].flatten
+  complete_internal_tutorial
+  # Tutorials from 3rd party sites
+  only_for ['csedweek.org', partner_sites].flatten
+  complete_external_tutorial
 end
 
 get '/api/hour/finish/:code' do |code|
-  only_for ['code.org', 'csedweek.org', partner_sites].flatten
+  # Tutorials from Code.org
+  only_for ['code.org'].flatten
   pass unless tutorial = DB[:tutorials].where(code: code).first
-  complete_tutorial(tutorial)
+  complete_internal_tutorial(tutorial)
+  # Tutorials from 3rd party sites
+  only_for ['csedweek.org', partner_sites].flatten
+  pass unless tutorial = DB[:tutorials].where(code: code).first
+  complete_internal_tutorial(tutorial)
 end
 
 get '/api/hour/finish_:code.png' do |code|
