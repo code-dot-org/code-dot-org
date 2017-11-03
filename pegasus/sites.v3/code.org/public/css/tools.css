@@ -1,0 +1,41 @@
+.tools-info {
+  border: 1px solid;
+  border-color: #7665a0;
+  float: left;
+  max-width: 770px;
+}
+
+.tools-img-box {
+  float: left;
+}
+
+.tools-title-bar {
+  background-color: #7665a0;
+  padding-left: 10px;
+}
+
+h1.tools-title {
+  padding: 6px;
+  margin: 0px;
+  color: white;
+}
+
+.tools-description {
+  padding: 14px 10px;
+}
+
+.tutorial-tile {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.tutorial-info {
+  background-color: #00adbc;
+  color: white;
+  padding: 20px;
+}
+
+h3.tutorial-info-h {
+  color: white;
+  margin-top: 0px;
+}
