@@ -1,10 +1,39 @@
 require 'aws-sdk'
 require 'tempfile'
 require 'active_support/core_ext/module/attribute_accessors'
+require 'active_support/core_ext/hash/slice'
+require 'honeybadger'
 
 module AWS
   module S3
     mattr_accessor :s3
+
+    # AWS SDK client plugin to log slow S3 responses to Honeybadger,
+    # recording the request headers in the error context for further investigation.
+    class SlowAwsResponseNotifier < Seahorse::Client::Plugin
+      option(:notify_timeout, 5) # seconds
+
+      class Handler < Seahorse::Client::Handler
+        def call(context)
+          start_time = Time.now
+          response = @handler.call(context)
+          duration = Time.now - start_time
+          if duration > context.config.notify_timeout
+            Honeybadger.notify(
+              error_class: "SlowAWSResponse",
+              error_message: "Slow AWS response",
+              context: response.context.
+                http_response.headers.to_h.
+                slice('x-amz-request-id', 'x-amz-id-2').
+                merge(duration: duration)
+            )
+          end
+          response
+        end
+      end
+      handler(Handler)
+      Aws::S3::Client.add_plugin(self)
+    end
 
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
     class NoSuchKey < Exception
@@ -17,7 +46,12 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      self.s3 ||= Aws::S3::Client.new
+      self.s3 ||= Aws::S3::Client.new(
+        retry_limit: 3,
+        http_open_timeout: 5,
+        http_read_timeout: 5,
+        http_idle_timeout: 2,
+      )
     end
 
     # A simpler name for connect_v2!
