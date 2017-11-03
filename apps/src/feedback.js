@@ -497,8 +497,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       $(saveButtonSelector).prop('disabled', true).text(msg.saving());
       project.copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
-        .catch(err => console.log(err));
+        .then(() => {
+          $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+          $(publishButtonSelector).prop('disabled', true);
+        }).catch(err => console.log(err));
     });
   }
 
