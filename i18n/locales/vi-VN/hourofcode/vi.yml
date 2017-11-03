@@ -1,30 +1,30 @@
 vi:
-  site_name: 'THỜI ĐIỂM của MÃ LẬP TRÌNH'
-  hour_of_code: 'Hour of Code'
+  site_name: 'GIỜ LẬP TRÌNH'
+  hour_of_code: 'Giờ viết mã'
   language: 'Tiếng Việt'
-  front_title: 'Join the largest learning event in history, %{campaign_date}'
-  coming_soon: 'Sẽ diễn ra sớm thôi/ Quay lại sớm thôi'
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  campaign_date_start_short: "Dec. 5"
-  campaign_date_start_long: "December 5"
-  campaign_date_short: "Dec. 5-11"
-  campaign_date_full: "December 5-11"
+  front_title: 'Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}'
+  coming_soon: 'Sắp diễn ra'
+  compatibility_unsupported_browser: "Trình duyệt của bạn không được hỗ trợ. Xin vui lòng nâng cấp trình duyệt của bạn với <a href='%{supported_browsers_url}', target='_blank'> một trong các trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trước trang, nhưng các chức năng có thẻ bị hỏng."
+  campaign_date_start_short: "5 tháng Mười Hai"
+  campaign_date_start_long: "5 Tháng Mười Hai"
+  campaign_date_short: "Tháng 12 Ngày 5-11"
+  campaign_date_full: "Tháng 12 5-11"
   campaign_date_year: "2016"
-  campaign_date_full_year: "December 5-11, 2016"
-  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  campaign_date_full_year: "Tháng 12 5-11, 2016"
+  front_header_banner: 'Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}'
+  front_intro_default: 'Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh, sinh viên trên 180+ quốc gia. Bất cứ ai, bất cứ đâu đều có thể tổ chức sự kiện Giờ Mã. Một giờ hướng dẫn có sẵn trong hơn 30 ngôn ngữ. Không cần kinh nghiệm. <strong>Độ tuổi từ 4 đến 104.</strong>'
   front_watch_video: 'Xem video mới'
-  front_watch_regular_video: 'Watch the video'
-  front_volunteers: 'Technical volunteers wanted'
-  front_start_learning: 'Start learning'
-  header_menu_resources: 'Nguồn xây dựng'
-  header_menu_faq: 'Những câu hỏi thường gặp'
-  header_menu_how_to: 'How-To'
-  header_menu_promote: 'Promote'
-  header_menu_activities: 'Activities'
-  not_found_title: 'Page Not Found'
-  not_found_desc: 'The requested page was not found'
-  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
+  front_watch_regular_video: 'Xem video'
+  front_volunteers: 'Tuyển tình nguyện viên kỹ thuật'
+  front_start_learning: 'Bắt đầu học'
+  header_menu_resources: 'Nguồn tài liệu'
+  header_menu_faq: 'Hỏi đáp'
+  header_menu_how_to: 'Hướng dẫn'
+  header_menu_promote: 'Khuyến khích'
+  header_menu_activities: 'Hoạt động'
+  not_found_title: 'Không Tìm Thấy Trang'
+  not_found_desc: 'Không tìm thấy trang được yêu cầu'
+  not_found_instructions: 'Kiểm tra địa chỉ trang web và tải lại hoặc chọn một liên kết từ danh sách dưới đây.'
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -142,6 +142,7 @@ vi:
   company_strongnet: Strongsville School District
   company_TukwilaSchoolDistrict: Tukwila School District
   company_vermilionschools: Vermilion Local School District
+  company_vista-equity-partners: "Vista Equity Partners"
   company_walthampublicschools: Waltham Public Schools
   company_warrencountyschools: Warren County Schools
   company_WaynesboroPublicSchools: Waynesboro Public Schools
@@ -150,25 +151,25 @@ vi:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: "Back to Resources"
-  how_to_nav_educators: "For educators"
-  how_to_nav_after_school: "For after school"
-  how_to_nav_parents: "For parents"
-  how_to_nav_public_officials: "For public officials"
-  how_to_nav_districts: "For districts"
-  how_to_nav_assemblies: "For school assemblies"
-  how_to_nav_organizations: "For organizations"
-  how_to_nav_companies: "For companies"
-  how_to_nav_afterschool_educators: "For after-school educators"
-  how_to_nav_volunteers: "For volunteers"
-  whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  nav_back_to_resources: "Quay về Tài Nguyên"
+  how_to_nav_educators: "Đối với nhà giáo dục"
+  how_to_nav_after_school: "Cho sau giờ học"
+  how_to_nav_parents: "Đối với phụ huynh"
+  how_to_nav_public_officials: "Đối với công chức"
+  how_to_nav_districts: "Đối với các huyện"
+  how_to_nav_assemblies: "Đối với hội đồng nhà trường"
+  how_to_nav_organizations: "Đối với các tổ chức"
+  how_to_nav_companies: "Cho các công ty"
+  how_to_nav_afterschool_educators: "Cho giáo dục sau giờ học"
+  how_to_nav_volunteers: "Cho tình nguyện viên"
+  whats_next_header: "Tiếp theo là gì?"
+  whats_next_description: "Chúng tôi sẽ gửi cho bạn tài liệu và các lời khuyên hữu ích cho các sự kiện của bạn. <a href='http://code.org/learn'> Hãy thử các hướng dẫn hiện hành</a> cho bất kỳ trình duyệt, điện thoại thông minh- hoặc thậm chí không có máy tính!"
+  whats_next_how_to: "<a href='/how-to'> Làm thế nào để bắt đầu Giờ Mã</a>"
+  whats_next_promote: "Phổ biến về Hour Of Code"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
-  whats_next_try_button: 'Try tutorials'
+  whats_next_try: "<a href='%{learn_url}'> Thử hướng dẫn</a>"
+  whats_next_try_button: 'Hãy thử các hướng dẫn'
   n_have_learned_an_hoc: "<h1>Thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>"
   anybody_can_learn: 'Bất cứ ai cũng có thể tìm hiểu.'
   get_started: 'Bắt đầu'
@@ -177,33 +178,33 @@ vi:
   share_on_facebook: 'Chia sẻ trên Facebook'
   share_on_twitter: 'Chia sẻ trên Twitter'
   front_join_us_heading: 'Một giờ cho mã lập trình dành cho tất cả học sinh.'
-  front_join_us_announcements: 'Announcements'
-  front_join_us_anybody_can_learn: 'Anybody can learn'
+  front_join_us_announcements: 'Thông báo'
+  front_join_us_anybody_can_learn: 'Bất cứ ai cũng có thể tìm hiểu'
   front_join_us_description: 'Khoa học máy tính là một nền tảng dành cho tất cả những ai đam mê tìm hiểu. Hãy giúp chúng tôi quảng bá nó đến với tất cả mọi người.'
-  front_join_us_description_short: 'Computer science is a foundation for every student.'
+  front_join_us_description_short: 'Khoa học máy tính là một nền tảng cho mọi học sinh.'
   front_join_us_button: 'Hãy tham gia với chúng tớ'
   front_what_is_hoc: 'Hour of Code là gì?'
   front_join_us_header: 'Bất cứ ai có thể học những điều cơ bản, và có niềm vui khi làm nó!'
-  front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
-  front_join_us_tutorials: "Try this year's new tutorials!"
-  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
+  front_join_us_volunteer_header: 'Tình nguyện viên cho Giờ Mã'
+  front_join_us_tutorials: "Hãy thử hướng dẫn mới của năm nay!"
+  front_join_us_tutorials_link: 'Lọc và tìm một danh sách mở rộng của <i>hơn 200 các hướng dẫn và kế hoạch bài học</i>! Tìm các hoạt động cho các lĩnh vực chủ đề khác nhau, nhiều nhu cầu về phần cứng và sinh viên tại bất kỳ mức độ kinh nghiệm.'
   front_join_us_robotics: 'Got robots?'
   front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
   front_join_us_teacher: 'Bạn có phải là một giáo viên?'
   front_join_us_inspire: 'Truyền cảm hứng cho học sinh'
   front_join_us_inspire_link: 'một Hour of Code trong lớp học.'
-  front_join_us_teacher_link: "Inspire students with an Hour of Code in the classroom"
-  front_join_us_teacher_volunteer: "Search for local volunteers who can visit your classroom or inspire your students remotely."
+  front_join_us_teacher_link: "Truyền cảm hứng cho sinh viên với Giờ Mã trong lớp học"
+  front_join_us_teacher_volunteer: "Tìm kiếm các tình nguyện viên địa phương, những người có thể truy cập vào lớp học của bạn hoặc truyền cảm hứng cho học sinh của bạn từ xa."
   front_join_us_parent: 'Bạn có phải là cha/mẹ?'
   front_join_us_ask_link: 'Đề nghị trường học của bạn'
   front_join_us_ask: 'để tổ chức một Giờ Mã.'
-  front_join_us_parent_link: "Ask your local school to host an Hour of Code"
+  front_join_us_parent_link: "Đề nghị trường của bạn tổ chức 1 Hour of Code"
   front_join_us_computer_science: 'mới yêu khoa học máy tính?'
-  front_join_us_cs_volunteer: 'Passionate about computer science education?'
+  front_join_us_cs_volunteer: 'Đam mê giáo dục máy tính khoa học?'
   front_join_us_spread: 'truyền bá khắp thế giới'
-  front_join_us_spread_word: "Spread the word in your community"
-  front_join_us_spread_word_work: "Spread the word in your community or workplace"
-  front_join_us_sign_up_volunteer: 'Sign up to volunteer at a local classroom or through a video chat.'
+  front_join_us_spread_word: "Truyền thông điệp tới mọi người xung quanh bạn"
+  front_join_us_spread_word_work: "Truyền thông điệp tới cộng đồng của bạn hoặc nơi làm việc"
+  front_join_us_sign_up_volunteer: 'Đăng ký tình nguyện tại một lớp học địa phương hoặc thông qua một cuộc trò chuyện video.'
   front_join_us_organize: 'Hoặc tự bạn tổ chức sự kiện Giờ Mã.'
   front_join_us_how_to_run: "Đây là cách để bắt đầu một Giờ Mã"
   front_join_us_help_promote: "Giúp quảng bá Giờ Mã"
@@ -214,52 +215,64 @@ vi:
   front_join_us_sign_up: "Đăng ký/ Ghi danh"
   front_join_us_host: "Tổ chức nó"
   front_join_us_support: "Hỗ trợ nó"
-  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: "For more information, please visit code.org"
+  front_join_us_more_info: "Để biết thêm chi tiết, vui lòng truy cập <a href='https://code.org'> code.org</a>."
+  front_join_us_code_info: "Để biết thêm thông tin chi tiết, vui lòng truy cập code.org"
   front_join_us_n_students_served: "# served"
-  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
+  signup_header: 'Tổ chức một sự kiện Hour of Code vào %{campaign_date}, và đăng ký nó ở đây.'
   signup_name_label: 'Tên của bạn'
+  signup_name_error: 'Tên là bắt buộc.'
   signup_email_label: 'Email của bạn'
+  signup_email_error: 'Email là bắt buộc'
   signup_organization_name_label: 'Tên trường hoặc tổ chức bạn đang học hoặc làm việc'
+  signup_organization_name_error: 'Tên tổ chức là bắt buộc.'
   signup_event_type_label: 'Kiểu sự kiện'
+  signup_event_type_error: 'Bạn chưa nhập loại sự kiện.'
   signup_event_entire_school_label: 'Toàn bộ học sinh trường tôi đã tham gia vào'
   signup_event_location_label: 'Địa điểm sự kiện (tuỳ chọn)'
+  signup_event_location_error: 'Bạn chưa nhập địa điểm của sự kiện.'
   signup_special_event_flag_label: 'Làm nổi bật sự kiện của tôi lên'
   signup_special_event_details_label: 'Chi tiết về sự kiện đặc biệt'
   signup_send_posters_flag_label: 'Gửi <a href= "/resources#posters"> áp phích</a> cho trường học hoặc tổ chức của tôi'
   signup_send_posters_address_label: 'Địa chỉ trường hoặc tổ chức của bạn'
   signup_whole_school_flag_label: 'Sự kiện này dành cho một trường'
   signup_your_event: 'Đăng ký sự kiện của bạn'
-  signup_host_an_hour: 'Host an hour'
-  signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
-  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_host_an_hour: 'Tổ chức một giờ'
+  signup_match_volunteer: 'Hãy giúp tôi tìm một kỹ sư phần mềm tại địa phương để truyền cảm hứng cho học sinh của tôi'
+  signup_multiple_event_warning: "Nếu bạn đang tổ chức nhiều sự kiện, xin vui lòng gửi một tên sự kiện riêng biệt cho mỗi sự kiện hoặc gửi email riêng biệt cho mỗi sự kiện. Chúng tôi chỉ tính một sự kiện dựa vào sự kết hợp của tên sự kiện và email."
+  signup_registration_deadline: "Hạn đăng ký cho sự kiện Hour of Code là ngày 11 tháng 12."
   signup_name_placeholder: 'Tên của bạn'
   signup_email_placeholder: 'You@example.com'
   signup_organization_name_placeholder: "Ví dụ, Trường THPT Phan Châu Trinh / Tổ chức AIESEC"
+  signup_event_country_label: "Quốc gia nơi tổ chức sự kiện"
+  signup_event_country_error: "Quốc tịch là bắt buộc."
   signup_event_location_placeholder: "Mã bưu chính và đất nước OR đầy đủ địa chỉ. \\r (chúng tôi sẽ sử dụng điều này để đặt một pin trên bản đồ của chúng tôi)"
   signup_special_event_details_placeholder: 'Hãy mô tả điều gì khiến cho sự kiện này trở nên đặc biệt'
   signup_send_posters_address_placeholder: 'Địa chỉ bạn cung cấp tuyệt đối không được chia sẻ trên trang của chúng tôi'
   signup_event_type_in_school: 'Trong một trường học'
   signup_event_type_out_of_school: 'Bên ngoài trường học'
+  signup_submit_census_label: 'Gửi đi/ Chấp nhận'
+  signup_submit_census_error_message: "Rất tiếc đã có lỗi xảy ra. Bạn vui lòng gửi lại form một lần nữa."
   signup_submit_label: 'Đăng ký/ Ghi danh'
   signup_submit_error_message: "Đã xảy ra lỗi trong quá trình thao tác. Xin vui lòng kiểm tra lại và đảm bảo rằng các ô trống bắt buộc đã được điền thông tin đầy đủ."
+  signup_submit_and_continue_label: 'Gửi và tiếp tục'
+  signup_continue_label: 'Tiếp tục'
   signup_thank_you_header: "Cám ơn bạn đã đăng ký với chúng tôi! HOUR of CODE"
   signup_thank_you_message: 'Chúng tôi đã gửi cho bạn một thư xác nhận vào địa chỉ email của bạn đã cung cấp. Hãy đảm bảo rằng bạn đã đọc nó trong hộp thư.'
-  map_title: "Hour of Code map"
+  map_title: "Bản đồ của Giờ lập trình"
   map_header: 'Sự kiện Hour of Code trên toàn thế giới'
   see_all_events: 'Xem tất cả sự kiện'
   map_header_company: '# bởi những người tổ chức công ty'
-  map_header_country: '# in %{country}'
+  map_header_country: '# tại %{country}'
   map_search_placeholder: 'Tìm kiếm sự kiện Hour of Code'
   map_search_search: 'Tìm kiếm'
   map_search_reset: 'Đặt lại'
-  map_legend_title: 'Legend'
-  map_legend_hoc_events: 'Hour of Code Event'
-  map_legend_cs_tech_jam: 'Special Event'
-  meta_tag_og_title: 'Sự kiện Giờ Mã đang đến gần'
+  map_legend_title: 'Chú thích'
+  map_legend_hoc_events: 'Sự kiện Hour of Code'
+  map_legend_cs_tech_jam: 'Sự kiện đặc biệt'
+  map_warning: "Bản đồ Giờ của Lập trình chỉ hiển thị 200.000 sự kiện đăng ký đầu tiên. Tất cả các sự kiện đã đăng ký với địa chỉ hợp lệ có thể được xem trên <a href='%{events_url}'> trang sự kiện.</a>"
+  meta_tag_og_title: Sự kiện Giờ Mã đang đến gần
   meta_tag_og_description: 'Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi từ 4 đến 104.'
-  meta_tag_twitter_title: 'Sự kiện Giờ Mã đang đến gần'
+  meta_tag_twitter_title: Sự kiện Giờ Mã đang đến gần
   meta_tag_twitter_description: 'Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi từ 4 đến 104.'
   twitter_default_text: "Tôi đang đang tham gia #HourofCode vào năm nay? còn bạn"
   hoc_faq_title: 'Câu hỏi thường gặp'
@@ -267,16 +280,16 @@ vi:
   hoc_faq_what_is_hoc_a: "Hour of Cpde là một giờ giới thiệu về khoa học máy tính, được thiết kế để mã rõ ràng và hiển thị mà bất cứ ai có thể học những điều cơ bản. <a href='http://code.org/learn'> kiểm tra các hướng dẫn."
   hoc_faq_last_year: "Hãy thử các hướng dẫn"
   hoc_faq_when_is_hoc_q: 'Khi là giờ mã?'
-  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
+  hoc_faq_when_is_hoc_a: "Giờ của Lập trình tổ chức sự kiện <a href='%{csedweek_url}'> Tuần lễ đào tạo Khoa học máy tính</a> hàng năm. Năm %{campaign_date_year} sự kiện này sẽ diễn ra vào %{campaign_date_full}, nhưng bạn vẫn có thể tổ chức sự kiện này vào bất cứ thời gian nào. Sự kiện này được tổ chức nhằm kỷ niệm ngày sinh của người đã đặt nền móng cho máy tính <a href='%{grace_hopper}'> Grace Murray Hopper</a> (9 tháng 12 năm 1906)."
   hoc_faq_why_cs_q: 'Tại sao lại là khoa học máy tính?'
   hoc_faq_why_cs_a: "<i>Mỗi</i> học sinh nên có cơ hội để tìm hiểu khoa học máy tính. Nó giúp nuôi dưỡng giải quyết vấn đề kỹ năng, logic và sáng tạo. Bằng cách bắt đầu sớm, học sinh/ sinh viên sẽ có một nền tảng cho sự thành công trong bất kỳ con đường sự nghiệp thế kỷ 21. Xem thêm thống kê trên <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: 'Làm thế nào để tham gia vào Hour of Code?'
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'> Bắt đầu lập kế hoạch ở đây </a> bằng cách xem hướng dẫn của chúng tôi. Bạn có thể tổ chức một sự kiện Hour of Code tại trường học hoặc tại nơi bạn sinh sống &mdash; giống như một câu lạc bộ ngoại khóa, chương trình phi lợi nhuận hay tổ chức nó ở nơi làm việc. Hoặc, bạn cũng có thể tự trải niệm vào %{campaign_date} khi sự kiện bắt đầu."
   hoc_faq_behind_hoc_q: 'Những ai đã làm nên Hour of Code?'
   hoc_faq_behind_hoc_a: "Giờ mã được tổ chức bởi <a href='http://code.org'> Code.org</a>, một khu vực 501 c 3 phi lợi nhuận chuyên dụng để mở rộng sự tham gia trong khoa học máy tính bằng cách làm cho nó có sẵn trong các trường học thêm, và tăng sự tham gia của phụ nữ và các sinh viên underrepresented của màu sắc. Một <a href='http://code.org/about/partners'> liên minh chưa từng có của các đối tác</a> đã đến với nhau để hỗ trợ giờ mã, quá &mdash; bao gồm Microsoft, Apple, Amazon, chàng trai và cô gái câu lạc bộ của Mỹ và hội đồng quản trị trường cao đẳng."
   hoc_faq_host_q: "Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể đến tham dự sự kiện?"
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
-  hoc_faq_devices_q: "What devices should I use for my students?"
+  hoc_faq_host_a: "Tất nhiên. Các hoạt động Hour of Code đều có hướng dẫn tự động trên trang web. Tất cả những gì bạn cần làm là <a href='%{codeorg_url}/learn'>tham gia vào các khóa học của chúng tôi</a>, chọn lấy một khóa học bạn muốn và dành ra 1 giờ, chúng tôi sẽ giúp bạn trong những phần tiếp theo. Chúng tôi cũng có nhiều lựa chọn cho các lứa tuổi và các mức độ người học khác nhau. Băt đầu lên kế hoạch cho việc học của bạn bằng việc đọc <a href='/resources/how-to'>Hướng dẫn</a> của chúng tôi."
+  hoc_faq_devices_q: "Tôi nên sử dụng những thiết bị nào cho học sinh của tôi?"
   hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: 'Tôi có cần máy tính cho mọi người tham gia?'
   hoc_faq_need_computers_a: "Không. Chúng tôi đã hướng dẫn giờ mã làm việc trên máy tính, điện thoại thông minh, viên nén, và một số đó có yêu cầu máy tính không có ở tất cả! Bạn có thể tham gia ở bất cứ đâu, với bất cứ điều gì bạn có. <p><i>Dưới đây là một vài lựa chọn:</i> <br><ul><li><b>làm việc trong cặp.</b> Nghiên cứu cho thấy học sinh tìm hiểu tốt nhất với <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> cặp lập trình</a>, chia sẻ một máy tính và làm việc cùng nhau. Khuyến khích học sinh của bạn tăng gấp đôi lên. <li><b>Sử dụng một màn hình dự kiến.</b> Nếu bạn có một máy chiếu và màn hình cho một máy tính kết nối Web, toàn bộ nhóm của bạn có thể làm một giờ mã với nhau. Xem video phần với nhau và đưa sang giải những câu đố hoặc trả lời câu hỏi. <li><b>Đi chưa cắm phít được.</b> Chúng tôi cung cấp hướng dẫn yêu cầu máy tính không có ở tất cả. </ul>"
@@ -292,7 +305,7 @@ vi:
   hoc_faq_scratch_a: "Bản chạy thử không chạy trên máy tính bảng. Nếu học sinh của bạn là người trẻ, họ có thể sử dụng ứng dụng iPad Scratch JR (cho  độc giả lần đầu tham gia). Nếu bạn nhìn vào các hướng dẫn trên <a href='http://code.org/learn'> Code.org/learn</a>, bạn có thể tìm thấy các hướng dẫn để làm việc trên iPad - từ Code.org, Tynker, Lightbot, hoặc CodeSpark."
   hoc_faq_count_hoc_q: "Làm thế nào bạn đếm\" Hours of Code\" ?"
   hoc_faq_map_q: "Why don't I see my dot on the map?"
-  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
+  hoc_faq_map_a: "We're so sorry you aren't seeing your event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "Bộ theo dõi \"Hour of Code\"  không phải là một thước đo chính xác của việc sử dụng. Chúng tôi không đếm xem có bao nhiêu cá nhân sinh viên xuất sắc khi tham gia Giờ Lập Trình, vì chúng tôi không yêu cầu các sinh viên đăng nhập hoặc đăng ký. Sau cùng, chúng tôi tính số lượng người tham gia nhiều nhất và ít nhất cùng một thời điểm. Xem chi tiết <a href='http://code.org/loc'> tại đây</a>."
   hoc_faq_one_hour_q: "How much can one learn in an hour?"
   hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
@@ -324,36 +337,36 @@ vi:
   resources_how_to_officials: Làm thế nào để hướng dẫn cho các công chức
   resources_handouts: Phát tờ rơi tuyên truyền
   resources_one_pager: One-page handout
-  resources_brochure: Brochure
+  resources_brochure: Tài liệu
   resources_posters: Áp phích
   resources_videos: Video
   resources_banners: Biểu ngữ (quảng cáo)
   resources_emails: Email mẫu 
-  resources_logo: Hour of Code logo
+  resources_logo: Biểu tượng của Hour of Code
   resources_stats: Số liệu thống kê và lời quảng cáo hữu ích 
   resources_press_kit: Bấm Kit
   resources_social: Cộng đồng
-  resources_country_resources: Country Specific Resources
-  resources_stickers: Stickers
-  resources_how_to_guides: 'How-to guides'
-  resources_promote: 'Promote'
+  resources_country_resources: Tài nguyên cụ thể từng nước
+  resources_stickers: Nhãn dán
+  resources_how_to_guides: 'Hướng dẫn sử dụng'
+  resources_promote: 'Khuyến khích'
   resources_nav_tutorials: 'Hãy thử các hướng dẫn'
   resources_nav_promote: 'Truyền tải thông điệp'
-  resources_nav_spread_word: 'How to get involved'
-  resources_banner_promote_text: "Promote"
-  resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
-  resources_banner_howto_text: "How-to"
+  resources_nav_spread_word: 'Tham gia như thế nào'
+  resources_banner_promote_text: "Khuyến khích"
+  resources_banner_promote_button: "Giới thiệu cho bạn bè, áp phích và đặt quảng cáo trên các mạng xã hội."
+  resources_banner_howto_text: "Hướng dẫn"
   resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
   handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
   videos_title: Truyền cảm hứng cho học sinh qua các video
-  videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
+  videos_what_most_schools_dont_teach: Những gì hầu hết các trường không dạy (5 phút)
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
   videos_obama_cs: Tổng thống Obama với khoa học máy tính
-  videos_anybody_can_learn: Anybody Can Learn (1 min)
-  title_country_resources: Country Specific Resources
+  videos_anybody_can_learn: Bất cứ ai cũng có thể tìm hiểu (1 phút)
+  title_country_resources: Tài nguyên cụ thể từng nước
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
@@ -361,32 +374,48 @@ vi:
   title_how_to_officials: Làm thế nào để hướng dẫn cho các công chức
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to_parents: How-to guide for parents
-  title_how_to: How-to Guide
+  title_how_to: Hướng dẫn Sử dụng
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Bấm Kit
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Đối tác
-  title_resources: Nguồn xây dựng
+  title_resources: Nguồn tài liệu
   title_signup_thanks: Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!
   title_tutorial_guidelines: Activity Guidelines
-  title_whole_school: Whole School Participation
-  events_nav_title: Hour of Code Events
+  title_whole_school: Sự tham gia của toàn bộ trường học
+  events_nav_title: Sự kiện Hour of Code
   events_nav_all: Tất cả các sự kiện
   events_nav_whole_schools: Toàn bộ trường học
   events_nav_special: Sự kiện đặc biệt
   events_nav_orgs: Tổ chức
-  events_all_old_title: "All @year Hour of Code events"
+  events_all_old_title: "Tất cả sự kiện Hour of Code của năm @year"
   events_all_title: Tất cả các  sự kiện "Hour of Code"
   events_whole_school_title: Sự kiện" Hour of Code" cho tất cả trường học 
   events_special_title: Sự kiện đặc biệt "Hour of Code"
   events_orgs_title: Tất cả các sự kiện "Hour of Code" tổ chức bởi các tổ chức đối tác
   event: sự kiện
   events: những sự kiện
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
+  highlights_title: Nổi bật
+  highlights_header: Nổi bật của Hour of Code
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  higlights_see_more: See more highlights
+  highlights_readmore: Read more
+  highlights_watchvideo: Xem video
+  highlights_facebook: Chia sẻ trên Facebook
+  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
+  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
+  highlights_constant_obama_short_heading: Coder in Chief
+  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
+  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
+  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
+  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
+  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_ny_short_heading: Brooklyn beats Chicago
+  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
+  highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: 'Tất cả thông tin lấy từ trang Code.org, đều thuộc quyền sở hữu của Code.org, Mọi trích dẫn từ trang vui lòng ghi rõ nguồn Code.org 2015'
   footer_trademark_message: 'Hour of Code là một tác quyền cá nhân/ thương hiệu của Code.org.'
   footer_menu_partners: 'Đối tác'
@@ -394,25 +423,26 @@ vi:
   footer_menu_support: 'Hỗ trợ'
   footer_menu_terms: 'Các điều khoản của Code.org'
   footer_menu_privacy: 'Chính sách bảo mật của Code.org'
-  learn_banner_heading: 'THỜI ĐIỂM của MÃ LẬP TRÌNH'
-  learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
-  learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
+  learn_banner_heading: 'GIỜ LẬP TRÌNH'
+  learn_banner_blurb: "Hãy thử làm hướng dẫn một giờ được thiết kế cho mọi lứa tuổi trên 45 ngôn ngữ.  Tham gia vào hàng triệu sinh viên và giáo viên tại hơn 180 quốc gia bắt đầu với Hour of Code."
+  learn_banner_beyond: "Bạn có muốn tiếp tục học tập không?  <a id='learn_banner_beyond'>Tiến xa hơn</a>"
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_robotics_banner_heading: 'ROBOTICS'
   learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
-  tutorial_moana_name: 'Moana: Wayfinding with Code'
-  tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_gumadventure_name: "Gumball's Coding Adventure"
+  tutorial_athlete_name: "Code your own sports game"
+  tutorial_moana_name: 'Moana: Tìm đường bị mã hoá'
+  tutorial_star-wars_name: 'Star Wars: Xây dựng một dải ngân hà với Mã'
+  tutorial_gumadventure_name: "Cuộc phiêu lưu mã hoá của Gumball"
   tutorial_mchoc_name: "Minecraft Hour of Code"
   tutorial_vidnews_name: 'Vidcode: Code the News'
   tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
-  tutorial_highseas_name: "Adventure on the High Seas"
+  tutorial_highseas_name: "Cuộc phiêu lưu trên biển cao"
   tutorial_capython_name: "Python Turtle Graphics"
-  tutorial_frzn_name: "Code with Anna and Elsa"
-  tutorial_cocom_name: "CodeCombat"
+  tutorial_frzn_name: "Mã hoã với Anna và Elsa"
+  tutorial_cocom_name: "Đấutrườngmãhoá"
   tutorial_play-lab_name: "Play Lab"
-  tutorial_boxisland2016_name: "Box Island"
-  tutorial_textcomp_name: "Text Compression"
+  tutorial_boxisland2016_name: "Đảo hộp"
+  tutorial_textcomp_name: "Văn bản nén"
   tutorial_encryption_name: "Simple Encryption"
   tutorial_kanopixel_name: "Kano Pixel Hack"
   tutorial_foos_name: "codeSpark Academy with The Foos"
@@ -444,14 +474,14 @@ vi:
   tutorial_hopgeo_name: "Geometry Jumper"
   tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
   tutorial_monster_name: "Mystery Island Coding Quest"
-  tutorial_tynkerapp_name: "Build an App"
-  tutorial_tynkerpup_name: "Puppy Adventure"
-  tutorial_livecode_name: "LiveCode Sound Boards"
-  tutorial_cocomgame_name: 'CodeCombat: Game Development'
+  tutorial_tynkerapp_name: "Xây dựng một ứng dụng"
+  tutorial_tynkerpup_name: "Chó con phiêu lưu"
+  tutorial_livecode_name: "Bo mạch âm thanh LiveCode"
+  tutorial_cocomgame_name: 'CodeCombat: Trò chơi phát triển'
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
-  tutorial_code-avengers_name: "Build a Game with JavaScript"
+  tutorial_code-avengers_name: "Xây dựng một trò chơi với JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
-  tutorial_makeschool_name: "Build an iPhone game in your browser!"
+  tutorial_makeschool_name: "Xây dựng một trò chơi iPhone trong trình duyệt của bạn!"
   tutorial_cmgame_name: "CodeMonkey's Game Builder"
   tutorial_codesters_name: "Codesters"
   tutorial_qrm_name: "Accessible programming (with screenreader support)"
@@ -538,7 +568,7 @@ vi:
   tutorial_fufafit_name: "fuzzFamily Fitness"
   tutorial_ozodance_name: "Ozobot Dance-Off"
   tutorial_codingrobotics_name: "Intro to Coding through Robotics (ft. Wonder Workshop)"
-  tutorial_box_name: "Box Island"
+  tutorial_box_name: "Đảo hộp"
   tutorial_hopgame_name: "Hopscotch Game Design Workshop"
   tutorial_icontrol_name: "iControl"
   tutorial_cocomteach_name: 'CodeCombat: Teacher-Led'
@@ -611,7 +641,7 @@ vi:
   tutorial_blockly_name: "Blockly"
   tutorial_tynker_name: "Build your own game"
   tutorial_baypt_name: "Code Baymax"
-  tutorial_code-combat_name: "CodeCombat"
+  tutorial_code-combat_name: "Đấutrườngmãhoá"
   tutorial_mky_name: "CodeMonkey"
   tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
   tutorial_pirates_name: "Coding Pirates"
@@ -637,10 +667,10 @@ vi:
   tutorial_play_name: "Play Lab"
   tutorial_robomind-nl_name: "Program a virtual robot"
   tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 2: Lights'
+  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Lights'
   tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
-  tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_swb_name: 'Star Wars: Xây dựng một dải ngân hà với Mã'
+  tutorial_build-a-galaxy_name: 'Star Wars: Xây dựng một dải ngân hà với Mã'
   tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
   tutorial_tchr_name: "Teacher Led Lesson Plans"
   tutorial_robogame_name: "The Robot Games"
@@ -672,6 +702,7 @@ vi:
   tutorial_khanweb_name: 'Khan Academy: Webpages'
   tutorial_khandata_name: 'Khan Academy: Databases'
   tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
+  tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
@@ -944,6 +975,7 @@ vi:
   tutorial_khanweb_shortdescription: "Learn how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
   tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
+  tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
@@ -1014,7 +1046,7 @@ vi:
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
   tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
-  tutorial_cdmy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
   tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
@@ -1202,7 +1234,7 @@ vi:
   tutorial_gpp_longdescription: "By \"programming\" one another to draw pictures, students will begin to understand what programming is really about. The activity will begin by having students instruct each other to color squares in on graph paper in an effort to reproduce an existing picture."
   tutorial_foosgame_longdescription: "Code your own video game with codeSpark Academy with The Foos’ new Game Kits. This activity guides students brand new to game design using a \"paint-by-numbers\" approach. Students will follow the on screen prompts to design and program a fun video game that they can share with their family and friends."
   tutorial_solopython_longdescription: "Learn Python basics using the first two modules on SoloLearn’s Python app, consult discussions and comments to help you understand better, run code examples in the compiler to help with material retention. Write and compile a simple program that takes your name as input, counts the number of letters, and outputs the result. Share and get community upvotes."
-  tutorial_kodableint_longdescription: "Students will learn about the role of a programmer in making machines function. Students will focus on sequence and practice giving instructions in order. This activity includes an unplugged group practice, as well as on-screen, independent practice."
+  tutorial_kodableint_longdescription: "Học sinh sẽ tìm hiểu về vai trò của một lập trình viên trong thực hiện chức năng của máy. Học sinh sẽ tập trung vào chuỗi và thực hành hướng dẫn theo thứ tự. Hoạt động này bao gồm một thực hành nhóm chưa cắm phít được, cũng như trên màn hình, thực hành độc lập."
   tutorial_kodableadv_longdescription: "Students will engage in developmentally appropriate lessons on higher level programming concepts such as loops, functions, variables, and object-oriented programming. Lessons included unplugged instruction, guided practice, and on-screen independent practice."
   tutorial_tynkertj_longdescription: "Learn Python to help Fletch collect the sachets of pixie dust to unlock the mysteries of the jungle and restore the islands to their original beauty. You'll use Python commands and syntax to solve puzzles as you navigate Fletch through the islands and avoid the carnivorous plans. Along the way, you'll practice computational and algorithmic thinking skills."
   tutorial_wolframa_longdescription: "In this activity, you will create a web-form that calculates your age in days, hours, nanoseconds, any unit of time that you specify!"
@@ -1216,6 +1248,7 @@ vi:
   tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
   tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
+  tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_gumadventure_language: "English only"
@@ -1223,7 +1256,7 @@ vi:
   tutorial_vidnews_language: "English only"
   tutorial_kodable-pre_language: "English, Arabic, Azerbaijani, German, Greek, Spanish, Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese"
   tutorial_highseas_language: "English only"
-  tutorial_capython_language: "English only"
+  tutorial_capython_language: "English, Dutch, Spanish"
   tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
   tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1265,14 +1298,14 @@ vi:
   tutorial_livecode_language: "English only"
   tutorial_cocomgame_language: "English, Arabic, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 8 more"
   tutorial_tynkerspin_language: "English only"
-  tutorial_code-avengers_language: "English, Spanish, Bulgarian, Danish, Greek, Finnish, Japanese and more"
+  tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
   tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
   tutorial_texas-instruments_language: "English only"
-  tutorial_cajava_language: "English only"
+  tutorial_cajava_language: "English, Dutch, Spanish"
   tutorial_codehs_language: "English only"
   tutorial_hopemo_language: "English only"
   tutorial_tynkercm_language: "English only"
@@ -1286,7 +1319,7 @@ vi:
   tutorial_mitedarc_language: "English only"
   tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
-  tutorial_cdmy_language: "Spanish"
+  tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
   tutorial_codestersbasketball_language: "English, Spanish"
   tutorial_nclkarel_language: "Multiple"
@@ -1294,7 +1327,7 @@ vi:
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
   tutorial_globaloria_language: "English, Spanish"
-  tutorial_capost_language: "English only"
+  tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
   tutorial_kanopong_language: "English only"
@@ -1323,7 +1356,7 @@ vi:
   tutorial_coders_language: "English, French"
   tutorial_tynkerhw_language: "English only"
   tutorial_tynkermh_language: "English only"
-  tutorial_caphoto_language: "English only"
+  tutorial_caphoto_language: "English, Dutch, Spanish"
   tutorial_mozillahw_language: "English only"
   tutorial_ticklep_language: "Chinese (Traditional), Danish, English, French, Japanese"
   tutorial_bbot_language: "Dutch, Suomi, English"
@@ -1488,6 +1521,7 @@ vi:
   tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
   tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
+  tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
@@ -1760,6 +1794,7 @@ vi:
   tutorial_khanweb_string_detail_grades: "Grades 2+"
   tutorial_khandata_string_detail_grades: "Grades 6+"
   tutorial_robomeshiq_string_detail_grades: "Grades 2+"
+  tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
@@ -1779,7 +1814,7 @@ vi:
   tutorial_tynkerdd_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkerana_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_vidcard_string_platforms: "Chrome"
-  tutorial_spritebox_string_platforms: "All modern browsers"
+  tutorial_spritebox_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkerch_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_lightbot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_hoc_string_platforms: "do-not-show"
@@ -1793,7 +1828,7 @@ vi:
   tutorial_inf_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_tynkersol_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_itchg_string_platforms: "Chrome, Firefox, Android Tablet"
-  tutorial_como_string_platforms: "All modern browsers"
+  tutorial_como_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_processfound_string_platforms: "Chrome, Firefox, Safari"
   tutorial_tynkerhomo_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_art_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -2032,6 +2067,7 @@ vi:
   tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
+  tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
@@ -2304,6 +2340,7 @@ vi:
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
+  tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
@@ -2576,3 +2613,45 @@ vi:
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_name_error: "School name is required."
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code"
+  school_zip_error: "School postal code is required."
+  census_thanks: 'Thanks for signing up!'
+  census_header: 'Please take a few minutes to tell us about your school (Optional).'
+  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
+  census_how_many_hoc: "How many students will do an Hour of Code?"
+  census_how_many_after_school: "How many students do computer programming in an after-school program?"
+  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
+  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
+  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
+  census_connection: "What is your connection to this school?"
+  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
+  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
+  census_followup_frequency: "How often per week does this class meet?"
+  less_than_one: "< 1 hour per week"
+  one_to_three: "1-3 hours per week"
+  three_plus: "3+ hours per week"
+  census_followup_more: "Please tell us more about this course."
+  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
+  census_topics_blocks: "Block-based programming"
+  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
+  census_topics_robots: "Robotics / Physical Computing"
+  census_topics_internet: "Internet and networking"
+  census_topics_security: "Cybersecurity"
+  census_topics_data: "Data analysis"
+  census_topics_web_design: "Web design using HTML and CSS"
+  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
+  teacher: "Teacher"
+  administrator: "Administrator"
+  parent: "Parent"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
+  other: "Other"
+  other_describe: "Other (please describe below)"
+  none: "None"
+  some: "Some"
+  all: "All"
+  dont_know: "I don't know"

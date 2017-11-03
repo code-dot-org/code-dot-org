@@ -1,15 +1,11 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promuovi l'Ora del Codice
 
@@ -37,23 +33,23 @@ nav: promote_nav
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Scarica le versioni ad alta risoluzione](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**Il nome "Hour of Code" ("Ora del codice") è un marchio registrato. Non vogliamo impedirne l'utilizzo, ma vogliamo assicurarci che l'uso rispetti alcuni limiti:**
 
-  1. Qualsiasi riferimento a "Hour of Code" deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Un esempio di uso corretto: "Partecipa all'Ora del Codice sul sito di ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. Includi una nota nella pagina (o nel piè di pagina), che contenga i collegamenti ai siti web CSEdWeek e Code.org e indichi quanto segue:
+1. Qualsiasi riferimento a "Hour of Code" ("Ora del codice") deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Un esempio di uso corretto: "Partecipa all'Ora del Codice sul sito di ACMECorp.com". Un esempio di uso sbagliato: "Prova l'Ora del Codice di ACME Corp".
+2. Utilizza un apice "TM" dove menzioni "Ora del Codice" o "Hour of Code", sia sul tuo sito web sia nelle descrizioni delle app.
+3. Includi una nota nella pagina (o nel piè di pagina), che contenga i collegamenti ai siti web CSEdWeek e Code.org e indichi quanto segue:
     
-    *"Hour of Code™" è un'iniziativa nazionale della Computer Science Education Week[csedweek.org] e di Code.org [code.org] per introdurre milioni di studenti ad un'ora di informatica e di programmazione dei computer*
+    *"L' Ora del Codice (Hour of Code™) è un'iniziativa nazionale della Computer Science Education Week[csedweek.org] e di Code.org [code.org] per introdurre milioni di studenti ad un'ora di informatica e programmazione."*
 
-  4. No use of "Hour of Code" in app names.
+4. Non è concesso alcun uso di "Ora del Codice" o "Hour of Code" nei nomi delle app.
 
 <a id="stickers"></a>
 
 ## Stampa questi adesivi da dare ai tuoi studenti
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Gli adesivi misurano 1" di diametro, 63 per foglio)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -64,15 +60,15 @@ nav: promote_nav
 
 ## Chiedi alla tua scuola, al tuo datore di lavoro o ai tuoi amici di iscriversi:
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. La buona notizia è che siamo intenzionati a cambiare rotta. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma meno della metà delle scuole insegna informatica. La buona notizia è che intendiamo cambiare rotta. Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato l'Ora del Codice.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! e anche del sito della Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Con l'Ora del Codice, l'informatica è stata sulle homepage di Google, MSN, Yahoo! e anche del sito della Disney. Più di 100 partner si sono uniti per supportare questo movimento. Ogni Apple Store nel mondo ha ospitato un'Ora del Codice. Il presidente Obama ha scritto la sua prima riga di codice nell'ambito di questa campagna.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Spargi la voce. Organizza un evento. Chiedi ad una scuola di iscriversi. Prova tu stesso l'Ora del Codice -- Chiunque può trarre beneficio dell'apprendimento dei concetti fondamentali dell'informatica.
 
-Get started at http://hourofcode.com/<%= @country %>
+Per iniziare vai su http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
@@ -80,15 +76,15 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. La buona notizia è che siamo intenzionati a cambiare rotta.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. La buona notizia è che intendiamo cambiare rotta.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! e anche del sito della Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Con l'Ora del Codice, l'informatica è stata sulle homepage di Google, MSN, Yahoo! e anche del sito della Disney. Più di 100 partner si sono uniti per supportare questo movimento. Ogni Apple Store nel mondo ha ospitato un'Ora del Codice. Il presidente Obama ha scritto la sua prima riga di codice nell'ambito di questa campagna.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Unisciti a noi.
 
 **Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
@@ -102,7 +98,7 @@ I look forward to being in touch.
 
 ## Comunica ai genitori informazioni sull'evento della tua scuola:
 
-Dear Parents,
+Cari genitori,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 

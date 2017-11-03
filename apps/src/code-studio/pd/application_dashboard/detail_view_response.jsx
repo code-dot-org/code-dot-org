@@ -1,13 +1,34 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import {Panel} from 'react-bootstrap';
+import MarkdownSpan from '../components/markdownSpan';
+
+const styles = {
+  lineItem: {
+    fontFamily: '"Gotham 7r"',
+    marginRight: '10px'
+  }
+};
+
+const Question = (props) => {
+  const suffix = '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
+  return (
+    <MarkdownSpan style={props.style}>
+      {`${props.text}${suffix}`}
+    </MarkdownSpan>
+  );
+};
+Question.propTypes = {
+  text: PropTypes.string.isRequired,
+  style: PropTypes.object
+};
 
 export default class DetailViewResponse extends React.Component {
   static propTypes = {
     question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool]),
     layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired
-  }
+  };
 
   render() {
     if (this.props.answer && !(typeof this.props.answer === 'boolean')) {
@@ -19,14 +40,7 @@ export default class DetailViewResponse extends React.Component {
       if (this.props.layout === 'lineItem') {
         return (
           <div>
-            <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
-              {
-                this.props.question
-              }
-              {
-                '?:.'.indexOf(this.props.question[this.props.question.length - 1]) >= 0 ? '' : ':'
-              }
-            </span>
+            <Question text={this.props.question} style={styles.lineItem} />
             {renderedValue}
           </div>
         );
@@ -34,7 +48,11 @@ export default class DetailViewResponse extends React.Component {
         return (
           <div className="row">
             <div className="col-md-8">
-              <Panel header={this.props.question}>
+              <Panel
+                header={
+                  <Question text={this.props.question}/>
+                }
+              >
                 {renderedValue}
               </Panel>
             </div>
