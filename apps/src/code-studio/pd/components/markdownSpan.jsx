@@ -7,12 +7,12 @@ renderer.link = (href, _title, text) => `<a href="${href}" target="_blank">${tex
 
 export default class MarkdownSpan extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired,
+    children: PropTypes.string.isRequired,
     style: PropTypes.object
   };
 
   render() {
-    const renderedText = marked.inlineLexer(this.props.markdown, [], {renderer});
+    const renderedText = marked.inlineLexer(this.props.children, [], {renderer});
     return (
       <span
         dangerouslySetInnerHTML={{__html: renderedText}} // eslint-disable-line react/no-danger

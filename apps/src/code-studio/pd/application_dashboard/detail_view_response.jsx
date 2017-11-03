@@ -13,10 +13,9 @@ const styles = {
 const Question = (props) => {
   const suffix = '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
   return (
-    <MarkdownSpan
-      markdown={`${props.text}${suffix}`}
-      style={props.style}
-    />
+    <MarkdownSpan style={props.style}>
+      {`${props.text}${suffix}`}
+    </MarkdownSpan>
   );
 };
 Question.propTypes = {

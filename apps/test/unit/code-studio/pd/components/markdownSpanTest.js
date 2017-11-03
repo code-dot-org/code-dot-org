@@ -6,9 +6,9 @@ import MarkdownSpan from '@cdo/apps/code-studio/pd/components/markdownSpan';
 describe("MarkdownSpan", () => {
   it("Renders the supplied markdown in a span element", () => {
     const markdownSpan = shallow(
-      <MarkdownSpan
-        markdown="normal text *bold text*"
-      />
+      <MarkdownSpan>
+        normal text *bold text*
+      </MarkdownSpan>
     );
 
     expect(markdownSpan).to.have.html(
@@ -18,9 +18,9 @@ describe("MarkdownSpan", () => {
 
   it("Renders links with target=_blank", () => {
     const markdownSpan = shallow(
-      <MarkdownSpan
-        markdown="This is a [link](https://code.org)."
-      />
+      <MarkdownSpan>
+        This is a [link](https://code.org).
+      </MarkdownSpan>
     );
 
     expect(markdownSpan).to.have.html(
@@ -30,10 +30,9 @@ describe("MarkdownSpan", () => {
 
   it("Applies the supplied style to the rendered span", () => {
     const markdownSpan = shallow(
-      <MarkdownSpan
-        markdown="text"
-        style={{fontFamily: "Gotham 7r"}}
-      />
+      <MarkdownSpan style={{fontFamily: "Gotham 7r"}}>
+        text
+      </MarkdownSpan>
     );
 
     expect(markdownSpan).to.containMatchingElement(
