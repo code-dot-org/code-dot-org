@@ -106,6 +106,18 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert school_info.valid?, school_info.errors.full_messages
   end
 
+  test 'inconsitant school data notifies' do
+    Honeybadger.expects(:notify)
+    school_info = build :school_info_with_public_school_only, country: 'Different Country'
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'consitant school data does not notify' do
+    Honeybadger.expects(:notify).never
+    school_info = build :school_info_with_public_school_only, country: 'US'
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
   test 'US public with district and school succeeds' do
     school_info = build :school_info_us_public, :with_district, :with_school
     assert school_info.valid?, school_info.errors.full_messages
