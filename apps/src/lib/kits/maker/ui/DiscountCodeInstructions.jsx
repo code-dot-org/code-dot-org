@@ -1,40 +1,41 @@
 import React, {Component, PropTypes} from 'react';
+import i18n from "@cdo/locale";
 
 export default class DiscountCodeInstructions extends Component {
   static propTypes = {
     discountCode: PropTypes.string.isRequired,
+    discountComplete: PropTypes.bool.isRequired,
   };
 
   render() {
     return (
       <div>
-        <h1>Subsidized Circuit Playground Kits</h1>
-        <h2>
-          Discount code for subsidized kit: discountCode (Expires December 31, 2018)
-        </h2>
+        <h1>{i18n.subsidizedPlaygroundKit()}</h1>
+        <h2>{i18n.discountCode({discountCode: this.props.discountCode})}</h2>
         <div>
-          We're happy to share with you this discount code that will bring down the cost of a $325 Circuit Playground kit to only $100 including shipping. We're excited that you will be bringing this opportunity to your students!
+          {i18n.discountCodeAnnouncement({discountAmount: this.props.discountComplete ? "$0" : "only $97.50 (including standard ground shipping)"})}
         </div>
         <div>
-          To order your kit with the discount code, follow the steps below.
+          {i18n.discountCodeOrderInstructions()}
           <b>
-            You must use your discount code by December 31, 2018.
+            {i18n.discountCodeExpiration()}
           </b>
         </div>
         <ol>
           <li>
-            Go to https://www.adafruit.com/product/3399 and add the kit to your cart.
+            {i18n.discountCodeInstructions1()}
           </li>
           <li>
-            Go to your cart.
+            {i18n.discountCodeInstructions2()}
           </li>
           <li>
-            Put in your discount code (discountCode) and hit "Apply":
+            {i18n.discountCodeInstructions3({discountCode: this.props.discountCode})}
           </li>
           <li>
-            Proceed to checkout. Your total cost should be kitCost.
+            {i18n.discountCodeInstructions4({kitCost: this.props.discountComplete ? "$0" : "$97.50"})}
           </li>
         </ol>
+        <div>{i18n.discountCodeHelp()}</div>
       </div>
     );
   }
