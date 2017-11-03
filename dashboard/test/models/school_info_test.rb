@@ -104,6 +104,11 @@ class SchoolInfoTest < ActiveSupport::TestCase
   test 'US public with school succeeds' do
     school_info = build :school_info_with_public_school_only
     assert school_info.valid?, school_info.errors.full_messages
+    assert_equal school_info.school_district, school_info.school.school_district
+    assert_equal school_info.school_type, school_info.school.school_type
+    assert_equal school_info.state, school_info.school.state
+    assert_equal school_info.country, 'US'
+    assert_equal school_info.validation_type, SchoolInfo::VALIDATION_FULL
   end
 
   test 'inconsitant school data notifies' do
