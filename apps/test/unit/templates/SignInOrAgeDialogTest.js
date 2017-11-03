@@ -70,6 +70,7 @@ describe('SignInOrAgeDialog', () => {
     afterEach(() => {
       utils.navigateToHref.restore();
       utils.reload.restore();
+      cookies.get.restore && cookies.get.restore();
       cookies.remove.restore();
       window.dashboard.rack_env = stashedRackEnv;
     });
@@ -90,7 +91,10 @@ describe('SignInOrAgeDialog', () => {
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
-      // assert.strictEqual(cookie.get(environmentSpecificCookieName('storage_id')));
+      // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
+      // does not work in unit tests
+      sinon.stub(cookies, 'get').returns('something');
+
       const wrapper = shallow(
         <SignInOrAgeDialog
           {...defaultProps}
@@ -105,6 +109,20 @@ describe('SignInOrAgeDialog', () => {
       assert(utils.reload.called);
       assert(cookies.remove.calledWith(environmentSpecificCookieName('storage_id'),
         {path: '/', domain: 'code.org'}));
+    });
+
+    it('does not reload when providing an age >= 13 if you did not have a cookie', () => {
+      const wrapper = shallow(
+        <SignInOrAgeDialog
+          {...defaultProps}
+        />
+      );
+      const instance = wrapper.instance();
+      instance.ageDropdown = {
+        getValue: () => '13'
+      };
+      wrapper.find('Button').at(1).simulate('click');
+      assert.equal(utils.reload.called, false);
     });
   });
 });
