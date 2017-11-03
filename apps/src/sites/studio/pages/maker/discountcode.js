@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import EligibilityChecklist from '@cdo/apps/templates/EligibilityChecklist';
 import { Status } from '@cdo/apps/lib/kits/maker/ui/SetupStep';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  const script = document.querySelector('script[data-discountcode]');
-  const scriptData = JSON.parse(script.dataset.discountcode);
+  const scriptData = getScriptData('discountcode');
 
   ReactDOM.render(
     <EligibilityChecklist
