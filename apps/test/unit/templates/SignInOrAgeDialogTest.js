@@ -6,6 +6,8 @@ import {
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import cookies from 'js-cookie';
+import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 
 describe('SignInOrAgeDialog', () => {
   const defaultProps = {
@@ -55,8 +57,22 @@ describe('SignInOrAgeDialog', () => {
   });
 
   describe('redirect', () => {
-    beforeEach(() => sinon.stub(utils, 'navigateToHref'));
-    afterEach(() => utils.navigateToHref.restore());
+    let stashedRackEnv;
+
+    beforeEach(() => {
+      stashedRackEnv = window.dashboard.rack_env;
+      window.dashboard.rack_env = 'unit_test';
+
+      sinon.stub(utils, 'navigateToHref');
+      sinon.stub(utils, 'reload');
+      sinon.stub(cookies, 'remove');
+    });
+    afterEach(() => {
+      utils.navigateToHref.restore();
+      utils.reload.restore();
+      cookies.remove.restore();
+      window.dashboard.rack_env = stashedRackEnv;
+    });
 
     it('redirects if you provide an age < 13', () => {
       const wrapper = shallow(
@@ -72,20 +88,23 @@ describe('SignInOrAgeDialog', () => {
       assert.strictEqual(sessionStorage.getItem('anon_over13'), null);
       assert(utils.navigateToHref.called);
     });
-  });
 
-  it('sets sessionStorage if you provide an age >= 13', () => {
-    const wrapper = shallow(
-      <SignInOrAgeDialog
-        {...defaultProps}
-      />
-    );
-    const instance = wrapper.instance();
-    instance.ageDropdown = {
-      getValue: () => '13'
-    };
-    wrapper.find('Button').at(1).simulate('click');
-    assert.strictEqual(sessionStorage.getItem('anon_over13'), 'true');
+    it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
+      // assert.strictEqual(cookie.get(environmentSpecificCookieName('storage_id')));
+      const wrapper = shallow(
+        <SignInOrAgeDialog
+          {...defaultProps}
+        />
+      );
+      const instance = wrapper.instance();
+      instance.ageDropdown = {
+        getValue: () => '13'
+      };
+      wrapper.find('Button').at(1).simulate('click');
+      assert.strictEqual(sessionStorage.getItem('anon_over13'), 'true');
+      assert(utils.reload.called);
+      assert(cookies.remove.calledWith(environmentSpecificCookieName('storage_id'),
+        {path: '/', domain: 'code.org'}));
+    });
   });
-
 });
