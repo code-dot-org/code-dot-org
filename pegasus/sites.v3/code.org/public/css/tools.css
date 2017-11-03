@@ -24,6 +24,14 @@ h1.tools-title {
   padding: 14px 15px;
 }
 
+.tools-img-applab {
+  width: 282px;
+}
+
+.tools-img-gamelab {
+  width: 222px;
+}
+
 .tutorial-tile {
   padding-right: 20px;
   padding-bottom: 20px;
@@ -41,4 +49,10 @@ h3.tutorial-info-h {
 button.tutorial-gray {
   background-color: #c6cacd;
   border-color: #c6cacd;
+}
+
+@media only screen and (max-width: 960px) {
+  .tools-img {
+  	width: 100%;
+  }
 }
