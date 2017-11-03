@@ -69,6 +69,10 @@ const styles = {
 const sessionStorageKey = 'anon_over13';
 
 class SignInOrAgeDialog extends Component {
+  state = {
+    open: true
+  };
+
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
@@ -93,8 +97,12 @@ class SignInOrAgeDialog extends Component {
     // but may still be using a storage_id for a previous user. Clear that cookie
     // and reload
     const cookieName = environmentSpecificCookieName('storage_id');
-    cookies.remove(cookieName, {path: '/', domain: 'code.org'});
-    reload();
+    if (cookies.get(cookieName)) {
+      cookies.remove(cookieName, {path: '/', domain: 'code.org'});
+      reload();
+    } else {
+      this.setState({open: false});
+    }
   };
 
   render() {
@@ -108,7 +116,7 @@ class SignInOrAgeDialog extends Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        isOpen={true}
+        isOpen={this.state.open}
         assetUrl={() => ''}
         uncloseable
       >
