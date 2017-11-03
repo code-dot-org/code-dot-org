@@ -2,13 +2,15 @@ import React, {Component, PropTypes} from 'react';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 
-export const HIDDEN = 'HIDDEN';
-export const WAITING = 'WAITING';
-export const ATTEMPTING = 'ATTEMPTING';
-export const SUCCEEDED = 'SUCCEEDED';
-export const FAILED = 'FAILED';
-export const CELEBRATING = 'CELEBRATING';
-export const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
+export const Status = {
+  HIDDEN: 'HIDDEN',
+  WAITING: 'WAITING',
+  ATTEMPTING: 'ATTEMPTING',
+  SUCCEEDED: 'SUCCEEDED',
+  FAILED: 'FAILED',
+  CELEBRATING: 'CELEBRATING',
+  UNKNOWN: 'UNKNOWN'
+};
 
 const style = {
   root: {
@@ -33,12 +35,13 @@ export default class SetupStep extends Component {
   static propTypes = {
     children: PropTypes.node,
     stepName: PropTypes.string.isRequired,
-    stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired
+    stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
+    displayExplanation: PropTypes.bool,
   };
 
   render() {
-    const {stepName, stepStatus, children} = this.props;
-    if (stepStatus === HIDDEN) {
+    const {stepName, stepStatus, children, displayExplanation} = this.props;
+    if (stepStatus === Status.HIDDEN) {
       return null;
     }
     return (
@@ -47,7 +50,7 @@ export default class SetupStep extends Component {
           {iconFor(stepStatus)}
           <span>{stepName}</span>
         </div>
-        {stepStatus === FAILED &&
+        {(stepStatus === Status.FAILED || displayExplanation) &&
         <div style={style.body}>
           {children}
         </div>
@@ -63,14 +66,16 @@ export default class SetupStep extends Component {
  */
 function styleFor(stepStatus) {
   switch (stepStatus) {
-    case ATTEMPTING:
-    case WAITING:
+    case Status.ATTEMPTING:
+    case Status.WAITING:
       return {color: color.light_gray};
-    case SUCCEEDED:
-    case CELEBRATING:
+    case Status.SUCCEEDED:
+    case Status.CELEBRATING:
       return {color: color.realgreen};
-    case HIDDEN:
+    case Status.HIDDEN:
       return {display: 'none'};
+    case Status.UNKNOWN:
+      return {color: color.light_gray};
     default:
       return {
         color: color.red,
@@ -88,16 +93,18 @@ function iconFor(stepStatus) {
     marginRight: 6,
   };
   switch (stepStatus) {
-    case WAITING:
+    case Status.WAITING:
       return <FontAwesome icon="clock-o" className="fa-fw" style={iconStyle}/>;
-    case ATTEMPTING:
+    case Status.ATTEMPTING:
       return <FontAwesome icon="spinner" className="fa-fw fa-spin" style={iconStyle}/>;
-    case SUCCEEDED:
+    case Status.SUCCEEDED:
       return <FontAwesome icon="check-circle" className="fa-fw" style={iconStyle}/>;
-    case CELEBRATING:
+    case Status.CELEBRATING:
       return <FontAwesome icon="thumbs-o-up" className="fa-fw" style={iconStyle}/>;
-    case FAILED:
+    case Status.FAILED:
       return <FontAwesome icon="times-circle" className="fa-fw" style={iconStyle}/>;
+    case Status.UNKNOWN:
+      return <FontAwesome icon="question-circle" className="fa-fw" style={iconStyle}/>;
     default:
       throw new Error('Unknown step status.');
   }

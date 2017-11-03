@@ -2,16 +2,12 @@
 import React from 'react';
 import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
-import SetupStep, {
-  STEP_STATUSES,
-  FAILED,
-  HIDDEN,
-} from '@cdo/apps/lib/kits/maker/ui/SetupStep';
+import SetupStep, {Status} from '@cdo/apps/lib/kits/maker/ui/SetupStep';
 
 describe('SetupStep', () => {
   describe('can render every status', () => {
     // This is the lazy 100% coverage test :D
-    STEP_STATUSES.forEach(status => {
+    Object.values(Status).forEach(status => {
       it(status, () => {
         const wrapper = mount(
           <SetupStep
@@ -30,7 +26,7 @@ describe('SetupStep', () => {
     const wrapper = mount(
       <SetupStep
         stepName="Hidden step"
-        stepStatus={HIDDEN}
+        stepStatus={Status.HIDDEN}
       >
         Some help content.
       </SetupStep>
@@ -43,7 +39,7 @@ describe('SetupStep', () => {
     const wrapper = mount(
       <SetupStep
         stepName="Failed step"
-        stepStatus={FAILED}
+        stepStatus={Status.FAILED}
       >
         {helpString}
       </SetupStep>
@@ -53,8 +49,8 @@ describe('SetupStep', () => {
 
   it('does not render help text when step is not failed', () => {
     const helpString = 'XYZZY help content';
-    STEP_STATUSES.forEach(status => {
-      if (status === FAILED || status === HIDDEN) {
+    Object.values(Status).forEach(status => {
+      if (status === Status.FAILED || status === Status.HIDDEN) {
         return;
       }
 
