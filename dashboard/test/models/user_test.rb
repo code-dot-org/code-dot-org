@@ -2223,7 +2223,7 @@ class UserTest < ActiveSupport::TestCase
     section_3 = create :section, user_id: teacher.id
 
     Timecop.freeze do
-      assert_equal nil, student.last_joined_section
+      assert_nil student.last_joined_section
       Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
       assert_equal section_1, student.last_joined_section
       Timecop.travel 1
@@ -2563,9 +2563,12 @@ class UserTest < ActiveSupport::TestCase
     regular_level = create :level
     create :script_level, script: script, stage: stage, levels: [regular_level]
 
+    # two different levels, backed by the same template level
     template_level = create :level
-    template_backed_level = create :level, project_template_level_name: template_level.name
-    create :script_level, script: script, stage: stage, levels: [template_backed_level]
+    template_backed_level1 = create :level, project_template_level_name: template_level.name
+    create :script_level, script: script, stage: stage, levels: [template_backed_level1]
+    template_backed_level2 = create :level, project_template_level_name: template_level.name
+    create :script_level, script: script, stage: stage, levels: [template_backed_level2]
 
     # Whether we have a channel for a regular level in the script, or a template
     # level, we generate a UserScript
@@ -2577,6 +2580,18 @@ class UserTest < ActiveSupport::TestCase
       user_scripts = UserScript.where(user: user)
       assert_equal 1, user_scripts.length
       assert_equal script, user_scripts.first.script
+
+      if level == regular_level
+        # we should have exactly one user_level created
+        assert_equal 1, user.user_levels.length
+        assert_equal regular_level.id, user.user_levels[0].level_id
+      elsif level == template_level
+        # Template backed levels share a channel, so when we find a channel for the
+        # template, we create user_levels for every level that uses that template
+        assert_equal 2, user.user_levels.length
+        assert user.user_levels.map(&:level_id).include?(template_backed_level1.id)
+        assert user.user_levels.map(&:level_id).include?(template_backed_level2.id)
+      end
     end
 
     # No UserScript if we only have channel tokens elsewhere

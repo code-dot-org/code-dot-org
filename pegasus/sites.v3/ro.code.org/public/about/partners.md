@@ -197,11 +197,6 @@ social:
          <div class="row">
             <div class="col-sm-3 col span_3">
                <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                  <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.jaromania.org" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/JA-YE-ROMANIA_vf-e1416154651265-293x160.jpg"></a>
-               </div>
-            </div>
-            <div class="col-sm-3 col span_3">
-               <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                   <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.lsacbucuresti.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/sigla_LSAC_vectorial_72dpi-1-453x160.png"></a>
                </div>
             </div>

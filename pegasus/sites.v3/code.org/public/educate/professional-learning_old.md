@@ -27,28 +27,31 @@ These workshops are facilitated by experienced computer science educators across
 
 ### Professional learning for middle and high school teachers to teach computer science
 
-<h3 style="font-family: 'Gotham 5r', sans-serif">Professional learning for middle and high school teachers</h3>
-
-
 Our [middle and high school programs](/files/PLProgramsOverview_1-Pager.pdf) offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started.
 
 <br>
 
+<div class="col-50" style="padding-right: 20px; padding-bottom: 20px;">
 
-<div class="col-50" style="margin-bottom: 20px;">
+<h4>6 - 10th grade: Computer Science Discoveries</h4>
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-discoveries'), cta_text: 'Professional Development for 6th-10th grade', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-10: Computer Science Discoveries', description: 'For educators in 6th - 10th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.' %>
+For educators in 6th - 10th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.
+
+<br>
+<a href="/educate/professional-learning/cs-discoveries"><button>Professional Development for 6-10th grade</button>
 
 </div>
 
-[col-50]
+<div class="col-50" style="padding-left: 20px; padding-bottom: 20px;">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/educate/professional-learning/cs-principles'), cta_text: 'Professional Development for 9th-12th grade', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 9-12: Computer Science Principles', description: 'If you're teaching 9th - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course -- no prerequisites required. The course is designed to be far more than a traditional introduction to programming. It is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.' %>
+<h4>9 - 12th grade: Computer Science Principles</h4>
 
-[/col-50]
+If you're teaching 9th - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course -- no prerequisites required. The course is designed to be far more than a traditional introduction to programming. It is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
-<div style="clear:both"></div>
+<br>
+<a href="/educate/professional-learning/cs-principles"><button>Professional Development for 9-12th gade</button>
 
+</div>
 
 <div style="clear: both;"></div>
 <br>

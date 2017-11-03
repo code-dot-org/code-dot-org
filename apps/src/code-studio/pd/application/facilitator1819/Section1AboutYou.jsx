@@ -4,6 +4,7 @@ import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES} from '../ApplicationConstants';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
 const FACILITATOR_EMAIL = "facilitators@code.org";
@@ -33,8 +34,8 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
           Thanks for your interest in the Code.org Facilitator Development Program!
         </p>
         <p>
-          This application should take 30 - 45 minutes to complete and includes both multiple choice and free response questions.
-          Fields marked with a
+          This application should take 30 - 45 minutes to complete and includes both multiple choice and
+          free response questions. Fields marked with a
           {' '}<span style={{color: "red"}}>*</span>{' '}
           are required. If you need more information on the program before you apply, please visit
           {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}
@@ -129,6 +130,10 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
   static getErrorMessages(data) {
     const formatErrors = {};
 
+    if (data.alternateEmail && !isEmail(data.alternateEmail)) {
+      formatErrors.alternateEmail = "Must be a valid email address";
+    }
+
     if (data.zipCode && !ZIP_CODE_REGEX.exec(data.zipCode)) {
       formatErrors.zipCode = "Must be a valid zip code";
     }
@@ -140,4 +145,19 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
     return formatErrors;
   }
 
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.workedInCsJob !== YES) {
+      changes.csRelatedJobRequirements = undefined;
+    }
+    if (data.diversityTraining !== YES) {
+      changes.diversityTrainingDescription = undefined;
+    }
+
+    return changes;
+  }
 }

@@ -4,7 +4,6 @@
 - homepage_data[:userid] = current_user.id
 - homepage_data[:valid_grades] = Section.valid_grades
 - homepage_data[:topCourse] = @top_course
-- homepage_data[:isEnglish] = @is_english
 
 - if current_user
   - provider = current_user.provider
@@ -43,16 +42,18 @@
 
 #workshop-links
   -if can? :read, Pd::Workshop
+    -# TODO: (mehal) Update this include workshop organizer for application dashboard
+    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      %h1
+        Application Dashboard
+      = link_to pd_application_dashboard_path do
+        %h3
+          Manage Applications
     %h1
       Workshop Dashboard
     %a{href:'/pd/workshop_dashboard'}
       %h3
         Manage PD Workshops
-    -# TODO: (mehal) Update this include workshop organizer for application dashboard
-    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-      = link_to pd_application_dashboard_path do
-        %h3
-          Application Dashboard
     -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
       = link_to pd_workshop_admins_path do
         %h3

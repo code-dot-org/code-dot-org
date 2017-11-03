@@ -4,7 +4,7 @@ import Facilitator1819Questions from './detail_view_facilitator_specific_compone
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 
-const STATUSES = ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Unreviewed'];
+const STATUSES = ['Unreviewed', 'Pending', 'Waitlisted', 'Accepted', 'Declined'];
 
 export default class DetailViewContents extends React.Component {
   static propTypes = {
@@ -18,6 +18,7 @@ export default class DetailViewContents extends React.Component {
       email: PropTypes.string,
       form_data: PropTypes.object
     }),
+    updateProps: PropTypes.func.isRequired
   };
 
   state = {
@@ -28,7 +29,8 @@ export default class DetailViewContents extends React.Component {
   handleCancelEditClick = () => {
     this.setState({
       editing: false,
-      status: this.props.applicationData.status
+      status: this.props.applicationData.status,
+      notes: this.props.applicationData.notes
     });
   };
 
@@ -61,13 +63,19 @@ export default class DetailViewContents extends React.Component {
       this.setState({
         editing: false
       });
+      this.props.updateProps({notes: this.state.notes, status: this.state.status});
     });
   };
 
   renderEditButtons = () => {
     if (this.state.editing) {
       return [(
-        <Button onClick={this.handleSaveClick} bsStyle="primary" key="save">
+        <Button
+          onClick={this.handleSaveClick}
+          bsStyle="primary"
+          key="save"
+          style={{marginRight: '5px'}}
+        >
           Save
         </Button>
       ), (
@@ -97,6 +105,7 @@ export default class DetailViewContents extends React.Component {
             disabled={!this.state.editing}
             value={this.state.status}
             onChange={this.handleStatusChange}
+            style={{marginRight: '5px'}}
           >
             {
               STATUSES.map((status, i) => (
@@ -153,13 +162,17 @@ export default class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <FormControl
-          id="Notes"
-          disabled={!this.state.editing}
-          componentClass="textarea"
-          value={this.state.notes || ''}
-          onChange={this.handleNotesChange}
-        />
+        <div className="row">
+          <div className="col-md-8">
+            <FormControl
+              id="Notes"
+              disabled={!this.state.editing}
+              componentClass="textarea"
+              value={this.state.notes || ''}
+              onChange={this.handleNotesChange}
+            />
+          </div>
+        </div>
         <br/>
         {this.renderEditButtons()}
       </div>
