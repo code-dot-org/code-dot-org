@@ -36,7 +36,8 @@ export default class DetailViewContents extends React.Component {
       district_name: PropTypes.string,
       email: PropTypes.string,
       form_data: PropTypes.object,
-      application_type: PropTypes.oneOf(['Facilitator', 'Teacher'])
+      application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
+      response_scores: PropTypes.object
     }),
     updateProps: PropTypes.func.isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -48,7 +49,9 @@ export default class DetailViewContents extends React.Component {
 
   state = {
     status: this.props.applicationData.status,
-    notes: this.props.applicationData.notes
+    notes: this.props.applicationData.notes,
+    response_scores: this.props.applicationData.response_scores || {},
+    editing: false
   };
 
   handleCancelEditClick = () => {
@@ -77,13 +80,19 @@ export default class DetailViewContents extends React.Component {
     });
   };
 
+  handleScoreChange = (event) => {
+    this.setState({
+      response_scores: Object.assign(this.state.response_scores, {[event.target.id]: event.target.value})
+    });
+  }
+
   handleSaveClick = () => {
     $.ajax({
       method: "PATCH",
       url: `/api/v1/pd/applications/${this.props.applicationId}`,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify(this.state)
+      data: JSON.stringify(Object.assign({}, this.state, {response_scores: JSON.stringify(this.state.response_scores)}))
     }).done(() => {
       this.setState({
         editing: false
@@ -178,6 +187,9 @@ export default class DetailViewContents extends React.Component {
       <DetailViewApplicationSpecificQuestions
         formResponses={this.props.applicationData.form_data}
         applicationType={this.props.applicationData.application_type}
+        editing={this.state.editing}
+        scores={this.state.response_scores}
+        handleScoreChange={this.handleScoreChange}
       />
     );
   };

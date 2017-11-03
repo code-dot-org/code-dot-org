@@ -56,6 +56,30 @@ export default storybook => {
             layout="lineItem"
           />
         )
+      },
+      {
+        name: 'Detail View Response for yes/no scored question',
+        story: () => (
+          <DetailViewResponse
+            question="Scored question that should have yes/no as possible scores"
+            answer="Here is a response"
+            layout="yesNoScore"
+            score="yes"
+            possibleScores={['Yes', 'No']}
+          />
+        )
+      },
+      {
+        name: 'Detail View Response for numeric scored question',
+        story: () => (
+          <DetailViewResponse
+            question="Scored question that should have numbers as possible scores"
+            answer="Here is a response"
+            layout="numericScore"
+            score="3"
+            possibleScores={[0, 3]}
+          />
+        )
       }
     ]);
 };
