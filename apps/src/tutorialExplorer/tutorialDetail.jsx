@@ -155,14 +155,13 @@ const TutorialDetail = React.createClass({
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
       // Reserve key 1 for the optional short link.
-      {key: 2, title: i18n.filterTeacherExperience(), body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
-      {key: 3, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
-      {key: 4, title: i18n.filterPlatform(),          body: this.props.item.string_platforms},
-      {key: 5, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 6, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      {key: 7, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
-      {key: 8, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
-      // Reserve key 9 for the optional standards.
+      {key: 2, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 3, title: i18n.filterPlatform(),          body: this.props.item.string_platforms},
+      {key: 4, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
+      {key: 5, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
+      {key: 6, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
+      {key: 7, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
+      // Reserve key 8 for the optional standards.
     ];
 
     const imageSrc = this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg");
@@ -302,7 +301,7 @@ const TutorialDetail = React.createClass({
                       </tr>
                     )}
                     {this.props.localeEnglish && this.props.item.string_standards && (
-                      <tr key={9}>
+                      <tr key={8}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           {i18n.tutorialDetailStandards()}
                         </td>
