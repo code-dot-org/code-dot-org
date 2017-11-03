@@ -1,3 +1,7 @@
+#resources {
+  margin-top: 40px;
+}
+
 .tools-info {
   border: 1px solid;
   border-color: #0094ca;
@@ -47,8 +51,9 @@ h3.tutorial-info-h {
 }
 
 button.tutorial-gray {
-  background-color: #c6cacd;
-  border-color: #c6cacd;
+  background-color: #e7e8ea;
+  border-color: #e7e8ea;
+  color: #5b6770;
 }
 
 @media only screen and (max-width: 960px) {
