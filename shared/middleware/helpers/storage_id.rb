@@ -116,7 +116,9 @@ def storage_id_for_current_user
   rescue Sequel::UniqueConstraintViolation
     # We lost a race against someone performing the same operation. The row
     # we're looking for should now be in the database.
-    storage_id_for_user_id(user_id)
+    user_storage_id = storage_id_for_user_id(user_id)
+    raise "no user storage id on second try" unless user_storage_id
+    user_storage_id
   end
 end
 
