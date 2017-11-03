@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import color from '../../../../util/color';
-import FontAwesome from '../../../../templates/FontAwesome';
+import color from '../util/color';
+import FontAwesome from './FontAwesome';
 
 export const Status = {
   HIDDEN: 'HIDDEN',
@@ -31,7 +31,7 @@ const style = {
   }
 };
 
-export default class SetupStep extends Component {
+export default class ValidateStep extends Component {
   static propTypes = {
     children: PropTypes.node,
     stepName: PropTypes.string.isRequired,

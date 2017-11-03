@@ -4,7 +4,7 @@ import i18n from "@cdo/locale";
 import Button from "./Button";
 import SchoolAutocompleteDropdown from './SchoolAutocompleteDropdown';
 
-import SetupStep, {Status} from '../lib/kits/maker/ui/SetupStep';
+import ValidateStep, {Status} from './ValidateStep';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -87,21 +87,21 @@ export default class EligibilityChecklist extends Component {
         <div>
           {i18n.eligibilityExplanation()}
         </div>
-        <SetupStep
+        <ValidateStep
           stepName={i18n.eligibilityReqPD()}
           stepStatus={this.props.statusPD}
         >
           {i18n.eligibilityReqPDFail()}
-        </SetupStep>
-        <SetupStep
+        </ValidateStep>
+        <ValidateStep
           stepName={i18n.eligibilityReqStudentCount()}
           stepStatus={this.props.statusStudentCount}
         >
           {i18n.eligibilityReqStudentCountFail()}
-        </SetupStep>
+        </ValidateStep>
         {/* Short version - displayed while 'focus' on other eligibility requirements */}
         {this.props.statusStudentCount !== Status.SUCCEEDED &&
-          <SetupStep
+          <ValidateStep
             stepName={i18n.eligibilityReqYear()}
             stepStatus={this.state.statusYear}
           />
@@ -109,13 +109,13 @@ export default class EligibilityChecklist extends Component {
         {/* Long version - displayed while 'focus' on this eligibility requirements */}
         {this.props.statusStudentCount === Status.SUCCEEDED &&
           <div>
-            <SetupStep
+            <ValidateStep
               stepName={i18n.eligibilityReqYear()}
               stepStatus={this.state.statusYear}
               displayExplanation={true}
             >
               {i18n.eligibilityReqYearFail()}
-            </SetupStep>
+            </ValidateStep>
             <div>
               <b>{i18n.eligibilityReqYearConfirmInstructions()}</b>
               <div>

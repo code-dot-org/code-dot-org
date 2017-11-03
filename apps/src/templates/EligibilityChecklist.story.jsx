@@ -1,6 +1,6 @@
 import React from 'react';
 import EligibilityChecklist from './EligibilityChecklist';
-import {Status} from '../lib/kits/maker/ui/SetupStep';
+import {Status} from './ValidateStep';
 
 export default storybook => {
   return storybook
