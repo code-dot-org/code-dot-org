@@ -267,6 +267,17 @@ export default class FormComponent extends React.Component {
   static getErrorMessages(data) {
     return {};
   }
+
+  /**
+   * Override in derived classes
+   * Process and transform this page's form data before validation,
+   * for example to remove answers to questions that are no longer relevant based on other selections.
+   * @param {Object} data - form data for this page, as entered
+   * @returns {Object} - fields to update with new values, or undefined to clear
+   */
+  static processPageData(data) {
+    return {};
+  }
 }
 
 FormComponent.propTypes = {

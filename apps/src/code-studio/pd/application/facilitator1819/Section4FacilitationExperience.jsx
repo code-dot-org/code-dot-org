@@ -64,4 +64,23 @@ export default class Section4FacilitationExperience extends Facilitator1819FormC
 
     return requiredFields;
   }
+
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.codeOrgFacilitator !== YES) {
+      changes.codeOrgFacilitatorYears = undefined;
+      changes.codeOrgFacilitatorPrograms = undefined;
+    }
+
+    if (data.haveLedPd !== YES) {
+      changes.groupsLedPd = undefined;
+      changes.describePriorPd = undefined;
+    }
+
+    return changes;
+  }
 }

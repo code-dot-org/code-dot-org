@@ -86,4 +86,25 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
 
     return requiredFields;
   }
+
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.teachingExperience !== YES) {
+      changes.gradesTaught = undefined;
+      changes.gradesCurrentlyTeaching = undefined;
+      changes.subjectsTaught = undefined;
+      changes.yearsExperience = undefined;
+    }
+
+    if (!data.yearsExperience || data.yearsExperience === NONE) {
+      changes.experienceLeading = undefined;
+      changes.completedPd = undefined;
+    }
+
+    return changes;
+  }
 }

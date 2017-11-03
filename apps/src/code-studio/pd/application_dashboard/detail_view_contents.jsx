@@ -4,7 +4,7 @@ import Facilitator1819Questions from './detail_view_facilitator_specific_compone
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 
-const STATUSES = ['Accepted', 'Waitlisted', 'Pending', 'Declined', 'Unreviewed'];
+const STATUSES = ['Unreviewed', 'Pending', 'Waitlisted', 'Accepted', 'Declined'];
 
 export default class DetailViewContents extends React.Component {
   static propTypes = {
