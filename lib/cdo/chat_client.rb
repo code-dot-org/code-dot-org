@@ -1,3 +1,4 @@
+require 'fileutils'
 require 'net/http'
 require 'net/http/responses'
 require 'uri'
@@ -7,6 +8,7 @@ require 'cdo/slack'
 # implementation (namely Slack as of February 2017).
 class ChatClient
   @@name = CDO.name[0..14]
+  @@logger = nil
 
   def self.log(message, options={})
     message(CDO.slack_log_room, message, options)
@@ -19,10 +21,13 @@ class ChatClient
   #   color (optional): The color the message should be posted.
   # @return [Boolean] Whether the message was posted successfully.
   def self.message(room, message, options={})
-    # TODO(asher): Get rid of this, if possible.
+    unless @@logger
+      FileUtils.mkdir_p(deploy_dir('log'))
+      @@logger = Logger.new(deploy_dir('log', 'chat_messages.log'))
+    end
+    @@logger.info("[#{room}] #{message}")
+
     unless CDO.hip_chat_logging
-      # Output to standard log if Slack isn't configured.
-      CDO.log.info("[#{room}] #{message}")
       return
     end
 
