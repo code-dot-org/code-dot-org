@@ -41,13 +41,13 @@
 #homepage-container
 
 #workshop-links
+  -if can? :read, Pd::Application::ApplicationBase
+    %h1
+      Application Dashboard
+    = link_to pd_application_dashboard_path do
+      %h3
+        Manage Applications
   -if can? :read, Pd::Workshop
-    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN) || current_user.regional_partners.any?
-      %h1
-        Application Dashboard
-      = link_to pd_application_dashboard_path do
-        %h3
-          Manage Applications
     %h1
       Workshop Dashboard
     %a{href:'/pd/workshop_dashboard'}
