@@ -23,6 +23,7 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import experiments from '../../util/experiments';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -605,6 +606,7 @@ Craft.reset = function (first) {
   if (Craft.level.usePlayer) {
     Craft.hideSoftButtons();
   }
+  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
