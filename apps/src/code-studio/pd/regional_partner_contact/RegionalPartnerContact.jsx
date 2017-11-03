@@ -1,7 +1,7 @@
 import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
-import FormGroup from 'react-bootstrap';
+import {FormGroup, Checkbox} from 'react-bootstrap';
 
 export default class RegionalPartnerContact extends FormController {
   /**
@@ -33,6 +33,8 @@ export default class RegionalPartnerContact extends FormController {
     schoolDistrictData['school-district-name'] = document.getElementById('school-district-name').value;
     schoolDistrictData['school-name'] = document.getElementById('school-name').value;
     schoolDistrictData['school-zipcode'] = document.getElementById('school-zipcode').value;
+
+    schoolDistrictData['receiveEmails'] = document.getElementById('receiveEmails').checked;
 
     return schoolDistrictData;
   }
@@ -111,7 +113,7 @@ class RegionalPartnerContactComponent extends FormComponent {
             name: 'program',
             label: 'Which programs are you interested in?',
             type: 'check',
-            required: false
+            required: true
           })
         }
         {
@@ -121,6 +123,12 @@ class RegionalPartnerContactComponent extends FormComponent {
             componentClass: 'textarea'
           })
         }
+        <Checkbox
+          id="receiveEmails"
+          defaultChecked
+        >
+          I want to be added to the Code.org mailing list.
+        </Checkbox>
 
       </FormGroup>
     );
@@ -128,4 +136,4 @@ class RegionalPartnerContactComponent extends FormComponent {
 }
 
 RegionalPartnerContactComponent.associatedFields =
-  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes'];
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes', 'receiveEmails'];
