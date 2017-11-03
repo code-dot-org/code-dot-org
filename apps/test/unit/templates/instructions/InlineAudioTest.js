@@ -142,6 +142,8 @@ describe('InlineAudio', function () {
   });
 });
 
+// Could extend this to have real EventTarget behavior,
+// then write tests for 'ended' and 'error' events.
 class FakeAudio {
   play() {}
   pause() {}
