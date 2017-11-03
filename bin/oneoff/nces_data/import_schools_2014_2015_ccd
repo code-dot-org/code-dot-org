@@ -4,7 +4,9 @@ require_relative '../../../dashboard/config/environment'
 
 CDO.log = Logger.new(STDOUT)
 
-AWS::S3.process_file('cdo-nces', '2014-2015/ccd/ccd_sch_029_1415_w_0216601a.txt') do |filename|
+SURVEY_YEAR = '2014-2015'.freeze
+
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_029_1415_w_0216601a.txt") do |filename|
   School.transaction do
     School.merge_from_csv(filename) do |row|
       {
@@ -25,7 +27,7 @@ AWS::S3.process_file('cdo-nces', '2014-2015/ccd/ccd_sch_029_1415_w_0216601a.txt'
   end
 end
 
-AWS::S3.process_file('cdo-nces', '2014-2015/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv') do |filename|
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv") do |filename|
   School.transaction do
     School.merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
       {

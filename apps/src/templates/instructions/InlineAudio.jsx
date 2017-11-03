@@ -3,7 +3,7 @@ import Radium from 'radium';
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import trackEvent from '../../util/trackEvent';
-var color = require("../../util/color");
+import color from '../../util/color';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -78,21 +78,28 @@ const styles = {
   }
 };
 
-const InlineAudio = React.createClass({
-  propTypes: {
+class InlineAudio extends React.Component {
+  static propTypes = {
     assetUrl: PropTypes.func.isRequired,
     locale: PropTypes.string,
     textToSpeechEnabled: PropTypes.bool,
     src: PropTypes.string,
     message: PropTypes.string,
     style: PropTypes.object
-  },
+  };
 
-  componentWillUpdate: function (nextProps) {
+  state = {
+    audio: undefined,
+    playing: false,
+    error: false,
+    hover: false,
+  };
+
+  componentWillUpdate(nextProps) {
     if (this.props.src !== nextProps.src ||
         this.props.message !== nextProps.message) {
       // unload current Audio object
-      var audio = this.state.audio;
+      const audio = this.state.audio;
 
       if (audio) {
         audio.src = undefined;
@@ -104,24 +111,15 @@ const InlineAudio = React.createClass({
         playing: false,
       });
     }
-  },
+  }
 
-  getInitialState: function () {
-    return {
-      audio: undefined,
-      playing: false,
-      error: false,
-      hover: false,
-    };
-  },
-
-  getAudioElement: function () {
+  getAudioElement() {
     if (this.state.audio) {
       return this.state.audio;
     }
 
-    var src = this.getAudioSrc();
-    var audio = new Audio(src);
+    const src = this.getAudioSrc();
+    const audio = new Audio(src);
     audio.addEventListener("ended", e => {
       this.setState({
         playing: false
@@ -140,13 +138,13 @@ const InlineAudio = React.createClass({
     this.setState({ audio });
     trackEvent('InlineAudio', 'getAudioElement', src);
     return audio;
-  },
+  }
 
-  isLocaleSupported: function () {
+  isLocaleSupported() {
     return VOICES.hasOwnProperty(this.props.locale);
-  },
+  }
 
-  getAudioSrc: function () {
+  getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
     }
@@ -159,27 +157,27 @@ const InlineAudio = React.createClass({
     const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
 
     return `${TTS_URL}/${voicePath}/${contentPath}`;
-  },
+  }
 
-  toggleAudio: function () {
+  toggleAudio = () => {
     this.state.playing ? this.pauseAudio() : this.playAudio();
-  },
+  };
 
-  playAudio: function () {
+  playAudio() {
     this.getAudioElement().play();
     this.setState({ playing: true });
-  },
+  }
 
-  pauseAudio: function () {
+  pauseAudio() {
     this.getAudioElement().pause();
     this.setState({ playing: false });
-  },
+  }
 
-  toggleHover: function (){
+  toggleHover = () => {
     this.setState({ hover: !this.state.hover });
-  },
+  };
 
- render: function () {
+  render() {
     if (this.props.textToSpeechEnabled && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
       return (
         <div
@@ -212,7 +210,7 @@ const InlineAudio = React.createClass({
     }
     return null;
   }
-});
+}
 
 export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
@@ -221,4 +219,4 @@ export default connect(function propsFromStore(state) {
     textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
   };
-})(Radium(InlineAudio));
+})(StatelessInlineAudio);

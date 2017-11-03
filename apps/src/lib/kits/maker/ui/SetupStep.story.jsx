@@ -1,12 +1,5 @@
 import React from 'react';
-import SetupStep, {
-  FAILED,
-  SUCCEEDED,
-  ATTEMPTING,
-  WAITING,
-  CELEBRATING,
-  HIDDEN
-} from './SetupStep';
+import SetupStep, {Status} from './SetupStep';
 
 export default storybook => {
   return storybook
@@ -18,7 +11,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is successful"
-            stepStatus={SUCCEEDED}
+            stepStatus={Status.SUCCEEDED}
           />
         )
       },
@@ -28,7 +21,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step has failed"
-            stepStatus={FAILED}
+            stepStatus={Status.FAILED}
           />
         )
       },
@@ -38,7 +31,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step has failed"
-            stepStatus={FAILED}
+            stepStatus={Status.FAILED}
           >
             Here is an explanation of why this step failed.
           </SetupStep>
@@ -50,7 +43,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is celebrating"
-            stepStatus={CELEBRATING}
+            stepStatus={Status.CELEBRATING}
           />
         )
       },
@@ -60,7 +53,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is hidden"
-            stepStatus={HIDDEN}
+            stepStatus={Status.HIDDEN}
           />
         )
       },
@@ -70,7 +63,7 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is waiting"
-            stepStatus={WAITING}
+            stepStatus={Status.WAITING}
           />
         )
       },
@@ -80,7 +73,17 @@ export default storybook => {
         story: () => (
           <SetupStep
             stepName="This step is attempting"
-            stepStatus={ATTEMPTING}
+            stepStatus={Status.ATTEMPTING}
+          />
+        )
+      },
+      {
+        name: 'Unknown Step',
+        description: 'Step in unknown state',
+        story: () => (
+          <SetupStep
+            stepName="This step is unknown"
+            stepStatus={Status.UNKNOWN}
           />
         )
       },

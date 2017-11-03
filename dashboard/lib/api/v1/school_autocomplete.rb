@@ -1,31 +1,27 @@
 class Api::V1::SchoolAutocomplete < AutocompleteHelper
-  # The minimum query length.
-  MIN_QUERY_LENGTH = 4
-
   # Queries the schools lookup table for schools that match the user-defined
   # search criteria.
   # @param query [String] the user-define query string
   # @param limit [int] the maximum number of results to return
   # @return [Array] an array of JSON formatted schools
   def self.get_matches(query, limit)
-    query = query.strip
-    return [] if query.length < MIN_QUERY_LENGTH
+    limit = format_limit(limit)
 
-    schools = School.limit(limit)
-    if search_by_zip?(query)
-      schools = schools.where("zip LIKE ?", "#{query[0, 5]}%")
+    rows = School.limit(limit)
+    if search_by_zip?((query = query.strip))
+      query = "#{query[0, 5]}%"
+      rows = rows.where("zip LIKE ?", query)
     else
-      search_string = to_search_string(query)
-      schools = schools.
-        where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", search_string).
-        order("MATCH(name,city) AGAINST('#{search_string}' IN BOOLEAN MODE) DESC, state, city, name")
+      query = format_query(query)
+      return [] if query.length < MIN_WORD_LENGTH + 2
+      rows = rows.
+        where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
+        order("MATCH(name,city) AGAINST('#{query}' IN BOOLEAN MODE) DESC, state, city, name")
     end
 
-    results = schools.map do |school|
-      Serializer.new(school).attributes
+    return rows.map do |row|
+      Serializer.new(row).attributes
     end
-
-    return results
   end
 
   # Determines if we should perform a search by ZIP code rather than by school
