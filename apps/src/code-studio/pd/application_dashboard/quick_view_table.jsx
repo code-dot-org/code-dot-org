@@ -54,9 +54,6 @@ export default class QuickViewTable extends React.Component {
       },
       cell: {
         format: (status) => {
-          if (status === 'move_to_interview') {
-            return 'Move to Interview';
-          }
           return _.upperFirst(status);
         },
         transforms: [
@@ -88,7 +85,7 @@ export default class QuickViewTable extends React.Component {
       case 'accepted': return color.level_perfect;
       case 'declined': return color.red;
       case 'waitlisted': return color.level_passed;
-      case 'move_to_interview': return color.orange;
+      case 'interview': return color.orange;
       case 'withdrawn': return color.lightest_red;
     }
   }
