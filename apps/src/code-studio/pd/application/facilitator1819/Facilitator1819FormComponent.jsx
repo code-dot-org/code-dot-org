@@ -22,9 +22,9 @@ export default class Facilitator1819FormComponent extends FormComponent {
     }
 
     return (
-      <MarkdownSpan
-        markdown={this.constructor.labels[name]}
-      />
+      <MarkdownSpan>
+        {this.constructor.labels[name]}
+      </MarkdownSpan>
     );
   }
 
