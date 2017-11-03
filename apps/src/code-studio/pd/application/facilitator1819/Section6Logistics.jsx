@@ -24,7 +24,7 @@ export default class Section6Logistics extends Facilitator1819FormComponent {
         {this.radioButtonsFor("availableDuringWeek")}
 
         {this.props.data.availableDuringWeek === YES &&
-        this.checkBoxesFor("weeklyAvailability", this.indented())
+          this.checkBoxesFor("weeklyAvailability", this.indented())
         }
 
         {this.radioButtonsFor("travelDistance")}
@@ -44,5 +44,18 @@ export default class Section6Logistics extends Facilitator1819FormComponent {
     }
 
     return requiredFields;
+  }
+
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.availableDuringWeek !== YES) {
+      changes.weeklyAvailability = undefined;
+    }
+
+    return changes;
   }
 }

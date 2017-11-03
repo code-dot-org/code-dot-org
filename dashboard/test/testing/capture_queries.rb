@@ -47,6 +47,8 @@ module CaptureQueries
 
       # Script/course-cache related queries don't count.
       next if backtrace.any? {|line| line =~ /(script|course)\.rb.*get_from_cache/}
+      # Ignore random updates to experiment cache.
+      next if backtrace.any? {|line| line =~ /experiment\.rb.*update_cache/}
 
       queries << "#{QueryLogger.log(duration, payload)}\n#{backtrace.join("\n")}"
     end

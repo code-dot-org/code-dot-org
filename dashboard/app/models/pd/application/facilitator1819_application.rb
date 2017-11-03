@@ -120,9 +120,9 @@ module Pd::Application
         worked_in_cs_job: [YES, NO],
 
         completed_cs_courses_and_activities: [
-          'Intro CS in HS',
-          'Intro CS in College',
-          'Advanced CS in HS or College',
+          'Intro CS in high school',
+          'Intro CS in college',
+          'Advanced CS in high school or college',
           'Online (Udacity, Coursera, etc.)',
           'Attended a coding or CS camp',
           'Attended a CS professional development workshop',
@@ -227,7 +227,7 @@ module Pd::Application
           'Code HS',
           'Edhesive',
           'Exploring Computer Science',
-          'Mobile CSP',
+          'Mobile CS Principles',
           'NMSI',
           'Project Lead the Way',
           'ScratchEd',
@@ -420,12 +420,31 @@ module Pd::Application
       ]
     end
 
+    # Filter out extraneous answers, based on selected program (course)
+    def self.filtered_labels(course)
+      labels_to_remove = (course == 'csf' ?
+        [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
+        : # csd / csp
+        [:csf_availability, :csf_partial_attendance_reason]
+      )
+
+      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
     # @override
-    def self.csv_header
+    # Filter out extraneous answers, based on selected program (course)
+    def full_answers
+      super.slice(*self.class.filtered_labels(course).keys)
+    end
+
+    # @override
+    def self.csv_header(course)
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        csv << ALL_LABELS_WITH_OVERRIDES.values.map {|l| markdown.render(l)}
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns.push :Status, :Notes
+        csv << columns
       end
     end
 
@@ -433,7 +452,9 @@ module Pd::Application
     def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
-        csv << ALL_LABELS.keys.map {|k| answers[k]}
+        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row.push status, notes
+        csv << row
       end
     end
 
