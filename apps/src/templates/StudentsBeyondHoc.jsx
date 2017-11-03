@@ -1,9 +1,10 @@
 import React, { PropTypes, Component } from 'react';
-import i18n from "@cdo/locale";
-import color from "../util/color";
-import { tutorialTypes } from './tutorialTypes.js';
+import i18n from '@cdo/locale';
+import color from '../util/color';
 import Responsive from '../responsive';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
+import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
+import { tutorialTypes } from './tutorialTypes.js';
 
 const styles = {
   heading: {
@@ -17,7 +18,7 @@ export default class StudentsBeyondHoc extends Component {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsive: PropTypes.instanceOf(Responsive).isRequired,
   };
 
   render() {
@@ -32,6 +33,12 @@ export default class StudentsBeyondHoc extends Component {
           isRtl={isRtl}
           responsive={responsive}
           showContainer={false}
+          hideBottomMargin={true}
+        />
+        <LocalClassActionBlock
+          isRtl={isRtl}
+          responsive={responsive}
+          showHeading={false}
         />
       </div>
     );
