@@ -149,7 +149,7 @@ def storage_id_from_cookie
 end
 
 def user_storage_ids_table
-  @user_storage_ids_table ||= PEGASUS_DB[:user_storage_ids]
+  PEGASUS_DB[:user_storage_ids]
 end
 
 def owns_channel?(encrypted_channel_id)
