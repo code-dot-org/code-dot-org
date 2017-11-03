@@ -1,6 +1,6 @@
 .tools-info {
   border: 1px solid;
-  border-color: #7665a0;
+  border-color: #0094ca;
   float: left;
   max-width: 770px;
 }
@@ -10,8 +10,8 @@
 }
 
 .tools-title-bar {
-  background-color: #7665a0;
-  padding-left: 10px;
+  background-color: #0094ca;
+  padding-left: 15px;
 }
 
 h1.tools-title {
@@ -21,7 +21,7 @@ h1.tools-title {
 }
 
 .tools-description {
-  padding: 14px 10px;
+  padding: 14px 15px;
 }
 
 .tutorial-tile {
@@ -30,12 +30,15 @@ h1.tools-title {
 }
 
 .tutorial-info {
-  background-color: #00adbc;
-  color: white;
+  border: 1px solid #949ca2;
   padding: 20px;
 }
 
 h3.tutorial-info-h {
-  color: white;
   margin-top: 0px;
+}
+
+button.tutorial-gray {
+  background-color: #c6cacd;
+  border-color: #c6cacd;
 }

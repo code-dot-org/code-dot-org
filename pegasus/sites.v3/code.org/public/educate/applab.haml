@@ -7,10 +7,10 @@ video_player: true
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-.tools-banner
+.tools-banner.responsive-body
   .tools-img-box
-    %img.tools-img{src: CDO.code_org_url("/shared/images/fill-200x200/courses/logo_applab_square.png")}
-  .tools-info
+    %img.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png"), style:"width: 282px;"}
+  .tools-info{style: "max-width: 670px;"}
     .tools-title-bar
       %h1.tools-title App Lab
     .tools-description
@@ -31,11 +31,11 @@ video_player: true
         %h3.tutorial-info-h Intro to App Lab (beta)
         .smalltext Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
         %a{:href=>CDO.studio_url("/s/applab-intro")}
-          %button{style: "margin-top: 20px;"} Start learning
+          %button.tutorial-gray{style: "margin-top: 20px;"} Start learning
   .col-50
     .tutorial-tile
-      = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4"
-      %div{style: "padding: 20px;"}
+      = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
+      .tutorial-info{style: "height: 196px;"}
         %h3{style: "margin-top: 0px;"} App Lab in the classrom
         .smalltext This launch video introduces five reasons App Lab could be a great tool for students learning programming.
 
