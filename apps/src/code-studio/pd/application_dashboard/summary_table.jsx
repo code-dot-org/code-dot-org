@@ -56,13 +56,13 @@ export default class SummaryTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.tableRow('Unreviewed', color.charcoal, this.props.data)}
-            {this.tableRow('Pending', color.lighter_orange, this.props.data)}
-            {this.tableRow('Move to Interview', color.orange, this.props.data)}
-            {this.tableRow('Waitlisted', color.level_passed, this.props.data)}
-            {this.tableRow('Accepted', color.level_perfect, this.props.data)}
-            {this.tableRow('Declined', color.red, this.props.data)}
-            {this.tableRow('Withdrawn', color.lightest_red, this.props.data)}
+            {this.tableRow('Unreviewed', color.charcoal, color.white, this.props.data)}
+            {this.tableRow('Pending', color.lighter_orange, color.black, this.props.data)}
+            {this.tableRow('Move to Interview', color.orange, color.black, this.props.data)}
+            {this.tableRow('Waitlisted', color.level_passed, color.black, this.props.data)}
+            {this.tableRow('Accepted', color.level_perfect, color.black, this.props.data)}
+            {this.tableRow('Declined', color.red, color.white, this.props.data)}
+            {this.tableRow('Withdrawn', color.lightest_red, color.black, this.props.data)}
           </tbody>
         </Table>
         <Button
