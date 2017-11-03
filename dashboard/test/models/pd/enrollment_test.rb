@@ -80,12 +80,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'for_school_district' do
-    school_district = create :school_district
-    school_info = create :school_info, school_district: school_district
+    school_info = create :school_info
     enrollment_in_district = create :pd_enrollment, school_info: school_info
     _enrollment_out_of_district = create :pd_enrollment
 
-    assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_district)
+    assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
   test 'exit_survey_url' do
