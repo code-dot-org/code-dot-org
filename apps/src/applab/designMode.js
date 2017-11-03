@@ -159,6 +159,7 @@ function appendPx(input) {
   if (/px/.test(input)) {
     return input;
   }
+  input = input.toString();
   return input ? input + 'px' : '';
 }
 
