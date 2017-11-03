@@ -41,6 +41,33 @@
   text-decoration: underline;
 }
 
+.mc-store {
+  width: 478px;
+  height: 230px;
+  background-color: #0094ca;
+  color: white;
+  float: left;
+  padding: 0 20px;
+}
+
+.mc-host-event {
+  width: 478px;
+  height: 230px;
+  background-color: #00adbc;
+  color: white;
+  float: right;
+  padding: 0 20px;
+}
+
+.mc-youth-spark {
+  background-color: #7665a0;
+  color: white;
+  margin-top: 15px;
+  padding: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
 .padded-button {
   margin-top: 22px;
 }
@@ -65,6 +92,15 @@
 
   .color-block {
     width: 100%;
+  }
+
+  .mc-store {
+    margin-bottom: 15px;
+  }
+
+  .mc-host-event, .mc-youth-spark, .mc-store {
+    padding-bottom: 15px;
+    height: auto;
   }
 
   .responsive-padding {

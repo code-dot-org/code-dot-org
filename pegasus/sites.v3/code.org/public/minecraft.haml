@@ -51,6 +51,27 @@ style_min: true
   =I18n.t(:minecraft_no_internet)
   %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
 
+.color-block.mc-store
+  %h2.white-text= I18n.t(:minecraft_store_camps)
+  = I18n.t(:minecraft_signup_store_camps).gsub('%{signup_store_camp}', 'https://www.microsoft.com/youthsparkprograms')
+
+.color-block.mc-host-event
+  %h2.white-text= I18n.t(:minecraft_host_event)
+  %a{href: '/hourofcode/mc'}= I18n.t(:minecraft_teach_resources)
+  %br
+  %a{href: 'https://docs.com/hourofcode2016'}= I18n.t(:minecraft_leader_guide)
+  %br
+  %br
+  %span= I18n.t(:minecraft_facilitating_event)
+  %a.white-link{href: 'https://aka.ms/hourofcode-register'}= I18n.t(:minecraft_join_online_training)
+
+.clear
+
+.color-block.mc-youth-spark
+  %h2.white-text= I18n.t(:minecraft_youthspark_continue_learning)
+  = I18n.t(:minecraft_youthspark_create_your_future)
+  %span= I18n.t(:minecraft_youthspark_tools).gsub('%{youthspark_link}', 'https://www.microsoft.com/about/philanthropies/youthspark/youthsparkhub')
+
 .mc-videos{style: "clear: both;"}
   %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
   =view :inspirational_videos
