@@ -87,7 +87,46 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
-
+    {
+      description: "getProperty and setProperty for value on text inputs.",
+      editCode: true,
+      xml:
+          "textInput('idTxt1', '');" +
+          "textInput('idTxt2', '');" +
+          "setProperty('idTxt1', 'value', 'test-value');" +
+          "setProperty('idTxt2', 'value', getProperty('idTxt1', 'value'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idTxt2').value === 'test-value');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "getProperty and setProperty for value on dropdowns.",
+      editCode: true,
+      xml:
+          "dropdown('idDrop1', 'a', 'b');" +
+          "dropdown('idDrop2', 'a', 'b');" +
+          "setProperty('idDrop1', 'value', 'b');" +
+          "setProperty('idDrop2', 'value', getProperty('idDrop1', 'value'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idDrop2').value === 'test-value');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
     {
       description: "button",
       editCode: true,
