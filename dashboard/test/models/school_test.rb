@@ -23,12 +23,12 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'high needs false when no stats data' do
-    school = School.find_by_id('20000100206')
-    assert_equal(false, school.high_needs?)
+    school = create :school
+    refute school.high_needs?
   end
 
   test 'high needs false when null students total' do
-    school = School.find_by_id('20000100206')
+    school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -36,11 +36,11 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    assert_equal(false, school.high_needs?)
+    refute school.high_needs?
   end
 
   test 'high needs false when null frl eligible total' do
-    school = School.find_by_id('20000100206')
+    school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -49,11 +49,11 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    assert_equal(false, school.high_needs?)
+    refute school.high_needs?
   end
 
   test 'high needs false when null frl eligible below 50 percent of students' do
-    school = School.find_by_id('20000100206')
+    school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -63,11 +63,11 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    assert_equal(false, school.high_needs?)
+    refute school.high_needs?
   end
 
   test 'high needs false when null frl eligible equal to 50 percent of students' do
-    school = School.find_by_id('20000100206')
+    school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -77,11 +77,11 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    assert_equal(false, school.high_needs?)
+    refute school.high_needs?
   end
 
   test 'high needs false when null frl eligible above 50 percent of students' do
-    school = School.find_by_id('20000100206')
+    school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
