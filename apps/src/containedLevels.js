@@ -111,7 +111,7 @@ export function initializeContainedLevel() {
     const disabledRunButtonHandler = e => {
       $(window).trigger('attemptedRunButtonClick');
     };
-    $('#gameButtons').bind('click', disabledRunButtonHandler);
+    $('#runButtonWrapper').bind('click', disabledRunButtonHandler);
 
     addCallouts([{
       id: 'disabledRunButtonCallout',
@@ -141,7 +141,7 @@ export function initializeContainedLevel() {
       stepButton.prop('disabled', !validResult);
       if (validResult) {
         runButton.qtip('hide');
-        $('#gameButtons').unbind('click', disabledRunButtonHandler);
+        $('#runButtonWrapper').unbind('click', disabledRunButtonHandler);
       }
       getStore().dispatch(setAwaitingContainedResponse(!validResult));
     });
