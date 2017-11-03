@@ -1,21 +1,21 @@
 /** @file Test SetupStep component */
 import React from 'react';
-import {expect} from '../../../../../util/configuredChai';
+import {expect} from '../../util/configuredChai';
 import {mount} from 'enzyme';
-import SetupStep, {Status} from '@cdo/apps/lib/kits/maker/ui/SetupStep';
+import ValidateStep, {Status} from '@cdo/apps/templates/ValidateStep';
 
-describe('SetupStep', () => {
+describe('ValidateStep', () => {
   describe('can render every status', () => {
     // This is the lazy 100% coverage test :D
     Object.values(Status).forEach(status => {
       it(status, () => {
         const wrapper = mount(
-          <SetupStep
+          <ValidateStep
             stepName={`${status} step name`}
             stepStatus={status}
           >
             Some help content for a {status} step.
-          </SetupStep>
+          </ValidateStep>
         );
         expect(wrapper).not.to.be.null;
       });
@@ -24,12 +24,12 @@ describe('SetupStep', () => {
 
   it('renders nothing when step is hidden', () => {
     const wrapper = mount(
-      <SetupStep
+      <ValidateStep
         stepName="Hidden step"
         stepStatus={Status.HIDDEN}
       >
         Some help content.
-      </SetupStep>
+      </ValidateStep>
     );
     expect(wrapper.html()).to.be.null;
   });
@@ -37,12 +37,12 @@ describe('SetupStep', () => {
   it('renders help text when step is failed', () => {
     const helpString = 'XYZZY help content';
     const wrapper = mount(
-      <SetupStep
+      <ValidateStep
         stepName="Failed step"
         stepStatus={Status.FAILED}
       >
         {helpString}
-      </SetupStep>
+      </ValidateStep>
     );
     expect(wrapper.text()).to.include(helpString);
   });
@@ -55,12 +55,12 @@ describe('SetupStep', () => {
       }
 
       const wrapper = mount(
-          <SetupStep
+          <ValidateStep
             stepName={`${status} step`}
             stepStatus={status}
           >
             {helpString}
-          </SetupStep>
+          </ValidateStep>
       );
       expect(wrapper.text()).not.to.include(helpString);
     });

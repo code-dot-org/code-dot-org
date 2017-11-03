@@ -1,15 +1,15 @@
 import React from 'react';
-import SetupStep, {Status} from './SetupStep';
+import ValidateStep, {Status} from './ValidateStep';
 
 export default storybook => {
   return storybook
-    .storiesOf('SetupStep', module)
+    .storiesOf('ValidateStep', module)
     .addStoryTable([
       {
         name: 'Succeeded Step',
         description: 'Step in success state',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step is successful"
             stepStatus={Status.SUCCEEDED}
           />
@@ -19,7 +19,7 @@ export default storybook => {
         name: 'Failed Step',
         description: 'Step in failed state',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step has failed"
             stepStatus={Status.FAILED}
           />
@@ -29,19 +29,19 @@ export default storybook => {
         name: 'Failed Step with Explanation',
         description: 'Step in failed state with explanation showing',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step has failed"
             stepStatus={Status.FAILED}
           >
             Here is an explanation of why this step failed.
-          </SetupStep>
+          </ValidateStep>
         )
       },
       {
         name: 'Celebrating Step',
         description: 'Step in celebrating state',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step is celebrating"
             stepStatus={Status.CELEBRATING}
           />
@@ -51,7 +51,7 @@ export default storybook => {
         name: 'Hidden Step',
         description: 'Step in hidden state',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step is hidden"
             stepStatus={Status.HIDDEN}
           />
@@ -61,7 +61,7 @@ export default storybook => {
         name: 'Waiting Step',
         description: 'Step in waiting state',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step is waiting"
             stepStatus={Status.WAITING}
           />
@@ -71,7 +71,7 @@ export default storybook => {
         name: 'Attempting Step',
         description: 'Step in attempting state',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step is attempting"
             stepStatus={Status.ATTEMPTING}
           />
@@ -81,7 +81,7 @@ export default storybook => {
         name: 'Unknown Step',
         description: 'Step in unknown state',
         story: () => (
-          <SetupStep
+          <ValidateStep
             stepName="This step is unknown"
             stepStatus={Status.UNKNOWN}
           />
