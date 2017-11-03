@@ -7,6 +7,10 @@ Feature: Big Game Versions
     And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible
+    And element ".tooltip-x-close" is visible
+    And callout "0" is visible
+    And I close callout "0"
+    And callout "0" is hidden
 
   @no_safari
   @no_mobile
