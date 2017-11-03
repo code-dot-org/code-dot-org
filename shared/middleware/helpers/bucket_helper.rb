@@ -2,6 +2,7 @@ require 'addressable'
 require 'active_support/core_ext/object/try'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'cdo/aws/s3'
+require 'honeybadger'
 
 #
 # BucketHelper
@@ -125,6 +126,18 @@ class BucketHelper
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_channel_id, filename
+
+      # Temporary: Add additional context to exceptions reported here, to help
+      # diagnose a recurring issue where we pass a bad copy_source to the S3
+      # API on remix.
+      # https://app.honeybadger.io/projects/3240/faults/35329035/8aba7532-c087-11e7-8280-13b5745130ae
+      Honeybadger.context(
+        {
+          copy_source: URI.encode(src),
+          copy_dest_bucket: @bucket,
+          copy_dest_key: dest
+        }
+      )
       response = s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
       {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
