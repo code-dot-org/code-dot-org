@@ -1,14 +1,15 @@
 ---
 title: CS Principles Professional Learning Program
+video_player: true
 theme: responsive
 ---
 # CS Principles Professional Learning Program
 
-<div class="col-50" style="padding-right: 20px">
+<div class="col-50" style="padding-right: 20px;">
 
-<%=view :display_video_thumbnail, id: "professional-learning_csp", video_code: "DMr1iFYacGQ", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center' %>
 
-[/col-50]
+</div>
 
 [col-50]
 

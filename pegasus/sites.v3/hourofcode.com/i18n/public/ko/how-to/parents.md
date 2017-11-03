@@ -1,19 +1,17 @@
 ---
-
-title: <%= hoc_s(:title_how_to_parents) %>
+title: '< % = hoc_s(:title_how_to_parents) % >'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Hour of Code 과정을 자녀와 함께 완료하는 방법
 
 Hour of Code 과정 하나를 집 또는 자녀의 학급에서 완료해 보세요! 여기에 그 방법이 있습니다.
 
-## 1) 이 설명 동영상을 시청하십시오. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) 튜토리얼을 선택하십시오.
+## 1) 이 설명 동영상을 살펴보세요. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2) 튜토리얼을 선택하세요.
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
@@ -53,7 +51,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 여러분이 원하는 튜토리얼을 선택했다면, 그 튜토리얼의 짧은 링크를 북마크할 수 있습니다.
 
-**여러분의 자녀가 어려워 한다면,**
+**여러분의 자녀가 어려워 한다면**
 
 괜찮다고 응답하세요:
 

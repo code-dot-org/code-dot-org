@@ -15,6 +15,7 @@ export default storybook => {
           <LocalClassActionBlock
             isRtl={false}
             responsive={responsive}
+            showHeading={true}
           />
         )
       },
@@ -25,6 +26,7 @@ export default storybook => {
           <AdministratorResourcesActionBlock
             isRtl={false}
             responsive={responsive}
+            showHeading={true}
           />
         )
       }

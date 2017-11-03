@@ -15,6 +15,7 @@ export default storybook => storybook
           isRtl={false}
           responsive={responsive}
           showContainer={true}
+          hideBottomMargin={false}
         />
       )
     },
