@@ -958,6 +958,21 @@ class User < ActiveRecord::Base
     teachers.include? teacher
   end
 
+  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
+  def circuit_playground_pd_eligible?
+    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
+
+    return true if cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
+    return true if courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
+    return false
+  end
+
+  # Looks to see if any of the users associated with this studio_person_id are eligibile
+  # for our circuit playground discount
+  def studio_person_circuit_playground_pd_eligible?
+    User.where(studio_person_id: studio_person_id).any?(&:circuit_playground_pd_eligible?)
+  end
+
   def locale
     read_attribute(:locale).try(:to_sym)
   end
