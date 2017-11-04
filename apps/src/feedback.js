@@ -534,8 +534,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
             console.log(err);
             store.dispatch({type: PUBLISH_FAILURE});
           }).then(() => {
-           showFeedbackDialog();
            if (didPublish) {
+             // Only show feedback dialog again if publishing succeeded,
+             // because we keep the publish dialog open if it failed.
+             showFeedbackDialog();
              $(publishButtonSelector).prop('disabled', true).text(msg.published());
              $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
            }
