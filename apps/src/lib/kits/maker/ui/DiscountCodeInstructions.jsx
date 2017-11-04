@@ -35,7 +35,7 @@ export default class DiscountCodeInstructions extends Component {
             {i18n.discountCodeInstructions4({kitCost: this.props.discountComplete ? "$0" : "$97.50"})}
           </li>
         </ol>
-        <div>{i18n.discountCodeHelp()}</div>
+        <div>{i18n.discountCodeHelpAdafruit()} <a href="https://www.adafruit.com/support">https://www.adafruit.com/support</a> {i18n.discountCodeHelpInternal()}</div>
       </div>
     );
   }
