@@ -23,7 +23,11 @@ class I18nHocRoutesTest < Minitest::Test
   end
 
   def assert_successful_get(path)
-    resp = get(path)
+    begin
+      resp = get(path)
+    rescue SyntaxError
+      flunk "Caught SyntaxError for #{path}"
+    end
     assert_equal 200, resp.status, path
   end
 
