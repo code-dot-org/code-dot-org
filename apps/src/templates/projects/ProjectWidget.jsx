@@ -6,13 +6,13 @@ import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const ProjectWidget = React.createClass({
-  propTypes: {
+class ProjectWidget extends React.Component {
+  static propTypes = {
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
     isRtl: PropTypes.bool
-  },
+  };
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
@@ -43,7 +43,7 @@ const ProjectWidget = React.createClass({
       </ContentContainer>
     );
   }
-});
+}
 
 // The project widget uses the channels API to populate the personal projects
 // and the data needs to be converted to match the format of the project cards
