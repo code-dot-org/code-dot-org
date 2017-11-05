@@ -1,8 +1,11 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
+
 ---
+
 <%= view :signup_button %>
 
 <%
@@ -12,15 +15,15 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# اطرافیان خود را با ساعت کدنویسی آشنا کنید
+# How to get involved
 
-## ۱. این مفهوم را گسترش دهید
+## 1.این مفهوم را گسترش دهید.
 
-به دوستان خود درباره **#ساعت‌کدنویسی** بگویید!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. از مدرسه خود بخواهید که ساعت کدنویسی را پیشنهاد دهد
+## 2. از کل مدرسه خود بخواهید که یک ساعت برنامه نویسی را پیشنهاد دهد
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
@@ -28,7 +31,7 @@ nav: promote_nav
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## ساعت کدنویسی را در جامعه خود تبلیغ کنید
+## 4. Promote Hour of Code in your community
 
 [Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 

@@ -1,19 +1,21 @@
 ---
-title: '<%= hoc_s(:title_how_to_parents) %>'
+
+title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
+
 ---
+
 <%= view :signup_button %>
 
-# כיצד להשלים שעה של קוד עם ילדך
+# How to complete an Hour of Code with your child
 
-השלם שעה של קוד בבית, או התנדב להביא את זה לכיתה של ילדכם! הנה איך:
+Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) צפו בסרטון ההדרכה <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial:
 
-## 2) בחרו בסרטון ההדרכה:
-
-אנו מספקים מגוון רחב של הדרכות מהנות שאורכם כשעה, לתלמידים בכל הגילאים, שנוצרו על ידי מגוון של שותפים. [נסה אותם!](<%= resolve_url('/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
@@ -40,7 +42,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- ערכו רשימה של דברים שמשתמשים בקוד בחיי היום יום.
+- List things that use code in everyday life.
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
@@ -55,21 +57,21 @@ When you've chosen the tutorial you would like to do, you can bookmark the tutor
 
 It’s okay to respond:
 
-- "אני לא יודע.. בוא נפתור את זה יחד."
-- "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
-- "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
+- “I don’t know. Let’s figure this out together.”
+- “Technology doesn’t always work out the way we want.”
+- “Learning to program is like learning a new language; you won’t be fluent right away.”
 
 ## 6) Celebrate
 
 [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
 
-שתפו תמונות וסרטוני וידאו של אירוע "שעה של קוד" ברשתות החברתיות. השתמשו בתג #HourOfCode ו@codeorg כדי שנוכל גם אנחנו להדגיש את הצלחתכם!
+Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 **Other Hour of Code resources:**
 
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**איך ממשיכים אחרי "שעה של קוד"?**
+**What comes after the Hour of Code?**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
