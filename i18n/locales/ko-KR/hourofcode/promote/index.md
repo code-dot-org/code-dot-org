@@ -1,19 +1,20 @@
----
-title: '<%= hoc_s(:title_how_to_promote) %>'
-layout: wide
-nav: promote_nav
----
+* * *
+
+title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
+
+* * *
+
 <%= view :signup_button %>
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Get your community involved in the Hour of Code
+# 동참하기
 
 ## 1. 널리 알려주세요.
 
-친구들에게 **#HourOfCode**을 소개해 봅시다
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
