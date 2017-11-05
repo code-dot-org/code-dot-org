@@ -1,13 +1,16 @@
----
-title: '<%= hoc_s(:title_partners) %>'
----
-Kod Saati, Kod Saatleri ve Bilgisayar Bilimleri Eğitim Haftası Danışma ve Değerlendirme Komiteleri tarafından yönetilmektedir.
+* * *
 
-[ Danışma Komitesi ](%= resolve_url('/advisory-committee') %), K-12, akademi, kar amacı gütmeyen kuruluşlar, kâr amacı gütmeyen kuruluşlar ve uluslararası kuruluşlardan temsilcilerden oluşmaktadır. Bu komite, Kodlama Saati kampanyası için stratejiyi yönlendirir.
+title: <%= hoc_s(:title_partners) %>
 
-[ Gözden Geçirme Komitesi ](%= resolve_url('/review-committee') %) Danışma Komitesi'nin değerlendirme tablosunu kullanarak faaliyetleri değerlendiren ve tavsiye eden K-12 sınıfındaki 15 eğitimciden oluşur. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+* * *
 
-Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her öğrenci için bilgisayar bilimlerine bir giriş sunma vizyonuna katkıda bulunmuştur.
+The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+
+The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+
+The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+
+Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 <% if @country == 'la' %>
 
@@ -113,13 +116,13 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% end %>
 
-# Majör Ortaklar ve Kurumsal Destekleyenler
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Majör Promosyon Ortaklarımız
+# Başlıca Promosyon Ortaklarımız
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
@@ -131,13 +134,13 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 * * *
 
-# Activity Partners
+# Eğitim Ortaklarımız
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# Altyapı ortakları ve araçları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

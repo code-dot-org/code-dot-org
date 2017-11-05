@@ -1,9 +1,8 @@
----
-title: '<%= hoc_s(:title_stats) %>'
-layout: wide
-nav: promote_nav
----
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
+
+* * *
 
 <a id="blurb"></a>
 
@@ -13,7 +12,7 @@ nav: promote_nav
 
 ## Gebruik deze korte beschrijving in nieuwsbrieven
 
-### Bring computer science to your school. Start with an Hour of Code!
+### Breng informatica naar je school. Start met een Uur Code
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Het goede nieuws is, we zijn op weg om dit te veranderen. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
