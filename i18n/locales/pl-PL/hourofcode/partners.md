@@ -1,13 +1,16 @@
----
-title: '<%= hoc_s(:title_partners) %>'
----
-Godziną Kodowania kieruje Komitet Doradczo-Odwoławczy inicjatyw Godzina Kodowania i Tydzień Edukacji Informatycznej.
+* * *
 
-[Komitet Doradczy](%= resolve_url('/advisory-committee') %) składa się z przedstawicieli ze szkół K-12, środowisk akademickich, organizacji non-profit, organizacji komercyjnych i organizacji międzynarodowych. Komitet ten kieruje strategią dotyczącą kampanii Godzina Kodowania.
+Tytuł: <%= hoc_s(:title_partners) %>
 
-[ Komitet ds. Oceny ](%= resolve_url('/review-committee') %) składa się z 15 edukatorów z różnych poziomów K-12, oceniających i rekomendujących działania przy użyciu tabeli Komitetu Doradczego. Ci edukatorzy sprawdzają samouczki dla uczniów i scenariusze lekcji dla nauczycieli nadsyłane przez setki partnerów, oceniając edukacyjną wartość działań, zdolność angażowania uczniów i potencjalne odwołania do różnych grup uczniów.
+* * *
 
-Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu Godziny Kodowania i wizji tej inicjatywy proponującej każdemu uczniowi wprowadzenia do informatyki.
+The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+
+The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+
+The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+
+Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 <% if @country == 'la' %>
 
@@ -113,7 +116,7 @@ Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu
 
 <% end %>
 
-# Główni Partnerzy oraz Korporacje Wspierające
+# Główni Partnerzy oraz Korporacje Wsparające
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
@@ -131,7 +134,7 @@ Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu
 
 * * *
 
-# Partnerzy Aktywności
+# Partnerzy Samouczków
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

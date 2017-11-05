@@ -1,8 +1,11 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
+
 ---
+
 <%= view :signup_button %>
 
 <%
@@ -12,23 +15,23 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# How to get involved
 
-## 1. Mondd el másoknak
+## 1. Spread the word
 
 Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Javasold, hogy az egész iskola tartsa meg a Kódolás Óráját
+## 2. Ask your whole school to offer an Hour of Code
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Kérd meg a munkáltatódat, hogy vegyetek részt
 
-Küldd el [ezt az emailt](<%= resolve_url('/promote/resources#sample-emails') %>) a céged vezetőjének.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## 4. Népszerűsítsd a Kódolás Óráját a közösségben
+## 4. Promote Hour of Code in your community
 
 [Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 

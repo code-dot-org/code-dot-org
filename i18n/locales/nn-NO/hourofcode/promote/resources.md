@@ -1,15 +1,17 @@
----
-title: '<%= hoc_s(:title_resources) %>'
-layout: wide
-nav: promote_nav
----
+* * *
+
+title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
+
+* * *
+
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
+</link>
 
 # Markedsfør Kodetimen
 
-## Skal du holde en Kodetime? <a href="<%= resolve_url('/how-to') %> Les hvordan det gjøres her</a>
+## Skal du holde en Kodetime? <a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -37,13 +39,13 @@ nav: promote_nav
 
 **"Kodetimen" er ikke varemerkebeskyttet. Vi ønsker ikke å forhindre bruken, men vi vil passe på at den passer innenfor et par rammer:**
 
-1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller refererer til Kodetimen som en grasrotbevegelse. Godt eksempel: "Delta i Kodetimen™ på ACMECorp.com". Dårlig eksempel: «Prøv Kodetimen fra ACME Corp».
-2. Bruk et hevet "TM" på de mest fremtredende stedene du nevner "Kodetimen", både på nettsiden og i beskrivelser av apper.
-3. Inkluder språk på siden (eller som bunntekst), inkluder lenker til CSEdWeek og Code.org sidene, som sier følgende:
+  1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller refererer til Kodetimen som en grasrotbevegelse. Godt eksempel: "Delta i Kodetimen™ på ACMECorp.com". Dårlig eksempel: «Prøv Kodetimen fra ACME Corp».
+  2. Bruk et hevet "TM" på de mest fremtredende stedene du nevner "Kodetimen", både på nettsiden og i beskrivelser av apper.
+  3. Inkluder språk på siden (eller som bunntekst), inkluder lenker til CSEdWeek og Code.org sidene, som sier følgende:
     
     *"" Hour of Code™"er et landsdekkende initiativ av Computer Science Education Week[csedweek.org] og Code.org[code.org] for å bruke en time til å presentere informatikk og programmering til millioner av studenter."*
 
-4. Ingen bruk av «Kodetimen» i app navn.
+  4. Ingen bruk av «Kodetimen» i app navn.
 
 <a id="stickers"></a>
 
@@ -54,13 +56,13 @@ nav: promote_nav
 
 <a id="sample-emails"></a>
 
-## Send desse epostane for å promotere Kodetimen
+## Send desse e-postane for å promotere Kodetimen
 
 <a id="email"></a>
 
-## Be skulen, arbeidsgjevaren eller vener om å registrere seg:
+## Be skulen, arbeidsgivaren eller vener om å registrere seg:
 
-Datamaskiner er over alt og endrer alle bransjer på planeten. Men færre enn halvparten av alle skoler underviser informatikk. Den gode nyheita er at vi arbeider for å endre dette. Hvis du har hørt om Kodetimen før, vet du kanskje at den ble historisk. Over hundre millioner elever har prøvd en Kodetime.
+Datamaskiner er over alt og endrer alle bransjer på planeten. Men færre enn halvparten av alle skoler underviser informatikk. Den gode nyheita er at me arbeider for å endre dette. Hvis du har hørt om Kodetimen før, vet du kanskje at den ble historisk. Over hundre millioner elever har prøvd en Kodetime.
 
 Med Kodetimen har informatikk vært på hjemmesidene til Google, MSN, Yahoo! og Disney. Mer enn 100 partnere har blitt med og støttet denne bevegelsen. Hver Apple Store i verden har hatt en Kodetime. President Obama skrev sin første kodelinje som en del av kampanjen.
 
@@ -68,15 +70,15 @@ This year, let's make it even bigger. I’m asking you to join in for the Hour o
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Kom i gang på http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
-## Invitér media til å dekke arrangementet:
+## Inviter media til å dekke arrangementet:
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Den gode nyheita er at vi arbeider for å endre dette.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Den gode nyheita er at me arbeider for å endre dette.
 
 Med Kodetimen har informatikk vært på hjemmesidene til Google, MSN, Yahoo! og Disney. Mer enn 100 partnere har blitt med og støttet denne bevegelsen. Hver Apple Store i verden har hatt en Kodetime. President Obama skrev sin første kodelinje som en del av kampanjen.
 
@@ -118,7 +120,7 @@ Your principal
 
 <a id="politicians"></a>
 
-## Invitér ein lokalpolitikar til arrangementet på skulen:
+## Inviter ein lokalpolitikar til skulens arrangement:
 
 Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
