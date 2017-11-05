@@ -49,6 +49,8 @@ Scenario: Share and save an artist level to the project gallery
   And I press "publish-to-project-gallery-button"
   And I click selector "#publish-dialog-publish-button" once I see it
   And I wait until element "#publish-dialog-publish-button" is not visible
+  # close the feedback dialog
+  And I close the dialog
   And element ".modal-body" is not visible
 
   Then I am on "http://studio.code.org/projects/"
@@ -79,6 +81,8 @@ Scenario: Share and save a playlab level to the project gallery
   And I press "publish-to-project-gallery-button"
   And I click selector "#publish-dialog-publish-button" once I see it
   And I wait until element "#publish-dialog-publish-button" is not visible
+  # close the feedback dialog
+  And I close the dialog
   And element ".modal-body" is not visible
 
   Then I am on "http://studio.code.org/projects/"
