@@ -1,79 +1,81 @@
 ---
-title: '<%= hoc_s(:title_how_to_parents) %>'
+
+title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
+
 ---
+
 <%= view :signup_button %>
 
-# Bagaimana menyelesaikan Sejam Memprogram dengan anak anda
+# How to complete an Hour of Code with your child
 
-Selesaikan sejam memprogram di rumah, atau jadi relawan untuk membawanya ke ruang kelas anak anda! Ini caranya:
+Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Lihat rekaman gambar 'bagaimana caranya' berikut ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial:
 
-## 2) Silahkan memilih bahan pengajaran berikut ini:
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-Kami menyediakan berbagai tutorial menyenangkan, selama satu jam untuk siswa dari segala usia, dibuat oleh berbagai mitra. [Ayo kita coba!](<%= resolve_url('/learn') %>)
-
-**Semua tutorial Sejam Memprogram bersifat swa-petunjuk, memungkinkan anak anda bekerja sesuai irama dan tingkat keterampilannya**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Rencanakan kebutuhan teknologi anda
+## 3) Plan your technology needs
 
-Sejam memprogram paling baik memakai komputer yang terhubung dengan internet. Tetapi Anda **tidak** perlu komputer. Ada banyak kegiatan yang "tak terhubung" dan dapat dilakukan tanpa teknologi apapun sama sekali.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
 
-- Uji tutorial pada komputer atau perangkat anda. Pastikan mereka bekerja dengan baik pada browser dengan suara dan video.
-- **Ingin belajar bersama anak Anda?** Coba [memprogram berpasangan.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Ilmu komputer bersifat sosial dan kolaboratif.
+- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) Mulai Sejam Memprogram anda dengan sebuah video inspiratif
+## 4) Start your Hour of Code off with an inspiring video
 
-Mulai Sejam Memprogram anda dengan menginspirasi anak anda dan cerita bagaimana ilmu komputasi mempengaruhi seluruh kehidupan kita.
+Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
 
-**Tampilkan rekaman gambar yang menginspirasi:**
+**Tampilkan video inspiratif:**
 
 - Video orginal peluncuran Code.org, yang menampilkan Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (Ada versi [1 menit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 menit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 menit](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Rekaman gambar peluncuran Jam Pemrograman 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), atau <% if @country == 'uk' %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [Video peluncuran Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), atau <% if @country == 'uk' %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
 - [Presiden Obama menyerukan semua pelajar untuk belajar ilmu komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Temukan lebih banyak [sumber daya](<%= resolve_url('https://code.org/inspire') %>) dan [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) yang inspiratif.
+- Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-Tidak masalah jika Anda dan murid Anda masih baru untuk ilmu komputer. Berikut beberapa ide untuk mengenalkan aktivitas Sejam Memprogram:
+It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
-- Jelaskan bagaimana dampak teknologi terhadap kehidupan kita, misalnya dengan contoh menarik baik bagi laki-laki dan perempuan (bicarakan tentang menyelamatkan jiwa, membantu orang lain, menghubungkan orang lain, dan lainnya).
-- Daftar hal-hal yang menggunakan pemrograman dalam kehidupan sehari-hari.
-- Lihat tips agar anak gadis tertarik dalam ilmu komputer [di sini](<%= resolve_url('https://code.org/girls') %>).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- Daftarkan hal yang menggunakan kode dalam kehidupan sehari-hari.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-Ingin ide lainnya? Periksa [rencana pola pelajaran](/files/AfterschoolEducatorLessonPlanOutline.docx) untuk praktik terbaik dari pendidik berpengalaman.
+Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
 
-## 5) Pemrograman!
+## 5) Code!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-Ketika Anda telah memilih tutorial yang ingin dilakukan, Anda dapat membuat "bookmark" kaitan tutorialnya.
+When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
 
-**Ketika anak Anda menemukan kesulitan**
+**When your child come across difficulties**
 
-Tidak apa-apa untuk menanggapi:
+It’s okay to respond:
 
-- "Saya kurang tahu. Mari kita mencari solusinya bersama-sama."
+- "Saya tidak tahu. Mari kita memikirkan hal ini bersama-sama."
 - "Teknologi tidak selalu bekerja dengan cara yang kita inginkan."
-- "Belajar untuk pemrograman seperti mempelajari bahasa baru; Anda tidak akan segera menjadi fasih."
+- "Belajar untuk program adalah seperti mempelajari suatu bahasa baru; Anda tidak akan lancar segera."
 
-## 6) Merayakan
+## 6) Celebrate
 
-[Mencetak sertifikat](<%= resolve_url('https://code.org/certificates') %>) untuk anak Anda (dan Anda sendiri!).
+[Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
 
-Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
+Bagikan foto dan video acara Hour of Code Anda pada media sosial. Gunakan #HourOfCode dan @codeorg sehingga kita dapat menyoroti keberhasilan Anda juga!
 
-**Sumber-sumber lain:**
+**Other Hour of Code resources:**
 
 - Tinjau [FAQ Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**Apa yang diharapkan selanjutnya setelah Jam Pemrograman?**
+**Apa yang selanjutnya dilakukan setelah Hour of Code?**
 
-Sejam Memprogram adalah langkah pertama dalam perjalanan untuk mempelajari lebih lanjut bagaimana teknologi bekerja dan bagaimana membuat aplikasi perangkat lunak. Untuk melanjutkan perjalanan ini lakukan:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Dorong siswa untuk melanjutkan [belajar online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Bantu [mempromosikan](<%= resolve_url('/promote') %>) pendidikan ilmu komputer di lingkungan sekolah anak Anda.
+- Encourage your child to continue [to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>

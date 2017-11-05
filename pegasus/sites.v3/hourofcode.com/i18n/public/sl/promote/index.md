@@ -1,8 +1,11 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
+
 ---
+
 <%= view :signup_button %>
 
 <%
@@ -12,7 +15,7 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# How to get involved
 
 ## 1. Razširite glas
 
@@ -20,9 +23,9 @@ Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Predlagajte celotni vaši šoli, da ponudi Hour of Code Uro za programiranje
+## 2. Predlagajte celotni vaši šoli, da ponudi Uro za kodo
 
-[Pošljite to e-pismo](<%= resolve_url('/promote/resources#sample-emails') %>) ravnatelju in izzovite vse razrede na šoli, da se projavijo.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
 ## Predlagajte vašemu delodajalcu, da se pridruži
 
