@@ -1,8 +1,11 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
+
 ---
+
 <%= view :signup_button %>
 
 <%
@@ -12,7 +15,7 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# Як взяти участь
 
 ## 1. Поширюйте інформацію
 
@@ -22,18 +25,18 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Надішліть цього електронного листа](<%= resolve_url('/promote/resources#sample-emails') %>) своєму директорові, та киньте заклик зареєструватися кожному класові своєї школи.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Попросіть про участь свою адміністрацію
 
-[Надішліть цього електронного листа](<%= resolve_url('/promote/resources#sample-emails') %>) своєму керівникові або генеральному директорові компанії.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## 4. Просувайте Годину коду у своїй спільноті
+## 4. Поширюйтеу Годину коду у своїй спільноті
 
-[Залучіть місцеву групу](<%= resolve_url('/promote/resources#sample-emails') %>) — хлоп'ячий/дівчачий скаутський клуб, церковну, університетську, ветеранську групу, профспілку, або навіть деяких друзів. Щоби вчитися нових навичок, вам не обов'язково потрібно бути в школі. Використовуйте ці [плакати, вивіски, наліпки, відео та інше](<%= resolve_url('/promote/resources') %>) для свого власного заходу.
+[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 
 ## 5. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Надішліть цього електронного листа](<%= resolve_url('/promote/resources#sample-emails') %>) своїм місцевим депутатам, міській або шкільній раді, й запросіть їх відвідати вашу школу на Годину коду. Це може допомогти розбудувати підтримку інформатики в вашому регіоні за межами однієї години.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
 <%= view :signup_button %>
