@@ -1,30 +1,31 @@
----
-title: '<%= hoc_s(:title_press_kit) %>'
-layout: wide
-nav: promote_nav
----
+* * *
+
+title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
+
+* * *
+
 <%= view :signup_button %>
 
 ## Jak przyciągnąć uwagę mediów do twojej akcji "Godzina Kodowania"
 
-*Wszelkie zapytania odnośnie prasy i mediów kieruj na <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Najważniejsze wskazówki
 
-- Skontaktuj się z mediami na dwa tygodnie przed wydarzeniem za pośrednictwem poczty elektronicznej. Ponów kontakt e-mailowy oraz telefoniczny, jeśli nie otrzymałeś(aś) wstępnej odpowiedzi.
-- Poproś pracownika szkoły lub wolontariusza by robił zdjęcia, które będzie można opublikować online lub wysłać do prasy.
-- Napisz o Godzinie Kodowania na swojej stronie internetowej i w gazetce szkolnej. Opublikuj szczegóły wydarzenia i zdjęcia.
-- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Skontaktuj się z mediami na dwa tygodnie przed wydarzeniem za pośrednictwem poczty elektronicznej. Ponów kontakt e-mailowy oraz telefoniczny, jeśli nie otrzymałeś(aś) wstępnej odpowiedzi.
+  * Poproś pracownika szkoły lub wolontariusza by robił zdjęcia, które będzie można opublikować online lub wysłać do prasy.
+  * Napisz o Godzinie Kodowania na swojej stronie internetowej i w gazetce szkolnej. Opublikuj szczegóły wydarzenia i zdjęcia.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Instrukcja krok po kroku:
 
 **1. Plan your event**
 
-- Zaplanuj zebranie, by wystartować z Hour of Code.
-- Wyślij rodzicom [list](%= resolve_url('/promote/resources#sample-emails') %). Poproś, aby rozpowszechnili wydarzenie.
-- Wyślij [zaproszenie](%= resolve_url('/promote/resources#sample-emails') %) do burmistrza, kongresmana, gubernatora czy wpływowych biznesmenów, by przybyła i przemówiła do twoich studentów.
-- Zorganizuj działania grupowe (jak pokaz programowania bez prądu) lub wyeksponuj aktywności wymyślone i przeprowadzone przez uczniów.
-- Pokaż [wideo Godziny Kodowania](%= resolve_url('/') %) autorstwa Code.org lub użyj [tych](%= resolve_url('/promote/resources#videos') %) do inspiracji.
+  * Zaplanuj zebranie, by wystartować z Hour of Code.
+  * Wyślij rodzicom [list](%= resolve_url('/promote/resources#sample-emails') %). Poproś, aby rozpowszechnili wydarzenie.
+  * Wyślij [zaproszenie](%= resolve_url('/promote/resources#sample-emails') %) do burmistrza, kongresmana, gubernatora czy wpływowych biznesmenów, by przybyła i przemówiła do twoich studentów.
+  * Zorganizuj działania grupowe (jak pokaz programowania bez prądu) lub wyeksponuj aktywności wymyślone i przeprowadzone przez uczniów.
+  * Pokaż [wideo Godziny Kodowania](%= resolve_url('/') %) autorstwa Code.org lub użyj [tych](%= resolve_url('/promote/resources#videos') %) do inspiracji.
 
 **2. Identify specific local reporters that cover education or local events.**
 
@@ -52,9 +53,9 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 "The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**O Code.org**
+**About Code.org**
 
-Godzina Kodowania jest organizowana przez Code.org, publiczną organizację non-profit, poszerzającą dostęp do wiedzy informatycznej oraz zwiększającą uczestnictwo dziewcząt i uczniów niedostatecznie reprezentowanych. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
 Find more resources and sample emails [here](%= resolve_url('/promote') %).
