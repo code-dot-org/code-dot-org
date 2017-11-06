@@ -1,8 +1,11 @@
 ---
-title: '<%= hoc_s(:title_press_kit) %>'
+
+title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
+
 ---
+
 <%= view :signup_button %>
 
 ## Come attirare l'attenzione dei media sul tuo evento dell'Ora del Codice
@@ -11,20 +14,20 @@ nav: promote_nav
 
 ### Suggerimenti Importanti
 
-- Mettiti in contatto con i media due settimane prima dell'evento via e-mail. Se non ricevi una risposta, riprova via e-mail oppure via telefono.
-- Chiedi ad un volontario oppure a un collaboratore della scuola di scattare fotografie da condividere online o trasmettere ai giornali.
-- Scrivi dell'Ora del Codice sulla homepage del sito web della scuola e sul giornale scolastico. &Egrave; utile arricchire i testi con dettagli sugli eventi e con foto delle attività svolte dagli studenti.
-- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Mettiti in contatto con i media due settimane prima dell'evento via e-mail. Se non ricevi una risposta, riprova via e-mail oppure via telefono.
+  * Chiedi ad un volontario oppure a un collaboratore della scuola di scattare fotografie da condividere online o trasmettere ai giornali.
+  * Scrivi dell'Ora del Codice sulla homepage del sito web della scuola e sul giornale scolastico. &Egrave; utile arricchire i testi con dettagli sugli eventi e con foto delle attività svolte dagli studenti.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guida passo-passo:
 
 **1. Plan your event**
 
-- Organizza una assemblea per promuovere l'Ora del Codice.
-- Invia [una lettera](<%= resolve_url('/promote/resources#sample-emails') %>) ai genitori. Chiedi loro di spargere la voce.
-- Invia [una lettera](<%= resolve_url('/promote/resources#sample-emails') %>) per invitare il sindaco, un politico o un imprenditore a partecipare e a parlare ai tuoi studenti.
-- Organizza attività di gruppo (come una dimostrazione oppure un'attività di programmazione offline), oppure organizza un'esibizione di attività svolte od organizzate dagli studenti.
-- Mostra i video de [L'Ora del Codice](<%= resolve_url('/') %>) di Code.org o uno di [questi video](<%= resolve_url('/promote/resources#videos') %>) per dare ispirazione a partecipare.
+  * Organizza una assemblea per promuovere l'Ora del Codice.
+  * Invia [una lettera](<%= resolve_url('/promote/resources#sample-emails') %>) ai genitori. Chiedi loro di spargere la voce.
+  * Invia [una lettera](<%= resolve_url('/promote/resources#sample-emails') %>) per invitare il sindaco, un politico o un imprenditore a partecipare e a parlare ai tuoi studenti.
+  * Organizza attività di gruppo (come una dimostrazione oppure un'attività di programmazione offline), oppure organizza un'esibizione di attività svolte od organizzate dagli studenti.
+  * Mostra i video de [L'Ora del Codice](<%= resolve_url('/') %>) di Code.org o uno di [questi video](<%= resolve_url('/promote/resources#videos') %>) per dare ispirazione a partecipare.
 
 **2. Identify specific local reporters that cover education or local events.**
 
