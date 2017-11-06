@@ -17,8 +17,7 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
-    fontFamily: 'Gotham 3r',
-    zIndex: 2,
+    fontFamily: '"Gotham 4r"',
     color: color.charcoal,
     width: 940
   }

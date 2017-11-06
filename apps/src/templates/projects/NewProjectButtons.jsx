@@ -189,7 +189,7 @@ class NewProjectButtonRowUnwrapped extends React.Component {
     return (
       <div style={styles.row}>
         {
-          projectTypes.slice(0,4).map((projectType, index) => (
+          projectTypes.map((projectType, index) => (
             <a key={index} href={"/projects/" + projectType + "/new"}>
               <div style={[styles.tile, index < 3 && styles.tilePadding]}>
                 <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
