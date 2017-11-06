@@ -11,7 +11,7 @@ const styles = {
     borderColor: color.border_gray,
     position: 'relative',
     height: 440,
-    width: 310,
+    width: 308,
     marginBottom: 20,
     backgroundColor: color.white
   },
