@@ -104,6 +104,9 @@ const styles = {
     width: styleConstants['content-width'],
     marginTop: 20,
   },
+  row: {
+    marginBottom: 10,
+  },
   tile: {
     width: 214,
     height: 70,
@@ -186,7 +189,7 @@ class NewProjectButtonRowUnwrapped extends React.Component {
     const { isRtl, projectTypes } = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
     return (
-      <div>
+      <div style={styles.row}>
         {
           projectTypes.slice(0,4).map((projectType, index) => (
             <a key={index} href={"/projects/" + projectType + "/new"}>

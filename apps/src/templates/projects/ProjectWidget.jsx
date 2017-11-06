@@ -10,7 +10,7 @@ import Button from "../Button";
 const styles = {
   button: {
     float: 'right',
-    marginTop: 20,
+    marginTop: 10,
   }
 };
 
