@@ -108,7 +108,7 @@ describe('SignInOrAgeDialog', () => {
       assert.strictEqual(sessionStorage.getItem('anon_over13'), 'true');
       assert(utils.reload.called);
       assert(cookies.remove.calledWith(environmentSpecificCookieName('storage_id'),
-        {path: '/', domain: 'code.org'}));
+        {path: '/', domain: '.code.org'}));
     });
 
     it('does not reload when providing an age >= 13 if you did not have a cookie', () => {
