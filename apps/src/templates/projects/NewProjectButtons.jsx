@@ -137,9 +137,8 @@ const styles = {
   description: {
     paddingRight: 10,
     paddingBottom: 10,
-    fontSize: 16,
-    fontFamily: 'Gotham 3r',
-    zIndex: 2,
+    fontSize: 14,
+    fontFamily: '"Gotham 5r"',
     color: color.charcoal,
     width: 940
   }
