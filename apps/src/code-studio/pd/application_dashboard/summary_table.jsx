@@ -3,7 +3,7 @@
  */
 import React, {PropTypes} from 'react';
 import {Table, Button} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
+import {StatusColor, StatusTextColor} from './constants';
 import _ from 'lodash';
 
 const styles = {
@@ -15,16 +15,6 @@ const styles = {
     width: '33.3%',
     paddingBottom: '30px'
   }
-};
-
-const status_colors = {
-  'unreviewed': color.charcoal,
-  'pending': color.lighter_orange,
-  'interview': color.orange,
-  'waitlisted': color.level_passed,
-  'accepted': color.level_perfect,
-  'declined': color.red,
-  'withdrawn': color.lightest_red
 };
 
 export default class SummaryTable extends React.Component {
@@ -39,11 +29,11 @@ export default class SummaryTable extends React.Component {
   }
 
   tableBody() {
-    return Object.keys(status_colors).map((status, i) => {
+    return Object.keys(StatusColor).map((status, i) => {
       if (this.props.data.hasOwnProperty(status)) {
         return (
           <tr key={i}>
-            <td style={{backgroundColor: status_colors[status]}}>
+            <td style={{backgroundColor: StatusColor[status], color: StatusTextColor[status]}}>
               {_.upperFirst(status)}
             </td>
             <td>{this.props.data[status]}</td>
