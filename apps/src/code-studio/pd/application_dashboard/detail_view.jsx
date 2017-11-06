@@ -57,7 +57,7 @@ export default class DetailView extends React.Component {
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
             updateProps={this.updateData}
-            path={this.props.route.path}
+            viewType={this.props.route.path.includes('facilitators') ? 'facilitator' : 'teacher'}
           />
         )
       );
