@@ -150,7 +150,6 @@ class NewProjectButtons extends React.Component {
 
   render() {
     const { isRtl, description } = this.props;
-    const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
     // Using absolute URLs to get this working in storybook.
     const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
     return (
@@ -158,24 +157,44 @@ class NewProjectButtons extends React.Component {
         <div style={styles.description}>
           {description || i18n.projectStartNew()}
         </div>
-        <div>
-          {
-            projectTypes.slice(0,4).map((projectType, index) => (
-              <a key={index} href={"/projects/" + projectType + "/new"}>
-                <div style={[styles.tile, index < 3 && styles.tilePadding]}>
-                  <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
-                  <div style={styles.label}>
-                    {PROJECT_INFO[projectType].label}
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div>
-        <div style={{clear: 'both'}}/>
+        <NewProjectButtonRow
+          isRtl={isRtl}
+          projectTypes={projectTypes.slice(0, 4)}
+        />
       </div>
     );
   }
 }
 
 export default Radium(NewProjectButtons);
+
+class NewProjectButtonRowUnwrapped extends React.Component {
+  static propTypes = {
+    projectTypes: PropTypes.arrayOf(PropTypes.string),
+    isRtl: PropTypes.bool,
+  };
+
+  render() {
+    const { isRtl, projectTypes } = this.props;
+    const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
+    return (
+      <div>
+        {
+          projectTypes.slice(0,4).map((projectType, index) => (
+            <a key={index} href={"/projects/" + projectType + "/new"}>
+              <div style={[styles.tile, index < 3 && styles.tilePadding]}>
+                <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
+                <div style={styles.label}>
+                  {PROJECT_INFO[projectType].label}
+                </div>
+              </div>
+            </a>
+          ))
+        }
+        <div style={{clear: 'both'}}/>
+      </div>
+    );
+  }
+}
+
+const NewProjectButtonRow = Radium(NewProjectButtonRowUnwrapped);
