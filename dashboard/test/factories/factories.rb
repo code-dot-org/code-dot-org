@@ -92,6 +92,12 @@ FactoryGirl.define do
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
+
+        trait :as_regional_partner_program_manager do
+          after(:create) do |workshop_organizer|
+            create :regional_partner_program_manager, program_manager: workshop_organizer
+          end
+        end
       end
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
@@ -598,7 +604,6 @@ FactoryGirl.define do
   # school info: default to public with district and school
   # Other variations have factories below
   factory :school_info, parent: :school_info_us_public do
-    with_district
     with_school
   end
 
@@ -639,6 +644,18 @@ FactoryGirl.define do
     school_name 'Princeton Day School'
   end
 
+  factory :school_info_with_public_school_only, class: SchoolInfo do
+    association :school, factory: :public_school
+  end
+
+  factory :school_info_with_private_school_only, class: SchoolInfo do
+    association :school, factory: :private_school
+  end
+
+  factory :school_info_with_charter_school_only, class: SchoolInfo do
+    association :school, factory: :charter_school
+  end
+
   factory :school_info_us_public, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
@@ -649,7 +666,7 @@ FactoryGirl.define do
     end
 
     trait :with_school do
-      association :school, factory: :public_school
+      association :school, factory: :public_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC
     end
   end
 
@@ -663,7 +680,7 @@ FactoryGirl.define do
     end
 
     trait :with_school do
-      association :school, factory: :charter_school
+      association :school, factory: :charter_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_CHARTER
     end
   end
 
@@ -716,6 +733,16 @@ FactoryGirl.define do
     zip "98122"
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
     association :school_district
+  end
+
+  factory :private_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id {(School.maximum(:id).to_i + 1).to_s}
+    name "A seattle private school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
   end
 
   factory :charter_school, class: School do

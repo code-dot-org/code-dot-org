@@ -22,6 +22,9 @@ Code.org offers hands-on workshops and online support at no charge. Over 60,000 
 
 Code.org offers 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). The workshops will cover content for [our elementary school curriculum](/educate/curriculum/elementary-school), and you will receive the supplies you need to teach the courses - at no cost. 
 
+<br>
+
+
 <div class="col-50" style="margin-bottom: 20px;">
 
 <%= view :course_wide_block, cta_link: CDO.code_org_url('/professional-development-workshops'), cta_text: 'Find a local K-5 workshop', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Computer Science Fundamentals', description: "You don't need any previous experience teaching computer science to join us. Not only is this an opportunity to increase your knowledge and confidence in facilitating an engaged computer science classroom, it's also a chance to connect with other educators in your area who are working to bring computer science to their schools. These workshops are facilitated by experienced computer science educators across the United States."%>
@@ -40,13 +43,13 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 <div class="col-50" style="margin-bottom: 20px;">
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-discoveries'), cta_text: 'Professional Development for 6th-10th grade', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Computer Science Discoveries', description: 'For educators in 6th - 10th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.' %>
+<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-discoveries'), cta_text: 'Professional Learning for 6th-10th grade', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Computer Science Discoveries', description: 'For educators in 6th - 10th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.<br><br>' %>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-principles'), cta_text: 'Professional Development for 9th-12th grade', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Computer Science Principles', description: 'If you are teaching 9th - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course -- no prerequisites required. The course is designed to be far more than a traditional introduction to programming. It is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.' %>
+<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-principles'), cta_text: 'Professional Learning for 9th-12th grade', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Computer Science Principles', description: 'If you are teaching 9th - 12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course -- no prerequisites required. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.' %>
 
 
 
@@ -64,7 +67,7 @@ Not sure which Code.org program is right for you? [Check out our program recomme
 
 **Applications to join our Professional Learning Program for the 2018-19 academic year will open in January 2018.** If you are interested in joining us in 2018-19, sign up below.
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1"><button>Tell me when applications open!</button> 
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open!</button> 
 
 <br>
 

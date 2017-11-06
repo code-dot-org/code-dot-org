@@ -852,10 +852,10 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
-  def last_attempt(level)
-    UserLevel.where(user_id: id, level_id: level.id).
-      order('updated_at DESC').
-      first
+  def last_attempt(level, script = nil)
+    query = UserLevel.where(user_id: id, level_id: level.id)
+    query = query.where(script_id: script.id) unless script.nil?
+    query.order('updated_at DESC').first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -988,7 +988,11 @@ class User < ActiveRecord::Base
   def age
     return @age unless birthday
     age = UserHelpers.age_from_birthday(birthday)
-    age = "21+" if age >= 21
+    if age < 4
+      age = nil
+    elsif age >= 21
+      age = '21+'
+    end
     age
   end
 

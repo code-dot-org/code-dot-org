@@ -38,13 +38,15 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 
 [col-33]
 
-<img src="/images/fit-200/k5certificate.png"/> 
+<img src="/images/fit-200/k5certificate.png"/>
 
 [/col-33]
 
 <div style="clear:both"></div>
 
-## Become a CS Fundamentals Facilitator for your district or region
-Learn more about our CS Fundamentals Facilitator program [here](/educate/professional-learning/cs-fundamentals-facilitator)
+## Become a CS Fundamentals Facilitator
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Fundamentals curriculum.
 
+Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
 
+<a href="/educate/professional-learning/facilitator"><button>Learn more</button>
