@@ -58,6 +58,28 @@
   }
 }
 
+.mc-img-wide {
+  width: 100%;
+}
+
+.mc-tutorial-info-wide {
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 325px;
+}
+
+.mc-tutorial-info-wide h2 {
+  margin: 0 0 15px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mc-tutorial-info-wide .mc-tutorial-details {
+  margin: 0;
+}
+
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .tutorial-box {
     margin-bottom: 15px;

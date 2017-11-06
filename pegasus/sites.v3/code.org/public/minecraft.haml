@@ -27,6 +27,15 @@ style_min: true
 %div{style: "clear:both"}
 .mc-container
   .mc-tutorials
+    .tutorial-box{style: "margin-bottom: 14px"}
+      .img-container
+        %img.mc-img-wide{:src => '/images/mc/fit-1940/mc_landing_2017_wide.jpg'}
+        .mc-tutorial-info.mc-tutorial-info-wide
+          .mc-tutorial-details
+            %h2.mc-h1-second-box= I18n.t(:minecraft_agent)
+            %p.mc-tutorial-description= I18n.t(:minecraft_agent_description)
+            %a{:href => CDO.studio_url('/s/hero/reset'), :target=>'_self'}
+              %button.primary= I18n.t(:minecraft_agent_button)
     .tutorial-box{style: "margin-right: 14px;"}
       .img-container
         %img.mc-img{:src => '/images/mc/mc_landing_2016.jpg'}
