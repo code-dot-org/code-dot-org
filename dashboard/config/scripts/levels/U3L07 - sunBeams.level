@@ -275,11 +275,11 @@
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* Added a loop to the `drawAllSumbeams`\r\n* Called `drawSunbeam` at least 75 times.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
