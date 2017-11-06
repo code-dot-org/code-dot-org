@@ -66,11 +66,8 @@
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "start_blocks": "//Checks if the switch is open or closed.\r\nonBoardEvent(buttonL, \"press\", function event(){\r\nif(__){\r\n  //Says \"Open!\"\r\n    }\r\nelse{\r\n  //Says \"Closed!\"\r\n}\r\n});",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSDU6 - toggleswitch state template"
+    "project_template_level_name": "CSDU6 - toggleswitch state template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
