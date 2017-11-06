@@ -5,8 +5,8 @@
 import color from '@cdo/apps/util/color';
 
 /**
-* Mapping of application statuses to their display colors.
-*/
+ * Mapping of application statuses to their background color.
+ */
 exports.StatusColor = {
   'unreviewed': color.charcoal,
   'pending': color.lighter_orange,
@@ -17,6 +17,9 @@ exports.StatusColor = {
   'withdrawn': color.lightest_red
 };
 
+/**
+ * Mapping of application statuses to their text color.
+ */
 exports.StatusTextColor = {
   'unreviewed': color.white,
   'pending': color.black,
