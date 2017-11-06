@@ -9,7 +9,7 @@ export const pre2017MinecraftCards = [
   {
     title: "Applab Tutorial",
     description: "",
-    link: "/minecraft"
+    link: "/applab"
   },
   {
     title: "Minecraft Education",

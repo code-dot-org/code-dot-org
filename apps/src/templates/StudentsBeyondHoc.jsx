@@ -26,13 +26,6 @@ export default class StudentsBeyondHoc extends Component {
   render() {
     const { isRtl, responsive } = this.props;
 
-
-//Decide which set of cards to pass to VerticalImageResourceCardRow based on completedTutorialType and signedIn.
-
-// set newMinecraftCards MCShareLink to the MCShareLink passed in here.
-// IF this.props.MCShareLink && completedTutorialType === 2017Minecraft, then
-// newMinecraftCards[2].MCShareLink = {this.props. MCShareLink}
-
     return (
       <div style={styles.container}>
         <h1 style={styles.heading}>
