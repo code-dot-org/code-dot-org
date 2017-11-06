@@ -21,7 +21,7 @@ export default class DetailView extends React.Component {
       applicationId: PropTypes.string.isRequired
     }).isRequired,
     route: PropTypes.shape({
-      path: PropTypes.string.isRequired
+      viewType: PropTypes.oneOf(['teacher', 'facilitator'])
     })
   };
 
@@ -57,7 +57,7 @@ export default class DetailView extends React.Component {
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
             updateProps={this.updateData}
-            viewType={this.props.route.path.includes('facilitators') ? 'facilitator' : 'teacher'}
+            viewType={this.props.route.viewType}
           />
         )
       );

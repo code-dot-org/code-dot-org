@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
+import {StatusColor, StatusTextColor} from './constants';
 import _ from 'lodash';
 
 const styles = {
@@ -59,8 +59,8 @@ export default class QuickViewTable extends React.Component {
         transforms: [
           (status) => ({
             style: {
-              backgroundColor: this.getViewColor(status),
-              color: this.getTextColor(status),
+              backgroundColor: StatusColor[status],
+              color: StatusTextColor[status],
               padding: '5px'
             }
           })
@@ -76,25 +76,6 @@ export default class QuickViewTable extends React.Component {
       }
     });
     return columns;
-  }
-
-  getViewColor = (status) => {
-    switch (status) {
-      case 'unreviewed': return color.charcoal;
-      case 'pending': return color.lighter_orange;
-      case 'accepted': return color.level_perfect;
-      case 'declined': return color.red;
-      case 'waitlisted': return color.level_passed;
-      case 'interview': return color.orange;
-      case 'withdrawn': return color.lightest_red;
-    }
-  }
-
-  getTextColor = (status) => {
-    if (status === 'declined' || status === 'unreviewed') {
-      return color.white;
-    }
-    return color.black;
   }
 
   formatViewButton = (id) => {
