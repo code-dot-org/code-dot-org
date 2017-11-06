@@ -20,7 +20,8 @@ class ProjectWidget extends React.Component {
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
+    canViewFullList: PropTypes.bool,
   };
 
   state = {
@@ -33,7 +34,7 @@ class ProjectWidget extends React.Component {
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { isRtl } = this.props;
+    const { canViewFullList, isRtl } = this.props;
     const { showFullList } = this.state;
 
     return (
@@ -59,13 +60,15 @@ class ProjectWidget extends React.Component {
           isRtl={isRtl}
         />
 
-        <Button
-          onClick={this.toggleShowFullList}
-          color={Button.ButtonColor.gray}
-          icon="caret-down"
-          text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
-          style={styles.button}
-        />
+        {canViewFullList &&
+          <Button
+            onClick={this.toggleShowFullList}
+            color={Button.ButtonColor.gray}
+            icon="caret-down"
+            text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
+            style={styles.button}
+          />
+        }
       </ContentContainer>
     );
   }
