@@ -1,16 +1,18 @@
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
 export const pre2017MinecraftCards = [
   {
     title: "CSF Express",
     description: "",
-    link: "/minecraft"
+    link: pegasus(`/educate/curriculum/express-course`)
   },
   {
-    title: "Applab",
+    title: "Applab Tutorial",
     description: "",
     link: "/minecraft"
   },
   {
-    title: "Minecraft",
+    title: "Minecraft Education",
     description: "",
     link: "/minecraft"
   },
@@ -18,19 +20,19 @@ export const pre2017MinecraftCards = [
 
 export const newMinecraftCards = [
   {
-    title: "Card 1",
+    title: "CSF Express",
     description: "",
-    link: "",
+    link: pegasus(`/educate/curriculum/express-course`)
   },
   {
-    title: "Card 2",
+    title: "Applab Tutorial",
     description: "",
-    link: ""
+    link: "/minecraft"
   },
   {
-    title: "Card 3",
+    title: "Minecraft Education",
     description: "",
-    link: ""
+    link: "/minecraft"
   },
 ];
 
