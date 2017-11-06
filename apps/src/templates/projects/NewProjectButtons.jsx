@@ -155,6 +155,7 @@ class NewProjectButtons extends React.Component {
 
   render() {
     const { isRtl, description } = this.props;
+    const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
     // Using absolute URLs to get this working in storybook.
     const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
     return (
@@ -162,13 +163,22 @@ class NewProjectButtons extends React.Component {
         {description && <div style={styles.description}>{description}</div>}
         {
           _.chunk(projectTypes, TILES_PER_ROW).map((projectTypesRow, rowIndex) => (
-              <NewProjectButtonRow
-                key={rowIndex}
-                isRtl={isRtl}
-                projectTypes={projectTypesRow}
-              />
-            )
-          )
+            <div style={styles.row}>
+              {
+                projectTypesRow.map((projectType, index) => (
+                  <a key={index} href={"/projects/" + projectType + "/new"}>
+                    <div style={[styles.tile, index < 3 && styles.tilePadding]}>
+                      <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
+                      <div style={styles.label}>
+                        {PROJECT_INFO[projectType].label}
+                      </div>
+                    </div>
+                  </a>
+                ))
+              }
+              <div style={{clear: 'both'}}/>
+            </div>
+          ))
         }
       </div>
     );
@@ -176,34 +186,3 @@ class NewProjectButtons extends React.Component {
 }
 
 export default Radium(NewProjectButtons);
-
-class NewProjectButtonRowUnwrapped extends React.Component {
-  static propTypes = {
-    projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isRtl: PropTypes.bool,
-  };
-
-  render() {
-    const { isRtl, projectTypes } = this.props;
-    const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
-    return (
-      <div style={styles.row}>
-        {
-          projectTypes.map((projectType, index) => (
-            <a key={index} href={"/projects/" + projectType + "/new"}>
-              <div style={[styles.tile, index < 3 && styles.tilePadding]}>
-                <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
-                <div style={styles.label}>
-                  {PROJECT_INFO[projectType].label}
-                </div>
-              </div>
-            </a>
-          ))
-        }
-        <div style={{clear: 'both'}}/>
-      </div>
-    );
-  }
-}
-
-const NewProjectButtonRow = Radium(NewProjectButtonRowUnwrapped);
