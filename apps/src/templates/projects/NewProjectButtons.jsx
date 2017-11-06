@@ -141,12 +141,12 @@ const styles = {
   }
 };
 
-const NewProjectButtons = React.createClass({
-  propTypes: {
+class NewProjectButtons extends React.Component {
+  static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
     description: PropTypes.string,
-  },
+  };
 
   render() {
     const { isRtl, description } = this.props;
@@ -176,6 +176,6 @@ const NewProjectButtons = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default Radium(NewProjectButtons);
