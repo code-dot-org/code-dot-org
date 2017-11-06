@@ -3,6 +3,7 @@ import i18n from "@cdo/locale";
 import styleConstants from '../../styleConstants';
 import color from "../../util/color";
 import Radium from 'radium';
+import _ from 'lodash';
 
 const DEFAULT_PROJECT_TYPES = [
   'playlab',
@@ -141,6 +142,8 @@ const styles = {
   }
 };
 
+const TILES_PER_ROW = 4;
+
 class NewProjectButtons extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
@@ -157,10 +160,15 @@ class NewProjectButtons extends React.Component {
         <div style={styles.description}>
           {description || i18n.projectStartNew()}
         </div>
-        <NewProjectButtonRow
-          isRtl={isRtl}
-          projectTypes={projectTypes.slice(0, 4)}
-        />
+        {
+          _.chunk(projectTypes, TILES_PER_ROW).map(projectTypesRow => (
+              <NewProjectButtonRow
+                isRtl={isRtl}
+                projectTypes={projectTypesRow}
+              />
+            )
+          )
+        }
       </div>
     );
   }
