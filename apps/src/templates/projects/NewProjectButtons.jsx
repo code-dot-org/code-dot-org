@@ -160,9 +160,7 @@ class NewProjectButtons extends React.Component {
     const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
     return (
       <div style={styles.fullsize}>
-        <div style={styles.description}>
-          {description || i18n.projectStartNew()}
-        </div>
+        {description && <div style={styles.description}>{description}</div>}
         {
           _.chunk(projectTypes, TILES_PER_ROW).map(projectTypesRow => (
               <NewProjectButtonRow

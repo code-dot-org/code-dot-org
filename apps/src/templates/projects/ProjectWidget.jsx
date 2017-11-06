@@ -6,11 +6,21 @@ import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from "../Button";
+import color from "../../util/color";
 
 const styles = {
   button: {
     float: 'right',
     marginTop: 10,
+  },
+  headingStartNew: {
+    paddingRight: 10,
+    paddingBottom: 10,
+    fontSize: 16,
+    fontFamily: 'Gotham 3r',
+    zIndex: 2,
+    color: color.charcoal,
+    width: 940
   }
 };
 
@@ -54,6 +64,7 @@ class ProjectWidget extends React.Component {
             isRtl={isRtl}
           />
         }
+        <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
         <NewProjectButtons
           projectTypes={this.props.projectTypes}
           isRtl={isRtl}
