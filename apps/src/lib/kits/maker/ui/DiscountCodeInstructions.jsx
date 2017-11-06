@@ -1,10 +1,15 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import View_Cart from "../../../../../../dashboard/app/assets/images/maker/View_Cart.png";
+import Add_to_cart from "../../../../../../dashboard/app/assets/images/maker/Add_to_cart.png";
+import Enter_Discount_Code from "../../../../../../dashboard/app/assets/images/maker/Enter_Discount_Code.png";
 
 const styles = {
   title: {
     fontSize: 32,
+  },
+  image: {
+    width: 400,
   }
 };
 
@@ -32,14 +37,28 @@ export default class DiscountCodeInstructions extends Component {
         <br/>
         <ol>
           <li>
-            {i18n.discountCodeInstructions1()} <a href="https://www.adafruit.com/product/3399">https://www.adafruit.com/product/3399</a>
+            <div>
+              <div>
+                {i18n.discountCodeInstructions1()} <a href="https://www.adafruit.com/product/3399">https://www.adafruit.com/product/3399</a>
+              </div>
+              <img style={styles.image} src={Add_to_cart}/>
+            </div>
           </li>
           <li>
-            {i18n.discountCodeInstructions2()}
-            <img src={View_Cart}/>
+            <div>
+              <div>
+                {i18n.discountCodeInstructions2()}
+              </div>
+              <img style={styles.image} src={View_Cart}/>
+            </div>
           </li>
           <li>
-            {i18n.discountCodeInstructions3({discountCode: this.props.discountCode})}
+            <div>
+              <div>
+                {i18n.discountCodeInstructions3({discountCode: this.props.discountCode})}
+              </div>
+              <img style={styles.image} src={Enter_Discount_Code}/>
+            </div>
           </li>
           <li>
             {i18n.discountCodeInstructions4({kitCost: this.props.discountComplete ? "$0" : "$97.50"})}
