@@ -967,6 +967,12 @@ class User < ActiveRecord::Base
     return false
   end
 
+  # @return {boolean} true if we have at least one section that meets our eligibility
+  #   requirements for student progress
+  def circuit_playground_student_progress_eligible?
+    sections.any?(&:has_sufficient_discount_code_progress?)
+  end
+
   # Looks to see if any of the users associated with this studio_person_id are eligibile
   # for our circuit playground discount
   def studio_person_circuit_playground_pd_eligible?
