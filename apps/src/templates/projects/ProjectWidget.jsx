@@ -11,7 +11,6 @@ const styles = {
   button: {
     float: 'right',
     marginTop: 20,
-    marginBottom: 20
   }
 };
 
@@ -68,6 +67,37 @@ class ProjectWidget extends React.Component {
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
           />
+        }
+
+        <div style={{clear: 'both'}}/>
+
+        {showFullList &&
+          <div>
+            <NewProjectButtons
+              description={i18n.projectGroupPlaylab()}
+              projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupEvents()}
+              projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupArtist()}
+              projectTypes={['artist', 'frozen']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMinecraft()}
+              projectTypes={['minecraft_designer', 'minecraft_adventurer']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupAdvancedTools()}
+              projectTypes={['applab', 'gamelab', 'weblab']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMath()}
+              projectTypes={['calc', 'eval']}
+            />
+          </div>
         }
       </ContentContainer>
     );
