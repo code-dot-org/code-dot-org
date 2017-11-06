@@ -63,7 +63,7 @@ class ProjectWidget extends React.Component {
           <Button
             onClick={this.toggleShowFullList}
             color={Button.ButtonColor.gray}
-            icon="caret-down"
+            icon={showFullList ? "caret-up" : "caret-down"}
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
           />
