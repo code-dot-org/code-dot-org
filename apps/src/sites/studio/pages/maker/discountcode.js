@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import EligibilityChecklist from '@cdo/apps/templates/EligibilityChecklist';
-import { Status } from '@cdo/apps/lib/kits/maker/ui/SetupStep';
+import { Status } from '@cdo/apps/lib/ui/ValidationStep';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
