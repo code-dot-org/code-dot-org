@@ -140,7 +140,6 @@ const styles = {
     fontSize: 14,
     fontFamily: '"Gotham 5r"',
     color: color.charcoal,
-    width: 940
   }
 };
 
@@ -167,7 +166,7 @@ class NewProjectButtons extends React.Component {
               {
                 projectTypesRow.map((projectType, index) => (
                   <a key={index} href={"/projects/" + projectType + "/new"}>
-                    <div style={[styles.tile, index < 3 && styles.tilePadding]}>
+                    <div style={[styles.tile, index < (TILES_PER_ROW - 1) && styles.tilePadding]}>
                       <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
                       <div style={styles.label}>
                         {PROJECT_INFO[projectType].label}
