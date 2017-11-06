@@ -1,11 +1,14 @@
 ---
-title: '<%= hoc_s(:title_partners) %>'
+
+title: <%= hoc_s(:title_partners) %>
+
 ---
+
 Ora e Kodimit udhëhiqet nga Ora e Kodimit dhe komunitetet këshilluese dhe shqyrtuese të Javës së Edukimit në shkencat Kompjuterike.
 
 [Komuniteti këshillues](<%= resolve_url('/advisory-committee') %>) përbëhet nga përfaqësues të K-12, akademi, organizata ndërkombëtare fitimprurëse dhe jo-fitimprurëse. Komuniteti udhëheq strategjitë për fushatën e Orës së Kodimit.
 
-[Komuniteti shqyrtues](<%= resolve_url('/review-committee') %>) përbëhet nga 15 edukatorë të të gjitha niveleve të shkollimit që kanë akses dhe rekomandojnë aktivitete duke përdorur rubrikën e Komunitetit Këshillues. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Komuniteti shqyrtues](<%= resolve_url('/review-committee') %>) përbëhet nga 15 edukatorë të të gjitha niveleve të shkollimit që kanë akses dhe rekomandojnë aktivitete duke përdorur rubrikën e Komunitetit Këshillues. Këta edukatorë rishikojnë tutorialet udhëheqëse të studentëve dhe mësuesve të dërguara nga qindra partnerë, vlerësojnë cilësinë edukative të aktiviteteve, aftësinë për të përfshirë nxënësin, dhe apeli i mundshëm që i bëhet studentëve të grupeve të ndryshme.
 
 Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së Kodimit dhe vizionin e saj për të ofruar një hyrje në shkencat kompjuterike për çdo nxënës.
 
@@ -131,13 +134,13 @@ Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së K
 
 ---
 
-# Activity Partners
+# Partnerët e Tutorialeve
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure Partners and Tools
+# Partnerët e infrastrukturës dhe mjeteve
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
