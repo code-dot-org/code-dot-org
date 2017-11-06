@@ -20,6 +20,8 @@ level 'CSD U6 setProperty hidden 2', progression: 'Events and Properties'
 named_level 'CSD U6 emotion machine example'
 level 'CSD U6 emotion machine 1', progression: 'Building an App'
 level 'CSD U6 emotion machine 2', progression: 'Building an App'
+level 'CSD U6 emotion machine 3', progression: 'Building an App'
+level 'CSD U6 emotion machine 4', progression: 'Building an App'
 
 stage 'The Circuit Playground', flex_category: 'csd6_1'
 named_level 'CSD LEDs Map'
