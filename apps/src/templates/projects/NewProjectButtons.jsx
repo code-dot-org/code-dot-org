@@ -52,12 +52,12 @@ const PROJECT_INFO = {
     label: i18n.projectTypeFrozen(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_frozen.png"
   },
-  'mc': {
-    label: i18n.projectTypeMC(),
+  'minecraft_adventurer': {
+    label: i18n.projectTypeMinecraftAdventurer(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_mc.png"
   },
-  'minecraft': {
-    label: i18n.projectTypeMinecraft(),
+  'minecraft_designer': {
+    label: i18n.projectTypeMinecraftDesigner(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft.png"
   },
   'starwars': {
@@ -100,7 +100,8 @@ const PROJECT_INFO = {
 
 const styles = {
   fullsize: {
-    width: styleConstants['content-width']
+    width: styleConstants['content-width'],
+    marginTop: 20,
   },
   tile: {
     width: 214,
@@ -143,17 +144,20 @@ const styles = {
 const NewProjectButtons = React.createClass({
   propTypes: {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
+    description: PropTypes.string,
   },
 
   render() {
-    const { isRtl } = this.props;
+    const { isRtl, description } = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
     // Using absolute URLs to get this working in storybook.
     const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
     return (
       <div style={styles.fullsize}>
-        <div style={styles.description}>{i18n.projectStartNew()}</div>
+        <div style={styles.description}>
+          {description || i18n.projectStartNew()}
+        </div>
         <div>
           {
             projectTypes.slice(0,4).map((projectType, index) => (
@@ -168,6 +172,7 @@ const NewProjectButtons = React.createClass({
             ))
           }
         </div>
+        <div style={{clear: 'both'}}/>
       </div>
     );
   }
