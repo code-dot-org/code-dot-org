@@ -162,8 +162,9 @@ class NewProjectButtons extends React.Component {
       <div style={styles.fullsize}>
         {description && <div style={styles.description}>{description}</div>}
         {
-          _.chunk(projectTypes, TILES_PER_ROW).map(projectTypesRow => (
+          _.chunk(projectTypes, TILES_PER_ROW).map((projectTypesRow, rowIndex) => (
               <NewProjectButtonRow
+                key={rowIndex}
                 isRtl={isRtl}
                 projectTypes={projectTypesRow}
               />
