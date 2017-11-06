@@ -18,4 +18,20 @@ describe("appendPx", () => {
     const cssVal = appendPx("100px");
     expect(cssVal).to.equal("100px");
   });
+  it('returns an empty string', function () {
+    const cssVal = appendPx("one hundred");
+    expect(cssVal).to.equal("");
+  });
+  it('returns an empty string', function () {
+    const cssVal = appendPx({object : 100});
+    expect(cssVal).to.equal("");
+  });
+  it('returns an empty string', function () {
+    const cssVal = appendPx(["bark", 300, 400]);
+    expect(cssVal).to.equal("");
+  });
+  it('returns an empty string', function () {
+    const cssVal = appendPx([200, 300, 400]);
+    expect(cssVal).to.equal("");
+  });
 });
