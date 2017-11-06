@@ -10,8 +10,12 @@
 }
 
 .mc-new-tag {
-  float: right;
-  margin-bottom: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 98px;
+  image-rendering:pixelated;
+  -ms-interpolation-mode:nearest-neighbor;
 }
 
 .new-mc {
@@ -25,10 +29,6 @@
 
 .mc-img {
   width: 478px;
-}
-
-.mc-new-tag {
-  width: 100px;
 }
 
 .white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
