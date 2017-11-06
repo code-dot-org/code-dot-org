@@ -36,11 +36,14 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
         <br/>
         {this.props.data.program === PROGRAM_CSF &&
           <div>
-            <h4>If selected for the program, you will be required to attend a Facilitator-in-Training Weekend in the spring of 2018.</h4>
+            <h4>
+              If selected for the program, you will be required to attend a
+              Facilitator-in-Training Weekend in the spring of 2018.
+            </h4>
 
             {this.radioButtonsFor("csfAvailability")}
 
-            {this.props.data.csfAvailability ===  CSF_AVAILABILITY_ONLY_WEEKEND &&
+            {this.props.data.csfAvailability === CSF_AVAILABILITY_ONLY_WEEKEND &&
               this.inputFor("csfPartialAttendanceReason", this.indented())
             }
           </div>
@@ -48,7 +51,10 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
 
         {this.props.data.program && this.props.data.program !== PROGRAM_CSF &&
           <div>
-            <h4>If selected for the program, you will be required to attend TeacherCon and a Facilitator-in-Training Weekend in the summer of 2018.</h4>
+            <h4>
+              If selected for the program, you will be required to attend TeacherCon and a
+              Facilitator-in-Training Weekend in the summer of 2018.
+            </h4>
 
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspTeacherconAvailability", {
               "I'm not available for either TeacherCon. (Please Explain):" : "unavailableReason"
@@ -86,5 +92,26 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
 
     return requiredFields;
   }
-}
 
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.program !== PROGRAM_CSF) {
+      changes.csfAvailability = undefined;
+
+      if (data.csfAvailability !== CSF_AVAILABILITY_ONLY_WEEKEND) {
+        changes.csfPartialAttendanceReason = undefined;
+      }
+    }
+
+    if (!data.program || data.program === PROGRAM_CSF) {
+      changes.csdCspTeacherconAvailability = undefined;
+      changes.csdCspFitAvailability = undefined;
+    }
+
+    return changes;
+  }
+}

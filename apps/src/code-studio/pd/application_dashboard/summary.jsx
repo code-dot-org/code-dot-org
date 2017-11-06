@@ -45,9 +45,9 @@ static propTypes = {
       <div>
         <h1>{this.props.route.regionalPartnerName}</h1>
         <div className="row">
-          <SummaryTable caption="CSF Facilitators" data={this.state.applications["csf_facilitators"]} path="csf_facilitators"/>
-          <SummaryTable caption="CSD Facilitators" data={this.state.applications["csd_facilitators"]} path="csd_facilitators"/>
-          <SummaryTable caption="CSP Facilitators" data={this.state.applications["csp_facilitators"]} path="csp_facilitators"/>
+          <SummaryTable caption="CS Fundamentals Facilitators" data={this.state.applications["csf_facilitators"]} path="csf_facilitators"/>
+          <SummaryTable caption="CS Discoveries Facilitators" data={this.state.applications["csd_facilitators"]} path="csd_facilitators"/>
+          <SummaryTable caption="CS Principles Facilitators" data={this.state.applications["csp_facilitators"]} path="csp_facilitators"/>
         </div>
       </div>
     );

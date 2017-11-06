@@ -37,7 +37,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52) [<button>Learn more</button>](/educate/professional-learning/cs-principles)
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new) [<button>Learn more</button>](/educate/professional-learning/cs-principles)
 
 ## Code.org's AP CS Principles Curriculum
 

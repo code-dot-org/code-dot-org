@@ -561,12 +561,6 @@ export default class Craft {
       return;
     }
     Craft.gameController.codeOrgAPI.resetAttempt();
-    Craft.gameController.codeOrgAPI.startAttempt(success => {
-      if (Craft.level.freePlay) {
-        return;
-      }
-      Craft.reportResult(success);
-    });
   }
 
   static phaserLoaded() {
@@ -723,6 +717,13 @@ export default class Craft {
             dirStringToDirection[direction], targetEntity);
       },
     }, {legacy: true});
+
+    Craft.gameController.codeOrgAPI.startAttempt(success => {
+      if (Craft.level.freePlay) {
+        return;
+      }
+      Craft.reportResult(success);
+    });
   }
 
   static getTestResultFrom(success, studioTestResults) {

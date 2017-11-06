@@ -95,18 +95,20 @@ class TwoColumnActionBlock extends Component {
 export class LocalClassActionBlock extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsive: PropTypes.instanceOf(Responsive).isRequired,
+    showHeading: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
+    const { isRtl, responsive, showHeading } = this.props;
+    const heading = showHeading ? i18n.findLocalClassHeading() : '';
 
     return (
       <TwoColumnActionBlock
         isRtl={isRtl}
         responsive={responsive}
         imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
-        heading={i18n.findLocalClassHeading()}
+        heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
         description={i18n.findLocalClassDescription()}
         buttonUrl={pegasus('/learn/local')}

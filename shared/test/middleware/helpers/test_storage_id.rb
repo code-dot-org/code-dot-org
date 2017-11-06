@@ -35,6 +35,32 @@ class StorageIdTest < Minitest::Test
     assert_equal row[:id], storage_id
   end
 
+  def test_storage_id_for_current_user_race_condition
+    request = mock
+    stubs(:request).returns(request)
+
+    table_user_id = 2
+    table_storage_id = 3
+    request.stubs(:user_id).returns(table_user_id)
+    request.stubs(:cookies).returns({})
+
+    # To simulate a race condition, say the storage id for this user is absent
+    # the first time we ask, then present the second time.
+    mock_rows = stub('mock rows')
+    mock_rows.stubs(:first).
+      returns(nil).then.
+      returns({id: table_storage_id})
+
+    # Mock the DB and table, raising an exception on insert.
+    mock_table = stub('user storage ids table')
+    mock_table.stubs(:where).with({user_id: table_user_id}).returns(mock_rows).twice
+    mock_table.stubs(:insert).with({user_id: table_user_id}).raises(Sequel::UniqueConstraintViolation).once
+
+    PEGASUS_DB.stubs(:[]).with(:user_storage_ids).returns(mock_table)
+
+    assert_equal table_storage_id, storage_id_for_current_user
+  end
+
   def test_take_storage_id_ownership_from_cookie
     response = mock
     response.stubs(:delete_cookie).returns(nil)
