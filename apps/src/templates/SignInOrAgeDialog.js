@@ -98,7 +98,7 @@ class SignInOrAgeDialog extends Component {
     // and reload
     const cookieName = environmentSpecificCookieName('storage_id');
     if (cookies.get(cookieName)) {
-      cookies.remove(cookieName, {path: '/', domain: 'code.org'});
+      cookies.remove(cookieName, {path: '/', domain: '.code.org'});
       reload();
     } else {
       this.setState({open: false});
