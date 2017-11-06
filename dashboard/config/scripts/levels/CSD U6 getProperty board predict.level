@@ -95,9 +95,6 @@
     "makerlab_enabled": "true",
     "contained_level_names": [
       "CSD U6 board getters"
-    ],
-    "encrypted_examples": [
-
     ]
   },
   "published": true,

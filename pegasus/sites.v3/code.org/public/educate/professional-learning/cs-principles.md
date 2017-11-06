@@ -19,7 +19,7 @@ The program kicks off with a 5-day summer workshop where you'll have the opportu
 
 **Applications for the 2018-19 [CS Principles Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-<a href="https://goo.gl/forms/jBWAHg5jvEV8lSV52"><button>Tell me when applications open!</button>
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open!</button>
 
 [/col-50]
 
@@ -78,7 +78,7 @@ The CS Principles Professional Learning Program is available in regions served b
 
 **Applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 ## <a name="facilitate"></a>Become a CS Principles Facilitator
 
