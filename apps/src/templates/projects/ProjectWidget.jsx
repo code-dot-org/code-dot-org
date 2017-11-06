@@ -5,6 +5,15 @@ import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Button from "../Button";
+
+const styles = {
+  button: {
+    float: 'right',
+    marginTop: 20,
+    marginBottom: 20
+  }
+};
 
 class ProjectWidget extends React.Component {
   static propTypes = {
@@ -14,9 +23,18 @@ class ProjectWidget extends React.Component {
     isRtl: PropTypes.bool
   };
 
+  state = {
+    showFullList: false,
+  };
+
+  toggleShowFullList = () => {
+    this.setState({showFullList: !this.state.showFullList});
+  };
+
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
     const { isRtl } = this.props;
+    const { showFullList } = this.state;
 
     return (
       <ContentContainer
@@ -39,6 +57,14 @@ class ProjectWidget extends React.Component {
         <NewProjectButtons
           projectTypes={this.props.projectTypes}
           isRtl={isRtl}
+        />
+
+        <Button
+          onClick={this.toggleShowFullList}
+          color={Button.ButtonColor.gray}
+          icon="caret-down"
+          text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
+          style={styles.button}
         />
       </ContentContainer>
     );
