@@ -17,16 +17,15 @@ export default class DetailViewContents extends React.Component {
       form_data: PropTypes.object
     }),
     updateProps: PropTypes.func.isRequired,
-    path: PropTypes.string.isRequired
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
-  statuses = () => {
-    let statuses = ['Unreviewed', 'Pending', 'Waitlisted', 'Accepted', 'Declined', 'Withdrawn'];
-    if (this.props.path.includes('facilitators')) {
-      statuses.splice(2, 0, 'Interview');
+  componentWillMount() {
+    this.statuses = ['Unreviewed', 'Pending', 'Waitlisted', 'Accepted', 'Declined', 'Withdrawn'];
+    if (this.props.viewType === 'facilitator') {
+      this.statuses.splice(2, 0, 'Interview');
     }
-    return statuses;
-  };
+  }
 
   state = {
     status: this.props.applicationData.status,
@@ -115,7 +114,7 @@ export default class DetailViewContents extends React.Component {
             style={{marginRight: '5px'}}
           >
             {
-              this.statuses().map((status, i) => (
+              this.statuses.map((status, i) => (
                 <option value={status.toLowerCase()} key={i}>
                   {status}
                 </option>

@@ -38,7 +38,7 @@ export default class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   }
 
-  tableBody = () => {
+  tableBody() {
     return Object.keys(status_colors).map((status, i) => {
       if (this.props.data.hasOwnProperty(status)) {
         return (
@@ -56,7 +56,7 @@ export default class SummaryTable extends React.Component {
   handleViewClick = (event) => {
     event.preventDefault();
     this.context.router.push(`/${this.props.path}`);
-  }
+  };
 
   render() {
     return (
