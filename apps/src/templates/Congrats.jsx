@@ -12,6 +12,7 @@ export default class Congrats extends Component {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
+    signedIn: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -49,7 +50,7 @@ export default class Congrats extends Component {
   }
 
   render() {
-    const { completedTutorialType, MCShareLink, isRtl } = this.props;
+    const { completedTutorialType, MCShareLink, isRtl, signedIn } = this.props;
     const contentStyle = {
       width: this.responsive.getResponsiveContainerWidth()
     };
@@ -64,6 +65,7 @@ export default class Congrats extends Component {
           MCShareLink={MCShareLink}
           responsive={this.responsive}
           isRtl={isRtl}
+          signedIn={signedIn}
         />
         <TeachersBeyondHoc/>
       </div>
