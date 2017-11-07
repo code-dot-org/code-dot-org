@@ -485,12 +485,12 @@ class SectionTest < ActiveSupport::TestCase
     def create_script_with_levels(name, level_type)
       script = create :script, name: name
       stage = create :stage, script: script
-      # 10 non-programming levels
+      # 5 non-programming levels
       5.times do
         create :script_level, script: script, stage: stage, levels: [create(:unplugged)]
       end
 
-      # 10 programming levels
+      # 5 programming levels
       5.times do
         create :script_level, script: script, stage: stage, levels: [create(level_type)]
       end
@@ -513,8 +513,8 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     setup_all do
-      @csd2 = create_script_with_levels('csd2', :gamelab)
-      @csd3 = create_script_with_levels('csd3', :weblab)
+      @csd2 = create_script_with_levels('csd2', :weblab)
+      @csd3 = create_script_with_levels('csd3', :gamelab)
     end
 
     test 'returns true when all conditions met' do
