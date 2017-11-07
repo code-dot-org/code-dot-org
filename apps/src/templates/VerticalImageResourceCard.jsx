@@ -11,7 +11,7 @@ const styles = {
     borderColor: color.border_gray,
     position: 'relative',
     height: 440,
-    width: 310,
+    width: 308,
     marginBottom: 20,
     backgroundColor: color.white
   },
@@ -58,10 +58,14 @@ const styles = {
 };
 
 /**
- * A card used on /congrats to display information about a particular course
- * includes an image. Not to be confused with CourseCard, the larger component used on /home for scripts and courses specific to a user.
+ * A card used on /congrats to display information about a particular course or
+ * HoC follow-up activity. Not to be confused with CourseCard, the larger
+ * component used on /home for scripts and courses specific to a user.
+ * ImageResourceCard is also similar, but has image and text aligned
+ * horizontally.
  */
-class CoursePromoCard extends Component {
+
+class VerticalImageResourceCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
@@ -102,4 +106,4 @@ class CoursePromoCard extends Component {
   }
 }
 
-export default Radium(CoursePromoCard);
+export default Radium(VerticalImageResourceCard);
