@@ -16,6 +16,7 @@ max_age: 60
 :ruby
 
   cert_id = params[:i]
+
   begin
     cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
   rescue ArgumentError

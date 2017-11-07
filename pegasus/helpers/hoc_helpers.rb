@@ -115,13 +115,23 @@ def complete_tutorial(tutorial={})
         weight: weight
       )
     end
+
     destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?
     destination += "&s=#{Base64.urlsafe_encode64(tutorial[:code])}" unless tutorial[:code].blank?
   end
 
   dont_cache
-  redirect (destination || "/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}")
+end
+
+def complete_internal_tutorial(tutorial={})
+  complete_tutorial(tutorial)
+  redirect CDO.studio_url("/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}", CDO.default_scheme)
+end
+
+def complete_external_tutorial(tutorial={})
+  complete_tutorial(tutorial)
+   redirect (destination || "/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}")
 end
 
 def complete_tutorial_pixel(tutorial={})
