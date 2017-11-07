@@ -53,7 +53,7 @@ module SharedConstants
     {
       all: 'all',
       successful_runs_and_final_level_only: 'successful_runs_and_final_level_only',
-      final_level_only: 'successful_runs_and_final_level_only',
+      final_level_only: 'final_level_only',
     }
   )
 
