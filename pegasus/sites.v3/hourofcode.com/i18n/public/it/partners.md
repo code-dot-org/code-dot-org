@@ -5,13 +5,13 @@ L'Ora del Codice è un progetto curato da Hour of Code, dal Comitato Consultivo 
 
 Il [Comitato Consultivo](<%= resolve_url('/advisory-committee') %>) è composto da rappresentanti delle scuole dell'obbligo, del mondo accademico, delle organizzazioni no-profit, del commercio e delle organizzazioni internazionali. Questo comitato propone e guida la campagna "Ora del Codice".
 
-Il [ Comitato di revisione](<%= resolve_url('/review-committee') %>) è composto da 15 insegnanti in grado di valutare e consigliare attività. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Il [Comitato di revisione](<%= resolve_url('/review-committee') %>) è composto da 15 insegnanti della scuola dell'obbligo in grado di valutare e consigliare attività secondo le linee guida del Comitato Consultivo. Questi educatori valutano le attività autogestite dagli studenti ed i programmi delle lezioni condotte dagli insegnanti inseriti da centinaia di partner, valutandone il valore educativo, la capacità di coinvolgere gli studenti e l'attrattiva per differenti fasce di età.
 
-Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of Code", offrendo un'introduzione d'informatica per ogni studente.
+Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell'Ora del Codice, offrendo un'introduzione all'informatica per ogni studente.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Partner Latino Americani
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Partner Africani
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Partner Australiani
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Partner Cinesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Partner Francesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Partner Indonesiani
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Partner Irlandesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'in' %>
 
-# India Partners
+# Partner Indiani
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Partner Giapponesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Partner Olandesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Partner Neo Zelandesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Partner Inglesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,7 +107,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Partner Canadesi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -131,13 +131,13 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell"Hour of
 
 ---
 
-# Activity Partners
+# Partner per le esercitazioni
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure Partners and Tools
+# Partner di supporto all'infrastruttura
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

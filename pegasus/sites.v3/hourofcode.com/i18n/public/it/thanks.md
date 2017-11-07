@@ -38,7 +38,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Invite a local politician or policy maker to visit your school for the Hour of Code. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
 
-Utilizza questi [poster, banner, adesivi, video e altro](<%= resolve_url('/promote/resources') %>) per il tuo evento.
+Adatta questi [poster, banner, adesivi, video e altro](<%= resolve_url('/promote/resources') %>) per il tuo evento.
 
 ## Trova un volontario vicino a te per farti aiutare con il tuo evento.
 
