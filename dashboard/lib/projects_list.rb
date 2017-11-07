@@ -12,7 +12,7 @@ module ProjectsList
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
     minecraft: ['minecraft_adventurer', 'minecraft_designer'],
-    events: %w(starwars starwarsblocks flappy bounce sports basketball)
+    events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball)
   }.freeze
 
   class << self
