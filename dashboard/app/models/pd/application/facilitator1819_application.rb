@@ -453,7 +453,7 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, notes
+        row.push status, notes, regional_partner_name
         csv << row
       end
     end
