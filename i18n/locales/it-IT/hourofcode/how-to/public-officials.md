@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Come portare l'Ora del Codice nella tua comunità.
+# Come portare l'Ora del Codice nella tua comunità
 
 [col-33]
 
@@ -17,9 +17,9 @@ nav: how_to_nav
 
 ## Fai partecipare ogni scuola e ogni studente!
 
-1. **Leggi la nostra presentazione** sul perché la formazione informatica è importante e come si può aiutare sostenendo l'Ora del Codice. **Trovi altre informazioni in italiano sul sito <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">Programma il Futuro</a>** [Scarica qui la presentazione.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Leggi la nostra presentazione** sul perché la formazione informatica è importante e come si può aiutare sostenendo l'Ora del Codice. [Scarica qui la presentazione (in inglese).](/files/hoc-one-pager-public-officials-2016.pdf) **Trovi altre informazioni in italiano sul sito <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">Programma il Futuro</a>**
 
-2. **Coinvolgi le scuole locali e gli istituti.** Utilizza [questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) o [questa descrizione](%= resolve_url('/promote/stats') %) come punto di partenza, puoi dare un'occhiata anche a questa [guida](%= resolve_url('/how-to') %) per le scuole o per gli istituti.
+2. **Coinvolgi tutte le scuole locali.** Utilizza [questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) o [questa descrizione](%= resolve_url('/promote/stats') %) come punto di partenza, puoi dare un'occhiata anche a questa [guida](%= resolve_url('/how-to') %) per le scuole.
 
 3. **Organizza un evento dell'Ora del Codice nella tua zona.** Guarda la nostra [guida su come organizzare un evento](%= resolve_url('/how-to/events') %) per vedere un esempio, un kit di supporto alla sensibilizzazione e altre informazioni utili. Organizzare un evento è un ottimo modo per promuovere l'Ora del Codice ed aumentare la partecipazione.
 
@@ -29,15 +29,15 @@ nav: how_to_nav
 
 6. **Scrivi un articolo**. Considera l'idea di pubblicare un articolo in un giornale locale. Guarda questo [esempio di articolo](%= resolve_url('/promote/op-ed') %) per supportare la Settimana di Educazione all'Informatica e i suoi obiettivi.
 
-7. **Diffondi la notizia.** [Condividi il video dell'Ora del Codice su Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) e [supporta l'iniziativa su Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Condividi foto di eventi o video che ritraggano te ed altri adulti durante l'Ora del Codice. Usa l'hashtag **#HourOfCode** così che Code.org (@code.org) possa vedere e promuovere le tue iniziative di sostegno. Oppure utilizza questi tweet di esempio:
+7. **Diffondi la notizia.** [Condividi il video dell'Ora del Codice su Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) e [supporta l'iniziativa su Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Condividi foto di eventi o video che ritraggano te ed altri adulti durante l'Ora del Codice. Usa l'hashtag **#HourOfCode o #OradelCodice** così che @code.org e @programmafuturo possano vedere e promuovere le tue iniziative di sostegno. Oppure utilizza questi tweet di esempio:
     
-    - Ogni studente, ragazzo o ragazza, dovrebbe avere la possibilità di studiare informatica. Unisciti a noi iniziando con un'Ora del Codice #HourOfCode <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](%= resolve_url('/') %) <% else %> [https://hourofcode.com](%= resolve_url('/') %) <% end %>
-    - Oggi siamo orgogliosi di far parte del movimento dell'Ora del Codice. Vuoi unirti anche tu? #HourOfCode <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](%= resolve_url('/') %) <% else %> [https://hourofcode.com](%= resolve_url('/') %) <% end %>   
+    - Ogni studente, ragazzo o ragazza, dovrebbe avere la possibilità di studiare informatica. Unisciti a noi iniziando con un'#OradelCodice [https://hourofcode.com](%= resolve_url('/') %) <% end %>
+    - Oggi siamo orgogliosi di far parte del movimento dell'Ora del Codice. Vuoi unirti anche tu? #OradelCodice [https://hourofcode.com](%= resolve_url('/') %) <% end %>   
           
         
 
 8. **Diffondi un comunicato stampa.** [Utilizza questo esempio](%= resolve_url('/promote/official-press-release') %) come modello.
 
-9. **Fai squadra nella tua zona.** Visita [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) per saperne di più sull'insegnamento dell'informatica nel tuo stato. Firma la petizione e riceverai aggiornamenti da Code.org riguardo tutti gli sforzi fatti.
+9. **Fai squadra nella tua zona.** Visita [www.programmailfuturo.it](https://www.programmailfuturo.it/) per saperne di più sull'insegnamento dell'informatica nel tuo paese. 
 
 <%= view :signup_button %>
