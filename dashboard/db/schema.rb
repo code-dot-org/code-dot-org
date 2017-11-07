@@ -124,6 +124,16 @@ ActiveRecord::Schema.define(version: 20171109230625) do
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
   end
 
+  create_table "circuit_playground_discount_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "code",             null: false
+    t.boolean  "partial_discount", null: false
+    t.datetime "expiration",       null: false
+    t.datetime "claimed_at"
+    t.datetime "voided_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
