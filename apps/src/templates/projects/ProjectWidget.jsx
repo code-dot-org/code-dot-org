@@ -7,6 +7,7 @@ import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from "../Button";
 import color from "../../util/color";
+import {valueOr} from '../../utils';
 
 const styles = {
   button: {
@@ -29,7 +30,7 @@ class ProjectWidget extends React.Component {
     isLoading: PropTypes.bool,
     isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
-    isTooYoung: PropTypes.bool,
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   };
 
   state = {
@@ -42,7 +43,8 @@ class ProjectWidget extends React.Component {
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { canViewFullList, isRtl, isTooYoung } = this.props;
+    const { canViewFullList, isRtl } = this.props;
+    const canViewAdvancedTools = valueOr(this.props.canViewAdvancedTools, true);
     const { showFullList } = this.state;
 
     return (
@@ -67,7 +69,7 @@ class ProjectWidget extends React.Component {
         <NewProjectButtons
           projectTypes={this.props.projectTypes}
           isRtl={isRtl}
-          isTooYoung={isTooYoung}
+          canViewAdvancedTools={canViewAdvancedTools}
         />
 
         {canViewFullList &&
@@ -100,7 +102,7 @@ class ProjectWidget extends React.Component {
               description={i18n.projectGroupMinecraft()}
               projectTypes={['minecraft_designer', 'minecraft_adventurer']}
             />
-            {!isTooYoung &&
+            {canViewAdvancedTools &&
               <NewProjectButtons
                 description={i18n.projectGroupAdvancedTools()}
                 projectTypes={['applab', 'gamelab', 'weblab']}
