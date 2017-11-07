@@ -34,9 +34,9 @@ class ActivitiesController < ApplicationController
     # Check a second switch if we passed the last level of the script.
     # Keep this logic in sync with code-studio/reporting#sendReport on the client.
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    post_final_milestone = Gatekeeper.allows('postFinalMilestone', where: {script_name: script_name}, default: true)
-    solved_final_level = solved && @script_level.try(:final_level?)
-    unless post_milestone || (post_final_milestone && solved_final_level)
+    post_failed_run_milestone = Gatekeeper.allows('postFailedRunMilestone', where: {script_name: script_name}, default: true)
+    final_level = @script_level.try(:final_level?)
+    unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
       head 503
       return
     end
