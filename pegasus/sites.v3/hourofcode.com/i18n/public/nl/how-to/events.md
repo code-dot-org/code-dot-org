@@ -11,12 +11,12 @@ nav: how_to_nav
 
 - Determine a venue, date, and time.
 - Stuur [een brief](<%= hoc_uri('https://docs. google. com/a/code. org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) om de burgemeester, een congreslid, of een andere invloedrijke bedrijfspersoon uit te nodigen om te spreken.
-- Nodig media en pers uit zoals de locale nieuwsstation, de krant of bloggers. Bekijk onze [pers Kit](<%= hoc_uri('/resources/press-kit') %>) voor hulp.
+- Nodig media en pers uit zoals de locale nieuwsstation, de krant of bloggers. Bekijk onze [pers kit](<%= hoc_uri('/resources/press-kit') %>) voor hulp.
 
 ## 2. During your event
 
 - Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-- Geef een intro over het belang van programmeren, met behulp van deze [stats en infographics](<%= resolve_url('/promote/stats') %>).   
+- Geef een inleiding over het belang van programmeren, met behulp van deze [statistieken en infographics](<%= resolve_url('/promote/stats') %>).   
       
     
 - Andere evenement ideeën: 
@@ -35,7 +35,7 @@ nav: how_to_nav
 
 Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## Voorbeeld van een evenementsplan
+## Voorbeeld van een evenementenplan
 
 **Evenement:** Door heel de school Computer Science Education Week kick-off bijeenkomst
 
@@ -53,9 +53,9 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 10:00-10:05 | Start met één van onze [inspirerende video's](<%= resolve_url('/promote/resources#videos') %>)                                                     |
 | 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
-| 10:15-10:30 | Speciale gasten praten over hun achtergrond en welke belangrijke rol informatica in hun alledaagse leven heeft.                                  |
+| 10:15-10:30 | Speciale gasten praten over hun achtergrond en welke belangrijke rol programmeren in hun alledaagse leven heeft.                                 |
 | 10:30-10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
 | 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                           |
-| 11:00-11:05 | De leraar die de evenement heeft georganiseerd sluit af.                                                                                         |
+| 11:00-11:05 | De leraar die het evenement heeft georganiseerd sluit af.                                                                                        |
 
 <%= view :signup_button %>
