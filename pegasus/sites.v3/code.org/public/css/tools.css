@@ -58,14 +58,83 @@ h3.tutorial-info-h {
   margin-top: 0px;
 }
 
+b.purple {
+  font-size: 14px;
+  color: #7665a0;
+}
+
 button.tutorial-gray {
   background-color: #e7e8ea;
   border-color: #e7e8ea;
   color: #5b6770;
 }
 
+.pl-callout {
+  border: 1px solid #0094ca;
+  height: 72px;
+  margin: 20px 0px;
+}
+
+.pl-icon {
+  background-color: #0094ca;
+  width: 72px;
+  height: 70px;
+  float: left;
+  padding: 16px 16px;
+}
+
+.pl-book {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 38px;
+}
+
+.pl-description {
+  float: left;
+  padding: 14px 15px;
+  width: 860px;
+}
+
+.pl-text-area {
+  float: left;
+}
+
+.pl-title {
+  font-size: 18px;
+  color: #0094ca;
+}
+
+.pl-button {
+  float: right;
+  margin-left: 30px;
+}
+
 @media only screen and (max-width: 960px) {
   .tools-img {
   	width: 100%;
+  }
+
+  .pl-callout {
+    height: auto;
+    border: none;
+  }
+
+  .pl-icon {
+    display: none;
+  }
+
+  .pl-description {
+    float: left;
+    padding: 14px 15px;
+    width: auto;
+    border: 1px solid #0094ca;
+  }
+
+  .pl-text-area {
+    float: left;
+  }
+
+  .pl-button {
+    float: left;
+    margin-left: 0px;
   }
 }
