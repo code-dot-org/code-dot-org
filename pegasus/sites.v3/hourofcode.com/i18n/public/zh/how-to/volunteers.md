@@ -1,96 +1,83 @@
 ---
-
-title: <%= hoc_s(:title_how_to_volunteers) %>
+title: '<%= hoc_s(:title_how_to_volunteers) %>'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# 給志工們的How-to指南
+# 給志工們的活動指引
 
-## 為什麼需要志工的加入呢？
+## 為何需要志工？
 
-Check out some testimony from past volunteers:
+查看來自志工們的見證：
 
-  * 在我經驗中最美好的部分是，整個課堂上都是女性與各個族裔的人們。這預告了我們這個產業將擁有機會去觸及與激發這些孩子們的未來。
-  * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-  * “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+- 「在我經驗中最美好的部分是，整個課堂上都是女性與各個族裔的人們。這預告了我們這個產業將擁有機會去觸及與激發這些孩子們的未來。」
+- 「尤其是享受著激勵年輕女孩們投入科技領域。感覺像是我在幫助我所在地方的下個世代。」
+- 「我愛看到孩子們興奮的模樣。」 令人驚奇的一件事是，教師注意到一些學業成績不佳的學生，在開發者的思維卻很卓越，同時他們也很願意幫助他人，他們可以在這兒得到成就感。」
 
 Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
 
-## Recruit your co-workers to volunteer
+## 招募你的同事們來當志工。
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+告訴你的朋友和同事關於一小時玩程式活動。 有上百名老師報名，所以需要尋找志工，詢問他們是否有意願[成為志工](https://code.org/volunteer)。 問問你的同事是否想參與。 [寄送這封信](https://hourofcode.com/promote/resources#email)給你的經理或 CEO。
 
-## How you get selected:
+## How you get selected
 
-  * Teachers will be searching for volunteers on our [volunteer map](/volunteer/local) 
-  * Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-  * A teacher will contact you through this form (your email address will never be shared with the teacher). 
-      * If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
+- 教師將審查您在地圖上的設定檔，因此你要使您的設定檔盡可能完整，增加老師會選擇你的機會。
+- 一位老師將通過這種形式與您聯繫 （您的電子郵件地址永遠不會與老師分享）。 
+  - 如果您得教師收到太多的請求，你總是可以通過按一下編輯您的資訊或取消訂閱，從老師提供的任何電子郵件底部的連結更新您的首選項。 
 
-## 如何準備:
+## How to prepare
 
-Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+[Try out tutorials](hourofcode.com/learn) before heading to the classroom.
 
-  * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
-  * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>)
-  * If you're visiting a school, complete any background checks or required paperwork
-  * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
-  * Prepare an intro: 
-      * Share an inspirational story: How you got involved in a career in tech or why tech is important to you
-      * Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
-  * Join the conversation on FB, Twitter, Instagram, Tumblr with #Hourofcode
-  * Connect with the teacher to discuss what you plan to speak about during your session
-  * If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand
+讓學生興致高昂！挑選一個影片播放給他們看，有助於引起他們的專注力，讓他們更有興致完成一小時玩程式的課程。
 
-### **Day-of Hour of Code Event:**
+- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+- If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>).
+- If you're visiting a school, complete any background checks or required paperwork.
+- [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students.
+- Join the conversation on FB, Twitter, Instagram, and Tumblr with #HourOfCode.
+- Connect with the teacher to discuss what you plan to speak about during your session.
+- If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
 
-  * Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
-  * Spend 5 minutes talking about yourself, who inspired you to pursue a career in tech and/or computer science. 
-      * Introduce yourself: who you are and what you do
-      * Choose one inspirational video and show it to the entire classroom together. Answer any questions from students.
-      * Share a short story about how you got interested in computer science. What or who inspired you? What do you love most about your job? Keep it short! ;) The point is to let the kids do the coding, leave time for more questions at the end.
-      * Share how computer science has broad, worldwide impact.
-  * Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright, instead try asking them questions so they can answer themselves what went wrong.
-  * Encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity. Often kids can solve the problems themselves and through teamwork. 
-  * At the completion of their Hour of Code, hand out your company swag (stickers are awesome) and answer any remaining questions.
-  * Also important to mention that if you do take pictures/videos during the event -- especially with students -- that you get teacher/parent permission if you would like to post your stories on social media.
+## Day-of Hour of Code Event
+
+When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
 
 ### **Sample agenda:**
 
 自我介紹: </ul>
 
-  * What do you work, what do you do, and what do you love most about your job?
-  * What or who inspired you
-  * Did you have a mentor?
-  * Share a story about how tech affects everyone</ul></td> </tr> 
-    Ask the students questions and leave time for Q&A </ul>
+- What do you work, what do you do, and what do you love most about your job?
+- 什麼或誰激勵了你
+- How did you get interested in computer science?
+- Did you have a mentor?
+- Share a story about how tech affects everyone.</ul></td> </tr> 
+  Ask the students questions and leave time for Q&A. </ul>
+  
+  - What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 
+  - 學生們有對你提出任何問題嗎?</ul></td> </tr> 
+    </tbody> </table> 
+    ### **在活動後:**
     
-      * WHat jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 
-      * Do the students have any questions for you?</ul></td> </tr> 
-        </tbody> </table> 
-        ### **After the Event:**
-        
-          * Share your photos and stories with Code.org at giving@code.org
-          * Remember to enter in your volunteer hours in your company’s volunteer tracking portal 
-          * Share about your experience on social media #Hourofcode! See below for tips. 
-        ## Volunteering during the Hour of Code FAQ
-        
-        ### **I haven't been contacted by a teacher yet. How can I still volunteer?**
-        
-        Try searching for local schools and call the principal/teacher/front office and ask how you can help.
-        
-        ### **How long do classroom visits last for?**
-        
-        An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes
-        
-        ### **What age group is the Hour of Code tutorial appropriate for?**
-        
-        Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
-        
-        <%= view :signup_button %>
+    - Share your photos and stories with Code.org at giving@code.org.
+    - Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+    - Share about your experience on social media #HourOfCode! See below for tips. 
+    - If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
+    ## 一小時玩程式的活動志工常見問答
+    
+    ### **我尚未與任何教師進行聯絡，我仍然可以當義工?**
+    
+    Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+    
+    ### **How long do classroom visits last for?**
+    
+    An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+    
+    ### **一小時玩程式教程是提供給哪個年齡層使用的？**
+    
+    Code.org 設計了一小時玩程式教程，透過遊戲和關卡來培養不同學齡（K-12）、不同背景的男生和女生。 Everyone, even adults can have fun playing our tutorials!
+    
+    <%= view :signup_button %>
