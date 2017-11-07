@@ -2,8 +2,10 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 
-require 'cdo/unicorn_listener'
-use Cdo::UnicornListener
+unless rack_env?(:development)
+  require 'cdo/unicorn_listener'
+  use Cdo::UnicornListener
+end
 
 require 'gctools/oobgc/unicorn_middleware'
 use GC::OOB::UnicornMiddleware
