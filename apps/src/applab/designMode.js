@@ -154,7 +154,7 @@ designMode.resetElementTray = function (allowEditing) {
  * Given an input value produce a valid css value that is
  * either in pixels or empty.
  */
-export function appendPx(input) {
+function appendPx(input) {
   // Don't append if we already have a px
   if (/px/.test(input)) {
     return input;
@@ -167,6 +167,7 @@ export function appendPx(input) {
   const parsedInput = parseInt(input);
   return isNaN(parsedInput) ? '' : parsedInput + 'px';
 }
+designMode.appendPx = appendPx;
 
 /**
  * Handle a change from our properties table.
