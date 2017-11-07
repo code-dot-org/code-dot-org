@@ -457,13 +457,14 @@ describe('entry tests', () => {
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
+    'maker/discountcode':           './src/sites/studio/pages/maker/discountcode.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
     'congrats/index':               './src/sites/studio/pages/congrats/index.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
     'courses/show':                 './src/sites/studio/pages/courses/show.js',
     'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
-    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js'
+    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js',
   };
 
   var otherEntries = {
