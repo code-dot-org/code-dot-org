@@ -37,11 +37,11 @@ nav: promote_nav
 
 **"CodeUur" is een handelsmerk. We willen het gebruik niet voorkomen, maar we willen ervoor zorgen dat het past binnen een paar grenzen:**
 
-1. Elke verwijzing naar "Uur Code" moet worden gebruikt op een zodanige manier deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het CodeUur op ACMECorp.com". Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
+1. Elke verwijzing naar "Uur Code" moet worden gebruikt op een zodanige manier dat deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het CodeUur op ACMECorp.com". Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
 2. Gebruik een "TM" superscript op de meest prominente plaatsen waar u "CodeUur" opnoemt, zowel op uw website en app beschrijvingen.
 3. Plaats op uw pagina (of in de de voettekst) de volgende tekst, waaronder koppelingen naar de websites van CSEdWeek en Code.org, met de volgende inhoud:
     
-    *"Het 'Hour of Code' is een wereldwijd initiatief van de Computer Science Education Week[csedweek.org] en Code.org [code.org] om miljoenen studenten te laten kennismaken met één uur van informatica en programmeren."*
+    *"Het 'Hour of Code' is een wereldwijd initiatief van de Week van het Programmeren[csedweek.org] en Code.org [code.org] om miljoenen studenten te laten kennismaken met één uur van informatica en programmeren."*
 
 4. Geen gebruik van "CodeUur" in app namen.
 
@@ -60,7 +60,7 @@ nav: promote_nav
 
 ## Vraag uw school, werkgever of vrienden zich aan te melden:
 
-Computers zijn overal en veranderen elke industrie op deze planeet. Maar minder dan de helft van alle scholen onderwijzen informatica. Het goede nieuws is, we zijn op weg om dit te veranderen. Als u al eerder van het CodeUur heeft gehoord, dan weet u dat het geschiedenis heeft gemaakt. Meer dan 100 miljoen leerlingen hebben meegedaan aan een CodeUur.
+Computers zijn overal en veranderen elke industrie op deze planeet. Maar minder dan de helft van alle scholen onderwijzen informatica. Het goede nieuws is dat we zijn op weg om dit te veranderen. Als u al eerder van het CodeUur heeft gehoord, dan weet u dat het geschiedenis heeft gemaakt. Meer dan 100 miljoen leerlingen hebben meegedaan aan een CodeUur.
 
 Dankzij het CodeUur, is programmeren op homepages gekomen van Google, MSN, Yahoo! en Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple winkel in de wereld heeft een CodeUur georganiseerd. President Obama schreef zijn eerst code regel als onderdeel van de campagne.
 
@@ -76,7 +76,7 @@ Ga aan de slag op http://hourofcode.com/<%= @country %>
 
 **Onderwerp:** Lokale school sluit zich aan bij de missie om studenten kennismaken met informatica
 
-Computers zijn overal, veranderen elke industrie op de planeet, maar minder dan de helft van alle scholen geeft computerwetenschappen. Meisjes en minderheden zijn ernstig ondervertegenwoordigd in computer science klassen en in de tech-industrie. Het goede nieuws is, we zijn op weg om dit te veranderen.
+Computers zijn overal, veranderen elke industrie op de planeet, maar minder dan de helft van alle scholen geeft computerwetenschappen. Meisjes en minderheden zijn ernstig ondervertegenwoordigd in computer science klassen en in de tech-industrie. Het goede nieuws is dat we zijn op weg om dit te veranderen.
 
 Dankzij het CodeUur, is programmeren op homepages gekomen van Google, MSN, Yahoo! en Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple winkel in de wereld heeft een CodeUur georganiseerd. President Obama schreef zijn eerst code regel als onderdeel van de campagne.
 

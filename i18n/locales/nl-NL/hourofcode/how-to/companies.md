@@ -18,7 +18,7 @@ Code.org biedt medewerkers van bedrijven de mogelijkheid om zich te [verbinden](
 
 - Vraag uw CEO [een bedrijfsbrede e-mail](%= resolve_url('/promote/resources#sample-emails') %) te verspreiden, waarin gewezen wordt op het belang van informatica en waarin medewerkers worden aangemoedigd om dit te verspreiden. 
 - Organiseer een CodeUur Happy Hour met collega's om de [activiteiten](%= resolve_url('/learn') %) uit te proberen.
-- Host een CodeUur event voor een lokale klas of vraag non-profit partners een CodeUur event te hosten bij u op kantoor. Zie how-to guide voor events hieronder.
+- Houdt een CodeUur evenement voor een lokale klas of vraag non-profit partners een CodeUur evenement te hosten bij u op kantoor. Zie how-to guide voor evenementen hieronder.
 
 # Organiseer een CodeUur met leerlingen
 
@@ -54,10 +54,10 @@ De beste CodeUur ervaring beleef je met computers die met internet verbonden zij
 
 Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invloed van programmeren is in ons leven. Deel meer over wat u heeft geïnspireerd om te leren programmeren en uw rol in uw bedrijf.
 
-**Laat inspirerende video zien:**
+**Laat een inspirerende video zien:**
 
 - De originele Code.org lanceringsvideo, waarin Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh voorkomen (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- De [CodeUur 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de <% if @country == 'uk' %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama roept alle leerlingen op om zich te verdiepen in computerwetenschappen](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Vind meer inspirerende video's [hier](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -71,7 +71,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 ## 6. Code!
 
-**Betrek de deelnemers mee aan de activiteit**
+**Betrek de deelnemers in de activiteit**
 
 - Schrijf de activiteit link op een whiteboard. De link kunt u vinden op de [informatie voor uw geselecteerde activiteit](%= resolve_url('/learn') %) onder het deelnemersaantal.
 - Voor jongere leerlingen, laad de activiteit pagina vooraf of sla deze op als een bladwijzer.

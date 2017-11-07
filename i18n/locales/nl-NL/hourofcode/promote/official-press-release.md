@@ -5,7 +5,7 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Voorbeeld perscommuniqué voor verkozenen
+# Voorbeeld persbericht voor verkozen ambtenaren
 
 Voor Onmiddellijke Publicatie   
 [**DATUM**]   

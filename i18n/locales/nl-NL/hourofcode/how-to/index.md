@@ -27,7 +27,7 @@ De beste CodeUur ervaring beleef je met computers die met internet verbonden zij
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-Voorzie koptelefonen voor uw klas, of vraag de leerlingen om het zelf mee te nemen, als de tutorial het beste met geluid werkt.
+Voorzie koptelefoons voor uw klas, of vraag de leerlingen om ze zelf mee te nemen, als de tutorial het beste met geluid werkt.
 
 **Heeft u niet genoeg apparatuur?** Maak dan [tweetallen](https://www.youtube.com/watch?v=vgkahOzFH2Q). Als leerlingen in paren werken helpen ze elkaar en zijn ze minder afhankelijk van de leerkracht. Ze zullen ook inzien dat programmeren sociaal is en samenwerking vereist.
 
@@ -37,7 +37,7 @@ Voorzie koptelefonen voor uw klas, of vraag de leerlingen om het zelf mee te nem
 
 **Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
-**Laat inspirerende video zien:**
+**Laat een inspirerende video zien:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Vind meer inspirerende [middelen](%= resolve_url('https://code.org/inspire') %) en [video 's](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
@@ -83,7 +83,7 @@ Voorzie koptelefonen voor uw klas, of vraag de leerlingen om het zelf mee te nem
 
 - [Print certificates](%= resolve_url('https://code.org/certificates')%) for your students.
 - [Print de "Ik heb meegedaan met CodeUur!"](%= resolve_url('/promote/resources#stickers') %) stickers voor uw leerlingen.
-- [Bestel aangepaste t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw studenten.
+- [Bestel custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw school.
 - Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
 
 [col-33]
@@ -104,6 +104,6 @@ Voorzie koptelefonen voor uw klas, of vraag de leerlingen om het zelf mee te nem
 Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen kunt maken. Zet deze reis voort:
 
 - Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond')%).
-- [Woon](%= resolve_url('https://code.org/professional-development-workshops') %) een 1-dag in-persoon workshop, om instructie te over programmeren van een ervaren programmeur. (Alleen VS opvoeders)
+- [Woon](%= resolve_url('https://code.org/professional-development-workshops') %) een 1-dag in-persoon workshop bij, om instructie te krijgen over programmeren van een ervaren programmeur. (Alleen VS leraren)
 
 <%= view :signup_button %>

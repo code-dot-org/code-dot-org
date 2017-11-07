@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Hoe uw hele gemeenschap in aanmerking laten komen met CodeUur.
+# Uw hele gemeenschap in aanmerking laten komen met CodeUur.
 
 [col-33]
 
