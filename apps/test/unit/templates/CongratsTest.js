@@ -9,6 +9,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         isRtl={false}
+        signedIn={false}
       />
     );
     expect(wrapper.find('Certificate').exists()).to.be.true;
@@ -19,6 +20,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         isRtl={false}
+        signedIn={false}
       />
     );
     expect(wrapper.find('StudentsBeyondHoc').exists()).to.be.true;
@@ -29,6 +31,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         isRtl={false}
+        signedIn={false}
       />
     );
     expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.true;

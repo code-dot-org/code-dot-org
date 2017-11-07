@@ -19,10 +19,11 @@ export default class StudentsBeyondHoc extends Component {
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
+    signedIn: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
+    const { isRtl, responsive, signedIn } = this.props;
 
     return (
       <div style={styles.container}>
