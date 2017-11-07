@@ -556,6 +556,8 @@ en:
         'mc_2017_puzzle_3' : 'Minecraft Hour of Code - Repeat Loops'
         'mc_2017_puzzle_8' : 'Minecraft Hour of Code - Functions'
         'mc_2017_puzzle_12' : 'Minecraft Hour of Code - Freeplay'
+        'hint_videos_d_11_3_first' : 'Hint Videos: D.11.3 First'
+        'hint_videos_d_11_3_last' : 'Hint Videos: D.11.3 Last'
     callout:
       text:
         # Keyed by #{callout.localization_key}
