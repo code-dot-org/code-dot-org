@@ -113,7 +113,8 @@ class SchoolInfo < ActiveRecord::Base
       # Report if we are overriding a non-nil value that was originally passed in
       something_overwritten = original.map {|key, value| value && value != self[key]}.reduce {|acc, b| acc || b}
       if something_overwritten
-        Honeybadger.notify("Overwriting passed in data for new SchoolInfo",
+        Honeybadger.notify(
+          error_message: "Overwriting passed in data for new SchoolInfo",
           error_class: "SchoolInfo.sync_from_schools",
           context: {
             original_input: original,
