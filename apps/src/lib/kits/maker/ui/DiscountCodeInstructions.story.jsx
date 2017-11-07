@@ -11,7 +11,7 @@ export default storybook => {
         story: () => (
           <DiscountCodeInstructions
             discountCode="123abc"
-            discountComplete={true}
+            fullDiscount={true}
           />
         )
       },
@@ -21,7 +21,7 @@ export default storybook => {
         story: () => (
           <DiscountCodeInstructions
             discountCode="456def"
-            discountComplete={false}
+            fullDiscount={false}
           />
         )
       },
