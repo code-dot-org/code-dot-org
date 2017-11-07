@@ -1,13 +1,17 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
-import {StatusColor, StatusTextColor} from './constants';
+import {StatusColors} from './constants';
 import _ from 'lodash';
 
 const styles = {
   table: {
     width: '100%',
-  }
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors
 };
 
 export default class QuickViewTable extends React.Component {
@@ -58,11 +62,7 @@ export default class QuickViewTable extends React.Component {
         },
         transforms: [
           (status) => ({
-            style: {
-              backgroundColor: StatusColor[status],
-              color: StatusTextColor[status],
-              padding: '5px'
-            }
+            style: {...styles.statusCellCommon, ...styles.statusCell[status]}
           })
         ]
       }
