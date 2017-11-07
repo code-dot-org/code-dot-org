@@ -4,15 +4,16 @@ import styleConstants from '../../styleConstants';
 import color from "../../util/color";
 import Radium from 'radium';
 import _ from 'lodash';
+import {valueOr} from '../../utils';
 
-const DEFAULT_PROJECT_TYPES = [
+const DEFAULT_PROJECT_TYPES_ADVANCED = [
   'playlab',
   'artist',
   'applab',
   'gamelab'
 ];
 
-const YOUNG_PROJECT_TYPES = [
+const DEFAULT_PROJECT_TYPES_BASIC = [
   'playlab',
   'artist',
   'minecraft_designer',
@@ -157,14 +158,15 @@ class NewProjectButtons extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
     description: PropTypes.string,
-    isTooYoung: PropTypes.bool,
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   };
 
   render() {
-    const { isRtl, isTooYoung, description } = this.props;
+    const { isRtl, description } = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
-    // Using absolute URLs to get this working in storybook.
-    const defaultProjectTypes = isTooYoung ? YOUNG_PROJECT_TYPES : DEFAULT_PROJECT_TYPES;
+    const canViewAdvancedTools = valueOr(this.props.canViewAdvancedTools, true);
+    const defaultProjectTypes = canViewAdvancedTools ?
+      DEFAULT_PROJECT_TYPES_ADVANCED: DEFAULT_PROJECT_TYPES_BASIC;
     const projectTypes = this.props.projectTypes || defaultProjectTypes;
     return (
       <div style={styles.fullsize}>
