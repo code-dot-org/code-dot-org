@@ -14,8 +14,6 @@ class I18nHocRoutesTest < Minitest::Test
     subpages = load_hoc_subpages
 
     languages.collect { |x| x[:unique_language_s]}.each do |lang|
-      next if lang == 'el'
-
       # Tests the homepage
       assert_successful_get("/us/#{lang}")
 
