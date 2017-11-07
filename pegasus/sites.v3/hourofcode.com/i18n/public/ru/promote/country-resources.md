@@ -102,7 +102,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 **Все уроки Часа Кода:**
 
-- Require minimal prep-time for organizers
+- Требуют минимального времени подготовки для организаторов
 - Являются интуитивными, позволяя ученикам работать в их собственном темпе и уровне квалификации
 
 <a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
