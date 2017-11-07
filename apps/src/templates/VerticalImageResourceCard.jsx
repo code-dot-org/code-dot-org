@@ -22,7 +22,7 @@ const styles = {
     borderColor: color.border_gray,
     position: 'relative',
     height: 440,
-    width: 463,
+    width: 473,
     marginBottom: 20,
     backgroundColor: color.white
   },
@@ -32,7 +32,7 @@ const styles = {
     position: 'absolute',
   },
   jumboImage: {
-    width: 463,
+    width: 473,
     height: 220,
     backgroundColor: color.purple
   },
