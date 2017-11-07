@@ -852,10 +852,10 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
-  def last_attempt(level)
-    UserLevel.where(user_id: id, level_id: level.id).
-      order('updated_at DESC').
-      first
+  def last_attempt(level, script = nil)
+    query = UserLevel.where(user_id: id, level_id: level.id)
+    query = query.where(script_id: script.id) unless script.nil?
+    query.order('updated_at DESC').first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -956,6 +956,27 @@ class User < ActiveRecord::Base
 
   def student_of?(teacher)
     teachers.include? teacher
+  end
+
+  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
+  def circuit_playground_pd_eligible?
+    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
+
+    return true if cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
+    return true if courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
+    return false
+  end
+
+  # @return {boolean} true if we have at least one section that meets our eligibility
+  #   requirements for student progress
+  def circuit_playground_student_progress_eligible?
+    sections.any?(&:has_sufficient_discount_code_progress?)
+  end
+
+  # Looks to see if any of the users associated with this studio_person_id are eligibile
+  # for our circuit playground discount
+  def studio_person_circuit_playground_pd_eligible?
+    User.where(studio_person_id: studio_person_id).any?(&:circuit_playground_pd_eligible?)
   end
 
   def locale
