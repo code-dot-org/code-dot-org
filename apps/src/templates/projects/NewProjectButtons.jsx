@@ -162,7 +162,7 @@ class NewProjectButtons extends React.Component {
         {description && <div style={styles.description}>{description}</div>}
         {
           _.chunk(projectTypes, TILES_PER_ROW).map((projectTypesRow, rowIndex) => (
-            <div style={styles.row}>
+            <div style={styles.row} key={rowIndex}>
               {
                 projectTypesRow.map((projectType, index) => (
                   <a key={index} href={"/projects/" + projectType + "/new"}>
