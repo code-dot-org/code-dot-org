@@ -92,7 +92,11 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
-    get_table(shard_id, table_name).fetch(id.to_i).to_json
+    begin
+      get_table(shard_id, table_name).fetch(id.to_i).to_json
+    rescue RedisTable::NotFound
+      not_found
+    end
   end
 
   # GET /v3/netsim/<shard-id>?t[]=<table1>@<id1>&t[]=<table2>@<id2>&...
@@ -356,6 +360,8 @@ class NetSimApi < Sinatra::Base
       table = get_table(shard_id, table_name)
       int_id = id.to_i
       value = table.update(int_id, JSON.parse(body_string), request.ip)
+    rescue RedisTable::NotFound
+      not_found
     rescue JSON::ParserError
       json_bad_request
     end

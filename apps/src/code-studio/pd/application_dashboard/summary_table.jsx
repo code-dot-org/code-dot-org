@@ -1,4 +1,4 @@
-/**
+ /**
  * Table displaying a summary of application statuses
  */
 import React, {PropTypes} from 'react';
@@ -27,13 +27,13 @@ export default class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   }
 
-  tableRow = (label, bgColor, data) =>  {
-    const status = label.toLowerCase();
+  tableRow = (label, bgColor, textColor, data) =>  {
+    const status = label.toLowerCase().replace(/ /g,'_');
     const total = data[status];
 
     return (
       <tr>
-        <td style={{backgroundColor: bgColor}}>{label}</td>
+        <td style={{backgroundColor: bgColor, color: textColor}}>{label}</td>
         <td>{total}</td>
       </tr>
     );
@@ -56,11 +56,13 @@ export default class SummaryTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.tableRow('Accepted', color.level_perfect, this.props.data)}
-            {this.tableRow('Waitlisted', color.level_passed, this.props.data)}
-            {this.tableRow('Pending', color.orange, this.props.data)}
-            {this.tableRow('Declined', color.red, this.props.data)}
-            {this.tableRow('Unreviewed', color.charcoal, this.props.data)}
+            {this.tableRow('Unreviewed', color.charcoal, color.white, this.props.data)}
+            {this.tableRow('Pending', color.lighter_orange, color.black, this.props.data)}
+            {this.tableRow('Move to Interview', color.orange, color.black, this.props.data)}
+            {this.tableRow('Waitlisted', color.level_passed, color.black, this.props.data)}
+            {this.tableRow('Accepted', color.level_perfect, color.black, this.props.data)}
+            {this.tableRow('Declined', color.red, color.white, this.props.data)}
+            {this.tableRow('Withdrawn', color.lightest_red, color.black, this.props.data)}
           </tbody>
         </Table>
         <Button

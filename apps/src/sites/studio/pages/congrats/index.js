@@ -3,8 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import Congrats from '@cdo/apps/templates/Congrats';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 $(document).ready(function () {
+  const store = getStore();
   const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-congrats]');
   const congratsData = JSON.parse(script.dataset.congrats);
@@ -28,10 +31,12 @@ $(document).ready(function () {
 }
 
   ReactDOM.render(
-    <Congrats
-      completedTutorialType={completedTutorialType}
-      isRtl={isRtl}
-    />,
+    <Provider store={store}>
+      <Congrats
+        completedTutorialType={completedTutorialType}
+        isRtl={isRtl}
+      />
+    </Provider>,
     document.getElementById('congrats-container')
   );
 });

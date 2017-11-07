@@ -41,8 +41,8 @@ social:
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: minifiable_asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: asset_path('js/hourofcode.com/public/index.js')}
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{type: "text/javascript", src: minifiable_asset_path('js/hourofcode.com/public/index.js')}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 
@@ -219,14 +219,20 @@ social:
       %img{src: "/images/fit-300/stats-languages.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
-      %p=hoc_s(:stats_global)
-      %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
+      -if @language == "en"
+        %img{src: "/images/fit-300/stats-400m.jpg", style: "width: 100%;"}
+      -else
+        %p=hoc_s(:stats_global)
+        %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
-      %p=hoc_s(:stats_girls_more)
-      %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
-        %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
-
+      -if @language == "en"
+        %p=hoc_s(:stats_females)
+        %img{src: "/images/fit-300/stats-females.jpg", style: "width: 100%;"}
+        %p=hoc_s(:stats_females_more)
+      -else
+        %p=hoc_s(:stats_girls_more)
+        %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
 
   -# Signup
 

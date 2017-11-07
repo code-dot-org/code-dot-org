@@ -3,6 +3,7 @@ login_required true
 hideable_stages true
 student_detail_progress_view true
 has_verified_resources true
+script_announcements [{"notice"=>"Updates in Progress to Align with 2018 AP Create and Explore PT Scoring Guidelines", "details"=>"This unit is currently out-of-date with the updated Scoring Guidelines released by the College Board in the Fall of 2017. Click \"Learn more\" to view the updated guidelines and PT exemplars on the College Board website.", "link"=>"", "type"=>"information"}]
 
 stage 'Tech Setup - Your AP Digital Portfolio and Other Tools', flex_category: 'csp_ap_1'
 level 'U6 AP Performance Task Tech Setup - Student Links', progression: 'AP Performance Task Tech Setup - Student Links'

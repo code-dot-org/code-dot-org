@@ -32,7 +32,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
       end
       format.csv do
-        csv_text = [TYPES_BY_ROLE[role].csv_header, *applications.map(&:to_csv_row)].join
+        course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
+        csv_text = [TYPES_BY_ROLE[role].csv_header(course), *applications.map(&:to_csv_row)].join
         send_csv_attachment csv_text, "#{role}_applications.csv"
       end
     end
