@@ -96,7 +96,6 @@ class SchoolInfo < ActiveRecord::Base
       original[:school_other] = school_other
       original[:school_name] = school_name
       original[:full_address] = full_address
-      original[:validation_type] = validation_type
 
       school = School.find(school_id) if school.nil?
       self.country = 'US' # Everything in SCHOOLS is a US school
@@ -114,7 +113,14 @@ class SchoolInfo < ActiveRecord::Base
       # Report if we are overriding a non-nil value that was originally passed in
       something_overwritten = original.map {|key, value| value && value != self[key]}.reduce {|acc, b| acc || b}
       if something_overwritten
-        Honeybadger.notify("Overwriting passed in data for new SchoolInfo", context: {original_input: original, school_id: school.id})
+        Honeybadger.notify(
+          error_message: "Overwriting passed in data for new SchoolInfo",
+          error_class: "SchoolInfo.sync_from_schools",
+          context: {
+            original_input: original,
+            school_id: school.id
+          }
+        )
       end
     end
   end
