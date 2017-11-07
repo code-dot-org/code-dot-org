@@ -59,11 +59,6 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
-    OTHER = 'Other'.freeze
-    OTHER_PLEASE_LIST = 'Other (Please List):'
-    YES = 'Yes'.freeze
-    NO = 'No'.freeze
-    NONE = 'None'.freeze
     GRADES = [
       'Pre-K'.freeze,
       'Kindergarten'.freeze,
@@ -87,27 +82,10 @@ module Pd::Application
 
     def self.options
       {
-        title: %w(Mr. Mrs. Ms. Dr.),
-
-        state: get_all_states_with_dc.to_h.values,
-
-        gender_identity: [
-          'Female',
-          'Male',
-          OTHER,
-          'Prefer not to answer'
-        ],
-
-        race: [
-          'White',
-          'Black or African American',
-          'Hispanic or Latino',
-          'Asian',
-          'Native Hawaiian or other Pacific Islander',
-          'American Indian/Alaska Native',
-          OTHER,
-          'Prefer not to say'
-        ],
+        title: COMMON_OPTIONS[:title],
+        state: COMMON_OPTIONS[:state],
+        gender_identity: COMMON_OPTIONS[:gender_identity],
+        race: COMMON_OPTIONS[:race],
 
         institution_type: [
           'School district',
