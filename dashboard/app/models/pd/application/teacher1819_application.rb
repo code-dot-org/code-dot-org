@@ -35,6 +35,12 @@ module Pd::Application
       self.application_type = TEACHER_APPLICATION
     end
 
+    validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
+
+    def self.statuses
+      Pd::Application::ApplicationBase.statuses.except('interview')
+    end
+
     validates_uniqueness_of :user_id
     validates_presence_of :course
     before_validation :set_course_from_program

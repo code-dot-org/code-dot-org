@@ -4553,7 +4553,7 @@ en:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         Multiple Choice: Multiple Choice
-        Which program does not create this image?: Which program does not create this image?
+        Which program **does not** create this image?: Which program **does not** create this image?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"

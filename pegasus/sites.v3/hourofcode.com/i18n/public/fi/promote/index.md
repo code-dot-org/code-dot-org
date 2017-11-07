@@ -1,8 +1,11 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
+
 ---
+
 <%= view :signup_button %>
 
 <%
@@ -12,7 +15,7 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# How to get involved
 
 ## 1. Levitä sanaa
 
@@ -28,7 +31,7 @@ Tell your friends about the **#HourOfCode**!
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## 5. Edistä Koodituntia paikkakunnallasi
+## 4. Promote Hour of Code in your community
 
 [Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 

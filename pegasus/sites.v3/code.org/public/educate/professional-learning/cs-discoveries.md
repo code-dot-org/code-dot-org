@@ -17,7 +17,7 @@ This program prepares educators to provide high quality instruction based on the
 
 **Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 [/col-50]
 
@@ -88,7 +88,7 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 **Applications for the 2018-19 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Tell me when applications open!</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 ## <a name="facilitate"></a>Become a CS Discoveries Facilitator
 

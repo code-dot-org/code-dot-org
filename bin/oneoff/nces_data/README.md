@@ -11,7 +11,7 @@ collects survery results for schools and districts.
 
 ## Where to store the NCES data files?
 
-Import files are organized by year and type in the S3 bucket `nces_data`
+Import files are organized by year and type in the S3 bucket `cdo-nces`
 * `ccd`, represents the common core data for public and charter schools
 * `pss`, represents the private school survey data
 

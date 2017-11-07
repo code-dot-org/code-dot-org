@@ -21,4 +21,76 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
   end
+
+  test 'high needs false when no stats data' do
+    school = create :school
+    refute school.high_needs?
+  end
+
+  test 'high needs false when null students total' do
+    school = create :school
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999'
+      }
+    )
+    school.save!
+    refute school.high_needs?
+  end
+
+  test 'high needs false when null frl eligible total' do
+    school = create :school
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4
+      }
+    )
+    school.save!
+    refute school.high_needs?
+  end
+
+  test 'high needs false when null frl eligible below 50 percent of students' do
+    school = create :school
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4,
+        frl_eligible_total: 1
+      }
+    )
+    school.save!
+    refute school.high_needs?
+  end
+
+  test 'high needs false when null frl eligible equal to 50 percent of students' do
+    school = create :school
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4,
+        frl_eligible_total: 2
+      }
+    )
+    school.save!
+    refute school.high_needs?
+  end
+
+  test 'high needs false when null frl eligible above 50 percent of students' do
+    school = create :school
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4,
+        frl_eligible_total: 3
+      }
+    )
+    school.save!
+    assert_equal(true, school.high_needs?)
+  end
 end
