@@ -3383,6 +3383,8 @@ en:
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0

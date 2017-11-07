@@ -181,6 +181,7 @@ LegacyDialog.prototype.show = function (options) {
 
 LegacyDialog.prototype.hide = function () {
   $(this.div).modal('hide');
+  this.isVisible = false;
 };
 
 LegacyDialog.prototype.focus = function () {

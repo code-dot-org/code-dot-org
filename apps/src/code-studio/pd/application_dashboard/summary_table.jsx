@@ -1,9 +1,10 @@
- /**
+/**
  * Table displaying a summary of application statuses
  */
 import React, {PropTypes} from 'react';
 import {Table, Button} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
+import {StatusColors} from './constants';
+import _ from 'lodash';
 
 const styles = {
   table: {
@@ -13,7 +14,8 @@ const styles = {
   tableWrapper: {
     width: '33.3%',
     paddingBottom: '30px'
-  }
+  },
+  statusCell: StatusColors
 };
 
 export default class SummaryTable extends React.Component {
@@ -27,17 +29,20 @@ export default class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   }
 
-  tableRow = (label, bgColor, textColor, data) =>  {
-    const status = label.toLowerCase().replace(/ /g,'_');
-    const total = data[status];
-
-    return (
-      <tr>
-        <td style={{backgroundColor: bgColor, color: textColor}}>{label}</td>
-        <td>{total}</td>
-      </tr>
-    );
-  };
+  tableBody() {
+    return Object.keys(StatusColors).map((status, i) => {
+      if (this.props.data.hasOwnProperty(status)) {
+        return (
+          <tr key={i}>
+            <td style={{...styles.statusCell[status]}}>
+              {_.upperFirst(status)}
+            </td>
+            <td>{this.props.data[status]}</td>
+          </tr>
+        );
+      }
+    });
+  }
 
   handleViewClick = (event) => {
     event.preventDefault();
@@ -56,13 +61,7 @@ export default class SummaryTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.tableRow('Unreviewed', color.charcoal, color.white, this.props.data)}
-            {this.tableRow('Pending', color.lighter_orange, color.black, this.props.data)}
-            {this.tableRow('Move to Interview', color.orange, color.black, this.props.data)}
-            {this.tableRow('Waitlisted', color.level_passed, color.black, this.props.data)}
-            {this.tableRow('Accepted', color.level_perfect, color.black, this.props.data)}
-            {this.tableRow('Declined', color.red, color.white, this.props.data)}
-            {this.tableRow('Withdrawn', color.lightest_red, color.black, this.props.data)}
+            {this.tableBody()}
           </tbody>
         </Table>
         <Button

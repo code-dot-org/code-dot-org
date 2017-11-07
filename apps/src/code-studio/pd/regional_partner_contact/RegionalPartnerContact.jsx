@@ -1,7 +1,7 @@
 import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
-import FormGroup from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap';
 
 export default class RegionalPartnerContact extends FormController {
   /**

@@ -1,54 +1,36 @@
 ---
-title: '<%= hoc_s(:title_country_resources) %>'
+
+title: <%= hoc_s(:title_country_resources) %>
 layout: wide
 nav: promote_nav
+
 ---
+
 <%= view :signup_button %>
 
 <% if @country == 'la' %>
 
 # Recursos
 
-## ¿Qué hacemos cuando hacemos la Hora del Código?
+## Vídeos <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
+<
 
-<div class="handout" style="width: 50%; float: left;">
-  
-<a href="/la/files/hacemos-la-Hora-del-Codigo.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo.png"></a>
-<br />En Español
-</div>
-
-<div class="handout" style="width: 50%; float: left;">
-  
-<a href="/la/files/hacemos-la-Hora-del-Codigo-Ingles.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo-Ingles.png"></a>
-<br />En Inglés
-</div>
-
-<div style="clear:both"></div>
-
-## Vídeos
+p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
   
- <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
+<
 
-<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)</strong></a>
+p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
 
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
-  
-[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=_vq6Wpb-WyQ)
-
-<% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
+<% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <% elsif @country == 'ca' %>
 
-## Відео <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
+## Відео <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
@@ -61,8 +43,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 <% elsif @country == 'jp' %>
 
-## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
@@ -74,8 +55,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
   
   
   
- <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
@@ -100,46 +80,38 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**Всі підручники Години коду:**
+**Всі програми "Година коду":**
 
-- Require minimal prep-time for organizers
-- Призначені для самостійного навчання - дозволяючи учням працювати у власному темпі відповідно до свого рівня знань
+  * Require minimal prep-time for organizers
+  * Призначені для самостійного навчання - дозволяючи учням працювати у власному темпі відповідно до свого рівня знань
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+[![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
 ## 2) Визначтеся з потребами - комп'ютери не обов'язкові
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-- **Перевірте підручники на учнівських комп'ютерах чи інших пристроях.** Переконайтесь, що все працює коректно (зі звуком та відео).
-- **Ознайомтесь з вітальною сторінкою**, яку побачать учні після завершення роботи. 
-- **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Перевірте підручники на учнівських комп'ютерах чи інших пристроях.** Переконайтесь, що все працює коректно (зі звуком та відео).
+  * **Ознайомтесь з вітальною сторінкою**, яку побачать учні після завершення роботи. 
+  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Виходьте з наявних можливостей
 
-- **Мало комп'ютерів?** Застосовуйте [парне програмування](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
-- **Поганий Інтернет?** Сплануйте фронтальний перегляд відео-роликів, щоб зменшити завантаження учнівських комп'ютерів. Або спробуйте безмашинні чи оффлайнові вправи.
+  * **Мало комп'ютерів?** Застосовуйте [парне програмування](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Поганий Інтернет?** Сплануйте фронтальний перегляд відео-роликів, щоб зменшити завантаження учнівських комп'ютерів. Або спробуйте безмашинні чи оффлайнові вправи.
 
 ## 4) Надихайте учнів - покажіть відео-ролики
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-- Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукерберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-- [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукерберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+  * [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 
-<% elsif @country == 'pe' %>
-
-# La Hora del Código Perú <iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
-<
-
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
-
 <% else %>
 
-# Додаткові ресурси будуть найближчим часом!
+# Additional resources coming soon!
 
 <% end %>
