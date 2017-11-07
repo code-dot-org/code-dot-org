@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## Publica esto en las redes sociales
 
-[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imagen](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -31,7 +31,7 @@ nav: promote_nav
 
 ## Use el logotipo de la Hora del Código para correr la voz
 
-[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![imagen](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Descarga versiones de alta resolución](http://images.code.org/share/hour-of-code-logo.zip)
 
@@ -50,7 +50,7 @@ nav: promote_nav
 ## Imprima estas pegatinas para dar a sus estudiantes
 
 (Las pegatinas son de 2,54cm de diámetro, 63 por hoja)  
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![imagen](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -64,7 +64,7 @@ Los ordenadores están por todas partes, cambiando todas las industrias en el pl
 
 Con la Hora del Código, las Ciencias de la Computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todas las tiendas de Apple en el mundo han organizado una Hora de Código. El Presidente Obama escribió su primera línea de código como parte de la campaña.
 
-Este año, hagámoslo aún más grande. Te pido que te unas a la hora de código 2017. Por favor, participe en un evento de la Hora del Código para la Semana de educación en informática, <% = campaign_date ('full')%>.
+Este año, hagámoslo aún más grande. Te pido que te unas a la hora de código 2017. Por favor, participe en un evento de la Hora del Código para la Semana de educación en informática, <%= campaign_date('full')%>.
 
 Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O haz tu mismo la Hora del Código-- todos pueden beneficiarse de aprender los conceptos básicos.
 
@@ -80,7 +80,7 @@ Los ordenadores están por todas partes, cambiando todas las industrias en el pl
 
 Con la Hora del Código, las Ciencias de la Computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todas las tiendas de Apple en el mundo han organizado una Hora de Código. El Presidente Obama escribió su primera línea de código como parte de la campaña.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
+Es por eso que cada uno de los [NÚMERO DE ESTUDIANTES] estudiantes en [NOMBRE DE LA ESCUELA] se están uniendo al evento de aprendizaje más grande en la historia: la Hora del Código, durante la Semana de Educación en Informática (<%= campaign_date('full') %>).
 
 Le escribo para invitarle a asistir a nuestra Asamblea de comienzo y a ver a los niños comenzar la actividad en [DATE].
 
