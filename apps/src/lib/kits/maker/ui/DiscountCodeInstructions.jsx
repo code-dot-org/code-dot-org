@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import View_Cart from "../../../../../../dashboard/app/assets/images/maker/View_Cart.png";
-import Add_to_cart from "../../../../../../dashboard/app/assets/images/maker/Add_to_cart.png";
-import Enter_Discount_Code from "../../../../../../dashboard/app/assets/images/maker/Enter_Discount_Code.png";
+import viewCart from "../../../../../static/maker/viewCart.png";
+import addToCart from "../../../../../static/maker/addToCart.png";
+import enterDiscountCode from "../../../../../static/maker/enterDiscountCode.png";
 
 const styles = {
   title: {
@@ -43,7 +43,7 @@ export default class DiscountCodeInstructions extends Component {
                 Go to <a href="https://www.adafruit.com/product/3399">https://www.adafruit.com/product/3399</a>
                 and add the kit to your cart.
               </div>
-              <img style={styles.image} src={Add_to_cart}/>
+              <img style={styles.image} src={addToCart}/>
             </div>
           </li>
           <li>
@@ -51,7 +51,7 @@ export default class DiscountCodeInstructions extends Component {
               <div>
                 Go to your cart.
               </div>
-              <img style={styles.image} src={View_Cart}/>
+              <img style={styles.image} src={viewCart}/>
             </div>
           </li>
           <li>
@@ -59,7 +59,7 @@ export default class DiscountCodeInstructions extends Component {
               <div>
                 Put in your discount code ({this.props.discountCode}) and hit "Apply":
               </div>
-              <img style={styles.image} src={Enter_Discount_Code}/>
+              <img style={styles.image} src={enterDiscountCode}/>
             </div>
           </li>
           <li>
