@@ -12,6 +12,13 @@ const DEFAULT_PROJECT_TYPES = [
   'gamelab'
 ];
 
+const YOUNG_PROJECT_TYPES = [
+  'playlab',
+  'artist',
+  'minecraft_designer',
+  'flappy'
+];
+
 const PROJECT_INFO = {
   'playlab': {
     label: i18n.projectTypePlaylab(),
@@ -150,13 +157,15 @@ class NewProjectButtons extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
     description: PropTypes.string,
+    isTooYoung: PropTypes.bool,
   };
 
   render() {
-    const { isRtl, description } = this.props;
+    const { isRtl, isTooYoung, description } = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
     // Using absolute URLs to get this working in storybook.
-    const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
+    const defaultProjectTypes = isTooYoung ? YOUNG_PROJECT_TYPES : DEFAULT_PROJECT_TYPES;
+    const projectTypes = this.props.projectTypes || defaultProjectTypes;
     return (
       <div style={styles.fullsize}>
         {description && <div style={styles.description}>{description}</div>}

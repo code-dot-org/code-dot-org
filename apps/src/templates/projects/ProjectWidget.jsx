@@ -29,6 +29,7 @@ class ProjectWidget extends React.Component {
     isLoading: PropTypes.bool,
     isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
+    isTooYoung: PropTypes.bool,
   };
 
   state = {
@@ -41,7 +42,7 @@ class ProjectWidget extends React.Component {
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { canViewFullList, isRtl } = this.props;
+    const { canViewFullList, isRtl, isTooYoung } = this.props;
     const { showFullList } = this.state;
 
     return (
@@ -66,6 +67,7 @@ class ProjectWidget extends React.Component {
         <NewProjectButtons
           projectTypes={this.props.projectTypes}
           isRtl={isRtl}
+          isTooYoung={isTooYoung}
         />
 
         {canViewFullList &&
@@ -98,10 +100,12 @@ class ProjectWidget extends React.Component {
               description={i18n.projectGroupMinecraft()}
               projectTypes={['minecraft_designer', 'minecraft_adventurer']}
             />
-            <NewProjectButtons
-              description={i18n.projectGroupAdvancedTools()}
-              projectTypes={['applab', 'gamelab', 'weblab']}
-            />
+            {!isTooYoung &&
+              <NewProjectButtons
+                description={i18n.projectGroupAdvancedTools()}
+                projectTypes={['applab', 'gamelab', 'weblab']}
+              />
+            }
             <NewProjectButtons
               description={i18n.projectGroupPreReader()}
               projectTypes={['playlab_k1', 'artist_k1']}
