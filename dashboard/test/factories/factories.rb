@@ -330,6 +330,10 @@ FactoryGirl.define do
     game {Game.gamelab}
   end
 
+  factory :weblab, parent: :level, class: Weblab do
+    game {Game.weblab}
+  end
+
   factory :multi, parent: :level, class: Multi do
     game {create(:game, app: "multi")}
     transient do
