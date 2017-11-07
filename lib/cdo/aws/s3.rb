@@ -3,12 +3,13 @@ require 'tempfile'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/hash/slice'
 require 'honeybadger'
+require 'dynamic_config/dcdo'
 
 module AWS
   module S3
     mattr_accessor :s3
 
-    # AWS SDK client plugin to log slow S3 responses to Honeybadger,
+    # AWS SDK client plugin to log 'slow' (as defined by :notify_timeout) S3 responses to Honeybadger,
     # recording the request headers in the error context for further investigation.
     class SlowAwsResponseNotifier < Seahorse::Client::Plugin
       option(:notify_timeout, 5) # seconds
@@ -46,12 +47,19 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      self.s3 ||= Aws::S3::Client.new(
-        retry_limit: 3,
-        http_open_timeout: 5,
-        http_read_timeout: 5,
-        http_idle_timeout: 2,
-      )
+      self.s3 ||= Aws::S3::Client.new
+
+      # Adjust s3_timeout using a dynamic variable,
+      # updating the S3 client if the variable changes.
+      timeout = DCDO.get('s3_timeout', 15)
+      if timeout != s3.config.http_open_timeout
+        s3.config.http_open_timeout = timeout
+        s3.config.http_read_timeout = timeout
+        s3.config.notify_timeout = timeout
+        s3.config.http_idle_timeout = timeout / 2
+      end
+
+      s3
     end
 
     # A simpler name for connect_v2!
