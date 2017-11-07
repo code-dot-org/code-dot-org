@@ -103,6 +103,10 @@ class ProjectWidget extends React.Component {
               projectTypes={['applab', 'gamelab', 'weblab']}
             />
             <NewProjectButtons
+              description={i18n.projectGroupPreReader()}
+              projectTypes={['playlab_k1', 'artist_k1']}
+            />
+            <NewProjectButtons
               description={i18n.projectGroupMath()}
               projectTypes={['calc', 'eval']}
             />

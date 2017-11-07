@@ -18,7 +18,7 @@ const PROJECT_INFO = {
     thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
   },
   'playlab_k1': {
-    label: i18n.projectTypePlaylab(),
+    label: i18n.projectTypePlaylabPreReader(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
   },
   'artist': {
@@ -26,7 +26,7 @@ const PROJECT_INFO = {
     thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
   },
   'artist_k1': {
-    label: i18n.projectTypeArtist(),
+    label: i18n.projectTypeArtistPreReader(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
   },
   'applab': {
