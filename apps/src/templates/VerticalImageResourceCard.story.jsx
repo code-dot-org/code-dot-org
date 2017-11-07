@@ -1,5 +1,5 @@
 import React from 'react';
-import CoursePromoCard from './CoursePromoCard';
+import VerticalImageResourceCard from './VerticalImageResourceCard';
 
 const exampleCard = {
   title: "CS Fundamentals Express",
@@ -10,13 +10,13 @@ const exampleCard = {
 
 export default storybook => {
   return storybook
-    .storiesOf('CoursePromoCard', module)
+    .storiesOf('VerticalImageResourceCard', module)
     .addStoryTable([
       {
-        name: 'Course Promo Card',
-        description: `This is an example course promo card that can be used to promote a course`,
+        name: 'Vertical Image Resource Card',
+        description: `This is an example card that fits 3 across on desktop and has an image stacked above a desctription and button. It's used here to promote a course`,
         story: () => (
-          <CoursePromoCard
+          <VerticalImageResourceCard
             title={exampleCard.title}
             description={exampleCard.description}
             buttonText={exampleCard.buttonText}
@@ -26,10 +26,10 @@ export default storybook => {
         )
       },
       {
-        name: 'Course Promo Card - RTL',
-        description: `This is an example course promo card that can be used to promote a course in RTL language`,
+        name: 'Vertical Image Resource Card - RTL',
+        description: `This is an example vertical image resource card that can be used with in RTL styling`,
         story: () => (
-          <CoursePromoCard
+          <VerticalImageResourceCard
             title={exampleCard.title}
             description={exampleCard.description}
             buttonText={exampleCard.buttonText}
@@ -39,10 +39,10 @@ export default storybook => {
         )
       },
       {
-        name: 'Minecraft Promo Card',
-        description: `This is an example Minecraft promo card, includes share link`,
+        name: 'Minecraft Vertical Image Resource Card',
+        description: `This is an example Minecraft Vertical Image Resource Card, includes share link for Minecraft education`,
         story: () => (
-          <CoursePromoCard
+          <VerticalImageResourceCard
             title="Minecraft Education"
             description="Copy the link below to continue programming with Minecraft."
             buttonText="Go to Minecraft"
