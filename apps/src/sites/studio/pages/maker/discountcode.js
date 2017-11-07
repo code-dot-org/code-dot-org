@@ -8,19 +8,20 @@ import DiscountCodeInstructions from '@cdo/apps/lib/kits/maker/ui/DiscountCodeIn
 
 $(document).ready(() => {
   const scriptData = getScriptData('discountcode');
+  const eligibleTemp = false;
 
   ReactDOM.render(
     <div>
-      {false &&
+      {!eligibleTemp &&
         <EligibilityChecklist
           statusPD={scriptData.eligibility_status.statusPD ? Status.SUCCEEDED : Status.FAILED}
           statusStudentCount={scriptData.eligibility_status.statusStudentCount ? Status.SUCCEEDED : Status.FAILED}
         />
       }
-      {true &&
+      {eligibleTemp &&
         <DiscountCodeInstructions
-          discountCode="XXX3XXX"
-          discountComplete={true}
+          discountCode="XXXXXX"
+          fullDiscount={true}
         />
       }
     </div>
