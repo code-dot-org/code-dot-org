@@ -25,131 +25,131 @@ es:
   not_found_title: 'Pagina no encontrada'
   not_found_desc: 'La página solicitada no fue encontrada'
   not_found_instructions: 'Compruebe la dirección web o elige una dirección de la lista.'
-  company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
+  company_4-H: Desarrollo juvenil 4-H
+  company_asa: Alianza Extraescolar
   company_asos: ASOS
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
+  company_bgca: Boys and Girls Club de América
+  company_bsusa: Boy Scouts de América
+  company_cgcs: Consejo de Escuelas de la Gran Ciudad
+  company_gsusa: Girl Scouts de América
   company_khanacademy: Khan Academy
-  company_mesa: Mathematics Engineering Science Achievement
-  company_napcs: National Alliance of Public Charter Schools
-  company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
-  company_teachforamerica: Teach for America
+  company_mesa: Logro de la Ciencia de Ingeniería Matemática
+  company_napcs: Alianza Nacional de Escuelas Públicas
+  company_ngcp: Proyecto colaborativo de niñas nacionales
+  company_teachforall: Enseñanza para todos
+  company_teachforamerica: Enseñanza por América
   company_tntp: TNTP
-  company_abss: Alamance-Burlington School System
-  company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
-  company_laalliance: Alliance College Ready Public Schools
-  company_asd: Arlington Public Schools
-  company_arlingtonpublicschools: Arlington Public Schools
-  company_bisd303: Bainbridge Island School District
-  company_beavertonschooldistrict: Beaverton School District
-  company_bellevuepublicschools: Bellevue Public Schools
-  company_blan: Blanchester Local Schools
-  company_bremertonschools: Bremerton School District
-  company_browardschools: Broward County Schools
-  company_cajonvalley: Cajon Valley School District
-  company_calistogajointunified: Calistoga Joint Unified School District
-  company_canalwinchesterschools: Canal Winchester Local Schools
-  company_canyonsdistrict: Canyons School District
-  company_centralunified: Central Unified School District
-  company_cvsd: Central Valley School District
-  company_ccboe: Charles County Public Schools
-  company_ChathamCountySchools: Chatham County Schools
-  company_chelmsfordpublicschooldistrict: Chelmsford School District
-  company_cheneysd: Cheney School District
-  company_chesterfieldschools: Chesterfield County Public Schools
-  company_codebrooklyn: Code Brooklyn
-  company_cps: Chicago Public Schools
-  company_ccsd: Clark County School District
-  company_cloverparkschooldistrict: Clover Park School District
-  company_ccsoh: Columbus City School District
-  company_cresskillboe: Cresskill Public Schools
-  company_dallasisd: Dallas Independent School District
+  company_abss: Sistema escolar de Alamance-Burlington
+  company_aldineisd: Distrito escolar independiente de Aldine
+  company_afterschool: después de la escuela
+  company_laalliance: Alianza para escuelas públicas listas para la universidad
+  company_asd: Escuelas públicas de Arlington
+  company_arlingtonpublicschools: Escuelas públicas de Arlington
+  company_bisd303: Distrito Escolar de Bainbridge Island
+  company_beavertonschooldistrict: Distrito Escolar de Beaverton
+  company_bellevuepublicschools: Escuelas públicas de Bellevue
+  company_blan: Escuelas locales de Blanchester
+  company_bremertonschools: Distrito Escolar de Bremerton
+  company_browardschools: Escuelas del Condado de Broward
+  company_cajonvalley: Distrito Escolar de Cajon Valley
+  company_calistogajointunified: Distrito Escolar Unificado de Calistoga
+  company_canalwinchesterschools: Escuelas locales de Canal Winchester
+  company_canyonsdistrict: Distrito Escolar de Canyons
+  company_centralunified: Distrito Escolar Unificado Central
+  company_cvsd: Distrito Escolar Central Valley
+  company_ccboe: Escuelas públicas del Condado de Charles
+  company_ChathamCountySchools: Escuelas del Condado de Chatham
+  company_chelmsfordpublicschooldistrict: Distrito Escolar de Chelmsford
+  company_cheneysd: Distrito Escolar de Cheney
+  company_chesterfieldschools: Escuelas públicas del condado Chesterfield
+  company_codebrooklyn: Código Brooklyn
+  company_cps: Escuelas públicas de Chicago
+  company_ccsd: Distrito Escolar del Condado de Clark
+  company_cloverparkschooldistrict: Distrito Escolar de Clover Park
+  company_ccsoh: Distrito Escolar de Columbus City
+  company_cresskillboe: Escuelas públicas de Cresskill
+  company_dallasisd: Distrito escolar independiente de Dallas
   company_disney: Disney
-  company_dpsk12: Denver Public Schools
-  company_dcsdk12: Douglas County Schools
-  company_dpsnc: Durham Public Schools
-  company_evsd: East Valley School District
-  company_eastonvilleschooldistrict: Eatonville School District
-  company_enumclawschooldistrict: Enumclaw School District
-  company_everettsd: Everette Public Schools
-  company_fsusd: Fairfield-Suisun Unified School District
-  company_fayettecountypublicschools: Fayette County Public Schools
-  company_forsythcountyschools: Forsyth County Schools
-  company_fcschools: Franklin County School
-  company_fpschools: Franklin Pierce School District
-  company_frederickcountypublicschools: Frederick County Public Schools
-  company_fultonschools: Fulton County Schools
-  company_vadoe: Governor's School Programs
-  company_gcs: Granville County Schools
+  company_dpsk12: Escuelas públicas de Denver
+  company_dcsdk12: Escuelas del Condado de Douglas
+  company_dpsnc: Escuelas públicas de Durham
+  company_evsd: Distrito Escolar de East Valley
+  company_eastonvilleschooldistrict: Distrito Escolar de Eatonville
+  company_enumclawschooldistrict: Distrito Escolar de Enumclaw
+  company_everettsd: Escuelas públicas de Everette
+  company_fsusd: Distrito Escolar Unificado de Fairfield-Suisun
+  company_fayettecountypublicschools: Escuelas públicas del Condado de Fayette
+  company_forsythcountyschools: Escuelas del Condado de Forsyth
+  company_fcschools: Escuelas del Condado de Franklin
+  company_fpschools: Distrito escolar Franklin Pierce
+  company_frederickcountypublicschools: Escuelas públicas del Condado de Frederick
+  company_fultonschools: Escuelas del Condado de Fulton
+  company_vadoe: Programas de la escuela del gobernador
+  company_gcs: Escuelas del Condado de Granville
   company_gcisd: Grapevine-Colleyville ISD
   company_godaddy: Go Daddy
-  company_greenupcountyschooldistrict: Greenup County Schools
-  company_gwinnettcountypublicschools: Gwinnett County Public Schools
-  company_HamptonCitySchools: Hampton City Schools
-  company_HanoverCountyPublicSchools: Hanover County Public Schools
-  company_HenricoCountyPublicSchools: Henrico County Public Schools
-  company_highlineschools: Highline School District
-  company_houstonisd: Houston Independent School District
-  company_hcpss: Howard County Public Schools
+  company_greenupcountyschooldistrict: Escuelas del Condado de Greenup
+  company_gwinnettcountypublicschools: Escuelas públicas del Condado de Gwinnett
+  company_HamptonCitySchools: Escuelas de la ciudad de Hampton
+  company_HanoverCountyPublicSchools: Escuelas públicas del Condado de Hannover
+  company_HenricoCountyPublicSchools: Escuelas públicas del Condado de Henrico
+  company_highlineschools: Distrito Escolar de Highline
+  company_houstonisd: Distrito escolar independiente de Houston
+  company_hcpss: Escuelas públicas del Condado de Howard
   company_idla: Idaho Digital Learning Academy
-  company_janesvilleschooldistrict: Janesville School District
-  company_johnstoncountyschools: Johnston County Schools
-  company_lps: Lincoln Public School
-  company_littletonpublicschools: Littleton Public Schools
-  company_lausd: Los Angeles Unified School District
-  company_lcps: Louisa County Public Schools
-  company_lcsedu: Lynchburg City Schools
-  company_msvl: Marysville School District
-  company_dadeschools: Miami-Dade Public Schools
-  company_miltonps: Milton Public Schools
-  company_montgomeryschoolsmd: Montgomery County Public Schools
-  company_needhampublicschools: Needham Public Schools
-  company_NelsonCountyPublicSchools: Nelson County Public Schools
-  company_newalbanyschools: New Albany Plain Local Schools
-  company_newkentschools: New Kent County Public Schools
-  company_newarkcityschools: Newark City Schools
-  company_nnschools: Newport News Public Schools
-  company_newtonpublicschools: Newton Public Schools
-  company_nps: Norfolk Public Schools
-  company_nycdoe: NYC Department of Education
-  company_ohlsd: Oak Hills Local School District
-  company_oneclay: One Clay County School District
-  company_ocps: Orange County Schools
-  company_orangeusd: Orange Unified School District
-  company_pbsd: Palm Beach School District
-  company_pvusd: Paradise Valley Unified School District
-  company_PetersburgCityPublicSchools: Petersburg City Public Schools
-  company_pylusd: Placentia-Yorba Linda Union School District
-  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
-  company_pgcps: Prince Georges County Public Schools
-  company_provocityschooldistrict: Provo Public Schools
-  company_reyn: Reynoldsburg City School District
-  company_RichmondPublicSchools: Richmond Public Schools
-  company_RockinghamCountySchools: Rockingham County Schools
-  company_svusd: Saddleback Valley Unified School District
-  company_sfusd: San Francisco Unified School District
-  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
-  company_shorelineschools: Shoreline School District
+  company_janesvilleschooldistrict: Distrito Escolar de Janesville
+  company_johnstoncountyschools: Escuelas del Condado de Johnston
+  company_lps: Escuela Pública Lincoln
+  company_littletonpublicschools: Escuela Pública Littleton
+  company_lausd: Distrito Escolar Unificado Los Angeles
+  company_lcps: Escuelas públicas del Condado de Louisa
+  company_lcsedu: Escuelas de la ciudad de Lynchburg
+  company_msvl: Distrito Escolar de Marysville
+  company_dadeschools: Escuelas públicas de Miami-Dade
+  company_miltonps: Escuelas públicas de Milton
+  company_montgomeryschoolsmd: Escuelas públicas del Condado de Montgomery
+  company_needhampublicschools: Escuelas públicas de Needham
+  company_NelsonCountyPublicSchools: Escuelas públicas del Condado de Nelson
+  company_newalbanyschools: Escuelas locales de New Albany Plain
+  company_newkentschools: Escuelas públicas del Condado de New Kent
+  company_newarkcityschools: Escuelas de Newark City
+  company_nnschools: Escuelas públicas de Newport News
+  company_newtonpublicschools: Escuelas públicas de Newton
+  company_nps: Escuelas públicas de Norfolk
+  company_nycdoe: Departamento de Educación de Nueva York
+  company_ohlsd: Distrito escolar local de Oak Hills
+  company_oneclay: Distrito Escolar del Condado de One Clay
+  company_ocps: Escuelas de Orange County
+  company_orangeusd: Distrito Escolar Unificado de Orange
+  company_pbsd: Distrito Escolar de Palm Beach
+  company_pvusd: Distrito Escolar Unificado de Paradise Valley
+  company_PetersburgCityPublicSchools: Escuelas públicas de Petersburg City
+  company_pylusd: Distrito Escolar Unificado de Placentia-Yorba Linda
+  company_PowhatanCountyPublicSchools: Escuelas públicas del Condado de Powhatan
+  company_pgcps: Escuelas públicas del Condado de Prince Georges
+  company_provocityschooldistrict: Escuelas públicas de Provo
+  company_reyn: Distrito Escolar de Reynoldsburg
+  company_RichmondPublicSchools: Escuelas públicas de Richmond
+  company_RockinghamCountySchools: Escuelas del Condado de Rockingham
+  company_svusd: Distrito Escolar Unificado de Saddleback Valley
+  company_sfusd: Distrito Escolar Unificado de San Francisco
+  company_ShenandoahCountyPublicSchools: Escuelas públicas del Condado de Shenandoah
+  company_shorelineschools: Distrito Escolar de Shoreline
   company_sjusd: Distrito escolar unificado San Juan
   company_sky: Sky
-  company_spokaneschools: Spokane Public Schools
-  company_StaffordCountyPublicSchools: Stafford County Public Schools
-  company_strongnet: Strongsville School District
-  company_TukwilaSchoolDistrict: Tukwila School District
-  company_vermilionschools: Vermilion Local School District
+  company_spokaneschools: Escuelas públicas de Spokane
+  company_StaffordCountyPublicSchools: Escuelas públicas del Condado de Stafford
+  company_strongnet: Distrito Escolar de Strongsville
+  company_TukwilaSchoolDistrict: Distrito Escolar de Tukwila
+  company_vermilionschools: Distrito Escolar Local de Vermilion
   company_vista-equity-partners: "Vista Equity Partners"
-  company_walthampublicschools: Waltham Public Schools
-  company_warrencountyschools: Warren County Schools
-  company_WaynesboroPublicSchools: Waynesboro Public Schools
-  company_WellesleyPublicSchools: Wellesley Public Schools
-  company_wvsd208: West Valley School District
-  company_wuhsd: Whittier Union High School District
-  company_wcschools: Wilson County Schools
+  company_walthampublicschools: Escuelas públicas de Waltham
+  company_warrencountyschools: Escuelas del Condado de Warren
+  company_WaynesboroPublicSchools: Escuelas públicas de Waynesboro
+  company_WellesleyPublicSchools: Escuelas públicas de Wellesley
+  company_wvsd208: Distrito Escolar de West Valley
+  company_wuhsd: Distrito Escolar de Whittier Union
+  company_wcschools: Escuelas del Condado de Wilson
   company_yelp: Yelp
   nav_back_to_resources: "Recursos"
   how_to_nav_educators: "Para profesores"
@@ -579,54 +579,54 @@ es:
   tutorial_crd_name: "Condicioales con cartas"
   tutorial_bbcbio_name: "Bitsbox Codificacion + Biologia"
   tutorial_ticklebb8_name: "BB-8 Swing"
-  tutorial_grok_name: "Grok Learning"
+  tutorial_grok_name: "Aprendizaje Grok"
   tutorial_ijournalist_name: "iJournalist"
-  tutorial_bbcmusic_name: "Bitsbox Coding + Music"
-  tutorial_secretcodes_name: "Secret Codes Activity"
-  tutorial_tlchex_name: "HexaHexaFlexagon Automata Activity"
+  tutorial_bbcmusic_name: "Bitsbox Coding + música"
+  tutorial_secretcodes_name: "Actividad de códigos secretos"
+  tutorial_tlchex_name: "Actividad Autómata HexaHexaFlexagon"
   tutorial_tickles_name: "Sphero Run"
-  tutorial_ozogame_name: "Create an Ozobot Game Level"
-  tutorial_vidcodeio_name: "Input and Output, Math Activity"
-  tutorial_besttech_name: "Best Technology Activity"
-  tutorial_tlcbrain_name: "Brain-in-a-bag Activity"
-  tutorial_hopquiz_name: "Quiz Creator"
-  tutorial_unfortunate_name: "A Series of Unfortunate Events"
-  tutorial_cha_name: "Computer History Activity"
-  tutorial_elaseq_name: 'Writing and Coding: ELA Integration with Common Core Standards'
-  tutorial_bbcmathi_name: "Bitsbox Coding + Math (3-5)"
-  tutorial_tlcpixel_name: "Pixel Puzzles"
+  tutorial_ozogame_name: "Crear un nivel de juego Ozobot"
+  tutorial_vidcodeio_name: "Entrada y salida, actividades de matemáticas"
+  tutorial_besttech_name: "Mejor actividad de tecnología"
+  tutorial_tlcbrain_name: "Actividad Brain-in-a-bag"
+  tutorial_hopquiz_name: "Creador de acertijos"
+  tutorial_unfortunate_name: "Una serie de acontecimientos desafortunados"
+  tutorial_cha_name: "Actividad Historia del Ordenador"
+  tutorial_elaseq_name: 'Escritura y programación: integración de ELA con estándares básicos comunes'
+  tutorial_bbcmathi_name: "Bitsbox Codificación + Matemáticas (3-5)"
+  tutorial_tlcpixel_name: "Puzzles Pixel"
   tutorial_arduino_name: "Actividad de Arduino"
   tutorial_introrobo_name: "Introducción a la robótica"
-  tutorial_tlcinvis_name: "Invisible Palming Activity"
-  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
+  tutorial_tlcinvis_name: "Actividad invisible de palmeo"
+  tutorial_tlcjflap_name: 'JFLAP: Creación de máquinas de estado finito'
   tutorial_procolor_name: "Programando con colores"
-  tutorial_spiralsfinch_name: "Spirals with the Finch"
+  tutorial_spiralsfinch_name: "Espirales con el pinzón"
   tutorial_ozoi_name: "Una introducción a la programación y Ozobot"
   tutorial_ticklel_name: "LEGO ladrillador"
   tutorial_spiralsdash_name: "Dibujar espirales con Dash"
-  tutorial_ghdebug_name: "Grace Hopper Debugging Activity"
+  tutorial_ghdebug_name: "Actividad de depuración de Grace Hopper"
   tutorial_tlckk_name: "Kriss Kross Puzzles"
   tutorial_firstcomp_name: "Mi primer ordenador"
   tutorial_mazefinch_name: "A través del laberinto con Finch Robot"
   tutorial_tlccc_name: "Código de compresión Puzzles"
   tutorial_tlcdoodle_name: "Algoritmos con Doodle Art"
-  tutorial_tlcpunch_name: "Punch Card Searching Activity"
-  tutorial_finchfract_name: "Finch Fractals"
-  tutorial_tlcmind_name: "The Red Black Mind Meld Activity"
+  tutorial_tlcpunch_name: "Actividad de búsqueda de tarjetas perforadas"
+  tutorial_finchfract_name: "Fractales de Pinzón"
+  tutorial_tlcmind_name: "La actividad de fusión mental rojo negro"
   tutorial_tlctelebot_name: "Actividad de teletransportar el Robot"
-  tutorial_tlcaus_name: "Australian Magician's Dream Activity"
+  tutorial_tlcaus_name: "Actividad de sueño del mago australiano"
   tutorial_oralhist_name: "Proyecto de historia oral"
-  tutorial_tlcmicro_name: "Microwave Racing Video Activity"
+  tutorial_tlcmicro_name: "Actividad de video de carreras de microondas"
   tutorial_imathematician_name: "iMatematico"
   tutorial_tlcmagic_name: "Libro mágico de magia"
   tutorial_scratchmus_name: "Hacer música con Scratch"
   tutorial_scratchanim_name: "Animar tu nombre con Scratch"
   tutorial_scratchfly_name: "Hacer volar con Scratch"
   tutorial_tynkerarc_name: "Kit juego Arcade bajo el mar"
-  tutorial_grokffpython_name: "Frozen Fractals (Python Turtle)"
-  tutorial_grokffblock_name: "Frozen Fractals (Blockly Turtle)"
+  tutorial_grokffpython_name: "Fractales congelados (Python Turtle)"
+  tutorial_grokffblock_name: "Fractales congelados (Blockly Turtle)"
   tutorial_grokeliza_name: "¿Es Eliza un humano? (Python)"
-  tutorial_tynkercan_name: "Physics Cannon 2-Player Game Kit"
+  tutorial_tynkercan_name: "Physics Cannon juego de 2 jugadores"
   tutorial_grokflags_name: "Banderas del mundo (Python Turtle)"
   tutorial_robomind_name: "Programar un robot virtual con RoboMind"
   tutorial_scratchanimwork_name: 'Anima tu nombre: Guía del educador'
@@ -643,9 +643,9 @@ es:
   tutorial_baypt_name: "Código Baymax"
   tutorial_code-combat_name: "Combate de Código"
   tutorial_mky_name: "CodeMonkey"
-  tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
+  tutorial_spellcraft_name: 'CodeSpells: hechizo'
   tutorial_pirates_name: "Programando piratas"
-  tutorial_csfirst_name: "CS First"
+  tutorial_csfirst_name: "Informática primero"
   tutorial_loopedy_name: "Baila el Buclecito-Bucle"
   tutorial_dsw_name: "Disney Star Wars"
   tutorial_dswb_name: "Disney Star Wars"
@@ -666,30 +666,30 @@ es:
   tutorial_pixie_name: "Desafíos PIXIE"
   tutorial_play_name: "Laboratorio de juegos"
   tutorial_robomind-nl_name: "Programar un robot virtual"
-  tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Lights'
+  tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Introducción'
+  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Luces'
   tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
   tutorial_swb_name: 'La Guerra de las Galaxias: Construyendo una galaxia con Código'
   tutorial_build-a-galaxy_name: 'La Guerra de las Galaxias: Construyendo una galaxia con Código'
-  tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
-  tutorial_tchr_name: "Teacher Led Lesson Plans"
-  tutorial_robogame_name: "The Robot Games"
-  tutorial_tap_name: "Tynker on Tablets"
+  tutorial_alicesims_name: "Guión gráfico y Programación con Alicia y Los Sims"
+  tutorial_tchr_name: "Planes de lecciones dirigidas por el maestro"
+  tutorial_robogame_name: "Los juegos de Robot"
+  tutorial_tap_name: "Tynker en Tablets"
   tutorial_cintl_name: "Escribe tu primer programa de ordenador"
-  tutorial_itchstop_name: "ITCH Stop Frame Animation (Scratch)"
-  tutorial_tynkerpn_name: 'Peep: Nature Walk'
-  tutorial_tynkerpd_name: 'Peep: Dance with Friends'
-  tutorial_persistence_name: 'Persistence: Building a Foundation'
-  tutorial_getloopy_name: "Getting Loopy"
-  tutorial_createface_name: "Create-a-Face"
+  tutorial_itchstop_name: "Animación de marco de detención ITCH (cero)"
+  tutorial_tynkerpn_name: 'Peep: Paseo por la naturaleza'
+  tutorial_tynkerpd_name: 'Peep: Baile con amigos'
+  tutorial_persistence_name: 'Persistencia: Construir una base'
+  tutorial_getloopy_name: "Poniéndose loco"
+  tutorial_createface_name: "Crear una cara"
   tutorial_happymaps_name: "Mapas Felices"
   tutorial_moveit_name: "¡Muévelo, muévelo!"
   tutorial_bigevent_name: "El Gran Evento"
-  tutorial_gpp_name: "Graph Paper Programming"
-  tutorial_foosgame_name: "codeSpark Academy with the Foos - GameMaker"
+  tutorial_gpp_name: "Programación de papel de gráficos"
+  tutorial_foosgame_name: "codeSpark Academy con los Foos - GameMaker"
   tutorial_solopython_name: "Mi Primer Código Python"
   tutorial_kodableint_name: "Introducción a la Programación"
-  tutorial_kodableadv_name: "Advanced Programming Concepts"
+  tutorial_kodableadv_name: "Conceptos avanzados de programación"
   tutorial_tynkertj_name: "Jungla Tóxica"
   tutorial_wolframa_name: "Edad en Días"
   tutorial_wolframm_name: "Melodias Aleatorias"
@@ -774,21 +774,21 @@ es:
   tutorial_khan_shortdescription: 'Khan Academy: Dibujando con código te enseña a programar usando JavaScript diseñando tu propio muñeco de nieve'
   tutorial_tynkerd_shortdescription: "¡Lucha contra insectos para salvar a la placa madre!"
   tutorial_cdmy_shortdescription: "Aprenda a programar \"JavaScript\", en un navegador web"
-  tutorial_codestersdance_shortdescription: "Design your own dance routine and program a sprite to perform it! "
-  tutorial_codestersbasketball_shortdescription: "Build your own pull and shoot basketball game! "
-  tutorial_nclkarel_shortdescription: "Learn basic concepts of Computer Science by typing programs for a robot."
-  tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
-  tutorial_tynkerdrones_shortdescription: "Program a controller for your robot or drone."
+  tutorial_codestersdance_shortdescription: "¡Diseña tu propia rutina de baile y programa un sprite para realizarla! "
+  tutorial_codestersbasketball_shortdescription: "¡Crea tu propio juego de baloncesto tirar y disparar! "
+  tutorial_nclkarel_shortdescription: "Aprende conceptos básicos de informática escribiendo programas para un robot."
+  tutorial_buildpong_shortdescription: "Construye el clásico de Arcade y dale al ordenador inteligencia artificial para jugar contra ti."
+  tutorial_tynkerdrones_shortdescription: "Programa un controlador para tu robot o drone."
   tutorial_carla_shortdescription: "¡Aprende código programando un robot virtual parlante llamado Carla!"
-  tutorial_globaloria_shortdescription: "Go on a MakeQuest! Modify code to beat our game, then build your own!"
-  tutorial_capost_shortdescription: "Use code to build a great looking holiday or birthday card."
-  tutorial_marco_shortdescription: "An immersive game to guide Marco with a visual programming language."
-  tutorial_codestersflappybike_shortdescription: "Create a game with player controls. Keep the bike in the air while dodging the obstacles!"
-  tutorial_kanopong_shortdescription: "Change the game. Break the rules. Win with code."
-  tutorial_tynkerright_shortdescription: "Program a quiz about the Bill of Rights!"
-  tutorial_flatverse_shortdescription: "Help Bot conquer the Flatverse! "
-  tutorial_touchdevelop_shortdescription: "Solve puzzles, create games, and learn coding all on your phone. "
-  tutorial_tynkercc_shortdescription: "Build and train your army for battle!"
+  tutorial_globaloria_shortdescription: "¡Vete a MakeQuest! ¡Modifica el código para vencer a nuestro juego, luego construye el tuyo!"
+  tutorial_capost_shortdescription: "Usa el código para construir una tarjeta genial de vacaciones o de cumpleaños."
+  tutorial_marco_shortdescription: "Un juego envolvente para guiar a Marco con un lenguaje de programación visual."
+  tutorial_codestersflappybike_shortdescription: "Crea un juego con controles de jugador. ¡Mantenga la bicicleta en el aire mientras esquiva los obstáculos!"
+  tutorial_kanopong_shortdescription: "Cambia el juego. Rompe las reglas. Gana con código."
+  tutorial_tynkerright_shortdescription: "¡Programa un acertijo sobre la Declaración de Derechos!"
+  tutorial_flatverse_shortdescription: "¡Ayuda a Bot a conquistar Flatverse! "
+  tutorial_touchdevelop_shortdescription: "Resuelve puzzles, crea juegos y aprende a programar en tu teléfono. "
+  tutorial_tynkercc_shortdescription: "¡Construye y entrena a tu ejército para la batalla!"
   tutorial_bamboo_shortdescription: "The Bamboo JS activity was created by Codemoji to teach students basic Javascript concepts."
   tutorial_robojav_shortdescription: "Build a small world on your screen for simulated robots and creatures."
   tutorial_roboba_shortdescription: "RoboBlockly is designed for beginners to learn Algebra 1 with robots in Blockly. "
@@ -1533,7 +1533,7 @@ es:
   tutorial_frzn_string_detail_grades: "Grades 2+"
   tutorial_cocom_string_detail_grades: "Grades 2+"
   tutorial_play-lab_string_detail_grades: "Grades 2+"
-  tutorial_boxisland2016_string_detail_grades: "All ages"
+  tutorial_boxisland2016_string_detail_grades: "Todas las edades"
   tutorial_textcomp_string_detail_grades: "Grades 9+"
   tutorial_encryption_string_detail_grades: "Grades 9+"
   tutorial_kanopixel_string_detail_grades: "Grades 2+"
@@ -1634,7 +1634,7 @@ es:
   tutorial_ticklep_string_detail_grades: "do-not-show"
   tutorial_bbot_string_detail_grades: "Grades 2+"
   tutorial_scratchg_string_detail_grades: "Grades 6+"
-  tutorial_roboticfriends_string_detail_grades: "All ages"
+  tutorial_roboticfriends_string_detail_grades: "Todas las edades"
   tutorial_sjforest_string_detail_grades: "Pre-reader - Grade 5"
   tutorial_sjgreet_string_detail_grades: "Pre-reader - Grade 5"
   tutorial_sjsunset_string_detail_grades: "Pre-reader - Grade 5"
@@ -1648,7 +1648,7 @@ es:
   tutorial_flocond_string_detail_grades: "Grades 2+"
   tutorial_floloops_string_detail_grades: "Grades 2+"
   tutorial_pgts_string_detail_grades: "Grades 6+"
-  tutorial_ozo_string_detail_grades: "All ages"
+  tutorial_ozo_string_detail_grades: "Todas las edades"
   tutorial_bbcla_string_detail_grades: "do-not-show"
   tutorial_bbcsci_string_detail_grades: "do-not-show"
   tutorial_tlctour_string_detail_grades: "Grades 2+"
@@ -1658,7 +1658,7 @@ es:
   tutorial_bbcart_string_detail_grades: "do-not-show"
   tutorial_tlcknight_string_detail_grades: "Grades 2+"
   tutorial_fufafit_string_detail_grades: "Grades 2-5"
-  tutorial_ozodance_string_detail_grades: "All ages"
+  tutorial_ozodance_string_detail_grades: "Todas las edades"
   tutorial_codingrobotics_string_detail_grades: "Pre-reader - Grade 5"
   tutorial_box_string_detail_grades: "do-not-show"
   tutorial_hopgame_string_detail_grades: "Grades 2-8"
@@ -1677,7 +1677,7 @@ es:
   tutorial_secretcodes_string_detail_grades: "Grades 6-8"
   tutorial_tlchex_string_detail_grades: "Grades 6+"
   tutorial_tickles_string_detail_grades: "Grades 2+"
-  tutorial_ozogame_string_detail_grades: "All ages"
+  tutorial_ozogame_string_detail_grades: "Todas las edades"
   tutorial_vidcodeio_string_detail_grades: "Grades 2+"
   tutorial_besttech_string_detail_grades: "Grades 9+"
   tutorial_tlcbrain_string_detail_grades: "Grades 6+"
@@ -1693,7 +1693,7 @@ es:
   tutorial_tlcjflap_string_detail_grades: "Grades 6+"
   tutorial_procolor_string_detail_grades: "Pre-reader - Grade 8"
   tutorial_spiralsfinch_string_detail_grades: "Grades 2+"
-  tutorial_ozoi_string_detail_grades: "All ages"
+  tutorial_ozoi_string_detail_grades: "Todas las edades"
   tutorial_ticklel_string_detail_grades: "Grades 2+"
   tutorial_spiralsdash_string_detail_grades: "Grades 2-8"
   tutorial_ghdebug_string_detail_grades: "Grades 2-8"
@@ -1732,7 +1732,7 @@ es:
   tutorial_bits_string_detail_grades: "Grades 2-5"
   tutorial_blockly_string_detail_grades: "Grades 2+"
   tutorial_tynker_string_detail_grades: "do-not-show"
-  tutorial_baypt_string_detail_grades: "All ages"
+  tutorial_baypt_string_detail_grades: "Todas las edades"
   tutorial_code-combat_string_detail_grades: "do-not-show"
   tutorial_mky_string_detail_grades: "Grades 2+"
   tutorial_spellcraft_string_detail_grades: "Grades 6+"
@@ -1745,7 +1745,7 @@ es:
   tutorial_sswb_string_detail_grades: "do-not-show"
   tutorial_kodable-unplugged_string_detail_grades: "Grades 2-8"
   tutorial_scratch_string_detail_grades: "Grades 2-5"
-  tutorial_bayes_string_detail_grades: "All ages"
+  tutorial_bayes_string_detail_grades: "Todas las edades"
   tutorial_gumball_string_detail_grades: "do-not-show"
   tutorial_hrm_string_detail_grades: "Grades 6+"
   tutorial_ice-age_string_detail_grades: "do-not-show"
@@ -1992,7 +1992,7 @@ es:
   tutorial_grokffblock_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_grokeliza_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkercan_string_platforms: "All modern browsers"
-  tutorial_grokflags_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)"
+  tutorial_grokflags_string_platforms: "Internet Explorer 11, Edge Microsoft, Chrome, Firefox, Safari, Chrome Android (optimizado para móvil), iOS (optimizado para móvil)"
   tutorial_robomind_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_scratchanimwork_string_platforms: "All modern browsers"
   tutorial_adventureq_string_platforms: "iPad"
@@ -2009,9 +2009,9 @@ es:
   tutorial_code-combat_string_platforms: "do-not-show"
   tutorial_mky_string_platforms: "All modern browsers"
   tutorial_spellcraft_string_platforms: "Windows"
-  tutorial_pirates_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
+  tutorial_pirates_string_platforms: "Internet Explorer 11, Edge Microsoft, Chrome, Firefox, Safari, Android tablet, iPad, teléfono Android, iPhone"
   tutorial_csfirst_string_platforms: "All modern browsers"
-  tutorial_loopedy_string_platforms: "iPad, iPhone, Android tablet, Android phone, Dash and Dot robot"
+  tutorial_loopedy_string_platforms: "iPad, iPhone, Android tablet, Android phone, Dash y Dot robot"
   tutorial_dsw_string_platforms: "do-not-show"
   tutorial_dswb_string_platforms: "do-not-show"
   tutorial_ssw_string_platforms: "do-not-show"
@@ -2020,10 +2020,10 @@ es:
   tutorial_scratch_string_platforms: "All modern browsers"
   tutorial_bayes_string_platforms: "All modern browsers"
   tutorial_gumball_string_platforms: "do-not-show"
-  tutorial_hrm_string_platforms: "PC and Mac downloadable"
+  tutorial_hrm_string_platforms: "PC y Mac para descargar"
   tutorial_ice-age_string_platforms: "do-not-show"
   tutorial_koapp_string_platforms: "do-not-show"
-  tutorial_lightbot-intl_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
+  tutorial_lightbot-intl_string_platforms: "Internet Explorer 11, Edge Microsoft, Chrome, Firefox, Safari, Android tablet, iPad, teléfono Android, iPhone"
   tutorial_rmc_string_platforms: "do-not-show"
   tutorial_smc_string_platforms: "do-not-show"
   tutorial_minecraft-2016_string_platforms: "do-not-show"
@@ -2038,12 +2038,12 @@ es:
   tutorial_build-a-galaxy_string_platforms: "do-not-show"
   tutorial_alicesims_string_platforms: "All modern browsers"
   tutorial_tchr_string_platforms: "do-not-show"
-  tutorial_robogame_string_platforms: "Android tablet, iPad, Android phone, iPhone, Dash and Dot robot"
+  tutorial_robogame_string_platforms: "Android tablet, iPad, Android phone, iPhone, Dash y Dot robot"
   tutorial_tap_string_platforms: "Android tablet, iPad"
   tutorial_cintl_string_platforms: "do-not-show"
   tutorial_itchstop_string_platforms: "All modern browsers"
-  tutorial_tynkerpn_string_platforms: "All modern browsers, iPad, Android tablet"
-  tutorial_tynkerpd_string_platforms: "All modern browsers, iPad, Android tablet"
+  tutorial_tynkerpn_string_platforms: "Todos los navegadores modernos, iPad, tablet Android"
+  tutorial_tynkerpd_string_platforms: "Todos los navegadores modernos, iPad, tablet Android"
   tutorial_persistence_string_platforms: "Unplugged"
   tutorial_getloopy_string_platforms: "Unplugged"
   tutorial_createface_string_platforms: "Unplugged"
@@ -2052,7 +2052,7 @@ es:
   tutorial_bigevent_string_platforms: "Unplugged"
   tutorial_gpp_string_platforms: "Unplugged"
   tutorial_foosgame_string_platforms: "Android tablet, iPad"
-  tutorial_solopython_string_platforms: "All modern browsers, Android tablet, Android phone, iPad, iPhone"
+  tutorial_solopython_string_platforms: "Todos los navegadores modernos, tablets Android, iPad, teléfono Android, iPhone"
   tutorial_kodableint_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
   tutorial_kodableadv_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
   tutorial_tynkertj_string_platforms: "All modern browsers"
@@ -2062,9 +2062,9 @@ es:
   tutorial_wolframsph_string_platforms: "All modern browsers"
   tutorial_wolframp_string_platforms: "All modern browsers"
   tutorial_wolframn_string_platforms: "All modern browsers"
-  tutorial_soloweb_string_platforms: "All modern browsers, Android tablet, Android phone, iPad, iPhone"
+  tutorial_soloweb_string_platforms: "Todos los navegadores modernos, tablets Android, iPad, teléfono Android, iPhone"
   tutorial_bloxmobapp_string_platforms: "All modern browsers"
-  tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
+  tutorial_khanweb_string_platforms: "Todos los navegadores modernos, tablet Android"
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
   tutorial_athlete_string_detail_platforms: ""
@@ -2073,7 +2073,7 @@ es:
   tutorial_gumadventure_string_detail_platforms: ""
   tutorial_mchoc_string_detail_platforms: ""
   tutorial_vidnews_string_detail_platforms: ""
-  tutorial_kodable-pre_string_detail_platforms: "All modern browsers, iPad app"
+  tutorial_kodable-pre_string_detail_platforms: "Todos los navegadores modernos, iPad app"
   tutorial_highseas_string_detail_platforms: ""
   tutorial_capython_string_detail_platforms: ""
   tutorial_frzn_string_detail_platforms: ""
@@ -2240,7 +2240,7 @@ es:
   tutorial_procolor_string_detail_platforms: "Ozobot robot"
   tutorial_spiralsfinch_string_detail_platforms: "Finch robot"
   tutorial_ozoi_string_detail_platforms: "Ozobot robot"
-  tutorial_ticklel_string_detail_platforms: "LEGO WeDo robot"
+  tutorial_ticklel_string_detail_platforms: "Robot de LEGO WeDo"
   tutorial_spiralsdash_string_detail_platforms: "Dash robot"
   tutorial_ghdebug_string_detail_platforms: ""
   tutorial_tlckk_string_detail_platforms: "Unplugged"
@@ -2340,318 +2340,318 @@ es:
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
-  tutorial_athlete_string_detail_programming_languages: "Blocks"
-  tutorial_moana_string_detail_programming_languages: "Blocks"
+  tutorial_athlete_string_detail_programming_languages: "Bloques"
+  tutorial_moana_string_detail_programming_languages: "Bloques"
   tutorial_star-wars_string_detail_programming_languages: "Bloques, JavaScript"
-  tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
-  tutorial_mchoc_string_detail_programming_languages: "Blocks"
+  tutorial_gumadventure_string_detail_programming_languages: "Bloques, Scratch"
+  tutorial_mchoc_string_detail_programming_languages: "Bloques"
   tutorial_vidnews_string_detail_programming_languages: "JavaScript"
-  tutorial_kodable-pre_string_detail_programming_languages: "Blocks"
-  tutorial_highseas_string_detail_programming_languages: "Blocks, Scratch"
+  tutorial_kodable-pre_string_detail_programming_languages: "Bloques"
+  tutorial_highseas_string_detail_programming_languages: "Bloques, Scratch"
   tutorial_capython_string_detail_programming_languages: "Python"
-  tutorial_frzn_string_detail_programming_languages: "Blocks"
+  tutorial_frzn_string_detail_programming_languages: "Bloques"
   tutorial_cocom_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
-  tutorial_play-lab_string_detail_programming_languages: "Blocks"
-  tutorial_boxisland2016_string_detail_programming_languages: "Blocks"
-  tutorial_textcomp_string_detail_programming_languages: "Language independent"
-  tutorial_encryption_string_detail_programming_languages: "Language independent"
+  tutorial_play-lab_string_detail_programming_languages: "Bloques"
+  tutorial_boxisland2016_string_detail_programming_languages: "Bloques"
+  tutorial_textcomp_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_encryption_string_detail_programming_languages: "Independiente del idioma"
   tutorial_kanopixel_string_detail_programming_languages: "JavaScript, Coffeescript"
-  tutorial_foos_string_detail_programming_languages: "Blocks"
-  tutorial_tynkerdd_string_detail_programming_languages: "Blocks"
-  tutorial_tynkerana_string_detail_programming_languages: "Blocks"
+  tutorial_foos_string_detail_programming_languages: "Bloques"
+  tutorial_tynkerdd_string_detail_programming_languages: "Bloques"
+  tutorial_tynkerana_string_detail_programming_languages: "Bloques"
   tutorial_vidcard_string_detail_programming_languages: "JavaScript"
-  tutorial_spritebox_string_detail_programming_languages: "Blocks, Java, iOS/Swift"
+  tutorial_spritebox_string_detail_programming_languages: "Bloques, Java, iOS/Swift"
   tutorial_tynkerch_string_detail_programming_languages: "JavaScript"
-  tutorial_lightbot_string_detail_programming_languages: "Blocks"
+  tutorial_lightbot_string_detail_programming_languages: "Bloques"
   tutorial_hoc_string_detail_programming_languages: "do-not-show"
-  tutorial_code_string_detail_programming_languages: "Blocks"
+  tutorial_code_string_detail_programming_languages: "Bloques"
   tutorial_tinspire_string_detail_programming_languages: "TI Basic"
-  tutorial_itchbounceball_string_detail_programming_languages: "Blocks, Scratch"
+  tutorial_itchbounceball_string_detail_programming_languages: "Bloques, Scratch"
   tutorial_vidclim_string_detail_programming_languages: "JavaScript"
   tutorial_matlab_string_detail_programming_languages: "MATLAB"
-  tutorial_flap_string_detail_programming_languages: "Blocks"
-  tutorial_galaxy_string_detail_programming_languages: "Blocks"
-  tutorial_inf_string_detail_programming_languages: "Blocks"
-  tutorial_tynkersol_string_detail_programming_languages: "Blocks"
-  tutorial_itchg_string_detail_programming_languages: "Blocks"
+  tutorial_flap_string_detail_programming_languages: "Bloques"
+  tutorial_galaxy_string_detail_programming_languages: "Bloques"
+  tutorial_inf_string_detail_programming_languages: "Bloques"
+  tutorial_tynkersol_string_detail_programming_languages: "Bloques"
+  tutorial_itchg_string_detail_programming_languages: "Bloques"
   tutorial_como_string_detail_programming_languages: "CoffeeScript"
   tutorial_processfound_string_detail_programming_languages: "Java"
-  tutorial_tynkerhomo_string_detail_programming_languages: "Blocks"
-  tutorial_art_string_detail_programming_languages: "Blocks"
-  tutorial_tynkerbrick_string_detail_programming_languages: "Blocks"
-  tutorial_itchbio_string_detail_programming_languages: "Blocks"
-  tutorial_itchj_string_detail_programming_languages: "Blocks"
-  tutorial_tickleo_string_detail_programming_languages: "Blocks"
-  tutorial_hopgeo_string_detail_programming_languages: "Hopscotch"
-  tutorial_tynkermult_string_detail_programming_languages: "Blocks"
-  tutorial_monster_string_detail_programming_languages: "Blocks"
+  tutorial_tynkerhomo_string_detail_programming_languages: "Bloques"
+  tutorial_art_string_detail_programming_languages: "Bloques"
+  tutorial_tynkerbrick_string_detail_programming_languages: "Bloques"
+  tutorial_itchbio_string_detail_programming_languages: "Bloques"
+  tutorial_itchj_string_detail_programming_languages: "Bloques"
+  tutorial_tickleo_string_detail_programming_languages: "Bloques"
+  tutorial_hopgeo_string_detail_programming_languages: "Rayuela"
+  tutorial_tynkermult_string_detail_programming_languages: "Bloques"
+  tutorial_monster_string_detail_programming_languages: "Bloques"
   tutorial_tynkerapp_string_detail_programming_languages: "do-not-show"
-  tutorial_tynkerpup_string_detail_programming_languages: "Blocks"
-  tutorial_livecode_string_detail_programming_languages: "Language independent"
+  tutorial_tynkerpup_string_detail_programming_languages: "Bloques"
+  tutorial_livecode_string_detail_programming_languages: "Independiente del idioma"
   tutorial_cocomgame_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
-  tutorial_tynkerspin_string_detail_programming_languages: "Blocks"
+  tutorial_tynkerspin_string_detail_programming_languages: "Bloques"
   tutorial_code-avengers_string_detail_programming_languages: "JavaScript"
-  tutorial_tynkercq_string_detail_programming_languages: "Blocks"
+  tutorial_tynkercq_string_detail_programming_languages: "Bloques"
   tutorial_makeschool_string_detail_programming_languages: "iOS/Swift"
   tutorial_cmgame_string_detail_programming_languages: "CoffeeScript"
   tutorial_codesters_string_detail_programming_languages: "do-not-show"
-  tutorial_qrm_string_detail_programming_languages: "Quorum"
+  tutorial_qrm_string_detail_programming_languages: "Quórum"
   tutorial_texas-instruments_string_detail_programming_languages: "TI Basic"
   tutorial_cajava_string_detail_programming_languages: "JavaScript"
   tutorial_codehs_string_detail_programming_languages: "JavaScript"
-  tutorial_hopemo_string_detail_programming_languages: "Hopscotch"
-  tutorial_tynkercm_string_detail_programming_languages: "Blocks"
+  tutorial_hopemo_string_detail_programming_languages: "Rayuela"
+  tutorial_tynkercm_string_detail_programming_languages: "Bloques"
   tutorial_codesterswintergreet_string_detail_programming_languages: "Python"
   tutorial_codestersc_string_detail_programming_languages: "Python"
   tutorial_codestersturtle_string_detail_programming_languages: "Python"
   tutorial_penjee_string_detail_programming_languages: "Python"
-  tutorial_trinket_string_detail_programming_languages: "Blocks, Kano Code"
-  tutorial_frogger_string_detail_programming_languages: "Blocks"
-  tutorial_tynkereco_string_detail_programming_languages: "Blocks"
-  tutorial_mitedarc_string_detail_programming_languages: "Blocks"
+  tutorial_trinket_string_detail_programming_languages: "Bloques, Kano Code"
+  tutorial_frogger_string_detail_programming_languages: "Bloques"
+  tutorial_tynkereco_string_detail_programming_languages: "Bloques"
+  tutorial_mitedarc_string_detail_programming_languages: "Bloques"
   tutorial_khan_string_detail_programming_languages: "JavaScript"
-  tutorial_tynkerd_string_detail_programming_languages: "Blocks"
+  tutorial_tynkerd_string_detail_programming_languages: "Bloques"
   tutorial_cdmy_string_detail_programming_languages: "JavaScript"
-  tutorial_codestersdance_string_detail_programming_languages: "Blocks, Python"
+  tutorial_codestersdance_string_detail_programming_languages: "Bloques, Python"
   tutorial_codestersbasketball_string_detail_programming_languages: "Python"
-  tutorial_nclkarel_string_detail_programming_languages: "Karel (simplified Python)"
+  tutorial_nclkarel_string_detail_programming_languages: "Karel (Python simplificado)"
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
-  tutorial_tynkerdrones_string_detail_programming_languages: "Blocks"
-  tutorial_carla_string_detail_programming_languages: "Coffeescript"
+  tutorial_tynkerdrones_string_detail_programming_languages: "Bloques"
+  tutorial_carla_string_detail_programming_languages: "CoffeeScript"
   tutorial_globaloria_string_detail_programming_languages: "JavaScript"
   tutorial_capost_string_detail_programming_languages: "HTML, CSS"
-  tutorial_marco_string_detail_programming_languages: "Blocks"
+  tutorial_marco_string_detail_programming_languages: "Bloques"
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"
   tutorial_kanopong_string_detail_programming_languages: "JavaScript"
-  tutorial_tynkerright_string_detail_programming_languages: "Blocks"
-  tutorial_flatverse_string_detail_programming_languages: "Touch Develop"
+  tutorial_tynkerright_string_detail_programming_languages: "Bloques"
+  tutorial_flatverse_string_detail_programming_languages: "Desarrollo táctil"
   tutorial_touchdevelop_string_detail_programming_languages: "do-not-show"
-  tutorial_tynkercc_string_detail_programming_languages: "Blocks"
+  tutorial_tynkercc_string_detail_programming_languages: "Bloques"
   tutorial_bamboo_string_detail_programming_languages: "JavaScript"
   tutorial_robojav_string_detail_programming_languages: "Java"
-  tutorial_roboba_string_detail_programming_languages: "Blocks, Ch/C/C++"
+  tutorial_roboba_string_detail_programming_languages: "Bloques, Ch/C/C++"
   tutorial_knodsnake_string_detail_programming_languages: "JavaScript"
   tutorial_soccharater_string_detail_programming_languages: "JavaScript"
   tutorial_silent_string_detail_programming_languages: "JavaScript"
-  tutorial_robomesh_string_detail_programming_languages: "Blocks, Python"
+  tutorial_robomesh_string_detail_programming_languages: "Bloques, Python"
   tutorial_amaze_string_detail_programming_languages: "Blocks, Ready, Unity"
-  tutorial_codestersds_string_detail_programming_languages: "Blocks"
+  tutorial_codestersds_string_detail_programming_languages: "Bloques"
   tutorial_knodtext_string_detail_programming_languages: "Python"
-  tutorial_alicegar_string_detail_programming_languages: "Blocks"
+  tutorial_alicegar_string_detail_programming_languages: "Bloques"
   tutorial_codesterstransform_string_detail_programming_languages: "Python"
   tutorial_flexfrog_string_detail_programming_languages: "CSS"
   tutorial_codemoji_string_detail_programming_languages: "do-not-show"
-  tutorial_robobii_string_detail_programming_languages: "Blocks, Ch/C/C++"
-  tutorial_robobm_string_detail_programming_languages: "Blocks, Ch/C/C++"
-  tutorial_codingrobots_string_detail_programming_languages: "Blocks, Ch/C/C++"
-  tutorial_robob_string_detail_programming_languages: "Blocks, Ch/C/C++"
-  tutorial_coders_string_detail_programming_languages: "Language independent"
-  tutorial_tynkerhw_string_detail_programming_languages: "Blocks"
-  tutorial_tynkermh_string_detail_programming_languages: "Blocks"
+  tutorial_robobii_string_detail_programming_languages: "Bloques, Ch/C/C++"
+  tutorial_robobm_string_detail_programming_languages: "Bloques, Ch/C/C++"
+  tutorial_codingrobots_string_detail_programming_languages: "Bloques, Ch/C/C++"
+  tutorial_robob_string_detail_programming_languages: "Bloques, Ch/C/C++"
+  tutorial_coders_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tynkerhw_string_detail_programming_languages: "Bloques"
+  tutorial_tynkermh_string_detail_programming_languages: "Bloques"
   tutorial_caphoto_string_detail_programming_languages: "JavaScript, HTML, CSS"
   tutorial_mozillahw_string_detail_programming_languages: "JavaScript"
   tutorial_ticklep_string_detail_programming_languages: "do-not-show"
-  tutorial_bbot_string_detail_programming_languages: "Visual programming language"
-  tutorial_scratchg_string_detail_programming_languages: "Language independent"
-  tutorial_roboticfriends_string_detail_programming_languages: "Language independent"
-  tutorial_sjforest_string_detail_programming_languages: "Blocks"
-  tutorial_sjgreet_string_detail_programming_languages: "Blocks"
-  tutorial_sjsunset_string_detail_programming_languages: "Blocks"
-  tutorial_fufafrenz_string_detail_programming_languages: "Language independent"
+  tutorial_bbot_string_detail_programming_languages: "Lenguaje de programación visual"
+  tutorial_scratchg_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_roboticfriends_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_sjforest_string_detail_programming_languages: "Bloques"
+  tutorial_sjgreet_string_detail_programming_languages: "Bloques"
+  tutorial_sjsunset_string_detail_programming_languages: "Bloques"
+  tutorial_fufafrenz_string_detail_programming_languages: "Independiente del idioma"
   tutorial_bbcgeo_string_detail_programming_languages: "do-not-show"
   tutorial_chspixel_string_detail_programming_languages: "JavaScript"
-  tutorial_hummingbird_string_detail_programming_languages: "Blocks"
-  tutorial_recoloring_string_detail_programming_languages: "Coffee Script (Pencil Code)"
+  tutorial_hummingbird_string_detail_programming_languages: "Bloques"
+  tutorial_recoloring_string_detail_programming_languages: "Coffee Script (Código de Lápiz)"
   tutorial_bbcchem_string_detail_programming_languages: "do-not-show"
-  tutorial_floalgo_string_detail_programming_languages: "Language independent"
-  tutorial_flocond_string_detail_programming_languages: "Blocks, Language independent"
-  tutorial_floloops_string_detail_programming_languages: "Blocks, Language independent"
-  tutorial_pgts_string_detail_programming_languages: "Language independent"
-  tutorial_ozo_string_detail_programming_languages: "Blocks"
+  tutorial_floalgo_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_flocond_string_detail_programming_languages: "Bloques, independiente del idioma"
+  tutorial_floloops_string_detail_programming_languages: "Bloques, independiente del idioma"
+  tutorial_pgts_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_ozo_string_detail_programming_languages: "Bloques"
   tutorial_bbcla_string_detail_programming_languages: "do-not-show"
   tutorial_bbcsci_string_detail_programming_languages: "do-not-show"
-  tutorial_tlctour_string_detail_programming_languages: "Language independent"
+  tutorial_tlctour_string_detail_programming_languages: "Independiente del idioma"
   tutorial_codesterstj_string_detail_programming_languages: "Python"
-  tutorial_tlclocked_string_detail_programming_languages: "Language independent"
-  tutorial_baubles_string_detail_programming_languages: "Language independent"
+  tutorial_tlclocked_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_baubles_string_detail_programming_languages: "Independiente del idioma"
   tutorial_bbcart_string_detail_programming_languages: "do-not-show"
-  tutorial_tlcknight_string_detail_programming_languages: "Language independent"
-  tutorial_fufafit_string_detail_programming_languages: "Language independent"
-  tutorial_ozodance_string_detail_programming_languages: "Blocks"
-  tutorial_codingrobotics_string_detail_programming_languages: "Language independent"
+  tutorial_tlcknight_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_fufafit_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_ozodance_string_detail_programming_languages: "Bloques"
+  tutorial_codingrobotics_string_detail_programming_languages: "Independiente del idioma"
   tutorial_box_string_detail_programming_languages: "do-not-show"
-  tutorial_hopgame_string_detail_programming_languages: "Hopscotch"
+  tutorial_hopgame_string_detail_programming_languages: "Rayuela"
   tutorial_icontrol_string_detail_programming_languages: "Tickle"
   tutorial_cocomteach_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
   tutorial_bbcmathii_string_detail_programming_languages: "do-not-show"
   tutorial_bbcphys_string_detail_programming_languages: "do-not-show"
   tutorial_bitsbox_string_detail_programming_languages: "JavaScript"
-  tutorial_tlcemo_string_detail_programming_languages: "Language independent"
-  tutorial_crd_string_detail_programming_languages: "Language independent"
+  tutorial_tlcemo_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_crd_string_detail_programming_languages: "Independiente del idioma"
   tutorial_bbcbio_string_detail_programming_languages: "do-not-show"
-  tutorial_ticklebb8_string_detail_programming_languages: "Blocks"
+  tutorial_ticklebb8_string_detail_programming_languages: "Bloques"
   tutorial_grok_string_detail_programming_languages: "do-not-show"
   tutorial_ijournalist_string_detail_programming_languages: "HTML, CSS"
   tutorial_bbcmusic_string_detail_programming_languages: "do-not-show"
-  tutorial_secretcodes_string_detail_programming_languages: "Blocks"
-  tutorial_tlchex_string_detail_programming_languages: "Language independent"
-  tutorial_tickles_string_detail_programming_languages: "Blocks"
-  tutorial_ozogame_string_detail_programming_languages: "Blocks"
-  tutorial_vidcodeio_string_detail_programming_languages: "Language independent"
-  tutorial_besttech_string_detail_programming_languages: "Blocks, C/C++"
-  tutorial_tlcbrain_string_detail_programming_languages: "Language independent"
-  tutorial_hopquiz_string_detail_programming_languages: "Hopscotch"
-  tutorial_unfortunate_string_detail_programming_languages: "Blocks"
-  tutorial_cha_string_detail_programming_languages: "Language independent"
-  tutorial_elaseq_string_detail_programming_languages: "Language independent"
+  tutorial_secretcodes_string_detail_programming_languages: "Bloques"
+  tutorial_tlchex_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tickles_string_detail_programming_languages: "Bloques"
+  tutorial_ozogame_string_detail_programming_languages: "Bloques"
+  tutorial_vidcodeio_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_besttech_string_detail_programming_languages: "Bloques, C/C++"
+  tutorial_tlcbrain_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_hopquiz_string_detail_programming_languages: "Rayuela"
+  tutorial_unfortunate_string_detail_programming_languages: "Bloques"
+  tutorial_cha_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_elaseq_string_detail_programming_languages: "Independiente del idioma"
   tutorial_bbcmathi_string_detail_programming_languages: "do-not-show"
-  tutorial_tlcpixel_string_detail_programming_languages: "Language independent"
+  tutorial_tlcpixel_string_detail_programming_languages: "Independiente del idioma"
   tutorial_arduino_string_detail_programming_languages: "Arduino"
   tutorial_introrobo_string_detail_programming_languages: "Bloques, JavaScript"
-  tutorial_tlcinvis_string_detail_programming_languages: "Language independent"
-  tutorial_tlcjflap_string_detail_programming_languages: "Language independent"
-  tutorial_procolor_string_detail_programming_languages: "Language independent"
-  tutorial_spiralsfinch_string_detail_programming_languages: "Blocks"
-  tutorial_ozoi_string_detail_programming_languages: "Language independent"
-  tutorial_ticklel_string_detail_programming_languages: "Blocks"
-  tutorial_spiralsdash_string_detail_programming_languages: "Blocks"
-  tutorial_ghdebug_string_detail_programming_languages: "Blocks"
-  tutorial_tlckk_string_detail_programming_languages: "Language independent"
-  tutorial_firstcomp_string_detail_programming_languages: "Language independent"
-  tutorial_mazefinch_string_detail_programming_languages: "Blocks"
-  tutorial_tlccc_string_detail_programming_languages: "Language independent"
-  tutorial_tlcdoodle_string_detail_programming_languages: "Language independent"
-  tutorial_tlcpunch_string_detail_programming_languages: "Language independent"
+  tutorial_tlcinvis_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tlcjflap_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_procolor_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_spiralsfinch_string_detail_programming_languages: "Bloques"
+  tutorial_ozoi_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_ticklel_string_detail_programming_languages: "Bloques"
+  tutorial_spiralsdash_string_detail_programming_languages: "Bloques"
+  tutorial_ghdebug_string_detail_programming_languages: "Bloques"
+  tutorial_tlckk_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_firstcomp_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_mazefinch_string_detail_programming_languages: "Bloques"
+  tutorial_tlccc_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tlcdoodle_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tlcpunch_string_detail_programming_languages: "Independiente del idioma"
   tutorial_finchfract_string_detail_programming_languages: "Java, Python"
-  tutorial_tlcmind_string_detail_programming_languages: "Language independent"
-  tutorial_tlctelebot_string_detail_programming_languages: "Language independent"
-  tutorial_tlcaus_string_detail_programming_languages: "Language independent"
-  tutorial_oralhist_string_detail_programming_languages: "Language independent"
-  tutorial_tlcmicro_string_detail_programming_languages: "Language independent"
+  tutorial_tlcmind_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tlctelebot_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tlcaus_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_oralhist_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_tlcmicro_string_detail_programming_languages: "Independiente del idioma"
   tutorial_imathematician_string_detail_programming_languages: "Scratch"
-  tutorial_tlcmagic_string_detail_programming_languages: "Language independent"
-  tutorial_scratchmus_string_detail_programming_languages: "Blocks, Scratch"
-  tutorial_scratchanim_string_detail_programming_languages: "Blocks, Scratch"
-  tutorial_scratchfly_string_detail_programming_languages: "Blocks, Scratch"
-  tutorial_tynkerarc_string_detail_programming_languages: "Blocks"
+  tutorial_tlcmagic_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_scratchmus_string_detail_programming_languages: "Bloques, Scratch"
+  tutorial_scratchanim_string_detail_programming_languages: "Bloques, Scratch"
+  tutorial_scratchfly_string_detail_programming_languages: "Bloques, Scratch"
+  tutorial_tynkerarc_string_detail_programming_languages: "Bloques"
   tutorial_grokffpython_string_detail_programming_languages: "Python"
-  tutorial_grokffblock_string_detail_programming_languages: "Blocks"
+  tutorial_grokffblock_string_detail_programming_languages: "Bloques"
   tutorial_grokeliza_string_detail_programming_languages: "Python"
-  tutorial_tynkercan_string_detail_programming_languages: "Blocks"
+  tutorial_tynkercan_string_detail_programming_languages: "Bloques"
   tutorial_grokflags_string_detail_programming_languages: "Python"
-  tutorial_robomind_string_detail_programming_languages: "Blocks"
-  tutorial_scratchanimwork_string_detail_programming_languages: "Blocks, Scratch"
-  tutorial_adventureq_string_detail_programming_languages: "Blocks"
+  tutorial_robomind_string_detail_programming_languages: "Bloques"
+  tutorial_scratchanimwork_string_detail_programming_languages: "Bloques, Scratch"
+  tutorial_adventureq_string_detail_programming_languages: "Bloques"
   tutorial_khan-es_string_detail_programming_languages: "JavaScript"
   tutorial_kpt_string_detail_programming_languages: "JavaScript"
   tutorial_kpl_string_detail_programming_languages: "JavaScript"
   tutorial_khe_string_detail_programming_languages: "JavaScript"
   tutorial_kfr_string_detail_programming_languages: "JavaScript"
-  tutorial_app-inventor_string_detail_programming_languages: "Blocks"
-  tutorial_bits_string_detail_programming_languages: "Blocks, Language independent"
-  tutorial_blockly_string_detail_programming_languages: "Blocks"
+  tutorial_app-inventor_string_detail_programming_languages: "Bloques"
+  tutorial_bits_string_detail_programming_languages: "Bloques, independiente del idioma"
+  tutorial_blockly_string_detail_programming_languages: "Bloques"
   tutorial_tynker_string_detail_programming_languages: "do-not-show"
-  tutorial_baypt_string_detail_programming_languages: "Blocks"
+  tutorial_baypt_string_detail_programming_languages: "Bloques"
   tutorial_code-combat_string_detail_programming_languages: "do-not-show"
   tutorial_mky_string_detail_programming_languages: "CoffeeScript"
   tutorial_spellcraft_string_detail_programming_languages: "Bloques, JavaScript"
-  tutorial_pirates_string_detail_programming_languages: "Blocks, Pirate code"
+  tutorial_pirates_string_detail_programming_languages: "Bloques, código pirata"
   tutorial_csfirst_string_detail_programming_languages: "Scratch"
-  tutorial_loopedy_string_detail_programming_languages: "Blocks"
+  tutorial_loopedy_string_detail_programming_languages: "Bloques"
   tutorial_dsw_string_detail_programming_languages: "do-not-show"
   tutorial_dswb_string_detail_programming_languages: "do-not-show"
   tutorial_ssw_string_detail_programming_languages: "do-not-show"
   tutorial_sswb_string_detail_programming_languages: "do-not-show"
-  tutorial_kodable-unplugged_string_detail_programming_languages: "Language independent"
-  tutorial_scratch_string_detail_programming_languages: "Language independent"
-  tutorial_bayes_string_detail_programming_languages: "Blocks"
+  tutorial_kodable-unplugged_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_scratch_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_bayes_string_detail_programming_languages: "Bloques"
   tutorial_gumball_string_detail_programming_languages: "do-not-show"
   tutorial_hrm_string_detail_programming_languages: "Assembly"
   tutorial_ice-age_string_detail_programming_languages: "do-not-show"
   tutorial_koapp_string_detail_programming_languages: "do-not-show"
-  tutorial_lightbot-intl_string_detail_programming_languages: "Blocks"
+  tutorial_lightbot-intl_string_detail_programming_languages: "Bloques"
   tutorial_rmc_string_detail_programming_languages: "do-not-show"
   tutorial_smc_string_detail_programming_languages: "do-not-show"
   tutorial_minecraft-2016_string_detail_programming_languages: "do-not-show"
   tutorial_thinkersmith-es_string_detail_programming_languages: "JavaScript"
-  tutorial_pixie_string_detail_programming_languages: "Blocks"
+  tutorial_pixie_string_detail_programming_languages: "Bloques"
   tutorial_play_string_detail_programming_languages: "do-not-show"
-  tutorial_robomind-nl_string_detail_programming_languages: "Blocks"
-  tutorial_spheroi_string_detail_programming_languages: "Blocks, C/C++"
-  tutorial_spherol_string_detail_programming_languages: "Blocks, C/C++"
-  tutorial_spherov_string_detail_programming_languages: "Blocks, C/C++"
+  tutorial_robomind-nl_string_detail_programming_languages: "Bloques"
+  tutorial_spheroi_string_detail_programming_languages: "Bloques, C/C++"
+  tutorial_spherol_string_detail_programming_languages: "Bloques, C/C++"
+  tutorial_spherov_string_detail_programming_languages: "Bloques, C/C++"
   tutorial_swb_string_detail_programming_languages: "do-not-show"
   tutorial_build-a-galaxy_string_detail_programming_languages: "do-not-show"
-  tutorial_alicesims_string_detail_programming_languages: "Blocks"
+  tutorial_alicesims_string_detail_programming_languages: "Bloques"
   tutorial_tchr_string_detail_programming_languages: "do-not-show"
-  tutorial_robogame_string_detail_programming_languages: "Blocks"
-  tutorial_tap_string_detail_programming_languages: "Blocks"
+  tutorial_robogame_string_detail_programming_languages: "Bloques"
+  tutorial_tap_string_detail_programming_languages: "Bloques"
   tutorial_cintl_string_detail_programming_languages: "do-not-show"
-  tutorial_itchstop_string_detail_programming_languages: "Blocks"
-  tutorial_tynkerpn_string_detail_programming_languages: "Blocks"
-  tutorial_tynkerpd_string_detail_programming_languages: "Blocks"
-  tutorial_persistence_string_detail_programming_languages: "Language independent"
-  tutorial_getloopy_string_detail_programming_languages: "Language independent"
-  tutorial_createface_string_detail_programming_languages: "Language independent"
-  tutorial_happymaps_string_detail_programming_languages: "Language independent"
-  tutorial_moveit_string_detail_programming_languages: "Language independent"
-  tutorial_bigevent_string_detail_programming_languages: "Language independent"
-  tutorial_gpp_string_detail_programming_languages: "Language independent"
-  tutorial_foosgame_string_detail_programming_languages: "Blocks"
+  tutorial_itchstop_string_detail_programming_languages: "Bloques"
+  tutorial_tynkerpn_string_detail_programming_languages: "Bloques"
+  tutorial_tynkerpd_string_detail_programming_languages: "Bloques"
+  tutorial_persistence_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_getloopy_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_createface_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_happymaps_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_moveit_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_bigevent_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_gpp_string_detail_programming_languages: "Independiente del idioma"
+  tutorial_foosgame_string_detail_programming_languages: "Bloques"
   tutorial_solopython_string_detail_programming_languages: "Python"
-  tutorial_kodableint_string_detail_programming_languages: "Language independent, Symbols"
-  tutorial_kodableadv_string_detail_programming_languages: "Language independent, Javascript"
+  tutorial_kodableint_string_detail_programming_languages: "Lenguage independiente, símbolos"
+  tutorial_kodableadv_string_detail_programming_languages: "Lenguage independiente, Javascript"
   tutorial_tynkertj_string_detail_programming_languages: "Python"
-  tutorial_wolframa_string_detail_programming_languages: "Wolfram Language"
-  tutorial_wolframm_string_detail_programming_languages: "Wolfram Language"
-  tutorial_wolframspi_string_detail_programming_languages: "Wolfram Language"
-  tutorial_wolframsph_string_detail_programming_languages: "Wolfram Language"
-  tutorial_wolframp_string_detail_programming_languages: "Wolfram Language"
-  tutorial_wolframn_string_detail_programming_languages: "Wolfram Language"
+  tutorial_wolframa_string_detail_programming_languages: "Lenguage de Wolfram"
+  tutorial_wolframm_string_detail_programming_languages: "Lenguage de Wolfram"
+  tutorial_wolframspi_string_detail_programming_languages: "Lenguage de Wolfram"
+  tutorial_wolframsph_string_detail_programming_languages: "Lenguage de Wolfram"
+  tutorial_wolframp_string_detail_programming_languages: "Lenguage de Wolfram"
+  tutorial_wolframn_string_detail_programming_languages: "Lenguage de Wolfram"
   tutorial_soloweb_string_detail_programming_languages: "HTML, CSS"
-  tutorial_bloxmobapp_string_detail_programming_languages: "Blocks"
+  tutorial_bloxmobapp_string_detail_programming_languages: "Bloques"
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
-  tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
-  school_not_found_heading: "We couldn't find your school. Please enter more information."
-  school_name: "School name"
-  school_name_error: "School name is required."
-  school_city: "School city"
-  school_state: "School state"
-  school_zip: "Postal code"
-  school_zip_error: "School postal code is required."
-  census_thanks: 'Thanks for signing up!'
-  census_header: 'Please take a few minutes to tell us about your school (Optional).'
-  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
-  census_how_many_hoc: "How many students will do an Hour of Code?"
-  census_how_many_after_school: "How many students do computer programming in an after-school program?"
-  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
-  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
-  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
-  census_connection: "What is your connection to this school?"
-  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
-  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
-  census_followup_frequency: "How often per week does this class meet?"
-  less_than_one: "< 1 hour per week"
-  one_to_three: "1-3 hours per week"
-  three_plus: "3+ hours per week"
-  census_followup_more: "Please tell us more about this course."
-  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
-  census_topics_blocks: "Block-based programming"
-  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
-  census_topics_robots: "Robotics / Physical Computing"
-  census_topics_internet: "Internet and networking"
-  census_topics_security: "Cybersecurity"
-  census_topics_data: "Data analysis"
-  census_topics_web_design: "Web design using HTML and CSS"
-  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
-  teacher: "Teacher"
-  administrator: "Administrator"
-  parent: "Parent"
-  volunteer_or_advocate: "Volunteer/Community Advocate"
-  other: "Other"
-  other_describe: "Other (please describe below)"
-  none: "None"
-  some: "Some"
-  all: "All"
-  dont_know: "I don't know"
+  tutorial_robomeshiq_string_detail_programming_languages: "Bloques, Python"
+  school_not_found_heading: "No pudimos encontrar su escuela. Por favor introduzca más información."
+  school_name: "Nombre de la escuela"
+  school_name_error: "Nombre de la escuela es necesario."
+  school_city: "Ciudad de la escuela"
+  school_state: "País de la escuela"
+  school_zip: "Código postal"
+  school_zip_error: "El código postal de la escuela es necesario."
+  census_thanks: '¡Gracias por registrarte!'
+  census_header: 'Por favor tome unos minutos para contarnos sobre su escuela (opcional).'
+  census_heading: "Por favor compartir cuánta programación se enseña en esta escuela. Asumir a los efectos de las siguientes preguntas que programación no incluye HTML/CSS, Diseño Web o cómo usar las apps."
+  census_how_many_hoc: "¿Cuántos estudiantes van a hacer una hora de código?"
+  census_how_many_after_school: "¿Cuántos estudiantes hacen programación como actividad extraescolar?"
+  census_how_many_ten_hours: "¿Cuántos estudiantes toman al menos 10 horas de programación informática integradas en un curso no relacionado con la informática (como TechEd, Matemáticas, Ciencias, Arte, Biblioteca o aula)?"
+  census_how_many_twenty_hours: "¿Cuántos estudiantes toman un curso de informática de un semestre o un año que incluye al menos 20 horas de programación?"
+  census_other_cs: "Esta escuela enseña otras clases de informática que no incluyen al menos 20 horas de programación. (Por ejemplo, aprender a usar aplicaciones, alfabetización informática, diseño web, HTML / CSS u otro)"
+  census_connection: "¿Cuál es su conexión a esta escuela?"
+  census_pledge: "Me comprometo a expandir las ofertas de ciencias de la computación en mi escuela, y a involucrar a un grupo diverso de estudiantes, para brindar oportunidades a todos."
+  census_followup_heading: "¡Su escuela ofrece una clase de informática de un semestre o un año! ¿Qué temas incluye este curso?"
+  census_followup_frequency: "¿Cuantas veces por semana se reúne esta clase?"
+  less_than_one: "< 1 hora por semana"
+  one_to_three: "1-3 horas por semana"
+  three_plus: ">3 horas por semana"
+  census_followup_more: "Por favor díganos más acerca de este curso."
+  census_followup_more_placeholder: "Por ejemplo, nombre de la clase, con qué frecuencia se encuentra, descripción de lo que se enseña."
+  census_topics_blocks: "Programación basada en bloques"
+  census_topics_text: "  Programación basada en texto en un lenguaje como Java, JavaScript, Python, C++, etc. (Excluyendo HTML o CSS)"
+  census_topics_robots: "Robótica / Computación física"
+  census_topics_internet: "Internet y redes"
+  census_topics_security: "Ciberseguridad"
+  census_topics_data: "Análisis de datos"
+  census_topics_web_design: "Diseño web con HTML y CSS"
+  census_topics_game_design: "Diseño de juegos utilizando herramientas para diseño de juegos sin programación"
+  teacher: "Profesor"
+  administrator: "Administrador"
+  parent: "Padres"
+  volunteer_or_advocate: "Voluntario/Defensor de la comunidad"
+  other: "Otros"
+  other_describe: "Otros (describa a continuación)"
+  none: "Ninguno"
+  some: "Algunos"
+  all: "Todos"
+  dont_know: "No lo sé"

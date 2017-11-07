@@ -64,7 +64,7 @@ Los ordenadores están por todas partes, cambiando todas las industrias en el pl
 
 Con la Hora del Código, las Ciencias de la Computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todas las tiendas de Apple en el mundo han organizado una Hora de Código. El Presidente Obama escribió su primera línea de código como parte de la campaña.
 
-Este año, hagámoslo aún más grande. Te pido que te unas a la hora de código 2017. Por favor, participe en un evento de la Hora del Código para la Semana de educación en informática, <% = campaign_date ('full')%>.
+Este año, hagámoslo aún más grande. Te pido que te unas a la hora de código 2017. Por favor, participe en un evento de la Hora del Código para la Semana de educación en informática, <%= campaign_date('full')%>.
 
 Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O haz tu mismo la Hora del Código-- todos pueden beneficiarse de aprender los conceptos básicos.
 
