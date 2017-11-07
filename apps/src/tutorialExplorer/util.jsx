@@ -9,7 +9,8 @@ export const TutorialsSortByOptions = utils.makeEnum('popularityrank', 'displayw
 export const TutorialsSortByFieldNames = utils.makeEnum(
   'popularityrank',
   'displayweight',
-  'displayweight_k5',
+  'displayweight_pre',
+  'displayweight_25',
   'displayweight_middle',
   'displayweight_high'
 );
