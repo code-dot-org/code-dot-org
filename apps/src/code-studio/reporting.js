@@ -245,8 +245,8 @@ reporting.sendReport = function (report) {
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  var postMilestoneMode = appOptions.postMilestoneMode;
-  var postMilestone;
+  const postMilestoneMode = appOptions.postMilestoneMode || PostMilestoneMode.all;
+  let postMilestone;
 
   switch (postMilestoneMode) {
     case PostMilestoneMode.all:

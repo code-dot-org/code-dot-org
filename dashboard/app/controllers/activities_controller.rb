@@ -36,6 +36,9 @@ class ActivitiesController < ApplicationController
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     post_failed_run_milestone = Gatekeeper.allows('postFailedRunMilestone', where: {script_name: script_name}, default: true)
     final_level = @script_level.try(:final_level?)
+    # We should only expect milestone posts if:
+    #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
+    #  - this is the final level - we always post on final level
     unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
       head 503
       return
