@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_press_kit) %>'
+layout: ფართო
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## როგორ მოიზიდოთ მედიის წარმომადგენლები თქვენს კოდის ერთ საათზე
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### ძირითადი მინიშნებები
 
-  * დაუკავშირდით მედია-საშუალებებს ღონისძიებამდე ორი კვირით ადრე ელ. ფოსტით. თუ პასუხს არ მიიღებთ, კვლავ მისწერეთ ან ტელეფონით დაუკავშირდით.
-  * სთხოვეთ სკოლის თანამშრომელს ან მოხალისეს გადაიღონ სურათები - ეს შემდგომ დაგჭირდებათ ონლაინ ან პრესისთვის გასაზიარებლად.
-  * დაწერეთ კოდის ერთი საათის შესახებ თქვენი ვებ-საიტის მთავარ გვერდზე, ასევე სკოლის გაზეთში. დაპოსტეთ ღონისძიების დეტალები და მოსწავლეების აქტივობების ამსახველი სურათები.
-  * გააზიარეთ თვენი ახალი ამბები და გეგმები, ღონისძიებები და სურათები Facebook-სა და Twitter-ზე დეკემბრის 5-11 კვირის განმავლობაში. გამოიყენეთ ჰეშთეგი **#HourOfCode** - ასე Code.org დაინახავს და გაავრცელებს თქვენს ღონისძიებებს.
+- დაუკავშირდით მედია-საშუალებებს ღონისძიებამდე ორი კვირით ადრე ელ. ფოსტით. თუ პასუხს არ მიიღებთ, კვლავ მისწერეთ ან ტელეფონით დაუკავშირდით.
+- სთხოვეთ სკოლის თანამშრომელს ან მოხალისეს გადაიღონ სურათები - ეს შემდგომ დაგჭირდებათ ონლაინ ან პრესისთვის გასაზიარებლად.
+- დაწერეთ კოდის ერთი საათის შესახებ თქვენი ვებ-საიტის მთავარ გვერდზე, ასევე სკოლის გაზეთში. დაპოსტეთ ღონისძიების დეტალები და მოსწავლეების აქტივობების ამსახველი სურათები.
+- გააზიარეთ თვენი ახალი ამბები და გეგმები, ღონისძიებები და სურათები Facebook-სა და Twitter-ზე დეკემბრის 5-11 კვირის განმავლობაში. გამოიყენეთ ჰეშთეგი **#HourOfCode** - ასე Code.org დაინახავს და გაავრცელებს თქვენს ღონისძიებებს.
 
 ### დაწვრილებითი ინსტრუქცია:
 
 **1. Plan your event**
 
-  * დაგეგმეთ, ვინ მიიღებს მონაწილეობას კოდის ერთი საათის გახსნაში.
-  * გაუგავნეთ [წერილი](%= resolve_url('/promote/resources#sample-emails') %) მშობლებს. სთხოვეთ, გაავრცელონ ინფორმაცია.
-  * გააგზავნეთ [წერილი](%= resolve_url('/promote/resources#sample-emails') %) და მოიწვიეთ სპიკერად მერი, მთავრობის სხვა წარმომადგენელი ან გავლენიანი ბიზნესმენი.
-  * დაგეგმეთ ჯგუფური აქტივობები (მაგალითად, ოფლაინ-პროგრამირების აქტივობები) ან აჩვენეთ მოსწავლეების მიერ შექმნილი პროგრამები.
-  * შთაგონებისთვის აჩვენეთ Code.org-ის [კოდის ერთი საათის ვიდეო](%= resolve_url('/') %) ან ერთ-ერთი [ამათგანი](%= resolve_url('/promote/resources#videos') %).
+- დაგეგმეთ, ვინ მიიღებს მონაწილეობას კოდის ერთი საათის გახსნაში.
+- გაუგავნეთ [წერილი](%= resolve_url('/promote/resources#sample-emails') %) მშობლებს. სთხოვეთ, გაავრცელონ ინფორმაცია.
+- გააგზავნეთ [წერილი](%= resolve_url('/promote/resources#sample-emails') %) და მოიწვიეთ სპიკერად მერი, მთავრობის სხვა წარმომადგენელი ან გავლენიანი ბიზნესმენი.
+- დაგეგმეთ ჯგუფური აქტივობები (მაგალითად, ოფლაინ-პროგრამირების აქტივობები) ან აჩვენეთ მოსწავლეების მიერ შექმნილი პროგრამები.
+- შთაგონებისთვის აჩვენეთ Code.org-ის [კოდის ერთი საათის ვიდეო](%= resolve_url('/') %) ან ერთ-ერთი [ამათგანი](%= resolve_url('/promote/resources#videos') %).
 
 **2. Identify specific local reporters that cover education or local events.**
 
@@ -55,9 +54,9 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 **About Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. დამატებითი ინფორმაციისთვის გთხოვთ, ეწვიეთ: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote') %).
+მეტი რესურსი და ელექტრონული წერილის ნიმუშები იხილეთ [აქ](%= resolve_url('/promote') %).
 
 <%= view :signup_button %>
