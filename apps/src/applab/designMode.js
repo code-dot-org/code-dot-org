@@ -162,7 +162,7 @@ export function appendPx(input) {
   //if any sort of object, including arrays, is inputted, return empty string.
   //This gets around how parseInt and parseFloat treat arrays with first element numbers
   if (typeof input === 'object'){
-    return ''
+    return '';
   }
   const parsedInput = parseInt(input);
   return isNaN(parsedInput) ? '' : parsedInput + 'px';
