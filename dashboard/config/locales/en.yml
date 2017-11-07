@@ -765,6 +765,13 @@ en:
     create: "Create Project"
     create_a_project: 'Create a new project:'
     new: "Create New"
+    new_buttons:
+      artist: "Artist"
+      playlab: "Play Lab"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Rename"
     save: "Save"
     delete: "Delete"
