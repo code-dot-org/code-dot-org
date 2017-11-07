@@ -1,7 +1,7 @@
 ---
-title: <%=hoc_s(titre_ed_op) %>
+title: '<%= hoc_s(:title_op_ed) %>'
 layout: wide
-nav: promotion_nav
+nav: promote_nav
 ---
 <%= view :signup_button %>
 
@@ -10,7 +10,7 @@ nav: promotion_nav
   
 
 
-Veuillez visiter [<%=resolve_utl('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) pour retrouver des informations pertinentes sur les sciences de l'informatique. 
+Veuillez visiter [<%=resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %) pour retrouver des informations pertinentes sur les sciences de l'informatique.
 
 **Titre : L'informatique... Où seront les emplois**
 
