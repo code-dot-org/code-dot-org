@@ -25,10 +25,14 @@ class I18nHocRoutesTest < Minitest::Test
   def assert_successful_get(path)
     begin
       resp = get(path)
-    rescue SyntaxError
-      flunk "Caught SyntaxError for #{path}"
+      assert_equal 200, resp.status, path
+    rescue SyntaxError => e
+      flunk "Caught SyntaxError for #{path}: #{e}. It's likely that a translation incorrectly edited some templating syntax."
+    rescue NameError => e
+      flunk "Caught NameError for #{path}: #{e}. It's likely that a translation translated a template method name."
+    rescue Psych::SyntaxError => e
+      flunk "Caught Psych::SyntaxError when parsing YML for #{path}: #{e}. It's likely that a .yml translation file for this language received a formatting error."
     end
-    assert_equal 200, resp.status, path
   end
 
   def load_hoc_subpages
