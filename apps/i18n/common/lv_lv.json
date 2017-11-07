@@ -889,14 +889,20 @@
   "eligibilityYearYes1819": "Yes, I plan on teaching it during the '18-'19 school year.",
   "getDiscountCode": "Get discount code",
   "getCode": "Get Code",
+  "hideFullList": "Hide full list",
+  "projectGroupAdvancedTools": "Advanced Tools",
   "projectGroupArtistAllProjects": "All Drawing Projects",
   "projectGroupEventsAllProjects": "All Games with Events",
+  "projectGroupMath": "Math",
   "projectGroupMinecraftAllProjects": "All Minecraft Projects",
   "projectGroupPlaylabAllProjects": "All Play Lab Projects",
+  "projectTypeMinecraftAdventurer": "Minecraft Adventurer",
+  "projectTypeMinecraftDesigner": "Minecraft Designer",
   "typeName": "(Type your first and last name below):",
   "verifyStatementsforCode": "Please verify the following statements before you can receive a code.",
   "verifySignature": "By signing below you commit to teach the second semester of CS Discoveries, including Unit 6, by the '18-'19 school year.",
   "verifySingleCode": "I have not received or used another discount code from Code.org to purchase a Circuit Playground kit.",
   "verifyStudentCount": "I taught Units 1, 2, and 3 of Code.org's CS Discoveries curriculum to a classroom of at least 10 students.",
-  "verifyYear": "I plan on teaching Unit 6 (Physical Computing) of CS Discoveries to a classroom of at least 10 students by the end of the '18-'19 school year."
+  "verifyYear": "I plan on teaching Unit 6 (Physical Computing) of CS Discoveries to a classroom of at least 10 students by the end of the '18-'19 school year.",
+  "viewFullList": "View full list"
 }
