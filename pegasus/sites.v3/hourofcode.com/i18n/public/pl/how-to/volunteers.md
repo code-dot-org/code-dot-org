@@ -7,11 +7,11 @@ nav: how_to_nav
 
 # Poradnik dla wolontariuszy
 
-## Czemu wziąć udział?
+## Dlaczego wolontariat?
 
 Przeczytaj niektóre relacje innych wolontariuszy:
 
-- "Najlepsze, że cała klasa składała się z dziewcząt wszelkich ras. To, że mamy szansę dotrzeć do tych dzieciaków i zainteresować je, dobrze wróży przyszłości naszego przemysłu."
+- "Najlepsze moje doświadczenie, że cała klasa składała się z dziewcząt i osób o różnych kolorach skóry. To, że mamy szansę dotrzeć do tych dzieciaków i zainteresować je, dobrze wróży przyszłości naszego przemysłu."
 - "Radość sprawiło mi zwłaszcza zachęcanie dziewcząt do zainteresowania się technologią. Czułam, że pomagam kolejnemu pokoleniu w mojej okolicy."
 - "Uwielbiałem patrzeć na podekscytowane dzieci. Jedną z niesamowitych rzeczy było to, że nauczyciele zauważyli jak niektórzy słabi w nauce uczniowie doskonale sobie radzili z mysleniem programistycznym i nawet pomagali innym - co budowało ich wiarę w siebie."
 
