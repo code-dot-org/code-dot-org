@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
-import { navigateToHref } from '@cdo/apps/utils';
+import { navigateToHref, reload } from '@cdo/apps/utils';
+import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 
 const styles = {
   container: {
@@ -91,10 +93,16 @@ class SignInOrAgeDialog extends Component {
 
     sessionStorage.setItem(sessionStorageKey, true);
 
-    // Over 13, let them do the tutorial
-    this.setState({
-      open: false
-    });
+    // When opening a new tab, we'll have a new session (and thus show this dialog),
+    // but may still be using a storage_id for a previous user. Clear that cookie
+    // and reload
+    const cookieName = environmentSpecificCookieName('storage_id');
+    if (cookies.get(cookieName)) {
+      cookies.remove(cookieName, {path: '/', domain: '.code.org'});
+      reload();
+    } else {
+      this.setState({open: false});
+    }
   };
 
   render() {
