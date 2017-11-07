@@ -3,7 +3,7 @@
  */
 import React, {PropTypes} from 'react';
 import {Table, Button} from 'react-bootstrap';
-import {StatusColor, StatusTextColor} from './constants';
+import {StatusColors} from './constants';
 import _ from 'lodash';
 
 const styles = {
@@ -14,7 +14,8 @@ const styles = {
   tableWrapper: {
     width: '33.3%',
     paddingBottom: '30px'
-  }
+  },
+  statusCell: StatusColors
 };
 
 export default class SummaryTable extends React.Component {
@@ -29,11 +30,11 @@ export default class SummaryTable extends React.Component {
   }
 
   tableBody() {
-    return Object.keys(StatusColor).map((status, i) => {
+    return Object.keys(StatusColors).map((status, i) => {
       if (this.props.data.hasOwnProperty(status)) {
         return (
           <tr key={i}>
-            <td style={{backgroundColor: StatusColor[status], color: StatusTextColor[status]}}>
+            <td style={{...styles.statusCell[status]}}>
               {_.upperFirst(status)}
             </td>
             <td>{this.props.data[status]}</td>

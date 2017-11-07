@@ -5,27 +5,35 @@
 import color from '@cdo/apps/util/color';
 
 /**
- * Mapping of application statuses to their background color.
+ * Mapping of application statuses to their background and text colors.
  */
-exports.StatusColor = {
-  'unreviewed': color.charcoal,
-  'pending': color.lighter_orange,
-  'interview': color.orange,
-  'waitlisted': color.level_passed,
-  'accepted': color.level_perfect,
-  'declined': color.red,
-  'withdrawn': color.lightest_red
-};
-
-/**
- * Mapping of application statuses to their text color.
- */
-exports.StatusTextColor = {
-  'unreviewed': color.white,
-  'pending': color.black,
-  'interview': color.black,
-  'waitlisted': color.black,
-  'accepted': color.black,
-  'declined': color.white,
-  'withdrawn': color.black
+exports.StatusColors = {
+  'unreviewed': {
+    backgroundColor: color.charcoal,
+    color: color.white
+  },
+  'pending': {
+    backgroundColor: color.lighter_orange,
+    color: color.black
+  },
+  'interview': {
+    backgroundColor: color.orange,
+    color: color.black
+  },
+  'waitlisted': {
+    backgroundColor: color.level_passed,
+    color: color.black
+  },
+  'accepted': {
+    backgroundColor: color.level_perfect,
+    color: color.black
+  },
+  'declined': {
+    backgroundColor: color.red,
+    color: color.white
+  },
+  'withdrawn': {
+    backgroundColor: color.lightest_red,
+    color: color.black
+  }
 };
