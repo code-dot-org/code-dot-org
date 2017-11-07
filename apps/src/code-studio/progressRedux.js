@@ -428,6 +428,10 @@ export const stageExtrasUrl = (state, stageId) => (
     : ''
 );
 
+export const getLevelStatus = (state, levelId) => (
+  state.levelProgress && state.levelProgress[levelId]
+);
+
 /**
  * Given a level and levelProgress (both from our redux store state), determine
  * the status for that level.
