@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_country_resources) %>'
-layout: wide
+layout: szeroki
 nav: promote_nav
 ---
 <%= view :signup_button %>

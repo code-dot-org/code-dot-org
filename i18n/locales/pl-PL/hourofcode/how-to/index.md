@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_how_to) %>'
-layout: wide
+layout: szeroki
 nav: how_to_nav
 ---
 <%= view :signup_button %>
