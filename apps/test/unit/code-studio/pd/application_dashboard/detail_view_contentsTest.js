@@ -28,6 +28,7 @@ describe("DetailViewContents", () => {
             abilityToMeetRequirements: '10'
           }
         }}
+        viewType="facilitator"
         updateProps={() => {}}
       />
     );
