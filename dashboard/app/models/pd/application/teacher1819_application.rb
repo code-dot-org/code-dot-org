@@ -258,5 +258,21 @@ module Pd::Application
         ]
       }
     end
+
+    def program
+      sanitize_form_data_hash[:program]
+    end
+
+    def zip_code
+      sanitize_form_data_hash[:zip_code]
+    end
+
+    def state_name
+      sanitize_form_data_hash[:state]
+    end
+
+    def state_code
+      STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
   end
 end
