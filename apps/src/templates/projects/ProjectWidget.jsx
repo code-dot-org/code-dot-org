@@ -20,6 +20,7 @@ const styles = {
     fontSize: 16,
     fontFamily: '"Gotham 4r"',
     color: color.charcoal,
+    marginBottom: -20
   }
 };
 
