@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_press_kit) %>'
-layout: larg
+layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
