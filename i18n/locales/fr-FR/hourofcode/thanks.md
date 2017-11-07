@@ -1,20 +1,20 @@
 ---
-title: '<%= hoc_s(:title_signup_thanks) %>'
-layout: large
-nav: comment_faire_nav
+title: <%=hoc_s(titre_inscription_merci) %>
+layout: wide
+nav: how_to_nav
 social:
-  "og:title": '<%= hoc_s(:meta_tag_og_title) %>'
-  "og:description": '<%= hoc_s(:meta_tag_og_description) %>'
-  "og:image": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "og:title": '<%=hoc_s(:tag_meta_titre_og) %>'
+  "og:description": <%= hoc_s(tag_meta_déscription_og) %>
+  "og:image": 'http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png'
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": 'http://<%=request.host%>'
-  "twitter:card": player
-  "twitter:site": '@codeorg'
-  "twitter:url": 'http://<%=request.host%>'
-  "twitter:title": '<%= hoc_s(:meta_tag_twitter_title) %>'
-  "twitter:description": '<%= hoc_s(:meta_tag_twitter_description) %>'
-  "twitter:image:src": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "og:url": 'http://<%=requête.hôte%>'
+  "twitter:card": joueur
+  "twitter:site": '@code. org'
+  "twitter:url": 'http://<%=requête.hôte%>'
+  "twitter:title": '<%= hoc_s(:étiquette_meta_twitter_titre) %>'
+  "twitter:description": '<%=hoc_s(:étiquette_meta_twitter_déscription) %>'
+  "twitter:image:src": 'http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png'
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -22,7 +22,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Merci de vous être inscrit(e) pour organiser une Heure de Code !
 
-En guise de remerciement pour avoir aidé les étudiants à commencer à apprendre l'informatique, nous aimerions vous offrir un ensemble gratuit de posters créés par des professionnels et présentant différents modèles pour votre classe. Utilisez le code promotionnel "FREEPOSTERS" au moment de payer. (Remarque: offre disponible jusqu'à épuisement des stocks et vous devrez couvrir les frais d'expédition. Si ce n'est pas dans votre budget, les fichiers PDF sont disponibles pour l'imprimer vous même.) (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+En guise de remerciement pour avoir aidé les étudiants à commencer à apprendre l'informatique, nous aimerions vous offrir un ensemble gratuit de posters créés par des professionnels et présentant différents modèles pour votre classe. Utilisez le code promotionnel "FREEPOSTERS" au moment de payer. (Remarque: offre disponible jusqu'à épuisement des stocks et vous devrez couvrir les frais d'expédition. Si ce n'est pas dans votre budget, les fichiers PDF sont disponibles pour l'imprimer vous même.). Vu que ces affiches sont livrées des États-Unis, les frais d'expédition peuvent être pas mal hauts dans le cas de livrage internationel ou au Canada. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
 <br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
 <br /> **Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**

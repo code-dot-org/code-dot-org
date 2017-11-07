@@ -1,7 +1,7 @@
 ---
-title: <%=hoc_s(title_comment_faire_événements) %>
-layout: large
-nav: comment_faire_nav
+title: '<%= hoc_s(:title_how_to_events) %>'
+layout: wide
+nav: how_to_nav
 ---
 <%= view :signup_button %>
 

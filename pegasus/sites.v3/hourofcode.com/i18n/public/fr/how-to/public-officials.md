@@ -1,7 +1,7 @@
 ---
-title: '<%= hoc_s(:titre_comment_faire_officiels) %>'
-layout: large
-nav: comment_faire_nav
+title: '<%= hoc_s(:title_how_to_officials) %>'
+layout: wide
+nav: how_to_nav
 ---
 <%= view :signup_button %>
 

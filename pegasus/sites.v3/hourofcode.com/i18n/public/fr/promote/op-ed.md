@@ -1,6 +1,6 @@
 ---
 title: <%=hoc_s(titre_ed_op) %>
-layout: large
+layout: wide
 nav: promotion_nav
 ---
 <%= view :signup_button %>

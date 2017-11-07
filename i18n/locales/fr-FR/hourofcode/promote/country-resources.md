@@ -1,6 +1,6 @@
 ---
 title: '<%=hoc_s(:titre_resources_par_pays) %>'
-layout: large
+layout: wide
 nav: promotion_nav
 ---
 <%= view :signup_button %>
@@ -9,7 +9,7 @@ nav: promotion_nav
 
 # Recursos
 
-## ¿Qué hacemos cuando hacemos la Hora del Código?
+## ¿Qué hacemos cuando hacemos la Hora del Código ?
 
 <div class="handout" style="width: 50%; float: left;">
   
@@ -20,7 +20,7 @@ nav: promotion_nav
 <div class="handout" style="width: 50%; float: left;">
   
 <a href="/la/files/hacemos-la-Hora-del-Codigo-Ingles.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo-Ingles.png"></a>
-<br />En Inglés
+<br />En francés
 </div>
 
 <div style="clear:both"></div>
@@ -30,7 +30,7 @@ nav: promotion_nav
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)</strong></a>
+<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar ? Participá de la Hora del Código en Argentine (5 min)</strong></a>
 
   
   
@@ -51,23 +51,23 @@ p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <
 
-p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+p>[**Joignez-vous à la Nouvelle-Écosse pour l'Heure du Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
 <% elsif @country == 'id' %>
 
-Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang Menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia Pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
 
 Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 <% elsif @country == 'jp' %>
 
-## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## L'Heure de Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 <
 
-p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+p>[**l'Heure de Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+[Guide de Leçons Heure de Code](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
@@ -78,7 +78,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 <
 
-p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
+p>[**Amis de la Technologie Heur de Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
 <% elsif @country == 'pk' %>
 
@@ -86,19 +86,19 @@ p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed
 
 <% elsif @country == 'ro' %>
 
-Va multumim pentru inregistrare, daca doriti materiale printate pentru promovarea evenimentului, echipa din Romania vi le poate trimite prin curier. Trebuie doar sa trimiteti un email la HOC@adfaber.org si sa le solicitati.
+Va multumin pentru inregistrate, daca doriti materiale printate pentru promovarea ebenimentulul, echipa din Romania vi le poate trimite prin curier. Trebule doar sa trimiteti un email la HOC@adfaber.org si sa le solicitati.
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# Guide Comment-Faire pour les Organizations
 
-## Use this handout to recruit corporations
+## Utilisez ce document pour recruter les compagnies
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
 ## 1) Essayez les tutoriels:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+Nous allons mettre en place plusieurs tutoriels amusants durant un heur, créés par plusieurs partenaires. De nouveaux tutoriels arrivent pour commencer l'Heure de Code avant<%= date_de_la_campagne('pleine') %>.
 
 **Tous les tutoriels de l'Heure de Code:**
 
@@ -109,7 +109,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Planifier vos besoins en matériel - les ordinateurs sont facultatifs
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+La meilleure expérience Heur de Code sera avec des ordinateurs en-ligne. Mais vous n'avez pas besoin d'une ordinateur pour chaque participant, et vous pouvez même faire l'Heur de Code sans aucun ordinateur du tout.
 
 - **Testez les tutoriels sur les ordinateurs ou le matériel qu'utiliseront les élèves.** Assurez-vous que tout fonctionne correctement (avec son et vidéo).
 - **Prévisualisez la page de félicitation** pour voir ce que les élèves verront lorsqu'ils auront fini. 
