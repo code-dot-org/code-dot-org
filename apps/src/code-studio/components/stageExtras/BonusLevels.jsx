@@ -1,9 +1,12 @@
 import React, {PropTypes} from 'react';
 import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
-import i18n from '@cdo/locale';
-import { bonusLevel } from './shapes';
 import color from "../../../util/color";
+import i18n from '@cdo/locale';
+import { TestResults } from '@cdo/apps/constants';
+import { bonusLevel } from './shapes';
+import { connect } from 'react-redux';
+import { getLevelStatus } from '@cdo/apps/code-studio/progressRedux';
 
 const THUMBNAIL_IMAGE_SIZE = 200;
 
@@ -33,7 +36,10 @@ const styles = {
 };
 
 class BonusLevel extends React.Component {
-  static propTypes = bonusLevel;
+  static propTypes = {
+    ...bonusLevel,
+    perfected: PropTypes.bool.isRequired,
+  };
 
   renderWithMazeThumbnail() {
     return (
@@ -83,17 +89,22 @@ class BonusLevel extends React.Component {
   }
 }
 
+const ConnectedBonusLevel = connect((state, ownProps) => ({
+  perfected: getLevelStatus(state.progress, ownProps.levelId) >=
+    TestResults.MINIMUM_OPTIMAL_RESULT,
+}))(BonusLevel);
+
 export default function BonusLevels(props) {
   return (
     <div>
       <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
       <div style={styles.challengeRow}>
-        {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
+        {props.bonusLevels.map(bonus => (<ConnectedBonusLevel key={bonus.id} {...bonus} />))}
       </div>
     </div>
   );
 }
 
 BonusLevels.propTypes = {
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
+  bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
 };
