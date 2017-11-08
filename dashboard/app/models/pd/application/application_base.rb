@@ -36,7 +36,36 @@ module Pd::Application
     include ApplicationConstants
     include Pd::Form
 
+    OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
+    OTHER_PLEASE_LIST = 'Other (Please List):'
+    YES = 'Yes'.freeze
+    NO = 'No'.freeze
+    NONE = 'None'.freeze
+
+    COMMON_OPTIONS = {
+      title: %w(Mr. Mrs. Ms. Dr.),
+
+      state: get_all_states_with_dc.to_h.values,
+
+      gender_identity: [
+        'Female',
+        'Male',
+        OTHER,
+        'Prefer not to answer'
+      ],
+
+      race: [
+        'White',
+        'Black or African American',
+        'Hispanic or Latino',
+        'Asian',
+        'Native Hawaiian or other Pacific Islander',
+        'American Indian/Alaska Native',
+        OTHER,
+        'Prefer not to say'
+      ]
+    }
 
     after_initialize -> {self.status = :unreviewed}, if: :new_record?
     before_create -> {self.status = :unreviewed}
@@ -58,7 +87,7 @@ module Pd::Application
       declined
       waitlisted
       withdrawn
-      move_to_interview
+      interview
     ).index_by(&:to_sym).freeze
 
     enum course: %w(

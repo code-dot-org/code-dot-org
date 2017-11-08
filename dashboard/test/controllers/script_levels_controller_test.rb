@@ -1095,13 +1095,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should have milestone posting disabled if Milestone is set" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     get_show_script_level_page @script_level
-    assert_equal false, assigns(:view_options)[:post_milestone]
+    assert_equal POST_MILESTONE_MODE.final_level_only, assigns(:view_options)[:post_milestone_mode]
   end
 
   test "should not have milestone posting disabled if Milestone is not set" do
     Gatekeeper.set('postMilestone', where: {script_name: 'Some other level'}, value: false)
     get_show_script_level_page(@script_level)
-    assert_equal true, assigns(:view_options)[:post_milestone]
+    assert_equal POST_MILESTONE_MODE.all, assigns(:view_options)[:post_milestone_mode]
   end
 
   test "should not see examples if an unauthorized teacher is signed in" do
