@@ -750,6 +750,13 @@ eu:
     create: "Sortu proiektua"
     create_a_project: 'Sortu proiektu berria:'
     new: "Berria sortu"
+    new_buttons:
+      artist: "Artista"
+      playlab: "Jokoen Laborategia"
+      applab: "App laborategia"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Aldatu izena"
     save: "Gorde"
     delete: "Ezabatu"

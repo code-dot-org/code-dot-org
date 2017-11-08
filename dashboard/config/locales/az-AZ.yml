@@ -981,6 +981,13 @@
     create: Create Project
     create_a_project: 'Yeni bir layihə düzəlt:'
     new: Yenisini düzəlt
+    new_buttons:
+      artist: Rəssam
+      playlab: Oyun labı
+      applab: Proqram Labı
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Adını dəyiş
     save: Yadda saxla
     delete: Sil

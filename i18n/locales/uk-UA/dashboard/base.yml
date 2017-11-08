@@ -750,6 +750,13 @@ uk:
     create: "Створити проект"
     create_a_project: 'Створити новий проект:'
     new: "Створити новий"
+    new_buttons:
+      artist: "Художник"
+      playlab: "Ігрова студія"
+      applab: "App Lab"
+      gamelab: "Ігрова лабораторія"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Перейменувати"
     save: "зберегти"
     delete: "Видалити"

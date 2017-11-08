@@ -3,7 +3,7 @@ nn:
     callouts:
       2-3 Artist 1 new_callout: [ ]
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: Kunstneren har ikke en "Skritt"-knapp, men kan du dra glidebryteren mot venstre for å se programmet kjøre saktere.
+        2-3_Artist_Debugging_1_a: Kunstneren har ikke en "Skritt"-knapp, men du kan dra glidebryteren mot venstre for å se programmet kjøre saktere.
       2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det veit du ikkje før du køyrer koden!
       4-5 Artist Patterns Free Play_callout:
@@ -35,6 +35,8 @@ nn:
       AppLab Intro 2 - add onEvent_callout:
         onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: Click here when you're done!
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -269,6 +271,12 @@ nn:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kodeområdet.
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -336,7 +344,7 @@ nn:
       Course 4 Artist Vars 6_callout:
         degrees_per_side: Del 360 på antall sider for å finne kor mange grader kvar vinkel er.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: Trenger du mer plass?  Dra denne linjen over å gjøre kodeområdet bredere.
+        Course_4_Artist_Vars_8_a: Trenger du mer plass?  Dra denne linjen for å gjøre kodeområdet bredere.
       Course 4 Artist Vars 9_callout:
         set_sides: Bruk denne blokka til å sette antall "sider" som trengs for å gjere ferdig oppgåva.
       Course 4 Bee 1_callout:
@@ -1220,7 +1228,7 @@ nn:
         edit_add_parameter: Klikk Rediger for å legge til ein parameter i funksjonen din
         add_and_drag_parameter: Skriv inn namnet på parameteren din her, klikk på "Legg til" og dra den etter det til funksjonsdefinisjonen din
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: Trenger du mer plass?  Dra denne linjen over å gjøre kodeområdet bredere.
+        Course_4_Artist_Vars_8_a: Trenger du mer plass?  Dra denne linjen for å gjøre kodeområdet bredere.
       grade5_artist_variables_octagons13_callout: [ ]
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålsteikna

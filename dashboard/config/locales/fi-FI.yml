@@ -974,6 +974,13 @@
     create: Luo projekti
     create_a_project: 'Luo uusi projekti:'
     new: Luo uusi
+    new_buttons:
+      artist: Taiteilija
+      playlab: Pelilabra
+      applab: Sovelluksien laboratorio
+      gamelab: Pelilabra
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Nimeä uudelleen
     save: Tallenna
     delete: Poista

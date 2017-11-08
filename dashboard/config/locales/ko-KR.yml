@@ -897,6 +897,13 @@
     create: "프로젝트 만들기"
     create_a_project: "새 프로젝트 만들기:"
     new: "새로 만들기"
+    new_buttons:
+      artist: "화가"
+      playlab: Play Lab
+      applab: "앱 연구실"
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "이름 바꾸기"
     save: "저장"
     delete: "삭제"
