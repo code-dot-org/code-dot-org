@@ -71,7 +71,7 @@ export default class EligibilityChecklist extends Component {
               ref={input => this.teacherID = input}
             />
             <Button
-              color="orange"
+              color={Button.ButtonColor.orange}
               text="Submit"
               onClick={this.handleSubmitId}
             />
