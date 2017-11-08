@@ -34,6 +34,15 @@ export default class SchoolAutocompleteDropdown extends Component {
     this.props.setField("nces", event);
   }
 
+  handleSchoolNotFoundCheckbox(event) {
+    var checkbox = event.target;
+    if (checkbox.checked) {
+      this.props.setField("nces", {value: "-1"});
+    } else {
+      this.props.setField("nces", {value: ""});
+    }
+  }
+
   render() {
     return (
       <div>
@@ -56,6 +65,12 @@ export default class SchoolAutocompleteDropdown extends Component {
           onChange={this.sendToParent}
           placeholder={i18n.searchForSchool()}
         />
+        <label>
+          <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={this.props.value === "-1"}/>
+          <span style={styles.checkboxOption}>
+            {i18n.schoolNotFoundCheckboxLabel()}
+          </span>
+        </label>
       </div>
     );
   }
