@@ -34,7 +34,7 @@ const InlineHint = React.createClass({
           dangerouslySetInnerHTML={{ __html: this.props.content }}
         />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
-        {this.props.video && <VideoThumbnail video={this.props.video}/>}
+        {this.props.video && <VideoThumbnail video={this.props.video} />}
       </ChatBubble>
     );
   }
