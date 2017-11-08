@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import viewCart from "../../../../../static/maker/viewCart.png";
-import addToCart from "../../../../../static/maker/addToCart.png";
-import enterDiscountCode from "../../../../../static/maker/enterDiscountCode.png";
+import viewCart from "@cdo/static/maker/viewCart.png";
+import addToCart from "@cdo/static/maker/addToCart.png";
+import enterDiscountCode from "@cdo/static/maker/enterDiscountCode.png";
 
 const styles = {
   title: {

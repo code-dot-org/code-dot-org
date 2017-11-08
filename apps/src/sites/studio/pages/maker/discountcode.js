@@ -26,13 +26,13 @@ $(document).ready(() => {
 
   ReactDOM.render(
     <div>
-      {!(scriptData.discountCode) &&
+      {!scriptData.discountCode &&
         <EligibilityChecklist
           statusPD={scriptData.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
           statusStudentCount={scriptData.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
         />
       }
-      {(scriptData.discountCode) &&
+      {scriptData.discountCode &&
         <DiscountCodeInstructions
           discountCode="XXXXXX"
           fullDiscount={true}
