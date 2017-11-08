@@ -1,9 +1,9 @@
 /** @file Admin Override for Maker Discount Code Eligibility*/
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import SchoolAutocompleteDropdown from '../../../../templates/SchoolAutocompleteDropdown';
-import Button from "../../../../templates/Button";
-import ValidationStep, {Status} from '../../../../lib/ui/ValidationStep';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import Button from "@cdo/apps/templates/Button";
+import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 const styles = {
   title: {
@@ -49,7 +49,7 @@ export default class EligibilityChecklist extends Component {
     this.setState({
       submission: {
         ...this.state.submission,
-        [field]: event ? event.value : ''
+        [field]: event.value
       }
     });
   }
@@ -77,8 +77,9 @@ export default class EligibilityChecklist extends Component {
             />
           </label>
         </form>
+        {this.state.teacherID &&
           <div>
-            <h2>Eligibility requirements for </h2>
+            <h2>Eligibility requirements for {this.state.teacherID}</h2>
             <ValidationStep
               stepName={i18n.eligibilityReqPD()}
               stepStatus={this.props.statusPD}
@@ -102,14 +103,16 @@ export default class EligibilityChecklist extends Component {
             <div>
               If teacher meets the eligibity requirements but is simply using a
                different email address for their account than what we have on file,
-               please go to the Studio Person ID admin page to link this acccount
+               please go to the <a href="https://studio.code.org/admin/studio_person">
+               Studio Person ID admin page </a> to link this acccount
                to the saccount associated with the email address we have on file.
             </div>
             <h4>Option 2: Give teacher a discount code</h4>
             <div>
               If the teacher has already received their code and it was for the incorrect amount,
-              email adaaccounts@adafruit.com so they can disable that code first. We should not be
-              doing this override if the teacher has already used the incorrect code to purchase a kit.
+              email <a href="mailto:adaaccounts@adafruit.com"> adaaccounts@adafruit.com </a>
+              so they can disable that code first. We should not be doing this override if the
+              teacher has already used the incorrect code to purchase a kit.
               <form>
                 <label>
                   <input
@@ -128,13 +131,14 @@ export default class EligibilityChecklist extends Component {
                   Teacher should receive partial discount code (kit price would become $97.50)
                 </label>
                 <Button
-                  color="orange"
+                  color={Button.ButtonColor.orange}
                   text="Submit"
                   onClick={() => {}}
                 />
               </form>
             </div>
           </div>
+        }
       </div>
     );
   }
