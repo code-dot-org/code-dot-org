@@ -39,7 +39,7 @@ class UnicornListenerTest < Minitest::Test
     Cdo::Metrics.expects(:push).with do |namespace, data|
       namespace == 'Unicorn' &&
         data.group_by {|d| d[:metric_name]}.
-          map{|k, v| {k => v.map{|x| x[:value]}}} ==
+          map {|k, v| {k => v.map {|x| x[:value]}}} ==
           [
             {active: [1, 3]},
             {queued: [2, 4]},
