@@ -1,14 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_partners) %>
-
-* * *
-
+---
+title: '<%= hoc_s(:title_partners) %>'
+---
 Hour of Code este condus de catre comitetul Hour of code si Computer Science Education Week.
 
 [Comitetul consultativ](%= resolve_url('/advisory-committee') %) este format din reprezentanţi ai K-12, mediul academic, non-profit, pentru-profit şi organizaţii internaţionale. Acest comitet ghideaza strategia pentru campania Hour of Code.
 
-[Comitetul de revizuire](%= resolve_url('/review-committee') %) este format din 15 cadre didactice peste gradele K-12 care evaluează şi recomanda activităţi folosind rubrica de Comitetul consultativ. Aceste cadre didactice revizuieste tutoriale şi planuri de lecţie transmise de sute de parteneri, evaluarea activităţilor educative ca valoare, capacitatea de a capta cursanţi şi potenţial pentru diverse stipuri de studenţi.
+[Comitetul de revizuire](%= resolve_url('/review-committee') %) este format din 15 cadre didactice peste gradele K-12 care evaluează şi recomanda activităţi folosind rubrica de Comitetul consultativ. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
 Munca şi dedicarea ambelor comitete au contribuit la succesul Hour of Code şi la viziunea sa de a oferi o introducere în informatică pentru fiecare student.
 
@@ -134,13 +131,13 @@ Munca şi dedicarea ambelor comitete au contribuit la succesul Hour of Code şi 
 
 * * *
 
-# Parteneri pentru Tutoriale
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Parteneri de infrastructură şi instrumente
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

@@ -2,29 +2,29 @@ hr:
   site_name: 'SAT KODIRANJA'
   hour_of_code: 'Sat kodiranja'
   language: 'Hrvatski'
-  front_title: 'Pridružite se najvećem edukacijskom događanju u povijesti, %{campaign_date}, 2015'
+  front_title: 'Pridružite se najvećem edukativnom događaju u povijesti, od 8. do 14. prosinca 2015'
   coming_soon: 'Uskoro'
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+  compatibility_unsupported_browser: "Vaš preglednik nije podržan. Molimo Vas nadogradite Vaš preglednik na <a href='%{supported_browsers_url}', target='_blank'> jedan od naših podržanih preglednika</a>. Pokušajte otvoriti stranicu, ali očekujte probleme s funkcionalnošću."
   campaign_date_start_short: "7. prosinca"
   campaign_date_start_long: "7. prosinca"
   campaign_date_short: "7. - 13. prosinca"
   campaign_date_full: "7. - 13. prosinca"
-  campaign_date_year: "2016"
-  campaign_date_full_year: "December 5-11, 2016"
+  campaign_date_year: "2016."
+  campaign_date_full_year: "5.-11. prosinca, 2016."
   front_header_banner: 'Pridružite se najvećem edukativnom događaju u povijesti, od 8. do 14. prosinca 2015'
   front_intro_default: 'Sat Kodiranja globalni je pokret kojeg čine deseci milijuna učenika u preko 180 zemalja. Bilo tko, bilo gdje može organizirati događanje Sat Kodiranja. Jednosatni vodiči dostupni su na preko 40 jezika. Nikakvo iskustvo nije potrebno. <strong>Od 4 do 104 godine.</strong>'
   front_watch_video: 'Pogledajte novi video'
   front_watch_regular_video: 'Pogledajte video'
   front_volunteers: 'Traže se tehnički volonteri'
-  front_start_learning: 'Start learning'
+  front_start_learning: 'Počnite učiti'
   header_menu_resources: 'Resursi'
   header_menu_faq: 'Učestalo postavljana pitanja'
   header_menu_how_to: 'Upute'
   header_menu_promote: 'Promocija'
-  header_menu_activities: 'Activities'
-  not_found_title: 'Page Not Found'
-  not_found_desc: 'The requested page was not found'
-  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
+  header_menu_activities: 'Aktivnosti'
+  not_found_title: 'Stranica nije pronađena'
+  not_found_desc: 'Tražena stranica nije pronađena'
+  not_found_instructions: 'Provjerite mrežnu adresu i pokuštajte ponovno ili odaberite poveznicu s popisa u nastavku.'
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -142,6 +142,7 @@ hr:
   company_strongnet: Strongsville School District
   company_TukwilaSchoolDistrict: Tukwila School District
   company_vermilionschools: Vermilion Local School District
+  company_vista-equity-partners: "Vista Equity Partners"
   company_walthampublicschools: Waltham Public Schools
   company_warrencountyschools: Warren County Schools
   company_WaynesboroPublicSchools: Waynesboro Public Schools
@@ -169,7 +170,7 @@ hr:
   whats_next_how_to_promote_link: "<a href='/promote'> Kako promovirati Sat kodiranja</a>"
   whats_next_try: "<a href='http://code.org/learn'> Isprobajte tutorijale</a>"
   whats_next_try_button: 'Isprobajte tutorijale'
-  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
+  n_have_learned_an_hoc: "<h1>Pokušaj</h1> <h2>Sata koda</h2> <h3># organiziran</h3>"
   anybody_can_learn: 'Svatko može naučiti.'
   get_started: 'Početak'
   beyond_an_hour: 'Nakon Sata kodiranja'
@@ -177,18 +178,18 @@ hr:
   share_on_facebook: 'Podijeli na Facebooku'
   share_on_twitter: 'Podijeli na Twitteru'
   front_join_us_heading: 'Sat Kodiranja za svakog učenika.'
-  front_join_us_announcements: 'Announcements'
-  front_join_us_anybody_can_learn: 'Anybody can learn'
+  front_join_us_announcements: 'Obavijesti'
+  front_join_us_anybody_can_learn: 'Svatko može naučiti'
   front_join_us_description: 'Informatika je temelj za svakog učenika. Pomozite nam predstaviti je stotinama milijuna.'
   front_join_us_description_short: 'Računarstvo je temelj za svakog učenika.'
   front_join_us_button: 'Pridružite nam se'
   front_what_is_hoc: 'Što je Sat Kodiranja?'
   front_join_us_header: 'Svatko može naučiti osnove, i zabaviti  se dok to radi!'
   front_join_us_volunteer_header: 'Volonteri za Sat kodiranja'
-  front_join_us_tutorials: "Try this year's new tutorials!"
-  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
-  front_join_us_robotics: 'Got robots?'
-  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_tutorials: "Isprobajte ovogodišnje vodiče!"
+  front_join_us_tutorials_link: 'Filtrirajte i pregledajte prošireni popis <i>preko 200 vodiča</i> i planova lekcija! Pronađite djelatnosti za različita područja, s različitim hardverskim zahtjevima i za učenike s različitim razinama iskustva.'
+  front_join_us_robotics: 'Imate robote?'
+  front_join_us_robotics_link: 'Hvala našim partnerima iz robotike, navedenim ispod, za podržavanje sata koda! Ako Vaš razred ima robote, kliknite na logo ispod kako biste pronašli popis djelatnosti vezanih uz robote!'
   front_join_us_teacher: 'Jeste li učitelj?'
   front_join_us_inspire: 'Potaknuti studente s'
   front_join_us_inspire_link: 'Sat Kodiranja u učionici.'
@@ -219,34 +220,45 @@ hr:
   front_join_us_n_students_served: "# posluženo"
   signup_header: 'Organizirajte Sat kodiranja tijekom %{campaign_date} i prijavite ga ovdje.'
   signup_name_label: 'Ime'
+  signup_name_error: 'Name is required.'
   signup_email_label: 'E-pošta'
+  signup_email_error: 'Email is required'
   signup_organization_name_label: 'Naziv škole ili organizacije'
+  signup_organization_name_error: 'Organization name is required.'
   signup_event_type_label: 'Vrsta događaja'
+  signup_event_type_error: 'Event type is required.'
   signup_event_entire_school_label: 'Cijela škola sudjeluje'
   signup_event_location_label: 'Lokacija (neobavezno)'
+  signup_event_location_error: 'Event location is required.'
   signup_special_event_flag_label: 'Istaknite moj poseban događaj'
   signup_special_event_details_label: 'Detalji posebnog događaja'
   signup_send_posters_flag_label: 'Pošaljite <a href= "/resources#posters"> plakate</a> u moju školu ili ustanovu'
   signup_send_posters_address_label: 'Adresa škole ili ustanove'
   signup_whole_school_flag_label: 'Ovaj događaj je za cijelu školu'
   signup_your_event: 'Prijavite vaš događaj'
-  signup_host_an_hour: 'Host an hour'
+  signup_host_an_hour: 'Budite domaćin sata'
   signup_match_volunteer: 'Pomozite mi pronaći programera koji bi inspirirao moje učenike'
   signup_multiple_event_warning: "Ako ste domaćih više događanja, molimo vas da pošaljete jedinstveni naziv ili adresu e-pošte za svaki od njih. Računamo samo jedan događaj prema kombinaciji imena i adrese e-pošte."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_registration_deadline: "Prijava za sat koda se zatvara 12. prosinca."
   signup_name_placeholder: 'Vaše ime'
   signup_email_placeholder: 'VašeIme@primjer.com'
   signup_organization_name_placeholder: "Primjerice, srednja škola"
+  signup_event_country_label: "Event country"
+  signup_event_country_error: "Country is required."
   signup_event_location_placeholder: "Poštanski broj i zemlja ILI puna adresa. \\r (Upotrijebit ćemo ove podatke da bi mjesto označili na našoj karti)"
   signup_special_event_details_placeholder: 'Opišite ono što čini ovaj događaj posebnim'
   signup_send_posters_address_placeholder: 'Ova adresa neće biti prikazana na našoj karti'
   signup_event_type_in_school: 'U školi'
   signup_event_type_out_of_school: 'Izvan škole'
+  signup_submit_census_label: 'Submit'
+  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: 'Registrirajte se'
   signup_submit_error_message: "Došlo je do greške. Molimo provjerite jesu li sva obvezna polja popunjena ispravno."
+  signup_submit_and_continue_label: 'Submit and Continue'
+  signup_continue_label: 'Continue'
   signup_thank_you_header: "Hvala vam za registriranje da budete domaćin Sata Koridanja."
   signup_thank_you_message: 'Poslali smo vam e-poštu potvrde sa informacijama da vam pomognemo započeti.'
-  map_title: "Hour of Code map"
+  map_title: "Mapa sata koda"
   map_header: '# Sat Kodiranja događanja diljem svijeta'
   see_all_events: 'Prikaži sva događanja'
   map_header_company: '# Organizirano od strane firme'
@@ -257,9 +269,10 @@ hr:
   map_legend_title: 'Legenda'
   map_legend_hoc_events: 'Događanje Sat kodiranja'
   map_legend_cs_tech_jam: 'Poseban događaj'
-  meta_tag_og_title: 'Sat kodiranja se približava'
+  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
+  meta_tag_og_title: Sat kodiranja se približava
   meta_tag_og_description: 'Sat Kodiranja je globalni pokret koji doseže milijune učenika u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.'
-  meta_tag_twitter_title: 'Sat kodiranja se približava'
+  meta_tag_twitter_title: Sat kodiranja se približava
   meta_tag_twitter_description: 'Sat Kodiranja je globalni pokret koji doseže milijune učenika u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.'
   twitter_default_text: "Ja sudjelujem u ovogodišnjem Satu Kodiranja #HourOfCode, a vi? @codeorg"
   hoc_faq_title: 'Učestalo postavljana pitanja'
@@ -285,15 +298,15 @@ hr:
   hoc_faq_tutorial_q: 'Kako napraviti vodič za Sat Kodiranja?'
   hoc_faq_tutorial_a: "Ako ste zainteresirani da postanete suradnik u izradi vodiča, <a href='/tutorial-guidelines'> pogledajte naše smjernice i upute</a>. Htjeli bismo omogućiti razne opcije, ali primarni cilj je optimizirati iskustvo za učenike i učitelje kojima je informatika nepoznata."
   hoc_faq_account_q: "Trebaju li se učenici za prijaviti putem računa?"
-  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>."
+  hoc_faq_account_a: "Ne. Registracija ili prijava uopće nisu obvezni kako bi učenik iskušao Sat Koda. Većina <a href='%{codeorg_url}/learn/beyond'> naknadnih tečajeva</a> zahtijeva stvaranje računa kako bi se spremio učenikov napredak. Također, registracija za Sat Koda NE ĆE se automatski stvoriti račun za Code Studio. Ako želite otvoriti račune za svoje učenike, slijedite ove <a href='https://youtu.be/_smelV_KISE'> upute</a>."
   hoc_faq_high_school_q: "Koje aktivnosti mogu raditi sa srednjoškolcima?"
   hoc_faq_high_school_a: "Naš novi Star Wars i Minecraft tutorijal odlični su za srednjoškolce, naročito Star Wars JavaScript verzije i razina sa slobodnom igrom na oba tutorijala. Također, preporučamo da za početak isprobate i jedan od početničkih tutorijala na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, kao što su Angry Birds tutorijal ili tutorijal Annom i Elsom. Srednjoškolac bi trebao biti u mogućnosti završiti jedan od ovih tutorijala u 30 minuta i tada pokušati naprednije tutorijale u JavaScript-u, poput Khan Academy ili CodeHS."
   hoc_faq_scratch_q: "Na Satu kodiranja koristit ću Scratch, ali što ako moji učenici koriste iPad umjesto laptopa?"
   hoc_faq_scratch_a: "Scratch se ne može pokrenuti na tabletima. Ako su vaši učenici mlađi, mogu koristiti ScratchJR iPad aplikaciju (za učenike koji su tek naučili čitati). Ako pogledate vodiče na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, možete pronaći vodiče koji rade na iPadu - od Code.org-a, Tynker-a, Lightbot-a ili CodeSpark-a."
   hoc_faq_count_hoc_q: "Kako prebrojavate Sate kodiranja?"
   hoc_faq_map_q: "Zašto ne vidim svoju točku na karti?"
-  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
+  hoc_faq_map_a: "Jako nam je žao što ne vidite Vaš događaj na karti Sata Koda. Zbog desetina tisuća organizatora koji se prijavljuju, karta sažima podatke i prikazuje jednu točku za nekoliko događaja. Klikom na broj iznad karte biti ćete usmjereni na popis svih događaja prema državi i moći ćete pronaći sve događaja navedene ondje. Dodatno, s obzirom na tisuće ljudi koji se prijavljuju za Sat Koda, popis karata i događaj obično zahtijevaju 48 sati za zanavljanje. Provjerite opet za nekoliko dana!"
+  hoc_faq_count_hoc_a: "Sustav praćenja Sata Koda ne mjeri korištenje točno. Pri praćenju sudjelovanja u Satu Koda ne brojimo jedinstvene ID učenika savršno, pogotovo stoga što ne zahtijevamo ni prijavu niti registraciju. Posljedično, u isti mah sudionike pre-brojavamo i pod-brojavamo. Pročitajte sve detalje <a href='%{codeorg_url}/loc'>ovdje</a>."
   hoc_faq_one_hour_q: "Koliko se može naučiti u sat vremena?"
   hoc_faq_one_hour_a: 'Cilj Sata kodiranja nije naučiti svakoga kako postati vrsni računalni znanstvenik u sat vremena. Sat vremena dovoljno je za shvatiti kako je računalna znanost zabavna i kreativna, da je dostupna svim uzrastima, za sve učenike, bez obzira na njihovu pozadinu. Mjera uspjeha ove kampanje nije u tome koliko su učenici informatike naučili - uspjeh se ogleda u širokom sudjelovanju bez obzira na spol i etničku i socijalnu razlikost grupa i povećanom upisu i sudjelovanju u informatičkim tečajevima na svim razinama. Milijuni učitelja i učenika odlučili su učiti i više od jednog sata - učiti cijeli dan, čitav tjedan ili duže, a kao rezultat toga mnogi su učenici odlučili upisati cijeli tečaj (ili čak kolegij na fakultetu). <br/> <br/> Osim učenika, još jedan "učenik" je i nastavnik koji nakon jednog sata stječe samopouzdanje za podučavanje informatike iako nema diplomu informatičara. Deseci tisuća nastavnika odlučili su dodatno učiti informatiku, ili pohađaju dodatne tečajeve ili nude pohađenje online tečajeva, ili oboje. To vrijedi i za školske administratore koji shvaćaju da je informatika nešto što učenici žele i da su njihovi nastavnici u stanju predavati. <br/> <br/> Iznad svega, ono što svi sudionici mogu naučiti u sat vremena jest da ovo svi možemo.'
   hoc_faq_more_questions_q: "Imate još pitanja?"
@@ -302,8 +315,8 @@ hr:
   hoc_faq_keep_learning_a: "Bilo tko može organizirati Sat kodiranja u bilo koje vrijeme. Tutorijali ostaju na internetu cijele godine. Možete očekivati da će naši tutorijali i nastavni plan i program biti vječno dostupni na našim stranicama. Molimo idite na <a href='/promote'> naše resurse</a> kako biste preuzeli vodiče i druge resurse za organizaciju koji će vam pomoći da vaš Sat kodiranja bude uspješan."
   hoc_faq_certificates_q: "Gdje mogu ispisati certifikate za svoje učenike?"
   hoc_faq_certificates_a: "Idite na naše <a href='%{codeorg_url}/certificates'> stranice s certifikatima</a> na kojoj možete unaprijed ispisati potvrde za cijeli razred. Također, možete ispisati <a href='%{codeorg_url}/certificates?course=mc'> posebne certifikate</a> za učenike koji uče pomoću Minecraft tutorijala."
-  hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
+  hoc_faq_logo_q: "Postoje li ograničenja za korištenje loga ili imena Sata Koda?"
+  hoc_faq_logo_a: "Sat Koda je zaštićena tržišna marka. Ne želimo spriječiti njegovo korištenje, ali želimo osigurati da se njegovo korištenje uklapa u nekoliko ograničenja. Molimo pogledajte <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'> ove smjernice za korištenje</a>."
   stats_hoc_2013_image_alt: 'Statistika Sata Kodiranja 2013'
   stats_growth: "Najbrže je dostignut broj od 15 milijuna korisnika."
   stats_i18n: "Učenici uče na 40 jezika"
@@ -360,10 +373,10 @@ hr:
   title_how_to_companies: Kako organizirati Sat kodiranja - za tvrtke
   title_how_to_officials: Kako-da vodič za javne dužnosnike
   title_how_to_volunteers: Vodič za Sat kodiranja za volontere
-  title_how_to_parents: How-to guide for parents
+  title_how_to_parents: Kako-da vodič za roditelje
   title_how_to: Vodič s uputama
   title_press_release: Priopćenje za tisak Sata kodiranja za izabrane dužnosnike
-  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_op_ed: Uzorak "op-ed" podrške tjednu podučavanja računalne znanosti i Sata Koda
   title_press_kit: Mterijal za novinare
   title_proclamation: Primjer Rezolucije podrške tjednu podučavanja informatike i Satu kodiranja
   title_stats: Pohvale i statistika
@@ -384,9 +397,25 @@ hr:
   events_orgs_title: Sva događanja Sata Kodiranja organizirana uz pomoć partnera
   event: događaj
   events: događaji
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  highlights_title: Izdvajamo
+  highlights_header: Izdvajamo iz Sata Koda
+  highlights_description: Neki od naših omiljenih trenutaka iz kampanje Sata Koda.
+  higlights_see_more: See more highlights
+  highlights_readmore: Read more
+  highlights_watchvideo: Pogledajte video
+  highlights_facebook: Podijeli na Facebooku
+  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
+  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
+  highlights_constant_obama_short_heading: Coder in Chief
+  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
+  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
+  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
+  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
+  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_ny_short_heading: Brooklyn beats Chicago
+  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
+  highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: 'Copyright 2015 Code.org. Sva prava pridržana.'
   footer_trademark_message: 'Sata Kodiranja ™ je zaštitni znak tvrtke Code.org.'
   footer_menu_partners: 'Partneri'
@@ -395,312 +424,314 @@ hr:
   footer_menu_terms: 'Uvjeti'
   footer_menu_privacy: 'Privatnost'
   learn_banner_heading: 'SAT KODIRANJA'
-  learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
-  learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_robotics_banner_heading: 'ROBOTICS'
-  learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
-  tutorial_moana_name: 'Moana: Wayfinding with Code'
-  tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_gumadventure_name: "Gumball's Coding Adventure"
-  tutorial_mchoc_name: "Minecraft Hour of Code"
-  tutorial_vidnews_name: 'Vidcode: Code the News'
-  tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
-  tutorial_highseas_name: "Adventure on the High Seas"
-  tutorial_capython_name: "Python Turtle Graphics"
-  tutorial_frzn_name: "Code with Anna and Elsa"
+  learn_banner_blurb: "Isprobajte jednosatni vodič prilagođen svim uzrastima u više od 45 jezika. Pridružite se milijunima učenika i nastavnika u preko 180 zemalja koji počinju sa Satom Koda."
+  learn_banner_beyond: "Želite nastaviti učiti? <a id='learn_banner_beyond'>Nastavite dulje od sata</a>"
+  learn_banner_teachers: 'Nastavnici:<a id=''teacher_banner_host''>Budite domaćin sata</a> ili <a id=''teacher_banner_howto''>pročitajte Kako-da vodič</a>'
+  learn_robotics_banner_heading: 'ROBOTIKA'
+  learn_robotics_banner_blurb: 'Imate robote? Iskoristite ih u navedenim djelatnostima i napravite lako shvatljiv Sat Koda za učenike svih dobi!'
+  tutorial_athlete_name: "Code your own sports game"
+  tutorial_moana_name: 'Moana: Traženje puta uz pomoć Koda'
+  tutorial_star-wars_name: 'Zvjezdani ratovi: Izgradnja galaktike uz pomoć Koda'
+  tutorial_gumadventure_name: "Žvakićeva kodirajuća avantura"
+  tutorial_mchoc_name: "Minecraft Sat Koda"
+  tutorial_vidnews_name: 'Vidcode: Kodirajte vijesti'
+  tutorial_kodable-pre_name: "Kodable (dobrodošli su i koji ne znaju čitati)"
+  tutorial_highseas_name: "Avantura na otvorenoj pučini"
+  tutorial_capython_name: "Grafika u jeziku python s pomoću kornjače"
+  tutorial_frzn_name: "Kodirajte s Annom i Elsom"
   tutorial_cocom_name: "CodeCombat"
-  tutorial_play-lab_name: "Play Lab"
-  tutorial_boxisland2016_name: "Box Island"
-  tutorial_textcomp_name: "Text Compression"
-  tutorial_encryption_name: "Simple Encryption"
+  tutorial_play-lab_name: "Laboratorij za igre"
+  tutorial_boxisland2016_name: "Kutijasti otok"
+  tutorial_textcomp_name: "Sažimanje teksta"
+  tutorial_encryption_name: "Jednostavno šifriranje"
   tutorial_kanopixel_name: "Kano Pixel Hack"
-  tutorial_foos_name: "codeSpark Academy with The Foos"
-  tutorial_tynkerdd_name: "Dragon Dash"
-  tutorial_tynkerana_name: "Analog Clock STEM Kit"
-  tutorial_vidcard_name: 'Vidcode: Bestie Greeting Card'
-  tutorial_spritebox_name: "Spritebox Coding"
-  tutorial_tynkerch_name: "Counter Hack"
+  tutorial_foos_name: "codeSpark Akademija s The Foos"
+  tutorial_tynkerdd_name: "Zmajev nalet"
+  tutorial_tynkerana_name: "STEM sklop za analogni sat"
+  tutorial_vidcard_name: 'Vidcode: Čestitka najboljem prijatelju'
+  tutorial_spritebox_name: "Spritebox programiranje"
+  tutorial_tynkerch_name: "Uzvratno hakiranje"
   tutorial_lightbot_name: "Lightbot"
-  tutorial_hoc_name: "Placeholder for new code.org/hoc"
-  tutorial_code_name: "Write your first computer program"
-  tutorial_tinspire_name: "10 Minutes of Code for the TI-Nspire CX"
-  tutorial_itchbounceball_name: "ITCH Bouncing Ball (in Scratch)"
-  tutorial_vidclim_name: 'Vidcode: Climate Science & Code'
-  tutorial_matlab_name: "Learn to Code with MATLAB"
-  tutorial_flap_name: "Make a Flappy game"
+  tutorial_hoc_name: "Rezervirano mjesto za novi kod.org/hoc"
+  tutorial_code_name: "Napišite svoj prvi računalni program"
+  tutorial_tinspire_name: "10 minuta koda za TI-Nspire CX"
+  tutorial_itchbounceball_name: "ITCH loptica skočica (u jeziku scratch)"
+  tutorial_vidclim_name: 'Vidcode: Klimatske znanost i kod'
+  tutorial_matlab_name: "Naučite kodirati u jeziku MATLAB"
+  tutorial_flap_name: "Napravite igru Flappy"
   tutorial_galaxy_name: "Galaxy Game Jam"
-  tutorial_inf_name: "Infinity Play Lab"
-  tutorial_tynkersol_name: "Solar System STEM Kit"
+  tutorial_inf_name: "Laboratorij za igru \"Infinity\""
+  tutorial_tynkersol_name: "STEM sklop \"Sunčev sustav\""
   tutorial_itchg_name: "ITCH Name IT - Geography"
   tutorial_como_name: "CodeMonkey"
   tutorial_processfound_name: "The Processing Foundation - Hello Processing"
-  tutorial_tynkerhomo_name: "Homophones STEM Kit"
+  tutorial_tynkerhomo_name: "STEM sklop \"Homophones\""
   tutorial_art_name: "Artist"
-  tutorial_tynkerbrick_name: "Brick Breaker Game Kit"
+  tutorial_tynkerbrick_name: "Sklop za igru \"Razbijanje opeka\""
   tutorial_itchbio_name: "ITCH Name IT - Parts of the Biological Cell"
   tutorial_itchj_name: "ITCH Jumping (in Scratch)"
-  tutorial_tickleo_name: "Swimming Orca - by Tickle App"
-  tutorial_hopgeo_name: "Geometry Jumper"
-  tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
-  tutorial_monster_name: "Mystery Island Coding Quest"
-  tutorial_tynkerapp_name: "Build an App"
-  tutorial_tynkerpup_name: "Puppy Adventure"
-  tutorial_livecode_name: "LiveCode Sound Boards"
-  tutorial_cocomgame_name: 'CodeCombat: Game Development'
-  tutorial_tynkerspin_name: "Spin Draw Animation Kit"
-  tutorial_code-avengers_name: "Build a Game with JavaScript"
-  tutorial_tynkercq_name: "Candy Quest"
-  tutorial_makeschool_name: "Build an iPhone game in your browser!"
-  tutorial_cmgame_name: "CodeMonkey's Game Builder"
+  tutorial_tickleo_name: "Plivajući orka - ponudio Tickle App"
+  tutorial_hopgeo_name: "Geometrijski skakač"
+  tutorial_tynkermult_name: "STEP sklop \"Množeći bijeg\""
+  tutorial_monster_name: "Kodirajuća potraga \"Tajanstveni otok\""
+  tutorial_tynkerapp_name: "Izgradite aplikaciju"
+  tutorial_tynkerpup_name: "Psićeve avanture"
+  tutorial_livecode_name: "LiveCode i zvučne ploče"
+  tutorial_cocomgame_name: 'CodeCombat: razvoj igre'
+  tutorial_tynkerspin_name: "Sklop za animaciju \"Spin Draw\""
+  tutorial_code-avengers_name: "Napravite igru u jeziku JavaScript"
+  tutorial_tynkercq_name: "Potraga za bombonima"
+  tutorial_makeschool_name: "Napravite igru za iPhone u Vašem pregledniku!"
+  tutorial_cmgame_name: "CodeMonkey graditelj igara"
   tutorial_codesters_name: "Codesters"
-  tutorial_qrm_name: "Accessible programming (with screenreader support)"
-  tutorial_texas-instruments_name: "10 Minutes of Code"
-  tutorial_cajava_name: "Drawing Flags with JavaScript"
-  tutorial_codehs_name: "Learn to Code with Karel the Dog"
-  tutorial_hopemo_name: "Emoji Draw"
-  tutorial_tynkercm_name: "Code Monsters"
-  tutorial_codesterswintergreet_name: "Winter Greetings"
-  tutorial_codestersc_name: "The Coordinate Plane"
-  tutorial_codestersturtle_name: "Turtle Drawing"
-  tutorial_penjee_name: "Learn Python with Penjee the Penguin"
-  tutorial_trinket_name: "Trinket's Hour of Python"
-  tutorial_frogger_name: "Make your own 3D Frogger game"
-  tutorial_tynkereco_name: "Ecological Pyramid STEM Kit"
-  tutorial_mitedarc_name: "MIT Education Arcade"
-  tutorial_khan_name: 'Khan Academy: Drawing with Code'
-  tutorial_tynkerd_name: "Debugger"
+  tutorial_qrm_name: "Dostupno programiranje (s podrškom za čitač zaslona)"
+  tutorial_texas-instruments_name: "10 minuta koda"
+  tutorial_cajava_name: "Crtanje zastava s pomoću jezika JavaScript"
+  tutorial_codehs_name: "Naučite kod s psom Karelom"
+  tutorial_hopemo_name: "Crtanje emotikona"
+  tutorial_tynkercm_name: "Programirana čudovišta"
+  tutorial_codesterswintergreet_name: "Zimski pozdravi"
+  tutorial_codestersc_name: "Koordinatna ravnina"
+  tutorial_codestersturtle_name: "Crtanje kornjače"
+  tutorial_penjee_name: "Naučite Python s pingvinom Penjeejem"
+  tutorial_trinket_name: "Trinketov sat Pythona"
+  tutorial_frogger_name: "Napravite vlastitu igru Frogger u 3D"
+  tutorial_tynkereco_name: "STEM sklop \"Ekološka piramida\""
+  tutorial_mitedarc_name: "MIT-ova poučna arkadna igra"
+  tutorial_khan_name: 'Akademija Khan: Crtanje kodom'
+  tutorial_tynkerd_name: "Program za ispravljanje pogrešaka"
   tutorial_cdmy_name: "Codecademy"
-  tutorial_codestersdance_name: "Dance Moves"
-  tutorial_codestersbasketball_name: "Basketball"
-  tutorial_nclkarel_name: "Learn How to Code with Karel the Robot"
-  tutorial_buildpong_name: "Build Pong with AI"
-  tutorial_tynkerdrones_name: "Program Drones and Robots"
-  tutorial_carla_name: "Programming with Carla"
+  tutorial_codestersdance_name: "Plesni pokreti"
+  tutorial_codestersbasketball_name: "Košarka"
+  tutorial_nclkarel_name: "Naučite kod s psom Karelom"
+  tutorial_buildpong_name: "Napravite igru Pong s pomoću AI"
+  tutorial_tynkerdrones_name: "Programiranje trutova i robota"
+  tutorial_carla_name: "Programiranje s Carlom"
   tutorial_globaloria_name: "Globaloria MakeQuest"
-  tutorial_capost_name: "Build a Digital Postcard with HTML and CSS"
-  tutorial_marco_name: "Run Marco!"
-  tutorial_codestersflappybike_name: "Flappy Bike"
-  tutorial_kanopong_name: "Kano Computing - Make Pong"
-  tutorial_tynkerright_name: "Bill of Rights STEM Kit"
-  tutorial_flatverse_name: "Flatverse"
+  tutorial_capost_name: "Napravite digitalne razglednice s pomoću HTML i CSS"
+  tutorial_marco_name: "Bjež' Marko!"
+  tutorial_codestersflappybike_name: "Flappy bicikl"
+  tutorial_kanopong_name: "Kano računarstvo - Napravite Pong"
+  tutorial_tynkerright_name: "STEM sklop \"Ustav\""
+  tutorial_flatverse_name: "Plosnati svemir"
   tutorial_touchdevelop_name: "TouchDevelop"
-  tutorial_tynkercc_name: "Code Commander"
-  tutorial_bamboo_name: "Bamboo JS"
-  tutorial_robojav_name: 'Robots and Java: An introduction to Java'
-  tutorial_roboba_name: "Learn Algebra with RoboBlockly"
-  tutorial_knodsnake_name: "JavaScript Snake"
-  tutorial_soccharater_name: "Character Building"
-  tutorial_silent_name: "Silent Teacher"
-  tutorial_robomesh_name: "Program VEX IQ Robots with Blockly"
-  tutorial_amaze_name: "A-Maze-thing"
-  tutorial_codestersds_name: "Dream Sequence"
-  tutorial_knodtext_name: 'Text Adventure: Python'
-  tutorial_alicegar_name: "Animating with Alice and Garfield"
-  tutorial_codesterstransform_name: "Transformation Puzzles"
-  tutorial_flexfrog_name: "Flexbox Froggy"
+  tutorial_tynkercc_name: "Zapovjednik koda"
+  tutorial_bamboo_name: "Bambus JS"
+  tutorial_robojav_name: 'Roboti i Java: Uvod u Javu'
+  tutorial_roboba_name: "Naučite algebru s igrom RoboBlockly"
+  tutorial_knodsnake_name: "JavaScript zmija"
+  tutorial_soccharater_name: "Izgradnja znakova"
+  tutorial_silent_name: "Tihi učitelj"
+  tutorial_robomesh_name: "Programirajte VEX IQ robote s pomoću jezika Blockly"
+  tutorial_amaze_name: "Labirint-astično"
+  tutorial_codestersds_name: "Slijed snova"
+  tutorial_knodtext_name: 'Tekstualna avantura: Python'
+  tutorial_alicegar_name: "Animiranje s Alice i Garfieldom"
+  tutorial_codesterstransform_name: "Transformacijske zagonetke"
+  tutorial_flexfrog_name: "Flexbox žabac"
   tutorial_codemoji_name: "Codemoji"
-  tutorial_robobii_name: "Learn Coding with RoboBlockly"
-  tutorial_robobm_name: "Learn Math with RoboBlockly"
-  tutorial_codingrobots_name: "Learn One Hour Coding with RoboBlockly"
-  tutorial_robob_name: "Learn Robotics with RoboBlockly"
-  tutorial_coders_name: 'Coders Strike Back: an introduction to bot programming'
-  tutorial_tynkerhw_name: "Learn to Code with Hot Wheels"
-  tutorial_tynkermh_name: "Learn to Code with Monster High"
-  tutorial_caphoto_name: "Build a Photo Booth App"
-  tutorial_mozillahw_name: "Mozilla Homework Excuse Generator"
+  tutorial_robobii_name: "Naučite programiranje uz RoboBlockly"
+  tutorial_robobm_name: "Naučite matematiku uz RoboBlockly"
+  tutorial_codingrobots_name: "Naučite jedan sat programiranja uz RoboBlockly"
+  tutorial_robob_name: "Naučite robotiku uz RoboBlockly"
+  tutorial_coders_name: 'Programeri uzvraćaju udarac: uvod u programiranje robota'
+  tutorial_tynkerhw_name: "Naučite programirati uz autiće Hot Wheels"
+  tutorial_tynkermh_name: "Naučite programirati u školi Monster High"
+  tutorial_caphoto_name: "Napravite alikaciju \"Fotografska kabina\""
+  tutorial_mozillahw_name: "Mozilla generator izgovora za domaću zadaću"
   tutorial_ticklep_name: "Parrot Wonder"
-  tutorial_bbot_name: "Bomberbot Fun and Easy Coding Activities"
-  tutorial_scratchg_name: "Programming Games in Scratch"
-  tutorial_roboticfriends_name: "My Robotic Friends"
-  tutorial_sjforest_name: 'ScratchJr: Can I Make a Spooky Forest?'
-  tutorial_sjgreet_name: 'ScratchJr: Can I Make My Characters Greet Each Other?'
-  tutorial_sjsunset_name: 'ScratchJr: Can I Make the Sun Set?'
-  tutorial_fufafrenz_name: "fuzzFamily Frenzy"
-  tutorial_bbcgeo_name: "Bitsbox Coding + Geometry"
-  tutorial_chspixel_name: "CodeHS Pixel Art"
-  tutorial_hummingbird_name: "Creating a Game with Hummingbird"
-  tutorial_recoloring_name: "Recoloring the Universe"
-  tutorial_bbcchem_name: "Bitsbox Coding + Chemistry"
-  tutorial_floalgo_name: 'Coding: Algorithms Lesson Plan'
-  tutorial_flocond_name: 'Coding: Conditionals Lesson Plan'
-  tutorial_floloops_name: 'Coding: For Loops Lesson Plan'
-  tutorial_pgts_name: "Rock, Paper, Scissors"
-  tutorial_ozo_name: "The Ozobot Tutorial"
-  tutorial_bbcla_name: "Bitsbox Coding + Language Arts"
-  tutorial_bbcsci_name: "Bitsbox Coding + Science"
-  tutorial_tlctour_name: "Tour Guide Activity"
+  tutorial_bbot_name: "Zabava s bomberbotom i zadaće jednostavne za programiranje"
+  tutorial_scratchg_name: "Programiranje igara u jeziku scratch"
+  tutorial_roboticfriends_name: "Moji robotski prijatelji"
+  tutorial_sjforest_name: 'ScratchJz: Mogu li napraviti jezivu šumu?'
+  tutorial_sjgreet_name: 'ScratchJr: Mogu li napraviti da se moji likovi pozdravljaju?'
+  tutorial_sjsunset_name: 'ScratchJr: Mogu li napraviti zalazak sunca?'
+  tutorial_fufafrenz_name: "fuzzFamily bijes"
+  tutorial_bbcgeo_name: "Bitsbox kodiranje + geometrija"
+  tutorial_chspixel_name: "CodeHS umjetnost piksela"
+  tutorial_hummingbird_name: "Stvaranje igre sa sklopom Hummingbird"
+  tutorial_recoloring_name: "Prebojavanje svemira"
+  tutorial_bbcchem_name: "Bitsbox kodiranje + kemija"
+  tutorial_floalgo_name: 'Kodiranje: Nastavni plan algoritama'
+  tutorial_flocond_name: 'Kodiranje: Nastavni plan uvjetovanja'
+  tutorial_floloops_name: 'Kodiranje: Nastavni plan "for" petlji'
+  tutorial_pgts_name: "Kamen, papir, nožice"
+  tutorial_ozo_name: "Priručnik Ozbot"
+  tutorial_bbcla_name: "Bitsbox kodiranje + jezična umijeća"
+  tutorial_bbcsci_name: "Bitsbox kodiranje + znanost"
+  tutorial_tlctour_name: "Djelatnost vodiča"
   tutorial_codesterstj_name: "CS Tech Jam"
-  tutorial_tlclocked_name: "Locked-In"
-  tutorial_baubles_name: "Binary Baubles"
-  tutorial_bbcart_name: "Bitsbox Coding + Art"
-  tutorial_tlcknight_name: "Knight's Tour Activity"
+  tutorial_tlclocked_name: "Zaključan"
+  tutorial_baubles_name: "Binarne trice"
+  tutorial_bbcart_name: "Bitsbox kodiranje + umjetnost"
+  tutorial_tlcknight_name: "Viteška djelatnost vodiča"
   tutorial_fufafit_name: "fuzzFamily Fitness"
   tutorial_ozodance_name: "Ozobot Dance-Off"
-  tutorial_codingrobotics_name: "Intro to Coding through Robotics (ft. Wonder Workshop)"
-  tutorial_box_name: "Box Island"
-  tutorial_hopgame_name: "Hopscotch Game Design Workshop"
+  tutorial_codingrobotics_name: "Uvod u programiranje kroz robotiku (s pomoću Radionice čuda)"
+  tutorial_box_name: "Kutijasti otok"
+  tutorial_hopgame_name: "Radionica oblikovanja igara \"Hopscotch\""
   tutorial_icontrol_name: "iControl"
-  tutorial_cocomteach_name: 'CodeCombat: Teacher-Led'
-  tutorial_bbcmathii_name: "Bitsbox Coding + Math (K-2)"
-  tutorial_bbcphys_name: "Bitsbox Coding + Physics"
-  tutorial_bitsbox_name: "Build Crazy Apps with Bitsbox"
-  tutorial_tlcemo_name: 'Emotion Machine: Create-a-Face Card'
-  tutorial_crd_name: "Conditionals with Cards"
-  tutorial_bbcbio_name: "Bitsbox Coding + Biology"
+  tutorial_cocomteach_name: 'CodeCombat: Pod vodstvom nastavnika'
+  tutorial_bbcmathii_name: "Bitsbox kodiranje + matematika (K-2)"
+  tutorial_bbcphys_name: "Bitsbox kodiranje + fizika"
+  tutorial_bitsbox_name: "Napravite lude aplikacije uz Bitbox"
+  tutorial_tlcemo_name: 'Osjećajni stroj: Karta "stvori lice"'
+  tutorial_crd_name: "Uvjetovanja s kartama"
+  tutorial_bbcbio_name: "Bitsbox kodiranje + biologija"
   tutorial_ticklebb8_name: "BB-8 Swing"
   tutorial_grok_name: "Grok Learning"
-  tutorial_ijournalist_name: "iJournalist"
-  tutorial_bbcmusic_name: "Bitsbox Coding + Music"
-  tutorial_secretcodes_name: "Secret Codes Activity"
-  tutorial_tlchex_name: "HexaHexaFlexagon Automata Activity"
-  tutorial_tickles_name: "Sphero Run"
-  tutorial_ozogame_name: "Create an Ozobot Game Level"
-  tutorial_vidcodeio_name: "Input and Output, Math Activity"
-  tutorial_besttech_name: "Best Technology Activity"
-  tutorial_tlcbrain_name: "Brain-in-a-bag Activity"
-  tutorial_hopquiz_name: "Quiz Creator"
-  tutorial_unfortunate_name: "A Series of Unfortunate Events"
-  tutorial_cha_name: "Computer History Activity"
-  tutorial_elaseq_name: 'Writing and Coding: ELA Integration with Common Core Standards'
-  tutorial_bbcmathi_name: "Bitsbox Coding + Math (3-5)"
-  tutorial_tlcpixel_name: "Pixel Puzzles"
-  tutorial_arduino_name: "Arduino Activity"
-  tutorial_introrobo_name: "Introduction to Robotics"
-  tutorial_tlcinvis_name: "Invisible Palming Activity"
-  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
-  tutorial_procolor_name: "Programming with Colors"
-  tutorial_spiralsfinch_name: "Spirals with the Finch"
-  tutorial_ozoi_name: "An Introduction to Programming and Ozobot"
+  tutorial_ijournalist_name: "iNovinar"
+  tutorial_bbcmusic_name: "Bitsbox kodiranje + glazba"
+  tutorial_secretcodes_name: "Zadatak \"Tajni kodovi\""
+  tutorial_tlchex_name: "Zadatak HexaHexaFlagon Automata"
+  tutorial_tickles_name: "Utrka uz Sphero"
+  tutorial_ozogame_name: "Napravite razinu igre Ozobot"
+  tutorial_vidcodeio_name: "Ulaz i izlaz, matematički zadatak"
+  tutorial_besttech_name: "Zadatak o najboljoj tehnologiji"
+  tutorial_tlcbrain_name: "Zadatak \"mozak u torbi\""
+  tutorial_hopquiz_name: "Kreator kvizova"
+  tutorial_unfortunate_name: "Niz nesretnih događaja"
+  tutorial_cha_name: "Zadatak o povijesti računala"
+  tutorial_elaseq_name: 'Pisanje i kodiranje: Povezivanje ELA-e sa zajedničkim temeljnim standardima'
+  tutorial_bbcmathi_name: "Bitsbox kodiranje + matematika (3-5)"
+  tutorial_tlcpixel_name: "Piksel zagonetke"
+  tutorial_arduino_name: "Zadatak Arduino"
+  tutorial_introrobo_name: "Uvod u robotiku"
+  tutorial_tlcinvis_name: "Zadatak nevidljivo nošenje lopte"
+  tutorial_tlcjflap_name: 'JFLAP: Stvaranje strojeva konačnih stanja'
+  tutorial_procolor_name: "Programiranje bojama"
+  tutorial_spiralsfinch_name: "Spirale s robotom Finchem"
+  tutorial_ozoi_name: "Uvod u programiranje i Ozobot"
   tutorial_ticklel_name: "LEGO Bricker"
-  tutorial_spiralsdash_name: "Draw Spirals with Dash"
-  tutorial_ghdebug_name: "Grace Hopper Debugging Activity"
-  tutorial_tlckk_name: "Kriss-Kross Puzzles"
-  tutorial_firstcomp_name: "My First Computer"
-  tutorial_mazefinch_name: "Through the Maze with the Finch Robot"
-  tutorial_tlccc_name: "Compression Code Puzzles"
-  tutorial_tlcdoodle_name: "Algorithmic Doodle Art"
-  tutorial_tlcpunch_name: "Punch Card Searching Activity"
-  tutorial_finchfract_name: "Finch Fractals"
-  tutorial_tlcmind_name: "The Red Black Mind Meld Activity"
-  tutorial_tlctelebot_name: "The Teleporting Robot Activity"
-  tutorial_tlcaus_name: "Australian Magician's Dream Activity"
-  tutorial_oralhist_name: "Oral History Project"
-  tutorial_tlcmicro_name: "Microwave Racing Video Activity"
-  tutorial_imathematician_name: "iMathematician"
-  tutorial_tlcmagic_name: "Magical Book Magic"
-  tutorial_scratchmus_name: "Make Music with Scratch"
-  tutorial_scratchanim_name: "Animate Your Name with Scratch"
-  tutorial_scratchfly_name: "Make it Fly with Scratch"
-  tutorial_tynkerarc_name: "Undersea Arcade Game Kit"
-  tutorial_grokffpython_name: "Frozen Fractals (Python Turtle)"
-  tutorial_grokffblock_name: "Frozen Fractals (Blockly Turtle)"
-  tutorial_grokeliza_name: "Is Eliza Human? (Python)"
-  tutorial_tynkercan_name: "Physics Cannon 2-Player Game Kit"
-  tutorial_grokflags_name: "Flags of the World (Python Turtle)"
-  tutorial_robomind_name: "Program a virtual robot with RoboMind"
-  tutorial_scratchanimwork_name: 'Animate Your Name: Educator Guide'
-  tutorial_adventureq_name: "Adventure with Q"
-  tutorial_khan-es_name: "An introduction to JavaScript"
-  tutorial_kpt_name: "An introduction to JavaScript"
-  tutorial_kpl_name: "An introduction to JavaScript"
-  tutorial_khe_name: "An introduction to JavaScript"
-  tutorial_kfr_name: "An introduction to JavaScript"
-  tutorial_app-inventor_name: "AppInventor Hour of Code"
+  tutorial_spiralsdash_name: "Nacrtajte spirale uz Dash"
+  tutorial_ghdebug_name: "Ispravljanje pogrješaka uz Grace Hopper"
+  tutorial_tlckk_name: "Križaljke"
+  tutorial_firstcomp_name: "Moje prvo računalo"
+  tutorial_mazefinch_name: "S robotom Finchem kroz labirint"
+  tutorial_tlccc_name: "Zagonetke sažimanja koda"
+  tutorial_tlcdoodle_name: "Algoritamske šare bare"
+  tutorial_tlcpunch_name: "Zadatak pretraživanja bušene kartice"
+  tutorial_finchfract_name: "Finchevi fraktali"
+  tutorial_tlcmind_name: "Zadatak crveno crnog spajanja uma"
+  tutorial_tlctelebot_name: "Zadatak teleportiranja robota"
+  tutorial_tlcaus_name: "Zadatak sna australskog mađioničara"
+  tutorial_oralhist_name: "Projekt usmene povijesti"
+  tutorial_tlcmicro_name: "Djelatnost videa mikrovalnih utrka"
+  tutorial_imathematician_name: "iMatematičar"
+  tutorial_tlcmagic_name: "Čarolije čarobne knjige"
+  tutorial_scratchmus_name: "Stvorite glazbu s pomoću jezika Scratch"
+  tutorial_scratchanim_name: "Animirajte Vaše ime s pomoću jezika Scratch"
+  tutorial_scratchfly_name: "Neka poleti uz jezik Scratch"
+  tutorial_tynkerarc_name: "Sklop za podmorsku arkadnu igru"
+  tutorial_grokffpython_name: "Smrznuti fraktali (Python kornjača)"
+  tutorial_grokffblock_name: "Smrznuti fraktali (Blockly kornjača)"
+  tutorial_grokeliza_name: "Je li Eliza čovjek? (Python)"
+  tutorial_tynkercan_name: "Fizikalni top 2 - Igraći sklop"
+  tutorial_grokflags_name: "Zastave svijeta (Python kornjača)"
+  tutorial_robomind_name: "Programirajte prividnog robota uz RoboMind"
+  tutorial_scratchanimwork_name: 'Animirajte svoje ime: Vodič za nastavnika'
+  tutorial_adventureq_name: "Avantura s Q"
+  tutorial_khan-es_name: "Uvod u JavaScript"
+  tutorial_kpt_name: "Uvod u JavaScript"
+  tutorial_kpl_name: "Uvod u JavaScript"
+  tutorial_khe_name: "Uvod u JavaScript"
+  tutorial_kfr_name: "Uvod u JavaScript"
+  tutorial_app-inventor_name: "Sat koda AppInventor"
   tutorial_bits_name: "Bits and bricks"
   tutorial_blockly_name: "Blockly"
-  tutorial_tynker_name: "Build your own game"
-  tutorial_baypt_name: "Code Baymax"
+  tutorial_tynker_name: "Napravite vlastitu igru"
+  tutorial_baypt_name: "Kod Baymax"
   tutorial_code-combat_name: "CodeCombat"
   tutorial_mky_name: "CodeMonkey"
   tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
-  tutorial_pirates_name: "Coding Pirates"
+  tutorial_pirates_name: "Kodirajući gusari"
   tutorial_csfirst_name: "CS First"
-  tutorial_loopedy_name: "Dance the Loopedy-Loop"
-  tutorial_dsw_name: "Disney Star Wars"
-  tutorial_dswb_name: "Disney Star Wars"
-  tutorial_ssw_name: "Disney Star Wars"
-  tutorial_sswb_name: "Disney Star Wars"
-  tutorial_kodable-unplugged_name: "fuzzFamily Frenzy"
-  tutorial_scratch_name: "Get creative with coding"
+  tutorial_loopedy_name: "Zaplešite zapetljanu petlju"
+  tutorial_dsw_name: "Disneyevi Zvjezdani ratovi"
+  tutorial_dswb_name: "Disneyevi Zvjezdani ratovi"
+  tutorial_ssw_name: "Disneyevi Zvjezdani ratovi"
+  tutorial_sswb_name: "Disneyevi Zvjezdani ratovi"
+  tutorial_kodable-unplugged_name: "fuzzFamily bijes"
+  tutorial_scratch_name: "Budite stvaraoci uz kodiranje"
   tutorial_bayes_name: "Grandes Heroes"
-  tutorial_gumball_name: "Gumball Play Lab"
-  tutorial_hrm_name: "Human Resource Machine"
-  tutorial_ice-age_name: "Ice Age Play Lab"
-  tutorial_koapp_name: "Kodable (pre-readers welcome)"
+  tutorial_gumball_name: "Laboratorij za igru \"Žvakić\""
+  tutorial_hrm_name: "Stroj za kadrovsku službu"
+  tutorial_ice-age_name: "Laboratorij za igru \"Ledeno doba\""
+  tutorial_koapp_name: "Kodable (dobrodošli su i koji ne znaju čitati)"
   tutorial_lightbot-intl_name: "Lightbot"
-  tutorial_rmc_name: "Minecraft Hour of Code"
-  tutorial_smc_name: "Minecraft Hour of Code"
-  tutorial_minecraft-2016_name: "Minecraft Hour of Code"
-  tutorial_thinkersmith-es_name: "Mis Amigos Roboticos"
-  tutorial_pixie_name: "PIXIE Challenges"
-  tutorial_play_name: "Play Lab"
-  tutorial_robomind-nl_name: "Program a virtual robot"
-  tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 2: Lights'
-  tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
-  tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
-  tutorial_tchr_name: "Teacher Led Lesson Plans"
-  tutorial_robogame_name: "The Robot Games"
-  tutorial_tap_name: "Tynker on Tablets"
-  tutorial_cintl_name: "Write your first computer program"
+  tutorial_rmc_name: "Minecraft Sat Koda"
+  tutorial_smc_name: "Minecraft Sat Koda"
+  tutorial_minecraft-2016_name: "Minecraft Sat Koda"
+  tutorial_thinkersmith-es_name: "Mojos robotikos prijateljos"
+  tutorial_pixie_name: "PIXIE izazovi"
+  tutorial_play_name: "Laboratorij za igre"
+  tutorial_robomind-nl_name: "Programirajte prividnog robota"
+  tutorial_spheroi_name: 'SPRK munja laboratorijski blokovi 1: Uvod'
+  tutorial_spherol_name: 'SPRK munja laboratorijski blokovi 2: Svjetla'
+  tutorial_spherov_name: 'SPRK munja laboratorijski blokovi 3: Varijable'
+  tutorial_swb_name: 'Zvjezdani ratovi: Izgradnja galaktike uz pomoć Koda'
+  tutorial_build-a-galaxy_name: 'Zvjezdani ratovi: Izgradnja galaktike uz pomoć Koda'
+  tutorial_alicesims_name: "Nacrt priče i programiranje uz Alice and The Sims"
+  tutorial_tchr_name: "Nastavni planovi za cjeline koje vodi učitelj"
+  tutorial_robogame_name: "Robotske igre"
+  tutorial_tap_name: "Tynker na tabletima"
+  tutorial_cintl_name: "Napišite svoj prvi računalni program"
   tutorial_itchstop_name: "ITCH Stop Frame Animation (Scratch)"
-  tutorial_tynkerpn_name: 'Peep: Nature Walk'
-  tutorial_tynkerpd_name: 'Peep: Dance with Friends'
-  tutorial_persistence_name: 'Persistence: Building a Foundation'
-  tutorial_getloopy_name: "Getting Loopy"
-  tutorial_createface_name: "Create-a-Face"
-  tutorial_happymaps_name: "Happy Maps"
-  tutorial_moveit_name: "Move it, Move it!"
-  tutorial_bigevent_name: "The Big Event"
-  tutorial_gpp_name: "Graph Paper Programming"
-  tutorial_foosgame_name: "codeSpark Academy with the Foos - GameMaker"
-  tutorial_solopython_name: "My First Python Code"
-  tutorial_kodableint_name: "Introduction to Programming"
-  tutorial_kodableadv_name: "Advanced Programming Concepts"
-  tutorial_tynkertj_name: "Toxic Jungle"
-  tutorial_wolframa_name: "Age in Days"
-  tutorial_wolframm_name: "Random Melodies"
+  tutorial_tynkerpn_name: 'Peep: Šetnja prirodom'
+  tutorial_tynkerpd_name: 'Peep: Ples s prijateljima'
+  tutorial_persistence_name: 'Upornost: Izgradnja temelja'
+  tutorial_getloopy_name: "Mršenje petlji"
+  tutorial_createface_name: "Napravite lice"
+  tutorial_happymaps_name: "Sretne karte"
+  tutorial_moveit_name: "Idemo, idemo!"
+  tutorial_bigevent_name: "Veliki događaj"
+  tutorial_gpp_name: "Programiranje uz milimetarski papir"
+  tutorial_foosgame_name: "codeSpark akademija s Foos - GameMaker"
+  tutorial_solopython_name: "Moj prvi Python kod"
+  tutorial_kodableint_name: "Uvod u programiranje"
+  tutorial_kodableadv_name: "Napredni koncepti programiranja"
+  tutorial_tynkertj_name: "Otrovna džungla"
+  tutorial_wolframa_name: "Starost u danima"
+  tutorial_wolframm_name: "Nasumične melodije"
   tutorial_wolframspi_name: "Sound of PI"
-  tutorial_wolframsph_name: "Draw a Sphere"
-  tutorial_wolframp_name: "Draw a Polygon"
-  tutorial_wolframn_name: "Ninja Name Generator"
-  tutorial_soloweb_name: "Your First Webpage in an Hour!"
-  tutorial_bloxmobapp_name: "Build YOUR mobile APP"
-  tutorial_khanweb_name: 'Khan Academy: Webpages'
-  tutorial_khandata_name: 'Khan Academy: Databases'
-  tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
-  tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
-  tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
-  tutorial_mchoc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
-  tutorial_vidnews_shortdescription: "Code effects and graphics to make a news story all about tech, diversity, kids, and coding."
-  tutorial_kodable-pre_shortdescription: "A fun game to teach computer programming concepts"
-  tutorial_highseas_shortdescription: "In this activity, you'll create an adventure story with two characters that takes place on the high seas!"
-  tutorial_capython_shortdescription: "Use Python code to draw fun pictures with turtles."
-  tutorial_frzn_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
-  tutorial_cocom_shortdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
-  tutorial_play-lab_shortdescription: "Create a story or make a game with Play Lab!"
-  tutorial_boxisland2016_shortdescription: "Take a trip on Box Island and collect all the stars!"
-  tutorial_textcomp_shortdescription: "Investigate lossless compression techniques with the Text Compression Widget"
-  tutorial_encryption_shortdescription: "Introduces the need for encryption and simple techniques for cracking secret messages."
-  tutorial_kanopixel_shortdescription: "Code your way through iconic images from video game history, from Tetris through Minecraft!"
-  tutorial_foos_shortdescription: "\"The Foos\" is a fun, pre-reader friendly game to learn about programming."
-  tutorial_tynkerdd_shortdescription: "Go on an epic quest for treasure."
-  tutorial_tynkerana_shortdescription: "Create a working analog clock."
-  tutorial_vidcard_shortdescription: "Learn how to make a greeting card with JavaScript!"
-  tutorial_spritebox_shortdescription: "Run, jump, and code your way through three different worlds to collect the stars and make it to the finish line! Learn sequencing, debugging and loops, and code in Swift, Java, or with Icons."
-  tutorial_tynkerch_shortdescription: "Learn Javascript as you defeat viruses!"
-  tutorial_lightbot_shortdescription: "Program Lightbot to solve puzzles using procedures and loops!"
-  tutorial_hoc_shortdescription: "Placeholder for new code.org/hoc"
-  tutorial_code_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  tutorial_tinspire_shortdescription: "Get students started coding on their TI-Nspire CX handhelds in just 10 minutes at a time."
-  tutorial_itchbounceball_shortdescription: "Use ITCH - Scratch integrated with a video lesson to make your own bouncing ball project"
-  tutorial_vidclim_shortdescription: "Combine CS & Environmental Science, and record a video about climate."
-  tutorial_matlab_shortdescription: "Find the closest location to meet your friends using MATLAB!"
-  tutorial_flap_shortdescription: "Make your own game - Flappy Bird, Shark, or Submarine"
+  tutorial_wolframsph_name: "Nacrtajte kuglu"
+  tutorial_wolframp_name: "Nacrtajte mnogokut"
+  tutorial_wolframn_name: "Generator ninja imena"
+  tutorial_soloweb_name: "Vaša prva mrežna stranica u sat vremena!"
+  tutorial_bloxmobapp_name: "Napravite svoju mobilnu aplikaciju"
+  tutorial_khanweb_name: 'Khan Academy: Mrežne stranice'
+  tutorial_khandata_name: 'Khan Academy: Baze podataka'
+  tutorial_robomeshiq_name: "Programirajte VEX IQ robote s pomoću jezika Blockly"
+  tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
+  tutorial_moana_shortdescription: "Moana je hrabra, neustrašiva i odlučna pronaći svoj vlastiti put."
+  tutorial_star-wars_shortdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_gumadventure_shortdescription: "S pomoću koda nastavite epizodu Čudesnog svijeta žvakića."
+  tutorial_mchoc_shortdescription: "S pomoću blokova koda povedi Alexa ili Stevea na avanturu kroz Mincraft svijet."
+  tutorial_vidnews_shortdescription: "Programski efekti i grafika za stvaranje vijesti o tehnologiji, raznolikosti, djeci i kodiranju."
+  tutorial_kodable-pre_shortdescription: "Zabavna igra za učenje načela programiranja računala"
+  tutorial_highseas_shortdescription: "U ovoj ćete djelatnosti stvoriti uzbudljivu priču s dva junaka koja se odvija na otvorenom moru!"
+  tutorial_capython_shortdescription: "Koristite kod u jeziku Python za crtanje zabavnih slika s pomoću kornjača."
+  tutorial_frzn_shortdescription: "Idemo koristiti kod kako bismo se pridružili Anni i Elsi u njihovom istraživanju čarolije i ljepote leda."
+  tutorial_cocom_shortdescription: "Pobijedite čudovišta kako biste naučili Python ili JavaScript u ovoj epskoj igri programiranja!"
+  tutorial_play-lab_shortdescription: "Napravite priču ili stvorite igru uz Laboratorij igara!"
+  tutorial_boxisland2016_shortdescription: "Otputujte na Kutijasti otok i skupite sve zvijezde!"
+  tutorial_textcomp_shortdescription: "Istražite postupke sažimanja bez gubitaka uz Text Compression Widget"
+  tutorial_encryption_shortdescription: "Uvodi potrebu za šifriranjem i jednostavne postupke probijanja tajnih poruka."
+  tutorial_kanopixel_shortdescription: "Kodirajte svoj put kroz legendarne slike iz povijesti video igara, od Tetrisa do Minecrafta!"
+  tutorial_foos_shortdescription: "\"The Foos\" ja zabavna igra za učenje o programiranju, prilagođena djetetu koje još ne čita."
+  tutorial_tynkerdd_shortdescription: "Pođite na epsku potragu za blagom."
+  tutorial_tynkerana_shortdescription: "Napravite djelatni analogni sat."
+  tutorial_vidcard_shortdescription: "Saznajte kako napraviti čestitku uz JavaScript!"
+  tutorial_spritebox_shortdescription: "Trčite, skačite i isprogramirajte svoj put kroz tri različita svijeta kako biste skupili sve zvijeze i uspjeli doći do cilja! Naučite slijedove, ispravljanje pogrješaka i petlje, te kodirajte u jezicima Swift, Java ili uz Icons."
+  tutorial_tynkerch_shortdescription: "Naučite Javascript dok poražavate viruse!"
+  tutorial_lightbot_shortdescription: "Programirajte Lightbot za rješavanje zagonetki koristeći procedure i petlje!"
+  tutorial_hoc_shortdescription: "Rezervirano mjesto za novi kod.org/hoc"
+  tutorial_code_shortdescription: "Naučite kodirati uz Marka Zuckerberga i Angry Birds!"
+  tutorial_tinspire_shortdescription: "Potaknite učenike da počnu programirati na svojim TI-Nspire CX dlanovnicima u samo po 10 minuta."
+  tutorial_itchbounceball_shortdescription: "Koristite ITCH - Scratch uklopljen u video lekciju kako biste napravili vlastiti projekt loptice skočice"
+  tutorial_vidclim_shortdescription: "Kombinirajte CS i znanost o okolišu te snimite video o klimi."
+  tutorial_matlab_shortdescription: "Pronađite najbliže mjesto za susret s prijateljima koristeći MATLAB!"
+  tutorial_flap_shortdescription: "Napravite vlastitu igru - Flappy Bird, morski pas ili podmornica"
   tutorial_galaxy_shortdescription: "Create your own Android Galaxy games, animations, and interactive stories!"
   tutorial_inf_shortdescription: "Use Play Lab to create a story or game starring Disney Infinity characters."
   tutorial_tynkersol_shortdescription: "Program a moving model of the Solar System."
@@ -882,17 +913,17 @@ hr:
   tutorial_bits_shortdescription: "Move Bit by bit!"
   tutorial_blockly_shortdescription: "Download a ZIP file to learn offline"
   tutorial_tynker_shortdescription: "Learn to code by solving fun puzzles and build your own games."
-  tutorial_baypt_shortdescription: "Code Baymax"
-  tutorial_code-combat_shortdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
+  tutorial_baypt_shortdescription: "Kod Baymax"
+  tutorial_code-combat_shortdescription: "Pobijedite čudovišta kako biste naučili Python ili JavaScript u ovoj epskoj igri programiranja!"
   tutorial_mky_shortdescription: "Students program a monkey to catch bananas."
   tutorial_spellcraft_shortdescription: "Learn about Event-Driven programming using the power of CodeSpells!"
   tutorial_pirates_shortdescription: "Navigate the crystal waters of the southern hemisphere, code your treasure maps and discover the riches that lie on the golden shores. A fun way to learn the basic concepts of coding."
   tutorial_csfirst_shortdescription: "Animate a story about two characters on the ocean. Add your own style!"
   tutorial_loopedy_shortdescription: "Make a dance using loops!"
-  tutorial_dsw_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_dswb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_ssw_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_sswb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_dsw_shortdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_dswb_shortdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_ssw_shortdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_sswb_shortdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
   tutorial_kodable-unplugged_shortdescription: "A fun unplugged exercise"
   tutorial_scratch_shortdescription: "Create your own interactive games, stories, and animations with Scratch!"
   tutorial_bayes_shortdescription: "Grandes Heroes"
@@ -901,23 +932,23 @@ hr:
   tutorial_ice-age_shortdescription: "Create an Ice Age story or make a game with Play Lab!"
   tutorial_koapp_shortdescription: "A fun iPad game to teach computer programming concepts"
   tutorial_lightbot-intl_shortdescription: "A game to teach coding concepts"
-  tutorial_rmc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
-  tutorial_smc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
+  tutorial_rmc_shortdescription: "S pomoću blokova koda povedi Alexa ili Stevea na avanturu kroz Mincraft svijet."
+  tutorial_smc_shortdescription: "S pomoću blokova koda povedi Alexa ili Stevea na avanturu kroz Mincraft svijet."
   tutorial_minecraft-2016_shortdescription: "Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more."
   tutorial_thinkersmith-es_shortdescription: "Tutorial para un grupo sin computadoras"
   tutorial_pixie_shortdescription: "A visual language to learn to code step by step through challenges and games."
-  tutorial_play_shortdescription: "Create a story or make a game with Play Lab!"
+  tutorial_play_shortdescription: "Napravite priču ili stvorite igru uz Laboratorij igara!"
   tutorial_robomind-nl_shortdescription: "Write code for a virtual robot"
   tutorial_spheroi_shortdescription: "Introduction to Lightning Lab, The Sphero App for programming Sphero robots."
   tutorial_spherol_shortdescription: "Learn how to control Sphero’s lights and get creative with programming."
   tutorial_spherov_shortdescription: "Learn about Variables and Operators to program Sphero to simulate a speeding car, a hot potato game, and a fortune teller."
-  tutorial_swb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_build-a-galaxy_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_swb_shortdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_build-a-galaxy_shortdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
   tutorial_alicesims_shortdescription: "Tell stories and be creative while learning to code. "
   tutorial_tchr_shortdescription: "Be inspired to design your own Hour of Code event with these lesson plans."
   tutorial_robogame_shortdescription: "The grit, the games, the fun!"
   tutorial_tap_shortdescription: "Learn to program by solving fun coding puzzles."
-  tutorial_cintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
+  tutorial_cintl_shortdescription: "Naučite kodirati uz Marka Zuckerberga i Angry Birds!"
   tutorial_itchstop_shortdescription: "Learn to create your own Stop Frame Animations in Scratch"
   tutorial_tynkerpn_shortdescription: "Go for a nature walk with Peep!"
   tutorial_tynkerpd_shortdescription: "Make Peep and his friends dance!"
@@ -944,10 +975,11 @@ hr:
   tutorial_khanweb_shortdescription: "Learn how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
   tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
+  tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
-  tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_star-wars_longdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
-  tutorial_mchoc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
+  tutorial_mchoc_longdescription: "S pomoću blokova koda povedi Alexa ili Stevea na avanturu kroz Mincraft svijet."
   tutorial_vidnews_longdescription: 'It’s the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. “Breaking News: 400 students at Roosevelt participate in the Hour of Code”'
   tutorial_kodable-pre_longdescription: "Kodable is a self-guided game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary."
   tutorial_highseas_longdescription: "Animate an ocean wave to create a setting, then tell a story that takes place on the high seas."
@@ -963,10 +995,10 @@ hr:
   tutorial_tynkerdd_longdescription: "Design your own custom dragon, then use programming to guide it through fun puzzles on its quest for treasure and coins! You'll have to navigate through complex castles, find power-ups, and conquer knights to get all the treasure."
   tutorial_tynkerana_longdescription: "Use your knowledge of math and geometry to create a working analog clock with moving second, minute, and hour hands. You'll need to calculate the angle that each hand should point based on what time it is. When you're done, you can add in reminders about what you need to do throughout the day to make your own alarm clock!"
   tutorial_vidcard_longdescription: "Learn how to make a greeting card with JavaScript!\n\nYou will learn how to manipulate your own videos by accessing each and every pixel and telling it what to do with CODE!\n\nYou can also upload and record your own footage to personalize the experience.\n\nCreated in partnership with GSGNY."
-  tutorial_spritebox_longdescription: "Run, jump, and code your way through three different worlds to collect the stars and make it to the finish line! Learn sequencing, debugging and loops, and code in Swift, Java, or with Icons."
+  tutorial_spritebox_longdescription: "Trčite, skačite i isprogramirajte svoj put kroz tri različita svijeta kako biste skupili sve zvijeze i uspjeli doći do cilja! Naučite slijedove, ispravljanje pogrješaka i petlje, te kodirajte u jezicima Swift, Java ili uz Icons."
   tutorial_tynkerch_longdescription: "Save the computer from a malicious virus! You'll have to hack your way through the system by deleting viruses, opening doors, solving mazes, and navigating through the portals. Watch out for viruses and glitches!"
   tutorial_lightbot_longdescription: "Lightbot is a game that asks players to use programming logic to solve puzzles! Gain a practical understanding of basic coding concepts by guiding Lightbot to light up all the blue tiles in each level. Learn how to sequence instructions, write procedures, and utilize loops along the way in this self-guided activity. Great for all ages and all skill levels."
-  tutorial_hoc_longdescription: "Placeholder for new code.org/hoc"
+  tutorial_hoc_longdescription: "Rezervirano mjesto za novi kod.org/hoc"
   tutorial_code_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages."
   tutorial_tinspire_longdescription: "Introduce students to the basics of coding – in just 10 minutes at a time – using the TI technology they carry in their backpacks every day. These lessons give students an easy-entry into programming that can help spark their interest in coding and computer science.  Students will write programs that can strengthen math concepts using the TI Basic language that is ready-to-use on their TI-Nspire handhelds."
   tutorial_itchbounceball_longdescription: "We take you through an introduction to Itch, utilizing the Scratch visual programming language.\n\nThis lesson provides a video and text directions for the code students need to add to get a ball bouncing zanily around the screen.\n\nOnce students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!\n\nAll instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended."
@@ -1014,7 +1046,7 @@ hr:
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
   tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
-  tutorial_cdmy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
   tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
@@ -1154,17 +1186,17 @@ hr:
   tutorial_bits_longdescription: "Bit is a little, very adventurous LEGO® robot, but as with all small creatures, sometimes Bit cannot get its programs right. You can help Bit solve the challenges by figuring out which programs are needed. You do this by creating a sequence of small behavior blocks that tells Bit what to do."
   tutorial_blockly_longdescription: "Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick"
   tutorial_tynker_longdescription: "Play fun coding games to learn to code. Use programming to complete a spooktacular Monster High scavenger hunt, program a Hot Wheels car, plan your war strategy against invading goblins, and even battle monsters. Learn key programming concepts and computational thinking skills as you play. Then build your own games and share them with friends!"
-  tutorial_baypt_longdescription: "Code Baymax"
-  tutorial_code-combat_longdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
+  tutorial_baypt_longdescription: "Kod Baymax"
+  tutorial_code-combat_longdescription: "Pobijedite čudovišta kako biste naučili Python ili JavaScript u ovoj epskoj igri programiranja!"
   tutorial_mky_longdescription: "Learn and teach coding in CoffeeScript, a real-world programming language. CodeMonkey is a fun, award-winning game, suitable for everybody, with or without any coding experience. CodeMonkey's adaptive platform will give you all the instructions and hints you need, and will reward you star scores. Write code. Catch Bananas. Save the world."
   tutorial_spellcraft_longdescription: "Learn about Event-Driven programming using the power of spells! With CodeSpells, you can design and create your very own wizarding spells using Google’s easy-to-use Blockly coding interface or a built-in JavaScript text editor. Through spell creation, students will learn how to write code based around events and become familiar with Event-Driven coding concepts."
   tutorial_pirates_longdescription: "Captain Hack is a pirate looking for treasure. He also writes treasure maps, and writing those like writing code. He (the player) uses \"pirate code\" for this. It is a symbol-based programming language, used for instructions and even AI behaviors. movements, loops, GO-TO's, true/false-statements are all core parts of the game. The players are guided through a tutorial and presented for the posibilities, step by step. There are no correct solution for the tutorial levels, so the user can chose whatever solution they like. "
   tutorial_csfirst_longdescription: "Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!"
   tutorial_loopedy_longdescription: "The goal of a good programmer is to write a program that is a short, clear, and effective as possible. In this lesson, students will learn how write programs using loops."
-  tutorial_dsw_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_dswb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_ssw_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_sswb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_dsw_longdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_dswb_longdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_ssw_longdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_sswb_longdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
   tutorial_kodable-unplugged_longdescription: "Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. "
   tutorial_scratch_longdescription: "With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. To get started, animate your name, create a dance scene, or make a hide-and-seek game featuring Cartoon Network’s We Bare Bears!"
   tutorial_bayes_longdescription: "Grandes Heroes"
@@ -1173,8 +1205,8 @@ hr:
   tutorial_ice-age_longdescription: "Create a story or make a game with Play Lab! Make Ice Age characters move, make sounds, score points, and even throw snow flakes!"
   tutorial_koapp_longdescription: "Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary."
   tutorial_lightbot-intl_longdescription: "Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!"
-  tutorial_rmc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
-  tutorial_smc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
+  tutorial_rmc_longdescription: "S pomoću blokova koda povedi Alexa ili Stevea na avanturu kroz Mincraft svijet."
+  tutorial_smc_longdescription: "S pomoću blokova koda povedi Alexa ili Stevea na avanturu kroz Mincraft svijet."
   tutorial_minecraft-2016_longdescription: "Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more."
   tutorial_thinkersmith-es_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
   tutorial_pixie_longdescription: "Hour of Code tutorial with Pixie"
@@ -1183,8 +1215,8 @@ hr:
   tutorial_spheroi_longdescription: "Everyone starts somewhere. Welcome to your first Lightning Lab activity!\n\nFollow the steps to get a quick video overview of the app, learn how to create programs using the block-based interface, and gain an understanding of loops. After that, test your skills and curiosity by playing a game with your robot and the app.\n"
   tutorial_spherol_longdescription: "Dive into the power of lights in this activity. You will discover different methods to control Sphero’s lights and then build programs to put the lights to work. You will create a program that powers a robotic Jack-o’-Lantern, turns Sphero into a sensor-based spinning top, and also get creative with long exposure light art."
   tutorial_spherov_longdescription: "In this Sphero Lightning Lab activity you will learn about powerful programming commands. This activity will simulate Sphero getting pulled over by a police officer for speeding. You will also build a hot potato game program, and turn Sphero into a fortune teller to predict the future. All of this will be accomplished with variables that let you set conditional values in the Lightning Lab app. "
-  tutorial_swb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_build-a-galaxy_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_swb_longdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
+  tutorial_build-a-galaxy_longdescription: "Naučite programirati droida i stvorite svoju vlastitu igru Zvjezdanih ratova u galaksiji daleko, daleko."
   tutorial_alicesims_longdescription: "Follow the animation production process from storyboarding to programming with Alice and The Sims.  Let creativity and storytelling drive your learning in a drag and drop coding environment.  The project will guide you through what is a storyboard, translating a storyboard into a programmable script, and how to program a short 3D animation. "
   tutorial_tchr_longdescription: "Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans."
   tutorial_robogame_longdescription: "Challenge your school to compete in the Robot Games! Students will compete in a series of mathematics themed activities where they use Dash and Dot to solve a problem and earn points for themselves, their grade, and/or their school."
@@ -1216,6 +1248,7 @@ hr:
   tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
   tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
+  tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_gumadventure_language: "English only"
@@ -1223,7 +1256,7 @@ hr:
   tutorial_vidnews_language: "English only"
   tutorial_kodable-pre_language: "English, Arabic, Azerbaijani, German, Greek, Spanish, Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese"
   tutorial_highseas_language: "English only"
-  tutorial_capython_language: "English only"
+  tutorial_capython_language: "English, Dutch, Spanish"
   tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
   tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1265,14 +1298,14 @@ hr:
   tutorial_livecode_language: "English only"
   tutorial_cocomgame_language: "English, Arabic, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 8 more"
   tutorial_tynkerspin_language: "English only"
-  tutorial_code-avengers_language: "English, Spanish, Bulgarian, Danish, Greek, Finnish, Japanese and more"
+  tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
   tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
   tutorial_texas-instruments_language: "English only"
-  tutorial_cajava_language: "English only"
+  tutorial_cajava_language: "English, Dutch, Spanish"
   tutorial_codehs_language: "English only"
   tutorial_hopemo_language: "English only"
   tutorial_tynkercm_language: "English only"
@@ -1286,7 +1319,7 @@ hr:
   tutorial_mitedarc_language: "English only"
   tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
-  tutorial_cdmy_language: "Spanish"
+  tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
   tutorial_codestersbasketball_language: "English, Spanish"
   tutorial_nclkarel_language: "Multiple"
@@ -1294,7 +1327,7 @@ hr:
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
   tutorial_globaloria_language: "English, Spanish"
-  tutorial_capost_language: "English only"
+  tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
   tutorial_kanopong_language: "English only"
@@ -1323,7 +1356,7 @@ hr:
   tutorial_coders_language: "English, French"
   tutorial_tynkerhw_language: "English only"
   tutorial_tynkermh_language: "English only"
-  tutorial_caphoto_language: "English only"
+  tutorial_caphoto_language: "English, Dutch, Spanish"
   tutorial_mozillahw_language: "English only"
   tutorial_ticklep_language: "Chinese (Traditional), Danish, English, French, Japanese"
   tutorial_bbot_language: "Dutch, Suomi, English"
@@ -1488,6 +1521,7 @@ hr:
   tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
   tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
+  tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
@@ -1760,6 +1794,7 @@ hr:
   tutorial_khanweb_string_detail_grades: "Grades 2+"
   tutorial_khandata_string_detail_grades: "Grades 6+"
   tutorial_robomeshiq_string_detail_grades: "Grades 2+"
+  tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
@@ -1779,7 +1814,7 @@ hr:
   tutorial_tynkerdd_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkerana_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_vidcard_string_platforms: "Chrome"
-  tutorial_spritebox_string_platforms: "All modern browsers"
+  tutorial_spritebox_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkerch_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_lightbot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_hoc_string_platforms: "do-not-show"
@@ -1793,7 +1828,7 @@ hr:
   tutorial_inf_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_tynkersol_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_itchg_string_platforms: "Chrome, Firefox, Android Tablet"
-  tutorial_como_string_platforms: "All modern browsers"
+  tutorial_como_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_processfound_string_platforms: "Chrome, Firefox, Safari"
   tutorial_tynkerhomo_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_art_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -2032,6 +2067,7 @@ hr:
   tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
+  tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
@@ -2304,6 +2340,7 @@ hr:
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
+  tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
@@ -2576,3 +2613,45 @@ hr:
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_name_error: "School name is required."
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code"
+  school_zip_error: "School postal code is required."
+  census_thanks: 'Thanks for signing up!'
+  census_header: 'Please take a few minutes to tell us about your school (Optional).'
+  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
+  census_how_many_hoc: "How many students will do an Hour of Code?"
+  census_how_many_after_school: "How many students do computer programming in an after-school program?"
+  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
+  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
+  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
+  census_connection: "What is your connection to this school?"
+  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
+  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
+  census_followup_frequency: "How often per week does this class meet?"
+  less_than_one: "< 1 hour per week"
+  one_to_three: "1-3 hours per week"
+  three_plus: "3+ hours per week"
+  census_followup_more: "Please tell us more about this course."
+  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
+  census_topics_blocks: "Block-based programming"
+  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
+  census_topics_robots: "Robotics / Physical Computing"
+  census_topics_internet: "Internet and networking"
+  census_topics_security: "Cybersecurity"
+  census_topics_data: "Data analysis"
+  census_topics_web_design: "Web design using HTML and CSS"
+  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
+  teacher: "Teacher"
+  administrator: "Administrator"
+  parent: "Parent"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
+  other: "Other"
+  other_describe: "Other (please describe below)"
+  none: "None"
+  some: "Some"
+  all: "All"
+  dont_know: "I don't know"
