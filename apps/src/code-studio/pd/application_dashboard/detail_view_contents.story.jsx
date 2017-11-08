@@ -32,6 +32,7 @@ export default storybook => {
                 abilityToMeetRequirements: '10'
               }
             }}
+            viewType="facilitator"
             updateProps={() => {}}
           />
         )

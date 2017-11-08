@@ -1,11 +1,8 @@
 ---
-
-title: <%= hoc_s(:title_op_ed) %>
-layout: wide
+title: '<%= hoc_s(:title_op_ed) %>'
+layout: ფართო
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### ქვემოთ მოცემულია კომპიუტერული განათლების კვირეულისა და კოდის ერთი საათის მხარდამჭერი სტატიის მაგალითი რომლის გამოყენებაც შეუძლიათ ადგილობრივ კანონმდებლებს, ბიზნეს-ლიდერებს და ა. შ.
@@ -45,6 +42,6 @@ We need to recruit more computer science teachers and encourage professional dev
 
 According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. დაუჭირეთ მხარი ჩვენს ინიციატივას, რომ კომპიუტერული მეცნიერებები **[STATE]**-ის მეტ სკოლაში ისწავლებოდეს.
 
 <%= view :signup_button %>

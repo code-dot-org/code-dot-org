@@ -83,9 +83,9 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def empty_application_data
     {}.tap do |app_data|
-      ROLES.each do |role|
+      TYPES_BY_ROLE.each do |role, app_type|
         app_data[role] = {}
-        Pd::Application::ApplicationBase.statuses.keys.each do |status|
+        app_type.statuses.keys.each do |status|
           app_data[role][status] = 0
         end
       end

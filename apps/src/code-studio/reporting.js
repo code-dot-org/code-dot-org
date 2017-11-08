@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import { TestResults } from '@cdo/apps/constants';
+import { PostMilestoneMode } from '@cdo/apps/util/sharedConstants';
 import experiments from '../util/experiments';
 var clientState = require('./clientState');
 
@@ -244,9 +245,26 @@ reporting.sendReport = function (report) {
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  if (appOptions.postMilestone ||
-    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
+  const postMilestoneMode = appOptions.postMilestoneMode || PostMilestoneMode.all;
+  let postMilestone;
 
+  switch (postMilestoneMode) {
+    case PostMilestoneMode.all:
+      postMilestone = true;
+      break;
+    case PostMilestoneMode.successful_runs_and_final_level_only:
+      postMilestone = report.pass || appOptions.level.final_level;
+      break;
+    case PostMilestoneMode.final_level_only:
+      postMilestone = appOptions.level.final_level;
+      break;
+    default:
+      console.error("Unexpected postMilestoneMode " + postMilestoneMode);
+      postMilestone = true;
+      break;
+  }
+
+  if (postMilestone) {
     var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,

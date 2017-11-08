@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promova a Hora do Código
 
@@ -39,13 +37,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **A "Hour of Code" é uma marca registrada. Não queremos impedir seu uso, mas queremos garantir que ele se enquadre em alguns limites:**
 
-  1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Exemplo de uso errado: "Experimente a Hora do Código promovida pela ACME Corp".
-  2. Use "TM" sobrescrito nos textos de maior destaque quando mencionar "Hour of Code" (ou Hora do Código), tanto em seu website como em descrições de aplicativos.
-  3. Use o seguinte texto na página (ou no rodapé), com links para os sites da Semana da Educação em Ciência da Computação e Code.org:
+1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Exemplo de uso errado: "Experimente a Hora do Código promovida pela ACME Corp".
+2. Use "TM" sobrescrito nos textos de maior destaque quando mencionar "Hour of Code" (ou Hora do Código), tanto em seu website como em descrições de aplicativos.
+3. Use o seguinte texto na página (ou no rodapé), com links para os sites da Semana da Educação em Ciência da Computação e Code.org:
     
     *"A 'Hora do Código' é uma iniciativa nacional da Semana da Educação em Ciência da Computação[csedweek.org] e da Code.org[code.org] para proporcionar a experiência de uma hora de ciência da computação e programação a milhões de estudantes".*
 
-  4. É proibido o uso de "Hour of Code" em nomes de aplicativos.
+4. É proibido o uso de "Hour of Code" em nomes de aplicativos.
 
 <a id="stickers"></a>
 
@@ -62,11 +60,11 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Peça para sua escola, empregador ou amigos se inscreverem:
 
-Os computadores estão em toda parte, mudando todos os setores do planeta. Mas menos da metade de todas as escolas ensinam ciência da computação. A boa notícia é que estamos a caminho de mudar essa realidade. Se você já ouviu falar da Hora do Código, sabe que ela marcou a história. Mais de 100 milhões de alunos já experimentaram uma Hora do Código.
+Os computadores estão em toda parte, mudando todos os setores do planeta. Mas menos da metade das escolas ensina ciência da computação. A boa notícia é que estamos a caminho de mudar essa realidade. Se você já ouviu falar da Hora do Código, sabe que ela marcou a história. Mais de 100 milhões de alunos já experimentaram uma Hora do Código.
 
 Com a Hora do Código, a ciência da computação esteve nas páginas iniciais do Google, MSN e Yahoo! e Disney. Mais de 100 parceiros se uniram para apoiar este movimento. Todas as lojas da Apple do mundo já sediaram uma Hora do Código. O presidente Obama escreveu sua primeira linha de código como parte da campanha.
 
-Este ano, contamos com você para torná-lo um evento ainda maior. Participe da Hora do Código 2016. Venha experimentar a Hora do Código durante a Semana da Educação em Ciência da Computação, <%= campaign_date('full') %>.
+Esse ano, vamos torná-lo ainda maior. Estou lhe convidando a participar da Hora do Código 2016. Por favor, se envolva com um evento da Hora do Código durante a Semana de Educação da Ciência da Computação, <%= campaign_date('full') %>.
 
 Divulgue. Sedie um evento. Peça para uma escola local se inscrever. Ou experimente a Hora do Código você mesmo — todos podem se beneficiar aprendendo seus fundamentos.
 
@@ -78,11 +76,11 @@ Comece em http://hourofcode.com/<%= @country %>
 
 **Assunto:** Escola local participa da missão de levar a ciência da computação aos alunos
 
-Computadores estão em toda parte, mudando todos os setores do planeta, mas menos da metade de todas as escolas ensinam ciência da computação. As minorias sociais e as mulheres têm baixíssima representação nas aulas de ciência da computação, bem como no setor da tecnologia. A boa notícia é que estamos a caminho de mudar essa realidade.
+Os computadores estão em toda parte, mudando todos os setores do planeta, mas menos da metade das escolas ensina ciência da computação. As minorias sociais e as mulheres têm baixíssima representação nas aulas de ciência da computação, bem como no setor da tecnologia. A boa notícia é que estamos a caminho de mudar essa realidade.
 
 Com a Hora do Código, a ciência da computação esteve nas páginas iniciais do Google, MSN e Yahoo! e Disney. Mais de 100 parceiros se uniram para apoiar este movimento. Todas as lojas da Apple do mundo já sediaram uma Hora do Código. O presidente Obama escreveu sua primeira linha de código como parte da campanha.
 
-É por isso que todos os [NÚMERO] alunos da [NOME DA ESCOLA] estão participando do maior evento de aprendizado da história: a Hora do Código, durante a Semana da Educação em Ciência da Computação (<%= campaign_date('full') %>).
+É por isso que cada um dos [X number] alunos da [SCHOOL NAME] estão participando do maior evento de aprendizado da história: a Hora do Código, durante a Semana de Educação da Ciência da Computação (<%= campaign_date('full') %>).
 
 Gostaria de convidá-lo para participar da abertura de nosso evento e assistir ao início das atividades das crianças no dia [DATA].
 
@@ -126,7 +124,7 @@ Caro, [nome do Prefeito/Secretário/Governador/Senador]:
 
 Sabia que a computação é a principal fonte de remuneração nos EUA? Há mais de 500 mil vagas de emprego disponíveis na área de computação em todo o país, mas, no último ano, apenas 42.969 alunos formados em ciência da computação entraram para a força de trabalho.
 
-A ciência da computação é fundamental para *todos* os setores hoje em dia. Ainda assim, a maioria das escolas não a ensinam. Na [NOME DA ESCOLA], estamos tentando mudar isso.
+A ciência da computação é fundamental para *todos* os setores hoje em dia. Ainda assim, a maioria das escolas não a ensina. Na [NOME DA ESCOLA], estamos tentando mudar isso.
 
 É por isso que toda a nossa escola participará do maior evento de aprendizado da história: a Hora do Código, durante a Semana da Educação em Ciência da Computação (<%= campaign_date('full') %>). Mais de 100 milhões de alunos no mundo todo já experimentaram uma Hora do Código.
 

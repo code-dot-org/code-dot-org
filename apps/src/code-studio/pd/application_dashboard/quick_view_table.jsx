@@ -1,13 +1,17 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
+import {StatusColors} from './constants';
 import _ from 'lodash';
 
 const styles = {
   table: {
     width: '100%',
-  }
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors
 };
 
 export default class QuickViewTable extends React.Component {
@@ -54,18 +58,11 @@ export default class QuickViewTable extends React.Component {
       },
       cell: {
         format: (status) => {
-          if (status === 'move_to_interview') {
-            return 'Move to Interview';
-          }
           return _.upperFirst(status);
         },
         transforms: [
           (status) => ({
-            style: {
-              backgroundColor: this.getViewColor(status),
-              color: this.getTextColor(status),
-              padding: '5px'
-            }
+            style: {...styles.statusCellCommon, ...styles.statusCell[status]}
           })
         ]
       }
@@ -79,25 +76,6 @@ export default class QuickViewTable extends React.Component {
       }
     });
     return columns;
-  }
-
-  getViewColor = (status) => {
-    switch (status) {
-      case 'unreviewed': return color.charcoal;
-      case 'pending': return color.lighter_orange;
-      case 'accepted': return color.level_perfect;
-      case 'declined': return color.red;
-      case 'waitlisted': return color.level_passed;
-      case 'move_to_interview': return color.orange;
-      case 'withdrawn': return color.lightest_red;
-    }
-  }
-
-  getTextColor = (status) => {
-    if (status === 'declined' || status === 'unreviewed') {
-      return color.white;
-    }
-    return color.black;
   }
 
   formatViewButton = (id) => {
