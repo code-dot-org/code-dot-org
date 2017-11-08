@@ -1,83 +1,77 @@
 ---
-
-title: <%= hoc_s(:title_how_to) %>
+title: '<%= hoc_s(:title_how_to) %>'
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# Jak uczyć jednej Godziny Kodowania po szkole
+# Jak poprowadzić Godzinę Kodowania w ramach zajęć pozalekcyjnych
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-**Wszystkie samouczki Godziny Kodowania:**
+## 2. Wybierz samouczek
 
-  * Wymagają od organizatorów niewielkiego czasu na przygotowanie
-  * Są samo wyjaśniające - pozwalają uczniom pracować we własnym tempie i na własnym poziomie przygotowania
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [ Wypróbuj je! ](<%= resolve_url('/learn') %>)
+
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3) Promote your Hour of Code
+## 3. Promuj swoją Godzinę Kodowania
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4) Zaplanuj swoje potrzeby technologiczne - komputery są opcjonalne
+## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Najlepsze doświadczenia z Godziną Kodowania zapewnią komputery z dostępem do Internetu. Ale **nie** potrzebujesz komputera dla każdego dziecka, możesz przeprowadzić Godzinę Kodowania nawet bez żadnych komputerów.
 
-**Plan Ahead!** Do the following before your event starts:
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Jeśli nie masz dość urządzeń,** zaproponuj [programowanie w parach](https://www.youtube.com/watch?v=vgkahOzFH2Q). Gdy uczniowie dobierają się w pary, pomagają sobie nawzajem i mniej potrzebują pomocy nauczyciela. Przekonują się także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
-  * **Jeśli masz zbyt wolne łącze internetowe,** to pokazuj filmy przed całą klasą, aby każdy uczeń nie musiał pobierać swojego filmu. Możesz też wypróbować samouczki bez komputera lub offline.
+Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samouczek, który wybrałeś, działa najlepiej z dźwiękiem.
 
-![](/images/fit-350/group_ipad.jpg)
+**Czy nie masz wystarczająco urządzeń?** Wykorzystaj [programowanie parami](https://www.youtube.com/watch?v=vgkahOzFH2Q). Gdy uczniowie dobierają się w pary, to pomagają sobie nawzajem i mniej potrzebują pomocy nauczyciela. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
 
-## 5) Start your Hour of Code off with an inspiring video
+<img src="/images/fit-350/group_ipad.jpg" />
+
+## 5. Rozpocznij swoją Godzinę Kodowania od obejrzenia inspirującego filmu
 
 Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest wpływ informatyki na każdą sferę naszego życia.
 
 **Pokaż inspirujący film:**
 
-  * Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Wideo inaugurujące Godzinę Kodowania 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub <% if @country == 'uk' %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Znajdź więcej inspirujących filmów [tutaj](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Prezydent Obama wzywa wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Przedstaw, jak technologia wpływa na nasze życie, z przykładami, które interesują zarówno chłopców, jak i dziewczęta (Uwzględnij w dyskusji o aplikacjach i technologii te przykłady, które odnoszą się do ratowania życia, pomocy ludziom, łączenia ludzi itp).
-  * Wymień rzeczy, które używają kodu w codziennym życiu.
-  * Zobacz porady dotyczące zainteresowania dziewcząt informatyką [tutaj](<%= resolve_url('https://code.org/girls') %>).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Wymień rzeczy, które używają kodu w codziennym życiu.
+- Zobacz [tutaj](<%= resolve_url('https://code.org/girls') %>) porady, jak zainteresować informatyką dziewczęta.
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-**Jeśli potrzebujesz więcej pomysłów dydaktycznych,** sprawdź [najlepsze praktyki ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) od doświadczonych pedagogów.
-
-## 6) Programuj!
+## 6. Code!
 
 **Skieruj uczestników na aktywności**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
-  * "Nie wiem. Sprawdźmy to razem."
-  * "Technologia nie zawsze działa na sposób, w jaki chcemy."
-  * "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
+- "Nie wiem. Sprawdźmy to razem."
+- "Technologia nie zawsze działa w sposób, jaki chcemy."
+- "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
 
 **Co zrobić, jeśli ktoś kończy wcześniej?**
 
-  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-  * Lub poproś tych, którzy skończyli wcześniej, by pomogli tym, którzy mają problemy.
+- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+- Or, ask those who finish early to help others who are having trouble.
 
 [col-33]
 
@@ -91,11 +85,9 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## 7) Świętuj
+## 7. Świętuj
 
 [col-33]
 
@@ -103,10 +95,10 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 [/col-33]
 
-  * [Wydrukuj świadectwa](<%= resolve_url('https://code.org/certificates') %>) dla swoich uczniów.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
+- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+- [Wydrukuj naklejki "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) dla swoich uczniów.
+- [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twojej szkoły.
+- Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
 [col-33]
 
@@ -114,23 +106,20 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## Inne zasoby Godziny Kodowania dla nauczycieli:
+## Inne zasoby Godziny Kodowania dla nauczycieli
 
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-  * Obejrzyj nagranie naszego [Przewodnika edukatora z seminarium o Godzinie Kodowania](https://youtu.be/EJeMeSW2-Mw).
-  * [Weź udział na żywo w Q & A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) z naszym założycielem, Hadi Partovi, aby przygotować się do Godziny Kodowania.
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-  * Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+- Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co będzie się działo po Godzinie Kodowania?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-  * Zachęcaj uczniów do kontynuowania [nauki online](<%= resolve_url('https://code.org/learn/beyond') %>).
-  * [Weź udział](<%= resolve_url('https://code.org/professional-development-workshops') %>) w jednodniowych warsztatach, aby otrzymać instrukcje od moderatora doświadczonego w dziedzinie informatyki. (Tylko edukatorów z USA)
+- Zachęć uczniów do kontynuowania [nauki online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- [Weź udział](<%= resolve_url('https://code.org/professional-development-workshops') %>) w jednodniowych warsztatach, aby otrzymać wskazówki od doświadczonego instruktora informatyki. (Tylko dla edukatorów z USA)
 
 <%= view :signup_button %>

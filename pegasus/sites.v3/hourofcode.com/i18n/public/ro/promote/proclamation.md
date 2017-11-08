@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Mai jos este o rezoluţie de proba de susţinere a Saptamanii Mondiale a Educatiei si Stiintei calculatorului şi obiectivele sale, care ar putea fi utilizate de stat şi legiuitorii locali.
