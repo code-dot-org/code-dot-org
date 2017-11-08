@@ -23,6 +23,7 @@ class HttpCache
     frozen
     gumball
     minecraft
+    hero
     sports
     basketball
   ).map do |script_name|
