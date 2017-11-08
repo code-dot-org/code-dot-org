@@ -583,6 +583,20 @@ export default class Craft {
     $('.arrow').prop("disabled", false);
   }
 
+  static isPreAnimationFailure(testResult) {
+    switch (testResult) {
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+      case TestResults.EMPTY_FUNCTIONAL_BLOCK:
+      case TestResults.EXTRA_TOP_BLOCKS_FAIL:
+      case TestResults.EXAMPLE_FAILED:
+      case TestResults.EMPTY_BLOCK_FAIL:
+      case TestResults.EMPTY_FUNCTION_NAME:
+        return true;
+      default:
+        return false;
+    }
+  }
+
   /**
    * Click the run button.  Start the program.
    */
@@ -620,9 +634,9 @@ export default class Craft {
       return;
     }
 
-    if (studioApp().hasUnwantedExtraTopBlocks()) {
-      // immediately check answer instead of executing, which will fail and
-      // report top level blocks (rather than executing them)
+    // Fail immediately for empty repeat blocks, etc.
+    const initialTestResults = studioApp().getTestResults(false);
+    if (Craft.isPreAnimationFailure(initialTestResults)) {
       Craft.reportResult(false);
       return;
     }

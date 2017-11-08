@@ -166,9 +166,8 @@ module LevelsHelper
     end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
-    view_options(post_milestone: post_milestone)
-    post_final_milestone = @script ? Gatekeeper.allows('postFinalMilestone', where: {script_name: @script.name}, default: true) : true
-    view_options(post_final_milestone: post_final_milestone)
+    post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_milestone_mode: post_milestone_mode(post_milestone, post_failed_run_milestone))
 
     @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
@@ -816,5 +815,20 @@ module LevelsHelper
       end
     end
     level_source_image
+  end
+
+  # Returns the appropriate POST_MILESTONE_MODE enum based on the values
+  # of postMilestone and postFailedRunMilestone
+  #
+  # @param post_milestone [boolean] gatekeeper value
+  # @param post_failed_run_milestone [boolean] gatekeeper value
+  # @returns [POST_MILESTONE_MODE] enum value
+  def post_milestone_mode(post_milestone, post_failed_run_milestone)
+    if post_milestone
+      return POST_MILESTONE_MODE.successful_runs_and_final_level_only unless post_failed_run_milestone
+      POST_MILESTONE_MODE.all
+    else
+      POST_MILESTONE_MODE.final_level_only
+    end
   end
 end
