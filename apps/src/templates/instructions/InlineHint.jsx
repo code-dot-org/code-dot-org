@@ -6,6 +6,8 @@ import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
 import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
+import VideoThumbnail from '../VideoThumbnail';
+import { videoDataShape } from '../types';
 
 const InlineHint = React.createClass({
 
@@ -13,7 +15,7 @@ const InlineHint = React.createClass({
     block: PropTypes.object, // XML
     borderColor: PropTypes.string,
     content: PropTypes.string.isRequired,
-    video: PropTypes.string,
+    video: videoDataShape,
     ttsUrl: PropTypes.string,
     ttsMessage: PropTypes.string,
     isBlockly: PropTypes.bool
@@ -28,13 +30,11 @@ const InlineHint = React.createClass({
   render() {
     return (
       <ChatBubble borderColor={this.props.borderColor} ttsUrl={this.props.ttsUrl} ttsMessage={this.props.ttsMessage}>
-        {this.props.video &&
-          <p>Video: {this.props.video}</p>
-        }
         <div
           dangerouslySetInnerHTML={{ __html: this.props.content }}
         />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
+        {this.props.video && <VideoThumbnail video={this.props.video}/>}
       </ChatBubble>
     );
   }

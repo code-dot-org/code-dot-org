@@ -339,6 +339,14 @@ class Blockly < Level
         hint
       end
       JSON.generate(localized_hints)
+    else
+      hints = JSON.parse(authored_hints).map do |hint|
+        if hint['hint_video'].present?
+          hint['hint_video'] = Video.find_by_key(hint['hint_video']).summarize
+        end
+        hint
+      end
+      JSON.generate(hints)
     end
   end
 
