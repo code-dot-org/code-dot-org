@@ -32,6 +32,7 @@ $(document).ready(() => {
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
   store.dispatch(selectGallery(initialState));
+  showGallery(initialState);
 
   $.ajax({
     method: 'GET',
@@ -58,6 +59,7 @@ $(document).ready(() => {
 });
 
 function showGallery(gallery) {
+  $('#project-links-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
