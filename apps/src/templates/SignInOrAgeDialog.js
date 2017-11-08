@@ -7,7 +7,7 @@ import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
-import { navigateToHref, reload } from '@cdo/apps/utils';
+import { reload } from '@cdo/apps/utils';
 import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 
 const styles = {
@@ -63,6 +63,9 @@ const styles = {
     marginRight: 10,
     marginTop: 2,
     width: 160
+  },
+  tooYoungButton: {
+    textAlign: 'right'
   }
 };
 
@@ -70,7 +73,8 @@ const sessionStorageKey = 'anon_over13';
 
 class SignInOrAgeDialog extends Component {
   state = {
-    open: true
+    open: true,
+    tooYoung: false,
   };
 
   static propTypes = {
@@ -86,8 +90,7 @@ class SignInOrAgeDialog extends Component {
     }
 
     if (parseInt(value, 10) < 13) {
-      // /too_young will redirect to /home, with an info warning if possible
-      navigateToHref('/too_young');
+      this.setState({tooYoung: true});
       return;
     }
 
@@ -111,6 +114,33 @@ class SignInOrAgeDialog extends Component {
     // we haven't already given this dialog our age
     if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
       return null;
+    }
+
+    if (this.state.tooYoung) {
+      return (
+        <BaseDialog
+          useUpdatedStyles
+          isOpen={true}
+          assetUrl={() => ''}
+          uncloseable
+        >
+          <div style={styles.container}>
+            <div style={styles.heading}>
+              {i18n.tutorialUnavailable()}
+            </div>
+            <div style={styles.middle}>
+              {i18n.tutorialUnavailableExplanation()}
+            </div>
+            <div style={styles.tooYoungButton}>
+              <Button
+                href="/courses"
+                text="See all tutorials"
+                color={Button.ButtonColor.orange}
+              />
+            </div>
+          </div>
+        </BaseDialog>
+      );
     }
 
     return (
