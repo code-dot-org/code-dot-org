@@ -25,6 +25,17 @@ export default storybook => {
             canViewFullList={true}
           />
         )
+      }, {
+        name: 'Project widget with full list without advanced tools',
+        description: 'Most recent projects and a set of new projects to start.',
+        story: () => (
+          <ProjectWidget
+            projectList={generateFakePersonalProjects(5)}
+            isRtl={false}
+            canViewFullList={true}
+            canViewAdvancedTools={false}
+          />
+        )
       },
     ]);
 };
