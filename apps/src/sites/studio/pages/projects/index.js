@@ -24,7 +24,7 @@ $(document).ready(() => {
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={store}>
-      <ProjectHeader showGallery={showGallery} />
+      <ProjectHeader/>
     </Provider>,
     projectsHeader
   );
@@ -32,7 +32,6 @@ $(document).ready(() => {
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
   store.dispatch(selectGallery(initialState));
-  showGallery(initialState);
 
   $.ajax({
     method: 'GET',
@@ -96,5 +95,13 @@ function setupReduxSubscribers(store) {
       const projectType = state.publishDialog.projectType;
       store.dispatch(prependProjects([projectData], projectType));
     }
+
+    if (
+      (lastState.projects && lastState.projects.selectedGallery) !==
+      (state.projects && state.projects.selectedGallery)
+    ) {
+      showGallery(state.projects.selectedGallery);
+    }
+
   });
 }
