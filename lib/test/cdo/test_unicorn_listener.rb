@@ -46,4 +46,16 @@ class UnicornListenerTest < Minitest::Test
     get '/'
     get '/'
   end
+
+  def test_reporting_task
+    listener = Cdo::UnicornListener.new(nil,
+      interval: 0.1,
+      report_count: 2,
+      listeners: [TCP_LISTENER, SOCKET_LISTENER]
+    )
+    Cdo::Metrics.expects(:push).at_least(1)
+    sleep 0.3
+  ensure
+    listener && listener.shutdown
+  end
 end

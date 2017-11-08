@@ -35,15 +35,19 @@ module Cdo
       spawn_reporting_task(interval) unless interval.zero?
     end
 
+    def shutdown
+      @task && @task.shutdown
+    end
+
     def spawn_reporting_task(interval)
-      Concurrent::TimerTask.new(execution_interval: interval, &method(:collect_metrics)).
+      @task ||= Concurrent::TimerTask.new(execution_interval: interval, &method(:collect_metrics)).
         with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
         execute
     end
 
     # Periodically collect unicorn-listener metrics,
     # reporting every time `report_count` metrics have been collected.
-    def collect_metrics
+    def collect_metrics(*_)
       stat_values = collect_listener_stats + [@stats.max_calling.tap {@stats.max_calling = 0}]
       @metrics.zip(stat_values) {|stat, val| stat[1] << {timestamp: Time.now, value: val}}
       report!(@metrics) if @metrics.values.first.count >= @report_count
