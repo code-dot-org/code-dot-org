@@ -1,7 +1,3 @@
-require 'simplecov'
-SimpleCov.start
-SimpleCov.root('../../..')
-
 require_relative '../test_helper'
 require 'cdo/unicorn_listener'
 
