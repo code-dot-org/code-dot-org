@@ -974,6 +974,13 @@
     create: Vytvořit projekt
     create_a_project: 'Vytvořte nový projekt:'
     new: Vytvořit nový
+    new_buttons:
+      artist: Umělec
+      playlab: Play Lab
+      applab: App Lab
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Přejmenovat
     save: Uložit
     delete: Odstranit

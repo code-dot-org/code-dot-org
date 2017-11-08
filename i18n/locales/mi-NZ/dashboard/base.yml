@@ -750,6 +750,13 @@ mi:
     create: "Waihanga Tūmahi"
     create_a_project: 'Waihanga i tētahi tūmahi hou:'
     new: "Waihanga mea Hou"
+    new_buttons:
+      artist: "Rehetoi"
+      playlab: "Taiwhanga Tākaro"
+      applab: "Taiwhanga Taupānga"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Whakaingoa anō"
     save: "Save"
     delete: "Delete"
