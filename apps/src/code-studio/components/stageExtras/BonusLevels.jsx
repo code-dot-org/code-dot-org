@@ -3,10 +3,9 @@ import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import color from "../../../util/color";
 import i18n from '@cdo/locale';
-import { TestResults } from '@cdo/apps/constants';
 import { bonusLevel } from './shapes';
 import { connect } from 'react-redux';
-import { getLevelStatus } from '@cdo/apps/code-studio/progressRedux';
+import { isPerfect } from '@cdo/apps/code-studio/progressRedux';
 
 const THUMBNAIL_IMAGE_SIZE = 200;
 
@@ -90,8 +89,7 @@ class BonusLevel extends React.Component {
 }
 
 const ConnectedBonusLevel = connect((state, ownProps) => ({
-  perfected: getLevelStatus(state.progress, ownProps.levelId) >=
-    TestResults.MINIMUM_OPTIMAL_RESULT,
+  perfected: isPerfect(state.progress, ownProps.levelId),
 }))(BonusLevel);
 
 export default function BonusLevels(props) {

@@ -428,8 +428,9 @@ export const stageExtrasUrl = (state, stageId) => (
     : ''
 );
 
-export const getLevelStatus = (state, levelId) => (
-  state.levelProgress && state.levelProgress[levelId]
+export const isPerfect = (state, levelId) => (
+  !!state.levelProgress &&
+    state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT
 );
 
 /**
