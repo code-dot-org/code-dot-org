@@ -556,9 +556,11 @@ var projects = module.exports = {
       case 'calc':
         return 'calc';
       case 'craft':
-        if (appOptions.level.isEventLevel) {
+        if (appOptions.level.isAgentLevel) {
+          return 'minecraft_hero';
+        } else if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
-        } else if (appOptions.level.isConnectionLevel || appOptions.level.isAgentLevel) {
+        } else if (appOptions.level.isConnectionLevel) {
           return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
