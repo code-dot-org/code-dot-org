@@ -1,3 +1,4 @@
+import {testApplabConsoleOutput} from '../../util/levelTestTypes';
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 
@@ -100,6 +101,15 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    }
+    },
+
+    // This regression test covers an error in the interpreter's sort()
+    // implementation that only surfaces in a few particular situations.
+    // See https://github.com/code-dot-org/JS-Interpreter/pull/23 for details.
+    testApplabConsoleOutput({
+      testName: 'Array.prototype.sort',
+      source: 'console.log([5, 4, 4, 1].sort());',
+      expect: '[1,4,4,5]'
+    })
   ]
 };
