@@ -64,7 +64,7 @@ module Pd::Application
     end
 
     test 'district name' do
-      school_info = build :school_info
+      school_info = create :school_info
       teacher = build :teacher, school_info: school_info
       application = build :pd_facilitator1819_application, user: teacher
 

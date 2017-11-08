@@ -10,8 +10,9 @@ class Api::V1::SchoolsController < ApplicationController
 
   # GET /dashboardapi/v1/schoolsearch/:q/:limit
   def search
-    query = params.require(:q)
-    limit = Api::V1::SchoolAutocomplete.to_limit(params[:limit].to_i)
-    render json: Api::V1::SchoolAutocomplete.get_matches(query, limit)
+    render json: Api::V1::SchoolAutocomplete.get_matches(
+      params.require(:q),
+      params[:limit]
+    )
   end
 end

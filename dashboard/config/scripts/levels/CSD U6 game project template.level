@@ -101,12 +101,9 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false",
-    "start_blocks": "// Create your variables here\r\n\r\n\r\n\r\n// Create your event handlers here\r\n\r\n\r\n\r\n// Create your functions here"
+    "start_blocks": "// Create your variables here\r\n\r\n\r\n\r\n// Create your event handlers here\r\n\r\n\r\n\r\n// Create your functions here",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

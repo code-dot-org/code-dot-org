@@ -4,7 +4,7 @@ import i18n from "@cdo/locale";
 import Button from "./Button";
 import SchoolAutocompleteDropdown from './SchoolAutocompleteDropdown';
 
-import SetupStep, {Status} from '../lib/kits/maker/ui/SetupStep';
+import ValidationStep, {Status} from '../lib/ui/ValidationStep';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -43,7 +43,7 @@ export default class EligibilityChecklist extends Component {
 
   // Saves the teaching-year choice to trigger next step of actions
   handleSubmit = () => {
-    this.setState({ statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED )});
+    this.setState({statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED)});
   }
 
   handleDropdownChange = (field, event) => {
@@ -61,7 +61,7 @@ export default class EligibilityChecklist extends Component {
         ...this.state.submission,
         [field]: event.target.value
       }
-    }, this.checkShowFollowUp);
+    });
   }
 
 
@@ -87,21 +87,21 @@ export default class EligibilityChecklist extends Component {
         <div>
           {i18n.eligibilityExplanation()}
         </div>
-        <SetupStep
+        <ValidationStep
           stepName={i18n.eligibilityReqPD()}
           stepStatus={this.props.statusPD}
         >
           {i18n.eligibilityReqPDFail()}
-        </SetupStep>
-        <SetupStep
+        </ValidationStep>
+        <ValidationStep
           stepName={i18n.eligibilityReqStudentCount()}
           stepStatus={this.props.statusStudentCount}
         >
           {i18n.eligibilityReqStudentCountFail()}
-        </SetupStep>
+        </ValidationStep>
         {/* Short version - displayed while 'focus' on other eligibility requirements */}
         {this.props.statusStudentCount !== Status.SUCCEEDED &&
-          <SetupStep
+          <ValidationStep
             stepName={i18n.eligibilityReqYear()}
             stepStatus={this.state.statusYear}
           />
@@ -109,13 +109,13 @@ export default class EligibilityChecklist extends Component {
         {/* Long version - displayed while 'focus' on this eligibility requirements */}
         {this.props.statusStudentCount === Status.SUCCEEDED &&
           <div>
-            <SetupStep
+            <ValidationStep
               stepName={i18n.eligibilityReqYear()}
               stepStatus={this.state.statusYear}
               displayExplanation={true}
             >
               {i18n.eligibilityReqYearFail()}
-            </SetupStep>
+            </ValidationStep>
             <div>
               <b>{i18n.eligibilityReqYearConfirmInstructions()}</b>
               <div>

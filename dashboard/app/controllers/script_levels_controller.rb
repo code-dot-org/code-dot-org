@@ -256,7 +256,7 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
-      @last_activity = current_user.last_attempt(@level)
+      @last_activity = current_user.last_attempt(@level, @script)
       level_source = @last_activity.try(:level_source)
 
       user_level = current_user.user_level_for(@script_level, @level)
