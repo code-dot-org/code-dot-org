@@ -39,6 +39,11 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   # US, private
 
+  test 'US private with school succeeds' do
+    school_info = build :school_info_with_private_school_only
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
   test 'US private with zip and school name succeeds' do
     school_info = build :school_info_us_private
     assert school_info.valid?, school_info.errors.full_messages
@@ -96,19 +101,47 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   # US, public
 
+  test 'US public with school succeeds' do
+    school_info = build :school_info_with_public_school_only
+    assert school_info.valid?, school_info.errors.full_messages
+    assert_equal school_info.school_district, school_info.school.school_district
+    assert_equal school_info.school_type, school_info.school.school_type
+    assert_equal school_info.state, school_info.school.state
+    assert_equal school_info.country, 'US'
+    assert_equal school_info.validation_type, SchoolInfo::VALIDATION_FULL
+  end
+
+  test 'inconsitant school data notifies' do
+    Honeybadger.expects(:notify)
+    school_info = build :school_info_with_public_school_only, country: 'Different Country'
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'consitant school data does not notify' do
+    Honeybadger.expects(:notify).never
+    school_info = build :school_info_with_public_school_only, country: 'US'
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'auto upgrade validation type without other overwritting does not notify' do
+    Honeybadger.expects(:notify).never
+    school_info = build :school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_NONE
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
   test 'US public with district and school succeeds' do
     school_info = build :school_info_us_public, :with_district, :with_school
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US public without state fails' do
-    school_info = build :school_info_us_public, :with_district, :with_school, state: nil
+    school_info = build :school_info_us_public, :with_district, state: nil
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'State is required', school_info.errors.full_messages.first
   end
 
   test 'US public without district fails' do
-    school_info = build :school_info_us_public, :with_school
+    school_info = build :school_info_us_public
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
@@ -161,19 +194,24 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   # US, charter
 
+  test 'US charter with school succeeds' do
+    school_info = build :school_info_with_charter_school_only
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
   test 'US charter with district and school succeeds' do
     school_info = build :school_info_us_charter, :with_district, :with_school
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US charter without state fails' do
-    school_info = build :school_info_us_charter, :with_district, :with_school, state: nil
+    school_info = build :school_info_us_charter, :with_district, state: nil
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'State is required', school_info.errors.full_messages.first
   end
 
   test 'US charter without district fails' do
-    school_info = build :school_info_us_charter, :with_school
+    school_info = build :school_info_us_charter
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end

@@ -9,14 +9,7 @@ import {
   getChromeVersion,
   isCodeOrgBrowser,
 } from '../util/browserChecks';
-import SetupStep, {
-  HIDDEN,
-  WAITING,
-  ATTEMPTING,
-  SUCCEEDED,
-  FAILED,
-  CELEBRATING,
-} from './SetupStep';
+import ValidationStep, {Status} from '../../../ui/ValidationStep';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -28,12 +21,12 @@ const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 const initialState = {
   isDetecting: false,
   caughtError: null,
-  [STATUS_SUPPORTED_BROWSER]: WAITING,
-  [STATUS_APP_INSTALLED]: WAITING,
-  [STATUS_WINDOWS_DRIVERS]: WAITING,
-  [STATUS_BOARD_PLUG]: WAITING,
-  [STATUS_BOARD_CONNECT]: WAITING,
-  [STATUS_BOARD_COMPONENTS]: WAITING,
+  [STATUS_SUPPORTED_BROWSER]: Status.WAITING,
+  [STATUS_APP_INSTALLED]: Status.WAITING,
+  [STATUS_WINDOWS_DRIVERS]: Status.WAITING,
+  [STATUS_BOARD_PLUG]: Status.WAITING,
+  [STATUS_BOARD_CONNECT]: Status.WAITING,
+  [STATUS_BOARD_COMPONENTS]: Status.WAITING,
 };
 
 export default class SetupChecklist extends Component {
@@ -45,23 +38,23 @@ export default class SetupChecklist extends Component {
   };
 
   hide(selector) {
-    this.setState({[selector]: HIDDEN});
+    this.setState({[selector]: Status.HIDDEN});
   }
 
   fail(selector) {
-    this.setState({[selector]: FAILED});
+    this.setState({[selector]: Status.FAILED});
   }
 
   spin(selector) {
-    this.setState({[selector]: ATTEMPTING});
+    this.setState({[selector]: Status.ATTEMPTING});
   }
 
   succeed(selector) {
-    this.setState({[selector]: SUCCEEDED});
+    this.setState({[selector]: Status.SUCCEEDED});
   }
 
   thumb(selector) {
-    this.setState({[selector]: CELEBRATING});
+    this.setState({[selector]: Status.CELEBRATING});
   }
 
   getSurveyURL() {
@@ -147,8 +140,8 @@ export default class SetupChecklist extends Component {
    */
   redetect() {
     if (
-      this.state[STATUS_SUPPORTED_BROWSER] !== SUCCEEDED
-      || (isChrome() && this.state[STATUS_APP_INSTALLED] !== SUCCEEDED)
+      this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED
+      || (isChrome() && this.state[STATUS_APP_INSTALLED] !== Status.SUCCEEDED)
     ) {
       // If the Chrome app was not installed last time we checked, but has been
       // installed since, we'll probably need a full page reload to pick it up.
@@ -183,8 +176,8 @@ export default class SetupChecklist extends Component {
             />
           </h2>
           <div className="setup-status">
-            {this.state[STATUS_SUPPORTED_BROWSER] !== SUCCEEDED &&
-              <SetupStep
+            {this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED &&
+              <ValidationStep
                 stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
                 stepName="Using a supported browser"
               >
@@ -192,21 +185,21 @@ export default class SetupChecklist extends Component {
                 Your current browser is not supported at this time.
                 Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
                 <br/><em>Note: We plan to support other browsers including Internet Explorer in Fall 2017.</em>
-              </SetupStep>
+              </ValidationStep>
             }
-            {this.state[STATUS_SUPPORTED_BROWSER] === SUCCEEDED && isCodeOrgBrowser() &&
-              <SetupStep
+            {this.state[STATUS_SUPPORTED_BROWSER] === Status.SUCCEEDED && isCodeOrgBrowser() &&
+              <ValidationStep
                 stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
                 stepName="Code.org Browser"
               />
             }
-            {this.state[STATUS_SUPPORTED_BROWSER] === SUCCEEDED && isChrome() &&
+            {this.state[STATUS_SUPPORTED_BROWSER] === Status.SUCCEEDED && isChrome() &&
               <div>
-                <SetupStep
+                <ValidationStep
                   stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
                   stepName="Chrome version 33+"
                 />
-                <SetupStep
+                <ValidationStep
                   stepStatus={this.state[STATUS_APP_INSTALLED]}
                   stepName="Chrome App installed"
                 >
@@ -223,22 +216,22 @@ export default class SetupChecklist extends Component {
                   <br/>If a prompt asking for permission for Code Studio to connect
                   to the Chrome App pops up, click Accept.
                   {surveyLink}
-                </SetupStep>
+                </ValidationStep>
               </div>
             }
-            <SetupStep
+            <ValidationStep
               stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
               stepName="Windows drivers installed? (cannot auto-check)"
             />
-            <SetupStep
+            <ValidationStep
               stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             >
               We couldn't detect a Circuit Playground board.
               Make sure your board is plugged in, and click <a href="#" onClick={this.redetect.bind(this)}>re-detect</a>.
               {surveyLink}
-            </SetupStep>
-            <SetupStep
+            </ValidationStep>
+            <ValidationStep
               stepStatus={this.state[STATUS_BOARD_CONNECT]}
               stepName="Board connectable"
             >
@@ -246,8 +239,8 @@ export default class SetupChecklist extends Component {
               <br/>You should make sure it has the right firmware sketch installed.
               You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
               {surveyLink}
-            </SetupStep>
-            <SetupStep
+            </ValidationStep>
+            <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName="Board components usable"
             >
@@ -255,7 +248,7 @@ export default class SetupChecklist extends Component {
               <br/>You should make sure your board has the right firmware sketch installed.
               You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
               {surveyLink}
-            </SetupStep>
+            </ValidationStep>
           </div>
           <h2>Survey / Support</h2>
           <div>

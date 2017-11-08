@@ -3,6 +3,7 @@ require 'test_helper'
 class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
   class MockSchoolInfoDeduplicator
     include SchoolInfoDeduplicator
+    attr_accessor :school_info
   end
 
   test 'country and school type and state' do
@@ -129,5 +130,13 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       validation_type: 'none'
     }
     assert_equal expect, mock.process_school_info_attributes(actual)
+  end
+
+  test 'dedupe with school, ignoring other attrs' do
+    mock = MockSchoolInfoDeduplicator.new
+    school_info = create :school_info_with_public_school_only
+    deduped = mock.deduplicate_school_info({school_id: school_info.school_id, validation_type: SchoolInfo::VALIDATION_NONE, state: "FAKE"}, mock)
+    assert deduped, "Expected to dedupe on school id"
+    assert_equal school_info.id, mock.school_info.id
   end
 end
