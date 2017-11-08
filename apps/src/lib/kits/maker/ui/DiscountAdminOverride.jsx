@@ -55,7 +55,7 @@ export default class EligibilityChecklist extends Component {
   }
 
   handleSubmitId = () => {
-    this.setState({teacherID : this.teacherID.value});
+    this.setState({teacherID: this.teacherID.value});
   }
 
   render() {
