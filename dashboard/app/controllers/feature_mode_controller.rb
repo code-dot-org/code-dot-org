@@ -14,7 +14,9 @@ class FeatureModeController < ApplicationController
   # Shows the current or pending feature mode.
   def show
     authorize! :read, :reports
-    @current_mode = FeatureModeManager.get_mode(Gatekeeper, DCDO, ScriptConfig.scale_mode_scripts)
+    @current_mode = FeatureModeManager.get_mode(Gatekeeper, DCDO,
+      ScriptConfig.hoc_scripts, ScriptConfig.csf_scripts
+    )
     @pending_mode = pending_mode
     @script_names = Gatekeeper.script_names.sort
     @feature_names = Gatekeeper.feature_names.sort
@@ -35,7 +37,9 @@ class FeatureModeController < ApplicationController
   def update
     authorize! :read, :reports
     mode = params[:mode]
-    FeatureModeManager.set_mode(mode, Gatekeeper, DCDO, ScriptConfig.scale_mode_scripts)
+    FeatureModeManager.set_mode(mode, Gatekeeper, DCDO,
+      ScriptConfig.hoc_scripts, ScriptConfig.csf_scripts
+    )
     set_pending_mode(mode)
     flash[:notice] = PLEASE_WAIT_MESSAGE
     redirect_to(action: 'show')
