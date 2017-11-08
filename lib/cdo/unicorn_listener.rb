@@ -23,7 +23,11 @@ module Cdo
   # Any errors are forwarded to Honeybadger for logging and notifying.
   class UnicornListener < Raindrops::Middleware
     def initialize(app, opts = {})
-      super(app, opts.merge(stats: StatsWithMax.new))
+      # Track max_calling using a modified Stats implementation.
+      opts[:stats] ||= StatsWithMax.new
+      # Disable the reporting endpoint with an empty-string :path by default.
+      opts[:path] ||= ''
+      super(app, opts)
       @metrics = %i(active queued calling).map {|name| [name, []]}.to_h
 
       @report_count = opts[:report_count] || 60
