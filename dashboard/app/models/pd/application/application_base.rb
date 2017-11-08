@@ -57,6 +57,8 @@ module Pd::Application
       accepted
       declined
       waitlisted
+      withdrawn
+      interview
     ).index_by(&:to_sym).freeze
 
     enum course: %w(

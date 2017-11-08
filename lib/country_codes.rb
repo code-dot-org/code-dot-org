@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'sort_alphabetical'
 # coding: utf-8
 COUNTRY_CODE_TO_COUNTRY_NAME = {
@@ -241,6 +242,7 @@ COUNTRY_CODE_TO_COUNTRY_NAME = {
   "VU" => "Vanuatu",
   "WF" => "Wallis and Futuna",
   "WS" => "Samoa",
+  "XK" => "Kosovo",
   "YE" => "Yemen",
   "YT" => "Mayotte",
   "ZA" => "South Africa",

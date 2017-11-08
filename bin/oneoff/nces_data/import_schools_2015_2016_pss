@@ -4,7 +4,9 @@ require_relative '../../../dashboard/config/environment'
 
 CDO.log = Logger.new(STDOUT)
 
-AWS::S3.process_file('cdo-nces', '2015-2016/pss/pss1516_pu.csv') do |filename|
+SURVEY_YEAR = '2015-2016'.freeze
+
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/pss/pss1516_pu.csv") do |filename|
   School.transaction do
     School.merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
       {

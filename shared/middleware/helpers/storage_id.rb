@@ -110,8 +110,16 @@ def storage_id_for_current_user
   user_storage_id = take_storage_id_ownership_from_cookie(user_id)
   return user_storage_id unless user_storage_id.nil?
 
-  # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id: user_id)
+  begin
+    # We don't have any existing storage id we can associate with this user, so create a new one
+    user_storage_ids_table.insert(user_id: user_id)
+  rescue Sequel::UniqueConstraintViolation
+    # We lost a race against someone performing the same operation. The row
+    # we're looking for should now be in the database.
+    user_storage_id = storage_id_for_user_id(user_id)
+    raise "no user storage id on second try" unless user_storage_id
+    user_storage_id
+  end
 end
 
 # @return {number} storage_id for user
@@ -143,7 +151,7 @@ def storage_id_from_cookie
 end
 
 def user_storage_ids_table
-  @user_storage_ids_table ||= PEGASUS_DB[:user_storage_ids]
+  PEGASUS_DB[:user_storage_ids]
 end
 
 def owns_channel?(encrypted_channel_id)

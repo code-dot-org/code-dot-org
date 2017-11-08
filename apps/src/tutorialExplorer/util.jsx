@@ -9,7 +9,8 @@ export const TutorialsSortByOptions = utils.makeEnum('popularityrank', 'displayw
 export const TutorialsSortByFieldNames = utils.makeEnum(
   'popularityrank',
   'displayweight',
-  'displayweight_k5',
+  'displayweight_pre',
+  'displayweight_25',
   'displayweight_middle',
   'displayweight_high'
 );
@@ -20,6 +21,12 @@ export const TutorialsOrgName = utils.makeEnum('all');
 // "do-not-show" string used in the source data as both a tag and in place of an
 // organization name.
 export const DoNotShow = "do-not-show";
+
+// Code.org's organization name.
+export const orgNameCodeOrg = "Code.org";
+
+// Minecraft's organization name.
+export const orgNameMinecraft = "Mojang, Microsoft and Code.org";
 
 /**
  * For a comma-separated string of tags, generate a comma-separated string of their friendly

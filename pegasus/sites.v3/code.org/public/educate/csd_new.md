@@ -6,7 +6,7 @@ theme: responsive
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
-# CS Discoveries
+# Computer Science Discoveries
 
 ## <a name="what"></a>What is CS Discoveries?
 
@@ -14,7 +14,7 @@ Computer Science Discoveries is appropriate for 6 - 10th grade students and can 
 
 <div class="col-50" style="padding-right: 20px">
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
-<i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
+<i>Want a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
 
 </div>
 

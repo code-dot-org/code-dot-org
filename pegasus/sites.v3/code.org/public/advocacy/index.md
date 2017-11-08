@@ -67,6 +67,8 @@ For more information, please contact advocacy@code.org.
 * <a href="http://cra.org/">Computing Research Association</a>
 * <a href="http://ct.org/">Connecticut Technology Council</a>
 * <a href="http://www.cccoe.k12.ca.us/index.html">Contra Costa County Office of Education</a>
+* <a href="http://www.bit.ly/chisuburbanCSTA">Chicago Suburban CSTA</a>
+* <a href="http://www.cs4il.org">CS4IL</a>
 * <a href="http://cs4tx.org/">CS4TX</a>
 * <a href="http://csta.acm.org/">CSTA</a>
 * <a href="http://cstanj.org/">CSTA New Jersey</a>
