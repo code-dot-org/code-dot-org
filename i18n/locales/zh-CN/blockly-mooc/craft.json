@@ -3,7 +3,7 @@
   "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
   "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "在",
-  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
+  "agentDiamondPathCongrats": "恭喜你找到钻石之路了！您到目前为止已经收集了{count, plural, one {1} other {#}} 颗钻石 ! ",
   "blockActionAdd": "添加",
   "blockActionAttack": "攻击",
   "blockActionClone": "复制模块",
