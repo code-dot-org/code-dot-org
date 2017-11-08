@@ -114,7 +114,7 @@ export default class AuthoredHints {
 
     // Notify game types that implement the `displayHintPath` listener to draw
     // hint paths in the visualization area.
-    if (hint.hintPath) {
+    if (hint.hintPath && hint.hintPath.length) {
       const event = createEvent('displayHintPath');
       event.detail = hint.hintPath;
       window.dispatchEvent(event);
