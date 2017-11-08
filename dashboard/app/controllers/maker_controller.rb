@@ -6,8 +6,8 @@ class MakerController < ApplicationController
 
   def discountcode
     script_data = {
-      is_pd_eligible: current_user.circuit_playground_pd_eligible?,
-      is_progress_eligible: current_user.circuit_playground_student_progress_eligible?,
+      is_pd_eligible: CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(current_user),
+      is_progress_eligible: CircuitPlaygroundDiscountApplication.student_progress_eligible?(current_user),
       # This will be a number from 1-5 (representing which radio button) was selected,
       # or nil if no selection yet
       unit_6_intention: nil,
