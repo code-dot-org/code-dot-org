@@ -24,26 +24,25 @@ module Cdo
   class UnicornListener < Raindrops::Middleware
     def initialize(app, opts = {})
       super(app, opts.merge(stats: StatsWithMax.new))
-      interval = opts[:interval] || 1
-      report_count = opts[:report_count] || 60
+      @metrics = %i(active queued calling).map {|name| [name, []]}.to_h
 
-      task = reporting_task(interval, report_count)
-      task.add_observer {|_, _, ex| Honeybadger.notify(ex) if ex}
-      task.execute
+      @report_count = opts[:report_count] || 60
+      interval = opts[:interval] || 1
+      spawn_reporting_task(interval) unless interval.zero?
     end
 
-    # Periodically collect unicorn-listener metrics every `delay` seconds,
+    def spawn_reporting_task(interval)
+      Concurrent::TimerTask.new(execution_interval: interval, &method(:collect_metrics)).
+        with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
+        execute
+    end
+
+    # Periodically collect unicorn-listener metrics,
     # reporting every time `report_count` metrics have been collected.
-    # @param interval [Fixnum]
-    # @param report_count [Fixnum]
-    def reporting_task(interval, report_count)
-      stat_names = %i(active queued calling)
-      stats = stat_names.map {|name| [name, []]}.to_h
-      Concurrent::TimerTask.new(execution_interval: interval) do
-        stat_values = collect_listener_stats + [@stats.max_calling.tap {@stats.reset_max}]
-        stats.zip(stat_values) {|stat, val| stat[1] << {timestamp: Time.now, value: val}}
-        report!(stats) if stats.values.first.count >= report_count
-      end
+    def collect_metrics
+      stat_values = collect_listener_stats + [@stats.max_calling.tap {@stats.reset_max}]
+      @metrics.zip(stat_values) {|stat, val| stat[1] << {timestamp: Time.now, value: val}}
+      report!(@metrics) if @metrics.values.first.count >= @report_count
     end
 
     # Collect current snapshot of tcp/unix listener stats.
@@ -57,9 +56,9 @@ module Cdo
     end
 
     # Report all stats as CloudWatch metrics, then clear the collection.
-    # @param stats [Hash]
-    def report!(stats)
-      metric_data = stats.map do |name, stat|
+    # @param metrics [Hash]
+    def report!(metrics)
+      metric_data = metrics.map do |name, stat|
         stat.reject {|datum| datum[:value].nil?}.map do |datum|
           {
             metric_name: name,
@@ -74,7 +73,7 @@ module Cdo
           }
         end
       end.flatten
-      stats.values.map(&:clear)
+      metrics.values.map(&:clear)
       Cdo::Metrics.push('Unicorn', metric_data)
     end
   end
