@@ -28,6 +28,8 @@ const ProjectCardGrid = React.createClass({
       artist: PropTypes.arrayOf(projectPropType),
       minecraft: PropTypes.arrayOf(projectPropType),
       bounce: PropTypes.arrayOf(projectPropType),
+      events: PropTypes.arrayOf(projectPropType),
+      k1: PropTypes.arrayOf(projectPropType),
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired
@@ -133,6 +135,20 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
               hideWithoutThumbnails={true}
             />
+            {showMoreProjects &&
+              <ProjectAppTypeArea
+                labKey="k1"
+                labName={i18n.projectGroupPreReader()}
+                labViewMoreString={i18n.projectGroupPreReaderViewMore()}
+                projectList={projectLists.k1}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.onSelectApp}
+                isDetailView={false}
+                hideWithoutThumbnails={true}
+              />
+            }
+
             <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
           </div>
         }
@@ -205,6 +221,18 @@ const ProjectCardGrid = React.createClass({
                 labName={i18n.projectTypeAllProjectsGamelab()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.gamelab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
+              />
+            }
+            {this.state.showApp === 'k1' &&
+              <ProjectAppTypeArea
+                labKey="k1"
+                labName={i18n.projectGroupPreReaderAllProjects()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.k1}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
