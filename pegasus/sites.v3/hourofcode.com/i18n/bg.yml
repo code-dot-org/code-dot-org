@@ -2,7 +2,7 @@ bg:
   site_name: 'HOUR of CODE'
   hour_of_code: 'Hour of Code'
   language: 'Български'
-  front_title: 'Присъединете се към най-голямото обучение събитие в историята, %{campaign_date}, 2015 г'
+  front_title: 'Присъединете се към най-голямото обучение събитие в историята, 7-13 декември 2015 г.'
   coming_soon: 'Очаквайте скоро'
   compatibility_unsupported_browser: "Вашият браузър не се поддържа. Моля, надстройте браузъра си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите поддържани браузъри</a>. Можете да разгледате страницата, но може да не функционира добре."
   campaign_date_start_short: "7 дек."
@@ -21,10 +21,10 @@ bg:
   header_menu_faq: 'ЧЕСТО ЗАДАВАНИ ВЪПРОСИ'
   header_menu_how_to: 'Практически съвети'
   header_menu_promote: 'Реклама'
-  header_menu_activities: 'Activities'
-  not_found_title: 'Page Not Found'
-  not_found_desc: 'The requested page was not found'
-  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
+  header_menu_activities: 'Дейности'
+  not_found_title: 'Страницата не е намерена'
+  not_found_desc: 'Търсената страница не е намерена'
+  not_found_instructions: 'Проверете уеб адреса и заредете отново или изберете връзка от списъка по-долу.'
   company_4-H: 4-H Youth Development
   company_asa: Afterschool алианс
   company_asos: ASOS
@@ -142,6 +142,7 @@ bg:
   company_strongnet: Strongsville School District
   company_TukwilaSchoolDistrict: Tukwila School District
   company_vermilionschools: Vermilion Local School District
+  company_vista-equity-partners: "Vista Equity Partners"
   company_walthampublicschools: Waltham Public Schools
   company_warrencountyschools: Warren County Schools
   company_WaynesboroPublicSchools: Waynesboro Public Schools
@@ -219,11 +220,16 @@ bg:
   front_join_us_n_students_served: "# пробваха"
   signup_header: 'Организирайте Hour of Code по време на %{campaign_date}, и го регистрирайте тук.'
   signup_name_label: 'Вашето име'
+  signup_name_error: 'Името е задължително.'
   signup_email_label: 'Вашият имейл'
+  signup_email_error: 'Необходим е имейл'
   signup_organization_name_label: 'Име на училище или организация'
+  signup_organization_name_error: 'Име на организацията се изисква.'
   signup_event_type_label: 'Вид на събитието'
+  signup_event_type_error: 'Тип на събитието е необходимо.'
   signup_event_entire_school_label: 'Цялото ми училище участва'
   signup_event_location_label: 'Място на събитието (по избор)'
+  signup_event_location_error: 'Необходимо е да запишете място.'
   signup_special_event_flag_label: 'Подчертайте моето специално събитие'
   signup_special_event_details_label: 'Детайли на специалното събитие'
   signup_send_posters_flag_label: 'Изпратете <a href= "/resources#posters"> плакати</a> за моето училище или организация'
@@ -237,13 +243,19 @@ bg:
   signup_name_placeholder: 'Вашето Име'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "Примерно, Lincoln High School"
+  signup_event_country_label: "Страна"
+  signup_event_country_error: "Страна се изисква."
   signup_event_location_placeholder: "Пощенски код и държава ИЛИ пълен адрес.\\r(Ще го използваме за да ви маркираме на картата)"
   signup_special_event_details_placeholder: 'Опишете защо това е специално събитие'
   signup_send_posters_address_placeholder: 'Този адрес няма да бъде споделян на нашата карта'
   signup_event_type_in_school: 'В училище'
   signup_event_type_out_of_school: 'Извън училище'
+  signup_submit_census_label: 'Изпращане'
+  signup_submit_census_error_message: "Съжаляваме. Възникна грешка. Моля опитайте да подадете формуляра отново."
   signup_submit_label: 'Регистрирайте се'
   signup_submit_error_message: "Възникнала е грешка. Моля проверете дали всички задължителни полета са попълнени правилно."
+  signup_submit_and_continue_label: 'Подаване и продължи'
+  signup_continue_label: 'Продължи'
   signup_thank_you_header: "Благодаря ви, че регистрирахте събитие за Hour of Code."
   signup_thank_you_message: 'Ние ще ви изпратим имейл за потвърждение с информация, която да ви помогне да започнете.'
   map_title: "Часът на кода карта"
@@ -257,9 +269,10 @@ bg:
   map_legend_title: 'Легенда'
   map_legend_hoc_events: 'Hour of Code събитие'
   map_legend_cs_tech_jam: 'CS Tech Jam'
-  meta_tag_og_title: 'Часът на кодирането наближава'
+  map_warning: "Картата на Часът на кода показва само първите 200 000 регистрирани събития. Всички регистрирани събития с валиден адрес могат да се видят на <a href='%{events_url}'> събития страницата.</a>"
+  meta_tag_og_title: Часът на кодирането наближава
   meta_tag_og_description: 'Hour of Code е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.'
-  meta_tag_twitter_title: 'Hour of Code е тук'
+  meta_tag_twitter_title: Часът на кодирането наближава
   meta_tag_twitter_description: 'Hour of Code е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.'
   twitter_default_text: "Аз ще участвам тази година в #HourOfCode, а ти? @codeorg"
   hoc_faq_title: 'Често задавани въпроси'
@@ -358,7 +371,7 @@ bg:
   title_how_to_events: Hour of Code практически съвети
   title_how_to_organizations: Как да станете домакин на Hour of Code - за организации
   title_how_to_companies: Как да бъдете домакин на Hour of Code - за фирми
-  title_how_to_officials: Как да Пътеводител за държавни служители
+  title_how_to_officials: '"Как да" Пътеводител за държавни служители'
   title_how_to_volunteers: Как да подпомогнете Hour of Code - за доброволци
   title_how_to_parents: Практически пътеводител за родители
   title_how_to: Практически пътеводител
@@ -369,7 +382,7 @@ bg:
   title_stats: Blurbs и статистика
   title_partners: Партньори
   title_resources: Ресурси
-  title_signup_thanks: Благодаря за регистрирането Ви като домакин на Hour of Code събитие!
+  title_signup_thanks: Благодаря за регистрирането ви като домакин на Hour of Code събитие!
   title_tutorial_guidelines: Насоки по уроците
   title_whole_school: Общоучилищно участие
   events_nav_title: Hour of Code събития
@@ -387,6 +400,22 @@ bg:
   highlights_title: Акценти
   highlights_header: Часът на кода акценти
   highlights_description: Някои от нашите любими моменти от кампанията на часът на кода.
+  higlights_see_more: Вижте повече акценти
+  highlights_readmore: Прочетете повече
+  highlights_watchvideo: Гледай видеото
+  highlights_facebook: Споделете във Facebook
+  highlights_constant_alba_heading: Актриса, активист и предприемач са домакини на часът на кода с целия персонал на Honest Company.
+  highlights_constant_alba_short_heading: Джесика Алба учи с часът на кода
+  highlights_constant_obama_heading: Президентът Обама е първият президент, написал код, домакин на исторически час на кода за ученици в Белия дом.
+  highlights_constant_obama_short_heading: Програмист в Chief
+  highlights_constant_malala_heading: "\"Всяко момиче заслужава да вземе участие в създаването на технология, която ще промени нашия свят и да има възможност да промени начинът по който той работи\""
+  highlights_constant_malala_short_heading: Malala, спечелила Нобелова награда за мир
+  highlights_constant_trudeau_heading: Канадският министър Джъстин Трюдо написа проста игра за любимия си спорт.
+  highlights_constant_trudeau_short_heading: Министър Джъстин Трюдо програмира игра
+  highlights_constant_ny_heading: След една епична битка 80 % от училищата в Бруклин направиха Часът на кода срещу 60 % от училищата в Чикаго. Не е зле!
+  highlights_constant_ny_short_heading: Бруклин бие Чикаго
+  highlights_constant_athletes_heading: Шампионите и златни медалисти Серена Уилямс, Неймар младши, Кармело Антъни и др вдъхновяват учениците да се мотивират.
+  highlights_constant_athletes_short_heading: Мотивирай се
   footer_copyright_message: 'Copyright 2015 Code.org. Всички права запазени.'
   footer_trademark_message: 'Hour of Code™ е търговска марка на Code.org.'
   footer_menu_partners: 'Партньори'
@@ -395,57 +424,58 @@ bg:
   footer_menu_terms: 'Условия'
   footer_menu_privacy: 'Декларация за поверителност'
   learn_banner_heading: 'HOUR of CODE'
-  learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
-  learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_robotics_banner_heading: 'ROBOTICS'
-  learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
-  tutorial_moana_name: 'Moana: Wayfinding with Code'
-  tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_gumadventure_name: "Gumball's Coding Adventure"
+  learn_banner_blurb: "Опитайте едночасов урок за всички възрасти на над 45 езика.  Присъединете се към милиони ученици и учители в над 180 страни, като се започне с  Hour of Code."
+  learn_banner_beyond: "Искате да продължите да учите?  <a id='learn_banner_beyond'> Отидете след един час</a>"
+  learn_banner_teachers: 'Учители: <a id=''teacher_banner_host''> станете домакини за един час</a> или <a id=''teacher_banner_howto''> прочетете ръководството </a>'
+  learn_robotics_banner_heading: 'РОБОТИКА'
+  learn_robotics_banner_blurb: 'Имаш ли роботи? Използвай ги с дейностите по-долу и направи материален Hour of Code за ученици от всички възрасти!'
+  tutorial_athlete_name: "Програмирай своя собствена спортна игра"
+  tutorial_moana_name: 'Moana: Потърси път с код'
+  tutorial_star-wars_name: 'Междузвездни войни: Изграждане галактика с код'
+  tutorial_gumadventure_name: "Гъмбол приключение с код"
   tutorial_mchoc_name: "Minecraft Hour of Code"
-  tutorial_vidnews_name: 'Vidcode: Code the News'
-  tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
-  tutorial_highseas_name: "Adventure on the High Seas"
+  tutorial_vidnews_name: 'Vidcode: Кодирай новини'
+  tutorial_kodable-pre_name: "Kodable (за учещи се да четат)"
+  tutorial_highseas_name: "Приключение в открито море"
   tutorial_capython_name: "Python Turtle Graphics"
-  tutorial_frzn_name: "Code with Anna and Elsa"
+  tutorial_frzn_name: "Кодирай с Анна и Елза"
   tutorial_cocom_name: "CodeCombat"
-  tutorial_play-lab_name: "Play Lab"
-  tutorial_boxisland2016_name: "Box Island"
-  tutorial_textcomp_name: "Text Compression"
-  tutorial_encryption_name: "Simple Encryption"
+  tutorial_play-lab_name: "Игрална лаборатория"
+  tutorial_boxisland2016_name: "Кутиения остров"
+  tutorial_textcomp_name: "Компресия на текст"
+  tutorial_encryption_name: "Обикновено криптиране"
   tutorial_kanopixel_name: "Kano Pixel Hack"
-  tutorial_foos_name: "codeSpark Academy with The Foos"
+  tutorial_foos_name: "codeSpark академия с Foos"
   tutorial_tynkerdd_name: "Dragon Dash"
-  tutorial_tynkerana_name: "Analog Clock STEM Kit"
-  tutorial_vidcard_name: 'Vidcode: Bestie Greeting Card'
-  tutorial_spritebox_name: "Spritebox Coding"
+  tutorial_tynkerana_name: "Аналогов часовник STEM Kit"
+  tutorial_vidcard_name: 'Vidcode: най-страхотната картичка'
+  tutorial_spritebox_name: "Spritebox кодиране"
   tutorial_tynkerch_name: "Counter Hack"
   tutorial_lightbot_name: "Lightbot"
-  tutorial_hoc_name: "Placeholder for new code.org/hoc"
-  tutorial_code_name: "Write your first computer program"
-  tutorial_tinspire_name: "10 Minutes of Code for the TI-Nspire CX"
-  tutorial_itchbounceball_name: "ITCH Bouncing Ball (in Scratch)"
-  tutorial_vidclim_name: 'Vidcode: Climate Science & Code'
-  tutorial_matlab_name: "Learn to Code with MATLAB"
-  tutorial_flap_name: "Make a Flappy game"
+  tutorial_hoc_name: "Контейнер за нов code.org/hoc"
+  tutorial_code_name: "Напишете първата си компютърна програма"
+  tutorial_tinspire_name: "10 минути на Code for the TI-Nspire CX"
+  tutorial_itchbounceball_name: "Bouncing Ball (Scratch)"
+  tutorial_vidclim_name: 'Vidcode: Науката за климата & код'
+  tutorial_matlab_name: "Научете се да програмирате с MATLAB"
+  tutorial_flap_name: "Направи Flappy игра"
   tutorial_galaxy_name: "Galaxy Game Jam"
-  tutorial_inf_name: "Infinity Play Lab"
-  tutorial_tynkersol_name: "Solar System STEM Kit"
-  tutorial_itchg_name: "ITCH Name IT - Geography"
+  tutorial_inf_name: "Инфинити театрална лаборатория"
+  tutorial_tynkersol_name: "Слънчевата система STEM Kit"
+  tutorial_itchg_name: "ITCH Name IT - география"
   tutorial_como_name: "CodeMonkey"
   tutorial_processfound_name: "The Processing Foundation - Hello Processing"
   tutorial_tynkerhomo_name: "Homophones STEM Kit"
-  tutorial_art_name: "Artist"
+  tutorial_art_name: "Художник"
   tutorial_tynkerbrick_name: "Brick Breaker Game Kit"
   tutorial_itchbio_name: "ITCH Name IT - Parts of the Biological Cell"
   tutorial_itchj_name: "ITCH Jumping (in Scratch)"
-  tutorial_tickleo_name: "Swimming Orca - by Tickle App"
+  tutorial_tickleo_name: "Swimming Orca - Tickle App"
   tutorial_hopgeo_name: "Geometry Jumper"
-  tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
+  tutorial_tynkermult_name: "Умножение Escape STEM Kit"
   tutorial_monster_name: "Mystery Island Coding Quest"
-  tutorial_tynkerapp_name: "Build an App"
-  tutorial_tynkerpup_name: "Puppy Adventure"
+  tutorial_tynkerapp_name: "Изграждане на приложение"
+  tutorial_tynkerpup_name: "Приключението на кученцето"
   tutorial_livecode_name: "LiveCode Sound Boards"
   tutorial_cocomgame_name: 'CodeCombat: Game Development'
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
@@ -491,55 +521,55 @@ bg:
   tutorial_roboba_name: "Learn Algebra with RoboBlockly"
   tutorial_knodsnake_name: "JavaScript Snake"
   tutorial_soccharater_name: "Character Building"
-  tutorial_silent_name: "Silent Teacher"
-  tutorial_robomesh_name: "Program VEX IQ Robots with Blockly"
-  tutorial_amaze_name: "A-Maze-thing"
+  tutorial_silent_name: "Тих учител"
+  tutorial_robomesh_name: "Програмиране на VEX IQ роботи с Blockly"
+  tutorial_amaze_name: "Лабиринт-нещото"
   tutorial_codestersds_name: "Dream Sequence"
-  tutorial_knodtext_name: 'Text Adventure: Python'
-  tutorial_alicegar_name: "Animating with Alice and Garfield"
-  tutorial_codesterstransform_name: "Transformation Puzzles"
+  tutorial_knodtext_name: 'Текстово приключение: Python'
+  tutorial_alicegar_name: "Анимирайте с Алис и Гарфийлд"
+  tutorial_codesterstransform_name: "Трансформиращи се пъзели"
   tutorial_flexfrog_name: "Flexbox Froggy"
   tutorial_codemoji_name: "Codemoji"
-  tutorial_robobii_name: "Learn Coding with RoboBlockly"
-  tutorial_robobm_name: "Learn Math with RoboBlockly"
-  tutorial_codingrobots_name: "Learn One Hour Coding with RoboBlockly"
-  tutorial_robob_name: "Learn Robotics with RoboBlockly"
-  tutorial_coders_name: 'Coders Strike Back: an introduction to bot programming'
-  tutorial_tynkerhw_name: "Learn to Code with Hot Wheels"
-  tutorial_tynkermh_name: "Learn to Code with Monster High"
-  tutorial_caphoto_name: "Build a Photo Booth App"
-  tutorial_mozillahw_name: "Mozilla Homework Excuse Generator"
+  tutorial_robobii_name: "Научете за кодирането с RoboBlockly"
+  tutorial_robobm_name: "Научете математика с RoboBlockly"
+  tutorial_codingrobots_name: "Научете за кодирането с RoboBlockly"
+  tutorial_robob_name: "Научете роботика с RoboBlockly"
+  tutorial_coders_name: 'Coders Strike Back: Въведение в програмирането ботове'
+  tutorial_tynkerhw_name: "Научете се да пишете код с Hot Wheels"
+  tutorial_tynkermh_name: "Научете се да пишете код с Monster High"
+  tutorial_caphoto_name: "Изграждане на Photo Booth приложение"
+  tutorial_mozillahw_name: "Mozilla \"извинения за домашното\" генератор"
   tutorial_ticklep_name: "Parrot Wonder"
-  tutorial_bbot_name: "Bomberbot Fun and Easy Coding Activities"
-  tutorial_scratchg_name: "Programming Games in Scratch"
-  tutorial_roboticfriends_name: "My Robotic Friends"
-  tutorial_sjforest_name: 'ScratchJr: Can I Make a Spooky Forest?'
-  tutorial_sjgreet_name: 'ScratchJr: Can I Make My Characters Greet Each Other?'
-  tutorial_sjsunset_name: 'ScratchJr: Can I Make the Sun Set?'
+  tutorial_bbot_name: "Бомбърбот забавни и лесни дейности по кодиране"
+  tutorial_scratchg_name: "Програмиране игри в Scratch"
+  tutorial_roboticfriends_name: "Моите приятели, роботи"
+  tutorial_sjforest_name: 'ScratchJr: Да направя призрачна гора?'
+  tutorial_sjgreet_name: 'ScratchJr: Мога ли да направя моите герои да се поздравяват помежду си?'
+  tutorial_sjsunset_name: 'ScratchJr: Да направя залез?'
   tutorial_fufafrenz_name: "fuzzFamily Frenzy"
-  tutorial_bbcgeo_name: "Bitsbox Coding + Geometry"
-  tutorial_chspixel_name: "CodeHS Pixel Art"
-  tutorial_hummingbird_name: "Creating a Game with Hummingbird"
-  tutorial_recoloring_name: "Recoloring the Universe"
-  tutorial_bbcchem_name: "Bitsbox Coding + Chemistry"
-  tutorial_floalgo_name: 'Coding: Algorithms Lesson Plan'
-  tutorial_flocond_name: 'Coding: Conditionals Lesson Plan'
-  tutorial_floloops_name: 'Coding: For Loops Lesson Plan'
-  tutorial_pgts_name: "Rock, Paper, Scissors"
-  tutorial_ozo_name: "The Ozobot Tutorial"
-  tutorial_bbcla_name: "Bitsbox Coding + Language Arts"
-  tutorial_bbcsci_name: "Bitsbox Coding + Science"
-  tutorial_tlctour_name: "Tour Guide Activity"
-  tutorial_codesterstj_name: "CS Tech Jam"
-  tutorial_tlclocked_name: "Locked-In"
-  tutorial_baubles_name: "Binary Baubles"
-  tutorial_bbcart_name: "Bitsbox Coding + Art"
-  tutorial_tlcknight_name: "Knight's Tour Activity"
-  tutorial_fufafit_name: "fuzzFamily Fitness"
-  tutorial_ozodance_name: "Ozobot Dance-Off"
-  tutorial_codingrobotics_name: "Intro to Coding through Robotics (ft. Wonder Workshop)"
-  tutorial_box_name: "Box Island"
-  tutorial_hopgame_name: "Hopscotch Game Design Workshop"
+  tutorial_bbcgeo_name: "Bitsbox кодиране + геометрия"
+  tutorial_chspixel_name: "CodeHS пиксел арт"
+  tutorial_hummingbird_name: "Създаване на игра с Hummingbird"
+  tutorial_recoloring_name: "Преоцветяване на Вселената"
+  tutorial_bbcchem_name: "Bitsbox кодиране + химия"
+  tutorial_floalgo_name: 'Кодиране: Алгоритми- урочен план'
+  tutorial_flocond_name: 'Кодиране: условия - урок план'
+  tutorial_floloops_name: 'Кодиране: За циклите- урочен план'
+  tutorial_pgts_name: "Камък, хартия, ножици"
+  tutorial_ozo_name: "Ozobot урок"
+  tutorial_bbcla_name: "Bitsbox кодиране + език"
+  tutorial_bbcsci_name: "Bitsbox кодиране + наука"
+  tutorial_tlctour_name: "Tour Guide дейност"
+  tutorial_codesterstj_name: "CS Tech конфитюр"
+  tutorial_tlclocked_name: "Заключена в"
+  tutorial_baubles_name: "Двоични дрънкулки"
+  tutorial_bbcart_name: "Bitsbox кодиране + изкуство"
+  tutorial_tlcknight_name: "Рицарски турнир- дейност"
+  tutorial_fufafit_name: "fuzzFamily фитнес"
+  tutorial_ozodance_name: "Ozobot танц -Off"
+  tutorial_codingrobotics_name: "Въведение в кодирането чрез роботика ( Wonder Workshop)"
+  tutorial_box_name: "Кутиения остров"
+  tutorial_hopgame_name: "Hopscotch дизайн на игра - семинар"
   tutorial_icontrol_name: "iControl"
   tutorial_cocomteach_name: 'CodeCombat: Teacher-Led'
   tutorial_bbcmathii_name: "Bitsbox Coding + Math (K-2)"
@@ -627,25 +657,25 @@ bg:
   tutorial_gumball_name: "Gumball Play Lab"
   tutorial_hrm_name: "Human Resource Machine"
   tutorial_ice-age_name: "Ice Age Play Lab"
-  tutorial_koapp_name: "Kodable (pre-readers welcome)"
+  tutorial_koapp_name: "Kodable (за учещи се да четат)"
   tutorial_lightbot-intl_name: "Lightbot"
   tutorial_rmc_name: "Minecraft Hour of Code"
   tutorial_smc_name: "Minecraft Hour of Code"
   tutorial_minecraft-2016_name: "Minecraft Hour of Code"
   tutorial_thinkersmith-es_name: "Mis Amigos Roboticos"
   tutorial_pixie_name: "PIXIE Challenges"
-  tutorial_play_name: "Play Lab"
+  tutorial_play_name: "Игрална лаборатория"
   tutorial_robomind-nl_name: "Program a virtual robot"
   tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 2: Lights'
+  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Lights'
   tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
-  tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_swb_name: 'Междузвездни войни: Изграждане галактика с код'
+  tutorial_build-a-galaxy_name: 'Междузвездни войни: Изграждане галактика с код'
   tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
   tutorial_tchr_name: "Teacher Led Lesson Plans"
   tutorial_robogame_name: "The Robot Games"
   tutorial_tap_name: "Tynker on Tablets"
-  tutorial_cintl_name: "Write your first computer program"
+  tutorial_cintl_name: "Напишете първата си компютърна програма"
   tutorial_itchstop_name: "ITCH Stop Frame Animation (Scratch)"
   tutorial_tynkerpn_name: 'Peep: Nature Walk'
   tutorial_tynkerpd_name: 'Peep: Dance with Friends'
@@ -671,7 +701,8 @@ bg:
   tutorial_bloxmobapp_name: "Build YOUR mobile APP"
   tutorial_khanweb_name: 'Khan Academy: Webpages'
   tutorial_khandata_name: 'Khan Academy: Databases'
-  tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
+  tutorial_robomeshiq_name: "Програмиране на VEX IQ роботи с Blockly"
+  tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
@@ -694,7 +725,7 @@ bg:
   tutorial_spritebox_shortdescription: "Run, jump, and code your way through three different worlds to collect the stars and make it to the finish line! Learn sequencing, debugging and loops, and code in Swift, Java, or with Icons."
   tutorial_tynkerch_shortdescription: "Learn Javascript as you defeat viruses!"
   tutorial_lightbot_shortdescription: "Program Lightbot to solve puzzles using procedures and loops!"
-  tutorial_hoc_shortdescription: "Placeholder for new code.org/hoc"
+  tutorial_hoc_shortdescription: "Контейнер за нов code.org/hoc"
   tutorial_code_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
   tutorial_tinspire_shortdescription: "Get students started coding on their TI-Nspire CX handhelds in just 10 minutes at a time."
   tutorial_itchbounceball_shortdescription: "Use ITCH - Scratch integrated with a video lesson to make your own bouncing ball project"
@@ -944,6 +975,7 @@ bg:
   tutorial_khanweb_shortdescription: "Learn how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
   tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
+  tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
@@ -966,7 +998,7 @@ bg:
   tutorial_spritebox_longdescription: "Run, jump, and code your way through three different worlds to collect the stars and make it to the finish line! Learn sequencing, debugging and loops, and code in Swift, Java, or with Icons."
   tutorial_tynkerch_longdescription: "Save the computer from a malicious virus! You'll have to hack your way through the system by deleting viruses, opening doors, solving mazes, and navigating through the portals. Watch out for viruses and glitches!"
   tutorial_lightbot_longdescription: "Lightbot is a game that asks players to use programming logic to solve puzzles! Gain a practical understanding of basic coding concepts by guiding Lightbot to light up all the blue tiles in each level. Learn how to sequence instructions, write procedures, and utilize loops along the way in this self-guided activity. Great for all ages and all skill levels."
-  tutorial_hoc_longdescription: "Placeholder for new code.org/hoc"
+  tutorial_hoc_longdescription: "Контейнер за нов code.org/hoc"
   tutorial_code_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages."
   tutorial_tinspire_longdescription: "Introduce students to the basics of coding – in just 10 minutes at a time – using the TI technology they carry in their backpacks every day. These lessons give students an easy-entry into programming that can help spark their interest in coding and computer science.  Students will write programs that can strengthen math concepts using the TI Basic language that is ready-to-use on their TI-Nspire handhelds."
   tutorial_itchbounceball_longdescription: "We take you through an introduction to Itch, utilizing the Scratch visual programming language.\n\nThis lesson provides a video and text directions for the code students need to add to get a ball bouncing zanily around the screen.\n\nOnce students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!\n\nAll instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended."
@@ -1014,7 +1046,7 @@ bg:
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
   tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
-  tutorial_cdmy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
   tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
@@ -1216,6 +1248,7 @@ bg:
   tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
   tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
+  tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_gumadventure_language: "English only"
@@ -1223,7 +1256,7 @@ bg:
   tutorial_vidnews_language: "English only"
   tutorial_kodable-pre_language: "English, Arabic, Azerbaijani, German, Greek, Spanish, Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese"
   tutorial_highseas_language: "English only"
-  tutorial_capython_language: "English only"
+  tutorial_capython_language: "English, Dutch, Spanish"
   tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
   tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1265,14 +1298,14 @@ bg:
   tutorial_livecode_language: "English only"
   tutorial_cocomgame_language: "English, Arabic, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 8 more"
   tutorial_tynkerspin_language: "English only"
-  tutorial_code-avengers_language: "English, Spanish, Bulgarian, Danish, Greek, Finnish, Japanese and more"
+  tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
   tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
   tutorial_texas-instruments_language: "English only"
-  tutorial_cajava_language: "English only"
+  tutorial_cajava_language: "English, Dutch, Spanish"
   tutorial_codehs_language: "English only"
   tutorial_hopemo_language: "English only"
   tutorial_tynkercm_language: "English only"
@@ -1286,7 +1319,7 @@ bg:
   tutorial_mitedarc_language: "English only"
   tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
-  tutorial_cdmy_language: "Spanish"
+  tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
   tutorial_codestersbasketball_language: "English, Spanish"
   tutorial_nclkarel_language: "Multiple"
@@ -1294,7 +1327,7 @@ bg:
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
   tutorial_globaloria_language: "English, Spanish"
-  tutorial_capost_language: "English only"
+  tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
   tutorial_kanopong_language: "English only"
@@ -1323,7 +1356,7 @@ bg:
   tutorial_coders_language: "English, French"
   tutorial_tynkerhw_language: "English only"
   tutorial_tynkermh_language: "English only"
-  tutorial_caphoto_language: "English only"
+  tutorial_caphoto_language: "English, Dutch, Spanish"
   tutorial_mozillahw_language: "English only"
   tutorial_ticklep_language: "Chinese (Traditional), Danish, English, French, Japanese"
   tutorial_bbot_language: "Dutch, Suomi, English"
@@ -1488,6 +1521,7 @@ bg:
   tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
   tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
+  tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
@@ -1760,6 +1794,7 @@ bg:
   tutorial_khanweb_string_detail_grades: "Grades 2+"
   tutorial_khandata_string_detail_grades: "Grades 6+"
   tutorial_robomeshiq_string_detail_grades: "Grades 2+"
+  tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
@@ -1779,7 +1814,7 @@ bg:
   tutorial_tynkerdd_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkerana_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_vidcard_string_platforms: "Chrome"
-  tutorial_spritebox_string_platforms: "All modern browsers"
+  tutorial_spritebox_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkerch_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_lightbot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_hoc_string_platforms: "do-not-show"
@@ -1793,7 +1828,7 @@ bg:
   tutorial_inf_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_tynkersol_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_itchg_string_platforms: "Chrome, Firefox, Android Tablet"
-  tutorial_como_string_platforms: "All modern browsers"
+  tutorial_como_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_processfound_string_platforms: "Chrome, Firefox, Safari"
   tutorial_tynkerhomo_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_art_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -2032,6 +2067,7 @@ bg:
   tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
+  tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
@@ -2304,6 +2340,7 @@ bg:
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
+  tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
@@ -2576,3 +2613,45 @@ bg:
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_name_error: "School name is required."
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code"
+  school_zip_error: "School postal code is required."
+  census_thanks: 'Thanks for signing up!'
+  census_header: 'Please take a few minutes to tell us about your school (Optional).'
+  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
+  census_how_many_hoc: "How many students will do an Hour of Code?"
+  census_how_many_after_school: "How many students do computer programming in an after-school program?"
+  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
+  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
+  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
+  census_connection: "What is your connection to this school?"
+  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
+  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
+  census_followup_frequency: "How often per week does this class meet?"
+  less_than_one: "< 1 hour per week"
+  one_to_three: "1-3 hours per week"
+  three_plus: "3+ hours per week"
+  census_followup_more: "Please tell us more about this course."
+  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
+  census_topics_blocks: "Block-based programming"
+  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
+  census_topics_robots: "Robotics / Physical Computing"
+  census_topics_internet: "Internet and networking"
+  census_topics_security: "Cybersecurity"
+  census_topics_data: "Data analysis"
+  census_topics_web_design: "Web design using HTML and CSS"
+  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
+  teacher: "Teacher"
+  administrator: "Administrator"
+  parent: "Parent"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
+  other: "Other"
+  other_describe: "Other (please describe below)"
+  none: "None"
+  some: "Some"
+  all: "All"
+  dont_know: "I don't know"

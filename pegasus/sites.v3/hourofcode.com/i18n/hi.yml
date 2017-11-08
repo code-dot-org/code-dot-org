@@ -1,30 +1,30 @@
 hi:
   site_name: 'एक घंटा कोड का'
-  hour_of_code: 'Ek Gante Ka Computer Code '
+  hour_of_code: 'एक घंटा कोड का'
   language: 'हिन्दी'
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'जल्द आ रहा है'
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  campaign_date_start_short: "Dec. 5"
-  campaign_date_start_long: "December 5"
-  campaign_date_short: "Dec. 5-11"
-  campaign_date_full: "December 5-11"
-  campaign_date_year: "2016"
-  campaign_date_full_year: "December 5-11, 2016"
+  campaign_date_start_short: "Dec. 4"
+  campaign_date_start_long: "December 4"
+  campaign_date_short: "Dec. 4-10"
+  campaign_date_full: "December 4-10"
+  campaign_date_year: "2017"
+  campaign_date_full_year: "December 4-10, 2017"
   front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default: 'द ऑवर ऑफ़ कोड एक वैश्विक आन्दोलन है जो 180+ से अधिक देशों में लाखों करोड़ों क्षत्रों तक पहुंचा हुआ है। कोई भी कहीं भी ऑवर ऑफ़ कोड का आयोजन कर सकता है। एक घंटे के टुटोरिअल 45 भाषाओं में उपलब्ध है। कोई भी अनुभव की आवश्यकता नहीं। <strong>4 से 104 की उम्र के लिए।</strong>'
   front_watch_video: 'नया वीडियो देखें'
-  front_watch_regular_video: 'Watch the video'
-  front_volunteers: 'Technical volunteers wanted'
-  front_start_learning: 'Start learning'
+  front_watch_regular_video: 'वीडियो देखें'
+  front_volunteers: 'तकनीकी स्वयंसेवकों चाहते थे'
+  front_start_learning: 'सीखना शुरू'
   header_menu_resources: 'संसाधन'
   header_menu_faq: 'आम सवाल'
-  header_menu_how_to: 'How-To'
-  header_menu_promote: 'Promote'
-  header_menu_activities: 'Activities'
-  not_found_title: 'Page Not Found'
-  not_found_desc: 'The requested page was not found'
-  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
+  header_menu_how_to: 'कैसे-करें'
+  header_menu_promote: 'बढ़ावा दें'
+  header_menu_activities: 'गतिविधियाँ'
+  not_found_title: 'अप्राप्त पृष्ठ'
+  not_found_desc: 'अनुरोधित पृष्ठ नहीं मिला'
+  not_found_instructions: 'वेब पता जांचें और पुनः सबमिट करें या नीचे दी गई सूची में से कोई लिंक चुनें ।'
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -142,6 +142,7 @@ hi:
   company_strongnet: Strongsville School District
   company_TukwilaSchoolDistrict: Tukwila School District
   company_vermilionschools: Vermilion Local School District
+  company_vista-equity-partners: "विस्टा इक्विटी पार्टनर्स"
   company_walthampublicschools: Waltham Public Schools
   company_warrencountyschools: Warren County Schools
   company_WaynesboroPublicSchools: Waynesboro Public Schools
@@ -150,56 +151,56 @@ hi:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: "Back to Resources"
-  how_to_nav_educators: "For educators"
-  how_to_nav_after_school: "For after school"
-  how_to_nav_parents: "For parents"
-  how_to_nav_public_officials: "For public officials"
-  how_to_nav_districts: "For districts"
-  how_to_nav_assemblies: "For school assemblies"
-  how_to_nav_organizations: "For organizations"
-  how_to_nav_companies: "For companies"
-  how_to_nav_afterschool_educators: "For after-school educators"
-  how_to_nav_volunteers: "For volunteers"
-  whats_next_header: "What's next?"
+  nav_back_to_resources: "वापस संसाधनों के लिए"
+  how_to_nav_educators: "शिक्षकों के लिए"
+  how_to_nav_after_school: "के लिए स्कूल के बाद"
+  how_to_nav_parents: "माता पिता के लिए"
+  how_to_nav_public_officials: "सरकारी अधिकारियों के लिए"
+  how_to_nav_districts: "जिलों के लिए"
+  how_to_nav_assemblies: "स्कूल सभाओं के लिए"
+  how_to_nav_organizations: "संगठनों के लिए"
+  how_to_nav_companies: "कंपनियों के लिए"
+  how_to_nav_afterschool_educators: "के बाद स्कूल के शिक्षकों के लिए"
+  how_to_nav_volunteers: "स्वयंसेवकों के लिए"
+  whats_next_header: "आगे क्या है?"
   whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
-  whats_next_try_button: 'Try tutorials'
+  whats_next_try_button: 'ट्यूटोरियल की कोशिश करो'
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: 'हर कोई सीख सकता है'
-  get_started: 'Start'
-  beyond_an_hour: 'Beyond an Hour of Code'
+  get_started: 'प्रारंभ करना'
+  beyond_an_hour: 'कोड के एक घंटे से परे'
   register_now: 'एक खाता अभी बनाएँ'
-  share_on_facebook: 'Share on Facebook'
-  share_on_twitter: 'Share on Twitter'
+  share_on_facebook: 'फेसबुक पर साझा करें'
+  share_on_twitter: 'ट्विटर पर साझा करें'
   front_join_us_heading: 'हर छात्र के लिए ''एक घंटा कोड का'''
-  front_join_us_announcements: 'Announcements'
-  front_join_us_anybody_can_learn: 'Anybody can learn'
+  front_join_us_announcements: 'घोषणाएं'
+  front_join_us_anybody_can_learn: 'किसी को भी सीख सकते है'
   front_join_us_description: 'संघनक विज्ञान ये हर छात्र के लिए आधार है। हमें इसे १० कोटी छात्रों तक पोहोचने में मदद करे ।'
-  front_join_us_description_short: 'Computer science is a foundation for every student.'
+  front_join_us_description_short: 'कंप्यूटर साइंस हर विद्यार्थी के लिए एक आधार है ।'
   front_join_us_button: 'हमसे जुड़ें'
   front_what_is_hoc: 'क्या है ये एक घंटा कोड का?'
-  front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
-  front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
-  front_join_us_tutorials: "Try this year's new tutorials!"
-  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
-  front_join_us_robotics: 'Got robots?'
-  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_header: 'कोई भी मूल बातें सीख सकते हैं, और यह कर मज़ा है!'
+  front_join_us_volunteer_header: 'कोड के घंटे के लिए स्वयंसेवकों'
+  front_join_us_tutorials: "कोड ट्यूटोरियल के अपने घंटे चुनें!"
+  front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
+  front_join_us_robotics: 'रोबोट समझे?'
+  front_join_us_robotics_link: 'आप कोड के घंटे के समर्थन के लिए नीचे हमारे रोबोटिक्स भागीदारों के लिए धंयवाद! यदि आपकी कक्षा रोबोटों है, लोगो पर क्लिक करने के लिए रोबोट से संबंधित गतिविधियों की एक सूची मिल!'
   front_join_us_teacher: 'क्या आप शिक्षक है?'
-  front_join_us_inspire: 'Inspire students with'
-  front_join_us_inspire_link: 'an Hour of Code in the classroom.'
-  front_join_us_teacher_link: "Inspire students with an Hour of Code in the classroom"
-  front_join_us_teacher_volunteer: "Search for local volunteers who can visit your classroom or inspire your students remotely."
+  front_join_us_inspire: 'साथ छात्रों को प्रेरित'
+  front_join_us_inspire_link: 'कक्षा में कोड का एक घंटा ।'
+  front_join_us_teacher_link: "कक्षा में कोड के एक घंटे के साथ छात्रों को प्रेरित"
+  front_join_us_teacher_volunteer: "स्थानीय स्वयंसेवकों जो अपनी कक्षा की यात्रा या अपने छात्रों को दूर से प्रेरित कर सकते है के लिए खोजें ।"
   front_join_us_parent: 'क्या आप पालक है?'
   front_join_us_ask_link: 'आपके स्थानिक प्रशाला से पूछिये'
   front_join_us_ask: 'एक घंटा कोड का की मेजबानी करने|'
   front_join_us_parent_link: "Ask your local school to host an Hour of Code"
   front_join_us_computer_science: 'आपको संघनक विज्ञान पसंद है?'
-  front_join_us_cs_volunteer: 'Passionate about computer science education?'
+  front_join_us_cs_volunteer: 'कंप्यूटर विज्ञान शिक्षा के बारे में भावुक?'
   front_join_us_spread: 'Spread the word.'
   front_join_us_spread_word: "Spread the word in your community"
   front_join_us_spread_word_work: "Spread the word in your community or workplace"
@@ -219,11 +220,16 @@ hi:
   front_join_us_n_students_served: "# served"
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'आपका नाम'
+  signup_name_error: 'Name is required.'
   signup_email_label: 'आपका ईमेल'
+  signup_email_error: 'Email is required'
   signup_organization_name_label: 'प्रशाला या संस्था का नाम'
+  signup_organization_name_error: 'Organization name is required.'
   signup_event_type_label: 'कार्यक्रम का प्रकार'
+  signup_event_type_error: 'Event type is required.'
   signup_event_entire_school_label: 'मेरी पूरी प्रशाला भाग ले रही है'
   signup_event_location_label: 'स्थल (वैकल्पिक)'
+  signup_event_location_error: 'Event location is required.'
   signup_special_event_flag_label: 'मेरे कार्यक्रम का प्रचार करे'
   signup_special_event_details_label: 'विशेष कार्यक्रम का विवरण'
   signup_send_posters_flag_label: 'कृपया मेरी पाठशाला को एक घंटा कोड का की <a href= "/resources#posters">पत्रिका</a> भेजिए'
@@ -233,17 +239,23 @@ hi:
   signup_host_an_hour: 'Host an hour'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_registration_deadline: "Registration for the Hour of Code closes December 11."
   signup_name_placeholder: 'आपका नाम'
   signup_email_placeholder: 'आप@नमूना.com'
   signup_organization_name_placeholder: "उदाहरण के लिए, लिंकन हाई स्कूल"
-  signup_event_location_placeholder: "पोस्टल कोड और देश या पूर्ण पते। \\r\n(इस्का इस्तमॉल हम नक़्शेपे पिन के रूप में दिखनेके लिए करेंगे)"
+  signup_event_country_label: "घटना का देश"
+  signup_event_country_error: "देश की आवश्यकता है ।"
+  signup_event_location_placeholder: "पोस्टल कोड और देश या पूरा पता।"
   signup_special_event_details_placeholder: 'इस कार्यक्रम की विशेषताए बताये'
   signup_send_posters_address_placeholder: 'पता नक़्शे पे लिखा नहीं जायेगा'
   signup_event_type_in_school: 'प्रशाला में'
   signup_event_type_out_of_school: 'प्रशाला के बहर'
+  signup_submit_census_label: 'Submit'
+  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: 'साइन अप'
   signup_submit_error_message: "गलती हो गयी है. सभी जरुरी हिस्से पूर्ण किये गए है ये सुनिश्चित करे"
+  signup_submit_and_continue_label: 'Submit and Continue'
+  signup_continue_label: 'Continue'
   signup_thank_you_header: "एक घंटा कोड का का हिस्सा बनने के लिए धन्यवाद|"
   signup_thank_you_message: 'हमने आपको पुष्टिकरण के लिए और आरम्भमें मदत करनेकेलिए ईमेल भेजा है|'
   map_title: "Hour of Code map"
@@ -255,17 +267,18 @@ hi:
   map_search_search: 'Search'
   map_search_reset: 'Reset'
   map_legend_title: 'Legend'
-  map_legend_hoc_events: 'Hour of Code Event'
-  map_legend_cs_tech_jam: 'Special Event'
-  meta_tag_og_title: 'एक घंटा कोड का आ रहा है'
+  map_legend_hoc_events: 'कोड ईवेंट का घंटा'
+  map_legend_cs_tech_jam: 'विशेष घटना'
+  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
+  meta_tag_og_title: एक घंटा कोड का आ रहा है
   meta_tag_og_description: 'एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है'
-  meta_tag_twitter_title: 'एक घंटा कोड का आ रहा है'
+  meta_tag_twitter_title: एक घंटा कोड का आ रहा है
   meta_tag_twitter_description: 'एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है'
   twitter_default_text: "मै इस साल #HourOfCode का हिस्सा हु, क्या आप है? @codeorg"
   hoc_faq_title: 'सामान्य प्रश्न'
   hoc_faq_what_is_hoc_q: 'क्या है ये एक घंटा कोड का?'
   hoc_faq_what_is_hoc_a: "The Hour of Code started as a one-hour introduction to computer science, designed to demystify \"code\", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide."
-  hoc_faq_last_year: "Try the tutorials"
+  hoc_faq_last_year: "ट्यूटोरियल की कोशिश करो"
   hoc_faq_when_is_hoc_q: '''एक घंटा कोड का'' कब है?'
   hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: 'क्या है ये संगणक विज्ञान?'
@@ -287,12 +300,12 @@ hi:
   hoc_faq_account_q: "Do students need to log on using an account?"
   hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>."
   hoc_faq_high_school_q: "Which activity should I do with high school students?"
-  hoc_faq_high_school_a: "Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "हमारे स्टार वार्स और माइनकॉर्टर ट्यूटोरियल ,विशेष रूप से स्टार वार्स जावास्क्रिप्ट संस्करण और  मुक्त खेल लेवल ट्यूटोरियल दोनों  उच्च विद्यालयीन विद्यार्थियों के लिए अच्छा है. <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> \nक प्राथमिक स्तर का टूटोरिअल में काम करने की कोशिश कर लीजिये। जैसे की अँगरी बर्ड्स या फिर आना और एल्सा का टुटोरिअल। उच्च विद्यालय के विद्यार्थी इसे ३० मिनिट के अंदर कर सकते है. और उसके बाद वे और advanced स्तर का JavaScript में बनाया हुआ टुटोरिअल भी कोशिश कर सकते है। जैसे की खान academy या फिर CodeHS . \n\n"
   hoc_faq_scratch_q: "I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?"
   hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: "How do you count Hours of Code?"
   hoc_faq_map_q: "Why don't I see my dot on the map?"
-  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
+  hoc_faq_map_a: "We're so sorry you aren't seeing your event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   hoc_faq_one_hour_q: "How much can one learn in an hour?"
   hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
@@ -319,30 +332,30 @@ hi:
   stats_student: '"मुझे ये पताथा की ये <b>जिन्दगीमे एक बार मिलने वाला</b> मौका है" - मरिआना अलज़ते, कक्षा ५'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   resources_how_to: अध्यापको के लिए प्रशिक्षण पत्र
-  resources_how_to_events: Event how-to guide
-  resources_how_to_districts: How-to guide for districts
-  resources_how_to_officials: How-to guide for public officials
+  resources_how_to_events: इवेंट कैसे करें गाइड
+  resources_how_to_districts: जिलों के लिए मार्गदर्शिका कैसे करें
+  resources_how_to_officials: सार्वजनिक अधिकारियों के लिए मार्गदर्शिका कैसे करें
   resources_handouts: प्रचार पत्रक
-  resources_one_pager: One-page handout
-  resources_brochure: Brochure
+  resources_one_pager: एक-पृष्ठ हैंडआउट
+  resources_brochure: विवरणिका
   resources_posters: प्रचार पत्रिका
   resources_videos: वीडियो
   resources_banners: बैनर
   resources_emails: ईमेल का नमूना
-  resources_logo: Hour of Code logo
+  resources_logo: कोड लोगो का घंटा
   resources_stats: Stats and blurbs
   resources_press_kit: पत्रकारों के किये सामान
-  resources_social: Social
-  resources_country_resources: Country Specific Resources
-  resources_stickers: Stickers
-  resources_how_to_guides: 'How-to guides'
-  resources_promote: 'Promote'
-  resources_nav_tutorials: 'Try the tutorials'
+  resources_social: सोशल
+  resources_country_resources: देश विशिष्ट संसाधन
+  resources_stickers: स्टिकर्स
+  resources_how_to_guides: 'कैसे-करें मार्गदर्शिकाएं'
+  resources_promote: 'बढ़ावा दें'
+  resources_nav_tutorials: 'ट्यूटोरियल की कोशिश करो'
   resources_nav_promote: 'प्रचार कीजिये'
-  resources_nav_spread_word: 'How to get involved'
-  resources_banner_promote_text: "Promote"
+  resources_nav_spread_word: 'कैसे शामिल हो'
+  resources_banner_promote_text: "बढ़ावा दें"
   resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
-  resources_banner_howto_text: "How-to"
+  resources_banner_howto_text: "कैसे-करें"
   resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
   handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
@@ -353,12 +366,12 @@ hi:
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
   videos_obama_cs: President Obama on computer science
   videos_anybody_can_learn: Anybody Can Learn (1 min)
-  title_country_resources: Country Specific Resources
+  title_country_resources: देश विशिष्ट संसाधन
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
   title_how_to_companies: How to host an Hour of Code - Companies
-  title_how_to_officials: How-to guide for public officials
+  title_how_to_officials: सार्वजनिक अधिकारियों के लिए मार्गदर्शिका कैसे करें
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to_parents: How-to guide for parents
   title_how_to: How-to Guide
@@ -387,6 +400,22 @@ hi:
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  higlights_see_more: See more highlights
+  highlights_readmore: Read more
+  highlights_watchvideo: वीडियो देखें
+  highlights_facebook: फेसबुक पर साझा करें
+  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
+  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
+  highlights_constant_obama_short_heading: Coder in Chief
+  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
+  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
+  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
+  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
+  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_ny_short_heading: Brooklyn beats Chicago
+  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
+  highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: 'मुद्रधिकार २०१५ code.org. सर्व अधिकार आरक्षित'
   footer_trademark_message: 'Hour of Code™ ये code.org का ट्रेडमार्क है।'
   footer_menu_partners: 'भागीदार'
@@ -400,8 +429,9 @@ hi:
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_robotics_banner_heading: 'ROBOTICS'
   learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
+  tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: 'Moana: Wayfinding with Code'
-  tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_star-wars_name: 'स्टार वार्स: कोड के साथ एक आकाशगंगा का निर्माण'
   tutorial_gumadventure_name: "Gumball's Coding Adventure"
   tutorial_mchoc_name: "Minecraft Hour of Code"
   tutorial_vidnews_name: 'Vidcode: Code the News'
@@ -637,10 +667,10 @@ hi:
   tutorial_play_name: "Play Lab"
   tutorial_robomind-nl_name: "Program a virtual robot"
   tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 2: Lights'
+  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Lights'
   tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
-  tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_swb_name: 'स्टार वार्स: कोड के साथ एक आकाशगंगा का निर्माण'
+  tutorial_build-a-galaxy_name: 'स्टार वार्स: कोड के साथ एक आकाशगंगा का निर्माण'
   tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
   tutorial_tchr_name: "Teacher Led Lesson Plans"
   tutorial_robogame_name: "The Robot Games"
@@ -672,8 +702,9 @@ hi:
   tutorial_khanweb_name: 'Khan Academy: Webpages'
   tutorial_khandata_name: 'Khan Academy: Databases'
   tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
+  tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
-  tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_star-wars_shortdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
   tutorial_mchoc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
   tutorial_vidnews_shortdescription: "Code effects and graphics to make a news story all about tech, diversity, kids, and coding."
@@ -889,10 +920,10 @@ hi:
   tutorial_pirates_shortdescription: "Navigate the crystal waters of the southern hemisphere, code your treasure maps and discover the riches that lie on the golden shores. A fun way to learn the basic concepts of coding."
   tutorial_csfirst_shortdescription: "Animate a story about two characters on the ocean. Add your own style!"
   tutorial_loopedy_shortdescription: "Make a dance using loops!"
-  tutorial_dsw_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_dswb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_ssw_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_sswb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_dsw_shortdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_dswb_shortdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_ssw_shortdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_sswb_shortdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
   tutorial_kodable-unplugged_shortdescription: "A fun unplugged exercise"
   tutorial_scratch_shortdescription: "Create your own interactive games, stories, and animations with Scratch!"
   tutorial_bayes_shortdescription: "Grandes Heroes"
@@ -911,8 +942,8 @@ hi:
   tutorial_spheroi_shortdescription: "Introduction to Lightning Lab, The Sphero App for programming Sphero robots."
   tutorial_spherol_shortdescription: "Learn how to control Sphero’s lights and get creative with programming."
   tutorial_spherov_shortdescription: "Learn about Variables and Operators to program Sphero to simulate a speeding car, a hot potato game, and a fortune teller."
-  tutorial_swb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_build-a-galaxy_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_swb_shortdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_build-a-galaxy_shortdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
   tutorial_alicesims_shortdescription: "Tell stories and be creative while learning to code. "
   tutorial_tchr_shortdescription: "Be inspired to design your own Hour of Code event with these lesson plans."
   tutorial_robogame_shortdescription: "The grit, the games, the fun!"
@@ -944,8 +975,9 @@ hi:
   tutorial_khanweb_shortdescription: "Learn how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
   tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
+  tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
-  tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_star-wars_longdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
   tutorial_mchoc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
   tutorial_vidnews_longdescription: 'It’s the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. “Breaking News: 400 students at Roosevelt participate in the Hour of Code”'
@@ -1014,7 +1046,7 @@ hi:
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
   tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
-  tutorial_cdmy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
   tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
@@ -1092,7 +1124,7 @@ hi:
   tutorial_tlcemo_longdescription: "Students create and program a 2D robot made of card to show different emotions. They create a table that can be used to translate emotions (high level commands) into low level machine instructions."
   tutorial_crd_longdescription: "Learn about algorithms and conditional statements in this \"unplugged\" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team."
   tutorial_bbcbio_longdescription: "Standards-based lesson plan for grades K-5. Take your kids to the computer lab with worksheets in hand, and learn about growth, species diversity, and pollination."
-  tutorial_ticklebb8_longdescription: "What you can achieve\nBB-8, being the best company to all Starwars fans, can now also be your best coding education buddy! With the force of Tickle app, you can team up with BB-8 to give it a good swing, moving along some routes of particular patterns or interacting with you. At the same time, you can learn programming concepts while trying to clear the exercises.\n(Devices needed: BB-8) \n\nPractice & Exercise\n- Program BB-8 to move in a square pattern.\n- Program BB-8 to move in a figure-eight pattern.\n- Program BB-8 to randomly select a number between 1 and 10, and then guess the number!\n- Utilize the tilting sensors of your phones and tablets to pilot BB-8. For example, tilting your  \ndevice forwards will make BB-8 move likewise, and shaking your device will make BB-8   vibrate.\n\nWhat you can learn\n- Become familiar with visual programming. \n- Program BB-8 to perform actions using basic motion commands. \n- Learn the usage of repeating blocks, or loops, which allows code to run multiple times  \nconsecutively.\n- Become familiar with mathematics in programming.\n- Learn how to create variables in programming.\n- Understand the programming concept of “event-driven programming.”\n- Use motion sensors in devices to sense motion events (tilt and shake) to pilot BB-8."
+  tutorial_ticklebb8_longdescription: "आप इससे की प्राप्त कर सकते है \nबी बी -8, सभी स्टारवार्स प्रशंसकों के लिए सबसे अच्छी कंपनी है, और तो और ये कंपनी  आप सब स्टार वॉरस फैन लोगोंका  कोडिंग  की शिक्षा में अच्छा सा मित्र भी है. Tickle ऍप की मदद से और BB-8 के  साथ आप इसमें विशिष्ट ढाँचे से, तरह तरह पैटर्न का अंदाजा ले सकते है. \n  एक ही समय में,   प्रोग्रामिंग अवधारणाओं को सीखते सीखते आप उसमे से कुछ एक्सरसाइज का भी अभ्यास कर सकते है. \n(डिवाइस की आवश्यकता है: बीबी -8)\n\nअभ्यास और एक्सरसाइज \n- एक  चौकोन पैटर्न में स्थानांतरित करने के लिए प्रोग्राम BB-8।\n- एक आंकड़ा-आठ पैटर्न में स्थानांतरित करने के लिए प्रोग्राम BB-8\n-  प्रोग्राम BB-8का उपयोग १ और १० के बिच के अंक चुनने के लिए और बाद में वो अंक का अंदाजा /अनुमान लगाने के लिए करना \n- अपने फोन के झुकाव सेंसर का उपयोग पायलट BB-8 के लिए करना - उदारहरण के लिए -\n  फोन को अगर आगे झुकें तो BB-8 भी उसी दिशा झुक के चलेगा और अगर फोन को हिलाया तो BB-8 भी कम्पित हो जायेगा। \n\nआप क्या सीख सकते हैं\n- विजुअल प्रोग्रामिंग से परिचित रहें\n- बुनियादी गति कमांड का उपयोग करने के लिए प्रोग्राम BB-8।\n- दोहराए जाने वाले ब्लॉकों या लूप का उपयोग सीखें, जो कोड को कई बार चलाने की अनुमति देता है\nलगातार।\n- प्रोग्रामिंग में गणित से परिचित रहें\n- प्रोग्रामिंग में  variable  बनाने के बारे में जानें\n- \"घटना-आधारित प्रोग्रामिंग\" की प्रोग्रामिंग अवधारणा को समझें।\n- बीबी -8 पायलट के लिए गति इवेंट (झुकाव और शेक) को समझने के लिए उपकरणों में गति सेंसर का उपयोग करें"
   tutorial_grok_longdescription: "Use drag-and-drop blocks or the text-based language Python to draw flags from around the world, create fantastic snowflakes, or build a chatbot called \"Eliza\". "
   tutorial_ijournalist_longdescription: "This teacher facilitated lesson teaches Computer Science and Language Arts.  Pupils begin to develop a journalistic style that considers the interest of the reader and presentation of information for an online news story.  Pupils use basic HTML and CSS to create and present an online news story about a fictional school robbery.\n\nIt sets computer science within a meaningful context enabling children to understand the value of computer science in other subject areas. \n\n"
   tutorial_bbcmusic_longdescription: "Standards-based lesson plan for grades K-5. Take your kids to the computer lab with worksheets in hand, and build apps involving music."
@@ -1161,10 +1193,10 @@ hi:
   tutorial_pirates_longdescription: "Captain Hack is a pirate looking for treasure. He also writes treasure maps, and writing those like writing code. He (the player) uses \"pirate code\" for this. It is a symbol-based programming language, used for instructions and even AI behaviors. movements, loops, GO-TO's, true/false-statements are all core parts of the game. The players are guided through a tutorial and presented for the posibilities, step by step. There are no correct solution for the tutorial levels, so the user can chose whatever solution they like. "
   tutorial_csfirst_longdescription: "Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!"
   tutorial_loopedy_longdescription: "The goal of a good programmer is to write a program that is a short, clear, and effective as possible. In this lesson, students will learn how write programs using loops."
-  tutorial_dsw_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_dswb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_ssw_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_sswb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_dsw_longdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_dswb_longdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_ssw_longdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_sswb_longdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
   tutorial_kodable-unplugged_longdescription: "Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. "
   tutorial_scratch_longdescription: "With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. To get started, animate your name, create a dance scene, or make a hide-and-seek game featuring Cartoon Network’s We Bare Bears!"
   tutorial_bayes_longdescription: "Grandes Heroes"
@@ -1183,8 +1215,8 @@ hi:
   tutorial_spheroi_longdescription: "Everyone starts somewhere. Welcome to your first Lightning Lab activity!\n\nFollow the steps to get a quick video overview of the app, learn how to create programs using the block-based interface, and gain an understanding of loops. After that, test your skills and curiosity by playing a game with your robot and the app.\n"
   tutorial_spherol_longdescription: "Dive into the power of lights in this activity. You will discover different methods to control Sphero’s lights and then build programs to put the lights to work. You will create a program that powers a robotic Jack-o’-Lantern, turns Sphero into a sensor-based spinning top, and also get creative with long exposure light art."
   tutorial_spherov_longdescription: "In this Sphero Lightning Lab activity you will learn about powerful programming commands. This activity will simulate Sphero getting pulled over by a police officer for speeding. You will also build a hot potato game program, and turn Sphero into a fortune teller to predict the future. All of this will be accomplished with variables that let you set conditional values in the Lightning Lab app. "
-  tutorial_swb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  tutorial_build-a-galaxy_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  tutorial_swb_longdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
+  tutorial_build-a-galaxy_longdescription: "droids नामक कम्प्यूटर प्रोग्रॅम सीखिए और इस आकाशगंगा में अपना खुद का 'स्टार वॉरस ' खेल बनाइये।"
   tutorial_alicesims_longdescription: "Follow the animation production process from storyboarding to programming with Alice and The Sims.  Let creativity and storytelling drive your learning in a drag and drop coding environment.  The project will guide you through what is a storyboard, translating a storyboard into a programmable script, and how to program a short 3D animation. "
   tutorial_tchr_longdescription: "Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans."
   tutorial_robogame_longdescription: "Challenge your school to compete in the Robot Games! Students will compete in a series of mathematics themed activities where they use Dash and Dot to solve a problem and earn points for themselves, their grade, and/or their school."
@@ -1216,17 +1248,18 @@ hi:
   tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
   tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
+  tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
-  tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_star-wars_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_gumadventure_language: "English only"
-  tutorial_mchoc_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_mchoc_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_vidnews_language: "English only"
   tutorial_kodable-pre_language: "English, Arabic, Azerbaijani, German, Greek, Spanish, Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese"
   tutorial_highseas_language: "English only"
-  tutorial_capython_language: "English only"
-  tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_capython_language: "English, Dutch, Spanish"
+  tutorial_frzn_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
-  tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_play-lab_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_boxisland2016_language: "English, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_textcomp_language: "English only"
   tutorial_encryption_language: "English only"
@@ -1238,21 +1271,21 @@ hi:
   tutorial_spritebox_language: "English, Brazilian Portuguese"
   tutorial_tynkerch_language: "English only"
   tutorial_lightbot_language: "English, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malaysia, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Thai"
-  tutorial_hoc_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
-  tutorial_code_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_hoc_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
+  tutorial_code_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_tinspire_language: "English only"
   tutorial_itchbounceball_language: "English only"
   tutorial_vidclim_language: "English only"
   tutorial_matlab_language: "English only"
-  tutorial_flap_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_flap_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_galaxy_language: "English, Albanian, Arabic, Bosnian, Chinese, Croatian, Czech, Danish, Dutch, French, German, Hebrew, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese, Romanian, Russian, Slovenian, Spanish, Swedish, Turkish, Vietnamese"
-  tutorial_inf_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_inf_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_tynkersol_language: "English only"
   tutorial_itchg_language: "English only"
   tutorial_como_language: "English, Arabic, Chinese, Czech, French, German, Greek, Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish, Turkish, Ukrainian"
   tutorial_processfound_language: "English only"
   tutorial_tynkerhomo_language: "English only"
-  tutorial_art_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_art_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_tynkerbrick_language: "English only"
   tutorial_itchbio_language: "English only"
   tutorial_itchj_language: "English only"
@@ -1265,14 +1298,14 @@ hi:
   tutorial_livecode_language: "English only"
   tutorial_cocomgame_language: "English, Arabic, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 8 more"
   tutorial_tynkerspin_language: "English only"
-  tutorial_code-avengers_language: "English, Spanish, Bulgarian, Danish, Greek, Finnish, Japanese and more"
+  tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
   tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
   tutorial_texas-instruments_language: "English only"
-  tutorial_cajava_language: "English only"
+  tutorial_cajava_language: "English, Dutch, Spanish"
   tutorial_codehs_language: "English only"
   tutorial_hopemo_language: "English only"
   tutorial_tynkercm_language: "English only"
@@ -1286,7 +1319,7 @@ hi:
   tutorial_mitedarc_language: "English only"
   tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
-  tutorial_cdmy_language: "Spanish"
+  tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
   tutorial_codestersbasketball_language: "English, Spanish"
   tutorial_nclkarel_language: "Multiple"
@@ -1294,7 +1327,7 @@ hi:
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
   tutorial_globaloria_language: "English, Spanish"
-  tutorial_capost_language: "English only"
+  tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
   tutorial_kanopong_language: "English only"
@@ -1323,7 +1356,7 @@ hi:
   tutorial_coders_language: "English, French"
   tutorial_tynkerhw_language: "English only"
   tutorial_tynkermh_language: "English only"
-  tutorial_caphoto_language: "English only"
+  tutorial_caphoto_language: "English, Dutch, Spanish"
   tutorial_mozillahw_language: "English only"
   tutorial_ticklep_language: "Chinese (Traditional), Danish, English, French, Japanese"
   tutorial_bbot_language: "Dutch, Suomi, English"
@@ -1440,9 +1473,9 @@ hi:
   tutorial_kodable-unplugged_language: "English only"
   tutorial_scratch_language: "English only"
   tutorial_bayes_language: "Spanish"
-  tutorial_gumball_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_gumball_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_hrm_language: "Multiple"
-  tutorial_ice-age_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_ice-age_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_koapp_language: "Multiple"
   tutorial_lightbot-intl_language: "French, Russian, Brazilian Portuguese"
   tutorial_rmc_language: "Russian"
@@ -1450,13 +1483,13 @@ hi:
   tutorial_minecraft-2016_language: "Multiple"
   tutorial_thinkersmith-es_language: "Spanish"
   tutorial_pixie_language: "Spanish"
-  tutorial_play_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_play_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_robomind-nl_language: "Dutch"
   tutorial_spheroi_language: "English only"
   tutorial_spherol_language: "English only"
   tutorial_spherov_language: "English only"
-  tutorial_swb_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
-  tutorial_build-a-galaxy_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
+  tutorial_swb_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
+  tutorial_build-a-galaxy_language: "अंग्रेजी, अरबी, बल्गेरियाई, चीनी, क्रोएशियाई, डेनिश, डच, फिनिश, फ्रेंच, जर्मन, ग्रीक, आइसलैंड, इंडोनेशियाई, इतालवी, जापानी, कोरियाई, नार्वे, फ़ारसी, पोलिश, पुर्तगाली, रोमानियाई, रूसी, स्पैनिश, स्वीडिश, तुर्की, यूक्रेनी और 19 अधिक"
   tutorial_alicesims_language: "English only"
   tutorial_tchr_language: "English only"
   tutorial_robogame_language: "English only"
@@ -1488,6 +1521,7 @@ hi:
   tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
   tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
+  tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
@@ -1760,10 +1794,11 @@ hi:
   tutorial_khanweb_string_detail_grades: "Grades 2+"
   tutorial_khandata_string_detail_grades: "Grades 6+"
   tutorial_robomeshiq_string_detail_grades: "Grades 2+"
+  tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
-  tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_star-wars_string_platforms: "सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड, एंड्रॉयड फोन, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
-  tutorial_mchoc_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_mchoc_string_platforms: "सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड, एंड्रॉयड फोन, iPhone"
   tutorial_vidnews_string_platforms: "Chrome, Firefox"
   tutorial_kodable-pre_string_platforms: "All modern browsers, Android tablet, iPad, Unplugged"
   tutorial_highseas_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
@@ -1775,13 +1810,13 @@ hi:
   tutorial_textcomp_string_platforms: "All modern browsers"
   tutorial_encryption_string_platforms: "All modern browsers"
   tutorial_kanopixel_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
-  tutorial_foos_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_foos_string_platforms: "सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड, एंड्रॉयड फोन, iPhone"
   tutorial_tynkerdd_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkerana_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_vidcard_string_platforms: "Chrome"
-  tutorial_spritebox_string_platforms: "All modern browsers"
+  tutorial_spritebox_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkerch_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
-  tutorial_lightbot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_lightbot_string_platforms: "सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड, एंड्रॉयड फोन, iPhone"
   tutorial_hoc_string_platforms: "do-not-show"
   tutorial_code_string_platforms: "All modern browsers, Android, iOS"
   tutorial_tinspire_string_platforms: "TI-Nspire handheld"
@@ -1790,13 +1825,13 @@ hi:
   tutorial_matlab_string_platforms: "All modern browsers"
   tutorial_flap_string_platforms: "All modern browsers, Android, iOS"
   tutorial_galaxy_string_platforms: "Android tablet, Android phone"
-  tutorial_inf_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_inf_string_platforms: "सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड, एंड्रॉयड फोन, iPhone"
   tutorial_tynkersol_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_itchg_string_platforms: "Chrome, Firefox, Android Tablet"
-  tutorial_como_string_platforms: "All modern browsers"
+  tutorial_como_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_processfound_string_platforms: "Chrome, Firefox, Safari"
   tutorial_tynkerhomo_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
-  tutorial_art_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_art_string_platforms: "सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड, एंड्रॉयड फोन, iPhone"
   tutorial_tynkerbrick_string_platforms: "All modern browsers"
   tutorial_itchbio_string_platforms: "Chrome, Firefox"
   tutorial_itchj_string_platforms: "Chrome, Firefox, Android Tablet"
@@ -1806,7 +1841,7 @@ hi:
   tutorial_monster_string_platforms: "All modern browsers"
   tutorial_tynkerapp_string_platforms: "do-not-show"
   tutorial_tynkerpup_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
-  tutorial_livecode_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_livecode_string_platforms: "सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड, एंड्रॉयड फोन, iPhone"
   tutorial_cocomgame_string_platforms: "All modern browsers"
   tutorial_tynkerspin_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_code-avengers_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
@@ -2032,6 +2067,7 @@ hi:
   tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
+  tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
@@ -2304,8 +2340,9 @@ hi:
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
+  tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
-  tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_star-wars_string_detail_programming_languages: "ब्लॉक, जावास्क्रिप्ट"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_mchoc_string_detail_programming_languages: "Blocks"
   tutorial_vidnews_string_detail_programming_languages: "JavaScript"
@@ -2470,7 +2507,7 @@ hi:
   tutorial_bbcmathi_string_detail_programming_languages: "do-not-show"
   tutorial_tlcpixel_string_detail_programming_languages: "Language independent"
   tutorial_arduino_string_detail_programming_languages: "Arduino"
-  tutorial_introrobo_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_introrobo_string_detail_programming_languages: "ब्लॉक, जावास्क्रिप्ट"
   tutorial_tlcinvis_string_detail_programming_languages: "Language independent"
   tutorial_tlcjflap_string_detail_programming_languages: "Language independent"
   tutorial_procolor_string_detail_programming_languages: "Language independent"
@@ -2517,7 +2554,7 @@ hi:
   tutorial_baypt_string_detail_programming_languages: "Blocks"
   tutorial_code-combat_string_detail_programming_languages: "do-not-show"
   tutorial_mky_string_detail_programming_languages: "CoffeeScript"
-  tutorial_spellcraft_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_spellcraft_string_detail_programming_languages: "ब्लॉक, जावास्क्रिप्ट"
   tutorial_pirates_string_detail_programming_languages: "Blocks, Pirate code"
   tutorial_csfirst_string_detail_programming_languages: "Scratch"
   tutorial_loopedy_string_detail_programming_languages: "Blocks"
@@ -2576,3 +2613,45 @@ hi:
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_name_error: "School name is required."
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code"
+  school_zip_error: "School postal code is required."
+  census_thanks: 'Thanks for signing up!'
+  census_header: 'Please take a few minutes to tell us about your school (Optional).'
+  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
+  census_how_many_hoc: "How many students will do an Hour of Code?"
+  census_how_many_after_school: "How many students do computer programming in an after-school program?"
+  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
+  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
+  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
+  census_connection: "What is your connection to this school?"
+  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
+  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
+  census_followup_frequency: "How often per week does this class meet?"
+  less_than_one: "< 1 hour per week"
+  one_to_three: "1-3 hours per week"
+  three_plus: "3+ hours per week"
+  census_followup_more: "Please tell us more about this course."
+  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
+  census_topics_blocks: "Block-based programming"
+  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
+  census_topics_robots: "Robotics / Physical Computing"
+  census_topics_internet: "Internet and networking"
+  census_topics_security: "Cybersecurity"
+  census_topics_data: "Data analysis"
+  census_topics_web_design: "Web design using HTML and CSS"
+  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
+  teacher: "Teacher"
+  administrator: "Administrator"
+  parent: "Parent"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
+  other: "Other"
+  other_describe: "Other (please describe below)"
+  none: "None"
+  some: "Some"
+  all: "All"
+  dont_know: "I don't know"

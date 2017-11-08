@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # آور-آف-کوڈ کو پروموٹ کریں
 
@@ -39,13 +37,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. "آور-آف-کوڈ" کا کوئی بھی حوالہ (ریفرنس) ایک ایسے انداز میں استعمال کیا جانا چاہیئے جو کہ یہ تاثر نہ دے کہ یہ آپ کا ذاتی برانڈ نیم ہے، بلکہ اس کے بجائے آور-اف-کوڈ کو بنیادی سطح (گراس روٹ) کی تحریک کے حوالے سے لیا جائے۔ اچھی مثال: ACMECorp.com پر "آور-آف-کوڈ™ پر حصہ لیں" Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. اپنی ویب سائیٹ اور ایپ ڈسکرپشن، دونوں میں "آور-آف-کوڈ" کا ذکر سب سے نمایاں مقامات پر "TM" کے سپراسکرپٹ کا استعمال کرتے ہوئے کریں۔
+1. "آور-آف-کوڈ" کا کوئی بھی حوالہ (ریفرنس) ایک ایسے انداز میں استعمال کیا جانا چاہیئے جو کہ یہ تاثر نہ دے کہ یہ آپ کا ذاتی برانڈ نیم ہے، بلکہ اس کے بجائے آور-اف-کوڈ کو بنیادی سطح (گراس روٹ) کی تحریک کے حوالے سے لیا جائے۔ اچھی مثال: ACMECorp.com پر "آور-آف-کوڈ™ پر حصہ لیں" Bad example: "Try Hour of Code by ACME Corp".
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+3. اپنی ویب سائیٹ اور ایپ ڈسکرپشن، دونوں میں "آور-آف-کوڈ" کا ذکر سب سے نمایاں مقامات پر "TM" کے سپراسکرپٹ کا استعمال کرتے ہوئے کریں۔
     
     *اپنی ویب سائیٹ اور ایپ ڈسکرپشن، دونوں میں "آور-آف-کوڈ" کا ذکر سب سے نمایاں مقامات پر "TM" کے سپراسکرپٹ کا استعمال کرتے ہوئے کریں۔*
 
-  4. No use of "Hour of Code" in app names.
+4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

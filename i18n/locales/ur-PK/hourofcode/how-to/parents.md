@@ -1,17 +1,17 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_parents) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # How to complete an Hour of Code with your child
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## ١) اس ویڈیو کو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## ٢) ٹیٹوریئل منتخب کریں:
+## ١) ہدایات کے لیے یہ ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## ٢) ایک سبق کا انتخاب کریں:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
@@ -63,13 +63,13 @@ It’s okay to respond:
 
 [Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 
-!سوشل میڈیا پر اپنے آور-آف-کوڈ کے ایونٹ کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم بھی آپ کی کامیابی کو اجاگر کرسکیں
+! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 
 **Other Hour of Code resources:**
 
 - [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔
 
-**آور-آف-کوڈ کے بعد کیا آتا ہے؟**
+**آور-آف-کوڈ کے بعد کیا ہو گا؟**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

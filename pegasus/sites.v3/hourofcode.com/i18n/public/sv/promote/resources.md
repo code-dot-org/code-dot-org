@@ -1,19 +1,15 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Hjälp till att marknadsföra Hour of Code
+# Marknadsför Hour of Code
 
-## Ska du hålla en Hour of Code? <a
+## Ska du hålla en Hour of Code? <a href="<%= resolve_url('/how-to') %> Titta på guiden</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -41,13 +37,13 @@ nav: promote_nav
 
 **"Hour of Code" är varumärkesskyddat. Vi vill inte förhindra denna användning, men vi vill se till att det passar inom några gränser:**
 
-  1. Alla hänvisningar till "Hour of Code" bör användas på ett sätt som inte tyder på att det är ditt eget varumärke, hänvisa hellre till Hour of Code som en gräsrotsrörelse. Bra exempel: "Delta i Hour of Code™ på ACMECorp.com". Dåligt exempel: "Prova Hour of Code av ACME Corp".
-  2. Använd en "TM" upphöjd i de mest framträdande platser du nämner "Hour of Code", både på webbplatsen och i appbeskrivningar.
-  3. Inkludera språk på sidan (eller i sidfoten), inklusive länkar till webbplatserna CSEdWeek och Code.org, som säger följande:
+1. Alla hänvisningar till "Hour of Code" bör användas på ett sätt som inte tyder på att det är ditt eget varumärke, hänvisa hellre till Hour of Code som en gräsrotsrörelse. Bra exempel: "Delta i Hour of Code™ på ACMECorp.com". Dåligt exempel: "Prova Hour of Code av ACME Corp".
+2. Använd en "TM" upphöjd i de mest framträdande platser du nämner "Hour of Code", både på webbplatsen och i appbeskrivningar.
+3. Inkludera språk på sidan (eller i sidfoten), inklusive länkar till webbplatserna CSEdWeek och Code.org, som säger följande:
     
     *"Hour of Code™' är ett rikstäckande initiativ av Computer Science Week[csedweek.org] och Code.org[code.org] för att miljoner elever ska introduceras till en timme av datavetenskap och programmering."*
 
-  4. Ingen användning av "Hour of Code" i appnamn.
+4. Ingen användning av "Hour of Code" i appnamn.
 
 <a id="stickers"></a>
 
@@ -68,7 +64,7 @@ Datorer finns överallt, och förändrar varje industri på planeten. But fewer 
 
 Med Hour of Code, har datavetenskap har varit på startsidan på Google, MSN, Yahoo! och Disney. Över 100 partners har gått samman för att stödja denna rörelse. Varje Apple Store i världen har varit värd för Hour of Code. President Obama skrev sina första rader kod som en del av kampanjen.
 
-Detta år, låt oss göra det ännu större. Jag ber dig att vara med på Hour of Code 2016. Vänligen bli involverad med Hour of Code under Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Berätta om det. Håll ett evenemang. Be din lokala skola att registera sig. Eller prova en Hour of Code själv - alla har nytta av att kunna grunderna.
 
@@ -80,29 +76,29 @@ Kom igång på http://hourofcode.com/<%= @country %>
 
 **Ämnesrad:** Lokala skolan går med rörelsen att introducera eleverna till datavetenskap
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Tjejer och minoriteter är kraftigt underrepresenterade inom datavetenskap och i den tekniska branschen. Goda nyheter är, vi är på väg att ändra detta.
+Dator finns överallt och förändrar allt i vår värld, men färre än hälften av alla skolor lär ut datavetenskap. Tjejer och minoriteter är kraftigt underrepresenterade inom datavetenskap och i den tekniska branschen. Goda nyheter är, vi är på väg att ändra detta.
 
 Med Hour of Code, har datavetenskap har varit på startsidan på Google, MSN, Yahoo! och Disney. Över 100 partners har gått samman för att stödja denna rörelse. Varje Apple Store i världen har varit värd för Hour of Code. President Obama skrev sina första rader kod som en del av kampanjen.
 
-Det är därför alla av de [X nummer] studenter vid [skolans namn] går med i det största utbildningsevenemanget i historian: The Hour of Code, under Computer Science Education Week (<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Jag skriver för att bjuda in dig till vår kick-off och att se när våra elever påbörjar aktiviteterna på [datum].
 
 Hour of Code som organiseras av den ideella föreningen Code.org och över 100 andra partners, är en global rörelse som drivs av övertygelsen att elever är redo för att lära sig de kunskaper som utvecklar dagens samhälle. Please join us.
 
-**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
+**Kontakt:** [DITT NAMN], [TITLE], telefon: 212-555 55 55
 
-**When:** [DATE and TIME of your event]
+**När:**[DATUM och TID för ditt event]
 
-**Where:** [ADDRESS and DIRECTIONS]
+**Var:** [ADDRESS and VÄGBESKRIVNING]
 
 I look forward to being in touch.
 
 <a id="parents"></a>
 
-## Tell parents about your school's event:
+## Berätta för föräldrar om din skolas evenemang:
 
-Dear Parents,
+Kära föräldrar,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
@@ -116,9 +112,9 @@ This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Sincerely,
+Vänliga hälsningar,
 
-Your principal
+Er rektor
 
 <a id="politicians"></a>
 
