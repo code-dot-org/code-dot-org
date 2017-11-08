@@ -1,15 +1,11 @@
 ---
-
 title: <%= hoc_s(:title_resources) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promoveaza evenimentul Hour of Code
 
@@ -41,13 +37,13 @@ nav: promote_nav
 
 **"Ora de Programare" este marcă înregistrată. Nu vrem să prevenim utilizarea acesteia, dar vrem să ne asigurăm că se plasează în câteva limite:**
 
-  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Exemplu negativ: "Încercaţi Ora de Programare de ACME Corp".
-  2. Utilizează un exponent "TM" în locurile cele mai proeminente în care menționezi "Hour of Code", atât pe site-ul tău de web cât şi în descrierea aplicației.
-  3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
+1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Exemplu negativ: "Încercaţi Ora de Programare de ACME Corp".
+2. Utilizează un exponent "TM" în locurile cele mai proeminente în care menționezi "Hour of Code", atât pe site-ul tău de web cât şi în descrierea aplicației.
+3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
     
     *"Hour of Code este o iniţiativă internațională a Computer Science Education Week[csedweek.org] şi Code.org [code.org] pentru a iniția milioane de studenţi în tehnologia computerelor și în programare cu ajutorul unei ore globale de programare."*
 
-  4. A nu se utiliza "Hour of Code"/Ora de Programare în nume de aplicații.
+4. A nu se utiliza "Hour of Code"/Ora de Programare în nume de aplicații.
 
 <a id="stickers"></a>
 
@@ -68,7 +64,7 @@ Computerele sunt peste tot, schimbă fiecare industrie pe planeta. Dar mai puţi
 
 In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Preşedintele Obama a scris lui prima linie de cod ca parte a campaniei.
 
-În acest an, haideți sa il facem si mai mare. Va rog sa va alaturati evenimentului Hour of Codr 2015. Implicati-va cu evenimentul dvs. Hour of Code in timpul Saptamanii educatiei in tehnologia computerelor <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Împăștiați vestea. Găzduiți un eveniment. Cereți unei școli locale să se înscrie. Sau încercați chiar dvs. Ora de Programare -- oricine poate beneficia din învățarea noțiunilor de bază.
 
@@ -82,9 +78,9 @@ In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima p
 
 Computerele sunt peste tot, schimbă fiecare industrie pe planetă, dar mai putin de jumătate dintre şcoli predau informatica. Fete şi minorităţile sunt grav slab reprezentate în clasele de ştiinţă calculator şi în industria de tehnologie. Vestea bună e că suntem pe cale să schimbăm acest lucru.
 
-In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Preşedintele Obama a scris prima lui linie de cod ca parte a campaniei.
+In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Fiecare magazin Apple din lume a găzduit o Oră de Programare. Preşedintele Obama a scris lui prima linie de cod ca parte a campaniei.
 
-De aceea, fiecare dintre cei [X] elevi de la [numele şcolii] ne alaturăm celui mai mare eveniment educativ în istorie: Ora de Programare, în săptămâna 5-11 Decembrie 2016<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Vă scriu pentru a vă invita să participați la reuniunea noastră de impact și să vedeți cum încep copiii această activitate pe data de [DATA].
 
