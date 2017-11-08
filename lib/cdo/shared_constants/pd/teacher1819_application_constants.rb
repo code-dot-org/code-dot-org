@@ -13,6 +13,7 @@ module Teacher1819ApplicationConstants
 
   PAGE_LABELS = {
     section_1_about_you_and_your_school: {
+      country: 'Country',
       title: 'Title',
       first_name: 'First Name',
       preferred_first_name: 'Preferred First Name',
@@ -52,7 +53,7 @@ module Teacher1819ApplicationConstants
          Note: no computer science experience is necessary or expected
          to participate in the Professional Learning Program.'
       ),
-      cs_taught_at_school:
+      cs_offered_at_school:
         'What computer science courses or activities are currently offered at your school? (select all that apply)',
       cs_opportunities_at_school:
         'What computer science opportunities currently exist at your school? (select all that apply)',
