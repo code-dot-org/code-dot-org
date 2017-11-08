@@ -24,7 +24,8 @@ video_player: true
 #resources.responsive-body
   .col-50
     .tutorial-tile
-      %img.tutorial-tile-img{src: CDO.code_org_url("/images/app-lab/applab-intro.png"), style: "width: 100%;"}
+      %a{:href=>CDO.studio_url("/s/applab-intro")}
+        %img.tutorial-tile-img{src: CDO.code_org_url("/images/app-lab/applab-intro.png"), style: "width: 100%;"}
       .tutorial-info
         %h3.tutorial-info-h Intro to App Lab Tutorial (beta)
         .smalltext Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
