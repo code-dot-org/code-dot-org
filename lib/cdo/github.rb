@@ -83,7 +83,10 @@ module GitHub
     pr_number = create_pull_request(base: base, head: head, title: title)
     # By sleeping, we allow GitHub time to determine that a merge conflict is
     # not present. Otherwise, empirically, we receive a 405 response error.
-    sleep 3
+    # (Brad 2017-11-07) Speculatively doubling this sleep in case the 500 errors
+    #   we've seen over the last couple of days are caused by trying to merge
+    #   too quick.
+    sleep 6
     success = merge_pull_request(pr_number, title)
     success ? pr_number : nil
   end
