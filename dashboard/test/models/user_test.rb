@@ -1881,14 +1881,54 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'Validation failed: Age is required', e.message
   end
 
-  test 'age validation is bypassed for Google OAuth users' do
+  test 'age validation is bypassed for Google OAuth users with no birthday' do
     # Users created this way will be asked for their age when they first sign in.
-    create :user, birthday: nil, provider: 'google_oauth2'
+    user = create :user, birthday: nil, provider: 'google_oauth2'
+    assert_nil user.age
   end
 
-  test 'age validation is bypassed for Clever users' do
+  test "age is nil for Google OAuth users under age 4" do
     # Users created this way will be asked for their age when they first sign in.
-    create :user, birthday: nil, provider: 'clever'
+    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'google_oauth2'
+    assert_nil three_year_old.age
+  end
+
+  test "age is set exactly for Google OAuth users between ages 4 and 20" do
+    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
+    assert_equal 4, four_year_old.age
+
+    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
+    assert_equal 20, twenty_year_old.age
+  end
+
+  test "age is 21+ for Google OAuth users over the age of 20" do
+    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'google_oauth2'
+    assert_equal '21+', twenty_something.age
+  end
+
+  test 'age validation is bypassed for Clever users with no birthday' do
+    # Users created this way will be asked for their age when they first sign in.
+    user = create :user, birthday: nil, provider: 'clever'
+    assert_nil user.age
+  end
+
+  test "age is nil for Clever users under age 4" do
+    # Users created this way will be asked for their age when they first sign in.
+    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'clever'
+    assert_nil three_year_old.age
+  end
+
+  test "age is set exactly for Clever users between ages 4 and 20" do
+    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'clever'
+    assert_equal 4, four_year_old.age
+
+    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'clever'
+    assert_equal 20, twenty_year_old.age
+  end
+
+  test "age is 21+ for Clever users over the age of 20" do
+    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'clever'
+    assert_equal '21+', twenty_something.age
   end
 
   test 'users updating the email field must provide a valid email address' do
@@ -2601,5 +2641,47 @@ class UserTest < ActiveSupport::TestCase
 
     user_scripts = UserScript.where(user: user)
     assert_equal 0, user_scripts.length
+  end
+
+  class CircuitPlaygroundPdEligible < ActiveSupport::TestCase
+    setup do
+      @csd_cohort = create :cohort, name: 'CSD-TeacherConPhiladelphia'
+      @other_cohort = create :cohort
+    end
+    test 'returns true if attended a CSD TeacherCon' do
+      teacher = create :teacher
+      @csd_cohort.teachers << teacher
+      assert_equal true, teacher.circuit_playground_pd_eligible?
+    end
+
+    test 'returns false if a member of other cohorts, not CSD' do
+      teacher = create :teacher
+      @other_cohort.teachers << teacher
+      assert_equal false, teacher.circuit_playground_pd_eligible?
+    end
+
+    test 'returns true if a CSD facilitator' do
+      course_facilitator = create :pd_course_facilitator, course: Pd::Workshop::COURSE_CSD
+      user = course_facilitator.facilitator
+      assert_equal true, user.circuit_playground_pd_eligible?
+    end
+
+    test 'returns false if a non-CSD facilitator' do
+      course_facilitator = create :pd_course_facilitator, course: Pd::Workshop::COURSE_CSP
+      user = course_facilitator.facilitator
+      assert_equal false, user.circuit_playground_pd_eligible?
+    end
+
+    test 'studio_person_circuit_playground_pd_eligible returns true if studio_person_id associated User is eligible' do
+      user1 = create :teacher
+      user2 = create :teacher, studio_person_id: user1.studio_person_id
+
+      @csd_cohort.teachers << user1
+      assert_equal true, user1.circuit_playground_pd_eligible?
+      assert_equal false, user2.circuit_playground_pd_eligible?
+
+      assert_equal true, user1.studio_person_circuit_playground_pd_eligible?
+      assert_equal true, user2.studio_person_circuit_playground_pd_eligible?
+    end
   end
 end
