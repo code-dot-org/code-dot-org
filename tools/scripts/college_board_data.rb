@@ -68,33 +68,55 @@ STATES_WITH_DC = [
 
 # An array of hashes, with each hash specifying the years to which it applies
 # and the cells to grab (as a hash from tab names to an array of cells).
+# Allows extraction of multiple tests (relevant as of 2017)
 SPECS = [
   {
     years: [2007, 2008, 2009, 2010, 2011],
-    cells: {
-      all: %w(J18 J32 J39 J53 J60 J74),
-      females: %w(J74)
+    tests: {
+      csa: {
+        all: %w(J18 J32 J39 J53 J60 J74),
+        females: %w(J74)
+      }
     }
   },
   {
     years: [2012],
-    cells: {
-      all: %w(K19 K33 K40 K54 K61 K75),
-      females: %w(K75)
+    tests: {
+      csa: {
+        all: %w(K19 K33 K40 K54 K61 K75),
+        females: %w(K75)
+      }
     }
   },
   {
     years: [2013, 2014, 2015],
-    cells: {
-      All: %w(K19 K33 K40 K54 K61 K75),
-      Females: %w(K75)
+    tests: {
+      csa: {
+        All: %w(K19 K33 K40 K54 K61 K75),
+        Females: %w(K75)
+      }
     }
   },
   {
     years: [2016],
-    cells: {
-      All: %w(K12 K26 K33 K40 K75),
-      Females: %w(K75)
+    tests: {
+      csa: {
+        All: %w(K12 K26 K33 K40 K75),
+        Females: %w(K75)
+      }
+    }
+  },
+  {
+    years: [2017],
+    tests: {
+      csa: {
+        All: %w(K12 K26 K33 K40 K75),
+        Females: %w(K75)
+      },
+      csp: {
+        All: %w(L12 L26 L33 L40 L75),
+        Females: %w(L75)
+      }
     }
   }
 ].freeze
@@ -161,7 +183,7 @@ def get_url(year, state)
     return "http://media.collegeboard.com/digitalServices/misc/ap/#{state}-summary-#{year}.xlsx"
   end
 
-  if year == 2016
+  if year == 2016 || year == 2017
     state = 'District of Columbia' if state == 'DC'
     state.tr!(' ', '-')
     state.downcase!
@@ -228,7 +250,7 @@ def get_tab_name(year, state, tab)
   if year == 2016 && state == 'Alabama' && tab == 'All'
     return 'ALL'
   end
-  tab.to_s 
+  tab.to_s
 end
 
 # Retrieves the value in the spreadsheet with the indicated year and state_name
@@ -247,6 +269,7 @@ def get_value(spreadsheet, year, state, tab, column_row)
       row = t.row(get_row_from_column_row(column_row))
       value = row[get_column_from_column_row(column_row)]
     end
+  rescue Exception
     puts "  YEAR: #{year}. STATE_NAME: #{state}. FIXED_TAB: #{fixed_tab}. "\
       "COLUMN_ROW: #{column_row}."
     raise
@@ -256,11 +279,17 @@ def get_value(spreadsheet, year, state, tab, column_row)
 end
 
 # Downloads the XLS files from the AP College Board.
-def get_xlss
+# Assumes you want to extract data for all years unless a year is specified
+def get_xlss(specific_year=nil)
   STATES_WITH_DC.each do |state|
     puts "  DOWNLOADING #{state}..."
     SPECS.each do |spec|
-      spec[:years].each do |year|
+      if specific_year.nil?
+        year_collection = spec[:years]
+      else
+        year_collection = [specific_year]
+      end
+      year_collection.each do |year|
         File.write(
           get_filename(year, state.clone),
           Net::HTTP.get(URI.parse(get_url(year, state.clone)))
@@ -273,26 +302,39 @@ end
 # Processes the XLS files stored locally.
 # @return [Array] An array of arrays, each subarray containing information about
 #   about one value extracted from some XLS file.
-def process_xlss
+# Assumes you want to process all years unless a year is specified.
+def process_xlss(specific_year=nil)
   data = []
   STATES_WITH_DC.each do |state|
     puts "PROCESSING #{state}..."
     SPECS.each do |spec|
-      spec[:years].each do |year|
+      # Years to iterate over either determined by spec, or just a single year
+      if specific_year.nil?
+        year_collection = spec[:years]
+      else
+        year_collection = [specific_year]
+      end
+      year_collection.each do |year|
         if year >= 2014
           spreadsheet = RubyXL::Parser.parse get_filename(year, state)
         else
           spreadsheet = Spreadsheet.open get_filename(year, state)
         end
-        spec[:cells].each do |tab, column_rows|
-          column_rows.each do |column_row|
-            data << [
-              state,
-              year,
-              tab,
-              column_row,
-              get_value(spreadsheet, year, state, tab, column_row)
-            ]
+        spec[:years].each do |i|
+          next unless i == year
+          spec[:tests].each do |test_name, cells_of_interest|
+            cells_of_interest.each do |tab, column_rows|
+              column_rows.each do |column_row|
+                data << [
+                  state,
+                  year,
+                  test_name,
+                  tab,
+                  column_row,
+                  get_value(spreadsheet, year, state, tab, column_row)
+                ]
+              end
+            end
           end
         end
       end
@@ -312,22 +354,35 @@ def output_csv(data)
 end
 
 def main
-  print 'SHOULD I DOWNLOAD ALL FILES? (Y/N): '
+  print 'INTERESTED IN A YEAR OR ALL DATA (4 DIGIT NUMBER OR ALL): '
+  period = gets.chomp
+
+  print 'SHOULD I DOWNLOAD FILES? (Y/N): '
   download = gets.chomp
   if download == 'Y'
-    get_xlss
+    if (2007..2017).cover? period.to_i
+      get_xlss(period.to_i)
+    elsif download_year == 'ALL'
+      get_xlss
+    else
+      puts 'NOTHING DOWNLOADED'
+    end
   end
 
   print 'SHOULD I PROCESS ALL FILES? (Y/N): '
   process = gets.chomp
   if process == 'Y'
-    data = process_xlss
+    data = process_xlss(period.to_i)
+  else
+    puts 'NOTHING PROCESSED'
   end
 
   print 'SHOULD I OUTPUT ALL DATA? (Y/N): '
   output = gets.chomp
   if output == 'Y'
     output_csv(data)
+  else
+    puts 'NOTHING OUTPUTTED'
   end
 end
 
