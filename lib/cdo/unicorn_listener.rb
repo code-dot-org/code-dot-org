@@ -40,7 +40,7 @@ module Cdo
     # Periodically collect unicorn-listener metrics,
     # reporting every time `report_count` metrics have been collected.
     def collect_metrics
-      stat_values = collect_listener_stats + [@stats.max_calling.tap {@stats.reset_max}]
+      stat_values = collect_listener_stats + [@stats.max_calling.tap {@stats.max_calling = 0}]
       @metrics.zip(stat_values) {|stat, val| stat[1] << {timestamp: Time.now, value: val}}
       report!(@metrics) if @metrics.values.first.count >= @report_count
     end
@@ -78,27 +78,18 @@ module Cdo
     end
   end
 
-  # Adds an atomic `max_calling` counter to Raindrops::Middleware::Stats.
+  # Extends Raindrops::Middleware::Stats (which defines :calling and :writing)
+  # with an additional :max_calling atomic counter.
   # This allows us to record the peak number of currently-executing
   # worker-processes at any point, which a one-second sampling interval
   # might not otherwise capture.
-  class StatsWithMax < Raindrops::Middleware::Stats
-    def initialize
-      super
-      @raindrops.size = 3
-    end
-
+  #
+  # rubocop:disable Style/StructInheritance
+  class StatsWithMax < Raindrops::Struct.new(:calling, :writing, :max_calling)
+    # Override incr_calling to keep max_calling updated.
     def incr_calling
       calling = super
-      @raindrops[2] = calling if calling > @raindrops[2]
-    end
-
-    def max_calling
-      @raindrops[2]
-    end
-
-    def reset_max
-      @raindrops[2] = 0
+      self.max_calling = calling if calling > max_calling
     end
   end
 end
