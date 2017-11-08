@@ -1,15 +1,11 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promosikan Hour of Code
 
@@ -41,13 +37,13 @@ nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. Setiap mereferensikan "Hour of Code" harus tidak mengatakan bahwa nama merek tersebut adalah milik anda, tetapi referensikan Hour of Code sebagai akar/inti dari gerakan/kampanye ini. Contoh baik: "Berpartisipasilan dalam Hour of Code™ di ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. Sertakan bahasa pada halaman (atau pada footer), termasuk dalam alamat menuju CSEdWeek dan situs web Code.org, yang memilki tulisan:
+1. Setiap mereferensikan "Hour of Code" harus tidak mengatakan bahwa nama merek tersebut adalah milik anda, tetapi referensikan Hour of Code sebagai akar/inti dari gerakan/kampanye ini. Contoh baik: "Berpartisipasilan dalam Hour of Code™ di ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+3. Sertakan bahasa pada halaman (atau pada footer), termasuk dalam alamat menuju CSEdWeek dan situs web Code.org, yang memilki tulisan:
     
     *"'Hour of Code™' adalah gerakan global dari Pekan Edukasi Ilmu Komputer [csedweek.org] dan Code.org [code.org] untuk mengenalkan jutaan siswa dengan sesi satu jam dari ilmu komputer dan pemrograman komputer."*
 
-  4. No use of "Hour of Code" in app names.
+4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

@@ -1,30 +1,30 @@
 fa:
   site_name: 'ساعت كد نويسي'
-  hour_of_code: 'Hour of Code'
+  hour_of_code: 'ساعت کدنویسی'
   language: 'فارسی'
-  front_title: 'Join the largest learning event in history, %{campaign_date}'
+  front_title: 'به بزرگترین رویداد یادگیری در تاریخ بپیوندید، %{campaign_date}'
   coming_soon: 'به زودي'
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  campaign_date_start_short: "Dec. 5"
-  campaign_date_start_long: "December 5"
-  campaign_date_short: "Dec. 5-11"
-  campaign_date_full: "December 5-11"
+  compatibility_unsupported_browser: "مرورگر شما پشتیبانی نمیشود. لطفا مرورگر خود را به<a href='%{supported_browsers_url}', target='_blank'> یکی از مرورگرهای تحت پشتیبانی ما</a> بروزرسانی کنید. میتوانید محتویات صفحه را مشاهده کنید، اما عملکرد آن مطلوب نخواهد بود."
+  campaign_date_start_short: "5 دسامبر"
+  campaign_date_start_long: "۴ دسامبر"
+  campaign_date_short: "۴ تا ۱۰ دسامبر"
+  campaign_date_full: "۴ تا ۱۰ دسامبر"
   campaign_date_year: "2016"
-  campaign_date_full_year: "December 5-11, 2016"
-  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  campaign_date_full_year: "۴ تا دسامبر ۲۰۱۷"
+  front_header_banner: 'به بزرگترین رویداد یادگیری در تاریخ بپیوندید، %{campaign_date}'
+  front_intro_default: '"ساعت کد نويسی" يك حركت جهانی در راستای رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور است. هركس در هرجای دنيا می تواند يك رويداد "ساعت كدنويسی" را ترتيب دهد. برنامه های آموزشي يك ساعته در بيش از ٣٠ زبان قابل دسترسی می باشد. هیچ تجربه ای مورد نیاز نيست. <strong> برای سنین ٤ تا ١٠٤ سال.</strong>'
   front_watch_video: 'ويدئوي جديد را ببينيد'
-  front_watch_regular_video: 'Watch the video'
-  front_volunteers: 'Technical volunteers wanted'
-  front_start_learning: 'Start learning'
+  front_watch_regular_video: 'ویدیو را مشاهده کنید'
+  front_volunteers: 'نیازمندی به داوطلبان فنی'
+  front_start_learning: 'شروع یادگیری'
   header_menu_resources: 'منابع'
   header_menu_faq: 'پرسش و پاسخ'
-  header_menu_how_to: 'How-To'
-  header_menu_promote: 'Promote'
-  header_menu_activities: 'Activities'
-  not_found_title: 'Page Not Found'
-  not_found_desc: 'The requested page was not found'
-  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
+  header_menu_how_to: 'چگونه'
+  header_menu_promote: 'ترویج'
+  header_menu_activities: 'فعالیت ها'
+  not_found_title: 'صفحه پیدا نشد'
+  not_found_desc: 'صفحه مورد درخواست شما یافت نشد'
+  not_found_instructions: 'آدرس وب را چک کنید و مجددا ثبت کنید و یا لینکی را از لیست زیر انتخاب کنید.'
   company_4-H: توسعه جوانان 4-H
   company_asa: اتحاد پس از مدرسه‌ای
   company_asos: ASOS
@@ -142,6 +142,7 @@ fa:
   company_strongnet: Strongsville School District
   company_TukwilaSchoolDistrict: Tukwila School District
   company_vermilionschools: Vermilion Local School District
+  company_vista-equity-partners: "Vista Equity Partners"
   company_walthampublicschools: Waltham Public Schools
   company_warrencountyschools: Warren County Schools
   company_WaynesboroPublicSchools: Waynesboro Public Schools
@@ -150,25 +151,25 @@ fa:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: "Back to Resources"
-  how_to_nav_educators: "For educators"
-  how_to_nav_after_school: "For after school"
-  how_to_nav_parents: "For parents"
-  how_to_nav_public_officials: "For public officials"
-  how_to_nav_districts: "For districts"
-  how_to_nav_assemblies: "For school assemblies"
-  how_to_nav_organizations: "For organizations"
-  how_to_nav_companies: "For companies"
-  how_to_nav_afterschool_educators: "For after-school educators"
-  how_to_nav_volunteers: "For volunteers"
-  whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
-  whats_next_try_button: 'Try tutorials'
+  nav_back_to_resources: "بازگشت به منابع"
+  how_to_nav_educators: "برای آموزگاران"
+  how_to_nav_after_school: "برای بعد از مدرسه"
+  how_to_nav_parents: "برای اولیا"
+  how_to_nav_public_officials: "برای مقامات رسمی"
+  how_to_nav_districts: "برای مناطق"
+  how_to_nav_assemblies: "برای مجموعه مدرسه ها"
+  how_to_nav_organizations: "برای سازمان ها"
+  how_to_nav_companies: "برای شرکت ها"
+  how_to_nav_afterschool_educators: "بعد از مدرسه برای آموزگاران"
+  how_to_nav_volunteers: "برای داوطلبان"
+  whats_next_header: "گام بعدی چیست؟"
+  whats_next_description: "ما به شما موارد و راهنمایی های مفید برای رویدادتان را ارسال میکنیم. <a href='http://code.org/learn'> آموزش های موجود را امتحان کنید</a> که برای هر مرورگر، گوشی های هوشمند – و یا بدون نیاز به کامپیوتر در نظر گرفته شده اند!"
+  whats_next_how_to: "<a href='/how-to'> نحوه برگزاری ساعت کدنویسی</a>"
+  whats_next_promote: "<a href='/promote'> ترویج ساعت کدنویسی</a>"
+  whats_next_how_to_promote: "<a href='/promote'> چگونگی ترویج ساعت کدنویسی</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'> چگونگی ترویج ساعت کدنویسی</a>"
+  whats_next_try: "<a href='%{learn_url}'> آموزش ها را امتحان کنید</a>"
+  whats_next_try_button: 'آموزش ها را امتحان کنید'
   n_have_learned_an_hoc: "<h1>یک</h1><h2> ساعت کدنویسی را امتحان کنید</h2><h3># قابل استفاده</h3>"
   anybody_can_learn: 'هر کس می تواند یاد بگیرد.'
   get_started: 'شروع کنید'
@@ -177,17 +178,17 @@ fa:
   share_on_facebook: 'در فیسبوک به اشتراک بگذارید'
   share_on_twitter: 'در توییتر به اشتراک بگذارید'
   front_join_us_heading: 'يك "ساعت كدنويسي" براي هر دانش آموز.'
-  front_join_us_announcements: 'Announcements'
-  front_join_us_anybody_can_learn: 'Anybody can learn'
-  front_join_us_description: 'علوم كامپيوتر، مورد نیاز هر دانش آموزی است. به ما كمك كنيد آن را به ١٠٠ميليون نفر معرفی كنيم.'
-  front_join_us_description_short: 'Computer science is a foundation for every student.'
+  front_join_us_announcements: 'اطلاعیه ها'
+  front_join_us_anybody_can_learn: 'هر کس می تواند یاد بگیرد'
+  front_join_us_description: 'علوم كامپيوتر، مورد نیاز هر دانش آموزی است. به ما كمك كنيد آن را به ١٠٠ ميليون نفر معرفی كنيم.'
+  front_join_us_description_short: 'علوم كامپيوتر، مورد نیاز هر دانش آموزی است.'
   front_join_us_button: 'به ما بپیوندید'
   front_what_is_hoc: 'ساعت برنامه نویسی چیست؟ '
   front_join_us_header: 'هر کسی می تواند موارد اساسی را بیاموزد، و از آموختنش لذت ببرد!'
-  front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
-  front_join_us_tutorials: "Try this year's new tutorials!"
-  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
-  front_join_us_robotics: 'Got robots?'
+  front_join_us_volunteer_header: 'داوطلبان ساعت کدنویسی'
+  front_join_us_tutorials: "آموزش های جدید امسال را امتحان کنید!"
+  front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
+  front_join_us_robotics: 'ربات دارید؟'
   front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
   front_join_us_teacher: 'آيا معلم هستيد؟'
   front_join_us_inspire: 'به دانش آموزان با'
@@ -197,13 +198,13 @@ fa:
   front_join_us_parent: 'آيا شما مادر يا پدر هستيد؟'
   front_join_us_ask_link: 'از مدرسه فرزندتان درخواست كنيد'
   front_join_us_ask: 'تا برگزار كننده يك "ساعت كدنويسي" باشد.'
-  front_join_us_parent_link: "Ask your local school to host an Hour of Code"
+  front_join_us_parent_link: "2. از مدرسه محل خود بخواهید که ساعت کدنویسی را میزبانی کند"
   front_join_us_computer_science: 'فقط عاشق علوم كامپيوتر هستيد؟'
-  front_join_us_cs_volunteer: 'Passionate about computer science education?'
+  front_join_us_cs_volunteer: 'مشتاق به تحصیل در حوزه علوم کامپیوتر هستید؟'
   front_join_us_spread: 'این صحبت ها را نشر دهید.'
-  front_join_us_spread_word: "Spread the word in your community"
-  front_join_us_spread_word_work: "Spread the word in your community or workplace"
-  front_join_us_sign_up_volunteer: 'Sign up to volunteer at a local classroom or through a video chat.'
+  front_join_us_spread_word: "اين موضوع را در جوامع خود اطلاع رسانی كنيد"
+  front_join_us_spread_word_work: "اين موضوع را در جوامع یا محل کار خود اطلاع رسانی كنيد"
+  front_join_us_sign_up_volunteer: 'برای شرکت داوطلبانه در یک کلاس درس یا شرکت با ویدیو چت ثبت نام کنید.'
   front_join_us_organize: 'يا خودتان يك "ساعت كدنويسي" را ترتيب دهيد.'
   front_join_us_how_to_run: "چگونگي اجراي يك \"ساعت كد نويسي\""
   front_join_us_help_promote: "كمك به ترويج \"ساعت كدنويسي\""
@@ -214,52 +215,64 @@ fa:
   front_join_us_sign_up: "ثبت نام"
   front_join_us_host: "برگزاري"
   front_join_us_support: "حمايت"
-  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: "For more information, please visit code.org"
+  front_join_us_more_info: "برای کسب اطلاعات بیشتر، لطفا <a href='https://code.org'> این صفحه</a> را مشاهده کنید."
+  front_join_us_code_info: "برای کسب اطلاعات بیشتر، لطفا code.org را مشاهده فرمایید"
   front_join_us_n_students_served: "# served"
-  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
+  signup_header: 'یک رویداد ساعت کدنویسی را در %{campaign_date} سازمان دهی کنید و آن را در اینجا ثبت کنید.'
   signup_name_label: 'نام شما'
+  signup_name_error: 'وارد کردن نام الزامی است.'
   signup_email_label: 'ايميل شما'
+  signup_email_error: 'وارد کردن ایمیل الزامی است.'
   signup_organization_name_label: 'نام مدرسه یا مركز'
+  signup_organization_name_error: 'وارد کردن نام سازمان الزامی است.'
   signup_event_type_label: 'نوع رویداد'
+  signup_event_type_error: 'وارد کردن نوع رویداد الزامی است.'
   signup_event_entire_school_label: 'كل مدرسه من شركت مي كند'
   signup_event_location_label: 'محل رویداد (اختیاری)'
+  signup_event_location_error: 'وارد کردن مکان رویداد الزامی است.'
   signup_special_event_flag_label: 'متمايز سازي رويداد خاص من'
   signup_special_event_details_label: 'جزئیات رویداد خاص'
   signup_send_posters_flag_label: 'ارسال <a href= "/resources#posters"> پوستر</a> به مدرسه يا مركز من'
   signup_send_posters_address_label: 'نشانی مدرسه یا مركز'
   signup_whole_school_flag_label: 'این رویداد برای کل مدرسه است'
   signup_your_event: 'رویدادتان را ثبت کنید'
-  signup_host_an_hour: 'Host an hour'
+  signup_host_an_hour: 'میزبان ساعت کدنویسی شوید'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_registration_deadline: "Registration for the Hour of Code closes December 11."
   signup_name_placeholder: 'نام شما'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "به عنوان مثال، دبیرستان لينكلن"
+  signup_event_country_label: "Event country"
+  signup_event_country_error: "وارد کردن کشور الزامی است."
   signup_event_location_placeholder: "کد پستی و کشور یا  آدرس كامل. \\r (براي قراردادن پين در نقشه مان استفاده خواهد شد)"
   signup_special_event_details_placeholder: 'چيزي كه باعث خاص شدن اين رويداد مي شود را توصيف كنيد'
   signup_send_posters_address_placeholder: 'این آدرس بر نقشه ما نمايش داده نخواهد شد'
   signup_event_type_in_school: 'در مدرسه'
   signup_event_type_out_of_school: 'خارج از مدرسه'
+  signup_submit_census_label: 'ارسال'
+  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: 'ثبت نام'
   signup_submit_error_message: "خطایی رخ داد. لطفا مطمئن شويد كه تمامي فيلدهاي مورد نياز به درستي پر شده اند."
+  signup_submit_and_continue_label: 'ارسال و ادامه'
+  signup_continue_label: 'ادامه'
   signup_thank_you_header: "با تشکر از شما برای ثبت نام براي برگزاري رويداد يك \"ساعت كد نويسي\"."
   signup_thank_you_message: 'ما يك ايميل تاييد بهمراه اطلاعاتي براي كمك به شروع فعاليت برايتان ارسال كرديم.'
-  map_title: "Hour of Code map"
+  map_title: "نقشه ساعت کدنویسی"
   map_header: 'رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
-  see_all_events: 'See all events'
+  see_all_events: 'مشاهده تمام رویدادها'
   map_header_company: '# بوسیله ی سازماندهان شرکتی'
-  map_header_country: '# in %{country}'
+  map_header_country: '# در %{country}'
   map_search_placeholder: 'برای رویدادهای ساعت کدنویسی جستجو کن'
   map_search_search: 'جستجو کن'
   map_search_reset: 'راه اندازی مجدد'
   map_legend_title: 'Legend'
-  map_legend_hoc_events: 'Hour of Code Event'
-  map_legend_cs_tech_jam: 'Special Event'
-  meta_tag_og_title: 'ساعت كد نويسي مي آيد'
+  map_legend_hoc_events: 'رویداد ساعت کدنویسی'
+  map_legend_cs_tech_jam: 'رویداد ویژه'
+  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
+  meta_tag_og_title: ساعت كد نويسي مي آيد
   meta_tag_og_description: 'ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
-  meta_tag_twitter_title: 'ساعت كد نويسي مي آيد'
+  meta_tag_twitter_title: ساعت كد نويسي مي آيد
   meta_tag_twitter_description: 'ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
   twitter_default_text: "من در\"ساعت كد نويسي\" #HourOfCode امسال شركت مي كنم، شما چطور؟ @codeorg"
   hoc_faq_title: 'سوالات متداول'
@@ -276,12 +289,12 @@ fa:
   hoc_faq_behind_hoc_a: "ساعت کدنويسي را <a href='http://code.org'> Code.org</a> سازماندهي كرده است، كد يك سازمان غيرانتفاعي از نوع c3 501 با هدف گسترش مشارکت در علوم کامپیوتر و در دسترس قرار دادن آم در مدرسه‌هاي بيش‌تري و نيز افزایش مشارکت زنان و حذف تبعيض‌هاي نژادي در اين زمينه است. <a href='http://code.org/about/partners'> ائتلافي بی سابقه </a> از همكاران گرد آمده اند و ساعت کدنويسي را حمايت مي‌كنند &mdash; از جمله مایکروسافت، اپل، آمازون، باشگاه‌هاي پسران و دختران امریکا و هیئت مدیره کالج‌ها."
   hoc_faq_host_q: "من چيزي درباره كد نويسي نمي دانم. آيا همچنان مي توانم ميزبان چنين رويدادي باشم؟"
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
-  hoc_faq_devices_q: "What devices should I use for my students?"
+  hoc_faq_devices_q: "چه دستگاه هایی برای دانش آموزانم باید استفاده کنم؟"
   hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: 'آيا هر شركت‌كننده يك رايانه نياز دارد؟'
   hoc_faq_need_computers_a: "خير. آموزش‌هاي ساعت کدنويسي روی رایانه های شخصی، تلفن‌هاي هوشمند، تبلت‌ها قابل استفاده‌اند و بعضي از آن‌ها به هيچ رايانه‌اي نیاز ندارند! <p><i>چند گزینه:</i> <br><ul><li><b>كار گروهي </b> تحقیقات نشان می‌دهد كه كه بهترين يادگيري دانش‌آموزان در <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> گروه‌هاي برنامه‌نويسي اتفاق مي‌افتد</a> با به اشتراک‌گذاری رايانه و کار گروهي. دانش‌آموزان خود را به تشكيل گروه‌هاي دو نفره تشويق كنيد. <li><b>از پروژكتور استفاده كنيد</b> اگر شما یک پروژکتور و کامپیوتر متصل به وب داريد، كل گروه مي‌توانند ساعت كدنويسي را با هم انجام دهند. بخش‌هاي ويديويي را با هم ببينيد و به نوبت معماها را حل كنيد و به سوالات پاسخ دهيد.<li><b>بدون رايانه.</b> ما آموزش‌هايي را ارائه مي‌دهيم كه هيچ نيازي به رايانه ندارند. </ul>"
   hoc_faq_international_q: "که من در آن هستم <country>. چگونه بین المللی شرکت کنم?"
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
+  hoc_faq_international_a: "هرکسی، در هرجای دنیا می تواند رویداد ساعت کدنویسی را سازماندهی کند. سال گذشته، دانش آموزان در سراسر دنیا برای ساعت کدنویسی به هم پیوستند. برای اطلاعات بیشتر <a href='target-resources'> اینجا را بخوانید </a>."
   hoc_faq_tutorial_q: 'چگونه مي‌توان يك آموزش ساعت كدنويسي را ايجاد كنم؟'
   hoc_faq_tutorial_a: "اگر مشتاق به همكاري در آموزش‌ها هستيد <a href='target-tutorial-guidelines'> راهنماها و دستورالعمل‌های ما را ببينيد</a>. ما از ميزباني هر گزينه‌اي براي همكاري استقبال مي‌كنيم، ولي هدف اصلي ما بهبود تجربه براي دانش‌آموزان و معلماني است كه با علوم كامپيوتر تازه آشنا مي‌شوند."
   hoc_faq_account_q: "آیا دانش آموزان نیاز دارند با استفاده از یک حساب کاربری وارد سیستم شوند?"
@@ -291,8 +304,8 @@ fa:
   hoc_faq_scratch_q: "من برای ساعت کدنویسی از Scratch استفاده میکنم، اما اگر دانش آموزانم به جای لپ تاپ از آی پد استفاده کنند چه می شود?"
   hoc_faq_scratch_a: "Scratch روی تبلت اجرا نمی شود. اگر دانش آموزانتان کم سن هستند، می توانند از برنامه ی ScratchJR برای آی پد استفاده کنند (برای خوانندگان جدید). اگر شما به آموزش ها در <a href='http://code.org/learn'> Code.org/learn</a>، نگاه کنید می توانید آموزش های دیگری که روی آی پد اجرا می شود پیدا کنید - از Code.org، Tynker، Lightbot، یا CodeSpark."
   hoc_faq_count_hoc_q: "How do you count Hours of Code?"
-  hoc_faq_map_q: "Why don't I see my dot on the map?"
-  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
+  hoc_faq_map_q: "چرا من من نقطه خود را بر روی نقشه نمیبینم؟"
+  hoc_faq_map_a: "We're so sorry you aren't seeing your event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   hoc_faq_one_hour_q: "How much can one learn in an hour?"
   hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
@@ -306,15 +319,15 @@ fa:
   hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: 'آماري از ساعت كدنويسي در سال 2013'
   stats_growth: "سريع‌ترين در رسيدن به 15 ميليون كاربر."
-  stats_i18n: "Students are learning in over 45 languages"
+  stats_i18n: "دانش آموزان در حال یادگیری در بیش از 45 زبان مختلف هستند"
   stats_tumblr: 'تامبلر: سه سال و نيم'
   stats_facebook: 'فیسبوک: سه سال'
   stats_twitter: 'توییتر: دو سال و نيم'
   stats_pinterest: 'Pinterest: دو سال'
   stats_instagram: 'Instagram: چهارده ماه'
   stats_hoc: 'ساعت كدنويسي: 5 روز'
-  stats_global: "Over 100M students have tried an Hour of Code"
-  stats_girls_more: "More girls tried computer science than in the last 70 years"
+  stats_global: "بیش از 100 میلیون دانش آموز ساعت کدنویسی را امتحان کرده اند"
+  stats_girls_more: "تعداد دختراني كه علوم كامپيوتر را تجربه كردند بيش از تعداد آن‌ها در 70 سال گذشته است"
   stats_nina: '"هر روز همان نتایج به دست آمد &mdash; 100% مشارکت."-نینا نیکولز پيري، معلم'
   stats_student: '"من می دانستم که این يك <b> فرصت تكرار نشدني</b> است."-ماریانا الزيت، كلاس پنجمي'
   stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد هیجان زده ندیده ام." از میشل کلارک، معلم'
@@ -324,25 +337,25 @@ fa:
   resources_how_to_officials: نحوه‌ی راهنمایی برای راهنمایی مقامات دولتی
   resources_handouts: جزوه‌هايي براي گسترش موضوع
   resources_one_pager: One-page handout
-  resources_brochure: Brochure
+  resources_brochure: بروشور
   resources_posters: پوسترها
   resources_videos: ویدیوها
   resources_banners: بَنرها
   resources_emails: نمونه ایمیل
-  resources_logo: Hour of Code logo
+  resources_logo: لوگو ساعت کدنویسی
   resources_stats: آمارها و گزارش‌های مفید
   resources_press_kit: بسته مطبوعات
   resources_social: ' اجتماعی'
-  resources_country_resources: Country Specific Resources
-  resources_stickers: Stickers
-  resources_how_to_guides: 'How-to guides'
-  resources_promote: 'Promote'
+  resources_country_resources: منابع خاص کشور
+  resources_stickers: برچسب ها
+  resources_how_to_guides: 'راهنماها'
+  resources_promote: 'ترویج'
   resources_nav_tutorials: 'آموزشات را امتحان کنید.'
-  resources_nav_promote: 'Spread the word'
+  resources_nav_promote: 'این مفهوم را گسترش دهید'
   resources_nav_spread_word: 'How to get involved'
-  resources_banner_promote_text: "Promote"
+  resources_banner_promote_text: "ترویج"
   resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
-  resources_banner_howto_text: "How-to"
+  resources_banner_howto_text: "راهنما"
   resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
   handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
@@ -353,15 +366,15 @@ fa:
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
   videos_obama_cs: President Obama on computer science
   videos_anybody_can_learn: Anybody Can Learn (1 min)
-  title_country_resources: Country Specific Resources
+  title_country_resources: منابع خاص کشور
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
   title_how_to_companies: How to host an Hour of Code - Companies
   title_how_to_officials: نحوه‌ی راهنمایی برای راهنمایی مقامات دولتی
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
-  title_how_to_parents: How-to guide for parents
-  title_how_to: How-to Guide
+  title_how_to_parents: راهنما برای والدین
+  title_how_to: راهنما
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: بسته مطبوعات
@@ -369,10 +382,10 @@ fa:
   title_stats: Blurbs and Stats
   title_partners: شرکا
   title_resources: منابع
-  title_signup_thanks: با تشکر برای ورود به میزباني ساعت کدنويسي!
+  title_signup_thanks: تشکر برای ورود به میزبانی ساعت کدنويسی!
   title_tutorial_guidelines: Activity Guidelines
-  title_whole_school: Whole School Participation
-  events_nav_title: Hour of Code Events
+  title_whole_school: مشارکت کل مدرسه
+  events_nav_title: رویدادهای ساعت کدنویسی
   events_nav_all: همه رویدادها
   events_nav_whole_schools: تمام مدارس
   events_nav_special: برنامه های ویژه
@@ -387,6 +400,22 @@ fa:
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  higlights_see_more: See more highlights
+  highlights_readmore: بیشتر
+  highlights_watchvideo: ویدیو را مشاهده کنید
+  highlights_facebook: در فیسبوک به اشتراک بگذارید
+  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
+  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
+  highlights_constant_obama_short_heading: Coder in Chief
+  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
+  highlights_constant_malala_short_heading: برنده‌ی جایزه‌ی نوبل صلح ملاله
+  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
+  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
+  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_ny_short_heading: بروکلین شیکاگو را شکست می‌دهد
+  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
+  highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: 'حق طبع و نشر Code.org  2015. کلیه حقوق محفوظ می‌باشد.'
   footer_trademark_message: '™Hour of Code علامت تجاري Code.org است.'
   footer_menu_partners: 'شرکا'
@@ -398,22 +427,23 @@ fa:
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
   learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_robotics_banner_heading: 'ROBOTICS'
+  learn_robotics_banner_heading: 'رباتیک'
   learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
+  tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: 'Moana: Wayfinding with Code'
-  tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_star-wars_name: 'جنگ ستارگان: ساخت یک کهکشان با کد'
   tutorial_gumadventure_name: "Gumball's Coding Adventure"
-  tutorial_mchoc_name: "Minecraft Hour of Code"
+  tutorial_mchoc_name: "ساعت برنامه‌نویسی Minecraft"
   tutorial_vidnews_name: 'Vidcode: Code the News'
   tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
   tutorial_highseas_name: "Adventure on the High Seas"
   tutorial_capython_name: "Python Turtle Graphics"
-  tutorial_frzn_name: "Code with Anna and Elsa"
+  tutorial_frzn_name: "برنامه‌نویسی با آنا و السا"
   tutorial_cocom_name: "CodeCombat"
-  tutorial_play-lab_name: "Play Lab"
-  tutorial_boxisland2016_name: "Box Island"
-  tutorial_textcomp_name: "Text Compression"
-  tutorial_encryption_name: "Simple Encryption"
+  tutorial_play-lab_name: "آزمایشگاه بازی"
+  tutorial_boxisland2016_name: "جزیره‌ی جعبه"
+  tutorial_textcomp_name: "فشرده‌سازی متن"
+  tutorial_encryption_name: "رمزنگاری ساده"
   tutorial_kanopixel_name: "Kano Pixel Hack"
   tutorial_foos_name: "codeSpark Academy with The Foos"
   tutorial_tynkerdd_name: "Dragon Dash"
@@ -436,7 +466,7 @@ fa:
   tutorial_como_name: "CodeMonkey"
   tutorial_processfound_name: "The Processing Foundation - Hello Processing"
   tutorial_tynkerhomo_name: "Homophones STEM Kit"
-  tutorial_art_name: "Artist"
+  tutorial_art_name: "هنرمند"
   tutorial_tynkerbrick_name: "Brick Breaker Game Kit"
   tutorial_itchbio_name: "ITCH Name IT - Parts of the Biological Cell"
   tutorial_itchj_name: "ITCH Jumping (in Scratch)"
@@ -444,7 +474,7 @@ fa:
   tutorial_hopgeo_name: "Geometry Jumper"
   tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
   tutorial_monster_name: "Mystery Island Coding Quest"
-  tutorial_tynkerapp_name: "Build an App"
+  tutorial_tynkerapp_name: "یک برنامه بسازید"
   tutorial_tynkerpup_name: "Puppy Adventure"
   tutorial_livecode_name: "LiveCode Sound Boards"
   tutorial_cocomgame_name: 'CodeCombat: Game Development'
@@ -468,11 +498,11 @@ fa:
   tutorial_frogger_name: "Make your own 3D Frogger game"
   tutorial_tynkereco_name: "Ecological Pyramid STEM Kit"
   tutorial_mitedarc_name: "MIT Education Arcade"
-  tutorial_khan_name: 'Khan Academy: Drawing with Code'
-  tutorial_tynkerd_name: "Debugger"
+  tutorial_khan_name: 'آکادمی خان: نقاشی با کد'
+  tutorial_tynkerd_name: "اشکال زدا"
   tutorial_cdmy_name: "Codecademy"
-  tutorial_codestersdance_name: "Dance Moves"
-  tutorial_codestersbasketball_name: "Basketball"
+  tutorial_codestersdance_name: "حرکات رقص"
+  tutorial_codestersbasketball_name: "بسکتبال"
   tutorial_nclkarel_name: "Learn How to Code with Karel the Robot"
   tutorial_buildpong_name: "Build Pong with AI"
   tutorial_tynkerdrones_name: "Program Drones and Robots"
@@ -538,7 +568,7 @@ fa:
   tutorial_fufafit_name: "fuzzFamily Fitness"
   tutorial_ozodance_name: "Ozobot Dance-Off"
   tutorial_codingrobotics_name: "Intro to Coding through Robotics (ft. Wonder Workshop)"
-  tutorial_box_name: "Box Island"
+  tutorial_box_name: "جزیره‌ی جعبه"
   tutorial_hopgame_name: "Hopscotch Game Design Workshop"
   tutorial_icontrol_name: "iControl"
   tutorial_cocomteach_name: 'CodeCombat: Teacher-Led'
@@ -629,18 +659,18 @@ fa:
   tutorial_ice-age_name: "Ice Age Play Lab"
   tutorial_koapp_name: "Kodable (pre-readers welcome)"
   tutorial_lightbot-intl_name: "Lightbot"
-  tutorial_rmc_name: "Minecraft Hour of Code"
-  tutorial_smc_name: "Minecraft Hour of Code"
-  tutorial_minecraft-2016_name: "Minecraft Hour of Code"
+  tutorial_rmc_name: "ساعت برنامه‌نویسی Minecraft"
+  tutorial_smc_name: "ساعت برنامه‌نویسی Minecraft"
+  tutorial_minecraft-2016_name: "ساعت برنامه‌نویسی Minecraft"
   tutorial_thinkersmith-es_name: "Mis Amigos Roboticos"
   tutorial_pixie_name: "PIXIE Challenges"
-  tutorial_play_name: "Play Lab"
+  tutorial_play_name: "آزمایشگاه بازی"
   tutorial_robomind-nl_name: "Program a virtual robot"
   tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 2: Lights'
+  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Lights'
   tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
-  tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_swb_name: 'جنگ ستارگان: ساخت یک کهکشان با کد'
+  tutorial_build-a-galaxy_name: 'جنگ ستارگان: ساخت یک کهکشان با کد'
   tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
   tutorial_tchr_name: "Teacher Led Lesson Plans"
   tutorial_robogame_name: "The Robot Games"
@@ -672,6 +702,7 @@ fa:
   tutorial_khanweb_name: 'Khan Academy: Webpages'
   tutorial_khandata_name: 'Khan Academy: Databases'
   tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
+  tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
@@ -944,6 +975,7 @@ fa:
   tutorial_khanweb_shortdescription: "Learn how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
   tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
+  tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
@@ -1014,7 +1046,7 @@ fa:
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
   tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
-  tutorial_cdmy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
   tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
@@ -1216,6 +1248,7 @@ fa:
   tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
   tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
+  tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_gumadventure_language: "English only"
@@ -1223,7 +1256,7 @@ fa:
   tutorial_vidnews_language: "English only"
   tutorial_kodable-pre_language: "English, Arabic, Azerbaijani, German, Greek, Spanish, Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese"
   tutorial_highseas_language: "English only"
-  tutorial_capython_language: "English only"
+  tutorial_capython_language: "English, Dutch, Spanish"
   tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
   tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1265,14 +1298,14 @@ fa:
   tutorial_livecode_language: "English only"
   tutorial_cocomgame_language: "English, Arabic, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 8 more"
   tutorial_tynkerspin_language: "English only"
-  tutorial_code-avengers_language: "English, Spanish, Bulgarian, Danish, Greek, Finnish, Japanese and more"
+  tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
   tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
   tutorial_texas-instruments_language: "English only"
-  tutorial_cajava_language: "English only"
+  tutorial_cajava_language: "English, Dutch, Spanish"
   tutorial_codehs_language: "English only"
   tutorial_hopemo_language: "English only"
   tutorial_tynkercm_language: "English only"
@@ -1286,7 +1319,7 @@ fa:
   tutorial_mitedarc_language: "English only"
   tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
-  tutorial_cdmy_language: "Spanish"
+  tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
   tutorial_codestersbasketball_language: "English, Spanish"
   tutorial_nclkarel_language: "Multiple"
@@ -1294,7 +1327,7 @@ fa:
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
   tutorial_globaloria_language: "English, Spanish"
-  tutorial_capost_language: "English only"
+  tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
   tutorial_kanopong_language: "English only"
@@ -1323,7 +1356,7 @@ fa:
   tutorial_coders_language: "English, French"
   tutorial_tynkerhw_language: "English only"
   tutorial_tynkermh_language: "English only"
-  tutorial_caphoto_language: "English only"
+  tutorial_caphoto_language: "English, Dutch, Spanish"
   tutorial_mozillahw_language: "English only"
   tutorial_ticklep_language: "Chinese (Traditional), Danish, English, French, Japanese"
   tutorial_bbot_language: "Dutch, Suomi, English"
@@ -1488,6 +1521,7 @@ fa:
   tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
   tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
+  tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
@@ -1760,6 +1794,7 @@ fa:
   tutorial_khanweb_string_detail_grades: "Grades 2+"
   tutorial_khandata_string_detail_grades: "Grades 6+"
   tutorial_robomeshiq_string_detail_grades: "Grades 2+"
+  tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
@@ -1779,7 +1814,7 @@ fa:
   tutorial_tynkerdd_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkerana_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_vidcard_string_platforms: "Chrome"
-  tutorial_spritebox_string_platforms: "All modern browsers"
+  tutorial_spritebox_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkerch_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_lightbot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_hoc_string_platforms: "do-not-show"
@@ -1793,7 +1828,7 @@ fa:
   tutorial_inf_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_tynkersol_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_itchg_string_platforms: "Chrome, Firefox, Android Tablet"
-  tutorial_como_string_platforms: "All modern browsers"
+  tutorial_como_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_processfound_string_platforms: "Chrome, Firefox, Safari"
   tutorial_tynkerhomo_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_art_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -2032,6 +2067,7 @@ fa:
   tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
+  tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
@@ -2304,6 +2340,7 @@ fa:
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
+  tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
@@ -2576,3 +2613,45 @@ fa:
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
+  school_not_found_heading: "We couldn't find your school. Please enter more information."
+  school_name: "School name"
+  school_name_error: "School name is required."
+  school_city: "School city"
+  school_state: "School state"
+  school_zip: "Postal code"
+  school_zip_error: "School postal code is required."
+  census_thanks: 'Thanks for signing up!'
+  census_header: 'Please take a few minutes to tell us about your school (Optional).'
+  census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
+  census_how_many_hoc: "How many students will do an Hour of Code?"
+  census_how_many_after_school: "How many students do computer programming in an after-school program?"
+  census_how_many_ten_hours: "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?"
+  census_how_many_twenty_hours: "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?"
+  census_other_cs: "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)"
+  census_connection: "What is your connection to this school?"
+  census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
+  census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
+  census_followup_frequency: "How often per week does this class meet?"
+  less_than_one: "< 1 hour per week"
+  one_to_three: "1-3 hours per week"
+  three_plus: "3+ hours per week"
+  census_followup_more: "Please tell us more about this course."
+  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
+  census_topics_blocks: "Block-based programming"
+  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
+  census_topics_robots: "Robotics / Physical Computing"
+  census_topics_internet: "Internet and networking"
+  census_topics_security: "Cybersecurity"
+  census_topics_data: "Data analysis"
+  census_topics_web_design: "Web design using HTML and CSS"
+  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
+  teacher: "Teacher"
+  administrator: "Administrator"
+  parent: "Parent"
+  volunteer_or_advocate: "Volunteer/Community Advocate"
+  other: "Other"
+  other_describe: "Other (please describe below)"
+  none: "None"
+  some: "Some"
+  all: "All"
+  dont_know: "I don't know"

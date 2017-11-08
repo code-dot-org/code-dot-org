@@ -1,15 +1,11 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Προωθήστε την Ώρα του Κώδικα
 
@@ -41,13 +37,13 @@ nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. Οποιαδήποτε αναφορά στην "Ώρα του Κώδικα" θα δεν πρέπει να χρησιμοποιείται έτσι ώστε να φαίνεται ότι πρόκειται για δικό σας λογότυπο αλλά ότι αφορά στην "Ώρα του Κώδικα" ως ένα λαϊκό κίνημα. Ένα καλό παράδειγμα: "Λάβε μέρος στην Ώρα του Κώδικα στο ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. Συμπεριλάβετε γλώσσα στην σελίδα (ή στο υποσέλιδο), συμπεριλαμβάνοντας συνδέσμους προς τις ιστοσελίδες CSEdWeek και Code.org, οι οποίοι θα λένε τα ακόλουθα:
+1. Οποιαδήποτε αναφορά στην "Ώρα του Κώδικα" θα δεν πρέπει να χρησιμοποιείται έτσι ώστε να φαίνεται ότι πρόκειται για δικό σας λογότυπο αλλά ότι αφορά στην "Ώρα του Κώδικα" ως ένα λαϊκό κίνημα. Ένα καλό παράδειγμα: "Λάβε μέρος στην Ώρα του Κώδικα στο ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+3. Συμπεριλάβετε γλώσσα στην σελίδα (ή στο υποσέλιδο), συμπεριλαμβάνοντας συνδέσμους προς τις ιστοσελίδες CSEdWeek και Code.org, οι οποίοι θα λένε τα ακόλουθα:
     
     *“Η 'Ώρα του Κώδικα' είναι μια διεθνής πρωτοβουλία από την Εκπαιδευτική Εβδομάδα Πληροφορικής [csedweek.org] και την Code.org [code.org] για να εισαγάγει εκατομμύρια μαθητές σε μια ώρα της επιστήμης της πληροφορικής και του προγραμματισμού υπολογιστών.”*
 
-  4. No use of "Hour of Code" in app names.
+4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

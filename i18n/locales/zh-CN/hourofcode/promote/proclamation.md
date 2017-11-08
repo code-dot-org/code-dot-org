@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_proclamation) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### 以下是关于支持计算机科学教育周的示例分析，其目的是让其可用于州和地方立法。
@@ -43,14 +42,14 @@ Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper
 
 Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) 支持指定的计算机科学教育周 (< %= campaign_date('full') %>);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) 鼓励学校，教育工作者，家长和决策者参加计算机科学教育周，让他们的学生参与编程一小时；
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) 鼓励学校，教师，科研人员，高校，企业领导者和决策者制定教师机制，接受最先进的专业发展，让他们可为各级教育提供计算机科学的可持续学习经验，并鼓励学生接触计算机科学概念；
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) 鼓励政策制定者消除障碍，让计算机科学课程被视为同数学或科学一样计入到毕业所需的学分；
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) 鼓励通过现有方案，为女性和少数族裔在学习计算机科学方面创造机会。
 
 <%= view :signup_button %>
