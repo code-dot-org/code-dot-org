@@ -14,7 +14,7 @@ It's easy to get involved and win a classroom video chat with a special guest!
 
 **Step one**: do an Hour of Code with one of the Code.org activities below! 
 
-**Step two**: snap a few pictures of you or your class during the Hour of Code.
+**Step two**: snap a picture of you or your class during the Hour of Code.
 
 **Step three**: Tweet or publicly post your picture on Twitter, Facebook, or Instagram and include:
 
@@ -22,13 +22,13 @@ It's easy to get involved and win a classroom video chat with a special guest!
 - the hashtag #HourOfCode;
 - and the @profile of the special guest you want to contact.
 
-This challenge is open to classrooms and individual students. Check out this sample tweet for inspiration.
+This challenge is open to classrooms, after-school clubs, and individual students. Check out this sample tweet for inspiration.
 
-<img src="/images/infographics/fit-800/hoc-challenge-tweet2.png" class ="col-95">
+<img src="/images/fit-800/hoc-challenge-tweet.png" class ="col-95">
 
 
 ## How do you get the project link to share? 
-When you finish one of our Hour of Code activities, when you click "finish" on the last level you'll receive a share link. Use that link when you're communicating with one of our special guests.
+When you finish one of our Hour of Code activities, on the last level you'll receive a share link. Use that link when you're communicating with one of our special guests.
 
 <a name="contestrules"></a>
 ## What are the contest rules?
