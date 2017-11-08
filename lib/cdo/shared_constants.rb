@@ -48,6 +48,15 @@ module SharedConstants
     }
   )
 
+  # Valid milestone post modes
+  POST_MILESTONE_MODE = OpenStruct.new(
+    {
+      all: 'all',
+      successful_runs_and_final_level_only: 'successful_runs_and_final_level_only',
+      final_level_only: 'final_level_only',
+    }
+  )
+
   PUBLISHABLE_PROJECT_TYPES_UNDER_13 = %w(
     artist
     frozen
