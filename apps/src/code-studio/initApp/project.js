@@ -551,6 +551,8 @@ var projects = module.exports = {
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
+        } else if (appOptions.level.isK1) {
+          return 'artist_k1';
         }
         return 'artist';
       case 'calc':
@@ -579,6 +581,8 @@ var projects = module.exports = {
           return 'infinity';
         } else if (appOptions.skinId === 'gumball') {
           return 'gumball';
+        } else if (appOptions.level.isK1) {
+          return 'playlab_k1';
         }
         return 'playlab';
       case 'weblab':
