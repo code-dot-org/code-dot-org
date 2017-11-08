@@ -25,7 +25,7 @@
 #  topic_other_description      :string(255)
 #  topic_do_not_know            :boolean
 #  class_frequency              :string(255)
-#  tell_us_more                 :string(255)
+#  tell_us_more                 :text(65535)
 #  pledged                      :boolean
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
@@ -38,7 +38,7 @@
 # This class represents census submissions coming from the original /yourschool
 # census page.
 #
-class Census::CensusYourSchool2017v1 < Census::CensusSubmission
+class Census::CensusYourSchool2017v1 < Census::CensusYourSchool2017v0
   def validate_pledge?
     submitter_role_teacher? || submitter_role_administrator?
   end
@@ -47,8 +47,6 @@ class Census::CensusYourSchool2017v1 < Census::CensusSubmission
     how_many_20_hours_some? || how_many_20_hours_all?
   end
 
-  validates :submitter_email_address, presence: true
-  validates :submitter_role, presence: true
   validates :how_many_do_hoc, presence: true
   validates :how_many_after_school, presence: true
   validates :how_many_10_hours, presence: true
