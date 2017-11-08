@@ -47,10 +47,6 @@ FactoryGirl.define do
       topic_other_description 'a' * 256
     end
 
-    trait :with_long_tell_us_more do
-      tell_us_more 'a' * 256
-    end
-
     trait :as_teacher do
       submitter_role "teacher"
     end
@@ -77,9 +73,11 @@ FactoryGirl.define do
     end
   end
 
-  factory :census_your_school2017v1, parent: :census_submission, class: Census::CensusYourSchool2017v1 do
+  factory :census_your_school2017v0, parent: :census_submission, class: Census::CensusYourSchool2017v0 do
     submitter_email_address "parent@school.edu"
+  end
 
+  factory :census_your_school2017v1, parent: :census_your_school2017v0, class: Census::CensusYourSchool2017v1 do
     trait :requiring_followup do
       how_many_20_hours "all"
     end
