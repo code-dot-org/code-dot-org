@@ -11,14 +11,14 @@ $(document).ready(function () {
   const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-congrats]');
   const congratsData = JSON.parse(script.dataset.congrats);
-  const signedIn = (congratsData.current_user !== null);
+  const userType = congratsData.current_user ? congratsData.current_user.user_type : "signedOut";
 
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
         completedTutorialType="other"
         isRtl={isRtl}
-        signedIn={signedIn}
+        userType={userType}
       />
     </Provider>,
     document.getElementById('congrats-container')
