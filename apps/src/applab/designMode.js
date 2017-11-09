@@ -17,6 +17,7 @@ import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
+import {applabObjectFitImages} from './applabObjectFitImages';
 
 var designMode = {};
 export default designMode;
@@ -925,7 +926,7 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
-  Applab.objectFitImages();
+  applabObjectFitImages();
 }
 
 /**

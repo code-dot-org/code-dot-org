@@ -10,6 +10,7 @@ import EventRow from './EventRow';
 import {ICON_PREFIX_REGEX} from '../constants';
 import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
+import {applabObjectFitImages} from '../applabObjectFitImages';
 
 class ImageProperties extends React.Component {
   static propTypes = {
@@ -155,7 +156,7 @@ function setObjectFitStyles(element, value) {
 
   // Set a style that will be picked up by objectFitImages() for old browsers:
   element.style.fontFamily = `'object-fit: ${value};'`;
-  Applab.objectFitImages(element);
+  applabObjectFitImages(element);
 }
 
 export default {

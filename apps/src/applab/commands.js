@@ -964,8 +964,6 @@ applabCommands.setImageURL = function (opts) {
     }
     element.setAttribute('data-canonical-image-url', opts.src);
 
-    // TODO: objectFitImages() for IE?
-
     if (!toBeCached[element.src]) {
       var img = new Image();
       img.src = element.src;
