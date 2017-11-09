@@ -21,11 +21,11 @@ describe('SchoolAutocompleteDropdown', () => {
   });
 
   it('renders VirtualizedSelect', () => {
-    expect(select.exists()).to.be.true;
+    expect(select).to.exist;
   });
 
   it('Displays supplied value', () => {
-    expect(select.prop('value')).to.equal("12345");
+    expect(select).to.have.prop('value', '12345');
   });
 
   it("Calls props.onChange when the selection changes", () => {
