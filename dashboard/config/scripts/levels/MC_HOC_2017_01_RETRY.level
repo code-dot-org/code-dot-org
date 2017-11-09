@@ -53,8 +53,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Drag one `move forward` block from the toolbox to the workspace, and snap it into place beneath the `when run` block.\",\"hint_id\":\"MC_HOC_2017_01_RETRY_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c5cf101a9e49ea319c1a39a0258d52ae/MC_HOC_2017_01_RETRY.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to click \\\"Run\\\" to run the code for the Agent.\",\"hint_id\":\"MC_HOC_2017_01_RETRY_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5e7e2faca85598b61cc129f2576ef7c6/MC_HOC_2017_01_RETRY.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Once the Agent has run all of its code, you can move the player with the arrow keys!\",\"hint_id\":\"MC_HOC_2017_01_RETRY_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fb8a95113ab166740231dfef8c88db9b/MC_HOC_2017_01_RETRY.mp3\"}]",
     "instructions": "Write code to get the Agent to the pressure plate, then press \"Run\" and use the arrow keys to move the player out of the house to collect the chest. ",
     "show_popup_on_load": "playerSelection",
-    "contained_level_names": null,
-    "video_key": "mc_2017_puzzle_1"
+    "video_key": "mc_2017_puzzle_1",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
