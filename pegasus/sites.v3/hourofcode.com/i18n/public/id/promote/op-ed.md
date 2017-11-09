@@ -1,11 +1,8 @@
 ---
-
-title: <%= hoc_s(:title_op_ed) %>
+title: '<%= hoc_s(:title_op_ed) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Dibawah ini adalah contoh op-ed yang mendukung Pekan Edukasi Ilmu Komputer dan tujuan yang dapat digunakan oleh negara, legislator lokal, pemimpin bisnis, dll.

@@ -56,6 +56,24 @@ describe('SignInOrAgeDialog', () => {
     assert.equal(wrapper.name(), 'BaseDialog');
   });
 
+  it('renders an explanation and button if under 13', () => {
+    const wrapper = shallow(
+      <SignInOrAgeDialog
+        {...defaultProps}
+      />
+    );
+    const instance = wrapper.instance();
+    instance.ageDropdown = {
+      getValue: () => '12'
+    };
+    wrapper.find('Button').at(1).simulate('click');
+    assert.strictEqual(sessionStorage.getItem('anon_over13'), null);
+    assert.equal(wrapper.find('BaseDialog div > div').first().text(),
+      'Tutorial unavailable for younger students');
+    assert.equal(wrapper.find('BaseDialog Button').props().text, 'See all tutorials');
+    assert.equal(wrapper.find('BaseDialog Button').props().href, '/courses');
+  });
+
   describe('redirect', () => {
     let stashedRackEnv;
 
@@ -63,31 +81,14 @@ describe('SignInOrAgeDialog', () => {
       stashedRackEnv = window.dashboard.rack_env;
       window.dashboard.rack_env = 'unit_test';
 
-      sinon.stub(utils, 'navigateToHref');
       sinon.stub(utils, 'reload');
       sinon.stub(cookies, 'remove');
     });
     afterEach(() => {
-      utils.navigateToHref.restore();
       utils.reload.restore();
       cookies.get.restore && cookies.get.restore();
       cookies.remove.restore();
       window.dashboard.rack_env = stashedRackEnv;
-    });
-
-    it('redirects if you provide an age < 13', () => {
-      const wrapper = shallow(
-        <SignInOrAgeDialog
-          {...defaultProps}
-        />
-      );
-      const instance = wrapper.instance();
-      instance.ageDropdown = {
-        getValue: () => '12'
-      };
-      wrapper.find('Button').at(1).simulate('click');
-      assert.strictEqual(sessionStorage.getItem('anon_over13'), null);
-      assert(utils.navigateToHref.called);
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {

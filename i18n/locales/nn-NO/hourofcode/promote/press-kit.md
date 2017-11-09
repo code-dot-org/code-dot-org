@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_press_kit) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Korleis få merksemd om Kodetimen i media?
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Gode råd
 
-  * Ta kontakt med media på epost to veker før arrangementet. Følg opp med epost og telefon om du ikkje får respons.
-  * Spør ein ansatt på skulen eller ein frivillig om å ta bilde som kan delast på nett og sendast til media.
-  * Skriv om Kodetimen på skulens heimeside og i skuleavisa. Legg ut detaljar om arrangementet og bilder av elevane i aksjon.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Ta kontakt med media på epost to veker før arrangementet. Følg opp med epost og telefon om du ikkje får respons.
+- Spør ein tilsett på skulen eller ein frivillig om å ta bilde som kan delast på nett og sendast til media.
+- Skriv om Kodetimen på heimesidene til skulen og i skuleavisa. Legg ut detaljar om arrangementet og bilete av elevane i aksjon.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
-### Steg-for-steg vegleiing:
+### Steg-for-steg-rettleiing:
 
 **1. Plan your event**
 
-  * Planlegg ei samling for å markere starten på Kodetimen.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organisere gruppeaktivitetar (som ein demonstrasjon av en "unplugged" programmeringsaktivitet), eller vis fram aktivitetar som elevane sjølve står for.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+- Planlegg ei samling for å markere starten på Kodetimen.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Organisér gruppeaktivitetar (som ein demonstrasjon av en "unplugged" kodeaktivitet), eller vis fram aktivitetar som elevane sjølve står for.
+- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 
