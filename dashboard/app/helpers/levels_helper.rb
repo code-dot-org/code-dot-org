@@ -611,13 +611,24 @@ module LevelsHelper
         embedded: true,
         locale: js_locale,
         baseUrl: Blockly.base_url,
-        blocks: level.blocks_to_embed(level.properties[block_type]),
+        blocks: '<xml></xml>',
         dialog: {},
       }
-      content_tag(
-        :div,
-        render(partial: 'levels/apps_dependencies', locals: {app: level.game.app, use_blockly: true, app_options: options}),
-        {id: 'codeWorkspace'}
+      app = level.game.app
+
+      content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
+      content_tag(:script, '', src: minifiable_asset_path('js/blockly.js')) +
+      content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/blockly_locale.js")) +
+      content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
+      content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+      content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+      content_tag(:div,
+        content_tag(:script, '',
+          {
+            src: minifiable_asset_path('js/embedBlocks.js'),
+            'data-blocks': level.blocks_to_embed(level.properties[block_type]),
+          }
+        ), {id: 'embed-blocks'}
       )
 
     elsif File.extname(path) == '.level'
