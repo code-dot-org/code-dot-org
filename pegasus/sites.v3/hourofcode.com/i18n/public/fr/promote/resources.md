@@ -1,15 +1,11 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promouvoir Une Heure de Code
 
@@ -41,13 +37,13 @@ nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Mauvais exemple : « Essayez Hour of Code par ACME Corp ».
-  2. Placez un exposant « TM » aux emplacements principaux dans lesquels vous mentionnez « Hour of Code », aussi bien sur votre site web que dans les descriptions d'application.
-  3. Inclure la langue dans la page (ou en pied de page), y compris des liens vers les sites web CSEdWeek et Code.org, en indiquant ce qui suit :
+1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Mauvais exemple : « Essayez Hour of Code par ACME Corp ».
+2. Placez un exposant « TM » aux emplacements principaux dans lesquels vous mentionnez « Hour of Code », aussi bien sur votre site web que dans les descriptions d'application.
+3. Inclure la langue dans la page (ou en pied de page), y compris des liens vers les sites web CSEdWeek et Code.org, en indiquant ce qui suit :
     
     *« Une Heure de Code ™ est une initiative nationale organisée durant la semaine d'éducation aux Sciences Informatiques [csedweek.org] et Code.org[code.org] pour initier des millions d'étudiants à une heure d'informatique et à la programmation informatique. »*
 
-  4. « Hour of Code » de doit pas être utilisé dans des noms d'application.
+4. « Hour of Code » de doit pas être utilisé dans des noms d'application.
 
 <a id="stickers"></a>
 
@@ -64,9 +60,9 @@ nav: promote_nav
 
 ## Proposez à votre école, votre employeur ou vos amis de s'inscrire :
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. La bonne nouvelle, c'est nous sommes sur le point de changer cela. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. Mais moins de la moitié des écoles enseignent les sciences de l'informatique. La bonne nouvelle, c'est que nous sommes en train de changer cela. Si vous avez entendu parler de l'Heure de Code, l'année dernière, vous savez probablement qu'elle a marqué l'histoire. Plus de 100 millions d'étudiants se sont mis à une Heure de Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Grâce à Une Heure de Code, l'informatique est sur les pages d'accueil de Google, MSN, Yahoo! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
@@ -80,9 +76,9 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. La bonne nouvelle, c'est nous sommes sur le point de changer cela.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. La bonne nouvelle, c'est que nous sommes en train de changer cela.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Grâce à Une Heure de Code, l'informatique est sur les pages d'accueil de Google, MSN, Yahoo! et Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
@@ -102,11 +98,11 @@ I look forward to being in touch.
 
 ## Informez les parents d'élèves au sujet de l'événement dans votre école :
 
-Dear Parents,
+Chers parents d'élèves,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+Nous vivons dans un monde où la technologie est omniprésente. Nous savons que quel que soit le domaine dans lequel nos élèves choisiront d'évoluer, leur aptitude à réussir dépendra de plus en plus de leur compréhension de la technologie.
 
-But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+Mais seule une petite fraction d'entre nous apprennent **le fonctionnement de la technologie**. Moins de la moitié de toutes les écoles enseignent l’informatique.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
