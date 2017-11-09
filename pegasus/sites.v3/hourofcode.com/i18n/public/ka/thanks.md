@@ -32,19 +32,19 @@ As a thank you for helping make it possible for students to start learning compu
 
 <br /> **Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-## 1. Spread the word in your school and community
+## 1. გაავრცელეთ ხმა თქვენ ირგვლივ
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+თქვენ შემოუერთდით კოდის ერთი საათის მოძრაობას. მოუყევით თქვენს მეგობრებს: **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. Invite a local politician or policy maker to visit your school for the Hour of Code. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. ჩართეთ ადგილობრივი ჯგუფი - ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, ვეტერანთა ან სამუშაო გაერთიანება ან თქვენი მეგობრებიც კი. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. Invite a local politician or policy maker to visit your school for the Hour of Code. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
 
 გამოიყენეთ ეს [პოსტერები, ბანერები, სტიკერები, ვიდეობი და სხვა](<%= resolve_url('/promote/resources') %>) თქვენი ღონისძიებისთვის.
 
 ## 2. მოძებნეთ ადგილობრივი მოხალისე, რომელიც თქვენი ღონისძიების ჩატარებაში დაგეხმარებათ.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[გამოიკვლიეთ ჩვენი მოხალისეების რუკა](<%= resolve_url('https://code.org/volunteer/local') %>) და იპოვეთ მოხალისე, რომელიც მოვა თქვენს კლასში ან ვიდეო–ჩატით მოუყვება თქვენს მოსწავლეებს კომპიუტერული მეცნიერების შესაძლებლობებზე.
 
-## 3. Plan your Hour of Code
+## 3. დაგეგმეთ თქვენი კოდის ერთი საათი
 
 Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 

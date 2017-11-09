@@ -12,15 +12,15 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# Topluluğunuzu Kod-Saatine dahil edin
 
 ## 1. Organizasyonu yayın
 
-Tell your friends about the **#HourOfCode**!
+Arkadaşlarına **#HourOfCode**'dan bahset!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
+## 2. Okulunuzun Kod-Saati talep etmesini sağlayın
 
 Müdürünüze [bu maili gönderin](<%= resolve_url('/promote/resources#sample-emails') %>) ve tüm sınıfların kayıt olması için mücadele edin.
 
@@ -28,12 +28,12 @@ Müdürünüze [bu maili gönderin](<%= resolve_url('/promote/resources#sample-e
 
 Şirket CEO'nuza veya yöneticinize [bu maili gönderin.](<%= resolve_url('/promote/resources#sample-emails') %>).
 
-## 4. Kodlama Saati'ni çevrenize tanıtın
+## 4. Kod-Saati'ni çevrenize tanıtın
 
-yerel bir grup,kız ya da erkek izci kulübü,kilise,üniversite,gaziler grubu,işçi sendikası hatta bazı arkadaşlar. Yeni beceriler öğrenmek için okulda olmana gerek yok. Kendi etkinliklerin için posterler, afişler, çıkartmalar, videolar ve daha fazlasını kullan.
+[Yerel bir grup](<%= resolve_url('/promote/resources#sample-emails') %>) — kız ya da erkek izci kulübü, kilise, üniversite, gaziler grubu, işçi sendikası veya bazı arkadaşlar toplayın. Yeni beceriler öğrenmek için okulda olmana gerek yok. Bu [ poster, afiş, çıkartma, video ve daha fazlasını](<%= resolve_url('/promote/resources') %>) etkinlik için kullan.
 
-## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini rica edin
+## 5. Yerel yönetim idarelerinden Kod-Saatini desteklemelerini rica edin
 
-Bu e-postayı yerel temsilcilere, belediye meclisine ve okul yönetimine gönder ve onları kod saati için okuluna davet et. Bu senin bölgenin bir saat mesafesinde bilgisayar bilimleri desteği oluşturmana yardım edebilir.
+[ Bu e-postayı](<%= resolve_url('/promote/resources#sample-emails') %>) yerel temsilcilere, Belediye Meclisine veya okul yönetimi ne gönder ve okuluna Kod-Saatini ziyaret için davet et. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
 
 <%= view :signup_button %>

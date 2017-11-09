@@ -11,7 +11,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Socios de América Latina
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Socios de África
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Socios de Australia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Socios de China
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Socios de Francia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Socios de Indonesia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Socios de Irlanda
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'in' %>
 
-# India Partners
+# Socios de la India
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Socios de Japón
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Socios de Holanda
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Socios de Nueva Zelanda
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Socios de Reino Unido
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,7 +107,7 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Socios de Canadá
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 

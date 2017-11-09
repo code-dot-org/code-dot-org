@@ -57,7 +57,7 @@ Code.org 提供了一些机会，让你的员工去[联系 ](%= resolve_url('htt
 **播放鼓舞人心的视频：**
 
 - Code.org 推出比尔·盖茨，马克·扎克伯格，NBA球星克里斯·波什为主演的视频（它们的长度分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)，和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)。）
-- [2013年编程一小时活动视频](https://www.youtube.com/watch?v=FC5FbmsH4fw)，或者 <% if @country == 'uk' %> [ 2015年编程一小时活动 视频](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ 2015 年编程一小时活动视频](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [总统奥巴马号召所有学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
 - 从[这里](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)寻找更多的励志视频。
 

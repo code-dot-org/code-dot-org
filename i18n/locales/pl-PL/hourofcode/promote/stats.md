@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_how_to_districts) %>'
-layout: szeroki
+layout: wide
 nav: promote_nav
 ---
 

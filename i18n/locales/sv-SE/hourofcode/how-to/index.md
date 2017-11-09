@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Hur man undervisar på Hour of Code</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. En timme kod är lätt att köra - även för nybörjare! Om du känner att du vill ha lite hjälp, kan du hitta en [ lokal volontär](%= resolve_url('https://code.org/volunteer/local') %) som kan hjälpa dig köra en timme av kod i din klass.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

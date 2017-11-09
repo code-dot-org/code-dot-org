@@ -33,7 +33,7 @@ Mulai Sejam Memprogram anda dengan menginspirasi anak anda dan cerita bagaimana 
 **Tampilkan rekaman gambar yang menginspirasi:**
 
 - Video orginal peluncuran Code.org, yang menampilkan Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (Ada versi [1 menit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 menit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 menit](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Rekaman gambar peluncuran Jam Pemrograman 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), atau <% if @country == 'uk' %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Presiden Obama menyerukan semua pelajar untuk belajar ilmu komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Temukan lebih banyak [sumber daya](%= resolve_url('https://code.org/inspire') %) dan [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) yang inspiratif.
 
