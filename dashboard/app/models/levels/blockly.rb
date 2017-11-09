@@ -319,7 +319,9 @@ class Blockly < Level
   end
 
   def localized_authored_hints
-    if should_localize? && authored_hints
+    return unless authored_hints
+
+    if should_localize?
       translations = I18n.t("data.authored_hints").
         try(:[], "#{name}_authored_hint".to_sym)
 
@@ -339,6 +341,14 @@ class Blockly < Level
         hint
       end
       JSON.generate(localized_hints)
+    else
+      hints = JSON.parse(authored_hints).map do |hint|
+        if hint['hint_video'].present?
+          hint['hint_video'] = Video.find_by_key(hint['hint_video']).summarize
+        end
+        hint
+      end
+      JSON.generate(hints)
     end
   end
 
