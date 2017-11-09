@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 #
-# This script automates the download of data on AP participation by state from the College Board's website. 
+# This script automates the download of data on AP participation by state from the College Board's website.
 # It was originally written to download data for the period 2007-2016,
-# and has been modified to allow someone to download data for a single year (in this case, 2017) 
+# and has been modified to allow someone to download data for a single year (in this case, 2017)
 # and for multiple tests (in this case, CSP and CSA, since this is the first year that the two were offered).
 #
 require 'csv'
