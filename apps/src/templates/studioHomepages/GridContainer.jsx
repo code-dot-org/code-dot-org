@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 
 const styles = {
   container: {
@@ -29,7 +30,6 @@ const GridContainer = React.createClass({
     // Then determine the percentage string for each item.
 
     const itemWidth = ({lg: `${nonResponsiveWidthPercent}%`, md: '100%'})[responsiveSize];
-    // const itemWidth = ({lg: 485, md: 700, sm: 600, xs: 310})[responsiveSize];
 
     const itemStyle = isRtl ? styles.itemRtl : styles.item;
 
@@ -50,4 +50,7 @@ const GridContainer = React.createClass({
   }
 });
 
-export default GridContainer;
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(GridContainer);
