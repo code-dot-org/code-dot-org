@@ -4,7 +4,6 @@ import styleConstants from '../../styleConstants';
 import color from "../../util/color";
 import Radium from 'radium';
 import _ from 'lodash';
-import {valueOr} from '../../utils';
 
 const DEFAULT_PROJECT_TYPES_ADVANCED = [
   'playlab',
@@ -159,13 +158,16 @@ class NewProjectButtons extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
     description: PropTypes.string,
-    canViewAdvancedTools: PropTypes.bool, // Default: true
+    canViewAdvancedTools: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    canViewAdvancedTools: true
   };
 
   render() {
-    const { isRtl, description } = this.props;
+    const { canViewAdvancedTools, description, isRtl } = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
-    const canViewAdvancedTools = valueOr(this.props.canViewAdvancedTools, true);
     const defaultProjectTypes = canViewAdvancedTools ?
       DEFAULT_PROJECT_TYPES_ADVANCED: DEFAULT_PROJECT_TYPES_BASIC;
     const projectTypes = this.props.projectTypes || defaultProjectTypes;

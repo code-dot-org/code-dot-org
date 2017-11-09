@@ -4,7 +4,6 @@ import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {valueOr} from '../../utils';
 import StartNewProject from './StartNewProject';
 
 class ProjectWidget extends React.Component {
@@ -27,8 +26,7 @@ class ProjectWidget extends React.Component {
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { canViewFullList, isRtl } = this.props;
-    const canViewAdvancedTools = valueOr(this.props.canViewAdvancedTools, true);
+    const { canViewAdvancedTools, canViewFullList, isRtl } = this.props;
 
     return (
       <ContentContainer
