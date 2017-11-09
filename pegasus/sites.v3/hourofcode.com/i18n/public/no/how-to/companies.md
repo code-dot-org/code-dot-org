@@ -37,9 +37,9 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planlegg hva du trenger av utstyr - datamaskiner er valgfrie
 
-Den beste Kodetimen opplevelsen inkluderer Internett-tilkoblede datamaskiner. Men du trenger **ikke** en datamaskin for hver deltaker, og du kan til og med gjøre Kodetimen uten datamaskiner i det hele tatt.
+Den beste kodetime erfaringen inkluderer Internett-tilkoblede datamaskiner. Men du trenger **ikke** en datamaskin for hver deltaker, og du kan til og med gjøre Kodetimen uten datamaskiner i det hele tatt.
 
 **Planlegg!** Gjør følgende før arrangementet starter:
 
@@ -57,7 +57,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 **Vis en inspirerende video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- [Kodetimen 2013 lansering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -69,7 +69,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 - Inviter programmere fra ditt selskap til å snakke om hvorfor de bestemte seg for å studere datavitenskap og de prosjektene de jobber på.
 - Se tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls') %>).
 
-## 6. Code!
+## 6. Koding!
 
 **Led elevene til aktiviteten**
 
