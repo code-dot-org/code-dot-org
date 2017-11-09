@@ -18,6 +18,9 @@ window.SignupManager = function (options) {
   }
 
   function formSuccess(success) {
+    if (urlFlagInPlace() && isTeacherSelected()) {
+      logEvent('teacher-submit-success');
+    }
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
@@ -30,6 +33,10 @@ window.SignupManager = function (options) {
   }
 
   function formError(err) {
+    if (urlFlagInPlace() && isTeacherSelected()) {
+      logEvent('teacher-submit-error');
+    }
+
     // re-enable "Sign up" button upon error
     $('#signup-button').prop('disabled', false);
 
@@ -128,7 +135,7 @@ window.SignupManager = function (options) {
     schoolCity: '',
     schoolState: '',
     schoolZip: '',
-    schoolType: '',
+    schoolType: 'omitted',
     afterSchool: ''
   };
 
@@ -156,50 +163,6 @@ window.SignupManager = function (options) {
     }
     updateAutocompleteSchoolFields(schoolData);
   }
-
-  // function validateSchoolDropdown() {
-  //   if (schoolData.country === "US") {
-  //     if (schoolData.nces) {
-  //       return false;
-  //     } else {
-  //       return true;
-  //     }
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  //
-  // function validateSchool() {
-  //   if (schoolData.country === "US" && schoolData.nces === "-1") {
-  //     return (this.validateNotBlank(schoolData.schoolName) || this.validateNotBlank(schoolData.schoolState) || this.validateNotBlank(schoolData.schoolCity)
-  //     || this.validateNotBlank(schoolData.schoolType) || this.validateNotBlank(schoolData.schoolZip));
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  //
-  // function validateNotBlank(questionField) {
-  //   return questionField === '';
-  // }
-
-  // function validateSubmission() {
-    // this.setState({
-    //   errors: {
-    //     ...this.state.errors,
-    //     email: this.validateNotBlank(this.state.submission.email),
-    //     topics: this.validateTopics(),
-    //     frequency: this.validateFrequency(),
-    //     country: this.validateNotBlank(this.state.submission.country),
-    //     nces: this.validateSchoolDropdown(),
-    //     school: this.validateSchool(),
-    //     role: this.validateNotBlank(this.state.submission.role),
-    //     hoc: this.validateNotBlank(this.state.submission.hoc),
-    //     afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
-    //     tenHours: this.validateNotBlank(this.state.submission.tenHours),
-    //     twentyHours: this.validateNotBlank(this.state.submission.twentyHours)
-    //   }
-    // }, this.censusFormSubmit);
-  // }
 
   function updateAutocompleteSchoolFields(data) {
     ReactDOM.render(
@@ -494,7 +457,7 @@ window.SignupManager = function (options) {
           <SchoolNotFound
             onChange={onSchoolNotFoundChange}
             schoolName={data.schoolName}
-            schoolType={data.schoolType}
+            schoolType="omitted"
             schoolCity={data.schoolCity}
             schoolState={data.schoolState}
             schoolZip={data.schoolZip}
@@ -507,6 +470,7 @@ window.SignupManager = function (options) {
     );
   }
 
+  let loggedTeacherSelected = false;
   function showTeacher() {
     // Show correct form elements.
     $("#age-block").hide();
@@ -522,8 +486,9 @@ window.SignupManager = function (options) {
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
 
-    if (urlFlagInPlace()) {
+    if (urlFlagInPlace() && !loggedTeacherSelected) {
       logEvent('teacher-selected');
+      loggedTeacherSelected = true;
     }
 
     if (shouldUseAutocompleteDropdown()) {
@@ -598,7 +563,7 @@ window.SignupManager = function (options) {
     $("#password_message").text("");
     $("#password_message_confirmation").text("");
 
-    if (urlFlagInPlace()) {
+    if (urlFlagInPlace() && isTeacherSelected()) {
       logEvent('teacher-submitted');
     }
 
