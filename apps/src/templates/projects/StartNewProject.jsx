@@ -55,13 +55,13 @@ class StartNewProject extends React.Component {
         />
 
         {canViewFullList &&
-        <Button
-          onClick={this.toggleShowFullList}
-          color={Button.ButtonColor.gray}
-          icon={showFullList ? "caret-up" : "caret-down"}
-          text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
-          style={styles.button}
-        />
+          <Button
+            onClick={this.toggleShowFullList}
+            color={Button.ButtonColor.gray}
+            icon={showFullList ? "caret-up" : "caret-down"}
+            text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
+            style={styles.button}
+          />
         }
 
         <div style={{clear: 'both'}}/>
