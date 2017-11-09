@@ -8,6 +8,7 @@ import {valueOr} from '../../utils';
 const styles = {
   button: {
     float: 'right',
+    marginRight: 1,
   },
   headingStartNew: {
     paddingRight: 10,
