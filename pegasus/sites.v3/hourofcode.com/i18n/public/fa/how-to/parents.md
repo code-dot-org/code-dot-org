@@ -33,7 +33,7 @@ nav: how_to_nav
 **ویدئوهای الهام بخش را نمایش دهید:**
 
 - سایت code.org فیلم هایی از بیل گیتز ، مارک زوکربرگ ، و ستاره ان بی ای کریس بوش آماده کرده است .( فیلم ها در نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای ](https://www.youtube.com/watch?v=nKIu9yen5nc)و [9 دقیقه ای ](https://www.youtube.com/watch?v=dU1xS07N-FA)موجودند )
-- ویدئو آغازین یکساعت کدنویسی 2013 یا <% if @country == 'uk' %> [یکساعت کد نویسی 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [یکساعت کدنویسی 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [آقای اوباما رییس جمهور آمریکا به تمام دانش آموزان می گوید که کامپیوتر بیاموزند](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - [منابع](<%= resolve_url('https://code.org/inspire') %>) و [ویدیوهای](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)الهام بخش بیشتری پیدا کنید.
 
