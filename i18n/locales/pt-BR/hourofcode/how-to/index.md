@@ -7,25 +7,25 @@ nav: how_to_nav
 
 <h1>Como ensinar a Hora do Código</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+Junte-se ao movimento e apresente para um grupo de estudantes a sua primeira hora de informática com estas etapas. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial for your hour
+## 2. Escolha um tutorial para sua hora
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) as well as [teacher-guided tutorials](%= resolve_url('https://code.org/educate/teacher-led') %) for participants of all ages, created by a variety of partners.
+Nós fornecemos uma variedade de tutoriais divertidos, [guiados por estudantes](%= resolve_url('/learn') %), bem como [tutoriais orientados por professores](%= resolve_url('https://code.org/educate/teacher-led') %) para participantes de todas as idades, criados por vários parceiros.
 
 [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Promova sua Hora do Código
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promova sua Hora de Código [com essas ferramentas](%= resolve_url('/promote/resources') %) e incentive outros a hospedar seus próprios eventos.
 
 ## 4) Avalie suas necessidades tecnológicas (computadores são opcionais)
 
 A melhor experiência da Hora do Código inclui computadores conectados à Internet. Mas você **não** precisa de um computador para cada criança, e pode inclusive realizar a Hora do Código sem computador nenhum.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Certifique-se de testar tutoriais em computadores ou dispositivos para garantir que eles funcionem corretamente nos navegadores com som e vídeo. **Tem internet lenta?** Planeje mostrar vídeos na frente da classe, para que cada aluno não esteja baixando seus próprios vídeos. Ou tente os tutoriais desconectados / off-line.
 
 Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus próprios fones, se o tutorial escolhido funcionar melhor com som.
 
@@ -33,26 +33,26 @@ Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus pr�
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5. Comece sua hora de código com um áudio ou vídeo inspirador
 
-**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Convide um [voluntário local](%= resolve_url('https://code.org/volunteer/local') %) para inspirar seus alunos falando sobre a amplitude das possibilidades em ciência da computação.** Existem milhares de voluntários ao redor do mundo prontos para ajudar com sua Hora do Código através de uma visita à sala de aula ou conversa por vídeo com seus alunos!
 
 **Mostre um vídeo inspirador:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (Existem versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA) disponíveis)
 - Encontre mais [recursos](%= resolve_url('https://code.org/inspire') %) e [vídeos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspiradores.
 
 **Não tem problema se você e seus alunos não têm experiência com ciência da computação. Apresentamos aqui algumas ideias para começar sua atividade da Hora do Código:**
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
+- Explique as formas em que a tecnologia afeta nossas vidas, com exemplos de meninos e meninas que se preocupam (falar sobre salvar vidas, ajudar as pessoas, conectar as pessoas etc).
 - Em uma atividade com a turma toda, monte uma lista com as coisas que usam a programação na vida cotidiana.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls')%).
+- Veja dicas para estimular o interesse das meninas por ciência da computação [aqui](%= resolve_url('https://code.org/girls')%).
 
 ## 6. É hora de programar!
 
 **Direcione os alunos para a atividade**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
+- Escreva o link do tutorial em um quadro branco. Encontre o link listado nas [informações do seu tutorial selecionado](%= resolve_url('/learn')%) sob o número de participantes.
 
 **Quando seus alunos tiverem dificuldades, tudo bem responder:**
 
@@ -60,9 +60,9 @@ Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus pr�
 - "A tecnologia nem sempre funciona da maneira que queremos".
 - "Aprender programação é como aprender uma nova língua, você não vai se tornar fluente imediatamente".
 
-**What if a student finishes early?**
+**E se um estudante terminar cedo?**
 
-- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
+- Os alunos podem ver todos os tutoriais e [tentar outra atividade do Hour of Code](%= resolve_url('/learn')%).
 - Ou, peça aos alunos que terminarem mais cedo para que ajudem os colegas que estão tendo problemas com a atividade.
 
 [col-33]
@@ -81,7 +81,7 @@ Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus pr�
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates')%) for your students.
+- [Imprima certificados](%= resolve_url('https://code.org/certificates')%) para seus alunos.
 - Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/promote/resources#stickers') %) para seus alunos.
 - [Encomende camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sua escola.
 - Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso também!
