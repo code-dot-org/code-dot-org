@@ -90,6 +90,45 @@ export default storybook => {
                   solutionImageUrl: 'https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png',
                 },
               ]
+            },
+            {
+              stageNumber: 3,
+              levels: [
+                {
+                  id: 23226,
+                  levelId: 9,
+                  name: 'courseC_artist_prog_challenge1',
+                  type: 'Artist',
+                  solutionImageUrl: 'https://d3p74s6bwmy6t9.cloudfront.net/80cc9bbdbd9a05c1a0cf03500b4eb38c=development/2091.png',
+                },
+                {
+                  id: 23227,
+                  levelId: 10,
+                  name: "courseB_maze_seq_challenge2",
+                  type: "Maze",
+                  map: [
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 1, 1, 4, 1, 3, 0],
+                    [0, 1, 1, 0, 1, 1, 4, 0],
+                    [0, 1, 0, 1, 1, 0, 1, 0],
+                    [0, 1, 1, 1, 0, 1, 1, 0],
+                    [0, 1, 1, 0, 1, 1, 1, 0],
+                    [0, 2, 1, 1, 1, 1, 1, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                  ],
+                  skin: "birds",
+                  level: {
+                    startDirection: 2,
+                  },
+                },
+                {
+                  id: 23228,
+                  levelId: 11,
+                  name: 'courseC_PlayLab_events_challenge1',
+                  type: 'Studio',
+                  solutionImageUrl: 'https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png',
+                },
+              ]
             }]}
             showProjectWidget={false}
           />
