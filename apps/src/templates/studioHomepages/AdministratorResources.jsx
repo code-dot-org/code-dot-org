@@ -6,7 +6,6 @@ import TwoColumnActionBlock from '../TwoColumnActionBlock';
 
 export class AdministratorResources extends Component {
   static propTypes = {
-    showHeading: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.string.isRequired,
   };
