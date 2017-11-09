@@ -606,16 +606,18 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       block_type = ext.slice(1..-1)
+      options = {
+        readonly: true,
+        embedded: true,
+        locale: js_locale,
+        baseUrl: Blockly.base_url,
+        blocks: level.blocks_to_embed(level.properties[block_type]),
+        dialog: {},
+      }
       content_tag(
-        :iframe,
-        '',
-        {
-          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
-          width: width ? width.strip : '100%',
-          scrolling: 'no',
-          seamless: 'seamless',
-          style: 'border: none;',
-        }
+        :div,
+        render(partial: 'levels/apps_dependencies', locals: {app: level.game.app, use_blockly: true, app_options: options}),
+        {id: 'codeWorkspace'}
       )
 
     elsif File.extname(path) == '.level'
