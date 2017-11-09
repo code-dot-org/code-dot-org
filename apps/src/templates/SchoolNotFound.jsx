@@ -55,29 +55,31 @@ export default class SchoolNotFound extends Component {
               />
             </label>
           </div>
-          <div style={styles.field}>
-            <label>
-              <div style={styles.question}>
-                {i18n.schoolType()}
-                <span style={styles.asterisk}> *</span>
-              </div>
-              <select
-                name="school_type_s"
-                value={this.props.schoolType}
-                onChange={this.handleChange.bind(this, "schoolType")}
-                style={styles.schoolNotFoundDropdown}
-              >
-                {schoolTypes.map((schoolType, index) =>
-                  <option
-                    value={schoolType}
-                    key={index}
-                  >
-                    {schoolType}
-                  </option>
-                )}
-              </select>
-            </label>
-          </div>
+          {this.props.schoolType !== 'omitted' &&
+            <div style={styles.field}>
+              <label>
+                <div style={styles.question}>
+                  {i18n.schoolType()}
+                  <span style={styles.asterisk}> *</span>
+                </div>
+                <select
+                  name="school_type_s"
+                  value={this.props.schoolType}
+                  onChange={this.handleChange.bind(this, "schoolType")}
+                  style={styles.schoolNotFoundDropdown}
+                >
+                  {schoolTypes.map((schoolType, index) =>
+                    <option
+                      value={schoolType}
+                      key={index}
+                    >
+                      {schoolType}
+                    </option>
+                  )}
+                </select>
+              </label>
+            </div>
+          }
         </div>
         <div>
           <div style={styles.field}>
@@ -95,46 +97,50 @@ export default class SchoolNotFound extends Component {
               />
             </label>
           </div>
+          {this.props.schoolState !== 'omitted' &&
+            <div style={styles.field}>
+              <label>
+                <div style={styles.question}>
+                  {i18n.schoolState()}
+                  <span style={styles.asterisk}> *</span>
+                </div>
+                <select
+                  name="school_state_s"
+                  value={this.props.schoolState}
+                  onChange={this.handleChange.bind(this, "schoolState")}
+                  style={styles.schoolNotFoundDropdown}
+                >
+                  {STATES.map((state, index) =>
+                    <option
+                      value={state}
+                      key={index}
+                    >
+                      {state}
+                    </option>
+                  )}
+                </select>
+              </label>
+            </div>
+          }
+        </div>
+        {this.props.schoolZip !== 'omitted' &&
           <div style={styles.field}>
             <label>
               <div style={styles.question}>
-                {i18n.schoolState()}
+                {i18n.schoolZip()}
                 <span style={styles.asterisk}> *</span>
               </div>
-              <select
-                name="school_state_s"
-                value={this.props.schoolState}
-                onChange={this.handleChange.bind(this, "schoolState")}
-                style={styles.schoolNotFoundDropdown}
-              >
-                {STATES.map((state, index) =>
-                  <option
-                    value={state}
-                    key={index}
-                  >
-                    {state}
-                  </option>
-                )}
-              </select>
+              <input
+                id="school_zipcode"
+                type="text"
+                name="school_zip_s"
+                value={this.props.schoolZip}
+                onChange={this.handleChange.bind(this, "schoolZip")}
+                style={styles.input}
+              />
             </label>
           </div>
-        </div>
-        <div style={styles.field}>
-          <label>
-            <div style={styles.question}>
-              {i18n.schoolZip()}
-              <span style={styles.asterisk}> *</span>
-            </div>
-            <input
-              id="school_zipcode"
-              type="text"
-              name="school_zip_s"
-              value={this.props.schoolZip}
-              onChange={this.handleChange.bind(this, "schoolZip")}
-              style={styles.input}
-            />
-          </label>
-        </div>
+        }
         <div style={styles.clear}/>
       </div>
     );
