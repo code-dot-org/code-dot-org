@@ -55,9 +55,11 @@ module AWS
       if timeout != s3.config.http_open_timeout
         s3.config.http_open_timeout = timeout
         s3.config.http_read_timeout = timeout
-        s3.config.notify_timeout = timeout
         s3.config.http_idle_timeout = timeout / 2
       end
+
+      notify_timeout = DCDO.get('s3_slow_request', timeout)
+      s3.config.notify_timeout = notify_timeout if s3.config.notify_timeout != notify_timeout
 
       s3
     end
