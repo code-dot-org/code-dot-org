@@ -75,7 +75,7 @@ describe('SchoolAutocompleteDropdown', () => {
 
       return expect(promise).to.eventually.deep.equal({
         options: [
-          {value: '-1', label: 'My school isn’t listed.'},
+          {value: '-1', label: 'Other school not listed below (click here to provide details)'},
           {value: '10', label: 'Abcd School 1 - Seattle, WA 98101'},
           {value: '11', label: 'Abcd School 2 - Redmond, WA 98073'}
         ]
@@ -94,7 +94,7 @@ describe('SchoolAutocompleteDropdown', () => {
 
       return expect(promise).to.eventually.deep.equal({
         options: [
-          {value: '-1', label: 'My school isn’t listed.'}
+          {value: '-1', label: 'Other school not listed below (click here to provide details)'}
         ]
       });
     });
