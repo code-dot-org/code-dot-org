@@ -284,16 +284,13 @@ def get_value(spreadsheet, year, state, tab, column_row)
 end
 
 # Downloads the XLS files from the AP College Board.
-# Assumes you want to extract data for all years unless a year is specified
+# @param [Integer] specific_year The specific year, if any, to download. If nil, all years are downloaded.
+#   Default is nil.
 def get_xlss(specific_year=nil)
   STATES_WITH_DC.each do |state|
     puts "  DOWNLOADING #{state}..."
     SPECS.each do |spec|
-      if specific_year.nil?
-        year_collection = spec[:years]
-      else
-        year_collection = [specific_year]
-      end
+      year_collection = specific_year.nil? ? spec[:years] : [specific_year]
       year_collection.each do |year|
         File.write(
           get_filename(year, state.clone),
@@ -305,28 +302,25 @@ def get_xlss(specific_year=nil)
 end
 
 # Processes the XLS files stored locally.
+# @param [Integer] specific_year The specific year, if any, to download. If nil, all years are downloaded.
+#   Default is nil.
 # @return [Array] An array of arrays, each subarray containing information about
 #   about one value extracted from some XLS file.
-# Assumes you want to process all years unless a year is specified.
 def process_xlss(specific_year=nil)
   data = []
   STATES_WITH_DC.each do |state|
     puts "PROCESSING #{state}..."
     SPECS.each do |spec|
       # Years to iterate over either determined by spec, or just a single year
-      if specific_year.nil?
-        year_collection = spec[:years]
-      else
-        year_collection = [specific_year]
-      end
+      year_collection = specific_year.nil? ? spec[:years] : [specific_year]
       year_collection.each do |year|
         if year >= 2014
           spreadsheet = RubyXL::Parser.parse get_filename(year, state)
         else
           spreadsheet = Spreadsheet.open get_filename(year, state)
         end
-        spec[:years].each do |i|
-          next unless i == year
+        spec[:years].each do |spec_year|
+          next unless spec_year == year
           spec[:tests].each do |test_name, cells_of_interest|
             cells_of_interest.each do |tab, column_rows|
               column_rows.each do |column_row|
