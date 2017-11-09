@@ -351,7 +351,7 @@ Resources:
         {
           AcmCertificateArn: certificate_arn,
           MinimumProtocolVersion: 'TLSv1',
-          SslSupportMethod: 'sni-only'
+          SslSupportMethod: domain == 'code.org' ? 'vip' : 'sni-only'
         }
       )%>
 <%   end -%>
