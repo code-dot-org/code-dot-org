@@ -50,6 +50,7 @@ module ScriptConstants
       STARWARS_BLOCKS_NAME = 'starwarsblocks'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
+      MINECRAFT_HERO_NAME = 'hero'.freeze,
       INFINITY_NAME = 'infinity'.freeze,
       ARTIST_NAME = 'artist'.freeze,
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
@@ -117,7 +118,8 @@ module ScriptConstants
     flappy: [FLAPPY_NAME],
     minecraft: [
       MINECRAFT_NAME,
-      MINECRAFT_DESIGNER_NAME
+      MINECRAFT_DESIGNER_NAME,
+      MINECRAFT_HERO_NAME,
     ],
     tts: [
       TTS_NAME = 'allthettsthings'.freeze
