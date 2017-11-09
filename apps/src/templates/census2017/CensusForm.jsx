@@ -4,7 +4,7 @@ import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
 import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 import { styles } from './censusFormStyles';
@@ -251,7 +251,7 @@ class CensusForm extends Component {
             showErrorMsg={errors.country}
           />
           {US && (
-            <SchoolAutocompleteDropdown
+            <SchoolAutocompleteDropdownWithLabel
               setField={this.handleDropdownChange}
               value={submission.nces}
               showErrorMsg={errors.nces}
