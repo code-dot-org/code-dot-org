@@ -31,8 +31,7 @@
  * @property {boolean} isExternalProjectLevel
  * @property {boolean} isChannelBacked
  * @property {boolean} isLegacyShare
- * @property {boolean} postMilestone
- * @property {boolean} postFinalMilestone
+ * @property {PostMileStoneMode} postMilestoneMode
  * @property {string} puzzleRatingsUrl
  * @property {string} authoredHintViewRequestsUrl
  * @property {?} authoredHintsUsedIds
@@ -54,7 +53,6 @@
  * @property {boolean} pinWorkspaceToBottom
  * @property {boolean} hasVerticalScrollbars
  * @property {boolean} showExampleTestButtons
- * @property {string} rackEnv
  * @property {ReportOptions} report
  * @property {boolean} sendToPhone
  * @property {string} send_to_phone_url

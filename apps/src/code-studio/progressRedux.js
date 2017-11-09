@@ -263,7 +263,6 @@ export function processedStages(stages, isPlc) {
   });
 }
 
-
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
     saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,
@@ -427,6 +426,11 @@ export const stageExtrasUrl = (state, stageId) => (
   state.stageExtrasEnabled
     ? state.stages.find(stage => stage.id === stageId).stage_extras_level_url
     : ''
+);
+
+export const isPerfect = (state, levelId) => (
+  !!state.levelProgress &&
+    state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT
 );
 
 /**

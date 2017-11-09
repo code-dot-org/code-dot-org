@@ -10,8 +10,20 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortBy, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
-import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
+import {
+  TutorialsSortByOptions,
+  TutorialsSortByFieldNames,
+  TutorialsOrgName,
+  mobileCheck,
+  DoNotShow,
+  orgNameCodeOrg,
+  orgNameMinecraft
+} from './util';
+import {
+  getResponsiveContainerWidth,
+  isResponsiveCategoryInactive,
+  getResponsiveValue
+} from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
@@ -43,7 +55,7 @@ const TutorialExplorer = React.createClass({
     roboticsButtonUrl: PropTypes.string,
     showSortDropdown: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
-    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired
   },
 
   shouldScrollToTop: false,
@@ -92,7 +104,10 @@ const TutorialExplorer = React.createClass({
     const state = Immutable.fromJS(this.state);
 
     let newState = {};
-    if (value) {
+
+    if (this.props.filterGroups.find(item => item.name === filterGroup).singleEntry) {
+      newState = state.updateIn(['filters', filterGroup], arr => [filterEntry]);
+    } else if (value) {
       // Add value to end of array.
       newState = state.updateIn(['filters', filterGroup], arr => arr.push(filterEntry));
     } else {
@@ -173,23 +188,48 @@ const TutorialExplorer = React.createClass({
     }
   },
 
+  /**
+   * Given a sort by choice (popularityrank or displayweight) and a grade range,
+   * return the field name from the tutorials data that should used for sorting.
+   */
+  getSortByFieldName(sortBy, grade) {
+    let sortByFieldName;
+
+    const gradeToSortByFieldName = {
+      "all": TutorialsSortByFieldNames.displayweight,
+      "pre": TutorialsSortByFieldNames.displayweight_pre,
+      "2-5": TutorialsSortByFieldNames.displayweight_25,
+      "6-8": TutorialsSortByFieldNames.displayweight_middle,
+      "9+": TutorialsSortByFieldNames.displayweight_high
+    };
+
+    // If we're sorting by recommendation (a.k.a. displayweight) then find the
+    // right set of data to match the currently-selected grade.
+    if (sortBy === TutorialsSortByOptions.displayweight) {
+      sortByFieldName = gradeToSortByFieldName[grade];
+    } else {
+      sortByFieldName = TutorialsSortByFieldNames.popularityrank;
+    }
+
+    return sortByFieldName;
+  },
+
   /*
    * The main tutorial set is returned with the given filters and sort order.
    *
    * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
   filterTutorialSet(filters, sortBy, orgName) {
+    const grade = filters.grade[0];
+
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
       locale: "en-US",
-      orgName: orgName
+      orgName: orgName,
+      sortByFieldName: this.getSortByFieldName(sortBy, grade)
     };
 
-    // If the user hasn't chosen a sorting option yet (and the dropdown is still in its
-    // default state) then use whatever we know to be the default sort criteria.
-    // But if the user has chosen a sorting option, then use that.
-    filterProps.sortBy = sortBy === TutorialsSortBy.default ? this.props.defaultSortBy : sortBy;
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
   },
@@ -202,7 +242,7 @@ const TutorialExplorer = React.createClass({
    */
   filterTutorialSetForLocale() {
     const filterProps = {
-      sortBy: this.props.defaultSortBy
+      sortByFieldName: this.props.defaultSortBy
     };
 
     if (this.isRobotics()) {
@@ -325,7 +365,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, orgName, filters, hideFilters, sortBy } = filterProps;
+      const { locale, specificLocale, orgName, filters, hideFilters, sortByFieldName } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as DoNotShow.  If it does,
@@ -352,8 +392,12 @@ const TutorialExplorer = React.createClass({
         }
 
         // If we are showing an explicit orgname, then filter if it doesn't
-        // match.
-        if (orgName && orgName !== TutorialsOrgName.all && tutorial.orgname !== orgName) {
+        // match.  Make an exception for Minecraft so that it shows when
+        // Code.org is selected.
+        if (orgName &&
+          orgName !== TutorialsOrgName.all &&
+          tutorial.orgname !== orgName &&
+          !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)) {
           return false;
         }
 
@@ -388,10 +432,10 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        if (sortBy === TutorialsSortBy.popularityrank) {
+        if (sortByFieldName === TutorialsSortByFieldNames.popularityrank) {
           return tutorial1.popularityrank - tutorial2.popularityrank;
         } else {
-          return tutorial2.displayweight - tutorial1.displayweight;
+          return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
         }
       });
 
@@ -451,6 +495,8 @@ const TutorialExplorer = React.createClass({
       visibility: this.shouldShowTutorials() ? "visible" : "hidden"
     };
 
+    const grade = this.state.filters.grade[0];
+
     return (
       <StickyContainer>
         <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
@@ -470,6 +516,7 @@ const TutorialExplorer = React.createClass({
                   specificLocale={true}
                   localeEnglish={this.isLocaleEnglish()}
                   disabledTutorials={this.props.disabledTutorials}
+                  grade={grade}
                 />
               )}
             </div>
@@ -486,9 +533,12 @@ const TutorialExplorer = React.createClass({
           {this.state.showingAllTutorials && (
             <div ref={allTutorials => this.allTutorials = allTutorials}>
               <FilterHeader
+                mobileLayout={this.state.mobileLayout}
+                filterGroups={this.props.filterGroups}
+                selection={this.state.filters}
+                onUserInputFilter={this.handleUserInputFilter}
                 backButton={this.props.backButton}
                 filteredTutorialsCount={this.state.filteredTutorialsCount}
-                mobileLayout={this.state.mobileLayout}
                 showingModalFilters={this.state.showingModalFilters}
                 showModalFilters={this.showModalFilters}
                 hideModalFilters={this.hideModalFilters}
@@ -498,6 +548,7 @@ const TutorialExplorer = React.createClass({
               {this.shouldShowFilters() && (
                 <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
                   <FilterSet
+                    mobileLayout={this.state.mobileLayout}
                     uniqueOrgNames={this.getUniqueOrgNames()}
                     orgName={this.state.orgName}
                     showSortDropdown={this.props.showSortDropdown}
@@ -521,6 +572,7 @@ const TutorialExplorer = React.createClass({
                     locale={this.props.locale}
                     localeEnglish={this.isLocaleEnglish()}
                     disabledTutorials={this.props.disabledTutorials}
+                    grade={grade}
                   />
                 )}
               </div>
@@ -548,19 +600,19 @@ const TutorialExplorer = React.createClass({
 function getFilters({robotics, mobile}) {
   const filters = [
     { name: "grade",
-      text: i18n.filterGrades(), //"Grades",
+      text: i18n.filterGrades(),
+      headerOnDesktop: true,
+      singleEntry: true,
       entries: [
+        {name: "all",             text: i18n.filterGradesAll()},
         {name: "pre",             text: i18n.filterGradesPre()},
         {name: "2-5",             text: i18n.filterGrades25()},
         {name: "6-8",             text: i18n.filterGrades68()},
         {name: "9+",              text: i18n.filterGrades9()}]},
-    { name: "teacher_experience",
-      text: i18n.filterTeacherExperience(),
-      entries: [
-        {name: "beginner",        text: i18n.filterTeacherExperienceBeginner()},
-        {name: "comfortable",     text: i18n.filterTeacherExperienceComfortable()}]},
     { name: "student_experience",
       text: i18n.filterStudentExperience(),
+      headerOnDesktop: true,
+      singleEntry: true,
       entries: [
         {name: "beginner",        text: i18n.filterStudentExperienceBeginner()},
         {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()}]},
@@ -600,8 +652,8 @@ function getFilters({robotics, mobile}) {
         {name: "other",           text: i18n.filterProgrammingLanguageOther()}]}];
 
   const initialFilters = {
-    teacher_experience: ["beginner"],
-    student_experience: ["beginner"]
+    student_experience: ["beginner"],
+    grade: ["all"]
   };
 
   const hideFilters = {
@@ -617,8 +669,6 @@ function getFilters({robotics, mobile}) {
     });
 
     initialFilters.activity_type = ["robotics"];
-    initialFilters.teacher_experience = [];
-    initialFilters.student_experience = [];
 
     hideFilters.activity_type = [];
   }
@@ -678,6 +728,8 @@ function getUrlParameters(filters, robotics) {
   if (robotics) {
     // The robotics page remains dedicated to robotics activities.
     parametersObject.activity_type = ["robotics"];
+    parametersObject.student_experience = ["beginner"];
+    parametersObject.grade = ["all"];
   }
 
   return parametersObject;
@@ -696,7 +748,9 @@ window.TutorialExplorerManager = function (options) {
 
   // The caller can provide defaultSortByPopularity, and when true, the default sort will
   // be by popularity.  Otherwise, the default sort will be by display weight.
-  const defaultSortBy = options.defaultSortByPopularity ? TutorialsSortBy.popularityrank : TutorialsSortBy.displayweight;
+  const defaultSortBy =
+    options.defaultSortByPopularity ? TutorialsSortByOptions.popularityrank :
+    TutorialsSortByOptions.displayweight;
 
   this.renderToElement = function (element) {
     ReactDOM.render(

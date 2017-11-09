@@ -40,6 +40,7 @@ import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
+import userAgentParser from './code-studio/initApp/userAgentParser';
 import {KeyCodes, TestResults} from './constants';
 import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
@@ -58,6 +59,7 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import { addCallouts } from '@cdo/apps/code-studio/callouts';
 
 var copyrightStrings;
 
@@ -378,10 +380,7 @@ StudioApp.prototype.init = function (config) {
     showWarnings(config);
   }
 
-  if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
-      !config.readonlyWorkspace) {
-    this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
-  }
+  this.initProjectTemplateWorkspaceIconCallout();
 
   this.alertIfCompletedWhilePairing(config);
 
@@ -496,6 +495,22 @@ StudioApp.prototype.init = function (config) {
   }
 
   this.emit('afterInit');
+};
+
+StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
+  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
+    addCallouts([{
+      id: 'projectTemplateWorkspaceIconCallout',
+      element_id: '#projectTemplateWorkspaceIcon',
+      localized_text: msg.workspaceProjectTemplateLevel(),
+      qtip_config: {
+        position: {
+          my: 'top center',
+          at: 'bottom center',
+        },
+      },
+    }]);
+  }
 };
 
 StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
@@ -2408,6 +2423,14 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     config.afterInject();
   }
   this.setStartBlocks_(config, true);
+
+  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
+    // Mobile Safari resize events fire too early, see:
+    // https://openradar.appspot.com/31725316
+    // Rerun the blockly resize handler after 500ms when clientWidth/Height
+    // should be correct
+    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
+  }
 };
 
 /**
@@ -2864,6 +2887,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isK1: config.level.isK1,
     appType: config.app,
     nextLevelUrl: config.nextLevelUrl,
+    showProjectTemplateWorkspaceIcon: !!config.level.projectTemplateLevelName &&
+      !config.level.isK1 &&
+      !config.readonlyWorkspace,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));

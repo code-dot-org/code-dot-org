@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'sort_alphabetical'
 # coding: utf-8
 COUNTRY_CODE_TO_COUNTRY_NAME = {
@@ -241,6 +242,7 @@ COUNTRY_CODE_TO_COUNTRY_NAME = {
   "VU" => "Vanuatu",
   "WF" => "Wallis and Futuna",
   "WS" => "Samoa",
+  "XK" => "Kosovo",
   "YE" => "Yemen",
   "YT" => "Mayotte",
   "ZA" => "South Africa",
@@ -257,4 +259,8 @@ end
 # Returns the entire list of countries
 def get_all_countries
   return COUNTRY_CODE_TO_COUNTRY_NAME.sort_alphabetical_by {|_code, name| name}
+end
+
+def valid_country_code?(code)
+  return COUNTRY_CODE_TO_COUNTRY_NAME[code.to_s.strip.upcase].present?
 end

@@ -750,14 +750,6 @@ schafer@pd.code.org
 [/col-33]
 
 [col-33]
-### Meredith Allen
-Fort Dodge, IA
-
-allen@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Cindy Herren
 Waukee, IA
 
@@ -1479,14 +1471,6 @@ reeves@pd.code.org
 <br />
 ### **Houston**
 [col-33]
-### Erica Deakins
-Houston, TX
-
-deakins@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Karen North
 Houston, TX
 
@@ -1499,14 +1483,6 @@ north@pd.code.org
 Houston, TX
 
 hanson@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Sabrina Provencher
-Houston, TX
-
-provencher@pd.code.org
 
 [/col-33]
 
@@ -1598,14 +1574,6 @@ dovi@pd.code.org
 
 <a id="wa"></a>
 ## Washington
-[col-33]
-### Cheri Bortleson
-Bellevue, WA
-
-bortleson@pd.code.org
-
-[/col-33]
-
 [col-33]
 ### Valerie Buck
 Issaquah, WA

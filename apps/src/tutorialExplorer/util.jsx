@@ -2,8 +2,18 @@ import i18n from '@cdo/tutorialExplorer/locale';
 import * as utils from '../utils';
 
 
-// Sorting for tutorials.
-export const TutorialsSortBy = utils.makeEnum('popularityrank', 'displayweight');
+// Sort By dropdown choices for tutorials.
+export const TutorialsSortByOptions = utils.makeEnum('popularityrank', 'displayweight');
+
+// Sort By source data field names (from gsheet) for tutorials.
+export const TutorialsSortByFieldNames = utils.makeEnum(
+  'popularityrank',
+  'displayweight',
+  'displayweight_pre',
+  'displayweight_25',
+  'displayweight_middle',
+  'displayweight_high'
+);
 
 // Orgname value.
 export const TutorialsOrgName = utils.makeEnum('all');
@@ -11,6 +21,12 @@ export const TutorialsOrgName = utils.makeEnum('all');
 // "do-not-show" string used in the source data as both a tag and in place of an
 // organization name.
 export const DoNotShow = "do-not-show";
+
+// Code.org's organization name.
+export const orgNameCodeOrg = "Code.org";
+
+// Minecraft's organization name.
+export const orgNameMinecraft = "Mojang, Microsoft and Code.org";
 
 /**
  * For a comma-separated string of tags, generate a comma-separated string of their friendly
@@ -39,9 +55,6 @@ export function getTagString(prefix, tagString) {
     subject_la:                       i18n.filterTopicsLa(),
     subject_art:                      i18n.filterTopicsArt(),
     "subject_cs-only":                i18n.filterTopicsCsOnly(),
-
-    teacher_experience_beginner:      i18n.filterTeacherExperienceBeginner(),
-    teacher_experience_comfortable:   i18n.filterTeacherExperienceComfortable(),
 
     student_experience_beginner:      i18n.filterStudentExperienceBeginner(),
     student_experience_comfortable:   i18n.filterStudentExperienceComfortable(),

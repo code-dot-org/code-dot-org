@@ -25,7 +25,7 @@ const styles = {
   },
 };
 
-export default Radium(class CodeWritten extends React.Component {
+class CodeWritten extends React.Component {
   static propTypes = {
     numLinesWritten: PropTypes.number.isRequired,
     totalNumLinesWritten: PropTypes.number.isRequired,
@@ -81,4 +81,6 @@ export default Radium(class CodeWritten extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(CodeWritten);

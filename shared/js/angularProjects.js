@@ -60,14 +60,14 @@ services.factory('projectsService', ['$resource',
       // Until projectType is back-filled, check level when projectType is missing.
       return this.projectType ?
         this.projectType :
-        this.level.substr('/projects/'.length);
+        this.level && this.level.substr('/projects/'.length);
     };
 
     Project.prototype.isPublishableProjectType = function () {
       var projectType = this.getType();
       var publishableTypes = isUnder13 || userSharingDisabled ?
-        ['artist', 'playlab'] :
-        ['applab', 'gamelab', 'artist', 'playlab'];
+        window.PublishableProjectTypesUnder13 :
+        window.PublishableProjectTypesOver13;
       return publishableTypes.indexOf(projectType) > -1;
     };
 

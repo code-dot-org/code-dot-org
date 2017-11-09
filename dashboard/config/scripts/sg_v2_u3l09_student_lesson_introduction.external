@@ -12,11 +12,17 @@ markdown <<MARKDOWN
 * **Iteration**: "loop" by another name - the repetition of a statement, process, or procedure.
 * **For Loop** - A particular kind of looping construct provided in many languages. Typically, a for loop defines a counting variable that is checked and incremented on each iteration in order to loop a specific number of times.
 
-## Lesson
+## New Subgoals and Blocks
+
+*  **Subgoal** - `//Write a loop`
+ * **[for](//docs.code.org/applab/forLoop_i_0_4/)** - `for`
+ 
+ ## Lesson
 
 * Introduction to the `for` loop.
 * Practice using loops to draw figures.
 * Use loops in conjunction with Top-Down Design and random values to complete a digital scene.
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

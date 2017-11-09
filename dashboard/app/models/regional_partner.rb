@@ -55,6 +55,8 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   # find a Regional Partner that services a particular region
+  # @param [String] zip_code
+  # @param [String] state - 2-letter state code
   def self.find_by_region(zip_code, state)
     return RegionalPartner.
       joins(:mappings).

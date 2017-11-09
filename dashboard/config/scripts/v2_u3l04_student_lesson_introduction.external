@@ -1,30 +1,23 @@
 name 'v2 U3L04 Student Lesson Introduction'
-display_name 'Lesson Vocabulary & Resources'
-title 'Programming with Simple Commands - Getting Started'
-css 'unplugged'
-
+title 'title'
+description 'description here'
 markdown <<MARKDOWN
-# Unit 3: Lesson 04 - Programming with Simple Commands
+# Unit 3 - Lesson 4: Using Simple Commands
 
 ## Lesson
-
 * Learn to use the App Lab programming environment
-* Write a program that uses basic “building blocks” to draw an image in App Lab
+* Write a program that uses basic "building blocks" to draw an image in App Lab
 * Think about what "efficiency" means when programming
 
 ## Vocab
-* **Turtle Programming** - a classic method for learning programming with commands to control movement and drawing of an on-screen robot called a "turtle".   The turtle hearkens back to early implementations in which children programmed a physical robot whose dome-like shape was reminiscent of a turtle.
 
-## New Blocks
+* **Turtle Programming** - a classic method for learning programming with commands to control movement and drawing of an on-screen robot called a "turtle". The turtle hearkens back to early implementations in which children programmed a physical robot whose dome-like shape was reminiscent of a turtle.
 
-*  **[moveForward](//docs.code.org/applab/moveForward/)** - `moveForward`
-*  **[penUp](//docs.code.org/applab/penUp/)** - `penUp`
-*  **[turnLeft](//docs.code.org/applab/turnLeft/)** - `turnLeft`
-*  **[penDown](//docs.code.org/applab/penDown/)** - `penDown`
+## Introduced Code
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
+* [moveForward](//docs.code.org/applab/moveForward/)
+* [penDown](//docs.code.org/applab/penDown/)
+* [penUp](//docs.code.org/applab/penUp/)
+* [turnLeft](//docs.code.org/applab/turnLeft/)
 
 MARKDOWN

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 475885 teachers (lower than original list due to some badly formatted emails that were dropped)
-../send-to-mailing-list --limit 500000 2017-01-20-outage-followup ./teachers.csv

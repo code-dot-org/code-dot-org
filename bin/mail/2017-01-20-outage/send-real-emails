@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 478071 teachers
-../send-to-mailing-list --limit 500000 2017-01-20-outage ./teachers.csv

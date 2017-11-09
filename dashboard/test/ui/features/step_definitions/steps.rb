@@ -21,6 +21,8 @@ end
 def element_stale?(element)
   element.enabled?
   false
+rescue Selenium::WebDriver::Error::JavascriptError => e
+  e.message.starts_with? 'Element does not exist in cache'
 rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
@@ -115,12 +117,6 @@ When /^I close the dialog$/ do
   STEPS
 end
 
-When /^I close the React alert$/ do
-  steps <<-STEPS
-    When I click selector ".react-alert button"
-  STEPS
-end
-
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end
@@ -130,13 +126,13 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
-    And I wait until element "button:contains(Delete Progress)" is visible
+    And I wait until element "button:contains(Start over)" is visible
     And I close the dialog
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
     Then I click selector "#versions-header"
-    And I wait until element "button:contains(Delete Progress)" is visible
-    And I click selector "button:contains(Delete Progress)"
+    And I wait until element "button:contains(Start over)" is visible
+    And I click selector "button:contains(Start over)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds

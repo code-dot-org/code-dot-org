@@ -1,11 +1,11 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import ContentContainer from '../ContentContainer';
 import OwnedSections from '../teacherDashboard/OwnedSections';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 
-class TeacherSections extends React.Component {
+class TeacherSections extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
