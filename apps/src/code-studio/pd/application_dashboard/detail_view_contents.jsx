@@ -3,6 +3,7 @@ import {Button, FormControl} from 'react-bootstrap';
 import Facilitator1819Questions from './detail_view_facilitator_specific_components';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
+import {TeacherApplicationStatuses, FacilitatorApplicationStatuses} from './constants';
 
 const styles = {
   notes: {
@@ -41,10 +42,7 @@ export default class DetailViewContents extends React.Component {
   };
 
   componentWillMount() {
-    this.statuses = ['Unreviewed', 'Pending', 'Waitlisted', 'Accepted', 'Declined', 'Withdrawn'];
-    if (this.props.viewType === 'facilitator') {
-      this.statuses.splice(2, 0, 'Interview');
-    }
+    this.statuses = (this.props.viewType === 'facilitator') ? FacilitatorApplicationStatuses : TeacherApplicationStatuses;
   }
 
   state = {

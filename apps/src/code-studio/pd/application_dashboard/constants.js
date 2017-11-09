@@ -37,3 +37,28 @@ exports.StatusColors = {
     color: color.black
   }
 };
+
+/**
+ * Valid statuses for Teacher Applications.
+ */
+exports.TeacherApplicationStatuses = [
+  'Unreviewed',
+  'Pending',
+  'Waitlisted',
+  'Accepted',
+  'Declined',
+  'Withdrawn'
+];
+
+/**
+ * Valid statuses for Facilitator Applications.
+ */
+exports.FacilitatorApplicationStatuses = [
+  'Unreviewed',
+  'Pending',
+  'Interview',
+  'Waitlisted',
+  'Accepted',
+  'Declined',
+  'Withdrawn'
+];
