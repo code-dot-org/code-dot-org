@@ -17,6 +17,7 @@ import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
+import objectFitImages from 'object-fit-images';
 
 var designMode = {};
 export default designMode;
@@ -318,38 +319,8 @@ designMode.updateProperty = function (element, name, value) {
 
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
-        break;
-      }
-
-      element.src = assetPrefix.fixPath(value);
-      // do not resize if only the asset path has changed (e.g. on remix).
-      if (value !== originalValue) {
-        var resizeElement = function (width, height) {
-          element.style.width = width + 'px';
-          element.style.height = height + 'px';
-          if (gridUtils.isDraggableContainer(element.parentNode)) {
-            element.parentNode.style.width = width + 'px';
-            element.parentNode.style.height = height + 'px';
-          }
-          // Re-render properties
-          if (currentlyEditedElement === element) {
-            designMode.editElementProperties(element);
-          }
-        };
-        if (value === '') {
-          element.src = '/blockly/media/1x1.gif';
-          resizeElement(100, 100);
-        } else {
-          element.onload = function () {
-            // naturalWidth/Height aren't populated until image has loaded.
-            var left = parseFloat(element.style.left);
-            var top = parseFloat(element.style.top);
-            var dimensions = boundedResize(left, top, element.naturalWidth, element.naturalHeight, true);
-            resizeElement(dimensions.width, dimensions.height);
-            // only perform onload once
-            element.onload = null;
-          };
-        }
+      } else {
+        element.src = assetPrefix.fixPath(value);
       }
       break;
     case 'hidden':
@@ -664,6 +635,25 @@ designMode.serializeToLevelHtml = function () {
   });
   designModeVizClone.children().children().each(function () {
     elementUtils.removeIdPrefix(this);
+    if (this.nodeName === 'IMG') {
+      // Remove object-fit style and all styles and attributes used by the
+      // the object-fit-images polyfill for IE and replace the src attribute
+
+      // (We will rely on our own data-object-fit property for serialization)
+      this.style.objectFit = '';
+      this.style.backgroundPosition = '';
+      this.style.backgroundImage = '';
+      this.style.backgroundRepeat = '';
+      this.style.backgroundOrigin = '';
+      this.style.backgroundSize = '';
+      this.style.fontFamily = '';
+      this.removeAttribute('data-ofi-undefined');
+      const ofiSrc = this.getAttribute('data-ofi-src');
+      if (ofiSrc) {
+        this.src = ofiSrc;
+        this.removeAttribute('data-ofi-src');
+      }
+    }
   });
 
   // Remove the "data:img/png..." URI from icon images
@@ -936,6 +926,7 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
+  objectFitImages();
 }
 
 /**

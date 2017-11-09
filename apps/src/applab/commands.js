@@ -181,6 +181,8 @@ applabCommands.image = function (opts) {
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
+  Applab.updateProperty(newImage, 'objectFit', 'contain');
+
   return Boolean(Applab.activeScreen().appendChild(newImage));
 };
 
@@ -961,6 +963,8 @@ applabCommands.setImageURL = function (opts) {
       element.src = assetPrefix.fixPath(opts.src);
     }
     element.setAttribute('data-canonical-image-url', opts.src);
+
+    // TODO: objectFitImages() for IE?
 
     if (!toBeCached[element.src]) {
       var img = new Image();

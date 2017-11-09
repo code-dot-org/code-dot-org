@@ -68,6 +68,7 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
+import objectFitImages from 'object-fit-images';
 
 /**
  * Create a namespace for the application.
@@ -349,6 +350,11 @@ Applab.init = function (config) {
 
   // Necessary for tests.
   thumbnailUtils.init();
+
+  // Enable polyfill so we can use object-fit (we must additionally specify
+  // the style in font-family and avoid scale-down & using it in media queries)
+  // See https://www.npmjs.com/package/object-fit-images for details.
+  objectFitImages(null, { watchMQ: true });
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
