@@ -18,6 +18,15 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     this.props.setField("nces", selectValue);
   };
 
+  handleSchoolNotFoundCheckbox(event) {
+    var checkbox = event.target;
+    if (checkbox.checked) {
+      this.props.setField("nces", {value: "-1"});
+    } else {
+      this.props.setField("nces", {value: ""});
+    }
+  }
+
   render() {
     return (
       <div>
@@ -25,15 +34,21 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
           {i18n.schoolName()}
           <span style={styles.asterisk}> *</span>
           {this.props.showErrorMsg && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSelect()}
-            </div>
+             <div style={styles.errors}>
+               {i18n.censusRequiredSelect()}
+             </div>
           )}
         </div>
         <SchoolAutocompleteDropdown
           value={this.props.value}
           onChange={this.sendToParent}
         />
+        <label>
+          <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={this.props.value === "-1"}/>
+          <span style={styles.checkboxOption}>
+            {i18n.schoolNotFoundCheckboxLabel()}
+          </span>
+        </label>
       </div>
     );
   }
