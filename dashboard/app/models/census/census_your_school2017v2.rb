@@ -42,6 +42,10 @@
 class Census::CensusYourSchool2017v2 < Census::CensusYourSchool2017v1
   validates :topic_other_description, exclusion: {in: [nil], message: "cannot be nil"}, if: :require_other_description
 
+  def show_followup?
+    how_many_20_hours_some? || how_many_20_hours_all?
+  end
+
   def require_other_description
     show_followup? && topic_other
   end
