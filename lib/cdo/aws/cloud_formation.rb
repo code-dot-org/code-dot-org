@@ -291,7 +291,6 @@ module AWS
           str = "#{event.timestamp}- #{str}" unless ENV['QUIET']
           CDO.log.info str
           if event.resource_status == 'UPDATE_COMPLETE_CLEANUP_IN_PROGRESS'
-            @@event_timestamp += 600
             throw :success
           end
         end
@@ -315,7 +314,7 @@ module AWS
               print '.' unless ENV['QUIET']
             end
           end
-          tail_events(stack_id, log_resource_filter)
+          tail_events(stack_id, log_resource_filter) rescue nil
           tail_log
         rescue Aws::Waiters::Errors::FailureStateError
           tail_events(stack_id)
