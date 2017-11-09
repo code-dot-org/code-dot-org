@@ -341,6 +341,17 @@ Applab.initReadonly = function (config) {
 };
 
 /**
+ * Wrapper to objectFitImages() to avoid using it on phantomjs
+ * See https://github.com/bfred-it/object-fit-images/issues/11
+ */
+Applab.objectFitImages = function (imgs, opts) {
+  if (/PhantomJS/.test(window.navigator.userAgent)) {
+    return;
+  }
+  objectFitImages(imgs, opts);
+};
+
+/**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function (config) {
@@ -354,7 +365,7 @@ Applab.init = function (config) {
   // Enable polyfill so we can use object-fit (we must additionally specify
   // the style in font-family and avoid scale-down & using it in media queries)
   // See https://www.npmjs.com/package/object-fit-images for details.
-  objectFitImages(null, { watchMQ: true });
+  Applab.objectFitImages(null, { watchMQ: true });
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);

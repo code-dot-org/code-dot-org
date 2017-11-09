@@ -872,8 +872,6 @@ module.exports = {
 
         assert(/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
         assert.equal(designImage.getAttribute('data-canonical-image-url'), '');
-        assert.equal(designImage.style.width, '100px', 'width is reset');
-        assert.equal(designImage.style.height, '100px', 'height is reset');
 
         Applab.onPuzzleComplete();
       },
