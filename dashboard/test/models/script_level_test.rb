@@ -345,6 +345,16 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
   end
 
+  test 'redirects back to correct stage extras from bonus level' do
+    script = create :script
+    stage1 = create :stage
+    stage2 = create :stage
+    script_level = create :script_level, stage: stage1, script: script, bonus: true
+
+    assert_equal script_stage_extras_path(script.name, stage2.absolute_position),
+      script_level.next_level_or_redirect_path_for_user(@user, stage2)
+  end
+
   test 'can view my last attempt for regular levelgroup' do
     script = create :script
 
