@@ -342,14 +342,16 @@ Resources:
     Properties:
       DistributionConfig: <%= AWS::CloudFront.distribution_config(
         app.downcase.to_sym,
-        "origin-#{subdomain}",
+        subdomain('origin'),
         app == 'Dashboard' ?
-          [studio_subdomain] :
-          [subdomain] + (['i18n'] + CDO.partners).map{|x| "#{cname}-#{x}.#{domain}"},
+          # TODO: Set prod_stack_name: false after production cutover to CloudFormation-managed CloudFront distribution,
+          # to update CloudFront aliases to the production CNAME entries.
+          [studio_subdomain(prod_stack_name: true)] :
+          [subdomain(prod_stack_name: true)] + (['i18n'] + CDO.partners).map{|x| subdomain(nil, x, prod_stack_name: true)},
         {
           AcmCertificateArn: certificate_arn,
           MinimumProtocolVersion: 'TLSv1',
-          SslSupportMethod: 'sni-only'
+          SslSupportMethod: domain == 'code.org' ? 'vip' : 'sni-only'
         }
       )%>
 <%   end -%>
@@ -360,7 +362,7 @@ Resources:
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: "origin-<%=subdomain%>"
+        - Name: "<%=subdomain('origin')%>"
           Type: A
           AliasTarget:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
