@@ -1,6 +1,5 @@
 ---
 title: 3rd Party AP Computer Science A Educator Resources
-nav: educate_nav
 theme: responsive
 ---
 

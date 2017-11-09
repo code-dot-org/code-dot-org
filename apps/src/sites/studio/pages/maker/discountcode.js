@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import EligibilityChecklist from '@cdo/apps/templates/EligibilityChecklist';
 import { Status } from '@cdo/apps/lib/ui/ValidationStep';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import DiscountCodeInstructions from '@cdo/apps/lib/kits/maker/ui/DiscountCodeInstructions';
 
 $(document).ready(() => {
   let scriptData = getScriptData('discountcode');
@@ -24,10 +25,20 @@ $(document).ready(() => {
   }
 
   ReactDOM.render(
-    <EligibilityChecklist
-      statusPD={scriptData.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
-      statusStudentCount={scriptData.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
-    />
+    <div>
+      {!scriptData.discountCode &&
+        <EligibilityChecklist
+          statusPD={scriptData.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
+          statusStudentCount={scriptData.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
+        />
+      }
+      {scriptData.discountCode &&
+        <DiscountCodeInstructions
+          discountCode="XXXXXX"
+          fullDiscount={true}
+        />
+      }
+    </div>
     , document.getElementById('discountcode')
   );
 });

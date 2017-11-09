@@ -4,7 +4,7 @@ import i18n from "@cdo/locale";
 import _ from 'lodash';
 import $ from 'jquery';
 import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 import { styles } from './censusFormStyles';
@@ -63,14 +63,14 @@ class CensusForm extends Component {
   checkShowFollowUp() {
     const twentyHours = this.state.submission.twentyHours;
     this.setState({
-      showFollowUp: (twentyHours === 'Some' || twentyHours === 'All')
+      showFollowUp: (twentyHours === 'some' || twentyHours === 'all')
     }, this.checkShowPledge);
   }
 
   checkShowPledge() {
     const role = this.state.submission.role;
     this.setState({
-      showPledge: (role === 'Teacher' || role === 'Administrator')
+      showPledge: (role === 'teacher' || role === 'administrator')
     });
   }
 
@@ -243,6 +243,7 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
+        <input type="hidden" id="version" name="version" value="4"/>
           <CountryAutocompleteDropdown
             onChange={this.handleDropdownChange.bind("country")}
             value={submission.country}
@@ -250,7 +251,7 @@ class CensusForm extends Component {
             showErrorMsg={errors.country}
           />
           {US && (
-            <SchoolAutocompleteDropdown
+            <SchoolAutocompleteDropdownWithLabel
               setField={this.handleDropdownChange}
               value={submission.nces}
               showErrorMsg={errors.nces}
@@ -306,10 +307,10 @@ class CensusForm extends Component {
               >
                 {howManyStudents.map((role, index) =>
                   <option
-                    value={role}
+                    value={role.value}
                     key={index}
                   >
-                    {role}
+                    {role.display}
                   </option>
                 )}
               </select>
@@ -333,10 +334,10 @@ class CensusForm extends Component {
               >
                 {howManyStudents.map((role, index) =>
                   <option
-                    value={role}
+                    value={role.value}
                     key={index}
                   >
-                    {role}
+                    {role.display}
                   </option>
                 )}
               </select>
@@ -360,10 +361,10 @@ class CensusForm extends Component {
               >
                 {howManyStudents.map((role, index) =>
                   <option
-                    value={role}
+                    value={role.value}
                     key={index}
                   >
-                    {role}
+                    {role.display}
                   </option>
                 )}
               </select>
@@ -387,10 +388,10 @@ class CensusForm extends Component {
               >
                 {howManyStudents.map((role, index) =>
                   <option
-                    value={role}
+                    value={role.value}
                     key={index}
                   >
-                    {role}
+                    {role.display}
                   </option>
                 )}
               </select>
@@ -462,10 +463,10 @@ class CensusForm extends Component {
                 >
                   {frequencyOptions.map((role, index) =>
                     <option
-                      value={role}
+                      value={role.value}
                       key={index}
                     >
-                      {role}
+                      {role.display}
                     </option>
                   )}
                 </select>
@@ -502,10 +503,10 @@ class CensusForm extends Component {
             >
               {roleOptions.map((role, index) =>
                 <option
-                  value={role}
+                  value={role.value}
                   key={index}
                 >
-                  {role}
+                  {role.display}
                 </option>
               )}
             </select>
