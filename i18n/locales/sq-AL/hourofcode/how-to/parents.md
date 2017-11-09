@@ -33,7 +33,7 @@ Planifiko Orën tënde të Kodimit duke inspiruar fëmijën tënd dhe diskutoni 
 **Trego një video frymëzuese:**
 
 - Video origjinale e lancimit të Code.org, ku paraqiten Bill Gates, Mark Zuckerberg, dhe ylli i NBA Chris Bosh (Ka versione [1 minutëshe](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutëshe](https://www.youtube.com/watch?v=nKIu9yen5nc), dhe [9 minutëshe](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Videoja e lançimit të Orës së Kodimit 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), apo <% if @country == 'uk' %>[Video e Orës së Kodimit 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %>[ Videoja e Orës së Kodimit 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Presidenti i SHBA-së Obama duke i bërë thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Gjej më shumë [burime](%= resolve_url('https://code.org/inspire') %) dhe[ video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) frymëzuese.
 
