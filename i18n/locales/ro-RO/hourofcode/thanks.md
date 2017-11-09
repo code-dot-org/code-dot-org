@@ -1,7 +1,7 @@
 ---
 title: '<%= hoc_s(:title_signup_thanks) %>'
-layout: larg
-nav: cum_sa_navighezi
+layout: wide
+nav: how_to_nav
 social:
   "og:title": '<%= hoc_s(:meta_tag_og_title) %>'
   "og:description": '<%= hoc_s(:meta_tag_og_description) %>'
@@ -25,7 +25,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Ca un mulțumesc pentru ajutorul oferit de a face posibil pentru studenți sa înceapă să învețe ștința computărelor, ne-ar plăcea să va oferim un set gratis ds postere printate profesionist oferind diverse modele de urmat pentru clasa dumneavoastra. Foloseste codul oferit **POSTEREGRATUITE** la verificare. (Nota: aceasta este valabila doar in timp ce resursele dureaza si o sa ai nevoie sa acopere costurile de livrare. Intru-cat aceste postere sunt transportate din Statele Unite, costurile de transport pot fi destul de ridicate daca sunt transportate in Canada si international. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
 <br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-<br /> **Ora codului ruleaza pe parcursul <%=campanie_date('plin')%>. O sa tinem legatura cu noile tutoriale si alte captivante actualizarii dupa cum apar. In tmpul acesta, ce poti face acum?**
+<br /> **Ora codului ruleaza pe parcursul <%= campaign_date('full') %>. O sa tinem legatura cu noile tutoriale si alte captivante actualizarii dupa cum apar. In tmpul acesta, ce poti face acum?**
 
 ## 1. Imprastie vestea in scoala si comunitatea ta
 
