@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import ContentContainer from '../ContentContainer';
+import {UnconnectedContentContainer as ContentContainer} from '../ContentContainer.jsx';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
 import SectionsTable from '../studioHomepages/SectionsTable';

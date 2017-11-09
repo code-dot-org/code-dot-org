@@ -222,6 +222,8 @@ class Link extends Component {
   }
 }
 
+export const UnconnectedContentContainer = ContentContainer;
+
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
   isRtl: state.isRtl,

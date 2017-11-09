@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import color from '../util/color';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
-import LocalClassActionBlock from './studioHomepages/TwoColumnActionBlock';
+import LocalClassActionBlock from './studioHomepages/LocalClassActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
 import { pre2017MinecraftCards } from './congratsBeyondHocActivityCards';
 
@@ -19,11 +19,9 @@ class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const { isRtl } = this.props;
 
     return (
       <div style={styles.container}>
@@ -36,11 +34,9 @@ class StudentsBeyondHoc extends Component {
         <CourseBlocksStudentGradeBands
           showContainer={false}
           hideBottomMargin={true}
-          isRtl={isRtl}
         />
         <LocalClassActionBlock
           showHeading={false}
-          isRtl={isRtl}
         />
       </div>
     );
