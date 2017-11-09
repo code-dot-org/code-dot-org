@@ -98,12 +98,12 @@ class Video < ActiveRecord::Base
     # Note: similar video info is also set in javascript at levels/_blockly.html.haml
     {
       src: youtube_url(autoplay: autoplay ? 1 : 0),
-        key: key,
-        name: localized_name,
-        download: download,
-        thumbnail: thumbnail_path,
-        enable_fallback: true,
-        autoplay: autoplay
+      key: key,
+      name: localized_name,
+      download: download,
+      thumbnail: thumbnail_path,
+      enable_fallback: true,
+      autoplay: autoplay,
     }
   end
 end
