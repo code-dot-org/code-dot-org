@@ -43,6 +43,12 @@ var blocksToDisplayText = {
   tree: i18n.blockTypeTree(),
   water: i18n.blockTypeWater(),
   wool: i18n.blockTypeWool(),
+  wool_orange: i18n.blockTypeWoolOrange(),
+  wool_blue: i18n.blockTypeWoolBlue(),
+  wool_magenta: i18n.blockTypeWoolMagenta(),
+  wool_pink: i18n.blockTypeWoolPink(),
+  wool_red: i18n.blockTypeWoolRed(),
+  wool_yellow: i18n.blockTypeWoolYellow(),
   '': i18n.blockTypeEmpty()
 };
 
