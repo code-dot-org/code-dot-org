@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107193805) do
+ActiveRecord::Schema.define(version: 20171109230625) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -63,6 +63,15 @@ ActiveRecord::Schema.define(version: 20171107193805) do
     t.text     "qtip_config",      limit: 65535
     t.string   "on"
     t.string   "callout_text"
+  end
+
+  create_table "census_submission_form_maps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "census_submission_id", null: false
+    t.integer  "form_id",              null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["census_submission_id"], name: "index_census_submission_form_maps_on_census_submission_id", using: :btree
+    t.index ["form_id"], name: "index_census_submission_form_maps_on_form_id", using: :btree
   end
 
   create_table "census_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1273,6 +1282,7 @@ ActiveRecord::Schema.define(version: 20171107193805) do
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
+  add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "pd_payment_terms", "regional_partners"
