@@ -319,7 +319,9 @@ class Blockly < Level
   end
 
   def localized_authored_hints
-    if should_localize? && authored_hints
+    return unless authored_hints
+
+    if should_localize?
       translations = I18n.t("data.authored_hints").
         try(:[], "#{name}_authored_hint".to_sym)
 
