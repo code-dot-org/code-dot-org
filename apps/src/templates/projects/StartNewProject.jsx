@@ -3,7 +3,6 @@ import NewProjectButtons from './NewProjectButtons.jsx';
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import color from '../../util/color';
-import {valueOr} from '../../utils';
 
 const styles = {
   button: {
@@ -30,7 +29,11 @@ class StartNewProject extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool, // Default: true
+    canViewAdvancedTools: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    canViewAdvancedTools: true
   };
 
   state = {
@@ -42,8 +45,7 @@ class StartNewProject extends React.Component {
   };
 
   render() {
-    const { canViewFullList, isRtl } = this.props;
-    const canViewAdvancedTools = valueOr(this.props.canViewAdvancedTools, true);
+    const { canViewAdvancedTools, canViewFullList, isRtl } = this.props;
     const { showFullList } = this.state;
     return (
       <div>
