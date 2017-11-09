@@ -36,39 +36,13 @@
 #
 
 # This class represents census submissions coming from the original /yourschool
-# census page.
+# census page. This version of the page seemed to require followup questions and
+# pledged to be set but becasue of a bug that was not always the case. So we don't
+# require those here even when the conditions were met.
 #
 class Census::CensusYourSchool2017v1 < Census::CensusYourSchool2017v0
-  def validate_pledge?
-    submitter_role_teacher? || submitter_role_administrator?
-  end
-
-  def show_followup?
-    how_many_20_hours_some? || how_many_20_hours_all?
-  end
-
   validates :how_many_do_hoc, presence: true
   validates :how_many_after_school, presence: true
   validates :how_many_10_hours, presence: true
   validates :how_many_20_hours, presence: true
-
-  # We only show the pledge checkbox based on other answers.
-  # We expect some value (either true or false) in those cases only.
-  validates :pledged, exclusion: {in: [nil], message: "cannot be nil"}, if: :validate_pledge?
-
-  # These questions are shown conditionally based on other answers.
-  # Only validate under those conditions.
-  with_options if: :show_followup? do |submission|
-    submission.validates :topic_blocks, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_text, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_robots, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_internet, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_security, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_data, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_web_design, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_game_design, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_other, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_do_not_know, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :class_frequency, presence: true
-  end
 end

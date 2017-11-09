@@ -93,6 +93,9 @@ FactoryGirl.define do
   factory :census_your_school2017v3, parent: :census_your_school2017v2, class: Census::CensusYourSchool2017v3 do
   end
 
+  factory :census_your_school2017v4, parent: :census_your_school2017v3, class: Census::CensusYourSchool2017v4 do
+  end
+
   factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
     submitter_email_address "hoc@email.address"
     submitter_name "Hoc Submitter"
