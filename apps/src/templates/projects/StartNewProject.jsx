@@ -8,7 +8,6 @@ import {valueOr} from '../../utils';
 const styles = {
   button: {
     float: 'right',
-    marginTop: 10,
   },
   headingStartNew: {
     paddingRight: 10,
@@ -16,7 +15,12 @@ const styles = {
     fontSize: 16,
     fontFamily: '"Gotham 4r"',
     color: color.charcoal,
-    marginBottom: -20
+    marginBottom: -10
+  },
+  spacer: {
+    paddingTop: 10,
+    clear: 'both',
+    width: '100%'
   }
 };
 
@@ -95,6 +99,7 @@ class StartNewProject extends React.Component {
           />
         </div>
         }
+        <div style={styles.spacer}/>
       </div>
     );
   }
