@@ -100,9 +100,9 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**Dies gilt für alle Hour of Code-Tutorials:**
+**Dies gilt für alle "Hour of Code"-Tutorials:**
 
-- Require minimal prep-time for organizers
+- Benötigt etwas Vorbereitungszeit für den Veranstalter
 - Are self-guided - allowing students to work at their own pace and skill-level
 
 <a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
@@ -118,7 +118,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 ## 3) Plane im Voraus auf der Grundlage der verfügbaren Technologie
 
 - **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
-- **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+- **Haben Sie eine niedrige Bandbreite?** Zeigen Sie Videos vor der Klasse, so dass nicht jeder Schüler seine eigenen Videos herunterlädt. Oder probieren Sie die offline-Tutorials.
 
 ## 4) Inspiriere die Schülerinnen und Schüler und zeige ein Video
 
