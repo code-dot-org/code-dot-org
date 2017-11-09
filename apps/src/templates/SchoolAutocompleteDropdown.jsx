@@ -18,9 +18,7 @@ export default class SchoolAutocompleteDropdown extends Component {
     }
     const url = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
     return fetch(url)
-      .then(response => {
-        return response.ok ? response.json() : [];
-      })
+      .then(response => response.ok ? response.json() : [])
       .then(json => {
         const schools = json.map(school => ({
           value: school.nces_id.toString(),
