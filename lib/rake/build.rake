@@ -25,9 +25,6 @@ namespace :build do
       ChatClient.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
-      # Workaround for https://github.com/sass/node-sass/issues/1804
-      RakeUtils.npm_rebuild 'node-sass'
-
       # Workaround for https://github.com/karma-runner/karma-phantomjs-launcher/issues/120
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
 
