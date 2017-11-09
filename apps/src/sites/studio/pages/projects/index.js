@@ -18,8 +18,12 @@ import publishDialogReducer, {
 import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
+import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 
 $(document).ready(() => {
+  const script = document.querySelector('script[data-projects]');
+  const projectsData = JSON.parse(script.dataset.projects);
+
   registerReducers({projects, publishDialog: publishDialogReducer});
   const store = getStore();
   setupReduxSubscribers(store);
@@ -33,12 +37,12 @@ $(document).ready(() => {
 
   const showProjectWidget = experiments.isEnabled('createMoreProjects');
   if (showProjectWidget) {
-    const isRtl = false;
+    const isRtl = isRtlFromDOM();
     ReactDOM.render(
       <StartNewProject
         isRtl={isRtl}
         canViewFullList={true}
-        canViewAdvancedTools={true}
+        canViewAdvancedTools={projectsData.canViewAdvancedTools}
       />,
       document.getElementById('new-project-buttons')
     );
