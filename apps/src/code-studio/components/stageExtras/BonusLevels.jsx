@@ -20,6 +20,9 @@ const styles = {
     marginRight: THUMBNAIL_IMAGE_MARGIN,
     float: 'left',
   },
+  bonusLevels: {
+    transition: 'width 0.1s ease-out',
+  },
   bonusLevelsTitle: {
     fontSize: 24,
     fontFamily: '"Gotham 4r"',
@@ -146,18 +149,24 @@ export default Radium(class BonusLevels extends React.Component {
   };
 
   render() {
+    const totalThumbnailWidth = THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN;
     const totalWidth = this.props.bonusLevels[this.state.stageIndex].levels.length *
-      (THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN);
+      totalThumbnailWidth;
 
     const levels = this.props.bonusLevels.filter(stage =>
       stage.stageNumber < this.props.bonusLevels[this.state.stageIndex].stageNumber
     ).reduce((numLevels, stage) => numLevels + stage.levels.length, 0);
-    const scrollAmount = -1 * levels * (THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN);
+    const scrollAmount = -1 * levels * totalThumbnailWidth;
 
     const leftDisabled = this.state.stageIndex === 0;
     const rightDisabled = this.state.stageIndex === this.props.bonusLevels.length - 1;
     return (
-      <div style={{width: totalWidth}}>
+      <div
+        style={{
+          ...styles.bonusLevels,
+          width: totalWidth,
+        }}
+      >
         <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
         <h3 style={styles.stageNumberHeading}>
           <RadiumFontAwesome
@@ -186,7 +195,11 @@ export default Radium(class BonusLevels extends React.Component {
           {this.props.bonusLevels.map(stage =>
             <div
               key={stage.stageNumber}
-              style={{...styles.challengeRow, left: scrollAmount}}
+              style={{
+                ...styles.challengeRow,
+                left: scrollAmount,
+                width: stage.levels.length * totalThumbnailWidth,
+              }}
             >
               {stage.levels.map(level => (
                 <ConnectedBonusLevel key={level.id} {...level} />
