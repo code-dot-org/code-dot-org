@@ -8,6 +8,9 @@ import { tutorialTypes } from './tutorialTypes.js';
 const styles = {
   container: {
     width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    maxWidth: 970
   },
 };
 
