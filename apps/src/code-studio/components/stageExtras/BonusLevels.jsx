@@ -10,13 +10,14 @@ import { connect } from 'react-redux';
 import { isPerfect } from '@cdo/apps/code-studio/progressRedux';
 
 const THUMBNAIL_IMAGE_SIZE = 200;
+const THUMBNAIL_IMAGE_MARGIN = 10;
 const RadiumFontAwesome = Radium(FontAwesome);
 
 const styles = {
   bonusLevel: {
     width: THUMBNAIL_IMAGE_SIZE,
     textAlign: 'center',
-    marginRight: 10,
+    marginRight: THUMBNAIL_IMAGE_MARGIN,
     float: 'left',
   },
   bonusLevelsTitle: {
@@ -33,7 +34,6 @@ const styles = {
     transition: 'left 0.25s ease-out',
   },
   challenges: {
-    //height: 256,
     overflowX: 'hidden',
     whiteSpace: 'nowrap',
   },
@@ -146,13 +146,18 @@ export default Radium(class BonusLevels extends React.Component {
   };
 
   render() {
+    const totalWidth = this.props.bonusLevels[this.state.stageIndex].levels.length *
+      (THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN);
+
     const levels = this.props.bonusLevels.filter(stage =>
       stage.stageNumber < this.props.bonusLevels[this.state.stageIndex].stageNumber
     ).reduce((numLevels, stage) => numLevels + stage.levels.length, 0);
+    const scrollAmount = -1 * levels * (THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN);
+
     const leftDisabled = this.state.stageIndex === 0;
     const rightDisabled = this.state.stageIndex === this.props.bonusLevels.length - 1;
     return (
-      <div style={{width: this.props.bonusLevels[this.state.stageIndex].levels.length * 210}}>
+      <div style={{width: totalWidth}}>
         <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
         <h3 style={styles.stageNumberHeading}>
           <RadiumFontAwesome
@@ -164,7 +169,9 @@ export default Radium(class BonusLevels extends React.Component {
               leftDisabled && styles.arrowDisabled,
             ]}
           />
-          {i18n.extrasStageNChallenges({stageNumber: this.props.bonusLevels[this.state.stageIndex].stageNumber})}
+          {i18n.extrasStageNChallenges({
+            stageNumber: this.props.bonusLevels[this.state.stageIndex].stageNumber
+          })}
           <RadiumFontAwesome
             icon="caret-right"
             onClick={this.nextStage}
@@ -177,8 +184,13 @@ export default Radium(class BonusLevels extends React.Component {
         </h3>
         <div style={styles.challenges}>
           {this.props.bonusLevels.map(stage =>
-            <div key={stage.stageNumber} style={{...styles.challengeRow, left: -210 * levels}}>
-              {stage.levels.map(level => (<ConnectedBonusLevel key={level.id} {...level} />))}
+            <div
+              key={stage.stageNumber}
+              style={{...styles.challengeRow, left: scrollAmount}}
+            >
+              {stage.levels.map(level => (
+                <ConnectedBonusLevel key={level.id} {...level} />
+              ))}
             </div>
           )}
         </div>
