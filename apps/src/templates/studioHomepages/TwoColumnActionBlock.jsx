@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import color from "../../util/color";
 import GridContainer from './GridContainer';
 import Button from '@cdo/apps/templates/Button';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -46,18 +46,18 @@ const styles = {
 
 class TwoColumnActionBlock extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     imageUrl: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
     subHeading: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     buttonUrl: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired
+    buttonText: PropTypes.string.isRequired,
+    responsiveSize: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const { isRtl, responsive, imageUrl, heading, subHeading, description, buttonUrl, buttonText } = this.props;
+    const { imageUrl, heading, subHeading, description, buttonUrl, buttonText, responsiveSize, isRtl } = this.props;
 
     return (
       <div>
@@ -67,9 +67,9 @@ class TwoColumnActionBlock extends Component {
         <GridContainer
           numColumns={2}
           isRtl={isRtl}
-          responsive={responsive}
+          responsiveSize={responsiveSize}
         >
-          {responsive.isResponsiveCategoryActive('lg') && (
+          {responsiveSize ==='lg' && (
             <img src={imageUrl}/>
           )}
           <div style={styles.textItem}>
@@ -92,45 +92,38 @@ class TwoColumnActionBlock extends Component {
   }
 }
 
-export class LocalClassActionBlock extends Component {
+class LocalClassActionBlock extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     showHeading: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    responsiveSize: PropTypes.string.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, showHeading } = this.props;
+    const { showHeading, isRtl, responsiveSize } = this.props;
     const heading = showHeading ? i18n.findLocalClassHeading() : '';
 
     return (
       <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
         imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
         description={i18n.findLocalClassDescription()}
         buttonUrl={pegasus('/learn/local')}
         buttonText={i18n.findLocalClassButton()}
+        isRtl={isRtl}
+        responsiveSize={responsiveSize}
       />
     );
   }
 }
 
 export class AdministratorResourcesActionBlock extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
-  };
 
   render() {
-    const { isRtl, responsive } = this.props;
 
     return (
       <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
         imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
         heading={i18n.administratorResourcesHeading()}
         subHeading={i18n.administratorResourcesSubheading()}
@@ -141,3 +134,8 @@ export class AdministratorResourcesActionBlock extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(LocalClassActionBlock);

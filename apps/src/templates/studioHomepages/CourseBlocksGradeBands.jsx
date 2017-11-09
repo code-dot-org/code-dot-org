@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
 import Responsive from '../../responsive';
@@ -15,12 +16,12 @@ class CourseBlocksGradeBands extends Component {
       })
     ).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsiveSize: PropTypes.string.isRequired,
   };
 
   render() {
     return (
-      <ResourceCardResponsiveContainer responsive={this.props.responsive}>
+      <ResourceCardResponsiveContainer>
         {this.props.cards.map(
           (card, cardIndex) => (
             <ResourceCard
@@ -38,4 +39,7 @@ class CourseBlocksGradeBands extends Component {
   }
 }
 
-export default CourseBlocksGradeBands;
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(CourseBlocksGradeBands);
