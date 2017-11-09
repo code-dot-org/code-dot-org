@@ -92,4 +92,11 @@ $projects-table-width: 970px;
 
 .new_project_links_wrapper {
   margin-left: -5px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#legacy-project-links {
+  margin-bottom: 20px;
 }
