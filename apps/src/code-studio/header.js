@@ -11,9 +11,10 @@ import Dialog from './LegacyDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
-import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
+import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
 
 import { convertBlocksXml } from '../craft/code-connection/utils';
+import experiments from '../util/experiments';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -175,12 +176,25 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
-    const canPublish = !!appOptions.isSignedIn &&
-      PUBLISHED_PROJECT_TYPES.includes(appType);
+
+    // Only show the publish button for non-experimental project types in the
+    // project share dialog. this list can go away once the publishMoreProjects
+    // experiment is launched.
+    const nonExperimentalProjectTypes = [
+      'artist', 'playlab', 'gumball', 'iceage', 'infinity', 'applab', 'gamelab',
+    ];
+    const projectTypes = experiments.isEnabled('publishMoreProjects') ?
+      PublishableProjectTypesOver13 : nonExperimentalProjectTypes;
+
+    // Allow publishing for any project type that older students can publish.
+    // Younger students should never be able to get to the share dialog in the
+    // first place, so there's no need to check age against project types here.
+    const canPublish = !!appOptions.isSignedIn && projectTypes.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
         <ShareDialog
+          isProjectLevel={!!dashboard.project.isProjectLevel()}
           i18n={i18n}
           shareUrl={shareUrl}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}

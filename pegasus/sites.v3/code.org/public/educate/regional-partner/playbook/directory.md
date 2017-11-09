@@ -18,15 +18,18 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Maryland](#md)**<br/>
 - **[Michigan](#mi)**<br/>
 - **[Minnesota](#mn)**<br/>
+- **[Mississippi](#ms)**<br/>
 - **[Missouri](#mo)**<br/>
 - **[Montana](#mt)**</br/>
 - **[Nevada](#nv)**</br/>
 - **[New Jersey](#nj)**</br/>
+- **[New Mexico](#nm)**</br/>
 - **[New York](#ny)**<br/>
 - **[North Carolina](#nc)**<br/>
 - **[Ohio](#oh)**<br/>
 - **[Oklahoma](#ok)**<br/>
 - **[Pennsylvania](#pa)**</br/>
+- **[Rhode Island](#ri)**</br/>
 - **[South Carolina](#sc)**</br/>
 - **[Tennessee](#tn)**</br/>
 - **[Texas](#tx)**<br/>
@@ -174,6 +177,22 @@ CS Discoveries<br/>
 **Contact Information**<br/>
 Anthonette Pena<br/>
 apena@eisca.org
+
+<br/>
+### [Fresno County Superintendent of Schools](https://fcoe.org/)<br/>
+Fresno County, California	<br/>
+
+Fresno County Superintendent of Schools is a county office of education that supports the 32 school districts in Fresno County, California. 
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Working with school districts <br/>
+
+**Contact Information**<br/>
+Marlena Hebern<br/>
+code@fcoe.org
 
 <br/>
 
@@ -483,8 +502,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and co-working<br/>
 
 **Contact Information**<br/>
-Samantha Dahlby, K-12 Education Coordinator<br/>
-Samantha@newbo.co
+Kristine Sorensen<br/>
+Kristine@newbo.co
 
 <br/>
 
@@ -518,7 +537,7 @@ ________________
 <a id="me"></a>
 
 ## Maine
-### Educate Maine and the Maine Mathematics and Science Alliance <br/>
+### [Educate Maine](http://www.educatemaine.org/) & [Maine Mathematics and Science Alliance](https://mmsa.org/) <br/>
 Maine
 
 Educate Maine’s mission is to champion college and career readiness and to increase the education attainment of all Maine people. All Maine students should graduate from high school prepared to succeed in postsecondary education and in the workplace and the number of Maine people with a college degree, a postsecondary certificate, or a professional credential must increase to meet the demands of the economy. Project>Login, one of Educate Maine's programs, is a campaign to increase Maine’s computing and information technology professionals through education, information, and internships.
@@ -592,7 +611,7 @@ ________________
 ### [Twin Cities PBS](http://scigirlsconnect.org)<br/>
 Minnesota<br/>
 
-Twin Cities PBS (TPT) mission is to enrich lives and strengthen our community through the power of media. The STEM Department at TPT creates a nationally broadcast PBS television show, creates STEM content for K-12 educators, and runs a national education outreach program.
+Twin Cities PBS (TPT) mission is to enrich lives and strengthen our community through the power of media. The STEM Department at TPT creates a nationally broadcast PBS television show, creates STEM content for K-12 educators, and runs a national education outreach program. 
 
 **Programs**<br/>
 CS Principles<br/>
@@ -603,6 +622,29 @@ CS Discoveries<br/>
 **Contact Information**<br/>
 Alex Dexheimer<br/>
 adexheimer@tpt.org
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="ms"></a>
+
+## Mississippi
+### [Mississippi State University](http://cs4ms.org/)<br/>
+Mississippi<br/>
+
+The Computer Science for Mississippi (CS4MS) Initiative is a statewide pilot program of the Mississippi Department of Education to incorporate computer science curricula into Mississippi classrooms.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Implementing CS state-wide<br/>
+
+**Contact Information**<br/>
+Shelly Hollis<br/>
+thecs4ms@gmail.com
+
 
 [**Back to the top**](#top)
 <br/>
@@ -676,7 +718,7 @@ ________________
 <a id="nj"></a>
 
 ## New Jersey
-### TCNJ Center for Excellence in STEM Education(https://centerforstem.pages.tcnj.edu/)<br/>
+### [TCNJ Center for Excellence in STEM Education](https://centerforstem.pages.tcnj.edu/)<br/>
 New Jersey
 
 **Programs**<br/>
@@ -688,6 +730,27 @@ Henry Harms<br/>
 harms@tcnj.edu<br/><br/>
 [**Back to the top**](#top)
 <br/>
+________________
+<a id="nm"></a>
+## New Mexico
+### [Explora](http://www.explora.us/)<br/>
+New Mexico<br/>
+
+Explora is a Science Center and Children's Museum. Our mission is to create opportunities for inspirational discovery and the joy of lifelong learning through interactive experiences in science, technology, engineering, art, and math.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Informal Science Education<br/>
+
+**Contact Information**<br/>
+Kevin Dilley<br/>
+kdilley@explora.us
+
+[**Back to the top**](#top)
+<br/>
+
 ________________
 <a id="ny"></a>
 ## New York
@@ -803,6 +866,31 @@ jregino@dciu.org<br/>
 
 Rebecca Jervey<br/>
 rjervery@dciu.org<br/>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="ri"></a>
+
+## Rhode Island
+### [University of Rhode Island](http://k12.cs.uri.edu/)<br/>
+Rhode Island<br/>
+
+The University of Rhode Island’s Computer Science Department provides computer science and computational thinking to Rhode Island’s Elementary and Secondary Schools through free course materials, teacher professional development, and college credit in computer science for high school students.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:**
+Cyber Security, CTE Programming and Web Development, Computing, and Data Science
+
+**Contact Information**<br/>
+Jessie Barrett<br/> 
+urics.k12@gmail.com<br/>
+
+
 
 [**Back to the top**](#top)
 <br/>

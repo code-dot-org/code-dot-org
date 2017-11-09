@@ -28,7 +28,6 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
-  const isEnglish = homepageData.isEnglish;
   const query = queryString.parse(window.location.search);
 
   const store = getStore();
@@ -52,14 +51,14 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingCoursesEFImprovements();
-  let announcementDescription = i18n.announcementDescriptionCoursesEFImprovements();
-  let announcementLink =
-    "http://teacherblog.code.org/post/165559168804/new-improvements-to-cs-fundamentals-courses-e-and";
-  let announcementId = "courses_e_f_improvements";
+  let announcementHeading = i18n.announcementHeadingFacilitatorApp();
+  let announcementDescription = i18n.announcementDescriptionFacilitatorApp();
+  let announcementLink = "https://code.org/facilitator";
+  let announcementId = "facilitator_app";
+  let announcementType = "";
 
   // Optional override of teacher announcement.
-  if (isEnglish &&
+  if (
     announcementOverride &&
     announcementOverride.teacher_announce_heading &&
     announcementOverride.teacher_announce_description &&
@@ -71,6 +70,7 @@ function showHomepage() {
     announcementDescription = announcementOverride.teacher_announce_description;
     announcementLink = announcementOverride.teacher_announce_url;
     announcementId = announcementOverride.teacher_announce_id;
+    announcementType = announcementOverride.teacher_announce_type;
   }
 
   ReactDOM.render (
@@ -142,6 +142,7 @@ function showHomepage() {
                 description: announcementDescription,
                 link: announcementLink,
                 image: "",
+                type: announcementType,
                 id: announcementId
               }
             ]}
@@ -195,6 +196,7 @@ window.CleverTakeoverManager = function (options) {
 
   function onCancelModal() {
     $("#user_user_type").val("student");
+    $.get("/users/clever_modal_dismissed");
     closeLinkCleverModal();
   }
 

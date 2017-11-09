@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Содействовие с Час кода
 
@@ -39,13 +37,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **"Час кода" является торговой маркой. Мы не хотим прекратить использование этой марки, но хотим убедиться, что оно отвечает нескольким требованиям:**
 
-  1. Любые ссылки на Час кода должны использоваться не как ваше собственное название, а как отсылка к Часу кода как общественному движению. Хороший пример: "Принимайте участие в Часе кода на ACMECorp.com". Плохой пример: "Попробуйте Час кода от корпорации ACME".
-  2. Используйте надстрочный знак "TM" в самых видных местах при упоминании Часа кода как на веб-сайтах, так и в описании приложений.
-  3. Включите в описание страницы абзац, включая ссылки на сайты Недели Образования в Информатике (CSEdWeek) и Code.org, содержащий следующую информацию:
+1. Любые ссылки на Час кода должны использоваться не как ваше собственное название, а как отсылка к Часу кода как общественному движению. Хороший пример: "Принимайте участие в Часе кода на ACMECorp.com". Плохой пример: "Попробуйте Час кода от корпорации ACME".
+2. Используйте надстрочный знак "TM" в самых видных местах при упоминании Часа кода как на веб-сайтах, так и в описании приложений.
+3. Включите в описание страницы абзац, включая ссылки на сайты Недели Образования в Информатике (CSEdWeek) и Code.org, содержащий следующую информацию:
     
     *"Час кода - это общенациональная инициатива CsedWeek.org \[csedweek.org\] (Недели образования в Информатике) и Code.org [code.org] с целью вовлечения миллионов учеников в один час информатики и программирования." (“The 'Hour of Code' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”)*
 
-  4. Не допускается использование "Час кода" в названиях приложений.
+4. Не допускается использование "Час кода" в названиях приложений.
 
 <a id="stickers"></a>
 
@@ -66,7 +64,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 С Час кода, компьютерные науки на страницах Google, MSN, Yahoo! и Disney. Более 100 партнеров собрались вместе, чтобы поддержать это движение. В каждом магазине Apple в мире прошел Час кода. Президент Обама написал свою первую строчку кода в рамках кампании.
 
-В этом году, давайте сделаем его еще больше.Я прошу вас присоединиться к Час кода 2016. Просьба, связываться с мероприятием в течение образовательной недели компьютерных наук, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 

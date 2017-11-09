@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promovo Orën e Kodimit
 
@@ -39,13 +37,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **"Ora e Kodimit" është markë tregtare. Ne nuk duam të parandalojmë këtë përdorim, por ne duam të sigurohemi se përshtatet brenda disa kufijve:**
 
-  1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mire: "Merr pjese ne Oren e Kodimit™ ne ACMECorp.com". Shembull i keq: "Provo Orën e Kodimit nga ACME Corp".
-  2. Përdorni një "TM"si indeks të sipërm në vendet më të dukshme që ju përmendni "Orën e Kodimit", në faqen tuaj web dhe në përshkrimet e aplikacionit.
-  3. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim:
+1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mire: "Merr pjese ne Oren e Kodimit™ ne ACMECorp.com". Shembull i keq: "Provo Orën e Kodimit nga ACME Corp".
+2. Përdorni një "TM"si indeks të sipërm në vendet më të dukshme që ju përmendni "Orën e Kodimit", në faqen tuaj web dhe në përshkrimet e aplikacionit.
+3. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim:
     
     *"Ora e Kodimit" është një nismë në shkallë vendi nga Java Edukative e Shkencave Kompjuterike[csedweek.org] dhe Code.org [code.org] për të futur miliona studentë për një orë në shkencën kompjuterike dhe programimin kompjuterik. "*
 
-  4. Nuk ka përdorimi të "Orës së Kodimit" në emrat e aplikacioneve.
+4. Nuk ka përdorimi të "Orës së Kodimit" në emrat e aplikacioneve.
 
 <a id="stickers"></a>
 
@@ -66,7 +64,7 @@ Kompjuterat janë kudo, duke ndryshuar çdo industri në planet. Por më pak se 
 
 Nëpërmjet Orës së Kodimit, shkenca kompjuterike ka qenë në faqen kryesore të Google, MSN, Yahoo! dhe Disney-it. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje. Çdo dyqan apple në botë ka zhvilluar një orë kodimi. Presidenti Obama shkruajti rreshtin e tij të parë të kodit gjatë fushatës.
 
-Këtë vit, le ta bëjmë më të madhe. Po ju kërkoj që të bashkoheni me Orën e Kodimit 2016. Ju lutem përfshihuni në një event Ore Kodimi gjatë Javës së Edukmit të Shkencave Kompjuterike, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Përhapeni fjalën. Organizo eventin. Gjeni një shkollë në afërsi për t'u regjistruar në këtë event ose provojeni vet Orën e Kodimit. Gjithësecili nga ne mund të përfitojë nga këto mësime elementare.
 
@@ -82,7 +80,7 @@ Kompjuterat janë kudo, duke ndryshuar çdo industri në planet, por më pak se 
 
 Nëpërmjet Orës së Kodimit, shkenca kompjuterike ka qenë në faqen kryesore të Google, MSN, Yahoo! dhe Disney-it. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje. Çdo dyqan apple në botë ka zhvilluar një orë kodimi. Presidenti Obama shkruajti rreshtin e tij të parë të kodit gjatë fushatës.
 
-Kjo është arsyeja pse secili nga [X numër] nxënësit në [EMRI I SHKOLLES] po bëhen pjesë e eventit më të madhe të të nxënurit në histori: Ora e Kodimit, nga data 5 deri më 11 dhjetor<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Po ju shkruaj për t'iu ftuar të bëheni pjesë e takimit lançues si dhe të ndiqni fëmijët teksa marrin pjesë në aktivitetin tonë më [DATE].
 

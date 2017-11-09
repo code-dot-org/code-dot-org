@@ -1,17 +1,17 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_parents) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # How to complete an Hour of Code with your child
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## ১। ভিডিওটি দেখুন কীভাবে করতে হয়ঃ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2) প্রশিক্ষণ-পর্ব বেছে নিনঃ
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 

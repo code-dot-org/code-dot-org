@@ -2591,10 +2591,10 @@
           et trykk på skjermen.
       5:
         image: notes/starwars_events_5.JPG
-        text: Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
-          til en opprørspilot og så bevege seg ned til en annen opprørspilot. Vi bruker
-          hendelser for å få ham til å flytte på seg. Når spilleren bruker piltastene
-          opp/ned eller opp/ned-knappene.
+        text: 'Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
+          til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi
+          bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker
+          piltastene opp/ned eller opp/ned-knappene.'
       6:
         image: notes/starwars_events_6.JPG
         text: Vi bruker whenUp() hendelsesblokken og kobler goUp() blokken til den.
@@ -2729,10 +2729,10 @@
           et trykk på skjermen.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
-          til en opprørspilot og så bevege seg ned til en annen opprørspilot. Vi bruker
-          hendelser for å få ham til å flytte på seg. Når spilleren bruker piltastene
-          opp/ned eller opp/ned-knappene.
+        text: 'Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
+          til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi
+          bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker
+          piltastene opp/ned eller opp/ned-knappene.'
       6:
         image: notes/starwars_blocks_events_6.JPG
         text: We use the whenUp() event block and attach the goUp() block to it. When

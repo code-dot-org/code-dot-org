@@ -22,6 +22,8 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
+import experiments from '../../util/experiments';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -317,15 +319,27 @@ Craft.init = function (config) {
         Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
+        const hammerToButton = {
+          [Hammer.DIRECTION_LEFT]: 'leftButton',
+          [Hammer.DIRECTION_RIGHT]: 'rightButton',
+          [Hammer.DIRECTION_UP]: 'upButton',
+          [Hammer.DIRECTION_DOWN]: 'downButton',
+        };
+
         const onDrag = function (e) {
-          const hammerToButton = {
-            [Hammer.DIRECTION_LEFT]: 'leftButton',
-            [Hammer.DIRECTION_RIGHT]: 'rightButton',
-            [Hammer.DIRECTION_UP]: 'upButton',
-            [Hammer.DIRECTION_DOWN]: 'downButton',
-          };
           if (hammerToButton[e.direction]) {
-            Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[hammerToButton[e.direction]]);
+            Craft.gameController.codeOrgAPI.arrowDown(
+              directionToFacing[hammerToButton[e.direction]],
+            );
+          }
+          e.preventDefault();
+        };
+
+        const onDragEnd = function (e) {
+          if (hammerToButton[e.direction]) {
+            Craft.gameController.codeOrgAPI.arrowUp(
+              directionToFacing[hammerToButton[e.direction]],
+            );
           }
           e.preventDefault();
         };
@@ -335,6 +349,7 @@ Craft.init = function (config) {
         mc.add(new Hammer.Press({time: 150}) );
         mc.add(new Hammer.Tap() );
         mc.on("pan", onDrag);
+        mc.on('panend pancancel', onDragEnd);
         mc.on("press", () => Craft.gameController.codeOrgAPI.clickDown(() => {}));
         mc.on("tap", () => {
           Craft.gameController.codeOrgAPI.clickDown(() => {});
@@ -591,6 +606,7 @@ Craft.reset = function (first) {
   if (Craft.level.usePlayer) {
     Craft.hideSoftButtons();
   }
+  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
@@ -813,6 +829,7 @@ Craft.reportResult = function (success) {
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
+  const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
   studioApp().report({
     app: 'craft',
@@ -843,7 +860,8 @@ Craft.reportResult = function (success) {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: image,
-        showingSharing: Craft.initialConfig.level.freePlay
+        showingSharing: Craft.initialConfig.level.freePlay,
+        saveToProjectGallery,
       });
     }
   });

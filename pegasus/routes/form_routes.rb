@@ -21,6 +21,8 @@ post '/forms/:kind' do |kind|
     halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
   rescue Sequel::UniqueConstraintViolation
     halt 409
+  rescue NameError
+    halt 400
   end
 end
 

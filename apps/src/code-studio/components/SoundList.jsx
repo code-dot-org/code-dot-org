@@ -50,7 +50,7 @@ export default class SoundList extends React.Component {
 
     return (
       <div style={styles.root}>
-        {soundEntries.length > 0 ? soundEntries : 'No sounds found'}
+        {soundEntries.length > 0 ? soundEntries : 'No sound found. Upload your own sounds by clicking on the "My files" tab.'}
       </div>
     );
   }

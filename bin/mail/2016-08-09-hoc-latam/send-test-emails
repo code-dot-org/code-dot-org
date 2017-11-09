@@ -1,4 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 08-08-16-latam-hoc ../mailing-common/test-params-international.csv
-../send-to-mailing-list 08-08-16-brazil-hoc ../mailing-common/test-params-international.csv

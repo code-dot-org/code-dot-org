@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -19,7 +19,7 @@ const styles = {
   }
 };
 
-export default class TeacherHomepage extends React.Component {
+export default class TeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
     courses: shapes.courses,
@@ -53,7 +53,7 @@ export default class TeacherHomepage extends React.Component {
         {announcements.length > 0 && (
           <div>
             <Notification
-              type="bullhorn"
+              type={announcements[0].type || "bullhorn"}
               notice={announcements[0].heading}
               details={announcements[0].description}
               dismissible={false}

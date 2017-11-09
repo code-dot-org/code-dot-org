@@ -34,9 +34,12 @@ class ActivitiesController < ApplicationController
     # Check a second switch if we passed the last level of the script.
     # Keep this logic in sync with code-studio/reporting#sendReport on the client.
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    post_final_milestone = Gatekeeper.allows('postFinalMilestone', where: {script_name: script_name}, default: true)
-    solved_final_level = solved && @script_level.try(:final_level?)
-    unless post_milestone || (post_final_milestone && solved_final_level)
+    post_failed_run_milestone = Gatekeeper.allows('postFailedRunMilestone', where: {script_name: script_name}, default: true)
+    final_level = @script_level.try(:final_level?)
+    # We should only expect milestone posts if:
+    #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
+    #  - this is the final level - we always post on final level
+    unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
       head 503
       return
     end
@@ -173,10 +176,14 @@ class ActivitiesController < ApplicationController
     synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-    if synchronous_save
-      @activity = Activity.create!(attributes)
-    else
-      @activity = Activity.create_async!(attributes)
+
+    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
+    if allow_activity_writes
+      if synchronous_save
+        @activity = Activity.new(attributes).tap(&:atomic_save!)
+      else
+        @activity = Activity.create_async!(attributes)
+      end
     end
     if @script_level
       if synchronous_save

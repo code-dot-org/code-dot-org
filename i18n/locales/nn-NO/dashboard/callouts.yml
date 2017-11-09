@@ -5,31 +5,31 @@ nn:
       2-3 Artist Debugging 1_callout:
         2-3_Artist_Debugging_1_a: Kunstneren har ikke en "Skritt"-knapp, men kan du dra glidebryteren mot venstre for å se programmet kjøre saktere.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det vet du ikke før du kjører koden!
+        Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det veit du ikkje før du køyrer koden!
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Click and drag a "Text Area" onto the screen
-        screenSelectorCallout3: Pick the screen you made
+        dragTextAreaIn: Klikk og dra eit "tekstområde" på skjermen
+        screenSelectorCallout3: Vel skjermen du laga
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
+        screenSelectorCallout2: Dette er skjerm veljaren
         changePlace1ID: Change the id of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's "text"
-        appLabIntro2_textColor: Scroll down to change the "text color"
+        applabIntro2_1: Klikk på tittelen på appen
+        appLabIntro2_designMenu: Bruk desse menyane til å endre teksten i din app "tekst"
+        appLabIntro2_textColor: Bla ned for å endre "tekstfargen"
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: Click the story text on this screen
+        applabIntro2storyText: Klikk historieteksten på denne skjermen
         appLabIntro2_editStoryText: Drag out the bottom right hand corner of this text box for more space. Then fill in your story text
-        appLabIntro2_textColor: Try out some of the different properties you can change below
+        appLabIntro2_textColor: Prøv nokre av dei ulike eigenskapene du kan endre under
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag a button onto your screen.
+        designToolboxCallOut: Dra ein knapp inn på skjermen.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton" or "goOutsideButton"
-        screenSelectorCallout3: Go to your "startScreen"
+        screenSelectorCallout3: Gå til din "startScreen"
       AppLab Intro 2 - add more buttons 2_callout: [ ]
       AppLab Intro 2 - add more buttons_callout: [ ]
       AppLab Intro 2 - add onEvent_callout:
@@ -132,11 +132,11 @@ nn:
       CSD U3 Sprites text_callout: [ ]
       CSD U3 UP_ARROW_callout: [ ]
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Endre nummeret her
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenettet.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenettet.
       CSD U3 Variables TEMPLATE square_callout: [ ]
       CSD U3 Variables make a big square_callout: [ ]
       CSD U3 Variables make a square_callout: [ ]
@@ -234,14 +234,14 @@ nn:
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kodeområdet.
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kodeområdet.
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kodeområdet.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -250,8 +250,8 @@ nn:
         CSD_U3_L18_S3_C2: Variables area
       CSD U3 keydown conditional_callout: [ ]
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Her er "Køyr"-knappen.
       CSD U3 picture_callout: [ ]
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
@@ -264,11 +264,11 @@ nn:
       CSD U3 platform variable1_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Her er "Køyr"-knappen.
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kodeområdet.
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -301,9 +301,9 @@ nn:
         Code Studio Puzzle Challenge 6 - Bee_callout1: Drag blocks into the trash can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: [ ]
       Counting_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       Course 4 Artist 4_callout:
         repeat_full_circle: Angi kor mange gonger zombien må flytte for å lage ein full sirkel
       Course 4 Artist 7_callout:
@@ -414,10 +414,12 @@ nn:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace.
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Spel av ein lyd når denne hendinga skjer.
       Infinity_move_directions_callout:
@@ -444,20 +446,36 @@ nn:
       MC HOC 2016 New Drop_callout: [ ]
       MC HOC 2016 New Spawn_callout: [ ]
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: Trykk "Kjør" for å begynne å flytte.
-      MC_HOC_2017_01_Cole_callout: [ ]
+        MC_HOC_2016_New_Walk_callout2: Trykk "Køyr" for å begynne å flytte.
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Use the arrow keys or click here to start moving the player.
       MC_HOC_2017_01_Kiki_callout: [ ]
+      MC_HOC_2017_02_Cole_callout: [ ]
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for the Agent to help get you through the levels.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to repeat it over and over again!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit them!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       Modular Arithmetic_callout: [ ]
       NEW Course 4 Artist Functions 10_callout: [ ]
       NEW Course 4 Artist Functions 3_callout:
@@ -487,15 +505,15 @@ nn:
       New App Lab Project_callout: [ ]
       New Artist Project_callout:
         New Artist Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Artist Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Artist Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       New Frozen Project_callout:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       New Maker Lab Project_callout: [ ]
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -515,13 +533,13 @@ nn:
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenettet.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det vet du ikke før du kjører koden!
+        Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det veit du ikkje før du køyrer koden!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenettet.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       Play Lab Rocket 2_callout:
         pass_function: Denne start(funksjon) blokken lar deg sende en funksjon (ikke verdien funksjonen returnerer med inndata) inn i rakett animasjon biblioteket. Animasjonen du ser bruker faktisk funksjonen til å flytte raketten!
         play lab rocket 2: Definere din raketthøyde-funksjon her
@@ -534,32 +552,41 @@ nn:
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for a hint!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       Rocket Height Course A_callout:
         pass_function: Denne start(funksjon) blokken lar deg sende en funksjon (ikke verdien funksjonen returnerer med inndata) inn i rakett animasjon biblioteket. Animasjonen du ser bruker faktisk funksjonen til å flytte raketten!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
+      SG Add Subgoals practice_callout: [ ]
+      SG U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
+      SG U3L2 Using Simple Commands part 1_callout: [ ]
       SG U3L2 Using Simple Commands_callout: [ ]
-      SG U3L2_Turtle3by3Grid_callout: [ ]
+      SG U3L2_Add-subgoals_callout: [ ]
+      SG U3L2_Turtle3by3Grid_callout:
+        pen_functions: penUp and penDown are here now if you want to use them.
+        goals_tab: drag goals out from here
       SG U3L2_TurtleSquare_right_callout: [ ]
-      SGU3L2A Introducing Subgoals_callout: [ ]
+      SGU3L2A Introducing Subgoals_callout:
+        goals_palette_show: Here is a list of subgoals
+        goals_workspace: Example of code with subgoals in it
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Rediger denne funksjonen for å hindre at Sam forsvinner ut til høyre
       Sam the Butterfly 5_callout: [ ]
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       TestLab_callout: [ ]
       U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
       U3 - Simple Drawing - Fill_callout: [ ]
@@ -578,6 +605,8 @@ nn:
       U3 Variables make a square_callout: [ ]
       U3L05_3x3GridEfficiencyChallenge_callout: [ ]
       U3L05_draw3x3GridEfficiently_callout: [ ]
+      U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
       U3L2 Using Simple Commands (no tooltips)_callout: [ ]
       U3L2 Using Simple Commands_callout: [ ]
       U3L2_Turtle3by3Grid_callout: [ ]
@@ -616,7 +645,7 @@ nn:
         artistLoopsK2_1: Dette tallet angir hvor mange av disse blokkene du kan bruke i denne oppgaven.
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+        courseD_bee_conditionals_challenge2_1: Bruk denne løkka for å samle alle nektar (eller honning) frå ein blome (eller vokskake).
       course2_collector_loops_challenge2_callout: [ ]
       course2_collector_prog_challenge1_callout: [ ]
       course2_collector_prog_challenge2_callout: [ ]
@@ -627,7 +656,7 @@ nn:
         courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
         courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
       course3_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+        courseD_bee_debugging_challenge1_callout1: Bruk denne kommandoen til å flytte bia bakover.
       course3_bee_functions_challenge3_callout:
         courseF_bee_functions_challenge1_1: What code should you put in this function?
         courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
@@ -655,13 +684,25 @@ nn:
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Dette tallet angir hvor mange av disse blokkene du kan bruke i denne oppgaven.
       courseA_collector_loops3_predict1_callout: [ ]
+      courseA_collector_preLoops1_callout:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
+      courseA_collector_preLoops2_callout:
+        courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseA_collector_preLoops3_callout:
+        courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseA_collector_preLoops4_callout:
+        courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseA_collector_preLoops5_callout:
+        courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseA_collector_preLoops6_callout:
+        courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseA_forVideoTest_artist_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseA_maze_seq4_callout:
-        courseA_maze_seq4_1: These blocks are made of stone.  You can move them, but you can't delete them!
+        made_of_stone: These blocks are made of stone.  You can move them, but you can't delete them!
       courseA_maze_seq4a_callout: [ ]
       courseA_playLab_events2_callout: [ ]
       courseA_playLab_events3_callout: [ ]
@@ -683,10 +724,10 @@ nn:
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
+        courseB_maze_seq3_1: Grå blokkar er laga av stein og kan ikkje bli kasta.
       courseB_maze_seq7_callout: [ ]
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Bruk den grøne ned pilen for å endre retningar.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseC_artist_loopsPrePre1a_callout:
@@ -707,7 +748,7 @@ nn:
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Desse blokkane er låst og kan ikkje slettast!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: [ ]
@@ -718,7 +759,7 @@ nn:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: [ ]
@@ -744,19 +785,19 @@ nn:
         courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+        courseD_artist_ramp11_1: Du kan endre dette nummeret.
+        courseD_artist_ramp11_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+        courseD_bee_conditionals_challenge2_1: Bruk denne løkka for å samle alle nektar (eller honning) frå ein blome (eller vokskake).
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
+        courseD_bee_conditionals_challenge3_1: Prøve å gjenta flytte framover blokken med denne løkka.
       courseD_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+        courseD_bee_debugging_challenge1_callout1: Bruk denne kommandoen til å flytte bia bakover.
       courseD_bee_debugging_challenge2_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+        courseD_bee_debugging_challenge1_callout1: Bruk denne kommandoen til å flytte bia bakover.
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
@@ -775,7 +816,7 @@ nn:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step through the program. This will help you find the bug!
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseD_maze_ramp5_callout: [ ]
@@ -827,13 +868,17 @@ nn:
       courseE_artist_predict1_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+        courseD_artist_ramp11_1: Du kan endre dette nummeret.
+        courseD_artist_ramp11_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
       courseE_artist_ramp12_callout: [ ]
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+        courseE_artist_ramp8_1: Du kan endre dette nummeret.
+        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
+      courseE_artist_ramp8_2_callout:
+        courseE_artist_ramp8_1: Du kan endre dette nummeret.
+        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
       courseE_artist_ramp9_callout: [ ]
+      courseE_artist_ramp9_2_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -901,7 +946,7 @@ nn:
       courseF_IceAge_8_callout:
         playlab_add_score: ""
       courseF_IceAge_9_callout:
-        playlab_add_blocks_1: Add blocks here
+        playlab_add_blocks_1: Legg til blokkane dine her
       courseF_IceAge_template_callout:
         arrows_move_actor: ""
       courseF_artist_embed_variables9_callout: [ ]
@@ -917,8 +962,8 @@ nn:
       courseF_artist_predict1_callout: [ ]
       courseF_artist_ramp10_callout: [ ]
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+        courseE_artist_ramp8_1: Du kan endre dette nummeret.
+        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
       courseF_artist_ramp9_callout: [ ]
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -960,7 +1005,8 @@ nn:
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: [ ]
-      courseF_bee_for4_callout: [ ]
+      courseF_bee_for4_callout:
+        courseF_bee_for4_1: You will find the `for` loop in here!
       courseF_bee_for6_callout: [ ]
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
@@ -975,6 +1021,8 @@ nn:
       courseF_bee_functions_challenge2_callout: [ ]
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp2_callout:
+        courseF_bee_fwp2_a: The block that calls your function lives in here.
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty spaces as well as clouds.
       courseF_bee_fwp4_callout:
@@ -997,9 +1045,9 @@ nn:
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       courseF_playlab_embed_vars_callout: [ ]
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
@@ -1015,7 +1063,8 @@ nn:
         courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_variables6c_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
-      courseF_playlab_variables7c_callout: [ ]
+      courseF_playlab_variables7c_callout:
+        courseF_playlab_variables7c_1: Find the `ask` block here!
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
@@ -1040,7 +1089,7 @@ nn:
       frozen freeplay_callout:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       frozen line_callout:
-        run: Trykk på "Kjør" for å prøve programmet!
+        run: Trykk på "Køyr" for å prøve programmet!
         move_elsa_forward: Dra ei «Flytt framover»-blokk og fest den under «Når køyrt»-blokka for å få Elsa til å flytte framover
       frozen perpendicular_callout:
         turn_elsa: Bruk «Snu»-blokken for å få Elsa til å snu. Tallet i nedtrekks-lista avgjer kor mykje Elsa snur seg
@@ -1057,7 +1106,7 @@ nn:
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How will you use it?
       grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: These grey blocks are made of stone!  That means that they can't be trashed.
+        grade1_maze_sequence6_1: Desse grå blokkane er laga av stein!  Det betyr at dei ikkje kan bli kasta.
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       grade2_CaringForNewPet_1_callout:
@@ -1098,30 +1147,30 @@ nn:
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: You only have one of these blocks available in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det vet du ikke før du kjører koden!
+        Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det veit du ikkje før du køyrer koden!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die, and you get to decide how many sides the die has.
       grade3_playLab_buildGame_2_callout:
         Playlab_cond_2_1: 'This block is your way to tell the computer to remember your value: when you use the block labeled `j`, the program will give you the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create the first square.
       grade4_artist_functions2_callout:
         grade4_artist_funcions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klikk Rediger for å legge til ein parameter i funksjonen din
         add_and_drag_parameter: Skriv inn namnet på parameteren din her, klikk på "Legg til" og dra den etter det til funksjonsdefinisjonen din
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOME. Du treng ikkje å sjå etter bikaker i det heile tatt.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       grade4_frozen_functions3_callout:
@@ -1141,19 +1190,19 @@ nn:
       grade4_frozen_square_loop3_callout:
         replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       grade4_playlab_test_callout: [ ]
       grade4_review_artist1_callout: [ ]
       grade5_artist_for_loops1b_callout:
         grade5_artist_for_loops1b_1: The toolbox has been changed into "category" mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: [ ]
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordne for å se hvor alt ble av!
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in here.
       grade5_artist_functionparameters_6_callout:
@@ -1260,16 +1309,16 @@ nn:
       sample9a_callout:
         sample9a_1: This would be a puzzle to connect stage to freeplay, but playlab does not have "turn" or "move forward". Also, the goals are not flexible (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
-        New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
-        sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+        New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkane i verktøykassa! Dra blokkar til arbeidsområdet for å leggje dei til programmet
+        New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
+        sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
       subgoal U3 L4 introducing subgoal labels_callout: [ ]
       subgoal U3L2 Using Simple Commands_callout: [ ]
       subgoal-test-clone_callout:
         move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
       subgoal-test_callout:
         move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
-        orient_subgoal: This means you want to turn the turtle
+        orient_subgoal: Dette betyr at du vil snu skilpadden
       subgoalU3L2_TurtleSquare_right_callout: [ ]
       testing code callout_callout:
         testing_code_callout: Dette får figuren til å røre på seg!

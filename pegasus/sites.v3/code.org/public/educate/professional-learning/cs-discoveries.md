@@ -1,17 +1,23 @@
 ---
 title: CS Discoveries Professional Learning Program
-nav: plc_csd_nav
 theme: responsive
 ---
 # CS Discoveries Professional Learning Program
 
+Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started! 
+<br>
+
+<hr/>
+
 [col-50]
 
-The [Code.org Computer Science Discoveries Professional Learning Program](/files/PLProgramsOverview_1-pager.pdf) is designed for middle school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms. 
+The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
 
-**Applications for the 2018-19 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+**Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
+
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 [/col-50]
 
@@ -26,6 +32,11 @@ The [Code.org Computer Science Discoveries Professional Learning Program](/files
 [/col-50]
 
 <div style="clear: both;"></div>
+
+<%= view :three_circles, circles: [
+{img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
+{img: '/images/testimonials/fit-150/students-1.jpg', text: '"I truly believe that this course may level the playing field for some of my students and very likely give them a break they need to find a path to success."'},
+{img: '/images/testimonials/fit-150/students-2.jpg', text: '"After teaching 27 years, it is refreshing to attend a training that has me energized and enthusiastic about offering new content to my students."'}] %>
 
 ## What does a Code.org CS Discoveries educator do?
 If accepted into the Code.org CS Discoveries Professional Learning Program, you will:
@@ -75,6 +86,14 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="apply"></a>How to apply?
 
-**Applications for the 2017-18 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+**Applications for the 2018-19 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
+
+## <a name="facilitate"></a>Become a CS Discoveries Facilitator
+
+Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Discoveries curriculum. 
+
+Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
+
+<a href="/educate/professional-learning/facilitator"><button>Learn more</button>

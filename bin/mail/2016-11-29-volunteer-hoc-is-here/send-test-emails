@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 2 2016-11-29-volunteer-hoc-is-here ./test-params.csv

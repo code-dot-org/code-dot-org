@@ -156,6 +156,7 @@
     user_type_student: Dalta
     field_is_required: riachtanach
     accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
+    error: An error occurred.
   school_info:
     title: Eolas faoin scoil (roghnach)
     school_country: Tír na Scoile
@@ -1006,6 +1007,13 @@
     save: Sábháil
     delete: Scrios
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: Fill ar an gCúrsa
     my_projects: Mo Chuid Tograí
     project_gallery: Tograí

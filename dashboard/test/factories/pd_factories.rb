@@ -531,4 +531,91 @@ FactoryGirl.define do
     association :regional_partner
     state 'WA'
   end
+
+  factory :pd_facilitator1819_application_hash, class: 'Hash' do
+    transient do
+      program Pd::Application::Facilitator1819Application::PROGRAM_OPTIONS.first
+      state 'Washington'
+      add_attribute :zip_code, '98101'
+    end
+
+    initialize_with do
+      {
+        firstName: 'Rubeus',
+        lastName: 'Hagrid',
+        phone: '555-555-5555',
+        address: '101 Hogwarts Ave',
+        city: 'Seattle',
+        state: state,
+        zipCode: zip_code,
+        genderIdentity: 'Male',
+        race: ['Other'],
+        institutionType: ['Institute of higher education'],
+        currentEmployer: 'Gryffindor House',
+        jobTitle: 'Keeper of Keys and Grounds of Hogwarts',
+        resumeLink: 'linkedin.com/rubeus_hagrid',
+        workedInCsJob: 'No',
+        completedCsCoursesAndActivities: ['Advanced CS in high school or college'],
+        diversityTraining: 'No',
+        howHeard: ['Code.org email'],
+        program: program,
+        planOnTeaching: ['Yes'],
+        abilityToMeetRequirements: '4',
+        ledCsExtracurriculars: ['Hour of Code'],
+        teachingExperience: 'No',
+        gradesTaught: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'],
+        gradesCurrentlyTeaching: ['Grade 7'],
+        subjects_taught: ['Computer Science'],
+        yearsExperience: 'None',
+        experienceLeading: ['AP CS A', 'Hour of Code'],
+        completedPd: ['CS Fundamentals (1 day workshop)'],
+        codeOrgFacilitator: 'No',
+        haveLedPd: 'Yes',
+        groupsLedPd: ['None'],
+        describePriorPd: 'PD description',
+        whoShouldHaveOpportunity: 'all students',
+        howSupportEquity: 'support equity',
+        expectedTeacherNeeds: 'teacher needs',
+        describeAdaptingLessonPlan: 'adapt lesson plan',
+        describeStrategies: 'strategies',
+        exampleHowUsedFeedback: 'used feedback',
+        exampleHowProvidedFeedback: 'provided feedback',
+        hopeToLearn: 'many things',
+        availableDuringWeek: 'Yes',
+        weeklyAvailability: ['10am ET / 7am PT'],
+        travelDistance: 'Within my city',
+        additionalInfo: 'none',
+        agree: true
+      }.tap do |hash|
+        if program == Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
+          hash[:csfAvailability] = 'Yes'
+        else
+          hash[:csdCspTeacherconAvailability] = 'TeacherCon 1: June 17 - 22, 2018'
+          hash[:csdCspFitAvailability] = 'June 23 - 24, 2018 (immediately following TeacherCon 1)'
+        end
+      end.stringify_keys
+    end
+
+    trait :with_csf_specific_fields do
+      after :build do |hash|
+        hash['csfAvailability'] = Pd::Application::Facilitator1819Application::ONLY_WEEKEND
+        hash['csfPartialAttendanceReason'] = 'reasons'
+      end
+    end
+
+    trait :with_csd_csp_specific_fields do
+      after :build do |hash|
+        hash['csdCspFitAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_fit_availability].first
+        hash['csdCspTeacherconAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_teachercon_availability].first
+      end
+    end
+  end
+
+  factory :pd_facilitator1819_application, class: 'Pd::Application::Facilitator1819Application' do
+    association :user, factory: :teacher, strategy: :create
+    transient do
+      form_data_hash {build :pd_facilitator1819_application_hash}
+    end
+    form_data {form_data_hash.to_json}
+  end
 end

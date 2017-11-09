@@ -63,6 +63,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def show
+    @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 
@@ -165,7 +166,7 @@ class ScriptLevelsController < ApplicationController
     @stage_extras = {
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_stage_extras(current_user),
-      bonus_levels: @stage.script_levels.select(&:bonus).map {|sl| sl.summarize_as_bonus(current_user)},
+      bonus_levels: @stage.script_levels.select(&:bonus).map(&:summarize_as_bonus),
     }.camelize_keys
 
     render 'scripts/stage_extras'
@@ -255,7 +256,7 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
-      @last_activity = current_user.last_attempt(@level)
+      @last_activity = current_user.last_attempt(@level, @script)
       level_source = @last_activity.try(:level_source)
 
       user_level = current_user.user_level_for(@script_level, @level)

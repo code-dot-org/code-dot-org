@@ -1,0 +1,31 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+#thanks
+  %h1 Thank you for your application.
+
+  %h2
+    Code.org and our Regional Partners will review applications in December and January.
+    We will provide a status update to all applicants by the end of January 2018.
+
+  %p
+    - if @application.regional_partner
+      Your Code.org Regional Partner is:
+      = @application.regional_partner.name
+    - else
+      Your application is not yet matched to a Code.org Regional Partner.
+      If there is a partner in your area, we will send your application to the partner for review.
+      If there isn’t yet a partner in your area, we will consider your application as space becomes
+      available in the Facilitator Development Program.
+
+  %p
+    Due to the volume of applications we will receive, we are not able to respond to individual requests for status updates.
+    Please contact
+    =link_to('facilitators@code.org', 'mailto:facilitators@code.org')
+    with all other questions.
+
+  %p
+    In the meantime, please visit
+    =link_to('https://code.org/yourschool', 'https://code.org/yourschool', target: '_blank')
+    and tell us more about what computer science opportunities are available at your school or schools in your area.
+    Thank you for supporting computer science for all!

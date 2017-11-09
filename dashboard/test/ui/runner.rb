@@ -544,12 +544,8 @@ def how_many_reruns?(test_run_string)
       return 1
     else
       flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
-      recommended_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
-      max_reruns = [1, [recommended_reruns, 5].min].max # Clamp rerun count to range 1-5
-
-      confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
+      max_reruns, confidence = TestFlakiness.recommend_reruns(flakiness)
       flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
-
       if max_reruns < 2
         $lock.synchronize {puts flakiness_message.green}
       elsif max_reruns < 3
@@ -585,6 +581,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += ' -t ~@no_circle' if options.is_circle
   arguments += ' -t ~@no_ie' if browser['browserName'] == 'Internet Explorer'
   arguments += ' -t ~@chrome' if browser['browserName'] != 'chrome' && !options.local
+  arguments += ' -t ~@chrome_before_62' if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
   arguments += ' -t ~@no_safari' if browser['browserName'] == 'Safari'
   arguments += ' -t ~@no_firefox' if browser['browserName'] == 'firefox'
   arguments += ' -t ~@webpurify' unless CDO.webpurify_key

@@ -7,7 +7,9 @@ import i18n from "@cdo/locale";
 class CourseBlocksStudentGradeBands extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsive: PropTypes.instanceOf(Responsive).isRequired,
+    showContainer: PropTypes.bool.isRequired,
+    hideBottomMargin: PropTypes.bool.isRequired
   };
 
   cards = [
@@ -29,14 +31,21 @@ class CourseBlocksStudentGradeBands extends Component {
   ];
 
   render() {
+    const { showContainer, hideBottomMargin } = this.props;
+    const link = showContainer ? '/home/#recent-courses' : '';
+    const linkText = showContainer ? i18n.viewMyRecentCourses() : '';
+    const heading = showContainer ? i18n.courseBlocksGradeBandsContainerHeading() : '';
+    const description = showContainer ? i18n.courseBlocksGradeBandsContainerDescription() : '';
+
     return (
       <ContentContainer
-        link={'/home/#recent-courses'}
-        linkText={i18n.viewMyRecentCourses()}
-        heading={i18n.courseBlocksGradeBandsContainerHeading()}
-        description={i18n.courseBlocksGradeBandsContainerDescription()}
+        link={link}
+        linkText={linkText}
+        heading={heading}
+        description={description}
         isRtl={this.props.isRtl}
         responsive={this.props.responsive}
+        hideBottomMargin={hideBottomMargin}
       >
         <CourseBlocksGradeBands
           cards={this.cards}

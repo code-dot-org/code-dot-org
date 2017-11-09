@@ -1,6 +1,5 @@
 ---
 title: 3rd Party Educator Resources
-nav: educate_nav
 theme: responsive
 style_min: true
 ---

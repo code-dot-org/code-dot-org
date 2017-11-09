@@ -43,6 +43,7 @@ jobs:
           name: taking these out of dockerfile to see if that fixes build issues
           command: |
             sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
+            sudo apt-get update
             sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
             sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
 

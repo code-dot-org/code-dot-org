@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# 2277955 contacts
-../send-to-mailing-list --start 0 --limit 500000 2016-12-05-hoc-global-is-here ./contacts.csv
-../send-to-mailing-list --start 500000 --limit 500000 2016-12-05-hoc-global-is-here ./contacts.csv
-../send-to-mailing-list --start 1000000 --limit 500000 2016-12-05-hoc-global-is-here ./contacts.csv
-../send-to-mailing-list --start 1500000 --limit 500000 2016-12-05-hoc-global-is-here ./contacts.csv
-../send-to-mailing-list --start 2000000 --limit 280000 2016-12-05-hoc-global-is-here ./contacts.csv

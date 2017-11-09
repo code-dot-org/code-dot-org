@@ -1,0 +1,11 @@
+name 'csd-post-survey-2017-implementation-teacher'
+
+markdown <<MARKDOWN
+### Part 4: The last month in this class
+
+For the next questions please focus on things that happened in your computer science class **during the past month**.  
+
+***
+
+<h3><em>During the past month how often did your <strong>teacher</strong> do the following?</em></h3>
+MARKDOWN

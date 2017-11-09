@@ -535,6 +535,8 @@
   volunteer_engineer_submission_type_task_remote: "আমি চাই আপনি আমার শ্রেনীতে বাচ্চাদের স্কাইপের মাধ্যমে কিছু অনুপ্রেরণীয় কথা বলুন"
   volunteer_engineer_submission_type_task_mentor: "আমার ছাত্রদের সাথে কোডিং করার জন্য প্রস্তুত হতে আমি একজন পরামর্শদাতা খুঁজছি"
   petition_age: "বয়স"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "আরও জানুন"
   dashboard_landing_title: "শিক্ষক হোম পেজ"
   dashboard_landing_welcome: "নতুন ও উন্নত শিক্ষক dashboard-এ আপনাকে স্বাগতম।"
   dashboard_landing_video: "এই ভিডিও টি দেখুন"
