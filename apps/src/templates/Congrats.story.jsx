@@ -3,9 +3,10 @@ import Congrats from './Congrats';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import responsive from '../code-studio/responsiveRedux';
+import isRtl from '../code-studio/isRtlRedux';
 
 export default storybook => {
-  const store = createStore(combineReducers({responsive}));
+  const store = createStore(combineReducers({responsive, isRtl}));
   return storybook
     .storiesOf('Congrats', module)
     .addStoryTable([
@@ -16,7 +17,6 @@ export default storybook => {
           <Provider store={store}>
             <Congrats
               completedTutorialType="applab"
-              isRtl={false}
             />
           </Provider>
         )
@@ -28,7 +28,6 @@ export default storybook => {
           <Provider store={store}>
             <Congrats
               completedTutorialType="pre2017Minecraft"
-              isRtl={false}
             />
           </Provider>
         )
@@ -40,7 +39,7 @@ export default storybook => {
           <Provider store={store}>
             <Congrats
               completedTutorialType="2017Minecraft"
-              isRtl={false}
+              MCShareLink="code.org/minecraft"
             />
           </Provider>
         )
@@ -52,7 +51,6 @@ export default storybook => {
           <Provider store={store}>
             <Congrats
               completedTutorialType="other"
-              isRtl={false}
             />
           </Provider>
         )

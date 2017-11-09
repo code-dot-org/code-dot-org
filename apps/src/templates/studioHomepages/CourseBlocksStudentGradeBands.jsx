@@ -31,7 +31,7 @@ class CourseBlocksStudentGradeBands extends Component {
   ];
 
   render() {
-    const { showContainer, hideBottomMargin, isRtl, responsiveSize } = this.props;
+    const { showContainer, hideBottomMargin } = this.props;
     const link = showContainer ? '/home/#recent-courses' : '';
     const linkText = showContainer ? i18n.viewMyRecentCourses() : '';
     const heading = showContainer ? i18n.courseBlocksGradeBandsContainerHeading() : '';
@@ -43,9 +43,7 @@ class CourseBlocksStudentGradeBands extends Component {
         linkText={linkText}
         heading={heading}
         description={description}
-        responsive={this.props.responsive}
         hideBottomMargin={hideBottomMargin}
-        isRtl={isRtl}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
