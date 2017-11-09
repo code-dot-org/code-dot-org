@@ -55,31 +55,29 @@ export default class SchoolNotFound extends Component {
               />
             </label>
           </div>
-          {this.props.schoolType !== 'omitted' &&
-            <div style={styles.field}>
-              <label>
-                <div style={styles.question}>
-                  {i18n.schoolType()}
-                  <span style={styles.asterisk}> *</span>
-                </div>
-                <select
-                  name="school_type_s"
-                  value={this.props.schoolType}
-                  onChange={this.handleChange.bind(this, "schoolType")}
-                  style={styles.schoolNotFoundDropdown}
-                >
-                  {schoolTypes.map((schoolType, index) =>
-                    <option
-                      value={schoolType}
-                      key={index}
-                    >
-                      {schoolType}
-                    </option>
-                  )}
-                </select>
-              </label>
-            </div>
-          }
+          <div style={styles.field}>
+            <label>
+              <div style={styles.question}>
+                {i18n.schoolType()}
+                <span style={styles.asterisk}> *</span>
+              </div>
+              <select
+                name="school_type_s"
+                value={this.props.schoolType}
+                onChange={this.handleChange.bind(this, "schoolType")}
+                style={styles.schoolNotFoundDropdown}
+              >
+                {schoolTypes.map((schoolType, index) =>
+                  <option
+                    value={schoolType}
+                    key={index}
+                  >
+                    {schoolType}
+                  </option>
+                )}
+              </select>
+            </label>
+          </div>
         </div>
         <div>
           <div style={styles.field}>
