@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-11-03T20:00:26.000Z",
+  "created_at": "2017-11-07T19:51:34.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -179,13 +179,15 @@
       "tempSensor.F": null,
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+      "buzzer.off": null,
+      "soundSensor.start": null,
+      "lightSensor.start": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Setting Text\r\n\r\nYour happy and sad buttons should be almost completely functional now. The only thing they still need to do is change the text at the bottom of the screen.\r\n\r\n# Do This\r\n\r\nMake each of the event handlers change the text of \"feeling\" to the appropriate emotion (either \"happy\" or \"sad\")",
+    "markdown_instructions": "# Board Events\r\n\r\nGo back to the Events section of your activity guide and find any events that respond to your board (ones that would use `onBoardEvent()`). Create event handlers for each of those now. If these events rely on functions you haven't written yet, just leave yourself a comment in the code.",
     "instructions_important": "false",
-    "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -202,12 +204,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "CSD U6 emotion machine template",
+    "project_template_level_name": "CSD U6 game project template",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
+    "submittable": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
@@ -219,12 +222,12 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
+    "makerlab_enabled": "true",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-03 19:04:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-03 19:58:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-03 21:29:48 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-06 19:27:43 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-06 19:29:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-01 23:09:16 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-01 23:15:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"design_mode_at_start\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-07 19:41:12 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-07 19:50:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-07 19:54:55 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
