@@ -320,7 +320,7 @@ designMode.updateProperty = function (element, name, value) {
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
       } else {
-        element.src = assetPrefix.fixPath(value);
+        element.src = value === '' ? '/blockly/media/1x1.gif' : assetPrefix.fixPath(value);
       }
       break;
     case 'hidden':
