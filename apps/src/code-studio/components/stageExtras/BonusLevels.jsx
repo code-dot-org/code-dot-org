@@ -20,9 +20,6 @@ const styles = {
     marginRight: THUMBNAIL_IMAGE_MARGIN,
     float: 'left',
   },
-  bonusLevels: {
-    transition: 'width 0.1s ease-out',
-  },
   bonusLevelsTitle: {
     fontSize: 24,
     fontFamily: '"Gotham 4r"',
@@ -37,8 +34,11 @@ const styles = {
     transition: 'left 0.25s ease-out',
   },
   challenges: {
+    display: 'inline-block',
     overflowX: 'hidden',
     whiteSpace: 'nowrap',
+    transition: 'width 0.1s ease-out',
+    verticalAlign: 'top',
   },
   solutionImage: {
     border: `1px solid ${color.lighter_gray}`,
@@ -51,18 +51,13 @@ const styles = {
     textAlign: 'center',
   },
   arrow: {
-    fontSize: '200%',
+    fontSize: 40,
     cursor: 'pointer',
+    verticalAlign: -30,
   },
   arrowDisabled: {
     color: color.lighter_gray,
     cursor: 'default',
-  },
-  arrowLeft: {
-    float: 'left',
-  },
-  arrowRight: {
-    float: 'right',
   },
 };
 
@@ -151,7 +146,7 @@ export default Radium(class BonusLevels extends React.Component {
   render() {
     const totalThumbnailWidth = THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN;
     const totalWidth = this.props.bonusLevels[this.state.stageIndex].levels.length *
-      totalThumbnailWidth;
+      totalThumbnailWidth - THUMBNAIL_IMAGE_MARGIN;
 
     const levels = this.props.bonusLevels.filter(stage =>
       stage.stageNumber < this.props.bonusLevels[this.state.stageIndex].stageNumber
@@ -161,37 +156,22 @@ export default Radium(class BonusLevels extends React.Component {
     const leftDisabled = this.state.stageIndex === 0;
     const rightDisabled = this.state.stageIndex === this.props.bonusLevels.length - 1;
     return (
-      <div
-        style={{
-          ...styles.bonusLevels,
-          width: totalWidth,
-        }}
-      >
+      <div>
         <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
-        <h3 style={styles.stageNumberHeading}>
-          <RadiumFontAwesome
-            icon="caret-left"
-            onClick={this.previousStage}
-            style={[
-              styles.arrow,
-              styles.arrowLeft,
-              leftDisabled && styles.arrowDisabled,
-            ]}
-          />
-          {i18n.extrasStageNChallenges({
-            stageNumber: this.props.bonusLevels[this.state.stageIndex].stageNumber
-          })}
-          <RadiumFontAwesome
-            icon="caret-right"
-            onClick={this.nextStage}
-            style={[
-              styles.arrow,
-              styles.arrowRight,
-              rightDisabled && styles.arrowDisabled,
-            ]}
-          />
-        </h3>
-        <div style={styles.challenges}>
+        <RadiumFontAwesome
+          icon="caret-left"
+          onClick={this.previousStage}
+          style={[
+            styles.arrow,
+            leftDisabled && styles.arrowDisabled,
+          ]}
+        />
+        <div
+          style={{
+            ...styles.challenges,
+            width: totalWidth,
+          }}
+        >
           {this.props.bonusLevels.map(stage =>
             <div
               key={stage.stageNumber}
@@ -201,12 +181,25 @@ export default Radium(class BonusLevels extends React.Component {
                 width: stage.levels.length * totalThumbnailWidth,
               }}
             >
+              <h3 style={styles.stageNumberHeading}>
+                {i18n.extrasStageNChallenges({
+                  stageNumber: this.props.bonusLevels[this.state.stageIndex].stageNumber
+                })}
+              </h3>
               {stage.levels.map(level => (
                 <ConnectedBonusLevel key={level.id} {...level} />
               ))}
             </div>
           )}
         </div>
+        <RadiumFontAwesome
+          icon="caret-right"
+          onClick={this.nextStage}
+          style={[
+            styles.arrow,
+            rightDisabled && styles.arrowDisabled,
+          ]}
+        />
       </div>
     );
   }
