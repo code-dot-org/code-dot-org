@@ -899,5 +899,12 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "開始教學",
   "yourSchoolTeacherDesc": "今天就開始教學，不需要電腦科學的經驗",
-  "yourSchoolTellUs": "告訴我們關於你的學校"
+  "yourSchoolTellUs": "告訴我們關於你的學校",
+  "projectGroupPreReaderAllProjects": "All Pre-reader Projects",
+  "projectGroupPreReaderViewMore": "View more pre-reader projects",
+  "schoolInformationHeader": "School / Organization Information",
+  "schoolNotFoundCheckboxLabel": "I cannot find my school above",
+  "seeAllTutorials": "See all tutorials",
+  "tutorialUnavailable": "Tutorial unavailable for younger students",
+  "tutorialUnavailableExplanation": "Sorry, this tutorial is not available for younger students unless they signed in as part of a classroom with a teacher. We have many more tutorials for all ages."
 }
