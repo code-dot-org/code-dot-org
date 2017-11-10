@@ -3,8 +3,6 @@ import {connect} from 'react-redux';
 import color from "../util/color";
 import GridContainer from './studioHomepages/GridContainer';
 import Button from '@cdo/apps/templates/Button';
-import i18n from "@cdo/locale";
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   heading: {

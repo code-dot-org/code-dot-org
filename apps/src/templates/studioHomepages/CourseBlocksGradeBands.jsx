@@ -2,7 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
