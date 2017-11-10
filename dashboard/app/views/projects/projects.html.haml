@@ -1,8 +1,6 @@
 - @page_title = t('project.projects')
 
 .projects-table-wrapper.center
-  = render partial: 'projects/links'
-
   %div{'ng-show' => 'projects.length === 0 && projectsLoaded'}
     %div{style: "padding: 10px;"}
       = t('project.no_projects')

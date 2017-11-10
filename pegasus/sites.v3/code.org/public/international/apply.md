@@ -1,5 +1,6 @@
 ---
 title: Apply to be a partner
+nav: intl_nav
 theme: responsive
 ---
 

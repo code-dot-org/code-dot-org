@@ -33,7 +33,7 @@ Beginnen Sie Ihre Hour of Code, indem Sie Ihr Kind begeistern und mit ihm diskut
 **Show an inspirational video:**
 
 - Das Original-Launch-Video von Code.org Start video, mit Bill Gates, Mark Zuckerberg und NBA-Star Chris Bosh (es stehen mehrere Versionen zur Verfügung: [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Hier finden Sie weitere inspirierende [Ressourcen](<%= resolve_url('https://code.org/inspire') %>) und [Videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
