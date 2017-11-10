@@ -18,6 +18,7 @@ default['cdo-apps'] = {
       'en' => 'English',
     },
   },
-  'nginx_enabled' => true
+  'nginx_enabled' => true,
+  'pmm_enabled' => node['cdo-apps']['daemon']
 }
 default['omnibus_updater']['version'] = '12.7.2'

@@ -1,0 +1,6 @@
+source 'https://supermarket.chef.io'
+
+metadata
+cookbook 'pmm_test', path: './test/cookbooks/pmm_test'
+cookbook 'cdo-mysql', path: '../cdo-mysql'
+cookbook 'cdo-docker', path: '../cdo-docker'

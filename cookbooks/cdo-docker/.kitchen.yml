@@ -1,0 +1,30 @@
+---
+driver:
+  name: dokken
+  chef_version: latest
+transport:
+  name: dokken
+provisioner:
+  name: dokken
+verifier:
+  name: inspec
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      image: dokken/ubuntu-14.04
+      pid_one_command: /sbin/init
+    run_list:
+      - recipe[apt]
+suites:
+  - name: default
+    driver:
+      privileged: true
+    run_list:
+      - recipe[cdo-docker]
+  - name: client
+    driver:
+      privileged: true
+      volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    run_list:
+      - recipe[cdo-docker::client]

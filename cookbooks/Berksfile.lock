@@ -1,5 +1,5 @@
 DEPENDENCIES
-  apt (~> 2.6.0)
+  apt (< 6.0.0)
   build-essential (~> 2.1.3)
   cdo-apps
     path: cdo-apps
@@ -9,6 +9,8 @@ DEPENDENCIES
     path: cdo-awscli
   cdo-cloudwatch-extra-metrics
     path: cdo-cloudwatch-extra-metrics
+  cdo-docker
+    path: cdo-docker
   cdo-freegeoip
     path: cdo-freegeoip
   cdo-github-access
@@ -27,6 +29,8 @@ DEPENDENCIES
     path: cdo-nginx
   cdo-nodejs
     path: cdo-nodejs
+  cdo-pmm
+    path: cdo-pmm
   cdo-postfix
     path: cdo-postfix
   cdo-repository
@@ -55,7 +59,8 @@ DEPENDENCIES
     path: sudo-user
 
 GRAPH
-  apt (2.6.1)
+  apt (5.1.0)
+    compat_resource (>= 12.16.3)
   ark (1.0.1)
     build-essential (>= 0.0.0)
     seven_zip (>= 0.0.0)
@@ -65,11 +70,13 @@ GRAPH
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-cloudwatch-extra-metrics (>= 0.0.0)
+    cdo-docker (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
     cdo-networking (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
     cdo-nodejs (>= 0.0.0)
+    cdo-pmm (>= 0.0.0)
     cdo-postfix (>= 0.0.0)
     cdo-repository (>= 0.0.0)
     cdo-ruby (>= 0.0.0)
@@ -83,6 +90,10 @@ GRAPH
   cdo-awscli (0.1.5)
   cdo-cloudwatch-extra-metrics (0.1.6)
     ark (>= 0.0.0)
+  cdo-docker (0.0.1)
+    apt (>= 0.0.0)
+    chef-apt-docker (>= 0.0.0)
+    docker (>= 0.0.0)
   cdo-freegeoip (0.1.2)
     ark (>= 0.0.0)
     poise-service (>= 0.0.0)
@@ -100,6 +111,9 @@ GRAPH
     ssl_certificate (>= 0.0.0)
   cdo-nodejs (0.2.20)
     nodejs (>= 0.0.0)
+  cdo-pmm (0.0.1)
+    apt (>= 0.0.0)
+    docker (>= 0.0.0)
   cdo-postfix (0.2.7)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
@@ -112,6 +126,7 @@ GRAPH
   cdo-users (0.1.20)
   cdo-varnish (0.3.164)
     apt (>= 0.0.0)
+  chef-apt-docker (2.0.4)
   chef-client (4.2.4)
     cron (>= 1.2.0)
     logrotate (>= 1.2.0)
@@ -119,8 +134,9 @@ GRAPH
   chef_handler (1.3.0)
   chef_hostname (0.4.1)
     compat_resource (>= 0.0.0)
-  compat_resource (12.9.1)
+  compat_resource (12.19.0)
   cron (1.7.4)
+  docker (2.17.0)
   homebrew (2.0.5)
     build-essential (>= 2.1.2)
   ixgbevf (0.1.2)

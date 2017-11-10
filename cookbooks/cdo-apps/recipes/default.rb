@@ -82,6 +82,11 @@ include_recipe 'cdo-varnish'
 
 include_recipe 'cdo-cloudwatch-extra-metrics'
 
+if node['cdo-apps']['pmm_enabled']
+  include_recipe 'cdo-docker'
+  include_recipe 'cdo-pmm'
+end
+
 include_recipe 'cdo-apps::bundle_bootstrap'
 include_recipe 'cdo-apps::build'
 
