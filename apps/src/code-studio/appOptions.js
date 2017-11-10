@@ -31,8 +31,7 @@
  * @property {boolean} isExternalProjectLevel
  * @property {boolean} isChannelBacked
  * @property {boolean} isLegacyShare
- * @property {boolean} postMilestone
- * @property {boolean} postFinalMilestone
+ * @property {PostMileStoneMode} postMilestoneMode
  * @property {string} puzzleRatingsUrl
  * @property {string} authoredHintViewRequestsUrl
  * @property {?} authoredHintsUsedIds
