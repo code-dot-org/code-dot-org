@@ -2753,6 +2753,14 @@ Studio.runButtonClick = function () {
     }
   }
 
+  // If this is a free play level, save the code every time the run button is
+  // clicked rather than only on finish
+  if (level.freePlay) {
+    Studio.setResult();
+    Studio.testResults = TestResults.FREE_PLAY;
+    Studio.report(false);
+  }
+
   if (level.showZeroScore) {
     Studio.displayScore();
   }
