@@ -1,18 +1,18 @@
 %div.start_new_project_header
   =t('project.new_buttons_header')
 %span.new_project_links_wrapper
-  %a{href: playlab_project_create_new_projects_path}
+  %a{href: playlab_project_create_new_projects_path, data: {projectType: 'playlab'}}
     %button.btn.btn-default
       = t('project.new_buttons.playlab')
-  %a{href: artist_project_create_new_projects_path}
+  %a{href: artist_project_create_new_projects_path, data: {projectType: 'artist'}}
     %button.btn.btn-default
       = t('project.new_buttons.artist')
-  %a{href: applab_project_create_new_projects_path}
+  %a{href: applab_project_create_new_projects_path, data: {projectType: 'applab'}}
     %button.btn.btn-default
       = t('project.new_buttons.applab')
-  %a{href: gamelab_project_create_new_projects_path}
+  %a{href: gamelab_project_create_new_projects_path, data: {projectType: 'gamelab'}}
     %button.btn.btn-default
       = t('project.new_buttons.gamelab')
-  %a{href: weblab_project_create_new_projects_path}
+  %a{href: weblab_project_create_new_projects_path, data: {projectType: 'weblab'}}
     %button.btn.btn-default
       = t('project.new_buttons.weblab')
