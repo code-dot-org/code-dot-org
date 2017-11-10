@@ -46,6 +46,7 @@ $(document).ready(() => {
         isRtl={isRtl}
         canViewFullList={true}
         canViewAdvancedTools={projectsData.canViewAdvancedTools}
+        shouldLogEvents={true}
       />,
       document.getElementById('new-project-buttons')
     );
