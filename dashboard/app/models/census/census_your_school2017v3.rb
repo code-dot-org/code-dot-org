@@ -25,7 +25,7 @@
 #  topic_other_description      :string(255)
 #  topic_do_not_know            :boolean
 #  class_frequency              :string(255)
-#  tell_us_more                 :string(255)
+#  tell_us_more                 :text(65535)
 #  pledged                      :boolean
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null

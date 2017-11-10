@@ -551,14 +551,18 @@ var projects = module.exports = {
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
+        } else if (appOptions.level.isK1) {
+          return 'artist_k1';
         }
         return 'artist';
       case 'calc':
         return 'calc';
       case 'craft':
-        if (appOptions.level.isEventLevel) {
+        if (appOptions.level.isAgentLevel) {
+          return 'minecraft_hero';
+        } else if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
-        } else if (appOptions.level.isConnectionLevel || appOptions.level.isAgentLevel) {
+        } else if (appOptions.level.isConnectionLevel) {
           return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
@@ -579,6 +583,8 @@ var projects = module.exports = {
           return 'infinity';
         } else if (appOptions.skinId === 'gumball') {
           return 'gumball';
+        } else if (appOptions.level.isK1) {
+          return 'playlab_k1';
         }
         return 'playlab';
       case 'weblab':

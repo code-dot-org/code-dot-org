@@ -159,8 +159,12 @@ function appendPx(input) {
   if (/px/.test(input)) {
     return input;
   }
-  return input ? input + 'px' : '';
+  //if any sort of object, including arrays, is inputted, return empty string.
+  //This gets around how parseInt and parseFloat treat arrays with first element numbers
+  const parsedInput = parseInt(input);
+  return (isNaN(parsedInput) || typeof input === 'object') ? '' : parsedInput + 'px';
 }
+designMode.appendPx = appendPx;
 
 /**
  * Handle a change from our properties table.
