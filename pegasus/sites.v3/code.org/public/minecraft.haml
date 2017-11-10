@@ -27,7 +27,7 @@ style_min: true
 %div{style: "clear:both"}
 .mc-container
   .mc-tutorials
-    .tutorial-box{style: "margin-bottom: 14px"}
+    .tutorial-box{style: "margin-bottom: 14px; display: #{DCDO.get('hoc_launch', nil).try(:[], 'mc_landing_2017') ? 'block' : 'none'}"}
       .img-container
         %img.mc-img-wide{src: '/images/mc/fit-1940/mc_landing_2017_wide.jpg'}
         %img.mc-img.mc-img-narrow{src: '/images/mc/mc_landing_2017_narrow.jpg'}

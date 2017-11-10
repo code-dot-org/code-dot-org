@@ -48,9 +48,9 @@
 @media screen and (min-width: 971px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 218px;
+    right: 0;
     top: 0;
-    height: 307px;
+    bottom: 0;
   }
 
   .mc-tutorial-details {
@@ -66,21 +66,7 @@
   }
 
   .mc-tutorial-info-wide {
-    left: 0;
-    bottom: 0;
-    height: auto;
-    width: 325px;
-  }
-
-  .mc-tutorial-info-wide h2 {
-    margin: 0 0 15px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .mc-tutorial-info-wide .mc-tutorial-details {
-    margin: 0;
+    width: 360px;
   }
 }
 
@@ -101,9 +87,9 @@
 @media screen and (min-width: 513px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 228px;
+    right: 0;
     top: 0;
-    height: 307px;
+    bottom: 0;
   }
 
   .tutorial-box {
