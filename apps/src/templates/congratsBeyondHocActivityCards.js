@@ -1,109 +1,93 @@
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
+const CSFExpress = {
+  title: "CSF Express",
+  description: "",
+  link: pegasus(`/educate/curriculum/express-course`),
+  image: "csf-express"
+};
+
+const CreateAccount = {
+  title: "Create an Account",
+  description: "",
+  link: pegasus(`/educate/curriculum/express-course`),
+  image: "create-account"
+};
+
+const AnotherHoC = {
+  title: "Another HoC",
+  description: "",
+  link: "/applab",
+  image: "another-hoc"
+};
+
+const ApplabTutorial = {
+  title: "Applab Tutorial",
+  description: "",
+  link: "/applab",
+  image: "applab-tutorial"
+};
+
+const ApplabMarketing = {
+  title: "Applab Tutorial",
+  description: "",
+  link: "/applab",
+  image: "applab-marketing"
+};
+
+const ApplabProject = {
+  title: "Applab Project",
+  description: "",
+  link: "/applab",
+  image: "applab-project"
+};
+
+const OldMinecraft = {
+  title: "Minecraft Education",
+  description: "",
+  link: "/minecraft",
+  image: "old-minecraft"
+};
+
+const NewMinecraft = {
+  title: "Minecraft Education",
+  description: "",
+  link: "/minecraft",
+  image: "new-minecraft"
+};
+
 export const pre2017MinecraftCards = [
-  {
-    title: "CSF Express",
-    description: "",
-    link: pegasus(`/educate/curriculum/express-course`)
-  },
-  {
-    title: "Applab Tutorial",
-    description: "",
-    link: "/applab"
-  },
-  {
-    title: "Minecraft Education",
-    description: "",
-    link: "/minecraft"
-  },
+  CSFExpress,
+  ApplabTutorial,
+  OldMinecraft
 ];
 
 export const newMinecraftCards = [
-  {
-    title: "CSF Express",
-    description: "",
-    link: pegasus(`/educate/curriculum/express-course`)
-  },
-  {
-    title: "Applab Tutorial",
-    description: "",
-    link: "/minecraft"
-  },
-  {
-    title: "Minecraft Education",
-    description: "",
-    link: "/minecraft"
-  },
+  CSFExpress,
+  ApplabTutorial,
+  NewMinecraft
 ];
 
 export const signedInApplabCards = [
-  {
-    title: "Card 1",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 2",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 3",
-    description: "",
-    link: ""
-  },
+  ApplabProject,
+  ApplabMarketing,
+  AnotherHoC
 ];
 
 export const signedOutApplabCards = [
-  {
-    title: "Card 1",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 2",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 3",
-    description: "",
-    link: ""
-  },
+  ApplabProject,
+  ApplabMarketing,
+  CreateAccount
 ];
 
 export const signedInDefaultCards = [
-  {
-    title: "Card 1",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 2",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 3",
-    description: "",
-    link: ""
-  },
+  CSFExpress,
+  ApplabTutorial,
+  AnotherHoC
 ];
 
 export const signedOutDefaultCards = [
-  {
-    title: "Card 1",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 2",
-    description: "",
-    link: ""
-  },
-  {
-    title: "Card 3",
-    description: "",
-    link: ""
-  },
+  CSFExpress,
+  ApplabTutorial,
+  CreateAccount
 ];
