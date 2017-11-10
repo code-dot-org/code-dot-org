@@ -7,16 +7,15 @@ nav: how_to_nav
 
 # How to teach one Hour of Code in after-school classes and clubs
 
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Choose a tutorial
 
-Kami menyediakan beragam bahan pengajaran berdurasi satu jam, yang menyenangkan untuk peserta segala umur, yang diciptakan oleh mitra yang bervariasi. Ayo dicoba
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. Ayo dicoba
 
-**Semua bahan pengajaran Jam Pemrograman:**
-
-- Memerlukan persiapan-waktu minimal untuk penyelenggara
-- Disertai Pemandu Mandiri - memberikan peluang untuk anak-anak dapat bekerja dengan kecepatan dan tingkat-keterampilan mereka masing-masing
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
@@ -24,26 +23,19 @@ Kami menyediakan beragam bahan pengajaran berdurasi satu jam, yang menyenangkan 
 
 ## 3. Promote your Hour of Code
 
-Promosikan Hour of Code Anda [dengan alat ini](<%= resolve_url('/promote') %>) dan dorong orang lain untuk mengadakan acara mereka sendiri.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
 ## 4. Plan your technology needs - computers are optional
 
-<div class="col-66" style="padding-right: 20px;">
-  The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
-</div>
+Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan internet. Tetapi Anda **tidak** memerlukan sebuah komputer untuk setiap peserta, dan Anda bahkan dapat melakukan Hour of Code tanpa menggunakan komputer sama sekali.
 
-<div class="col-33">
-  <img src="/images/fit-400/group_ipad.jpg" />
-</div>
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-<div style="clear: both;"></div>
+Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik mereka sendiri, jika tutorial Anda berjalan lebih baik dengan suara.
 
-**Rencanakan ke depan!** Lakukanlah hal berikut sebelum acara Anda mulai:
+**Tidak memiliki perangkat cukup?** Gunakan [pemrograman berpasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu pengetahuan komputer bersifat sosial dan kolaborasi.
 
-- Uji tutorial pada siswa komputer atau perangkat. Pastikan mereka bekerja dengan baik pada browser dengan suara dan video.
-- Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik mereka sendiri, jika tutorial Anda berjalan lebih baik dengan suara.
-- **Tidak memiliki perangkat cukup?** Gunakan [pemrograman berpasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu pengetahuan komputer bersifat sosial dan kolaborasi.
-- **Mempunyai bandwidth kecil?** Rencanakan untuk menunjukan video di depan kelas, supaya setiap pelajar tidak mengunduh video mereka sendiri. Atau cobalah tutorial offline atau tanpa komputer.
+<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Start your Hour of Code off with an inspiring video
 
@@ -52,13 +44,13 @@ Mulai Hour of Code Anda dengan peserta yang menginspirasi dan diskusikan bagaima
 **Tampilkan rekaman gambar yang menginspirasi:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- [Rekaman gambar peluncuran Jam Pemrograman 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), atau <% if @country == 'uk' %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Tidak masalah jika kamu masih baru dalam ilmu pengetahuan komputer. Ini adalah beberapa ide untuk memperkenalkan kamu pada aktivitas Jam Pemrograman:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- Menjelaskan bagaimana caranya teknologi mempengaruhi kehidupan kita, dengan memberikan contoh dimana baik anak laki-laki dan perempuan akan perduli (Mendisuksikan bagaimana aplikasi dan teknologi digunakan untuk menyelamatkan jiwa seseorang, menolong orang, meperhubungkan orang dan lain lain).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
 - Daftar hal-hal yang menggunakan pemrograman dalam kehidupan sehari-hari.
 - Lihat tips agar anak gadis tertarik dalam ilmu komputer [di sini](<%= resolve_url('https://code.org/girls') %>).
 
@@ -68,9 +60,9 @@ Mulai Hour of Code Anda dengan peserta yang menginspirasi dan diskusikan bagaima
 
 **Arahkan peserta langsung ke aktivitas**
 
-- Tulislah link pengajaran pada papan tulis. Temukan link yang tertera pada informasi untuk tutorial pilihan Anda sesuai dengan jumlah peserta.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-**Jika ada pelajar yang mengalami kesulitan dapat langsung dilayani:**
+**When someone comes across difficulties it's okay to respond:**
 
 - "Saya kurang tahu. Mari kita mencari solusinya bersama-sama."
 - "Teknologi tidak selalu bekerja dengan cara yang kita inginkan."
@@ -78,8 +70,8 @@ Mulai Hour of Code Anda dengan peserta yang menginspirasi dan diskusikan bagaima
 
 **Apa yang harus dilakukan jika seseorang selesai lebih awal?**
 
-- Memberikan semangat pada peserta untuk mencoba aktivitas Jam Pemrograman lainnya pada hourofcode.com/learn
-- Atau, dapat meminta peserta yang telah selesai untuk menolong peserta lainnya yang menghadapi masalah.
+- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+- Or, ask those who finish early to help others who are having trouble.
 
 [col-33]
 
@@ -103,7 +95,7 @@ Mulai Hour of Code Anda dengan peserta yang menginspirasi dan diskusikan bagaima
 
 [/col-33]
 
-- [Cetak sertifikat](<%= resolve_url('https://code.org/certificates') %>) untuk pelajar Anda.
+- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
 - [Cetak stiker "Aku telah menyelesaikan Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) untuk siswa.
 - [Pesanan kustom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk sekolah Anda.
 - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
@@ -118,9 +110,9 @@ Mulai Hour of Code Anda dengan peserta yang menginspirasi dan diskusikan bagaima
 
 ## Other Hour of Code resources for educators
 
-- Lihat praktik terbaik dari penyelenggara Jam Pemrograman sebelumnya. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Kunjungi Forum Jam Pemrograman untuk mendapatkan petunjuk, wawasan dan dukungan dari penyelenggara lainnya. <% if @country == 'us' %>
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Tinjau [FAQ Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Apa yang diharapkan selanjutnya setelah Jam Pemrograman?
