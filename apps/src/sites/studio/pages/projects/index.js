@@ -19,6 +19,9 @@ import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@
 import experiments from '@cdo/apps/util/experiments';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+const LEGACY_PROJECT_BUTTON_TYPES = ['playlab', 'artist', 'applab', 'gamelab', 'weblab'];
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
@@ -47,7 +50,13 @@ $(document).ready(() => {
       document.getElementById('new-project-buttons')
     );
   } else {
-    $('#legacy-project-links').show();
+    const legacyProjectLinks = $('#legacy-project-links');
+    legacyProjectLinks.show();
+    LEGACY_PROJECT_BUTTON_TYPES.forEach(projectType => {
+      legacyProjectLinks.find(`a[data-projectType=${projectType}]`)
+        .on('click', recordLegacyProjectButtonClick.bind(this, projectType));
+    });
+
   }
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
@@ -82,6 +91,20 @@ function showGallery(gallery) {
   $('#project-links-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
+}
+
+function recordLegacyProjectButtonClick(projectType) {
+  firehoseClient.putRecord(
+    'analysis-events',
+    {
+      study: 'my-projects-create-project',
+      study_group: 'legacy-project-buttons',
+      // '-wip' should be removed when the data format is finalized
+      // and the A/B experiment is launched
+      event: 'create-project-wip',
+      data_json: JSON.stringify({projectType})
+    }
+  );
 }
 
 // Make these available to angularProjects.js. These can go away
