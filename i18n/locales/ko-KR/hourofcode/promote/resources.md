@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Hour of Code 를 홍보해주세요.
 
@@ -39,13 +37,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. 의류 등 각종 패션 제품에 사용되는 "Hour of Code"라는 브랜드 이름으로서 사용되서는 안되며, Hour of Code 운동에 대한 참조를 달아야 합니다. 좋은 예시: "Hour of Code™ 에 함께 참여해보세요. ACMECorp.com". 나쁜 예시: "ACME Corp 가 만든 Hour of Code를 해보세요".
-  2. "Hour of Code"를 언급하는 경우, 웹사이트에 게제하거나, 앱/프로그램에 설명하는 경우에는 윗 첨자 "TM"를 눈에 띄게 표시해 주세요.
-  3. 웹 페이지에 가능한 언어들을 포함시켜주세요.(아니면 아래쪽에 링크 포함) CSEdWeek 와 Code.org 웹사이트 링크를 포함시켜주세요:
+1. 의류 등 각종 패션 제품에 사용되는 "Hour of Code"라는 브랜드 이름으로서 사용되서는 안되며, Hour of Code 운동에 대한 참조를 달아야 합니다. 좋은 예시: "Hour of Code™ 에 함께 참여해보세요. ACMECorp.com". 나쁜 예시: "ACME Corp 가 만든 Hour of Code를 해보세요".
+2. "Hour of Code"를 언급하는 경우, 웹사이트에 게제하거나, 앱/프로그램에 설명하는 경우에는 윗 첨자 "TM"를 눈에 띄게 표시해 주세요.
+3. 웹 페이지에 가능한 언어들을 포함시켜주세요.(아니면 아래쪽에 링크 포함) CSEdWeek 와 Code.org 웹사이트 링크를 포함시켜주세요:
     
     *" 'Hour of Code'는 1시간 짜리의 컴퓨터과학/컴퓨터프로그래밍 과정을 전세계 수천만명의 학생들에게 소개하고 경험할 수 있도록 하기 위해, 컴퓨터과학교육주간(Computer Science Education Week[csedweek.org]) 과 Code.org [code.org] 에 의해 조직/운영되는 전세계적인 운동입니다."*
 
-  4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
+4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
 
 <a id="stickers"></a>
 

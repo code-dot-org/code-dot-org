@@ -1,6 +1,11 @@
 @import "color";
 
 .projects-page {
+  // Make the projects page 970px wide, accounting for the -20px margin which
+  // application.scss puts on .row elements, and various other rules which
+  // terribly depend on that negative margin.
+  width: 950px;
+
   h1 {
     text-align: center;
   }
@@ -18,7 +23,7 @@
   }
 }
 
-$projects-table-width: 850px;
+$projects-table-width: 970px;
 
 .projects-table-wrapper {
   width: $projects-table-width;
@@ -87,4 +92,11 @@ $projects-table-width: 850px;
 
 .new_project_links_wrapper {
   margin-left: -5px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#legacy-project-links {
+  margin-bottom: 20px;
 }

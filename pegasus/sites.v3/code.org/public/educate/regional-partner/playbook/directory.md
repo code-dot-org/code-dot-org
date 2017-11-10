@@ -22,6 +22,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Missouri](#mo)**<br/>
 - **[Montana](#mt)**</br/>
 - **[Nevada](#nv)**</br/>
+- **[New Hampshire](#nh)**</br/>
 - **[New Jersey](#nj)**</br/>
 - **[New Mexico](#nm)**</br/>
 - **[New York](#ny)**<br/>
@@ -712,6 +713,29 @@ CS Discoveries<br/>
 Frank Mathews<br/>
 frankm@rpdp.net<br/>
 
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="nh"></a>
+
+## New Hampshire
+### [The University of New Hampshire and the CS4NH Coalition](https://www.unh.edu/stem/stem-teachers-collaborative)<br/>
+New Hampshire
+
+The STEM Teachers’ Collaborative on UNH’s Durham campus and the STEM Discovery Lab on the Manchester campus have partnered with the NH Department of Education and the NH High Tech Council to create the CS4NH coalition, committed to providing all New Hampshire students access to a high quality K-12 progression of Computer Science (CS) educational opportunities.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** How to work with the state department of education, partnering across multiple campuses, integrating CS into the instruction of other subjects
+
+**Contact Information**<br/>
+Laura Nickerson<br/>
+laura.nickerson@unh.edu<br/>
+
+Emily Kerr<br/>
+emily.kerr@unh.edu<br/><br/>
 [**Back to the top**](#top)
 <br/>
 ________________

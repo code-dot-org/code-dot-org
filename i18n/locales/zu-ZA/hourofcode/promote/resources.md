@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Khuthaza iHora loKufingqwa
 
@@ -39,13 +37,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **"iHora loKufingqwa" limakelwe uhwebo. Asifuni ukuvimba ukusetshenziswa, kodwa sifuna ukwenza isiqiniseko sokuba kufanelana ngaphakathi kwemigcele embalwa:**
 
-  1. Nayiphi na inkomba ku "Hora loKufingqwa" kufanele isetshenziswe ngomkhuba ongakhombi ukuba umkhiqizo wakho, kodwa ekhombisa iHora loKufingqwa njengesisekelo somnyakazo. Isibonelo esihle: "Hlanganyela kuHora loKufingqwa ku ACMECorp.com". Isibonakaliso esibi: "Zama iHora loKufingqwa ngenkampani yeACME".
-  2. Sebenzisa umbhalo ongezansi we"TM" kuzindawo eziqavileyo lapho ukhuluma ngeHora loKufingqwa, kuwebhisayithi yakho kanye nakuncazelo yehlelo lakho.
-  3. Hlanganisa ulwimi kukhasi (noma kunyaweni wekhasi), okubala izixhumaniso kumawebhusayithi eCSEdWeek kanye neCode.org, akhuluma lokhu okulandelayo:
+1. Nayiphi na inkomba ku "Hora loKufingqwa" kufanele isetshenziswe ngomkhuba ongakhombi ukuba umkhiqizo wakho, kodwa ekhombisa iHora loKufingqwa njengesisekelo somnyakazo. Isibonelo esihle: "Hlanganyela kuHora loKufingqwa ku ACMECorp.com". Isibonakaliso esibi: "Zama iHora loKufingqwa ngenkampani yeACME".
+2. Sebenzisa umbhalo ongezansi we"TM" kuzindawo eziqavileyo lapho ukhuluma ngeHora loKufingqwa, kuwebhisayithi yakho kanye nakuncazelo yehlelo lakho.
+3. Hlanganisa ulwimi kukhasi (noma kunyaweni wekhasi), okubala izixhumaniso kumawebhusayithi eCSEdWeek kanye neCode.org, akhuluma lokhu okulandelayo:
     
     *"IHora loKufingqwa ngelokuhweba liyisinyathelo somhlaba wonke evela kuMfundiso yeViki ngeKhompyutha Sayensi [csedweek.org] kanye neCode.org[code.org] ukwazisa izinkulungwane nezinkulungwane zabafundi kuhora elilodwa lekhompyutha sayensi kanye nakuzinhlelo zekhompyutha."*
 
-  4. Akusetshenziswa "iHora loKufingqwa" emagameni amahlelo okwenza.
+4. Akusetshenziswa "iHora loKufingqwa" emagameni amahlelo okwenza.
 
 <a id="stickers"></a>
 
@@ -66,7 +64,7 @@ Amakhompyutha atholakala kuyo yonke indawo, ekushintsheni imboni zonke mhlaba wo
 
 NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
 
-Kulonyaka, asiyenzeni ibenkudlwana. Nginicela ukuba nizibandakanye neHora loKufingqwa 2016. Nginicela ukuba nibambe ichaza kumcimbi weHora loKufingqwa ngeViki leMfundiso yeKhompyutha Sayensi, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Yazisa abantu. Hlela umcimbi. Cela isikole esigodini ukuba sibhalise. Okanye zama iHora loKufingqwa ngokwakho-wonke umuntu angazuza ngokufunda izisekelo.
 
@@ -82,7 +80,7 @@ Amakhompyutha akhona kuyonke indawo, ashinstha kumabhizinisi umhlaba wonke, kodw
 
 NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
 
-Yingakho wonke omunye we [X inombolo] abafundi base [IGAMA LESIKOLE] bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Ngibhalela ukukumema ukuba ubekhona kumhlangano wethu wokuqala, ubese ubona izingane ziqala umsebenzi ngo [USUKU].
 

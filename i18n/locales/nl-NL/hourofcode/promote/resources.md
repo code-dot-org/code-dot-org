@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_resources) %>'
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promoot het CodeUur
 
@@ -35,23 +33,23 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Download Hi-res versies](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"CodeUur" is een handelsmerk. We willen het gebruik niet voorkomen, maar we willen ervoor zorgen dat het past binnen een paar grenzen:**
 
-  1. Elke verwijzing naar "Uur Code" moet worden gebruikt op een zodanige manier deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het CodeUur op ACMECorp.com". Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
-  2. Gebruik een "TM" superscript op de meest prominente plaatsen waar u "CodeUur" opnoemt, zowel op uw website en app beschrijvingen.
-  3. Plaats op uw pagina (of in de de voettekst) de volgende tekst, waaronder koppelingen naar de websites van CSEdWeek en Code.org, met de volgende inhoud:
+1. Elke verwijzing naar "Uur Code" moet worden gebruikt op een zodanige manier dat deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het CodeUur op ACMECorp.com". Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
+2. Gebruik een "TM" superscript op de meest prominente plaatsen waar u "CodeUur" opnoemt, zowel op uw website en app beschrijvingen.
+3. Plaats op uw pagina (of in de de voettekst) de volgende tekst, waaronder koppelingen naar de websites van CSEdWeek en Code.org, met de volgende inhoud:
     
-    *"Het 'Hour of Code' is een wereldwijd initiatief van de Computer Science Education Week[csedweek.org] en Code.org [code.org] om miljoenen studenten te laten kennismaken met één uur van informatica en programmeren."*
+    *"Het 'Hour of Code' is een wereldwijd initiatief van de Week van het Programmeren[csedweek.org] en Code.org [code.org] om miljoenen studenten te laten kennismaken met één uur van informatica en programmeren."*
 
-  4. Geen gebruik van "CodeUur" in app namen.
+4. Geen gebruik van "CodeUur" in app namen.
 
 <a id="stickers"></a>
 
 ## Print deze stickers om ze aan de leerlingen te geven
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Stickers zijn 1" diameter, 63 per vel)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -62,39 +60,39 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Vraag uw school, werkgever of vrienden zich aan te melden:
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Het goede nieuws is, we zijn op weg om dit te veranderen. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers zijn overal en veranderen elke industrie op deze planeet. Maar minder dan de helft van alle scholen onderwijzen informatica. Het goede nieuws is dat we zijn op weg om dit te veranderen. Als u al eerder van het CodeUur heeft gehoord, dan weet u dat het geschiedenis heeft gemaakt. Meer dan 100 miljoen leerlingen hebben meegedaan aan een CodeUur.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! en Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Dankzij het CodeUur, is programmeren op homepages gekomen van Google, MSN, Yahoo! en Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple winkel in de wereld heeft een CodeUur georganiseerd. President Obama schreef zijn eerst code regel als onderdeel van de campagne.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Zegt het voort. Begin zelf een event. Vraag een lokale school om zich aan te melden. Of probeer het Code Uur zelf - iedereen kan voordeel uit de basis krijgen.
 
-Get started at http://hourofcode.com/<%= @country %>
+Ga aan de slag op http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
 ## Vraag de media uw evenement bij te wonen:
 
-**Subject line:** Local school joins mission to introduce students to computer science
+**Onderwerp:** Lokale school sluit zich aan bij de missie om studenten kennismaken met informatica
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Het goede nieuws is, we zijn op weg om dit te veranderen.
+Computers zijn overal, veranderen elke industrie op de planeet, maar minder dan de helft van alle scholen geeft computerwetenschappen. Meisjes en minderheden zijn ernstig ondervertegenwoordigd in computer science klassen en in de tech-industrie. Het goede nieuws is dat we zijn op weg om dit te veranderen.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! en Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Dankzij het CodeUur, is programmeren op homepages gekomen van Google, MSN, Yahoo! en Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple winkel in de wereld heeft een CodeUur georganiseerd. President Obama schreef zijn eerst code regel als onderdeel van de campagne.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+Ik nodig je uit om de aftrap bij te wonen en om uw kinderen bezig te zien met de activiteit op [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
+Het uur van de Code, georganiseerd door de non-profitorganisatie Code.org e.a. meer dan 100 anderen, is een wereldwijde beweging die gelooft dat de studenten van vandaag bereid zijn om de kritische succes vaardigheden voor 21e eeuw te leren. Please join us.
 
 **Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**When:** [DATE and TIME of your event]
+**Wanneer:** [Datum en tijd van uw evenement]
 
-**Where:** [ADDRESS and DIRECTIONS]
+**Waar:** [Adres en routebeschrijving]
 
-I look forward to being in touch.
+Ik kijk uit naar onze kennismaking.
 
 <a id="parents"></a>
 
