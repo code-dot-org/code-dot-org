@@ -206,7 +206,6 @@
  * @augments MilestoneResponse
  * @property {?} timestamp
  * @property {{message: ?, type: ?, contents: ?}} share_failure
- * @property {number} hints_used - used by gamification.
  * @property {string} save_to_gallery_url - URL to save this submission to the gallery.
  * @property {string} level_source
  * @property {string} level_source_id
