@@ -13,6 +13,7 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink=""
         responsive={responsive}
         isRtl={false}
+        signedIn={false}
       />
     );
     expect(wrapper.find('VerticalImageResourceCardRow').exists()).to.be.true;
