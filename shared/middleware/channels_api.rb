@@ -86,11 +86,18 @@ class ChannelsApi < Sinatra::Base
 
     timestamp = Time.now
 
-    # The client decides whether to publish the project, but we rely on the
-    # server to generate the timestamp. Remove shouldPublish from the project
-    # data because it doesn't make sense to persist it.
-    published_at = data['shouldPublish'] ? timestamp : nil
-    data.delete('shouldPublish')
+    published_at = nil
+    if data['shouldPublish']
+      project_type = data['projectType']
+      bad_request unless PUBLISHABLE_PROJECT_TYPES_OVER_13.include?(project_type)
+      forbidden if under_13? && !PUBLISHABLE_PROJECT_TYPES_UNDER_13.include?(project_type)
+
+      # The client decides whether to publish the project, but we rely on the
+      # server to generate the timestamp. Remove shouldPublish from the project
+      # data because it doesn't make sense to persist it.
+      published_at = timestamp
+      data.delete('shouldPublish')
+    end
 
     id = storage_app.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
