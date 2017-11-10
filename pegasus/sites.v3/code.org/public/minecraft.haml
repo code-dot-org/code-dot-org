@@ -1,10 +1,8 @@
 ---
 <%
-  designer_text = 'Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft.'
-  agent_text = 'Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes.'
   mc_landing_2017 = !!DCDO.get('hoc_launch', {})['mc_landing_2017']
   year = mc_landing_2017 ? 2017 : 2016
-  share = mc_landing_2017 ? agent_text : designer_text
+  share = mc_landing_2017 ? I18n.t(:minecraft_og_agent) : I18n.t(:minecraft_og_designer)
 %>
 
 title: Minecraft
