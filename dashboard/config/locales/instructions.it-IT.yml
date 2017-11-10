@@ -787,7 +787,7 @@
       4-5 Bee Conditionals 6_instruction: |-
         Un fiore viola può avere 1, 2 o 3 dosi di nettare, ma tu non sai quante ne ha! <br>
         <br>
-        Combina i blocchi condizionali `se` e `se-altrimenti` per raccogliere esattamente la quantità di nettare che ha il fiore. <br>
+        Come puoi usare i blocchi `se` o `se-altrimenti` per raccogliere esattamente la quantità di nettare che ha il fiore?<br>
         <br>
         Ricordati che ad ogni esecuzione la quantità di nettare del fiore viola può essere diversa.
       4-5 Bee Conditionals 7_instruction: |-
@@ -2851,8 +2851,7 @@
         Need
         a hint? Click here.
       Course 4 Artist For Loops inspire_instruction: |-
-        <img
-        src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png"
+        <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png"
         width="250px"/><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist Functions 1_instruction: Riesci a disegnare un quadrato con
@@ -3434,8 +3433,7 @@
       Course 4 SCF 3_instruction: |-
         <b>Super Sfida sulle funzioni:</b> Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa.<br>
         <br><i>Nota: Il codice diventa più semplice se usi le funzioni con parametri.</i><br>
-        <img
-        src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png"
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png"
         width="300px"/>
       Course 4 SCFL 1_instruction: "<b>Super Sfida sui cicli con contatore:</b> Risolvi
         questo esercizio usando il minor numero possibile di blocchi."
@@ -3458,8 +3456,7 @@
         width="350px"/>
       Course 4 SCFL 6_instruction: |-
         <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno usando un solo ciclo?<br>
-        <img
-        src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png"
+        <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png"
         width="350px"/>
       Course 4 SCFL 7_instruction: |-
         <b>Super Sfida sui cicli con contatore:</b> L'artista vuole disegnare qualche onda! Riesci ad aiutarlo ricreando questo disegno?<br>
@@ -4235,9 +4232,9 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
-        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
-        the chest. "
+      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
+        then press \"Run\" and use the arrow keys to move the player out of\nthe house
+        to collect the chest. "
       MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
         can get to the map. "
@@ -4314,6 +4311,8 @@
       MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
       MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
+        collect all of the diamonds in this level? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
         collect all of the diamonds in this level? "
       MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
       MC_HOC_2017_Ryan_03_instruction: |-
@@ -7286,6 +7285,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -7439,10 +7441,10 @@
         ...`. Poi fai rimbalzare la palla fino a quando colpisce la bandierina.
       bounce_7_basketball_instruction: |-
         Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
-        Far rimbalzare la palla fino a quando non colpisce la bandiera.
+        Fai rimbalzare la palla fino a quando non colpisce la bandiera.
       bounce_7_sports_instruction: |-
         Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
-        Far rimbalzare la palla fino a quando non colpisce la bandiera.
+        Fai rimbalzare la palla fino a quando non colpisce la bandiera.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -7788,6 +7790,9 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -11303,8 +11308,7 @@
         Very little
         of the code has been provided for you.
       grade5_artist_for_loopsfreeplay11_instruction: |-
-        <img
-        src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png"
+        <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png"
         width="250px"/><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       grade5_artist_for_loopsfreeplay12_instruction: |-

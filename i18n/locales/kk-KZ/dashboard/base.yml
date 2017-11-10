@@ -750,6 +750,13 @@ kk:
     create: "Жоба Құру"
     create_a_project: 'Жаңа Жоба құру:'
     new: "Жаңасын құру"
+    new_buttons:
+      artist: "Кейіпкер"
+      playlab: "Ойындар Лабораториясы"
+      applab: "Қосымшалар Лабораториясы"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Жоба атын өзгерту"
     save: "Сақтау"
     delete: "Өшіру"

@@ -750,6 +750,13 @@ nl:
     create: "Project aanmaken"
     create_a_project: 'Maak een nieuw project aan:'
     new: "Nieuwe maken"
+    new_buttons:
+      artist: "Kunstenaar"
+      playlab: "Speel Lab"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (bèta)"
+    new_buttons_header: "Start a new project:"
     rename: "Hernoemen"
     save: "Opslaan"
     delete: "Verwijderen"

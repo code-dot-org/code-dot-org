@@ -437,7 +437,7 @@
   homepage_slot_text_title_students: Nemendur
   homepage_slot_text_blurb_students: Skoða allt kennsluefni okkar
   homepage_slot_text_blurb_students_courses: Kíktu á námskeiðin okkar
-  homepage_slot_text_link_codestudio: Prófa námskeið Code.org
+  homepage_slot_text_link_codestudio: Prófa Kóðastúdíóið
   homepage_slot_text_link_local: Finna nám í nágrenninu
   homepage_slot_text_link_othercourses: "Önnur námskeið á netinu"
   homepage_slot_text_title_educators: Fræðsluaðilar
@@ -706,9 +706,9 @@
   volunteer_engineer_submission_type_task_mentor: "Ég er að leita að leiðbeinanda
     til að hjálpa mér að undirbúa að kóða með nemendum mínum"
   petition_age: Aldur
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
+  dashboard_announce_hoc_scaling_progress: "Það er mikið álag á Klukkustund kóðunar.
+    Við getum ekki vistað neina framvindu þessa vikuna en öll framvinda þar á undan
+    er varðveitt."
   dashboard_announce_learn_more_button: Læra meira
   dashboard_landing_title: Heimasíða kennara
   dashboard_landing_welcome: Velkomin á nýtt og endurbætt stjórnborð kennara.
@@ -1995,8 +1995,8 @@
   user_header_logout: Skrá út
   user_header_signin: Innskráning
   view_all_sections: Sjá alla hópa
-  view_section: Skoða hóp
-  view_named_section: Skoða %{section_name}
+  view_section: Sjá hóp
+  view_named_section: Sjá %{section_name}
   privacy_doc_explanation: Smelltu hér til að fá persónuverndarskjal okkar sem þú
     getur deilt eða prentað fyrir nemendur þína.
   signing_in: Innskráning
@@ -2009,7 +2009,7 @@
   sign_in_instruct_button: Smella á "Skrá inn" hnappinn.
   sign_in_overview_cards: Nemendur geta fundið allar þessar upplýsingar, þar á meðal
     leyndarmálið sitt %{secret}, á innskráningarspjöldunum hér fyrir neðan.
-  reset_student_password: Endurstilla aðgangsorð nemenda
+  reset_student_password: Endurstilling aðgangsorða nemenda
   reset_student_password_instructions: Þú getur endurstillt leynilega <orðið/myndina>
     fyrir nemanda þinn með því að fara á "Umsjón hóps" flipann fyrir hópinn, smella
     á "Sýna leyndarmál" hnappinn í dálknum "Aðgangsorð" og smella á hnappinn "Endurstilla

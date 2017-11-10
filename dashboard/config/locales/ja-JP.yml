@@ -828,6 +828,13 @@
     create: "プロジェクトを作る"
     create_a_project: "新しいプロジェクトを作る"
     new: "新しく作る"
+    new_buttons:
+      artist: "アーティスト"
+      playlab: "プレイラボ"
+      applab: "アプリ ラボ"
+      gamelab: "ゲーム ラボ"
+      weblab: Web 研究室 (ベータ版)
+    new_buttons_header: 'Start a new project:'
     rename: "名前をかえる"
     save: "保存"
     delete: "削除（さくじょ）"
