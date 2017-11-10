@@ -56,7 +56,7 @@ export default class TeacherHomepage extends Component {
         {hocLaunch && hocLaunch.special_announcement && hocLaunch.special_announcement === "mc2017" && (
           <SpecialAnnouncementActionBlock
             isRtl={isRtl}
-            imageUrl={pegasus('/images/fill-540x289/special-announcement-hoc2017.jpg')}
+            imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
             heading={i18n.specialAnnouncementHeading()}
             subHeading={""}
             description={i18n.specialAnnouncementDescription()}
