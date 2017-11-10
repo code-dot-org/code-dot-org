@@ -128,6 +128,28 @@ module.exports = {
       },
     },
     {
+      description: "getProperty and setProperty for fit on images.",
+      editCode: true,
+      xml:
+          "image('idImage1', '');" +
+          "image('idImage2', '');" +
+          "image('idImage3', '');" +
+          "setProperty('idImage1', 'fit', 'cover');" +
+          "setProperty('idImage2', 'fit', getProperty('idImage1', 'fit'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idImage2').getAttribute('data-object-fit') === 'cover');
+          assert(document.getElementById('idImage3').getAttribute('data-object-fit') === 'contain');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
       description: "button",
       editCode: true,
       xml: "button('my_button_id', 'my_button_text');",

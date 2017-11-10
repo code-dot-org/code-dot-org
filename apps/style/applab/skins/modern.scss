@@ -59,8 +59,7 @@
   }
 }
 
-#designModeViz.appModern, .draggingParent {
-
+#divApplab.notRunning, #designModeViz.appModern, .draggingParent {
   img[data-canonical-image-url=''], canvas, .chart {
     border: 5px solid #fff;
     box-sizing: border-box;
@@ -71,7 +70,8 @@
 
   img[data-canonical-image-url=''] {
     display: block;
-    background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat;
+    // Using !important so that object-fit-images polyfill (which creates inline background styles) doesn't override the placeholder
+    background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat !important;
   }
 
   canvas {

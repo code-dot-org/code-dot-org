@@ -2105,7 +2105,26 @@
   google_sign_in_instruct: 'Z tamtego miejsca powinni wybrać opcję &ldquor;Zaloguj
     się używając konta Google&rdquo;:'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
-  minecraft_agent: 'Minecraft: Hero''s Journey'
-  minecraft_agent_description: You’re the hero! Write code to journey through Minecraft
-    biomes.
+  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
   minecraft_agent_button: Start
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
+    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
+    of the new tutorial by the Minecraft team and learn about the resources and best
+    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
+    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
+  minecraft_youthspark_continue_learning: Continue Learning with Microsoft YouthSpark
+  minecraft_youthspark_create_your_future: Whatever you're passionate about, you can
+    use computer science to imagine, create and make a future that's yours.
