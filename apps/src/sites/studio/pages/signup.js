@@ -229,6 +229,17 @@ window.SignupManager = function (options) {
             showErrorMsg={schoolDataErrors.school}
           />
         }
+        {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
+          <SchoolNotFound
+            onChange={onSchoolNotFoundChange}
+            schoolName={data.schoolName}
+            schoolType="omitted"
+            schoolCity={data.schoolCity}
+            schoolState={data.schoolState}
+            schoolZip={data.schoolZip}
+            showErrorMsg={schoolDataErrors.school}
+          />
+        }
         {!isUS &&
           <SchoolNotFound
             onChange={onSchoolNotFoundChange}
