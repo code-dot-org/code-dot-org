@@ -11,6 +11,42 @@ const schoolTypes = [
   i18n.other()
 ];
 
+const singleLineLayoutStyles = {
+  display: "table-cell",
+  width: 210,
+  verticalAlign: "top",
+  minHeight: 42,
+  fontSize: 13,
+  fontFamily: '"Gotham 4r", sans-serif',
+  color: "#333",
+  padding: 0,
+};
+
+const singleLineLabelStyles = {
+  display: "table",
+  width: "100%",
+  height: 42,
+  marginBottom: 0,
+};
+
+const singleLineFieldStyles = {
+  width: "100%",
+  height: "auto",
+};
+
+const singleLineInputStyles = {
+  height: "auto",
+  width: "100%",
+  marginBottom: 0,
+  boxSizing: "border-box",
+};
+
+const singleLineDropdownStyles = {
+  marginTop: 0,
+  marginBottom: 0,
+  width: "100%",
+};
+
 export default class SchoolNotFound extends Component {
   static propTypes = {
     onChange: PropTypes.func,
@@ -19,7 +55,8 @@ export default class SchoolNotFound extends Component {
     schoolState: PropTypes.string,
     schoolZip: PropTypes.string,
     schoolType: PropTypes.string,
-    showErrorMsg: PropTypes.bool
+    showErrorMsg: PropTypes.bool,
+    singleLineLayout: PropTypes.bool,
   };
 
   handleChange = (field, event) => {
@@ -27,21 +64,29 @@ export default class SchoolNotFound extends Component {
   }
 
   render() {
+    const singleLineLayout = this.props.singleLineLayout;
+    const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
+    const labelStyle = {...(singleLineLayout && singleLineLabelStyles)};
+    const fieldStyle = {...styles.field, ...(singleLineLayout && singleLineFieldStyles)};
+    const inputStyle = {...styles.input, ...(singleLineLayout && singleLineInputStyles)};
+    const dropdownStyle = {...styles.schoolNotFoundDropdown, ...(singleLineLayout && singleLineDropdownStyles)};
 
     return (
       <div>
-        <div style={styles.question}>
-          {i18n.schoolNotFoundDescription()}
-          {this.props.showErrorMsg && (
-            <div style={styles.errors}>
-              {i18n.schoolInfoRequired()}
-            </div>
-          )}
-        </div>
+        {!singleLineLayout &&
+          <div style={styles.question}>
+            {i18n.schoolNotFoundDescription()}
+            {this.props.showErrorMsg && (
+              <div style={styles.errors}>
+                {i18n.schoolInfoRequired()}
+              </div>
+            )}
+          </div>
+        }
         <div>
-          <div style={styles.field}>
-            <label>
-              <div style={styles.question}>
+          <div style={fieldStyle}>
+            <label style={labelStyle}>
+              <div style={questionStyle}>
                 {i18n.schoolName()}
                 <span style={styles.asterisk}> *</span>
               </div>
@@ -51,14 +96,14 @@ export default class SchoolNotFound extends Component {
                 name="school_name_s"
                 value={this.props.schoolName}
                 onChange={this.handleChange.bind(this, "schoolName")}
-                style={styles.input}
+                style={inputStyle}
               />
             </label>
           </div>
           {this.props.schoolType !== 'omitted' &&
-            <div style={styles.field}>
-              <label>
-                <div style={styles.question}>
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                <div style={questionStyle}>
                   {i18n.schoolType()}
                   <span style={styles.asterisk}> *</span>
                 </div>
@@ -66,7 +111,7 @@ export default class SchoolNotFound extends Component {
                   name="school_type_s"
                   value={this.props.schoolType}
                   onChange={this.handleChange.bind(this, "schoolType")}
-                  style={styles.schoolNotFoundDropdown}
+                  style={dropdownStyle}
                 >
                   {schoolTypes.map((schoolType, index) =>
                     <option
@@ -82,9 +127,9 @@ export default class SchoolNotFound extends Component {
           }
         </div>
         <div>
-          <div style={styles.field}>
-            <label>
-              <div style={styles.question}>
+          <div style={fieldStyle}>
+            <label style={labelStyle}>
+              <div style={questionStyle}>
                 {i18n.schoolCity()}
                 <span style={styles.asterisk}> *</span>
               </div>
@@ -93,14 +138,14 @@ export default class SchoolNotFound extends Component {
                 name="school_city_s"
                 value={this.props.schoolCity}
                 onChange={this.handleChange.bind(this, "schoolCity")}
-                style={styles.input}
+                style={inputStyle}
               />
             </label>
           </div>
           {this.props.schoolState !== 'omitted' &&
-            <div style={styles.field}>
-              <label>
-                <div style={styles.question}>
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                <div style={questionStyle}>
                   {i18n.schoolState()}
                   <span style={styles.asterisk}> *</span>
                 </div>
@@ -108,7 +153,7 @@ export default class SchoolNotFound extends Component {
                   name="school_state_s"
                   value={this.props.schoolState}
                   onChange={this.handleChange.bind(this, "schoolState")}
-                  style={styles.schoolNotFoundDropdown}
+                  style={dropdownStyle}
                 >
                   {STATES.map((state, index) =>
                     <option
@@ -124,9 +169,9 @@ export default class SchoolNotFound extends Component {
           }
         </div>
         {this.props.schoolZip !== 'omitted' &&
-          <div style={styles.field}>
-            <label>
-              <div style={styles.question}>
+          <div style={fieldStyle}>
+            <label style={labelStyle}>
+              <div style={questionStyle}>
                 {i18n.schoolZip()}
                 <span style={styles.asterisk}> *</span>
               </div>
@@ -136,7 +181,7 @@ export default class SchoolNotFound extends Component {
                 name="school_zip_s"
                 value={this.props.schoolZip}
                 onChange={this.handleChange.bind(this, "schoolZip")}
-                style={styles.input}
+                style={inputStyle}
               />
             </label>
           </div>

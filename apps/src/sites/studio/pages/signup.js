@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
 import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
@@ -117,7 +117,7 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
-  const registrationSchoolStyleGroup = (Math.random() > .5) ? "control" : "autocomplete";
+  const registrationSchoolStyleGroup = (Math.random() > 1.5) ? "control" : "autocomplete";
 
   function logEvent(event) {
     firehoseClient.putRecord(
@@ -164,7 +164,7 @@ window.SignupManager = function (options) {
     updateAutocompleteSchoolFields(schoolData);
   }
 
-  function onSchoolChange(event) {
+  function onSchoolChange(_, event) {
     schoolData.nces = event ? event.value : '';
     updateAutocompleteSchoolFields(schoolData);
   }
@@ -191,8 +191,9 @@ window.SignupManager = function (options) {
           value={data.country}
           required={true}
           showErrorMsg={schoolDataErrors.country}
+          singleLineLayout
         />
-        <div className="itemblock">
+        <div className="itemblock" style={{minHeight:42}}>
           <div className="school-info-labelblock">School Type</div>
           <select
             className="form-control fieldblock"
@@ -213,9 +214,11 @@ window.SignupManager = function (options) {
           </select>
         </div>
         {isUS && schoolTypesToShowDropdown.includes(data.schoolType) &&
-          <SchoolAutocompleteDropdown
-            onChange={onSchoolChange}
+          <SchoolAutocompleteDropdownWithLabel
+            setField={onSchoolChange}
             value={data.nces}
+            showErrorMsg={schoolDataErrors.nces}
+            singleLineLayout
           />
         }
         {isUS && data.nces === '-1' &&
@@ -227,6 +230,7 @@ window.SignupManager = function (options) {
             schoolState={data.schoolState}
             schoolZip={data.schoolZip}
             showErrorMsg={schoolDataErrors.school}
+            singleLineLayout
           />
         }
         {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
@@ -238,6 +242,7 @@ window.SignupManager = function (options) {
             schoolState={data.schoolState}
             schoolZip={data.schoolZip}
             showErrorMsg={schoolDataErrors.school}
+            singleLineLayout
           />
         }
         {!isUS &&
@@ -249,6 +254,7 @@ window.SignupManager = function (options) {
             schoolState="omitted"
             schoolZip="omitted"
             showErrorMsg={schoolDataErrors.school}
+            singleLineLayout
           />
         }
       </div>
