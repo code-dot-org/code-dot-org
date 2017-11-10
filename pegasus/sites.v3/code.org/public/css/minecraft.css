@@ -10,8 +10,12 @@
 }
 
 .mc-new-tag {
-  float: right;
-  margin-bottom: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 98px;
+  image-rendering:pixelated;
+  -ms-interpolation-mode:nearest-neighbor;
 }
 
 .new-mc {
@@ -25,10 +29,6 @@
 
 .mc-img {
   width: 478px;
-}
-
-.mc-new-tag {
-  width: 100px;
 }
 
 .white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
@@ -48,13 +48,25 @@
 @media screen and (min-width: 971px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 218px;
+    right: 0;
     top: 0;
-    height: 307px;
+    bottom: 0;
   }
 
   .mc-tutorial-details {
     margin-top: 100px;
+  }
+
+  .mc-img-wide {
+    width: 100%;
+  }
+
+  .mc-img-narrow {
+    display: none;
+  }
+
+  .mc-tutorial-info-wide {
+    width: 360px;
   }
 }
 
@@ -75,9 +87,9 @@
 @media screen and (min-width: 513px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 228px;
+    right: 0;
     top: 0;
-    height: 307px;
+    bottom: 0;
   }
 
   .tutorial-box {
@@ -86,6 +98,14 @@
 
   .mc-tutorial-details {
     margin-top: 100px;
+  }
+
+  .mc-img-wide {
+    display: none;
+  }
+
+  .mc-img-narrow {
+    display: block;
   }
 }
 
@@ -108,7 +128,7 @@
     background-size: 605px 100px;
   }
 
-  .mc-img {
+  .mc-img, .mc-img-wide {
     display: none;
   }
 
