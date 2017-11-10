@@ -29,6 +29,7 @@ export default class TeacherHomepage extends Component {
     announcements: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
+    hocLaunch: PropTypes.object
   };
 
   componentDidMount() {
@@ -38,7 +39,7 @@ export default class TeacherHomepage extends Component {
   }
 
   render() {
-    const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
+    const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections, hocLaunch } = this.props;
 
     return (
       <div>
@@ -52,20 +53,22 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
+        {hocLaunch && hocLaunch.special_announcement && hocLaunch.special_announcement === "mc2017" && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcement-hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeading()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescription()}
+            buttons={[
+              {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+              {url: pegasus('/minecraft'), text: i18n.tryIt()}
+            ]}
+          />
+        )}
+
         {announcements.length > 0 && (
           <div>
-            <SpecialAnnouncementActionBlock
-              isRtl={isRtl}
-              imageUrl={pegasus('/images/fill-540x289/special-announcement-hoc2017.jpg')}
-              heading={i18n.specialAnnouncementHeading()}
-              subHeading={""}
-              description={i18n.specialAnnouncementDescription()}
-              buttons={[
-                {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
-                {url: pegasus('/minecraft'), text: i18n.tryIt()}
-              ]}
-            />
-
             <Notification
               type={announcements[0].type || "bullhorn"}
               notice={announcements[0].heading}
