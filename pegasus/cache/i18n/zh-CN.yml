@@ -350,7 +350,7 @@
   homepage_slot_text_link_buy: "加入进来"
   homepage_slot_text_link_donate: "捐赠"
   homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: "带到您的学校或地区"
   homepage_header_codestudio: Code.org学生作品
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: "查看全部"
@@ -547,9 +547,8 @@
   volunteer_engineer_submission_type_task_remote: "我邀请你通过 Skype 参与我的课堂，说几句对孩子们富有启示的话"
   volunteer_engineer_submission_type_task_mentor: "我正在寻找一位导师，帮助我备课，以使我能与我的学生写代码。"
   petition_age: "年龄"
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
+  dashboard_announce_hoc_scaling_progress: "呀! 我们正经历着编程一小时的访问高峰期。本周我们暂时无法保存任何进度存档,
+    但本周之前的进度存档仍然是安全的。"
   dashboard_announce_learn_more_button: "了解详情"
   dashboard_landing_title: "教师主页"
   dashboard_landing_welcome: "欢迎您来到我们最新改进的教师控制台。"
@@ -957,8 +956,8 @@
   csp1_name: "第1单元：互联网"
   csp2_name: "第2单元︰ 数字信息"
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: "单元 3: 编程介绍 (版本 A)"
+  csp3-research-mxghyt_name: "单元 3: 编程介绍 (子目标)"
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1501,53 +1500,33 @@
   view_all_sections: "查看所有小组"
   view_section: "查看小组"
   view_named_section: "查看%{section_name}"
-  privacy_doc_explanation: Click here for our privacy document that can be shared
-    or printed for your students.
-  signing_in: Signing In
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
-    these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
-  sign_in_overview_cards: Students can find all of this information, including their
-    secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
-  reset_student_password_instructions: You can reset the secret <word/picture> for
-    any of your students by going to the “Manage Students” tab for the section, clicking
-    the “Show secret” button under the “Password” column, and clicking the “Reset
-    secret” button.
-  login_cards: Login Cards
-  print_login_cards: Print login cards
-  joining_section: Joining your section (one-time only)
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
-  joining_section_instruct_button: Once they press the “Go” button, they should be
-    added to your section.
-  signing_in_single_instruct: Your students can sign in to their Code.org accounts
-    by going to https://code.org/ and clicking on the “Sign in” button on the top
-    right corner.
-  reset_student_password_email: If your student created a Code.org account by using
-    their email address and password (instead of signing in through their Google,
-    Facebook, Microsoft, or Clever account), you can reset their password by going
-    to the “Manage Students” tab for the section, and clicking the “Reset password”
-    button under the “Password” column.
-  syncing_students: Syncing your students
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
+  privacy_doc_explanation: "单击此处可为您的学生共享或打印我们的隐私文档。"
+  signing_in: "正在登录"
+  sign_in_overview: "您的学生可以通过以下步骤来登录他们的 Code.org 帐户:"
+  sign_in_instruct_website: "跳转至 %{code_org_url}"
+  sign_in_instruct_code: "输入他们的小组代码: %{section_code}。"
+  sign_in_instruct_name: "选择他们的显示名称"
+  sign_in_instruct_secret: "选择他们的秘钥 %{secret}。"
+  sign_in_instruct_button: 点击 "登录" 按钮。
+  sign_in_overview_cards: "学生可以在下面的登录卡中找到所有这些信息, 包括他们的秘钥 %{secret}。"
+  reset_student_password: "重置学生密码"
+  reset_student_password_instructions: 您可以通过进入 "管理学生" 选项卡, 单击 "密码" 栏下的 "显示密码" 按钮,
+    然后单击 "重置密码" 按钮来重置任何学生的密码 <word/picture>。
+  login_cards: "登录卡"
+  print_login_cards: "打印登录卡"
+  joining_section: "加入你的小组（只能加入一次）"
+  joining_section_overview: "如果学生尚未加入您的小组, 请要求他们执行以下步骤。请注意, 他们只需要这样做一次。通过加入您的小组, 学生将能够看到分配给他们的课程,
+    而您能够在他们登录后跟踪他们的作业完成进度。"
+  joining_section_instruct_website: "如果他们尚未注册，先创建一个 Code.org 帐户。他们可以在 https://studio.code.org/users/sign_up完成注册。请注意,
+    他们可以使用电子邮件地址和密码注册, 或通过点击以下其中一个按钮来使用谷歌, Facebook, 或微软账号来进行注册:"
+  joining_section_instruct_account: "用他们的 Code.org 帐户登录。"
+  joining_section_instruct_code: "导航到%{code_org_url} 并键入其小组代码: %{section_code}。"
+  joining_section_instruct_button: 一旦他们按下 "好的" 按钮, 他们就会被添加到您的小组。
+  signing_in_single_instruct: 您的学生可以通过访问 https://code.org/，点击右上角的"登录" 按钮来登录他们的 Code.org
+    帐户。
+  reset_student_password_email: 如果您的学生使用他们的电子邮件地址和密码创建了 Code.org 帐户 (而不是通过他们的 Google、Facebook、Microsoft
+    或Clever帐户登录), 您可以在 "管理学生" 选项卡中单击"密码" 栏下的 "重设密码" 按钮来重置其密码。
+  syncing_students: "同步您的学生信息"
+  syncing_students_instructions: '如果您的 Code.org 小组与您在 google 教室中的学生名单不够新, 请点击 "管理学生"
+    标签 上的"从 google 教室同步学生信息" 按钮:'
+  google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
