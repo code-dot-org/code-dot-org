@@ -50,10 +50,7 @@ var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
 var authoredHintUtils = require('./authoredHintUtils');
 
-import experiments from './util/experiments';
-import AchievementDialog from './templates/AchievementDialog';
 import ChallengeDialog from './templates/ChallengeDialog';
-import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
  * @typedef {Object} FeedbackOptions
@@ -243,77 +240,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   const isPerfect = actualBlocks <= idealBlocks;
   const showPuzzleRatingButtons =
       options.response && options.response.puzzle_ratings_enabled;
-
-  if (!options.level.freePlay && experiments.isEnabled('gamification')) {
-    const container = document.createElement('div');
-    const hintsUsed = (options.response.hints_used || 0) +
-      authoredHintUtils.currentOpenedHintCount(options.response.level_id);
-
-    const lastInStage = FeedbackUtils.isLastLevel();
-    const stageName = `Stage ${window.appOptions.stagePosition}`;
-
-    const progress = FeedbackUtils.calculateStageProgress(
-        isPerfect,
-        hintsUsed,
-        options.response.level_id,
-        isFinite(idealBlocks));
-
-    const achievements = FeedbackUtils.getAchievements(
-        isPerfect,
-        hintsUsed,
-        idealBlocks,
-        actualBlocks,
-        progress);
-    const msgParams = {
-      puzzleNumber: options.level.puzzle_number || 0,
-      numBlocks: idealBlocks,
-    };
-    const feedbackMessage = isPerfect ?
-        msg.nextLevel(msgParams) :
-        msg.numBlocksNeeded(msgParams);
-
-    let onContinue = options.onContinue;
-    if (lastInStage) {
-      onContinue = () => {
-        ReactDOM.render(
-          <StageAchievementDialog
-            stageName={stageName}
-            assetUrl={this.studioApp_.assetUrl}
-            onContinue={onContinue}
-            showStageProgress={true}
-            newStageProgress={progress.newStageProgress}
-            numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
-          />,
-          container
-        );
-      };
-    }
-
-    if (showPuzzleRatingButtons) {
-      const prevOnContinue = onContinue;
-      onContinue = () => {
-        puzzleRatingUtils.cachePuzzleRating(container, {
-          script_id: options.response.script_id,
-          level_id: options.response.level_id,
-        });
-        prevOnContinue();
-      };
-    }
-
-    document.body.appendChild(container);
-    ReactDOM.render(
-      <AchievementDialog
-        achievements={achievements}
-        assetUrl={this.studioApp_.assetUrl}
-        encourageRetry={!isPerfect}
-        feedbackMessage={feedbackMessage}
-        oldStageProgress={progress.oldStageProgress}
-        onContinue={onContinue}
-        showPuzzleRatingButtons={showPuzzleRatingButtons}
-        showStageProgress={true}
-      />, container);
-    return;
-  }
 
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
