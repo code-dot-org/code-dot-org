@@ -25,7 +25,7 @@ export default class StudentsBeyondHoc extends Component {
   };
 
   render() {
-    const { isRtl, responsive, signedIn } = this.props;
+    const { isRtl, responsive } = this.props;
 
     return (
       <div style={styles.container}>
