@@ -6,7 +6,14 @@ import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudent
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
-import { pre2017MinecraftCards } from './congratsBeyondHocActivityCards';
+import {
+  pre2017MinecraftCards,
+  // newMinecraftCards,
+  // signedInApplabCards,
+  // signedOutApplabCards,
+  // signedInDefaultCards,
+  // signedOutDefaultCards
+ } from './congratsBeyondHocActivityCards';
 
 const styles = {
   heading: {

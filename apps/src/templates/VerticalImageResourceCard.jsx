@@ -82,12 +82,13 @@ class VerticalImageResourceCard extends Component {
 
     const filenameToImgUrl = {
       "another-hoc": require('@cdo/static/resource_cards/anotherhoc.png'),
+      "applab-marketing": require('@cdo/static/resource_cards/applabmarketing.png'),
       "applab-project": require('@cdo/static/resource_cards/applabcreateproject.png'),
       "applab-tutorial": require('@cdo/static/resource_cards/applabtutorial.png'),
       "create-account": require('@cdo/static/resource_cards/createaccount.png'),
       "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
       "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
-      "oldminecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
+      "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
