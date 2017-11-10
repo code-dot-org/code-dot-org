@@ -4,6 +4,7 @@ import styleConstants from '../../styleConstants';
 import color from "../../util/color";
 import Radium from 'radium';
 import _ from 'lodash';
+import firehoseClient from '../../lib/util/firehose';
 
 const DEFAULT_PROJECT_TYPES_ADVANCED = [
   'playlab',
@@ -159,11 +160,30 @@ class NewProjectButtons extends React.Component {
     isRtl: PropTypes.bool,
     description: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
+    shouldLogEvents: PropTypes.bool,
   };
 
   static defaultProps = {
     canViewAdvancedTools: true
   };
+
+  handleProjectClick(projectType) {
+    if (!this.props.shouldLogEvents) {
+      return;
+    }
+
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'my-projects-create-project',
+        study_group: 'start-new-project-widget',
+        // '-wip' should be removed when the data format is finalized
+        // and the A/B experiment is launched
+        event: 'create-project-wip',
+        data_json: JSON.stringify({projectType})
+      }
+    );
+  }
 
   render() {
     const { canViewAdvancedTools, description, isRtl } = this.props;
@@ -179,7 +199,11 @@ class NewProjectButtons extends React.Component {
             <div style={styles.row} key={rowIndex}>
               {
                 projectTypesRow.map((projectType, index) => (
-                  <a key={index} href={"/projects/" + projectType + "/new"}>
+                  <a
+                    key={index}
+                    href={"/projects/" + projectType + "/new"}
+                    onClick={this.handleProjectClick.bind(this, projectType)}
+                  >
                     <div style={[styles.tile, index < (TILES_PER_ROW - 1) && styles.tilePadding]}>
                       <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
                       <div style={styles.label}>
