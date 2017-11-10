@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>如何讲授编程一小时</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 如何在课后兴趣班讲授编程一小时 1. 观看指导视频 2. 选择教程 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
