@@ -1,5 +1,6 @@
 ---
 title: FAQs
+nav: intl_nav
 theme: responsive
 ---
 
