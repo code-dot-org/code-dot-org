@@ -302,6 +302,7 @@
   homepage_hero_text_stat_loc: "8.5 million girls are enrolled to learn on Code.org"
   homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen with Anna and Elsa"
   homepage_slot_text_teacher: "Teacher Dashboard"
@@ -427,10 +428,13 @@
   mc_gradelevel: "Ages 6-106"
   mc_platformtext: "Modern browsers, smartphones, tablets"
   mc_specs: "Many languages | Modern browsers and tablets | Ages 6-106"
+  minecraft_agent: 'Minecraft: Hero''s Journey'
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
+  minecraft_agent_description: "You’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_agent_button: "Start"
   minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_designer_button: "Start"
   minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
