@@ -356,11 +356,10 @@ export function getInternalPropertyInfo(element, friendlyPropName) {
  * @returns {!Array<string> | function} droplet dropdown array or function
  */
 function getPropertyValueDropdown(param2) {
-  //This is probably what you want to make into an array of stuff
   const dropletConfigDefaultValue = ["0", "25", "50", "75", "100", "150", "200"];
 
   if (!param2) {
-    return [dropletConfigDefaultValue];
+    return dropletConfigDefaultValue;
   }
   const formattedParam = stripQuotes(param2);
 
