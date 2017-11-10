@@ -1,16 +1,24 @@
 ---
+<%
+  designer_text = 'Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft.'
+  agent_text = 'Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes.'
+  mc_landing_2017 = !!DCDO.get('hoc_launch', {})['mc_landing_2017']
+  year = mc_landing_2017 ? 2017 : 2016
+  share = mc_landing_2017 ? agent_text : designer_text
+%>
+
 title: Minecraft
 theme: responsive
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/minecraft"
-  "twitter:image:src" : "https://code.org/images/mc/mc_social_2017.jpg"
+  "twitter:image:src" : "https://code.org/images/mc/mc_social_<%= year %>.jpg"
   "twitter:title": "Minecraft Hour of Code"
-  "twitter:description": "Minecraft is back for the Hour of Code, and you're the hero! Write code to journey through Minecraft biomes."
+  "twitter:description": "<%= share %>"
   "og:title": "Minecraft Hour of Code"
-  "og:description": "Minecraft is back for the Hour of Code, and you're the hero! Write code to journey through Minecraft biomes."
-  "og:image" : "https://code.org/images/mc/mc_social_2017.jpg"
+  "og:description": "<%= share %>"
+  "og:image" : "https://code.org/images/mc/mc_social_<%= year %>.jpg"
   "og:image:width": "1200"
   "og:image:height": "630"
   "og:video": ""
