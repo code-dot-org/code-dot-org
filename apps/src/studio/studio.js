@@ -3329,12 +3329,7 @@ Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
 Studio.onPuzzleComplete = function () {
-  if (Studio.executionError) {
-    Studio.result = ResultType.ERROR;
-  } else if (studioApp().hasContainedLevels ||
-      (level.freePlay && !Studio.preExecutionFailure)) {
-    Studio.result = ResultType.SUCCESS;
-  }
+  Studio.setResult();
 
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
@@ -3364,6 +3359,26 @@ Studio.onPuzzleComplete = function () {
     studioApp().playAudioOnFailure();
   }
 
+  Studio.report();
+};
+
+/**
+ * Sets Studio.result based on other state
+ */
+Studio.setResult = function () {
+  if (Studio.executionError) {
+    Studio.result = ResultType.ERROR;
+  } else if (studioApp().hasContainedLevels ||
+      (level.freePlay && !Studio.preExecutionFailure)) {
+    Studio.result = ResultType.SUCCESS;
+  }
+};
+
+/**
+ * Send the milestone post, including level progress (result and testResults)
+ * and saved user code.
+ */
+Studio.report = function () {
   if (studioApp().hasContainedLevels && !level.edit_blocks) {
     postContainedLevelAttempt(studioApp());
     runAfterPostContainedLevel(() => {
