@@ -24,12 +24,16 @@ video_player: true
 #resources.responsive-body
   .col-50
     .tutorial-tile
-      %img.tutorial-tile-img{src: CDO.code_org_url("/images/app-lab/applab-intro.png"), style: "width: 100%;"}
+      %a{:href=>CDO.studio_url("/s/applab-intro/reset")}
+        %img.tutorial-tile-img{src: CDO.code_org_url("/images/app-lab/applab-intro.png"), style: "width: 100%;"}
       .tutorial-info
         %h3.tutorial-info-h Intro to App Lab Tutorial (beta)
         .smalltext Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
-        %a{:href=>CDO.studio_url("/s/applab-intro")}
+        %a{:href=>CDO.studio_url("/s/applab-intro/reset")}
           %button.tutorial-gray{style: "margin-top: 20px;"} Start tutorial
+        %div{style: "float: right; margin-top: 25px;"}
+          %a{href: "https://curriculum.code.org/hoc/plugged/7/"}
+            View teacher guide
   .col-50
     .tutorial-tile
       = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
@@ -54,23 +58,107 @@ video_player: true
     = view :highlight_item, item: {image: "app-lab/gallery", title: "Project gallery", desc: "Check out projects other students have made and use them as insiration for your own app.", cta: "View project gallery", url: 'https://studio.code.org/projects/public'}
   .clear
 
+.clear
+%h2 Demos for creating apps with App Lab
+.col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
+  = view :display_video_thumbnail, id: "app_lab_intro", video_code: "xlbRL5eOgkI", play_button: 'center', download_path: "//videos.code.org/applab/how-to-introduction.mp4", letterbox: 'false', play_button: 'center'
+.col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
+  = view :display_video_thumbnail, id: "how_to_make_an_app", video_code: "tDnoxkOSfQw", play_button: 'center', download_path: "//videos.code.org/applab/how-to-make-an-app.mp4", letterbox: 'false', play_button: 'center'
+.col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
+  = view :display_video_thumbnail, id: "choose_adventure", video_code: "ZhgBSYKWL2A", play_button: 'center', download_path: "//videos.code.org/applab/how-to-choose-your-own-adventure.mp4", letterbox: 'false', play_button: 'center'
+.col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
+  = view :display_video_thumbnail, id: "whack_e_moji", video_code: "WZVAA3ajZxc", play_button: 'center', download_path: "//videos.code.org/applab/whack-e-moji.mp4", letterbox: 'false', play_button: 'center'
+.col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
+  = view :display_video_thumbnail, id: "app_lab_deep_dive", video_code: "4DntNOOYmpo", play_button: 'center', download_path: "//videos.code.org/2015/csp/AppLabDemo.mp4", letterbox: 'false', play_button: 'center'
+
+.clear
+#teachers
+  %h2 For teachers
+  %p
+    Want to do more with App Lab? Our introductory course, 
+    = succeed "," do
+      %a{href: '/csd'} Computer Science Discoveries
+    and our
+    %a{href: '/csp'} Computer Science Principles
+    course both use this tool to help teach students computer science concepts.
+
+  .pl-callout
+    .pl-icon
+      %i.fa.fa-book.pl-book
+    .pl-description
+      .pl-text-area
+        .pl-title Professional Learning Program
+        %p Course specific professional learning provides hands on experience with the curriculum.
+      .pl-button
+        %a{href: "/educate/professional-learning"}
+          %button.tutorial-gray Learn more
+
+  %h3
+    %a{href: '/csp'} Computer Science Principles
+    units that use App Lab
+
+  %table
+    %tr
+      %th{style: "min-width: 75px;"} Link
+      %th Unit description
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/csp3")}
+          %img{src: "/educate/csp/images/thumb_applab.png"}
+          Unit 3
+      %td
+        %b.purple Algorithms and Programming
+        %p This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/csp5")}
+          %img{src: "/educate/csp/images/thumb_app.png"}
+          Unit 5
+      %td
+        %b.purple Building Apps
+        %p This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event-driven apps.
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/csppostap")}
+          %img{src: "/educate/csp/images/data_button.png"}
+          Post-AP
+      %td
+        %b.purple Post-AP material - Making Data-backed apps
+        %p This unit teaches students how to use App Lab's database capabilites to make apps that store data in the cloud so it can be retrieved later.
+
+  %h3
+    %a{href: '/csd'} Computer Science Discoveries
+    units that use App Lab
+
+  %table
+    %tr
+      %th{style: "min-width: 75px;"} Link
+      %th Unit description
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/csd4")}
+          %img{src: "/educate/csp/images/thumb_app.png"}
+          Unit 4
+      %td
+        %b.purple The Design Process
+        %p In this unit, students are asked to consider and understand the needs of others while developing a solution to a problem through a series of design challenges. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/csd6")}
+          %img{src: "/images/fit-50/animated-examples/circuitplayground.gif"}
+          Unit 6
+      %td 
+        %b.purple Physical Computing
+        %p
+          In this unit, students develop their programming skills in App Lab while exploring the role of hardware platforms in computing. Students look towards current and “smart” devices to understand the ways in which different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Note: This unit requires access to
+          %a{href: "https://code.org/circuitplayground"}
+            Adafruit's Circuit Playground
+          board.
+
+
 #videos
   %h2.responsive-body Video library
   Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
-
-  .clear
-  %h3 Demos for creating apps with App Lab
-  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
-    = view :display_video_thumbnail, id: "app_lab_intro", video_code: "xlbRL5eOgkI", play_button: 'center', download_path: "//videos.code.org/applab/how-to-introduction.mp4", letterbox: 'false', play_button: 'center'
-  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
-    = view :display_video_thumbnail, id: "how_to_make_an_app", video_code: "tDnoxkOSfQw", play_button: 'center', download_path: "//videos.code.org/applab/how-to-make-an-app.mp4", letterbox: 'false', play_button: 'center'
-  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
-    = view :display_video_thumbnail, id: "choose_adventure", video_code: "ZhgBSYKWL2A", play_button: 'center', download_path: "//videos.code.org/applab/how-to-choose-your-own-adventure.mp4", letterbox: 'false', play_button: 'center'
-  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
-    = view :display_video_thumbnail, id: "whack_e_moji", video_code: "WZVAA3ajZxc", play_button: 'center', download_path: "//videos.code.org/applab/whack-e-moji.mp4", letterbox: 'false', play_button: 'center'
-  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
-    = view :display_video_thumbnail, id: "app_lab_deep_dive", video_code: "4DntNOOYmpo", play_button: 'center', download_path: "//videos.code.org/2015/csp/AppLabDemo.mp4", letterbox: 'false', play_button: 'center'
-  .clear
 
   - cspunit3_videos = []
   - cspunit3_videos << { id: 'turtle', category_title: 'Procedural abstraction and top-down design', caption: 'Program a turtle to move around the screen and draw anything from basic shapes to complex designs.', code: 'i2KHYUhtOlM', download_path: '//videos.code.org/2015/csp/applab/turtle.mp4', studio_stage: '/s/cspunit3/stage/2/puzzle/1' }

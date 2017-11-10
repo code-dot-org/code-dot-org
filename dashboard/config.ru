@@ -2,6 +2,11 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 
+unless rack_env?(:development)
+  require 'cdo/unicorn_listener'
+  use Cdo::UnicornListener
+end
+
 require 'gctools/oobgc/unicorn_middleware'
 use GC::OOB::UnicornMiddleware
 use Rack::ContentLength

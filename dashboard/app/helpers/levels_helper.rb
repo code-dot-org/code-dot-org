@@ -1,7 +1,8 @@
 require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
-require "firebase_token_generator"
+require 'firebase_token_generator'
+require 'image_size'
 
 module LevelsHelper
   include ApplicationHelper
@@ -166,9 +167,8 @@ module LevelsHelper
     end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
-    view_options(post_milestone: post_milestone)
-    post_final_milestone = @script ? Gatekeeper.allows('postFinalMilestone', where: {script_name: @script.name}, default: true) : true
-    view_options(post_final_milestone: post_final_milestone)
+    post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_milestone_mode: post_milestone_mode(post_milestone, post_failed_run_milestone))
 
     @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
@@ -607,17 +607,30 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       block_type = ext.slice(1..-1)
-      content_tag(
-        :iframe,
-        '',
-        {
-          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
-          width: width ? width.strip : '100%',
-          scrolling: 'no',
-          seamless: 'seamless',
-          style: 'border: none;',
-        }
-      )
+      options = {
+        readonly: true,
+        embedded: true,
+        locale: js_locale,
+        baseUrl: Blockly.base_url,
+        blocks: '<xml></xml>',
+        dialog: {},
+      }
+      app = level.game.app
+      blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+
+      unless @blockly_loaded
+        @blockly_loaded = true
+        blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
+        content_tag(:style, '.blocklySvg { background: none; }') +
+        content_tag(:script, '', src: minifiable_asset_path('js/blockly.js')) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/blockly_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+        content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
+      end
+
+      blocks
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
@@ -801,14 +814,24 @@ module LevelsHelper
   #
   # @param level_image [String] A base64-encoded image.
   # @param level_source_id [Integer, nil] The id of a LevelSource or nil.
+  # @param upgrade [Boolean] Whether to replace the saved image if level_image
+  #   is higher resolution
   # @returns [LevelSourceImage] A level source image, or nil if one was not
   # created or found.
-  def find_or_create_level_source_image(level_image, level_source_id)
+  def find_or_create_level_source_image(level_image, level_source_id, upgrade=false)
     level_source_image = nil
-    # Store the image only if the image is set, and the image has not been saved
+    # Store the image only if the image is set, and either the image has not been
+    # saved or the saved image is smaller than the provided image
     if level_image && level_source_id
       level_source_image = LevelSourceImage.find_by(level_source_id: level_source_id)
-      unless level_source_image
+      upgradable = false
+      if upgrade && level_source_image
+        old_image_size = ImageSize.path(level_source_image.s3_url)
+        new_image_size = ImageSize.new(Base64.decode64(level_image))
+        upgradable = new_image_size.width > old_image_size.width &&
+          new_image_size.height > old_image_size.height
+      end
+      if !level_source_image || upgradable
         level_source_image = LevelSourceImage.new(level_source_id: level_source_id)
         unless level_source_image.save_to_s3(Base64.decode64(level_image))
           level_source_image = nil
@@ -816,5 +839,20 @@ module LevelsHelper
       end
     end
     level_source_image
+  end
+
+  # Returns the appropriate POST_MILESTONE_MODE enum based on the values
+  # of postMilestone and postFailedRunMilestone
+  #
+  # @param post_milestone [boolean] gatekeeper value
+  # @param post_failed_run_milestone [boolean] gatekeeper value
+  # @returns [POST_MILESTONE_MODE] enum value
+  def post_milestone_mode(post_milestone, post_failed_run_milestone)
+    if post_milestone
+      return POST_MILESTONE_MODE.successful_runs_and_final_level_only unless post_failed_run_milestone
+      POST_MILESTONE_MODE.all
+    else
+      POST_MILESTONE_MODE.final_level_only
+    end
   end
 end

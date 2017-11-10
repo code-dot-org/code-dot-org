@@ -1,52 +1,62 @@
 ---
-
-title: <%= hoc_s(:title_press_release) %>
+title: "<%= hoc_s(:title_press_release) %>"
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-# Voorbeeld perscommuniqué voor verkozenen
+# Voorbeeld persbericht voor verkozen ambtenaren
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Voor Onmiddellijke Publicatie   
+[**DATUM**]   
+Contact: [**CONTACT INFORMATIE**]  
   
 
 
-**
+<strong>
 
 <center>
   GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
 </center>
 
-  
-  
-</p> 
+<br /> <br /></p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+<p>
+  <strong>DATUM</strong>-[<strong>NAAM INVOEGEN</strong>] voegde zich bij de directie en faculteitsleden van [<strong>NAAM SCHOOL INVOEGEN</strong>], bedrijfsleiders en lokale families voor [<strong>NAAM VAN HET EVENEMENT</strong>] om deel te nemen aan het CodeUur als onderdeel van het Science Education Week. [Invoegen naam] en leden van de gemeenschap waren een van de tientallen miljoenen mensen over de hele wereld die deel namen aan het grootste leerevenement in de geschiedenis.
+</p>
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+<p>
+  [<strong>INVOEGEN DETAILS VAN GEBEURTENIS, GEBRUIK BESCHRIJVENDE EN KWANTIFICEERBARE TAAL. BIJVOORBEELD:</strong>] <br /> "Daniels Run basisschool hield een CodeUur evenement met de hele school om zijn leerlingen met programmeren kennis te laten maken. Meer dan 700 leerlingen uit alle klassen deden op zijn minst één CodeUur. En een dozijn ouders en medewerkers van de gemeenschap hielpen die dag en brachten de kinderen samen voor een bijeenkomst om aan te tonen waarom programmeren belangrijk is in het leven van deze leerlingen."
+</p>
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+<p>
+  [<strong>VOORBEELD TEKST ALS CONTEXT:</strong>]<br /> Computers zijn overal, maar steeds minder scholen onderwijzen leerlingen in programmeren dan 10 jaar geleden. Meisjes en gekleurde leerlingen zijn ernstig ondervertegenwoordigd. Het goede nieuws is dat we dit veranderen voor het beste. Het CodeUur is een toegangsweg die alle leerlingen voorziet van toegang tot hoge kwaliteit programmeer onderwijzing.
+</p>
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! en Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+<p>
+  Wereldwijd hebben er meer dan 100 miljoen leerlingen meegedaan met het CodeUur. Dankzij het CodeUur, was programmeren op homepages van Google, MSN, Yahoo! en Disney. President Obama, Shakira en Ashton Kutcher startten het CodeUur met video's. Meer dan 100 organisaties kwamen samen om de stichting te ondersteunen.
+</p>
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+<p>
+  [<strong>VOEG QUOTE IN VAN WOORDVOERDER, VOORBEELD HIERONDER:</strong><br /> "We moeten de interesse in programmeren van leerlingen aanmoedigen," zei [<strong>NAAM INVOEGEN</strong>]. "Elke leerling heeft het recht op een kans om te leren programmeren om toegang te krijgen tot de beste carrières van de 21ste eeuw."
+</p>
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+<p>
+  [<strong>MEER INFORMATIE INVOEGEN OVER UW EVENEMENT EN/OF UW ORGANISATIE</strong>]
+</p>
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+<p>
+  [<strong>QUOTE INVOEGEN VAN ANDERE ORGANISATIE OF IEMAND DIE AANWEZIG WAS TIJDENS HET EVENEMENT</strong>]
+</p>
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+<p>
+  Voor meer informatie over [<strong>EVENEMENT/PROGRAMMA/ETC</strong>], bezoek [<strong>WEBSITE INVOEGEN</strong>] of Neem contact op met [<strong>CONTACT INFORMATIE INVOEGEN</strong>]
+</p>
 
-  
-  
+<p>
+  <br /> <br />
+</p>
 
-
-<%= view :signup_button %>
+<p>
+  <%= view :signup_button %>
+</p>

@@ -2,7 +2,7 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import Button from "./Button";
-import SchoolAutocompleteDropdown from './SchoolAutocompleteDropdown';
+import SchoolAutocompleteDropdownWithLabel from './census2017/SchoolAutocompleteDropdownWithLabel';
 
 import ValidationStep, {Status} from '../lib/ui/ValidationStep';
 
@@ -188,7 +188,7 @@ export default class EligibilityChecklist extends Component {
         }
         {this.state.statusYear === Status.SUCCEEDED &&
           <div>
-            <SchoolAutocompleteDropdown
+            <SchoolAutocompleteDropdownWithLabel
               setField={this.handleDropdownChange}
               value={submission.nces}
               showErrorMsg={errors.nces}

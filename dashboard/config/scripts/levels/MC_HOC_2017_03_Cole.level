@@ -53,8 +53,8 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Once you get the Agent to the pressure plate, you can use your arrow keys to walk the player to the compass!\",\"hint_id\":\"MC_HOC_2017_03_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"[[4, 9], [4, 5]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f06d1b6465e4be1fdcbd8a7fcba5909a/MC_HOC_2017_03_Cole.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does the code feel a little long?  Try using a `repeat` loop and see if you can figure out how to make it shorter!\",\"hint_id\":\"MC_HOC_2017_03_Cole_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e7ad09ff6651a9d7be21293f0bdc88c0/MC_HOC_2017_03_Cole.mp3\"}]",
     "songs": "[\"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\"]",
     "instructions": "Code the Agent to open the gate. ",
-    "contained_level_names": null,
-    "video_key": "mc_2017_puzzle_3"
+    "video_key": "mc_2017_puzzle_3",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
