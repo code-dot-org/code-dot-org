@@ -1,13 +1,13 @@
 ---
 title: '<%= hoc_s(:title_how_to) %>'
-layout: szeroki
+layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
 <h1>Jak przeprowadzić jedną Godzinę Kodowania</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

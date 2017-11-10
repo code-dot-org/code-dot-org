@@ -33,7 +33,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 **کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:**
 
 - Code.org کی اوریجنل ویڈیو پلے کریں، جس میں بل گیٹس، مارک زوکربرگ، اور NBA اسٹار کرس بوش نمایاں کردار ہیں۔ (اس کے [ 1 منٹ](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [ 5 منٹ](https://www.youtube.com/watch?v=nKIu9yen5nc)، اور [ 9 منٹ](https://www.youtube.com/watch?v=dU1xS07N-FA) پر مبنی ورژن ہیں)
-- د ی [آور-آف-کوڈ 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw)، لانچ کریں، یا د ی <% if @country == 'uk' %> [ آور-آف-کوڈ 2015 ویڈیو](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> آور-آف-کوڈ 2015 ویڈیو</a> چلائیں۔ <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [صدر اوباما نے تمام اسٹوڈینٹس کو کمپیوٹر سائنس سیکھنے پر زور دیا](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
