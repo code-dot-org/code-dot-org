@@ -24,24 +24,24 @@ nav: promote_nav
 
 Жөндөмдүү програмчыларга талап туу чокусуна жеткенде, компүтерди окугандарын саны кыскарып кеткен. Азыркы жумушсуздуктун жогорку деңгээлине карабастан, миңдеген жумуш бар, алардын көбү мында - **[INSERT STATE/CITY]** жана жөндөмү туура келген киши жоктугунан улам бош калат.
 
-Эмне мындай? Жана кантип өзгөртө алабыз?
+Эмнеге мындай? Жана кантип өзгөртө алабыз?
 
 Маселе орто мектепте башталат. Он мектептин ичинен тогузунда компүтердик програмдоо сабагы окутулбайт. Былтыр **[РАЙОНДОГУ МЕКТЕПТЕРДИН]** ичинен **[САНЫ]** гана коллеж деңгээлиндеги кеңейтилип өтүлүүчү компүтердик билим сынагын тапшырган. Болгону биз студенттерибизди бул жакшы төлөнгөн, абдан керектүү ишке жетиштүү түрдө шыктандырбай жатабыз.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Дээрлик бардык компүтердик иновацияларды биздин өлкөдө ойлоп чыгарылган, бирок эгерде биз азыр эч нерсе жасабай койсок, бул лидерликти жоготушубуз мүмкүн.
 
 Бир нерсени өзгөртүш керек.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Бир олутту өзгөрүү: так информатика курстарынын жогорку класстардагы математика же бүтүрүүчү илимий иштердин талаптарына дал келүүсү болуп эсептелет. **[INSERT STATE]** мектептеринде информатика курстары тандалма. Академиялык талаптарды эске алганда, окуучулар өз эрки менен информатика курстарын алууга мүмкүнчүлүктөрү жок. Бул өзгөрүш чоң таасир берет. Информатика сабагы милдеттүү түрдө окутулган штаттарда, тандоо сабагы катары окутулган штаттарга караганда курстардын катышуусу элүү пайызга көбүрөөк.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+Ошондой эле биз жаш окуучуларды информатика жана код жазууга кызыктырыш үчүн алар менен иштешибиз керек. Биздин балдар колдонмолорду колдонуу менен видео оюндарды ойногонду гана билбестен - аларды жасаганды да билиши керек. Балдар экинчи класстан баштап эле код жазууну үйрөнүп башташса болот.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Биз информатика окутуучуларга иш орундарын берип, бул тармактын профессионалдык өнүгүүсүн колдошубуз керек. Азыркы учурда жаңы технологиялар окутуучулар үчүн жеткиликтүү болууга жана алар тууралуу окуучуларды кабардар кылып турууга жардам берчү көптөгөн онлайн ресурстар бар.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+Иш камсыздоо бюросунун статистикасы боюнча, 2020-жылы STEM тармагында 9.2 миллион иш орун ачылат. 4.6 миллион жумуш орунунун жарымы эсептөө же маалымат технологиялар тармагында болот. Компүтер илими - 21-кылымдын негизги билими болуп баратат. Эгерде биздин балдар үчүн керектүү жөндөмдөрдү өздөштүрүүгө мүмкүнчүлүк түзүлбөсө, бул жумуш орундарды кимдер толуктайт?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Бул жума - <%= campaign_date('full') %> Информатика аптасы. **[STATE]** мектептеринде окуган окуучуларыбыз компүтер илимин жайылтыш үчүн жана бул илим жөнүндө көбүрөөк үйрөнүш үчүн улуттук Код сааты долбоорунда катышышат. Мен аларга кошулам жана силерди да кошулууга чакырам. Код жазганды баары билиши керек. Мында кирип https://hourofcode.com/<%= @country %> маалымат алгыла дагы баштагыла. Ошондой эле **[STATE]** мектептеринде компүтердик илимди көбүрөөк окутуу аракетибизди колдоңуз.
 
 <%= view :signup_button %>

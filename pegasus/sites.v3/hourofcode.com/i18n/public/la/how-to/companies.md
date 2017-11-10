@@ -57,7 +57,7 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 **Muestre un video inspirador:**
 
 - El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- El [vídeo de lanzamiento de la Hora del Código 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o el <% if @country == 'uk' %> [vídeo de la Hora del Código 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vídeo de la Hora del Código 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- El [vídeo mundial de la Hora del Código](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [El presidente Obama llama a todos los estudiantes a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encuentra más videos inspiradores [aquí](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

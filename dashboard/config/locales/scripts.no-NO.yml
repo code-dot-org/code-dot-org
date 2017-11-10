@@ -287,7 +287,7 @@
             'Calc: Evaluation Blocks':
               name: Evaluation Blocks and Arithmetic Expressions
             'Eval: Boolean Operators':
-              name: Boolean Operators
+              name: Boolske operatorer
             'Eval: Conditionals':
               name: Betingelser
             'Eval: Defining Functions':
@@ -2352,7 +2352,7 @@
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Enkel kryptering
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -3745,6 +3745,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4173,7 +4175,7 @@
             and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Enkel kryptering
         fesbinary:
           title: Binær
           description_audience: ''
@@ -6591,7 +6593,7 @@
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: Kurs A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -6631,7 +6633,7 @@
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Kurs B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: |-
@@ -6672,7 +6674,7 @@
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Kurs C
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -6849,7 +6851,7 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: Kurs D
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7075,12 +7077,12 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Nested Loops:
               name: Løkker i løkker
-          title: 'CS Fundamentals: Course E'
+          title: Kurs E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7291,9 +7293,9 @@
                 all five stages of the process can be found in the beginning of the
                 project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals
-                in the world of Minecraft.
+              name: Betingelser i Minecraft
+              description_student: Unngå lavaen! Her skal du lære om betingelser i
+                Minecraft-verdenen.
               description_teacher: This lesson gives students a chance to learn and
                 practice conditionals. It features characters and settings from Minecraft,
                 and students will complete tasks such as mining and building structures
@@ -7315,10 +7317,10 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: 'CS Fundamentals: Course F'
+          title: Kurs F
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7650,7 +7652,7 @@
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Betingelser i Minecraft
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
@@ -7879,6 +7881,10 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -7943,7 +7949,7 @@
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Sequence in Maze:
               name: Sequence in Maze
           title: Course E & F Ramp
@@ -8045,7 +8051,7 @@
             Conditional Loops in Maze:
               name: Conditional Loops in Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Betingelser i Minecraft
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             'Variables: Envelope Variables':
@@ -8121,7 +8127,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Dice Race':
@@ -8179,7 +8185,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Tangrams':
@@ -8191,7 +8197,7 @@
             Ice Age Play Lab:
               name: Istid Spill-lab
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Betingelser i Minecraft
             Envelope Variables:
               name: Konvolutt variabler
             Variables in Artist:
@@ -8443,6 +8449,26 @@
             Minecraft Hour of Code:
               name: Kodetimen med Minecraft
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''

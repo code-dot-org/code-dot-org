@@ -174,13 +174,13 @@ is:
         desc: Í þessum tíma munt þú 'forrita' vini þína!
       courseB_unplugged_loopyMRF:
         title: Verkefni án tölvu
-        desc: Alveg eins og í 'Vinir mínir vélmennin' munt þú 'forrita' vini þína, en í þetta sinn með lykkjum!
+        desc: Alveg eins og í "Vinir mínir vélmennin" munt þú "forrita" vini þína, en í þetta sinn með lykkjum!
       courseC_Unplugged_ScreenOutTheMean:
         title: Verkefni án tölvu
         desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við þig á netinu.
       courseD_unplugged_digitalCitizenship:
         title: Verkefni án tölvu
-        desc: Í dag munt þú læra hvað það þýðir að vera Netþegn.
+        desc: Í dag munt þú læra hvað það þýðir að hafa stafrænt ríkisfang.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Private and Personal Information '
         desc: Í dag munt þú læra muninn á persónulegum og ópersónulegum gögnum!
@@ -189,7 +189,7 @@ is:
         desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við þig á netinu.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'þýðingu vantar: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algrím úr raunheimi: Sá fræi'
         desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.

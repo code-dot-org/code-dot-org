@@ -7,7 +7,7 @@ nav: promote_nav
 
 <% if @country == 'la' %>
 
-# Recursos
+# Каражаттар
 
 ## ¿Qué hacemos cuando hacemos la Hora del Código?
 
@@ -102,7 +102,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 **Код саатынын көнүгүүлөрү:**
 
-- Require minimal prep-time for organizers
+- Даярданууга көп убакыт талап кылбайт
 - Are self-guided - allowing students to work at their own pace and skill-level
 
 <a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
@@ -118,15 +118,15 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 ## 3) Plan ahead based on your technology available
 
 - **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
-- **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+- **Интернет жайбы?** Ар бир окуучу өзү жүктөбөсү үчүн, видеолорду катышуучуларга жалпы көрсөтүүнү пландаштыргыла же офлайн жетектемелерди колдонгула.
 
 ## 4) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+- Code.org тааныштыруу видеосу, Билл Гейтс, Марк Цукерберг жана NBA жылдызы Крис Бош тартылган (Анын [1 мүнөт](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 мүнөт](https://www.youtube.com/watch?v=nKIu9yen5nc) жана [9 мүнөт](https://www.youtube.com/watch?v=dU1xS07N-FA) версиялары бар)
 - The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- [Президент Обама окуучуларды компүтердик илимди өздөштүрүүгө чакырат](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 

@@ -35,9 +35,9 @@ nav: promote_nav
 
 [Завантажити версії з високою роздільністю](http://images.code.org/share/hour-of-code-logo.zip)
 
-**«Година коду» є торговельним знаком. Ми не хочемо перешкоджати цьому використанню, але ми хотіли би переконатися, чи вписується воно в декілька обмежень:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Будь-яке посилання на Годину коду має використовуватись таким чином, щоб не створювати враження про те, що це Ваша власна торгова марка, натомість посилаючись на масовий рух Години коду. Добрий приклад: «Візьміть участь у Годині коду™ на ACMECorp.com». Поганий приклад: «Спробуйте годину коду від ACME Corp».
+1. Будь-яке посилання на Годину коду має використовуватись таким чином, щоб не створювати враження про те, що це Ваша власна торгова марка, натомість посилаючись на масовий рух Години коду. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
 2. Використовуйте верхній індекс «TM» у найвидніших місцях, де ви згадуєте «Годину коду», як на вашому сайті, так і в описах застосунків.
 3. Додайте на сторінку (або в колонтитул) текстовий блок з посиланнями на сайти CSEdWeek та Code.org, з наступним змістом:
     
@@ -58,80 +58,108 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## Запросіть підписатись свою школу, працедавця чи друзів:
+### Ask your school, employer, or friends to sign up:
 
-Комп'ютери є скрізь, вони змінюють кожну галузь на планеті. Але інформатики вчать менше ніж у половині шкіл. Доброю новиною є те, що ми змінюємо це. Якщо ви чули про Годину коду раніше, ви можете знати, що вона творить історію. Годину коду спробували понад 100 мільйонів учнів.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-Завдяки Годині коду інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Для підтримки цього руху об'єдналися понад 100 партнерів. Кожен з магазинів Apple у світі провів Годину коду. Президент Обама в рамках цієї кампанії написав свій перший рядок коду.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Поширюйте інформацію. Проведіть захід. Запросіть місцеву школу приєднатися. Або спробуйте Годину коду самі — від вивчення основ виграти може кожен.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Почніть на http://hourofcode.com/<%= @country %>
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+
+Get started at http://hourofcode.com/<%= @country %>
+
+<a id="help-schools"></a>
+
+### Volunteer at a school:
+
+**Subject line:** Can we help you host and Hour of Code?
+
+Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+
+Thanks!
+
+[Your name], [Your organization]
 
 <a id="media-pitch"></a>
 
-## Запросіть ЗМІ на свій захід:
+### Invite media to attend your event:
 
-**Заголовок:** Місцева школа приєднується до місії знайомства учнів з інформатикою
+**Subject line:** Local school joins mission to introduce students to computer science
 
-Комп'ютери є скрізь, вони змінюють кожну галузь на планеті, але інформатики вчать менше ніж у половині шкіл. Дівчата та представники національних меншин серйозно недостатньо представлені на заняттях з інформатики та в індустрії високих технологій. Доброю новиною є те, що ми змінюємо це.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Доброю новиною є те, що ми змінюємо це.
 
-Завдяки Годині коду інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Для підтримки цього руху об'єдналися понад 100 партнерів. Кожен з магазинів Apple у світі провів Годину коду. Президент Обама в рамках цієї кампанії написав свій перший рядок коду.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Я хочу запросити Вас відвідати наші вступні збори і побачити, як діти починають роботу [ДАТА].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-Година коду, що проводиться некомерційною організацією Code.org і більш як сотнею інших, є глобальним рухом, який вірить, що сьогоденні учні готові вчитися необхідним навичкам для успіху в 21-му сторіччі. Будь ласка, приєднуйтесь до нас.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
 
-**Контакт:** [ВАШЕ ІМ'Я], [ПОСАДА], тел. (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**Коли:** [ДАТА та ЧАС вашої події]
+I look forward to being in touch.
 
-**Де:** [АДРЕСА та ЯК ДІСТАТИСЯ]
-
-З нетерпінням чекаю на контакт.
+[Your Name]
 
 <a id="parents"></a>
 
-## Повідомте батьків про заходи у вашій школі:
+### Tell parents about your school's event:
 
-Шановні батьки,
+**Subject line:** Our students are changing the future with an Hour of Code
 
-Ми живемо у світі, наповненому технологіями. І ми знаємо, що яку б професію не обрали наші учні у майбутньому, їхній успіх все більше залежатиме від розуміння принципів роботи цих технологій.
+Dear Parents,
 
-Але лише невеликий відсоток з нас вивчає, **як** працюють технології. Менше ніж половина шкіл вчать інформатики.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Тому вся наша школа приєднується до найбільшої освітньої події в історії: Години коду, протягом тижня інформатики (<%= campaign_date('full') %>). Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду.
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
-Наша Година коду є доказом того, що [НАЗВА ШКОЛИ] готова навчати цих базових навичок 21-го століття. Щоби пропонувати більше занять з програмування нашим учням, ми хочемо зробити нашу подію Години коду величезною. Я закликаю вас стати волонтером, донести цю інформацію до місцевих ЗМІ, поширити ці новини каналами соціальних мереж та розглянути можливість проведення додаткових подій Години коду в нашій громаді.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Це — шанс змінити майбутнє освіти в [НАСЕЛЕНИЙ ПУНКТ].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-Докладніше див. http://hourofcode.com/<%= @country %>, і передайте далі.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-З повагою,
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Ваш директор школи
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
-## Запросіть місцевих політиків на захід у Вашій школі:
+### Invite a local politician to your school's event:
 
-Шановний [мере/губернаторе/народний депутате ІМ'Я ПРІЗВИЩЕ]:
+**Subject line:** Join our school as we change the future with an Hour of Code
 
-Чи знали Ви, що інформаційні технології є джерелом №1 зарплат у США? В інформаційних технологіях є понад 500 000 вільних робочих місць, але попереднього року робочу силу поповнили лише 42 969 випускників з інформатики.
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Інформатика сьогодні є основою *кожної* галузі. Проте в більшості шкіл її не вивчають. У [НАЗВА ШКОЛИ] ми намагаємося змінити це.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Тому вся наша школа приєднується до найбільшої освітньої події в історії: Години коду, протягом тижня інформатики (<%= campaign_date('full') %>). Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Я хочу запросити Вас взяти участь в нашому заході Години коду і виступити на вступних зборах. Вони відбудуться [ДАТА, ЧАС, МІСЦЕ] і стануть сильною заявою про те, що [назва Міста чи Області] готове вчити наших учнів критичних навичок 21-го сторіччя. Ми хочемо бути впевнені, що наші учні знаходяться на передньому краї створення технологій майбутнього — а не лише споживання їх.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Будь ласка, зв'яжіться зі мною за [НОМЕР ТЕЛЕФОНУ АБО АДРЕСА ЕЛЕКТРОННОЇ ПОШТИ]. Я з нетерпінням чекаю на Вашу відповідь.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-З повагою, [ІМ'Я], [ПОСАДА]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+
+Sincerely,
+
+[Your Name], [Title]
 
 <%= view :signup_button %>

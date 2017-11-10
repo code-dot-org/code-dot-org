@@ -15,15 +15,16 @@
     errors:
       messages:
         blank: on nõutud
-        blank_plural: are required
+        blank_plural: on nõutud
         invalid_plural: are invalid
     attributes:
       user:
         name: Kuvatav nimi
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-post
-        parent_email: Parent/guardian email
-        personal_email: Personal email address
+        parent_email: Lapsevanem/hooldaja e-posti aadress
+        personal_email: Isiklik e-posti aadress <a href="%{url}"> (vajuta siia, kui
+          teil ei ole e-posti aadressi)</a>
         username: Kasutajanimi
         password: Salasõna
         password_confirmation: Salasõna kinnitus
@@ -53,20 +54,20 @@
       placeholder: "Üksuse kood (ABCDEF)"
       instructions: Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline
         tähtedest koosnev kood, näiteks "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions_short: Sisestage oma 6-täheline sektsiooni kood
     submit: Lisa õpetaja
   add_hint_form:
     placeholder: Palun sisesta oma vihje siia
     submit: Lisa vihje
   appname: Code.org
   stage: Tase
-  stage_number: Tase %{number}
+  stage_number: "Õppetund %{number}"
   puzzle: Mõistatus
   trophies: Trofeed
   courses: Kursused
   courses_page:
     title_student: "Õpi Code stuudios"
-    title_teacher: Teach with Code Studio
+    title_teacher: "Õpeta koos Code Studioga"
   unplugged_activity: Lahutatud tegevus
   of: kohta
   more: NÄITA ROHKEM
@@ -92,12 +93,12 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsofti konto
-    clever: Clever Account
+    clever: Tark konto
     forgot_password: Unustasid oma salasõna?
     need_confirmation: Ei saanud kinnituse juhiseid?
     need_unlock: Ei saanud lahtilukustamise juhiseid?
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
+    not_linked: Kahjuks sinu Code.org konto ei ole seotud teie %{provider}. Sisselogimiseks
+      palun sisestage parool.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
   signup_form:
@@ -220,7 +221,7 @@
     your_section:
       one: 'Your section:'
       other: 'Your sections:'
-    code_with_teacher: "%{section_code} with %{teacher_name}"
+    code_with_teacher: "%{section_code} ja %{teacher_name}"
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
@@ -336,8 +337,8 @@
       already_registered: Oled juba liitunud?
       pair_programming: Paarisprogrammeerimine
       team: Võistkond
-      driver: Juht
-      navigator: Kaardilugeja
+      driver: Sisse logitud
+      navigator: Parnter
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
@@ -361,8 +362,8 @@
     students:
       dashboard: Mine õpetaja menüüsse
     user_not_found: "Õpetajat ei leitud."
-    student_teacher_disassociated: Olete eemaldanud %{teacher_name} oma õpetajate
-      nimekirjast.
+    student_teacher_disassociated: Olete lahkunud oma õpetaja %{teacher_name} tunnist
+      %{section_code}.
     panel:
       answer_viewer: "Õpetaja paneel"
       student: "Õpilane"
@@ -465,7 +466,7 @@
     heading_elementary: "<h2>20-tunnised kursused </h2><h1> Arvutiteaduse Põhialused
       (kõik vanused)</h1>"
     heading_apps: "<h2>Lõbu</h2> <h1>Kõigile</h1>"
-    heading_tools: "<h2>Valmis järgmiseks sammuks?</h2><h1>JavaScript tööriistad keskkoolile</h1>"
+    heading_tools: "<h2>Valmis järgmiseks sammuks?</h2><h1>Tööriistad keskkoolile</h1>"
     heading_legacy: "<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>"
     your_gallery: Galerii
     no_primary_course: Proovige Code Studio kursust
@@ -590,7 +591,7 @@
     all_students_must_be_in_current_section: Kõik õpilased peavad praegu sinu sektsiooni
       registreeritud olema.
     already_enrolled_in_new_section: Sa ei saa neid õpilasi liigutada, sest nad on
-      selle õpetaja teises sektsioonis.
+      selle õpetaja uues sektsioonis.
   share:
     title: "Õpi Code stuudios"
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
@@ -635,7 +636,7 @@
     copyright: Autoriõigus
     more: Veel
     feedback: Tagasiside
-    translate: Aita meil tõlkida oma keelde
+    translate: Tule vabatahtlikuks ja aita meil tõlkida
     support: Tugi
     support_url: http://support.code.org
     tos_short: Tingimused
@@ -645,7 +646,7 @@
     report_abuse: Teata rikkumisest
     built_on_code_studio: Code Studio abil loodud
     make_my_own_app: Oma rakenduse loomine
-    how_it_works: Tööpõhimõtted
+    how_it_works: Kuidas see töötab (vaata koodi)
     try_hour_of_code: Proovi Koodi Tundi!
   reference_area:
     title: Vajad abi?
@@ -974,6 +975,13 @@
     create: Loo projekt
     create_a_project: 'Uue projekti loomine:'
     new: Loo uus
+    new_buttons:
+      artist: Kunstnik
+      playlab: Play Lab
+      applab: App Lab
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Nimeta ümber
     save: Salvesta
     delete: Kustuta

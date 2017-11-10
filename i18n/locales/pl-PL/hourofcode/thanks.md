@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_signup_thanks) %>'
-layout: szeroki
+layout: wide
 nav: how_to_nav
 social:
   "og:title": '<%= hoc_s(:meta_tag_og_title) %>'

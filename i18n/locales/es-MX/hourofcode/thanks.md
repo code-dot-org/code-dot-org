@@ -22,14 +22,14 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-Como agradecimiento por ayudar a que los estudiantes puedan comenzar a aprender informática, nos gustaría darle un conjunto gratuito de carteles impresos profesionalmente con diversos modelos para su clase. Utilice el código de oferta **FREEPOSTERS** al finalizar la compra. (Nota: esta última sólo está disponible mientras duren las existencias y usted necesitará cubrir los gastos de envío. Dado que estos carteles se envían desde los Estados Unidos, los costos de envío pueden ser bastante altos si se envían a Canadá e internacionalmente. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Como agradecimiento por ayudar a que los estudiantes puedan comenzar a aprender informática, nos gustaría darle un conjunto gratuito de carteles impresos profesionalmente con diversos modelos para su clase. Utilice el código de oferta **FREEPOSTERS** al finalizar la compra. (Nota: esta última sólo está disponible mientras duren las existencias y usted necesitará cubrir los gastos de envío. Dado que estos carteles se envían desde los Estados Unidos, los costos de envío pueden ser bastante altos si se envían a Canadá e internacionalmente. Entendemos que esto puede no estar dentro de su presupuesto, y le recomendamos que imprima los [archivos PDF](https://code.org/inspire) para su clase.)  
+<br /> [<button>Obtener carteles</button>](https://store.code.org/products/code-org-posters-set-of-12) Utilice el código de oferta FREEPOSTERS
 
-<br /> **La Hora del código se celebra durante <% = campaign_date ('full')%>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
+<br /> **La Hora del código se celebra durante <%= campaign_date('full') %>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
 
 ## 1. Corre la voz en tu escuela y comunidad
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Se acaba de unir al movimiento de la Hora del Código. ¡Díselo a tus amigos con **#HoraDelCódigo**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Anime a otros a participar [con nuestros correos electrónicos de muestra.](%= resolve_url('/promote/resources#sample-emails') %) Póngase en contacto con su director y desafíe a cada aula de su escuela para que se registren. Reclute un grupo local - club de scouts, iglesia, universidad, grupo de veteranos, sindicato o incluso algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Invite a un político local o autoridad a visitar su escuela durante la Hora del Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
 
@@ -41,7 +41,7 @@ Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](%= reso
 
 ## 3. Planifique su Hora del Código
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
+Elija una [actividad de la Hora del Código](https://hourofcode.com/learn) para su clase y [revisa esta guía práctica](%= resolve_url('/how-to') %).
 
 # Vaya más allá de una Hora de Código
 

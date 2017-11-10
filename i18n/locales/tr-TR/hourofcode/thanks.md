@@ -22,8 +22,8 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Bir saat kodu oluşturduğunuz için teşekkürler!
 
-Bilgisayar eğitimini öğrenmek isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. </strong>FREEPOSTERS</0> Promosyon kuponunuzdur ücretsiz posterinizi almak için kodu kullanınız. (Not: gönderdiğimiz posterleri ücretsiz kullana bilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Posterler Amerika'dan kargolandığı için, Kanada ve diğer ülkelere kargo ücreti oldukça fazla olabilir. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Bilgisayar eğitimini öğrenmek isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. </strong>FREEPOSTERS</0> Promosyon kuponunuzdur ücretsiz posterinizi almak için kodu kullanınız. (Not: gönderdiğimiz posterleri ücretsiz kullana bilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Posterler Amerika'dan kargolandığı için, Kanada ve diğer ülkelere kargo ücreti oldukça fazla olabilir. Bunun, bütçenize göre olmayabileceğini anlıyoruz ve sınıfınız için  PDF dosyalarını </ 0> basmanızı öneriyoruz.)   
+<br /> [<button>Poster edinin</button>](https://store.code.org/products/code-org-posters-set-of-12) Bedava poster için teklif kodunu kullanın</p> 
 
 <br /> **Kod Saati projesi <%= campaign_date('full')%> tarihine kadar sürecektir. Yeni uygulamalar ve diğer güncellemeler hakkında sizinle irtibat halinde olacağız. Bu arada, şimdi neler yapabilirsiniz? **
 
@@ -31,9 +31,9 @@ Bilgisayar eğitimini öğrenmek isteyen öğrencilere yaptığınız yardım i�
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Yeni beceriler öğrenmek için okulda olmana gerek yok. Invite a local politician or policy maker to visit your school for the Hour of Code. Bu senin bölgenin bir saat mesafesinde bilgisayar bilimleri desteği oluşturmana yardım edebilir.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Yeni beceriler öğrenmek için okulda olmana gerek yok. Invite a local politician or policy maker to visit your school for the Hour of Code. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
 
-Kendi etkinliklerin için posterler, afişler, çıkartmalar, videolar ve daha fazlasını kullan.
+Bu [ poster, afiş, çıkartma, video ve daha fazlasını](%= resolve_url('/promote/resources') %) etkinlik için kullan.
 
 ## 1. Size yardımcı olacak kendi dilinizde konuşan yerel gönüllüler bulun.
 

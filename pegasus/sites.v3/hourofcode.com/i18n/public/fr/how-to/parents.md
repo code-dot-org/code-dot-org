@@ -33,7 +33,7 @@ Lancez le coup d'envoi de votre Heure de Code en inspirant votre enfant et en é
 **Montrez une vidéo qui inspire :**
 
 - La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) disponible )
-- La [vidéo de lancement d'Une Heure de Code en 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou la <% if @country == 'uk' %> [vidéo Une Heure de Code en 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vidéo Une Heure de Code en 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Le président Obama a lancé un appel, invitant tous les étudiants à apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Retrouvez ici d'autres [ressources](<%= resolve_url('https://code.org/inspire') %>) et [vidéos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspirantes.
 

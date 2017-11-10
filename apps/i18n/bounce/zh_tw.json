@@ -122,7 +122,7 @@
   "setTeam": "球隊設為{team}",
   "setTeamRandom": "球隊設為隨機",
   "shareBounceTwitter": "我在 @codeorg 製作了一個彈跳球遊戲，有空來玩。",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareBounceTwitterDonor": "看看我做的彈跳遊戲。(感謝 {donor} 支援 @codeorg)",
   "shareGame": "分享你的遊戲：",
   "turnLeft": "轉向-左方",
   "turnRight": "轉向-右方",
