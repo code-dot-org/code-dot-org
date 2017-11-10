@@ -5,7 +5,7 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Hieronder is een voorbeeld van een voorstander opiniepagina van de week van programmeren en zijn doelstellingen die kunnen worden gebruikt door de staat, lokale wetgevers, bedrijfsleiders enz.
+### Hieronder is een voorbeeld van een voorstander opiniepagina van het Computer Science Education Week en zijn doelstellingen die kunnen worden gebruikt door de staat, lokale wetgevers, bedrijfsleiders etc.
 
   
 

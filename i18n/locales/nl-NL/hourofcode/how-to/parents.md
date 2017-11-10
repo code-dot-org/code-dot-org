@@ -30,17 +30,17 @@ De beste CodeUur ervaring beleeft u met computers die met internet verbonden zij
 
 Begin uw CodeUur met het inspireren van uw kind en te bespreken hoe programmeren elk deel van ons leven beïnvloedt.
 
-**Laat inspirerende video zien:**
+**Laat een inspirerende video zien:**
 
 - De originele Code.org lanceringsvideo, in samenwerking met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- De [CodeUur 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de <% if @country == 'uk' %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama roept alle leerlingen op om mee te doen met programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Vind meer inspirerende [middelen](%= resolve_url('https://code.org/inspire') %) en [video 's](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Het maakt niet uit als programmeren voor u en uw kind nog nieuw is. Hier zijn een paar ideeën om uw CodeUur activiteit te introduceren:
 
 - Leg uit hoe technologie impact heeft op ons leven, doe dit met behulp van voorbeelden zodat zowel jongens als meisjes interesse zullen tonen (Praat over apps en technologie dat wordt gebruikt om levens te redden, mensen te helpen, en mensen in contact brengt met elkaar etc).
-- Maak een lijst over dingen die gebruik maken van codes in het dagelijks leven.
+- Maak een lijst van dingen die gebruik maken van codes in het dagelijks leven.
 - Zie [hier](%= resolve_url('https://code.org/girls') %) tips om meisjes ook geïnteresseerd te krijgen in programmeren.
 
 Wilt u meer ideeën? Bekijk ons [lesplan model](/files/AfterschoolEducatorLessonPlanOutline.docx) voor de beste methoden van ervaren leraren.

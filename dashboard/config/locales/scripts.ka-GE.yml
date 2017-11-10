@@ -3779,6 +3779,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -7982,6 +7984,10 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში"
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: "შესავალი აპლიკაციების ლაბორატორიაში"
           description_audience: ''
           description_short: ''
@@ -8547,6 +8553,28 @@
             Minecraft Hour of Code:
               name: "მაინკრაფტის კოდის ერთი საათი"
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში - აირჩიეთ თქვენი საკუთარი
+                თავგადასავალი"
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში - აირჩიეთ თქვენი საკუთარი
+                თავგადასავალი 2"
+            Intro to AppLab - Your First App:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში - თქვენი პირველი აპლიკაცია"
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''

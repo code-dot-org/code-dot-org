@@ -67,7 +67,7 @@ Not sure which Code.org program is right for you? [Check out our program recomme
 
 **Applications to join our Professional Learning Program for the 2018-19 academic year will open in January 2018.** If you are interested in joining us in 2018-19, sign up below.
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1"><button>Tell me when applications open!</button> 
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open!</button> 
 
 <br>
 

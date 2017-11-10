@@ -3383,6 +3383,8 @@ en:
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -6114,7 +6116,7 @@ en:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
-          title: CSP Unit 3 - Intro to Programming
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.

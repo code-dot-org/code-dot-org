@@ -980,6 +980,13 @@
     create: Stvaranje projekta
     create_a_project: 'Stvaranje novog projekta:'
     new: Kreiraj novi
+    new_buttons:
+      artist: Umjetnik
+      playlab: Laboratorij igara
+      applab: Laboratorij aplikacija
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Preimenuj
     save: Spremi
     delete: izbriši

@@ -1,20 +1,20 @@
 ---
-title: '<%= hoc_s(:title_signup_thanks) %>'
-layout: large
-nav: comment_faire_nav
+title: <%=hoc_s(titre_inscription_merci) %>
+layout: wide
+nav: how_to_nav
 social:
-  "og:title": '<%= hoc_s(:meta_tag_og_title) %>'
-  "og:description": '<%= hoc_s(:meta_tag_og_description) %>'
-  "og:image": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "og:title": '<%=hoc_s(:tag_meta_titre_og) %>'
+  "og:description": <%= hoc_s(tag_meta_déscription_og) %>
+  "og:image": 'http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png'
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": 'http://<%=request.host%>'
-  "twitter:card": player
-  "twitter:site": '@codeorg'
-  "twitter:url": 'http://<%=request.host%>'
-  "twitter:title": '<%= hoc_s(:meta_tag_twitter_title) %>'
-  "twitter:description": '<%= hoc_s(:meta_tag_twitter_description) %>'
-  "twitter:image:src": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "og:url": 'http://<%=requête.hôte%>'
+  "twitter:card": joueur
+  "twitter:site": '@code. org'
+  "twitter:url": 'http://<%=requête.hôte%>'
+  "twitter:title": '<%= hoc_s(:étiquette_meta_twitter_titre) %>'
+  "twitter:description": '<%=hoc_s(:étiquette_meta_twitter_déscription) %>'
+  "twitter:image:src": 'http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png'
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -22,22 +22,22 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Merci de vous être inscrit(e) pour organiser une Heure de Code !
 
-En guise de remerciement pour avoir aidé les étudiants à commencer à apprendre l'informatique, nous aimerions vous offrir un ensemble gratuit de posters créés par des professionnels et présentant différents modèles pour votre classe. Utilisez le code promotionnel "FREEPOSTERS" au moment de payer. (Remarque: offre disponible jusqu'à épuisement des stocks et vous devrez couvrir les frais d'expédition. Si ce n'est pas dans votre budget, les fichiers PDF sont disponibles pour l'imprimer vous même.) (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+En guise de remerciement pour avoir aidé les étudiants à commencer à apprendre l'informatique, nous aimerions vous offrir un ensemble gratuit de posters créés par des professionnels et présentant différents modèles pour votre classe. Utilisez le code promotionnel "FREEPOSTERS" au moment de payer. (Remarque: offre disponible jusqu'à épuisement des stocks et vous devrez couvrir les frais d'expédition. Si ce n'est pas dans votre budget, les fichiers PDF sont disponibles pour l'imprimer vous même.). Vu que ces affiches sont livrées des États-Unis, les frais d'expédition peuvent être pas mal hauts dans le cas de livrage internationel ou au Canada. Nous comprenons que ce n'est peut-être pas dans votre budget, et nous vous encourageons à imprimer les [files PDF](https://code.org/inspire) pour votre classe.)  
+<br /> [<button>Obtenez les affiches</button>](https://store.code.org/products/code-org-posters-set-of-12)Utilisez le code spécial FREEPOSTERS
 
-<br /> **Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **L'Heure de Code prend course pendant <%=date_de_campaigne('complet') %>. Nous serons en contact sur le sujet de nouveaux tutoriels et d'autres nouvelles excitantes au fur et à mesure qu'ils surgissent. En attendant, que pouvez-vous faire en ce moment?**
 
-## 1. Spread the word in your school and community
+## 1. Passez le message auprès de votre école et de votre communeauté
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Vous venez de joindre le mouvement Une Heure de Code. Parlez-en à vos amis avec **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Invite a local politician or policy maker to visit your school for the Hour of Code. Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encouragez les autres à y participer [avec nos exemples de courriels.](%= resolve_url('/promote/resources#sample-emails') %) Contactez votre directeur et proposez à chaque classe de votre ècole de s'inscrire. Recruitez un groupe local - club scoutes, église, université, groupe de vétérans, union de travail, ou même quelques amis. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Invite a local politician or policy maker to visit your school for the Hour of Code. Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
 
 Utilisez ces [affiches, banderoles, autocollants, vidéos et plus encore](%= resolve_url('/promote/resources') %) pour votre évènement.
 
 ## 2. Trouvez un bénévole à proximité pour vous aider lors de votre événement
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Cherchez notre carte de bénévoles](%= resolve_url('https://code.org/volunteer/local') %) pour des bénévoles qui peuvent visiter votre salle de classe ou parler en vidéo à distance afin d'encourager vos élèves sur le sujet de toutes les possibilités avec l'informatique.
 
 ## 3. Plan your Hour of Code
 

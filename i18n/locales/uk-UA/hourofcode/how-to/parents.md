@@ -33,7 +33,7 @@ nav: how_to_nav
 **Покажіть надихальні відео:**
 
 - Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукерберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Відео запуску Години коду 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), або <% if @country == 'uk' %> [відео Години коду 2015](https://www.youtube.com/watch?v=7L97YMYqLHc)<% else %> [відео Години коду 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Знайдіть ще надихальні [ресурси](%= resolve_url('https://code.org/inspire') %) та [відео](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

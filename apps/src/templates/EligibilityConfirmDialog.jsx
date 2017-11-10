@@ -1,5 +1,5 @@
 /** @file Confirm Dialog for Maker Discount Codes */
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import BaseDialog from "./BaseDialog";
 import DialogFooter from "./teacherDashboard/DialogFooter";
@@ -16,25 +16,27 @@ const styles = {
 };
 
 export default class EligibilityConfirmDialog extends Component {
+  static propTypes = {
+    handleCancel: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     signature: "",
     activeButton: false,
   };
 
   verifyResponse = () => {
-    if (this.check1.checked &&
-        this.check2.checked &&
-        this.check3.checked &&
-        this.state.signature !== ""){
-      this.setState({activeButton: true});
-    } else { // if someone unchecks their responses
-      this.setState({activeButton: false});
-    }
+    this.setState({
+      activeButton: this.check1.checked
+        && this.check2.checked
+        && this.check3.checked
+        && /\S/.test(this.state.signature)
+    });
   }
 
   setSignature = (event) => {
-    this.setState({signature: event.target.value});
-    this.verifyResponse();
+    this.setState({signature: event.target.value}, this.verifyResponse);
   }
 
   render() {
@@ -42,7 +44,7 @@ export default class EligibilityConfirmDialog extends Component {
       <BaseDialog
         useUpdatedStyles
         uncloseable
-        isOpen = {true}
+        isOpen
         assetUrl={() => ''}
         style={{padding:20}}
       >
@@ -53,7 +55,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label style={styles.boxStyle}>
             <input
               type="checkbox"
-              ref={input => {this.check1 = input;}}
+              ref={input => this.check1 = input}
               onChange={this.verifyResponse}
             />
             {i18n.verifyStudentCount()}
@@ -61,7 +63,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <input
               type="checkbox"
-              ref={input => {this.check2 = input;}}
+              ref={input => this.check2 = input}
               onChange={this.verifyResponse}
             />
             {i18n.verifyYear()}
@@ -69,7 +71,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <input
               type="checkbox"
-              ref={input => {this.check3 = input;}}
+              ref={input => this.check3 = input}
               onChange={this.verifyResponse}
             />
             {i18n.verifySingleCode()}
@@ -79,7 +81,7 @@ export default class EligibilityConfirmDialog extends Component {
             <div><b>{i18n.verifySignature()}</b> {i18n.typeName()}</div>
             <input
               value=""
-              style={{width: 98 + '%', height: 40}}
+              style={styles.signatureBox}
               onChange={this.setSignature}
             />
           </label>
@@ -88,11 +90,11 @@ export default class EligibilityConfirmDialog extends Component {
         <DialogFooter>
           <Button
             text={i18n.dialogCancel()}
-            onClick={() => {}}
+            onClick={this.props.handleCancel}
           />
           <Button
             text={i18n.getCode()}
-            onClick={() => {}}
+            onClick={this.props.handleSubmit}
             disabled={!this.state.activeButton}
           />
         </DialogFooter>

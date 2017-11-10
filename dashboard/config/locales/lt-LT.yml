@@ -977,6 +977,13 @@
     create: Sukurti projektą
     create_a_project: 'Sukurti naują projektą:'
     new: Sukurti naują
+    new_buttons:
+      artist: Menininkas
+      playlab: Laboratorija
+      applab: App Lab
+      gamelab: "Žaidimų laboratorija"
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Pervadinti
     save: Išsaugoti
     delete: Ištrinti

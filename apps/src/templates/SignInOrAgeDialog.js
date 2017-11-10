@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
-import { navigateToHref } from '@cdo/apps/utils';
+import { reload } from '@cdo/apps/utils';
+import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 
 const styles = {
   container: {
@@ -61,6 +63,9 @@ const styles = {
     marginRight: 10,
     marginTop: 2,
     width: 160
+  },
+  tooYoungButton: {
+    textAlign: 'right'
   }
 };
 
@@ -68,7 +73,8 @@ const sessionStorageKey = 'anon_over13';
 
 class SignInOrAgeDialog extends Component {
   state = {
-    open: true
+    open: true,
+    tooYoung: false,
   };
 
   static propTypes = {
@@ -84,17 +90,22 @@ class SignInOrAgeDialog extends Component {
     }
 
     if (parseInt(value, 10) < 13) {
-      // /too_young will redirect to /home, with an info warning if possible
-      navigateToHref('/too_young');
+      this.setState({tooYoung: true});
       return;
     }
 
     sessionStorage.setItem(sessionStorageKey, true);
 
-    // Over 13, let them do the tutorial
-    this.setState({
-      open: false
-    });
+    // When opening a new tab, we'll have a new session (and thus show this dialog),
+    // but may still be using a storage_id for a previous user. Clear that cookie
+    // and reload
+    const cookieName = environmentSpecificCookieName('storage_id');
+    if (cookies.get(cookieName)) {
+      cookies.remove(cookieName, {path: '/', domain: '.code.org'});
+      reload();
+    } else {
+      this.setState({open: false});
+    }
   };
 
   render() {
@@ -103,6 +114,33 @@ class SignInOrAgeDialog extends Component {
     // we haven't already given this dialog our age
     if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
       return null;
+    }
+
+    if (this.state.tooYoung) {
+      return (
+        <BaseDialog
+          useUpdatedStyles
+          isOpen={true}
+          assetUrl={() => ''}
+          uncloseable
+        >
+          <div style={styles.container}>
+            <div style={styles.heading}>
+              {i18n.tutorialUnavailable()}
+            </div>
+            <div style={styles.middle}>
+              {i18n.tutorialUnavailableExplanation()}
+            </div>
+            <div style={styles.tooYoungButton}>
+              <Button
+                href="/courses"
+                text="See all tutorials"
+                color={Button.ButtonColor.orange}
+              />
+            </div>
+          </div>
+        </BaseDialog>
+      );
     }
 
     return (

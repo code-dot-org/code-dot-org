@@ -33,7 +33,7 @@ nav: how_to_nav
 **Покажите им вдохновляющее видео:**
 
 - Оригинальное начальное видео от Code.org, в котором вы сможете увидеть Билла Гейтса, Марка Цукерберга и звезду NBA Криса Боша ([1минутная версия](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-минутная версия](https://www.youtube.com/watch?v=nKIu9yen5nc) и [9-минутная версия](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Стартовое видео Часа Кода 2013 года](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %> [видео Часа Кода 2015 года](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [видео Часа Кода 2015 года](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [ПРезидент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Найдите больше вдохновляющих [ресурсов](%= resolve_url('https://code.org/inspire') %) и [видео](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

@@ -746,6 +746,13 @@ hu:
     create: "Projekt létrehozása"
     create_a_project: 'Új projekt létrehozása:'
     new: "Új létrehozása"
+    new_buttons:
+      artist: "Művész"
+      playlab: "Játéklabor"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Átnevezés"
     save: "Mentés"
     delete: "Törlés"

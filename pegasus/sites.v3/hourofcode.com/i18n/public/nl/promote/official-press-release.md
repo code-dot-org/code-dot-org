@@ -1,11 +1,11 @@
 ---
-title: '<%= hoc_s(:title_press_release) %>'
+title: "<%= hoc_s(:title_press_release) %>"
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Voorbeeld perscommuniqué voor verkozenen
+# Voorbeeld persbericht voor verkozen ambtenaren
 
 Voor Onmiddellijke Publicatie   
 [**DATUM**]   

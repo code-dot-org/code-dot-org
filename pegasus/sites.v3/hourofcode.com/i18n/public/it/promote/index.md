@@ -12,11 +12,11 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# Coinvolgi la tua comunità nell'Ora del Codice
 
 ## 1. Diffondi la notizia
 
-Tell your friends about the **#HourOfCode**!
+Parla ai tuoi amici dell'**#OradelCodice**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -30,7 +30,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 4. Promuovi l'Ora del Codice fra i tuoi conoscenti
 
-[ Recluta un po' di persone](<%= resolve_url('/promote/resources#sample-emails') %>) — tra i boy-scout, in parrocchia, all'università, tra gli esperti, al sindacato o tra i tuoi amici. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Utilizza questi [poster, banner, adesivi, video e altro](<%= resolve_url('/promote/resources') %>) per il tuo evento.
+[ Recluta un po' di persone](<%= resolve_url('/promote/resources#sample-emails') %>) — tra gli scout, in parrocchia, all'università, tra gli esperti, al sindacato o tra i tuoi amici. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Adatta questi [poster, banner, adesivi, video e altro](<%= resolve_url('/promote/resources') %>) per il tuo evento.
 
 ## 5. Proponi ad un amministratore locale di sostenere L'Ora del Codice
 

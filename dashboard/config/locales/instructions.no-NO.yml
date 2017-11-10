@@ -15,7 +15,7 @@
         er 100, men den halvferdige veggen er bare 50. Fullfør veggen. '
       2-3 Artist 2_instruction: 'Dette huset har en halv ferdig vegg. Hver side er
         100, men den halvferdige veggen er bare 50. Fullfør veggen. '
-      2-3 Artist 3.4_instruction: Hoppe blokken beveger kunstneren uten å tegne. Tegn
+      2-3 Artist 3.4_instruction: Hoppeblokken beveger kunstneren uten å tegne. Tegn
         den stiplede linjen ved hjelp av både hoppe- og tegne blokker.
       2-3 Artist 3_instruction: Denne hatten er 100 pixler høy. Tegn en hatt som er
         70 piksler lavere.
@@ -36,12 +36,12 @@
       2-3 Artist 9_instruction: Fullfør denne dragen
       2-3 Artist Assessment 1_instruction: 'Lekse: Fullfør å tegne den siste tannen,
         25 piksler bred og 25 piksler høy.'
-      2-3 Artist Debugging 1_instruction: Kan du lage denne luen med en topp lengde
-        100?
-      2-3 Artist Debugging 10_instruction: |-
-        Retnings-kontrolleren er for smal.\r
-        \r
-        Hint: Gjør den bredere med 10 piksler.\r
+      2-3 Artist Debugging 1_instruction: |-
+        Denne hatten burde bare være 50 piksler bred.
+        Kan du fikse det?
+      2-3 Artist Debugging 10_instruction: "Retnings-kontrolleren er for smal.\\r\n\\r\nHint:
+        Gjør den bredere med 10 piksler.\\r \n\\r\nPrøv å kjøre koden først for å
+        se hva som er galt."
       2-3 Artist Debugging 11_instruction: |-
         Snøfnugget mitt faller fra hverandre!\r
         \r
@@ -53,8 +53,10 @@
         \r
         \r
         Hint: Fiks koden slik at alle værhårene har samme lengde.
-      2-3 Artist Debugging 3_instruction: 'Båten min har ett hull! Kan du fikse det
-        ved å endre vinkelen til linjen? Hint: Den siste vinkelen er feil med 15 grader.'
+      2-3 Artist Debugging 3_instruction: |-
+        Båten min har et hull! \r
+        \r
+        Kan du fikse det ved å endre vinkelen til linjen? Hint: Den siste vinkelen er feil med 15 grader?
       2-3 Artist Debugging 4_instruction: Hva er bildet som vi prøver å tegne? Fullfør
         å koble prikkene sammen med riktige linjer og vinkler.
       2-3 Artist Debugging 5_instruction: 'Denne koden for benet og foten som du ser
@@ -682,7 +684,7 @@
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
       4-5 Bee Conditionals 4_instruction: Det ukjente objektet er enten en blomst
-        eller en bikube. bruk "hvis/ellers" blokk til å samle inn nekter dersom det
+        eller en bikube. bruk "hvis/ellers" blokk til å samle inn nektar dersom det
         er en blomst, hvis ikke så lager du honning (fordi det er en bikube).
       4-5 Bee Conditionals 5_instruction: Det kan være en blomst eller en bikube under
         skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en
@@ -848,7 +850,7 @@
       4-5 While Loops Assessment 1_instruction: Det er mange hull og hauger. Hjelp
         meg og fylle og fjerne de slik at bakken blir helt jevn.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
+      Alien Defender_instruction: 'Idé: Lag et forsvarsspill i Play Lab!'
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
@@ -1293,19 +1295,15 @@
       CSD U4 - Events Template_instruction: |-
         Add a large red button to your screen
         using Design Mode. (Click for full instructions.)
-      CSD U5 black white images pixelation 2_instruction: |-
-        Draw a smiley face (click
-        here to see image)
-      CSD U5 black white images pixelation 3_instruction: |-
-        Change the width and height
-        sliders to find the image (click here to see more)
-      CSD U5 black white images pixelation 4_instruction: |-
-        Add eyebrows to the smiley
-        face (click here to see the image)
-      CSD U5 black white images pixelation 5_instruction: Draw anything you like
-      CSD U5 black white images pixelation_instruction: |-
-        Complete the X shape by
-        typing 0s and 1s
+      CSD U5 black white images pixelation 2_instruction: Tegn et smilefjes (trykk
+        her for å se bilde)
+      CSD U5 black white images pixelation 3_instruction: Juster bredde- og høydebryterne
+        for å finne bildet (klikk her for å se mer)
+      CSD U5 black white images pixelation 4_instruction: Tegn øyenbryn på smilefjeset
+        (klikk her for å se bilde)
+      CSD U5 black white images pixelation 5_instruction: Tegn hva du vil
+      CSD U5 black white images pixelation_instruction: Fullfør X-formen ved å bruke
+        0 og 1-tall
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1409,9 +1407,8 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
-      CSDU6 - for loop - color buttons with for_instruction: |-
-        Write the contents
-        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: Skriv innholdet i matrisen
+        på skjermen i numerisk rekkefølge. (Klikk her for detaljerte instruksjoner)
       CSDU6 - for loop - color buttons_instruction: |-
         Write the contents of the array
         to the screen in numerical order. (Click to see full instructions)
@@ -1456,7 +1453,7 @@
         instructions) "
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
-      CSP student contact info_instruction: Please enter your email address.
+      CSP student contact info_instruction: Vennligst oppgi e-postadressen din.
       CSPU5 Add Screens to Chaser Game_instruction: |-
         Recreate the game from the "Chaser
         Game" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)
@@ -1802,9 +1799,9 @@
       CSPU5_U3 - Loops - 3_instruction: |-
         Change the if statement to a while loop
         so the program will run until it rolls a 6. (Click to see full instructions)
-      CSPU5_U3 - Loops - 4_instruction: |-
-        Use the Debug Commands to make a list of
-        all the values rolled before a 6. (Click to see full instructions)
+      CSPU5_U3 - Loops - 4_instruction: Bruk feilsøksingskommandoer for å lage en
+        liste over alle tallene som ble rullet før 6-tallet. (Klikk her for detaljerte
+        instruksjoner)
       CSPU5_U3 - Loops - 5_instruction: |-
         Add code inside the while loop which will
         update the variable num so that the condition will eventually become false.
@@ -3208,7 +3205,7 @@
         med y antall piksler. Bruk positive og negative tall.
       Course 4 Variables Assessment_instruction: Kan du lage dette bildet ved å bruke
         en variabel for sidene? Hver linje skal være 50 piksler lange.
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: Hent tre nektar og lag to honning
       Course1MazeAssessment1_instruction: |-
         This is a test!\r
         Move one way, then
@@ -3484,9 +3481,8 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
-      Find the Wizard_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Find the Wizard_instruction: Bygg hva enn du vil. Dette er et eksempel på et
+        siffergjettingsspill!
       Food Fight!_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan
         \"if\" statement to program your game to call the \"level_up\" function\nonly
         when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
@@ -3495,11 +3491,10 @@
       Food Fight_instruction: |-
         You can make whatever you want in play lab! This is
         an example of a game you can make in play lab.
-      FoodFight_instruction: This is an example of a game you can make in play lab.
+      FoodFight_instruction: Dette er et eksempel på hva du kan lage i laben.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the torch.
+      Function intro Ryan_instruction: Bruk `bygg bro` funksjonen to ganger for å
+        lage en vei til fakkelen.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3510,9 +3505,8 @@
       Geometric Sun_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
-      Get To The Goal_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Get To The Goal_instruction: Bygg hva enn du vil. Dette er et eksempel på et
+        siffergjettingsspill!
       'Grade 4 Example PlayLab Project #1_instruction': |-
         Take a look at this project.  Do
         you see how it was made?
@@ -3560,9 +3554,8 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
-      InspirationalArtwork_instruction: |-
-        If this picture inspires you, try to make
-        something similar. Otherwise, create something all your own.
+      InspirationalArtwork_instruction: Hvis dette bildet inspirerer deg kan du prøve
+        å lage noe lignende. Ellers kan du prøve å lage noe helt selv.
       'Internet Simulator: Broadcast Mode_instruction': |
         Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
@@ -3698,7 +3691,7 @@
         løkker til å bevege deg!
       K-1 Bee Loops Assessment 2_instruction: Hent nektar for å lage honning ved å
         bruke løkker!
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: Hent tre nektar og lag to honning
       K-1 Building a Foundation Assessment_instruction: Bygg en pyramide med tre nivåer.
         Det er ingen andre regler, så lek deg med brikkene til du får det til!
       K-1 Maze 10_instruction: 'Gå rundt boksene med TNT for å få meg bort til grisen! '
@@ -3810,9 +3803,8 @@
       Kiki_StarWars_Test_4_instruction: Tekst
       Kiki_StarWars_Test_5_instruction: Tekst
       Kiki_StarWars_Test_5_Example_instruction: Tekst
-      LaurelDebugging4Video1_instruction: |-
-        Move Laurel around and get as much gold
-        as you can!
+      LaurelDebugging4Video1_instruction: Flytt på Laurel for å få så mye gull som
+        mulig!
       Limited Quantity of Blocks Test_instruction: |-
         Get me to the pig by adding only
         one block
@@ -3848,69 +3840,63 @@
         function even more useful?
       MC HOC 2016 Level 10_instruction: Det er på tide å lage ditt eget Minecraft!
         Sett ut vesener og få dem til å gjøre hva du enn vil! Ha det gøy!
-      MC HOC 2016 Level 2-2_instruction: Kyllingen er frossen. Plasser "flytt" og
-        "snu" blokker i "når skapt" sporet for å få den til å flytte.
+      MC HOC 2016 Level 2-2_instruction: Kyllingen er frosset. Plasser "gå" og "snu"
+        blokker i "når satt ut"-sporet for å få den til å bevege seg.
       MC HOC 2016 Level 3_instruction: |
         Flott, kyllingen flyttet! Men så stoppet hun.
-        I spill, kan kyllinger gå evig. Bruk en "forever do" løkke for å få disse kyllingene til å fortsette å gå. \r
+        I spill kan kyllinger gå for alltid. Bruk en "for alltid gjør"-løkke for å få disse kyllingene til å fortsette å gå. \r
       MC HOC 2016 Level 4_instruction: Nå ser kyllingene rare ut siden de flytter
         seg på samme måte. Spill bruker tilfeldige trekk for å gjøre at ting ser ekte
         ut. Få kyllingene til å "snu tilfeldig".
       MC HOC 2016 Level 5_instruction: Disse kuene har gått seg vill! Led dem til
-        gresset ved å bruke "bevege et skritt mot" blokken i en "alltid gjøre" løkke.
-      MC HOC 2016 Level 6_instruction: Nå lager du zombiene. Bruk "opprette" blokken
+        gresset ved å bruke "gå et skritt mot" blokken i en "for alltid gjør"- løkke.
+      MC HOC 2016 Level 6_instruction: Nå lager du zombiene. Bruk "sett ut"-blokken
         for å lage 3 zombier når det blir natt. Få dem til å flytte seg mot deg. Overlev
         til i morgenen.
       MC HOC 2016 Level 8_instruction: Veien til sauen din er blokkert av en steinvegg.
         Heldigvis er det en creeper her. Creepere eksploderer etter at du tar på dem.
         Få creeperen til å sprenge veggen så du kan komme deg bort til sauen din!
-      MC HOC 2016 New Drop_instruction: I Minecraft slipper sauen ull. Plasser "miste"
-        blokken i "når brukt', gå deretter over og bruk sauene for å slippe et element.
+      MC HOC 2016 New Drop_instruction: I Minecraft slipper sauen ull. Plasser "slipp"
+        blokken i "når brukt', gå deretter bort til og bruk sauene for å slippe et
+        element.
       MC HOC 2016 New Spawn_instruction: Du kan nå fylle verden med hva du vil! Plasser
-        'opprette' blokker under 'når kjører' for å opprette ting når spillet starter.
+        'sett ut' blokker under 'når kjører' for å opprette ting når spillet starter.
       MC HOC 2016 New Walk_instruction: La oss utforske vår verden! Flytt med pilene,
-        og trykk på mellomromstasten eller trykk spillebrettet for å bruke elementer.
+        og trykk på mellomromstasten eller trykk på spillebrettet for å bruke elementer.
         Bruk døren for å gå inn i huset.
       MC HOC 2016 SCORE LEVEL_instruction: I noen spill har du en poengsum. Spill
-        "sisten" med disse jerngolemene og bruk 'Legg til 1 til poengsum'-blokka for
+        "sisten" med disse jerngolemene og bruk 'legg til 1 til poengsum'-blokka for
         å gi deg selv et poeng når du tar dem. Få fem poeng for å vinne!
       MC HOC 2016 Village Test_instruction: "Å nei! Zombier har fanget deg inne! \nKode
         Jern Golem til å jage og angripe zombier!"
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
-        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
-        the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_2017_Ryan_02_instruction: Hjelp spilleren med løkker for å få agenten til
+        trykkplaten.
+      MC_HOC_2017 Agent Test_instruction: Klikk på "kjør" for å flytte spilleren til
+        det oransje feltet inni huset.
+      MC_HOC_2017_01_instruction: Klikk på "kjør" for å flytte spilleren til det oransje
+        feltet inni huset.
+      MC_HOC_2017_01_Cole_instruction: Du må samle alle verktøyene på denne reisen.
+        Beveg deg ved å bruke **piltastene**, og vinn ved å komme til skattekisten
+      MC_HOC_2017_01_Kiki_instruction: Klikk på "kjør" for å flytte spilleren til
+        det oransje feltet inni huset.
+      MC_HOC_2017_01_RETRY_instruction: 'Få agenten til trykkplaten, deretter klikk
+        "kjør" og bruk piltastene for å bevege spilleren ut av huset for å komme til
+        kisten. '
+      MC_HOC_2017_02_instruction: Få agenten til trykkplaten.
+      MC_HOC_2017_02_Cole_instruction: 'Beveg agenten til trykkplaten slik at {currentPlayerName}
+        kan komme til kartet. '
+      MC_HOC_2017_02_Kiki_instruction: Få agenten til trykkplaten, deretter få spilleren
+        til den oransje firkanten.
+      MC_HOC_2017_02_Will_instruction: Få agenten til trykkplaten.
+      MC_HOC_2017_03_Cole_instruction: 'Programmer agenten til å åpne porten. '
+      MC_HOC_2017_03_Kiki_instruction: Få agenten til trykkplaten.
       MC_HOC_2017_04_instruction: |-
         Change the loop from the last puzzle to help the
         Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04POINT5_Cole_instruction: Få agenten til trykkplaten.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Få agenten til trykkplaten.
+      MC_HOC_2017_04_Cole_instruction: Få agenten til trykkplaten.
+      MC_HOC_2017_04_Kiki_instruction: Få agenten til trykkplaten.
       MC_HOC_2017_05_instruction: |-
         Use a function to help the Agent get to the pressure
         plate.
@@ -3968,9 +3954,11 @@
         Create a function to help you finish this
         minecart.
       MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_4.5v2_instruction: Få agenten til trykkplaten.
       MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
       MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
+        collect all of the diamonds in this level? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
         collect all of the diamonds in this level? "
       MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
       MC_HOC_2017_Ryan_03_instruction: |-
@@ -6871,6 +6859,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -7367,6 +7358,9 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -9957,7 +9951,7 @@
         Now I just want to make honey. Some
         of these clouds might have honeycombs under them. Be sure to check each cloud!
       grade3_ConditionalsElse_4_instruction: Det ukjente objektet er enten en blomst
-        eller en bikube. bruk "hvis/ellers" blokk til å samle inn nekter dersom det
+        eller en bikube. bruk "hvis/ellers" blokk til å samle inn nektar dersom det
         er en blomst, hvis ikke så lager du honning (fordi det er en bikube).
       grade3_ConditionalsElse_5_instruction: |-
         There will be either a flower or a

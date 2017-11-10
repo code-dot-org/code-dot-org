@@ -90,9 +90,9 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# Guia de como organizar
 
-## Use this handout to recruit corporations
+## Use este folheto para recrutar corporações
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
@@ -109,7 +109,7 @@ Disponibilizaremos diversos tutoriais divertidos com duração de uma hora, cria
 
 ## 2) Planeje suas necessidades de hardware (computadores são opcionais)
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+A melhor experiência do Hour of Code será com computadores conectados à Internet. Mas você não precisa de um computador para cada participante, e pode até fazer a Hora do Código sem um computador.
 
 - **Teste os tutoriais nos computadores ou dispositivos dos alunos.** Verifique se eles funcionam da maneira adequada (com som e vídeo).
 - **Visualize a página de parabenização** para saber o que os alunos veem quando terminam. 
@@ -122,10 +122,10 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 4) Inspire seus alunos - mostre um vídeo a eles
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Mostre aos alunos um vídeo inspirador para dar início à Hora do Código. Exemplos:
 
 - O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+- O [vídeo de lançamento do Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o [video Hour of Code 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)
 - [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**

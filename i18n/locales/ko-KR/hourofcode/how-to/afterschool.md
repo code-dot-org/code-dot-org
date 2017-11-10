@@ -7,16 +7,15 @@ nav: how_to_nav
 
 # How to teach one Hour of Code in after-school classes and clubs
 
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Choose a tutorial
 
-우리는 다양한 파트너들이 만든 모든 연령대를 위한 [한 시간짜리 재미있는 튜토리얼들](%= resolve_url('/learn') %)을 제공할 것입니다. [재미있는 다양한 튜토리얼들을 해보세요!](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [재미있는 다양한 튜토리얼들을 해보세요!](%= resolve_url('/learn') %)
 
-**모든 Hour of Code 튜토리얼들은:**
-
-- 최소한의 시간만으로 준비하고 운영할 수 있습니다.
-- 학생 자신의 진도와 수준에 맞추어 자기주도 학습이 가능합니다.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
@@ -24,26 +23,19 @@ nav: how_to_nav
 
 ## 3. Promote your Hour of Code
 
-[이 도구들을 이용하여](%= resolve_url('/promote') %) 여러분의 Hour of Code를 알리고 다른 친구들이 자신만의 이벤트를 진행할 수 있도록 응원해주세요.
+Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
 ## 4. Plan your technology needs - computers are optional
 
-<div class="col-66" style="padding-right: 20px;">
-  The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
-</div>
+Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 하지만 모든 아이들이 컴퓨터가 필요한 것은 **아닙니다**, 그리고 Hour of Code는 컴퓨터 없이도 가능합니다.
 
-<div class="col-33">
-  <img src="/images/fit-400/group_ipad.jpg" />
-</div>
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-<div style="clear: both;"></div>
+소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
 
-**계획을 먼저 하세요!** 여러분의 이벤트를 시작하기 전에 다음 순서를 따르세요.
+**충분한 장비가 없습니까?**[페어 프로그래밍 방법을](https://www.youtube.com/watch?v=vgkahOzFH2Q) 활용하세요. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
 
-- 학생의 컴퓨터에서 튜토리얼을 테스트합니다. 웹브라우저에서 소리와 영상이 적절하게 나오는지 확인하십시오.
-- 소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
-- **충분한 장비가 없습니까?**[페어 프로그래밍 방법을](https://www.youtube.com/watch?v=vgkahOzFH2Q) 활용하세요. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
-- **통신 속도가 느리다면?** 교실 앞에서 비디오를 보여주면, 학생들 모두가 비디오를 다운로드 받으면서 보지 않아도 됩니다. 아니면, 오프라인용 언플러그드 활동을 활용해 보세요. 
+<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Start your Hour of Code off with an inspiring video
 
@@ -52,13 +44,13 @@ nav: how_to_nav
 **영감을 주는 동영상을 보여주세요:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- [2013 Hour of Code 동영상](https://www.youtube.com/watch?v=FC5FbmsH4fw) 또는 <% if @country == 'uk' %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**여러분이 컴퓨터과학에 완전한 초보라도 괜찮습니다. 여기에는 여러분을 Hour of Code 활동으로 안내하기 위한 몇가지 아이디어가 있습니다.**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- 컴퓨터과학기술이 인간의 삶에 미치는 영향에 대해, 남녀학생들 모두 관심 가질 수 있는 예를 가지고 설명하세요. (생명을 살리고, 사람을 돕고, 사람들을 연결하는 데 사용되는 응용프로그램들과 기술들에 대해 이야기 하세요.)
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
 - 일상생활에서 코드가 사용되는 것들을 나열하세요.
 - 여학생들이 컴퓨터과학에 흥미를 갖도록 하기 위한 팁이 [여기](%= resolve_url('https://code.org/girls') %) 있습니다.
 
@@ -70,7 +62,7 @@ nav: how_to_nav
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
-**여러분의 학생들이 어려운 상황을 만났을 때 이렇게 응답해 주면 좋습니다:**
+**When someone comes across difficulties it's okay to respond:**
 
 - "나도 잘 모른단다. 우리 함께 생각해 보자."
 - "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
@@ -78,8 +70,8 @@ nav: how_to_nav
 
 **누군가 일찍 완료 했을 때는 어떻게 할까요?**
 
-- 아래 링크에 실린 다른 프로그래밍을 시도해 보라고 격려해주세요. hourofcode.com/learn
-- 또는 일찍 완료한 친구들에게, 어려움을 겪고 있는 다른 친구들을 도와달라고 요청해보세요.
+- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
+- Or, ask those who finish early to help others who are having trouble.
 
 [col-33]
 
@@ -103,7 +95,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- 여러분의 학생들을 위해서 [인증서](%= resolve_url('https://code.org/certificates') %)를 인쇄하세요.
+- [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
 - 여러분의 학생들을 위한 ["나는 Hour of Code를 해냈다!"라는 스티커를 인쇄하세요.](%= resolve_url('/promote/resources#stickers') %)
 - [행사 T-셔츠 주문](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) 하기.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
@@ -118,9 +110,9 @@ nav: how_to_nav
 
 ## Other Hour of Code resources for educators
 
-- 여러분 이전에 Hour of Code를 진행하신 선생님들의 [모범 활동 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 확인하세요. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- 다른 교육자들의 조언, 견해 그리고 지원을 얻을 수 있는 [Hour of Code 포럼](http://forum.code.org/c/plc/hour-of-code) 에 방문해 보세요. <% if @country == 'us' %>
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요. <% end %>
 
 ## Hour of Code 이후에는 어떤 것들이 있나요?
