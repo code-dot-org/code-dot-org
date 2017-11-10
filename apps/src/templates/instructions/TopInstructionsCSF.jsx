@@ -174,6 +174,7 @@ var TopInstructions = React.createClass({
       hintId: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
       block: PropTypes.object, // XML
+      video: PropTypes.string,
     })).isRequired,
     hasUnseenHint: PropTypes.bool.isRequired,
     showNextHint: PropTypes.func.isRequired,
@@ -682,6 +683,7 @@ var TopInstructions = React.createClass({
                 ttsUrl={hint.ttsUrl}
                 ttsMessage={hint.ttsMessage}
                 block={hint.block}
+                video={hint.hintVideo}
               />
             )}
             {this.props.feedback && !this.props.collapsed &&

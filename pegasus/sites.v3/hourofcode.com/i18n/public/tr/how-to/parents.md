@@ -32,48 +32,49 @@ En iyi kodlama saati deneyimi internet bağlantısı olan bir bilgisayarda gerç
 
 **İlham verici bir video gösterin:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- [2013 Kodlama Saati başlangıç videosu](https://www.youtube.com/watch?v=FC5FbmsH4fw), ya da <% if @country == 'uk' %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Daha fazla ilham verici [kaynaklar](<%= resolve_url('https://code.org/inspire') %>) ve [videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.
-
-Eğer bilgisayar biliminde yeniyseniz sorun değil. işte size kodlama saati aktivitelerini tanıtmak için birkaç fikir:
-
-- Teknolojinin hayatımıza etkisini hem kız hemde erkekleri ilgilendirecek şekilde açıklayın.( hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin.).
-- Günlük hayatımızda kod kullanılan şeyleri listeleyin.
-- Kızların bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya](<%= resolve_url('https://code.org/girls') %>) bakın.
-
-Daha fazla fikir ister misiniz? Deneyimli eğitimcilerin en iyi uygulamaları için  şablon ders planımıza </ 0> bakın.</p> 
-
-## 6) Kod!
-
-<img src="/images/fit-700/tutorial-short-link.png" />
-
-Yapmak istediğiniz öğreticiyi seçtiğinizde, öğreticinin kısa bağlantısına yer işareti koyabilirsiniz.
-
-**Çocuğunuz zorluklarla karşılaştığında**
-
-Cevap vermek sorun değil:
-
-- "Bilmiyorum. Buna birlikte bakalım."
-- "Teknoloji her zaman istediğimiz gibi çalışmaz."
-- "Programlama öğrenmek yeni bir dil öğrenmek gibidir; hemen akıcı olmayacaktır."
-
-## 6) Kutlama
-
-çocuğunuz (ve kendiniz) için [sertifika bastırın.](<%= resolve_url('https://code.org/certificates') %>).
-
-Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
-
-**Diğer saat kod kaynakları:**
-
-- [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)'u gözden geçirin.
-
-**Kod Saati etkinliğinden sonra ne yapmalı?**
-
-Kodlama Zamanı, teknolojinin nasıl çalıştığı hakkında daha fazla bilgi edinme ve uygulama yazılımı oluşturmayı öğrenme yolculuğunda sadece ilk basamaktır. Bu yolculuğa devam etmek için:
-
-- Çocuğunuzu[ çevrimiçi](<%= resolve_url('https://code.org/learn/beyond') %>) öğrenmeye devam etmesi için teşvik edin.
-- Çocuğunuzun okul bölgesindeki bilgisayar bilimi eğitimini  teşvik edin </ 0>.</li> </ul> 
+- Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un yer aldığı ilk Code.org yayın videosu ( 1 dakika </ 0>,  5 dakika </ 1> ve  9 dakika < / 2> sürümler)</li> 
     
-    <%= view :signup_button %>
+    - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+    - [Başkan Obama, tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+    - Daha fazla ilham verici [kaynaklar](<%= resolve_url('https://code.org/inspire') %>) ve [videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.</ul> 
+    
+    Eğer bilgisayar biliminde yeniyseniz sorun değil. işte size kodlama saati aktivitelerini tanıtmak için birkaç fikir:
+    
+    - Teknolojinin hayatımıza etkisini hem kız hemde erkekleri ilgilendirecek şekilde açıklayın.( hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin.).
+    - Günlük hayatımızda kod kullanılan şeyleri listeleyin.
+    - Kızların bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya](<%= resolve_url('https://code.org/girls') %>) bakın.
+    
+    Daha fazla fikir ister misiniz? Deneyimli eğitimcilerin en iyi uygulamaları için  şablon ders planımıza </ 0> bakın.</p> 
+    
+    ## 6) Kod!
+    
+    <img src="/images/fit-700/tutorial-short-link.png" />
+    
+    Yapmak istediğiniz öğreticiyi seçtiğinizde, öğreticinin kısa bağlantısına yer işareti koyabilirsiniz.
+    
+    **Çocuğunuz zorluklarla karşılaştığında**
+    
+    Cevap vermek sorun değil:
+    
+    - "Bilmiyorum. Buna birlikte bakalım."
+    - "Teknoloji her zaman istediğimiz gibi çalışmaz."
+    - "Programlama öğrenmek yeni bir dil öğrenmek gibidir; hemen akıcı olmayacaktır."
+    
+    ## 6) Kutlama
+    
+    çocuğunuz (ve kendiniz) için [sertifika bastırın.](<%= resolve_url('https://code.org/certificates') %>).
+    
+    Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
+    
+    **Diğer saat kod kaynakları:**
+    
+    - [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin.
+    
+    **Kod Saati etkinliğinden sonra ne yapmalı?**
+    
+    Kodlama Zamanı, teknolojinin nasıl çalıştığı hakkında daha fazla bilgi edinme ve uygulama yazılımı oluşturmayı öğrenme yolculuğunda sadece ilk basamaktır. Bu yolculuğa devam etmek için:
+    
+    - Çocuğunuzu[ çevrimiçi](<%= resolve_url('https://code.org/learn/beyond') %>) öğrenmeye devam etmesi için teşvik edin.
+    - Çocuğunuzun okul bölgesindeki bilgisayar bilimi eğitimini  teşvik edin </ 0>.</li> </ul> 
+        
+        <%= view :signup_button %>

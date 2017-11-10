@@ -9,7 +9,10 @@ export default storybook => {
         name: 'Confirm Dialog',
         description: 'EligibilityConfirmDialog',
         story: () => (
-          <EligibilityConfirmDialog/>
+          <EligibilityConfirmDialog
+            handleCancel={() => {}}
+            handleSubmit={() => {}}
+          />
         )
       },
     ]);

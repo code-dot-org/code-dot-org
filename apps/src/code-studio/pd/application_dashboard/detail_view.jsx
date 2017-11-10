@@ -19,7 +19,10 @@ export default class DetailView extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
       applicationId: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    route: PropTypes.shape({
+      viewType: PropTypes.oneOf(['teacher', 'facilitator'])
+    })
   };
 
   state = {
@@ -54,6 +57,7 @@ export default class DetailView extends React.Component {
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
             updateProps={this.updateData}
+            viewType={this.props.route.viewType}
           />
         )
       );

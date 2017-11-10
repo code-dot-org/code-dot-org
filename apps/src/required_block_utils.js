@@ -229,7 +229,8 @@ var ignorableAttributes = [
   'inline',
   'uservisible',
   'usercreated',
-  'id'
+  'id',
+  'inputcount',
 ];
 
 ignorableAttributes.contains = function (attr) {

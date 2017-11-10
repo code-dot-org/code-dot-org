@@ -1,13 +1,13 @@
 ---
-title: '<%=hoc_s(:titlu_cum_sa)%>'
-layout: larg
-nav: cum_sa_navighezi
+title: '<%= hoc_s(:title_how_to) %>'
+layout: wide
+nav: how_to_nav
 ---
 <%= view :signup_button %>
 
 <h1>Cum sa sustii o Ora de Programare</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Priveşte acest video indrumator <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

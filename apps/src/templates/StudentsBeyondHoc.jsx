@@ -3,8 +3,10 @@ import i18n from '@cdo/locale';
 import color from '../util/color';
 import Responsive from '../responsive';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
+import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
+import { pre2017MinecraftCards } from './congratsBeyondHocActivityCards';
 
 const styles = {
   heading: {
@@ -19,6 +21,7 @@ export default class StudentsBeyondHoc extends Component {
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
+    signedIn: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -29,6 +32,11 @@ export default class StudentsBeyondHoc extends Component {
         <h1 style={styles.heading}>
           {i18n.congratsStudentHeading()}
         </h1>
+        <VerticalImageResourceCardRow
+          cards={pre2017MinecraftCards}
+          isRtl={isRtl}
+          responsive={responsive}
+        />
         <CourseBlocksStudentGradeBands
           isRtl={isRtl}
           responsive={responsive}

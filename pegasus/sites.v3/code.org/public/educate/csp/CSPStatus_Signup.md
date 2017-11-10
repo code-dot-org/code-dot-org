@@ -41,7 +41,8 @@ Sign up below to receive monthly email updates on  Code.org’s Computer Science
 - [April 2017] (http://go.pardot.com/webmail/153401/166317323/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)
 - [May 2017](http://go.pardot.com/webmail/153401/261880590/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)
 - [Back to School Update, Sept 2017](http://go.pardot.com/webmail/153401/261565769/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)
-- [October 2017](http://go.pardot.com/webmail/153401/282686815/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)  
+- [October 2017](http://go.pardot.com/webmail/153401/282686815/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9)
+- [November 2017](http://go.pardot.com/webmail/153401/302017753/e46ae3ec91ad4014b64fb4078ff8739e65c753bc5464d16656455ab2891a49bd)  
 
 ## Sign-up information
 

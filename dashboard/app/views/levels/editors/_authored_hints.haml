@@ -13,6 +13,7 @@
               %option{value: 'pointer'} Pointer Hint
               %option{value: 'bottom-out'} Bottom-out Hint
             %input.hint_path{type: 'text', placeholder: 'hint_path'}
+            = f.select :video_key, options_for_select(video_key_choices), {include_blank: true}, {class: 'hint_video'}
         .row
           .span5
             %textarea.hint_markdown
@@ -83,6 +84,7 @@
           hint_id: "",
           hint_type: "general",
           hint_path: "",
+          hint_video: "",
           tts_url: "",
         }
       });
