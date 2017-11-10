@@ -615,21 +615,21 @@ module LevelsHelper
         dialog: {},
       }
       app = level.game.app
+      blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
 
-      content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
-      content_tag(:script, '', src: minifiable_asset_path('js/blockly.js')) +
-      content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/blockly_locale.js")) +
-      content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
-      content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/#{app}_locale.js")) +
-      content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
-      content_tag(:div,
-        content_tag(:script, '',
-          {
-            src: minifiable_asset_path('js/embedBlocks.js'),
-            'data-blocks': level.blocks_to_embed(level.properties[block_type]),
-          }
-        ), {id: 'embed-blocks'}
-      )
+      unless @blockly_loaded
+        @blockly_loaded = true
+        blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
+        content_tag(:style, '.blocklySvg { background: none; }') +
+        content_tag(:script, '', src: minifiable_asset_path('js/blockly.js')) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/blockly_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+        content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
+      end
+
+      blocks
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
