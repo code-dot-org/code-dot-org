@@ -94,17 +94,19 @@ namespace :circle do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-          " --feature #{container_features.join(',')}" \
-          " --pegasus localhost.code.org:3000" \
-          " --dashboard localhost-studio.code.org:3000" \
-          " --circle" \
-          " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
-          " --parallel #{use_saucelabs ? 16 : 8}" \
-          " --abort_when_failures_exceed 10" \
-          " --retry_count 2" \
-          " --output-synopsis" \
-          " --html"
+      ui_test_thread = Thread.new do
+        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
+            " --feature #{container_features.join(',')}" \
+            " --pegasus localhost.code.org:3000" \
+            " --dashboard localhost-studio.code.org:3000" \
+            " --circle" \
+            " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
+            " --parallel #{use_saucelabs ? 16 : 8}" \
+            " --abort_when_failures_exceed 10" \
+            " --retry_count 2" \
+            " --output-synopsis" \
+            " --html"
+      end
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
@@ -117,6 +119,7 @@ namespace :circle do
             " --retry_count 1" \
             " --html"
       end
+      ui_test_thread.join
     end
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
