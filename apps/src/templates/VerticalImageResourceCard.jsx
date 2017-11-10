@@ -18,7 +18,7 @@ const styles = {
   image: {
     width: 310,
     height: 220,
-    backgroundColor: color.purple
+    position: 'absolute',
   },
   text: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -71,17 +71,30 @@ class VerticalImageResourceCard extends Component {
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
     MCShareLink: PropTypes.string
   };
 
   render() {
-    const { title, description, link, buttonText, isRtl, MCShareLink } = this.props;
+    const { title, description, link, buttonText, isRtl, MCShareLink, image } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
+
+    const filenameToImgUrl = {
+      "another-hoc": require('@cdo/static/resource_cards/anotherhoc.png'),
+      "applab-project": require('@cdo/static/resource_cards/applabcreateproject.png'),
+      "applab-tutorial": require('@cdo/static/resource_cards/applabtutorial.png'),
+      "create-account": require('@cdo/static/resource_cards/createaccount.png'),
+      "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
+      "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
+      "oldminecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
+    };
+    const imgSrc = filenameToImgUrl[image];
 
     return (
       <div style={[styles.card, localeStyle]}>
         <div style={styles.image}/>
+          <img src={imgSrc}/>
         <div>
           <div style={[styles.text, styles.title, localeStyle]}>
             {title}
