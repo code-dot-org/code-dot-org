@@ -750,6 +750,13 @@ sv:
     create: "Skapa projekt"
     create_a_project: 'Skapa ett nytt projekt:'
     new: "Skapa ny"
+    new_buttons:
+      artist: "Konstnären"
+      playlab: "Spel-labb"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Ändra namn"
     save: "Spara"
     delete: "Ta bort"

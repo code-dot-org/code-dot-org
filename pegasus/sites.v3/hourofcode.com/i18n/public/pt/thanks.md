@@ -27,14 +27,14 @@ social:
 
 # Obrigado por se inscrever para sediar a Hora do Código!
 
-Como forma de agradecer sua ajuda em tornar possível que novos alunos aprendam ciência da computação, gostaríamos de oferecer um conjunto gratuito de pôsteres impressos profissionalmente para uso em sala de aula. Use o código de oferta **FREEPOSTERS** na hora de fechar o pedido. (Nota: A oferta só estará disponível enquanto durar o estoque do material, e você precisará cobrir os custos de envio. Uma vez que esses pôsteres são enviados dos Estados Unidos, os custos de envio podem ser bastante elevados se forem enviados para o Canadá e internacionalmente. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Como forma de agradecer sua ajuda em tornar possível que novos alunos aprendam ciência da computação, gostaríamos de oferecer um conjunto gratuito de pôsteres impressos profissionalmente para uso em sala de aula. Use o código de oferta **FREEPOSTERS** na hora de fechar o pedido. (Nota: A oferta só estará disponível enquanto durar o estoque do material, e você precisará cobrir os custos de envio. Uma vez que esses pôsteres são enviados dos Estados Unidos, os custos de envio podem ser bastante elevados se forem enviados para o Canadá e internacionalmente. Entendemos que isso pode não estar em seu orçamento e nós encorajamos você a imprimir os arquivos PDF para sua sala de aula.)  
+<br /> [<button>Obtenha cartazes</button>](https://store.code.org/products/code-org-posters-set-of-12) Use o código de oferta FREEPOSTERS</p> 
 
 <br /> **A Hora do Código funciona durante <%= campaign_date('full') %>. Entraremos em contato sobre novos tutoriais e outras atualizações emocionantes à medida que surgirem. Enquanto isso, o que você pode fazer agora?**
 
 ## 1. Divulgue o evento em sua escola e comunidade
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Você acabou de se juntar ao movimento Hora do Código. Diga aos seus amigos com **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Incentive os outros a participar [com nossos e-mails de amostra.](<%= resolve_url('/promote/resources#sample-emails') %>) Entre em contato com seu diretor e desafie todas as salas de aula da sua escola para se inscrever. Recrute um grupo local - clubes de escoteiros ou escoteiras, igrejas, universidades, sindicatos ou até mesmo alguns amigos. Você não precisa estar na escola para aprender novas habilidades. Convide um político local ou legislador para visitar sua escola para a Hora do Código. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
 

@@ -1009,6 +1009,13 @@
     create: "პროექტის შექმნა"
     create_a_project: "ახალი პროექტის შექმნა:"
     new: "შექმენით ახალი"
+    new_buttons:
+      artist: "მხატვარი"
+      playlab: "თამაშების ლაბი"
+      applab: App Lab
+      gamelab: "თამაშების ლაბორატორია"
+      weblab: "ვებ ლაბორატორია (ბეტა)"
+    new_buttons_header: 'Start a new project:'
     rename: "სახელის შეცვლა"
     save: "შენახვა"
     delete: "წაშლა"

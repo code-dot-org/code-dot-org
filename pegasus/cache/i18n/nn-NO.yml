@@ -1952,28 +1952,28 @@
   header_project_gallery: Prosjekt
   header_sections: Seksjonar
   header_professional_learning: Profesjonell opplæring
-  header_educate_overview: Educator Overview
+  header_educate_overview: Oversikt for lærere
   header_educate_elementary: Grunnskule
   header_educate_middle: Ungdomsskule
   header_educate_high: Vidaregåande skule
   header_educate_hoc: Kodetimen
-  header_educate_partner: Partner with Us
+  header_educate_partner: Jobb med oss
   header_educate_beyond: Utover Code.org
-  header_educate_inspire: Inspire a Student
+  header_educate_inspire: Inspirer en elev
   header_educate_community: Nettforum
   header_educate_tools: Verktøy og videoar
   header_about_us: Om oss
   header_about_leadership: Leiarskap
   header_about_donors: Givarar
   header_about_partners: Partnarar
-  header_about_team: Full Team
-  header_about_news: Newsroom
+  header_about_team: Hele teamet
+  header_about_news: Nyhetsrom
   header_about_evaluation: Evaluering
-  header_about_jobs: Jobs
+  header_about_jobs: Jobber
   header_about_contact: Kontakt oss
   header_about_faqs: Vanlege spørsmål
-  header_learn: Learn
-  header_teach: Teach
+  header_learn: Lær
+  header_teach: Undervis
   header_stats: Statistikk
   header_help_us: Hjelp oss
   header_about: Om
@@ -2036,3 +2036,8 @@
     lista di over elevar i Google Classroom, klikk på knappen "Synkronisér elevar
     frå Google Classroom" i fana "Administrér elevar":'
   google_sign_in_instruct: 'Derfra bør dei velge alternativet "Logg på med Google-kontoen":'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  minecraft_agent: 'Minecraft: Hero''s Journey'
+  minecraft_agent_description: You’re the hero! Write code to journey through Minecraft
+    biomes.
+  minecraft_agent_button: Start

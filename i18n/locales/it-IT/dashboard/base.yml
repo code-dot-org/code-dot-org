@@ -19,7 +19,7 @@ it:
         parent_email: 'E-mail del genitore/tutore'
         personal_email: "E-mail personale<a href=\"%{url}\">(clicca qui se non hai un indirizzo e-mail)</a>"
         username: 'Nome utente'
-        password: 'password'
+        password: 'Password'
         password_confirmation: 'Conferma della password'
         current_password: 'Password attuale'
         locale: 'Lingua'
@@ -194,7 +194,7 @@ it:
   section:
     your_section:
       one: 'La tua classe:'
-      other: 'Le tue sezioni:'
+      other: 'Le tue classi:'
     code_with_teacher: '%{section_code} con %{teacher_name}'
     confirm:
       remove: 'Sicuro di voler abbandonare questa classe?'
@@ -252,11 +252,11 @@ it:
         playlab: 'Costruisci un Gioco'
         artist: 'Disegna qualcosa'
         calculate: 'Calculate something'
-        applab: 'Costruisci una App'
-        gamelab: 'Crea un progetto Game Lab'
-        weblab: 'Crea un progetto Web Lab (beta)'
+        applab: 'Costruisci una App in Sviluppo App'
+        gamelab: 'Crea un progetto in Sviluppo Giochi'
+        weblab: 'Crea un progetto in Sviluppo Web (versione provvisoria)'
       home: "Home"
-      my_dashboard: "Home"
+      my_dashboard: "Controllo"
       courses: "Corsi"
       course_catalog: "Corsi"
       project_gallery: "Progetti"
@@ -266,7 +266,7 @@ it:
       teacher_community: "Teacher community"
       professional_learning: "Professional learning"
       documentation: "Documentazione"
-      tutorials: "Tutorial"
+      tutorials: "Corsi"
       educate_overview: "Panoramica dei corsi"
       educate_elementary: "Scuola elementare"
       educate_middle: "Scuola media"
@@ -375,7 +375,7 @@ it:
     description: 'Code Studio è la base di partenza per i corsi online creati da Code.org'
     lines_of_code: "%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI"
     lines_of_code_linebreak: "%{lines_count} linee di codice <br/> scritte da %{students_count} milioni di studenti"
-    all_courses: "Panoramica dei corsi 1, 2 e 3"
+    all_courses: "Panoramica dei corsi 1, 2, 3 e 4 (in inglese)"
     lesson_plans: "Piani di lavoro delle lezioni"
     signin_message: "Già iscritto? %{link}"
     student_reg_link: 'Iscrizione studenti'
@@ -415,7 +415,7 @@ it:
     print_certificate: "Stampa l'attestato"
     announcement_title: "Avvisi"
     announcement_message_fall2016_features: "Abbiamo passato l'estate a trasformare le vostre segnalazioni in nuove funzionalità. Ora, potete <a href=\"%{pp_url}\" target=\"_blank\">monitorare i vari progressi degli studenti</a> anche se stanno programmando in coppia su un unico dispositivo. Potete utilizzare <a href=\"%{csp_widgets_url}\" target=\"_blank\">i migliori strumenti interattivi</a> dal nostro corso CS prinicipale in <i>qualsiasi</i> aula. E i vostri studenti possono <a href=\"%{unused_code_url}\" target=\"_blank\">tenere i codici inutilizzati</a> nella loro area di lavoro per incoraggiare la sperimentazione! Scoprite tutte le nostre nuove funzionalità e fateci sapere che ne pensate."
-    announcement_csp_widgets_message: "Stai cercando alcuni modi divertenti per insegnare alla tua classe come funziona internet, come la crittografia mantiene i dati sicuri, e altre nozioni? Abbiamo preso i migliori strumenti interattivi dal nostro curriculum di Principi dell'Informatica e rilasciato widget autonomi che puoi usare in qualunque momento!"
+    announcement_csp_widgets_message: "Stai cercando dei modi divertenti per insegnare alla tua classe come funziona Internet, come fa la crittografia a garantire la sicurezza dei dati, e altri concetti simili? Abbiamo preso i migliori strumenti interattivi dal nostro corso \"Principi dell'Informatica\" e li abbiamo resi disponibili come strumenti autonomi che puoi usare in qualunque momento!"
     announcement_learn_more_button: "Ulteriori informazioni"
     announcement_try_now_button: "Prova adesso"
     announcement_host_an_hour_button: "Ospita un'ora"
@@ -437,7 +437,7 @@ it:
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
     announcement_csp_deadline: "Richiamo finale per gli insegnanti di scuola superiore! Prendi il comando dell'Informatica nella tua scuola e metti in pratica i nostri programmi di apprendimento professionali e di alta qualità <strong>senza assolutamente nessun costo per te e la tua scuola</strong>. Le richiesti di partecipazione si chiudono il 14 Aprile."
-    announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
+    announcement_applab_export: "Sviluppo App, il nostro ambiente di programmazione basato sul web, ora supporta l'esportazione di codice! È possibile iniziare a creare App lavorando con i blocchi, quindi esportare il codice per modificarlo in qualsiasi ambiente di sviluppo professionale desiderato."
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
     announcement_navigation_redesign: "<b>In arrivo cambiamenti nella navigazione del sito</b><br/>\nCon l'arrivo dell'estate, stiamo migliorando la navigazione nel sito Code.org in modo che tu possa avere accesso alle risorse principali da ogni parte del sito. Non appena accederai con la tua utenza di insegnante, ogni pagina avrà una nuova barra di navigazione con collegamenti a: Home, Corsi, Progetti, Classi e Professional Learning."
   move_students:
@@ -503,10 +503,10 @@ it:
     upgrade:
       unsupported_message: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
       link: "Ulteriori informazioni"
-      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
-      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
+      applab_unsupported_tablet: "Sviluppo App funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
+      gamelab_unsupported_tablet: "Sviluppo Giochi funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
+      weblab_unsupported_browser: "Purtroppo, ci sono al momento dei problemi per usare Sviluppo Web su questo browser. Ti consigliamo di utilizzare un altro browser, finché non risolviamo i problemi attuali. Ci scusiamo per l'inconveniente."
+      weblab_unsupported_locale_storage: "Potrebbero verificarsi problemi utilizzando Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente."
   slow_loading: 'Questa operazione sta prendendo più tempo del solito...'
   try_reloading: 'Prova a ricaricare la pagina'
   next_stage: 'Finito! Prosegui con la lezione successiva'
@@ -521,7 +521,7 @@ it:
     title: "Clicca su \"Esegui\" per vedere il mio programma in azione"
     bounce_og_title: "Prova la mia versione del Ping-Pong"
     flappy_og_title: "Prova la mia versione del gioco Flappy"
-    studio_og_title: "Prova la mia versione del Gioco da Laboratorio"
+    studio_og_title: "Prova il gioco che ho fatto col Laboratorio"
     check_out_what_i_made: "Guarda cosa ho fatto"
     og_description: "Ho scritto il codice per conto mio con Code.org"
     phone_number_not_allowed: "Sembra che ci sia un numero di telefono nel codice. Prova a cambiare il testo."
@@ -542,9 +542,9 @@ it:
   upsell:
     applab:
       title: 'Sviluppo App'
-      body: "App Lab è un ambiente di programmazione dove puoi creare semplici applicazioni. Sviluppa un app, programmala con i blocchi o il JavaScript per farla funzionare, e infine condividila in pochi secondi."
+      body: "Sviluppo App è un ambiente di programmazione in cui puoi creare semplici applicazioni. Progetta una App, sviluppala usando i blocchi o JavaScript, e infine condividila."
       body_short: "Progetta una App, programmala con i blocchi o con Javascript, e poi condividila."
-      audience: 'Eta'' 13+'
+      audience: 'Da 13 anni in su'
       cta: 'Scopri come'
     hoc:
       title: 'Labirinto Classico'
@@ -555,7 +555,7 @@ it:
     20-hour:
       title: 'Corso rapido'
       body: 'Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell''informatica e della programmazione. Il corso è pensato per l''uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po'' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.'
-      body_short: 'Acquisisci le basi dell''informatica utilizzando una versione sintetica dei corsi 2-4.'
+      body_short: 'Acquisisci le basi dell''informatica con una sintesi dei corsi 2-4.'
     hoc2014:
       try_new_tutorial: 'Prova il nuovo corso dell''Ora del Codice in versione provvisoria'
       try_frozen: 'Artista con Anna ed Elsa, da Frozen'
@@ -563,14 +563,14 @@ it:
       title: "La tua collezione"
       body: "Guarda una collezione di app e immagini artistiche create dai nostri utenti"
     gamelab:
-      title: "Laboratorio di gioco"
-      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
-      audience: "Eta' 13+"
+      title: "Sviluppo Giochi"
+      body: "Sviluppo Giochi è un ambiente di programmazione in cui si possono realizzare semplici animazioni e giochi con oggetti e personaggi che interagiscono tra loro."
+      audience: "Da 13 anni in su"
       cta: "Scopri come"
     weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
-      audience: "Eta' 13+"
+      title: "Sviluppo Web (versione provvisoria)"
+      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
+      audience: "Da 13 anni in su"
       cta: "Scopri come"
     frozen:
       title: "Frozen"
@@ -590,7 +590,7 @@ it:
       body: "Crea una partita di basket o abbina diversi sport."
     text-compression:
       title: "Text Compression"
-      body: "In questa lezione puoi imparare come si comprime un testo sostituendo delle sequenze di caratteri che si ripetono con dei simboli."
+      body: "In questa lezione impari come si comprime un testo sostituendo le sequenze di caratteri che si ripetono con dei simboli."
     unplugged:
       title: "Lezioni Tradizionali"
       audience: "Età 4+"
@@ -627,7 +627,7 @@ it:
     help_resources: "Aiuto e Risorse"
     help_support: "Help and support"
     documentation: "Documentazione"
-    tutorials: "Tutorial"
+    tutorials: "Corsi"
   multi:
     wrong_title: "Risposta non corretta"
     wrong_body: "La risposta che hai scelto non è corretta.  Per favore riprova!"
@@ -750,6 +750,13 @@ it:
     create: "Crea progetto"
     create_a_project: 'Crea un nuovo progetto:'
     new: "Nuovo"
+    new_buttons:
+      artist: "Artista"
+      playlab: "Laboratorio"
+      applab: "Sviluppo App"
+      gamelab: "Sviluppo Giochi"
+      weblab: "Sviluppo Web (versione provvisoria)"
+    new_buttons_header: "Start a new project:"
     rename: "Rinomina"
     save: "Salva"
     delete: "Elimina"
@@ -976,4 +983,4 @@ it:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Corsi Completi'
+  courses_category: 'Corsi Avanzati'

@@ -1,6 +1,6 @@
 ---
-title: <%=hoc_s(titlu_tara_resurse)%>
-layout: larg
+title: '<%= hoc_s(:title_country_resources) %>'
+layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>

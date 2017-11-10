@@ -748,6 +748,13 @@ fa:
     create: "پروژه ایجاد کنید"
     create_a_project: 'یک پروژه جدید بساز:'
     new: "جدید ایجاد کنید"
+    new_buttons:
+      artist: "هنرمند"
+      playlab: "آزمایشگاه بازی"
+      applab: "آزمایشگاه نرم افزار"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "تغییر نام"
     save: "ذخيره"
     delete: "پاک کردن"

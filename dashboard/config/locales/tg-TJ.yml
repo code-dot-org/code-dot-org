@@ -987,6 +987,13 @@
     create: "Эҷод кардани лоиҳа"
     create_a_project: 'Create a new project:'
     new: "Эҷод кардани нав"
+    new_buttons:
+      artist: Artist
+      playlab: Play Lab
+      applab: App Lab
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Иваз кардани ном"
     save: Save
     delete: Delete

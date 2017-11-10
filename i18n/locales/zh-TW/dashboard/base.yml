@@ -750,6 +750,13 @@ zh-TW:
     create: "創建專案"
     create_a_project: '創建一個新的專案：'
     new: "建立新專案"
+    new_buttons:
+      artist: "藝術家"
+      playlab: "Play Lab"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "重新命名"
     save: "儲存"
     delete: "删除"
@@ -945,7 +952,7 @@ zh-TW:
   hidden_stage: "你的老師沒想到你會在這，問問你的老師你該上哪堂課。"
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
   return_unit_overview: '移至單元概覽'
-  return_course_overview: '移至單元概覽'
+  return_course_overview: '移至課程概覽'
   view_all_units: '查看所有單元'
   pd:
     survey:

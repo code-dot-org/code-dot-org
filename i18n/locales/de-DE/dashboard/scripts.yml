@@ -272,7 +272,7 @@ de:
             'Eval: Defining Functions':
               name: Composite Functions
             'Eval: Functions':
-              name: Solving Word Problems with the Design Recipe
+              name: Text-Probleme mit dem Design-Builder lösen
             'Eval: Strings and Images':
               name: Zeichenfolgen und Bilder
             'Eval: Writing Contracts':
@@ -288,7 +288,7 @@ de:
             'Play Lab: Defining Functions':
               name: Rocket Height
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: Das große Spiel - Variablen
             'Unplugged: Booleans':
               name: 'Offline: Boolesche Werte und Logik'
             'Unplugged: Collision Detection and the Distance Formula':
@@ -2251,7 +2251,7 @@ de:
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Einfache Verschlüsselung
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -3381,6 +3381,8 @@ de:
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3690,7 +3692,7 @@ de:
           description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Einfache Verschlüsselung
         fesbinary:
           title: Binärdatei
           description_audience: Falmouth Middle School
@@ -6181,6 +6183,10 @@ de:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -6734,6 +6740,26 @@ de:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''

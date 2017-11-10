@@ -44,6 +44,8 @@
         onEventFirstTime: Click and drag an "onEvent" block into the workspace to
           the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: Click here when you're done!
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -285,6 +287,12 @@
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Aqui estão o código
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click

@@ -1017,6 +1017,13 @@
     create: "Δημιουργία Έργου"
     create_a_project: "Δημιουργία ενός νέου έργου:"
     new: "Δημιουργία Νέου"
+    new_buttons:
+      artist: "Καλλιτέχνης"
+      playlab: "Εργαστήριο Παιχνιδιού"
+      applab: "Εργαστήριο εφαρμογών"
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Μετονομασία"
     save: "Αποθήκευση"
     delete: "Διαγραφή"
