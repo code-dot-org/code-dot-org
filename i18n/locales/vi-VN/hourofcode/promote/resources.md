@@ -35,9 +35,9 @@ nav: promote_nav
 
 [Tải về phiên bản hi-res](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" đã đăng kí bản quyền. Chúng tôi không muốn để ngăn chặn việc sử dụng này, nhưng chúng tôi muốn đảm bảo rằng nó được đặt trong một khuôn khổ nhất định:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Bất kỳ tham chiếu đến "Giờ mã" nên được sử dụng trong một thời trang không gợi ý rằng nó là tên thương hiệu riêng của bạn, nhưng thay vì tham khảo giờ mã như là một phong trào cơ sở. Ví dụ: "Tham gia trong giờ của mã tại ACMECorp.com". Ví dụ xấu: "Hãy thử giờ của mã bởi ACME Corp".
+1. Bất kỳ tham chiếu đến "Giờ mã" nên được sử dụng trong một thời trang không gợi ý rằng nó là tên thương hiệu riêng của bạn, nhưng thay vì tham khảo giờ mã như là một phong trào cơ sở. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
 2. Sử dụng một superscript "TM" trong những nơi nổi bật nhất bạn đề cập đến "Giờ mã", cả hai trên trang web của bạn và trong phần giới thiệu ứng dụng.
 3. Bao gồm các ngôn ngữ trên trang (hoặc trong các chân trang), trong đó có liên kết đến các trang web CSEdWeek và Code.org, nói những điều sau đây:
     
@@ -58,80 +58,108 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## Giới thiệu tới trường học của bạn, nhân viên hoặc bạn bè của bạn để họ đăng ký tham gia:
+### Ask your school, employer, or friends to sign up:
 
-Máy tính có ở khắp mọi nơi, thay đổi mọi ngành công nghiệp trên hành tinh. Nhưng ít hơn một nửa của tất cả các trường giảng dạy khoa học máy tính. Tin tốt là chúng tôi đang trên đường thay đổi điều đó. Nếu bạn đã nghe nói về Hour of Code trước đây, bạn có thể biết nó đã làm nên lịch sử. Hơn 100 triệu sinh viên đã cố gắng Hour of Code.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-Với Hour of Code, khoa học máy tính đã ở trên trang chủ của Google, MSN, Yahoo! và Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Mỗi cửa hàng của Apple trên thế giới đã tổ chức một Hour of Code. Tổng thống Obama đã viết dòng đầu tiên của ông về mã như một phần của chiến dịch.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Hãy nói ra. Hãy tổ chức một sự kiện. Mời một trường học địa phương đăng nhập. Hoặc tự thử nghiệm Hour of Code\--- mọi người đều tìm thấy lợi ích từ những điều cơ bản.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Bắt đầu tại http://hourofcode.com/<%= @country %>
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+
+Get started at http://hourofcode.com/<%= @country %>
+
+<a id="help-schools"></a>
+
+### Volunteer at a school:
+
+**Subject line:** Can we help you host and Hour of Code?
+
+Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+
+Thanks!
+
+[Your name], [Your organization]
 
 <a id="media-pitch"></a>
 
-## Lôi cuốn truyền thông vào sự kiện:
+### Invite media to attend your event:
 
-**Chủ đề:**nhiệm vụ của các trường học tham gia là giới thiệu học sinh tìm hiểu khoa học máy tính
+**Subject line:** Local school joins mission to introduce students to computer science
 
-Máy tính đang ở khắp mọi nơi, thay đổi mọi ngành công nghiệp trên các hành tinh, nhưng ít hơn một nửa của tất cả các trường giảng dạy khoa học máy tính. Cô gái và dân tộc thiểu số đang bị đánh giá thấp trong các lớp học khoa học máy tính, và trong ngành công nghiệp công nghệ cao. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
 
-Với Hour of Code, khoa học máy tính đã ở trên trang chủ của Google, MSN, Yahoo! và Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Mỗi cửa hàng của Apple trên thế giới đã tổ chức một Hour of Code. Tổng thống Obama đã viết dòng đầu tiên của ông về mã như một phần của chiến dịch.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Tôi đang viết để mời bạn tham gia chúng tôi kickoff hội nghị này, và xem trẻ em bắt đầu các hoạt động trên [DATE].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-Hour of Code, tổ chức phi lợi nhuận Code.org và hơn 100 người khác, là một phong trào toàn cầu tin rằng học sinh của ngày hôm nay đã sẵn sàng để tìm hiểu các kỹ năng quan trọng cho sự thành công của thế kỷ 21. Xin vui lòng tham gia với chúng tôi.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
 
-**Liên hệ:** [TÊN BẠN], [TITLE], điện thoại: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**Khi nào:** [NGÀY và GIỜ diễn ra sự kiện]
+I look forward to being in touch.
 
-**Địa điểm:** [ĐỊA CHỈ và CHỈ DẪN]
-
-Tôi hy vọng được giữ liên lạc.
+[Your Name]
 
 <a id="parents"></a>
 
-## Thông báo cho phụ huynh về sự kiện diễn ra ở trường học:
+### Tell parents about your school's event:
 
-Các bậc phụ huynh thân mến,
+**Subject line:** Our students are changing the future with an Hour of Code
 
-Chúng ta đang được sống trong thế giới của công nghệ. Và chúng ta đều hiểu rằng dù khi lớn lên những đứa trẻ của chúng ta có chọn đi theo chuyên ngành nào thì khả năng thành công của chúng sẽ cao hơn nếu các em có những hiểu biết cơ bản về của công nghệ.
+Dear Parents,
 
-Nhưng chỉ một phần nhỏ của chúng tôi đang học tập **làm thế nào để làm** các công trình công nghệ. Ít hơn một nửa của tất cả các trường giảng dạy khoa học máy tính.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Đó là lý do tại sao toàn bộ trường học của chúng tôi đang tham gia vào một sự kiện học tập lớn nhất trong lịch sử: Giờ lập trình, diễn ra trong Tuần Giáo Dục Khoa Học Máy Tính (tháng 12). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code.
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
-Giờ Lập Trình tuyên bố rằng [TÊN TRƯỜNG] sẵn sàng dạy những kĩ năng cơ bản này trong thế kỉ 21. Để tiếp tục mang hoạt động lập trình đến con em của các bạn, chúng tôi muốn làm cho sự kiện Giờ Lập trình với quy mô lớn hơn. Tôi khuyến khích các bạn hãy tham gia tình nguyện, liên hệ với phương tiện truyền thông địa phương, chia sẻ tin tức trên kênh phương tiện truyền thông xã hội của các bạn và xem xét việc tổ chức thêm sự kiện Giờ Lập Trình ở cộng đồng.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Đây là thời cơ để thay đổi nền giáo dục tương lai ở [THỊ TRẤN/ TÊN THÀNH PHỐ].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-Xem chi tiết tại http://hourofcode.com/<%= @country %>, và góp phần lan truyền ra thế giới.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-Trân trọng,
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Ban tổ chức
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
-## Mời một chính trị gia địa phương tham gia sự kiện ở trường học của bạn:
+### Invite a local politician to your school's event:
 
-[Họ của Thị trưởng/Thống đốc/Ban đại diện/thượng nghị sĩ] kính mến:
+**Subject line:** Join our school as we change the future with an Hour of Code
 
-Ông/bà có biết rằng máy tính là nguồn #1 của lương tại Mỹ.? Có hơn 500.000 tính toán công việc mở trên toàn quốc, nhưng năm ngoái chỉ 42,969 máy tính khoa học sinh viên tốt nghiệp vào lực lượng lao động.
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Khoa học máy tính là nền tảng cho *mọi* ngành công nghiệp hiện nay. Tuy nhiên, hầu hết các trường không dạy cho nó. Tại trường [tên], chúng tôi đang cố gắng thay đổi điều đó.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Đó là lý do tại sao toàn bộ trường học của chúng tôi đang tham gia vào một sự kiện học tập lớn nhất trong lịch sử: Giờ lập trình, diễn ra trong Tuần Giáo Dục Khoa Học Máy Tính (tháng 12). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Tôi viết thư này kính mời ông/bà tham dự sự kiện Giờ Lập Trình và phát biểu tại lễ khai mạc của chúng tôi. Sự kiện sẽ diễn ra vào [NGÀY, THỜI GIAN, ĐỊA ĐIỂM] và sẽ trịnh trọng tuyên bố rằng [Tiểu bang hoặc tên Thành phố] sẵn sàng dạy cho học sinh thế kỉ 21 những kĩ năng quan trọng này. Chúng tôi muốn đảm bảo rằng học sinh của chúng tôi đang đi đầu trong việc tạo ra các công nghệ của tương lai-không chỉ tiêu thụ nó.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Làm ơn liên hệ với chúng tôi theo số [SỐ ĐIỆN THOẠI HOẶC ĐỊA CHỈ EMAIL]. Tôi mong chờ hồi âm của ông/bà.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Trân trọng, [NAME], [TITLE]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+
+Sincerely,
+
+[Your Name], [Title]
 
 <%= view :signup_button %>

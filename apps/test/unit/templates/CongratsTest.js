@@ -10,26 +10,55 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 describe('Congrats', () => {
   let root;
 
-  beforeEach(() => {
+  it('renders a Certificate component', () => {
     const store = createStore(combineReducers({responsive, isRtl}));
     root = mount(
       <Provider store={store}>
         <Congrats
           completedTutorialType="other"
+          userType="signedOut"
         />
       </Provider>
     );
-  });
-
-  it('renders a Certificate component', () => {
     expect(root.find('Certificate').exists());
   });
 
   it('renders a StudentsBeyondHoc component', () => {
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="signedOut"
+        />
+      </Provider>
+    );
     expect(root.find('StudentsBeyondHoc').exists());
   });
 
-  it('renders a TeachersBeyondHoc component', () => {
+  it('renders a TeachersBeyondHoc component, for signed out', () => {
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="signedOut"
+        />
+      </Provider>
+    );
     expect(root.find('TeachersBeyondHoc').exists());
+  });
+
+  it('does not render a TeachersBeyondHoc component, for students', () => {
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="student"
+        />
+      </Provider>
+    );
+    expect(root.find('TeachersBeyondHoc').exists()).to.be.false;
   });
 });

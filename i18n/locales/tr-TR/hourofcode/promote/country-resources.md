@@ -102,7 +102,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 **Kod-saati içerikleri:**
 
-- Require minimal prep-time for organizers
+- Organizatörler için minimum hazırlık zamanı gerektir
 - Kendi yönlendirmelerine sahiptir - öğrencilerin kendi hızlarına ve seviyelerine uygun hareket etmelerine izin verir
 
 <a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
@@ -124,22 +124,23 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-
-**Get your students excited - give them a short intro**
-
-<% elsif @country == 'pe' %>
-
-# La Hora del Código Perú <iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-
-<
-
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
-
-<% else %>
-
-# Ek kaynaklar çok yakında geliyor!
-
-<% end %>
+- Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un yer aldığı ilk Code.org yayın videosu ( 1 dakika </ 0>,  5 dakika </ 1> ve  9 dakika < / 2> sürümler)</li> 
+    
+    - The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+    - [Başkan Obama, tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY)</ul> 
+    
+    **Get your students excited - give them a short intro**
+    
+    <% elsif @country == 'pe' %>
+    
+    # La Hora del Código Perú <iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+    
+    <
+    
+    p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
+    
+    <% else %>
+    
+    # Ek kaynaklar çok yakında geliyor!
+    
+    <% end %>

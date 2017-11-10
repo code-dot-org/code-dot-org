@@ -340,7 +340,7 @@
   homepage_slot_text_title_hoc: "Hora do Código"
   homepage_slot_text_blurb_hoc: "Qualquer pessoa pode aprender. Comece hoje mesmo"
   homepage_slot_text_link_hoc: "Faça uma Hora do Código"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
+  homepage_slot_text_link_about_hoc: "Sobre a Hora do Código"
   homepage_slot_text_link_host: "Organize um evento da Hora do Código"
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: "Voluntário da Hora do Código"
@@ -734,10 +734,10 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
+  dashboard_coursea: 'Curso A: '
+  dashboard_courseb: 'Curso B: '
+  dashboard_coursec: 'Curso C: '
+  dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Se não tiver computadores, <a href='%{unplugged_url}'>use essas aulas off-line</a> na sua sala de aula."
@@ -843,7 +843,7 @@
   carousel_heading_mobtabelem: "For phones and tablets"
   carousel_heading_prereader: "For pre-readers"
   carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
+  carousel_heading_nointernet: "Internet ruim? Instale esse aplicativos no seu computador"
   educator_notes: "Observações do Educador"
   teach_led_lesson_plans: "Planos de aula orientados pelo professor"
   learn_footer_all_tutorials: "Veja a <a href=\"https://code.org/educate/allhourofcode\">lista completa de tutoriais da Hora do Código</a>. Para ver nossos critérios e diretrizes de envio para tutoriais da Hora do Código, <a href=\"https://hourofcode.com/tutorial-guidelines\">clique aqui.</a>"
@@ -913,18 +913,18 @@
   course2_name: "Curso 2"
   course3_name: "Curso 3"
   course4_name: "Curso 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
-  coursec-draft_name: Course C
-  coursec_name: "Course C"
-  coursed-draft_name: Course D
-  coursed_name: "Course D"
-  coursee-draft_name: Course E
-  coursee_name: "Course E"
-  coursef-draft_name: Course F
-  coursef_name: "Course F"
+  coursea-draft_name: Curso A
+  coursea_name: "Curso A"
+  courseb-draft_name: Curso B
+  courseb_name: "Curso B"
+  coursec-draft_name: Curso C
+  coursec_name: "Curso C"
+  coursed-draft_name: Curso D
+  coursed_name: "Curso D"
+  coursee-draft_name: Curso E
+  coursee_name: "Curso E"
+  coursef-draft_name: Curso F
+  coursef_name: "Curso F"
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
@@ -938,7 +938,7 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
+  csd5_name: 'Unidade 5: Dados e Sociedade'
   csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 2: Informação Digital'
@@ -966,7 +966,7 @@
   starwarsblocks_name: "Star Wars (Blocos)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
   math_category_name: "Matemática"
   hoc_category_name: "Hora do Código"
@@ -1427,13 +1427,13 @@
   header_help_us: "Ajude-nos"
   header_about: "Sobre"
   header_teacher_community: "Comunidade de professores"
-  header_help_support: 'Ajuda e suporte'
+  header_help_support: 'Ajuda e suporte '
   header_report_bug: "Reportar um erro"
   header_tutorials: "Tutoriais"
   header_documentation: "Documentação"
   csp_name: "Princípios da CC - 16-17"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Cursos Completos"
   user_header_label: "Oi, %{username}"
   user_header_settings: "Minha conta"
   user_header_logout: "Sair"
@@ -1442,13 +1442,13 @@
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
+  signing_in: "Fazendo Login"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_website: "Ir para %{code_org_url}."
   sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
+  sign_in_instruct_name: "Escolha o nome de exibição deles."
+  sign_in_instruct_secret: "Escolha o segredo deles %{secret}."
+  sign_in_instruct_button: "Clique no botão \"Login\"."
   sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
   reset_student_password: "Resetting student passwords"
   reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."

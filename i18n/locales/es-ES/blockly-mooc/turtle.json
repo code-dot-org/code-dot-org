@@ -75,7 +75,7 @@
   "penUp": "levantar lápiz",
   "reinfFeedbackMsg": "¡Aquí está tu dibujo! Sigue trabajando en él o continúa al siguiente rompecabezas.",
   "setAlpha": "establecer alfa",
-  "setCharacter": "set character to {character}",
+  "setCharacter": "configura el personaje a {character}",
   "setColour": "definir color",
   "setPattern": "establecer patrón",
   "setWidth": "definir ancho",

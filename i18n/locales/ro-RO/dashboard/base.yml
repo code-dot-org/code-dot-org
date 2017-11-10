@@ -750,6 +750,13 @@ ro:
     create: "Creează proiect"
     create_a_project: 'Creează un proiect nou:'
     new: "Creează unul nou"
+    new_buttons:
+      artist: "Artist"
+      playlab: "Laborator de Joacă"
+      applab: "Laboratului Aplicației"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Redenumește"
     save: "Salvează"
     delete: "Șterge"

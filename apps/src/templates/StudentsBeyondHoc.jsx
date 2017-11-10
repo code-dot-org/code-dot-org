@@ -19,6 +19,7 @@ class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
+    signedIn: PropTypes.bool.isRequired,
   };
 
   render() {

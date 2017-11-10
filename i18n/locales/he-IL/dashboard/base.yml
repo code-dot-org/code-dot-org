@@ -751,6 +751,13 @@ he:
     create: "צור פרויקט"
     create_a_project: 'צור פרויקט חדש:'
     new: "צור חדש"
+    new_buttons:
+      artist: "אמן"
+      playlab: "מעבדת משחקים"
+      applab: "מעבדת היישומים"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "שנה שם"
     save: "שמור"
     delete: "מחק"

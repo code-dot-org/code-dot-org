@@ -18,21 +18,29 @@ class Congrats extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
+    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired
   };
 
   render() {
-    const { completedTutorialType, MCShareLink } = this.props;
+    const { completedTutorialType, MCShareLink, userType } = this.props;
+    const signedIn = (userType === "teacher" || userType === "student");
 
     return (
       <div style={styles.container}>
         <Certificate
           completedTutorialType={completedTutorialType}
         />
+        {userType === "teacher" && (
+          <TeachersBeyondHoc/>
+        )}
         <StudentsBeyondHoc
           completedTutorialType={completedTutorialType}
           MCShareLink={MCShareLink}
+          signedIn={signedIn}
         />
-        <TeachersBeyondHoc/>
+        {userType === "signedOut" && (
+          <TeachersBeyondHoc/>
+        )}
       </div>
     );
   }

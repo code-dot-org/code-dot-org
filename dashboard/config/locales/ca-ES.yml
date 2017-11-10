@@ -990,6 +990,13 @@
     create: Crear un projecte
     create_a_project: 'Crear un nou projecte:'
     new: Crea nou
+    new_buttons:
+      artist: Artista
+      playlab: Play Lab
+      applab: Laboratori d'aplicacions
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Canviar el nom
     save: Desa
     delete: Elimina

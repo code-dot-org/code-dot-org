@@ -98,7 +98,7 @@ Va multumin pentru inregistrate, daca doriti materiale printate pentru promovare
 
 ## 1) Essayez les tutoriels:
 
-Nous allons mettre en place plusieurs tutoriels amusants durant un heur, créés par plusieurs partenaires. De nouveaux tutoriels arrivent pour commencer l'Heure de Code avant<%= date_de_la_campagne('pleine') %>.
+Nous allons mettre en place plusieurs tutoriels amusants durant un heur, créés par plusieurs partenaires. De nouveaux tutoriels arrivent pour commencer l'Heure de Code avant<%= campaign_date('full') %>.
 
 **Tous les tutoriels de l'Heure de Code:**
 

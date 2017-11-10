@@ -994,6 +994,13 @@
     create: Crear proyecto
     create_a_project: 'Crear un nuevo proyecto:'
     new: Crear nuevo
+    new_buttons:
+      artist: Artista
+      playlab: Laboratorio de juegos
+      applab: Laboratorio de Aplicaciones
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Cambiar nombre
     save: Guardar
     delete: Borrar
