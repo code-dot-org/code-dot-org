@@ -32,6 +32,7 @@ const styles = {
     position: 'relative',
     whiteSpace: 'normal',
     transition: 'left 0.25s ease-out',
+    paddingBottom: 10,
   },
   challenges: {
     display: 'inline-block',
