@@ -1530,3 +1530,8 @@
   syncing_students_instructions: '如果您的 Code.org 小组与您在 google 教室中的学生名单不够新, 请点击 "管理学生"
     标签 上的"从 google 教室同步学生信息" 按钮:'
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  minecraft_agent: 'Minecraft: Hero''s Journey'
+  minecraft_agent_description: You’re the hero! Write code to journey through Minecraft
+    biomes.
+  minecraft_agent_button: Start

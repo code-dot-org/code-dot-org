@@ -2101,5 +2101,8 @@
   syncing_students_instructions: 'If your Code.org section is ever out of date with
     your list of students in Google Classroom, click on the “Sync students from Google
     Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'Von dort sollten sie die Option "Anmelden mit Google-Konto"
-    auswählen:'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  minecraft_agent: 'Minecraft: Hero''s Journey'
+  minecraft_agent_description: You’re the hero! Write code to journey through Minecraft
+    biomes.
+  minecraft_agent_button: Start
