@@ -117,7 +117,7 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
-  const registrationSchoolStyleGroup = (Math.random() > 1.5) ? "control" : "autocomplete";
+  const registrationSchoolStyleGroup = (Math.random() > 0.5) ? "control" : "autocomplete";
 
   function logEvent(event) {
     firehoseClient.putRecord(
