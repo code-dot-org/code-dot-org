@@ -3377,8 +3377,11 @@ Studio.setResult = function () {
 /**
  * Send the milestone post, including level progress (result and testResults)
  * and saved user code.
+ *
+ * @param {boolean} [enableOnComplete=true] whether or not to attach the
+ *        onComplete handler to the StudioApp.report call
  */
-Studio.report = function () {
+Studio.report = function (enableOnComplete = true) {
   if (studioApp().hasContainedLevels && !level.edit_blocks) {
     postContainedLevelAttempt(studioApp());
     runAfterPostContainedLevel(() => {
@@ -3405,15 +3408,19 @@ Studio.report = function () {
   Studio.waitingForReport = true;
 
   var sendReport = function () {
-    studioApp().report({
+    const reportData = {
       app: 'studio',
       level: level.id,
       result: Studio.result === ResultType.SUCCESS,
       testResult: Studio.testResults,
       program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
-      onComplete: Studio.onReportComplete
-    });
+    };
+
+    if (enableOnComplete) {
+      reportData.onComplete = Studio.onReportComplete;
+    }
+    studioApp().report(reportData);
   };
 
   // don't try it if function is not defined, which should probably only be
