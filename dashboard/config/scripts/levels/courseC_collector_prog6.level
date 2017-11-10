@@ -35,8 +35,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "All blocks already attached, but some in wrong order. How do you fix?",
