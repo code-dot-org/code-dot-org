@@ -607,30 +607,17 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       block_type = ext.slice(1..-1)
-      options = {
-        readonly: true,
-        embedded: true,
-        locale: js_locale,
-        baseUrl: Blockly.base_url,
-        blocks: '<xml></xml>',
-        dialog: {},
-      }
-      app = level.game.app
-      blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
-
-      unless @blockly_loaded
-        @blockly_loaded = true
-        blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
-        content_tag(:style, '.blocklySvg { background: none; }') +
-        content_tag(:script, '', src: minifiable_asset_path('js/blockly.js')) +
-        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/blockly_locale.js")) +
-        content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
-        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/#{app}_locale.js")) +
-        content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
-        content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
-      end
-
-      blocks
+      content_tag(
+        :iframe,
+        '',
+        {
+          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
+          width: width ? width.strip : '100%',
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;',
+        }
+      )
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
