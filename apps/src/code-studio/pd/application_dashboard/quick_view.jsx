@@ -82,6 +82,7 @@ export default class QuickView extends React.Component {
 
     const statusList = (this.props.route.viewType === 'facilitator') ? FacilitatorApplicationStatuses : TeacherApplicationStatuses;
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
+    this.statuses.unshift({value: null, label: "\u00A0"});
   }
 
   handleDownloadCsvClick = event => {
