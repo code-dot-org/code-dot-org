@@ -25,7 +25,7 @@ action_num_served,action,homepage_action_text_num_served,num_served,,,,,,,code.o
 action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_learn,https://hourofcode.com,/learn,,,,code.org,nah,all
 action_cta_button,action,homepage_action_text_learn,cta_button,/student,,,,,,code.org,nah,all
 action_cta_hoc2017_join_us,action,homepage_action_text_join_us,cta_button,https://hourofcode.com/#join,,,,,,code.org,show,all
-action_cta_hoc2017_try_it,action,hoc2014_try,cta_button,/learn,,,,,,code.org,show,all
+action_cta_hoc2017_try_it,action,hoc2014_try,cta_button_secondary,/learn,,,,,,code.org,show,all
 action_cta_button_noten,action,homepage_action_text_learn,cta_button,/student,,,,,,code.org,nah,not en
 action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,//videos.code.org/social/what-most-schools-dont-teach.mp4,https://www.facebook.com/Code.org/videos/10100689712053311/,"Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321",,,code.org,nah,all
 action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,//videos.code.org/social/hourofcode-2015-50MB.mp4,,,,,csedweek.org,nah,all
