@@ -202,7 +202,7 @@ class NewProjectButtons extends React.Component {
                   <a
                     key={index}
                     href={"/projects/" + projectType + "/new"}
-                    onClick={this.handleProjectClick.bind(this, projectType)}
+                    onClick={_.debounce(this.handleProjectClick.bind(this, projectType), 1000)}
                   >
                     <div style={[styles.tile, index < (TILES_PER_ROW - 1) && styles.tilePadding]}>
                       <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
