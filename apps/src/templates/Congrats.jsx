@@ -63,25 +63,30 @@ export default class Congrats extends Component {
     const store = createStore(combineReducers({responsive: responsiveRedux}));
 
     return (
-      <div style={contentStyle}>
-        <Certificate
-          completedTutorialType={completedTutorialType}
-        />
-        {userType === "teacher" && (
-          <TeachersBeyondHoc/>
-        )}
-        <StudentsBeyondHoc
-          completedTutorialType={completedTutorialType}
-          MCShareLink={MCShareLink}
-          responsive={this.responsive}
-          isRtl={isRtl}
-          signedIn={signedIn}
-          isEnglish={isEnglish}
-        />
-        {userType === "signedOut" && (
-          <TeachersBeyondHoc/>
-        )}
-      </div>
+      <Provider store={store}>
+        <div style={contentStyle}>
+          <Certificate
+            completedTutorialType={completedTutorialType}
+          />
+          {userType === "teacher" && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+          <StudentsBeyondHoc
+            completedTutorialType={completedTutorialType}
+            MCShareLink={MCShareLink}
+            responsive={this.responsive}
+            isRtl={isRtl}
+            signedIn={signedIn}
+            isEnglish={isEnglish}
+          />
+          {userType === "signedOut" && (
+            <TeachersBeyondHoc/>
+          )}
+        </div>
+      </Provider>
     );
   }
 }

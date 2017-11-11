@@ -10,6 +10,9 @@ const styles = {
   heading: {
     color: color.teal,
     width: '100%'
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
@@ -29,12 +32,14 @@ export default class TeachersBeyondHoc extends Component {
         description: "Description, description, description, description, Description, description, description, description, description, description, description, description",
         buttonText: i18n.learnMore(),
         link: "/courses?view=teacher",
+        image: "codeorg-teacher"
       },
       {
         title: "Teach other courses",
         description: "Description, description, description, description, Description, description, description, description, description, description, description, description",
         buttonText: i18n.learnMore(),
-        link: '/educate/curriculum/3rd-party'
+        link: '/educate/curriculum/3rd-party',
+        image: "third-party-teacher"
       }
     ];
 
@@ -54,10 +59,12 @@ export default class TeachersBeyondHoc extends Component {
                 link={pegasus(`/${card.link}`)}
                 isRtl={isRtl}
                 jumbo={desktop}
+                image={card.image}
               />
             )
           )}
         </ResourceCardResponsiveContainer>
+        <div style={styles.clear}/>
       </div>
     );
   }
