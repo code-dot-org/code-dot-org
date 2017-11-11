@@ -1,16 +1,22 @@
 ---
+<%
+  mc_landing_2017 = !!DCDO.get('hoc_launch', {})['mc_landing_2017']
+  share_image = "mc_social_#{mc_landing_2017 ? 2017 : 2016}.jpg"
+  share_text = mc_landing_2017 ? I18n.t(:minecraft_og_agent) : I18n.t(:minecraft_og_designer)
+%>
+
 title: Minecraft
 theme: responsive
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/minecraft"
-  "twitter:image:src" : "https://code.org/images/mc/mc_social_2016.jpg"
+  "twitter:image:src" : "https://code.org/images/mc/<%= share_image %>"
   "twitter:title": "Minecraft Hour of Code"
-  "twitter:description": "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  "twitter:description": "<%= share_text %>"
   "og:title": "Minecraft Hour of Code"
-  "og:description": "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  "og:image" : "https://code.org/images/mc/mc_social_2016.jpg"
+  "og:description": "<%= share_text %>"
+  "og:image" : "https://code.org/images/mc/<%= share_image %>"
   "og:image:width": "1200"
   "og:image:height": "630"
   "og:video": ""
@@ -27,7 +33,7 @@ style_min: true
 %div{style: "clear:both"}
 .mc-container
   .mc-tutorials
-    .tutorial-box{style: "margin-bottom: 14px; display: #{DCDO.get('hoc_launch', nil).try(:[], 'mc_landing_2017') ? 'block' : 'none'}"}
+    .tutorial-box{style: "margin-bottom: 14px; display: #{DCDO.get('hoc_launch', {})['mc_landing_2017'] ? 'block' : 'none'}"}
       .img-container
         %img.mc-img-wide{src: '/images/mc/fit-1940/mc_landing_2017_wide.jpg'}
         %img.mc-img.mc-img-narrow{src: '/images/mc/mc_landing_2017_narrow.jpg'}
