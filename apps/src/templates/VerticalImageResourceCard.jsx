@@ -34,7 +34,7 @@ const styles = {
   jumboImage: {
     width: 473,
     height: 220,
-    backgroundColor: color.purple
+    position: 'absolute',
   },
   text: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -108,6 +108,10 @@ class VerticalImageResourceCard extends Component {
       "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
       "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
       "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
+      "codeorg-teacher":
+      require('@cdo/static/resource_cards/codeorgteacher.png'),
+      "third-party-teacher":
+      require('@cdo/static/resource_cards/thirdpartyteacher.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
