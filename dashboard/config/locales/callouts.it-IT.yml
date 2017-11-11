@@ -46,6 +46,8 @@
         onEventFirstTime: Click and drag an "onEvent" block into the workspace to
           the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: Click here when you're done!
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -287,6 +289,12 @@
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
@@ -669,7 +677,7 @@
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: |-
           Ti sei bloccato?<br>
-          Clicca la lampadina per un suggerimento!
+          Clicca sulla lampadina per avere un suggerimento!
       Robot Doodle_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
           sono stati organizzati in categorie. Clicca su queste parole per scoprire
@@ -757,7 +765,7 @@
       Underground Iron_callout:
         craft_what_is_iron: Estrai il ferro!
       WebLab PS test - 1-12_callout:
-        version_history_button: Dai un'occhiata alla cronologia delle versioni
+        version_history_button: Controlla la cronologia delle versioni
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
@@ -864,7 +872,7 @@
           strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
       courseA_forVideoTest_artist_callout: []
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Clicca la lampadina quando hai bisogno di un indizio!
+        courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Usa il bottone passo per andare passo dopo passo
           nel programma. Ti aiuterà a trovare il bug!
@@ -893,7 +901,7 @@
         courseB_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli
           strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Clicca la lampadina quando hai bisogno di un indizio!
+        courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Usa il bottone passo per andare passo dopo passo
           nel programma. Ti aiuterà a trovare il bug!

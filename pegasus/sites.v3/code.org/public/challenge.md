@@ -12,17 +12,23 @@ style_min: true
 ## How do I participate?
 It's easy to get involved and win a classroom video chat with a special guest! 
 
-**Step one**: do an Hour of Code with one of the Code.org activities below! 
+**Step one**: Tweet or publicly post reach out to one of our special guests on Twitter, Facebook, or Instagram (including their @profile) and include the hashtag #HourOfCode.
 
-**Step two**: snap a picture of you or your class during the Hour of Code.
+That's it! This challenge is open to classrooms, after-school clubs, and individual students.
 
-**Step three**: Tweet or publicly post your picture on Twitter, Facebook, or Instagram and include:
+<a name="contestrules"></a>
+## What are the contest rules?
+When submitting your project, tag the special guest you'd like talk to on a video chat. BUT you can only tag one guest per entry. However, you can contact your favorite guest as many times as you want! 
 
+Each entry must include the required tags and content to be considered and must be publicly visible.
+
+## Is there any way to increase my chances of winning?
+You may enter the contest simply by contacting your favorite guest, but your chances of winning will increase if you include these things in your post:
+
+- a picture or video of you or your class during the Hour of Code;
 - a link to an awesome Hour of Code creation made on Code.org;
-- the hashtag #HourOfCode;
-- and the @profile of the special guest you want to contact.
 
-This challenge is open to classrooms, after-school clubs, and individual students. Check out this sample tweet for inspiration.
+ Check out this sample tweet for inspiration.
 
 <img src="/images/fit-800/hoc-challenge-tweet.png" class ="col-95">
 
@@ -30,12 +36,6 @@ This challenge is open to classrooms, after-school clubs, and individual student
 ## How do you get the project link to share? 
 When you finish one of our Hour of Code activities, on the last level you'll receive a share link. Use that link when you're communicating with one of our special guests.
 
-<a name="contestrules"></a>
-## What are the contest rules?
-When submitting your project, tag the special guest you'd like talk to on a video chat. BUT you can only tag one guest per entry. However, you can submit the same project multiple times tagging a different guest in each post. 
-
-- Each entry must include the required tags and content to be considered and must be publicly visible.
-- Feel free to enter as many projects and as many times as you want on Twitter, Facebook, or Instagram!
 
 ### Examples of student creations
 [col-33]

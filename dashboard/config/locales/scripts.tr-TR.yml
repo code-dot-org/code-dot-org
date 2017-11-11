@@ -144,7 +144,7 @@
             'Maze: Conditionals':
               name: 'Labirent: Koşullar'
             Songwriting:
-              name: Parametrelerle Şarkı Yazmak
+              name: "Şarkı Yazarlığı"
             'Studio: Create a Game':
               name: 'Oyun Laboratuvarı: Bir Oyun Oluşturun'
             'Studio: Create a Story':
@@ -980,7 +980,7 @@
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -1316,7 +1316,7 @@
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1346,7 +1346,7 @@
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with
@@ -1382,7 +1382,7 @@
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -1490,7 +1490,7 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
             Songwriting:
-              name: Parametrelerle Şarkı Yazmak
+              name: "Şarkı Yazarlığı"
             The Big Event:
               name: Büyük Olay
         afterschool1:
@@ -1724,7 +1724,7 @@
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         algebraPD3b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: CS in Algebra mid year lesson support
@@ -1937,7 +1937,7 @@
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -3110,7 +3110,7 @@
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Proje Sahnesi (Döngüler, Olaylar, Koşullar, Fonksiyonlar)
             Songwriting:
-              name: Parametrelerle Şarkı Yazmak
+              name: "Şarkı Yazarlığı"
             'Unplugged: Funky Functions':
               name: 'Bağımsız (Unplugged): Acaip (Funky) Fonksiyonlar'
         grade1:
@@ -3761,6 +3761,8 @@
               name: Parametreler ve Rastgelelik (Randomization)
             Shapes and Randomization:
               name: "Şekiller ve Rastgelelik"
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -5167,7 +5169,7 @@
             Thinking Ahead to Implementation:
               name: Uygulama hakkında düşünme
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         2016_sciencePD_phase2b:
           title: ''
           description_audience: ''
@@ -5187,7 +5189,7 @@
             Thinking Ahead to Implementation:
               name: Uygulama hakkında düşünme
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         sciencepd3-2016:
           title: ''
           description_audience: ''
@@ -5277,7 +5279,7 @@
             Thinking About Implementation:
               name: Uygulama hakkında düşünme
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         csp-ca-a:
           title: ''
           description_audience: ''
@@ -5301,7 +5303,7 @@
             Physical Science Challenges:
               name: Fiziksel bilim meydan okuma
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         csf2harvey:
           title: New Functions Puzzles
           description_audience: ''
@@ -5339,7 +5341,7 @@
             Physical Science Challenges:
               name: Fiziksel bilim meydan okuma
             Wrap-Up:
-              name: paketlemek
+              name: Toparlama
         csp5-support:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
@@ -7913,6 +7915,10 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -8478,6 +8484,26 @@
             Minecraft Hour of Code:
               name: Minecraft Kod Saati
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''

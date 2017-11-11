@@ -1,4 +1,12 @@
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
+import { COUNTRIES } from '@cdo/apps/geographyConstants';
+import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
+import i18n from "@cdo/locale";
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -13,6 +21,9 @@ window.SignupManager = function (options) {
   }
 
   function formSuccess(success) {
+    if (getAutocompleteFlag() && isTeacherSelected()) {
+      logEvent('teacher-submit-success');
+    }
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
@@ -25,6 +36,10 @@ window.SignupManager = function (options) {
   }
 
   function formError(err) {
+    if (getAutocompleteFlag() && isTeacherSelected()) {
+      logEvent('teacher-submit-error');
+    }
+
     // re-enable "Sign up" button upon error
     $('#signup-button').prop('disabled', false);
 
@@ -102,6 +117,153 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
+  const registrationSchoolStyleGroup = (Math.random() > 0.5) ? "control" : "autocomplete";
+
+  function logEvent(event) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-registration-school-style',
+        study_group: registrationSchoolStyleGroup,
+        event: event
+      }
+    );
+  }
+
+  let schoolData = {
+    name: '',
+    country: 'United States',
+    nces: '',
+    schoolName: '',
+    schoolCity: '',
+    schoolState: '',
+    schoolZip: '',
+    schoolType: '',
+  };
+
+  let schoolDataErrors = {
+    name: false,
+    country: false,
+    nces: false,
+    schoolType: false,
+    school: false
+  };
+
+  function onCountryChange(field, event) {
+    schoolData.country = event ? event.value : '';
+    updateAutocompleteSchoolFields(schoolData);
+  }
+
+  function getCountryCodeForCountry(countryName) {
+    return COUNTRIES.find(pair => pair.value === countryName).label;
+  }
+  window.getCountryCodeForCountry = getCountryCodeForCountry;
+
+  function onSchoolTypeChange(event) {
+    schoolData.schoolType = event ? event.target.value : '';
+    updateAutocompleteSchoolFields(schoolData);
+  }
+
+  function onSchoolChange(_, event) {
+    schoolData.nces = event ? event.value : '';
+    updateAutocompleteSchoolFields(schoolData);
+  }
+
+  function onSchoolNotFoundChange(field, event) {
+    if (event) {
+      schoolData = {
+        ...schoolData,
+        [field]: event.target.value
+      };
+    }
+    updateAutocompleteSchoolFields(schoolData);
+  }
+
+  function updateAutocompleteSchoolFields(data) {
+    const schoolTypesToShowDropdown = ['charter', 'private', 'public'];
+    const isUS = data.country === 'United States';
+    ReactDOM.render(
+      <div>
+        <h5 style={{fontWeight: "bold"}}>{i18n.schoolInformationHeader()}</h5>
+        <hr/>
+        <CountryAutocompleteDropdown
+          onChange={onCountryChange}
+          value={data.country}
+          required={true}
+          showErrorMsg={schoolDataErrors.country}
+          singleLineLayout
+        />
+        <div className="itemblock" style={{minHeight:42}}>
+          <div className="school-info-labelblock">School Type</div>
+          <select
+            className="form-control fieldblock"
+            id="school-type-auto"
+            name="user[school_info_attributes][school_type]"
+            type="select"
+            defaultValue=""
+            onChange={onSchoolTypeChange}
+          >
+            <option disabled="" value=""></option>
+            <option value="charter">Charter</option>
+            <option value="private">Private</option>
+            <option value="public">Public</option>
+            <option value="homeschool">Homeschool</option>
+            <option value="afterschool">After School</option>
+            <option value="organization">Organization</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        {isUS && schoolTypesToShowDropdown.includes(data.schoolType) &&
+          <SchoolAutocompleteDropdownWithLabel
+            setField={onSchoolChange}
+            value={data.nces}
+            showErrorMsg={schoolDataErrors.nces}
+            singleLineLayout
+          />
+        }
+        {isUS && data.nces === '-1' &&
+          <SchoolNotFound
+            onChange={onSchoolNotFoundChange}
+            schoolName={data.schoolName}
+            schoolType="omitted"
+            schoolCity={data.schoolCity}
+            schoolState={data.schoolState}
+            schoolZip={data.schoolZip}
+            showErrorMsg={schoolDataErrors.school}
+            singleLineLayout
+          />
+        }
+        {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
+          <SchoolNotFound
+            onChange={onSchoolNotFoundChange}
+            schoolName={data.schoolName}
+            schoolType="omitted"
+            schoolCity={data.schoolCity}
+            schoolState={data.schoolState}
+            schoolZip={data.schoolZip}
+            showErrorMsg={schoolDataErrors.school}
+            singleLineLayout
+          />
+        }
+        {!isUS &&
+          <SchoolNotFound
+            onChange={onSchoolNotFoundChange}
+            schoolName={data.schoolName}
+            schoolType="omitted"
+            schoolCity={data.schoolCity}
+            schoolState="omitted"
+            schoolZip="omitted"
+            showErrorMsg={schoolDataErrors.school}
+            singleLineLayout
+          />
+        }
+      </div>
+      ,
+      $("#schooldropdown-block")[0]
+    );
+  }
+
+  let loggedTeacherSelected = false; // only make this log call once
   function showTeacher() {
     // Show correct form elements.
     $("#age-block").hide();
@@ -116,6 +278,23 @@ window.SignupManager = function (options) {
 
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
+
+    if (getAutocompleteFlag() && !loggedTeacherSelected) {
+      logEvent('teacher-selected');
+      loggedTeacherSelected = true;
+    }
+
+    if (shouldUseAutocompleteDropdown()) {
+      updateAutocompleteSchoolFields(schoolData);
+    }
+  }
+
+  function getAutocompleteFlag() {
+    return window.location.href.lastIndexOf("enableAutocompleteDropdown=true") > 0;
+  }
+
+  function shouldUseAutocompleteDropdown() {
+    return getAutocompleteFlag() && registrationSchoolStyleGroup === 'autocomplete';
   }
 
   function getUserTypeSelected() {
@@ -145,7 +324,25 @@ window.SignupManager = function (options) {
       age_selector: "#user_user_age",
       skip_clear_email: true});
 
-    var formData = $("#new_user").serializeArray();
+    const formData = $("#new_user").serializeArray();
+
+    if (shouldUseAutocompleteDropdown()) {
+      const signupForm = $(".signupform").serializeArray();
+      const schoolInfoDataMap = [
+        {from: 'nces_school_s', to: 'school_id'},
+        {from: 'country_s', to: 'country', transform: getCountryCodeForCountry},
+        {from: 'school_name_s', to: 'school_name'},
+        {from: 'school_state_s', to: 'school_state'},
+        {from: 'school_zip_s', to: 'school_zip'}
+      ];
+      signupForm.forEach( function (el) {
+        const match = schoolInfoDataMap.find(x => x.from === el.name);
+        if (match) {
+          const value = match.transform ? match.transform(el.value) : el.value;
+          formData.push({name: "user[school_info_attributes][" + match.to + "]", value: value});
+        }
+      });
+    }
 
     if (isTeacherSelected()) {
       // Teachers get age 21 in the form data.
@@ -165,6 +362,10 @@ window.SignupManager = function (options) {
     // Hide any other hint messages that might be showing based on input.
     $("#password_message").text("");
     $("#password_message_confirmation").text("");
+
+    if (getAutocompleteFlag() && isTeacherSelected()) {
+      logEvent('teacher-submitted');
+    }
 
     $.ajax({
       url: "/users.json",

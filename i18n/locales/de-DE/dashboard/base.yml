@@ -750,6 +750,13 @@ de:
     create: "Projekt erstellen"
     create_a_project: 'Neues Projekt erstellen:'
     new: "Neu erstellen"
+    new_buttons:
+      artist: "Künstler"
+      playlab: "Spielelabor"
+      applab: "App-Labor"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Umbenennen"
     save: "Speichern"
     delete: "Löschen"

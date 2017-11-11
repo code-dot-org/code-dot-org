@@ -750,6 +750,13 @@ bn:
     create: "প্রকল্প তৈরি করুন"
     create_a_project: 'Create a new project:'
     new: "নতুন তৈরি করুন"
+    new_buttons:
+      artist: "শিল্পী"
+      playlab: "প্লে ল্যাব"
+      applab: "অ্যাপ ল্যাব"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "পুনঃনামকরণ করুন"
     save: "সংরক্ষন করন"
     delete: "বাদ দিন"

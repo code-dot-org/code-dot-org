@@ -836,12 +836,13 @@
   tutorial_ozoprogram_name: "How to Program Robots"
   tutorial_ozopair_name: "Pair Programming with Ozobot"
   tutorial_codesnoopy_name: "Snoopy Snow Brawl"
+  tutorial_applab_name: "Intro to App Lab"
 
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
-  tutorial_mchoc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
+  tutorial_mchoc_shortdescription: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   tutorial_vidnews_shortdescription: "Code effects and graphics to make a news story all about tech, diversity, kids, and coding."
   tutorial_kodable-pre_shortdescription: "A fun game to teach computer programming concepts"
   tutorial_highseas_shortdescription: "In this activity, you'll create an adventure story with two characters that takes place on the high seas!"
@@ -1207,12 +1208,13 @@
   tutorial_ozoprogram_shortdescription: "Students without robots can discover how to program them with Ozobot Games."
   tutorial_ozopair_shortdescription: "Students learn about Pair Programming roles, then work together to program Bit or Evo by Ozobot to complete a maze."
   tutorial_codesnoopy_shortdescription: "Code to win in Snoopy Snow Brawl - who will be the last scout standing?"
+  tutorial_applab_shortdescription: "Create your own app in JavaScript using blocks or text."
 
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode \"The Signal,\" a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
-  tutorial_mchoc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
+  tutorial_mchoc_longdescription: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   tutorial_vidnews_longdescription: "It's the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. \"Breaking News: 400 students at Roosevelt participate in the Hour of Code\""
   tutorial_kodable-pre_longdescription: "Kodable is a self-guided game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary."
   tutorial_highseas_longdescription: "Animate an ocean wave to create a setting, then tell a story that takes place on the high seas."
@@ -1578,6 +1580,7 @@
   tutorial_ozoprogram_longdescription: "Students find out how easy it is to program robots, even if their classroom doesn't have any. This teacher-guided online tutorial helps students develop programming skills and gain confidence in their ability to understand computer science through Ozobot's Blockly games. Students discover how Bit and Evo by Ozobot will upload the program through a unique method - colors flash onto the robot's light sensors and teach the it the program."
   tutorial_ozopair_longdescription: "Students who know the OzoBlockly block-based programming language learn how to work in teams as Drivers and Navigators, and then practice by creating a single program on one computer for one Ozobot robot. This is a teacher-led tutorial that requires videos to be shown at the beginning, and then guidance to help students through completing their program when needed."
   tutorial_codesnoopy_longdescription: "Team up with friends and practice your coding skills by programming Snoopy's Beagle Scouts in a fun and silly snowball fight! Beginners and pre-readers welcome - teams write their code in secret while trying to outsmart each other. With words-free code, everyone can get in on the fun! This activity supports 1- 4 players on the same device - play against friends or the computer."
+  tutorial_applab_longdescription: "Create your own app in JavaScript using blocks or text. You'll make a simple app with buttons, images, sounds and multiple screens that you can share with your friends or publish to a public gallery. If you've already done some coding with blocks, this is a great next step to take your programming to the next level."
 
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
@@ -1949,6 +1952,7 @@
   tutorial_ozoprogram_language: "English only"
   tutorial_ozopair_language: "English only"
   tutorial_codesnoopy_language: "English, Chinese, Dutch, French, German, Italian, Korean, Malay, Portuguese, Spanish, Swedish, Thai"
+  tutorial_applab_language: "English only"
 
   tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
@@ -2320,6 +2324,7 @@
   tutorial_ozoprogram_string_detail_grades: "Grades 2-8"
   tutorial_ozopair_string_detail_grades: "Grades 2+"
   tutorial_codesnoopy_string_detail_grades: "Pre-reader - Grade 5"
+  tutorial_applab_string_detail_grades: "Grades 9+"
 
   tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -2691,6 +2696,7 @@
   tutorial_ozoprogram_string_platforms: "All modern browsers"
   tutorial_ozopair_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
   tutorial_codesnoopy_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_applab_string_platforms: "All modern browsers"
 
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -3062,6 +3068,7 @@
   tutorial_ozoprogram_string_detail_platforms: ""
   tutorial_ozopair_string_detail_platforms: "Ozobot Bit or Evo robot"
   tutorial_codesnoopy_string_detail_platforms: ""
+  tutorial_applab_string_detail_platforms: ""
 
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
@@ -3433,6 +3440,7 @@
   tutorial_ozoprogram_string_detail_programming_languages: "Blocks"
   tutorial_ozopair_string_detail_programming_languages: "Blocks"
   tutorial_codesnoopy_string_detail_programming_languages: "Blocks"
+  tutorial_applab_string_detail_programming_languages: "Blocks, JavaScript"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"

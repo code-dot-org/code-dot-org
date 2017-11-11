@@ -744,6 +744,13 @@ hi:
     create: "प्रोजेक्ट बनाएँ"
     create_a_project: 'Create a new project:'
     new: "नया बनाएँ"
+    new_buttons:
+      artist: "Artist"
+      playlab: "Play Lab"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "नाम बदलें"
     save: "सहेजें"
     delete: "मिटाएँ"

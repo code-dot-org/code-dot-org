@@ -4,7 +4,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import { TestResults } from '@cdo/apps/constants';
 import { PostMilestoneMode } from '@cdo/apps/util/sharedConstants';
-import experiments from '../util/experiments';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -186,7 +185,6 @@ function validateReport(report) {
  * @property {?} attempt - ??
  * @property {?} image - ??
  * @property {boolean} pass - true if the attempt is passing.
- * @property {boolean} gamification_enabled - true if experiment is enabled.
  */
 
 /**
@@ -232,11 +230,6 @@ reporting.sendReport = function (report) {
   const serverReport = _.pick(report, serverFields);
   for (var key in serverReport) {
     queryItems.push(key + '=' + report[key]);
-  }
-
-  // Tell the server about the current list of experiments (right now only Gamification has server-side changes)
-  if (experiments.isEnabled('gamification')) {
-    queryItems.push('gamification_enabled=true');
   }
   const queryString = queryItems.join('&');
 

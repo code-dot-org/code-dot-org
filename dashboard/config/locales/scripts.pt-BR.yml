@@ -2381,7 +2381,7 @@
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Criptografia simples
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -2590,7 +2590,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Velocidade
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -3451,7 +3451,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Velocidade
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -3776,6 +3776,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4204,7 +4206,7 @@
             and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Criptografia simples
         fesbinary:
           title: Binário
           description_audience: ''
@@ -5852,7 +5854,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Velocidade
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6225,7 +6227,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocidade
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6372,7 +6374,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocidade
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6624,7 +6626,7 @@
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: Curso A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -6664,7 +6666,7 @@
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Curso B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: |-
@@ -6705,7 +6707,7 @@
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Curso C
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -6882,7 +6884,7 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: Curso D
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7113,7 +7115,7 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Laços aninhados
-          title: 'CS Fundamentals: Course E'
+          title: Curso E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7351,7 +7353,7 @@
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: 'CS Fundamentals: Course F'
+          title: Curso F
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7917,6 +7919,10 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -8481,6 +8487,26 @@
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''
