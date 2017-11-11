@@ -150,6 +150,7 @@
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.0",
     "progress-bar-webpack-plugin": "^1.8.0",
     "pusher-js": "4.1.0",
+    "qtip2": "2.2.0",
     "radium": "0.18.1",
     "react": "~15.4.0",
     "react-addons-test-utils": "~15.4.0",
