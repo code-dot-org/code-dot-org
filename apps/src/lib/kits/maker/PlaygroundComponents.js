@@ -18,6 +18,7 @@ import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
 import Led from './Led';
+import Switch from './Switch';
 import experiments from '../../../util/experiments';
 
 /**
@@ -42,7 +43,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       led: new Led({board, pin: 13}),
 
-      toggleSwitch: new five.Switch({board, pin: 21}),
+      toggleSwitch: new Switch({board}),
 
       buzzer: new Piezo({
         board,
@@ -86,7 +87,7 @@ export function destroyCircuitPlaygroundComponents(components) {
   }
   delete components.led;
 
-  // No reset needed for five.Switch
+  // No reset needed for Switch
   delete components.toggleSwitch;
 
   if (components.buzzer) {
@@ -135,7 +136,7 @@ export const componentConstructors = {
   Board: five.Board,
   NeoPixel: NeoPixel,
   Button: five.Button,
-  Switch: five.Switch,
+  Switch,
   Piezo,
   Sensor: five.Sensor,
   Thermometer: five.Thermometer,
