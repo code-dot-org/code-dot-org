@@ -14,8 +14,8 @@
   top: 10px;
   right: 10px;
   width: 98px;
-  image-rendering:pixelated;
-  -ms-interpolation-mode:nearest-neighbor;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .new-mc {
