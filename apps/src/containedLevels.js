@@ -1,9 +1,10 @@
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import { TestResults } from './constants';
-import { addCallouts } from '@cdo/apps/code-studio/callouts';
+import * as callouts from '@cdo/apps/code-studio/callouts';
 import { getStore } from './redux';
 import { setAwaitingContainedResponse } from './redux/runState';
 import locale from '@cdo/locale';
+import $ from 'jquery';
 
 const PostState = {
   None: 'None',
@@ -113,7 +114,7 @@ export function initializeContainedLevel() {
     };
     $('#runButtonWrapper').bind('click', disabledRunButtonHandler);
 
-    addCallouts([{
+    callouts.addCallouts([{
       id: 'disabledRunButtonCallout',
       element_id: '#runButton',
       localized_text: locale.containedLevelRunDisabledTooltip(),
