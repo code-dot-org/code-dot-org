@@ -16,7 +16,6 @@ import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -39,8 +38,7 @@ $(document).ready(() => {
     projectsHeader
   );
 
-  const showProjectWidget = experiments.isEnabled('createMoreProjects');
-  if (showProjectWidget) {
+  if (projectsData.showStartNewProjectWidget) {
     const isRtl = isRtlFromDOM();
     ReactDOM.render(
       <StartNewProject
