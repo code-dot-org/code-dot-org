@@ -49,7 +49,7 @@ var PROP_INFO = {
   checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean', defaultValue: 'true' },
   readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean', defaultValue: 'true' },
   options: { friendlyName: 'options', internalName: 'options', type: 'array', defaultValue: '["option1", "etc"]' },
-  sliderValue: { friendlyName: 'value', internalName: 'defaultValue', type: 'number', defaultValue: '100' },
+  sliderValue: { friendlyName: 'value', internalName: 'sliderValue', type: 'number', defaultValue: '100' },
   min: { friendlyName: 'min', internalName: 'min', type: 'number', defaultValue: '100' },
   max: { friendlyName: 'max', internalName: 'max', type: 'number', defaultValue: '100' },
   step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' },
