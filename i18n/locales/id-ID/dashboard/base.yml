@@ -748,6 +748,13 @@ id:
     create: "Buat proyek"
     create_a_project: 'Buat proyek baru:'
     new: "Buat baru"
+    new_buttons:
+      artist: "Artis"
+      playlab: "Play Lab/Lab Permainan"
+      applab: "Laboratorium Aplikasi"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Ubah Nama"
     save: "Simpan"
     delete: "Hapus"

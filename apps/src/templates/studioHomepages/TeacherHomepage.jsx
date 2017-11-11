@@ -29,6 +29,8 @@ export default class TeacherHomepage extends Component {
     announcements: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
+    canViewAdvancedTools: PropTypes.bool,
+    canCreateMoreProjects: PropTypes.bool,
     hocLaunch: PropTypes.object
   };
 
@@ -39,7 +41,8 @@ export default class TeacherHomepage extends Component {
   }
 
   render() {
-    const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections, hocLaunch } = this.props;
+    const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
+    const { canCreateMoreProjects, canViewAdvancedTools, hocLaunch } = this.props;
 
     return (
       <div>
@@ -95,7 +98,11 @@ export default class TeacherHomepage extends Component {
           isRtl={isRtl}
         />
         <TeacherResources isRtl={isRtl}/>
-        <ProjectWidgetWithData isRtl={isRtl}/>
+        <ProjectWidgetWithData
+          isRtl={isRtl}
+          canViewFullList={canCreateMoreProjects}
+          canViewAdvancedTools={canViewAdvancedTools}
+        />
         <StudentSections
           initialSections={joinedSections}
           canLeave={true}

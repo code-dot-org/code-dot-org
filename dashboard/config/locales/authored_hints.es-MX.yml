@@ -158,25 +158,32 @@
         2-3_Artist_Nested_Loops_9_a: "¿Necesita ayuda para encontrar el ángulo correcto?
           ** 360 / 12 = 30 **"
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: "¿Teniendo un tiempo difícil averiguar cómo bajar
-          los bloques?  ¡Intentar tratar la flor roja exactamente igual que una flor
-          morada!"
-        2-3_Bee_Conditionals_14_b: "¿Si la flor roja fuera púrpura, podría usted averiguar
-          cómo utilizar un bucle extra 'repetición' para reducir el código?"
-        2-3_Bee_Conditionals_14_c: "Intenta separar esto en dos partes :  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Tomar néctar 3 veces\n  - Mueve adelante 5 veces\n  - Verifica si hay néctar,
-          si hay: cógelo\n  - Gira a la izquierda\n  \n2) Fabricar miel \n  - Mueve
-          adelante una vez\n  - Fabrica dos de miel"
+        2-3_Bee_Conditionals_14_a: "¿Tienes problema en resolver cómo bajar los bloques?
+          ¡Intenta tratar a la flor roja de la misma manera que la flor morada!"
+        2-3_Bee_Conditionals_14_b: Si la flor roja fuera morada, ¿Podrías averiguar
+          como utilizar un ciclo extra de 'repetición' para reducir el código?
+        2-3_Bee_Conditionals_14_c: |-
+          Intenta separar lo siguiente en dos partes:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Tomar néctar 3 veces:
+          - Ve hacia adelante 5 veces
+          - Revisa si existe néctar, de ser así: tómalo
+          - Gira a la derecha
+
+          2) Producir miel
+          - Ve hacia adelante una vez
+          - Fabrica dos mieles
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Recuerde: Flores de color púrpura sólo néctar
-          ya sea 0 o 1 y puede cambiar cada vez que se ejecuta el programa.'
+        2-3_Bee_Conditionals_15_a: 'Recuerda: las flores moradas solo tienen ya sea
+          0 o 1 de néctar y puede cambiar cada que ejecutes el programa.'
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: El código será más corto si utilizas un bucle por
+          cada vez que avanzas, que recolectas néctar y cada que fabricas miel.
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores moradas cambian entre 0 y
+          1 cuando ejecutas el programa!'
       2-3 Bee Debugging 1_authored_hint:
         2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
           any patterns that could be made more simple using a `repeat` loop?
@@ -3693,6 +3700,8 @@
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: This is the third and final hint. It doesn't have anything special.
       Function intro Ryan_authored_hint:
+        Function_intro_Ryan_b: If you call the functions correctly, this is the path
+          you will travel...
         Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
           calling it twice to solve this puzzle.
       Harvesting_authored_hint:
@@ -3775,6 +3784,8 @@
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
         MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
           to move the player to the map!
+        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
+          on the map!
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
           plate.  That will open the door for your player.
@@ -3802,16 +3813,18 @@
       MC_HOC_2017_04_Cole_authored_hint:
         MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
           you use a `repeat` loop to make that happen?
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
         MC_HOC_2017_04_Cole_c: |-
           Press "Run"!
 
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
+          open the door for the player.
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
           code inside of a loop?  Try placing a plank **and** moving forward inside
           of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
+          you go.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
           code inside of a loop?  Try placing a plank **and** moving forward inside
@@ -3819,10 +3832,14 @@
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
           *should* it run?
+        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
+          water! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
           loop!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
+          to the Minecart.
         MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
           function does and call it as many times as you need using the small green
           `clear path` block from the toolbox.
@@ -3843,6 +3860,8 @@
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
       MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
+          line!
         MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
@@ -3858,7 +3877,10 @@
 
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
         MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
+          the lava.
       MC_HOC_2017_FP10x10_authored_hint: []
+      MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
           or Steve can walk around beyond the edges of the map.
@@ -4170,6 +4192,18 @@
       aE8_authored_hint:
         aE8_a: "To make a square from your line, you will need to: \n-  draw the line
           \n-  use the curvy corner\n\nRepeat these steps 4 times."
+      allHallows2017_authored_hint:
+        allHallows2017_a: Careful!  GT might follow behind you on his bike and erase
+          your line!
+        allHallows2017_g: 'Sarah says: "Are you cold? Come sit in the corner... It''s
+          90 degrees!"'
+        allHallows2017_c: 'Jordyn says: "You crayon''t stop now! Keep going!"'
+        allHallows2017_d: 'Josh says: "You will need to draw on your coding skills
+          to complete this puzzle!"'
+        allHallows2017_e: 'Dani says: "I''m not good at puns. Try using a repeat block!"'
+        allHallows2017_b: 'Baker says: "The Chicago crayon only works on the *green
+          line*."'
+        allHallows2017_f: 'Amy says: "You can do it! Just think outside the box"'
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
           the code step-by-step and look for a pattern.
@@ -5718,6 +5752,9 @@
           You can move back over the path a second time before moving south.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      courseA_collector_loops_challenge2kp_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
+        courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
       courseA_collector_preLoops1_authored_hint: []
       courseA_collector_preLoops2_authored_hint: []
       courseA_collector_preLoops3_authored_hint: []
@@ -12025,29 +12062,27 @@
           where the bee needs to move forward, then turn left several times to complete
           the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: "¿Teniendo un tiempo difícil averiguar cómo bajar
-          los bloques?  ¡Intentar tratar la flor roja exactamente igual que una flor
-          morada!"
-        2-3_Bee_Conditionals_14_b: "¿Si la flor roja fuera púrpura, podría usted averiguar
-          cómo utilizar un bucle extra 'repetición' para reducir el código?"
+        2-3_Bee_Conditionals_14_a: "¿Tienes problema en resolver cómo bajar los bloques?
+          ¡Intenta tratar a la flor roja de la misma manera que la flor morada!"
+        2-3_Bee_Conditionals_14_b: Si la flor roja fuera morada, ¿Podrías averiguar
+          como utilizar un ciclo extra de 'repetición' para reducir el código?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
           if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
           \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Recuerde: Flores de color púrpura sólo néctar
-          ya sea 0 o 1 y puede cambiar cada vez que se ejecuta el programa.'
+        2-3_Bee_Conditionals_15_a: 'Recuerda: las flores moradas solo tienen ya sea
+          0 o 1 de néctar y puede cambiar cada que ejecutes el programa.'
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: El código será más corto si utilizas un bucle por
+          cada vez que avanzas, que recolectas néctar y cada que fabricas miel.
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores moradas cambian entre 0 y
+          1 cuando ejecutas el programa!'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores moradas cambian entre 0 y
+          1 cuando ejecutas el programa!'
       grade3_Debugging_1_authored_hint:
         2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
           any patterns that could be made more simple using a `repeat` loop?

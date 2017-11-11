@@ -35,6 +35,8 @@ et:
       AppLab Intro 2 - add onEvent_callout:
         onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: Click here when you're done!
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -269,6 +271,12 @@ et:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -441,12 +449,12 @@ et:
       Luigi's Pizza 3_callout: [ ]
       Luigi's Pizza 4_callout: [ ]
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
+        craft2_run_button_callout: Kui olete valmis, vajutage "Käivita" oma programmi proovimiseks.
       MC HOC 2016 Level 6_callout: [ ]
       MC HOC 2016 New Drop_callout: [ ]
       MC HOC 2016 New Spawn_callout: [ ]
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
+        MC_HOC_2016_New_Walk_callout2: Vajuta "Käivita", et hakata liikuma.
       MC_HOC_2017_01_Cole_callout:
         MC_HOC_2017_01_Cole_2: Use the arrow keys or click here to start moving the player.
       MC_HOC_2017_01_Kiki_callout: [ ]
@@ -613,7 +621,7 @@ et:
       U3L2_TurtleSquare_right_callout: [ ]
       U5 ColorSleuth Template_callout: [ ]
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada edasiliikumiskäsu?
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?
       Underground Iron_callout:
         craft_what_is_iron: Kaevanda seda rauda!
       WebLab PS test - 1-12_callout:

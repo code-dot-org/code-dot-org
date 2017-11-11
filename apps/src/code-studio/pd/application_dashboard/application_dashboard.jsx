@@ -28,11 +28,11 @@ const ApplicationDashboardHeader = (props) => (
 );
 
 const paths = {
-  'csf_facilitators': 'CS Fundamentals Facilitator Applications',
-  'csd_facilitators': 'CS Discoveries Facilitator Applications',
-  'csp_facilitators': 'CS Principles Facilitator Applications',
-  'csd_teachers': 'CS Discoveries Teacher Applications',
-  'csp_teachers': 'CS Principles Teacher Applications'
+  'csf_facilitators': {type: 'facilitator', name: 'CS Fundamentals Facilitator Applications'},
+  'csd_facilitators': {type: 'facilitator', name: 'CS Discoveries Facilitator Applications'},
+  'csp_facilitators': {type: 'facilitator', name: 'CS Principles Facilitator Applications'},
+  'csd_teachers': {type: 'teacher', name: 'CS Discoveries Teacher Applications'},
+  'csp_teachers': {type: 'teacher', name: 'CS Principles Teacher Applications'}
 };
 
 export default class ApplicationDashboard extends React.Component {
@@ -60,20 +60,21 @@ export default class ApplicationDashboard extends React.Component {
                     key={`detail_${i}`}
                     path={`${path}/(:applicationId)`}
                     breadcrumbs={[
-                      {name: paths[path], path: path},
+                      {name: paths[path].name, path: path},
                       {name: 'Application Details', path: ''}
                     ]}
                     component={DetailView}
+                    viewType={paths[path].type}
                   />
                 ),
                 (
                   <Route
                     key={`quick_view_${i}`}
                     path={path}
-                    breadcrumbs={paths[path]}
+                    breadcrumbs={paths[path].name}
                     component={QuickView}
                     regionalPartnerName={regionalPartnerName}
-                    applicationType={paths[path]}
+                    applicationType={paths[path].name}
                   />
                 )
               ];

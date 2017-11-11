@@ -1000,6 +1000,13 @@
     create: "Създаване на проект"
     create_a_project: "Създаване на нов проект:"
     new: "Създаване на нов"
+    new_buttons:
+      artist: "Художник"
+      playlab: "Театрална лаборатория"
+      applab: "Лаборатория за приложения"
+      gamelab: "Играта лаборатория"
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Преименуване"
     save: "Запазване"
     delete: "Изтриване"

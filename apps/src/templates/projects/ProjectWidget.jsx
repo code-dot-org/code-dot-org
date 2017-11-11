@@ -1,26 +1,10 @@
 import React, {PropTypes} from 'react';
 import PersonalRecentProjects from './PersonalRecentProjects.jsx';
-import NewProjectButtons from './NewProjectButtons.jsx';
 import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from "../Button";
-import color from "../../util/color";
-
-const styles = {
-  button: {
-    float: 'right',
-    marginTop: 10,
-  },
-  headingStartNew: {
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 16,
-    fontFamily: '"Gotham 4r"',
-    color: color.charcoal,
-  }
-};
+import StartNewProject from './StartNewProject';
 
 class ProjectWidget extends React.Component {
   static propTypes = {
@@ -29,6 +13,7 @@ class ProjectWidget extends React.Component {
     isLoading: PropTypes.bool,
     isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   };
 
   state = {
@@ -41,8 +26,7 @@ class ProjectWidget extends React.Component {
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { canViewFullList, isRtl } = this.props;
-    const { showFullList } = this.state;
+    const { canViewAdvancedTools, canViewFullList, isRtl } = this.props;
 
     return (
       <ContentContainer
@@ -62,52 +46,12 @@ class ProjectWidget extends React.Component {
             isRtl={isRtl}
           />
         }
-        <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
-        <NewProjectButtons
+        <StartNewProject
           projectTypes={this.props.projectTypes}
           isRtl={isRtl}
+          canViewFullList={canViewFullList}
+          canViewAdvancedTools={canViewAdvancedTools}
         />
-
-        {canViewFullList &&
-          <Button
-            onClick={this.toggleShowFullList}
-            color={Button.ButtonColor.gray}
-            icon={showFullList ? "caret-up" : "caret-down"}
-            text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
-            style={styles.button}
-          />
-        }
-
-        <div style={{clear: 'both'}}/>
-
-        {showFullList &&
-          <div>
-            <NewProjectButtons
-              description={i18n.projectGroupPlaylab()}
-              projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupEvents()}
-              projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupArtist()}
-              projectTypes={['artist', 'frozen']}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupMinecraft()}
-              projectTypes={['minecraft_designer', 'minecraft_adventurer']}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupAdvancedTools()}
-              projectTypes={['applab', 'gamelab', 'weblab']}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupMath()}
-              projectTypes={['calc', 'eval']}
-            />
-          </div>
-        }
       </ContentContainer>
     );
   }

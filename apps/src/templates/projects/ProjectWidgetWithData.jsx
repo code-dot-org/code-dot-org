@@ -6,7 +6,9 @@ const ProjectWidgetWithData = React.createClass({
   propTypes: {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     projectList: PropTypes.array,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
+    canViewFullList: PropTypes.bool,
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   },
 
   getInitialState() {
@@ -31,7 +33,7 @@ const ProjectWidgetWithData = React.createClass({
   },
 
   render() {
-    const { isRtl } = this.props;
+    const { isRtl, canViewAdvancedTools, canViewFullList } = this.props;
 
     return (
       <ProjectWidget
@@ -39,6 +41,8 @@ const ProjectWidgetWithData = React.createClass({
         projectTypes={this.props.projectTypes}
         isLoading={this.state.isLoading}
         isRtl={isRtl}
+        canViewFullList={canViewFullList}
+        canViewAdvancedTools={canViewAdvancedTools}
       />
     );
   }

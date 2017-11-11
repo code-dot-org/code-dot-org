@@ -22,9 +22,11 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_create_published_channel
+    old_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(old_user)
     start = DateTime.now - 1
-    post '/v3/channels', {shouldPublish: true, key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.redirection?
+    post '/v3/channels', {shouldPublish: true, projectType: 'artist', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?, 'old user can publish artist project'
     follow_redirect!
 
     response = JSON.parse(last_response.body)
@@ -34,6 +36,18 @@ class ChannelsTest < Minitest::Test
     published_at = DateTime.parse(response['publishedAt'])
     assert (start..DateTime.now).cover? published_at
     assert_equal 'val', response['key']
+
+    post '/v3/channels', {shouldPublish: true, projectType: 'bogus', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.client_error?, 'cannot publish invalid project type'
+
+    young_user = {name: ' xavier', birthday: 12.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(young_user)
+
+    post '/v3/channels', {shouldPublish: true, projectType: 'playlab', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?, 'young user can publish playlab project'
+
+    post '/v3/channels', {shouldPublish: true, projectType: 'applab', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.client_error?, 'young user cannot publish advanced project type'
   end
 
   def test_update_channel
