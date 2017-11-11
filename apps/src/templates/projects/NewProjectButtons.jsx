@@ -5,11 +5,18 @@ import color from "../../util/color";
 import Radium from 'radium';
 import _ from 'lodash';
 
-const DEFAULT_PROJECT_TYPES = [
+const DEFAULT_PROJECT_TYPES_ADVANCED = [
   'playlab',
   'artist',
   'applab',
   'gamelab'
+];
+
+const DEFAULT_PROJECT_TYPES_BASIC = [
+  'playlab',
+  'artist',
+  'minecraft_designer',
+  'flappy'
 ];
 
 const PROJECT_INFO = {
@@ -18,7 +25,7 @@ const PROJECT_INFO = {
     thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
   },
   'playlab_k1': {
-    label: i18n.projectTypePlaylab(),
+    label: i18n.projectTypePlaylabPreReader(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
   },
   'artist': {
@@ -26,7 +33,7 @@ const PROJECT_INFO = {
     thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
   },
   'artist_k1': {
-    label: i18n.projectTypeArtist(),
+    label: i18n.projectTypeArtistPreReader(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
   },
   'applab': {
@@ -102,7 +109,8 @@ const PROJECT_INFO = {
 const styles = {
   fullsize: {
     width: styleConstants['content-width'],
-    marginTop: 20,
+    marginTop: 10,
+    marginBottom: 10,
   },
   row: {
     marginBottom: 10,
@@ -150,13 +158,19 @@ class NewProjectButtons extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
     description: PropTypes.string,
+    canViewAdvancedTools: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    canViewAdvancedTools: true
   };
 
   render() {
-    const { isRtl, description } = this.props;
+    const { canViewAdvancedTools, description, isRtl } = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
-    // Using absolute URLs to get this working in storybook.
-    const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
+    const defaultProjectTypes = canViewAdvancedTools ?
+      DEFAULT_PROJECT_TYPES_ADVANCED: DEFAULT_PROJECT_TYPES_BASIC;
+    const projectTypes = this.props.projectTypes || defaultProjectTypes;
     return (
       <div style={styles.fullsize}>
         {description && <div style={styles.description}>{description}</div>}

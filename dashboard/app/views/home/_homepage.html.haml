@@ -21,6 +21,7 @@
       - homepage_data[:canLeave] = false
     - else
       - homepage_data[:canLeave] = true
+  - homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/home/_homepage.js'), data: {homepage: homepage_data.to_json}}
