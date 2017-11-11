@@ -20,6 +20,7 @@ import experiments from '@cdo/apps/util/experiments';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import _ from 'lodash';
 
 const LEGACY_PROJECT_BUTTON_TYPES = ['playlab', 'artist', 'applab', 'gamelab', 'weblab'];
 
@@ -54,8 +55,9 @@ $(document).ready(() => {
     const legacyProjectLinks = $('#legacy-project-links');
     legacyProjectLinks.show();
     LEGACY_PROJECT_BUTTON_TYPES.forEach(projectType => {
+      const logClick = recordLegacyProjectButtonClick.bind(this, projectType);
       legacyProjectLinks.find(`a[data-projectType=${projectType}]`)
-        .on('click', recordLegacyProjectButtonClick.bind(this, projectType));
+        .on('click', _.debounce(logClick, 1000));
     });
 
   }
