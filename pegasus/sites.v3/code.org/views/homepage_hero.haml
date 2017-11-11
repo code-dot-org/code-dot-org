@@ -1,4 +1,8 @@
+- hoc_launch = DCDO.get('hoc_launch', nil)
 - census_announcement = DCDO.get('census_announcement', nil)
+
+-# Whether we show a HOC launch background
+- show_hoc_launch_layout = hoc_launch && hoc_launch["homepage"]
 
 -# Whether we show non-rotating background image and center options on desktop.
 - show_census_layout = request.language == "en"
@@ -8,9 +12,25 @@
 
 - census_announcement_hero = [{"id":99,"id_s":"hero_census_announcement","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/announcement.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
 
+- hoc_launch_hero = {}
+
+-# Temporary for mc 2017 hoc tutorial launch page
+- hoc_launch_hero["mc"] = [{"id":99,"id_s":"mchoc2017","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/mchoc2017.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
+
 - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
 
+-# Temporary for mc 2017 hoc tutorial launch page
+- if show_hoc_launch_layout && hoc_launch["homepage"] == "mc"
+  .desktop-feature
+    %img{src: "/images/fit-300/mc/MC_Logo_Large.png", style: "position: absolute; width: 300px; left: 20px; top: 237px;"}
+  .mobile-feature{style: "width: 100%; text-align: center; "}
+    %img{src: "/images/fit-300/mc/MC_Logo_Large.png", style: "position: absolute; width: 300px; top: 237px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
+
 - main_actions = capture_haml do
+  -# Temporary heading text for the Hour of Code
+  - if request.language == "en"
+    = I18n.t(:homepage_hero_hoc_is_coming)
+
   - actions.each_with_index do |entry, index|
     - display = entry[:active_s] == "hide" ? "none" : "block"
     .action
@@ -27,6 +47,11 @@
         .buttongroup{style: "margin-bottom: 15px"}
           %a{href: entry[:param2_s]}
             %button.herohocbutton{style: "min-width: 230px; margin-right: 0px"}= I18n.t(entry[:text1_s])
+        %div{style: "clear: both;"}
+      - elsif entry[:param1_s] == "cta_button_secondary"
+        .buttongroup{style: "margin-bottom: 15px"}
+          %a{href: entry[:param2_s]}
+            %button.herohocbutton{style: "min-width: 230px; margin-right: 0px; background-color: transparent; border-color: white; border-width: 2px; margin-top: 0px"}= I18n.t(entry[:text1_s])
         %div{style: "clear: both;"}
       - elsif entry[:param1_s] == "video"
         %button{style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
@@ -57,6 +82,9 @@
   - elsif rack_env != :production && request.params["lock-hero"]
     -# for UI tests just lock to the first hero image
     - heroes_arranged = heroes[0, 1]
+  - elsif show_hoc_launch_layout
+    - hoc_launch_hero_variation = hoc_launch["homepage"]
+    - heroes_arranged = hoc_launch_hero[hoc_launch_hero_variation]
   - elsif show_census_layout
     - heroes_arranged = census_announcement_hero
   - else
@@ -110,7 +138,7 @@
         = view :mobile_header_responsive
 
   #caption_container.container_responsive
-    - if show_census_layout
+    - if show_census_layout || show_hoc_launch_layout
       .bigannounce{style: "padding: 20px; text-align: center"}
         #actions
           = main_actions
