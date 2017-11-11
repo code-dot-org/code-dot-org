@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import experiments from './util/experiments';
 import processMarkdown from 'marked';
 import renderer, { makeRenderer } from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
@@ -142,11 +141,6 @@ authoredHintUtils.clearUnfinishedHints = function () {
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
-  if (experiments.isEnabled('gamification')) {
-    const oldHints = authoredHintUtils.getOldFinishedHints();
-    trySetLocalStorage('old_finished_authored_hint_views',
-        JSON.stringify(oldHints.concat(authoredHintUtils.getFinishedHints_())));
-  }
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
@@ -311,6 +305,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
       hintPath: JSON.parse(hint.hint_path || '[]'),
+      hintVideo: hint.hint_video,
       ttsUrl: hint.tts_url,
       alreadySeen: false
     };

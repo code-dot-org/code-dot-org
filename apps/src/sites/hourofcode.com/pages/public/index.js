@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown.jsx';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel.jsx';
 
 let schoolData = {
   nces: '',
@@ -15,7 +15,7 @@ const SCHOOL_NOT_FOUND = "-1";
 
 function renderSchoolDropdown() {
   ReactDOM.render (
-    <SchoolAutocompleteDropdown
+    <SchoolAutocompleteDropdownWithLabel
       setField={schoolDropdownOnChange}
       value={schoolData.nces}
       showErrorMsg={schoolData.showDropdownError}

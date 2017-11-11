@@ -7,7 +7,13 @@ module SchoolInfoDeduplicator
 
     return false unless SchoolInfo.new(attr).valid?
 
-    if school_info = SchoolInfo.where(attr).first
+    # If the SchoolInfo is related to a School then any fully validated school info for that same school id is a match
+    if attr[:school_id]
+      school_info = SchoolInfo.where(school_id: attr[:school_id], validation_type: SchoolInfo::VALIDATION_FULL).first
+    else
+      school_info = SchoolInfo.where(attr).first
+    end
+    if school_info
       self_object.school_info = school_info
       return true
     end

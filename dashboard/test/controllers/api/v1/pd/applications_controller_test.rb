@@ -120,5 +120,17 @@ module Api::V1::Pd
       expected_ids = [@csf_facilitator_application_no_partner, @csf_facilitator_application_with_partner].map(&:id).sort
       assert_equal expected_ids, data.map {|a| a['id']}.sort
     end
+
+    test 'regional partners can edit their applications' do
+      sign_in @workshop_organizer
+      put :update, params: {id: @csf_facilitator_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
+      assert_response :success
+    end
+
+    test 'regional partners cannot edit other applications' do
+      sign_in @workshop_organizer
+      put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', notes: 'Notes'}}
+      assert_response :forbidden
+    end
   end
 end

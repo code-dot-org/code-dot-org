@@ -997,6 +997,13 @@
     create: "Создать проект"
     create_a_project: "Создать новый проект:"
     new: "Создать новый"
+    new_buttons:
+      artist: "Художник"
+      playlab: "Лаборатория игр"
+      applab: "Лаборатория приложений"
+      gamelab: "Игровая лаборатория"
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Переименовать"
     save: "Сохранить"
     delete: "Удалить"

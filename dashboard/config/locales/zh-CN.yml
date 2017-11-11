@@ -781,6 +781,13 @@
     create: "创建项目"
     create_a_project: "创建一个新项目："
     new: "新建"
+    new_buttons:
+      artist: "小艺术家"
+      playlab: "游戏实验室"
+      applab: "应用实验室"
+      gamelab: "游戏实验室"
+      weblab: "网站实验室 （测试版）"
+    new_buttons_header: 'Start a new project:'
     rename: "重命名"
     save: "保存​​"
     delete: "刪除"

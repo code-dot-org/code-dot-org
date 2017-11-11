@@ -53,7 +53,8 @@ var PROP_INFO = {
   min: { friendlyName: 'min', internalName: 'min', type: 'number', defaultValue: '100' },
   max: { friendlyName: 'max', internalName: 'max', type: 'number', defaultValue: '100' },
   step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' },
-  value: { friendlyName: 'value', internalName: 'value', type: 'uistring', defaultValue: '"text"' }
+  value: { friendlyName: 'value', internalName: 'value', type: 'uistring', defaultValue: '"text"' },
+  fit: { friendlyName: 'fit', internalName: 'objectFit', type: 'string', defaultValue: '"fill"' }
 };
 
 // When we don't know the element type, we display all possible friendly names
@@ -169,7 +170,8 @@ PROPERTIES[ElementType.IMAGE] = {
     'pictureImage',
     'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
     'iconColor',
-    'hidden'
+    'hidden',
+    'fit'
   ]
 };
 PROPERTIES[ElementType.CANVAS] = {
@@ -371,6 +373,8 @@ function getPropertyValueDropdown(param2) {
       return ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'];
     case "text-align":
       return ['"left"', '"right"', '"center"', '"justify"'];
+    case "fit":
+      return ['"fill"', '"cover"', '"contain"', '"none"'];
     case "hidden":
     case "checked":
     case "readonly":

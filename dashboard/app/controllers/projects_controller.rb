@@ -72,6 +72,9 @@ class ProjectsController < ApplicationController
     minecraft_designer: {
       name: 'New Minecraft Designer Project'
     },
+    minecraft_hero: {
+      name: 'New Minecraft Hero Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true

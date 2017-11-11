@@ -3,7 +3,6 @@ import { getStore } from './redux';
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
-import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
 import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
@@ -48,12 +47,8 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
-var authoredHintUtils = require('./authoredHintUtils');
 
-import experiments from './util/experiments';
-import AchievementDialog from './templates/AchievementDialog';
 import ChallengeDialog from './templates/ChallengeDialog';
-import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
  * @typedef {Object} FeedbackOptions
@@ -244,77 +239,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   const showPuzzleRatingButtons =
       options.response && options.response.puzzle_ratings_enabled;
 
-  if (!options.level.freePlay && experiments.isEnabled('gamification')) {
-    const container = document.createElement('div');
-    const hintsUsed = (options.response.hints_used || 0) +
-      authoredHintUtils.currentOpenedHintCount(options.response.level_id);
-
-    const lastInStage = FeedbackUtils.isLastLevel();
-    const stageName = `Stage ${window.appOptions.stagePosition}`;
-
-    const progress = FeedbackUtils.calculateStageProgress(
-        isPerfect,
-        hintsUsed,
-        options.response.level_id,
-        isFinite(idealBlocks));
-
-    const achievements = FeedbackUtils.getAchievements(
-        isPerfect,
-        hintsUsed,
-        idealBlocks,
-        actualBlocks,
-        progress);
-    const msgParams = {
-      puzzleNumber: options.level.puzzle_number || 0,
-      numBlocks: idealBlocks,
-    };
-    const feedbackMessage = isPerfect ?
-        msg.nextLevel(msgParams) :
-        msg.numBlocksNeeded(msgParams);
-
-    let onContinue = options.onContinue;
-    if (lastInStage) {
-      onContinue = () => {
-        ReactDOM.render(
-          <StageAchievementDialog
-            stageName={stageName}
-            assetUrl={this.studioApp_.assetUrl}
-            onContinue={onContinue}
-            showStageProgress={true}
-            newStageProgress={progress.newStageProgress}
-            numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
-          />,
-          container
-        );
-      };
-    }
-
-    if (showPuzzleRatingButtons) {
-      const prevOnContinue = onContinue;
-      onContinue = () => {
-        puzzleRatingUtils.cachePuzzleRating(container, {
-          script_id: options.response.script_id,
-          level_id: options.response.level_id,
-        });
-        prevOnContinue();
-      };
-    }
-
-    document.body.appendChild(container);
-    ReactDOM.render(
-      <AchievementDialog
-        achievements={achievements}
-        assetUrl={this.studioApp_.assetUrl}
-        encourageRetry={!isPerfect}
-        feedbackMessage={feedbackMessage}
-        oldStageProgress={progress.oldStageProgress}
-        onContinue={onContinue}
-        showPuzzleRatingButtons={showPuzzleRatingButtons}
-        showStageProgress={true}
-      />, container);
-    return;
-  }
-
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
@@ -360,6 +284,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     }
     return;
   }
+
+  $('#feedback-dialog').remove();
 
   var feedbackDialog = this.createModalDialog({
     contentDiv: feedback,
@@ -495,8 +421,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       $(saveButtonSelector).prop('disabled', true).text(msg.saving());
       project.copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
-        .catch(err => console.log(err));
+        .then(() => {
+          $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+          $(publishButtonSelector).prop('disabled', true);
+        }).catch(err => console.log(err));
     });
   }
 
@@ -520,12 +448,23 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       const store = getStore();
       FeedbackUtils.showConfirmPublishDialog(() => {
         store.dispatch({type: PUBLISH_REQUEST});
+        let didPublish = false;
         project.copy(project.getNewProjectName(), {shouldPublish: true})
           .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
-          .catch(err => {
+          .then(() => {
+            store.dispatch({type: PUBLISH_SUCCESS});
+            didPublish = true;
+          }).catch(err => {
             console.log(err);
             store.dispatch({type: PUBLISH_FAILURE});
+          }).then(() => {
+           if (didPublish) {
+             // Only show feedback dialog again if publishing succeeded,
+             // because we keep the publish dialog open if it failed.
+             showFeedbackDialog();
+             $(publishButtonSelector).prop('disabled', true).text(msg.published());
+             $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+           }
           });
       });
     });
@@ -556,9 +495,13 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  feedbackDialog.show({
-    backdrop: (options.app === 'flappy' ? 'static' : true)
-  });
+  function showFeedbackDialog() {
+    feedbackDialog.show({
+      backdrop: (options.app === 'flappy' ? 'static' : true)
+    });
+  }
+
+  showFeedbackDialog();
 
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
@@ -599,130 +542,6 @@ FeedbackUtils.saveThumbnail = function (image) {
     .then(project.saveThumbnail)
     // Don't pass any arguments to project.save().
     .then(() => project.save());
-};
-
-FeedbackUtils.getAchievements = function (
-    isPerfect,
-    hintsUsed,
-    idealNumBlocks,
-    numBlocks,
-    stageProgress) {
-  const achievements = [{
-    check: true,
-    msg: msg.puzzleCompleted(),
-    progress: stageProgress.newPassedProgress,
-  }];
-  if (isFinite(idealNumBlocks)) {
-    achievements.push({
-      check: numBlocks <= idealNumBlocks,
-      msg: FeedbackUtils.blocksUsedMessage(numBlocks, idealNumBlocks),
-      progress: stageProgress.newPerfectProgress,
-    });
-  }
-  if (hintsUsed < 2) {
-    achievements.push({
-      check: true,
-      msg: FeedbackUtils.hintsMessage(hintsUsed),
-      progress: stageProgress.newHintUsageProgress,
-    });
-  }
-  return achievements;
-};
-
-FeedbackUtils.blocksUsedMessage = function (numBlocks, idealNumBlocks) {
-  if (numBlocks > idealNumBlocks) {
-    return msg.usingTooManyBlocks({numBlocks});
-  } else if (numBlocks === idealNumBlocks) {
-    return msg.exactNumberOfBlocks({numBlocks});
-  } else {
-    return msg.fewerNumberOfBlocks({numBlocks});
-  }
-};
-
-FeedbackUtils.hintsMessage = function (numHints) {
-  if (numHints === 0) {
-    return msg.withoutHints();
-  } else if (numHints === 1) {
-    return msg.usingOneHint();
-  } else {
-    return msg.usingHints();
-  }
-};
-
-// TODO(ram): split this up into something more modular
-FeedbackUtils.calculateStageProgress = function (
-    isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
-  const stage = getStore().getState().progress.stages[0];
-  const scriptName = stage.script_name;
-  const levels = stage.levels;
-  const progress = ClientState.allLevelsProgress();
-  const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
-
-  let numLevels = 0,
-    numPassed = 0,
-    numPerfect = 0,
-    numZeroHints = 0,
-    numOneHint = 0;
-  for (let i = 0; i < levels.length; i++) {
-    if (levels[i].freePlay) {
-      continue;
-    }
-    numLevels++;
-    if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
-      continue;
-    }
-    const levelProgress = ClientState.bestProgress(levels[i].ids, scriptName, progress);
-    if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
-      numPassed++;
-      if (levelProgress > TestResults.MINIMUM_OPTIMAL_RESULT) {
-        numPerfect++;
-      }
-      const numHintsUsed = oldFinishedHints.filter(hint => levels[i].ids.indexOf(hint.levelId) !== -1).length;
-      if (numHintsUsed === 0) {
-        numZeroHints++;
-      } else if (numHintsUsed === 1) {
-        numOneHint++;
-      }
-    }
-  }
-
-  const passedScore = numPassed / numLevels;
-  const perfectScore = numPerfect / numLevels;
-  const hintScore = numZeroHints / numLevels +
-    0.5 * numOneHint / numLevels;
-  const oldStageProgress = 0.3 * passedScore +
-    0.4 * perfectScore +
-    0.3 * hintScore;
-
-  const newPassedLevels = 1;
-  const newPerfectLevels = isPerfect ? 1 : 0;
-
-  let newHintUsageLevels = 0;
-  if (hintsUsed === 0) {
-    newHintUsageLevels = 1;
-  } else if (hintsUsed === 1) {
-    newHintUsageLevels = 0.5;
-  }
-
-  const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
-  const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
-
-  const newPassedProgress = newPassedLevels * passedWeight / numLevels;
-  const newPerfectProgress = newPerfectLevels * perfectWeight / numLevels;
-  const newHintUsageProgress = newHintUsageLevels * 0.3 / numLevels;
-
-  const newStageProgress = oldStageProgress +
-    newPassedProgress +
-    newPerfectProgress +
-    newHintUsageProgress;
-
-  return {
-    oldStageProgress,
-    newPassedProgress,
-    newPerfectProgress,
-    newHintUsageProgress,
-    newStageProgress,
-  };
 };
 
 FeedbackUtils.isLastLevel = function () {
