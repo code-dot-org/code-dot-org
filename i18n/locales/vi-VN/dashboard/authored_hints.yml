@@ -3468,6 +3468,7 @@ vi:
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: This is the third and final hint. It doesn't have anything special.
       Function intro Ryan_authored_hint:
+        Function_intro_Ryan_b: If you call the functions correctly, this is the path you will travel...
         Function_intro_Ryan_a: You can call a function many times inside of your program!  Try calling it twice to solve this puzzle.
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and make a decision?
@@ -3524,6 +3525,7 @@ vi:
           
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
         MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys to move the player to the map!
+        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined on the map!
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.
         MC_HOC_2017_02_Cole_b: |-
@@ -3544,20 +3546,23 @@ vi:
         MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe.
       MC_HOC_2017_04_Cole_authored_hint:
         MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can you use a `repeat` loop to make that happen?
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will open the door for the player.
         MC_HOC_2017_04_Cole_c: |-
           Press "Run"!
           
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, the Agent will open the door for the player.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as you go.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times *should* it run?
+        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the water! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat` loop!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path to the Minecart.
         MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.
         MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle.
       MC_HOC_2017_08_RY_authored_hint:
@@ -3575,6 +3580,7 @@ vi:
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
       MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted line!
         MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
@@ -3589,7 +3595,9 @@ vi:
           
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
         MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through the lava.
       MC_HOC_2017_FP10x10_authored_hint: [ ]
+      MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
       MikeStar_authored_hint:
@@ -3841,6 +3849,14 @@ vi:
         aE7_b: You will need 4 segments to complete this puzzle.
       aE8_authored_hint:
         aE8_a: "To make a square from your line, you will need to: \n-  draw the line \n-  use the curvy corner\n\nRepeat these steps 4 times."
+      allHallows2017_authored_hint:
+        allHallows2017_a: Careful!  GT might follow behind you on his bike and erase your line!
+        allHallows2017_g: 'Sarah says: "Are you cold? Come sit in the corner... It''s 90 degrees!"'
+        allHallows2017_c: 'Jordyn says: "You crayon''t stop now! Keep going!"'
+        allHallows2017_d: 'Josh says: "You will need to draw on your coding skills to complete this puzzle!"'
+        allHallows2017_e: 'Dani says: "I''m not good at puns. Try using a repeat block!"'
+        allHallows2017_b: 'Baker says: "The Chicago crayon only works on the *green line*."'
+        allHallows2017_f: 'Amy says: "You can do it! Just think outside the box"'
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
       artistFunctionsVideo1_authored_hint: [ ]
@@ -5171,6 +5187,9 @@ vi:
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: You only need to use 1 block to solve this.
         courseA_collector_loops_challenge2_a: You can move back over the path a second time before moving south.
+      courseA_collector_loops_challenge2kp_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
+        courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
       courseA_collector_preLoops1_authored_hint: [ ]
       courseA_collector_preLoops2_authored_hint: [ ]
       courseA_collector_preLoops3_authored_hint: [ ]

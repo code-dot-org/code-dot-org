@@ -744,6 +744,13 @@ es-MX:
     create: "Crear Proyecto"
     create_a_project: 'Crear un nuevo proyecto:'
     new: "Crear Nuevo"
+    new_buttons:
+      artist: "Artista"
+      playlab: "Laboratorio de juegos"
+      applab: "Laboratorio de App"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project:"
     rename: "Renombrar"
     save: "Guardar"
     delete: "Borrar"

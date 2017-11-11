@@ -60,9 +60,4 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
     submission = build(:census_submission, :with_long_other_description)
     assert_not submission.valid?, submission.errors.full_messages
   end
-
-  test "census submission with long tell us more" do
-    submission = build(:census_submission, :with_long_tell_us_more)
-    assert_not submission.valid?, submission.errors.full_messages
-  end
 end

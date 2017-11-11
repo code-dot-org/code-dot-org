@@ -3,7 +3,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import { TestResults } from '@cdo/apps/constants';
-import experiments from '../util/experiments';
+import { PostMilestoneMode } from '@cdo/apps/util/sharedConstants';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -185,7 +185,6 @@ function validateReport(report) {
  * @property {?} attempt - ??
  * @property {?} image - ??
  * @property {boolean} pass - true if the attempt is passing.
- * @property {boolean} gamification_enabled - true if experiment is enabled.
  */
 
 /**
@@ -232,11 +231,6 @@ reporting.sendReport = function (report) {
   for (var key in serverReport) {
     queryItems.push(key + '=' + report[key]);
   }
-
-  // Tell the server about the current list of experiments (right now only Gamification has server-side changes)
-  if (experiments.isEnabled('gamification')) {
-    queryItems.push('gamification_enabled=true');
-  }
   const queryString = queryItems.join('&');
 
   clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
@@ -244,9 +238,26 @@ reporting.sendReport = function (report) {
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  if (appOptions.postMilestone ||
-    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
+  const postMilestoneMode = appOptions.postMilestoneMode || PostMilestoneMode.all;
+  let postMilestone;
 
+  switch (postMilestoneMode) {
+    case PostMilestoneMode.all:
+      postMilestone = true;
+      break;
+    case PostMilestoneMode.successful_runs_and_final_level_only:
+      postMilestone = report.pass || appOptions.level.final_level;
+      break;
+    case PostMilestoneMode.final_level_only:
+      postMilestone = appOptions.level.final_level;
+      break;
+    default:
+      console.error("Unexpected postMilestoneMode " + postMilestoneMode);
+      postMilestone = true;
+      break;
+  }
+
+  if (postMilestone) {
     var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,

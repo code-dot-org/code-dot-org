@@ -3275,9 +3275,9 @@ en:
         path to win"
       MC_HOC_2017_01_Kiki_instruction: "Click \"Run\" to move the player to the orange
         square inside of the house."
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then
-        press \"Run\" and use the arrow keys to move the player out of the house to
-        collect the chest. "
+      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure
+        plate, then press \"Run\" and use the arrow keys to move the player out of
+        the house to collect the chest. "
       MC_HOC_2017_02_instruction: "Get the Agent to the pressure plate."
       MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that
         {currentPlayerName} can get to the map. "
@@ -3335,6 +3335,8 @@ en:
       MC_HOC_2017_4.5v2_instruction: "Get the Agent to the pressure plate."
       MC_HOC_2017_Ali_instruction: "Use the functions to find a way across the lava."
       MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself
+        to collect all of the diamonds in this level? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself
         to collect all of the diamonds in this level? "
       MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
       MC_HOC_2017_Ryan_03_instruction: "Now use loops to help The Agent build a bridge
@@ -5522,6 +5524,8 @@ en:
         \r\n\r\nIf looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?"
       aEfreeplay_instruction: "Free Play!"
+      allHallows2017_instruction: "Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!"
       allthethings data blocks test_instruction: "Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
         sign in, but this is only enforceable for a whole script and would be annoying
@@ -5858,6 +5862,8 @@ en:
       courseA_collector_loops_challenge1_instruction: "*\"Can you help me spot some
         bugs? I know which way I want to go, but I'm not sure how many steps to take.\"*"
       courseA_collector_loops_challenge2_instruction: "Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: "Collect at least *3* pieces
+        of treasure to pass this level."
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \r\n\r\nPress
         \"Run\" to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2_instruction: "Great!  Now you get to add code yourself!  \r\n\r\nSnap

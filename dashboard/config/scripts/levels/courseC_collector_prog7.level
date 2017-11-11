@@ -32,13 +32,16 @@
     "ideal": "16",
     "instructions_important": "false",
     "min_collected": "5",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There is already a lot of great code in the workspace.  You don't need to delete any of it to solve this puzzle.  \",\"hint_id\":\"courseC_collector_prog7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3b25dd2636eec22b658510ea54bd64b3/courseC_collector_prog7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.\",\"hint_id\":\"courseC_collector_prog7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d6cd6bb3b9c33243624fd62c2a34775b/courseC_collector_prog7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There is already a lot of great code in the workspace.  You don't need to delete any of it to solve this puzzle.  \",\"hint_id\":\"courseC_collector_prog7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3b25dd2636eec22b658510ea54bd64b3/courseC_collector_prog7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.\",\"hint_id\":\"courseC_collector_prog7_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d6cd6bb3b9c33243624fd62c2a34775b/courseC_collector_prog7.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Having trouble seeing a route to collect all of the treasure?  Try this path!\",\"hint_id\":\"courseC_collector_prog7_c\",\"hint_type\":\"general\",\"hint_path\":\"[[5,1],[5,4],[1,4],[1,5]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4450d5aa5d254537d2f21acf3911b00/courseC_collector_prog7.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "P7 Some blocks already attached, a little in the wrong order, need to pull more from the toolbar (Challenge) [length or something to create desire for loops]\r\n",
+  "audit_log": "[{\"changed_at\":\"2017-11-09 03:26:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 4
