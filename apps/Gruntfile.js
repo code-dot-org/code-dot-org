@@ -544,6 +544,7 @@ describe('entry tests', () => {
       externals: [
         {
           'jquery': 'var $',
+          'qtip2': 'var qtip2',
         }
       ],
       plugins: [
