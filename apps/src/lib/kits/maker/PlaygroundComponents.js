@@ -43,7 +43,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       led: new Led({board, pin: 13}),
 
-      toggleSwitch: new Switch({board}),
+      toggleSwitch: new Switch(board),
 
       buzzer: new Piezo({
         board,
