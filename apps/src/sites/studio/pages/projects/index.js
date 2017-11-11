@@ -100,9 +100,7 @@ function recordLegacyProjectButtonClick(projectType) {
     {
       study: 'my-projects-create-project',
       study_group: 'legacy-project-buttons',
-      // '-wip' should be removed when the data format is finalized
-      // and the A/B experiment is launched
-      event: 'create-project-wip',
+      event: 'create-project',
       data_json: JSON.stringify({projectType})
     }
   );
