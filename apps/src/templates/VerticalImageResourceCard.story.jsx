@@ -37,6 +37,7 @@ export default storybook => {
             link={exampleCard.link}
             isRtl={false}
             jumbo={true}
+            image="codeorg-teacher"
           />
         )
       },

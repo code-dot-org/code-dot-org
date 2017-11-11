@@ -83,7 +83,10 @@ export default class Congrats extends Component {
             isEnglish={isEnglish}
           />
           {userType === "signedOut" && (
-            <TeachersBeyondHoc/>
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
           )}
         </div>
       </Provider>
