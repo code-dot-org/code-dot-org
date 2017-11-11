@@ -9,6 +9,10 @@ import five from '@code-dot-org/johnny-five';
 /** @const {number} Pin for the toggle switch on a Circuit Playground. */
 const SWITCH_PIN = 21;
 
+// Properties that should pass through to the inner controller.
+export const READ_ONLY_PROPERTIES = ['isOpen', 'isClosed', 'board', 'pin', 'value'];
+export const READ_WRITE_PROPERTIES = ['closeValue', 'invert', 'openValue'];
+
 /**
  * 'Transparent' wrapper around a johnny-five Switch controller
  * that only emits open and close events when it knows the state has changed,
@@ -17,7 +21,7 @@ const SWITCH_PIN = 21;
  * @param {number} pin
  */
 export default class Switch extends EventEmitter {
-  constructor({board, pin = SWITCH_PIN}) {
+  constructor(board, pin = SWITCH_PIN) {
     super();
 
     /**
@@ -25,7 +29,7 @@ export default class Switch extends EventEmitter {
      * interface to.
      * @type {five.Switch}
      */
-    const fiveSwitch = new five.Switch({board, pin});
+    const fiveSwitch = Switch._constructFiveSwitchController(board, pin);
 
     /**
      * The johnny-five Switch controller will fire 'open' or 'closed' events
@@ -39,7 +43,7 @@ export default class Switch extends EventEmitter {
     let lastKnownState = undefined;
 
     // Define read-only properties that pass through to the five.Switch controller
-    const readOnlyProperties = _(['isOpen', 'isClosed', 'board', 'pin', 'value'])
+    const readOnlyProperties = _(READ_ONLY_PROPERTIES)
       .map(name => [
         name,
         {
@@ -50,7 +54,7 @@ export default class Switch extends EventEmitter {
       .value();
 
     // Define read-write properties that pass through to the five.Switch controller
-    const readWriteProperties= _(['closeValue', 'invert', 'openValue'])
+    const readWriteProperties= _(READ_WRITE_PROPERTIES)
       .map(name => [
         name,
         {
@@ -71,17 +75,17 @@ export default class Switch extends EventEmitter {
     fiveSwitch.on('open', () => {
       if (lastKnownState !== fiveSwitch.openValue) {
         this.emit('open');
-        this.emit('change', fiveSwitch.value);
+        this.emit('change', fiveSwitch.openValue);
       }
-      lastKnownState = fiveSwitch.value;
+      lastKnownState = fiveSwitch.openValue;
     });
 
     fiveSwitch.on('close', () => {
       if (lastKnownState !== fiveSwitch.closeValue) {
         this.emit('close');
-        this.emit('change', fiveSwitch.value);
+        this.emit('change', fiveSwitch.closeValue);
       }
-      lastKnownState = fiveSwitch.value;
+      lastKnownState = fiveSwitch.closeValue;
     });
   }
 
@@ -103,4 +107,17 @@ export default class Switch extends EventEmitter {
    * @event Switch#change
    * @type {?} the current switch value
    */
+
+  /**
+   * Static helper called when constructing an internal Switch controller,
+   * designed to be easily stubbed in unit tests.
+   * @param {five.Board} board
+   * @param {number} pin
+   * @returns {five.Switch}
+   * @private
+   * @static
+   */
+  static _constructFiveSwitchController(board, pin) {
+    return new five.Switch({board, pin});
+  }
 }
