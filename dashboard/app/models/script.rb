@@ -426,7 +426,7 @@ class Script < ActiveRecord::Base
     unless @all_bonus_script_levels
       @all_bonus_script_levels = stages.map do |stage|
         {
-          stageNumber: stage.absolute_position,
+          stageNumber: stage.relative_position,
           levels: stage.script_levels.select(&:bonus).map(&:summarize_as_bonus)
         }
       end

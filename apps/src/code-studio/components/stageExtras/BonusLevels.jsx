@@ -1,4 +1,4 @@
-import FontAwesome from '../../../templates/FontAwesome';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Radium from 'radium';
 import React, {PropTypes} from 'react';
 import MazeThumbnail from './MazeThumbnail';
