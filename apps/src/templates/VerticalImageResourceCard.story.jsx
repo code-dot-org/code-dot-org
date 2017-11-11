@@ -26,6 +26,7 @@ export default storybook => {
               description={exampleCard.description}
               buttonText={exampleCard.buttonText}
               link={exampleCard.link}
+              image="csf-express"
             />
           </Provider>
         )
@@ -40,6 +41,7 @@ export default storybook => {
               description={exampleCard.description}
               buttonText={exampleCard.buttonText}
               link={exampleCard.link}
+              image="csf-express"
               isRtl={true}
             />
           </Provider>
@@ -49,6 +51,7 @@ export default storybook => {
         name: 'Minecraft Vertical Image Resource Card',
         description: `This is an example Minecraft Vertical Image Resource Card, includes share link for Minecraft education`,
         story: () => (
+
           <Provider store={store}>
             <VerticalImageResourceCard
               title="Minecraft Education"
@@ -56,6 +59,7 @@ export default storybook => {
               buttonText="Go to Minecraft"
               link="https://minecraft.net/en-us/"
               MCShareLink="code.org/sharelink"
+              image="new-minecraft"
             />
           </Provider>
         )

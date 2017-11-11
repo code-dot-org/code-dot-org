@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import ContentContainer from './ContentContainer';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
@@ -13,7 +13,7 @@ import shapes from './studioHomepages/shapes';
 class VerticalImageResourceCardRow extends Component {
   static propTypes = {
     cards: shapes.courses,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -35,6 +35,7 @@ class VerticalImageResourceCardRow extends Component {
                 description={card.description}
                 buttonText={i18n.learnMore()}
                 link={card.link}
+                image={card.image}
               />
             )
           )}
