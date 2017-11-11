@@ -1,5 +1,6 @@
 require_relative '../../../deployment'
 require 'active_support/core_ext/string/inflections'
+require 'active_support/core_ext/object/blank'
 require 'cdo/rake_utils'
 require 'aws-sdk'
 require 'json'
@@ -56,19 +57,21 @@ module AWS
         (ENV['STACK_NAME'] || CDO.stack_name || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
       end
 
-      # CNAME to use for this stack.
-      # Suffix env-named stacks with "_cfn" during migration.
+      # CNAME prefix to use for this stack.
       def cname
-        stack_name == rack_env.to_s ? "#{stack_name}-cfn" : stack_name
+        stack_name
       end
 
-      # Fully qualified domain name
-      def fqdn
-        "#{cname}.#{DOMAIN}".downcase
+      # Fully qualified domain name, with optional pre/postfix.
+      # prod_stack_name is used to control partially-migrated resources in production.
+      def subdomain(prefix = nil, postfix = nil, prod_stack_name: true)
+        name = (rack_env?(:production) && !prod_stack_name) ? nil : cname
+        subdomain = [prefix, name, postfix].compact.join('-')
+        [subdomain.presence, DOMAIN].compact.join('.').downcase
       end
 
-      def studio_fqdn
-        "#{cname}-studio.#{DOMAIN}".downcase
+      def studio_subdomain(prod_stack_name: true)
+        subdomain nil, 'studio', prod_stack_name: prod_stack_name
       end
 
       def adhoc_image_id
@@ -236,7 +239,7 @@ module AWS
 
       def update_certs
         Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.bundle_exec './update_certs', fqdn
+          RakeUtils.bundle_exec './update_certs', subdomain
         end
       end
 
@@ -291,7 +294,6 @@ module AWS
           str = "#{event.timestamp}- #{str}" unless ENV['QUIET']
           CDO.log.info str
           if event.resource_status == 'UPDATE_COMPLETE_CLEANUP_IN_PROGRESS'
-            @@event_timestamp += 600
             throw :success
           end
         end
@@ -315,7 +317,7 @@ module AWS
               print '.' unless ENV['QUIET']
             end
           end
-          tail_events(stack_id, log_resource_filter)
+          tail_events(stack_id, log_resource_filter) rescue nil
           tail_log
         rescue Aws::Waiters::Errors::FailureStateError
           tail_events(stack_id)
@@ -344,8 +346,6 @@ module AWS
           certificate_arn: CERTIFICATE_ARN,
           cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
-          subdomain: fqdn,
-          studio_subdomain: studio_fqdn,
           cname: cname,
           availability_zone: AVAILABILITY_ZONES.first,
           availability_zones: AVAILABILITY_ZONES,

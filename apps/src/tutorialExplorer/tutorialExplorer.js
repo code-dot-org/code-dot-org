@@ -10,8 +10,20 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortByOptions, TutorialsSortByFieldNames, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
-import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
+import {
+  TutorialsSortByOptions,
+  TutorialsSortByFieldNames,
+  TutorialsOrgName,
+  mobileCheck,
+  DoNotShow,
+  orgNameCodeOrg,
+  orgNameMinecraft
+} from './util';
+import {
+  getResponsiveContainerWidth,
+  isResponsiveCategoryInactive,
+  getResponsiveValue
+} from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
@@ -183,18 +195,18 @@ const TutorialExplorer = React.createClass({
   getSortByFieldName(sortBy, grade) {
     let sortByFieldName;
 
+    const gradeToSortByFieldName = {
+      "all": TutorialsSortByFieldNames.displayweight,
+      "pre": TutorialsSortByFieldNames.displayweight_pre,
+      "2-5": TutorialsSortByFieldNames.displayweight_25,
+      "6-8": TutorialsSortByFieldNames.displayweight_middle,
+      "9+": TutorialsSortByFieldNames.displayweight_high
+    };
+
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
     // right set of data to match the currently-selected grade.
     if (sortBy === TutorialsSortByOptions.displayweight) {
-      if (grade === "all") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight;
-      } else if (grade === "pre" || grade === "2-5") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_k5;
-      } else if (grade === "6-8") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_middle;
-      } else {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_high;
-      }
+      sortByFieldName = gradeToSortByFieldName[grade];
     } else {
       sortByFieldName = TutorialsSortByFieldNames.popularityrank;
     }
@@ -380,8 +392,12 @@ const TutorialExplorer = React.createClass({
         }
 
         // If we are showing an explicit orgname, then filter if it doesn't
-        // match.
-        if (orgName && orgName !== TutorialsOrgName.all && tutorial.orgname !== orgName) {
+        // match.  Make an exception for Minecraft so that it shows when
+        // Code.org is selected.
+        if (orgName &&
+          orgName !== TutorialsOrgName.all &&
+          tutorial.orgname !== orgName &&
+          !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)) {
           return false;
         }
 
