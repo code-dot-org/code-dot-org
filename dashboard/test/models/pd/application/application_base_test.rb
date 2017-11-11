@@ -23,11 +23,6 @@ module Pd::Application
       application = Teacher1819Application.new
       assert_equal TEACHER_APPLICATION, application.application_type
       assert_equal YEAR_18_19, application.application_year
-
-      # with form_data and user, it is valid
-      application.form_data = {}.to_json
-      application.user = create(:user)
-      assert application.valid?
     end
 
     test 'default status is unreviewed' do
@@ -64,7 +59,7 @@ module Pd::Application
     end
 
     test 'district name' do
-      school_info = build :school_info
+      school_info = create :school_info
       teacher = build :teacher, school_info: school_info
       application = build :pd_facilitator1819_application, user: teacher
 

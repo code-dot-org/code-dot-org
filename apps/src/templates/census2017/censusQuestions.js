@@ -1,20 +1,20 @@
 import i18n from "@cdo/locale";
 
 export const howManyStudents = [
-  "",
-  i18n.none(),
-  i18n.some(),
-  i18n.all(),
-  i18n.iDontKnow()
+  {value: "", display: ""},
+  {value: "none", display: i18n.none()},
+  {value: "some", display: i18n.some()},
+  {value: "all", display: i18n.all()},
+  {value: "dont_know", display: i18n.iDontKnow()}
 ];
 
 export const roleOptions = [
-  "",
-  i18n.teacher(),
-  i18n.administrator(),
-  i18n.parent(),
-  i18n.volunteer(),
-  i18n.other(),
+  {value: "", display: ""},
+  {value: "teacher", display: i18n.teacher()},
+  {value: "administrator", display: i18n.administrator()},
+  {value: "parent", display: i18n.parent()},
+  {value: "volunteer", display: i18n.volunteer()},
+  {value: "other", display: i18n.other()}
 ];
 
 export const courseTopics = [{
@@ -52,11 +52,11 @@ export const courseTopics = [{
 ];
 
 export const frequencyOptions = [
-  "",
-  i18n.censusFrequency1(),
-  i18n.censusFrequency1to3(),
-  i18n.censusFrequency3plus(),
-  i18n.iDontKnow()
+  {value: "", display: ""},
+  {value: "less_than_one", display: i18n.censusFrequency1()},
+  {value: "one_to_three", display: i18n.censusFrequency1to3()},
+  {value: "three_plus", display: i18n.censusFrequency3plus()},
+  {value: "dont_know", display: i18n.iDontKnow()}
 ];
 
 export const pledge = i18n.censusPledge();

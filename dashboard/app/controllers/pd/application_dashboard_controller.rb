@@ -1,6 +1,6 @@
 module Pd
   class ApplicationDashboardController < ApplicationController
-    before_action :authenticate_user!
+    authorize_resource class: 'Pd::Application::ApplicationBase'
 
     def index
       view_options(full_width: true)

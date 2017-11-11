@@ -1,22 +1,32 @@
 import React, {PropTypes} from 'react';
 import PersonalRecentProjects from './PersonalRecentProjects.jsx';
-import NewProjectButtons from './NewProjectButtons.jsx';
 import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import StartNewProject from './StartNewProject';
 
-const ProjectWidget = React.createClass({
-  propTypes: {
+class ProjectWidget extends React.Component {
+  static propTypes = {
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
-    isRtl: PropTypes.bool
-  },
+    isRtl: PropTypes.bool,
+    canViewFullList: PropTypes.bool,
+    canViewAdvancedTools: PropTypes.bool, // Default: true
+  };
+
+  state = {
+    showFullList: false,
+  };
+
+  toggleShowFullList = () => {
+    this.setState({showFullList: !this.state.showFullList});
+  };
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { isRtl } = this.props;
+    const { canViewAdvancedTools, canViewFullList, isRtl } = this.props;
 
     return (
       <ContentContainer
@@ -36,14 +46,16 @@ const ProjectWidget = React.createClass({
             isRtl={isRtl}
           />
         }
-        <NewProjectButtons
+        <StartNewProject
           projectTypes={this.props.projectTypes}
           isRtl={isRtl}
+          canViewFullList={canViewFullList}
+          canViewAdvancedTools={canViewAdvancedTools}
         />
       </ContentContainer>
     );
   }
-});
+}
 
 // The project widget uses the channels API to populate the personal projects
 // and the data needs to be converted to match the format of the project cards
