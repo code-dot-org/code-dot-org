@@ -1,4 +1,5 @@
-CREATE OR REPLACE VIEW analysis_pii.regional_partner_stats AS
+drop table if exists analysis_pii.regional_partner_stats;
+create table analysis_pii.regional_partner_stats AS
   SELECT d.course,
          d.location,
          d.user_id,
@@ -38,12 +39,8 @@ CREATE OR REPLACE VIEW analysis_pii.regional_partner_stats AS
          ON ss.school_id = d.school_id
   LEFT JOIN analysis.quarterly_workshop_attendance qwa
          ON qwa.user_id = d.user_id
-        AND qwa.course = d.course
+        AND qwa.course = d.course -- only include attendance at the workshop for which you were trained
   LEFT JOIN analysis.teacher_most_progress tmp 
          ON tmp.user_id = d.user_id
   LEFT JOIN analysis.student_activity sa 
-         ON sa.user_id = d.user_id
-WITH NO SCHEMA binding;
-
-GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats TO GROUP admin;
-GRANT SELECT ON analysis_pii.regional_partner_stats TO GROUP reader_pii;
+         ON sa.user_id = d.user_id;
