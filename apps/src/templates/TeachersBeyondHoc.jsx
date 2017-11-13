@@ -28,16 +28,16 @@ export default class TeachersBeyondHoc extends Component {
 
     const cards = [
       {
-        title: "Teach Code.org courses",
-        description: "Description, description, description, description, Description, description, description, description, description, description, description, description",
-        buttonText: i18n.learnMore(),
+        title: i18n.congratsTeacherCodeOrgTitle(),
+        description: i18n.congratsTeacherCodeOrgDesc(),
+        buttonText: i18n.congratsTeacherCodeOrgButton(),
         link: "/courses?view=teacher",
         image: "codeorg-teacher"
       },
       {
-        title: "Teach other courses",
-        description: "Description, description, description, description, Description, description, description, description, description, description, description, description",
-        buttonText: i18n.learnMore(),
+        title: i18n.congratsTeacherExternalTitle(),
+        description: i18n.congratsTeacherExternalDesc(),
+        buttonText: i18n.congratsTeacherExternalButton(),
         link: '/educate/curriculum/3rd-party',
         image: "third-party-teacher"
       }
