@@ -720,6 +720,12 @@ export default class Craft {
           blockType,
           'PlayerAgent');
       },
+      placeDirection: function (blockType, direction, blockID) {
+        appCodeOrgAPI.placeDirection(studioApp().highlight.bind(studioApp(), blockID),
+          blockType,
+          'PlayerAgent',
+          direction);
+      },
       moveDirection: function (direction, targetEntity, blockID) {
         const dirStringToDirection = {
           up: FacingDirection.North,
