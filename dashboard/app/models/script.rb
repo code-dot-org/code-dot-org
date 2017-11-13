@@ -422,6 +422,20 @@ class Script < ActiveRecord::Base
     script_levels[chapter - 1] # order is by chapter
   end
 
+  def get_bonus_script_levels(current_stage)
+    unless @all_bonus_script_levels
+      @all_bonus_script_levels = stages.map do |stage|
+        {
+          stageNumber: stage.relative_position,
+          levels: stage.script_levels.select(&:bonus).map(&:summarize_as_bonus)
+        }
+      end
+      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
+    end
+
+    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+  end
+
   def beta?
     Script.beta? name
   end

@@ -283,6 +283,12 @@ reporting.sendReport = function (report) {
           var fallback = getFallbackResponse(report) || {};
           response.redirect = fallback.redirect;
         }
+        if (appOptions.isBonusLevel) {
+          // Bonus levels might have to take students back to a different stage,
+          // ignore the redirect in response and use the url from appOptions
+          // instead
+          response.redirect = appOptions.nextLevelUrl;
+        }
         reportComplete(report, response);
       },
       error: function (xhr, textStatus, thrownError) {
