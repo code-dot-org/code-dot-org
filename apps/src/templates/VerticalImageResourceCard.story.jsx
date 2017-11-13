@@ -22,6 +22,7 @@ export default storybook => {
             buttonText={exampleCard.buttonText}
             link={exampleCard.link}
             isRtl={false}
+            image="csf-express"
           />
         )
       },
@@ -35,6 +36,7 @@ export default storybook => {
             buttonText={exampleCard.buttonText}
             link={exampleCard.link}
             isRtl={true}
+            image="csf-express"
           />
         )
       },
@@ -49,6 +51,7 @@ export default storybook => {
             link="https://minecraft.net/en-us/"
             isRtl={false}
             MCShareLink="code.org/sharelink"
+            image="new-minecraft"
           />
         )
       }

@@ -899,5 +899,16 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "أخبرنا عن مدرستك"
+  "yourSchoolTellUs": "أخبرنا عن مدرستك",
+  "extrasStageNChallenges": "Lesson {stageNumber} Challenges",
+  "joinUs": "Join us",
+  "projectGroupPreReaderAllProjects": "All Pre-reader Projects",
+  "projectGroupPreReaderViewMore": "View more pre-reader projects",
+  "schoolInformationHeader": "School / Organization Information",
+  "schoolNotFoundCheckboxLabel": "I cannot find my school above",
+  "seeAllTutorials": "See all tutorials",
+  "specialAnnouncementHeading": "The Hour of Code is coming",
+  "specialAnnouncementDescription": "Try our brand new Minecraft activity with your class for the Hour of Code (Dec 4-10)! This year, we’ve upgraded our servers so your students can play it signed in. They can save their progress and keep their final projects. Sign up your class today!",
+  "tutorialUnavailable": "Tutorial unavailable for younger students",
+  "tutorialUnavailableExplanation": "Sorry, this tutorial is not available for younger students unless they signed in as part of a classroom with a teacher. We have many more tutorials for all ages."
 }

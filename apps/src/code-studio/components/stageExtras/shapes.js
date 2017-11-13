@@ -10,3 +10,8 @@ export const bonusLevel = {
   startDirection: PropTypes.number,
   type: PropTypes.string.isRequired,
 };
+
+export const stageOfBonusLevels = {
+  stageNumber: PropTypes.number.isRequired,
+  levels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
+};

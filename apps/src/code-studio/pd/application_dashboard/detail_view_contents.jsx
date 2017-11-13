@@ -4,6 +4,26 @@ import Facilitator1819Questions from './detail_view_facilitator_specific_compone
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 
+const styles = {
+  notes: {
+    height: '95px'
+  },
+  statusSelect: {
+    marginRight: '5px'
+  },
+  detailViewHeader: {
+    display: 'flex',
+    marginLeft: 'auto'
+  },
+  headerWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  saveButton: {
+    marginRight: '5px'
+  }
+};
+
 export default class DetailViewContents extends React.Component {
   static propTypes = {
     applicationId: PropTypes.string.isRequired,
@@ -80,7 +100,7 @@ export default class DetailViewContents extends React.Component {
           onClick={this.handleSaveClick}
           bsStyle="primary"
           key="save"
-          style={{marginRight: '5px'}}
+          style={styles.saveButton}
         >
           Save
         </Button>
@@ -100,18 +120,18 @@ export default class DetailViewContents extends React.Component {
 
   renderHeader = () => {
     return (
-      <div style={{display: 'flex', alignItems: 'baseline'}}>
+      <div style={styles.headerWrapper}>
         <h1>
           {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
         </h1>
 
-        <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
+        <div id="DetailViewHeader" style={styles.detailViewHeader}>
           <FormControl
             componentClass="select"
             disabled={!this.state.editing}
             value={this.state.status}
             onChange={this.handleStatusChange}
-            style={{marginRight: '5px'}}
+            style={styles.statusSelect}
           >
             {
               this.statuses.map((status, i) => (
@@ -176,6 +196,7 @@ export default class DetailViewContents extends React.Component {
               componentClass="textarea"
               value={this.state.notes || ''}
               onChange={this.handleNotesChange}
+              style={styles.notes}
             />
           </div>
         </div>
