@@ -18,6 +18,7 @@ export default storybook => {
               completedTutorialType="applab"
               isRtl={false}
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -31,6 +32,7 @@ export default storybook => {
               completedTutorialType="applab"
               isRtl={false}
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -44,6 +46,7 @@ export default storybook => {
               completedTutorialType="pre2017Minecraft"
               isRtl={false}
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -57,6 +60,7 @@ export default storybook => {
               completedTutorialType="pre2017Minecraft"
               isRtl={false}
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -70,6 +74,7 @@ export default storybook => {
               completedTutorialType="2017Minecraft"
               isRtl={false}
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -83,6 +88,7 @@ export default storybook => {
               completedTutorialType="2017Minecraft"
               isRtl={false}
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -96,6 +102,7 @@ export default storybook => {
               completedTutorialType="other"
               isRtl={false}
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -109,6 +116,7 @@ export default storybook => {
               completedTutorialType="other"
               isRtl={false}
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -122,6 +130,7 @@ export default storybook => {
               completedTutorialType="other"
               isRtl={false}
               userType="teacher"
+              isEnglish={true}
             />
           </Provider>
         )

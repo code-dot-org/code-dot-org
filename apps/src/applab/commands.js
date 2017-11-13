@@ -181,8 +181,6 @@ applabCommands.image = function (opts) {
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
-  Applab.updateProperty(newImage, 'objectFit', 'contain');
-
   return Boolean(Applab.activeScreen().appendChild(newImage));
 };
 

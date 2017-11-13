@@ -2,7 +2,8 @@
 - if @stage_extras
   - text = @stage.localized_title
 - else
-  - text = @script.professional_learning_course? ? @script_level.stage.localized_name : @script_level.stage.localized_title
+  - stage = @stage || @script_level.stage
+  - text = @script.professional_learning_course? ? stage.localized_name : stage.localized_title
 
 .header_level
   %div.header_level_container
