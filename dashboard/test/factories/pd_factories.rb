@@ -661,36 +661,28 @@ FactoryGirl.define do
         committed: 'Yes',
         willing_to_travel: 'More than 50 miles',
         agree: 'Yes'
-      }.stringify_keys
-    end
-
-    trait :with_csp_specific_fields do
-      after :build do |hash|
-        hash['csp_which_grades'] = ['11', '12']
-        hash['csp_course_hours_per_week'] = 'More than 5 course hours per week'
-        hash['csp_course_hours_per_year'] = 'At least 100 course hours'
-        hash['csp_terms_per_year'] = '1 quarter'
-        hash['csp_how_offer'] = 'As an AP course'
-        hash['csp_ap_exam'] = 'Yes, all students will be expected to take the AP CS Principles exam'
-      end
-    end
-
-    trait :with_csd_specific_fields do
-      after :build do |hash|
-        hash['csd_which_grades'] = ['6', '7']
-        hash['csd_course_hours_per_week'] = '5 or more course hours per week'
-        hash['csd_course_hours_per_year'] = 'At least 100 course hours'
-        hash['csd_terms_per_year'] = '1 quarter'
-      end
+      }.tap do |hash|
+        if program == 'csp'
+          hash['csp_which_grades'] = ['11', '12']
+          hash['csp_course_hours_per_week'] = 'More than 5 course hours per week'
+          hash['csp_course_hours_per_year'] = 'At least 100 course hours'
+          hash['csp_terms_per_year'] = '1 quarter'
+          hash['csp_how_offer'] = 'As an AP course'
+          hash['csp_ap_exam'] = 'Yes, all students will be expected to take the AP CS Principles exam'
+        else
+          hash['csd_which_grades'] = ['6', '7']
+          hash['csd_course_hours_per_week'] = '5 or more course hours per week'
+          hash['csd_course_hours_per_year'] = 'At least 100 course hours'
+          hash['csd_terms_per_year'] = '1 quarter'
+        end
+      end.stringify_keys
     end
   end
 
-  factory :csp_pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
+  factory :pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
     association :user, factory: :teacher, strategy: :create
-    transient do
-      form_data_hash {build :pd_teacher1819_application_hash, :with_csp_specific_fields}
-    end
-    form_data {form_data_hash.to_json}
+    course 'csp'
+    form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
   end
 
   factory :csd_pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
