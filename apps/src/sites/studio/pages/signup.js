@@ -189,7 +189,6 @@ window.SignupManager = function (options) {
         <CountryAutocompleteDropdown
           onChange={onCountryChange}
           value={data.country}
-          required={true}
           showErrorMsg={schoolDataErrors.country}
           singleLineLayout
         />
