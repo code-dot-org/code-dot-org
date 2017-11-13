@@ -126,16 +126,14 @@ export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
 class Item extends Component {
   static propTypes = {
-    children: PropTypes.string.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array]).isRequired,
     onClick: PropTypes.func,
     href: PropTypes.string,
     first: PropTypes.bool,
     last: PropTypes.bool,
-  };
-
-  static style = {
-    color: color.dark_charcoal,
-    textDecoration: 'none', // Remove underline from anchor tags
+    color: PropTypes.string,
   };
 
   render() {
@@ -155,6 +153,11 @@ class Item extends Component {
       }
     };
 
+    const textStyle = {
+      color: this.props.color? this.props.color : color.dark_charcoal,
+      textDecoration: 'none', // Remove underline from anchor tags
+    };
+
     const Tag = href ? 'a' : 'div';
     return (
       <div
@@ -163,7 +166,7 @@ class Item extends Component {
         <Tag
           className="pop-up-menu-item"
           href={href}
-          style={PopUpMenu.Item.style}
+          style={textStyle}
           onClick={onClick}
         >
           {children}
