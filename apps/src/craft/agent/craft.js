@@ -22,6 +22,7 @@ import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
 import experiments from '../../util/experiments';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -561,6 +562,7 @@ export default class Craft {
     if (first) {
       return;
     }
+    captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
     Craft.gameController.codeOrgAPI.resetAttempt();
   }
 
