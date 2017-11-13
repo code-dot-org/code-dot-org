@@ -27,7 +27,7 @@ file = Tempfile.new(['data', '.csv'])
 begin
   CSV.open(file.path, 'w') do |csv|
     DASHBOARD_DB[:census_submissions].
-      select_append(:census_submissions__id___census_submissions_id).
+      select(:census_submissions__id___census_submissions_id, :how_many_10_hours, :how_many_20_hours, :pledged, :school_infos__school_id, :schools__name, :schools__zip, :schools__city).
       join(:census_submissions_school_infos, census_submission_id: :id).
       join(:school_infos, id: :school_info_id).
       join(:schools, id: :school_id).
