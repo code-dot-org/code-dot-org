@@ -76,6 +76,7 @@
     "special_level_type": "freeplay",
     "instructions": "**Freeplay:**  Time to explore on your own!",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.\",\"hint_id\":\"MC_HOC_2017_13_Cole_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/23c6f4439dec875899ae1981a7dd426a/MC_HOC_2017_13_Cole.mp3\"}]",
+    "video_key": "mc_2017_congratulations",
     "contained_level_names": null
   },
   "published": true,
