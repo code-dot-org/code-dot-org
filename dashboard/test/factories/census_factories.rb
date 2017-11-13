@@ -112,7 +112,7 @@ FactoryGirl.define do
     form_id nil
 
     trait :with_submission do
-      census_submission build :census_hoc2017v1
+      census_submission {build :census_hoc2017v1}
     end
 
     trait :with_form do
