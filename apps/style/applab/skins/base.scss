@@ -73,9 +73,9 @@ $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
   }
 }
 
-#divApplab.notRunning, #designModeViz, .draggingParent {
+#designModeViz, .draggingParent {
 
-  canvas:not(#turtleCanvas) {
+  canvas {
     background-color: #eee;
   }
 
