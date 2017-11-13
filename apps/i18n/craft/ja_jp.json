@@ -290,5 +290,11 @@
   "weather": "天気",
   "weatherTypeClear": "クリア",
   "weatherTypeRain": "雨",
-  "weatherTypeThunder": "雷"
+  "weatherTypeThunder": "雷",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool"
 }

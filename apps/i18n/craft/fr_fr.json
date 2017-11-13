@@ -290,5 +290,11 @@
   "weather": "météo",
   "weatherTypeClear": "dégagé",
   "weatherTypeRain": "pluie",
-  "weatherTypeThunder": "tonnerre"
+  "weatherTypeThunder": "tonnerre",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool"
 }
