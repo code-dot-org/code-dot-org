@@ -128,34 +128,46 @@ class Item extends Component {
   static propTypes = {
     children: PropTypes.string.isRequired,
     onClick: PropTypes.func,
+    href: PropTypes.string,
     first: PropTypes.bool,
     last: PropTypes.bool,
   };
 
   static style = {
     color: color.dark_charcoal,
-    paddingLeft: STANDARD_PADDING,
-    paddingRight: STANDARD_PADDING,
-    cursor: 'pointer',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-    }
+    textDecoration: 'none', // Remove underline from anchor tags
   };
 
   render() {
-    const {first, last, onClick, children} = this.props;
-    const style = {
-      ...PopUpMenu.Item.style,
+    const {first, last, onClick, children, href} = this.props;
+    if (!href && !onClick) {
+      throw new Error('Expect at least one of href/onClick');
+    }
+
+    const paddingStyle = {
       paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 2,
       paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
+      paddingLeft: STANDARD_PADDING,
+      paddingRight: STANDARD_PADDING,
+      cursor: 'pointer',
+      ':hover': {
+        backgroundColor: color.lightest_gray,
+      }
     };
+
+    const Tag = href ? 'a' : 'div';
     return (
       <div
-        className="pop-up-menu-item"
-        style={style}
-        onClick={onClick}
+        style={paddingStyle}
       >
-        {children}
+        <Tag
+          className="pop-up-menu-item"
+          href={href}
+          style={PopUpMenu.Item.style}
+          onClick={onClick}
+        >
+          {children}
+        </Tag>
       </div>
     );
   }
