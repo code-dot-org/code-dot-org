@@ -141,7 +141,7 @@ module LevelsHelper
       view_options(
         stage_position: @script_level.stage.absolute_position,
         level_position: @script_level.position,
-        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user)
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @stage)
       )
     end
 
