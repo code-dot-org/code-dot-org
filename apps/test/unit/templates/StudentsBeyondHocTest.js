@@ -1,52 +1,38 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import StudentsBeyondHoc from '@cdo/apps/templates/StudentsBeyondHoc';
-import Responsive from '@cdo/apps/responsive';
+import {Provider} from 'react-redux';
+import {combineReducers, createStore} from 'redux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('StudentsBeyondHoc', () => {
-  it('renders a VerticalImageResourceCardRow component', () => {
-    const responsive = new Responsive();
-    const wrapper = shallow(
-      <StudentsBeyondHoc
-        completedTutorialType="other"
-        MCShareLink=""
-        responsive={responsive}
-        isRtl={false}
-        signedIn={false}
-        isEnglish={true}
-      />
+  let root;
+
+  beforeEach(() => {
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <StudentsBeyondHoc
+          completedTutorialType="other"
+          MCShareLink="code.org/minecraft/sharelink"
+          signedIn={true}
+          isEnglish={true}
+        />
+      </Provider>
     );
-    expect(wrapper.find('VerticalImageResourceCardRow').exists()).to.be.true;
+  });
+
+  it('renders a VerticalImageResourceCardRow component', () => {
+    expect(root.find('VerticalImageResourceCardRow').exists());
   });
 
   it('renders a CourseBlocksStudentGradeBands component', () => {
-    const responsive = new Responsive();
-    const wrapper = shallow(
-      <StudentsBeyondHoc
-        completedTutorialType="other"
-        MCShareLink="code.org/minecraft/sharelink"
-        responsive={responsive}
-        isRtl={false}
-        signedIn={false}
-        isEnglish={true}
-      />
-    );
-    expect(wrapper.find('CourseBlocksStudentGradeBands').exists()).to.be.true;
+    expect(root.find('CourseBlocksStudentGradeBands').exists());
   });
 
   it('renders a LocalClassActionBlock component', () => {
-    const responsive = new Responsive();
-    const wrapper = shallow(
-      <StudentsBeyondHoc
-        completedTutorialType="other"
-        MCShareLink="code.org/minecraft/sharelink"
-        responsive={responsive}
-        isRtl={false}
-        signedIn={false}
-        isEnglish={true}
-      />
-    );
-    expect(wrapper.find('LocalClassActionBlock').exists()).to.be.true;
+    expect(root.find('LocalClassActionBlock').exists());
   });
 });

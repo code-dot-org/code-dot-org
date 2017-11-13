@@ -1,15 +1,15 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
-import Responsive from '../../responsive';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
 
 class CourseBlocksStudentGradeBands extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     showContainer: PropTypes.bool.isRequired,
-    hideBottomMargin: PropTypes.bool.isRequired
+    hideBottomMargin: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    responsiveSize: PropTypes.string.isRequired,
   };
 
   cards = [
@@ -43,18 +43,17 @@ class CourseBlocksStudentGradeBands extends Component {
         linkText={linkText}
         heading={heading}
         description={description}
-        isRtl={this.props.isRtl}
-        responsive={this.props.responsive}
         hideBottomMargin={hideBottomMargin}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </ContentContainer>
     );
   }
 }
 
-export default CourseBlocksStudentGradeBands;
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(CourseBlocksStudentGradeBands);

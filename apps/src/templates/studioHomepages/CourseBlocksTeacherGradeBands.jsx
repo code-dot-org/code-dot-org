@@ -1,13 +1,13 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 
 class CourseBlocksTeacherGradeBands extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsiveSize: PropTypes.string.isRequired,
   };
 
   cards = [
@@ -33,17 +33,16 @@ class CourseBlocksTeacherGradeBands extends Component {
       <ContentContainer
         heading={i18n.courseBlocksGradeBandsContainerHeading()}
         description={i18n.courseBlocksGradeBandsContainerDescription()}
-        isRtl={this.props.isRtl}
-        responsive={this.props.responsive}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </ContentContainer>
     );
   }
 }
 
-export default CourseBlocksTeacherGradeBands;
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(CourseBlocksTeacherGradeBands);

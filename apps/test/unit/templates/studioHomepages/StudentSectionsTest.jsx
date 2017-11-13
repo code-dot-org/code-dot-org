@@ -4,7 +4,7 @@ import {expect} from '../../../util/configuredChai';
 import {sections} from './fakeSectionUtils';
 import i18n from '@cdo/locale';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
-import ContentContainer from "@cdo/apps/templates/ContentContainer";
+import {UnconnectedContentContainer as ContentContainer} from "@cdo/apps/templates/ContentContainer";
 import JoinSection from "@cdo/apps/templates/studioHomepages/JoinSection";
 import JoinSectionNotifications from "@cdo/apps/templates/studioHomepages/JoinSectionNotifications";
 import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";

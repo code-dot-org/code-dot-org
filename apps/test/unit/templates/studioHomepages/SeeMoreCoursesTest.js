@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {assert, expect} from '../../../util/configuredChai';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
-import ContentContainer from '@cdo/apps/templates/ContentContainer';
+import {UnconnectedContentContainer as ContentContainer} from '@cdo/apps/templates/ContentContainer';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import Button from "@cdo/apps/templates/Button";
 import color from '@cdo/apps/util/color';

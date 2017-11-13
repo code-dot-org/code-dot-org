@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import PersonalRecentProjects from './PersonalRecentProjects.jsx';
-import ContentContainer from '../ContentContainer.jsx';
+import {UnconnectedContentContainer as ContentContainer} from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

@@ -1,8 +1,8 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import ContentContainer from './ContentContainer';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
-import Responsive from '../responsive';
 import i18n from "@cdo/locale";
 import shapes from './studioHomepages/shapes';
 
@@ -10,24 +10,23 @@ import shapes from './studioHomepages/shapes';
  * A responsive row of 3 VerticalImageResourceCards, that stack on mobile.
  */
 
-export default class VerticalImageResourceCardRow extends Component {
+class VerticalImageResourceCardRow extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     cards: shapes.courses,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, cards } = this.props;
+    const { cards, isRtl } = this.props;
+
     return (
       <ContentContainer
         heading=""
         description=""
-        isRtl={isRtl}
-        responsive={responsive}
         hideBottomMargin={true}
+        isRtl={isRtl}
       >
-        <ResourceCardResponsiveContainer responsive={responsive}>
+        <ResourceCardResponsiveContainer>
           {cards.map(
             (card, cardIndex) => (
               <VerticalImageResourceCard
@@ -36,7 +35,6 @@ export default class VerticalImageResourceCardRow extends Component {
                 description={card.description}
                 buttonText={i18n.learnMore()}
                 link={card.link}
-                isRtl={isRtl}
                 image={card.image}
               />
             )
@@ -46,3 +44,8 @@ export default class VerticalImageResourceCardRow extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(VerticalImageResourceCardRow);

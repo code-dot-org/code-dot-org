@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import ImageResourceCard from './ImageResourceCard';
-import ContentContainer from '../ContentContainer';
+import {UnconnectedContentContainer as ContentContainer} from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import styleConstants from '../../styleConstants';

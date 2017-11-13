@@ -2,7 +2,6 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -11,6 +10,7 @@ import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import TwoColumnActionBlock from '../TwoColumnActionBlock';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -18,7 +18,10 @@ const styles = {
   clear: {
     clear: 'both',
     height: 30
-  }
+  },
+  fullWidthNonResponsive: {
+    width: 970
+  },
 };
 
 export default class TeacherHomepage extends Component {
@@ -57,17 +60,19 @@ export default class TeacherHomepage extends Component {
           ref="termsReminder"
         />
         {hocLaunch && hocLaunch.special_announcement && hocLaunch.special_announcement === "mc2017" && (
-          <SpecialAnnouncementActionBlock
-            isRtl={isRtl}
-            imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
-            heading={i18n.specialAnnouncementHeading()}
-            subHeading={""}
-            description={i18n.specialAnnouncementDescription()}
-            buttons={[
-              {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
-              {url: pegasus('/minecraft'), text: i18n.tryIt()}
-            ]}
-          />
+          <div style={styles.fullWidthNonResponsive}>
+            <TwoColumnActionBlock
+              isRtl={isRtl}
+              imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+              heading={i18n.specialAnnouncementHeading()}
+              subHeading={""}
+              description={i18n.specialAnnouncementDescription()}
+              buttons={[
+                {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+                {url: pegasus('/minecraft'), text: i18n.tryIt()}
+              ]}
+            />
+          </div>
         )}
 
         {announcements.length > 0 && (

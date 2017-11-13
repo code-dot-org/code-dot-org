@@ -1,14 +1,12 @@
 import React from 'react';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
-import Responsive from '../../responsive';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '../../code-studio/responsiveRedux';
-
-const responsive = new Responsive();
+import responsive from '../../code-studio/responsiveRedux';
+import isRtl from '../../code-studio/isRtlRedux';
 
 export default storybook => {
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  const store = createStore(combineReducers({responsive, isRtl}));
   return storybook
     .storiesOf('CourseBlocksTeacherGradeBands', module)
     .addStoryTable([
@@ -17,10 +15,7 @@ export default storybook => {
         description: `This is a set of course blocks listing teacher grade bands`,
         story: () => (
           <Provider store={store}>
-            <CourseBlocksTeacherGradeBands
-              isRtl={false}
-              responsive={responsive}
-            />
+            <CourseBlocksTeacherGradeBands/>
           </Provider>
         )
       },

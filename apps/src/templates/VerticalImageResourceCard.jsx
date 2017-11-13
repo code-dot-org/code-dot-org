@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 import Radium from 'radium';
 import color from "../util/color";
 import Button from './Button';
@@ -71,13 +72,13 @@ class VerticalImageResourceCard extends Component {
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
+    MCShareLink: PropTypes.string,
     image: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    MCShareLink: PropTypes.string
   };
 
   render() {
-    const { title, description, link, buttonText, isRtl, MCShareLink, image } = this.props;
+    const { title, description, link, buttonText, MCShareLink, image, isRtl } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
 
     const filenameToImgUrl = {
@@ -120,4 +121,6 @@ class VerticalImageResourceCard extends Component {
   }
 }
 
-export default Radium(VerticalImageResourceCard);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(VerticalImageResourceCard));
