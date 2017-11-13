@@ -19,9 +19,9 @@ describe('PopUpMenu', () => {
   it('renders each menu item', () => {
     const wrapper = mount(
       <MenuBubble targetPoint={targetPoint}>
-        <PopUpMenu.Item>Item one</PopUpMenu.Item>
-        <PopUpMenu.Item>Item two</PopUpMenu.Item>
-        <PopUpMenu.Item>Item three</PopUpMenu.Item>
+        <PopUpMenu.Item onClick={() => {}}>Item one</PopUpMenu.Item>
+        <PopUpMenu.Item onClick={() => {}}>Item two</PopUpMenu.Item>
+        <PopUpMenu.Item onClick={() => {}}>Item three</PopUpMenu.Item>
       </MenuBubble>
     );
     expect(wrapper.text())
