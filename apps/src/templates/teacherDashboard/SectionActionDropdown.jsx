@@ -11,6 +11,7 @@ import {sectionCode,
         importOrUpdateRoster} from './teacherSectionsRedux';
 import * as utils from '../../utils';
 import {connect} from 'react-redux';
+import PrintCertificates from "./PrintCertificates";
 
 const styles = {
   actionButton:{
@@ -171,6 +172,10 @@ class SectionActionDropdown extends Component {
           >
             {i18n.editSectionDetails()}
           </PopUpMenu.Item>
+          <PrintCertificates
+            sectionId={sectionData.id}
+            assignmentName={sectionData.assignmentNames[0]}
+          />
           <PopUpMenu.Item
             onClick={this.onClickSync}
           >
