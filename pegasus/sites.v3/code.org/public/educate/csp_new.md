@@ -50,9 +50,8 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 ## <a name="overview"></a>Curriculum Resources and Features
 
-- [One-pager](/files/CSPrinciples_1-pager.pdf) describing the course
+
 - [2017 AP Endorsed Syllabus and Overview](/files/CSPSyllabusMay2017.pdf)
-- [Curriculum Guide](/files/CSP_CurriculumGuide_2017_forWeb.pdf) for teachers
 - [Course Materials List](#materials)
 - [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
@@ -85,7 +84,9 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 [col-33]
 
-THIS FINAL THING
+[<center><img src="/images/csp/csp_syllabus.png" width="90%">](/files/CSPSyllabusMay2017.pdf)
+
+<div style="margin-left: 15px; margin-top: 5px;">This <a href="/files/CSPSyllabusMay2017.pdf">2017 AP Endorsed Syllabus</a> is a place-holder for something colorful!</div>
 
 [/col-33]
 
@@ -154,20 +155,68 @@ THIS FINAL THING
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-ap'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-ap/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'AP Tasks', ages: 'Explore and Performance Tasks', description: 'Students design a project plan, then work on and complete their AP Performance Task projects for submission to the College Board.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-ap'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-ap/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Tasks', ages: 'Explore and Performance Tasks', description: 'Students design a project plan, then work on and complete their AP Performance Task projects for submission to the College Board.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-postap'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-ap/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, many people have a few weeks left of school. We have some material and lessons that teach students how to use App Lab's database capabilities to make apps that sotre data in the cloud so that it can be retrieved later."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-postap'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to use App Lab's database capabilities to make apps that sotre data in the cloud so that it can be retrieved later."%>
+
+[/col-50]
+
+<div style="clear:both"></div>
 
 
 *Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution Non-Commerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).*
 
 
+<hr/>
 
+## Keep up with CS Principles
 
+<div style="float:left; padding:25px; width:50%">
+
+<h4>Let us know how we're doing!</h4>
+
+We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
+<br><br>
+
+<a href="mailto:support@code.org"><button>Give feedback</button></a>
+
+</div>
+
+<div style="float:left; padding:25px; width:50%">
+
+<h4> Subscribe for the latest news </h4>
+
+Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for CS Principles.
+
+<br><br>
+
+<a href="/educate/csp/CSPStatus_Signup"> <button>Sign up</button> </a>
+
+</div>
+
+<div style="clear:both"></div>
+
+<hr/>
+
+## Spread the word about CS Principles
+
+### Hand out these fliers around your school and consider sending home to parents.
+
+[![image](/images/fit-200/csp/CSPrinciples_1-pager.png)](/files/CSPrinciples_1-pager.pdf)
+[![image](/images/fit-200/csp/csp-student-flyer.png)](/files/programs/csp-student-flyer.pdf)
+
+### Hang these posters in your classroom and around your school:
+
+[![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
+[![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
+[![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
+[![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
+
+<hr/>
 
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
