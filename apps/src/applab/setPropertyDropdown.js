@@ -356,10 +356,10 @@ export function getInternalPropertyInfo(element, friendlyPropName) {
  * @returns {!Array<string> | function} droplet dropdown array or function
  */
 function getPropertyValueDropdown(param2) {
-  const dropletConfigDefaultValue = "100";
+  const dropletConfigDefaultValue = ["0", "25", "50", "75", "100", "150", "200"];
 
   if (!param2) {
-    return [dropletConfigDefaultValue];
+    return dropletConfigDefaultValue;
   }
   const formattedParam = stripQuotes(param2);
 
@@ -370,7 +370,7 @@ function getPropertyValueDropdown(param2) {
     case "text-color":
     case "background-color":
     case "icon-color":
-      return ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'];
+      return ['"white"', '"red"', '"green"', '"blue"', '"yellow"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'];
     case "text-align":
       return ['"left"', '"right"', '"center"', '"justify"'];
     case "fit":
@@ -386,7 +386,7 @@ function getPropertyValueDropdown(param2) {
     case "options":
       return ['["option1", "etc"]'];
     default:
-      return [dropletConfigDefaultValue];
+      return dropletConfigDefaultValue;
   }
 }
 
