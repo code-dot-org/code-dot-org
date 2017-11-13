@@ -18,11 +18,14 @@ class Congrats extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
-    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired
+    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
+    isEnglish: PropTypes.bool.isRequired,
+    responsiveSize: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { completedTutorialType, MCShareLink, userType } = this.props;
+    const { completedTutorialType, MCShareLink, userType, isEnglish } = this.props;
     const signedIn = (userType === "teacher" || userType === "student");
 
     return (
@@ -37,6 +40,7 @@ class Congrats extends Component {
           completedTutorialType={completedTutorialType}
           MCShareLink={MCShareLink}
           signedIn={signedIn}
+          isEnglish={isEnglish}
         />
         {userType === "signedOut" && (
           <TeachersBeyondHoc/>

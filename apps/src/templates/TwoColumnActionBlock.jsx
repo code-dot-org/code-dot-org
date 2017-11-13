@@ -48,40 +48,53 @@ class TwoColumnActionBlock extends Component {
     heading: PropTypes.string.isRequired,
     subHeading: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    buttonUrl: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired,
-    responsiveSize: PropTypes.string.isRequired,
+    buttons: PropTypes.arrayOf(PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })),
+    responsiveSize: PropTypes.string,
     isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const { imageUrl, heading, subHeading, description, buttonUrl, buttonText, responsiveSize, isRtl } = this.props;
+    const { imageUrl, heading, subHeading, description, buttons, responsiveSize, isRtl } = this.props;
 
     return (
       <div>
-        <div style={styles.heading}>
-          {heading}
-        </div>
+        {heading && (
+          <div style={styles.heading}>
+            {heading}
+          </div>
+        )}
         <GridContainer
           numColumns={2}
           isRtl={isRtl}
           responsiveSize={responsiveSize}
         >
-          {responsiveSize ==='lg' && (
+          {!responsiveSize ||responsiveSize ==='lg' && (
             <img src={imageUrl}/>
           )}
           <div style={styles.textItem}>
-            <div style={styles.subheading}>
-              {subHeading}
-            </div>
+            {subHeading && (
+              <div style={styles.subheading}>
+                {subHeading}
+              </div>
+            )}
             <div style={styles.description}>
               {description}
             </div>
-            <Button
-              href={buttonUrl}
-              color={Button.ButtonColor.gray}
-              text={buttonText}
-            />
+            {buttons.map((button, index) =>
+              <span key={index}>
+                <Button
+                  href={button.url}
+                  color={Button.ButtonColor.gray}
+                  text={button.text}
+                />
+                &nbsp;
+                &nbsp;
+                &nbsp;
+              </span>
+            )}
           </div>
         </GridContainer>
         <div style={styles.clear}/>

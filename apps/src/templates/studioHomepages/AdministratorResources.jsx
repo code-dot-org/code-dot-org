@@ -11,6 +11,7 @@ export class AdministratorResources extends Component {
   };
 
   render() {
+    const { isRtl, responsiveSize } = this.props;
 
     return (
       <TwoColumnActionBlock
@@ -18,8 +19,9 @@ export class AdministratorResources extends Component {
         heading={i18n.administratorResourcesHeading()}
         subHeading={i18n.administratorResourcesSubheading()}
         description={i18n.administratorResourcesDescription()}
-        buttonUrl={pegasus('/administrators')}
-        buttonText={i18n.yourSchoolAdminButton()}
+        buttons={[{url: pegasus('/administrators'), text: i18n.yourSchoolAdminButton()}]}
+        isRtl={isRtl}
+        responsiveSize={responsiveSize}
       />
     );
   }

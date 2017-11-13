@@ -21,8 +21,7 @@ class LocalClassActionBlock extends Component {
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
         description={i18n.findLocalClassDescription()}
-        buttonUrl={pegasus('/learn/local')}
-        buttonText={i18n.findLocalClassButton()}
+        buttons={[{url: pegasus('/learn/local'), text: i18n.findLocalClassButton()}]}
         isRtl={isRtl}
         responsiveSize={responsiveSize}
       />

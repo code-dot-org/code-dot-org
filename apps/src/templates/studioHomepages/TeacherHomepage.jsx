@@ -10,13 +10,18 @@ import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import TwoColumnActionBlock from '../TwoColumnActionBlock';
 import i18n from "@cdo/locale";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   clear: {
     clear: 'both',
     height: 30
-  }
+  },
+  fullWidthNonResponsive: {
+    width: 970
+  },
 };
 
 export default class TeacherHomepage extends Component {
@@ -29,6 +34,7 @@ export default class TeacherHomepage extends Component {
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     canCreateMoreProjects: PropTypes.bool,
+    hocLaunch: PropTypes.object
   };
 
   componentDidMount() {
@@ -39,7 +45,7 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
-    const { canCreateMoreProjects, canViewAdvancedTools } = this.props;
+    const { canCreateMoreProjects, canViewAdvancedTools, hocLaunch } = this.props;
 
     return (
       <div>
@@ -53,6 +59,22 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
+        {hocLaunch && hocLaunch.special_announcement && hocLaunch.special_announcement === "mc2017" && (
+          <div style={styles.fullWidthNonResponsive}>
+            <TwoColumnActionBlock
+              isRtl={isRtl}
+              imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+              heading={i18n.specialAnnouncementHeading()}
+              subHeading={""}
+              description={i18n.specialAnnouncementDescription()}
+              buttons={[
+                {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+                {url: pegasus('/minecraft'), text: i18n.tryIt()}
+              ]}
+            />
+          </div>
+        )}
+
         {announcements.length > 0 && (
           <div>
             <Notification

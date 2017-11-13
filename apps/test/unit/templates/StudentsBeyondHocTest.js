@@ -18,6 +18,7 @@ describe('StudentsBeyondHoc', () => {
           completedTutorialType="other"
           MCShareLink="code.org/minecraft/sharelink"
           signedIn={true}
+          isEnglish={true}
         />
       </Provider>
     );

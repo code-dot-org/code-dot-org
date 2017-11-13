@@ -17,6 +17,7 @@ describe('Congrats', () => {
         <Congrats
           completedTutorialType="other"
           userType="signedOut"
+          isEnglish={true}
         />
       </Provider>
     );
@@ -30,10 +31,25 @@ describe('Congrats', () => {
         <Congrats
           completedTutorialType="other"
           userType="signedOut"
+          isEnglish={true}
         />
       </Provider>
     );
     expect(root.find('StudentsBeyondHoc').exists());
+  });
+
+  it('renders a TeachersBeyondHoc component, for teachers', () => {
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="teacher"
+          isEnglish={true}
+        />
+      </Provider>
+    );
+    expect(root.find('TeachersBeyondHoc').exists());
   });
 
   it('renders a TeachersBeyondHoc component, for signed out', () => {
@@ -43,6 +59,7 @@ describe('Congrats', () => {
         <Congrats
           completedTutorialType="other"
           userType="signedOut"
+          isEnglish={true}
         />
       </Provider>
     );
@@ -56,6 +73,7 @@ describe('Congrats', () => {
         <Congrats
           completedTutorialType="other"
           userType="student"
+          isEnglish={true}
         />
       </Provider>
     );

@@ -18,6 +18,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="applab"
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -30,6 +31,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="applab"
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -42,6 +44,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="pre2017Minecraft"
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -54,6 +57,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="pre2017Minecraft"
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -66,6 +70,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="2017Minecraft"
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -79,6 +84,7 @@ export default storybook => {
               completedTutorialType="2017Minecraft"
               MCShareLink="code.org/minecraft"
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -91,6 +97,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="other"
               userType="signedOut"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -103,6 +110,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="other"
               userType="student"
+              isEnglish={true}
             />
           </Provider>
         )
@@ -115,6 +123,7 @@ export default storybook => {
             <Congrats
               completedTutorialType="other"
               userType="teacher"
+              isEnglish={true}
             />
           </Provider>
         )
