@@ -290,5 +290,11 @@
   "weather": "veður",
   "weatherTypeClear": "heiðskírt",
   "weatherTypeRain": "regn",
-  "weatherTypeThunder": "þrumur"
+  "weatherTypeThunder": "þrumur",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool"
 }
