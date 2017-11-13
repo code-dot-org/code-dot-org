@@ -94,7 +94,7 @@ class VerticalImageResourceCard extends Component {
   };
 
   render() {
-    const { title, description, link, buttonText, isRtl, jumbo, MCShareLink } = this.props;
+    const { title, description, link, buttonText, isRtl, jumbo, MCShareLink, image } = this.props;
     const cardStyle = jumbo ? styles.jumboCard : styles.card;
     const imageStyle = jumbo ? styles.jumboImage : styles.image;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
@@ -118,6 +118,7 @@ class VerticalImageResourceCard extends Component {
     return (
       <div style={[cardStyle, localeStyle]}>
         <div style={imageStyle}/>
+          <img src={imgSrc}/>
         <div>
           <div style={[styles.text, styles.title, localeStyle]}>
             {title}
