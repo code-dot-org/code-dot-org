@@ -1765,23 +1765,19 @@ Artist.prototype.checkAnswer = function () {
   // Test whether the student can progress to the next level. There can be no
   // errors, and this either needs to be a free play/preidction level, or they
   // need to have met success conditions.
-  var levelComplete = (!level.editCode || !this.executionError) &&
+  this.levelComplete = (!level.editCode || !this.executionError) &&
       (level.freePlay ||
       this.studioApp_.hasContainedLevels ||
       this.isCorrect_(delta, permittedErrors));
-  this.testResults = this.studioApp_.getTestResults(levelComplete);
+  this.testResults = this.studioApp_.getTestResults(this.levelComplete);
 
-  var program;
-  if (this.studioApp_.isUsingBlockly()) {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
-  }
+  var program = this.getUserCode();
 
   // Make sure we don't reuse an old message, since not all paths set one.
   this.message = undefined;
 
   // In level K1, check if only lengths differ.
-  if (level.isK1 && !levelComplete && !this.studioApp_.editCode &&
+  if (level.isK1 && !this.levelComplete && !this.studioApp_.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
     this.testResults = TestResults.APP_SPECIFIC_ERROR;
@@ -1810,16 +1806,6 @@ Artist.prototype.checkAnswer = function () {
     }
   }
 
-  if (level.editCode) {
-    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-    // identical versions of the code on the service, we could do either of these:
-
-    // do an acorn.parse and then use escodegen to generate back a "clean" version
-    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-    program = this.studioApp_.editor.getValue();
-  }
-
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
@@ -1841,19 +1827,7 @@ Artist.prototype.checkAnswer = function () {
       this.onReportComplete();
     });
   } else {
-    var reportData = {
-      app: 'turtle',
-      level: level.id,
-      result: levelComplete,
-      testResult: this.testResults,
-      program: encodeURIComponent(program),
-      onComplete: _.bind(this.onReportComplete, this),
-      save_to_gallery: level.impressive
-    };
-
-    reportData = this.setReportDataImage_(level, reportData);
-
-    this.studioApp_.report(reportData);
+    this.report();
   }
 
   if (this.studioApp_.isUsingBlockly()) {
@@ -1862,6 +1836,46 @@ Artist.prototype.checkAnswer = function () {
   }
 
   // The call to displayFeedback() will happen later in onReportComplete()
+};
+
+Artist.prototype.getUserCode = function () {
+  if (this.studioApp_.isUsingBlockly()) {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    return Blockly.Xml.domToText(xml);
+  } else if (this.level.editCode) {
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+    return this.studioApp_.editor.getValue();
+  }
+};
+
+/**
+ * Send the milestone post, including level progress (result and testResults)
+ * and saved user code.
+ *
+ * @param {boolean} [enableOnComplete=true] whether or not to attach the
+ *        onComplete handler to the StudioApp.report call
+ */
+Artist.prototype.report = function (enableOnComplete = true) {
+  let reportData = {
+    app: 'turtle',
+    level: this.level.id,
+    result: this.levelComplete,
+    testResult: this.testResults,
+    program: encodeURIComponent(this.getUserCode()),
+    save_to_gallery: this.level.impressive
+  };
+
+  if (enableOnComplete) {
+    reportData.onComplete = this.onReportComplete.bind(this);
+  }
+
+  reportData = this.setReportDataImage_(this.level, reportData);
+
+  this.studioApp_.report(reportData);
 };
 
 /**
