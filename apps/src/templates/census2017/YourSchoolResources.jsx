@@ -44,7 +44,7 @@ class YourSchoolResources extends Component {
         </div>
         <div style={styles.card}>
           <ResourceCard
-            title={i18n.parents()}
+            title={i18n.parentsAndStudents()}
             description={i18n.yourSchoolParentDesc()}
             buttonText={i18n.yourSchoolParentButton()}
             link={pegasus('/help')}
