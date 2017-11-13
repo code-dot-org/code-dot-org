@@ -50,36 +50,35 @@ begin
     DB_READONLY[:forms].where("kind in (#{CENSUS_FORM_KINDS})").paged_each(rows_per_fetch: 10_000) do |form|
       # Skip any rows that were migrated to CENSUS_SUBMISSIONS since those were already processed above.
       form_map = DASHBOARD_DB[:census_submission_form_maps].where(form_id: form[:id])
-      if form_map.empty?
-        data = JSON.parse(form[:data])
+      next unless form_map.empty?
+      data = JSON.parse(form[:data])
 
-        # Was a pledge made?
-        pledged = ["on", "1"].any? {|s| s.casecmp(data["pledge_b"].to_s).zero?}
+      # Was a pledge made?
+      pledged = ["on", "1"].any? {|s| s.casecmp(data["pledge_b"].to_s).zero?}
 
-        # Does the school teach some kind of CS?
-        teaches_cs = ["some", "all"].any? {|s| s.casecmp(data["ten_hours_s"].to_s).zero?} ||
-                     ["some", "all"].any? {|s| s.casecmp(data["twenty_hours_s"].to_s).zero?}
+      # Does the school teach some kind of CS?
+      teaches_cs = ["some", "all"].any? {|s| s.casecmp(data["ten_hours_s"].to_s).zero?} ||
+          ["some", "all"].any? {|s| s.casecmp(data["twenty_hours_s"].to_s).zero?}
 
-        # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
-        next unless pledged || teaches_cs
+      # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
+      next unless pledged || teaches_cs
 
-        # Use the school ID in the form.
-        school_id = data["school_id_s"] || data["nces_school_s"]
+      # Use the school ID in the form.
+      school_id = data["school_id_s"] || data["nces_school_s"]
 
-        # Retrieve the ZIP and city for this school district from the dashboard's database.
-        school = DASHBOARD_DB[:schools].where(id: school_id).first
-        next unless school
+      # Retrieve the ZIP and city for this school district from the dashboard's database.
+      school = DASHBOARD_DB[:schools].where(id: school_id).first
+      next unless school
 
-        if pledged
-          type = "pledged"
-        else
-          type = "teaches_cs"
-        end
-
-        row_id = "FORMS-#{form[:id]}"
-        row = [row_id, school[:name], school[:zip], school[:city], type]
-        csv << row
+      if pledged
+        type = "pledged"
+      else
+        type = "teaches_cs"
       end
+
+      row_id = "FORMS-#{form[:id]}"
+      row = [row_id, school[:name], school[:zip], school[:city], type]
+      csv << row
     end
 
     if File.file?('cspschools.csv')
