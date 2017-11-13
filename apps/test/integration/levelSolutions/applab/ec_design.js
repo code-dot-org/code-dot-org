@@ -581,9 +581,8 @@ module.exports = {
         assertPropertyRowExists(3, 'x position (px)', assert);
         assertPropertyRowExists(4, 'y position (px)', assert);
         assertPropertyRowExists(5, 'image Choose...', assert);
-        assertPropertyRowExists(6, 'fit imagefillcovercontainnone', assert);
-        assertPropertyRowExists(7, 'hidden', assert);
-        assertPropertyRowExists(8, 'depth', assert);
+        assertPropertyRowExists(6, 'hidden', assert);
+        assertPropertyRowExists(7, 'depth', assert);
 
         // Make sure it's draggable
         var manipulator = newImage.parent();
@@ -872,6 +871,8 @@ module.exports = {
 
         assert(/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
         assert.equal(designImage.getAttribute('data-canonical-image-url'), '');
+        assert.equal(designImage.style.width, '100px', 'width is reset');
+        assert.equal(designImage.style.height, '100px', 'height is reset');
 
         Applab.onPuzzleComplete();
       },
