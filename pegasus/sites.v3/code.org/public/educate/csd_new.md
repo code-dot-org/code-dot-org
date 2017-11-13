@@ -40,30 +40,38 @@ If you are interested in joining in 2018-19, sign up below.
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
 
-[col-50]
+[col-33]
 
 [<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](/files/CSDiscoveries-Curriculum-Guide.pdf)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The  <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The  <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
-[/col-50]
+[/col-33]
 
-[col-50]
+[col-33]
 
 [<center><img src="/images/animated-examples/lessonplans_csd.png" width="90%">](https://curriculum.code.org/csd)</center>
 
 <div style="margin-left: 15px; margin-top: 5px;"><a href="https://curriculum.code.org/csd">Daily lesson plans</a> come with detailed instructions, activity guides, and assessments.</div>
 
-[/col-50]
+[/col-33]
+
+[col-33]
+
+[<center><img src="/images/csd/teacher_dashboard.png" width="100%">](https://studio.code.org/home)</center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Create and manage your classroom sections, as well as check student progress, administer assessments, and integrate with your Google or Clever classroom, all from your <a href="https://studio.code.org/home">Teacher Dashboard</a>.</div>
+
+[/col-33]
 
 <p style="clear:both"></p>
 <br>
 
 [col-33]
 
-[<center><img src="/images/WebLab.png" width="90%">](/weblab)</center>
+[<center><img src="/images/WebLab.png" width="100%">](/weblab)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Students learn to use HTML and CSS to design web pages in <a href="/weblab">Web Lab</a></div>
+<div style="margin-left: 15px; margin-top: 5px;">Students learn to use HTML and CSS to design their own web pages in <a href="/weblab">Web Lab</a>.</div>
 
 [/col-33]
 
@@ -71,7 +79,7 @@ If you are interested in joining in 2018-19, sign up below.
 
 [<center><img src="/images/animated-examples/tennis_jump.gif" width="90%">](/gamelab)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in <a href="/gamelab">Game Lab</a></div>
+<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in <a href="/gamelab">Game Lab</a>.</div>
 
 [/col-33]
 
@@ -79,7 +87,7 @@ If you are interested in joining in 2018-19, sign up below.
 
 [<center><img src="/images/animated-examples/circuitplayground.gif" width="90%">](/applab)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and <a href="/applab">App Lab</a></div>
+<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and <a href="/applab">App Lab</a>.</div>
 
 [/col-33]
 

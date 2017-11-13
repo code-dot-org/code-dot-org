@@ -37,6 +37,7 @@ export default class VerticalImageResourceCardRow extends Component {
                 buttonText={i18n.learnMore()}
                 link={card.link}
                 isRtl={isRtl}
+                image={card.image}
               />
             )
           )}
