@@ -79,7 +79,7 @@ def create_school_info(data, processed_data)
     attrs[:zip] = nil if attrs[:zip].to_i <= 0
   end
 
-  puts "Creatng school_info with attrs: #{attrs}" if @verbose
+  puts "Creating school_info with attrs: #{attrs}" if @verbose
 
   catcher = SchoolInfoCatcher.new
   if deduplicate_school_info(attrs, catcher)
