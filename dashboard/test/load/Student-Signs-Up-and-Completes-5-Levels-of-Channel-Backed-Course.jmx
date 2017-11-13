@@ -36,15 +36,6 @@
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
-        <stringProp name="TestPlan.comments">Log name of the server that requests will be sent to.</stringProp>
-        <stringProp name="scriptLanguage">groovy</stringProp>
-        <stringProp name="parameters"></stringProp>
-        <stringProp name="filename"></stringProp>
-        <stringProp name="cacheKey">ab888d5a-622a-451f-931c-3a4d68b32a7a</stringProp>
-        <stringProp name="script">log.info(&quot;Sending Load Test Requests to server name: &quot; + vars.get(&quot;serverName&quot;))</stringProp>
-      </JSR223PreProcessor>
-      <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
@@ -87,7 +78,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">users/sign_up</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -294,7 +285,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">users.json</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -369,7 +360,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/hidden_stages</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -432,7 +423,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">api/user_progress/csd2</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -491,7 +482,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/next.next</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -547,7 +538,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/stage/1/puzzle/2</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -560,7 +551,6 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          <stringProp name="TestPlan.comments">The response to this request contains the milestone POST URL in javascript logic that will have to be parsed with a regex.  Skipping the milestone post for this request.</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
@@ -649,7 +639,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -712,7 +702,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/stage/2/puzzle/1</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -814,7 +804,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -877,7 +867,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/stage/2/puzzle/2</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -978,7 +968,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1041,7 +1031,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/stage/3/puzzle/1</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1142,7 +1132,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1205,7 +1195,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/stage/3/puzzle/2</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1273,25 +1263,25 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             <stringProp name="JSONPostProcessor.defaultValues">milestoneURLNotFound</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get level id" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">levelId</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">serverLevelId</stringProp>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - get channel" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">channel</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">channel</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="Sample.scope">variable</stringProp>
             <stringProp name="Scope.variable">JSONDataOnCourseLevelPage</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">levelIdNotFound</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">channelNotFound</stringProp>
           </JSONPostProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/6D9dvPqAVq_wnE_ADD-jFw" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/:channel" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/channels/6D9dvPqAVq_wnE_ADD-jFw</stringProp>
+          <stringProp name="HTTPSampler.path">v3/channels/${channel}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1338,15 +1328,15 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/6D9dvPqAVq_wnE_ADD-jFw/abuse" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/:channel/abuse" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/channels/6D9dvPqAVq_wnE_ADD-jFw/abuse</stringProp>
+          <stringProp name="HTTPSampler.path">v3/channels/${channel}/abuse</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1393,15 +1383,15 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/6D9dvPqAVq_wnE_ADD-jFw/sharing_disabled" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/:channel/sharing_disabled" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/channels/6D9dvPqAVq_wnE_ADD-jFw/sharing_disabled</stringProp>
+          <stringProp name="HTTPSampler.path">v3/channels/${channel}/sharing_disabled</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1448,15 +1438,15 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/files/6D9dvPqAVq_wnE_ADD-jFw" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/files/:channel" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/files/6D9dvPqAVq_wnE_ADD-jFw</stringProp>
+          <stringProp name="HTTPSampler.path">v3/files/${channel}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1499,7 +1489,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/files/6D9dvPqAVq_wnE_ADD-jFw/index.html" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/files/:channel/index.html" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -1512,9 +1502,9 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/files/6D9dvPqAVq_wnE_ADD-jFw/index.html</stringProp>
+          <stringProp name="HTTPSampler.path">v3/files/${channel}/index.html</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1561,7 +1551,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/files/6D9dvPqAVq_wnE_ADD-jFw/index.html?files-version=zvH2RJZJYJZmYjh4MHx4IWNWppywg0Wz" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/files/:channel/index.html?files-version=zvH2RJZJYJZmYjh4MHx4IWNWppywg0Wz" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -1574,9 +1564,9 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/files/6D9dvPqAVq_wnE_ADD-jFw/index.html?files-version=zvH2RJZJYJZmYjh4MHx4IWNWppywg0Wz</stringProp>
+          <stringProp name="HTTPSampler.path">v3/files/${channel}/index.html?files-version=zvH2RJZJYJZmYjh4MHx4IWNWppywg0Wz</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1623,7 +1613,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/sources/6D9dvPqAVq_wnE_ADD-jFw/main.json" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/sources/:channel/main.json" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -1636,9 +1626,9 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/sources/6D9dvPqAVq_wnE_ADD-jFw/main.json</stringProp>
+          <stringProp name="HTTPSampler.path">v3/sources/${channel}/main.json</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1693,7 +1683,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/6D9dvPqAVq_wnE_ADD-jFw" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/v3/channels/:channel" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -1706,9 +1696,9 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">v3/channels/6D9dvPqAVq_wnE_ADD-jFw</stringProp>
+          <stringProp name="HTTPSampler.path">v3/channels/${channel}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1826,7 +1816,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">${milestoneURL}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1889,7 +1879,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">s/csd2/stage/3/puzzle/3</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
