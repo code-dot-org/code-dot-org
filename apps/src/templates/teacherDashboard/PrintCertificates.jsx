@@ -4,14 +4,21 @@ import $ from 'jquery';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from "../../util/color";
 
+const STANDARD_PADDING = 20;
+
 const styles = {
   main: {
     margin: 0
   },
   actionText: {
-    fontSize: 14,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal,
+    fontSize: 13,
+    color: color.dark_charcoal,
+    paddingLeft: STANDARD_PADDING,
+    paddingRight: STANDARD_PADDING,
+    cursor: 'pointer',
+    ':hover': {
+      backgroundColor: color.lightest_gray,
+    }
   },
 };
 
