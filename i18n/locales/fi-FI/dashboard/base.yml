@@ -756,7 +756,7 @@ fi:
       applab: "Sovelluksien laboratorio"
       gamelab: "Pelilabra"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Nimeä uudelleen"
     save: "Tallenna"
     delete: "Poista"

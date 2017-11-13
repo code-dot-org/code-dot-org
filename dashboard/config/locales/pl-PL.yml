@@ -1015,7 +1015,7 @@
       applab: App Lab
       gamelab: Laboratorium Gier (Game Lab)
       weblab: Laboratorium Sieci (beta)
-    new_buttons_header: 'Start a new project:'
+    new_buttons_header: 'Utwórz nowy projekt:'
     rename: Zmień nazwę
     save: Zapisz
     delete: Usuń

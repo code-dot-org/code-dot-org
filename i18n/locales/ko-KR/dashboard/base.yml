@@ -46,7 +46,7 @@ ko:
       label: '선생님 추가:'
       placeholder: "섹션 코드(ABCDEF)"
       instructions: "당신의 선생님과 공유하고 있는 문자를 입력해주세요. 그 문자는 \"ABCDEF\" 와 같은 6개의 영어 문자입니다."
-      instructions_short: "Enter your 6 letter section code"
+      instructions_short: "6자리의 섹션 코드를 입력하세요."
     submit: '선생님 추가하기'
   add_hint_form:
     placeholder: '도움내용을 입력하세요.'
@@ -756,7 +756,7 @@ ko:
       applab: "앱 연구실"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "새 프로젝트를 시작"
     rename: "이름 바꾸기"
     save: "저장"
     delete: "삭제"

@@ -756,7 +756,7 @@ zh-TW:
       applab: "App Lab"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "開始一個新專案"
     rename: "重新命名"
     save: "儲存"
     delete: "删除"

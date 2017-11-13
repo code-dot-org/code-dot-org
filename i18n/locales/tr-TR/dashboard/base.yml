@@ -753,7 +753,7 @@ tr:
       applab: "App Laboratuvarı"
       gamelab: "Oyun Laboratuvarı"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Yeni bir proje başlat"
     rename: "Yeniden adlandır"
     save: "Kaydet"
     delete: "Sil"

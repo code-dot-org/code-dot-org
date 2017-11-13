@@ -750,7 +750,7 @@ es-MX:
       applab: "Laboratorio de App"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Renombrar"
     save: "Guardar"
     delete: "Borrar"

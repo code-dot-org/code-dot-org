@@ -4376,6 +4376,9 @@
         się tym!
       New Infinity Project_instruction: Utwórz cokolwiek, co Ci się podoba, i podziel
         się tym!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -8250,9 +8253,10 @@
         all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Sprawdź, czy pod chmurką jest
         kwiat. Jeśli jest, zbierz nektar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

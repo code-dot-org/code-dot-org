@@ -3937,12 +3937,12 @@
         "køyr" og bruk piltastane for å bevege spelaren ut av huset for å kome til
         kista. '
       MC_HOC_2017_02_instruction: Få agenten til trykkplata.
-      MC_HOC_2017_02_Cole_instruction: 'Beveg agenten til trykkplaten slik at {currentPlayerName}
+      MC_HOC_2017_02_Cole_instruction: 'Flytt agenten til trykkplata slik at {currentPlayerName}
         kan komme til kartet. '
       MC_HOC_2017_02_Kiki_instruction: Få agenten til trykkplata og få så spelaren
         til den oransje firkanten.
       MC_HOC_2017_02_Will_instruction: Få agenten til trykkplata.
-      MC_HOC_2017_03_Cole_instruction: 'Programmer agenten til å åpne porten. '
+      MC_HOC_2017_03_Cole_instruction: 'Programmer agenten til å opne porten. '
       MC_HOC_2017_03_Kiki_instruction: Få agenten til trykkplata.
       MC_HOC_2017_04_instruction: Forandre løkka frå den siste gåta for å hjelpe agenten
         til å lage ein bane over den breiaste delen av elva.
@@ -4345,6 +4345,9 @@
       New Gumball Project_instruction: Lag det du har lyst til og del med andre!
       New Ice Age Project_instruction: Lag det du har lyst til og del med andre!
       New Infinity Project_instruction: Lag det du har lyst til og del med andre!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: 'Lag ditt eiget spel! Du bestemmer: Du kan endre
         på alle reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er
         ferdig, trykk "Fullført" for å la venene dine prøve det på sine telefonar.'
@@ -8199,9 +8202,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

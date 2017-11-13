@@ -2005,8 +2005,8 @@
         **Stuck?
         Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 7 - thisOrThatPersonalize_markdown_instruction: |-
-        <img src="https://images.code.org/762507aef26d512f820c42fb2e7fc6f1-image-1508386296370.11.19
-        PM.png" style="float:right;height:200px">\r
+        <img src="https://images.code.org/fe6ff9b7605128f999e727487d87908b-image-1510169816629.35.34
+        AM.png" style="float:right;height:200px">\r
         \r
         **Goal:** Start building
         your own "Choose Your Own Adventure" app. Don't forget to "Share" it
@@ -15101,6 +15101,10 @@
         [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
         *
         You can also download a CSV version of the file [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
+      CSD U5 Waze Data Video_markdown_instruction: |-
+        Watch this video to learn how
+        this problem is solved by Waze. As you watch think about what data is being
+        collected and where it's coming from.
       CSD U5 binary 1_markdown_instruction: |-
         # 5-Bit Number\r
         \r
@@ -15701,7 +15705,7 @@
         </div>\r
         \r
         Create
-        and event handler for "sad_button" and make it change to a sad emoji.\r
+        an event handler for "sad_button" and make it change to a sad emoji.\r
         \r
         *
         Drag out an `onEvent` block and select "sad_button" from the id dropdown\r
@@ -15784,13 +15788,61 @@
         *
         Modify the line of code that makes the buzzer sound so that it uses the `frequency`
         variable rather than the default frequency of `500`.
+      CSD U6 game project board events_markdown_instruction: |-
+        # Board Events\r
+        \r
+        Go
+        back to the Events section of your activity guide and find any events that
+        respond to your board (ones that would use `onBoardEvent()`). Create event
+        handlers for each of those now. If these events rely on functions you haven't
+        written yet, just leave yourself a comment in the code.
+      CSD U6 game project finish_markdown_instruction: |-
+        # Finishing Touches and Testing\r
+        \r
+        At
+        this point you should have most of your program in place. Now you need to
+        add whatever finishing touches are needed and do a little testing. When your
+        app is ready, have your classmates try it out. See if you can find any bugs,
+        confusing design choices, or missing features you'd like to work on.\r
+        \r
+        Once
+        you're all down with this version of your program, click Submit to turn it
+        in.
+      CSD U6 game project functions call_markdown_instruction: |-
+        # Calling your Functions\r
+        \r
+        With
+        your functions defined, you can can call them wherever you need. Go through
+        your event handlers, or anywhere else in your program that your function should
+        be used, and add calls to the function you created.
+      CSD U6 game project functions define_markdown_instruction: |-
+        # Define Your Functions\r
+        \r
+        Define
+        all of your functions at the bottom of the program, under the comment `//
+        Create your functions here`.\r
+        \r
+        Right now we're only worrying about writing
+        the function _definitions_, the part which looks like:\r
+        \r
+        ```\r
+        function
+        myFunction() {\r
+        \t// Things my function does\r
+        }\r
+        ```
       CSD U6 game project screen links_markdown_instruction: |-
-        # Design Element Events\r
+        # UI Element Events\r
         \r
         Now
         that all of your screens are designed, you can add any event handlers that
-        will respond to screen interaction. Remember, you create event handlers for
-        design elements using the `onEvent()` block.
+        will respond to _screen interaction_. These should be listed in the "Events"
+        section of your activity guide. If you run into new events that you hadn't
+        thought of in the planning stage, make sure you add them to your project guide.\r
+        \r
+        Don't
+        worry about making these completely functional yet. If your events rely on
+        board elements or your own functions, we'll take care of that in later levels.
       CSD U6 game project screens_markdown_instruction: |-
         # Create Your Screens\r
         \r
@@ -16138,7 +16190,7 @@
         It's
         not really useful to only set a property when your program is run. After all,
         you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty` you're able to do things you couldn't do with Design
+        with `setProperty`, you're able to do things you couldn't do with Design
         Mode alone.\r
         \r
         # Do This\r
@@ -16173,7 +16225,7 @@
         \r
         Every
         design element (except for the screen) has an "x" and a "y" property that
-        control their position.\r
+        controls its position.\r
         \r
         # Do This\r
         \r
@@ -36171,6 +36223,9 @@
         Students
         connect directly to one another and send entire packets back and forth, exploring
         systems of encoding data.
+      New Minecraft Hero Project_markdown_instruction: |-
+        **Freeplay:** Now it's up
+        to you! Use the Agent's code to help you explore this world.
       Nike Example Brand Book_markdown_instruction: |
         # Brand Book\r
         \r
@@ -36708,7 +36763,7 @@
         Something happened
         to the bits in this image!  Find error and fix it!  Hint: a few extra bits
         were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_markdown_instruction: |
+      Pixelation - Lesson 14 - Make the Letter A_markdown_instruction: |-
         <img align="right"
         src="https://code.org/images/cspunit1/letterA.png" width="150" hspace="20">\r
         #
@@ -36717,9 +36772,9 @@
         "A" depicted (at right) using the pixelation widget. \r
         \r
         The image is
-        intially setup with the *incorrect* dimensions. Your first task is to set
+        initially setup with the *incorrect* dimensions. Your first task is to set
         the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start
-        entering pixel data to make the A.\r
+        entering pixel data to make the A.
       Pixelation - Lesson 14 - Make your own B and W Image_markdown_instruction: |
         #
         Make your own image of any size\r
@@ -63395,6 +63450,15 @@
         *once*.  \r
         \r
         Remember: Not all clouds hide the same thing!
+      courseD_bee_conditionals2_test_markdown_instruction: |-
+        More clouds! \r
+        \r
+        Check
+        underneath every cloud to see if it is hiding a flower before you get nectar.
+        If there is a flower underneath the cloud, the bee will need to get nectar
+        *once*.  \r
+        \r
+        Remember: Not all clouds hide the same thing!
       courseD_bee_conditionals3_markdown_instruction: |-
         You can only collect nectar
         from flowers, but you can check any space to see if there is a flower. If
@@ -67536,7 +67600,7 @@
         <br>\r
         \r
         In this lesson we talked about
-        top-down design for building up solutions to larger programming problems.  Plan
+        how to build up solutions to larger programming problems with functions.  Plan
         the code that you would use to draw this image (shown at right). Describe
         each of the functions that you would create. You should not write all the
         code, only the names of the functions that you would create with a brief description

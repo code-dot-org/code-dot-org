@@ -13,7 +13,7 @@ bg:
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Click and drag a "Text Area" onto the screen
+        dragTextAreaIn: Щракнете и плъзнете "Текст зона" на екрана
         screenSelectorCallout3: Pick the screen you made
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: This is the screen selector
@@ -474,7 +474,7 @@ bg:
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but Steve and Alex can''t!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
@@ -798,6 +798,9 @@ bg:
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
+        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
       courseD_bee_conditionals_challenge3_callout:

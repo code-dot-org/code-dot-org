@@ -691,8 +691,8 @@
     notes_coming_soon: Le note testuali per questo video sono in corso di preparazione.
     autoplay_option: Avvia automaticamente i video
     download: Scarica il video
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Mostra le spiegazioni
+    show_video: Mostra il video
   compatibility:
     upgrade:
       unsupported_message: Il tuo browser non è supportato. Si prega di aggiornare
@@ -1021,7 +1021,7 @@
       applab: Sviluppo App
       gamelab: Sviluppo Giochi
       weblab: Sviluppo Web (versione provvisoria)
-    new_buttons_header: 'Start a new project:'
+    new_buttons_header: 'Inizia un nuovo progetto:'
     rename: Rinomina
     save: Salva
     delete: Elimina
@@ -1265,8 +1265,8 @@
     il momento di lavorarci su o revisionare le tue risposte.
   hidden_stage: Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla
     tuo/a insegnante su quale lezione dovresti essere.
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
+  hidden_script: Il tuo insegnante non si aspettava che tu sia qui. Per favore, chiedigli
+    in quale lezione dovresti essere.
   return_unit_overview: Go to unit overview
   return_course_overview: Vai alla visualizzazione delle unità
   view_all_units: View all units
