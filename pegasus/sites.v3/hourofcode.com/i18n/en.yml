@@ -1208,7 +1208,7 @@
   tutorial_ozoprogram_shortdescription: "Students without robots can discover how to program them with Ozobot Games."
   tutorial_ozopair_shortdescription: "Students learn about Pair Programming roles, then work together to program Bit or Evo by Ozobot to complete a maze."
   tutorial_codesnoopy_shortdescription: "Code to win in Snoopy Snow Brawl - who will be the last scout standing?"
-  tutorial_applabinto_shortdescription: "Create your own app in JavaScript using blocks or text."
+  tutorial_applabintro_shortdescription: "Create your own app in JavaScript using blocks or text."
 
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
