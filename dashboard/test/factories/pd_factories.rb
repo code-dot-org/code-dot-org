@@ -684,12 +684,4 @@ FactoryGirl.define do
     course 'csp'
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
   end
-
-  factory :csd_pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
-    association :user, factory: :teacher, strategy: :create
-    transient do
-      form_data_hash {build :pd_teacher1819_application_hash, :with_csd_specific_fields}
-    end
-    form_data {form_data_hash.to_json}
-  end
 end
