@@ -29,6 +29,7 @@ export default class StudentsBeyondHoc extends Component {
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
     signedIn: PropTypes.bool.isRequired,
+    isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {

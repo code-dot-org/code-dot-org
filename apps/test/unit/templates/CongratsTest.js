@@ -10,6 +10,7 @@ describe('Congrats', () => {
         completedTutorialType="other"
         isRtl={false}
         userType="signedOut"
+        isEnglish={true}
       />
     );
     expect(wrapper.find('Certificate').exists()).to.be.true;
@@ -22,6 +23,7 @@ describe('Congrats', () => {
         isRtl={false}
         signedIn={false}
         userType="signedOut"
+        isEnglish={true}
       />
     );
     expect(wrapper.find('StudentsBeyondHoc').exists()).to.be.true;
@@ -33,6 +35,7 @@ describe('Congrats', () => {
         completedTutorialType="other"
         isRtl={false}
         userType="teacher"
+        isEnglish={true}
       />
     );
     expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.true;
@@ -44,6 +47,7 @@ describe('Congrats', () => {
         completedTutorialType="other"
         isRtl={false}
         userType="signedOut"
+        isEnglish={true}
       />
     );
     expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.true;
@@ -55,6 +59,7 @@ describe('Congrats', () => {
         completedTutorialType="other"
         isRtl={false}
         userType="student"
+        isEnglish={true}
       />
     );
     expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.false;

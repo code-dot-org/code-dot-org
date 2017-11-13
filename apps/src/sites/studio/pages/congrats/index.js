@@ -12,6 +12,7 @@ $(document).ready(function () {
   const script = document.querySelector('script[data-congrats]');
   const congratsData = JSON.parse(script.dataset.congrats);
   const userType = congratsData.current_user ? congratsData.current_user.user_type : "signedOut";
+  const isEnglish = congratsData.english;
 
   ReactDOM.render(
     <Provider store={store}>
@@ -19,6 +20,7 @@ $(document).ready(function () {
         completedTutorialType="other"
         isRtl={isRtl}
         userType={userType}
+        isEnglish={isEnglish}
       />
     </Provider>,
     document.getElementById('congrats-container')
