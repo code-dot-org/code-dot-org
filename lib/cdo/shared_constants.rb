@@ -66,6 +66,7 @@ module SharedConstants
     infinity
     minecraft_adventurer
     minecraft_designer
+    minecraft_hero
     starwars
     starwarsblocks_hour
     flappy
