@@ -8,9 +8,7 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import {ICON_PREFIX_REGEX} from '../constants';
-import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
-import {applabObjectFitImages} from '../applabObjectFitImages';
 
 class ImageProperties extends React.Component {
   static propTypes = {
@@ -78,12 +76,6 @@ class ImageProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'picture')}
         />
         {iconColorPicker}
-        <EnumPropertyRow
-          desc={'fit image'}
-          initialValue={element.style.objectFit || 'fill'}
-          options={['fill','cover','contain','none']}
-          handleChange={this.props.handleChange.bind(this, 'objectFit')}
-        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -147,17 +139,6 @@ class ImageEvents extends React.Component {
   }
 }
 
-function setObjectFitStyles(element, value) {
-  // NOTE: neither of these will be saved (we strip these out when we serialize
-  // and rely on our custom data-object-fit attribute during save/load)
-
-  // Set a style for modern browsers:
-  element.style.objectFit = value;
-
-  // Set a style that will be picked up by objectFitImages() for old browsers:
-  element.style.fontFamily = `'object-fit: ${value};'`;
-  applabObjectFitImages(element);
-}
 
 export default {
   PropertyTab: ImageProperties,
@@ -170,11 +151,6 @@ export default {
     element.setAttribute('src', '/blockly/media/1x1.gif');
     element.setAttribute('data-canonical-image-url', '');
 
-    // New elements are created with 'contain', but the default value for
-    // existing (unadorned) images is 'fill' for compatibility reasons
-    element.setAttribute('data-object-fit', 'contain');
-    setObjectFitStyles(element, 'contain');
-
     return element;
   },
   onDeserialize: function (element, updateProperty) {
@@ -184,29 +160,6 @@ export default {
     } else {
       element.setAttribute('src', '/blockly/media/1x1.gif');
       element.setAttribute('data-canonical-image-url', '');
-    }
-    const objectFitValue = element.getAttribute('data-object-fit');
-    if (objectFitValue) {
-      setObjectFitStyles(element, objectFitValue);
-    }
-  },
-  onPropertyChange: function (element, name, value) {
-    switch (name) {
-      case 'objectFit':
-        element.setAttribute('data-object-fit', value);
-        setObjectFitStyles(element, value);
-        break;
-      default:
-        return false;
-    }
-    return true;
-  },
-  readProperty: function (element, name) {
-    switch (name) {
-      case 'objectFit':
-        return element.getAttribute('data-object-fit');
-      default:
-        throw `unknown property name ${name}`;
     }
   }
 };

@@ -19,7 +19,6 @@ export default class DesignToolbox extends React.Component {
         width: 270,
         boxSizing: 'border-box',
         borderRight: '1px solid gray',
-        overflowY: 'scroll',
         padding: 10
     };
 
