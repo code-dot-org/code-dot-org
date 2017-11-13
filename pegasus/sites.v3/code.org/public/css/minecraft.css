@@ -10,8 +10,12 @@
 }
 
 .mc-new-tag {
-  float: right;
-  margin-bottom: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 98px;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .new-mc {
@@ -27,10 +31,6 @@
   width: 478px;
 }
 
-.mc-new-tag {
-  width: 100px;
-}
-
 .white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
   color: white;
 }
@@ -41,6 +41,49 @@
   text-decoration: underline;
 }
 
+.mc-store {
+  width: 478px;
+  height: 360px;
+  background-color: #0094ca;
+  color: white;
+  float: left;
+  padding: 0 20px;
+}
+
+.mc-host-event {
+  width: 478px;
+  height: 360px;
+  background-color: #b9bf15;
+  color: white;
+  float: right;
+  padding: 0 20px;
+}
+
+.mc-continue-learning {
+  width: 478px;
+  height: 360px;
+  background-color: #7665a0;
+  color: white;
+  margin-top: 15px;
+  font-size: 14px;
+  float: left;
+  padding: 0 20px;
+}
+
+.mc-future {
+  width: 478px;
+  height: 360px;
+  background-color: #00adbc;
+  margin-top: 15px;
+  color: white;
+  float: right;
+  padding: 0 20px;
+}
+
+.mc-videos {
+  margin-top: 20px;
+}
+
 .padded-button {
   margin-top: 22px;
 }
@@ -48,13 +91,25 @@
 @media screen and (min-width: 971px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 218px;
+    right: 0;
     top: 0;
-    height: 307px;
+    bottom: 0;
   }
 
   .mc-tutorial-details {
     margin-top: 100px;
+  }
+
+  .mc-img-wide {
+    width: 100%;
+  }
+
+  .mc-img-narrow {
+    display: none;
+  }
+
+  .mc-tutorial-info-wide {
+    width: 360px;
   }
 }
 
@@ -67,6 +122,15 @@
     width: 100%;
   }
 
+  .mc-store {
+    margin-bottom: 15px;
+  }
+
+  .mc-host-event, .mc-youth-spark, .mc-store {
+    padding-bottom: 15px;
+    height: auto;
+  }
+
   .responsive-padding {
     padding: 10px;
   }
@@ -75,9 +139,9 @@
 @media screen and (min-width: 513px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 228px;
+    right: 0;
     top: 0;
-    height: 307px;
+    bottom: 0;
   }
 
   .tutorial-box {
@@ -86,6 +150,14 @@
 
   .mc-tutorial-details {
     margin-top: 100px;
+  }
+
+  .mc-img-wide {
+    display: none;
+  }
+
+  .mc-img-narrow {
+    display: block;
   }
 }
 
@@ -108,7 +180,7 @@
     background-size: 605px 100px;
   }
 
-  .mc-img {
+  .mc-img, .mc-img-wide {
     display: none;
   }
 
