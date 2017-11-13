@@ -1045,6 +1045,14 @@ Artist.prototype.execute = function () {
 
   // api.log now contains a transcript of all the user's actions.
 
+  // If this is a free play level, save the code every time the run button is
+  // clicked rather than only on finish
+  if (this.level.freePlay) {
+    this.levelComplete = true;
+    this.testResults = TestResults.FREE_PLAY;
+    this.report(false);
+  }
+
   if (this.shouldSupportNormalization()) {
     // First, draw a normalized version of the user's actions (ie, one which
     // doesn't vary patterns or stickers) to a dedicated context. Note that we
