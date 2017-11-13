@@ -13,6 +13,8 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink=""
         responsive={responsive}
         isRtl={false}
+        signedIn={false}
+        isEnglish={true}
       />
     );
     expect(wrapper.find('VerticalImageResourceCardRow').exists()).to.be.true;
@@ -26,6 +28,8 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink="code.org/minecraft/sharelink"
         responsive={responsive}
         isRtl={false}
+        signedIn={false}
+        isEnglish={true}
       />
     );
     expect(wrapper.find('CourseBlocksStudentGradeBands').exists()).to.be.true;
@@ -39,6 +43,8 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink="code.org/minecraft/sharelink"
         responsive={responsive}
         isRtl={false}
+        signedIn={false}
+        isEnglish={true}
       />
     );
     expect(wrapper.find('LocalClassActionBlock').exists()).to.be.true;

@@ -8,11 +8,11 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 
 export default class Summary extends React.Component {
-static propTypes = {
-  route: PropTypes.shape({
+  static propTypes = {
+    route: PropTypes.shape({
       regionalPartnerName: PropTypes.string.isRequired
     })
-}
+  }
 
   static contextTypes = {
     router: PropTypes.object.isRequired
