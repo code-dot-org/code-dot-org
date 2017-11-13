@@ -29,3 +29,5 @@ CREATE TABLE analysis.quarterly_workshop_attendance AS
   'Unit 6: Physical Computing')
   GROUP BY 1,2;
 
+GRANT ALL PRIVILEGES ON analysis.quarterly_workshop_attendance TO GROUP admin;
+GRANT SELECT ON analysis.quarterly_workshop_attendance TO GROUP reader, GROUP reader_pii;

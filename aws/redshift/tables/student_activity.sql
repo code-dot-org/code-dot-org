@@ -21,3 +21,6 @@ CREATE table analysis.student_activity AS
     JOIN dashboard_production_pii.users u_students
       ON u_students.id = us.user_id AND u_students.user_type = 'student'
   GROUP BY 1;
+
+GRANT ALL PRIVILEGES ON analysis.student_activity TO GROUP admin;
+GRANT SELECT ON analysis.student_activity TO GROUP reader, GROUP reader_pii;
