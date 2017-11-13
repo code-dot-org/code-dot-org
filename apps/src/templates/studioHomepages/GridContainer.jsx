@@ -18,7 +18,7 @@ const GridContainer = React.createClass({
     numColumns: PropTypes.number.isRequired,
     children: PropTypes.arrayOf(React.PropTypes.node),
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    responsive: PropTypes.instanceOf(Responsive)
   },
 
   render() {
@@ -28,7 +28,9 @@ const GridContainer = React.createClass({
     const nonResponsiveWidthPercent = 100 / numColumns;
 
     // Then determine the percentage string for each item.
-    const itemWidth = responsive.getResponsiveValue({lg: `${nonResponsiveWidthPercent}%` , md: '100%'});
+    const itemWidth = responsive ?
+      responsive.getResponsiveValue({lg: `${nonResponsiveWidthPercent}%` , md: '100%'}) :
+      `${nonResponsiveWidthPercent}%`;
 
     const itemStyle = isRtl ? styles.itemRtl : styles.item;
 
