@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import color from "../../util/color";
-import {sortableSectionShape} from "./shapes.jsx";
+import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
 import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 import {pegasus} from "../../lib/util/urlHelpers";
@@ -12,6 +12,10 @@ import {sectionCode,
 import * as utils from '../../utils';
 import {connect} from 'react-redux';
 import PrintCertificates from "./PrintCertificates";
+import FontAwesome from '../FontAwesome';
+import BaseDialog from '../BaseDialog';
+import Button from '../Button';
+import DialogFooter from "./DialogFooter";
 
 const styles = {
   actionButton:{
@@ -34,6 +38,9 @@ const styles = {
     paddingRight: 5,
     color: color.white,
   },
+  xIcon: {
+    paddingRight: 5,
+  },
 };
 
 class SectionActionDropdown extends Component {
@@ -51,6 +58,7 @@ class SectionActionDropdown extends Component {
 
   state = {
     selected: false,
+    deleting: false,
     open: false,
     canOpen: true,
     menuTop: 0, // location of dropdown menu
@@ -176,22 +184,58 @@ class SectionActionDropdown extends Component {
             sectionId={sectionData.id}
             assignmentName={sectionData.assignmentNames[0]}
           />
-          <PopUpMenu.Item
-            onClick={this.onClickSync}
-          >
-            {i18n.syncClever()}
-          </PopUpMenu.Item>
-          <PopUpMenu.Item
-            onClick={this.onClickSync}
-          >
-            {i18n.syncGoogleClassroom()}
-          </PopUpMenu.Item>
+          {sectionData.loginType === OAuthSectionTypes.clever &&
+            <PopUpMenu.Item
+              onClick={this.onClickSync}
+            >
+              {i18n.syncClever()}
+            </PopUpMenu.Item>
+          }
+          {sectionData.loginType === OAuthSectionTypes.google_classroom &&
+            <PopUpMenu.Item
+              onClick={this.onClickSync}
+            >
+              {i18n.syncGoogleClassroom()}
+            </PopUpMenu.Item>
+          }
           <PopUpMenu.Item
             onClick={this.onClickHideShow}
           >
             {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
           </PopUpMenu.Item>
+          {sectionData.studentCount === 0 &&
+            <PopUpMenu.Item
+              onClick={this.onRequestDelete}
+              color={color.red}
+            >
+              <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+              {i18n.deleteSection()}
+            </PopUpMenu.Item>
+          }
         </PopUpMenu>
+        <BaseDialog
+          useUpdatedStyles
+          uncloseable
+          isOpen = {this.state.deleting}
+          style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
+        >
+          <h2>{i18n.deleteSection()}</h2>
+          <div>{i18n.deleteSectionConfirm()}</div>
+          <br/>
+          <div>{i18n.deleteSectionHideSuggestion()}</div>
+          <DialogFooter>
+            <Button
+              text={i18n.dialogCancel()}
+              onClick={() => {this.setState({deleting: false});}}
+              color="gray"
+            />
+            <Button
+              text={i18n.delete()}
+              onClick={this.onConfirmDelete}
+              color="red"
+            />
+          </DialogFooter>
+        </BaseDialog>
       </span>
     );
   }
