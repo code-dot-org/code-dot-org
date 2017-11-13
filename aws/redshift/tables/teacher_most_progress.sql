@@ -33,3 +33,5 @@ FROM (
    ) 
    WHERE student_rank = 1;
 
+GRANT ALL PRIVILEGES ON analysis.teacher_most_progress TO GROUP admin;
+GRANT SELECT ON analysis.teacher_most_progress TO GROUP reader, GROUP reader_pii;

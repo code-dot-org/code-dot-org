@@ -44,3 +44,6 @@ create table analysis_pii.regional_partner_stats AS
          ON tmp.user_id = d.user_id
   LEFT JOIN analysis.student_activity sa 
          ON sa.user_id = d.user_id;
+
+GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats TO GROUP admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats TO GROUP reader_pii;

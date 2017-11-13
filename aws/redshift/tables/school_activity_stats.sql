@@ -59,3 +59,6 @@ CREATE table analysis.school_activity_stats AS
                WHERE course = 'CS Fundamentals') csf_pd 
            ON csf_pd.user_id = u.id
   GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12;
+
+GRANT ALL PRIVILEGES ON analysis.school_activity_stats TO GROUP admin;
+GRANT SELECT ON analysis.school_activity_stats TO GROUP reader, GROUP reader_pii;

@@ -67,3 +67,5 @@ CREATE table analysis.outreach_stats_by_year AS
   AND   ug.state IS NOT NULL
   GROUP BY 1,2,3,4;
 
+GRANT ALL PRIVILEGES ON analysis.outreach_stats_by_year TO GROUP admin;
+GRANT SELECT ON analysis.outreach_stats_by_year TO GROUP reader, GROUP reader_pii;
