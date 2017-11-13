@@ -12,7 +12,7 @@ import "react-select/dist/react-select.css";
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import {TeacherApplicationStatuses, FacilitatorApplicationStatuses} from './constants';
+import {ApplicationStatuses} from './constants';
 import {
   Button,
   FormGroup,
@@ -80,7 +80,7 @@ export default class QuickView extends React.Component {
       });
     });
 
-    const statusList = (this.props.route.viewType === 'facilitator') ? FacilitatorApplicationStatuses : TeacherApplicationStatuses;
+    const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
     this.statuses.unshift({value: null, label: "\u00A0"});
   }

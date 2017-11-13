@@ -39,26 +39,24 @@ exports.StatusColors = {
 };
 
 /**
- * Valid statuses for Teacher Applications.
+ * Valid statuses for Applications.
  */
-exports.TeacherApplicationStatuses = [
-  'Unreviewed',
-  'Pending',
-  'Waitlisted',
-  'Accepted',
-  'Declined',
-  'Withdrawn'
-];
-
-/**
- * Valid statuses for Facilitator Applications.
- */
-exports.FacilitatorApplicationStatuses = [
-  'Unreviewed',
-  'Pending',
-  'Interview',
-  'Waitlisted',
-  'Accepted',
-  'Declined',
-  'Withdrawn'
-];
+exports.ApplicationStatuses = {
+  'teacher': [
+    'Unreviewed',
+    'Pending',
+    'Waitlisted',
+    'Accepted',
+    'Declined',
+    'Withdrawn'
+  ],
+  'facilitator': [
+    'Unreviewed',
+    'Pending',
+    'Interview',
+    'Waitlisted',
+    'Accepted',
+    'Declined',
+    'Withdrawn'
+  ]
+};

@@ -97,7 +97,7 @@ export default class QuickViewTable extends React.Component {
   };
 
   constructRows() {
-    return this.props.statusFilter ? this.props.data.filter(row => (row.status === this.props.statusFilter)) : this.props.data;
+    return this.props.statusFilter ? this.props.data.filter(row => row.status === this.props.statusFilter) : this.props.data;
   }
 
   render() {
