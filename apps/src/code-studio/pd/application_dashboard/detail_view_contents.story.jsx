@@ -19,6 +19,7 @@ export default storybook => {
               school_name: 'School Name',
               district_name: 'District Name',
               email: 'email',
+              application_type: 'Facilitator1819Application',
               form_data: {
                 firstName: 'First Name',
                 lastName: 'Last Name',
@@ -28,7 +29,7 @@ export default storybook => {
                 accountEmail: 'accountEmail',
                 alternateEmail: 'alternateEmail',
                 program: 'program',
-                planOnTeachering: ['Yes'],
+                planOnTeaching: ['Yes'],
                 abilityToMeetRequirements: '10'
               }
             }}

@@ -1,7 +1,5 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl} from 'react-bootstrap';
-import Facilitator1819Questions from './detail_view_facilitator_specific_components';
-import Teacher1819Questions from './detail_view_teacher_specific_components';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
