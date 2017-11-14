@@ -33,7 +33,7 @@ nav: how_to_nav
 **播放鼓舞人心的视频：**
 
 - Code.org推出的原始视频有比尔·盖茨，马克·扎克伯格和NBA球星克里斯 - 波什（它们分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)版本）
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [编程一小时 全球视频 ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [奥巴马总统号召所有对的学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - 找到更多鼓舞人心的 [资源](<%= resolve_url('https://code.org/inspire') %>) 和 [视频](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 

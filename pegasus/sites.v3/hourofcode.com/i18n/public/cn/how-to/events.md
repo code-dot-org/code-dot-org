@@ -33,13 +33,13 @@ nav: how_to_nav
 
 ## 借助编程一小时开展家庭编程之夜，邀请父母们也参与进来。
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+考虑举办一个K-5 晚会，邀请家长们和他们的孩子们一起参加一小时的计算机科学学习。 这是让更多的社区民众参加进来的好方法，它也鼓励家长们支持你学校学习计算机科学。 我们的合作伙伴在家庭编程之夜已经创作出一个多功能一体的活动工具册，它包含计划清单，演讲脚本，邀请邮件，海报，PPT 演示 以及其他更多的事项可以帮助你举办活动。 点击这里[](http://www.familycodenight.org/DownloadCodeDotOrg.html)来下载活动工具册。
 
 ## 活动计划示例
 
 **活动：**学校范围内的计算机科学教育周启动集会
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**日期：** 12. 05 （计算机科学教育周的开始）
 
 **时间：**上学日期间。推荐早中午活动。大约 1 小时。
 
@@ -49,13 +49,13 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 ## 流程演示
 
-| 时间            | 活动                                                                                                                                               |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 上午10:00-10:05 | 以我们的一个[励志视频](<%= resolve_url('/promote/resources#videos') %>)开始                                                                                    |
-| 上午10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
-| 上午10:15-10:30 | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                                                                                                          |
-| 上午10:30-10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 上午10:40-11:00 | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                                                                                                               |
-| 上午11:00-11:05 | 组织学校范围内活动的老师致闭幕词。                                                                                                                                |
+| 时间            | 活动                                                              |
+| ------------- | --------------------------------------------------------------- |
+| 上午10:00-10:05 | 以我们的一个[励志视频](<%= resolve_url('/promote/resources#videos') %>)开始   |
+| 上午10:05-10:15 | 校长用[数据和信息图表](<%= resolve_url('/promote/stats') %>)就计算机科学的重要性做开场白。 |
+| 上午10:15-10:30 | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                         |
+| 上午10:30-10:40 | 打破常规，让学生演示编程一小时，让他们来教校长，政客或者其他的学生。                              |
+| 上午10:40-11:00 | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                              |
+| 上午11:00-11:05 | 组织学校范围内活动的老师致闭幕词。                                               |
 
 <%= view :signup_button %>
