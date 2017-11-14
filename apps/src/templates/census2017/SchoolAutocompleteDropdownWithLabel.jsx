@@ -56,7 +56,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     return (
       <div style={containerStyle}>
         <div style={questionStyle}>
-          {i18n.schoolName()}
+          {singleLineLayout ? i18n.school() : i18n.schoolName()}
           {showRequiredIndicator && (
             <span style={styles.asterisk}> *</span>
           )}
