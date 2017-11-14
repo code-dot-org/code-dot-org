@@ -4205,9 +4205,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the Redstone Torch.
+      Function intro Ryan_instruction: Use the `build bridge` function twice to make
+        a path to the torch.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4658,9 +4657,9 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
+      MC_HOC_2017_01_RETRY_instruction: 'Get the Agent to the pressure plate, then
+        press "Run" and use the arrow keys to move the player out of the house to
+        collect the chest. '
       MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
         can get to the map. "
@@ -4724,9 +4723,8 @@
       MC_HOC_2017_10_Kiki_instruction: |-
         Create a function to help you finish this
         minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Use the functions to finish this minecart
-        track.
+      MC_HOC_2017_10_RETRY_instruction: Create a function to help you finish this
+        minecart.
       MC_HOC_2017_10_RYAN_instruction: |-
         Create a function to help you finish this
         minecart.

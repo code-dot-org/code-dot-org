@@ -462,7 +462,7 @@ en-GB:
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for the Agent to help get you through the levels.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over.
+        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace and add code that you want to run again and again.
       MC_HOC_2017_04_Cole_callout:
         MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
       MC_HOC_2017_04_Kiki_callout:
@@ -474,7 +474,7 @@ en-GB:
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but Steve and Alex can''t!  '
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
