@@ -113,7 +113,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/users/sign_in</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/users/sign_in</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -308,7 +308,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-CSRF-Token" elementType="Header">
                 <stringProp name="Header.name">X-CSRF-Token</stringProp>
@@ -332,7 +332,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/users/sign_up</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/users/sign_up</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -403,7 +403,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -462,7 +462,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -518,7 +518,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -573,7 +573,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/1/puzzle/1</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/1/puzzle/1</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -662,7 +662,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -682,7 +682,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/2/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/2/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -738,7 +738,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/1/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/1/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -827,7 +827,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -847,7 +847,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/2/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/2/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -902,7 +902,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/2/puzzle/1</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/2/puzzle/1</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -991,7 +991,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -1011,7 +1011,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/2/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/2/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1066,7 +1066,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/2/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/2/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1155,7 +1155,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -1175,7 +1175,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/1</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/1</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1230,7 +1230,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/1</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/1</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1314,7 +1314,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1369,7 +1369,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1424,7 +1424,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1475,7 +1475,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1521,7 +1521,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             <collectionProp name="HeaderManager.headers">
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="User-Agent" elementType="Header">
                 <stringProp name="Header.name">User-Agent</stringProp>
@@ -1537,7 +1537,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1583,7 +1583,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
             <collectionProp name="HeaderManager.headers">
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="User-Agent" elementType="Header">
                 <stringProp name="Header.name">User-Agent</stringProp>
@@ -1599,7 +1599,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1649,7 +1649,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -1669,7 +1669,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1719,7 +1719,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -1739,7 +1739,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1839,7 +1839,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Origin" elementType="Header">
                 <stringProp name="Header.name">Origin</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp></stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>
               </elementProp>
               <elementProp name="X-Requested-With" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
@@ -1859,7 +1859,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -1914,7 +1914,7 @@ vars.put(&quot;hashedUserEmail&quot;, hashedUserEmail)
               </elementProp>
               <elementProp name="Referer" elementType="Header">
                 <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">${protocol}://${serverName}</stringProp>/s/csd2/stage/3/puzzle/2</stringProp>
+                <stringProp name="Header.value">${protocol}://${serverName}/s/csd2/stage/3/puzzle/2</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
