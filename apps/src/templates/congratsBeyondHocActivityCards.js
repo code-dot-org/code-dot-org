@@ -78,7 +78,7 @@ export const cardSets = {
     ApplabTutorial,
     OldMinecraft
   ],
-  'nonEnglishpre2017MinecraftCards' : [
+  'nonEnglishPre2017MinecraftCards' : [
     CSFAccelerated,
     CourseCatalog,
     OldMinecraft
