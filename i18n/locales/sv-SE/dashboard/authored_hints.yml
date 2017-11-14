@@ -3471,7 +3471,7 @@ sv:
         last_hint: This is the third and final hint. It doesn't have anything special.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: If you call the functions correctly, this is the path you will travel...
-        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try calling it twice to solve this puzzle.
+        Function_intro_Ryan_a: Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and make a decision?
       Inspirational Artwork_authored_hint:
@@ -3515,93 +3515,85 @@ sv:
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house. End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: Använd piltangenterna för att leda spelaren in i huset. Stanna på den orangefärgade rutan för att vinna.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: Dra ett "gå framåt"-block från verktygslådan till arbetsytan och fäst det under "vid körning"-blocket.
+        MC_HOC_2017_01_RETRY_b: Glöm inte att klicka på "Kör" för att köra agentens kod.
+        MC_HOC_2017_01_RETRY_c: När agenten har kört sin kod kan du styra spelaren med piltangenterna!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys to move the player to the map!
+          Tryck på "Kör"! 
+          Du kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.
+        MC_HOC_2017_02_Cole_c: När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!
         MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined on the map!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys to move the player to the orange square.
+          Tryck på "Kör agent"! 
+          Du kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.
+        MC_HOC_2017_02_Cole_c: När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till den orangefärgade rutan.
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat` loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!
+        MC_HOC_2017_03_Cole_b: Verkar koden lite för lång?  Använd "upprepa"-loopar och se om du kan korta ned koden!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-          
+          Genom att passera de två tryckplattorna öppnas vägen för spelaren. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: 'Använd "sväng vänster"-blocket för att vända på agenten. '
+        MC_HOC_2017_04POINT5_RYAN_a: Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_a: Agenten måste "gå framåt" 7 gånger.  Hur kan du använda en "upprepa"-loop för att få det att hända?
         MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, the Agent will open the door for the player.
+          Tryck på "Kör"! 
+          Du kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.
+        MC_HOC_2017_04_Cole_b: När agenten når tryckplattan öppnar han dörren åt spelaren.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** "gå framåt" inuti "upprepa" för att klara av det här pusslet.
         MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as you go.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Visste du att man kan ha mer än ett kodblock i en loop?  Prova att sätta en planka **och** "gå framåt" inuti "upprepa" för att klara av det här pusslet.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times *should* it run?
+        MC_HOC_2017_06_Cole_a: Hur många gånger körs den här loopen?  Hur många gånger *ska* den köras?
         MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the water! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat` loop!
+        MC_HOC_2017_06_Cole_a: Prova att ha mer än en instruktion i en "upprepa"-loop!
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_a: För att lösa det här pusslet måste du klura ut vad "rensa väg"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna "rensa väg"-blocket i verktygslådan.
+        MC_HOC_2017_07_Cole_b: Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Tryck på "Kör agent"! 
+          Du kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.
+        MC_HOC_2017_08_RY_b: Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Tryck på "Kör agent"! 
+          Du kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.
+        MC_HOC_2017_08_RY_b: Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Använd funktioner för att lösa det här pusslet enklare!
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Använd funktioner för att lösa det här pusslet enklare!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter.
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-          
+          Genom att passera de två tryckplattorna öppnas vägen för spelaren. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Tryck på "Kör"! 
+          Du kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.
+        MC_HOC_2017_08_RY_b: Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through the lava.
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter.
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -3750,7 +3742,7 @@ sv:
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment is added to your counter variable each time through. \n\nWhat do you need to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.

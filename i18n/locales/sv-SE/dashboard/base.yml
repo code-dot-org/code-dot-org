@@ -760,11 +760,11 @@ sv:
     rename: "Ändra namn"
     save: "Spara"
     delete: "Ta bort"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Importera"
+    share_link_import_bad_link_header: "Delningslänken kändes inte igen"
+    share_link_import_bad_link_body: 'Vi kunde inte importera delningslänken. Se till att du använder en länk från ett Minecraft: Agent-pussel, och att du har kopierat hela länken.'
+    share_link_import_error_header: "Någonting gick fel."
+    share_link_import_error_body: "Det gick inte att importera delningslänken. Försök igen."
     exit: "Tillbaka till kursen"
     my_projects: "Mina projekt"
     project_gallery: "Projekt"
