@@ -27,6 +27,21 @@ export default storybook => {
         )
       },
       {
+        name: 'Vertical Image Resource Card - Jumbo',
+        description: `This is an example card that fits 2 across on desktop and has an image stacked above a desctription and button. It's used here to promote a course`,
+        story: () => (
+          <VerticalImageResourceCard
+            title={exampleCard.title}
+            description={exampleCard.description}
+            buttonText={exampleCard.buttonText}
+            link={exampleCard.link}
+            isRtl={false}
+            jumbo={true}
+            image="codeorg-teacher"
+          />
+        )
+      },
+      {
         name: 'Vertical Image Resource Card - RTL',
         description: `This is an example vertical image resource card that can be used with in RTL styling`,
         story: () => (
