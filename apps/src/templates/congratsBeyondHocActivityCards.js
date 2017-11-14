@@ -53,7 +53,8 @@ const NewMinecraft = {
   title: "Minecraft Education",
   description: "",
   link: "/minecraft",
-  image: "new-minecraft"
+  image: "new-minecraft",
+  MCShareLink: ""
 };
 
 export const cardSets = {
