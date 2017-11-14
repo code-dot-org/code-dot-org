@@ -3733,8 +3733,9 @@
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: If you call the functions correctly, this is the path
           you will travel...
-        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
-          calling it twice to solve this puzzle.
+        Function_intro_Ryan_a: "Μπορείς να καλέσεις μια συνάρτηση πολλές φορές μέσα
+          στο πρόγραμμά σου!  Δοκίμασε να την καλέσεις δύο φορές για να λύσεις αυτό
+          το παζλ."
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and
           make a decision?
@@ -3797,124 +3798,127 @@
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
-          End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: "Χρησιμοποίησε τα πλήκτρα βέλους για να κατευθύνεις
+          τον παίκτη μέσα στο σπίτι. Πρέπει να καταλήξεις στο πορτοκαλί τετράγωνο
+          για να νικήσεις."
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
-          the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
-          Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
-          the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: Σύρε ένα μπλοκ "προχώρησε μπροστά" από την εργαλειοθήκη
+          σου στο χώρο εργασίας και τοποθέτησέ τον κάτω από το μπλοκ "όταν τρέχει".
+        MC_HOC_2017_01_RETRY_b: Μην ξεχάσεις να κάνεις κλικ στο κουμπί "Εκτέλεση"
+          για εκτέλεση του κώδικα για τον Agent.
+        MC_HOC_2017_01_RETRY_c: "Μόλις ο Agent εκτελέσει το σύνολο του κώδικα, θα
+          μπορείς να μετακινήσεις τον παίκτη με τα πλήκτρα βέλους!"
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the map!
+        MC_HOC_2017_02_Cole_a: "Μετακίνησε τον Agent μπροστά δύο φορές για να σταθεί
+          στην πλάκα πίεσης.  Με αυτόν τον τρόπο θα ανοίξει η πόρτα για τον παίκτη
+          σου."
+        MC_HOC_2017_02_Cole_b: "Πάτησε \"Εκτέλεση\"! \nΜπορείς να εκτελέσεις τον κώδικά
+          σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά σου
+          ξανά και ξανά μέχρι να ανακαλύψεις το λάθος."
+        MC_HOC_2017_02_Cole_c: "Μόλις ο Agent ανοίξει την πόρτα, χρησιμοποίησε τα
+          πλήκτρα βέλους για να μετακινήσεις τον παίκτη στο χάρτη!"
         MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
           on the map!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the orange square.
+        MC_HOC_2017_02_Cole_a: "Μετακίνησε τον Agent μπροστά δύο φορές για να σταθεί
+          στην πλάκα πίεσης.  Με αυτόν τον τρόπο θα ανοίξει η πόρτα για τον παίκτη
+          σου."
+        MC_HOC_2017_02_Cole_b: "Πάτησε \"Εκτέλεση Agent\"! \nΜπορείς να εκτελέσεις
+          τον κώδικά σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον
+          κώδικά σου ξανά και ξανά μέχρι να ανακαλύψεις το λάθος."
+        MC_HOC_2017_02_Cole_c: "Μόλις ο Agent ανοίξει την πόρτα, χρησιμοποίησε τα
+          πλήκτρα βέλους για να μετακινήσεις τον παίκτη στο πορτοκαλί τετράγωνο."
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
-          use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
-          loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: "Μόλις τοποθετήσεις τον Agent στην πλάκα πίεσης, μπορείς
+          να χρησιμοποιήσεις τα πλήκτρα βέλους για να περπατήσει ο παίκτης στην πυξίδα!"
+        MC_HOC_2017_03_Cole_b: Μήπως σου φαίνεται υπερβολικά μεγάλος ο κώδικας;  Δοκίμασε
+          να χρησιμοποιήσεις ένα βρόχο "επανάλαβε" και δες αν μπορείς να βρεις τον
+          τρόπο να κάνεις τον κώδικα πιο σύντομο!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "Αν περάσεις αυτές τις δύο πλάκες πίεσης, θα
+          ανοίξει ο δρόμος για τον παίκτη. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
-          direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
-          plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: 'Χρησιμοποίησε το μπλοκ "στρίψε αριστερά" για
+          να αλλάξεις την κατεύθυνση του Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: "Ο Agent χρειάζεται να φτάσει μόνο στην πρώτη
+          πλάκα πίεσης για να προχωρήσει η Alex ή ο Steve και να φτάσει στο τσεκούρι."
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
-          you use a `repeat` loop to make that happen?
-        MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
+        MC_HOC_2017_04_Cole_a: Ο Agent χρειάζεται να προχωρήσει μπροστά 7 φορές.  Μπορείς
+          να το καταφέρεις αυτό χρησιμοποιώντας ένα βρόχο "επανάλαβε";
+        MC_HOC_2017_04_Cole_c: "Πάτησε \"Εκτέλεση\"! \nΜπορείς να εκτελέσεις τον κώδικά
+          σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά σου
+          ξανά και ξανά μέχρι να ανακαλύψεις το λάθος."
+        MC_HOC_2017_04_Cole_b: "Μόλις ο Agent φτάσει στην πλάκα πίεσης, θα ανοίξει
+          η πόρτα για τον παίκτη."
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Γνώριζες ότι μπορείς να τοποθετήσεις περισσότερα από
+          ένα κομμάτια κώδικα μέσα σε ένα βρόχο;  Δοκίμασε να τοποθετήσεις σανίδα
+          **και** να προχωρήσεις μπροστά χρησιμοποιώντας ένα βρόχο "επανάλαβε" για
+          να λύσεις αυτό το παζλ.
         MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
           you go.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Γνώριζες ότι μπορείς να τοποθετήσεις περισσότερα από
+          ένα κομμάτια κώδικα μέσα σε ένα βρόχο;  Δοκίμασε να τοποθετήσεις σανίδα
+          **και** να προχωρήσεις μπροστά χρησιμοποιώντας ένα βρόχο "επανάλαβε" για
+          να λύσεις αυτό το παζλ.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
-          *should* it run?
+        MC_HOC_2017_06_Cole_a: "Πόσες φορές εκτελείται αυτός ο βρόχος;  Πόσες φορές
+          *θα έπρεπε* να εκτελείται;"
         MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
           water! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
-          loop!
+        MC_HOC_2017_06_Cole_a: Δοκίμασε να τοποθετήσεις περισσότερες από μία οδηγίες
+          μέσα σε ένα βρόχο "επανάλαβε"!
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
           to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
-          function does and call it as many times as you need using the small green
-          `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
-          the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_a: Για να λύσεις αυτό το παζλ, ανακάλυψε τι κάνει η συνάρτηση
+          "άνοιξε δρόμο" και κάλεσέ την όσες φορές χρειάζεσαι χρησιμοποιώντας το μικρό
+          πράσινο μπλοκ "άνοιξε δρόμο" από την εργαλειοθήκη.
+        MC_HOC_2017_07_Cole_b: "Δοκίμασε να συνδυάσεις μπλοκ συναρτήσεων με άλλα μπλοκ
+          από την εργαλειοθήκη σου για να μπορέσεις να λύσεις αυτό το παζλ."
       MC_HOC_2017_08_RY_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Πάτησε \"Εκτέλεση Agent\"! \nΜπορείς να εκτελέσεις τον
+          κώδικά σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά
+          σου ξανά και ξανά μέχρι να ανακαλύψεις το λάθος."
+        MC_HOC_2017_08_RY_b: "Υπάρχουν ΠΟΛΛΟΙ τρόποι για να λύσεις αυτό το παζλ.  Δοκίμασε
+          μερικούς!"
       MC_HOC_2017_08_Will_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Πάτησε \"Εκτέλεση Agent\"! \nΜπορείς να εκτελέσεις τον
+          κώδικά σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά
+          σου ξανά και ξανά μέχρι να ανακαλύψεις το λάθος."
+        MC_HOC_2017_08_RY_b: "Υπάρχουν ΠΟΛΛΟΙ τρόποι για να λύσεις αυτό το παζλ.  Δοκίμασε
+          μερικούς!"
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: "Χρησιμοποίησε συναρτήσεις για να λύσεις αυτό το παζλ
+          πιο εύκολα!"
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
           line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: "Χρησιμοποίησε συναρτήσεις για να λύσεις αυτό το παζλ
+          πιο εύκολα!"
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "Δοκίμασε να χρησιμοποιήσεις τον Agent για να χτίσεις
+          μερικές γέφυρες, ώστε η Alex και ο Steve να μπορούν να περιπλανηθούν πέρα
+          από τις άκρες του χάρτη."
       MC_HOC_2017_4.5v2_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "Αν περάσεις αυτές τις δύο πλάκες πίεσης, θα
+          ανοίξει ο δρόμος για τον παίκτη. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_Ali_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Πάτησε \"Εκτέλεση\"! \nΜπορείς να εκτελέσεις τον κώδικά
+          σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά σου
+          ξανά και ξανά μέχρι να ανακαλύψεις το λάθος."
+        MC_HOC_2017_08_RY_b: "Υπάρχουν ΠΟΛΛΟΙ τρόποι για να λύσεις αυτό το παζλ.  Δοκίμασε
+          μερικούς!"
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
           the lava.
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "Δοκίμασε να χρησιμοποιήσεις τον Agent για να χτίσεις
+          μερικές γέφυρες, ώστε η Alex και ο Steve να μπορούν να περιπλανηθούν πέρα
+          από τις άκρες του χάρτη."
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -4080,8 +4084,9 @@
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "Δοκίμασε να χρησιμοποιήσεις τον Agent για να χτίσεις
+          μερικές γέφυρες, ώστε η Alex και ο Steve να μπορούν να περιπλανηθούν πέρα
+          από τις άκρες του χάρτη."
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.

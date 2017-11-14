@@ -423,7 +423,7 @@ el:
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
       Function intro Ryan_callout:
-        Function_intro_Ryan_1: This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace.
+        Function_intro_Ryan_1: Αυτή η μικρή οδηγία "λέει" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Geometric Sun_callout:
@@ -456,25 +456,25 @@ el:
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: Use the arrow keys or click here to start moving the player.
+        MC_HOC_2017_01_Cole_2: Χρησιμοποίησε τα πλήκτρα βέλους ή κάνε κλικ εδώ για να ξεκινήσεις να μετακινείς τον παίκτη.
       MC_HOC_2017_01_Kiki_callout: [ ]
       MC_HOC_2017_02_Cole_callout: [ ]
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for the Agent to help get you through the levels.
+        MC_HOC_2017_02_Cole_1: Τώρα ο παίκτης σου έχει ένα φιλαράκι!  Μπορείς να γράψεις κώδικα για τον Agent, ώστε να σε βοηθήσει να περάσεις τα διάφορα επίπεδα.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over.
+        MC_HOC_2017_03_Cole_1: Αυτός είναι ένας βρόχος "επανάλαβε"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
+        MC_HOC_2017_04_Cole_a: Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to repeat it over and over again!
+        MC_HOC_2017_04_Kiki_1: Τοποθέτησέ το στο χώρο εργασίας και πρόσθεσε κώδικα για να επαναληφθεί ξανά και ξανά!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit them!
+        MC_HOC_2017_06_Cole_1: Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but Steve and Alex can''t!  '
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
