@@ -906,5 +906,16 @@
   "yourSchoolParentDesc": "Предприеми действия за разширяване на изучаването на компютърни науки във вашето училище или област",
   "yourSchoolTeacherButton": "Започнете обучение",
   "yourSchoolTeacherDesc": "Започнете преподаване днес, не необходим опит в компютърните науки",
-  "yourSchoolTellUs": "Разкажете ни за вашето училище"
+  "yourSchoolTellUs": "Разкажете ни за вашето училище",
+  "congratsTeacherCodeOrgButton": "Explore Code.org Courses",
+  "congratsTeacherCodeOrgDesc": "Code.org offers courses across K12 at no cost to schools. And, if you’d like help getting started, we have hands-on professional learning workshops around the country.",
+  "congratsTeacherCodeOrgTitle": "Teach courses by Code.org",
+  "congratsTeacherExternalButton": "Explore 3rd party Options",
+  "congratsTeacherExternalDesc": "Compare options by different partners, organized by grade band.",
+  "congratsTeacherExternalTitle": "Teach courses by other providers",
+  "country": "Country",
+  "school": "School",
+  "schoolInformationOptionalHeader": "School / Organization Information (optional)",
+  "signupFormSchoolOrOrganization": "School / Organization",
+  "signupFormSchoolType": "Type"
 }

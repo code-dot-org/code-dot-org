@@ -906,5 +906,16 @@
   "yourSchoolParentDesc": "Få fart på datakunnskapen på din skole eller i ditt distrikt",
   "yourSchoolTeacherButton": "Start undervisningen",
   "yourSchoolTeacherDesc": "Begynne å lære i dag, ingen informatikkerfaring nødvendig",
-  "yourSchoolTellUs": "Fortell oss om skolen din"
+  "yourSchoolTellUs": "Fortell oss om skolen din",
+  "congratsTeacherCodeOrgButton": "Explore Code.org Courses",
+  "congratsTeacherCodeOrgDesc": "Code.org offers courses across K12 at no cost to schools. And, if you’d like help getting started, we have hands-on professional learning workshops around the country.",
+  "congratsTeacherCodeOrgTitle": "Teach courses by Code.org",
+  "congratsTeacherExternalButton": "Explore 3rd party Options",
+  "congratsTeacherExternalDesc": "Compare options by different partners, organized by grade band.",
+  "congratsTeacherExternalTitle": "Teach courses by other providers",
+  "country": "Country",
+  "school": "School",
+  "schoolInformationOptionalHeader": "School / Organization Information (optional)",
+  "signupFormSchoolOrOrganization": "School / Organization",
+  "signupFormSchoolType": "Type"
 }
