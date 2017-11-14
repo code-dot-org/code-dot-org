@@ -3449,9 +3449,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: Bu oyun laboratuarda yapabileceğiniz bir oyun bir örneğidir.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the Redstone Torch.
+      Function intro Ryan_instruction: Meşaleye giden bir yol açmak için `köprü inşa
+        et` işlevini iki kez kullan.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3834,96 +3833,73 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Use the functions to finish this minecart
-        track.
-      MC_HOC_2017_10_RYAN_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN2_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_2017_01_RETRY_instruction: 'Agent''ı baskı plakasına götür, ardından
+        "Çalıştır" düğmesine bas ve sandığı toplaması için ok tuşlarını kullanarak
+        oyuncuyu evin dışına çıkar. '
+      MC_HOC_2017_02_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_02_Cole_instruction: "{currentPlayerName} haritaya ulaşabilsin diye
+        Agent'ı baskı plakasına taşı. "
+      MC_HOC_2017_02_Kiki_instruction: Agent'ı baskı plakasına götür, ardından oyuncuyu
+        turuncu kareye götür.
+      MC_HOC_2017_02_Will_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_03_Cole_instruction: 'Agent''ı geçidi açacak şekilde kodla. '
+      MC_HOC_2017_03_Kiki_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04_instruction: Agent'ın bu nehrin geniş kısmında bir yol açmasına
+        yardımcı olmak için son bulmacadaki döngüyü değiştir.
+      MC_HOC_2017_04POINT5_Cole_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04_Cole_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04_Kiki_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_05_instruction: Agent'ın baskı plakasına ulaşmasına yardımcı olmak
+        için bir işlev kullan.
+      MC_HOC_2017_05_Cole_instruction: Oyuncuyu küreğe götür.
+      MC_HOC_2017_05_Josh_instruction: Oyuncuyu küreğe götür.
+      MC_HOC_2017_05_Kiki_instruction: Oyuncuyu turuncu kareye götür.
+      MC_HOC_2017_06_Cole_instruction: Agent'ın bu nehir üzerinde bir köprü inşa etmesi
+        için bu kodu düzelt.
+      MC_HOC_2017_06_Josh_instruction: Agent'ın bu nehir üzerinde bir köprü inşa etmesine
+        yardımcı olmak için bu kodu düzelt.
+      MC_HOC_2017_06_Kiki_instruction: Agent'ın bu nehir üzerinde bir köprü inşa etmesine
+        yardımcı olmak için bu kodu düzelt.
+      MC_HOC_2017_07_Cole_instruction: "{currentPlayerName} Maden Arabasına ulaşabilsin
+        diye buzu yok et."
+      MC_HOC_2017_07_Kiki_instruction: Turuncu kareye giden yolu temizlemek için bir
+        işlev kullan.
+      MC_HOC_2017_07a_Kiki_instruction: Turuncu kareye giden yolu temizle.
+      MC_HOC_2017_08_Cole_instruction: Bu biyomda çalışabilmesi için belirtilen işlevi
+        değiştir.
+      MC_HOC_2017_08_Kiki_instruction: Bu bulmacada çalışabilmesi için işlevi değiştir.
+      MC_HOC_2017_08_RY_instruction: Lavın üzerinden geçebilmek için işlevleri kullan.
+      MC_HOC_2017_08_Will_instruction: Lavın üzerinden geçebilmek için işlevleri kullan.
+      MC_HOC_2017_09_Cole_instruction: Agent'ın oyuncunun yolunu temizleyecek şekilde
+        programla.
+      MC_HOC_2017_09_Kiki_instruction: Agent'ı oyuncunun yolu temizleyecek ve baskı
+        plakasına ulaşacak şekilde programla.
+      MC_HOC_2017_10_Cole_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_Cole_old_instruction: Bu maden arabasını tamamlamana yardımcı
+        olacak bir işlev oluştur.
+      MC_HOC_2017_10_Kiki_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_RETRY_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_RYAN_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_RYAN2_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_13_Cole_instruction: "**Serbest Oyun:**  Kendi başına keşfetme zamanı!"
+      MC_HOC_2017_4.5v2_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_Ali_instruction: Lavın üzerinden geçebilmek için işlevleri kullan.
+      MC_HOC_2017_FP10x10_instruction: "**Serbest Oyun:** Bu seviyedeki tüm elmasları
+        toplamayı başarabilir misin? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Serbest Oyun:** Bu seviyedeki tüm elmasları
+        toplamayı başarabilir misin? "
+      MC_HOC_2017_FP20x20_instruction: "**Serbest Oyun:**  Kendi başına keşfetme zamanı!"
+      MC_HOC_2017_Ryan_03_instruction: "Şimdi Agent'ın suya bloklar yerleştirerek
+        nehir üzerinde bir köprü inşa etmesine yardımcı olmak için döngüleri kullan."
+      MC_HOC_2017_Ryan_05_instruction: Oyuncunun hedefe ulaşabilmesi için bu kaktüsleri
+        yok et.
+      MC_HOC_Kiki_02_instruction: Agent'ı baskı plakasına götür.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
