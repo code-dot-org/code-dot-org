@@ -218,6 +218,7 @@ window.SignupManager = function (options) {
             value={data.nces}
             showErrorMsg={schoolDataErrors.nces}
             singleLineLayout
+            showRequiredIndicator={false}
           />
         }
         {isUS && data.nces === '-1' &&
