@@ -57,8 +57,8 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "timeout_after_when_run": "false",
-    "contained_level_names": null,
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
