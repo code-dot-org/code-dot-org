@@ -10,6 +10,10 @@ litmus_tracking_id: "5g5lyi1a"
 ### Thanks for signing up to host an Hour of Code!
 As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a [free set of 12 professionally printed posters featuring diverse role models for your classroom](https://<%= storedotcodedotorg %>/products/code-org-posters-set-of-12). Use offer code FREEPOSTERS at checkout. (This code is good through 12/31 while supplies last. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://<%= hourofcode %>/promote/resources#posters) for your classroom.)
 
+<% if form.data["hoc_event_country_s"] == 'US' %>
+Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. Please note that this is only open for US schools.
+
+<% end %>
 Hour of Code runs December 4-10. We'll be in touch about new tutorials and other exciting updates as they come out. **In the meantime, what can you do now?**
 
 ### 1. Find a local volunteer to help you with your event.

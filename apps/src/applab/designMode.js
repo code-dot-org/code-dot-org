@@ -652,9 +652,12 @@ designMode.serializeToLevelHtml = function () {
       this.style.backgroundSize = '';
       this.style.fontFamily = '';
       this.removeAttribute('data-ofi-undefined');
+      // This data attribute comes from the object-fit-images polyfill used to
+      // supply fit behavior in IE11
+      // @see https://github.com/bfred-it/object-fit-images
       const ofiSrc = this.getAttribute('data-ofi-src');
       if (ofiSrc) {
-        this.src = ofiSrc;
+        this.src = makeUrlProtocolRelative(ofiSrc);
         this.removeAttribute('data-ofi-src');
       }
     }
@@ -675,6 +678,10 @@ designMode.serializeToLevelHtml = function () {
   return serialization;
 };
 
+function makeUrlProtocolRelative(url) {
+  return url.replace(/^https?:\/\//i, '//');
+}
+designMode.makeUrlProtocolRelative = makeUrlProtocolRelative;
 
 function getUnsafeHtmlReporter(sanitizationTarget) {
   return function (removed, unsafe, safe) {
