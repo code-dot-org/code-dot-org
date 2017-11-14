@@ -34,7 +34,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
       labelOverrides: this.props.applicationType === 'Teacher1819Application' ? {} : FacilitatorLabelOverrides,
       numberedQuestions: this.props.applicationType === 'Teacher1819Application' ? [] : NumberedQuestions,
       paneledQuestions: paneledQuestions[this.props.applicationType]
-    }
+    };
   }
 
   getQuestionText = (section, question) => {
@@ -67,15 +67,14 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
                         key={j}
                         layout={this.state.paneledQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
                       />
-                    )
+                    );
                   })
                 }
               </div>
-            )
+            );
           })
         }
       </div>
-    )
+    );
   }
 }
-
