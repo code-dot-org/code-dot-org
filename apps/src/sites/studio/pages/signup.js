@@ -202,7 +202,7 @@ window.SignupManager = function (options) {
           singleLineLayout
         />
         <div className="itemblock" style={{minHeight:42}}>
-          <div className="school-info-labelblock">School Type</div>
+          <div className="school-info-labelblock">{i18n.signupFormSchoolType()}</div>
           <select
             className="form-control fieldblock"
             id="school-type-auto"
