@@ -68,6 +68,7 @@ module SharedConstants
     minecraft_designer
     minecraft_hero
     starwars
+    starwarsblocks
     starwarsblocks_hour
     flappy
     bounce
