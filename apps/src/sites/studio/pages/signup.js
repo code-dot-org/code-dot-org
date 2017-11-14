@@ -202,7 +202,7 @@ window.SignupManager = function (options) {
           singleLineLayout
         />
         <div className="itemblock" style={{minHeight:42}}>
-          <div className="school-info-labelblock">School Type</div>
+          <div className="school-info-labelblock">{i18n.signupFormSchoolType()}</div>
           <select
             className="form-control fieldblock"
             id="school-type-auto"
@@ -412,6 +412,9 @@ class SignupSchoolNotFound extends React.Component {
     );
     if (outsideUS || ncesInfoNotFound || noDropdownForSchoolType) {
       const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(data.schoolType);
+      const schoolNameLabel = ['afterschool', 'organization'].includes(data.schoolType)
+        ? i18n.signupFormSchoolOrOrganization()
+        : i18n.schoolName();
       return (
         <SchoolNotFound
           onChange={onSchoolNotFoundChange}
@@ -423,6 +426,7 @@ class SignupSchoolNotFound extends React.Component {
           showErrorMsg={schoolDataErrors.school}
           singleLineLayout
           showRequiredIndicators={false}
+          schoolNameLabel={schoolNameLabel}
         />
       );
     }
