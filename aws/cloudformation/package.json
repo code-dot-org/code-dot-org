@@ -7,9 +7,9 @@
     "test": "mocha"
   },
   "dependencies": {
-    "aws-sdk": "^2.50.0"
   },
   "devDependencies": {
+    "aws-sdk": "^2.50.0",
     "lambda-tester": "^3.0.2",
     "mocha": "^3.4.1",
     "nock": "^9.0.4",

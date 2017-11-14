@@ -106,4 +106,17 @@ FactoryGirl.define do
 
   factory :census_hoc2017v3, parent: :census_hoc2017v2, class: Census::CensusHoc2017v3 do
   end
+
+  factory :census_submission_form_map, class: Census::CensusSubmissionFormMap do
+    census_submission nil
+    form_id nil
+
+    trait :with_submission do
+      census_submission {build :census_hoc2017v1}
+    end
+
+    trait :with_form do
+      form_id 1
+    end
+  end
 end

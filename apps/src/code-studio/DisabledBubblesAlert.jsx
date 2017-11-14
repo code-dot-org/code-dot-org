@@ -42,7 +42,7 @@ const DisabledBubblesAlert = React.createClass({
           <span>{i18n.disabledButtonsInfo()  + " "}</span>
           <a
             target="_blank"
-            href={window.dashboard.CODE_ORG_URL + '/saving-progress-hoc'}
+            href="https://support.code.org/hc/en-us/articles/115002660852"
           >
             {i18n.learnMore()}
           </a>

@@ -116,6 +116,14 @@
         <block type="craft_placeBlock">
           <title name="TYPE">rails</title>
         </block>
+        <block type="craft_placeBlockDirection">
+          <title name="TYPE">grass</title>
+          <title name="DIR">0</title>
+        </block>
+        <block type="craft_placeBlockDirection">
+          <title name="TYPE">grass</title>
+          <title name="DIR">2</title>
+        </block>
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="2-10">2</title>
         </block>

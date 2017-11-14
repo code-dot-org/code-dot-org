@@ -3,6 +3,7 @@
 - projects_data = {}
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
+  - projects_data[:showStartNewProjectWidget] = Experiment.enabled?(user: current_user, experiment_name: 'start-new-project-widget')
 
 = render partial: 'shared/angular'
 
