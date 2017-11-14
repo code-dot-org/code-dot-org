@@ -756,7 +756,7 @@ bn:
       applab: "অ্যাপ ল্যাব"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "পুনঃনামকরণ করুন"
     save: "সংরক্ষন করন"
     delete: "বাদ দিন"
