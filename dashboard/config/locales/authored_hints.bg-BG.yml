@@ -3728,8 +3728,8 @@
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: If you call the functions correctly, this is the path
           you will travel...
-        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
-          calling it twice to solve this puzzle.
+        Function_intro_Ryan_a: "Във вашата програма можете многократно да извикате
+          дадена функция!  Опитайте да я извикате два пъти, за да разрешите този пъзел."
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and
           make a decision?
@@ -3792,124 +3792,122 @@
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
-          End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: "Използвайте вашите клавиши със стрелки, за да насочите
+          играча към къщата. Достигнете оранжевото квадратче, за да спечелите."
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
-          the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
-          Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
-          the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: "Плъзнете един блок „движение напред“ от кутията за
+          инструменти към работното пространство и го фиксирайте намясто под блока
+          „при изпълняване“."
+        MC_HOC_2017_01_RETRY_b: "Не забравяйте да щракнете върху „Изпълняване“, за
+          да изпълните кода за Agent."
+        MC_HOC_2017_01_RETRY_c: "Щом Agent е изпълнил целия си код, можете да движите
+          играча с клавишите със стрелки!"
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the map!
+        MC_HOC_2017_02_Cole_a: "Придвижете агента две разстояния напред, така че да
+          застане на активиращата плоча.  Това ще отвори вратата за вашия играч."
+        MC_HOC_2017_02_Cole_b: "Натиснете „Изпълняване“! \nМожете да изпълните вашия
+          код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново,
+          докато не разберете къде е грешката."
+        MC_HOC_2017_02_Cole_c: "Щом Agent отвори вратата, използвайте клавишите със
+          стрелки, за да придвижите играча към картата!"
         MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
           on the map!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the orange square.
+        MC_HOC_2017_02_Cole_a: "Придвижете агента две разстояния напред, така че да
+          застане на активиращата плоча.  Това ще отвори вратата за вашия играч."
+        MC_HOC_2017_02_Cole_b: "Натиснете „Изпълняване на Agent“! \nМожете да изпълните
+          вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново
+          и отново, докато не разберете къде е грешката."
+        MC_HOC_2017_02_Cole_c: "Щом Agent отвори вратата, използвайте клавишите със
+          стрелки, за да преместите играча към оранжевото квадратче."
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
-          use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
-          loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: "Щом придвижите Agent към активиращата плоча, можете
+          да използвате клавишите със стрелки, за да придвижите агента до компаса!"
+        MC_HOC_2017_03_Cole_b: "Смятате кода за прекалено дълъг?  Пробвайте да използвате
+          цикъла „повтаряне“ и вижте дали можете да разберете как да го посъкратите!"
       MC_HOC_2017_04POINT5_Cole_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "Преминаването на тези две активиращи плочи ще
+          отвори пътя за играча. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
-          direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
-          plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: "Използвайте блока „завъртане надясно“, за да
+          промените посоката на агента "
+        MC_HOC_2017_04POINT5_RYAN_a: "Необходимо е Agent да премине само през първата
+          активираща плоча, за да пусне Алекс или Стийв да достигнат до брадвата."
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
-          you use a `repeat` loop to make that happen?
-        MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
+        MC_HOC_2017_04_Cole_a: Agent трябва да извърши „движение напред“ 7 пъти.  Как
+          можете да използвате цикъл „повтаряне“, за да осъществите това?
+        MC_HOC_2017_04_Cole_c: "Натиснете „Изпълняване“! \nМожете да изпълните вашия
+          код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново,
+          докато не разберете къде е грешката."
+        MC_HOC_2017_04_Cole_b: "Щом Agent достигне до активиращата плоча, той ще отвори
+          вратата за играча."
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: "Знаехте ли, че можете да поставите повече от една
+          част от код в цикъл?  Пробвайте да поставите дъска **и** движение напред
+          в „повтаряне“, за да завършите пъзела."
         MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
           you go.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: "Знаехте ли, че можете да поставите повече от една
+          част от код в цикъл?  Пробвайте да поставите дъска **и** движение напред
+          в „повтаряне“, за да завършите пъзела."
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
-          *should* it run?
+        MC_HOC_2017_06_Cole_a: "Колко пъти се изпълнява цикълът?  Колко пъти *трябва*
+          да се изпълнява?"
         MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
           water! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
-          loop!
+        MC_HOC_2017_06_Cole_a: "Пробвайте да поставите повече от една инструкция в
+          цикъл „повтаряне“!"
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
           to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
-          function does and call it as many times as you need using the small green
-          `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
-          the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_a: "За да решите този пъзел, разберете какво прави функцията
+          „прочистване на пътека“ и я извикайте колкото пъти желаете чрез малкия зелен
+          блок „прочистване на пътека“ от кутията за инструменти."
+        MC_HOC_2017_07_Cole_b: "Пробвайте да смесите функционалните блокове с други
+          блокове от кутията за инструменти, за да ви помогнат да решите пъзела."
       MC_HOC_2017_08_RY_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Натиснете „Изпълняване на Agent“! \nМожете да изпълните
+          вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново
+          и отново, докато не разберете къде е грешката."
+        MC_HOC_2017_08_RY_b: "Има МНОГО начини за решаване на пъзела.  Пробвайте някои
+          от тях!"
       MC_HOC_2017_08_Will_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Натиснете „Изпълняване на Agent“! \nМожете да изпълните
+          вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново
+          и отново, докато не разберете къде е грешката."
+        MC_HOC_2017_08_RY_b: "Има МНОГО начини за решаване на пъзела.  Пробвайте някои
+          от тях!"
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: "Използвайте функции, за да улесните решаването на
+          пъзела!"
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
           line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: "Използвайте функции, за да улесните решаването на
+          пъзела!"
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "Пробвайте да накарате Agent да построи няколко моста,
+          така че Алекс и Стийв да могат да се придвижват около и извън краищата на
+          картата."
       MC_HOC_2017_4.5v2_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "Преминаването на тези две активиращи плочи ще
+          отвори пътя за играча. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_Ali_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Натиснете „Изпълняване“! \nМожете да изпълните вашия
+          код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново,
+          докато не разберете къде е грешката."
+        MC_HOC_2017_08_RY_b: "Има МНОГО начини за решаване на пъзела.  Пробвайте някои
+          от тях!"
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
           the lava.
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "Пробвайте да накарате Agent да построи няколко моста,
+          така че Алекс и Стийв да могат да се придвижват около и извън краищата на
+          картата."
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -4075,8 +4073,9 @@
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "Пробвайте да накарате Agent да построи няколко моста,
+          така че Алекс и Стийв да могат да се придвижват около и извън краищата на
+          картата."
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
