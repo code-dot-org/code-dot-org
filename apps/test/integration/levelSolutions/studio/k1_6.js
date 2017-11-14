@@ -5,7 +5,7 @@ module.exports = {
   skinId: "studio",
   levelFile: "levels",
   levelId: "k1_6",
-  timeout: 15000,
+  timeout: 20000,
   tests: [
     {
       description: "Show and hide sprite",
@@ -34,7 +34,7 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
           Studio.onPuzzleComplete();
-        }, 10000);
+        }, 15000);
       },
       customValidator: function (assert) {
         assert.isFalse(window.Studio.sprite[0].visible, 'sprite is hidden');
