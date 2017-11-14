@@ -106,6 +106,7 @@ class VerticalImageResourceCard extends Component {
       "applab-tutorial": require('@cdo/static/resource_cards/applabtutorial.png'),
       "create-account": require('@cdo/static/resource_cards/createaccount.png'),
       "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
+      "course-catalog": require('@cdo/static/resource_cards/coursecatalog.png'),
       "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
       "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
       "codeorg-teacher":
