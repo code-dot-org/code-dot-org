@@ -290,5 +290,11 @@
   "weather": "cuaca",
   "weatherTypeClear": "cerah",
   "weatherTypeRain": "hujan",
-  "weatherTypeThunder": "guntur"
+  "weatherTypeThunder": "guntur",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool"
 }

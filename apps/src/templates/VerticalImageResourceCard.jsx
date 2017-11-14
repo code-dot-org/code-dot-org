@@ -15,8 +15,24 @@ const styles = {
     marginBottom: 20,
     backgroundColor: color.white
   },
+  jumboCard: {
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    position: 'relative',
+    height: 440,
+    width: 473,
+    marginBottom: 20,
+    backgroundColor: color.white
+  },
   image: {
     width: 310,
+    height: 220,
+    position: 'absolute',
+  },
+  jumboImage: {
+    width: 473,
     height: 220,
     position: 'absolute',
   },
@@ -62,7 +78,7 @@ const styles = {
  * HoC follow-up activity. Not to be confused with CourseCard, the larger
  * component used on /home for scripts and courses specific to a user.
  * ImageResourceCard is also similar, but has image and text aligned
- * horizontally.
+ * horizontally. The jumbo version fits 2 across in a row.
  */
 
 class VerticalImageResourceCard extends Component {
@@ -73,11 +89,14 @@ class VerticalImageResourceCard extends Component {
     link: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    MCShareLink: PropTypes.string
+    MCShareLink: PropTypes.string,
+    jumbo: PropTypes.bool
   };
 
   render() {
-    const { title, description, link, buttonText, isRtl, MCShareLink, image } = this.props;
+    const { title, description, link, buttonText, isRtl, jumbo, MCShareLink, image } = this.props;
+    const cardStyle = jumbo ? styles.jumboCard : styles.card;
+    const imageStyle = jumbo ? styles.jumboImage : styles.image;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
 
     const filenameToImgUrl = {
@@ -89,12 +108,16 @@ class VerticalImageResourceCard extends Component {
       "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
       "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
       "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
+      "codeorg-teacher":
+      require('@cdo/static/resource_cards/codeorgteacher.png'),
+      "third-party-teacher":
+      require('@cdo/static/resource_cards/thirdpartyteacher.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={[styles.card, localeStyle]}>
-        <div style={styles.image}/>
+      <div style={[cardStyle, localeStyle]}>
+        <div style={imageStyle}/>
           <img src={imgSrc}/>
         <div>
           <div style={[styles.text, styles.title, localeStyle]}>

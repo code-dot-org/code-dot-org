@@ -189,7 +189,6 @@ window.SignupManager = function (options) {
         <CountryAutocompleteDropdown
           onChange={onCountryChange}
           value={data.country}
-          required={true}
           showErrorMsg={schoolDataErrors.country}
           singleLineLayout
         />
@@ -219,6 +218,7 @@ window.SignupManager = function (options) {
             value={data.nces}
             showErrorMsg={schoolDataErrors.nces}
             singleLineLayout
+            showRequiredIndicator={false}
           />
         }
         {isUS && data.nces === '-1' &&
@@ -231,6 +231,7 @@ window.SignupManager = function (options) {
             schoolZip={data.schoolZip}
             showErrorMsg={schoolDataErrors.school}
             singleLineLayout
+            showRequiredIndicators={false}
           />
         }
         {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
@@ -243,6 +244,7 @@ window.SignupManager = function (options) {
             schoolZip={data.schoolZip}
             showErrorMsg={schoolDataErrors.school}
             singleLineLayout
+            showRequiredIndicators={false}
           />
         }
         {!isUS &&
@@ -255,6 +257,7 @@ window.SignupManager = function (options) {
             schoolZip="omitted"
             showErrorMsg={schoolDataErrors.school}
             singleLineLayout
+            showRequiredIndicators={false}
           />
         }
       </div>
