@@ -495,7 +495,7 @@ it:
         last_hint: Questo è il terzo e ultimo suggerimento. Non ha nulla di speciale.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Se chiami le funzioni in modo corretto, questo è il percorso che seguirai...
-        Function_intro_Ryan_a: È possibile richiamare una funzione più volte all'interno del vostro programma!  Provatela due volte per risolvere il puzzle.
+        Function_intro_Ryan_a: Puoi richiamare una funzione più volte nel tuo programma!  Prova a richiamarla due volte per risolvere questo rompicapo.
       Harvesting_authored_hint:
         pointer_harvester_test: Che tipo di blocco è possibile utilizzare per controllare qualcosa e prendere una decisione?
       Inspirational Artwork_authored_hint:
@@ -536,81 +536,85 @@ it:
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Utilizzare i tasti freccia per dirigere il giocatore nella casa. Terminare il quadrato arancione per vincere.
+        MC_HOC_2017_01_Cole_a: Usa le frecce per condurre il giocatore nella casa. Fermati sulla casella arancione per vincere.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: Trascina un blocco "muovi avanti" dalla sezione degli strumenti all'area di lavoro e affiancalo sotto al blocco "quando esegui".
+        MC_HOC_2017_01_RETRY_b: Ricorda di cliccare "Esegui" per eseguire il codice per l'Agent.
+        MC_HOC_2017_01_RETRY_c: Quando l'Agent ha eseguito tutto il suo codice, puoi muovere il giocatore con le frecce!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Spostate l'agente avanti di due spazi sul piano di pressione.  Questo aprirà la porta al vostro giocatore.
+        MC_HOC_2017_02_Cole_a: Muovi l'Agent due caselle in avanti per farlo posizionare sulla pedana a pressione, che aprirà la porta per il tuo giocatore.
         MC_HOC_2017_02_Cole_b: |-
-          Premere "Esegui agente"!  Anche se non è corretto, è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più volte fino a capire che cosa sta andando storto.
-        MC_HOC_2017_02_Cole_c: Una volta che l'agente avrà aperto la porta, sarà possibile utilizzare i tasti freccia per muovere il giocatore nel quadrato arancione.
+          Premi "Esegui"! 
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_02_Cole_c: Quando l'Agent ha aperto la porta, usa le frecce per muovere il giocatore sulla mappa!
         MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined on the map!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Spostate l'agente avanti di due spazi sul piano di pressione.  Questo aprirà la porta al vostro giocatore.
+        MC_HOC_2017_02_Cole_a: Muovi l'Agent due caselle in avanti per farlo posizionare sulla pedana a pressione, che aprirà la porta per il tuo giocatore.
         MC_HOC_2017_02_Cole_b: |-
-          Premere "Esegui agente"!  Anche se non è corretto, è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più volte fino a capire che cosa sta andando storto.
-        MC_HOC_2017_02_Cole_c: Una volta che l'agente avrà aperto la porta, sarà possibile utilizzare i tasti freccia per muovere il giocatore nel quadrato arancione.
+          Premi "Esegui Agent"! 
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_02_Cole_c: Quando l'Agent ha aperto la porta, usa le frecce per muovere il giocatore fino alla casella arancione!
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat` loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: Quando hai posizionato l'Agent sulla pedana a pressione, usa le frecce per far camminare il giocatore verso la bussola!
+        MC_HOC_2017_03_Cole_b: Il codice ti sembra un po' lungo?  Prova a usare un ciclo "ripetizione" e cerca di capire come renderlo più breve!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-          
+          Passare su queste due pedane a pressione aprirà il sentiero per il giocatore. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: 'Usa il blocco "gira a destra" per cambiare la direzione dell''Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: L'Agent ha bisogno di arrivare solo alla prima pedana a pressione affinché Alex o Steve possa raggiungere l'ascia.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_a: L'Agent deve usare "muovi avanti" 7 volte.  Come puoi sfruttare un ciclo "ripetizione" per ottenere questo risultato?
         MC_HOC_2017_04_Cole_c: |-
-          Premere "Esegui agente"!  Anche se non è corretto, è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più volte fino a capire che cosa sta andando storto.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, the Agent will open the door for the player.
+          Premi "Esegui"! 
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_04_Cole_b: Quando l'Agent raggiunge la pedana a pressione, apre la porta per il giocatore.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più pezzi di codice in un ciclo?  Prova a posizionare un'asse **e** andare avanti in una "ripetizione" per completare questo rompicapo.
         MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as you go.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più pezzi di codice in un ciclo?  Prova a posizionare un'asse **e** andare avanti in una "ripetizione" per completare questo rompicapo.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times *should* it run?
+        MC_HOC_2017_06_Cole_a: Quante volte viene eseguito questo ciclo?  Quante volte *dovrebbe* essere eseguito?
         MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the water! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat` loop!
+        MC_HOC_2017_06_Cole_a: Prova a inserire più di una istruzione in un ciclo "ripetizione"!
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_a: Per risolvere questo rompicapo, scopri cosa fa la funzione "distruggi" e richiamala il numero di volte necessario usando il piccolo blocco verde "distruggi" presente tra gli strumenti.
+        MC_HOC_2017_07_Cole_b: Prova a mescolare i blocchi delle funzioni con altri blocchi presenti tra gli strumenti per risolvere questo rompicapo.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Premere "Esegui agente"!  Anche se non è corretto, è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più volte fino a capire che cosa sta andando storto.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Premi "Esegui Agent"! 
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo rompicapo.  Provane alcuni!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Premere "Esegui agente"!  Anche se non è corretto, è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più volte fino a capire che cosa sta andando storto.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Premi "Esegui Agent"! 
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo rompicapo.  Provane alcuni!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Usa le funzioni per rendere più facile la soluzione di questo rompicapo!
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Usa le funzioni per rendere più facile la soluzione di questo rompicapo!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Prova a far costruire dei ponti all'Agent, in modo che Alex o Steve possa camminare oltre i limiti della mappa.
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-          
+          Passare su queste due pedane a pressione aprirà il sentiero per il giocatore. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Premere "Esegui agente"!  Anche se non è corretto, è possibile eseguire il codice.  Sbrigarsi e reimpostare il codice più e più volte fino a capire che cosa sta andando storto.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Premi "Esegui"! 
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo rompicapo.  Provane alcuni!
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through the lava.
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Prova a far costruire dei ponti all'Agent, in modo che Alex o Steve possa camminare oltre i limiti della mappa.
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -649,7 +653,7 @@ it:
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: "Se il ciclo deve contare \"a crescere\" il valore del passo deve corrispondere ad un incremento (quindi un numero positivo). Quanto bisogna aggiungere in questo caso ad ogni valore per ottenere il valore successivo nella sequenza?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Prova a far costruire dei ponti all'Agent, in modo che Alex o Steve possa camminare oltre i limiti della mappa.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: Puoi scegliere tra diversi percorsi. Qual'è il più corto?
         mc_8_b: Usa il blocco `ripeti ... volte` per semplificare il tuo programma.
