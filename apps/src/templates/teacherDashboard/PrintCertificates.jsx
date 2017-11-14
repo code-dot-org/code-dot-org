@@ -14,8 +14,8 @@ const styles = {
   outerStyle: {
     paddingLeft: STANDARD_PADDING,
     paddingRight: STANDARD_PADDING,
-    paddingTop: STANDARD_PADDING / 2,
-    paddingBottom: STANDARD_PADDING / 2,
+    paddingTop: STANDARD_PADDING / 4,
+    paddingBottom: STANDARD_PADDING / 4,
     cursor: 'pointer',
     ':hover': {
       backgroundColor: color.lightest_gray,

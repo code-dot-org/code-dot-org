@@ -158,35 +158,42 @@ class SectionActionDropdown extends Component {
           targetPoint={targetPoint}
           isOpen={this.state.open}
           beforeClose={this.beforeClose}
+          minimalStyle={true}
         >
           <PopUpMenu.Item
+            heightDivisor={4}
             href={pegasus('/teacher-dashboard#/sections/' + sectionData.id)}
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
+            heightDivisor={4}
             href={pegasus('/teacher-dashboard#/sections/' + sectionData.id + "/manage")}
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
+            heightDivisor={4}
             href={pegasus('/teacher-dashboard#/sections/' + sectionData.id + '/print_signin_cards')}
           >
             {i18n.printLoginCards()}
           </PopUpMenu.Item>
           <PopUpMenu.MenuBreak/>
           <PopUpMenu.Item
+            heightDivisor={4}
             id="ui-test-edit-section"
             onClick={this.onClickEdit}
           >
             {i18n.editSectionDetails()}
           </PopUpMenu.Item>
           <PrintCertificates
+            heightDivisor={4}
             sectionId={sectionData.id}
             assignmentName={sectionData.assignmentNames[0]}
           />
           {sectionData.loginType === OAuthSectionTypes.clever &&
             <PopUpMenu.Item
+              heightDivisor={4}
               onClick={this.onClickSync}
             >
               {i18n.syncClever()}
@@ -194,18 +201,21 @@ class SectionActionDropdown extends Component {
           }
           {sectionData.loginType === OAuthSectionTypes.google_classroom &&
             <PopUpMenu.Item
+              heightDivisor={4}
               onClick={this.onClickSync}
             >
               {i18n.syncGoogleClassroom()}
             </PopUpMenu.Item>
           }
           <PopUpMenu.Item
+            heightDivisor={4}
             onClick={this.onClickHideShow}
           >
             {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
           </PopUpMenu.Item>
           {sectionData.studentCount === 0 &&
             <PopUpMenu.Item
+              heightDivisor={4}
               onClick={this.onRequestDelete}
               color={color.red}
             >
