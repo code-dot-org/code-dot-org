@@ -7,6 +7,7 @@ import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import * as color from "@cdo/apps/util/color";
 
 const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -127,7 +128,20 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
-  const registrationSchoolStyleGroup = (Math.random() > 0.5) ? "control" : "autocomplete";
+  const SCHOOL_STYLE_TEST_GROUPS = {
+    control: "control",
+    autocompleteOptional: "autocomplete-optional",
+    autocompleteRequired: "autocomplete-required",
+  };
+
+  const schoolStyleRandom = Math.random();
+  let registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
+  if (schoolStyleRandom > 1.0 / 3.0) {
+    registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteOptional;
+  }
+  if (schoolStyleRandom > 2.0 / 3.0) {
+    registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
+  }
 
   function logEvent(event) {
     firehoseClient.putRecord(
@@ -141,7 +155,6 @@ window.SignupManager = function (options) {
   }
 
   let schoolData = {
-    name: '',
     country: 'United States',
     nces: '',
     schoolName: '',
@@ -149,17 +162,10 @@ window.SignupManager = function (options) {
     schoolState: '',
     schoolZip: '',
     schoolType: '',
+    showErrorMsg: false,
   };
 
-  let schoolDataErrors = {
-    name: false,
-    country: false,
-    nces: false,
-    schoolType: false,
-    school: false
-  };
-
-  function onCountryChange(field, event) {
+  function onCountryChange(_, event) {
     schoolData.country = event ? event.value : '';
     updateAutocompleteSchoolFields(schoolData);
   }
@@ -189,16 +195,30 @@ window.SignupManager = function (options) {
     updateAutocompleteSchoolFields(schoolData);
   }
 
+  function schoolInfoOptional() {
+    return registrationSchoolStyleGroup !== SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
+  }
+
+  const errorStyles = {
+    fontSize: 14,
+    fontFamily: '"Gotham 3r", sans-serif',
+    color: color.red,
+    paddingTop: 5,
+    paddingBottom: 5
+  };
+
   function updateAutocompleteSchoolFields(data) {
     const isUS = data.country === 'United States';
     ReactDOM.render(
       <div>
-        <h5 style={{fontWeight: "bold"}}>{i18n.schoolInformationHeader()}</h5>
+        <h5 style={{fontWeight: "bold"}}>
+          {schoolInfoOptional() ? i18n.schoolInformationOptionalHeader() : i18n.schoolInformationHeader()}
+        </h5>
         <hr/>
         <CountryAutocompleteDropdown
           onChange={onCountryChange}
           value={data.country}
-          showErrorMsg={schoolDataErrors.country}
+          showErrorMsg={false}
           singleLineLayout
         />
         <div className="itemblock" style={{minHeight:42}}>
@@ -225,7 +245,7 @@ window.SignupManager = function (options) {
           <SchoolAutocompleteDropdownWithLabel
             setField={onSchoolChange}
             value={data.nces}
-            showErrorMsg={schoolDataErrors.nces}
+            showErrorMsg={false}
             singleLineLayout
             showRequiredIndicator={false}
           />
@@ -233,13 +253,57 @@ window.SignupManager = function (options) {
         <SignupSchoolNotFound
           isUS={isUS}
           data={data}
-          schoolDataErrors={schoolDataErrors}
+          schoolDataErrors={{}}
           onSchoolNotFoundChange={onSchoolNotFoundChange}
         />
+        {data.showErrorMsg && (
+          <div style={errorStyles}>
+            {i18n.schoolInfoRequired()}
+          </div>
+        )}
       </div>
       ,
       $("#schooldropdown-block")[0]
     );
+  }
+
+  function schoolInfoIsComplete() {
+    // Logic:
+    // require country
+    // require school type
+    // if US:
+    //   if school type requires nces search, require nces <> ''
+    //   if nces === -1 or not requires nces search:
+    //     require city/town
+    //     if SCHOOL_TYPES_HAVING_NAMES:
+    //       require school name
+    // else (non-US):
+    //   require city/town
+    //   if SCHOOL_TYPES_HAVING_NAMES:
+    //     require school name
+    let missingInfo = false;
+    missingInfo |= schoolData.country === '';
+    missingInfo |= schoolData.schoolType === '';
+    const registrationSchoolLocation = $('#registration-school-location')[0];
+    if (schoolData.country === 'United States') {
+      const useNCES = SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolData.schoolType);
+      if (useNCES) {
+        missingInfo |= schoolData.nces === '';
+      }
+      if (!useNCES || schoolData.nces === '-1') {
+        registrationSchoolLocation && (missingInfo |= registrationSchoolLocation.value === '');
+        if (SCHOOL_TYPES_HAVING_NAMES.includes(schoolData.schoolType)) {
+          missingInfo |= schoolData.schoolName === '';
+        }
+      }
+    } else if (schoolData.country !== '') {
+      // Non-US
+      registrationSchoolLocation && (missingInfo |= registrationSchoolLocation.value === '');
+      if (SCHOOL_TYPES_HAVING_NAMES.includes(schoolData.schoolType)) {
+        missingInfo |= schoolData.schoolName === '';
+      }
+    }
+    return !missingInfo;
   }
 
   let loggedTeacherSelected = false; // only make this log call once
@@ -273,7 +337,7 @@ window.SignupManager = function (options) {
   }
 
   function shouldUseAutocompleteDropdown() {
-    return getAutocompleteFlag() && registrationSchoolStyleGroup === 'autocomplete';
+    return getAutocompleteFlag() && registrationSchoolStyleGroup !== SCHOOL_STYLE_TEST_GROUPS.control;
   }
 
   function getUserTypeSelected() {
@@ -319,7 +383,9 @@ window.SignupManager = function (options) {
         const match = schoolInfoDataMap.find(x => x.from === el.name);
         if (match) {
           const value = match.transform ? match.transform(el.value) : el.value;
-          formData.push({name: "user[school_info_attributes][" + match.to + "]", value: value});
+          if (!(match.to === 'school_id' && value === '-1')) { // skip passing "not found" school id value
+            formData.push({name: "user[school_info_attributes][" + match.to + "]", value: value});
+          }
         }
       });
     }
@@ -344,7 +410,18 @@ window.SignupManager = function (options) {
     $("#password_message_confirmation").text("");
 
     if (getAutocompleteFlag() && isTeacherSelected()) {
+      schoolData.showErrorMsg = false;
       logEvent('teacher-submitted');
+      if (registrationSchoolStyleGroup === SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired) {
+        if (!schoolInfoIsComplete()) {
+          schoolData.showErrorMsg = true;
+          updateAutocompleteSchoolFields(schoolData);
+          logEvent('teacher-submit-error');
+          $('#signup-button').prop('disabled', false);
+          return false;
+        }
+      }
+      updateAutocompleteSchoolFields(schoolData);
     }
 
     $.ajax({
