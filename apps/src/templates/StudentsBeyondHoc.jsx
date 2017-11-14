@@ -50,11 +50,15 @@ export default class StudentsBeyondHoc extends Component {
     }
     const cards = cardSets[specificCardSet];
 
-// 2017 Minecraft Tutorial has a share link that can be used on Minecraft Education to import code.
-//Check if the 2017 Minecraft tutorial was completed;
-// if it was, update the Minecraft share link for the card that goes to Minecraft Education.
+    // 2017 Minecraft Tutorial has a share link that can be used on Minecraft // Education to import code. Check if the 2017 Minecraft tutorial was
+    // completed; if it was, update the Minecraft share link for the card that // goes to Minecraft Education.
+    function findMinecraftCard(card) {
+      return card.MCShareLink === "";
+    }
+
     if (specificCardSet === "newMinecraftCards" && MCShareLink) {
-      cards[2].MCShareLink = MCShareLink;
+      var MinecraftCard = cards.find(findMinecraftCard);
+      MinecraftCard.MCShareLink = MCShareLink;
     }
 
     return (
