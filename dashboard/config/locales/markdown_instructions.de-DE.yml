@@ -34194,12 +34194,9 @@
         secret data?\r
         \r
       Function intro Ryan_markdown_instruction: |-
-        A **function** named `build bridge`
-        is in your workspace.  All of the code you need to cross the river is built
-        right in! \r
+        In deinem Arbeitsbereich befindet sich eine **Funktion** namens "Brücke bauen".  Sie umfasst den gesamten Code, den du zum Überqueren des Flusses benötigst! \r
          \r
-        Snap the small, green block twice into your workspace to
-        fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].
+        Docke den kleinen, grünen Block zweimal in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName} zur Redstone-Fackel [redstone_torch] zu bringen.
       'Game Lab Workshop: Random_markdown_instruction': |
         # Randomized Shapes\r
         \r
@@ -35464,230 +35461,168 @@
         to the door and open it (using the **space bar**) so you can get to the orange
         square inside.
       MC_HOC_2017_01_markdown_instruction: |-
-        Click "Run" to move the player using
-        the **arrow keys**.  \r
+        Klicke auf "Ausführen", um den Spieler mit den **Pfeiltasten** zu bewegen.  \r
         \r
-        To pass this level, you will need to get to the
-        door and open it (using the **space bar**) so you can get to the orange square
-        inside.
-      MC_HOC_2017_01_Cole_markdown_instruction: |-
-        You need to collect all the tools
-        on this journey. Move around using the **arrow keys**, and get to the chest
-        on the path to win
-      MC_HOC_2017_01_Kiki_markdown_instruction: "To play this level, click the orange\n\"Run\"
-        button beneath the play space, then move the player around using the\n**arrow
-        keys**.  "
-      MC_HOC_2017_01_RETRY_markdown_instruction: |-
-        The door is locked, but the Agent
-        is here to help!\r
-        \r
-        Snap a `move forward` block to the bottom of the `when
-        run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up],
-        then press "Run" and use the arrow keys to move out of the house to collect
-        the **chest** [chest].
-      MC_HOC_2017_02_markdown_instruction: |-
-        The player needs to get into that secret
-        grove.  Help The Agent open the gate by writing code to get him to the pressure
-        plate.
-      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} is headed on\nan
-        adventure! To help, get the **map** [map_empty] behind the locked door\non
-        the right. \\r\n \\r\nSnap the code into the workspace to move the Agent\nto
-        the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get\nthrough. "
+        Um dieses Level zu bestehen, musst du zur Tür gelangen und diese öffnen (verwende die **Leertaste**). So kommst du zum orangenen Quadrat drinnen.
+      MC_HOC_2017_01_Cole_markdown_instruction: Du musst auf deinem Weg alle Werkzeuge
+        einsammeln. Bewege dich mit den **Pfeiltasten** umher und erreiche die Truhe,
+        um zu gewinnen.
+      MC_HOC_2017_01_Kiki_markdown_instruction: 'Klicke auf die orangefarbene "Ausführen"-Schaltfläche
+        unter dem Spielbereich, um dieses Level zu spielen. Bewege dann den Spieler
+        mit den **Pfeiltasten**.  '
+      MC_HOC_2017_01_RETRY_markdown_instruction: "{currentPlayerName} ist im Haus
+        gefangen. Der Agent steht jedoch zur Hilfe bereit!   \\r\n \\r\n   \\r\nDocke
+        im Arbeitsbereich einen \"vorwärts bewegen\"-Block unter dem \"beim Ausführen\"-Block
+        ein, um den Agenten auf die Druckplatte [PressurePlate_Up] zu bringen. Wähle
+        dann \"Ausführen\" aus und verwende die Pfeiltasten, um {currentPlayerName}
+        aus dem Haus zu bewegen und die **Truhe** [chest] einzusammeln.  "
+      MC_HOC_2017_02_markdown_instruction: Der Spieler muss in den verborgenen Hain
+        gelangen.  Hilf dem Agenten, das Tor zu öffnen, indem du Code schreibst, mit
+        dem er sich zur Druckplatte bewegt.
+      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} geht auf Abenteuertour!
+        Hol die **Karte** [map_empty] hinter der verschlossenen Tür rechts. \\r\n
+        \\r\nDocke Code im Arbeitsbereich an, um den Agenten auf die Druckplatte zu
+        bewegen [PressurePlate_Up], damit {currentPlayerName} durchkann. "
       MC_HOC_2017_02_Kiki_markdown_instruction: |-
-        The player is headed out on an adventure,
-        but first they have to get the torch that is hidden on the other side of that
-        locked door. \r
+        Der Spieler zieht zu einem Abenteuer los. Zuerst benötigt er jedoch die Fackel, die sich hinter der verschlossenen Tür befindet. \r
         \r
-        Program the Agent to move forward twice to follow the
-        white path and get to the pressure plate so he can open the door for the player.
+        Programmiere den Agenten so, dass er sich zweimal vorwärts bewegt, um dem weißen Weg zu folgen und zur Druckplatte zu gelangen. So kann er dem Spieler die Tür öffnen.
       MC_HOC_2017_02_Will_markdown_instruction: |-
-        To finish this level, the player
-        needs to get to the orange square inside of the Secret Grove, which is behind
-        the locked door.  \r
+        Um dieses Level abzuschließen, muss der Spieler zum orangefarbenen Quadrat im verborgenen Hain gelangen. Es befindet sich hinter der Tür.  \r
         \r
-        The code in the workspace will make the Agent move
-        forward twice to get to the pressure plate and open the door for Alex or Steve.
-      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} continues on\nthe
-        adventure and needs the **compass** [compass] to prepare for the trip.  \\r\n
-        \  \\r\nCode\nthe Agent to open the gate. "
+        Der Code im Arbeitsbereich sorgt dafür, dass sich der Agent zweimal vorwärtsbewegt, um die Druckplatte zu erreichen und die Tür für Alex oder Steve zu öffnen.
+      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} setzt sein Abenteuer
+        fort und benötigt den **Kompass** [compass], um sich auf die Reise vorzubereiten.
+        \ \\r\n   \\r\nProgrammiere den Agenten, um das Tor zu öffnen. "
       MC_HOC_2017_03_Kiki_markdown_instruction: |-
-        The player's adventure will begin
-        behind the locked door, in the Secret Grove!  \r
+        Das Abenteuer des Spielers beginnt hinter der verschlossenen Tür im verborgenen Hain!  \r
         \r
         \r
-        Help The Agent open
-        the door by writing code to get him to the pressure plate.
-      MC_HOC_2017_04_markdown_instruction: |-
-        Change the loop from the last puzzle
-        to help the Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
+        Hilf dem Agenten beim Öffnen der Tür, indem du ihn so programmierst, dass er die Druckplatte erreicht.
+      MC_HOC_2017_04_markdown_instruction: "Ändere die Schleife aus der letzten Aufgabe
+        so, dass der Agent einen Weg über den breiteren Teil des Flusses baut."
+      MC_HOC_2017_04POINT5_Cole_markdown_instruction: "Du hast es aus dem Sumpf geschafft!
+        \ Bringe jetzt den Spieler sicher zum orangefarbenen Quadrat. \n\n\nHilf dem
+        Agenten beim Räumen des Weges, indem du ein einfaches Muster entwirfst und
+        es mit Schleifen zum Überqueren der ersten beiden Druckplatten verwendest."
+      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |
+        Du bist drüben! \r
         \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |-
-        You made it across! \r
-        \r
-        Now,
-        get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]
-      MC_HOC_2017_04_Cole_markdown_instruction: "The Agent can move across water!
-        \ \\r\n\n\\r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName}\nget
-        to the **bucket** [bucket_empty] behind the door. "
+        Bringe {currentPlayerName} jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\r
+      MC_HOC_2017_04_Cole_markdown_instruction: "Der Agent kann sich über Wasser bewegen!
+        \ \\r\n \\r\nVerwende eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen
+        und {currentPlayerName} den **Eimer** [bucket_empty] hinter der Tür holen
+        zu lassen. "
       MC_HOC_2017_04_Kiki_markdown_instruction: |-
-        The entry to the Secret Grove led
-        to this beautiful Oasis!  To pass this level, the player needs to get to the
-        orange square in the cabana.  \r
+        Der Eintritt in den verborgenen Hain hat zu dieser wunderschönen Oase geführt!  Um dieses Level zu bestehen, muss der Spieler das orangefarbene Quadrat in der Hütte erreichen.  \r
         \r
-        Use a `repeat` loop to help the Agent
-        get all the way up to the pressure plate, which opens the cabana door.
-      MC_HOC_2017_05_markdown_instruction: |-
-        Loops are not always helpful.\r
-        \r
-        These
-        cacti are not growing in an obvious pattern, so a loop would not clear them
-        correctly.  Instead, we've given you a function called `destroy and move`
-        that will do the hard work for you each time the Agent gets to an obstacle.
+        Verwende eine "wiederholen"-Schleife, damit der Agent den Weg zur Druckplatte findet. Diese öffnet die Tür der Hütte.
+      MC_HOC_2017_05_markdown_instruction: "Schleifen sind nicht immer hilfreich.
+        \n\n\nDiese Kakteen wachsen kreuz und quer. Eine Schleife bringt hier also
+        nichts.  Wir haben dir stattdessen eine Funktion namens \"Zerstören und bewegen\"
+        bereitgestellt. Diese erledigt den schwierigen Teil für dich, sobald der Agent
+        ein Hindernis erreicht."
       MC_HOC_2017_05_Cole_markdown_instruction: |-
-        Oh no, the bridge is out! \r
+        Oh nein! Die Brücke ist kaputt! \r
         \r
-        Code
-        the Agent to rebuild the bridge using the `place` block so that {currentPlayerName}
-        can get to the **shovel** [diamond_shovel].
-      MC_HOC_2017_05_Josh_markdown_instruction: |-
-        Oh no, the bridge is out!\r
-        \r
-        Help
-        the Agent rebuild the bridge so that the player can get to the **shovel**.
+        Programmiere den Agenten mit dem "platzieren"-Block, um die Brücke neu zu bauen. Dann kann {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen.
+      MC_HOC_2017_05_Josh_markdown_instruction: "Oh nein! Die Brücke ist kaputt! \n\n\nProgrammiere
+        den Agenten, um die Brücke neu zu bauen. Dann kann der Spieler die **Schaufel**
+        erreichen."
       MC_HOC_2017_05_Kiki_markdown_instruction: |-
-        It's time for the player to leave
-        the Secret Grove and continue the adventure, but the bridge is out! \r
+        Jetzt muss der Spieler den verborgenen Hain verlassen und sein Abenteuer fortsetzen. Die Brücke ist jedoch kaputt! \r
         \r
-        Help
-        the Agent rebuild the bridge, then move to the wooden plank so that the player
-        can get to the orange square.
-      MC_HOC_2017_06_Cole_markdown_instruction: "Another river, but this one is much\nwider!
-        \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName}\ncan
-        get to the **pickaxe** [diamond_pickaxe]. "
+        Hilf dem Agenten beim Aufbauen der Brücke. Bewege dann das Holzbrett, damit der Spieler das orangefarbene Quadrat erreichen kann.
+      MC_HOC_2017_06_Cole_markdown_instruction: "Noch ein Fluss. Aber dieser ist viel
+        breiter! \\r\n \\r\nÄndere den Code, damit der Agent eine Brücke baut. Dann
+        kann {currentPlayerName} die **Spitzhacke** [diamond_pickaxe] erreichen. "
       MC_HOC_2017_06_Josh_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
+        Noch ein Fluss. Aber dieser ist viel breiter!  \r
         \r
-        Fix this code to help the Agent build a bridge across this
-        river.
+        Ändere den Code, damit der Agent eine Brücke über den Fluss baut.
       MC_HOC_2017_06_Kiki_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
-        \r
-        Fix this code to help the Agent build a bridge across the
-        water.
-      MC_HOC_2017_07_Cole_markdown_instruction: "There's ice in the way!  \\r\n \\r\nThe\n`clear
-        path` function can help you destroy the ice and get {currentPlayerName}\nto
-        the Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Kiki_markdown_instruction: "Loops are not the only way to repeat\ncode!
-        \ \\r\n\\r\nHere, we've given you a function called `clear cacti` that\nwill
-        do the hard work of clearing three cacti every time you use it.  Use\ntwo
-        `clear cacti` blocks to clear the path to the orange square. "
-      MC_HOC_2017_07a_Kiki_markdown_instruction: |-
-        Now, edit this loop to help the
-        Agent clear a path to the orange square.
+        Noch ein Fluss. Aber dieser ist viel breiter!  \r
+         \r
+        Ändere den Code, damit der Agent eine Brücke über das Wasser baut.
+      MC_HOC_2017_07_Cole_markdown_instruction: "Da ist Eis im Weg!  \\r\n \\r\nDie
+        \"Weg räumen\"-Funktion hilft dir dabei, das Eis zu zerstören und {currentPlayerName}
+        zur Lore [minecart_normal] zu bringen! "
+      MC_HOC_2017_07_Kiki_markdown_instruction: "Schleifen sind nicht die einzige
+        Möglichkeit, um Code zu wiederholen!  \\r\n\\r\nHier hast du eine Funktion
+        namens \"Kakteen räumen\". Sie kümmert sich bei jeder Verwendung darum, drei
+        Kakteen zu räumen.  Verwende zwei \"Kakteen räumen\"-Blöcke, um den Weg zum
+        orangenen Quadrat frei zu machen. "
+      MC_HOC_2017_07a_Kiki_markdown_instruction: Bearbeite jetzt die Schleife so,
+        dass der Agent den Weg zum orangefarbenen Quadrat frei macht.
       MC_HOC_2017_08_Cole_markdown_instruction: |-
-        Now, instead of destroying before
-        you move, you will need to place a block.  \r
+        Statt vor sie dem Bewegen zu zerstören, musst du jetzt einen Block platzieren.  \r
         \r
-        Change the provided function
-        to work for the desert.
+        Ändere die bereitgestellte Funktion so, dass sie in der Wüste funktioniert.
       MC_HOC_2017_08_Kiki_markdown_instruction: |-
-        Now, instead of destroying cacti,
-        you will need to place stone over lava, then destroy standstone.  \r
+        Statt die Kakteen vor dem Bewegen zu zerstören, platzierst du jetzt Stein auf Lava. Dann zerstörst du den Sandstein.  \r
         \r
-        Change
-        the function to work for this level.
-      MC_HOC_2017_08_RY_markdown_instruction: |-
-        Now there are **TWO** functions to
-        choose from!\r
-        \r
-        Use these functions to quickly build a bridge across the
-        lava for {currentPlayerName}.
-      MC_HOC_2017_08_Will_markdown_instruction: |-
-        Now there are **TWO** functions
-        to choose from!\r
-        \r
-        Use these functions to quickly build a bridge across
-        the lava for the player.
-      MC_HOC_2017_09_Cole_markdown_instruction: |-
-        Use functions to help the Agent
-        destroy the giant blocks of dirt that are blocking the player's path to the
-        pressure plate.
-      MC_HOC_2017_09_Kiki_markdown_instruction: "This starting code cannot be removed.\\r\n\\r\nAdd\ncommands
-        to the `create trail` function so that the program in the workspace\nwill
-        get the Agent to the pressure plate. "
-      MC_HOC_2017_09_RS_CLONE_markdown_instruction: |-
-        Fix this function to fill in
-        the holes, then step on the pressure plate to clear a path to the torch.
-      MC_HOC_2017_10_Cole_markdown_instruction: |-
-        Use the functions to clear a path
-        for the mine cart, and walk into the Nether Portal.
-      MC_HOC_2017_10_Cole_old_markdown_instruction: |-
-        Try building a function from
-        the beginning that will make it easier for the Agent to finish this minecart
-        and get the player to the orange square.
-      MC_HOC_2017_10_Kiki_markdown_instruction: |-
-        Try building a function from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RETRY_markdown_instruction: "Can you spot the difference between\nthe
-        two functions in your workspace? \\r\n \\r\nUse these functions with other\ncode
-        from the toolbox to clear a path for the Minecart, then collect the **Flint\nand
-        Steel** [flint_and_steel]. \\r\n "
-      MC_HOC_2017_10_RYAN_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RYAN2_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_11_Kiki_markdown_instruction: |-
-        Now it's up to you! See what you
-        can create around this frozen lake.
-      MC_HOC_2017_13_Cole_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
-      MC_HOC_2017_4.5v2_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
-        \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_Ali_markdown_instruction: "Look at the functions below.  How can\nyou
-        use them to avoid the Ghasts and help {currentPlayerName} make it safely\nto
-        the **Enchanted Book** [book_enchanted]?  "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Freeplay:** Now it's up to you!\nCan
-        you challenge yourself to collect all of the diamonds in this level? "
+        Ändere die Funktion so, dass sie in diesem Level funktioniert.
+      MC_HOC_2017_08_RY_markdown_instruction: "Jetzt gibt es **ZWEI** Funktionen zur
+        Auswahl! \n\n\nVerwende die Funktionen, um schnell für {currentPlayerName}
+        eine Brücke über die Lava zu bauen."
+      MC_HOC_2017_08_Will_markdown_instruction: "Jetzt gibt es **ZWEI** Funktionen
+        zur Auswahl! \n\n\nVerwende die Funktionen, um dem Spieler schnell eine Brücke
+        über die Lava zu bauen."
+      MC_HOC_2017_09_Cole_markdown_instruction: Verwende die Funktionen, damit der
+        Agent die riesigen Erdblöcke zerstört, die den Weg des Spielers zur Druckplatte
+        blockieren.
+      MC_HOC_2017_09_Kiki_markdown_instruction: "Der Anfangscode kann nicht entfernt
+        werden.\\r\n\\r\nFüge Befehle zur \"Pfad erstellen\"-Funktion hinzu, damit
+        das Programm im Arbeitsbereich den Agenten zur Druckplatte lenkt. "
+      MC_HOC_2017_09_RS_CLONE_markdown_instruction: Repariere diese Funktion, um die
+        Löcher zu füllen, auf die Druckplatte zu treten und einen Weg zur Fackel zu
+        räumen.
+      MC_HOC_2017_10_Cole_markdown_instruction: Verwende diese Funktionen, um einen
+        Weg zur Lore zu räumen und in das Netherportal zu gehen.
+      MC_HOC_2017_10_Cole_old_markdown_instruction: Versuche, eine Funktion neu zu
+        erstellen, mit der der Agent die Lore einfacher erstellt und der Spieler das
+        orangefarbene Quadrat erreicht.
+      MC_HOC_2017_10_Kiki_markdown_instruction: Versuche, eine Funktion neu zu erstellen,
+        mit der der Agent die Lore einfacher erstellt und der Spieler das orangefarbene
+        Quadrat erreicht.
+      MC_HOC_2017_10_RETRY_markdown_instruction: "Siehst du den Unterschied zwischen
+        den beiden Funktionen im Arbeitsbereich? \\r\n \\r\nVerwende die Funktionen
+        und anderen Code aus der Werkzeugkiste, um einen Pfad für die Lore zu räumen
+        und dann das **Feuerzeug** [flint_and_steel] einzusammeln. \\r\n "
+      MC_HOC_2017_10_RYAN_markdown_instruction: Versuche, Funktionen ganz neu zu erstellen,
+        mit denen der Agent seine Lore einfacher erstellt und der Spieler das orangefarbene
+        Quadrat erreicht.
+      MC_HOC_2017_10_RYAN2_markdown_instruction: Versuche, Funktionen ganz neu zu
+        erstellen, mit denen der Agent seine Lore einfacher erstellt und der Spieler
+        das orangefarbene Quadrat erreicht.
+      MC_HOC_2017_11_Kiki_markdown_instruction: Jetzt bist du dran! Probiere aus,
+        was du rund um den gefrorenen See machen kannst.
+      MC_HOC_2017_13_Cole_markdown_instruction: "**Freies Spiel:** Jetzt bist du dran!
+        Verwende den Code des Agenten, um die Welt zu erkunden."
+      MC_HOC_2017_4.5v2_markdown_instruction: "Du hast es aus dem Sumpf geschafft!
+        \ Bringe jetzt den Spieler sicher zum orangefarbenen Quadrat. \n\n\nHilf dem
+        Agenten beim Räumen des Weges, indem du ein einfaches Muster entwirfst und
+        es mit Schleifen zum Überqueren der ersten beiden Druckplatten verwendest."
+      MC_HOC_2017_Ali_markdown_instruction: 'Sieh dir die Funktionen unten an. Wie
+        kannst du diese verwenden, um die Ghasts zu vermeiden und {currentPlayerName}
+        beim sicheren Erreichen des **Zauberbuchs** [book_enchanted] zu helfen?  '
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Freies Spiel:** Jetzt bist du dran!
+        Kannst du alle Diamanten in diesem Level einsammeln? "
       MC_HOC_2017_FP10x10_RE_markdown_instruction: |
         **Freeplay:** Now it's up to
         you! Can you challenge yourself to collect all of the diamonds in this level?
-      MC_HOC_2017_FP20x20_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
+      MC_HOC_2017_FP20x20_markdown_instruction: "**Freies Spiel:** Jetzt bist du dran!
+        Verwende den Code des Agenten, um die Welt zu erkunden."
       MC_HOC_2017_Ryan_03_markdown_instruction: |-
-        Did you know that you can put more
-        than one piece of code into a loop?  \r
+        Wusstest du, dass du mehr als ein Code-Element in eine Schleife packen kannst?  \r
         \r
-        Use a `repeat` loop to help the
-        Agent build a bridge over the river by placing blocks in the water.
+        Verwende eine "wiederholen"-Schleife, um den Agenten Blöcke im Wasser platzieren zu lassen. So entstehe eine Brücke über den Fluss.
       MC_HOC_2017_Ryan_05_markdown_instruction: |-
-        Sometimes you need to knock down
-        things that get in the way of your player.  \r
-        Use the `destroy` block to
-        clear all of the cactii between the Agent and the pressure plate.
-      MC_HOC_Kiki_02_markdown_instruction: |-
-        Someone needs to be on the pressure plate
-        before the side door will open.  Help the Agent get to the plate so the player
-        can leave the house.
+        Manchmal musst du Dinge beseitigen, die deinem Spieler im Weg sind.  \r
+        Verwende den "zerstören"-Block, um alle Kakteen zwischen dem Agenten und der Druckplatte zu räumen.
+      MC_HOC_Kiki_02_markdown_instruction: Jemand muss auf die Druckplatte treten,
+        damit sich die Tür öffnet.  Hilf dem Agenten dabei, die Platte zu erreichen.
+        Dann kann der Spieler das Haus verlassen.
       MSM Defining Vars 1_markdown_instruction: |-
         Write a program that produces a
         50 pixel solid green triangle.
