@@ -174,6 +174,7 @@ class SectionActionDropdown extends Component {
           >
             {i18n.printLoginCards()}
           </PopUpMenu.Item>
+          <PopUpMenu.MenuBreak/>
           <PopUpMenu.Item
             id="ui-test-edit-section"
             onClick={this.onClickEdit}
