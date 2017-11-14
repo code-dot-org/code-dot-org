@@ -793,7 +793,7 @@
     delete: "刪除"
     import: "导入"
     share_link_import_bad_link_header: "分享的链接无法识别"
-    share_link_import_bad_link_body: "无法导入共享链接。请确保这个链接是来源于《我的世界：代理人关卡》，并且正确复制了整个链接。"
+    share_link_import_bad_link_body: "无法导入该分享链接。请确保您所使用的是来自我的世界： Agent 难题的链接，并已经复制了完整链接。"
     share_link_import_error_header: "出错了。"
     share_link_import_error_body: "导入该共享链接时出错。请再试一次。"
     exit: "返回课程"
