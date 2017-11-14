@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
@@ -7,6 +7,16 @@ import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
+
+const SCHOOL_TYPES_HAVING_NAMES = [
+  'charter',
+  'private',
+  'public',
+  'afterschool',
+  'organization',
+];
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -180,7 +190,6 @@ window.SignupManager = function (options) {
   }
 
   function updateAutocompleteSchoolFields(data) {
-    const schoolTypesToShowDropdown = ['charter', 'private', 'public'];
     const isUS = data.country === 'United States';
     ReactDOM.render(
       <div>
@@ -193,7 +202,7 @@ window.SignupManager = function (options) {
           singleLineLayout
         />
         <div className="itemblock" style={{minHeight:42}}>
-          <div className="school-info-labelblock">School Type</div>
+          <div className="school-info-labelblock">{i18n.signupFormSchoolType()}</div>
           <select
             className="form-control fieldblock"
             id="school-type-auto"
@@ -212,7 +221,7 @@ window.SignupManager = function (options) {
             <option value="other">Other</option>
           </select>
         </div>
-        {isUS && schoolTypesToShowDropdown.includes(data.schoolType) &&
+        {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType) &&
           <SchoolAutocompleteDropdownWithLabel
             setField={onSchoolChange}
             value={data.nces}
@@ -221,45 +230,12 @@ window.SignupManager = function (options) {
             showRequiredIndicator={false}
           />
         }
-        {isUS && data.nces === '-1' &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState={data.schoolState}
-            schoolZip={data.schoolZip}
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-            showRequiredIndicators={false}
-          />
-        }
-        {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState={data.schoolState}
-            schoolZip={data.schoolZip}
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-            showRequiredIndicators={false}
-          />
-        }
-        {!isUS &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState="omitted"
-            schoolZip="omitted"
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-            showRequiredIndicators={false}
-          />
-        }
+        <SignupSchoolNotFound
+          isUS={isUS}
+          data={data}
+          schoolDataErrors={schoolDataErrors}
+          onSchoolNotFoundChange={onSchoolNotFoundChange}
+        />
       </div>
       ,
       $("#schooldropdown-block")[0]
@@ -411,3 +387,49 @@ window.SignupManager = function (options) {
   $("#user_email").placeholder();
   $("#user_school").placeholder();
 };
+
+class SignupSchoolNotFound extends React.Component {
+  static propTypes = {
+    isUS: PropTypes.bool.isRequired,
+    data: PropTypes.object.isRequired,
+    schoolDataErrors: PropTypes.object.isRequired,
+    onSchoolNotFoundChange: PropTypes.func.isRequired,
+  };
+
+  render() {
+    const {
+      isUS,
+      data,
+      schoolDataErrors,
+      onSchoolNotFoundChange,
+    } = this.props;
+
+    const outsideUS = !isUS;
+    const ncesInfoNotFound = (data.nces === '-1');
+    const noDropdownForSchoolType = (
+      !SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType)
+      && data.schoolType !== ''
+    );
+    if (outsideUS || ncesInfoNotFound || noDropdownForSchoolType) {
+      const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(data.schoolType);
+      const schoolNameLabel = ['afterschool', 'organization'].includes(data.schoolType)
+        ? i18n.signupFormSchoolOrOrganization()
+        : i18n.schoolName();
+      return (
+        <SchoolNotFound
+          onChange={onSchoolNotFoundChange}
+          schoolName={askForName ? data.schoolName : SchoolNotFound.OMIT_FIELD}
+          schoolType={SchoolNotFound.OMIT_FIELD}
+          schoolCity={data.schoolCity}
+          schoolState={isUS ? data.schoolState : SchoolNotFound.OMIT_FIELD}
+          schoolZip={isUS ? data.schoolZip : SchoolNotFound.OMIT_FIELD}
+          showErrorMsg={schoolDataErrors.school}
+          singleLineLayout
+          showRequiredIndicators={false}
+          schoolNameLabel={schoolNameLabel}
+        />
+      );
+    }
+    return null;
+  }
+}
