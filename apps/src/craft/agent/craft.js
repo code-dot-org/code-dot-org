@@ -757,7 +757,6 @@ export default class Craft {
   static reportResult(success) {
     const studioTestResults = studioApp().getTestResults(success);
     const testResultType = Craft.getTestResultFrom(success, studioTestResults);
-    const saveToProjectGallery = true;
 
     const image = Craft.initialConfig.level.freePlay
       ? Craft.gameController.getScreenshot()
@@ -811,7 +810,7 @@ export default class Craft {
           },
           feedbackImage: image,
           showingSharing: Craft.initialConfig.level.freePlay,
-          saveToProjectGallery,
+          saveToProjectGallery: true,
         });
       },
     });
