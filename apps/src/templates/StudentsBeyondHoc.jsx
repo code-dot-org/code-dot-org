@@ -4,7 +4,7 @@ import color from '../util/color';
 import Responsive from '../responsive';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
-import LocalClassActionBlock from './studioHomepages/TwoColumnActionBlock';
+import LocalClassActionBlock from './studioHomepages/LocalClassActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
 import {
   pre2017MinecraftCards,
