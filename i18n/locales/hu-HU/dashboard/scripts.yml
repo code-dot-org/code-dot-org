@@ -6113,7 +6113,7 @@ hu:
               name: 3. lecke 1. fejezet végi értékelés
             foo:
               name: foo
-          title: CSP Unit 3 - Intro to Programming
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Programozás
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -6187,7 +6187,7 @@ hu:
               name: Intro to App Lab
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab
+          title: Intro to App Lab (Beta)
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of creative projects.
@@ -6741,8 +6741,8 @@ hu:
               name: Minecraft Kódolás Órája
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft is back with a brand new activity for Hour of Code!
+          description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:

@@ -14,7 +14,7 @@
   "addPointsTooltip": "Skoru bir puan arttır veya azalt.",
   "alien": "Uzaylı",
   "alienInvasion": "Uzaylı istilası!",
-  "allowActorsOutsidePlayspaceTooltip": "Aktörlerin çalışma alanından dışarı çıkmalarına izin ver, böylece görülemez olurlar.",
+  "allowActorsOutsidePlayspaceTooltip": "Aktörlerin çalışma alanından dışarı çıkmalarına izin ver, böylece görülmez olurlar.",
   "allowActorsToLeaveThePlayspace": "Aktörlerin oyun alanından çıkmasına izin ver",
   "backgroundBlack": "siyah",
   "backgroundCave": "mağara",
@@ -875,6 +875,6 @@
   "failedMultiplyCharactersTimeout": "Sen 20 Fare Droids almak gerekir. İki veya daha fazla Fare droidler tek olsun her zaman eklemek emin olun.",
   "failedMultiplyCharactersTimeoutBlockly": "Sen 20 Fare Droids almak gerekir. İki veya daha fazla Fare Droids tek olsun her zaman eklemek için \"Fare Droid olsun\" olayı içinde \"bir fare Droid ekle\" komutunu kullanın.\n",
   "failedMultiplyCharactersTimeoutGotSome": "Tebrikler, fare Droids yapmak için kod eklendi. Bir sonraki bulmaca gitmek ya da 20 Fare Droids almak için tekrar deneyebilirsiniz. Onları daha ekleyerek kolaylaştırıyoruz deneyin! (Basın ve hızlı hareket etmek için klavye (veya ekran) tuşları basılı tutun.)",
-  "failedChangeSettingTimeout": "Taşımak için üç Rebel Pilotlar alın.",
+  "failedChangeSettingTimeout": "İlerlemek için üç Rebel Pilot alın.",
   "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım."
 }
