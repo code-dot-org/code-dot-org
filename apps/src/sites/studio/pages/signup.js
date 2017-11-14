@@ -412,6 +412,9 @@ class SignupSchoolNotFound extends React.Component {
     );
     if (outsideUS || ncesInfoNotFound || noDropdownForSchoolType) {
       const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(data.schoolType);
+      const schoolNameLabel = ['afterschool', 'organization'].includes(data.schoolType)
+        ? i18n.signupFormSchoolOrOrganization()
+        : i18n.schoolName();
       return (
         <SchoolNotFound
           onChange={onSchoolNotFoundChange}
@@ -423,6 +426,7 @@ class SignupSchoolNotFound extends React.Component {
           showErrorMsg={schoolDataErrors.school}
           singleLineLayout
           showRequiredIndicators={false}
+          schoolNameLabel={schoolNameLabel}
         />
       );
     }
