@@ -1,9 +1,9 @@
 import React, {Component, PropTypes} from 'react';
-import color from "../../util/color";
-import GridContainer from './GridContainer';
+import color from "../util/color";
+import GridContainer from './studioHomepages/GridContainer';
 import Button from '@cdo/apps/templates/Button';
-import Responsive from '../../responsive';
-import styleConstants from '../../styleConstants';
+import Responsive from '../responsive';
+import styleConstants from '../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -106,85 +106,6 @@ class TwoColumnActionBlock extends Component {
           </div>
         </GridContainer>
         <div style={styles.clear}/>
-      </div>
-    );
-  }
-}
-
-export class LocalClassActionBlock extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
-    showHeading: PropTypes.bool.isRequired,
-  };
-
-  render() {
-    const { isRtl, responsive, showHeading } = this.props;
-    const heading = showHeading ? i18n.findLocalClassHeading() : '';
-
-    return (
-      <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
-        imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
-        heading={heading}
-        subHeading={i18n.findLocalClassSubheading()}
-        description={i18n.findLocalClassDescription()}
-        buttons={[{url: pegasus('/learn/local'), text: i18n.findLocalClassButton()}]}
-      />
-    );
-  }
-}
-
-export class AdministratorResourcesActionBlock extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
-  };
-
-  render() {
-    const { isRtl, responsive } = this.props;
-
-    return (
-      <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
-        imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
-        heading={i18n.administratorResourcesHeading()}
-        subHeading={i18n.administratorResourcesSubheading()}
-        description={i18n.administratorResourcesDescription()}
-        buttons={[{url: pegasus('/administrators'), text: i18n.yourSchoolAdminButton()}]}
-      />
-    );
-  }
-}
-
-export class SpecialAnnouncementActionBlock extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive),
-    imageUrl: PropTypes.string.isRequired,
-    heading: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
-    }))
-  };
-
-  render() {
-    const { isRtl, responsive, imageUrl, heading, description, buttons } = this.props;
-
-    return (
-      <div style={styles.fullWidthNonResponsive}>
-        <TwoColumnActionBlock
-          isRtl={isRtl}
-          responsive={responsive}
-          imageUrl={imageUrl}
-          subHeading={heading}
-          description={description}
-          buttons={buttons}
-        />
       </div>
     );
   }
