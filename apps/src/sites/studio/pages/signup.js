@@ -231,6 +231,7 @@ window.SignupManager = function (options) {
             schoolZip={data.schoolZip}
             showErrorMsg={schoolDataErrors.school}
             singleLineLayout
+            showRequiredIndicators={false}
           />
         }
         {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
@@ -243,6 +244,7 @@ window.SignupManager = function (options) {
             schoolZip={data.schoolZip}
             showErrorMsg={schoolDataErrors.school}
             singleLineLayout
+            showRequiredIndicators={false}
           />
         }
         {!isUS &&
@@ -255,6 +257,7 @@ window.SignupManager = function (options) {
             schoolZip="omitted"
             showErrorMsg={schoolDataErrors.school}
             singleLineLayout
+            showRequiredIndicators={false}
           />
         }
       </div>
