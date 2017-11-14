@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
@@ -7,6 +7,8 @@ import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+const schoolTypesToShowDropdown = ['charter', 'private', 'public'];
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -180,7 +182,6 @@ window.SignupManager = function (options) {
   }
 
   function updateAutocompleteSchoolFields(data) {
-    const schoolTypesToShowDropdown = ['charter', 'private', 'public'];
     const isUS = data.country === 'United States';
     ReactDOM.render(
       <div>
@@ -221,45 +222,12 @@ window.SignupManager = function (options) {
             showRequiredIndicator={false}
           />
         }
-        {isUS && data.nces === '-1' &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState={data.schoolState}
-            schoolZip={data.schoolZip}
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-            showRequiredIndicators={false}
-          />
-        }
-        {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState={data.schoolState}
-            schoolZip={data.schoolZip}
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-            showRequiredIndicators={false}
-          />
-        }
-        {!isUS &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState="omitted"
-            schoolZip="omitted"
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-            showRequiredIndicators={false}
-          />
-        }
+        <SignupSchoolNotFound
+          isUS={isUS}
+          data={data}
+          schoolDataErrors={schoolDataErrors}
+          onSchoolNotFoundChange={onSchoolNotFoundChange}
+        />
       </div>
       ,
       $("#schooldropdown-block")[0]
@@ -411,3 +379,44 @@ window.SignupManager = function (options) {
   $("#user_email").placeholder();
   $("#user_school").placeholder();
 };
+
+class SignupSchoolNotFound extends React.Component {
+  static propTypes = {
+    isUS: PropTypes.bool.isRequired,
+    data: PropTypes.object.isRequired,
+    schoolDataErrors: PropTypes.object.isRequired,
+    onSchoolNotFoundChange: PropTypes.func.isRequired,
+  };
+
+  render() {
+    const {
+      isUS,
+      data,
+      schoolDataErrors,
+      onSchoolNotFoundChange,
+    } = this.props;
+
+    const outsideUS = !isUS;
+    const ncesInfoNotFound = (data.nces === '-1');
+    const noDropdownForSchoolType = (
+      !schoolTypesToShowDropdown.includes(data.schoolType)
+      && data.schoolType !== ''
+    );
+    if (outsideUS || ncesInfoNotFound || noDropdownForSchoolType) {
+      return (
+        <SchoolNotFound
+          onChange={onSchoolNotFoundChange}
+          schoolName={data.schoolName}
+          schoolType="omitted"
+          schoolCity={data.schoolCity}
+          schoolState={isUS ? data.schoolState : "omitted"}
+          schoolZip={isUS ? data.schoolZip : "omitted"}
+          showErrorMsg={schoolDataErrors.school}
+          singleLineLayout
+          showRequiredIndicators={false}
+        />
+      );
+    }
+    return null;
+  }
+}
