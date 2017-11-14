@@ -59,9 +59,8 @@
   }
 }
 
-#designModeViz.appModern, .draggingParent {
-
-  img[data-canonical-image-url=''], canvas, .chart {
+#divApplab.notRunning, #designModeViz.appModern, .draggingParent {
+  img[data-canonical-image-url=''], canvas:not(#turtleCanvas), .chart {
     border: 5px solid #fff;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -71,10 +70,11 @@
 
   img[data-canonical-image-url=''] {
     display: block;
-    background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat;
+    // Using !important so that object-fit-images polyfill (which creates inline background styles) doesn't override the placeholder
+    background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat !important;
   }
 
-  canvas {
+  canvas:not(#turtleCanvas) {
     background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat;
   }
 
