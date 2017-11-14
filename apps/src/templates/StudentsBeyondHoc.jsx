@@ -6,14 +6,7 @@ import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudent
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
-import {
-  pre2017MinecraftCards,
-  // newMinecraftCards,
-  // signedInApplabCards,
-  // signedOutApplabCards,
-  // signedInDefaultCards,
-  // signedOutDefaultCards
- } from './congratsBeyondHocActivityCards';
+import { cardSets } from './congratsBeyondHocActivityCards';
 
 const styles = {
   heading: {
@@ -33,7 +26,29 @@ export default class StudentsBeyondHoc extends Component {
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
+    const { isRtl, responsive, completedTutorialType, signedIn } = this.props;
+
+    var specificCardSet;
+    switch (true) {
+      case completedTutorialType === 'pre2017Minecraft':
+          specificCardSet = 'pre2017MinecraftCards';
+        break;
+      case completedTutorialType === '2017Minecraft':
+          specificCardSet = 'newMinecraftCards';
+        break;
+      case completedTutorialType === 'applab' && signedIn:
+          specificCardSet = 'signedInApplabCards';
+        break;
+      case completedTutorialType === 'applab' && !signedIn:
+          specificCardSet = 'signedOutApplabCards';
+        break;
+      case completedTutorialType === 'other' && signedIn:
+          specificCardSet = 'signedInDefaultCards';
+        break;
+      default:
+        specificCardSet = 'signedOutDefaultCards';
+    }
+    const cards = cardSets[specificCardSet];
 
     return (
       <div style={styles.container}>
@@ -41,7 +56,7 @@ export default class StudentsBeyondHoc extends Component {
           {i18n.congratsStudentHeading()}
         </h1>
         <VerticalImageResourceCardRow
-          cards={pre2017MinecraftCards}
+          cards={cards}
           isRtl={isRtl}
           responsive={responsive}
         />
@@ -49,7 +64,7 @@ export default class StudentsBeyondHoc extends Component {
           isRtl={isRtl}
           responsive={responsive}
           showContainer={false}
-          hideBottomMargin={true}
+          hideBottomMargin={false}
         />
         <LocalClassActionBlock
           isRtl={isRtl}

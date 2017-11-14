@@ -56,38 +56,35 @@ const NewMinecraft = {
   image: "new-minecraft"
 };
 
-export const pre2017MinecraftCards = [
-  CSFExpress,
-  ApplabTutorial,
-  OldMinecraft
-];
-
-export const newMinecraftCards = [
-  CSFExpress,
-  ApplabTutorial,
-  NewMinecraft
-];
-
-export const signedInApplabCards = [
-  ApplabProject,
-  ApplabMarketing,
-  AnotherHoC
-];
-
-export const signedOutApplabCards = [
-  ApplabProject,
-  ApplabMarketing,
-  CreateAccount
-];
-
-export const signedInDefaultCards = [
-  CSFExpress,
-  ApplabTutorial,
-  AnotherHoC
-];
-
-export const signedOutDefaultCards = [
-  CSFExpress,
-  ApplabTutorial,
-  CreateAccount
-];
+export const cardSets = {
+  'pre2017MinecraftCards' : [
+    CSFExpress,
+    ApplabTutorial,
+    OldMinecraft
+  ],
+  'newMinecraftCards' : [
+    CSFExpress,
+    ApplabTutorial,
+    NewMinecraft
+  ],
+  'signedInApplabCards' : [
+    ApplabProject,
+    ApplabMarketing,
+    AnotherHoC
+  ],
+  'signedOutApplabCards' : [
+    ApplabProject,
+    ApplabMarketing,
+    CreateAccount
+  ],
+  'signedInDefaultCards' : [
+    CSFExpress,
+    ApplabTutorial,
+    AnotherHoC
+  ],
+  'signedOutDefaultCards' : [
+    CSFExpress,
+    ApplabTutorial,
+    CreateAccount
+  ]
+};
