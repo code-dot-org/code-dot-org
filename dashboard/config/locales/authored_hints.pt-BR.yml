@@ -3563,8 +3563,8 @@
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: If you call the functions correctly, this is the path
           you will travel...
-        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
-          calling it twice to solve this puzzle.
+        Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de
+          seu programa! Tente executá-la duas vezes para resolver este enigma.
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and
           make a decision?
@@ -3627,124 +3627,117 @@
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
-          End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: Use as teclas de seta para direcionar o jogador pela
+          casa. Termine no quadrado laranja para vencer.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
-          the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
-          Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
-          the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: Arraste um bloco 'mover para a frente' da caixa de
+          ferramentas para a área de trabalho e fixe-o abaixo do bloco 'ao rodar'.
+        MC_HOC_2017_01_RETRY_b: Não esqueça de clicar em "Executar" para executar
+          o código para o Agent.
+        MC_HOC_2017_01_RETRY_c: Depois que o Agent executar todo o código, você poderá
+          se mover com o jogador com as teclas de seta!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the map!
+        MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça
+          sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
+        MC_HOC_2017_02_Cole_b: "Pressione \"Executar\"! \nVocê pode executar seu código,
+          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de
+          seta para mover o jogador pelo mapa!
         MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
           on the map!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the orange square.
+        MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça
+          sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
+        MC_HOC_2017_02_Cole_b: "Pressione \"Executar Agent\"! \nVocê pode executar
+          seu código, mesmo se ele não estiver certo. Execute e redefina seu código
+          repetidamente, até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de
+          seta para mover o jogador para o quadrado laranja!
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
-          use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
-          loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: Quando o Agent chegar à placa de pressão, você pode
+          usar as setas do teclado para levar o jogador até a bússola!
+        MC_HOC_2017_03_Cole_b: Parece que o código é um pouco longo? Tente usar um
+          ciclo 'Repetir' e ver se você consegue descobrir como deixá-lo mais curto!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "Cruzar essas duas placas de pressão abrirá o
+          caminho para o jogador. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
-          direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
-          plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: 'Use o bloco ''virar à direita'' para mudar a
+          direção do Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: O Agent só precisa chegar até a primeira placa
+          de pressão para passar o Alex ou o Steve pelo machado.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
-          you use a `repeat` loop to make that happen?
-        MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
+        MC_HOC_2017_04_Cole_a: O Agent precisa 'mover-se para frente' 7 vezes. Como
+          é possível usar o ciclo 'Repetir' para que isso aconteça?
+        MC_HOC_2017_04_Cole_c: "Pressione \"Executar\"! \nVocê pode executar seu código,
+          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_04_Cole_b: Quando o Agent chegar à placa de pressão, ele abrirá
+          a porta para o jogador.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código
+          dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir'
+          para completar este enigma.
         MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
           you go.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código
+          dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir'
+          para completar este enigma.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
-          *should* it run?
+        MC_HOC_2017_06_Cole_a: Quantas vezes este ciclo é executado? Quantas vezes
+          ele *deve* ser executado?
         MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
           water! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
-          loop!
+        MC_HOC_2017_06_Cole_a: Tente colocar mais de uma instrução dentro do um ciclo
+          'Repetir'!
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
           to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
-          function does and call it as many times as you need using the small green
-          `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
-          the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_a: Para resolver este enigma, descubra o que a função
+          'abrir caminho' faz e use-a quantas vezes precisar usando o pequeno bloco
+          'abrir caminho' da caixa de ferramentas.
+        MC_HOC_2017_07_Cole_b: Tente misturar os blocos de função com outros blocos
+          da caixa de ferramentas para ajudá-lo a resolver este enigma.
       MC_HOC_2017_08_RY_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Pressione \"Executar Agent\"! \nVocê pode executar seu
+          código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas
+          delas!
       MC_HOC_2017_08_Will_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Pressione \"Executar Agent\"! \nVocê pode executar seu
+          código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas
+          delas!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
           line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
+          para que Alex ou Steve possa andar além dos limites do mapa.
       MC_HOC_2017_4.5v2_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "Cruzar essas duas placas de pressão abrirá o
+          caminho para o jogador. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_Ali_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "Pressione \"Executar\"! \nVocê pode executar seu código,
+          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas
+          delas!
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
           the lava.
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
+          para que Alex ou Steve possa andar além dos limites do mapa.
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -3910,8 +3903,8 @@
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
+          para que Alex ou Steve possa andar além dos limites do mapa.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
