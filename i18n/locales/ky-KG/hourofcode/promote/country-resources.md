@@ -7,37 +7,37 @@ nav: promote_nav
 
 <% if @country == 'la' %>
 
-# Каражаттар
+# Ресурстар
 
-## ¿Qué hacemos cuando hacemos la Hora del Código?
+## Код саатында биз эмнелерди кылабыз?
 
 <div class="handout" style="width: 50%; float: left;">
   
 <a href="/la/files/hacemos-la-Hora-del-Codigo.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo.png"></a>
-<br />En Español
+<br />Испанча
 </div>
 
 <div class="handout" style="width: 50%; float: left;">
   
 <a href="/la/files/hacemos-la-Hora-del-Codigo-Ingles.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo-Ingles.png"></a>
-<br />En Inglés
+<br />Англисче
 </div>
 
 <div style="clear:both"></div>
 
-## Vídeos
+## Видеолор
 
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)</strong></a>
+<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>Эмне үчүн баары програмдаганды үйрөнүшү керек? Аргентинадагы Код саатына катышкыла (5 мүн)</strong></a>
 
   
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
   
-[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=_vq6Wpb-WyQ)
+[**Код сааты Чилиде (2 мүн)**](https://www.youtube.com/watch?v=_vq6Wpb-WyQ)
 
 <% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -67,7 +67,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+[Код сааты сабак жетектемеси](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
@@ -78,7 +78,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 <
 
-p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
+p>[**Технологиялык Код саатынын достору (2 мүн)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
 <% elsif @country == 'pk' %>
 
@@ -90,45 +90,45 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# Уюмдар үчүн кандай өтүү жетектемеси
 
-## Use this handout to recruit corporations
+## Баракчаны компанияларды тартуу үчүн колдонгула
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
-## 1) Try the tutorials:
+## 1) Жетектемелерди көргүлө:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
 **Код саатынын көнүгүүлөрү:**
 
 - Даярданууга көп убакыт талап кылбайт
-- Are self-guided - allowing students to work at their own pace and skill-level
+- Өзүнчө ишке - окуучулар өз жөндөмүнө жараша иштегенге ылайыкташкан
 
 <a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Техниканы пландаштыруу - компүтер, бар болсо
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Код сааты интернетке туташкан компүтерлер менен мыкты өтөт. Бирок ар бир катышуучуга компүтер болушу керек эмес, Код саатын компүтерсиз өткөзсө деле болот.
 
-- **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-- **Preview the congrats page** to see what students will see when they finish. 
-- **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+- **Жетектемелерди окуучулардын компүтеринде же түзмөрүндө текшергиле.** Видео ж-а үн иштегени анык болсун.
+- **Куттуктоо барагын карап**, окуучулар аяктаганда эмнени көрүшөрүн билгиле. 
+- Үнү бар жетектеме тандасаңыз, **топту кулакчындар менен камсыздагыла**, же окуучуларга өздөрүнүкүн ала келүүсүн айткыла.
 
-## 3) Plan ahead based on your technology available
+## 3) Техниканын жетиштүүлүгүнө жараша пландаштыргыла
 
-- **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+- **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Катышуучулар өнөктөшкөндө, бири-бирине жардамдашып, окутуучуга азыраак кайрылышат.
 - **Интернет жайбы?** Ар бир окуучу өзү жүктөбөсү үчүн, видеолорду катышуучуларга жалпы көрсөтүүнү пландаштыргыла же офлайн жетектемелерди колдонгула.
 
-## 4) Inspire students - show them a video
+## 4) Видео көрсөткүлө - шыктандыргыла
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Код саатын шыктандыруучу видео көрсөтүү менен баштагыла. Мисалдар:
 
 - Code.org тааныштыруу видеосу, Билл Гейтс, Марк Цукерберг жана NBA жылдызы Крис Бош тартылган (Анын [1 мүнөт](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 мүнөт](https://www.youtube.com/watch?v=nKIu9yen5nc) жана [9 мүнөт](https://www.youtube.com/watch?v=dU1xS07N-FA) версиялары бар)
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+- The [Код сааты 2013 бетачар видеосу](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Код сааты 2014 бетачар видеосу](https://www.youtube.com/watch?v=96B5-JGA9EQ)
 - [Президент Обама окуучуларды компүтердик илимди өздөштүрүүгө чакырат](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Окуучуларды таң калтыргыла - кыска киришме бергиле**
 
 <% elsif @country == 'pe' %>
 
@@ -136,7 +136,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <
 
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
+p>[**Педро Пабло Кучински. Перунун президенти 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
 
 <% else %>
 
