@@ -4,8 +4,6 @@ import GridContainer from './studioHomepages/GridContainer';
 import Button from '@cdo/apps/templates/Button';
 import Responsive from '../responsive';
 import styleConstants from '../styleConstants';
-import i18n from "@cdo/locale";
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const contentWidth = styleConstants['content-width'];
 
@@ -50,7 +48,7 @@ const styles = {
   }
 };
 
-class TwoColumnActionBlock extends Component {
+export default class TwoColumnActionBlock extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive),
