@@ -2163,6 +2163,18 @@ Studio.init = function (config) {
     hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/),
   };
 
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
+
   // for hoc2015x, we only have permission to show the Rey avatar for approved
   // scripts. For all others, we override the avatars with an empty image
   if (config.skin.avatarAllowedScripts &&

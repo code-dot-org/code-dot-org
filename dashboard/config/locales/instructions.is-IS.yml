@@ -4161,6 +4161,9 @@
       New Gumball Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Ice Age Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Infinity Project_instruction: Búðu til hvað sem þú vilt og deildu því!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: 'Búðu til leik eftir þínu höfði! Þú stjórnar
         hér: þú getur breytt öllum reglunum, blandað saman íþróttum, notað ímyndunaraflið!
         Smelltu á Ljúka þegar leikurinn er tilbúinn svo að vinir þínir geti prófað
@@ -6615,9 +6618,8 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
-      allHallows2017_instruction: |-
-        Trap the Code.org employees in the crayon box
-        by drawing a square with 320 pixel sides!
+      allHallows2017_instruction: Lokaðu starfsmenn Code.org inni í litaboxinu með
+        því að teikna ferning með 320 díla hliðar!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -7035,9 +7037,8 @@
         auga á villur? Ég veit í hvaða átt ég vil fara, en ég er ekki viss um skrefin
         sem þarf að taka."*'
       courseA_collector_loops_challenge2_instruction: 'Náðu öllum fjársjóðnum! '
-      courseA_collector_loops_challenge2kp_instruction: |-
-        Collect at least *3* pieces
-        of treasure to pass this level.
+      courseA_collector_loops_challenge2kp_instruction: Safnaðu minnst *3* gersemum
+        til að leysa þetta borð.
       courseA_collector_preLoops1_instruction: |-
         Þetta er Lára ævintýramær!\r
         \r
@@ -7747,9 +7748,10 @@
         all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm.
         Sæktu blómasafann, ef svo er.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

@@ -13,6 +13,7 @@ import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
 import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
 import Led from '@cdo/apps/lib/kits/maker/Led';
+import Switch from '@cdo/apps/lib/kits/maker/Switch';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
@@ -181,8 +182,8 @@ describe('Circuit Playground Components', () => {
           .then((components) => toggleSwitch = components.toggleSwitch);
       });
 
-      it('creates a five.Switch', () => {
-        expect(toggleSwitch).to.be.an.instanceOf(five.Switch);
+      it('creates a Switch', () => {
+        expect(toggleSwitch).to.be.an.instanceOf(Switch);
       });
 
       it('bound to the board controller', () => {
@@ -192,9 +193,6 @@ describe('Circuit Playground Components', () => {
       it('on pin 21', () => {
         expect(toggleSwitch.pin).to.equal(21);
       });
-
-      // Note to self: Possible bug with toggleswitch.close event when it was
-      // open on app start?
     });
 
     describe('buzzer', () => {

@@ -753,7 +753,7 @@ bs:
       applab: "Laboratorij za Aplikacije"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Preimenuj"
     save: "Snimi"
     delete: "Izbriši"

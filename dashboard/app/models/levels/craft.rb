@@ -120,6 +120,12 @@ class Craft < Blockly
     topSnow: true,
     water: true,
     wool: true,
+    wool_orange: true,
+    wool_blue: true,
+    wool_magenta: true,
+    wool_pink: true,
+    wool_red: true,
+    wool_yellow: true,
 
     # House parts
     houseTopA: true,

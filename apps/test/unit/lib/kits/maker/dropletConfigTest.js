@@ -42,6 +42,7 @@ describe('maker/dropletConfig.js', () => {
 
     it('toggleSwitch dropdown', () => {
       expect(getBoardEventDropdownForParam('toggleSwitch')).to.deep.equal([
+        '"change"',
         '"close"',
         '"open"'
       ]);
