@@ -20,6 +20,7 @@ const menuStyle = {
   boxShadow: "3px 3px 3px gray",
   marginTop: TAIL_HEIGHT,
   textAlign: 'left',
+  maxWidth: 200,
 };
 const tailBorderStyle = {
   position: 'absolute',
@@ -49,6 +50,7 @@ export default class PopUpMenu extends Component {
     className: PropTypes.string,
     isOpen: PropTypes.bool,
     beforeClose: PropTypes.func,
+    minimalStyle: PropTypes.bool,
   };
 
   render() {
@@ -63,6 +65,7 @@ export default class PopUpMenu extends Component {
           targetPoint={this.props.targetPoint}
           className={this.props.className}
           children={this.props.children}
+          minimalStyle={this.props.minimalStyle}
         />
       </Portal>
     );
@@ -77,6 +80,7 @@ class MenuBubbleUnwrapped extends Component {
     }).isRequired,
     children: PropTypes.any,
     className: PropTypes.string,
+    minimalStyle: PropTypes.bool,
   };
 
   renderMenuItems() {
@@ -116,8 +120,12 @@ class MenuBubbleUnwrapped extends Component {
       <div style={style} className={className}>
         {this.renderMenuItems()}
         {/* These elements are used to draw the 'tail' with CSS */}
-        <span style={tailBorderStyle}/>
-        <span style={tailFillStyle}/>
+        {!this.props.minimalStyle &&
+          <span style={tailBorderStyle}/>
+        }
+        {!this.props.minimalStyle &&
+          <span style={tailFillStyle}/>
+        }
       </div>
     );
   }
@@ -152,17 +160,18 @@ class Item extends Component {
     first: PropTypes.bool,
     last: PropTypes.bool,
     color: PropTypes.string,
+    heightDivisor: PropTypes.number,
   };
 
   render() {
-    const {first, last, onClick, children, href} = this.props;
+    const {first, last, onClick, children, href, heightDivisor} = this.props;
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
     }
 
     const paddingStyle = {
-      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 2,
-      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
+      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / (heightDivisor ? heightDivisor: 2),
+      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / (heightDivisor ? heightDivisor: 2),
       paddingLeft: STANDARD_PADDING,
       paddingRight: STANDARD_PADDING,
       cursor: 'pointer',
