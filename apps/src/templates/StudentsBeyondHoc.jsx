@@ -31,11 +31,17 @@ export default class StudentsBeyondHoc extends Component {
 
     var specificCardSet;
     switch (true) {
-      case completedTutorialType === 'pre2017Minecraft':
+      case completedTutorialType === 'pre2017Minecraft' && isEnglish:
           specificCardSet = 'pre2017MinecraftCards';
         break;
-      case completedTutorialType === '2017Minecraft':
+      case completedTutorialType === 'pre2017Minecraft' && !isEnglish:
+          specificCardSet ='nonEnglishPre2017MinecraftCards';
+        break;
+      case completedTutorialType === '2017Minecraft' && isEnglish:
           specificCardSet = 'newMinecraftCards';
+        break;
+      case completedTutorialType === '2017Minecraft' && !isEnglish:
+          specificCardSet = 'nonEnglishNewMinecraftCards';
         break;
       case completedTutorialType === 'applab' && signedIn:
           specificCardSet = 'signedInApplabCards';
@@ -43,8 +49,17 @@ export default class StudentsBeyondHoc extends Component {
       case completedTutorialType === 'applab' && !signedIn:
           specificCardSet = 'signedOutApplabCards';
         break;
-      case completedTutorialType === 'other' && signedIn:
+      case completedTutorialType === 'other' && signedIn && isEnglish:
           specificCardSet = 'signedInDefaultCards';
+        break;
+      case completedTutorialType === 'other' && signedIn && !isEnglish:
+          specificCardSet = 'signedInNonEnglishDefaultCards';
+        break;
+      case completedTutorialType === 'other' && !signedIn && isEnglish:
+          specificCardSet = 'signedOutDefaultCards';
+        break;
+      case completedTutorialType === 'other' && !signedIn && !isEnglish:
+          specificCardSet = 'signedOutNonEnglishDefaultCards';
         break;
       default:
         specificCardSet = 'signedOutDefaultCards';
