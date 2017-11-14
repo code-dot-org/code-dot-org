@@ -10,8 +10,4 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   def form_data
     object.full_answers_camelized
   end
-
-  def application_type
-    object.type.split('::').last
-  end
 end

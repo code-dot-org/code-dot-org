@@ -35,7 +35,7 @@ export default class DetailViewContents extends React.Component {
       district_name: PropTypes.string,
       email: PropTypes.string,
       form_data: PropTypes.object,
-      application_type: PropTypes.string.isRequired
+      application_type: PropTypes.oneOf(['Facilitator', 'Teacher'])
     }),
     updateProps: PropTypes.func.isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
