@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import Responsive from '../responsive';
 import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
@@ -127,6 +128,7 @@ class ContentContainer extends Component {
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
     responsive: PropTypes.instanceOf(Responsive),
+    responsiveSize: PropTypes.string,
     hideBottomMargin: PropTypes.bool
   };
 
@@ -222,4 +224,9 @@ class Link extends Component {
   }
 }
 
-export default Radium(ContentContainer);
+export const UnconnectedContentContainer = ContentContainer;
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(Radium(ContentContainer));
