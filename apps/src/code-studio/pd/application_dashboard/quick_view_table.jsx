@@ -11,7 +11,13 @@ const styles = {
   statusCellCommon: {
     padding: '5px'
   },
-  statusCell: StatusColors
+  statusCell: StatusColors,
+  notesCell: {
+    whiteSpace: 'nowrap',
+    maxWidth: '200px',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  }
 };
 
 export default class QuickViewTable extends React.Component {
@@ -63,6 +69,18 @@ export default class QuickViewTable extends React.Component {
         transforms: [
           (status) => ({
             style: {...styles.statusCellCommon, ...styles.statusCell[status]}
+          })
+        ]
+      }
+    },{
+      property: 'notes',
+      header: {
+        label: 'Notes'
+      },
+      cell: {
+        transforms: [
+          (notes) => ({
+            style: {...styles.notesCell}
           })
         ]
       }
