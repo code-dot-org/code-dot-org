@@ -60,10 +60,12 @@ export default class SchoolNotFound extends Component {
     showErrorMsg: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicators: PropTypes.bool,
+    schoolNameLabel: PropTypes.string,
   };
 
   static defaultProps = {
     showRequiredIndicators: true,
+    schoolNameLabel: i18n.schoolName(),
   };
 
   static OMIT_FIELD = OMIT_FIELD;
@@ -111,7 +113,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolName !== OMIT_FIELD &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                {this.renderLabel(i18n.schoolName())}
+                {this.renderLabel(this.props.schoolNameLabel)}
                 <input
                   id="school_name"
                   type="text"
