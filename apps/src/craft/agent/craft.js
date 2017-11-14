@@ -21,7 +21,6 @@ import { getStore } from '../../redux';
 import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
-import experiments from '../../util/experiments';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 const MEDIA_URL = '/blockly/media/craft/';
@@ -758,7 +757,7 @@ export default class Craft {
   static reportResult(success) {
     const studioTestResults = studioApp().getTestResults(success);
     const testResultType = Craft.getTestResultFrom(success, studioTestResults);
-    const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
+    const saveToProjectGallery = true;
 
     const image = Craft.initialConfig.level.freePlay
       ? Craft.gameController.getScreenshot()
