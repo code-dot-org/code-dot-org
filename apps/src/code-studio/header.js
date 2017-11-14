@@ -176,12 +176,11 @@ function shareProject() {
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
-    const projectTypes = PublishableProjectTypesOver13;
-
     // Allow publishing for any project type that older students can publish.
     // Younger students should never be able to get to the share dialog in the
     // first place, so there's no need to check age against project types here.
-    const canPublish = !!appOptions.isSignedIn && projectTypes.includes(appType);
+    const canPublish = !!appOptions.isSignedIn &&
+      PublishableProjectTypesOver13.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
