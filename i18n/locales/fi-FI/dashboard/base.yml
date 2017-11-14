@@ -760,11 +760,11 @@ fi:
     rename: "Nimeä uudelleen"
     save: "Tallenna"
     delete: "Poista"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Tuo"
+    share_link_import_bad_link_header: "Jakolinkkiä ei tunnistettu"
+    share_link_import_bad_link_body: 'Emme voineet tuoda tuota jakolinkkiä. Varmista, että käytät Minecraft: Agent -tehtävän linkkiä ja että olet kopioinut koko linkin.'
+    share_link_import_error_header: "Jokin meni pieleen."
+    share_link_import_error_body: "Jakolinkin tuomisessa tapahtui virhe. Yritä uudelleen."
     exit: "Takaisin kurssiin"
     my_projects: "Omat projektit"
     project_gallery: "Projektit"
