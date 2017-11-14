@@ -68,7 +68,7 @@ export default class Congrats extends Component {
           <Certificate
             completedTutorialType={completedTutorialType}
           />
-          {userType === "teacher" && (
+          {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
               isRtl={isRtl}
@@ -82,7 +82,7 @@ export default class Congrats extends Component {
             signedIn={signedIn}
             isEnglish={isEnglish}
           />
-          {userType === "signedOut" && (
+          {userType === "signedOut" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
               isRtl={isRtl}
