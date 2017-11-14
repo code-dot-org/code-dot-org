@@ -654,7 +654,7 @@ designMode.serializeToLevelHtml = function () {
       this.removeAttribute('data-ofi-undefined');
       const ofiSrc = this.getAttribute('data-ofi-src');
       if (ofiSrc) {
-        this.src = ofiSrc;
+        this.src = makeUrlProtocolRelative(ofiSrc);
         this.removeAttribute('data-ofi-src');
       }
     }
@@ -675,6 +675,10 @@ designMode.serializeToLevelHtml = function () {
   return serialization;
 };
 
+function makeUrlProtocolRelative(url) {
+  return url.replace(/^https?:\/\//i, '//');
+}
+designMode.makeUrlProtocolRelative = makeUrlProtocolRelative;
 
 function getUnsafeHtmlReporter(sanitizationTarget) {
   return function (removed, unsafe, safe) {
