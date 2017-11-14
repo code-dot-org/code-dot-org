@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
-import ContentContainer from '../ContentContainer';
+import {UnconnectedContentContainer as ContentContainer} from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
 import i18n from "@cdo/locale";
