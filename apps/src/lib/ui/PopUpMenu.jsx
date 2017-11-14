@@ -124,6 +124,24 @@ class MenuBubbleUnwrapped extends Component {
 }
 export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
+class MenuBreak extends Component {
+
+  render() {
+    const style = {
+      borderTop: '1px solid ' + color.lighter_gray,
+      marginTop: STANDARD_PADDING/2,
+      marginBottom: STANDARD_PADDING/2,
+      marginLeft: STANDARD_PADDING,
+      marginRight: STANDARD_PADDING,
+    };
+    return (
+      <div style={style}></div>
+    );
+  }
+}
+
+PopUpMenu.MenuBreak = Radium(MenuBreak);
+
 class Item extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
