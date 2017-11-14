@@ -3812,9 +3812,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the Redstone Torch.
+      Function intro Ryan_instruction: Brug "byg bro" funktionen to gange for at bygge
+        en vej hen til faklen.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4239,96 +4238,75 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Use the functions to finish this minecart
-        track.
-      MC_HOC_2017_10_RYAN_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN2_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_2017_01_RETRY_instruction: 'Få agenten hen til trykpladen. Tryk derefter
+        på "Kør", og brug piletasterne til at styre spilleren ud af huset og frem
+        til kisten. '
+      MC_HOC_2017_02_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_02_Cole_instruction: 'Flyt agenten hen til trykpladen, så {currentPlayerName}
+        kan nå frem til kortet. '
+      MC_HOC_2017_02_Kiki_instruction: Få agenten hen til trykpladen, og styr derefter
+        spilleren frem til det orange felt.
+      MC_HOC_2017_02_Will_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_03_Cole_instruction: 'Kod agenten til at åbne porten. '
+      MC_HOC_2017_03_Kiki_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_04_instruction: Rediger loopet fra den seneste opgave, så agenten
+        nu bygger en vej hen over den bredere del af floden.
+      MC_HOC_2017_04POINT5_Cole_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_04_Cole_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_04_Kiki_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_05_instruction: Brug en funktion til at hjælpe agenten hen til trykpladen.
+      MC_HOC_2017_05_Cole_instruction: Få spilleren hen til skovlen.
+      MC_HOC_2017_05_Josh_instruction: Få spilleren hen til skovlen.
+      MC_HOC_2017_05_Kiki_instruction: Få spilleren hen til det orange felt.
+      MC_HOC_2017_06_Cole_instruction: Ret koden, så agenten bygger en bro hen over
+        floden.
+      MC_HOC_2017_06_Josh_instruction: Ret koden, så agenten bygger en bro hen over
+        floden.
+      MC_HOC_2017_06_Kiki_instruction: Ret koden, så agenten bygger en bro hen over
+        floden.
+      MC_HOC_2017_07_Cole_instruction: "Ødelæg isen, og få {currentPlayerName} hen
+        til minevognen."
+      MC_HOC_2017_07_Kiki_instruction: Brug en funktion til at rydde vejen hen til
+        det orange felt.
+      MC_HOC_2017_07a_Kiki_instruction: Ryd vejen hen til det orange felt.
+      MC_HOC_2017_08_Cole_instruction: Rediger funktionen, så den virker i det aktuelle
+        økosystem.
+      MC_HOC_2017_08_Kiki_instruction: Rediger funktionen, så den virker i den aktuelle
+        opgave.
+      MC_HOC_2017_08_RY_instruction: Brug funktionerne til at finde vej hen over lavaen.
+      MC_HOC_2017_08_Will_instruction: Brug funktionerne til at finde vej hen over
+        lavaen.
+      MC_HOC_2017_09_Cole_instruction: Programmér agenten til at rydde vejen for spilleren.
+      MC_HOC_2017_09_Kiki_instruction: Programmér agenten til at rydde vejen for spilleren
+        og nå frem til trykpladen.
+      MC_HOC_2017_10_Cole_instruction: Opret en funktion, der kan hjælpe dig med at
+        få minevognen færdig.
+      MC_HOC_2017_10_Cole_old_instruction: Opret en funktion, der kan hjælpe dig med
+        at få minevognen færdig.
+      MC_HOC_2017_10_Kiki_instruction: Opret en funktion, der kan hjælpe dig med at
+        få minevognen færdig.
+      MC_HOC_2017_10_RETRY_instruction: Opret en funktion, der kan hjælpe dig med
+        at få minevognen færdig.
+      MC_HOC_2017_10_RYAN_instruction: Opret en funktion, der kan hjælpe dig med at
+        få minevognen færdig.
+      MC_HOC_2017_10_RYAN2_instruction: Opret en funktion, der kan hjælpe dig med
+        at få minevognen færdig.
+      MC_HOC_2017_13_Cole_instruction: "**Fri leg:**  Tid til at udforske på egen
+        hånd!"
+      MC_HOC_2017_4.5v2_instruction: Få agenten hen til trykpladen.
+      MC_HOC_2017_Ali_instruction: Brug funktionerne til at finde vej hen over lavaen.
+      MC_HOC_2017_FP10x10_instruction: "**Fri leg:** Tør du udfordre dig selv til
+        at finde alle diamanterne på kortet? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Fri leg:** Tør du udfordre dig selv til
+        at finde alle diamanterne på kortet? "
+      MC_HOC_2017_FP20x20_instruction: "**Fri leg:**  Tid til at udforske på egen
+        hånd!"
+      MC_HOC_2017_Ryan_03_instruction: Brug loop til at hjælpe agenten med at bygge
+        en bro hen over floden ved at placere blokke i vandet.
+      MC_HOC_2017_Ryan_05_instruction: "Ødelæg kaktusserne, så spilleren kan nå frem
+        til målet."
+      MC_HOC_Kiki_02_instruction: Få agenten hen til trykpladen.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
