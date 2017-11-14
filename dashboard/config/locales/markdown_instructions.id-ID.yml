@@ -34223,12 +34223,9 @@
         secret data?\r
         \r
       Function intro Ryan_markdown_instruction: |-
-        A **function** named `build bridge`
-        is in your workspace.  All of the code you need to cross the river is built
-        right in! \r
+        **Fungsi** bernama `bangun jembatan` ada di ruang kerjamu.  Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia! \r
          \r
-        Snap the small, green block twice into your workspace to
-        fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].
+        Posisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch].
       'Game Lab Workshop: Random_markdown_instruction': |
         # Randomized Shapes\r
         \r
@@ -35493,230 +35490,166 @@
         to the door and open it (using the **space bar**) so you can get to the orange
         square inside.
       MC_HOC_2017_01_markdown_instruction: |-
-        Click "Run" to move the player using
-        the **arrow keys**.  \r
+        Klik "Jalankan" untuk memindahkan pemain menggunakan **tombol panah**.  \r
         \r
-        To pass this level, you will need to get to the
-        door and open it (using the **space bar**) so you can get to the orange square
-        inside.
-      MC_HOC_2017_01_Cole_markdown_instruction: |-
-        You need to collect all the tools
-        on this journey. Move around using the **arrow keys**, and get to the chest
-        on the path to win
-      MC_HOC_2017_01_Kiki_markdown_instruction: "To play this level, click the orange\n\"Run\"
-        button beneath the play space, then move the player around using the\n**arrow
-        keys**.  "
-      MC_HOC_2017_01_RETRY_markdown_instruction: |-
-        The door is locked, but the Agent
-        is here to help!\r
-        \r
-        Snap a `move forward` block to the bottom of the `when
-        run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up],
-        then press "Run" and use the arrow keys to move out of the house to collect
-        the **chest** [chest].
-      MC_HOC_2017_02_markdown_instruction: |-
-        The player needs to get into that secret
-        grove.  Help The Agent open the gate by writing code to get him to the pressure
-        plate.
-      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} is headed on\nan
-        adventure! To help, get the **map** [map_empty] behind the locked door\non
-        the right. \\r\n \\r\nSnap the code into the workspace to move the Agent\nto
-        the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get\nthrough. "
+        Untuk melewati level ini, kamu perlu menuju pintu dan membukanya (menggunakan **space bar**) sehingga kamu bisa mencapai kotak oranye di dalamnya.
+      MC_HOC_2017_01_Cole_markdown_instruction: Kamu perlu mengambil semua alat dalam
+        perjalanan ini. Bergeraklah dengan menggunakan **tombol panah** dan menuju
+        peti di jalur untuk menang
+      MC_HOC_2017_01_Kiki_markdown_instruction: Untuk memainkan level ini, klik tombol
+        "Jalankan" oranye di bawah ruang bermain, lalu pindahkan pemain dengan menggunakan
+        **tombol panah**.
+      MC_HOC_2017_01_RETRY_markdown_instruction: "{currentPlayerName} terjebak di
+        dalam rumah, namun Agent siap membantu!   \\r\n \\r\n   \\r\nPosisikan blok
+        `pindah maju` ke blok `ketika dijalankan` di ruang kerja untuk membawa Agent
+        ke pelat tekanan [PressurePlate_Up], lalu tekan \"Jalankan\" dan gunakan tombol
+        panah untuk memindahkan {currentPlayerName} ke luar rumah untuk mengambil
+        **peti** [chest].  "
+      MC_HOC_2017_02_markdown_instruction: Pemain perlu masuk ke dalam hutan kecil
+        rahasia itu.  Bantu Agent membuka gerbang dengan menulis kode untuk membawanya
+        ke pelat tekanan.
+      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} pergi berpetualang!
+        Untuk membantu, dapatkan **peta** [map_empty] di balik pintu terkunci di sebelah
+        kanan. \\r\n \\r\nPosisikan kode ke ruang kerja untuk memindahkan Agent ke
+        pelat tekanan [PressurePlate_Up] sehingga {currentPlayerName} bisa lewat. "
       MC_HOC_2017_02_Kiki_markdown_instruction: |-
-        The player is headed out on an adventure,
-        but first they have to get the torch that is hidden on the other side of that
-        locked door. \r
+        Pemain pergi berpetualang, tapi pertama mereka harus mendapatkan obor yang tersembunyi di balik pintu terkunci itu. \r
         \r
-        Program the Agent to move forward twice to follow the
-        white path and get to the pressure plate so he can open the door for the player.
+        Programkan Agent untuk maju dua kali untuk mengikuti jalur putih dan mencapai pelat tekanan sehingga ia bisa membuka pintu bagi pemain.
       MC_HOC_2017_02_Will_markdown_instruction: |-
-        To finish this level, the player
-        needs to get to the orange square inside of the Secret Grove, which is behind
-        the locked door.  \r
+        Untuk menyelesaikan level ini, pemain harus masuk ke kotak oranye di dalam Hutan Kecil Rahasia yang berada di balik pintu terkunci.  \r
         \r
-        The code in the workspace will make the Agent move
-        forward twice to get to the pressure plate and open the door for Alex or Steve.
-      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} continues on\nthe
-        adventure and needs the **compass** [compass] to prepare for the trip.  \\r\n
-        \  \\r\nCode\nthe Agent to open the gate. "
+        Kode di ruang kerja akan membuat Agent maju dua kali untuk mencapai pelat tekanan dan membuka pintu bagi Alex atau Steve.
+      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} melanjutkan petualangan
+        dan membutuhkan **kompas** [compass] untuk mempersiapkan perjalanan.  \\r\n
+        \  \\r\nBuat kode agar Agent membuka gerbang. "
       MC_HOC_2017_03_Kiki_markdown_instruction: |-
-        The player's adventure will begin
-        behind the locked door, in the Secret Grove!  \r
+        Petualangan pemain akan dimulai dari balik pintu terkunci di Hutan Kecil Rahasia!  \r
         \r
         \r
-        Help The Agent open
-        the door by writing code to get him to the pressure plate.
-      MC_HOC_2017_04_markdown_instruction: |-
-        Change the loop from the last puzzle
-        to help the Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
+        Bantu Agent membuka pintu dengan menulis kode untuk membawanya ke pelat tekanan.
+      MC_HOC_2017_04_markdown_instruction: Ubah loop dari teka-teki terakhir untuk
+        membantu Agent membuat jalur di bagian yang lebih luas di sungai ini.
+      MC_HOC_2017_04POINT5_Cole_markdown_instruction: "Kamu berhasil keluar dari rawa!
+        \ Sekarang, bawa pemain dengan aman ke kotak oranye. \n\n\nBantu Agent membersihkan
+        jalur dengan menemukan pola sederhana dan menggunakan loop untuk melintasi
+        dua pelat tekanan pertama."
+      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |
+        Kamu berhasil menyeberang! \r
         \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |-
-        You made it across! \r
-        \r
-        Now,
-        get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]
-      MC_HOC_2017_04_Cole_markdown_instruction: "The Agent can move across water!
-        \ \\r\n\n\\r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName}\nget
-        to the **bucket** [bucket_empty] behind the door. "
+        Sekarang, bawa {currentPlayerName} dengan aman melalui labirin untuk mengambil **kapak** [diamond_axe]\r
+      MC_HOC_2017_04_Cole_markdown_instruction: "Agent bisa bergerak melintasi air!
+        \ \\r\n \\r\nGunakan loop `ulangi` untuk memecahkan teka-teki ini dan membantu
+        {currentPlayerName} masuk ke **ember** [bucket_empty] di balik pintu. "
       MC_HOC_2017_04_Kiki_markdown_instruction: |-
-        The entry to the Secret Grove led
-        to this beautiful Oasis!  To pass this level, the player needs to get to the
-        orange square in the cabana.  \r
+        Jalan masuk ke Hutan Kecil Rahasia mengarah ke Oasis yang indah ini!  Untuk melewati level ini, pemain perlu mencapai kotak oranye di pondok.  \r
         \r
-        Use a `repeat` loop to help the Agent
-        get all the way up to the pressure plate, which opens the cabana door.
-      MC_HOC_2017_05_markdown_instruction: |-
-        Loops are not always helpful.\r
-        \r
-        These
-        cacti are not growing in an obvious pattern, so a loop would not clear them
-        correctly.  Instead, we've given you a function called `destroy and move`
-        that will do the hard work for you each time the Agent gets to an obstacle.
+        Gunakan loop `ulangi` untuk membantu Agent mencapai pelat tekanan yang membuka pintu pondok.
+      MC_HOC_2017_05_markdown_instruction: "Loop tidak selalu berguna. \n\n\nKaktus
+        ini tidak tumbuh dalam pola yang jelas, jadi loop tidak akan membersihkannya
+        dengan benar.  Sebagai gantinya, kami telah memberi kamu fungsi yang disebut
+        `hancurkan dan pindah` yang akan membantumu setiap kali Agent menemui rintangan."
       MC_HOC_2017_05_Cole_markdown_instruction: |-
-        Oh no, the bridge is out! \r
+        Oh tidak, jembatannya hilang! \r
         \r
-        Code
-        the Agent to rebuild the bridge using the `place` block so that {currentPlayerName}
-        can get to the **shovel** [diamond_shovel].
+        Buat kode agar Agent membangun kembali jembatan menggunakan blok `tempatkan` sehingga {currentPlayerName} bisa mencapai **sekop** [diamond_shovel].
       MC_HOC_2017_05_Josh_markdown_instruction: |-
-        Oh no, the bridge is out!\r
+        Oh tidak, jembatannya hilang! \r
         \r
-        Help
-        the Agent rebuild the bridge so that the player can get to the **shovel**.
+        Bantu Agent membangun kembali jembatan sehingga pemain bisa mencapai **sekop**.
       MC_HOC_2017_05_Kiki_markdown_instruction: |-
-        It's time for the player to leave
-        the Secret Grove and continue the adventure, but the bridge is out! \r
+        Waktunya pemain meninggalkan Hutan Kecil Rahasia dan melanjutkan petualangannya, tapi jembatannya hilang! \r
         \r
-        Help
-        the Agent rebuild the bridge, then move to the wooden plank so that the player
-        can get to the orange square.
-      MC_HOC_2017_06_Cole_markdown_instruction: "Another river, but this one is much\nwider!
-        \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName}\ncan
-        get to the **pickaxe** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
-        \r
-        Fix this code to help the Agent build a bridge across this
-        river.
+        Bantu Agent membangun kembali jembatan, lalu pindah ke papan kayu agar pemain bisa mencapai kotak oranye.
+      MC_HOC_2017_06_Cole_markdown_instruction: "Ada sungai lagi, tapi yang ini jauh
+        lebih lebar! \\r\n \\r\nPerbaiki kode ini untuk membantu Agent membangun jembatan
+        sehingga {currentPlayerName} bisa mencapai **beliung** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh_markdown_instruction: "Ada sungai lagi, tapi yang ini jauh
+        lebih lebar!  r \n\n\nPerbaiki kode ini untuk membantu Agent membangun jembatan
+        yang melintasi sungai ini."
       MC_HOC_2017_06_Kiki_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
+        Ada sungai lagi, tapi yang ini jauh lebih lebar!  \r
         \r
-        Fix this code to help the Agent build a bridge across the
-        water.
-      MC_HOC_2017_07_Cole_markdown_instruction: "There's ice in the way!  \\r\n \\r\nThe\n`clear
-        path` function can help you destroy the ice and get {currentPlayerName}\nto
-        the Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Kiki_markdown_instruction: "Loops are not the only way to repeat\ncode!
-        \ \\r\n\\r\nHere, we've given you a function called `clear cacti` that\nwill
-        do the hard work of clearing three cacti every time you use it.  Use\ntwo
-        `clear cacti` blocks to clear the path to the orange square. "
-      MC_HOC_2017_07a_Kiki_markdown_instruction: |-
-        Now, edit this loop to help the
-        Agent clear a path to the orange square.
+        Perbaiki kode ini untuk membantu Agent membangun jembatan yang melintasi air.
+      MC_HOC_2017_07_Cole_markdown_instruction: "Ada es yang menghalangi!  \\r\n \\r\nFungsi
+        `bersihkan jalur` bisa membantumu menghancurkan es dan membawa {currentPlayerName}
+        ke Kereta Tambang [minecart_normal]! "
+      MC_HOC_2017_07_Kiki_markdown_instruction: "Loop bukan satu-satunya cara untuk
+        mengulangi kode!  \\r\n\\r\nDi sini, kami telah memberi kamu fungsi yang disebut
+        `bersihkan kaktus` yang akan membantu membersihkan tiga kaktus setiap kali
+        kamu menggunakannya.  Gunakan dua blok `bersihkan kaktus` untuk membersihkan
+        jalur ke kotak oranye. "
+      MC_HOC_2017_07a_Kiki_markdown_instruction: Sekarang, edit loop ini untuk membantu
+        Agent membersihkan jalur ke kotak oranye.
       MC_HOC_2017_08_Cole_markdown_instruction: |-
-        Now, instead of destroying before
-        you move, you will need to place a block.  \r
+        Sekarang, bukannya menghancurkan sebelum kamu bergerak, kamu perlu menempatkan satu blok.  \r
         \r
-        Change the provided function
-        to work for the desert.
+        Ubah fungsi yang disediakan agar berhasil untuk gurun.
       MC_HOC_2017_08_Kiki_markdown_instruction: |-
-        Now, instead of destroying cacti,
-        you will need to place stone over lava, then destroy standstone.  \r
+        Sekarang, bukannya menghancurkan kaktus, kamu perlu menempatkan batu di atas lahar, lalu menghancurkan batu pasir.  \r
         \r
-        Change
-        the function to work for this level.
-      MC_HOC_2017_08_RY_markdown_instruction: |-
-        Now there are **TWO** functions to
-        choose from!\r
-        \r
-        Use these functions to quickly build a bridge across the
-        lava for {currentPlayerName}.
-      MC_HOC_2017_08_Will_markdown_instruction: |-
-        Now there are **TWO** functions
-        to choose from!\r
-        \r
-        Use these functions to quickly build a bridge across
-        the lava for the player.
-      MC_HOC_2017_09_Cole_markdown_instruction: |-
-        Use functions to help the Agent
-        destroy the giant blocks of dirt that are blocking the player's path to the
-        pressure plate.
-      MC_HOC_2017_09_Kiki_markdown_instruction: "This starting code cannot be removed.\\r\n\\r\nAdd\ncommands
-        to the `create trail` function so that the program in the workspace\nwill
-        get the Agent to the pressure plate. "
-      MC_HOC_2017_09_RS_CLONE_markdown_instruction: |-
-        Fix this function to fill in
-        the holes, then step on the pressure plate to clear a path to the torch.
-      MC_HOC_2017_10_Cole_markdown_instruction: |-
-        Use the functions to clear a path
-        for the mine cart, and walk into the Nether Portal.
-      MC_HOC_2017_10_Cole_old_markdown_instruction: |-
-        Try building a function from
-        the beginning that will make it easier for the Agent to finish this minecart
-        and get the player to the orange square.
-      MC_HOC_2017_10_Kiki_markdown_instruction: |-
-        Try building a function from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RETRY_markdown_instruction: "Can you spot the difference between\nthe
-        two functions in your workspace? \\r\n \\r\nUse these functions with other\ncode
-        from the toolbox to clear a path for the Minecart, then collect the **Flint\nand
-        Steel** [flint_and_steel]. \\r\n "
-      MC_HOC_2017_10_RYAN_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RYAN2_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_11_Kiki_markdown_instruction: |-
-        Now it's up to you! See what you
-        can create around this frozen lake.
-      MC_HOC_2017_13_Cole_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
-      MC_HOC_2017_4.5v2_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
-        \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_Ali_markdown_instruction: "Look at the functions below.  How can\nyou
-        use them to avoid the Ghasts and help {currentPlayerName} make it safely\nto
-        the **Enchanted Book** [book_enchanted]?  "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Freeplay:** Now it's up to you!\nCan
-        you challenge yourself to collect all of the diamonds in this level? "
+        Ubah fungsi agar berhasil untuk level ini.
+      MC_HOC_2017_08_RY_markdown_instruction: "Sekarang ada **DUA** fungsi yang bisa
+        dipilih! \n\n\nGunakan fungsi ini untuk membangun jembatan yang melintasi
+        lahar dengan cepat bagi {currentPlayerName}."
+      MC_HOC_2017_08_Will_markdown_instruction: "Sekarang ada **DUA** fungsi yang
+        bisa dipilih! \n\n\nGunakan fungsi ini untuk membangun jembatan yang melintasi
+        lahar dengan cepat bagi pemain."
+      MC_HOC_2017_09_Cole_markdown_instruction: Gunakan fungsi untuk membantu Agent
+        menghancurkan blok tanah sangat besar yang menghalangi jalur pemain ke pelat
+        tekanan.
+      MC_HOC_2017_09_Kiki_markdown_instruction: "Kode awal ini tidak bisa dihapus.
+        \n\n\nTambahkan perintah ke fungsi `buat jejak` sehingga program di ruang
+        kerja akan membawa Agent ke pelat tekanan."
+      MC_HOC_2017_09_RS_CLONE_markdown_instruction: Perbaiki fungsi ini untuk mengisi
+        lubang, lalu injak pelat tekanan untuk membersihkan jalur ke obor.
+      MC_HOC_2017_10_Cole_markdown_instruction: Gunakan fungsi untuk membersihkan
+        jalur kereta tambang dan masuk ke Portal Nether.
+      MC_HOC_2017_10_Cole_old_markdown_instruction: Coba buat fungsi dari awal yang
+        akan mempermudah Agent untuk menyelesaikan kereta tambang ini dan membawa
+        pemain ke kotak oranye.
+      MC_HOC_2017_10_Kiki_markdown_instruction: Coba buat fungsi dari awal yang akan
+        mempermudah Agent untuk menyelesaikan kereta tambang ini dan membawa pemain
+        ke kotak oranye.
+      MC_HOC_2017_10_RETRY_markdown_instruction: "Dapatkah kamu melihat perbedaan
+        antara dua fungsi di ruang kerjamu? \\r\n \\r\nGunakan fungsi ini dengan kode
+        lain dari kotak alat untuk membersihkan jalur Kereta Tambang, lalu ambil **Batu
+        Api dan Baja** [flint_and_steel]. \\r\n "
+      MC_HOC_2017_10_RYAN_markdown_instruction: Coba buat fungsi dari awal yang akan
+        mempermudah Agent untuk menyelesaikan kereta tambang ini dan membawa pemain
+        ke kotak oranye.
+      MC_HOC_2017_10_RYAN2_markdown_instruction: Coba buat fungsi dari awal yang akan
+        mempermudah Agent untuk menyelesaikan kereta tambang ini dan membawa pemain
+        ke kotak oranye.
+      MC_HOC_2017_11_Kiki_markdown_instruction: Sekarang terserah kamu! Lihat apa
+        yang bisa kamu buat di sekitar danau beku ini.
+      MC_HOC_2017_13_Cole_markdown_instruction: "**Main bebas:** Sekarang terserah
+        kamu! Gunakan kode Agent untuk membantu kamu menjelajahi dunia ini."
+      MC_HOC_2017_4.5v2_markdown_instruction: "Kamu berhasil keluar dari rawa!  Sekarang,
+        bawa pemain dengan aman ke kotak oranye. \n\n\nBantu Agent membersihkan jalur
+        dengan menemukan pola sederhana dan menggunakan loop untuk melintasi dua pelat
+        tekanan pertama."
+      MC_HOC_2017_Ali_markdown_instruction: 'Lihatlah fungsi di bawah ini.  Bagaimana
+        kamu bisa menggunakannya untuk menghindari Ghast dan membantu {currentPlayerName}
+        mencapai **Buku Sihir** [book_enchanted] dengan aman?  '
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Main bebas:** Sekarang terserah
+        kamu! Dapatkah kamu menantang dirimu untuk mengambil semua berlian di level
+        ini? "
       MC_HOC_2017_FP10x10_RE_markdown_instruction: |
         **Freeplay:** Now it's up to
         you! Can you challenge yourself to collect all of the diamonds in this level?
-      MC_HOC_2017_FP20x20_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
+      MC_HOC_2017_FP20x20_markdown_instruction: "**Main bebas:** Sekarang terserah
+        kamu! Gunakan kode Agent untuk membantu kamu menjelajahi dunia ini."
       MC_HOC_2017_Ryan_03_markdown_instruction: |-
-        Did you know that you can put more
-        than one piece of code into a loop?  \r
+        Tahukah kamu bahwa kamu bisa memasukkan lebih dari satu bagian kode ke dalam loop?  \r
         \r
-        Use a `repeat` loop to help the
-        Agent build a bridge over the river by placing blocks in the water.
+        Gunakan loop `ulangi` untuk membantu Agent membangun jembatan di atas sungai dengan menempatkan blok di air.
       MC_HOC_2017_Ryan_05_markdown_instruction: |-
-        Sometimes you need to knock down
-        things that get in the way of your player.  \r
-        Use the `destroy` block to
-        clear all of the cactii between the Agent and the pressure plate.
-      MC_HOC_Kiki_02_markdown_instruction: |-
-        Someone needs to be on the pressure plate
-        before the side door will open.  Help the Agent get to the plate so the player
-        can leave the house.
+        Terkadang kamu perlu merobohkan benda yang menghalangi pemainmu.  \r
+        Gunakan blok `hancurkan` untuk membersihkan semua kaktus antara Agent dan pelat tekanan.
+      MC_HOC_Kiki_02_markdown_instruction: Seseorang harus berada di pelat tekanan
+        agar pintu samping terbuka.  Bantu Agent mencapai pelat sehingga pemain bisa
+        meninggalkan rumah.
       MSM Defining Vars 1_markdown_instruction: |-
         Write a program that produces a
         50 pixel solid green triangle.
