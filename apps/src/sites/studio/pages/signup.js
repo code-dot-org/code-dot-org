@@ -8,7 +8,15 @@ import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const schoolTypesToShowDropdown = ['charter', 'private', 'public'];
+const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
+
+const SCHOOL_TYPES_HAVING_NAMES = [
+  'charter',
+  'private',
+  'public',
+  'afterschool',
+  'organization',
+];
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -213,7 +221,7 @@ window.SignupManager = function (options) {
             <option value="other">Other</option>
           </select>
         </div>
-        {isUS && schoolTypesToShowDropdown.includes(data.schoolType) &&
+        {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType) &&
           <SchoolAutocompleteDropdownWithLabel
             setField={onSchoolChange}
             value={data.nces}
@@ -399,14 +407,15 @@ class SignupSchoolNotFound extends React.Component {
     const outsideUS = !isUS;
     const ncesInfoNotFound = (data.nces === '-1');
     const noDropdownForSchoolType = (
-      !schoolTypesToShowDropdown.includes(data.schoolType)
+      !SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType)
       && data.schoolType !== ''
     );
     if (outsideUS || ncesInfoNotFound || noDropdownForSchoolType) {
+      const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(data.schoolType);
       return (
         <SchoolNotFound
           onChange={onSchoolNotFoundChange}
-          schoolName={data.schoolName}
+          schoolName={askForName ? data.schoolName : "omitted"}
           schoolType="omitted"
           schoolCity={data.schoolCity}
           schoolState={isUS ? data.schoolState : "omitted"}
