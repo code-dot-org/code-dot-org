@@ -104,19 +104,21 @@ export default class SchoolNotFound extends Component {
           </div>
         }
         <div>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolName())}
-              <input
-                id="school_name"
-                type="text"
-                name="school_name_s"
-                value={this.props.schoolName}
-                onChange={this.handleChange.bind(this, "schoolName")}
-                style={inputStyle}
-              />
-            </label>
-          </div>
+          {this.props.schoolName !== 'omitted' &&
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(i18n.schoolName())}
+                <input
+                  id="school_name"
+                  type="text"
+                  name="school_name_s"
+                  value={this.props.schoolName}
+                  onChange={this.handleChange.bind(this, "schoolName")}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          }
           {this.props.schoolType !== 'omitted' &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
