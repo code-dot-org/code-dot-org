@@ -21,6 +21,8 @@ import { getStore } from '../../redux';
 import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
+import experiments from '../../util/experiments';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -560,6 +562,7 @@ export default class Craft {
     if (first) {
       return;
     }
+    captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
     Craft.gameController.codeOrgAPI.resetAttempt();
   }
 
@@ -755,6 +758,7 @@ export default class Craft {
   static reportResult(success) {
     const studioTestResults = studioApp().getTestResults(success);
     const testResultType = Craft.getTestResultFrom(success, studioTestResults);
+    const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
     const image = Craft.initialConfig.level.freePlay
       ? Craft.gameController.getScreenshot()
@@ -808,6 +812,7 @@ export default class Craft {
           },
           feedbackImage: image,
           showingSharing: Craft.initialConfig.level.freePlay,
+          saveToProjectGallery,
         });
       },
     });
