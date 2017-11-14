@@ -47,6 +47,8 @@ const singleLineDropdownStyles = {
   width: "100%",
 };
 
+const OMIT_FIELD = '__omit_field__';
+
 export default class SchoolNotFound extends Component {
   static propTypes = {
     onChange: PropTypes.func,
@@ -63,6 +65,8 @@ export default class SchoolNotFound extends Component {
   static defaultProps = {
     showRequiredIndicators: true,
   };
+
+  static OMIT_FIELD = OMIT_FIELD;
 
   handleChange = (field, event) => {
     this.props.onChange(field, event);
@@ -104,20 +108,22 @@ export default class SchoolNotFound extends Component {
           </div>
         }
         <div>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolName())}
-              <input
-                id="school_name"
-                type="text"
-                name="school_name_s"
-                value={this.props.schoolName}
-                onChange={this.handleChange.bind(this, "schoolName")}
-                style={inputStyle}
-              />
-            </label>
-          </div>
-          {this.props.schoolType !== 'omitted' &&
+          {this.props.schoolName !== OMIT_FIELD &&
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(i18n.schoolName())}
+                <input
+                  id="school_name"
+                  type="text"
+                  name="school_name_s"
+                  value={this.props.schoolName}
+                  onChange={this.handleChange.bind(this, "schoolName")}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          }
+          {this.props.schoolType !== OMIT_FIELD &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolType())}
@@ -153,7 +159,7 @@ export default class SchoolNotFound extends Component {
               />
             </label>
           </div>
-          {this.props.schoolState !== 'omitted' &&
+          {this.props.schoolState !== OMIT_FIELD &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolState())}
@@ -176,7 +182,7 @@ export default class SchoolNotFound extends Component {
             </div>
           }
         </div>
-        {this.props.schoolZip !== 'omitted' &&
+        {this.props.schoolZip !== OMIT_FIELD &&
           <div style={fieldStyle}>
             <label style={labelStyle}>
               {this.renderLabel(i18n.schoolZip())}
