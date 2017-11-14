@@ -415,11 +415,11 @@ class SignupSchoolNotFound extends React.Component {
       return (
         <SchoolNotFound
           onChange={onSchoolNotFoundChange}
-          schoolName={askForName ? data.schoolName : "omitted"}
-          schoolType="omitted"
+          schoolName={askForName ? data.schoolName : SchoolNotFound.OMIT_FIELD}
+          schoolType={SchoolNotFound.OMIT_FIELD}
           schoolCity={data.schoolCity}
-          schoolState={isUS ? data.schoolState : "omitted"}
-          schoolZip={isUS ? data.schoolZip : "omitted"}
+          schoolState={isUS ? data.schoolState : SchoolNotFound.OMIT_FIELD}
+          schoolZip={isUS ? data.schoolZip : SchoolNotFound.OMIT_FIELD}
           showErrorMsg={schoolDataErrors.school}
           singleLineLayout
           showRequiredIndicators={false}
