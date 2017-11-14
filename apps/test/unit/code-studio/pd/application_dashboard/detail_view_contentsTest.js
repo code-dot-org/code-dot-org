@@ -35,20 +35,25 @@ describe("DetailViewContents", () => {
     );
   };
 
-  for (const applicationType of ['Teacher1819Application', 'Facilitator1819Application']) {
-    it(`Renders full contents for ${applicationType} initially`, () => {
-      const detailView = mountDetailView(applicationType);
+  const expectedTestData = [
+    {type: 'Teacher', applicationSpecificQuestions: 4},
+    {type: 'Facilitator', applicationSpecificQuestions: 7}
+  ];
+
+  for (const applicationData of expectedTestData) {
+    it(`Renders full contents for ${applicationData.type} initially`, () => {
+      const detailView = mountDetailView(applicationData.type);
 
       expect(detailView.find('#TopSection DetailViewResponse')).to.have.length(4);
       expect(detailView.find('DetailViewApplicationSpecificQuestions')).to.have.length(1);
       expect(detailView.find('DetailViewApplicationSpecificQuestions h3')).to.have.length(
-        applicationType === 'Teacher1819Application' ? 4 : 7
+        applicationData.applicationSpecificQuestions
       );
     });
 
     describe("Edit controls behavior", () => {
-      it(`the dropdown is disabled until the Edit button is clicked in ${applicationType}`, () => {
-        const detailView = mountDetailView(applicationType);
+      it(`the dropdown is disabled until the Edit button is clicked in ${applicationData.type}`, () => {
+        const detailView = mountDetailView(applicationData.type);
 
         expect(detailView.find('#DetailViewHeader Button')).to.have.length(1);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;

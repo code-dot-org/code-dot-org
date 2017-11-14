@@ -2,7 +2,8 @@ import React, {PropTypes} from 'react';
 import DetailViewResponse from './detail_view_response';
 import {
   SectionHeaders as TeacherSectionHeaders,
-  PageLabels as TeacherPageLabels
+  PageLabels as TeacherPageLabels,
+  LabelOverrides as TeacherLabelOverrides
 } from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {
   SectionHeaders as FacilitatorSectionHeaders,
@@ -11,9 +12,12 @@ import {
   NumberedQuestions
 } from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
+const TEACHER = 'Teacher';
+const FACILITATOR = 'Facilitator';
+
 const paneledQuestions = {
-  'Teacher1819Application': [],
-  'Facilitator1819Application': [
+  [TEACHER]: [],
+  [FACILITATOR]: [
     'resumeLink', 'csRelatedJobRequirements', 'diversityTrainingDescription', 'describePriorPd', 'additionalInfo',
     ...Object.keys(FacilitatorPageLabels.section5YourApproachToLearningAndLeading)
   ]
@@ -22,17 +26,17 @@ const paneledQuestions = {
 export default class DetailViewApplicationSpecificQuestions extends React.Component {
   static propTypes = {
     formResponses: PropTypes.object.isRequired,
-    applicationType: PropTypes.oneOf(Object.keys(paneledQuestions))
+    applicationType: PropTypes.oneOf([TEACHER, FACILITATOR]).isRequired
   }
 
    constructor(props) {
     super(props);
 
     this.state = {
-      sectionHeaders: this.props.applicationType === 'Teacher1819Application' ? TeacherSectionHeaders : FacilitatorSectionHeaders,
-      pageLabels: this.props.applicationType === 'Teacher1819Application' ? TeacherPageLabels : FacilitatorPageLabels,
-      labelOverrides: this.props.applicationType === 'Teacher1819Application' ? {} : FacilitatorLabelOverrides,
-      numberedQuestions: this.props.applicationType === 'Teacher1819Application' ? [] : NumberedQuestions,
+      sectionHeaders: this.props.applicationType === TEACHER ? TeacherSectionHeaders : FacilitatorSectionHeaders,
+      pageLabels: this.props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels,
+      labelOverrides: this.props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides,
+      numberedQuestions: this.props.applicationType === TEACHER ? [] : NumberedQuestions,
       paneledQuestions: paneledQuestions[this.props.applicationType]
     };
   }
