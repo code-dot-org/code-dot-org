@@ -727,6 +727,7 @@
   "schoolCountry": "School Country",
   "schoolInfoRequired": "School information is required.",
   "schoolInformationHeader": "School / Organization Information",
+  "schoolInformationOptionalHeader": "School / Organization Information (optional)",
   "schoolName": "School Name",
   "schoolState": "School State",
   "schoolType": "School Type",
