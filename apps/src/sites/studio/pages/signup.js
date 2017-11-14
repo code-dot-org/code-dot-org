@@ -312,7 +312,8 @@ window.SignupManager = function (options) {
         {from: 'country_s', to: 'country', transform: getCountryCodeForCountry},
         {from: 'school_name_s', to: 'school_name'},
         {from: 'school_state_s', to: 'school_state'},
-        {from: 'school_zip_s', to: 'school_zip'}
+        {from: 'school_zip_s', to: 'school_zip'},
+        {from: 'registration_location', to: 'full_address'},
       ];
       signupForm.forEach( function (el) {
         const match = schoolInfoDataMap.find(x => x.from === el.name);
@@ -427,6 +428,7 @@ class SignupSchoolNotFound extends React.Component {
           singleLineLayout
           showRequiredIndicators={false}
           schoolNameLabel={schoolNameLabel}
+          useGoogleLocationSearch={true}
         />
       );
     }
