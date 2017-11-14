@@ -9,7 +9,6 @@ import {sectionCode,
         removeSection,
         toggleSectionHidden,
         importOrUpdateRoster} from './teacherSectionsRedux';
-import * as utils from '../../utils';
 import {connect} from 'react-redux';
 import PrintCertificates from "./PrintCertificates";
 import FontAwesome from '../FontAwesome';
@@ -113,13 +112,7 @@ class SectionActionDropdown extends Component {
   onClickSync = () => {
     // Section code is the course ID, without the G- or C- prefix.
     const courseId = this.props.sectionCode.replace(/^[GC]-/, '');
-    this.props.updateRoster(courseId, this.props.sectionName)
-      .then(() => {
-        // While we are embedded in an angular page, reloading is the easiest
-        // way to pick up roster changes.  Once everything is React maybe we
-        // won't need to do this.
-        utils.reload();
-      });
+    this.props.updateRoster(courseId, this.props.sectionName);
   };
 
   onRequestDelete = () => {
