@@ -227,7 +227,8 @@ class SectionActionDropdown extends Component {
         <BaseDialog
           useUpdatedStyles
           uncloseable
-          isOpen = {this.state.deleting}
+          assetUrl={() => {}}
+          isOpen={this.state.deleting}
           style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
         >
           <h2>{i18n.deleteSection()}</h2>
