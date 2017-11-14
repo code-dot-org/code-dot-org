@@ -57,15 +57,35 @@ export default class SchoolNotFound extends Component {
     schoolType: PropTypes.string,
     showErrorMsg: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
+    showRequiredIndicators: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    showRequiredIndicators: true,
   };
 
   handleChange = (field, event) => {
     this.props.onChange(field, event);
   }
 
+  renderLabel(text) {
+    const {singleLineLayout, showRequiredIndicators} = this.props;
+    const questionStyle = {
+      ...styles.question,
+      ...(singleLineLayout && singleLineLayoutStyles)
+    };
+    return (
+      <div style={questionStyle}>
+        {text}
+        {showRequiredIndicators && (
+          <span style={styles.asterisk}> *</span>
+        )}
+      </div>
+    );
+  }
+
   render() {
-    const singleLineLayout = this.props.singleLineLayout;
-    const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
+    const {singleLineLayout} = this.props;
     const labelStyle = {...(singleLineLayout && singleLineLabelStyles)};
     const fieldStyle = {...styles.field, ...(singleLineLayout && singleLineFieldStyles)};
     const inputStyle = {...styles.input, ...(singleLineLayout && singleLineInputStyles)};
@@ -86,10 +106,7 @@ export default class SchoolNotFound extends Component {
         <div>
           <div style={fieldStyle}>
             <label style={labelStyle}>
-              <div style={questionStyle}>
-                {i18n.schoolName()}
-                <span style={styles.asterisk}> *</span>
-              </div>
+              {this.renderLabel(i18n.schoolName())}
               <input
                 id="school_name"
                 type="text"
@@ -103,10 +120,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolType !== 'omitted' &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                <div style={questionStyle}>
-                  {i18n.schoolType()}
-                  <span style={styles.asterisk}> *</span>
-                </div>
+                {this.renderLabel(i18n.schoolType())}
                 <select
                   name="school_type_s"
                   value={this.props.schoolType}
@@ -129,10 +143,7 @@ export default class SchoolNotFound extends Component {
         <div>
           <div style={fieldStyle}>
             <label style={labelStyle}>
-              <div style={questionStyle}>
-                {i18n.schoolCity()}
-                <span style={styles.asterisk}> *</span>
-              </div>
+              {this.renderLabel(i18n.schoolCity())}
               <input
                 type="text"
                 name="school_city_s"
@@ -145,10 +156,7 @@ export default class SchoolNotFound extends Component {
           {this.props.schoolState !== 'omitted' &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                <div style={questionStyle}>
-                  {i18n.schoolState()}
-                  <span style={styles.asterisk}> *</span>
-                </div>
+                {this.renderLabel(i18n.schoolState())}
                 <select
                   name="school_state_s"
                   value={this.props.schoolState}
@@ -171,10 +179,7 @@ export default class SchoolNotFound extends Component {
         {this.props.schoolZip !== 'omitted' &&
           <div style={fieldStyle}>
             <label style={labelStyle}>
-              <div style={questionStyle}>
-                {i18n.schoolZip()}
-                <span style={styles.asterisk}> *</span>
-              </div>
+              {this.renderLabel(i18n.schoolZip())}
               <input
                 id="school_zipcode"
                 type="text"
