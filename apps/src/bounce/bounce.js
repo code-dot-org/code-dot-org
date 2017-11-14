@@ -26,7 +26,6 @@ var SquareType = tiles.SquareType;
 import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
-import experiments from '../util/experiments';
 import {SignInState} from '../code-studio/progressRedux';
 
 /**
@@ -1019,7 +1018,7 @@ var displayFeedback = function () {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
         sharingText: bounceMsg.shareGame()
       },
-      saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+      saveToProjectGallery: true,
       disableSaveToGallery: !isSignedIn,
     });
   }

@@ -5,7 +5,6 @@ import i18n from "@cdo/locale";
 import {connect} from 'react-redux';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import experiments from '../../util/experiments';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
@@ -59,7 +58,7 @@ const ProjectCardGrid = React.createClass({
   render() {
     const { projectLists } = this.props;
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
-    const showMoreProjects = experiments.isEnabled('publishMoreProjects');
+    const showMoreProjects = true;
 
     return (
       <div style={styles.grid}>
