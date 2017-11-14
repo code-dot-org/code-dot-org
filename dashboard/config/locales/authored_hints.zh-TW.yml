@@ -686,8 +686,7 @@
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: If you call the functions correctly, this is the path
           you will travel...
-        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
-          calling it twice to solve this puzzle.
+        Function_intro_Ryan_a: "您可以在自己的程式中呼叫使用功能多次！請嘗試呼叫兩次以解決此版圖。"
       Harvesting_authored_hint:
         pointer_harvester_test: "哪種積木可以幫助我判斷（檢查還有做決定）？"
       Inspirational Artwork_authored_hint:
@@ -747,124 +746,75 @@
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
-          End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: "使用您的箭頭按鍵來引導玩家進入房屋。在橙色方塊中結束就獲勝。"
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
-          the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
-          Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
-          the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: "從工具箱中拖曳一個「往前移動」方塊至工作空間，然後將該方塊放在「當按下執行時」方塊下方。"
+        MC_HOC_2017_01_RETRY_b: "別忘了按一下「執行」以執行 Agent 的代碼。"
+        MC_HOC_2017_01_RETRY_c: "當 Agent 已執行其所有代碼後，您就可以使用箭頭按鍵移動玩家！"
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the map!
+        MC_HOC_2017_02_Cole_a: "向前移動 Agent 兩步以站在壓板上。這將為玩家開門。"
+        MC_HOC_2017_02_Cole_b: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_02_Cole_c: "當 Agent 把門打開之後，使用箭頭按鍵移動玩家至地圖上！"
         MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
           on the map!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the orange square.
+        MC_HOC_2017_02_Cole_a: "向前移動 Agent 兩步以站在壓板上。這將為玩家開門。"
+        MC_HOC_2017_02_Cole_b: "按「執行 Agent」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_02_Cole_c: "當 Agent 把門打開之後，使用箭頭按鍵移動玩家至橙色方塊上！"
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
-          use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
-          loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: "當您將 Agent 移至壓板上後，您可以使用箭頭按鍵移動玩家至羅盤上！"
+        MC_HOC_2017_03_Cole_b: "代碼長度是否有點過長？請嘗試使用「重複」循環，看看是否能找出縮短代碼的方式！"
       MC_HOC_2017_04POINT5_Cole_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "交叉這兩塊壓板，將為玩家開啟路徑。 \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
-          direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
-          plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: "使用「向右轉」方塊以變更 Agent 的方向"
+        MC_HOC_2017_04POINT5_RYAN_a: Agent 只需要抵達第一塊壓板，即可引導愛莉克斯或史提夫通過斧頭。
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
-          you use a `repeat` loop to make that happen?
-        MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
+        MC_HOC_2017_04_Cole_a: Agent 必須「往前移動」7 次。您可以如何使用「重複」循環來完成這個任務？
+        MC_HOC_2017_04_Cole_c: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_04_Cole_b: "當 Agent 抵達壓板後，他將為玩家開門。"
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: "您知道嗎？您可以將代碼的多個部分放在循環中。請嘗試放置木板**並**向前移動至「重複」內以完成此版圖。"
         MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
           you go.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: "您知道嗎？您可以將代碼的多個部分放在循環中。請嘗試放置木板**並**向前移動至「重複」內以完成此版圖。"
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
-          *should* it run?
+        MC_HOC_2017_06_Cole_a: "此循環會執行多少次？循環*應*執行多少次？"
         MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
           water! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
-          loop!
+        MC_HOC_2017_06_Cole_a: "請嘗試在「重複」循環中放置多個指令！"
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
           to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
-          function does and call it as many times as you need using the small green
-          `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
-          the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_a: "若要解決此版圖，請找出「清除路徑」的功能，並使用工具箱中小型綠色「清除路徑」方塊，依照自己的所需次數呼叫。"
+        MC_HOC_2017_07_Cole_b: "請嘗試混合功能方塊與工具箱中的其他方塊，以協助您解決此版圖。"
       MC_HOC_2017_08_RY_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "按「執行 Agent」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_08_RY_b: "解決此版圖有許多方式。請嘗試採用幾個！"
       MC_HOC_2017_08_Will_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "按「執行 Agent」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_08_RY_b: "解決此版圖有許多方式。請嘗試採用幾個！"
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: "使用功能以更輕鬆檢決此版圖！"
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
           line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: "使用功能以更輕鬆檢決此版圖！"
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "請嘗試讓 Agent 建立幾座橋樑，這樣愛莉克斯或史提夫才可走出地圖邊緣。"
       MC_HOC_2017_4.5v2_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: "交叉這兩塊壓板，將為玩家開啟路徑。 \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_Ali_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_a: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_08_RY_b: "解決此版圖有許多方式。請嘗試採用幾個！"
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
           the lava.
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "請嘗試讓 Agent 建立幾座橋樑，這樣愛莉克斯或史提夫才可走出地圖邊緣。"
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -915,8 +865,7 @@
 
           如果要依序收集花蜜，間隔數需要設成多少？
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "請嘗試讓 Agent 建立幾座橋樑，這樣愛莉克斯或史提夫才可走出地圖邊緣。"
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.

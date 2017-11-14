@@ -822,12 +822,10 @@
     save: "儲存"
     delete: "删除"
     import: "匯入"
-    share_link_import_bad_link_header: "分享連結無法辨識"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: "有地方出錯了。"
-    share_link_import_error_body: "匯入此分享連結時出錯。請再試一次。"
+    share_link_import_bad_link_header: "無法辨識分享連結"
+    share_link_import_bad_link_body: "我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。"
+    share_link_import_error_header: "發生錯誤。"
+    share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
     exit: "返回課程"
     my_projects: "我的專案"
     project_gallery: "所有專案"
