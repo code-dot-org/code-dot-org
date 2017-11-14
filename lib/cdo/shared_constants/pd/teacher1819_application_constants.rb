@@ -6,9 +6,9 @@ module Teacher1819ApplicationConstants
 
   SECTION_HEADERS = {
     section_1_about_you_and_your_school: 'About You and Your School',
-    section_2_choose_your_program: 'Section 2: Choose Your Program',
-    section_3_summer_workshop: 'Section 3: Summer Workshop',
-    section_4_submission: 'Section 4: Submission'
+    section_2_choose_your_program: 'Choose Your Program',
+    section_3_summer_workshop: 'Summer Workshop',
+    section_4_submission: 'Submission'
   }
 
   PAGE_LABELS = {
