@@ -78,9 +78,19 @@ export const cardSets = {
     ApplabTutorial,
     OldMinecraft
   ],
+  'nonEnglishpre2017MinecraftCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    OldMinecraft
+  ],
   'newMinecraftCards' : [
     CSFExpress,
     ApplabTutorial,
+    NewMinecraft
+  ],
+  'nonEnglishNewMinecraftCards' : [
+    CSFAccelerated,
+    CourseCatalog,
     NewMinecraft
   ],
   'signedInApplabCards' : [
@@ -98,9 +108,19 @@ export const cardSets = {
     ApplabTutorial,
     AnotherHoC
   ],
+  'signedInNonEnglishDefaultCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    AnotherHoC
+  ],
   'signedOutDefaultCards' : [
     CSFExpress,
     ApplabTutorial,
     CreateAccount
-  ]
+  ],
+  'signedOutNonEnglishDefaultCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    CreateAccount
+  ],
 };

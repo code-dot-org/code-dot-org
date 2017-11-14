@@ -21,12 +21,13 @@ export default class StudentsBeyondHoc extends Component {
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
-    signedIn: PropTypes.bool.isRequired,
+    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, completedTutorialType, signedIn } = this.props;
+    const { isRtl, responsive, completedTutorialType, userType, isEnglish } = this.props;
+    const signedIn = (userType === "teacher" || userType === "student");
 
     var specificCardSet;
     switch (true) {
@@ -60,12 +61,14 @@ export default class StudentsBeyondHoc extends Component {
           isRtl={isRtl}
           responsive={responsive}
         />
-        <CourseBlocksStudentGradeBands
-          isRtl={isRtl}
-          responsive={responsive}
-          showContainer={false}
-          hideBottomMargin={false}
-        />
+        {isEnglish && (
+          <CourseBlocksStudentGradeBands
+            isRtl={isRtl}
+            responsive={responsive}
+            showContainer={false}
+            hideBottomMargin={false}
+          />
+        )}
         <LocalClassActionBlock
           isRtl={isRtl}
           responsive={responsive}
