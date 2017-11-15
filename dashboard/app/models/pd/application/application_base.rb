@@ -71,20 +71,12 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
-    after_initialize :set_notes_template, if: :new_record?
-    before_create :set_notes_template
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
       self.application_year = nil
       self.application_type = nil
-    end
-
-    def set_notes_template
-      unless notes
-        self.notes = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
-      end
     end
 
     self.table_name = 'pd_applications'
