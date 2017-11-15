@@ -4,59 +4,63 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import i18n from "@cdo/locale";
-import { styles } from './census2017/censusFormStyles';
 
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
-    setField: PropTypes.func,
-    showErrorMsg: PropTypes.bool,
+    onChange: PropTypes.func.isRequired,
     // Value is the NCES id of the school
     value: PropTypes.string
   };
 
-  getOptions(q) {
+  constructSchoolOption = school => ({
+    value: school.nces_id.toString(),
+    label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`
+  });
+
+  constructSchoolNotFoundOption = () => ({
+      value: "-1",
+      label: i18n.schoolNotFound()
+  });
+
+  getOptions = (q) => {
+    // Existing value? Construct the matching option for display.
+    if (q.length === 0 && this.props.value) {
+      if (this.props.value === '-1') {
+        return Promise.resolve({options: [this.constructSchoolNotFoundOption()]});
+      } else {
+        const getUrl = `/dashboardapi/v1/schools/${this.props.value}`;
+        return fetch(getUrl)
+          .then(response => response.ok ? response.json() : [])
+          .then(json => ({options: [this.constructSchoolOption(json)]}));
+      }
+    }
+
+    // Search
     if (q.length < 4) {
       return Promise.resolve();
     }
-    return fetch(`/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`)
+    const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
+    return fetch(searchUrl)
       .then(response => response.ok ? response.json() : [])
       .then(json => {
-        var schools = json.map(school => ({
-          value: school.nces_id.toString(),
-          label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`
-        }));
-        schools.unshift({ value: "-1", label: i18n.schoolNotFound()});
+        const schools = json.map(school => this.constructSchoolOption(school));
+        schools.unshift(this.constructSchoolNotFoundOption());
         return { options: schools };
     });
-  }
-
-  sendToParent = (event) => {
-    this.props.setField("nces", event);
-  }
+  };
 
   render() {
     return (
-      <div>
-        <div style={styles.question}>
-          {i18n.schoolName()}
-          <span style={styles.asterisk}> *</span>
-          {this.props.showErrorMsg && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSelect()}
-            </div>
-          )}
-        </div>
-        <VirtualizedSelect
-          id="nces_school"
-          name="nces_school_s"
-          async={true}
-          loadOptions={this.getOptions}
-          filterOption={() => true}
-          value={this.props.value}
-          onChange={this.sendToParent}
-          placeholder={i18n.searchForSchool()}
-        />
-      </div>
+      <VirtualizedSelect
+        id="nces_school"
+        name="nces_school_s"
+        async={true}
+        loadOptions={this.getOptions}
+        filterOption={() => true}
+        value={this.props.value}
+        onChange={this.props.onChange}
+        placeholder={i18n.searchForSchool()}
+      />
     );
   }
 }

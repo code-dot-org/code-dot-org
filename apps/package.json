@@ -42,9 +42,9 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.6.26",
+    "@code-dot-org/blockly": "1.6.27",
     "@code-dot-org/bramble": "0.1.22",
-    "@code-dot-org/craft": "github:code-dot-org/craft#3b5a5150afcd282a030dadab2b9775672d303548",
+    "@code-dot-org/craft": "github:code-dot-org/craft#97a9f9e86e6473d7314ed903a3f16afe1beb2a29",
     "@code-dot-org/johnny-five": "0.11.1-cdo.1",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
@@ -205,11 +205,12 @@
     "webpack-notifier": "^1.4.1"
   },
   "dependencies": {
-    "@code-dot-org/js-interpreter": "^1.3.5",
+    "@code-dot-org/js-interpreter": "^1.3.6",
     "crypto-js": "^3.1.9-1",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
+    "object-fit-images": "^3.2.3",
     "query-string": "4.1.0",
     "react-dom-confetti": "^0.0.8",
     "react-hot-loader": "^1.3.1",

@@ -88,6 +88,30 @@ module.exports = {
       },
     },
     {
+      description: "getProperty and setProperty for value on sliders.",
+      editCode: true,
+      // Creating the slider elements with the write() API since we don't expose
+      // an API to create sliders at runtime...
+      xml:
+          "write('<input type=\"range\" value=\"50\" min=\"0\" max=\"100\"" +
+            " step=\"1\" id=\"idSlider1\">');" +
+          "write('<input type=\"range\" value=\"50\" min=\"0\" max=\"100\"" +
+            " step=\"1\" id=\"idSlider2\">');" +
+          "setProperty('idSlider1', 'value', 25);" +
+          "setProperty('idSlider2', 'value', getProperty('idSlider1', 'value'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idSlider2').value === '25');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
       description: "getProperty and setProperty for value on text inputs.",
       editCode: true,
       xml:
@@ -119,6 +143,28 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
           assert(document.getElementById('idDrop2').value === 'b');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "getProperty and setProperty for fit on images.",
+      editCode: true,
+      xml:
+          "image('idImage1', '');" +
+          "image('idImage2', '');" +
+          "image('idImage3', '');" +
+          "setProperty('idImage1', 'fit', 'cover');" +
+          "setProperty('idImage2', 'fit', getProperty('idImage1', 'fit'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idImage2').getAttribute('data-object-fit') === 'cover');
+          assert(document.getElementById('idImage3').getAttribute('data-object-fit') === 'contain');
           Applab.onPuzzleComplete();
         });
       },

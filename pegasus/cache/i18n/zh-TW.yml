@@ -307,6 +307,7 @@
   homepage_hero_text_stat_loc: 250 萬名女孩已經參與了 Code.org 的程式設計活動
   homepage_hero_text_stat_students: 'Code.org 上已有 #student_count 個學生帳戶'
   homepage_hero_text_stat_served: "一小時玩程式：已有 #served 次參與"
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_slot_text_hoc: "一小時玩程式活動"
   homepage_slot_text_frozen: "與安娜與艾莎一同玩冰雪奇緣"
   homepage_slot_text_teacher: "教師控制台"
@@ -432,10 +433,14 @@
   mc_gradelevel: "年齡 6-106"
   mc_platformtext: "瀏覽器, 智慧手機, 平板"
   mc_specs: "多種語言 | 現代瀏覽器和平板電腦 | 年齡 6-106"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft 設計師
   minecraft_adventurer: Minecraft 探險家
   minecraft_tutorials: "一小時玩 Minecraft 教程"
   minecraft_specs: "多種語言 | 最新瀏覽器或平板電腦 | 年級 2+"
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: "開始"
   minecraft_designer_description: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
   minecraft_designer_button: "開始"
   minecraft_adventurer_description: "使用程式積木與 Steve 或 Alex 一起完成冒險。"
@@ -443,6 +448,40 @@
   minecraft_no_internet: "沒有網路嗎？"
   minecraft_download_adventurer: "下載離線版的 Minecraft 探險家。"
   minecraft_subtitle: "一小時玩 Minecraft"
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
+    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
+    of the new tutorial by the Minecraft team and learn about the resources and best
+    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
+    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: "一小時玩運動遊戲"
   sports_og_title: "只要不斷鞭策自己，你一定學得會。"
   sports_og_description: "世界體育冠軍和金牌得主們都在鼓勵你試試一小時玩程式活動（Hour of Code）。快來編寫一個你自己的運動遊戲。"

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Bagaimana mengajar menggunakan Hour of Code</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+Sertai gerakan ini dan perkenalkan sekumpulan pelajar kepada sains komputer untuk sejam pertama mereka dengan langkah-langkah ini. Hour of Code mudah untuk dilaksanakan - walaupun untuk pemula! Jika perlukan bantuan, anda boleh dapatkan [ sukarelawan tempatan](<%= resolve_url('https://code.org/volunteer/local') %>) untuk membantu melaksanakan Hour of Code dalam kelas anda.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

@@ -1,8 +1,29 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl} from 'react-bootstrap';
-import Facilitator1819Questions from './detail_view_facilitator_specific_components';
+import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
+import {ApplicationStatuses} from './constants';
+
+const styles = {
+  notes: {
+    height: '95px'
+  },
+  statusSelect: {
+    marginRight: '5px'
+  },
+  detailViewHeader: {
+    display: 'flex',
+    marginLeft: 'auto'
+  },
+  headerWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  saveButton: {
+    marginRight: '5px'
+  }
+};
 
 export default class DetailViewContents extends React.Component {
   static propTypes = {
@@ -14,22 +35,20 @@ export default class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      form_data: PropTypes.object
+      form_data: PropTypes.object,
+      application_type: PropTypes.oneOf(['Facilitator', 'Teacher'])
     }),
     updateProps: PropTypes.func.isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
   componentWillMount() {
-    this.statuses = ['Unreviewed', 'Pending', 'Waitlisted', 'Accepted', 'Declined', 'Withdrawn'];
-    if (this.props.viewType === 'facilitator') {
-      this.statuses.splice(2, 0, 'Interview');
-    }
+    this.statuses = ApplicationStatuses[this.props.viewType];
   }
 
   state = {
     status: this.props.applicationData.status,
-    notes: this.props.applicationData.notes
+    notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
   };
 
   handleCancelEditClick = () => {
@@ -80,7 +99,7 @@ export default class DetailViewContents extends React.Component {
           onClick={this.handleSaveClick}
           bsStyle="primary"
           key="save"
-          style={{marginRight: '5px'}}
+          style={styles.saveButton}
         >
           Save
         </Button>
@@ -100,18 +119,18 @@ export default class DetailViewContents extends React.Component {
 
   renderHeader = () => {
     return (
-      <div style={{display: 'flex', alignItems: 'baseline'}}>
+      <div style={styles.headerWrapper}>
         <h1>
           {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
         </h1>
 
-        <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
+        <div id="DetailViewHeader" style={styles.detailViewHeader}>
           <FormControl
             componentClass="select"
             disabled={!this.state.editing}
             value={this.state.status}
             onChange={this.handleStatusChange}
-            style={{marginRight: '5px'}}
+            style={styles.statusSelect}
           >
             {
               this.statuses.map((status, i) => (
@@ -156,8 +175,9 @@ export default class DetailViewContents extends React.Component {
 
   renderQuestions = () => {
     return (
-      <Facilitator1819Questions
+      <DetailViewApplicationSpecificQuestions
         formResponses={this.props.applicationData.form_data}
+        applicationType={this.props.applicationData.application_type}
       />
     );
   };
@@ -174,8 +194,9 @@ export default class DetailViewContents extends React.Component {
               id="Notes"
               disabled={!this.state.editing}
               componentClass="textarea"
-              value={this.state.notes || ''}
+              value={this.state.notes}
               onChange={this.handleNotesChange}
+              style={styles.notes}
             />
           </div>
         </div>

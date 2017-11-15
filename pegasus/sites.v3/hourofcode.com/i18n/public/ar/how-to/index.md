@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>كيف تدرس ساعة واحدة لتعلم البرمحة</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+الانضمام إلى الحركة وإدخل مجموعة من الطلاب إلى ساعة أولى من علوم الحاسوب مع هذه الخطوات. ومن السهل تشغيل ساعة من التعليمات البرمجية - حتى بالنسبة للمبتدئين! إذا كنت تريد مجموعة إضافية من يد للمساعدة، يمكنك العثور على [ المتطوعين المحليين](<%= resolve_url('https://code.org/volunteer/local') %>) للمساعدة في تشغيل "مدار التعليمات البرمجية" في الفئة الخاصة بك.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

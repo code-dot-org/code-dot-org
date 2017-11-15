@@ -3,7 +3,6 @@ import ContentContainer from './ContentContainer';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
 import Responsive from '../responsive';
-import i18n from "@cdo/locale";
 import shapes from './studioHomepages/shapes';
 
 /**
@@ -34,9 +33,11 @@ export default class VerticalImageResourceCardRow extends Component {
                 key={cardIndex}
                 title={card.title}
                 description={card.description}
-                buttonText={i18n.learnMore()}
+                buttonText={card.buttonText}
                 link={card.link}
                 isRtl={isRtl}
+                image={card.image}
+                MCShareLink={card.MCShareLink}
               />
             )
           )}
