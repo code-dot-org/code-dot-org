@@ -33670,9 +33670,9 @@
         secret data?\r
         \r
       Function intro Ryan_markdown_instruction: |-
-        您的工作间中有一项名为"建造桥梁"的**功能**。您越过河流所需的全部代码都已经写在其中了！\r
+        您的工作区中有一项名为"建造桥梁"的**函数**。您越过河流所需的全部代码都已经写在其中了！\r
          \r
-        两次捕捉这个小小的绿色方块进入您的工作间，以修复路径并让{currentPlayerName}抵达红石火把[redstone_torch]。
+        将这个小小的绿色方块粘入您的工作区两次，从而修复道路并让{currentPlayerName} 抵达红石火把[redstone_torch]。
       'Game Lab Workshop: Random_markdown_instruction': |
         # Randomized Shapes\r
         \r
@@ -35005,22 +35005,23 @@
       MC_HOC_2017_10_RYAN_markdown_instruction: "尝试从一开始就建造一些功能，使得 Agent 完成该矿车并使玩家抵达橙色方形区域的过程变得更加容易。"
       MC_HOC_2017_10_RYAN2_markdown_instruction: "尝试从一开始就建造一些功能，使得 Agent 完成该矿车并使玩家抵达橙色方形区域的过程变得更加容易。"
       MC_HOC_2017_11_Kiki_markdown_instruction: "现在得靠您自己了！看看您可以在这片冰湖周围创建些什么。"
-      MC_HOC_2017_13_Cole_markdown_instruction: "**自由游戏时间：**现在得靠您自己了！使用该 Agent 的代码帮助您探索这个世界。"
+      MC_HOC_2017_13_Cole_markdown_instruction: "**自由游戏时间：** 现在得靠您自己了！使用代理人的代码帮助您探索这个世界。"
       MC_HOC_2017_4.5v2_markdown_instruction: "您已经成功走出了沼泽！现在，您需要让玩家安全抵达橙色方形区域。 \n\n\n找到一种简单的模式并使用环来越过前两个压力板，帮助
         Agent 清空路径。"
       MC_HOC_2017_Ali_markdown_instruction: "参看下方的代码。您将如何使用它们避开恶魂并帮助{currentPlayerName}安全抵达**附魔书**[book_enchanted]？
         \ "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**自由游戏时间：**现在得靠您自己了！您能挑战自我并收集完当前关卡的所有钻石吗？ "
+      MC_HOC_2017_FP10x10_markdown_instruction: "**自由游戏时间：** 现在得靠您自己了！您能挑战自我并收集完当前关卡的所有钻石吗？ "
       MC_HOC_2017_FP10x10_RE_markdown_instruction: |
         **Freeplay:** Now it's up to
         you! Can you challenge yourself to collect all of the diamonds in this level?
-      MC_HOC_2017_FP20x20_markdown_instruction: "**自由游戏时间：**现在得靠您自己了！使用该 Agent 的代码帮助您探索这个世界。"
+      MC_HOC_2017_FP20x20_markdown_instruction: "**自由游戏时间：** 现在得靠您自己了！使用代理人的代码帮助您探索这个世界。"
       MC_HOC_2017_Ryan_03_markdown_instruction: |-
-        您是否知道您可以在一个环中放置不止一段代码？ \r
+        您是否知道您可以在一个循环中放置不止一段代码？ \r
         \r
-        使用一个"重复"环帮助 Agent 以在水中放置方块的方式在河流上建造一座桥梁。
-      MC_HOC_2017_Ryan_05_markdown_instruction: "有时，您需要击倒那些阻碍了您的玩家的东西。 \n使用\"摧毁\"方块清空在
-        Agent 和压力板之间的使用仙人掌。"
+        使用一个"重复"循环帮助代理人，通过在水中放置方块的方式在河流上建造一座桥梁。
+      MC_HOC_2017_Ryan_05_markdown_instruction: |-
+        有时，您需要击倒那些阻碍了您的玩家的东西。 \r
+        使用"摧毁"方块清空在代理人和压力板之间的仙人掌。
       MC_HOC_Kiki_02_markdown_instruction: "需要有人位于压力板之上，侧门才会打开。帮助 Agent 抵达压力板，以便玩家能够离开房屋。"
       MSM Defining Vars 1_markdown_instruction: |-
         Write a program that produces a

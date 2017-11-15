@@ -3018,7 +3018,7 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: "这是一个游戏的例子。你可以在剧本实验室创造它。"
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: 使用"建造桥梁"功能两次，制造一条通往火把的路径。
+      Function intro Ryan_instruction: 使用"建造桥梁"功能两次，制造一条通往红石火把的路径。
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3315,7 +3315,7 @@
       MC_HOC_2017_01_instruction: 单击"运行"将玩家移动到房子里的橙色方块上。
       MC_HOC_2017_01_Cole_instruction: "在路上收集工具。使用方向键左右移动，取到屋里的宝箱。"
       MC_HOC_2017_01_Kiki_instruction: 单击"运行"将玩家移动到房子里的橙色方块上。
-      MC_HOC_2017_01_RETRY_instruction: '使 Agent 抵达压力板，然后按"运行"并使用方向键将玩家移出房屋以收集箱子。 '
+      MC_HOC_2017_01_RETRY_instruction: '使代理人抵达压力板，然后按"运行"并使用方向键将玩家移出房屋以收集箱子。 '
       MC_HOC_2017_02_instruction: "让特工到达压力板。"
       MC_HOC_2017_02_Cole_instruction: "移动特工到压力板, 使{currentPlayerName} 可以到达地图。 "
       MC_HOC_2017_02_Kiki_instruction: "让特工到达压力板，并将玩家移动到橙色方块上。"
@@ -3349,15 +3349,15 @@
       MC_HOC_2017_10_RETRY_instruction: "创建一个函数以帮助您完成此矿车。"
       MC_HOC_2017_10_RYAN_instruction: "创建一个函数以帮助您完成此矿车。"
       MC_HOC_2017_10_RYAN2_instruction: "创建一个函数以帮助您完成此矿车。"
-      MC_HOC_2017_13_Cole_instruction: "**自由游戏时间：**是时候自行探索了！"
+      MC_HOC_2017_13_Cole_instruction: "**自由游戏时间：** 是时候自行探索了！"
       MC_HOC_2017_4.5v2_instruction: "让特工到达压力板。"
       MC_HOC_2017_Ali_instruction: "使用这些功能找到一种越过岩浆的办法。"
-      MC_HOC_2017_FP10x10_instruction: "**自由游戏时间：**您能挑战自我并收集完当前关卡的所有钻石吗？ "
-      MC_HOC_2017_FP10x10_RE_instruction: "**自由游戏时间：**您能挑战自我并收集完当前关卡的所有钻石吗？ "
-      MC_HOC_2017_FP20x20_instruction: "**自由游戏时间：**是时候自行探索了！"
-      MC_HOC_2017_Ryan_03_instruction: "现在，使用环帮助 Agent 以在水中放置方块的方式在河流上建造一座桥梁。"
+      MC_HOC_2017_FP10x10_instruction: "**自由游戏时间：** 您能挑战自我并收集完当前关卡的所有钻石吗？ "
+      MC_HOC_2017_FP10x10_RE_instruction: "**自由游戏时间：** 您能挑战自我并收集完当前关卡的所有钻石吗？ "
+      MC_HOC_2017_FP20x20_instruction: "**自由游戏时间：** 是时候自行探索了！"
+      MC_HOC_2017_Ryan_03_instruction: "现在，使用循环来帮助代理人，以在水中放置方块的方式在河流上建造一座桥梁。"
       MC_HOC_2017_Ryan_05_instruction: "摧毁这些仙人掌，以便让玩家抵达目标。"
-      MC_HOC_Kiki_02_instruction: "使  Agent 抵达压力板。"
+      MC_HOC_Kiki_02_instruction: "使代理人抵达压力板。"
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_parents) %>'
+title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
 ---

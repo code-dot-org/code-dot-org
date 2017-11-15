@@ -34,7 +34,7 @@ sk:
   company_gsusa: Girl Scouts of America
   company_khanacademy: Khan Academy
   company_kipp: KIPP
-  company_mesa: Mathematics Engineering Science Achievement
+  company_mesa: Matematicko inžinierske vedné ocenenie
   company_napcs: National Alliance of Public Charter Schools
   company_ngcp: National Girls Collaborative Project
   company_teachforall: Teach for All
@@ -42,7 +42,7 @@ sk:
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
+  company_afterschool: mimoškolský
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -219,19 +219,19 @@ sk:
   front_join_us_more_info: "Pre viac informácií, prosím navštívte <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Pre viac informácií navštívte stránku code.org"
   front_join_us_n_students_served: "# podávajú"
-  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_closed: 'Registrácia pre Hour of Code je nateraz uzavretá. Skontrolujte prosím znova v Októbri možnosť prihlásenia sa do ďalšej Hour of Code.'
   signup_header: 'Zorganizujte Hodinu kódu počas %{campaign_date} a zaregistrujte sa tu.'
   signup_name_label: 'Vaše meno'
-  signup_name_error: 'Name is required.'
+  signup_name_error: 'Meno je povinné pole.'
   signup_email_label: 'Váš email'
-  signup_email_error: 'Email is required'
+  signup_email_error: 'Email je povinné pole'
   signup_organization_name_label: 'Názov školy alebo organizácie'
-  signup_organization_name_error: 'Organization name is required.'
+  signup_organization_name_error: 'Meno spoločnosti je povinné pole.'
   signup_event_type_label: 'Typ udalosti'
-  signup_event_type_error: 'Event type is required.'
+  signup_event_type_error: 'Typ udalosti je povinné pole.'
   signup_event_entire_school_label: 'Celá škola sa zúčastní'
   signup_event_location_label: 'Miesto akcie (voliteľné)'
-  signup_event_location_error: 'Event location is required.'
+  signup_event_location_error: 'Miesto udalosti je povinné pole.'
   signup_special_event_flag_label: 'Zvýraznite svoju špeciálnu udalosť'
   signup_special_event_details_label: 'Podrobnosti o špeciálnej udalosti'
   signup_send_posters_flag_label: 'Odoslať <a href= "/resources/promote#posters"> plagáty</a> mojej škole alebo organizácii (iba USA)'
@@ -245,25 +245,25 @@ sk:
   signup_name_placeholder: 'Vaše meno'
   signup_email_placeholder: 'meno@priklad.sk'
   signup_organization_name_placeholder: "Napr. Základná škola Selec"
-  signup_event_country_label: "Event country"
-  signup_event_country_error: "Country is required."
+  signup_event_country_label: "Miesto udalosti"
+  signup_event_country_error: "Krajina je povinné pole."
   signup_event_location_placeholder: "Poštové smerovacie číslo a krajina ALEBO úplná adresa."
   signup_special_event_details_placeholder: 'Opíšte, čím je vaša udalosť špeciálna'
   signup_send_posters_address_placeholder: 'Táto adresa nebude zverejnená na našej mape'
   signup_event_type_in_school: 'V škole'
   signup_event_type_out_of_school: 'Mimo školu'
-  signup_submit_census_label: 'Submit'
-  signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
+  signup_submit_census_label: 'Odoslať'
+  signup_submit_census_error_message: "Ospravedlňujeme sa za vzniknutú chybu. Prosím skúste znovu odoslať formulár."
   signup_submit_label: 'Zaregistrovať sa'
   signup_submit_error_message: "Vyskytla sa chyba. Skontrolujte prosím, uistite sa, že všetky požadované polia boli vyplnené správne."
-  signup_submit_and_continue_label: 'Submit and Continue'
-  signup_continue_label: 'Continue'
+  signup_submit_and_continue_label: 'Uložiť a pokračovať'
+  signup_continue_label: 'Pokračovať'
   signup_thank_you_header: "Ďakujeme Vám, že organizujete udalosť Hodina kódu."
   signup_thank_you_message: 'Poslali sme Vám potvrdzujúci email s informáciami, ktoré vám pomôžu začať.'
   map_title: "Hodina kódu mapa"
   map_header: '# Udalosti Hodiny kódu po celom svete'
   see_all_events: 'Zobraziť všetky udalosti'
-  map_header_company: '# by company organizers'
+  map_header_company: '# podľa názvu organizátora'
   map_header_country: '# v %{country}'
   map_search_placeholder: 'Hľadať medzi udalosťami Hodiny kódu'
   map_search_search: 'Hľadať'
@@ -271,7 +271,7 @@ sk:
   map_legend_title: 'Vysvetlivky'
   map_legend_hoc_events: 'Udalosť Hodiny kódu'
   map_legend_cs_tech_jam: 'Špeciálna udalosť'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
+  map_warning: "Hour of Code mapa zobrazuje len prvých 200000 zaevidovaných udalostí. Všetky zaevidované udalosti spolu s platnou adresou si môžete prezrieť tu <a href='%{events_url}'>the events page.</a>"
   meta_tag_og_title: Každé dieťa si zaslúži príležitosť
   meta_tag_og_description: 'Hodina kódu je globálne hnutie, ktoré má dosah až na desiatky miliónov študentov vo viac ako 180 krajinách a je vo viac ako 45 jazykoch. Pre vek od 4 do 104 rokov.'
   meta_tag_twitter_title: Každé dieťa si zaslúži príležitosť
@@ -330,7 +330,7 @@ sk:
   stats_hoc: 'Hodina Kódu: 5 dní'
   stats_global: "Viac ako 100 miliónov študentov vyskúšalo Hodinu kódu"
   stats_girls_more: "Viac dievčat skúsilo informatiku ako za posledných 70 rokov"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
+  stats_females: "Podiel žien v informatike je len 20% na stredoškolských, vysokoškolských smeroch a pracovnej sfére."
   stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
   stats_nina: '"Každý jeden deň poskytol rovnaký výsledok&mdash; zapojenie na 100%." - Nina Nichols Peery, pedagóg'
   stats_student: '"Vedela som, že je to šanca <b>raz za život</b>." Mariana Alzate, 5. ročníki'
@@ -445,7 +445,7 @@ sk:
   tutorial_frzn_name: "Programuj s Annou a Elsou"
   tutorial_cocom_name: Útok kódom
   tutorial_play-lab_name: "Hracie laboratórium"
-  tutorial_boxisland2016_name: "Krabicový ostrov"
+  tutorial_boxisland_name: "Krabicový ostrov"
   tutorial_textcomp_name: "Kompresia textu"
   tutorial_encryption_name: "Jednoduché šifrovanie"
   tutorial_kanopixel_name: "Kano Pixel Hack"
@@ -709,7 +709,7 @@ sk:
   tutorial_googlelogo_name: "Create your own Google logo"
   tutorial_playtune_name: "Play That Tune App"
   tutorial_computeit_name: "Compute it"
-  tutorial_codesterssj_name: "Sprite Jokes"
+  tutorial_codesterssj_name: "Space Jokes"
   tutorial_cmchat_name: "Python Chatbot"
   tutorial_tynkerdb_name: "Dragon Blast"
   tutorial_cmbuild_name: "Game Builder"
@@ -803,19 +803,20 @@ sk:
   tutorial_ozoprogram_name: "How to Program Robots"
   tutorial_ozopair_name: "Pair Programming with Ozobot"
   tutorial_codesnoopy_name: "Snoopy Snow Brawl"
+  tutorial_applabintro_name: "Intro to App Lab"
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
-  tutorial_mchoc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
+  tutorial_mchoc_shortdescription: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   tutorial_vidnews_shortdescription: "Code effects and graphics to make a news story all about tech, diversity, kids, and coding."
   tutorial_kodable-pre_shortdescription: "A fun game to teach computer programming concepts"
   tutorial_highseas_shortdescription: "In this activity, you'll create an adventure story with two characters that takes place on the high seas!"
   tutorial_capython_shortdescription: "Use Python code to draw fun pictures with turtles."
-  tutorial_frzn_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+  tutorial_frzn_shortdescription: "Pripojme sa programovaním k Anne a Else pri ich objavovaní kúziel a krás ľadu."
   tutorial_cocom_shortdescription: "Learn Python and Javascript by coding your way through Kithgard Dungeon!"
   tutorial_play-lab_shortdescription: "Create a story or make a game with Play Lab!"
-  tutorial_boxisland2016_shortdescription: "Take a trip on Box Island and collect all the stars!"
+  tutorial_boxisland_shortdescription: "Take a trip on Box Island and collect all the stars!"
   tutorial_textcomp_shortdescription: "Investigate lossless compression techniques with the Text Compression Widget"
   tutorial_encryption_shortdescription: "Introduces the need for encryption and simple techniques for cracking secret messages."
   tutorial_kanopixel_shortdescription: "Code your way through iconic images from video game history, from Tetris through Minecraft!"
@@ -877,7 +878,7 @@ sk:
   tutorial_cdmy_shortdescription: "Learn JavaScript programming, in a web-browser"
   tutorial_codestersdance_shortdescription: "Design your own dance routine and program a sprite to perform it! "
   tutorial_codestersbasketball_shortdescription: "Build your own pull and shoot basketball game! "
-  tutorial_nclkarel_shortdescription: "Learn basic concepts of Computer Science by typing programs for a robot."
+  tutorial_nclkarel_shortdescription: "Learn to code with Karel the Robot as you travel the world together solving problems."
   tutorial_buildpong_shortdescription: "Build the arcade classic and give the computer artificial intelligence to play against you."
   tutorial_tynkerdrones_shortdescription: "Program a controller for your robot or drone."
   tutorial_carla_shortdescription: "Learn to code by programming a talking virtual robot named Carla!"
@@ -1173,19 +1174,20 @@ sk:
   tutorial_ozoprogram_shortdescription: "Students without robots can discover how to program them with Ozobot Games."
   tutorial_ozopair_shortdescription: "Students learn about Pair Programming roles, then work together to program Bit or Evo by Ozobot to complete a maze."
   tutorial_codesnoopy_shortdescription: "Code to win in Snoopy Snow Brawl - who will be the last scout standing?"
+  tutorial_applabintro_shortdescription: "Create your own app in JavaScript using blocks or text."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode \"The Signal,\" a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
-  tutorial_mchoc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
+  tutorial_mchoc_longdescription: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   tutorial_vidnews_longdescription: 'It''s the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. "Breaking News: 400 students at Roosevelt participate in the Hour of Code"'
   tutorial_kodable-pre_longdescription: "Kodable is a self-guided game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary."
   tutorial_highseas_longdescription: "Animate an ocean wave to create a setting, then tell a story that takes place on the high seas."
   tutorial_capython_longdescription: "Python is an engaging and simple language to learn. Learn about using modules, functions, loops, and lists, all while creating fun images with the help of your turtle buddies. Geometry has never been so much fun!"
-  tutorial_frzn_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  tutorial_frzn_longdescription: "Použime programovanie na pripojenie k Anne a Else pri ich objavovaní kúziel a krás ľadu. Počas korčuľovania budeš v ľade vytvárať snehové vločky a vzory a vytvor zimnú krajinu zázrakov, ktorú potom môžeš zdieľať so svojimi priateľmi!"
   tutorial_cocom_longdescription: "Choose your hero and code your way through the ogre patrols, lava pits, and laser beams of Kithgard Dungeon. Level up, earn gems, and loot magic items to unlock new programming powers!"
   tutorial_play-lab_longdescription: "Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!"
-  tutorial_boxisland2016_longdescription: "Take a trip on Box Island and collect all the stars! Box Island is a beautiful mobile coding game that takes kids on an exciting adventure on the charming island. In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
+  tutorial_boxisland_longdescription: "Take a trip on Box Island and collect all the stars! Box Island is a beautiful mobile coding game that takes kids on an exciting adventure on the charming island. In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   tutorial_textcomp_longdescription: "At some point we reach a physical limit of how fast we can send bits, and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data. In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text. "
   tutorial_encryption_longdescription: "Students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages. They try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher. Students should become well-acquainted with the need for secrecy when sending information over the Internet, and that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated. "
   tutorial_kanopixel_longdescription: "Creators of all ages learn to code in a real programming language and watch their commands come to life by drawing a sequence of 13 pictures with code. They'll learn along the way about video game art history from Pong and other retro games through 8-bit art and Minecraft, weaving together computer science with art, history, and storytelling. The implementation is flexible––you can spend 1 hour or a few hours over one or multiple sessions. Learners can complete Pixel Hack on their own using guidance within the challenges, or you can turn Pixel Hack into an instructor-led journey, with a comprehensive educator manual full of suggestions. Students will be encouraged to add their own creative flair by hacking our challenges, to earn the Pixel Hacker Certificate."
@@ -1247,7 +1249,7 @@ sk:
   tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
   tutorial_codestersbasketball_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. "
-  tutorial_nclkarel_longdescription: "This short course consists of 18 fun programming puzzles for Karel the Robot. It should take no more than one hour of your time to get your Certificate of Completion. If you like Karel, make sure to take the full Karel programming course in NCLab!"
+  tutorial_nclkarel_longdescription: "Learn to code and solve problems by guiding Karel the Robot through jungles, mountains, and deserts. Karel follows your instructions, just like a real robot. Start programming with simple commands such as go, get, and put. Next you will learn how to build repeat loops and conditions into your programs. Finally define custom commands for Karel. You can create your own games with NCLab's app! Have fun while learning skills that you can use in any programming language."
   tutorial_buildpong_longdescription: "Pong is one of the earliest arcade video games and the very first sports arcade video game. It is a table tennis sports game featuring simple two-dimensional graphics. The aim of the game is for the PLAYER to score on the COMPUTER while defending its GOAL. In this project, the COMPUTER is programmed with basic artificial intelligence so it can respond to the PLAYER."
   tutorial_tynkerdrones_longdescription: "Learn to program connected devices by solving the \"Crash Course\" puzzles, where you navigate virtual drones and robots through obstacles. Then you're ready to create programs to control real drones and robots. Requires an iPad or Android tablet and a supported toy."
   tutorial_carla_longdescription: "\"Programming with Carla\" is a series of short activities that guide students through building a simple chatbot, whilst learning about core concepts like variables and conditionals. The activities have been carefully designed to address common misconceptions that new programmers have about these topics by offering many opportunities for practice, as well as targeted hints and feedback.\n"
@@ -1543,6 +1545,7 @@ sk:
   tutorial_ozoprogram_longdescription: "Students find out how easy it is to program robots, even if their classroom doesn't have any. This teacher-guided online tutorial helps students develop programming skills and gain confidence in their ability to understand computer science through Ozobot's Blockly games. Students discover how Bit and Evo by Ozobot will upload the program through a unique method - colors flash onto the robot's light sensors and teach the it the program."
   tutorial_ozopair_longdescription: "Students who know the OzoBlockly block-based programming language learn how to work in teams as Drivers and Navigators, and then practice by creating a single program on one computer for one Ozobot robot. This is a teacher-led tutorial that requires videos to be shown at the beginning, and then guidance to help students through completing their program when needed."
   tutorial_codesnoopy_longdescription: "Team up with friends and practice your coding skills by programming Snoopy's Beagle Scouts in a fun and silly snowball fight! Beginners and pre-readers welcome - teams write their code in secret while trying to outsmart each other. With words-free code, everyone can get in on the fun! This activity supports 1- 4 players on the same device - play against friends or the computer."
+  tutorial_applabintro_longdescription: "Create your own app in JavaScript using blocks or text. You'll make a simple app with buttons, images, sounds and multiple screens that you can share with your friends or publish to a public gallery. If you've already done some coding with blocks, this is a great next step to take your programming to the next level."
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1555,7 +1558,7 @@ sk:
   tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
   tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
-  tutorial_boxisland2016_language: "English, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
+  tutorial_boxisland_language: "English, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_textcomp_language: "Iba v angličtine"
   tutorial_encryption_language: "Iba v angličtine"
   tutorial_kanopixel_language: "Iba v angličtine"
@@ -1584,7 +1587,7 @@ sk:
   tutorial_tynkerbrick_language: "Iba v angličtine"
   tutorial_itchbio_language: "Iba v angličtine"
   tutorial_itchj_language: "Iba v angličtine"
-  tutorial_tickleo_language: "English, Chinese (Traditional), Danish, French, Japanese"
+  tutorial_tickleo_language: "Iba v angličtine"
   tutorial_hopgeo_language: "Iba v angličtine"
   tutorial_tynkermult_language: "Iba v angličtine"
   tutorial_monster_language: "English, Spanish, Portuguese, Italian, French, German, Polish, Turkish"
@@ -1688,7 +1691,7 @@ sk:
   tutorial_cocomteach_language: "Iba v angličtine"
   tutorial_bbcmathii_language: "Iba v angličtine"
   tutorial_bbcphys_language: "Iba v angličtine"
-  tutorial_bitsbox_language: "Viacero"
+  tutorial_bitsbox_language: "Iba v angličtine"
   tutorial_tlcemo_language: "Iba v angličtine"
   tutorial_crd_language: "Iba v angličtine"
   tutorial_bbcbio_language: "Iba v angličtine"
@@ -1913,6 +1916,7 @@ sk:
   tutorial_ozoprogram_language: "Iba v angličtine"
   tutorial_ozopair_language: "Iba v angličtine"
   tutorial_codesnoopy_language: "English, Chinese, Dutch, French, German, Italian, Korean, Malay, Portuguese, Spanish, Swedish, Thai"
+  tutorial_applabintro_language: "Iba v angličtine"
   tutorial_athlete_string_detail_grades: "2. ročník a vyššie"
   tutorial_moana_string_detail_grades: "2. ročník a vyššie"
   tutorial_star-wars_string_detail_grades: "2. ročník a vyššie"
@@ -1925,7 +1929,7 @@ sk:
   tutorial_frzn_string_detail_grades: "2. ročník a vyššie"
   tutorial_cocom_string_detail_grades: "2. ročník a vyššie"
   tutorial_play-lab_string_detail_grades: "2. ročník a vyššie"
-  tutorial_boxisland2016_string_detail_grades: "Všetky vekové kategórie"
+  tutorial_boxisland_string_detail_grades: "Všetky vekové kategórie"
   tutorial_textcomp_string_detail_grades: "9. ročník a vyššie"
   tutorial_encryption_string_detail_grades: "9. ročník a vyššie"
   tutorial_kanopixel_string_detail_grades: "2. ročník a vyššie"
@@ -2283,6 +2287,7 @@ sk:
   tutorial_ozoprogram_string_detail_grades: "Ročníky 2-8"
   tutorial_ozopair_string_detail_grades: "2. ročník a vyššie"
   tutorial_codesnoopy_string_detail_grades: "Pre-reader - Grade 5"
+  tutorial_applabintro_string_detail_grades: "9. ročník a vyššie"
   tutorial_athlete_string_platforms: "Všetky moderné prehliadače"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -2295,7 +2300,7 @@ sk:
   tutorial_frzn_string_platforms: "All modern browsers, Android, iOS"
   tutorial_cocom_string_platforms: "Všetky moderné prehliadače"
   tutorial_play-lab_string_platforms: "All modern browsers, Android, iOS"
-  tutorial_boxisland2016_string_platforms: "Android tablet, iPad, Android phone, iPhone"
+  tutorial_boxisland_string_platforms: "Android tablet, iPad, Android phone, iPhone"
   tutorial_textcomp_string_platforms: "Všetky moderné prehliadače"
   tutorial_encryption_string_platforms: "Všetky moderné prehliadače"
   tutorial_kanopixel_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
@@ -2653,6 +2658,7 @@ sk:
   tutorial_ozoprogram_string_platforms: "Všetky moderné prehliadače"
   tutorial_ozopair_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
   tutorial_codesnoopy_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_applabintro_string_platforms: "Všetky moderné prehliadače"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
@@ -2665,7 +2671,7 @@ sk:
   tutorial_frzn_string_detail_platforms: ""
   tutorial_cocom_string_detail_platforms: ""
   tutorial_play-lab_string_detail_platforms: ""
-  tutorial_boxisland2016_string_detail_platforms: ""
+  tutorial_boxisland_string_detail_platforms: ""
   tutorial_textcomp_string_detail_platforms: ""
   tutorial_encryption_string_detail_platforms: ""
   tutorial_kanopixel_string_detail_platforms: ""
@@ -3023,6 +3029,7 @@ sk:
   tutorial_ozoprogram_string_detail_platforms: ""
   tutorial_ozopair_string_detail_platforms: "Ozobot Bit or Evo robot"
   tutorial_codesnoopy_string_detail_platforms: ""
+  tutorial_applabintro_string_detail_platforms: ""
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
@@ -3035,7 +3042,7 @@ sk:
   tutorial_frzn_string_detail_programming_languages: "Blocks"
   tutorial_cocom_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
   tutorial_play-lab_string_detail_programming_languages: "Blocks"
-  tutorial_boxisland2016_string_detail_programming_languages: "Blocks"
+  tutorial_boxisland_string_detail_programming_languages: "Blocks"
   tutorial_textcomp_string_detail_programming_languages: "Language independent"
   tutorial_encryption_string_detail_programming_languages: "Language independent"
   tutorial_kanopixel_string_detail_programming_languages: "JavaScript, Coffeescript"
@@ -3301,7 +3308,7 @@ sk:
   tutorial_computeit_string_detail_programming_languages: "Language independent"
   tutorial_codesterssj_string_detail_programming_languages: "Blocks, Python"
   tutorial_cmchat_string_detail_programming_languages: "Python"
-  tutorial_tynkerdb_string_detail_programming_languages: "Blocks, JavaScript, Python"
+  tutorial_tynkerdb_string_detail_programming_languages: "Blocks"
   tutorial_cmbuild_string_detail_programming_languages: "CoffeeScript"
   tutorial_robotrattle_string_detail_programming_languages: "Blocks"
   tutorial_codestersh_string_detail_programming_languages: "Blocks, Python"
@@ -3313,7 +3320,7 @@ sk:
   tutorial_kodmaze_string_detail_programming_languages: "Language independent"
   tutorial_codestersa_string_detail_programming_languages: "Python"
   tutorial_cmdodo_string_detail_programming_languages: "CoffeeScript"
-  tutorial_tynkerspace_string_detail_programming_languages: "Blocks, JavaScript, Python"
+  tutorial_tynkerspace_string_detail_programming_languages: "Blocks"
   tutorial_gfbloons_string_detail_programming_languages: "Blocks"
   tutorial_raspipong_string_detail_programming_languages: "Python"
   tutorial_codehsvr_string_detail_programming_languages: "JavaScript"
@@ -3393,6 +3400,7 @@ sk:
   tutorial_ozoprogram_string_detail_programming_languages: "Blocks"
   tutorial_ozopair_string_detail_programming_languages: "Blocks"
   tutorial_codesnoopy_string_detail_programming_languages: "Blocks"
+  tutorial_applabintro_string_detail_programming_languages: "Blocks, JavaScript"
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
   school_name_error: "School name is required."

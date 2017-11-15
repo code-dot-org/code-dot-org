@@ -3952,22 +3952,17 @@
         за победа!"
       MC HOC 2016 Village Test_instruction: "О не! Зомбита са те вкарали в капан вътре!
         Напиши код за железния голем, за да го накараш да гони и атакува зомбитата!"
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+      MC_2017_Ryan_02_instruction: "Помогни на играча да се измъкне с помощта на електрическа
+        верига като поставиш агента върху плочата- ключ."
+      MC_HOC_2017 Agent Test_instruction: Щракни върху "Старт" за да се премести играча
+        в оранжевия квадрат в къщата.
+      MC_HOC_2017_01_instruction: Щракни върху "Старт" за да се премести играча в
+        оранжевия квадрат в къщата.
+      MC_HOC_2017_01_Cole_instruction: "Необходимо е да събереш всички инструменти
+        по време на това пътешествие. Придвижвай се с **клавишите със стрелки** и
+        стигни до сандъка на пътеката, за да спечелиш"
+      MC_HOC_2017_01_Kiki_instruction: Щракни върху "Старт" за да се премести играча
+        в оранжевия квадрат в къщата.
       MC_HOC_2017_01_RETRY_instruction: "Придвижете агента до активиращата плоча и
         след това натиснете „Изпълняване“ и използвайте клавишите със стрелки, за
         да придвижите Agent извън къщата, така че да може да прибере сандъка."
@@ -7482,21 +7477,19 @@
         me to the pig!
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
         the pig! "
-      courseA_maze_seq11_instruction: |-
-        Move one way, then another to get the bird
-        to the pig.
+      courseA_maze_seq11_instruction: "Премести ме в една посока, после в друга, за
+        да стигна до прасето."
       courseA_maze_seq12_instruction: 'Get that pig! '
       courseA_maze_seq13_instruction: Get the pig any way you can!
       courseA_maze_seq2_instruction: "Промени кода, за да ме заведеш до прасето!"
       courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq4_instruction: "ПРЕМАХНИ блок, за да стигне птицата да прасето!"
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
         blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
+      courseA_maze_seq6_instruction: "Премести ме в една посока, после в друга, за
+        да стигна до прасето!"
       courseA_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
@@ -7635,9 +7628,8 @@
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
+      courseB_maze_seq6_instruction: "Премести ме в една посока, после в друга, за
+        да стигна до прасето!"
       courseB_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
@@ -8413,9 +8405,9 @@
       courseD_bounce_events1s_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the net.
-      courseD_bounce_events2_instruction: |-
-        Attach a block to the "when right arrow"
-        and "when left arrow" blocks. Move the paddle to reach both finish targets.
+      courseD_bounce_events2_instruction: Долепете блокче до блокчетата "Когато е
+        натисната стрелка надясно" и "Когато е натисната стрелка наляво". Натиснете
+        "Старт ". Местете платформата така, че да достигне и двете цели.
       courseD_bounce_events2s_instruction: |-
         Now, attach a block to the `when right
         event` so that the hand can get to both baskets.
@@ -8425,12 +8417,10 @@
       courseD_bounce_events3s_instruction: |-
         Now try something similar with the "when
         up arrow" block. Move the paddle to the finish target at the top.
-      courseD_bounce_events4_instruction: |-
-        This time you need to add four blocks.
-        Move the paddle to all four finish targets to complete this puzzle.
-      courseD_bounce_events4s_instruction: |-
-        This time you need to add four blocks.
-        Move the paddle to all four finish targets to complete this puzzle.
+      courseD_bounce_events4_instruction: "Този път трябва да добавите четири блокчета.
+        Преместете платформата до всички четири цели, за да завършите тази задача."
+      courseD_bounce_events4s_instruction: "Този път трябва да добавите четири блокчета.
+        Преместете платформата до всички четири цели, за да завършите тази задача."
       courseD_bounce_events5_instruction: |-
         We're going to send a ball flying down
         towards the paddle. Attach a block to the "when ball hits paddle" block

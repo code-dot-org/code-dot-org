@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Làm thế nào để mang Giờ Mã hoá đến toàn thể cộng đồng.
+# Làm thế nào để mang Giờ Lập Trình đến toàn thể cộng đồng.
 
 [col-33]
 
@@ -17,9 +17,9 @@ nav: how_to_nav
 
 ## Hãy để mọi học sinh đều có cơ hội tham gia!
 
-1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Đọc trang nhất của chúng tôi** trên lý do tại sao giáo dục công nghệ máy tính là quan trọng, và làm thế nào bạn có thể giúp sự cố gắng bằng cách hỗ trợ Giờ Lập Trình. [Nhận trang nhất của chúng tôi.](/files/hoc-one-pager-public-officials-2016.pdf)
 
-2. **Recruit local schools and districts.** Use [this email](%= resolve_url('/promote/resources#sample-emails') %) or [this blurb](%= resolve_url('/promote/stats') %) as a starting point, and take a look at this [how-to](%= resolve_url('/how-to') %) for schools and districts.
+2. **Tuyển trường học địa phương và quận, huyện.** Sử dụng [email này](%= resolve_url('/promote/resources#sample-emails') %) hoặc [quảng cáo này](%= resolve_url('/promote/stats') %) như một điểm bắt đầu, và nhìn qua về [làm thế nào](%= resolve_url('/how-to') %) cho trường học và quận huyện.
 
 3. **Host an Hour of Code event.** See our [event how-to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
 
