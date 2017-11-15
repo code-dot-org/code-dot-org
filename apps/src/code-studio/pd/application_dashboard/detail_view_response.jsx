@@ -54,9 +54,9 @@ export default class DetailViewResponse extends React.Component {
         disabled={!this.props.editing}
         value={this.props.score}
         onChange={this.props.handleScoreChange}
-        id={this.props.questionId}
+        id={`${this.props.questionId}-score`}
       >
-        <option key="">--</option>
+        <option>--</option>
         {this.renderScoreOptions()}
       </FormControl>
     );
