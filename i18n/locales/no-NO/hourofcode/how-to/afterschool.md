@@ -5,45 +5,37 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Hvordan undervise en Kodetime i AKS/SFO og klubb
+# Hvordan undervise i Kodetimen på AKS/SFO og fritidsklubber
+
+Bli med i bevegelsen og introduser en gruppe elever til deres første time i informatikk med disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig](%= resolve_url('https://code.org/volunteer/local') %) som kan hjelpe til med å organisere Kodetimen for klassen din.
 
 ## 1. Se denne veiledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Velg en oppgave
 
-Vi tilbyr en rekke [morsomme, timelange oppgaver](%= resolve_url('/learn') %) for deltakerne alle aldre, laget av en rekke partnere. [Prøv dem!](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Prøv dem!](%= resolve_url('/learn') %)
 
-**Alle Kodetimen oppgavene:**
-
-- Require minimal prep-time for organizers
-- Er tilrettelagt for at studentene skal arbeide på egen hånd i eget tempo og tilpasset deres ferdighetsnivå
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Trenger du en plan for gjennomføring av Kodetimen på SFO / AKS?** Sjekk ut denne [malen](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Markedsfør Kodetimen din
 
-Spre ordet om Kodetimen [med disse verktøyene](%= resolve_url('/promote') %) og oppmuntre andre å arrangere sine egne kodetimer.
+Skap blest om deres lokale Kodetime med [disse verktøyene](%= resolve_url('/promote') %) og få andre til å organisere egne Kodetimer.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planlegg hva du trenger av utstyr - datamaskiner er valgfrie
 
-<div class="col-66" style="padding-right: 20px;">
-  The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
-</div>
+Den beste kodetime erfaringen inkluderer Internett-tilkoblede datamaskiner. Men du trenger **ikke** en datamaskin for hvert barn, og du kan til og med gjennomføre Kodetimen selv uten en datamaskin.
 
-<div class="col-33">
-  <img src="/images/fit-400/group_ipad.jpg" />
-</div>
+Husk å teste undervisningsopplegg på elevenes datamaskiner eller enheter for å sikre at de fungerer riktig i nettlesere med lyd og video. **Har dere dårlig eller treg internettforbindelse?** Planlegg å vise videoene for hele klassen samlet, slik at hver elev ikke trenger å laste ned sine egne videoer. Eller prøv de frakoblede/offline veiledningene.
 
-<div style="clear: both;"></div>
+Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom opplegget du har valgt fungerer best med lyd.
 
-**Planlegg!** Gjør følgende før arrangementet starter:
+**Har du ikke nok enheter?** Bruk [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevene jobber to og to, vil de hjelpe hverandre og være mindre avhengige av læreren. De vil også oppleve at programmering er sosialt og handler om samarbeid.
 
-- Prøv å gå igjennom et av undervisningsoppleggene fra elevenes pc-er på forhånd. Sjekk at både lyd og video fungerer optimalt.
-- Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom opplegget du har valgt fungerer best med lyd.
-- **Har du ikke nok enheter?** Bruk [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevene jobber to og to, vil de hjelpe hverandre og være mindre avhengige av læreren. De vil også oppleve at programmering er sosialt og handler om samarbeid.
-- **Har dere dårlig eller treg internettforbindelse?** Planlegg å vise videoene for hele klassen samlet, slik at hver elev ikke trenger å laste ned sine egne videoer. Eller prøv de leksjonene som kan gjøres uten tilkobling til nett.
+<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Start Kodetimen med en inspirerende video
 
@@ -52,23 +44,23 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 **Vis en inspirerende video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- [Kodetimen 2013 lansering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Kodetimen 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Finn flere inspirerende videoer[her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det er helt greit om du er ny med informatikk. Her er noen ideer til hvordan du kan introdusere Kodetimen din:**
+**Det gjør ingenting om du er nybegynner i informatikk. Her finner du noen ideer til hvordan du kan introdusere Kodetimen:**
 
-- Forklare måter teknologi påvirker våre liv, med eksempler både gutter og jenter vil kjenne seg igjen i (snakk om apper og teknologi som brukes til å redde liv, hjelpe folk, kobler mennesker sammen osv).
+- Forklar hvordan teknologi påvirker dagliglivet vårt, med eksempler både gutter og jenter kan kjenne seg igjen i (snakk om apper og teknologi som brukes til å redde liv, hjelpe folk, knytte mennesker sammen, osv).
 - Fortell om ting fra hverdagen som inneholder kode.
 - Se tips for å få jenter interessert i informatikk [her](%= resolve_url('https://code.org/girls') %).
 
-**Trenger du mer veiledning?** Last ned denne [læringsmalen](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Trenger du mer veiledning?** Last ned denne [undervisningsmalen](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Koding!
 
 **Led elevene til aktiviteten**
 
-- Skriv oppgavelenken på en tavle. Finn lenken under [informasjon om den valgte oppgaven](%= resolve_url('/learn') %) under antall deltakere.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **Når elevene har spørsmål eller synes noe er vanskelig, er det greit å svare:**
 
@@ -78,8 +70,8 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 **Hva gjør jeg hvis noen er ferdig tidlig?**
 
-- Oppmuntre deltakerne til å prøve en annen Kodetimen aktivitet på [hourofcode.com/learn](%= resolve_url('/learn') %)
-- Eller, spør dem som ble tidlig ferdig med å hjelpe andre som har problemer.
+- Elevene kan se alle leksjonene og prøve en av de andre aktivitetene for Kodetimen på [hourofcode.com/learn](%= resolve_url('/learn') %)
+- Eller du kan be de som er raskt ferdig om å hjelpe andre som har problemer.
 
 [col-33]
 
@@ -95,7 +87,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 <p style="clear:both">&nbsp;</p>
 
-## 6. Feire
+## 7. Feire
 
 [col-33]
 
@@ -103,8 +95,8 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 [/col-33]
 
-- [Skriv ut diplomer](%= resolve_url('https://code.org/certificates') %) for elevene.
-- [Print ut "Jeg gjennomførte Kodetimen!"](%= resolve_url('/promote/resources#stickers') %) klistremerker til elevene dine.
+- [Skriv ut diplomer](%= resolve_url('https://code.org/certificates') %) til elevene.
+- [Print ut "Jeg gjennomførte Kodetimen!"](%= resolve_url('/promote/resources#stickers') %)-klistremerker til elevene dine.
 - [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skolen din.
 - Del bilder og videoer av Kodetimen arrangement på sosiale medier. Bruk #HourOfCode og @codeorg så vi kan fremheve din suksess også!
 
@@ -120,7 +112,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 - Se [anbefalte fremgangsmåter](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra tidligere arrangører av Kodetimen. 
 - Se på opptaket av vårt webinar [Lærerens Guide til Kodetimen](https://youtu.be/EJeMeSW2-Mw).
-- Besøk [Kodetimens forum](http://forum.code.org/c/plc/hour-of-code) for å få råd, innsikt og støtte fra andre lærere. <% if @country == 'us' %>
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Se på [Kodetimens ofte stilte spørsmål](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Hva kommer etter Kodetimen?

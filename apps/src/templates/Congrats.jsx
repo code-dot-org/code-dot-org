@@ -6,12 +6,17 @@ import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
 import { tutorialTypes } from './tutorialTypes.js';
+import { Provider } from 'react-redux';
+import { combineReducers, createStore } from 'redux';
+import responsiveRedux from '../code-studio/responsiveRedux';
 
 export default class Congrats extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
+    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
+    isEnglish: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -49,24 +54,41 @@ export default class Congrats extends Component {
   }
 
   render() {
-    const { completedTutorialType, MCShareLink, isRtl } = this.props;
+    const { completedTutorialType, MCShareLink, isRtl, userType, isEnglish } = this.props;
+
     const contentStyle = {
       width: this.responsive.getResponsiveContainerWidth()
     };
+    const store = createStore(combineReducers({responsive: responsiveRedux}));
 
     return (
-      <div style={contentStyle}>
-        <Certificate
-          completedTutorialType={completedTutorialType}
-        />
-        <StudentsBeyondHoc
-          completedTutorialType={completedTutorialType}
-          MCShareLink={MCShareLink}
-          responsive={this.responsive}
-          isRtl={isRtl}
-        />
-        <TeachersBeyondHoc/>
-      </div>
+      <Provider store={store}>
+        <div style={contentStyle}>
+          <Certificate
+            completedTutorialType={completedTutorialType}
+          />
+          {userType === "teacher" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+          <StudentsBeyondHoc
+            completedTutorialType={completedTutorialType}
+            MCShareLink={MCShareLink}
+            responsive={this.responsive}
+            isRtl={isRtl}
+            userType={userType}
+            isEnglish={isEnglish}
+          />
+          {userType === "signedOut" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+        </div>
+      </Provider>
     );
   }
 }

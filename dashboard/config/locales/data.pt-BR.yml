@@ -747,7 +747,7 @@
         CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
         CSF_collector_repeat_loops: Collector Repeat Loops
         CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
+        CSF_create_functions: Criar Funções
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Computer Science Matters
@@ -774,6 +774,7 @@
         csd_concept_search: How Search Works
         csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
           To Change Our Lives
+        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -784,7 +785,7 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
+        csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Intro to Web Lab - Part 1
         csd_weblab_intro_2: Intro to Web Lab - Part 2
         csd_weblab_css_1: Intro to CSS - Part 1
@@ -886,10 +887,17 @@
         applab_hoc_setproperty: App Lab Hour of Code - setProperty
         applab_hoc_onevent: App Lab Hour of Code - onEvent
         applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
+        applab_hoc_share: LabApp Hora do Código - Compartilhar
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
         mc_2017_functions: Minecraft Hour of Code - Functions
+        mc_2017_congratulations: Hora do Código Minecraft - Parabéns
+        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
+        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
+        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
+        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
+        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
+        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

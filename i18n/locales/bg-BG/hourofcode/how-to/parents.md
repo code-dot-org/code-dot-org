@@ -33,7 +33,7 @@ nav: how_to_nav
 **Покажи вдъхновяващо видео:**
 
 - Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Видео[ клипът на първия Hour of Code от 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %> [ клипът за часът на кода 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ Hour of Code 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [ Видео за световния Час на кода](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Намери още вдъхновяващи [ ресурси](%= resolve_url('https://code.org/inspire') %) и [ видеа](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

@@ -750,6 +750,13 @@ sl:
     create: "Ustvari projekt"
     create_a_project: 'Ustvari nov projekt:'
     new: "Ustvari novo"
+    new_buttons:
+      artist: "Umetnik"
+      playlab: "Play Lab"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Preimenuj"
     save: "Shrani"
     delete: "Izbriši"

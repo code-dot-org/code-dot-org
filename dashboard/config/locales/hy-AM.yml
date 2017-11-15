@@ -991,6 +991,13 @@
     create: "Ստեղծել ծրագիրը"
     create_a_project: "Ստեղծել նոր նախագիծ:"
     new: "Ստեղծել նոր"
+    new_buttons:
+      artist: "Արտիստ"
+      playlab: Play Lab
+      applab: App Lab
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: Start a new project
     rename: "վերանվանել"
     save: Save
     delete: Delete

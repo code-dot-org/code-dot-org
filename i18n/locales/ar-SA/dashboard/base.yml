@@ -751,6 +751,13 @@ ar:
     create: "إنشاء مشروع"
     create_a_project: 'إنشاء مشروع جديد:'
     new: "إنشاء جديد"
+    new_buttons:
+      artist: "الرسام"
+      playlab: "مختبر اللعب"
+      applab: "مختبر التطبيق"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "إعادة تسمية"
     save: "حفظ"
     delete: "حذف"

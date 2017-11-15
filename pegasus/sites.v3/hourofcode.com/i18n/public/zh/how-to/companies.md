@@ -57,7 +57,7 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 **展示一支激勵人心的影片**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- [Hour of Code 2013 揭幕影片](https://www.youtube.com/watch?v=FC5FbmsH4fw)，或是 <% if @country == 'uk' %> [Hour of Code 2015 影片](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 影片](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

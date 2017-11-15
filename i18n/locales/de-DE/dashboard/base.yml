@@ -750,14 +750,21 @@ de:
     create: "Projekt erstellen"
     create_a_project: 'Neues Projekt erstellen:'
     new: "Neu erstellen"
+    new_buttons:
+      artist: "Künstler"
+      playlab: "Spielelabor"
+      applab: "App-Labor"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Umbenennen"
     save: "Speichern"
     delete: "Löschen"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Importieren"
+    share_link_import_bad_link_header: "Freigabelink nicht erkannt"
+    share_link_import_bad_link_body: 'Wir konnten den Freigabelink nicht importieren. Prüfe, ob du einen Link aus einem Minecraft: Agent-Rätsel verwendest. Kopiere den kompletten Link.'
+    share_link_import_error_header: "Etwas ist schiefgelaufen."
+    share_link_import_error_body: "Es gab ein Problem beim Import des Freigabelinks. Versuche es erneut."
     exit: "Zurück zum Kurs"
     my_projects: "Meine Projekte"
     project_gallery: "Projekte"

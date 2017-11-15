@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Kodlama saatini şirketinize nasıl getirirsiniz
 
-## Kodlama Saati için öğrenci ve gönüllülere ilham verin
+## Kod-Saati için öğrenci ve gönüllülere ilham verin
 
 Code.org, teknoloji alanındaki kariyer deneyimlerini paylaşmaları ve bu alanda çalışmak isteyen öğrencilere ilham verebilmeleri için, çalışanlarınıza, Kod-Saati uygulayan yerel sınıflara [bağlanma](<%= resolve_url('https://code.org/volunteer') %>) fırsatı sunar.
 
@@ -45,19 +45,19 @@ En iyi Kodlama Saati deneyimi internete bağlı olan bilgisayarları içerir. Hi
 
 - Etkinlikleri bilgisayar veya cihazlarda deneyin. Ses ve videoların tarayıcılarda düzgün bir şekilde çalıştıklarından emin olun.
 - Eğer seçtiğiniz etkinlik sesli bir etkinlik ise, kulaklık temin edin veya katılımcılardan kendi kulaklıklarını getirmelerini isteyin.
-- **Yeterli ekipman yok mu?** o halde [ çift programlayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. Çocuklar takım halinde çalıştıklarında birbirlerine yardımcı olacak ve organizatöre daha az ihtiyaç duyacaklar. Ayrıca bu yöntemle öğrenciler bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklar.
+- **Yeterli ekipman yok mu?** o halde [ eşli programlayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. Çocuklar takım halinde çalıştıklarında birbirlerine yardımcı olacak ve organizatöre daha az ihtiyaç duyacaklar. Ayrıca bu yöntemle öğrenciler bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklar.
 - **Bant genişliğiniz düşük mü?** Videoları etkinliğin ön tarafında göstermeyi planlayın, böylece her öğrencinin videoyu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen etkinlikleri deneyin.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Kodlama Saatinizi ilham verici bir video ile başlatın
 
 Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın. Bilgisayar bilimi ve şirketteki rolünüz hakkında ilham kaynağı olabilecek daha fazla bilgi paylaşın.
 
 **İlham verici bir video gösterin:**
 
 - Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un olduğu orjinal Code.org videosu başlatın ([1 dakika](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakika](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakika](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları vardır).
-- [2013 Kodlama Saati başlangıç videosu](https://www.youtube.com/watch?v=FC5FbmsH4fw), ya da <% if @country == 'uk' %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [ Başkan Obama tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -73,7 +73,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 **Katılımcıları aktiviteye yönlendirin**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](<%= resolve_url('/learn') %>) under the number of participants.
+- Etkinlik bağlantısını bir beyaz tahtaya yazın. Seçilen etkinliğinizin [bilgileri katılımcı sayısı altında listelenen bağlantıyı bulun.](<%= resolve_url('/learn') %>).
 - Genç öğrenciler, eğitim sayfasını daha önceden yükleyin veya yer imi olarak kayıt edin.
 
 **Birisi zorluklarla karşılaştığında şu şekilde yanıtlamak iyidir:**

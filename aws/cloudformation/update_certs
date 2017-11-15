@@ -18,8 +18,9 @@ unless ARGV.length == 1
 end
 
 domain = ARGV[0]
-`acmesmith current #{domain} 2>&1`
-unless $?.success?
+begin
+  Acmesmith::Command.start ['current', domain]
+rescue => _
   required_certs = ['', 'dashboard-', 'origin-'].map {|prefix| prefix + domain}
   CDO.log.info "Authorizing SSL certificates for subdomain: #{domain}"
   required_certs.each do |auth|

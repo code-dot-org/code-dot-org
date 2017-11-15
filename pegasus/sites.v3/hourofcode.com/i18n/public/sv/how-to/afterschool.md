@@ -5,13 +5,13 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Hur man undervisar en timme av kod på fritids och i föreningar
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. En timme kod är lätt att köra - även för nybörjare! Om du känner att du vill ha lite hjälp, kan du hitta en [ lokal volontär](<%= resolve_url('https://code.org/volunteer/local') %>) som kan hjälpa dig köra en timme av kod i din klass.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Se den här video-guiden <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. Välj en handledning
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Prova dem](<%= resolve_url('/learn') %>)
 
@@ -21,19 +21,19 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Marknadsför din Hour of Code
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planera vad du behöver för teknik - datorer är inte nödvändiga
 
-Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behöver **inte** en dator för varje barn, och du kan även göra Hour of Coode utan datorer.
+Den bästa Hour of Code-upplevelsen fås med datorer med internet. Men du behöver **inte** en dator för varje barn, och du kan även göra Hour of Code helt utan datorer.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Testa övningarna på elevdatorer eller surfplattor. Kontrollera att de fungerar korrekt (med ljud och video). **Är internet-uppkopplingen långsam?** Planera att se videor gemensamt, så att varje elev inte behöver ladda ner sina egna videos. Eller prova övningar som fungerar utan internet eller teknik.
 
-**Fixa hörlurar till din klass**, eller be eleverna att ta med sig egna, om de övningar du väljer fungerar bäst med ljud.
+Fixa hörlurar till din klass, eller be eleverna att ta med sig egna, om de övningar du väljer fungerar bäst med ljud.
 
-**Inte har tillräckligt många enheter?** Använd [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
+**Har du inte tillräckligt många enheter?** Använd [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
@@ -56,7 +56,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Koda!
 
 **Visa eleverna till aktiviteten**
 
@@ -87,7 +87,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate
+## 7. Fira
 
 [col-33]
 
@@ -96,7 +96,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 [/col-33]
 
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-- [Skriva ut "Jag gjorde en timme av kod!"](<%= resolve_url('/promote/resources#stickers') %>) klistermärken för dina elever.
+- [Skriv ut "Jag gjorde en timme av kod!"](<%= resolve_url('/promote/resources#stickers') %>)- klistermärken för dina elever.
 - [Beställ specialgjorda t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) till din skola.
 - Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 

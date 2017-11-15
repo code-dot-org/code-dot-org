@@ -32,9 +32,9 @@ nav: how_to_nav
 
 **Шыктандыруучу видео көрсөткүлө:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- [Код сааты 2013 бетачар видеосу](https://www.youtube.com/watch?v=FC5FbmsH4fw), же <% if @country == 'uk' %> [Код сааты 2015 видеосу](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Код сааты 2015 видеосу](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- Code.org тааныштыруу видеосу, Билл Гейтс, Марк Цукерберг жана NBA жылдызы Крис Бош тартылган (Анын [1 мүнөт](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 мүнөт](https://www.youtube.com/watch?v=nKIu9yen5nc) жана [9 мүнөт](https://www.youtube.com/watch?v=dU1xS07N-FA) версиялары бар)
+- The [Код сааты дүйнөдө видеосу](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Президент Обама окуучуларды компүтердик илимди өздөштүрүүгө чакырат](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Дагы башка шыктандыруучу [ресурстар](<%= resolve_url('https://code.org/inspire') %>) жана [виделор](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Өзүңүз жана балаңыз дагы компүтер менен тааныш болбосо - эч нерсе эмес. Код сааты иш-чараңызды тааныштыруунун айрым идеялары:
@@ -71,7 +71,7 @@ nav: how_to_nav
 
 **Код саатынан кийин эмне болот?**
 
-Код сааты технологиялардын иштешин терең изилдөөдө саякатындагы жана програмдык жабдууларды өндүрүүдөгү биринчи эле кадам. Бул саякатты улантуу үчүн:
+Код сааты технологиялардын иштешин терең изилдөө саякатындагы жана програмдык жабдууларды өндүрүүдөгү биринчи эле кадам. Бул саякатты улантуу үчүн:
 
 - Балаңызды [онлайн үйрөнүүнү](<%= resolve_url('https://code.org/learn/beyond') %>) улантууга чакыргыла.
 - Компүтердик билимди балаңыздын мектебинде [илгерилетүүгө](<%= resolve_url('/promote') %>) жардам бериңиз.

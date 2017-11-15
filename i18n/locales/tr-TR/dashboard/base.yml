@@ -95,7 +95,7 @@ tr:
     teacher_count: '%{count}öğretmen çoktan kaydoldu.'
     overview: 'İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın. <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi ve projelerinizi saklamak için giriş yapmak gerekecektir.'
     hoc_already_signed_up_heading: 'Giriş yapmadan başla'
-    hoc_already_signed_up_content: 'Kodlama Saatinde öğretmek için kaydoldunuz! Siz ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla paylaşın.<br/><br/>. Eğer Kodlama Saatinden memnun kaldıysanız bir şifre oluşturup Code Studio hesabı yaratarak öğrencilerinizi aşağıdaki <a href="https://code.org/educate">daha uzun </a> kurslara kaydedebilirsiniz.'
+    hoc_already_signed_up_content: 'Kod Saatinde öğretmek için kaydoldunuz! Siz ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak için<a href="%{learn_url}">bir eğitim seçin </a> ve bu linki onlarla paylaşın.<br/><br/>. Eğer Kod Saatinden memnun kaldıysanız ve bir adım ileri gitmek istiyorsanız, bir şifre oluşturup Code Studio hesabı oluşturarak öğrencilerinizi aşağıdaki <a href="%{educate_url}">daha uzun kurslara kaydedebilirsiniz</a>.'
     hoc_already_signed_up_content_post_hoc: 'Kodlama saati düzenlediğiniz için teşekkür ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak gerekir. Bu sizin ilerlemenizi kaydetmenizi ve sınıfınızı yönetmenizi sağlar. Öğrenciler için kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız. <a href="%{studio_url}"> Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için hesap oluşturmadan </a> devam edebilirsiniz.'
     teacher_educator_guide: 'Eğitim rehberine bakın'
     title: "Code.org için kayıt ol"
@@ -114,7 +114,7 @@ tr:
     valid_password: "Geçerli parola!"
     invalid_password: "Parola en az 6 karakter olmalıdır"
     mismatch_password: "Girdiğiniz iki parola aynı değil"
-    student_terms: "Code.org <a href='http://code.org/tos'> hizmet şartları</a> bağlı olmayı kabul edersiniz. Eğer ben 13 yaşın altındaiseniz ebeveyn veya yasal veline Code.org Hizmetleri kullanma iznine sahip bu formu gönderermesine izin veriyorsun. <br/> <br/> E-posta adresleri bizim öğrenciler için izin veren  form içinde depolanır. Öğrenciler  şifre kurtarma dışında Code.org e-postalar almassınız. Bizim <a href='http://code.org/privacy'> Gizlilik Politikası</a> daha fazla bilgi için bkz:."
+    student_terms: "Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum. <br/> <br/> E-posta adresleri öğrencilerle bağlantı kurmamız için herhangi bir formda depolanmaz. Öğrenciler şifre kurtarma dışında Code.org'dan herhangi bir e-posta almaz. Daha fazla bilgi için <a href='http://code.org/privacy'> Gizlilik Politikamıza</a> bakınız."
     teacher_terms: "Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum. Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik politikamıza göz atın</a>."
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_label: "Hesap Türü"
@@ -136,7 +136,7 @@ tr:
     state: 'Eyalet'
     district: 'Bölge'
     other_district_not_listed: 'Yukarıda listelenmeyen diğer ilçe'
-    district_name: 'ilçe adı'
+    district_name: 'İlçe adı'
     school: 'Okul'
     other_school_not_listed: 'Yukarıda listelenmeyen diğer okul'
     school_name: 'Okulun Adı'
@@ -180,9 +180,9 @@ tr:
   welcome_email:
     subject: 'Sınıfıma Katıl (Code.org üzerinde)'
     body: |
-      Code.org taki bilgisayar bilimleri öğretici bölümlerine kayıt olmak için aşağıda ki link'e tıklayın(sizin "öğretmeniniz" olarak benle)
+      Code.org taki bilgisayar bilimleri öğretici bölümlerine kayıt olmak için aşağıdaki bağlantıya tıklayın( sizin "öğretmeniniz" ben seçili olarak)
       %{link}
-      Öğretici bölümler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel konseptini basit,yönlendirerek,oyun-benzeri tecrübeleri kullanarak öğretir.Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
+      Eğitimler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel yapı taşlarını basit, yönlendirerek, oyun-benzeri bulmacaları kullanarak öğretir. Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org için oturum açma bilgileri'
@@ -246,7 +246,7 @@ tr:
       finished_hoc: "Kod Saati'ni tamamladım"
       sign_in_to_save: 'İlerleme kaydetmek için oturum açın'
       free_play:
-        playlab: 'Uygulama oluşturun'
+        playlab: 'Oyun Laboratuvarında Uygulama oluşturun'
         artist: 'Bir şeyler çizin'
         calculate: 'Bir şey hesaplamak'
         applab: 'Uygulama oluşturun'
@@ -301,10 +301,10 @@ tr:
       already_registered: 'Zaten hesabınız var mı?'
       pair_programming: 'Eşli Programlama'
       team: 'Takım'
-      driver: 'Sürücü'
-      navigator: 'Gezinme'
+      driver: 'Giriş yapılmış'
+      navigator: 'Takım Arkadaşı'
     popup:
-      progress_for_user: "%{name}'ın işleniyor"
+      progress_for_user: "%{name}'ın ilerlemesi"
       progress: 'İlerlemeniz'
       lines: 'Toplam kod satırı: %{lines}'
       close: 'kapat'
@@ -326,7 +326,7 @@ tr:
     students:
       dashboard: 'Öğretmen Panosuna Git'
     user_not_found: 'Öğretmen bulunamadı.'
-    student_teacher_disassociated: 'Öğretmenin %{teacher_name} olmayacak şekilde çıkartıldı.'
+    student_teacher_disassociated: '%{teacher_name}öğretmenin %{section_code} sınıfından çıktın.'
     panel:
       answer_viewer: 'Öğretmen Paneli'
       student: 'öğrenci'
@@ -747,14 +747,21 @@ tr:
     create: "Proje Oluştur"
     create_a_project: 'Yeni bir proje oluşturun:'
     new: "Yeni oluştur"
+    new_buttons:
+      artist: "Aktör"
+      playlab: "Oyun Laboratuvarı"
+      applab: "App Laboratuvarı"
+      gamelab: "Oyun Laboratuvarı"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Yeni bir proje başlat"
     rename: "Yeniden adlandır"
     save: "Kaydet"
     delete: "Sil"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "İçeri Aktar"
+    share_link_import_bad_link_header: "Paylaşım bağlantısı tanınmıyor"
+    share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık. Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı kopyaladığından emin ol.'
+    share_link_import_error_header: "Bir sorun oluştu."
+    share_link_import_error_body: "Paylaşım bağlantısını içeri aktarırken bir sorun oluştu. Lütfen tekrar dene."
     exit: "Kursa dön"
     my_projects: "Projelerim"
     project_gallery: "Projeler"

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_companies) %>'
+title: 怎样把《编程一小时》带到你的公司
 layout: wide
 nav: how_to_nav
 ---
@@ -11,7 +11,7 @@ nav: how_to_nav
 
 Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
+- 报名参加志愿者活动.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## Additional ways companies can support the Hour of Code:
@@ -57,7 +57,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -105,7 +105,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- 为您的员工订购定制的T恤衫。.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

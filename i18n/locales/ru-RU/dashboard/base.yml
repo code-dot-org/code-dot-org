@@ -750,14 +750,21 @@ ru:
     create: "Создать проект"
     create_a_project: 'Создать новый проект:'
     new: "Создать новый"
+    new_buttons:
+      artist: "Художник"
+      playlab: "Лаборатория игр"
+      applab: "Лаборатория приложений"
+      gamelab: "Игровая лаборатория"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Переименовать"
     save: "Сохранить"
     delete: "Удалить"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Импорт"
+    share_link_import_bad_link_header: "Ссылка общего доступа не распознана"
+    share_link_import_bad_link_body: 'Не удалось импортировать ссылку общего доступа. Убедитесь, что вы используете ссылку из задачи Minecraft: Agent и что вы скопировали ссылку целиком.'
+    share_link_import_error_header: "Что-то пошло не так."
+    share_link_import_error_body: "При импорте ссылки общего доступа возникла проблема. Попробуйте еще раз."
     exit: "Вернуться к курсу"
     my_projects: "Мои проекты"
     project_gallery: "Проекты"

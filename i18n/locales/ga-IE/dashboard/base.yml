@@ -750,6 +750,13 @@ ga:
     create: "Cruthaigh Togra"
     create_a_project: 'Cruthaigh togra nua:'
     new: "Cruthaigh Togra Nua"
+    new_buttons:
+      artist: "Ealaíontóir"
+      playlab: "Spraotharlann"
+      applab: "Saotharlann Aipeanna"
+      gamelab: "An tSaotharlann Cluichíochta"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Ainm Nua"
     save: "Sábháil"
     delete: "Scrios"

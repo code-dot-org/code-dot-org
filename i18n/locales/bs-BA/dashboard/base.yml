@@ -747,6 +747,13 @@ bs:
     create: "Stvori Projekt"
     create_a_project: 'Stvori novi projekat:'
     new: "Kreiraj novi"
+    new_buttons:
+      artist: "Umjetnik"
+      playlab: "Play Lab"
+      applab: "Laboratorij za Aplikacije"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Preimenuj"
     save: "Snimi"
     delete: "Izbriši"

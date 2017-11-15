@@ -7,13 +7,13 @@ nav: how_to_nav
 
 <h1>Come insegnare l'Ora del Codice</h1>
 
-Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi.
+Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! Se hai bisogno di una mano, puoi trovare un [volontario locale](%= resolve_url('https://code.org/volunteer/local') %) che ti aiuti a tenere l'Ora del Codice nella tua aula (solo per gli USA).
 
 ## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Scegli un'esercitazione
 
-Noi forniamo un'ampia scelta di divertenti [esercitazioni autogestite](%= resolve_url('/learn') %) ed altrettante [gestite dall'insegnante](%= resolve_url('https://code.org/educate/teacher-led') %) per partecipanti di tutte le età, creati diversi partner.
+Noi forniamo un'ampia scelta di divertenti [esercitazioni autogestite](%= resolve_url('/learn') %) ed altrettante [gestite dall'insegnante](%= resolve_url('https://code.org/educate/teacher-led') %) per partecipanti di tutte le età, create da diversi partner.
 
 [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 

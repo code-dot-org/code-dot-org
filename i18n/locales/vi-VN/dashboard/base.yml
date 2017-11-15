@@ -750,6 +750,13 @@ vi:
     create: "Tạo ra chương trình"
     create_a_project: 'Tạo một chương trình mới:'
     new: "Tạo mới"
+    new_buttons:
+      artist: "Họa sĩ"
+      playlab: "Phòng trò chơi"
+      applab: "Phòng thí nghiệm ứng dụng"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Đổi tên"
     save: "Lưu"
     delete: "Xóa"

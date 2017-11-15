@@ -7,25 +7,25 @@ nav: how_to_nav
 
 <h1>როგორ ვასწავლოთ კოდის ერთი საათის ფარგლებში</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! თუ დახმარება გჭირდებათ, შეგიძლიათ მოძებნოთ [ადგილობრივი მოხალისე](%= resolve_url('https://code.org/volunteer/local') %), რომელიც დაგეხმარებათ თქვენს კლასში კოდის ერთი საათის ჩატარებაში.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial for your hour
+## 2. აირჩიეთ ტუტორიალი თქვენი ღონისძიებისთვის
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) as well as [teacher-guided tutorials](%= resolve_url('https://code.org/educate/teacher-led') %) for participants of all ages, created by a variety of partners.
+ჩვენ გთავაზობთ ბევრ მხიარულ ტუტორიალს, როგორც [მოსწავლეებისთვის](%= resolve_url('/learn') %),[ასევე მასწავლებლებისთვის განკუთვნილს. ](%= resolve_url('https://code.org/educate/teacher-led') %) ტუტორიალები შექმნილია სხვადასხვა პარტნიორის მიერ ყველა ასაკის მონაწილეებისთვის.
 
 [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-## 3. Promote your Hour of Code
+## 3. გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას [ამ ხელსაწყოებით](%= resolve_url('/promote/resources') %) და წაახალისეთ სხვები, რომ საკუთარ ღონისძიებებს უმასპინძლონ.
 
-## 4. Plan your technology needs - computers are optional
+## 4. დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
-კოდის ერთი საათის საუკეთესო გამოცდილება მოიცავს ინტერნეტთან დაკავშირებულ კომპიუტერებს. მაგრამ **არ** გჭირდებათ კომპიუტერი თითოეული ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
+კოდის ერთი საათის საუკეთესო გამოცდილების მისაღებად საჭიროა ინტერნეტთან დაკავშირებული კომპიუტერები. მაგრამ **არ** გჭირდებათ კომპიუტერი თითოეული ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+არ დაგავიწყდეთ გატესტოთ ტუტორიალები მოსწავლეების კომპიუტერებსა ან მოწყობილობებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში. **ინტერნეტს დაბალი სიჩქარე აქვს?** აჩვენეთ ვიდეოები ერთ დიდ ეკრანზე - ასე ყოველ მოსწავლეს არ დასჭირდება ცალკე ჩატვირთოს ვიდეო. ან სცადეთ უსადენო / ოფლაინ ტუტორიალები.
 
 არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
 
@@ -33,36 +33,36 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5. კოდის ერთი საათი დაიწყეთ შთამაგონებელი მომხსენებლით ან ვიდეოთი
 
-**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**მოიწვიეთ [ადგილობრივი მოხალისე](%= resolve_url('/promote/resources') %), რომელიც მოსწავლეებს ესაუბრება კომპიუტერული მეცნიერების შესაძლებლობებზე.** მთელ მსოფლიოში ათასობით მოხალისეა მზად, დაგეხმაროთ კოდის ერთი საათის ჩატარებაში, როგორც პირადი ვიზიტის, ასევე ვიდეოჩატის საშუალებით!
 
 **აჩვენეთ შთამაგონებელი ვიდეო:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
+- Code.org-ის უნიკალური ვიდეო ღონისძიების დასაწყებად: ბილ გეითსის, მარკ ცუკერგერგის და NBA ვარსკვლავის კრის ბოშის მონაწილეობით. (ხელმისაწვდომია შემდეგი ხანგრძლივობის ვერსიები: [1 წუთიანი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთიანი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთიანი](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - მოიძიეთ მეტი შთამაგონებელი [რესურსი](%= resolve_url('https://code.org/inspire') %) და [ვიდეო](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**არაუშავს, თუ კომპიუტერეულ მეცნიერებებში თქვენ და თქვენი მოსწავლეები თანაბრად გამოუცდელი ხართ. აი, რამდენიმე იდეა, როგორ შეიძლება წარადგინოთ კოდის ერთი საათის აქტივობა:**
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
+- ახსენით, რა გავლენას ახდენენ ტექნოლოგიები ჩვენს ცხოვრებაზე. გამოიყენეთ მაგალითები, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება (ესაუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, მათ ერთმანეთთან დაკავშირებაზე და ა. შ.).
 - კლასთან ერთად ჩამოწერეთ ყოველდღიური გამოყენების საგნები, რომლებიც იყენებენ პროგრამირებას.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls')%).
+- გაიგეთ, როგორ დააინტერესოთ გოგონები პროგრამირებითა და ინფორმატიკით [აქ](%= resolve_url('https://code.org/girls')%).
 
-## 6. Code!
+## 6. დაწერეთ კოდი!
 
-**Direct students to the activity**
+**აუხსენით ბავშვებს, რა უნდა გააკეთონ**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
+- დაწერეთ გაკვეთილის ბმული დაფაზე. ლინკი შეგიძლიათ მონაწილეების რიცხვს ქვემოთ, [თქვენ მიერ არჩეული გაკვეთილის ინფორმაციაში](%= resolve_url('/learn')%) იხილოთ.
 
-**When your students come across difficulties it's okay to respond:**
+**როცა მოსწავლეები რამე სირთულეს გადააწყდებიან, არაუშავს, თუ უპასუხებთ:**
 
 - "არ ვიცი. მოდი, ერთად ვიპოვოთ გამოსავალი"
 - ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა
 - "პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია დაუყოვნებლივ დაიწყოთ გამართულად საუბარი."
 
-**What if a student finishes early?**
+**როგორ მოვიქცეთ, თუ მოსწავლემ მალე დაამთავრა?**
 
-- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
+- მოსწავლეებს შეუძლიათ ნახონ ყველა ტუტორიალი და [სცადონ კოდის ერთი საათის სხვა აქტივობები](%= resolve_url('/learn')%).
 - ან მას შეუძლია დაეხმაროს იმ კლასელებს, ვისაც გაუჭირდა დავალებების შესრულება.
 
 [col-33]
@@ -73,7 +73,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate
+## 7. აღნიშნეთ
 
 [col-33]
 
@@ -81,7 +81,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates')%) for your students.
+- [დაბეჭდეთ სერთიფიკატები](%= resolve_url('https://code.org/certificates')%) თქვენი მოსწავლეებისთვის.
 - [ამობეჭდეთ სტიკერები "მე გავიარე კოდის ერთი საათი!"](%= resolve_url('/promote/resources#stickers') %) თქვენი მოსწავლეებისთვის.
 - [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი სკოლისთვის.
 - გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
@@ -103,7 +103,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. ამ მოგზაურობის გასაგრძელებლად:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond')%).
+- ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](%= resolve_url('https://code.org/learn/beyond')%).
 - [დაესწარით ](%= resolve_url('https://code.org/professional-development-workshops') %) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
 
 <%= view :signup_button %>

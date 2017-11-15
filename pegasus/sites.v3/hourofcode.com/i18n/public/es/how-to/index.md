@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Cómo enseñar una Hora de Código</h1>
 
-Únete al movimiento e introduce a un grupo de estudiantes a su primera hora de Informática con estos pasos.
+Únete al movimiento e introduce a un grupo de estudiantes a su primera hora de Informática con estos pasos. ¡La Hora del Código es fácil de organizar - incluso para los principiantes! Si necesitas que te echen una mano, puedes encontrar un[voluntario local](<%= resolve_url('https://code.org/volunteer/local') %>) para que te ayude a organizar una Hora de Código en tu clase.
 
 ## 1. Mira este vídeo explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

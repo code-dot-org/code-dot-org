@@ -123,7 +123,6 @@ class ActivitiesController < ApplicationController
       level_source_image: @level_source_image,
       activity: @activity,
       new_level_completed: @new_level_completed,
-      get_hint_usage: params[:gamification_enabled],
       share_failure: share_failure,
       user_level: milestone_response_user_level
     )

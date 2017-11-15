@@ -505,7 +505,7 @@ pt-BR:
       link: "Saiba mais"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_browser: "Infelizmente, estamos com problemas com o carregamento do Web Lab neste navegador. Você pode tentar usar um navegador diferente até que isso seja resolvido. Desculpe pela inconveniência."
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Isso está demorando mais do que o normal...'
   try_reloading: 'Tente recarregar a página'
@@ -750,14 +750,21 @@ pt-BR:
     create: "Criar projeto"
     create_a_project: 'Crie um novo projeto:'
     new: "Criar novo"
+    new_buttons:
+      artist: "Artista"
+      playlab: "Laboratório"
+      applab: "Laboratório de Aplicativo"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Renomear"
     save: "Salvar"
     delete: "Excluir"
     import: "Importar"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    share_link_import_bad_link_header: "link de compartilhamento não reconhecido"
+    share_link_import_bad_link_body: 'Não foi possível importar o link de compartilhamento. Verifique se você está usando um link de um enigma do Minecraft: Agent e se copiou o link completo.'
+    share_link_import_error_header: "Ocorreu um erro."
+    share_link_import_error_body: "Houve um problema ao importar o link de compartilhamento. Tente novamente."
     exit: "Voltar ao curso"
     my_projects: "Meus projetos"
     project_gallery: "Projetos"
@@ -976,4 +983,4 @@ pt-BR:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Cursos Completos'

@@ -66,12 +66,16 @@ module SharedConstants
     infinity
     minecraft_adventurer
     minecraft_designer
+    minecraft_hero
     starwars
+    starwarsblocks
     starwarsblocks_hour
     flappy
     bounce
     sports
     basketball
+    artist_k1
+    playlab_k1
   ).freeze
 
   PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(

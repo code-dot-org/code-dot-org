@@ -22,12 +22,14 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Merci de vous être inscrit(e) pour organiser une Heure de Code !
 
-En guise de remerciement pour avoir aidé les étudiants à commencer à apprendre l'informatique, nous aimerions vous offrir un ensemble gratuit de posters créés par des professionnels et présentant différents modèles pour votre classe. Utilisez le code promotionnel "FREEPOSTERS" au moment de payer. (Remarque: offre disponible jusqu'à épuisement des stocks et vous devrez couvrir les frais d'expédition. Si ce n'est pas dans votre budget, les fichiers PDF sont disponibles pour l'imprimer vous même.). Vu que ces affiches sont livrées des États-Unis, les frais d'expédition peuvent être pas mal hauts dans le cas de livrage internationel ou au Canada. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+En guise de remerciement pour avoir aidé les étudiants à commencer à apprendre l'informatique, nous aimerions vous offrir un ensemble gratuit de posters créés par des professionnels et présentant différents modèles pour votre classe. Utilisez le code promotionnel "FREEPOSTERS" au moment de payer. (Remarque: offre disponible jusqu'à épuisement des stocks et vous devrez couvrir les frais d'expédition. Si ce n'est pas dans votre budget, les fichiers PDF sont disponibles pour l'imprimer vous même.). Vu que ces affiches sont livrées des États-Unis, les frais d'expédition peuvent être pas mal hauts dans le cas de livrage internationel ou au Canada. Nous comprenons que ce n'est peut-être pas dans votre budget, et nous vous encourageons à imprimer les [files PDF](https://code.org/inspire) pour votre classe.)  
+<br /> [<button>Obtenez les affiches</button>](https://store.code.org/products/code-org-posters-set-of-12)Utilisez le code spécial FREEPOSTERS
 
-<br /> **Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
-## 1. Spread the word in your school and community
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+
+## 1. Passez le message auprès de votre école et de votre communeauté
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 

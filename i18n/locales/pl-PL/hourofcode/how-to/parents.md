@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_how_to_parents) %>'
-layout: szeroki
+layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
@@ -33,7 +33,7 @@ Na początku Godziny Kodowania postaraj się zainspirować swoje dziecko dyskutu
 **Pokaż inspirujący film:**
 
 - Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Wideo na Światową Godzinę Kodowania](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Znajdź więcej inspirujących [zasobów](%= resolve_url('https://code.org/inspire') %) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

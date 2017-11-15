@@ -426,6 +426,7 @@ pl:
         'csd_concept_binary_data': 'Jak działają komputery: Binarność i dane'
         'csd_concept_search': 'Jak działa wyszukiwanie'
         'csd_external_amazon_data': 'How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives'
+        'csd_external_waze_data': 'Why Are So Many Users Obsessed With Waze?'
         'csd_gamelab_animation_tab': 'Karta Animacji'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
@@ -534,6 +535,13 @@ pl:
         'mc_2017_agent_intro': 'Godzina Kodowania Minecraft - Agent'
         'mc_2017_repeat': 'Godzina Kodowania Minecraft - Pętle repetycyjne'
         'mc_2017_functions': 'Godzina Kodowania Minecraft - Funkcje'
+        'mc_2017_congratulations': 'Minecraft w Godzinie Kodowania - Gratulacje'
+        'mc_2017_puzzle_1': 'Godzina Kodowania Minecraft - Agent'
+        'mc_2017_puzzle_3': 'Godzina Kodowania Minecraft - Pętle repetycyjne'
+        'mc_2017_puzzle_8': 'Godzina Kodowania Minecraft - Funkcje'
+        'mc_2017_puzzle_12': 'Minecraft Hour of Code - Freeplay'
+        'hint_videos_d_11_3_first': 'Hint Videos: D.11.3 First'
+        'hint_videos_d_11_3_last': 'Hint Videos: D.11.3 Last'
     callout:
       text:
         drag_blocks: 'Przeciągnij blok "idź" i przypnij go poniżej innego bloku'

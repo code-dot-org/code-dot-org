@@ -67,7 +67,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+[კოდის ერთი საათის გაკვეთილის ინსტრუქციები](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
@@ -90,15 +90,15 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# სახელმძღვანელო ორგანიზატორებისთვის
 
-## Use this handout to recruit corporations
+## გამოიყენეთ ეს სახელმძღვანელო კორპორაციების ჩასართავად
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
 ## 1) ნახეთ ტუტორიალები:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+ჩვენ გვაქვს უამრავი სახალისო ერთსაათიანი გაკვეთილი, რომელიც სხვადასხვა პარტნიორის მიერაა შემქნილი. <%= campaign_date('full') %> კოდის ერთი საათისთვის კი კიდევ რამდენიმე ახალ გაკვეთილს დავდებთ.
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
@@ -109,7 +109,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერები არ არის აუცილებელი
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+საუკეთესო გამოცდილებას კომპიუტერებითა და ინტერნეტით აღჭურვილ კლასში მიიღებთ, თუმცა თქვენ არ გჭირდებათ კომპიუტერი ყოველი ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
 
 - ** გატესტეთ ტუტორიალები მოსწავლეების კომპიუტერებზე.** დარმწუნდით, რომ ვიდეო ჩანს და ხმა ისმის.
 - **გაეცანით მილოცვის გვერდს** და გაიგეთ, რას ნახავენ მოსწავლეები, როცა დაასრულებენ ტუტორიალს. 
@@ -122,13 +122,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 4) შთააგონეთ მოსწავლეები - აჩვენეთ მათ ვიდეო
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+აჩვენეთ მოსწავლეებს ჩვენი ერთ-ერთი ვიდეო კოდის ერთი საათის ენერგიულად დასაწყებად. მაგალითად:
 
 - Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+- [2013 წლის კოდის ერთი საათის დაწყების ვიდეო](https://www.youtube.com/watch?v=FC5FbmsH4fw) ან [2014 წლის კოდის ერთი საათის ვიდეო](https://www.youtube.com/watch?v=96B5-JGA9EQ)
 - [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**დააინტერესეთ თქვენი მოსწავლეები - აჩვენეთ, რასთან აქვთ საქმე**
 
 <% elsif @country == 'pe' %>
 

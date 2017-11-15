@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Cách dạy một người về Hour of Code</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps.
+Tham gia vào các phong trào và giới thiệu nhóm học sinh cho giờ của công nghệ máy tính đầu tiên của họ với các bước sau. Hour of Code (Giờ Lập Trình) rất dễ dàng để chạy - ngay cả với người mới luôn đấy! Nếu bạn muốn một thêm bàn tay để trợ giúp, bạn có thể tìm [tình nguyện viện địa phương](<%= resolve_url('https://code.org/volunteer/local') %>) để giúp bạn chạy Giờ của Mã trong lớp của bạn.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

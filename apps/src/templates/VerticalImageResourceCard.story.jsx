@@ -22,6 +22,22 @@ export default storybook => {
             buttonText={exampleCard.buttonText}
             link={exampleCard.link}
             isRtl={false}
+            image="csf-express"
+          />
+        )
+      },
+      {
+        name: 'Vertical Image Resource Card - Jumbo',
+        description: `This is an example card that fits 2 across on desktop and has an image stacked above a desctription and button. It's used here to promote a course`,
+        story: () => (
+          <VerticalImageResourceCard
+            title={exampleCard.title}
+            description={exampleCard.description}
+            buttonText={exampleCard.buttonText}
+            link={exampleCard.link}
+            isRtl={false}
+            jumbo={true}
+            image="codeorg-teacher"
           />
         )
       },
@@ -35,6 +51,7 @@ export default storybook => {
             buttonText={exampleCard.buttonText}
             link={exampleCard.link}
             isRtl={true}
+            image="csf-express"
           />
         )
       },
@@ -49,6 +66,7 @@ export default storybook => {
             link="https://minecraft.net/en-us/"
             isRtl={false}
             MCShareLink="code.org/sharelink"
+            image="new-minecraft"
           />
         )
       }

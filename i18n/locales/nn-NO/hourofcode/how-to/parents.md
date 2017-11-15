@@ -33,7 +33,7 @@ Start Kodetimen med å diskutere korleis informasjonsteknologi påverker oss i d
 **Vis ein inspirerande video:**
 
 - Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eit minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Lanseringsvideoen til Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama oppfordrar alle elevar til å lære datavitskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Finn fleire inspirerande [ressursar](%= resolve_url('https://code.org/inspire') %) og [videoar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

@@ -7,56 +7,37 @@ nav: promote_nav
 
 # პრეს-რელიზი მონაწილე ოფიციალური პირების შესახებ: მაგალითი
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+დაუყოვნებლივ პუბლიკაციისთვის   
+[**თარიღი**]  
+დაგვიკავშირდით: [**საკონტაქტო ინფორმაცია**]  
+  
+
+<strong><center>/მმართველი/სენატორი/მერი/წარმომადგენელი/საბჭოს წევრი [ჩაწერეთ სახელი და გვარი] [იღებდა მონაწილეობას კოდის ერთ საათში ადგილობრივ მოსწავლეებთან ერთად]</strong>  
+საზოგადოება ერთიანდება ინფორმატიკის საგანმანათლებლო კვირეულის ფარგლებში პროგრამირების სწავლის მნიშვნელობაზე ყურადღების გასამახვილებლად</center>   
   
 
 
-<strong>
+**თარიღი** -[**ჩაწერეთ სახელი**] [**ჩაწერეთ სკოლის სახელი**] სკოლის დირექტორსა და საბჭოს წევრებთან, ბიზნეს-ლიდერებთან და ადგილობრივ ოჯახებთან ერთად მიიღო მონაწილეობა [**ღონისძიების სახელი**], რომელიც ჩატარდა კოდის ერთი საათისა და კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის ფარგლებში . [ჩაწერეთ სახელი] და საზოგადოების სხვა წევრები იყვნენ სხვა ათობით მილიონ ადამიანს შორის, რომლებიც გაერთიანდნენ ისტორიაში ყველაზე დიდი საგანმანათლებლო მოვლენის ირგვლივ.
 
-<center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
-</center>
+[**ჩართეთ ღონისძიების დეტალები, გამოიყენეთ აღწერები და რაოდენობრივი მონაცემები. მაგალითად: **]  
+"დენიელ რანის დაწყებითმა სკოლამ ჩაატარა კოდის ერთი საათი და გააცნო პროგრამირება მოსწავლეებს. ყველა ასაკობრივი ჯგუფის 700-ზე მეტმა მოსწავლემ კოდის ერთ საათში მაინც მიიღო მონაწილეობა. ათობით მშობელი და მოხალისე გაერთიანდა იმისთვის, რომ ეჩვენებინათ მოსწავლეებისთვის ინფორმატიკის მნიშვნელობა."
 
-<br /> <br /></p> 
+[**შესავალი ტექსტის მაგალითი:**]  
+კომპიუტერები ყველგანაა, მაგრამ უფრო ნაკლები სკოლა ასწავლის პროგრამირებას დღეს, ვიდრე 10 წლის წინ. განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას ფერადკანიანი მოსწავლეები და გოგონები. მაგრამ ჩვენ ამ სიტუაციის შეცვლას ვაპირებთ. კოდის ერთი საათი უზრუნველყოფს პროგრამირების ხარისხიან სწავლას ყველა მოსწავლისთვის თანაბრად.
 
-<p>
-  <strong>DATE</strong> - [<strong>INSERT NAME</strong>] joined the principal and faculty members of [<strong>INSERT NAME OF SCHOOL</strong>], business leaders and local families today for [<strong>NAME OF EVENT</strong>] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
-</p>
+100 მილიონზე მეტმა მოსწავლემ უკვე მიიღო მონაწილეობა კოდის ერთ საათში. კოდის ერთი საათის დამსახურებით, Google, MSN და Yahoo!–ს მთავარი გვერდი კომპიუტერულმა მეცნიერებამ დაიკავა! და Disney. კოდის ერთი საათის პრომოვიდეოები ობამამ, შაკირამ და ეშტონ კატჩერმა ჩაწერეს. ჩვენი მოძრაობის მხარდასაჭერად 100–ზე მეტი პირი გაერთიანდა.
 
-<p>
-  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
-</p>
+[**ჩართეთ ციტატა სპიკერის გამოსვლიდან, მაგალითად:**]  
+"ჩვენ ყველანაირად უნდა დავუჭიროთ მხარი ჩვენი მოსწავლეების პროგრამირებით დაინტერესებას" თქვა [**ჩასვით სახელი**]. "ყოველი მოსწავლე იმსახურებს პროგრამირების სწავლისა და 21-ე საუკუნის საუკეთესო კარიერის აწყობის შანსს."
 
-<p>
-  [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
-</p>
+[**ჩასვით დამატებითი ინფორმაცია თქვენს ღონისძიებაზე და/ან თქვენს ორგანიზაციაზე**]
 
-<p>
-  Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! და Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+[**ჩასვით სხვა ორგანიზაციის ან ვინმე დამსწრე პირის ციტატა**]
 
-<p>
-  [<strong>INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “We need to encourage and embrace our students’ interest in computer science,” said [<strong>INSERT NAME</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
-</p>
+მეტი ინფორმაციისთვის [**ჩაწერეთ ღონისძიების სახელი**] ეწვეით [**ჩაწერეთ ვე-გვერდი**] ან დაგვიკავშირდით [**ჩაწერეთ საკონტაქტო ინფორმაცია**]
 
-<p>
-  [<strong>INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION</strong>]
-</p>
+  
+  
 
-<p>
-  [<strong>INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT</strong>]
-</p>
 
-<p>
-  For more information about [<strong>EVENT/PROGRAM/ETC</strong>], visit [<strong>INSERT WEBSITE</strong>] or contact [<strong>INSERT CONTACT INFORMATION</strong>]
-</p>
-
-<p>
-  <br /> <br />
-</p>
-
-<p>
-  <%= view :signup_button %>
-</p>
+<%= view :signup_button %>

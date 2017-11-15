@@ -5,13 +5,13 @@ title: '<%= hoc_s(:title_partners) %>'
 
 [Advisory Committee](<%= resolve_url('/advisory-committee') %>) შედგება წარმომადგენლებისაგან 1-დან 12-მდე ჩათვლით კლასებიდან, კომერციული, არაკომერციული და საერთაშორისო ორგანიზაციებიდან. კოდის საათის კამპანიის სტრატეგიას ხელმძღვანელობს ეს კომიტეტი.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[განმხილველი კომიტეტი](<%= resolve_url('/review-committee') %>) შედგება 15 განმანათლებლისგან K-12 კლასის ჯგუფიდან, რომლებიც ირჩევენ და რეკომენდაციას უწევენ აქტივობებს, რომელთაც გამოიყენებენ მრჩეველთა კომიტეტის რუბრიკაში. ეს პედაგოგები განიხილავენ მოსწავლეების მიერ წარმართულ აქტივობებს და მასწავლებლების მიერ წარმართული გაკვეთილის გეგმებს, რომლებსაც აგზავნის აქტივობის ასობით პარტნიორი. ისინი აფასებენ აქტივობების საგანმანათლებლო ღრებულებას, პროცესში მოსწავლეების ჩართვის შესაძლებლობას და სტუდენტების სხვადასხვა ჯგუფისთვის მიმზიდველობას.
 
 ორივე კომიტეტის მუშაობა და საქმისადმი თავდადება დაეხმარა კოდის საათს წარმატების მიღწევასა და მისიის განხორციელებაში, ჩვენ ყველა მოსწავლეს ვთავაზობთ კომპიუტერული მეცნიერების შესავალს.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# პარტნიორები ლათინური ამერიკიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# პარტნიორები აფრიკიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# პარტნიორები ავსტრალიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'cn' %>
 
-# China Partners
+# პარტნიორები ჩინეთიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'fr' %>
 
-# France Partners
+# პარტნიორები საფრანგეთიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# პარტნიორები ინდონეზიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# პარტნიორები ირლანდიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'in' %>
 
-# India Partners
+# პარტნიორები ინდოეთიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# პარტნიორები იაპონიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# პარტნიორები ნიდერლანდებიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# პარტნიორები ახალი ზელანდიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# პარტნიორები გაერთიანებული სამეფოდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,7 +107,7 @@ The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 1
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# პარტნიორები კანადიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 

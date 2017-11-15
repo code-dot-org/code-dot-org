@@ -5,72 +5,64 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# كيفية تدريس ساعة من التعليمات البرمجية في ما بعد الدراسة "صفوف و أندية"
+
+الانضمام إلى الحركة وإدخل مجموعة من الطلاب إلى ساعة أولى من علوم الحاسوب مع هذه الخطوات. ومن السهل تشغيل ساعة من التعليمات البرمجية - حتى بالنسبة للمبتدئين! إذا كنت تريد مجموعة إضافية من يد للمساعدة، يمكنك العثور على [ المتطوعين المحليين](%= resolve_url('https://code.org/volunteer/local') %) للمساعدة في تشغيل "مدار التعليمات البرمجية" في الفئة الخاصة بك.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. اختر برنامجاً تعليمياً
 
-نوفر العديد من [ المقاطع التعليمة الممتعة ](%= resolve_url('/learn') %) مناسبه للمشاركين من جميع الاعمار! تم إنشاؤها بواسطة مجموعة متنوعة من الشركاء. <0/>جربهم!</p> 
+نوفر العديد من [ المقاطع التعليمة الممتعة ](%= resolve_url('/learn') %) المناسبه لجميع المشاركين من جميع الاعمار! تم إنشاؤها بواسطة مجموعة متنوعة من الشركاء. <0/>جربهم!</p> 
 
-**جميع دروس ساعة في البرمجة:**
-
-- Require minimal prep-time for organizers
-- ذات توجيه ذاتي - و هو ما يفتح المجال للأطفال ليتعلموا حسب سرعتهم و مهارتهم
+**دروس "ساعة كل من التعليمات البرمجية"** تتطلب الحد الأدنى من الوقت الإعدادية للمنظمين، والذاتي تسترشد--السماح للأطفال بالعمل في وتيرة ومستوى المهارات الخاصة به.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**هل أنت بحاجة إلى خطة دراسية لنشاط "ساعة في البرمجة" ما بعد المدرسة ؟** أنضر إلى هذا [النموذج](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promote your Hour of Code
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+تعزيز "ساعة من التعليمات البرمجية" الخاص بك [ باستخدام هذه الأدوات](%= resolve_url('/promote') %)، وتشجيع الآخرين على استضافة الأحداث الخاصة بهم.
 
 ## 4. Plan your technology needs - computers are optional
 
-<div class="col-66" style="padding-right: 20px;">
-  The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all. 
-</div>
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-<div class="col-33">
-  <img src="/images/fit-400/group_ipad.jpg" /> 
-</div>
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-<div style="clear: both;"></div>
+Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Plan Ahead!** Do the following before your event starts:
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). عندما يتعاون الطلبة، يقل الاعتماد على المعلم. سيعرفون ان علوم الحاسوب اجتماعية و تعاونية.
 
-- Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). عندما يتعاون الطلبة، يقل الاعتماد على المعلم. سيعرفون ان علوم الحاسوب اجتماعية و تعاونية.
-- **سرعة الانترنات منخفضة ؟** قم بعرض أشرطة الفيديو امام كل القسم، بحيث لا يستحق كل طالب تحميل أشرطة الفيديو. أو حاول الدروس الغير موصولة.
+<img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5) ابدأ تدريبك "ساعة في البرمجة" بمشاهدة هذا الفيديو الملهم
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- الفيديو الرسمي ل Code.org، من تقديم بيل غاتس, مارك زوكربيرج ونجم إن بي أي كريس بوش (توجد نسح <a href="https://www.youtube.com/watch?v=qYZF6oIZtfc"1 دقيقة واحدة</a>, [5 دقائق](https://www.youtube.com/watch?v=nKIu9yen5nc), [9 دقائق](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- [فيديو ساعة من التعليمات البرمجية في العالم ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- العثور على المزيد من أشرطة الفيديوهات الملهمة من [ هنا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **فلا بأس إذا كنت لا تعلم شيئا عن علوم الحاسب. إليك بعض الأفكار لتعرفك على نشاطات ساعة في البرمجة:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- شرح طرق التكنولوجيا يؤثر حياتنا، مع أمثلة على كل من البنين والبنات و التي سوف يهتمون بها (نقاش حول تطبيقات التكنولوجية المستخدمة في إنقاذ الأرواح، ومساعدة الناس، وربط الناس إلى أخره).
 - List things that use code in everyday life.
 - See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**بحاجة إلى المزيد من التوجيه؟** تحميل هذا [ النموزج من الدراسة](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Code!
 
 **Direct participants to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+- كتابة رابط عن البرنامج التعليمي على لوح معلومات. العثور على الارتباط المدرج على [ معلومات عن البرنامج التعليمي المحدد الخاص بك](%= resolve_url('/learn') %) تحت عدد المشاركين.
 
-**When someone comes across difficulties it's okay to respond:**
+**عندما يأتي شخص عبر الصعوبات و ان يجاوب أنها بخير:**
 
 - “I don’t know. Let’s figure this out together.”
 - “Technology doesn’t always work out the way we want.”
@@ -78,8 +70,8 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **What to do if someone finishes early?**
 
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
-- Or, ask those who finish early to help others who are having trouble.
+- تشجيع المشاركين على محاولة نشاط "ساعة من التعليمات البرمجية" في [ hourofcode.com/learn](%= resolve_url('/learn') %)
+- أو، أطلب من أولئك الذين ينتهون في الوقت المبكر أن يمساعدو الآخرين الذين يواجهون المتاعب.
 
 [col-33]
 
@@ -103,7 +95,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
+- [ طباعة الشهادات للطلاب](%= resolve_url('https://code.org/certificates') %).
 - [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
@@ -116,11 +108,11 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 <p style="clear:both">&nbsp;</p>
 
-## Other Hour of Code resources for educators
+## الموارد الأخرى للمعلمين مثلا "مدار للتعليمات البرمجية"
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+- تحقق من [ أفضل الممارسات](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) من خلال "ساعة من التعليمات البرمجية" للمنظمين. 
+- مشاهدة التسجيل الذي لدينا [ دليل للمعلم لwebinar "ساعة من التعليمات البرمجية"](https://youtu.be/EJeMeSW2-Mw).
+- زيارة [ ساعة المنتدى التعليمات للبرمجيات](http://forum.code.org/c/plc/hour-of-code) الحصول على المشروع، والبصيرة ودعم من الجهات الأخرى المنظمة. <% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## What comes after the Hour of Code?

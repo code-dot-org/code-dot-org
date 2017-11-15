@@ -104,6 +104,13 @@ class AwsS3IntegrationTest < Minitest::Test
     AWS::S3.connect_v2!
     # Slight limitation: doesn't revert to default setting (60) if variable is set to nil.
     assert_equal 15, client.config.http_read_timeout
+
+    assert_equal 15, client.config.notify_timeout
+    DCDO.set('s3_slow_request', 30)
+    AWS::S3.connect_v2!
+    assert_equal 30, client.config.notify_timeout
+    assert_equal 15, client.config.http_read_timeout
+    DCDO.set('s3_slow_request', nil)
   end
 
   # Simulate a slow AWS client response.

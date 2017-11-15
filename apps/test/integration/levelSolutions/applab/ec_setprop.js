@@ -165,7 +165,7 @@ module.exports = {
         tickWrapper.runOnAppTick(Applab, 2, function () {
           var slider = document.getElementById('my_slider');
 
-          assert.equal(slider.getAttribute('value'), '51');
+          assert.equal(slider.value, '51');
           assert.equal(slider.getAttribute('min'), '1');
           assert.equal(slider.getAttribute('max'), '101');
           assert.equal(slider.getAttribute('step'), '3');

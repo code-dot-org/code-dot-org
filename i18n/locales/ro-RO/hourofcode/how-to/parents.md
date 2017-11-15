@@ -1,7 +1,7 @@
 ---
 title: '<%= hoc_s(:title_how_to_parents) %>'
-layout: larg
-nav: cum_sa_navighezi
+layout: wide
+nav: how_to_nav
 ---
 <%= view :signup_button %>
 
