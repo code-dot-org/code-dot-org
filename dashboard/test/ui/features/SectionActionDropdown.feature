@@ -1,6 +1,3 @@
-@no_mobile
-@dashboard_db_access
-@pegasus_db_access
 Feature: Using the SectionActionDropdown
   Scenario: Viewing progress from SectionActionDropdown
     Given I create a teacher-associated student named "Sally"
