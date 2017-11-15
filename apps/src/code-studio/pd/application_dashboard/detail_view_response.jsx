@@ -35,16 +35,12 @@ export default class DetailViewResponse extends React.Component {
     handleScoreChange: PropTypes.func
   }
 
-  renderScoreOptions = () => {
-    return this.props.possibleScores.map((score, i) => {
-      return (
-        (
-          <option value={score} key={i}>
-            {score}
-          </option>
-        )
-      );
-    });
+  renderScoreOptions() {
+    return this.props.possibleScores.map((score, i) => (
+      <option value={score} key={i}>
+        {score}
+      </option>
+    ));
   }
 
   renderScore = () => {
