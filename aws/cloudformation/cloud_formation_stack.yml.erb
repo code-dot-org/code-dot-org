@@ -289,6 +289,16 @@ Resources:
       SourceArn: !GetAtt WebServerHookEventRule.Arn
   WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
 <%  if environment == :production -%>
+  HealthEventRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: !Sub "Health Events for ${AWS::StackName}."
+      EventPattern:
+        source: [aws.health]
+      State: ENABLED
+      Targets:
+      - Arn: !ImportValue SlackEvent
+        Id: HealthEventRuleTarget
   ClassroomScaleUp:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:

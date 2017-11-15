@@ -26,7 +26,7 @@ export default class CountryAutocompleteDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func,
     showErrorMsg: PropTypes.bool,
-    required: PropTypes.bool,
+    showRequiredIndicator: PropTypes.bool,
     value: PropTypes.string,
     singleLineLayout: PropTypes.bool,
   };
@@ -36,15 +36,15 @@ export default class CountryAutocompleteDropdown extends Component {
   }
 
   render() {
-    const {required, showErrorMsg, value, singleLineLayout} = this.props;
+    const {showRequiredIndicator, showErrorMsg, value, singleLineLayout} = this.props;
 
     const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
     return (
       <div style={containerStyle}>
         <div style={questionStyle}>
-          {i18n.schoolCountry()}
-          {required && (
+          {singleLineLayout ? i18n.country() : i18n.schoolCountry()}
+          {showRequiredIndicator && (
             <span style={styles.asterisk}> *</span>
           )}
           {showErrorMsg && (

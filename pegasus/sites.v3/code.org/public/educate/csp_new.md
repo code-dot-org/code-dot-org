@@ -161,7 +161,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-postap'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to use App Lab's database capabilities to make apps that sotre data in the cloud so that it can be retrieved later."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-postap'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to use App Lab's database capabilities to make apps that store data in the cloud so that it can be retrieved later."%>
 
 [/col-50]
 
@@ -175,7 +175,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 ## Keep up with CS Principles
 
-<div style="float:left; padding:25px; width:50%">
+<div style="float:left; padding:25px; width:33%">
 
 <h4>Let us know how we're doing!</h4>
 
@@ -186,7 +186,7 @@ We are always looking for ways to improve our courses. If something's not quite 
 
 </div>
 
-<div style="float:left; padding:25px; width:50%">
+<div style="float:left; padding:25px; width:33%">
 
 <h4> Subscribe for the latest news </h4>
 
@@ -198,7 +198,19 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 </div>
 
+<div style="float:left; padding:25px; width:33%">
+
+<h4> Chat about CS Principles in the forum </h4>
+
+We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12.
+
+<br><br>
+
+<a href="http://forum.code.org"> <button>Check out the forum </button> 
 <div style="clear:both"></div>
+
+### Chat about CS Principles in the forum
+We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).
 
 <hr/>
 
@@ -239,17 +251,6 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 </div>
 
 <div style="clear: both;"></div>
-
-
-### Chat about CS Principles in the forum
-We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CS Principles there are two forums that are most useful:
-
-* [General CS Principles forum](http://forum.code.org/c/csp)
-* [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp1)
-* [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp2)
-* [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp3)
-* [Unit 4 Lesson-Specific Forums](http://forum.code.org/c/csp4)
-* [Unit 5 Lesson-Specific Forums](http://forum.code.org/c/csp5)
 
 ## Frequently Asked Questions
 
