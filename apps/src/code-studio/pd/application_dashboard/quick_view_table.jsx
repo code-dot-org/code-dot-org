@@ -84,7 +84,7 @@ export default class QuickViewTable extends React.Component {
       cell: {
         format: this.formatNotesTooltip,
         transforms: [
-          (status) => ({
+          () => ({
             style: {...styles.notesCell}
           })
         ]
