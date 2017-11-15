@@ -21,6 +21,38 @@ function getChildNodeByName(node, type) {
   }
 }
 
+// The order of blocks as they appear in the agent inventory within MC:EE, so we
+// can translate the placeBlock block from string identifiers to indexes.
+const blockPlaceOrder = [
+  "bricks",
+  "cobblestone",
+  "dirt",
+  "grass",
+  "gravel",
+  "ice",
+  "logAcacia",
+  "logBirch",
+  "logJungle",
+  "logOak",
+  "logSpruce",
+  "planksAcacia",
+  "planksBirch",
+  "planksjungle",
+  "planksOak",
+  "planksSpruce",
+  "rails",
+  "sand",
+  "sandstone",
+  "snow",
+  "stone",
+  "wool_blue",
+  "wool_magenta",
+  "wool_orange",
+  "wool_pink",
+  "wool_red",
+  "wool_yellow",
+];
+
 // Map naming scheme for Agent-style block types to CodeBuilder-style block
 // types. BlockTypes not included here should be identical between the two
 // versions
@@ -90,12 +122,16 @@ const blockConversions = Object.freeze({
 
   craft_placeBlock: function (xml) {
     const next = getChildNodeByName(xml, 'next');
+    const title = getChildNodeByName(xml, 'title');
+    const blockType = title.textContent;
+    // placement slots are one-indexed and should default to 1
+    const blockIndex = (blockPlaceOrder.indexOf(blockType) + 1) || 1;
     return (`
       <block type="craft_place" inline="false">
         <title name="DIR">down</title>
         <value name="SLOTNUM">
           <block type="math_number">
-            <title name="NUM">1</title>
+            <title name="NUM">${blockIndex}</title>
           </block>
         </value>
         ${next ? serialize(next) : ''}
