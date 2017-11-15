@@ -137,14 +137,16 @@ module Teacher1819ApplicationConstants
   }
 
   VALID_SCORES = {
-    regional_partner: YES_NO,
+    regional_partner_name: YES_NO,
     # Need to include whether the participant is new
     committed: YES_NO,
     able_to_attend_single: YES_NO,
     csp_which_grades: YES_NO,
     csp_course_hours_per_year: YES_NO,
     csd_which_grades: YES_NO,
-    csp_terms_per_year: YES_NO
+    csp_terms_per_year: YES_NO,
+    taught_in_past: [0, 2],
+    csp_ap_exam: [0, 2]
   }
 
   ALL_LABELS = PAGE_LABELS.values.reduce(:merge)
