@@ -49,7 +49,7 @@ export default class DetailViewContents extends React.Component {
 
   state = {
     status: this.props.applicationData.status,
-    notes: this.props.applicationData.notes
+    notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
   };
 
   handleCancelEditClick = () => {
@@ -194,7 +194,7 @@ export default class DetailViewContents extends React.Component {
               id="Notes"
               disabled={!this.state.editing}
               componentClass="textarea"
-              value={this.state.notes || ''}
+              value={this.state.notes}
               onChange={this.handleNotesChange}
               style={styles.notes}
             />
