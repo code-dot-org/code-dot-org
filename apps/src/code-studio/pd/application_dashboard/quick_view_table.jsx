@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
 import {StatusColors} from './constants';
@@ -13,10 +14,13 @@ const styles = {
   },
   statusCell: StatusColors,
   notesCell: {
-    whiteSpace: 'nowrap',
     maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
   }
 };
 
@@ -78,8 +82,9 @@ export default class QuickViewTable extends React.Component {
         label: 'Notes'
       },
       cell: {
+        format: this.formatNotesTooltip,
         transforms: [
-          (notes) => ({
+          (status) => ({
             style: {...styles.notesCell}
           })
         ]
@@ -95,6 +100,30 @@ export default class QuickViewTable extends React.Component {
     });
     return columns;
   }
+
+  formatNotesTooltip = (notes) => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
 
   formatViewButton = (id) => {
     return (
