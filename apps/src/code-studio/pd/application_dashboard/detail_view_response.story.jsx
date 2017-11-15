@@ -63,8 +63,8 @@ export default storybook => {
           <DetailViewResponse
             question="Scored question that should have yes/no as possible scores"
             answer="Here is a response"
-            layout="yesNoScore"
-            score="yes"
+            layout="panel"
+            score="Yes"
             possibleScores={['Yes', 'No']}
           />
         )
@@ -75,7 +75,7 @@ export default storybook => {
           <DetailViewResponse
             question="Scored question that should have numbers as possible scores"
             answer="Here is a response"
-            layout="numericScore"
+            layout="panel"
             score="3"
             possibleScores={[0, 3]}
           />
