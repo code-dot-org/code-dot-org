@@ -1,3 +1,5 @@
+/* globals google */
+
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
 import { STATES } from '../geographyConstants';
@@ -47,6 +49,8 @@ const singleLineDropdownStyles = {
   width: "100%",
 };
 
+const OMIT_FIELD = '__omit_field__';
+
 export default class SchoolNotFound extends Component {
   static propTypes = {
     onChange: PropTypes.func,
@@ -58,11 +62,18 @@ export default class SchoolNotFound extends Component {
     showErrorMsg: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicators: PropTypes.bool,
+    schoolNameLabel: PropTypes.string,
+    // Note: Google location search requires the following line to be present in the haml where this component is used:
+    // %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+    useGoogleLocationSearch: PropTypes.bool,
   };
 
   static defaultProps = {
     showRequiredIndicators: true,
+    schoolNameLabel: i18n.schoolName(),
   };
+
+  static OMIT_FIELD = OMIT_FIELD;
 
   handleChange = (field, event) => {
     this.props.onChange(field, event);
@@ -104,20 +115,22 @@ export default class SchoolNotFound extends Component {
           </div>
         }
         <div>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolName())}
-              <input
-                id="school_name"
-                type="text"
-                name="school_name_s"
-                value={this.props.schoolName}
-                onChange={this.handleChange.bind(this, "schoolName")}
-                style={inputStyle}
-              />
-            </label>
-          </div>
-          {this.props.schoolType !== 'omitted' &&
+          {this.props.schoolName !== OMIT_FIELD &&
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(this.props.schoolNameLabel)}
+                <input
+                  id="school_name"
+                  type="text"
+                  name="school_name_s"
+                  value={this.props.schoolName}
+                  onChange={this.handleChange.bind(this, "schoolName")}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          }
+          {this.props.schoolType !== OMIT_FIELD &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolType())}
@@ -141,19 +154,21 @@ export default class SchoolNotFound extends Component {
           }
         </div>
         <div>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolCity())}
-              <input
-                type="text"
-                name="school_city_s"
-                value={this.props.schoolCity}
-                onChange={this.handleChange.bind(this, "schoolCity")}
-                style={inputStyle}
-              />
-            </label>
-          </div>
-          {this.props.schoolState !== 'omitted' &&
+          {!this.props.useGoogleLocationSearch &&
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(i18n.schoolCity())}
+                <input
+                  type="text"
+                  name="school_city_s"
+                  value={this.props.schoolCity}
+                  onChange={this.handleChange.bind(this, "schoolCity")}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          }
+          {this.props.schoolState !== OMIT_FIELD && !this.props.useGoogleLocationSearch &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolState())}
@@ -176,7 +191,7 @@ export default class SchoolNotFound extends Component {
             </div>
           }
         </div>
-        {this.props.schoolZip !== 'omitted' &&
+        {this.props.schoolZip !== OMIT_FIELD && !this.props.useGoogleLocationSearch &&
           <div style={fieldStyle}>
             <label style={labelStyle}>
               {this.renderLabel(i18n.schoolZip())}
@@ -191,8 +206,28 @@ export default class SchoolNotFound extends Component {
             </label>
           </div>
         }
+        {this.props.useGoogleLocationSearch &&
+          <div style={fieldStyle}>
+            <label style={labelStyle}>
+              {this.renderLabel("City / Town")}
+              <input
+                id="registration-school-location"
+                type="text"
+                name="registration_location"
+                placeholder="Search for your school or organization location"
+                style={inputStyle}
+              />
+            </label>
+          </div>
+        }
         <div style={styles.clear}/>
       </div>
     );
+  }
+
+  componentDidMount() {
+    if (this.props.useGoogleLocationSearch) {
+      new google.maps.places.SearchBox(document.getElementById('registration-school-location'));
+    }
   }
 }

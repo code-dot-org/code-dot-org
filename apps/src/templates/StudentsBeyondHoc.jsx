@@ -21,20 +21,28 @@ export default class StudentsBeyondHoc extends Component {
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
-    signedIn: PropTypes.bool.isRequired,
+    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, completedTutorialType, signedIn, MCShareLink } = this.props;
+
+    const { isRtl, responsive, completedTutorialType, userType, isEnglish, MCShareLink } = this.props;
+    const signedIn = (userType === "teacher" || userType === "student");
 
     var specificCardSet;
     switch (true) {
-      case completedTutorialType === 'pre2017Minecraft':
+      case completedTutorialType === 'pre2017Minecraft' && isEnglish:
           specificCardSet = 'pre2017MinecraftCards';
         break;
-      case completedTutorialType === '2017Minecraft':
+      case completedTutorialType === 'pre2017Minecraft' && !isEnglish:
+          specificCardSet ='nonEnglishPre2017MinecraftCards';
+        break;
+      case completedTutorialType === '2017Minecraft' && isEnglish:
           specificCardSet = 'newMinecraftCards';
+        break;
+      case completedTutorialType === '2017Minecraft' && !isEnglish:
+          specificCardSet = 'nonEnglishNewMinecraftCards';
         break;
       case completedTutorialType === 'applab' && signedIn:
           specificCardSet = 'signedInApplabCards';
@@ -42,8 +50,17 @@ export default class StudentsBeyondHoc extends Component {
       case completedTutorialType === 'applab' && !signedIn:
           specificCardSet = 'signedOutApplabCards';
         break;
-      case completedTutorialType === 'other' && signedIn:
+      case completedTutorialType === 'other' && signedIn && isEnglish:
           specificCardSet = 'signedInDefaultCards';
+        break;
+      case completedTutorialType === 'other' && signedIn && !isEnglish:
+          specificCardSet = 'signedInNonEnglishDefaultCards';
+        break;
+      case completedTutorialType === 'other' && !signedIn && isEnglish:
+          specificCardSet = 'signedOutDefaultCards';
+        break;
+      case completedTutorialType === 'other' && !signedIn && !isEnglish:
+          specificCardSet = 'signedOutNonEnglishDefaultCards';
         break;
       default:
         specificCardSet = 'signedOutDefaultCards';
@@ -61,22 +78,26 @@ export default class StudentsBeyondHoc extends Component {
       MinecraftCard.MCShareLink = MCShareLink;
     }
 
+    const heading = isEnglish ? i18n.congratsStudentHeading() : i18n.congratsStudentHeadingNonEng();
+
     return (
       <div style={styles.container}>
         <h1 style={styles.heading}>
-          {i18n.congratsStudentHeading()}
+          {heading}
         </h1>
         <VerticalImageResourceCardRow
           cards={cards}
           isRtl={isRtl}
           responsive={responsive}
         />
-        <CourseBlocksStudentGradeBands
-          isRtl={isRtl}
-          responsive={responsive}
-          showContainer={false}
-          hideBottomMargin={false}
-        />
+        {isEnglish && (
+          <CourseBlocksStudentGradeBands
+            isRtl={isRtl}
+            responsive={responsive}
+            showContainer={false}
+            hideBottomMargin={false}
+          />
+        )}
         <LocalClassActionBlock
           isRtl={isRtl}
           responsive={responsive}

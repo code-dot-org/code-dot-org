@@ -75,6 +75,7 @@ export default class ApplicationDashboard extends React.Component {
                     component={QuickView}
                     regionalPartnerName={regionalPartnerName}
                     applicationType={paths[path].name}
+                    viewType={paths[path].type}
                   />
                 )
               ];
