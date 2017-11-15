@@ -75,7 +75,7 @@ export default class SoundLibrary extends React.Component {
   };
 
   componentWillMount() {
-    this.sounds = new Sounds();
+    this.sounds = Sounds.getSingleton();
   }
 
   search = (e) => {
