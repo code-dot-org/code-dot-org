@@ -43,6 +43,7 @@
 class Census::CensusSubmission < ApplicationRecord
   has_and_belongs_to_many :school_infos
   validates :school_infos, presence: true
+  validates_email_format_of :submitter_email_address
 
   HOW_MANY_OPTIONS = {
     none: "NONE",
