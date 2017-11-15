@@ -73,7 +73,7 @@ export default class StudentsBeyondHoc extends Component {
       return card.MCShareLink === "";
     }
 
-    if (specificCardSet === "newMinecraftCards" && MCShareLink) {
+    if ((specificCardSet === "newMinecraftCards" || specificCardSet === "nonEnglishNewMinecraftCards") && MCShareLink) {
       var MinecraftCard = cards.find(findMinecraftCard);
       MinecraftCard.MCShareLink = MCShareLink;
     }
