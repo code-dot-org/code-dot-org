@@ -67,7 +67,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+[კოდის ერთი საათის გაკვეთილის ინსტრუქციები](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
@@ -90,9 +90,9 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# სახელმძღვანელო ორგანიზატორებისთვის
 
-## Use this handout to recruit corporations
+## გამოიყენეთ ეს სახელმძღვანელო კორპორაციების ჩასართავად
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 

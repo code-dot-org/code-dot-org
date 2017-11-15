@@ -9,7 +9,7 @@ nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Get your community involved in the Hour of Code
+# Предложите Вашим друзьям и коллегам принять участие в Часе Программирования
 
 ## 1. Поделиться информацией о Часе Программирования
 
@@ -25,7 +25,7 @@ Tell your friends about the **#HourOfCode**!
 
 [Отправьте это письмо](%= resolve_url('/promote/resources#sample-emails') %) вашему менеджеру или руководителю компании.
 
-## 4. Расскажите у себя на районе о Часе кода
+## 4. Расскажите Вашим коллегам о Часе кода
 
 [Соберите участников](%= resolve_url('/promote/resources#sample-emails') %) из Вашей школы, спортивного клуба, церкви, университета, профсоюза, подключите друзей и знакомых. И совсем не обязательно быть школьником или студентом, чтобы получить новые знания. Используйте эти [плакаты, баннеры, наклейки, видео и многое другое](%= resolve_url('/promote/resources') %) для вашего мероприятия.
 
