@@ -756,7 +756,7 @@ vi:
       applab: "Phòng thí nghiệm ứng dụng"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Đổi tên"
     save: "Lưu"
     delete: "Xóa"

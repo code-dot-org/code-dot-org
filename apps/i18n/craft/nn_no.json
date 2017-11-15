@@ -1,9 +1,9 @@
 {
   "absolute": "absoluttverdi",
-  "agentGenericFailureMessage": "Fortsett å kode! Husk å bruke Agenten for hjelp.",
-  "agentTooFewBlocksFailureMessage": "Prøv å legge til bare en blokk for å få Agenten til til riktig sted.",
+  "agentGenericFailureMessage": "Hald fram å kode! Hugs å bruke agenten for hjelp.",
+  "agentTooFewBlocksFailureMessage": "Prøv å leggje til ein blokk om gongen for å få agenten til riktig stad.",
   "at": "på",
-  "agentDiamondPathCongrats": "Gratulerer, fant du diamantstien! Du har samlet {count, plural, one {1 diamant} other {# diamanter}} så langt!",
+  "agentDiamondPathCongrats": "Gratulerer, du har funne diamantstien! Du har samla {count, plural,one {1 diamant}other {# diamantar}} så langt.",
   "blockActionAdd": "legg til",
   "blockActionAttack": "angrip",
   "blockActionClone": "klon blokker",
@@ -234,7 +234,7 @@
   "quantity": "antall",
   "reinfFeedbackMsg": "Du kan trykke \"Fortsett å spele\" for å gå tilbake til spelet ditt.",
   "relative": "relativ",
-  "runAgent": "Kjør Agenten",
+  "runAgent": "Køyr agenten",
   "score": "Poengsum",
   "seconds": "sekund",
   "selectChooseButton": "Vel",
@@ -290,5 +290,11 @@
   "weather": "vær",
   "weatherTypeClear": "tøm",
   "weatherTypeRain": "regn",
-  "weatherTypeThunder": "torden"
+  "weatherTypeThunder": "torden",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool"
 }

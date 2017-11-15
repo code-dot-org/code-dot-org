@@ -1034,14 +1034,14 @@
     rename: Renommer
     save: Sauvegarder
     delete: Supprimer
-    import: Import
-    share_link_import_bad_link_header: Share link not recognized
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: Something went wrong.
-    share_link_import_error_body: There was a problem importing that share link. Please
-      try again.
+    import: Importer
+    share_link_import_bad_link_header: Lien de partage non reconnu
+    share_link_import_bad_link_body: 'Nous n''avons pas pu importer ce lien de partage.
+      Assurez-vous d''utiliser un lien issu du casse-tête Minecraft: Agent et de copier
+      le lien complet.'
+    share_link_import_error_header: Une erreur est survenue.
+    share_link_import_error_body: Un problème est survenu lors de l'importation de
+      ce lien de partage. Veuillez réessayer.
     exit: Retourner au cours
     my_projects: Mes projets
     project_gallery: Projets

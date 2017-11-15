@@ -3551,7 +3551,7 @@ tr:
               description_teacher: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. In pairs, students evaluate various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
             Project - Propose an App:
               name: Proje - bir uygulama önermek
-              description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
+              description_student: Sınıfımız; problem çözme süreci çalışmalarını ve bilgisayarın giriş/çıkış/depolama/sürecini sonuçlandırmak için, gerçek hayat problemlerini çözebilecek uygulamalar sunar. Bu projenin tamamlanması günlere yayılabilir ve, her uygulamanın önemli noktalarını vurgulayan özelliklerin posterle sunulmasıyla proje sonuçlandırılacaktır. Proje ikili bitirilebilecek şekilde tasarlanmıştır, ama bireysel de yapılabilir.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
             CS Discoveries Pre-survey:
               name: CS Discoveries Pre-survey
@@ -6105,7 +6105,7 @@ tr:
               name: Ünite 3 Bölüm 1 değerlendirme
             foo:
               name: foo
-          title: CSP Unit 3 - Intro to Programming
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Programlama
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -6179,7 +6179,7 @@ tr:
               name: Intro to App Lab
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab
+          title: Intro to App Lab (Beta)
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of creative projects.
@@ -6733,8 +6733,8 @@ tr:
               name: Minecraft Kod Saati
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft is back with a brand new activity for Hour of Code!
+          description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
