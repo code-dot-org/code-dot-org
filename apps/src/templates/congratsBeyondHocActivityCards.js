@@ -9,6 +9,22 @@ const CSFExpress = {
   buttonText: i18n.csfExpressButton()
 };
 
+const CSFAccelerated = {
+  title: "CSF Accelerated",
+  description: "Keep going with our intro course! Learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games.",
+  link: "/s/20-hour",
+  image: "csf-express",
+  buttonText: "Try the course"
+};
+
+const CourseCatalog = {
+  title: "Course Catalog",
+  description: "Code.org offers courses across K-12 at no cost to schools. And, if you’d like help getting started, we also offer online professional learning at no cost.",
+  link: "/courses/view?=teacher",
+  image: "course-catalog",
+  buttonText: "View Course Catalog"
+};
+
 const CreateAccount = {
   title: i18n.createAccount(),
   description: i18n.createAccountDesc(),
@@ -71,9 +87,19 @@ export const cardSets = {
     ApplabTutorial,
     OldMinecraft
   ],
+  'nonEnglishPre2017MinecraftCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    OldMinecraft
+  ],
   'newMinecraftCards' : [
     CSFExpress,
     ApplabTutorial,
+    NewMinecraft
+  ],
+  'nonEnglishNewMinecraftCards' : [
+    CSFAccelerated,
+    CourseCatalog,
     NewMinecraft
   ],
   'signedInApplabCards' : [
@@ -91,9 +117,19 @@ export const cardSets = {
     ApplabTutorial,
     AnotherHoC
   ],
+  'signedInNonEnglishDefaultCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    AnotherHoC
+  ],
   'signedOutDefaultCards' : [
     CSFExpress,
     ApplabTutorial,
     CreateAccount
-  ]
+  ],
+  'signedOutNonEnglishDefaultCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    CreateAccount
+  ],
 };
