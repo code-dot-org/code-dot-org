@@ -7,7 +7,8 @@ module Pd
 
       @script_data = {
         props: {
-          regionalPartnerName: current_user.regional_partners.first.try(:name)
+          regionalPartnerName: current_user.regional_partners.first.try(:name),
+          regionalPartners: RegionalPartner.select("id, name")
         }.to_json
       }
     end
