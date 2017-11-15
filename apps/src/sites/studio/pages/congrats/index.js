@@ -17,10 +17,11 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
-        completedTutorialType="other"
+        completedTutorialType="2017Minecraft"
         isRtl={isRtl}
         userType={userType}
         isEnglish={isEnglish}
+        MCShareLink="minecraft/sharelink"
       />
     </Provider>,
     document.getElementById('congrats-container')
