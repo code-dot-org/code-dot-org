@@ -41,7 +41,10 @@ const styles = {
     color: color.charcoal,
   },
   title: {
-    padding: 20,
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 15,
     fontSize: 20,
   },
   button: {
@@ -52,16 +55,14 @@ const styles = {
     paddingRight: 20,
     fontSize: 14,
     lineHeight: 1.5,
-    height: 84
+    height: 89
   },
   shareLink: {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    fontSize: 16,
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 10,
+    fontSize: 14,
+    marginTop: 5,
     padding: 5,
     width: 258,
   },
@@ -114,6 +115,8 @@ class VerticalImageResourceCard extends Component {
       require('@cdo/static/resource_cards/codeorgteacher.png'),
       "third-party-teacher":
       require('@cdo/static/resource_cards/thirdpartyteacher.png'),
+      "third-party-teacher-small":
+      require('@cdo/static/resource_cards/thirdpartyteachersmall.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
@@ -127,12 +130,12 @@ class VerticalImageResourceCard extends Component {
           </div>
           <div style={[styles.text, styles.description, localeStyle]}>
            {description}
+           {MCShareLink && (
+             <div style={[styles.text, styles.shareLink, localeStyle]}>
+              {MCShareLink}
+             </div>
+           )}
           </div>
-          {MCShareLink && (
-            <div style={[styles.text, styles.shareLink, localeStyle]}>
-             {MCShareLink}
-            </div>
-          )}
           <Button
             href={link}
             color={Button.ButtonColor.gray}
