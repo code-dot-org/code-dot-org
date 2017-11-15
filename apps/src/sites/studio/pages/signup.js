@@ -19,9 +19,49 @@ const SCHOOL_TYPES_HAVING_NAMES = [
   'organization',
 ];
 
+const SCHOOL_STYLE_TEST_GROUPS = {
+  control: "control",
+  autocompleteOptional: "autocomplete-optional",
+  autocompleteRequired: "autocomplete-required",
+};
+
+const schoolStyleRandom = Math.random();
+let registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
+if (schoolStyleRandom > 1.0 / 3.0) {
+  registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteOptional;
+}
+if (schoolStyleRandom > 2.0 / 3.0) {
+  registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
+}
+if (window.dashboard.rack_env === 'test') {
+  // Pin to control group on test
+  registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
+}
+
+const errorStyles = {
+  fontSize: 14,
+  fontFamily: '"Gotham 3r", sans-serif',
+  color: color.red,
+  paddingTop: 5,
+  paddingBottom: 5
+};
+
 window.SignupManager = function (options) {
   this.options = options;
   var self = this;
+
+  let schoolData = {
+    country: options.usIP ? 'United States' : '',
+    nces: '',
+    schoolName: '',
+    schoolCity: '',
+    schoolState: '',
+    schoolZip: '',
+    schoolType: '',
+    showErrorMsg: false,
+  };
+
+  let loggedTeacherSelected = false;
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
   if (self.options.isTeacher === "true") {
@@ -128,26 +168,6 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
-  const SCHOOL_STYLE_TEST_GROUPS = {
-    control: "control",
-    autocompleteOptional: "autocomplete-optional",
-    autocompleteRequired: "autocomplete-required",
-  };
-
-  const schoolStyleRandom = Math.random();
-  let registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
-  if (schoolStyleRandom > 1.0 / 3.0) {
-    registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteOptional;
-  }
-  if (schoolStyleRandom > 2.0 / 3.0) {
-    registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
-  }
-
-  if (window.dashboard.rack_env === 'test') {
-    // Pin to control group on test
-    registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
-  }
-
   function logEvent(event) {
     firehoseClient.putRecord(
       'analysis-events',
@@ -159,17 +179,6 @@ window.SignupManager = function (options) {
     );
   }
 
-  let schoolData = {
-    country: options.usIP ? 'United States' : '',
-    nces: '',
-    schoolName: '',
-    schoolCity: '',
-    schoolState: '',
-    schoolZip: '',
-    schoolType: '',
-    showErrorMsg: false,
-  };
-
   function onCountryChange(_, event) {
     schoolData.country = event ? event.value : '';
     updateAutocompleteSchoolFields(schoolData);
@@ -178,7 +187,6 @@ window.SignupManager = function (options) {
   function getCountryCodeForCountry(countryName) {
     return COUNTRIES.find(pair => pair.value === countryName).label;
   }
-  window.getCountryCodeForCountry = getCountryCodeForCountry;
 
   function onSchoolTypeChange(event) {
     schoolData.schoolType = event ? event.target.value : '';
@@ -203,14 +211,6 @@ window.SignupManager = function (options) {
   function schoolInfoOptional() {
     return registrationSchoolStyleGroup !== SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
   }
-
-  const errorStyles = {
-    fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.red,
-    paddingTop: 5,
-    paddingBottom: 5
-  };
 
   function updateAutocompleteSchoolFields(data) {
     const isUS = data.country === 'United States';
@@ -311,7 +311,6 @@ window.SignupManager = function (options) {
     return !missingInfo;
   }
 
-  let loggedTeacherSelected = false; // only make this log call once
   function showTeacher() {
     // Show correct form elements.
     $("#age-block").hide();
