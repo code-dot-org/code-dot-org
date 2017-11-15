@@ -39,7 +39,7 @@ describe('PopUpMenu', () => {
         <PopUpMenu.Item onClick={spy2}>Item two</PopUpMenu.Item>
       </MenuBubble>
     );
-    wrapper.find(PopUpMenu.Item).first().simulate('click');
+    wrapper.find(PopUpMenu.Item).first().children().first().simulate('click');
     expect(spy1).to.have.been.calledOnce;
     expect(spy2).not.to.have.been.called;
   });
