@@ -52,6 +52,7 @@ const styles = {
     paddingRight: 20,
     fontSize: 14,
     lineHeight: 1.5,
+    height: 84
   },
   shareLink: {
     borderWidth: 1,
