@@ -4590,6 +4590,8 @@ en:
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
