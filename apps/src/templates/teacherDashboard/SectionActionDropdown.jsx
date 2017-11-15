@@ -40,6 +40,16 @@ const styles = {
   xIcon: {
     paddingRight: 5,
   },
+  heading: {
+    borderTopWidth: 0,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.default_text,
+    paddingBottom: 20,
+    marginBottom: 30,
+  },
 };
 
 class SectionActionDropdown extends Component {
@@ -227,7 +237,7 @@ class SectionActionDropdown extends Component {
           isOpen={this.state.deleting}
           style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
         >
-          <h2>{i18n.deleteSection()}</h2>
+          <h2 style={styles.heading}>{i18n.deleteSection()}</h2>
           <div>{i18n.deleteSectionConfirm()}</div>
           <br/>
           <div>{i18n.deleteSectionHideSuggestion()}</div>
