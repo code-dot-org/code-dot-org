@@ -1,7 +1,9 @@
+/* global dashboard */
+
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
 import color from '../util/color';
-import { tutorialTypes } from './tutorialTypes.js';
+import queryString from 'query-string';
 
 const styles = {
   heading: {
@@ -15,21 +17,11 @@ const styles = {
 
 export default class Certificate extends Component {
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired
   };
 
   render() {
-    const { completedTutorialType } = this.props;
-
-    const minecraft = (completedTutorialType === '2017Minecraft' ||
-     completedTutorialType === 'pre2017Minecraft');
-    const image = minecraft ? "minecraft-cert" : "default-cert";
-
-    const filenameToImgUrl = {
-      "default-cert": require('@cdo/static/hour_of_code_certificate.jpg'),
-      "minecraft-cert": require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
-    };
-    const imgSrc = filenameToImgUrl[image];
+    const certificate = queryString.parse(window.location.search)['i'].replace(/[^a-z0-9_]/, '');
+    const imgSrc = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
 
     return (
       <div>

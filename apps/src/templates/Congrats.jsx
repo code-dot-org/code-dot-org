@@ -66,7 +66,6 @@ export default class Congrats extends Component {
       <Provider store={store}>
         <div style={contentStyle}>
           <Certificate
-            completedTutorialType={completedTutorialType}
           />
           {userType === "teacher" && (
             <TeachersBeyondHoc
