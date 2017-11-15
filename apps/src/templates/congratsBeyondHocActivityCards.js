@@ -6,7 +6,23 @@ const CSFExpress = {
   description: i18n.csfExpressDesc(),
   link: pegasus(`/educate/curriculum/express-course`),
   image: "csf-express",
-  buttonText: i18n.csfExpressButton()
+  buttonText: i18n.csfButton()
+};
+
+const CSFAccelerated = {
+  title: i18n.csfAcceleratedTitle(),
+  description: i18n.csfAcceleratedDesc(),
+  link: "/s/20-hour",
+  image: "csf-express",
+  buttonText: i18n.csfButton()
+};
+
+const CourseCatalog = {
+  title: i18n.courseCatalogTitle(),
+  description: i18n.courseCatalogDescription(),
+  link: "/courses/view?=teacher",
+  image: "course-catalog",
+  buttonText: i18n.courseCatalogButton()
 };
 
 const CreateAccount = {
@@ -62,7 +78,8 @@ const NewMinecraft = {
   description: i18n.minecraft2017Desc(),
   link: "https://education.minecraft.net/support/knowledge-base/connecting-code-connection-minecraft/",
   image: "new-minecraft",
-  buttonText: i18n.minecraft2017Button()
+  buttonText: i18n.minecraft2017Button(),
+  MCShareLink: ""
 };
 
 export const cardSets = {
@@ -71,9 +88,19 @@ export const cardSets = {
     ApplabTutorial,
     OldMinecraft
   ],
+  'nonEnglishPre2017MinecraftCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    OldMinecraft
+  ],
   'newMinecraftCards' : [
     CSFExpress,
     ApplabTutorial,
+    NewMinecraft
+  ],
+  'nonEnglishNewMinecraftCards' : [
+    CSFAccelerated,
+    CourseCatalog,
     NewMinecraft
   ],
   'signedInApplabCards' : [
@@ -91,9 +118,19 @@ export const cardSets = {
     ApplabTutorial,
     AnotherHoC
   ],
+  'signedInNonEnglishDefaultCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    AnotherHoC
+  ],
   'signedOutDefaultCards' : [
     CSFExpress,
     ApplabTutorial,
     CreateAccount
-  ]
+  ],
+  'signedOutNonEnglishDefaultCards' : [
+    CSFAccelerated,
+    CourseCatalog,
+    CreateAccount
+  ],
 };
