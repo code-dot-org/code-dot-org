@@ -43,7 +43,7 @@ export default class CountryAutocompleteDropdown extends Component {
     return (
       <div style={containerStyle}>
         <div style={questionStyle}>
-          {i18n.schoolCountry()}
+          {singleLineLayout ? i18n.country() : i18n.schoolCountry()}
           {showRequiredIndicator && (
             <span style={styles.asterisk}> *</span>
           )}

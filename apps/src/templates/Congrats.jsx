@@ -55,7 +55,6 @@ export default class Congrats extends Component {
 
   render() {
     const { completedTutorialType, MCShareLink, isRtl, userType, isEnglish } = this.props;
-    const signedIn = (userType === "teacher" || userType === "student");
 
     const contentStyle = {
       width: this.responsive.getResponsiveContainerWidth()
@@ -68,7 +67,7 @@ export default class Congrats extends Component {
           <Certificate
             completedTutorialType={completedTutorialType}
           />
-          {userType === "teacher" && (
+          {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
               isRtl={isRtl}
@@ -79,10 +78,10 @@ export default class Congrats extends Component {
             MCShareLink={MCShareLink}
             responsive={this.responsive}
             isRtl={isRtl}
-            signedIn={signedIn}
+            userType={userType}
             isEnglish={isEnglish}
           />
-          {userType === "signedOut" && (
+          {userType === "signedOut" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
               isRtl={isRtl}

@@ -991,14 +991,13 @@
     rename: Omdøb
     save: Gem
     delete: Slet
-    import: Import
-    share_link_import_bad_link_header: Share link not recognized
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: Something went wrong.
-    share_link_import_error_body: There was a problem importing that share link. Please
-      try again.
+    import: Importér
+    share_link_import_bad_link_header: Ukendt delingslink
+    share_link_import_bad_link_body: 'Vi kunne ikke importere delingslinket. Sørg
+      for, at du bruger et link fra en Minecraft: Agent-opgave, og at du har kopieret
+      hele linket.'
+    share_link_import_error_header: Der gik noget galt
+    share_link_import_error_body: Vi kunne ikke importere delingslinket. Prøv igen.
     exit: Vend tilbage til kursus
     my_projects: Mine projekter
     project_gallery: Projekter

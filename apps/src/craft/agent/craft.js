@@ -21,7 +21,6 @@ import { getStore } from '../../redux';
 import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
-import experiments from '../../util/experiments';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 const MEDIA_URL = '/blockly/media/craft/';
@@ -723,6 +722,12 @@ export default class Craft {
           blockType,
           'PlayerAgent');
       },
+      placeDirection: function (blockType, direction, blockID) {
+        appCodeOrgAPI.placeDirection(studioApp().highlight.bind(studioApp(), blockID),
+          blockType,
+          'PlayerAgent',
+          direction);
+      },
       moveDirection: function (direction, targetEntity, blockID) {
         const dirStringToDirection = {
           up: FacingDirection.North,
@@ -758,7 +763,6 @@ export default class Craft {
   static reportResult(success) {
     const studioTestResults = studioApp().getTestResults(success);
     const testResultType = Craft.getTestResultFrom(success, studioTestResults);
-    const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
     const image = Craft.initialConfig.level.freePlay
       ? Craft.gameController.getScreenshot()
@@ -812,7 +816,7 @@ export default class Craft {
           },
           feedbackImage: image,
           showingSharing: Craft.initialConfig.level.freePlay,
-          saveToProjectGallery,
+          saveToProjectGallery: true,
         });
       },
     });

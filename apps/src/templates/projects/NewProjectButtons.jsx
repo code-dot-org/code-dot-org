@@ -69,6 +69,10 @@ const PROJECT_INFO = {
     label: i18n.projectTypeMinecraftDesigner(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft.png"
   },
+  'minecraft_hero': {
+    label: i18n.projectTypeMinecraftHero(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft_hero_square.jpg"
+  },
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
@@ -110,7 +114,7 @@ const PROJECT_INFO = {
 const styles = {
   fullsize: {
     width: styleConstants['content-width'],
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 10,
   },
   row: {
@@ -177,9 +181,7 @@ class NewProjectButtons extends React.Component {
       {
         study: 'my-projects-create-project',
         study_group: 'start-new-project-widget',
-        // '-wip' should be removed when the data format is finalized
-        // and the A/B experiment is launched
-        event: 'create-project-wip',
+        event: 'create-project',
         data_json: JSON.stringify({projectType})
       }
     );

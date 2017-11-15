@@ -3262,9 +3262,7 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: "這是一個遊戲範例，你也可以在 play lab 裡自己做一個。"
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the torch.
+      Function intro Ryan_instruction: "使用「建造橋樑」功能兩次，以開闢路徑前往火把。"
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3585,96 +3583,49 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN2_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_2017_01_RETRY_instruction: "讓 Agent 前往壓板，然後按「執行」並使用箭頭按鍵，移動玩家離開房屋以收集箱子。"
+      MC_HOC_2017_02_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_02_Cole_instruction: "移動 Agent 前往壓板，這樣 {currentPlayerName} 才能前往地圖。"
+      MC_HOC_2017_02_Kiki_instruction: "讓 Agent 前往壓板，然後讓玩家前往橙色方塊。"
+      MC_HOC_2017_02_Will_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_03_Cole_instruction: "設定 Agent 的代碼以開啟大門。"
+      MC_HOC_2017_03_Kiki_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_04_instruction: "變更上一個版圖的循環，讓 Agent 可以在這條河較寬的部分開闢路徑。"
+      MC_HOC_2017_04POINT5_Cole_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_04POINT5_RYAN_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_04_Cole_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_04_Kiki_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_05_instruction: "使用一種功能，讓 Agent 可前往壓板。"
+      MC_HOC_2017_05_Cole_instruction: "讓玩家前往鏟子的位置。"
+      MC_HOC_2017_05_Josh_instruction: "讓玩家前往鏟子的位置。"
+      MC_HOC_2017_05_Kiki_instruction: "讓玩家前往橙色方塊。"
+      MC_HOC_2017_06_Cole_instruction: "修正此代碼，讓 Agent 可建造橫跨這條河流的橋樑。"
+      MC_HOC_2017_06_Josh_instruction: "修正此代碼，幫助 Agent 建造橫跨這條河流的橋樑。"
+      MC_HOC_2017_06_Kiki_instruction: "修正此代碼，幫助 Agent 建造橫跨這條河流的橋樑。"
+      MC_HOC_2017_07_Cole_instruction: "破壞冰塊，並讓 {currentPlayerName} 前往礦車。"
+      MC_HOC_2017_07_Kiki_instruction: "使用一種功能，清除前往橙色方塊的路徑。"
+      MC_HOC_2017_07a_Kiki_instruction: "清除前往橙色方塊的路徑。"
+      MC_HOC_2017_08_Cole_instruction: "變更提供的功能以於此生態域中使用。"
+      MC_HOC_2017_08_Kiki_instruction: "變更功能以於此版圖中使用。"
+      MC_HOC_2017_08_RY_instruction: "使用功能以找到穿過熔岩的路。"
+      MC_HOC_2017_08_Will_instruction: "使用功能以找到穿過熔岩的路。"
+      MC_HOC_2017_09_Cole_instruction: "設定 Agent 的程式以清除玩家的路徑。"
+      MC_HOC_2017_09_Kiki_instruction: "設定 Agent 的程式以清除玩家的路徑，並讓玩家前往壓板。"
+      MC_HOC_2017_10_Cole_instruction: "建立一種功能，幫助您完成此礦車。"
+      MC_HOC_2017_10_Cole_old_instruction: "建立一種功能，幫助您完成此礦車。"
+      MC_HOC_2017_10_Kiki_instruction: "建立一種功能，幫助您完成此礦車。"
+      MC_HOC_2017_10_RETRY_instruction: "建立一種功能，幫助您完成此礦車。"
+      MC_HOC_2017_10_RYAN_instruction: "建立一種功能，幫助您完成此礦車。"
+      MC_HOC_2017_10_RYAN2_instruction: "建立一種功能，幫助您完成此礦車。"
+      MC_HOC_2017_13_Cole_instruction: "**自由遊戲：**是自己探索的時候了！"
+      MC_HOC_2017_4.5v2_instruction: "讓 Agent 前往壓板。"
+      MC_HOC_2017_Ali_instruction: "使用功能以找到穿過熔岩的路。"
+      MC_HOC_2017_FP10x10_instruction: "**自由遊戲：**您可以挑戰自己，在此關卡中收集到所有鑽石嗎？"
+      MC_HOC_2017_FP10x10_RE_instruction: "**自由遊戲：**您可以挑戰自己，在此關卡中收集到所有鑽石嗎？"
+      MC_HOC_2017_FP20x20_instruction: "**自由遊戲：**是自己探索的時候了！"
+      MC_HOC_2017_Ryan_03_instruction: "現在就使用循環，在水中放置方塊，協助 Agent 建造橫跨河流的橋樑。"
+      MC_HOC_2017_Ryan_05_instruction: "破壞仙人掌，讓玩家可以抵達目的地。"
+      MC_HOC_Kiki_02_instruction: "讓 Agent 前往壓板。"
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3986,6 +3937,9 @@
       New Gumball Project_instruction: "自由發揮吧！然後把您的成果分享出來！"
       New Ice Age Project_instruction: "自由發揮吧！然後把您的成果分享出來！"
       New Infinity Project_instruction: "自由發揮吧！然後把您的成果分享出來！"
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -7506,9 +7460,10 @@
         Collect all of the nectar and make
         all of the honey.
       courseD_bee_conditionals1_predict1_instruction: "檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。"
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
