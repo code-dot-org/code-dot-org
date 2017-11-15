@@ -170,66 +170,6 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 *Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution Non-Commerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).*
 
-
-<hr/>
-
-## Keep up with CS Principles
-
-<div style="float:left; padding:25px; width:33%">
-
-<h4>Let us know how we're doing!</h4>
-
-We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
-<br><br>
-
-<a href="mailto:support@code.org"><button>Give feedback</button></a>
-
-</div>
-
-<div style="float:left; padding:25px; width:33%">
-
-<h4> Subscribe for the latest news </h4>
-
-Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for CS Principles.
-
-<br><br>
-
-<a href="/educate/csp/CSPStatus_Signup"> <button>Sign up</button> </a>
-
-</div>
-
-<div style="float:left; padding:25px; width:33%">
-
-<h4> Chat about CS Principles in the forum </h4>
-
-We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12.
-
-<br><br>
-
-<a href="http://forum.code.org"> <button>Check out the forum </button> 
-<div style="clear:both"></div>
-
-### Chat about CS Principles in the forum
-We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).
-
-<hr/>
-
-## Spread the word about CS Principles
-
-### Hand out these fliers around your school and consider sending home to parents.
-
-[![image](/images/fit-200/csp/CSPrinciples_1-pager.png)](/files/CSPrinciples_1-pager.pdf)
-[![image](/images/fit-200/csp/csp-student-flyer.png)](/files/programs/csp-student-flyer.pdf)
-
-### Hang these posters in your classroom and around your school:
-
-[![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
-[![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
-[![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
-[![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
-
-<hr/>
-
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
 <div class="col-25" style="float: left; margin-right: 12px;">
@@ -251,6 +191,63 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 </div>
 
 <div style="clear: both;"></div>
+
+<hr/>
+
+## Keep up with CS Principles
+
+<div style="float:left; padding:25px; width:33%">
+
+<h4>Let us know how we're doing!</h4>
+
+We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
+<br><br>
+
+<a href="mailto:support@code.org"><button>Give feedback</button></a>
+
+</div>
+
+<div style="float:left; padding:25px; width:33%">
+
+<h4>Subscribe for the latest news</h4>
+
+Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for CS Principles.
+<br><br>
+
+<a href="/educate/csp/CSPStatus_Signup"> <button>Sign up</button></a>
+
+</div>
+
+<div style="float:left; padding:25px; width:33%">
+
+<h4>Chat about CS Principles in the forum</h4>
+
+We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12.
+<br><br>
+
+<a href="http://forum.code.org"> <button>Visit the forum</button></a> 
+
+</div>
+
+<div style="clear:both"></div>
+
+<hr/>
+
+## Spread the word about CS Principles
+
+### Hand out these fliers around your school and consider sending home to parents.
+
+[![image](/images/fit-200/csp/CSPrinciples_1-pager.png)](/files/CSPrinciples_1-pager.pdf)
+[![image](/images/fit-200/csp/csp-student-flyer.png)](/files/programs/csp-student-flyer.pdf)
+
+### Hang these posters in your classroom and around your school:
+
+[![image](/images/fit-200/kieran_rory_CS_recruitment.png)](/files/programs/kieran_rory_CS_recruitment.pdf)
+[![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
+[![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
+[![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
+
+<hr/>
 
 ## Frequently Asked Questions
 
