@@ -18,7 +18,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="other"
-              MCShareLink=""
               responsive={responsive}
               isRtl={false}
               userType="teacher"
@@ -34,7 +33,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="other"
-              MCShareLink=""
               responsive={responsive}
               isRtl={false}
               userType="student"
@@ -50,7 +48,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="other"
-              MCShareLink=""
               responsive={responsive}
               isRtl={false}
               userType="signedOut"
@@ -66,7 +63,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="other"
-              MCShareLink=""
               responsive={responsive}
               isRtl={false}
               userType="signedOut"
@@ -82,7 +78,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="applab"
-              MCShareLink=""
               responsive={responsive}
               isRtl={false}
               userType="signedOut"
@@ -98,7 +93,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="applab"
-              MCShareLink=""
               responsive={responsive}
               isRtl={false}
               userType="student"
@@ -114,7 +108,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="pre2017Minecraft"
-              MCShareLink=""
               responsive={responsive}
               isRtl={false}
               userType="student"
@@ -130,39 +123,6 @@ export default storybook => {
           <Provider store={store}>
             <StudentsBeyondHoc
               completedTutorialType="pre2017Minecraft"
-              MCShareLink=""
-              responsive={responsive}
-              isRtl={false}
-              userType="student"
-              isEnglish={false}
-            />
-          </Provider>
-        )
-      },
-      {
-        name: '2017 Minecraft, signed in, English',
-        description: `Same for signed out`,
-        story: () => (
-          <Provider store={store}>
-            <StudentsBeyondHoc
-              completedTutorialType="2017Minecraft"
-              MCShareLink="link/share/minecraft"
-              responsive={responsive}
-              isRtl={false}
-              userType="student"
-              isEnglish={true}
-            />
-          </Provider>
-        )
-      },
-      {
-        name: '2017 Minecraft, signed in, non-English',
-        description: `Same for signed out`,
-        story: () => (
-          <Provider store={store}>
-            <StudentsBeyondHoc
-              completedTutorialType="2017Minecraft"
-              MCShareLink="link/share/minecraft"
               responsive={responsive}
               isRtl={false}
               userType="student"
