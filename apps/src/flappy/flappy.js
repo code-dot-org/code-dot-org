@@ -22,7 +22,6 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
-import experiments from '../util/experiments';
 import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
 import {SignInState} from '../code-studio/progressRedux';
@@ -727,7 +726,7 @@ var displayFeedback = function () {
           reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
           sharingText: flappyMsg.shareGame()
         },
-        saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+        saveToProjectGallery: true,
         feedbackImage: feedbackImageUri,
         disableSaveToGallery: !isSignedIn,
       });
