@@ -8,7 +8,7 @@ const CSFExpress = {
 };
 
 const CSFAccelerated = {
-  title: "Course Catalog",
+  title: "CSF Accelerated",
   description: "Keep going with our intro course! Learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games.",
   link: "/s/20-hour",
   image: "csf-express",
@@ -16,8 +16,8 @@ const CSFAccelerated = {
 };
 
 const CourseCatalog = {
-  title: "CS Fundamentals Accelerated",
-  description: "Code.org offers courses across K12 at no cost to schools. And, if you’d like help getting started, we have hands-on professional learning workshops around the country.",
+  title: "Course Catalog",
+  description: "Code.org offers courses across K-12 at no cost to schools. And, if you’d like help getting started, we also offer online professional learning at no cost.",
   link: "/courses/view?=teacher",
   image: "course-catalog",
   buttonText: "View Course Catalog"
