@@ -89,7 +89,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS),
+      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES),
       source_module: Teacher1819ApplicationConstants,
       transform_keys: true
     ),
