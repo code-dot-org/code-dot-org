@@ -155,7 +155,7 @@ window.SignupManager = function (options) {
   }
 
   let schoolData = {
-    country: 'United States',
+    country: options.usIP ? 'United States' : '',
     nces: '',
     schoolName: '',
     schoolCity: '',
