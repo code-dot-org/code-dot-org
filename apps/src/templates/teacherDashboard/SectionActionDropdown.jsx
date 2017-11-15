@@ -56,7 +56,6 @@ class SectionActionDropdown extends Component {
   };
 
   state = {
-    selected: false,
     deleting: false,
     open: false,
     canOpen: true,
@@ -128,11 +127,11 @@ class SectionActionDropdown extends Component {
     const windowWidth = window.innerWidth;
     if (windowWidth > 970) { // Accounts for resizing when page is not scrollable
       this.setState({menuTop: rect.bottom + window.pageYOffset});
-      this.setState({menuLeft: rect.left + (rect.width / 2) - (windowWidth - this.state.currWindowWidth)/2});
+      this.setState({menuLeft: rect.left - rect.width - (windowWidth - this.state.currWindowWidth)/2});
       this.setState({currWindowWidth : window.innerWidth});
     } else { // Accounts for scrolling or resizing when scrollable
       this.setState({menuTop: rect.bottom + window.pageYOffset});
-      this.setState({menuLeft: rect.left + (rect.width / 2) + window.pageXOffset});
+      this.setState({menuLeft: rect.left - rect.width + window.pageXOffset});
     }
   }
 
@@ -146,7 +145,7 @@ class SectionActionDropdown extends Component {
       >
         <a
           icon="chevron-down"
-          style={this.state.selected ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}
+          style={this.state.open ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}
           onClick={this.state.canOpen ? this.open : undefined}
         >
           <i className="fa fa-chevron-down"></i>
