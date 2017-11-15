@@ -32,7 +32,7 @@ window.SignupManager = function (options) {
   }
 
   function formSuccess(success) {
-    if (getAutocompleteFlag() && isTeacherSelected()) {
+    if (isTeacherSelected()) {
       logEvent('teacher-submit-success');
     }
     var url;
@@ -47,7 +47,7 @@ window.SignupManager = function (options) {
   }
 
   function formError(err) {
-    if (getAutocompleteFlag() && isTeacherSelected()) {
+    if (isTeacherSelected()) {
       logEvent('teacher-submit-error');
     }
 
@@ -322,7 +322,7 @@ window.SignupManager = function (options) {
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
 
-    if (getAutocompleteFlag() && !loggedTeacherSelected) {
+    if (!loggedTeacherSelected) {
       logEvent('teacher-selected');
       loggedTeacherSelected = true;
     }
@@ -332,12 +332,8 @@ window.SignupManager = function (options) {
     }
   }
 
-  function getAutocompleteFlag() {
-    return window.location.href.lastIndexOf("enableAutocompleteDropdown=true") > 0;
-  }
-
   function shouldUseAutocompleteDropdown() {
-    return getAutocompleteFlag() && registrationSchoolStyleGroup !== SCHOOL_STYLE_TEST_GROUPS.control;
+    return registrationSchoolStyleGroup !== SCHOOL_STYLE_TEST_GROUPS.control;
   }
 
   function getUserTypeSelected() {
@@ -409,7 +405,7 @@ window.SignupManager = function (options) {
     $("#password_message").text("");
     $("#password_message_confirmation").text("");
 
-    if (getAutocompleteFlag() && isTeacherSelected()) {
+    if (isTeacherSelected()) {
       schoolData.showErrorMsg = false;
       logEvent('teacher-submitted');
       if (registrationSchoolStyleGroup === SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired) {
