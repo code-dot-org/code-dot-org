@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109230625) do
+ActiveRecord::Schema.define(version: 20171115221314) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -416,6 +416,8 @@ ActiveRecord::Schema.define(version: 20171109230625) do
     t.datetime "updated_at",                        null: false
     t.string   "course"
     t.text     "response_scores",     limit: 65535,              comment: "Scores given to certain responses"
+    t.string   "application_guid"
+    t.index ["application_guid"], name: "index_pd_applications_on_application_guid", using: :btree
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
     t.index ["course"], name: "index_pd_applications_on_course", using: :btree
