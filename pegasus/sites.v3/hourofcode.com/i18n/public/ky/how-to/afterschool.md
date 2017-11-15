@@ -7,23 +7,23 @@ nav: how_to_nav
 
 # Код саатын сабактын тышкары класстарда жана клубдарда кандай өткөрүү керек
 
-Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. Код сааты - баштаган оңой, үйрөнчүктөргө дагы! Код саатын өткөзгөнгө кошумча жардамчылар керек болсо, [жергиликтүү ыктыярчыларды](<%= resolve_url('https://code.org/volunteer/local') %>) таба аласыңар.
 
 ## 1. Кандай кылуу видеосун көрүңүз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Жетектеме тандаңыз
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Байкап көрүңүз!](<%= resolve_url('/learn') %>)
+Биз бардык курактагы катышуучуларга өнөктөрүбүз даярдаган [кызыктуу, бир сааттык көнүгүүлөрдү](<%= resolve_url('/learn') %>) камсыздайбыз. [Байкап көрүңүз!](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Код саатынын бардык жетектемелери** уюштуруучулрадан минималдык даярдыкты талап кылат жана өзү алдынча ишке - балдардын жөндөмүнө жараша үйрөнүшүнө ылайыкташкан.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Сабактан тышкары Код саатын өтүүнүн иш-планы керекпи?** Бул [үлгүнү](/files/AfterschoolEducatorLessonPlanOutline.docx) көрүңүз!
 
 ## 3. Код саатыңызды жарнамалаңыз
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+Код сааты иш-чараңызды [бул жарактар](<%= resolve_url('/promote') %>) менен илгерилетип, башкаларды дагы иш-чара өткөзүүгө чакыргыла.
 
 ## 4. Керектүү техниканы пландаштыруу - компүтерлер, бар болсо
 
@@ -43,26 +43,26 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
 
 **Шыктандыруучу видео көрсөткүлө:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Code.org киришүү видеосуна Билл Гейтс, Марк Цукерберг жана NBA жылдызы Крис Бош тартылган - анын [1 мүнөт](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 мүнөт](https://www.youtube.com/watch?v=nKIu9yen5nc) жана [9 мүнөт](https://www.youtube.com/watch?v=dU1xS07N-FA) версиялары бар.
+- The [Код сааты дүйнөдө видеосу](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Президент Обама окуучуларды компүтердик илимди өздөштүрүүгө чакырат](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Дагы шыктандыруучу виделор [бул жерде](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Компүтер менен тааныш болбосоңуз - эч нерсе эмес. Код сааты иш-чараңызды тааныштыруунун айрым идеялары:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Технологиянын жашообузга болгон таасирин көргөзгөн мисал келтиргиле - балдарга жана кыздарга тең кызык болсун (өмүр сактаган, жардам берген, кишилерди байланыштырган колдонмолор ж. б.).
 - Турмуштагы код колдонгон нерселердин тизмеси.
 - Кыздарды компүтердик илимге кызыктыруучу кеңештер [бул жерде](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Дагы жетектемелер керекпи?** Бул [сабактын үлгү планы](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Код жазгыла!
 
 **Катышуучуларды ишке багыттагыла**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+- Жетектеменин шилтемесин тактага жазгыла. Тизмеден катышуучулардын санына жараша [тандалган жетектеменин маалыматына](<%= resolve_url('/learn') %>) шилтемени тапкыла.
 
-**When someone comes across difficulties it's okay to respond:**
+**Кыйынчылыкка дуушар болуп жаткандарга мындай жооп берсе болот:**
 
 - "Мен билбейм. Келгиле, чогуу карап көрөлү."
 - "Технологиялар дайым эле биз каалагандай иштей бербейт."
@@ -70,8 +70,8 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
 
 **Бирөө башкалардан эрте бүтсө эмне кылабыз?**
 
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
+- Катышуучуларды [hourofcode.com/learn](<%= resolve_url('/learn') %>) кирип башка Код саатын дагы иштеп көрүүгө чакыргыла
+- Же эрте бүткөндөрдөн кыйналып жаткандарга жардам берүүсүн сурангыла.
 
 [col-33]
 
@@ -95,7 +95,7 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
 
 [/col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+- Окуучуларыңызга [сертификат чыгаргыла](<%= resolve_url('https://code.org/certificates') %>).
 - Окуучуларга [Мен "Код саатын өттүм"](<%= resolve_url('/promote/resources#stickers') %>) деген чаптама бастыргыла.
 - Мектебиңизге [ логосу бар футболкаларды](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) жасатыңыз.
 - Код саатыңыздын фото жана видеолорун социалдык желелерде бөлүшкүлө. #HourOfCode ж-а @codeorg хештег колдонуп, ийгилигиңизди бизге дагы билдиргиле!
@@ -110,9 +110,9 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
 
 ## Код саатынын үйрөтүүчүлөр үчүн кошумча ресурсттар
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+- Мурунку Код саатын уюштуруучулардан [мыкты тажрыйба](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) алыңыз. 
+- [Код сааты вебинары үчүн үйрөтүүчүлөрдүн жетектемеси](https://youtu.be/EJeMeSW2-Mw) видеобузду көрүңүз.
+- [Код сааты форумуна](http://forum.code.org/c/plc/hour-of-code) кирип, башка уюштуруучулардан кеңеш жана колдоо алыңыз. <% if @country == 'us' %>
 - [Код саатынын КБСин](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) карагыла. <% end %>
 
 ## Код саатынан кийин эмне болот?

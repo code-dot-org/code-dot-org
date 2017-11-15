@@ -25,13 +25,15 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Sebagai bentuk terima kasih atas bantuan Anda yang memungkinkan para siswa mulai belajar ilmu komputer, kami ingin memberi Anda sebuah paket poster cetak profesional yang menampilkan beragam teladan untuk kelas Anda. Gunakan kode penawaran **FREEPOSTERS** saat checkout. (Catatan: ini hanya ada selama persediaan masih tersedia dan Anda perlu menanggung biaya pengiriman. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
 <br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-<br /> **Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Sebarkan informasi ini di sekolah dan komunitas Anda
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Ajak orang lain berpartisipasi [dengan email contoh kami.](%= resolve_url('/promote/resources#sample-emails') %) Hubungi kepala sekolahmu dan tantang setiap kelas di sekolahmu untuk mendaftar. Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Anda tidak perlu berada di sekolah untuk belajar keterampilan baru. Undang politisi atau pembuat kebijakan untuk mengunjungi sekolah Anda untuk Hour of Code. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Anda tidak perlu berada di sekolah untuk belajar keterampilan baru. Invite a local politician or policy maker to visit your school for the Hour of Code. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
 
 Gunakan [poster, spanduk, sticker, video ini dan banyak hal lagi](%= resolve_url('/promote/resources') %) untuk acara Anda sendiri.
 

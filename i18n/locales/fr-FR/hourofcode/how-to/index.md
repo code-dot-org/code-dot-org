@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Comment enseigner l'Heure de Code</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. L'Heure de Code est facile à exécuter - même pour les débutants! Si vous voulez de l'aide supplémentaire, vous pouvez trouver un [bénévole local](%= resolve_url('https://code.org/volunteer/local') %) pour vous aider à exécuter une Heure de Code dans votre classe.
+Joignez le mouvement et introduisez un groupe d'étudiants à leur première heure d'informatique avec ces étapes. L'Heure de Code est facile à exécuter - même pour les débutants! Si vous voulez de l'aide supplémentaire, vous pouvez trouver un [bénévole local](%= resolve_url('https://code.org/volunteer/local') %) pour vous aider à exécuter une Heure de Code dans votre classe.
 
 ## 1. Regarder cette vidéo de formation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
