@@ -78,7 +78,8 @@ const NewMinecraft = {
   description: i18n.minecraft2017Desc(),
   link: "https://education.minecraft.net/support/knowledge-base/connecting-code-connection-minecraft/",
   image: "new-minecraft",
-  buttonText: i18n.minecraft2017Button()
+  buttonText: i18n.minecraft2017Button(),
+  MCShareLink: ""
 };
 
 export const cardSets = {
