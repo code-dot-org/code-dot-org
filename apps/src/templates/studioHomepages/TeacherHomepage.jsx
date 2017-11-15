@@ -30,7 +30,6 @@ export default class TeacherHomepage extends Component {
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
-    canCreateMoreProjects: PropTypes.bool,
     hocLaunch: PropTypes.object
   };
 
@@ -42,7 +41,7 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
-    const { canCreateMoreProjects, canViewAdvancedTools, hocLaunch } = this.props;
+    const { canViewAdvancedTools, hocLaunch } = this.props;
 
     return (
       <div>
@@ -100,7 +99,7 @@ export default class TeacherHomepage extends Component {
         <TeacherResources isRtl={isRtl}/>
         <ProjectWidgetWithData
           isRtl={isRtl}
-          canViewFullList={canCreateMoreProjects}
+          canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
         <StudentSections
