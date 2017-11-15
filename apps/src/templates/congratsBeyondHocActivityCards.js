@@ -6,23 +6,23 @@ const CSFExpress = {
   description: i18n.csfExpressDesc(),
   link: pegasus(`/educate/curriculum/express-course`),
   image: "csf-express",
-  buttonText: i18n.csfExpressButton()
+  buttonText: i18n.csfButton()
 };
 
 const CSFAccelerated = {
-  title: "CSF Accelerated",
-  description: "Keep going with our intro course! Learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games.",
+  title: i18n.csfAcceleratedTitle(),
+  description: i18n.csfAcceleratedDesc(),
   link: "/s/20-hour",
   image: "csf-express",
-  buttonText: "Try the course"
+  buttonText: i18n.csfButton()
 };
 
 const CourseCatalog = {
-  title: "Course Catalog",
-  description: "Code.org offers courses across K-12 at no cost to schools. And, if you’d like help getting started, we also offer online professional learning at no cost.",
+  title: i18n.courseCatalogTitle(),
+  description: i18n.courseCatalogDescription(),
   link: "/courses/view?=teacher",
   image: "course-catalog",
-  buttonText: "View Course Catalog"
+  buttonText: i18n.courseCatalogButton()
 };
 
 const CreateAccount = {
