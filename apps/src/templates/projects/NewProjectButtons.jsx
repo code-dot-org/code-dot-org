@@ -114,7 +114,7 @@ const PROJECT_INFO = {
 const styles = {
   fullsize: {
     width: styleConstants['content-width'],
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 10,
   },
   row: {
