@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {UnconnectedSectionActionBox as SectionActionBox} from '@cdo/apps/templates/teacherDashboard/SectionActionBox';
+import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 
 const sections = [
@@ -55,10 +55,10 @@ const sections = [
   }
 ];
 
-describe('SectionActionBox', () => {
+describe('SectionActionDropdown', () => {
   it('renders the delete option when a section is not a third party and has zero students', () => {
     const wrapper = shallow(
-        <SectionActionBox
+        <SectionActionDropdown
           sectionData={sections[0]}
           onEdit={() => {}}
           removeSection={() => {}}
@@ -71,7 +71,7 @@ describe('SectionActionBox', () => {
 
   it('renders the delete option when a section is a third party (Google Classroom) and has zero students', () => {
     const wrapper = shallow(
-      <SectionActionBox
+      <SectionActionDropdown
         sectionData={sections[1]}
         onEdit={() => {}}
         removeSection={() => {}}
@@ -84,7 +84,7 @@ describe('SectionActionBox', () => {
 
   it('does not render the delete option for sections with students', () => {
     const wrapper = shallow(
-      <SectionActionBox
+      <SectionActionDropdown
         sectionData={sections[2]}
         onEdit={() => {}}
         removeSection={() => {}}
@@ -97,7 +97,7 @@ describe('SectionActionBox', () => {
 
   it('renders the sync option for third party (Google Classroom) sections', () => {
     const wrapper = shallow(
-      <SectionActionBox
+      <SectionActionDropdown
         sectionData={sections[1]}
         onEdit={() => {}}
         removeSection={() => {}}
@@ -110,7 +110,7 @@ describe('SectionActionBox', () => {
 
   it('renders the five standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
-      <SectionActionBox
+      <SectionActionDropdown
         sectionData={sections[1]}
         onEdit={() => {}}
         removeSection={() => {}}
@@ -127,7 +127,7 @@ describe('SectionActionBox', () => {
 
   it('renders the five standard options for not a third party section', () => {
     const wrapper = shallow(
-      <SectionActionBox
+      <SectionActionDropdown
         sectionData={sections[0]}
         onEdit={() => {}}
         removeSection={() => {}}
@@ -144,7 +144,7 @@ describe('SectionActionBox', () => {
 
   it('renders the hide option for a un-hidden section', () => {
     const wrapper = shallow(
-      <SectionActionBox
+      <SectionActionDropdown
         sectionData={sections[0]}
         onEdit={() => {}}
         removeSection={() => {}}
@@ -157,7 +157,7 @@ describe('SectionActionBox', () => {
 
   it('renders the show option for a hidden section', () => {
     const wrapper = shallow(
-      <SectionActionBox
+      <SectionActionDropdown
         sectionData={sections[3]}
         onEdit={() => {}}
         removeSection={() => {}}

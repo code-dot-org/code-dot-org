@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionActionBox from './SectionActionBox';
+import SectionActionDropdown from './SectionActionDropdown';
 import { combineReducers, createStore } from 'redux';
 import teacherSections, { setSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { Provider } from 'react-redux';
@@ -45,7 +45,7 @@ const sectionDataNotEmpty = {
 
 export default storybook => {
   storybook
-    .storiesOf('SectionActionBox', module)
+    .storiesOf('SectionActionDropdown', module)
     .addStoryTable([
       {
         name: 'Hidden Section',
@@ -55,7 +55,7 @@ export default storybook => {
           store.dispatch(setSections([sectionDataHidden]));
           return (
             <Provider store={store}>
-              <SectionActionBox
+              <SectionActionDropdown
                 sectionData = {sectionDataHidden}
               />
             </Provider>
@@ -70,7 +70,7 @@ export default storybook => {
           store.dispatch(setSections([sectionDataShown]));
           return (
             <Provider store={store}>
-              <SectionActionBox
+              <SectionActionDropdown
                 sectionData={sectionDataShown}
               />
             </Provider>
@@ -85,7 +85,7 @@ export default storybook => {
           store.dispatch(setSections([sectionDataNotEmpty]));
           return (
             <Provider store={store}>
-              <SectionActionBox
+              <SectionActionDropdown
                 sectionData={sectionDataNotEmpty}
               />
             </Provider>
