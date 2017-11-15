@@ -119,6 +119,10 @@ class SectionActionDropdown extends Component {
     this.setState({deleting: true});
   };
 
+  onCancelDelete = () => {
+    this.setState({deleting: false});
+  }
+
   updateMenuLocation = () => {
     const rect = this.icon.getBoundingClientRect();
     const windowWidth = window.innerWidth;
@@ -231,7 +235,7 @@ class SectionActionDropdown extends Component {
           <DialogFooter>
             <Button
               text={i18n.dialogCancel()}
-              onClick={() => {this.setState({deleting: false});}}
+              onClick={this.onCancelDelete}
               color="gray"
             />
             <Button
