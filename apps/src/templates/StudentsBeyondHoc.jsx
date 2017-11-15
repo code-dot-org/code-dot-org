@@ -66,10 +66,12 @@ export default class StudentsBeyondHoc extends Component {
     }
     const cards = cardSets[specificCardSet];
 
+    const heading = isEnglish ? i18n.congratsStudentHeading() : i18n.congratsStudentHeadingNonEng();
+
     return (
       <div style={styles.container}>
         <h1 style={styles.heading}>
-          {i18n.congratsStudentHeading()}
+          {heading}
         </h1>
         <VerticalImageResourceCardRow
           cards={cards}
