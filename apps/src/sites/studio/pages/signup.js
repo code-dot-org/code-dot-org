@@ -143,6 +143,11 @@ window.SignupManager = function (options) {
     registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
   }
 
+  if (window.dashboard.rack_env === 'test') {
+    // Pin to control group on test
+    registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
+  }
+
   function logEvent(event) {
     firehoseClient.putRecord(
       'analysis-events',
