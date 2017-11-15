@@ -5,7 +5,7 @@ theme: responsive
 
 # Terms of Service
 
-Date of Last Revision: October 25, 2017
+Date of Last Revision: November 15, 2017
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the websites located at [https://code.org](https://code.org), [https://studio.code.org](https://studio.code.org), [https://csedweek.org](https://csedweek.org), [https://www.k12cs.org](https://www.k12cs.org), [https://hourofcode.com](https://hourofcode.com), [https://curriculum.code.org](https://curriculum.code.org), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”).
 
