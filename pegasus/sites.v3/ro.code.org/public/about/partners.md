@@ -61,9 +61,13 @@ social:
                </div>
             </div>
 	   
-            <h1 class="text-align-center">Eveniment oferit de</h1>
+            <h1 class="text-align-center">Eveniment oferit cu sprijinul</h1>
             <div class="row">
-               <div class="row">
+             <div class="col-sm-3 col span_3">
+               <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                  <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://kissfm.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/KissFM.png"></a>
+               </div>
+            </div> 
       
             </div>
             <h1 class="text-align-center">Parteneri Media</h1>
