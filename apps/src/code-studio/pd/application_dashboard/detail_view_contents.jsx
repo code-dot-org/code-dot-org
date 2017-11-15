@@ -4,6 +4,7 @@ import DetailViewApplicationSpecificQuestions from './detail_view_application_sp
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import {ApplicationStatuses} from './constants';
+import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 
 const styles = {
   notes: {
@@ -163,11 +164,27 @@ export default class DetailViewContents extends React.Component {
           answer={this.props.applicationData.email}
           layout="lineItem"
         />
-        <DetailViewResponse
-          question="Regional Partner"
-          answer={this.props.applicationData.regional_partner_name}
-          layout="lineItem"
-        />
+        {
+          this.props.applicationData.application_type === 'Teacher' ?
+            (
+              <DetailViewResponse
+                question="Regional Partner"
+                questionId="regionalParnterName"
+                answer={this.props.applicationData.regional_partner_name}
+                layout="panel"
+                score={this.state.response_scores['regional_partner_name']}
+                possibleScores={TeacherValidScores['regionalPartnerName']}
+                editing={this.state.editing}
+                handleScoreChange={this.handleScoreChange}
+              />
+            ) : (
+            <DetailViewResponse
+              question="Regional Partner"
+              answer={this.props.applicationData.regional_partner_name}
+              layout="lineItem"
+            />
+            )
+        }
         <DetailViewResponse
           question="School Name"
           answer={this.props.applicationData.school_name}
