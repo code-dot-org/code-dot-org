@@ -3509,6 +3509,7 @@ en:
         csd-pulse-check-survey-1-levelgroup U5Ch2: {}
         csd-pulse-check-survey-1-levelgroup U6Ch1: {}
         csd-pulse-check-survey-1-levelgroup U6Ch2: {}
+        csp-post-survey-2017-levelgroup: {}
         csp-pre-survey-2017-levelgroup: {}
         csp-pulse-check-survey-1-levelgroup-U1Ch2: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
@@ -8815,6 +8816,16 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q25:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like my opinions are taken seriously in this computer science class.: I feel like my opinions are taken seriously in this computer science class.
+        I feel like my opinions will be taken seriously in this computer science class.: I feel like my opinions will be taken seriously in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q26:
         Agree: Agree
         Disagree: Disagree
@@ -8869,6 +8880,63 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q32:
+        Agree: Agree
+        Disagree: Disagree
+        I often take a step back and think about what is most important to me.: I often take a step back and think about what is most important to me.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q33:
+        Agree: Agree
+        Disagree: Disagree
+        Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.: Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q34:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Some people are just better at learning and doing computer science than others.: Some people are just better at learning and doing computer science than others.
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q35:
+        Agree: Agree
+        Disagree: Disagree
+        I worry that the teacher or students in this class could think that I am not as good at computer science as other students.: I worry that the teacher or students in this class could think that I am not as good at computer science as other students.
+        I worry that the teacher or students in this class think that I am not as good at computer science as other students.: I worry that the teacher or students in this class think that I am not as good at computer science as other students.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q36-a:
+        A little: A little
+        A lot: A lot
+        I worry because I'm not good at math.: I worry because I'm not good at math.
+        Not at all: Not at all
+      csp-post-survey-2017-q36-b:
+        A little: A little
+        A lot: A lot
+        I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
+        Not at all: Not at all
+      csp-post-survey-2017-q36-c:
+        A little: A little
+        A lot: A lot
+        I worry because of my gender.: I worry because of my gender.
+        Not at all: Not at all
+      csp-post-survey-2017-q36-d:
+        A little: A little
+        A lot: A lot
+        I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
+        Not at all: Not at all
       csp-post-survey-2017-q4:
         Agree: Agree
         Disagree: Disagree
@@ -8878,6 +8946,61 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q50:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Agree: Agree
+        'Analyze data (organize, process, manipulate, or evaluate data). ': 'Analyze data (organize, process, manipulate, or evaluate data). '
+        Disagree: Disagree
+        Many class sessions: Many class sessions
+        Neither: Neither
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
+      csp-post-survey-2017-q51:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        'Analyze data (organize, process, manipulate, or evaluate data). ': 'Analyze data (organize, process, manipulate, or evaluate data). '
+        Explain the logic and reasoning supporting my solutions to problems.: Explain the logic and reasoning supporting my solutions to problems.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q52:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Explain the logic and reasoning supporting my solutions to problems.: Explain the logic and reasoning supporting my solutions to problems.
+        Explain why I agreed or disagreed with the work of other students in class.: Explain why I agreed or disagreed with the work of other students in class.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q53:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Communicate my thought processes to others.: Communicate my thought processes to others.
+        Explain why I agreed or disagreed with the work of other students in class.: Explain why I agreed or disagreed with the work of other students in class.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q54:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Communicate my thought processes to others.: Communicate my thought processes to others.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Problem solve when something didn't work the way I wanted it to work.: Problem solve when something didn't work the way I wanted it to work.
+      csp-post-survey-2017-q55:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Considered alternative approaches to my work: Considered alternative approaches to my work
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Problem solve when something didn't work the way I wanted it to work.: Problem solve when something didn't work the way I wanted it to work.
       csp-post-survey-2017-q6:
         Agree: Agree
         Disagree: Disagree
@@ -9069,6 +9192,7 @@ en:
       csp-pre-survey-2017-q26:
         Agree: Agree
         Disagree: Disagree
+        I feel like it will be hard for people like me to be accepted in this computer science class.: I feel like it will be hard for people like me to be accepted in this computer science class.
         I feel like it will be hard for people like me to to be accepted in this computer science class.: I feel like it will be hard for people like me to to be accepted in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
