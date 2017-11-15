@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl} from 'react-bootstrap';
-import Facilitator1819Questions from './detail_view_facilitator_specific_components';
+import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import {ApplicationStatuses} from './constants';
@@ -35,7 +35,8 @@ export default class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      form_data: PropTypes.object
+      form_data: PropTypes.object,
+      application_type: PropTypes.oneOf(['Facilitator', 'Teacher'])
     }),
     updateProps: PropTypes.func.isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -174,8 +175,9 @@ export default class DetailViewContents extends React.Component {
 
   renderQuestions = () => {
     return (
-      <Facilitator1819Questions
+      <DetailViewApplicationSpecificQuestions
         formResponses={this.props.applicationData.form_data}
+        applicationType={this.props.applicationData.application_type}
       />
     );
   };
