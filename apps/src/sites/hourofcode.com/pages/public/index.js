@@ -170,6 +170,8 @@ function showCensusForm(data) {
   $('#census-header').show();
   $('#thanks-header').show();
   $('#census-form').show();
+  // Jump up to the top of the form
+  window.location.hash = '#thanks-header';
 }
 
 function gotoThankYouPage() {
