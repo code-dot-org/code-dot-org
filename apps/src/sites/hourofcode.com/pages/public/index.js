@@ -123,8 +123,8 @@ $(document).ready(function () {
   });
 
   function checkShowCensusFollowUp() {
-    if ($("#twenty-hour-how-much").val() === "some" || $("#twenty-hour-how-much").val() === "all" || $("#ten-hour-how-much").val() === "some" ||
-    $("#ten-hour-how-much").val() === "all") {
+    if ($("#twenty-hour-how-much").val() === "SOME" || $("#twenty-hour-how-much").val() === "ALL" || $("#ten-hour-how-much").val() === "SOME" ||
+    $("#ten-hour-how-much").val() === "ALL") {
       $('#followup_questions').show();
     } else {
       $('#followup_questions').hide();
@@ -140,7 +140,7 @@ $(document).ready(function () {
   });
 
   $('#role').change(function () {
-    if ($(this).val() === "teacher" || $(this).val() === "administrator") {
+    if ($(this).val() === "TEACHER" || $(this).val() === "ADMINISTRATOR") {
       $('#pledge').show();
     } else {
       $('#pledge').hide();
@@ -153,25 +153,21 @@ function showCensusForm(data) {
   $('#signup-header').hide();
   $('#join-us-header').hide();
   $('#submit').hide();
-  // Copy all of the hoc-signup inputs to the census form
-  $('.main-form :input').each(
-    function (index) {
-      var input = $(this);
-      var name = input.attr('name');
-      if (name !== undefined) {
-        var newInput = document.createElement("input");
-        newInput.value = input.val();
-        newInput.setAttribute("name", input.attr('name'));
-        newInput.setAttribute("type", "hidden");
-        $('#census-form').append(newInput);
-      }
-    }
-  );
+
   $('#census-header').show();
   $('#thanks-header').show();
   $('#census-form').show();
+
   // Jump up to the top of the form
   window.location.hash = '#thanks-header';
+
+  // Copy relevant hoc-signup inputs to the census form
+  $('#census_email').val($('#hoc-email').val());
+  $('#census_name').val($('#hoc-name').val());
+  $('#census_school_id').val($('#nces_school').val());
+  $('#census_country').val($('#country').val());
+  $('#census_school_name').val($('#school-name').val());
+  $('#census_location').val($('#hoc-event-location').val());
 }
 
 function gotoThankYouPage() {
@@ -271,7 +267,7 @@ function censusFormSubmit() {
   $("#census_submit").attr('disabled','disabled');
 
   $.ajax({
-    url: "/forms/HocCensus" + hocYear,
+    url: "/dashboardapi/v1/census/CensusHoc2017v3",
     type: "post",
     dataType: "json",
     data: $("#census-form").serialize()

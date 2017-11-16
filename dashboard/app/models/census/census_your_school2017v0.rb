@@ -39,6 +39,5 @@
 # census page.
 #
 class Census::CensusYourSchool2017v0 < Census::CensusSubmission
-  validates :submitter_email_address, presence: true
   validates :submitter_role, presence: true
 end
