@@ -1,6 +1,7 @@
 /* global dashboard */
 
 import React, { PropTypes, Component } from 'react';
+import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '../util/color';
 import queryString from 'query-string';
@@ -28,13 +29,43 @@ const styles = {
   },
 };
 
+const blankCertificates = {
+  hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
+  minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
+};
+
 export default class Certificate extends Component {
+  constructor() {
+    super();
+    this.state = {
+      personalized: false,
+    };
+  }
+
   static propTypes = {
+    type: PropTypes.oneOf(['hourOfCode', 'minecraft']).isRequired,
   };
 
+  personalizeCertificate(session) {
+    $.ajax({
+      url: '/v2/certificate',
+      type: "post",
+      dataType: "json",
+      data: {
+        session_s: session,
+        name_s: this.nameInput.value,
+      }
+    }).done(response => {
+      if (response.certificate_sent) {
+        this.setState({personalized: true});
+      }
+    });
+  }
+
   render() {
+    const blankCertificate = blankCertificates[this.props.type];
     const certificate = queryString.parse(window.location.search)['i'].replace(/[^a-z0-9_]/, '');
-    const imgSrc = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
+    const imgSrc = this.state.personalized ? `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg` : blankCertificate;
 
     const facebook = queryString.stringify({
       u: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
@@ -59,8 +90,12 @@ export default class Certificate extends Component {
             type="text"
             style={styles.nameInput}
             placeholder={i18n.yourName()}
+            ref={input => this.nameInput = input}
           />
-          <button style={styles.submit}>
+          <button
+            style={styles.submit}
+            onClick={this.personalizeCertificate.bind(this, certificate)}
+          >
             {i18n.submit()}
           </button>
           <h2>{i18n.congratsCertificateShare()}</h2>
