@@ -11,7 +11,7 @@ const styles = {
     width: 310,
     background: color.teal
   },
-  card_allow_wrap: {
+  cardAllowWrap: {
     position: 'relative'
   },
   text: {
@@ -27,12 +27,12 @@ const styles = {
     width: 260,
     display: 'inline',
   },
-  title_no_wrap: {
+  titleNoWrap: {
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
     overflow: 'hidden'
   },
-  title_allow_wrap: {
+  titleAllowWrap: {
     lineHeight: '110%'
   },
   description: {
@@ -46,7 +46,7 @@ const styles = {
     marginLeft: 20,
     marginRight: 20,
   },
-  button_allow_wrap: {
+  buttonAllowWrap: {
     position: 'absolute',
     bottom: 20,
     left: 0,
@@ -77,11 +77,11 @@ class ResourceCard extends Component {
     let cardStyles = [styles.card, localeStyle];
     let titleStyles = [styles.title, styles.text, localeStyle];
     if (allowWrap) {
-      buttonStyles.push(styles.button_allow_wrap);
-      cardStyles.push(styles.card_allow_wrap);
-      titleStyles.push(styles.title_allow_wrap);
+      buttonStyles.push(styles.buttonAllowWrap);
+      cardStyles.push(styles.cardAllowWrap);
+      titleStyles.push(styles.titleAllowWrap);
     } else {
-      titleStyles.push(styles.title_no_wrap);
+      titleStyles.push(styles.titleNoWrap);
     }
 
     return (
