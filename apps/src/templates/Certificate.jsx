@@ -1,11 +1,9 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
-import color from '../util/color';
 import { tutorialTypes } from './tutorialTypes.js';
 
 const styles = {
   heading: {
-    color: color.teal,
     width: '100%',
   },
   image: {
