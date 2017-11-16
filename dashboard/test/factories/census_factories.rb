@@ -9,7 +9,7 @@ FactoryGirl.define do
     how_many_do_hoc "none"
     how_many_after_school "none"
     submitter_role "parent"
-    class_frequency "one_hour_per_week"
+    class_frequency "less_than_one_hour_per_week"
 
     transient do
       school_info_count 1

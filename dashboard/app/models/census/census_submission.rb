@@ -68,7 +68,7 @@ class Census::CensusSubmission < ApplicationRecord
   enum submitter_role: ROLES, _prefix: true
 
   CLASS_FREQUENCIES = {
-    one_hour_per_week: 'ONE HOUR PER WEEK',
+    less_than_one_hour_per_week: 'LESS THAN ONE HOUR PER WEEK',
     one_to_three_hours_per_week: 'ONE TO THREE HOURS PER WEEK',
     three_plus_hours_per_week: 'THREE PLUS HOURS PER WEEK',
     dont_know: "I DON'T KNOW"
