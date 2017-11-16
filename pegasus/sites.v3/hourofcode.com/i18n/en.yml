@@ -237,6 +237,7 @@
   signup_name_error: 'Name is required.'
   signup_email_label: 'Your email'
   signup_email_error: 'Email is required'
+  signup_invalid_email_error: 'The email address you entered is invalid'
   signup_organization_name_label: 'Organization name'
   signup_organization_name_error: 'Organization name is required.'
   signup_event_type_label: 'Event type'
