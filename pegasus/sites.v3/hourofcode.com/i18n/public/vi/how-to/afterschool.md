@@ -5,25 +5,25 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Làm thế nào để dạy Giờ Lập Trình sau giờ học và câu lạc bộ
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+Tham gia vào các phong trào và giới thiệu nhóm học sinh cho giờ của công nghệ máy tính đầu tiên của họ với các bước sau. Hour of Code (Giờ Lập Trình) rất dễ dàng để chạy - ngay cả với người mới luôn đấy! Nếu bạn muốn một thêm bàn tay để trợ giúp, bạn có thể tìm [tình nguyện viện địa phương](<%= resolve_url('https://code.org/volunteer/local') %>) để giúp bạn chạy Giờ của Mã trong lớp của bạn.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. Chọn một bài hướng dẫn
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Hãy thử chúng!](<%= resolve_url('/learn') %>)
+Chúng tôi cung cấp một loạt bài [vui vẻ, hướng dẫn nhiều giờ](<%= resolve_url('/learn') %>) cho các đối tượng ở mọi lứa tuổi, được tạo bởi một loạt các đối tác. [Hãy thử chúng!](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Tất cả bài hướng dẫn Giờ Lập Trình** yêu cầu thời gian chuẩn bị tối thiểu cho các tổ chức, và tự giác để cho trẻ em làm việc với tốc độ và cấp độ kỹ năng của trẻ.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Cần một kế hoạch giảng dạy cho Giờ Lập Trình sau giờ học?** Tìm hiểu [mẫu](/files/AfterschoolEducatorLessonPlanOutline.docx) ngay!
 
 ## 3. Promote your Hour of Code
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+Quảng bá Giờ Lập Trình của bạn [với các công cụ sau đây](<%= resolve_url('/promote') %>) và khuyến khích những bạn khác lưu trữ sự kiện của bản thân.
 
 ## 4. Plan your technology needs - computers are optional
 
@@ -37,30 +37,30 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Bắt đầu buổi Giờ Lập Trình của bạn với một video truyền cảm hứng
 
 Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm hứng cho những người tham gia và bàn luận về cách mà khoa học máy tính tác động đến mọi lĩnh vực trong cuộc sống của chúng ta.
 
 **Chiếu một video truyền cảm hứng:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zukerberg, và ngôi sao NBA Chris Bosh - lần lược là [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), và [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA) phiên bản có sẵn.
+- [Video toàn thế giới Giờ Lập Trình](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Tìm nhiều video cảm hứng hơn [tại đây](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Chẳng sao cả nếu bạn chưa biết gì về khoa học máy tính. Dưới đây là một số ý tưởng để giới thiệu hoạt động Giờ Lập Trình của bạn:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Diễn giải cách mà công nghệ đã tác động đến đời sống của ta, với các ví dụ giữa những chàng trai và những cô gái sẽ quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để tiết kiệm cuộc sống, giúp đỡ, kết nối mọi người, vv).
 - Lên danh sách những thứ sử dụng mã hóa trong đời sống hằng ngày.
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Cần hướng dẫn thêm?** Tải về [mẫu kế hoạch bài giảng này](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Code!
 
 **Chỉ dẫn những người tham gia vào các hoạt động**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+- Viết đường dẫn bài hướng dẫn lên bảng. Tìm địa chỉ được liệt kê tại [thông tin về lựa chọn bài hướng dẫn của bạn](<%= resolve_url('/learn') %>) theo số lượng người tham gia.
 
 **When someone comes across difficulties it's okay to respond:**
 

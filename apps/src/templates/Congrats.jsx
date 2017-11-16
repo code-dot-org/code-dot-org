@@ -10,6 +10,13 @@ import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import responsiveRedux from '../code-studio/responsiveRedux';
 
+const styles = {
+  container: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+};
+
 export default class Congrats extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
@@ -55,11 +62,11 @@ export default class Congrats extends Component {
 
   render() {
     const { completedTutorialType, MCShareLink, isRtl, userType, isEnglish } = this.props;
-    const signedIn = (userType === "teacher" || userType === "student");
 
     const isMinecraft = /2017Minecraft|pre2017Minecraft/.test(completedTutorialType);
 
     const contentStyle = {
+      ...styles.container,
       width: this.responsive.getResponsiveContainerWidth()
     };
     const store = createStore(combineReducers({responsive: responsiveRedux}));
@@ -69,8 +76,9 @@ export default class Congrats extends Component {
         <div style={contentStyle}>
           <Certificate
             type={isMinecraft ? "minecraft" : "hourOfCode"}
+            isRtl={isRtl}
           />
-          {userType === "teacher" && (
+          {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
               isRtl={isRtl}
@@ -81,10 +89,10 @@ export default class Congrats extends Component {
             MCShareLink={MCShareLink}
             responsive={this.responsive}
             isRtl={isRtl}
-            signedIn={signedIn}
+            userType={userType}
             isEnglish={isEnglish}
           />
-          {userType === "signedOut" && (
+          {userType === "signedOut" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
               isRtl={isRtl}
