@@ -10,6 +10,13 @@ import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import responsiveRedux from '../code-studio/responsiveRedux';
 
+const styles = {
+  container: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+};
+
 export default class Congrats extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
@@ -57,6 +64,7 @@ export default class Congrats extends Component {
     const { completedTutorialType, MCShareLink, isRtl, userType, isEnglish } = this.props;
 
     const contentStyle = {
+      ...styles.container,
       width: this.responsive.getResponsiveContainerWidth()
     };
     const store = createStore(combineReducers({responsive: responsiveRedux}));
@@ -66,6 +74,7 @@ export default class Congrats extends Component {
         <div style={contentStyle}>
           <Certificate
             completedTutorialType={completedTutorialType}
+            isRtl={isRtl}
           />
           {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
