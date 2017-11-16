@@ -90,11 +90,13 @@ export default class Certificate extends Component {
         <h1 style={styles.heading}>
           {i18n.congratsCertificateHeading()}
         </h1>
-        <LargeChevronLink
-          link={document.referrer}
-          linkText={i18n.backToActivity()}
-          isRtl={this.props.isRtl}
-        />
+        {document.referrer && (
+          <LargeChevronLink
+            link={document.referrer}
+            linkText={i18n.backToActivity()}
+            isRtl={this.props.isRtl}
+          />
+        )}
         <div style={styles.personalize}>
           {this.state.personalized ?
             <div>
