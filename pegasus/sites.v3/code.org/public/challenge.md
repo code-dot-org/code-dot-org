@@ -4,17 +4,41 @@ theme: responsive
 style_min: true
 ---
 
-# Join the Code.org #HourOfCode Challenge!
+# Win a celebrity chat for your class!
 
 ### Submit a creation made on Code.org and tag one of our special guests for a chance to win a 10-minute video chat with them!
-**We'll be announcing the special guests soon...stay tuned!**
 
-## How do I participate?
-It's easy to get involved and win a classroom video chat with a special guest! 
 
-**Step one**: Tweet or publicly post reach out to one of our special guests on Twitter, Facebook, or Instagram (including their @profile) and include the hashtag #HourOfCode.
+<%= view :three_circles, circles: [ {img: '/images/fit-300/steph-curry.png', text: '<a href="#lookingfor">Stephen Curry</a><br>[Twitter: @StephenCurry30](https://twitter.com/intent/tweet?text=@stephencurry30)<br>Facebook: @StephenCurryOfficial<br>Instagram: @stephencurry30'}, {img: '/images/fit-300/sheryl-sandberg.png', text: '<a href="#lookingfor">Sheryl Sandberg</a><br>Facebook: @Sheryl<br>Instagram: @sherylsandberg'}, {img: '/images/fit-300/russell-wilson.png', text: '<a href="#lookingfor">Russell Wilson</a><br>[Twitter: @DangeRussWilson](https://twitter.com/intent/tweet?text=@dangerusswilson)<br>Facebook: @DangerRussWilson<br>Instagram: @dangerusswilson'}] %>
 
-That's it! This challenge is open to classrooms, after-school clubs, and individual students.
+<br>
+
+<%= view :three_circles, circles: [ {img: '/images/fit-300/susan-wojcicki.png', text: '<a href="#lookingfor">Susan Wojcicki</a><br>[Twitter: @SusanWojcicki](https://twitter.com/intent/tweet?text=@susanwojcicki)'}, {img: '/images/fit-300/stacy-plays.png', text: '<a href="#lookingfor">StacyPlays</a><br>[Twitter: @stacysays](https://twitter.com/intent/tweet?text=@stacysays)<br>Facebook: @stacyhinojosa'}, {img: '/images/fit-300/hadi-partovi.png', text: '<a href="#lookingfor">Hadi Partovi</a><br>[Twitter: @hadip](https://twitter.com/intent/tweet?text=@hadip)<br>Facebook: @hadi<br>Instagram: @hadipartovi'}] %>
+
+
+## How do I win?
+Post about your Hour of Code on social media during Computer Science Education Week: Dec. 4-10.
+- Tweet: tag #HourOfCode and your celebrity
+- Facebook: post publicly and tag @Codeorg and your celebrity.
+- Instagram: tag @CodeOrg in the photo,  #HourofCode and your celebrity????
+
+The celebrities will work with Code.org to pick a winner. Increase your chances to win with photos or videos of yourself or your class showing off apps, games, or artwork your students created. This challenge is open to classrooms, after-school clubs, and individual students.
+
+## Use one of these activities:
+
+<a name="lookingfor"></a>
+## What are they looking for?
+Stephen Curry: Teamwork is so important when you're trying to make it to the NBA finals, and even more important in the classroom.
+
+Sheryl Sandberg:
+
+Russell Wilson:
+
+StacyPlays:
+
+Susan Wojcicki:
+
+Hadi Partovi:
 
 <a name="contestrules"></a>
 ## What are the contest rules?
@@ -22,13 +46,7 @@ When submitting your project, tag the special guest you'd like talk to on a vide
 
 Each entry must include the required tags and content to be considered and must be publicly visible.
 
-## Is there any way to increase my chances of winning?
-You may enter the contest simply by contacting your favorite guest, but your chances of winning will increase if you include these things in your post:
-
-- a picture or video of you or your class during the Hour of Code;
-- a link to an awesome Hour of Code creation made on Code.org;
-
- Check out this sample tweet for inspiration.
+Check out this sample tweet for inspiration.
 
 <img src="/images/fit-800/hoc-challenge-tweet.png" class ="col-95">
 

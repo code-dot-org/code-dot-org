@@ -179,3 +179,7 @@ post '/api/hour/certificate' do
   content_type :json
   session_status_for_row(row).to_json
 end
+
+post '/v2/certificate' do
+  call(env.merge('PATH_INFO' => '/api/hour/certificate'))
+end
