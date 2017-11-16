@@ -171,34 +171,33 @@
         2-3_Bee_Debugging_4_a: Er det noen sted hvor bien gjør noe som ikke gir mening?
           Hva skjer når du endrer den blokken?
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: Du trenger ikke bruke en løkke med en funksjon. Prøv
+          å flytte, bruk en funksjonen, og deretter flytte og bruke funksjonen igjen.
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: Du trenger ikke bruke en løkke med en funksjon. Prøv
+          å flytte, bruk en funksjonen, og deretter flytte og bruke funksjonen igjen.
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge
+          funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem.
+          Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge
+          funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem.
+          Legg til flere, og prøv igjen. Snart vil du få det til!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Husk å bygge koden din inne i den grønne blokken.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Du skal ende opp med fire blokker inne i løkken din.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
           code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
@@ -213,7 +212,7 @@
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
@@ -4643,15 +4642,15 @@
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan
+          du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker,
+          og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan
+          du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker,
+          og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge3_authored_hint:
@@ -9189,23 +9188,23 @@
           move forward\n- collect all of the nectar\n- turn around\n- move back to
           the main path\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve
+          å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve
+          å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "Hvis oppgaven virker utfordrende, kan du prøve
+          å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          Husk å bygge koden din inne i den grønne blokken.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
@@ -9226,15 +9225,15 @@
         courseE_bee_functions9_b: Even though you know how much nectar some of the
           flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan
+          du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker,
+          og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan
+          du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker,
+          og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_ramp14_authored_hint:
@@ -10946,9 +10945,9 @@
         courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward,
           then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve
+          å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseF_bee_functions6_b: Your function should check if there is a flower
           or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you
@@ -10959,15 +10958,15 @@
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger.
           Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Hvis oppgaven virker utfordrende, kan du prøve
+          å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseF_bee_functions8a_b: |
           Remember to build code inside of the function editor.
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "Hvis oppgaven virker utfordrende, kan du prøve
+          å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
@@ -11090,9 +11089,9 @@
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Hvis oppgaven virker utfordrende, kan du prøve
+          å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseF_bee_functions8a_b: |
           Remember to build code inside of the function editor.
       courseF_bee_fwp1_authored_hint:
@@ -12146,7 +12145,7 @@
         2-3_Bee_Debugging_4_a: Er det noen sted hvor bien gjør noe som ikke gir mening?
           Hva skjer når du endrer den blokken?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
           away, start by coding out each move and look for a pattern.
@@ -12156,23 +12155,22 @@
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
           code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Du skal ende opp med fire blokker inne i løkken din.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat
           loop.
@@ -12475,15 +12473,15 @@
           forward\n- collect all of the nectar\n- turn around\n- move back to the
           main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge
+          funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem.
+          Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge
+          funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem.
+          Legg til flere, og prøv igjen. Snart vil du få det til!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Husk å bygge koden din inne i den grønne blokken.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down
@@ -12537,12 +12535,11 @@
         2-3_Artist_6_c: Hver side av trekanten har samme lengde som hver side av kvadratet,
           100 piksler.
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One
           counts up from 1 to 8, the other counts down from 8 to 1.
@@ -12952,7 +12949,7 @@
           have them happen immediately after the program starts.
       k1stickerfreeplay_authored_hint: []
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       level 'grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
           away, start by coding out each move and look for a pattern.
@@ -12962,23 +12959,22 @@
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
           code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Du skal ende opp med fire blokker inne i løkken din.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
