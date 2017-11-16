@@ -410,12 +410,12 @@
   mc_gradelevel: "Възраст 6 +"
   mc_platformtext: "Съвременни браузъри, смартфони, таблети"
   mc_specs: "На много езици | Съвременни браузъри и таблети | Възраст 6 +"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Пътуването на героя'
   minecraft_designer: "Minecraft дизайнер"
   minecraft_adventurer: "Minecraft авантюрист"
   minecraft_tutorials: "Minecraft Hour of Code уроци"
   minecraft_specs: "Много езици | Съвременни браузъри и таблети | Клас 2 +"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_description: "Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код."
   minecraft_agent_button: "Старт"
   minecraft_designer_description: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
   minecraft_designer_button: "Старт"
@@ -436,7 +436,7 @@
   minecraft_future: "Help all youth become future ready"
   minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
   minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_og_agent: "Minecraft се завръща за часът на кода, и ти си героят там! Пиши код за пътуване през Minecraft средата."
   sports_page_title: "Спортен Hour of Code"
   sports_og_title: "Уроци за спортен Hour of Code"
   sports_og_description: "Изберете между NBA и WNBA или от всички спортни уроци за кодиране."

@@ -397,19 +397,19 @@
             Internet Simulator Freeplay:
               name: Internet Simulator Freeplay
             Manual DNS:
-              name: Manual DNS
+              name: Manuele DNS
             Overview and Setup Instructions:
               name: Overview and Setup Instructions
             Packets and Reliability:
               name: Packets and Reliability
             Peer to Peer - Sending Ascii:
-              name: Peer to Peer - Sending Ascii
+              name: Peer to Peer - Verzend Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
-              name: Peer to Peer - Sending Bits on a Shared Wire
+              name: Peer to Peer - Verzend Bits op een Gedeelde Lijn
             Peer to Peer - Sending Numbers:
-              name: Peer to Peer - Sending Numbers
+              name: Peer to Peer - Verzend Getallen
             Routers and addresses:
-              name: Routers and addresses
+              name: Routers en Adressen
         pixelation:
           title: Pixelachtig
           description: Maak afbeeldingen met bits en bytes.
@@ -566,11 +566,11 @@
             Bytes and File Sizes:
               name: Bytes and File Sizes
             Encode a Complex Thing:
-              name: Encode an Experience
+              name: Verzend een Ervaring
             Encoding B&W Images:
-              name: Encoding B&W Images
+              name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
-              name: Encoding Color Images
+              name: Verzend Kleuren Afbeeldingen
             Encoding Numbers in the Real World:
               name: Encoding Numbers in the Real World
             Encoding and Sending Text:
@@ -603,7 +603,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
             Introduction to PD:
@@ -629,7 +629,7 @@
             Luigi's Pizza:
               name: Luigi's Pizza
             Rocket-Height:
-              name: Rocket-Height
+              name: Rakethoogte
             Sam the Bat:
               name: Sam de Vleermuis
             Strings and Images:
@@ -668,7 +668,7 @@
             Teaching Strategies:
               name: Teaching Strategies
             What is CSP?:
-              name: What is CSP?
+              name: Wat is CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for csp
@@ -695,7 +695,7 @@
             Teaching Strategies:
               name: Teaching Strategies
             What is ECS?:
-              name: What is ECS?
+              name: Wat is ECS?
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -709,7 +709,7 @@
             Dispositions and Classroom Culture:
               name: Dispositions and Classroom Culture
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Inleiding tot Complex Adaptieve Systemen
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
@@ -719,13 +719,13 @@
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: De Tutorial
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Wat te Verwachten
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -733,14 +733,14 @@
           description_audience: ''
           stages:
             reference:
-              name: reference
+              name: referentie
         Test Wednesday:
           title: Test Wednesday
           description: Test Wednesday
           description_short: Test Wednesay
           stages:
             PDK5 Intro:
-              name: PDK5 Intro
+              name: PDK5 Inleiding
         cspunit3:
           title: CSP Unit 3 - Programming
           description: Programming in Javascript and AppLap
@@ -748,7 +748,7 @@
           description_audience: ''
           stages:
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API's en Functieparameters
             Beyond Buttons Toward Apps:
               name: Beyond Buttons Toward Apps
             Canvas and Arrays in Apps:
@@ -766,9 +766,9 @@
             Event-Driven Programming and Debugging:
               name: Event-Driven Programming and Debugging
             Events Unplugged:
-              name: Events Unplugged
+              name: Gebeurtenissen Unplugged
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Functies en Top-Down Designs
             Functions with Return Values:
               name: Functions with Return Values
             Image Scroller with Key Events:
@@ -776,7 +776,7 @@
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Inleiding tot Arrays
             Introduction to Conditional Logic:
               name: Introduction to Conditional Logic
             Introduction to Digital Assistants:
@@ -784,7 +784,7 @@
             Looping and Random Numbers:
               name: Looping and Random Numbers
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Lussen en Simulaties
             Multi-screen Apps:
               name: Multi-screen Apps
             Practice PT - Design a Digital Scene:
@@ -792,17 +792,17 @@
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: Arrays Verwerken
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: De Nood Aan Programmeertalen
             Understanding Program Flow and Logic:
               name: Understanding Program Flow and Logic
             User Input and Strings:
-              name: User Input and Strings
+              name: Gebruikersinvoer en Strings
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Simpele Commando's Gebruiken
             Using Variables in Apps:
-              name: Using Variables in Apps
+              name: Variabelen Gebruiken In Apps
             While Loops:
               name: Zolang-lussen
         algebraPD3:
@@ -814,7 +814,7 @@
             Computer Science Pedagogy:
               name: Computer Science Pedagogy
             Course Overview:
-              name: Course Overview
+              name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
             Next Steps:
@@ -824,7 +824,7 @@
             Teacher Dashboard:
               name: Dashboard Leerkrachten
             The Big Game:
-              name: The Big Game
+              name: Het Grote Spel
             The Design Recipe:
               name: Het ontwerp Recept
         ECSPD-NexTech:
@@ -844,7 +844,7 @@
             Teaching Strategies:
               name: Teaching Strategies
             What is ECS?:
-              name: What is ECS?
+              name: Wat is ECS?
         ECSPD-iZone:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -862,7 +862,7 @@
             Teaching Strategies:
               name: Teaching Strategies
             What is ECS?:
-              name: What is ECS?
+              name: Wat is ECS?
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -871,7 +871,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
             Introduction to PD:
@@ -890,7 +890,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
             Introduction to PD:
@@ -915,7 +915,7 @@
             Dispositions and Classroom Culture:
               name: Dispositions and Classroom Culture
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Inleiding tot Complex Adaptieve Systemen
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
@@ -925,13 +925,13 @@
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: De Tutorial
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Wat te Verwachten
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -946,7 +946,7 @@
             Dispositions and Classroom Culture:
               name: Dispositions and Classroom Culture
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Inleiding tot Complex Adaptieve Systemen
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
@@ -956,13 +956,13 @@
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: De Tutorial
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Wat te Verwachten
         sciencePD2:
           title: Computer Science in Science PD
           description: 'Fase 2 Online: Gemengde zomer studie'
@@ -990,9 +990,9 @@
             Decode and Share:
               name: Decode and Share
             Mystery Model:
-              name: Mystery Model
+              name: Mysterie Model
             Welcome Back!:
-              name: Welcome Back!
+              name: Welkom Terug!
         Testing:
           title: Testing
           description: Testing
@@ -1011,9 +1011,9 @@
           description_short: Het Internet
           stages:
             Algorithms Detour - Hard Problems TSP:
-              name: Hard Problems - The Traveling Salesperson Problem
+              name: Moeilijke Problemen - Het Reizende-Verkoper-Probleem
             Algorithms Detour - How Routers Learn:
-              name: How Routers Learn
+              name: Hoe Routers Leren
             Algorithms Detour - Minimum Spanning Tree:
               name: Algorithms Detour - Minimum Spanning Tree
             Algorithms Detour - Shortest Path:
@@ -1025,9 +1025,9 @@
             DNS in the Real World:
               name: DNS in the Real World
             Encryption Algorithms:
-              name: Keys and Passwords
+              name: Sleutels en Paswoorden
             HTTP and Abstraction:
-              name: HTTP and Abstraction on the Internet
+              name: HTTP en Abstractie op het Internet
             Invent an Addressing Protocol:
               name: Invent an Addressing Protocol
             One Way Functions - Ice Cream Vans:
@@ -1043,13 +1043,13 @@
             Routers and Redundancy:
               name: Routers and Redundancy
             Tell Me a Secret - Encrypting Text:
-              name: The Need for Encryption
+              name: De Nood aan Encryptie
             The Internet:
               name: Het Internet
             The Need for Addressing:
-              name: The Need for Addressing
+              name: De Nood aan Adressering
             The Need for DNS:
-              name: The Need for DNS
+              name: De Nood aan DNS
           description_audience: ''
         algebraPD2a:
           title: Computer Science in Algebra PD
@@ -1078,7 +1078,7 @@
             Luigi's Pizza:
               name: Luigi's Pizza
             Rocket-Height:
-              name: Rocket-Height
+              name: Rakethoogte
             Sam the Bat:
               name: Sam de Vleermuis
             Strings and Images:
@@ -1146,7 +1146,7 @@
             Sample PLC Assessment:
               name: Sample PLC Assessment
             Star wars:
-              name: Star wars
+              name: Star Wars
             Studio:
               name: Studio
             Swapped Levels:
@@ -1162,7 +1162,7 @@
             Single page assessment:
               name: Single page assessment
             Standalone video:
-              name: Standalone video
+              name: Alleenstaande video
             Curriculum Reference:
               name: Curriculum Reference
         algebraPD2b:
@@ -1176,7 +1176,7 @@
             Booleans:
               name: Booleans
             Course Overview:
-              name: Course Overview
+              name: Cursusoverzicht
             Defining Functions:
               name: Functies definiëren
             Defining Variables:
@@ -1188,7 +1188,7 @@
             Next Steps:
               name: Volgende stappen
             Rocket-Height:
-              name: Rocket-Height
+              name: Rakethoogte
             Strings and Images:
               name: Woorden en afbeeldingen
             Teacher Dashboard:
@@ -1551,7 +1551,7 @@
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: Welkom Terug!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies
@@ -1856,13 +1856,13 @@
             Image Scroller with Key Events:
               name: Image Scroller with Key Events
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Inleiding tot Arrays
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Lussen en Simulaties
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: Arrays Verwerken
             While Loops:
               name: Zolang-lussen
         CSP-Unit3-Support:
@@ -2162,7 +2162,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Cursusoverzicht
             Evaluation Blocks:
               name: evaluatie blokken
             Introduction to PD:
@@ -2222,9 +2222,9 @@
             The Internet:
               name: Het Internet
             The Need for Addressing:
-              name: The Need for Addressing
+              name: De Nood aan Adressering
             The Need for DNS:
-              name: The Need for DNS
+              name: De Nood aan DNS
             Unit 1 Chapter 1 Assessment:
               name: Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 2 Assessment:
@@ -2261,9 +2261,9 @@
             Encode a Complex Thing:
               name: Encode a Complex Thing
             Encoding B&W Images:
-              name: Encoding B&W Images
+              name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
-              name: Encoding Color Images
+              name: Verzend Kleuren Afbeeldingen
             Finding Trends with Visualizations:
               name: Finding Trends with Visualizations
             Good and Bad Data Visualizations:
@@ -2301,7 +2301,7 @@
           description_audience: ''
           stages:
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API's en Functieparameters
             Creating Functions:
               name: Maken van functies
             Creating functions with Parameters:
@@ -2309,17 +2309,17 @@
             Creativity in Algorithms:
               name: Creativity in Algorithms
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Functies en Top-Down Designs
             Looping and Random Numbers:
               name: Looping and Random Numbers
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: De Nood Aan Programmeertalen
             The Need for Algorithms:
               name: The Need for Algorithms
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Simpele Commando's Gebruiken
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
@@ -2399,7 +2399,7 @@
             Event-Driven Programming and Debugging:
               name: Event-Driven Programming and Debugging
             Events Unplugged:
-              name: Events Unplugged
+              name: Gebeurtenissen Unplugged
             Functions with Return Values:
               name: Functions with Return Values
             Image Scroller with Key Events:
@@ -2407,25 +2407,25 @@
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Inleiding tot Arrays
             Introduction to Conditional Logic:
               name: Introduction to Conditional Logic
             Introduction to Digital Assistants:
               name: Introduction to Digital Assistants
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Lussen en Simulaties
             Multi-screen Apps:
               name: Multi-screen Apps
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: Arrays Verwerken
             Understanding Program Flow and Logic:
               name: Understanding Program Flow and Logic
             User Input and Strings:
-              name: User Input and Strings
+              name: Gebruikersinvoer en Strings
             Using Variables in Apps:
-              name: Using Variables in Apps
+              name: Variabelen Gebruiken In Apps
             While Loops:
               name: Zolang-lussen
             Edited lessons ABOVE this line:
@@ -2586,7 +2586,7 @@
             Dispositions and Classroom Culture:
               name: Dispositions and Classroom Culture
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Inleiding tot Complex Adaptieve Systemen
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
@@ -2596,13 +2596,13 @@
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: De Tutorial
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Wat te Verwachten
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
@@ -2667,7 +2667,7 @@
             Dispositions and Classroom Culture:
               name: Dispositions and Classroom Culture
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Inleiding tot Complex Adaptieve Systemen
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
@@ -2677,13 +2677,13 @@
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: De Tutorial
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Wat te Verwachten
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles
@@ -3056,11 +3056,11 @@
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Foutopsporing
             Events:
               name: Gebeurtenissen
             Events Unplugged:
-              name: Events Unplugged
+              name: Gebeurtenissen Unplugged
             Fuzz Fiesta:
               name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
@@ -3068,7 +3068,7 @@
             Loops:
               name: Lussen
             Loops Intro:
-              name: Loops Intro
+              name: Lussen Intro
             Loops Unplugged:
               name: Loops Unplugged
             Persistence & Frustration:
@@ -3094,7 +3094,7 @@
             'Bee: Functions (Course 3)':
               name: 'Bee: Functions (Course 3)'
             Build a Star Wars Game!:
-              name: Build a Star Wars Game!
+              name: Bouw een Star Wars Spel!
             Digital Citizenship:
               name: Digitaal Burgerschap
             Explore project ideas:
@@ -3126,17 +3126,17 @@
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Foutopsporing
             Events:
               name: Gebeurtenissen
             Events Unplugged:
-              name: Events Unplugged
+              name: Gebeurtenissen Unplugged
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzel: Leer hoe je kan knippen en plakken'
             Loops:
               name: Lussen
             Loops Intro:
-              name: Loops Intro
+              name: Lussen Intro
             Loops Unplugged:
               name: Loops Unplugged
             More Computer Science:
@@ -3544,7 +3544,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             'Project: Design a Game':
-              name: 'Project: Design a Game'
+              name: 'Project: Ontwerp een Spel'
             Programming for Entertainment:
               name: Programming for Entertainment
               description_student: The class is asked to consider the "problems" of
@@ -5175,7 +5175,7 @@
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: Welkom Terug!
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -5844,7 +5844,7 @@
             Using the Game Design Process:
               name: Using the Game Design Process
             'Project: Design a Game':
-              name: 'Project: Design a Game'
+              name: 'Project: Ontwerp een Spel'
         csd5:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
@@ -6217,7 +6217,7 @@
             Using the Game Design Process:
               name: Using the Game Design Process
             'Project: Design a Game':
-              name: 'Project: Design a Game'
+              name: 'Project: Ontwerp een Spel'
         csd1-old:
           title: CSD Unit 1 (DEPRECATED)
           description_audience: ''
@@ -6364,7 +6364,7 @@
             Using the Game Design Process:
               name: Using the Game Design Process
             'Project: Design a Game':
-              name: 'Project: Design a Game'
+              name: 'Project: Ontwerp een Spel'
             'Chapter 1: Images and Animation':
               name: 'Chapter 1: Images and Animation'
             'null':
@@ -7797,19 +7797,19 @@
             new stage:
               name: new stage
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: De Nood Aan Programmeertalen
             The Need for Algorithms:
               name: The Need for Algorithms
             Creativity in Algorithms:
               name: Creativity in Algorithms
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Simpele Commando's Gebruiken
             Creating Functions:
               name: Maken van functies
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Functies en Top-Down Designs
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API's en Functieparameters
             Creating functions with Parameters:
               name: Creating functions with Parameters
             Looping and Random Numbers:
@@ -8377,19 +8377,19 @@
         csp3-staging:
           stages:
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: De Nood Aan Programmeertalen
             The Need for Algorithms:
               name: The Need for Algorithms
             Creativity in Algorithms:
               name: Creativity in Algorithms
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Simpele Commando's Gebruiken
             Creating Functions:
               name: Maken van functies
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Functies en Top-Down Designs
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API's en Functieparameters
             Creating functions with Parameters:
               name: Creating functions with Parameters
             Looping and Random Numbers:
