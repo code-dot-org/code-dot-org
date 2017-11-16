@@ -6,11 +6,16 @@ import i18n from '@cdo/locale';
 import color from '../util/color';
 import queryString from 'query-string';
 import SocialShare from './SocialShare';
+import Responsive from '../responsive';
 import LargeChevronLink from './LargeChevronLink';
 
 const styles = {
   heading: {
     width: '100%',
+  },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5,
   },
   image: {
     width: '50%',
@@ -45,6 +50,7 @@ export default class Certificate extends Component {
   static propTypes = {
     type: PropTypes.oneOf(['hourOfCode', 'minecraft']).isRequired,
     isRtl: PropTypes.bool.isRequired,
+    responsive: PropTypes.instanceOf(Responsive).isRequired,
   };
 
   personalizeCertificate(session) {
@@ -64,6 +70,11 @@ export default class Certificate extends Component {
   }
 
   render() {
+    const {responsive} = this.props;
+
+    const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
+
+    const headingStyle = desktop ? styles.heading : styles.mobileHeading;
     const blankCertificate = blankCertificates[this.props.type];
     let certificate;
     try {
@@ -87,7 +98,7 @@ export default class Certificate extends Component {
 
     return (
       <div>
-        <h1 style={styles.heading}>
+        <h1 style={headingStyle}>
           {i18n.congratsCertificateHeading()}
         </h1>
         <LargeChevronLink
