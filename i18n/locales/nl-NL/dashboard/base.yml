@@ -756,7 +756,7 @@ nl:
       applab: "App Lab"
       gamelab: "Game Lab"
       weblab: "Web Lab (bèta)"
-    new_buttons_header: "Start a new project"
+    new_buttons_header: "Start een nieuw project"
     rename: "Hernoemen"
     save: "Opslaan"
     delete: "Verwijderen"
@@ -983,4 +983,4 @@ nl:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Volledige Cursussen'
