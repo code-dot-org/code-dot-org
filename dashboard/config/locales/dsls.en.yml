@@ -2885,6 +2885,9 @@ en:
         description here: description here
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
+      csp-post-survey-2017 preamble how often did teacher ask you to: {}
+      csp-post-survey-2017 preamble how often did teacher do: {}
+      csp-post-survey-2017 preamble how often did you: {}
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 3 this class: {}
@@ -8796,6 +8799,7 @@ en:
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
+        Sometimes I feel unsure whether I belong in this class.: Sometimes I feel unsure whether I belong in this class.
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-post-survey-2017-q23:
@@ -8820,7 +8824,6 @@ en:
         Agree: Agree
         Disagree: Disagree
         I feel like my opinions are taken seriously in this computer science class.: I feel like my opinions are taken seriously in this computer science class.
-        I feel like my opinions will be taken seriously in this computer science class.: I feel like my opinions will be taken seriously in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8830,6 +8833,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         I feel like it is hard for people like me to to be accepted in this computer science class.: I feel like it is hard for people like me to to be accepted in this computer science class.
+        It has been hard for people like me to to be accepted in this computer science class.: It has been hard for people like me to to be accepted in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8910,7 +8914,6 @@ en:
       csp-post-survey-2017-q35:
         Agree: Agree
         Disagree: Disagree
-        I worry that the teacher or students in this class could think that I am not as good at computer science as other students.: I worry that the teacher or students in this class could think that I am not as good at computer science as other students.
         I worry that the teacher or students in this class think that I am not as good at computer science as other students.: I worry that the teacher or students in this class think that I am not as good at computer science as other students.
         Neither: Neither
         Slightly agree: Slightly agree
@@ -8949,22 +8952,13 @@ en:
       csp-post-survey-2017-q50:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Agree: Agree
         'Analyze data (organize, process, manipulate, or evaluate data). ': 'Analyze data (organize, process, manipulate, or evaluate data). '
-        Disagree: Disagree
         Many class sessions: Many class sessions
-        Neither: Neither
         Never: Never
         Once or more per class session: Once or more per class session
-        Slightly agree: Slightly agree
-        Slightly disagree: Slightly disagree
-        Strongly agree: Strongly agree
-        Strongly disagree: Strongly disagree
-        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-post-survey-2017-q51:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        'Analyze data (organize, process, manipulate, or evaluate data). ': 'Analyze data (organize, process, manipulate, or evaluate data). '
         Explain the logic and reasoning supporting my solutions to problems.: Explain the logic and reasoning supporting my solutions to problems.
         Many class sessions: Many class sessions
         Never: Never
@@ -8972,7 +8966,6 @@ en:
       csp-post-survey-2017-q52:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Explain the logic and reasoning supporting my solutions to problems.: Explain the logic and reasoning supporting my solutions to problems.
         Explain why I agreed or disagreed with the work of other students in class.: Explain why I agreed or disagreed with the work of other students in class.
         Many class sessions: Many class sessions
         Never: Never
@@ -8981,14 +8974,12 @@ en:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Communicate my thought processes to others.: Communicate my thought processes to others.
-        Explain why I agreed or disagreed with the work of other students in class.: Explain why I agreed or disagreed with the work of other students in class.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csp-post-survey-2017-q54:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Communicate my thought processes to others.: Communicate my thought processes to others.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
@@ -9000,7 +8991,42 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
-        Problem solve when something didn't work the way I wanted it to work.: Problem solve when something didn't work the way I wanted it to work.
+      csp-post-survey-2017-q56:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        Considered alternative approaches to my work: Considered alternative approaches to my work
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q57:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        ? Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        : Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q58:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        : Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.: Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q59:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Connected lesson content with current events.: Connected lesson content with current events.
+        Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.: Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csp-post-survey-2017-q6:
         Agree: Agree
         Disagree: Disagree
@@ -9010,6 +9036,40 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q60:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked questions when I was confused about activities or assignments.: Asked questions when I was confused about activities or assignments.
+        Connected lesson content with current events.: Connected lesson content with current events.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q61:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked questions when I was confused about activities or assignments.: Asked questions when I was confused about activities or assignments.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        'Tried new things in class even when I was not sure how to do them. ': 'Tried new things in class even when I was not sure how to do them. '
+      csp-post-survey-2017-q64:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        : 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        Many class sessions: Many class sessions
+        Never: Never
+        'No': 'No'
+        Once or more per class session: Once or more per class session
+        'Tried new things in class even when I was not sure how to do them. ': 'Tried new things in class even when I was not sure how to do them. '
+        'Yes': 'Yes'
+      csp-post-survey-2017-q65:
+        ? 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        : 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        I don't know: I don't know
+        Is this computer science course required for you?: Is this computer science course required for you?
+        'No': 'No'
+        'Yes': 'Yes'
       csp-post-survey-2017-q8:
         Agree: Agree
         Disagree: Disagree
@@ -9193,7 +9253,6 @@ en:
         Agree: Agree
         Disagree: Disagree
         I feel like it will be hard for people like me to be accepted in this computer science class.: I feel like it will be hard for people like me to be accepted in this computer science class.
-        I feel like it will be hard for people like me to to be accepted in this computer science class.: I feel like it will be hard for people like me to to be accepted in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
