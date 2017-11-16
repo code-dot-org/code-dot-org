@@ -9,18 +9,19 @@ style_min: true
 ### Submit a creation made on Code.org and tag one of our special guests for a chance to win a 10-minute video chat with them!
 
 
-<%= view :three_circles, circles: [ {img: '/images/fit-300/steph-curry.png', text: '<a href="#lookingfor">Stephen Curry</a><br>[Twitter: @StephenCurry30](https://twitter.com/intent/tweet?text=@stephencurry30)<br>Facebook: @StephenCurryOfficial<br>Instagram: @stephencurry30'}, {img: '/images/fit-300/sheryl-sandberg.png', text: '<a href="#lookingfor">Sheryl Sandberg</a><br>Facebook: @Sheryl<br>Instagram: @sherylsandberg'}, {img: '/images/fit-300/russell-wilson.png', text: '<a href="#lookingfor">Russell Wilson</a><br>[Twitter: @DangeRussWilson](https://twitter.com/intent/tweet?text=@dangerusswilson)<br>Facebook: @DangerRussWilson<br>Instagram: @dangerusswilson'}] %>
+<%= view :three_circles, circles: [ {img: '/images/fit-300/steph-curry.png', text: '<a href="#lookingfor">Stephen Curry</a><br>Twitter: [@StephenCurry30](https://twitter.com/intent/tweet?screen_name=stephencurry30&hashtags=HourOfCode)<br>Facebook: @StephenCurryOfficial<br>Instagram: @stephencurry30'}, {img: '/images/fit-300/sheryl-sandberg.png', text: '<a href="#lookingfor">Sheryl Sandberg</a><br>Facebook: @Sheryl<br>Instagram: @sherylsandberg'}, {img: '/images/fit-300/russell-wilson.png', text: '<a href="#lookingfor">Russell Wilson</a><br>Twitter: [ @DangeRussWilson](https://twitter.com/intent/tweet?screen_name=dangerusswilson&hashtags=HourOfCode)<br>Facebook: @DangerRussWilson<br>Instagram: @dangerusswilson'}] %>
 
 <br>
 
-<%= view :three_circles, circles: [ {img: '/images/fit-300/susan-wojcicki.png', text: '<a href="#lookingfor">Susan Wojcicki</a><br>[Twitter: @SusanWojcicki](https://twitter.com/intent/tweet?text=@susanwojcicki)'}, {img: '/images/fit-300/stacy-plays.png', text: '<a href="#lookingfor">StacyPlays</a><br>[Twitter: @stacysays](https://twitter.com/intent/tweet?text=@stacysays)<br>Facebook: @stacyhinojosa'}, {img: '/images/fit-300/hadi-partovi.png', text: '<a href="#lookingfor">Hadi Partovi</a><br>[Twitter: @hadip](https://twitter.com/intent/tweet?text=@hadip)<br>Facebook: @hadi<br>Instagram: @hadipartovi'}] %>
+<%= view :three_circles, circles: [ {img: '/images/fit-300/susan-wojcicki.png', text: '<a href="#lookingfor">Susan Wojcicki</a><br>Twitter: [@SusanWojcicki](https://twitter.com/intent/tweet?screen_name=susanwojcicki&hashtags=HourOfCode)'}, {img: '/images/fit-300/stacy-plays.png', text: '<a href="#lookingfor">StacyPlays</a><br>Twitter: [@stacysays](https://twitter.com/intent/tweet?screen_name=stacysays&hashtags=HourOfCode)<br>Facebook: @stacyhinojosa'}, {img: '/images/fit-300/hadi-partovi.png', text: '<a href="#lookingfor">Hadi Partovi</a><br>Twitter: [@hadip](https://twitter.com/intent/tweet?screen_name=hadip&hashtags=HourOfCode)<br>Facebook: @hadi<br>Instagram: @hadipartovi'}] %>
 
 
 ## How do I win?
 Post about your Hour of Code on social media during Computer Science Education Week: Dec. 4-10.
+
 - Tweet: tag #HourOfCode and your celebrity
 - Facebook: post publicly and tag @Codeorg and your celebrity.
-- Instagram: tag @CodeOrg in the photo,  #HourofCode and your celebrity????
+- Instagram: tag @CodeOrg in the photo, #HourofCode and your celebrity????
 
 The celebrities will work with Code.org to pick a winner. Increase your chances to win with photos or videos of yourself or your class showing off apps, games, or artwork your students created. This challenge is open to classrooms, after-school clubs, and individual students.
 
@@ -28,17 +29,17 @@ The celebrities will work with Code.org to pick a winner. Increase your chances 
 
 <a name="lookingfor"></a>
 ## What are they looking for?
-Stephen Curry: Teamwork is so important when you're trying to make it to the NBA finals, and even more important in the classroom.
+**Stephen Curry**: When the Golden State Warriors head to the NBA finals, we get there through teamwork. I want to see what you and your team can create. 
 
-Sheryl Sandberg:
+**Sheryl Sandberg**: I challenge girls to Lean In to computer science and create an app using AppLab!
 
-Russell Wilson:
+**Russell Wilson**: 
 
-StacyPlays:
+**StacyPlays**: Everyone knows Minecraft is my favorite. 
 
-Susan Wojcicki:
+**Susan Wojcicki**: At YouTube, we love good storytellers. Use App Lab to choose your own adventure, make a story in play lab, or post a video story about anything you created. Maybe your creation will go viral!
 
-Hadi Partovi:
+**Hadi Partovi**:
 
 <a name="contestrules"></a>
 ## What are the contest rules?

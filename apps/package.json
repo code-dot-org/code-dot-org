@@ -138,7 +138,7 @@
     "lazysizes": "^4.0.0-rc1",
     "load-grunt-tasks": "3.5.0",
     "lodash": "4.15.0",
-    "marked": "0.3.2",
+    "marked": "^0.3.6",
     "messageformat": "0.2.2",
     "mocha": "^3.1.2",
     "mock-firmata": "0.2.0",
