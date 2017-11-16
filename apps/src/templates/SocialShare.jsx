@@ -17,8 +17,8 @@ export default class SocialShare extends Component {
   };
 
   render() {
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${encodeURIComponent(this.props.facebook)}`;
-    const twitterShareUrl = `https://twitter.com/share?${encodeURIComponent(this.props.twitter)}`;
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${this.props.facebook}`;
+    const twitterShareUrl = `https://twitter.com/share?${this.props.twitter}`;
 
     return (
       <div>
