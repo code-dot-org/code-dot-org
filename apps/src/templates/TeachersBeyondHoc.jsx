@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
-import color from "../util/color";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import Responsive from '../responsive';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
@@ -8,7 +7,6 @@ import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardRespo
 
 const styles = {
   heading: {
-    color: color.teal,
     width: '100%'
   },
   clear: {
