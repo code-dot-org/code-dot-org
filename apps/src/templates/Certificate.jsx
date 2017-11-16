@@ -85,19 +85,27 @@ export default class Certificate extends Component {
           {i18n.congratsCertificateHeading()}
         </h1>
         <div style={styles.personalize}>
-          <h2>{i18n.congratsCertificatePersonalize()}</h2>
-          <input
-            type="text"
-            style={styles.nameInput}
-            placeholder={i18n.yourName()}
-            ref={input => this.nameInput = input}
-          />
-          <button
-            style={styles.submit}
-            onClick={this.personalizeCertificate.bind(this, certificate)}
-          >
-            {i18n.submit()}
-          </button>
+          {this.state.personalized ?
+            <div>
+              <h2>{i18n.congratsCertificateThanks()}</h2>
+              <p>{i18n.congratsCertificateContinue()}</p>
+            </div> :
+            <div>
+              <h2>{i18n.congratsCertificatePersonalize()}</h2>
+              <input
+                type="text"
+                style={styles.nameInput}
+                placeholder={i18n.yourName()}
+                ref={input => this.nameInput = input}
+              />
+              <button
+                style={styles.submit}
+                onClick={this.personalizeCertificate.bind(this, certificate)}
+              >
+                {i18n.submit()}
+              </button>
+            </div>
+          }
           <h2>{i18n.congratsCertificateShare()}</h2>
           <SocialShare
             facebook={facebook}
