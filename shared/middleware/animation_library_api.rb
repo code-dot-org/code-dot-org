@@ -15,6 +15,10 @@ ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 # https://docs.google.com/document/d/18-LVuvKd0jKTUiGo5GYReUWM5oFWCyKRyEQURJ5HCOM/edit#
 #
 class AnimationLibraryApi < Sinatra::Base
+  helpers do
+    load(CDO.dir('shared', 'middleware', 'helpers', 'core.rb'))
+  end
+
   #
   # GET /api/v1/animation-library/<version-id>/<filename>
   #
