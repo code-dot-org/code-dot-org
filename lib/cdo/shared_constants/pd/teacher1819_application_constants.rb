@@ -1,7 +1,7 @@
 module Teacher1819ApplicationConstants
-  # Remove newlines and leading whitespace from multiline strings
   YES_NO = %w(Yes No)
 
+  # Remove newlines and leading whitespace from multiline strings
   def self.clean_multiline(string)
     string.gsub(/\n\s*/, ' ')
   end

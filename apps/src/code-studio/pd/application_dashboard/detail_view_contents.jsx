@@ -169,7 +169,7 @@ export default class DetailViewContents extends React.Component {
             (
               <DetailViewResponse
                 question="Regional Partner"
-                questionId="regionalParnterName"
+                questionId="regionalPartnerName"
                 answer={this.props.applicationData.regional_partner_name}
                 layout="panel"
                 score={this.state.response_scores['regional_partner_name']}
