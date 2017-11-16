@@ -134,5 +134,13 @@ module Teacher1819ApplicationConstants
     willing_to_travel: 'How far would you be willing to travel to each workshop?'
   }
 
+  VALID_SCORES = {
+    able_to_attend_single: ['Yes', 'No'],
+    committed: ['Yes', 'No'],
+    taught_in_past: [0, 2],
+    csd_which_grades: ['Yes', 'No'],
+    csp_which_grades: ['Yes', 'No']
+  }
+
   ALL_LABELS = PAGE_LABELS.values.reduce(:merge)
 end
