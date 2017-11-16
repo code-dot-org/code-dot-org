@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
-import color from '../util/color';
 import Responsive from '../responsive';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
@@ -10,7 +9,6 @@ import { cardSets } from './congratsBeyondHocActivityCards';
 
 const styles = {
   heading: {
-    color: color.teal,
     width: '100%',
   },
 };
