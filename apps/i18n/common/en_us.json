@@ -49,6 +49,7 @@
   "authorizeGoogleClassrooms": "Click here to authorize Google Classroom.",
   "authorizeGoogleClassroomsText": "Before you can sync Google Classroom, you must give Code.org permission to access your Google Classroom account.",
   "autolock": "Note: Stage auto-locks after 24 hours.",
+  "backToActivity": "Back to activity",
   "backToPreviousLevel": "Back to previous level",
   "blocklyMessage": "Blockly",
   "blocks": "blocks",
