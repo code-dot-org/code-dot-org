@@ -50,7 +50,7 @@ export default class PopUpMenu extends Component {
     className: PropTypes.string,
     isOpen: PropTypes.bool,
     beforeClose: PropTypes.func,
-    minimalStyle: PropTypes.bool,
+    showTail: PropTypes.bool,
   };
 
   render() {
@@ -65,7 +65,7 @@ export default class PopUpMenu extends Component {
           targetPoint={this.props.targetPoint}
           className={this.props.className}
           children={this.props.children}
-          minimalStyle={this.props.minimalStyle}
+          showTail={this.props.showTail}
         />
       </Portal>
     );
@@ -80,7 +80,7 @@ class MenuBubbleUnwrapped extends Component {
     }).isRequired,
     children: PropTypes.any,
     className: PropTypes.string,
-    minimalStyle: PropTypes.bool,
+    showTail: PropTypes.bool,
   };
 
   renderMenuItems() {
@@ -120,10 +120,10 @@ class MenuBubbleUnwrapped extends Component {
       <div style={style} className={className}>
         {this.renderMenuItems()}
         {/* These elements are used to draw the 'tail' with CSS */}
-        {!this.props.minimalStyle &&
+        {this.props.showTail &&
           <span style={tailBorderStyle}/>
         }
-        {!this.props.minimalStyle &&
+        {this.props.showTail &&
           <span style={tailFillStyle}/>
         }
       </div>
@@ -160,18 +160,17 @@ class Item extends Component {
     first: PropTypes.bool,
     last: PropTypes.bool,
     color: PropTypes.string,
-    heightDivisor: PropTypes.number,
   };
 
   render() {
-    const {first, last, onClick, children, href, heightDivisor} = this.props;
+    const {first, last, onClick, children, href} = this.props;
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
     }
 
     const paddingStyle = {
-      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / (heightDivisor ? heightDivisor: 2),
-      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / (heightDivisor ? heightDivisor: 2),
+      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 4,
+      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 4,
       paddingLeft: STANDARD_PADDING,
       paddingRight: STANDARD_PADDING,
       cursor: 'pointer',
