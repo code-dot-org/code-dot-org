@@ -8,26 +8,29 @@ describe('Certificate', () => {
     const wrapper = shallow(
       <Certificate
         completedTutorialType="2017Minecraft"
+        isRtl={false}
       />
     );
-    expect(wrapper.find('img').html().includes('MC_Hour_Of_Code_Certificate')).to.be.true;
+    expect(wrapper.find('img').html().includes('MC_Hour_Of_Code_Certificate'));
   });
 
   it('renders a Minecraft certificate for older Minecraft tutorials', () => {
     const wrapper = shallow(
       <Certificate
         completedTutorialType="pre2017Minecraft"
+        isRtl={false}
       />
     );
-    expect(wrapper.find('img').html().includes('MC_Hour_Of_Code_Certificate')).to.be.true;
+    expect(wrapper.find('img').html().includes('MC_Hour_Of_Code_Certificate'));
   });
 
   it('renders a default certificate for all other tutorials', () => {
     const wrapper = shallow(
       <Certificate
         completedTutorialType="other"
+        isRtl={false}
       />
     );
-    expect(wrapper.find('img').html().includes('hour_of_code_certificate')).to.be.true;
+    expect(wrapper.find('img').html().includes('hour_of_code_certificate'));
   });
 });
