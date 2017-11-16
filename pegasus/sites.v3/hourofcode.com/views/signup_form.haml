@@ -27,6 +27,8 @@
           %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text"}
         #email-error.error-message{style: "display:none;"}
           = hoc_s(:signup_email_error)
+        #email-invalid-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_invalid_email_error)
 
       .form-group
         %label.control-label{for: "hoc-event-country"}
