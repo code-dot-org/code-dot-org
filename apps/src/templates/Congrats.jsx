@@ -63,6 +63,8 @@ export default class Congrats extends Component {
   render() {
     const { completedTutorialType, MCShareLink, isRtl, userType, isEnglish } = this.props;
 
+    const isMinecraft = /2017Minecraft|pre2017Minecraft/.test(completedTutorialType);
+
     const contentStyle = {
       ...styles.container,
       width: this.responsive.getResponsiveContainerWidth()
@@ -73,7 +75,7 @@ export default class Congrats extends Component {
       <Provider store={store}>
         <div style={contentStyle}>
           <Certificate
-            completedTutorialType={completedTutorialType}
+            type={isMinecraft ? "minecraft" : "hourOfCode"}
             isRtl={isRtl}
           />
           {userType === "teacher" && isEnglish && (
