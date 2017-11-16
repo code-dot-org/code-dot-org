@@ -85,14 +85,14 @@ describe('SectionActionDropdown', () => {
   it('does not render the delete option for sections with students', () => {
     const wrapper = shallow(
       <SectionActionDropdown
-        sectionData={sections[2]}
+        sectionData={sections[3]}
         onEdit={() => {}}
         removeSection={() => {}}
         toggleSectionHidden={() => {}}
         updateRoster={() => {}}
       />
     );
-    expect(wrapper).to.not.contain("Delete Section");
+    expect(wrapper.text()).to.not.include("Delete Section");
   });
 
   it('renders the sync option for third party (Google Classroom) sections', () => {
@@ -108,7 +108,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain("Sync students from Google Classroom");
   });
 
-  it('renders the five standard options for a third party section (Google Classroom)', () => {
+  it('renders the four standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
       <SectionActionDropdown
         sectionData={sections[1]}
@@ -122,10 +122,10 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Manage Students');
     expect(wrapper).to.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
-    expect(wrapper).to.contain(<PrintCertificates sectionId={2} assignmentName="a"/>);
+    expect(wrapper.find(<PrintCertificates sectionId={2} assignmentName="a"/>).length, 1);
   });
 
-  it('renders the five standard options for not a third party section', () => {
+  it('renders the four standard options for not a third party section', () => {
     const wrapper = shallow(
       <SectionActionDropdown
         sectionData={sections[0]}
@@ -139,7 +139,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Manage Students');
     expect(wrapper).to.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
-    expect(wrapper).to.contain(<PrintCertificates sectionId={1} assignmentName="a"/>);
+    expect(wrapper.find(<PrintCertificates sectionId={1} assignmentName="a"/>).length, 1);
   });
 
   it('renders the hide option for a un-hidden section', () => {
