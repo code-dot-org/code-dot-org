@@ -2,6 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -11,6 +12,7 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   clear: {
@@ -27,6 +29,8 @@ export default class TeacherHomepage extends Component {
     announcements: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
+    canViewAdvancedTools: PropTypes.bool,
+    hocLaunch: PropTypes.object
   };
 
   componentDidMount() {
@@ -37,6 +41,7 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
+    const { canViewAdvancedTools, hocLaunch } = this.props;
 
     return (
       <div>
@@ -50,6 +55,20 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
+        {hocLaunch && hocLaunch.special_announcement && hocLaunch.special_announcement === "mc2017" && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeading()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescription()}
+            buttons={[
+              {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+              {url: pegasus('/minecraft'), text: i18n.tryIt()}
+            ]}
+          />
+        )}
+
         {announcements.length > 0 && (
           <div>
             <Notification
@@ -78,7 +97,11 @@ export default class TeacherHomepage extends Component {
           isRtl={isRtl}
         />
         <TeacherResources isRtl={isRtl}/>
-        <ProjectWidgetWithData isRtl={isRtl}/>
+        <ProjectWidgetWithData
+          isRtl={isRtl}
+          canViewFullList={true}
+          canViewAdvancedTools={canViewAdvancedTools}
+        />
         <StudentSections
           initialSections={joinedSections}
           canLeave={true}

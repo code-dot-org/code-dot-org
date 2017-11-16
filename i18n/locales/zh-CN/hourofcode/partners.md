@@ -1,16 +1,13 @@
-* * *
+---
+title: '<%= hoc_s(:title_partners) %>'
+---
+编程一小时的网站由《编程一小时》和计算机科学教育周咨询委员会及审查委员会运营。
 
-title: <%= hoc_s(:title_partners) %>
+[咨询委员会](%= resolve_url('/advisory-committee') %)由来自基础教育、学术界、非盈利及盈利组织、国际组织的代表所组成。 该委员会负责指导编程一小时的活动制作。
 
-* * *
+[审查委员会](%= resolve_url('/review-committee') %)由15名涵盖了基础教育的每个年级的教育者所组成，他们负责评估和推荐采纳了咨询委员会的能够量化学生表现的方法的活动。 These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
-
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
-
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
-
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+这两个委员会所做的工作和贡献让编程一小时活动得以成功，同时也实现了活动本身想为每个学生提供认识计算机科学机会的愿景。
 
 <% if @country == 'la' %>
 
@@ -116,7 +113,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# 主要合作伙伴和赞助商
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
@@ -134,13 +131,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# 教程合作伙伴
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# 基础设施合作伙伴和工具
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

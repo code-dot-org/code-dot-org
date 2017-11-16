@@ -4197,7 +4197,7 @@
       Frequency Analysis_instruction: Test
       Function intro Ryan_instruction: |-
         Use the `build bridge` function twice to
-        make a path to the torch.
+        make a path to the Redstone Torch.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4642,9 +4642,9 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
-        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
-        the chest. "
+      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
+        then press \"Run\" and use the arrow keys to move the player out of\nthe house
+        to collect the chest. "
       MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
         can get to the map. "
@@ -4709,8 +4709,8 @@
         Create a function to help you finish this
         minecart.
       MC_HOC_2017_10_RETRY_instruction: |-
-        Create a function to help you finish this
-        minecart.
+        Use the functions to finish this minecart
+        track.
       MC_HOC_2017_10_RYAN_instruction: |-
         Create a function to help you finish this
         minecart.
@@ -4721,6 +4721,8 @@
       MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
       MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
+        collect all of the diamonds in this level? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
         collect all of the diamonds in this level? "
       MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
       MC_HOC_2017_Ryan_03_instruction: |-
@@ -5133,6 +5135,9 @@
       New Gumball Project_instruction: Create anything you like and share it!
       New Ice Age Project_instruction: Create anything you like and share it!
       New Infinity Project_instruction: Create anything you like and share it!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -7714,6 +7719,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -8255,6 +8263,9 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -9093,9 +9104,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

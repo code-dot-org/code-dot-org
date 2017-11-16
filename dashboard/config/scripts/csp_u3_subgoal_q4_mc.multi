@@ -8,7 +8,7 @@ wrong 'None of the above'
 
 
 markdown <<MARKDOWN
-Consider a these various uses of `randomNumber`.  Each answer describes the use and shows a code example. Which one of the following is NOT a valid use of `randomNumber`
+Consider these various uses of `randomNumber`.  Each answer describes the use and shows a code example. Which one of the following is NOT a valid use of `randomNumber`
 
 MARKDOWN
 

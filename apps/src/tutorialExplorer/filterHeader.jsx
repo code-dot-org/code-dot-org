@@ -4,7 +4,7 @@
 
 import React, {PropTypes} from 'react';
 import BackButton from './backButton';
-import FilterGroupHeaderGrade from './filterGroupHeaderGrade';
+import FilterGroupHeaderSelection from './filterGroupHeaderSelection';
 import { getResponsiveValue } from './responsive';
 import { Sticky } from 'react-sticky';
 import i18n from '@cdo/tutorialExplorer/locale';
@@ -17,32 +17,23 @@ const styles = {
     paddingRight: 7,
     backgroundColor: 'white'
   },
-  sticky: {
-    boxShadow: "0 8px 6px -6px #999"
-  },
   barDesktop: {
     color: "dimgrey",
     height: 46,
     overflow: "hidden",
-    backgroundColor: "white",
-    boxShadow: "0 8px 6px -6px #ccc"
+    backgroundColor: "white"
   },
   barMobile: {
     color: "white",
     height: 46,
     overflow: "hidden",
-    backgroundColor: "white",
-    boxShadow: "0 8px 6px -6px #ccc"
+    backgroundColor: "white"
   },
   button: {
     backgroundColor: "#2799a4",
     color: "white",
     borderColor: "white",
     height: 34
-  },
-  filterBy: {
-    float: "left",
-    width: "100%"
   },
   full: {
     float: "left",
@@ -61,6 +52,14 @@ const styles = {
     lineHeight: '46px',
     paddingLeft: 6,
     color: 'dimgrey'
+  },
+  filterGroupGradeContainer: {
+    width: '68%',
+    float: 'left'
+  },
+  filterGroupStudentExperienceContainer: {
+    width: '28%',
+    float: 'right'
   }
 };
 
@@ -92,11 +91,14 @@ export default class FilterHeader extends React.Component {
       i18n.filterHeaderTutorialCountSingle() :
       i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
 
-    // There is one filter which can appear in this header at desktop width.
-    // Check explicitly for it.
+    // There are two filters which can appear in this header at desktop width.
+    // Check explicitly for each.
     let filterGroupGrade = null;
+    let filterGroupHeaderStudentExperience = null;
     if (!this.props.mobileLayout) {
       filterGroupGrade = this.props.filterGroups.find(item => item.name === "grade");
+      filterGroupHeaderStudentExperience =
+        this.props.filterGroups.find(item => item.name === "student_experience");
     }
 
     return (
@@ -108,15 +110,22 @@ export default class FilterHeader extends React.Component {
 
             {!this.props.mobileLayout && (
               <div style={styles.full}>
-                <div style={styles.filterBy}>
-                  {filterGroupGrade && (
-                    <FilterGroupHeaderGrade
-                      filterGroup={filterGroupGrade}
-                      selection={this.props.selection["grade"]}
-                      onUserInput={this.props.onUserInputFilter}
-                    />
-                  )}
-                </div>
+                {filterGroupGrade && (
+                  <FilterGroupHeaderSelection
+                    containerStyle={styles.filterGroupGradeContainer}
+                    filterGroup={filterGroupGrade}
+                    selection={this.props.selection["grade"]}
+                    onUserInput={this.props.onUserInputFilter}
+                  />
+                )}
+                {filterGroupHeaderStudentExperience && (
+                  <FilterGroupHeaderSelection
+                    containerStyle={styles.filterGroupStudentExperienceContainer}
+                    filterGroup={filterGroupHeaderStudentExperience}
+                    selection={this.props.selection["student_experience"]}
+                    onUserInput={this.props.onUserInputFilter}
+                  />
+                )}
               </div>
             )}
 

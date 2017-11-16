@@ -486,7 +486,7 @@
           description_audience: ''
           stages:
             Applab:
-              name: Applab
+              name: Sviluppo App
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
@@ -1109,7 +1109,7 @@
             Anonymous student survey 2:
               name: Anonymous student survey 2
             AppLab:
-              name: Laboratorio App
+              name: Sviluppo App
             Artist:
               name: Artista
             Bee:
@@ -1125,7 +1125,7 @@
             Free Response:
               name: Free Response
             Gamelab:
-              name: Gamelab
+              name: Sviluppo Giochi
             Jigsaw:
               name: Puzzle
             Long assessment:
@@ -1151,7 +1151,7 @@
             Pixelation:
               name: Conversione di pixel
             PlayLab:
-              name: PlayLab
+              name: Laboratorio
             Public Key Cryptography:
               name: Public Key Cryptography
             Rich long assessment:
@@ -1169,7 +1169,7 @@
             TextMatch:
               name: TextMatch
             Web Lab:
-              name: Laboratorio Web
+              name: Sviluppo Web
             Multi page assessment:
               name: Multi page assessment
             Single page assessment:
@@ -1226,7 +1226,7 @@
             Text Compression Lesson:
               name: Lezione Compressione del Testo
             Text Compression Widget:
-              name: Widget Compressione del Testo
+              name: Compressione del Testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -2145,7 +2145,7 @@
             'Eval: Writing Contracts':
               name: 'Valutazione: Scrittura di Contratti'
             'Play Lab: Defining Functions':
-              name: 'Play Lab: Defining Functions'
+              name: 'Laboratorio: Definizione di Funzioni'
             'Unplugged: Contracts':
               name: Tradizionale &ndash; Contratti
             'Unplugged: Fast Functions':
@@ -2580,7 +2580,7 @@
             Draw Loop and Randomization:
               name: Draw Loop and Randomization
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Sprite Movement Methods:
@@ -2644,7 +2644,7 @@
           description_audience: ''
           stages:
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
         CSF_Secret_Sample:
           title: Secret Sample
           description: Test of new educational philosophy
@@ -2795,7 +2795,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Laboratorio di gioco
+              name: Sviluppo Giochi
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -3447,7 +3447,7 @@
             Draw Loop and Randomization:
               name: Draw Loop and Randomization
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
               description_student: The class is introduced to Game Lab, the programming
                 environment for this unit, and begins to use it to position shapes
                 on the screen. Thee lesson covers the basics of sequencing and debugging,
@@ -3796,6 +3796,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4204,19 +4206,10 @@
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
+          title: Scegli la tua squadra e fai una partita di basket
           description_audience: ''
-          description_short: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
-          description: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
+          description_short: Scegli la tua squadra e fai una partita di basket
+          description: Scegli la tua squadra e fai una partita di basket
           stages:
             Bounce:
               name: Ping-Pong
@@ -4932,7 +4925,7 @@
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
@@ -4972,7 +4965,7 @@
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             More Computer Science:
               name: More Computer Science
             Keep it Private:
@@ -5015,7 +5008,7 @@
             Binary Bracelets:
               name: Braccialetti Binari
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Your Digital Footprint:
               name: La tua Impronta Digitale
             Building a Foundation:
@@ -5062,7 +5055,7 @@
             More Programming with CS4FN:
               name: More Programming with CS4FN
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Conditionals in Bee:
               name: Conditionals in Bee
             Digital Citizenship:
@@ -5105,7 +5098,7 @@
             Determine the Concept in Bee:
               name: Determine the Concept in Bee
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -5144,7 +5137,7 @@
             Envelope Variables:
               name: Variabili e Buste
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             Variables in Artist:
               name: Variables in Artist
             For Loop Fun:
@@ -5218,8 +5211,8 @@
         sports:
           title: Programma il tuo sport
           description_audience: ''
-          description_short: Combinare diversi sport
-          description: Combinare diversi sport
+          description_short: Combina diversi sport
+          description: Combina diversi sport
           stages:
             Sports:
               name: Sports
@@ -5881,7 +5874,7 @@
             Shapes and Randomness:
               name: Shapes and Randomness
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
             Programming for Entertainment:
@@ -6271,7 +6264,7 @@
             - this original draft will remain available until July 1, 2017.
           stages:
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             Draw Loop and Randomization:
               name: Draw Loop and Randomization
             Variables Unplugged:
@@ -6414,7 +6407,7 @@
             Plotting Shapes:
               name: Plotting Shapes
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
@@ -6490,7 +6483,7 @@
             Plotting Shapes:
               name: Plotting Shapes
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
           title: CSD - Drawing in Game Lab
           description_audience: Falmouth Middle School (Mike Harvey)
           description_short: ''
@@ -6684,7 +6677,7 @@
                 the user exactly when the user wants it to. That is what events are
                 for.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
               description_student: ''
               description_teacher: In this online activity, students will have the
                 opportunity to learn how to use events in Play Lab and to apply all
@@ -6725,7 +6718,7 @@
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
@@ -6762,7 +6755,7 @@
             Build a Flappy Game:
               name: Build a Flappy Game
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Screen Out the Mean:
               name: Screen Out the Mean
             Binary Bracelets:
@@ -6904,7 +6897,7 @@
 
                 Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
               description_student: This lesson will guide you through making your
                 very own video game.
               description_teacher: In this online activity, students will have the
@@ -6981,7 +6974,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
             For Loops in Bee:
@@ -7122,7 +7115,7 @@
                 to apply. Students will review basic algorithms, debugging, `repeat`
                 loops, conditionals, `while` loops, and functions.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
               description_student: Practice making games to share with your friends
                 and family.
               description_teacher: This lesson features Play Lab, a platform where
@@ -7255,7 +7248,7 @@
                 and easier to read. After guided puzzles, students will end in a freeplay
                 level to show what they have learned and create their own designs.
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
               description_student: Soon you will learn about making characters interact
                 in a game using variables!
               description_teacher: Students will get further practice with variables
@@ -7757,7 +7750,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
             For Loops in Bee:
@@ -7839,7 +7832,7 @@
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Spelling Bee:
               name: Ape Sapiente
           title: ''
@@ -7978,6 +7971,10 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -8026,7 +8023,7 @@
             Determine the Concept:
               name: Determine the Concept
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -8080,7 +8077,7 @@
             Digital Citizenship:
               name: Cittadinanza Digitale
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             'Unplugged: Binary':
               name: Binario
             Artist Binary:
@@ -8152,7 +8149,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             'For Loops: For Loop Fun':
               name: 'For Loops: For Loop Fun'
             For Loops in Bee:
@@ -8244,7 +8241,7 @@
             Determine the Concept:
               name: Determine the Concept
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -8296,7 +8293,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
             For Loops in Bee:
@@ -8542,6 +8539,26 @@
             Minecraft Hour of Code:
               name: L'Ora del Codice con Minecraft
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''

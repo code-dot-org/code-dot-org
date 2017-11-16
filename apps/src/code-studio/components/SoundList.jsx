@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import SoundListEntry from './SoundListEntry';
-import Sounds from '../../Sounds';
 import {searchAssets} from '../assets/searchAssets';
 import soundLibrary from '../soundLibrary.json';
 
@@ -20,12 +19,9 @@ export default class SoundList extends React.Component {
     assetChosen: PropTypes.func.isRequired,
     search: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-    selectedSound: PropTypes.object.isRequired
+    selectedSound: PropTypes.object.isRequired,
+    soundsRegistry: PropTypes.object.isRequired,
   };
-
-  componentWillMount() {
-    this.sounds = new Sounds();
-  }
 
   getMatches(searchQuery) {
     // Sound library does not use pagination so give a range from 0 - 400
@@ -43,7 +39,7 @@ export default class SoundList extends React.Component {
           assetChosen={this.props.assetChosen}
           soundMetadata={sound}
           isSelected={isSelected}
-          soundsRegistry={this.sounds}
+          soundsRegistry={this.props.soundsRegistry}
         />
       );
     });

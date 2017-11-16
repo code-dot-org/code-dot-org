@@ -35,6 +35,8 @@ en-GB:
       AppLab Intro 2 - add onEvent_callout:
         onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: Click here when you're done!
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -269,6 +271,12 @@ en-GB:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -454,7 +462,7 @@ en-GB:
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for the Agent to help get you through the levels.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over.
+        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace and add code that you want to run again and again.
       MC_HOC_2017_04_Cole_callout:
         MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
       MC_HOC_2017_04_Kiki_callout:
@@ -790,6 +798,9 @@ en-GB:
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
       courseD_bee_conditionals_challenge3_callout:

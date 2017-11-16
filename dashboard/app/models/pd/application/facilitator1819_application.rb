@@ -59,11 +59,6 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
-    OTHER = 'Other'.freeze
-    OTHER_PLEASE_LIST = 'Other (Please List):'
-    YES = 'Yes'.freeze
-    NO = 'No'.freeze
-    NONE = 'None'.freeze
     GRADES = [
       'Pre-K'.freeze,
       'Kindergarten'.freeze,
@@ -87,27 +82,10 @@ module Pd::Application
 
     def self.options
       {
-        title: %w(Mr. Mrs. Ms. Dr.),
-
-        state: get_all_states_with_dc.to_h.values,
-
-        gender_identity: [
-          'Female',
-          'Male',
-          OTHER,
-          'Prefer not to answer'
-        ],
-
-        race: [
-          'White',
-          'Black or African American',
-          'Hispanic or Latino',
-          'Asian',
-          'Native Hawaiian or other Pacific Islander',
-          'American Indian/Alaska Native',
-          OTHER,
-          'Prefer not to say'
-        ],
+        title: COMMON_OPTIONS[:title],
+        state: COMMON_OPTIONS[:state],
+        gender_identity: COMMON_OPTIONS[:gender_identity],
+        race: COMMON_OPTIONS[:race],
 
         institution_type: [
           'School district',
@@ -420,12 +398,31 @@ module Pd::Application
       ]
     end
 
+    # Filter out extraneous answers, based on selected program (course)
+    def self.filtered_labels(course)
+      labels_to_remove = (course == 'csf' ?
+        [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
+        : # csd / csp
+        [:csf_availability, :csf_partial_attendance_reason]
+      )
+
+      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
     # @override
-    def self.csv_header
+    # Filter out extraneous answers, based on selected program (course)
+    def full_answers
+      super.slice(*self.class.filtered_labels(course).keys)
+    end
+
+    # @override
+    def self.csv_header(course)
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        csv << ALL_LABELS_WITH_OVERRIDES.values.map {|l| markdown.render(l)}
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns.push :Status, :Notes
+        csv << columns
       end
     end
 
@@ -433,7 +430,9 @@ module Pd::Application
     def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
-        csv << ALL_LABELS.keys.map {|k| answers[k]}
+        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row.push status, notes, regional_partner_name
+        csv << row
       end
     end
 

@@ -3680,9 +3680,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the torch.
+      Function intro Ryan_instruction: Χρησιμοποίησε δύο φορές τη συνάρτηση "χτίσε
+        γέφυρα" για να φτιάξεις ένα δρόμο μέχρι τον πυρσό.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4102,94 +4101,81 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
-        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
-        the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN2_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_2017_01_RETRY_instruction: 'Μετακίνησε τον Agent στην πλάκα πίεσης και,
+        στη συνέχεια, πάτησε "Εκτέλεση" και χρησιμοποίησε τα πλήκτρα πίεσης για να
+        μετακινήσεις τον παίκτη έξω από το σπίτι, ώστε να συλλέξει το σεντούκι. '
+      MC_HOC_2017_02_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_02_Cole_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης, ώστε
+        ο παίκτης {currentPlayerName} να μπορεί να φτάσει στο χάρτη. "
+      MC_HOC_2017_02_Kiki_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης και,
+        στη συνέχεια, μετακίνησε τον παίκτη στο πορτοκαλί τετράγωνο."
+      MC_HOC_2017_02_Will_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_03_Cole_instruction: "Χρησιμοποίησε κώδικα για να βάλεις τον Agent
+        να ανοίξει την πύλη. "
+      MC_HOC_2017_03_Kiki_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_04_instruction: "Άλλαξε το βρόχο από το τελευταίο παζλ για να βοηθήσεις
+        τον Agent να φτιάξει δρόμο πάνω από το πιο πλατύ κομμάτι αυτού του ποταμιού."
+      MC_HOC_2017_04POINT5_Cole_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_04POINT5_RYAN_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_04_Cole_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_04_Kiki_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_05_instruction: "Χρησιμοποίησε μια συνάρτηση για να βοηθήσεις τον
+        Agent να φτάσει στην πλάκα πίεσης."
+      MC_HOC_2017_05_Cole_instruction: "Μετακίνησε τον παίκτη στο φτυάρι."
+      MC_HOC_2017_05_Josh_instruction: "Μετακίνησε τον παίκτη στο φτυάρι."
+      MC_HOC_2017_05_Kiki_instruction: "Μετακίνησε τον παίκτη στο πορτοκαλί τετράγωνο."
+      MC_HOC_2017_06_Cole_instruction: "Φτιάξε αυτόν τον κώδικα για να χτίσει ο Agent
+        μια γέφυρα πάνω από αυτό το ποτάμι."
+      MC_HOC_2017_06_Josh_instruction: "Φτιάξε αυτόν τον κώδικα για να βοηθήσεις τον
+        Agent να χτίσει μια γέφυρα πάνω από αυτό το ποτάμι."
+      MC_HOC_2017_06_Kiki_instruction: "Φτιάξε αυτόν τον κώδικα για να βοηθήσεις τον
+        Agent να χτίσει μια γέφυρα πάνω από αυτό το ποτάμι."
+      MC_HOC_2017_07_Cole_instruction: "Κατάστρεψε τον πάγο και μετακίνησε τον παίκτη
+        {currentPlayerName} στο Βαγονέτο."
+      MC_HOC_2017_07_Kiki_instruction: "Χρησιμοποίησε μια συνάρτηση για να ανοίξεις
+        το δρόμο προς το πορτοκαλί τετράγωνο."
+      MC_HOC_2017_07a_Kiki_instruction: "Άνοιξε το δρόμο προς το πορτοκαλί τετράγωνο."
+      MC_HOC_2017_08_Cole_instruction: "Άλλαξε την παρεχόμενη συνάρτηση για να λειτουργήσει
+        σε αυτήν τη διάπλαση."
+      MC_HOC_2017_08_Kiki_instruction: "Άλλαξε τη συνάρτηση για να λειτουργήσει σε
+        αυτό το παζλ."
+      MC_HOC_2017_08_RY_instruction: "Χρησιμοποίησε τις συναρτήσεις για να βρεις τρόπο
+        να περάσεις από τη λάβα."
+      MC_HOC_2017_08_Will_instruction: "Χρησιμοποίησε τις συναρτήσεις για να βρεις
+        τρόπο να περάσεις από τη λάβα."
+      MC_HOC_2017_09_Cole_instruction: "Προγραμμάτισε τον Agent να ανοίξει δρόμο για
+        τον παίκτη."
+      MC_HOC_2017_09_Kiki_instruction: "Προγραμμάτισε τον Agent να ανοίξει δρόμο για
+        τον παίκτη και να φτάσει στην πλάκα πίεσης."
+      MC_HOC_2017_10_Cole_instruction: "Δημιούργησε μια συνάρτηση για να σε βοηθήσει
+        να ολοκληρώσεις αυτό το βαγονέτο."
+      MC_HOC_2017_10_Cole_old_instruction: "Δημιούργησε μια συνάρτηση για να σε βοηθήσει
+        να ολοκληρώσεις αυτό το βαγονέτο."
+      MC_HOC_2017_10_Kiki_instruction: "Δημιούργησε μια συνάρτηση για να σε βοηθήσει
+        να ολοκληρώσεις αυτό το βαγονέτο."
+      MC_HOC_2017_10_RETRY_instruction: "Δημιούργησε μια συνάρτηση για να σε βοηθήσει
+        να ολοκληρώσεις αυτό το βαγονέτο."
+      MC_HOC_2017_10_RYAN_instruction: "Δημιούργησε μια συνάρτηση για να σε βοηθήσει
+        να ολοκληρώσεις αυτό το βαγονέτο."
+      MC_HOC_2017_10_RYAN2_instruction: "Δημιούργησε μια συνάρτηση για να σε βοηθήσει
+        να ολοκληρώσεις αυτό το βαγονέτο."
+      MC_HOC_2017_13_Cole_instruction: "**Ελεύθερο παιχνίδι:**  Ώρα να εξερευνήσεις
+        μόνος σου!"
+      MC_HOC_2017_4.5v2_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
+      MC_HOC_2017_Ali_instruction: "Χρησιμοποίησε τις συναρτήσεις για να βρεις τρόπο
+        να περάσεις από τη λάβα."
+      MC_HOC_2017_FP10x10_instruction: "**Ελεύθερο παιχνίδι:** Μπορείς να καταφέρεις
+        να συλλέξεις όλα τα διαμάντια σε αυτό το επίπεδο; "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Ελεύθερο παιχνίδι:** Μπορείς να καταφέρεις
+        να συλλέξεις όλα τα διαμάντια σε αυτό το επίπεδο; "
+      MC_HOC_2017_FP20x20_instruction: "**Ελεύθερο παιχνίδι:**  Ώρα να εξερευνήσεις
+        μόνος σου!"
+      MC_HOC_2017_Ryan_03_instruction: "Χρησιμοποίησε τώρα βρόχους για να βοηθήσεις
+        τον Agent να χτίσει μια γέφυρα πάνω από το ποτάμι τοποθετώντας κύβους στο
+        νερό."
+      MC_HOC_2017_Ryan_05_instruction: "Κατάστρεψε αυτούς τους κάκτους, ώστε να μπορέσει
+        ο παίκτης να φτάσει στο στόχο."
+      MC_HOC_Kiki_02_instruction: "Μετακίνησε τον Agent στην πλάκα πίεσης."
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4559,6 +4545,9 @@
         το!"
       New Infinity Project_instruction: "Δημιουργήστε κάτι που σας αρέσει και μοιραστείτε
         το!"
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -7127,6 +7116,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -7664,6 +7656,9 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -8498,9 +8493,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

@@ -35,6 +35,8 @@ is:
       AppLab Intro 2 - add onEvent_callout:
         onEventFirstTime: Smelltu á og dragðu "onEvent" kubb út á vinnusvæðið hægra megin
         setScreenFirstTime: Smelltu og dragðu inn í plássið í "onEvent" kubbnum
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: Smelltu hér þegar þetta er tilbúið!
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -269,6 +271,12 @@ is:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Hér er kóðinn
         CSD_U3_rect_c2: Dragðu þennan kubb yfir á kóðasvæðið.
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Skilgreindu startGame hér
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Skilgreindu movePlayer() hér
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -460,7 +468,7 @@ is:
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Smelltu þessu á vinnusvæðið og bættu við kóða sem á að endurtaka aftur og aftur!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit them!
+        MC_HOC_2017_06_Cole_1: Þú getur ekki fjarlægt þessa kubba, en þú getur breytt þeim!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Umbinn getur svifið yfir hraun, en leikmaðurinn ekki!  '
       MC_HOC_2017_08_Will_callout:
@@ -569,12 +577,12 @@ is:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
       SG Add Subgoals practice_callout: [ ]
       SG U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Dragðu athugasemdakubb héðan og inn í kóðann þinn
       SG U3L2 Using Simple Commands part 1_callout: [ ]
       SG U3L2 Using Simple Commands_callout: [ ]
       SG U3L2_Add-subgoals_callout: [ ]
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: Aðgerðirnar penUp og penDown er nú hér ef þú vilt nota þær.
+        pen_functions: Aðgerðirnar penUp og penDown eru nú hér ef þú vilt nota þær.
         goals_tab: dragðu markmið út héðan
       SG U3L2_TurtleSquare_right_callout: [ ]
       SGU3L2A Introducing Subgoals_callout:
@@ -606,7 +614,7 @@ is:
       U3L05_3x3GridEfficiencyChallenge_callout: [ ]
       U3L05_draw3x3GridEfficiently_callout: [ ]
       U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Dragðu athugasemdakubb héðan og inn í kóðann þinn
       U3L2 Using Simple Commands (no tooltips)_callout: [ ]
       U3L2 Using Simple Commands_callout: [ ]
       U3L2_Turtle3by3Grid_callout: [ ]
@@ -685,7 +693,7 @@ is:
         gradek_adventurer_loops2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: Click here to watch the code run!
+        courseA_collector_preLoops1_1: Smelltu hér til að sjá kóðann keyra!
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseA_collector_preLoops3_callout:
@@ -790,6 +798,9 @@ is:
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
+        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Notaðu þessa lykkju til að safna öllum blómasafanum (eða hunangi) frá einu blómi (eða búi).
       courseD_bee_conditionals_challenge3_callout:

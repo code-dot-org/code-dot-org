@@ -7,12 +7,28 @@ import i18n from "@cdo/locale";
 import { styles } from './census2017/censusFormStyles';
 import { COUNTRIES } from '../geographyConstants';
 
+const singleLineLayoutStyles = {
+  display: "table-cell",
+  width: 210,
+  verticalAlign: "middle",
+  minHeight: 42,
+  fontSize: 13,
+  fontFamily: '"Gotham 4r", sans-serif',
+  color: "#333",
+  padding: 0,
+};
+const singleLineContainerStyles = {
+  display: "table",
+  width: "100%",
+};
+
 export default class CountryAutocompleteDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func,
     showErrorMsg: PropTypes.bool,
-    required: PropTypes.bool,
-    value: PropTypes.string
+    showRequiredIndicator: PropTypes.bool,
+    value: PropTypes.string,
+    singleLineLayout: PropTypes.bool,
   };
 
   handleChange = (event) => {
@@ -20,13 +36,15 @@ export default class CountryAutocompleteDropdown extends Component {
   }
 
   render() {
-    const {required, showErrorMsg, value} = this.props;
+    const {showRequiredIndicator, showErrorMsg, value, singleLineLayout} = this.props;
 
+    const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
+    const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
     return (
-      <div>
-        <div style={styles.question}>
-          {i18n.schoolCountry()}
-          {required && (
+      <div style={containerStyle}>
+        <div style={questionStyle}>
+          {singleLineLayout ? i18n.country() : i18n.schoolCountry()}
+          {showRequiredIndicator && (
             <span style={styles.asterisk}> *</span>
           )}
           {showErrorMsg && (

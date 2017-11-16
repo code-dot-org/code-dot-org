@@ -747,12 +747,19 @@ zh-CN:
     create: "创建项目"
     create_a_project: '创建一个新项目：'
     new: "新建"
+    new_buttons:
+      artist: "小艺术家"
+      playlab: "游戏实验室"
+      applab: "应用实验室"
+      gamelab: "游戏实验室"
+      weblab: "网站实验室 （测试版）"
+    new_buttons_header: "创建一个新项目"
     rename: "重命名"
     save: "保存​​"
     delete: "刪除"
     import: "导入"
     share_link_import_bad_link_header: "分享的链接无法识别"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: 无法导入共享链接。请确保这个链接是来源于《我的世界：代理人关卡》，并且完整复制了整个链接。
     share_link_import_error_header: "出错了。"
     share_link_import_error_body: "导入该共享链接时出错。请再试一次。"
     exit: "返回课程"

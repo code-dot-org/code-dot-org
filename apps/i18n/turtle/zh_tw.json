@@ -75,7 +75,7 @@
   "penUp": "停筆",
   "reinfFeedbackMsg": "這是你的畫作！留下來再創作，或者繼續到下一關。",
   "setAlpha": "透明值設置",
-  "setCharacter": "set character to {character}",
+  "setCharacter": "將角色設定為 {character}",
   "setColour": "顏色設為",
   "setPattern": "圖案設置",
   "setWidth": "設定寬度",

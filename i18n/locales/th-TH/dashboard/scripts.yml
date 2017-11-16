@@ -3381,6 +3381,8 @@ th:
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -6111,7 +6113,7 @@ th:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
-          title: CSP Unit 3 - Intro to Programming
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -6181,7 +6183,11 @@ th:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
-          title: Intro to App Lab
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
+          title: Intro to App Lab (Beta)
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of creative projects.
@@ -6734,6 +6740,26 @@ th:
             Minecraft Hour of Code:
               name: ชั่วโมงแห่งการโค้ดด้วย Minecraft
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: Minecraft is back with a brand new activity for Hour of Code!
+          description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''

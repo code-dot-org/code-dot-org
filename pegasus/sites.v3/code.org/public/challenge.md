@@ -4,29 +4,56 @@ theme: responsive
 style_min: true
 ---
 
-# Join the Code.org #HourOfCode Challenge!
+# Win a celebrity chat for your class!
 
-### Submit your classroom's best creation and tag one of our special guests for a chance to win a 10-minute video chat with them!
-**We'll be announcing the special guests soon...stay tuned!**
+### Submit a creation made on Code.org and tag one of our special guests for a chance to win a 10-minute video chat with them!
 
-## How do I participate?
-It's easy to get involved and win a classroom video chat with a special guest! 
 
-**Step one**: do an hour of code! 
+<%= view :three_circles, circles: [ {img: '/images/fit-300/steph-curry.png', text: '<a href="#lookingfor">Stephen Curry</a><br>[Twitter: @StephenCurry30](https://twitter.com/intent/tweet?text=@stephencurry30)<br>Facebook: @StephenCurryOfficial<br>Instagram: @stephencurry30'}, {img: '/images/fit-300/sheryl-sandberg.png', text: '<a href="#lookingfor">Sheryl Sandberg</a><br>Facebook: @Sheryl<br>Instagram: @sherylsandberg'}, {img: '/images/fit-300/russell-wilson.png', text: '<a href="#lookingfor">Russell Wilson</a><br>[Twitter: @DangeRussWilson](https://twitter.com/intent/tweet?text=@dangerusswilson)<br>Facebook: @DangerRussWilson<br>Instagram: @dangerusswilson'}] %>
 
-*If you haven't signed up to host an hour of code with your classroom yet, click the button below to get started.*
+<br>
 
-[<button>Sign up today!</button>](https://hourofcode.com)
+<%= view :three_circles, circles: [ {img: '/images/fit-300/susan-wojcicki.png', text: '<a href="#lookingfor">Susan Wojcicki</a><br>[Twitter: @SusanWojcicki](https://twitter.com/intent/tweet?text=@susanwojcicki)'}, {img: '/images/fit-300/stacy-plays.png', text: '<a href="#lookingfor">StacyPlays</a><br>[Twitter: @stacysays](https://twitter.com/intent/tweet?text=@stacysays)<br>Facebook: @stacyhinojosa'}, {img: '/images/fit-300/hadi-partovi.png', text: '<a href="#lookingfor">Hadi Partovi</a><br>[Twitter: @hadip](https://twitter.com/intent/tweet?text=@hadip)<br>Facebook: @hadi<br>Instagram: @hadipartovi'}] %>
 
-**Step two**: snap a few pictures of your class during the Hour of Code.
 
-**Step three**: Tweet or publicly post the picture of your class on Twitter, Facebook, or Instagram and include:
+## How do I win?
+Post about your Hour of Code on social media during Computer Science Education Week: Dec. 4-10.
+- Tweet: tag #HourOfCode and your celebrity
+- Facebook: post publicly and tag @Codeorg and your celebrity.
+- Instagram: tag @CodeOrg in the photo,  #HourofCode and your celebrity????
 
-- a link to an awesome Hour of Code creation made on Code.org;
-- the hashtag #HourOfCode;
-- and the @profile of the special guest you want to contact.
+The celebrities will work with Code.org to pick a winner. Increase your chances to win with photos or videos of yourself or your class showing off apps, games, or artwork your students created. This challenge is open to classrooms, after-school clubs, and individual students.
 
-See the <a href="#contestrules">full contest rules</a> below for details on how to enter!
+## Use one of these activities:
+
+<a name="lookingfor"></a>
+## What are they looking for?
+Stephen Curry: Teamwork is so important when you're trying to make it to the NBA finals, and even more important in the classroom.
+
+Sheryl Sandberg:
+
+Russell Wilson:
+
+StacyPlays:
+
+Susan Wojcicki:
+
+Hadi Partovi:
+
+<a name="contestrules"></a>
+## What are the contest rules?
+When submitting your project, tag the special guest you'd like talk to on a video chat. BUT you can only tag one guest per entry. However, you can contact your favorite guest as many times as you want! 
+
+Each entry must include the required tags and content to be considered and must be publicly visible.
+
+Check out this sample tweet for inspiration.
+
+<img src="/images/fit-800/hoc-challenge-tweet.png" class ="col-95">
+
+
+## How do you get the project link to share? 
+When you finish one of our Hour of Code activities, on the last level you'll receive a share link. Use that link when you're communicating with one of our special guests.
+
 
 ### Examples of student creations
 [col-33]
@@ -54,16 +81,6 @@ See the <a href="#contestrules">full contest rules</a> below for details on how 
 [/col-33]
 
 <p style="clear:both"> </p>
-<a name="contestrules"></a>
-## What are the contest rules?
-The rules are pretty easy. When submitting your project, you tag the special guest you'd like talk to on a video chat. BUT you can only tag one guest per entry. However, you can submit the same project multiple times tagging a different guest in each post. 
-
-- Each entry must include the required tags and content to be considered and must be publicly visible.
-- Feel free to enter as many projects and as many times as you want on Twitter, Facebook, or Instagram!
-
-Check out this sample tweet for inspiration.
-
-<img src="/images/infographics/fit-800/hoc-challenge-tweet2.png" class ="col-95">
 
 
 <div style="clear: both;"></div>

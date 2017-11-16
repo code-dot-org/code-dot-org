@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.26":
-  version "1.6.26"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.26.tgz#14677c90f5ed6a0ae58ae0c2c9e1ea4cc4f4626e"
+"@code-dot-org/blockly@1.6.28":
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.28.tgz#5dff3ea371b63fb3635e8f5f08f597bba0a1af59"
 
 "@code-dot-org/bramble@0.1.22":
   version "0.1.22"
@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#3b5a5150afcd282a030dadab2b9775672d303548":
-  version "0.0.16"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/3b5a5150afcd282a030dadab2b9775672d303548"
+"@code-dot-org/craft@github:code-dot-org/craft#97a9f9e86e6473d7314ed903a3f16afe1beb2a29":
+  version "0.0.20"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/97a9f9e86e6473d7314ed903a3f16afe1beb2a29"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.1":
   version "0.11.1-cdo.1"
@@ -79,9 +79,9 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@^1.3.5":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.5.tgz#fef6dbd3f472aac9cb175a147385dd6fd6a27ebb"
+"@code-dot-org/js-interpreter@^1.3.6":
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.6.tgz#baecfa3f802a7d15b3be86c3b9696517ece33786"
   dependencies:
     yargs "^7.0.1"
 
@@ -6555,6 +6555,10 @@ object-assign@^3.0.0:
 object-component@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/object-component/-/object-component-0.0.3.tgz#f0c69aa50efc95b866c186f400a33769cb2f1291"
+
+object-fit-images@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/object-fit-images/-/object-fit-images-3.2.3.tgz#4089f6d0070a3b5563d3c1ab6f1b28d61331f0ac"
 
 object-is@^1.0.1:
   version "1.0.1"

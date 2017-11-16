@@ -1,19 +1,34 @@
 import React, {PropTypes} from 'react';
+import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
+import {StatusColors} from './constants';
 import _ from 'lodash';
 
 const styles = {
   table: {
     width: '100%',
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
   }
 };
 
 export default class QuickViewTable extends React.Component {
   static propTypes = {
     path: PropTypes.string.isRequired,
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    statusFilter: PropTypes.string
   };
 
   static contextTypes = {
@@ -58,10 +73,20 @@ export default class QuickViewTable extends React.Component {
         },
         transforms: [
           (status) => ({
-            style: {
-              backgroundColor: this.getViewColor(status),
-              padding: '5px'
-            }
+            style: {...styles.statusCellCommon, ...styles.statusCell[status]}
+          })
+        ]
+      }
+    },{
+      property: 'notes',
+      header: {
+        label: 'Notes'
+      },
+      cell: {
+        format: this.formatNotesTooltip,
+        transforms: [
+          () => ({
+            style: {...styles.notesCell}
           })
         ]
       }
@@ -77,15 +102,29 @@ export default class QuickViewTable extends React.Component {
     return columns;
   }
 
-  getViewColor = (status) => {
-    switch (status) {
-      case 'unreviewed': return color.charcoal;
-      case 'pending': return color.orange;
-      case 'accepted': return color.level_perfect;
-      case 'declined': return color.red;
-      case 'waitlisted': return color.level_passed;
-    }
-  }
+  formatNotesTooltip = (notes) => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
 
   formatViewButton = (id) => {
     return (
@@ -104,13 +143,17 @@ export default class QuickViewTable extends React.Component {
     this.context.router.push(`/${this.props.path}/${id}`);
   };
 
+  constructRows() {
+    return this.props.statusFilter ? this.props.data.filter(row => row.status === this.props.statusFilter) : this.props.data;
+  }
+
   render() {
-    const rows = this.props.data;
+    const rows = this.constructRows();
     const columns = this.constructColumns();
 
     return (
       <Table.Provider
-        className="pure-table pure-table-striped"
+        className="pure-table table-striped"
         columns={columns}
         style={styles.table}
       >

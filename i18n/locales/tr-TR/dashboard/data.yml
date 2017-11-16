@@ -64,7 +64,7 @@ tr:
         'maze_2_5': "Sadece 2 blok kullanarak yeşil domuza ulaşabileceğim bir yol var. Bulabilir misin?"
         'maze_2_6': "Sadece üç blok kullanarak beni yeşil işgalciye ulaştırmaya çalış."
         'maze_2_7': "En az sayıda blok kullanarak bu kötü domuzcuğu ortadan kaldırmama yardım et. Birden fazla \"...defa tekrar et \" bloğu kullanmayı dene."
-        'maze_2_8': "Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Yapbozu 3 defa tekrar eden \"tekrar\" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki \"tekrar\" bloğunun içine yerleştir: oynat, oynat, dön."
+        'maze_2_8': "Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Bu bulmacayı 3 defa tekrar eden \"tekrar\" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki \"tekrar\" bloğunun içine yerleştir: ilerle, ilerle, dön."
         'maze_2_9': "Tamam, yeni \"e kadar tekrarla\" bloğunu dene. Bu, ben yeşil domuza ulaşana kadar tekrarlayacak."
         'maze_2_10': "Tamam, pratik için son kez. Bunu sadece 4 blok kullanarak çözebilir misin?"
         'maze_2_11': "Değerli kişi. Ben zombi. Ben açım. Ayçiçeklerini almam gerekli. Beni onlara sadece 5 blok kullanarak götürebilir misin?"
@@ -77,7 +77,7 @@ tr:
         'maze_2_18': "\"Eğer -değilse\" bloğunun bir örneği daha, ilk denemede doğru yapabilir misin?"
         'maze_2_19': "Daha karmaşık bir labirenti sadece 3 blok ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaparsan, uzunluğu ne olursa olsun her kıvrımlı yolda yürüyebilirim."
         'turtle_1_1': "Merhaba , ben bir sanatçıyım. İstediğin herhangi bir şeyi çizmek için beni programlayabilirsin. Resimdeki gri çizgileri çizdirmek için bir kaç blok kullan."
-        'turtle_1_2': "Şimdi bir kare çiz. Not: Bunu \"rengi belirle\" bloğununda en sevdiğin rengi seçerek yapabilirsin."
+        'turtle_1_2': "Şimdi bir kare çiz. Not: Bunu \"rengi belirle\" bloğunda en sevdiğin rengi seçerek yapabilirsin."
         'turtle_1_3': "Sadece 3 blok kullanarak bir kare yapın."
         'turtle_1_4': "Her seferinde farklı bir renk alan \"rastgele renk\" seçeneğini kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar uzağa dönmeniz gerektiğini dönüş blogundaki numaraya tıklayarak bulmanız gerek."
         'turtle_1_5': "Şimdi, uygulama için bir üçgen ve sonra bir zarf çizmek için bir kare çizin."
@@ -426,6 +426,7 @@ tr:
         'csd_concept_binary_data': 'How Computers Work: Binary & Data'
         'csd_concept_search': 'Arama nasıl çalışır'
         'csd_external_amazon_data': 'How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives'
+        'csd_external_waze_data': 'Why Are So Many Users Obsessed With Waze?'
         'csd_gamelab_animation_tab': 'Animasyon sekmesi'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
@@ -534,6 +535,13 @@ tr:
         'mc_2017_agent_intro': 'Minecraft Hour of Code - The Agent'
         'mc_2017_repeat': 'Minecraft Hour of Code - Repeat Loops'
         'mc_2017_functions': 'Minecraft Hour of Code - Functions'
+        'mc_2017_congratulations': 'Minecraft Kodlama Saati - Tebrikler'
+        'mc_2017_puzzle_1': 'Minecraft Hour of Code - The Agent'
+        'mc_2017_puzzle_3': 'Minecraft Hour of Code - Repeat Loops'
+        'mc_2017_puzzle_8': 'Minecraft Hour of Code - Functions'
+        'mc_2017_puzzle_12': 'Minecraft Hour of Code - Freeplay'
+        'hint_videos_d_11_3_first': 'Hint Videos: D.11.3 First'
+        'hint_videos_d_11_3_last': 'Hint Videos: D.11.3 Last'
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

@@ -1003,17 +1003,24 @@
     create: Criar projeto
     create_a_project: 'Cria um projeto novo:'
     new: Criar novo
+    new_buttons:
+      artist: Artista
+      playlab: Laboratório
+      applab: Laboratório de aplicações
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: Renomear
     save: Guardar
     delete: Apagar
-    import: Import
-    share_link_import_bad_link_header: Share link not recognized
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: Something went wrong.
-    share_link_import_error_body: There was a problem importing that share link. Please
-      try again.
+    import: Importar
+    share_link_import_bad_link_header: Ligação de partilha não reconhecida
+    share_link_import_bad_link_body: 'Não foi possível importar a ligação de partilha.
+      Certifica-te de que estás a utilizar uma ligação do quebra-cabeças Minecraft:
+      Agent e de que copiaste a ligação completa.'
+    share_link_import_error_header: Algo correu mal.
+    share_link_import_error_body: Ocorreu um problema ao importar a ligação de partilha.
+      Tenta de novo.
     exit: Voltar ao curso
     my_projects: Os meus projetos
     project_gallery: Projetos

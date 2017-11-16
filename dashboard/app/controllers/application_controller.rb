@@ -225,12 +225,6 @@ class ApplicationController < ActionController::Base
           }
         )
       end
-
-      if options[:get_hint_usage]
-        response[:hints_used] =
-          HintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count +
-          AuthoredHintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count
-      end
     end
 
     response[:activity_id] = options[:activity] && options[:activity].id
