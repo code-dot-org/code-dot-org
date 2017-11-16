@@ -17,7 +17,7 @@
 # Indexes
 #
 #  index_circuit_playground_applications_on_code_id           (circuit_playground_discount_code_id)
-#  index_circuit_playground_discount_applications_on_user_id  (user_id)
+#  index_circuit_playground_discount_applications_on_user_id  (user_id) UNIQUE
 #
 
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
