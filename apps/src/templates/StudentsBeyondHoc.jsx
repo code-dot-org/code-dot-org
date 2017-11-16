@@ -11,6 +11,10 @@ const styles = {
   heading: {
     width: '100%',
   },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5,
+  },
   spacer: {
     height: 20
   }
@@ -27,9 +31,13 @@ export default class StudentsBeyondHoc extends Component {
   };
 
   render() {
-
     const { isRtl, responsive, completedTutorialType, userType, isEnglish, MCShareLink } = this.props;
+
     const signedIn = (userType === "teacher" || userType === "student");
+
+    const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
+
+    const headingStyle = desktop ? styles.heading : styles.mobileHeading;
 
     var specificCardSet;
     switch (true) {
@@ -83,7 +91,7 @@ export default class StudentsBeyondHoc extends Component {
 
     return (
       <div style={styles.container}>
-        <h1 style={styles.heading}>
+        <h1 style={headingStyle}>
           {heading}
         </h1>
         <VerticalImageResourceCardRow
