@@ -11,7 +11,10 @@ const styles = {
   },
   clear: {
     clear: 'both'
-  }
+  },
+  spacer: {
+    height: 50,
+  },
 };
 
 export default class TeachersBeyondHoc extends Component {
@@ -67,6 +70,9 @@ export default class TeachersBeyondHoc extends Component {
           )}
         </ResourceCardResponsiveContainer>
         <div style={styles.clear}/>
+        {!desktop && (
+          <div style={styles.spacer}/>
+        )}
       </div>
     );
   }
