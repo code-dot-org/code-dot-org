@@ -299,6 +299,13 @@ Resources:
       Targets:
       - Arn: !ImportValue SlackEvent
         Id: HealthEventRuleTarget
+  HealthEventPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !ImportValue SlackEvent
+      Action: 'lambda:InvokeFunction'
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt HealthEventRule.Arn
   ClassroomScaleUp:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
