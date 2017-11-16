@@ -14,7 +14,6 @@ const styles = {
   container: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxWidth: 970
   },
 };
 
