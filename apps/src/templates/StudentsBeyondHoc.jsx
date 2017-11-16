@@ -11,6 +11,9 @@ const styles = {
   heading: {
     width: '100%',
   },
+  spacer: {
+    height: 20
+  }
 };
 
 export default class StudentsBeyondHoc extends Component {
@@ -93,9 +96,10 @@ export default class StudentsBeyondHoc extends Component {
             isRtl={isRtl}
             responsive={responsive}
             showContainer={false}
-            hideBottomMargin={false}
+            hideBottomMargin={true}
           />
         )}
+        <div style={styles.spacer}/>
         <LocalClassActionBlock
           isRtl={isRtl}
           responsive={responsive}
