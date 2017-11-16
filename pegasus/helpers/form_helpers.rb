@@ -31,6 +31,11 @@ def insert_or_upsert_form(kind, data, options={})
     data[:name_s] ||= dashboard_user[:name]
   end
 
+  # The DB cannot store utf8mb4 characters so make sure they are all stripped out.
+  data.each do |k, v|
+    data[k] = v.strip_utf8mb4 if v.is_a? String
+  end
+
   data = validate_form(kind, data, Pegasus.logger)
 
   timestamp = DateTime.now
