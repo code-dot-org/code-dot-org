@@ -33,7 +33,7 @@ const styles = {
     overflow: 'hidden'
   },
   titleAllowWrap: {
-    lineHeight: '110%'
+    lineHeight: '1.1'
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
