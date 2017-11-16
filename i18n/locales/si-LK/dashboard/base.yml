@@ -750,6 +750,13 @@ si:
     create: "ව්යාපෘති නිර්මාණය"
     create_a_project: 'නව ව්යාපෘතියක් සාදන්න:'
     new: "අලුතෙන් තනන්න"
+    new_buttons:
+      artist: "කලාකරු"
+      playlab: "ක්‍රීඩා පරීක්ෂණාගාරය"
+      applab: "මෘදුකාංග විද්‍යාගාරය"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "නැවත නම් කරන්න"
     save: "සුරකින්න"
     delete: "මකන්න"

@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
 import * as color from "../../util/color";
+import Sounds from '../../Sounds';
 
 const SOUND_CATEGORIES = {
   category_animals: 'Animals',
@@ -73,6 +74,10 @@ export default class SoundLibrary extends React.Component {
     selectedSound: {}
   };
 
+  componentWillMount() {
+    this.sounds = Sounds.getSingleton();
+  }
+
   search = (e) => {
     this.setState({
       search: e.target.value
@@ -86,6 +91,7 @@ export default class SoundLibrary extends React.Component {
   };
 
   onClickChoose = () => {
+    this.sounds.stopAllAudio();
     this.props.assetChosen(this.state.selectedSound.sourceUrl);
   };
 
@@ -145,6 +151,7 @@ export default class SoundLibrary extends React.Component {
               search={this.state.search}
               category={this.state.category}
               selectedSound={this.state.selectedSound}
+              soundsRegistry={this.sounds}
             />
             <button
               className={"primary"}

@@ -18,7 +18,6 @@ social:
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
   "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -28,40 +27,37 @@ social:
 
 # Hour of Code! 행사를 운영하는데 가입해 주셔서 감사합니다.
 
-여러분들은 전세계의 학생들에게 Hour of Code를 배워보도록 함으로서 *학생들의 인생을 바꿀 수도 있는 것입니다*, 다음 기간 동안에 <%= campaign_date('full') %>. 우리는 계속해서 새로운 튜토리얼 들과 다른 흥미로운 것을 업데이트할 것입니다. 지금 여러분들에게 필요한 것은?
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-## 1. 널리 알려주세요.
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
-여러분들은 이제 막 Hour of Code 운동에 합류했습니다. 여러분들의 친구들에게 **#HourOfCode** 를 알려주세요.!
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+## 1. Spread the word in your school and community
+
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 새로운 기술들을 배우기 위해서 학교에서만 있을 필요는 없습니다. Invite a local politician or policy maker to visit your school for the Hour of Code. 그렇게 하면 여러분 지역에서 한 시간의 Hour of Code 이후의 컴퓨터과학(정보과학) 수업이 이루어지는데 큰 도움이 될 수 있습니다.
+
+이 [포스터, 배너, 스티커, 동영상 등을](<%= resolve_url('/promote/resources') %>) 여러분의 이벤트에 활용해보세요.
 
 ## 2. 이벤트 행사를 도와줄 수 있는 지역 자원 봉사자 찾기
 
-[자원 봉사자 지도](<%= resolve_url('https://code.org/volunteer/local') %>)를 통해, 여러분의 수업에 함께 참여하거나 원격 비디오 채팅으로 학생들에게 컴퓨터과학(정보과학)으로 가능한 것들에 대해서 이야기하면서, 학생들에게 꿈과 희망을 불어 넣어줄 수 있는 자원 봉사자들을 찾아보세요.
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 2. 학교 전체 행사로 Hour of Code 를 열어달라고 요청하세요.
+## 3. Plan your Hour of Code
 
-교장선생님께 [이 이메일을 보내서](<%= resolve_url('/promote/resources#sample-emails') %>) 학교의 모든 학급이 참여할 수 있도록 도전해보세요.
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
-## 4. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
+# Go beyond an Hour of Code
 
-이 [이메일을](<%= resolve_url('/promote/resources#sample-emails') %>) 여러분 직장의 상사나 CEO에게 보내주세요.
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-## 5. Hour of Code를 여러분의 소속 단체나 커뮤니티에 홍보해 주세요.
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-[지역 단체를 모집하세요.](<%= resolve_url('/promote/resources#sample-emails') %>) 보이/걸 스카우드, 교회, 대학, 재향 군인 단체, 노동 조합 등등 그 이외 어떤 친구들도 좋습니다. 새로운 기술들을 배우기 위해서 학교에서만 있을 필요는 없습니다. 이 [포스터, 배너, 스티커, 동영상 등을](<%= resolve_url('/promote/resources') %>) 여러분의 이벤트에 활용해보세요.
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## 6. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
-
-지역대표, 시의회, 교육위원회, 교육청 등에 [이메일](<%= resolve_url('/promote/resources#sample-emails') %>)을 보내세요. 그리고 그들이 여러분 학교의 Hour of Code 행사를 방문할 수 있도록 초대하세요. 그렇게 하면 여러분 지역에서 한 시간의 Hour of Code 이후의 컴퓨터과학(정보과학) 수업이 이루어지는데 큰 도움이 될 수 있습니다.
-
-## 7. Hour of Code 를 계획하세요.
-
-Hour of Code 활동을 선택한 후, 이 [how-to 가이드를](<%= resolve_url('/how-to') %>) 살펴보세요..
-
-## 8. Go beyond an Hour of Code
-
-Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

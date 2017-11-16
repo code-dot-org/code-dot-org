@@ -1,58 +1,55 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Hieronder vindt u een voorbeeld resolutie die de week van programmeren ondersteunt en de doelstellingen die door de staat en lokale wetgevers kunnen worden gebruikt.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[HUIS, SENAAT, STAAT, LAND OF STAD RESOLUTIE OF BEKENDMAKING ###] - Waarbij de week van programmeren de cruciale rol van programmeren in het transformeren van onze maatschappij en hoe programmeren innovatie en economische mogelijkheden het leven inroept in de spotlights zet;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[HUIS OF SENAAT RESOLUTIE ###]
 
-[DATE]
+[DATUM]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Waarbij programmeren een integraal onderdeel van de moderne cultuur is en de interactie tussen mensen en de wereld om hen heen verandert;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Waarbij programmeren de industrie verandert, nieuwe handelsvelden creëert, innovatie aanstuurt op alle gebieden van de wetenschap, en de productiviteit in gevestigde economische sectoren versterkt;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Waarbij programmeren de informatie technologiesector van onze economie ondersteunt, die een belangrijke bijdrage levert aan de economische output van de Verengde Staten;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Waarbij programmeren een fundamentele wetenschap voor het digitale tijdperk is;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Waarbij de informatie technologiesector uniek is gepositioneerd om te helpen met het economisch herstel door middel van onderzoek en ontwikkeling van nieuwe innovaties;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Waarbij informatica banen een mooi vooruitzicht hebben met meer dan 500.000 open computer posities door heel het land;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Waarbij scholieren de kans aangeboden krijgen om deel te nemen in hoge kwalitatieve programmering activiteiten, die hen blootstelt aan de rijke mogelijkheden die het veld biedt en vaardigheden in kritisch denken biedt die hen gedurende hun hele leven zal dienen;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Waarbij alle leerlingen een grondige voorbereiding in programmeren verdienen, inclusief toegang tot gekwalificeerde leraren, technologie, en naar de leeftijd aangepaste curriculum die nodig is om programmeren op basis- en middelbare scholen te leren;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Waarbij het programmeren onderwijs uitdagingen heeft om te adresseren, inclusief de eisen van programmeerlessen op het voortgezet onderwijs, en het verstrekken van professionele ontwikkeling voor programmering docenten;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Waarbij deelnemen aan een CodeUur evenement tijdens de week van programmeren kan dienen om programmeren te verhelderen en meer studenten aanmoedigt om verder te gaan met programmeren;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Waarbij het gebied van programmeren in aanmerking komt met veel belemmeringen, inclusief het aantrekken van meer participatie van vrouwen en ondervertegenwoordigde minderheden op alle niveaus en branches;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Waarbij Grace Murray Hopper, een van de eerste vrouwen op het gebied van programmeren, nieuwe programmeertalen ontwierp en normen voor computersystemen pionierde die de basis legden voor veel vooruitgang in programmering; en
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Waarbij de week van < % = campaign_date('start-long') % >, ter ere van Grace Hopper's verjaardag, is uitgeroepen tot 'De Week van programmering': nu, daarom, wees het
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Opgelost, dat het [THUIS OF SENAAT, STAAT, LAND, STAD OF SCHOOLBESTUUR]--
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) Ondersteunt de aanwijzing van de week van programmeren (< % = campaign_date('full') %>);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) Moedigt scholen, docenten, ouders en beleidsmakers aan om deel te nemen aan de week van programmeren door de scholieren aan te zetten om ook deel te nemen aan het CodeUur;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) Moedigt scholen, leerkrachten, onderzoekers, universiteiten, ondernemers en beleidsmakers aan om mechanisme voor leerkrachten te introduceren, om professionele ontwikkeling te ontvangen, om duurzame leerervaringen in programmeren in alle opleidingsniveaus te bieden en scholieren aan te moedigen om te worden blootgesteld aan computer wetenschap concepten;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) Moedigt beleidsmakers aan om belemmeringen te verwijderen die voorkomen dat programmering klassen worden gezien als wiskunde of wetenschap lessen als eis voor het diploma;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) Biedt kansen voor vrouwen en ondervertegenwoordigde minderheden in programmeren, onder andere via bestaande programma's,.
 
 <%= view :signup_button %>

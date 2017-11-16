@@ -10,8 +10,20 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortByOptions, TutorialsSortByFieldNames, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
-import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
+import {
+  TutorialsSortByOptions,
+  TutorialsSortByFieldNames,
+  TutorialsOrgName,
+  mobileCheck,
+  DoNotShow,
+  orgNameCodeOrg,
+  orgNameMinecraft
+} from './util';
+import {
+  getResponsiveContainerWidth,
+  isResponsiveCategoryInactive,
+  getResponsiveValue
+} from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
@@ -183,18 +195,18 @@ const TutorialExplorer = React.createClass({
   getSortByFieldName(sortBy, grade) {
     let sortByFieldName;
 
+    const gradeToSortByFieldName = {
+      "all": TutorialsSortByFieldNames.displayweight,
+      "pre": TutorialsSortByFieldNames.displayweight_pre,
+      "2-5": TutorialsSortByFieldNames.displayweight_25,
+      "6-8": TutorialsSortByFieldNames.displayweight_middle,
+      "9+": TutorialsSortByFieldNames.displayweight_high
+    };
+
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
     // right set of data to match the currently-selected grade.
     if (sortBy === TutorialsSortByOptions.displayweight) {
-      if (grade === "all") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight;
-      } else if (grade === "pre" || grade === "2-5") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_k5;
-      } else if (grade === "6-8") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_middle;
-      } else {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_high;
-      }
+      sortByFieldName = gradeToSortByFieldName[grade];
     } else {
       sortByFieldName = TutorialsSortByFieldNames.popularityrank;
     }
@@ -380,8 +392,12 @@ const TutorialExplorer = React.createClass({
         }
 
         // If we are showing an explicit orgname, then filter if it doesn't
-        // match.
-        if (orgName && orgName !== TutorialsOrgName.all && tutorial.orgname !== orgName) {
+        // match.  Make an exception for Minecraft so that it shows when
+        // Code.org is selected.
+        if (orgName &&
+          orgName !== TutorialsOrgName.all &&
+          tutorial.orgname !== orgName &&
+          !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)) {
           return false;
         }
 
@@ -595,19 +611,11 @@ function getFilters({robotics, mobile}) {
         {name: "9+",              text: i18n.filterGrades9()}]},
     { name: "student_experience",
       text: i18n.filterStudentExperience(),
-      headerOnDesktop: false,
-      singleEntry: false,
+      headerOnDesktop: true,
+      singleEntry: true,
       entries: [
         {name: "beginner",        text: i18n.filterStudentExperienceBeginner()},
-        {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()},
-        {name: "experienced",     text: i18n.filterStudentExperienceExperienced()}]},
-    { name: "teacher_experience",
-      text: i18n.filterTeacherExperience(),
-      singleEntry: false,
-      entries: [
-        {name: "beginner",        text: i18n.filterTeacherExperienceBeginner()},
-        {name: "comfortable",     text: i18n.filterTeacherExperienceComfortable()},
-        {name: "experienced",     text: i18n.filterTeacherExperienceExperienced()}]},
+        {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()}]},
     { name: "platform",
       text: i18n.filterPlatform(),
       entries: [
@@ -644,7 +652,6 @@ function getFilters({robotics, mobile}) {
         {name: "other",           text: i18n.filterProgrammingLanguageOther()}]}];
 
   const initialFilters = {
-    teacher_experience: ["beginner"],
     student_experience: ["beginner"],
     grade: ["all"]
   };
@@ -721,7 +728,6 @@ function getUrlParameters(filters, robotics) {
   if (robotics) {
     // The robotics page remains dedicated to robotics activities.
     parametersObject.activity_type = ["robotics"];
-    parametersObject.teacher_experience = ["beginner"];
     parametersObject.student_experience = ["beginner"];
     parametersObject.grade = ["all"];
   }

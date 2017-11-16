@@ -29,7 +29,6 @@ function showHomepage() {
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
   const query = queryString.parse(window.location.search);
-
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
@@ -51,11 +50,10 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingHOCiscoming();
-  let announcementDescription = i18n.announcementDescriptionHOCiscoming();
-  let announcementLink =
-    "https://hourofcode.com/#join";
-  let announcementId = "hoc_is_coming";
+  let announcementHeading = i18n.announcementHeadingFacilitatorApp();
+  let announcementDescription = i18n.announcementDescriptionFacilitatorApp();
+  let announcementLink = "https://code.org/facilitator";
+  let announcementId = "facilitator_app";
   let announcementType = "";
 
   // Optional override of teacher announcement.
@@ -147,11 +145,13 @@ function showHomepage() {
                 id: announcementId
               }
             ]}
+            hocLaunch={homepageData.hoc_launch}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
             isRtl={isRtl}
             queryStringOpen={query['open']}
+            canViewAdvancedTools={homepageData.canViewAdvancedTools}
           />
         )}
         {!isTeacher && (
@@ -161,6 +161,7 @@ function showHomepage() {
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
             isRtl={isRtl}
+            canViewAdvancedTools={homepageData.canViewAdvancedTools}
           />
         )}
       </div>

@@ -3781,16 +3781,16 @@
         vinna."
       MC_HOC_2017_01_Kiki_instruction: Smelltu á "Keyra" til að færa leikmanninn að
         appelsínugula reitnum í húsinu.
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
-        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
-        the chest. "
+      MC_HOC_2017_01_RETRY_instruction: 'Komdu Umbanum til þrýstiplötunnar og smelltu
+        svo á "Keyra". Notaðu örvarlyklana til að færa leikmanninn út úr húsinu og
+        láta hann ná kistunni. '
       MC_HOC_2017_02_instruction: Komdu Umbanum til þrýstihellunnar.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
+      MC_HOC_2017_02_Cole_instruction: "Færðu Umbann að þrýstiplötunni svo að\n{currentPlayerName}
+        komist áleiðis. "
       MC_HOC_2017_02_Kiki_instruction: Komdu Umbanum til þrýstihellunnar og færðu
         svo leikmanninn á appelsínugula reitinn.
       MC_HOC_2017_02_Will_instruction: Komdu Umbanum til þrýstihellunnar.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_03_Cole_instruction: 'Kóðaðu Umbann til að opna hliðið. '
       MC_HOC_2017_03_Kiki_instruction: Komdu Umbanum til þrýstihellunnar.
       MC_HOC_2017_04_instruction: Breyttu lykkjunni úr síðustu þraut til að hjálpa
         Umbanum að gera slóð yfir breiðari hluta þessarar ár.
@@ -3821,7 +3821,7 @@
       MC_HOC_2017_08_Will_instruction: Notaðu föllin til að finna leið yfir hraunið.
       MC_HOC_2017_09_Cole_instruction: Forritaðu Umbann svo hann opni slóð fyrir leikmanninn.
       MC_HOC_2017_09_Kiki_instruction: Forritaðu Umbann svo hann opni slóð fyrir leikmanninn
-        og komast til þrýstihellunnar.
+        og komist til þrýstihellunnar.
       MC_HOC_2017_10_Cole_instruction: Búðu til fall til að hjálpa þér að ljúka þessum
         námuvagni.
       MC_HOC_2017_10_Cole_old_instruction: Búðu til fall til að hjálpa þér að ljúka
@@ -3837,8 +3837,10 @@
       MC_HOC_2017_13_Cole_instruction: "**Frjáls æfing:** Kannaðu heiminn!"
       MC_HOC_2017_4.5v2_instruction: Komdu Umbanum til þrýstihellunnar.
       MC_HOC_2017_Ali_instruction: Notaðu föllin til að finna leið yfir hraunið.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
+      MC_HOC_2017_FP10x10_instruction: "**Frjáls æfing:** Hvernig væri að reyna að
+        ná öllum demöntunum í þessu borði? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Frjáls æfing:** Hvernig væri að reyna
+        að ná öllum demöntunum í þessu borði? "
       MC_HOC_2017_FP20x20_instruction: "**Frjáls æfing:** Kannaðu heiminn!"
       MC_HOC_2017_Ryan_03_instruction: Notaðu nú lykkjur til að hjálpa Umba að byggja
         brú yfir ána með því að setja blokkir í vatnið.
@@ -4159,6 +4161,9 @@
       New Gumball Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Ice Age Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Infinity Project_instruction: Búðu til hvað sem þú vilt og deildu því!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: 'Búðu til leik eftir þínu höfði! Þú stjórnar
         hér: þú getur breytt öllum reglunum, blandað saman íþróttum, notað ímyndunaraflið!
         Smelltu á Ljúka þegar leikurinn er tilbúinn svo að vinir þínir geti prófað
@@ -4529,9 +4534,8 @@
       SG U3L06 Challenge 5 overlapping circles_instruction: "Þessi mynd er búin til
         eingöngu með því að nota dot() og penColor(), en hvernig fáum við hringana
         svona gegnsæja? Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!"
-      SG U3L06 Challenge 6 squiggles_instruction: 'Lestu skjölunina til skipanirnar
-        "arcLeft" (vinstriBogi) og "arcRight" (hægriBogi) og teiknaðu svo línurnar
-        sem sjást. '
+      SG U3L06 Challenge 6 squiggles_instruction: |
+        Lestu skjölunina fyrir skipanirnar "arcLeft" (vinstriBogi) og "arcRight" (hægriBogi) og teiknaðu svo línurnar sem sjást.
       SG U3L06 Challenge 7 smiley face_instruction: Notaðu turnTo() og moveTo() til
         að hjálpa að teikna broskall. (Smelltu til að sjá ítarlegar leiðbeiningar)
       SG U3L06 Challenge 8 make your own_instruction: Búðu til teikningu eftir eigin
@@ -4611,9 +4615,9 @@
       SG U3L08 comments_instruction: Notaðu randomNumber() kubbana til að prófa föllin
         sem þú bjóst til með handahófskennsu inntaki, (Smelltu til að sjá ítarlegar
         leiðbeiningar)
-      SG U3L08 how to add comments_instruction: |-
-        Use the randomNumber() blocks to
-        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L08 how to add comments_instruction: Notaðu randomNumber() kubbana til
+        að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til
+        að sjá ítarlegar leiðbeiningar)
       SG U3L2 Using Simple Commands part 1_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -5671,10 +5675,9 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
-      U3L08 - introUnderTheSea with comments_instruction: |-
-        Add an extra fish, starfish,
-        and piece of seagrass to the image. Look at, but don't change, the functions
-        that create them. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: Bættu fiski, krossfiski
+        og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu
+        til að sjá ítarlegar leiðbeiningar)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -6615,6 +6618,8 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: Lokaðu starfsmenn Code.org inni í litaboxinu með
+        því að teikna ferning með 320 díla hliðar!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -6779,11 +6784,11 @@
         Getur þú teiknað hús? Gefðu því útlit eftir eigin smekk. Reyndu að koma auga á mynstur sem endurtaka sig!
       course1_artist_loops_challenge2_instruction: Komum í leik! Teiknaðu eins mörg
         X og þú getur! Nærðu að hafa 3 í röð?
-      course1_artist_loops_challenge3_instruction: Tíst tíst! Getur þú hjálpað mér
-        að búa til tvö fuglahús?
+      course1_artist_loops_challenge3_instruction: '"Getur þú hjálpað mér að búa til
+        tvö fuglahús?"'
       course1_artist_loops_challenge4_instruction: |-
-        Kominn tími til að varpa teningunum!
-        Getur þú hjálpað mér að teikna þá?
+        "Kominn tími til að varpa teningunum!
+        Getur þú hjálpað mér að teikna þá?"
       course1_collector_loops_challenge1_instruction: Getur þú hjálpað mér að koma
         auga á villur? Ég veit í hvaða átt ég vil fara, en ég er ekki viss um skrefin
         sem þarf að taka.
@@ -6802,11 +6807,10 @@
         Forðastu TNT sprengjuna annars verður fjaðrafok!
       course1_maze_seq_challenge2_instruction: "Þú mátt aðeins fara mest fjórum sinnum
         í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
-      course1_playlab_events_challenge1_instruction: Hvar eru vinir mínir að fela
-        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?
-      course1_playlab_events_challenge2_instruction: Höldum partí! Láttu hvern vin
-        gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað
-        annað mun gerast?
+      course1_playlab_events_challenge1_instruction: '"Hvar eru vinir mínir að fela
+        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?"'
+      course1_playlab_events_challenge2_instruction: '"Höldum partí! Láttu hvern vin
+        gera eitthvað þegar það er smellt eða slegið á hann."'
       course2_artist_nestedLoops_challenge1_instruction: Getur þú fundið út hvernig
         svona mynd er búin til?
       course2_artist_nestedLoops_challenge2_instruction: Getur þú fundið út hvernig
@@ -6820,13 +6824,11 @@
         búðu til allt hunangið.
       course2_bee_conditionals_challenge2_instruction: Safnaðu öllum blómasafnum eða
         búðu til allt hunangið.
-      course2_collector_loops_challenge2_instruction: Leitum að fjársjóð - með lykkjum!
-        Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
-        fjársjóðnum!
+      course2_collector_loops_challenge2_instruction: Náðu öllum fjársjóðnum!
       course2_collector_prog_challenge1_instruction: Gáðu vandlega! Getur þú safnað
         öllum *10* fjársjóðunum?
-      course2_collector_prog_challenge2_instruction: Hér má finna *20* fjársjóði.
-        Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!
+      course2_collector_prog_challenge2_instruction: Hér má finna 20 gersemar. Safnaðu
+        að minnsta kosti helmingnum til að ljúka þessari áskorun!
       course2_harvester_loops_challenge1_instruction: Safnaðu öllu korninu.
       course2_harvester_loops_challenge2_instruction: |-
         Safnaðu öllu kálinu.
@@ -6971,9 +6973,9 @@
         að safna öllu grænmetinu í röðinni. Láttu `frá` lykkjuna telja upp í mismunandi
         hámarksgildi með því að nota stikann `lengd`. Hafðu forritið eins stutt og
         hægt er með því að nota aðra `frá` lykkju utan við fallið.
-      course4_collector_nested_loops_challenge2_instruction: |-
-        Við skulum leita að fjársjóði
-        - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4.
+      course4_collector_nested_loops_challenge2_instruction: Hjálpaðu safnaranum að
+        ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er
+        mögulegt að ná öllum 4.
       course4_harvester_nested_loops_challenge1_instruction: '"Ég þarf aðstoð á býlinu!
         Hjálpaðu mér að slá þetta korn með kubbunum í verkfærakassanum."'
       course4_playlab_variables_challenge1_instruction: Notaðu þessa kubba til að
@@ -7006,14 +7008,14 @@
         water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "Áskorun: Lagaðu tröppurnar."
-      courseA_artist_loops_challenge2_instruction: Tíst tíst! Getur þú hjálpað mér
-        að búa til tvö fuglahús?
+      courseA_artist_loops_challenge2_instruction: '"Getur þú hjálpað mér að búa til
+        tvö fuglahús?"'
       courseA_artist_loops_challenge3_instruction: Komum í leik! Teiknaðu eins mörg
         X og þú getur! Nærðu að hafa 3 í röð?
       courseA_collector_loops1_instruction: Láttu Laurel hreyfast og safna eins miklum
         fjársjóði og þú getur!
-      courseA_collector_loops10_instruction: Hjálpaðu Laurel að ná öllum fjársjóðnum
-        úr þessum djúpa dal.
+      courseA_collector_loops10_instruction: Hjálpaðu Láru að ná öllum fjársjóðum
+        á þessari slóð.
       courseA_collector_loops11_instruction: Hjálpaðu Laurel að ná öllum fjársjóðnum
         úr þessum helli.
       courseA_collector_loops12_instruction: Eureka! Náðu eins miklum fjársjóði og
@@ -7031,36 +7033,29 @@
       courseA_collector_loops8_instruction: Skrifaðu kóðann til að ná öllum fjársjóðnum.
       courseA_collector_loops9_instruction: "**Áskorun:** Fjársjóðurinn fer alla leið
         upp þessar tröppur! Hjálpaðu Laurel að ná honum öllum."
-      courseA_collector_loops_challenge1_instruction: Getur þú hjálpað mér að koma
+      courseA_collector_loops_challenge1_instruction: '*"Getur þú hjálpað mér að koma
         auga á villur? Ég veit í hvaða átt ég vil fara, en ég er ekki viss um skrefin
-        sem þarf að taka.
-      courseA_collector_loops_challenge2_instruction: "Í þetta sinn mátt þú að eins
-        nota einn af hverjum örvarkubbi. Náðu öllum fjársjóðnum! "
+        sem þarf að taka."*'
+      courseA_collector_loops_challenge2_instruction: 'Náðu öllum fjársjóðnum! '
+      courseA_collector_loops_challenge2kp_instruction: Safnaðu minnst *3* gersemum
+        til að leysa þetta borð.
       courseA_collector_preLoops1_instruction: |-
-        This is Laurel the Adventurer! \r
+        Þetta er Lára ævintýramær!\r
         \r
-        Press
-        "Run" to see her walk up to the treasure and grab it.
+        Ýttu á "Keyra" til að sjá hana ganga að fjársjóðnum og grípa hann.
       courseA_collector_preLoops2_instruction: |-
-        Great!  Now you get to add code yourself!  \r
+        Fínt! Nú getur þú bætt við kóða! \r
         \r
-        Snap
-        a `get treasure` block to the bottom of the program and click "Run".
-      courseA_collector_preLoops3_instruction: |-
-        Snap two `E -->` blocks and one `get
-        treasure` block to the bottom of the program, then click "Run".
-      courseA_collector_preLoops4_instruction: |-
-        Can you figure out how to solve this
-        puzzle?
-      courseA_collector_preLoops5_instruction: |-
-        Get 1 of these 2 gems to solve this
-        puzzle.
-      courseA_collector_preLoops6_instruction: |-
-        Get both pieces of treasure to solve
-        this puzzle.
-      courseA_collector_preLoops7_instruction: |-
-        Get all three piles to pass this
-        level.
+        Bættu við kubbnum `sækja fjársjóð` neðst í forritinu og smelltu á "Keyra".
+      courseA_collector_preLoops3_instruction: Tengdu tvo `A-->` kubba og einn `sækja
+        fjársjóð` kubb við forritið neðst og smelltu svo á "Keyra".
+      courseA_collector_preLoops4_instruction: Geturðu fundið lausn á þessari þraut?
+      courseA_collector_preLoops5_instruction: Náðu 1 af þessum 2 gimsteinum til að
+        leysa þrautina.
+      courseA_collector_preLoops6_instruction: Náðu báðum dýrgripunum til að leysa
+        þessa þraut.
+      courseA_collector_preLoops7_instruction: Náðu öllum þremur hrúgunum til að klára
+        þennan áfanga.
       courseA_forVideoTest_artist_instruction: Notaðu "endurtaka" lykkjuna til að
         bæta öldum á vatnið.
       courseA_maze_seq1_instruction: Komdu fuglinum til vonda svínsins!
@@ -7083,8 +7078,8 @@
       courseA_maze_seq8_instruction: Leystu þetta borð og komdu fuglinum til svínsins!
       courseA_maze_seq9_instruction: Lagaðu villur í þessu borði með þvi að bæta við
         kubbum svo fuglinn nái svíninu!
-      courseA_maze_seq_challenge1_instruction: Lagaðu þetta borð. Fjarlægðu óþarfa
-        kubba og bættu inn þeim sem vantar. Láttu fuglinn ná grísnum!
+      courseA_maze_seq_challenge1_instruction: Lagaðu þetta borð. Láttu fuglinn ná
+        grísnum!
       courseA_maze_seq_challenge2_instruction: Fylgdu slóðinni og leiddu mig að svínka.
         Forðastu TNT sprengjuna annars verður fjaðrafok!
       courseA_playLab_events1_instruction: |-
@@ -7107,11 +7102,10 @@
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
-      courseA_playlab_events_challenge1_instruction: Hvar eru vinir mínir að fela
-        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?
-      courseA_playlab_events_challenge2_instruction: Höldum partí! Láttu hvern vin
-        gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað
-        annað mun gerast?
+      courseA_playlab_events_challenge1_instruction: '"Hvar eru vinir mínir að fela
+        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?"'
+      courseA_playlab_events_challenge2_instruction: '"Höldum partí! Láttu hvern vin
+        gera eitthvað þegar það er smellt eða slegið á hann."'
       courseA_playlab_events_challengeClone_instruction: Hvar eru vinir mínir að fela
         sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?
       courseA_toMakeLoopsVideo_Collector_instruction: "Þú látið innihald lykkju endurtaka
@@ -7141,8 +7135,8 @@
         Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?
       courseB_artist_loops_challenge1_instruction: |-
-        Kominn tími til að varpa teningunum!
-        Getur þú hjálpað mér að teikna þá?
+        "Kominn tími til að varpa teningunum!
+        Getur þú hjálpað mér að teikna þá?"
       courseB_artist_loops_challenge2_instruction: Komum í leik! Teiknaðu eins mörg
         X og þú getur! Nærðu að hafa 3 í röð?
       courseB_collector_loops1_instruction: "Þetta er Laurel ævintýrahetja! Getur
@@ -7250,11 +7244,10 @@
       courseB_playlab_events_challenge2_template_instruction: Látum dýrin hverfa þegar
         þú smellir á þau! Þú getur líka bætt við hljóðum og skorað stig til að búa
         til leikinn Dýraklukk!
-      courseB_starWars_prog1_instruction: Hjálpaðu BB-8 að safna brotamálminum!
+      courseB_starWars_prog1_instruction: '"Sæktu brotamálminn, BB-8!"'
       courseB_starWars_prog10_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
       courseB_starWars_prog11_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
-      courseB_starWars_prog2_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
-        brotamálminum
+      courseB_starWars_prog2_instruction: Náðu öllum málminum.
       courseB_starWars_prog3_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
         brotamálminum
       courseB_starWars_prog4_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
@@ -7324,7 +7317,7 @@
       courseC_artist_loops2_instruction: Nú þegar uppvakningurinn þekkir leiðina þarf
         að hjálpa honum að grafa holur á slóðinni til að setja niður fleiri blóm!
       courseC_artist_loops2a_instruction: Notaðu nú lykkju til að snúa fuglinum um
-        36 gráður 10 sinnum.
+        30 gráður 12 sinnum.
       courseC_artist_loops3_instruction: Fínt! Blómin eru að springa út svo nú þarf
         að hjálpa uppvakningnum að setja vin með 50 díla millibili til að verja blómin
         þar til þau eru fullvaxin.
@@ -7382,9 +7375,7 @@
         Það eru margar lausnir á þessari þraut svo þú getur haft gaman af. Stysta mögulega lausnin hefur 6 kubba, en notaðu eins marga og þér sýnist!
       courseC_artist_prog_challenge2_instruction: "*Hjálpaðu mér að teikna gulu línurnar
         á þessum vegi!*"
-      courseC_collector_loops_challenge2_instruction: Leitum að fjársjóð - með lykkjum!
-        Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
-        fjársjóðnum!
+      courseC_collector_loops_challenge2_instruction: Náðu öllum fjársjóðnum!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7415,8 +7406,8 @@
         the stage!
       courseC_collector_prog_challenge1_instruction: Gáðu vandlega! Getur þú safnað
         öllum *10* fjársjóðunum?
-      courseC_collector_prog_challenge2_instruction: Hér má finna *20* fjársjóði.
-        Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!
+      courseC_collector_prog_challenge2_instruction: Hér má finna 20 gersemar. Safnaðu
+        að minnsta kosti helmingnum til að ljúka þessari áskorun!
       courseC_flappy_embed_events_instruction: Hér er dæmi um leik sem þú átt bráðum
         að búa til á eigin spýtur! Spilaðu hann einu sinni eða tvisvar til að fá hugmynd
         um hvað þú ert að fara að búa til.
@@ -7592,12 +7583,12 @@
       courseC_starWars_loops1_predict1_instruction: BB-8 mun tína upp öll málmbrot
         á slóðinni sem hann fer eftir. Notaðu 5 eins kubba til að láta BB-8 tína upp
         allan brotamálm á leiksvæðinu.
-      courseC_starWars_loops2_instruction: Getur þú látið BB-8 tína upp allan brotamálminn
-        með því að búa til lykkju sem notar aðeins einn kubb innan í "endurtaka" kubbi?
+      courseC_starWars_loops2_instruction: Náðu öllum brotamálminum með því að búa
+        til lykkju sem notar aðeins einn kubb innan í `endurtaka` kubbi.
       courseC_starWars_loops4_instruction: Í þessari þraut munu tvær "endurtaka" lykkjur
         hjálpa þér að láta BB-8 komast yfir allan brotamálminn með sem fæstum kubbum!
-      courseC_starWars_loops5_instruction: "*Láttu BB-8 tína upp allan brotamálminn
-        eins fljótt og hægt er!*"
+      courseC_starWars_loops5_instruction: Láttu BB-8 tína upp allan brotamálminn
+        eins fljótt og hægt er!
       courseC_starWars_loops6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence?
@@ -7728,8 +7719,8 @@
         svona mynd er búin til?
       courseD_artist_nestedLoops_challenge2_instruction: Getur þú fundið út hvernig
         svona mynd er búin til?
-      courseD_artist_project1_instruction: |
-        Teiknaðu lítið form með breidd á milli **20 og 50** díla. Það má vera hvað sem er.\r
+      courseD_artist_project1_instruction: 'Teiknaðu lítið form með breidd á milli
+        **20 og 50** díla. Það má vera hvað sem er.  '
       courseD_artist_project1a_instruction: Teiknaðu tröppugang sem notar snúninga
         á milli 75 og 105 gráða.
       courseD_artist_project2_instruction: Teiknaðu nú tvö eða þrjú svona form í röð!
@@ -7757,9 +7748,10 @@
         all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm.
         Sæktu blómasafann, ef svo er.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
@@ -7861,7 +7853,7 @@
         bolti hittir ekki hönd` til að búa til leik. '
       courseD_bounce_events11_instruction: Þú getur núna tengt kubba við kubbinn "þegar
         keyrt". Þú verður að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum
-        stað. Prófaðu líka að breyta sviðinu eða hraða spaðans og boltans og sjáðu
+        stað. Prófaðu líka að breyta sviðinu eða hraða spaðans og boltans og gáðu
         hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar.
       courseD_bounce_events11s_instruction: 'Settu kubbinn `kasta nýjum bolta` alls
         staðar þar sem leikurinn þarf nýjan bolta. '
@@ -7924,14 +7916,14 @@
       courseD_collector_debugging6_instruction: "Áskorun: Hér eru allar skipanir sem
         þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
       courseD_collector_debugging6a_instruction: "Áskorun: Notaðu kóðann á vinnusvæðinu
-        til að safna minnst **6** fjársjóðum!"
+        til að safna minnst **6** gersemum!"
       courseD_collector_debugging7_instruction: "Áskorun: Hér eru allar skipanir sem
         þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
       courseD_collector_debugging_challenge2_instruction: Ert þú sérfræðingur í földuðum
         lykkjum? Notaðu það sem þú hefur lært til að safna öllum fjársjóðnum!
-      courseD_collector_nested_loops_challenge2_instruction: |-
-        Við skulum leita að fjársjóði
-        - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4.
+      courseD_collector_nested_loops_challenge2_instruction: Hjálpaðu safnaranum að
+        ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er
+        mögulegt að ná öllum 4.
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
@@ -8068,8 +8060,8 @@
       courseD_maze_nestedLoops6_instruction: |-
         Get the zombie to the sunflower using
         only the blocks available.
-      courseD_maze_ramp1_instruction: 'Í þessari þraut: Dragðu alla kubbana saman
-        og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseD_maze_ramp1_instruction: 'Í þessari þraut: Festu alla kubbana saman og
+        smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_maze_ramp2_instruction: Dragðu annan "færa áfram" kubb úr verkfærakassanum
         og festu svo alla kubbana við "þegar keyrt" kubbinn til að ljúka við kóðann.
       courseD_maze_ramp3_instruction: "Það er einn aukakubbur sem veldur því að fuglinn
@@ -8151,7 +8143,7 @@
         Færðu Peleg sjóræningja með örvarlyklunum. Náðu til drekans til að skora stig en forðastu ninjuna! Ef þú stendur fyrir neðan kolkrabbana hættir ninjan að elta þig en varaðu þig! Því lengur sem þú stendur þar því fleiri stigum taparðu.\r
         \r
         Náðu 5 stigum til að vinna leikinn!
-      courseD_scrat_ramp1_instruction: 'Í þessari þraut: Dragðu alla kubbana saman
+      courseD_scrat_ramp1_instruction: 'Í þessari þraut: Festu alla kubbana saman
         og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_scrat_ramp2_instruction: Dragðu annan "færa áfram" kubb úr verkfærakassanum
         og festu svo alla kubbana við "þegar keyrt" kubbinn til að ljúka við kóðann.
@@ -8388,10 +8380,10 @@
         er eitthvað að tína.)
       courseE_farmer_ramp11_instruction: "Þessi þraut notar líka faldaðar lykkjur.
         Getur þú fundið út hvernig?"
-      courseE_farmer_ramp11a_instruction: 'Sæktu kál en aðeins ef það er enn kál. '
-      courseE_farmer_ramp11b_instruction: 'Sæktu kál en aðeins ef það er enn kál. '
-      courseE_farmer_ramp12_instruction: Notaðu nú faldaðar lykkjur ("endurtaka" og
-        "meðan") til að leysa þessa þraut.
+      courseE_farmer_ramp11a_instruction: Fjarlægðu mold á meðan enn er mold.
+      courseE_farmer_ramp11b_instruction: Fjarlægðu mold á meðan enn er mold.
+      courseE_farmer_ramp12_instruction: Notaðu nú faldaðar lykkjur til að leysa þessa
+        þraut.
       courseE_farmer_ramp12_forswap_instruction: Notaðu nú faldaðar lykkjur til að
         leysa þessa þraut.
       courseE_farmer_ramp12a_instruction: Hjálpaðu bóndanum að fylgja slóðinni rétt
@@ -8472,7 +8464,7 @@
         We don't have a video for creating
         functions, yet. This is a placeholder.
       courseF_IceAge_1_instruction: Hjálpaðu Sid að segja "Hæ!" með því að draga fram
-        kubbinn `leikari 1 segir` og tengja hann við "Þegar keyrt" atburðinn.
+        kubbinn `leikari 1 segir` og tengja hann við `Þegar keyrt` atburðinn.
       courseF_IceAge_10_instruction: Notaðu skipunina `leikari ___ varpar` til að
         láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2) og láttu Granny gleðjast
         þegar hjörtun lenda á henni.
@@ -8483,7 +8475,7 @@
         honum síðustu 200 dílana.
       courseF_IceAge_4_instruction: Tengdu kubb við atburðinn `þegar leikmaður snertir`
         svo að hljóð sé spilað þegar Diego finnur Manny.
-      courseF_IceAge_5_instruction: Hjálpaðu Granny að komast í æfingu með því að
+      courseF_IceAge_5_instruction: Hjálpaðu Granny að fá smá hreyfingu með því að
         fara endurtekið til vinstri og hægri.
       courseF_IceAge_6_instruction: 'Getur þú hjálpað Sid að kalla á vini sína þegar
         þú smellir á hann? '
@@ -8647,12 +8639,10 @@
         all of the honey.
       courseF_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm.
         Sæktu blómasafann, ef svo er.
-      courseF_bee_conditionals2_instruction: |
-        Gáðu hvort ský felur blóm eða ekki áður en þú reynir að sækja blómasafa. \r
+      courseF_bee_conditionals2_instruction: 'Gáðu hvort ský felur blóm eða ekki áður
+        en þú reynir að sækja blómasafa.  '
       courseF_bee_conditionals3_instruction: |
         Hjálpaðu býflugunni að safna öllum blómasafanum.
-        \r
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -8767,7 +8757,7 @@
       courseF_maze_ramp7_instruction: Notaðu það sem þú hefur lært og komdu fuglinum
         til svínsins!
       courseF_playlab_embed_vars_instruction: Svaraðu spurningum Pegleg sjóræningja.
-        Hvað gerir ef þú slærð inn leyniorðið "password"? Hvað með önnur leyniorð?
+        Hvað gerist ef þú slærð inn leyniorðið "password"? Hvað með önnur leyniorð?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -10723,7 +10713,7 @@
       iceage_free_playcourseF_IceAge_11_instruction: 'Nú átt þú að búa til eigin leik
         eða sögu! '
       iceage_hello1_instruction: Hjálpaðu Sid að segja "Hæ!" með því að draga fram
-        kubbinn `segir` og festa hann neðan á "Þegar keyrt" atburðinn.
+        kubbinn `segir` og festa hann neðan á `Þegar keyrt` atburðinn.
       iceage_hello2_instruction: Hjálpaðu Manny og Sid að heilsast með því að nota
         kubbinn `leikari ___ segir` tvisvar.
       iceage_move_events_instruction: Skrifaðu kóðann sem hjálpar Skrat að ná öllum
@@ -10732,7 +10722,7 @@
         snertir` svo að hljóð sé spilað þegar Diego finnur Manny.
       iceage_move_to_flag_instruction: Skrat er að leita að akarninu (nema hvað)!
         Hjálpaðu honum síðustu 200 dílana.
-      iceage_repeat_instruction: Hjálpaðu Granny að komast í æfingu með því að fara
+      iceage_repeat_instruction: Hjálpaðu Granny að komast í form með því að fara
         endurtekið til vinstri og hægri.
       iceage_sound_and_points_instruction: 'Getur þú klárað þetta forrit svo að það
         bæði **spili hljóð** og **skori stig** þegar Sid og Granny rekast á? '
@@ -10869,7 +10859,7 @@
       ramp_artist_loops3_instruction: Notaðu `endurtaka` lykkju til að teikna fimm
         lituð þankastrik.
       ramp_artist_loops4_instruction: Hvað gerist þegar þú bætir við 72 gráðu hægri
-        snúningi sem síðasta kubb í lykkjunni?
+        snúningi sem síðasta kubbi í lykkjunni?
       ramp_artist_loops5_instruction: Notaðu lykkjur til að teikna þessar tröppur.
       ramp_artist_loops6_instruction: Breyttu lykkjunni svo hún teikni þessar tröppur.
       ramp_artist_loops7_instruction: Leitaðu að endurtekningu og styttu þennan kóða

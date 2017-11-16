@@ -17,9 +17,9 @@ var AppView = require('../../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
-import experiments from '../../util/experiments';
 
 import {TestResults} from '../../constants';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -542,6 +542,7 @@ Craft.reset = function (first) {
   if (first) {
     return;
   }
+  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
@@ -742,7 +743,6 @@ Craft.reportResult = function (success) {
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
-  const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
   studioApp().report({
     app: 'craft',
@@ -774,7 +774,7 @@ Craft.reportResult = function (success) {
         },
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
-        saveToProjectGallery,
+        saveToProjectGallery: true,
       });
     }
   });

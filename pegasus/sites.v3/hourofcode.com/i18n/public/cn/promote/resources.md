@@ -1,15 +1,11 @@
 ---
-
-title: <%= hoc_s(:title_resources) %>
+title: '<%= hoc_s(:title_resources) %>'
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # 推广《编程一小时》
 
@@ -27,7 +23,10 @@ nav: promote_nav
 
 ## 利用社交媒体发布
 
-[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![图片
+](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![图片
+](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![图片
+](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -35,26 +34,28 @@ nav: promote_nav
 
 ## 使用编程一小时标志来传播这个词
 
-[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![图片
+](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[下载高分辨率版本](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". 坏例子：“试验ACME公司的编程一小时”。
-  2. 用一个“TM”上标放在最显著的提到“编程一小时”的地方。包括网站和应用程序。
-  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+1. 凡引用“编程一小时”时，都不应该使用令别人误以为这是你自己的品牌的表述方式，而应该引用“编程一小时”为一场民间的运动。 **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
+2. 用一个“TM”上标放在最显著的提到“编程一小时”的地方。包括网站和应用程序。
+3. 在页面（或页脚）加入以下文字内容，包括CSEdWeek和Code.org的网站链接：
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *编程一小时是一项由Computer Science Education Week[csedweek.org] 和Code.org[code.org] 发起的全国性倡议，旨在向百万计的学生介绍一个小时的计算机科学和计算机编程。*
 
-  4. 不要将“编程一小时”用在应用程序名字中。
+4. 不要将“编程一小时”用在应用程序名字中。
 
 <a id="stickers"></a>
 
 ## 打印这些贴纸，给你的学生。
 
-(Stickers are 1" diameter, 63 per sheet)  
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+（贴纸直径为2.54cm，63个一整张）  
+[![图片
+](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -62,45 +63,69 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## 邀请你的学校，同事或朋友报名：
+### Ask your school, employer, or friends to sign up:
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. 好消息是，我们正在着手改变现状。 If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 以及迪斯尼的主页。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+计算机无所不在，它正改变着地球上的每一个产业。 But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 超过100位合作伙伴共同支持这项活动。 Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. 请参与在计算机科学教育周的编程一小时活动, <%= campaign_date('full')%>。
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Get started at http://hourofcode.com/<%= @country %>
 
+<a id="help-schools"></a>
+
+### Volunteer at a school:
+
+**Subject line:** Can we help you host and Hour of Code?
+
+Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+
+[Our organization/My name] would love to help [school name] run an Hour of Code event. 我们可以帮助老师在他们的教室里主持一个小《编程一小时》 (我们甚至不需要电脑!) 或者如果你想举办一个学校大会, 我们可以安排一个演讲者谈论技术是如何运作的, 以及成为一个软件工程师的感觉。
+
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+
+计算机无所不在，它正改变着地球上的每一个产业。 But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 超过100位合作伙伴共同支持这项活动。 Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+
+Thanks!
+
+[Your name], [Your organization]
+
 <a id="media-pitch"></a>
 
-## 邀请媒体出席你的活动：
+### Invite media to attend your event:
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
 Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 好消息是，我们正在着手改变现状。
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 以及迪斯尼的主页。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 超过100位合作伙伴共同支持这项活动。 Every Apple Store in the world has hosted an Hour of Code. 甚至连奥巴马总统也曾在竞选活动中写下了自己的第一行编程。
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
 
-**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
-
-**When:** [DATE and TIME of your event]
-
-**Where:** [ADDRESS and DIRECTIONS]
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
 I look forward to being in touch.
 
+[Your Name]
+
 <a id="parents"></a>
 
-## 告诉父母学校的活动：
+### Tell parents about your school's event:
+
+** 主题行: **我们的学生用《编程一小时》来改变未来
 
 Dear Parents,
 
@@ -110,9 +135,9 @@ But only a tiny fraction of us are learning **how** technology works. Fewer than
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+这是一个改变未来教育的机会在[镇/城市名称]。
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
@@ -122,20 +147,24 @@ Your principal
 
 <a id="politicians"></a>
 
-## 邀请当地的政界人士出席你们学校的活动：
+### 邀请当地的政界人士出席你们学校的活动：
+
+**Subject line:** Join our school as we change the future with an Hour of Code
 
 Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
 Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-Sincerely, [NAME], [TITLE]
+Sincerely,
+
+[Your Name], [Title]
 
 <%= view :signup_button %>

@@ -47,10 +47,6 @@ FactoryGirl.define do
       topic_other_description 'a' * 256
     end
 
-    trait :with_long_tell_us_more do
-      tell_us_more 'a' * 256
-    end
-
     trait :as_teacher do
       submitter_role "teacher"
     end
@@ -77,9 +73,11 @@ FactoryGirl.define do
     end
   end
 
-  factory :census_your_school2017v1, parent: :census_submission, class: Census::CensusYourSchool2017v1 do
+  factory :census_your_school2017v0, parent: :census_submission, class: Census::CensusYourSchool2017v0 do
     submitter_email_address "parent@school.edu"
+  end
 
+  factory :census_your_school2017v1, parent: :census_your_school2017v0, class: Census::CensusYourSchool2017v1 do
     trait :requiring_followup do
       how_many_20_hours "all"
     end
@@ -95,6 +93,9 @@ FactoryGirl.define do
   factory :census_your_school2017v3, parent: :census_your_school2017v2, class: Census::CensusYourSchool2017v3 do
   end
 
+  factory :census_your_school2017v4, parent: :census_your_school2017v3, class: Census::CensusYourSchool2017v4 do
+  end
+
   factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
     submitter_email_address "hoc@email.address"
     submitter_name "Hoc Submitter"
@@ -104,5 +105,18 @@ FactoryGirl.define do
   end
 
   factory :census_hoc2017v3, parent: :census_hoc2017v2, class: Census::CensusHoc2017v3 do
+  end
+
+  factory :census_submission_form_map, class: Census::CensusSubmissionFormMap do
+    census_submission nil
+    form_id nil
+
+    trait :with_submission do
+      census_submission {build :census_hoc2017v1}
+    end
+
+    trait :with_form do
+      form_id 1
+    end
   end
 end

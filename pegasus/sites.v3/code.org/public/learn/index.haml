@@ -36,6 +36,7 @@ style_min: false
     background: -o-linear-gradient(#0094a3, #00adbc); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#0094a3, #00adbc); /* For Firefox 3.6 to 15 */
     background: background: linear-gradient(#0094a3, #00adbc); /* Standard syntax */
+    overflow: hidden;
   }
   .banner {
     color: white;
@@ -101,6 +102,8 @@ style_min: false
 %script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: minifiable_asset_path("js/tutorialExplorer.js")}
 
+- hoc_launch = DCDO.get('hoc_launch', nil)
+
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
 - tutorials_contents.each do |tutorial|
@@ -114,6 +117,10 @@ style_min: false
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+
+  - if hoc_launch && hoc_launch["tutorial_explorer_mc2017_image"]
+    - if tutorial[:short_code] == "mchoc"
+      - tutorial[:image] = "/images/tutorials/hoc2017/minecraft2017.png"
 
 #tutorials
 

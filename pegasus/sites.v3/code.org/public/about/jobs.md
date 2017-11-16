@@ -29,7 +29,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 - **Administration**
 	- [Director of Finance & Accounting](#accounting)
-	
 - **Internships**
 	- [Education Team intern (Chicago, IL)](#edintern)
 

@@ -1,5 +1,7 @@
 class Api::V1::SchoolsController < ApplicationController
-  # GET /api/v1/school/<school_district_id>/<school_type>
+  load_resource :school, only: :show
+
+  # GET /api/v1/schools/<school_district_id>/<school_type>
   def index
     schools = School.where(school_district_id: params[:school_district_id], school_type: params[:school_type])
     serialized_schools = schools.map do |school|
@@ -8,10 +10,16 @@ class Api::V1::SchoolsController < ApplicationController
     render json: serialized_schools
   end
 
+  # GET /api/v1/schools/:id
+  def show
+    render json: @school, serializer: Api::V1::SchoolAutocomplete::Serializer
+  end
+
   # GET /dashboardapi/v1/schoolsearch/:q/:limit
   def search
-    query = params.require(:q)
-    limit = [1, [40, Integer(params[:limit])].min].max
-    render json: Api::V1::SchoolAutocomplete.instance.get_matches(query, limit)
+    render json: Api::V1::SchoolAutocomplete.get_matches(
+      params.require(:q),
+      params[:limit]
+    )
   end
 end

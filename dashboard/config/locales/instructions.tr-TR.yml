@@ -14,8 +14,8 @@
       2-3 Artist 2_instruction: 'Bu evin yarısı tamamlanmış bir duvarı var. Her kenarı
         100 birim; fakat yarım tamamlanmış duvarı sadece 50 birim. Duvarı tamamlayın. '
       2-3 Artist 3.4_instruction: |-
-        Zıpla bloğu sanatçıyı çizim yapmadan ilerletir.
-        Hem zıpla hem de çiz bloğunu kullanarak çizgileri birleştirin. Her çizgi 50 piksel uzunluğunda.
+        Taşı bloğu sanatçıyı çizim yapmadan ilerletir.
+        Hem taşı hem de çiz bloğunu kullanarak çizgileri birleştirin. Her çizgi 50 piksel uzunluğunda.
       2-3 Artist 3_instruction: Bu şapka 100 piksel yüksekliğinde. Yüksekliği 70 pikselden
         daha az olan bir şapka çiz.
       2-3 Artist 3new_instruction: Kırmızı şapka 100 piksel uzunluğundadır. 70 piksel
@@ -2978,9 +2978,9 @@
         misin?
       Course 4 Play Lab For Loops 2_instruction: "Şimdi 1 den 100 e kadar tek sayıları
         sayalım."
-      Course 4 Play Lab Params 1_instruction: Zıpla "jump" fonksiyonu tanımlandı.
-        ana oyuncuyu 100 piksel zıplatıyor. Bu fonksiyonu kullan ve köpeğin bütün
-        bayrakları toplamasını sağla.
+      Course 4 Play Lab Params 1_instruction: Burada tanımlanan 'zıpla' (jump) fonksiyonu
+        ana oyuncuyu 100 piksel zıplatıyor. Bu fonksiyonu kullan ve köpeği ok tuşlarıyla
+        hareket ettirip bütün bayrakları toplamasını sağla.
       Course 4 Play Lab Params 10_instruction: "Sizin için son bir fonksiyon ekledik.\nEğer
         bloğu kullan ve oyuncunun puanı belirli bir sayıyı geçince üst seviye \"level_up\"
         fonksiyonunu çağır.\nOyunu oyna ve 4 seviye geçmesini sağla. "
@@ -3020,7 +3020,7 @@
         dog_speed değişkeni ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını
         sağla. Önce 10 bayrak toplayan kazanır!"
       Course 4 Play Lab Vars 3_instruction: Sol ve sağ ok tuşlarıyla hareket ettirin.
-        Yukarı ok tuşu ile zıplatın. bütün bayrakları toplaya bilecekmisin.
+        Yukarı ok tuşu ile zıplayın. Bütün bayrakları toplaya bilir misin?
       Course 4 Play Lab Vars 4_instruction: Height yükseklik değişkeni köpeğin ne
         kadar zıplayacağını kontrol ediyor. Bu değişkeni güncelleyerek köpeğin bayrağa
         ulaşmasını sağla.
@@ -3449,9 +3449,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: Bu oyun laboratuarda yapabileceğiniz bir oyun bir örneğidir.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the torch.
+      Function intro Ryan_instruction: Meşaleye giden bir yol açmak için `köprü inşa
+        et` işlevini iki kez kullan.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3834,94 +3833,73 @@
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
-        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
-        the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN2_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_2017_01_RETRY_instruction: 'Agent''ı baskı plakasına götür, ardından
+        "Çalıştır" düğmesine bas ve sandığı toplaması için ok tuşlarını kullanarak
+        oyuncuyu evin dışına çıkar. '
+      MC_HOC_2017_02_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_02_Cole_instruction: "{currentPlayerName} haritaya ulaşabilsin diye
+        Agent'ı baskı plakasına taşı. "
+      MC_HOC_2017_02_Kiki_instruction: Agent'ı baskı plakasına götür, ardından oyuncuyu
+        turuncu kareye götür.
+      MC_HOC_2017_02_Will_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_03_Cole_instruction: 'Agent''ı geçidi açacak şekilde kodla. '
+      MC_HOC_2017_03_Kiki_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04_instruction: Agent'ın bu nehrin geniş kısmında bir yol açmasına
+        yardımcı olmak için son bulmacadaki döngüyü değiştir.
+      MC_HOC_2017_04POINT5_Cole_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04_Cole_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_04_Kiki_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_05_instruction: Agent'ın baskı plakasına ulaşmasına yardımcı olmak
+        için bir işlev kullan.
+      MC_HOC_2017_05_Cole_instruction: Oyuncuyu küreğe götür.
+      MC_HOC_2017_05_Josh_instruction: Oyuncuyu küreğe götür.
+      MC_HOC_2017_05_Kiki_instruction: Oyuncuyu turuncu kareye götür.
+      MC_HOC_2017_06_Cole_instruction: Agent'ın bu nehir üzerinde bir köprü inşa etmesi
+        için bu kodu düzelt.
+      MC_HOC_2017_06_Josh_instruction: Agent'ın bu nehir üzerinde bir köprü inşa etmesine
+        yardımcı olmak için bu kodu düzelt.
+      MC_HOC_2017_06_Kiki_instruction: Agent'ın bu nehir üzerinde bir köprü inşa etmesine
+        yardımcı olmak için bu kodu düzelt.
+      MC_HOC_2017_07_Cole_instruction: "{currentPlayerName} Maden Arabasına ulaşabilsin
+        diye buzu yok et."
+      MC_HOC_2017_07_Kiki_instruction: Turuncu kareye giden yolu temizlemek için bir
+        işlev kullan.
+      MC_HOC_2017_07a_Kiki_instruction: Turuncu kareye giden yolu temizle.
+      MC_HOC_2017_08_Cole_instruction: Bu biyomda çalışabilmesi için belirtilen işlevi
+        değiştir.
+      MC_HOC_2017_08_Kiki_instruction: Bu bulmacada çalışabilmesi için işlevi değiştir.
+      MC_HOC_2017_08_RY_instruction: Lavın üzerinden geçebilmek için işlevleri kullan.
+      MC_HOC_2017_08_Will_instruction: Lavın üzerinden geçebilmek için işlevleri kullan.
+      MC_HOC_2017_09_Cole_instruction: Agent'ın oyuncunun yolunu temizleyecek şekilde
+        programla.
+      MC_HOC_2017_09_Kiki_instruction: Agent'ı oyuncunun yolu temizleyecek ve baskı
+        plakasına ulaşacak şekilde programla.
+      MC_HOC_2017_10_Cole_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_Cole_old_instruction: Bu maden arabasını tamamlamana yardımcı
+        olacak bir işlev oluştur.
+      MC_HOC_2017_10_Kiki_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_RETRY_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_RYAN_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_10_RYAN2_instruction: Bu maden arabasını tamamlamana yardımcı olacak
+        bir işlev oluştur.
+      MC_HOC_2017_13_Cole_instruction: "**Serbest Oyun:**  Kendi başına keşfetme zamanı!"
+      MC_HOC_2017_4.5v2_instruction: Agent'ı baskı plakasına götür.
+      MC_HOC_2017_Ali_instruction: Lavın üzerinden geçebilmek için işlevleri kullan.
+      MC_HOC_2017_FP10x10_instruction: "**Serbest Oyun:** Bu seviyedeki tüm elmasları
+        toplamayı başarabilir misin? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Serbest Oyun:** Bu seviyedeki tüm elmasları
+        toplamayı başarabilir misin? "
+      MC_HOC_2017_FP20x20_instruction: "**Serbest Oyun:**  Kendi başına keşfetme zamanı!"
+      MC_HOC_2017_Ryan_03_instruction: "Şimdi Agent'ın suya bloklar yerleştirerek
+        nehir üzerinde bir köprü inşa etmesine yardımcı olmak için döngüleri kullan."
+      MC_HOC_2017_Ryan_05_instruction: Oyuncunun hedefe ulaşabilmesi için bu kaktüsleri
+        yok et.
+      MC_HOC_Kiki_02_instruction: Agent'ı baskı plakasına götür.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4257,6 +4235,9 @@
       New Gumball Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       New Ice Age Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       New Infinity Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: 'Kendi oyununu oluştur! Burada sen ne dersen
         o olur: bütün kuralları değiştirebilir, sporları karıştırabilir ve birbirine
         uydurabilirsin, yaratıcı ol! Oluşturduğunda, bitir düğmesine tıklayarak oyununu
@@ -6797,6 +6778,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -7007,7 +6991,7 @@
       course2_maze_programming_challenge1_instruction: '* "Domuz saklanıyor! Etrafından
         bir yol bulmam için bana yardımcı olabilir misin?" *'
       course2_maze_programming_challenge2_instruction: Bazen aynı sorunu çözmek için
-        birden fazla yol vardır. Bazen geriye daha hızlı olur!
+        birden fazla yol vardır. Bazen geriye doğru gitmek daha hızlı olabilir!
       course2_maze_seq_challenge1_instruction: Yolu takip et ve beni sersem domuza
         götür. Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
       course2_maze_seq_challenge2_instruction: Her yönde yalnızca 4 kez ilerleyebilirsin.
@@ -7208,6 +7192,9 @@
         misin? Hangi yoldan gitmek gerektiğini biliyorum fakat kaç adım bilmiyorum.
       courseA_collector_loops_challenge2_instruction: 'Bu sefer sadece ok bloklrından
         birini kullanabilirsiniz. Tüm hazineyi al! '
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -7730,7 +7717,7 @@
       courseC_maze_programming_challenge1_instruction: '* "Domuz saklanıyor! Etrafından
         bir yol bulmam için bana yardımcı olabilir misin?" *'
       courseC_maze_programming_challenge2_instruction: Bazen aynı sorunu çözmek için
-        birden fazla yol vardır. Bazen geriye daha hızlı olur!
+        birden fazla yol vardır. Bazen geriye doğru gitmek daha hızlı olabilir!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
         use your arrow keys to get the penguin to run into the octopus.\r
@@ -7934,9 +7921,10 @@
         all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Bulut altında çiçek olup olmadığını
         kontrol edin. eğer çiçek varsa, nektar alın.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
@@ -10711,7 +10699,7 @@
         dog_speed değişkeni ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını
         sağla. Önce 10 bayrak toplayan kazanır!"
       grade5_playlab_variables3_instruction: Sol ve sağ ok tuşlarıyla hareket ettirin.
-        Yukarı ok tuşu ile zıplatın. bütün bayrakları toplaya bilecekmisin.
+        Yukarı ok tuşu ile zıplayın. Bütün bayrakları toplaya bilir misin?
       grade5_playlab_variables4_instruction: |-
         Now we're using a variable called
         "height" to control how high the dog can jump. Update the "height" variable

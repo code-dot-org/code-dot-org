@@ -302,6 +302,7 @@
   homepage_hero_text_stat_loc: "2,5 milhões de garotas se inscreveram para aprender no Code Studio"
   homepage_hero_text_stat_students: "#student_count contas de aluno no Code Studio"
   homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
   homepage_slot_text_hoc: "A Hour of Code"
   homepage_slot_text_frozen: "Frozen com Anna e Elsa"
   homepage_slot_text_teacher: "Painel de controle do professor"
@@ -340,7 +341,7 @@
   homepage_slot_text_title_hoc: "Hora do Código"
   homepage_slot_text_blurb_hoc: "Qualquer pessoa pode aprender. Comece hoje mesmo"
   homepage_slot_text_link_hoc: "Faça uma Hora do Código"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
+  homepage_slot_text_link_about_hoc: "Sobre a Hora do Código"
   homepage_slot_text_link_host: "Organize um evento da Hora do Código"
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: "Voluntário da Hora do Código"
@@ -427,10 +428,13 @@
   mc_gradelevel: "De 6 a 106 anos de idade"
   mc_platformtext: "Navegadores modernos, smartphones, tablets"
   mc_specs: "Muitos idiomas | Navegadores modernos e tablets | De 6 a 106 anos de idade"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Designer de Minecraft"
   minecraft_adventurer: "Aventureiro de Minecraft"
   minecraft_tutorials: "Tutoriais da Hora do Código Minecraft"
   minecraft_specs: "Muitos idiomas | Navegadores modernos e tablets | A partir do 2º ano"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_button: "Começar"
   minecraft_designer_description: "Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft."
   minecraft_designer_button: "Começar"
   minecraft_adventurer_description: "Use códigos para levar Alex ou Steve a uma aventura."
@@ -438,6 +442,19 @@
   minecraft_no_internet: "Não tem Internet?"
   minecraft_download_adventurer: "Baixe a versão offline do Aventureiro de Minecraft."
   minecraft_subtitle: "Hora do Código Minecraft"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Join us on November 16th, 2017 for a special webinar for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough of the new tutorial by the Minecraft team and learn about the resources and best practices to help you confidently facilitate an exciting Hour of Code with Minecraft. <a href='%{minecraft_webinar_url}'>Sign up today</a>!"
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Hora do Código Esportes"
   sports_og_title: "Esforce-se. Qualquer um pode aprender."
   sports_og_description: "Campeões e medalhistas de ouro encorajá-lo a experimentar o hora de código. Crie seu próprio jogo de esportes."
@@ -734,10 +751,10 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
+  dashboard_coursea: 'Curso A: '
+  dashboard_courseb: 'Curso B: '
+  dashboard_coursec: 'Curso C: '
+  dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Se não tiver computadores, <a href='%{unplugged_url}'>use essas aulas off-line</a> na sua sala de aula."
@@ -843,7 +860,7 @@
   carousel_heading_mobtabelem: "For phones and tablets"
   carousel_heading_prereader: "For pre-readers"
   carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
+  carousel_heading_nointernet: "Internet ruim? Instale esse aplicativos no seu computador"
   educator_notes: "Observações do Educador"
   teach_led_lesson_plans: "Planos de aula orientados pelo professor"
   learn_footer_all_tutorials: "Veja a <a href=\"https://code.org/educate/allhourofcode\">lista completa de tutoriais da Hora do Código</a>. Para ver nossos critérios e diretrizes de envio para tutoriais da Hora do Código, <a href=\"https://hourofcode.com/tutorial-guidelines\">clique aqui.</a>"
@@ -913,18 +930,18 @@
   course2_name: "Curso 2"
   course3_name: "Curso 3"
   course4_name: "Curso 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
-  coursec-draft_name: Course C
-  coursec_name: "Course C"
-  coursed-draft_name: Course D
-  coursed_name: "Course D"
-  coursee-draft_name: Course E
-  coursee_name: "Course E"
-  coursef-draft_name: Course F
-  coursef_name: "Course F"
+  coursea-draft_name: Curso A
+  coursea_name: "Curso A"
+  courseb-draft_name: Curso B
+  courseb_name: "Curso B"
+  coursec-draft_name: Curso C
+  coursec_name: "Curso C"
+  coursed-draft_name: Curso D
+  coursed_name: "Curso D"
+  coursee-draft_name: Curso E
+  coursee_name: "Curso E"
+  coursef-draft_name: Curso F
+  coursef_name: "Curso F"
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
@@ -938,7 +955,7 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
+  csd5_name: 'Unidade 5: Dados e Sociedade'
   csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 2: Informação Digital'
@@ -966,7 +983,7 @@
   starwarsblocks_name: "Star Wars (Blocos)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
   math_category_name: "Matemática"
   hoc_category_name: "Hora do Código"
@@ -1427,13 +1444,13 @@
   header_help_us: "Ajude-nos"
   header_about: "Sobre"
   header_teacher_community: "Comunidade de professores"
-  header_help_support: 'Ajuda e suporte'
+  header_help_support: 'Ajuda e suporte '
   header_report_bug: "Reportar um erro"
   header_tutorials: "Tutoriais"
   header_documentation: "Documentação"
   csp_name: "Princípios da CC - 16-17"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Cursos Completos"
   user_header_label: "Oi, %{username}"
   user_header_settings: "Minha conta"
   user_header_logout: "Sair"
@@ -1442,13 +1459,13 @@
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
+  signing_in: "Fazendo Login"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_website: "Ir para %{code_org_url}."
   sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
+  sign_in_instruct_name: "Escolha o nome de exibição deles."
+  sign_in_instruct_secret: "Escolha o segredo deles %{secret}."
+  sign_in_instruct_button: "Clique no botão \"Login\"."
   sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
   reset_student_password: "Resetting student passwords"
   reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
