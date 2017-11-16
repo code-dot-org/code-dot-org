@@ -9,6 +9,10 @@ const styles = {
   heading: {
     width: '100%'
   },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5,
+  },
   clear: {
     clear: 'both'
   },
@@ -31,6 +35,8 @@ export default class TeachersBeyondHoc extends Component {
     const thirdPartyTeacherImage = desktop ? "third-party-teacher" : "third-party-teacher-small";
     const thirdPartyTeacherTitle = desktop ? i18n.congratsTeacherExternalTitle() : i18n.congratsTeacherExternalTitleShort();
 
+    const headingStyle = desktop ? styles.heading : styles.mobileHeading;
+
     const cards = [
       {
         title: i18n.congratsTeacherCodeOrgTitle(),
@@ -50,7 +56,7 @@ export default class TeachersBeyondHoc extends Component {
 
     return (
       <div>
-        <h1 style={styles.heading}>
+        <h1 style={headingStyle}>
           {i18n.congratsTeacherHeading()}
         </h1>
         <ResourceCardResponsiveContainer responsive={responsive}>
