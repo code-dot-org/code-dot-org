@@ -113,12 +113,6 @@
   "blockTypeTree": "ხე",
   "blockTypeWater": "წყალი",
   "blockTypeWool": "მატყლი",
-  "blockTypeWoolBlue": "blue wool",
-  "blockTypeWoolMagenta": "magenta wool",
-  "blockTypeWoolOrange": "orange wool",
-  "blockTypeWoolPink": "pink wool",
-  "blockTypeWoolRed": "red wool",
-  "blockTypeWoolYellow": "yellow wool",
   "blockWhileXAheadAhead": "წინ",
   "blockWhileXAheadDo": "შესრულება",
   "blockWhileXAheadWhile": "სანამ",
@@ -296,5 +290,11 @@
   "weather": "ამინდი",
   "weatherTypeClear": "გასუფთავება",
   "weatherTypeRain": "წვიმა",
-  "weatherTypeThunder": "მეხი"
+  "weatherTypeThunder": "მეხი",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool"
 }

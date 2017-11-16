@@ -15605,7 +15605,7 @@
         \r
         In
         this app we've already added a text label with the id "sound_value". Using
-        the `soundSensor.value` block, display the value of the sound sensor.
+        the `soundSensor.value` block. display the value of the sound sensor.
       CSD U6 analog temp_markdown_instruction: |-
         # Make a Thermometer App\r
         \r
@@ -15826,7 +15826,7 @@
         confusing design choices, or missing features you'd like to work on.\r
         \r
         Once
-        you're all done with this version of your program, click Submit to turn it
+        you're all down with this version of your program, click Submit to turn it
         in.
       CSD U6 game project functions call_markdown_instruction: |-
         # Calling your Functions\r
@@ -16345,14 +16345,14 @@
         # Game Screen Design\r
         \r
         We've
-        also added a "game" screen where the game will be played. It just needs
-        a couple of tweaks.\r
+        also added a "game" screen where the game will be played. It just need a
+        couple of tweaks.\r
         \r
         # Do This\r
         \r
-        Switch to the "game" screen
-        and, using your planning guide, fix this screen by changing the color of the
-        two emoji images.\r
+        Switch to the "game" screen and,
+        using your planning guide, fix this screen by changing the color of the two
+        emoji images.\r
         \r
         Feel free to add any other design tweaks that you'd
         like.
@@ -22148,20 +22148,20 @@
         to display different images based on sensor values
       CSDU6 - sensors experiment_markdown_instruction: |-
         <iframe width="370" height="620"
-        style="float:right; margin-left: 25px; border: 0px;" src="https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"></iframe>\r
+        style="float:left; margin-right: 25px; border: 0px;" src="https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"></iframe>\r
         \r
         #
         Sensor Experiment\r
         \r
-        Run the program to the right and experiment with
-        your board. Try interacting with your board in many different ways to figure
-        out what each sensor might be. Once you've completed the experiment, answer
-        the following questions for each sensor in the text box below.\r
+        Run the program to the left and experiment with your
+        board. Try interacting with your board in many different ways to figure out
+        what each sensor might be. Once you've completed the experiment, answer the
+        following questions for each sensor in the text box below.\r
         \r
-        * What
-        does this sensor measure?\r
-        * What is its maximum value?\r
-        * What is its
+        * What does
+        this sensor measure?\r
+        * What is it's maximum value?\r
+        * What is it's
         minimum value?
       CSDU6 - sensors light_markdown_instruction: |-
         # Light Sensor Updates\r
@@ -58268,114 +58268,6 @@
         * **Run your app** and test that all
         of the buttons work.
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
-      U4-AP-Practice-Choose-The-Data-Concern_markdown_instruction: |-
-        # AP Practice
-        - Identify the Data Concern\r
-        \r
-        One component of the **AP Explore Performance
-        Task** is describing a data concern related to a computing innovation.\r
-        \r
-        <div
-        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
-        font-family: serif; font-size: 12pt">\r
-        \r
-        <b>Computing Innovation</b>\r
-        <br>\r
-        <br>\r
-        2d.  Using
-        specific details, describe\r
-        <br>\r
-        <br>\r
-        <ul>\r
-        <li>at least one data
-        storage concern, data privacy concern, or data security concern directly related
-        to the computing innovation.</li>\r
-        </ul>\r
-        </div>\r
-        <br>\r
-        \r
-        Here's
-        the scoring guide for this part of the question\r
-        \r
-        <div style="magin:auto">\r
-        \t<img
-        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
-        PM.png">\r
-        </div>\r
-        \r
-        <br>\r
-        \r
-        # Sample Responses\r
-        \r
-        The responses
-        below are 4 sample responses to this component of the question.\r
-        \r
-        **Response
-        A:** "Facial recognition technology stores data mapping a user's face. A
-        privacy concern for this technology is that it could be used by businesses
-        and governments to identify people as they walk around in their daily lives."\r
-        \r
-        **Response
-        B:** "Software that tracks soccer player movements on the field can be used
-        to generate new statistics that help value contributions of individual players.
-        A data concern is that this information may be used to justify firing less
-        productive players."\r
-        \r
-        **Response C:** "Social networks allow users
-        to share vast amounts of private information about their lives. A security
-        concern of this technology is that this publicly available data may enable
-        stalkers or other criminals to identify potential targets."\r
-        \r
-        **Response
-        D:** "Self-driving cars store vast amounts of information about their location
-        and the world around them. A data concern is that this information would be
-        overwhelming for a single human to focus on as they drive."\r
-        \r
-        # Choose
-        the 2 Data Concerns\r
-        \r
-        **Two of these responses would likely earn the
-        point for this row. Two likely would not.**\r
-        \r
-        **Choose the two responses
-        (A, B, C, or D) that would earn the point. Then justify why you chose them.**
-      U4-AP-Practice-Choose-The-Harmful-Effect_markdown_instruction: |-
-        # AP Practice
-        - Choose the Harmful Effect\r
-        One component of the **AP Explore Performance
-        Task** is describing a data concern related to a computing innovation.\r
-        \r
-        <div
-        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
-        font-family: serif; font-size: 12pt">\r
-        \r
-        <b>Computing Innovation</b>\r
-        <br>\r
-        <br>\r
-        2d.  Using
-        specific details, describe\r
-        <br>\r
-        <br>\r
-        <ul>\r
-        <li>at least one data
-        storage concern, data privacy concern, or data security concern directly related
-        to the computing innovation.</li>\r
-        </ul>\r
-        </div>\r
-        <br>\r
-        \r
-        Here's
-        the scoring guide for this part of the question\r
-        \r
-        <div style="magin:auto">\r
-        \t<img
-        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
-        PM.png">\r
-        </div>\r
-        \r
-        <br>\r
-        \r
-        # Choose the Harmful Effect
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
         text.

@@ -179,8 +179,9 @@
         by adding our flower. \r
         \r
         Loop the diamond 12 times to draw the flower.
-      2-3 Artist Nested Loops Free Play_markdown_instruction: Vrij spelen, teken iets
-        cools met geneste lussen.
+      2-3 Artist Nested Loops Free Play_markdown_instruction: |-
+        Free play, draw something
+        cool with nested loops.
       2-3 Bee Conditionals 11_markdown_instruction: Verzamel nektar van bloemen met
         nektar.
       2-3 Bee Conditionals 13_markdown_instruction: |-
@@ -261,9 +262,11 @@
       2-3 Bee Debugging 9_markdown_instruction: Deze blokken blijven een probleem.
         Herstel de fout(en) om alle nektar te verzamelen en alle honing te maken.
       2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        **Opdracht:** Het is tijd om te tonen wat je weet!\r
+        **Assessment:**  Now
+        it's time to show what you know!\r
         \r
-        Herstel de fout(en) door alle nectar te verzamelen en maak alle honing.
+        Fix the error(s) to collect all of
+        the nectar and make all of the honey.
       2-3 Bee Functions 1_markdown_instruction: |-
         Functions are blocks of code that
         perform a task.  \r
@@ -287,21 +290,24 @@
         \r
         Use
         the function to collect all of the nectar.
-      2-3 Bee Functions Assessment 1_markdown_instruction: "**Opdracht:** Gebruik
-        de gegeven functie om alle nectar te verzamelen van elke bloem."
+      2-3 Bee Functions Assessment 1_markdown_instruction: |-
+        **Assessment:** Use the
+        given function to collect nectar from each flower.
       2-3 Bee Functions Assessment 2_markdown_instruction: |-
-        **Opdracht:** Maak een functie om te draaien, voorwaarts te beween en maak 3 honing aan.
-        Breng vervolgens de bij terug naar waar hij startte en keer om.
+        **Assessment:** Create
+        a function to turn, move forward and make 3 honey, then return the bee to
+        where it started and turn back.
       2-3 Bee Loops 1_markdown_instruction: |-
         Those flowers look tasty!\r
         \r
         Collect
         nectar from each of the flowers using the fewest blocks possible.
       2-3 Bee Loops 13_markdown_instruction: |-
-        **Opdracht:** Verzamel alle nectar,
-        gebruik makende van het zo weinig mogelijk blokken.
-      2-3 Bee Loops 3A_markdown_instruction: Gebruik een `herhaal` lust om alle nectar
-        te verzamelen.
+        **Assessment:** Collect all of the
+        nectar using the fewest blocks possible.
+      2-3 Bee Loops 3A_markdown_instruction: |-
+        Use a `repeat` loop to collect all
+        of the nectar.
       2-3 Bee Loops 3B_markdown_instruction: |-
         Now use the `repeat` block to collect
         all of the nectar and make all of the honey.
@@ -339,8 +345,9 @@
         \r
         This loop will run as long as the
         condition is true, in this case `nectar > 0`.
-      2-3 Bee Loops Assessment 1_markdown_instruction: "**Opdracht:** Gebruik een
-        `terwijl` lus om alle nectar te verzamelen van deze bloemen."
+      2-3 Bee Loops Assessment 1_markdown_instruction: |-
+        **Assessment:** Use a `while`
+        loop to collect all of the nectar from these flowers.
       2-3 Maze 1_markdown_instruction: |
         Can you help me catch the naughty pig? \r
         \r
@@ -376,8 +383,8 @@
         \r
         \r
         Use loops to get me to the sunflower with the fewest loops possible.
-      2-3 Maze Loops Assessment 1_markdown_instruction: "**Opdracht:** Bereik de zonnebloem,
-        gebruik makende van slechts 5 blokken?"
+      2-3 Maze Loops Assessment 1_markdown_instruction: "**Assessment:**  Get me\nto
+        the sunflower using only 5 blocks! "
       4-5 Artist 1_markdown_instruction: |
         Help me finish drawing my box. (Each line
         is 300 pixels long) \r
@@ -412,27 +419,34 @@
         \r
         Loop
         the blocks to create a circle of colors.
-      4-5 Artist 5_markdown_instruction: Door wat kunnen we "???" vervangen om de
-        zombie de tekening te laten vervolledigen, gebruik makend van de gegeven lus?
-      4-5 Artist 6_markdown_instruction: De gelijkzijdige driehoek heeft hoeken van
-        60, 60, en 60 graden. Iedere zijde is 200 pixels lang. Vervolledig de tekening.
+      4-5 Artist 5_markdown_instruction: |-
+        What can we replace "???" with to make
+        sure that the zombie completes this drawing using the loop provided?
+      4-5 Artist 6_markdown_instruction: |-
+        This equilateral triangle has angles of
+        60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.
       4-5 Artist 7_markdown_instruction: |-
-        De rechtse driehoek heeft hoeken van 30, 60, en 90 graden.
-        De lengte van de schuine zijde (=hypothenusa) is 200 pixels.\r
+        This right triangle has angles of 30, 60,
+        and 90 degrees.  The slanted side's length (length of the hypotenuse) is
+        200 pixels. \r
         \r
-        Maak de tekening af.
+        Complete the drawing.
       4-5 Artist 8_markdown_instruction: |-
-        De middellijn op een voetbalplein staat *loodrecht* op de zijlijnen.\r
-        Deze rechthoek heeft een totale omtrek van 800 pixels en is 240 pixels lang. Hoe breed is dit?\r
+        The halfway line on a soccer field is *perpendicular*
+        to the sidelines.   \r
+        This rectangle has a perimeter of 800 pixels total,
+        and it is 240 pixels long. How tall is it?   \r
         \r
-        Teken de buitenlijnen en de middellijn.
+        Draw the bounds and the
+        halfway line.
       4-5 Artist 9_markdown_instruction: |-
         Draw the right half of this image so that
         the design is symmetrical. \r
         The triangles are equilateral and have sides
         that are 50 pixels long.
-      4-5 Artist Assessment 1_markdown_instruction: "**Opdracht:** Gebruik een lus
-        om de gelijkzijdige driehoek te tekenen. Elke zijde is 300 pixels lang."
+      4-5 Artist Assessment 1_markdown_instruction: |-
+        **Assessment:** Use a loop to
+        draw the equilateral triangle. Each side is 300 pixels.
       4-5 Artist Free Draw 1_markdown_instruction: Vrije tekening! Teken de creatie
         die in je opkomt.
       4-5 Artist Patterns 1_markdown_instruction: Kun jij dit vierkant tekenen met
@@ -466,11 +480,15 @@
         \r
         Use a loop to draw it.
       4-5 Artist Patterns 5_markdown_instruction: |-
-        Herhaal deze code om een rij van 6 diamanten te verkijgen.\r
+        Repeat this code to make a row
+        of 6 diamonds. \r
         \r
-        Merk op dat we onze diamant code veranderden om 3 keer te herhalen in plaats van 2. Waarom is dat, denk je?
-      4-5 Artist Patterns 6_markdown_instruction: Hoeveel keer moet je dit blok herhalen
-        om een volledig rooster diamanten te tekenen?
+        Notice that we changed our diamond code to repeat 3
+        times instead of 2 - why do you think that is?
+      4-5 Artist Patterns 6_markdown_instruction: |
+        How many times do you need to
+        repeat this block to draw the full grid of diamonds?\r
+        \r
       4-5 Artist Patterns 7_markdown_instruction: |
         Let's modify the code from the
         last puzzle to make this more complex pattern. Notice how the diamonds overlap
@@ -531,9 +549,12 @@
         \r
         Remember, the amount of nectar can change each
         time you run the puzzle!
-      4-5 Bee Conditionals 7_markdown_instruction: Onthoud dat paarse bloemen 3, 2
-        of 1 nectar kunnen hebben. Maak de "controleer paarse bloem" functie af en
-        gebruik hem om alle nectar bij de bloemen te verzamelen.
+      4-5 Bee Conditionals 7_markdown_instruction: |-
+        These flowers can have 3, 2,
+        or 1 nectar. \r
+        \r
+        Complete the `check purple flower` function and use it
+        to collect all of the nectar at the flowers.
       4-5 Bee Conditionals 8_markdown_instruction: |-
         Write the function for `check
         flower make honey`. \r
@@ -550,9 +571,10 @@
         Complete the `get nectar or make honey` function, then
         call it to collect the nectar or honey. \r
       4-5 Bee Debugging 1_markdown_instruction: |-
-        Deze blokken storen me echt.\r
+        These blocks are really bugging
+        me. \r
         \r
-        Kan jij dat corrigeren?
+        Can you fix them?
       4-5 Bee Debugging 6_markdown_instruction: |-
         The purple flower has a different
         amount of nectar each time you run the puzzle. \r
@@ -15442,7 +15464,7 @@
         \r
         In
         this app we've already added a text label with the id "sound_value". Using
-        the `soundSensor.value` block, display the value of the sound sensor.
+        the `soundSensor.value` block. display the value of the sound sensor.
       CSD U6 analog temp_markdown_instruction: |-
         # Make a Thermometer App\r
         \r
@@ -15663,7 +15685,7 @@
         confusing design choices, or missing features you'd like to work on.\r
         \r
         Once
-        you're all done with this version of your program, click Submit to turn it
+        you're all down with this version of your program, click Submit to turn it
         in.
       CSD U6 game project functions call_markdown_instruction: |-
         # Calling your Functions\r
@@ -16182,14 +16204,14 @@
         # Game Screen Design\r
         \r
         We've
-        also added a "game" screen where the game will be played. It just needs
-        a couple of tweaks.\r
+        also added a "game" screen where the game will be played. It just need a
+        couple of tweaks.\r
         \r
         # Do This\r
         \r
-        Switch to the "game" screen
-        and, using your planning guide, fix this screen by changing the color of the
-        two emoji images.\r
+        Switch to the "game" screen and,
+        using your planning guide, fix this screen by changing the color of the two
+        emoji images.\r
         \r
         Feel free to add any other design tweaks that you'd
         like.
@@ -21985,20 +22007,20 @@
         to display different images based on sensor values
       CSDU6 - sensors experiment_markdown_instruction: |-
         <iframe width="370" height="620"
-        style="float:right; margin-left: 25px; border: 0px;" src="https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"></iframe>\r
+        style="float:left; margin-right: 25px; border: 0px;" src="https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"></iframe>\r
         \r
         #
         Sensor Experiment\r
         \r
-        Run the program to the right and experiment with
-        your board. Try interacting with your board in many different ways to figure
-        out what each sensor might be. Once you've completed the experiment, answer
-        the following questions for each sensor in the text box below.\r
+        Run the program to the left and experiment with your
+        board. Try interacting with your board in many different ways to figure out
+        what each sensor might be. Once you've completed the experiment, answer the
+        following questions for each sensor in the text box below.\r
         \r
-        * What
-        does this sensor measure?\r
-        * What is its maximum value?\r
-        * What is its
+        * What does
+        this sensor measure?\r
+        * What is it's maximum value?\r
+        * What is it's
         minimum value?
       CSDU6 - sensors light_markdown_instruction: |-
         # Light Sensor Updates\r
@@ -58102,114 +58124,6 @@
         * **Run your app** and test that all
         of the buttons work.
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
-      U4-AP-Practice-Choose-The-Data-Concern_markdown_instruction: |-
-        # AP Practice
-        - Identify the Data Concern\r
-        \r
-        One component of the **AP Explore Performance
-        Task** is describing a data concern related to a computing innovation.\r
-        \r
-        <div
-        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
-        font-family: serif; font-size: 12pt">\r
-        \r
-        <b>Computing Innovation</b>\r
-        <br>\r
-        <br>\r
-        2d.  Using
-        specific details, describe\r
-        <br>\r
-        <br>\r
-        <ul>\r
-        <li>at least one data
-        storage concern, data privacy concern, or data security concern directly related
-        to the computing innovation.</li>\r
-        </ul>\r
-        </div>\r
-        <br>\r
-        \r
-        Here's
-        the scoring guide for this part of the question\r
-        \r
-        <div style="magin:auto">\r
-        \t<img
-        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
-        PM.png">\r
-        </div>\r
-        \r
-        <br>\r
-        \r
-        # Sample Responses\r
-        \r
-        The responses
-        below are 4 sample responses to this component of the question.\r
-        \r
-        **Response
-        A:** "Facial recognition technology stores data mapping a user's face. A
-        privacy concern for this technology is that it could be used by businesses
-        and governments to identify people as they walk around in their daily lives."\r
-        \r
-        **Response
-        B:** "Software that tracks soccer player movements on the field can be used
-        to generate new statistics that help value contributions of individual players.
-        A data concern is that this information may be used to justify firing less
-        productive players."\r
-        \r
-        **Response C:** "Social networks allow users
-        to share vast amounts of private information about their lives. A security
-        concern of this technology is that this publicly available data may enable
-        stalkers or other criminals to identify potential targets."\r
-        \r
-        **Response
-        D:** "Self-driving cars store vast amounts of information about their location
-        and the world around them. A data concern is that this information would be
-        overwhelming for a single human to focus on as they drive."\r
-        \r
-        # Choose
-        the 2 Data Concerns\r
-        \r
-        **Two of these responses would likely earn the
-        point for this row. Two likely would not.**\r
-        \r
-        **Choose the two responses
-        (A, B, C, or D) that would earn the point. Then justify why you chose them.**
-      U4-AP-Practice-Choose-The-Harmful-Effect_markdown_instruction: |-
-        # AP Practice
-        - Choose the Harmful Effect\r
-        One component of the **AP Explore Performance
-        Task** is describing a data concern related to a computing innovation.\r
-        \r
-        <div
-        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
-        font-family: serif; font-size: 12pt">\r
-        \r
-        <b>Computing Innovation</b>\r
-        <br>\r
-        <br>\r
-        2d.  Using
-        specific details, describe\r
-        <br>\r
-        <br>\r
-        <ul>\r
-        <li>at least one data
-        storage concern, data privacy concern, or data security concern directly related
-        to the computing innovation.</li>\r
-        </ul>\r
-        </div>\r
-        <br>\r
-        \r
-        Here's
-        the scoring guide for this part of the question\r
-        \r
-        <div style="magin:auto">\r
-        \t<img
-        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
-        PM.png">\r
-        </div>\r
-        \r
-        <br>\r
-        \r
-        # Choose the Harmful Effect
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
         text.
@@ -69095,8 +69009,9 @@
       grade3_Conditionals_10_markdown_instruction: |-
         Verzamel nektar en maak honing. Tip:
         Wat gebeurt er als je de voorwaarde "als nektar" gebruikt bij een rode bloem? Kan je dit met een lus doen?
-      grade3_Conditionals_11 BAD_markdown_instruction: "**Opdracht:** Gebruik een
-        `terwijl` lus om alle nectar te verzamelen van deze bloemen."
+      grade3_Conditionals_11 BAD_markdown_instruction: |-
+        **Assessment:** Use a `while`
+        loop to collect all of the nectar from these flowers.
       grade3_Conditionals_11_markdown_instruction: |-
         Let's put everything together!\r
         \r
