@@ -333,7 +333,7 @@
   homepage_slot_text_title_hoc: "Uur Code"
   homepage_slot_text_blurb_hoc: "Iedereen kan het leren. Begin vandaag"
   homepage_slot_text_link_hoc: "Probeer een Uur Code"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
+  homepage_slot_text_link_about_hoc: "Over Hour of Code"
   homepage_slot_text_link_host: "Organiseer een 'Hour of Code'"
   homepage_slot_text_link_hocserved: "# bediend"
   homepage_solot_text_link_volunteer: "Word vrijwilliger voor het Uur Code"
@@ -436,7 +436,7 @@
   minecraft_subtitle: "Minecraft Uur Code"
   minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_host_event: "Plan een Minecraft Hour of Code Evenement"
   minecraft_teach_resources: "Teacher resources and lesson plan."
   minecraft_leader_guide: "Download resources to help you plan and lead an event."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
@@ -622,11 +622,11 @@
   dashboard_action_remove_confirm: "Verwijder?"
   dashboard_action_done: "Voltooid"
   dashboard_action_required: "verplicht"
-  dashboard_action_print_certificates: "Print certificates"
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_action_print_certificates: "Print certificaten"
+  dashboard_assessments_view: 'Bekijk evaluaties in:'
   dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
-  dashboard_assessments_summaries: "Assessment summaries"
+  dashboard_assessments_summaries: "Evaluatie-samenvattingen"
   dashboard_assessments_answers: "All assessment answers"
   dashboard_surveys_answers: "Enquêtes"
   dashboard_percent: "Percentage"
@@ -643,7 +643,7 @@
   dashboard_navigation_all_sections: "Leerlingaccounts en vooruitgang"
   dashboard_navigation_view_progress: "Voortgang"
   dashboard_navigation_view_text_responses: "Text Responses"
-  dashboard_navigation_view_assessments: "Assessments"
+  dashboard_navigation_view_assessments: "Evaluaties"
   dashboard_navigation_view_assessments_surveys: "Assessments/Surveys"
   dashboard_navigation_add_students: "Leerlingen Toevoegen"
   dashboard_navigation_manage_students: "Beheer Leerlingen"
@@ -694,7 +694,7 @@
   dashboard_sections_move_students: "Verplaatsen van studenten"
   dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
   dashboard_sections_assign_hoc_script_msg: "Please note that we will not be able to save progress in this course from December 3 - 11 due to the amount of traffic our site will receive for the Hour of Code.  Everything else in this tutorial will continue to work as expected.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)  We will save and report student progress for every other week of the year."
-  dashboard_sections_assign_activity: "Assign Course"
+  dashboard_sections_assign_activity: "Cursus Toewijzen"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: "Voeg leerling toe"
@@ -743,12 +743,12 @@
   dashboard_course2: 'Cursus 2:'
   dashboard_course3: 'Cursus 3:'
   dashboard_course4: 'Cursus 4 (bèta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Cursus A: '
+  dashboard_courseb: 'Cursus B: '
+  dashboard_coursec: 'Cursus C: '
+  dashboard_coursed: 'Cursus D: '
+  dashboard_coursee: 'Cursus E: '
+  dashboard_coursef: 'Cursus F: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "Lesprogramma"
   dashboard_curriculum_overview: "Basisschool Curriculum overzicht"
@@ -779,11 +779,11 @@
   dashboard_response: "Antwoord"
   dashboard_correctness: "Juistheid"
   dashboard_correctness_free_response: "Free response"
-  dashboard_correctness_unsubmitted: "Unsubmitted"
+  dashboard_correctness_unsubmitted: "Niet doorgestuurd"
   dashboard_correctness_correct: "Juist"
   dashboard_correctness_incorrect: "Incorrect"
   dashboard_submission_submitted: "Ingediend"
-  dashboard_submission_in_progress: "In progress"
+  dashboard_submission_in_progress: "In behandeling"
   dashboard_status: "Status"
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -807,7 +807,7 @@
   dashboard_faq_k5: "K-5 Veelgestelde vragen"
   code_hoc_coming: "Het Uur Code is hier - van 8 -14 december!"
   code_sign_up: "Meld u aan om deel te nemen tijdens de CS Onderwijs Week"
-  host_an_hour: "Host an hour"
+  host_an_hour: "Organiseer een uur"
   learn_banner_title: "Join us for the Hour of Code"
   learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: "Probeer nu"
@@ -848,7 +848,7 @@
   carousel_heading_webpages: "Leer webpagina's te maken"
   carousel_heading_robots: "Leer robots te programmeren"
   carousel_heading_ide: "Platformen populair onder docenten"
-  carousel_heading_desktop: "Learn to code on a computer"
+  carousel_heading_desktop: "Leer te programmeren op een computer"
   carousel_heading_mobtabelem: "For phones and tablets"
   carousel_heading_prereader: "For pre-readers"
   carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
@@ -984,14 +984,14 @@
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "CS Principles"
-  cspexams_category_name: "CS Principles Practice Test"
+  csp17_category_name: "CW Principes"
+  cspexams_category_name: "CW Principes Praktische Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Leeftijd 13+"
-  applab_shortdescription_congrats: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds"
+  applab_shortdescription_congrats: "App Lab is een programmeeromgeving waar je eenvoudige apps kan maken. Ontwikkel een app, codeer met blokken of JavaScript om het te laten werken, en deel je app in seconden"
   codeorg_gradelevel: "Leeftijden 4-104"
   codeintl_gradelevel: "Leeftijden 4-104"
   thinkersmithspanish_gradelevel: "Por todos"
@@ -1440,9 +1440,9 @@
   header_report_bug: "Rapporteer bugs"
   header_tutorials: "Tutorials"
   header_documentation: "Documentatie"
-  csp_name: "CS Principles"
+  csp_name: "CW Principes"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Volledige Cursussen"
   user_header_label: "Hallo %{username}"
   user_header_settings: "Mijn account"
   user_header_logout: "Uitloggen"
@@ -1451,7 +1451,7 @@
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
+  signing_in: "Aan Het Inloggen"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
   sign_in_instruct_website: "Go to %{code_org_url}."
   sign_in_instruct_code: 'Type in their section code: %{section_code}.'
@@ -1459,7 +1459,7 @@
   sign_in_instruct_secret: "Choose their secret %{secret}."
   sign_in_instruct_button: "Click the “Sign in” button."
   sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
+  reset_student_password: "Studenten paswoorden aan het resetten"
   reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
   login_cards: "Login Cards"
   print_login_cards: "Print login cards"
@@ -1471,6 +1471,6 @@
   joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
   signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
   reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-  syncing_students: "Syncing your students"
+  syncing_students: "Studenten aan het synchroniseren"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
