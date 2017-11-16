@@ -144,4 +144,30 @@ describe('convertBlocksXml', () => {
       expect(resultingBlock.textContent).to.equal(expected);
     });
   });
+
+  it('can convert placeBlockDirection directions', () => {
+    const directions = ['forward', 'right', 'back', 'left'];
+
+    directions.forEach((dirString, dirNumber) => {
+      const xml = `
+        <xml>
+          <block type="craft_placeBlockDirection">
+            <title name="TYPE">dirt</title>
+            <title name="DIR">${dirNumber}</title>
+          </block>
+        </xml>
+      `;
+
+      const result = parseElement(convertBlocksXml(xml));
+      const titles = result.getElementsByTagName('title');
+      let resultingBlock;
+      for (let i = 0; i < titles.length; i++) {
+        if (titles[i].getAttribute("name") === "DIR") {
+          resultingBlock = titles[i];
+        }
+      }
+
+      expect(resultingBlock.textContent).to.equal(dirString);
+    });
+  });
 });
