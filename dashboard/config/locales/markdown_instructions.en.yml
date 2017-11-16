@@ -7061,7 +7061,7 @@ en:
         make the app update continually."
       CSD U6 analog sound_markdown_instruction: "# Reading the Sound Sensor\r\n\r\nIn
         this app we've already added a text label with the id \"sound_value\". Using
-        the `soundSensor.value` block. display the value of the sound sensor."
+        the `soundSensor.value` block, display the value of the sound sensor."
       CSD U6 analog temp_markdown_instruction: "# Make a Thermometer App\r\n\r\nWhile
         the light and sound sensors have just a raw value with the `value` property,
         the temperature sensor is a little bit smarter. Instead of `tempSensor.value`,
@@ -7159,7 +7159,7 @@ en:
         add whatever finishing touches are needed and do a little testing. When your
         app is ready, have your classmates try it out. See if you can find any bugs,
         confusing design choices, or missing features you'd like to work on.\r\n\r\nOnce
-        you're all down with this version of your program, click Submit to turn it
+        you're all done with this version of your program, click Submit to turn it
         in."
       CSD U6 game project functions call_markdown_instruction: "# Calling your Functions\r\n\r\nWith
         your functions defined, you can can call them wherever you need. Go through
@@ -7404,10 +7404,10 @@ en:
         on the right clicks the right button. Whoever can get the bug over to their
         side first wins."
       CSD U6 tugowar design 1.5_markdown_instruction: "# Game Screen Design\r\n\r\nWe've
-        also added a \"game\" screen where the game will be played. It just need a
-        couple of tweaks.\r\n\r\n# Do This\r\n\r\nSwitch to the \"game\" screen and,
-        using your planning guide, fix this screen by changing the color of the two
-        emoji images.\r\n\r\nFeel free to add any other design tweaks that you'd
+        also added a \"game\" screen where the game will be played. It just needs
+        a couple of tweaks.\r\n\r\n# Do This\r\n\r\nSwitch to the \"game\" screen
+        and, using your planning guide, fix this screen by changing the color of the
+        two emoji images.\r\n\r\nFeel free to add any other design tweaks that you'd
         like."
       CSD U6 tugowar design 1_markdown_instruction: "# Getting Started: Screen Design\r\n\r\nYou
         should have already reviewed the planning guide for this project. Some of
@@ -10075,12 +10075,12 @@ en:
         Change the width, height, or position of a UI element\r\n* Use conditionals
         to display different images based on sensor values"
       CSDU6 - sensors experiment_markdown_instruction: "<iframe width=\"370\" height=\"620\"
-        style=\"float:left; margin-right: 25px; border: 0px;\" src=\"https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed\"></iframe>\r\n\r\n#
-        Sensor Experiment\r\n\r\nRun the program to the left and experiment with your
-        board. Try interacting with your board in many different ways to figure out
-        what each sensor might be. Once you've completed the experiment, answer the
-        following questions for each sensor in the text box below.\r\n\r\n* What does
-        this sensor measure?\r\n* What is it's maximum value?\r\n* What is it's
+        style=\"float:right; margin-left: 25px; border: 0px;\" src=\"https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed\"></iframe>\r\n\r\n#
+        Sensor Experiment\r\n\r\nRun the program to the right and experiment with
+        your board. Try interacting with your board in many different ways to figure
+        out what each sensor might be. Once you've completed the experiment, answer
+        the following questions for each sensor in the text box below.\r\n\r\n* What
+        does this sensor measure?\r\n* What is its maximum value?\r\n* What is its
         minimum value?"
       CSDU6 - sensors light_markdown_instruction: "# Light Sensor Updates\r\n\r\nThis
         app is very similar to the last, but we've added a button with the ID \"update_button\".
@@ -27561,6 +27561,45 @@ en:
         ID** from each `setScreen` dropdown.\r\n* **Run your app** and test that all
         of the buttons work."
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
+      U4-AP-Practice-Choose-The-Data-Concern_markdown_instruction: "# AP Practice
+        - Identify the Data Concern\r\n\r\nOne component of the **AP Explore Performance
+        Task** is describing a data concern related to a computing innovation.\r\n\r\n<div
+        style=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt\">\r\n\r\n<b>Computing Innovation</b>\r\n<br>\r\n<br>\r\n2d.  Using
+        specific details, describe\r\n<br>\r\n<br>\r\n<ul>\r\n<li>at least one data
+        storage concern, data privacy concern, or data security concern directly related
+        to the computing innovation.</li>\r\n</ul>\r\n</div>\r\n<br>\r\n\r\nHere's
+        the scoring guide for this part of the question\r\n\r\n<div style=\"magin:auto\">\r\n\t<img
+        src=\"https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
+        PM.png\">\r\n</div>\r\n\r\n<br>\r\n\r\n# Sample Responses\r\n\r\nThe responses
+        below are 4 sample responses to this component of the question.\r\n\r\n**Response
+        A:** \"Facial recognition technology stores data mapping a user's face. A
+        privacy concern for this technology is that it could be used by businesses
+        and governments to identify people as they walk around in their daily lives.\"\r\n\r\n**Response
+        B:** \"Software that tracks soccer player movements on the field can be used
+        to generate new statistics that help value contributions of individual players.
+        A data concern is that this information may be used to justify firing less
+        productive players.\"\r\n\r\n**Response C:** \"Social networks allow users
+        to share vast amounts of private information about their lives. A security
+        concern of this technology is that this publicly available data may enable
+        stalkers or other criminals to identify potential targets.\"\r\n\r\n**Response
+        D:** \"Self-driving cars store vast amounts of information about their location
+        and the world around them. A data concern is that this information would be
+        overwhelming for a single human to focus on as they drive.\"\r\n\r\n# Choose
+        the 2 Data Concerns\r\n\r\n**Two of these responses would likely earn the
+        point for this row. Two likely would not.**\r\n\r\n**Choose the two responses
+        (A, B, C, or D) that would earn the point. Then justify why you chose them.**"
+      U4-AP-Practice-Choose-The-Harmful-Effect_markdown_instruction: "# AP Practice
+        - Choose the Harmful Effect\r\nOne component of the **AP Explore Performance
+        Task** is describing a data concern related to a computing innovation.\r\n\r\n<div
+        style=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt\">\r\n\r\n<b>Computing Innovation</b>\r\n<br>\r\n<br>\r\n2d.  Using
+        specific details, describe\r\n<br>\r\n<br>\r\n<ul>\r\n<li>at least one data
+        storage concern, data privacy concern, or data security concern directly related
+        to the computing innovation.</li>\r\n</ul>\r\n</div>\r\n<br>\r\n\r\nHere's
+        the scoring guide for this part of the question\r\n\r\n<div style=\"magin:auto\">\r\n\t<img
+        src=\"https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
+        PM.png\">\r\n</div>\r\n\r\n<br>\r\n\r\n# Choose the Harmful Effect"
       U4L01 Free Response_markdown_instruction: "This is the free response question
         text.\n"
       U4L02 - Objects - Template1_markdown_instruction: "# Template"
