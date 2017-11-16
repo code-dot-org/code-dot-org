@@ -1,11 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
-import color from '../util/color';
 import { tutorialTypes } from './tutorialTypes.js';
+import LargeChevronLink from './LargeChevronLink';
 
 const styles = {
   heading: {
-    color: color.teal,
     width: '100%',
   },
   image: {
@@ -15,11 +14,12 @@ const styles = {
 
 export default class Certificate extends Component {
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired
+    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { completedTutorialType } = this.props;
+    const { completedTutorialType, isRtl, } = this.props;
 
     const minecraft = (completedTutorialType === '2017Minecraft' ||
      completedTutorialType === 'pre2017Minecraft');
@@ -36,6 +36,11 @@ export default class Certificate extends Component {
         <h1 style={styles.heading}>
           {i18n.congratsCertificateHeading()}
         </h1>
+        <LargeChevronLink
+          link={document.referrer}
+          linkText={i18n.backToActivity()}
+          isRtl={isRtl}
+        />
         <div style={styles.image}>
           <img src={imgSrc}/>
         </div>
