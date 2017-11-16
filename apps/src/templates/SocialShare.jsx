@@ -22,12 +22,12 @@ export default class SocialShare extends Component {
 
     return (
       <div>
-        <a href={facebookShareUrl}>
+        <a href={facebookShareUrl} target="_blank">
           <button style={{background: color.facebook_blue, ...styles.shareButton}}>
             <i className="fa fa-facebook" />
           </button>
         </a>
-        <a href={twitterShareUrl}>
+        <a href={twitterShareUrl} target="_blank">
           <button style={{background: color.twitter_blue, ...styles.shareButton}}>
             <i className="fa fa-twitter" />
           </button>
