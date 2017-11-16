@@ -945,5 +945,8 @@
   "yourSchoolParentDesc": "Gakktu í málið að efla tölvufræðinám í skólanum þínum eða á staðnum",
   "yourSchoolTeacherButton": "Byrjaðu að kenna",
   "yourSchoolTeacherDesc": "Byrjaðu að kenna í dag, það þarf enga reynslu af tölvunarfræði",
-  "yourSchoolTellUs": "Segðu okkur frá skóla þínum"
+  "yourSchoolTellUs": "Segðu okkur frá skóla þínum",
+  "backToActivity": "Back to activity",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

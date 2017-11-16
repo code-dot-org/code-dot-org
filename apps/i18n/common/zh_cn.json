@@ -945,5 +945,8 @@
   "yourSchoolParentDesc": "请采取行动在您的学校或地区推广计算机科学",
   "yourSchoolTeacherButton": "开始教学",
   "yourSchoolTeacherDesc": "今天就开始教学，无需计算机科学经验",
-  "yourSchoolTellUs": "告诉我们你的学校"
+  "yourSchoolTellUs": "告诉我们你的学校",
+  "backToActivity": "Back to activity",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

@@ -945,5 +945,8 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Conte-nos sobre a sua escola"
+  "yourSchoolTellUs": "Conte-nos sobre a sua escola",
+  "backToActivity": "Back to activity",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

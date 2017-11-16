@@ -945,5 +945,8 @@
   "yourSchoolParentDesc": "მოიმოქმედეთ რამე, რათა განავრცოთ კომპიუტერული მეცნიერება თქვენს სკოლასა ან უბანში",
   "yourSchoolTeacherButton": "სწავლების დაწყება",
   "yourSchoolTeacherDesc": "დაიწყეთ სწავლება დღესვე, გამოცდილება კომპიუტერულ მეცნიერებაში საჭირო არაა",
-  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება"
+  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება",
+  "backToActivity": "Back to activity",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

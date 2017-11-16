@@ -945,5 +945,8 @@
   "yourSchoolParentDesc": "Få fart på datakunnskapen på din skole eller i ditt distrikt",
   "yourSchoolTeacherButton": "Start undervisningen",
   "yourSchoolTeacherDesc": "Begynne å lære i dag, ingen informatikkerfaring nødvendig",
-  "yourSchoolTellUs": "Fortell oss om skolen din"
+  "yourSchoolTellUs": "Fortell oss om skolen din",
+  "backToActivity": "Back to activity",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

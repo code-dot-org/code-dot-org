@@ -945,5 +945,8 @@
   "yourSchoolParentDesc": "Предприеми действия за разширяване на изучаването на компютърни науки във вашето училище или област",
   "yourSchoolTeacherButton": "Започнете обучение",
   "yourSchoolTeacherDesc": "Започнете преподаване днес, не необходим опит в компютърните науки",
-  "yourSchoolTellUs": "Разкажете ни за вашето училище"
+  "yourSchoolTellUs": "Разкажете ни за вашето училище",
+  "backToActivity": "Back to activity",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }
