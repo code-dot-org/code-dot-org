@@ -65,7 +65,12 @@ export default class Certificate extends Component {
 
   render() {
     const blankCertificate = blankCertificates[this.props.type];
-    const certificate = queryString.parse(window.location.search)['i'].replace(/[^a-z0-9_]/, '');
+    let certificate;
+    try {
+      certificate = queryString.parse(window.location.search)['i'].replace(/[^a-z0-9_]/, '');
+    } catch (e) {
+      certificate = '';
+    }
     const imgSrc = this.state.personalized ? `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg` : blankCertificate;
 
     const facebook = queryString.stringify({
