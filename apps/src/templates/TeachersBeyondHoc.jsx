@@ -32,7 +32,9 @@ export default class TeachersBeyondHoc extends Component {
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
 
     const codeorgTeacherImage = desktop ? "codeorg-teacher" : "course-catalog";
+
     const thirdPartyTeacherImage = desktop ? "third-party-teacher" : "third-party-teacher-small";
+
     const thirdPartyTeacherTitle = desktop ? i18n.congratsTeacherExternalTitle() : i18n.congratsTeacherExternalTitleShort();
 
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
