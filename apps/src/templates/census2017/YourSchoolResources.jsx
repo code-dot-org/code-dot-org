@@ -49,6 +49,7 @@ class YourSchoolResources extends Component {
             buttonText={i18n.yourSchoolParentButton()}
             link={pegasus('/help')}
             isRtl={false}
+            allowWrap={true}
           />
         </div>
       </div>
