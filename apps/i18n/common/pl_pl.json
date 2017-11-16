@@ -945,5 +945,8 @@
   "yourSchoolParentDesc": "Podejmij działanie i rozwiń naukę informatyki w Twojej szkole lub okolicy",
   "yourSchoolTeacherButton": "Zacznij uczyć",
   "yourSchoolTeacherDesc": "Zacznij uczyć już dziś. Doświadczenie informatyczne nie jest do tego niezbędne",
-  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole"
+  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole",
+  "backToActivity": "Back to activity",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }
