@@ -209,12 +209,12 @@ export default class SchoolNotFound extends Component {
         {this.props.useGoogleLocationSearch &&
           <div style={fieldStyle}>
             <label style={labelStyle}>
-              {this.renderLabel("City / Town")}
+              {this.renderLabel(i18n.schoolCityTown())}
               <input
                 id="registration-school-location"
                 type="text"
                 name="registration_location"
-                placeholder="Search for your school or organization location"
+                placeholder={i18n.schoolLocationSearchPlaceholder()}
                 style={inputStyle}
               />
             </label>
