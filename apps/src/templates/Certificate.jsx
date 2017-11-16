@@ -37,11 +37,11 @@ export default class Certificate extends Component {
     const imgSrc = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
 
     const facebook = queryString.stringify({
-      u: `${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+      u: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
     });
 
     const twitter = queryString.stringify({
-      url: `${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+      url: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
       related: 'codeorg',
       text: i18n.justDidHourOfCode(),
     });
