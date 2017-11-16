@@ -46,7 +46,7 @@ bg:
       label: 'Добавете учител:'
       placeholder: "Код по раздел(ABCDEF)"
       instructions: "Моля въведете кода, споделен от учителя. Това е код от 6 букви като \"ABCDEF\"."
-      instructions_short: "Въведете вашия шестбуквен код за раздел"
+      instructions_short: "Enter your 6 letter section code"
     submit: 'Добавяне на учител'
   add_hint_form:
     placeholder: 'Моля, въведете вашата препоръка'
@@ -59,7 +59,7 @@ bg:
   courses: 'Курсове'
   courses_page:
     title_student: "Обучавайте се в Code Studio"
-    title_teacher: "Научи с Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Ънплъгд дейност'
   of: "на"
   more: "ПОВЕЧЕ"
@@ -84,12 +84,12 @@ bg:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft профил'
-    clever: 'Умен профил'
+    clever: 'Clever Account'
     forgot_password: 'Забравили сте паролата си?'
     need_confirmation: "Не сте получили инструкции за потвърждение ?"
     need_unlock: "Не сте получили инструкции за отключване?"
     not_linked: "За съжаление, твоят Code.org акаунт не е свързан с %{provider}. Ще се наложи да влезеш като въведеш паролата си по-долу."
-    use_clever: "За съжаление, този Code.org акаунт не е свързан с вашият %{provider}. Моля, влезте през вашия умен портал."
+    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} ученици вече са се регистрирали.'
     teacher_count: '%{count} учители вече са се регистрирали.'
@@ -122,7 +122,7 @@ bg:
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
-    error: "Възникна грешка."
+    error: "An error occurred."
   school_info:
     title: 'Информацшя за училището (по избор)'
     school_country: 'Училищен район'
@@ -188,7 +188,7 @@ bg:
   parent_mailer:
     student_associated_subject: 'Информация за вход в Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Добре дошли в Code.org!'
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Вашата секция:'
@@ -215,7 +215,7 @@ bg:
       section_not_found: "Не е намерена раздел с код \"%{section_code}\"."
       blank_code: "Моля въведете код за раздела"
       cant_join_own_section: "За съжаление, не можете да се присъедините към вашият собствен раздел."
-      provider_managed_section: "Този раздел се управлява от друг доставчик и не може да се присъединете. Помолете учителите си да ви добавят чрез %{provider} и повторно синхронизирайте раздела."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org уведомление: %{student_name} вече не свързан като ваш ученик.'

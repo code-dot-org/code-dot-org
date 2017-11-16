@@ -998,7 +998,7 @@
       applab: App Lab
       gamelab: Game Lab
       weblab: Web Lab (bèta)
-    new_buttons_header: Start een nieuw project
+    new_buttons_header: 'Start a new project:'
     rename: Hernoemen
     save: Opslaan
     delete: Verwijderen
@@ -1291,4 +1291,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Volledige Cursussen
+  courses_category: Full Courses
