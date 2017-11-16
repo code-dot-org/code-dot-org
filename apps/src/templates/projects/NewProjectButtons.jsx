@@ -69,6 +69,10 @@ const PROJECT_INFO = {
     label: i18n.projectTypeMinecraftDesigner(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft.png"
   },
+  'minecraft_hero': {
+    label: i18n.projectTypeMinecraftHero(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft_hero_square.jpg"
+  },
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
@@ -110,7 +114,7 @@ const PROJECT_INFO = {
 const styles = {
   fullsize: {
     width: styleConstants['content-width'],
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 10,
   },
   row: {

@@ -23,7 +23,10 @@ nav: promote_nav
 
 ## 利用社交媒体发布
 
-[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![图片
+](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![图片
+](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![图片
+](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -31,7 +34,8 @@ nav: promote_nav
 
 ## 使用编程一小时标志来传播这个词
 
-[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
+[![图片
+](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [下载高分辨率版本](http://images.code.org/share/hour-of-code-logo.zip)
 
@@ -50,7 +54,8 @@ nav: promote_nav
 ## 打印这些贴纸，给你的学生。
 
 （贴纸直径为2.54cm，63个一整张）  
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![图片
+](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -62,11 +67,11 @@ nav: promote_nav
 
 **Subject line:** Join me and over 100 million students for an Hour of Code
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+计算机无所不在，它正改变着地球上的每一个产业。 But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 超过100位合作伙伴共同支持这项活动。 Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. 请参与在计算机科学教育周的编程一小时活动, <%= campaign_date('full')%>。
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
@@ -80,13 +85,13 @@ Get started at http://hourofcode.com/<%= @country %>
 
 Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[Our organization/My name] would love to help [school name] run an Hour of Code event. 我们可以帮助老师在他们的教室里主持一个小《编程一小时》 (我们甚至不需要电脑!) 或者如果你想举办一个学校大会, 我们可以安排一个演讲者谈论技术是如何运作的, 以及成为一个软件工程师的感觉。
 
 The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+计算机无所不在，它正改变着地球上的每一个产业。 But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
 
-Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 超过100位合作伙伴共同支持这项活动。 Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
 
@@ -102,7 +107,7 @@ Thanks!
 
 Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 好消息是，我们正在着手改变现状。
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 超过100位合作伙伴共同支持这项活动。 Every Apple Store in the world has hosted an Hour of Code. 甚至连奥巴马总统也曾在竞选活动中写下了自己的第一行编程。
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
@@ -120,7 +125,7 @@ I look forward to being in touch.
 
 ### Tell parents about your school's event:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+** 主题行: **我们的学生用《编程一小时》来改变未来
 
 Dear Parents,
 
@@ -132,7 +137,7 @@ That’s why our entire school is joining in on the largest learning event in hi
 
 Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+这是一个改变未来教育的机会在[镇/城市名称]。
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
@@ -142,7 +147,7 @@ Your principal
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### 邀请当地的政界人士出席你们学校的活动：
 
 **Subject line:** Join our school as we change the future with an Hour of Code
 

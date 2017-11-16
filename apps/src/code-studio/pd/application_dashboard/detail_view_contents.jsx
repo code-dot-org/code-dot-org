@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl} from 'react-bootstrap';
-import Facilitator1819Questions from './detail_view_facilitator_specific_components';
+import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import {ApplicationStatuses} from './constants';
@@ -35,7 +35,9 @@ export default class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      form_data: PropTypes.object
+      form_data: PropTypes.object,
+      application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
+      response_scores: PropTypes.object
     }),
     updateProps: PropTypes.func.isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -47,7 +49,9 @@ export default class DetailViewContents extends React.Component {
 
   state = {
     status: this.props.applicationData.status,
-    notes: this.props.applicationData.notes
+    notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:",
+    response_scores: this.props.applicationData.response_scores || {},
+    editing: false
   };
 
   handleCancelEditClick = () => {
@@ -76,13 +80,19 @@ export default class DetailViewContents extends React.Component {
     });
   };
 
+  handleScoreChange = (event) => {
+    this.setState({
+      response_scores: {...this.state.response_score, [event.target.id]: event.target.value}
+    });
+  }
+
   handleSaveClick = () => {
     $.ajax({
       method: "PATCH",
       url: `/api/v1/pd/applications/${this.props.applicationId}`,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify(this.state)
+      data: JSON.stringify(Object.assign({}, this.state, {response_scores: JSON.stringify(this.state.response_scores)}))
     }).done(() => {
       this.setState({
         editing: false
@@ -174,8 +184,12 @@ export default class DetailViewContents extends React.Component {
 
   renderQuestions = () => {
     return (
-      <Facilitator1819Questions
+      <DetailViewApplicationSpecificQuestions
         formResponses={this.props.applicationData.form_data}
+        applicationType={this.props.applicationData.application_type}
+        editing={this.state.editing}
+        scores={this.state.response_scores}
+        handleScoreChange={this.handleScoreChange}
       />
     );
   };
@@ -192,7 +206,7 @@ export default class DetailViewContents extends React.Component {
               id="Notes"
               disabled={!this.state.editing}
               componentClass="textarea"
-              value={this.state.notes || ''}
+              value={this.state.notes}
               onChange={this.handleNotesChange}
               style={styles.notes}
             />

@@ -37,15 +37,15 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planera vad du behöver för teknik - datorer är inte nödvändiga
 
-Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behöver **inte** en dator för varje barn, och du kan även göra Hour of Coode utan datorer.
+Den bästa Hour of Code-upplevelsen fås med datorer med internet. Men du behöver **inte** en dator för varje barn, och du kan även göra Hour of Coode utan datorer.
 
 **Planera!** Gör följande steg innan evenemanget startar:
 
 - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
 - Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Inte har tillräckligt många enheter?** Använd [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
+- **Har du inte tillräckligt många enheter?** Använd [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
 - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 <img src="/images/fit-350/group_ipad.jpg" />
@@ -69,7 +69,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 - Bjuda in programmerare från företaget att tala om varför de beslutade att studera datavetenskap och de projekt som de arbetar på.
 - Se tips på hur man kan få tjejer intresserade av datavetenskap [här](<%= resolve_url('https://code.org/girls') %>).
 
-## 6. Code!
+## 6. Koda!
 
 **Visa eleverna till aktiviteten**
 

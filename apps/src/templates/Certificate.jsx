@@ -6,10 +6,10 @@ import i18n from '@cdo/locale';
 import color from '../util/color';
 import queryString from 'query-string';
 import SocialShare from './SocialShare';
+import LargeChevronLink from './LargeChevronLink';
 
 const styles = {
   heading: {
-    color: color.teal,
     width: '100%',
   },
   image: {
@@ -44,6 +44,7 @@ export default class Certificate extends Component {
 
   static propTypes = {
     type: PropTypes.oneOf(['hourOfCode', 'minecraft']).isRequired,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   personalizeCertificate(session) {
@@ -84,6 +85,11 @@ export default class Certificate extends Component {
         <h1 style={styles.heading}>
           {i18n.congratsCertificateHeading()}
         </h1>
+        <LargeChevronLink
+          link={document.referrer}
+          linkText={i18n.backToActivity()}
+          isRtl={this.props.isRtl}
+        />
         <div style={styles.personalize}>
           {this.state.personalized ?
             <div>

@@ -6,9 +6,9 @@ module Teacher1819ApplicationConstants
 
   SECTION_HEADERS = {
     section_1_about_you_and_your_school: 'About You and Your School',
-    section_2_choose_your_program: 'Section 2: Choose Your Program',
-    section_3_summer_workshop: 'Section 3: Summer Workshop',
-    section_4_submission: 'Section 4: Submission'
+    section_2_choose_your_program: 'Choose Your Program',
+    section_3_summer_workshop: 'Summer Workshop',
+    section_4_submission: 'Submission'
   }
 
   PAGE_LABELS = {
@@ -122,6 +122,24 @@ module Teacher1819ApplicationConstants
          and application with Code.org’s Regional Partners.'
       )
     }
+  }
+
+  LABEL_OVERRIDES = {
+    taught_in_past: 'Have you taught computer science courses or activities in the past?',
+    program: 'Which professional learning program would you like to join for the 2018-19 school year?',
+    csd_which_grades: 'To which grades does your school plan to offer CS Discoveries?',
+    csp_which_grades: 'To which grades does your school plan to offer CS Principles?',
+    csp_ap_exam: 'Are you planning for your students to take the AP CS Principles exam in the spring of 2019?',
+    alternate_workshops: 'Which of the following alternate workshops are you available to attend?',
+    willing_to_travel: 'How far would you be willing to travel to each workshop?'
+  }
+
+  VALID_SCORES = {
+    able_to_attend_single: ['Yes', 'No'],
+    committed: ['Yes', 'No'],
+    taught_in_past: [0, 2],
+    csd_which_grades: ['Yes', 'No'],
+    csp_which_grades: ['Yes', 'No']
   }
 
   ALL_LABELS = PAGE_LABELS.values.reduce(:merge)
