@@ -192,7 +192,7 @@ module LevelsHelper
 
     if pairing_check_user
       recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
-      if recent_driver
+      if recent_driver && !recent_user.is_a?(DeletedUser)
         level_view_options(@level.id, pairing_driver: recent_driver)
         if recent_attempt
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
