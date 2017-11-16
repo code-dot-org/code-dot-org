@@ -49,7 +49,7 @@ class Census::CensusSubmission < ApplicationRecord
     none: "NONE",
     some: "SOME",
     all: "ALL",
-    dont_know:  "I DON’T KNOW"
+    dont_know:  "I DON'T KNOW"
   }.freeze
 
   enum how_many_do_hoc: HOW_MANY_OPTIONS, _prefix: true
