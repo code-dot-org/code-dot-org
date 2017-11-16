@@ -945,7 +945,9 @@
   "pre2017MinecraftTitle": "Minecraft Education",
   "projectTypeMinecraftHero": "Minecraft Hero",
   "school": "School",
+  "schoolCityTown": "City / Town",
   "schoolInformationOptionalHeader": "School / Organization Information (optional)",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location",
   "signupFormSchoolOrOrganization": "School / Organization",
   "signupFormSchoolType": "Type"
 }
