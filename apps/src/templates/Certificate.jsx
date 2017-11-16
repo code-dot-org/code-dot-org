@@ -1,6 +1,11 @@
+/* global dashboard */
+
 import React, { PropTypes, Component } from 'react';
+import $ from 'jquery';
 import i18n from '@cdo/locale';
-import { tutorialTypes } from './tutorialTypes.js';
+import color from '../util/color';
+import queryString from 'query-string';
+import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 
 const styles = {
@@ -10,26 +15,75 @@ const styles = {
   image: {
     width: '50%',
   },
+  personalize: {
+    width: '50%',
+    float: 'right',
+  },
+  nameInput: {
+    height: 32,
+    margin: 0,
+  },
+  submit: {
+    background: color.orange,
+    color: color.white,
+  },
+};
+
+const blankCertificates = {
+  hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
+  minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
 };
 
 export default class Certificate extends Component {
+  constructor() {
+    super();
+    this.state = {
+      personalized: false,
+    };
+  }
+
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
+    type: PropTypes.oneOf(['hourOfCode', 'minecraft']).isRequired,
     isRtl: PropTypes.bool.isRequired,
   };
 
+  personalizeCertificate(session) {
+    $.ajax({
+      url: '/v2/certificate',
+      type: "post",
+      dataType: "json",
+      data: {
+        session_s: session,
+        name_s: this.nameInput.value,
+      }
+    }).done(response => {
+      if (response.certificate_sent) {
+        this.setState({personalized: true});
+      }
+    });
+  }
+
   render() {
-    const { completedTutorialType, isRtl, } = this.props;
+    const blankCertificate = blankCertificates[this.props.type];
+    let certificate;
+    try {
+      certificate = queryString.parse(window.location.search)['i'].replace(/[^a-z0-9_]/, '');
+    } catch (e) {
+      certificate = '';
+    }
+    const imgSrc = this.state.personalized ? `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg` : blankCertificate;
 
-    const minecraft = (completedTutorialType === '2017Minecraft' ||
-     completedTutorialType === 'pre2017Minecraft');
-    const image = minecraft ? "minecraft-cert" : "default-cert";
+    const facebook = queryString.stringify({
+      u: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+    });
 
-    const filenameToImgUrl = {
-      "default-cert": require('@cdo/static/hour_of_code_certificate.jpg'),
-      "minecraft-cert": require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
-    };
-    const imgSrc = filenameToImgUrl[image];
+    const twitter = queryString.stringify({
+      url: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+      related: 'codeorg',
+      text: i18n.justDidHourOfCode(),
+    });
+
+    const print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
 
     return (
       <div>
@@ -39,8 +93,37 @@ export default class Certificate extends Component {
         <LargeChevronLink
           link={document.referrer}
           linkText={i18n.backToActivity()}
-          isRtl={isRtl}
+          isRtl={this.props.isRtl}
         />
+        <div style={styles.personalize}>
+          {this.state.personalized ?
+            <div>
+              <h2>{i18n.congratsCertificateThanks()}</h2>
+              <p>{i18n.congratsCertificateContinue()}</p>
+            </div> :
+            <div>
+              <h2>{i18n.congratsCertificatePersonalize()}</h2>
+              <input
+                type="text"
+                style={styles.nameInput}
+                placeholder={i18n.yourName()}
+                ref={input => this.nameInput = input}
+              />
+              <button
+                style={styles.submit}
+                onClick={this.personalizeCertificate.bind(this, certificate)}
+              >
+                {i18n.submit()}
+              </button>
+            </div>
+          }
+          <h2>{i18n.congratsCertificateShare()}</h2>
+          <SocialShare
+            facebook={facebook}
+            twitter={twitter}
+            print={print}
+          />
+        </div>
         <div style={styles.image}>
           <img src={imgSrc}/>
         </div>
