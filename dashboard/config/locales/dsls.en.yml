@@ -8794,7 +8794,6 @@ en:
         Strongly disagree: Strongly disagree
       csp-post-survey-2017-q22:
         Agree: Agree
-        At times I felt unsure whether I belong in this class.: At times I felt unsure whether I belong in this class.
         Disagree: Disagree
         Neither: Neither
         Slightly agree: Slightly agree
@@ -8832,7 +8831,6 @@ en:
       csp-post-survey-2017-q26:
         Agree: Agree
         Disagree: Disagree
-        I feel like it is hard for people like me to to be accepted in this computer science class.: I feel like it is hard for people like me to to be accepted in this computer science class.
         It has been hard for people like me to to be accepted in this computer science class.: It has been hard for people like me to to be accepted in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
@@ -8996,15 +8994,12 @@ en:
         About half the class sessions: About half the class sessions
         ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
         : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
-        Considered alternative approaches to my work: Considered alternative approaches to my work
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csp-post-survey-2017-q57:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
-        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
         ? Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
         : Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
         Many class sessions: Many class sessions
@@ -9013,8 +9008,6 @@ en:
       csp-post-survey-2017-q58:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
-        : Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
         Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.: Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.
         Many class sessions: Many class sessions
         Never: Never
@@ -9023,7 +9016,6 @@ en:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Connected lesson content with current events.: Connected lesson content with current events.
-        Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.: Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
@@ -9040,32 +9032,22 @@ en:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Asked questions when I was confused about activities or assignments.: Asked questions when I was confused about activities or assignments.
-        Connected lesson content with current events.: Connected lesson content with current events.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csp-post-survey-2017-q61:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Asked questions when I was confused about activities or assignments.: Asked questions when I was confused about activities or assignments.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
         'Tried new things in class even when I was not sure how to do them. ': 'Tried new things in class even when I was not sure how to do them. '
       csp-post-survey-2017-q64:
-        A few classes: A few classes
-        About half the class sessions: About half the class sessions
         ? 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
         : 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
-        Many class sessions: Many class sessions
-        Never: Never
         'No': 'No'
-        Once or more per class session: Once or more per class session
-        'Tried new things in class even when I was not sure how to do them. ': 'Tried new things in class even when I was not sure how to do them. '
         'Yes': 'Yes'
       csp-post-survey-2017-q65:
-        ? 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
-        : 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
         I don't know: I don't know
         Is this computer science course required for you?: Is this computer science course required for you?
         'No': 'No'
