@@ -36,7 +36,7 @@ Feature: Using the SectionActionDropdown
     And I am on "http://studio.code.org/"
     And I create a new section
     And I click selector ".fa-chevron-down" once I see it
-    And I click selector "#ui-test-edit-section" once I see it
+    And I click selector ".pop-up-menu-item:contains('Edit Section Details')" once I see it
     And I press the save button to create a new section
 
   # This should adequately test section down
@@ -48,7 +48,7 @@ Feature: Using the SectionActionDropdown
     And I am on "http://studio.code.org/"
     And I create a new section
     And I click selector ".fa-chevron-down" once I see it
-    And I click selector "#ui-test-hide-section" once I see it
+    And I click selector ".pop-up-menu-item:contains('Hide Section')" once I see it
     And I click selector ".ui-test-show-hide" once I see it
     And I click selector ".fa-chevron-down" once I see it
-    And I click selector "a:contains('Show Section')" once I see it
+    And I click selector ".pop-up-menu-item:contains('Show Section')" once I see it
