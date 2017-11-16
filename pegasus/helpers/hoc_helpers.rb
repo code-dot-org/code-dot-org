@@ -117,7 +117,7 @@ def complete_tutorial(tutorial={})
     end
 
     site = row[:referer]
-    if tutorial[:orgname].include? 'Code.org'
+    if DCDO.get('new_congrats', false) && tutorial[:orgname].include?('Code.org')
       site = CDO.studio_url
     end
 
