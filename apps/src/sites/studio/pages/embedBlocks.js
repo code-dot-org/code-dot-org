@@ -4,6 +4,6 @@
  */
 import { convertXmlToBlockly } from '@cdo/apps/templates/instructions/utils';
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   convertXmlToBlockly(document.body);
 });
