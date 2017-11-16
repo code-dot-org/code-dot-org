@@ -52,6 +52,7 @@ $(document).ready(function () {
   renderSchoolDropdown();
 
   $("#hoc-signup-form").submit(function ( event ) {
+    $('#email-invalid-error').hide();
     if (validateFields()) {
       signupFormSubmit(gotoThankYouPage);
     }
@@ -63,6 +64,7 @@ $(document).ready(function () {
   });
 
   $('#continue').click(function () {
+    $('#email-invalid-error').hide();
     if (validateFields()) {
       signupFormSubmit(showCensusForm);
     }
@@ -240,6 +242,9 @@ function validateFields() {
 }
 
 function signupFormError(data) {
+  if (data.responseJSON.email_s[0] === "invalid") {
+    $('#email-invalid-error').show();
+  }
   $('#error_message').html("<p>" + signupErrorMessage + "</p>").show();
   $("#signup_submit").removeAttr('disabled');
 }
