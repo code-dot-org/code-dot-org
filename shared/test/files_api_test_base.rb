@@ -54,8 +54,9 @@ class FilesApiTestBase < Minitest::Test
     end
   end
 
-  # Delete all versions of the specified file from S3, including all delete markers
-  def delete_all_versions(bucket, key)
+  # Delete all versions of the specified file from S3, including all delete markers.
+  # @param [Fixnum] max_versions Optional sanity check to prevent accidental mass-deletion.
+  def delete_all_versions(bucket, key, max_versions = nil)
     s3 = AWS::S3.create_client
     response = s3.list_object_versions(bucket: bucket, prefix: key)
     objects = response.versions.concat(response.delete_markers).map do |version|
@@ -64,6 +65,12 @@ class FilesApiTestBase < Minitest::Test
         version_id: version.version_id
       }
     end
+
+    num_versions = objects.length
+    if max_versions && num_versions > max_versions
+      raise "Won't delete #{num_versions} versions of s3://#{bucket}/#{key}, max #{max_versions}"
+    end
+
     if objects.any?
       s3.delete_objects(
         bucket: bucket,
