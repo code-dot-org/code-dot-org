@@ -136,7 +136,7 @@ ActiveRecord::Schema.define(version: 20171109230625) do
     t.datetime "created_at",                                          null: false
     t.datetime "updated_at",                                          null: false
     t.index ["circuit_playground_discount_code_id"], name: "index_circuit_playground_applications_on_code_id", using: :btree
-    t.index ["user_id"], name: "index_circuit_playground_discount_applications_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_circuit_playground_discount_applications_on_user_id", unique: true, using: :btree
   end
 
   create_table "circuit_playground_discount_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

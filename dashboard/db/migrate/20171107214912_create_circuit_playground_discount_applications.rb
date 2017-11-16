@@ -1,7 +1,7 @@
 class CreateCircuitPlaygroundDiscountApplications < ActiveRecord::Migration[5.0]
   def change
     create_table :circuit_playground_discount_applications do |t|
-      t.references :user, index: true, null: false
+      t.references :user, index: {unique: true}, null: false
       t.integer :unit_6_intention, null: true
       t.boolean :has_confirmed_school, null: false, default: false
       t.boolean :full_discount, null: true
