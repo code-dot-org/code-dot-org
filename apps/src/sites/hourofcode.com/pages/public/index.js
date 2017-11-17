@@ -166,7 +166,7 @@ function showCensusForm(data) {
   // Copy relevant hoc-signup inputs to the census form
   $('#census_email').val($('#hoc-email').val());
   $('#census_name').val($('#hoc-name').val());
-  $('#census_school_id').val($('input[name=nces_school_s]').val());
+  $('#census_school_id').val($('#hoc-signup-form sinput[name=nces_school_s]').val());
   $('#census_country').val($('#country').val());
   $('#census_school_name').val($('#school-name').val());
   $('#census_location').val($('#hoc-event-location').val());
