@@ -23,18 +23,11 @@ $(document).ready(function () {
     tutorial = atob(params['s']).replace(/[^A-Za-z0-9_\- ]/g, '');
   } catch (e) {}
 
-  const tutorialType = {
-    'applab-intro': 'applab',
-    hero: '2017Minecraft',
-    minecraft: 'pre2017Minecraft',
-    mc: 'pre2017Minecraft',
-  }[tutorial] || 'other';
-
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
         certificateId={certificateId}
-        completedTutorialType={tutorialType}
+        tutorial={tutorial}
         isRtl={isRtl}
         userType={userType}
         isEnglish={isEnglish}
