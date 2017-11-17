@@ -49,9 +49,6 @@
     "contained_level_names": [
       "CSDU6 - button_LED_prediction"
     ],
-    "encrypted_examples": [
-
-    ],
     "top_level_procedure_autopopulate": "false"
   },
   "published": true,
