@@ -129,7 +129,7 @@ describe('SettingsCog', () => {
         expect(wrapper.text()).to.include(msg.enableMaker());
       });
 
-      it('renders with disable maker option if maker is available and ensabled', () => {
+      it('renders with disable maker option if maker is available and enabled', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(true);
         const wrapper = mount(
