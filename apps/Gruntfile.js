@@ -546,7 +546,17 @@ describe('entry tests', () => {
       externals: [
         {
           'jquery': 'var $',
-          'qtip2': 'var qtip2',
+          // qtip2 doesn't actually export anything - it's a jquery extension
+          // and modifies the jquery object when present.
+          // We also want to be free to import 'qtip2' in our code (for tests)
+          // without including a copy of it in our release bundles since it's
+          // already provided by application.js.
+          // Therefore we include it as an external here (which keeps us from
+          // including the library in release bundles) but we map it to the
+          // jquery object, which will always be available when we are depending
+          // on qtip.  Tests skip this 'external' configuration and load the
+          // npm-provided copy of qtip2.
+          'qtip2': 'var $',
         }
       ],
       plugins: [
