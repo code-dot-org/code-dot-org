@@ -33,6 +33,14 @@ const CreateAccount = {
   buttonText: i18n.createAccount()
 };
 
+const CreateAccountApplab = {
+  title: i18n.createAccount(),
+  description: i18n.createAccountApplabDesc(),
+  link: "/users/sign_up",
+  image: "create-account",
+  buttonText: i18n.createAccount()
+};
+
 const AnotherHoC = {
   title: i18n.anotherHoCTitle(),
   description: i18n.anotherHoCDesc(),
@@ -109,9 +117,9 @@ export const cardSets = {
     AnotherHoC
   ],
   'signedOutApplabCards' : [
-    ApplabProject,
     ApplabMarketing,
-    CreateAccount
+    CreateAccountApplab,
+    ApplabProject
   ],
   'signedInDefaultCards' : [
     CSFExpress,
