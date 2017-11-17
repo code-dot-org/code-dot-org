@@ -67,30 +67,30 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   end
 
   test 'find_by_region finds matching regional_partner' do
-    regional_partner_wa_98105 = create :regional_partner, name: "partner_WA_98105"
-    regional_partner_wa_98105.mappings.find_or_create_by(state: "WA")
-    regional_partner_wa_98105.mappings.find_or_create_by(state: "98105")
-
     regional_partner_wa = create :regional_partner, name: "partner_WA"
     regional_partner_wa.mappings.find_or_create_by(state: "WA")
 
     regional_partner_wa_98104 = create :regional_partner, name: "partner_WA_98104"
-    regional_partner_wa_98104.mappings.find_or_create_by(state: "WA")
-    regional_partner_wa_98104.mappings.find_or_create_by(state: "98104")
+    regional_partner_wa_98104.mappings.find_or_create_by!(state: "WA")
+    regional_partner_wa_98104.mappings.find_or_create_by!(zip_code: "98104")
+
+    regional_partner_wa_98105 = create :regional_partner, name: "partner_WA_98105"
+    regional_partner_wa_98105.mappings.find_or_create_by!(state: "WA")
+    regional_partner_wa_98105.mappings.find_or_create_by!(zip_code: "98105")
 
     regional_partner_ny = create :regional_partner, name: "partner_NY"
-    regional_partner_ny.mappings.find_or_create_by(state: "NY")
+    regional_partner_ny.mappings.find_or_create_by!(state: "NY")
 
     regional_partner_ma_02138 = create :regional_partner, name: "partner_MA_02138"
-    regional_partner_ma_02138.mappings.find_or_create_by(state: "MA")
-    regional_partner_ma_02138.mappings.find_or_create_by(zip_code: "02138")
+    regional_partner_ma_02138.mappings.find_or_create_by!(state: "MA")
+    regional_partner_ma_02138.mappings.find_or_create_by!(zip_code: "02138")
 
     regional_partner_ca_94305 = create :regional_partner, name: "partner_CA_94305"
-    regional_partner_ca_94305.mappings.find_or_create_by(state: "CA")
-    regional_partner_ca_94305.mappings.find_or_create_by(zip_code: "94305")
+    regional_partner_ca_94305.mappings.find_or_create_by!(state: "CA")
+    regional_partner_ca_94305.mappings.find_or_create_by!(zip_code: "94305")
 
     regional_partner_70808 = create :regional_partner, name: "partner_70808"
-    regional_partner_70808.mappings.find_or_create_by(zip_code: "70808")
+    regional_partner_70808.mappings.find_or_create_by!(zip_code: "70808")
 
     create :regional_partner, name: "partner_nomappings"
 
