@@ -519,7 +519,7 @@ export default function loadAppOptions() {
     }
     const appOptions = getAppOptions();
     if (appOptions.embedded) {
-      // when we just "embed" an app (i.e. via embed_blocks.html.erb),
+      // when we just "embed" an app (i.e. via LevelsHelper#string_or_image),
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
       resolve(appOptions);
