@@ -36,7 +36,7 @@ const CreateAccount = {
 const AnotherHoC = {
   title: i18n.anotherHoCTitle(),
   description: i18n.anotherHoCDesc(),
-  link: pegasus(`/hourofcode/overview`),
+  link: pegasus('/hourofcode/overview'),
   image: "another-hoc",
   buttonText: i18n.anotherHoCButton()
 };
@@ -52,7 +52,7 @@ const ApplabTutorial = {
 const ApplabMarketing = {
   title: i18n.applabMarketingTitle(),
   description: i18n.applabMarketingDesc(),
-  link: pegasus(`/applab`),
+  link: pegasus('/applab'),
   image: "applab-marketing",
   buttonText: i18n.applabMarketingButton()
 };
