@@ -25,7 +25,8 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_do_not_know,
     :class_frequency,
     :tell_us_more,
-    :pledged
+    :pledged,
+    :share_with_regional_partners
   ].freeze
 
   BOOLEAN_FIELDS = [
@@ -40,7 +41,8 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_game_design,
     :topic_other,
     :topic_do_not_know,
-    :pledged
+    :pledged,
+    :share_with_regional_partners
   ].freeze
 
   # POST /dashboardapi/v1/census/<form_version>
@@ -85,6 +87,8 @@ class Api::V1::Census::CensusController < ApplicationController
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
+    when 'CensusYourSchool2017v5'
+      submission = ::Census::CensusYourSchool2017v5.new census_params
     when 'CensusYourSchool2017v4'
       submission = ::Census::CensusYourSchool2017v4.new census_params
     when 'CensusHoc2017v3'
