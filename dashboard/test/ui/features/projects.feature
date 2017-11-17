@@ -237,8 +237,8 @@ Scenario: Starwars Flow
 Scenario: My Projects
   When I open my eyes to test "My Projects page"
   And I am on "http://studio.code.org/projects/"
-  And I wait for the page to fully load
-  And element "#uitest-view-full-list" is visible
+  And I wait to see ".header_user"
+  And I wait until element "#uitest-view-full-list" is visible
   And element "a[href='/projects/artist/new']" is visible
   And element "a[href='/projects/gumball/new']" is not visible
   Then I see no difference for "page load"
