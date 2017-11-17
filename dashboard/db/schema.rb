@@ -403,12 +403,12 @@ ActiveRecord::Schema.define(version: 20171115221314) do
   end
 
   create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                           null: false
+    t.integer  "user_id"
     t.string   "type",                              null: false
     t.string   "application_year",                  null: false
     t.string   "application_type",                  null: false
     t.integer  "regional_partner_id"
-    t.string   "status",                            null: false
+    t.string   "status"
     t.datetime "locked_at"
     t.text     "notes",               limit: 65535
     t.text     "form_data",           limit: 65535, null: false
