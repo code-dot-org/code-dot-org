@@ -26,12 +26,12 @@ $(document).ready(() => {
         <HeaderBanner
           headingText={i18n.projects()}
           subHeadingText={i18n.projectsSubHeading()}
-          short={true}
+          short
         />
         <StartNewProject
           isRtl={isRtl}
-          canViewFullList={true}
-          canViewAdvancedTools={true}
+          canViewFullList
+          canViewAdvancedTools
         />
         <Provider store={getStore()}>
           <PublicGallery />

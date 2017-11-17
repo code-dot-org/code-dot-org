@@ -38,7 +38,7 @@ $(document).ready(() => {
   ReactDOM.render(
     <StartNewProject
       isRtl={isRtl}
-      canViewFullList={true}
+      canViewFullList
       canViewAdvancedTools={projectsData.canViewAdvancedTools}
     />,
     document.getElementById('new-project-buttons')
