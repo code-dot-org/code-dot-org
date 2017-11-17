@@ -17,6 +17,7 @@ import BaseDialog from '../BaseDialog';
 import Button from '../Button';
 import DialogFooter from "./DialogFooter";
 import styleConstants from '../../styleConstants';
+import throttle from 'lodash/debounce';
 
 const styles = {
   actionButton:{
@@ -79,21 +80,22 @@ class SectionActionDropdown extends Component {
   // Menu open
   open = () => {
     this.updateMenuLocation();
-    window.addEventListener("resize", this.updateMenuLocation);
+    window.addEventListener("resize", throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
   }
 
   // Menu closed
   close = () => {
-    window.removeEventListener("resize", this.updateMenuLocation);
+    window.removeEventListener("resize", throttle(this.updateMenuLocation, 50));
     this.setState({open: false});
   }
 
   // Menu closed
   beforeClose = (_, resetPortalState) => {
     resetPortalState();
-    this.setState({open: false});
-    window.setTimeout(() => this.setState({canOpen: true}), 0);
+    this.setState({
+      open: false,
+      canOpen: true});
   };
 
   onConfirmDelete = () => {
@@ -169,17 +171,17 @@ class SectionActionDropdown extends Component {
           showTail={false}
         >
           <PopUpMenu.Item
-            href={pegasus('/teacher-dashboard#/sections/' + sectionData.id)}
+            href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}`)}
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={pegasus('/teacher-dashboard#/sections/' + sectionData.id + "/manage")}
+            href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}/manage`)}
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={pegasus('/teacher-dashboard#/sections/' + sectionData.id + '/print_signin_cards')}
+            href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}/print_signin_cards`)}
           >
             {i18n.printLoginCards()}
           </PopUpMenu.Item>
