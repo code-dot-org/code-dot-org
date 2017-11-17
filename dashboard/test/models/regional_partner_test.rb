@@ -67,44 +67,46 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   end
 
   test 'find_by_region finds matching regional_partner' do
-    # partners and their mappings
+    regional_partner_wa_98105 = create :regional_partner, name: "partner_WA_98105"
+    regional_partner_wa_98105.mappings.find_or_create_by(state: "WA")
+    regional_partner_wa_98105.mappings.find_or_create_by(state: "98105")
 
-    # regional_partner_WA
-    # regional_partner_WA_98105
-    # regional_partner_98105
-    # regional_partner_NY
+    regional_partner_wa = create :regional_partner, name: "partner_WA"
+    regional_partner_wa.mappings.find_or_create_by(state: "WA")
+
+    regional_partner_wa_98104 = create :regional_partner, name: "partner_WA_98104"
+    regional_partner_wa_98104.mappings.find_or_create_by(state: "WA")
+    regional_partner_wa_98104.mappings.find_or_create_by(state: "98104")
+
     regional_partner_ny = create :regional_partner, name: "partner_NY"
     regional_partner_ny.mappings.find_or_create_by(state: "NY")
 
-    # regional_partner_MA_02138
     regional_partner_ma_02138 = create :regional_partner, name: "partner_MA_02138"
     regional_partner_ma_02138.mappings.find_or_create_by(state: "MA")
     regional_partner_ma_02138.mappings.find_or_create_by(zip_code: "02138")
 
-    # regional_partner_CA_94305
     regional_partner_ca_94305 = create :regional_partner, name: "partner_CA_94305"
     regional_partner_ca_94305.mappings.find_or_create_by(state: "CA")
     regional_partner_ca_94305.mappings.find_or_create_by(zip_code: "94305")
 
-    # regional_partner_70808
     regional_partner_70808 = create :regional_partner, name: "partner_70808"
     regional_partner_70808.mappings.find_or_create_by(zip_code: "70808")
 
-    # regional_partner_no_mappings
+    create :regional_partner, name: "partner_nomappings"
 
-    # queries
+    # TEST find_by_region with different combinations of zip code and state
 
     # state=nil/zip=nil [return nil (no match)]
     assert_nil RegionalPartner.find_by_region(nil, nil)
 
     # state=NY [search by state only where there is only one match]
-    assert_equal RegionalPartner.find_by_region(nil, "NY"), regional_partner_ny
+    assert_equal regional_partner_ny, RegionalPartner.find_by_region(nil, "NY")
 
     # zip=70808 [search by zip only where there is only one match]
-    assert_equal RegionalPartner.find_by_region("70808", nil), regional_partner_70808
+    assert_equal regional_partner_70808, RegionalPartner.find_by_region("70808", nil)
 
     # state=MA/zip=02138 [search by state & zip where both match with one partner]
-    assert_equal RegionalPartner.find_by_region("02138", "MA"), regional_partner_ma_02138
+    assert_equal regional_partner_ma_02138, RegionalPartner.find_by_region("02138", "MA")
 
     # state=LA [state only, no match]
     assert_nil RegionalPartner.find_by_region(nil, "LA")
@@ -113,10 +115,14 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_nil RegionalPartner.find_by_region("90210", nil)
 
     # state=CA/zip=90210 [state matches one partner, zip code does not match]
-    assert_equal RegionalPartner.find_by_region("94305", "CA"), regional_partner_ca_94305
+    assert_equal regional_partner_ca_94305, RegionalPartner.find_by_region("94305", "CA")
 
     # state=LA/zip=70808 [zip code matches one partner, state does not match]
+    assert_equal regional_partner_70808, RegionalPartner.find_by_region("70808", "LA")
+
     # state=WA/zip=98104 [state matches many, zip matches one]
+    assert_equal regional_partner_wa_98104, RegionalPartner.find_by_region("98104", "WA")
+
     # state=WA [state matches many, indeterminate result]
     # zip=98105 [zip matches many, indeterminate result]
   end
