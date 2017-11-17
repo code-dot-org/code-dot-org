@@ -60,19 +60,18 @@ class RegionalPartner < ActiveRecord::Base
   def self.find_by_region(zip_code, state)
     return nil if zip_code.nil? && state.nil?
 
-    find_by_region_query = RegionalPartner
-    if state
-      find_by_region_query = find_by_region_query.joins(:mappings).where(pd_regional_partner_mappings: {state: state})
-      if zip_code
-        find_by_region_query = find_by_region_query.or(
-          joins(:mappings).
-          where(pd_regional_partner_mappings: {zip_code: zip_code})
-        )
+    base_query = RegionalPartner.joins(:mappings)
+    state_query = base_query.where(pd_regional_partner_mappings: {state: state}) if state
+    zip_code_query = base_query.where(pd_regional_partner_mappings: {zip_code: zip_code}) if zip_code
+
+    find_by_region_query =
+      if state && zip_code.nil?
+        state_query
+      elsif state.nil? && zip_code
+        zip_code_query
+      elsif state && zip_code
+        state_query.or(zip_code_query)
       end
-    elsif zip_code
-      find_by_region_query = find_by_region_query.
-        joins(:mappings).where(pd_regional_partner_mappings: {zip_code: zip_code})
-    end
 
     # prefer match by zip code when multiple partners cover the same state
     return find_by_region_query.order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').first
