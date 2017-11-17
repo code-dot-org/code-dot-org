@@ -49,17 +49,32 @@
     "is_agent_level": "true",
     "agent_start_position": "[10,19]",
     "place_block_options": [
-      "bedrock",
       "bricks",
       "cobblestone",
       "dirt",
       "grass",
       "gravel",
+      "ice",
       "rails",
       "sand",
       "sandstone",
+      "snow",
       "stone",
-      "wool"
+      "wool_blue",
+      "wool_magenta",
+      "wool_pink",
+      "wool_red",
+      "wool_yellow",
+      "logAcacia",
+      "logBirch",
+      "logJungle",
+      "logOak",
+      "logSpruce",
+      "planksAcacia",
+      "planksBirch",
+      "planksJungle",
+      "planksOak",
+      "planksSpruce"
     ],
     "level_verification_timeout": "0",
     "markdown_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
@@ -104,7 +119,15 @@
         </block>
         <block type="craft_destroyBlock"/>
         <block type="craft_placeBlock">
-          <title name="TYPE">gravel</title>
+          <title name="TYPE">rails</title>
+        </block>
+        <block type="craft_placeBlockDirection">
+          <title name="TYPE">grass</title>
+          <title name="DIR">0</title>
+        </block>
+        <block type="craft_placeBlockDirection">
+          <title name="TYPE">grass</title>
+          <title name="DIR">2</title>
         </block>
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="2-10">2</title>
