@@ -1891,25 +1891,25 @@ en:
         text: "In the next few levels you'll be working on a single project. First you'll add a button then you'll add a new screen and finally you'll write code so that the button switches to the new screen."
     applab_intro_share:
       1:
-        image: "Now that you've learned some of the basics of App Lab like adding buttons, sounds, images, text and new screens you can make all sorts of apps."
-        text:
+        image: 'notes/applab_intro_share_1.png'
+        text: "Now that you've learned some of the basics of App Lab like adding buttons, sounds, images, text and new screens you can make all sorts of apps."
       2:
-        image:
+        image: 'notes/applab_intro_share_2.png'
         text: "In the next level you'll find the app you just finished building. With a little creativity, you can turn this into a personality quiz for your friends, a greeting card that you can share with your family or a choose-your-own-adventure game. All of these apps are just a combination of the skills you've already learned, and I bet you can come up with even more."
       3:
-        image:
+        image: 'notes/applab_intro_share_3.png'
         text: "Once you're done with your app you can easily send it to your phone to see how it looks. Just click \"Share\" and enter your phone number here."
       4:
-        image:
+        image: 'notes/applab_intro_share_4.png'
         text: "You'll receive a text message that'll let you open up your app instantly."
       5:
-        image:
+        image: 'notes/applab_intro_share_5.png'
         text: "You can also share a link to your app over social media or post it to the code.org public gallery for other people to play and share."
       6:
-        image:
+        image: 'notes/applab_intro_share_6.png'
         text: "You've just scratched the surface of what App Lab can do. Full App Lab features more advanced user interactions, new screen elements and even a built-in database so you can quickly build full featured apps. At \"code.org/applab\" you'll find the full tool and lots of ideas if you want to keep going."
       7:
-        image:
+        image: 'notes/applab_intro_share_7.png'
         text: "Thanks for coming along the ride. Now go build and share your first app, and keep on building apps with App Lab!"
 
 
