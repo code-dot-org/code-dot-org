@@ -1,6 +1,7 @@
 // entry point for api that gets exposed.
 
 window.$ = require('jquery');
+window.qtip2 = require('qtip2');
 import '@cdo/apps/sites/studio/pages/code-studio';
 // third party dependencies that are provided as globals in code-studio but
 // which need to be explicitly required here.
