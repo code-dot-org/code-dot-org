@@ -1860,34 +1860,34 @@ en:
         text: "That's all there is to it! Now you can start adding images and sounds to make your apps even more fun and dynamic."
     applab_intro_designmode:
       1:
-        image:
+        image: 'notes/applab_intro_designmode_1.png'
         text: "To build your own apps you're going to need to start designing screens and elements from scratch. App Lab makes this easy to do with Design Mode."
       2:
-        image:
+        image: 'notes/applab_intro_designmode_2.png'
         text: "Use the switch on top of your app to go into design mode."
       3:
-        image:
+        image: 'notes/applab_intro_designmode_3.png'
         text: "You can add new elements by dragging them onto the screen. You can move them around to different locations and change their size by dragging the bottom right corner."
       4:
-        image:
+        image: 'notes/applab_intro_designmode_4.png'
         text: "To change an element's properties use the controls on the right. For example, it's really easy to change this button's text, color, and font size."
       5:
-        image:
+        image: 'notes/applab_intro_designmode_5.png'
         text: "When you add a new element to your screen it'll get a generic ID like button1. It's a good idea to change this button's ID to something more meaningful like \"rightButton\". So that you'll know which one it is when you go to the program."
       6:
-        image:
+        image: 'notes/applab_intro_designmode_6.png'
         text: "If you add an element to your app by mistake, just drag it out or hit the delete."
       7:
-        image:
+        image: 'notes/applab_intro_designmode_7.png'
         text: "You can add entirely new screens to your app by dragging in a screen element"
       8:
-        image:
+        image: 'notes/applab_intro_designmode_8.png'
         text: "From the drop-down at the top you can quickly switch back and forth between the screens you create."
       9:
-        image:
+        image: 'notes/applab_intro_designmode_9.png'
         text: "Inside your app, you'll need a way to switch between all of these screens, so the setScreen block has been added to the toolbox. Use \"setScreen\" inside the \"onEvent\" block to change screens at the click of a button."
       10:
-        image:
+        image: 'notes/applab_intro_designmode_10.png'
         text: "In the next few levels you'll be working on a single project. First you'll add a button then you'll add a new screen and finally you'll write code so that the button switches to the new screen."
     applab_intro_share:
       1:
