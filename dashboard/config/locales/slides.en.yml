@@ -1768,3 +1768,149 @@ en:
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
         text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+    applab_intro_welcome:
+      1:
+        image: 
+        text: "My name is Mei'lani. I'm an intern at code.org and I'm also a computer science student. I like computer science because it's really creative. I get to be the problem solver. I get to make everything function how I want it to. But I also get to be the designer. I get to be the artist and choose everything on the creative side of it."
+      2:
+        image:
+        text: "Making your own apps is easy with App Lab! Whether you're new to coding or have some experience. App Lab Apple is a great tool for building new apps and sharing them with your friends."
+      3:
+        image:
+        text: "This is a App Lab. On the left side is your app. On the right side is the code that will make it run. You build your program by dragging in blocks from the toolbox. To start you'll just have one block called 'setProperty'."
+      4:
+        image:
+        text: "The set property block changes the look of the elements on your screen. Like the buttons, labels, or even the screen itself. First you need to decide which element you want to change. If you hover over an element in your app you can see the name or ID here. Then go select that ID from the first drop down."
+      5:
+        image:
+        text: "Elements have lots of properties you can change like their text color, background color or font size. You can see the full list and choose which property you want to change in the second drop down."
+      6:
+        image:
+        text: "The last drop down is where you'll write the value you want to use value you want to use. The block will make a suggestion for you. But you can always type in different colors or numbers yourself."
+      7:
+        image:
+        text: "Once you're done, the block reads a bit like a sentence:'Set button1's background color to green.' Hit run to see the changes you're building in code. If you reset you can drag in more blocks to change other things about your app. Like the text!"
+      8:
+        image:
+        text: "For this tutorial we'll be working in block mode but App Lab also supports working in text."
+      9:
+        image:
+        text: "Either way you'll be programming in JavaScript, the language of the web. Each level has a goal, instructions and an image of what you're aiming to create."
+      10:
+        image:
+        text: "If you're ever stuck click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
+      11:
+        image:
+        text: "Once you've completed the goal for this level click finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
+    applab_intro_events:
+      1:
+        image:
+        text: "Apps are really cool because it's kind of like starting your own business I mean, you get to design everything from the ground up, you get to manage everything, and you're the owner of this piece of work that you just created with code."
+      2:
+        image:
+        text: "Now that you can change the look of your app let's make it interactive by responding to events! Events are user actions like clicking a button, scrolling through a menu, or hovering over a picture. Interactive apps need ways to respond to events, like playing a sound when I click this button. To do this in App Lab you need to use a new block called onEvent."
+      3:
+        image:
+        text: "This program sets the screen to blue. I want the screen to turn green when I click this button. First I'll need to drag in an onEvent block. By hovering I know the button's ID is \"bigButton\" so I'll select that in the first drop-down."
+      4:
+        image:
+        text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
+      5:
+        image:
+        text: "Finally I'll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: \"On the event that the button is clicked run all this code.\""
+      6:
+        image:
+        text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
+      7:
+        image:
+        text: "And when I click the big button the code inside my onEvent runs and my screen turns green."
+      8:
+        image:
+        text: "If you want to change more things after the event, like the text on the screen just add more code to the onEvent"
+      9:
+        image:
+        text: "To make your program respond to more events add more onEvent blocks. Just make sure not to put them inside of each other. Now it's time to try it out for yourself. Have fun!"
+    applab_intro_sounds:
+      1:
+        image:
+        text: "Next you'll learn about adding images and sounds to your app. Let's start by checking out the sound options."
+      2:
+        image:
+        text: "In the tool box you'll find a new block called \"playSound\". Drag it into the workspace. You can pick a sound to play by clicking the drop-down then clicking \"Choose\"."
+      3:
+        image:
+        text: "From here you can either upload a sound file from your computer, or search for a sound from the sound library. The sound library has lots of different categories like instruments, background music or animals."
+      4:
+        image:
+        text: "Once you've got the sound you want, click \"Choose\". When this block runs, it will play the sound you chose."
+      5:
+        image:
+        text: "To add images to your elements you can just use the setProperty block. Select the image property in the second drop-down"
+      6:
+        image:
+        text: "Then select "Choose" from the third drop down."
+      7:
+        image:
+        text: "From here you can upload an image from your computer or you can look through a huge library of icons in the icon library."
+      8:
+        image:
+        text: "Back in code mode you can use the setProperty block to change the icon color of your icon. Once you've picked what image your icon to use click \"Run\" to see how it looks."
+      9:
+        image:
+        text: "That's all there is to it! Now you can start adding images and sounds to make your apps even more fun and dynamic."
+    applab_intro_designmode:
+      1:
+        image:
+        text: "To build your own apps you're going to need to start designing screens and elements from scratch. App Lab makes this easy to do with Design Mode."
+      2:
+        image:
+        text: "Use the switch on top of your app to go into design mode."
+      3:
+        image:
+        text: "You can add new elements by dragging them onto the screen. You can move them around to different locations and change their size by dragging the bottom right corner."
+      4:
+        image:
+        text: "To change an element's properties use the controls on the right. For example, it's really easy to change this button's text, color, and font size."
+      5:
+        image:
+        text: "When you add a new element to your screen it'll get a generic ID like button1. It's a good idea to change this button's ID to something more meaningful like \"rightButton\". So that you'll know which one it is when you go to the program."
+      6:
+        image:
+        text: "If you add an element to your app by mistake, just drag it out or hit the delete."
+      7:
+        image:
+        text: "You can add entirely new screens to your app by dragging in a screen element"
+      8:
+        image:
+        text: "From the drop-down at the top you can quickly switch back and forth between the screens you create."
+      9:
+        image:
+        text: "Inside your app, you'll need a way to switch between all of these screens, so the setScreen block has been added to the toolbox. Use \"setScreen\" inside the \"onEvent\" block to change screens at the click of a button."
+      10:
+        image:
+        text: "In the next few levels you'll be working on a single project. First you'll add a button then you'll add a new screen and finally you'll write code so that the button switches to the new screen."
+    applab_intro_share:
+      1:
+        image: "Now that you've learned some of the basics of App Lab like adding buttons, sounds, images, text and new screens you can make all sorts of apps."
+        text:
+      2:
+        image:
+        text: "In the next level you'll find the app you just finished building. With a little creativity, you can turn this into a personality quiz for your friends, a greeting card that you can share with your family or a choose-your-own-adventure game. All of these apps are just a combination of the skills you've already learned, and I bet you can come up with even more."
+      3:
+        image:
+        text: "Once you're done with your app you can easily send it to your phone to see how it looks. Just click \"Share\" and enter your phone number here."
+      4:
+        image:
+        text: "You'll receive a text message that'll let you open up your app instantly."
+      5:
+        image:
+        text: "You can also share a link to your app over social media or post it to the code.org public gallery for other people to play and share."
+      6:
+        image:
+        text: "You've just scratched the surface of what App Lab can do. Full App Lab features more advanced user interactions, new screen elements and even a built-in database so you can quickly build full featured apps. At \"code.org/applab\" you'll find the full tool and lots of ideas if you want to keep going."
+      7:
+        image:
+        text: "Thanks for coming along the ride. Now go build and share your first app, and keep on building apps with App Lab!"
+
+
+      
