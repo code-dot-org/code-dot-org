@@ -31,7 +31,9 @@ const styles = {
 
 const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
+  mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
+  hero: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
 };
 
 export default class Certificate extends Component {
@@ -43,7 +45,8 @@ export default class Certificate extends Component {
   }
 
   static propTypes = {
-    type: PropTypes.oneOf(['hourOfCode', 'minecraft']).isRequired,
+    tutorial: PropTypes.string,
+    certificateId: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
   };
 
@@ -64,14 +67,10 @@ export default class Certificate extends Component {
   }
 
   render() {
-    const blankCertificate = blankCertificates[this.props.type];
-    let certificate;
-    try {
-      certificate = queryString.parse(window.location.search)['i'].replace(/[^a-z0-9_]/, '');
-    } catch (e) {
-      certificate = '';
-    }
-    const imgSrc = this.state.personalized ? `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg` : blankCertificate;
+    const certificate = this.props.certificateId || 'blank';
+    const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
+    const blankCertificate = blankCertificates[this.props.tutorial] || blankCertificates.hourOfCode;
+    const imgSrc = this.state.personalized ? personalizedCertificate : blankCertificate;
 
     const facebook = queryString.stringify({
       u: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
@@ -91,7 +90,7 @@ export default class Certificate extends Component {
           {i18n.congratsCertificateHeading()}
         </h1>
         <LargeChevronLink
-          link={document.referrer}
+          link={`/s/${this.props.tutorial}`}
           linkText={i18n.backToActivity()}
           isRtl={this.props.isRtl}
         />

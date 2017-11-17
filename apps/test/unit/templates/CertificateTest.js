@@ -7,7 +7,7 @@ describe('Certificate', () => {
   it('renders a Minecraft certificate for new Minecraft tutorials', () => {
     const wrapper = shallow(
       <Certificate
-        type="minecraft"
+        tutorial="minecraft"
         isRtl={false}
       />
     );
@@ -17,7 +17,7 @@ describe('Certificate', () => {
   it('renders a default certificate for all other tutorials', () => {
     const wrapper = shallow(
       <Certificate
-        type="hourOfCode"
+        tutorial="frozen"
         isRtl={false}
       />
     );
