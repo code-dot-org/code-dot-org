@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
-import color from "../util/color";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import Responsive from '../responsive';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
@@ -8,7 +7,6 @@ import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardRespo
 
 const styles = {
   heading: {
-    color: color.teal,
     width: '100%'
   },
   clear: {
@@ -26,20 +24,24 @@ export default class TeachersBeyondHoc extends Component {
     const { isRtl, responsive } = this.props;
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
 
+    const codeorgTeacherImage = desktop ? "codeorg-teacher" : "course-catalog";
+    const thirdPartyTeacherImage = desktop ? "third-party-teacher" : "third-party-teacher-small";
+    const thirdPartyTeacherTitle = desktop ? i18n.congratsTeacherExternalTitle() : i18n.congratsTeacherExternalTitleShort();
+
     const cards = [
       {
         title: i18n.congratsTeacherCodeOrgTitle(),
         description: i18n.congratsTeacherCodeOrgDesc(),
         buttonText: i18n.congratsTeacherCodeOrgButton(),
         link: "/courses?view=teacher",
-        image: "codeorg-teacher"
+        image: codeorgTeacherImage
       },
       {
-        title: i18n.congratsTeacherExternalTitle(),
+        title: thirdPartyTeacherTitle,
         description: i18n.congratsTeacherExternalDesc(),
         buttonText: i18n.congratsTeacherExternalButton(),
         link: '/educate/curriculum/3rd-party',
-        image: "third-party-teacher"
+        image: thirdPartyTeacherImage
       }
     ];
 

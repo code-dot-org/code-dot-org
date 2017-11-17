@@ -185,7 +185,6 @@ PROPERTIES[ElementType.CANVAS] = {
 };
 PROPERTIES[ElementType.SCREEN] = {
   propertyNames: [
-    'text',
     'backgroundColor',
     'screenImage',
     'iconColor'
