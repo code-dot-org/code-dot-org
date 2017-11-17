@@ -945,5 +945,13 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "Cuéntanos acerca de tu escuela"
+  "yourSchoolTellUs": "Cuéntanos acerca de tu escuela",
+  "backToActivity": "Back to activity",
+  "congratsCertificatePersonalize": "Personalize your certificate",
+  "congratsCertificateShare": "Share your achievement",
+  "congratsCertificateThanks": "Thanks for submitting!",
+  "congratsCertificateContinue": "Now, keep going with our other courses, or see more options to Learn beyond an Hour below.",
+  "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

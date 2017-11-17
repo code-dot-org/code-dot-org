@@ -945,5 +945,13 @@
   "yourSchoolParentDesc": "Podejmij działanie i rozwiń naukę informatyki w Twojej szkole lub okolicy",
   "yourSchoolTeacherButton": "Zacznij uczyć",
   "yourSchoolTeacherDesc": "Zacznij uczyć już dziś. Doświadczenie informatyczne nie jest do tego niezbędne",
-  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole"
+  "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole",
+  "backToActivity": "Back to activity",
+  "congratsCertificatePersonalize": "Personalize your certificate",
+  "congratsCertificateShare": "Share your achievement",
+  "congratsCertificateThanks": "Thanks for submitting!",
+  "congratsCertificateContinue": "Now, keep going with our other courses, or see more options to Learn beyond an Hour below.",
+  "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

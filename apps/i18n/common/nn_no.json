@@ -945,5 +945,13 @@
   "yourSchoolParentDesc": "Få fart på datakunnskapen på din skole eller i ditt distrikt",
   "yourSchoolTeacherButton": "Start undervisningen",
   "yourSchoolTeacherDesc": "Begynne å lære i dag, ingen informatikkerfaring nødvendig",
-  "yourSchoolTellUs": "Fortel oss om skulen din"
+  "yourSchoolTellUs": "Fortel oss om skulen din",
+  "backToActivity": "Back to activity",
+  "congratsCertificatePersonalize": "Personalize your certificate",
+  "congratsCertificateShare": "Share your achievement",
+  "congratsCertificateThanks": "Thanks for submitting!",
+  "congratsCertificateContinue": "Now, keep going with our other courses, or see more options to Learn beyond an Hour below.",
+  "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

@@ -39,6 +39,5 @@
 # the Hour of Code signup page.
 #
 class Census::CensusHoc2017v1 < Census::CensusSubmission
-  validates :submitter_email_address, presence: true
   validates :submitter_name, presence: true
 end

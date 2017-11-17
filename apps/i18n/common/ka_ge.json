@@ -945,5 +945,13 @@
   "yourSchoolParentDesc": "მოიმოქმედეთ რამე, რათა განავრცოთ კომპიუტერული მეცნიერება თქვენს სკოლასა ან უბანში",
   "yourSchoolTeacherButton": "სწავლების დაწყება",
   "yourSchoolTeacherDesc": "დაიწყეთ სწავლება დღესვე, გამოცდილება კომპიუტერულ მეცნიერებაში საჭირო არაა",
-  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება"
+  "yourSchoolTellUs": "რუკაზე თქვენი სკოლის განთავსება",
+  "backToActivity": "Back to activity",
+  "congratsCertificatePersonalize": "Personalize your certificate",
+  "congratsCertificateShare": "Share your achievement",
+  "congratsCertificateThanks": "Thanks for submitting!",
+  "congratsCertificateContinue": "Now, keep going with our other courses, or see more options to Learn beyond an Hour below.",
+  "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
+  "schoolCityTown": "City / Town",
+  "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }
