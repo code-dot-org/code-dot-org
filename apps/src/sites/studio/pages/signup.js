@@ -87,7 +87,7 @@ window.SignupManager = function (options) {
         window.location.href = url;
         navigatedToTeacherURL = true;
       };
-      setTimeout(gotoTeacherUrl, 5000); // Failsafe if event is never logged
+      setTimeout(gotoTeacherUrl, 2000); // Failsafe if event is never logged
       logEvent('teacher-submit-success', gotoTeacherUrl);
       return;
     } else {
