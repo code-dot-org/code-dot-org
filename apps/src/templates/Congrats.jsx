@@ -82,6 +82,7 @@ export default class Congrats extends Component {
             tutorial={tutorial}
             certificateId={certificateId}
             isRtl={isRtl}
+            responsive={this.responsive}
           />
           {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
