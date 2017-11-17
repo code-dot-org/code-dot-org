@@ -4590,6 +4590,8 @@ en:
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6190,7 +6192,7 @@ en:
               name: Intro to App Lab
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab
+          title: Intro to App Lab (Beta)
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of creative projects.
@@ -6724,6 +6726,8 @@ en:
               name: CSD/P pulse check survey 2017
             CSD mid and post survey 2017 staging:
               name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -6744,8 +6748,8 @@ en:
               name: Minecraft Hour of Code
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft is back with a brand new activity for Hour of Code!
+          description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -6765,4 +6769,34 @@ en:
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
+          description: ''
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
           description: ''

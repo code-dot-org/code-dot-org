@@ -98,13 +98,13 @@
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: "Husk at koden fra den siste oppgaven var: \n\n![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)"
         2-3_Artist_Loops_New_11_b: Ditt neste tur/trekk burde gå på **slutten** av
-          koden og ikke inne i løkken.
+          koden inne i løkken.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Før han starter med diamanten må tegneren snu 60
           grader mot venstre for å komme på riktig vei.
         2-3_Artist Loops_New_12_b: Etter at artisten har gått fremover 100 piksler,
-          vil han trenge å snu ot høyre 120 grader for å klare å runde hjørnet.
-        2-3_Artist Loops_New_12_c: Tegneren trenger bare å snu 60 grader mot høyre
+          vil han trenge å svinge mot høyre 120 grader for å klare å runde hjørnet.
+        2-3_Artist Loops_New_12_c: Tegneren trenger bare å snu seg 60 grader mot høyre
           for å lage et bredt hjørne.
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: |-
@@ -112,11 +112,11 @@
 
           På grunn av dette trenger vi ikke å legge på en ekstra 'snu deg mot venstre' blokk før vi starter igjen.
         2-3_Artist_Loops_New_13_b: "For å lage en diamant, må kunstneren:   \n- gå\n-
-          snu 120 grader til høyre\n- gå\n- snu 60 grader til høyre\n\nSå gjøre det
-          om igjen!"
+          snu seg 120 grader til høyre\n- gå\n- snu seg 60 grader til høyre\n\nSå
+          gjøre det om igjen!"
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: Kunstneren må snu 45 grader til høyre før han starter
-          tengingen.
+        2-3_Artist_Loops_New_9_a: Kunstneren må snu seg 45 grader til høyre før han
+          starter tengingen.
         2-3_Artist_Loops_New_9_b: Denne V'en er egentlig bare halvparten av en firkant.
           Hva ville koden være for å tegne halvparten av et kvadrat?
       2-3 Artist Nested Loops 1_authored_hint:
@@ -131,47 +131,45 @@
         2-3_Artist_Nested_Loops_3_a: "Trenger du hjelp med vinklene?  \n**360/12 =
           30**"
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from
-          the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        2-3_Artist_Nested_Loops_5_a: "Prøv å bruke \"hoppe fremover\" blokken for
+          å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis
+          din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt
+          trenger du å hoppe?"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat
-          is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: "Hvor langt skal du hoppe i hver bue?  \n\nHva
+          er 360/10?"
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+          Trenger du hjelp til å finne riktig vinkel?
 
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
-          \ \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
-          if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
-          \ - Make two honey"
+        2-3_Bee_Conditionals_14_a: Har du vansker med å finne ut hvordan få blokkene
+          ned? Prøv å behandle den røde blomsten akkurat som den lilla blomsten!
+        2-3_Bee_Conditionals_14_b: Hvis den røde blomsten var lilla, kan du finne
+          ut hvordan man kan bruke en ekstra "gjenta" loop for å kutte ned på koden?
+        2-3_Bee_Conditionals_14_c: "Prøv å bryt dette opp i to separate deler:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
+          Samle Nektar 3 ganger\n  - Flytt fremover 5 ganger\n  - Se om det er nektar,
+          Hvis nektar: samle den\n  - Snut til venstre\n  \n2) Lag honning \n  - Gå
+          frem en gang\n  - Lag to honninger"
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Husk: Lilla blomster har enten 0 eller 1 nektar,
+          og de kan endre seg hver gang du kjører programmet.'
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: Koden blir kortest hvis du bruker en loop for hver
+          gang du går videre, en annen løkke for å samle nektar, og en annen i honningproduksjonen.
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Husk: Lilla blomster endrer mellom 0 og 1 nektar
+          når du kjører programmet!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Når du finner og fikser blokken med feil, ser du noen
+          mønstre som kan gjøres enklere ved hjelp av en gjenta-løkke?
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: Når du finner og fikser blokken med feil, ser du noen
+          mønstre som kan gjøres enklere ved hjelp av en gjenta-løkke?
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Er det noen sted hvor bien gjør noe som ikke gir mening?
+          Hva skjer når du endrer den blokken?
       2-3 Bee Functions 4_authored_hint:
         2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving,
           using the function, then moving and using the function again.
@@ -4030,6 +4028,9 @@
         NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
@@ -4270,7 +4271,7 @@
         courseA_collector_loops_challenge2_b: |
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
         courseA_collector_loops_challenge2_a: |-
-          Du kan flytte tilbake over veien en andre gang før du går sydover.
+          Du kan flytte tilbake over veien en gang til før du går sydover.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       course1_collector_loops_challenge3_authored_hint:
@@ -4281,7 +4282,7 @@
           <block type="collector_collect"/></next>
           </xml>
         courseB_collector_loops_challenge1_a: |
-          Du kan flytte tilbake over veien en andre gang før du går østover.
+          Nord mønsteret er litt annerledes enn sørmønsteret. <xml><block type="collector_collect"/> <next><block type="maze_moveNorth"/></next> neste ></xml>
         courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n
           \ <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n
           \ </xml>\nYou can do this with only 14 blocks. Click for one more hint to
@@ -4345,8 +4346,8 @@
           </block>
           </xml>
       course1_collector_loops_challenge4_authored_hint:
-        courseB_collector_loops_challenge2_a: Hvis noe går galt kan du forsøke å endre
-          tallene i hver løkke.
+        courseB_collector_loops_challenge2_a: Hvis noe går galt, ikke vær redd for
+          å starte på nytt. Ikke gi opp!
         courseB_collector_loops_challenge2_b: |-
           If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!
 
@@ -5738,10 +5739,8 @@
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: |
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
-        courseA_collector_loops_challenge2_a: |-
-          Du kan flytte tilbake over veien en andre gang før du går sydover.
-
-          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+        courseA_collector_loops_challenge2_a: Du kan flytte tilbake over veien en
+          andre gang før du går sydover.
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
         courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
@@ -5830,8 +5829,7 @@
         courseA_maze_seq9_c: You will need to move in three different directions to
           solve this puzzle.
       courseA_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge1_a: Noen veier vil lede til TNT hvis du går for
-          langt.
+        courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
           not to count the space where you start!
@@ -6220,8 +6218,8 @@
           </block>
           </xml>
       courseB_collector_loops_challenge2_authored_hint:
-        courseB_collector_loops_challenge2_a: Hvis noe går galt kan du forsøke å endre
-          tallene i hver løkke.
+        courseB_collector_loops_challenge2_a: Hvis noe går galt, ikke vær redd for
+          å starte på nytt. Ikke gi opp!
         courseB_collector_loops_challenge2_b: |-
           If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!
 
@@ -6286,16 +6284,14 @@
         courseA_collector_loops_challenge2_b: |
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
         courseA_collector_loops_challenge2_a: |-
-          Du kan flytte tilbake over veien en andre gang før du går sydover.
+          Du kan flytte tilbake over veien en gang til før du går sydover.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_maze_seq1_authored_hint:
-        courseB_maze_seq1_a: |-
-          Dra tre av disse "S"-pilene ut og fest dem til "når den kjører"-blokken for å få fuglen din til grisen.
-
-          <xml><block type="when_run" deletable="false" movable="false"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"></block></next></block></next></block></next></block></xml>
+        courseB_maze_seq1_a: Koble blokker til <xml><block type="when_run"/></xml>
+          for å få fuglen til å flytte på seg!
         courseB_maze_seq1_b: |-
           Drag three of these `S` arrows out and connect them to the `when run` block to get your bird to the pig.
 
@@ -6331,26 +6327,31 @@
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: If you get stuck, try drawing out the path on paper.
         courseB_maze_seq5_b: There are 2 ways to solve this puzzle!
+        courseB_maze_seq5_c: Not sure how to get to the pig?  Try this path.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_a: Your final code should have three movement blocks.
         courseB_maze_seq6_b: If you get stuck, try solving the puzzle in two separate
           parts, one sideways and one up-and-down.
         courseB_maze_seq5_c: There are two ways to solve this puzzle.
+        courseB_maze_seq5_d: Not sure how to get to the pig? Try this path!
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_a: There is 1 block that you need to add to move the bird
           to the pig.
         courseB_maze_seq7_b: Try running the code that's given to you and see where
           you end up.
+        courseB_maze_seq7_c: Can't get to the pig?  Try this path!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: If you're stuck, try adding one block at a time until
           you solve the puzzle.
         courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
         courseB_maze_seq9_b: Remember, you can build your program a block at a time,
           and test as you build.
         courseB_maze_seq9_c: There are two ways to solve this puzzle.
+        courseB_maze_seq9_d: Stuck?  Try this path!
       courseB_maze_seq9_challenge1_authored_hint: []
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
@@ -6603,7 +6604,7 @@
           and otherwise just keep rolling.
         courseB_starWars_prog5_c: Try drawing a stair step pattern over this puzzle.
           Does it cover all of the scrap metal?
-        courseB_starWars_prog5_d: |-
+        courseB_starWars_prog5_da: |-
           Look what happens if you use the same solution as the stair-step puzzle:
 
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
@@ -6993,6 +6994,7 @@
         courseC_collector_prog4_b: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
+        courseC_collector_prog4_c: Try this option for a path.
       courseC_collector_prog5_authored_hint:
         courseC_collector_prog5_a: "Where does this program go wrong?\n\n- Does it
           work at the first step?\n- Does it work at the second step? \n- Where do
@@ -7001,6 +7003,7 @@
           work, use the steps above to find more bugs.
         courseC_collector_prog5_c: If you get stuck, try writing out the steps on
           a piece of paper.
+        courseC_collector_prog5_d: Follow the path to collect the treasure.
       courseC_collector_prog6_authored_hint:
         courseC_collector_prog6_a: "Can you figure out what is going wrong?  \n\nTry
           using the \"Step\" button to find errors by running your code line by line."
@@ -7012,6 +7015,8 @@
           don''t need to delete any of it to solve this puzzle.  '
         courseC_collector_prog7_b: Don't see the block you need to get the adventurer
           moving in the right direction?  Pull one from the toolbox.
+        courseC_collector_prog7_c: Having trouble seeing a route to collect all of
+          the treasure?  Try this path!
       courseC_collector_prog8_authored_hint: []
       courseC_collector_prog9_authored_hint: []
       courseC_collector_progA_authored_hint:
@@ -7325,6 +7330,7 @@
           steg måtte du ta?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
           starts facing a wall.
+        courseC_maze_programming6_d: Feel stuck?  Look at this path!
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
@@ -7565,10 +7571,10 @@
         courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of
           the loop so that the artist turns after each triangle.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get
-          from the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        courseD_artist_nestedLoops3_a: "Prøv å bruke \"hoppe fremover\" blokken for
+          å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis
+          din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt
+          trenger du å hoppe?"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
@@ -7765,6 +7771,18 @@
           ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
           will only be flowers or blank spaces under the clouds.
+      courseD_bee_conditionals2_test_authored_hint:
+        courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
+          hint video.
+        courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
+          won't.  If you want your code to run in both cases, make sure to use an
+          `if` statement.
+        courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path
+          ahead` to move through this maze.
+        courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
+          will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
+          video.
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
@@ -9152,6 +9170,7 @@
           under the `when run` block.
         courseE_bee_functions3_c: Your main program will control all of the movement,
           the function is just for what happens when the bee reaches a flower.
+        courseE_bee_functions3_d: Try using this path through.
       courseE_bee_functions4_authored_hint:
         courseE_bee_functions4_a: Your function will already travel down the side
           paths and return the bee back to the main road.  You don't need to add that
@@ -11949,7 +11968,7 @@
 
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
         2-3_Artist_Loops_New_11_b: Ditt neste tur/trekk burde gå på **slutten** av
-          koden og ikke inne i løkken.
+          koden inne i løkken.
       grade2_MakeDogTag_BFP_authored_hint: []
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
@@ -12045,31 +12064,30 @@
           der bien først må gå fremover og deretter snu mot venstre flere ganger for
           å fullføre veien.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: Har du vansker med å finne ut hvordan få blokkene
+          ned? Prøv å behandle den røde blomsten akkurat som den lilla blomsten!
+        2-3_Bee_Conditionals_14_b: Hvis den røde blomsten var lilla, kan du finne
+          ut hvordan man kan bruke en ekstra "gjenta" loop for å kutte ned på koden?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
           if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
           \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Husk: Lilla blomster har enten 0 eller 1 nektar,
+          og de kan endre seg hver gang du kjører programmet.'
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: Koden blir kortest hvis du bruker en loop for hver
+          gang du går videre, en annen løkke for å samle nektar, og en annen i honningproduksjonen.
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Husk: Lilla blomster endrer mellom 0 og 1 nektar
+          når du kjører programmet!'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Husk: Lilla blomster endrer mellom 0 og 1 nektar
+          når du kjører programmet!'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Når du finner og fikser blokken med feil, ser du noen
+          mønstre som kan gjøres enklere ved hjelp av en gjenta-løkke?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
@@ -12125,8 +12143,8 @@
           the stair step pattern, try tracing it with your finger and saying the commands
           out loud. \n\nDon't forget to point out the direction of the turns!"
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Er det noen sted hvor bien gjør noe som ikke gir mening?
+          Hva skjer når du endrer den blokken?
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       grade3_Loops_11_authored_hint:

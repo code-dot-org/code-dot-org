@@ -13,10 +13,11 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink=""
         responsive={responsive}
         isRtl={false}
-        signedIn={false}
+        userType="signedOut"
+        isEnglish={true}
       />
     );
-    expect(wrapper.find('VerticalImageResourceCardRow').exists()).to.be.true;
+    expect(wrapper.find('VerticalImageResourceCardRow').exists());
   });
 
   it('renders a CourseBlocksStudentGradeBands component', () => {
@@ -27,10 +28,11 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink="code.org/minecraft/sharelink"
         responsive={responsive}
         isRtl={false}
-        signedIn={false}
+        userType="signedOut"
+        isEnglish={true}
       />
     );
-    expect(wrapper.find('CourseBlocksStudentGradeBands').exists()).to.be.true;
+    expect(wrapper.find('CourseBlocksStudentGradeBands').exists());
   });
 
   it('renders a LocalClassActionBlock component', () => {
@@ -41,9 +43,10 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink="code.org/minecraft/sharelink"
         responsive={responsive}
         isRtl={false}
-        signedIn={false}
+        userType="signedOut"
+        isEnglish={true}
       />
     );
-    expect(wrapper.find('LocalClassActionBlock').exists()).to.be.true;
+    expect(wrapper.find('LocalClassActionBlock').exists());
   });
 });

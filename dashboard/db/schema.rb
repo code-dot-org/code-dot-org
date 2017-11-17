@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107193805) do
+ActiveRecord::Schema.define(version: 20171115221314) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -65,6 +65,15 @@ ActiveRecord::Schema.define(version: 20171107193805) do
     t.string   "callout_text"
   end
 
+  create_table "census_submission_form_maps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "census_submission_id", null: false
+    t.integer  "form_id",              null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["census_submission_id"], name: "index_census_submission_form_maps_on_census_submission_id", using: :btree
+    t.index ["form_id"], name: "index_census_submission_form_maps_on_form_id", using: :btree
+  end
+
   create_table "census_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "type",                                       null: false
     t.string   "submitter_email_address"
@@ -113,6 +122,31 @@ ActiveRecord::Schema.define(version: 20171107193805) do
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
     t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true, using: :btree
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
+  end
+
+  create_table "circuit_playground_discount_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                                             null: false
+    t.integer  "unit_6_intention"
+    t.boolean  "has_confirmed_school",                default: false, null: false
+    t.boolean  "full_discount"
+    t.boolean  "admin_set_status",                    default: false, null: false
+    t.string   "signature"
+    t.datetime "signed_at"
+    t.integer  "circuit_playground_discount_code_id"
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.index ["circuit_playground_discount_code_id"], name: "index_circuit_playground_applications_on_code_id", using: :btree
+    t.index ["user_id"], name: "index_circuit_playground_discount_applications_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "circuit_playground_discount_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "code",             null: false
+    t.boolean  "partial_discount", null: false
+    t.datetime "expiration",       null: false
+    t.datetime "claimed_at"
+    t.datetime "voided_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -407,6 +441,8 @@ ActiveRecord::Schema.define(version: 20171107193805) do
     t.datetime "updated_at",                        null: false
     t.string   "course"
     t.text     "response_scores",     limit: 65535,              comment: "Scores given to certain responses"
+    t.string   "application_guid"
+    t.index ["application_guid"], name: "index_pd_applications_on_application_guid", using: :btree
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
     t.index ["course"], name: "index_pd_applications_on_course", using: :btree
@@ -1273,6 +1309,7 @@ ActiveRecord::Schema.define(version: 20171107193805) do
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
+  add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "pd_payment_terms", "regional_partners"

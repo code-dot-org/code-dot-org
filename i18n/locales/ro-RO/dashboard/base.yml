@@ -756,7 +756,7 @@ ro:
       applab: "Laboratului Aplicației"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Redenumește"
     save: "Salvează"
     delete: "Șterge"

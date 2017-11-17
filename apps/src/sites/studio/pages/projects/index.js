@@ -16,7 +16,6 @@ import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 
@@ -35,20 +34,15 @@ $(document).ready(() => {
     projectsHeader
   );
 
-  const showProjectWidget = experiments.isEnabled('createMoreProjects');
-  if (showProjectWidget) {
-    const isRtl = isRtlFromDOM();
-    ReactDOM.render(
-      <StartNewProject
-        isRtl={isRtl}
-        canViewFullList={true}
-        canViewAdvancedTools={projectsData.canViewAdvancedTools}
-      />,
-      document.getElementById('new-project-buttons')
-    );
-  } else {
-    $('#legacy-project-links').show();
-  }
+  const isRtl = isRtlFromDOM();
+  ReactDOM.render(
+    <StartNewProject
+      isRtl={isRtl}
+      canViewFullList={true}
+      canViewAdvancedTools={projectsData.canViewAdvancedTools}
+    />,
+    document.getElementById('new-project-buttons')
+  );
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;

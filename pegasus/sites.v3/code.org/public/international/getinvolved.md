@@ -6,11 +6,11 @@ theme: responsive
 
 # Join our international community! 
 
-## Tell us about yourself
+## Sign up for our mailing list
 
-We would love to know more about you so we can find the best ways to stay in touch. Even before you hear back from us, though, you can get started right away promoting CS education in your country using the options below.
+We'll be sending out regular communications regarding Code.org's international program. 
 
-[First, please introduce yourself to us.] (https://goo.gl/forms/1NPvBQcBnHRNOs5o1)  
+[Sign up for our mailing list.](https://goo.gl/forms/1NPvBQcBnHRNOs5o1)  
 
 ***
 
@@ -18,7 +18,14 @@ We would love to know more about you so we can find the best ways to stay in tou
 
 The [Hour of Code] (hourofcode.com) is the largest learning event in history. Since it first launched in 2013, it has become a truly global movement, reaching tens of millions of students in more than 180 countries. People of all ages have tried the Hour of Code, a one-hour course designed to demystify computer science and show that anybody can learn the basics. Hour of Code events can happen anytime, anywhere. 
 
-[Learn how to organize an Hour of Code.] (https://hourofcode.com/how-to)
+[Organize an Hour of Code.] (https://hourofcode.com/how-to)
+
+***
+
+## Apply to become a Code.org International Partner 
+Are you an organization committed to expanding CS education in your country? Have you already hosted successful Hour of Code events and feel ready for more? Will Code.org's resources and partnership help you take CS education in your country to the next level? 
+
+[Learn about the application process and apply.] (https://code.org/international/apply)
 
 ***
 
@@ -29,12 +36,3 @@ If you can dedicate 8-10 hours per week and have strong project management skill
 
 [Get started translating.] (https://code.org/translate)
 
-*** 
-
-## Apply to become a Code.org International Partner 
-Are you an organization committed to expanding CS education in your country? Have you already hosted successful Hour of Code events and feel ready for more? Will Code.org's resources and partnership help you take CS education in your country to the next level? 
-
-[Apply to become a Code.org International Partner.] (https://code.org/international/apply)   
-***
-
-## 

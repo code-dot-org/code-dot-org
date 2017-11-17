@@ -5,14 +5,25 @@ import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
-import { tutorialTypes } from './tutorialTypes.js';
+import { Provider } from 'react-redux';
+import { combineReducers, createStore } from 'redux';
+import responsiveRedux from '../code-studio/responsiveRedux';
+
+const styles = {
+  container: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+};
 
 export default class Congrats extends Component {
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
+    certificateId: PropTypes.string,
+    tutorial: PropTypes.string,
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
-    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired
+    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
+    isEnglish: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -50,32 +61,51 @@ export default class Congrats extends Component {
   }
 
   render() {
-    const { completedTutorialType, MCShareLink, isRtl, userType } = this.props;
-    const signedIn = (userType === "teacher" || userType === "student");
+    const { tutorial, certificateId, MCShareLink, isRtl, userType, isEnglish } = this.props;
+    const tutorialType = {
+      'applab-intro': 'applab',
+      hero: '2017Minecraft',
+      minecraft: 'pre2017Minecraft',
+      mc: 'pre2017Minecraft',
+    }[tutorial] || 'other';
 
     const contentStyle = {
+      ...styles.container,
       width: this.responsive.getResponsiveContainerWidth()
     };
+    const store = createStore(combineReducers({responsive: responsiveRedux}));
 
     return (
-      <div style={contentStyle}>
-        <Certificate
-          completedTutorialType={completedTutorialType}
-        />
-        {userType === "teacher" && (
-          <TeachersBeyondHoc/>
-        )}
-        <StudentsBeyondHoc
-          completedTutorialType={completedTutorialType}
-          MCShareLink={MCShareLink}
-          responsive={this.responsive}
-          isRtl={isRtl}
-          signedIn={signedIn}
-        />
-        {userType === "signedOut" && (
-          <TeachersBeyondHoc/>
-        )}
-      </div>
+      <Provider store={store}>
+        <div style={contentStyle}>
+          <Certificate
+            tutorial={tutorial}
+            certificateId={certificateId}
+            isRtl={isRtl}
+            responsive={this.responsive}
+          />
+          {userType === "teacher" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+          <StudentsBeyondHoc
+            completedTutorialType={tutorialType}
+            MCShareLink={MCShareLink}
+            responsive={this.responsive}
+            isRtl={isRtl}
+            userType={userType}
+            isEnglish={isEnglish}
+          />
+          {userType === "signedOut" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+        </div>
+      </Provider>
     );
   }
 }

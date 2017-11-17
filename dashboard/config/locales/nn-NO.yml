@@ -203,7 +203,7 @@
       email: E-postadresse
       submit: Send inn
     reset_errors:
-      invalid_email: Det ser ut til at du har registrert deg men en ugyldig e-post
+      invalid_email: Det ser ut til at du har registrert deg med en ugyldig e-post
         adresse. Vennligst send epost til support@code.org for å få tilsendt en lenke
         for tilbakestilling av passord.
     change_form:
@@ -231,7 +231,7 @@
       other: 'Dine seksjoner:'
     code_with_teacher: "%{section_code} med %{teacher_name}"
     confirm:
-      remove: Er du sikker på at du vil forlate denne seksjoner?
+      remove: Er du sikker på at du vil forlate denne seksjonen?
     remove: "(fjern seksjonen)"
     type:
       picture: Bilde passord
@@ -307,7 +307,7 @@
       teacher_community: Lærarforum
       professional_learning: Profesjonell opplæring
       documentation: Dokumentasjon
-      tutorials: Tutorials
+      tutorials: Guide
       educate_overview: Oversikt for lærere
       educate_elementary: Grunnskule
       educate_middle: Ungdomsskule
@@ -399,9 +399,9 @@
     deleted_user: sletta brukar
     no_password_because_oauth: Ingen passord fordi du logger inn med en tredjepartsleverandør.
     no_password_because_sponsored: Din lærer administrerer ditt passord.
-    create_personal_login: Opprette en personlig pålogging
+    create_personal_login: Opprett en personlig pålogging
     create_personal_login_under_13_info: Hvis du vil fortsette å bruke din Code.org
-      konto, selv etter slutten av skoleåret, kan du be dine foreldre/foresatte til
+      konto, selv etter slutten av skoleåret, kan du be dine foreldre/foresatte om
       å opprette din egen personlige pålogging nedenfor.
     create_personal_login_under_13_username: Brukarnamn (ikkje bruk ditt verkelege
       namn!)
@@ -414,11 +414,11 @@
       bruk</a>. Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller
       verges tillatelse til å bruke Code.org tjenestene selv uten en lærer.
     create_personal_login_email_note: 'Merk: E-postadresser er ikke lagret i et format
-      som tillater oss å kontakte studenteene. Studenter vil aldri få epost fra Code.org,
+      som tillater oss å kontakte studentene. Studenter vil aldri få epost fra Code.org,
       unntatt ved passordgjenoppretting. Se våre <a href=''%{privacy_policy_url}'',
       target=''_blank''> retningslinjer for personvern</a> for mer informasjon.'
     enter_new_login_info: Angi ny påloggingsinformasjon
-    confirm_secret_words: Bekreft at det er du ved å angi gjeldende hemmelige ord
+    confirm_secret_words: Bekreft at det er deg ved å angi gjeldende hemmelige ord
     enter_parent_email: Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)
   user_level:
     completed: Fullført
@@ -515,11 +515,11 @@
       og fleire verktøy for alle klassetrinn&mdash;alt du treng heilt gratis. Lurer
       du på kvar du skal begynne? Last ned<a href='%{video_download_url}'>denne videoen</a>!
     announcement_go_beyond: Fortsette videre fra Kodetimen og utforsk konsepter fra
-      datateknikk med dine elever hver uke. Code.org tilby pensum, timeplaner, profesjoneller
-      høykvalitets læreplaner og tilby tonnevis av gode verktøy for alle klassenivåer&mdash;og
-      alt er gratis. :) Du behøver ikke noen erfaring for å begynne med å lære bort
-      datateknologi i klasserommet ditt. <b>Finn det neste steget som passer for ditt
-      klasserom.</b>
+      datateknikk med dine elever hver uke. Code.org og LKK tilbyr pensum, timeplaner,
+      profesjonelle høykvalitets læreplaner og tilby tonnevis av gode verktøy for
+      alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for
+      å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste
+      steget som passer for ditt klasserom.</b>
     announcement_teacher_recruitment: Teachers like you are leading the computer science
       education movement. You can participate in high-quality K-12th grade professional
       learning programs <strong>at absolutely no cost to you or your school</strong>.
@@ -530,22 +530,23 @@
       professional learning programs <strong>at absolutely no cost to you or your
       school</strong>. Take the lead on computer science in your school, and apply
       for professional learning. Middle and high school teachers, apply by March 17th.
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
-      of updating our CS Fundamentals courses! We're looking for teachers to pilot
-      an updated CS Fundamentals curriculum during the winter and spring of 2017.
-      We're eager to hear your feedback before these updates go live in August 2017."
-    announcement_student_privacy: At Code.org, we take student privacy very seriously.
-      To protect your students’ privacy, we have made a change to your section’s login
-      page to avoid displaying full names. Even though this update should reduce privacy
-      concerns for the login page, we still encourage users to <i>not use full names
-      for students</i>.
-    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-      Your students could be featured in Code.org''s next viral video encouraging
-      students to take the AP CS Principles exam this year. We''re inviting all CS
-      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
-      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
-      will be featured in our video and the winning students will receive Code.org
-      swag!'
+    announcement_csf_pilot: "<strong>Grunnskole lærere:</strong> Bli med og oppdater
+      våre grunnleggende Informatikk kurs! VI ser etter lærere til å lede arbeidet
+      med å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren
+      og våren 2017. Vi ser frem til å høre dine innspill før oppdateringene slippes
+      i august 2017."
+    announcement_student_privacy: Hos Code.org tar vi studentenes personvern svært
+      alvorlig. For å beskytte elevenes personvern har vi gjort endringer for din
+      seksjons pålogginsside til ikke å vise fullt navn. Selv om denne oppdateringen
+      forbedrer personvernet, oppfordrer vi likevel brukere til å <i>ikke bruke fullt
+      navn på studentene</i>.
+    announcement_apcsp_recruitment: '<strong>Informatikk lærere:</strong> Dine studenter
+      kan delta i Code.org''s neste virale video for å oppmuntre flere studenter til
+      å ta Prinsipper i Informatikk eksamen i år. Vi inviterer alle Prinsipper i Informatikk
+      studenter til å legge ut en 10-20 sekunders videoklipp på Twitter, Instagram
+      eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
+      videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
+      premie!'
     announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
       break records. Student participation in the exam could dramatically shift diversity
       in AP Computer Science, but we need your help. Encourage every CS Principles
@@ -563,10 +564,9 @@
       on computer science in your school and apply for our high-quality professional
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Applications close on April 14th.
-    announcement_applab_export: App Lab, our web-based programming environment, now
-      supports exporting your code! You can start building apps with drag-and-drop
-      JavaScript blocks, then export the code to continue editing in any professional
-      development environment of your choice.
+    announcement_applab_export: App Lab, vårt web-baserte programmeringsmiljø, støtter
+      nå export av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av JavaScript
+      blokker, eksporter så koden for å fortsette kodingen i ditt favoritt utviklingsverktøy.
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
       CS Principles students taking the AP CS Exam will join over 50,000 other students
       in the largest AP Exam launch in history. Now, let the voices of your students
@@ -752,8 +752,8 @@
       cta: Lær korleis
     weblab:
       title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      body: Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med
+        HTML og CSS. Design din webside og del siden din i løpet av sekunder.
       audience: Alder 13+
       cta: Lær korleis
     frozen:
@@ -771,11 +771,12 @@
       body: Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft.
     sports:
       title: Sport
-      body: Make a basketball game or mix and match across sports.
+      body: Velg mellom å lage et basketballspill eller miks og match på tvers av
+        ulike sporter.
     text-compression:
       title: Text Compression
-      body: In this lesson, students will use the Text Compression Widget to compress
-        text by substituting patterns with symbols.
+      body: I denne leksjonen vil studentene bruke tekst comprimerings modulen til
+        å komprimere tekst ved å estatte mønstre med symboler.
     unplugged:
       title: Analoge leksjonar
       audience: Alder 4+
@@ -788,14 +789,14 @@
         i ditt klasserom.
     unplugged_conditionals:
       title: Betingelser
-      body: Learn about algorithms and conditional statements in this “unplugged”
-        activity using a deck of cards.
+      body: Lær om algoritmer og betingede instruksjoner i denne "løsrevede" aktiviteten
+        ved å bruke en kortstokk.
     widgets:
-      title: Widgets
-      body: Students can explore concepts from our Computer Science Principles course
-        hands-on using these digital tools. Use the widgets on their own, or create
-        a single-concept lesson for your class.
-      audience: Ages 14+
+      title: Moduler
+      body: Studenter kan utforske konsepter fra informatikk-prinsipper-kurset vårt
+        selv ved å bruke disse digitale verktøyene. Bruk modulene for seg selv, eller
+        lag en enkeltkonseptøkt for klassen din.
+      audience: Alder 14+
       cta: Lær korleis
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
@@ -828,7 +829,7 @@
     help_resources: Hjelp og oppslagsverk
     help_support: Hjelp og støtte
     documentation: Dokumentasjon
-    tutorials: Tutorials
+    tutorials: Guide
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har gitt er ikkje rett.  Prøv på nytt!
@@ -932,11 +933,11 @@
       er akseptert.
     review_terms: Les våre oppdaterte vilkår
   school_info_interstitial:
-    title: We want to bring Computer Science to every student - help us track our
-      progress!
-    message: Please enter your school information below.
-    message_with_suggestion: Please verify that the following information is correct,
-      or update as necessary.
+    title: Vi ønsker å fremme kunnskap om informatikk til alle studenter - hjelp oss
+      med å måle fremdriften!
+    message: Vennligst oppgi din skoles informasjon under.
+    message_with_suggestion: Vennlist kontroller at følgende informasjon er korrekt,
+      eller oppdater etter behov.
     save: Lagre
   race_interstitial:
     title: 'Valfritt: Hjelp oss å spora framdrifta av forbetringa av mangfaldet innan
@@ -979,23 +980,23 @@
       applab: App Lab
       gamelab: Spel lab
       weblab: Web Lab (beta)
-    new_buttons_header: 'Start a new project:'
+    new_buttons_header: Opprett et nytt prosjekt
     rename: Gje nytt navn
     save: Lagre
     delete: Slett
     import: Importér
-    share_link_import_bad_link_header: Share link not recognized
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: Something went wrong.
-    share_link_import_error_body: There was a problem importing that share link. Please
-      try again.
+    share_link_import_bad_link_header: Lenke ikke gjenkjent
+    share_link_import_bad_link_body: 'Vi kunne ikke importere lenken. Kontroller at
+      du bruker en kobling fra en Minecraft: Agent puslespill, og at du har kopiert
+      hele koblingen.'
+    share_link_import_error_header: Noe gikk galt.
+    share_link_import_error_body: Det oppstod et problem ved import av lenken. Vennligst
+      prøv igjen.
     exit: Attende til kurset
     my_projects: Mine prosjekt
     project_gallery: Prosjekt
     publish: Publisér
-    unpublish: Unpublish
+    unpublish: Avpubliser
     share: Del
     share_title: Del prosjektet ditt
     share_copy_link: 'Kopier lenkja:'
@@ -1005,8 +1006,8 @@
       skule.
     embed: Bygg inn
     advanced_share: Vis avanserte alternativ
-    no_projects: You currently have no projects. Click on one of the buttons above
-      to start a project.
+    no_projects: Du har ingen prosjekter. Klikk på en av knappene over for å starte
+      et prosjekt.
     close: Lukk
     more: Meir
     name: Namn
@@ -1016,9 +1017,9 @@
       under for å lage eit nytt Spill-lab eller kunstprosjekt!<br/>Du kan komme tilbake
       og jobbe på prosjekta dine når som helst.
     need_help: Treng du hjelp for å kome i gong?
-    thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
-      to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
-      to refresh everywhere.
+    thumbnail_help: Ikke riktig miniatyrbildet for prosjektet? Kjør din app for å
+      generere et nytt miniatyrbilde. Merk at det kan ta et par timer før miniatyrbildet
+      er oppdatert overalt.
     really_delete: Slette?
     delete_yes: Ja
     delete_no: Nei
@@ -1033,9 +1034,9 @@
     remix: Remix
     click_to_remix: Klikk "Remix" for å snurre i gong din eigen versjon!
     edit_project: Endre prosjekt
-    sharing_disabled: Sorry, this project is not available for sharing. If this is
-      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
-      in</a> to your account to view the project.
+    sharing_disabled: Beklager, dette prosjektet er ikke tilgjengelig for deling.
+      Hvis dette er ditt eller en av dine elevers prosjekt, vennligst <a href='https://studio.code.org/users/sign_in'>logg
+      på</a> din konto for å se prosjektet.
     abuse:
       tos: Dette prosjektet er blitt rapportert for brot på Code.org sine <a href='http://code.org/tos'>Vilkår
         for bruk</a> og kan ikkje bli delt med andre.
@@ -1100,36 +1101,36 @@
     optional_stages: Optional Stages
     main_course: Hovedkurs
     extra_course_content: Ekstra kursinnhald
-    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_1: Oppgrader til Kurs E (Valgfritt)
     csf_e_2: Kursinnhald E
-    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_1: Oppgrader til Kurs F (Valgfritt)
     csf_f_2: Kursinnhald F
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd1_1: 'Kapittel 1: Problemløsingsprosessen'
+    csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
+    csd2_1: 'Kapittel 1: Webinnhold og HTML'
+    csd2_2: 'Kapittel 2: Styling og CSS'
+    csd3_1: 'Kapittel 1: Bilder og animasjoner'
+    csd3_2: 'Kapittel 2: Bygge spill'
+    csd4_1: 'Kapittel 1: Bruke sentrert design'
+    csd4_2: 'Kapittel 2: App Prototyping'
+    csd5_1: 'Kapittel 1: Representerer informasjon'
+    csd5_2: 'Kapittel 2: Problemløsing med data'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
+    csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
+    csp2_2: 'Kapittel 2: Manipulere og Visualisere data'
+    csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmer'
+    csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
+    csp5_1: 'Kapittel 1: Event-drevet programmering'
+    csp5_2: 'Kapittel 2: Programmering med datastrukturer'
     cspSurvey: Undersøking
     cspAssessment: Vurdering av kapittel
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    dlp: Reflection Prompts
+    csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
+    csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    dlp: Spørsmål til refleksjon
   external_links:
     disclaimer: Fråskrive seg ansvar
     leaving_domain: Du forlet no dette domenet, til eit område som ikkje blir styrt

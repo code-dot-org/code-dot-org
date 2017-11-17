@@ -17,8 +17,6 @@
 
     #project-links-wrapper{style: 'display: none;'}
       #new-project-buttons
-      #legacy-project-links{style: 'display: none;'}
-        = render partial: 'projects/links'
 
     #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
       %div{'ng-app' => 'projectsApp', 'ng-view' => ''}

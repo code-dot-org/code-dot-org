@@ -7,52 +7,52 @@ nav: how_to_nav
 
 # სახელმძღვანელო მოხალისეებისთვის
 
-### Make a difference in a classroom today!
+### შეიტანეთ ცვლილებები სწავლებაში დღესვე!
 
 ## რატომ უნდა გავხდე მოხალისე?
 
 გადახედეთ წინა მოხალისეთა შთაბეჭდილებებს:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "ჩემი გამოცდილების საუკეთესო ნაწილი იყო ის, რომ მთელი კლასი შედგებოდა ქალებისგან და ფერადკანიანი ადამიანებისგან. ეს კარგი წინასწარმეტყველებაა ჩვენი ინდუსტრიისთვის, რათა მივწვდეთ ამ ბავშვებს და შთავაგონოთ ისინი."
+- "მე განსაკუთრებით მომეწონა გოგონების წახალისება ტექნოლოგიით დაინტერესებაში. ვგრძნობდი, თითქოს ვეხმარებოდი მომავალ თაობას ჩემს რაიონში."
+- "მე საოცარი სიამოვნება მომგვარა ამ ბავშვების აღფრთოვანებამ. ერთ-ერთი გასაოცარი მოვლენა იყო, როცა მასწავლებლებმა შენიშნეს, რომ მოსწავლეები, რომლებსაც არ ჰქონდათ კარგი აკადემიური მოსწრება, შესანიშნავად აზროვნებდნენ როგორც დეველოპერები და სხვებს ეხმარებოდნენ სწავლაში, რამაც მათ შეუქმნა სფერო, სადაც არიან თავდაჯერებულები."
 
-## Anyone can volunteer
+## ყველას შეუძლია მოხალისეობა
 
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+**მოხალისეები და სპიკერები ტექნოლოგიის სფეროდან**: გაქვთ რაიმე კავშირი კომპიუტერულ მეცნიერებებთან ან ტექნოლოგიებთან? თუ პროგრამული უზრუნველყოფის სფეროში მუშაობთ, ან ტექნოლოგიურ კომპანიაში ნებისმიერ პოზიციაზე (ინჟინრის ან არა ინჟინრის პოზიციაზე), ან გაიარეთ კომპიუტერული მეცნიერებების კურსები, შეგიძლიათ, დაგვეხმაროთ მოსწავლეების შთაგონებაში! ბევრი სტუდენტი არასდროს შეხვედრია ტექნოლოგიების ინდუსტრიაში მომუშავე ადამიანს, ჩვენს მასწავლებელებს კი ძალიან უყვართ თავიანთი კლასის დაკავშირება პროფესიონალებთან და უნივერსიტეტის სტუდენტებთან.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+თქვენ შეგიძლიათ, იყოთ მოწვეული სპიკერი ან დაეხმაროთ მასწავლებელს აქტივობის ჩატარებაში. ეწვიეთ ადგილობრივ კლასს და შთააგონეთ მოსწავლეები, განაგრძონ კომპიუტერული მეცნიერებების შესწავლა.
 
-<a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button></p> 
+<a href="https://code.org/volunteer/engineer"><button>დარეგისტრირდით დღეს, რათა გახდეთ ტექნიკური მოხალისე!</button></p> 
 
 <p>
-  <strong>Anyone passionate about expanding opportunity</strong>: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+  <strong>ყველას, ვისაც აინტერესებს შესაძლებლობების გაფართოება</strong>: გჯერათ, რომ კომპიუტერული მეცნიერებების სწავლებამ შეიძლება, კარი გაუღოს შესაძლებლობებს მოსწავლეებისთვის? დაეხმარეთ ადგილობრივ კლასს ან გაუკეთეთ ორგანიზება კლასგარეშე ღონისძიებას! იმისთვის, რომ უმასპინძლოთ კოდის საათს, არ არის აუცილებელი, გქონდეთ განათლება კომპიუტერულ მეცნიერებებში. უბრალოდ დახმარების შეთავაზებაც კი ხშირად საკმარისია თქვენი ბავშვის მასწავლებლის, მეგობრის ან კლუბის დასარწმუნებლად იმაში, რომ სცადონ ერთი საათის ჩატარება.
 </p>
 
 <p>
-  How do you get started?
+  როგორ დავიწყოთ?
 </p>
 
 <ol>
   <li>
     <p>
-      <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+      <a href="%= resolve_url('/promote/resources#help-schools') %">გაუგზავნეთ ეს წერილი</a> თქვენი ბავშვის მასწავლებელს და შესთავაზეთ დახმარება კოდის საათის ჩატარებაში.
     </p>
   </li>
   
   <li>
     <p>
-      Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+      შესთავაზეთ ადგილობრივ სკოლას, გამართოს კოდის საათი გაკვეთილების შემდეგ. <a href="%= resolve_url('/how-to') %">გამოიყენეთ ეს სახელმძღვანელო</a> ღონისძიების გასაგეგმად.
     </p>
   </li>
 </ol>
 
 <h2>
-  Recruit your co-workers to volunteer
+  მოუწოდეთ თქვენს თანამშრომლებს, გახდნენ მოხალისეები
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  მოუყევით თქვენს მეგობრებსა და თანამშრომლებს კოდის ერთი საათის შესახებ. ათასობით მასწავლებელი ეძებს მოხალისეებს, ამიტომ, სთხოვეთ მათ, <a href="https://code.org/volunteer">დარეგისტრირდნენ მოხალისეებად</a>. მოუწოდეთ თქვენს დამსაქმებელს, მიიღოს მონაწილეობა. <a href="%= resolve_url('/promote/resources#sample-email') %">გაუგზავნეთ ეს წერილი</a> თქვენს მენეჯერს ან დირექტორს, რათა ყველა ჩაერთოს.
 </p>
 
 <h2>
@@ -61,28 +61,28 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="%= resolve_url('/promote/resources#videos') %">აირჩიეთ ვიდეო</a>, რომელიც დაგეხმარებათ კლასის მობილიზებაში და დააინტერესებს ბავშვებს კოდის საათით.
   </li>
   <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+    შეამოწმეთ <a href="/files/hoc-volunteer-toolkit.pdf">კოდის ერთი საათის მოხალისეთა გზამკვლევი</a>, რომელშიც მოცემულია მიმოხილვა, განრიგი, მოსამზადებელი მასალები და სარეკლამო რესურსები. ყველაფერი, რაც მოხალისეობრივი გამოცდილებისთვის გჭირდება!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+    თუ სესიის დროს ტუტორიალის გაკეთებას აპირებთ, დახარჯეთ 30 წუთი და ერთი <a href="%= resolve_url('/learn') %">კოდის საათის ტუტორიალი</a> მაინც სცადეთ.
   </li>
   <li>
-    If you're visiting a school, complete any background checks or required paperwork.
+    თუ სკოლას სტუმრობთ, წინასწარ შეასრულეთ ყველა აუცილებელი შემოწმება და მოამზადეთ საჭირო საბუთები.
   </li>
   <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">გადახედეთ ამ რჩევებს</a> მოსწავლეებთან ურთიერთობისთვის.
   </li>
   <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+    შეუერთდით დიალოგს Facebook-ზე, Twitter-ზე, Instagram-ზე and Tumblr-ზე ჰეშთეგით #HourOfCode.
   </li>
   <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
+    დაუკავშირდით მასწავლებელს, რათა განიხილოთ, რაზე აპირებთ საუბარს სესიის დროს.
   </li>
   <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+    თუ ვირტუალური მოხალისე ხართ, წინასწარ შეამოწმეთ აუდიო/ვიდეო და ეკრანის გაზიარება.
   </li>
 </ul>
 
@@ -91,11 +91,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  როცა კოდის ერთ საათს უმასპინძლებთ, მიჰყევით ქვემოთ მოცემულ შაბლონს, რომლიც დაგეხმარებათ დღის დაგეგმვაში. მანამდე დარწმუნდით, რომ დარეგისტრირებული ხართ სკოლაში და გაეცანით მასწავლებელს. გადაამოწმეთ შეთანხმებული განრიგი და განიხილეთ ყველა სასაუბრო საკითხი.
 </p>
 
 <h3>
-  <strong>Sample agenda:</strong>
+  <strong>დღის განრიგის შაბლონი:</strong>
 </h3>
 
 <table>
@@ -105,139 +105,139 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </th>
     
     <th>
-      Agenda item
+      განრიგის პუნქტი
     </th>
   </tr>
   
   <tr>
     <td>
-      1-5 minutes
+      1-5 წუთი
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+      <a href="%= resolve_url('promote/resources#videos') %">აჩვენეთ შთამაგონებელი ვიდეო</a>.
     </td>
   </tr>
   
   <tr>
     <td>
-      5-10 minutes
+      5-10 წუთი
     </td>
     
     <td>
-      Introduce yourself and learn more about the students: </ul>
+      წარადგინეთ საკუთარი თავი და გაიგეთ მეტი მოსწავლეების შესახებ: </ul>
       
       <li>
-        What do you work, what do you do, and what do you love most about your job?
+        სად მუშაობთ, რას აკეთებთ და რა მოგწონთ ყველაზე მეტად თქვენს სამსახურში?
       </li>
       
       <li>
-        What or who inspired you?
+        ვინ ან რამ შთაგაგონათ?
       </li>
       
       <li>
-        How did you get interested in computer science?
+        როგორ დაინტერესდით კომპიუტერული მეცნიერებით?
       </li>
       
       <li>
-        Did you have a mentor?
+        გყავდათ თუ არა ზედამხედველი?
       </li>
       
       <li>
-        Share a story about how tech affects everyone.
+        მოყევით, თუ რა გავლენას ახდენს ტექნოლოგიები სამყაროზე.
       </li>
       
-      <br />Ask the students questions and leave time for Q&A.</br> 
+      <br />დაუსვით მოსწავლეებს შეკითხვები და დატოვეთ დრო კითხვა&პასუხისთვის.</br> 
       
       <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+        რა სამსახური აინტერესებთ, რომელია მათი საყვარელი ელექტრონული მოწყობილობა ან აპლიკაცია და, მათი აზრით, როგორ მუშაობენ ისინი?
       </li>
       
       <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
+        აქვთ თუ არა მოსწავლეებს შეკითხვები?</ul></td> </tr> <tr>
           <td>
-            30-60 minutes
+            30-60 წუთი
           </td>
           
           <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+            <strong>წერეთ კოდი!</strong> იარეთ, უპასუხეთ კითხვებს და მიეცით მათ მიმართულება რთული თავსატეხების ამოსახსნელად. ეცადეთ, არ მისცეთ მოსწავლეებს პირდაპირ პასუხები, არამედ, დაუსვით კითხვები ისე, რომ მათ თავადვე უპასუხონ, რა გააკეთეს არასწორად, და წაახალისეთ მოსწავლეები, ჰკითხონ ერთმანეთს, თუ რამე ვერ გაიგეს. ერთმანეთისგან სწავლა შესანიშნავი შესაძლებლობაა.
           </td>
         </tr>
         
         <tr>
           <td>
-            1-3 minutes
+            1-3 წუთი
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            მადლობა გადაუხადეთ ყველას და წარმოთქვით შთამაგონებელი დასამშვიდობებელი სიტყვა. თუ გაქვთ, დაარიგეთ თქვენი კომპანიის ბრენდირებული ნივთები (სტიკერები შესანიშნავი იქნება)!
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            შემდეგ
           </td>
           
           <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+            <strong>გახადე ცვლილება ხანგრძლივი:</strong> დაელაპარაკე მასწავლებელს, რომ კოდის საათი გადაიქცეს კომპიუტერული მეცნიერებების სრულ კურსად! შედით <a href="https://code.org/yourschool">code.org/yourschool</a>-ზე მასწავლებელთან ერთად და შეავსეთ, რას ასწავლის ეს სკოლა დღეს და წაახალისეთ ისინი, დადონ პირობა, რომ შემოიტანენ კომპიუტერულ მეცნიერებებს კლასში.
           </td>
         </tr></tbody> </table> 
         
         <h3>
-          <strong>After the Event:</strong>
+          <strong>ღონისძიების შემდეგ:</strong>
         </h3>
         <ul>
           <li>
-            Share your photos and stories with Code.org at giving@code.org.
+            გააზიარეთ თქვენი სურათები და ამბები Code.org-თან ერთად ამ მისამართზე: giving@code.org.
           </li>
           <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+            არ დაგავიწყდეთ, შეიყვანოთ თქვენი მოხალისეობის საათები კომპანიის მოხალისეობის აღრიცხვის პორტალზე.
           </li>
           <li>
-            Share about your experience on social media #HourOfCode!
+            გააზიარეთ თქვენი გამოცდილება სოციალურ მედიაში #HourOfCode!
           </li>
           <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+            თუ ღონისძიების დროს გადაიღეთ ფოტოები/ვიდეოები, <strong>განსაკუთრებით, მოსწავლეებთან ერთად</strong>, დარწმუნდით, რომ გაქვთ მასწავლებლის/მშობლის ნებართვა, თუ გსურთ მათი სოციალური მედიით გაზიარება.
           </li>
           <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+            და ერთ თვეში გადაამოწმეთ: მასწავლებელი დაინტერესებულია კომპიუტერული მეცნიერებების კურსის შექმნით? გააზიარეთ <a href="https://code.org/yourschool">რესურსები და პროფესიონალური სწავლის შესაძლებლობები, მათ დასახმარებლად</a>.
           </li>
         </ul>
         <h2>
-          How you get selected as a technical volunteer of guest speaker
+          როგორ შეგარჩევენ მოწვეული სპიკერის ტექნიკურ მოხალისედ
         </h2>
         <ul>
           <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+            მასწავლებლები მოძებნიან მოხალისეებს ჩვენი <a href="https://code.org/volunteer/local">მოხალისეების რუკის</a> საშუალებით.
           </li>
           <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+            შეეცადეთ, თქვენი პროფილი გახადოთ მაქსიმალურად სრული - ამით შანსი, რომ მასწავლებელი თქვენ შეგარჩევთ, გაიზრდება.
           </li>
           <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+            მასწავლებელი ამ ფორმის დახმარებით დაგიკავშირდებათ (თქვენი ელექტრონულიფოსტის მისამართი მასწავლებელს არასდროს გადაეცემა). <em>თუ მასწავლებელებისგან ძალიან ბევრ მოთხოვნას ღებულობთ, ყოველთვის შეგიძლიათ, განაახლოთ თქვენი პრიორიტეტები, რისთვისაც უნდა გადახვიდეთ ამ ლინკზე, სადაც საშუალება გაქვთ, შეცვალოთ თქვენი ინფორმაცია ან გააუქმოთ გამოწერა რომელიც მასწავლებლისგან მოსული ნებისმიერი წერილის ქვედა ნაწილში არის მოცემული.</em>
           </li>
         </ul>
         <h2>
-          Volunteering during the Hour of Code FAQ
+          კოდის ერთი საათის დროს მოხალისეობის შესახებ ხშირად დასმული შეკითხვები
         </h2>
         <h3>
-          <strong>I haven't been contacted by a teacher yet. How can I still volunteer?</strong>
+          <strong>მასწავლებელი ჯერ არ დამკავშირებია. როგორ შემიძლია, მაინც ვიყო მოხალისე?</strong>
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          სცადეთ ადგილობრივი სკოლების მოძებნა და დირექტორთან/მასწავლებელთან/ადმინისტრაციასთან დაკავშირება და მათგან გაიგეთ, როგორ შეგიძლიათ დახმარება.
         </p>
         <h3>
-          <strong>How long do classroom visits last for?</strong>
+          <strong>რამდენ ხანს გრძელდება კლასში ვიზიტი?</strong>
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          საკლასო ოთახში ვიზიტი, როგორც წესი, 60-90 წუთს გრძელდება, ვირტუალური კლასი კი - 20-30 წუთს.
         </p>
         <h3>
-          <strong>What age group is the Hour of Code tutorial appropriate for?</strong>
+          <strong>რომელ ასაკობრივ ჯგუფს შეესაბამება კოდის ერთი საათის ტუტორიალი?</strong>
         </h3>
         <p>
-          Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
+          Code.org კოდის საათის ტუტორიალებს ქმნის თამაშებისა და თავსატეხების სახით, იმისთვის, რომ ჩართოს ყველა დონეზე მყოფი (k-12) და ნებისმიერი საფუძვლების მქონე მოსწავლე, როგორც გოგოები, ასევე ბიჭები. ყველა, ზრდასრულიც კი, შეიძლება გაერთოს ჩვენი ტუტორიალებით!
         </p>
         <p>
           <%= view :signup_button %>

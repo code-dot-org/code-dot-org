@@ -84,7 +84,7 @@ class StartNewProject extends React.Component {
           />
           <NewProjectButtons
             description={i18n.projectGroupMinecraft()}
-            projectTypes={['minecraft_designer', 'minecraft_adventurer']}
+            projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
           />
           {canViewAdvancedTools &&
             <NewProjectButtons

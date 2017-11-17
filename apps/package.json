@@ -42,9 +42,9 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.6.26",
+    "@code-dot-org/blockly": "1.6.28",
     "@code-dot-org/bramble": "0.1.22",
-    "@code-dot-org/craft": "github:code-dot-org/craft#25669c66928055e6d755595e71ca24e943b5ac87",
+    "@code-dot-org/craft": "github:code-dot-org/craft#e8adff5c475c55c3648b619f9f461e0e9b49c82d",
     "@code-dot-org/johnny-five": "0.11.1-cdo.1",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",

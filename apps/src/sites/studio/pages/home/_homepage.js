@@ -16,7 +16,6 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
-import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showHomepage);
 
@@ -30,8 +29,6 @@ function showHomepage() {
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
   const query = queryString.parse(window.location.search);
-  const canCreateMoreProjects = experiments.isEnabled('createMoreProjects');
-
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
@@ -148,13 +145,13 @@ function showHomepage() {
                 id: announcementId
               }
             ]}
+            hocLaunch={homepageData.hoc_launch}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
             isRtl={isRtl}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            canCreateMoreProjects={canCreateMoreProjects}
           />
         )}
         {!isTeacher && (
@@ -165,7 +162,6 @@ function showHomepage() {
             canLeave={homepageData.canLeave}
             isRtl={isRtl}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            canCreateMoreProjects={canCreateMoreProjects}
           />
         )}
       </div>

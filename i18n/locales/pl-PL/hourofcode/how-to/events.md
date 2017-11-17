@@ -5,41 +5,41 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Jak zorganizować Godzinę Kodowania
+# Jak zorganizować wydarzenie Godzin Kodowania
 
-## 1. Prepare for your event
+## 1. Przygotuj własne wydarzenie
 
-- Determine a venue, date, and time.
+- Określ miejsce, datę i czas.
 - Wyślij [list](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) z zaproszeniem do miejscowych władz. Zaproponuj, aby wygłosili krótkie przemówienie na otwarciu.
 - Zaproś media i prasę, np. lokalną rozgłośnię radiową, gazetę, blogerów zajmujących się techniką lub edukacją. Sprawdź nasz [pakiet dla prasy](%= resolve_url('/promote/press-kit') %).
 
-## W czasie wydarzenia
+## 2. W czasie Twojego wydarzenia
 
-- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
+- Rozpocznij swoje wydarzenie jednym z naszych [inspirujących filmów](%= resolve_url('/promote/resources#videos') %).
 - We wprowadzeniu podkreśl wagę informatyki, używając [statystyk i ikonografik](%= resolve_url('/promote/stats') %).   
       
     
 - Inne pomysły: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Zaproś lokalnego lidera z branży It, by porozmawiać o jej lub jego pracy związanej z informatyk.
+    - Zaproś lokalnego polityka i niech uczniowie nauczą go, jak się koduje.
+    - Zaproponuj, aby grupa uczniów zademonstrowała ćwiczenia bez komputera.
+    - Niech grupa uczniów nauczy, jak się koduje dyrektora lub grupę nauczycieli.
+    - Jeśli Twoja szkoła uczy informatyki, niech uczniowie pokażą swoje projekty.
 
-## 3. Share how it went
+## 3. Podziel się, jak poszło
 
-- Udostępnij zdjęcia z twojej godziny kodowania na Facebooku i Twitterze. 
-- Use the hashtag **#HourOfCode**
+- Udostępnij zdjęcia z Twojej Godziny Kodowania na Facebooku i Twitterze. 
+- Użyj hasztag **#HourofCode**
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Zorganizuj Rodzinną Noc Kodowania z Godziną Kodowania i zaproś rodziców do udziału
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Rozważ zorganizowania wydarzenia wieczorem dla K-5 i zaproś rodziców, by przyłączyli się do swoich uczniów na godzinę informatyki. Jest to świetny sposób, by zaangażować większą społeczność i zachęcić rodziców do wsparcia informatyki w Twojej szkole. Nasi partnerzy Rodzinnej Nocy Kodowania stworzyliśmy zestaw organizacyjny zdarzenia złożony z: listy planowanych przedsięwzięć, skryptu prezentera, mail z zaproszeniami, plakatów, prezentacji w PowerPoint i wiele więcej dla wsparcia Twojego wydarzenia. [ Kliknij tutaj, aby pobrać Zestaw organizacyjny wydarzenia](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## Przykładowy plan imprezy
 
 **Wydarzenie: **Otwarcie ogólnoszkolnego Tygodnia Edukacji Informatycznej
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Data: **5 grudnia (rozpoczęcie Tygodnia Edukacji Informatycznej)
 
 **Czas: **Podczas dnia szkolnego, najlepiej przed południem. Całość zajmie mniej więcej godzinę.
 
@@ -49,13 +49,13 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 ## Program imprezy
 
-| Godzina       | Program                                                                                                                                          |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00-10:05   | Rozpocznij jednym z naszych [inspirujących filmów](%= resolve_url('/promote/resources#videos') %)                                                |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %). |
-| 10:15 - 10:30 | Gość specjalny mówi kilka słów o sobie i o roli, jaką w jego codziennym życiu odgrywa technologia i informatyka.                                 |
-| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10;40 - 11:00 | Uczniowie prezentują, jak można uczyć informatyki bez komputera.                                                                                 |
-| 11:00 - 11:05 | Nauczyciel, który zorganizował wydarzenie w szkole podsumowuje i zamyka spotkanie.                                                               |
+| Godzina       | Program                                                                                                                                             |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05   | Rozpocznij jednym z naszych [inspirujących filmów](%= resolve_url('/promote/resources#videos') %)                                                   |
+| 10:05 - 10:15 | Dyrektor we wprowadzeniu podkreśla wagę informatyki, używając [statystyk i ikonografik](%= resolve_url('/promote/stats') %).                        |
+| 10:15 - 10:30 | Gość specjalny mówi kilka słów o sobie i o roli, jaką w jego codziennym życiu odgrywa technologia i informatyka.                                    |
+| 10:30 - 10:40 | Uczniowie prezentują swoje osiągnięcia z Godziny Kodowania. Urozmaicenie: poproś ich, żeby nauczyli czegoś dyrektora, polityka albo innych uczniów! |
+| 10;40 - 11:00 | Uczniowie prezentują, jak można uczyć informatyki bez komputera.                                                                                    |
+| 11:00 - 11:05 | Nauczyciel, który zorganizował wydarzenie w szkole podsumowuje i zamyka spotkanie.                                                                  |
 
 <%= view :signup_button %>

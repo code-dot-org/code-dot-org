@@ -49,6 +49,7 @@ class Blockly < Level
     disable_param_editing
     disable_variable_editing
     disable_procedure_autopopulate
+    top_level_procedure_autopopulate
     use_modal_function_editor
     use_contract_editor
     default_num_example_blocks
