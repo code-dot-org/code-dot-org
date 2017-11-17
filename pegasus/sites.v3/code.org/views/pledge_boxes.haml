@@ -4,7 +4,7 @@
   - pledge_boxes = []
   - pledge_boxes << { title_s: 'Administrators', description_t: "View resources on how to get started or expand opportunities", url_s: '/administrators', button_s: 'View resources'}
   - pledge_boxes << { title_s: 'Teachers', description_t: "Start teaching today, no computer science experience necessary", url_s: '/educate', button_s: 'Start teaching'}
-  - pledge_boxes << { title_s: 'Parents', description_t: 'Take action to expand computer science in your school or district', url_s: '/help', button_s: 'Take action'}
+  - pledge_boxes << { title_s: 'Parents and Students', description_t: 'Take action to expand computer science in your school or district', url_s: '/help', button_s: 'Take action'}
   - pledge_boxes.each do |box|
     = view :educate_box, item: box, color: "#00adbc"
 
