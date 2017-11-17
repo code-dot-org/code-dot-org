@@ -14,7 +14,8 @@ export default class EligibilityChecklist extends Component {
 
   state = {
     statusYear: Status.UNKNOWN,
-    yearChoice: false, // stores the teaching-year choice until submitted
+    submitting: false,
+    yearChoice: null, // stores the teaching-year choice until submitted
     displayDiscountAmount: false,
     submission: {
       name: '',
@@ -43,7 +44,24 @@ export default class EligibilityChecklist extends Component {
 
   // Saves the teaching-year choice to trigger next step of actions
   handleSubmit = () => {
-    this.setState({statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED)});
+    this.setState({submitting: true});
+    // TODO: show pending button while waiting for server
+    $.ajax({
+     url: "/maker/apply",
+     type: "post",
+     dataType: "json",
+     data: {
+       unit_6_intention: this.state.yearChoice
+     }
+   }).done(data => {
+     this.setState({
+       statusYear: data.valid ? Status.SUCCEEDED : Status.FAILED,
+       submitting: false
+     });
+   }).fail((jqXHR, textStatus) => {
+     // TODO: should probably introduce some error UI
+     console.error(textStatus);
+   });
   }
 
   handleDropdownChange = (field, event) => {
@@ -69,12 +87,8 @@ export default class EligibilityChecklist extends Component {
     this.setState({displayDiscountAmount: true});
   }
 
-  setEligibleYear = () => {
-    this.setState({yearChoice: true});
-  }
-
-  setIneligibleYear = () => {
-    this.setState({yearChoice: false});
+  handleChangeIntention = event => {
+    this.setState({yearChoice: event.target.value});
   }
 
   render() {
@@ -125,7 +139,8 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="no"
-                      onChange={this.setIneligibleYear}
+                      checked={this.state.yearChoice === 'no'}
+                      onChange={this.handleChangeIntention}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearNo()}
@@ -135,7 +150,8 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="yes1718"
-                      onChange={this.setEligibleYear}
+                      checked={this.state.yearChoice === 'yes1718'}
+                      onChange={this.handleChangeIntention}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearYes1718()}
@@ -145,7 +161,8 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="yes1819"
-                      onChange={this.setEligibleYear}
+                      checked={this.state.yearChoice === 'yes1819'}
+                      onChange={this.handleChangeIntention}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearYes1819()}
@@ -155,7 +172,8 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="yesAfter"
-                      onChange={this.setIneligibleYear}
+                      checked={this.state.yearChoice === 'yesAfter'}
+                      onChange={this.handleChangeIntention}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearAfter()}
@@ -165,7 +183,8 @@ export default class EligibilityChecklist extends Component {
                       type="radio"
                       name="year"
                       value="unsure"
-                      onChange={this.setIneligibleYear}
+                      checked={this.state.yearChoice === 'unsure'}
+                      onChange={this.handleChangeIntention}
                       disabled={this.state.statusYear !== Status.UNKNOWN}
                     />
                     {i18n.eligibilityYearUnknown()}
@@ -174,8 +193,9 @@ export default class EligibilityChecklist extends Component {
                   {this.state.statusYear === Status.UNKNOWN &&
                     <Button
                       color="orange"
-                      text={i18n.submit()}
+                      text={this.state.submitting ? i18n.submitting() : i18n.submit()}
                       onClick={this.handleSubmit}
+                      disabled={this.state.submitting}
                     />
                   }
                 </form>
