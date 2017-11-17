@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import color from "../../util/color";
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes.jsx";
-import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
+import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 import {pegasus} from "../../lib/util/urlHelpers";
 import {sectionCode,
@@ -181,7 +181,7 @@ class SectionActionDropdown extends Component {
           >
             {i18n.printLoginCards()}
           </PopUpMenu.Item>
-          <PopUpMenu.MenuBreak/>
+          <MenuBreak/>
           <PopUpMenu.Item
             onClick={this.onClickEdit}
           >
