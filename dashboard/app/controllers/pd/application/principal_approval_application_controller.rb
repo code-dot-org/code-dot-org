@@ -6,15 +6,15 @@ module Pd::Application
         return render :not_available
       end
 
-      # Load principal application for this GUID
-      @approval_application = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: params[:application_guid])
-
-      # If exists, render submitted
-      return render :submitted if @approval_application
-
-      # If not, load corresponding teacher application
       @teacher_application = Pd::Application::Teacher1819Application.find_by(application_guid: params[:application_guid])
-      return render :not_found unless @teacher_application
+
+      if @teacher_application
+        if Pd::Application::PrincipalApproval1819Application.exists?(application_guid: params[:application_guid])
+          return render :submitted
+        end
+      else
+        return render :not_found unless @teacher_application
+      end
     end
   end
 end
