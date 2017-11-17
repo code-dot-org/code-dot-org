@@ -31,7 +31,7 @@ Code.org offre (solo per gli USA) ai dipendenti delle aziende e organizzazioni l
 
 ## 3. Scegli un'esercitazione
 
-Ti forniamo un'ampia scelta di [esercitazioni divertenti, della durata di un'ora](%= resolve_url('/learn') %) per partecipanti di tutte le età, creati da diversi partner. [Provali!](%= resolve_url('/learn') %)  
+Ti forniamo un'ampia scelta di [esercitazioni divertenti, della durata di un'ora](%= resolve_url('/learn') %) per partecipanti di tutte le età, creati da diversi partner. [Provale!](%= resolve_url('/learn') %)  
   
 **Trovi altre informazioni in italiano sul sito <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">Programma il Futuro</a>.**
 
@@ -59,8 +59,8 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 **Mostra un video stimolante:**
 
 - Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Il messaggio del Presidente Obama che invita tutti gli studenti ad imparare informatica.](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Il [video mondiale dell'Ora del Codice](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Il messaggio del Presidente Obama che invita tutti gli studenti ad imparare informatica.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Puoi trovare altri video motivanti in inglese [qui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) oppure [alcuni in italiano](https://www.programmailfuturo.it/notizie/messaggeri-del-codice) sul sito di Programma il Futuro.
 
 **Idee per introdurre la tua Ora del Codice:**

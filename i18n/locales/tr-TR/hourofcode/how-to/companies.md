@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Kodlama saatini şirketinize nasıl getirirsiniz
 
-## Kodlama Saati için öğrenci ve gönüllülere ilham verin
+## Kod-Saati için öğrenci ve gönüllülere ilham verin
 
 Code.org, teknoloji alanındaki kariyer deneyimlerini paylaşmaları ve bu alanda çalışmak isteyen öğrencilere ilham verebilmeleri için, çalışanlarınıza, Kod-Saati uygulayan yerel sınıflara [bağlanma](%= resolve_url('https://code.org/volunteer') %) fırsatı sunar.
 

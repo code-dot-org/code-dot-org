@@ -35478,19 +35478,13 @@
         toppings)\r
         - Create a function that allows you to add a coupon code for
         a 30% discount
-      MC_2017_Ryan_02_markdown_instruction: |-
-        Code like this can be made even shorter
-        using loops!  \r
-        \r
-        Now get the Agent to the pressure plate using a `repeat`
-        loop to help him move forward.
+      MC_2017_Ryan_02_markdown_instruction: "Код като този  може да се направи още
+        по-кратък с използване на цикли!  \\r \\r Сега накарай агента да натисне плочата-ключ
+        като използваш цикъл за повторение за да му помогнеш да се придвижи напред."
       MC_HOC_2017 Agent Test_markdown_instruction: |-
-        Click "Run" to move the player
-        using the **arrow keys**.  \r
+        Щракни на „Старт“, за да преместиш играча с помощта на **клавишите със стрелки**.  \r
         \r
-        To pass this level, you will need to get
-        to the door and open it (using the **space bar**) so you can get to the orange
-        square inside.
+        За да преминеш нивото, ще трябва да отидеш до вратата и да я отвориш (с помощта на клавиша за **интервал**), за да можеш да достигнеш до оранжевото квадратче вътре.
       MC_HOC_2017_01_markdown_instruction: |-
         Щракнете „Изпълняване“, за да преместите играча с помощта на **клавишите със стрелки**.  \r
         \r
@@ -36191,9 +36185,9 @@
         Students
         connect directly to one another and send entire packets back and forth, exploring
         systems of encoding data.
-      New Minecraft Hero Project_markdown_instruction: |-
-        **Freeplay:** Now it's up
-        to you! Use the Agent's code to help you explore this world.
+      New Minecraft Hero Project_markdown_instruction: "**Свободна игра:** Сега вие
+        сте на ход! Използвайте кода на Агента, с помощта на който да изследвате този
+        свят."
       Nike Example Brand Book_markdown_instruction: |
         # Brand Book\r
         \r

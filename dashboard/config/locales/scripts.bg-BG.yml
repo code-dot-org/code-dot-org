@@ -7372,13 +7372,13 @@
                 all five stages of the process can be found in the beginning of the
                 project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals
-                in the world of Minecraft.
-              description_teacher: This lesson gives students a chance to learn and
-                practice conditionals. It features characters and settings from Minecraft,
-                and students will complete tasks such as mining and building structures
-                using their programs.
+              name: "Условия в Minecraft"
+              description_student: "Избегни лавата! Тук ще научиш за условията в света
+                на Minecraft."
+              description_teacher: "Този урок дава на учевиците възможност да учат
+                и практикуват с услонията. Той предлага герои и настройки от Minecraft,
+                и учениците ще извършват задачи като минни и строителни конструкции,
+                като използват свои програми."
             Functions in Bee:
               name: Functions in Bee
             'Programming: My Robotic Friends':
@@ -7731,7 +7731,7 @@
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: "Условия в Minecraft"
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
@@ -8135,7 +8135,7 @@
             Conditional Loops in Maze:
               name: Conditional Loops in Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: "Условия в Minecraft"
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             'Variables: Envelope Variables':
@@ -8281,7 +8281,7 @@
             Ice Age Play Lab:
               name: "Ледена епоха: игрална лаборатория"
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: "Условия в Minecraft"
             Envelope Variables:
               name: "Плик с променливи"
             Variables in Artist:
@@ -8529,13 +8529,15 @@
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Hero''s Journey Hour of Code'
+              name: 'Minecraft\: Пътуването на героя в часът на кода'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
-          title: 'Minecraft: Hero''s Journey'
+          title: 'Minecraft: Пътуването на героя'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft се завръща с чисто нова дейност за часът на
+            кода!
+          description: Minecraft се завръща за часът на кода с чисто нова дейност!
+            Пътешествай през Minecraft с код.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:

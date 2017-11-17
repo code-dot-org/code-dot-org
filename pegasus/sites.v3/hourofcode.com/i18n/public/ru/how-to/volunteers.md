@@ -17,11 +17,11 @@ nav: how_to_nav
 - «Особенно заслуживают поощрения молодые девушки в технологии. Почувствовал, как я помогал следующему поколению в моем районе.»
 - «Я был доволен видя, как дети были заинтересованны. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
 
-## Anyone can volunteer
+## Каждый может стать волонтером
 
 **Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+Вы можете быть приглашены в класс для рассказа или помочь учителю проводить занятия. Ваше участие поможет помочь вовлечь учеников в изучение навыков компьютерного программирования
 
 <a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button></p> 
 
