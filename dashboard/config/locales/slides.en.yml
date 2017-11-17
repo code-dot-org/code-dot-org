@@ -1770,37 +1770,37 @@ en:
         text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
     applab_intro_welcome:
       1:
-        image: 
+        image: 'notes/applab_intro_welcome_1.png'
         text: "My name is Mei'lani. I'm an intern at code.org and I'm also a computer science student. I like computer science because it's really creative. I get to be the problem solver. I get to make everything function how I want it to. But I also get to be the designer. I get to be the artist and choose everything on the creative side of it."
       2:
-        image:
+        image: 'notes/applab_intro_welcome_2.png'
         text: "Making your own apps is easy with App Lab! Whether you're new to coding or have some experience. App Lab Apple is a great tool for building new apps and sharing them with your friends."
       3:
-        image:
+        image: 'notes/applab_intro_welcome_3.png'
         text: "This is a App Lab. On the left side is your app. On the right side is the code that will make it run. You build your program by dragging in blocks from the toolbox. To start you'll just have one block called 'setProperty'."
       4:
-        image:
+        image: 'notes/applab_intro_welcome_4.png'
         text: "The set property block changes the look of the elements on your screen. Like the buttons, labels, or even the screen itself. First you need to decide which element you want to change. If you hover over an element in your app you can see the name or ID here. Then go select that ID from the first drop down."
       5:
-        image:
+        image: 'notes/applab_intro_welcome_5.png'
         text: "Elements have lots of properties you can change like their text color, background color or font size. You can see the full list and choose which property you want to change in the second drop down."
       6:
-        image:
+        image: 'notes/applab_intro_welcome_6.png'
         text: "The last drop down is where you'll write the value you want to use value you want to use. The block will make a suggestion for you. But you can always type in different colors or numbers yourself."
       7:
-        image:
+        image: 'notes/applab_intro_welcome_7.png'
         text: "Once you're done, the block reads a bit like a sentence:'Set button1's background color to green.' Hit run to see the changes you're building in code. If you reset you can drag in more blocks to change other things about your app. Like the text!"
       8:
-        image:
+        image: 'notes/applab_intro_welcome_8.png'
         text: "For this tutorial we'll be working in block mode but App Lab also supports working in text."
       9:
-        image:
+        image: 'notes/applab_intro_welcome_9.png'
         text: "Either way you'll be programming in JavaScript, the language of the web. Each level has a goal, instructions and an image of what you're aiming to create."
       10:
-        image:
+        image: 'notes/applab_intro_welcome_10.png'
         text: "If you're ever stuck click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
       11:
-        image:
+        image: 'notes/applab_intro_welcome_11.png'
         text: "Once you've completed the goal for this level click finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
     applab_intro_events:
       1:
