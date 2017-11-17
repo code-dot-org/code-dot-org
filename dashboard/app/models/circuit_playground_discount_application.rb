@@ -24,6 +24,18 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   belongs_to :user
   belongs_to :circuit_playground_discount_code
 
+  enum unit_6_intention: {
+    no: 1,
+    yes1718: 2,
+    yes1819: 3,
+    yesAfter: 4,
+    unsure: 5,
+  }
+
+  def valid_unit_6_intention?
+    yes1718? || yes1819?
+  end
+
   # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
   def self.user_pd_eligible?(user)
     csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
