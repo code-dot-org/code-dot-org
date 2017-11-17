@@ -26,5 +26,27 @@ export default storybook => {
           />
         )
       },
+      {
+        name: 'Ineligible year submitted',
+        description: 'User had submitted an ineligible response for unit 6 intentions',
+        story: () => (
+          <EligibilityChecklist
+            statusPD={Status.SUCCEEDED}
+            statusStudentCount={Status.SUCCEEDED}
+            unit6Intention="no"
+          />
+        )
+      },
+      {
+        name: 'Eligible year submitted',
+        description: 'User had submitted an eligible response for unit 6 intentions',
+        story: () => (
+          <EligibilityChecklist
+            statusPD={Status.SUCCEEDED}
+            statusStudentCount={Status.SUCCEEDED}
+            unit6Intention="yes1718"
+          />
+        )
+      },
     ]);
 };
