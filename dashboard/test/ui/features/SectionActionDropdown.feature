@@ -40,7 +40,7 @@ Feature: Using the SectionActionDropdown
     And I create a new section
     And I open the section action dropdown
     And I click selector ".pop-up-menu-item:contains('Edit Section Details')" once I see it
-    And I press the save button to create a new section
+    And I press the first ".uitest-saveButton" element
 
   # * Checks that section can be hidden and shown
   #   * The menu of a new section should have a 'Hide Section' option -> select it to hide the section
