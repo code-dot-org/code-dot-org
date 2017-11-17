@@ -303,6 +303,7 @@
   homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen with Anna and Elsa"
   homepage_slot_text_teacher: "Teacher Dashboard"
@@ -322,6 +323,7 @@
   homepage_action_text_girlvideo: "Inspire a girl"
   homepage_action_text_learn: "Start learning"
   homepage_action_text_signpetition: "Sign the petition"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "I agree &#x25BE;"
   homepage_diversity_pledge: "Take the diversity pledge"
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
@@ -448,7 +450,7 @@
   minecraft_teach_resources: "Teacher resources and lesson plan."
   minecraft_leader_guide: "Download resources to help you plan and lead an event."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Join us on November 16th, 2017 for a special webinar for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough of the new tutorial by the Minecraft team and learn about the resources and best practices to help you confidently facilitate an exciting Hour of Code with Minecraft. <a href='%{minecraft_webinar_url}'>Sign up today</a>!"
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
   minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
   minecraft_future: "Help all youth become future ready"
