@@ -13,7 +13,6 @@ import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
-require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
