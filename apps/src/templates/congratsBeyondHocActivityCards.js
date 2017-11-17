@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 const CSFExpress = {
   title: i18n.csfExpressTitle(),
   description: i18n.csfExpressDesc(),
-  link: pegasus(`/educate/curriculum/express-course`),
+  link: "/s/express",
   image: "csf-express",
   buttonText: i18n.csfButton()
 };
