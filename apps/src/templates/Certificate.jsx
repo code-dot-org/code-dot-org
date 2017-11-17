@@ -92,7 +92,13 @@ export default class Certificate extends Component {
       text: i18n.justDidHourOfCode(),
     });
 
-    const print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+    const isMinecraft = /mc|minecraft|hero/.test(this.props.tutorial);
+
+    let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+    if (isMinecraft && !this.state.personalized) {
+      // Correct the minecraft print url for non-personalized certificates.
+      print = `${dashboard.CODE_ORG_URL}/printcertificate/?s=mc`;
+    }
 
     return (
       <div>
