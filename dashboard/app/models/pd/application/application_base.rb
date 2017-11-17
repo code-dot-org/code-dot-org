@@ -16,9 +16,11 @@
 #  updated_at          :datetime         not null
 #  course              :string(255)
 #  response_scores     :text(65535)
+#  application_guid    :string(255)
 #
 # Indexes
 #
+#  index_pd_applications_on_application_guid     (application_guid)
 #  index_pd_applications_on_application_type     (application_type)
 #  index_pd_applications_on_application_year     (application_year)
 #  index_pd_applications_on_course               (course)
@@ -71,6 +73,7 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
+
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.

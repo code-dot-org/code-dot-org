@@ -153,8 +153,8 @@ class ScriptLevelsController < ApplicationController
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
       @level = @script_level.level
-      @stage = @script_level.stage
-      @script = @script_level.script
+      @script = Script.get_from_cache(params[:script_id])
+      @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
       @game = @level.game
 
       present_level
@@ -166,7 +166,7 @@ class ScriptLevelsController < ApplicationController
     @stage_extras = {
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_stage_extras(current_user),
-      bonus_levels: @stage.script_levels.select(&:bonus).map(&:summarize_as_bonus),
+      bonus_levels: @script.get_bonus_script_levels(@stage),
     }.camelize_keys
 
     render 'scripts/stage_extras'
@@ -307,6 +307,12 @@ class ScriptLevelsController < ApplicationController
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 
+    # If there's an override, use that
+    if params[:level_name]
+      specified_level = @script_level.levels.find {|l| l.name == params[:level_name]}
+      return specified_level if specified_level
+    end
+
     # For teachers, load the student's most recent attempt
     if @user && current_user != @user
       last_attempt = @user.last_attempt_for_any(@script_level.levels)
@@ -337,7 +343,7 @@ class ScriptLevelsController < ApplicationController
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
-    @stage = @script_level.stage
+    @stage ||= @script_level.stage
 
     load_level_source
 
@@ -372,6 +378,7 @@ class ScriptLevelsController < ApplicationController
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
+      is_bonus_level: @script_level.bonus,
     )
 
     @@fallback_responses ||= {}
