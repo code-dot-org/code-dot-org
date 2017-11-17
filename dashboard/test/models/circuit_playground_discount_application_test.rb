@@ -9,6 +9,36 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     @other_cohort = create :cohort
   end
 
+  test 'eligible_unit_6_intention?' do
+    teacher = create :teacher
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'no')
+    refute application.eligible_unit_6_intention?
+
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1718')
+    assert application.eligible_unit_6_intention?
+
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1819')
+    assert application.eligible_unit_6_intention?
+
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yesAfter')
+    refute application.eligible_unit_6_intention?
+
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'unsure')
+    refute application.eligible_unit_6_intention?
+  end
+
+  test 'find_by_studio_person_id' do
+    user1 = create :teacher
+    user2 = create :teacher, studio_person_id: user1.studio_person_id
+
+    CircuitPlaygroundDiscountApplication.create!(user_id: user1.id, unit_6_intention: 'unsure')
+
+    app1 = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(user1.studio_person_id)
+    app2 = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(user2.studio_person_id)
+    assert_equal app1, app2
+    assert_equal 'unsure', app1.unit_6_intention
+  end
+
   test 'studio_person_pd_eligible? returns true if attended a CSD TeacherCon' do
     teacher = create :teacher
     @csd_cohort.teachers << teacher
@@ -64,10 +94,10 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
 
   test 'application_status for existing application' do
     teacher = create :teacher
-    create :circuit_playground_discount_application, user: teacher, unit_6_intention: 1
+    create :circuit_playground_discount_application, user: teacher, unit_6_intention: 'no'
 
     expected = {
-      unit_6_intention: 1,
+      unit_6_intention: 'no',
       has_confirmed_school: false,
       gets_full_discount: nil,
       discount_code: nil,

@@ -32,8 +32,15 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     unsure: 5,
   }
 
-  def valid_unit_6_intention?
+  def eligible_unit_6_intention?
     yes1718? || yes1819?
+  end
+
+  # Given a studio_person_id, finds an existing application (if one exists) for any user
+  # associated. Should never return more than one result
+  def self.find_by_studio_person_id(studio_person_id)
+    associated_user_ids = User.where(studio_person_id: studio_person_id).map(&:id)
+    where(user_id: associated_user_ids).first
   end
 
   # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator

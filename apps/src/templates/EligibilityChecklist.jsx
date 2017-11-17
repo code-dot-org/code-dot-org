@@ -70,7 +70,7 @@ export default class EligibilityChecklist extends Component {
      }
    }).done(data => {
      this.setState({
-       statusYear: data.valid ? Status.SUCCEEDED : Status.FAILED,
+       statusYear: data.eligible ? Status.SUCCEEDED : Status.FAILED,
        submitting: false
      });
    }).fail((jqXHR, textStatus) => {
