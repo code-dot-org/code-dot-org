@@ -546,20 +546,20 @@ module AWS
         erb_eval(str, filename).to_json
       end
 
-      # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
-      def js_zip(files)
+      # Zip all JS files in the path (along with the installed `node_modules` folder), and upload to S3.
+      def js_zip(path)
         hash = nil
-        code_zip = Dir.chdir(aws_dir('cloudformation')) do
+        code_zip = Dir.chdir(aws_dir('lambda', path)) do
           RakeUtils.npm_install '--production'
           # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
           hash = Digest::MD5.hexdigest(
-            Dir[*files, 'node_modules/**/*'].
+            Dir['*.js', 'node_modules/**/*'].
               select(&File.method(:file?)).
               sort.
               map(&Digest::MD5.method(:file)).
               join
           )
-          `zip -qr - #{files.join(' ')} node_modules`
+          `zip -qr - #{Dir['*.js'].join(' ')} node_modules`
         end
         key = "lambdajs-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil

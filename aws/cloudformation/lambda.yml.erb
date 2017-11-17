@@ -118,7 +118,7 @@ Resources:
     Properties:
       Description: 'Publish a CloudWatch Event to a Slack channel.'
       FunctionName: SlackEvent
-      Code: <%=js_zip ['slackCloudWatchEvent.js']%>
+      Code: <%=js_zip 'slackCloudWatchEvent'%>
       Environment:
         Variables:
           SLACK_ENDPOINT: !Ref SlackEndpoint
