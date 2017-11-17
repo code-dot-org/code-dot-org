@@ -77,6 +77,7 @@ export default class Congrats extends Component {
           <Certificate
             type={isMinecraft ? "minecraft" : "hourOfCode"}
             isRtl={isRtl}
+            responsive={this.responsive}
           />
           {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
