@@ -10,12 +10,13 @@ export default class EligibilityChecklist extends Component {
   static propTypes = {
     statusPD: PropTypes.oneOf(Object.values(Status)).isRequired,
     statusStudentCount: PropTypes.oneOf(Object.values(Status)).isRequired,
+    unit6Intention: PropTypes.string,
   };
 
   state = {
     statusYear: Status.UNKNOWN,
-    submitting: false,
     yearChoice: null, // stores the teaching-year choice until submitted
+    submitting: false,
     displayDiscountAmount: false,
     submission: {
       name: '',
@@ -42,10 +43,24 @@ export default class EligibilityChecklist extends Component {
     }
   };
 
+  constructor(props) {
+    super(props);
+
+    // If we had already submitted our intentions for unit 6, initialize component
+    // state with that data
+    if (props.unit6Intention) {
+      this.state = {
+        ...this.state,
+        yearChoice: props.unit6Intention,
+        statusYear: (props.unit6Intention === 'yes1718' ||
+          props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED
+      };
+    }
+  }
+
   // Saves the teaching-year choice to trigger next step of actions
   handleSubmit = () => {
     this.setState({submitting: true});
-    // TODO: show pending button while waiting for server
     $.ajax({
      url: "/maker/apply",
      type: "post",
@@ -134,61 +149,25 @@ export default class EligibilityChecklist extends Component {
               <b>{i18n.eligibilityReqYearConfirmInstructions()}</b>
               <div>
                 <form>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="no"
-                      checked={this.state.yearChoice === 'no'}
-                      onChange={this.handleChangeIntention}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearNo()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="yes1718"
-                      checked={this.state.yearChoice === 'yes1718'}
-                      onChange={this.handleChangeIntention}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearYes1718()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="yes1819"
-                      checked={this.state.yearChoice === 'yes1819'}
-                      onChange={this.handleChangeIntention}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearYes1819()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="yesAfter"
-                      checked={this.state.yearChoice === 'yesAfter'}
-                      onChange={this.handleChangeIntention}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearAfter()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="unsure"
-                      checked={this.state.yearChoice === 'unsure'}
-                      onChange={this.handleChangeIntention}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearUnknown()}
-                  </label>
+                  {[
+                    ['no', i18n.eligibilityYearNo()],
+                    ['yes1718', i18n.eligibilityYearYes1718()],
+                    ['yes1819', i18n.eligibilityYearYes1819()],
+                    ['yesAfter', i18n.eligibilityYearAfter()],
+                    ['unsure', i18n.eligibilityYearUnknown()],
+                  ].map(([value, description]) =>
+                    <label key={value}>
+                      <input
+                        type="radio"
+                        name="year"
+                        value={value}
+                        checked={this.state.yearChoice === value}
+                        onChange={this.handleChangeIntention}
+                        disabled={this.state.statusYear !== Status.UNKNOWN}
+                      />
+                    {description}
+                    </label>
+                  )}
                   {/* Remove button after choice is made */}
                   {this.state.statusYear === Status.UNKNOWN &&
                     <Button
