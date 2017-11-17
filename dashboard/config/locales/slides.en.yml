@@ -1804,59 +1804,59 @@ en:
         text: "Once you've completed the goal for this level click finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
     applab_intro_events:
       1:
-        image:
+        image: 'notes/applab_intro_events_1.png'
         text: "Apps are really cool because it's kind of like starting your own business I mean, you get to design everything from the ground up, you get to manage everything, and you're the owner of this piece of work that you just created with code."
       2:
-        image:
+        image: 'notes/applab_intro_events_2.png'
         text: "Now that you can change the look of your app let's make it interactive by responding to events! Events are user actions like clicking a button, scrolling through a menu, or hovering over a picture. Interactive apps need ways to respond to events, like playing a sound when I click this button. To do this in App Lab you need to use a new block called onEvent."
       3:
-        image:
+        image: 'notes/applab_intro_events_3.png'
         text: "This program sets the screen to blue. I want the screen to turn green when I click this button. First I'll need to drag in an onEvent block. By hovering I know the button's ID is \"bigButton\" so I'll select that in the first drop-down."
       4:
-        image:
+        image: 'notes/applab_intro_events_4.png'
         text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
       5:
-        image:
+        image: 'notes/applab_intro_events_5.png'
         text: "Finally I'll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: \"On the event that the button is clicked run all this code.\""
       6:
-        image:
+        image: 'notes/applab_intro_events_6.png'
         text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
       7:
-        image:
+        image: 'notes/applab_intro_events_7.png'
         text: "And when I click the big button the code inside my onEvent runs and my screen turns green."
       8:
-        image:
+        image: 'notes/applab_intro_events_8.png'
         text: "If you want to change more things after the event, like the text on the screen just add more code to the onEvent"
       9:
-        image:
+        image: 'notes/applab_intro_events_9.png'
         text: "To make your program respond to more events add more onEvent blocks. Just make sure not to put them inside of each other. Now it's time to try it out for yourself. Have fun!"
     applab_intro_sounds:
       1:
-        image:
+        image: 'notes/applab_intro_sounds_1.png'
         text: "Next you'll learn about adding images and sounds to your app. Let's start by checking out the sound options."
       2:
-        image:
+        image: 'notes/applab_intro_sounds_2.png'
         text: "In the tool box you'll find a new block called \"playSound\". Drag it into the workspace. You can pick a sound to play by clicking the drop-down then clicking \"Choose\"."
       3:
-        image:
+        image: 'notes/applab_intro_sounds_3.png'
         text: "From here you can either upload a sound file from your computer, or search for a sound from the sound library. The sound library has lots of different categories like instruments, background music or animals."
       4:
-        image:
+        image: 'notes/applab_intro_sounds_4.png'
         text: "Once you've got the sound you want, click \"Choose\". When this block runs, it will play the sound you chose."
       5:
-        image:
+        image: 'notes/applab_intro_sounds_5.png'
         text: "To add images to your elements you can just use the setProperty block. Select the image property in the second drop-down"
       6:
-        image:
+        image: 'notes/applab_intro_sounds_6.png'
         text: "Then select "Choose" from the third drop down."
       7:
-        image:
+        image: 'notes/applab_intro_sounds_7.png'
         text: "From here you can upload an image from your computer or you can look through a huge library of icons in the icon library."
       8:
-        image:
+        image: 'notes/applab_intro_sounds_8.png'
         text: "Back in code mode you can use the setProperty block to change the icon color of your icon. Once you've picked what image your icon to use click \"Run\" to see how it looks."
       9:
-        image:
+        image: 'notes/applab_intro_sounds_9.png'
         text: "That's all there is to it! Now you can start adding images and sounds to make your apps even more fun and dynamic."
     applab_intro_designmode:
       1:
