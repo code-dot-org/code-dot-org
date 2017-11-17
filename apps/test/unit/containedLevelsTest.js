@@ -109,7 +109,7 @@ describe('getContainedLevelResultInfo', () => {
     getStore().getState().instructions.hasContainedLevels = true;
     codeStudioLevels.hasValidContainedLevelResult.returns(true);
     initializeContainedLevel();
-    //assert.isTrue(codeStudioLevels.lockContainedLevelAnswers.calledOnce);
+    assert.isTrue(codeStudioLevels.lockContainedLevelAnswers.calledOnce);
     assert.isFalse($('#runButton').prop('disabled'));
   });
 
