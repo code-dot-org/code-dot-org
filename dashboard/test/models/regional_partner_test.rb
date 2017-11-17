@@ -68,7 +68,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
   test 'find_by_region finds matching regional_partner' do
     regional_partner_wa = create :regional_partner, name: "partner_WA"
-    regional_partner_wa.mappings.find_or_create_by(state: "WA")
+    regional_partner_wa.mappings.find_or_create_by!(state: "WA")
 
     regional_partner_wa_98104 = create :regional_partner, name: "partner_WA_98104"
     regional_partner_wa_98104.mappings.find_or_create_by!(state: "WA")
@@ -91,6 +91,13 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     regional_partner_70808 = create :regional_partner, name: "partner_70808"
     regional_partner_70808.mappings.find_or_create_by!(zip_code: "70808")
+
+    regional_partner_fl_32313 = create :regional_partner, name: "partner_FL_32313"
+    regional_partner_fl_32313.mappings.find_or_create_by!(state: "FL")
+    regional_partner_fl_32313.mappings.find_or_create_by!(zip_code: "32313")
+
+    regional_partner_32313 = create :regional_partner, name: "partner_32313"
+    regional_partner_32313.mappings.find_or_create_by!(zip_code: "32313")
 
     create :regional_partner, name: "partner_nomappings"
 
@@ -124,6 +131,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal regional_partner_wa_98104, RegionalPartner.find_by_region("98104", "WA")
 
     # state=WA [state matches many, indeterminate result]
-    # zip=98105 [zip matches many, indeterminate result]
+    assert_includes [regional_partner_wa, regional_partner_wa_98104, regional_partner_wa_98105],
+      RegionalPartner.find_by_region(nil, "WA")
+
+    # zip=32313 [zip matches many, indeterminate result]
+    assert_includes [regional_partner_fl_32313, regional_partner_32313], RegionalPartner.find_by_region("32313", nil)
   end
 end
