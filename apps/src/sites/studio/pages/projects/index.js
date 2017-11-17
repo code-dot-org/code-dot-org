@@ -73,7 +73,6 @@ $(document).ready(() => {
 });
 
 function showGallery(gallery) {
-  $('#project-links-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
