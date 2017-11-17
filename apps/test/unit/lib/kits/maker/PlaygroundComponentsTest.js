@@ -523,12 +523,44 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getOrientation('z')).to.equal(0);
       });
 
+      it('getOrientation returns an array if called without any arguments', () => {
+        const stub = sinon.stub(accelerometer, 'getOrientation');
+        stub.withArgs('x').returns(1);
+        stub.withArgs('y').returns(2);
+        stub.withArgs('z').returns(3);
+        stub.callThrough(); // Call original method if none of the above matched.
+
+        expect(accelerometer.getOrientation()).to.deep.equal([
+          accelerometer.getOrientation('x'),
+          accelerometer.getOrientation('y'),
+          accelerometer.getOrientation('z'),
+        ]);
+
+        stub.restore();
+      });
+
       it('and a getAcceleration method', () => {
         expect(accelerometer).to.haveOwnProperty('getAcceleration');
         expect(accelerometer.getAcceleration('x')).to.equal(0);
         expect(accelerometer.getAcceleration('y')).to.equal(0);
         expect(accelerometer.getAcceleration('z')).to.equal(0);
         expect(accelerometer.getAcceleration('total')).to.equal(0);
+      });
+
+      it('getAcceleration returns an array if called without any arguments', () => {
+        const stub = sinon.stub(accelerometer, 'getAcceleration');
+        stub.withArgs('x').returns(1);
+        stub.withArgs('y').returns(2);
+        stub.withArgs('z').returns(3);
+        stub.callThrough(); // Call original method if none of the above matched.
+
+        expect(accelerometer.getAcceleration()).to.deep.equal([
+          accelerometer.getAcceleration('x'),
+          accelerometer.getAcceleration('y'),
+          accelerometer.getAcceleration('z'),
+        ]);
+
+        stub.restore();
       });
     });
 

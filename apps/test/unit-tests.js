@@ -22,7 +22,7 @@ if (!runnable.length) {
   runnable = testsContext.keys();
 }
 
-describe('unit tests', () => {
+describe('unit tests', function () {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();

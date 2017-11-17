@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Apr 2017 01:01:44 GMT
+      - Thu, 16 Nov 2017 21:05:45 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -26,47 +26,72 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-sound-library</Name><Prefix>test_sound.mp3</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>test_sound.mp3</Key><VersionId>9l_wRteBGvZ8hiuFnFz54sosAcAyir82</VersionId><IsLatest>true</IsLatest><LastModified>2017-04-13T00:59:58.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>test_sound.mp3</Key><VersionId>c4PXnwu2JKhWMFn1xRUYX_BVTmq2yW7X</VersionId><IsLatest>false</IsLatest><LastModified>2017-04-13T00:01:24.000Z</LastModified><ETag>&quot;60a511e0a407e569d20286a246e014e5&quot;</ETag><Size>11631</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-sound-library</Name><Prefix>test_sound.mp3</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Thu, 13 Apr 2017 01:01:43 GMT
+  recorded_at: Thu, 16 Nov 2017 21:05:44 GMT
 - request:
-    method: head
-    uri: https://cdo-sound-library.s3.amazonaws.com/test_sound.mp3?versionId=c4PXnwu2JKhWMFn1xRUYX_BVTmq2yW7X
+    method: put
+    uri: https://cdo-sound-library.s3.amazonaws.com/test_sound.mp3
     body:
-      encoding: ASCII-8BIT
-      string: ''
+      encoding: UTF-8
+      string: MP3_CONTENT
     headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - U0GHsMQ/FlLxtB7gZLlUeA==
       Content-Length:
-      - '0'
+      - '11'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 13 Apr 2017 01:01:45 GMT
-      Last-Modified:
-      - Thu, 13 Apr 2017 00:01:24 GMT
-      Etag:
-      - '"60a511e0a407e569d20286a246e014e5"'
+      - Thu, 16 Nov 2017 21:05:45 GMT
       X-Amz-Version-Id:
-      - c4PXnwu2JKhWMFn1xRUYX_BVTmq2yW7X
-      Accept-Ranges:
-      - bytes
-      Content-Type:
-      - audio/mp3
+      - u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex
+      Etag:
+      - '"534187b0c43f1652f1b41ee064b95478"'
       Content-Length:
-      - '11631'
+      - '0'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 13 Apr 2017 01:01:44 GMT
+  recorded_at: Thu, 16 Nov 2017 21:05:44 GMT
+- request:
+    method: delete
+    uri: https://cdo-sound-library.s3.amazonaws.com/test_sound.mp3
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Thu, 16 Nov 2017 21:05:45 GMT
+      X-Amz-Version-Id:
+      - zmWgb84pC1fnIJEfzKO9t7eO2HLvxWm7
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 16 Nov 2017 21:05:44 GMT
 - request:
     method: get
-    uri: https://cdo-sound-library.s3.amazonaws.com/test_sound.mp3?versionId=c4PXnwu2JKhWMFn1xRUYX_BVTmq2yW7X
+    uri: https://cdo-sound-library.s3.amazonaws.com/?encoding-type=url&prefix=test_sound.mp3&versions
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -79,283 +104,163 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Apr 2017 01:01:45 GMT
+      - Thu, 16 Nov 2017 21:05:45 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-sound-library</Name><Prefix>test_sound.mp3</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>test_sound.mp3</Key><VersionId>zmWgb84pC1fnIJEfzKO9t7eO2HLvxWm7</VersionId><IsLatest>true</IsLatest><LastModified>2017-11-16T21:05:45.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>test_sound.mp3</Key><VersionId>u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex</VersionId><IsLatest>false</IsLatest><LastModified>2017-11-16T21:05:45.000Z</LastModified><ETag>&quot;534187b0c43f1652f1b41ee064b95478&quot;</ETag><Size>11</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Thu, 16 Nov 2017 21:05:44 GMT
+- request:
+    method: head
+    uri: https://cdo-sound-library.s3.amazonaws.com/test_sound.mp3?versionId=u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Nov 2017 21:05:45 GMT
       Last-Modified:
-      - Thu, 13 Apr 2017 00:01:24 GMT
+      - Thu, 16 Nov 2017 21:05:45 GMT
       Etag:
-      - '"60a511e0a407e569d20286a246e014e5"'
+      - '"534187b0c43f1652f1b41ee064b95478"'
       X-Amz-Version-Id:
-      - c4PXnwu2JKhWMFn1xRUYX_BVTmq2yW7X
+      - u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex
       Accept-Ranges:
       - bytes
       Content-Type:
       - audio/mp3
       Content-Length:
-      - '11631'
+      - '11'
       Server:
       - AmazonS3
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      encoding: UTF-8
+      string: ''
     http_version: 
-  recorded_at: Thu, 13 Apr 2017 01:01:44 GMT
+  recorded_at: Thu, 16 Nov 2017 21:05:44 GMT
+- request:
+    method: get
+    uri: https://cdo-sound-library.s3.amazonaws.com/test_sound.mp3?versionId=u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Nov 2017 21:05:46 GMT
+      Last-Modified:
+      - Thu, 16 Nov 2017 21:05:45 GMT
+      Etag:
+      - '"534187b0c43f1652f1b41ee064b95478"'
+      X-Amz-Version-Id:
+      - u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - audio/mp3
+      Content-Length:
+      - '11'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: MP3_CONTENT
+    http_version: 
+  recorded_at: Thu, 16 Nov 2017 21:05:45 GMT
+- request:
+    method: get
+    uri: https://cdo-sound-library.s3.amazonaws.com/?encoding-type=url&prefix=test_sound.mp3&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Nov 2017 21:05:46 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-sound-library</Name><Prefix>test_sound.mp3</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>test_sound.mp3</Key><VersionId>zmWgb84pC1fnIJEfzKO9t7eO2HLvxWm7</VersionId><IsLatest>true</IsLatest><LastModified>2017-11-16T21:05:45.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>test_sound.mp3</Key><VersionId>u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex</VersionId><IsLatest>false</IsLatest><LastModified>2017-11-16T21:05:45.000Z</LastModified><ETag>&quot;534187b0c43f1652f1b41ee064b95478&quot;</ETag><Size>11</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Thu, 16 Nov 2017 21:05:45 GMT
+- request:
+    method: post
+    uri: https://cdo-sound-library.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>test_sound.mp3</Key>
+            <VersionId>u2yaRe6hZ4dZKvCDmH25kvEMxNgYbUex</VersionId>
+          </Object>
+          <Object>
+            <Key>test_sound.mp3</Key>
+            <VersionId>zmWgb84pC1fnIJEfzKO9t7eO2HLvxWm7</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - h3doRDAca7jqX4r1fw/GrQ==
+      Content-Length:
+      - '315'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Nov 2017 21:05:46 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Thu, 16 Nov 2017 21:05:45 GMT
 recorded_with: VCR 3.0.3

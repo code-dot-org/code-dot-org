@@ -11,9 +11,9 @@ style_min: true
 
 ## <a name="whatis"></a>What is CS Principles?
 
-In 2016, the College Board launched AP&reg;  Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities. 
-
-For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
+Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in. 
+<p>
+This course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach.
 
 <div class="col-50" style="padding-right: 20px;">
 
@@ -41,7 +41,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 ## Code.org's AP CS Principles Curriculum
 
-<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CS Principles. Our curriculum is available at no cost for anyone, anywhere to teach.
+<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
 
  * [Code.org 2017-18 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2017.pdf)
  * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
@@ -49,11 +49,6 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 <div style="clear:both"></div>
 
 ## <a name="overview"></a>Curriculum Resources and Features
-
-
-- [2017 AP Endorsed Syllabus and Overview](/files/CSPSyllabusMay2017.pdf)
-- [Course Materials List](#materials)
-- [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
 [col-33]
 
@@ -86,7 +81,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 [<center><img src="/images/csp/csp_syllabus.png" width="90%">](/files/CSPSyllabusMay2017.pdf)
 
-<div style="margin-left: 15px; margin-top: 5px;">This <a href="/files/CSPSyllabusMay2017.pdf">2017 AP Endorsed Syllabus</a> is a place-holder for something colorful!</div>
+<div style="margin-left: 15px; margin-top: 5px;">Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabusMay2017.pdf">2017 AP Endorsed Syllabus</a> for the AP course audit.</div>
 
 [/col-33]
 
@@ -95,7 +90,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 <center><img src="/images/animated-examples/binary.gif" width="90%"></center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Students get hands on with concepts like binary and pixels through <a href="/educate/csp/widgets">computational widgets</a></div>
+<div style="margin-left: 15px; margin-top: 5px;">Students get hands on experience with concepts like binary and pixels through <a href="/educate/csp/widgets">computational widgets</a></div>
 
 [/col-33]
 
@@ -109,7 +104,11 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 <p style="clear:both">&nbsp;</p>
 
-<hr/>
+### Don't miss these additional resources:
+
+- [**Course Materials List**](#materials)
+- [**CS Principles Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
+
 
 ## <a name="lessons"></a>Unit Overview
 
@@ -170,44 +169,22 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 *Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution Non-Commerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).*
 
-### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
-
-<div class="col-25" style="float: left; margin-right: 12px;">
-
-	<%=view :display_video_thumbnail, id: "images_pixels", video_code: "15aqFQQVBWU", play_button: 'center' %>
-
-</div>
-
-<div class="col-25" style="float: left; margin-right: 12px;">
-
-	<%=view :display_video_thumbnail, id: "digital_compression", video_code: "By30SCp-Tsw", play_button: 'center' %>
-
-</div>
-
-<div class="col-25" style="float: left; margin-right: 12px;">
-
-	<%=view :display_video_thumbnail, id: "the_internet", video_code: "ZhEf7e4kopM", play_button: 'center' %>
-
-</div>
-
-<div style="clear: both;"></div>
-
 <hr/>
 
 ## Keep up with CS Principles
 
-<div style="float:left; padding:25px; width:33%">
+<div class="col-33" style="padding-right: 20px;">
 
 <h4>Let us know how we're doing!</h4>
 
 We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
-<br><br>
+<br>
 
 <a href="mailto:support@code.org"><button>Give feedback</button></a>
 
 </div>
 
-<div style="float:left; padding:25px; width:33%">
+<div class="col-33" style="padding-right: 20px;">
 
 <h4>Subscribe for the latest news</h4>
 
@@ -218,14 +195,14 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 </div>
 
-<div style="float:left; padding:25px; width:33%">
+<div class="col-33" style="padding-right: 20px;">
 
 <h4>Chat about CS Principles in the forum</h4>
 
 We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12.
 <br><br>
 
-<a href="http://forum.code.org"> <button>Visit the forum</button></a> 
+<a href="http://forum.code.org/c/csp"> <button>Visit the forum</button></a> 
 
 </div>
 
@@ -246,6 +223,30 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 [![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
 [![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
 [![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
+
+### Share these videos with students, parents, or administrators:
+
+
+<div class="col-33" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video4", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video5", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video6", video_code: "POiMh0qISpI", play_button: 'center', letterbox: 'false' %>
+
+</div>
+
+<div style="clear: both;"></div>
+
 
 <hr/>
 
@@ -284,7 +285,6 @@ For teachers in our professional learning program will automatically be approved
 
 #### How can I communicate with other teachers who are using the curriculum? 
 Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
-
 
 <br />
 #### Can I give feedback on the lessons?

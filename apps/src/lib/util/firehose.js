@@ -161,12 +161,15 @@ class FirehoseClient {
    *   (default {alwaysPut: false})
    * @option options [String] alwaysPut Forces the record to be sent.
    */
-  putRecord(deliveryStreamName, data, options = {alwaysPut: false}) {
+  putRecord(deliveryStreamName, data, options = {alwaysPut: false, callback: null}) {
     data = this.addCommonValues(data);
     if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed("Skipped sending record to " + deliveryStreamName);
       console.log(data);
       console.groupEnd();
+      if (options.callback) {
+        options.callback(null, data);
+      }
       return;
     }
 
@@ -177,7 +180,11 @@ class FirehoseClient {
           Data: JSON.stringify(data),
         },
       },
-      function (err, data) {}
+      function (err, data) {
+        if (options.callback) {
+          options.callback(err, data);
+        }
+      }
     );
   }
 

@@ -18,7 +18,6 @@ describe('maker/dropletConfig.js', () => {
         '"doubleTap"',
         '"down"',
         '"open"',
-        '"press"',
         '"singleTap"',
         '"up"'
       ]);
@@ -27,7 +26,6 @@ describe('maker/dropletConfig.js', () => {
     it('buttonL dropdown', () => {
       expect(getBoardEventDropdownForParam('buttonL')).to.deep.equal([
         '"down"',
-        '"press"',
         '"up"'
       ]);
     });
@@ -35,7 +33,6 @@ describe('maker/dropletConfig.js', () => {
     it('buttonR dropdown', () => {
       expect(getBoardEventDropdownForParam('buttonR')).to.deep.equal([
         '"down"',
-        '"press"',
         '"up"'
       ]);
     });
