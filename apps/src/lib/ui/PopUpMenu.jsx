@@ -132,7 +132,7 @@ class MenuBubbleUnwrapped extends Component {
 }
 export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
-class MenuBreak extends Component {
+export class MenuBreak extends Component {
 
   render() {
     const style = {
@@ -147,8 +147,6 @@ class MenuBreak extends Component {
     );
   }
 }
-
-PopUpMenu.MenuBreak = Radium(MenuBreak);
 
 class Item extends Component {
   static propTypes = {
