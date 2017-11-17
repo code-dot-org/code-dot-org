@@ -13,16 +13,21 @@ const styles = {
   heading: {
     width: '100%',
   },
+  container: {
+    marginBottom: 50,
+    float: 'left'
+  },
   mobileHeading: {
     fontSize: 24,
     lineHeight: 1.5,
   },
-  image: {
+  desktopHalf: {
     width: '50%',
+    float: 'left',
   },
-  personalize: {
-    width: '50%',
-    float: 'right',
+  mobileFull: {
+    width: '100%',
+    float: 'left',
   },
   nameInput: {
     height: 32,
@@ -81,6 +86,7 @@ export default class Certificate extends Component {
     const {responsive} = this.props;
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
+    const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
     const facebook = queryString.stringify({
       u: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
@@ -95,7 +101,7 @@ export default class Certificate extends Component {
     const print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
 
     return (
-      <div>
+      <div style={styles.container}>
         <h1 style={headingStyle}>
           {i18n.congratsCertificateHeading()}
         </h1>
@@ -104,7 +110,10 @@ export default class Certificate extends Component {
           linkText={i18n.backToActivity()}
           isRtl={this.props.isRtl}
         />
-        <div style={styles.personalize}>
+        <div style={certificateStyle}>
+          <img src={imgSrc}/>
+        </div>
+        <div style={certificateStyle}>
           {this.state.personalized ?
             <div>
               <h2>{i18n.congratsCertificateThanks()}</h2>
@@ -132,9 +141,6 @@ export default class Certificate extends Component {
             twitter={twitter}
             print={print}
           />
-        </div>
-        <div style={styles.image}>
-          <img src={imgSrc}/>
         </div>
       </div>
     );
