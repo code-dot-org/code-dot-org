@@ -44,14 +44,14 @@ export default class TeachersBeyondHoc extends Component {
         title: i18n.congratsTeacherCodeOrgTitle(),
         description: i18n.congratsTeacherCodeOrgDesc(),
         buttonText: i18n.congratsTeacherCodeOrgButton(),
-        link: "/courses?view=teacher",
+        link: '/courses?view=teacher',
         image: codeorgTeacherImage
       },
       {
         title: thirdPartyTeacherTitle,
         description: i18n.congratsTeacherExternalDesc(),
         buttonText: i18n.congratsTeacherExternalButton(),
-        link: '/educate/curriculum/3rd-party',
+        link: pegasus('/educate/curriculum/3rd-party'),
         image: thirdPartyTeacherImage
       }
     ];
@@ -69,7 +69,7 @@ export default class TeachersBeyondHoc extends Component {
                 title={card.title}
                 description={card.description}
                 buttonText={card.buttonText}
-                link={pegasus(`/${card.link}`)}
+                link={card.link}
                 isRtl={isRtl}
                 jumbo={desktop}
                 image={card.image}

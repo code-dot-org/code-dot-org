@@ -13,16 +13,21 @@ const styles = {
   heading: {
     width: '100%',
   },
+  container: {
+    marginBottom: 50,
+    float: 'left'
+  },
   mobileHeading: {
     fontSize: 24,
     lineHeight: 1.5,
   },
-  image: {
+  desktopHalf: {
     width: '50%',
+    float: 'left',
   },
-  personalize: {
-    width: '50%',
-    float: 'right',
+  mobileFull: {
+    width: '100%',
+    float: 'left',
   },
   nameInput: {
     height: 32,
@@ -36,7 +41,9 @@ const styles = {
 
 const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
+  mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
+  hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
 };
 
 export default class Certificate extends Component {
@@ -48,7 +55,8 @@ export default class Certificate extends Component {
   }
 
   static propTypes = {
-    type: PropTypes.oneOf(['hourOfCode', 'minecraft']).isRequired,
+    tutorial: PropTypes.string,
+    certificateId: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
   };
@@ -70,43 +78,52 @@ export default class Certificate extends Component {
   }
 
   render() {
+    const certificate = this.props.certificateId || 'blank';
+    const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
+    const blankCertificate = blankCertificates[this.props.tutorial] || blankCertificates.hourOfCode;
+    const imgSrc = this.state.personalized ? personalizedCertificate : blankCertificate;
+
+    const certificateLink = `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+
     const {responsive} = this.props;
-
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
-
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
-    const blankCertificate = blankCertificates[this.props.type];
-    let certificate;
-    try {
-      certificate = queryString.parse(window.location.search)['i'].replace(/[^a-z0-9_]/, '');
-    } catch (e) {
-      certificate = '';
-    }
-    const imgSrc = this.state.personalized ? `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg` : blankCertificate;
+    const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
     const facebook = queryString.stringify({
-      u: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+      u: certificateLink,
     });
 
     const twitter = queryString.stringify({
-      url: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+      url: certificateLink,
       related: 'codeorg',
       text: i18n.justDidHourOfCode(),
     });
 
-    const print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+    const isMinecraft = /mc|minecraft|hero/.test(this.props.tutorial);
+
+    let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+    if (isMinecraft && !this.state.personalized) {
+      // Correct the minecraft print url for non-personalized certificates.
+      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${this.props.tutorial}`;
+    }
 
     return (
-      <div>
+      <div style={styles.container}>
         <h1 style={headingStyle}>
           {i18n.congratsCertificateHeading()}
         </h1>
         <LargeChevronLink
-          link={document.referrer}
+          link={`/s/${this.props.tutorial}`}
           linkText={i18n.backToActivity()}
           isRtl={this.props.isRtl}
         />
-        <div style={styles.personalize}>
+        <div style={certificateStyle}>
+          <a href={certificateLink}>
+            <img src={imgSrc} />
+          </a>
+        </div>
+        <div style={certificateStyle}>
           {this.state.personalized ?
             <div>
               <h2>{i18n.congratsCertificateThanks()}</h2>
@@ -134,9 +151,6 @@ export default class Certificate extends Component {
             twitter={twitter}
             print={print}
           />
-        </div>
-        <div style={styles.image}>
-          <img src={imgSrc}/>
         </div>
       </div>
     );

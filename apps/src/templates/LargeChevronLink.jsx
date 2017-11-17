@@ -10,6 +10,7 @@ const styles = {
   linkBox: {
     marginTop: 10,
     marginBottom: 10,
+    width: '100%'
   },
   linkText: {
     fontSize: 20,
