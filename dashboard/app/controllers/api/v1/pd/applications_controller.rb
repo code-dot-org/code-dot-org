@@ -4,12 +4,19 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   # This must be included after load_and_authorize_resource so the auth callback runs first
   include Api::CsvDownload
 
-  # GET /api/v1/pd/applications
+  # GET /api/v1/pd/applications?regional_partner=:regional_partner
   def index
+    regional_partner_id = params[:regional_partner]
     application_data = empty_application_data
+    puts "regional partner id: #{regional_partner_id}"
 
     ROLES.each do |role|
-      get_applications_by_role(role).group(:status).count.each do |status, count|
+      apps = get_applications_by_role(role).group(:status)
+      if regional_partner_id && regional_partner_id != "null"
+        puts "in the if"
+        apps = apps.where(regional_partner_id: regional_partner_id)
+      end
+      apps.count.each do |status, count|
         application_data[role][status] = count
       end
     end
