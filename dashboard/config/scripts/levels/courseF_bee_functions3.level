@@ -34,17 +34,18 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "true",
     "instructions_important": "true",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function for this puzzle only needs to make honey, it shouldn't have any `move forward` or `turn` blocks in it. \",\"hint_id\":\"courseF_bee_functions3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d9ebdbbab392298ed8e3b6c8c3e78e8d/courseF_bee_functions3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember that your function should only get honey *if* there is a honeycomb.\",\"hint_id\":\"courseF_bee_functions3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/01b28cb8afcd27396e2bbec8c3636342/courseF_bee_functions3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `only make honey` block to call your function.\",\"hint_id\":\"courseF_bee_functions3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/23aecc4b50daf988b4e7ad01ffe9db6c/courseF_bee_functions3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function for this puzzle only needs to make honey, it shouldn't have any `move forward` or `turn` blocks in it. \",\"hint_id\":\"courseF_bee_functions3_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d9ebdbbab392298ed8e3b6c8c3e78e8d/courseF_bee_functions3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember that your function should only get honey *if* there is a honeycomb.\",\"hint_id\":\"courseF_bee_functions3_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/01b28cb8afcd27396e2bbec8c3636342/courseF_bee_functions3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `only make honey` block to call your function.\",\"hint_id\":\"courseF_bee_functions3_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/23aecc4b50daf988b4e7ad01ffe9db6c/courseF_bee_functions3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Check out this path.\",\"hint_id\":\"courseF_bee_functions3_d\",\"hint_type\":\"general\",\"hint_path\":\"[[3,2],[4,2],[4,4],[5,4]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/79a6ea6b863a86c1f4f525f6cc80f25b/courseF_bee_functions3.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 22:48:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 16:13:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:48:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 16:13:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-14 23:43:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-14 23:44:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-14 23:46:50 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 2,
@@ -127,18 +128,6 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <title name="NAME">only make honey</title>
-          <statement name="STACK">
-            <block type="bee_ifFlower">
-              <title name="LOC">atHoneycomb</title>
-              <statement name="DO">
-                <block type="maze_honey"/>
-              </statement>
-            </block>
-          </statement>
-        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="maze_move">
@@ -184,6 +173,18 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">only make honey</title>
+          <statement name="STACK">
+            <block type="bee_ifFlower">
+              <title name="LOC">atHoneycomb</title>
+              <statement name="DO">
+                <block type="maze_honey"/>
+              </statement>
+            </block>
+          </statement>
         </block>
       </xml>
     </solution_blocks>
