@@ -1,4 +1,5 @@
 Feature: Using the SectionActionDropdown
+  # * Check that we get redirected to the right page
   Scenario: Viewing progress from SectionActionDropdown
     Given I create a teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
@@ -8,47 +9,55 @@ Feature: Using the SectionActionDropdown
     And I sign out
 
     When I sign in as "Teacher_Sally"
-    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
-    And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
-    And I click selector ".fa-chevron-down" once I see it
+    And I open the section action dropdown
     And I click selector "a:contains('View Progress')" once I see it
-    And I wait for 4 seconds
     And I wait until current URL contains "/progress"
 
+  # * Check that we get redirected to the right page
   Scenario: Managing students from SectionActionDropdown
     Given I am a teacher
     And I am on "http://studio.code.org/"
     And I create a new section
-    And I click selector ".fa-chevron-down" once I see it
+    And I open the section action dropdown
     And I click selector "a:contains('Manage Students')" once I see it
     And I wait until current URL contains "/manage"
 
+  # * Check that we get redirected to the right page
   Scenario: Printing Login Cards from SectionActionDropdown
     Given I am a teacher
     And I am on "http://studio.code.org/"
     And I create a new section
-    And I click selector ".fa-chevron-down" once I see it
+    And I open the section action dropdown
     And I click selector "a:contains('Print Login Cards')" once I see it
     And I wait until current URL contains "/print_signin_cards"
 
+  # * Add a section and then opens the edit dialog.
+  #     * If the save button can be pressed, we are in the right dialog.
+  #     * If the save button cannot be pressed, we do not have focus in the right dialog.
   Scenario: Editing Section Information from SectionActionDropdown
     Given I am a teacher
     And I am on "http://studio.code.org/"
     And I create a new section
-    And I click selector ".fa-chevron-down" once I see it
+    And I open the section action dropdown
     And I click selector ".pop-up-menu-item:contains('Edit Section Details')" once I see it
     And I press the save button to create a new section
 
-  # This should adequately test section down
-  # * Check that section has hide value
-  #   * If it has hide then we toggle it
-  #   * If it is correctly toggled, it will show up is the hidden sections && display 'Show Section'
+  # * Checks that section can be hidden and shown
+  #   * The menu of a new section should have a 'Hide Section' option -> select it to hide the section
+  #   * Button to show hidden sections appears -> select it to show the now-hidden section
+  #   * The menu of the now-hidden section should have a 'Show Section' option -> select it to show the section
+  #   * Table of hidden sections and "Hide/Show" button automatically disappears when empty
+  #   * Check that the option to hide the section is available again
   Scenario: Hiding/Showing Section from SectionActionDropdown
     Given I am a teacher
     And I am on "http://studio.code.org/"
     And I create a new section
-    And I click selector ".fa-chevron-down" once I see it
+    And I open the section action dropdown
     And I click selector ".pop-up-menu-item:contains('Hide Section')" once I see it
+    And I wait until I don't see selector ".ui-test-section-dropdown"
     And I click selector ".ui-test-show-hide" once I see it
-    And I click selector ".fa-chevron-down" once I see it
+    And I open the section action dropdown
     And I click selector ".pop-up-menu-item:contains('Show Section')" once I see it
+    And I wait until I don't see selector ".ui-test-show-hide"
+    And I open the section action dropdown
+    And I click selector ".pop-up-menu-item:contains('Hide Section')" once I see it

@@ -162,7 +162,7 @@ class SectionActionDropdown extends Component {
           style={this.state.open ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}
           onClick={this.state.canOpen ? this.open : undefined}
         >
-          <i className="fa fa-chevron-down"></i>
+          <i className="fa fa-chevron-down ui-test-section-dropdown"></i>
         </a>
         <PopUpMenu
           targetPoint={targetPoint}
@@ -237,11 +237,13 @@ class SectionActionDropdown extends Component {
           <div>{i18n.deleteSectionHideSuggestion()}</div>
           <DialogFooter>
             <Button
+              class="ui-test-cancel-delete"
               text={i18n.dialogCancel()}
               onClick={this.onCancelDelete}
               color="gray"
             />
             <Button
+              class="ui-test-confirm-delete"
               text={i18n.delete()}
               onClick={this.onConfirmDelete}
               color="red"

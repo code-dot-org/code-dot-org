@@ -55,15 +55,20 @@ const sections = [
   }
 ];
 
+const DEFAULT_PROPS = {
+  sectionData: sections[0],
+  onEdit: () => {},
+  removeSection: () => {},
+  toggleSectionHidden: () => {},
+  updateRoster: () => {},
+};
+
 describe('SectionActionDropdown', () => {
   it('renders the delete option when a section is not a third party and has zero students', () => {
     const wrapper = shallow(
         <SectionActionDropdown
+          {...DEFAULT_PROPS}
           sectionData={sections[0]}
-          onEdit={() => {}}
-          removeSection={() => {}}
-          toggleSectionHidden={() => {}}
-          updateRoster={() => {}}
         />
     );
     expect(wrapper).to.contain("Delete Section");
@@ -72,11 +77,8 @@ describe('SectionActionDropdown', () => {
   it('renders the delete option when a section is a third party (Google Classroom) and has zero students', () => {
     const wrapper = shallow(
       <SectionActionDropdown
+        {...DEFAULT_PROPS}
         sectionData={sections[1]}
-        onEdit={() => {}}
-        removeSection={() => {}}
-        toggleSectionHidden={() => {}}
-        updateRoster={() => {}}
       />
     );
     expect(wrapper).to.contain("Delete Section");
@@ -85,11 +87,8 @@ describe('SectionActionDropdown', () => {
   it('does not render the delete option for sections with students', () => {
     const wrapper = shallow(
       <SectionActionDropdown
+        {...DEFAULT_PROPS}
         sectionData={sections[3]}
-        onEdit={() => {}}
-        removeSection={() => {}}
-        toggleSectionHidden={() => {}}
-        updateRoster={() => {}}
       />
     );
     expect(wrapper.text()).to.not.include("Delete Section");
@@ -98,11 +97,8 @@ describe('SectionActionDropdown', () => {
   it('renders the sync option for third party (Google Classroom) sections', () => {
     const wrapper = shallow(
       <SectionActionDropdown
+        {...DEFAULT_PROPS}
         sectionData={sections[1]}
-        onEdit={() => {}}
-        removeSection={() => {}}
-        toggleSectionHidden={() => {}}
-        updateRoster={() => {}}
       />
     );
     expect(wrapper).to.contain("Sync students from Google Classroom");
@@ -111,11 +107,8 @@ describe('SectionActionDropdown', () => {
   it('renders the four standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
       <SectionActionDropdown
+        {...DEFAULT_PROPS}
         sectionData={sections[1]}
-        onEdit={() => {}}
-        removeSection={() => {}}
-        toggleSectionHidden={() => {}}
-        updateRoster={() => {}}
       />
     );
     expect(wrapper).to.contain("View Progress");
@@ -128,11 +121,8 @@ describe('SectionActionDropdown', () => {
   it('renders the four standard options for not a third party section', () => {
     const wrapper = shallow(
       <SectionActionDropdown
+        {...DEFAULT_PROPS}
         sectionData={sections[0]}
-        onEdit={() => {}}
-        removeSection={() => {}}
-        toggleSectionHidden={() => {}}
-        updateRoster={() => {}}
       />
     );
     expect(wrapper).to.contain("View Progress");
@@ -145,11 +135,8 @@ describe('SectionActionDropdown', () => {
   it('renders the hide option for a un-hidden section', () => {
     const wrapper = shallow(
       <SectionActionDropdown
+        {...DEFAULT_PROPS}
         sectionData={sections[0]}
-        onEdit={() => {}}
-        removeSection={() => {}}
-        toggleSectionHidden={() => {}}
-        updateRoster={() => {}}
       />
     );
     expect(wrapper).to.contain("Hide Section");
@@ -158,11 +145,8 @@ describe('SectionActionDropdown', () => {
   it('renders the show option for a hidden section', () => {
     const wrapper = shallow(
       <SectionActionDropdown
+        {...DEFAULT_PROPS}
         sectionData={sections[3]}
-        onEdit={() => {}}
-        removeSection={() => {}}
-        toggleSectionHidden={() => {}}
-        updateRoster={() => {}}
       />
     );
     expect(wrapper).to.contain("Show Section");
