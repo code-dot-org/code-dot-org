@@ -43,7 +43,7 @@ const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
   mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
-  hero: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
+  hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
 };
 
 export default class Certificate extends Component {
@@ -83,22 +83,30 @@ export default class Certificate extends Component {
     const blankCertificate = blankCertificates[this.props.tutorial] || blankCertificates.hourOfCode;
     const imgSrc = this.state.personalized ? personalizedCertificate : blankCertificate;
 
+    const certificateLink = `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+
     const {responsive} = this.props;
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
     const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
     const facebook = queryString.stringify({
-      u: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+      u: certificateLink,
     });
 
     const twitter = queryString.stringify({
-      url: `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`,
+      url: certificateLink,
       related: 'codeorg',
       text: i18n.justDidHourOfCode(),
     });
 
-    const print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+    const isMinecraft = /mc|minecraft|hero/.test(this.props.tutorial);
+
+    let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+    if (isMinecraft && !this.state.personalized) {
+      // Correct the minecraft print url for non-personalized certificates.
+      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${this.props.tutorial}`;
+    }
 
     return (
       <div style={styles.container}>
@@ -111,7 +119,9 @@ export default class Certificate extends Component {
           isRtl={this.props.isRtl}
         />
         <div style={certificateStyle}>
-          <img src={imgSrc}/>
+          <a href={certificateLink}>
+            <img src={imgSrc} />
+          </a>
         </div>
         <div style={certificateStyle}>
           {this.state.personalized ?
