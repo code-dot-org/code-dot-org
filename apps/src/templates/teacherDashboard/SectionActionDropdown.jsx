@@ -8,13 +8,15 @@ import {sectionCode,
         sectionName,
         removeSection,
         toggleSectionHidden,
-        importOrUpdateRoster} from './teacherSectionsRedux';
+        importOrUpdateRoster
+       } from './teacherSectionsRedux';
 import {connect} from 'react-redux';
 import PrintCertificates from "./PrintCertificates";
 import FontAwesome from '../FontAwesome';
 import BaseDialog from '../BaseDialog';
 import Button from '../Button';
 import DialogFooter from "./DialogFooter";
+import styleConstants from '../../styleConstants';
 
 const styles = {
   actionButton:{
@@ -135,13 +137,15 @@ class SectionActionDropdown extends Component {
   updateMenuLocation = () => {
     const rect = this.icon.getBoundingClientRect();
     const windowWidth = window.innerWidth;
-    if (windowWidth > 970) { // Accounts for resizing when page is not scrollable
-      this.setState({menuTop: rect.bottom + window.pageYOffset});
-      this.setState({menuLeft: rect.left - rect.width - (windowWidth - this.state.currWindowWidth)/2});
-      this.setState({currWindowWidth : window.innerWidth});
+    if (windowWidth > styleConstants['content-width']) { // Accounts for resizing when page is not scrollable
+      this.setState({
+        menuTop: rect.bottom + window.pageYOffset,
+        menuLeft: rect.left - rect.width - (windowWidth - this.state.currWindowWidth)/2,
+        currWindowWidth : window.innerWidth});
     } else { // Accounts for scrolling or resizing when scrollable
-      this.setState({menuTop: rect.bottom + window.pageYOffset});
-      this.setState({menuLeft: rect.left - rect.width + window.pageXOffset});
+      this.setState({
+        menuTop: rect.bottom + window.pageYOffset,
+        menuLeft: rect.left - rect.width + window.pageXOffset});
     }
   }
 
@@ -150,9 +154,7 @@ class SectionActionDropdown extends Component {
     const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
 
     return (
-      <span
-        ref={icon => {this.icon = icon;}}
-      >
+      <span ref={span => this.icon = span}>
         <a
           icon="chevron-down"
           style={this.state.open ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}
