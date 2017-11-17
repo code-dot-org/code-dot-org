@@ -1,6 +1,5 @@
 Feature: Projects
 
-@skip
 Scenario: Save Artist Project
   Given I am on "http://studio.code.org/projects/artist"
   And I get redirected to "/projects/artist/([^\/]*?)/edit" via "dashboard"
@@ -26,7 +25,6 @@ Scenario: Save Artist Project
 #   try to execute any JS after our redirect on line 42
 @dashboard_db_access @as_student
 @no_mobile @no_ie
-@skip
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -110,7 +108,6 @@ Scenario: Applab Flow
   # TODO - maybe we do a remix and/or create new as well
 
 @dashboard_db_access @as_student @no_mobile
-@skip
 Scenario: Gamelab Flow
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"
