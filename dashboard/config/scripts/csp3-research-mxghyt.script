@@ -120,6 +120,7 @@ assessment 'subgoals_u3_top_down_FR', progression: 'Check Your Understanding'
 stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
 named_level 'SG v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L08 - individualCode', progression: 'Design Your Components'
+named_level 'How To: Share Code with Teammates'
 level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene'
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
