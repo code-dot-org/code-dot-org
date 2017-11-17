@@ -160,6 +160,9 @@ function showCensusForm(data) {
   $('#thanks-header').show();
   $('#census-form').show();
 
+  // Jump up to the top of the form
+  window.location.hash = '#thanks-header';
+
   // Copy relevant hoc-signup inputs to the census form
   $('#census_email').val($('#hoc-email').val());
   $('#census_name').val($('#hoc-name').val());
