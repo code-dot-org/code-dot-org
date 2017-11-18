@@ -946,7 +946,16 @@
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Put your school on the map",
+  "addToProjects": "Add to Projects",
+  "addedToProjects": "Added",
+  "addingToProjects": "Adding...",
   "backToActivity": "Back to activity",
+  "congratsCertificatePersonalize": "Personalize your certificate",
+  "congratsCertificateShare": "Share your achievement",
+  "congratsCertificateThanks": "Thanks for submitting!",
+  "congratsCertificateContinue": "Now, keep going with our other courses, or see more options to Learn beyond an Hour below.",
+  "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
+  "parentsAndStudents": "Parents and Students",
   "schoolCityTown": "City / Town",
   "schoolLocationSearchPlaceholder": "Search for your city / town location"
 }

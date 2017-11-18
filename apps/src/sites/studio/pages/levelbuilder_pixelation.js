@@ -1,6 +1,6 @@
 /** @file Javascript for the pixelation widget levelbuilder edit page */
 import $ from 'jquery';
-import 'jquery-ui';
+import 'jquery-ui/ui/effect'; // Add easing functions
 
 let pixelationVersionDropdown;
 let hideSlidersField;

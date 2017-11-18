@@ -9,6 +9,7 @@ style_min: true
 1. Sign up [here](http://eepurl.com/Im_In) to stay up to date on what we need translated.
 1. Translate hourofcode.com [here](https://crowdin.com/project/hour-of-code).
 1. Translate our newest tutorials.
+  * [Minecraft: Hero's Journey](/translate/hero)
   * [Minecraft Designer](/translate/minecraft)
   * [Minecraft Adventurer](/translate/mc)
   * [Star Wars](/translate/starwars)

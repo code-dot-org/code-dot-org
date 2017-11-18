@@ -30,7 +30,6 @@ class StartNewProject extends React.Component {
     isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
-    shouldLogEvents: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -46,7 +45,7 @@ class StartNewProject extends React.Component {
   };
 
   render() {
-    const { canViewAdvancedTools, canViewFullList, isRtl, shouldLogEvents } = this.props;
+    const { canViewAdvancedTools, canViewFullList, isRtl } = this.props;
     const { showFullList } = this.state;
     return (
       <div>
@@ -55,7 +54,6 @@ class StartNewProject extends React.Component {
           projectTypes={this.props.projectTypes}
           isRtl={isRtl}
           canViewAdvancedTools={canViewAdvancedTools}
-          shouldLogEvents={shouldLogEvents}
         />
 
         {canViewFullList &&
@@ -75,39 +73,32 @@ class StartNewProject extends React.Component {
           <NewProjectButtons
             description={i18n.projectGroupPlaylab()}
             projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupEvents()}
             projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupArtist()}
             projectTypes={['artist', 'frozen']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupMinecraft()}
             projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
-            shouldLogEvents={shouldLogEvents}
           />
           {canViewAdvancedTools &&
             <NewProjectButtons
               description={i18n.projectGroupAdvancedTools()}
               projectTypes={['applab', 'gamelab', 'weblab']}
-              shouldLogEvents={shouldLogEvents}
             />
           }
           <NewProjectButtons
             description={i18n.projectGroupPreReader()}
             projectTypes={['playlab_k1', 'artist_k1']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupMath()}
             projectTypes={['calc', 'eval']}
-            shouldLogEvents={shouldLogEvents}
           />
         </div>
         }
