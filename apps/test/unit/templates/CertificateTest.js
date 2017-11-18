@@ -9,7 +9,7 @@ describe('Certificate', () => {
     const responsive = new Responsive();
     const wrapper = shallow(
       <Certificate
-        type="minecraft"
+        tutorial="minecraft"
         isRtl={false}
         responsive={responsive}
       />
@@ -33,7 +33,7 @@ describe('Certificate', () => {
     const responsive = new Responsive();
     const wrapper = shallow(
       <Certificate
-        type="hourOfCode"
+        tutorial="frozen"
         isRtl={false}
         responsive={responsive}
       />

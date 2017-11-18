@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115221314) do
+ActiveRecord::Schema.define(version: 20171117004332) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -122,6 +122,31 @@ ActiveRecord::Schema.define(version: 20171115221314) do
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
     t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true, using: :btree
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id", using: :btree
+  end
+
+  create_table "circuit_playground_discount_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                                             null: false
+    t.integer  "unit_6_intention"
+    t.boolean  "has_confirmed_school",                default: false, null: false
+    t.boolean  "full_discount"
+    t.boolean  "admin_set_status",                    default: false, null: false
+    t.string   "signature"
+    t.datetime "signed_at"
+    t.integer  "circuit_playground_discount_code_id"
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.index ["circuit_playground_discount_code_id"], name: "index_circuit_playground_applications_on_code_id", using: :btree
+    t.index ["user_id"], name: "index_circuit_playground_discount_applications_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "circuit_playground_discount_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "code",             null: false
+    t.boolean  "partial_discount", null: false
+    t.datetime "expiration",       null: false
+    t.datetime "claimed_at"
+    t.datetime "voided_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -403,12 +428,12 @@ ActiveRecord::Schema.define(version: 20171115221314) do
   end
 
   create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                           null: false
+    t.integer  "user_id"
     t.string   "type",                              null: false
     t.string   "application_year",                  null: false
     t.string   "application_type",                  null: false
     t.integer  "regional_partner_id"
-    t.string   "status",                            null: false
+    t.string   "status"
     t.datetime "locked_at"
     t.text     "notes",               limit: 65535
     t.text     "form_data",           limit: 65535, null: false
