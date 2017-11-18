@@ -83,7 +83,7 @@ const NewMinecraft = {
 };
 
 const MinecraftMarketing = {
-  title: i18n.minecraftMarketingButton(),
+  title: i18n.minecraftMarketingTitle(),
   description: i18n.minecraftMarketingDesc(),
   link: pegasus('/minecraft'),
   image: "minecraft-marketing",
