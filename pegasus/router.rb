@@ -485,11 +485,14 @@ class Documents < Sinatra::Base
         end
       end
 
-      unless metadata['og:image']
-        if request.site != 'csedweek.org'
+      if request.site != 'csedweek.org'
+        unless metadata['og:image']
           metadata['og:image'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
           metadata['og:image:width'] = 1220
           metadata['og:image:height'] = 640
+        end
+        unless metadata['twitter:image:src']
+          metadata['twitter:image:src'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
         end
       end
 
