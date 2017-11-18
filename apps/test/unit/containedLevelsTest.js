@@ -10,6 +10,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import UnconnectedGameButtons from '@cdo/apps/templates/GameButtons';
 import { TestResults } from '@cdo/apps/constants';
 import $ from 'jquery';
+import {setInstructionsConstants} from '@cdo/apps/redux/instructions';
 
 describe('getContainedLevelResultInfo', () => {
   const containedLevelResult = {
@@ -99,14 +100,28 @@ describe('getContainedLevelResultInfo', () => {
     containedLevelResult.result.result = false;
   });
 
+  /**
+   * Changes the hasContainedLevels value in the redux instructions module
+   * correctly by dispatching an action, and without changing any of the
+   * other constants.
+   * @param {boolean} newValue
+   */
+  function setHasContainedLevels(newValue) {
+    const store = getStore();
+    store.dispatch(setInstructionsConstants({
+      ...store.getState().instructions,
+      hasContainedLevels: newValue,
+    }));
+  }
+
   it('does not disable run button when level not contained', () => {
-    getStore().getState().instructions.hasContainedLevels = false;
+    setHasContainedLevels(false);
     initializeContainedLevel();
     assert.isFalse($('#runButton').prop('disabled'));
   });
 
   it('locks contained level answer if valid', () => {
-    getStore().getState().instructions.hasContainedLevels = true;
+    setHasContainedLevels(true);
     codeStudioLevels.hasValidContainedLevelResult.returns(true);
     initializeContainedLevel();
     assert.isTrue(codeStudioLevels.lockContainedLevelAnswers.calledOnce);
@@ -114,7 +129,7 @@ describe('getContainedLevelResultInfo', () => {
   });
 
   it('disables run button if no valid answer and reenables when answer is valid', () => {
-    getStore().getState().instructions.hasContainedLevels = true;
+    setHasContainedLevels(true);
     codeStudioLevels.hasValidContainedLevelResult.returns(false);
     initializeContainedLevel();
     const runButton = $('#runButton');
