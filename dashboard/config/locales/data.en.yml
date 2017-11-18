@@ -559,6 +559,11 @@ en:
         'mc_2017_puzzle_12' : 'Minecraft Hour of Code - Freeplay'
         'hint_videos_d_11_3_first' : 'Hint Videos: D.11.3 First'
         'hint_videos_d_11_3_last' : 'Hint Videos: D.11.3 Last'
+        'applab_intro_welcome' : 'App Lab - Getting Started'
+        'applab_intro_events' : 'App Lab - Make It Interactive'
+        'applab_intro_sounds' : 'App Lab - Images and Sounds'
+        'applab_intro_designmode' : 'App Lab - Design Mode'
+        'applab_intro_share' : 'App Lab - Share Your App'
     callout:
       text:
         # Keyed by #{callout.localization_key}
