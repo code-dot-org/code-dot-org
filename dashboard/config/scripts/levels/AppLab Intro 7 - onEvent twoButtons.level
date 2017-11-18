@@ -64,10 +64,7 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: black;\"><button id=\"onButton\" style=\"padding: 0px; margin: 0px; color: rgb(255, 255, 255); position: absolute; top: 340px; width: 145px; height: 100px; font-size: 30px; left: 10px; background-color: teal;\">On</button><button id=\"offButton\" style=\"padding: 0px; margin: 0px; font-size: 30px; color: rgb(255, 255, 255); position: absolute; left: 165px; top: 340px; width: 145px; height: 100px; background-color: teal;\">Off</button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; max-width: 320px; width: 300px; position: absolute; top: 10px; left: 10px; text-align: center; height: 320px; font-size: 40px; color: white;\" id=\"label1\">Flashlight App</label></div></div>",
     "start_blocks": "onEvent(\"onButton\",\"click\",function(){\r\n  setProperty(\"screen1\",\"background-color\",\"white\");\r\n  setProperty(\"label1\", \"text-color\",\"black\");\r\n});\r\nonEvent(\"offButton\",\"click\",function(){\r\n  \r\n});",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

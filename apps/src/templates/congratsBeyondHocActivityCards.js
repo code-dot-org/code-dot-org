@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 const CSFExpress = {
   title: i18n.csfExpressTitle(),
   description: i18n.csfExpressDesc(),
-  link: pegasus(`/educate/curriculum/express-course`),
+  link: "/s/express",
   image: "csf-express",
   buttonText: i18n.csfButton()
 };
@@ -36,7 +36,7 @@ const CreateAccount = {
 const AnotherHoC = {
   title: i18n.anotherHoCTitle(),
   description: i18n.anotherHoCDesc(),
-  link: pegasus(`/hourofcode/overview`),
+  link: pegasus('/hourofcode/overview'),
   image: "another-hoc",
   buttonText: i18n.anotherHoCButton()
 };
@@ -44,7 +44,7 @@ const AnotherHoC = {
 const ApplabTutorial = {
   title: i18n.applabTutorialTitle(),
   description: i18n.applabTutorialDesc(),
-  link: "/s/applab-intro",
+  link: "/s/applab-intro/reset",
   image: "applab-tutorial",
   buttonText: i18n.applabTutorialButton()
 };
@@ -52,7 +52,7 @@ const ApplabTutorial = {
 const ApplabMarketing = {
   title: i18n.applabMarketingTitle(),
   description: i18n.applabMarketingDesc(),
-  link: "/applab",
+  link: pegasus('/applab'),
   image: "applab-marketing",
   buttonText: i18n.applabMarketingButton()
 };
@@ -60,7 +60,7 @@ const ApplabMarketing = {
 const ApplabProject = {
   title: i18n.applabProjectTitle(),
   description: i18n.applabProjectDesc(),
-  link: "/p/applab",
+  link: "/projects/applab/new",
   image: "applab-project",
   buttonText: i18n.applabProjectButton()
 };

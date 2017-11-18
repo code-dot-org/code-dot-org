@@ -72,14 +72,24 @@ window.SignupManager = function (options) {
   }
 
   function formSuccess(success) {
-    if (isTeacherSelected()) {
-      logEvent('teacher-submit-success');
-    }
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
     } else if (isTeacherSelected()) {
+      // This is more complicated because we want to delay navigation
+      // until the logging call completes, with a failsafe
       url = self.options.teacherDashboardUrl;
+      let navigatedToTeacherURL = false;
+      const gotoTeacherUrl = function () {
+        if (navigatedToTeacherURL) {
+          return;
+        }
+        window.location.href = url;
+        navigatedToTeacherURL = true;
+      };
+      setTimeout(gotoTeacherUrl, 2000); // Failsafe if event is never logged
+      logEvent('teacher-submit-success', gotoTeacherUrl);
+      return;
     } else {
       url = "/";
     }
@@ -168,13 +178,17 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
-  function logEvent(event) {
+  function logEvent(event, callback = null) {
     firehoseClient.putRecord(
       'analysis-events',
       {
         study: 'teacher-registration-school-style',
         study_group: registrationSchoolStyleGroup,
         event: event
+      },
+      {
+        alwaysPut: false,
+        callback: callback
       }
     );
   }

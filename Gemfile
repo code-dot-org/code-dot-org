@@ -152,7 +152,7 @@ gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive',
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
 
-gem 'jquery-ui-rails', '~> 5.0.3'
+gem 'jquery-ui-rails', '~> 6.0.1'
 
 gem 'nokogiri', '~> 1.6.1'
 
