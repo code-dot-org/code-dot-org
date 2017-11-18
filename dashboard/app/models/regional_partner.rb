@@ -58,16 +58,23 @@ class RegionalPartner < ActiveRecord::Base
   # @param [String] zip_code
   # @param [String] state - 2-letter state code
   def self.find_by_region(zip_code, state)
-    return RegionalPartner.
-      joins(:mappings).
-      where(pd_regional_partner_mappings: {state: state}).
-      or(
-        joins(:mappings).
-        where(pd_regional_partner_mappings: {zip_code: zip_code})
-      ).
-      # prefer match by zip code when multiple partners cover the same state
-      order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').
-      first
+    return nil if zip_code.nil? && state.nil?
+
+    base_query = RegionalPartner.joins(:mappings)
+    state_query = base_query.where(pd_regional_partner_mappings: {state: state}) if state
+    zip_code_query = base_query.where(pd_regional_partner_mappings: {zip_code: zip_code}) if zip_code
+
+    find_by_region_query =
+      if state && zip_code.nil?
+        state_query
+      elsif state.nil? && zip_code
+        zip_code_query
+      elsif state && zip_code
+        state_query.or(zip_code_query)
+      end
+
+    # prefer match by zip code when multiple partners cover the same state
+    return find_by_region_query.order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').first
   end
 
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze

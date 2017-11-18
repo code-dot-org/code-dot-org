@@ -48,7 +48,7 @@
     "lock_chunk_size_control": "false",
     "default_chunk_size_bits": "8",
     "video_key": "csp_internetsimulator_2",
-    "markdown_instructions": "##NetSim: Variant 2\r\n\r\nStudents connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
+    "markdown_instructions": "## NetSim: Variant 2\r\n\r\nStudents connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
     "show_log_browser_button": "false",
     "broadcast_mode": "false",
     "connected_routers": "false",
