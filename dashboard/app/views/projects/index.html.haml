@@ -3,7 +3,6 @@
 - projects_data = {}
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
-  - projects_data[:showStartNewProjectWidget] = Experiment.enabled?(user: current_user, experiment_name: 'start-new-project-widget')
 
 = render partial: 'shared/angular'
 
@@ -16,10 +15,7 @@
   .row
     #projects-header
 
-    #project-links-wrapper{style: 'display: none;'}
-      #new-project-buttons
-      #legacy-project-links{style: 'display: none;'}
-        = render partial: 'projects/links'
+    #new-project-buttons
 
     #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
       %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
