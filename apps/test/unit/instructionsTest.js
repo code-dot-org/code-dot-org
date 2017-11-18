@@ -8,6 +8,9 @@ import instructions, {
   setInstructionsMaxHeightAvailable,
   setInstructionsMaxHeightNeeded,
   setFeedback,
+  setInstructionsConstants,
+  setHasAuthoredHints,
+  hideOverlay,
   determineInstructionsConstants
 } from '@cdo/apps/redux/instructions';
 
@@ -126,6 +129,50 @@ describe('instructions reducer', () => {
     assert.isUndefined(initialState.feedback);
     const newState = reducer(initialState, setFeedback('anything'));
     assert.strictEqual(newState.feedback, 'anything');
+  });
+
+  it('setInstructionsConstants can set expected constants', () => {
+    const initialState = new InstructionsState();
+    const newState = reducer(initialState, setInstructionsConstants({
+      noInstructionsWhenCollapsed: 'A',
+      hasInlineImages: 'B',
+      shortInstructions: 'C',
+      shortInstructions2: 'D',
+      longInstructions: 'E',
+      hasContainedLevels: 'F',
+      overlayVisible: 'G',
+      teacherMarkdown: 'H',
+      levelVideos: 'I'
+    }));
+    assert.equal(newState.noInstructionsWhenCollapsed, 'A');
+    assert.equal(newState.hasInlineImages, 'B');
+    assert.equal(newState.shortInstructions, 'C');
+    assert.equal(newState.shortInstructions2, 'D');
+    assert.equal(newState.longInstructions, 'E');
+    assert.equal(newState.hasContainedLevels, 'F');
+    assert.equal(newState.overlayVisible, 'G');
+    assert.equal(newState.teacherMarkdown, 'H');
+    assert.equal(newState.levelVideos, 'I');
+  });
+
+  it('setInstructionsConstants throws if trying to set instructions twice', () => {
+    const initialState = new InstructionsState();
+    const newState = reducer(initialState, setInstructionsConstants({shortInstructions: 'C'}));
+    assert.throws(() => {
+      reducer(newState, setInstructionsConstants({shortInstructions: 'second time'}));
+    });
+  });
+
+  it('setHasAuthoredHints sets hasAuthoredHints', () => {
+    const initialState = new InstructionsState({hasAuthoredHints: false});
+    const newState = reducer(initialState, setHasAuthoredHints(true));
+    assert.isTrue(newState.hasAuthoredHints);
+  });
+
+  it('hideOverlay sets overlayVisible to false', () => {
+    const initialState = new InstructionsState({overlayVisible: true});
+    const newState = reducer(initialState, hideOverlay());
+    assert.isFalse(newState.overlayVisible);
   });
 });
 
