@@ -5,6 +5,7 @@
  * off of those actions.
  */
 
+import {Record} from 'immutable';
 import { trySetLocalStorage, tryGetLocalStorage } from '../utils';
 
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
@@ -30,7 +31,7 @@ const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
  *     longInstructions will both be set.
  * (5) CSF level with just long instructions
  */
-const instructionsInitialState = {
+export const InstructionsState = Record({
   noInstructionsWhenCollapsed: false,
   hasInlineImages: false,
   shortInstructions: undefined,
@@ -52,9 +53,9 @@ const instructionsInitialState = {
   hasAuthoredHints: false,
   overlayVisible: false,
   levelVideos: []
-};
+});
 
-export default function reducer(state = instructionsInitialState, action) {
+export default function reducer(state = new InstructionsState(), action) {
   if (action.type === SET_CONSTANTS) {
     if (state.shortInstructions || state.longInstructions) {
       throw new Error('instructions constants already set');
@@ -75,7 +76,7 @@ export default function reducer(state = instructionsInitialState, action) {
       // If we only have short instructions, we want to be in collapsed mode
       collapsed = true;
     }
-    return Object.assign({}, state, {
+    return state.merge({
       noInstructionsWhenCollapsed,
       hasInlineImages,
       shortInstructions,
@@ -90,13 +91,11 @@ export default function reducer(state = instructionsInitialState, action) {
   }
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
-    return Object.assign({}, state, {
-      collapsed: !state.collapsed
-    });
+    return state.set('collapsed', !state.collapsed);
   }
 
   if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT) {
-    return Object.assign({}, state, {
+    return state.merge({
       renderedHeight: action.height,
       expandedHeight: !state.collapsed ? action.height : state.expandedHeight
     });
@@ -104,14 +103,12 @@ export default function reducer(state = instructionsInitialState, action) {
 
   if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
       action.maxNeededHeight !== state.maxNeededHeight) {
-    return Object.assign({}, state, {
-      maxNeededHeight: action.maxNeededHeight
-    });
+    return state.set('maxNeededHeight', action.maxNeededHeight);
   }
 
   if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE &&
       action.maxAvailableHeight !== state.maxAvailableHeight) {
-    return Object.assign({}, state, {
+    return state.merge({
       maxAvailableHeight: action.maxAvailableHeight,
       renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
       expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
@@ -119,21 +116,15 @@ export default function reducer(state = instructionsInitialState, action) {
   }
 
   if (action.type === SET_HAS_AUTHORED_HINTS) {
-    return Object.assign({}, state, {
-      hasAuthoredHints: action.hasAuthoredHints
-    });
+    return state.set('hasAuthoredHints', action.hasAuthoredHints);
   }
 
   if (action.type === SET_FEEDBACK) {
-    return Object.assign({}, state, {
-      feedback: action.feedback
-    });
+    return state.set('feedback', action.feedback);
   }
 
   if (action.type === HIDE_OVERLAY) {
-    return Object.assign({}, state, {
-      overlayVisible: false
-    });
+    return state.set('overlayVisible', false);
   }
 
   return state;
