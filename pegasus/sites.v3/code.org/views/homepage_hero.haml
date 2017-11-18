@@ -4,6 +4,12 @@
 -# Whether we show a HOC launch background
 - show_hoc_launch_layout = hoc_launch && hoc_launch["homepage"]
 
+-# Non-en users get mc instead of applab/celebs
+- if show_hoc_launch_layout
+  - hoc_launch_hero_variation = hoc_launch["homepage"]
+  - if ["applab", "celebs"].include?(hoc_launch_hero_variation) && request.language != "en"
+    - hoc_launch_hero_variation = "mc"
+
 -# Whether we show non-rotating background image and center options on desktop.
 - show_census_layout = request.language == "en"
 
@@ -17,19 +23,44 @@
 -# Temporary for mc 2017 hoc tutorial launch page
 - hoc_launch_hero["mc"] = [{"id":99,"id_s":"mchoc2017","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/mchoc2017.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
 
+-# Temporary for applab 2017 hoc tutorial launch page
+- hoc_launch_hero["applab"] = [{"id":99,"id_s":"mchoc2017","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/applab_hoc2017.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
+
+-# Temporary for celebs 2017 launch page
+- hoc_launch_hero["celebs"] = [{"id":99,"id_s":"mchoc2017","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/celebs_hoc2017.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
+
 - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
 
 -# Temporary for mc 2017 hoc tutorial launch page
-- if show_hoc_launch_layout && hoc_launch["homepage"] == "mc"
+- if show_hoc_launch_layout && hoc_launch_hero_variation == "mc"
   .desktop-feature
     %img{src: "/images/fit-300/mc/MC_Logo_Large.png", style: "position: absolute; width: 300px; left: 20px; top: 237px;"}
   .mobile-feature{style: "width: 100%; text-align: center; "}
     %img{src: "/images/fit-300/mc/MC_Logo_Large.png", style: "position: absolute; width: 300px; top: 237px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
 
+-# Temporary for applab 2017 hoc tutorial launch page
+- if show_hoc_launch_layout && hoc_launch_hero_variation == "applab"
+  .desktop-feature
+    %img{src: "/images/homepage/fit-300/applab_hoc2017_logo.png", style: "position: absolute; width: 300px; right: 60px; top: 237px;"}
+  .mobile-feature{style: "width: 100%; text-align: center; "}
+    %img{src: "/images/homepage/fit-300/applab_hoc2017_logo.png", style: "position: absolute; width: 300px; top: 237px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
+
+  - actions = [{param1_s: "cta_button", text1_s: "homepage_action_text_join_us", param2_s: "https://hourofcode.com/#join"}, {param1_s: "cta_button_secondary", text1_s: "homepage_action_text_try_it", param2_s: "/hourofcode/overview"}]
+
+-# Temporary for celebs 2017 launch page
+- if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs"
+  .mobile-feature{style: "width: 100%; text-align: center; "}
+    %img{src: "/images/homepage/fit-300/celebs_hoc2017_logo.png", style: "position: absolute; width: 300px; top: 137px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
+
+  - actions = [{param1_s: "cta_button", text1_s: "get_started", param2_s: "/learn"}, {param1_s: "cta_button_secondary", text1_s: "homepage_action_text_wincelebritychat", param2_s: "/challenge"}]
+
 - main_actions = capture_haml do
   -# Temporary heading text for the Hour of Code
   - if request.language == "en"
-    = I18n.t(:homepage_hero_hoc_is_coming)
+    - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs"
+      = I18n.t(:homepage_hero_hoc_is_here)
+    - else
+      = I18n.t(:homepage_hero_hoc_is_coming)
 
   - actions.each_with_index do |entry, index|
     - display = entry[:active_s] == "hide" ? "none" : "block"
@@ -83,7 +114,6 @@
     -# for UI tests just lock to the first hero image
     - heroes_arranged = heroes[0, 1]
   - elsif show_hoc_launch_layout
-    - hoc_launch_hero_variation = hoc_launch["homepage"]
     - heroes_arranged = hoc_launch_hero[hoc_launch_hero_variation]
   - elsif show_census_layout
     - heroes_arranged = census_announcement_hero
