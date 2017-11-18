@@ -133,6 +133,7 @@
     user_type_student: "生徒"
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
+    error: An error occurred.
   school_info:
     title: "学校名(任意)"
     school_country: "学校のある国"
@@ -827,10 +828,21 @@
     create: "プロジェクトを作る"
     create_a_project: "新しいプロジェクトを作る"
     new: "新しく作る"
+    new_buttons:
+      artist: "アーティスト"
+      playlab: "プレイラボ"
+      applab: "アプリ ラボ"
+      gamelab: "ゲーム ラボ"
+      weblab: Web 研究室 (ベータ版)
+    new_buttons_header: 'Start a new project:'
     rename: "名前をかえる"
     save: "保存"
     delete: "削除（さくじょ）"
-    import: Import
+    import: "インポート"
+    share_link_import_bad_link_header: "共有リンクが認識されません"
+    share_link_import_bad_link_body: "共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。"
+    share_link_import_error_header: "問題が発生しました。"
+    share_link_import_error_body: "共有リンクのインポート時に問題が発生しました。もう一度やり直してください。"
     exit: "コースに戻る"
     my_projects: "マイプロジェクト"
     project_gallery: "プロジェクト"

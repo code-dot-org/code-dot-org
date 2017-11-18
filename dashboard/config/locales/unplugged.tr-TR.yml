@@ -52,16 +52,16 @@
         video: Unplug4
       Unplug5:
         title: Fonksiyonlar
-        desc: Bu derste, öğrenciler güneş avcısı(suncatcher) yapacaklar; bunu yaparken
-          ip, boncuklar ve özel bir büyü(pişirme yöntemi) kullanacaklar. Öğrenciler
-          bir dizi işi adım adım yapacaklar, daha sonra tekrar eden bazı adımları
-          tanımlamaları istenecek. Bu adımlar tanımlandığında, ana program onların
-          isimlerini kullanacak ve tüm bu mükemmel işlem tek bir sayfada kodlanacak.
-          Son program tüm sınıf tarafından donatılacak; kullandıkları iplerin, boncukların
-          ve büyünün cinsi ne olursa olsun. Bunu etkili bir şekilde yapabilmeleri
+        desc: Bu derste, öğrenciler güneş kapan(suncatcher) yapacaklar; bunu yaparken
+          ip, boncuklar ve özel dekor kullanacaklar. Öğrenciler bir dizi işi adım
+          adım yapacaklar, daha sonra tekrar eden bazı adımları tanımlamaları istenecek.
+          Bu adımlar tanımlandığında, ana program onların isimlerini kullanacak ve
+          tüm bu mükemmel işlem tek bir sayfada kodlanacak. Son program tüm sınıf
+          tarafından anlaşılacak şekilde olacak; kullandıkları iplerin, boncukların
+          ve dekorun cinsi ne kadar farklı olursa olsun. Bunu etkili bir şekilde yapabilmeleri
           için, öğrencilerin kullandıkları malzemeleri soyut olarak kodlamaları ve
-          kişisel katkıları için bulanık(özel) terimler yaratmaları gerekecek. Genel
-          kod yerleştirme için değişkenlerin bu şekilde kullanılması mükemmel.
+          kişisel seçimlerini genelleyerek bir terminoloji oluşturmaları gerekecek.
+          Değişkenleri öğretmek için bu tarz jenerik isimler kullanılması mükemmel.
         pdfs:
         - unplug5
         video: Unplug5
@@ -105,7 +105,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: paketlemek
+        title: Toparlama
         desc: "İlk 20 saatlik dersin son kısmı öğrencilerin dersler boyunca en sevdiği
           kısımları canlandıracak ve kendilerinin bilgisayar bilimleri macerasında
           yol almak isteyip istemeyeceklerine karar vermelerine destek olacak."
@@ -131,9 +131,9 @@
           ve öğrenciler işler karmaşıkolduğunda ısrarcı olmayı tartışmalı."
       GettingLoopy:
         title: Döngüselleşme
-        desc: Bu ders dans aktivitesi ile döngülerin(tekrarlanan komutlar) programlama
-          konsepti hakkında bilgilendirme yapar.Öğrenciler  basit planlama yı ve inşa
-          edilenleri tekrar etmeyi öğrenecekler.
+        desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında
+          bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu
+          tekrar etmeyi öğrenecekler.
       RelayProgramming:
         title: Röle Programlama
         desc: Öğrenciler bayrak yarışı ile koşturup "Grafik kağıdı programlama" algoritma
@@ -183,7 +183,7 @@
           (tekrar tekrar kullanmak istediğiniz kod parçalarını) kullanıyorlar. İp
           ve boncuk kullanarak kolye yapın."
       SongwritingParameters:
-        title: Parametrelerle Şarkı Yazmak
+        title: "Şarkı Yazarlığı"
         desc: "Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl
           parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme)."
       DiceRace:
@@ -335,9 +335,9 @@
           bilgisayar bilimindeki önemini göreceğiz.
       courseC_unplugged_gettingLoopy:
         title: Döngüselleşme
-        desc: Bu ders dans aktivitesi ile döngülerin(tekrarlanan komutlar) programlama
-          konsepti hakkında bilgilendirme yapar.Öğrenciler  basit planlama yı ve inşa
-          edilenleri tekrar etmeyi öğrenecekler.
+        desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında
+          bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu
+          tekrar etmeyi öğrenecekler.
       courseC_unplugged_binaryBracelets:
         title: "İkilik Bileklikler"
         desc: "Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik
@@ -382,7 +382,7 @@
         desc: "Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
           Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır."
       courseE_unplugged_songwriting:
-        title: Parametrelerle Şarkı Yazmak
+        title: "Şarkı Yazarlığı"
         desc: "Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl
           parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme)."
       courseF_unplugged_tangrams:
@@ -408,3 +408,38 @@
           tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin
           neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu
           kavramalarına yardımcı olacaktır.  '
+      swipeRightPassThrough:
+        title: Recruitment Scenarios Session
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      swipeRightPassThrough-test123:
+        title: Recruitment Scenarios Session
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: |-
+          # Brad Repro Bug 000\r
+          ## Attempt to recreate a bug Brooke reported\r
+          process as follows:\r
+          1. started with an `unplugged` level. populated with info. hit save and publish.\r
+          2. “destroyed” the level\r
+          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush

@@ -52,7 +52,8 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
                  WHEN (frl_eligible_total /
                        students_total::float) > 0.5
                  THEN 1
-                 ELSE 0 END)                      AS high_needs
+                 ELSE 0 END)                      AS high_needs,
+           school_stats_by_years.community_type   AS community_type
       FROM dashboard_production.schools
  LEFT JOIN dashboard_production.school_districts
         ON schools.school_district_id = school_districts.id
@@ -66,5 +67,5 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
        AND school_stats_by_years.school_year = max_survey_years.survey_year
 WITH NO SCHEMA BINDING;
 
-GRANT SELECT ON analysis.school_stats
-   TO GROUP reader, GROUP reader_pii, GROUP admin;
+GRANT ALL PRIVILEGES ON analysis.school_stats TO GROUP admin;
+GRANT SELECT ON analysis.school_stats TO GROUP reader, GROUP reader_pii;

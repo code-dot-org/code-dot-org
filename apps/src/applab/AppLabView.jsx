@@ -11,7 +11,6 @@ import { ApplabInterfaceMode } from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
-import SignInOrAgeDialog from '../templates/SignInOrAgeDialog';
 
 /**
  * Top-level React wrapper for App Lab.
@@ -42,7 +41,6 @@ class AppLabView extends React.Component {
     const codeWorkspaceVisible = (ApplabInterfaceMode.CODE === this.props.interfaceMode);
     return (
       <StudioAppWrapper>
-        <SignInOrAgeDialog/>
         <ImportProjectDialog />
         <ImportScreensDialog />
         <ApplabVisualizationColumn

@@ -1,94 +1,244 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: '<%= hoc_s(:title_how_to_volunteers) %>'
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # Guía para voluntarios
 
-## Why volunteer?
+### ¡Haga una diferencia en una clase hoy!
 
-Check out some testimony from past volunteers:
+## ¿Por qué ser voluntario?
 
-  * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-  * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-  * “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+Vea algunos testimonios de los últimos voluntarios:
 
-Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
+- "La mejor parte de mi experiencia era que toda la clase era mujeres y personas de color. Un buen presagio para el futuro de nuestra industria para tener la oportunidad de llegar y emocionar a estos niños."
+- "Disfruté especialmente alentando a las muchachas jóvenes a introducirse en la tecnología. Me sentía como si estuviera ayudando a la siguiente generación en mi zona"
+- "Me ENCANTÓ ver lo emocionados que estaban los niños. Algo que fue increíble, fue que los maestros notaron que algunos de los estudiantes que no eran tan buenos académicamente estaban sobresaliendo en tener un pensamiento como desarrolladores y ayudando a otros a aprender - dándoles un lugar para sentirse seguros."
 
-## Recruit your co-workers to volunteer
+## Cualquier persona puede ser voluntario/a
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+**Voluntarios y presentadores de tecnología**: ¿Tienen alguna conexión con CS o tecnología? ¡Si trabaja en ingeniería de software, en una empresa de tecnología en cualquier papel (no ingeniero o ingeniero), o si ha tomado clases de ciencias de las computadoras, usted puede ayudar a inspirar estudiantes! Muchos estudiantes nunca han conocido a alguien que trabaja en la industria de la tecnología y nuestros maestros adoran poder conectar sus clases con profesionales y estudiantes de universidad.
 
-## How you get selected:
+Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a con una actividad. Visitar una clase en su localidad para inspirar a los estudiantes a seguir aprendiendo ciencias de la computación.
 
-  * Teachers will be searching for volunteers on our [volunteer map](/volunteer/local) 
-  * Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-  * A teacher will contact you through this form (your email address will never be shared with the teacher). 
-      * If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+<a href="https://code.org/volunteer/engineer"><button>¡Regístrese hoy para ser un voluntario de tecnología!</button></p> 
 
-## How to prepare:
+<p>
+  <strong>Cualquier apasionado en expandir oportunidades</strong>: ¿Usted cree que aprender ciencias de la computación puede abrir puertas de oportunidades para los estudiantes? ¡Ayude en una clase local u organice un evento después de escuela! No necesita tener ningún conocimiento en ciencias de la computación para tener una Hora de Código. Y, solamente con que ofrezca ayudar es a menudo suficiente para convencer al/la maestro/a de su hijo/a, un/a amigo/a, o un club a que lo intenten una hora.
+</p>
 
-Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+<p>
+  ¿Cómo comenzar?
+</p>
 
-  * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
-  * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](%= resolve_url('/learn') %)
-  * If you're visiting a school, complete any background checks or required paperwork
-  * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
-  * Prepare an intro: 
-      * Share an inspirational story: How you got involved in a career in tech or why tech is important to you
-      * Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
-  * Join the conversation on FB, Twitter, Instagram, Tumblr with #Hourofcode
-  * Connect with the teacher to discuss what you plan to speak about during your session
-  * If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand
+<ol>
+  <li>
+    <p>
+      <a href="%= resolve_url('/promote/resources#help-schools') %">Envíele este email</a> al/la maestro/a de su hijo/a ofreciéndole ayuda para llevar a cabo la Hora de Código.
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      Ofrezca auspiciar un evento de Hora de Código después de escuela en una escuela local. <a href="%= resolve_url('/how-to') %">Use esta Guía de Cómo Hacer</a> para ayudarse.
+    </p>
+  </li>
+</ol>
 
-### **Day-of Hour of Code Event:**
+<h2>
+  Reclute colegas para que sean voluntarios
+</h2>
 
-  * Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
-  * Spend 5 minutes talking about yourself, who inspired you to pursue a career in tech and/or computer science. 
-      * Introduce yourself: who you are and what you do
-      * Choose one inspirational video and show it to the entire classroom together. Answer any questions from students.
-      * Share a short story about how you got interested in computer science. What or who inspired you? What do you love most about your job? Keep it short! ;) The point is to let the kids do the coding, leave time for more questions at the end.
-      * Share how computer science has broad, worldwide impact.
-  * Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright, instead try asking them questions so they can answer themselves what went wrong.
-  * Encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity. Often kids can solve the problems themselves and through teamwork. 
-  * At the completion of their Hour of Code, hand out your company swag (stickers are awesome) and answer any remaining questions.
-  * Also important to mention that if you do take pictures/videos during the event -- especially with students -- that you get teacher/parent permission if you would like to post your stories on social media.
+<p>
+  Cuéntele a sus amigos y colegas acerca de la Hora de Código. Miles de maestros están buscando voluntarios, así que pídales <a href="https://code.org/volunteer">inscribirse como voluntarios</a>. Sugiérale a su jefe que se involucre. <a href="%= resolve_url('/promote/resources#sample-email') %">Envíele este email</a> a su director/a o al CEO para tener a todos a bordo.
+</p>
 
-### **Sample agenda:**
+<h2>
+  Cómo prepararse
+</h2>
 
-Introduce yourself: </ul>
+<ul>
+  <li>
+    <a href="%= resolve_url('/promote/resources#videos') %">Seleccione un video</a> para mostrar y ayudar a la clase a enfocarse y para que se emocionen con la Hora de Código.
+  </li>
+  <li>
+    Revise las <a href="/files/hoc-volunteer-toolkit.pdf">Herramientas para Voluntarios de la Hora de Código</a> que incluyen un resumen, cronograma, preparación de materiales y material de mercadotecnia. ¡Todo lo que usted necesita para estar listo/a para su experiencia como voluntario/a!
+  </li>
+  <li>
+    Si va a estar haciendo una tutoría durante su sesión, emplee 30 minutos intentando por lo menos una <a href="%= resolve_url('/learn') %">tutoría de Hora de Código</a>.
+  </li>
+  <li>
+    Si va a visitar una escuela, complete cualquier revisión de antecedentes o papeleo requerido.
+  </li>
+  <li>
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">Revise estas sugerencias</a> acerca de cómo interactuar con estudiantes.
+  </li>
+  <li>
+    Únase a la conversación en Facebook, Twitter, Instagram y Tumblr con #HourOfCode.
+  </li>
+  <li>
+    Conéctese con el/la maestro/a para discutir de lo que usted piensa hablar durante su sesión.
+  </li>
+  <li>
+    Si usted es un/a voluntario/a virtual, revise la capacidad del A/V y de la pantalla con anticipación.
+  </li>
+</ul>
 
-  * What do you work, what do you do, and what do you love most about your job?
-  * What or who inspired you
-  * Did you have a mentor?
-  * Share a story about how tech affects everyone</ul></td> </tr> 
-    Ask the students questions and leave time for Q&A </ul>
+<h2>
+  Día del Evento de la Hora del Código
+</h2>
+
+<p>
+  Cuando esté llevando a cabo un evento para la Hora de Código, siga la agenda ejemplo de abajo para guiarse durante el día. Antes de esto, asegúrese de registrarse en la escuela y saludar a el/la maestro/a el día del evento. Confirm the agreed schedule for the day and discuss any talking points.
+</p>
+
+<h3>
+  <strong>Sample agenda:</strong>
+</h3>
+
+<table>
+  <tr>
+    <th>
+      Hora
+    </th>
     
-      * WHat jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 
-      * Do the students have any questions for you?</ul></td> </tr> 
-        </tbody> </table> 
-        ### **After the Event:**
+    <th>
+      Puntos de Agenda
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      1-5 minutes
+    </td>
+    
+    <td>
+      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      5-10 minutes
+    </td>
+    
+    <td>
+      Introduce yourself and learn more about the students: </ul>
+      
+      <li>
+        What do you work, what do you do, and what do you love most about your job?
+      </li>
+      
+      <li>
+        What or who inspired you?
+      </li>
+      
+      <li>
+        How did you get interested in computer science?
+      </li>
+      
+      <li>
+        Did you have a mentor?
+      </li>
+      
+      <li>
+        Share a story about how tech affects everyone.
+      </li>
+      
+      <br />Ask the students questions and leave time for Q&A.</br> 
+      
+      <li>
+        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+      </li>
+      
+      <li>
+        Do the students have any questions for you?</ul></td> </tr> <tr>
+          <td>
+            30-60 minutes
+          </td>
+          
+          <td>
+            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+          </td>
+        </tr>
         
-          * Share your photos and stories with Code.org at giving@code.org
-          * Remember to enter in your volunteer hours in your company’s volunteer tracking portal 
-          * Share about your experience on social media #Hourofcode! See below for tips. 
-        ## Volunteering during the Hour of Code FAQ
+        <tr>
+          <td>
+            1-3 minutes
+          </td>
+          
+          <td>
+            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+          </td>
+        </tr>
         
-        ### **I haven't been contacted by a teacher yet. How can I still volunteer?**
+        <tr>
+          <td>
+            After
+          </td>
+          
+          <td>
+            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+          </td>
+        </tr></tbody> </table> 
         
-        Try searching for local schools and call the principal/teacher/front office and ask how you can help.
-        
-        ### **How long do classroom visits last for?**
-        
-        An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes
-        
-        ### **What age group is the Hour of Code tutorial appropriate for?**
-        
-        Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
-        
-        <%= view :signup_button %>
+        <h3>
+          <strong>After the Event:</strong>
+        </h3>
+        <ul>
+          <li>
+            Share your photos and stories with Code.org at giving@code.org.
+          </li>
+          <li>
+            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+          </li>
+          <li>
+            Share about your experience on social media #HourOfCode!
+          </li>
+          <li>
+            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+          </li>
+          <li>
+            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+          </li>
+        </ul>
+        <h2>
+          How you get selected as a technical volunteer of guest speaker
+        </h2>
+        <ul>
+          <li>
+            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+          </li>
+          <li>
+            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+          </li>
+          <li>
+            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+          </li>
+        </ul>
+        <h2>
+          Volunteering during the Hour of Code FAQ
+        </h2>
+        <h3>
+          <strong>I haven't been contacted by a teacher yet. How can I still volunteer?</strong>
+        </h3>
+        <p>
+          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+        </p>
+        <h3>
+          <strong>How long do classroom visits last for?</strong>
+        </h3>
+        <p>
+          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+        </p>
+        <h3>
+          <strong>What age group is the Hour of Code tutorial appropriate for?</strong>
+        </h3>
+        <p>
+          Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
+        </p>
+        <p>
+          <%= view :signup_button %>
+        </p>

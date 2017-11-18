@@ -152,6 +152,7 @@
     user_type_student: Student
     field_is_required: krävs
     accept_terms: Du måste godkänna för att skapa ett konto
+    error: An error occurred.
   school_info:
     title: School Information (optional)
     school_country: Skolans land
@@ -982,10 +983,24 @@
     create: Skapa projekt
     create_a_project: 'Skapa ett nytt projekt:'
     new: Skapa ny
+    new_buttons:
+      artist: Konstnären
+      playlab: Spel-labb
+      applab: App Lab
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Ändra namn"
     save: Spara
     delete: Ta bort
-    import: Import
+    import: Importera
+    share_link_import_bad_link_header: Delningslänken kändes inte igen
+    share_link_import_bad_link_body: 'Vi kunde inte importera delningslänken. Se till
+      att du använder en länk från ett Minecraft: Agent-pussel, och att du har kopierat
+      hela länken.'
+    share_link_import_error_header: Någonting gick fel.
+    share_link_import_error_body: Det gick inte att importera delningslänken. Försök
+      igen.
     exit: Tillbaka till kursen
     my_projects: Mina projekt
     project_gallery: Projekt

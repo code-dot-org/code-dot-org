@@ -122,6 +122,7 @@ fi:
     user_type_student: "Oppilas"
     field_is_required: "vaaditaan"
     accept_terms: "Sinun on hyväksyttävä luodaksesi tili"
+    error: "An error occurred."
   school_info:
     title: 'Koulun tiedot (valinnainen)'
     school_country: 'Koulun maa'
@@ -749,10 +750,21 @@ fi:
     create: "Luo projekti"
     create_a_project: 'Luo uusi projekti:'
     new: "Luo uusi"
+    new_buttons:
+      artist: "Taiteilija"
+      playlab: "Pelilabra"
+      applab: "Sovelluksien laboratorio"
+      gamelab: "Pelilabra"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Nimeä uudelleen"
     save: "Tallenna"
     delete: "Poista"
-    import: "Import"
+    import: "Tuo"
+    share_link_import_bad_link_header: "Jakolinkkiä ei tunnistettu"
+    share_link_import_bad_link_body: 'Emme voineet tuoda tuota jakolinkkiä. Varmista, että käytät Minecraft: Agent -tehtävän linkkiä ja että olet kopioinut koko linkin.'
+    share_link_import_error_header: "Jokin meni pieleen."
+    share_link_import_error_body: "Jakolinkin tuomisessa tapahtui virhe. Yritä uudelleen."
     exit: "Takaisin kurssiin"
     my_projects: "Omat projektit"
     project_gallery: "Projektit"

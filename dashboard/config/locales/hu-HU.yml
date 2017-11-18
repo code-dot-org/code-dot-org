@@ -152,6 +152,7 @@
     user_type_student: Diák
     field_is_required: szükséges
     accept_terms: El kell fogadnia, hogy létre hozzon egy fiókot
+    error: An error occurred.
   school_info:
     title: Az iskolai információ (opcionális)
     school_country: Iskola országa
@@ -988,10 +989,25 @@
     create: Projekt létrehozása
     create_a_project: "Új projekt létrehozása:"
     new: "Új létrehozása"
+    new_buttons:
+      artist: Művész
+      playlab: Játéklabor
+      applab: App Lab
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Átnevezés"
     save: Mentés
     delete: Törlés
-    import: Import
+    import: Importálás
+    share_link_import_bad_link_header: A megosztási hivatkozást a rendszer nem ismerte
+      fel
+    share_link_import_bad_link_body: 'Nem sikerült importálni a megosztási hivatkozást.
+      Bizonyosodj meg arról, hogy a Minecraft: Agent kirakósból származó hivatkozást
+      használsz, és hogy a teljes hivatkozást lemásoltad.'
+    share_link_import_error_header: Hiba történt.
+    share_link_import_error_body: Hiba történt a megosztási hivatkozás importálása
+      során. Próbáld újra!
     exit: Vissza a tanfolyamhoz
     my_projects: Projektjeim
     project_gallery: Projektek

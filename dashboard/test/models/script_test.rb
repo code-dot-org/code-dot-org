@@ -79,10 +79,10 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map {|stage| stage[:scriptlevels]}.flatten
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages]
 
     # Set different level name in tested script
-    parsed_script[4][:levels][0]['name'] = "Level 1"
+    parsed_script.map {|stage| stage[:scriptlevels]}.flatten[4][:levels][0]['name'] = "Level 1"
 
     # Set different 'hidden' option from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), hidden: false}
@@ -208,10 +208,7 @@ class ScriptTest < ActiveSupport::TestCase
       "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
-    script = Script.add_script(
-      {name: 'test script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
-    )
+    script = Script.add_script({name: 'test script'}, script_data[:stages])
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
@@ -220,22 +217,22 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow applab and gamelab levels in hidden scripts' do
     Script.add_script(
       {name: 'test script', hidden: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
@@ -536,10 +533,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment3';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script(
-      {name: 'test_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
-    )
+    script = Script.add_script({name: 'test_script'}, script_data[:stages])
 
     # Everything has Stage <number> when nothing is lockable
     assert /^Lesson 1:/.match(script.stages[0].localized_title)
@@ -555,10 +549,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script(
-      {name: 'test_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
-    )
+    script = Script.add_script({name: 'test_script'}, script_data[:stages])
 
     # When first stage is lockable, it has no stage number, and the next stage starts at 1
     assert /^Lesson/.match(script.stages[0].localized_title).nil?
@@ -574,10 +565,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script(
-      {name: 'test_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
-    )
+    script = Script.add_script({name: 'test_script'}, script_data[:stages])
 
     # When only second stage is lockable, we count non-lockable stages appropriately
     assert /^Lesson 1:/.match(script.stages[0].localized_title)
@@ -596,7 +584,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
     assert_raises do
-      Script.add_script({name: 'test_script'}, script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten)
+      Script.add_script({name: 'test_script'}, script_data[:stages])
     end
   end
 
@@ -750,5 +738,29 @@ class ScriptTest < ActiveSupport::TestCase
     stage = create :stage, script: script
     create :script_level, script: script, stage: stage, levels: [level]
     assert_equal false, script.logged_out_age_13_required?
+  end
+
+  test "get_bonus_script_levels" do
+    script = create :script
+    stage1 = create :stage, script: script
+    create :stage, script: script
+    stage3 = create :stage, script: script
+    create :script_level, script: script, stage: stage1, bonus: true
+    create :script_level, script: script, stage: stage1, bonus: true
+    create :script_level, script: script, stage: stage3, bonus: true
+    create :script_level, script: script, stage: stage3, bonus: true
+
+    bonus_levels1 = script.get_bonus_script_levels(stage1)
+    bonus_levels3 = script.get_bonus_script_levels(stage3)
+
+    assert_equal 1, bonus_levels1.length
+    assert_equal 1, bonus_levels1[0][:stageNumber]
+    assert_equal 2, bonus_levels1[0][:levels].length
+
+    assert_equal 2, bonus_levels3.length
+    assert_equal 1, bonus_levels3[0][:stageNumber]
+    assert_equal 3, bonus_levels3[1][:stageNumber]
+    assert_equal 2, bonus_levels3[0][:levels].length
+    assert_equal 2, bonus_levels3[1][:levels].length
   end
 end

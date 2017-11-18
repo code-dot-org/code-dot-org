@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {pageLabels} from './Facilitator1819Labels';
+import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
 const PROGRAM_CSF = "CS Fundamentals (Pre-K - 5th grade)";
 const CSF_AVAILABILITY_ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training";
@@ -12,10 +12,10 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
     accountEmail: PropTypes.string.isRequired
   };
 
-  static labels = pageLabels.Section2ChooseYourProgram;
+  static labels = PageLabels.section2ChooseYourProgram;
 
   static associatedFields = [
-    ...Object.keys(pageLabels.Section2ChooseYourProgram),
+    ...Object.keys(PageLabels.section2ChooseYourProgram),
     "csdCspTeacherconAvailability_unavailableReason",
     "csdCspFitAvailability_unavailableReason"
   ];
@@ -23,7 +23,7 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
   render() {
     return (
       <FormGroup>
-        <h3>Section 2: Choose Your Program</h3>
+        <h3>Section 2: {SectionHeaders.section2ChooseYourProgram}</h3>
 
         {this.radioButtonsFor("program")}
 
@@ -36,11 +36,14 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
         <br/>
         {this.props.data.program === PROGRAM_CSF &&
           <div>
-            <h4>If selected for the program, you will be required to attend a Facilitator-in-Training Weekend in the spring of 2018.</h4>
+            <h4>
+              If selected for the program, you will be required to attend a
+              Facilitator-in-Training Weekend in the spring of 2018.
+            </h4>
 
             {this.radioButtonsFor("csfAvailability")}
 
-            {this.props.data.csfAvailability ===  CSF_AVAILABILITY_ONLY_WEEKEND &&
+            {this.props.data.csfAvailability === CSF_AVAILABILITY_ONLY_WEEKEND &&
               this.inputFor("csfPartialAttendanceReason", this.indented())
             }
           </div>
@@ -48,7 +51,10 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
 
         {this.props.data.program && this.props.data.program !== PROGRAM_CSF &&
           <div>
-            <h4>If selected for the program, you will be required to attend TeacherCon and a Facilitator-in-Training Weekend in the summer of 2018.</h4>
+            <h4>
+              If selected for the program, you will be required to attend TeacherCon and a
+              Facilitator-in-Training Weekend in the summer of 2018.
+            </h4>
 
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspTeacherconAvailability", {
               "I'm not available for either TeacherCon. (Please Explain):" : "unavailableReason"
@@ -86,5 +92,26 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
 
     return requiredFields;
   }
-}
 
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.program !== PROGRAM_CSF) {
+      changes.csfAvailability = undefined;
+
+      if (data.csfAvailability !== CSF_AVAILABILITY_ONLY_WEEKEND) {
+        changes.csfPartialAttendanceReason = undefined;
+      }
+    }
+
+    if (!data.program || data.program === PROGRAM_CSF) {
+      changes.csdCspTeacherconAvailability = undefined;
+      changes.csdCspFitAvailability = undefined;
+    }
+
+    return changes;
+  }
+}

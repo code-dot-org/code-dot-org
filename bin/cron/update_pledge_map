@@ -21,25 +21,50 @@ require 'googleauth'
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
 TABLE_ID = CDO.pledge_map_table_id.freeze
-CURRENT_CENSUS_SIGNUP = "Census2017".freeze
+CENSUS_FORM_KINDS = "'Census2017','HocCensus2017'".freeze
 
 file = Tempfile.new(['data', '.csv'])
 begin
   CSV.open(file.path, 'w') do |csv|
-    DB_READONLY[:forms].where(kind: CURRENT_CENSUS_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
+    DASHBOARD_DB[:census_submissions].
+      select(:census_submissions__id___census_submissions_id, :how_many_10_hours, :how_many_20_hours, :pledged, :school_infos__school_id, :schools__name, :schools__zip, :schools__city).
+      join(:census_submissions_school_infos, census_submission_id: :id).
+      join(:school_infos, id: :school_info_id).
+      join(:schools, id: :school_id).
+      paged_each(rows_per_fetch: 10_000) do |submission|
+      pledged = submission[:pledged]
+      teaches_yes = ["SOME", "ALL"]
+      teaches_cs = teaches_yes.include?(submission[:how_many_10_hours]) || teaches_yes.include?(submission[:how_many_20_hours])
+
+      # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
+      next unless pledged || teaches_cs
+
+      type = pledged ? "pledged" : "teaches_cs"
+
+      next unless submission[:school_id]
+      row_id = "CENSUS_SUBMISSIONS-#{submission[:census_submissions_id]}"
+      row = [row_id, submission[:name], submission[:zip], submission[:city], type]
+      csv << row
+    end
+
+    DB_READONLY[:forms].where("kind in (#{CENSUS_FORM_KINDS})").paged_each(rows_per_fetch: 10_000) do |form|
+      # Skip any rows that were migrated to CENSUS_SUBMISSIONS since those were already processed above.
+      form_map = DASHBOARD_DB[:census_submission_form_maps].where(form_id: form[:id])
+      next unless form_map.empty?
       data = JSON.parse(form[:data])
 
       # Was a pledge made?
-      pledged = data["pledge_b"] == "on"
+      pledged = ["on", "1"].any? {|s| s.casecmp(data["pledge_b"].to_s).zero?}
 
       # Does the school teach some kind of CS?
-      teaches_cs = ["Some", "All"].include?(data["ten_hours_s"]) || ["Some", "All"].include?(data["twenty_hours_s"])
+      teaches_cs = ["some", "all"].any? {|s| s.casecmp(data["ten_hours_s"].to_s).zero?} ||
+          ["some", "all"].any? {|s| s.casecmp(data["twenty_hours_s"].to_s).zero?}
 
       # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
       next unless pledged || teaches_cs
 
       # Use the school ID in the form.
-      school_id = data["school_id_s"]
+      school_id = data["school_id_s"] || data["nces_school_s"]
 
       # Retrieve the ZIP and city for this school district from the dashboard's database.
       school = DASHBOARD_DB[:schools].where(id: school_id).first
@@ -51,7 +76,8 @@ begin
         type = "teaches_cs"
       end
 
-      row = [form[:id], school[:name], school[:zip], school[:city], type]
+      row_id = "FORMS-#{form[:id]}"
+      row = [row_id, school[:name], school[:zip], school[:city], type]
       csv << row
     end
 

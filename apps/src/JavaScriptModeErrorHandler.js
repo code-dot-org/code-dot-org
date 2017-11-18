@@ -73,7 +73,7 @@ export default class JavaScriptModeErrorHandler {
     logText += message;
 
     // Send the assembled output to our logging service.
-    this.logTarget_.log(logText);
+    this.logTarget_.log(logText, logLevel);
 
     // Add an annotation directly in the editor for this output
     if (lineNumber !== undefined) {

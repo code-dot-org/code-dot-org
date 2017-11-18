@@ -2,7 +2,7 @@ module SchoolInfoInterstitialHelper
   def self.show_school_info_interstitial?(user)
     return false unless user.teacher?
 
-    return false if user.account_age_days < 30
+    return false if user.account_age_days < 7
 
     school_info = user.school_info
 

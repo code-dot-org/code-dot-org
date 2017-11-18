@@ -94,14 +94,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft  ანგარიში
-    clever: Clever Account
+    clever: Clever-ის ანგარიში
     forgot_password: "დაგავიწყდათ თქვენი პაროლი?"
     need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
     need_unlock: "არ მოგსვლიათ განბლოკვის ინსტრუქციები?"
     not_linked: "ბოდიში, თქვენი Code.org-ის ანგარიში არაა დაკავშირებული თქვენს %{provider}-თან.
       ქვემოთ პაროლის შეყვანით თქვენ შეძლებთ ანგარიშში შესვლა."
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "ბოდიშ გიხდით, მაგრამ თქვენი Code.org-ის ანგარიში არ არის დაკავშირებული
+      თქვენს %{provider}-თან. გთხოვთ შეხვიდეთ Clever-ის პორტალიდან."
   signup_form:
     student_count: "უკვე დარეგისტრირდა %{count} სტუდენტი."
     teacher_count: "უკვე დარეგისტრირდა %{count} მასწავლებელი."
@@ -155,6 +155,7 @@
     user_type_student: "მოსწავლე"
     field_is_required: "სავალდებულოა"
     accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
+    error: "მოხდა შეცდომა."
   school_info:
     title: "სასკოლო ინფორმაცია (არასავალდებულო)"
     school_country: "სკოლის ქვეყანა"
@@ -300,14 +301,14 @@
       my_dashboard: "ჩემი მთავარი პანელი"
       courses: "კურსები"
       course_catalog: "კურსების კატალოგი"
-      project_gallery: "პროექტის გალერეა"
+      project_gallery: "პროექტები"
       sections: "განყოფილებები"
       help_support: "დახმარება და მხარდაჭერა"
       report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
       teacher_community: "მასწავლებელთა კოლექტივი"
       professional_learning: "პროფესიონალთაშორისი სწავლება"
       documentation: "დოკუმენტაცია"
-      tutorials: "გაკვეთილები"
+      tutorials: "ტუტორიალები"
       educate_overview: "პედაგოგის მიმოხილვა"
       educate_elementary: "დაწყებითი სკოლა"
       educate_middle: "საშუალო სკოლა"
@@ -690,7 +691,7 @@
     notes_coming_soon: "ამ ვიდეოს ჩანაწერები მალე დაიდება."
     autoplay_option: "ვიდეოების ავტომატური ჩართვა"
     download: "ვიდეოს გადმოწერა"
-    show_notes: "შენიშვნების ჩვენება"
+    show_notes: "ჩანიშვნების ჩვენება"
     show_video: "ვიდეოს ჩვენება"
   compatibility:
     upgrade:
@@ -860,7 +861,7 @@
     help_resources: "დახმარება და რესურსები"
     help_support: "დახმარება და მხარდაჭერა"
     documentation: "დოკუმენტაცია"
-    tutorials: "გაკვეთილები"
+    tutorials: "ტუტორიალები"
   multi:
     wrong_title: "პასუხი არასწორია"
     wrong_body: "ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!"
@@ -1008,10 +1009,24 @@
     create: "პროექტის შექმნა"
     create_a_project: "ახალი პროექტის შექმნა:"
     new: "შექმენით ახალი"
+    new_buttons:
+      artist: "მხატვარი"
+      playlab: "თამაშების ლაბი"
+      applab: App Lab
+      gamelab: "თამაშების ლაბორატორია"
+      weblab: "ვებ ლაბორატორია (ბეტა)"
+    new_buttons_header: "დაიწყეთ ახალი პროექტი"
     rename: "სახელის შეცვლა"
     save: "შენახვა"
     delete: "წაშლა"
-    import: Import
+    import: "შემოტანა"
+    share_link_import_bad_link_header: "გასაზიარებელი ბმულის ამოცნობა ვერ მოხერხდა"
+    share_link_import_bad_link_body: "ჩვენ ვერ შემოვიტანეთ ეს გასაზიარებელი ბმული.
+      დარწმუნდით, რომ იყენებთ ბმულს მაინკრაფტი: აგენტის თავსატეხიდან და ბმული სრულად
+      გადააკოპირეთ."
+    share_link_import_error_header: "მოხდა შეცდომა."
+    share_link_import_error_body: "ამ გასაზიარებელი ბმულის შემოტანის დროს მოხდა შეცდომა.
+      გთხოვთ გაიმეოროთ თავიდან."
     exit: "დავუბრუნდეთ კურსს"
     my_projects: "ჩემი პროექტები"
     project_gallery: "პროექტები"
@@ -1123,9 +1138,9 @@
     main_course: "მთავარი კურსი"
     extra_course_content: "კურსის დამატებითი მასალები"
     csf_e_1: "გაიზარდე კურს E-მდე (არჩევითი)"
-    csf_e_2: E კურსის შემცველობა
+    csf_e_2: E კურსის შიგთავსი
     csf_f_1: "გაიზარდე კურს F-მდე (არჩევითი)"
-    csf_f_2: F კურსის შემცველობა
+    csf_f_2: F კურსის შიგთავსი
     csd1_1: "თავი 1: პრობლემის გადაჭრის პროცესი"
     csd1_2: "თავი 2: კომპიუტერები და პრობლემების გადაჭრა"
     csd2_1: "თავი 1: ვებ კონტენტი და HTML"
@@ -1242,7 +1257,7 @@
     უნდა იყოთ."
   return_unit_overview: "კურსის მიმოხილვაზე გადასვლა"
   return_course_overview: "კურსის მიმოხილვაზე გადასვლა"
-  view_all_units: "ყველა ერთეულის ნახვა"
+  view_all_units: "ყველა სექციის ნახვა"
   pd:
     survey:
       number_teachers: Number of attending teachers

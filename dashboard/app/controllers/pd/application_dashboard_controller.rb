@@ -1,20 +1,15 @@
 module Pd
   class ApplicationDashboardController < ApplicationController
-    before_action :authenticate_user!
+    authorize_resource class: 'Pd::Application::ApplicationBase'
 
     def index
-      @permission = nil
-
-      if current_user.permission? UserPermission::WORKSHOP_ADMIN
-        @permission = :workshop_admin
-      end
-
-      unless @permission
-        render_404
-        return
-      end
-
       view_options(full_width: true)
+
+      @script_data = {
+        props: {
+          regionalPartnerName: current_user.regional_partners.first.try(:name)
+        }.to_json
+      }
     end
   end
 end

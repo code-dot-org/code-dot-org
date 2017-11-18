@@ -6,7 +6,10 @@ const PHONE_NUMBER_REGEX = /(\()?(\(?\d{1,3})?(\) ?)?(\d{1,3})?(-| )?(\d{1,4})?/
 export default class UsPhoneNumberInput extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element
+    ]).isRequired,
     value: PropTypes.string,
     validationState: PropTypes.string,
     errorMessage: PropTypes.string,

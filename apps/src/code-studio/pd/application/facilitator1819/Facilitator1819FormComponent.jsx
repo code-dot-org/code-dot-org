@@ -1,5 +1,6 @@
-import {PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import FormComponent from '../../form_components/FormComponent';
+import MarkdownSpan from '../../components/markdownSpan';
 
 export default class Facilitator1819FormComponent extends FormComponent {
   static propTypes = {
@@ -19,7 +20,12 @@ export default class Facilitator1819FormComponent extends FormComponent {
       console.warn(`Label missing for ${name}`);
       return name;
     }
-    return this.constructor.labels[name];
+
+    return (
+      <MarkdownSpan>
+        {this.constructor.labels[name]}
+      </MarkdownSpan>
+    );
   }
 
   indented(depth = 1) {

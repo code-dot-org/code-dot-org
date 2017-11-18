@@ -175,14 +175,14 @@ class ApiController < ApplicationController
     script = load_script(section)
 
     # stage data
-    stages = script.script_levels.where(bonus: nil).group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:stage).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
       }
     end
 
-    script_levels = script.script_levels.where(bonus: nil)
+    script_levels = script.script_levels.select {|sl| sl.bonus.nil?}
 
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data

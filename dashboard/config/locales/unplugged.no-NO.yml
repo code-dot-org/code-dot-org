@@ -149,7 +149,7 @@
       BigEvent:
         title: Den store begivenheten
         desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
-          handlnger som datamaskinen overfoker. Læreren trykker på knapper på en papirfjernkontroll
+          handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll
           og elevene svarer basert på hvilken knapp som er trykket.
       GoingPlacesSafely:
         title: Trygg reise
@@ -191,13 +191,13 @@
           funksjonen).
       DiceRace:
         title: 'Virkelige algoritmer: Terningrace'
-        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
-          ved hjelp av plante et frø som et eksempel. Som en del av dette skal elevene
-          finne og skrive ned algoritmen for terningracet.
+        desc: Denne leksjonen viser måter vi bruker algoritmer på i vårt daglige liv.
+          Som en del av dette, vil studentene identifisere og skrive ned algoritmen
+          for terningracet.
       Internet:
         title: Internett
-        desc: Studentene sende meldinger som representerer ulike Internett metoder
-          bruke papirark.
+        desc: Studentene sender meldinger som representerer ulike internett overføringsmetoder
+          ved hjelp av papirark.
       Crowdsourcing:
         title: Crowdsourcing
         desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig
@@ -284,26 +284,26 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: I denne oppgaven skal du lære om løkker!
       courseB_unplugged_MRF:
         title: Frakoblet Aktivitet
-        desc: In this lesson, you will 'program' your friends!
+        desc: I denne oppgaven skal du 'programmere' vennene dine!
       courseB_unplugged_loopyMRF:
         title: Frakoblet Aktivitet
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Akkurat som i "Mine robotvenner" skal du "programmere" vennene dine,
+          men denne gangen med løkker!
       courseC_Unplugged_ScreenOutTheMean:
         title: Frakoblet Aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       courseD_unplugged_digitalCitizenship:
         title: Frakoblet Aktivitet
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: I dag skal du lære hva det vil si å være en digital borger.
       courseE_unplugged_privateInformation:
-        title: Frakoblet Aktivitet
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Sunn fornuft opplæring: Privat og personlig informasjon '
+        desc: I dag vil du lære forskjellen mellom privat og personlig informasjon!
       courseF_unplugged_powerOfWords:
         title: Frakoblet Aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -323,7 +323,7 @@
       courseABC_unplugged_bigEvent:
         title: Den store begivenheten
         desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
-          handlnger som datamaskinen overfoker. Læreren trykker på knapper på en papirfjernkontroll
+          handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll
           og elevene svarer basert på hvilken knapp som er trykket.
       courseB_unplugged_digitalFootprint:
         title: Dine digitale fotavtrykk
@@ -373,10 +373,10 @@
           videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
           informasjon (som for eksempel bilder og farger) binært også.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
-        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
-          ved hjelp av plante et frø som et eksempel. Som en del av dette skal elevene
-          finne og skrive ned algoritmen for terningracet.
+        title: 'Virkelige algoritmer: Terningrace'
+        desc: Denne leksjonen viser måter vi bruker algoritmer på i vårt daglige liv.
+          Som en del av dette, vil studentene identifisere og skrive ned algoritmen
+          for terningracet.
       courseE_unplugged_songwritingParameters:
         title: Låtskriving med parametere
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende
@@ -384,8 +384,8 @@
           funksjonen).
       courseE_unplugged_internet:
         title: Internett
-        desc: Studentene sende meldinger som representerer ulike Internett metoder
-          bruke papirark.
+        desc: Studentene sender meldinger som representerer ulike internett overføringsmetoder
+          ved hjelp av papirark.
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
         desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig
@@ -418,3 +418,38 @@
           igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt
           forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig
           nyttig praksis.  '
+      swipeRightPassThrough:
+        title: "Økt med rekruttering rekrutterings scenarier"
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      swipeRightPassThrough-test123:
+        title: "Økt med rekruttering rekrutterings scenarier"
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: |-
+          # Brad Repro Bug 000\r
+          ## Attempt to recreate a bug Brooke reported\r
+          process as follows:\r
+          1. started with an `unplugged` level. populated with info. hit save and publish.\r
+          2. “destroyed” the level\r
+          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush

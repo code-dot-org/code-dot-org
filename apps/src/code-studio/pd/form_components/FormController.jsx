@@ -49,6 +49,13 @@ export default class FormController extends React.Component {
     this.prevPage = this.prevPage.bind(this);
   }
 
+  componentWillMount() {
+    if (this.constructor.sessionStorageKey && sessionStorage[this.constructor.sessionStorageKey]) {
+      const reloadedState = JSON.parse(sessionStorage[this.constructor.sessionStorageKey]);
+      this.setState(reloadedState);
+    }
+  }
+
   /**
    * @override
    */
@@ -114,7 +121,32 @@ export default class FormController extends React.Component {
       data,
       errors
     });
+
+    this.saveToSessionStorage({data});
   }
+
+  /**
+   * Override in derived classes with a key name (e.g. the class name)
+   * to save session storage in that key. Otherwise, no session storage will be saved.
+   */
+  static sessionStorageKey = null;
+
+  /**
+   * Save currentPage and form data to the session storage, if a sessionStorageKey is specified on this class
+   * @param {Object} newState - data and/or currentPage to override the value in this.state
+   */
+  saveToSessionStorage = (newState) => {
+    if (this.constructor.sessionStorageKey) {
+      const mergedData = {
+        ...{
+          currentPage: this.state.currentPage,
+          data: this.state.data
+        },
+        ...newState
+      };
+      sessionStorage.setItem(this.constructor.sessionStorageKey, JSON.stringify(mergedData));
+    }
+  };
 
   /**
    * Assemble all data to be submitted
@@ -162,6 +194,7 @@ export default class FormController extends React.Component {
       dataType: "json",
       data: JSON.stringify(this.serializeFormData())
     }).done(data => {
+      sessionStorage.removeItem(this.constructor.sessionStorageKey);
       this.onSuccessfulSubmit(data);
     }).fail(data => {
       if (data.responseJSON &&
@@ -295,7 +328,7 @@ export default class FormController extends React.Component {
     const pageFields = currentPage.associatedFields;
 
     // Trim string values on page, and set empty strings to null
-    const pageData = {};
+    let pageData = {};
     pageFields.forEach(field => {
       let value = this.state.data[field];
       if (typeof value === "string") {
@@ -305,6 +338,8 @@ export default class FormController extends React.Component {
         pageData[field] = value;
       }
     });
+
+    pageData = Object.assign(pageData, currentPage.processPageData(pageData));
     this.setState({
       data: {
         ...this.state.data,
@@ -359,6 +394,8 @@ export default class FormController extends React.Component {
       this.setState({
         currentPage: newPage
       });
+
+      this.saveToSessionStorage({currentPage: newPage});
     }
   }
 
@@ -447,7 +484,7 @@ export default class FormController extends React.Component {
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
   options: PropTypes.object.isRequired,
-  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 FormController.defaultProps = {

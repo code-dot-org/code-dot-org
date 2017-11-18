@@ -1,5 +1,5 @@
 import React from 'react';
-import {DetailViewContents} from './detail_view_contents';
+import DetailViewContents from './detail_view_contents';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
 export default storybook => {
@@ -19,7 +19,8 @@ export default storybook => {
               school_name: 'School Name',
               district_name: 'District Name',
               email: 'email',
-              formData: {
+              application_type: 'Facilitator',
+              form_data: {
                 firstName: 'First Name',
                 lastName: 'Last Name',
                 title: 'Title',
@@ -28,10 +29,12 @@ export default storybook => {
                 accountEmail: 'accountEmail',
                 alternateEmail: 'alternateEmail',
                 program: 'program',
-                planOnTeachering: ['Yes'],
+                planOnTeaching: ['Yes'],
                 abilityToMeetRequirements: '10'
               }
             }}
+            viewType="facilitator"
+            updateProps={() => {}}
           />
         )
       }

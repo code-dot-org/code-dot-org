@@ -9,7 +9,8 @@
             arendada probleemi lahendamise oskust ning vastupidavust raskete ülesannete
             lahendamisel. Selle kursuse lõpuks loovad õpilased päris oma mängu või
             loo, mida nad saavad jagada. Soovitatav 5-8-aastastele.
-          description_short: Alusta kursusega 1, kui õpilased on äsja lugema hakanud
+          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes on just
+            õppisid lugema.
           description_audience: Vanustele 4-6
           stages:
             'Artist: Loops':
@@ -54,7 +55,8 @@
             siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad programme
             probleemide lahendamiseks ja arendavad interaktiivseid mänge või lugusid,
             mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
-          description_short: "Õpilastega, kes suudavad lugeda, alustage kursus 2-ga."
+          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes oskavad
+            lugeda.
           description_audience: Vanusele 6+ (lugemisoskus vajalik)
           stages:
             'Artist: Debugging':
@@ -102,7 +104,8 @@
             ning loovad paindlike lahendusi veelgi keerulisematele probleemidele.
             Kursuse lõpuks loovad õpilased interaktiivseid lugusid ja mänge, mida
             nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
-          description_short: Kursus 3 on järg kursusele 2.
+          description_short: Kaevuma sügavamale programmeerises ehitades mänge ja
+            interaktiivseid lugusid. See on järg Kursusele 2.
           description_audience: Vanustele 8-18
           stages:
             Artist:
@@ -189,8 +192,8 @@
             kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad
             neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada
             tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
-          description_short: "Õpilased, kes võtavad Kursus 4-ja peaksid enne olema
-            läbinud Kursused 2 ja 3."
+          description_short: Ehita keerulisemaid programme koos trüklite ja parameetritega
+            ja parameetritega funktsioonid. See on järg Kursus 3le.
           description_audience: Vanustele 10-18
           stages:
             Artist:
@@ -364,7 +367,7 @@
             K-5 Courses:
               name: K-5 Courses
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             'Programming Concept: Conditionals':
               name: 'Programming Concept: Conditionals'
             'Programming Concept: Events':
@@ -374,13 +377,13 @@
             'Programming Concept: Loops':
               name: 'Programming Concept: Loops'
             Reflection:
-              name: Reflection
+              name: Peegeldus
             Teacher Dashboard:
               name: "Õpetaja töölaud"
             Unplugged lessons:
-              name: Unplugged lessons
+              name: Seadmeteta tunnid
             Writing computer programs:
-              name: Writing computer programs
+              name: Arvutiprogrammide kirjutamine
         netsim:
           title: Interneti simulaator
           description: Learn about how the Internet works.
@@ -394,7 +397,7 @@
             Internet Simulator Freeplay:
               name: Internet Simulator Freeplay
             Manual DNS:
-              name: Manual DNS
+              name: Manuaalne DNS
             Overview and Setup Instructions:
               name: Overview and Setup Instructions
             Packets and Reliability:
@@ -506,7 +509,7 @@
           title: Flappy kood
           description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi
             meie Flappy Code õpetusvideot!
-          description_short: Loo oma Flappy mäng vähem kui 10 minutiga!
+          description_short: Loo oma Flappy mäng!
           description_audience: ''
           stages:
             Flappy Code:
@@ -562,9 +565,9 @@
           description_short: Make Black and White Images with the pixelation tool
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Binaararvud
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Baidid ja faili suurused
             Encode a Complex Thing:
               name: Encode an Experience
             Encoding B&W Images:
@@ -603,7 +606,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -627,7 +630,7 @@
             Evaluation Blocks:
               name: Hindamise plokid
             Luigi's Pizza:
-              name: Luigi's Pizza
+              name: Luigi Pizza
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
@@ -635,7 +638,7 @@
             Strings and Images:
               name: Sõned ja kujutised
             Your Game - Animation:
-              name: Your Game - Animation
+              name: Sinu mäng - animatsioon
             Your Game - Booleans:
               name: Your Game - Booleans
             Your Game - Collision Detection:
@@ -660,15 +663,15 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             What is CSP?:
-              name: What is CSP?
+              name: Mis on CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for csp
@@ -676,9 +679,9 @@
           description_audience: ''
           stages:
             Lesson 14:
-              name: Lesson 14
+              name: "Õppetund 14"
             Lesson 15:
-              name: Lesson 15
+              name: "Õppetund 15"
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -687,15 +690,15 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             What is ECS?:
-              name: What is ECS?
+              name: Mis on ECS?
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -725,7 +728,7 @@
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -814,11 +817,11 @@
             Computer Science Pedagogy:
               name: Computer Science Pedagogy
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             Strings and Images:
               name: Sõned ja kujutised
             Teacher Dashboard:
@@ -836,15 +839,15 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             What is ECS?:
-              name: What is ECS?
+              name: Mis on ECS?
         ECSPD-iZone:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -854,15 +857,15 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             What is ECS?:
-              name: What is ECS?
+              name: Mis on ECS?
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -871,7 +874,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -890,7 +893,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -931,7 +934,7 @@
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -962,7 +965,7 @@
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         sciencePD2:
           title: Computer Science in Science PD
           description: 'Faas 2 online: Blended Summer Study'
@@ -992,7 +995,7 @@
             Mystery Model:
               name: Mystery Model
             Welcome Back!:
-              name: Welcome Back!
+              name: Tere tulemast tagasi!
         Testing:
           title: Testing
           description: Testing
@@ -1023,7 +1026,7 @@
             DNS in the Real World:
               name: DNS in the Real World
             Encryption Algorithms:
-              name: Keys and Passwords
+              name: Võtmed ja paroolid
             HTTP and Abstraction:
               name: HTTP and Abstraction on the Internet
             Invent an Addressing Protocol:
@@ -1074,7 +1077,7 @@
             Free Play:
               name: Tasuta mäng
             Luigi's Pizza:
-              name: Luigi's Pizza
+              name: Luigi Pizza
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
@@ -1174,7 +1177,7 @@
             Booleans:
               name: Booleans
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Defining Functions:
               name: "Ülesannete määratlemine"
             Defining Variables:
@@ -1184,7 +1187,7 @@
             Evaluation Blocks:
               name: Hindamise plokid
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1240,7 +1243,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             Planning:
               name: Planning
         ECSPD2:
@@ -1365,7 +1368,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Faas 2 online: Blended Summer Study'
@@ -1551,7 +1554,7 @@
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: Tere tulemast tagasi!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies
@@ -1579,7 +1582,7 @@
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ECSPD3-Unit3:
@@ -1595,7 +1598,7 @@
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -1613,7 +1616,7 @@
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -1748,15 +1751,15 @@
             Getting Started:
               name: Getting Started
             Teaching Support - Lessons 1-3:
-              name: Teaching Support - Lessons 1-3
+              name: "Õpetamise tugi - Tunnid 1-3"
             Teaching Support - Lessons 13-16:
-              name: Teaching Support - Lessons 13-16
+              name: "Õpetamise tugi - Tunnid 13-16"
             Teaching Support - Lessons 17-20:
-              name: Teaching Support - Lessons 17-20
+              name: "Õpetamise tugi - Tunnid 17-20"
             Teaching Support - Lessons 4-7:
-              name: Teaching Support - Lessons 4-7
+              name: "Õpetamise tugi - Tunnid 4-7"
             Teaching Support - Lessons 8-12:
-              name: Teaching Support - Lessons 8-12
+              name: "Õpetamise tugi - Tunnid 8-12"
         CSPPD3-Unit2:
           title: 'Computer Science Principles: Unit 2 PD'
           description: Online Exploration of CSP Unit 2
@@ -2164,7 +2167,7 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -2198,7 +2201,7 @@
           description_audience: ''
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Binaararvud
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
@@ -2252,7 +2255,7 @@
           description_audience: ''
           stages:
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Baidid ja faili suurused
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
@@ -2605,7 +2608,7 @@
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
@@ -2686,7 +2689,7 @@
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles
@@ -3158,7 +3161,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Märkamata vead
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3246,7 +3249,7 @@
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ecs-unit3:
@@ -3262,7 +3265,7 @@
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -3280,7 +3283,7 @@
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "Õpetamise strateegiad"
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -3379,21 +3382,21 @@
             Introduction to Teachercon:
               name: Introduction to Teachercon
             Lesson 1,10:
-              name: Lesson 1,10
+              name: "Õppetund 1,10"
             Lesson 1,11:
-              name: Lesson 1,11
+              name: "Õppetund 1,11"
             Lesson 1,4:
-              name: Lesson 1,4
+              name: "Õppetund 1,4"
             Lesson 1,6:
-              name: Lesson 1,6
+              name: "Õppetund 1,6"
             Lesson 1,9:
-              name: Lesson 1,9
+              name: "Õppetund 1,9"
             Lesson 2,10:
-              name: Lesson 2,10
+              name: "Õppetund 2.10"
             Lesson 2,2:
-              name: Lesson 2,2
+              name: "Õppetund 2,2"
             Lesson 2,3:
-              name: Lesson 2,3
+              name: "Õppetund 2,3"
             Test stage with bubbles:
               name: Test stage with bubbles
         csd3:
@@ -3766,6 +3769,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4176,7 +4181,7 @@
         basketball:
           title: Vali meeskond ja tee korvpallimäng
           description_audience: ''
-          description_short: Tee korvpallimäng
+          description_short: Vali oma meeskond ja tee korvpallimäng
           description: Vali meeskond ja tee korvpallimäng
           stages:
             Bounce:
@@ -4306,7 +4311,8 @@
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
               description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.
+                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
+                \r
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4405,15 +4411,10 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: "Starting with an exploration of the song \"Happy
-                Birthday\" and its history of copyright protection, the class explores
-                the purpose and role of copyright for both creators and users of creative
-                content. After a brief discussion about the purpose of copyright,
-                we move on to an activity exploring the various Creative Commons licenses
-                as a solution to the difficulty in dealing with copyright. \n\nFinally,
-                with a common understanding of the restrictions of various Creative
-                Commons licenses, students will learn how to add images to their web
-                pages using the &lt;img&gt; tag."
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4421,12 +4422,9 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: "After learning about how to link web pages to
-                one another, students are finally able to publish the website they
-                have been working on.  In this lesson, they link together all the
-                previous pages they have created into one project, create a new page,
-                and add navigation between the pages before publishing the entire
-                site to the Web.  \n\n"
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4449,9 +4447,22 @@
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
             Headings:
               name: Headings
+              description_student: This lesson continues the introduction to HTML
+                tags, this time with headers.  The class practices using header tags
+                to create page and section titles and learns how the different header
+                elements are displayed by default.  Next, the class plans how to organize
+                their content on the personal web pages that will be built across
+                the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to
+                structure text on web pages, this time with headings.  Students learn
+                how the different heading elements are displayed by default and practice
+                using them to create page and section titles.  Students then start
+                to decide how they will organize their content on their own personal
+                web pages.  In the last level, students begin the project that they
+                will continue to work on throughout the unit.
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -4520,7 +4531,7 @@
                 that user’s characteristics to choose appropriate products, critique
                 product design, and suggest improvements to design.
               description_teacher: |
-                Designers need to understand their users’ needs.  This lesson starts students thinking about how to design for another person by role-playing a user profile and reacting to a series of products.  Students will each receive a user profile describing a person. They will use that user’s characteristics to choose appropriate products, critique product design, and suggest improvements to design.\r
+                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4603,7 +4614,7 @@
                 some time to discuss the basic functionality of their app before using
                 3x5 index cards to develop paper prototypes.
               description_teacher: |
-                To better scope their own apps, teams start by looking through several example apps, choosing one (or more) as a basis for the type of app they will make. From there, teams will have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
             Prototype Testing:
               name: Prototype Testing
               description_student: Teams will develop a plan to test with users before
@@ -4773,6 +4784,64 @@
                 directs students through the process including building the app and
                 testing it with their user to see if their assumptions about the user
                 interfaces they created are accurate.
+            Linking Screens:
+              name: Linking Screens
+              description_student: Building on the screens that the class designed
+                in the previous lesson, teams combine screens into a single app. Simple
+                code can then be added to make button clicks change to the appropriate
+                screen.
+              description_teacher: In this lesson teams combine the screens that they
+                designed in the previous lesson into a single app, which they can
+                then link together using code. Students learn basic event driven programming
+                by building up the model app that they started in the previous lesson.
+                In addition to the screen that students designed yesterday, they'll
+                learn how to create additional screens and even import screens made
+                by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and
+                get feedback on software before writing any code. To help out a developer
+                with their idea, the class tests and provides an app prototype made
+                of paper.
+              description_teacher: Following the mini design project, students look
+                towards the next phase of design - prototyping a product that attempts
+                to address user needs. In teams, students examine a paper prototype
+                for a chat app called "Txt Ur Grndkdz". Through using this paper prototype,
+                students get a chance to see how a simple paper prototype can be used
+                to quickly test ideas and assumptions before we ever get to the computer.
+                After "using" the provided prototype students begin to identify ways
+                to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots
+                of feedback for the developer. The class needs to sort through all
+                of this feedback, identify the common themes and needs, and start
+                revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users"
+                of the paper-prototyped app from the previous lesson in order to develop
+                improvements to the user interface of that paper prototype. The lesson
+                begins with a reflection on the fact that designers need to translate
+                human needs with technology into changes to the user interface or
+                experience. Students are then given a collection of feedback and requests
+                from users of the app from the previous lesson. In groups students
+                categorize the feedback and identify ways the needs expressed in the
+                feedback could be met by changes to the interface of the app. Then
+                in groups students will implement some of these changes to meet one
+                of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Each team prepares a presentation to "pitch" the
+                app they've developed. This is the time to share struggles, triumphs,
+                and plans for the future.
+              description_teacher: At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation. Using the provided presentation
+                template, teams prepare to present about their process of app development,
+                including the problem they set out to solve, the ways in which they've
+                incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: KoodiTund Minecraft Designer
           description_audience: ''
@@ -5113,7 +5182,7 @@
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
-          title: Tee MCode'iga oma spordimäng
+          title: Tee oma spordimäng
           description_audience: ''
           description_short: Sega omavahel ja sobita kokku üle spordialade
           description: Sega omavahel ja sobita kokku üle spordialade
@@ -5167,7 +5236,7 @@
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: Tere tulemast tagasi!
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -5448,6 +5517,16 @@
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -7861,6 +7940,14 @@
               name: Intro to AppLab - Your First App 2
             Intro to AppLab - Your First App 3:
               name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -8271,6 +8358,8 @@
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -8296,6 +8385,153 @@
             craft17 stage:
               name: craft17 stage
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Loomisfunktsioonid
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: |
+            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+        pwc:
+          stages:
+            new stage:
+              name: new stage
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+          title: PwC Access Your Potential
+          description_audience: ''
+          description_short: ''
+          description: ''
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: Minecrafti KoodiTund
+          title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
           description: ''

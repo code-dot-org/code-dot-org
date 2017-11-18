@@ -1,94 +1,165 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
+import {Button} from 'react-bootstrap';
+import {StatusColors} from './constants';
+import _ from 'lodash';
+
+const styles = {
+  table: {
+    width: '100%',
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
+  }
+};
 
 export default class QuickViewTable extends React.Component {
+  static propTypes = {
+    path: PropTypes.string.isRequired,
+    data: PropTypes.array.isRequired,
+    statusFilter: PropTypes.string
+  };
+
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+
+  constructColumns() {
+    let columns = [];
+    columns.push({
+      property: 'created_at',
+      header: {
+        label: 'Submitted',
+      },
+      cell: {
+        format: (created_at) => {
+          return new Date(created_at).toLocaleDateString('en-us', {month: 'long', day: 'numeric'});
+        }
+      }
+    },{
+      property: 'applicant_name',
+      header: {
+        label: 'Name',
+      },
+    },{
+      property: 'district_name',
+      header: {
+        label: 'School District',
+      },
+    },{
+      property: 'school_name',
+      header: {
+        label: 'School Name',
+      },
+    },{
+      property: 'status',
+      header: {
+        label: 'Status',
+      },
+      cell: {
+        format: (status) => {
+          return _.upperFirst(status);
+        },
+        transforms: [
+          (status) => ({
+            style: {...styles.statusCellCommon, ...styles.statusCell[status]}
+          })
+        ]
+      }
+    },{
+      property: 'notes',
+      header: {
+        label: 'Notes'
+      },
+      cell: {
+        format: this.formatNotesTooltip,
+        transforms: [
+          () => ({
+            style: {...styles.notesCell}
+          })
+        ]
+      }
+    },{
+      property: 'id',
+      header: {
+        label: 'View Application',
+      },
+      cell: {
+        format: this.formatViewButton
+      }
+    });
+    return columns;
+  }
+
+  formatNotesTooltip = (notes) => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
+
+  formatViewButton = (id) => {
+    return (
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(`/${this.props.path}/${id}`)}
+        onClick={this.handleViewClick.bind(this, id)}
+      >
+        View Application
+      </Button>
+    );
+  };
+
+  handleViewClick = (id, event) => {
+    event.preventDefault();
+    this.context.router.push(`/${this.props.path}/${id}`);
+  };
+
+  constructRows() {
+    return this.props.statusFilter ? this.props.data.filter(row => row.status === this.props.statusFilter) : this.props.data;
+  }
 
   render() {
-    const rows = [
-      {
-        id: 1,
-        created_at: "2017-10-10 14:06:04 -0700",
-        name: "Minerva McGonagall",
-        district: "Hogsmeade Central School District",
-        school: "Hogwarts School of Witchcraft and Wizardry",
-        principal: "Albus Dumbledore",
-        status: "unreviewed",
-        locked_at: null,
-        notes: "Animagus"
-      }
-    ];
-
-    const columns = [
-      {
-        property: 'created_at',
-        header: {
-          label: 'Date Submitted',
-        },
-      },
-      {
-        property: 'name',
-        header: {
-          label: 'Name',
-        },
-      },
-      {
-        property: 'district',
-        header: {
-          label: 'District',
-        },
-      },
-      {
-        property: 'school',
-        header: {
-          label: 'School',
-        },
-      },
-      {
-        property: 'principal',
-        header: {
-          label: 'Principal',
-        },
-      },
-      {
-        property: 'status',
-        header: {
-          label: 'Status',
-        },
-      },
-      {
-        property: 'locked_at',
-        header: {
-          label: 'Locked',
-        },
-        cell: {
-          formatters: [
-            locked_at => locked_at ? 'Yes' : 'No'
-          ]
-        }
-      },
-      {
-        property: 'notes',
-        header: {
-          label: 'Notes',
-        }
-      },
-      {
-        header: {
-          label: 'Button',
-        }
-      }
-    ];
+    const rows = this.constructRows();
+    const columns = this.constructColumns();
 
     return (
       <Table.Provider
-        className="pure-table pure-table-striped"
+        className="pure-table table-striped"
         columns={columns}
+        style={styles.table}
       >
         <Table.Header />
-
         <Table.Body rows={rows} rowKey="id" />
       </Table.Provider>
     );
   }
-
 }

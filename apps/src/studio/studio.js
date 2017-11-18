@@ -72,6 +72,7 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
+import {SignInState} from '../code-studio/progressRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -119,7 +120,9 @@ let level;
 let skin;
 
 // These skins can be published as projects.
-const PUBLISHABLE_SKINS = ['gumball', 'studio', 'iceage', 'infinity'];
+const PUBLISHABLE_SKINS = [
+  'gumball', 'studio', 'iceage', 'infinity', 'hoc2015'
+];
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -2159,6 +2162,18 @@ Studio.init = function (config) {
     hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/),
   };
 
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
+
   // for hoc2015x, we only have permission to show the Rey avatar for approved
   // scripts. For all others, we override the avatars with an empty image
   if (config.skin.avatarAllowedScripts &&
@@ -2782,7 +2797,7 @@ Studio.displayFeedback = function () {
 
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
-    const {isSignedIn, userType} = getStore().getState().pageConstants;
+    const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2801,10 +2816,7 @@ Studio.displayFeedback = function () {
       saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
-      // The rails session cookie is blocked on some playlab level types,
-      // causing isSignedIn to be null. In this case, use the userType (based on
-      // a different cookie) to determine if the user is signed in.
-      disableSaveToGallery: level.disableSaveToGallery || !(isSignedIn || userType),
+      disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
@@ -3119,8 +3131,8 @@ Studio.hasUnexpectedLocalFunction_ = function () {
   }
 };
 
-function handleExecutionError(err, lineNumber) {
-  outputError(String(err), lineNumber);
+function handleExecutionError(err, lineNumber, outputString) {
+  outputError(outputString, lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
   // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:

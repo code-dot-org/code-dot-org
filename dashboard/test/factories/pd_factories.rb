@@ -555,14 +555,20 @@ FactoryGirl.define do
         jobTitle: 'Keeper of Keys and Grounds of Hogwarts',
         resumeLink: 'linkedin.com/rubeus_hagrid',
         workedInCsJob: 'No',
-        completedCsCoursesAndActivities: ['Advanced CS in HS or College'],
+        completedCsCoursesAndActivities: ['Advanced CS in high school or college'],
         diversityTraining: 'No',
         howHeard: ['Code.org email'],
         program: program,
         planOnTeaching: ['Yes'],
         abilityToMeetRequirements: '4',
-        led_cs_extracurriculars: ['Hour of Code'],
-        teaching_experience: 'No',
+        ledCsExtracurriculars: ['Hour of Code'],
+        teachingExperience: 'No',
+        gradesTaught: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'],
+        gradesCurrentlyTeaching: ['Grade 7'],
+        subjects_taught: ['Computer Science'],
+        yearsExperience: 'None',
+        experienceLeading: ['AP CS A', 'Hour of Code'],
+        completedPd: ['CS Fundamentals (1 day workshop)'],
         codeOrgFacilitator: 'No',
         haveLedPd: 'Yes',
         groupsLedPd: ['None'],
@@ -584,10 +590,24 @@ FactoryGirl.define do
         if program == Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
           hash[:csfAvailability] = 'Yes'
         else
-          hash[:csd_csp_teachercon_availability] = 'TeacherCon 1: June 17 - 22, 2018'
-          hash[:csd_csp_fit_availability] = 'June 23 - 24, 2018 (immediately following TeacherCon 1)'
+          hash[:csdCspTeacherconAvailability] = 'TeacherCon 1: June 17 - 22, 2018'
+          hash[:csdCspFitAvailability] = 'June 23 - 24, 2018 (immediately following TeacherCon 1)'
         end
       end.stringify_keys
+    end
+
+    trait :with_csf_specific_fields do
+      after :build do |hash|
+        hash['csfAvailability'] = Pd::Application::Facilitator1819Application::ONLY_WEEKEND
+        hash['csfPartialAttendanceReason'] = 'reasons'
+      end
+    end
+
+    trait :with_csd_csp_specific_fields do
+      after :build do |hash|
+        hash['csdCspFitAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_fit_availability].first
+        hash['csdCspTeacherconAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_teachercon_availability].first
+      end
     end
   end
 
@@ -597,5 +617,71 @@ FactoryGirl.define do
       form_data_hash {build :pd_facilitator1819_application_hash}
     end
     form_data {form_data_hash.to_json}
+  end
+
+  factory :pd_teacher1819_application_hash, class: 'Hash' do
+    transient do
+      program Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
+      state 'Washington'
+      add_attribute :zip_code, '98101'
+    end
+
+    initialize_with do
+      {
+        country: 'United States',
+        title: 'Mr.',
+        first_name: 'Severus',
+        preferred_first_name: 'Sevvy',
+        last_name: 'Snape',
+        account_meail: 'severus@hogwarts.edu',
+        alternate_email: 'ilovepotions@gmail.com',
+        phone: '5558675309',
+        address: '123 Fake Street',
+        city: 'Buffalo',
+        principal_first_name: 'Albus',
+        principal_last_name: 'Dumbledore',
+        principal_title: 'Dr.',
+        principal_email: 'socks@hogwarts.edu',
+        confirm_principal_email: 'socks@hogwarts.edu',
+        principal_phone_number: '5555882300',
+        current_role: 'Teacher',
+        program: program,
+        grades_at_school: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'],
+        grades_teacher: ['Grade 7'],
+        grades_expect_to_teach: ['Grade 6', 'Grade 7'],
+        subjects_teaching: ['Computer Science'],
+        subjects_expect_to_teach: ['Computer Science'],
+        subjects_licensed_to_teach: ['Computer Science'],
+        taught_in_the_past: ['Hour of Code'],
+        cs_offered_at_school: ['AP CS A'],
+        cs_opportunities_at_school: ['Courses for credit'],
+        plan_to_teach: 'Yes, I plan to teach this course',
+        able_to_attend_single: 'Yes',
+        able_to_attend_multiple: 'Yes',
+        committed: 'Yes',
+        willing_to_travel: 'More than 50 miles',
+        agree: 'Yes'
+      }.tap do |hash|
+        if program == 'csp'
+          hash['csp_which_grades'] = ['11', '12']
+          hash['csp_course_hours_per_week'] = 'More than 5 course hours per week'
+          hash['csp_course_hours_per_year'] = 'At least 100 course hours'
+          hash['csp_terms_per_year'] = '1 quarter'
+          hash['csp_how_offer'] = 'As an AP course'
+          hash['csp_ap_exam'] = 'Yes, all students will be expected to take the AP CS Principles exam'
+        else
+          hash['csd_which_grades'] = ['6', '7']
+          hash['csd_course_hours_per_week'] = '5 or more course hours per week'
+          hash['csd_course_hours_per_year'] = 'At least 100 course hours'
+          hash['csd_terms_per_year'] = '1 quarter'
+        end
+      end.stringify_keys
+    end
+  end
+
+  factory :pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
+    association :user, factory: :teacher, strategy: :create
+    course 'csp'
+    form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
   end
 end

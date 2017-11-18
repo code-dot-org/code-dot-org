@@ -852,10 +852,10 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
-  def last_attempt(level)
-    UserLevel.where(user_id: id, level_id: level.id).
-      order('updated_at DESC').
-      first
+  def last_attempt(level, script = nil)
+    query = UserLevel.where(user_id: id, level_id: level.id)
+    query = query.where(script_id: script.id) unless script.nil?
+    query.order('updated_at DESC').first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -958,6 +958,27 @@ class User < ActiveRecord::Base
     teachers.include? teacher
   end
 
+  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
+  def circuit_playground_pd_eligible?
+    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
+
+    return true if cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
+    return true if courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
+    return false
+  end
+
+  # @return {boolean} true if we have at least one section that meets our eligibility
+  #   requirements for student progress
+  def circuit_playground_student_progress_eligible?
+    sections.any?(&:has_sufficient_discount_code_progress?)
+  end
+
+  # Looks to see if any of the users associated with this studio_person_id are eligibile
+  # for our circuit playground discount
+  def studio_person_circuit_playground_pd_eligible?
+    User.where(studio_person_id: studio_person_id).any?(&:circuit_playground_pd_eligible?)
+  end
+
   def locale
     read_attribute(:locale).try(:to_sym)
   end
@@ -988,7 +1009,11 @@ class User < ActiveRecord::Base
   def age
     return @age unless birthday
     age = UserHelpers.age_from_birthday(birthday)
-    age = "21+" if age >= 21
+    if age < 4
+      age = nil
+    elsif age >= 21
+      age = '21+'
+    end
     age
   end
 
@@ -1383,7 +1408,7 @@ class User < ActiveRecord::Base
       end
 
       script = Script.get_from_cache(script_id)
-      script_valid = script.csf? && !script.k1?
+      script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         script_valid &&
@@ -1642,6 +1667,61 @@ class User < ActiveRecord::Base
     if teacher?
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
+      end
+    end
+  end
+
+  # When creating an account, we want to look for any channels that got created
+  # for this user before they signed in, and if any of them are in our Applab HOC
+  # course, we will create a UserScript entry so that they get a course card
+  # In addition, we want to have green bubbles for the levels associated with these
+  # channels, so we create level progress.
+  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # should be able to handle this gracefully
+    script = begin
+      Script.get_from_cache(script_name)
+    rescue ActiveRecord::RecordNotFound
+      nil
+    end
+    return unless script
+
+    # Find the set of levels this user started
+    # Worth noting that because ChannelToken uses levels (rather than script_levels)
+    # if a level is used in multiple scripts, we have no way to disambiguate which
+    # one a user saw it in, which becomes a challenge if we expand the scope of
+    # this beyond our applab-intro script.
+    channel_level_ids = ChannelToken.where(storage_id: storage_id).map(&:level_id)
+
+    levels_in_script = script.levels
+
+    # host_level will be self if we don't have a template level
+    # Expanding the scope beyond applab-intro would also be a challenge for template
+    # levels, as if a template is used in multiple scripts ,we have no way to know
+    # which a user saw it in
+    hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
+
+    unless (channel_level_ids & hoc_level_ids).empty?
+      User.track_script_progress(id, Script.get_from_cache(script_name).id)
+
+      # Create user_level entries for the levels associated with channels. In the
+      # case of template backed levels, a channel for the template level will result
+      # in user_level entries for all levels that use the template
+      script.script_levels.each do |script_level|
+        script_level.levels.each do |level|
+          # When making progress on a template backed level, the channel will be
+          # attached to the template level, thus we look to see if we have a channel
+          # for the host_level
+          next unless channel_level_ids.include?(level.host_level.id)
+          User.track_level_progress_sync(
+            user_id: id,
+            level_id: level.id,
+            script_id: script_level.script_id,
+            new_result: ActivityConstants::BEST_PASS_RESULT,
+            submitted: false,
+            level_source_id: nil
+          )
+        end
       end
     end
   end

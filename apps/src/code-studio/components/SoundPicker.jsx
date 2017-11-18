@@ -37,7 +37,7 @@ export default class SoundPicker extends React.Component {
     useFilesApi: PropTypes.bool.isRequired
   };
 
-  state = {mode: MODE.files};
+  state = {mode: MODE.sounds};
 
   getAssetNameWithPrefix = (sound) => {
     const soundName = sound.replace(DEFAULT_SOUND_PATH_PREFIX, SOUND_PREFIX);
@@ -79,7 +79,7 @@ export default class SoundPicker extends React.Component {
       modeSwitch = (
         <div>
           <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>My Files</p>
-          <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>Sound library</p>
+          <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>Sound Library</p>
           <hr style={styles.divider}/>
         </div>
       );

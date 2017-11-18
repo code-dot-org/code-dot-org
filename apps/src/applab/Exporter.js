@@ -73,8 +73,7 @@ const APP_OPTIONS_WHITELIST = {
   "channel": true,
   "readonlyWorkspace": true,
   "isLegacyShare": true,
-  "postMilestone": true,
-  "postFinalMilestone": true,
+  "postMilestoneMode": true,
   "puzzleRatingsUrl": false,
   "authoredHintViewRequestsUrl": false,
   "serverLevelId": false,
@@ -92,7 +91,6 @@ const APP_OPTIONS_WHITELIST = {
   "pinWorkspaceToBottom": true,
   "hasVerticalScrollbars": true,
   "showExampleTestButtons": true,
-  "rackEnv": false,
   "report": {
     "fallback_response": true,
     "callback": true,

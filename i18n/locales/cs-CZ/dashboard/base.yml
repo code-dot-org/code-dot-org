@@ -122,6 +122,7 @@ cs:
     user_type_student: "student"
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
+    error: "An error occurred."
   school_info:
     title: 'Název školy (nepovinné)'
     school_country: 'Země školy'
@@ -749,10 +750,21 @@ cs:
     create: "Vytvořit projekt"
     create_a_project: 'Vytvořte nový projekt:'
     new: "Vytvořit nový"
+    new_buttons:
+      artist: "Umělec"
+      playlab: "Play Lab"
+      applab: "App Lab"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Přejmenovat"
     save: "Uložit"
     delete: "Odstranit"
-    import: "Import"
+    import: "Importovat"
+    share_link_import_bad_link_header: "Odkaz pro sdílení nebyl rozpoznán"
+    share_link_import_bad_link_body: 'Daný odkaz pro sdílení se nám nepodařilo naimportovat. Ověřte, zda používáte odkaz z hádanky Minecraft: Agent a zda jste zkopírovali úplný odkaz.'
+    share_link_import_error_header: "Něco se nepovedlo."
+    share_link_import_error_body: "Došlo k problému při importu daného odkazu pro sdílení. Zkuste to znovu."
     exit: "Návrat ke kurzu"
     my_projects: "Moje projekty"
     project_gallery: "Projekty"

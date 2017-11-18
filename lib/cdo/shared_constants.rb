@@ -48,12 +48,34 @@ module SharedConstants
     }
   )
 
+  # Valid milestone post modes
+  POST_MILESTONE_MODE = OpenStruct.new(
+    {
+      all: 'all',
+      successful_runs_and_final_level_only: 'successful_runs_and_final_level_only',
+      final_level_only: 'final_level_only',
+    }
+  )
+
   PUBLISHABLE_PROJECT_TYPES_UNDER_13 = %w(
     artist
+    frozen
     playlab
     gumball
     iceage
     infinity
+    minecraft_adventurer
+    minecraft_designer
+    minecraft_hero
+    starwars
+    starwarsblocks
+    starwarsblocks_hour
+    flappy
+    bounce
+    sports
+    basketball
+    artist_k1
+    playlab_k1
   ).freeze
 
   PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(

@@ -1,10 +1,10 @@
 {
-  "continue":"Davam et",
-  "nextLevel":"Təbriklər! Siz bu tapmacanı tamamladınız.",
-  "no":"Xeyr",
-  "numBlocksNeeded":"Bu  tapmaca %1 blokla həll oluna bilər.",
-  "reinfFeedbackMsg":"Oyununuzu təkrar oynamaq üçün \"Təkrar\" düyməsinə basa bilərsiniz.",
-  "share":"Bölüşün",
-  "shareGame":"Oyununuzu bölüşün:",
-  "yes":"Bəli"
+  "continue": "Davam et",
+  "nextLevel": "Təbriklər! Siz bu tapmacanı tamamladınız.",
+  "no": "Xeyr",
+  "numBlocksNeeded": "Bu  tapmaca %1 blokla həll oluna bilər.",
+  "reinfFeedbackMsg": "Oyununuzu təkrar oynamaq üçün \"Təkrar\" düyməsinə basa bilərsiniz.",
+  "share": "Bölüşün",
+  "shareGame": "Oyununuzu bölüşün:",
+  "yes": "Bəli"
 }

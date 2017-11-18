@@ -22,6 +22,7 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -604,6 +605,7 @@ Craft.reset = function (first) {
   if (Craft.level.usePlayer) {
     Craft.hideSoftButtons();
   }
+  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
@@ -856,7 +858,8 @@ Craft.reportResult = function (success) {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: image,
-        showingSharing: Craft.initialConfig.level.freePlay
+        showingSharing: Craft.initialConfig.level.freePlay,
+        saveToProjectGallery: true,
       });
     }
   });

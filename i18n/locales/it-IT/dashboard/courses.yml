@@ -3,17 +3,17 @@ it:
     course:
       name:
         csp:
-          title: Princìpi dell'Informatica
+          title: Princìpi dell'Informatica (scuole superiori - in inglese)
           description_student: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
           description_teacher: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
           description_short: Impara i concetti fondamentali dell'informatica.
         csd:
-          title: Alla Scoperta dell'Informatica
+          title: Alla Scoperta dell'Informatica (scuole medie - in inglese)
           description_student: Alla Scoperta dell'Informatica è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni ed abitua all'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
           description_teacher: Alla Scoperta dell'Informatica è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni ed abitua all'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
           description_short: Corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni.
         allthethingscourse:
           title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer description for students
-          description_teacher: This is a course for allthethings and has a longer description for teachers
+          description_short: Si tratta di un corso globale
+          description_student: Questo è un corso per globale e ha una corposa descrizione per gli studenti
+          description_teacher: Questo è un corso per globale e ha una corposa descrizione per gli insegnanti

@@ -21,6 +21,8 @@ Dashboard::Application.routes.draw do
 
   get "/home", to: "home#home"
 
+  get "/congrats", to: "congrats#index"
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -42,6 +44,7 @@ Dashboard::Application.routes.draw do
   end
 
   get 'maker/setup', to: 'maker#setup'
+  get 'maker/discountcode', to: 'maker#discountcode'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -238,9 +241,8 @@ Dashboard::Application.routes.draw do
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
   resources :regional_partners
-  get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  post 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
   get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
-  get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
   post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
   get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
 
@@ -395,7 +397,11 @@ Dashboard::Application.routes.draw do
         post :facilitator, to: 'facilitator_applications#create'
       end
 
-      resources :applications, controller: 'applications', only: [:index, :show, :update]
+      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+        collection do
+          get :quick_view
+        end
+      end
     end
   end
 
@@ -511,6 +517,7 @@ Dashboard::Application.routes.draw do
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
+      get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
@@ -527,9 +534,14 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
-  # We want to allow school search on things like "St. Paul" so we specify the constraint on :q to match anything but a slash
-  # See http://guides.rubyonrails.org/routing.html#specifying-constraints
+  get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
+
+  # We want to allow searchs with dots, for instance "St. Paul", so we specify
+  # the constraint on :q to match anything but a slash.
+  # @see http://guides.rubyonrails.org/routing.html#specifying-constraints
+  get '/dashboardapi/v1/districtsearch/:q/:limit', to: 'api/v1/school_districts#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
   get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
+
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}

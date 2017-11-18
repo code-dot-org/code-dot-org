@@ -752,6 +752,11 @@ en:
       CSD U5 video2:
         description here: description here
         title: title
+      CSD U6 LED create intro:
+        Make an App Using the LED: Make an App Using the LED
+        description here: description here
+      CSD U6 game project stop: {}
+      CSD U6 tugowar stop: {}
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
@@ -817,6 +822,7 @@ en:
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Abstraction in Programming: {}
+      CSP Abstraction in Programming 2: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -2000,6 +2006,10 @@ en:
       SFLP - Web - Images on the Web: {}
       SFLP - Web - Quality Websites: {}
       SFLP - Web - Text on the Web: {}
+      SG CSP Abstraction in Programming 2: {}
+      SG U3 whats a comment:
+        description here: description here
+        title: title
       SG U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       SG v2 U3L01 Student Lesson Introduction:
@@ -2206,6 +2216,9 @@ en:
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
+      U3 whats a comment:
+        description here: description here
+        title: title
       U3- L12 -Design Mode SFLP: {}
       U3- Loops - Intro: {}
       U3-Variables 2 - SFLP: {}
@@ -2849,7 +2862,13 @@ en:
         Good Job!: Good Job!
       courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
+      courseF_firstFunctions_map:
+        description here: description here
+        title: title
       coursee-privateandpersonalinformation: {}
+      coursef_functionsSummary_map:
+        description here: description here
+        title: title
       coursef_powerofwords:
         description here: description here
         title: title
@@ -2857,6 +2876,7 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csd-novice-congrats: {}
+      csd-post-survey-2017 preamble 1: {}
       csd-post-survey-2017-implementation-student: {}
       csd-post-survey-2017-implementation-teacher: {}
       csd-pulse-check-survey-preamble: {}
@@ -3411,7 +3431,8 @@ en:
       v2 U3L03 Student Lesson Introduction:
         Creativity in Algorithms: Creativity in Algorithms
       v2 U3L04 Student Lesson Introduction:
-        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+        description here: description here
+        title: title
       v2 U3L05 Student Lesson Introduction:
         Creating Functions: Creating Functions
       v2 U3L07 Student Lesson Introduction:
@@ -3421,6 +3442,8 @@ en:
       v2 U3L09 Student Lesson Introduction:
         Looping and Random Numbers: Looping and Random Numbers
       v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      v2 U3L10 Student Lesson Introduction - stage mods only:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
@@ -4530,7 +4553,7 @@ en:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         Multiple Choice: Multiple Choice
-        Which program does not create this image?: Which program does not create this image?
+        Which program **does not** create this image?: Which program **does not** create this image?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
@@ -4986,10 +5009,10 @@ en:
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
       CSD U6 setProperty predict multi:
-        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;"': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;"'
-        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;"': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;"'
-        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"'
-        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"'
+        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">'
         Make a Prediction: Make a Prediction
         Read the code and predict what this app will look like when run.: Read the code and predict what this app will look like when run.
       CSDU4 Screens Predict Multi:
@@ -5516,6 +5539,13 @@ en:
         rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
         swaps the values of a and b: swaps the values of a and b
         this code doesn't do anything: this code doesn't do anything
+      Commute Assess - comp 1 - block B:
+        This program causes an error: This program causes an error
+        a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
+        makes a and b equal to each other: makes a and b equal to each other
+        rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
+        swaps the values of a and b: swaps the values of a and b
+        this code doesn't do anything: this code doesn't do anything
       Commute Assess - comp 2 - block:
         Randomly returns on of the three numbers: Randomly returns on of the three numbers
         'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
@@ -5561,7 +5591,19 @@ en:
         "<pre>5</pre>": "<pre>5</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
+      Commute Assess - func 2a - block B:
+        "<pre>10</pre>": "<pre>10</pre>"
+        "<pre>55</pre>": "<pre>55</pre>"
+        "<pre>5</pre>": "<pre>5</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
       Commute Assess - func 2b - block:
+        "<pre>21</pre>": "<pre>21</pre>"
+        "<pre>81</pre>": "<pre>81</pre>"
+        "<pre>9</pre>": "<pre>9</pre>"
+        nothing is printed: nothing is printed
+        this script would cause an error: this script would cause an error
+      Commute Assess - func 2b - block B:
         "<pre>21</pre>": "<pre>21</pre>"
         "<pre>81</pre>": "<pre>81</pre>"
         "<pre>9</pre>": "<pre>9</pre>"
@@ -5590,7 +5632,21 @@ en:
         It will be different each time: It will be different each time
         Nothing will be printed: Nothing will be printed
         What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 1 - block B:
+        "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
+        "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
+        "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
+        It will be different each time: It will be different each time
+        Nothing will be printed: Nothing will be printed
+        What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 2 - block:
+        "<pre>All done.</pre>": "<pre>All done.</pre>"
+        "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
+        "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
+        "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
+        "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 2 - block B:
         "<pre>All done.</pre>": "<pre>All done.</pre>"
         "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
         "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
@@ -5641,6 +5697,13 @@ en:
         '6': '6'
         How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
         It will be different each time you run it: It will be different each time you run it
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
+        It will be different each time you run it: It will be different each time you run it
       CommuteAssess - loops 2 - block:
         '0': '0'
         '1': '1'
@@ -5676,7 +5739,22 @@ en:
         x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
         x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
         x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
+      CumulAssess - Var 1 - block B:
+        What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
+        x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
+        x is equal to 10, 15; y is equal to 5, 10: x is equal to 10, 15; y is equal to 5, 10
+        x is equal to 10; y is equal to 5: x is equal to 10; y is equal to 5
+        x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
+        x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
+        x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
       CumulAssess - Var 2 - block:
+        "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
+        "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
+        "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
+        "<pre>sentence</pre>": "<pre>sentence</pre>"
+        <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CumulAssess - Var 2 - block B:
         "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
         "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
         "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
@@ -8649,7 +8727,7 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
-        When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always be able to figure out some way to solve it.
+        When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-post-survey-2017-q16:
         Agree: Agree
         Disagree: Disagree

@@ -163,6 +163,7 @@
     user_type_student: "φοιτητής/μαθητής"
     field_is_required: "απαιτείται"
     accept_terms: "Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό"
+    error: An error occurred.
   school_info:
     title: "Πληροφορίες σχολείου (προαιρετικό)"
     school_country: "Χώρα σχολείου"
@@ -247,7 +248,7 @@
       word: Secret Words
       email: "Ηλεκτρονικό ταχυδρομείο"
       google_classroom: Google Classroom
-      clever: Clever
+      clever: "Εξυπνο"
   follower:
     invite_sent: "Η πρόσκληση στάλθηκε"
     added_teacher: "Ο %{name} σε πρόσθεσε ως δάσκαλο"
@@ -1016,10 +1017,24 @@
     create: "Δημιουργία Έργου"
     create_a_project: "Δημιουργία ενός νέου έργου:"
     new: "Δημιουργία Νέου"
+    new_buttons:
+      artist: "Καλλιτέχνης"
+      playlab: "Εργαστήριο Παιχνιδιού"
+      applab: "Εργαστήριο εφαρμογών"
+      gamelab: Game Lab
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Μετονομασία"
     save: "Αποθήκευση"
     delete: "Διαγραφή"
-    import: Import
+    import: "Εισαγωγή"
+    share_link_import_bad_link_header: "Η σύνδεση κοινής χρήσης δεν αναγνωρίζεται"
+    share_link_import_bad_link_body: "Δεν ήταν δυνατή η εισαγωγή αυτής της σύνδεσης
+      κοινής χρήσης. Βεβαιώσου ότι χρησιμοποιείς σύνδεση από παζλ του Minecraft: Agent
+      και ότι αντέγραψες ολόκληρη τη σύνδεση."
+    share_link_import_error_header: "Κάτι δεν πήγε καλά."
+    share_link_import_error_body: "Παρουσιάστηκε πρόβλημα με την εισαγωγή αυτής της
+      σύνδεσης κοινής χρήσης. Δοκίμασε ξανά."
     exit: "Επιστροφή στο Μάθημα"
     my_projects: "Τα Έργα μου"
     project_gallery: "Έργα"

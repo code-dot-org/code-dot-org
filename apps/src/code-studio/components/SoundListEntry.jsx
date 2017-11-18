@@ -42,7 +42,7 @@ const styles = {
  * Component for a single sound tile in the Sound Library.
  * Used in App Lab and Game Lab
  */
-export default Radium(class SoundListEntry extends React.Component {
+class SoundListEntry extends React.Component {
   static propTypes = {
     assetChosen: PropTypes.func.isRequired,
     soundMetadata: PropTypes.object.isRequired,
@@ -54,6 +54,7 @@ export default Radium(class SoundListEntry extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (!nextProps.isSelected) {
+      this.props.soundsRegistry.stopPlayingURL(this.props.soundMetadata.sourceUrl);
       this.setState({isPlaying: false});
     }
   }
@@ -97,7 +98,9 @@ export default Radium(class SoundListEntry extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(SoundListEntry);
 
 // Adapted from: http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-string-with-format-hhmmss
 // Convert a number, numSeconds, into a string formatted as MM:SS or "Less than 1 second"

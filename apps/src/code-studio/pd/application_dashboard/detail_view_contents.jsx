@@ -1,20 +1,31 @@
 import React, {PropTypes} from 'react';
 import {Button, FormControl} from 'react-bootstrap';
-import {Facilitator1819Program} from './detail_view_facilitator_specific_components';
+import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
+import DetailViewResponse from './detail_view_response';
+import {ApplicationStatuses} from './constants';
 
-const renderLineItem = (key, value) => {
-  return value && (
-      <div>
-      <span style={{fontFamily: '"Gotham 7r"', marginRight: '10px'}}>
-        {key}:
-      </span>
-        {value}
-      </div>
-    );
+const styles = {
+  notes: {
+    height: '95px'
+  },
+  statusSelect: {
+    marginRight: '5px'
+  },
+  detailViewHeader: {
+    display: 'flex',
+    marginLeft: 'auto'
+  },
+  headerWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  saveButton: {
+    marginRight: '5px'
+  }
 };
 
-class DetailViewContents extends React.Component {
+export default class DetailViewContents extends React.Component {
   static propTypes = {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
@@ -24,50 +35,47 @@ class DetailViewContents extends React.Component {
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      formData: PropTypes.shape({
-        firstName: PropTypes.string.isRequired,
-        lastName: PropTypes.string.isRequired,
-        title: PropTypes.string,
-        phone: PropTypes.string,
-        preferredFirstName: PropTypes.string,
-        accountEmail: PropTypes.string,
-        alternateEmail: PropTypes.string,
-        program: PropTypes.string.isRequired,
-        planOnTeaching: PropTypes.arrayOf(PropTypes.string.isRequired),
-        abilityToMeetRequirements: PropTypes.string.isRequired,
-      })
+      form_data: PropTypes.object,
+      application_type: PropTypes.oneOf(['Facilitator', 'Teacher'])
     }),
+    updateProps: PropTypes.func.isRequired,
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+  };
+
+  componentWillMount() {
+    this.statuses = ApplicationStatuses[this.props.viewType];
   }
 
   state = {
     status: this.props.applicationData.status,
-    notes: this.props.applicationData.notes
-  }
+    notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
+  };
 
   handleCancelEditClick = () => {
     this.setState({
       editing: false,
-      status: this.props.applicationData.status
+      status: this.props.applicationData.status,
+      notes: this.props.applicationData.notes
     });
-  }
+  };
 
   handleEditClick = () => {
     this.setState({
       editing: true
     });
-  }
+  };
 
   handleStatusChange = (event) => {
     this.setState({
       status: event.target.value
     });
-  }
+  };
 
   handleNotesChange = (event) => {
     this.setState({
       notes: event.target.value
     });
-  }
+  };
 
   handleSaveClick = () => {
     $.ajax({
@@ -80,21 +88,26 @@ class DetailViewContents extends React.Component {
       this.setState({
         editing: false
       });
+      this.props.updateProps({notes: this.state.notes, status: this.state.status});
     });
-  }
+  };
 
   renderEditButtons = () => {
     if (this.state.editing) {
       return [(
-        <Button bsStyle="primary">
+        <Button
+          onClick={this.handleSaveClick}
+          bsStyle="primary"
+          key="save"
+          style={styles.saveButton}
+        >
           Save
         </Button>
       ), (
-        <Button onClick={this.handleCancelEditClick}>
+        <Button onClick={this.handleCancelEditClick} key="cancel">
           Cancel
         </Button>
-      )
-      ];
+      )];
     } else {
       return (
         <Button onClick={this.handleEditClick}>
@@ -102,115 +115,105 @@ class DetailViewContents extends React.Component {
         </Button>
       );
     }
-  }
+  };
 
   renderHeader = () => {
     return (
-      <div style={{display: 'flex', alignItems: 'baseline'}}>
+      <div style={styles.headerWrapper}>
         <h1>
-          {`${this.props.applicationData.formData.firstName} ${this.props.applicationData.formData.lastName}`}
+          {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
         </h1>
 
-        <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
+        <div id="DetailViewHeader" style={styles.detailViewHeader}>
           <FormControl
             componentClass="select"
             disabled={!this.state.editing}
             value={this.state.status}
             onChange={this.handleStatusChange}
+            style={styles.statusSelect}
           >
-            <option value="unreviewed">
-              Unreviewed
-            </option>
-            <option value="accepted">
-              Accepted
-            </option>
-            <option value="declined">
-              Declined
-            </option>
+            {
+              this.statuses.map((status, i) => (
+                <option value={status.toLowerCase()} key={i}>
+                  {status}
+                </option>
+              ))
+            }
           </FormControl>
-          {
-            this.state.editing ? [(
-              <Button onClick={this.handleSaveClick} bsStyle="primary" key="save">
-                Save
-              </Button>
-            ), (
-              <Button onClick={this.handleCancelEditClick} key="cancel">
-                Cancel
-              </Button>
-            )
-            ] : (
-              <Button onClick={this.handleEditClick}>
-                Edit
-              </Button>
-            )
-          }
+          {this.renderEditButtons()}
         </div>
       </div>
     );
-  }
+  };
 
-  renderAboutSection = () => {
+  renderTopSection = () => {
     return (
-      <div>
-        <h3>
-          About You
-        </h3>
-        {renderLineItem('Title', this.props.applicationData.formData.title)}
-        {renderLineItem('Preferred First Name', this.props.applicationData.formData.preferredFirstName)}
-        {renderLineItem('Account Email', this.props.applicationData.email)}
-        {renderLineItem('Alternate Email', this.props.applicationData.formData.alternateEmail)}
-        {renderLineItem('Phone', this.props.applicationData.formData.phone)}
-        <br/>
-        {renderLineItem('District', this.props.applicationData.district_name)}
-        {renderLineItem('School', this.props.applicationData.school_name)}
-        {renderLineItem('Course', this.props.applicationData.formData.program)}
-        {renderLineItem('Regional Partner', this.props.applicationData.regional_partner_name)}
-      </div>
-    );
-  }
-
-  renderChooseYourProgram = () => {
-    return (
-      <div>
-        <h3>
-          Choose Your Program
-        </h3>
-        {renderLineItem('Program', this.props.applicationData.formData.program)}
-        <Facilitator1819Program
-          planToTeachThisYear1819={this.props.applicationData.formData.planOnTeaching}
-          abilityToMeetRequirements={this.props.applicationData.formData.abilityToMeetRequirements}
+      <div id="TopSection">
+        <DetailViewResponse
+          question="Email"
+          answer={this.props.applicationData.email}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="Regional Partner"
+          answer={this.props.applicationData.regional_partner_name}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="School Name"
+          answer={this.props.applicationData.school_name}
+          layout="lineItem"
+        />
+        <DetailViewResponse
+          question="District Name"
+          answer={this.props.applicationData.district_name}
+          layout="lineItem"
         />
       </div>
     );
-  }
+  };
 
-  renderNotes() {
+  renderQuestions = () => {
+    return (
+      <DetailViewApplicationSpecificQuestions
+        formResponses={this.props.applicationData.form_data}
+        applicationType={this.props.applicationData.application_type}
+      />
+    );
+  };
+
+  renderNotes = () => {
     return (
       <div>
         <h4>
           Notes
         </h4>
-        <FormControl
-          id="Notes"
-          disabled={!this.state.editing}
-          componentClass="textarea"
-          value={this.state.notes || ''}
-          onChange={this.handleNotesChange}
-        />
+        <div className="row">
+          <div className="col-md-8">
+            <FormControl
+              id="Notes"
+              disabled={!this.state.editing}
+              componentClass="textarea"
+              value={this.state.notes}
+              onChange={this.handleNotesChange}
+              style={styles.notes}
+            />
+          </div>
+        </div>
+        <br/>
+        {this.renderEditButtons()}
       </div>
     );
-  }
+  };
 
   render() {
     return (
       <div>
         {this.renderHeader()}
-        {this.renderAboutSection()}
-        {this.renderChooseYourProgram()}
+        {this.renderTopSection()}
+        {this.renderQuestions()}
         {this.renderNotes()}
       </div>
     );
   }
 }
-
-export {renderLineItem, DetailViewContents};

@@ -19,6 +19,7 @@ import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -541,6 +542,7 @@ Craft.reset = function (first) {
   if (first) {
     return;
   }
+  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
@@ -771,7 +773,8 @@ Craft.reportResult = function (success) {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: image,
-        showingSharing: Craft.initialConfig.level.freePlay
+        showingSharing: Craft.initialConfig.level.freePlay,
+        saveToProjectGallery: true,
       });
     }
   });

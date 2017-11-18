@@ -154,6 +154,7 @@
     user_type_student: "учень"
     field_is_required: "необхідне"
     accept_terms: "Потрібно погодитись, щоб створити обліковий запис"
+    error: An error occurred.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -754,7 +755,7 @@
       title: "Галерея"
       body: "Переглянути галерею програм та художніх зображень, створених нашими користувачами"
     gamelab:
-      title: Game Lab (beta)
+      title: "Ігрова лабораторія"
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: "Вік 13+"
@@ -983,10 +984,24 @@
     create: "Створити проект"
     create_a_project: "Створити новий проект:"
     new: "Створити новий"
+    new_buttons:
+      artist: "Художник"
+      playlab: "Ігрова студія"
+      applab: App Lab
+      gamelab: "Ігрова лабораторія"
+      weblab: Web Lab (beta)
+    new_buttons_header: 'Start a new project:'
     rename: "Перейменувати"
     save: "зберегти"
     delete: "Видалити"
-    import: Import
+    import: "Імпорт"
+    share_link_import_bad_link_header: "Посилання на завдання не розпізнано"
+    share_link_import_bad_link_body: "Не вдалось імпортувати посилання на завдання.
+      Перевірте, чи це дійсно посилання із завдання Minecraft: Agent, яке ви повністю
+      скопіювали."
+    share_link_import_error_header: "Щось пішло не так."
+    share_link_import_error_body: "Під час імпорту цього посилання на завдання виникла
+      проблема. Спробуйте ще раз."
     exit: "Повернутися до курсу"
     my_projects: "Мої проекти"
     project_gallery: "Проекти"

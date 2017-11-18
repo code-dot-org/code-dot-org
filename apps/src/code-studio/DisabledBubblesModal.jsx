@@ -48,7 +48,7 @@ const DisabledBubblesModal = React.createClass({
             {i18n.disabledProgress3()}
           </div>
           <div style={styles.paragraph}>
-            <a target="_blank" href={window.dashboard.CODE_ORG_URL +'/saving-progress-hoc'}>
+            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115002660852">
               {i18n.learnMore()}
             </a>
           </div>

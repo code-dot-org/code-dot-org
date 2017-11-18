@@ -31,8 +31,7 @@
  * @property {boolean} isExternalProjectLevel
  * @property {boolean} isChannelBacked
  * @property {boolean} isLegacyShare
- * @property {boolean} postMilestone
- * @property {boolean} postFinalMilestone
+ * @property {PostMileStoneMode} postMilestoneMode
  * @property {string} puzzleRatingsUrl
  * @property {string} authoredHintViewRequestsUrl
  * @property {?} authoredHintsUsedIds
@@ -54,7 +53,6 @@
  * @property {boolean} pinWorkspaceToBottom
  * @property {boolean} hasVerticalScrollbars
  * @property {boolean} showExampleTestButtons
- * @property {string} rackEnv
  * @property {ReportOptions} report
  * @property {boolean} sendToPhone
  * @property {string} send_to_phone_url
@@ -208,7 +206,6 @@
  * @augments MilestoneResponse
  * @property {?} timestamp
  * @property {{message: ?, type: ?, contents: ?}} share_failure
- * @property {number} hints_used - used by gamification.
  * @property {string} save_to_gallery_url - URL to save this submission to the gallery.
  * @property {string} level_source
  * @property {string} level_source_id

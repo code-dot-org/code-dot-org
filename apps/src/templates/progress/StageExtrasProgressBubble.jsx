@@ -1,30 +1,27 @@
 import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from "@cdo/apps/util/color";
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import i18n from '@cdo/locale';
 import TooltipWithIcon from './TooltipWithIcon';
-import { DOT_SIZE } from './progressStyles';
 
 const styles = {
   main: {
-    display: 'inline-block',
-    lineHeight: DOT_SIZE + 'px',
-    paddingLeft: 2,
-    fontSize: 12,
-    color: color.light_gray,
-    ':hover': {
-      color: color.orange
-    },
+    backgroundImage: `url('${assetUrl("media/common_images/flag_inactive.png")}')`,
+    width: 21,
+    height: 24,
   },
   focused: {
-    color: color.charcoal,
-    fontSize: 30,
-    // to center properly
-    position: 'relative',
-    top: 5
-  }
+    backgroundImage: `url('${assetUrl("media/common_images/flag_active.png")}')`,
+  },
+  hoverOverlay: {
+    backgroundImage: `url('${assetUrl("media/common_images/flag_hover.png")}')`,
+    opacity: 0,
+    transition: 'opacity .2s ease-out',
+    ':hover': {
+      opacity: 1,
+    },
+  },
 };
 
 class StageExtrasProgressBubble extends Component {
@@ -36,7 +33,6 @@ class StageExtrasProgressBubble extends Component {
     const { stageExtrasUrl, onStageExtras } = this.props;
 
     const tooltipId = _.uniqueId();
-    const icon = onStageExtras ? 'flag-checkered' : 'flag';
     return (
       <a
         href={stageExtrasUrl}
@@ -44,15 +40,13 @@ class StageExtrasProgressBubble extends Component {
           ...styles.main,
           ...(onStageExtras && styles.focused)
         }}
+        data-tip data-for={tooltipId}
+        aria-describedby={tooltipId}
       >
-        <FontAwesome
-          icon={icon}
-          data-tip data-for={tooltipId}
-          aria-describedby={tooltipId}
-        />
+        <div style={{...styles.main, ...styles.hoverOverlay}}/>
         <TooltipWithIcon
           tooltipId={tooltipId}
-          icon={icon}
+          icon={'flag'}
           text={i18n.stageExtras()}
         />
       </a>

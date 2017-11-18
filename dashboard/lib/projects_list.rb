@@ -10,7 +10,10 @@ module ProjectsList
     applab: ['applab'],
     gamelab: ['gamelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
-    artist: ['artist']
+    artist: ['artist', 'frozen'],
+    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
+    events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
+    k1: ['artist_k1', 'playlab_k1'],
   }.freeze
 
   class << self

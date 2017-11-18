@@ -310,6 +310,7 @@ class ShareAllowedDialog extends React.Component {
                     style={hasThumbnail ? styles.button : styles.buttonDisabled}
                     onClick={this.publish}
                     disabled={!hasThumbnail}
+                    className="no-mc"
                   >
                     {i18n.publish()}
                   </button>
@@ -322,6 +323,7 @@ class ShareAllowedDialog extends React.Component {
                     pendingText={i18n.unpublishPending()}
                     style={styles.button}
                     text={i18n.unpublish()}
+                    className="no-mc"
                   />
                   }
                   {/* prevent buttons from overlapping when unpublish is pending */}
@@ -349,7 +351,9 @@ class ShareAllowedDialog extends React.Component {
                 />}
                 {canPublish && !isPublished && !hasThumbnail &&
                   <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}}>{i18n.thumbnailWarning()}</span>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.thumbnailWarning()}
+                      </span>
                   </div>
                 }
                 <div style={{clear: 'both', marginTop: 40}}>
@@ -363,15 +367,6 @@ class ShareAllowedDialog extends React.Component {
                     channelId={this.props.channelId}
                     embedOptions={embedOptions}
                   />}
-                  {/* Awkward that this is called continue-button, when text is
-                   close, but id is (unfortunately) used for styling */}
-                  <button
-                    id="continue-button"
-                    style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                    onClick={this.close}
-                  >
-                    {this.props.i18n.t('project.close')}
-                  </button>
                 </div>
               </div>
             </div>

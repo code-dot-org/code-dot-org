@@ -122,6 +122,7 @@ id:
     user_type_student: "siswa"
     field_is_required: "diperlukan"
     accept_terms: "You must agree to create an account"
+    error: "An error occurred."
   school_info:
     title: 'Informasi sekolah (pilihan)'
     school_country: 'Negara Sekolah'
@@ -747,10 +748,21 @@ id:
     create: "Buat proyek"
     create_a_project: 'Buat proyek baru:'
     new: "Buat baru"
+    new_buttons:
+      artist: "Artis"
+      playlab: "Play Lab/Lab Permainan"
+      applab: "Laboratorium Aplikasi"
+      gamelab: "Game Lab"
+      weblab: "Web Lab (beta)"
+    new_buttons_header: "Start a new project"
     rename: "Ubah Nama"
     save: "Simpan"
     delete: "Hapus"
-    import: "Import"
+    import: "Impor"
+    share_link_import_bad_link_header: "Tautan berbagi tidak dikenali"
+    share_link_import_bad_link_body: 'Kami tidak bisa mengimpor tautan berbagi tersebut. Pastikan kamu menggunakan tautan dari teka-teki Minecraft: Agent dan bahwa kamu telah menyalin tautan lengkap.'
+    share_link_import_error_header: "Terjadi kesalahan."
+    share_link_import_error_body: "Ada masalah saat mengimpor tautan berbagi tersebut. Coba lagi."
     exit: "Kembali ke Kursus"
     my_projects: "Project Saya"
     project_gallery: "Proyek"

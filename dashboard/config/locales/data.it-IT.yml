@@ -37,7 +37,7 @@
         NetSim: Simulatore di Internet
         Custom: Artista
         CustomStudio: Laboratorio
-        Gamelab: Game Lab
+        Gamelab: Sviluppo Giochi
     trophy:
       name:
         Bronze: Bronzo
@@ -326,79 +326,54 @@
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
           dinamite (TNT) ed arrivare al maiale.
         bounce_1_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/1
-
           Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
           Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.
         bounce_2_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/2
-
           Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
           Poi sposta la racchetta usando entrambe le frecce orizzontali per raggiungere le due bandierine.
-        bounce_5_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/3
-
-          Stiamo per lanciarti una palla verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce la mano` per permettere alla palla di raggiungere la bandierina.
-        bounce_6_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/4
-
-          Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce la mano` e `quando la palla colpisce il muro`.
+        bounce_5_basketball: Stiamo per lanciarti una palla verso la mano. Attacca
+          un blocco al blocco verde `quando la palla colpisce la mano` per permettere
+          alla palla di raggiungere la bandierina.
+        bounce_6_basketball: Ora la bandierina è in alto. Per risolvere questo esercizio
+          devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla
+          colpisce il giocatore` e `quando la palla colpisce il muro`.
         bounce_7_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/5
-
           Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
-          Far rimbalzare la palla fino a quando non colpisce la bandiera.
+          Fai rimbalzare la palla fino a quando non colpisce la bandiera.
         bounce_10_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/6
-
           Ora in alto c'è il canestro! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca la mano`.<br>
-          Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio.
+          Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due.
         bounce_11_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/7
-
           Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
-          Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
-        bounce_12_basketball: |-
-          https://studio.code.org/s/basketball/stage/1/puzzle/8
-
-          Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito di giocare, clicca su "Termina" per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco.
+          Prova anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!
+        bounce_12_basketball: Crea il tuo gioco di basket. Puoi modificare tutte le
+          regole. Quando hai finito di giocare, clicca su "Termina" per ottenere un
+          link da condividere con i tuoi amici o per giocare sul tuo telefono con
+          la tua versione del gioco.
         bounce_1_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/1
-
           Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
           Poi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina.
         bounce_2_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/2
-
           Ora ci sono due bandiere! Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
           Poi sposta il giocatore usando entrambe le frecce orizzontali per raggiungere le due bandierine.
-        bounce_5_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/3
-
-          Il disco da hockey sta per arrivare al giocatore! Attacca un blocco al blocco verde `quando la palla colpisce il giocatore` per permettere alla palla di raggiungere la bandierina.
-        bounce_6_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/4
-
-          Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce il giocatore` e `quando la palla colpisce il muro`.
+        bounce_5_sports: Il disco da hockey sta per arrivare al giocatore! Attacca
+          un blocco al blocco verde `quando la palla colpisce il giocatore` per permettere
+          alla palla di raggiungere la bandierina.
+        bounce_6_sports: Ora la bandierina è in alto. Per risolvere questo esercizio
+          devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla
+          colpisce il giocatore` e `quando la palla colpisce il muro`.
         bounce_7_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/5
-
           Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>
-          Far rimbalzare la palla fino a quando non colpisce la bandiera.
+          Fai rimbalzare la palla fino a quando non colpisce la bandiera.
         bounce_10_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/6
-
           Ora in alto c'è la meta! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca il giocatore`.<br>
-          Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio.
+          Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due!
         bounce_11_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/7
-
           Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su "Esegui"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>
-          Prova anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!
-        bounce_12_sports: |-
-          https://studio.code.org/s/sports/stage/1/puzzle/8
-
-          Ora comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
+          Prova anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!
+        bounce_12_sports: 'Ora comandi tu. Puoi modificare tutte le regole, combinando
+          i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per
+          consentire agli amici di provare il tuo gioco sui loro telefoni.'
         bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso
           sinistra` e premi "Esegui". Poi sposta la racchetta usando la freccia verso
           sinistra per raggiungere la bandierina.
@@ -438,7 +413,7 @@
         flappy_2: Ora nello scenario c'è anche il terreno.  Attacca un blocco di azione
           al blocco di evento `quando precipita a terra`.  Inoltre, il tuo codice
           ha bisogno del blocco `fine del gioco` quando Flappy precipita a terra.
-        flappy_3: Il blocco "quando si clicca su 'Esegui' " permette di eseguire delle
+        flappy_3: Il blocco `quando si clicca su "Esegui"` permette di eseguire delle
           specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità
           con cui Flappy vola verso il bersaglio.
         flappy_4: Scrivi del codice per aiutare Flappy a volare attraverso i tubi
@@ -468,7 +443,7 @@
         flappy_k1_3: Ora nello scenario c'è anche il terreno.  Attacca un blocco di
           quelli a sinistra al blocco "quando precipita a terra".  Il tuo codice ha
           bisogno del blocco "fine del gioco" quando Flappy precipita a terra.
-        flappy_k1_4: Il blocco "quando si clicca su 'Esegui' " permette di eseguire
+        flappy_k1_4: Il blocco `quando si clicca su "Esegui"` permette di eseguire
           delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità
           con cui Flappy vola verso il bersaglio.
         flappy_k1_5: Scrivi del codice per aiutare Flappy a volare attraverso i tubi
@@ -838,6 +813,9 @@
         csd_concept_computer: Cosa rende un Computer, un Computer?
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_search: Come Funziona la Ricerca
+        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
+          To Change Our Lives
+        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: La scheda dell'animazione
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -849,11 +827,11 @@
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocità
-        csd_weblab_intro_1: Introduzione a Web Lab - Parte 1
-        csd_weblab_intro_2: Introduzione a Web Lab - Part 2
+        csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
+        csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
         csd_weblab_css_1: Introduzione a CSS - Parte 1
         csd_weblab_css_2: Introduzione a CSS - Parte 2
-        csd_weblab_intro_3: Introduzione a Web Lab - Part 3
+        csd_weblab_intro_3: Introduzione a Sviluppo Web - Parte 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -947,11 +925,21 @@
         mc_2016_events: L'Ora del Codice con Minecraft - Eventi
         mc_2016_spawn: L'Ora del Codice con Minecraft - Creare
         mc_2016_congrats: L'Ora del Codice con Minecraft - Complimenti
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
+        applab_hoc_welcome: L'ora del codice in Sviluppo App - Benvenuto
+        applab_hoc_setproperty: L'ora del codice in Sviluppo App - setProperty
+        applab_hoc_onevent: L'ora del codice in Sviluppo App - onEvent
+        applab_hoc_designmode: L'ora del codice in Sviluppo App - modalità di progetto
+        applab_hoc_share: L'ora del codice in Sviluppo App - condivisione
+        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
+        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
+        mc_2017_functions: Minecraft Hour of Code - Functions
+        mc_2017_congratulations: L'Ora del Codice con Minecraft - Complimenti
+        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
+        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
+        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
+        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
+        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
+        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
