@@ -7,6 +7,7 @@ import instructions, {
   setInstructionsRenderedHeight,
   setInstructionsMaxHeightAvailable,
   setInstructionsMaxHeightNeeded,
+  setFeedback,
   determineInstructionsConstants
 } from '@cdo/apps/redux/instructions';
 
@@ -118,6 +119,13 @@ describe('instructions reducer', () => {
       renderedHeight: 300,
       expandedHeight: 300
     })));
+  });
+
+  it('setFeedback sets feedback', () => {
+    const initialState = new InstructionsState();
+    assert.isUndefined(initialState.feedback);
+    const newState = reducer(initialState, setFeedback('anything'));
+    assert.strictEqual(newState.feedback, 'anything');
   });
 });
 

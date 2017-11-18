@@ -52,7 +52,8 @@ export const InstructionsState = Record({
   maxAvailableHeight: Infinity,
   hasAuthoredHints: false,
   overlayVisible: false,
-  levelVideos: []
+  levelVideos: [],
+  feedback: undefined,
 });
 
 export default function reducer(state = new InstructionsState(), action) {
