@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#97a9f9e86e6473d7314ed903a3f16afe1beb2a29":
-  version "0.0.20"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/97a9f9e86e6473d7314ed903a3f16afe1beb2a29"
+"@code-dot-org/craft@github:code-dot-org/craft#e8adff5c475c55c3648b619f9f461e0e9b49c82d":
+  version "0.0.21"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/e8adff5c475c55c3648b619f9f461e0e9b49c82d"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.1":
   version "0.11.1-cdo.1"
@@ -5043,9 +5043,9 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery-ui@1.10.5:
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.10.5.tgz#826aed3dd1f88d32ae75d74df48643dc431a5815"
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
 
 jquery@2.1.4:
   version "2.1.4"
