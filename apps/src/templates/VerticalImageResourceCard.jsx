@@ -130,9 +130,12 @@ class VerticalImageResourceCard extends Component {
           <div style={[styles.text, styles.description, localeStyle]}>
            {description}
            {MCShareLink && (
-             <div style={[styles.text, styles.shareLink, localeStyle]}>
-              {MCShareLink}
-             </div>
+             <input
+               type="text"
+               style={[styles.text, styles.shareLink, localeStyle]}
+               value={MCShareLink}
+               onClick={e => e.target.select()}
+             />
            )}
           </div>
           <Button
