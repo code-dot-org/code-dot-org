@@ -12,7 +12,6 @@ const styles = {
     position: 'relative',
     height: 440,
     width: 308,
-    marginBottom: 20,
     backgroundColor: color.white
   },
   jumboCard: {

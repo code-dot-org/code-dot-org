@@ -1,4 +1,6 @@
 module Teacher1819ApplicationConstants
+  YES_NO = %w(Yes No)
+
   # Remove newlines and leading whitespace from multiline strings
   def self.clean_multiline(string)
     string.gsub(/\n\s*/, ' ')
@@ -135,11 +137,16 @@ module Teacher1819ApplicationConstants
   }
 
   VALID_SCORES = {
-    able_to_attend_single: ['Yes', 'No'],
-    committed: ['Yes', 'No'],
+    regional_partner_name: YES_NO,
+    # Need to include whether the participant is new
+    committed: YES_NO,
+    able_to_attend_single: YES_NO,
+    csp_which_grades: YES_NO,
+    csp_course_hours_per_year: YES_NO,
+    csd_which_grades: YES_NO,
+    csp_terms_per_year: YES_NO,
     taught_in_past: [0, 2],
-    csd_which_grades: ['Yes', 'No'],
-    csp_which_grades: ['Yes', 'No']
+    csp_ap_exam: [0, 2]
   }
 
   ALL_LABELS = PAGE_LABELS.values.reduce(:merge)
