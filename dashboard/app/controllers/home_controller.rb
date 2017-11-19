@@ -114,7 +114,7 @@ class HomeController < ApplicationController
           linkToLesson: script_next_path(script, 'next')
         }
       end
-
     end
+    @is_english = request.language == 'en'
   end
 end
