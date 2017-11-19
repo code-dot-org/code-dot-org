@@ -29,7 +29,7 @@ class Api::V1::Census::CensusController < ApplicationController
     :share_with_regional_partners
   ].freeze
 
-  BOOLEAN_FIELDS = [
+  CHECKBOX_FIELDS = [
     :other_classes_under_20_hours,
     :topic_blocks,
     :topic_text,
@@ -41,8 +41,7 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_game_design,
     :topic_other,
     :topic_do_not_know,
-    :pledged,
-    :share_with_regional_partners
+    :pledged
   ].freeze
 
   # POST /dashboardapi/v1/census/<form_version>
@@ -81,7 +80,7 @@ class Api::V1::Census::CensusController < ApplicationController
 
     # Checkboxes don't get submitted if they aren't checked.
     # Set them to false if they are nil
-    BOOLEAN_FIELDS.map do |field|
+    CHECKBOX_FIELDS.map do |field|
       census_params[field] = false unless census_params[field]
     end
     census_params[:school_infos] = [school_info]
