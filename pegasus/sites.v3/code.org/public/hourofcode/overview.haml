@@ -3,7 +3,8 @@ title: Hour of Code Teacher Resources
 nav: hoc_teacher_resources_nav
 theme: responsive
 ---
-%link{:href=>"/css/student.css", :rel=>"stylesheet"}
+%link{href: "/css/student.css", rel: "stylesheet"}
+%link{href: "/css/tools.css", rel: "stylesheet"}
 %link(rel='stylesheet' type='text/css' href='/shared/css/course-blocks.css')
 %script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
@@ -12,6 +13,34 @@ theme: responsive
 The
 %a{href:"https://hourofcode.com"} Hour of Code
 is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 200+ one-hour tutorials, available in over 45 languages. Teachers, to view lesson plans and additional teacher resources please select your desired Hour of Code tutorial from the side menu to the left.
+
+#resources.responsive-body
+  .col-50
+    .tutorial-tile
+      %a{href: CDO.studio_url("/s/applab-intro/reset")}
+        %img.tutorial-tile-img{src: CDO.code_org_url("/images/app-lab/applab-intro.png"), style: "width: 100%; height: 195px"}
+      .tutorial-info{style: "height: 200px;"}
+        %h3.tutorial-info-h Intro to App Lab Tutorial (beta)
+        .smalltext Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming.
+        %a{href: CDO.studio_url("/s/applab-intro/reset")}
+          %button.tutorial-gray{style: "margin-top: 20px;"} Start tutorial
+        %div{style: "float: right; margin-top: 25px;"}
+          %a{href: "https://curriculum.code.org/hoc/plugged/7/"}
+            View teacher guide
+  .col-50
+    .tutorial-tile
+      %a{href: "/minecraft"}
+        %img.tutorial-tile-img{src: CDO.code_org_url("/images/mc/special-announcement-hoc2017.jpg"), style: "width: 100%; height: 195px"}
+      .tutorial-info{style: "height: 200px;"}
+        %h3{style: "margin-top: 0px;"} Minecraft Hour of Code
+        .smalltext Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+        %a{href: "/minecraft"}
+          %button.tutorial-gray{style: "margin-top: 20px;"} Start tutorial
+        %div{style: "float: right; margin-top: 25px;"}
+          %a{href: "/hourofcode/mc"}
+            View teacher guide
+
+.clear
 
 %br
 %br
@@ -24,4 +53,4 @@ is a global movement reaching tens of millions of students in 180+ countries. An
       %h2.resource-title More Activities from Partners
       The Hour of Code website has over 100 computer science activities for all ages and experience levels, developed by Code.org and partners.
     %a{href: "/learn"}
-      %button.orange-button{:style=>"margin-bottom: 20px;"} Go
+      %button.orange-button{style: "margin-bottom: 20px;"} Go
