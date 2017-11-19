@@ -29,7 +29,7 @@ const styles = {
     boxSizing: 'border-box'
   },
   subheading: {
-    paddingRight: 10,
+    paddingRight: 0,
     paddingBottom: 20,
     fontSize: 27,
     lineHeight: 1.2,
