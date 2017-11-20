@@ -36,15 +36,14 @@ export default class ValidationStep extends Component {
     children: PropTypes.node,
     stepName: PropTypes.string.isRequired,
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
-    displayExplanation: PropTypes.bool
+    alwaysShowChildren: PropTypes.bool
   };
 
   render() {
-    const {stepName, stepStatus, children} = this.props;
-    // By default, we show the explanation if the step has failed. If displayExplanation
-    // prop is provided, use that instead
-    let displayExplanation = this.props.displayExplanation === undefined ?
-      stepStatus === Status.FAILED : this.props.displayExplanation;
+    const {stepName, stepStatus, alwaysShowChildren, children} = this.props;
+    // By default, we only the children if the step failed. If alwaysShowChildren
+    // is set, always show children
+    let displayExplanation = alwaysShowChildren || stepStatus === Status.FAILED;
 
     if (stepStatus === Status.HIDDEN) {
       return null;
