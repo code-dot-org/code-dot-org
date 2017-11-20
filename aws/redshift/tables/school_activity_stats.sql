@@ -1,4 +1,7 @@
-CREATE OR REPLACE VIEW analysis.school_activity_stats AS
+-- No check on whether students actually made progress
+-- Quick change: only include last year of activity
+drop table if exists analysis.school_activity_stats;
+CREATE table analysis.school_activity_stats AS
   SELECT ss.school_id,
          rpsd.regional_partner_id,
          rp.name regional_partner,
@@ -55,8 +58,7 @@ CREATE OR REPLACE VIEW analysis.school_activity_stats AS
                    ON pdw.id = pde.pd_workshop_id
                WHERE course = 'CS Fundamentals') csf_pd 
            ON csf_pd.user_id = u.id
-  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12
-WITH NO SCHEMA BINDING;
+  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12;
 
 GRANT ALL PRIVILEGES ON analysis.school_activity_stats TO GROUP admin;
 GRANT SELECT ON analysis.school_activity_stats TO GROUP reader, GROUP reader_pii;
