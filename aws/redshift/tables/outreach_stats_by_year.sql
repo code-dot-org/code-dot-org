@@ -1,4 +1,5 @@
-CREATE OR REPLACE VIEW analysis.outreach_stats_by_year AS
+drop table if exists analysis.outreach_stats_by_year;
+CREATE table analysis.outreach_stats_by_year AS
   SELECT 'State' region_type,
          ug.state region,
          ug.state state,
@@ -64,8 +65,7 @@ CREATE OR REPLACE VIEW analysis.outreach_stats_by_year AS
   AND   u_students.user_type = 'student'
   AND   ug.city IS NOT NULL
   AND   ug.state IS NOT NULL
-  GROUP BY 1,2,3,4 
-WITH NO SCHEMA BINDING;
+  GROUP BY 1,2,3,4;
 
 GRANT ALL PRIVILEGES ON analysis.outreach_stats_by_year TO GROUP admin;
 GRANT SELECT ON analysis.outreach_stats_by_year TO GROUP reader, GROUP reader_pii;
