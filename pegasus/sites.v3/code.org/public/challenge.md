@@ -18,6 +18,13 @@ style_min: true
 
 ## Use one of these activities
 
+<div id="hoc-tiles-container"></div>
+
+<script>
+  $("#hoc-tiles-container").load("/dashboardapi/hoc_courses_challenge");
+</script>
+
+<link rel="stylesheet" type="text/css" href="/shared/css/course-blocks.css"></link>
 
 <a name="lookingfor"></a>
 ## What are they looking for?
