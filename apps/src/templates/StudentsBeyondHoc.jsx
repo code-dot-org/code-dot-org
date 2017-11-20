@@ -27,13 +27,16 @@ export default class StudentsBeyondHoc extends Component {
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
+    userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, completedTutorialType, userType, isEnglish, MCShareLink } = this.props;
+    const { isRtl, responsive, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
 
     const signedIn = (userType === "teacher" || userType === "student");
+
+    const under13 = userAge < 13;
 
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
 
@@ -41,6 +44,9 @@ export default class StudentsBeyondHoc extends Component {
 
     var specificCardSet;
     switch (true) {
+      case completedTutorialType === 'pre2017Minecraft' && isEnglish && under13:
+          specificCardSet = 'youngerThan13pre2017MinecraftCards';
+        break;
       case completedTutorialType === 'pre2017Minecraft' && isEnglish:
           specificCardSet = 'pre2017MinecraftCards';
         break;
@@ -50,6 +56,9 @@ export default class StudentsBeyondHoc extends Component {
       case completedTutorialType === '2017Minecraft' && isEnglish:
           specificCardSet = 'newMinecraftCards';
         break;
+      case completedTutorialType === '2017Minecraft' && isEnglish && under13:
+          specificCardSet = 'youngerThan13NewMinecraftCards';
+        break;
       case completedTutorialType === '2017Minecraft' && !isEnglish:
           specificCardSet = 'nonEnglishNewMinecraftCards';
         break;
@@ -58,6 +67,9 @@ export default class StudentsBeyondHoc extends Component {
         break;
       case completedTutorialType === 'applab' && !signedIn:
           specificCardSet = 'signedOutApplabCards';
+        break;
+      case completedTutorialType === 'other' && isEnglish && under13:
+          specificCardSet = 'youngerThan13DefaultCards';
         break;
       case completedTutorialType === 'other' && signedIn && isEnglish:
           specificCardSet = 'signedInDefaultCards';

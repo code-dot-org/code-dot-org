@@ -25,10 +25,11 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_do_not_know,
     :class_frequency,
     :tell_us_more,
-    :pledged
+    :pledged,
+    :share_with_regional_partners
   ].freeze
 
-  BOOLEAN_FIELDS = [
+  CHECKBOX_FIELDS = [
     :other_classes_under_20_hours,
     :topic_blocks,
     :topic_text,
@@ -79,16 +80,21 @@ class Api::V1::Census::CensusController < ApplicationController
 
     # Checkboxes don't get submitted if they aren't checked.
     # Set them to false if they are nil
-    BOOLEAN_FIELDS.map do |field|
+    CHECKBOX_FIELDS.map do |field|
       census_params[field] = false unless census_params[field]
     end
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
+    when 'CensusYourSchool2017v5'
+      submission = ::Census::CensusYourSchool2017v5.new census_params
+      template = 'census_form_receipt'
     when 'CensusYourSchool2017v4'
       submission = ::Census::CensusYourSchool2017v4.new census_params
+      template = 'census_form_receipt'
     when 'CensusHoc2017v3'
       submission = ::Census::CensusHoc2017v3.new census_params
+      template = 'hoc_census_2017_pledge_receipt' if submission.pledged
     else
       errors[:form_version] = "Invalid form_version"
     end
@@ -99,6 +105,13 @@ class Api::V1::Census::CensusController < ApplicationController
       ActiveRecord::Base.transaction do
         school_info.save
         submission.save
+      end
+      if template
+        recipient = Poste2.create_recipient(submission.submitter_email_address,
+          name: submission.submitter_name,
+          ip_address: request.remote_ip
+        )
+        Poste2.send_message(template, recipient)
       end
       render json: {census_submission_id: submission.id}, status: :created
     else

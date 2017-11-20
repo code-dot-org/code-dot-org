@@ -14,6 +14,7 @@ $(document).ready(function () {
   const congratsData = JSON.parse(script.dataset.congrats);
   const userType = congratsData.current_user ? congratsData.current_user.user_type : "signedOut";
   const isEnglish = congratsData.english;
+  const userAge = congratsData.user_age;
 
   let certificateId = '';
   let tutorial = '';
@@ -30,6 +31,7 @@ $(document).ready(function () {
         tutorial={tutorial}
         isRtl={isRtl}
         userType={userType}
+        userAge={userAge}
         isEnglish={isEnglish}
         MCShareLink="minecraft/sharelink"
       />
