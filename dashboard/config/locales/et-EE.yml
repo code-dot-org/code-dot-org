@@ -975,13 +975,6 @@
     create: Loo projekt
     create_a_project: 'Uue projekti loomine:'
     new: Loo uus
-    new_buttons:
-      artist: Kunstnik
-      playlab: Play Lab
-      applab: App Lab
-      gamelab: Game Lab
-      weblab: Web Lab (beta)
-    new_buttons_header: 'Start a new project:'
     rename: Nimeta ümber
     save: Salvesta
     delete: Kustuta

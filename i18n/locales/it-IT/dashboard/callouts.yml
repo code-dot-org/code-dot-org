@@ -36,7 +36,9 @@ it:
         onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Click here when you're done!
+        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not, hit 'Reset', change your code, and hit 'Run' again.
+      AppLab Intro 7 - thisOrThatAddButton_callout:
+        AppLabHoCFinal11: You're now in Design Mode.
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -460,21 +462,21 @@ it:
       MC_HOC_2017_01_Kiki_callout: [ ]
       MC_HOC_2017_02_Cole_callout: [ ]
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: Ora il tuo giocatore ha un amico!  Puoi scrivere un codice per farti aiutare dall'Agent a superare i livelli.
+        MC_HOC_2017_02_Cole_1: Ora il tuo giocatore ha un amico!  Puoi scrivere del codice per farti aiutare dall'Agente a superare i livelli.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: Questo è un ciclo "ripetizione"!  Clicca nell'area di lavoro e aggiungi il codice che vuoi eseguire diverse volte.
+        MC_HOC_2017_03_Cole_1: Questo è un ciclo di "ripetizione"!  Prendilo dall'area di lavoro e aggiungi al suo interno il codice che vuoi eseguire diverse volte.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: L'Agent può muoversi sull'acqua, il giocatore no!
+        MC_HOC_2017_04_Cole_a: L'Agente può muoversi sull'acqua, il giocatore no!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Clicca questo nell'area di lavoro e aggiungi il codice che vuoi ripetere diverse volte!
+        MC_HOC_2017_04_Kiki_1: Trascina questo blocco nell'area di lavoro e aggiungi al suo interno il codice che vuoi ripetere diverse volte!
       MC_HOC_2017_06_Cole_callout:
         MC_HOC_2017_06_Cole_1: Non puoi buttare via questi blocchi, ma puoi modificarli!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: 'L''Agent può muoversi sulla lava, il giocatore no!  '
+        MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, il giocatore no!  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: 'L''Agent può muoversi sulla lava, il giocatore no!  '
+        MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, il giocatore no!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'L''Agent può muoversi sulla lava, il giocatore no!  '
+        MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex non possono!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here

@@ -2,12 +2,12 @@ sl:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: Če uporabiš blok 'premakni se naprej za 100 pikslov' avtomatično narišem črto.
+        2-3_Artist_1_new_b: Imate težave pri obračanju? Uporabite blok 'obrni se desno za 90 stopinj'.
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: 'Imate težave s koti? V celem krogu morate ko 360 stopinj razdeliti na 8 enakih kotov. Koliko je 360/8? '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns 1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: Za polni krog se morate obrniti za 360 stopinj. Če se umetnik vsakič obrne za 1 stopinjo v zanki, mora to narediti 360 krat, da pride okrog.
       2-3 Artist 2 new_authored_hint:
         2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
       2-3 Artist 3new_authored_hint:
@@ -26,7 +26,7 @@ sl:
       2-3 Artist 9 NEW_authored_hint:
         2-3_Artist_9_a: This diamond is really just a square on its side
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: Vsak korak je 100 pikslov širok in visok 100 pikslov.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
         2-3_Artist_9_b: |-
@@ -267,10 +267,10 @@ sl:
       4-5 Maze 4_authored_hint:
         4-5_Maze_4_a: If you are having a hard time figuring out where to put the repeat, try coding everything out and looking for a pattern.
       4-5 Maze 5_authored_hint:
-        4-5_Maze_5_a: Try using a `repeat` loop anytime you need to `move forward` more than two steps.
-        4-5_Maze_5_b: You can use more than one `repeat` loop in a puzzle.
+        4-5_Maze_5_a: Uporabi `ponovi` zanko vedno, ko potrebuješ `premakni se naprej` za več kot dva koraka.
+        4-5_Maze_5_b: Lahko uporabiš več kot eno `ponovi` zanko v uganki.
       4-5 Maze 6_authored_hint:
-        4-5_Maze_6_a: "Try tracing out a path with your finger.  \nIs it the shortest path you can find?"
+        4-5_Maze_6_a: "Poskusi slediti poti s svojim prstom.\nAli je to najkrajša pot, ki jo najdeš?"
       4-5 Maze 7_authored_hint:
         4-5_Maze_7_a: "**Want to get your code as small as it can be?** \n\nLook for patterns in your blocks. Do you see something that repeats?  Try putting a loop around it instead!"
       4-5 Nested Loops 12_authored_hint:
@@ -313,8 +313,8 @@ sl:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
       Course 4 Artist 11_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        Course_4_Artist_11_a: 'Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.'
+        Course_4_Artist_11_b: '2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**.'
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Each repeated shape is the combination of **half of a hexagon**, followed by **2/3 of a triangle**. '
         Course_4_Artist_12_b: 'The unit shape is almost the same as in the last puzzle, except the half-hexagon is a bit bigger. '
@@ -379,13 +379,13 @@ sl:
       Course 4 Artist 7_authored_hint: [ ]
       Course 4 Artist 8a_authored_hint:
         Course_4_Artist_8a: |-
-          Need help figuring out how far to turn?
+          Potrebujejo pomoč pri ugotovljanju za koliko se obrniti?
           
-          There are 3 triangles within the 360 degree rotation.
+          Na sliki so 3 trikotniki v 360 stopinjski rotaciji.
           
-          How many times does 3 go into 360?
+          Koliko krat gre 3 v 360?
       Course 4 Artist 9_authored_hint:
-        Course_4_Artist_9_a: "Need to know how much to turn? \n\nWhat is 360 divided by 10?"
+        Course_4_Artist_9_a: "Neveš za koliko se obrniti?\n\nKoliko je 360 deljeno z 10?"
       Course 4 Artist Binary Free Play 2b_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.
         Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.
@@ -665,13 +665,13 @@ sl:
           </block>
           </xml>
       Course 4 Artist Vars 13_authored_hint:
-        Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other) both repeating `sides` times.
-        Course_4_Artist_Vars_13_b: "The inner repeat loop draws an octagon (turning to the left).   \n\nAfterwards, you need to move forward and turn right only in the outer loop."
-        Course_4_Artist_Vars_13_c: To adjust the shape to stay the same size when the number of sides change, use the math block to divide the length in pixels by the number of sides.
+        Course_4_Artist_Vars_13_a: Uporabiti moraš dve `ponovi N-krat` vgnezdeni(to pomeni ena znotraj druge) zanki, v obeh uporabi `sides` spremeljivko.
+        Course_4_Artist_Vars_13_b: "Notranja zanka naj riše osemkotnik (obrača naj se levi).\nNato se moraš v zunanji zanki premakniti naprej in obrniti na desno."
+        Course_4_Artist_Vars_13_c: Da bi prilagodil obliko, ki ostane iste velikosti ko se število stranic spremenja moraš uporabiti matematični blok s katerim deliš dolžino v pikslih s številom stranic.
       Course 4 Artist Vars 6_authored_hint:
         Course_4_Artist_Vars_6_a: To draw a regular polygon, turn **360/sides** each time.
       Course 4 Artist Vars 8_authored_hint:
-        Course_4_Artist_Vars_8_a: If you divide your starting length by the number of sides, the length of each side will get shorter as the number of sides gets higher.
+        Course_4_Artist_Vars_8_a: Če razdeliš začetno dolžino s številom stranic, bo dolžina vsake stranice krajša, ko se bo število stranic povečevalo.
       Course 4 Bee Params 7_authored_hint:
         notice_pattern: 'Do you see a pattern in how the number of nectar changes? '
         count_with_for: Notice that the nectar goes up in steps. What kind of block can you use to do the same thing many times while counting up?
@@ -3601,7 +3601,7 @@ sl:
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some minecart tracks so you can explore the world!
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -3748,7 +3748,7 @@ sl:
           
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
       NEW Course 4 Bee For Loops 8_authored_hint:
-        NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment is added to your counter variable each time through. \n\nWhat do you need to add to each number to get the number after it?"
+        NEW_Course_4_Bee_For_Loops_8_a: "Če tvoja zanka šteje, se k tvojemu števcu vsakič doda prirastek.\n\nKaj moraš dodati vsaki številki, da dobiš naslednjo številko?"
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
       Overworld Avoid Monsters_authored_hint:
@@ -4195,8 +4195,8 @@ sl:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Try moving west to start.
       course3_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.'
+        courseE_artist_concept_challenge1_b: '2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**.'
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner. You can also `jump to` other positions or change the whole thing around however you want!
       course3_artist_functions_challenge2_authored_hint:
@@ -7551,8 +7551,8 @@ sl:
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What comes next?
         courseE_artist_concept4_c: After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?
       courseE_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.'
+        courseE_artist_concept_challenge1_b: '2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**.'
         courseE_artist_concept_challenge1_c: |-
           This is the design you want to repeat to make the full shape:
           
@@ -9110,6 +9110,7 @@ sl:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3_b: Remember that your function should only get honey *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3a_b: Use a stairstep pattern to check the first four clouds.
@@ -9971,8 +9972,8 @@ sl:
       grade2_CaringForNewPet_7D_authored_hint:
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: Če uporabiš blok 'premakni se naprej za 100 pikslov' avtomatično narišem črto.
+        2-3_Artist_1_new_b: Imate težave pri obračanju? Uporabite blok 'obrni se desno za 90 stopinj'.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
       grade2_MakeDogTag_3_authored_hint:
@@ -10311,8 +10312,8 @@ sl:
         grade4_artist_functions_windows2_a: Try creating your function first then adding in windows one at a time.
         grade4_artist_functions_windows2_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels forward for each top window, and 150 pixels down to get the bottom windows.
       grade4_artist_nestedLoops_challenge2_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        Course_4_Artist_11_a: 'Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.'
+        Course_4_Artist_11_b: '2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**.'
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           This design will loop 10 times over 360 degrees.
@@ -10394,8 +10395,8 @@ sl:
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: Če uporabiš blok 'premakni se naprej za 100 pikslov' avtomatično narišem črto.
+        2-3_Artist_1_new_b: Imate težave pri obračanju? Uporabite blok 'obrni se desno za 90 stopinj'.
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
         2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
@@ -10500,7 +10501,7 @@ sl:
       grade5_artist_parameters_stars1_authored_hint:
         hint1: Don't give up!
       grade5_artist_variables_freeplay10_authored_hint:
-        Course_4_Artist_Vars_8_a: If you divide your starting length by the number of sides, the length of each side will get shorter as the number of sides gets higher.
+        Course_4_Artist_Vars_8_a: Če razdeliš začetno dolžino s številom stranic, bo dolžina vsake stranice krajša, ko se bo število stranic povečevalo.
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: After you complete one square, try jumping forward half of it's length before turning and making another.
         Course_4_Artist_Inspire_b: Each square and jump is repeated four times (using a left turn inbetween) to make a full pinwheel-like unit.
@@ -10509,9 +10510,9 @@ sl:
           **Solution:**
           ![Blocks for solution](https://images.code.org/1865aaf1b4a8ba84a5e8a7408401092d-image-1440060930335.43.39.png)
       grade5_artist_variables_octagons13_authored_hint:
-        Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other) both repeating `sides` times.
-        Course_4_Artist_Vars_13_b: "The inner repeat loop draws an octagon (turning to the left).   \n\nAfterwards, you need to move forward and turn right only in the outer loop."
-        Course_4_Artist_Vars_13_c: To adjust the shape to stay the same size when the number of sides change, use the math block to divide the length in pixels by the number of sides.
+        Course_4_Artist_Vars_13_a: Uporabiti moraš dve `ponovi N-krat` vgnezdeni(to pomeni ena znotraj druge) zanki, v obeh uporabi `sides` spremeljivko.
+        Course_4_Artist_Vars_13_b: "Notranja zanka naj riše osemkotnik (obrača naj se levi).\nNato se moraš v zunanji zanki premakniti naprej in obrniti na desno."
+        Course_4_Artist_Vars_13_c: Da bi prilagodil obliko, ki ostane iste velikosti ko se število stranic spremenja moraš uporabiti matematični blok s katerim deliš dolžino v pikslih s številom stranic.
       grade5_artist_variables_square7_authored_hint:
         Course_4_Artist_Vars_6_a: To draw a regular polygon, turn **360/sides** each time.
       grade5_artist_variables_triangles1_authored_hint:
