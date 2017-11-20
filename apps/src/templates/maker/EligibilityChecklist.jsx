@@ -104,16 +104,6 @@ export default class EligibilityChecklist extends Component {
     });
   }
 
-  handleNotFoundChange = (field, event) => {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        [field]: event.target.value
-      }
-    });
-  }
-
-
   displayDiscountAmount = () => {
     this.setState({displayDiscountAmount: true});
   }
