@@ -13,50 +13,37 @@ Contact: [**CONTACT INFORMATION**]
   
 
 
-<strong>
+<mark strong = "crwd-tanda"> 
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  GUBERNUR / SENATOR / ASSEMBLYMEMBER / PERWAKILAN / WALIKOTA / Councilmember [MASUKKAN NAMA] [BERPARTISIPASI DALAM JAM KODE DENGAN MAHASISWA LOCAL] </ strong> <br /> Komunitas datang bersama-sama untuk meningkatkan kesadaran tentang pentingnya pendidikan ilmu komputer dengan berpartisipasi dalam Pekan Pendidikan Ilmu Komputer
 </center>
 
-<br /> <br /></p> 
+  
+  
 
-<p>
-  <strong>DATE</strong> - [<strong>INSERT NAME</strong>] joined the principal and faculty members of [<strong>INSERT NAME OF SCHOOL</strong>], business leaders and local families today for [<strong>NAME OF EVENT</strong>] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
-</p>
 
-<p>
-  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
-</p>
+** DATE </ strong> - [ ** INSERT NAME </ strong> ] bergabung dengan anggota kepala sekolah dan fakultas dari <** INSERT NAMA SEKOLAH </ strong> ], pemimpin bisnis dan keluarga lokal hari ini untuk [ < strong> NAMA EVENT </ strong> ] untuk berpartisipasi dalam Jam Kode sebagai bagian dari Pekan Pendidikan Ilmu Komputer . [INSERT NAME] dan anggota masyarakat termasuk di antara puluhan juta orang di seluruh dunia untuk berpartisipasi dalam acara pembelajaran terbesar sepanjang sejarah.</p> 
 
-<p>
-  [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
-</p>
+[ ** INSERT DETAIL PERISTIWAAN, GUNAKAN DESKRIPTIF DAN BAHASA KUANTIFIABLE. UNTUK CONTOH: </ strong>]   
+"Sekolah Dasar Daniels Run mengadakan acara Hour of Code sepanjang sekolah untuk mengekspos mahasiswanya ke ilmu komputer. Lebih dari 700 siswa dari semua kelas melakukan setidaknya satu jam kode. Dan selusin orang tua dan sukarelawan dari masyarakat membantu sepanjang hari dan membawa anak-anak berkumpul untuk sebuah majelis yang menampilkan mengapa ilmu komputer penting dalam kehidupan siswa-siswa ini. "</p> 
 
-<p>
-  Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! dan Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+[ ** CONTOH TEKS SAMPEL UNTUK KONTEKS: </ strong>]   
+Komputer ada dimana-mana, namun lebih sedikit sekolah yang mengajar ilmu komputer daripada 10 tahun yang lalu. Anak perempuan dan siswa dengan warna sangat kurang terwakili. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.</p> 
 
-<p>
-  [<strong>INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “We need to encourage and embrace our students’ interest in computer science,” said [<strong>INSERT NAME</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
-</p>
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! dan Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-<p>
-  [<strong>INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION</strong>]
-</p>
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
 
-<p>
-  [<strong>INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT</strong>]
-</p>
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
 
-<p>
-  For more information about [<strong>EVENT/PROGRAM/ETC</strong>], visit [<strong>INSERT WEBSITE</strong>] or contact [<strong>INSERT CONTACT INFORMATION</strong>]
-</p>
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
-<p>
-  <br /> <br />
-</p>
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-<p>
-  <%= view :signup_button %>
-</p>
+  
+  
+
+
+<%= view :signup_button %>

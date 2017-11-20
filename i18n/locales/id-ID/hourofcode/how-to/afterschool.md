@@ -5,15 +5,15 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Cara mengajar satu jam kode di kelas dan klub setelah sekolah
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Bergabunglah dengan gerakan ini dan perkenalkan sekelompok siswa pada jam pertama ilmu komputer mereka dengan langkah-langkah ini. Jam Kode mudah dijalankan - bahkan untuk pemula! Jika Anda ingin set ekstra tangan untuk membantu, Anda dapat menemukan.org/volunteer/local') [ relawan lokal ](%= kode resolve_url('https:// %) untuk membantu menjalankan Jam Kode di kelas Anda.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. Pilih tutorial
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. Ayo dicoba
+Kami menyediakan berbagai [ tutorial yang menyenangkan dan sejam ](%= resolve_url('/learn') %) bagi peserta segala usia, diciptakan oleh berbagai mitra. Ayo dicoba
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 

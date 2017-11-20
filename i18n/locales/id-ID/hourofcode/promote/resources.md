@@ -7,9 +7,9 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promosikan Hour of Code
+# Promosikan Jam Kode
 
-## Menyelenggarakan Hour of Code? [ Lihat panduan](<%= resolve_url('/how-to') %>)
+## Hosting Satu Jam Kode? [ Lihat petunjuk panduannya ](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -60,49 +60,49 @@ nav: promote_nav
 
 ### Ask your school, employer, or friends to sign up:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code
+** Subject line: </ 0> Bergabunglah dengan saya dan lebih dari 100 juta siswa untuk Hour of Code</p> 
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Komputer ada dimana-mana, mengubah setiap industri di planet ini. Tapi kurang dari separuh sekolah mengajarkan ilmu komputer. Kabar baiknya adalah, kita sedang dalam perjalanan untuk mengubah ini! If you've heard about the Hour of Code before, you might know it made history. Lebih dari 100 juta siswa telah mencoba Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Lebih dari 100 mitra telah bergabung bersama untuk mendukung gerakan ini. Setiap Apple Store di dunia telah menyelenggarakan Hour of Code, dan para pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis baris kode pertama mereka sebagai bagian dari kampanye.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+Tahun ini, mari kita buat lebih besar lagi. I’m asking you to join the Hour of Code 2017. Silakan terlibat dalam acara Hour of Code selama Pekan Pendidikan Ilmu Komputer, <% = campaign_date ('full')%>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Get started at http://hourofcode.com/<%= @country %>
+Mulai di http://hourofcode.com/<%= @country %>
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### Relawan di sekolah:
 
-**Subject line:** Can we help you host and Hour of Code?
+** Baris subjek: </ strong> Bisakah kami membantu Anda meng-host dan Hour of Code?</p> 
 
-Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+Antara Desember. 4-10, sepuluh persen siswa di seluruh dunia akan merayakan Pekan Pendidikan Ilmu Komputer dengan melakukan acara Hour of Code di sekolah mereka. Ini adalah kesempatan bagi setiap anak untuk belajar bagaimana teknologi di sekitar kita bekerja.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[Organisasi kami / nama saya] ingin membantu [nama sekolah] menjalankan acara Hour of Code. Kami dapat membantu para guru menyelenggarakan Hour of Code di kelas mereka (kami bahkan tidak memerlukan komputer!) Atau jika Anda ingin menjadi tuan rumah sebuah majelis sekolah, kami dapat mengatur agar pembicara berbicara tentang bagaimana teknologi bekerja dan bagaimana rasanya jadilah insinyur perangkat lunak.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+Para siswa akan membuat aplikasi atau permainan mereka sendiri yang bisa mereka tunjukkan pada orang tua mereka, dan kami juga akan mencetak sertifikat Kode Hari yang bisa mereka bawa pulang. Dan, ini menyenangkan! Dengan kegiatan interaktif dan langsung, siswa akan belajar keterampilan berpikir komputasi dengan cara yang mudah didekati.
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+Komputer ada dimana-mana, mengubah setiap industri di planet ini. Tapi kurang dari separuh sekolah mengajarkan ilmu komputer. Kabar baiknya adalah, kita sedang dalam perjalanan untuk mengubah ini! Jika Anda pernah mendengar tentang Hour of Code sebelumnya, Anda mungkin tahu itu membuat sejarah - lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code.
 
-Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Berkat Hour of Code, ilmu komputer telah berada di homepage Google, MSN, Yahoo!, dan Disney. Lebih dari 100 mitra telah bergabung bersama untuk mendukung gerakan ini. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+Anda dapat membaca lebih lanjut tentang acara di http://hourofcode.com/. Atau, beri tahu kami jika Anda ingin menjadwalkan beberapa waktu untuk membicarakan bagaimana [nama sekolah] dapat berpartisipasi.
 
-Thanks!
+Terima kasih!
 
-[Your name], [Your organization]
+[Nama anda], [organisasi anda]
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### Undang media untuk menghadiri acara Anda:
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
 Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Lebih dari 100 mitra telah bergabung bersama untuk mendukung gerakan ini. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
@@ -122,7 +122,7 @@ I look forward to being in touch.
 
 **Subject line:** Our students are changing the future with an Hour of Code
 
-Dear Parents,
+Orang tua yang di hormati
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
