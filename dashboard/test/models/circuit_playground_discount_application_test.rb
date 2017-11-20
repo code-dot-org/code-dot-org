@@ -13,18 +13,23 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     teacher = create :teacher
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'no')
     refute application.eligible_unit_6_intention?
+    application.destroy
 
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1718')
     assert application.eligible_unit_6_intention?
+    application.destroy
 
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1819')
     assert application.eligible_unit_6_intention?
+    application.destroy
 
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yesAfter')
     refute application.eligible_unit_6_intention?
+    application.destroy
 
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'unsure')
     refute application.eligible_unit_6_intention?
+    application.destroy
   end
 
   test 'find_by_studio_person_id' do
