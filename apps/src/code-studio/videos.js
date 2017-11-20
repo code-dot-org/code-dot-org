@@ -46,6 +46,7 @@ function onYouTubeIframeAPIReady() {
 function createVideo(options) {
   return $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
+    allowfullscreen: 'true',
     scrolling: 'no'
   });
 }
