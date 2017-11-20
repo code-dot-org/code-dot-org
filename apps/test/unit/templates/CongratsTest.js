@@ -1,67 +1,82 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import Congrats from '@cdo/apps/templates/Congrats';
+import {Provider} from 'react-redux';
+import {combineReducers, createStore} from 'redux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('Congrats', () => {
+  let root;
+
   it('renders a Certificate component', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        isRtl={false}
-        userType="signedOut"
-        isEnglish={true}
-      />
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="signedOut"
+          isEnglish={true}
+        />
+      </Provider>
     );
-    expect(wrapper.find('Certificate').exists()).to.be.true;
+    expect(root.find('Certificate').exists());
   });
 
-  it('renders a StudentsBeyondHoc component, regardless of user type', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        isRtl={false}
-        signedIn={false}
-        userType="signedOut"
-        isEnglish={true}
-      />
+  it('renders a StudentsBeyondHoc component', () => {
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="signedOut"
+          isEnglish={true}
+        />
+      </Provider>
     );
-    expect(wrapper.find('StudentsBeyondHoc').exists()).to.be.true;
+    expect(root.find('StudentsBeyondHoc').exists());
   });
 
   it('renders a TeachersBeyondHoc component, for teachers', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        isRtl={false}
-        userType="teacher"
-        isEnglish={true}
-      />
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="teacher"
+          isEnglish={true}
+        />
+      </Provider>
     );
-    expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.true;
+    expect(root.find('TeachersBeyondHoc').exists());
   });
 
   it('renders a TeachersBeyondHoc component, for signed out', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        isRtl={false}
-        userType="signedOut"
-        isEnglish={true}
-      />
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="signedOut"
+          isEnglish={true}
+        />
+      </Provider>
     );
-    expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.true;
+    expect(root.find('TeachersBeyondHoc').exists());
   });
 
   it('does not render a TeachersBeyondHoc component, for students', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        isRtl={false}
-        userType="student"
-        isEnglish={true}
-      />
+    const store = createStore(combineReducers({responsive, isRtl}));
+    root = mount(
+      <Provider store={store}>
+        <Congrats
+          completedTutorialType="other"
+          userType="student"
+          isEnglish={true}
+        />
+      </Provider>
     );
-    expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.false;
+    expect(root.find('TeachersBeyondHoc').exists()).to.be.false;
   });
 });
