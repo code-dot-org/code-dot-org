@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Enviï [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) per convidar alguna persona influent localment per fer una xerrada.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Convidi mitjans de comunicació. és a dir, premsa local, diaris generals, bloggers d'educació o tecnologia... Consulti el [dossier de premsa](%= resolve_url('/promote/press-kit') %) per obtenir ajuda.
 
 ## 2. During your event
