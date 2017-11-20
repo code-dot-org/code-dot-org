@@ -5,9 +5,9 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-<% facebook = {: u = > "http://#{request.host}/us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {: 网址 = > "http://hourofcode.com",: 相关的 = > "codeorg",: 标签 = >> hoc_s (: twitter_default_text)} 推特 [: 标签] = ' hourofcode ' 除非 hoc_s (: twitter_default_text). 包括？ "#编程一小时"%
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # 发动你的社区来参与编程一小时活动
 

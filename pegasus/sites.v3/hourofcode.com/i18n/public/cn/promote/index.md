@@ -12,6 +12,14 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
+# 发动你的社区来参与编程一小时活动
+
+## 1. 帮助宣传这个活动
+
+告诉你的朋友 ** #编程一小时 **!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+
 ## 2. 邀请你的学校加入编程一小时
 
 [发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给你的校长并让学校的每个班级来报名。

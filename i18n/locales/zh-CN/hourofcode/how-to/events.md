@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. 准备你的活动
 
 - 确定地点，日期和时间
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- 发送 [一封邮件](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit)，邀请当地的市长， 国会议员、，州长或其他有影响力的商业人士发言。 请查看我们的 [ 入门工具包 ](%=resolve_url('/files/elected-official.pdf')%), 在《编程一小时》的活动中托管一个民选官员以了解更多信息。
 - 邀请新闻媒体，比如本地的新闻社，报纸，教育或技术博客。查看我们的[新闻工具包](%= resolve_url('/promote/press-kit') %)以获得帮助。
 
 ## 2. 活动期间
