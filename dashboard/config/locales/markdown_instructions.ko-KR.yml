@@ -1962,8 +1962,8 @@
         **Stuck?
         Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 7 - thisOrThatPersonalize_markdown_instruction: |-
-        <img src="https://images.code.org/762507aef26d512f820c42fb2e7fc6f1-image-1508386296370.11.19
-        PM.png" style="float:right;height:200px">\r
+        <img src="https://images.code.org/fe6ff9b7605128f999e727487d87908b-image-1510169816629.35.34
+        AM.png" style="float:right;height:200px">\r
         \r
         **Goal:** Start building
         your own "Choose Your Own Adventure" app. Don't forget to "Share" it
@@ -15058,6 +15058,10 @@
         [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
         *
         You can also download a CSV version of the file [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
+      CSD U5 Waze Data Video_markdown_instruction: |-
+        Watch this video to learn how
+        this problem is solved by Waze. As you watch think about what data is being
+        collected and where it's coming from.
       CSD U5 binary 1_markdown_instruction: |-
         # 5-Bit Number\r
         \r
@@ -15658,7 +15662,7 @@
         </div>\r
         \r
         Create
-        and event handler for "sad_button" and make it change to a sad emoji.\r
+        an event handler for "sad_button" and make it change to a sad emoji.\r
         \r
         *
         Drag out an `onEvent` block and select "sad_button" from the id dropdown\r
@@ -15741,13 +15745,61 @@
         *
         Modify the line of code that makes the buzzer sound so that it uses the `frequency`
         variable rather than the default frequency of `500`.
+      CSD U6 game project board events_markdown_instruction: |-
+        # Board Events\r
+        \r
+        Go
+        back to the Events section of your activity guide and find any events that
+        respond to your board (ones that would use `onBoardEvent()`). Create event
+        handlers for each of those now. If these events rely on functions you haven't
+        written yet, just leave yourself a comment in the code.
+      CSD U6 game project finish_markdown_instruction: |-
+        # Finishing Touches and Testing\r
+        \r
+        At
+        this point you should have most of your program in place. Now you need to
+        add whatever finishing touches are needed and do a little testing. When your
+        app is ready, have your classmates try it out. See if you can find any bugs,
+        confusing design choices, or missing features you'd like to work on.\r
+        \r
+        Once
+        you're all down with this version of your program, click Submit to turn it
+        in.
+      CSD U6 game project functions call_markdown_instruction: |-
+        # Calling your Functions\r
+        \r
+        With
+        your functions defined, you can can call them wherever you need. Go through
+        your event handlers, or anywhere else in your program that your function should
+        be used, and add calls to the function you created.
+      CSD U6 game project functions define_markdown_instruction: |-
+        # Define Your Functions\r
+        \r
+        Define
+        all of your functions at the bottom of the program, under the comment `//
+        Create your functions here`.\r
+        \r
+        Right now we're only worrying about writing
+        the function _definitions_, the part which looks like:\r
+        \r
+        ```\r
+        function
+        myFunction() {\r
+        \t// Things my function does\r
+        }\r
+        ```
       CSD U6 game project screen links_markdown_instruction: |-
-        # Design Element Events\r
+        # UI Element Events\r
         \r
         Now
         that all of your screens are designed, you can add any event handlers that
-        will respond to screen interaction. Remember, you create event handlers for
-        design elements using the `onEvent()` block.
+        will respond to _screen interaction_. These should be listed in the "Events"
+        section of your activity guide. If you run into new events that you hadn't
+        thought of in the planning stage, make sure you add them to your project guide.\r
+        \r
+        Don't
+        worry about making these completely functional yet. If your events rely on
+        board elements or your own functions, we'll take care of that in later levels.
       CSD U6 game project screens_markdown_instruction: |-
         # Create Your Screens\r
         \r
@@ -16095,7 +16147,7 @@
         It's
         not really useful to only set a property when your program is run. After all,
         you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty` you're able to do things you couldn't do with Design
+        with `setProperty`, you're able to do things you couldn't do with Design
         Mode alone.\r
         \r
         # Do This\r
@@ -16130,7 +16182,7 @@
         \r
         Every
         design element (except for the screen) has an "x" and a "y" property that
-        control their position.\r
+        controls its position.\r
         \r
         # Do This\r
         \r
@@ -34099,12 +34151,9 @@
         secret data?\r
         \r
       Function intro Ryan_markdown_instruction: |-
-        A **function** named `build bridge`
-        is in your workspace.  All of the code you need to cross the river is built
-        right in! \r
+        작업 공간에 있는 '다리 짓기' **함수가** 보이죠?  강을 건너는 해결 방법은 이미 주어졌어요! \r
          \r
-        Snap the small, green block twice into your workspace to
-        fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].
+        녹색의 작은 블록을 작업 공간으로 두 번 가져와 길을 만들고 {currentPlayerName}이(가) 레드스톤 횃불 [redstone_torch] 쪽으로 갈 수 있게 도와주세요.
       'Game Lab Workshop: Random_markdown_instruction': |
         # Randomized Shapes\r
         \r
@@ -35369,230 +35418,141 @@
         to the door and open it (using the **space bar**) so you can get to the orange
         square inside.
       MC_HOC_2017_01_markdown_instruction: |-
-        Click "Run" to move the player using
-        the **arrow keys**.  \r
+        '실행'을 클릭한 다음 **화살키**를 사용해 플레이어를 움직이세요.  \r
         \r
-        To pass this level, you will need to get to the
-        door and open it (using the **space bar**) so you can get to the orange square
-        inside.
-      MC_HOC_2017_01_Cole_markdown_instruction: |-
-        You need to collect all the tools
-        on this journey. Move around using the **arrow keys**, and get to the chest
-        on the path to win
-      MC_HOC_2017_01_Kiki_markdown_instruction: "To play this level, click the orange\n\"Run\"
-        button beneath the play space, then move the player around using the\n**arrow
-        keys**.  "
-      MC_HOC_2017_01_RETRY_markdown_instruction: |-
-        The door is locked, but the Agent
-        is here to help!\r
-        \r
-        Snap a `move forward` block to the bottom of the `when
-        run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up],
-        then press "Run" and use the arrow keys to move out of the house to collect
-        the **chest** [chest].
-      MC_HOC_2017_02_markdown_instruction: |-
-        The player needs to get into that secret
-        grove.  Help The Agent open the gate by writing code to get him to the pressure
-        plate.
-      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} is headed on\nan
-        adventure! To help, get the **map** [map_empty] behind the locked door\non
-        the right. \\r\n \\r\nSnap the code into the workspace to move the Agent\nto
-        the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get\nthrough. "
+        이 레벨을 통과하려면 문까지 이동한 다음 **스페이스바**를 사용해 문을 열고 그 안에 있는 주황색 네모 칸에 도달해야 합니다.
+      MC_HOC_2017_01_Cole_markdown_instruction: "여정에 필요한 도구를 모두 확보해야 합니다. **방향키**를
+        사용해 원하는 방향으로 이동하세요. 길목에 있는 상자에 도달하면 성공입니다."
+      MC_HOC_2017_01_Kiki_markdown_instruction: "이 레벨을 플레이하려면 플레이 화면 아래에 있는 주황색 '실행'
+        버튼을 클릭한 다음 **방향키**를 사용해 플레이어를 움직이세요.  "
+      MC_HOC_2017_01_RETRY_markdown_instruction: "{currentPlayerName}이(가) 집 안에 갇혀
+        버렸어요. 하지만 Agent가 있으니 걱정할 필요는 없답니다!   \\r\n \\r\n   \\r\\'앞으로 이동하기' 블록을 작업
+        공간의 '실행하면' 블록에 연결해서 Agent가 감압판 [PressurePlate_Up] 위로 가게 하세요. 그런 다음 '실행'을 누르고
+        방향키를 사용해 {currentPlayerName}을(를) 집 밖으로 움직여 **상자** [chest]를 집게 하세요. "
+      MC_HOC_2017_02_markdown_instruction: "비밀의 숲길로 플레이어를 이동해야 합니다.  Agent가 감압판 위로
+        움직여 플레이어 대신 문을 열 수 있게 코드를 만드세요."
+      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName}의 모험이 시작되었어요!
+        모험에 필요한 **지도** [map_empty]를 얻으려면 오른쪽에 있는 잠긴 문을 열어야 합니다. \\r\n \\r\n작업 공간으로
+        코드를 가져온 다음 Agent를 감압판 [PressurePlate_Up] 위로 움직여 {currentPlayerName}이(가) 들어갈
+        수 있게 해주세요. "
       MC_HOC_2017_02_Kiki_markdown_instruction: |-
-        The player is headed out on an adventure,
-        but first they have to get the torch that is hidden on the other side of that
-        locked door. \r
+        플레이어가 본격적으로 모험을 시작하려면 먼저 저쪽에 있는 잠긴 문을 열고 그 안에 숨겨진 횃불을 찾아야 해요. \r
         \r
-        Program the Agent to move forward twice to follow the
-        white path and get to the pressure plate so he can open the door for the player.
+        흰색으로 표시된 길을 따라 Agent를 앞으로 두 번 움직여 감압판 위로 올라가게 하세요. 그럼 문이 열리고 플레이어가 안으로 들어갈 수 있어요.
       MC_HOC_2017_02_Will_markdown_instruction: |-
-        To finish this level, the player
-        needs to get to the orange square inside of the Secret Grove, which is behind
-        the locked door.  \r
+        이 레벨을 완료하려면 플레이어를 비밀의 숲길에 있는 주황색 네모 칸으로 움직여야 합니다. 이 길은 잠긴 문으로 막혀 있죠.  \r
         \r
-        The code in the workspace will make the Agent move
-        forward twice to get to the pressure plate and open the door for Alex or Steve.
-      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} continues on\nthe
-        adventure and needs the **compass** [compass] to prepare for the trip.  \\r\n
-        \  \\r\nCode\nthe Agent to open the gate. "
+        작업 공간에 있는 코드를 사용해 Agent를 앞으로 두 칸 움직여 감압판 위로 올라가게 하면 알렉스나 스티브를 위해 문을 열 수 있습니다.
+      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName}이(가) 모험을 계속하려면
+        **나침반** [compass]이 필요합니다.  \\r\n   \\r\nAgent가 문을 열게 코드를 만드세요. "
       MC_HOC_2017_03_Kiki_markdown_instruction: |-
-        The player's adventure will begin
-        behind the locked door, in the Secret Grove!  \r
+        플레이어가 모험을 시작하려면 비밀의 숲길에 있는 잠긴 문을 열어야 합니다.  \r
         \r
         \r
-        Help The Agent open
-        the door by writing code to get him to the pressure plate.
-      MC_HOC_2017_04_markdown_instruction: |-
-        Change the loop from the last puzzle
-        to help the Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
+        코드를 만들어 Agent가 감압판으로 가서 문을 열 수 있게 도와주세요.
+      MC_HOC_2017_04_markdown_instruction: "마지막 퍼즐에 사용된 루프의 내용을 바꿔서 Agent가 강폭이 넓은
+        곳을 건너는 길을 만들 수 있게 도와주세요."
+      MC_HOC_2017_04POINT5_Cole_markdown_instruction: "늪지 탈출에 성공했네요!  자, 이제 플레이어를
+        안전한 주황색 네모 칸으로 움직이세요. \n\n\n간단한 패턴을 찾고 루프를 사용해 Agent를 움직여 두 개의 감압판을 밟으면 길을
+        열 수 있어요."
+      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |
+        무사히 건넜군요! \r
         \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |-
-        You made it across! \r
-        \r
-        Now,
-        get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]
-      MC_HOC_2017_04_Cole_markdown_instruction: "The Agent can move across water!
-        \ \\r\n\n\\r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName}\nget
-        to the **bucket** [bucket_empty] behind the door. "
+        이제 {currentPlayerName}이(가) 안전하게 미로를 통과해 **도끼** [diamond_axe]를 찾을 수 있게 도와주세요.\r
+      MC_HOC_2017_04_Cole_markdown_instruction: |-
+        Agent는 물을 그냥 건널 수 있어요!  \r
+         \r
+        '반복' 루프를 사용해 이 퍼즐을 해결하고 {currentPlayerName}이(가) 문 안쪽에 있는 **양동이** [bucket_empty]를 찾게 도와주세요.
       MC_HOC_2017_04_Kiki_markdown_instruction: |-
-        The entry to the Secret Grove led
-        to this beautiful Oasis!  To pass this level, the player needs to get to the
-        orange square in the cabana.  \r
+        비밀의 숲길 입구는 아름다운 오아시로 연결된답니다!  이 레벨을 통과하려면 플레이어를 집 안의 주황색 네모 칸으로 움직여야 합니다.  \r
         \r
-        Use a `repeat` loop to help the Agent
-        get all the way up to the pressure plate, which opens the cabana door.
-      MC_HOC_2017_05_markdown_instruction: |-
-        Loops are not always helpful.\r
-        \r
-        These
-        cacti are not growing in an obvious pattern, so a loop would not clear them
-        correctly.  Instead, we've given you a function called `destroy and move`
-        that will do the hard work for you each time the Agent gets to an obstacle.
+        '반복' 루프를 사용해 Agent를 감압판으로 보내 집의 문을 열 수 있게 도와주세요.
+      MC_HOC_2017_05_markdown_instruction: "루프가 항상 최고의 해결책인 것은 아니에요. \n\n\n이 선인장들은
+        패턴에 따라 자라고 있기 때문에 루프를 사용해서는 제대로 제거할 수 없어요. 대신 앞으로는 새롭게 제공된 '제거하고 이동하기' 함수를
+        사용해보세요."
       MC_HOC_2017_05_Cole_markdown_instruction: |-
-        Oh no, the bridge is out! \r
+        이런, 다리가 무너져 버렸어요! \r
         \r
-        Code
-        the Agent to rebuild the bridge using the `place` block so that {currentPlayerName}
-        can get to the **shovel** [diamond_shovel].
-      MC_HOC_2017_05_Josh_markdown_instruction: |-
-        Oh no, the bridge is out!\r
-        \r
-        Help
-        the Agent rebuild the bridge so that the player can get to the **shovel**.
+        Agent가 블록을 '설치'해 다리를 다시 짓게 코드를 만들어 {currentPlayerName}이(가) **삽** [diamond_shovel]까지 갈 수 있게 도와주세요.
+      MC_HOC_2017_05_Josh_markdown_instruction: "이런, 다리가 무너져 버렸어요! \n\n\nAgent를 통해
+        다리를 다시 짓고 플레이어가 **삽**까지 갈 수 있도록 도와주세요."
       MC_HOC_2017_05_Kiki_markdown_instruction: |-
-        It's time for the player to leave
-        the Secret Grove and continue the adventure, but the bridge is out! \r
-        \r
-        Help
-        the Agent rebuild the bridge, then move to the wooden plank so that the player
-        can get to the orange square.
-      MC_HOC_2017_06_Cole_markdown_instruction: "Another river, but this one is much\nwider!
-        \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName}\ncan
-        get to the **pickaxe** [diamond_pickaxe]. "
+        이제 플레이어가 비밀의 숲길을 떠나 모험을 계속할 시간입니다. 하지만 다리가 무너져 버렸네요! \r
+
+        Agent를 도와 다리를 다시 짓고 나무 판자로 이동해 플레이어가 주황색 네모 칸으로 갈 수 있게 해주세요.
+      MC_HOC_2017_06_Cole_markdown_instruction: "이번에 만난 강은 훨씬 폭이 넓군요! \\r\n \\r\nAgent가
+        다리를 지을 수 있게 코드를 바꿔서 짓게 도와 {currentPlayerName}이(가) **곡괭이** [diamond_pickaxe]까지
+        갈 수 있게 도와주세요. "
       MC_HOC_2017_06_Josh_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
+        이번에 만난 강은 훨씬 폭이 넓군요!  \r
         \r
-        Fix this code to help the Agent build a bridge across this
-        river.
+        Agent가 강을 건너는 다리를 지을 수 있게 코드를 바꿔주세요.
       MC_HOC_2017_06_Kiki_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
+        이번에 만난 강은 훨씬 폭이 넓군요!  \r
         \r
-        Fix this code to help the Agent build a bridge across the
-        water.
-      MC_HOC_2017_07_Cole_markdown_instruction: "There's ice in the way!  \\r\n \\r\nThe\n`clear
-        path` function can help you destroy the ice and get {currentPlayerName}\nto
-        the Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Kiki_markdown_instruction: "Loops are not the only way to repeat\ncode!
-        \ \\r\n\\r\nHere, we've given you a function called `clear cacti` that\nwill
-        do the hard work of clearing three cacti every time you use it.  Use\ntwo
-        `clear cacti` blocks to clear the path to the orange square. "
-      MC_HOC_2017_07a_Kiki_markdown_instruction: |-
-        Now, edit this loop to help the
-        Agent clear a path to the orange square.
+        이 코드를 수정해서 Agent가 강 너머로 다리를 지을 수 있게 도와주세요.
+      MC_HOC_2017_07_Cole_markdown_instruction: "얼음이 길목을 막고 있네요!  \\r\n \\r\n`경로 확보하기`
+        함수를 사용하면 얼음을 제거해 {currentPlayerName}이(가) 광물 수레 [minecart_normal까지 갈 수 있어요]! "
+      MC_HOC_2017_07_Kiki_markdown_instruction: "루프를 사용하지 않아도 코드를 반복할 수 있는 방법이 있어요!
+        \ \\r\n\\r\n새로 주어진 '선인장 제거하기' 함수를 사용하면 사용할 때마다 선인장을 세 그루씩 제거합니다. '선인장 제거하기'
+        함수를 두 번 사용해 주황색 네모 칸으로 향하는 길을 만드세요. "
+      MC_HOC_2017_07a_Kiki_markdown_instruction: "이제 루프를 사용해 Agent가 주황색 네모 칸으로 가는
+        길을 만들 수 있게 도와주세요."
       MC_HOC_2017_08_Cole_markdown_instruction: |-
-        Now, instead of destroying before
-        you move, you will need to place a block.  \r
+        이번에는 블록을 제거해 길을 만드는 것이 아니라 블록을 설치해서 길을 만들어야 합니다. \r
         \r
-        Change the provided function
-        to work for the desert.
+        주어진 함수를 사막에서 사용할 수 있게 바꾸세요.
       MC_HOC_2017_08_Kiki_markdown_instruction: |-
-        Now, instead of destroying cacti,
-        you will need to place stone over lava, then destroy standstone.  \r
+        이번에는 선인장을 제거하는 대신 용암 위로 돌을 설치한 다음 사암을 제거해야 합니다. \r
         \r
-        Change
-        the function to work for this level.
-      MC_HOC_2017_08_RY_markdown_instruction: |-
-        Now there are **TWO** functions to
-        choose from!\r
-        \r
-        Use these functions to quickly build a bridge across the
-        lava for {currentPlayerName}.
-      MC_HOC_2017_08_Will_markdown_instruction: |-
-        Now there are **TWO** functions
-        to choose from!\r
-        \r
-        Use these functions to quickly build a bridge across
-        the lava for the player.
-      MC_HOC_2017_09_Cole_markdown_instruction: |-
-        Use functions to help the Agent
-        destroy the giant blocks of dirt that are blocking the player's path to the
-        pressure plate.
-      MC_HOC_2017_09_Kiki_markdown_instruction: "This starting code cannot be removed.\\r\n\\r\nAdd\ncommands
-        to the `create trail` function so that the program in the workspace\nwill
-        get the Agent to the pressure plate. "
-      MC_HOC_2017_09_RS_CLONE_markdown_instruction: |-
-        Fix this function to fill in
-        the holes, then step on the pressure plate to clear a path to the torch.
-      MC_HOC_2017_10_Cole_markdown_instruction: |-
-        Use the functions to clear a path
-        for the mine cart, and walk into the Nether Portal.
-      MC_HOC_2017_10_Cole_old_markdown_instruction: |-
-        Try building a function from
-        the beginning that will make it easier for the Agent to finish this minecart
-        and get the player to the orange square.
-      MC_HOC_2017_10_Kiki_markdown_instruction: |-
-        Try building a function from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RETRY_markdown_instruction: "Can you spot the difference between\nthe
-        two functions in your workspace? \\r\n \\r\nUse these functions with other\ncode
-        from the toolbox to clear a path for the Minecart, then collect the **Flint\nand
-        Steel** [flint_and_steel]. \\r\n "
-      MC_HOC_2017_10_RYAN_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RYAN2_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_11_Kiki_markdown_instruction: |-
-        Now it's up to you! See what you
-        can create around this frozen lake.
-      MC_HOC_2017_13_Cole_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
-      MC_HOC_2017_4.5v2_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
-        \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_Ali_markdown_instruction: "Look at the functions below.  How can\nyou
-        use them to avoid the Ghasts and help {currentPlayerName} make it safely\nto
-        the **Enchanted Book** [book_enchanted]?  "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Freeplay:** Now it's up to you!\nCan
-        you challenge yourself to collect all of the diamonds in this level? "
+        이 레벨에서 사용할 수 있게 함수를 바꾸세요.
+      MC_HOC_2017_08_RY_markdown_instruction: "이번에는 선택할 수 있는 함수가 **두 개**나 있네요! \n\n\n함수를
+        사용해 신속하게 다리를 지어 {currentPlayerName}이(가) 용암을 건널 수 있게 도와주세요."
+      MC_HOC_2017_08_Will_markdown_instruction: "이번에는 선택할 수 있는 함수가 **두 개**나 있네요! \n\n\n함수를
+        사용해 신속하게 다리를 지어 플레이어가 용암을 건널 수 있게 도와주세요."
+      MC_HOC_2017_09_Cole_markdown_instruction: "함수를 사용해 Agent가 거대한 흙 블록 무더기를 제거하고
+        플레이어가 감압판으로 갈 수 있는 길을 만들게 도와주세요."
+      MC_HOC_2017_09_Kiki_markdown_instruction: "이번 시작 코드는 삭제할 수 없습니다.\\r\n\\r\n'길
+        만들기' 함수에 명령을 추가해 Agent가 감압판으로 갈 수 있게 작업 공간에 프로그래밍하세요. "
+      MC_HOC_2017_09_RS_CLONE_markdown_instruction: "이 함수를 사용해 빈 공간을 블록으로 채우고 감압판
+        위로 움직여 횃불까지 가는 경로를 확보하세요."
+      MC_HOC_2017_10_Cole_markdown_instruction: "이 함수를 사용해 광물 수레로 가는 길을 확보하고 네더 포탈을
+        통과하세요."
+      MC_HOC_2017_10_Cole_old_markdown_instruction: Agent를 통해 광물 수레를 완성하고 플레이어를 주황색
+        네모 칸으로 이동할 수 있는 함수를 처음부터 만들어 보세요.
+      MC_HOC_2017_10_Kiki_markdown_instruction: Agent를 통해 광물 수레를 완성하고 플레이어를 주황색 네모
+        칸으로 이동할 수 있는 함수를 처음부터 만들어 보세요.
+      MC_HOC_2017_10_RETRY_markdown_instruction: "작업 공간에 있는 두 함수가 어떻게 다른지 아시겠어요? \\r\n
+        \\r\n각 함수를 툴 박스의 다른 코드와 함께 사용해 광물 수레로 가는 길을 확보하고 **부싯돌과 부시** [flint_and_steel]를
+        찾으세요. \\r\n "
+      MC_HOC_2017_10_RYAN_markdown_instruction: Agent를 통해 광물 수레를 완성하고 플레이어를 주황색 네모
+        칸으로 이동할 수 있는 여러 함수를 처음부터 만들어 보세요.
+      MC_HOC_2017_10_RYAN2_markdown_instruction: Agent를 통해 광물 수레를 완성하고 플레이어를 주황색 네모
+        칸으로 이동할 수 있는 여러 함수를 처음부터 만들어 보세요.
+      MC_HOC_2017_11_Kiki_markdown_instruction: "이제 실력을 발휘할 시간입니다! 얼음 호수 주변에 무언가를
+        만들어 보세요."
+      MC_HOC_2017_13_Cole_markdown_instruction: "**무료플레이:** 이제 실력을 발휘할 시간입니다! Agent의
+        코드를 사용해 월드를 탐험하세요."
+      MC_HOC_2017_4.5v2_markdown_instruction: "늪지 탈출에 성공했네요!  자, 이제 플레이어를 안전한 주황색
+        네모 칸으로 움직이세요. \n\n\n간단한 패턴을 찾고 루프를 사용해 Agent를 움직여 두 개의 감압판을 밟으면 길을 열 수 있어요."
+      MC_HOC_2017_Ali_markdown_instruction: "아래 함수들을 살펴 보고 이 함수들을 사용해 {currentPlayerName}이(가)
+        가스트를 피해 **효과부여 책** [book_enchanted]까지 안전하게 갈 수 있는 방법을 생각해보세요. "
+      MC_HOC_2017_FP10x10_markdown_instruction: "**무료플레이:** 이제 실력을 발휘할 시간입니다! 이 레벨에
+        있는 다이아몬드를 모두 모으는 데 도전해보는 건 어떠신가요? "
       MC_HOC_2017_FP10x10_RE_markdown_instruction: |
         **Freeplay:** Now it's up to
         you! Can you challenge yourself to collect all of the diamonds in this level?
-      MC_HOC_2017_FP20x20_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
+      MC_HOC_2017_FP20x20_markdown_instruction: "**무료플레이:** 이제 실력을 발휘할 시간입니다! Agent의
+        코드를 사용해 월드를 탐험하세요."
       MC_HOC_2017_Ryan_03_markdown_instruction: |-
-        Did you know that you can put more
-        than one piece of code into a loop?  \r
+        루프 안에는 코드를 하나 이상 추가할 수 있어요. \r
         \r
-        Use a `repeat` loop to help the
-        Agent build a bridge over the river by placing blocks in the water.
+        '반복' 루프를 사용해 Agent가 물 속에 블록을 설치해 강 너머로 연결되는 다리를 짓게 도와주세요.
       MC_HOC_2017_Ryan_05_markdown_instruction: |-
-        Sometimes you need to knock down
-        things that get in the way of your player.  \r
-        Use the `destroy` block to
-        clear all of the cactii between the Agent and the pressure plate.
-      MC_HOC_Kiki_02_markdown_instruction: |-
-        Someone needs to be on the pressure plate
-        before the side door will open.  Help the Agent get to the plate so the player
-        can leave the house.
+        플레이어의 길목이 막혀 있어 길을 뚫어야 하는 경우가 있습니다. \r
+        '제거' 블록을 사용해 Agent가 감압판으로 가는 길을 막고 있는 선인장을 모두 제거하세요.
+      MC_HOC_Kiki_02_markdown_instruction: "누군가가 감압판에 올라가서 문을 열어줘야겠군요. Agent를 감압판으로
+        움직여 플레이어가 집을 나올 수 있게 도와주세요."
       MSM Defining Vars 1_markdown_instruction: |-
         Write a program that produces a
         50 pixel solid green triangle.
@@ -36128,6 +36088,9 @@
         Students
         connect directly to one another and send entire packets back and forth, exploring
         systems of encoding data.
+      New Minecraft Hero Project_markdown_instruction: |-
+        **Freeplay:** Now it's up
+        to you! Use the Agent's code to help you explore this world.
       Nike Example Brand Book_markdown_instruction: |
         # Brand Book\r
         \r
@@ -36665,7 +36628,7 @@
         Something happened
         to the bits in this image!  Find error and fix it!  Hint: a few extra bits
         were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_markdown_instruction: |
+      Pixelation - Lesson 14 - Make the Letter A_markdown_instruction: |-
         <img align="right"
         src="https://code.org/images/cspunit1/letterA.png" width="150" hspace="20">\r
         #
@@ -36674,9 +36637,9 @@
         "A" depicted (at right) using the pixelation widget. \r
         \r
         The image is
-        intially setup with the *incorrect* dimensions. Your first task is to set
+        initially setup with the *incorrect* dimensions. Your first task is to set
         the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start
-        entering pixel data to make the A.\r
+        entering pixel data to make the A.
       Pixelation - Lesson 14 - Make your own B and W Image_markdown_instruction: |
         #
         Make your own image of any size\r
@@ -63351,6 +63314,15 @@
         *once*.  \r
         \r
         Remember: Not all clouds hide the same thing!
+      courseD_bee_conditionals2_test_markdown_instruction: |-
+        More clouds! \r
+        \r
+        Check
+        underneath every cloud to see if it is hiding a flower before you get nectar.
+        If there is a flower underneath the cloud, the bee will need to get nectar
+        *once*.  \r
+        \r
+        Remember: Not all clouds hide the same thing!
       courseD_bee_conditionals3_markdown_instruction: |-
         You can only collect nectar
         from flowers, but you can check any space to see if there is a flower. If
@@ -67492,7 +67464,7 @@
         <br>\r
         \r
         In this lesson we talked about
-        top-down design for building up solutions to larger programming problems.  Plan
+        how to build up solutions to larger programming problems with functions.  Plan
         the code that you would use to draw this image (shown at right). Describe
         each of the functions that you would create. You should not write all the
         code, only the names of the functions that you would create with a brief description

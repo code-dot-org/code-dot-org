@@ -1315,3 +1315,7 @@ end
 Then /^I scroll the save button into view$/ do
   @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
 end
+
+Then /^I open the section action dropdown$/ do
+  steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
+end

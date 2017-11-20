@@ -1,3 +1,5 @@
+/* globals google */
+
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
 import { STATES } from '../geographyConstants';
@@ -47,6 +49,8 @@ const singleLineDropdownStyles = {
   width: "100%",
 };
 
+const OMIT_FIELD = '__omit_field__';
+
 export default class SchoolNotFound extends Component {
   static propTypes = {
     onChange: PropTypes.func,
@@ -57,15 +61,42 @@ export default class SchoolNotFound extends Component {
     schoolType: PropTypes.string,
     showErrorMsg: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
+    showRequiredIndicators: PropTypes.bool,
+    schoolNameLabel: PropTypes.string,
+    // Note: Google location search requires the following line to be present in the haml where this component is used:
+    // %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+    useGoogleLocationSearch: PropTypes.bool,
   };
+
+  static defaultProps = {
+    showRequiredIndicators: true,
+    schoolNameLabel: i18n.schoolName(),
+  };
+
+  static OMIT_FIELD = OMIT_FIELD;
 
   handleChange = (field, event) => {
     this.props.onChange(field, event);
   }
 
+  renderLabel(text) {
+    const {singleLineLayout, showRequiredIndicators} = this.props;
+    const questionStyle = {
+      ...styles.question,
+      ...(singleLineLayout && singleLineLayoutStyles)
+    };
+    return (
+      <div style={questionStyle}>
+        {text}
+        {showRequiredIndicators && (
+          <span style={styles.asterisk}> *</span>
+        )}
+      </div>
+    );
+  }
+
   render() {
-    const singleLineLayout = this.props.singleLineLayout;
-    const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
+    const {singleLineLayout} = this.props;
     const labelStyle = {...(singleLineLayout && singleLineLabelStyles)};
     const fieldStyle = {...styles.field, ...(singleLineLayout && singleLineFieldStyles)};
     const inputStyle = {...styles.input, ...(singleLineLayout && singleLineInputStyles)};
@@ -84,29 +115,25 @@ export default class SchoolNotFound extends Component {
           </div>
         }
         <div>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              <div style={questionStyle}>
-                {i18n.schoolName()}
-                <span style={styles.asterisk}> *</span>
-              </div>
-              <input
-                id="school_name"
-                type="text"
-                name="school_name_s"
-                value={this.props.schoolName}
-                onChange={this.handleChange.bind(this, "schoolName")}
-                style={inputStyle}
-              />
-            </label>
-          </div>
-          {this.props.schoolType !== 'omitted' &&
+          {this.props.schoolName !== OMIT_FIELD &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                <div style={questionStyle}>
-                  {i18n.schoolType()}
-                  <span style={styles.asterisk}> *</span>
-                </div>
+                {this.renderLabel(this.props.schoolNameLabel)}
+                <input
+                  id="school_name"
+                  type="text"
+                  name="school_name_s"
+                  value={this.props.schoolName}
+                  onChange={this.handleChange.bind(this, "schoolName")}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          }
+          {this.props.schoolType !== OMIT_FIELD &&
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(i18n.schoolType())}
                 <select
                   name="school_type_s"
                   value={this.props.schoolType}
@@ -127,28 +154,24 @@ export default class SchoolNotFound extends Component {
           }
         </div>
         <div>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              <div style={questionStyle}>
-                {i18n.schoolCity()}
-                <span style={styles.asterisk}> *</span>
-              </div>
-              <input
-                type="text"
-                name="school_city_s"
-                value={this.props.schoolCity}
-                onChange={this.handleChange.bind(this, "schoolCity")}
-                style={inputStyle}
-              />
-            </label>
-          </div>
-          {this.props.schoolState !== 'omitted' &&
+          {!this.props.useGoogleLocationSearch &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
-                <div style={questionStyle}>
-                  {i18n.schoolState()}
-                  <span style={styles.asterisk}> *</span>
-                </div>
+                {this.renderLabel(i18n.schoolCity())}
+                <input
+                  type="text"
+                  name="school_city_s"
+                  value={this.props.schoolCity}
+                  onChange={this.handleChange.bind(this, "schoolCity")}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          }
+          {this.props.schoolState !== OMIT_FIELD && !this.props.useGoogleLocationSearch &&
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(i18n.schoolState())}
                 <select
                   name="school_state_s"
                   value={this.props.schoolState}
@@ -168,13 +191,10 @@ export default class SchoolNotFound extends Component {
             </div>
           }
         </div>
-        {this.props.schoolZip !== 'omitted' &&
+        {this.props.schoolZip !== OMIT_FIELD && !this.props.useGoogleLocationSearch &&
           <div style={fieldStyle}>
             <label style={labelStyle}>
-              <div style={questionStyle}>
-                {i18n.schoolZip()}
-                <span style={styles.asterisk}> *</span>
-              </div>
+              {this.renderLabel(i18n.schoolZip())}
               <input
                 id="school_zipcode"
                 type="text"
@@ -186,8 +206,28 @@ export default class SchoolNotFound extends Component {
             </label>
           </div>
         }
+        {this.props.useGoogleLocationSearch &&
+          <div style={fieldStyle}>
+            <label style={labelStyle}>
+              {this.renderLabel(i18n.schoolCityTown())}
+              <input
+                id="registration-school-location"
+                type="text"
+                name="registration_location"
+                placeholder={i18n.schoolLocationSearchPlaceholder()}
+                style={inputStyle}
+              />
+            </label>
+          </div>
+        }
         <div style={styles.clear}/>
       </div>
     );
+  }
+
+  componentDidMount() {
+    if (this.props.useGoogleLocationSearch) {
+      new google.maps.places.SearchBox(document.getElementById('registration-school-location'));
+    }
   }
 }

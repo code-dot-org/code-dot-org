@@ -11,3 +11,6 @@ assessment 'csd-pulse-check-survey-1-levelgroup', progression: 'pulse check mode
 
 stage 'CSD mid and post survey 2017 staging'
 assessment 'csd-post-survey-2017-levelgroup'
+
+stage 'CSP mid and post survey 2017 staging'
+assessment 'csp-post-survey-2017-levelgroup'

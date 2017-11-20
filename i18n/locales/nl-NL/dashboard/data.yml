@@ -314,7 +314,7 @@ nl:
         'loop_while': "Zolang Blok"
         'loop_for': "Teller Blok"
         'parameters': "Functies met Parameters"
-        'hoc_wrapup': "CodeUur Samenvatting"
+        'hoc_wrapup': "'Hour of Code' Samenvatting"
         'Unplug1': 'Wat is CS?'
         'Unplug2': 'Rekenend Denken'
         'Unplug3': 'Programmeren op Ruitjespapier'
@@ -535,6 +535,7 @@ nl:
         'mc_2017_agent_intro': 'Minecraft Hour of Code - The Agent'
         'mc_2017_repeat': 'Minecraft Hour of Code - Repeat Loops'
         'mc_2017_functions': 'Minecraft Hour of Code - Functions'
+        'mc_2017_congratulations': 'Minecraft Code Uur - Gefeliciteerd'
         'mc_2017_puzzle_1': 'Minecraft Hour of Code - The Agent'
         'mc_2017_puzzle_3': 'Minecraft Hour of Code - Repeat Loops'
         'mc_2017_puzzle_8': 'Minecraft Hour of Code - Functions'

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Код саатын кантип үйрөтүү керек</h1>
 
-Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. Код сааты - баштаган оңой, үйрөнчүктөргө дагы! Код саатын өткөзгөнгө кошумча жардамчылар керек болсо, [жергиликтүү ыктыярчыларды](%= resolve_url('https://code.org/volunteer/local') %) таба аласыңар.
 
 ## 1. Кандай кылуу видеосун көрүңүз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

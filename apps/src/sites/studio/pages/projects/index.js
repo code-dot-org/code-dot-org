@@ -16,13 +16,8 @@ import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import _ from 'lodash';
-
-const LEGACY_PROJECT_BUTTON_TYPES = ['playlab', 'artist', 'applab', 'gamelab', 'weblab'];
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
@@ -39,28 +34,15 @@ $(document).ready(() => {
     projectsHeader
   );
 
-  const showProjectWidget = experiments.isEnabled('createMoreProjects');
-  if (showProjectWidget) {
-    const isRtl = isRtlFromDOM();
-    ReactDOM.render(
-      <StartNewProject
-        isRtl={isRtl}
-        canViewFullList={true}
-        canViewAdvancedTools={projectsData.canViewAdvancedTools}
-        shouldLogEvents={true}
-      />,
-      document.getElementById('new-project-buttons')
-    );
-  } else {
-    const legacyProjectLinks = $('#legacy-project-links');
-    legacyProjectLinks.show();
-    LEGACY_PROJECT_BUTTON_TYPES.forEach(projectType => {
-      const logClick = recordLegacyProjectButtonClick.bind(this, projectType);
-      legacyProjectLinks.find(`a[data-projectType=${projectType}]`)
-        .on('click', _.debounce(logClick, 1000));
-    });
-
-  }
+  const isRtl = isRtlFromDOM();
+  ReactDOM.render(
+    <StartNewProject
+      isRtl={isRtl}
+      canViewFullList
+      canViewAdvancedTools={projectsData.canViewAdvancedTools}
+    />,
+    document.getElementById('new-project-buttons')
+  );
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
@@ -91,23 +73,8 @@ $(document).ready(() => {
 });
 
 function showGallery(gallery) {
-  $('#project-links-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
-}
-
-function recordLegacyProjectButtonClick(projectType) {
-  firehoseClient.putRecord(
-    'analysis-events',
-    {
-      study: 'my-projects-create-project',
-      study_group: 'legacy-project-buttons',
-      // '-wip' should be removed when the data format is finalized
-      // and the A/B experiment is launched
-      event: 'create-project-wip',
-      data_json: JSON.stringify({projectType})
-    }
-  );
 }
 
 // Make these available to angularProjects.js. These can go away

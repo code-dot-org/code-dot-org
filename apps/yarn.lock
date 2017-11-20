@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.27":
-  version "1.6.27"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.27.tgz#bbabcc22d520067b2b1128d89033e8ebc4574acc"
+"@code-dot-org/blockly@1.6.28":
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.28.tgz#5dff3ea371b63fb3635e8f5f08f597bba0a1af59"
 
 "@code-dot-org/bramble@0.1.22":
   version "0.1.22"
@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#caa36e2a5ed794326ac5e64d15e6b340e84d1269":
-  version "0.0.18"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/caa36e2a5ed794326ac5e64d15e6b340e84d1269"
+"@code-dot-org/craft@github:code-dot-org/craft#e8adff5c475c55c3648b619f9f461e0e9b49c82d":
+  version "0.0.21"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/e8adff5c475c55c3648b619f9f461e0e9b49c82d"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.1":
   version "0.11.1-cdo.1"
@@ -5043,9 +5043,9 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery-ui@1.10.5:
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.10.5.tgz#826aed3dd1f88d32ae75d74df48643dc431a5815"
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
 
 jquery@2.1.4:
   version "2.1.4"

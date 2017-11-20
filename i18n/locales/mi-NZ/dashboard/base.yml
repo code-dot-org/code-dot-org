@@ -756,7 +756,7 @@ mi:
       applab: "Taiwhanga Taupānga"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Whakaingoa anō"
     save: "Save"
     delete: "Delete"

@@ -71,7 +71,7 @@ describe('SignInOrAgeDialog', () => {
     assert.equal(wrapper.find('BaseDialog div > div').first().text(),
       'Tutorial unavailable for younger students');
     assert.equal(wrapper.find('BaseDialog Button').props().text, 'See all tutorials');
-    assert.equal(wrapper.find('BaseDialog Button').props().href, '/courses');
+    assert.equal(wrapper.find('BaseDialog Button').props().href, '/hourofcode/overview');
   });
 
   describe('redirect', () => {

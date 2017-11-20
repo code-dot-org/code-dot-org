@@ -77,8 +77,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   def test_allows
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, HOC_SCRIPTS, CSF_SCRIPTS)
 
-    puts "Gatekeeper: #{Gatekeeper.to_hash}"
-
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', HOC_SCRIPT)
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', nil)
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'hint_view_request', HOC_SCRIPT)
