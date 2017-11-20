@@ -1774,7 +1774,7 @@ en:
         text: "My name is Mei'lani. I'm an intern at code.org and I'm also a computer science student. I like computer science because it's really creative. I get to be the problem solver. I get to make everything function how I want it to. But I also get to be the designer. I get to be the artist and choose everything on the creative side of it."
       2:
         image: 'notes/applab_intro_welcome_2.png'
-        text: "Making your own apps is easy with App Lab! Whether you're new to coding or have some experience. App Lab Apple is a great tool for building new apps and sharing them with your friends."
+        text: "Making your own apps is easy with App Lab! Whether you're new to coding or have some experience. App Lab is a great tool for building new apps and sharing them with your friends."
       3:
         image: 'notes/applab_intro_welcome_3.png'
         text: "This is a App Lab. On the left side is your app. On the right side is the code that will make it run. You build your program by dragging in blocks from the toolbox. To start you'll just have one block called 'setProperty'."
@@ -1798,17 +1798,17 @@ en:
         text: "Either way you'll be programming in JavaScript, the language of the web. Each level has a goal, instructions and an image of what you're aiming to create."
       10:
         image: 'notes/applab_intro_welcome_10.png'
-        text: "If you're ever stuck click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
+        text: "If you're ever stuck, click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
       11:
         image: 'notes/applab_intro_welcome_11.png'
-        text: "Once you've completed the goal for this level click finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
+        text: "Once you've completed the goal for this level click Finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
     applab_intro_events:
       1:
         image: 'notes/applab_intro_events_1.png'
         text: "Apps are really cool because it's kind of like starting your own business I mean, you get to design everything from the ground up, you get to manage everything, and you're the owner of this piece of work that you just created with code."
       2:
         image: 'notes/applab_intro_events_2.png'
-        text: "Now that you can change the look of your app let's make it interactive by responding to events! Events are user actions like clicking a button, scrolling through a menu, or hovering over a picture. Interactive apps need ways to respond to events, like playing a sound when I click this button. To do this in App Lab you need to use a new block called onEvent."
+        text: "Now that you can change the look of your app let's make it interactive by responding to events! Events are user actions like clicking a button, scrolling through a menu, or hovering over a picture. Interactive apps need ways to respond to events, like playing a sound when I click this button. To do this in App Lab you need to use a new block called 'onEvent'."
       3:
         image: 'notes/applab_intro_events_3.png'
         text: "This program sets the screen to blue. I want the screen to turn green when I click this button. First I'll need to drag in an onEvent block. By hovering I know the button's ID is \"bigButton\" so I'll select that in the first drop-down."
@@ -1848,13 +1848,13 @@ en:
         text: "To add images to your elements you can just use the setProperty block. Select the image property in the second drop-down"
       6:
         image: 'notes/applab_intro_sounds_6.png'
-        text: "Then select "Choose" from the third drop down."
+        text: "Then select \"Choose\" from the third drop down."
       7:
         image: 'notes/applab_intro_sounds_7.png'
         text: "From here you can upload an image from your computer or you can look through a huge library of icons in the icon library."
       8:
         image: 'notes/applab_intro_sounds_8.png'
-        text: "Back in code mode you can use the setProperty block to change the icon color of your icon. Once you've picked what image your icon to use click \"Run\" to see how it looks."
+        text: "Back in code mode you can use the \"setProperty\" block to change the icon color of your icon. Once you've picked what image your icon to use click \"Run\" to see how it looks."
       9:
         image: 'notes/applab_intro_sounds_9.png'
         text: "That's all there is to it! Now you can start adding images and sounds to make your apps even more fun and dynamic."
@@ -1864,7 +1864,7 @@ en:
         text: "To build your own apps you're going to need to start designing screens and elements from scratch. App Lab makes this easy to do with Design Mode."
       2:
         image: 'notes/applab_intro_designmode_2.png'
-        text: "Use the switch on top of your app to go into design mode."
+        text: "Use the switch on top of your app to go into Design Mode."
       3:
         image: 'notes/applab_intro_designmode_3.png'
         text: "You can add new elements by dragging them onto the screen. You can move them around to different locations and change their size by dragging the bottom right corner."
