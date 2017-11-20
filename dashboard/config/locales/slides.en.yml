@@ -1976,3 +1976,22 @@ en:
       9:
         image: 'notes/mc_2017_repeat_9.png'
         text: "If you are thinking about having a cool job like Katie's, go ahead and click the show code button when you finish every level. That's going to actually show you the Javascript code that someone like Katie uses when she's actually programming Minecraft. Katie: Yeah, good luck everyone!"
+    mc_2017_functions:
+      1:
+        image: 'notes/mc_2017_functions_1.png'
+        text: "Preston: I'm not trying to brag, but I'm pretty good at parkour. Lizzy: Let's sleep so it's day when Stacy comes back."
+      2:
+        image: 'notes/mc_2017_functions_2.png'
+        text: "Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I'm having in my game. I think I can use a function. Let me just open this."
+      3:
+        image: 'notes/mc_2017_functions_3.png'
+        text: "So a function is a specific set of instructions to accomplish a certain task, kind of like a recipe. In the next few levels, you'll have access to functions that you can use to solve the puzzles."
+      4:
+        image: 'notes/mc_2017_functions_4.png'
+        text: "Look at the code in the function when it's in the workspace to see what it does."
+      5:
+        image: 'notes/mc_2017_functions_5.png'
+        text: "Then, find the block with that name in the toolbox and drag it from the toolbox to the when run block."
+      6:
+        image: 'notes/mc_2017_functions_6.png'
+        text: "Remember, you can use the same function every time you need to run the same set of instructions to do something, like build a bridge. Good luck, I know you can do it!"
