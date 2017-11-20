@@ -783,4 +783,7 @@ FactoryGirl.define do
     storage_app_id 1
     storage_id {storage_user.try(:id) || 2}
   end
+
+  factory :circuit_playground_discount_application do
+  end
 end

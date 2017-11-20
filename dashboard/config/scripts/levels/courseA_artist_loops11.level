@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "##Help me build steps to watch the ship sail away.\r\n\r\n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)",
+    "markdown_instructions": "## Help me build steps to watch the ship sail away.\r\n\r\n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/4adb0ff9bf619119908abfe1b3fade7d-image-1477125526950.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",

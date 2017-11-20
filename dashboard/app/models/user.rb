@@ -191,6 +191,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
 
+  has_one :circuit_playground_discount_application
+
   after_create :associate_with_potential_pd_enrollments
 
   # after_create :send_new_teacher_email
@@ -956,27 +958,6 @@ class User < ActiveRecord::Base
 
   def student_of?(teacher)
     teachers.include? teacher
-  end
-
-  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
-  def circuit_playground_pd_eligible?
-    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
-
-    return true if cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
-    return true if courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
-    return false
-  end
-
-  # @return {boolean} true if we have at least one section that meets our eligibility
-  #   requirements for student progress
-  def circuit_playground_student_progress_eligible?
-    sections.any?(&:has_sufficient_discount_code_progress?)
-  end
-
-  # Looks to see if any of the users associated with this studio_person_id are eligibile
-  # for our circuit playground discount
-  def studio_person_circuit_playground_pd_eligible?
-    User.where(studio_person_id: studio_person_id).any?(&:circuit_playground_pd_eligible?)
   end
 
   def locale
