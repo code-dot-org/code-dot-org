@@ -1,0 +1,18 @@
+name 'pwc_programming'
+display_name 'Introduction'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Programming - Hour of Code!
+
+Try a one-hour tutorial designed for all ages in over 45 languages. Join millions of students and teachers in over 180 countries starting with an Hour of Code.
+
+* [Minecraft Hour of Code Tutorials](https://code.org/minecraft)
+* [Star Wars Hour of Code Tutorials](https://code.org/starwars)
+* [Frozen Hour of Code Tutorial](https://studio.code.org/s/frozen/reset)
+* [Classic Maze Hour of Code Tutorial](https://studio.code.org/hoc/1)
+* [And many, many more!](https://code.org/learn)
+
+---
+[Facilitator Guide](https://hourofcode.com/us/how-to)
+MARKDOWN
