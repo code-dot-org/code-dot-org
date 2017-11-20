@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Guide pratique pour les bénévoles
 
-### Make a difference in a classroom today!
+### Faisez une différence en votre classe aujourd'hui!
 
 ## Pourquoi devenir bénévole?
 
@@ -15,9 +15,9 @@ Découvrez quelques témoignages de volontaires :
 
 - "La meilleure partie de mon expérience a été que toute la classe était constituée de femmes et de personnes de couleur. Ça vaut bien pour le futur de notre métier qu'on puisse atteindre et motiver ces enfants."
 - "J'ai particulièrement aimé la chance qui m'était donné, d'encourager les jeunes filles en technologie. Je sentais que j'aidais la prochaine génération près de chez moi."
-- "J'ai ADORÉ voir les enfants pleins de joie. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "J'ai ADORÉ voir les enfants pleins de joie. Une chose étonnante, c'est que les enseignants ont vu que certains élèves qui n'avaient pas autant succès académique étaient vraiment doués à penser comme un développeur et aider les autres à apprendre - leur donnant un endroit où ils peuvent être confiants."
 
-## Anyone can volunteer
+## Tout le monde peut devenir bénévole
 
 **Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
 
