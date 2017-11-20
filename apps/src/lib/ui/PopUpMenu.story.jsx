@@ -40,9 +40,9 @@ class Overview extends Component {
           It targets the bottom-center of this element.
         </div>
         <PopUpMenu isOpen targetPoint={this.state.targetPoint}>
-          <PopUpMenu.Item>Option One</PopUpMenu.Item>
-          <PopUpMenu.Item>Option Two</PopUpMenu.Item>
-          <PopUpMenu.Item>Option Three</PopUpMenu.Item>
+          <PopUpMenu.Item onClick={() => {}}>Option One</PopUpMenu.Item>
+          <PopUpMenu.Item onClick={() => {}}>Option Two</PopUpMenu.Item>
+          <PopUpMenu.Item onClick={() => {}}>Option Three</PopUpMenu.Item>
         </PopUpMenu>
       </div>
     );
