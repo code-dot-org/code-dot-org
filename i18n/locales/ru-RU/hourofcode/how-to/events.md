@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Отправьте [письмо](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) в администрацию вашего города для согласования мероприятия или пригласите влиятельного делового человека для выступления.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Пригласите сми, например, местное новостное агентство, радио, телевидение, газету, блогеров, пишущих об образовании и технологиях. Смотрите наш [пресс-пакет](%= resolve_url('/promote/press-kit') %) для справки.
 
 ## 2. During your event
