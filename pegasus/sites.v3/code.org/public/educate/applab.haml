@@ -22,24 +22,12 @@ video_player: true
 .clear
 
 #resources.responsive-body
-  .col-50
-    .tutorial-tile
-      %a{:href=>CDO.studio_url("/s/applab-intro/reset")}
-        %img.tutorial-tile-img{src: CDO.code_org_url("/images/app-lab/applab-intro.png")}
-      .tutorial-info
-        %h3.tutorial-info-h Intro to App Lab Tutorial (beta)
-        .smalltext Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
-        %a{:href=>CDO.studio_url("/s/applab-intro/reset")}
-          %button.tutorial-info-start.tutorial-gray Start tutorial
-        .tutorial-info-guide
-          %a{href: "https://curriculum.code.org/hoc/plugged/7/"}
-            View teacher guide
-        .clear
+  = view :top_hoc_tutorial_applab, image_match_youtube_height: true
 
   .col-50
     .tutorial-tile
       = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
-      .tutorial-info{style: "height: 196px;"}
+      .tutorial-info
         %h3{style: "margin-top: 0px;"} App Lab in the classrom
         .smalltext This launch video introduces five reasons App Lab could be a great tool for students learning programming.
       .clear
