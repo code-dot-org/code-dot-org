@@ -45,7 +45,8 @@ class Ability
       RegionalPartner,
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
-      Pd::Application::Facilitator1819Application
+      Pd::Application::Facilitator1819Application,
+      :maker_discount,
     ]
 
     if user.persisted?
@@ -85,6 +86,7 @@ class Ability
         end
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
+        can :manage, :maker_discount
       end
 
       if user.facilitator?
