@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## 让每个学校都参加，每个学生都来学习！
 
-1. **阅读这一页** 了解计算机科学为什么重要，以及你如何支持编程一小时活动。 [在这获取这份单页。](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **阅读这一页** 了解计算机科学为什么重要，以及你如何支持编程一小时活动。 [ 在这里获取一个寻呼机. ](/files/hoc-one-pager.pdf)
 
 2. **与当地的学校和地区机构合作** 使用 [此邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 或 [该介绍](<%= resolve_url('/promote/stats') %>) 作为起点，查看该 [操作指南](<%= resolve_url('/how-to') %>) 指导当地学校和地区机构
 

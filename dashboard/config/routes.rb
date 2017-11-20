@@ -45,6 +45,7 @@ Dashboard::Application.routes.draw do
 
   get 'maker/setup', to: 'maker#setup'
   get 'maker/discountcode', to: 'maker#discountcode'
+  post 'maker/apply', to: 'maker#apply'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
