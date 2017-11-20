@@ -11,10 +11,10 @@ nav: promote_nav
 
 ### Suggerimenti Importanti
 
-- Mettiti in contatto con i media due settimane prima dell'evento via e-mail. Se non ricevi una risposta, riprova via e-mail oppure via telefono.
+- Mettiti in contatto con i media due settimane prima dell'evento via email. Se non ricevi una risposta, riprova via email oppure via telefono.
 - Chiedi ad un volontario oppure a un collaboratore della scuola di scattare fotografie da condividere online o trasmettere ai giornali.
 - Scrivi dell'Ora del Codice sulla homepage del sito web della scuola e sul giornale scolastico. &Egrave; utile arricchire i testi con dettagli sugli eventi e con foto delle attività svolte dagli studenti.
-- Condividi su Facebook e Twitter gli aggiornamenti sulle tue attività, gli annuncia i tuoi eventi ed aggiungi delle foto %{campaign_date_full}. Usa gli hashtag **#HourOfCode** o **#OradelCodice** così lo staff di Code.org e di Programma il Futuro potranno seguire e promuovere i tuoi eventi.
+- Condividi su Facebook e Twitter gli aggiornamenti sulle tue attività, annuncia i tuoi eventi ed aggiungi delle foto dal 4 al 10 dicembre usando l'hashtag **#HourOfCode**. In questo modo, lo staff di Code.org potrà vedere i tuoi eventi e potrà promuoverli.
 
 ### Guida passo-passo:
 
@@ -24,13 +24,13 @@ nav: promote_nav
 - Invia [una lettera](<%= resolve_url('/promote/resources#sample-emails') %>) ai genitori. Chiedi loro di spargere la voce.
 - Invia [una lettera](<%= resolve_url('/promote/resources#sample-emails') %>) per invitare il sindaco, un politico o un imprenditore a partecipare e a parlare ai tuoi studenti.
 - Organizza attività di gruppo (come una dimostrazione oppure un'attività di programmazione offline), oppure organizza un'esibizione di attività svolte od organizzate dagli studenti.
-- Per dare ispirazione ed una spinta a partecipare, mostra i video de [L'Ora del Codice](<%= resolve_url('/') %>) di Code.org o uno di [questi video](<%= resolve_url('/promote/resources#videos') %>) <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro" target="_blank">o ancora questo in italiano di Programma il Futuro</a>.
+- Per dare ispirazione ed una spinta a partecipare, mostra i video de [L'Ora del Codice](<%= resolve_url('/') %>) di Code.org o uno di [questi video](<%= resolve_url('/promote/resources#videos') %>) o ancora <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro" target="_blank">questo in italiano di Programma il Futuro</a>.
 
 **2. Individua i giornalisti locali più impegnati sul fronte dell'educazione e degli eventi locali.**
 
 Non dimenticare i giornali, le TV e le radio locali, i blog più seguiti nel tuo territorio.
 
-Cerca online i contatti dei giornalisti. Se non riesci a trovarlo il giornalista di riferimento, chiama il giornale per richiederlo, o invia un'email ad un indirizzo email generale del tipo redazione@NOMEPUBBLICAZIONE.it e chiedi che il tuo messaggio venga reindirizzato al giornalista interessato.
+Cerca online i contatti dei giornalisti. Se non riesci a trovare il giornalista di riferimento, chiama il giornale per informarti, o invia un'email ad un indirizzo generale del tipo redazione@NOMEPUBBLICAZIONE.it e chiedi che il tuo messaggio venga reindirizzato al giornalista interessato.
 
 **3. Contatta i media locali**
 
@@ -57,6 +57,6 @@ La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di 
 Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusione dell'interesse nell'informatica e all'aumento della partecipazione in essa di donne e studenti delle minoranze etniche. La sua visione è che ogni studente di ogni scuola dovrebbe avere l'opportunità di imparare la programmazione. Dopo il lancio nel 2013, Code.org ha organizzato la campagna "L'Ora del Codice" – che ad oggi ha introdotto oltre 100 milioni di studenti all'informatica – e collaborato con 70 distretti della scuola pubblica a livello nazionale negli USA per espandere i programmi di informatica. Code.org è sostenuta da donazioni filantropiche di società, fondazioni e persone generose, tra cui Microsoft, Infosys Foundation, Stati Uniti d'America, The Ballmer Family Giving, Omidyar Network e altri. Per ulteriori informazioni, si può visitare: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Puoi trovare altre risorse ed email di esempio [qui](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>
