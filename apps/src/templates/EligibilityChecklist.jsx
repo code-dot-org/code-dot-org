@@ -10,11 +10,13 @@ export default class EligibilityChecklist extends Component {
   static propTypes = {
     statusPD: PropTypes.oneOf(Object.values(Status)).isRequired,
     statusStudentCount: PropTypes.oneOf(Object.values(Status)).isRequired,
+    unit6Intention: PropTypes.string,
   };
 
   state = {
     statusYear: Status.UNKNOWN,
-    yearChoice: false, // stores the teaching-year choice until submitted
+    yearChoice: null, // stores the teaching-year choice until submitted
+    submitting: false,
     displayDiscountAmount: false,
     submission: {
       name: '',
@@ -41,9 +43,40 @@ export default class EligibilityChecklist extends Component {
     }
   };
 
+  constructor(props) {
+    super(props);
+
+    // If we had already submitted our intentions for unit 6, initialize component
+    // state with that data
+    if (props.unit6Intention) {
+      this.state = {
+        ...this.state,
+        yearChoice: props.unit6Intention,
+        statusYear: (props.unit6Intention === 'yes1718' ||
+          props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED
+      };
+    }
+  }
+
   // Saves the teaching-year choice to trigger next step of actions
   handleSubmit = () => {
-    this.setState({statusYear: (this.state.yearChoice ? Status.SUCCEEDED : Status.FAILED)});
+    this.setState({submitting: true});
+    $.ajax({
+     url: "/maker/apply",
+     type: "post",
+     dataType: "json",
+     data: {
+       unit_6_intention: this.state.yearChoice
+     }
+   }).done(data => {
+     this.setState({
+       statusYear: data.eligible ? Status.SUCCEEDED : Status.FAILED,
+       submitting: false
+     });
+   }).fail((jqXHR, textStatus) => {
+     // TODO: should probably introduce some error UI
+     console.error(textStatus);
+   });
   }
 
   handleDropdownChange = (field, event) => {
@@ -69,12 +102,8 @@ export default class EligibilityChecklist extends Component {
     this.setState({displayDiscountAmount: true});
   }
 
-  setEligibleYear = () => {
-    this.setState({yearChoice: true});
-  }
-
-  setIneligibleYear = () => {
-    this.setState({yearChoice: false});
+  handleChangeIntention = event => {
+    this.setState({yearChoice: event.target.value});
   }
 
   render() {
@@ -120,62 +149,32 @@ export default class EligibilityChecklist extends Component {
               <b>{i18n.eligibilityReqYearConfirmInstructions()}</b>
               <div>
                 <form>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="no"
-                      onChange={this.setIneligibleYear}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearNo()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="yes1718"
-                      onChange={this.setEligibleYear}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearYes1718()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="yes1819"
-                      onChange={this.setEligibleYear}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearYes1819()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="yesAfter"
-                      onChange={this.setIneligibleYear}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearAfter()}
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="year"
-                      value="unsure"
-                      onChange={this.setIneligibleYear}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                    {i18n.eligibilityYearUnknown()}
-                  </label>
+                  {[
+                    ['no', i18n.eligibilityYearNo()],
+                    ['yes1718', i18n.eligibilityYearYes1718()],
+                    ['yes1819', i18n.eligibilityYearYes1819()],
+                    ['yesAfter', i18n.eligibilityYearAfter()],
+                    ['unsure', i18n.eligibilityYearUnknown()],
+                  ].map(([value, description]) =>
+                    <label key={value}>
+                      <input
+                        type="radio"
+                        name="year"
+                        value={value}
+                        checked={this.state.yearChoice === value}
+                        onChange={this.handleChangeIntention}
+                        disabled={this.state.statusYear !== Status.UNKNOWN}
+                      />
+                    {description}
+                    </label>
+                  )}
                   {/* Remove button after choice is made */}
                   {this.state.statusYear === Status.UNKNOWN &&
                     <Button
                       color="orange"
-                      text={i18n.submit()}
+                      text={this.state.submitting ? i18n.submitting() : i18n.submit()}
                       onClick={this.handleSubmit}
+                      disabled={this.state.submitting}
                     />
                   }
                 </form>

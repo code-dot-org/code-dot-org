@@ -103,7 +103,7 @@ GRAPH
   cdo-postfix (0.2.7)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
-  cdo-repository (0.2.17)
+  cdo-repository (0.2.18)
     cdo-github-access (>= 0.0.0)
   cdo-ruby (0.2.10)
   cdo-secrets (0.1.7)

@@ -65,8 +65,13 @@ Summer Workshop: (Summer)
 Continuing Professional Development: (September - June of the following academic year)
 
 - 4 days (24 hours) in-person, hosted locally around the nation
-- 20 hours online, self-paced
 
+## <a name="locations"></a>Where is the program offered?
+
+The CS Discoveries Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops.
+<br>
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
 
 ## <a name="participate"></a>Who can participate?
 

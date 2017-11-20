@@ -20,6 +20,7 @@ class DesignWorkspace extends React.Component {
     // provided by redux
     isRunning: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
+    showMakerToggle: PropTypes.bool,
   };
 
   state ={isToolboxVisible: true};
@@ -36,6 +37,7 @@ class DesignWorkspace extends React.Component {
         isToolboxVisible={this.state.isToolboxVisible}
         isRtl={this.props.isRtl}
         isRunning={this.props.isRunning}
+        showMakerToggle={this.props.showMakerToggle}
       />
       <DesignModeBox
         handleDragStart={this.props.handleDragStart}
@@ -56,4 +58,5 @@ class DesignWorkspace extends React.Component {
 export default connect(state => ({
   isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
+  showMakerToggle: !!state.pageConstants.showMakerToggle,
 }))(DesignWorkspace);

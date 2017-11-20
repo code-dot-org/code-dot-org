@@ -1,6 +1,5 @@
 Feature: Projects
 
-@skip
 Scenario: Save Artist Project
   Given I am on "http://studio.code.org/projects/artist"
   And I get redirected to "/projects/artist/([^\/]*?)/edit" via "dashboard"
@@ -26,7 +25,6 @@ Scenario: Save Artist Project
 #   try to execute any JS after our redirect on line 42
 @dashboard_db_access @as_student
 @no_mobile @no_ie
-@skip
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -110,7 +108,6 @@ Scenario: Applab Flow
   # TODO - maybe we do a remix and/or create new as well
 
 @dashboard_db_access @as_student @no_mobile
-@skip
 Scenario: Gamelab Flow
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"
@@ -234,3 +231,19 @@ Scenario: Starwars Flow
   And I wait to see "#footerDiv"
   Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
   And element "#codeWorkspace" is hidden
+
+@eyes
+@as_student
+Scenario: My Projects
+  When I open my eyes to test "My Projects page"
+  And I am on "http://studio.code.org/projects/"
+  And I wait to see ".header_user"
+  And I wait until element "#uitest-view-full-list" is visible
+  And element "a[href='/projects/artist/new']" is visible
+  And element "a[href='/projects/gumball/new']" is not visible
+  Then I see no difference for "page load"
+
+  When I click selector "#uitest-view-full-list"
+  And I wait until element "a[href='/projects/gumball/new']" is visible
+  Then I see no difference for "view full list of new project types"
+  And I close my eyes

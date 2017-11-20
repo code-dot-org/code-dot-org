@@ -140,6 +140,6 @@ p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtub
 
 <% else %>
 
-# Puoi trovare tutte le informazioni per l'Italia sul sito [www.programmailfuturo.it](https://programmailfuturo.it).
+# Puoi trovare tutte le informazioni per l'Italia sul sito [www.programmailfuturo.it](https://programmailfuturo.it)
 
 <% end %>
