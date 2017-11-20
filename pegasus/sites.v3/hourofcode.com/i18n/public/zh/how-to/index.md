@@ -7,25 +7,23 @@ nav: how_to_nav
 
 <h1>如何教授一小時玩程式的課程</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+參加到活動中，通過以下步驟為一群學生介紹他們初始一小時的計算機科學課程。 哪怕是對初學者來說，編程一小時的課程都非常容易學。 如果你有時間願意幫忙的話，你可以找一名當地的 自願者一起幫忙在你的課程裡來教編程一小時課程。</p> 
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2. 觀看視頻指導 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial for your hour
+## 2) 為你的這一個小時挑選教程：
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) as well as [teacher-guided tutorials](<%= resolve_url('https://code.org/educate/teacher-led') %>) for participants of all ages, created by a variety of partners.
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
-
-## 3. Promote your Hour of Code
+## 3) 推廣你的一小時玩程式活動
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
-## 4. Plan your technology needs - computers are optional
+## 4. 您所需的教學設備——電腦不是必需的
 
 一小時玩程式課程在有網路連線的電腦上會有最佳的體驗。 但你的學生**不見得**都需要一台電腦，你甚至可以舉辦一個完全沒有電腦的一小時玩程式活動。
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+在學生計算機或機台上測試這些指南，確保它們在播放器上的聲音和視頻能夠正常運作。 **擔心帶寬太低？ ** 可以在全部面前播放視頻，這樣學生就不會自行下載視頻。 或者也可以採用下線/不上網的教學指南。
 
 如果教程需要音效，請提供耳機或要求學員自備。
 
@@ -33,28 +31,28 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5）以一段激勵演講或視頻來開始編程一小時活動
 
 **Invite a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **展示一支激勵人心的影片**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
+- 正版的 Code.org 推出包括比爾蓋茨、馬克·扎克伯格和 NBA 球星克里斯. 波什的視頻。 (有 [ 1 分鐘 ](HTTPs://www.youtube.com/watch？v=qYZF6oIZtfc)、[ 5 分鐘 ](HTTPs://www.youtube.com/watch？v=nKIu9yen5nc) 和 [ 9 分鐘 ](HTTPs://www.youtube.com/watch？v=dU1xS07N-FA) 版本可用)
 - 尋找更多有啟發性的[資源](<%= resolve_url('https://code.org/inspire') %>)和[影片](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 
-**如果你和你學生都是初入計算機科學領域的新手也沒有關係，這裡有些點子幫助你介紹你的一小時玩程式活動：**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
+- 通過男孩和女孩們都關心的例子，介紹科技如何影響我們的生活（比如拯救生命，幫助人們，連接人們等）
 - 全班一起列出在日常生活中用到程式碼的事情。
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls')%>).
+- [這裡是](<%= resolve_url('https://code.org/girls')%>)讓女孩們對計算機科學感興趣的一些小貼士。
 
-## 6. Code!
+## 6) 寫程式！
 
-**引導學生參與活動**
+**Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn')%>) under the number of participants.
+- 把教學指南的鏈接寫在白板上。在參加人員數量下面可以找到[你選擇的指南鏈接](<%= resolve_url('/learn')%>)。
 
-**當您的學生遭遇困難時，這樣回答也沒關係：**
+**When your students come across difficulties it's okay to respond:**
 
 - 「我也不知道，我們一起找出方法吧。」
 - 「科技不見得是以我們想的方式運作。」
@@ -62,7 +60,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 **What if a student finishes early?**
 
-- Students can see all tutorials and [try another Hour of Code activity](<%= resolve_url('/learn')%>).
+- 學生可以查看所有教程和 [ 嘗試另一個小時的代碼活動 ](<%= resolve_url('/learn')%>)。
 - 或者，請提前完成的學生協助那些在活動遇到麻煩與的同學。
 
 [col-33]
@@ -73,7 +71,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate
+## 7. 慶祝
 
 [col-33]
 
@@ -81,7 +79,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 [/col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates')%>) for your students.
+- 給你的學生打印[](<%= resolve_url('https://code.org/certificates') %>)證書。
 - 為你的學生[列印「我完成了一小時玩程式！」](<%= resolve_url('/promote/resources#stickers') %>)貼紙。
 - 為你的學校[訂購客製化 T 恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 - 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。
@@ -103,7 +101,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 一小時玩程式只是入門，是瞭解科技如何運作、軟體如何創造的一小步，要繼續這段旅程，你可以：
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond')%>).
+- 鼓勵學生繼續 [ 在線學習 ](<%= resolve_url('https://code.org/learn/beyond') %>)。
 - [參加](<%= resolve_url('https://code.org/professional-development-workshops') %>) 一場整天的在職進修工作坊，以接受有經驗的電腦科學引導者的指導。 （僅適於美國地區教師）
 
 <%= view :signup_button %>

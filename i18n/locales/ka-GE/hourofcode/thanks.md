@@ -1,6 +1,6 @@
 ---
 title: '<%= hoc_s(:title_signup_thanks) %>'
-layout: ფართო
+layout: wide
 nav: how_to_nav
 social:
   "og:title": '<%= hoc_s(:meta_tag_og_title) %>'
@@ -9,7 +9,7 @@ social:
   "og:image:width": 1440
   "og:image:height": 900
   "og:url": 'http://<%=request.host%>'
-  "twitter:card": მოთამაშე
+  "twitter:card": player
   "twitter:site": '@codeorg'
   "twitter:url": 'http://<%=request.host%>'
   "twitter:title": '<%= hoc_s(:meta_tag_twitter_title) %>'
@@ -25,34 +25,34 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 მადლობის ნიშნად იმისთვის, რომ დაეხმარეთ მოსწალვეებისთვის კომპიუტერული მეცნიერებების სწავლის დაწყებაში, გვინდა, უფასოდ გადმოგცეთ პროფესიონალურად დაბეჭდილი პოსტერები, რომლებზეც გამოსახულია სხვადასხვა მისაბაძი მაგალითები თქვენი კლასისთვის. გადახდისას გამოიყენეთ შემოთავაზების კოდი **FREEPOSTERS**. (შენიშვნა: ეს შემოთავაზება ძალაშია მარაგის ამოწურვამდე და თქვენ მოგიწევთ ტრანსპორტირების საფასურის გადახდა. რადგანაც პოსტერები ამერიკის შეერთებული შტატებიდან მოდის, გადაზიდვის ღირებულება შეიძლება საკმაოდ მაღალი იყოს, თუ კანადაში ან სხვა ქვეყნებში გააგზავნით. ჩვენთვის გასაგებია, რომ ეს თანხა შეიძლება თქვენს ბიუჯეტში არ იყოს, ამიტომ, მოგიწოდებთ, ამობეჭდოთ [PDF ფაილები](https://code.org/inspire) თქვენი საკლასო ოთახისთვის.)  
 <br /> [<button>მიიღეთ პოსტერები</button> ](https://store.code.org/products/code-org-posters-set-of-12)გამოიყენეთ შემოთავაზების კოდი FREEPOSTERS
 
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+<% if @country == 'us' %> ჩვენ ვუმადლით Ozobot-ის, Dexter Industries, littleBits-ისა და Wonder Workshop-ის ხელგაშლილობას. მათი მხარდაჭერით 100-ზე მეტი კლასი მიიღებს რობოტებს და კომპიუტერულ სქემებს მათი კლასებისთვის! იმისათვის, რომ კომპლექტის მიღების საშუალება მიიღოთ, კოდის ერთი საათის შემდეგ არ დაგავიწყდეთ Code.org-ისგან მოსული გამოკითხვის შევსება. Code.org აირჩევს გამარჯვებულ კლასებს. ამასობაში, გადახედეთ ჩვენს რობოტიკის და კომპიუტერული სქემების აქტივობებს. გთხოვთ, გაითვალისწინოთ, რომ ეს ვრცელდება მხოლოდ აშშ-ს სკოლებზე. <% end %>
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **კოდის ერთი საათის მიმდინარეობის დროა <%= campaign_date('full') %>. ჩვენ კავშირზე ვიქნებით ახალი ტუტორიალებითა და სხვა ამაღელვებელი სიახლეებით. მანამდე კი, რისი გაკეთება შეგიძლიათ ახლა?**
 
 ## 1. გაავრცელეთ ხმა თქვენ ირგვლივ
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+თქვენ შემოუერთდით კოდის ერთი საათის მოძრაობას. მოუყევით თქვენს მეგობრებს: **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. Invite a local politician or policy maker to visit your school for the Hour of Code. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> წაახალისეთ სხვები, მიიღონ მონაწილეობა, [ამ წერილის შაბლონის გაგზავნით.](%= resolve_url('/promote/resources#sample-emails') %) დაუკავშირდით თქვენს დირექტორს და გამოიწვიეთ თქვენი სკოლის ყველა კლასი, დარეგისტრირდეს. ჩართეთ ადგილობრივი ჯგუფი - ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, ვეტერანთა ან სამუშაო გაერთიანება ან თქვენი მეგობრებიც კი. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. მოიწვიეთ ადგილობრივი პოლიტიკოსი და მთავრობის წარმომადგენელი თქვენს სკოლაში კოდის ერთ საათზე დასასწრებად. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
 
 გამოიყენეთ ეს [პოსტერები, ბანერები, სტიკერები, ვიდეობი და სხვა](%= resolve_url('/promote/resources') %) თქვენი ღონისძიებისთვის.
 
 ## 2. მოძებნეთ ადგილობრივი მოხალისე, რომელიც თქვენი ღონისძიების ჩატარებაში დაგეხმარებათ.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[გამოიკვლიეთ ჩვენი მოხალისეების რუკა](%= resolve_url('https://code.org/volunteer/local') %) და იპოვეთ მოხალისე, რომელიც მოვა თქვენს კლასში ან ვიდეო–ჩატით მოუყვება თქვენს მოსწავლეებს კომპიუტერული მეცნიერების შესაძლებლობებზე.
 
 ## 3. დაგეგმეთ თქვენი კოდის ერთი საათი
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
+აირჩიეთ [კოდის ერთი საათის აქტივობა](https://hourofcode.com/learn) თქვენი კლასისთვის და [გადახედეთ ამ სახელმძღვანელოს](%= resolve_url('/how-to') %).
 
 # იმოგზაურეთ კოდის ერთი საათის მიღმა
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> კოდის ერთი საათი მხოლოდ დასაწყისია. ადმინისტრატორი ხართ, მასწავლებელი თუ დამცველი, ჩვენ გვაქვს [პროფესიული განვითარების გეგმა, კურიკულუმი და რესურსები, რითიც დაგეხმარებით, კომპიუტერული მეცნიერებების გაკვეთილები მიიტანოთ თქვენს სკოლაში ან გააფართოვოთ თქვენი შეთავაზებები.](https://code.org/yourschool) თუ უკვე ასწავლით კომპიუტერულ მეცნიერებებს, გამოიყენეთ ეს რესურსები კომპიუტერული მეცნიერების საგანმანათელბლო კვირის განმავლობაში, რათა მოიპოვოთ თქვენი ადმინისტრაციის, მშობლებისა და საზოგადოების მხარდაჭერა.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+თქვენი სკოლის ჩართვის ბევრი გზა არსებობს. ორგანიზაციათა უმეტესობას, რომლებიც კოდის ერთი საათის ტუტორიალებს გთავაზობენ, აქვთ კურიკულუმი და პროფესიული განვითარების გეგმა. თუ შეგხვდებათ გაკვეთლი, რომელიც მოგეწონებათ, ითხოვეთ გაგრძელება. დაწყებაში რომ დაგეხმაროთ, მოვნიშნეთ რამდენიმე [კურიკულუმის მომწოდებელი, რომელიც დაგეხმარებათ თქვენ ან თქვენს მოსწავლეებს, გასცდეთ ერთ საათს.](https://hourofcode.com/beyond)
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> კოდის ერთი საათი მხოლოდ დასაწყისია. იმ ორგანიზაციათა უმეტესობას, რომლებიც კოდის ერთ საათს ატარებენ, აქვთ გეგმა, რომელიც სწავლის გაგრძელების საშუალებას მოგცემთ. დაწყებაში რომ დაგეხმაროთ, მოვნიშნეთ რამდენიმე [კურიკულუმის მომწოდებელი, რომელიც დაგეხმარებათ თქვენ ან თქვენს მოსწავლეებს, გასცდეთ ერთ საათს.](https://hourofcode.com/beyond)
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org ასევე გთავაზობთ სრულ [შესავალ კურსს კომპიუტერულ მეცნიერებებში](https://code.org/educate/curriculum/cs-fundamentals-international), რომელიც თარგმნილია 25 ენაზე და არის სრულიად უფასო თქვენთვის და თქვენი სკოლისთვის. <% end %>
 
 <%= view 'popup_window.js' %>

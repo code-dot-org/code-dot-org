@@ -23,7 +23,7 @@ nav: how_to_nav
     
     编程一小时只是学习技术的工作原理和创建软件应用旅程的第一步。继续这个旅程：
     
-    - Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+    - 鼓励学生继续 [ 在线学习 ](<%= resolve_url('https://code.org/learn/beyond') %>)。
     - [参加](<%= resolve_url('https://code.org/professional-development-workshops') %>) 1 天的面对面的研讨会，接受有经验的计算机科学推动者的指导。 （仅适用于美国学习者）
     
     <%= view :signup_button %>
