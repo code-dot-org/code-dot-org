@@ -1943,7 +1943,7 @@ en:
         image: 'notes/mc_2017_agent_intro_10.png'
         text: "The Agent can walk, turn, and activate pressure plates. It can also destroy blocks and place blocks. When it places the block like these minecart rails, it places it underneath itself."
       11:
-        image: 'notes/mc_2017_agent_intro_11.png
+        image: 'notes/mc_2017_agent_intro_11.png'
         text: "If you forget what to do, the instructions for each level are at the top."
       12:
         image: 'notes/mc_2017_agent_intro_12.png'
