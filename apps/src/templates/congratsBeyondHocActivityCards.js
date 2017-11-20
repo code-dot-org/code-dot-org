@@ -90,10 +90,23 @@ const NewMinecraft = {
   MCShareLink: ""
 };
 
+const MinecraftMarketing = {
+  title: i18n.minecraftMarketingTitle(),
+  description: i18n.minecraftMarketingDesc(),
+  link: pegasus('/minecraft'),
+  image: "minecraft-marketing",
+  buttonText: i18n.minecraftMarketingButton(),
+};
+
 export const cardSets = {
   'pre2017MinecraftCards' : [
     CSFExpress,
     ApplabTutorial,
+    OldMinecraft
+  ],
+  'youngerThan13pre2017MinecraftCards' : [
+    CSFExpress,
+    AnotherHoC,
     OldMinecraft
   ],
   'nonEnglishPre2017MinecraftCards' : [
@@ -104,6 +117,11 @@ export const cardSets = {
   'newMinecraftCards' : [
     CSFExpress,
     ApplabTutorial,
+    NewMinecraft
+  ],
+  'youngerThan13NewMinecraftCards' : [
+    CSFExpress,
+    AnotherHoC,
     NewMinecraft
   ],
   'nonEnglishNewMinecraftCards' : [
@@ -124,6 +142,11 @@ export const cardSets = {
   'signedInDefaultCards' : [
     CSFExpress,
     ApplabTutorial,
+    AnotherHoC
+  ],
+  'youngerThan13DefaultCards' : [
+    CSFExpress,
+    MinecraftMarketing,
     AnotherHoC
   ],
   'signedInNonEnglishDefaultCards' : [
