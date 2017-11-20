@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_officials) %>
+title: "<%= hoc_s(:title_how_to_officials) %>"
 layout: wide
 nav: how_to_nav
 ---
@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Zorg er voor dat iedere school deelneemt en elke leerling leert!
 
-1. **Lees onze one-pager** waarom programmeren belangrijk is, en hoe u kunt helpen het CodeUur te steunen. [Vraag hier de one-pager op.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Lees onze one-pager** waarom programmeren belangrijk is, en hoe u kunt helpen het CodeUur te steunen. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Werf lokale scholen en gemeenten.** Gebruik [ deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) of [deze korte samenvatting](<%= resolve_url('/promote/stats') %>) als een beginpunt, en neem een kijkje in deze [how-to](<%= resolve_url('/how-to') %>) voor scholen en gemeenten.
 
