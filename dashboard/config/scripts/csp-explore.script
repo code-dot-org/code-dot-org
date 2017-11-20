@@ -6,9 +6,8 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/csp-explore/
 has_verified_resources true
 
 stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
-level 'U6 AP Performance Task Tech Setup - Student Links', progression: 'AP Performance Task Tech Setup - Student Links'
-level 'csp-pt-tech-setup-and-tools', progression: 'Tech Setup and Tools - More Details'
 level 'U6 Explore PT Review - Student Links', progression: 'Explore PT - Review the Task'
+level 'csp-pt-tech-setup-and-tools', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
 stage 'Explore PT - Making a Plan', flex_category: 'csp_ap_2'
 level 'U6 Explore PT - Make a Plan - Student Links', progression: 'Explore PT - Make a Plan'
