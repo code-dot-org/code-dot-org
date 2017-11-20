@@ -13,9 +13,7 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) as well as [teacher-guided tutorials](%= resolve_url('https://code.org/educate/teacher-led') %) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Promote your Hour of Code
 
@@ -42,7 +40,7 @@ Voorzie koptelefoons voor uw klas, of vraag de leerlingen om ze zelf mee te neme
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Vind meer inspirerende [middelen](%= resolve_url('https://code.org/inspire') %) en [video 's](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Het maakt niet uit als programmeren voor u en uw leerlingen nog nieuw is. Hier zijn een paar ideeën om uw CodeUur activiteit te introduceren:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Noem dingen op waarmee codering wordt gebruikt.
@@ -50,11 +48,11 @@ Voorzie koptelefoons voor uw klas, of vraag de leerlingen om ze zelf mee te neme
 
 ## 6. Code!
 
-**Betrek de deelnemers bij de activiteit**
+**Direct students to the activity**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
 
-**Wanneer uw studenten moeilijkheden tegenkomen kunt u gerust reageren met:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Ik weet het niet. Laten we het samen oplossen."
 - "Technologie werkt niet altijd op de manier waarop we dat willen."
