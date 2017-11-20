@@ -51,7 +51,7 @@
     "connected_routers": "false",
     "instructions": "You and your partner can now reliably send messages back and forth without extra coordination! While you're always sending bits back and forth, you can also represent those bits as decimal numbers. What kinds of information can you represent with this system? ",
     "video_key": "csp_internetsimulator_2",
-    "markdown_instructions": "#Sending Numbers with the Internet Simulator\r\n\r\nYou and your partner can now reliably send messages back and forth without extra coordination! While you're always sending bits back and forth, you can also represent those bits as decimal numbers. What kinds of information can you represent with this system? \r\n\r\nYour teacher will hand out more specific instructions for this activity."
+    "markdown_instructions": "# Sending Numbers with the Internet Simulator\r\n\r\nYou and your partner can now reliably send messages back and forth without extra coordination! While you're always sending bits back and forth, you can also represent those bits as decimal numbers. What kinds of information can you represent with this system? \r\n\r\nYour teacher will hand out more specific instructions for this activity."
   }
 }]]></config>
   <blocks/>
