@@ -2,7 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import SpecialAnnouncementActionBlock from '../SpecialAnnouncementActionBlock';
+import SpecialAnnouncementActionBlock from './SpecialAnnouncementActionBlock';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
