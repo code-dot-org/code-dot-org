@@ -8,12 +8,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   def index
     regional_partner_id = params[:regional_partner]
     application_data = empty_application_data
-    puts "regional partner id: #{regional_partner_id}"
 
     ROLES.each do |role|
       apps = get_applications_by_role(role).group(:status)
       if regional_partner_id && regional_partner_id != "null"
-        puts "in the if"
         apps = apps.where(regional_partner_id: regional_partner_id)
       end
       apps.count.each do |status, count|

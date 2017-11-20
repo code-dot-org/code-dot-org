@@ -9,6 +9,7 @@
 import React, {PropTypes} from 'react';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
+import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
@@ -60,7 +61,9 @@ export default class QuickView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    filter: null
+    filter: null,
+    regionalPartnerName: this.props.route.regionalPartnerName,
+    regionalPartnerId: null
   };
 
   getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
@@ -94,15 +97,24 @@ export default class QuickView extends React.Component {
     this.setState({filter: filter});
   };
 
+  handleRegionalPartnerChange = (selected) => {
+    const regionalPartnerId = selected ? selected.value : null;
+    const regionalPartnerName = regionalPartnerId ? selected.label : this.props.route.regionalPartnerName;
+    this.setState({regionalPartnerName: regionalPartnerName, regionalPartnerId: regionalPartnerId});
+  };
+
   render() {
     if (this.state.loading) {
       return <Spinner/>;
     }
-
     return (
       <div>
+        <RegionalPartnerDropdown
+          onChange={this.handleRegionalPartnerChange}
+          regionalPartnerId={this.state.regionalPartnerId}
+        />
         <Row>
-          <h1>{this.props.route.regionalPartnerName}</h1>
+          <h1>{this.state.regionalPartnerName}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
             <Button
@@ -130,6 +142,7 @@ export default class QuickView extends React.Component {
           path={this.props.route.path}
           data={this.state.applications}
           statusFilter={this.state.filter}
+          regionalPartnerFilter={this.state.regionalPartnerId}
         />
       </div>
     );
