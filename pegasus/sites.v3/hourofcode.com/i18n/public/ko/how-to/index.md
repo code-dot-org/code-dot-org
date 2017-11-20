@@ -7,15 +7,13 @@ nav: how_to_nav
 
 <h1>1시간짜리 Hour of Code 교육 방법</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+이 운동에 참여하신 다음에는, 첫번째 컴푸터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! 만약 당신이 도움을 주고 싶다면, 당신은 [자원봉사](<%= resolve_url('https://code.org/volunteer/local') %>)를 방문하여 수업에서 Hour of Code를 사용할 수 있게 할 수 있습니다
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) as well as [teacher-guided tutorials](<%= resolve_url('https://code.org/educate/teacher-led') %>) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promote your Hour of Code
 
@@ -42,7 +40,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - 영감을 주는 더 많은 [자료](<%= resolve_url('https://code.org/inspire') %>)와 [비디오](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)를 찾아보세요
 
-**여러분과 여러분의 학생들이 컴퓨터과학에 완전한 초보라도 괜찮습니다. 여기에는 여러분을 Hour of Code 활동으로 안내하기 위한 몇가지 아이디어가 있습니다.**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - 수업에서, 일상생활 속에서 코드를 사용하는 것들을 나열하세요.
@@ -50,11 +48,11 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## 6. Code!
 
-**학생들에게 활동을 안내하세요.**
+**Direct students to the activity**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn')%>) under the number of participants.
 
-**여러분의 학생들이 어려운 상황을 만났을 때 이렇게 응답해 주면 좋습니다:**
+**When your students come across difficulties it's okay to respond:**
 
 - "나도 잘 모른단다. 우리 함께 생각해 보자."
 - "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."

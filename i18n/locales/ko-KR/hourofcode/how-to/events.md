@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- 강연을 하기 위해 여러분의 지역 시장, 지역 의원, 지역 공무원, 지역 사업가를 초청하는 [편지](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit)를 보내세요.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - 지역 신문, 지역 미디어, 지역 교육/공학 블로거들을 초대하세요. [프레스 키트](<%= hoc_uri('/resources/press-kit') %>)를 살펴보시면 됩니다.
 
 ## 2. During your event
