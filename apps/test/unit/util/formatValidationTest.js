@@ -59,7 +59,6 @@ describe("formatValidation", () => {
         "100",
         "-100",
         "1,000,000",
-        "55.123456"
       ].forEach(integer => {
         expect(isInt(integer), `Expected isInt("${integer}") to return true`).to.be.true;
       });
@@ -68,7 +67,9 @@ describe("formatValidation", () => {
     it("Rejects invalid numbers", () => {
       [
         "cat",
-        "",
+        "123ABC",
+        "123.55",
+        "1_000_000"
       ].forEach(integer => {
         expect(isInt(integer), `Expected isInt("${integer}") to return false`).to.be.false;
       });
@@ -91,12 +92,13 @@ describe("formatValidation", () => {
     it("Rejects invalid percentages", () => {
       [
         "-1",
-        "101",
+        "100.5",
+        "100.5%",
         "cat",
         ""
       ].forEach(percent => {
         expect(isPercent(percent), `Expected isPercent("${percent}") to return true`).to.be.false;
       });
-    })
-  })
+    });
+  });
 });
