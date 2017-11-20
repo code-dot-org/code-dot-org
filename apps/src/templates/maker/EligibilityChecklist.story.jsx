@@ -1,6 +1,6 @@
 import React from 'react';
 import EligibilityChecklist from './EligibilityChecklist';
-import {Status} from '../lib/ui/ValidationStep';
+import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 export default storybook => {
   return storybook
