@@ -1,6 +1,6 @@
 drop table if exists analysis.student_activity;
 CREATE table analysis.student_activity AS
-  SELECT se.user_id,
+  SELECT u_teachers.studio_person_id,
          COUNT(DISTINCT se.id) sections,
          COUNT(DISTINCT us.user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN us.user_id ELSE NULL END) students_female,
@@ -20,6 +20,8 @@ CREATE table analysis.student_activity AS
       AND us.started_at >= '2017-07-01' 
     JOIN dashboard_production_pii.users u_students
       ON u_students.id = us.user_id AND u_students.user_type = 'student'
+    JOIN dashboard_production_pii.users u_teachers
+      ON u_teachers.id = se.user_id
   GROUP BY 1;
 
 GRANT ALL PRIVILEGES ON analysis.student_activity TO GROUP admin;
