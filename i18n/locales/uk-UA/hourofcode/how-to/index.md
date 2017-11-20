@@ -13,9 +13,7 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) as well as [teacher-guided tutorials](%= resolve_url('https://code.org/educate/teacher-led') %) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## Рекламуйте свою Годину коду
 
@@ -42,7 +40,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Знайдіть ще надихальні [ресурси](%= resolve_url('https://code.org/inspire') %) та [відео](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Не біда, якщо як ви, так і ваші учні є повними новачками в інформатиці. Ось деякі ідеї, як представити ваш захід Години коду:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Разом з класом перелічіть повсякденні речі, які використовують код.
@@ -50,11 +48,11 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## 6. Code!
 
-**Скеруйте учнів до заняття**
+**Direct students to the activity**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
 
-**Коли ваші учні стикаються з труднощами, є нормальним відповідати:**
+**When your students come across difficulties it's okay to respond:**
 
 - «Я не знаю. З'ясуймо це разом.»
 - «Технології не завжди дають такий результат, як ми хочемо.»
