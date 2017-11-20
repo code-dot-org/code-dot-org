@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Kirimkan [sebuah surat](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) untuk mengundang kepala daerah, anggota dewan, gubernur ataupun pengusaha yang berpengaruh untuk berbicara.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Undang media/pers, misalnya stasiun berita lokal, koran, blogger edukasi/teknologi. Lihat [paket media](%= resolve_url('/promote/press-kit') %) kami untuk bantuan.
 
 ## 2. During your event
@@ -33,13 +33,13 @@ nav: how_to_nav
 
 ## Host a Family Code Night with the Hour of Code and invite parents to participate
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Mitra kami di Family Code Night telah membuat All-in-One Event Kit dengan daftar periksa perencanaan, skrip presenter, email undangan, poster, powerpoint dan lebih banyak untuk menjalankan acara Anda sendiri. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## Contoh Perencanaan Acara
 
 **Acara:** Pertemuan pembukaan Pekan Pendidikan Ilmu Komputer
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+** Tanggal: </ strong> 5 Desember (dimulainya Pekan Pendidikan Ilmu Komputer)</p> 
 
 **Waktu:** Saat sekolah. Lebih dianjurkan acara pagi. Perkiraan sekitar satu jam.
 

@@ -738,16 +738,6 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'can show embed blocks when not signed in' do
-    set_env :test
-
-    level = create :artist
-    sign_out @levelbuilder
-
-    get :embed_blocks, params: {level_id: level, block_type: :solution_blocks}
-    assert_response :success
-  end
-
   private
 
   # Assert that the url is a real S3 url, and not a placeholder.

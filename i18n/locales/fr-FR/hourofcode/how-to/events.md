@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Préparez pour votre prochaine événement
 
 - Choisissez un lieu, une date et une heure.
-- Envoyez [une lettre](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) pour inviter votre maire, votre député, le président de votre région ou un homme d'affaires influent à prendre la parole.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Invitez les médias, comme par exemple une station de radio ou une télé locale, un journal, des blogueurs spécialisés dans l'éducation ou les nouvelles technologies. Regardez notre [dossier de presse](%= resolve_url('/promote/press-kit') %) pour plus de conseils.
 
 ## 2. Pendant votre événement

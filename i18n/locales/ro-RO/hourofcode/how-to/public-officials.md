@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Implică fiecare școală in eveniment, fiecare elev trebuie sa invete!
 
-1. **Citiţi documentul nostru de 1 pagina ** despre de ce educatia in tehnologia computerului si programare este importanta si cum puteti dvs. sa va alaturati efortului evenimentului Hour of Code. [Iata aici documentul](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Citiţi documentul nostru de 1 pagina ** despre de ce educatia in tehnologia computerului si programare este importanta si cum puteti dvs. sa va alaturati efortului evenimentului Hour of Code. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Recruteaza scolile locale si districtele.** Foloseste [acest e-mail](%= resolve_url('/promote/resources#sample-emails') %) sau [acest rezumat](%= resolve_url('/promote/stats') %) ca un punct de plecare si arunca o privire la aceste [ghiduri](%= resolve_url('/how-to') %) pentru scoli si comunitati.
 
