@@ -34,29 +34,7 @@ export default class EligibilityChecklist extends Component {
     yearChoice: null, // stores the teaching-year choice until submitted
     submitting: false,
     displayDiscountAmount: false,
-    submission: {
-      name: '',
-      email: '',
-      role: '',
-      country: 'United States',
-      hoc: '',
-      nces: '',
-      schoolName: '',
-      schoolCity: '',
-      schoolState: '',
-      schoolZip: '',
-      schoolType: '',
-      afterSchool: '',
-      tenHours: '',
-      twentyHours: '',
-      otherCS: false,
-      followUpFrequency: '',
-      followUpMore: '',
-      acceptedPledge: false
-    },
-    errors: {
-      invalidEmail: false
-    }
+    schoolId: null
   };
 
   constructor(props) {
@@ -96,16 +74,23 @@ export default class EligibilityChecklist extends Component {
   }
 
   handleDropdownChange = (field, event) => {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        [field]: event ? event.value : ''
-      }
-    });
+    if (field === 'nces') {
+      this.setState({schoolId: event.value});
+    }
   }
 
-  displayDiscountAmount = () => {
-    this.setState({displayDiscountAmount: true});
+  handleClickConfirmSchool = () => {
+    this.setState({
+      confirmingSchool: true
+    });
+
+    // fake being an async API for now
+    setTimeout(() => {
+      this.setState({
+        displayDiscountAmount: true,
+        confirmingSchool: false
+      });
+    }, 1000);
   }
 
   handleChangeIntention = event => {
@@ -113,7 +98,7 @@ export default class EligibilityChecklist extends Component {
   }
 
   render() {
-    const {submission, errors} = this.state;
+    const {schoolId} = this.state;
     return (
       <div>
         <h2>
@@ -184,31 +169,34 @@ export default class EligibilityChecklist extends Component {
           <div>
             <SchoolAutocompleteDropdownWithLabel
               setField={this.handleDropdownChange}
-              value={submission.nces}
-              showErrorMsg={errors.nces}
+              value={schoolId}
+              showErrorMsg={false}
             />
             <br/>
-            {this.state.submission.nces !== "-1" && (
+            {this.state.schoolId !== "-1" && (
               <Button
                 color="orange"
                 text={i18n.confirmSchool()}
-                onClick={this.displayDiscountAmount}
+                onClick={this.handleClickConfirmSchool}
                 hidden={this.state.displayDiscountAmount}
               />
             )}
-            {this.state.submission.nces === "-1" && (
-              <div>{i18n.eligibilitySchoolUnknown()} <b>{i18n.contactToContinue()}</b></div>
-            )}
-            {this.state.displayDiscountAmount  &&
+            {this.state.schoolId === "-1" && (
               <div>
-                TEMP:Discount Amount for your school
-                <Button
-                  color="orange"
-                  text={i18n.getCode()}
-                  onClick={() => {}}
-                />
+                {i18n.eligibilitySchoolUnknown()}
+                <b> {i18n.contactToContinue()}</b>
               </div>
-            }
+            )}
+          </div>
+        }
+        {this.state.displayDiscountAmount  &&
+          <div>
+            TEMP:Discount Amount for your school
+            <Button
+              color="orange"
+              text={i18n.getCode()}
+              onClick={() => {}}
+            />
           </div>
         }
       </div>
