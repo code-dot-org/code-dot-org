@@ -13,13 +13,11 @@ nav: how_to_nav
 
 ## 选择课程 
 
-我们为各个年龄段的参加者提供了一整套由不同合作伙伴编写的有趣的[学生指南](%= resolve_url('/learn') %) 以及[教师指南](%= resolve_url('https://code.org/educate/teacher-led') %)
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. 推广您的编程一小时活动
 
-用这些[工具](%= resolve_url('/promote/resources') %) 来推广你的编程一小时并鼓励其他人来举办他们自己的活动。
+Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
 
 ## 4. 您所需的教学设备——电脑不是必需的
 
@@ -33,16 +31,16 @@ nav: how_to_nav
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5）以一段激励演讲或视频来开始编程一小时活动
 
-**邀请一名[当地的志愿者](%= resolve_url('https://code.org/volunteer/local') %)来讲计算机科学的应用可能性来激励你的学生。** 全球有数千名志愿者愿意来帮你。他们可以到你的课上来，或者用视频和你的学生交谈。
+**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **播放鼓舞人心的视频：**
 
 - 正版的 Code.org 推出包括比尔盖茨、马克·扎克伯格和 NBA 球星克里斯. 波什的视频。 （有[1 分钟的](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5 分钟的](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9 分钟的](https://www.youtube.com/watch?v=dU1xS07N-FA)）
 - 找到更多鼓舞人心的 [资源](%= resolve_url('https://code.org/inspire') %) 和 [视频](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 
-**如果你和你的学生都是第一次接触计算机科学也没关系。这里有一些主意来帮助你介绍你的编程一小时活动：**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - 通过男孩和女孩们都关心的例子，介绍科技如何影响我们的生活（比如拯救生命，帮助人们，连接人们等）
 - 让全班一起来列出每天生活中用到编程的地方。
@@ -50,17 +48,17 @@ nav: how_to_nav
 
 ## 6. 编程！
 
-**指导学生参与活动**
+**Direct students to the activity**
 
 - 把教学指南的链接写在白板上。在参加人员数量下面可以找到[你选择的指南链接](%= resolve_url('/learn')%)。
 
-**当你的学生遇到困难时，你完全可以用这样的方式回答：**
+**When your students come across difficulties it's okay to respond:**
 
 - "我也不知道。让我们一起来找到问题的答案吧"。
 - “科学技术并不总是同我们期望的方式一样工作。”
 - “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；你不会马上就说得很流利。”
 
-**如果有学生提前完成了怎么办？**
+**What if a student finishes early?**
 
 - 学生可以看所有的课程指南和[尝试另一个编程一小时的内容](%= resolve_url('/learn')%)
 - 或者可以让提早完成的学生去帮助那些在活动中遇到困难的同学。
