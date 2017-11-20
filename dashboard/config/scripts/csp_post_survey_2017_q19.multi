@@ -1,5 +1,5 @@
 name 'csp-post-survey-2017-q19'
-question 'I am going to like this computer science class.'
+question 'I like this computer science class.'
 right 'Strongly agree'
 right 'Agree'
 right 'Slightly agree'

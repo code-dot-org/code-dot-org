@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-11-14T01:47:02.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "markdown_instructions": "# AP Practice - Justify the Score\r\n\r\nOne component of the **AP Explore Performance Task** is describing a data concern related to a computing innovation.\r\n\r\n<div style=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt\">\r\n\r\n<b>Computing Innovation</b>\r\n<br>\r\n<br>\r\n2d.  Using specific details, describe\r\n<br>\r\n<br>\r\n<ul>\r\n<li>at least one data storage concern, data privacy concern, or data security concern directly related to the computing innovation.</li>\r\n</ul>\r\n</div>\r\n<br>\r\n\r\n**Sample Student Response:** A student submitted the following response as part of this question.\r\n\r\n*\"FaceApp has permission to use many devices on your smartphone, including the camera. A data concern that arises from this is that the company could use this permission to see what you're doing.\"*\r\n\r\n\r\n**Scoring Guide:** Here's the scoring guide for this part of the question\r\n\r\n<div style=\"magin:auto\">\r\n\t<img src=\"https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08 AM.png\">\r\n</div>\r\n\r\n<br>\r\n\r\n# Justify the Score\r\n\r\nBased on the scoring guidelines listed above, the student would NOT get Row 6 of the response and would likely not be awarded Row 7.\r\n\r\n**Explain why the student would not be awarded either row. Make a suggestion(s) for ways this response could be improved**\r\n\r\n",
+    "instructions_important": "false",
+    "display_name": "(new) Device or Data?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "u97b6KDVDOZsuVyStWY/mea/OuEuNGXJWn9ysE+cosYkToq0rhvYGeJny6YL\nOST+Fs1OBlPuIcEPj10sAYUs0UBXpCjWGlGdM6D/m9Zn6M04NWOgsv3jbM8w\nMmqo7rnl9ggagsB2zv0ZwY8ngjVkf9AVUpwX7Xaa6jx66n0fprPYwHiYeA2E\nsO8D909iSI2e0OAZNEtklpNSd3X5FO9MiZxtA09zsxOMHT/ikRzXIOX4D6A9\naiJx2MGwtXtKuS2Z6LzJJapf9CdoKqEI0Eaai04WueRpCeu8oeobSbdz1+nx\nHlS1gsiLT63FLwDghNjUy7gS3nNDWC62flpLFfFFKUVyX7lrEsoMGh61iQfx\nyfbO+ONtUMp56/W7qayV1Ps/KwozIjF1dqQFDmQdZEvO+i06nZC/380++w85\nF4PSdvk4n6Uycjc7VFIWrIzU2gdE0lcvOfcWC/oMubK/V11c7cDAOlO4uk1k\nVJgltiilP+tiJQH4Roxy64yBWGjjTLTUvU0NInNqGRolpdANemxAurVXwN5W\nQTUBzelZHJUmQvKNCwptwYXZ0953HBTG9riRGp0NTK2JXkLxZEwJ7MB04baj\nwJ5/Ez8a59ULjLlPy3I9m7kO5KGabPDhJM9s+gK9Vi68Srnbk2NTGUE5Sss6\nZZyOpQnmUsy+ir6vBdM9nk/RDU98aLMuLGxPe6ecfNu3gU5HexynbLLLdGWl\nNgWovdSSRX2FiuGBYWBajJ/5k0HQ/w7a52kFP/XCdyBemRFilnmzTCDGntUH\nKi9Qtqo6QQvyOjwUDky8MdcoI7qBz7D1i1haBCJ83GVSbKneWVlZRH5Tag4E\ngTPqFPmvBNIMSJB+J5dq+aPUHlRcrCMmpQivGRSasBXgAuUkhMO1dIH9YYlD\n7usnJN/O55tHTvYD1OVVSl3/P9ZhFyF7ncPYmpnbOKA4VZEp23Ow0+2FNoDV\n0e4gvDn8L4sgc7mo4mZD7IBWqiDUPPaQ76hGUwS8WfZdKIB+wYW1/xhXPkkB\n/L3DGGRuzNuASKom3BS3exfqc0AJVTmIaJcHBF6k9DaQaeesll2WmwKEY1Qz\nEX0uzY1P\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-13 22:37:52 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-13 23:19:50 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-13 23:21:05 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-13 23:35:39 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-14 01:28:24 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-14 02:49:36 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-14 02:50:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-20 19:24:31 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-20 19:40:53 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-20 19:47:27 +0000\",\"changed\":[\"name\",\"markdown_instructions\",\"display_name\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
