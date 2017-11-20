@@ -30,9 +30,8 @@
     "step_mode": "0",
     "shape_shift": "true",
     "instructions": "This level has shape-shifting turned on! Refresh to see different variants.",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
