@@ -6,8 +6,6 @@ import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocomplete
 import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as color from "@cdo/apps/util/color";
 
 const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -18,33 +16,6 @@ const SCHOOL_TYPES_HAVING_NAMES = [
   'afterschool',
   'organization',
 ];
-
-const SCHOOL_STYLE_TEST_GROUPS = {
-  control: "control",
-  autocompleteOptional: "autocomplete-optional",
-  autocompleteRequired: "autocomplete-required",
-};
-
-const schoolStyleRandom = Math.random();
-let registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
-if (schoolStyleRandom > 1.0 / 3.0) {
-  registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteOptional;
-}
-if (schoolStyleRandom > 2.0 / 3.0) {
-  registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
-}
-if (window.dashboard.rack_env === 'test') {
-  // Pin to control group on test
-  registrationSchoolStyleGroup = SCHOOL_STYLE_TEST_GROUPS.control;
-}
-
-const errorStyles = {
-  fontSize: 14,
-  fontFamily: '"Gotham 3r", sans-serif',
-  color: color.red,
-  paddingTop: 5,
-  paddingBottom: 5
-};
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -61,8 +32,6 @@ window.SignupManager = function (options) {
     showErrorMsg: false,
   };
 
-  let loggedTeacherSelected = false;
-
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
   if (self.options.isTeacher === "true") {
     // Select teacher in dropdown.
@@ -72,9 +41,6 @@ window.SignupManager = function (options) {
   }
 
   function formSuccess(success) {
-    if (isTeacherSelected()) {
-      logEvent('teacher-submit-success');
-    }
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
@@ -87,10 +53,6 @@ window.SignupManager = function (options) {
   }
 
   function formError(err) {
-    if (isTeacherSelected()) {
-      logEvent('teacher-submit-error');
-    }
-
     // re-enable "Sign up" button upon error
     $('#signup-button').prop('disabled', false);
 
@@ -168,17 +130,6 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
-  function logEvent(event) {
-    firehoseClient.putRecord(
-      'analysis-events',
-      {
-        study: 'teacher-registration-school-style',
-        study_group: registrationSchoolStyleGroup,
-        event: event
-      }
-    );
-  }
-
   function onCountryChange(_, event) {
     schoolData.country = event ? event.value : '';
     updateAutocompleteSchoolFields(schoolData);
@@ -208,16 +159,12 @@ window.SignupManager = function (options) {
     updateAutocompleteSchoolFields(schoolData);
   }
 
-  function schoolInfoOptional() {
-    return registrationSchoolStyleGroup !== SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired;
-  }
-
   function updateAutocompleteSchoolFields(data) {
     const isUS = data.country === 'United States';
     ReactDOM.render(
       <div>
         <h5 style={{fontWeight: "bold"}}>
-          {schoolInfoOptional() ? i18n.schoolInformationOptionalHeader() : i18n.schoolInformationHeader()}
+          {i18n.schoolInformationOptionalHeader()}
         </h5>
         <hr/>
         <CountryAutocompleteDropdown
@@ -261,54 +208,10 @@ window.SignupManager = function (options) {
           schoolDataErrors={{}}
           onSchoolNotFoundChange={onSchoolNotFoundChange}
         />
-        {data.showErrorMsg && (
-          <div style={errorStyles}>
-            {i18n.schoolInfoRequired()}
-          </div>
-        )}
       </div>
       ,
       $("#schooldropdown-block")[0]
     );
-  }
-
-  function schoolInfoIsComplete() {
-    // Logic:
-    // require country
-    // require school type
-    // if US:
-    //   if school type requires nces search, require nces <> ''
-    //   if nces === -1 or not requires nces search:
-    //     require city/town
-    //     if SCHOOL_TYPES_HAVING_NAMES:
-    //       require school name
-    // else (non-US):
-    //   require city/town
-    //   if SCHOOL_TYPES_HAVING_NAMES:
-    //     require school name
-    let missingInfo = false;
-    missingInfo |= schoolData.country === '';
-    missingInfo |= schoolData.schoolType === '';
-    const registrationSchoolLocation = $('#registration-school-location')[0];
-    if (schoolData.country === 'United States') {
-      const useNCES = SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolData.schoolType);
-      if (useNCES) {
-        missingInfo |= schoolData.nces === '';
-      }
-      if (!useNCES || schoolData.nces === '-1') {
-        registrationSchoolLocation && (missingInfo |= registrationSchoolLocation.value === '');
-        if (SCHOOL_TYPES_HAVING_NAMES.includes(schoolData.schoolType)) {
-          missingInfo |= schoolData.schoolName === '';
-        }
-      }
-    } else if (schoolData.country !== '') {
-      // Non-US
-      registrationSchoolLocation && (missingInfo |= registrationSchoolLocation.value === '');
-      if (SCHOOL_TYPES_HAVING_NAMES.includes(schoolData.schoolType)) {
-        missingInfo |= schoolData.schoolName === '';
-      }
-    }
-    return !missingInfo;
   }
 
   function showTeacher() {
@@ -326,18 +229,7 @@ window.SignupManager = function (options) {
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
 
-    if (!loggedTeacherSelected) {
-      logEvent('teacher-selected');
-      loggedTeacherSelected = true;
-    }
-
-    if (shouldUseAutocompleteDropdown()) {
-      updateAutocompleteSchoolFields(schoolData);
-    }
-  }
-
-  function shouldUseAutocompleteDropdown() {
-    return registrationSchoolStyleGroup !== SCHOOL_STYLE_TEST_GROUPS.control;
+    updateAutocompleteSchoolFields(schoolData);
   }
 
   function getUserTypeSelected() {
@@ -369,26 +261,25 @@ window.SignupManager = function (options) {
 
     const formData = $("#new_user").serializeArray();
 
-    if (shouldUseAutocompleteDropdown()) {
-      const signupForm = $(".signupform").serializeArray();
-      const schoolInfoDataMap = [
-        {from: 'nces_school_s', to: 'school_id'},
-        {from: 'country_s', to: 'country', transform: getCountryCodeForCountry},
-        {from: 'school_name_s', to: 'school_name'},
-        {from: 'school_state_s', to: 'school_state'},
-        {from: 'school_zip_s', to: 'school_zip'},
-        {from: 'registration_location', to: 'full_address'},
-      ];
-      signupForm.forEach( function (el) {
-        const match = schoolInfoDataMap.find(x => x.from === el.name);
-        if (match) {
-          const value = match.transform ? match.transform(el.value) : el.value;
-          if (!(match.to === 'school_id' && value === '-1')) { // skip passing "not found" school id value
-            formData.push({name: "user[school_info_attributes][" + match.to + "]", value: value});
-          }
+    // Data transformations for school info
+    const signupForm = $(".signupform").serializeArray();
+    const schoolInfoDataMap = [
+      {from: 'nces_school_s', to: 'school_id'},
+      {from: 'country_s', to: 'country', transform: getCountryCodeForCountry},
+      {from: 'school_name_s', to: 'school_name'},
+      {from: 'school_state_s', to: 'school_state'},
+      {from: 'school_zip_s', to: 'school_zip'},
+      {from: 'registration_location', to: 'full_address'},
+    ];
+    signupForm.forEach( function (el) {
+      const match = schoolInfoDataMap.find(x => x.from === el.name);
+      if (match) {
+        const value = match.transform ? match.transform(el.value) : el.value;
+        if (!(match.to === 'school_id' && value === '-1')) { // skip passing "not found" school id value
+          formData.push({name: "user[school_info_attributes][" + match.to + "]", value: value});
         }
-      });
-    }
+      }
+    });
 
     if (isTeacherSelected()) {
       // Teachers get age 21 in the form data.
@@ -410,17 +301,6 @@ window.SignupManager = function (options) {
     $("#password_message_confirmation").text("");
 
     if (isTeacherSelected()) {
-      schoolData.showErrorMsg = false;
-      logEvent('teacher-submitted');
-      if (registrationSchoolStyleGroup === SCHOOL_STYLE_TEST_GROUPS.autocompleteRequired) {
-        if (!schoolInfoIsComplete()) {
-          schoolData.showErrorMsg = true;
-          updateAutocompleteSchoolFields(schoolData);
-          logEvent('teacher-submit-error');
-          $('#signup-button').prop('disabled', false);
-          return false;
-        }
-      }
       updateAutocompleteSchoolFields(schoolData);
     }
 
