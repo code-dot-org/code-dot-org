@@ -49,10 +49,7 @@
     "contained_level_names": [
       "CSDU6 toggle state prediction"
     ],
-    "top_level_procedure_autopopulate": "false",
-    "encrypted_examples": [
-
-    ]
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",

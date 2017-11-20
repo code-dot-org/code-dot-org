@@ -62,10 +62,7 @@
     "disable_procedure_autopopulate": "false",
     "start_blocks": "//Plays a long buzz\r\nonBoardEvent(buttonL, \"down\", function event(){\r\n \r\n});\r\n//Plays a short buzz\r\nonBoardEvent(buttonR, \"down\", function event(){\r\n \r\n});",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
