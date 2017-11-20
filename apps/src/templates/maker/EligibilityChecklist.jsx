@@ -1,10 +1,10 @@
 /** @file Maker Discount Code Eligibility Checklist */
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import Button from "./Button";
-import SchoolAutocompleteDropdownWithLabel from './census2017/SchoolAutocompleteDropdownWithLabel';
+import Button from "../Button";
+import SchoolAutocompleteDropdownWithLabel from '../census2017/SchoolAutocompleteDropdownWithLabel';
 
-import ValidationStep, {Status} from '../lib/ui/ValidationStep';
+import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 const styles = {
   unit6Form: {
