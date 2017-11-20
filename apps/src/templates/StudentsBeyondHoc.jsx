@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
 import Responsive from '../responsive';
+import { connect } from 'react-redux';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
@@ -20,7 +21,7 @@ const styles = {
   }
 };
 
-export default class StudentsBeyondHoc extends Component {
+class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
@@ -129,3 +130,8 @@ export default class StudentsBeyondHoc extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(StudentsBeyondHoc);

@@ -4,17 +4,17 @@ import ReactDOM from 'react-dom';
 import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import Congrats from '@cdo/apps/templates/Congrats';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {combineReducers, createStore} from 'redux';
 import queryString from 'query-string';
 
 $(document).ready(function () {
-  const store = getStore();
-  const isRtl = isRtlFromDOM();
+  const store = createStore(combineReducers({isRtl}));
   const script = document.querySelector('script[data-congrats]');
   const congratsData = JSON.parse(script.dataset.congrats);
   const userType = congratsData.current_user ? congratsData.current_user.user_type : "signedOut";
   const isEnglish = congratsData.english;
   const userAge = congratsData.user_age;
+  const isRtl = isRtlFromDOM();
 
   let certificateId = '';
   let tutorial = '';
@@ -29,7 +29,6 @@ $(document).ready(function () {
       <Congrats
         certificateId={certificateId}
         tutorial={tutorial}
-        isRtl={isRtl}
         userType={userType}
         userAge={userAge}
         isEnglish={isEnglish}

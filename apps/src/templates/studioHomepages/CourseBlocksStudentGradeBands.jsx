@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import Responsive from '../../responsive';
-import ContentContainer from '../ContentContainer';
+import {UnconnectedContentContainer as ContentContainer} from '../ContentContainer';
 import i18n from "@cdo/locale";
 
 class CourseBlocksStudentGradeBands extends Component {

@@ -224,9 +224,9 @@ class Link extends Component {
   }
 }
 
-export const UnconnectedContentContainer = ContentContainer;
+export const UnconnectedContentContainer = Radium(ContentContainer);
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
   isRtl: state.isRtl,
-}))(Radium(ContentContainer));
+}))(UnconnectedContentContainer);
