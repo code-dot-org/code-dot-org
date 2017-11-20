@@ -1995,3 +1995,28 @@ en:
       6:
         image: 'notes/mc_2017_functions_6.png'
         text: "Remember, you can use the same function every time you need to run the same set of instructions to do something, like build a bridge. Good luck, I know you can do it!"
+    mc_2017_congratulations:
+      1:
+        image: 'notes/mc_2017_congratulations_1.png'
+        text: "Preston: Congratulations!"
+      2:
+        image: 'notes/mc_2017_congratulations_2.png'
+        text: "Lizzy: Congratulations!"
+      3:
+        image: 'notes/mc_2017_congratulations_3.png'
+        text: "Stampy: Congratulations, you did it!"
+      4:
+        image: 'notes/mc_2017_congratulations_4.png'
+        text: "Stacy: Congratulations guys, you totally rocked that! And now that you've completed the Hour of Code, you can start coding in Minecraft. You've learned about loops, functions, and what a software Agent does."
+      5:
+        image: 'notes/mc_2017_congratulations_5.png'
+        text: "Now, it's time for the free play level, where you are the developer. Use any remaining time to write your own functions to explore, mine, and build."
+      6:
+        image: 'notes/mc_2017_congratulations_6.png'
+        text: "You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click "Finish" and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!"
+      7:
+        image: 'notes/mc_2017_congratulations_7.png'
+        text: "Stacy: And I'm back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it's doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it's not just staircases. I can tell the Agent to do anything I want, and it will do it for me."
+      8:
+        image: 'notes/mc_2017_congratulations_8.png'
+        text: "Stampy: How did you do that? Stacy: It was easy, actually. I just used code!"
