@@ -110,6 +110,7 @@ class VerticalImageResourceCard extends Component {
       "course-catalog": require('@cdo/static/resource_cards/coursecatalog.png'),
       "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
       "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
+      "minecraft-marketing": require('@cdo/static/resource_cards/minecraftmarketing.png'),
       "codeorg-teacher":
       require('@cdo/static/resource_cards/codeorgteacher.png'),
       "third-party-teacher":
@@ -130,9 +131,13 @@ class VerticalImageResourceCard extends Component {
           <div style={[styles.text, styles.description, localeStyle]}>
            {description}
            {MCShareLink && (
-             <div style={[styles.text, styles.shareLink, localeStyle]}>
-              {MCShareLink}
-             </div>
+             <input
+               type="text"
+               style={[styles.text, styles.shareLink, localeStyle]}
+               value={MCShareLink}
+               readOnly={true}
+               onClick={e => e.target.select()}
+             />
            )}
           </div>
           <Button
