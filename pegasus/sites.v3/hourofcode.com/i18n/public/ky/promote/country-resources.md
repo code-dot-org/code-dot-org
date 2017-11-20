@@ -98,7 +98,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 ## 1) Жетектемелерди көргүлө:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+Биз түрдүү өнөктөрүбүз түзгөн бир сааттык жетектемелер менен камсыздайбыз. Жаңы жетектемелер <%= campaign_date('full') %> күнү Код сааты башталгыча түшүп турат.
 
 **Код саатынын көнүгүүлөрү:**
 
@@ -117,7 +117,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 3) Техниканын жетиштүүлүгүнө жараша пландаштыргыла
 
-- **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Катышуучулар өнөктөшкөндө, бири-бирине жардамдашып, окутуучуга азыраак кайрылышат.
+- **Түзмөктөр жетишпейби?** [Жупташып иштеп](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) көргүлө. Катышуучулар өнөктөшкөндө, бири-бирине жардамдашып, окутуучуга азыраак кайрылышат.
 - **Интернет жайбы?** Ар бир окуучу өзү жүктөбөсү үчүн, видеолорду катышуучуларга жалпы көрсөтүүнү пландаштыргыла же офлайн жетектемелерди колдонгула.
 
 ## 4) Видео көрсөткүлө - шыктандыргыла
