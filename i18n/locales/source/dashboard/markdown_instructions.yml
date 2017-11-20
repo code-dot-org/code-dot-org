@@ -972,46 +972,48 @@ en:
       AppLab Intro 7 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\r\n\t<img
         src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
         AM.png\" style=\"height:150px\"> \r\n</div>\r\n\r\n**Goal:** Make the screen
-        green. \r\n\r\n**How:** Drag in the block. Set the screen's `\"background-color\"`
-        property to `\"green\"`. Then hit \"Run\"\r\n\r\n**Stuck? Click here** ![expandable](https://images.code.org/817990cbff035c9960b84a4b228ecaba-image-1508521071643.gif)"
+        green. \r\n\r\n**How:** Drag in a `setProperty()` block. Use the dropdowns
+        to set the screen's `\"background-color\"` to `\"green\"`. Then hit \"Run\"\r\n\r\n**Stuck?
+        Click here** ![expandable](https://images.code.org/817990cbff035c9960b84a4b228ecaba-image-1508521071643.gif)"
       AppLab Intro 7 - Change Text 2_markdown_instruction: "<div style=\"float:right\">\r\n<img
         src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29
         PM.png\" style=\"height:150px;\">\r\n</div>\r\n\r\n**Goal:** Make the text
-        bigger and blue. You'll need two lines of code.\r\n\r\n**How:**  Give `\"label1\"`
+        bigger and blue.\r\n\r\n**How:**  You'll need two lines of code. Give `\"label1\"`
         a `\"font-size\"` of `80` and `\"text-color\"` of `\"blue\"`.\r\n\r\n**Stuck?
         Click here:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>"
       AppLab Intro 7 - Full Text_markdown_instruction: "<div style=\"float:right\">\r\n<img
         src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
         AM.png\" style=\"height:200px\">\r\n</div>\r\n\r\n**Goal:** Make the buttons
-        `\"red\"` and `\"blue\"`. Then change the text in the label. Remember you
-        can hover over elements to see their `\"id\"`\r\n\r\n**How:** Set the `\"text\"`
-        property of the label to anything you want, like `\"Welcome to my app!\"`.
-        Then set the `\"background-color\"` of the buttons.\r\n\r\n**Stuck? Click
-        here:** ![expandable](https://images.code.org/709ff200e5b5f553b24d1d0a769db6ed-image-1507565545993.gif)"
+        `\"red\"` and `\"blue\"`. Then change the text in the large orange label.\r\n\r\n**How:**
+        \r\n* Set the `\"text\"` property of the label to anything you want, like
+        `\"Welcome to my app!\"`.\r\n* Set the `\"background-color\"` of the buttons
+        to `\"blue\"` and `\"red\"`\r\n* Remember you can hover over elements to see
+        their `\"id\"`\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/709ff200e5b5f553b24d1d0a769db6ed-image-1507565545993.gif)"
       AppLab Intro 7 - onEvent intro_markdown_instruction: "<img src=\"https://images.code.org/8ac2e62d8940bfbe6e3a8ffdb94dd43b-image-1509043765361.gif\"
-        style=\"float:right;height:150px\">\r\n\r\n**Goal:** The screen turns `\"green\"`
-        when you click the button\r\n\r\n**How:** Add code inside the `\"onEvent\"`
-        that sets the screen's `\"background-color\"` to `\"green\"`.\r\n\r\n**Stuck?
-        Click here:** ![expandable](https://images.code.org/da6f9467a7da28efcbbe2f18a7d4721f-image-1509043778833.gif)"
+        style=\"float:right;height:200px\">\r\n\r\n**Goal:** The screen will start
+        out blue. Add code so it turns green when you click the \"Green-ify\" button.\r\n\r\n**How:**
+        Add code inside the `\"onEvent\"` that sets the screen's `\"background-color\"`
+        to `\"green\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/da6f9467a7da28efcbbe2f18a7d4721f-image-1509043778833.gif)"
       AppLab Intro 7 - onEvent twoButtons_markdown_instruction: "<img src=\"https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif\"
-        style=\"float:right;height:200px\">\r\n\r\n**Goal:** Complete this flashlight
-        app. The \"Off\" button should make the screen `\"black\"` and the text `\"white\"`\r\n\r\n**How:**
-        Add code to the empty `onEvent()` block that sets the `\"background-color\"`
-        of the screen and `\"text-color\"` of the label.\r\n\r\n**Stuck? Click here:**
-        ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)"
+        style=\"float:right;height:200px\">\r\n\r\n**Goal:** Help finish this flashlight
+        app. The \"On\" button already turns the screen white. Run the app and try
+        it out. Then write code so the \"Off\" button makes the screen black again.\r\n\r\n**How:**
+        Add code inside the empty `onEvent()` that sets the `\"background-color\"`
+        of the screen to `\"black\"` and `\"text-color\"` of the label to `\"white\"`.\r\n\r\n**Stuck?
+        Click here:** ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)"
       AppLab Intro 7 - playSound_markdown_instruction: "<img src=\"https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16
-        PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add an animal
-        to the sound board. If you don't want to find a picture of your animal then
-        change the color of the speaker icon to one you like.\r\n\r\n**How:** Add
-        an `onEvent()` and use `playSound()` inside of it. Find an animal sound you
-        like in the sound library. For the picture you can either upload an image
-        you find online and change the button's `\"image\"` property, or just change
-        the `\"icon-color\"`. \r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/d33c2d008b3f03f7a9775a4a3a1bbfcf-image-1509047489327.gif)"
+        PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** This sound board
+        app is almost done! Add an image, text, and sound to the bottom right button.\r\n\r\n**How:**
+        Add an `onEvent()` below the others and use `playSound()` inside of it. Choose
+        any animal sound you like from the library. Use `setProperty()` to set the
+        `\"image\"` property of the button to either an image or icon of your choosing.
+        Finally, set the `\"text\"` with a second `setProperty()`.\r\n\r\n**Stuck?
+        Click here:** ![expandable](https://images.code.org/d33c2d008b3f03f7a9775a4a3a1bbfcf-image-1509047489327.gif)"
       AppLab Intro 7 - thisOrThatAddButton_markdown_instruction: "<img src=\"https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add a second
-        button to the screen that says \"Right!\". Set its `\"id\"` to `\"rightButton\"`.\r\n\r\n**How:**
+        button to the screen that says \"Right!\" with an `\"id\"` of `\"rightButton\"`.\r\n\r\n**How:**
         In Design Mode drag in a new button. Position and resize it. Then set its
-        `\"id\"`, `\"text\"`, `\"background color\"`, and `\"font size\"`\r\n\r\n**Stuck?
+        `\"id\"`, `\"text\"`, `\"background color\"`, and `\"font size\"`.\r\n\r\n**Stuck?
         Click here:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)"
       AppLab Intro 7 - thisOrThatAddScreen_markdown_instruction: "<img src=\"https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59
         PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Create a new
@@ -1034,9 +1036,9 @@ en:
         (1).gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** The screen
         switches to `\"rightScreen\"` when the user clicks the `\"rightButton\"`.\r\n\r\n**How:**
         In Code Mode add a new `onEvent()` to your program for your \"Right!\" button.
-        Add a `setScreen()` block inside of it that switches screens to `\"thatScreen\"`.\r\n\r\n**Stuck?
+        Add a `setScreen()` block inside of it that switches screens to `\"rightScreen\"`.\r\n\r\n**Stuck?
         Click here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)"
-      AppLab_test02_markdown_instruction: "#This is the title \r\n\r\n- bullet 1
+      AppLab_test02_markdown_instruction: "# This is the title \r\n\r\n- bullet 1
         \r\n- do this\r\n- then this\r\n\r\n![](https://images.code.org/982f9167cf54c24251922fbd0a7f60b3-image-1436470853351.png)"
       Applab allthethings onRecordEvent_markdown_instruction: "Please sign in to
         test applab levels (By design, applab levels only work if signed in. Normally,
@@ -2381,10 +2383,11 @@ en:
         an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
         {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
         example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#Background
-        Color\r\n\r\n* Find the code in the style sheet that is making the background
-        of the entire page light blue.\r\n* Change the code to make the page a different
-        color.\r\n* Try to change the background color of just the paragraphs."
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#
+        Background Color\r\n\r\n* Find the code in the style sheet that is making
+        the background of the entire page light blue.\r\n* Change the code to make
+        the page a different color.\r\n* Try to change the background color of just
+        the paragraphs."
       CSD U2 layout style body_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n\r\n<details>\r\n<summary>**What does the `body` selector
@@ -2783,10 +2786,11 @@ en:
         in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why
         is the \"style.css\" file in a different language?**</summary>\r\nblah blah
         answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file
-        in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n</div>\r\n#Background
-        Color\r\n\r\n* Find the code in \"style.css\" that is making the background
-        of the entire page light blue.\r\n* Change the code to make the page a different
-        color.\r\n* Try to change the background color of just the paragraphs."
+        in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n</div>\r\n#
+        Background Color\r\n\r\n* Find the code in \"style.css\" that is making the
+        background of the entire page light blue.\r\n* Change the code to make the
+        page a different color.\r\n* Try to change the background color of just the
+        paragraphs."
       CSD U2 text style decoration_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
@@ -2854,8 +2858,8 @@ en:
         an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
         {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
         example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#Changing
-        the Font\r\n\r\n* Find the CSS rule-set in the style sheet that determines
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#
+        Changing the Font\r\n\r\n* Find the CSS rule-set in the style sheet that determines
         the style for the paragraph tag.\r\n* Change the font family and choose which
         one you like the best.\r\n  * Choose from \"serif\", \"sans-serif\", \"cursive\",
         \"fantasy\", and \"monospace\"\r\n* Add a font family rule for the h1 or h3
@@ -2958,13 +2962,13 @@ en:
         an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
         {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
         example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#Making
-        a new CSS rule-set\r\n\r\nThe block of code that gives rules for a particular
-        tag is called a _rule-set_.  You can make a new rule set by copying the pattern
-        you see in the rule-set for the `h1` tag.\r\n\r\n* Find the CSS rule-set in
-        the style sheet that determines the styles for the h1 tag.\r\n* Using the
-        same pattern, write a new CSS rule-set that will determine the style for the
-        h3 tag.\r\n* Add code to set a different color for the h3 tags."
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#
+        Making a new CSS rule-set\r\n\r\nThe block of code that gives rules for a
+        particular tag is called a _rule-set_.  You can make a new rule set by copying
+        the pattern you see in the rule-set for the `h1` tag.\r\n\r\n* Find the CSS
+        rule-set in the style sheet that determines the styles for the h1 tag.\r\n*
+        Using the same pattern, write a new CSS rule-set that will determine the style
+        for the h3 tag.\r\n* Add code to set a different color for the h3 tags."
       CSD U2 text style sample_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
         is a style sheet?**</summary>\r\nA style sheet is a document that controls
@@ -2997,13 +3001,13 @@ en:
         changes the font of the text.  It gives a general description of the type
         of font that should be used, but each browser might display the font slightly
         differently.  Read more at <a href=\"http://www.w3schools.com/cssref/pr_font_font-family.asp\">W3chools
-        - CSS font-family Property</a>\r\n</details>\r\n</div>\r\n#CSS and Style sheets\r\n\r\n*
-        Look at the web page below and find some different types of text stylings
-        that you don't know how to code yet.\r\n* Click on the style sheet (\"style.css\"
-        in the files area) and look at the code inside the file.\r\n* With your partner,
-        discuss which parts of the code you think are making the text appear differently
-        than before.\r\n\r\nIn the next few lessons, you'll be changing and adding
-        new styles on this page.\r\n\r\n"
+        - CSS font-family Property</a>\r\n</details>\r\n</div>\r\n# CSS and Style
+        sheets\r\n\r\n* Look at the web page below and find some different types of
+        text stylings that you don't know how to code yet.\r\n* Click on the style
+        sheet (\"style.css\" in the files area) and look at the code inside the file.\r\n*
+        With your partner, discuss which parts of the code you think are making the
+        text appear differently than before.\r\n\r\nIn the next few lessons, you'll
+        be changing and adding new styles on this page.\r\n\r\n"
       CSD U2 text style size_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
@@ -5414,7 +5418,7 @@ en:
         appear somewhere randomly on the screen."
       CSD U3 abstraction animation circle_markdown_instruction: "# Animate the Satellite\r\n\r\nNow
         you are ready for the final piece of the drawing: making the satellite circle
-        the moon.\r\n\r\n#Do This\r\n\r\nUse `setSpeed()` and `getDirection()` to
+        the moon.\r\n\r\n# Do This\r\n\r\nUse `setSpeed()` and `getDirection()` to
         make the satellite circle the moon. "
       CSD U3 abstraction animation rotate_markdown_instruction: "# Rotation\r\n\r\nMake
         earth rotate using the `rotationSpeed` property."
@@ -5440,8 +5444,8 @@ en:
         right place on the screen.\r\n\r\n"
       CSD U3 abstraction bug template_markdown_instruction: "# velocityY\r\n\r\n`velocityY`
         is like `velocityX`, but it moves things up and down.  Can you use it to make
-        the dragonfly walk up the screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY` to
-        make the sprite go up the screen.\r\n\r\n*Hint: Should velocity by positive
+        the dragonfly walk up the screen?\r\n\r\n# Do This\r\n\r\nUse `velocityY`
+        to make the sprite go up the screen.\r\n\r\n*Hint: Should velocity by positive
         or negative to move the sprite up the screen?*"
       CSD U3 abstraction car rotation_markdown_instruction: "# rotateToDirection\r\n\r\nHere's
         the car you just made move.  It stayed on the road, but it was not pointing
@@ -5518,12 +5522,12 @@ en:
         this picture."
       CSD U3 abstraction dragonfly (OLD)_markdown_instruction: "# velocityY\r\n\r\n`velocityY`
         is like `velocityX`, but it moves things up and down.  Can you use it to make
-        the feather float the down screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY`
+        the feather float the down screen?\r\n\r\n# Do This\r\n\r\nUse `velocityY`
         to make the sprite go down the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)"
       CSD U3 abstraction dragonfly OLD_markdown_instruction: "# velocityY\r\n\r\n`velocityY`
         is like `velocityX`, but it moves things up and down.  Can you use it to make
-        the dragonfly walk up the screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY` to
-        make the sprite go up the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)\r\n\r\n*Hint:
+        the dragonfly walk up the screen?\r\n\r\n# Do This\r\n\r\nUse `velocityY`
+        to make the sprite go up the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)\r\n\r\n*Hint:
         Should velocity be positive or negative to move the sprite up the screen?*"
       CSD U3 abstraction drive_markdown_instruction: "# Race Your Car\r\n\r\nNow
         that you can steer, you need to control the speed of your car.  Use the `setSpeed`
@@ -5919,7 +5923,7 @@ en:
         Why might one be better than the other?"
       CSD U3 abstraction velocityY 2_markdown_instruction: "# velocityY\r\n\r\n`velocityY`
         is like `velocityX`, but it moves things up and down.  Can you use it to make
-        the feather float the down screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY`
+        the feather float the down screen?\r\n\r\n# Do This\r\n\r\nUse `velocityY`
         to make the sprite go down the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)"
       CSD U3 abstraction velocityY control_markdown_instruction: "# Controlling Speed\r\n\r\nYour
         code before the draw loop sets up the beginning of your game.  Your code inside
@@ -7416,7 +7420,7 @@ en:
         Do This\r\n\r\nWe've already created a \"start\" screen and included a title
         and \"play\" button. Using your planning guide, finish creating this screen.
         Specifically you'll want to:\r\n\r\n* Update the title text to say \"Emoji
-        Race\"\r\n* Add instructions for playing with the ID \"instructions\"\r\n\r\nFeel
+        Race\"\r\n* Add instructions for playing using the ID \"instructions\"\r\n\r\nFeel
         free to add any other design tweaks that you'd like."
       CSD U6 tugowar design 2_markdown_instruction: "# Designing the Win Screen\r\n\r\nThe
         final screen in this program shows who won. It's totally blank right now.\r\n\r\n#
@@ -9639,10 +9643,10 @@ en:
         lists.\r\n* **Write Code** to display the final item in each list. Make sure
         to use list.length so that your code will work even if the list shrank.\r\n"
       CSDU6 - LED buttonL_markdown_instruction: "# Using Board Events\r\n\r\nRight
-        now the LED turns on when the left button (`buttonL`) is pressed. How can
-        you turn it off using a board event?\r\n\r\n## Do this\r\n<img src=\"https://images.code.org/cc903e4a0fb57b241b90abe220f027ef-image-1487707484420.04.00.png\"
-        style=\"float:right; margin-left: 10px; width: 50%\">\r\n* Add another `onBoardEvent()`
-        block to turn the LED off when the right button is pressed."
+        now the LED turns on when the left button (`buttonL`) is pressed down. How
+        can you turn it off using a board event?\r\n![](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)\r\n#
+        Do this\r\n\r\n* Add another `onBoardEvent()` block to turn the LED off when
+        the right button is pressed down."
       CSDU6 - LED toggle buttonL down_markdown_instruction: "# Other Board Events
         with the Buttons\r\n\r\nThe left and right buttons have three event types:`press`,
         `down`, and `up`\r\n\r\nSo far you've just been using the `press` event.
@@ -9654,7 +9658,7 @@ en:
         the Buttons\r\n\r\nYou might have noticed that the LED stays on even once
         the button goes back up. Because the event was triggered for when the button
         goes down only, the LED stays on. To turn it off, you'll need to trigger
-        an event for when the button pops back up.\r\n\r\n## Do this\r\n* Drag out
+        an event for when the button pops back up.\r\n\r\n# Do this\r\n* Drag out
         another `onBoardEvent` block and set the event type to `up`. Make sure that
         it's for the same button that you used in the last level.\r\n* Add code to
         turn the LED off when the button pops back up."
@@ -9750,10 +9754,12 @@ en:
         handlers that listen for when someone has finished moving the slider to a
         new location? Hint: Think back to your event investigation. Which event type
         do you want?"
-      CSDU6 - board event challenge_markdown_instruction: "# Challenge: Board Events
-        and Outputs\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nNow
-        that you know how to use board events, the led, and the buzzer, try to create
-        an app that uses all three."
+      CSDU6 - board event challenge_markdown_instruction: "# Challenge: Sound Board\r\n\r\nCheck
+        with your teacher before starting the challenge.\r\n\r\nNow that you know
+        how to use board events, the buttons, switch, and the buzzer, try making a
+        program that turns your board into a sound board when you press the buttons
+        or flip the switch. Play around with the duration and frequencies of the sounds,
+        and listen to how it turns out."
       CSDU6 - button LED prediction_markdown_instruction: "See contained level for
         markdown"
       CSDU6 - button debug_markdown_instruction: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/clickdebug.gif\"
@@ -9837,25 +9843,26 @@ en:
         answer.\r\n\r\n* What does the button do?\r\n* Does the light turn on once
         the program is run?"
       CSDU6 - buzzer duration buttons_markdown_instruction: "# Buzzer and the Buttons\r\n\r\nThe
-        buttons on your board can interact with the buzzer as well as the led. Using
+        buttons on your board can interact with the buzzer as well as the LED. Using
         the buttons, make a button that buzzes for a long duration of time, and another
-        button that buzzes for a short duration of time.\r\n\r\n## Do this\r\n* Pull
-        out two `buzzer.frequency()` blocks and put one inside each `onBoardEvent()`
-        block.\r\n* Change the buzzer's duration so that buttonL plays a long buzz,
-        and buttonR plays a short buzz."
+        button that buzzes for a short duration of time.\r\n\r\n# Do this\r\n* Change
+        the duration parameter of `buzzer.frequency` to make the left button play
+        a long buzz, and the right button play a short buzz."
       CSDU6 - buzzer duration_markdown_instruction: "# Buzzer Duration\r\n\r\nAs
-        exciting as that was, the buzzer only played for a little under a second.
-        You've probably noticed that the `buzzer.frequency()` block has two parameters:
-        frequency and duration. For right now we're gonna focus on duration, the
-        second parameter.\r\n\r\nDuration determines how long the buzzer is going
-        to play a sound for in milliseconds. 100 is 1/10th of a second, and 1000 is
-        a whole second.\r\n\r\n\r\n## Do this\r\n* Change the duration of your `buzzer.frequency()`
-        block to something longer than 100\r\n* See what happens when you run it for
-        longer!"
+        you've noticed, `buzzer.frequency()` has two parameters: frequency and duration.
+        Both of these take a number as input.\r\n\r\n* Frequency changes how the buzzer
+        sounds. The bigger the number you give it, the higher the buzzer's sound
+        will be.\r\n\r\n* Duration determines how long the buzzer is going to play
+        a sound for in milliseconds.\r\n\r\nFor right now we're gonna focus on duration,
+        the second parameter.\r\n\r\n\r\n# Do this\r\nTry out a few things with duration:\r\n\r\n*
+        Change the duration of the buzzer to something longer than 100.\r\n* Try setting
+        the duration to 0, what happens?\r\n\r\nRun the program multiple times to
+        see what happens before you move on."
       CSDU6 - buzzer intro_markdown_instruction: "# Using the Buzzer\r\n\r\nYou can
         use the buzzer in a lot of different ways, but right now we're just going
-        to use the `buzzer.frequency()` block to make it play a sound.\r\n\r\n## Do
-        this\r\n* Pull out a `buzzer.frequency()` block from the toolbox.\r\n* Run
+        to use the `buzzer.frequency()`.\r\n\r\n# Do this\r\n* Pull out a `buzzer.frequency()`
+        block from the toolbox and play around with it. You'll notice it has two
+        parameters, what happens when you change either, or both of those?\r\n* Run
         the program and enjoy the music of your Circuit Playground."
       CSDU6 - ch 1 exemplar LEDs_markdown_instruction: "# An Example Using Color
         LEDs\r\n\r\nHere's an example app that uses the color LEDs, event handlers,
@@ -10017,7 +10024,7 @@ en:
         Switch\r\n\r\nThe toggle switch is like a light switch, it can flip in one
         of two positions: `open` and `close`.\r\n\r\nFlipping the toggle switch to
         one of these two positions can trigger an event depending on if the switch
-        is open or closed. You're going to use these events to make a light switch.\r\n\r\n##
+        is open or closed. You're going to use these events to make a light switch.\r\n\r\n#
         Do this\r\n\r\n* Drag out another `onBoardEvent()` block for the `toggleSwitch`
         and set its event type to `close`\r\n* Add code so that when the toggle switch
         is flipped to `close` the light turns off."
@@ -10256,13 +10263,15 @@ en:
       CSDU6 - toggle state LED prediction_markdown_instruction: "See contained level
         for markdown"
       CSDU6 - toggleswitch state setProp_markdown_instruction: "# State and the Toggle
-        Switch\r\n\r\nNow that you know how to track the state of the toggle switch,
-        you can use this information to make changes on the screen.\r\n\r\n## Do this\r\n*
-        If the toggle switch is open (`true`), then change the text on the screen
-        to say \"Open!\" with the `setProperty()` block.\r\n* Else, change the toggle
-        switch to say \"Closed!\" with the `setProperty()` block.\r\n* Run the program
-        and flip the switch. Remember to press the left button, otherwise you won't
-        see the screen change."
+        Switch\r\n\r\nThe toggle switch has the `toggleSwitch.isOpen` property, which
+        keeps track of which **state** (opened or closed) the switch is in. `toggleSwitch.isOpen`
+        is a boolean, so its value is `true` if the toggle switch is open, and `false`
+        if it's closed.\r\n\r\n# Do this\r\n* Complete the if-statement with the
+        `toggleSwitch.isOpen` property. Since `toggleSwitch.isOpen` is a boolean,
+        the condition reads \"If true\".\r\n* If the toggle switch is open (`true`),
+        then change the text on the screen to say \"Open!\"\r\n* Else, the text should
+        say \"Closed!\"\r\n\r\n###Run the program and flip the switch. Remember to
+        press the left button, otherwise you won't see the screen change."
       CSDU6 - toggleswitch state_markdown_instruction: "# State and the Toggle Switch\r\n\r\nThe
         toggle switch has the `toggleSwitch.isOpen` property, which keeps track of
         which **state** (opened or closed) the switch is in. `toggleSwitch.isOpen`
@@ -10335,6 +10344,26 @@ en:
         button\r\n* Move the code that turns your LED on _inside_ the button's event
         handler\r\n\r\nIf everything worked out, you should see that your LED starts
         out off, but turns on when you click the button!"
+      CSDU6 array access modify_markdown_instruction: "# Accessing Items in a List\r\n\r\n**Starter
+        Code:** There is a list of days of the week provided as well as a command
+        to set the label on the screen.\r\n\r\n**Do This:** Can you change the index
+        value so that the page displays \"Today is: Tuesday\""
+      CSDU6 array index predict contained_markdown_instruction: "# Predict\r\n\r\nThe
+        code below will display four things on the screen.  What do you think they
+        will be?"
+      CSDU6 arrays rainbow_markdown_instruction: "# Index Practice\r\n\r\n<img src=\"https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45
+        PM.png\" style=\"width: 150px; float: right\">\r\n\r\n**Starter code** has
+        been provided that creates a list called `colors`.\r\n\r\n* Use `setProperty`
+        and the list of colors to change the `background-color` of the buttons to
+        create a rainbow. The first button has been done for you."
+      CSDU6 arrays random_markdown_instruction: "# Expressions as Indexes: Using
+        Variables\r\n\r\n* **Starter code** has been provided which creates an list
+        of identifiers for icons in the icon library\r\n* **Write code** that sets
+        the image on the screen to a random icon from the list"
+      CSDU6 arrays variable_markdown_instruction: "# Expressions as Indexes: Using
+        Variables\r\n\r\n* **Starter code** has been provided which creates an list
+        of identifiers for icons in the icon library\r\n* **Write code** that sets
+        the image on the screen to a random icon from the list"
       CSDU6 buzzer alarm_markdown_instruction: "# Noisy Alarm\r\n\r\nBack to the
         Alarm now - now with the buzzer we can make this thing really sound like an
         alarm. Using `buzzer.frequency()` and `buzzer.stop()` make your alarm play
@@ -10370,10 +10399,10 @@ en:
         nicely together?_"
       CSDU6 toggle state prediction_markdown_instruction: "# More on the Toggle Switch\r\n\r\nThe
         toggle switch has different properties that let it be used outside of toggle
-        switch related events. Look at the code below, do you see anything familiar,
-        or even something new, in the program? What do you think is going to happen
-        when you run this program?\r\n\r\nType your response and click \"Run\" to
-        see what happens."
+        switch related events. Look at the code below, what do you think is going
+        to happen when you run this program?\r\n* Note that all of the code is contained
+        inside an event, why do you think that is?\r\n\r\nType your response and click
+        \"Run\" to see what happens. "
       CSDU6- predict event types_markdown_instruction: "# Predict: Event Type\r\n\r\nSo
         far you have really only used the click event type with buttons. There are
         many different event types you can use in App Lab. Look at the code and predict
@@ -15983,7 +16012,7 @@ en:
         style=\"width:200px\">\r\n\r\n*  Hold down _Shift_ while reloading the page
         (this will delete cached files so the browser has to re download them while
         throttled)"
-      'Internet Simulator: DNS Mode_markdown_instruction': "##The Need for DNS\r\n\r\nIn
+      'Internet Simulator: DNS Mode_markdown_instruction': "## The Need for DNS\r\n\r\nIn
         this version of the Internet Simulator, a Domain Name System (DNS) is provided
         for you and knows the IP addresses of all connected computers. You can only
         see the hostnames of other connected computers.   \r\n![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)\r\n\r\nThe
@@ -15991,7 +16020,7 @@ en:
         protocol `GET [hostname]`, for example `GET Bob2`, to the DNS to get another
         student's address. You can keep track of the responses in the Notes section
         in the DNS tab.  \r\n![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)"
-      'Internet Simulator: DNS_markdown_instruction': "##The Need for DNS\r\n\r\nIn
+      'Internet Simulator: DNS_markdown_instruction': "## The Need for DNS\r\n\r\nIn
         this version of the Internet Simulator, a Domain Name System (DNS) is provided
         for you and knows the IP addresses of all connected computers. You can only
         see the hostnames of other connected computers.   \r\n![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)\r\n\r\nThe
@@ -16019,10 +16048,10 @@ en:
         English - do not count on human intuition to reconstruct the message. The
         message is not known beforehand.)\r\n- The sender and receiver must be confident
         the full message was successfully transmitted and reconstructed."
-      'Internet Simulator: Routers_markdown_instruction': "#An Updated Internet Simulator\r\nMany
-        changes have been made to the Internet Simulator. \r\n\r\n**Routers:** Rather
-        than being connected to your entire class you are now connected to a single
-        router. You can see who else is on your router in the network diagram.\r\n\r\n![](https://images.code.org/0311148470dc358fe435568e2b333062-image-1442008896037.51.04
+      'Internet Simulator: Routers_markdown_instruction': "# An Updated Internet
+        Simulator\r\nMany changes have been made to the Internet Simulator. \r\n\r\n**Routers:**
+        Rather than being connected to your entire class you are now connected to
+        a single router. You can see who else is on your router in the network diagram.\r\n\r\n![](https://images.code.org/0311148470dc358fe435568e2b333062-image-1442008896037.51.04
         PM.png)\r\n\r\n\r\n**IP Addresses:** Every user has a unique IP address. The
         first portion is the number of your router and the second is your own unique
         number. You can figure out the IP addresses of people on the router by looking
@@ -16036,7 +16065,7 @@ en:
         level of your router and the entire network by clicking the \"Log Browser\"
         button.\r\n\r\n![](https://images.code.org/b24975e33f1a2b10fc6a2ca8cf1c9ad2-image-1442009358166.58.48
         PM.png)"
-      'Internet Simulator: Sending Binary Messages 1_markdown_instruction': "##Coordination
+      'Internet Simulator: Sending Binary Messages 1_markdown_instruction': "## Coordination
         and Binary Messages Activity\r\n\r\n**Develop your Protocol**\r\nDevelop a
         protocol that allows you to use Internet Simulator to relay a message, i.e.
         one member sends a message and the other member sends the same message back.
@@ -16046,7 +16075,7 @@ en:
         turn it is to send or receive the message?\r\n- How will you coordinate your
         actions?\r\n\r\nDocument your protocol on the worksheet provided, and test
         your protocol using the Internet Simulator"
-      'Internet Simulator: Sending Binary Messages_markdown_instruction': "##Coordination
+      'Internet Simulator: Sending Binary Messages_markdown_instruction': "## Coordination
         and Binary Messages Activity\r\n\r\n**Develop your Protocol**\r\nDevelop a
         protocol that allows you to use Internet Simulator to relay a message, i.e.
         one member sends a message and the other member sends the same message back.
@@ -16883,7 +16912,7 @@ en:
         room, everyone receives them. What are some of the challenges of this system,
         and how might you solve them?\r\n\r\nYour teacher will hand out more specific
         instructions for this activity."
-      NetSim Standalone Classroom Routers_markdown_instruction: "#Routing messages
+      NetSim Standalone Classroom Routers_markdown_instruction: "# Routing messages
         \r\n\r\nIn this version of the Internet Simulator, everyone connects to a
         router and has a specific address. To send messages, you have to address your
         message to the specific address of the recipient, and the router will take
@@ -16909,7 +16938,7 @@ en:
         of a packet being dropped\r\n- Multiple packets may take different paths to
         the destination\r\n- The default max packet size is set to 6 additional characters\r\n\r\nYour
         teacher will hand out more specific instructions for this activity."
-      NetSim Standalone SendAB_markdown_instruction: "#Sending bits with the Internet
+      NetSim Standalone SendAB_markdown_instruction: "# Sending bits with the Internet
         Simulator\r\n\r\nYou and your partner share a single wire that can only be
         in state A or state B. You can set the wire to either state at any time, and
         you can read the state of the wire at any time. Can you figure out a way to
@@ -16921,13 +16950,13 @@ en:
         to send text-based information back and forth. With a text-based protocol,
         you can easily represent and communicate all kinds of information. \r\n\r\nYour
         teacher will hand out more specific instructions for this activity."
-      NetSim Standalone Sending Numbers_markdown_instruction: "#Sending Numbers with
-        the Internet Simulator\r\n\r\nYou and your partner can now reliably send messages
-        back and forth without extra coordination! While you're always sending bits
-        back and forth, you can also represent those bits as decimal numbers. What
-        kinds of information can you represent with this system? \r\n\r\nYour teacher
-        will hand out more specific instructions for this activity."
-      NetSim_Variant2_markdown_instruction: "##NetSim: Variant 2\r\n\r\nStudents
+      NetSim Standalone Sending Numbers_markdown_instruction: "# Sending Numbers
+        with the Internet Simulator\r\n\r\nYou and your partner can now reliably send
+        messages back and forth without extra coordination! While you're always sending
+        bits back and forth, you can also represent those bits as decimal numbers.
+        What kinds of information can you represent with this system? \r\n\r\nYour
+        teacher will hand out more specific instructions for this activity."
+      NetSim_Variant2_markdown_instruction: "## NetSim: Variant 2\r\n\r\nStudents
         connect directly to one another and send entire packets back and forth, exploring
         systems of encoding data."
       New Minecraft Hero Project_markdown_instruction: "**Freeplay:** Now it's up
@@ -17200,7 +17229,7 @@ en:
         \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\"
         if you want to clean up your work."
       PS FR test 7-25_markdown_instruction: "Here is *some* **markdown**"
-      PS Log test - Define and use turnAround_markdown_instruction: "#Do This:\r\n**Define**
+      PS Log test - Define and use turnAround_markdown_instruction: "# Do This:\r\n**Define**
         a function called `turnAround` which turns the turtle around. Once you've
         defined the function **call** it to make sure it works as you expect and then
         move the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)"
@@ -17677,7 +17706,7 @@ en:
         **orienting the turtle** (`//Orient turtle`). Last, don't forget to **call
         the function** (`//Call function`). If you get stuck, plan your solution with
         subgoals.\r\n\r\n![](https://images.code.org/4fa605353695afa0cd01ec01a1e2c709-image-1441772033658.gif)"
-      SG U3L03 Define and use turnAround_markdown_instruction: "#Do This:\r\n**Define**
+      SG U3L03 Define and use turnAround_markdown_instruction: "# Do This:\r\n**Define**
         a function called `turnAround()` which turns the turtle around. Once you've
         defined the function **call** it to make sure it works as you expect and then
         move the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)\r\n\r\n**Remember**
@@ -17691,7 +17720,7 @@ en:
         even subgoals can be broken down into subgoals sometimes. This will be helpful
         when you start creating more complex functions. \r\n\r\nThen you'll `//Call
         function` and `//Move turtle`.\r\n\r\nDon't forget to name your functions."
-      SG U3L03 Draw a T using turnAround_markdown_instruction: "#Do This:\r\nGet
+      SG U3L03 Draw a T using turnAround_markdown_instruction: "# Do This:\r\nGet
         some more practice **calling** a function by using `turnAround()` along with
         your old friend the `moveForward()` function to create a plus sign that is
         centered at the turtle's first position, as shown below. Even though you
@@ -17745,7 +17774,7 @@ en:
         If you are having trouble finding the solution, plan your approach with subgoals
         before filling it in with blocks. If you're not having trouble, feel free
         to skip the subgoals."
-      SG U3L03 draw diamond_markdown_instruction: "#Do This:\r\nWe're finally ready
+      SG U3L03 draw diamond_markdown_instruction: "# Do This:\r\nWe're finally ready
         to make our diamond! **Define** a function named `function drawDiamond()`
         that **calls** `drawSide()` multiple times in order to complete the drawing.
         Your final solution should be triggered by **a single call** to `drawDiamond()`.
@@ -17766,7 +17795,7 @@ en:
         Then you can figure out that one side can be drawn using the same function
         3 times plus a couple of steps, you can make note to define and call `drawStep()`.
         Once you've planned the solution, you can fill in blocks to complete it."
-      SG U3L04 - 3 by 3 with functions_markdown_instruction: "#Do This:\r\n\r\nWe're
+      SG U3L04 - 3 by 3 with functions_markdown_instruction: "# Do This:\r\n\r\nWe're
         going to revisit a familiar problem, **drawing the 3x3 square as efficiently
         as possible**. The only difference is that this time you are armed with the
         ability to create **layers of functions** to help you design more elegant
@@ -17777,7 +17806,7 @@ en:
         and `//Call function` to draw most of the square, then fill in the rest using
         `//Move turtle` and `//Orient turtle`.\r\n\r\n![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18
         PM.png)"
-      SG U3L04 - snowflake_markdown_instruction: "#Do This:\r\n\r\nYou should have
+      SG U3L04 - snowflake_markdown_instruction: "# Do This:\r\n\r\nYou should have
         already worked with a partner to break down the design below into its multiple
         layers of functions. Now you'll have an opportunity to program your solution.
         Here are a few things to keep in mind:\r\n\r\n* Identify useful patterns that
@@ -18176,13 +18205,15 @@ en:
         names.\r\n\r\n# Do This:\r\n* **Drag out ** the function block, and **name**
         your function `drawTriangle()`. \r\n* **Define `drawTriangle()` to have two
         parameters ** within the parentheses making sure to give them **descriptive
-        and meaningful** names separated by commas, such as `(size,width)`. \r\n*
+        and meaningful** names separated by commas, such as `(size,width)`. \r\n    *
+        This animation shows you how (without subgoals in the code) ![expandable](https://images.code.org/b1f5eead2ccb60e5ae607feff590bd3c-image-1442850344677.gif)\r\n    \r\n*
         Then **write ** the code inside `drawTriangle(size, width)` that will make
         it work as described.\r\n* If you get stuck, come up with a top-down plan
         and the subgoals you need for creating a function that draws a triangle.\r\n*
         Test it out!  **Run ** the code and experiment to create an image similar
         to the one below.\r\n\r\nRemember that to achieve the subgoal `//Define function`,
-        you need to give it a name, identify the parameters, and fill it in with blocks."
+        you need to give it a name, identify the parameters, and fill it in with blocks.\r\n\r\n![](https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38
+        PM.png)"
       SG U3L08 - digitalScene_markdown_instruction: "# Design Your Digital Scene\r\n\r\nThis
         is the final project that you will submit.\r\n\r\n# Do This:\r\n\r\n**Copy**
         all of the individual functions you and your group members have written at
@@ -18223,6 +18254,22 @@ en:
         functions that should be used to create your digital scene. \r\n\r\n# Do This:\r\nUse
         the space here to design your functions. Once you're done you can **share**
         this project with your groupmates."
+      SG U3L08 - introUnderTheSea - recovery_markdown_instruction: "# Under the Sea!\r\n\r\nIn
+        the next several challenges you will be working to improve **one program**
+        that draws an underwater scene.  Each time you  finish a puzzle and move on
+        to the next one, your code will be pulled forward and you'll get new instructions
+        telling you what to add.\r\n\r\n# Do This:\r\n\r\n* **Read through ** the
+        program provided to get a basic understanding of what it does.\r\n* **Add
+        function calls ** to the top of the program so that **two fish, two starfish,
+        and two pieces of seagrass** appear somewhere in the scene.You don't need
+        to provide values for the parameters at this stage.\r\n* **Hint:** you need
+        to call `moveTo` before drawing a second fish, starfish or seagrass, otherwise
+        you won't see the second one because it will draw exactly over the first
+        one -- those functions draw based on where the turtle is just before the call.\r\n*
+        Test out your code. If something doesn't work like you expect, consider whether
+        you can add anything to the functions' definitions to make them better.\r\n*
+        **Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
+        PM.png)"
       SG U3L08 - introUnderTheSea_markdown_instruction: "# Under the Sea!\r\n\r\nIn
         the next several challenges you will be working to improve **one program**
         that draws an underwater scene.  Each time you  finish a puzzle and move on
@@ -18882,7 +18929,7 @@ en:
         address these problem?\n\n### Hello!\n"
       Test Markdown level_markdown_instruction: "Enter prompt here\n\n# Test Markdown
         title\n\nTest Markdown prompt\n\n\n"
-      Test of comment block_markdown_instruction: "##instructions\r\n\r\nDrag out
+      Test of comment block_markdown_instruction: "## instructions\r\n\r\nDrag out
         the subgoal label block you want."
       Testing Quantum Farmer_markdown_instruction: "Wow, look at that! \r\n\r\nI
         don't know how many shovelfuls of dirt this hole needs.  \r\nCan you write
@@ -19103,7 +19150,7 @@ en:
         by a friend. The message was supposed to be ABAB. Unfortunately, your friend
         sent the message at 1/2 the bit rate you agreed upon. What message did you
         receive instead?\n"
-      U1L4 NetSim SendAB_markdown_instruction: "##Coordination and Binary Messages
+      U1L4 NetSim SendAB_markdown_instruction: "## Coordination and Binary Messages
         Activity\r\n\r\n**Develop your Protocol**\r\nDevelop a protocol that allows
         you to use Internet Simulator to relay a message, i.e. one member sends a
         message and the other member sends the same message back. You or a teacher
@@ -19497,7 +19544,7 @@ en:
         system your group devised.\n\nHow did your group decide upon a system for
         sending messages in the Battleship simulator? \n\nWere there disagreements
         or problems? How were they resolved?\n\n\n"
-      U2L04 - NetSim Routers with Addresses_markdown_instruction: "#An Updated Internet
+      U2L04 - NetSim Routers with Addresses_markdown_instruction: "# An Updated Internet
         Simulator\r\nMany changes have been made to the Internet Simulator. \r\n\r\n**Routers:**
         Rather than being connected to your entire class you are now connected to
         a single router. You can see who else is on your router in the network diagram.\r\n\r\n![](https://images.code.org/0311148470dc358fe435568e2b333062-image-1442008896037.51.04
@@ -19590,7 +19637,7 @@ en:
       U2L10 Free Response Wrap Up_markdown_instruction: "Complete this sentence.\n\nI
         learned three things today about DNS: ______(1)______ , ______(2)______ ,
         and ______(3)______. \n\nHowever, the most important thing I learned is ______(4)______.\n"
-      U2L10 NetSim Automatic DNS_markdown_instruction: "##The Need for DNS\r\n\r\nIn
+      U2L10 NetSim Automatic DNS_markdown_instruction: "## The Need for DNS\r\n\r\nIn
         this version of the Internet Simulator, a Domain Name System (DNS) is provided
         for you and knows the IP addresses of all connected computers. You can only
         see the hostnames of other connected computers.   \r\n![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)\r\n\r\nThe
@@ -19631,12 +19678,12 @@ en:
       U2L14 Free Response Wrap Up_markdown_instruction: "Knowing what you know now
         about frequency analysis, would you feel comfortable sending your password
         over the Internet using a substitution cipher?\r\n\r\nWhy or why not?\r\n"
-      U2L14 frequency random_markdown_instruction: "#Break a Caesar cipher!\r\n\r\nThis
+      U2L14 frequency random_markdown_instruction: "# Break a Caesar cipher!\r\n\r\nThis
         tool lets you play with text and do substitution ciphers. It also shows you
         a frequency analysis of the input text. (We’ll look at that more in a later
-        lesson.) You can use this to either encrypt a message or decrypt it.\r\n\r\n#Do
-        this\r\n- Load the \"Sample message (easy)\" from the message dropdown. This
-        will load a message that has been encrypted with a Caesar cipher\r\n\r\n![](https://images.code.org/336a6a68cc34636df21fe5ad9f43992c-image-1443566879847.gif)\r\n\r\n-
+        lesson.) You can use this to either encrypt a message or decrypt it.\r\n\r\n#
+        Do this\r\n- Load the \"Sample message (easy)\" from the message dropdown.
+        This will load a message that has been encrypted with a Caesar cipher\r\n\r\n![](https://images.code.org/336a6a68cc34636df21fe5ad9f43992c-image-1443566879847.gif)\r\n\r\n-
         Using the buttons in the Caesar substitution tab, you can shift the alphabet
         forwards or backwards to try to unscramble the message.\r\n\r\n![](https://images.code.org/1783d62a944fd758cc19c5d0f73ec2c4-image-1443567014825.gif)\r\n\r\nSee
         how long it takes you to crack the cipher! Is this a good method of encrypting
@@ -23428,7 +23475,7 @@ en:
         Do This:\r\n\r\n**Define** a function named `function drawStep()` which makes
         the turtle move forward and left as shown. \r\n\r\n**Note**: at the end the
         turtle should be facing the same direction it started.\r\n\r\n![](https://images.code.org/4fa605353695afa0cd01ec01a1e2c709-image-1441772033658.gif)"
-      U3L03 Define and use turnAround_markdown_instruction: "#Do This:\r\n**Define**
+      U3L03 Define and use turnAround_markdown_instruction: "# Do This:\r\n**Define**
         a function called `turnAround` which turns the turtle around. Once you've
         defined the function **call** it to make sure it works as you expect and then
         move the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)\r\n\r\n**Remember**
@@ -23437,7 +23484,7 @@ en:
         write the code to define the function and *then* add a line to call it.  Here
         is the `moveTwice` example from the video. You should do something similar
         for turnAround:\r\n\r\n![](https://images.code.org/3faf16575757ffae616dffd761085ab5-image-1467818996127.gif)"
-      U3L03 Draw a T using turnAround_markdown_instruction: "#Do This:\r\nGet some
+      U3L03 Draw a T using turnAround_markdown_instruction: "# Do This:\r\nGet some
         more practice **calling** a function by using `turnAround()` along with your
         old friend the `moveForward()` function to create a plus sign that is centered
         at the turtle's first position, as shown below. Even though you just wrote
@@ -23482,7 +23529,7 @@ en:
         Your program will still do the same thing. We are just changing the way it
         is written to demonstrate that you can use functions you've already written
         as building blocks in new functions."
-      U3L03 draw diamond_markdown_instruction: "#Do This:\r\nWe're finally ready
+      U3L03 draw diamond_markdown_instruction: "# Do This:\r\nWe're finally ready
         to make our diamond! **Define** a function named `function drawDiamond()`
         that **calls** `drawSide()` multiple times in order to complete the drawing.
         Your final solution should be triggered by **a single call** to `drawDiamond()`.
@@ -23493,7 +23540,7 @@ en:
         drawStep()\r\n* right()\r\n\r\nThese 4 functions work sort of like a hierarchy
         of top-down design.  At the top is `drawDiamond()` which makes calls to `drawSide()`,
         which makes calls to `drawStep()` and `right()`.\r\n\r\n\r\n"
-      U3L04 - 3 by 3 with functions_markdown_instruction: "#Do This:\r\n\r\nWe're
+      U3L04 - 3 by 3 with functions_markdown_instruction: "# Do This:\r\n\r\nWe're
         going to revisit a familiar problem, **drawing the 3x3 square as efficiently
         as possible**. The only difference is that this time you are armed with the
         ability to create **layers of functions** to help you design more elegant
@@ -23504,11 +23551,11 @@ en:
       U3L04 - six by six lines_markdown_instruction: "Code a solution to the highway
         lines problem.  Your solution should use functions to reduce clutter and improve
         readability of your solution.\r\n\r\n![](https://images.code.org/23a714face9925e1eb8dfe3c133eb22d-image-1441815998620.png)"
-      U3L04 - snowflake_markdown_instruction: "#Do This:\r\n\r\nYou should have already
-        worked with a partner to break down the design below into its multiple layers
-        of functions. Now you'll have an opportunity to program your solution. Here
-        are a few things to keep in mind:\r\n\r\n* Identify useful patterns that can
-        be reused and give them **their own functions**.\r\n* Remember: The functions
+      U3L04 - snowflake_markdown_instruction: "# Do This:\r\n\r\nYou should have
+        already worked with a partner to break down the design below into its multiple
+        layers of functions. Now you'll have an opportunity to program your solution.
+        Here are a few things to keep in mind:\r\n\r\n* Identify useful patterns that
+        can be reused and give them **their own functions**.\r\n* Remember: The functions
         you design **can call one another**. This is how you create layers of abstraction.\r\n*
         Functions should be given names that are **descriptive and meaningful**.\r\n*
         Your program should be kicked off with a single call to a function that makes
@@ -23969,6 +24016,29 @@ en:
         functions that should be used to create your digital scene. \r\n\r\n# Do This:\r\nUse
         the space here to design your functions. Once you're done you can **share**
         this project with your groupmates."
+      U3L08 - introUnderTheSea - clone for recovery_markdown_instruction: "# Recover
+        your Under the Sea project code!\r\n\r\nBelow you should see your code for
+        the Under the Sea project from CSP Unit 3 - Lesson 8 in the state it was in
+        around 3pm ET, Monday Oct. 30, 2017.\r\n\r\n**Students:** To get the code
+        below back into Unit 3 - Lesson 8...\r\n* Select all your code from the workspace
+        below (Highlight with mouse, or ctrl+A)\r\n* Copy it (Edit -> Copy, or ctrl+C)\r\n*
+        Paste it (Edit -> Paste, or ctrl+V) into the project in Unit 3\r\n    * Here
+        is a link to the project that will open in a new window: <a href=\"https://studio.code.org/s/csp3/stage/8/puzzle/17\"
+        target=_blank>https://studio.code.org/s/csp3/stage/8/puzzle/17</a>\r\n\r\n**Teachers:**
+        You can view your students' work here using the blue teacher tray.  Alternatively,
+        you can ask students to use the process above.\r\n\r\n**Details:**\r\n* The
+        Under the Sea code is a \"project\" that sat behind eight levels (\"bubbles\")
+        10-17 in Unit 3, Lesson 8.  \r\n* On Oct. 30, 2017 we updated that project
+        in a way that caused code to appear missing for those who had done work prior
+        to the change.\r\n* Your code still exists! It's just associated with the
+        old project, which is what we have provided below.\r\n* You can copy and paste
+        your code from below into any of the current Unit 3, Lesson 8, levels 10-17
+        and it will work for all. (In other words, the code for level 17 is actually
+        referring to the same project as levels 10-17)\r\n\r\nWe're sorry about this
+        mistake and for the inconvenience and disappointment it may have caused. Hopefully,
+        you were able to recover the code you worked so hard on.\r\n\r\nIf you have
+        further questions please submit a bug report (option in the top-right menu)
+        or send email to support@code.org\r\n\r\nThanks,\r\n\r\nCSP Team"
       U3L08 - introUnderTheSea with comments_markdown_instruction: "# Under the Sea!\r\n\r\nIn
         the next several challenges you will be working to improve **one program**
         that draws an underwater scene.  Each time you  finish a puzzle and move on
@@ -23999,8 +24069,7 @@ en:
         one -- those functions draw based on where the turtle is just before the call.\r\n*
         Test out your code. If something doesn’t work like you expect, consider whether
         you can add anything to the functions’ definitions to make them better.\r\n*
-        **Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\nIn
-        workspace – prepopulate with what is already there\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
+        **Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
         PM.png)"
       U3L08 - multiParamFish_markdown_instruction: "# Multiple Parameters\r\n\r\nLet's
         make our drawings even more interesting by adding some variety to the color.\r\n\r\n**Add**
@@ -25959,7 +26028,7 @@ en:
         you will not be able to earn full credit on the digital assistant project
         without a comprehensive record of your keywords."
       U3L24 Chatbot Nested Conditionals_markdown_instruction: "Here's your digital
-        assistant again! Time to make it a little smarter.\r\n\r\n###Instructions\r\n\r\n*
+        assistant again! Time to make it a little smarter.\r\n\r\n### Instructions\r\n\r\n*
         Add the `contains` function to your digital assistant\r\n* Add a nested conditional
         to your digital assistant so it can respond to at least two subtopics\r\n*
         Your nested conditional should include at least 3 `else if` statements.\r\n\r\n\r\n<details>\r\n<summary>**Example**</summary>\r\n<pre><code>if
@@ -27845,7 +27914,7 @@ en:
         and `randButtonID` and\r\n* Displays a message to console that they got right
         or wrong\r\n\r\nInsert something like this *between* your existing console.log
         statement and the call to setBoard()\r\n\r\n\t\tif( buttonId == randButtonID
-        ) {\r\n        \tconsole.log(\"You got it right!\")\r\n        } else {\r\n        \tconsole.log(\"WRONG\");\r\n        }\r\n\r\n**TEST
+        ) {\r\n        \tconsole.log(\"You got it right!\");\r\n        } else {\r\n        \tconsole.log(\"WRONG\");\r\n        }\r\n\r\n**TEST
         IT: Verify that the if-statement is giving correct results**\r\n<img src=\"https://images.code.org/8fd0d14a4c32a6e36299251a2edb56bb-image-1481148748359.png\"
         style=\"float: right\">\r\n\r\n* You should be able to click on buttons and
         see messages that verify your if-statement is working\r\n* Be sure to click
@@ -27855,7 +27924,7 @@ en:
         right.\r\n\r\n**TIP:** It might be useful to temporarily remove or comment
         out the call to `setBoard()` so the board doesn't change every time when
         you click.  This would let you verify that every button works right for a
-        single board setup.  Then add it back in once you're done.\r\n\r\n"
+        single board setup.  Then add it back in once you're done.\r\n"
       U5 ColorSleuth implement end game_markdown_instruction: "# Challenge - Pick
         a way for the game to end and implement it\r\n\r\nYour challenge now is to
         add some code completely on your own.  Use what you've learned so far, and
@@ -29344,7 +29413,7 @@ en:
         frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts
         below:__ \n\n- What types of information does Siri respond to in the video?\n-
         What do you think Siri is paying attention to in order to create these answers?\n"
-      allthethings_moviebot_markdown_instruction: "#Please sign in to test applab
+      allthethings_moviebot_markdown_instruction: "# Please sign in to test applab
         levels (By design, applab levels only work if signed in. Normally, we make
         people sign in, but this is only enforceable for a whole script and would
         be annoying to do for the allthethings script).\n# Introduction to the Digital
@@ -29647,12 +29716,12 @@ en:
         an `angry` or `normal` mood.\r\n* Give the wizard his own set of fortunes.\r\n*
         Make each actor change mood randomly.\r\n\r\nCheck the hints if you need help
         with these challenges!"
-      courseA_artist_loops10_markdown_instruction: "##Time to head back to land.
+      courseA_artist_loops10_markdown_instruction: "## Time to head back to land.
         Help me put down stones so I don't fall in!\r\n\r\n![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)"
-      courseA_artist_loops11_markdown_instruction: "##Help me build steps to watch
+      courseA_artist_loops11_markdown_instruction: "## Help me build steps to watch
         the ship sail away.\r\n\r\n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)"
       courseA_artist_loops12_markdown_instruction: "The artist saw something funny
-        in the distance.  Draw what you think he saw.\r\n\r\n___\r\n###Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+        in the distance.  Draw what you think he saw.\r\n\r\n___\r\n### Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseA_artist_loops2_markdown_instruction: "Help the artist draw this line
         two times forward.\r\n\r\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
       courseA_artist_loops3_markdown_instruction: "Our artist is trying to draw a
@@ -29660,14 +29729,15 @@ en:
       courseA_artist_loops4_markdown_instruction: "Now, use a <xml><block type=\"controls_repeat_simplified_dropdown\"><title
         name=\"TIMES\" config=\"2-6\">5</title></block></xml> loop to draw this line
         five times!\r\n\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
-      courseA_artist_loops5_markdown_instruction: "##Draw a line seven steps long.
+      courseA_artist_loops5_markdown_instruction: "## Draw a line seven steps long.
         This will become our horizon.\r\n\r\n![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
-      courseA_artist_loops6_markdown_instruction: "##Let's put a nice hill in the
+      courseA_artist_loops6_markdown_instruction: "## Let's put a nice hill in the
         back.\r\n\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
-      courseA_artist_loops7_markdown_instruction: "##Use the <xml><block type=\"controls_repeat_simplified_dropdown\"><title
+      courseA_artist_loops7_markdown_instruction: "## Use the <xml><block type=\"controls_repeat_simplified_dropdown\"><title
         name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop to add waves
         to the water.\r\n\r\n![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
-      courseA_artist_loops8_markdown_instruction: "##We need a ladder up to the boat.\r\n\r\n![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
+      courseA_artist_loops8_markdown_instruction: "## We need a ladder up to the
+        boat.\r\n\r\n![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
       courseA_artist_loops9_markdown_instruction: "##**Challenge:** The stairs down
         to the dock are broken.  Help me fix them.\r\n\r\n![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
       courseA_artist_loops_challenge1_markdown_instruction: "You can use a loop to
@@ -29759,7 +29829,8 @@ en:
         help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)"
       courseB_artist_loops10_markdown_instruction: "Use what you have learned to
-        draw a picture of what you think the artist saw when he got home.\r\n\r\n___\r\n###Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+        draw a picture of what you think the artist saw when he got home.\r\n\r\n___\r\n###
+        Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseB_artist_loops6_markdown_instruction: "Behind the bushes there is a beautiful
         vine full of flowers.  Can you climb the vine and see where it goes?"
       courseB_artist_loops7_markdown_instruction: "**Challenge:**  It's a hidden
@@ -30267,7 +30338,7 @@ en:
         side of the square has a length of 200 pixels, and you will need to turn 90
         degrees to make each angle."
       courseD_artist_ramp12_markdown_instruction: "Use what you've learned to draw
-        this triangle inside of a square.\r\n___\r\n#####The sides are each 200 pixels
+        this triangle inside of a square.\r\n___\r\n##### The sides are each 200 pixels
         long. You will need to turn 90 degrees to make the square and 120 degrees
         to make the triangle."
       courseD_bee_conditionals1_markdown_instruction: "*\"This cloud is blocking
@@ -30754,19 +30825,19 @@ en:
         to make the triangle."
       courseE_artist_ramp8_markdown_instruction: "Great!  Now let's use that `repeat`
         loop to make a square using Artist!  The blocks for artist are a little different
-        than other puzzles, but the idea is the same.\r\n___\r\n#####Each side of
+        than other puzzles, but the idea is the same.\r\n___\r\n##### Each side of
         the square has a length of 200 pixels, and you will need to turn 90 degrees
         to make each angle."
       courseE_artist_ramp8_2_markdown_instruction: "Great!  Now let's use that `repeat`
         loop to make a square using Artist!  The blocks for artist are a little different
-        than other puzzles, but the idea is the same.\r\n___\r\n#####Each side of
+        than other puzzles, but the idea is the same.\r\n___\r\n##### Each side of
         the square has a length of 200 pixels, and you will need to turn 90 degrees
         to make each angle."
       courseE_artist_ramp9_markdown_instruction: "Use what you've learned to draw
-        this triangle.\r\n___\r\n#####The sides are each 100 pixels long. You will
+        this triangle.\r\n___\r\n##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner."
       courseE_artist_ramp9_2_markdown_instruction: "Use what you've learned to draw
-        this triangle.\r\n___\r\n#####The sides are each 100 pixels long. You will
+        this triangle.\r\n___\r\n##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner."
       courseE_bee_concept1_markdown_instruction: "*\"Can you BEE-lieve all of these
         flowers?\"*\r\n\r\nCollect all of the nectar from each flower. "
@@ -30825,10 +30896,10 @@ en:
         function to use and which one to delete, then solve this puzzle!"
       courseE_farmer_functions1a_markdown_instruction: "*\"Oooh, veggies are cropping
         up everywhere!\"*\r\n\r\nNow help the farmer pick all of the corn on the way
-        to the pumpkin at the end.\r\n___\r\n#####Note: Every square on the path that
-        leads to the pumpkin will either have *one* corn nothing.  You will need to
-        use an `if` statement to check whether there is corn before you try to pick
-        it!"
+        to the pumpkin at the end.\r\n___\r\n##### Note: Every square on the path
+        that leads to the pumpkin will either have *one* corn nothing.  You will need
+        to use an `if` statement to check whether there is corn before you try to
+        pick it!"
       courseE_farmer_functions2a_markdown_instruction: "*\"I feel so functional!\"*\r\n\r\nWe're
         going to check lots of squares for crops in the next few puzzles.  Let's
         move everything into a function to make it easier."
@@ -30836,15 +30907,15 @@ en:
         going to check lots of squares for crops in the next few puzzles.  Let's
         move everything into a function to make it easier."
       courseE_farmer_functions2b_markdown_instruction: "Help the farmer pick the
-        corn and pumpkins.\r\n___\r\n#####Each sprout will either grow *one* corn
+        corn and pumpkins.\r\n___\r\n##### Each sprout will either grow *one* corn
         or nothing."
       courseE_farmer_functions2ba_markdown_instruction: "*\"I feel so functional!\"*\r\n\r\nDid
         you notice that there was repeated code in the last puzzle?  It doesn't work
         to put it all inside of a loop, but we **can** use functions.  \r\n\r\nFor
         this puzzle, we have moved the repeated code into a function called `corn
         and pumpkin`. Now, all you need to do is put the small `corn and pumpkin`
-        **function call block** into the code where you need it.\r\n\r\n___\r\n#####Each
-        sprout will either grow *one* corn or nothing."
+        **function call block** into the code where you need it.\r\n\r\n___\r\n#####
+        Each sprout will either grow *one* corn or nothing."
       courseE_farmer_functions3b_markdown_instruction: "*\"Oooh, veggies are cropping
         up everywhere!\"*\r\n\r\nNow help the farmer pick the corn, lettuce, **and**
         pumpkin."
@@ -30862,8 +30933,8 @@ en:
       courseE_farmer_functions6b_markdown_instruction: "Pick all of the produce."
       courseE_farmer_functions6c_markdown_instruction: "*\"Lettuce pick all of the
         produce!\"*\r\n\r\nNow the sprouts can be either corn **or** lettuce.  What
-        do you need to add to this program to check each sprout before you pick?\r\n___\r\n#####Note:
-        Each sprout will turn into either **one** corn or **one** lettuce."
+        do you need to add to this program to check each sprout before you pick?\r\n___\r\n#####
+        Note: Each sprout will turn into either **one** corn or **one** lettuce."
       courseE_farmer_functions7b_markdown_instruction: "*\"This harvest is a-MAZE-ing!\"*\r\n\r\nHelp
         the farmer find her way down this confusing path and to the pumpkin by turning
         **left** at the corn and **right** at the lettuce.  \r\n\r\n*(Don't forget
@@ -31117,7 +31188,7 @@ en:
         but the idea is the same.\r\n___\r\nEach side of the square has a length of
         200 pixels, and you will need to turn 90 degrees to make each angle."
       courseF_artist_ramp9_markdown_instruction: "Use what you've learned to draw
-        this triangle.\r\n___\r\n#####The sides are each 100 pixels long. You will
+        this triangle.\r\n___\r\n##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner."
       courseF_artist_variables10_markdown_instruction: "Here's your code from the
         last puzzle.  Try editing the variable in other ways.  \r\n-  What happens
@@ -32061,6 +32132,8 @@ en:
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r\n \r\n\r\n"
+      csp-post-survey-2017-q36-e_markdown_instruction: "I worry because of another
+        reason:"
       csp-pre-survey-2017-q36-e_markdown_instruction: "I worry because of another
         reason:"
       csp-pre-survey-2017-q38_markdown_instruction: "If yes, what computer science
