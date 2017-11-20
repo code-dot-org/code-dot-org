@@ -96,14 +96,14 @@ describe('SettingsCog', () => {
       });
 
       it('calls showAssetManager when clicked', () => {
-        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first().children().first();
+        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
         expect(assets.showAssetManager).not.to.have.been.called;
         firstMenuItem.simulate('click');
         expect(assets.showAssetManager).to.have.been.calledOnce;
       });
 
       it('closes the menu when clicked', () => {
-        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first().children().first();
+        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
         firstMenuItem.simulate('click');
         expect(portal).to.have.prop('isOpened', false);
       });
@@ -124,16 +124,16 @@ describe('SettingsCog', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(false);
         const wrapper = mount(
-          <ToggleMaker onClick={() => {}}/>
+          <ToggleMaker/>
         );
         expect(wrapper.text()).to.include(msg.enableMaker());
       });
 
-      it('renders with disable maker option if maker is available and enabled', () => {
+      it('renders with enable maker option if maker is available and disabled', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(true);
         const wrapper = mount(
-          <ToggleMaker onClick={() => {}}/>
+          <ToggleMaker/>
         );
         expect(wrapper.text()).to.include(msg.disableMaker());
       });
@@ -141,7 +141,7 @@ describe('SettingsCog', () => {
       it('hides maker toggle if maker is not available', () => {
         maker.isAvailable.returns(false);
         const wrapper = mount(
-          <ToggleMaker onClick={() => {}}/>
+          <ToggleMaker/>
         );
         expect(wrapper).to.be.blank;
       });
@@ -156,7 +156,7 @@ describe('SettingsCog', () => {
         expect(wrapper.text()).to.equal(msg.enableMaker());
 
         expect(handleToggleMaker).not.to.have.been.called;
-        wrapper.children().first().simulate('click');
+        wrapper.simulate('click');
         expect(handleToggleMaker).to.have.been.calledOnce;
       });
     });
