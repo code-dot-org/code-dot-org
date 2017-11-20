@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Dërgo [një letër](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) për të ftuar kryetarin e Bashkisë, deputetët, qeveritarët, ose persona me ndikim në biznes për të folur.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Fto media/shtyp, p.sh stacioni vendor të lajmeve, gazetën, blogerët për edukim/teknologji. Shiko [ paketën tonë njoftuese](%= resolve_url('/promote/press-kit') %) për ndihmë.
 
 ## 2. During your event
