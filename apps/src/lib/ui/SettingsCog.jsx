@@ -125,6 +125,7 @@ class SettingsCog extends Component {
           targetPoint={this.targetPoint}
           isOpen={this.state.open}
           beforeClose={this.beforeClose}
+          showTail={true}
         >
           <ManageAssets onClick={this.manageAssets}/>
           <ToggleMaker onClick={this.toggleMakerToolkit}/>
