@@ -44,6 +44,7 @@ export default storybook => {
                 courses={[]}
                 isRtl={false}
                 joinedSections={[]}
+                isEnglish={true}
               />
             </Provider>
           );
@@ -64,6 +65,7 @@ export default storybook => {
                 courses={courses}
                 isRtl={false}
                 joinedSections={[]}
+                isEnglish={true}
               />
             </Provider>
           );
@@ -83,6 +85,7 @@ export default storybook => {
                 courses={[]}
                 isRtl={false}
                 joinedSections={[]}
+                isEnglish={true}
               />
             </Provider>
           );
@@ -103,6 +106,7 @@ export default storybook => {
                 topCourse={topCourse}
                 isRtl={false}
                 joinedSections={[]}
+                isEnglish={true}
               />
             </Provider>
           );
@@ -123,6 +127,7 @@ export default storybook => {
                 topCourse={topCourse}
                 isRtl={false}
                 joinedSections={joinedSections}
+                isEnglish={true}
               />
             </Provider>
           );
