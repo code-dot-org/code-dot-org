@@ -58,6 +58,7 @@ class StartNewProject extends React.Component {
 
         {canViewFullList &&
           <Button
+            id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
             color={Button.ButtonColor.gray}
             icon={showFullList ? "caret-up" : "caret-down"}

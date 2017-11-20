@@ -684,4 +684,8 @@ FactoryGirl.define do
     course 'csp'
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
   end
+
+  factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
+    form_data {{}}
+  end
 end

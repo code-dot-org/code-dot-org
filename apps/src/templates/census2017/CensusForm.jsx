@@ -35,7 +35,8 @@ class CensusForm extends Component {
       otherCS: false,
       followUpFrequency: '',
       followUpMore: '',
-      acceptedPledge: false
+      acceptedPledge: false,
+      share: ''
     },
     errors: {
       invalidEmail: false
@@ -212,16 +213,28 @@ class CensusForm extends Component {
         hoc: this.validateNotBlank(this.state.submission.hoc),
         afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
         tenHours: this.validateNotBlank(this.state.submission.tenHours),
-        twentyHours: this.validateNotBlank(this.state.submission.twentyHours)
+        twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
+        share: this.validateNotBlank(this.state.submission.share)
       }
     }, this.censusFormSubmit);
   }
 
   censusFormSubmit() {
     const { errors } = this.state;
-    if (!errors.email && !errors.topics && !errors.frequency && !errors.school && !errors.nces && !errors.role && !errors.hoc && !errors.afterSchool && !errors.tenHours && !errors.twentyHours && !errors.country) {
+    if (!errors.email &&
+        !errors.topics &&
+        !errors.frequency &&
+        !errors.school &&
+        !errors.nces &&
+        !errors.role &&
+        !errors.hoc &&
+        !errors.afterSchool &&
+        !errors.tenHours &&
+        !errors.twentyHours &&
+        !errors.country &&
+        !errors.share) {
       $.ajax({
-        url: "/dashboardapi/v1/census/CensusYourSchool2017v4",
+        url: "/dashboardapi/v1/census/CensusYourSchool2017v5",
         type: "post",
         dataType: "json",
         data: $('#census-form').serialize()
@@ -248,7 +261,18 @@ class CensusForm extends Component {
 
   render() {
     const { showFollowUp, showPledge, submission, errors } = this.state;
-    const showErrorMsg = !!(errors.email || errors.topics || errors.frequency || errors.school || errors.role || errors.hoc || errors.afterSchool || errors.tenHours || errors.twentyHours || errors.country || errors.nces);
+    const showErrorMsg = !!(errors.email ||
+                            errors.topics ||
+                            errors.frequency ||
+                            errors.school ||
+                            errors.role ||
+                            errors.hoc ||
+                            errors.afterSchool ||
+                            errors.tenHours ||
+                            errors.twentyHours ||
+                            errors.country ||
+                            errors.nces ||
+                            errors.share);
     const US = submission.country === "United States";
 
     return (
@@ -528,7 +552,7 @@ class CensusForm extends Component {
           <div>
             <label>
               <div style={styles.question}>
-                {i18n.yourEmail()}
+                {i18n.censusEmail()}
                 <span style={styles.asterisk}> *</span>
               </div>
               {errors.email && (
@@ -549,6 +573,27 @@ class CensusForm extends Component {
                 placeholder={i18n.yourEmailPlaceholder()}
                 style={styles.input}
               />
+            </label>
+            <label>
+              {errors.share && (
+                 <div style={styles.errors}>
+                   {i18n.censusRequiredShare()}
+                 </div>
+              )}
+              <span style={styles.share}>
+                {i18n.censusShareWithRegionalPartners()}
+              </span>
+              <select
+                name="share_with_regional_partners"
+                value={this.state.submission.share}
+                onChange={this.handleChange.bind(this, 'share')}
+                style={styles.dropdown}
+              >
+                <option value="" disabled>{i18n.yesNo()}</option>
+                <option value="true">{i18n.yes()}</option>
+                <option value="false">{i18n.no()}</option>
+              </select>
+              <span style={styles.asterisk}> *</span>
             </label>
           </div>
           <div>

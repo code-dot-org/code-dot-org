@@ -265,34 +265,58 @@ function importProject() {
 
     const legacyShareRegex = /^\/c\/([^\/]*)/;
     const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
+    const projectShareRegex = /^\/projects\/minecraft_hero\/([^\/]*)/;
 
-    let levelSourcePath;
+    let levelSourcePath, channelId;
 
-    // Try a couple different kinds of share links
+    // Try a couple different kinds of share links, resolving to either a level
+    // source or channel
     if (shareUrl.pathname.match(legacyShareRegex)) {
       const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
       levelSourcePath = `/c/${levelSourceId}.json`;
     } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
       const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
       levelSourcePath = `/r/${levelSourceId}.json`;
+    } else if (shareUrl.pathname.match(projectShareRegex)) {
+      channelId = shareUrl.pathname.match(projectShareRegex)[1];
     }
 
+    const onFinish = function (source) {
+      // Source data will likely be from a different project type than this one,
+      // so convert it
+
+      const convertedSource = convertBlocksXml(source);
+      dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
+        const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
+        location.href = pathName;
+      });
+    };
+
+    const onError = function () {
+      Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
+    };
+
+    // Depending on what kind of source the share link resolved to (if it even
+    // did), retrieve the source and process it
     if (levelSourcePath) {
+      // level sources can be grabbed with a simple ajax request
       $.ajax({
         url: levelSourcePath,
         type: "get",
         dataType: "json"
       }).done(function (data) {
-        // Source data will likely be from a different project type than this one,
-        // so convert it
-
-        const convertedSource = convertBlocksXml(data.data);
-        dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
-          const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
-          location.href = pathName;
-        });
+        onFinish(data.data);
       }).error(function () {
-        Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
+        onError();
+      });
+    } else if (channelId) {
+      // channel-backed sources need to go through the project API
+      dashboard.project.getSourceForChannel(channelId, function (source) {
+        if (source) {
+          onFinish(source);
+        } else {
+          onError();
+        }
       });
     } else {
         Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));

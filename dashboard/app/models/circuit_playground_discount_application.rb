@@ -22,5 +22,52 @@
 
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
   belongs_to :user
-  has_one :circuit_playground_discount_code
+  belongs_to :circuit_playground_discount_code
+
+  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
+  def self.user_pd_eligible?(user)
+    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
+
+    return true if user.cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
+    return true if user.courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
+    return false
+  end
+
+  # Looks to see if any of the users associated with this studio_person_id are eligibile
+  # for our circuit playground discount
+  def self.studio_person_pd_eligible?(user)
+    User.where(studio_person_id: user.studio_person_id).any? {|associated_user| user_pd_eligible?(associated_user)}
+  end
+
+  # @return {boolean} true if we have at least one section that meets our eligibility
+  #   requirements for student progress
+  def self.student_progress_eligible?(user)
+    user.sections.any?(&:has_sufficient_discount_code_progress?)
+  end
+
+  def self.application_status(user)
+    application = CircuitPlaygroundDiscountApplication.find_by_user_id(user.id)
+
+    status = {
+      # This will be a number from 1-5 (representing which radio button) was selected,
+      # or nil if no selection yet
+      unit_6_intention: application.try(:unit_6_intention),
+      has_confirmed_school: application.try(:has_confirmed_school) || false,
+      # true/false once has_submitted_school is true
+      # false implies partial discount
+      gets_full_discount: application.try(:full_discount),
+      discount_code: application.try(:circuit_playground_discount_code),
+    }
+
+    if application
+      # We won't let you create an application without meeting our eligibility requirements
+      # so no need to check them again if we find an existing application
+      status.merge({is_pd_eligible: true, is_progress_eligible: true})
+    else
+      status.merge(
+        is_pd_eligible: studio_person_pd_eligible?(user),
+        is_progress_eligible: student_progress_eligible?(user)
+      )
+    end
+  end
 end

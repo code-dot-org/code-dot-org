@@ -83,14 +83,7 @@
       "wool_red",
       "wool_yellow"
     ],
-    "level_verification_timeout": "0",
-    "markdown_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
-    "special_level_type": "freeplay",
-    "instructions": "**Freeplay:**  Time to explore on your own!",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try having the Agent build some minecart tracks so you can explore the world!\",\"hint_id\":\"MC_HOC_2017_13_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/648eff05e8f153fb2ad23824320070b4/MC_HOC_2017_FP20x20.mp3\"}]",
-    "top_level_procedure_autopopulate": "true",
     "video_key": "mc_2017_congratulations",
-    "songs": "[\"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\"]",
     "contained_level_names": null
   },
   "published": true,

@@ -8,8 +8,11 @@ import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import projects, { setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
 import { MAX_PROJECTS_PER_CATEGORY } from '@cdo/apps/templates/projects/projectConstants';
+import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
+  const isRtl = isRtlFromDOM();
   registerReducers({projects});
   $.ajax({
     method: 'GET',
@@ -23,7 +26,12 @@ $(document).ready(() => {
         <HeaderBanner
           headingText={i18n.projects()}
           subHeadingText={i18n.projectsSubHeading()}
-          short={true}
+          short
+        />
+        <StartNewProject
+          isRtl={isRtl}
+          canViewFullList
+          canViewAdvancedTools
         />
         <Provider store={getStore()}>
           <PublicGallery />

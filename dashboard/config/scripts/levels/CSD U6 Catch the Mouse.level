@@ -192,7 +192,7 @@
     "markdown_instructions": "Embedded Prediction",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "var score = 0;\r\nled.off();\r\n\r\nonEvent(\"mouse\", \"click\", function(event) {\r\n  setProperty(\"mouse\",\"x\",randomNumber(0,200));\r\n  setProperty(\"mouse\",\"y\",randomNumber(50,350));\r\n  score = score + 1;\r\n  if (score > 30) {\r\n    setProperty(\"message\", \"text\", \"You win!!!!!!!!!!!\")\r\n    led.on();\r\n  } else if (score > 20){\r\n    led.blink(200);\r\n  }\r\n});",
+    "start_blocks": "var score = 0;\r\nled.off();\r\n\r\nonEvent(\"mouse\", \"click\", function(event) {\r\n  setProperty(\"mouse\",\"x\",randomNumber(0,200));\r\n  setProperty(\"mouse\",\"y\",randomNumber(50,350));\r\n  score = score + 1;\r\n  if (score > 10) {\r\n    setProperty(\"message\", \"text\", \"You win!!!!!!!!!!!\")\r\n    led.on();\r\n  } else if (score > 5){\r\n    led.blink(200);\r\n  }\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -226,11 +226,12 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-24 21:15:19 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:16:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:19:36 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:20:37 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:21:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 21:15:19 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:16:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:19:36 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:20:37 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:21:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:34:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
