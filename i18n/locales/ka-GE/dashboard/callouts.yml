@@ -34,7 +34,7 @@ ka:
       AppLab Intro 2 - add more buttons_callout: [ ]
       AppLab Intro 2 - add onEvent_callout:
         onEventFirstTime: დააწკაპეთ და გადმოათრიეთ "მოვლენაზე" ბლოკი მარჯვნივ განთავსებულ სამუშაო სივრცეში
-        setScreenFirstTime: დააწეკით და ჩააგდეთ "მოქმედებაზე" ბლოკის შიგნით სივრცეში
+        setScreenFirstTime: დააკლიკეთ და გადმოიტანეთ "onEvent" ბლოკის შიგნით სივრცეში
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: Click here when you're done!
       AppLab_test02_callout: [ ]
@@ -474,7 +474,7 @@ ka:
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but Steve and Alex can''t!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
         MSM Defining Vars 2_callout2: Define the triangle here
@@ -798,10 +798,13 @@ ka:
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
+        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: ამ ციკლის გამოყენებით, სცადეთ წინ მოძრაობის ბლოკის გამეორება.
+        courseD_bee_conditionals_challenge3_1: ამ ციკლის გამოყენებით სცადეთ, წინ მოძრაობის ბლოკის გამეორება.
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ ფუტკარი უკანა მიმართულებით.
       courseD_bee_debugging_challenge2_callout:
@@ -938,7 +941,7 @@ ka:
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ შემდეგ დონეზე.
       courseF_IceAge_1_callout:
-        playlab_drag_say_a: გადმოათრიეთ აქ `მსახიობო 1 თქვი` ბლოკი და ჩაბეჭდეთ "გამარჯობა!"
+        playlab_drag_say_a: გადმოათრიეთ აქ `მსახიობი 1 ამბობს` ბლოკი და ჩაწერეთ "გამარჯობა!"
       courseF_IceAge_10_callout: [ ]
       courseF_IceAge_11_callout: [ ]
       courseF_IceAge_2_callout:

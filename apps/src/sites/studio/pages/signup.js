@@ -1,16 +1,36 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
 import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
+
+const SCHOOL_TYPES_HAVING_NAMES = [
+  'charter',
+  'private',
+  'public',
+  'afterschool',
+  'organization',
+];
 
 window.SignupManager = function (options) {
   this.options = options;
   var self = this;
+
+  let schoolData = {
+    country: options.usIP ? 'United States' : '',
+    nces: '',
+    schoolName: '',
+    schoolCity: '',
+    schoolState: '',
+    schoolZip: '',
+    schoolType: '',
+    showErrorMsg: false,
+  };
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
   if (self.options.isTeacher === "true") {
@@ -21,9 +41,6 @@ window.SignupManager = function (options) {
   }
 
   function formSuccess(success) {
-    if (getAutocompleteFlag() && isTeacherSelected()) {
-      logEvent('teacher-submit-success');
-    }
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
@@ -36,10 +53,6 @@ window.SignupManager = function (options) {
   }
 
   function formError(err) {
-    if (getAutocompleteFlag() && isTeacherSelected()) {
-      logEvent('teacher-submit-error');
-    }
-
     // re-enable "Sign up" button upon error
     $('#signup-button').prop('disabled', false);
 
@@ -117,39 +130,7 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
   }
 
-  const registrationSchoolStyleGroup = (Math.random() > 0.5) ? "control" : "autocomplete";
-
-  function logEvent(event) {
-    firehoseClient.putRecord(
-      'analysis-events',
-      {
-        study: 'teacher-registration-school-style',
-        study_group: registrationSchoolStyleGroup,
-        event: event
-      }
-    );
-  }
-
-  let schoolData = {
-    name: '',
-    country: 'United States',
-    nces: '',
-    schoolName: '',
-    schoolCity: '',
-    schoolState: '',
-    schoolZip: '',
-    schoolType: '',
-  };
-
-  let schoolDataErrors = {
-    name: false,
-    country: false,
-    nces: false,
-    schoolType: false,
-    school: false
-  };
-
-  function onCountryChange(field, event) {
+  function onCountryChange(_, event) {
     schoolData.country = event ? event.value : '';
     updateAutocompleteSchoolFields(schoolData);
   }
@@ -157,7 +138,6 @@ window.SignupManager = function (options) {
   function getCountryCodeForCountry(countryName) {
     return COUNTRIES.find(pair => pair.value === countryName).label;
   }
-  window.getCountryCodeForCountry = getCountryCodeForCountry;
 
   function onSchoolTypeChange(event) {
     schoolData.schoolType = event ? event.target.value : '';
@@ -180,21 +160,21 @@ window.SignupManager = function (options) {
   }
 
   function updateAutocompleteSchoolFields(data) {
-    const schoolTypesToShowDropdown = ['charter', 'private', 'public'];
     const isUS = data.country === 'United States';
     ReactDOM.render(
       <div>
-        <h5 style={{fontWeight: "bold"}}>{i18n.schoolInformationHeader()}</h5>
+        <h5 style={{fontWeight: "bold"}}>
+          {i18n.schoolInformationOptionalHeader()}
+        </h5>
         <hr/>
         <CountryAutocompleteDropdown
           onChange={onCountryChange}
           value={data.country}
-          required={true}
-          showErrorMsg={schoolDataErrors.country}
+          showErrorMsg={false}
           singleLineLayout
         />
         <div className="itemblock" style={{minHeight:42}}>
-          <div className="school-info-labelblock">School Type</div>
+          <div className="school-info-labelblock">{i18n.signupFormSchoolType()}</div>
           <select
             className="form-control fieldblock"
             id="school-type-auto"
@@ -213,57 +193,27 @@ window.SignupManager = function (options) {
             <option value="other">Other</option>
           </select>
         </div>
-        {isUS && schoolTypesToShowDropdown.includes(data.schoolType) &&
+        {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType) &&
           <SchoolAutocompleteDropdownWithLabel
             setField={onSchoolChange}
             value={data.nces}
-            showErrorMsg={schoolDataErrors.nces}
+            showErrorMsg={false}
             singleLineLayout
+            showRequiredIndicator={false}
           />
         }
-        {isUS && data.nces === '-1' &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState={data.schoolState}
-            schoolZip={data.schoolZip}
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-          />
-        }
-        {isUS && !schoolTypesToShowDropdown.includes(data.schoolType) && data.schoolType !== '' &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState={data.schoolState}
-            schoolZip={data.schoolZip}
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-          />
-        }
-        {!isUS &&
-          <SchoolNotFound
-            onChange={onSchoolNotFoundChange}
-            schoolName={data.schoolName}
-            schoolType="omitted"
-            schoolCity={data.schoolCity}
-            schoolState="omitted"
-            schoolZip="omitted"
-            showErrorMsg={schoolDataErrors.school}
-            singleLineLayout
-          />
-        }
+        <SignupSchoolNotFound
+          isUS={isUS}
+          data={data}
+          schoolDataErrors={{}}
+          onSchoolNotFoundChange={onSchoolNotFoundChange}
+        />
       </div>
       ,
       $("#schooldropdown-block")[0]
     );
   }
 
-  let loggedTeacherSelected = false; // only make this log call once
   function showTeacher() {
     // Show correct form elements.
     $("#age-block").hide();
@@ -279,22 +229,7 @@ window.SignupManager = function (options) {
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
 
-    if (getAutocompleteFlag() && !loggedTeacherSelected) {
-      logEvent('teacher-selected');
-      loggedTeacherSelected = true;
-    }
-
-    if (shouldUseAutocompleteDropdown()) {
-      updateAutocompleteSchoolFields(schoolData);
-    }
-  }
-
-  function getAutocompleteFlag() {
-    return window.location.href.lastIndexOf("enableAutocompleteDropdown=true") > 0;
-  }
-
-  function shouldUseAutocompleteDropdown() {
-    return getAutocompleteFlag() && registrationSchoolStyleGroup === 'autocomplete';
+    updateAutocompleteSchoolFields(schoolData);
   }
 
   function getUserTypeSelected() {
@@ -326,23 +261,25 @@ window.SignupManager = function (options) {
 
     const formData = $("#new_user").serializeArray();
 
-    if (shouldUseAutocompleteDropdown()) {
-      const signupForm = $(".signupform").serializeArray();
-      const schoolInfoDataMap = [
-        {from: 'nces_school_s', to: 'school_id'},
-        {from: 'country_s', to: 'country', transform: getCountryCodeForCountry},
-        {from: 'school_name_s', to: 'school_name'},
-        {from: 'school_state_s', to: 'school_state'},
-        {from: 'school_zip_s', to: 'school_zip'}
-      ];
-      signupForm.forEach( function (el) {
-        const match = schoolInfoDataMap.find(x => x.from === el.name);
-        if (match) {
-          const value = match.transform ? match.transform(el.value) : el.value;
+    // Data transformations for school info
+    const signupForm = $(".signupform").serializeArray();
+    const schoolInfoDataMap = [
+      {from: 'nces_school_s', to: 'school_id'},
+      {from: 'country_s', to: 'country', transform: getCountryCodeForCountry},
+      {from: 'school_name_s', to: 'school_name'},
+      {from: 'school_state_s', to: 'school_state'},
+      {from: 'school_zip_s', to: 'school_zip'},
+      {from: 'registration_location', to: 'full_address'},
+    ];
+    signupForm.forEach( function (el) {
+      const match = schoolInfoDataMap.find(x => x.from === el.name);
+      if (match) {
+        const value = match.transform ? match.transform(el.value) : el.value;
+        if (!(match.to === 'school_id' && value === '-1')) { // skip passing "not found" school id value
           formData.push({name: "user[school_info_attributes][" + match.to + "]", value: value});
         }
-      });
-    }
+      }
+    });
 
     if (isTeacherSelected()) {
       // Teachers get age 21 in the form data.
@@ -363,8 +300,8 @@ window.SignupManager = function (options) {
     $("#password_message").text("");
     $("#password_message_confirmation").text("");
 
-    if (getAutocompleteFlag() && isTeacherSelected()) {
-      logEvent('teacher-submitted');
+    if (isTeacherSelected()) {
+      updateAutocompleteSchoolFields(schoolData);
     }
 
     $.ajax({
@@ -408,3 +345,50 @@ window.SignupManager = function (options) {
   $("#user_email").placeholder();
   $("#user_school").placeholder();
 };
+
+class SignupSchoolNotFound extends React.Component {
+  static propTypes = {
+    isUS: PropTypes.bool.isRequired,
+    data: PropTypes.object.isRequired,
+    schoolDataErrors: PropTypes.object.isRequired,
+    onSchoolNotFoundChange: PropTypes.func.isRequired,
+  };
+
+  render() {
+    const {
+      isUS,
+      data,
+      schoolDataErrors,
+      onSchoolNotFoundChange,
+    } = this.props;
+
+    const outsideUS = !isUS;
+    const ncesInfoNotFound = (data.nces === '-1');
+    const noDropdownForSchoolType = (
+      !SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType)
+      && data.schoolType !== ''
+    );
+    if (outsideUS || ncesInfoNotFound || noDropdownForSchoolType) {
+      const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(data.schoolType);
+      const schoolNameLabel = ['afterschool', 'organization'].includes(data.schoolType)
+        ? i18n.signupFormSchoolOrOrganization()
+        : i18n.schoolName();
+      return (
+        <SchoolNotFound
+          onChange={onSchoolNotFoundChange}
+          schoolName={askForName ? data.schoolName : SchoolNotFound.OMIT_FIELD}
+          schoolType={SchoolNotFound.OMIT_FIELD}
+          schoolCity={data.schoolCity}
+          schoolState={isUS ? data.schoolState : SchoolNotFound.OMIT_FIELD}
+          schoolZip={isUS ? data.schoolZip : SchoolNotFound.OMIT_FIELD}
+          showErrorMsg={schoolDataErrors.school}
+          singleLineLayout
+          showRequiredIndicators={false}
+          schoolNameLabel={schoolNameLabel}
+          useGoogleLocationSearch={true}
+        />
+      );
+    }
+    return null;
+  }
+}

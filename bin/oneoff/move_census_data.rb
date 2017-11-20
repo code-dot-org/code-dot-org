@@ -184,16 +184,16 @@ end
 
 def cleanup_frequency(frequency)
   {
-    "less_than_one" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_hour_per_week],
+    "less_than_one" => Census::CensusSubmission::CLASS_FREQUENCIES[:less_than_one_hour_per_week],
     "one_to_three" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_to_three_hours_per_week],
     "three_plus" => Census::CensusSubmission::CLASS_FREQUENCIES[:three_plus_hours_per_week],
     "dont_know" => Census::CensusSubmission::CLASS_FREQUENCIES[:dont_know],
-    "< 1 hour per week" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_hour_per_week],
+    "< 1 hour per week" => Census::CensusSubmission::CLASS_FREQUENCIES[:less_than_one_hour_per_week],
     "1-3 hours per week" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_to_three_hours_per_week],
     "3+ hours per week" => Census::CensusSubmission::CLASS_FREQUENCIES[:three_plus_hours_per_week],
     "I don't know" => Census::CensusSubmission::CLASS_FREQUENCIES[:dont_know],
-    "haftada 1 saatten az" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_hour_per_week],
-    "< 1 valanda per savaitę" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_hour_per_week],
+    "haftada 1 saatten az" => Census::CensusSubmission::CLASS_FREQUENCIES[:less_than_one_hour_per_week],
+    "< 1 valanda per savaitę" => Census::CensusSubmission::CLASS_FREQUENCIES[:less_than_one_hour_per_week],
     "1-3 Stunden pro Woche" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_to_three_hours_per_week],
     "1-3 uur per week" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_to_three_hours_per_week],
     "haftada 1 ile 3 saat arası" => Census::CensusSubmission::CLASS_FREQUENCIES[:one_to_three_hours_per_week],

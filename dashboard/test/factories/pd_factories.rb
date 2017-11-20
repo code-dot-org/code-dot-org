@@ -662,7 +662,7 @@ FactoryGirl.define do
         willing_to_travel: 'More than 50 miles',
         agree: 'Yes'
       }.tap do |hash|
-        if program == 'csp'
+        if program == 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'
           hash['csp_which_grades'] = ['11', '12']
           hash['csp_course_hours_per_week'] = 'More than 5 course hours per week'
           hash['csp_course_hours_per_year'] = 'At least 100 course hours'
@@ -683,5 +683,9 @@ FactoryGirl.define do
     association :user, factory: :teacher, strategy: :create
     course 'csp'
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
+  end
+
+  factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
+    form_data {{}}
   end
 end

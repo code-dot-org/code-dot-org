@@ -180,11 +180,11 @@ variants
 endvariants
 variants
   level '2-3 Artist 1 new', active: false
-  level '2-3 Artist Loops 1'
+  level 'ramp_video_artistIntro'
 endvariants
 variants
   level '2-3 Artist Loops 2'
-  level '2-3 Artist 2', active: false
+  level 'ramp_video_loopsArtist', active: false
 endvariants
 variants
   level '2-3 Artist Loops 4'

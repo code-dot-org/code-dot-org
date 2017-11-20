@@ -756,7 +756,7 @@ th:
       applab: "แอ๊ปแล็บ"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Rename"
     save: "บันทึก"
     delete: "ลบ"

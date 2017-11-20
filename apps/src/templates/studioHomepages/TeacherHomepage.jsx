@@ -2,7 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import TwoColumnActionBlock from '../TwoColumnActionBlock';
+import SpecialAnnouncementActionBlock from '../SpecialAnnouncementActionBlock';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -33,8 +33,8 @@ export default class TeacherHomepage extends Component {
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
-    canCreateMoreProjects: PropTypes.bool,
-    hocLaunch: PropTypes.object
+    hocLaunch: PropTypes.object,
+    isEnglish: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -45,7 +45,7 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
-    const { canCreateMoreProjects, canViewAdvancedTools, hocLaunch } = this.props;
+    const { canViewAdvancedTools, hocLaunch, isEnglish } = this.props;
 
     return (
       <div>
@@ -59,20 +59,57 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        {hocLaunch && hocLaunch.special_announcement && hocLaunch.special_announcement === "mc2017" && (
-          <div style={styles.fullWidthNonResponsive}>
-            <TwoColumnActionBlock
-              isRtl={isRtl}
-              imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
-              heading={i18n.specialAnnouncementHeading()}
-              subHeading={""}
-              description={i18n.specialAnnouncementDescription()}
-              buttons={[
-                {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
-                {url: pegasus('/minecraft'), text: i18n.tryIt()}
-              ]}
-            />
-          </div>
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         (hocLaunch.special_announcement === "mc2017" ||
+          (hocLaunch.special_announcement === "applab2017" && !isEnglish) ||
+          (hocLaunch.special_announcement === "celebs2017" && !isEnglish)) && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeading()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescription()}
+            buttons={[
+              {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+              {url: pegasus('/minecraft'), text: i18n.tryIt()}
+            ]}
+          />
+        )}
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "applab2017" &&
+         isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcements/applab_hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeadingAppLab()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescriptionAppLab()}
+            buttons={[
+              {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+              {url: pegasus('/learn'), text: i18n.tryIt()}
+            ]}
+          />
+        )}
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "celebs2017" &&
+         isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeadingCelebs()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescriptionCelebs()}
+            buttons={[
+              {url: pegasus('/challenge'), text: i18n.celebrityChallenge()},
+              {url: pegasus('/learn'), text: i18n.tryHOC()}
+            ]}
+          />
         )}
 
         {announcements.length > 0 && (
@@ -105,7 +142,7 @@ export default class TeacherHomepage extends Component {
         <TeacherResources isRtl={isRtl}/>
         <ProjectWidgetWithData
           isRtl={isRtl}
-          canViewFullList={canCreateMoreProjects}
+          canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
         <StudentSections

@@ -756,7 +756,7 @@ uz:
       applab: "Ilova labaratoriyasi"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Rename"
     save: "Saqlash"
     delete: "O'chirish"

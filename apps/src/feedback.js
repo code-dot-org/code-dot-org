@@ -418,11 +418,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   const saveButton = feedback.querySelector(saveButtonSelector);
   if (saveButton) {
     dom.addClickTouchEvent(saveButton, () => {
-      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      $(saveButtonSelector).prop('disabled', true).text(msg.addingToProjects());
       project.copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
         .then(() => {
-          $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+          $(saveButtonSelector).prop('disabled', true).text(msg.addedToProjects());
           $(publishButtonSelector).prop('disabled', true);
         }).catch(err => console.log(err));
     });

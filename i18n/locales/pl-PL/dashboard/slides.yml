@@ -492,20 +492,20 @@ pl:
         text: "Jeden z tych komputerów jest dobry w powtarzaniu komend. Jako osoba możesz się naprawdę zmęczyć, jeśli trzeba samemu robić te same rzeczy kilka razy. Ale komputer może robić to samo miliony, a nawet miliardy razy i się nie zmęczyć trzeba więc posiadać tę zdolność."
       2:
         image: 'notes/C1_maze_loops_2.png'
-        text: "For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday."
+        text: "Na przykład, jeśli chciałbym każdemu na Facebooku złożyć życzenia urodzinowe wysyłając mu e-mail, napisanie tych wszystkich e-maili mogłoby zająć więcej niż wiek. Ale przy pomocy zaledwie kilku linii kodu mogę sprawić, że system wyśle e-mail z życzeniami do każdej osoby na Facebooku."
       3:
         image: 'notes/C1_maze_loops_3.png'
-        text: "To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the \"repeat\" block. Drag the \"repeat\" block on to the workspace and enter the number 3. Then drag the \"move North\" block into the \"repeat\" block and hit \"Run\" to see if you got it right. Congratulations, you got it!"
+        text: "Aby przenieść ptaka do świni na tym poziomie... zamiast przeciągać do obszaru roboczego trzy bloki \"północ\", użyjesz bloku \"powtarzaj\". Przeciągnij blok \"powtarzaj\" do obszaru roboczego i wpisz liczbę 3. Następnie przeciągnij blok \"przesuń się na północ\" do bloku \"powtarzaj\" i kliknij \"Uruchom\", aby sprawdzić, czy zrobiłeś to dobrze. Gratulacje, udało się!"
     C1_moveitmoveit_unplugged:
       1:
         image: 'notes/C1_moveitmoveit_unplugged_1.png'
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: "Ta lekcja nazywa się przesuń to, przesuń to. Napiszemy wspólnie program, aby przemieścić naszych przyjaciół od początku z różą wiatrów do celu uśmiechniętej buzi."
       2:
         image: 'notes/C1_moveitmoveit_unplugged_2.png'
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: "Ale buźka jest zwrócona twarzą w dół i tylko jedna osoba wie, jak się tam dostać. Rozpocznijmy ten program."
       3:
         image: 'notes/C1_moveitmoveit_unplugged_3.png'
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: "Program to algorytm, który został zakodowany do czegoś, co może być uruchomione przez maszynę. Większość z nas myśli o programie jako o czymś, co piszemy na komputer. Programy świetnie się do tego nadają, ale są również pomocne w innych miejscach. Możesz wykonać swoją własną grę lub nawet zaprogramować robota, by robił coś dla ciebie."
     C1_going_places_safely:
       1:
         image: 'notes/C1_going_places_safely_1.png'
@@ -518,75 +518,75 @@ pl:
         text: "Wczoraj wybrałem się do zoo niedaleko mojego domu. Widziałem tam malutką zebrę. Zrobiłem jej zdjęcie, a potem zmieniłem kolor pasków, dodałem kapelusz i wrzuciłem to do mojej kolekcji szalonych zwierząt. Super! Później wybrałem się gdzieś bardzo daleko - do Kenii. To taki kraj w Afryce. Mieszka tam dużo zebr."
       4:
         image: 'notes/C1_going_places_safely_4.png'
-        text: "Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. \"Yummy, I wish the Internet had smellorama!\" I can talk to different people on the Internet, like my cousin but I only talk to people I know."
+        text: "Czasami w internecie rozmawiam z ludźmi, których znam, jak moja babcia, która mieszka w innym stanie. Cześć babciu! Piecze ciasteczka, które mi wyśle na urodziny. \"Pychotka, gdyby komputery potrafiły przekazywać zapachy!\" Mogę rozmawiać z różnymi ludźmi przez Internet, jak mój kuzyn, ale rozmawiam tylko z ludźmi, których znam."
       5:
         image: 'notes/C1_going_places_safely_5.png'
-        text: "What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!"
+        text: "To, co najbardziej lubię w internecie to możliwość grania w fajne gry. Punkt! Lubię również rysować i tworzyć nowe rzeczy i dzielić się nimi z moimi przyjaciółmi. Super! Czasami odwiedzam strony, na których uczę się czegoś nowego, ale zawsze trzymam się stron, które są dla mnie odpowiednie. Wow, dinozaury!"
       6:
         image: 'notes/C1_going_places_safely_6.png'
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'Internet to super fajne miejsce. Ale tak jak gdy przekraczasz ulicę w sąsiedztwie, musisz również być ostrożny gdy wchodzisz do internetu. Oto trzy zasady do zapamiętania. Zasada numer 1: Zawsze najpierw zapytaj rodziców. Zasada numer 2: Rozmawiaj tylko z ludźmi, których znasz. Zasada numer 3: Trzymaj się miejsc, które są w sam raz dla ciebie.'
       7:
         image: 'notes/C1_going_places_safely_7.png'
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: "Wow, to było super! Czas na kolację. Wylogowuję się. Nie mogę się doczekać, kiedy zaloguję się ponownie, żeby zobaczyć, jakie strony mogę odwiedzić jako następne."
     C1_pair_programming:
       1:
         image: 'notes/C1_pair_programming_1.png'
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: "Dzisiaj nauczymy się o Programowaniu w Parach. W programowaniu w parach pracujecie jako zespół. Dlaczego dwie osoby miałyby używać jednego komputera? Ponieważ co dwie głowy to nie jedna. W programowaniu w parach ty i twój partner będziecie siedzieć razem przy jednym komputerze i oboje będziecie pracować nad tym samym projektem."
       2:
         image: 'notes/C1_pair_programming_2.png'
-        text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
+        text: "W programowaniu w parach, jedna osoba jest kierowcą, a druga jest pilotem, dokładnie jak w przypadku jazdy samochodem. Kierowca siedzi przy komputerze i to on obsługuje klawiaturę i myszkę lub ekran dotykowy i kontroluje główne akcje komputera. Druga osoba to pilot. Pilot pomaga kierowcy, odpowiadając na jego pytania i wskazując potencjalne problemy i błędy."
       3:
         image: 'notes/C1_pair_programming_3.png'
-        text: "Communication is key to successful pair programming. No insults, be respectful, don't be a bossy navigator, because nobody likes a backseat driver. You and your partner should always be talking. The driver can explain what she or he is doing. And the navigator can help suggest what to do next."
+        text: "Komunikacja to klucz do udanego programowania w parach. Nie obrażaj, miej szacunek, nie wymądrzaj się, bo nikt nie lubi, gdy kierowca siedzi z tyłu. Ty i twój partner powinniście cały czas rozmawiać. Kierowca może wyjaśniać, co robi. A pilot może pomagać sugerować kolejne kroki."
       4:
         image: 'notes/C1_pair_programming_4.png'
-        text: "The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team."
+        text: "Pilot powinien myśleć o całokształcie, a kierowca skupiać się na szczegółach. Obie role są ważne. Programowanie w parach polega na wspólnej pracy jako zespół."
     C1_planting_seed:
       1:
         image: 'notes/C1_planting_seed_1.png'
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: "Ta lekcja nazywa się sadzenie nasion i pomoże nam zrozumieć algorytmy. Algorytmy to specyficzne instrukcje, które wyjaśniają kolejność wykonywania czegoś. Nawet codzienne sprawy takie jak jedzenie śniadania lub mycie zębów to algorytmy, które wymagają małych kroczków prowadzących do wykonania danej czynności."
       2:
         image: 'notes/C1_planting_seed_2.png'
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: "Komputery mogą być naprawdę mądre, ale rozumieją cię tylko wtedy, gdy powiesz im dokładnie, czego chcesz - krok po kroku. Najlepsze w algorytmach jest to, że jeśli wykonujesz instrukcje w określonym porządku, możesz zrobić coś, czego wcześniej nie umiałeś zrobić. To tak jak używanie przepisu kulinarnego."
       3:
         image: 'notes/C1_planting_seed_3.png'
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: "Dzisiaj będziemy sadzić nasze własne nasiona, używając algorytmu. Stwórz swój własny algorytm rozcinając obrazki. Wybierz obrazki, które pokazują etapy sadzenia nasiona i ułóż te obrazki we właściwej kolejności."
       4:
         image: 'notes/C1_planting_seed_4.png'
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: "A teraz czas zobaczyć, czy twój algorytm działa. Z uwagą wykonuj kroki opisane w algorytmie. Czy są ustawione w odpowiedniej kolejności? Czy udało ci się zasadzić nasiono, postępując zgodnie z algorytmem? To jest jak programowanie obrazkami!"
       5:
         image: 'notes/C1_planting_seed_5.png'
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: "Kiedy chcemy zrobić czekoladę, jest wiele etapów tego procesu, a każdy etap składa się ze zbioru mniejszych kroków, ponadto jest wiele różnych przepisów lub algorytmów, w zależności od tego, jak chcemy, żeby czekolada smakowała. Każdy krok jest ważny, nawet te malutkie, a więc bez jednego kroku reszta nie może być wykonana. Tworzenie algorytmów, które inni mogą zrozumieć, jest naprawdę ważne. Dlatego każdy krok musi być zapisany w ten sposób, żeby wynik był taki sam niezależnie od tego, kto dany krok wykona."
     C1_playlab_storytelling:
       1:
         image: 'notes/C1_playlab_storytelling_1.png'
-        text: "Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell."
+        text: "Czas stać się kreatywnym i użyć swoich umiejętności kodowania do opowiedzenia historyjki. Twoja historyjka będzie mieć aktorów, a ty będziesz mógł sprawić, że ci aktorzy będą mówić i oddziaływać ze sobą. Zacznij się zastanawiać, jaką historyjkę chcesz opowiedzieć."
       2:
         image: 'notes/C1_playlab_storytelling_2.png'
-        text: "The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The \"when run\" block starts everything. The \"move\" block will move your character and the \"say\" block will make your character say whatever you type."
+        text: "Kot zawsze bał się psa, a co jeśli kot domyśli się, że pies próbuje być miły? Blok \"po uruchomieniu\" wszystko zaczyna. Blok \"przesuń\" przesunie twoją postać, a blok \"powiedz\" sprawi, że twoja postać powie, cokolwiek napiszesz."
       3:
         image: 'notes/C1_playlab_storytelling_3.png'
-        text: "This is the \"when actors collide\" block which you can link up to the other blocks."
+        text: "To jest blok \"gdy aktorzy kolidują\", który możesz połączyć z innymi blokami."
       4:
         image: 'notes/C1_playlab_storytelling_4.png'
-        text: "I was making the dog come over and say \"Hi\" but then the cat got scared so it ran away. \"Ahh\" If there was more time, it would have been a happy ending. The end!"
+        text: "Próbowałem przekonać psa, żeby przyszedł i powiedział \"Cześć\", ale kot się wystraszył i uciekł. \"Ach...\" Gdyby było więcej czasu, moglibyśmy mieć szczęśliwe zakończenie. Koniec!"
     C1_spelling_bee_intro:
       1:
         image: 'notes/C1_spelling_bee_intro_1.png'
-        text: "This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words."
+        text: "To jest poziom literującej pszczoły. Użyj kawałków puzzli, aby przesunąć pszczołę. Przesuwając się, zbierze litery do przeliterowania słów."
       2:
         image: 'notes/C1_spelling_bee_intro_2.png'
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: "Zobacz, czy potrafisz przeliterować słowo, które dostajesz w ramce pod polem gry. Ale bzzządź ostrożny! Przesuwanie w złym kierunku doda litery, których nie chcesz."
     C1_zuck_repeat_loop:
       1:
         image: 'notes/C1_zuck_repeat_loop_1.png'
         text: "Jeden z tych komputerów jest dobry w powtarzaniu komend. Jako osoba możesz się naprawdę zmęczyć, jeśli trzeba samemu robić te same rzeczy kilka razy. Ale komputer może robić to samo miliony, a nawet miliardy razy i się nie zmęczyć trzeba więc posiadać tę zdolność."
       2:
         image: 'notes/C1_zuck_repeat_loop_2.png'
-        text: "For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday."
+        text: "Na przykład, jeśli chciałbym każdemu na Facebooku złożyć życzenia urodzinowe wysyłając mu e-mail, napisanie tych wszystkich e-maili mogłoby zająć więcej niż wiek. Ale przy pomocy zaledwie kilku linii kodu mogę sprawić, że system wyśle e-mail z życzeniami do każdej osoby na Facebooku."
       3:
         image: 'notes/C1_zuck_repeat_loop_3.png'
-        text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
+        text: "W tym przykładzie, twoim celem jest przesunięcie ptaka, aby złapać świnię. A teraz będziemy mieć możliwość użyć bloku repetycyjnego, aby zrobić to z łatwością. Możesz to zrobić albo dając komputerowi komendę \"przesuń się naprzód\" pięć razy, by przesunąć ptaka w kierunku świni o jeden krok za każdym razem, albo możesz kazać komputerowi przesunąć raz, a potem kazać powtórzyć to pięć razy - efekt będzie taki sam."
       4:
         image: 'notes/C1_zuck_repeat_loop_4.png'
         text: "In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward."

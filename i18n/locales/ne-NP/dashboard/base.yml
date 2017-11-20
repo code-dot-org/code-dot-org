@@ -756,7 +756,7 @@ ne:
       applab: "App Lab"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Rename"
     save: "सङ्ग्रह गर्नुहोस्"
     delete: "हटाउनुहोस्"

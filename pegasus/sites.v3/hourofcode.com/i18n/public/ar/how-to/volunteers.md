@@ -9,21 +9,21 @@ nav: how_to_nav
 
 ### Make a difference in a classroom today!
 
-## Why volunteer?
+## لماذا التطوع؟
 
-Check out some testimony from past volunteers:
+التحقق من شهادات بعض المتطوعين السابقة:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "وكان الجزء الأفضل من تجربتي أن فئة كاملة من النساء والملونين. أنه يبشر بالخير لمستقبل الصناعة لدينا فرصة للوصول إلى تأثير هؤلاء الأطفال. "
+- "لا سيما تتمتع الحصول على تشجيع الفتيات الصغيرات في التكنولوجيا. أنى شعرت بأني كنت مساعدة للجيل القادم في المنطقة التي في بلدي المحلية. "
+- "أحب رؤية كيفة كانوا الاطفال متحمسون. الشيء المدهش هو أن المدرسين لاحظوا أن بعض الطلاب الذين لم يفعلوا ذالك أكاديمياً من المتفوقين في التفكير مثل مطور ومساعد للآخرين تعلم-منحهم مكاناً للشعور بالثقة. "
 
-## Anyone can volunteer
+## أي شخص يمكن أن يتطوع
 
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+**المتطوعين والمتكلمين في التكنولوجيا**: هل لديك اتصال بخدمات العملاء أو التكنولوجيا؟ إذا كنت تعمل في هندسة البرمجيات، في شركة لتكنولوجيا في أي دور (غير مهندس أو مهندسة)، أو كنتم قد أخذتم دورات علوم الكمبيوتر، يمكنك المساعدة في المهام للطلاب! العديد من الطلاب قد اجتمعوا, البدأ لأي شخص يعمل في صناعة التكنولوجيا ويحب مدرسينا وقادراً على الاتصال بالفصول الدراسية للمهنيين وطلاب الجامعات.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+يمكنك أن تكون ضيفا متحدثاً في الفصول دراسية، أو مساعد المعلمين لتشغيل النشاط. قم بزيارة أحد الفصول دراسية المحلية الهام للطلاب للحفاظ على تعلم علوم الكمبيوتر.
 
-<a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button></p> 
+<a href="https://code.org/volunteer/engineer"><button>قم بالتسجيل اليوم لتكون تكنولوجي متطوع!</button></p> 
 
 <p>
   <strong>Anyone passionate about expanding opportunity</strong>: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.

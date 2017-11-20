@@ -5,6 +5,7 @@ require 'cdo/only_one'
 require 'cdo/solr'
 require 'retryable'
 require src_dir 'forms'
+require src_dir 'abort_form_error'
 
 SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
 # As the NULLness of various date columns indicates further processing is

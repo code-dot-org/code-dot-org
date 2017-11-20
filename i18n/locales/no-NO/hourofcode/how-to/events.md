@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [et brev](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) for å invitere din lokale ordfører, fylkesmann, stortingsrepresentant eller annen innflytelsesrik person for holde tale.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Inviter media/presse, som lokalnytt, aviser, bloggere, eller lignende. Se vår [pressepakke](%= resolve_url('/promote/press-kit') %) for hjelp.
 
 ## 2. During your event

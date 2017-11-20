@@ -349,6 +349,7 @@ export function restoreOnWindow(key) {
 export function clearTimeoutsBetweenTests() {
   let timeoutList = [];
   let intervalList = [];
+  const leftover = [];
 
   const setTimeoutNative = window.setTimeout;
   const setIntervalNative = window.setInterval;
@@ -383,16 +384,41 @@ export function clearTimeoutsBetweenTests() {
     return clearIntervalNative(id);
   };
 
-  afterEach(() => {
+  afterEach(function () {
+    // Guard carefully here, because arrow functions can steal our test context
+    // and prevent us from grabbing the test name.
+    const testName = this && this.currentTest && this.currentTest.fullTitle();
+
     timeoutList.forEach(id => {
-      console.log('clearing leftover timeout');
+      if (testName) {
+        leftover.push('(timeout)  ' + testName);
+      } else {
+        // When we don't know the test name, also print a note inline to help
+        // with debugging.
+        leftover.push('(timeout)  Unknown test');
+        console.log('clearing leftover timeout');
+      }
       clearTimeoutNative(id);
     });
     intervalList.forEach(id => {
-      console.log('clearing leftover interval');
+      if (testName) {
+        leftover.push('(interval) ' + testName);
+      } else {
+        // When we don't know the test name, also print a note inline to help
+        // with debugging.
+        leftover.push('(interval) Unknown test');
+        console.log('clearing leftover interval');
+      }
       clearIntervalNative(id);
     });
     timeoutList = [];
     intervalList = [];
+  });
+
+  after(() => {
+    console.log(
+      '\nLeftover timeouts/intervals: ' + leftover.length +
+      '\n' + leftover.map(s => '    ' + s).join('\n')
+    );
   });
 }

@@ -307,6 +307,12 @@ class ScriptLevelsController < ApplicationController
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 
+    # If there's an override, use that
+    if params[:level_name]
+      specified_level = @script_level.levels.find {|l| l.name == params[:level_name]}
+      return specified_level if specified_level
+    end
+
     # For teachers, load the student's most recent attempt
     if @user && current_user != @user
       last_attempt = @user.last_attempt_for_any(@script_level.levels)

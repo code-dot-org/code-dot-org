@@ -750,7 +750,7 @@ ms:
       applab: "App Lab"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Rename"
     save: "Simpan"
     delete: "Padam"

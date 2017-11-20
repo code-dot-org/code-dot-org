@@ -165,10 +165,10 @@ WebLab.prototype.init = function (config) {
     });
 
     // The project template workspace icon callout appears too far to the left
-    // if we don't delay this slightly (currently 0.1 seconds)
+    // if we don't delay this slightly (currently 0.25 seconds)
     setTimeout(() => {
       this.studioApp_.initProjectTemplateWorkspaceIconCallout();
-    }, 100);
+    }, 250);
   };
 
   // Push initial level properties into the Redux store

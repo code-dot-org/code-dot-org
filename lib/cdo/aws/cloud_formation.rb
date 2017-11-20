@@ -386,7 +386,7 @@ module AWS
         if str.length > LAMBDA_ZIPFILE_MAX
           raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
         end
-        {'Fn::Sub': erb_eval(str, filename)}.to_json
+        erb_eval(str, filename).to_json
       end
 
       # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.

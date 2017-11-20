@@ -5,7 +5,7 @@ theme: responsive
 
 # Terms of Service
 
-Date of Last Revision: October 25, 2017
+Date of Last Revision: November 15, 2017
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the websites located at [https://code.org](https://code.org), [https://studio.code.org](https://studio.code.org), [https://csedweek.org](https://csedweek.org), [https://www.k12cs.org](https://www.k12cs.org), [https://hourofcode.com](https://hourofcode.com), [https://curriculum.code.org](https://curriculum.code.org), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”).
 
@@ -171,7 +171,7 @@ These Terms and any rights and licenses granted hereunder, may not be transferre
 
 #### E. Indemnification
 
-You agree to indemnify, defend, and hold harmless Code.org, its affiliated companies, contractors, employees, agents and its third-party suppliers, licensors, and partners (“Code.org Indemnitees”) from any claims, losses, damages, liabilities, including legal fees and expenses, arising out of any use or misuse of the website, the Services, any violation of the Terms, or any breach of the representations, warranties, and covenants made herein, whether by You or by any Child associated with you if you are a Parent. Code.org reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify Code.org, and you agree to cooperate with Code.org’s defense of these claims. Code.org will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.
+You agree, to the extent permissible by law, to indemnify, defend, and hold harmless Code.org, its affiliated companies, contractors, employees, agents and its third-party suppliers, licensors, and partners (“Code.org Indemnitees”) from any claims, losses, damages, liabilities, including legal fees and expenses, arising out of any use or misuse of the website, the Services, any violation of the Terms, or any breach of the representations, warranties, and covenants made herein, whether by You or by any Child associated with you if you are a Parent. Code.org reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify Code.org, and you agree to cooperate with Code.org’s defense of these claims. Code.org will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.
 
 We may revise these Terms from time to time, the most current version will always be at code.org/tos. If the revision, in our sole discretion, is material we will notify you via an e-mail to the email associated with your account. By continuing to access or use the Services after those revisions become effective, you agree to be bound by the revised Terms.
 

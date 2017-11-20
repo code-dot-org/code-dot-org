@@ -17,7 +17,6 @@ export default class StudentHomepage extends Component {
     isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     canViewAdvancedTools: PropTypes.bool,
-    canCreateMoreProjects: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -27,7 +26,7 @@ export default class StudentHomepage extends Component {
 
   render() {
     const { courses, sections, isRtl, canLeave, topCourse } = this.props;
-    const { canCreateMoreProjects, canViewAdvancedTools } = this.props;
+    const { canViewAdvancedTools } = this.props;
 
     return (
       <div>
@@ -46,7 +45,7 @@ export default class StudentHomepage extends Component {
         />
         <ProjectWidgetWithData
           isRtl={isRtl}
-          canViewFullList={canCreateMoreProjects}
+          canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
         <StudentSections

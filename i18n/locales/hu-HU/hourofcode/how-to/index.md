@@ -13,9 +13,7 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) as well as [teacher-guided tutorials](%= resolve_url('https://code.org/educate/teacher-led') %) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Népszerűsítsd a Kódolás Órája eseményedet!
 
@@ -42,7 +40,7 @@ Biztosíts fülhallgatókat, vagy kérd meg a tanulókat, hogy hozzanak magukkal
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Tekints át további inspiráló [segédanyagokat](%= resolve_url('https://code.org/inspire') %) és [videókat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Nem baj, ha számodra és a tanulók számára is újdonság a számítógép-tudomány. Itt van néhány ötlet, hogyan vezetheted be a Kódolás Órája tevékenységet:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Az osztály gyűjtsön olyan mindennapi dolgokat, amelyeket a kódolás tesz lehetővé.
@@ -50,11 +48,11 @@ Biztosíts fülhallgatókat, vagy kérd meg a tanulókat, hogy hozzanak magukkal
 
 ## 6. Code!
 
-**Vezesd a tanulókat a tevékenységhez**
+**Direct students to the activity**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
 
-**Ha a tanulóknak nehézségeik vannak, lehet így reagálni:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Nem tudom. Találjunk együtt megoldást!"
 - "A technika nem mindig úgy működik, mint ahogy azt mi elképzeljük."

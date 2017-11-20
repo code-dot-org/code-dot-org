@@ -46,7 +46,7 @@
           megin
         setScreenFirstTime: Smelltu og dragðu inn í plássið í "onEvent" kubbnum
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Click here when you're done!
+        applab_hoc_finish: Smelltu hér þegar þetta er tilbúið!
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -289,11 +289,11 @@
         CSD_U3_rect_c1: Hér er kóðinn
         CSD_U3_rect_c2: Dragðu þennan kubb yfir á kóðasvæðið.
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: Define startGame here
+        CSD_U6_startGame: Skilgreindu startGame hér
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Skilgreindu movePlayer() hér
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
@@ -964,6 +964,11 @@
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM.
           Þú þarft ekkert að athuga með hunang.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM.
+          Þú þarft ekkert að athuga með hunang.
+        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO
+          HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Notaðu þessa lykkju til að safna öllum
           blómasafanum (eða hunangi) frá einu blómi (eða búi).

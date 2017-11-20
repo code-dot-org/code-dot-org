@@ -5,7 +5,6 @@ import i18n from "@cdo/locale";
 import {connect} from 'react-redux';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import experiments from '../../util/experiments';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
@@ -59,16 +58,14 @@ const ProjectCardGrid = React.createClass({
   render() {
     const { projectLists } = this.props;
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
-    const showMoreProjects = experiments.isEnabled('publishMoreProjects');
-
     return (
       <div style={styles.grid}>
         {(this.state.showAll) &&
           <div>
             <ProjectAppTypeArea
               labKey="playlab"
-              labName={showMoreProjects ? i18n.projectGroupPlaylab() : i18n.projectTypePlaylab()}
-              labViewMoreString={showMoreProjects ? i18n.projectGroupPlaylabViewMore() : i18n.projectTypePlaylabViewMore()}
+              labName={i18n.projectGroupPlaylab()}
+              labViewMoreString={i18n.projectGroupPlaylabViewMore()}
               projectList={projectLists.playlab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -76,23 +73,21 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
               hideWithoutThumbnails={true}
             />
-            {showMoreProjects &&
-              <ProjectAppTypeArea
-                labKey="events"
-                labName={i18n.projectGroupEvents()}
-                labViewMoreString={i18n.projectGroupEventsViewMore()}
-                projectList={projectLists.events}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.onSelectApp}
-                isDetailView={false}
-                hideWithoutThumbnails={true}
-              />
-            }
+            <ProjectAppTypeArea
+              labKey="events"
+              labName={i18n.projectGroupEvents()}
+              labViewMoreString={i18n.projectGroupEventsViewMore()}
+              projectList={projectLists.events}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
             <ProjectAppTypeArea
               labKey="artist"
-              labName={showMoreProjects ? i18n.projectGroupArtist() : i18n.projectTypeArtist()}
-              labViewMoreString={showMoreProjects ? i18n.projectGroupArtistViewMore() : i18n.projectTypeArtistViewMore()}
+              labName={i18n.projectGroupArtist()}
+              labViewMoreString={i18n.projectGroupArtistViewMore()}
               projectList={projectLists.artist}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -100,19 +95,17 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
               hideWithoutThumbnails={true}
             />
-            {showMoreProjects &&
-              <ProjectAppTypeArea
-                labKey="minecraft"
-                labName={i18n.projectGroupMinecraft()}
-                labViewMoreString={i18n.projectGroupMinecraftViewMore()}
-                projectList={projectLists.minecraft}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.onSelectApp}
-                isDetailView={false}
-                hideWithoutThumbnails={true}
-              />
-            }
+            <ProjectAppTypeArea
+              labKey="minecraft"
+              labName={i18n.projectGroupMinecraft()}
+              labViewMoreString={i18n.projectGroupMinecraftViewMore()}
+              projectList={projectLists.minecraft}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
             <ProjectAppTypeArea
               labKey="applab"
               labName={i18n.projectTypeApplab()}
@@ -135,19 +128,17 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
               hideWithoutThumbnails={true}
             />
-            {showMoreProjects &&
-              <ProjectAppTypeArea
-                labKey="k1"
-                labName={i18n.projectGroupPreReader()}
-                labViewMoreString={i18n.projectGroupPreReaderViewMore()}
-                projectList={projectLists.k1}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.onSelectApp}
-                isDetailView={false}
-                hideWithoutThumbnails={true}
-              />
-            }
+            <ProjectAppTypeArea
+              labKey="k1"
+              labName={i18n.projectGroupPreReader()}
+              labViewMoreString={i18n.projectGroupPreReaderViewMore()}
+              projectList={projectLists.k1}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
 
             <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
           </div>
@@ -182,7 +173,7 @@ const ProjectCardGrid = React.createClass({
             {this.state.showApp === 'artist' &&
               <ProjectAppTypeArea
                 labKey="artist"
-                labName={showMoreProjects ? i18n.projectGroupArtistAllProjects() : i18n.projectTypeAllProjectsArtist()}
+                labName={i18n.projectGroupArtistAllProjects()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.artist}
                 numProjectsToShow={numProjects}

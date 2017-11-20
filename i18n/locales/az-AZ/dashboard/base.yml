@@ -756,7 +756,7 @@ az:
       applab: "Proqram Labı"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Adını dəyiş"
     save: "Yadda saxla"
     delete: "Sil"

@@ -4039,12 +4039,12 @@
                 led discussion about the impact of apps on society. '
             Project - Propose an App:
               name: Proje - bir uygulama önermek
-              description_student: To conclude the study of the problem solving process
-                and the input/output/store/process model of a computer, the class
-                proposes apps designed to solve real world problems. This project
-                is completed across multiple days and culminates in a poster presentation
-                highlighting the features of each app. The project is designed to
-                be completed in pairs though it can be completed individually.
+              description_student: Sınıfımız; problem çözme süreci çalışmalarını ve
+                bilgisayarın giriş/çıkış/depolama/sürecini sonuçlandırmak için, gerçek
+                hayat problemlerini çözebilecek uygulamalar sunar. Bu projenin tamamlanması
+                günlere yayılabilir ve, her uygulamanın önemli noktalarını vurgulayan
+                özelliklerin posterle sunulmasıyla proje sonuçlandırılacaktır. Proje
+                ikili bitirilebilecek şekilde tasarlanmıştır, ama bireysel de yapılabilir.
               description_teacher: To conclude their study of the problem solving
                 process and the input/output/store/process model of a computer, students
                 will propose an app designed to solve a real world problem. This project

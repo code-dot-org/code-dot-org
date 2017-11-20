@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Comment enseigner une Heure de Code en activités para-scolaires ou en clubs
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. L'Heure de Code est facile à exécuter - même pour les débutants! Si vous voulez de l'aide supplémentaire, vous pouvez trouver un [bénévole local](<%= resolve_url('https://code.org/volunteer/local') %>) pour vous aider à exécuter une Heure de Code dans votre classe.
+Joignez le mouvement et introduisez un groupe d'étudiants à leur première heure d'informatique avec ces étapes. L'Heure de Code est facile à exécuter - même pour les débutants! Si vous voulez de l'aide supplémentaire, vous pouvez trouver un [bénévole local](<%= resolve_url('https://code.org/volunteer/local') %>) pour vous aider à exécuter une Heure de Code dans votre classe.
 
 ## 1. Regarder cette vidéo de formation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -48,21 +48,21 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**C'est bon même si vous êtes tous nouveaux dans le domaine de l'informatique. Il y a ici quelques idées pour introduire votre activité d'Heure de Code :**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Expliquer comment la technologie impacte nos vies, avec des exemples dont les filles et les garçons seront concernés (parler des apllications et de la technologie qui est utilisée pour sauver des vies, aider les gens, connecter les personnes, etc...).
 - Énumérez des exemples concrets, pris dans la vie de tous les jours, où on a besoin d'écrire des programmes.
 - Découvrez [ici](<%= resolve_url('https://code.org/girls') %>) des astuces pour amener les filles à s'intéresser à l'informatique.
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Besoin de plus de guidage ?**Téléchargez ça [modèle de plan de leçon](/files/AfterschoolEducatorLessonPlanOutline.docx).</p> 
 
 ## 6. Code!
 
 **Guider les participants pendant l'activité**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+- Ecrivez le lien du tutoriel sur un tableau. Trouvez le lien listé sur les [informations pour vôtre tutoriel sélectionné](<%= resolve_url('/learn') %>)sous le nombre de participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**Quand quelqu'un recontre des difficultés c'est bien de répondre :**
 
 - « Je ne sais pas. Regardons à cela ensemble. »
 - « La technologie ne fonctionnent pas toujours de la façon dont nous le voulons. »
@@ -70,8 +70,8 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 **Que faire si quelqu'un termine en avance ?**
 
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
+- Encouragez les participants à essayer une autre Heure de Code sur [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+- Ou, demandez à celui qui a fini tôt à aider ceux qui ont des difficultés.
 
 [col-33]
 
@@ -95,7 +95,7 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 [/col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+- [Imprimez les certificats](<%= resolve_url('https://code.org/certificates') %>) pour vos étudiants.
 - [Imprimez des autocollants « J'ai fait Une Heure de Code ! »](<%= resolve_url('/promote/resources#stickers') %>) pour vos élèves.
 - [Commandez des t-shirts personnalisés](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pour votre école.
 - Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !
@@ -110,9 +110,9 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 ## Autres ressources de l'Heure de Code pour les enseignants
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+- Regardez les [meilleurs entraînements](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) des organisateurs des Heure de Code passés. 
+- Regardez le film de nôtre [Guide d'Educateur pour l'Heure de Code webinaire](https://youtu.be/EJeMeSW2-Mw).
+- Visitez le [Forum Heure de Code](http://forum.code.org/c/plc/hour-of-code) pour obtenir des conseils, des idées et de l'aide de la part des autres organisateurs. <% if @country == 'us' %>
 - Revoir [la Foire aux Question Une Heure du Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Et après l'Heure de Code ?

@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Etkinliğiniz için hazırlanın
 
 - Yerine, gününe ve saatine karar verin.
-- Belediye başkanına, bir kongre üyesine, valiye veya iş adamlarına etkinliğinize katılmaları ve konuşma yapmaları için [bir mektup](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) gönderin.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Medyayı (yerel haber kanalları, gazeteler, eğitim ve teknoloji bloggerları,... vb.) davet edin. Bu konuda yardım için [basın kiti](<%= resolve_url('/promote/press-kit') %>)mizi inceleyin.
 
 ## 2. Etkinlik esnasında

@@ -7,15 +7,13 @@ nav: how_to_nav
 
 <h1>Bagaimana mengajar satu jam Hour of Code</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+Bergabunglah dengan gerakan ini dan perkenalkan sekelompok siswa pada jam pertama ilmu komputer mereka dengan langkah-langkah ini. Jam Kode mudah dijalankan - bahkan untuk pemula! Jika Anda ingin set ekstra tangan untuk membantu, Anda dapat menemukan [relawan lokal](<%= resolve_url('https://code.org/volunteer/local') %>) untuk membantu menjalankan Jam Kode di kelas Anda.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) as well as [teacher-guided tutorials](<%= resolve_url('https://code.org/educate/teacher-led') %>) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promote your Hour of Code
 
@@ -42,7 +40,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Temukan lebih banyak [sumber daya](<%= resolve_url('https://code.org/inspire') %>) dan [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) yang inspiratif.
 
-**Tidak masalah jika Anda dan murid Anda masih baru untuk ilmu komputer. Berikut beberapa ide untuk mengenalkan aktivitas Hour of Code:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Sebagai sebuah kelas, daftarkan hal-hal yang menggunakan kode dalam kehidupan sehari-hari.
@@ -50,11 +48,11 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 ## 6. Code!
 
-**Arahkan pelajar untuk melakukan aktivitas**
+**Direct students to the activity**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn')%>) under the number of participants.
 
-**Ketika siswa Anda menemukan kesulitan, tidak apa-apa untuk menanggapi:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Saya kurang tahu. Mari kita mencari solusinya bersama-sama."
 - "Teknologi tidak selalu bekerja dengan cara yang kita inginkan."

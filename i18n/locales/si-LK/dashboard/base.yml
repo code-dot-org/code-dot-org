@@ -756,7 +756,7 @@ si:
       applab: "මෘදුකාංග විද්‍යාගාරය"
       gamelab: "Game Lab"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "නැවත නම් කරන්න"
     save: "සුරකින්න"
     delete: "මකන්න"

@@ -3945,8 +3945,8 @@
         Create a function to help you finish this
         minecart.
       MC_HOC_2017_10_RETRY_instruction: |-
-        Create a function to help you finish this
-        minecart.
+        Use the functions to finish this minecart
+        track.
       MC_HOC_2017_10_RYAN_instruction: |-
         Create a function to help you finish this
         minecart.
@@ -4312,6 +4312,9 @@
       New Gumball Project_instruction: Lag det du har lyst til og del det med andre!
       New Ice Age Project_instruction: Lag det du har lyst til og del det med andre!
       New Infinity Project_instruction: Lag det du har lyst til og del det med andre!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -8190,9 +8193,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

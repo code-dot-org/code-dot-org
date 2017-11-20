@@ -3561,9 +3561,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: Jest to przykład gry, jaką można stworzyć w play lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Użyj funkcji "zbuduj most" dwukrotnie aby
-        utworzyć ścieżkę do pochodni.
+      Function intro Ryan_instruction: Aby przerzucić pomost i dostać się do pochodni,
+        dwukrotnie użyj funkcji "zbuduj most".
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3961,67 +3960,81 @@
         Poruszaj się używając **klawiszy strzałek** i dostań się do skrzyni wewnątrz domu, aby wygrać.
       MC_HOC_2017_01_Kiki_instruction: Kliknij "Uruchom", aby przenieść gracza na
         pomarańczowy kwadrat wewnątrz domku.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
-      MC_HOC_2017_02_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: Doprowadź Agenta do płytki naciskowej, a potem
-        gracza do pomarańczowego kwadratu.
-      MC_HOC_2017_02_Will_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_04_instruction: Zmień pętlę z ostatniego puzzla, aby pomóc Agentowi
-        utworzyć ścieżkę nad szerszą częścią rzeki.
-      MC_HOC_2017_04POINT5_Cole_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_04_Cole_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_04_Kiki_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_05_instruction: Użyj funkcji aby pomóc Agentowi dostać się do płytki
+      MC_HOC_2017_01_RETRY_instruction: 'Pokieruj Agentem tak, by dotarł do płyty
+        naciskowej, a następnie naciśnij przycisk "Wykonaj". Użyj klawiszy strzałek,
+        aby wyjść postacią gracza z domu i zabrać skrzynię. '
+      MC_HOC_2017_02_instruction: Pokieruj Agentem tak, aby dostał się do płyty naciskowej.
+      MC_HOC_2017_02_Cole_instruction: 'Pokieruj Agentem tak, aby dostał się na płytę
+        naciskową. Wtedy {currentPlayerName} zyska możliwość dotarcia do mapy. '
+      MC_HOC_2017_02_Kiki_instruction: Pokieruj Agentem tak, aby dotarł na płytę naciskową,
+        a następnie przedostań się postacią gracza na pomarańczowe pole.
+      MC_HOC_2017_02_Will_instruction: Pokieruj Agentem tak, aby dostał się do płyty
         naciskowej.
-      MC_HOC_2017_05_Cole_instruction: Doprowadź gracza do łopaty.
-      MC_HOC_2017_05_Josh_instruction: Doprowadź gracza do łopaty.
-      MC_HOC_2017_05_Kiki_instruction: Doprowadź gracza do pomarańczowego kwadratu.
-      MC_HOC_2017_06_Cole_instruction: Napraw kod, aby pomóc Agentowi wybudować most
-        przez rzekę.
-      MC_HOC_2017_06_Josh_instruction: Napraw kod, aby pomóc Agentowi wybudować most
-        przez rzekę.
-      MC_HOC_2017_06_Kiki_instruction: Napraw kod, aby pomóc Agentowi wybudować most
-        przez rzekę.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: Użyj funkcji aby oczyścić ścieżkę do pomarańczowego
-        kwadratu.
-      MC_HOC_2017_07a_Kiki_instruction: Oczyść drogę do pomarańczowego kwadratu.
-      MC_HOC_2017_08_Cole_instruction: Zmień podaną funkcję aby działała w tym biomie.
-      MC_HOC_2017_08_Kiki_instruction: Zmień funkcję aby działała dla tego puzzla.
-      MC_HOC_2017_08_RY_instruction: Użyj funkcji, aby znaleźć drogę przez lawę.
-      MC_HOC_2017_08_Will_instruction: Użyj funkcji, aby znaleźć drogę przez lawę.
-      MC_HOC_2017_09_Cole_instruction: Zaprogramuj Agenta, aby oczyścić drogę graczowi.
-      MC_HOC_2017_09_Kiki_instruction: Zaprogramuj Agenta, aby oczyścić drogę graczowi
-        i dostać się do płytki naciskowej.
-      MC_HOC_2017_10_Cole_instruction: Utwórz funkcję, aby ukończyć budowę wagonika.
-      MC_HOC_2017_10_Cole_old_instruction: Utwórz funkcję, aby ukończyć budowę wagonika.
-      MC_HOC_2017_10_Kiki_instruction: Utwórz funkcję, aby ukończyć budowę wagonika.
-      MC_HOC_2017_10_RETRY_instruction: Utwórz funkcję, aby ukończyć budowę wagonika.
-      MC_HOC_2017_10_RYAN_instruction: Utwórz funkcję, aby ukończyć budowę wagonika.
-      MC_HOC_2017_10_RYAN2_instruction: Utwórz funkcję, aby ukończyć budowę wagonika.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Doprowadź Agenta do płytki naciskowej.
-      MC_HOC_2017_Ali_instruction: Użyj funkcji, aby znaleźć drogę przez lawę.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_Ryan_03_instruction: |-
-        A teraz użyj pętli, aby pomóc Agentowi wybudować most
-        przez rzekę poprzez stawianie bloków w wodzie.
-      MC_HOC_2017_Ryan_05_instruction: Zniszcz te kaktusy aby gracz mógł dotrzeć do
-        celu.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_2017_03_Cole_instruction: 'Zakoduj Agenta tak, aby otworzył bramę. '
+      MC_HOC_2017_03_Kiki_instruction: Pokieruj Agentem tak, aby dostał się do płyty
+        naciskowej.
+      MC_HOC_2017_04_instruction: Zmień pętlę z poprzedniej łamigłówki, aby pomóc
+        Agentowi przerzucić pomost nad szerszą częścią tej rzeki.
+      MC_HOC_2017_04POINT5_Cole_instruction: Pokieruj Agentem tak, aby dostał się
+        do płyty naciskowej.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Pokieruj Agentem tak, aby dostał się
+        do płyty naciskowej.
+      MC_HOC_2017_04_Cole_instruction: Pokieruj Agentem tak, aby dostał się do płyty
+        naciskowej.
+      MC_HOC_2017_04_Kiki_instruction: Pokieruj Agentem tak, aby dostał się do płyty
+        naciskowej.
+      MC_HOC_2017_05_instruction: Użyj funkcji, aby pomóc Agentowi dotrzeć do płyty
+        naciskowej.
+      MC_HOC_2017_05_Cole_instruction: Dotrzyj postacią gracza do łopaty.
+      MC_HOC_2017_05_Josh_instruction: Dotrzyj postacią gracza do łopaty.
+      MC_HOC_2017_05_Kiki_instruction: Dostań się postacią gracza na pomarańczowe
+        pole.
+      MC_HOC_2017_06_Cole_instruction: Napraw ten kod, aby Agent mógł przerzucić przez
+        rzekę most.
+      MC_HOC_2017_06_Josh_instruction: Napraw ten kod, aby pomóc Agentowi przerzucić
+        przez rzekę most.
+      MC_HOC_2017_06_Kiki_instruction: Napraw ten kod, aby pomóc Agentowi przerzucić
+        przez rzekę most.
+      MC_HOC_2017_07_Cole_instruction: Zniszcz lód. Dzięki temu {currentPlayerName}
+        dotrze do wagonika.
+      MC_HOC_2017_07_Kiki_instruction: Użyj funkcji, aby oczyścić drogę do pomarańczowego
+        pola.
+      MC_HOC_2017_07a_Kiki_instruction: Oczyść drogę do pomarańczowego pola.
+      MC_HOC_2017_08_Cole_instruction: Zmień otrzymaną funkcję, aby działała w tym
+        biomie.
+      MC_HOC_2017_08_Kiki_instruction: Zmień tę funkcję, aby działała w tej łamigłówce.
+      MC_HOC_2017_08_RY_instruction: Użyj funkcji, aby przedostać się przez lawę.
+      MC_HOC_2017_08_Will_instruction: Użyj funkcji, aby przedostać się przez lawę.
+      MC_HOC_2017_09_Cole_instruction: Zaprogramuj Agenta tak, aby oczyścił drogę
+        graczowi.
+      MC_HOC_2017_09_Kiki_instruction: Zaprogramuj Agenta tak, aby oczyścił drogę
+        graczowi i dotarł do płyty naciskowej.
+      MC_HOC_2017_10_Cole_instruction: Stwórz funkcję, która pozwoli Ci ukończyć ten
+        wagonik.
+      MC_HOC_2017_10_Cole_old_instruction: Stwórz funkcję, która pozwoli Ci ukończyć
+        ten wagonik.
+      MC_HOC_2017_10_Kiki_instruction: Stwórz funkcję, która pozwoli Ci ukończyć ten
+        wagonik.
+      MC_HOC_2017_10_RETRY_instruction: Stwórz funkcję, która pozwoli Ci ukończyć
+        ten wagonik.
+      MC_HOC_2017_10_RYAN_instruction: Stwórz funkcję, która pozwoli Ci ukończyć ten
+        wagonik.
+      MC_HOC_2017_10_RYAN2_instruction: Stwórz funkcję, która pozwoli Ci ukończyć
+        ten wagonik.
+      MC_HOC_2017_13_Cole_instruction: "**Piaskownica:**  Czas na samodzielną eksplorację!"
+      MC_HOC_2017_4.5v2_instruction: Pokieruj Agentem tak, aby dostał się do płyty
+        naciskowej.
+      MC_HOC_2017_Ali_instruction: Użyj funkcji, aby przedostać się przez lawę.
+      MC_HOC_2017_FP10x10_instruction: "**Piaskownica:** Czy podejmiesz wyzwanie i
+        znajdziesz wszystkie diamenty znajdujące się na tym poziomie? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Piaskownica:** Czy podejmiesz wyzwanie
+        i znajdziesz wszystkie diamenty znajdujące się na tym poziomie? "
+      MC_HOC_2017_FP20x20_instruction: "**Piaskownica:**  Czas na samodzielną eksplorację!"
+      MC_HOC_2017_Ryan_03_instruction: A teraz użyj pętli i pomóż Agentowi przerzucić
+        przez rzekę most, umieszczając bloki w wodzie.
+      MC_HOC_2017_Ryan_05_instruction: Zniszcz kaktusy, aby gracz mógł dostać się
+        do celu.
+      MC_HOC_Kiki_02_instruction: Pokieruj Agentem tak, aby dostał się do płyty naciskowej.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4376,6 +4389,9 @@
         się tym!
       New Infinity Project_instruction: Utwórz cokolwiek, co Ci się podoba, i podziel
         się tym!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -8250,9 +8266,10 @@
         all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Sprawdź, czy pod chmurką jest
         kwiat. Jeśli jest, zbierz nektar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

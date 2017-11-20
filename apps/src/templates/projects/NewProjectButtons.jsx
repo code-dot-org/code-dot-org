@@ -4,7 +4,6 @@ import styleConstants from '../../styleConstants';
 import color from "../../util/color";
 import Radium from 'radium';
 import _ from 'lodash';
-import firehoseClient from '../../lib/util/firehose';
 
 const DEFAULT_PROJECT_TYPES_ADVANCED = [
   'playlab',
@@ -69,6 +68,10 @@ const PROJECT_INFO = {
     label: i18n.projectTypeMinecraftDesigner(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft.png"
   },
+  'minecraft_hero': {
+    label: i18n.projectTypeMinecraftHero(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft_hero_square.jpg"
+  },
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
@@ -110,7 +113,7 @@ const PROJECT_INFO = {
 const styles = {
   fullsize: {
     width: styleConstants['content-width'],
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 10,
   },
   row: {
@@ -160,30 +163,11 @@ class NewProjectButtons extends React.Component {
     isRtl: PropTypes.bool,
     description: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
-    shouldLogEvents: PropTypes.bool,
   };
 
   static defaultProps = {
     canViewAdvancedTools: true
   };
-
-  handleProjectClick(projectType) {
-    if (!this.props.shouldLogEvents) {
-      return;
-    }
-
-    firehoseClient.putRecord(
-      'analysis-events',
-      {
-        study: 'my-projects-create-project',
-        study_group: 'start-new-project-widget',
-        // '-wip' should be removed when the data format is finalized
-        // and the A/B experiment is launched
-        event: 'create-project-wip',
-        data_json: JSON.stringify({projectType})
-      }
-    );
-  }
 
   render() {
     const { canViewAdvancedTools, description, isRtl } = this.props;
@@ -199,11 +183,7 @@ class NewProjectButtons extends React.Component {
             <div style={styles.row} key={rowIndex}>
               {
                 projectTypesRow.map((projectType, index) => (
-                  <a
-                    key={index}
-                    href={"/projects/" + projectType + "/new"}
-                    onClick={_.debounce(this.handleProjectClick.bind(this, projectType), 1000)}
-                  >
+                  <a key={index} href={"/projects/" + projectType + "/new"}>
                     <div style={[styles.tile, index < (TILES_PER_ROW - 1) && styles.tilePadding]}>
                       <img style={thumbnailStyle} src={PROJECT_INFO[projectType].thumbnail} />
                       <div style={styles.label}>

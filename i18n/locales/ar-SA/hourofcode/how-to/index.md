@@ -7,15 +7,13 @@ nav: how_to_nav
 
 <h1>كيف تدرس ساعة واحدة لتعلم البرمحة</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+الانضمام إلى الحركة وإدخل مجموعة من الطلاب إلى ساعة أولى من علوم الحاسوب مع هذه الخطوات. ومن السهل تشغيل ساعة من التعليمات البرمجية - حتى بالنسبة للمبتدئين! إذا كنت تريد مجموعة إضافية من يد للمساعدة، يمكنك العثور على [ المتطوعين المحليين](%= resolve_url('https://code.org/volunteer/local') %) للمساعدة في تشغيل "مدار التعليمات البرمجية" في الفئة الخاصة بك.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) as well as [teacher-guided tutorials](%= resolve_url('https://code.org/educate/teacher-led') %) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Promote your Hour of Code
 

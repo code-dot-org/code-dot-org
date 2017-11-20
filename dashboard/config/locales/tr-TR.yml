@@ -976,18 +976,18 @@
       applab: App Laboratuvarı
       gamelab: Oyun Laboratuvarı
       weblab: Web Lab (beta)
-    new_buttons_header: 'Start a new project:'
+    new_buttons_header: Yeni bir proje başlat
     rename: Yeniden adlandır
     save: Kaydet
     delete: Sil
-    import: Import
-    share_link_import_bad_link_header: Share link not recognized
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: Something went wrong.
-    share_link_import_error_body: There was a problem importing that share link. Please
-      try again.
+    import: "İçeri Aktar"
+    share_link_import_bad_link_header: Paylaşım bağlantısı tanınmıyor
+    share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık.
+      Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı
+      kopyaladığından emin ol.'
+    share_link_import_error_header: Bir sorun oluştu.
+    share_link_import_error_body: Paylaşım bağlantısını içeri aktarırken bir sorun
+      oluştu. Lütfen tekrar dene.
     exit: Kursa dön
     my_projects: Projelerim
     project_gallery: Projeler

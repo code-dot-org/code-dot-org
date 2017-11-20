@@ -4206,19 +4206,10 @@
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
+          title: Scegli la tua squadra e fai una partita di basket
           description_audience: ''
-          description_short: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
-          description: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
+          description_short: Scegli la tua squadra e fai una partita di basket
+          description: Scegli la tua squadra e fai una partita di basket
           stages:
             Bounce:
               name: Ping-Pong

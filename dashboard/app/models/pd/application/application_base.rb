@@ -3,12 +3,12 @@
 # Table name: pd_applications
 #
 #  id                  :integer          not null, primary key
-#  user_id             :integer          not null
+#  user_id             :integer
 #  type                :string(255)      not null
 #  application_year    :string(255)      not null
 #  application_type    :string(255)      not null
 #  regional_partner_id :integer
-#  status              :string(255)      not null
+#  status              :string(255)
 #  locked_at           :datetime
 #  notes               :text(65535)
 #  form_data           :text(65535)      not null
@@ -16,9 +16,11 @@
 #  updated_at          :datetime         not null
 #  course              :string(255)
 #  response_scores     :text(65535)
+#  application_guid    :string(255)
 #
 # Indexes
 #
+#  index_pd_applications_on_application_guid     (application_guid)
 #  index_pd_applications_on_application_type     (application_type)
 #  index_pd_applications_on_application_year     (application_year)
 #  index_pd_applications_on_course               (course)
@@ -71,20 +73,12 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
-    after_initialize :set_notes_template, if: :new_record?
-    before_create :set_notes_template
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
       self.application_year = nil
       self.application_type = nil
-    end
-
-    def set_notes_template
-      unless notes
-        self.notes = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
-      end
     end
 
     self.table_name = 'pd_applications'
@@ -108,11 +102,11 @@ module Pd::Application
     belongs_to :user
     belongs_to :regional_partner
 
-    validates_presence_of :user_id
+    validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
     validates_inclusion_of :application_type, in: APPLICATION_TYPES
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
     validates_presence_of :type
-    validates_presence_of :status
+    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
 
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"

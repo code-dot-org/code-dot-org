@@ -353,6 +353,18 @@ Maze.init = function (config) {
     });
   };
 
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
+
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
     hideRunButton: !!(level.stepOnly && !level.edit_blocks)

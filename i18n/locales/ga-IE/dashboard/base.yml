@@ -756,7 +756,7 @@ ga:
       applab: "Saotharlann Aipeanna"
       gamelab: "An tSaotharlann Cluichíochta"
       weblab: "Web Lab (beta)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "Start a new project"
     rename: "Ainm Nua"
     save: "Sábháil"
     delete: "Scrios"

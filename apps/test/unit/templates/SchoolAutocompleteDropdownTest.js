@@ -24,7 +24,7 @@ describe('SchoolAutocompleteDropdown', () => {
     expect(select).to.exist;
   });
 
-  it('Displays supplied value', () => {
+  it('Passes supplied value to the select control', () => {
     expect(select).to.have.prop('value', '12345');
   });
 
@@ -95,6 +95,36 @@ describe('SchoolAutocompleteDropdown', () => {
       return expect(promise).to.eventually.deep.equal({
         options: [
           {value: '-1', label: 'Other school not listed below (click here to provide details)'}
+        ]
+      });
+    });
+
+    it("Returns not listed when there is no query and the value is -1", () => {
+      schoolAutocompleteDropdown.setProps({value: '-1'});
+      const promise = getOptions('');
+      expect(server.requests).to.have.length(0);
+
+      return expect(promise).to.eventually.deep.equal({
+        options: [
+          {value: '-1', label: 'Other school not listed below (click here to provide details)'}
+        ]
+      });
+    });
+
+    it("Fetches school option when there is no query and the value is a school id", () => {
+      schoolAutocompleteDropdown.setProps({value: '9999'});
+      setServerResponse(
+        "/dashboardapi/v1/schools/9999",
+        {nces_id: 9999, name: 'Abcd School 1', city: 'Seattle', state: 'WA', zip: '98101'}
+      );
+
+      const promise = getOptions('');
+      expect(server.requests).to.have.length(1);
+      server.respond();
+
+      return expect(promise).to.eventually.deep.equal({
+        options: [
+          {value: '9999', label: 'Abcd School 1 - Seattle, WA 98101'}
         ]
       });
     });

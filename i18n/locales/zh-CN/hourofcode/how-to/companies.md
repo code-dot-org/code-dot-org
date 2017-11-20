@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_companies) %>'
+title: <（如何在公司讲授编程一小时）>
 layout: wide
 nav: how_to_nav
 ---
@@ -9,18 +9,18 @@ nav: how_to_nav
 
 ## 激发学生和志愿者服务编程一小时活动
 
-Code.org 提供了一些机会，让你的员工去[联系 ](%= resolve_url('https://code.org/volunteer') %)当地的班级，开展编程一小时活动来让他们分享他们的职业教学经历并激励学生去学习计算机科学。
+Code.org 可以让你的员工通过[](%= resolve_url('https://code.org/volunteer') %)志愿者身份和那些当地编程一小时课程的学生互动。他们可以通过分享技术工作上的经验里激励学生学习计算机科学的意愿。
 
 - [报名志愿者](%= resolve_url('https://code.org/volunteer') %)。
-- 获取员工如何联系当地课堂的指导，请参阅我们的[合作伙伴指南](%= localized_file('/files/hoc-corporate-toolkit.pdf') %)。
+- 请参阅[公司合作伙伴指南来获取如果鼓励员工，让他们和当地课堂互动的信息。](%= localized_file('/files/hoc-corporate-toolkit.pdf') %)
 
-## 其他方式可以支持 编程一小时 活动的方式：
+## 其他一些公司可以支持编程一小时活动的方式：
 
-- 请你的CEO[发送一封全体电邮](%= resolve_url('/promote/resources#sample-emails') %)强调计算机科学的重要性，并鼓励员工去传播这个信息。 
+- 请公司的CEO[发文给全体员工](%= resolve_url('/promote/resources#sample-emails') %)，强调计算机科学的重要性，并鼓励员工去传播这个信息。 
 - 与同事一起尝试使用[教程](%= resolve_url('/learn') %)开展快乐的编程一小时活动。
-- 请参阅以下的操作指南，在您的公司为当地的学生或公益伙伴组织一场编程一小时活动。
+- 在您公司的办公地为当地的学生或公益伙伴举办编程一小时活动。请参阅以下的操作指南。
 
-# How to host an Hour of Code event with students
+# 如何和学生一起来举办编程一小时的活动
 
 ## 1. 推广你的编程一小时活动
 
@@ -33,7 +33,7 @@ Code.org 提供了一些机会，让你的员工去[联系 ](%= resolve_url('htt
 
 我们通过各种各样的合作者为所有年龄的参与者举办一场[丰富多彩的一小时活动](%= resolve_url('/learn') %)。 [点击这里试一试！](%= resolve_url('/learn') %)
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**编程一小时活动**不需要很多的提前准备时间。参加者可以依照自己的节奏和技能水平进行自我学习。
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
@@ -43,21 +43,21 @@ Code.org 提供了一些机会，让你的员工去[联系 ](%= resolve_url('htt
 
 您需要做以下**准备工作**：
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+- 在电脑或机台上测试活动内容。确认它们在浏览器里的声音和视频一切运行正常。
+- 如果选择的课程需要很好的音响效果，提供耳机给参加者或者让他们自带。
 - **电脑不够？**采取[搭档合作编程](https://www.youtube.com/watch?v=vgkahOzFH2Q)的方式。 搭档合作可以让参与者互相帮助，减少对组织者的依赖。 他们将明白编程也是一种社交和协作。
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- 担心**频带宽度太低？**，在活动开始前先播视频，这样参加者不会现场自行下载视频。或者可以选择线下不上网的活动。
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 开始先播一段激励人心的视频。
 
 讨论计算机科学对我们生活的各个方面的影响，鼓舞参与者，启动编程一小时活动 分享更多关于那些激励你探索计算机科学和你在公司的角色。
 
 **播放鼓舞人心的视频：**
 
 - Code.org 推出比尔·盖茨，马克·扎克伯格，NBA球星克里斯·波什为主演的视频（它们的长度分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)，和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)。）
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [编程一小时 全球视频 ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [总统奥巴马号召所有学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
 - 从[这里](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)寻找更多的励志视频。
 

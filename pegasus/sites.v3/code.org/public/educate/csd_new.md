@@ -148,18 +148,18 @@ If you are interested in joining in 2018-19, sign up below.
 
 ## <a name="involved"></a>Keep up with CS Discoveries
 
-<div style="float:left; padding:25px; width:50%">
+<div class="col-33" style="padding-right: 20px;">
 
 <h4>Let us know how we're doing!</h4>
 
 We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
-<br><br>
+<br>
 
 <a href="mailto:support@code.org"><button>Give feedback</button></a>
 
 </div>
 
-<div style="float:left; padding:25px; width:50%">
+<div class="col-33" style="padding-right: 20px;">
 
 <h4> Subscribe for the latest news </h4>
 
@@ -168,6 +168,17 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 <br><br>
 
 <a href="/educate/csd/status_signup"> <button>Sign up</button> </a>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<h4>Chat about CS Discoveries in the forum</h4>
+
+We have forums for educators to discuss and trade ideas about CS Discoveries and talk about the curriculum.  Code.org forums are used for all of our courses K-12.
+<br><br>
+
+<a href="http://forum.code.org/c/csd"> <button>Visit the forum</button></a> 
 
 </div>
 
@@ -188,6 +199,22 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 [![image](/images/fit-200/kulkarni_parker_CS_recruitment.png)](/files/programs/kulkarni_parker_CS_recruitment.pdf)
 [![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
 [![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
+
+### Share these videos with students and administrators:
+
+<div class="col-50" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video4", video_code: "g4qfsH8bc8s", play_button: 'center', letterbox: 'false' %>
+
+</div>
+
+<div class="col-50" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "video5", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
+
+</div>
+
+<div style="clear: both;"></div>
 
 <hr/>
 

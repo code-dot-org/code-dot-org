@@ -259,14 +259,14 @@ ka:
       my_dashboard: "ჩემი მთავარი პანელი"
       courses: "კურსები"
       course_catalog: "კურსების კატალოგი"
-      project_gallery: "პროექტის გალერეა"
+      project_gallery: "პროექტები"
       sections: "განყოფილებები"
       help_support: "დახმარება და მხარდაჭერა"
       report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
       teacher_community: "მასწავლებელთა კოლექტივი"
       professional_learning: "პროფესიონალთაშორისი სწავლება"
       documentation: "დოკუმენტაცია"
-      tutorials: "გაკვეთილები"
+      tutorials: "ტუტორიალები"
       educate_overview: "პედაგოგის მიმოხილვა"
       educate_elementary: "დაწყებითი სკოლა"
       educate_middle: "საშუალო სკოლა"
@@ -497,7 +497,7 @@ ka:
     notes_coming_soon: 'ამ ვიდეოს ჩანაწერები მალე დაიდება.'
     autoplay_option: 'ვიდეოების ავტომატური ჩართვა'
     download: 'ვიდეოს გადმოწერა'
-    show_notes: 'შენიშვნების ჩვენება'
+    show_notes: 'ჩანიშვნების ჩვენება'
     show_video: 'ვიდეოს ჩვენება'
   compatibility:
     upgrade:
@@ -627,7 +627,7 @@ ka:
     help_resources: "დახმარება და რესურსები"
     help_support: "დახმარება და მხარდაჭერა"
     documentation: "დოკუმენტაცია"
-    tutorials: "გაკვეთილები"
+    tutorials: "ტუტორიალები"
   multi:
     wrong_title: "პასუხი არასწორია"
     wrong_body: "ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!"
@@ -756,7 +756,7 @@ ka:
       applab: "App Lab"
       gamelab: "თამაშების ლაბორატორია"
       weblab: "ვებ ლაბორატორია (ბეტა)"
-    new_buttons_header: "Start a new project:"
+    new_buttons_header: "დაიწყეთ ახალი პროექტი"
     rename: "სახელის შეცვლა"
     save: "შენახვა"
     delete: "წაშლა"
@@ -852,9 +852,9 @@ ka:
     main_course: 'მთავარი კურსი'
     extra_course_content: 'კურსის დამატებითი მასალები'
     csf_e_1: 'გაიზარდე კურს E-მდე (არჩევითი)'
-    csf_e_2: 'E კურსის შემცველობა'
+    csf_e_2: 'E კურსის შიგთავსი'
     csf_f_1: 'გაიზარდე კურს F-მდე (არჩევითი)'
-    csf_f_2: 'F კურსის შემცველობა'
+    csf_f_2: 'F კურსის შიგთავსი'
     csd1_1: 'თავი 1: პრობლემის გადაჭრის პროცესი'
     csd1_2: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
     csd2_1: 'თავი 1: ვებ კონტენტი და HTML'
@@ -953,7 +953,7 @@ ka:
   hidden_script: "თქვენი მასწავლებელი არ გელოდათ აქ. გთხოვთ, ჰკითხეთ მას, რომელ გაკვეთილზე უნდა იყოთ."
   return_unit_overview: 'კურსის მიმოხილვაზე გადასვლა'
   return_course_overview: 'კურსის მიმოხილვაზე გადასვლა'
-  view_all_units: 'ყველა ერთეულის ნახვა'
+  view_all_units: 'ყველა სექციის ნახვა'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

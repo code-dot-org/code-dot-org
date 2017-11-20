@@ -28,6 +28,11 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     // Value is the NCES id of the school
     value: PropTypes.string,
     singleLineLayout: PropTypes.bool,
+    showRequiredIndicator: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    showRequiredIndicator: true,
   };
 
   sendToParent = (selectValue) => {
@@ -44,15 +49,17 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   }
 
   render() {
-    const singleLineLayout = this.props.singleLineLayout;
+    const {showRequiredIndicator, singleLineLayout} = this.props;
     const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
 
     return (
       <div style={containerStyle}>
         <div style={questionStyle}>
-          {i18n.schoolName()}
-          <span style={styles.asterisk}> *</span>
+          {singleLineLayout ? i18n.school() : i18n.schoolName()}
+          {showRequiredIndicator && (
+            <span style={styles.asterisk}> *</span>
+          )}
           {this.props.showErrorMsg && (
              <div style={styles.errors}>
                {i18n.censusRequiredSelect()}

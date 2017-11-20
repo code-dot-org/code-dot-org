@@ -12,22 +12,42 @@ export default class SchoolAutocompleteDropdown extends Component {
     value: PropTypes.string
   };
 
-  getOptions(q) {
+  constructSchoolOption = school => ({
+    value: school.nces_id.toString(),
+    label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`
+  });
+
+  constructSchoolNotFoundOption = () => ({
+      value: "-1",
+      label: i18n.schoolNotFound()
+  });
+
+  getOptions = (q) => {
+    // Existing value? Construct the matching option for display.
+    if (q.length === 0 && this.props.value) {
+      if (this.props.value === '-1') {
+        return Promise.resolve({options: [this.constructSchoolNotFoundOption()]});
+      } else {
+        const getUrl = `/dashboardapi/v1/schools/${this.props.value}`;
+        return fetch(getUrl)
+          .then(response => response.ok ? response.json() : [])
+          .then(json => ({options: [this.constructSchoolOption(json)]}));
+      }
+    }
+
+    // Search
     if (q.length < 4) {
       return Promise.resolve();
     }
-    const url = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
-    return fetch(url)
+    const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
+    return fetch(searchUrl)
       .then(response => response.ok ? response.json() : [])
       .then(json => {
-        const schools = json.map(school => ({
-          value: school.nces_id.toString(),
-          label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`
-        }));
-        schools.unshift({ value: "-1", label: i18n.schoolNotFound()});
+        const schools = json.map(school => this.constructSchoolOption(school));
+        schools.unshift(this.constructSchoolNotFoundOption());
         return { options: schools };
     });
-  }
+  };
 
   render() {
     return (

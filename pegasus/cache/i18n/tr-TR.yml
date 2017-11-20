@@ -393,6 +393,7 @@
   homepage_hero_text_stat_loc: "öğrenciler tarafından #loc satır kod yazılmıştır"
   homepage_hero_text_stat_students: 'Code Stüdyoda #student_count tane öğrenci hesabı'
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: 'Frozen: Anna ve Elsa '
   homepage_slot_text_teacher: "Öğretmen Panosu"
@@ -531,11 +532,15 @@
   mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: "Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Tasarımcısı
   minecraft_adventurer: Minecraft Maceracısı
   minecraft_tutorials: Minecraft Kodlama Saati Eğitimleri
   minecraft_specs: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar, tabletler
     | 2. sınıf ve üstü
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: Başlayın
   minecraft_designer_description: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın
     sendeki sürümde programla.
   minecraft_designer_button: Başlayın
@@ -545,6 +550,40 @@
   minecraft_no_internet: "İnternetin yok mu?"
   minecraft_download_adventurer: Minecraft Maceracı'nın çevrimdışı versiyonunu indir.
   minecraft_subtitle: Minecraft Kod Saati
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
+    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
+    of the new tutorial by the Minecraft team and learn about the resources and best
+    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
+    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Kodlama Saati Etkinlikleri-Spor
   sports_og_title: Kendini zorla. Herkes öğrenebilir.
   sports_og_description: "Şampiyonlar ve altın madalyalı sporcular olarak kod saatini
@@ -759,11 +798,13 @@
     deneyin ve Bilgisayar Bilimi Eğitimi Haftasında <a href="https://hourofcode.com">Kod
     Saati hareketine katılın.</a> '
   dashboard_k5_courses: K-5 için 20 saatlik kurslar
-  dashboard_k5_courses_desc: Bu kurslar kolay ve hiçbir bilgisayar gerektirmeyen kodlamayı
-    kendi kendine öğreten derslerden oluşmaktadır. Her ders tek başına uygulanabilir
+  dashboard_k5_courses_desc: 'Bu kurslar kolay ve hiçbir bilgisayar gerektirmeyen
+    kodlamayı kendi kendine öğreten derslerden oluşmaktadır. Her ders tek başına uygulanabilir
     veya tüm dersler ardı ardına bir dönem boyunca uygulanabilir.Her bir eğitim yaklaşık
     20 dersten oluşmaktadır. Dersler, anaokulu öğrencilerinin dahi kolayca anlayabileceği
-    şekilde oluşturulmuştur.
+    şekilde oluşturulmuştur. Eğitim vermeye başlamak için Amerika içinde bedava eğitim
+    kurslarımıza katılmak için tıklayın:  <a href="/professional-development-workshops">
+    Yakınınızdaki kursu bulun!</a>'
   dashboard_middle_courses: 20 saat Orta okul kursları
   dashboard_middle_courses_desc: Bilgisayar Bilimi ve Programlama eğitim programı
     orta okullarda matematik ve fen bilimlerinin öğretilmesinde bir araç olarak kullanılabilir.
@@ -967,8 +1008,8 @@
   dashboard_coursed: 'Ders D: '
   dashboard_coursee: 'Ders E: '
   dashboard_coursef: 'Ders F: '
-  dashboard_unplugged: Bilgisayarlarınız yok ise bu bağımsız dersleri sınıfınızda
-    kullanın.<a href='%{unplugged_url}'>
+  dashboard_unplugged: Bilgisayarlarınız yok ise bu <a href='%{unplugged_url}'>bilgisayarsız
+    dersleri sınıfınızda</a> kullanın.
   dashboard_curriculum: Müfredat
   dashboard_curriculum_overview: K-5 Müfredatı Ana Hatları
   dashboard_overview: Genel Bakış
@@ -1074,7 +1115,7 @@
   carousel_heading_beyond_beginners: Yeni başlayanlar için eğitimler
   carousel_heading_javascript: Javascript öğreten partner eğitimleri
   carousel_heading_beyond_javascript: JavaScript öğreten eğitimler
-  carousel_heading_unplugged: İnternet bağlantınız veya cihazınız yok mu? "Enstrümansız"
+  carousel_heading_unplugged: İnternet bağlantınız veya cihazınız yok mu? "Bilgisayarsız"
     bilgisayar bilimlerini deneyin
   carousel_heading_devices: Tabletler ve telefonlar için partner eğitim uygulamaları
   carousel_heading_beyond_devices: Tabletler ve telefonlar için eğitim uygulamaları
@@ -1309,7 +1350,7 @@
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
-  thinkersmithspanish_platformtext: "İnternetsiz"
+  thinkersmithspanish_platformtext: Bilgisayarsız
   khan_platformtext: Modern Web tarayıcıları
   khanes_platformtext: Modern Web tarayıcıları
   khanpt_platformtext: Modern Web tarayıcıları
@@ -1319,8 +1360,8 @@
   tynker_platformtext: Modern Web tarayıcıları
   scratch_platformtext: Masaüstü için web tarayıcıları (tabletler dahil değil)
   lightbot_platformtext: BÜTÜN tarayıcılar ve IOS, Android veya oyun konsolu
-  thinkersmith_platformtext: "İnternetsiz"
-  condcards_platformtext: "İnternetsiz"
+  thinkersmith_platformtext: Bilgisayarsız
+  condcards_platformtext: Bilgisayarsız
   lightbotintl_platformtext: IOS Android (veya web tarayıcı)
   codehs_platformtext: Modern tarayıcılar. (Bir sonraki kurs ücretlidir.)
   codecademy_platformtext: Modern web tarayıcıları. IOS Android uygulamaları
@@ -1341,9 +1382,9 @@
   touchdevelop_platformtext: Modern tarayıcılar, akıllı telefonlar, tüm cihazlar
   appinventor_platformtext: Modern tarayıcılar + Android
   blockly_platformtext: Sadece modern tarayıcılar
-  thinkersmith2_platformtext: "İnternetsiz"
-  kodableunplugged_platformtext: "İnternetsiz"
-  projguts_platformtext: "İnternetsiz"
+  thinkersmith2_platformtext: Bilgisayarsız
+  kodableunplugged_platformtext: Bilgisayarsız
+  projguts_platformtext: Bilgisayarsız
   hourofcode_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   frozen_platformtext: Modern tarayıcılar + Tablet
   starwars_platformtext: Modern tarayıcılar + tabletler
@@ -1369,7 +1410,7 @@
   scratch_shortdescription: "İnteraktif oyunlar,hikayeler ve animasyonlar yaratın."
   lightbot_shortdescription: Prosedürleri ve döngüleri kullanarak  bulmacaları çözmek
     için Lightbot ile programlayın!
-  thinkersmith_shortdescription: Bir grup için internetsiz öğreticiler
+  thinkersmith_shortdescription: Bilgisayarı olmayanlar için Bağlantısız Etkinlikler
   condcards_shortdescription: Bir deste kart ile algoritmaları öğrenin
   lightbotintl_shortdescription: Kodlama kavramlarını öğretmek için bir oyun
   codehs_shortdescription: Eğlenceli ve görsel bir başlangıç olan Karel ile programlamaya
@@ -1401,7 +1442,7 @@
   blockly_shortdescription: "Çevrimdışı öğrenmek için ZIP dosyasını indirin"
   thinkersmith2_shortdescription: Bilgisayarın 1leri ve 0ları kullanarak bilgileri
     nasıl gösterdiğini öğrenin
-  kodableunplugged_shortdescription: Bilgisayarsız eğlenceli bir egzersiz
+  kodableunplugged_shortdescription: Bilgisayarsız eğlenceli bir alıştırma
   projguts_shortdescription: Taş/Kağıt/Makas kullanarak modelleme ve simulasyon deneyin
   hourofcode_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   frozen_shortdescription: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya
@@ -1490,8 +1531,8 @@
     ayrıca önemli olan hata ayıklama becerilerini öğrenecekler. "Robotik Arkadaşlarım"
     grup aktivitesi olarak en iyi şekilde çalışır ve sınıfta kullanmak için bir öğretmen
     çalışma kitabı içerir.
-  condcards_longdescription: Bir deste kart kullanarak, algoritmaları ve koşullu ifadeleri
-    bu "bilgisayarsız"  aktivitede öğren. Öğrenciler bu aktiviteyi gruplar halinde
+  condcards_longdescription: Bir "bilgisayarsız" etkinlikte bir deste kart kullanarak,
+    algoritmaları ve koşullu ifadeleri öğren. Öğrenciler bu etkinliği gruplar halinde
     yapabilir, her grubun bir deste karta ihtiyacı vardır.
   lightbotintl_longdescription: Program kodlama mantığını, bu 4 yaş üstü, ios, android
     ( ya da web tarayıcısında) kullanılabilen süper-temel programlamayla başlayarak
@@ -1568,13 +1609,13 @@
     code.org dan indirebilirsiniz. 3MB bir ZIP dosyası
   thinkersmith2_longdescription: "Öğrenciler harflerim ikili şekilde depolanması konusunda
     bilgi edinecek. Dersin sonunda öğrenciler kendi isimlerinin baş harfini kodlayacak."
-  kodableunplugged_longdescription: 'Düz kağıt ile kullanılmak üzere tasarlanmış olan
+  kodableunplugged_longdescription: Düz kağıt ile kullanılmak üzere tasarlanmış olan
     fuzzFamily Frenzy, 5 yaş ve üstü çocuklara programlama mantığı oluşturma için
-    kullanılabilir. Bir öğretmen Oyunu açıklamalı, o zaman öğrenciler ortaklaşa sorunu
-    çözmeye çalışır. '
-  projguts_longdescription: Bu bağımsız "unplugged" etkinliğinde bir grup öğrenci
-    Kağıt/taş/makas oyununun farklı bir versiyonunu kullanacak ve modelleme ve simülasyon
-    çalışmalarını öğrenecek. Sonuçları görüp farklı modelleri deneyecekler.
+    kullanılabilir. Bir öğretmen oyunu açıklamalı, daha sonra öğrenciler eşlerini
+    programlayarak bir engeli geçip bulmacayı tamamlamasını sağlar.
+  projguts_longdescription: Bu "bağlantısız" etkinlikte bir grup öğrenci Kağıt/taş/makas
+    oyununun farklı bir versiyonunu kullanacak ve modelleme ve simülasyon çalışmalarını
+    öğrenecek. Sonuçları görüp farklı modelleri deneyecekler.
   hourofcode_longdescription: Yeni code.org/hoc için placeholder
   frozen_longdescription: Anna ve Elsa sihri ve buzun güzelliğini keşfederken sen
     de onlara kod yazarak katıl. Buz-kayağı ile kar kristalleri ve desenler oluşturarak
@@ -2023,42 +2064,3 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  minecraft_agent: 'Minecraft: Hero’s Journey'
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  minecraft_agent_button: Start
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
-    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
-    of the new tutorial by the Minecraft team and learn about the resources and best
-    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
-    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.

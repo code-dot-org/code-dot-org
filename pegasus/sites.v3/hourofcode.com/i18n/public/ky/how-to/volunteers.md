@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Ыктыярчылар үчүн жетектеме
 
-### Make a difference in a classroom today!
+### Бүгүн классты башкача кылгыла!
 
 ## Ыктыярчы болуу себеби
 
@@ -15,44 +15,44 @@ nav: how_to_nav
 
 - "Мен тажрыйбамдын эң кызыгы - класста бардыгы кыздар жана өңү түстүүлөр болгондугу. Бул балдарга жолугуп жана аларды шыктандыруу, биздин тармактын келечеги кең болушуна өбөлгө болот."
 - "Жаш кыздарды технологияларга кызыктыруу мага өзгөчө жакты. Өзүмдүн жергемдеги келерки муунга жардам берип жаткандай сездим."
-- "Балдардын толкунданганын көрүп АБДАН КУБАНДЫМ. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "Балдардын толкунданганын көрүп АБДАН КУБАНДЫМ. Мектептеги окуусу анча жакшы эмес балдар, программа түзүүчү катары өзүн мыкты көрсөтүшүп, башкаларга үйрөнгөнгө жардам берүү аркылуу өздөрүнө болгон ишеними артып калганын мугалимдер байкашканы мени таң калтырды."
 
-## Anyone can volunteer
+## Ар ким ыктыярчы боло алат
 
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+**Техн. ыктыярчылар жана сүйлөөчүлөр**: Технологияга кандай байланышыңар бар? Сиз эгер софт өндүрүүчү, техникалык компанияда (инженер же инженер эмес) иштесеңер же компүтердик курстарды өтсөңөр, окуучуларды шыктандырууга жардам бере аласыңар! Окуучулардын көбү технологиялар менен иштеген кишини жолуктурган эмес, ошондуктан мугалимдер класстарын адистер жана студенттер менен байланыштырганды жакшы көрүшөт.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+Класста сүйлөп берсеңер же мугалимге тапшырма аткарууга жардамдашсаңар болот. Жергиликтүү класска барып окуучуларды информатика окууну улантууга чакыргыла.
 
-<a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button></p> 
+<a href="https://code.org/volunteer/engineer"><button>Бүгүн катталып, техник ыктыярчы болгула!</button></p> 
 
 <p>
-  <strong>Anyone passionate about expanding opportunity</strong>: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+  <strong>Ар ким мүмкүнчүлүктөрүн кеңейтүүгө кызыкдар</strong>: Компүтердик илимди үйрөнүү окуучуларга жаңы мүмкүнчүлүктөрдүн эшигин ачат деп ишенесизби? Жергиликтүү класстарга жардамдашкыла же мектептен кийинки иш-чара уюштургула! Код саатын өткөзүш үчүн компүтердик билимдүү болуштун кереги жок. Көп учурда жардамдашуу сунушу балаңыздын мугалимин, досуңарды же клубду байкап көрүүгө ынандыруу үчүн жетиштүү.
 </p>
 
 <p>
-  How do you get started?
+  Кантип баштадыңар эле?
 </p>
 
 <ol>
   <li>
     <p>
-      <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+      Код саатын өткөзүүнү сунуштап, <a href="%= resolve_url('/promote/resources#help-schools') %">бул эмейлди</a> балаңыздын мугалимине жөнөткүлө.
     </p>
   </li>
   
   <li>
     <p>
-      Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+      Сабактан кийинки Код саатын мектепте өткөзүүнү сунуштагыла.<a href="%= resolve_url('/how-to') %">Бул кантип кылуу жетектемеси</a> сизге жардам берет.
     </p>
   </li>
 </ol>
 
 <h2>
-  Recruit your co-workers to volunteer
+  Чогуу иштегендерди ыктыярчылыкка тарткыла
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Досторуңарга жана жумушуңарда Код сааты тууралуу айткыла. Миңдеген мугалимдер ыктыярчыларды издешет, алардан <a href="https://code.org/volunteer">ыктыярчы болуп катталуусун</a> сурангыла. Жумушуңузду дагы катышууга чакыргыла. Баарын тартуу үчүн <a href="%= resolve_url('/promote/resources#sample-email') %">бул эмейлди</a> компанияңыздын башкаруучусуна же директоруна жөнөткүлө.
 </p>
 
 <h2>
@@ -61,28 +61,28 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    Код саатына кызыктырууга жана катышууга шыктандыруу үчүн көрсөткөнгө <a href="%= resolve_url('/promote/resources#videos') %">видео тандап алгыла</a>.
   </li>
   <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+    Баяндама, иш график, даярданма жана маркетинг материалдарын камтыган <a href="/files/hoc-volunteer-toolkit.pdf">Код сааты ыктыярчысынын топтомосун</a> карап чыккыла. Ыктыярчы тажрыйбасын алууга керек нерсенин баары даяр!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+    Сабак учурунда тапшырма аткарууну пландаштырып жатсаңыз, бир <a href="%= resolve_url('/learn') %">Код сааты тапшырмасын</a> аткарууга кеминде 30 мүнөт бөлгүлө.
   </li>
   <li>
-    If you're visiting a school, complete any background checks or required paperwork.
+    Мектепке бара турган болсоңуз, керектүү маалыматтарды же документтерди толтургула.
   </li>
   <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+    Бул окучулар менен иштешүү <a href="https://code.org/files/CSTT_Volunteers.pdf">кеңештерин карап чыккыла</a>.
   </li>
   <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+    Facebook, Twitter, Instagram, Tumblr'де #Hourofcode хештеги менен талкууларга катышкыла.
   </li>
   <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
+    Байланышып, өз сессияңызда эмнелерди айтарыңызды мугалимдер менен талкуулагыла.
   </li>
   <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+    Виртуалдык ыктыярчы болсоңор, аудио/видео ж-а скриншот жөнөтүү мүмкүнчүлүгүн текшергиле.
   </li>
 </ul>
 
@@ -91,11 +91,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Төмөнкү жөнөкөй күн тартибин пайдаланып, Код сааты иш-чараңарды ийгиликтүү уюштуруп алгыла. Ага чейин, иш чара күнү мектепке катталганыңарды текшергиле жана мугалимге жолуккула. Иш жүргүзүү планын макулдашкыла жана бардык башка учурларды талкуулагыла.
 </p>
 
 <h3>
-  <strong>Sample agenda:</strong>
+  <strong>Иш пландын үлгүсү:</strong>
 </h3>
 
 <table>
@@ -111,133 +111,133 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
   
   <tr>
     <td>
-      1-5 minutes
+      1-5 мүнөт
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+      <a href="%= resolve_url('promote/resources#videos') %">Шыктандыруучу видео көрсөткүлө</a>.
     </td>
   </tr>
   
   <tr>
     <td>
-      5-10 minutes
+      5-10 мүнөт
     </td>
     
     <td>
-      Introduce yourself and learn more about the students: </ul>
+      Өзүңөрдү тааныштыргыла жана окуучуларды сураштыргыла: </ul>
       
       <li>
-        What do you work, what do you do, and what do you love most about your job?
+        Кайда иштейсиңер, эмне иш аткарасыңар жана жумушуңардагы силерге эң жаккан нерсе?
       </li>
       
       <li>
-        What or who inspired you?
+        Ким же эмне сизди шыктандырды?
       </li>
       
       <li>
-        How did you get interested in computer science?
+        Компүтердик илимге кантип кызыгып калгансыз?
       </li>
       
       <li>
-        Did you have a mentor?
+        Насаатчыңыз барбы?
       </li>
       
       <li>
-        Share a story about how tech affects everyone.
+        Технологиялардын таасири тууралуу айтып бергиле.
       </li>
       
-      <br />Ask the students questions and leave time for Q&A.</br> 
+      <br />Окуучуларга суроо бергиле, суроо-жоопко убакыт калсын.</br> 
       
       <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+        Кандай жумушка кызыгышат, сүйүктүү техникалык гаджеттери же колдонмолору кайсылар жана алар кантип жасалган деп ойлошот?
       </li>
       
       <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
+        Окуучулардын сизге суроолору барбы?</ul></td> </tr> <tr>
           <td>
-            30-60 minutes
+            30-60 мүнөт
           </td>
           
           <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+            <strong>Код жазгыла!</strong>Классты кыдырып, суроолорго жооп бергиле жана тапшырмаларды аткарууга жардамдашкыла. Окуучуларга даяр чечим бербестен, анын ордуна эмне туура эмес болуп жаткандыгын көрсөтө алуучу суроо бергенге аракет кылгыла жана бири-биринен суроо берип, жооп издегенге үндөгүлө. Бири-биринен үйрөнүү - бул чоң мүмкүнчүлүк.
           </td>
         </tr>
         
         <tr>
           <td>
-            1-3 minutes
+            1-3 мүнөт
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            Баарына ыраазычылык билдирип, шыктандыруучу сөздөрдү айткыла. Компанияңыздын жарнамаларын тараткыла (чаптамалар сонун болот)!
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            Кийин
           </td>
           
           <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+            <strong>Туруктуу өзгөрүү киргизгиле:</strong> Мугалимге Код саатын толук кандуу информатика курсуна айлантууну сунуштагыла! Мугалимиңер менен <a href="https://code.org/yourschool">code.org/yourschool</a> кирип мектеп учурда эмнелерди окутаарын толтургула жана аларды өз классына информатиканы киргизүүгө ынандыргыла.
           </td>
         </tr></tbody> </table> 
         
         <h3>
-          <strong>After the Event:</strong>
+          <strong>Иш-чарадан кийин:</strong>
         </h3>
         <ul>
           <li>
-            Share your photos and stories with Code.org at giving@code.org.
+            giving@code.org аркылуу фотолоруңузду Code.org менен бөлүшүңүз.
           </li>
           <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+            Компанияңыздын ыктыярчыларды көрүү порталында ыктыярчылык сааттарыңызды киргизүүнү унутпаңыз.
           </li>
           <li>
-            Share about your experience on social media #HourOfCode!
+            #HourOfCode! деп, социалдык желелерде тажрыйба бөлүшкүлө!
           </li>
           <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+            Иш-чара учурунда <strong>өзгөчө окуучулар менен</strong> фото/видео тартсаңар, аларды социалдык желелерге жайгаштыруу үчүн мугалимден/ата-энелерден уруксат алуу керектигин унутпаңыз.
           </li>
           <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+            Бир айдан кийин текшергиле: мугалим информатика курсун сунуштоого кызыкдарбы? <a href="https://code.org/yourschool"> ресурстарын жана адистик окуу мүмкүнчүлүктөрүн бөлүшүп, алардын ишине көмөктөшкүлө</a>.
           </li>
         </ul>
         <h2>
-          How you get selected as a technical volunteer of guest speaker
+          Сизди техникалык ыктыярчы же сөз сүйлөөчү катары тандап алышат
         </h2>
         <ul>
           <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+            Мугалимдер <a href="https://code.org/volunteer/local">ыктыярчылар картабыздан</a> ыктыярчыларды издешет.
           </li>
           <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+            Тандалып алуу мүмкүнчүлүгүңүздү жогорулатуу үчүн профилиңизде болушунча толук маалымат бериңиз.
           </li>
           <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+            Мугалим сиз менен ушул толтурма аркылуу байланышат (эмейл адресиңиз эч качан башкалар менен бөлүшүлбөйт). <em>Эгер мугалимдерден өтө эле көп сунуш алып жатса, мындай каттардын алдында берилген шилтемени басып, маалыматтарыңызды өзгөртүп же жазылуудан баш тартып, учурдагы тандоолорду өзгөртө аласыңар.</em>
           </li>
         </ul>
         <h2>
-          Volunteering during the Hour of Code FAQ
+          Код сааты КБС учурунда ыктыярчылык кылыңыз
         </h2>
         <h3>
-          <strong>I haven't been contacted by a teacher yet. How can I still volunteer?</strong>
+          <strong>Мага мугалим байланыша элек. Кантип ыктыярчы бойдон калсам болот?</strong>
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Жергиликтүү мектептердин директор/мугалим/байланыш бөлүмүнө чалып, кандай жардам керектигин билгиле.
         </p>
         <h3>
-          <strong>How long do classroom visits last for?</strong>
+          <strong>Сабактын узактыгы канча созулат?</strong>
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Барып өткөн сабак адатта 60-90 мүнөт, виртуалдык сабак 20-30 мүнөт болот.
         </p>
         <h3>
-          <strong>What age group is the Hour of Code tutorial appropriate for?</strong>
+          <strong>Код саатынын тапшырмалары кайсыл курактарга туура келет?</strong>
         </h3>
         <p>
-          Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
+          Code.org Код саатын тапшырмаларын оюн жана башкатырма түрүндө бардык класстардын (K-12) жана катмарлардан чыккан балдар-кыздарга ылайыкташтырып түзүлгөн. Баарына, чоң кишилерге дагы, тапшырмаларыбызды аткаруу кызыктуу болот!
         </p>
         <p>
           <%= view :signup_button %>
