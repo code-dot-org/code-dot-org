@@ -5,7 +5,7 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Poniżej znajduje się przykładowa rezolucja wspierająca Tydzień Edukacji Informatycznej i jej cele, która może zostać wykorzystana przez stanowych i lokalnych ustawodawców, liderów firm itd.
 
   
 
