@@ -20,7 +20,6 @@ const menuStyle = {
   boxShadow: "3px 3px 3px gray",
   marginTop: TAIL_HEIGHT,
   textAlign: 'left',
-  maxWidth: 200,
 };
 const tailBorderStyle = {
   position: 'absolute',
@@ -50,7 +49,6 @@ export default class PopUpMenu extends Component {
     className: PropTypes.string,
     isOpen: PropTypes.bool,
     beforeClose: PropTypes.func,
-    showTail: PropTypes.bool,
   };
 
   render() {
@@ -65,7 +63,6 @@ export default class PopUpMenu extends Component {
           targetPoint={this.props.targetPoint}
           className={this.props.className}
           children={this.props.children}
-          showTail={this.props.showTail}
         />
       </Portal>
     );
@@ -80,7 +77,6 @@ class MenuBubbleUnwrapped extends Component {
     }).isRequired,
     children: PropTypes.any,
     className: PropTypes.string,
-    showTail: PropTypes.bool,
   };
 
   renderMenuItems() {
@@ -120,81 +116,46 @@ class MenuBubbleUnwrapped extends Component {
       <div style={style} className={className}>
         {this.renderMenuItems()}
         {/* These elements are used to draw the 'tail' with CSS */}
-        {this.props.showTail &&
-          <span style={tailBorderStyle}/>
-        }
-        {this.props.showTail &&
-          <span style={tailFillStyle}/>
-        }
+        <span style={tailBorderStyle}/>
+        <span style={tailFillStyle}/>
       </div>
     );
   }
 }
 export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
-export class MenuBreak extends Component {
-
-  render() {
-    const style = {
-      borderTop: '1px solid ' + color.lighter_gray,
-      marginTop: STANDARD_PADDING/2,
-      marginBottom: STANDARD_PADDING/2,
-      marginLeft: STANDARD_PADDING,
-      marginRight: STANDARD_PADDING,
-    };
-    return (
-      <div style={style}></div>
-    );
-  }
-}
-
 class Item extends Component {
   static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.array]).isRequired,
+    children: PropTypes.string.isRequired,
     onClick: PropTypes.func,
-    href: PropTypes.string,
     first: PropTypes.bool,
     last: PropTypes.bool,
-    color: PropTypes.string,
+  };
+
+  static style = {
+    color: color.dark_charcoal,
+    paddingLeft: STANDARD_PADDING,
+    paddingRight: STANDARD_PADDING,
+    cursor: 'pointer',
+    ':hover': {
+      backgroundColor: color.lightest_gray,
+    }
   };
 
   render() {
-    const {first, last, onClick, children, href} = this.props;
-    if (!href && !onClick) {
-      throw new Error('Expect at least one of href/onClick');
-    }
-
-    const paddingStyle = {
-      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 4,
-      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 4,
-      paddingLeft: STANDARD_PADDING,
-      paddingRight: STANDARD_PADDING,
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor: color.lightest_gray,
-      }
+    const {first, last, onClick, children} = this.props;
+    const style = {
+      ...PopUpMenu.Item.style,
+      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 2,
+      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
     };
-
-    const textStyle = {
-      color: this.props.color? this.props.color : color.dark_charcoal,
-      textDecoration: 'none', // Remove underline from anchor tags
-    };
-
-    const Tag = href ? 'a' : 'div';
     return (
       <div
-        style={paddingStyle}
+        className="pop-up-menu-item"
+        style={style}
+        onClick={onClick}
       >
-        <Tag
-          className="pop-up-menu-item"
-          href={href}
-          style={textStyle}
-          onClick={onClick}
-        >
-          {children}
-        </Tag>
+        {children}
       </div>
     );
   }
