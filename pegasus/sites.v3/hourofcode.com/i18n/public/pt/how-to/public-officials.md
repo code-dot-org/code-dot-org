@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Faça com que todas as escolas participem e todos os alunos possam aprender!
 
-1. **Leia nosso resumo** sobre por que a educação em ciência da computação é importante, e como você pode ajudar esse esforço apoiando a Hora do Código. [Veja o resumo aqui.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Leia nosso resumo** sobre por que a educação em ciência da computação é importante, e como você pode ajudar esse esforço apoiando a Hora do Código. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Recrute as escolas da sua região.** Use [este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) ou [este material de divulgação](<%= resolve_url('/promote/stats') %>) como ponto de partida e veja este [guia](<%= resolve_url('/how-to') %>) para escolas.
 

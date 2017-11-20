@@ -13,13 +13,11 @@ Junte-se ao movimento e apresente para um grupo de estudantes a sua primeira hor
 
 ## 2. Escolha um tutorial para sua hora
 
-Nós fornecemos uma variedade de tutoriais divertidos, [guiados por estudantes](<%= resolve_url('/learn') %>), bem como [tutoriais orientados por professores](<%= resolve_url('https://code.org/educate/teacher-led') %>) para participantes de todas as idades, criados por vários parceiros.
-
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promova sua Hora do Código
 
-Promova sua Hora de Código [com essas ferramentas](<%= resolve_url('/promote/resources') %>) e incentive outros a hospedar seus próprios eventos.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4) Avalie suas necessidades tecnológicas (computadores são opcionais)
 
@@ -35,14 +33,14 @@ Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus pr�
 
 ## 5. Comece sua hora de código com um áudio ou vídeo inspirador
 
-**Convide um [voluntário local](<%= resolve_url('https://code.org/volunteer/local') %>) para inspirar seus alunos falando sobre a amplitude das possibilidades em ciência da computação.** Existem milhares de voluntários ao redor do mundo prontos para ajudar com sua Hora do Código através de uma visita à sala de aula ou conversa por vídeo com seus alunos!
+**Invite a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Mostre um vídeo inspirador:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (Existem versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA) disponíveis)
 - Encontre mais [recursos](<%= resolve_url('https://code.org/inspire') %>) e [vídeos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspiradores.
 
-**Não tem problema se você e seus alunos não têm experiência com ciência da computação. Apresentamos aqui algumas ideias para começar sua atividade da Hora do Código:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explique as formas em que a tecnologia afeta nossas vidas, com exemplos de meninos e meninas que se preocupam (falar sobre salvar vidas, ajudar as pessoas, conectar as pessoas etc).
 - Em uma atividade com a turma toda, monte uma lista com as coisas que usam a programação na vida cotidiana.
@@ -50,17 +48,17 @@ Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus pr�
 
 ## 6. É hora de programar!
 
-**Direcione os alunos para a atividade**
+**Direct students to the activity**
 
 - Escreva o link do tutorial em um quadro branco. Encontre o link listado nas [informações do seu tutorial selecionado](<%= resolve_url('/learn')%>) sob o número de participantes.
 
-**Quando seus alunos tiverem dificuldades, tudo bem responder:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Eu não sei. Vamos descobrir juntos".
 - "A tecnologia nem sempre funciona da maneira que queremos".
 - "Aprender programação é como aprender uma nova língua, você não vai se tornar fluente imediatamente".
 
-**E se um estudante terminar cedo?**
+**What if a student finishes early?**
 
 - Os alunos podem ver todos os tutoriais e [tentar outra atividade do Hour of Code](<%= resolve_url('/learn')%>).
 - Ou, peça aos alunos que terminarem mais cedo para que ajudem os colegas que estão tendo problemas com a atividade.
