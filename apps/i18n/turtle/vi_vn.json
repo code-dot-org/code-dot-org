@@ -75,7 +75,7 @@
   "penUp": "nâng bút lên",
   "reinfFeedbackMsg": "Đây là bản vẽ của bạn! Tiếp tục làm việc trên nó hoặc tiếp tục câu đố tiếp theo.",
   "setAlpha": "thiết lập alpha",
-  "setCharacter": "set character to {character}",
+  "setCharacter": "thiết lập nhân vật {character}",
   "setColour": "chỉnh màu",
   "setPattern": "thiết lập thiết kế mẫu",
   "setWidth": "chỉnh độ rộng",
