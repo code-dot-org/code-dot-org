@@ -27,6 +27,14 @@ The celebrities will work with Code.org to pick a winner. Increase your chances 
 
 ## Use one of these activities:
 
+<div id="hoc-tiles-container"></div>
+
+<script>
+  $("#hoc-tiles-container").load("/dashboardapi/hoc_courses_challenge");
+</script>
+
+<link rel="stylesheet" type="text/css" href="/shared/css/course-blocks.css"></link>
+
 <a name="lookingfor"></a>
 ## What are they looking for?
 **Stephen Curry**: When the Golden State Warriors head to the NBA finals, we get there through teamwork. I want to see what you and your team can create. 
