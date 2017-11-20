@@ -1948,5 +1948,31 @@ en:
       12:
         image: 'notes/mc_2017_agent_intro_12.png'
         text: "If you want to try again, you can hit the blue reset button to reset everything to where it started. And if you need to delete a block of code, drag it from your workspace to the toolbox. Remember to hit run to get the Agent moving. Okay, go ahead and try out the first few levels. Good luck!"
-
-     
+    mc_2017_repeat:
+      1:
+        image: 'notes/mc_2017_repeat_1.png'
+        text: "Stampy: I wonder what Stacy is up to?"
+      2:
+        image: 'notes/mc_2017_repeat_2.png'
+        text: "Stacy: Woah, I think I'm in the right place. This is amazing!"
+      3:
+        image: 'notes/mc_2017_repeat_3.png'
+        text: "I feel like I'm back in Minecraft! Hello. How are you? Hello?"
+      4:
+        image: 'notes/mc_2017_repeat_4.png'
+        text: "Oh, there's a creeper. You don't do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!"
+      5:
+        image: 'notes/mc_2017_repeat_5.png'
+        text: "Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it's pretty awesome. I'm a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I've probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn't happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can't, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you're learning?"
+      6:
+        image: 'notes/mc_2017_repeat_6.png'
+        text: "Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there's actually some of that coming up in the levels ahead, so go ahead and give loops a try."
+      7:
+        image: 'notes/mc_2017_repeat_7.png'
+        text: "In the next level, you can use a loop to move the Agent along the path. Drag the repeat block into the workspace and place the move forward block inside the repeat block. This tells the computer to do the same thing many times in a row without having to drag a whole bunch of blocks into the workspace. You can choose how many times to repeat by putting a number in the repeat block."
+      8:
+        image: 'notes/mc_2017_repeat_8.png'
+        text: "You can put turns and multiple commands in the repeat block too, but for now try using a repeat to move the Agent forward a few steps. Remember, if you get stuck on a puzzle you can always hit the blue "reset" button and try again."
+      9:
+        image: 'notes/mc_2017_repeat_9.png'
+        text: "If you are thinking about having a cool job like Katie's, go ahead and click the show code button when you finish every level. That's going to actually show you the Javascript code that someone like Katie uses when she's actually programming Minecraft. Katie: Yeah, good luck everyone!"
