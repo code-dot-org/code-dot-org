@@ -1,4 +1,5 @@
-CREATE OR REPLACE VIEW analysis.quarterly_workshop_attendance AS
+drop table if exists analysis.quarterly_workshop_attendance;
+CREATE TABLE analysis.quarterly_workshop_attendance AS
   SELECT pde.user_id,
          pdw.course,
          MAX(CASE WHEN pdw.subject IN ('Units 1 and 2: The Internet and Digital Information','Units 2 and 3: Web Development and Animations') THEN 1 ELSE 0 END) q1,
@@ -26,8 +27,7 @@ CREATE OR REPLACE VIEW analysis.quarterly_workshop_attendance AS
   'Units 3 and 4: Building Games and User Centered Design',
   'Units 4 and 5: App Prototyping and Data & Society',
   'Unit 6: Physical Computing')
-  GROUP BY 1,2 
-WITH NO SCHEMA BINDING;
+  GROUP BY 1,2;
 
 GRANT ALL PRIVILEGES ON analysis.quarterly_workshop_attendance TO GROUP admin;
 GRANT SELECT ON analysis.quarterly_workshop_attendance TO GROUP reader, GROUP reader_pii;
