@@ -1911,6 +1911,42 @@ en:
       7:
         image: 'notes/applab_intro_share_7.png'
         text: "Thanks for coming along the ride. Now go build and share your first app, and keep on building apps with App Lab!"
+    mc_2017_agent_intro:
+      1:
+        image: 'notes/mc_2017_agent_intro_1.png'
+        text: "Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you're going to love it!"
+      2:
+        image: 'notes/mc_2017_agent_intro_2.png'
+        text: "Wait a minute - there's a hole in the track! (screaming)"
+      3:
+        image: 'notes/mc_2017_agent_intro_3.png'
+        text: "Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let's make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I'm just gonna gather some of this terracotta. Wait. Guys, I can't mine! Preston: Same. Lizzy: I can't either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can't mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don't know. Stampy: Does anyone know how to write Minecraft code?"
+      4:
+        image: 'notes/mc_2017_agent_intro_4.png'
+        text: "(poof) Preston: What is that? Stampy: I've never seen one of these before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
+      5:
+        image: 'notes/mc_2017_agent_intro_5.png'
+        text: "Oh, okay, hey, so I'm in the real world now. I'm going to go try to find the Minecraft offices."
+      6:
+        image: 'notes/mc_2017_agent_intro_6.png'
+        text: "But, I'm going to need your help. Start doing the tutorial, start learning how to code, and I'll catch up with you guys after a few levels, okay? Wish me luck! I think it's this way. Ow! Cactus! I'm okay!"
+      7:
+        image: 'notes/mc_2017_agent_intro_7.png'
+        text: "To complete the Hour of Code challenge, you'll need to write code to program the agent. You'll work together with The Agent to clear any obstacles in your path, so you can pick up the items you'll need for your journey. Only the Agent can place and break blocks, and only you can collect items. Your screen is split into three main parts. On the left is Minecraft."
+      8:
+        image: 'notes/mc_2017_agent_intro_8.png'
+        text: "The middle area is the toolbox with commands that the Agent can understand."
+      9:
+        image: 'notes/mc_2017_agent_intro_9.png'
+        text: "And on the right, is the workspace. That's where you stack the commands to build your program to control the Agent."
+      10:
+        image: 'notes/mc_2017_agent_intro_10.png'
+        text: "The Agent can walk, turn, and activate pressure plates. It can also destroy blocks and place blocks. When it places the block like these minecart rails, it places it underneath itself."
+      11:
+        image: 'notes/mc_2017_agent_intro_11.png
+        text: "If you forget what to do, the instructions for each level are at the top."
+      12:
+        image: 'notes/mc_2017_agent_intro_12.png'
+        text: "If you want to try again, you can hit the blue reset button to reset everything to where it started. And if you need to delete a block of code, drag it from your workspace to the toolbox. Remember to hit run to get the Agent moving. Okay, go ahead and try out the first few levels. Good luck!"
 
-
-      
+     
