@@ -48,7 +48,7 @@
     "CONTROLS_IF_ELSE_TOOLTIP": "Dodaj končni pogoj za IF blok.",
     "CONTROLS_IF_HELPURL": "http://code.google.com/p/blockly/wiki/If_Then",
     "CONTROLS_IF_IF_TOOLTIP": "Dodaj, odstrani ali prerazporedi odseke za spremembo tega IF bloka.",
-    "CONTROLS_IF_MSG_ELSE": "drugače",
+    "CONTROLS_IF_MSG_ELSE": "sicer",
     "CONTROLS_IF_MSG_ELSEIF": "sicer če",
     "CONTROLS_IF_MSG_IF": "če",
     "CONTROLS_IF_TOOLTIP_1": "Če vrednost velja, potem izvrši nekaj kode.",
@@ -386,7 +386,7 @@
     "VARIABLES_GET_TOOLTIP": "Vrne vrednost te spremenljivke.",
     "VARIABLES_SET_CREATE_GET": "Ustvari 'dobi %1'",
     "VARIABLES_SET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Set",
-    "VARIABLES_SET_TAIL": "v",
+    "VARIABLES_SET_TAIL": "na",
     "VARIABLES_SET_TITLE": "nastavi",
     "VARIABLES_SET_TOOLTIP": "Nastavite to spremenljivko tako, da bo enaka vhodu."
 }
