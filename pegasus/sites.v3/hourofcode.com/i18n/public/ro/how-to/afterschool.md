@@ -13,7 +13,7 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Alege un indrumator
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Încercați-le!](<%= resolve_url('/learn') %>)
+Oferim o varietate de [ tutoriale distractive, de o oră ](<%= resolve_url('/learn') %>) pentru participanți de toate vârstele, create de o varietate de parteneri. [Încercați-le!](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
