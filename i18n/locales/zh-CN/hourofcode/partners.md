@@ -3,15 +3,15 @@ title: '<%= hoc_s(:title_partners) %>'
 ---
 编程一小时的网站由《编程一小时》和计算机科学教育周咨询委员会及审查委员会运营。
 
-[咨询委员会](%= resolve_url('/advisory-committee') %)由来自基础教育、学术界、非盈利及盈利组织、国际组织的代表所组成。 该委员会负责指导编程一小时的活动制作。
+[咨询委员会](%= resolve_url('/advisory-committee') %)由来自基础教育、学术界、非盈利及盈利组织、国际组织的代表所组成。 该委员会负责指导编程一小时的活动策略。
 
-[审查委员会](%= resolve_url('/review-committee') %)由15名涵盖了基础教育的每个年级的教育者所组成，他们负责评估和推荐采纳了咨询委员会的能够量化学生表现的方法的活动。 These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[审查委员会](%= resolve_url('/review-committee') %)由15名 K-12级的教育工作者所组成，他们利用咨询委员会的规定评估和推荐活动。 这些教育工作者审查由数以百计的活动伙伴提交的学生主导的活动和由教师领导的课程计划, 评估活动的教育价值、参与学习的能力以及对不同的学生的潜在吸引力。
 
-这两个委员会所做的工作和贡献让编程一小时活动得以成功，同时也实现了活动本身想为每个学生提供认识计算机科学机会的愿景。
+这两个委员会的工作和贡献都促进了《编程一小时》的成功，为每一个学生提供计算机科学入门的愿景。
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# 拉丁美洲合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# 非洲合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# 澳大利亚合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'cn' %>
 
-# China Partners
+# 中国合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'fr' %>
 
-# France Partners
+# 法国合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# 印度尼西亚合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# 爱尔兰合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'in' %>
 
-# India Partners
+# 印度合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# 日本合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# 荷兰合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# 新西兰合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# 英国的合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,13 +107,13 @@ title: '<%= hoc_s(:title_partners) %>'
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# 加拿大合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# 主要合作伙伴和赞助商
+# 主要合作伙伴和企业赞助商
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
@@ -131,13 +131,13 @@ title: '<%= hoc_s(:title_partners) %>'
 
 * * *
 
-# Activity Partners
+# 活动合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# 基础设施合作伙伴和工具
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

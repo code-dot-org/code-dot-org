@@ -35,7 +35,7 @@ Dai il via alla tua Ora del Codice stimolando i bambini e discutendo di come l'i
 **Mostra un video stimolante:**
 
 - Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Il [video mondiale dell'Ora del Codice](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Il [video globale dell'Ora del Codice](https://www.youtube.com/watch?v=KsOIlDT145A) (in inglese).
 - [Il video del Presidente Obama che invita gli studenti ad imparare l'informatica.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Trova ancora più [risorse](%= resolve_url('https://code.org/inspire') %) e [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) stimolanti <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro" target="_blank">oppure questo in italiano di Programma il Futuro</a>.
 
@@ -69,7 +69,7 @@ Condividi le foto e i video del tuo evento dell'Ora del Codice sui social networ
 
 **Altre risorse dell'Ora del Codice:**
 
-- Controlla le [FAQ dell'Ora del Codice](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Controlla le [FAQ dell'Ora del Codice](https://hourofcode.com/it#faq).
 
 **Cosa c'è dopo l'Ora del Codice?**
 

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Poradnik dla wolontariuszy
 
-### Make a difference in a classroom today!
+### Już dzisiaj zmień coś w klasie!
 
 ## Dlaczego wolontariat?
 
