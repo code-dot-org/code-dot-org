@@ -32,7 +32,7 @@ Como agradecimiento por ayudar a que los estudiantes puedan comenzar a aprender 
 
 <% if @country == 'us' %> ¡Gracias a la generosidad de Ozobot, Dexter Industries, littleBits y Wonder Workshop, más de 100 clases serán seleccionadas para recibir robots o circuitos para su clase! Para ser elegible para recibir un conjunto, asegúrese de completar la encuesta enviada desde Code.org después de la Hora del Código. Code.org seleccionará las aulas ganadoras. Mientras tanto, revisa algunas de las actividades de robótica y circuitos. Tenga en cuenta que esto solo está abierto para las escuelas de EE.UU. <% end %>
 
-<br /> **La Hora del código se celebra durante <% = campaign_date ('full')%>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
+<br /> **La Hora del código se celebra durante <%= campaign_date('full')%>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
 
 ## 1. Corre la voz en tu escuela y comunidad
 

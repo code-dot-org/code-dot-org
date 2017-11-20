@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepárate para tu evento
 
 - Elige lugar, fecha y hora.
-- Envía [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) para invitar a tu alcalde, congresista, gobernador, o empresario influyente a dar una plática.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Invita a los medios/prensa como la radio o televisión local, periódicos o blogs de educación o tecnología. Vea nuestro [kit de prensa](<%= resolve_url('/promote/press-kit') %>) para obtener ayuda.
 
 ## 2. Durante tu evento
