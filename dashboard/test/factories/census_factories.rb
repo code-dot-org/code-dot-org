@@ -2,13 +2,14 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :census_submission, class: Census::CensusSubmission do
+    submitter_email_address "parent@school.edu"
     school_year 2017
     how_many_20_hours "none"
     how_many_10_hours "none"
     how_many_do_hoc "none"
     how_many_after_school "none"
     submitter_role "parent"
-    class_frequency "one_hour_per_week"
+    class_frequency "less_than_one_hour_per_week"
 
     transient do
       school_info_count 1
@@ -74,7 +75,6 @@ FactoryGirl.define do
   end
 
   factory :census_your_school2017v0, parent: :census_submission, class: Census::CensusYourSchool2017v0 do
-    submitter_email_address "parent@school.edu"
   end
 
   factory :census_your_school2017v1, parent: :census_your_school2017v0, class: Census::CensusYourSchool2017v1 do
@@ -96,8 +96,11 @@ FactoryGirl.define do
   factory :census_your_school2017v4, parent: :census_your_school2017v3, class: Census::CensusYourSchool2017v4 do
   end
 
+  factory :census_your_school2017v5, parent: :census_your_school2017v4, class: Census::CensusYourSchool2017v5 do
+    share_with_regional_partners true
+  end
+
   factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
-    submitter_email_address "hoc@email.address"
     submitter_name "Hoc Submitter"
   end
 

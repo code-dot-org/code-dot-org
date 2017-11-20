@@ -517,6 +517,7 @@ Dashboard::Application.routes.draw do
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
+      get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
@@ -533,6 +534,10 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
+
+  # Routes used by census
+  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#new_submission', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.

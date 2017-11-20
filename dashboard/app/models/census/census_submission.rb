@@ -30,6 +30,7 @@
 #  pledged                      :boolean
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
+#  share_with_regional_partners :boolean
 #
 # Indexes
 #
@@ -43,12 +44,13 @@
 class Census::CensusSubmission < ApplicationRecord
   has_and_belongs_to_many :school_infos
   validates :school_infos, presence: true
+  validates_email_format_of :submitter_email_address
 
   HOW_MANY_OPTIONS = {
     none: "NONE",
     some: "SOME",
     all: "ALL",
-    dont_know:  "I DON’T KNOW"
+    dont_know:  "I DON'T KNOW"
   }.freeze
 
   enum how_many_do_hoc: HOW_MANY_OPTIONS, _prefix: true
@@ -67,7 +69,7 @@ class Census::CensusSubmission < ApplicationRecord
   enum submitter_role: ROLES, _prefix: true
 
   CLASS_FREQUENCIES = {
-    one_hour_per_week: 'ONE HOUR PER WEEK',
+    less_than_one_hour_per_week: 'LESS THAN ONE HOUR PER WEEK',
     one_to_three_hours_per_week: 'ONE TO THREE HOURS PER WEEK',
     three_plus_hours_per_week: 'THREE PLUS HOURS PER WEEK',
     dont_know: "I DON'T KNOW"

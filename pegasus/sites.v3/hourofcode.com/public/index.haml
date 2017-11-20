@@ -4,9 +4,9 @@ title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-yea
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "og:image:width": '1920'
-  "og:image:height": '1080'
+  "og:image": "<%= 'https://' + request.host + '/images/social-media/hourofcode-2015-video-thumbnail.jpg' %>"
+  "og:image:width": '1440'
+  "og:image:height": '900'
   "og:video:url": "<%= 'http://youtube.com/v/KsOIlDT145A' %>"
   "og:video:secure_url": "<%= 'https://youtube.com/v/KsOIlDT145A' %>"
   "og:video:type": "video/mp4"
@@ -17,7 +17,7 @@ social:
   "twitter:url": "https://hourofcode.com"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/hourofcode-2015-video-thumbnail.jpg' %>"
   "twitter:player": "<%= 'https://youtube.com/embed/KsOIlDT145A' %>"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
@@ -175,10 +175,10 @@ social:
       %img{src: "/images/fit-300/stats-languages.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
+      %p=hoc_s(:stats_global)
       -if @language == "en"
         %img{src: "/images/fit-300/stats-400m.jpg", style: "width: 100%;"}
       -else
-        %p=hoc_s(:stats_global)
         %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}

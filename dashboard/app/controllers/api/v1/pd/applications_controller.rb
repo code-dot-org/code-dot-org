@@ -68,7 +68,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes
+      :status, :notes, :response_scores
     )
   end
 

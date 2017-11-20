@@ -13,14 +13,14 @@ export const SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
 export const BUTTON_VARS = ['buttonL', 'buttonR'];
 const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);
 
-const BUTTON_EVENTS = ['press', 'down', 'up'];
+const BUTTON_EVENTS = ['down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];
 const TOUCH_EVENTS = ['down', 'up'];
 
 export const COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
-  toggleSwitch: ['open', 'close'],
+  toggleSwitch: ['open', 'close', 'change'],
   accelerometer: ['change', 'data', 'singleTap', 'doubleTap']
 };
 SENSOR_VARS.forEach(s => COMPONENT_EVENTS[s] = SENSOR_EVENTS);

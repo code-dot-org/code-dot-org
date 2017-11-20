@@ -192,7 +192,7 @@ module LevelsHelper
 
     if pairing_check_user
       recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
-      if recent_driver
+      if recent_driver && !recent_user.is_a?(DeletedUser)
         level_view_options(@level.id, pairing_driver: recent_driver)
         if recent_attempt
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
@@ -607,17 +607,30 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       block_type = ext.slice(1..-1)
-      content_tag(
-        :iframe,
-        '',
-        {
-          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
-          width: width ? width.strip : '100%',
-          scrolling: 'no',
-          seamless: 'seamless',
-          style: 'border: none;',
-        }
-      )
+      options = {
+        readonly: true,
+        embedded: true,
+        locale: js_locale,
+        baseUrl: Blockly.base_url,
+        blocks: '<xml></xml>',
+        dialog: {},
+      }
+      app = level.game.app
+      blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+
+      unless @blockly_loaded
+        @blockly_loaded = true
+        blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
+        content_tag(:style, '.blocklySvg { background: none; }') +
+        content_tag(:script, '', src: minifiable_asset_path('js/blockly.js')) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/blockly_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+        content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
+      end
+
+      blocks
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')

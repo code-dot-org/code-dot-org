@@ -14,7 +14,6 @@ import { showShareDialog } from './components/shareDialogRedux';
 import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
 
 import { convertBlocksXml } from '../craft/code-connection/utils';
-import experiments from '../util/experiments';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -177,19 +176,11 @@ function shareProject() {
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
-    // Only show the publish button for non-experimental project types in the
-    // project share dialog. this list can go away once the publishMoreProjects
-    // experiment is launched.
-    const nonExperimentalProjectTypes = [
-      'artist', 'playlab', 'gumball', 'iceage', 'infinity', 'applab', 'gamelab',
-    ];
-    const projectTypes = experiments.isEnabled('publishMoreProjects') ?
-      PublishableProjectTypesOver13 : nonExperimentalProjectTypes;
-
     // Allow publishing for any project type that older students can publish.
     // Younger students should never be able to get to the share dialog in the
     // first place, so there's no need to check age against project types here.
-    const canPublish = !!appOptions.isSignedIn && projectTypes.includes(appType);
+    const canPublish = !!appOptions.isSignedIn &&
+      PublishableProjectTypesOver13.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -274,34 +265,58 @@ function importProject() {
 
     const legacyShareRegex = /^\/c\/([^\/]*)/;
     const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
+    const projectShareRegex = /^\/projects\/minecraft_hero\/([^\/]*)/;
 
-    let levelSourcePath;
+    let levelSourcePath, channelId;
 
-    // Try a couple different kinds of share links
+    // Try a couple different kinds of share links, resolving to either a level
+    // source or channel
     if (shareUrl.pathname.match(legacyShareRegex)) {
       const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
       levelSourcePath = `/c/${levelSourceId}.json`;
     } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
       const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
       levelSourcePath = `/r/${levelSourceId}.json`;
+    } else if (shareUrl.pathname.match(projectShareRegex)) {
+      channelId = shareUrl.pathname.match(projectShareRegex)[1];
     }
 
+    const onFinish = function (source) {
+      // Source data will likely be from a different project type than this one,
+      // so convert it
+
+      const convertedSource = convertBlocksXml(source);
+      dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
+        const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
+        location.href = pathName;
+      });
+    };
+
+    const onError = function () {
+      Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
+    };
+
+    // Depending on what kind of source the share link resolved to (if it even
+    // did), retrieve the source and process it
     if (levelSourcePath) {
+      // level sources can be grabbed with a simple ajax request
       $.ajax({
         url: levelSourcePath,
         type: "get",
         dataType: "json"
       }).done(function (data) {
-        // Source data will likely be from a different project type than this one,
-        // so convert it
-
-        const convertedSource = convertBlocksXml(data.data);
-        dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
-          const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
-          location.href = pathName;
-        });
+        onFinish(data.data);
       }).error(function () {
-        Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
+        onError();
+      });
+    } else if (channelId) {
+      // channel-backed sources need to go through the project API
+      dashboard.project.getSourceForChannel(channelId, function (source) {
+        if (source) {
+          onFinish(source);
+        } else {
+          onError();
+        }
       });
     } else {
         Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
