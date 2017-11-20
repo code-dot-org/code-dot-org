@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Vegyen részt minden iskola, tanuljon minden tanuló!
 
-1. **Olvassa el a rövid leírást**, hogy miért fontos a számítástechnika oktatása és hogyan segítheti a Kódolás Óra támogatásával. [Rövid leírás.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Olvassa el a rövid leírást**, hogy miért fontos a számítástechnika oktatása és hogyan segítheti a Kódolás Óra támogatásával. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
 
