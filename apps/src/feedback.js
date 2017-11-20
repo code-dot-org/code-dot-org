@@ -66,6 +66,7 @@ import ChallengeDialog from './templates/ChallengeDialog';
  * @property {boolean} preventDialog
  * @property {ExecutionError} executionError
  * @property {boolean} hideXButton
+ * @property {string} shareLink
  */
 
 /**
@@ -112,10 +113,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   options.level = options.level || {};
 
   var hadShareFailure = (options.response && options.response.share_failure);
-  // options.response.level_source is the url that we are sharing; can't
-  // share without it
-  var canShare = options.response && options.response.level_source;
-  var showingSharing = options.showingSharing && !hadShareFailure && canShare;
+  var showingSharing = options.showingSharing && !hadShareFailure && options.shareLink;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
@@ -873,7 +871,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
     // set up the twitter share url
     var twitterUrl = "https://twitter.com/intent/tweet?url=" +
-      options.response.level_source;
+      options.shareLink;
 
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
@@ -897,7 +895,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
     // set up the facebook share url
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
-                      options.response.level_source;
+                      options.shareLink;
     options.facebookUrl = facebookUrl;
   }
 
@@ -952,6 +950,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           var phone = $(sharingDiv.querySelector("#phone"));
           var params = $.param({
             level_source: options.response.level_source_id,
+            channel_id: options.channelId,
             phone: phone.val()
           });
           $(submitButton).val("Sending..");

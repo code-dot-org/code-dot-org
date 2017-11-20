@@ -1455,6 +1455,8 @@ StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
+  options.channelId = project.getCurrentId();
+  options.shareLink = (options.response && options.response.level_source) || (window.location.origin + project.getPathName());
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
