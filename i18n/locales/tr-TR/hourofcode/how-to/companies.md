@@ -57,7 +57,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 **İlham verici bir video gösterin:**
 
 - Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un olduğu orjinal Code.org videosu başlatın ([1 dakika](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakika](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakika](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları vardır).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Dünya geneli Kod-Saati videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [ Başkan Obama tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
