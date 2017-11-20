@@ -24,12 +24,12 @@ ________________
 ## Example Facilitator One Pager
 The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
 
-Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
+Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop. 
 
 ________________
 <a id="contract"></a>
 ## Example contract
-[This is an example](/files/example-csp-facilitator-contract.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
+[This is an example](/files/example-csp-facilitator-contract.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met. 
 
 *DISCLAIMER: By providing this example, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter.*
 
@@ -80,7 +80,7 @@ ________________
 - This summer, Code.org will directly pay any non-local veteran faciiltators as they are only working at your site this summer.
 - Starting with the first Academic Year Workshop, each Regional Partner is responsible for contracting with and paying all facilitators. We will include the funding for you to pay them in our checks to your organization.
 
-**CS Principles and CS Discoveries Facilitator Payments**
+**CS Principles Facilitator Payments**
 
 - All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
 - Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. *(Note: this includes any out of region facilitators)*
