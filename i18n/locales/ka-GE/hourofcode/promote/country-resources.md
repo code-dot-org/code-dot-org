@@ -1,49 +1,49 @@
 ---
 title: '<%= hoc_s(:title_country_resources) %>'
-layout: ფართო
+layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
 <% if @country == 'la' %>
 
-# Recursos
+# რესურსები
 
-## ¿Qué hacemos cuando hacemos la Hora del Código?
+## რას ვაკეთებთ, როცა კოდის ერთ საათს ვაკეთებთ?
 
 <div class="handout" style="width: 50%; float: left;">
   
 <a href="/la/files/hacemos-la-Hora-del-Codigo.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo.png"></a>
-<br />En Español
+<br />ესპანურად
 </div>
 
 <div class="handout" style="width: 50%; float: left;">
   
 <a href="/la/files/hacemos-la-Hora-del-Codigo-Ingles.pdf" target="_blank"><img src="/la/images/fit-260/hacemos-la-Hora-del-Codigo-Ingles.png"></a>
-<br />En Inglés
+<br />ინგლისურად
 </div>
 
 <div style="clear:both"></div>
 
-## Vídeos
+## ვიდეოები
 
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)</strong></a>
+<a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>რატომ უნდა ისწავლოს ყველამ პროგრამირება? მონაწილეობა მიიღე კოდის ერთ საათში არგენტინაში (5წთ)</strong></a>
 
   
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
   
-[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=_vq6Wpb-WyQ)
+[**La Hora del Código en Chile (2 წთ)**](https://www.youtube.com/watch?v=_vq6Wpb-WyQ)
 
 <% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 <
 
-p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
+p>[**კოდის ერთი საათი (5 წთ)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <% elsif @country == 'ca' %>
 
@@ -51,7 +51,7 @@ p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <
 
-p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+p>[**შემოუერთდი ნოვა სკოტიის პროვინციას კოდის ერთ საათში (3 წთ)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
 <% elsif @country == 'id' %>
 
@@ -61,7 +61,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 <% elsif @country == 'jp' %>
 
-## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## კოდის ერთი საათი(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 <
 
