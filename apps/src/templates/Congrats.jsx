@@ -5,9 +5,7 @@ import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '../code-studio/responsiveRedux';
+import { connect } from 'react-redux';
 
 const styles = {
   container: {
@@ -16,7 +14,7 @@ const styles = {
   },
 };
 
-export default class Congrats extends Component {
+class Congrats extends Component {
   static propTypes = {
     certificateId: PropTypes.string,
     tutorial: PropTypes.string,
@@ -74,40 +72,42 @@ export default class Congrats extends Component {
       ...styles.container,
       width: this.responsive.getResponsiveContainerWidth()
     };
-    const store = createStore(combineReducers({responsive: responsiveRedux}));
 
     return (
-      <Provider store={store}>
-        <div style={contentStyle}>
-          <Certificate
-            tutorial={tutorial}
-            certificateId={certificateId}
-            isRtl={isRtl}
-            responsive={this.responsive}
-          />
-          {userType === "teacher" && isEnglish && (
-            <TeachersBeyondHoc
-              responsive={this.responsive}
-              isRtl={isRtl}
-            />
-          )}
-          <StudentsBeyondHoc
-            completedTutorialType={tutorialType}
-            MCShareLink={MCShareLink}
+      <div style={contentStyle}>
+        <Certificate
+          tutorial={tutorial}
+          certificateId={certificateId}
+          isRtl={isRtl}
+          responsive={this.responsive}
+        />
+        {userType === "teacher" && isEnglish && (
+          <TeachersBeyondHoc
             responsive={this.responsive}
             isRtl={isRtl}
-            userType={userType}
-            userAge={userAge}
-            isEnglish={isEnglish}
           />
-          {userType === "signedOut" && isEnglish && (
-            <TeachersBeyondHoc
-              responsive={this.responsive}
-              isRtl={isRtl}
-            />
-          )}
-        </div>
-      </Provider>
+        )}
+        <StudentsBeyondHoc
+          completedTutorialType={tutorialType}
+          MCShareLink={MCShareLink}
+          responsive={this.responsive}
+          isRtl={isRtl}
+          userType={userType}
+          userAge={userAge}
+          isEnglish={isEnglish}
+        />
+        {userType === "signedOut" && isEnglish && (
+          <TeachersBeyondHoc
+            responsive={this.responsive}
+            isRtl={isRtl}
+          />
+        )}
+      </div>
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(Congrats);
