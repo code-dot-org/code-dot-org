@@ -714,6 +714,23 @@ var projects = module.exports = {
     }.bind(this));
   },
 
+  getSourceForChannel(channelId, callback) {
+    channels.fetch(channelId, function (err, data) {
+      if (err) {
+        executeCallback(callback, null);
+      } else {
+        var url = channelId + '/' + SOURCE_FILE;
+        sources.fetch(url, function (err, data) {
+          if (err) {
+            executeCallback(callback, null);
+          } else {
+            executeCallback(callback, data.source);
+          }
+        });
+      }
+    });
+  },
+
   createNewChannelFromSource(source, callback) {
     channels.create({
       name: "New Project",
