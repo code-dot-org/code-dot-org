@@ -1,0 +1,12 @@
+name 'pwc_problemsolving'
+display_name 'Introduction'
+title 'Problem Solving - Personal Innovations'
+description 'description here'
+markdown <<MARKDOWN
+# Problem Solving - Personal Innovations
+
+This lesson is about getting students excited and connecting their own personal interests to computer science. Students are asked to share something they know a lot about and teach it to a small group. Groups make a “rapid” prototype of an innovative idea and share it. Students watch a brief video about computing innovations.
+
+---
+[Facilitator Guide](https://curriculum.code.org/pwc/ayp/1)
+MARKDOWN

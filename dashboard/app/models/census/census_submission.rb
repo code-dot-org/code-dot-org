@@ -30,6 +30,7 @@
 #  pledged                      :boolean
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
+#  share_with_regional_partners :boolean
 #
 # Indexes
 #

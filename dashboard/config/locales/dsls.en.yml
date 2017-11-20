@@ -2894,6 +2894,7 @@ en:
       csp-pre-survey-2017 preamble 4 the future: {}
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
+      csp-pt-tech-setup-and-tools: {}
       csp-pulse-check-survey-preamble: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp_ap_intro: {}
@@ -3041,6 +3042,21 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
+      pwc_cybersecurity:
+        description here: description here
+        title: title
+      pwc_data:
+        Data Science & Analytics - Solving Problems with Big Data: Data Science & Analytics - Solving Problems with Big Data
+        description here: description here
+      pwc_problemsolving:
+        Problem Solving - Personal Innovations: Problem Solving - Personal Innovations
+        description here: description here
+      pwc_programming:
+        description here: description here
+        title: title
+      pwc_technologyfoundations:
+        Technology Foundations - What is a Computer?: Technology Foundations - What is a Computer?
+        description here: description here
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -8768,7 +8784,7 @@ en:
       csp-post-survey-2017-q19:
         Agree: Agree
         Disagree: Disagree
-        I am going to like this computer science class.: I am going to like this computer science class.
+        I like this computer science class.: I like this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8786,7 +8802,7 @@ en:
       csp-post-survey-2017-q20:
         Agree: Agree
         Disagree: Disagree
-        I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree

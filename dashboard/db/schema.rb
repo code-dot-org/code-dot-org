@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117004332) do
+ActiveRecord::Schema.define(version: 20171117010623) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20171117004332) do
     t.boolean  "pledged"
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
+    t.boolean  "share_with_regional_partners"
     t.index ["school_year", "id"], name: "index_census_submissions_on_school_year_and_id", using: :btree
   end
 
