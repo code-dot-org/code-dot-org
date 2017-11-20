@@ -28,7 +28,8 @@ export default class QuickViewTable extends React.Component {
   static propTypes = {
     path: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
-    statusFilter: PropTypes.string
+    statusFilter: PropTypes.string,
+    regionalPartnerFilter: PropTypes.number
   };
 
   static contextTypes = {
@@ -144,7 +145,10 @@ export default class QuickViewTable extends React.Component {
   };
 
   constructRows() {
-    return this.props.statusFilter ? this.props.data.filter(row => row.status === this.props.statusFilter) : this.props.data;
+    let rows = this.props.data;
+    rows = this.props.regionalPartnerFilter ? rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter) : rows;
+    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    return rows;
   }
 
   render() {

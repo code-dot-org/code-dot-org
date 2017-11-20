@@ -19,7 +19,7 @@ describe("Summary", () => {
 
   it("Initially renders a spinner", () => {
     let summary = shallow(
-      <Summary/>, {context}
+      <Summary route={routeProps}/>, {context}
     );
 
     expect(summary.find('Spinner')).to.have.length(1);

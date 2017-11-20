@@ -14,7 +14,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 const selectMenuMaxHeight = 400;
 const selectStyleProps = {
   menuContainerStyle: {
-    maxHeight: selectMenuMaxHeight
+    maxHeight: selectMenuMaxHeight,
+    maxWidth: '500px'
   },
   menuStyle: {
     maxHeight: selectMenuMaxHeight - 2
