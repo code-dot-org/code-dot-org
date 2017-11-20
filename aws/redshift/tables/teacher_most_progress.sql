@@ -1,4 +1,5 @@
-CREATE OR REPLACE VIEW analysis.teacher_most_progress AS
+drop table if exists analysis.teacher_most_progress;
+CREATE table analysis.teacher_most_progress AS
 SELECT user_id,
        name script_most_progress,
        students AS students_script_most_progress
@@ -24,14 +25,13 @@ FROM (
                 JOIN dashboard_production.user_scripts us 
                   ON us.user_id = f.student_user_id AND us.script_id IN (181,187,169,189,223,221,122,123,124,125,126,127) AND us.started_at IS NOT NULL 
                 JOIN dashboard_production.scripts sc 
-                  ON sc.id = us.script_id AND se.created_at >= '2017-06-01'
+                  ON sc.id = us.script_id
        ) 
        WHERE update_rank = 1 
        GROUP BY 1,2
      )
    ) 
-   WHERE student_rank = 1 
-WITH NO SCHEMA BINDING;
+   WHERE student_rank = 1;
 
 GRANT ALL PRIVILEGES ON analysis.teacher_most_progress TO GROUP admin;
 GRANT SELECT ON analysis.teacher_most_progress TO GROUP reader, GROUP reader_pii;

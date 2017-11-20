@@ -9,7 +9,7 @@ import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {pegasus} from "../../lib/util/urlHelpers";
-import SectionActionDropdown from "./SectionActionDropdown";
+import SectionTableButtonCell from "./SectionTableButtonCell";
 import Button from '@cdo/apps/templates/Button';
 
 /** @enum {number} */
@@ -42,7 +42,6 @@ const styles = {
     paddingTop: 20,
     paddingLeft: 20,
     paddingBottom: 20,
-    width: 40,
   },
   sectionCol: {
     paddingLeft: 20,
@@ -157,7 +156,7 @@ class SectionTable extends Component {
   };
 
   actionCellFormatter = (temp, {rowData}) => {
-    return <SectionActionDropdown sectionData={rowData} handleEdit={this.props.onEdit}/>;
+    return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
