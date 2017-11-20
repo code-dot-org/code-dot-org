@@ -1245,6 +1245,12 @@ en:
         to the screen in numerical order. (Click to see full instructions)"
       CSDU6 - for loop - why for_instruction: "Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)"
+      CSDU6 arrays rainbow_instruction: "Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)"
+      CSDU6 arrays random_instruction: "Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)"
+      CSDU6 arrays variable_instruction: "Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one
         thing you can count multiple things\r\n\r\nFind out how many people like something
         other than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo
@@ -4015,6 +4021,9 @@ en:
         calls to your new functions with parameters. (Click to see full instructions)"
       SG U3L08 - individualCode_instruction: "Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)"
+      SG U3L08 - introUnderTheSea - recovery_instruction: "Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)"
       SG U3L08 - introUnderTheSea_instruction: "Add an extra fish, starfish, and
         piece of seagrass to the image. Look at, but don't change, the functions
         that create them. (Click to see full instructions)"
