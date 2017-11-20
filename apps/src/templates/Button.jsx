@@ -131,12 +131,13 @@ const Button = React.createClass({
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    id: PropTypes.string,
   },
 
   render() {
     const { className, href, text, icon, iconClassName, iconStyle, target,
-      style, onClick, disabled } = this.props;
+      style, onClick, disabled, id } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -155,6 +156,7 @@ const Button = React.createClass({
         target={target}
         disabled={disabled}
         onClick={onClick}
+        id={id}
       >
         <div>
           {icon &&

@@ -78,14 +78,12 @@ export default class Certificate extends Component {
   }
 
   render() {
-    const certificate = this.props.certificateId || 'blank';
+    const {responsive, isRtl, tutorial, certificateId} = this.props;
+    const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
-    const blankCertificate = blankCertificates[this.props.tutorial] || blankCertificates.hourOfCode;
+    const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
     const imgSrc = this.state.personalized ? personalizedCertificate : blankCertificate;
-
     const certificateLink = `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
-
-    const {responsive} = this.props;
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
     const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
@@ -100,12 +98,12 @@ export default class Certificate extends Component {
       text: i18n.justDidHourOfCode(),
     });
 
-    const isMinecraft = /mc|minecraft|hero/.test(this.props.tutorial);
+    const isMinecraft = /mc|minecraft|hero/.test(tutorial);
 
     let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
     if (isMinecraft && !this.state.personalized) {
       // Correct the minecraft print url for non-personalized certificates.
-      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${this.props.tutorial}`;
+      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
     }
 
     return (
@@ -113,22 +111,20 @@ export default class Certificate extends Component {
         <h1 style={headingStyle}>
           {i18n.congratsCertificateHeading()}
         </h1>
-        <LargeChevronLink
-          link={`/s/${this.props.tutorial}`}
-          linkText={i18n.backToActivity()}
-          isRtl={this.props.isRtl}
-        />
+        {tutorial && (
+          <LargeChevronLink
+            link={`/s/${tutorial}`}
+            linkText={i18n.backToActivity()}
+            isRtl={isRtl}
+          />
+        )}
         <div style={certificateStyle}>
           <a href={certificateLink}>
             <img src={imgSrc} />
           </a>
         </div>
         <div style={certificateStyle}>
-          {this.state.personalized ?
-            <div>
-              <h2>{i18n.congratsCertificateThanks()}</h2>
-              <p>{i18n.congratsCertificateContinue()}</p>
-            </div> :
+          {tutorial && !this.state.personalized && (
             <div>
               <h2>{i18n.congratsCertificatePersonalize()}</h2>
               <input
@@ -144,7 +140,13 @@ export default class Certificate extends Component {
                 {i18n.submit()}
               </button>
             </div>
-          }
+          )}
+          {tutorial && this.state.personalized && (
+            <div>
+              <h2>{i18n.congratsCertificateThanks()}</h2>
+              <p>{i18n.congratsCertificateContinue()}</p>
+            </div>
+          )}
           <h2>{i18n.congratsCertificateShare()}</h2>
           <SocialShare
             facebook={facebook}

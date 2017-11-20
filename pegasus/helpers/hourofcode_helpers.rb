@@ -66,7 +66,7 @@ def hoc_canonicalized_i18n_path(uri, query_string)
 end
 
 def hoc_detect_country
-  location = Geocoder.search(request.ip).first
+  location = request.location
   return 'us' unless location
 
   country_code = location.country_code.to_s.downcase
