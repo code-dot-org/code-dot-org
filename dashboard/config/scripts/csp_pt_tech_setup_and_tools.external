@@ -2,19 +2,30 @@ name 'csp-pt-tech-setup-and-tools'
 markdown <<MARKDOWN
 # Tech Setup and Tools for the AP Performance Tasks
 
-### Table of contents
+## Background
 
-* [AP Digital Portfolio Setup](#portfolio)
-* [Making PDFs for Written Responses](#pdf-written)
-* [Making PDF of Program Code](#pdf-code)
-* [Making a Video Screen Capture](#video)
+You need to setup your AP Digital Portfolio to officially submit your performance tasks and to sign up for the exam. There are also several tools you should be familiar with in order to create the necessary PDF documents and Video screen captures that you need to submit.
 
+## Resources and Quick Links
+
+* [AP Student Guide for setting up digital portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf) (PDF)
+* [AP Digital Portfolio](https://digitalportfolio.collegeboard.org/)
+    * [AP Central web page about the digital portfolio](https://apcentral.collegeboard.org/courses/resources/about-ap-digital-portfolio?course=ap-computer-science-principles)
+
+* [Code Print](https://bakerfranke.github.io/codePrint/) - useful tool for preparing PDF of code for Create PT
+
+## More Details -- Table of contents
+
+* [AP Digital Portfolio Setup](#portfolio) (Create & Explore PT)
+* [Making PDFs for Written Responses](#pdf-written) (Create & Explore PT)
+* [Making PDF of Program Code](#pdf-code) (Create PT only)
+* [Making a Video Screen Capture](#video) (Create PT required, could also use for Explore PT computational artifact)
 
 ---
 
 <a name="portfolio"> </a>
 
-## AP Digital Portfolio Setup
+### AP Digital Portfolio Setup
 
 *Goal: Students should be aware of the Digital Portfolio and how to access it. They should know what's there and be familiar with the basic mechanics of uploading and submitting their projects.*
 
@@ -34,7 +45,7 @@ The digital portfolio and guide contains a few helpful other things students sho
 
 <a name="pdf-written"> </a>
 
-## Making PDFs for Written Responses
+### Making PDFs for Written Responses
 
 You are required to make a PDF of your written responses to prompts. It's recommended that you use the College Board templates for filling out your responses. At some point you will have your written responses in a word processing document such as Microsoft Word, Google Docs, or Pages.
 
@@ -76,7 +87,7 @@ follow the steps below:
 
 <a name="pdf-code"> </a>
 
-## Making PDF of Program Code (for the Create PT)
+### Making PDF of Program Code (for the Create PT)
 
 You need to make a PDF of your code and you *also* draw an oval and rectangle onto the PDF to highlight certain parts. There are a few options for this.
 
@@ -136,7 +147,7 @@ If not using [CodePrint](https://bakerfranke.github.io/codePrint/) you'll need t
 
 <a name="video"> </a>
 
-## Making a Video Screen Capture
+### Making a Video Screen Capture
 
 Students are required to make at least one video that is a "Screen capture" of themselves using the program they wrote for the Create PT.
 
