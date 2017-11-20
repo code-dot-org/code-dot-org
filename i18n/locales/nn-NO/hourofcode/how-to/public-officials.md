@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Få kvar skule til å delta, kvar elev til å lære!
 
-1. **Les info-arket vårt** om kvifor informatikkutdanning er viktig og om korleis du kan bidra ved å støtte Kodetimen. [Les info-arket her.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Les info-arket vårt** om kvifor informatikkutdanning er viktig og om korleis du kan bidra ved å støtte Kodetimen. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Rekruttér lokale skular og distrikt. **Bruk[denne epostadressa](%= resolve_url('/promote/resources#sample-emails') %)eller[denne teksten](%= resolve_url('/promote/stats') %) som eit utgangspunkt, og ta ein kikk på [slik-gjer-du-det](%= resolve_url('/how-to') %) for skular og distrikt.
 

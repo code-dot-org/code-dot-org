@@ -13,13 +13,11 @@ Bli med i bevegelsen og introduser en gruppe elever til deres første time i inf
 
 ## 2. Velg et undervisningsopplegg for din time
 
-Vi tilbyr variert moro, [elevrettede undervisningsopplegg](%= resolve_url('/learn') %), samt [lærerrettede undervisningsopplegg](%= resolve_url('https://code.org/educate/teacher-led') %), for deltakere i alle aldre, laget av mange ulike partnere.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Markedsfør Kodetimen din
 
-Markedsfør Kodetimen din [med disse verktøyene](%= resolve_url('/promote/resources') %) og oppmuntre andre til å arrangere egne arrangementer.
+Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
 
 ## 4. Planlegg hva du trenger av utstyr - datamaskiner er valgfrie
 
@@ -35,14 +33,14 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 ## 5. Start Kodetimen med en inspirerende foreleser eller video
 
-**Inviter en [lokal frivillig](%= resolve_url('https://code.org/volunteer/local') %) for å inspirere elevene dine ved å fortelle om bredden og mulighetene innen informatikk.** Det er tusenvis av frivillige verden over som er klare for å hjelpe til med Kodetimen deres, enten med et besøk til klasserommet eller en videosamtale med elevene!
+**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Vis ein inspirerande video:**
 
 - Den opprinnelige lanseringsvideoen fra Code.org med Bill Gates, Mark Zuckerberg og NBA stjerne Chris Bosh. (Det finnes versjoner på [1 minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Finn fleire inspirerande [ressursar](%= resolve_url('https://code.org/inspire') %) og [videoar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det er heilt greit om du og elevene dine ikkje er kjend med datavitskap frå før. Her er nokre idear til korleis du kan introdusere kodetimen din:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Forklar hvordan teknologi påvirker livene våre. Bruk gjerne eksempler som både jenter og gutter kan kjenne seg igjen i (Snakk om å redde liv, hjelpe andre, sosiale medier o.l.).
 - Lag ei liste over daglegdagse ting som er programmert.
@@ -50,17 +48,17 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 ## 6. Koding!
 
-**Sett elevane i gong med aktiviteten**
+**Direct students to the activity**
 
 - Skriv oppgavelenken på en tavle. Finn lenken på siden med [informasjon om den valgte oppgaven](%= resolve_url('/learn')%) under antall deltakere.
 
-**Når elevane har spørsmål eller synast noko er vanskeleg, er det greit å svare:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Eg veit ikkje. Lat oss finne det ut i lag."
 - «Det er ikkje alltid teknologien gjer seg slik vi vil.»
 - "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
 
-**Hva kan jeg gjøre hvis en elev blir tidlig ferdig?**
+**What if a student finishes early?**
 
 - Elever kan se på alle oppgavene og [prøve en annen aktivitet fra Kodetimen](%= resolve_url('/learn')%).
 - Eller du kan be dei elevane som blir fort ferdige om å hjelpe dei som slit med å få det til.
