@@ -6,7 +6,7 @@ nav: employee_engagement_nav
 rightbar: blank
 ---
 
-<img src="/images/employee-engagement/employee-volunteer.png" style="max-width: 100%">
+<img src="/images/employee-engagement/employee-volunteer.png" style="max-width: 100%"> 
 
 # Employee Engagement Opportunities
 
