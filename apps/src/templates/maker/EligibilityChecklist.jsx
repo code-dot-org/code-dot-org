@@ -2,9 +2,8 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import Button from "../Button";
-import SchoolAutocompleteDropdownWithLabel from '../census2017/SchoolAutocompleteDropdownWithLabel';
-
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 
 const styles = {
   unit6Form: {
@@ -27,14 +26,17 @@ export default class EligibilityChecklist extends Component {
     statusPD: PropTypes.oneOf(Object.values(Status)).isRequired,
     statusStudentCount: PropTypes.oneOf(Object.values(Status)).isRequired,
     unit6Intention: PropTypes.string,
+    schoolId: PropTypes.string,
+    schoolName: PropTypes.string,
+    hasConfirmedSchool: PropTypes.bool,
+    getsFullDiscount: PropTypes.bool,
   };
 
   state = {
     statusYear: Status.UNKNOWN,
     yearChoice: null, // stores the teaching-year choice until submitted
     submitting: false,
-    displayDiscountAmount: false,
-    schoolId: null
+    discountAmount: null,
   };
 
   constructor(props) {
@@ -47,7 +49,9 @@ export default class EligibilityChecklist extends Component {
         ...this.state,
         yearChoice: props.unit6Intention,
         statusYear: (props.unit6Intention === 'yes1718' ||
-          props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED
+          props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
+        discountAmount: props.hasConfirmedSchool ?
+          (props.getsFullDiscount ? "$0" : "$97.50") : null
       };
     }
   }
@@ -73,24 +77,10 @@ export default class EligibilityChecklist extends Component {
    });
   }
 
-  handleDropdownChange = (field, event) => {
-    if (field === 'nces') {
-      this.setState({schoolId: event.value});
-    }
-  }
-
-  handleClickConfirmSchool = () => {
+  handleSchoolConfirmed = (fullDiscount) => {
     this.setState({
-      confirmingSchool: true
+      discountAmount: fullDiscount ? "$0" : "$97.50"
     });
-
-    // fake being an async API for now
-    setTimeout(() => {
-      this.setState({
-        displayDiscountAmount: true,
-        confirmingSchool: false
-      });
-    }, 1000);
   }
 
   handleChangeIntention = event => {
@@ -98,7 +88,6 @@ export default class EligibilityChecklist extends Component {
   }
 
   render() {
-    const {schoolId} = this.state;
     return (
       <div>
         <h2>
@@ -166,38 +155,19 @@ export default class EligibilityChecklist extends Component {
           <div>{i18n.eligibilityYearDecline()}</div>
         }
         {this.state.statusYear === Status.SUCCEEDED &&
-          <div>
-            <SchoolAutocompleteDropdownWithLabel
-              setField={this.handleDropdownChange}
-              value={schoolId}
-              showErrorMsg={false}
-            />
-            <br/>
-            {this.state.schoolId !== "-1" && (
-              <Button
-                color="orange"
-                text={i18n.confirmSchool()}
-                onClick={this.handleClickConfirmSchool}
-                hidden={this.state.displayDiscountAmount}
-              />
-            )}
-            {this.state.schoolId === "-1" && (
-              <div>
-                {i18n.eligibilitySchoolUnknown()}
-                <b> {i18n.contactToContinue()}</b>
-              </div>
-            )}
-          </div>
+          <DiscountCodeSchoolChoice
+            initialSchoolId={this.props.schoolId}
+            initialSchoolName={this.props.schoolName}
+            schoolConfirmed={this.props.hasConfirmedSchool}
+            onSchoolConfirmed={this.handleSchoolConfirmed}
+          />
         }
-        {this.state.displayDiscountAmount  &&
-          <div>
-            TEMP:Discount Amount for your school
-            <Button
-              color="orange"
-              text={i18n.getCode()}
-              onClick={() => {}}
-            />
-          </div>
+        {this.state.discountAmount  &&
+          <Button
+            color={Button.ButtonColor.orange}
+            text={i18n.getCodePrice({price: this.state.discountAmount})}
+            onClick={() => {}}
+          />
         }
       </div>
     );

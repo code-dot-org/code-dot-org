@@ -31,6 +31,10 @@ $(document).ready(() => {
           statusPD={scriptData.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
           statusStudentCount={scriptData.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
           unit6Intention={scriptData.unit_6_intention}
+          schoolId={scriptData.school_id}
+          schoolName={scriptData.school_name}
+          hasConfirmedSchool={scriptData.has_confirmed_school}
+          getsFullDiscount={scriptData.gets_full_discount}
         />
       }
       {scriptData.discountCode &&
