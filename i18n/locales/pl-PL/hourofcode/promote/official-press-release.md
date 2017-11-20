@@ -5,58 +5,39 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Przykładowy komunikat prasowy dla wybieranych urzędników
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Do niezwłocznej publikacji  
+[**DATA</ strong>]   
+Kontakt: [**INFORMACJE KONTAKTOWE</ strong>]  
+  
+</p> 
+
+<strong> <center>Szanowny Panie/Pani Senatorze/Pośle/Wojewodo/Kuratorze/Burmistrzu/Wójcie/Radny [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong>  
+Nasze działania mają na celu uświadomienie znaczenia edukacji informatycznej w życiu, poprzez uczestnictwo w Tygodniu Edukacji Informatycznej. (Computer Science Education Week)</center>   
   
 
 
-<strong>
+**Data:** - [**INSERT NAME**] dołączył do nauczycieli [**INSERT NAME OF SCHOOL**], liderów biznesu i rodziców [**Nazwa zdarzenia**] aby wziąść udział w Godzinie Kodowania. Godzinie Kodowania to część Tygodnia Edukacji Informatycznej. [INSERT NAME] i wielu innych członków społeczności, wśród milionów ludzi na całym świecie zachęca do wzięcia udziału w największym edukacyjnym wydarzeniu w historii.
 
-<center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
-</center>
+[**TUTAJ OPIS WYDARZENIA. NALEŻY UŻYĆ JĘZYKA ZROZUMIAŁEGO. NA PRZYKŁAD: "Daniel w ramach Godziny Kodowania zorganizował ogólnoszkolne warsztaty dla uczniów wszystkich klas. Ponad 700 uczniów kodowało przynajmniej przez jedną godzinę każdy. Kilkunastu rodziców i wolontariuszy pomagało tego dnia gromadząc dzieci prezentując im, dlaczego informatyka ma tak duże znaczenie w życiu."</p> 
 
-<br /> <br /></p> 
+[**PRZYKŁAD:**]  
+Komputery są dostępne wszędzie, ale uczniowie pochodzący z uboższych rodzin nie mają w domu warunków do rozwoju swoich kompetencji informatycznych. Dobrą wiadomością jest to, że zmieniamy to na lepsze. Godzina kodowania zapewnia wszystkim uczniom równy dostęp Edukacji informatycznej na naprawdę światowym poziomie.
 
-<p>
-  <strong>DATE</strong> - [<strong>INSERT NAME</strong>] joined the principal and faculty members of [<strong>INSERT NAME OF SCHOOL</strong>], business leaders and local families today for [<strong>NAME OF EVENT</strong>] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
-</p>
+W Godzinie Kodowania wzięło już udział ponad 100 milionów uczniów na całym świecie. Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! i Disney. Prezydent Obama, Shakira i Ashton Kutcher występują w filmach promujących Godzinę Kodowania. Ponad 100 partnerów wspiera tą inicjatywę.
 
-<p>
-  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
-</p>
+[**TUTAJ MOŻNA WSTAWIĆ CYTAT RZECZNIKA:**]  
+"Musimy zachęcić i zainteresować naszych uczniów informatyką", powiedział [** INSERT NAME </ strong>]. "Każdy uczeń zasługuje na szansę nauki informatyki tak, aby uzyskać osiągnięcia, na miarę XXI wieku."</p> 
 
-<p>
-  [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
-</p>
+[**Więcej informacji o wydarzeniu i/lub organizacji**]
 
-<p>
-  Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! i Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+[**Tutaj można zacytować kogoś, KTO UCZESTNICZYŁ w wydarzeniu i ma ciekawe spostrzeżenia**]
 
-<p>
-  [<strong>INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “We need to encourage and embrace our students’ interest in computer science,” said [<strong>INSERT NAME</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
-</p>
+Aby uzyskać więcej informacji na temat [**WYDARZENIA/PROGRAM/itp**] odwiedź [**Wstaw ADRES STRONY**], lub skontaktuj się z [**Informacje kontaktowe**]
 
-<p>
-  [<strong>INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION</strong>]
-</p>
+  
+  
 
-<p>
-  [<strong>INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT</strong>]
-</p>
 
-<p>
-  For more information about [<strong>EVENT/PROGRAM/ETC</strong>], visit [<strong>INSERT WEBSITE</strong>] or contact [<strong>INSERT CONTACT INFORMATION</strong>]
-</p>
-
-<p>
-  <br /> <br />
-</p>
-
-<p>
-  <%= view :signup_button %>
-</p>
+<%= view :signup_button %>
