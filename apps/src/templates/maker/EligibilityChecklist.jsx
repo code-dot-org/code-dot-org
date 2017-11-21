@@ -4,22 +4,7 @@ import i18n from "@cdo/locale";
 import Button from "../Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
-
-const styles = {
-  unit6Form: {
-    marginTop: 15
-  },
-  question: {
-    marginBottom: 5,
-    fontWeight: 'bold',
-  },
-  radio: {
-    margin: '0px 10px'
-  },
-  submit: {
-    marginTop: 5
-  }
-};
+import Unit6ValidationStep from './Unit6ValidationStep';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -56,35 +41,16 @@ export default class EligibilityChecklist extends Component {
     }
   }
 
-  // Saves the teaching-year choice to trigger next step of actions
-  handleSubmit = () => {
-    this.setState({submitting: true});
-    $.ajax({
-     url: "/maker/apply",
-     type: "post",
-     dataType: "json",
-     data: {
-       unit_6_intention: this.state.yearChoice
-     }
-   }).done(data => {
-     this.setState({
-       statusYear: data.eligible ? Status.SUCCEEDED : Status.FAILED,
-       submitting: false
-     });
-   }).fail((jqXHR, textStatus) => {
-     // TODO: should probably introduce some error UI
-     console.error(textStatus);
-   });
-  }
-
   handleSchoolConfirmed = (fullDiscount) => {
     this.setState({
       discountAmount: fullDiscount ? "$0" : "$97.50"
     });
   }
 
-  handleChangeIntention = event => {
-    this.setState({yearChoice: event.target.value});
+  handleUnit6Submitted = eligible => {
+    this.setState({
+      statusYear: eligible ? Status.SUCCEEDED : Status.FAILED,
+    });
   }
 
   render() {
@@ -108,56 +74,13 @@ export default class EligibilityChecklist extends Component {
         >
           {i18n.eligibilityReqStudentCountFail()}
         </ValidationStep>
-        <ValidationStep
-          stepName={i18n.eligibilityReqYear()}
+        <Unit6ValidationStep
+          previousStepsSucceeded={this.props.statusStudentCount === Status.SUCCEEDED &&
+            this.props.statusPD === Status.SUCCEEDED}
           stepStatus={this.state.statusYear}
-          alwaysShowChildren={true}
-        >
-          {this.props.statusStudentCount === Status.SUCCEEDED &&
-              this.props.statusPD === Status.SUCCEEDED &&
-            <div>
-              {i18n.eligibilityReqYearFail()}
-              <form style={styles.unit6Form}>
-                <div style={styles.question}>
-                  {i18n.eligibilityReqYearConfirmInstructions()}
-                </div>
-                {[
-                  ['no', i18n.eligibilityYearNo()],
-                  ['yes1718', i18n.eligibilityYearYes1718()],
-                  ['yes1819', i18n.eligibilityYearYes1819()],
-                  ['yesAfter', i18n.eligibilityYearAfter()],
-                  ['unsure', i18n.eligibilityYearUnknown()],
-                ].map(([value, description]) =>
-                  <label key={value}>
-                    <input
-                      style={styles.radio}
-                      type="radio"
-                      name="year"
-                      value={value}
-                      checked={this.state.yearChoice === value}
-                      onChange={this.handleChangeIntention}
-                      disabled={this.state.statusYear !== Status.UNKNOWN}
-                    />
-                  {description}
-                  </label>
-                )}
-                {/* Remove button after choice is made */}
-                {this.state.statusYear === Status.UNKNOWN &&
-                  <Button
-                    style={styles.submit}
-                    color="orange"
-                    text={this.state.submitting ? i18n.submitting() : i18n.submit()}
-                    onClick={this.handleSubmit}
-                    disabled={this.state.submitting}
-                  />
-                }
-              </form>
-            </div>
-          }
-          {this.state.statusYear === Status.FAILED &&
-            <div>{i18n.eligibilityYearDecline()}</div>
-          }
-        </ValidationStep>
+          initialChoice={this.props.unit6Intention}
+          onSubmit={this.handleUnit6Submitted}
+        />
         {this.state.statusYear === Status.SUCCEEDED &&
           <DiscountCodeSchoolChoice
             initialSchoolId={this.props.schoolId}

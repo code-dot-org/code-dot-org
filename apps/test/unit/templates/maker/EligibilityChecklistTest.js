@@ -1,16 +1,24 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert} from '../../util/configuredChai';
+import {mount} from 'enzyme';
+import {assert} from '../../../util/configuredChai';
 import EligibilityChecklist from '@cdo/apps/templates/maker/EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import i18n from '@cdo/locale';
 
 describe('EligibilityChecklist', () => {
+  // TODO: these tests might better belong to Unit6ValidationStep
+  // TODO: use shallow instead of mount?
+
+  const defaultProps = {
+    statusPD: Status.SUCCEEDED,
+    statusStudentCount: Status.SUCCEEDED,
+    hasConfirmedSchool: false,
+  };
+
   it('does not fill in unit 6 intentions if not provided', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <EligibilityChecklist
-        statusPD={Status.SUCCEEDED}
-        statusStudentCount={Status.SUCCEEDED}
+        {...defaultProps}
       />
     );
     assert.equal(wrapper.find('input [checked="true"]').length, 0);
@@ -20,10 +28,9 @@ describe('EligibilityChecklist', () => {
   });
 
   it('fills in unit 6 intentions when provided ineligible response', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <EligibilityChecklist
-        statusPD={Status.SUCCEEDED}
-        statusStudentCount={Status.SUCCEEDED}
+        {...defaultProps}
         unit6Intention="no"
       />
     );
@@ -34,10 +41,9 @@ describe('EligibilityChecklist', () => {
   });
 
   it('fills in unit 6 intentions when provided eligible response', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <EligibilityChecklist
-        statusPD={Status.SUCCEEDED}
-        statusStudentCount={Status.SUCCEEDED}
+        {...defaultProps}
         unit6Intention="yes1718"
       />
     );
