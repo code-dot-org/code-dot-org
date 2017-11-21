@@ -9,6 +9,7 @@
 import React, {PropTypes} from 'react';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
+import {SelectStyleProps} from '../constants';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
@@ -21,19 +22,6 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-
-// Default max height for the React-Select menu popup, as defined in the imported react-select.css,
-// is 200px for the container, and 198 for the actual menu (to accommodate 2px for the border).
-// React-Select has props for overriding these default css styles. Increase the max height here:
-const selectMenuMaxHeight = 400;
-const selectStyleProps = {
-  menuContainerStyle: {
-    maxHeight: selectMenuMaxHeight
-  },
-  menuStyle: {
-    maxHeight: selectMenuMaxHeight - 2
-  }
-};
 
 const styles = {
   button: {
@@ -133,7 +121,7 @@ export default class QuickView extends React.Component {
                 placeholder={null}
                 options={this.statuses}
                 style={styles.select}
-                {...selectStyleProps}
+                {...SelectStyleProps}
               />
             </FormGroup>
           </Col>
