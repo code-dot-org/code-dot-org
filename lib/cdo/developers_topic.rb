@@ -4,11 +4,13 @@ require 'cdo/slack'
 module DevelopersTopic
   BRANCH_PREFIXES = {
     staging: 'DTS: ',
+    'staging-next': 'DTSN: ',
     test: 'DTT: ',
     production: 'DTP: ',
     levelbuilder: 'DTL: '
   }.freeze
   STAGING = 'staging'
+  STAGING_NEXT = 'staging-next'
   TEST = 'test'
   PRODUCTION = 'production'
   LEVELBUILDER = 'levelbuilder'
@@ -27,6 +29,11 @@ module DevelopersTopic
   # @return [Boolean] Whether DTS is yes.
   def self.dts?
     branch_open_for_merge? STAGING
+  end
+
+  # @return [Boolean] Whether DTSN is yes.
+  def self.dtsn?
+    branch_open_for_merge? STAGING_NEXT
   end
 
   # @return [Boolean] Whether DTT is yes.
@@ -48,6 +55,12 @@ module DevelopersTopic
   # @raise [RuntimeError] If the existing DTS topic does not specify a message.
   def self.dts
     branch_message STAGING
+  end
+
+  # @return [String] The DTSN portion of the room topic.
+  # @raise [RuntimeError] If the existing DTS topic does not specify a message.
+  def self.dtsn
+    branch_message STAGING_NEXT
   end
 
   # @return [String] The DTT portion of the room topic.
@@ -72,6 +85,12 @@ module DevelopersTopic
   # @raise [RuntimeError] If the existing DTS topic does not specify a message.
   def self.set_dts(message)
     set_branch_message STAGING, message
+  end
+
+  # @param new_subtopic [String] The string to which DTSN should be set.
+  # @raise [RuntimeError] If the existing DTSN topic does not specify a message.
+  def self.set_dtsn(message)
+    set_branch_message STAGING_NEXT, message
   end
 
   # @param message [String] The string to which DTT should be set.
