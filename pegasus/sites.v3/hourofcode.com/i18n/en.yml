@@ -863,7 +863,7 @@
   tutorial_lbguitar_name: "littlebits: Rockstar Guitar"
   tutorial_lbio_name: "Inputs & Outputs with littleBits"
   tutorial_wonpuppy_name: "Dash the Puppy (E3): Dash and Dot Challenge Cards"
-  tutorial_woncue_name: "Cue: Getting Started with Wonder Workshop's CUE robot"
+  tutorial_woncue_name: "Cue's Starter Guide"
   tutorial_wonzoo_name: "Dot at the Petting Zoo (B2): Dash and Dot Challenge Cards"
   tutorial_wontrip_name: "Dash's Road Trip (F2): Dash and Dot Challenge Cards"
   tutorial_woncollect_name: "Dash the Collector (B1): Dash and Dot Challenge Cards"
@@ -898,6 +898,7 @@
   tutorial_dkriver_name: "DevKit: Build the River Monsters App"
   tutorial_dkball_name: "DevKit: Build the Bouncing Ball App"
   tutorial_spheroit_name: "Blocks 2: If/Then Else"
+  tutorial_gameofcodes_name: "Game Of Codes"
 
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
@@ -1330,6 +1331,7 @@
   tutorial_dkriver_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
   tutorial_dkball_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
   tutorial_spheroit_shortdescription: "Learn your first \"if/then, else\" condition by building a fun game where you will be throwing Sphero and guessing animal sounds."
+  tutorial_gameofcodes_shortdescription: "Build your awesome Dragon game and export it as a standalone app"
 
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -1762,6 +1764,7 @@
   tutorial_dkriver_longdescription: "Build the awesome River Monsters game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the River Monsters template, and follow along with the video tutorial!"
   tutorial_dkball_longdescription: "Build the awesome Bouncing Ball game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Bouncing Ball template, and follow along with the video tutorial!"
   tutorial_spheroit_longdescription: "Learn your first \"if/then, else\" condition by building a fun game where you will be throwing Sphero and guessing animal sounds."
+  tutorial_gameofcodes_longdescription: "Build an awesome Dragon game to defend the wall, then export it as a standalone app (for iOS, Android, PC & Mac)"
 
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
@@ -2194,6 +2197,7 @@
   tutorial_dkriver_language: "English only"
   tutorial_dkball_language: "English only"
   tutorial_spheroit_language: "English only"
+  tutorial_gameofcodes_language: "English, Portuguese, Russian, and Spanish"
 
   tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
@@ -2626,6 +2630,7 @@
   tutorial_dkriver_string_detail_grades: "Grades 9+"
   tutorial_dkball_string_detail_grades: "Grades 9+"
   tutorial_spheroit_string_detail_grades: "Grades 2+"
+  tutorial_gameofcodes_string_detail_grades: "Grades 2+"
 
   tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -3058,6 +3063,7 @@
   tutorial_dkriver_string_platforms: "iPad, iPhone"
   tutorial_dkball_string_platforms: "iPad, iPhone"
   tutorial_spheroit_string_platforms: "iPad, Android tablet, iPhone, Android phone, Sphero robot"
+  tutorial_gameofcodes_string_platforms: "All modern browsers, Android tablet, Android phone, iPad"
 
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -3490,6 +3496,7 @@
   tutorial_dkriver_string_detail_platforms: ""
   tutorial_dkball_string_detail_platforms: ""
   tutorial_spheroit_string_detail_platforms: "Sphero robot"
+  tutorial_gameofcodes_string_detail_platforms: ""
 
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
@@ -3891,7 +3898,7 @@
   tutorial_wonzoo_string_detail_programming_languages: "Blocks"
   tutorial_wontrip_string_detail_programming_languages: "Blocks"
   tutorial_woncollect_string_detail_programming_languages: "Blocks"
-  tutorial_wonsecret_string_detail_programming_languages: "JavaScript"
+  tutorial_wonsecret_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_hsscience_string_detail_programming_languages: "Hopscotch"
   tutorial_popculture_string_detail_programming_languages: "Language independent"
   tutorial_legorobust_string_detail_programming_languages: "Blocks"
@@ -3922,6 +3929,7 @@
   tutorial_dkriver_string_detail_programming_languages: "Blocks"
   tutorial_dkball_string_detail_programming_languages: "Blocks"
   tutorial_spheroit_string_detail_programming_languages: "Blocks, C/C++"
+  tutorial_gameofcodes_string_detail_programming_languages: "Blocks, Ready, Unity"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
