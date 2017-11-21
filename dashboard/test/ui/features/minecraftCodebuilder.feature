@@ -9,9 +9,7 @@ Scenario: Importing an Agent level from a share link
   And I wait for the page to fully load
   And element "#runButton" is visible
 
-  # close the video
-  Then I press "x-close"
-  And I drag block "13" to block "10"
+  Then I drag block "13" to block "10"
   And I press "runButton"
   And I wait until element "#finishButton" is visible
   And I press "finishButton"
