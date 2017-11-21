@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Στείλτε [ένα γράμμα](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) για να προσκαλέσετε τον Δήμαρχο, τον τοπικό πολιτικό ή έναν επιχειρηματία με επιρροή για να μιλήσουν.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Προσκαλέστε μέσα/τύπο. Δηλαδή τοπικούς σταθμούς ειδήσεων, εφημερίδες, bloggers με θέματα εκπαίδευσης/τεχνολογίας. Δείτε το [πακέτο τύπου](%= resolve_url('/promote/press-kit') %) για βοήθεια.
 
 ## 2. During your event

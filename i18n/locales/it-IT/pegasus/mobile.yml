@@ -299,7 +299,8 @@
   homepage_hero_text_stat_loc: "2,5 milioni di ragazze si sono iscritte per imparare con Code Studio"
   homepage_hero_text_stat_students: "#student_count account di studenti in Code Studio"
   homepage_hero_text_stat_served: 'L''Ora del Codice: ne hanno già fatte #served'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_coming: "L'Ora del Codice è in arrivo"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "L'Ora del Codice"
   homepage_slot_text_frozen: "Frozen con Anna ed Elsa"
   homepage_slot_text_teacher: "Cruscotto dell'Insegnante"
@@ -319,6 +320,7 @@
   homepage_action_text_girlvideo: "Convinci una ragazza a partecipare"
   homepage_action_text_learn: "Inizia ad apprendere"
   homepage_action_text_signpetition: "Firma la petizione"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "Firma la nostra petizione &#x25BE;"
   homepage_diversity_pledge: "Abbraccia la causa in favore delle diversità"
   homepage_banner_text_prizes: 'L''Ora di Codice sta per ripartire, 7-13 Dicembre. '
@@ -404,7 +406,7 @@
   class_submission_level_college: "Università"
   class_submission_level_vocational: "Formazione professionale"
   class_submission_languages_other: "Altre lingue"
-  videos_more: "Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a> con modelli di ruolo e celebrità"
+  videos_more: "Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a> con modelli di ruolo e celebrità e <a href=\"https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro\" target=\"_blank\">un video in italiano di Programma il Futuro</a>"
   careers_page_more: "Ulteriori <a href='%{careers_url}' target='_blank'> video stimolanti</a> con professionisti in settori tecnologici"
   playlab_choose_theme: "Scegli il tema del tuo Laboratorio"
   playlab_classic_title: "Classico"
@@ -445,7 +447,7 @@
   minecraft_teach_resources: "Teacher resources and lesson plan."
   minecraft_leader_guide: "Download resources to help you plan and lead an event."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Join us on November 16th, 2017 for a special webinar for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough of the new tutorial by the Minecraft team and learn about the resources and best practices to help you confidently facilitate an exciting Hour of Code with Minecraft. <a href='%{minecraft_webinar_url}'>Sign up today</a>!"
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
   minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
   minecraft_future: "Help all youth become future ready"
@@ -481,7 +483,7 @@
   sports_athlete_Chris: "Chris Bosh, medaglia d'oro olimpica e campione NBA, Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, medaglia d'oro olimpica e campione NBA, Dallas Mavericks"
   watch_inspirational_videos: "Prima di iniziare, guarda uno di questi video stimolanti"
-  video_title_cs_is_everything: "Computer Science is Changing Everything"
+  video_title_cs_is_everything: "L'informatica sta cambiando ogni cosa"
   video_title_inspire_girl: "Convinci una ragazza a partecipare"
   video_title_cs_intro: "Introduzione all'Informatica"
   video_title_schools_dont_teach: "Cosa NON Insegnano nella maggior parte delle Scuole"
@@ -521,7 +523,7 @@
   volunteer_engineer_submission_field_location_desc: "Se si immette l'indirizzo esatto non lo condivideremo ma mostraremo solo una puntina sulla mappa."
   volunteer_engineer_submission_field_location_placeholder: "CAP, città e nazione o un indirizzo"
   volunteer_engineer_submission_field_location_flexibility: "Posso fornire aiuto durante l'ora del codice di... (selezionare tutte le risposte applicabili)"
-  volunteer_engineer_submission_checkbox_after_hoc: "Sono interessato nel volontariato dopo l'ora del codice"
+  volunteer_engineer_submission_checkbox_after_hoc: "Sono interessato a fare volontariato tutto l'anno"
   volunteer_engineer_submission_field_time_commitment: "Impegno di tempo dopo l'Ora del Codice"
   volunteer_engineer_submission_field_linkedin: "Profilo LinkedIn"
   volunteer_engineer_submission_field_linkedin_placeholder: "http://www.linkedin.com/in/tuo_nome"
@@ -981,7 +983,7 @@
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Crittografia semplice
-  text-compression_name: Text Compression
+  text-compression_name: Compressione del Testo
   math_category_name: "Matematica"
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Corsi base"
@@ -1051,7 +1053,7 @@
   course2_gradelevel: "Da 6 anni in su (per chi sa leggere)"
   course3_gradelevel: "Da 8 anni in su (dopo il Corso 2)"
   course4_gradelevel: "Da 10 anni in su (dopo il Corso 3)"
-  coursea_gradelevel: "Anni: 10+"
+  coursea_gradelevel: "Da 10 anni in su"
   courseb_gradelevel: "Grade 6+"
   coursec_gradelevel: "Grade 7+"
   coursed_gradelevel: "Classi 8+"

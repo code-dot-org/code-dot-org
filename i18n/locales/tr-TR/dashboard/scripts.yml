@@ -95,7 +95,7 @@ tr:
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           stages:
             Artist:
-              name: Aktör
+              name: Sanatçı
             'Artist: Functions':
               name: 'Sanatçı: Fonksiyonlar'
             'Artist: Nested Loops':
@@ -144,12 +144,12 @@ tr:
             Play Lab:
               name: Oyun Laboratuvarı
         artist:
-          title: Aktör
+          title: Sanatçı
           description: Sanatçı ile harika resimler ve tasarımlar yap!
           description_short: Sanatçı ile harika resimler ve tasarımlar yap!
           stages:
             Artist:
-              name: Aktör
+              name: Sanatçı
         hourofcode:
           title: Klasik Labirent
           description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz Devrinden sincap Scrat ile birlikte bilgisayar biliminin temel yapısını dene!
@@ -164,7 +164,7 @@ tr:
           description_short: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya katılıp kodlama yapalım.
           stages:
             Artist:
-              name: Aktör
+              name: Sanatçı
         course4:
           title: Ders 4
           description: Ders 4, ders 2 ve 3'ü almış öğrenciler için tasarlanmıştır. Öğrenciler daha zor bulmacaları ve problemleri öğrendikleri çeşitli kavramları birleştirip kullanarak çözerler.  Bu ders tamamlandığında, öğrencilerin şununla say döngüleri ve parametreli fonksiyonları kullanarak program yazabilecek yetiye ulaşacaklar. 4-8. sınıflar için önerilir.
@@ -172,7 +172,7 @@ tr:
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
           stages:
             Artist:
-              name: Aktör
+              name: Sanatçı
             Artist Binary:
               name: Sanaçtı İkili Taban
             'Artist: For Loops':
@@ -1056,7 +1056,7 @@ tr:
             AppLab:
               name: AppLab
             Artist:
-              name: Aktör
+              name: Sanatçı
             Bee:
               name: Arı
             Bounce:
@@ -4580,6 +4580,8 @@ tr:
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6713,6 +6715,8 @@ tr:
               name: CSD/P pulse check survey 2017
             CSD mid and post survey 2017 staging:
               name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -6752,6 +6756,54 @@ tr:
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
           title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: yeni kademe
+            Explore PT Prep - Reviewing the Task:
+              name: Performans Görevi Hazırlığı Keşfet - Görevi Gözden Geçirme
+            Explore PT - Making a Plan:
+              name: Performans Görevini Keşfet - Bir Plan Hazırla
+            Explore PT - Complete the Task:
+              name: Performans Gorevini Kesfet - Görevi Tamamla
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Teknik kurulum - AP dijital portföy ve diğer araçlar
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
+          description: ''
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Teknik kurulum - AP dijital portföy ve diğer araçlar
+            Create PT Prep - Reviewing the Task:
+              name: Performans Görevi Hazırlığı Oluştur - Görevi Gözden Geçirme
+            Create PT Prep - Making a Plan:
+              name: Performans Görevi Hazırlığı Oluştur - Bir Plan Hazırla
+            Create PT - Complete the Task:
+              name: Performans Görevini Oluştur - Görevi Tamamla
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
+          description: ''
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
           description_audience: ''
           description_short: ''
           description: ''

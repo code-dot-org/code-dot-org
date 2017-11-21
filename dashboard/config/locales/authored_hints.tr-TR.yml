@@ -5491,8 +5491,8 @@
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1
           up` block to the `when up arrow` event, then do the same for every other
           direction.
-        courseD_playLab_cond1_b: Gittikleri yönü değiştirmek için 'ne zaman ok' ve
-          'taşı aktör' bloklarındaki açılır menüleri kullan.
+        courseD_playLab_cond1_b: Gittikleri yönü değiştirmek için 'ok olduğunda' ve
+          'aktörü taşı' bloklarındaki açılır menüleri kullan.
         courseD_playLab_cond1_c: Kodunuzu yazdıktan sonra Pegleg' i ejderhaya doğru
           hareket ettirmeyi unutmayın!
       courseD_playLab_cond2_authored_hint:
@@ -7434,6 +7434,7 @@
           *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your
           function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: Bu bulmacanın sadece nektar alması veya bal yapması
           gerekiyor, içinde bir 'ileriye doğru hareket et' veya 'dön' blokları bulunmamalı.

@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Få med varje skola och varje elev!
 
-1. **Läs vårt informationsblad** om varför utbildning i datavetenskap är viktigt, och hur du kan hjälpa vår kamp genom att stödja Hour of Code. [Hämta informationsbladet här](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Läs vårt informationsblad** om varför utbildning i datavetenskap är viktigt, och hur du kan hjälpa vår kamp genom att stödja Hour of Code. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Värva lokala skolor och kommuner. **Använd [denna e-post](%= resolve_url('/promote/resources#sample-emails') %) eller [denna länk](%= resolve_url('/promote/stats') %) som en utgångspunkt och titta på denna [guide](%= resolve_url('/how-to') %) för skolor och kommuner.
 

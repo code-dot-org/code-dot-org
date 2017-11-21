@@ -394,6 +394,7 @@
   homepage_hero_text_stat_students: 'Code Stüdyoda #student_count tane öğrenci hesabı'
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: 'Frozen: Anna ve Elsa '
   homepage_slot_text_teacher: "Öğretmen Panosu"
@@ -413,6 +414,7 @@
   homepage_action_text_girlvideo: Bir kıza ilham kaynağı ol
   homepage_action_text_learn: "Öğrenmeye başla"
   homepage_action_text_signpetition: "Üye dilekçesi"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
   homepage_diversity_pledge: "Çeşitlilik oluştur ! "
   homepage_banner_text_prizes: "`Kod Saati` 7-13 Aralıkta tekrar gerçekleşecek."
@@ -1198,7 +1200,7 @@
   hourofcode_name: Klasik Labirent
   playlab_name: Oyun Laboratuvarı
   infinity_name: Sınırsız oyun laboratuarı
-  artist_name: Aktör
+  artist_name: Sanatçı
   monstercoding_name: Gizemli Ada Kodlama Macerası
   allcancode_name: "Çalış Maco!"
   csfirst_name: "Öncelikle CS"

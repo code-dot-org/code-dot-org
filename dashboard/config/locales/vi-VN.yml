@@ -298,7 +298,7 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
-      my_dashboard: My Dashboard
+      my_dashboard: Bảng điều khiển của tôi
       courses: Các khóa học
       course_catalog: Course Catalog
       project_gallery: chương trình
@@ -306,7 +306,7 @@
       help_support: Help and support
       report_bug: Report bug
       teacher_community: Teacher community
-      professional_learning: Professional Learning
+      professional_learning: Học tập nâng cao chuyên môn
       documentation: Documentation
       tutorials: Tutorials
       educate_overview: Educator Overview
@@ -374,7 +374,7 @@
     user_not_found: Không tìm thấy giáo viên.
     student_teacher_disassociated: Bạn đã gỡ bỏ %{teacher_name} là giáo viên của bạn.
     panel:
-      answer_viewer: Xem câu trả lời
+      answer_viewer: Kênh Giáo viên
       student: học sinh
       viewing_solution: Xem đáp án
       try_it_yourself: Hãy thử làm bài tập này
@@ -1001,13 +1001,6 @@
     create: Tạo ra chương trình
     create_a_project: 'Tạo một chương trình mới:'
     new: Tạo mới
-    new_buttons:
-      artist: Họa sĩ
-      playlab: Phòng trò chơi
-      applab: Phòng thí nghiệm ứng dụng
-      gamelab: Game Lab
-      weblab: Web Lab (beta)
-    new_buttons_header: 'Start a new project:'
     rename: "Đổi tên"
     save: Lưu
     delete: Xóa

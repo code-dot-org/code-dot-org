@@ -160,7 +160,7 @@ nav: how_to_nav
           </td>
           
           <td>
-            <strong>编程！</strong> 四处走动，问问题，并指导学生解决难题。 尽量不要马上给学生答案。试着问他们问题，这样他们自己可以回答哪里出错了，并鼓励学生相互间问问题。 Learning from each other is a great learning opportunity.
+            <strong>编程！</strong> 四处走动，问问题，并指导学生解决难题。 尽量不要马上给学生答案。试着问他们问题，这样他们自己可以回答哪里出错了，并鼓励学生相互间问问题。 互相学习是一个很好的学习机会。
           </td>
         </tr>
         
@@ -170,13 +170,13 @@ nav: how_to_nav
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            感谢大家并分享鼓舞人心的临别赠言。分发一些你公司的小饰品 （ 贴纸是个好主意！）
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            之后
           </td>
           
           <td>
