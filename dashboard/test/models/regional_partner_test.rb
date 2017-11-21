@@ -137,4 +137,18 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     # zip=32313 [zip matches many, indeterminate result]
     assert_includes [regional_partner_fl_32313, regional_partner_32313], RegionalPartner.find_by_region("32313", nil)
   end
+
+  test 'pd_workshops association' do
+    regional_partner = create :regional_partner
+    partner_organizer = create :workshop_organizer
+    create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
+
+    partner_workshops = create_list :pd_workshop, 2, organizer: partner_organizer
+
+    # non-partner workshops
+    non_partner_organizer = create :workshop_organizer
+    create_list :pd_workshop, 2, organizer: non_partner_organizer
+
+    assert_equal partner_workshops, regional_partner.pd_workshops
+  end
 end
