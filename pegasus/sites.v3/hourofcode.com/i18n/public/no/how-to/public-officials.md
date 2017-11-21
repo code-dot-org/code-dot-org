@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Få hver skole til å delta, hver elev til å lære!
 
-1. **Les vårt info-ark**om hvorfor informatikkutdanning er viktig, og om hvordan du kan bidra ved å støtte Kodetimen. [Les info-arket her.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Les vårt info-ark**om hvorfor informatikkutdanning er viktig, og om hvordan du kan bidra ved å støtte Kodetimen. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Rekrutter lokale skoler og kommuner.** Bruk [denne e-posten](<%= resolve_url('/promote/resources#sample-emails') %>) eller [denne reklameteksten](<%= resolve_url('/promote/stats') %>) som utgangspunkt, og ta en titt på denne [veiledningen](<%= resolve_url('/how-to') %>) for skoler og kommuner.
 

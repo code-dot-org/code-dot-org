@@ -382,6 +382,7 @@
   homepage_hero_text_stat_students: "#student_count elevkontoar på Code.org"
   homepage_hero_text_stat_served: 'Kodetimen: #served servert'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frost med Anna og Elsa
   homepage_slot_text_teacher: Lærarmodus
@@ -401,6 +402,7 @@
   homepage_action_text_girlvideo: Inspirér ei jente
   homepage_action_text_learn: Start læringa
   homepage_action_text_signpetition: Signér oppropet
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Eg er einig &#x25BE;
   homepage_diversity_pledge: Slå eit slag for mangfaldet
   homepage_banner_text_prizes: 'Kodetimen kjem tilbake, 7.-13. desember. '
@@ -519,13 +521,13 @@
   mc_gradelevel: Frå 4 - 104 år
   mc_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   mc_specs: Fleire språk | Moderne nettlesarar og nettbrett | Alder 6-106
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Heltens reise'
   minecraft_designer: Minecraft-designer
   minecraft_adventurer: Minecraft-eventyrar
   minecraft_tutorials: Rettleiingar for Kodetimen i Minecraft
   minecraft_specs: Mange språk | Moderne nettlesarar og nettbrett | 2. klasse og oppover
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  minecraft_agent_description: Minecraft er tilbake for Kodetimen med en helt ny aktivitet!
+    Reis gjennom Minecraft med kode.
   minecraft_agent_button: Start
   minecraft_designer_description: Programmer dyr og andre Minecraft-vesen i din eigen
     versjon av Minecraft.
@@ -536,12 +538,12 @@
   minecraft_no_internet: Har du ikkje internett?
   minecraft_download_adventurer: Last ned Minecraft-eventyrar for bruk utan internett.
   minecraft_subtitle: Kodetimen med Minecraft
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_store_camps: Gratis Minecraft Kodetime-leir på Microsoft Store
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
     free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
     Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_host_event: Hold en Minecraft Kodetime-arrangement
   minecraft_teach_resources: Teacher resources and lesson plan.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
@@ -566,8 +568,8 @@
     digital skills, from digital literacy to computer science education, to their
     communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
     the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_designer: Minecraft er tilbake med en ny aktivitet for Kodetimen. Programmer
+    dyr og andre Minecraft-skapninger i din egen versjon av Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
   sports_page_title: Kodetimen med sport

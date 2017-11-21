@@ -1,3 +1,5 @@
+/* global dashboard */
+
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
 import color from '../util/color';
@@ -22,12 +24,12 @@ export default class SocialShare extends Component {
 
     return (
       <div>
-        <a href={facebookShareUrl} target="_blank">
+        <a href={facebookShareUrl} target="_blank" onClick={dashboard.popupWindow}>
           <button style={{background: color.facebook_blue, ...styles.shareButton}}>
             <i className="fa fa-facebook" />
           </button>
         </a>
-        <a href={twitterShareUrl} target="_blank">
+        <a href={twitterShareUrl} target="_blank" onClick={dashboard.popupWindow}>
           <button style={{background: color.twitter_blue, ...styles.shareButton}}>
             <i className="fa fa-twitter" />
           </button>
