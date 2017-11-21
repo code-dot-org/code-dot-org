@@ -41,9 +41,9 @@ export default class ValidationStep extends Component {
 
   render() {
     const {stepName, stepStatus, alwaysShowChildren, children} = this.props;
-    // By default, we only the children if the step failed. If alwaysShowChildren
-    // is set, always show children
-    let displayExplanation = alwaysShowChildren || stepStatus === Status.FAILED;
+    // By default, we only show the children if the step failed. If alwaysShowChildren
+    // is set, show them regardless
+    let showChildren = alwaysShowChildren || stepStatus === Status.FAILED;
 
     if (stepStatus === Status.HIDDEN) {
       return null;
@@ -54,7 +54,7 @@ export default class ValidationStep extends Component {
           {iconFor(stepStatus)}
           <span>{stepName}</span>
         </div>
-        {displayExplanation &&
+        {showChildren &&
           <div style={style.body}>
             {children}
           </div>
