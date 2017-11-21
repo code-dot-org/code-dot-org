@@ -225,7 +225,7 @@ module GitHub
       pull['head']['sha'],
       STATUS_FAILURE,
       context: STATUS_CONTEXT_DTSN,
-      description: 'The staging branch is closed. Check #developers.'
+      description: 'The staging-next branch is closed. Check #developers.'
     )
   end
 
