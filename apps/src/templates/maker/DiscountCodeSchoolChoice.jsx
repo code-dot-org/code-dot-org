@@ -7,6 +7,9 @@ import { styles as censusFormStyles } from '../census2017/censusFormStyles';
 const styles = {
   confirmed: {
     marginBottom: 5
+  },
+  button: {
+    marginTop: 10
   }
 };
 
@@ -73,12 +76,13 @@ export default class DiscountCodeSchoolChoice extends Component {
           value={schoolId}
           showErrorMsg={false}
         />
-        <br/>
         {this.state.schoolId !== "-1" && (
           <Button
             color={Button.ButtonColor.orange}
             text={confirming ? i18n.confirming() : i18n.confirmSchool()}
             onClick={this.handleClickConfirmSchool}
+            style={styles.button}
+            disabled={confirming}
           />
         )}
         {this.state.schoolId === "-1" && (
