@@ -8,7 +8,7 @@ class Pd::RegionalPartnerProgramManagerTest < ActiveSupport::TestCase
     partner_workshop = create :pd_workshop, organizer: partner_organizer
     non_partner_workshop = create :pd_workshop, organizer: non_partner_organizer
 
-    assert regional_partner_program_manager.pd_workshops.include? partner_workshop
-    refute regional_partner_program_manager.pd_workshops.include? non_partner_workshop
+    assert regional_partner_program_manager.pd_workshops_organized.include? partner_workshop
+    refute regional_partner_program_manager.pd_workshops_organized.include? non_partner_workshop
   end
 end

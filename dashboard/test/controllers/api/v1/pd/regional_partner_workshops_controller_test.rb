@@ -3,26 +3,22 @@ require 'test_helper'
 class Api::V1::Pd::RegionalPartnerWorkshopsControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
+    Pd::Workshop.stubs(:process_location)
     first_session_time = Time.new(2017, 3, 15, 9)
 
     @partner_organizer = create :workshop_organizer, :as_regional_partner_program_manager
     @non_partner_organizer = create :workshop_organizer
 
-    @partner_csd_workshop = create :pd_workshop, organizer: @partner_organizer,
-      num_sessions: 5, sessions_from: first_session_time, location_address: 'Code.org, Seattle, WA',
-      course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    csd_options = {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP}
+    csp_options = {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP}
 
-    @partner_csp_workshop = create :pd_workshop, organizer: @partner_organizer,
-      num_sessions: 5, sessions_from: first_session_time, location_address: 'Code.org, Seattle, WA',
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-
-    @non_partner_csd_workshop = create :pd_workshop, num_sessions: 2,
-      sessions_from: first_session_time, organizer: @non_partner_organizer,
-      course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
-
-    @non_partner_csp_workshop = create :pd_workshop, num_sessions: 2,
-      sessions_from: first_session_time, organizer: @non_partner_organizer,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    @partner_csd_workshop, @partner_csp_workshop, @non_partner_csd_workshop, @non_partner_csp_workshop =
+      [@partner_organizer, @non_partner_organizer].map do |organizer|
+        [csd_options, csp_options].map do |course_options|
+          create :pd_workshop, organizer: organizer, num_sessions: 5, sessions_from: first_session_time,
+            location_address: 'Code.org, Seattle, WA', **course_options
+        end
+      end.flatten
 
     @school = create :school, zip: '99999'
     @regional_partner = @partner_organizer.regional_partners.first
@@ -134,6 +130,12 @@ class Api::V1::Pd::RegionalPartnerWorkshopsControllerTest < ::ActionController::
     sign_in @teacher
     RegionalPartner.expects(:find_by_region).with('98101', 'WA').at_least_once
     get :find, params: {zip_code: '98101', state: 'WA'}
+  end
+
+  test 'find accepts Washington DC' do
+    sign_in @teacher
+    RegionalPartner.expects(:find_by_region).with(nil, 'DC').at_least_once
+    get :find, params: {state: 'Washington DC'}
   end
 
   private
