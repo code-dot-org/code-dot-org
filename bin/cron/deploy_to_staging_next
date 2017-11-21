@@ -1,0 +1,91 @@
+#!/usr/bin/env ruby
+
+# A script that performs a merge of the test branch into the staging-next branch.
+#
+# NOTE: This script assumes it is only run from the test environment.
+
+require_relative '../../deployment'
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require 'cdo/infra_test_topic'
+require 'cdo/github'
+require 'cdo/only_one'
+
+# Creates a new branch with the given name from the given commit on the test server
+# (without checking it out) and pushes it to GitHub.
+# @param [String] branch_name The name of the branch to create.
+# @param [String] commit The sha of the commit to base the branch at.
+def create_branch_from_commit(branch_name, commit)
+  system(
+    [
+      'cd ~/test',
+      "git branch --no-track #{branch_name} #{commit}",
+      "git push origin #{branch_name}"
+    ].join(' && ')
+  )
+end
+
+# Deletes a branch with the given name, both locally and on GitHub.
+# @param [String] branch_name The name of the branch to delete.
+def delete_branch(branch_name)
+  system(
+    [
+      'cd ~/test',
+      'git branch -D branch_name',
+      'git push origin --delete branch_name'
+    ].join(' && ')
+  )
+end
+
+# @return [Boolean] Whether the Slack#developers topic specifies "DTSN: yes".
+def slack_permission?
+  # TODO: Once DTSN is working, respect it here.
+  # DevelopersTopic.dtsn?
+  true
+end
+
+# @param [String] commit The GitHub sha hash to compare the staging-next branch against.
+# @return [Boolean] Whether there are commits in commit not on the staging-next branch.
+def new_commits?(commit)
+  GitHub.behind?(base: commit, compare: 'staging-next')
+end
+
+# The business logic of the cronjob. If appropriate (based on Slack#developers topic), performs a
+# merge of the test branch into the staging-next branch.
+def main
+  test_green_commit = InfraTestTopic.green_commit
+
+  return unless slack_permission?
+  return unless new_commits?(test_green_commit)
+
+  # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull request
+  # from a commit hash (only a branch name), we create and push a branch.
+  branch_name = "dtsn_candidate_#{test_green_commit}"
+  create_branch_from_commit branch_name, test_green_commit
+
+  # Create the PR, raising an exception if doing so failed.
+  pr_number = GitHub.create_and_merge_pull_request(
+    base: 'staging-next',
+    head: branch_name,
+    title: "DTSN (Test > staging-next): #{test_green_commit}"
+  )
+  if pr_number.nil?
+    raise Exception.new('GitHub.create_and_merge_pull_request failed.')
+  end
+
+  ChatClient.message(
+    'infra-staging-next',
+    "robo-DTSN created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
+    color: 'green'
+  )
+
+  delete_branch(branch_name)
+rescue Exception => e
+  ChatClient.message(
+    'infra-staging-next',
+    "EXCEPTION: #{e.message}",
+    color: 'red'
+  )
+end
+
+main if only_one_running?(__FILE__)
