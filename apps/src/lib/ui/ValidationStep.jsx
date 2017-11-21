@@ -21,7 +21,7 @@ const style = {
   },
   header: {
     fontSize: 26,
-    lineHeight: 1.25,
+    lineHeight: 'normal',
   },
   body: {
     marginBottom: 15,
