@@ -750,13 +750,6 @@ nn:
     create: "Opprett prosjekt"
     create_a_project: 'Lag eit nytt prosjekt:'
     new: "Lag ny"
-    new_buttons:
-      artist: "Kunstnar"
-      playlab: "Spel-lab"
-      applab: "App Lab"
-      gamelab: "Spel lab"
-      weblab: "Web Lab (beta)"
-    new_buttons_header: "Opprett et nytt prosjekt"
     rename: "Gje nytt navn"
     save: "Lagre"
     delete: "Slett"

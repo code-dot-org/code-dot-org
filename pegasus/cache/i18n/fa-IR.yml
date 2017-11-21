@@ -409,6 +409,7 @@
     دانش آموز در استودیو ی کد"
   homepage_hero_text_stat_served: "ساعت کد نویسی: # طی شده گذرانده"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "ساعتی با کدنویسی"
   homepage_slot_text_frozen: "کارتون Frozen با آنا و السا"
   homepage_slot_text_teacher: Teacher Dashboard
@@ -428,6 +429,7 @@
   homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: "یادگیری را شروع کنید"
   homepage_action_text_signpetition: "درخواست را امضا کنید"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "درخواست ما را امضا کنید  &#x25BE;"
   homepage_diversity_pledge: "پیمان احترام و برابری نژاد ها را بپذیرید"
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '

@@ -81,9 +81,9 @@
       MC HOC 2016 SCORE LEVEL_failure_message_override: |-
         If you're having trouble
         tagging 5 Golems, try changing the score to 2 per tag.
-      MC HOC 2016 Village Test_failure_message_override: "Вие трябва да накарате желязния
+      MC HOC 2016 Village Test_failure_message_override: "Вие трябва да накарате железният
         голем Чейс да атакува зомбитата, за да спечелите."
-      WhileAdventure_failure_message_override: "Поздравления!  Вие се събрахте X монети!"
+      WhileAdventure_failure_message_override: "Поздравления!  Вие събрахте X монети!"
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.
