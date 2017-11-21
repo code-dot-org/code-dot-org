@@ -401,6 +401,7 @@
   homepage_hero_text_stat_students: "#student_count diák hozzáférés a Kód stúdió rendszerben"
   homepage_hero_text_stat_served: 'A Kódolás órája: #served megtartva'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: A kódolás órája
   homepage_slot_text_frozen: Jégvarázs Annával és Elzával
   homepage_slot_text_teacher: Tanári nyitólap
@@ -420,6 +421,7 @@
   homepage_action_text_girlvideo: Inspirálj egy lányt
   homepage_action_text_learn: Kezdj tanulni
   homepage_action_text_signpetition: "Írd alá a petíciót"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "Írd alá a petíciót &#x25BE;"
   homepage_diversity_pledge: Csatlakozz a diverzitási peticióhoz
   homepage_banner_text_prizes: "Újra közeledik a Kódolás órája, december 7-13. "
