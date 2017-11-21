@@ -988,4 +988,15 @@ class Script < ActiveRecord::Base
   def course_link
     course_path(course) if course
   end
+
+  # If there is an alternate version of this script which the user should be on
+  # due to existing progress or a course experiment, return that script. Otherwise,
+  # return nil.
+  def alternate_script(user)
+    course_scripts.each do |cs|
+      alternate_cs = cs.course.select_course_script(user, cs)
+      return alternate_cs.script if cs != alternate_cs
+    end
+    nil
+  end
 end

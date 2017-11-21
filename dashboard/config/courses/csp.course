@@ -6,7 +6,8 @@
     "csp3",
     "csp4",
     "csp5",
-    "csp-ap",
+    "csp-explore",
+    "csp-create",
     "csppostap"
   ],
   "alternate_scripts": [

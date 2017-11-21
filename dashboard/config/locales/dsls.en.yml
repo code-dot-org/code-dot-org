@@ -2885,9 +2885,14 @@ en:
         description here: description here
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
+      csp-post-survey-2017 preamble 3 this class: {}
+      csp-post-survey-2017 preamble 4 future and outlook: {}
       csp-post-survey-2017 preamble how often did teacher ask you to: {}
       csp-post-survey-2017 preamble how often did teacher do: {}
       csp-post-survey-2017 preamble how often did you: {}
+      csp-post-survey-2017-preamble 5 implementation-teacher: {}
+      csp-post-survey-2017-thanks: {}
+      csp-post-survey-2017-wrapup-preamble: {}
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 3 this class: {}
@@ -8120,15 +8125,15 @@ en:
       csd-post-survey-q27:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
-        : 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        ? 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        : 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csd-post-survey-q28:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Asked me problem solve when something didn't work the way I wanted it to work.: Asked me problem solve when something didn't work the way I wanted it to work.
+        Asked me to problem solve when something didn't work the way I wanted it to work.: Asked me to problem solve when something didn't work the way I wanted it to work.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
@@ -9001,15 +9006,15 @@ en:
       csp-post-survey-2017-q55:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Considered alternative approaches to my work: Considered alternative approaches to my work
+        Consider alternative approaches to my work.: Consider alternative approaches to my work.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csp-post-survey-2017-q56:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
-        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        ? Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
