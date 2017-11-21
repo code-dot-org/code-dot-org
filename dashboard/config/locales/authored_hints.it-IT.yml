@@ -489,7 +489,7 @@
         Course_4_Artist_For_Loops_Challenge_a: Il poligono più grande ha 19 lati.
         Course_4_Artist_For_Loops_Challenge_b: Tutti i poligoni sono incompleti, ossia
           ogni poligono viene disegnato con un lato di meno rispetto a quelli che
-          dovrebbe avere ("<i>counter</i> - 1").
+          dovrebbe avere (`<i>counter</i> - 1`).
       Course 4 Artist For Loops Challenge_a_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Il poligono più grande ha 19 lati.
         Course_4_Artist_For_Loops_Challenge_b: Ogni poligono è incompleto, con un
@@ -497,10 +497,10 @@
       Course 4 Artist For Loops inspire_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: La soluzione di questo esercizio è quasi
           uguale a quella dell'esercizio precedente... con un paio di cambiamenti.
-        Course_4_Artist_For_Loops_inspire_b: Prova ad usare un ciclo con contatore
+        Course_4_Artist_For_Loops_inspire_b: Prova ad usare un <i>ciclo con contatore</i>
           che va da 3 a 10 con passo di 1.
-        Course_4_Artist_For_Loops_inspire_c: All'interno del ciclo con contatore ci
-          sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta
+        Course_4_Artist_For_Loops_inspire_c: All'interno del <i>ciclo con contatore</i>
+          ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta
           del primo.
         Course_4_Artist_For_Loops_inspire_d: <b>Soluzione:</b> Vuoi sapere come è
           stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/109045588"
@@ -858,10 +858,10 @@
         second_hint: Questo è il secondo suggerimento. Ha un'immagine. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: Questo è il terzo e ultimo suggerimento. Non ha nulla di speciale.
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_b: Se chiami le funzioni in modo corretto, questo è il
-          percorso che seguirai...
-        Function_intro_Ryan_a: Puoi richiamare una funzione più volte nel tuo programma!  Prova
-          a richiamarla due volte per risolvere questo rompicapo.
+        Function_intro_Ryan_b: Se usi le funzioni in modo corretto, questo è il percorso
+          che seguirai...
+        Function_intro_Ryan_a: Puoi richiamare una funzione più volte in un programma!  Prova
+          a richiamarla due volte per risolvere questo esercizio.
       Harvesting_authored_hint:
         pointer_harvester_test: Che tipo di blocco è possibile utilizzare per controllare
           qualcosa e prendere una decisione?
@@ -926,25 +926,26 @@
         MC_HOC_2017_01_Cole_a: Usa le frecce per condurre il giocatore nella casa.
           Fermati sulla casella arancione per vincere.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Trascina un blocco "muovi avanti" dalla sezione degli
-          strumenti all'area di lavoro e affiancalo sotto al blocco "quando esegui".
-        MC_HOC_2017_01_RETRY_b: Ricorda di cliccare "Esegui" per eseguire il codice
-          per l'Agent.
-        MC_HOC_2017_01_RETRY_c: Quando l'Agent ha eseguito tutto il suo codice, puoi
-          muovere il giocatore con le frecce!
+        MC_HOC_2017_01_RETRY_a: Trascina un blocco `vai avanti` dalla cassetta degli
+          attrezzi all'area di lavoro e aggancialo sotto al blocco `quando si clicca
+          su "Esegui".
+        MC_HOC_2017_01_RETRY_b: Ricorda di cliccare il pulsante "Esegui" per far eseguire
+          il codice all'Agente.
+        MC_HOC_2017_01_RETRY_c: Quando l'Agente ha terminato di eseguire il suo codice,
+          devi muovere il giocatore con le frecce!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Muovi l'Agent due caselle in avanti per farlo posizionare
-          sulla pedana a pressione, che aprirà la porta per il tuo giocatore.
-        MC_HOC_2017_02_Cole_b: "Premi \"Esegui\"! \nPuoi eseguire il tuo codice anche
-          se non è corretto.  Esegui e ripristina il codice diverse volte finché non
-          hai capito dov'è l'errore."
-        MC_HOC_2017_02_Cole_c: Quando l'Agent ha aperto la porta, usa le frecce per
-          muovere il giocatore sulla mappa!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
-          on the map!
+        MC_HOC_2017_02_Cole_a: Muovi l'Agente due caselle in avanti per farlo posizionare
+          sulla pedana a pressione. Questo farà aprire la porta per il tuo giocatore.
+        MC_HOC_2017_02_Cole_b: |-
+          Premi "Esegui"!
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_02_Cole_c: Dopo che l'Agente ha fatto aprire la porta, usa le
+          frecce per muovere il giocatore verso la mappa!
+        MC_HOC_2017_02_Cole_d: Assicurati che l'Agente stia seguendo il percorso indicato
+          dalla linea bianca tratteggiata!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Muovi l'Agent due caselle in avanti per farlo posizionare
-          sulla pedana a pressione, che aprirà la porta per il tuo giocatore.
+        MC_HOC_2017_02_Cole_a: Muovi l'Agente due caselle in avanti per farlo posizionare
+          sulla pedana a pressione. Questo farà aprire la porta per il tuo giocatore.
         MC_HOC_2017_02_Cole_b: "Premi \"Esegui Agent\"! \nPuoi eseguire il tuo codice
           anche se non è corretto.  Esegui e ripristina il codice diverse volte finché
           non hai capito dov'è l'errore."
@@ -953,30 +954,32 @@
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Quando hai posizionato l'Agent sulla pedana a pressione,
           usa le frecce per far camminare il giocatore verso la bussola!
-        MC_HOC_2017_03_Cole_b: Il codice ti sembra un po' lungo?  Prova a usare un
-          ciclo "ripetizione" e cerca di capire come renderlo più breve!
+        MC_HOC_2017_03_Cole_b: Il codice ti sembra troppo lungo?  Cerca di capire
+          come renderlo più breve usando un blocco `ripeti ... volte`!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Passare su queste due pedane a pressione aprirà
           il sentiero per il giocatore. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Usa il blocco "gira a destra" per cambiare la
-          direzione dell''Agent '
-        MC_HOC_2017_04POINT5_RYAN_a: L'Agent ha bisogno di arrivare solo alla prima
-          pedana a pressione affinché Alex o Steve possa raggiungere l'ascia.
+        MC_HOC_2017_04POINT5_RYAN_b: Usa il blocco `gira a destra` per cambiare la
+          direzione dell'Agente.
+        MC_HOC_2017_04POINT5_RYAN_a: L'Agente ha bisogno di arrivare solo alla prima
+          pedana a pressione affinché il giocatore possa raggiungere l'ascia.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: L'Agent deve usare "muovi avanti" 7 volte.  Come puoi
-          sfruttare un ciclo "ripetizione" per ottenere questo risultato?
-        MC_HOC_2017_04_Cole_c: "Premi \"Esegui\"! \nPuoi eseguire il tuo codice anche
-          se non è corretto.  Esegui e ripristina il codice diverse volte finché non
-          hai capito dov'è l'errore."
-        MC_HOC_2017_04_Cole_b: Quando l'Agent raggiunge la pedana a pressione, apre
-          la porta per il giocatore.
+        MC_HOC_2017_04_Cole_a: L'Agente dovrebbe usare 7 blocchi `vai avanti`.  Come
+          puoi sfruttare un ciclo `ripeti ... volte` per ottenere lo stesso risultato
+          con meno blocchi?
+        MC_HOC_2017_04_Cole_c: |-
+          Premi "Esegui"!
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_04_Cole_b: Quando l'Agente raggiunge la pedana a pressione, la
+          porta si apre.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più pezzi di codice in un ciclo?  Prova
-          a posizionare un'asse **e** andare avanti in una "ripetizione" per completare
-          questo rompicapo.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
-          you go.
+        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più blocchi di codice all'interno
+          di un ciclo?  Per completare questo esercizio, prova ad inserire all'interno
+          di un ciclo `ripeti ... volte` il codice per andare avanti **e** mettere
+          un'asse di quercia .
+        MC_HOC_2017_05_Cole_b: Porta l'Agente al di là del fiume mentre costruisce
+          un ponte.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più pezzi di codice in un ciclo?  Prova
           a posizionare un'asse **e** andare avanti in una "ripetizione" per completare
@@ -984,53 +987,53 @@
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Quante volte viene eseguito questo ciclo?  Quante volte
           *dovrebbe* essere eseguito?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
-          water! '
+        MC_HOC_2017_06_Cole_b: 'Aiuta l''Agente a costruire un ponte attraversando
+          tutto il fiume! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Prova a inserire più di una istruzione in un ciclo
           "ripetizione"!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
-          to the Minecart.
-        MC_HOC_2017_07_Cole_a: Per risolvere questo rompicapo, scopri cosa fa la funzione
-          "distruggi" e richiamala il numero di volte necessario usando il piccolo
-          blocco verde "distruggi" presente tra gli strumenti.
-        MC_HOC_2017_07_Cole_b: Prova a mescolare i blocchi delle funzioni con altri
-          blocchi presenti tra gli strumenti per risolvere questo rompicapo.
+        MC_HOC_2017_07_Cole_c: Tutto ciò che deve fare l'Agente è distruggere il ghiaccio
+          per liberare la strada che porta al vagonetto.
+        MC_HOC_2017_07_Cole_a: Per risolvere questo esercizio, scopri cosa fa la funzione
+          `clear path` (<i>libera il passaggio</i>) e richiamala il numero di volte
+          necessario usando il piccolo blocco verde `clear path` presente nella cassetta
+          degli attrezzi.
+        MC_HOC_2017_07_Cole_b: Per risolvere questo esercizio, prova a mescolare i
+          blocchi delle funzioni con altri blocchi presenti nella cassetta degli attrezzi.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: "Premi \"Esegui Agent\"! \nPuoi eseguire il tuo codice
           anche se non è corretto.  Esegui e ripristina il codice diverse volte finché
           non hai capito dov'è l'errore."
-        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo rompicapo.  Provane
-          alcuni!
+        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo esercizio.
+          Provane alcuni!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: "Premi \"Esegui Agent\"! \nPuoi eseguire il tuo codice
           anche se non è corretto.  Esegui e ripristina il codice diverse volte finché
           non hai capito dov'è l'errore."
-        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo rompicapo.  Provane
-          alcuni!
+        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo esercizio.
+          Provane alcuni!
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Usa le funzioni per rendere più facile la soluzione
-          di questo rompicapo!
+          di questo esercizio!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
-          line!
+        MC_HOC_2017_10_Cole_b: Non sai dove andare?  Dovresti seguire la linea tratteggiata!
         MC_HOC_2017_10_Cole_a: Usa le funzioni per rendere più facile la soluzione
-          di questo rompicapo!
+          di questo esercizio!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Prova a far costruire dei ponti all'Agent, in modo
-          che Alex o Steve possa camminare oltre i limiti della mappa.
+        MC_HOC_2017_13_Cole_a: Prova a far costruire dei ponti all'Agente, in modo
+          che il giocatore possa camminare oltre i limiti della mappa.
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Passare su queste due pedane a pressione aprirà
           il sentiero per il giocatore. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_Ali_authored_hint:
-        MC_HOC_2017_08_RY_a: "Premi \"Esegui\"! \nPuoi eseguire il tuo codice anche
-          se non è corretto.  Esegui e ripristina il codice diverse volte finché non
-          hai capito dov'è l'errore."
-        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo rompicapo.  Provane
-          alcuni!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
-          the lava.
+        MC_HOC_2017_08_RY_a: |-
+          Premi "Esegui"!
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+        MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo esercizio.
+          Provane alcuni!
+        MC_HOC_2017_08_RY_c: Prova a seguire la linea tratteggiata per trovare un
+          semplice percorso attraverso la lava.
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
@@ -1086,23 +1089,23 @@
           <a href="https://studio.code.org/c/238594589" target="_blank">Clicca qui</a>
           e poi su "Come funziona" per scoprirlo.
       NEW Course 4 Bee For Loops 10a_authored_hint:
-        NEW_Course_4_Bee_For_Loops_10a_a: Can you find a pattern between the number
-          of steps you need to take and the number of nectars to gather?
-        NEW_Course_4_Bee_For_Loops_10a_b: You'll need to have 2 repeats, one will
-          use a math block.
+        NEW_Course_4_Bee_For_Loops_10a_a: Riesci a trovare una relazione tra il numero
+          di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare
+          che deve raccogliere?
+        NEW_Course_4_Bee_For_Loops_10a_b: 'Devi usare due blocchi `ripeti ... volte`:
+          uno di questi deve usare un blocco con operazioni matematiche.'
       NEW Course 4 Bee For Loops 7_authored_hint:
-        NEW_Course_4_Bee_For_Loops_7_a: |-
-          Try doing some math with the counter variable.
-
-          What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
+        NEW_Course_4_Bee_For_Loops_7_a: Prova ad usare nel <i>ciclo con contatore</i>
+          un valore della variabile `counter` che viene modificato con un blocco matematico
+          man mano che ti sposti e raccogli il nettare.
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: Se il ciclo deve contare "a crescere" il valore
           del passo deve corrispondere ad un incremento (quindi un numero positivo).
           Quanto bisogna aggiungere in questo caso ad ogni valore per ottenere il
           valore successivo nella sequenza?
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Prova a far costruire dei ponti all'Agent, in modo
-          che Alex o Steve possa camminare oltre i limiti della mappa.
+        MC_HOC_2017_13_Cole_a: Prova a far costruire dei ponti all'Agente, in modo
+          che il giocatore possa camminare oltre i limiti della mappa.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: Puoi scegliere tra diversi percorsi. Qual'è il più corto?
         mc_8_b: Usa il blocco `ripeti ... volte` per semplificare il tuo programma.
@@ -7529,8 +7532,9 @@
         courseF_bee_for1_b: You will need two blocks in your ‘repeat’ loop to collect
           all of the nectar.
       courseF_bee_for10_authored_hint:
-        courseF_bee_for10_a: Can you find a pattern between the number of steps you
-          need to take and the number of nectars to gather?
+        courseF_bee_for10_a: Riesci a trovare una relazione tra il numero di passi
+          che l'ape fa per arrivare al fiore ed il numero di dosi di nettare che deve
+          raccogliere?
         courseF_bee_for10_b: You'll need to have 2 repeats, one will use a math block.
         courseF_bee_for10_c: "In the puzzle, the first set of flowers has **14** flowers,
           the second set has **10** flowers, third set has **6** flowers, and the
@@ -7538,7 +7542,8 @@
           red squares, **5** orange squares, **3** green squares, and **1** blue block.
           \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
           Hint Drawing.png)\n\nHow do the numbers relate?"
-        courseF_bee_for10_d: You'll need to have 2 repeats, one will use a math block.
+        courseF_bee_for10_d: 'Devi usare due blocchi `ripeti ... volte`: uno di questi
+          deve usare un blocco con operazioni matematiche.'
       courseF_bee_for11_authored_hint:
         courseF_bee_for11_a: "How much less is 12 than 15?  \nHow much less is 9 than
           12?\n\nDo you see a pattern?"
@@ -7590,10 +7595,9 @@
         courseF_bee_for8_c: Your loop will count *from 3 to 15* with some increment.
           What is it?
       courseF_bee_for9_authored_hint:
-        courseF_bee_for9_a: |-
-          Try doing some math with the counter variable.
-
-          What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
+        courseF_bee_for9_a: Prova ad usare nel <i>ciclo con contatore</i> un valore
+          della variabile `counter` che viene modificato con un blocco matematico
+          man mano che ti sposti e raccogli il nettare.
         courseF_bee_for9_c: It looks like you will need to turn the bee at the beginning
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
@@ -7641,6 +7645,7 @@
           *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your
           function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get
           nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks
@@ -9356,10 +9361,10 @@
       grade5_artist_for_loopsfreeplay11_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: La soluzione di questo esercizio è quasi
           uguale a quella dell'esercizio precedente... con un paio di cambiamenti.
-        Course_4_Artist_For_Loops_inspire_b: Prova ad usare un ciclo con contatore
+        Course_4_Artist_For_Loops_inspire_b: Prova ad usare un <i>ciclo con contatore</i>
           che va da 3 a 10 con passo di 1.
-        Course_4_Artist_For_Loops_inspire_c: All'interno del ciclo con contatore ci
-          sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta
+        Course_4_Artist_For_Loops_inspire_c: All'interno del <i>ciclo con contatore</i>
+          ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta
           del primo.
         Course_4_Artist_For_Loops_inspire_d: "**Solution:**  ![Solution](https://images.code.org/d619892fc17ff491c201d86bb917e523-image-1441005190828.12.30.png) "
       grade5_artist_for_loopsfreeplay12_authored_hint:
@@ -9470,10 +9475,11 @@
         grade5_bee_for_loops10_a: "How much less is 12 than 15?  \nHow much less is
           9 than 12?\n\nDo you see a pattern?"
       grade5_bee_for_loops11_authored_hint:
-        NEW_Course_4_Bee_For_Loops_10a_a: Can you find a pattern between the number
-          of steps you need to take and the number of nectars to gather?
-        NEW_Course_4_Bee_For_Loops_10a_b: You'll need to have 2 repeats, one will
-          use a math block.
+        NEW_Course_4_Bee_For_Loops_10a_a: Riesci a trovare una relazione tra il numero
+          di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare
+          che deve raccogliere?
+        NEW_Course_4_Bee_For_Loops_10a_b: 'Devi usare due blocchi `ripeti ... volte`:
+          uno di questi deve usare un blocco con operazioni matematiche.'
       grade5_bee_for_loops3_authored_hint:
         grade5_bee_for_loops3_a: 'Use the `counter` variable inside the `repeat` loop
           where nectar is gathered to solve this puzzle. '
@@ -9498,10 +9504,9 @@
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the next amount of nectar?"
       grade5_bee_for_loops9_authored_hint:
-        NEW_Course_4_Bee_For_Loops_7_a: |-
-          Try doing some math with the counter variable.
-
-          What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
+        NEW_Course_4_Bee_For_Loops_7_a: Prova ad usare nel <i>ciclo con contatore</i>
+          un valore della variabile `counter` che viene modificato con un blocco matematico
+          man mano che ti sposti e raccogli il nettare.
         NEW_Course_4_Bee_For_Loops_7_b: 'Remember: If your loop is counting up, the
           increment is added to your `counter` variable each time through.'
       grade5_bee_parameters_new1_authored_hint:

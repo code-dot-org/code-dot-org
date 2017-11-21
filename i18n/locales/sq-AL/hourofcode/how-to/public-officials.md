@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Bëj çdo shkollë te marrë pjesë, çdo student të mësojë!
 
-1. **Lexoni faqen tonë** se pse edukimi në shkenca kompjuterike është i rëndësishëm, dhe se si ju mund të ndihmoni në këtë çështje duke mbështetur Orën e Kodimit. [Hapni faqen këtu.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Lexoni faqen tonë** se pse edukimi në shkenca kompjuterike është i rëndësishëm, dhe se si ju mund të ndihmoni në këtë çështje duke mbështetur Orën e Kodimit. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Rekruto shkollat vendore dhe rajonet.** Përdor [këtë email](%= resolve_url('/promote/resources#sample-emails') %) ose [këtë njoftim](%= resolve_url('/promote/stats') %) si një pikë filluese, dhe hidhi një sy këtij [informacioni](%= resolve_url('/how-to') %) për shkollat dhe rajonet.
 

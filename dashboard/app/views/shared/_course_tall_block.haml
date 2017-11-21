@@ -40,6 +40,11 @@
   - title = t('upsell.text-compression.title')
   - body = t('upsell.text-compression.body')
 
+- elsif id == 'hoc_encryption'
+  - url = CDO.studio_url('/s/hoc-encryption/reset')
+  - title = t('upsell.hoc-encryption.title')
+  - body = t('upsell.hoc-encryption.body')
+
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::COURSEA_NAME, Script::COURSEB_NAME, Script::COURSEC_NAME, Script::COURSED_NAME, Script::COURSEE_NAME, Script::COURSEF_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')

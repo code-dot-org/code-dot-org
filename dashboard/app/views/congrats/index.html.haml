@@ -1,8 +1,12 @@
 :ruby
   require 'cdo/user_helpers'
-  congrats_data = {current_user: current_user}
+  congrats_data = {}
   congrats_data[:english] = @is_english
-  congrats_data[:user_age] = UserHelpers.age_from_birthday(current_user[:birthday])
+  congrats_data[:random_donor_twitter] = @random_donor_twitter
+  if current_user
+    congrats_data[:current_user] = current_user
+    congrats_data[:user_age] = UserHelpers.age_from_birthday(current_user[:birthday])
+  end
 
 #congrats-container
 

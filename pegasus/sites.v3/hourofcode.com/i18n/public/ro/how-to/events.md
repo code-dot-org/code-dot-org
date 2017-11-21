@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Pregăteşte-te pentru eveniment
 
 - Stabilește un loc, o dată şi o oră.
-- Trimite-i [o scrisoare](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) prin care il inviti pe primar, un congressman, guvernator sau business man sa tina un discurs.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Invită mass-media şi presa locală, ziaristi sau bloggeri tech/educatie. Pentru ajutor, vedeti [kit-ul de presă](<%= resolve_url('/promote/press-kit') %>).
 
 ## 2. În timpul evenimentului dumneavoastră

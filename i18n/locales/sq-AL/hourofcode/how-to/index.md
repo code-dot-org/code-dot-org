@@ -13,9 +13,7 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) as well as [teacher-guided tutorials](%= resolve_url('https://code.org/educate/teacher-led') %) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Promote your Hour of Code
 
@@ -42,7 +40,7 @@ Në rast se tutoriali juaj funksionon më mirë me zë, vini në dizpozicion kuf
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Gjej më shumë [burime](%= resolve_url('https://code.org/inspire') %) dhe[ video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) frymëzuese.
 
-**Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike. Këtu janë disa ide se si mund të prezantoni aktivitetin tuaj të Orës së Kodimit:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Si klasë, listoni gjëra që përdorin kod në jetë e përditshme.
@@ -50,11 +48,11 @@ Në rast se tutoriali juaj funksionon më mirë me zë, vini në dizpozicion kuf
 
 ## 6. Code!
 
-**Drejto studentët për te aktiviteti**
+**Direct students to the activity**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
 
-**Kur studentët e tu kanë vështirësi është normale që të përgjigjeni:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Nuk e di. Le ta zgjidhim së bashku."
 - "Teknologjia nuk punon gjithmon ashtu siç duam ne."

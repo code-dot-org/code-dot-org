@@ -13,13 +13,11 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Välj en övning till din timme
 
-Vi erbjuder en mängd roliga, [ student-ledda övningar](<%= resolve_url('/learn') %>) samt [lärar-ledda övningar](<%= resolve_url('https://code.org/educate/teacher-led') %>) för deltagare i alla åldrar, skapad av en mängd partners.
-
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Marknadsför din Hour of Code
 
-Marknadsför din Hour of Code [med dessa verktyg](<%= resolve_url('/promote') %>) och uppmuntra andra att vara hålla egna evenemang.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Planera vad du behöver för teknik - datorer är inte nödvändiga
 
@@ -35,14 +33,14 @@ Fixa hörlurar till din klass, eller be eleverna att ta med sig egna, om de övn
 
 ## 5. Starta din Hour of Code med en inspirerande film eller talare
 
-**Om du kan, bjud in [lokala volontärer](<%= resolve_url('https://code.org/volunteer/local') %>) att inspirera dina elever genom att berätta om bredden av möjligheter inom datavetenskap.** Det finns tusentals volontärer runt om i världen som är redo att hjälpa med din Hour of Code, antingen genom ett klassrumsbesök eller ett videosamtal med dina studenter!
+**Invite a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Visa en inspirerande video:**
 
 - Preimärfilmen från code.org, med Bill Gates, Mark Zuckerberg och NBA-stjärnan Chris Bosh. (Det finns versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuters](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Hitta fler inspirerande [resurser](<%= resolve_url('https://code.org/inspire') %>) och [videor](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det är okej om du är alla helt ny med datavetenskap. Här är några idéer för hur du introducerar din Hour of Code-övning:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Förklara hur teknik påverkar våra liv, med exempel som alla elever i klassrummet kommer att bry sig om och inte endast ett fåtal (berätta om appar och teknik som används för att rädda liv, hjälpa människor, och föra personer närmare, o.s.v.).
 - Gör en lista med vardagsprylar som använder kod tillsammans med dina elever.
@@ -50,17 +48,17 @@ Fixa hörlurar till din klass, eller be eleverna att ta med sig egna, om de övn
 
 ## 6. Koda!
 
-**Visa hur eleverna kan hitta aktiviteten**
+**Direct students to the activity**
 
 - Skriv länken till guiden på en whiteboard. Länken finns på [informationen för din valda handledning](<%= resolve_url('/learn') %>) under antalet deltagare.
 
-**När någon stöter på problem är det okej att svara:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Jag vet inte. Låt oss lista ut detta tillsammans."
 - "Tekniken fungerar inte alltid som vi vill."
 - "Att lära sig programmera är som att lära sig ett nytt språk: Du blir inte flytande på en gång."
 
-**Vad gör jag om en elev blir färdig tidigare?**
+**What if a student finishes early?**
 
 - Studenter kan se alla övningar och [prova en annan Hour of Code-övning](<%= resolve_url('/learn')%>).
 - Eller, be elever som blir snabbt färdiga att hjälpa klasskamrater som behöver hjälp.

@@ -5,51 +5,51 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Төмөндө "Информатика аптасын" жана анын максаттарын колдогон мамлекеттик органдын жана жергиликтүү кеңештин өкүлүнүн кулактандыруусунун үлгүсү.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[АК-ҮЙ,СЕНАТ, ШТАТ, ОКРУГ ЖЕ ШААРДЫН РЕЗОЮЦИЯСЫ ЖЕ ЖАРЫЯСЫ ###] – "Информатика аптасы" өтүп жатканда компүтердик илимдин коомубузду өзгөртүүдөгү, инновацияларды жана экономикалык мүмкүнчүлүктөрдү жаратуудагы зор таасирин баса белгилей кеткибиз келет;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[АК-ҮЙ ЖЕ СЕНАТТЫН РЕЗЛЮЦИЯСЫ ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Компүтердик технологиялар учурдагы маданиятыбыздын ажырагыс бөлүгү болуп калды. Биздин бири-бирибиз жана дүйнө менен байланышуу жолдорубузду өзгөртүүдө;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Компүтердик технологиялар индустрияларды өзгөртүп, коммерциянын жаңы жолдорун ачып, илимдин бардык тармактарына инновацияларды алы келүүдө жана адаттагы экномиканын майнаптуулугун арттырууда;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+АКШ экономикасынын өндүрүшүнүн чоң бөлүгүн түзгөн маалымат технологиялар секторунун негизинде компүтердик илимдин тармагы жаткандыгын эске алуу менен;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Компүтердик илим санарип заманын негизинде жаткан илим экендигин эске алуу менен;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Изилдөө жана жаңы инновацияларды өнүктүрүү аркылуу экономиканы калыбына келтирүү ишиндеги маалымат технологиялар секторунун өзгөчө ордун эске алуу менен;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Бүт өлкөдө боюнча келечекте компүтердик технологиялар жаатында 500 000 ашык жумушчу орун түзүлөөрүн эске алуу менен;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Окуучулар жогорку сапаттуу компүтердик илимий иш-чараларга катышуу менен бул тармак сунуштаган бай мүмкүнчүлүктөргө ээ болууга шарт түзөөрүн жана аларга дайым керек болуучу сын көз караштуу ой жүгүртүү жөндөмүн калыптандырарын эске алуу менен;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Билим берүүнүн баштапкы жана орто баскычтарындагы бардык окуучулар, жашына ылайык түзүлгөн окуу планынын негизинде, квалификациялуу мугалимдер жана технологиялар жетиштүү болгон шартта, информатика боюнча билим алганга татыктуу экендигин эске алуу менен;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Жогорку класстардын бүтүрүүчүлөрү үчүн талап кылынган информатика сабактарын саны жана информатика мугалимдерине адистик өнүгүүгө шарт түзүү сыяктуу информатиканы үйрөтүү маселелерин чечүү зарылдыгын эске алуу менен;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Информатика аптасынын алкагында Код саатына катышуу компүтердик билим тууралуу мифтерди жокко чыгарууга шарт түзөрүн жана көптөгөн окуучуларды компүтердик билимин улантууга шыктандырарын эске алуу менен;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Компүтердик технологиялар тармагындагы бардык деңгээлдерде аялдарды жна азчылыктарды көбүрөөк катыштыруу сыяктуу чоң тоскоолдуктарды чечүү керектигин эске алуу менен;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Грейс Мүррей Хоппер - компүтер илиминдеги көптөгөн жетишкендиктердин негизинде жаткан компүтердик системдердин стандартын жана жаңы програмдоо тилин киргизген бул тармактагы алгачкы аялдардын бири экендигин эске алуу менен; жана
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Бул апталык <%= campaign_date('start-long') %>Грейс Хоппердин туулган күнүнө арналып "Информатика аптасы" аталгандыгын эске алуу менен: төмөнкүнү
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+[АК-ҮЙ ЖЕ СЕНАТ, ШТАТ, ОКРУГ, ШААР ЖЕ МЕКТЕПТИН БАЙКООЧУЛАР КЕҢЕШИ] чечим кылат:
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) (<%= campaign_date('full') %>) өтүүчү "Информатика аптасынын" максаттарын колдойт;
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) мектептерди, окутуучуларды, ата-энелерди жана коомдук ишмерлерди окуучуларын Код саатына катыштыруу менен "Информатика аптасынын" колдоого чакырат;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) мектептерди, мугалимдерди, изилдөөчүлөрдү, университеттерди, бизнес лидерлерди жана коомдук ишмерлерди бардык деңгээлдерде информатиканы окутууда мугалимдерге туруктуу окутуу тажрыйбаларын камсыздоо максатында алдыңкы адистик өнүктүрүү механизмдерин аныктап берүүгө жана окуучуларды компүтердик илимдин концепцияларын түшүнүүгө шыктандырууга чакырат;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) саясатчыларды информатика сабактарын бүтүрүү талаптарында математика же илим кредиттери катары эсептөөгө болгон тоскоолдуктарды алып салууга чакырат;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) информатикада аялдар жана азчылыктар үчүн мүмкүнчүлүктөрдү, учурдагы программалардан алкагында дагы, түзүүгө чакырат.
 
 <%= view :signup_button %>

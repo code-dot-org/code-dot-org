@@ -17,7 +17,7 @@ Code.org offre (solo per gli USA) ai dipendenti delle aziende e organizzazioni l
 ## Altri modi in cui le aziende possono supportare l'Ora del Codice
 
 - Chiedendo al tuo Amministratore Delegato di [inviare una email a tutta l'azienda](<%= resolve_url('/promote/resources#sample-emails') %>) sottolineando l'importanza dell'informatica ed incoraggiando i dipendenti a spargere la voce. 
-- Organizzando un'Happy Hour dedicata all'Ora del Codice con colleghi per provare le [esercitazioni](<%= resolve_url('https://code.org/learn') %>).
+- Organizzando un'Happy Hour dedicata all'Ora del Codice con colleghi per provare le [attività disponibili](https://programmailfuturo.it/come/ora-del-codice/introduzione).
 - Ospitando un evento dell'Ora del Codice per una classe locale di studenti o partner non-profit per poter fare un'ora di codice negli uffici della Vostra azienda. Guarda la guida sottostante per avere informazioni su come organizzare un evento.
 
 # Come ospitare un evento dell'Ora del Codice con gli studenti
@@ -59,8 +59,8 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 **Mostra un video stimolante:**
 
 - Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Il [video mondiale dell'Ora del Codice](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Il messaggio del Presidente Obama che invita tutti gli studenti ad imparare informatica.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- Il [video globale dell'Ora del Codice](https://www.youtube.com/watch?v=KsOIlDT145A) (in inglese).
+- [Il messaggio del Presidente Obama che invita tutti gli studenti ad imparare informatica](https://www.youtube.com/watch?v=6XvmhE1J9PY) (in inglese).
 - Puoi trovare altri video motivanti in inglese [qui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) oppure [alcuni in italiano](https://www.programmailfuturo.it/notizie/messaggeri-del-codice) sul sito di Programma il Futuro.
 
 **Idee per introdurre la tua Ora del Codice:**
