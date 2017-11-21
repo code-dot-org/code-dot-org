@@ -401,6 +401,7 @@
   homepage_hero_text_stat_students: "#student_count študentských účtov v Code Studiu"
   homepage_hero_text_stat_served: 'Hodina kódu: #served účastníkov'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Hodina Kódu
   homepage_slot_text_frozen: Frozen s Annou a Elsou
   homepage_slot_text_teacher: Teacher Dashboard
@@ -420,6 +421,7 @@
   homepage_action_text_girlvideo: Inšpirujte dievčatá
   homepage_action_text_learn: Spustiť
   homepage_action_text_signpetition: Podpísať petíciu
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Súhlasím &#x25BE;
   homepage_diversity_pledge: Zajistite rozmanitosť
   homepage_banner_text_prizes: 'Hour of Code príde znova, 7 - 13 decembra. '

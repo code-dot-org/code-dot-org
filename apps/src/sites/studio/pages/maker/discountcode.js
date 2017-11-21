@@ -30,6 +30,7 @@ $(document).ready(() => {
         <EligibilityChecklist
           statusPD={scriptData.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
           statusStudentCount={scriptData.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
+          unit6Intention={scriptData.unit_6_intention}
         />
       }
       {scriptData.discountCode &&

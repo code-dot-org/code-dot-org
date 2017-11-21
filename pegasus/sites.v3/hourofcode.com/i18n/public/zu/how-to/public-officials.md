@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Thola sonke isikole sibambe iqhaza, wonke umfundi efunda!
 
-1. **Funda ikhasi-elilodwa lethu** ngokuba kungani imfundiso yekhompyutha sayensi ibalulekile, kanye nokuthi ungasiza kanjani ngokweseka iHora loKufingqwa. [Thola lephepha elilodwa lapha.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Funda ikhasi-elilodwa lethu** ngokuba kungani imfundiso yekhompyutha sayensi ibalulekile, kanye nokuthi ungasiza kanjani ngokweseka iHora loKufingqwa. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **Faka izikole zendawo kanye nezifunda.** Sebenzisa [ le-imeyili](<%= resolve_url('/promote/resources#sample-emails') %>) okanye [leblurb](<%= resolve_url('/promote/stats') %>) njengephuzu lokuqala, uphinde uthathe ukubuka lokhu [indlela-yokwenza](<%= resolve_url('/how-to') %>) yezikole kanye nezifunda.
 

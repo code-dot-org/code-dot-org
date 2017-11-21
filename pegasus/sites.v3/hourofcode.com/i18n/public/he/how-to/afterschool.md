@@ -5,15 +5,15 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# איך ללמד "שעה של קוד" בשיעורים לאחר שעות הלימודים ובמועדוניות
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! אם תצטרכו סיוע של אדם נוסף, תוכלו למצוא [מתנדב מקומי](<%= resolve_url('https://code.org/volunteer/local') %>) שיעזור לנהל את שיעור "שעה של קוד" בכיתה.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. בחרו סרטון הדרכה
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [נסו אותם!](<%= resolve_url('/learn') %>)
+אנו מספקים מגוון של [סרטוני הדרכה כיפיים באורך של שעה אחת](<%= resolve_url('/learn') %>)עבור משתתפים מכל הגילאים, שנוצרו על ידי מגוון של שותפים. [נסו אותם!](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
