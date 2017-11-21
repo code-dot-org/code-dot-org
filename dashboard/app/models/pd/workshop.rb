@@ -315,8 +315,6 @@ class Pd::Workshop < ActiveRecord::Base
     in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(Time.zone.now - 2.days)
   end
 
-  scope :organized_by_regional_partners, -> {joins(organizer: :regional_partner_program_managers)}
-
   def course_name
     COURSE_NAMES_MAP[course]
   end
