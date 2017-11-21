@@ -395,6 +395,7 @@
   homepage_hero_text_stat_students: "#student_count llogari studentësh në Code Studio"
   homepage_hero_text_stat_served: 'Ora e Kodimit: #served dorëzuar'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Ora e Kodimit
   homepage_slot_text_frozen: Frozen me Anën dhe Elsën
   homepage_slot_text_teacher: 'Dërrasa e zezë '
@@ -414,6 +415,7 @@
   homepage_action_text_girlvideo: Frymëzo një vajzë
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_signpetition: Nënshkruaj peticionin
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Jam dakort &#x25BE;
   homepage_diversity_pledge: Zgjidh zotimin e diversitetit
   homepage_banner_text_prizes: 'Ora e Kodimit po vjen përsëri më 7-13 dhjetor. '

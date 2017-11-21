@@ -372,6 +372,7 @@
   homepage_hero_text_stat_students: '#student_count حساب طالب في "استوديو البرمجة"'
   homepage_hero_text_stat_served: "ساعة البرمجة: #served خدمة قدمت"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "الساعة من التعليمات البرمجية"
   homepage_slot_text_frozen: "ملكة الثلج مع أنّا و إلزا"
   homepage_slot_text_teacher: "لَوْحَة التَحَكُّم"
@@ -391,6 +392,7 @@
   homepage_action_text_girlvideo: "الهام بنت"
   homepage_action_text_learn: "ابدأ التعلم"
   homepage_action_text_signpetition: "وقّع على العريضة"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "أوافق &#x25BE;"
   homepage_diversity_pledge: "التعهد بالتنوع"
   homepage_banner_text_prizes: 'فعالية "ساعة برمجة" قادمة من جديد. 07 - 13 ديسمبر. '

@@ -421,6 +421,7 @@
   homepage_hero_text_stat_students: "#student_count de contas de alunos no Code Studio"
   homepage_hero_text_stat_served: 'Hora de Código: #served de alunos já experimentaram'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: A Hora de Código
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel do Professor
@@ -440,6 +441,7 @@
   homepage_action_text_girlvideo: Inspirar uma rapariga
   homepage_action_text_learn: Começa a aprender
   homepage_action_text_signpetition: Assina a petição
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Assina a nossa petição &#x25BE;
   homepage_diversity_pledge: Aceite a promessa de diversidade
   homepage_banner_text_prizes: 'A Hora de Código está de volta, de 7 a 13 de dezembro. '

@@ -135,7 +135,7 @@ class VerticalImageResourceCard extends Component {
                type="text"
                style={[styles.text, styles.shareLink, localeStyle]}
                value={MCShareLink}
-               readOnly={true}
+               onChange={() => {}}
                onClick={e => e.target.select()}
              />
            )}
