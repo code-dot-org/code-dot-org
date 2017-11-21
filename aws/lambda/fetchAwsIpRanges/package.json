@@ -1,0 +1,21 @@
+{
+  "name": "@cdo/fetchAwsIpRanges",
+  "private": true,
+  "version": "0.1.0",
+  "license": "apache-2.0",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "github": "^12.0.3",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "@octokit/fixtures": "^5.0.0",
+    "aws-sdk": "^2.50.0",
+    "lambda-tester": "^3.0.2",
+    "mocha": "^3.4.1",
+    "nock": "^9.0.4"
+  }
+}
