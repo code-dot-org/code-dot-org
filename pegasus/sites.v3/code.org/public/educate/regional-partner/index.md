@@ -48,6 +48,9 @@ Below is a list of program commitments:
 <a href="/educate/regional-partner/terms" target=_blank>Click here</a> to see a more detailed term sheet with program details.
 
 
-## <a name="partners"></a>
+## <a name="locations"></a>Where does Code.org have partners?
 
-<%= view :plp_partners_map %>
+Click on a location for more information on the region and the Regional Partner who serves that area.
+<br>
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
