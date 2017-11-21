@@ -45,7 +45,7 @@ const blockPlaceOrder = [
   "logSpruce",
   "planksAcacia",
   "planksBirch",
-  "planksjungle",
+  "planksJungle",
   "planksOak",
   "planksSpruce",
   "rails",

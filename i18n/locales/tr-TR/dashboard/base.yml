@@ -747,13 +747,6 @@ tr:
     create: "Proje Oluştur"
     create_a_project: 'Yeni bir proje oluşturun:'
     new: "Yeni oluştur"
-    new_buttons:
-      artist: "Aktör"
-      playlab: "Oyun Laboratuvarı"
-      applab: "App Laboratuvarı"
-      gamelab: "Oyun Laboratuvarı"
-      weblab: "Web Lab (beta)"
-    new_buttons_header: "Yeni bir proje başlat"
     rename: "Yeniden adlandır"
     save: "Kaydet"
     delete: "Sil"

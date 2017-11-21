@@ -981,13 +981,6 @@
     create: Opret projekt
     create_a_project: 'Opret et nyt projekt:'
     new: Opret nyt
-    new_buttons:
-      artist: Kunstner
-      playlab: Play Lab
-      applab: App Lab
-      gamelab: Game Lab
-      weblab: Web Lab (beta)
-    new_buttons_header: 'Start a new project:'
     rename: Omdøb
     save: Gem
     delete: Slet

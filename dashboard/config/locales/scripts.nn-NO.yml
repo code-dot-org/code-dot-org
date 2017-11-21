@@ -285,15 +285,15 @@
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: Defining Variables and Substitution
+              name: Definere variablar og substitusjon
             'Calc: Evaluation Blocks':
-              name: Evaluation Blocks and Arithmetic Expressions
+              name: Evalueringsblokker og aritmetiske uttrykk
             'Eval: Boolean Operators':
-              name: Boolske operatorer
+              name: Boolske operatorar
             'Eval: Conditionals':
               name: Betingelser
             'Eval: Defining Functions':
-              name: Composite Functions
+              name: Samansatte funksjonar
             'Eval: Functions':
               name: Solving Word Problems with the Design Recipe
             'Eval: Strings and Images':
@@ -301,17 +301,17 @@
             'Eval: Writing Contracts':
               name: Writing Contracts
             'Play Lab: Animation (Big Game)':
-              name: The Big Game - Animation
+              name: Det Store Spelet - Animasjon
             'Play Lab: Boolean (Big Game)':
-              name: The Big Game - Booleans
+              name: Det Store Spelet - Boolske verdier
             'Play Lab: Booleans':
-              name: Sam the Bat
+              name: Flaggermusa Sam
             'Play Lab: Collision Detection (Big Game)':
-              name: The Big Game - Collision Detection
+              name: Det Store Spelet - Kollisjonsdeteksjon
             'Play Lab: Defining Functions':
-              name: Rocket Height
+              name: Raketthøgde
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: Det Store Spelet - Variabler
             'Unplugged: Booleans':
               name: 'Unplugged: Booleans and Logic'
             'Unplugged: Collision Detection and the Distance Formula':
@@ -341,13 +341,13 @@
             programming language used in Code.org CS in Algebra
           stages:
             Defining Simple Functions:
-              name: Defining Simple Functions
+              name: Definering av enkle funksjonar
             Defining Variables:
               name: Definering av variablar
             Evaluation Blocks:
               name: Evalueringsblokker
             Making Pictures:
-              name: Making Pictures
+              name: "Å lage bilder"
             The Design Recipe:
               name: Design oppskrifta
         K5PD:
@@ -357,17 +357,17 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogikk for Informatikk
             Introduction to PD:
               name: Introduction to PD
             K-5 Courses:
-              name: K-5 Courses
+              name: Kurs for 5. klasse
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Programmeringskonsepter: Vilkår'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Programmeringskonsepter: hendingar'
             'Programming Concept: Functions':
               name: 'Programming Concept: Functions'
             'Programming Concept: Loops':
@@ -626,7 +626,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Flaggermusa Sam
             Strings and Images:
               name: Strenger og bilder
             Your Game - Animation:
@@ -807,13 +807,13 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogikk for Informatikk
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
               name: Evalueringsblokker
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             Strings and Images:
               name: Strenger og bilder
             Teacher Dashboard:
@@ -1075,7 +1075,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Flaggermusa Sam
             Strings and Images:
               name: Strenger og bilder
             The Design Recipe:
@@ -1181,7 +1181,7 @@
             Evaluation Blocks:
               name: Evalueringsblokker
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1237,7 +1237,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             Planning:
               name: Planning
         ECSPD2:
@@ -1362,7 +1362,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Neste steg
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Fase 2 Online: Blanda sommerstudie'
@@ -5296,7 +5296,7 @@
             Binary:
               name: Binær
             Snowflakes:
-              name: Snowflakes
+              name: Snøfnugg
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -5459,6 +5459,8 @@
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -8432,6 +8434,8 @@
               name: CSD/P pulse check survey 2017
             CSD mid and post survey 2017 staging:
               name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -8450,10 +8454,11 @@
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
               name: Kodetimen med Minecraft
-          title: 'Minecraft: Hero''s Journey'
+          title: 'Minecraft: Heltens reise'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft er tilbake med en helt ny aktivitet til Kodetimen!
+          description: Minecraft er tilbake for Kodetimen med en helt ny aktivitet!
+            Reis gjennom Minecraft med kode.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -8471,6 +8476,56 @@
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
           title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Explore Performance Tasks.
+          description: ''
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Create Performance Tasks.
+          description: ''
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
           description_audience: ''
           description_short: ''
           description: ''
