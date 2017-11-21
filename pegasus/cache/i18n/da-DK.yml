@@ -398,6 +398,7 @@
   homepage_hero_text_stat_students: "#student_count elever oprettet på Code Studio"
   homepage_hero_text_stat_served: 'Hour of Code: #served har prøvet'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frozen med Anna og Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -417,6 +418,7 @@
   homepage_action_text_girlvideo: Inspirer en pige
   homepage_action_text_learn: Begynd at lære
   homepage_action_text_signpetition: Skriv under
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Jeg er enig &#x25BE;
   homepage_diversity_pledge: Afgiv et løfte om mangfoldighed
   homepage_banner_text_prizes: 'The Hour Of Code kommer igen, nemlig d. 7.-13. december

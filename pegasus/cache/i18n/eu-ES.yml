@@ -397,6 +397,7 @@
   homepage_hero_text_stat_students: "#student_count ikasle kopurua Code Studio-n"
   homepage_hero_text_stat_served: 'Kode Ordua: #served artatuak'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Kode Ordua
   homepage_slot_text_frozen: Frozen Anna eta Elsarekin
   homepage_slot_text_teacher: Irakaslearen arbela
@@ -416,6 +417,7 @@
   homepage_action_text_girlvideo: Animatu neska bat
   homepage_action_text_learn: Ikasten hasi
   homepage_action_text_signpetition: Sinatu eskaera
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Ados nago &#x25BE;
   homepage_diversity_pledge: Aniztasunarekin konpromisoa
   homepage_banner_text_prizes: Berriro dator Kode Ordua, abenduaren 7-13an.

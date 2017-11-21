@@ -406,6 +406,7 @@
   homepage_hero_text_stat_students: 'Kod Studiyasında #student_count şagird hesabı'
   homepage_hero_text_stat_served: 'Kod Saatı: #served nəfər faydalanıb'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Kod Saatı
   homepage_slot_text_frozen: Anna və Elza ilə Buzlu ürək
   homepage_slot_text_teacher: Teacher Dashboard
@@ -425,6 +426,7 @@
   homepage_action_text_girlvideo: Bir qızı həvəsləndirin
   homepage_action_text_learn: "Öyrənməyə başlayın"
   homepage_action_text_signpetition: Petisiyaya qol çəkin
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Mən razıyam &#x25BE;
   homepage_diversity_pledge: Fərqlilik barədə öhdəlik götür
   homepage_banner_text_prizes: 'Kod Saatı yenə gəlir, 7-13 dekabrda. '

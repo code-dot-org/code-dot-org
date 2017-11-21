@@ -62,7 +62,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 [<center><img src="/images/animated-examples/lessonplans.png" width="90%">](https://curriculum.code.org/csp)</center>
 
-<div style="margin-top: 5px;"><a href="https://curriculum.code.org/csp">Daily lesson plans</a> come with detailed instructions, activity guides, assessments, standards mappings, and more</div>
+<div style="margin-top: 5px;"><a href="https://curriculum.code.org/csp">Daily lesson plans</a> come with detailed instructions, activity guides, assessments, standards mappings, and more.</div>
 
 [/col-33]
 
@@ -90,7 +90,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 <center><img src="/images/animated-examples/binary.gif" width="90%"></center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Students get hands on experience with concepts like binary and pixels through <a href="/educate/csp/widgets">computational widgets</a></div>
+<div style="margin-left: 15px; margin-top: 5px;">Students get hands on experience with concepts like binary and pixels through <a href="/educate/csp/widgets">computational widgets.</a></div>
 
 [/col-33]
 
@@ -148,13 +148,15 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 [col-50]
 
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and created a related digital artifact.'%>
+
 [/col-50]
 
 <div style="clear:both"></div>
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-ap'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-ap/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Tasks', ages: 'Explore and Performance Tasks', description: 'Students design a project plan, then work on and complete their AP Performance Task projects for submission to the College Board.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-create'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-create/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Create Performance Task', ages: 'Create - Applications from Ideas', description: 'This unit provides activities and resources for students to prepare for and complete the AP Create Performance Task, which asks students to develop a program on a topic that interests them or one that solves a problem.'%>
 
 </div>
 
@@ -175,7 +177,7 @@ If you are interested in joining in 2018-19, sign up below to be added to our co
 
 <div class="col-33" style="padding-right: 20px;">
 
-<h4>Let us know how we're doing!</h4>
+<h4>Let us know how we're doing</h4>
 
 We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
 <br>
@@ -199,7 +201,7 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 <h4>Chat about CS Principles in the forum</h4>
 
-We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12.
+We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum. Code.org forums are used for all of our courses, K-12.
 <br><br>
 
 <a href="http://forum.code.org/c/csp"> <button>Visit the forum</button></a> 
@@ -279,7 +281,7 @@ The following supplies are completely optional but will be useful to have on han
 #### How can I access answer keys? 
 With an approved teacher account you can find answer keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
 
-For teachers in our professional learning program will automatically be approved to view answer keys.  If you need an approved teacher account, any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
+Teachers in our professional learning program will automatically be approved to view answer keys.  If you need an approved teacher account, any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
 
 <br />
 
