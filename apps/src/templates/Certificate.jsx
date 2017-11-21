@@ -96,7 +96,9 @@ export default class Certificate extends Component {
     const twitter = queryString.stringify({
       url: certificateLink,
       related: 'codeorg',
-      text: randomDonorTwitter ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter}) : i18n.justDidHourOfCode(),
+      text: randomDonorTwitter ?
+        i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter}) :
+        i18n.justDidHourOfCode(),
     });
 
     const isMinecraft = /mc|minecraft|hero/.test(tutorial);

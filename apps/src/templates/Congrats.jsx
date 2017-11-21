@@ -63,7 +63,17 @@ export default class Congrats extends Component {
   }
 
   render() {
-    const { tutorial, certificateId, MCShareLink, isRtl, userType, userAge, isEnglish, randomDonorTwitter } = this.props;
+    const {
+      tutorial,
+      certificateId,
+      MCShareLink,
+      isRtl,
+      userType,
+      userAge,
+      isEnglish,
+      randomDonorTwitter
+    } = this.props;
+
     const tutorialType = {
       'applab-intro': 'applab',
       hero: '2017Minecraft',
