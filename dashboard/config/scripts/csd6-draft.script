@@ -118,6 +118,9 @@ assessment 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection
 stage 'Making Music', flex_category: 'csd6_2'
 level 'CSDU6 circuit playground piano', progression: 'Making Sounds'
 level 'CSDU6 frequency modification', progression: 'Making Sounds'
+level 'CSDU6 frequency creation', progression: 'Making Sounds'
+named_level 'Making Music'
+level 'CSDU6 piano with notes', progression: 'Playing with Notes'
 
 stage 'Arrays', flex_category: 'csd6_2'
 named_level 'CSD: Introduction to Lists - Part 1'
