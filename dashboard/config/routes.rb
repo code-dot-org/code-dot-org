@@ -537,7 +537,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
   # Routes used by census
-  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#new_submission', defaults: {format: 'json'}
+  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.
