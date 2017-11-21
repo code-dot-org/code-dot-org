@@ -2,10 +2,15 @@ import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
 
 import instructions, {
+  InstructionsState,
   toggleInstructionsCollapsed,
   setInstructionsRenderedHeight,
   setInstructionsMaxHeightAvailable,
   setInstructionsMaxHeightNeeded,
+  setFeedback,
+  setInstructionsConstants,
+  setHasAuthoredHints,
+  hideOverlay,
   determineInstructionsConstants
 } from '@cdo/apps/redux/instructions';
 
@@ -15,117 +20,159 @@ describe('instructions', () => {
   testUtils.setExternalGlobals();
 
 describe('instructions reducer', () => {
-  var reducer = instructions;
+  const reducer = instructions;
 
 
   it('starts out uncollapsed', () => {
-    var state = reducer(undefined, {});
+    const state = reducer(undefined, {});
     assert.strictEqual(state.collapsed, false);
   });
 
   it('toggles collapsed', () => {
-    var initialState, newState;
+    let initialState, newState;
 
     // start collapsed
-    initialState = {
+    initialState = new InstructionsState({
       collapsed: false,
       longInstructions: 'foo'
-    };
+    });
     newState = reducer(initialState, toggleInstructionsCollapsed());
     assert.strictEqual(newState.collapsed, true);
 
     // start uncollapsed
-    initialState = {
+    initialState = new InstructionsState({
       collapsed: true,
       longInstructions: 'foo'
-    };
+    });
     newState = reducer(initialState, toggleInstructionsCollapsed());
     assert.strictEqual(newState.collapsed, false);
   });
 
   it('will collapse even if no long instructions', () => {
-    var initialState, newState;
-
     // start collapsed
-    initialState = {
+    const initialState = new InstructionsState({
       collapsed: false,
       shortInstructions: 'short',
       longInstructions: undefined
-    };
-    newState = reducer(initialState, toggleInstructionsCollapsed());
+    });
+    const newState = reducer(initialState, toggleInstructionsCollapsed());
     assert.strictEqual(newState.collapsed, true);
   });
 
   it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {
-    var initialState, newState;
-    initialState = {
+    const initialState = new InstructionsState({
       collapsed: false,
       renderedHeight: 0,
       expandedHeight: 0
-    };
-    newState = reducer(initialState, setInstructionsRenderedHeight(200));
-    assert.deepEqual(newState, {
+    });
+    const newState = reducer(initialState, setInstructionsRenderedHeight(200));
+    assert(newState.equals(new InstructionsState({
       collapsed: false,
       renderedHeight: 200,
       expandedHeight: 200
-    });
+    })));
   });
 
   it('setInstructionsRenderedHeight updates only rendered height if collapsed', () => {
-    var initialState, newState;
-    initialState = {
+    const initialState = new InstructionsState({
       collapsed: true,
       renderedHeight: 0,
       expandedHeight: 0
-    };
-    newState = reducer(initialState, setInstructionsRenderedHeight(200));
-    assert.deepEqual(newState, {
+    });
+    const newState = reducer(initialState, setInstructionsRenderedHeight(200));
+    assert(newState.equals(new InstructionsState({
       collapsed: true,
       renderedHeight: 200,
       expandedHeight: 0
-    });
+    })));
   });
 
 
   it('setInstructionsMaxHeightNeeded sets maxNeededHeight', () => {
-    var initialState, newState;
-    initialState = {
+    const initialState = new InstructionsState({
       maxNeededHeight: 0
-    };
-    newState = reducer(initialState, setInstructionsMaxHeightNeeded(200));
-    assert.deepEqual(newState, {
-      maxNeededHeight: 200,
     });
+    const newState = reducer(initialState, setInstructionsMaxHeightNeeded(200));
+    assert.strictEqual(newState.maxNeededHeight, 200);
   });
 
   it('setInstructionsMaxHeightAvailable updates maxAvailableHeight', () => {
-    var initialState, newState;
-    initialState = {
+    const initialState = new InstructionsState({
       maxAvailableHeight: Infinity,
       renderedHeight: 0,
       expandedHeight: 0
-    };
-    newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
-    assert.deepEqual(newState, {
+    });
+    const newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
+    assert(newState.equals(new InstructionsState({
       maxAvailableHeight: 300,
       renderedHeight: 0,
       expandedHeight: 0
-    });
+    })));
   });
 
   it('setInstructionsMaxHeightAvailable adjusts rendered/expanded height if necessary', () => {
-    var initialState, newState;
-    initialState = {
+    const initialState = new InstructionsState({
       maxAvailableHeight: Infinity,
       renderedHeight: 400,
       expandedHeight: 400
-    };
-    newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
-    assert.deepEqual(newState, {
+    });
+    const newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
+    assert(newState.equals(new InstructionsState({
       maxAvailableHeight: 300,
       renderedHeight: 300,
       expandedHeight: 300
+    })));
+  });
+
+  it('setFeedback sets feedback', () => {
+    const initialState = new InstructionsState();
+    assert.isUndefined(initialState.feedback);
+    const newState = reducer(initialState, setFeedback('anything'));
+    assert.strictEqual(newState.feedback, 'anything');
+  });
+
+  it('setInstructionsConstants can set expected constants', () => {
+    const initialState = new InstructionsState();
+    const newState = reducer(initialState, setInstructionsConstants({
+      noInstructionsWhenCollapsed: 'A',
+      hasInlineImages: 'B',
+      shortInstructions: 'C',
+      shortInstructions2: 'D',
+      longInstructions: 'E',
+      hasContainedLevels: 'F',
+      overlayVisible: 'G',
+      teacherMarkdown: 'H',
+      levelVideos: 'I'
+    }));
+    assert.equal(newState.noInstructionsWhenCollapsed, 'A');
+    assert.equal(newState.hasInlineImages, 'B');
+    assert.equal(newState.shortInstructions, 'C');
+    assert.equal(newState.shortInstructions2, 'D');
+    assert.equal(newState.longInstructions, 'E');
+    assert.equal(newState.hasContainedLevels, 'F');
+    assert.equal(newState.overlayVisible, 'G');
+    assert.equal(newState.teacherMarkdown, 'H');
+    assert.equal(newState.levelVideos, 'I');
+  });
+
+  it('setInstructionsConstants throws if trying to set instructions twice', () => {
+    const initialState = new InstructionsState();
+    const newState = reducer(initialState, setInstructionsConstants({shortInstructions: 'C'}));
+    assert.throws(() => {
+      reducer(newState, setInstructionsConstants({shortInstructions: 'second time'}));
     });
+  });
+
+  it('setHasAuthoredHints sets hasAuthoredHints', () => {
+    const initialState = new InstructionsState({hasAuthoredHints: false});
+    const newState = reducer(initialState, setHasAuthoredHints(true));
+    assert.isTrue(newState.hasAuthoredHints);
+  });
+
+  it('hideOverlay sets overlayVisible to false', () => {
+    const initialState = new InstructionsState({overlayVisible: true});
+    const newState = reducer(initialState, hideOverlay());
+    assert.isFalse(newState.overlayVisible);
   });
 });
 
