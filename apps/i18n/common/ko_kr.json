@@ -973,5 +973,14 @@
   "yourSchoolParentDesc": "Take action to expand computer science in your school or district",
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
-  "yourSchoolTellUs": "근무하고있는 학교에 대해 알려주세요."
+  "yourSchoolTellUs": "근무하고있는 학교에 대해 알려주세요.",
+  "celebrityChallenge": "Celebrity challenge",
+  "minecraftMarketingButton": "Start",
+  "minecraftMarketingDesc": "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.",
+  "minecraftMarketingTitle": "Minecraft: Hero’s Journey",
+  "specialAnnouncementHeadingAppLab": "JavaScript in the Hour of Code",
+  "specialAnnouncementDescriptionAppLab": "Are your students ready for the next step? Our new App Lab tutorial lets them create their own app in JavaScript using either blocks or text. This year, we’ve upgraded our servers so your students can do activities signed in. Sign up to host an Hour of Code (Dec 4-10th) with your class today!",
+  "specialAnnouncementHeadingCelebs": "The Hour of Code is here!",
+  "specialAnnouncementDescriptionCelebs": "Share the apps and games your students are creating for the Hour of Code to win a video chat for your classroom with a celebrity!",
+  "submitting": "Submitting..."
 }
