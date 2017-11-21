@@ -16,6 +16,7 @@ $(document).ready(function () {
   const userType = congratsData.current_user ? congratsData.current_user.user_type : "signedOut";
   const isEnglish = congratsData.english;
   const userAge = congratsData.user_age;
+  const randomDonorTwitter = congratsData.random_donor_twitter;
 
   let certificateId = '';
   let tutorial = '';
@@ -37,6 +38,7 @@ $(document).ready(function () {
         userAge={userAge}
         isEnglish={isEnglish}
         MCShareLink={mcShareLink}
+        randomDonorTwitter={randomDonorTwitter}
       />
     </Provider>,
     document.getElementById('congrats-container')

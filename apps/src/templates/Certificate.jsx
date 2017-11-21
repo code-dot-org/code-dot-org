@@ -59,6 +59,7 @@ export default class Certificate extends Component {
     certificateId: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
+    randomDonorTwitter: PropTypes.string,
   };
 
   personalizeCertificate(session) {
@@ -78,7 +79,7 @@ export default class Certificate extends Component {
   }
 
   render() {
-    const {responsive, isRtl, tutorial, certificateId} = this.props;
+    const {responsive, isRtl, tutorial, certificateId, randomDonorTwitter} = this.props;
     const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
@@ -95,7 +96,7 @@ export default class Certificate extends Component {
     const twitter = queryString.stringify({
       url: certificateLink,
       related: 'codeorg',
-      text: i18n.justDidHourOfCode(),
+      text: randomDonorTwitter ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter}) : i18n.justDidHourOfCode(),
     });
 
     const isMinecraft = /mc|minecraft|hero/.test(tutorial);
