@@ -134,7 +134,7 @@
   "commentPrefix": "Bình luận:",
   "commentTooltip": "Để lại một tin nhắn cho chính bạn, hoặc bất cứ ai khác đọc mã lệnh của bạn.",
   "completed": "Đã hoàn thành",
-  "completedWithoutRecommendedBlock": "Chúc mừng! Bạn đã hoàn thành câu đố {số của câu đố}. (Nhưng bạn có thể dùng các lệnh khác để tối ưu việc lập trình của mình.)",
+  "completedWithoutRecommendedBlock": "Chúc mừng! Bạn đã hoàn thành câu đố {puzzleNumber}. (Nhưng bạn có thể dùng các lệnh khác để tối ưu việc lập trình của mình.)",
   "concept": "Khái niệm",
   "confirmSchool": "Xác nhận trường học",
   "congratsCertificateHeading": "Bạn đã có được một chứng chỉ hoàn thành",
