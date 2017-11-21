@@ -2,7 +2,7 @@ name_s,url_s,show_s,twitter_s,level_s,weight_f,twitter_weight_f
 AAAAAA (ignore this),,,,,0,
 AAAAAA2 (ignore this),,,,,0,
 Accenture,https://www.accenture.com/us-en/company-skills-succeed,logo,@Accenture,silver,0.004362467085,0.0050721548
-Adobe,http://www.adobe.com/,name,@Adobe,bronze,0.006105487792,0.0070987308
+Adobe,http://www.adobe.com/,name,asked not to be listed,bronze,0.006105487792,0.0070987308
 Akamai Technologies,,name,@Akamai,other,0.006192638828,0.0072000596
 Alex and Susie Algard,,name,@algard,other,0.006279789863,0.0073013884
 Alfred Lin,,name,@Alfred_Lin,supporter,0.00671554504,0.0078080324
@@ -96,7 +96,7 @@ Omidyar Network,http://www.omidyar.com,logo,,platinum,0.8621010304,
 Osman Rashid,,name,@osmanrashid,supporter,0.862318908,0.8440450010
 Owen and Jennifer Van Natta,http://www.crunchbase.com/person/owen-van-natta,name,,bronze,0.8636261735,
 Phokion Potamianos-Homem,,name,,supporter,0.8640619287,
-PricewaterhouseCoopers,,none,@PwC_LLP,platinum,0.8902072393,0.8744436403
+PricewaterhouseCoopers,,logo,@PwC_LLP,platinum,0.8902072393,0.8744436403
 Quadrivium Foundation,http://www.qdvm.org/,logo,@KathrynAMurdoch,gold,0.9076374464,0.8947093998
 Qualcomm,https://www.qualcomm.com,name,@Qualcomm,bronze,0.9086832588,0.8959253454
 Quantopian,,name,@quantopian,other,0.9087704099,0.8960266742
