@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Pd::Application
   class FacilitatorApplicationControllerTest < ::ActionController::TestCase
+    freeze_time Time.zone.local(2017, 12, 14)
+
     test 'logged out users see the logged out message' do
       get :new
       assert_response :success
@@ -26,18 +28,16 @@ module Pd::Application
       assert_select 'h1', 'Thank you for your application.'
     end
 
-    test 'application form is displayed for new teachers before Dec 1' do
-      Timecop.freeze Time.zone.local(2017, 11, 30) do
-        sign_in create(:teacher)
-        get :new
-        assert_response :success
-        assert_template :new
-        assert_select 'h1', '2018-2019 Code.org Facilitator Application'
-      end
+    test 'application form is displayed for new teachers before Dec 15' do
+      sign_in create(:teacher)
+      get :new
+      assert_response :success
+      assert_template :new
+      assert_select 'h1', '2018-2019 Code.org Facilitator Application'
     end
 
-    test 'after Dec 1 2017 applications are closed' do
-      Timecop.freeze Time.zone.local(2017, 12, 1) do
+    test 'after Dec 15 2017 applications are closed' do
+      Timecop.freeze Time.zone.local(2017, 12, 15) do
         sign_in create(:teacher)
         get :new
         assert_response :success
