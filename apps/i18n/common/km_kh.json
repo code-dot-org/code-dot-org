@@ -951,6 +951,7 @@
   "hideSection": "Hide Section",
   "joinUs": "Join us",
   "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
+  "justDidHourOfCodeDonor": "I just did the #HourOfCode - check it out! (Thanks {donor_twitter} for supporting @codeorg)",
   "manageStudents": "Manage Students",
   "minecraft2017Button": "Go to Minecraft Education",
   "minecraft2017Desc": "Take your code to Minecraft: Education Edition! Copy or write down your share link:",
