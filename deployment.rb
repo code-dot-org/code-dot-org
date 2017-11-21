@@ -41,6 +41,7 @@ def load_configuration
   {
     'app_servers'                 => {},
     'assets_bucket'               => 'cdo-dist',
+    'assets_bucket_prefix'        => rack_env.to_s,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_dashboard'             => true,
