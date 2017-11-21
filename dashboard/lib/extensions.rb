@@ -1,3 +1,5 @@
+require lib_dir 'utf8mb4_extensions'
+
 module CoreExtensions
   module Hash
     module Camelizing
