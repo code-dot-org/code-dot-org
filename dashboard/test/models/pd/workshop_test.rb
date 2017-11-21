@@ -772,6 +772,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal expected, workshop.pre_survey_units_and_lessons
   end
 
+  test 'organized by regional partners' do
+    partner_organizer = create :workshop_organizer, :as_regional_partner_program_manager
+    partner_workshop = create :pd_workshop, organizer: partner_organizer
+
+    normal_organizer = create :workshop_organizer
+    non_partner_workshop = create :pd_workshop, organizer: normal_organizer
+
+    partner_workshops = Pd::Workshop.organized_by_regional_partners
+    assert partner_workshops.include? partner_workshop
+    refute partner_workshops.include? non_partner_workshop
+  end
+
+  test 'friendly date range same month' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 10)
+    assert_equal 'March 10-14, 2017', workshop.friendly_date_range
+  end
+
+  test 'friendly date range different months' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30)
+    assert_equal 'March 30 - April 3, 2017', workshop.friendly_date_range
+  end
+
   private
 
   def session_on_day(day_offset)

@@ -184,6 +184,8 @@ class User < ActiveRecord::Base
   has_many :regional_partners,
     through: :regional_partner_program_managers
 
+  has_many :pd_workshops, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
