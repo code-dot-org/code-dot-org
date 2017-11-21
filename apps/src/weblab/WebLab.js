@@ -75,6 +75,7 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.initialFilesVersionId = config.level.lastAttempt;
 
   this.brambleHost = null;
 
@@ -364,7 +365,7 @@ WebLab.prototype.onInspectorChanged = function (inspectorOn) {
 /*
  * Called by Bramble host to set our reference to its interfaces
  * @param {!Object} bramble host interfaces
- * @return {String} current project id
+ * @return {String} current project path (project id plus initial version)
  */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
@@ -377,7 +378,11 @@ WebLab.prototype.setBrambleHost = function (obj) {
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
   this.brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
-  return project.getCurrentId();
+  if (this.initialFilesVersionId) {
+    return `${project.getCurrentId()}-${this.initialFilesVersionId}`;
+  } else {
+    return project.getCurrentId();
+  }
 };
 
 // Called by Bramble host to get page constants
@@ -408,11 +413,12 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function () {
-  filesApi.getFiles(result => {
+  filesApi.getFiles(this.initialFilesVersionId, result => {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
-      url: filesApi.basePath(fileEntry.filename)
+      url: filesApi.basePath(fileEntry.filename),
+      versionId: fileEntry.versionId,
     }));
     var latestFilesVersionId = result.filesVersionId;
     this.initialFilesVersionId = this.initialFilesVersionId || latestFilesVersionId;

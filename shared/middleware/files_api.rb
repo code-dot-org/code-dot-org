@@ -460,7 +460,7 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/files/<channel-id>
+  # GET /v3/files/<channel-id>?version=<version-id>
   #
   # List filenames and sizes.
   #
@@ -469,7 +469,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     bucket = FileBucket.new
-    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'])
+    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'], params['version'])
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
