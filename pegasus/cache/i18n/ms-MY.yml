@@ -407,6 +407,7 @@
   homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Satu Jam Kod
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -426,6 +427,7 @@
   homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Tandatangan petisyen
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Tandatangan petisyen kami &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '

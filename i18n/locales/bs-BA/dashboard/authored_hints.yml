@@ -3601,7 +3601,7 @@ bs:
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some minecart tracks so you can explore the world!
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -9110,6 +9110,7 @@ bs:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3_b: Remember that your function should only get honey *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3a_b: Use a stairstep pattern to check the first four clouds.
