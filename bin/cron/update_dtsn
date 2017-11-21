@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# This script updates the "DTS" check on PRs
+# This script updates the "DTSN" check on PRs
 
 require_relative '../../deployment'
 require 'cdo/github'
