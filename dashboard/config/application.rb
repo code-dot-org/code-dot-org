@@ -15,6 +15,7 @@ require 'animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
+require lib_dir 'utf8mb4_extensions'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
