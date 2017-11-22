@@ -43,6 +43,19 @@ class HomeController < ApplicationController
   def index
     if current_user
       if current_user.student? && current_user.assigned_course_or_script? && !session['clever_link_flag'] && current_user.primary_script
+
+        # Send students in course experiments (such as the subgoals experiment)
+        # to the right place when they end up on the wrong version of their script.
+        #
+        # In the future, when primary_script selects the script the student is
+        # assigned to rather then where they last made progress, this check can
+        # be removed.
+        alternate_script = current_user.primary_script.alternate_script(current_user)
+        if alternate_script
+          redirect_to script_path(alternate_script)
+          return
+        end
+
         redirect_to script_path(current_user.primary_script)
       else
         redirect_to '/home'

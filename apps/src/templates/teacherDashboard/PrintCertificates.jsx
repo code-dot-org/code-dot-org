@@ -1,16 +1,33 @@
 import React, {Component, PropTypes} from 'react';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from "../../util/color";
+import Radium from 'radium';
+
+const STANDARD_PADDING = 20;
 
 const styles = {
   main: {
     margin: 0
-  }
+  },
+  outerStyle: {
+    paddingLeft: STANDARD_PADDING,
+    paddingRight: STANDARD_PADDING,
+    paddingTop: STANDARD_PADDING / 4,
+    paddingBottom: STANDARD_PADDING / 4,
+    cursor: 'pointer',
+    ':hover': {
+      backgroundColor: color.lightest_gray,
+    }
+  },
+  actionText: {
+    fontSize: 13,
+    color: color.dark_charcoal,
+  },
 };
 
-export default class PrintCertificates extends Component {
+class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     assignmentName: PropTypes.string,
@@ -43,12 +60,14 @@ export default class PrintCertificates extends Component {
         {this.state.names.map((name, index) => (
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}
-        <Button
-          text={i18n.printCertificates()}
-          onClick={this.onClickPrintCerts}
-          color={Button.ButtonColor.gray}
-        />
+        <div style={styles.outerStyle}>
+          <div style={styles.actionText} onClick={this.onClickPrintCerts}>
+            {i18n.printCertificates()}
+          </div>
+        </div>
       </form>
     );
   }
 }
+
+export default Radium(PrintCertificates);
