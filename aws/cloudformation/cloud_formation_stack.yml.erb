@@ -481,6 +481,7 @@ Resources:
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
+          SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
 <%if stack_name != 'staging-next' -%>
       GroupSet:
         - !ImportValue VPC-FrontendSecurityGroup
