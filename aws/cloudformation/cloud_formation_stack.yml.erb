@@ -121,7 +121,7 @@ Resources:
         Enabled: true
         Timeout: 300
 <% unless frontends -%>
-      Instances: [WebServer]]
+      Instances: [WebServer]
 <% end -%>
 
 <% if frontends -%>
@@ -506,6 +506,7 @@ Resources:
           CidrIp: <%=ssh_ip%>
       VpcId: !ImportValue VPC
 <% end -%>
+<%end-%>
 <% if environment == :adhoc -%>
   Database:
     Type: AWS::RDS::DBInstance
