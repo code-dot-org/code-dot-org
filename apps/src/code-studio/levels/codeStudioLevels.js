@@ -107,7 +107,7 @@ export function getLevelIds() {
 export function lockContainedLevelAnswers() {
   const levelIds = getLevelIds();
   if (levelIds.length !== 1) {
-    throw `Expected exactly one contained level. Got ${levelIds.length}`;
+    throw new Error(`Expected exactly one contained level. Got ${levelIds.length}`);
   }
   getLevel(levelIds[0]).lockAnswers();
 }
@@ -115,7 +115,7 @@ export function lockContainedLevelAnswers() {
 export function getContainedLevelId() {
   const levelIds = getLevelIds();
   if (levelIds.length !== 1) {
-    throw `Expected exactly one contained level. Got ${levelIds.length}`;
+    throw new Error(`Expected exactly one contained level. Got ${levelIds.length}`);
   }
   return levelIds[0];
 }
