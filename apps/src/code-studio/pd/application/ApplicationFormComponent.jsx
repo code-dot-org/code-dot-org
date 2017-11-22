@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import FormComponent from '../../form_components/FormComponent';
-import MarkdownSpan from '../../components/markdownSpan';
+import FormComponent from '../form_components/FormComponent';
+import MarkdownSpan from '../components/markdownSpan';
 
 export default class Facilitator1819FormComponent extends FormComponent {
   static propTypes = {
@@ -42,6 +42,13 @@ export default class Facilitator1819FormComponent extends FormComponent {
       controlWidth: {md: 6},
       required: true
     };
+  }
+
+  singleCheckboxFor(name, props = {}) {
+    return this.buildSingleCheckbox({
+      ...this.defaultOptions(name),
+      ...props
+    });
   }
 
   checkBoxesFor(name, props = {}) {

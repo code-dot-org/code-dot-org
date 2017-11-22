@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Api::V1::Census::CensusControllerTest < ActionController::TestCase
   test 'census submission with bad version fails' do
-    post :new_submission,  params: {form_version: 'bogus'}
+    post :create,  params: {form_version: 'bogus'}
     assert_response 400
     response = JSON.parse(@response.body)
     refute response['form_version'].nil?, "form_version expected in errors: #{response}"
   end
 
   test 'census submission with bad school fails' do
-    post :new_submission,
+    post :create,
       params: {
         form_version: 'anything',
         nces_school_s: '00000044'
@@ -20,7 +20,7 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
   end
 
   test 'HoC census submission with good school succeeds' do
-    post :new_submission,
+    post :create,
       params: {
         form_version: 'CensusHoc2017v3',
         nces_school_s: '60000113717',
@@ -34,7 +34,7 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
   end
 
   test 'HoC census submission with negative 1 school_id succeeds' do
-    post :new_submission,
+    post :create,
       params: {
         form_version: 'CensusHoc2017v3',
         nces_school_s: '-1',
@@ -49,7 +49,7 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
   end
 
   test 'yourschool census submission with good school succeeds' do
-    post :new_submission,
+    post :create,
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '60000113717',
@@ -68,7 +68,7 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
   end
 
   test 'yourschool census submission with negative 1 school_id succeeds' do
-    post :new_submission,
+    post :create,
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
