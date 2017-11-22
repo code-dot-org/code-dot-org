@@ -85,6 +85,35 @@ export default class Facilitator1819FormComponent extends FormComponent {
     });
   }
 
+  dynamicRadioButtonsWithAdditionalTextFieldsFor(name, options, textFieldMap, props = {}) {
+    return this.buildButtonsWithAdditionalTextFields({
+      ...this.defaultOptions(name),
+      type: "radio",
+      options,
+      textFieldMap,
+      ...props
+    });
+  }
+
+  dynamicCheckBoxesFor(name, options, props = {}) {
+    return this.buildButtons({
+      ...this.defaultOptions(name),
+      type: 'check',
+      answers: options,
+      ...props
+    });
+  }
+
+  dynamicCheckBoxesWithAdditionalTextFieldsFor(name, options, textFieldMap, props = {}) {
+    return this.buildButtonsWithAdditionalTextFields({
+      ...this.defaultOptions(name),
+      type: "check",
+      options,
+      textFieldMap,
+      ...props
+    });
+  }
+
   selectFor(name, props = {}) {
     return this.buildSelectFieldGroupFromOptions({
       ...this.defaultOptions(name),
