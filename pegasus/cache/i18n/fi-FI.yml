@@ -382,6 +382,7 @@
   homepage_hero_text_stat_students: "#student_count opiskelijoiden tilejä Code Studio:ssa"
   homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Koodaustunti
   homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
   homepage_slot_text_teacher: Opettajan päänäyttö
@@ -401,6 +402,7 @@
   homepage_action_text_girlvideo: Inspiroi tyttö
   homepage_action_text_learn: Aloita oppiminen
   homepage_action_text_signpetition: Allekirjoita vetoomus
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Allekirjoita vetoomuksemme &#x25BE;
   homepage_diversity_pledge: Tee monipuolisuuslupaus
   homepage_banner_text_prizes: 'Koodaustunti on tulossa taas, joulukuussa 7-13. '

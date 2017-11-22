@@ -798,6 +798,11 @@ export default class Craft {
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {
+        const sharing = Craft.initialConfig.level.freePlay;
+        if (sharing && response.level_source) {
+          trySetLocalStorage('craftHeroShareLink', response.level_source);
+        }
+
         studioApp().displayFeedback({
           app: 'craft',
           skin: Craft.initialConfig.skin.id,
@@ -815,7 +820,7 @@ export default class Craft {
             generatedCodeDescription: craftMsg.generatedCodeDescription(),
           },
           feedbackImage: image,
-          showingSharing: Craft.initialConfig.level.freePlay,
+          showingSharing: sharing,
           saveToProjectGallery: true,
         });
       },

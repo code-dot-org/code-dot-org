@@ -409,6 +409,7 @@
   homepage_hero_text_stat_students: "#student_count Schüler-Accounts bei Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served mal genutzt'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Die "Hour of Code"
   homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
   homepage_slot_text_teacher: Lehrer-Dashboard
@@ -428,6 +429,7 @@
   homepage_action_text_girlvideo: Inspiriere ein Mädchen
   homepage_action_text_learn: Jetzt lernen
   homepage_action_text_signpetition: Petition unterzeichnen
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Ich stimme zu ▾
   homepage_diversity_pledge: Unterstützen
   homepage_banner_text_prizes: 'Die Hour of Code findet wieder statt, vom 7. bis 13.

@@ -403,6 +403,7 @@
   homepage_hero_text_stat_students: "#student_count บัญชี บน Code Studio"
   homepage_hero_text_stat_served: "มีผู้ใช้บริการ Hour of Code: #served คนแล้ว"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า
   homepage_slot_text_teacher: Teacher Dashboard
@@ -422,6 +423,7 @@
   homepage_action_text_girlvideo: "แรงบันดาลใจให้ผู้หญิง"
   homepage_action_text_learn: "เริ่มต้นการเรียนรู้กันเลย"
   homepage_action_text_signpetition: "ลงนามในคำร้อง"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "ลงนามในคำร้อง &#x25BE;"
   homepage_diversity_pledge: "รองรับความหลากหลาย"
   homepage_banner_text_prizes: "ชั่วโมงแห่งการโค้ดจะกลับมาอีกครั้งในวันที่ 7-13 ธันวาคม "

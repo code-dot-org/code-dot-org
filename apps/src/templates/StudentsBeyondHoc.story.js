@@ -27,7 +27,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Other tutorial, English, student',
+        name: 'Other tutorial, English, student over 13',
         description: `StudentsBeyondHoc`,
         story: () => (
           <Provider store={store}>
@@ -36,6 +36,23 @@ export default storybook => {
               responsive={responsive}
               isRtl={false}
               userType="student"
+              userAge={14}
+              isEnglish={true}
+            />
+          </Provider>
+        )
+      },
+      {
+        name: 'Other tutorial, English, student under 13',
+        description: `StudentsBeyondHoc`,
+        story: () => (
+          <Provider store={store}>
+            <StudentsBeyondHoc
+              completedTutorialType="other"
+              responsive={responsive}
+              isRtl={false}
+              userType="student"
+              userAge={10}
               isEnglish={true}
             />
           </Provider>
@@ -102,8 +119,8 @@ export default storybook => {
         )
       },
       {
-        name: 'pre2017 Minecraft, signed in, English',
-        description: `Same for signed out`,
+        name: 'pre2017 Minecraft, signed in, English, under 13',
+        description: `pre2017 Minecraft, signed in, English, under 13`,
         story: () => (
           <Provider store={store}>
             <StudentsBeyondHoc
@@ -112,6 +129,23 @@ export default storybook => {
               isRtl={false}
               userType="student"
               isEnglish={true}
+              userAge={8}
+            />
+          </Provider>
+        )
+      },
+      {
+        name: 'pre2017 Minecraft, signed in, English, 13+',
+        description: `pre2017 Minecraft, signed in, English, 13+`,
+        story: () => (
+          <Provider store={store}>
+            <StudentsBeyondHoc
+              completedTutorialType="pre2017Minecraft"
+              responsive={responsive}
+              isRtl={false}
+              userType="student"
+              isEnglish={true}
+              userAge={16}
             />
           </Provider>
         )

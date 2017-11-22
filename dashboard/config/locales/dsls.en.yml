@@ -2885,15 +2885,21 @@ en:
         description here: description here
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
+      csp-post-survey-2017 preamble 3 this class: {}
+      csp-post-survey-2017 preamble 4 future and outlook: {}
       csp-post-survey-2017 preamble how often did teacher ask you to: {}
       csp-post-survey-2017 preamble how often did teacher do: {}
       csp-post-survey-2017 preamble how often did you: {}
+      csp-post-survey-2017-preamble 5 implementation-teacher: {}
+      csp-post-survey-2017-thanks: {}
+      csp-post-survey-2017-wrapup-preamble: {}
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 3 this class: {}
       csp-pre-survey-2017 preamble 4 the future: {}
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
+      csp-pt-tech-setup-and-tools: {}
       csp-pulse-check-survey-preamble: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp_ap_intro: {}
@@ -3041,6 +3047,21 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
+      pwc_cybersecurity:
+        description here: description here
+        title: title
+      pwc_data:
+        Data Science & Analytics - Solving Problems with Big Data: Data Science & Analytics - Solving Problems with Big Data
+        description here: description here
+      pwc_problemsolving:
+        Problem Solving - Personal Innovations: Problem Solving - Personal Innovations
+        description here: description here
+      pwc_programming:
+        description here: description here
+        title: title
+      pwc_technologyfoundations:
+        Technology Foundations - What is a Computer?: Technology Foundations - What is a Computer?
+        description here: description here
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -3748,18 +3769,18 @@ en:
         CSD U3 keyinput match: CSD U3 keyinput match
         Question: Question
       CSD U6 LED match:
-        <img src="https://images.code.org/557b25702c7c3fbef1ce625030d68778-image-1508454410109.gif">: <img src="https://images.code.org/557b25702c7c3fbef1ce625030d68778-image-1508454410109.gif">
-        <img src="https://images.code.org/71cd707de8e60c80e5347edafaab18a2-image-1508454429445.gif">: <img src="https://images.code.org/71cd707de8e60c80e5347edafaab18a2-image-1508454429445.gif">
-        <img src="https://images.code.org/a351756cbed7972f759129a42e71c745-image-1508454442597.gif">: <img src="https://images.code.org/a351756cbed7972f759129a42e71c745-image-1508454442597.gif">
-        <img src="https://images.code.org/afebdad5266eadef03515e74bd289d1e-image-1508454435044.gif">: <img src="https://images.code.org/afebdad5266eadef03515e74bd289d1e-image-1508454435044.gif">
-        <img src="https://images.code.org/e9758bc0f748cda626087e6cd6447e2a-image-1508454431880.gif">: <img src="https://images.code.org/e9758bc0f748cda626087e6cd6447e2a-image-1508454431880.gif">
+        <img src="https://images.code.org/13c6f95018b1728330cf7947ca8110cf-image-1510946591584.21.16 AM.png">: <img src="https://images.code.org/13c6f95018b1728330cf7947ca8110cf-image-1510946591584.21.16 AM.png">
+        <img src="https://images.code.org/24bd83e858a1d26eb9ed90da0712b16a-image-1510946591583.21.50 AM.png">: <img src="https://images.code.org/24bd83e858a1d26eb9ed90da0712b16a-image-1510946591583.21.50 AM.png">
+        <img src="https://images.code.org/2e8634dca87b15479e96170a40183243-image-1510946781043.gif">: <img src="https://images.code.org/2e8634dca87b15479e96170a40183243-image-1510946781043.gif">
+        <img src="https://images.code.org/4e91f10e0ad896472cb39c4c20e0a6b1-image-1510946781039.gif">: <img src="https://images.code.org/4e91f10e0ad896472cb39c4c20e0a6b1-image-1510946781039.gif">
+        <img src="https://images.code.org/6862a5382c01de33f9a29b815b1d1a26-image-1510946591581.22.15 AM.png">: <img src="https://images.code.org/6862a5382c01de33f9a29b815b1d1a26-image-1510946591581.22.15 AM.png">
+        <img src="https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png">: <img src="https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png">
+        <img src="https://images.code.org/b4f013eeef4952db107708c371d2db33-image-1510946781042.gif">: <img src="https://images.code.org/b4f013eeef4952db107708c371d2db33-image-1510946781042.gif">
+        <img src="https://images.code.org/d9fa10dc211109c27223817dd4ae9ad9-image-1510946591584.21.24 AM.png">: <img src="https://images.code.org/d9fa10dc211109c27223817dd4ae9ad9-image-1510946591584.21.24 AM.png">
+        <img src="https://images.code.org/eb0ff1c31279235e91bdfed89156faf8-image-1510946781041.gif">: <img src="https://images.code.org/eb0ff1c31279235e91bdfed89156faf8-image-1510946781041.gif">
+        <img src="https://images.code.org/f636ab48d39b46096367388984f3e1e8-image-1510946781042.gif">: <img src="https://images.code.org/f636ab48d39b46096367388984f3e1e8-image-1510946781042.gif">
         Match the Block: Match the Block
         Match the block to the picture of what it does.: Match the block to the picture of what it does.
-        blink: blink
-        'off': 'off'
-        'on': 'on'
-        pulse: pulse
-        toggle: toggle
       CSD validator Matching:
         "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
         "&lt;head&gt;": "&lt;head&gt;"
@@ -8104,15 +8125,15 @@ en:
       csd-post-survey-q27:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
-        : 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        ? 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        : 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csd-post-survey-q28:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Asked me problem solve when something didn't work the way I wanted it to work.: Asked me problem solve when something didn't work the way I wanted it to work.
+        Asked me to problem solve when something didn't work the way I wanted it to work.: Asked me to problem solve when something didn't work the way I wanted it to work.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
@@ -8768,7 +8789,7 @@ en:
       csp-post-survey-2017-q19:
         Agree: Agree
         Disagree: Disagree
-        I am going to like this computer science class.: I am going to like this computer science class.
+        I like this computer science class.: I like this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8786,7 +8807,7 @@ en:
       csp-post-survey-2017-q20:
         Agree: Agree
         Disagree: Disagree
-        I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8985,15 +9006,15 @@ en:
       csp-post-survey-2017-q55:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Considered alternative approaches to my work: Considered alternative approaches to my work
+        Consider alternative approaches to my work.: Consider alternative approaches to my work.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csp-post-survey-2017-q56:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
-        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        ? Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session

@@ -23,7 +23,9 @@ export default class Congrats extends Component {
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
+    userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
+    randomDonorTwitter: PropTypes.string,
   };
 
   constructor(props) {
@@ -61,7 +63,17 @@ export default class Congrats extends Component {
   }
 
   render() {
-    const { tutorial, certificateId, MCShareLink, isRtl, userType, isEnglish } = this.props;
+    const {
+      tutorial,
+      certificateId,
+      MCShareLink,
+      isRtl,
+      userType,
+      userAge,
+      isEnglish,
+      randomDonorTwitter
+    } = this.props;
+
     const tutorialType = {
       'applab-intro': 'applab',
       hero: '2017Minecraft',
@@ -83,6 +95,7 @@ export default class Congrats extends Component {
             certificateId={certificateId}
             isRtl={isRtl}
             responsive={this.responsive}
+            randomDonorTwitter={randomDonorTwitter}
           />
           {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
@@ -96,6 +109,7 @@ export default class Congrats extends Component {
             responsive={this.responsive}
             isRtl={isRtl}
             userType={userType}
+            userAge={userAge}
             isEnglish={isEnglish}
           />
           {userType === "signedOut" && isEnglish && (

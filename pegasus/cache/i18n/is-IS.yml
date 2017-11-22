@@ -388,6 +388,7 @@
   homepage_hero_text_stat_students: "#student_count nemendur skráðir á Code.org"
   homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Stjórnborð kennara
@@ -407,6 +408,7 @@
   homepage_action_text_girlvideo: Veittu stúlku innblástur
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifa undir áskorunina
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "Ég samþykki &#x25BE;"
   homepage_diversity_pledge: Vinna fjölbreytniheitið
   homepage_banner_text_prizes: 'Klukkustund kóðunar kemur aftur 7. - 13. desember. '

@@ -714,6 +714,23 @@ var projects = module.exports = {
     }.bind(this));
   },
 
+  getSourceForChannel(channelId, callback) {
+    channels.fetch(channelId, function (err, data) {
+      if (err) {
+        executeCallback(callback, null);
+      } else {
+        var url = channelId + '/' + SOURCE_FILE;
+        sources.fetch(url, function (err, data) {
+          if (err) {
+            executeCallback(callback, null);
+          } else {
+            executeCallback(callback, data.source);
+          }
+        });
+      }
+    });
+  },
+
   createNewChannelFromSource(source, callback) {
     channels.create({
       name: "New Project",
@@ -879,6 +896,7 @@ var projects = module.exports = {
   copy(newName, options = {}) {
     const { shouldPublish } = options;
     current = current || {};
+    const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
     if (shouldPublish) {
@@ -890,7 +908,7 @@ var projects = module.exports = {
       channels.create(current, (err, data) => {
         this.updateCurrentData_(err, data, options);
         err ? reject(err) : resolve();
-      });
+      }, queryParams);
     }).then(() => this.save(
       false /* forceNewVersion */,
       true /* preparingRemix */

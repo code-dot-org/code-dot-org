@@ -308,6 +308,7 @@
   homepage_hero_text_stat_students: 'Code.org 上已有 #student_count 個學生帳戶'
   homepage_hero_text_stat_served: "一小時玩程式：已有 #served 次參與"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "一小時玩程式活動"
   homepage_slot_text_frozen: "與安娜與艾莎一同玩冰雪奇緣"
   homepage_slot_text_teacher: "教師控制台"
@@ -327,6 +328,7 @@
   homepage_action_text_girlvideo: "鼓勵女生一同參與"
   homepage_action_text_learn: "開始學習"
   homepage_action_text_signpetition: "在意願書上簽名"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
   homepage_diversity_pledge: "承諾多樣性"
   homepage_banner_text_prizes: "一小時玩程式（Hour of Code）又來囉，就在 12 月的 7 - 13 日。 "

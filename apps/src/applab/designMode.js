@@ -1,6 +1,9 @@
 /* global Applab */
 import $ from 'jquery';
-import 'jquery-ui'; // for $.fn.resizable();
+import 'jquery-ui/ui/effects/effect-drop';
+import 'jquery-ui/ui/widgets/draggable';
+import 'jquery-ui/ui/widgets/droppable';
+import 'jquery-ui/ui/widgets/resizable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DesignWorkspace from './DesignWorkspace';
