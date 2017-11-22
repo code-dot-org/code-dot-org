@@ -26,8 +26,11 @@ self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
-<% if environment == :adhoc -%>
 Parameters:
+  InstanceType:
+    Type: String
+    Default: <%=INSTANCE_TYPE%>
+<% if environment == :adhoc -%>
   DatabaseUsername:
     Type: String
     Default: master
@@ -49,7 +52,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=INSTANCE_TYPE%>
+      InstanceType: !Ref InstanceType
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
       SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
@@ -117,6 +120,9 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
+<% unless frontends -%>
+      Instances: [WebServer]]
+<% end -%>
 
 <% if frontends -%>
   Frontends:
@@ -151,7 +157,7 @@ Resources:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
-      InstanceType: <%=INSTANCE_TYPE%>
+      InstanceType: !Ref InstanceType
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
       KeyName: <%=SSH_KEY_NAME%>
@@ -424,6 +430,7 @@ Resources:
       PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
+<% unless environment == :adhoc || stack_name == 'staging-next'-%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
     Properties:
@@ -439,19 +446,20 @@ Resources:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
       QueueName: <%="activities_dead-#{stack_name}"%>
+<% end -%>
 <%
-   if environment == :adhoc
+   if environment == :adhoc || stack_name == 'staging-next'
    self.daemon = true
 -%>
-  Daemon:
+  WebServer:
     Type: AWS::EC2::Instance
     CreationPolicy:
       ResourceSignal:
         Timeout: PT60M
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=INSTANCE_TYPE%>
-      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !ImportValue IAM-<%=environment == :adhoc ? 'Frontend' : 'Staging'%>InstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
@@ -461,7 +469,7 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
-          resource_id: 'Daemon',
+          resource_id: 'WebServer',
           node_name: stack_name,
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
@@ -473,10 +481,32 @@ Resources:
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
-          GroupSet:
-            - !ImportValue VPC-FrontendSecurityGroup
-            - !ImportValue VPC-GatewaySecurityGroup
-          SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+<%if stack_name != 'staging-next' -%>
+      GroupSet:
+        - !ImportValue VPC-FrontendSecurityGroup
+        - !ImportValue VPC-GatewaySecurityGroup
+<% else -%>
+          GroupSet: [Ref: WebServerSecurityGroup]
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTP[S] + SSH access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: <%=ssh_ip%>
+      VpcId: !ImportValue VPC
+<% end -%>
+<% if environment == :adhoc -%>
   Database:
     Type: AWS::RDS::DBInstance
     Properties:
