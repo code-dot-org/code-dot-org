@@ -3,7 +3,7 @@ require 'test_helper'
 class Api::V1::Pd::RegionalPartnerWorkshopsControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    Pd::Workshop.stubs(:process_location)
+    Pd::Workshop.any_instance.stubs(:process_location)
     first_session_time = Time.new(2017, 3, 15, 9)
 
     @partner_organizer = create :workshop_organizer, :as_regional_partner_program_manager
@@ -31,10 +31,10 @@ class Api::V1::Pd::RegionalPartnerWorkshopsControllerTest < ::ActionController::
   test_redirect_to_sign_in_for :find
   test_redirect_to_sign_in_for :index
 
-  test_user_gets_response_for :find, user: -> {@teacher}, response: :success
-  test_user_gets_response_for :find, user: -> {@student}, response: :forbidden
-  test_user_gets_response_for :index, user: -> {@teacher}, response: :success
-  test_user_gets_response_for :index, user: -> {@student}, response: :forbidden
+  test_user_gets_response_for :find, user: :teacher, response: :success
+  test_user_gets_response_for :find, user: :student, response: :forbidden
+  test_user_gets_response_for :index, user: :teacher, response: :success
+  test_user_gets_response_for :index, user: :student, response: :forbidden
 
   test 'index with no params returns all workshops associated with regional partners' do
     sign_in @teacher
