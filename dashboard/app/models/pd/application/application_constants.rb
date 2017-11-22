@@ -9,5 +9,10 @@ module Pd::Application
     APPLICATION_YEARS = [
       YEAR_18_19 = '2018-2019'.freeze
     ].freeze
+
+    COURSE_NAMES = {
+      csd: 'Computer Science Discoveries',
+      csp: 'Computer Science Principles'
+    }.stringify_keys
   end
 end
