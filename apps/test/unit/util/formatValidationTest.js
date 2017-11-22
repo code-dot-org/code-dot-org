@@ -1,4 +1,7 @@
-import {isEmail} from '@cdo/apps/util/formatValidation';
+import {
+  isEmail,
+  isZipCode
+} from '@cdo/apps/util/formatValidation';
 import {expect} from 'chai';
 
 describe("formatValidation", () => {
@@ -19,6 +22,30 @@ describe("formatValidation", () => {
         "invalid@ code.org"
       ].forEach(email => {
         expect(isEmail(email), `Expected isEmail("${email}") to return false`).to.be.false;
+      });
+    });
+  });
+
+  describe("isZipCode", () => {
+    it("Accepts valid zip codes", () => {
+      [
+        "12345",
+        "12345-6789",
+        "12345 6789"
+      ].forEach(zipCode => {
+        expect(isZipCode(zipCode), `Expected isZipCode("${zipCode}") to return true`).to.be.true;
+      });
+    });
+
+    it("Rejects invalid zip codes", () => {
+      [
+        "",
+        "123",
+        "12345-",
+        "12345-1",
+        "ABCDE"
+      ].forEach(zipCode => {
+        expect(isZipCode(zipCode), `Expected isZipCode("${zipCode}") to return false`).to.be.false;
       });
     });
   });

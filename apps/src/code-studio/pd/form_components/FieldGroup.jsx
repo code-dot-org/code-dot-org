@@ -8,7 +8,7 @@ import {
   Col
 } from 'react-bootstrap';
 
-const REQUIRED = (<span style={{color: 'red'}}> *</span>);
+const REQUIRED = (<span style={{color: 'red'}}>&nbsp;*</span>);
 
 export default class FieldGroup extends React.Component {
   constructor(props) {
@@ -42,7 +42,7 @@ export default class FieldGroup extends React.Component {
       <FormGroup controlId={id} validationState={validationState}>
         <Row>
           <Col {...labelWidth}>
-            <ControlLabel>{label} {required && REQUIRED}</ControlLabel>
+            <ControlLabel>{label}{required && REQUIRED}</ControlLabel>
           </Col>
         </Row>
         <Row>
