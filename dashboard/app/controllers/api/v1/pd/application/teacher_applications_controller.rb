@@ -12,7 +12,7 @@ module Api::V1::Pd::Application
 
     def on_successful_create
       ::Pd::Application::Teacher1819ApplicationMailer.confirmation(@application).deliver_now
-      # TODO: Send principal approval email
+      # TODO(Andrew): Send principal approval email
     end
   end
 end

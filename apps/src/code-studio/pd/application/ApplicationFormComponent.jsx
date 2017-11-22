@@ -1,13 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import FormComponent from '../form_components/FormComponent';
 import MarkdownSpan from '../components/markdownSpan';
 
-export default class Facilitator1819FormComponent extends FormComponent {
-  static propTypes = {
-    ...FormComponent.propTypes,
-    accountEmail: PropTypes.string.isRequired
-  };
-
+export default class ApplicationFormComponent extends FormComponent {
   /**
    * Override in derived classes
    * @type {Object} - map of control name to label

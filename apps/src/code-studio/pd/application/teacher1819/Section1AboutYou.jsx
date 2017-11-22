@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ApplicationFormComponent from "../ApplicationFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
@@ -19,6 +19,11 @@ const INTERNATIONAL = 'International';
 const US = 'United States';
 
 export default class Section1AboutYou extends ApplicationFormComponent {
+  static propTypes = {
+    ...ApplicationFormComponent.propTypes,
+    accountEmail: PropTypes.string.isRequired
+  };
+
   static labels = PageLabels.section1AboutYou;
 
   static associatedFields = [
@@ -30,6 +35,34 @@ export default class Section1AboutYou extends ApplicationFormComponent {
   resetCountry = () => this.handleChange({country: US});
   exitApplication = () => window.location = PD_RESOURCES_URL;
 
+  renderInternationalModal() {
+    return (
+      <Modal
+        show={this.props.data.country === INTERNATIONAL}
+      >
+        <Modal.Header>
+          <Modal.Title>
+            Thank you for your interest in Code.org’s Professional Learning Program.
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          At this time, we are only able to provide this program to teachers in the United States.
+          Please visit our website for additional Code.org
+          {' '}<a href={PD_RESOURCES_URL} target="_blank">professional development resources</a>{' '}
+          and opportunities to connect with other
+          {' '}<a href={CS_TEACHERS_URL} target="_blank">computer science teachers</a>.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={this.resetCountry} bsStyle="primary">
+            Continue as United States Teacher
+          </Button>
+          <Button onClick={this.exitApplication}>
+            Exit Application
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
 
   render() {
     return (
@@ -66,30 +99,7 @@ export default class Section1AboutYou extends ApplicationFormComponent {
 
         {this.radioButtonsFor("country")}
 
-        <Modal
-          show={this.props.data.country === INTERNATIONAL}
-        >
-          <Modal.Header>
-            <Modal.Title>
-              Thank you for your interest in Code.org’s Professional Learning Program.
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            At this time, we are only able to provide this program to teachers in the United States.
-            Please visit our website for additional Code.org
-            {' '}<a href={PD_RESOURCES_URL} target="_blank">professional development resources</a>{' '}
-            and opportunities to connect with other
-            {' '}<a href={CS_TEACHERS_URL} target="_blank">computer science teachers</a>.
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.resetCountry} bsStyle="primary">
-              Continue as United States Teacher
-            </Button>
-            <Button onClick={this.exitApplication}>
-              Exit Application
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        {this.renderInternationalModal()}
 
         {this.selectFor("title", {
           required: false,

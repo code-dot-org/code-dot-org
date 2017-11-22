@@ -133,18 +133,6 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     super.handleChange(newState);
   }
 
-  handleUnderstandFeeChange = event => {
-    this.handleChange({
-      understandFee: event.target.checked
-    });
-  };
-
-  handleConsiderForFundingChange = event => {
-    this.handleChange({
-      considerForFunding: event.target.checked
-    });
-  };
-
   renderAbleToAttendSingle() {
     const options = [
       "Yes, I'm able to attend",
@@ -171,7 +159,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
         </div>
       );
     } else if (this.props.data.regionalPartnerGroup === 3 && this.props.data.regionalPartnerWorkshopCount === 0) {
-      // TODO: find TC based on G3 partner match
+      // TODO (Andrew): find TC based on G3 partner match
       const teacherCon = "TeacherCon Phoenix, July 22-27, 2018";
       return (
         <div>
@@ -183,7 +171,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
           {this.renderAbleToAttendSingle()}
         </div>
       );
-    } else /* partner groups 1-2, and group 3 partners with no workshops */ {
+    } else /* partner groups 1-2, and group 3 partners with workshops */ {
       if (this.state.partnerWorkshops.length === 0) {
         return (
           <h5>
@@ -311,7 +299,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.regionalPartnerGroup === 3 || data.regionalPartnerWorkshopCount === 1) {
+    if (data.regionalPartnerWorkshopCount === 1) {
       requiredFields.push("ableToAttendSingle");
     } else if (data.regionalPartnerWorkshopCount > 1) {
       requiredFields.push("ableToAttendMultiple");
@@ -333,13 +321,13 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (!data.regionalPartnerId || data.regionalPartnerGroup === 3) {
+    if (!data.regionalPartnerId || data.regionalPartnerWorkshopCount === 0) {
       changes.ableToAttendSingle = undefined;
       changes.ableToAttendMultiple = undefined;
-    } else if (data.regionalPartnerWorkshopCount > 1) {
-      changes.ableToAttendSingle = undefined;
-    } else if (data.regionalPartnerWorkshopCount <= 1) {
+    } else if (data.regionalPartnerWorkshopCount === 1) {
       changes.ableToAttendMultiple = undefined;
+    } else {
+      changes.ableToAttendSingle = undefined;
     }
 
     if (![1,2].includes(data.regionalPartnerGroup)) {

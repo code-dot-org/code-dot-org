@@ -117,14 +117,17 @@ export default class Section2YourSchool extends ApplicationFormComponent {
           "Other (Please List):" : "other"
         })}
 
-        <div style={styles.formText}>
+        <p style={styles.formText}>
           Requirements for licensing, certifications, and endorsements to teach computer science vary widely
           across the country. Please answer the following questions to the best of your knowledge, so that
           your Regional Partner can ensure that teachers selected for this program will be able to teach the
           course in the coming school year.
+        </p>
+        <p style={styles.formText}>
           Note: Code.org does not require specific licences to teach these courses, but to participate in this
           program, you must be able to teach this course during the 2018-19 school year.
-        </div>
+        </p>
+
         {this.radioButtonsFor("doesSchoolRequireCsLicense")}
         {this.radioButtonsFor("haveCsLicense")}
 
