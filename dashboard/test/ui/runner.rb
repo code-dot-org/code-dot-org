@@ -88,10 +88,10 @@ def parse_options
     options.os_version = nil
     options.browser_version = nil
     options.features = nil
-    options.pegasus_domain = 'test.code.org'
-    options.dashboard_domain = 'test-studio.code.org'
-    options.hourofcode_domain = 'test.hourofcode.com'
-    options.csedweek_domain = 'test.csedweek.org'
+    options.pegasus_domain = CDO.uitest_pegasus_domain || 'test.code.org'
+    options.dashboard_domain = CDO.uitest_dashboard_domain || 'test-studio.code.org'
+    options.hourofcode_domain = CDO.uitest_hourofcode_domain || 'test.hourofcode.com'
+    options.csedweek_domain = CDO.uitest_csedweek_domain || 'test.csedweek.org'
     options.local = nil
     options.html = nil
     options.maximize = nil
