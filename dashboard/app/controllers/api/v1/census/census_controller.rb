@@ -45,7 +45,7 @@ class Api::V1::Census::CensusController < ApplicationController
   ].freeze
 
   # POST /dashboardapi/v1/census/<form_version>
-  def new_submission
+  def create
     errors = {}
 
     school_id = params[:nces_school_s]

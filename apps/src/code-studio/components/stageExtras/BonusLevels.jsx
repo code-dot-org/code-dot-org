@@ -62,6 +62,18 @@ const styles = {
   },
 };
 
+class BonusLevelButton extends React.Component {
+  static propTypes = {
+    perfected: PropTypes.bool.isRequired,
+  };
+
+  render() {
+    return this.props.perfected ?
+      <button className="btn btn-large">{i18n.review()}</button> :
+      <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>;
+  }
+}
+
 class BonusLevel extends React.Component {
   static propTypes = {
     ...bonusLevel,
@@ -78,7 +90,7 @@ class BonusLevel extends React.Component {
           >
             <MazeThumbnail {...this.props}/>
           </CompletableLevelThumbnail>
-          <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
+          <BonusLevelButton perfected={this.props.perfected} />
         </a>
       </div>
     );
@@ -97,7 +109,7 @@ class BonusLevel extends React.Component {
               style={styles.solutionImage}
             />
           </CompletableLevelThumbnail>
-          <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
+          <BonusLevelButton perfected={this.props.perfected} />
         </a>
       </div>
     );
