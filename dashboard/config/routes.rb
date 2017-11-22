@@ -393,6 +393,8 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      get :regional_partner_workshops, to: 'regional_partner_workshops#index'
+      get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
