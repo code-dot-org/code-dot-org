@@ -5,6 +5,7 @@
 import React, {PropTypes} from 'react';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 
@@ -43,6 +44,7 @@ export default class Summary extends React.Component {
         applications: data
       });
     });
+    this.setState({isWorkshopAdmin: getScriptData("props")["isWorkshopAdmin"]});
   }
 
   handleRegionalPartnerChange = (selected) => {
@@ -68,10 +70,12 @@ export default class Summary extends React.Component {
     }
     return (
       <div>
-        <RegionalPartnerDropdown
-          onChange={this.handleRegionalPartnerChange}
-          regionalPartnerId={this.state.regionalPartnerId}
-        />
+        {this.state.isWorkshopAdmin &&
+          <RegionalPartnerDropdown
+            onChange={this.handleRegionalPartnerChange}
+            regionalPartnerId={this.state.regionalPartnerId}
+          />
+        }
         <h1>{this.state.regionalPartnerName}</h1>
         <div className="row">
           <SummaryTable

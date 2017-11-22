@@ -11,6 +11,7 @@ import Select from "react-select";
 import "react-select/dist/react-select.css";
 import {SelectStyleProps} from '../constants';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
@@ -70,6 +71,7 @@ export default class QuickView extends React.Component {
         applications: data
       });
     });
+    this.setState({isWorkshopAdmin: getScriptData("props")["isWorkshopAdmin"]});
 
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
@@ -97,10 +99,12 @@ export default class QuickView extends React.Component {
     }
     return (
       <div>
-        <RegionalPartnerDropdown
-          onChange={this.handleRegionalPartnerChange}
-          regionalPartnerId={this.state.regionalPartnerId}
-        />
+        {this.state.isWorkshopAdmin &&
+          <RegionalPartnerDropdown
+            onChange={this.handleRegionalPartnerChange}
+            regionalPartnerId={this.state.regionalPartnerId}
+          />
+        }
         <Row>
           <h1>{this.state.regionalPartnerName}</h1>
           <h2>{this.props.route.applicationType}</h2>
