@@ -149,6 +149,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     non_partner_organizer = create :workshop_organizer
     create_list :pd_workshop, 2, organizer: non_partner_organizer
 
-    assert_equal partner_workshops, regional_partner.pd_workshops
+    assert_equal partner_workshops, regional_partner.pd_workshops_organized
   end
 end
