@@ -121,7 +121,7 @@ Resources:
         Enabled: true
         Timeout: 300
 <% unless frontends -%>
-      Instances: [WebServer]
+      Instances: [!Ref WebServer]
 <% end -%>
 
 <% if frontends -%>
