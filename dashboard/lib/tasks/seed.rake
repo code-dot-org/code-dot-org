@@ -38,6 +38,8 @@ namespace :seed do
     'csp4',
     'csp5',
     'csp-ap',
+    'csp-explore',
+    'csp-create',
     'csppostap',
     'events',
     'flappy',
