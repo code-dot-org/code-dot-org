@@ -120,6 +120,7 @@ class OwnedSections extends React.Component {
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
+                  className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
                   icon={viewHidden ? "caret-up" : "caret-down"}
                   text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
