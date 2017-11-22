@@ -390,6 +390,7 @@
   homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
   homepage_slot_text_teacher: Panel nauczyciela
@@ -409,6 +410,7 @@
   homepage_action_text_girlvideo: Zainspiruj dziewczynę
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Zgadzam się &#x25BE;
   homepage_diversity_pledge: Weź zastaw różnorodności
   homepage_banner_text_prizes: 'Godzina Kodowania nadchodzi ponownie, 7-13 grudnia. '
