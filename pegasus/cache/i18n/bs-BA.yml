@@ -398,6 +398,7 @@
   homepage_hero_text_stat_students: "#student_count učeničkih računa u Studiju Kodiranja"
   homepage_hero_text_stat_served: 'Sat Kodiranja: #served posluženo'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Frozen sa Anna i Elsa
   homepage_slot_text_teacher: Nadzorna Ploča za Nastavnike
@@ -417,6 +418,7 @@
   homepage_action_text_girlvideo: Inspiriši djevojčicu
   homepage_action_text_learn: Započni sa učenjem
   homepage_action_text_signpetition: Potpiši peticiju
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Slažem se &#x25BE;
   homepage_diversity_pledge: Prisegni se na raznolikost
   homepage_banner_text_prizes: 'Sat Kodiranja dolazi opet, Decembar 7-13. '

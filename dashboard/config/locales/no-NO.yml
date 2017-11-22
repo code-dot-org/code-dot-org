@@ -983,13 +983,6 @@
     create: Opprett prosjekt
     create_a_project: 'Opprett et nytt prosjekt:'
     new: Opprett ny
-    new_buttons:
-      artist: Kunstner
-      playlab: Spill-lab
-      applab: App Lab
-      gamelab: Spill-lab
-      weblab: Web Lab (beta)
-    new_buttons_header: 'Opprett et nytt prosjekt:'
     rename: Gi nytt navn
     save: Lagre
     delete: Slett

@@ -347,6 +347,7 @@
   homepage_hero_text_stat_students: "#student_count Code Studio에 등록된 학생 계정"
   homepage_hero_text_stat_served: 'Hour of Code: # 제공'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: "안나와 엘사가 함께 하는 겨울왕국"
   homepage_slot_text_teacher: "선생님용 대시보드"
@@ -366,6 +367,7 @@
   homepage_action_text_girlvideo: "여학생들에게 영감 주기"
   homepage_action_text_learn: "학습 시작"
   homepage_action_text_signpetition: "청원서에 서명하세요"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "청원서에 서명하세요"
   homepage_diversity_pledge: "다양성 존중 서약하기"
   homepage_banner_text_prizes: '12월 7일 - 13일, Hour of Code가 다시 찾아옵니다. '

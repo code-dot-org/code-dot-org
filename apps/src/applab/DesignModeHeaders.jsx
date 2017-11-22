@@ -13,6 +13,7 @@ export default class DesignModeHeaders extends React.Component {
     isToolboxVisible: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
+    showMakerToggle: PropTypes.bool.isRequired,
   };
 
   onToggleToolbox = () => this.props.onToggleToolbox();
@@ -91,7 +92,13 @@ export default class DesignModeHeaders extends React.Component {
 
     const hasFocus = !this.props.isRunning;
 
-    const settingsCog = <SettingsCog isRunning={this.props.isRunning} runModeIndicators/>;
+    const settingsCog = (
+      <SettingsCog
+        isRunning={this.props.isRunning}
+        showMakerToggle={this.props.showMakerToggle}
+        runModeIndicators
+      />
+    );
 
     return (
       <PaneHeader

@@ -404,6 +404,7 @@
   homepage_hero_text_stat_students: "#student_count dalta cláraithe le Code.org"
   homepage_hero_text_stat_served: 'An Uair Chódála: #served códálaí'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: An Uair Chódála
   homepage_slot_text_frozen: Frozen in éindí le hAnna agus Elsa
   homepage_slot_text_teacher: Painéal na Múinteoirí
@@ -423,6 +424,7 @@
   homepage_action_text_girlvideo: Cuir misneach ar chailín
   homepage_action_text_learn: Tosaigh ag foghlaim
   homepage_action_text_signpetition: Sínigh an achainí
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Aontaím &#x25BE;
   homepage_diversity_pledge: Tabhair d'fhíor leis an éagsúlacht
   homepage_banner_text_prizes: 'Tá an Uair Chódála ag teacht arís, 7-13 Nollaig. '

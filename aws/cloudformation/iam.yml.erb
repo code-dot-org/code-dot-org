@@ -239,6 +239,10 @@ Outputs:
     Description: Standalone Frontend Instance Profile
     Value: !Ref StandaloneFrontendInstanceProfile
     Export: {Name: !Sub "${AWS::StackName}-StandaloneFrontendInstanceProfile"}
+  StagingInstanceProfile:
+    Description: Staging Instance Profile
+    Value: !Ref StagingInstanceProfile
+    Export: {Name: !Sub "${AWS::StackName}-StagingInstanceProfile"}
   LifecycleHookRoleARN:
     Description: Auto Scaling Lifecycle Hook Role
     Value: !GetAtt LifecycleHookRole.Arn

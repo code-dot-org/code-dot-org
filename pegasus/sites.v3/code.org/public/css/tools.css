@@ -49,13 +49,27 @@ h1.tools-title {
   padding-bottom: 20px;
 }
 
+.tutorial-tile-img {
+  width: 100%;
+}
+
 .tutorial-info {
   border: 1px solid #949ca2;
   padding: 20px;
+  min-height: 200px;
 }
 
 h3.tutorial-info-h {
   margin-top: 0px;
+}
+
+.tutorial-info-start {
+  margin-top: 20px;
+}
+
+.tutorial-info-guide {
+  float: right;
+  margin-top: 25px;
 }
 
 b.purple {

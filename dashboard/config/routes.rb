@@ -18,6 +18,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
   get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+  get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
 
@@ -424,6 +425,7 @@ Dashboard::Application.routes.draw do
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
+      get 'principal_approval/:application_guid', to: 'principal_approval_application#new'
     end
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
@@ -537,7 +539,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
   # Routes used by census
-  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#new_submission', defaults: {format: 'json'}
+  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.
