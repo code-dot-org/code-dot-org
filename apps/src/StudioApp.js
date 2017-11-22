@@ -1456,7 +1456,11 @@ StudioApp.prototype.displayFeedback = function (options) {
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
   options.channelId = project.getCurrentId();
-  options.shareLink = (options.response && options.response.level_source) || (window.location.origin + project.getPathName());
+
+  try {
+    options.shareLink = (options.response && options.response.level_source) ||
+      (window.location.origin + project.getPathName());
+  } catch (e) {}
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
