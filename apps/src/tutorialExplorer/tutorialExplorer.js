@@ -11,6 +11,7 @@ import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
 import {
+  isTutorialSortByFieldNamePopularity,
   TutorialsSortByOptions,
   TutorialsSortByFieldNames,
   TutorialsOrgName,
@@ -440,8 +441,8 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        if (sortByFieldName === TutorialsSortByFieldNames.popularityrank) {
-          return tutorial1.popularityrank - tutorial2.popularityrank;
+        if (isTutorialSortByFieldNamePopularity(sortByFieldName)) {
+          return tutorial1[sortByFieldName] - tutorial2[sortByFieldName];
         } else {
           return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
         }

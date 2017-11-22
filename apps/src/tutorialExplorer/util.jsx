@@ -19,6 +19,14 @@ export const TutorialsSortByFieldNames = utils.makeEnum(
   'displayweight_high'
 );
 
+export function isTutorialSortByFieldNamePopularity(sortByFieldName) {
+  return sortByFieldName === 'popularityrank' ||
+    sortByFieldName === 'popularityrank_pre' ||
+    sortByFieldName === 'popularityrank_25' ||
+    sortByFieldName === 'popularityrank_middle' ||
+    sortByFieldName === 'popularityrank_high';
+}
+
 // Orgname value.
 export const TutorialsOrgName = utils.makeEnum('all');
 
