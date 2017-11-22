@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import ApplicationFormComponent from "../ApplicationFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
@@ -10,6 +10,11 @@ const FACILITATOR_URL = "https://code.org/educate/facilitator";
 const FACILITATOR_EMAIL = "facilitators@code.org";
 
 export default class Section1AboutYou extends ApplicationFormComponent {
+  static propTypes = {
+    ...ApplicationFormComponent.propTypes,
+    accountEmail: PropTypes.string.isRequired
+  };
+
   static labels = PageLabels.section1AboutYou;
 
   static associatedFields = [
