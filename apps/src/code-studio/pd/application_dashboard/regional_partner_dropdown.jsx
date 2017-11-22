@@ -9,6 +9,12 @@ import Select from "react-select";
 import {SelectStyleProps} from '../constants';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
+const styles = {
+  select: {
+    maxWidth: 500
+  }
+};
+
 export default class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
@@ -30,6 +36,7 @@ export default class RegionalPartnerDropdown extends React.Component {
           onChange={this.props.onChange}
           placeholder={null}
           options={this.regionalPartners}
+          style={styles.select}
           {...SelectStyleProps}
         />
       </FormGroup>
