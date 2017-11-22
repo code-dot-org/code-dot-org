@@ -65,7 +65,7 @@
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
     end
 
-    if node.chef_environment == 'staging' && node.name == 'staging-next'
+    if node.chef_environment == 'test' && node.name == 'staging-next'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dtsn')
     end
 
