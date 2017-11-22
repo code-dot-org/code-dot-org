@@ -195,7 +195,7 @@ const TutorialExplorer = React.createClass({
   getSortByFieldName(sortBy, grade) {
     let sortByFieldName;
 
-    const gradeToSortByFieldName = {
+    const gradeToDisplayWeightSortByFieldName = {
       "all": TutorialsSortByFieldNames.displayweight,
       "pre": TutorialsSortByFieldNames.displayweight_pre,
       "2-5": TutorialsSortByFieldNames.displayweight_25,
@@ -203,12 +203,20 @@ const TutorialExplorer = React.createClass({
       "9+": TutorialsSortByFieldNames.displayweight_high
     };
 
+    const gradeToPopularityRankSortByFieldName = {
+      "all": TutorialsSortByFieldNames.popularityrank,
+      "pre": TutorialsSortByFieldNames.popularityrank_pre,
+      "2-5": TutorialsSortByFieldNames.popularityrank_25,
+      "6-8": TutorialsSortByFieldNames.popularityrank_middle,
+      "9+": TutorialsSortByFieldNames.popularityrank_high
+    };
+
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
     // right set of data to match the currently-selected grade.
     if (sortBy === TutorialsSortByOptions.displayweight) {
-      sortByFieldName = gradeToSortByFieldName[grade];
+      sortByFieldName = gradeToDisplayWeightSortByFieldName[grade];
     } else {
-      sortByFieldName = TutorialsSortByFieldNames.popularityrank;
+      sortByFieldName = gradeToPopularityRankSortByFieldName[grade];
     }
 
     return sortByFieldName;
