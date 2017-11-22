@@ -252,8 +252,7 @@ class ProjectsController < ApplicationController
 
     FirehoseClient.instance.put_record(
       'analysis-events',
-      # Use -wip suffix until we settle on an exact format for these records.
-      study: 'project-views-wip-2',
+      study: 'project-views',
       event: project_view_event_type(iframe_embed, sharing),
       # allow cross-referencing with the storage_apps table.
       project_id: storage_app_id,
