@@ -22,6 +22,7 @@ require 'cdo/cron'
 image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
 
 self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
+self.daemon = true if environment == :adhoc || stack_name == 'staging-next'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -120,7 +121,7 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
-<% unless frontends -%>
+<% if !frontends && daemon -%>
       Instances: [!Ref WebServer]
 <% end -%>
 
@@ -430,7 +431,7 @@ Resources:
       PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
-<% unless environment == :adhoc || stack_name == 'staging-next'-%>
+<% unless daemon -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
     Properties:
@@ -447,10 +448,7 @@ Resources:
       VisibilityTimeout: 15
       QueueName: <%="activities_dead-#{stack_name}"%>
 <% end -%>
-<%
-   if environment == :adhoc || stack_name == 'staging-next'
-   self.daemon = true
--%>
+<% if daemon -%>
   WebServer:
     Type: AWS::EC2::Instance
     CreationPolicy:
