@@ -403,6 +403,7 @@
     коду"
   homepage_hero_text_stat_served: "Година коду: навчились #served"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "Година Коду"
   homepage_slot_text_frozen: "Крижане серце з Анною і Ельзою"
   homepage_slot_text_teacher: "Панель вчителя"
@@ -422,6 +423,7 @@
   homepage_action_text_girlvideo: "Залучайте дівчат"
   homepage_action_text_learn: "Початок навчання"
   homepage_action_text_signpetition: "Підписати петицію"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "Підписати нашу петицію &#x25BE;"
   homepage_diversity_pledge: "Приєднатись до петиції про різноманіття"
   homepage_banner_text_prizes: "Година коду наближається знову, 7-13 грудня. "

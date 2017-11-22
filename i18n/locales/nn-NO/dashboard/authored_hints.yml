@@ -34,12 +34,12 @@ nn:
           
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Husk, du ønsker at kontrollpanelet skal være 10 piksler bredere, så ikke glem å legge til 10 uansett hvilket tall du endrer.
-        2-3_Artist_Debugging_10_b: "Prøving og feiling er helt greit her! \nStart med å endre ett tall av gangen. \nHvilke numre gjør hva?\nHvis du går deg helt vill, klikk på \"Start over\" og koden vil bli tilbakestilt."
+        2-3_Artist_Debugging_10_a: Hugs at du ønskjer at kontrollpanelet skal vere 10 piksel breiare, så ikkje gløym å leggje til 10 uansett kva tal du endrar.
+        2-3_Artist_Debugging_10_b: "Prøving og feiling er heilt greitt her! \nStart med å endre eit tal om gangen. \nKva tal gjer hva?\nHvis du gjeng deg heilt vill, klikk på \"Start over\" og koden vert stilt tilbake."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Hvert værhår er 75 piksler langt.'
+        2-3_Artist_Debugging_2_a: 'Hint: Kvart verhår er 75 piksel langt.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: Den ene svingen er 15 grader for liten.
+        2-3_Artist_Debugging_3_a: Den eine svingen er 15 grader for liten.
         2-3_Artist_Debugging_3_b: Hvis programmet kjører for fort til at du ser hva som skjer, kan du forsøke å skyve på knappen for å bremse det ned.
       2-3 Artist Debugging 7_authored_hint:
         2-3_Artist_Debugging_7_a: Hva skjer hvis du får tegneren til å bevege seg eller hoppe bakover etter at han har tegnet den første linjen?
@@ -92,7 +92,7 @@ nn:
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Trenger du hjelp med vinklene?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Prøv å bruke \"hoppe fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
+        2-3_Artist_Nested_Loops_5_a: "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
       2-3 Artist Nested Loops 7_authored_hint:
         2-3_Artist_Nested_Loops_7_a: "Hvor langt skal du hoppe i hver bue?  \n\nHva er 360/10?"
       2-3 Artist Nested Loops 9_authored_hint:
@@ -117,27 +117,27 @@ nn:
       2-3 Bee Debugging 4_authored_hint:
         2-3_Bee_Debugging_4_a: Er det noen sted hvor bien gjør noe som ikke gir mening? Hva skjer når du endrer den blokken?
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: Du trenger ikke bruke en løkke med en funksjon. Prøv å flytte, bruk en funksjonen, og deretter flytte og bruke funksjonen igjen.
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: Du trenger ikke bruke en løkke med en funksjon. Prøv å flytte, bruk en funksjonen, og deretter flytte og bruke funksjonen igjen.
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Husk å bygge koden din inne i den grønne blokken.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Du skal ende opp med fire blokker inne i løkken din.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       2-3 Bee Loops 5_authored_hint:
@@ -146,7 +146,7 @@ nn:
         2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
@@ -3474,93 +3474,81 @@ nn:
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house. End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: Bruk piltastane til å leie spelaren inn i huset. End opp på den oransje firkanten for å vinne.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: Dra ein "framover" blokk frå verktøyskassa til arbeidsområdet, og legg den på plass under 'når køyrer' blokken.
+        MC_HOC_2017_01_RETRY_b: Ikkje gløym å klikke "Køyr" for å køyre koden til agenten.
+        MC_HOC_2017_01_RETRY_c: Når agenten har køyrt all koden, kan du flytte spelaren med piltastane!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: Flytte agenten framover to steg for å stå på trykkplata. Dette vil opne døra for spelaren.
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys to move the player to the map!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined on the map!
+          Trykk "Køyr"! Sjølv om det ikkje er riktig kan du køyre koden. Køyr og tilbakestill koden igjen og igjen, til du finn ut kva som er galt.
+        MC_HOC_2017_02_Cole_c: Når agenten har opna døra, bruk piltastane til å flytte spelaren til kartet!
+        MC_HOC_2017_02_Cole_d: Kontroller at agenten føl banen vist på kartet!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: Flytte agenten framover to steg for å stå på trykkplata. Dette vil opne døra for spelaren.
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys to move the player to the orange square.
+          Trykk "Køyr agent"! Sjølv om det ikkje er riktig, kan du køyre koden. Køyr og tilbakestill koden igjen og igjen, heilt til du finn ut kva som går galt.
+        MC_HOC_2017_02_Cole_c: Når agenten har opna døra, bruk piltastane til å flytte spelaren til den oransje firkanten.
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat` loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: Når agenten kjem fram til trykkplata, kan du bruke piltastane til å leie spelaren til kompasset!
+        MC_HOC_2017_03_Cole_b: Følast koden litt lang? Prøv å bruke ein "løkke" og sjå om du kan finne ut korleis du kan gjere den kortare!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
+          Å krysse desse to trykkplatene, vil opne vegen for spelaren.
           
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: 'Bruk blokken "snu til høgre" for å endre retning for agenten '
+        MC_HOC_2017_04POINT5_RYAN_a: Agenten treng berre å komme til den første trykkplata for å la Alex eller Steve komme gjennom til øksa.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_a: Agenten må flytta "framover" sju gongar. Korleis kan du bruke ein "løkke" for å få det til å skje?
         MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, the Agent will open the door for the player.
+          Trykk "Køyr"! Sjølv om det ikkje er riktig kan du køyre koden. Køyr og tilbakestill koden igjen og igjen, til du finn ut kva som er galt.
+        MC_HOC_2017_04_Cole_b: Når agenten kjem til trykkplata, vil agenten opne døra for spelaren.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as you go.
+        MC_HOC_2017_05_Cole_a: Visste du at du kan setje meir enn ein blokk med kode i ein løkke? Prøv å setje framover **og** plassere ein planke i ein "løkke" for å fullføre oppgåva.
+        MC_HOC_2017_05_Cole_b: For å få agenten over elva, bygg ei bru medan du går.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of code inside of a loop?  Try placing a plank **and** moving forward inside of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Visste du at du kan setje meir enn ein blokk med kode i ein løkke? Prøv å setje plassere ein planke **og**  gå framover i ein "løkke" for å fullføre oppgåva.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times *should* it run?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the water! '
+        MC_HOC_2017_06_Cole_a: Kor mange gongar køyrar denne løkken? Kor mange gongar *bør* den køyre?
+        MC_HOC_2017_06_Cole_b: 'Hjelp agenten med å byggje ei bruk heilt over vatnet! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat` loop!
+        MC_HOC_2017_06_Cole_a: Prøv å setje fleire instruksjonar i ein løkke!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_c: Alt du treng å gjere er å få agenten til å rydde banen for Minevognen.
+        MC_HOC_2017_07_Cole_a: For å løyse denne oppgåva, må du finne ut kva funksjonen "rydd veg" gjer. Deretter må du kalle den så mange gongar du treng, ved å bruke den lille, grønne "rydd veg" blokken i verktøyskassa.
+        MC_HOC_2017_07_Cole_b: Prøv å blande funksjonsblokkane med andre blokkar frå værktøyskassa for å løyse oppgåva.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Trykk "Køyr agent"! Sjølv om det ikkje er riktig, kan du køyre koden. Køyr og tilbakestill koden igjen og igjen, heilt til du finn ut kva som går galt.
+        MC_HOC_2017_08_RY_b: Det er mange måtar å løyse oppgåva på. Prøv nokre!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Trykk "Køyr agent"! Sjølv om det ikkje er riktig, kan du køyre koden. Køyr og tilbakestill koden igjen og igjen, heilt til du finn ut kva som går galt.
+        MC_HOC_2017_08_RY_b: Det er mange måtar å løyse oppgåva på. Prøv nokre!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Bruk funksjonane til å løyse denne oppgåva enklare!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_b: Veit du ikkje kor du skal dra? Sjå om du kan finne den stipla linja!
+        MC_HOC_2017_10_Cole_a: Bruk funksjonane til å løyse denne oppgåva enklare!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Prøv å få agenten til å byggje bruer slik at Alex og Steve kan gå utanfor kantane på kartet.
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
+          Å krysse desse to trykkplatene, vil opne vegen for spelaren.
           
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
-          
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through the lava.
+          Trykk "Køyr"! Sjølv om det ikkje er riktig kan du køyre koden. Køyr og tilbakestill koden igjen og igjen, til du finn ut kva som er galt.
+        MC_HOC_2017_08_RY_b: Det er mange måtar å løyse oppgåva på. Prøv nokre!
+        MC_HOC_2017_08_RY_c: Prøv å følgje den stipla linja gjennom lavaen.
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Prøv å få agenten til å byggje nokre spor til minevogna slik at du kan utforske verda!
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -3709,7 +3697,7 @@ nn:
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment is added to your counter variable each time through. \n\nWhat do you need to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Prøv å få agenten til å byggje bruer slik at Alex og Steve kan gå utanfor kantane på kartet.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
@@ -3767,7 +3755,7 @@ nn:
         mc_11_a: All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.
         mc_11_b: Should your `move forward` command go inside of the `if` statement or after?
       Underground If Statements_authored_hint:
-        mc_12_a: The spaces with red speckles are where you will find Redstone.
+        mc_12_a: Du finner redstone i blokkene med røde merker på.
         mc_12_b: Can you use a `repeat` loop to make your code shorter?
         mc_12_c: 'Use an `if` statement to check spaces for lava, then place cobblestones. '
       Underground Iron_authored_hint:
@@ -4167,10 +4155,10 @@ nn:
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge3_authored_hint:
         courseF_bee_functions_challenge1_a: You can use the functions in the tool box to help you. You can call a function inside of another function's definition!
@@ -6563,7 +6551,7 @@ nn:
         courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle code with another `repeat` loop.
         courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of the loop so that the artist turns after each triangle.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Prøv å bruke \"hoppe fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
+        courseD_artist_nestedLoops3_a: "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
@@ -7698,15 +7686,15 @@ nn:
         courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          Husk å bygge koden din inne i den grønne blokken.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
@@ -7718,10 +7706,10 @@ nn:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
         courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: Bien fungerer akkurat som bonden i forrige oppgave. Fly langs veien og saml inn nektar hvis det finnes nektar, ellers lag honning!
@@ -9065,6 +9053,7 @@ nn:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3_b: Remember that your function should only get honey *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3a_b: Use a stairstep pattern to check the first four clouds.
@@ -9079,18 +9068,18 @@ nn:
         courseF_bee_functions5a_b: Use a `while` loop to travel down all of the main paths, since they are different lengths.
         courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward, then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions7_authored_hint:
         courseF_bee_functions7_a: You can look back at the last puzzle to see your function.
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger. Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseF_bee_functions8a_b: |+
           Remember to build code inside of the function editor.
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
           
@@ -9211,7 +9200,7 @@ nn:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         courseF_bee_functions8a_b: |+
           Remember to build code inside of the function editor.
       courseF_bee_fwp1_authored_hint:
@@ -9967,7 +9956,7 @@ nn:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Hvert værhår er 75 piksler langt.'
+        2-3_Artist_Debugging_2_a: 'Hint: Kvart verhår er 75 piksel langt.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: Hva skjer hvis du får tegneren til å bevege seg eller hoppe bakover etter at han har tegnet den første linjen?
       grade2_collector_2_authored_hint:
@@ -10081,25 +10070,25 @@ nn:
       grade3_Debugging_TeacherIDo_authored_hint:
         2-3_Bee_Debugging_4_a: Er det noen sted hvor bien gjør noe som ikke gir mening? Hva skjer når du endrer den blokken?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
       grade3_Loops_12_authored_hint:
         2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Du skal ende opp med fire blokker inne i løkken din.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat loop.
         grade3_RunningFarm_1_b: Make sure to use an `if at corn` block or you might try to pick something that's not there!
@@ -10311,11 +10300,11 @@ nn:
         grade4_bee_functions6_a: Edit the function so that it solves the puzzle without having to change the main program.
         grade4_bee_functions6_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Husk å bygge koden din inne i den grønne blokken.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
@@ -10354,11 +10343,11 @@ nn:
         2-3_Artist_6_b: Sidan eg allereie ser mot høgre, er det enklast å starte ved å gå framover og deretter snu meg mot venstre for å lage trekanten.
         2-3_Artist_6_c: Kvar side av trekanten har same lengde som kvar side av kvadratet, 100 pikslar!
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.
         Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.
@@ -10636,25 +10625,25 @@ nn:
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
       k1stickerfreeplay_authored_hint: [ ]
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Du burde ende opp med fem blokker inne i løkken din.
       level 'grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
       level 'grade3_Loops_12_authored_hint:
         2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Du trenger to ulike `gjenta` løkker, en etter den andre.
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: Den første handlingen blir en sving, i stedet for et flytt.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Du skal ende opp med fire blokker inne i løkken din.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Du burde ha 6 blokker inne i løkken din.
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:

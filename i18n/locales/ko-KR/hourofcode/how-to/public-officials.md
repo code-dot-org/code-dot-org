@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## 모든 학교들이 참여해서, 모든 학생들이 배워볼 수 있도록!
 
-1. **우리의 one-pager를 읽어보세요** 왜 컴퓨터 과학 교육이 중요한지, the Hour of Code를 도울수 있는 방법이 나와있습니다. [여기서 one-pager 를 읽어보세요.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **우리의 one-pager를 읽어보세요** 왜 컴퓨터 과학 교육이 중요한지, the Hour of Code를 도울수 있는 방법이 나와있습니다. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
 2. **지역과 학교를 모집하세요.** 시작으로 [이 메일](%= resolve_url('/promote/resources#sample-emails') %) 또는 [이 광고문](%= resolve_url('/promote/stats') %)을 사용하세요. 그리고 학교와 지역을 위한 [길잡이](%= resolve_url('/how-to') %)를 보세요.
 

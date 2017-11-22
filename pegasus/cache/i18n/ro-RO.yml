@@ -405,6 +405,7 @@
   homepage_hero_text_stat_students: "#student_count conturi de elev la Code Studio"
   homepage_hero_text_stat_served: 'Ora de cod: #served servite'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Ora de Programare
   homepage_slot_text_frozen: Tărâmul de gheață cu Anna și Elsa
   homepage_slot_text_teacher: Tabloul de bord al profesorilor
@@ -424,6 +425,7 @@
   homepage_action_text_girlvideo: Inspira o fata
   homepage_action_text_learn: "Începe învăţarea"
   homepage_action_text_signpetition: Semnează petiția
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Sunt de acord &#x25BE;
   homepage_diversity_pledge: Ia-ti angajamentul diversitatii
   homepage_banner_text_prizes: 'Ora de cod revine, 7-13 decembrie. '

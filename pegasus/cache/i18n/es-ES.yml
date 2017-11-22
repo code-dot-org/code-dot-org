@@ -395,6 +395,7 @@
     Studio"
   homepage_hero_text_stat_served: "#Served Horas de Code servidas"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
   homepage_slot_text_teacher: Tablero Maestro del Profesor
@@ -414,6 +415,7 @@
   homepage_action_text_girlvideo: Inspira a una chica
   homepage_action_text_learn: Empieza a aprender
   homepage_action_text_signpetition: Firma la petición
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Firma nuestra petición &#x25BE;
   homepage_diversity_pledge: Abraza la promesa de la diversidad
   homepage_banner_text_prizes: 'Vuelve la Hora de Code, del 7 al 13 de Diciembre. '

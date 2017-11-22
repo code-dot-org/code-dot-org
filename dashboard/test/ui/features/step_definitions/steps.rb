@@ -247,6 +247,23 @@ When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
   page_load(load) {@button.click}
 end
 
+When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ do |number, selector, load|
+  wait_short_until do
+    @elements = @browser.find_elements(:css, selector)
+    @element = @elements[number.to_i]
+  end
+
+  page_load(load) do
+    begin
+      @element.click
+    rescue
+      # Single retry to compensate for element changing between find and click
+      @element = @browser.find_element(:css, selector)
+      @element.click
+    end
+  end
+end
+
 When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
   wait_short_until do
     @element = @browser.find_element(:css, selector)
@@ -1314,4 +1331,8 @@ end
 
 Then /^I scroll the save button into view$/ do
   @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
+end
+
+Then /^I open the section action dropdown$/ do
+  steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
 end

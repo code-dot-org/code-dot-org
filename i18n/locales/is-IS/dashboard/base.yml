@@ -750,13 +750,6 @@ is:
     create: "Stofna verkefni"
     create_a_project: 'Byrja með nýtt verkefni:'
     new: "Stofna nýtt"
-    new_buttons:
-      artist: "Listamaður"
-      playlab: "Leikjasmiðja"
-      applab: "Appsmiðja"
-      gamelab: "Leikjasmiðjan"
-      weblab: "Vefsmiðja (beta)"
-    new_buttons_header: "Hefja nýtt verkefni:"
     rename: "Endurnefna"
     save: "Vista"
     delete: "Eyða"

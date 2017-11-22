@@ -3,12 +3,12 @@
 # Table name: pd_applications
 #
 #  id                  :integer          not null, primary key
-#  user_id             :integer          not null
+#  user_id             :integer
 #  type                :string(255)      not null
 #  application_year    :string(255)      not null
 #  application_type    :string(255)      not null
 #  regional_partner_id :integer
-#  status              :string(255)      not null
+#  status              :string(255)
 #  locked_at           :datetime
 #  notes               :text(65535)
 #  form_data           :text(65535)      not null
@@ -56,7 +56,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 15)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end

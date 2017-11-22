@@ -18,6 +18,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
   get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+  get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
 
@@ -45,6 +46,7 @@ Dashboard::Application.routes.draw do
 
   get 'maker/setup', to: 'maker#setup'
   get 'maker/discountcode', to: 'maker#discountcode'
+  post 'maker/apply', to: 'maker#apply'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -169,7 +171,6 @@ Dashboard::Application.routes.draw do
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
-    get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'
   end
@@ -424,6 +425,7 @@ Dashboard::Application.routes.draw do
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
+      get 'principal_approval/:application_guid', to: 'principal_approval_application#new'
     end
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'

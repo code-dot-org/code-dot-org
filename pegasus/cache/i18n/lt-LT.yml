@@ -392,6 +392,7 @@
     mokiniai'
   homepage_hero_text_stat_served: "„Programavimo valandą“: #served išbandė"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "„Programavimo valanda“"
   homepage_slot_text_frozen: Ledo šalis su Anna ir Elsa
   homepage_slot_text_teacher: Mokytojo prietaisų skydelis
@@ -411,6 +412,7 @@
   homepage_action_text_girlvideo: Suteik įkvėpimo mergaitei
   homepage_action_text_learn: Pradėti mokytis
   homepage_action_text_signpetition: Pasirašyti peticiją
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Aš sutinku &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '

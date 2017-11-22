@@ -414,6 +414,7 @@
   homepage_hero_text_stat_students: "#student_count tài khoản học viên trên Code Studio"
   homepage_hero_text_stat_served: 'Giờ lập trình: đã phục vụ #served'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Một giờ lập trình
   homepage_slot_text_frozen: Băng giá với Anna và Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -433,6 +434,7 @@
   homepage_action_text_girlvideo: Truyền cảm hứng cho một cô gái
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: The Hour of Code sắp diễn ra một lần nữa từ ngày
@@ -2022,12 +2024,12 @@
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
   header_home: Home
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Bảng điều khiển của tôi
   header_courses: Các khóa học
   header_course_catalog: Course Catalog
   header_project_gallery: chương trình
   header_sections: Sections
-  header_professional_learning: Professional Learning
+  header_professional_learning: Học tập nâng cao chuyên môn
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
