@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 # This script updates the "DTSN" check on PRs
+# Test change
 
 require_relative '../../deployment'
 require 'cdo/github'
