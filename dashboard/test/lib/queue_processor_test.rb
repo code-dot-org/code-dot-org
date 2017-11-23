@@ -102,7 +102,6 @@ class QueueProcessorTest < ActiveSupport::TestCase
   end
 
   def test_queue_processor
-    skip 'slow/broken test'
     response = @sqs.create_queue(
       queue_name: "test-queue-processor-test",
       # Set a short visibility timeout so that retries will happen quickly.
@@ -155,7 +154,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     # Wait for the queue processor to handle all of the messages.
     while handler.received_bodies.proper_subset?(expected_bodies)
       processor.assert_workers_alive_for_test
-      sleep 2
+      sleep 1
     end
 
     # Make sure that the metrics recorded at least the expected number of successes and failures.
@@ -167,19 +166,25 @@ class QueueProcessorTest < ActiveSupport::TestCase
     missed_bodies = expected_bodies.subtract(handler.received_bodies)
     assert_empty missed_bodies, "Failed to receive the following bodies: #{missed_bodies}"
 
-    # Now make sure that if the handler throws on the initial delivery of a message
-    # that the system will redeliver it and allow the handler to receive it.
-    handler.reset_received_bodies
-    initially_failing_body = 'initially_failing'
-    handler.raise_on_next_receipt_of(initially_failing_body)
-
-    @sqs.send_message(queue_url: queue_url, message_body: initially_failing_body)
-    sleep 2 until handler.received_bodies.include?(initially_failing_body)
-
-    # Make sure the metrics capture the initial failure.
-    assert sqs_metrics.failures.value >= 1
-
-    processor.stop
+    # TODO(asher): Reenable the remainder of the test. It is commented out as it takes excessively
+    # long to run, causing test flakiness.
+    # skip 'this part of the test takes too long'
+    #
+    # # Now make sure that if the handler throws on the initial delivery of a message
+    # # that the system will redeliver it and allow the handler to receive it.
+    # handler.reset_received_bodies
+    # initially_failing_body = 'initially_failing'
+    # handler.raise_on_next_receipt_of(initially_failing_body)
+    #
+    # @sqs.send_message(queue_url: queue_url, message_body: initially_failing_body)
+    # until handler.received_bodies.include?(initially_failing_body)
+    #   sleep 2
+    # end
+    #
+    # # Make sure the metrics capture the initial failure.
+    # assert sqs_metrics.failures.value >= 1
+    #
+    # processor.stop
   end
 
   def test_queue_process_config_parsing
