@@ -3,11 +3,14 @@
   description = I18n.t(:csedweek_og_description)
   description = I18n.t(:csedweek_og_description_soon) if DCDO.get('soon-hoc', false)
   description = I18n.t(:csedweek_og_description_here) if DCDO.get('actual-hoc', false)
+
+  title = I18n.t(:csedweek_og_title)
+  title = I18n.t(:og_title_here) if DCDO.get('actual-hoc', false)
 %>
 theme: responsive
 banner: null
 social:
-  "og:title": "<%= I18n.t(:csedweek_og_title) %>"
+  "og:title": "<%= title %>"
   "og:description": "<%= description %>"
   "og:image": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
   "og:image:width": "1200"
@@ -20,7 +23,7 @@ social:
   "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "https://csedweek.org/"
-  "twitter:title": "<%= I18n.t(:csedweek_og_title) %>"
+  "twitter:title": "<%= title %>"
   "twitter:description": "<%= description %>"
   "twitter:image:src": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
   "twitter:player": "https://youtube.com/embed/QvyTEx1wyOY"
