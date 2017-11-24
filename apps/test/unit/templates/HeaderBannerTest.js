@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import {allowConsoleErrors} from '../../util/testUtils';
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import {UnconnectedHeaderBanner as HeaderBanner} from '@cdo/apps/templates/HeaderBanner';
 
 describe('HeaderBanner', () => {
   allowConsoleErrors();
