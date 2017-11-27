@@ -1,6 +1,7 @@
 ---
 <%
-  hoc = DCDO.get('soon-hoc', false) || DCDO.get('actual-hoc', false)
+  mode = DCDO.get('hoc_mode', nil)
+  hoc = mode == 'soon-hoc' || mode == 'actual-hoc'
   share_image = hoc ? 'celeb-challenge.jpg' : 'default-og-image.jpg'
   description = hoc ? I18n.t(:og_description_celeb) : I18n.t(:og_description)
 
