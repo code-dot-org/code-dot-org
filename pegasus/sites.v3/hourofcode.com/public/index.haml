@@ -1,8 +1,10 @@
 ---
 <%
+  mode = DCDO.get('hoc_mode', false)
+
   title = hoc_s(:meta_tag_og_title)
-  title = I18n.t(:og_title_soon) if DCDO.get('soon-hoc', false)
-  title = I18n.t(:og_title_here) if DCDO.get('actual-hoc', false)
+  title = I18n.t(:og_title_soon) if mode == 'soon-hoc'
+  title = I18n.t(:og_title_here) if mode == 'actual-hoc'
 %>
 layout: wide_index
 title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year')) %>"
