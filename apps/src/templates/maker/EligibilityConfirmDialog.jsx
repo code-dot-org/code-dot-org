@@ -36,22 +36,37 @@ const styles = {
 
 export default class EligibilityConfirmDialog extends Component {
   static propTypes = {
-    handleCancel: PropTypes.func.isRequired,
-    handleSubmit: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    onSuccess: PropTypes.func.isRequired,
   };
 
   state = {
     signature: "",
-    activeButton: false,
+    validInput: false,
+    submitting: false,
   };
 
   verifyResponse = () => {
     this.setState({
-      activeButton: this.check1.checked
+      validInput: this.check1.checked
         && this.check2.checked
         && this.check3.checked
         && /\S/.test(this.state.signature)
     });
+  }
+
+  handleSubmit = () => {
+    this.setState({submitting: true});
+    // TODO: extract actual signature and make an ajax POST
+    // fake async for now
+    setTimeout(() => {
+      // TODO: now show discount code info page
+      this.setState({
+        submitting: false,
+      });
+      const discountCode = '12345';
+      this.props.onSuccess(discountCode);
+    }, 1000);
   }
 
   setSignature = (event) => {
@@ -75,6 +90,7 @@ export default class EligibilityConfirmDialog extends Component {
                 style={styles.checkbox}
                 type="checkbox"
                 ref={input => this.check1 = input}
+                disabled={this.state.submitting}
                 onChange={this.verifyResponse}
               />
               {i18n.verifyStudentCount()}
@@ -84,6 +100,7 @@ export default class EligibilityConfirmDialog extends Component {
                 style={styles.checkbox}
                 type="checkbox"
                 ref={input => this.check2 = input}
+                disabled={this.state.submitting}
                 onChange={this.verifyResponse}
               />
               {i18n.verifyYear()}
@@ -93,6 +110,7 @@ export default class EligibilityConfirmDialog extends Component {
                 style={styles.checkbox}
                 type="checkbox"
                 ref={input => this.check3 = input}
+                disabled={this.state.submitting}
                 onChange={this.verifyResponse}
               />
               {i18n.verifySingleCode()}
@@ -105,6 +123,7 @@ export default class EligibilityConfirmDialog extends Component {
             </div>
             <input
               value={this.state.signature}
+              disabled={this.state.submitting}
               style={styles.signatureBox}
               onChange={this.setSignature}
             />
@@ -114,13 +133,13 @@ export default class EligibilityConfirmDialog extends Component {
         <DialogFooter>
           <Button
             text={i18n.dialogCancel()}
-            onClick={this.props.handleCancel}
+            onClick={this.props.onCancel}
             color={Button.ButtonColor.gray}
           />
           <Button
             text={i18n.getCode()}
-            onClick={this.props.handleSubmit}
-            disabled={!this.state.activeButton}
+            onClick={this.handleSubmit}
+            disabled={!this.state.validInput || this.state.submitting}
           />
         </DialogFooter>
       </BaseDialog>
