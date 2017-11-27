@@ -39,6 +39,10 @@ module ScriptConstants
       # you must also update the Data_HocTutorials gsheet so the end of script API works
 
       nil,
+      MINECRAFT_HERO_NAME = 'hero'.freeze,
+      MINECRAFT_NAME = 'mc'.freeze,
+      MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
+      APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -48,16 +52,12 @@ module ScriptConstants
       ICEAGE_NAME = 'iceage'.freeze,
       STARWARS_NAME = 'starwars'.freeze,
       STARWARS_BLOCKS_NAME = 'starwarsblocks'.freeze,
-      MINECRAFT_NAME = 'mc'.freeze,
-      MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
-      MINECRAFT_HERO_NAME = 'hero'.freeze,
       INFINITY_NAME = 'infinity'.freeze,
       ARTIST_NAME = 'artist'.freeze,
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
-      APPLAB_INTRO = 'applab-intro'.freeze,
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
