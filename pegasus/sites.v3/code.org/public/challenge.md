@@ -8,7 +8,7 @@ social:
   "og:image" : "<%= 'https://' + request.host + '/images/social-media/hoc-student-challenge.png' %>"
   "og:image:width": '1920'
   "og:image:height": '1080'
-  "twitter:card": "player"
+  "twitter:card": "photo"
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/challenge"
   "twitter:title": "Celebrity Challenge"
