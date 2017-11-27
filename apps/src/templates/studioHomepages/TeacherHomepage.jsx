@@ -108,7 +108,8 @@ export default class TeacherHomepage extends Component {
           />
         )}
 
-        {announcements.length > 0 && (
+        {announcements.length > 0 &&
+         !(hocLaunch && hocLaunch.hide_teacher_announcement) && (
           <div>
             <Notification
               type={announcements[0].type || "bullhorn"}
@@ -124,6 +125,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear}/>
           </div>
         )}
+
         <TeacherSections
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}
