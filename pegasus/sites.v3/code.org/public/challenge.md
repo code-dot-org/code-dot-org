@@ -63,7 +63,7 @@ The team of software engineers at Code.org love to build apps, and they created 
 
 <a name="sheryl"></a>
 ### Sheryl Sandberg
-Girls are still underrepresented in tech and computer science from high school all the way to the workforce. We can change this! I challenge girls to Lean In to computer science and create an app using [App Lab](https://code.org/educate/applab)!
+Girls are still underrepresented in tech and computer science from high school all the way through the workforce. We can change this! I encourage girls to start learning computer science and create an app using [App Lab](https://code.org/educate/applab)!
 
 *To tag Sheryl, use @SherylSandberg on [Facebook](https://www.facebook.com/sheryl/).*
 
