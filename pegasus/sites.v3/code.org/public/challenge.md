@@ -1,11 +1,14 @@
 ---
+<%
+  share_image = DCDO.get('soon-hoc', false) ? 'hoc-student-challenge.jpg' : 'celeb-challenge.jpg'
+%>
 title: #HourOfCode Challenge
 theme: responsive
 style_min: true
 social:
   "og:title": "Celebrity Challenge"
   "og:description": "Win a celebrity video chat for your class!"
-  "og:image" : "<%= 'https://' + request.host + '/images/social-media/hoc-student-challenge.png' %>"
+  "og:image" : "<%= 'https://' + request.host + '/images/fit-1920/social-media/' + share_image %>"
   "og:image:width": '1920'
   "og:image:height": '1080'
   "twitter:card": "photo"
@@ -13,7 +16,7 @@ social:
   "twitter:url": "https://code.org/challenge"
   "twitter:title": "Celebrity Challenge"
   "twitter:description": "Win a celebrity video chat for your class!"
-  "twitter:image:src" : "<%= 'https://' + request.host + '/images/social-media/hoc-student-challenge.png' %>"
+  "twitter:image:src" : "<%= 'https://' + request.host + '/images/fit-1920/social-media/' + share_image %>"
 ---
 
 # Win a celebrity chat for your class!
