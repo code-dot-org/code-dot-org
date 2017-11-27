@@ -1,6 +1,6 @@
 ---
 <%
-  share_image = DCDO.get('soon-hoc', false) ? 'hoc-student-challenge.jpg' : 'celeb-challenge.jpg'
+  share_image = (DCDO.get('hoc_mode', nil) == 'soon-hoc') ? 'hoc-student-challenge.jpg' : 'celeb-challenge.jpg'
 %>
 title: #HourOfCode Challenge
 theme: responsive
