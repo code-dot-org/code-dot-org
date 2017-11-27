@@ -44,7 +44,6 @@ module ScriptConstants
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
-      HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       FROZEN_NAME = 'frozen'.freeze,
       FLAPPY_NAME = 'flappy'.freeze,
       PLAYLAB_NAME = 'playlab'.freeze,
@@ -58,6 +57,7 @@ module ScriptConstants
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
+      HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
