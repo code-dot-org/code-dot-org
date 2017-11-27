@@ -490,12 +490,12 @@ Resources:
           daemon: true
         )%>
       NetworkInterfaces:
-        - AssociatePublicIpAddress: true
-          DeviceIndex: 0
-          SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
-      GroupSet:
-        - !ImportValue VPC-FrontendSecurityGroup
-        - !ImportValue VPC-GatewaySecurityGroup
+      - AssociatePublicIpAddress: true
+        DeviceIndex: 0
+        SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+        GroupSet:
+          - !ImportValue VPC-FrontendSecurityGroup
+          - !ImportValue VPC-GatewaySecurityGroup
 <%end-%>
 <% if environment == :adhoc -%>
   Database:
