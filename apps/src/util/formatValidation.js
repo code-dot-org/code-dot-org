@@ -5,3 +5,10 @@ export const isEmail = (value) => EMAIL_REGEX.test(value);
 
 const ZIP_CODE_REGEX = /^\d{5}([\W-]?\d{4})?$/;
 export const isZipCode = (value) => ZIP_CODE_REGEX.test(value);
+
+export const isInt = (value) => !window.isNaN(parseInt(value, 10))
+export const isPercent = (value) => {
+  let percent = parseInt(value, 10)
+
+  return 0 <= percent && percent <= 100;
+}
