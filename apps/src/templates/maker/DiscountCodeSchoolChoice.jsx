@@ -45,16 +45,23 @@ export default class DiscountCodeSchoolChoice extends Component {
       confirming: true
     });
 
-    // TODO: eventually this will be an API call. To start with, just fake it
-    // by at least making it async
-    setTimeout(() => {
-      this.setState({
-        confirming: false,
-        confirmed: true,
-      });
-      const fullDiscount = false;
-      this.props.onSchoolConfirmed(fullDiscount);
-    }, 1000);
+    $.ajax({
+     url: "/maker/schoolchoice",
+     type: "post",
+     dataType: "json",
+     data: {
+       nces: this.state.schoolId
+     }
+   }).done(data => {
+     this.props.onSchoolConfirmed(data.full_discount);
+     this.setState({
+       confirming: false,
+       confirmed: true,
+     });
+   }).fail((jqXHR, textStatus) => {
+     // TODO: should probably introduce some error UI
+     console.error(textStatus);
+   });
   }
 
   render() {
