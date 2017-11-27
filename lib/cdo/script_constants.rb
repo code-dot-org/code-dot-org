@@ -186,7 +186,7 @@ module ScriptConstants
       # Would better be called something like assignable_name
       script_name: course_or_script[:name],
       category: first_category,
-      position: ScriptConstants.position_in_category(name, first_category),
+      position: ScriptConstants.position_in_category(course_or_script[:name], first_category),
       category_priority: ScriptConstants.category_priority(first_category),
     }
   end
