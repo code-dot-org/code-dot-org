@@ -498,7 +498,8 @@ StudioApp.prototype.init = function (config) {
 };
 
 StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
-  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
+  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon &&
+      $("#projectTemplateWorkspaceIcon").is(":visible")) {
     addCallouts([{
       id: 'projectTemplateWorkspaceIconCallout',
       element_id: '#projectTemplateWorkspaceIcon',
