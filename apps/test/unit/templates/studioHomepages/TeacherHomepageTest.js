@@ -5,9 +5,12 @@ import {assert, expect} from '../../../util/configuredChai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import { announcement, courses, topCourse } from './homepagesTestData';
+import { combineReducers, createStore } from 'redux';
+import responsiveRedux from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('TeacherHomepage', () => {
   let server;
+  const store = createStore(combineReducers({responsive: responsiveRedux}));
 
   const successResponse = () => [
     200,
@@ -30,9 +33,9 @@ describe('TeacherHomepage', () => {
         isRtl={false}
         joinedSections={[]}
         isEnglish={true}
-      />
+      />, {context: {store}}
     );
-    const headerBanner = wrapper.find('HeaderBanner');
+    const headerBanner = wrapper.find('Connect(HeaderBanner)');
     assert.deepEqual(headerBanner.props(), {
       headingText: "My Dashboard",
       short: true
@@ -48,7 +51,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
         joinedSections={[]}
         isEnglish={true}
-      />
+      />, {context: {store}}
     );
     expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
   });
@@ -62,7 +65,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
         joinedSections={[]}
         isEnglish={true}
-      />
+      />, {context: {store}}
     );
     const announcementContainer = wrapper.find('Notification');
     assert.deepEqual(announcementContainer.props(), {
@@ -87,7 +90,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
         joinedSections={[]}
         isEnglish={true}
-      />
+      />, {context: {store}}
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherSections
@@ -105,7 +108,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
         joinedSections={[]}
         isEnglish={true}
-      />
+      />, {context: {store}}
     );
     expect(wrapper.find('StudentSections').exists()).to.be.true;
   });
@@ -119,7 +122,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
         joinedSections={[]}
         isEnglish={true}
-      />
+      />, {context: {store}}
     );
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
@@ -141,7 +144,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
         joinedSections={[]}
         isEnglish={true}
-      />
+      />, {context: {store}}
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
   });
