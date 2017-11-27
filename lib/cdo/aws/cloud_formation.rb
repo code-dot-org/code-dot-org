@@ -91,7 +91,7 @@ module AWS
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
         params = parameters(template)
-        CDO.log.info "Parameters: #{params.join("\n")}" unless params.empty?
+        CDO.log.info "Parameters:\n#{params.map {|p| "#{p[:parameter_key]}: #{p[:parameter_value]}"}.join("\n")}" unless params.empty?
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
@@ -147,19 +147,21 @@ module AWS
         params = YAML.load(template)['Parameters']
         return [] unless params
         params.keys.map do |key|
-          value = CDO[key.underscore]
+          value = CDO[key.underscore] || ENV[key.underscore.upcase]
           if value
             {
               parameter_key: key,
               parameter_value: value
             }
-          else
+          elsif stack_exists?
             {
               parameter_key: key,
               use_previous_value: true
             }
+          else
+            nil
           end
-        end.flatten
+        end.compact
       end
 
       def stack_options(template)
@@ -231,10 +233,12 @@ module AWS
 
       # Only way to determine whether a given stack exists using the Ruby API.
       def stack_exists?
-        !!cfn.describe_stacks(stack_name: stack_name)
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        raise e unless e.message == "Stack with id #{stack_name} does not exist"
-        false
+        @@stack_exists ||= begin
+            !!cfn.describe_stacks(stack_name: stack_name)
+          rescue Aws::CloudFormation::Errors::ValidationError => e
+            raise e unless e.message == "Stack with id #{stack_name} does not exist"
+            false
+          end
       end
 
       def update_certs
