@@ -98,6 +98,23 @@ export default class TeacherHomepage extends Component {
           <SpecialAnnouncementActionBlock
             isRtl={isRtl}
             imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeading()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescriptionCelebs()}
+            buttons={[
+              {url: pegasus('/challenge'), text: i18n.celebrityChallenge()},
+              {url: pegasus('/learn'), text: i18n.tryHOC()}
+            ]}
+          />
+        )}
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "celebs2017actualhoc" &&
+         isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
             heading={i18n.specialAnnouncementHeadingCelebs()}
             subHeading={""}
             description={i18n.specialAnnouncementDescriptionCelebs()}
