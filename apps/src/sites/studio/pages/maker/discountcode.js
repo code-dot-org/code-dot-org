@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import EligibilityChecklist from '@cdo/apps/templates/maker/EligibilityChecklist';
 import { Status } from '@cdo/apps/lib/ui/ValidationStep';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import DiscountCodeInstructions from '@cdo/apps/lib/kits/maker/ui/DiscountCodeInstructions';
 
 $(document).ready(() => {
   let scriptData = getScriptData('discountcode');
@@ -26,23 +25,15 @@ $(document).ready(() => {
 
   ReactDOM.render(
     <div>
-      {!scriptData.discountCode &&
-        <EligibilityChecklist
-          statusPD={scriptData.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
-          statusStudentCount={scriptData.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
-          unit6Intention={scriptData.unit_6_intention}
-          schoolId={scriptData.school_id}
-          schoolName={scriptData.school_name}
-          hasConfirmedSchool={scriptData.has_confirmed_school}
-          getsFullDiscount={scriptData.gets_full_discount}
-        />
-      }
-      {scriptData.discountCode &&
-        <DiscountCodeInstructions
-          discountCode="XXXXXX"
-          fullDiscount={true}
-        />
-      }
+      <EligibilityChecklist
+        statusPD={scriptData.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
+        statusStudentCount={scriptData.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
+        unit6Intention={scriptData.unit_6_intention}
+        schoolId={scriptData.school_id}
+        schoolName={scriptData.school_name}
+        hasConfirmedSchool={scriptData.has_confirmed_school}
+        getsFullDiscount={scriptData.gets_full_discount}
+      />
     </div>
     , document.getElementById('discountcode')
   );

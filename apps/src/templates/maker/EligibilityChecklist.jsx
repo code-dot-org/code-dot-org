@@ -6,6 +6,7 @@ import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Unit6ValidationStep from './Unit6ValidationStep';
 import EligibilityConfirmDialog from './EligibilityConfirmDialog';
+import DiscountCodeInstructions from '@cdo/apps/lib/kits/maker/ui/DiscountCodeInstructions';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -16,6 +17,7 @@ export default class EligibilityChecklist extends Component {
     schoolName: PropTypes.string,
     hasConfirmedSchool: PropTypes.bool,
     getsFullDiscount: PropTypes.bool,
+    initialDiscountCode: PropTypes.string,
   };
 
   state = {
@@ -24,6 +26,7 @@ export default class EligibilityChecklist extends Component {
     submitting: false,
     discountAmount: null,
     confirming: false,
+    discountCode: null
   };
 
   constructor(props) {
@@ -38,7 +41,8 @@ export default class EligibilityChecklist extends Component {
         statusYear: (props.unit6Intention === 'yes1718' ||
           props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
         discountAmount: props.hasConfirmedSchool ?
-          (props.getsFullDiscount ? "$0" : "$97.50") : null
+          (props.getsFullDiscount ? "$0" : "$97.50") : null,
+        discountCode: props.initialDiscountCode,
       };
     }
   }
@@ -57,18 +61,20 @@ export default class EligibilityChecklist extends Component {
 
   confirmEligibility = () => this.setState({confirming: true})
 
-  cancelConfirm = () => this.setState({confirming: false})
+  handleCancelDialog = () => this.setState({confirming: false})
 
-  submitConfirm = () => {
-    // TODO: extract actual signature and make an ajax POST
-    // fake async for now
-    setTimeout(() => {
-      // TODO: now show discount code info page
-      this.setState({confirming: false});
-    }, 1000);
-  }
+  handleSuccessDialog = discountCode => this.setState({discountCode})
 
   render() {
+    if (this.state.discountCode) {
+      return (
+        <DiscountCodeInstructions
+          discountCode={this.state.discountCode}
+          fullDiscount={true}
+        />
+      );
+    }
+
     return (
       <div>
         <h2>
@@ -113,8 +119,8 @@ export default class EligibilityChecklist extends Component {
         }
         {this.state.confirming &&
           <EligibilityConfirmDialog
-            handleCancel={this.cancelConfirm}
-            handleSubmit={() => {}}
+            onCancel={this.handleCancelDialog}
+            onSuccess={this.handleSuccessDialog}
           />
         }
       </div>
