@@ -5,6 +5,7 @@ import Button from "../Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Unit6ValidationStep from './Unit6ValidationStep';
+import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -22,6 +23,7 @@ export default class EligibilityChecklist extends Component {
     yearChoice: null, // stores the teaching-year choice until submitted
     submitting: false,
     discountAmount: null,
+    confirming: false,
   };
 
   constructor(props) {
@@ -51,6 +53,19 @@ export default class EligibilityChecklist extends Component {
     this.setState({
       statusYear: eligible ? Status.SUCCEEDED : Status.FAILED,
     });
+  }
+
+  confirmEligibility = () => this.setState({confirming: true})
+
+  cancelConfirm = () => this.setState({confirming: false})
+
+  submitConfirm = () => {
+    // TODO: extract actual signature and make an ajax POST
+    // fake async for now
+    setTimeout(() => {
+      // TODO: now show discount code info page
+      this.setState({confirming: false});
+    }, 1000);
   }
 
   render() {
@@ -93,7 +108,13 @@ export default class EligibilityChecklist extends Component {
           <Button
             color={Button.ButtonColor.orange}
             text={i18n.getCodePrice({price: this.state.discountAmount})}
-            onClick={() => {}}
+            onClick={this.confirmEligibility}
+          />
+        }
+        {this.state.confirming &&
+          <EligibilityConfirmDialog
+            handleCancel={this.cancelConfirm}
+            handleSubmit={() => {}}
           />
         }
       </div>
