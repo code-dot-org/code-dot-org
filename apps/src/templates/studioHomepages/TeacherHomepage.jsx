@@ -108,9 +108,8 @@ export default class TeacherHomepage extends Component {
           />
         )}
 
-        {hocLaunch &&
-         !hocLaunch.hide_teacher_announcement &&
-         announcements.length > 0 && (
+        {announcements.length > 0 &&
+         !(hocLaunch && hocLaunch.hide_teacher_announcement) && (
           <div>
             <Notification
               type={announcements[0].type || "bullhorn"}
