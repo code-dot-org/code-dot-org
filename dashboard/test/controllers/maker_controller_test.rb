@@ -5,6 +5,7 @@ class MakerControllerTest < ActionController::TestCase
 
   setup do
     @teacher = create :teacher
+    @school = create :school
   end
 
   test "apply: fails if unit_6_intention not provided" do
@@ -51,5 +52,45 @@ class MakerControllerTest < ActionController::TestCase
 
     application = CircuitPlaygroundDiscountApplication.find_by_user_id(@teacher.id)
     assert application
+  end
+
+  test "schoolchoice: fails if no school id provided" do
+    sign_in @teacher
+
+    assert_raises ActionController::ParameterMissing do
+      post :schoolchoice
+    end
+  end
+
+  test "schoolchoice: fails if given a bad school_id" do
+    sign_in @teacher
+
+    assert_raises ActiveRecord::RecordNotFound do
+      post :schoolchoice, params: {nces: 'asdf'}
+    end
+  end
+
+  test "schoolchoice: fails if user doesnt have application" do
+    sign_in @teacher
+    post :schoolchoice, params: {nces: @school.id}
+    assert_response :not_found
+  end
+
+  test "schoolchoice: fails if user not teaching unit 6" do
+    sign_in @teacher
+    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'unsure')
+
+    post :schoolchoice, params: {nces: @school.id}
+    assert_response :forbidden
+  end
+
+  test "schoolchoice: succeeds if user is teaching unit 6" do
+    sign_in @teacher
+    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718')
+
+    post :schoolchoice, params: {nces: @school.id}
+    assert_response :success
+    expected = {"full_discount" => false}
+    assert_equal expected, JSON.parse(@response.body)
   end
 end
