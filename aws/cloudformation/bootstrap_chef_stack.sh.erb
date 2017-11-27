@@ -14,7 +14,7 @@ test "$(pip3 show awscli)" || pip3 install awscli
 STACK=${AWS::StackName}
 CHEF_VERSION=12.7.2
 REGION=${AWS::Region}
-BRANCH=<%=branch%>
+BRANCH=${Branch}
 S3_BUCKET=<%=s3_bucket%>
 ENVIRONMENT=<%=environment%>
 RUN_LIST='<%=run_list.to_json%>'
@@ -31,7 +31,7 @@ cat <<JSON > $FIRST_BOOT
     <% if commit %>
       "revision": "<%=commit%>",
     <% end -%>
-    "branch": "<%=branch%>",
+    "branch": "${Branch}",
     "sync": true
   },
   "cdo-secrets": {
