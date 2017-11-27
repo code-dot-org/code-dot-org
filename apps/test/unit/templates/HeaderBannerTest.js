@@ -2,19 +2,24 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import {allowConsoleErrors} from '../../util/testUtils';
-import {UnconnectedHeaderBanner as HeaderBanner} from '@cdo/apps/templates/HeaderBanner';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import { combineReducers, createStore } from 'redux';
+import responsiveRedux, {SET_RESPONSIVE_SIZE, ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('HeaderBanner', () => {
   allowConsoleErrors();
+
+  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  store.dispatch({type: SET_RESPONSIVE_SIZE, responsiveSize: ResponsiveSize.lg});
 
   it('renders a short HeaderBanner without a subheading or description', () => {
     const wrapper = shallow(
       <HeaderBanner
         headingText="Home"
         short={true}
-      />
+      />, {context: {store}},
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.dive()).to.containMatchingElement(
       <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
         <div>
           Home
@@ -34,9 +39,9 @@ describe('HeaderBanner', () => {
         headingText="Home"
         subHeadingText="This is where you can find useful information."
         short={true}
-      />
+      />, {context: {store}},
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.dive()).to.containMatchingElement(
       <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
         <div>
           Home
@@ -55,9 +60,9 @@ describe('HeaderBanner', () => {
         subHeadingText="This is where you can find useful information."
         description="Everything on the page is customized to you and easy to find."
         short={false}
-      />
+      />, {context: {store}},
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.dive()).to.containMatchingElement(
       <div style={{height: 260, maxWidth: '60%', marginTop: 25}}>
         <div>
           Home
