@@ -314,7 +314,9 @@ module LevelsHelper
       level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end
 
-    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+    # Only levels that have markdown instructions and are in designated scripts have tts enabled
+    app_options[:textToSpeechEnabled] = !@level.tts_markdown_instructions_text.empty? &&
+                                        @script.try(:text_to_speech_enabled?)
   end
 
   def set_hint_prompt_options(level_options)
