@@ -139,8 +139,6 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
               hideWithoutThumbnails={true}
             />
-
-            <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
           </div>
         }
 
