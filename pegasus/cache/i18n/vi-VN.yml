@@ -584,11 +584,12 @@
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
-  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
-    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
-    of the new tutorial by the Minecraft team and learn about the resources and best
-    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
-    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -2120,3 +2121,15 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
