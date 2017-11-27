@@ -9,13 +9,11 @@ export const isZipCode = (value) => ZIP_CODE_REGEX.test(value);
 
 export const isInt = (value) => {
   // Sub out commas
-  let newValue = value.replace(/,/g, "");
-  /* eslint-disable eqeqeq*/
-  return parseInt(newValue, 10) == newValue;
-  /* eslint-enable eqeqeq*/
+  const newValue = value.replace(/,/g, "");
+  return parseInt(newValue, 10).toString() === newValue;
 };
 export const isPercent = (value) => {
-  let percent = parseFloat(value, 10);
+  let percent = parseFloat(value);
 
   return 0 <= percent && percent <= 100;
 };
