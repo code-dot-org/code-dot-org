@@ -330,7 +330,7 @@ class V2SectionRoutesTest < SequelTestCase
             "name" => "Minecraft Adventurer",
             "script_name" => "mc",
             "category" => "Hour of Code",
-            "position" => nil,
+            "position" => 2,
             "category_priority" => 2
           },
           {
@@ -338,7 +338,7 @@ class V2SectionRoutesTest < SequelTestCase
             "name" => "Classic Maze",
             "script_name" => "hourofcode",
             "category" => "Hour of Code",
-            "position" => nil,
+            "position" => 19,
             "category_priority" => 2
           },
           {
@@ -346,7 +346,7 @@ class V2SectionRoutesTest < SequelTestCase
             "name" => "Minecraft Designer",
             "script_name" => "minecraft",
             "category" => "Hour of Code",
-            "position" => nil,
+            "position" => 3,
             "category_priority" => 2
           },
           {
@@ -354,7 +354,7 @@ class V2SectionRoutesTest < SequelTestCase
             "name" => "Make a Flappy game",
             "script_name" => "flappy",
             "category" => "Hour of Code",
-            "position" => 4,
+            "position" => 7,
             "category_priority" => 2
           },
           {
