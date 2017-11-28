@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_resources) %>'
+title: <%= hoc_s(:title_resources) %>
 layout: wide
 nav: promote_nav
 ---
@@ -66,7 +66,7 @@ Komputer ada dimana-mana, mengubah setiap industri di planet ini. Tapi kurang da
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Lebih dari 100 mitra telah bergabung bersama untuk mendukung gerakan ini. Setiap Apple Store di dunia telah menyelenggarakan Hour of Code, dan para pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis baris kode pertama mereka sebagai bagian dari kampanye.
 
-Tahun ini, mari kita buat lebih besar lagi. I’m asking you to join the Hour of Code 2017. Silakan terlibat dalam acara Hour of Code selama Pekan Pendidikan Ilmu Komputer, <% = campaign_date ('full')%>.
+Tahun ini, mari kita buat lebih besar lagi. I’m asking you to join the Hour of Code 2017. Silakan terlibat dalam acara Hour of Code selama Pekan Pendidikan Ilmu Komputer, <%= campaign_date('full')%>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
