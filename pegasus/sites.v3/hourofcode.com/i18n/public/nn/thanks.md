@@ -27,10 +27,10 @@ social:
 
 # Takk for at du melde deg som vert for Kodetimen!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Som en takk for at du hjelper til å gjøre det mulig for elever å starte å lære informatikk, vil vi gjerne gi deg et gratis sett med profesjonelt trykkede plakater med diverse rollemodeller til klasserommet ditt. Bruk tilbudskode **FREEPOSTERS** i kassa. (Merk: Dette er bare tilgjengelig så lenge beholdningen varer, og du må dekke fraktkostnader. Siden disse plakatene sendes fra USA, kan fraktkostnader være ganske høye for frakt til Norge og internasjonalt. Vi forstår at dette nok ikke er med i budsjettet, så vi oppfordrer deg til å skrive ut [ PDF-filer](https://code.org/inspire) for klasserommet.)   
+<br /> [ <button>få plakater</button>](https://store.code.org/products/code-org-posters-set-of-12) bruk Tilbudskode FREEPOSTERS
 
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+<% if @country == 'us' %> Takket være støtten fra Ozobot, Dexter industri, littleBits og Wonder Workshop, vil over 100 klasserom bli valgt å motta roboter eller utstyr til sin klasse! For å være berettiget til å motta et sett, må du fullføre undersøkelsen sendt fra Code.org etter Kodetimen. Code.org vil kåre de klasserommene som vinner. I mellomtiden, sjekk ut noen av aktivitetene med robotikk og kretser. Vær oppmerksom på at dette er bare åpent for amerikanske skoler. <% end %>
 
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
@@ -38,9 +38,9 @@ As a thank you for helping make it possible for students to start learning compu
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Du treng ikkje gå på skulen for å lære noko nytt. Invite a local politician or policy maker to visit your school for the Hour of Code. Dette kan hjelpe å bygge støtte til informatikkopplæring i ditt område ut over ein Kodetime.
 
-Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+Bruk desse [plakatar, bannere, klistremerke, videoar og meir](<%= resolve_url('/promote/resources') %>)for ditt eige arrangement.
 
 ## 2. Find a local volunteer to help you with your event.
 
