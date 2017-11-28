@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_officials) %>'
+title: <%= hoc_s(:title_how_to_officials) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## ¡Consigue la participación de cada escuela y que cada estudiante aprenda!
 
-1. **Lea nuestra hoja** acerca de por qué es importante la educación en Informática, y cómo puede ayudar apoyando la Hora de Código. [Get the one-pager here.](/files/hoc-one-pager.pdf)
+1. **Lea nuestra hoja** acerca de por qué es importante la educación en Informática, y cómo puede ayudar apoyando la Hora de Código. [Obtén el localizador aquí.](/files/hoc-one-pager.pdf)
 
 2. **Reclute escuelas y distritos escolares locales.** Utilice [este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) o [este eslogan](%= resolve_url('/promote/stats') %) como punto de partida y vea [este manual instructivo](%= resolve_url('/how-to') %) para las escuelas y distritos.
 
