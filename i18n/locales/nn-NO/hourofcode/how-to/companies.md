@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_companies) %>'
+title: <%= hoc_s(:title_how_to_companies) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -9,76 +9,76 @@ nav: how_to_nav
 
 ## Inspirér elevar og frivillige til Kodetimen
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org tilbyr tilsette i verksemder høve til å [få kontakt](%= resolve_url('https://code.org/volunteer') %) med lokale klasserom under Kodetimen slik at dei kan dele sine erfaringar og inspirere elevar til å studere datavitskap.
 
 - [Meld deg på](%= resolve_url('https://code.org/volunteer') %) som frivillig.
-- For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+- For meir informasjon om korleis du kan kople tilsette med ein skuleklasse, sjå vår [guide for partnerverksemder](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
 
 ## Andre måtar bedrifter kan støtte Kodetimen på:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
+- Spør direktøren i verksemda om å [sende ein e-post](%= resolve_url('/promote/resources#sample-emails') %) til alle tilsette der han understreker kor viktig informatikk er og oppmuntrer tilsette til å spre ordet. 
+- Arranger ein kodetimesamling der medarbeidarar kan prøve seg på dei ulike [aktivitetane](%= resolve_url('/learn') %).
 - Organisér eit kodetime-arrangement ved å invitere ein skuleklasse eller ideell organisasjon til verksemda di. Sjå "Slik organiserer du kodetime" nedanfor.
 
-# How to host an Hour of Code event with students
+# Korleis arrangere ein Kodetime med elevar
 
-## 1. Promote your Hour of Code
+## 1. Promotér kodetimen din
 
 - Promotér [Kodetimen](%= resolve_url('/promote') %)-arrangementet ditt, og inspirer andre til også å vera vertar for kodetimen.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Dei kan [registrere seg](%= resolve_url('https://code.org/volunteer/engineer') %) for å få kontakt med ein skuleklasse.
+- Inspirera programmerarar i selskapet ditt til å besøka ein skuleklasse for å hjelpa til med å leia ein kodetime, og derigjennom inspirera elevar til å studera datateknologi. Dei kan [registrere seg](%= resolve_url('https://code.org/volunteer/engineer') %) for å få kontakt med ein skuleklasse.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2. Sjå denne rettleiingsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3. Choose an activity
+## Vel ein aktivitet
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Prøv dei!](%= resolve_url('/learn') %)
+Vi tilbyr ei rekke [morosame oppgåver på ein time](%= resolve_url('/learn') %) for deltakarar i alle aldrar, laga av ei rekke samarbeidspartnarar. [Prøv dei!](%= resolve_url('/learn') %)
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**Alle kodetimeaktiviteter** krev minimal førebuingstid, og er sjølvforklarande slik at deltakarane kan arbeide i ege tempo og dugleiksnivå.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 4. Planlegg hva du trenger av utstyr - datamaskiner er valgfrie
+## 4. Planlegg kva du har bruk for av utstyr - datamaskiner er valfrie
 
 Den beste Kodetime-opplevinga får du med datamaskiner tilkopla internett. Men du **treng ikkje** ei datamaskin for kvar deltakar, og du kan jamvel gjera kodetimen utan datamaskin.
 
 **Planlegg!** Gjer følgjande før arrangementet startar:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+- Test øvingane på elevane sine datamaskiner eller nettbrett. Forsikre deg om at lyd og bilete fungerer i nettlesarane.
+- Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgåva du vel fungerer best med lyd.
 - **Manglar du datamaskiner eller einingar?** Bruk [par-programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når deltakarar vert inndelte i par, kan dei hjelpa kvarandre og vera mindre avhengige av organisatoren. Dei vil også oppleva at programmering er sosialt og handlar om samarbeid.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Har du låg bandbreidde?** Sjå på videoane saman i byrjinga av arrangementet, slik at kvar deltakar ikkje treng å lasta ned videoane sjølve. Eller prøv dei fråkobla instruksjonsvideoane.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Start Kodetimen din med ein inspirerande video
 
 Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informatikk påvirkar alle delar av livet vårt. Fortel meir om kva som inspirerte deg til å studera datateknikk, og kva som er rolla di på jobb.
 
 **Vis ein inspirerande video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Bill Gates, Mark Zuckerberg og NBA-stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eitt minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- Den internasjonale [Kodetimen-videoen](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [President Obama oppmoder alle elevar til å lære informatikk](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Finn flere inspirerende videoer[her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity to students:**
+**Idear for introduksjon av Kodetime-aktiviteten din til elevar:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Forklar på kva måtar teknologi påverkar liva våre, med eksempel som både gutar og jenter vil kjenna seg igjen i (Snakk t. d. om teknologi som reddar liv, hjelp menneske og koplar menneske saman). 
 - Dersom du kjem frå eit teknologiselskap, vis gjerne demoar av morosame og innovative produkt som verksemda di jobbar med.
 - Viss du ikkje representerar eit teknologiselskap, diskuter på kva måtar selskapet ditt brukar teknologi for å løysa problem og nå måla dykkar.
 - Invitér programmerarar frå verksemda di for å snakke om kvifor dei valde å studera datateknologi, og kva prosjekt dei jobbar med no.
 - Sjå tips for å få jenter interessert i informatikk [her](%= resolve_url('https://code.org/girls') %).
 
-## 6. Koding!
+## 6. Start å kode!
 
 **Lei deltakarane til aktiviteten**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Skriv oppgåvelenka på ei tavle. Finn lenka under [informasjonen for den valde oppgåva](%= resolve_url('/learn') %) under talet på deltakarar.
+- For yngre studentar, lasta aktivitetssida på førehand, eller lagra den som eit bokmerke.
 
 **Når deltakarar kjem opp i vanskar, er det greit å svare:**
 
-- "Eg veit ikkje. Lat oss finne det ut i lag."
+- "Eg veit ikkje. La oss finne ut av det i lag."
 - «Det er ikkje alltid teknologien gjer seg slik vi vil.»
 - "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
 
@@ -103,7 +103,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 
 ## 7) Gjer stas på deltakarane
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+- [Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) til deltakarar.
 - [Skriv ut "Eg fullførte ein Kodetime!"](%= resolve_url('/promote/resources#stickers') %)-klistremerke.
 - [Bestill Kodetimen-t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til dine tilsette.
 - Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
