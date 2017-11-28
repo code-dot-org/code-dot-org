@@ -443,5 +443,10 @@ module Pd::Application
     private_class_method def self.format_hour(hour)
       (Date.today + hour.hours).strftime("%l%P").strip
     end
+
+    # @override
+    def find_existing
+      Pd::Application::Facilitator1819Application.find_by(user: user)
+    end
   end
 end
