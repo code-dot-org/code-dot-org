@@ -233,11 +233,12 @@ FactoryGirl.define do
 
         if evaluator.randomized_survey_answers
           survey_hash.each do |k, _|
-            if Pd::TeacherconSurvey.options.key? k.underscore.to_sym
-              survey_hash[k] = Pd::TeacherconSurvey.options[k.underscore.to_sym].sample
-            else
-              survey_hash[k] = SecureRandom.hex[0..8]
-            end
+            survey_hash[k] =
+              if Pd::TeacherconSurvey.options.key? k.underscore.to_sym
+                Pd::TeacherconSurvey.options[k.underscore.to_sym].sample
+              else
+                SecureRandom.hex[0..8]
+              end
           end
         end
 
@@ -387,11 +388,12 @@ FactoryGirl.define do
 
         if evaluator.randomized_survey_answers
           survey_hash.each do |k, _|
-            if Pd::LocalSummerWorkshopSurvey.options.key? k.underscore.to_sym
-              survey_hash[k] = Pd::LocalSummerWorkshopSurvey.options[k.underscore.to_sym].sample
-            else
-              survey_hash[k] = SecureRandom.hex[0..8]
-            end
+            survey_hash[k] =
+              if Pd::LocalSummerWorkshopSurvey.options.key? k.underscore.to_sym
+                Pd::LocalSummerWorkshopSurvey.options[k.underscore.to_sym].sample
+              else
+                SecureRandom.hex[0..8]
+              end
           end
         end
 
