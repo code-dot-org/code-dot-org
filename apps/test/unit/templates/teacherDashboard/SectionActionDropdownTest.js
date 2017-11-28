@@ -113,7 +113,7 @@ describe('SectionActionDropdown', () => {
     );
     expect(wrapper).to.contain("View Progress");
     expect(wrapper).to.contain('Manage Students');
-    expect(wrapper.text()).to.not.include('Print Login Cards');
+    expect(wrapper).to.not.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find(<PrintCertificates sectionId={2} assignmentName="a"/>).length, 1);
   });
