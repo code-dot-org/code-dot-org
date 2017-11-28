@@ -98,6 +98,23 @@ export default class TeacherHomepage extends Component {
           <SpecialAnnouncementActionBlock
             isRtl={isRtl}
             imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeading()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescriptionCelebs()}
+            buttons={[
+              {url: pegasus('/challenge'), text: i18n.celebrityChallenge()},
+              {url: pegasus('/learn'), text: i18n.tryHOC()}
+            ]}
+          />
+        )}
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "celebs2017actualhoc" &&
+         isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
             heading={i18n.specialAnnouncementHeadingCelebs()}
             subHeading={""}
             description={i18n.specialAnnouncementDescriptionCelebs()}
@@ -108,7 +125,8 @@ export default class TeacherHomepage extends Component {
           />
         )}
 
-        {announcements.length > 0 && (
+        {announcements.length > 0 &&
+         !(hocLaunch && hocLaunch.hide_teacher_announcement) && (
           <div>
             <Notification
               type={announcements[0].type || "bullhorn"}
@@ -124,6 +142,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear}/>
           </div>
         )}
+
         <TeacherSections
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}
