@@ -2,8 +2,9 @@ hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
+stage_extras_available true
 project_widget_visible true
-project_widget_types ["applab"]
+project_widget_types ["applab", "gamelab", "weblab"]
 
 stage 'Computing Innovations', flex_category: 'csd6_1'
 named_level 'CSDU6 Innovation'
@@ -54,7 +55,7 @@ named_level 'CSD Buzzer Map'
 level 'CSDU6 - buzzer intro', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration buttons', progression: 'The Buzzer'
-level 'CSDU6 - board event challenge', progression: 'Challenge: Board Events'
+bonus 'CSDU6 - board event challenge'
 
 stage 'Getting Properties', flex_category: 'csd6_1'
 named_level 'CSD U6 getProperty Map'
@@ -66,12 +67,13 @@ level 'CSD U6 getProperty buzzer', progression: 'Getting Properties'
 level 'CSD U6 slider intro', progression: 'Sliders'
 level 'CSD U6 frequency', progression: 'Sliders'
 level 'CSD U6 interval', progression: 'Sliders'
-level 'CSD U6 onChange', progression: 'onChange'
-level 'CSD U6 get toggle', progression: 'onChange'
-level 'CSD U6 getters debug', progression: 'onChange'
+named_level 'CSD U6 Event Types'
+level 'CSD U6 change', progression: 'Change'
+level 'CSD U6 get toggle', progression: 'Change'
+level 'CSD U6 getters debug', progression: 'Change'
 level 'CSD U6 move motorcycle', progression: 'Motorcycle'
 level 'CSD U6 design motorcycle', progression: 'Motorcycle'
-named_level 'CSD U6 challenge motorcycle'
+bonus 'CSD U6 challenge motorcycle'
 
 stage 'Analog Input', flex_category: 'csd6_1'
 named_level 'CSDU6 - sensors experiment'
@@ -97,7 +99,6 @@ level 'CSD U6 tugowar design 2', progression: 'Screen Design'
 level 'CSD U6 tugowar variables 1', progression: 'Finishing Functions'
 level 'CSD U6 tugowar variables 2', progression: 'Finishing Functions'
 level 'CSD U6 tugowar variables 3', progression: 'Finishing Functions'
-named_level 'CSD U6 tugowar conditional map'
 level 'CSD U6 tugowar conditional', progression: 'Checking for a Winner'
 level 'CSD U6 tugowar setScreen', progression: 'Checking for a Winner'
 level 'CSD U6 tugowar setProperty', progression: 'Checking for a Winner'
@@ -121,6 +122,7 @@ level 'CSDU6 frequency modification', progression: 'Making Sounds'
 level 'CSDU6 frequency creation', progression: 'Making Sounds'
 named_level 'Making Music'
 level 'CSDU6 piano with notes', progression: 'Playing with Notes'
+named_level 'CSD-Arrays'
 
 stage 'Arrays', flex_category: 'csd6_2'
 named_level 'CSD: Introduction to Lists - Part 1'
