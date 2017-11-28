@@ -47,10 +47,6 @@
   # so cronjobs that run once per environment go here (standalone env
   # instances are all their own daemon)
   if node['cdo-apps']['daemon']
-    unless node.chef_environment == 'production' # non-production daemons
-      cronjob at:'@reboot', do:"#{deploy_dir('bin', 'solr', 'solr_server')} > #{pegasus_dir('log','solr.log')} 2>&1"
-    end
-
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
@@ -63,6 +59,11 @@
       cronjob at:'0 14 * * *', do:deploy_dir('bin', 'cron', 'github_dms_tasks')
       # cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
+    end
+
+    if node.chef_environment == 'test' && node.name == 'staging-next'
+      cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dtsn')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'trigger_circle_build')
     end
 
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only

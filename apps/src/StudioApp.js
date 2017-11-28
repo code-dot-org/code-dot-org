@@ -499,17 +499,24 @@ StudioApp.prototype.init = function (config) {
 
 StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
   if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
-    addCallouts([{
-      id: 'projectTemplateWorkspaceIconCallout',
-      element_id: '#projectTemplateWorkspaceIcon',
-      localized_text: msg.workspaceProjectTemplateLevel(),
-      qtip_config: {
-        position: {
-          my: 'top center',
-          at: 'bottom center',
-        },
-      },
-    }]);
+    // The callouts can't appear until the DOM is 100% rendered by react. The
+    // safest method is to kick off a requestAnimationFrame from an async
+    // setTimeout()
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        addCallouts([{
+          id: 'projectTemplateWorkspaceIconCallout',
+          element_id: '.projectTemplateWorkspaceIcon:visible',
+          localized_text: msg.workspaceProjectTemplateLevel(),
+          qtip_config: {
+            position: {
+              my: 'top center',
+              at: 'bottom center',
+            },
+          },
+        }]);
+      });
+    }, 0);
   }
 };
 

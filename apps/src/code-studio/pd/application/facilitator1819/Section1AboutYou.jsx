@@ -1,18 +1,17 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
-import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
+import ApplicationFormComponent from "../ApplicationFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES} from '../ApplicationConstants';
-import {isEmail} from '@cdo/apps/util/formatValidation';
+import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
 const FACILITATOR_EMAIL = "facilitators@code.org";
-const ZIP_CODE_REGEX = /^\d{5}([\W-]?\d{4})?$/;
 
-export default class Section1AboutYou extends Facilitator1819FormComponent {
+export default class Section1AboutYou extends ApplicationFormComponent {
   static propTypes = {
-    ...Facilitator1819FormComponent.propTypes,
+    ...ApplicationFormComponent.propTypes,
     accountEmail: PropTypes.string.isRequired
   };
 
@@ -134,7 +133,7 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
       formatErrors.alternateEmail = "Must be a valid email address";
     }
 
-    if (data.zipCode && !ZIP_CODE_REGEX.exec(data.zipCode)) {
+    if (data.zipCode && !isZipCode(data.zipCode)) {
       formatErrors.zipCode = "Must be a valid zip code";
     }
 

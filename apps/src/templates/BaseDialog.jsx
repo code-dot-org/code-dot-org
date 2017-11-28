@@ -18,7 +18,6 @@ var BaseDialog = React.createClass({
     useUpdatedStyles: PropTypes.bool,
     useDeprecatedGlobalStyles: PropTypes.bool,
     children: PropTypes.node,
-    assetUrl: PropTypes.func,
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
     style: PropTypes.object,
@@ -88,7 +87,7 @@ var BaseDialog = React.createClass({
       wrapperClassNames = "dashboard-styles";
       modalBodyClassNames = "";
       modalBodyStyle = {
-        background: `#fff top center url(${this.props.assetUrl('media/dialog/achievement_background.png')}) no-repeat`,
+        background: '#fff',
         height: this.props.fixedHeight,
         maxHeight: !this.props.fixedHeight && '80vh',
         overflowX: 'hidden',

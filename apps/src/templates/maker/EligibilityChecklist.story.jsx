@@ -1,6 +1,12 @@
 import React from 'react';
 import EligibilityChecklist from './EligibilityChecklist';
-import {Status} from '../lib/ui/ValidationStep';
+import {Status} from '@cdo/apps/lib/ui/ValidationStep';
+
+const defaultProps = {
+  statusPD: Status.SUCCEEDED,
+  statusStudentCount: Status.SUCCEEDED,
+  hasConfirmedSchool: false,
+};
 
 export default storybook => {
   return storybook
@@ -11,7 +17,7 @@ export default storybook => {
         description: 'EligbilityChecklist where one of first list items failed',
         story: () => (
           <EligibilityChecklist
-            statusPD={Status.SUCCEEDED}
+            {...defaultProps}
             statusStudentCount={Status.FAILED}
           />
         )
@@ -21,8 +27,7 @@ export default storybook => {
         description: 'First two items succeeded, third needs to be verified',
         story: () => (
           <EligibilityChecklist
-            statusPD={Status.SUCCEEDED}
-            statusStudentCount={Status.SUCCEEDED}
+            {...defaultProps}
           />
         )
       },
@@ -31,8 +36,7 @@ export default storybook => {
         description: 'User had submitted an ineligible response for unit 6 intentions',
         story: () => (
           <EligibilityChecklist
-            statusPD={Status.SUCCEEDED}
-            statusStudentCount={Status.SUCCEEDED}
+            {...defaultProps}
             unit6Intention="no"
           />
         )
@@ -42,8 +46,7 @@ export default storybook => {
         description: 'User had submitted an eligible response for unit 6 intentions',
         story: () => (
           <EligibilityChecklist
-            statusPD={Status.SUCCEEDED}
-            statusStudentCount={Status.SUCCEEDED}
+            {...defaultProps}
             unit6Intention="yes1718"
           />
         )

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_districts) %>'
+title: <%= hoc_s(:title_how_to_districts) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Jak wprowadzić Godzinę Kodowania do całego Twojego okręgu szkolnego
 
-## Spowoduj, by każda szkoła uczestniczyła i każdy uczeń się uczył!
+## Spowodujcie, by każda szkoła uczestniczyła i każdy uczeń się uczył!
 
 1. **Rekrutuj miejscowe szkoły.** Udostępnij [ ten mail](%= resolve_url('/promote/resources#sample-emails') %) i [ poradnik nauczyciela ](%= resolve_url('/how-to') %), lub umieść [krótką reklamę](%= resolve_url('/promote/stats') %) w miejscowym biuletynie informacyjnym.
 

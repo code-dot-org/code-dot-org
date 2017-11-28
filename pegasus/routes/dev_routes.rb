@@ -68,3 +68,22 @@ post '/api/dev/check-dts' do
   end
   'success'
 end
+
+post '/api/dev/check-dtsn' do
+  forbidden! unless rack_env == :test || rack_env == :development
+  forbidden! unless verify_signature(CDO.github_webhook_secret)
+  data = JSON.parse(params[:payload])
+  unless CHECK_DTS_ACTIONS.include?(data['action']) &&
+      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
+      data['pull_request']['base']['ref'] == 'staging-next'
+    status 202
+    next 'I only check the DTSN status for PRs against staging-next'
+  end
+  GitHub.configure_octokit
+  if DevelopersTopic.dtsn?
+    GitHub.set_dtsn_check_pass(data['pull_request'])
+  else
+    GitHub.set_dtsn_check_fail(data['pull_request'])
+  end
+  'success'
+end

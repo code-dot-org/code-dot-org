@@ -1,9 +1,10 @@
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import { TestResults } from './constants';
-import { addCallouts } from '@cdo/apps/code-studio/callouts';
+import * as callouts from '@cdo/apps/code-studio/callouts';
 import { getStore } from './redux';
 import { setAwaitingContainedResponse } from './redux/runState';
 import locale from '@cdo/locale';
+import $ from 'jquery';
 
 const PostState = {
   None: 'None',
@@ -111,9 +112,9 @@ export function initializeContainedLevel() {
     const disabledRunButtonHandler = e => {
       $(window).trigger('attemptedRunButtonClick');
     };
-    $('#gameButtons').bind('click', disabledRunButtonHandler);
+    $('#runButtonWrapper').bind('click', disabledRunButtonHandler);
 
-    addCallouts([{
+    callouts.addCallouts([{
       id: 'disabledRunButtonCallout',
       element_id: '#runButton',
       localized_text: locale.containedLevelRunDisabledTooltip(),
@@ -141,7 +142,7 @@ export function initializeContainedLevel() {
       stepButton.prop('disabled', !validResult);
       if (validResult) {
         runButton.qtip('hide');
-        $('#gameButtons').unbind('click', disabledRunButtonHandler);
+        $('#runButtonWrapper').unbind('click', disabledRunButtonHandler);
       }
       getStore().dispatch(setAwaitingContainedResponse(!validResult));
     });
