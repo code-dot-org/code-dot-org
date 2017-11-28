@@ -37,7 +37,7 @@ module Pd::Form
   # Determine if this (unsaved) model is a duplicate of an existing saved form.
   # Used for idempotence check by controller
   # @return [nil|Form] existing form that this is a duplicate of, or nil.
-  def find_existing
+  def check_idempotency
     # override in model to provide an idempotence check
     nil
   end

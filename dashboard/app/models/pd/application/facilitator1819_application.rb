@@ -445,7 +445,7 @@ module Pd::Application
     end
 
     # @override
-    def find_existing
+    def check_idempotency
       Pd::Application::Facilitator1819Application.find_by(user: user)
     end
   end
