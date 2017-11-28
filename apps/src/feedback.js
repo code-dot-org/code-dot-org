@@ -267,7 +267,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       ReactDOM.render(
         <ChallengeDialog
           title={msg.challengeLevelPassTitle()}
-          assetUrl={this.studioApp_.assetUrl}
           avatar={icon}
           handlePrimary={onContinue}
           primaryButtonLabel={msg.continue()}
