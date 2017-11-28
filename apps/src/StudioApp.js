@@ -170,7 +170,6 @@ class StudioApp extends EventEmitter {
     this.onAttempt = undefined;
     this.onContinue = undefined;
     this.onResetPressed = undefined;
-    this.backToPreviousLevel = undefined;
     this.sendToPhone = undefined;
     this.enableShowBlockCount = true;
 
@@ -1460,7 +1459,6 @@ StudioApp.prototype.clearHighlighting = function () {
 */
 StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
-  options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
 
   // Special test code for edit blocks.
@@ -1765,7 +1763,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onInitialize = config.onInitialize ?
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
-  this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;
 };
