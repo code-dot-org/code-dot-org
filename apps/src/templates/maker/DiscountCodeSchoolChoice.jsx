@@ -32,7 +32,6 @@ export default class DiscountCodeSchoolChoice extends Component {
   }
 
   handleDropdownChange = (field, event) => {
-    console.log(field, event);
     if (field === 'nces') {
       this.setState({
         schoolId: event.value,
@@ -60,8 +59,12 @@ export default class DiscountCodeSchoolChoice extends Component {
        confirmed: true,
      });
    }).fail((jqXHR, textStatus) => {
-     // TODO: should probably introduce some error UI
+     // TODO: should probably introduce/test some error UI
      console.error(textStatus);
+     this.setState({
+       confirming: false,
+       confirmed: false
+     });
    });
   }
 

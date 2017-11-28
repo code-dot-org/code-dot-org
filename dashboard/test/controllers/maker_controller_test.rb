@@ -84,6 +84,14 @@ class MakerControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "schoolchoice: fails if already confirmed school" do
+    sign_in @teacher
+    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718', has_confirmed_school: true)
+
+    post :schoolchoice, params: {nces: @school.id}
+    assert_response :forbidden
+  end
+
   test "schoolchoice: succeeds if user is teaching unit 6" do
     sign_in @teacher
     CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718')
