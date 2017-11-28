@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Fai partecipare ogni scuola e ogni studente!
 
-1. **Leggi la nostra presentazione** sul perché la formazione informatica è importante e come si può aiutare sostenendo l'Ora del Codice. [Scarica qui la presentazione (in inglese).](/files/hoc-one-pager-public-officials-2016.pdf) [Get the one-pager here.](/files/hoc-one-pager.pdf)
+1. **Leggi la nostra presentazione** sul perché la formazione informatica è importante e come si può aiutare sostenendo l'Ora del Codice. [Scarica qui la presentazione (in inglese).](/files/hoc-one-pager-public-officials-2016.pdf) [Trovi qui il volantino.](/files/hoc-one-pager.pdf)
 
 2. **Coinvolgi tutte le scuole locali.** Utilizza [questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#sample-emails') %>) o [questa descrizione](<%= resolve_url('/promote/stats') %>) come punto di partenza, puoi dare un'occhiata anche a questa [guida](<%= resolve_url('/how-to') %>) per le scuole.
 

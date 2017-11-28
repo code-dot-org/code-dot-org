@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -13,11 +13,11 @@ nav: how_to_nav
 
 ## 2) 為你的這一個小時挑選教程：
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+我們為所有年齡組和經驗水平提供了各種樂趣, [ 學生指導教程 ](<%= resolve_url('/learn')%>) 學生自己做活動, 雖然許多活動包括教師教案 (您將在單擊活動時看到鏈接) 以指導討論或擴展活動。 [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3) 推廣你的一小時玩程式活動
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
+用這些[工具](<%= resolve_url('/promote/resources') %>) 來推廣您的編程一小時並鼓勵其他人來舉辦他們自己的活動。
 
 ## 4. 您所需的教學設備——電腦不是必需的
 
@@ -33,14 +33,14 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 ## 5）以一段激勵演講或視頻來開始編程一小時活動
 
-**Invite a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**邀請一名[當地的志願者](<%= resolve_url('https://code.org/volunteer/local') %>)通過談論計算機科學的各種可能性來激勵您的學生。 ** 全球有成千上萬的志願者願意他們可以到您的課堂訪問，或者和您的學生用視頻聊天來幫助您。
 
 **展示一支激勵人心的影片**
 
 - 正版的 Code.org 推出包括比爾蓋茨、馬克·扎克伯格和 NBA 球星克里斯. 波什的視頻。 (有 [ 1 分鐘 ](HTTPs://www.youtube.com/watch？v=qYZF6oIZtfc)、[ 5 分鐘 ](HTTPs://www.youtube.com/watch？v=nKIu9yen5nc) 和 [ 9 分鐘 ](HTTPs://www.youtube.com/watch？v=dU1xS07N-FA) 版本可用)
 - 尋找更多有啟發性的[資源](<%= resolve_url('https://code.org/inspire') %>)和[影片](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**如果您和您的學生都是第一次接觸計算機科學也沒關係。這裡有一些建議來幫助您介紹您的《編程一小時》活動：**
 
 - 通過男孩和女孩們都關心的例子，介紹科技如何影響我們的生活（比如拯救生命，幫助人們，連接人們等）
 - 全班一起列出在日常生活中用到程式碼的事情。
@@ -48,17 +48,17 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 ## 6) 寫程式！
 
-**Direct students to the activity**
+**引導學生進行活動**
 
 - 把教學指南的鏈接寫在白板上。在參加人員數量下面可以找到[你選擇的指南鏈接](<%= resolve_url('/learn')%>)。
 
-**When your students come across difficulties it's okay to respond:**
+**當你的學生遇到困難時, 你可以回答:**
 
 - 「我也不知道，我們一起找出方法吧。」
 - 「科技不見得是以我們想的方式運作。」
 - 「學習程式設計就像是學習新的語言；你不會馬上就上手。」
 
-**What if a student finishes early?**
+**如果一個學生提前完成了呢？**
 
 - 學生可以查看所有教程和 [ 嘗試另一個小時的代碼活動 ](<%= resolve_url('/learn')%>)。
 - 或者，請提前完成的學生協助那些在活動遇到麻煩與的同學。
