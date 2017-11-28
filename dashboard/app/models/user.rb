@@ -458,7 +458,7 @@ class User < ActiveRecord::Base
 
   # NOTE: Order is important here.
   before_save :make_teachers_21,
-    :normalize_email,
+    :normalize_emails,
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
@@ -470,9 +470,16 @@ class User < ActiveRecord::Base
     self.age = 21
   end
 
-  def normalize_email
-    return unless email.present?
-    self.email = email.strip.downcase
+  # @param [String] email The email to normalize.
+  # @return [String] The normalized email, stripped and downcased.
+  def self.normalize_email(email)
+    email.strip.downcase
+  end
+
+  # Changes email and parent_email to be normalized. Does not trigger a DB write.
+  def normalize_emails
+    self.email = User.normalize_email(email) if email.present?
+    self.parent_email = User.normalize_email(parent_email) if parent_email.present?
   end
 
   def self.hash_email(email)
@@ -1052,13 +1059,15 @@ class User < ActiveRecord::Base
   # plaintext, hashed, or as a parent email. Empty array
   # if no associated users are found.
   def self.associated_users(email)
-    result = []
-    return result if email.blank?
+    return [] if email.blank?
 
-    primary_account = User.find_by_email_or_hashed_email(email)
+    result = []
+    normalized_email = User.normalize_email(email)
+
+    primary_account = User.find_by_email_or_hashed_email(normalized_email)
     result.push(primary_account) if primary_account
 
-    child_accounts = User.where(parent_email: email)
+    child_accounts = User.where(parent_email: normalized_email)
     result += child_accounts
 
     result

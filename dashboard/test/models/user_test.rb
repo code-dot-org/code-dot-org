@@ -82,9 +82,14 @@ class UserTest < ActiveSupport::TestCase
     assert SchoolInfo.where(attr).count == 1
   end
 
-  test 'normalize_email' do
+  test 'normalize_emails normalizes email' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email
+  end
+
+  test 'normalize_emails normalizes parent_email' do
+    student_with_parent = create :student, parent_email: 'CAPS@EXAMPLE.COM'
+    assert_equal 'caps@example.com', student_with_parent.parent_email
   end
 
   test 'hash_email' do
