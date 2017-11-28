@@ -34,18 +34,18 @@ ky:
   company_gsusa: Girl Scouts of America
   company_khanacademy: Khan Academy
   company_kipp: KIPP
-  company_mesa: Математика тармагындагы жетишкендиги
+  company_mesa: 'Математика тармагындагы жетишкендиги'
   company_napcs: National Alliance of Public Charter Schools
   company_ngcp: National Girls Collaborative Project
-  company_teachforall: Баарын окутуу
-  company_teachforamerica: Америкада окутуу
+  company_teachforall: 'Баарын окутуу'
+  company_teachforamerica: 'Америкада окутуу'
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: мектептен кийин
+  company_afterschool: 'мектептен кийин'
   company_laalliance: Alliance College Ready мамлекеттик мектептери
-  company_asd: Арлингтон мамлекеттик мектептери
-  company_arlingtonpublicschools: Арлингтон мамлекеттик мектептери
+  company_asd: 'Арлингтон мамлекеттик мектептери'
+  company_arlingtonpublicschools: 'Арлингтон мамлекеттик мектептери'
   company_bisd303: Bainbridge Island School District
   company_beavertonschooldistrict: Beaverton School District
   company_bellevuepublicschools: Bellevue Public Schools
@@ -102,23 +102,23 @@ ky:
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
   company_littletonpublicschools: Littleton Public Schools
-  company_lausd: Лос-Анжелестин бириккен мектеп округу
-  company_lcps: Луиза округунун мамлекеттик мектептери
-  company_lcsedu: Линчбург шаардык мектептери
-  company_msvl: Мэрисвилл мектеп округу
-  company_dadeschools: Майами-Дейд мамлекеттик мектептери
-  company_miltonps: Милтон мамлекеттик мектептери
-  company_montgomeryschoolsmd: Монтгомери округунун мамлекеттик мектептери
-  company_needhampublicschools: Нидем мамлекеттик мектептери
-  company_NelsonCountyPublicSchools: Нельсон округунун мамлекеттик мектептери
-  company_newalbanyschools: Нү-Албани-Плейн жергиликтүү мектептери
-  company_newkentschools: Нү-Кент округунун мамлекеттик мектептери
-  company_newarkcityschools: Нүарк шаардык мектептери
-  company_nnschools: Нүпорт-Нүс мамлекеттик мектептери
-  company_newtonpublicschools: Нүтон мамлекеттик мектептери
-  company_nps: Норфолк мамлекеттик мектептери
-  company_nycdoe: Нү-Йорк шаарынын билим берүү департаменти
-  company_ohlsd: Оук-Хиллз жергиликтүү мектеп округу
+  company_lausd: 'Лос-Анжелестин бириккен мектеп округу'
+  company_lcps: 'Луиза округунун мамлекеттик мектептери'
+  company_lcsedu: 'Линчбург шаардык мектептери'
+  company_msvl: 'Мэрисвилл мектеп округу'
+  company_dadeschools: 'Майами-Дейд мамлекеттик мектептери'
+  company_miltonps: 'Милтон мамлекеттик мектептери'
+  company_montgomeryschoolsmd: 'Монтгомери округунун мамлекеттик мектептери'
+  company_needhampublicschools: 'Нидем мамлекеттик мектептери'
+  company_NelsonCountyPublicSchools: 'Нельсон округунун мамлекеттик мектептери'
+  company_newalbanyschools: 'Нү-Албани-Плейн жергиликтүү мектептери'
+  company_newkentschools: 'Нү-Кент округунун мамлекеттик мектептери'
+  company_newarkcityschools: 'Нүарк шаардык мектептери'
+  company_nnschools: 'Нүпорт-Нүс мамлекеттик мектептери'
+  company_newtonpublicschools: 'Нүтон мамлекеттик мектептери'
+  company_nps: 'Норфолк мамлекеттик мектептери'
+  company_nycdoe: 'Нү-Йорк шаарынын билим берүү департаменти'
+  company_ohlsd: 'Оук-Хиллз жергиликтүү мектеп округу'
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
@@ -225,7 +225,7 @@ ky:
   signup_name_error: 'Атыңыз талап кылынат.'
   signup_email_label: 'Эмейлиңиз'
   signup_email_error: 'Эмейлиңерди киргизгиле'
-  signup_invalid_email_error: 'The email address you entered is invalid'
+  signup_invalid_email_error: 'Киргизилген эмейл жараксыз'
   signup_organization_name_label: 'Мектептин же уюмдун аты'
   signup_organization_name_error: 'Уюмдун атын киргизгиле.'
   signup_event_type_label: 'Иш-чаранын түрү'
@@ -273,9 +273,9 @@ ky:
   map_legend_hoc_events: 'Код сааты иш-чарасы'
   map_legend_cs_tech_jam: 'Атайын иш-чара'
   map_warning: "Код сааты картасы биринчи катталган 200 000 иш-чараны гана көрсөтөт. Бардык жарактуу адрес менен катталган иш-чараларды <a href='%{events_url}'>иш-чаралар бетинде көрсөңүздөр болот.</a>"
-  meta_tag_og_title: Код сааты жакындап келатат
+  meta_tag_og_title: 'Код сааты жакындап келатат'
   meta_tag_og_description: 'Код сааты - 180+ өлкөдөн бардык курактагы он миллиондогон окуучулар катышкан, 45тен ашык тилде жеткиликтүү глобалдык кыймыл.'
-  meta_tag_twitter_title: Код сааты жакындап келатат
+  meta_tag_twitter_title: 'Код сааты жакындап келатат'
   meta_tag_twitter_description: 'Код сааты - 180+ өлкөдөн бардык курактагы он миллиондогон окуучулар катышкан, 45тен ашык тилде жеткиликтүү глобалдык кыймыл.'
   twitter_default_text: "Мен быйыл #HourOfCode катышып жатам, сенчи? @codeorg"
   hoc_faq_title: 'КБС'
@@ -336,23 +336,23 @@ ky:
   stats_nina: '"Күнүгө бирдей натыйжа - &mdash; 100% катышуу" - Нина Никольс Пери, мугалим'
   stats_student: '"Бул <b>жашоодо бир келген мүмкүнчүлүк</b> экенин билем" - Мариана Алсате, 5-класстын окуучусу'
   stats_michael: '"Окуучуларым окууга ушунчалык шыктанганын <b>эч качан</b> көргөн эмесмин" - Майкл Кларк, мугалим'
-  resources_how_to: Мугалимдер үчүн кандай өтүү жетектемеси
-  resources_how_to_events: Иш-чараны өткөзүү жетектемеси
-  resources_how_to_districts: Райондор үчүн кандай өтүү жетектемеси
-  resources_how_to_officials: Ырасмий өкүлдөр үчүн кандай өтүү жетектемеси
-  resources_handouts: Маалымат баракчаларын тараткыла
-  resources_one_pager: Бир барак таратма
-  resources_brochure: Брошюра
-  resources_posters: Постерлер
-  resources_videos: Видеолор
-  resources_banners: Социалдык медиалар
-  resources_emails: Эмейлдердин үлгүлөрү
-  resources_logo: Код саатынын энбелгиси
-  resources_stats: Статистика жана кыска маалыматтар
-  resources_press_kit: Пресс-кит
-  resources_social: Социалдык
-  resources_country_resources: Өлкөгө тиешелүү ресурсттар
-  resources_stickers: Чаптамалар
+  resources_how_to: 'Мугалимдер үчүн кандай өтүү жетектемеси'
+  resources_how_to_events: 'Иш-чараны өткөзүү жетектемеси'
+  resources_how_to_districts: 'Райондор үчүн кандай өтүү жетектемеси'
+  resources_how_to_officials: 'Ырасмий өкүлдөр үчүн кандай өтүү жетектемеси'
+  resources_handouts: 'Маалымат баракчаларын тараткыла'
+  resources_one_pager: 'Бир барак таратма'
+  resources_brochure: 'Брошюра'
+  resources_posters: 'Постерлер'
+  resources_videos: 'Видеолор'
+  resources_banners: 'Социалдык медиалар'
+  resources_emails: 'Эмейлдердин үлгүлөрү'
+  resources_logo: 'Код саатынын энбелгиси'
+  resources_stats: 'Статистика жана кыска маалыматтар'
+  resources_press_kit: 'Пресс-кит'
+  resources_social: 'Социалдык'
+  resources_country_resources: 'Өлкөгө тиешелүү ресурсттар'
+  resources_stickers: 'Чаптамалар'
   resources_how_to_guides: 'Кантип кылуу жетектемелери'
   resources_promote: 'Илгерилетүү'
   resources_nav_tutorials: 'Жетектемелерди байкап көргүлө'
@@ -362,65 +362,65 @@ ky:
   resources_banner_promote_button: "Брошюралар, шыктандыруучу посттор жана социалдык медиалардагы баннерлер менен башкаларды катталууга чакыргыла."
   resources_banner_howto_text: "Кантип"
   resources_banner_howto_button: "Код саатын өткөзүү үчүн мугалимдер, ата-энелер жана райондор үчүн ресурстар."
-  handouts_section: Бул таратмаларды бөлүшкүлө
-  handouts_onepager: Бул бир барак таратма менен маалымат тараткыла
-  handouts_brochure: Бул брошюраны мугалимдерге жана окуучуларга бергиле
-  handouts_participationguide: Код саатыңызды бул катышуучунун жетектемеси менен пландаштыргыла
-  videos_title: Окуучуларга бул шыктандыруучу видеолорду көрсөткүлө
-  videos_what_most_schools_dont_teach: Мектептердин көбү эмнени үйрөтпөйт? (5 мүн)
-  videos_hoc_2014: Код сааты бул жерде - Каалаган киши үйрөнө алат
-  videos_obama_cs: Президент Обама компүтердик илим тууралуу
-  videos_anybody_can_learn: Каалаган үйрөнө алат (1 мүн)
-  title_country_resources: Өлкөгө тиешелүү ресурсттар
-  title_how_to_districts: Код саатын райондордо кантип өтүү керек
-  title_how_to_events: Код сааты иш-чарасын кантип өткөзүү керек
-  title_how_to_organizations: Код саатын кантип өткөзүү керек - Уюмдар
-  title_how_to_companies: Код саатын кантип өткөзүү керек - Компаниялар
-  title_how_to_officials: Ырасмий өкүлдөр үчүн кандай өтүү жетектемеси
-  title_how_to_volunteers: Ыктыярчылар үчүн Код саатын өткөзүү жетектемеси
-  title_how_to_parents: Ата-энелер үчүн кандай өтүү жетектемеси
-  title_how_to: Кантип кылуу жетектемеси
-  title_press_release: Шайланма бийликтер үчүн Код сааты пресс-релизи
-  title_op_ed: Информатика аптасы менен Код саатын колдоо документинин үлгүсү
-  title_press_kit: Пресс-кит
-  title_proclamation: Информатика аптасы менен Код саатын колдоо резолюциясынын үлгүсү
-  title_stats: Жарыялар жана пайдалуу стаститика
-  title_partners: Өнөктөр
-  title_resources: Булактар
-  title_signup_thanks: Код саатын кабыл алуу үчүн катталганыңызга ырахмат!
-  title_tutorial_guidelines: Иш-аракет жетектемелери
-  title_whole_school: Мектептин толук катышуусу
-  events_nav_title: Код саатынын иш-чаралары
-  events_nav_all: Бардык иш-чаралар
-  events_nav_whole_schools: Бардык мектептер
-  events_nav_special: Атайын иш-чаралар
-  events_nav_orgs: Уюмдар
+  handouts_section: 'Бул таратмаларды бөлүшкүлө'
+  handouts_onepager: 'Бул бир барак таратма менен маалымат тараткыла'
+  handouts_brochure: 'Бул брошюраны мугалимдерге жана окуучуларга бергиле'
+  handouts_participationguide: 'Код саатыңызды бул катышуучунун жетектемеси менен пландаштыргыла'
+  videos_title: 'Окуучуларга бул шыктандыруучу видеолорду көрсөткүлө'
+  videos_what_most_schools_dont_teach: 'Мектептердин көбү эмнени үйрөтпөйт? (5 мүн)'
+  videos_hoc_2014: 'Код сааты бул жерде - Каалаган киши үйрөнө алат'
+  videos_obama_cs: 'Президент Обама компүтердик илим тууралуу'
+  videos_anybody_can_learn: 'Каалаган үйрөнө алат (1 мүн)'
+  title_country_resources: 'Өлкөгө тиешелүү ресурсттар'
+  title_how_to_districts: 'Код саатын райондордо кантип өтүү керек'
+  title_how_to_events: 'Код сааты иш-чарасын кантип өткөзүү керек'
+  title_how_to_organizations: 'Код саатын кантип өткөзүү керек - Уюмдар'
+  title_how_to_companies: 'Код саатын кантип өткөзүү керек - Компаниялар'
+  title_how_to_officials: 'Ырасмий өкүлдөр үчүн кандай өтүү жетектемеси'
+  title_how_to_volunteers: 'Ыктыярчылар үчүн Код саатын өткөзүү жетектемеси'
+  title_how_to_parents: 'Ата-энелер үчүн кандай өтүү жетектемеси'
+  title_how_to: 'Кантип кылуу жетектемеси'
+  title_press_release: 'Шайланма бийликтер үчүн Код сааты пресс-релизи'
+  title_op_ed: 'Информатика аптасы менен Код саатын колдоо документинин үлгүсү'
+  title_press_kit: 'Пресс-кит'
+  title_proclamation: 'Информатика аптасы менен Код саатын колдоо резолюциясынын үлгүсү'
+  title_stats: 'Жарыялар жана пайдалуу стаститика'
+  title_partners: 'Өнөктөр'
+  title_resources: 'Булактар'
+  title_signup_thanks: 'Код саатын кабыл алуу үчүн катталганыңызга ырахмат!'
+  title_tutorial_guidelines: 'Иш-аракет жетектемелери'
+  title_whole_school: 'Мектептин толук катышуусу'
+  events_nav_title: 'Код саатынын иш-чаралары'
+  events_nav_all: 'Бардык иш-чаралар'
+  events_nav_whole_schools: 'Бардык мектептер'
+  events_nav_special: 'Атайын иш-чаралар'
+  events_nav_orgs: 'Уюмдар'
   events_all_old_title: "Жыл бою өтүүчү Код сааты иш-чаралары"
-  events_all_title: Код саатынын бардык иш-чаралары
-  events_whole_school_title: Бүт мектеп үчүн Код сааты иш-чаралары
-  events_special_title: Код саатынын өзгөчө иш-чаралары
-  events_orgs_title: Өнөк уюмдар уюштурган бардык Код сааты иш-чаралары
-  event: иш-чара
-  events: иш-чаралар
-  highlights_title: Негизги учурлар
-  highlights_header: Код саатынын негизги учурлары
-  highlights_description: Код сааты өнөктөштүгүбүздүн тандамал учурлары.
-  higlights_see_more: Көбүрөөк фактыларды кароо
-  highlights_readmore: Көбүрөөк окугула
-  highlights_watchvideo: Видео көргүлө
+  events_all_title: 'Код саатынын бардык иш-чаралары'
+  events_whole_school_title: 'Бүт мектеп үчүн Код сааты иш-чаралары'
+  events_special_title: 'Код саатынын өзгөчө иш-чаралары'
+  events_orgs_title: 'Өнөк уюмдар уюштурган бардык Код сааты иш-чаралары'
+  event: 'иш-чара'
+  events: 'иш-чаралар'
+  highlights_title: 'Негизги учурлар'
+  highlights_header: 'Код саатынын негизги учурлары'
+  highlights_description: 'Код сааты өнөктөштүгүбүздүн тандамал учурлары.'
+  higlights_see_more: 'Көбүрөөк фактыларды кароо'
+  highlights_readmore: 'Көбүрөөк окугула'
+  highlights_watchvideo: 'Видео көргүлө'
   highlights_facebook: Facebook'та бөлүшүү
-  highlights_constant_alba_heading: Актриса, активист жана ишкер The Honest Company компаниянын кызматкерлер штатына Код саатын өткөрдү.
-  highlights_constant_alba_short_heading: Жессика Альба Код саатын үйрөнүүдө
-  highlights_constant_obama_heading: Президент Обама - код сабын жазган биринчи президент болуп, Ак үйдө окуучуларга тарыхый Код саатын өткөргөн.
-  highlights_constant_obama_short_heading: Башкы код жазуучу
+  highlights_constant_alba_heading: 'Актриса, активист жана ишкер The Honest Company компаниянын кызматкерлер штатына Код саатын өткөрдү.'
+  highlights_constant_alba_short_heading: 'Жессика Альба Код саатын үйрөнүүдө'
+  highlights_constant_obama_heading: 'Президент Обама - код сабын жазган биринчи президент болуп, Ак үйдө окуучуларга тарыхый Код саатын өткөргөн.'
+  highlights_constant_obama_short_heading: 'Башкы код жазуучу'
   highlights_constant_malala_heading: "\"Ар бир кыз дүйнөнү өзгөртүүчү технологияны жаратуу жана ишке ашырууга катышууга татыктуу\"."
   highlights_constant_malala_short_heading: '"Нобель" тынчтык сыйлыгынын ээси - Малала'
-  highlights_constant_trudeau_heading: Канаданын премьер-министри Жастин Трүдо сүйүктүү спортунун жөнөкөй оюнун кодун жазды.
-  highlights_constant_trudeau_short_heading: Премьер-министр Жастин Трүдо оюн коддойт
-  highlights_constant_ny_heading: Укмуш мелдештин соңунда, Код саатын Бруклин мектептери 80%, Чикаго мектептери 60% аткарды. Жакшы көрсөткүч!
-  highlights_constant_ny_short_heading: Бруклин Чикагону жеңди
-  highlights_constant_athletes_heading: Серена Уильямс, Неймар кичүүсү, Кармело Энтони жана башка чемпиондор жана алтын медалдардын ээлери окуучуларды шыктандырып, түрткү беришет.
-  highlights_constant_athletes_short_heading: Өзүңөргө түрткү бергиле
+  highlights_constant_trudeau_heading: 'Канаданын премьер-министри Жастин Трүдо сүйүктүү спортунун жөнөкөй оюнун кодун жазды.'
+  highlights_constant_trudeau_short_heading: 'Премьер-министр Жастин Трүдо оюн коддойт'
+  highlights_constant_ny_heading: 'Укмуш мелдештин соңунда, Код саатын Бруклин мектептери 80%, Чикаго мектептери 60% аткарды. Жакшы көрсөткүч!'
+  highlights_constant_ny_short_heading: 'Бруклин Чикагону жеңди'
+  highlights_constant_athletes_heading: 'Серена Уильямс, Неймар кичүүсү, Кармело Энтони жана башка чемпиондор жана алтын медалдардын ээлери окуучуларды шыктандырып, түрткү беришет.'
+  highlights_constant_athletes_short_heading: 'Өзүңөргө түрткү бергиле'
   footer_copyright_message: 'Автордук укук %{current_year} Code.org. Бардык укуктар корголгон.'
   footer_trademark_message: 'Hour of Code™ - Code.org уюмунун соода белгиси.'
   footer_menu_partners: 'Өнөктөр жана кеңешчилер'
@@ -805,60 +805,60 @@ ky:
   tutorial_ozopair_name: "Озобот менен кош-програмдоо"
   tutorial_codesnoopy_name: "Snoopy Snow Brawl"
   tutorial_applabintro_name: "Колдонмо лабораториясына киришүү"
-  tutorial_cslartist_name: "The Little Artist In Your Computer Activity Pack"
-  tutorial_cslscratchjr_name: "Let's Play with the ScratchJr Kitten! Activity Pack"
-  tutorial_floevents_name: "Writing and interpreting Events"
-  tutorial_florobot_name: "Design a Robot"
+  tutorial_cslartist_name: "Компүтер тапшырмалар топтомуңдагы кичинекей сүрөтчү"
+  tutorial_cslscratchjr_name: "Кел ScratchJr Kitten менен ойнойбуз! Тапшырма топтому"
+  tutorial_floevents_name: "Иш-чараларды жазуу жана чечмелөө"
+  tutorial_florobot_name: "Роботту түз"
   tutorial_isavesanta_name: "iSave Santa!"
   tutorial_iorder_name: "iOrder"
   tutorial_ianimate_name: "iAnimate"
   tutorial_iloveada_name: "iLove Ada"
-  tutorial_kodflash_name: "If Flash, Then Clap!"
-  tutorial_kodchoose_name: "Choose Your Own (Fuzzy) Adventure!"
-  tutorial_kodpizzapre_name: "Pizza Party! (pre-reader)"
-  tutorial_kodpizza_name: "Pizza Party!"
-  tutorial_kodwomen_name: "Women in Tech"
-  tutorial_tfunplug_name: 'Robot Repair: Can You Fix the Robot Brain? (Unplugged)'
-  tutorial_lbvariables_name: "Variables with Littlebits"
-  tutorial_lbfunctions_name: "Fun with Functions & littleBits"
-  tutorial_lblogic_name: "Lessons in Logic with littleBits"
-  tutorial_lbworld_name: 'littleBits: Change the world arcade challenge'
-  tutorial_lbloops_name: "Leap into loops with littleBits!"
-  tutorial_lbtug_name: 'littleBits: Tug of War'
-  tutorial_lbpotato_name: 'littleBits: Hot Potato...of Doom!'
-  tutorial_lbguitar_name: 'littlebits: Rockstar Guitar'
-  tutorial_lbio_name: "Inputs & Outputs with littleBits"
-  tutorial_wonpuppy_name: 'Dash the Puppy (E3): Dash and Dot Challenge Cards'
-  tutorial_woncue_name: 'Cue: Getting Started with Wonder Workshop''s CUE robot'
-  tutorial_wonzoo_name: 'Dot at the Petting Zoo (B2): Dash and Dot Challenge Cards'
-  tutorial_wontrip_name: 'Dash''s Road Trip (F2): Dash and Dot Challenge Cards'
-  tutorial_woncollect_name: 'Dash the Collector (B1): Dash and Dot Challenge Cards'
-  tutorial_wonsecret_name: "Cue's Secret Message"
-  tutorial_hsscience_name: 'Hopscotch: Make Interactive Science Models on Your iPad/iPhone!'
-  tutorial_popculture_name: "Pop Culture Data Science"
-  tutorial_legorobust_name: "Robust Structures – LEGO® Education WeDo 2.0"
-  tutorial_legoplants_name: "Plants and Pollinators – LEGO® Education WeDo 2.0"
-  tutorial_legopark_name: "Autonomous Parking – LEGO® MINDSTORMS® Education EV3"
-  tutorial_legodetect_name: "Object Detection – LEGO® MINDSTORMS® Education EV3"
-  tutorial_legolight_name: "Automatic Headlights – LEGO® MINDSTORMS® Education EV3"
-  tutorial_alexa_name: 'Amazon Alexa Fact Skill Tutorial: My School Facts'
-  tutorial_grokpetmicro_name: "Virtual Pet (micro:bit MicroPython)"
-  tutorial_pirateplunder_name: "Pirate Plunder"
-  tutorial_cadj_name: "DR DJ Device"
-  tutorial_cacrazy_name: "Code Crazy Creatures"
-  tutorial_cajump_name: "Jumping Jam"
-  tutorial_carest_name: "Robo-restaurant puzzler"
-  tutorial_accai_name: "Planet Exploration with Artificial Intelligence"
-  tutorial_vceclipse_name: "Code the Eclipse"
+  tutorial_kodflash_name: "Жарк этсе - кол чап!"
+  tutorial_kodchoose_name: "Өзүңдүн (Фаззи) окуяңды танда!"
+  tutorial_kodpizzapre_name: "Пицца майрамы! (окуучу+)"
+  tutorial_kodpizza_name: "Пицца майрамы!"
+  tutorial_kodwomen_name: "Аялдар техникада"
+  tutorial_tfunplug_name: 'Робот оңдоо: роботтун мээсин оңдой аласыңбы? (Офлайн)'
+  tutorial_lbvariables_name: "Littlebits менен өзгөрүлмөлөр"
+  tutorial_lbfunctions_name: "littleBits & функциялар менен көңүл ач"
+  tutorial_lblogic_name: "littleBits менен логика сабактары"
+  tutorial_lbworld_name: 'littleBits: дүйнөнү өзгөртүү аркад тапшырмасы'
+  tutorial_lbloops_name: "littleBits менен циклдарга кириш!"
+  tutorial_lbtug_name: 'littleBits: аркан тартуу'
+  tutorial_lbpotato_name: 'littleBits: тагдырдын ысык картөшкөсү!'
+  tutorial_lbguitar_name: 'littlebits: рок-жылдыз гитара'
+  tutorial_lbio_name: "littleBits менен киргизүүлөр & чыгаруулар"
+  tutorial_wonpuppy_name: 'Dash күчүк (E3): Dash жана Dot тапшырма карталары'
+  tutorial_woncue_name: 'Cue: Wonder Workshop''тун CUE роботу менен башта'
+  tutorial_wonzoo_name: 'Зоопарктагы Dot (B2): Dash жана Dot тапшырма карталары'
+  tutorial_wontrip_name: 'Dash''тин жол окуясы (F2): Dash жана Dot тапшырма карталары'
+  tutorial_woncollect_name: 'Жыйноочу Dash (B1): Dash жана Dot тапшырма карталары'
+  tutorial_wonsecret_name: "Cue'нун сыр билдирмеси"
+  tutorial_hsscience_name: 'Hopscotch: iPad/iPhone''до интерактивдүү илимий үлгүлөрдү түз!'
+  tutorial_popculture_name: "Поп маданият маалымат илими"
+  tutorial_legorobust_name: "Күчтүү түзүмдөр - LEGO® Education WeDo 2.0"
+  tutorial_legoplants_name: "Өсүмдүктөр жана чаңдаштыруучулар - LEGO® Education WeDo 2.0"
+  tutorial_legopark_name: "Автономдуу унаа токтотуу - LEGO® MINDSTORMS® Education EV3"
+  tutorial_legodetect_name: "Объекттерди табуу - LEGO® MINDSTORMS® Education EV3"
+  tutorial_legolight_name: "Автоматтык фаралар - LEGO® MINDSTORMS® Education EV3"
+  tutorial_alexa_name: 'Amazon Alexa факт жөндөмдөр жетектемеси: мектеп фактыларым'
+  tutorial_grokpetmicro_name: "Виртуалдык үй жаныбары (микро:bit MicroPython)"
+  tutorial_pirateplunder_name: "Деңиз карактоосу"
+  tutorial_cadj_name: "DR DJ түзмөгү"
+  tutorial_cacrazy_name: "Укмуштуу жандыктарды коддогула"
+  tutorial_cajump_name: "Секирүүчү Жэм"
+  tutorial_carest_name: "Робо-ресторан тапшырмасы"
+  tutorial_accai_name: "Жасалма интеллект менен аалам изилдөө"
+  tutorial_vceclipse_name: "Тутулууну коддогула"
   tutorial_pmzero_name: "Pac-Man ZERO"
-  tutorial_hsela_name: 'Telling stories: ELA + coding'
-  tutorial_ticklear_name: "What's AR?"
-  tutorial_bcrobot_name: "BlocksCAD Robot"
+  tutorial_hsela_name: 'Окуяларды айтуу: ELA + код жазуу'
+  tutorial_ticklear_name: "AR деген эмне?"
+  tutorial_bcrobot_name: "BlocksCAD роботу"
   tutorial_bcsnow_name: "BlocksCAD Snowflake"
   tutorial_ifly_name: "iFly"
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
-  tutorial_rmedr_name: "Program VEX EDR Robots with Blockly"
+  tutorial_rmedr_name: "Blockly менен VEX EDR роботторду програмда"
   tutorial_athlete_shortdescription: "Баскетбол оюнун же спорттун түрлөрүн аралаштырып түзүүнү тандагыла!"
   tutorial_moana_shortdescription: "Моана эр жүрөк, кайраттуу жана өз жолун табууга чечкиндүү баратат."
   tutorial_star-wars_shortdescription: "Дроиддерди програмдоону үйрөнүп, алыскы галактикада өзүңдүн Жылдыздар согушу оюнуңду түз."
@@ -1230,60 +1230,60 @@ ky:
   tutorial_ozopair_shortdescription: "Окуучулар жуп програмдоонун ролдорун үйрөнүп, лабиринтти аякташ үчүн Озо-Бит же Эвону чогу програмдашат."
   tutorial_codesnoopy_shortdescription: "Snoopy Snow Brawl'да жеңиш үчүн код жаз - акырында калган скаут ким болот?"
   tutorial_applabintro_shortdescription: "Блоктор же текст м-н JavaScript'те өз колдонмоңду түз."
-  tutorial_cslartist_shortdescription: "A fun-filled coding + art challenge for students K-4"
-  tutorial_cslscratchjr_shortdescription: "Read Aloud Coding Story for Pre-Readers with Worksheets and a Follow-up Coding Project "
-  tutorial_floevents_shortdescription: "Watch a hip-hop video about events. Then write and act out your own!"
-  tutorial_florobot_shortdescription: "Watch a hip-hop video about robots, read about them and design your own!"
-  tutorial_isavesanta_shortdescription: "It's Christmas Eve and Santa is off on his travels around the world delivering presents when catastrophe strikes! He's fallen out of his Sleigh! Create algorithms and program Santa to get back into his sleigh in any way you know how."
-  tutorial_iorder_shortdescription: "Summer time and the weather is sweet. Makes you want to make a nice cool treat. Create algorithms and program an ice-cream simulation/game using Scratch 2.0. Includes lesson plan, pupil support materials, and pre-written program templates."
-  tutorial_ianimate_shortdescription: "Create an animated GIF for the festive season using animation software. Add artwork, backgrounds and objects and make them come to life!"
-  tutorial_iloveada_shortdescription: "Teach computing with history. This teacher-led activity involves conducting online research about Ada Lovelace, a female pioneer in STEM and the world's first computer programmer!"
-  tutorial_kodflash_shortdescription: "If there is lightning, then thunder will follow!"
-  tutorial_kodchoose_shortdescription: "Write a Choose Your Own Adventure story using \"If statements\"!"
-  tutorial_kodpizzapre_shortdescription: "Help Dominic's Pizza develop an algorithm for their new mobile app!"
-  tutorial_kodpizza_shortdescription: "Help Dominic's Pizza develop an algorithm for their new mobile app!"
-  tutorial_kodwomen_shortdescription: 'Technology: is it for all or just some? Explore inequalities in tech.'
-  tutorial_tfunplug_shortdescription: "Enjoy this fun, unplugged CS activity that teaches Boolean logic concepts."
-  tutorial_lbvariables_shortdescription: "Having fun is not a variable with this littleBits Code Kit tutorial."
-  tutorial_lbfunctions_shortdescription: "The fun don't stop when you combine function-based code blocks & littleBits."
-  tutorial_lblogic_shortdescription: "The choice is yours with conditional logic & littleBits."
-  tutorial_lbworld_shortdescription: "You can change the world with code, one game at a time."
-  tutorial_lbloops_shortdescription: "From special effects to secret messages, loops are your secret game weapon."
-  tutorial_lbtug_shortdescription: "Make the classic Tug of War epic with functions & littleBits."
-  tutorial_lbpotato_shortdescription: "Build & code your own game of Hot Potato. Can you stand the heat?"
-  tutorial_lbguitar_shortdescription: "Build it. Code it. Rock it!"
-  tutorial_lbio_shortdescription: "Let's make controllers with littleBits and code!"
-  tutorial_wonpuppy_shortdescription: "Program Dash the robot to tackle 3 coding challenges while performing different puppy tricks!"
-  tutorial_woncue_shortdescription: "Program the CUE robot through fun challenges and demos that will show you how to code using blocks, JavaScript, or state machines!"
-  tutorial_wonzoo_shortdescription: "Program Dot the robot to tackle 3 coding challenges at the Petting Zoo!"
-  tutorial_wontrip_shortdescription: "Program Dash the robot to tackle 3 coding challenges while preparing for a road trip!"
-  tutorial_woncollect_shortdescription: "Use the Wonder Workshop Blockly app and Dash the robot to tackle 3 coding challenges!"
-  tutorial_wonsecret_shortdescription: "Let's use the Wonder Workshop Cue app with Cue the robot to make a secret message system."
-  tutorial_hsscience_shortdescription: "Make interactive science models on your iPad/iPhone!"
-  tutorial_popculture_shortdescription: "Vote on Pop Culture items then analyze data to see what is trendy."
-  tutorial_legorobust_shortdescription: "Investigating what characteristics of a building would help make it resistant to an earthquake, using an earthquake simulator constructed from LEGO bricks."
-  tutorial_legoplants_shortdescription: "Model the relationship between a pollinator and flower during the reproduction phase."
-  tutorial_legopark_shortdescription: "Design cars that can park themselves safely without driver intervention."
-  tutorial_legodetect_shortdescription: "Design ways to avoid accidents between vehicles and objects in the road."
-  tutorial_legolight_shortdescription: "Design car features that will improve nighttime driving safety."
-  tutorial_alexa_shortdescription: "Alexa is the voice service that powers Amazon Echo. In this tutorial, you will create fact skills unique to your school for this lab."
-  tutorial_grokpetmicro_shortdescription: "Use the MicroPython programming language to make a pet that you can feed and play with."
-  tutorial_pirateplunder_shortdescription: "Use the MicroPython programming language to make a pet that you can feed and play with."
-  tutorial_cadj_shortdescription: "Use the MicroPython programming language to make a pet that you can feed and play with."
-  tutorial_cacrazy_shortdescription: "Use the MicroPython programming language to make a pet that you can feed and play with."
-  tutorial_cajump_shortdescription: "Use the MicroPython programming language to make a pet that you can feed and play with."
-  tutorial_carest_shortdescription: "Use the MicroPython programming language to make a pet that you can feed and play with."
-  tutorial_accai_shortdescription: "Teach an Artificial Intelligence robot to explore a new planet!"
-  tutorial_vceclipse_shortdescription: "Code a solar eclipse simulation with JavaScript!"
-  tutorial_pmzero_shortdescription: "Create and program a 3D Pac-Man Maze World"
-  tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
-  tutorial_ticklear_shortdescription: "Anyone can now code virtual and AR characters and program real devices to interact with them – seamlessly blending imagination and reality into a single experience!"
-  tutorial_bcrobot_shortdescription: "With only two blocks, students can design, create, and think in 3D! They can build their own robot, while learning underlying math and computational thinking concepts."
-  tutorial_bcsnow_shortdescription: "Students will use BlocksCAD to think, design, and create in 3D!"
-  tutorial_ifly_shortdescription: "It's Christmas Eve and Santa's sleigh has developed a fault! Luckily one of his trusty elves has secretly been working on developing a sleigh drone. It's no Santa's sleigh but it works and is ready save Christmas day!"
-  tutorial_idowedo_shortdescription: "Design and build a robotic vehicle then program it to transport mini figures."
-  tutorial_diggindwarf_shortdescription: "Dwarfs need your help to navigate, dig, and collect gems using JavaScript."
-  tutorial_rmedr_shortdescription: "Program a VEX EDR robot to navigate a maze using Blockly programming."
+  tutorial_cslartist_shortdescription: "Кызыктуу код жазуу + K-4 окуучулар үчүн өнөр тапшырма"
+  tutorial_cslscratchjr_shortdescription: "Иш барактар жана кийинки код жазуу долбоору менен +окуучуларга код жазуу окуясын окуп бер "
+  tutorial_floevents_shortdescription: "Иш-чаралардын хип-хоп видеосун көр. Өз видеоңду жазып чыгар!"
+  tutorial_florobot_shortdescription: "Роботтордун хип-хоп видеосун көр, алар жөнүндө окуп өз роботуңду түз!"
+  tutorial_isavesanta_shortdescription: "Рождестводон бир күн мурун, Санта белектерди таратуу сапарына чыгып кырсыкка кабылды! Ал өз чанасынан кулады! Сантаны чанасына кайтарышка аны програмдап алгоритмдерди түз."
+  tutorial_iorder_shortdescription: "Жай. Аба ырайы ысык. Салкындатуучу нерселерди жасагың келет. Алгоритмдерди түзүп Scratch 2.0 менен бал муздак симуляциясын/оюнду програмда. Анын ичине окуу планы, жардамчы материалдары жана алдын ала жазылган программа үлгүлөрү кирет."
+  tutorial_ianimate_shortdescription: "Анимациялоо софтун колдонуп, жарманкелер сезонуна анимацияланган GIF түзгүлө. Көркөмдөмөлөрдү, фонду жана обжекттерди кошуп, аларды жандандыргыла!"
+  tutorial_iloveada_shortdescription: "Компүтерди тарых менен үйрөткүлө. Бул мугалим жетектеген тапшырма ИТЕМдеги (STEM) пионер аял жана дүйнөдөгү алгачкы компүтердик програмчы Ада Ловлейс тууралуу онлайн изилдөөгө тартат!"
+  tutorial_kodflash_shortdescription: "Чагылгандан кийин күн күркүрөйт!"
+  tutorial_kodchoose_shortdescription: "\"If операторлорун\" колдонуп өзүңөрдүн окуялуу баяныңарды жазгыла!"
+  tutorial_kodpizzapre_shortdescription: "Доминик пиццасынын жаңы мобилдик колдонмосуна алгоритм түзүүгө жардам бер!"
+  tutorial_kodpizza_shortdescription: "Доминик пиццасынын жаңы мобилдик колдонмосуна алгоритм түзүүгө жардам бер!"
+  tutorial_kodwomen_shortdescription: 'Технология: кимге арналган? Технология чөйрөдөгү теңсиздикти изилде.'
+  tutorial_tfunplug_shortdescription: "Boolean'дын логикалык концепттерин окуткан кызыктуу офлайн тапшырманы колдон."
+  tutorial_lbvariables_shortdescription: "littleBits Code Kit окуу жетектемеси менен ыракаттануу өзгөрүлмө болбойт."
+  tutorial_lbfunctions_shortdescription: "Функционалдык код жазуу блокторуна littleBits'ти кошсоң оюн токтобойт."
+  tutorial_lblogic_shortdescription: "Шарттуу логика & littleBits менен тандоо сенде."
+  tutorial_lbworld_shortdescription: "Код жана бир оюн менен сен заматта дүйнөнү өзгөртө аласың."
+  tutorial_lbloops_shortdescription: "Атайын эффекттерден сыр белгилерге чейин: циклдар - сенин жашырын оюн куралың."
+  tutorial_lbtug_shortdescription: "Функциялар & littleBits менен классикалык аркан тартууну укмуштуу кыл."
+  tutorial_lbpotato_shortdescription: "Ысык картөшкө оюнуңду түз жана коддо. Ысыкка чыдай аласыңбы?"
+  tutorial_lbguitar_shortdescription: "Түз. Коддо. Колдон!"
+  tutorial_lbio_shortdescription: "littleBits жана код менен текшерүүчүлөрдү түзөлү!"
+  tutorial_wonpuppy_shortdescription: "Dash роботту күчүктүн ыкмаларын аткарган коддогу 3 маселени чечкидей кылып програмдагыла!"
+  tutorial_woncue_shortdescription: "Кызыктуу тапшырмалар жана блоктор, JavaScript же автоматтар менен кантип коддошту көрсөткөн демолор менен CUE роботту програмда!"
+  tutorial_wonzoo_shortdescription: "Dash робот зоопарктын кодундагы 3 маселени чечкидей кылып програмдагыла!"
+  tutorial_wontrip_shortdescription: "Dash роботту жолго даярдануу кодундагы 3 маселени чечкидей кылып програмдагыла!"
+  tutorial_woncollect_shortdescription: "3 код жазуу тапшырмаларды аткарышка Wonder Workshop Blockly жана Dash роботту колдон!"
+  tutorial_wonsecret_shortdescription: "Жашырын билдирүү системин түзүш үчүн Cue роботу менен Wonder Workshop Cue колдонмосун колдонолу."
+  tutorial_hsscience_shortdescription: "iPad/iPhone'до интерактивдүү илимий үлгүлөрдү түз!"
+  tutorial_popculture_shortdescription: "Поп маданият боюнча добуш бергиле жана анализ кылып трендди көргүлө."
+  tutorial_legorobust_shortdescription: "LEGO кирпичтеринен жер титирөө симуляциясын түзүп, имараттын жер титирөөгө туруштук берүүчү касиеттерин изилде."
+  tutorial_legoplants_shortdescription: "Көбөйүү фазадагы чаңдаштыруучу менен гүлдүн ортосундагы байланышын үлгүлө."
+  tutorial_legopark_shortdescription: "Айдоочусуз өз алдынча туура жайгаша алган унааларды түз."
+  tutorial_legodetect_shortdescription: "Жолдо унаалар менен объекттердин кагылышууларын жокко чыгарган жолдорду түз."
+  tutorial_legolight_shortdescription: "Түнкү сааттарда айдоону коопсуз кыла турган унаа касиеттерди түз."
+  tutorial_alexa_shortdescription: "Алекса - Amazon Echo'нун үн кызматы. Бул окуу жетектемеде силер бул лаборатория үчүн мектебиңерге ылайыктуу болгон окуяларды түзөсүңөр."
+  tutorial_grokpetmicro_shortdescription: "MicroPython програмдоо тилинин жардамы менен тамак берип, чогу ойноочу үй жаныбарды жарат."
+  tutorial_pirateplunder_shortdescription: "MicroPython програмдоо тилинин жардамы менен тамак берип, чогу ойноочу үй жаныбарды жарат."
+  tutorial_cadj_shortdescription: "MicroPython програмдоо тилинин жардамы менен тамак берип, чогу ойноочу үй жаныбарды жарат."
+  tutorial_cacrazy_shortdescription: "MicroPython програмдоо тилинин жардамы менен тамак берип, чогу ойноочу үй жаныбарды жарат."
+  tutorial_cajump_shortdescription: "MicroPython програмдоо тилинин жардамы менен тамак берип, чогу ойноочу үй жаныбарды жарат."
+  tutorial_carest_shortdescription: "MicroPython програмдоо тилинин жардамы менен тамак берип, чогу ойноочу үй жаныбарды жарат."
+  tutorial_accai_shortdescription: "Жасалма интеллекттүү роботко жаңы планета изилдегенди үйрөт!"
+  tutorial_vceclipse_shortdescription: "JavaScript менен күн тутулуу симуляциясын коддо!"
+  tutorial_pmzero_shortdescription: "3D пакман лабиринт ааламын түзүп програмда"
+  tutorial_hsela_shortdescription: 'Окуяларды айтуу: ELA + код жазуу'
+  tutorial_ticklear_shortdescription: "Азыр баары виртуалдык жана AR-касиеттерин коддоп алар менен аракеттешүүгө фантазия менен реалдуулукту бирге колдонуп реалдуу түзмөктөрдү програмдай алат!"
+  tutorial_bcrobot_shortdescription: "2 блок менен окуучулар 3D-де түзүп, жаратып жана ойлоно алышат! Алар жалпы математика жана компүтердик ой-жүгүртүү концепттерин үйрөнүп жатып өз роботун түзө алышат."
+  tutorial_bcsnow_shortdescription: "Окуучулар 3D'де жаратып, түзүп жана ойлонушка BlocksCAD'ди колдонушат!"
+  tutorial_ifly_shortdescription: "Рождестводон бир күн мурун, Сантанын чаналары кырсыкка кабылды! Тилекке жараша бир ишенимдүү эльф жашырын түрдө чана дронун түзүп жаткан. Ал Сантанын кадимки чанасы эмес бирок Рождествону куткарганга даяр!"
+  tutorial_idowedo_shortdescription: "Робот унаасын түз; кичинекей фигураларды ташыш үчүн робот унаасын програмда."
+  tutorial_diggindwarf_shortdescription: "Гномдорго асыл таштарды JavaScript менен табып, казып жана чогултушка жардам бер."
+  tutorial_rmedr_shortdescription: "Blockly програмдоо менен VEX EDR роботту програмдап лабиринттен чыгар."
   tutorial_athlete_longdescription: "Баскетбол оюнун же спорттун түрлөрүн аралаштырып түзүүнү тандагыла!"
   tutorial_moana_longdescription: "Disney'дин жаңы Код сааты окуу китебинде окуучулар код жазыш үчүн блокторду сүйрөп койгон визуалдык програмдоо тили колдонулат. Визуалдык програмдоо - код жазуу логикасыны үйрөтүүнүн көңүлдүү жана түшүнүктүү ыкмасы. Визуалдык програмдоонун таасир этүүсү татаалыраак тапшырмага - текстте негизделген програмдоого негизин салат. Окуу китеби биринчи жолу код жазууга үйрөнө тургандарга жана 8+ балдарга арналган. 23 тилде жеткиликтүү жана Акш чегинин тышында локализацияланган. Бул окуу китептин жеткиликтүү вариантын онлайн таба аласыз, ал окутуучулар жана иш-чаралардын уюштуруучулары үчүн англис жана испан тилиндеги санариптик аспаптардын жыйндысын камтыйт."
   tutorial_star-wars_longdescription: "Дроиддерди програмдоону үйрөнүп, алыскы галактикада өзүңдүн Жылдыздар согушу оюнуңду түз."
@@ -1464,7 +1464,7 @@ ky:
   tutorial_firstcomp_longdescription: "Компүтер сыяктуу кызыктыруучу нерселер аз. Бул жолу силер кагаздан өздүк компүтериңерди түзөсүңөр. CPU, RAM жана ROM, Mass Storage жана GPU жөнүндө үйрөнгүлө. Биринчи колдонмоңорду тарткыла. Кайчы, калем жана кагаздарыңарды чыгаргыла!"
   tutorial_mazefinch_longdescription: "Бул тапшырмада, Finch роботуна жылуу жана бурулуу иш-аракеттерин аткартыш үчүн эң жөнөкөй програмдоо тилин колдоносуңар. Андан соң, роботту лабиринттен чыгарыш үчүн программаларды жазасыңар! Бул жерде програмдоо тажрыйбасы талап кылынбайт жана силер ноутбук же хромбукту колдоно аласыңар. "
   tutorial_tlccc_longdescription: "Компүтердеги маалымат узун ырааттуу белгилер аркылуу сакталат - акырында бинардык 1 жана 0 түрүндө. Маалыматты кысуу идеясы - ошол эле маалыматты аз белгилер аркылуу сакташ үчүн биздин алгоритмдерди маалыматты көрсөтүүчү ыкмасынын өзгөрүүсү үчүн колдонгонубуз."
-  tutorial_tlcdoodle_longdescription: Тасма декорациялары көп учурда компүтердин жардамы менен жасалат. Алар кандай жол менен жасалганын ойлодуңар беле? Түшүнүксүз нерселерди тартып жатканда, алгоритмикалык түшүнүксүз нерсени тартып, табият тартуу алгоритмдерди изилдегиле. Алгоритмдер рекурсивдүү болот, башкача айтканда, алар бир кадамды чийип, эң баштапкы алгоритмден баштап, башканы ошол эле принцип менен кайталап тартканыңызды сурайт.
+  tutorial_tlcdoodle_longdescription: 'Тасма декорациялары көп учурда компүтердин жардамы менен жасалат. Алар кандай жол менен жасалганын ойлодуңар беле? Түшүнүксүз нерселерди тартып жатканда, алгоритмикалык түшүнүксүз нерсени тартып, табият тартуу алгоритмдерди изилдегиле. Алгоритмдер рекурсивдүү болот, башкача айтканда, алар бир кадамды чийип, эң баштапкы алгоритмден баштап, башканы ошол эле принцип менен кайталап тартканыңызды сурайт.'
   tutorial_tlcpunch_longdescription: "Эң биринчи компүтерлердин перфокарталарда сакталган маалыматты кантип тапканын жана бул алгоритмдин \"Австралиялык сыйкырчынын тилеги\" тапшырмадагы сыйкырду амалына окшош болгонун көрсөткүлө. Ал издөө алгоритми кантип иштегенин визуалдуу түрдө көрсөтөт. Муну жасап жатканда силер бинардык сандардын, бөлүштүрүү жана басып алуу алгоритмдин иш жүзүндө колдонулуусун көрсөтөсүңөр жана маселе туудурган тармактар арасындагы которуу чечимдеринин эсептөөчү амалын изилдейсиңер."
   tutorial_finchfract_longdescription: "Бул тапшырмада Finch роботу менен Кох фракталдарын тартыш үчүн рекурсиялар колдонулат. Окуучулардын рекурсия идеясы эмне болгондугун билиши керек, бирок, бул тапшырманы аяктаган соң алар рекурсиянын физикалык сүрөттөлүшү аркылуу бул концептти терең түшүнө башташат. Бул тапшырма Python же Java'ны колдонгон информатиканын кириш же илгерилетилген курсун алган окуучуларга ылайык."
   tutorial_tlcmind_longdescription: "Бул иш-аракетте алгебра аркылуу алгоритмдин ар дайым иштегенин көрсөткөн логикалык ойлоо менен тааныштырат. Бул жерде алгоритмдерди баалаш үчүн абстракция жана логикалык ойлонуунун керек болгондугу көрсөтүлөт."
@@ -1572,7 +1572,7 @@ ky:
   tutorial_grokhd_longdescription: 'Blockly програмдоо чеберчилигин улант! Бул курс Frozen Fractals тапшырмадагы: https://hourofcode.com/grokffblock силер үйрөнгөн нерселердин негизинде түзүлгөн. Бул тапшырма програмдоодогу тармакталып кеткен чечимдерди көрсөтөт. Гортензия гүлүн тартып, аны боеш үчүн Python''дун Blockly версиясын жана ташбака модулун колдон!'
   tutorial_grokem_longdescription: "Бул тапшырма атайын Код сааты үчүн жана силерге програмдоону үйрөтүш үчүн түзүлгөн. Эможилерди изилдеш үчүн жана текст манипуляцияларын аткарыш үчүн Python програмдоо тилин колдон."
   tutorial_kodmaze_longdescription: "Өздүк лабиринттерди өтүү үчүн куруп, бөлүш! Окуучулар лабиринттерди курууда геометрия менен програмдоону бириктиришет. Тапшырмаларда жөнөкөй формалар, бөлчөктөр, симметрия жана кенен бурчтар менен лабиринттер камтылат."
-  tutorial_codestersa_longdescription: Бул кичине код жазуу тажрыйбасы барлар үчүн тапшырмада, окуучулар текстке сүйрөө куралыбызды колдонуп, оюнчу башкаруучу оюн түзүшөт! Окуучулар өзгөрмөлөрдү, кокустук сандарын жаратууну, геймдизайнды, ивенттердин көп түрүн жана ивенттердин триггерлерин жана космос кемесине учуп келаткан астероиддерге кабылбай тырмышууну үйрөнүшөт! Окуучу өзгөрмөлөрдү жана параметрлерди билиши керек.
+  tutorial_codestersa_longdescription: 'Бул кичине код жазуу тажрыйбасы барлар үчүн тапшырмада, окуучулар текстке сүйрөө куралыбызды колдонуп, оюнчу башкаруучу оюн түзүшөт! Окуучулар өзгөрмөлөрдү, кокустук сандарын жаратууну, геймдизайнды, ивенттердин көп түрүн жана ивенттердин триггерлерин жана космос кемесине учуп келаткан астероиддерге кабылбай тырмышууну үйрөнүшөт! Окуучу өзгөрмөлөрдү жана параметрлерди билиши керек.'
   tutorial_cmdodo_longdescription: "2-4 класстардын окуучулары CodeMonkey'дин \"Coding Adventure\" сыяктуу колдонгонго оңой оюнга негизделген платформа менен математиканы үйрөнүп, көнүгүү аткарышат. Интерактивдүү 60 мелдеште, жаңы кызыктуу каармандар, мүмкүнчүлүктөр жана мелдештер менен математика жөндөмдөрүн жакшыртышат. Окуучулар аралыкты ченөөдө пикселдик сызгычты жана транспортирди колдонуп, Додого жумурткалары жеткенге жардам беришет."
   tutorial_tynkerspace_longdescription: "Астронавтыңардын кемеси бузулуп конду! Бактыга жараша сиз ал жерде болуп калдыңыз. Душмандардан жана тоскоолдуктардан буйтап өтүп,  каарманыңарга тетиктерди чогултканга жардам бергиле. Астронавтты үйгө кайтарганга кеме таба аласыңарбы?"
   tutorial_gfbloons_longdescription: "Бул сабакта Bloons Tower Defense оюнан алынган маймылдын атуучу мунарасын коддойсуңар. Бул сабактын аягында бүгүнкү күндө көп ойнолгон мунараны коргоо оюндарында жалпы колдонулган алгоритмдер менен бурчтарды табуу математикасынын байланышын түшүнөсүңөр. Бул билимиңерди өз оюнуңарды түзүү үчүн пайдалана аласыңар. Код саатынын Gamefroot жетектемелери, окучуулар блокторду ары-бери сүйрөп-коюу жолу менен оңой код жазууга үйрөткөн визуалдык програмдоо тилин колдонот."
@@ -1600,7 +1600,7 @@ ky:
   tutorial_techec_longdescription: "Жабуулар - JavaScript'тин маанилүү, бирок ал програмчылар оңой түшүнө бербеген, сырдуу аспект. Бул интерактивдүү жетектеме JavaScript тажрыйбаңарды арттырууда Жабуулар канчалык күчтүү жана пайдалуу экендигин үйрөтөт!"
   tutorial_rgbegin_longdescription: "Бакчы робот - түшүнүктүү, окуучулар үйрөнүүгө жигердүү катыша алган практикалык окутуу колдонмосу. Код жазганды нөлдөн үйрөтүү үчүн толук жабдылган RoboGarden, техникалык тажрыйбалуу мугалимге муктаждыкты жокко чыгарат."
   tutorial_myradream_longdescription: "Монстрлар Миранын уйкусун уурдап кетишти. Код жазып, аны көпүрөлөрдөн өткөрүп, абада учуруп жана суу алдында сүздүрүп уйкусун кайтарууга жардам бергиле. Actimator - оюн түзүүчү жана биргелешип илимий үлгүлөөчү, ошондой эле аларды интернетте жарыялоо жана мобилдик колдонмого айлантуучу веб негиздүү визуалдык чөйрө."
-  tutorial_thinkfun_longdescription: "Биз силерге роботтун мээсин оңдоо процессин көргөзөбүз! Бул тапшырмада силер \"Логикалык маселени канаатандырат\" (Sat) негизделген башкатырмаларды чечесиңер жана бир сааттын ичинде Булен чебери болуп илгерилетилген програмдоо концепттерин үйрөнөсүңөр! Бардык нускамалар бир экранда жайгашкан, көлөмү маанилүү эмес."
+  tutorial_thinkfun_longdescription: "Биз силерге роботтун мээсин оңдоо процессин көргөзөбүз! Бул тапшырмада силер SAT'та (Логикалык маселени канаатандырат) негизделген башкатырмаларды чечесиңер жана бир сааттын ичинде Булен чебери болуп илгерилетилген програмдоо концепттерин үйрөнөсүңөр! Бардык нускамалар бир экранда жайгашкан, көлөмү маанилүү эмес."
   tutorial_hopfireworks_longdescription: "Окуучуларыңар өзүнүн фейерверк (жарылбаган) колдонмосунун кодун жазуудан ырахат алышат! Hopscotch - чыгармачылык эркиндиги менен миллиондогон окуучуларга жаккан, iPad/iPhone'до колдонулган жөнөкөй програмдоо аспабы. Бул видео жетектеме 8+ балдарга өзүнүн интерактивдүү фейерверк оюнун кодун жазуу аркылуу програмдоонун негиздерин үйрөтөт. "
   tutorial_grokspace_longdescription: "Бул тапшырма атайын Код саатына жана силерге програмдоону үйрөтүүгө түзүлгөн. Blockly визуалдык програмдоо тилин колдонуп космосту изилдегиле жана жылдыздарга жеткиле."
   tutorial_codehspython_longdescription: "Сиз иштеше ала турган програмдарды жазып, Python програмдоо тилинде код жазууну үйрөнгүлө! Бул саатта бастырууну, өзгөрмөлөрдү, математиканы жана колдонуучудан маалымат алууну камтыйт. Колдонуучудан маалыматтарды алып, жайгаштырып жана уникалдуу жооп берген программа жазгыла!"
@@ -1641,7 +1641,7 @@ ky:
   tutorial_rgadvan_longdescription: "Бакчы робот - түшүнүктүү, окуучулар үйрөнүүгө жигердүү катыша алган практикалык окутуу колдонмосу. Код жазганды нөлдөн үйрөтүү үчүн толук жабдылган RoboGarden, техникалык тажрыйбалуу мугалимге муктаждыкты жокко чыгарат."
   tutorial_codehsrn_longdescription: "Бул тапшырма силерге биринчи реалдуу мобилдик колдонмону түзүү жана React Native менен аларды телефондо сынап көрүү мисалдарын сунуштайт. Колдонмолорду акылдуу телефондо иштетиш үчүн окуучулар Expo колдонмосун жүктөшү керек. Expo жөнүндө башка маалыматтар боюнча: https://expo.io/."
   tutorial_codehswd_longdescription: "CodeHS Explorer'ден башка бардык заманбап браузерлерге туура келет. Биз Chrome браузерин сунуштайбыз, бирок заманбап браузерлер катары Firefox менен Safari да колдонушу мүмкүн."
-  tutorial_turtlerobot_longdescription: "Окуучуларга өз алдынча үйрөнүүгө жол берген \"Ташбака роботтору\" оюнду аткарып башта."
+  tutorial_turtlerobot_longdescription: "Окуучуларга өз алдынча үйрөнүүгө жол берген \"Ташбака роботтору\" оюнун аткарып башта."
   tutorial_ozoevo_longdescription: "Озобот Эво жакындоо сенсорлор, програмдалуучу светодиоддор, жүрүү менен үн жана түстөр менен сызыктарды эрчүүгө астында жарык менен түс сенсорлору орнотулган мыкты технологиялар менен чогултулган. Бул Эво киришүүдө OzoBlockly программасы көрсөтүлгөн: ал колуңар жакындоо сенсоруна тийгенде Эвону иштеттирип, белгилүү түстөрдү басканда жеңиш бийин ойноттурат."
   tutorial_ozoexped_longdescription: "Бул басып чыгарылган такта оюнда окуучулар Озобот ээрчий алган сызыктарды жана түстүү коддорду тартканды үйрөнүшөт. Форма жана түс коддорун айкаштырууну талап кылган кызыктуу тапшырмаларда ийгилик жана тажрыйба маанилүү. Ийгиликке жеткен окуучулар максатына жакындашат. Бул тапшырмага карталар да кирет: окуучулар аларды атаандашына каршы стратегиясынын ыкмасы катары колдоно алышат."
   tutorial_ozojourney_longdescription: "Окуучулар Фернан Магелландын саякатын жыйынтыкташ үчүн Озоботторун програмдашат. Окутуучу алдын ала кагаз континенттерди кесип даярдап коюшу кажет. Окуучулар Магеллан барган континенттердин жолун Озоботко көрсөтүш үчүн аны OzoBlockly тили менен програмдашат. Бул саякатта окуучулар дүйнөлүк географиянын аймактарын белгилешет."
@@ -1655,60 +1655,60 @@ ky:
   tutorial_ozopair_longdescription: "OzoBlockly блоктук програмдоо тилин билген окуучулар драйвер жана навигатор катары топто иштегенди үйрөнүп кийин бир компүтерде Озобот роботуна бир программа түзүп колдонушат. Башында көргөзүү видеолорду камтыган жана окуучуларга керек болгондо жардам берүү колдонмону сунуштаган окутуучулардын жетекчилигиндеги колдонмо."
   tutorial_codesnoopy_longdescription: "Досторуңар менен шайыр кар атышууда Snoopy's Beagle Scouts'ту програмдап код жазууну колдонгула! Үйрөнчүктөрдү катышууга чакырабыз - топтор бири-биринен ашып өтүү максаты менен өз коддорун жашыруун түрдө жазышат. Эркин-сөз коду менен бул оюнда баары катыша алат! Бул тапшырмада 1-4 оюнчу бир түзмөктө ойной алат. Досторуңа же компүтерге каршы ойногула."
   tutorial_applabintro_longdescription: "Текст же блоктор менен JavaScript'те өз колдонмоңорду түзгүлө. Баскычтар, сүрөттөр, үндөр жана көптөгөн экрандар менен досторуңар менен бөлүшүп коомдук галереяга жарыялоого мүмкүн болгон жөнөкөй колдонмону түзөсүңөр. Эгерде силер мурун блоктор менен код жазып көрсөңөр бул иш програмдоо тажрыйбаңарды кийинки деңгээлге алып барган чоң кадам болот."
-  tutorial_cslartist_longdescription: "Did you know that there's a little artist who lives inside every computer? This PDF contains a fun story embedded with puzzles that will teach your students the fundamentals of digital art as they make their own creations using pixels, algorithms and repeat loops."
-  tutorial_cslscratchjr_longdescription: "CodeSpeak's \"Let's Play with the ScratchJr Kitten!\" Activity Pack is a Read Aloud Story with accompanying worksheets. The Story walks through the code for a great first project for brand new coders. A grown-up can read the story to a class of pre-reader students and then guide students to code the story in their tablets using the ScratchJr app. Students with early reading skills can read the story themselves and independently complete the Activity Pack."
-  tutorial_floevents_longdescription: "Students will explore events, a concept that allows programs to respond to specific stimuli. Events are determined in bits of code called event handlers, which listen for specific events and contain instructions on how to respond. Students will learn key vocabulary and write text for event handlers in a Mad Libs-style exercise in which they create and act out event handlers of their own."
-  tutorial_florobot_longdescription: "In this lesson, students will build their literacy skills while diving into the field of robotics. They'll watch Flocabulary's educational hip-hop video to find out what a robot is and see examples of robots in daily life. They'll close-read short passages about robots, discuss tasks that robots are well suited for and finish the lesson by designing their own robot to solve a specific problem."
-  tutorial_isavesanta_longdescription: "In this teacher-led festive activity, adapted for the Hour of Code, the children explore create a computer game using Scratch to save Santa. They design algorithms, use conditional statements as well as test and debug their work. Includes step-by-step lesson plan, pupil resources, support cards and pre-written program templates."
-  tutorial_iorder_longdescription: "This teacher led activity, adapted for the Hour of Code, develops computational thinking and coding skills using Scratch 2.0. The children program an ice-cream stand simulation and/or game and, in doing so, design algorithms, use repetition, conditional statements, test and debug their work. Includes step-by-step lesson plan, pupil support materials, and pre-written Scratch 2.0 program templates for teacher and pupils."
-  tutorial_ianimate_longdescription: 'This teacher-led seasonal activity, adapted for the Hour of Code, introduces children to creating computer animations. The children will create frames, add artwork and animate a simple Christmas scene. Lots of ideas for differentiation, extension and enrichment from making a very simple animated sequence to more able pupils: animating backgrounds as well as characters and objects, adding 3D effects (e.g. shadows), creating more frames for smoother movement, switching backgrounds to create scene changes, and animating more than one object.'
-  tutorial_iloveada_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides an opportunity to teach cross-curricular computing with history. Children research Ada Lovelace an important historical figure in computer science and the world's first computer programmer! They then use basic HTML to create a multimedia webpage showcasing their findings and skills as web masters. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
-  tutorial_kodflash_longdescription: "Flash! Clap! This hands-on, wild weather lesson teaches conditional statements with lightning and thunder. Students will learn about why thunder always follows lightning and will examine the logic statement \"if there is lightning, then thunder will follow.\" Count the seconds between the two to see how far away the storm is!"
-  tutorial_kodchoose_longdescription: "Choose your own adventure! Through a series of \"If statements\", students will alter the storyline and ending to a narrative they write. Like a program's path changes based on conditions, the path a character takes through a narrative can change too. Get creative and lead the Kodable fuzzFamily on multiple adventures within one story that can have varying conclusions."
-  tutorial_kodpizzapre_longdescription: "In a 3-part unit, students will connect math and programming to develop solutions for a restaurant's mobile ordering app. Dominic's Pizza restaurant is creating an algorithm for their new app and it's up to students to help calculate pizza costs. At the end of the unit, students will make and deliver their \"pizza\" after calculating the cost of the order."
-  tutorial_kodpizza_longdescription: "In a 3-part unit, students will connect math and programming to develop solutions for a restaurant's mobile ordering app. Dominic's Pizza restaurant is creating an algorithm for their new app and it's up to students to help calculate pizza costs. At the end of the unit, students will make and deliver their \"pizza\" after calculating the cost of the order."
-  tutorial_kodwomen_longdescription: "This 3-part unit explores gender inequality and engages students in activities and discussions around different experiences and perspectives. Highlighting influential women in the history of tech, students learn about past pioneers and form their own opinions on equality in the tech field. At the end of the unit, students express their opinions in writing to effect change in their school community."
-  tutorial_tfunplug_longdescription: "We'll take you through the process of fixing a Robot's brain, step by step! Along the way you'll solve puzzles based on the famous 'Boolean Satisfiability Problem,' and within an hour you'll be a Boolean Master and have an understanding of advanced programming concepts! No computers required – everything you'll need can be printed out from our supplied PDF."
-  tutorial_lbvariables_longdescription: "Having fun is not a variable! Short activities and fun videos provide an overview of the core coding concepts that students will encounter in the app. The variables lesson teaches students to create variables to add countdowns, characters, and extra players to games."
-  tutorial_lbfunctions_longdescription: "Short activities and fun videos provide an overview of the core coding concepts that students will encounter in the app. The functions lesson teaches students to create their own unique code blocks to level-up their game."
-  tutorial_lblogic_longdescription: "Logic-defying fun activities and videos provide an overview of the core coding concepts that students will encounter in the app. The logic lesson teaches students to use conditional statements to program rules and choices into their games."
-  tutorial_lbworld_longdescription: "Code for good! Students design a game that will help make life easier for people in their community. At the end, each group will present their prototypes at a \"Change the World Arcade\" that will be open to community members."
-  tutorial_lbloops_longdescription: "Loops are the secret weapon of every game ninja. Short activities and fun videos provide an overview of the core coding concepts that students will encounter in the app. The loops lesson teaches students how to use loops to create animations."
-  tutorial_lbtug_longdescription: "Bring a whole new meaning to the term \"button-masher\". Students will create and remix the Tug of War game to explore how functions are used to structure code."
-  tutorial_lbpotato_longdescription: "Students will use loops, conditional logic, and variables to create a new spin on the game of Hot Potato. This lesson provides a choice between a beginner or intermediate level exploration into understanding the invention code."
-  tutorial_lbguitar_longdescription: "Students will work together to design a musical instrument that makes it easy for anyone, even for those who cannot read music, to play simple songs."
-  tutorial_lbio_longdescription: "Short activities and fun videos provide an overview of the core coding concepts that students will encounter in the app. The inputs and outputs lesson teaches students how to control images, sound, and motion."
-  tutorial_wonpuppy_longdescription: "Use the Wonder Workshop Blockly app and Dash the robot to tackle 3 coding challenges! In this series of challenges, you will train Dash the puppy to perform tricks. This series is part 3 of the Hour of Code Dash and Dot Challenge Card activities. It is recommended for students who have coding experience with functions."
-  tutorial_woncue_longdescription: "Use Wonder Workshop's cue app to program your CUE robot in different ways. Challenges and demos in the app will show you how to program using blocks, JavaScript, or state machines. You'll also get to know the robot's 4 different personalities as you code!"
-  tutorial_wonzoo_longdescription: "Use the Wonder Workshop Blockly app and Dot the robot to tackle 3 coding challenges! In this series of challenges, you will help Dot play with the animals at the petting zoo. This series is part 2 of the Hour of Code Dash and Dot Challenge Card activities."
-  tutorial_wontrip_longdescription: "Use the Wonder Workshop Blockly app and Dash the robot to tackle 3 coding challenges! In this series of challenges, you will help Dash prepare for a road trip. This series is part 4 of the Hour of Code Dash and Dot Challenge Card activities. It is recommended for students who have coding experience with event handlers and conditionals."
-  tutorial_woncollect_longdescription: "Use the Wonder Workshop Blockly app and Dash the robot to tackle 3 coding challenges! In this series of challenges, you will help Dash collect different objects like seashells and candy. Don't forget to make some space on the floor for your robot to move around. This series is part 1 of the Hour of Code Dash and Dot Challenge Card activities."
-  tutorial_wonsecret_longdescription: "Let's use the Wonder Workshop Cue app with Cue the robot to make a secret message system. This activity is recommended for students who have experience coding in JavaScript."
-  tutorial_hsscience_longdescription: "Imagine if your students could easily make their own computer models of natural phenomena! This hour-long lesson plan uses the water cycle as an example for building an interactive computer model using an iPad-based kid's programming tool called Hopscotch. You can adapt it to simulate any dynamic system being studied. No prior experience required!"
-  tutorial_popculture_longdescription: "This activity gives beginners an accessible introduction to crowd-sourcing data, visualization, and data analysis using interactive tools. The aim is to demonstrate that anybody can contribute to data science projects and that computer science can be connected to a wide variety of topics (even trends in popular culture) making it relevant to a variety of people. In this activity, students practice asking their own questions about popular culture and seeking answers to those questions using computational tools."
-  tutorial_legorobust_longdescription: "Investigating what characteristics of a building would help make it resistant to an earthquake, using an earthquake simulator constructed from LEGO bricks. Students will explore the origin and nature of earthquakes. Create and program a device that will allow you to test building designs. Document evidence and present your findings about which structure design(s) are best for withstanding earthquakes."
-  tutorial_legoplants_longdescription: "Model the relationship between a pollinator and flower during the reproduction phase using a LEGO representation. Students will explore how different organisms take an active role in plant reproduction. Create and program a model of a bee and flower to mimic the relationship between the pollinator and the plant. Present and document the different models you have created of plants and their pollinators."
-  tutorial_legopark_longdescription: "Design cars that can park themselves safely without driver intervention. Students will understand that algorithms are capable of carrying out a series of instructions in order. Explore the concept of Outputs by comparing different ways in which a wheeled robot can move."
-  tutorial_legodetect_longdescription: "Design ways to avoid accidents between vehicles and objects in the road."
-  tutorial_legolight_longdescription: "Design car features that will improve nighttime driving safety. Students will explore the concept of inputs and the way to control them."
-  tutorial_alexa_longdescription: "Alexa is the voice service that powers Amazon Echo. Alexa provides capabilities, called \"skills\", which enable customers to interact with devices using voice. In this tutorial, you will build a web service to handle notifications from Alexa. You will create fact skills unique to your school for this lab. By the end of this lab, you will be able to create an Alexa Fact skill in the Amazon Developer Portal, create and configure an interaction model for the Alexa skill, and test the skill using Developer tools and optionally an Alexa device or simulator."
-  tutorial_grokpetmicro_longdescription: "This activity is designed to introduce you to embedded programming, and has been specially designed for the Hour of Code. Use the MicroPython programming language to make a pet that you can feed and play with. Don't have a BBC micro:bit? No problem! This course includes a full micro:bit simulator, so you'll be able to do everything you'd do on a real micro:bit!"
-  tutorial_pirateplunder_longdescription: "Pirate Plunder takes place in an engaging 3D environment in which students help our pirate captain to reach his treasure by dragging and dropping visual blocks to write code. Students climb, fight, collect, and walk their way through challenges of increasing complexity while learning to create efficient code with loops and write intelligent behaviour with conditions. This actvitiy is targeted to kids aged 7+ and first-time-coders. On top of that, anyone with a smartphone and a mobile VR headset will be able to explore their solved tasks in VR."
-  tutorial_cadj_longdescription: "Join Cody and Ava as they learn about Data Representation using a fun and interactive DJ Device. Discover how your name can be represented using numbers, images and sound while creating your very own colorful musical melody!"
-  tutorial_cacrazy_longdescription: "Join Alex and Lonnie as they learn about coding by creating fun, interactive pictures. Learn about sequence, loops, events, and actions as you create crazy creatures in this exciting adventure!"
-  tutorial_cajump_longdescription: "Join Charlie and Tilley as they design a sport-themed platformer game for Lucy's birthday."
-  tutorial_carest_longdescription: "Join Ross at the Food Avengers restaurant. Use your computational thinking skills to help Ross solve problems and serve dinner to 8 excited kids."
-  tutorial_accai_longdescription: "A robot is sent to an unknown planet to discover if humanity could establish a new settlement. It explores the planet to find shelter and discovers and interacts with the local population. As the player, you will experience various Artificial Intelligence techniques to teach the robot how to recognize animals and plants, understand a new language, dialogue with the inhabitants etc."
-  tutorial_vceclipse_longdescription: "2017 gave us one of the most spectacular natural phenomena of our lives, and now we're going to simulate the solar eclipse with JavaScript! Looking at the eclipse as a system of moving parts, we can decompose the problem into bite-sized chunks, using objects with methods, loops, and conditionals to make an interactive app that models our observations."
-  tutorial_pmzero_longdescription: "In one hour you create a simple version of a Pac-Man game. You draw the characters in 2D and turn them into 3D. You create your own maze. Then you program the game using AgentCubes. With only 11 IF/THEN rules you create sophisticated AI. Even with just two smart ghosts you will have your hands full to win the game."
-  tutorial_hsela_longdescription: "Students will practice identifying narrative elements while bringing their favorite story, poem or historical event to life. Learning to code gives students another format and media for expressing their creativity and communicating with others. Show them how to program their own interactive stories, and wait for the smiles. 1-hour lesson plan, no prior coding experience required."
-  tutorial_ticklear_longdescription: "You will learn the basic concept of AR (Augmented Reality), its current applications and its possibilities in the future and the basic concepts of programming using motion blocks and event blocks under an AR/3D environment."
-  tutorial_bcrobot_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D snowflake. Using shape and translate blocks, students will be exposed to computational thinking to construct something they can 3D print!"
-  tutorial_bcsnow_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D snowflake. Using shapes, translate, rotate, and loop blocks, students will be exposed to computational thinking to construct something they can 3D print!"
-  tutorial_ifly_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical systems through robotics. Using a visual drag-and-drop programming environment and drones, pupils learn that physical systems can be programmed and controlled through algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
-  tutorial_idowedo_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical programming (robotics). Children design and build models using construction bricks and bring them to life with code! Using a visual drag-and-drop programming environment and LEGO™ WeDo parts (motor and hub and optional sensors), pupils learn that physical systems can be programmed and controlled using algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
-  tutorial_diggindwarf_longdescription: "Dwarfs need your help to navigate, dig, and collect gems!  Learn how to use JavaScript to guide your dwarf through mazes and puzzles."
-  tutorial_rmedr_longdescription: "Using Blockly in Robot Mesh Studio, program a VEX EDR robot \"mimic\" online and watch it run through a maze. Students learn about basic robot movement, and how to incorporate three sensors and one output into their programming."
+  tutorial_cslartist_longdescription: "Ар бир компүтердин ичинде бирден сүрөтчү бар экенин билесиңби? Бул PDF'те кызыктуу окуя камтылган: анын ичинде окуучуларга пикселдер, алгоритмдер жанан кайталанган циклдар менен өз эмгектерин жаратуу жолу менен санариптик өнөрдүн негиздерин үйрөтүүчү башкатырмалар бар."
+  tutorial_cslscratchjr_longdescription: "CodeSpeak'тин \"Келгиле ScratchJr мышыгы менен ойнойлу!\" тапшырма топтому - даяр барактар менен коштолуп окулган окуя. Окуя жаңы програмчыларга арналган биринчи ири долбоор үчүн кодду карап чыгат. Чоңдор +окуучуларга окуя окуп берип, аларга ScratchJr колдонмо менен өз планшеттеринде окуяны коддогонду үйрөтүшөт. Окуганды эрте баштаган окуучулар окуяны окуп тапшырма топтомун өз алдынча жыйынтыктай алышат."
+  tutorial_floevents_longdescription: "Программаларга өзгөчө стимулдарга жооп кайтарууга уруксат берүүчү иш-чараларды үйрөнүшөт. Иш-чаралар \"окуялар иштеткичи\" деп аталган код битинде аныкталышат, алар өзгөчө иш-чараларды угуп, жооп кайтаруу боюнча нускамаларды камтышат. Окуучулар ачкыч сөздөрдү үйрөнүшөт жана окуялар иштеткичине Mad Libs тапшырма стилинде текст жазып өз окуялар иштеткичин жаратышат."
+  tutorial_florobot_longdescription: "Бул тапшырмада окуучулар роботикстер ааламына кирип өз билимдерин кеңейтишет. Алар робот эмне экенин жана анын күнүмдүк жашоосун үйрөнүшкө Flocabulary'нин хип-хоп окутуучу видеосун көрүшөт. Алар роботтор жөнүндө кыска билдирүүлөрдү окушат жана алар аткара алган тапшырмаларды талкулашат. Окуучулар тапшырманын аягында өзгөчө маселелерди чече алган өз роботторун түзүшөт."
+  tutorial_isavesanta_longdescription: "Код саатына ылайыкташтырылган, окутуучу алып барган кызыктуу тапшырмада окуучулар Сантаны кутарышка Scratch менен компүтердик оюн түзүүнү үйрөнүшөт. Алар алгоритмдерди түзүп, шарттуу билдирүүлөр менен өз эмгектерин текшерип түзөтүшөт. Ичине кадамдык окуу планы, булактар, жардамчы карталар жана алдын ала жазылган программа үлгүлөрү кирет."
+  tutorial_iorder_longdescription: "Бул Код саатына ылайыкташтырылган жана окутуучу алып барган тапшырма Scratch 2.0 менен компүтердик ой-жүгүртүүнү жана код жазууну машыктырат. Балдар бал муздак симуляцияны жана/же оюнду програмдашат; алгоритмдерди түзүп, кайталоону, шартуу билдирүүлөрдү колдонуп эмгегин текшерип түзөтүшөт. Анын ичине окуу планы, жардамчы материалдары жана окутуучулар менен окуучуларга алдын ала жазылган Scratch 2.0 программа үлгүлөрү кирет."
+  tutorial_ianimate_longdescription: 'Код саатына ылайыкташтырылган, окутуучу жетектеген мезгилдик тапшырма окуучуларды компүтердик анимациялардын түзүлүшү менен тааныштырат. Окуучулар каркастарды түзүп, кооздуктарды кошуп кадимки Рождество сахнасын жандандырышат. Зээңдүү балдарга жөнөкөй жандандырылган иреттерди жасоого өзгөрүлүү, кеңейүү жана байытуу идеялары бар: фон, каармандар жана объекттер анимациясы, 3D эффекттерди кошуу (мис. көлөкөлөр), салмактуу аракеттерге каркастарды жаратуу, сахна өзгөрүүлөрдү жаратыш үчүн фондорду өзгөртүү жана бир объекттен ашык жандандыруу.'
+  tutorial_iloveada_longdescription: "Код саатына ылайыкташтырылган, окутуучу жетектеген тапшырма тарых менен компүтердик эсептөөнү окутуу мүмкүнчүлүгүн берет. Окуучулар компүтер илиминин олуттуу тарыхый фигурасы жана дүйнөнүн эң биринчи програмчысы болгон Ада Лавлейст жөнүндө изилдешет! Аллар негизги HTML'ди колдонуп мультимедиялык веб-баракча көргөзмөлөрүн түзүшөт. Ичине кадамдык окуу планы, булактар жана үйрөнүү процессин кеңейтип байыткан идеялар кирет."
+  tutorial_kodflash_longdescription: "Жарк-журк! Бул бороон-чалкын практикалык сабагы чагылган менен күн күркүрөгү аркылуу шарттуу билдирүүлөрдү үйрөтөт. Окуучулар чагылганды күркүрөө коштогонун үйрөнүп, \"чагылгандан кийин күн күркүрөйт\" логикалык билдирүүнү сынашат. Экөөнүн ортосундагы заман аралыкты секундалап санап, бороондун алыстыгын бил!"
+  tutorial_kodchoose_longdescription: "Өз окуяңды танда! \"If операторлор\" аркылуу окуучулар сюжетти өзгөртүп, жазып жаткан окуяны аякташат. Шарттардан улам өзгөрүлгөн программа жолдорундай эле окуядагы каармандын жолу да өзгөрө алат. Тапкычтык менен Kodable fuzzFamily'ге соңу ар кандай боло алган окуядагы түрдүү укмуштуу окуяларда жол көрсөт."
+  tutorial_kodpizzapre_longdescription: "3 бөлүмдөн турган блокто окуучулар мобилдик ресторандык заказ берүү колдонмону түзүүгө математика менен програмдоого кайрылышат. Dominic's Pizza рестораны жаңы колдонмосуна алгоритмдерди түзүп жатат: окуучулар пиццанын баасын эсептей алышат. Бөлүмдүн соңунда, окуучулар өз пиццаларын жасап, заказдын баасын эсептеп, пиццаны жеткирип беришет."
+  tutorial_kodpizza_longdescription: "3 бөлүмдөн турган блокто окуучулар мобилдик ресторандык заказ берүү колдонмону түзүүгө математика менен програмдоого кайрылышат. Dominic's Pizza рестораны жаңы колдонмосуна алгоритмдерди түзүп жатат: окуучулар пиццанын баасын эсептей алышат. Бөлүмдүн соңунда, окуучулар өз пиццаларын жасап, заказдын баасын эсептеп, пиццаны жеткирип беришет."
+  tutorial_kodwomen_longdescription: "3 бөлүмдөн турган блокто жыныстык теңсиздиги изилденип, окуучулар түрдүү окуялуу талкулоолордо катышышат. Технология тарыхындагы олуттуу аялдарды белгилеп, окуучулар биринчи демилгечилер жөнүндө үйрөнүп, технологиядагы теңдик жөнүндө өз пикирин түзүшөт. Бөлүмдүн соңунда окуучулар мектеп өзгөрүүлөрдү колдоп, пикирлерин жазуу түрүндө билдиришет."
+  tutorial_tfunplug_longdescription: "Биз силерге роботтун мээсин оңдоо процессин көргөзөбүз! Бул тапшырмада силер SAT'та (Логикалык маселени канаатандырат) негизделген башкатырмаларды чечесиңер жана бир сааттын ичинде Булен чебери болуп, илгерилетилген програмдоо концепттерин үйрөнөсүңөр! Компүтер керексиз: керектүү нерселерди биздин тиркелген PDF'тен чыгарып алсаңар болот."
+  tutorial_lbvariables_longdescription: "Кубануу - бул өзгөрмө эмес! Кыска тапшырмалар жана кызыктуу видолор окуучуларга колдонмодо кездеше турган жалпы коддо концепттерин тааныштырышат. Өзгөрмөлөр сабагы окуучуларга оюнга тескери эсепти, каармандарды жана кошумча оюнчуларды киргизүүгө өзгөрмөлөрдү түзгөндү үйрөтөт."
+  tutorial_lbfunctions_longdescription: "Кыска тапшырмалар жана кызыктуу видолор окуучуларга колдонмодо кездеше турган жалпы коддо концепттерин тааныштырышат. Функциялар сабагы оюнду кийинки деңгээлге көтөргөнгө жардам берген уникалдуу код блокторду түзгөндү үйрөтөт."
+  tutorial_lblogic_longdescription: "Логикасыз кызыктуу тапшырмалар жана видолор окуучуларга колдонмодо кездеше турган жалпы коддо концепттерин тааныштырышат. Логика сабагы окуучуларга оюнга эрежелерди жана тандоолорду програмдаганга шарттуу билдирүүлөрдү колдонгонду үйрөтөт."
+  tutorial_lbworld_longdescription: "Жакшылык үчүн коддо! Окуучулар жердештеринин жашоосун жеңилдеткен оюнду түзүшөт. Натыйжада ар бир топ бардык жердештерине ачык болгон \"Дүйнөнү өзгөртүү\" аркад оюнунда өз прототиптерин көрсөтүшөт."
+  tutorial_lbloops_longdescription: "Циклдар - бардык нинжа оюндардын сыр куралы. Кыска тапшырмалар жана кызыктуу видеолор окуучуларга колдонмодо кездеше турган коддо концепттерин тааныштырышат. Циклдар сабагы анимация жаратууда циклдардын колдонушун үйрөтөт."
+  tutorial_lbtug_longdescription: "\"Баскычты жанчуу\" терминине жаңы түшүндүрмө тапкыла. Окуучулар код түзүүдө функциялардын колдонушун изилдөөгө аркан тартуу оюнду түзүп жана кайрадан өзгөртүшөт."
+  tutorial_lbpotato_longdescription: "Окуучулар Ысык Картөшкө оюнунда жаңы спинди түзүш үчүн циклдарды, шарттуу логиканы жана өзгөрмөлөрдү колдонушат. Бул сабакта ойлоп чыгарылган нерсенин кодун түшүнүүгө алып келген изилдөөнүн үйрөнчүк же орто деңгээлин тандаса болот."
+  tutorial_lbguitar_longdescription: "Окуучулар жөнөкөй ырларды аткарууга баарына жеңил болгон музыкалык аспапты чогу иштеп жаратышат."
+  tutorial_lbio_longdescription: "Кыска тапшырмалар жана кызыктуу видолор окуучуларга колдонмодо кездеше турган жалпы коддо концепттерин тааныштырышат. Кирүүлөр жана чыгуулар сабактары окуучуларга сүрөт, үн жана кыймылды кантип башкарууну үйрөтөт."
+  tutorial_wonpuppy_longdescription: "3 код жазуу тапшырмаларды аткарыш үчүн Wonder Workshop Blockly колдонмону жана Dash роботун колдон! Бул тапшырмаларда силер Dash аттуу күчүккө трюктарды үйрөтөсүңөр. Бул тапшырмалар Код саатынын Dash жана Dot карта тапшырмасынын 3чү бөлүгү. Бул тапшырма функциялар менен коддоп көргөн окуучуларга арналган."
+  tutorial_woncue_longdescription: "CUE роботуңду ар кайсы жолдор менен програмдашка Wonder Workshop'тун Cue колдонмосун колдон. Колдонмодогу тапшырмалар жана демолор сага блоктор, JavaScript же автоматтар менен програмдоо жолун көрсөтөт. Код жазууда роботтун 4 түрдүү касиеттерин үйрөнөсүң!"
+  tutorial_wonzoo_longdescription: "3 код жазуу тапшырмаларды аткарыш үчүн Wonder Workshop Blockly колдонмону жана Dot роботун колдон! Бул тапшырмаларда Dot'ко айбанаттар бакчасында ойногонго жардам бересиң. Бул тапшырмалар Код саатынын Dash жана Dot карта тапшырмасынын 2чи бөлүгү."
+  tutorial_wontrip_longdescription: "3 код жазуу тапшырмаларды аткарыш үчүн Wonder Workshop Blockly колдонмону жана Dash роботун колдон! Бул тапшырмаларда силер Dash'ти жолго чыгууга даярдайсыңар. Бул тапшырмалар Код саатынын Dash жана Dot карта тапшырмасынын 4чү бөлүгү. Бул тапшырма окуялар иштеткичи жана шарттуулуктар менен коддоп көргөн окуучуларга арналган."
+  tutorial_woncollect_longdescription: "3 код жазуу тапшырмаларды аткарыш үчүн Wonder Workshop Blockly колдонмону жана Dot роботун колдон! Бул тапшырмаларда Dash'ке деңиз кабактарын жана момпосуйлар сыяктуу түрдүү нерселерди чогултууга жардам бересиң. Роботтун эркин жылышына жолун тазалаганды унутпа. Бул тапшырмалар Код саатынын Dash жана Dot карта тапшырмасынын 1чи бөлүгү."
+  tutorial_wonsecret_longdescription: "Келгиле Cue роботу менен Wonder Workshop Cue колдонмосу менен жашырын билдирүү системин түзөлү. Бул тапшырма JavaScript'те код жазып көргөн окуучуларга арналган."
+  tutorial_hsscience_longdescription: "Окуучуларыңар жаратылыш кубулуштардын компүтердик үлгүлөрүн жарата алгандыктарын элестеткиле! Бул 1 сааттык окуу планында iPad'тагы Hopscotch балдар програмдоо аспабы менен интерактивдүү компүтер үлгүсүн түзүүгө суу циклы мисал катары алынган. Силер аны бардык окула турган динамикалуу системди үлгүлөшкө ыңгайлаштыраласың. Тажрыйба зарылсыз!"
+  tutorial_popculture_longdescription: "Бул тапшырма интерактивдүү аспаптар аркылуу үйрөнчүктөргө краундсорсинг берилишти, көркөм элестетүүнү жана маалымат анализин тааныштырат. Мунун максаты: баардыгы маалыматтар илимий долбооруна салым кошо алгандыгын жана информатиканын түрдүү адамдарга кызыктуу болгон темаларды камтыгангын (заманбап маданият тенденциялары кошумчалуу) көрсөтүү. Бул тапшырмада окуучулар заманбап маданият тууралуу суроолорду берип, компүтердик аспаптарды колдонуп аларга жооп табышат."
+  tutorial_legorobust_longdescription: "LEGO кирпичтеринен тургузулган жер титирөө симуляциясын колдонуп, жер титирөөгө туруштук берген имарат касиеттерин изилде. Окуучулар жер титирөөлөрдүн себебин жана табиятын изилдешет. Имараттарды текшерүүгө мүмкүн берген түзмөктү түз жана програмда. Маалыматтарды тастыктап, жер титирөөлөргө туруштук берген түзүлмөнү (-лөрдү) сунушта."
+  tutorial_legoplants_longdescription: "LEGO менен көбөйүү фазадагы чаңдаштыруучу менен гүл ортосундагы байланышты үлгүлө. Окуучулар өсүмдүктөрдү көбөйтүү процессиндеги түрдүү организмдердин ролун үйрөнүшөт. Чаңдаштыруучу менен өсүмдүктүн байланышын симуляциялашка аары менен гүлдүн үлгүсүн түз жана програмда. Өсүмдүктөрдөн жана алардын чаңдаштыруучуларынан түзгөн түрдүү үлгүлөрдү көрсөтүп каттагыла."
+  tutorial_legopark_longdescription: "Айдоочусуз туура жайгаша алган машиналарды түзгүлө. Окуучулар алгоритмдердин нускамаларды ирети менен аткара алгандыгын үйрөнүшөт. Дөңгөлөктүү роботтордун жүрүшүн ар кандай жолдор менен салыштырып чыгуулардын концепциясын изилдегиле."
+  tutorial_legodetect_longdescription: "Жолдо унаалар менен объекттердин кагылышууларын жокко чыгарган жолдорду түз."
+  tutorial_legolight_longdescription: "Түнкү сааттарда айдоону коопсуз кыла турган унаа касиеттерди түз. Окуучулар кирүүлөрдүн концепциясын жана аларды баашкарууну изилдешет."
+  tutorial_alexa_longdescription: "Alexa - бул Amazon Echo'ну башкарган үн кызматы. Alexa колдонуучуларга үн менен түзмөгүн башкаруу мүмкүнчүлүгүн же \"жөндөмдөрдү\" камсыздайт. Бул жетектемеде Alexa'дан түшкөн билдирүүлөрдү тейлеген веб кызмат түзөсүңөр. Бул лабораторияда мектебиңер үчүн уникалдуу факт жөндөмүн түзөсүңөр. Лаборатория аяктаганда Amazon өндүрүүчүлөр порталында Alexa факт жөндөмүн түзгөндү, Alexa иштешүү үлгүсүн түзгөндү жана аны тууралалагынды, Өндүрүүчүнүн куралдары, эгер болсо, Alexa түзмөгү же симулятору менен жөндөмдү сынаганды үйрөнөсүңөр."
+  tutorial_grokpetmicro_longdescription: "Бул тапшырма атайын Код сааты үчүн түзүлүп, сени камтылган програмдоо менен тааныштырат. MicroPython програмдоо тилинин жардамы менен тамак берип, чогу ойноочу үй жаныбарды жарат. BBC micro:bit жокбу? Эч нерсе эмес! Бул курс толук micro:bit симуляторун камтыйт: силер реалдуу micro:bit менен жасай туруучу нерселерди аткара аласыңар!"
+  tutorial_pirateplunder_longdescription: "Деңиз карактоосу укмуштуу 3D чөйрөдө орун алган: окуучулар каракчынын казынага жетишине жардамдашып, код жазышка сүйрөп-коюу визуалдык блокторду колдонушат. Окуучулар циклдар менен натыйжалуу код жазганды үйрөнүп жана шарттуулуктар менен интеллектуалдык кыймылдарды жазып татаал такшерүүлөрдөн өтүшөт. Бул тапшырма 7+ жана үйрөнчүк балдарга арналган. Мындан тышкары акылдуу телефону жана ВР кулактыктары барлар чечилген тапшырмаларын ВР'та изилдей алышат."
+  tutorial_cadj_longdescription: "Кызыктуу жана интерактивдүү DJ түзмөгү менен маалымат көрүнүшүн үйрөнүп жаткан Коди менен Авага кошул. Түстүү музыкалык мелодияңды жаратып жатканда, сандар, сүрөттөр жана үн аркылуу атың кантип көрсөтүлгөнүн үйрөн!"
+  tutorial_cacrazy_longdescription: "Кызыктуу жана интерактивдүү сүрөттөрдү түзүп код жазууну үйрөнүп жаткан Алекс менен Лонниге кошул. Бул окуяда кызыктуу жандыктарды жаратып, ирет, циклдар, иш-чаралар жана иш-аракеттер жөнүндө үйрөнгүлө!"
+  tutorial_cajump_longdescription: "Лүсинин туулган күнүнө спорттук платформер оюнду түзүп жаткан Чарли менен Тиллиге кошул."
+  tutorial_carest_longdescription: "Food Avengers ресторанындагы Росско кошул. Компүтердик ой-жүгүртүүң менен ага маселелерди чечүүгө жана 8 ызы-чуу балдарга тамак берүүгө жардам бер."
+  tutorial_accai_longdescription: "Робот белгисиз планетага жиберилип, адам баласы жаңы турак жайын түзө алгандыгын үйрөнөт. Ал башкалка табыш үчүн планетаны изилдейт, ошентип жергиликтүү калкка туш келет. Оюнчу катары силер жасалма интеллекттин түрдүү ыкмаларын колдонуп роботко жаныбарлар менен өсүмдүктөрдү таанууга, жаңы тилди түшүнүүгө, жергиликтүү калк менен сүлөшүүгө ж. б. жардам бересиңер."
+  tutorial_vceclipse_longdescription: "2017'де биз жашообуздагы эң көрүнүктүү табигый кубулушка туш болдук, эми биз JavaScript менен күн тутулуусун симуляциялайбыз! Тутулуу деп кыймылдуу бөлүктөрдүн системин элестет; байкоолорубузду үлгүлөгөн интерактивдүү колдонмону түзүүгө биз ыкмалуу объекттерди, циклдарды жана шарттуулуктарды колдонуп маселени кесим өлчөмүндөгү бөлүктөргө бөлө алабыз."
+  tutorial_pmzero_longdescription: "1 саат ичинде Pac-Man оюндун жөнөкөй версиясын түз. 2D каармандарды тартып, аларды 3D'ге өзгөрт. Өз лабиринтиңди түз. Андан соң AgentCubes менен оюнду програмда. 11 гана IF/THEN эрежелери менен татаал AI'ду түз. 2 акылдуу арбактар менен сен бул оюнду жеңе аласың."
+  tutorial_hsela_longdescription: "Окуучулар сүйүктүү окуясын, ырын же тарыхый окуяны жандандырып, аңгеме элементтерин үйрөнүшөт. Код жазууну үйрөнүп, окуучулар тапкычтыгын билдирүүнүн жана башкалар менен кабарлашуунун башка формат жана медиага туш келишет. Аларга өз интерактивдүү окуяларын програмдаганды көрсөт. 1 сааттык окуу планы, код жазуу тажрыйбасы зарылсыз."
+  tutorial_ticklear_longdescription: "Силер КР (кеңейтилген реалдуулуктун) негизги концепттерин, анын колдонмолорун жана болочок мүмкүнчүлүктөрүн, ошондой эле КР/3D чөйрөдөгү кыймыл жана иш-чара блоктору менен програмдоонун негизги концепттерин үйрөнөсүңөр."
+  tutorial_bcrobot_longdescription: "Код жазуу менен автоматташтырылган түзүүнү үйрөтүүчү BlocksCAD ачык онлайн программалык камсыздоо менен окуучулар 3D кар бүртүгүн түзүшөт. Форма жана өтмө блоктор менен окуучулар компүтердей ойлонуп 3D'де чыгара алган нерселерди түзүшөт!"
+  tutorial_bcsnow_longdescription: "Код жазуу менен автоматташтырылган түзүүнү үйрөтүүчү BlocksCAD ачык онлайн программалык камсыздоо менен окуучулар 3D кар бүртүгүн түзүшөт. Форма, өтмө, айландыруу жана цикл блоктор менен окуучулар компүтердей ойлонуп 3D'де чыгара алган нерселерди түзүшөт!"
+  tutorial_ifly_longdescription: "Код саатына ылайыкташтырылган, окутуучу жетектеген тапшырма роботикс аркылуу физикалык системдерди үйрөнүүгө жол берет. Визуалдык сүйрөп-коюу програмдоо чөйрөсү менен дрондорду колдонуп окуучулар програмдалуучу жана алгоритм менен код аркылуу башкарылуучу физикалык системдерди үйрөнүшөт. Ичине кадамдык окуу планы, булактар жана үйрөнүү процессин кеңейтип байыткан идеялар кирет."
+  tutorial_idowedo_longdescription: "Код саатына ылайыкташтырылган, окутуучу жетектеген тапшырма физикалык програмдоону (роботикс) изилдегенге жол берет. Окуучулар кирпичтер менен үлгүлөрдү түзүп, аларды коддор менен жандандырышат! Визуалдык сүйрөп-коюу програмдоо чөйрөсү менен LEGO™ WeDo бөлүкчөлөрүн (кыймылдаткыч менен күпчөк жана кошумча сенсорлор) колдонуп, окуучулар алгоритм жана код аркылуу физикалык системдердин башкарылып, програмдалышын үйрөнүшөт. Ичине кадамдык окуу планы, булактар жана үйрөнүү процессин кеңейтип байыткан идеялар кирет."
+  tutorial_diggindwarf_longdescription: "Гномдорго асыл таштарды табып, казып жана чогултушка жардамың керек! Гномду лабиринттен чыгарууда JavaScript'ти колдонгонду үйрөн."
+  tutorial_rmedr_longdescription: "Robot Mesh Studio'до Blockly'ни колдонуп, лабиринттен өтүүчү VEX EDR \"тууроочу\" роботту онлайн програмда. Окуучулар негизги робот иш-аракеттерин жана програмдоолоруна 3 сенсор жана 1 чыгууну кантип кошушту үйрөнүшөт."
   tutorial_athlete_language: "Англисче, французча, испанча, италиянча, португалча (Бразилия)"
   tutorial_moana_language: "Англисче, арабча, кытайча (жөнөкөйлөштүрүлгөн), кытайча (салттуу), датча, нидерландча, финче, французча, немисче, индонезияча, итальянча, жапончо, корейче, норвежче, полякча, полинезияча (Самоа), португалча, орусча, испанча, шведча, түркчө, украинче, вьетнамча"
   tutorial_star-wars_language: "Англисче, арабча, болгарча, кытайча, хорватча, датча, нидерландча, финче, французча, немисче, грекче, исландияча, индонезияча, итальянча, жапончо, корейче, норвежче, парсча, полякча, португалча, румынча, орусча, испанча, шведче, түркчө, украинче, вьетнамча жана 19 башка тил"
@@ -1899,9 +1899,9 @@ ky:
   tutorial_tlcmicro_language: "Англисче гана"
   tutorial_imathematician_language: "Англисче гана"
   tutorial_tlcmagic_language: "Англисче гана"
-  tutorial_scratchmus_language: "Англисче, каталанчо, немисче, итальянча, норвежче, португалча, испанча"
+  tutorial_scratchmus_language: "Англисче, каталончо, немисче, итальянча, норвежче, португалча, испанча"
   tutorial_scratchanim_language: "Англисче, французча, немисче, итальянча, норвежче, португалча, испанча"
-  tutorial_scratchfly_language: "Англисче, каталанчо, итальянча, норвежче, португалча"
+  tutorial_scratchfly_language: "Англисче, каталончо, итальянча, норвежче, португалча"
   tutorial_tynkerarc_language: "Англисче гана"
   tutorial_grokffpython_language: "Англисче гана"
   tutorial_grokffblock_language: "Англисче гана"
@@ -1998,7 +1998,7 @@ ky:
   tutorial_grokem_language: "Англисче гана"
   tutorial_kodmaze_language: "Англисче гана"
   tutorial_codestersa_language: "Кытайча (салттуу), англисче, испанча"
-  tutorial_cmdodo_language: "Англисче, жөөт тилинде"
+  tutorial_cmdodo_language: "Англисче, еврейче"
   tutorial_tynkerspace_language: "Кытайча (жөнөкөйлөштүрүлгөн), англисче, французча, немисче, жапончо, испанча"
   tutorial_gfbloons_language: "Англисче гана"
   tutorial_raspipong_language: "Англисче гана"
@@ -2123,13 +2123,13 @@ ky:
   tutorial_cacrazy_language: "Англисче гана"
   tutorial_cajump_language: "Англисче гана"
   tutorial_carest_language: "Англисче гана"
-  tutorial_accai_language: "English, Danish, Dutch, French, German, Greek, Italian, Portuguese, Spanish"
+  tutorial_accai_language: "Англисче, датча, нидерландча, французча, немисче, грекче, итальянча, португалча, испанча"
   tutorial_vceclipse_language: "Англисче гана"
   tutorial_pmzero_language: "Англисче гана"
   tutorial_hsela_language: "Англисче гана"
   tutorial_ticklear_language: "Англисче гана"
-  tutorial_bcrobot_language: "Chinese, English, French, German, Norwegian, Slovenian, Spanish"
-  tutorial_bcsnow_language: "Chinese, English, French, German, Norwegian, Slovenian, Spanish"
+  tutorial_bcrobot_language: "Кытайча, англисче, французча, немисче, норвежче, словенче, испанча"
+  tutorial_bcsnow_language: "Кытайча, англисче, французча, немисче, норвежче, словенче, испанча"
   tutorial_ifly_language: "Англисче гана"
   tutorial_idowedo_language: "Англисче гана"
   tutorial_diggindwarf_language: "Англисче гана"
@@ -2221,7 +2221,7 @@ ky:
   tutorial_flatverse_string_detail_grades: "9+ класстар"
   tutorial_touchdevelop_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_tynkercc_string_detail_grades: "6+ класстар"
-  tutorial_bamboo_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_bamboo_string_detail_grades: "2-5-класстар"
   tutorial_robojav_string_detail_grades: "6+ класстар"
   tutorial_roboba_string_detail_grades: "6+ класстар"
   tutorial_knodsnake_string_detail_grades: "6-8-класстар"
@@ -2295,13 +2295,13 @@ ky:
   tutorial_besttech_string_detail_grades: "9+ класстар"
   tutorial_tlcbrain_string_detail_grades: "6+ класстар"
   tutorial_hopquiz_string_detail_grades: "6-8-класстар"
-  tutorial_unfortunate_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_unfortunate_string_detail_grades: "2-5-класстар"
   tutorial_cha_string_detail_grades: "6-8-класстар"
   tutorial_elaseq_string_detail_grades: "Алдын ала окуучу - 5 класс"
   tutorial_bbcmathi_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_tlcpixel_string_detail_grades: "2-8-класстар"
   tutorial_arduino_string_detail_grades: "6-8-класстар"
-  tutorial_introrobo_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_introrobo_string_detail_grades: "2-5-класстар"
   tutorial_tlcinvis_string_detail_grades: "2+ класстар"
   tutorial_tlcjflap_string_detail_grades: "6+ класстар"
   tutorial_procolor_string_detail_grades: "Алдын ала окуучу - 8-класс"
@@ -2310,7 +2310,7 @@ ky:
   tutorial_ticklel_string_detail_grades: "2+ класстар"
   tutorial_spiralsdash_string_detail_grades: "2-8-класстар"
   tutorial_ghdebug_string_detail_grades: "2-8-класстар"
-  tutorial_tlckk_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_tlckk_string_detail_grades: "2-5-класстар"
   tutorial_firstcomp_string_detail_grades: "Алдын ала окуучу - 1-класс"
   tutorial_mazefinch_string_detail_grades: "Алдын ала окуучу - 5 класс"
   tutorial_tlccc_string_detail_grades: "2-8-класстар"
@@ -2335,14 +2335,14 @@ ky:
   tutorial_grokflags_string_detail_grades: "6+ класстар"
   tutorial_robomind_string_detail_grades: "2-8-класстар"
   tutorial_scratchanimwork_string_detail_grades: "2-8-класстар"
-  tutorial_adventureq_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_adventureq_string_detail_grades: "2-5-класстар"
   tutorial_khan-es_string_detail_grades: "6+ класстар"
   tutorial_kpt_string_detail_grades: "6+ класстар"
   tutorial_kpl_string_detail_grades: "6+ класстар"
   tutorial_khe_string_detail_grades: "6+ класстар"
   tutorial_kfr_string_detail_grades: "6+ класстар"
   tutorial_app-inventor_string_detail_grades: "6+ класстар"
-  tutorial_bits_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_bits_string_detail_grades: "2-5-класстар"
   tutorial_blockly_string_detail_grades: "2+ класстар"
   tutorial_tynker_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_baypt_string_detail_grades: "Бардык курактагылар"
@@ -2351,13 +2351,13 @@ ky:
   tutorial_spellcraft_string_detail_grades: "6+ класстар"
   tutorial_pirates_string_detail_grades: "2-8-класстар"
   tutorial_csfirst_string_detail_grades: "2+ класстар"
-  tutorial_loopedy_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_loopedy_string_detail_grades: "2-5-класстар"
   tutorial_dsw_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_dswb_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_ssw_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_sswb_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_kodable-unplugged_string_detail_grades: "2-8-класстар"
-  tutorial_scratch_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_scratch_string_detail_grades: "2-5-класстар"
   tutorial_bayes_string_detail_grades: "Бардык курактагылар"
   tutorial_gumball_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_hrm_string_detail_grades: "6+ класстар"
@@ -2367,7 +2367,7 @@ ky:
   tutorial_rmc_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_smc_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_minecraft-2016_string_detail_grades: "көрсөтүүгө болбойт"
-  tutorial_thinkersmith-es_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_thinkersmith-es_string_detail_grades: "2-5-класстар"
   tutorial_pixie_string_detail_grades: "2+ класстар"
   tutorial_play_string_detail_grades: "көрсөтүүгө болбойт"
   tutorial_robomind-nl_string_detail_grades: "2-8-класстар"
@@ -2412,7 +2412,7 @@ ky:
   tutorial_computeit_string_detail_grades: "2+ класстар"
   tutorial_codesterssj_string_detail_grades: "2-8-класстар"
   tutorial_cmchat_string_detail_grades: "6+ класстар"
-  tutorial_tynkerdb_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_tynkerdb_string_detail_grades: "2-5-класстар"
   tutorial_cmbuild_string_detail_grades: "6+ класстар"
   tutorial_robotrattle_string_detail_grades: "2-8-класстар"
   tutorial_codestersh_string_detail_grades: "2-8-класстар"
@@ -2423,8 +2423,8 @@ ky:
   tutorial_grokem_string_detail_grades: "6+ класстар"
   tutorial_kodmaze_string_detail_grades: "Алдын ала окуучу - 5 класс"
   tutorial_codestersa_string_detail_grades: "2-8-класстар"
-  tutorial_cmdodo_string_detail_grades: "Алдын ала окуучу - 5 класс"
-  tutorial_tynkerspace_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_cmdodo_string_detail_grades: "2-5-класстар"
+  tutorial_tynkerspace_string_detail_grades: "2-5-класстар"
   tutorial_gfbloons_string_detail_grades: "9+ класстар"
   tutorial_raspipong_string_detail_grades: "9+ класстар"
   tutorial_codehsvr_string_detail_grades: "6+ класстар"
@@ -2439,7 +2439,7 @@ ky:
   tutorial_codehsjsgraph_string_detail_grades: "9+ класстар"
   tutorial_thunkable_string_detail_grades: "6+ класстар"
   tutorial_hopcrossyroad_string_detail_grades: "2-8-класстар"
-  tutorial_switchglitch_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_switchglitch_string_detail_grades: "2-5-класстар"
   tutorial_codecar_string_detail_grades: "6+ класстар"
   tutorial_codesterscp_string_detail_grades: "6-8-класстар"
   tutorial_grokpetblock_string_detail_grades: "6-8-класстар"
@@ -2448,7 +2448,7 @@ ky:
   tutorial_codesterscr_string_detail_grades: "2-8-класстар"
   tutorial_grokdisease_string_detail_grades: "9+ класстар"
   tutorial_techec_string_detail_grades: "Университет"
-  tutorial_rgbegin_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_rgbegin_string_detail_grades: "2-5-класстар"
   tutorial_myradream_string_detail_grades: "2-8-класстар"
   tutorial_thinkfun_string_detail_grades: "2-8-класстар"
   tutorial_hopfireworks_string_detail_grades: "2-8-класстар"
@@ -2456,7 +2456,7 @@ ky:
   tutorial_codehspython_string_detail_grades: "6+ класстар"
   tutorial_codehsjava_string_detail_grades: "9+ класстар"
   tutorial_techioda_string_detail_grades: "Университет"
-  tutorial_grokmonster_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_grokmonster_string_detail_grades: "2-5-класстар"
   tutorial_techmjs_string_detail_grades: "Университет"
   tutorial_techga_string_detail_grades: "Университет"
   tutorial_techioan_string_detail_grades: "Университет"
@@ -2464,22 +2464,22 @@ ky:
   tutorial_groktunnel_string_detail_grades: "6+ класстар"
   tutorial_stemcod_string_detail_grades: "6+ класстар"
   tutorial_techikb_string_detail_grades: "Университет"
-  tutorial_kanostreet_string_detail_grades: "Алдын ала окуучу - 5 класс"
-  tutorial_nyblebot_string_detail_grades: "Алдын ала окуучу - 5 класс"
-  tutorial_codemojijs_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_kanostreet_string_detail_grades: "2-5-класстар"
+  tutorial_nyblebot_string_detail_grades: "2-5-класстар"
+  tutorial_codemojijs_string_detail_grades: "2-5-класстар"
   tutorial_bloxmobmath_string_detail_grades: "6+ класстар"
   tutorial_techapf_string_detail_grades: "Университет"
   tutorial_techfpjs_string_detail_grades: "Университет"
   tutorial_techlinq_string_detail_grades: "Университет"
   tutorial_gpbcatapult_string_detail_grades: "6+ класстар"
   tutorial_quorumastro_string_detail_grades: "6+ класстар"
-  tutorial_alicewonder_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_alicewonder_string_detail_grades: "2-5-класстар"
   tutorial_rginter_string_detail_grades: "6-8-класстар"
   tutorial_bloxmobscience_string_detail_grades: "6+ класстар"
   tutorial_cssgrid_string_detail_grades: "6+ класстар"
   tutorial_bloxmobdesign_string_detail_grades: "6+ класстар"
   tutorial_jshero_string_detail_grades: "9+ класстар"
-  tutorial_codemojipy_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_codemojipy_string_detail_grades: "2-5-класстар"
   tutorial_bloxmobcomp_string_detail_grades: "6+ класстар"
   tutorial_nclabdrone_string_detail_grades: "6+ класстар"
   tutorial_gpbcircle_string_detail_grades: "6+ класстар"
@@ -2512,11 +2512,11 @@ ky:
   tutorial_isavesanta_string_detail_grades: "2-8-класстар"
   tutorial_iorder_string_detail_grades: "2-8-класстар"
   tutorial_ianimate_string_detail_grades: "2-8-класстар"
-  tutorial_iloveada_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_iloveada_string_detail_grades: "2-5-класстар"
   tutorial_kodflash_string_detail_grades: "Алдын ала окуучу - 5 класс"
-  tutorial_kodchoose_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_kodchoose_string_detail_grades: "2-5-класстар"
   tutorial_kodpizzapre_string_detail_grades: "Алдын ала окуучу - 1-класс"
-  tutorial_kodpizza_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_kodpizza_string_detail_grades: "2-5-класстар"
   tutorial_kodwomen_string_detail_grades: "2-8-класстар"
   tutorial_tfunplug_string_detail_grades: "6-8-класстар"
   tutorial_lbvariables_string_detail_grades: "2-8-класстар"
@@ -2528,9 +2528,9 @@ ky:
   tutorial_lbpotato_string_detail_grades: "2+ класстар"
   tutorial_lbguitar_string_detail_grades: "2+ класстар"
   tutorial_lbio_string_detail_grades: "2-8-класстар"
-  tutorial_wonpuppy_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_wonpuppy_string_detail_grades: "2-5-класстар"
   tutorial_woncue_string_detail_grades: "2+ класстар"
-  tutorial_wonzoo_string_detail_grades: "Алдын ала окуучу - 5 класс"
+  tutorial_wonzoo_string_detail_grades: "2-5-класстар"
   tutorial_wontrip_string_detail_grades: "2-8-класстар"
   tutorial_woncollect_string_detail_grades: "Алдын ала окуучу - 5 класс"
   tutorial_wonsecret_string_detail_grades: "6+ класстар"
@@ -2935,37 +2935,37 @@ ky:
   tutorial_floevents_string_platforms: "Офлайн"
   tutorial_florobot_string_platforms: "Офлайн"
   tutorial_isavesanta_string_platforms: "Бардык жаңы браузерлер"
-  tutorial_iorder_string_platforms: "All modern borwsers"
+  tutorial_iorder_string_platforms: "Бардык жаңы браузерлер"
   tutorial_ianimate_string_platforms: "Бардык жаңы браузерлер, iPad"
-  tutorial_iloveada_string_platforms: "All modern borwsers"
+  tutorial_iloveada_string_platforms: "Бардык жаңы браузерлер"
   tutorial_kodflash_string_platforms: "Офлайн"
   tutorial_kodchoose_string_platforms: "Офлайн"
   tutorial_kodpizzapre_string_platforms: "Офлайн"
   tutorial_kodpizza_string_platforms: "Офлайн"
   tutorial_kodwomen_string_platforms: "Офлайн"
   tutorial_tfunplug_string_platforms: "Офлайн"
-  tutorial_lbvariables_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbfunctions_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lblogic_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbworld_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbloops_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbtug_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbpotato_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbguitar_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbio_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_wonpuppy_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dash robot"
-  tutorial_woncue_string_platforms: "iPads, iPhones, Android tablets, Android phones, Cue robot"
-  tutorial_wonzoo_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dot robot"
-  tutorial_wontrip_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dash robot"
-  tutorial_woncollect_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dash robot"
-  tutorial_wonsecret_string_platforms: "iPads, iPhones, Android tablets, Android phones, Cue robot"
+  tutorial_lbvariables_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lbfunctions_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lblogic_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lbworld_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lbloops_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lbtug_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lbpotato_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lbguitar_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_lbio_string_platforms: "Бардык жаңы браузерлер, littleBits Code Kit"
+  tutorial_wonpuppy_string_platforms: "iPad'тар, iPhone'дор, андроид планшеттери, андроид телефондору, Dash роботу"
+  tutorial_woncue_string_platforms: "iPad'тар, iPhone'дор, андроид планшеттери, андроид телефондору, Cue роботу"
+  tutorial_wonzoo_string_platforms: "iPad'тар, iPhone'дор, андроид планшеттери, андроид телефондору, Dot роботу"
+  tutorial_wontrip_string_platforms: "iPad'тар, iPhone'дор, андроид планшеттери, андроид телефондору, Dash роботу"
+  tutorial_woncollect_string_platforms: "iPad'тар, iPhone'дор, андроид планшеттери, андроид телефондору, Dash роботу"
+  tutorial_wonsecret_string_platforms: "iPad'тар, iPhone'дор, андроид планшеттери, андроид телефондору, Cue роботу"
   tutorial_hsscience_string_platforms: "iPad, iPhone"
   tutorial_popculture_string_platforms: "Бардык жаңы браузерлер, Android планшети, Android телефону"
-  tutorial_legorobust_string_platforms: "All modern browsers, Android tablet, iPad, WeDo 2.0"
-  tutorial_legoplants_string_platforms: "All modern browsers, Android tablet, iPad, WeDo 2.0"
-  tutorial_legopark_string_platforms: "All modern browsers, Android tablet, iPad, MINDSTORMS® EV3"
-  tutorial_legodetect_string_platforms: "All modern browsers, Android tablet, iPad, MINDSTORMS® EV3"
-  tutorial_legolight_string_platforms: "All modern browsers, Android tablet, iPad, MINDSTORMS® EV3"
+  tutorial_legorobust_string_platforms: "Бардык жаңы браузерлер, андроид планшети, iPad, WeDo 2.0"
+  tutorial_legoplants_string_platforms: "Бардык жаңы браузерлер, андроид планшети, iPad, WeDo 2.0"
+  tutorial_legopark_string_platforms: "Бардык жаңы браузерлер, андроид планшети, iPad, MINDSTORMS® EV3"
+  tutorial_legodetect_string_platforms: "Бардык жаңы браузерлер, андроид планшети, iPad, MINDSTORMS® EV3"
+  tutorial_legolight_string_platforms: "Бардык жаңы браузерлер, андроид планшети, iPad, MINDSTORMS® EV3"
   tutorial_alexa_string_platforms: "Бардык жаңы браузерлер"
   tutorial_grokpetmicro_string_platforms: "Бардык жаңы браузерлер"
   tutorial_pirateplunder_string_platforms: "Chrome, Firefox"
@@ -2980,8 +2980,8 @@ ky:
   tutorial_ticklear_string_platforms: "iPad, iPhone"
   tutorial_bcrobot_string_platforms: "Chrome, Firefox, Safari"
   tutorial_bcsnow_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_ifly_string_platforms: "Android tablet, iPad, Parrot Minidrones"
-  tutorial_idowedo_string_platforms: "All modern browsers, Android tablet, iPad, WeDo"
+  tutorial_ifly_string_platforms: "Андроид планшети, iPad, Тоту куш кичи дрондору"
+  tutorial_idowedo_string_platforms: "Бардык жаңы браузерлер, андроид планшети, iPad, WeDo"
   tutorial_diggindwarf_string_platforms: "Chrome, Firefox, Safari"
   tutorial_rmedr_string_platforms: "Бардык жаңы браузерлер"
   tutorial_athlete_string_detail_platforms: ""
@@ -3379,11 +3379,11 @@ ky:
   tutorial_lbguitar_string_detail_platforms: "littleBits Code Kit"
   tutorial_lbio_string_detail_platforms: "littleBits Code Kit"
   tutorial_wonpuppy_string_detail_platforms: "Dash роботу"
-  tutorial_woncue_string_detail_platforms: "Cue robot"
-  tutorial_wonzoo_string_detail_platforms: "Dot robot"
+  tutorial_woncue_string_detail_platforms: "Cue роботу"
+  tutorial_wonzoo_string_detail_platforms: "Dot роботу"
   tutorial_wontrip_string_detail_platforms: "Dash роботу"
   tutorial_woncollect_string_detail_platforms: "Dash роботу"
-  tutorial_wonsecret_string_detail_platforms: "Cue robot"
+  tutorial_wonsecret_string_detail_platforms: "Cue роботу"
   tutorial_hsscience_string_detail_platforms: ""
   tutorial_popculture_string_detail_platforms: ""
   tutorial_legorobust_string_detail_platforms: "WeDo 2.0"
@@ -3405,7 +3405,7 @@ ky:
   tutorial_ticklear_string_detail_platforms: ""
   tutorial_bcrobot_string_detail_platforms: ""
   tutorial_bcsnow_string_detail_platforms: ""
-  tutorial_ifly_string_detail_platforms: "Parrot Minidrones"
+  tutorial_ifly_string_detail_platforms: "Тоту куш кичи дрондору"
   tutorial_idowedo_string_detail_platforms: "WeDo"
   tutorial_diggindwarf_string_detail_platforms: ""
   tutorial_rmedr_string_detail_platforms: ""
@@ -3850,7 +3850,7 @@ ky:
   census_how_many_twenty_hours: "Канча окуучу 20 сааттан аз эмес код жазуу/компүтер програмдоо сабактарын камтыган жылдык же бир семестрдик информатика курсун алат?"
   census_other_cs: "Бул мектепте минимум 20 сааттык код жазуу/компүтер програмдоо курстарынан тышкары башка информатика курстарын камтыйт. (Мисалы, колдонмолорду колдонуу, компүтердик сабаттуулук, веб-дизайн, HTML/CSS же башкалар)"
   census_connection: "Бул мектеп менен кандай байланыштасыңар?"
-  census_pledge: "Мен метебимде информатика боюнча сунуштарды жаюуга жана баарына мүмкүнчүлүк түзүш үчүн окуучулардын ар түрдүү топторун үндөөгө убада берем."
+  census_pledge: "Мен мектебимде информатика боюнча сунуштарды жаюуга жана баарына мүмкүнчүлүк түзүш үчүн окуучулардын ар түрдүү топторун үндөөгө убада берем."
   census_followup_heading: "Мектебиңер бир семестрдик же бир жылдык информатика курсун сунуштайт! Бул курста кандай темалар камтылган?"
   census_followup_frequency: "Бул класстын жолугушуулары жума сайын канча жолу өтөт?"
   less_than_one: "< 1 жумада 1 саат"

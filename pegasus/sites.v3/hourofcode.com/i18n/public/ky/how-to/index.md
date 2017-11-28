@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -13,11 +13,11 @@ nav: how_to_nav
 
 ## 2. Жетектеме тандаңыз
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+Биз бардык курактагы катышуучуларга, бардык тажрыйба деңгээлдерине туура келген [окуучулар даярдаган ](<%= resolve_url('/learn') %>) кызыктуу көнүгүүлөрдү камсыздайбыз. Окуучулар тапшырмаларды өз алдынча аткарышат, мугалимдер талкууларды жетектеп же тапшырманы кеңейте алышы үчүн тапшырмалардын көбү окуу планын дагы камтыйт (тапшырманы басканда шилтеме көрүнөт). [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Код саатыңызды жарнамалаңыз
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
+Код сааты иш-чараңызды [бул жарактар](<%= resolve_url('/promote') %>) менен илгерилетип, башкаларды дагы иш-чара өткөзүүгө чакыргыла.
 
 ## 4. Керектүү техниканы пландаштыруу - компүтерлер, бар болсо
 
@@ -33,14 +33,14 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 ## 5. Код саатын шыктандыруучу сөз айткан киши же видео менен баштагыла
 
-**Invite a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Компүтердик технологиялардын кеңири мүмкүнчүлүктөрү тууралуу шыктандыра сүлөп берүүчү [жергиликтүү ыктыярчыларды](<%= resolve_url('https://code.org/volunteer/local') %>) чакыргыла**. Код саатыңызды өткөзүүгө класска келип же видеочат аркылуу жардам берүүгө даяр миңдеген ыктыярчылар бар!
 
 **Шыктандыруучу видео көрсөткүлө:**
 
 - Билл Гейтс, Марк Цукерберг жана NBA жылдызы Крис Бош тартылган Code.org тааныштыруу видеосу. (Анын [1 мүнөт](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 мүнөт](https://www.youtube.com/watch?v=nKIu9yen5nc) жана [9 мүнөт](https://www.youtube.com/watch?v=dU1xS07N-FA) версиялары бар)
 - Дагы башка шыктандыруучу [ресурстар](<%= resolve_url('https://code.org/inspire') %>) жана [виделор](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Өзүңүз жана окуучуларыңыз дагы компүтер менен тааныш болбосо - эч нерсе эмес. Код сааты иш-чараңызды тааныштыруунун айрым идеялары:**
 
 - Технологиянын жашообузга тийгизген таасиринен мисал бергиле - балдарга жана кыздарга тең кызык болсун (өмүр сактаган, жардам берген, кишилерди байланыштырган ж. б.).
 - Класс катары, турмуштагы код колдонгон нерселердин тизмеси.
@@ -48,17 +48,17 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 ## 6. Код жазгыла!
 
-**Direct students to the activity**
+**Катышуучуларды ишке багыттагыла**
 
 - Жетектеменин шилтемесин тактага жазгыла. Тизмеден катышуучулардын санына жараша[тандалган жетектеменин маалыматына](<%= resolve_url('/learn')%>) шилтемени тапкыла.
 
-**When your students come across difficulties it's okay to respond:**
+**Окуучулар кыйынчылыкка дуушар болгондо мындай жооп берсе болот:**
 
 - "Мен билбейм. Келгиле, чогуу карап көрөлү."
 - "Технологиялар дайым эле биз каалагандай иштей бербейт."
 - "Програмдык тилди үйрөнүү жаңы тил үйрөнгөндөй; шыр эле эркин сүйлөп кете албайсың."
 
-**What if a student finishes early?**
+**Окуучу эрте бүтсө эмне кылабыз?**
 
 - Окуучулар [ кирип, Код саатынынын башка тапшырмаларын иштеп көрө алышат](<%= resolve_url('/learn')%>).
 - Же эрте бүткөн окуучулардан кыйналып жаткан досторуна жардам берүүсүн сурангыла.

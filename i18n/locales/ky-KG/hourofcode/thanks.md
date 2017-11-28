@@ -1,20 +1,20 @@
 ---
-title: '<%= hoc_s(:title_signup_thanks) %>'
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": '<%= hoc_s(:meta_tag_og_title) %>'
-  "og:description": '<%= hoc_s(:meta_tag_og_description) %>'
-  "og:image": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "og:title": <%= hoc_s(:meta_tag_og_title) %>
+  "og:description": <%= hoc_s(:meta_tag_og_description) %>
+  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": 'http://<%=request.host%>'
-  "twitter:card": оюнчу
+  "og:url": http://<%=request.host%>
+  "twitter:card": 'оюнчу'
   "twitter:site": '@codeorg'
-  "twitter:url": 'http://<%=request.host%>'
-  "twitter:title": '<%= hoc_s(:meta_tag_twitter_title) %>'
-  "twitter:description": '<%= hoc_s(:meta_tag_twitter_description) %>'
-  "twitter:image:src": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "twitter:url": http://<%=request.host%>
+  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
+  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
+  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -22,7 +22,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Код саатын кабыл алуу үчүн катталганыңызга ырахмат!
 
-Окуучуларга информатиканы үйрөнү баштоого жардам бергениңиз үчүн, класстык бөлмөңөргө мыкты сапатта түрдүү роль аткарып ойнолуучу каармандар менен бастырылган плакаттарды бекер тартуулайбыз. Текшермеде **FREEPOSTERS** кодун колдонгула. (Эскертүү: бар болсо гана берилет жана жеткирүү чыгымын сиз төлөшүңүз керек болот. Бул постерлердин Акшдан жиберилгенинен, Канадага же башка чет мамлекеттерге заказ кылынганда жеткирип берүүнүн баасы жогору болушу мүмкүн. Постерлерди сатып алууга мүмкүнчүлүгүңүз жок болгондугун түшүнүп, силердин класстарыңарга бул [PDF файлдарын ](https://code.org/inspire) чыгарып алууну сунуштайбыз.)  
+Окуучуларга информатиканы үйрөнү баштоого жардам бергениңиз үчүн, класстык бөлмөңөргө мыкты сапатта түрдүү роль аткарып ойнолуучу каармандар менен бастырылган плакаттарды бекер тартуулайбыз. Текшермеде **FREEPOSTERS** кодун колдонгула. (Эскертүү: бар болсо гана берилет жана жеткирүү чыгымын сиз төлөшүңүз керек болот. Бул постерлердин АКШдан жиберилгенинен, Канадага же башка чет мамлекеттерге заказ кылынганда жеткирип берүүнүн баасы жогору болушу мүмкүн. Постерлерди сатып алууга мүмкүнчүлүгүңүз жок болгондугун түшүнүп, силердин класстарыңарга бул [PDF файлдарын ](https://code.org/inspire) чыгарып алууну сунуштайбыз.)  
 <br /> Постерлерди жүктөп алыш үчүн</button> АКЫСЫЗПОСТЕРЛЕР кодун колдонгула</p> 
 
 <% if @country == 'us' %> Ozobot, Dexter Industries, littleBits жана Wonder Workshop кең пейилдиги менен 100дөн ашык класс роботторду жана схемалар берүү үчүн тандалат! Топтомдорду алыш үчүн Код саатынан кийин Code.org жөнөткөн сурамжылоону толук толтурган болушуңар керек. Жеңүүчү классты Code.org тандап алат. Азырынча айрым роботтор жана схемалар менен таанышып чыгыңыз. Бул АКШ мектептери үчүн гана экенин эске алыңыз. <% end %>
