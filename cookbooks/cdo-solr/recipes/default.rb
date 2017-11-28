@@ -5,12 +5,21 @@
 
 include_recipe 'cdo-java-7'
 
-remote_file "#{Chef::Config[:file_cache_path]}/solr-#{node['cdo-solr']['version']}.tgz" do
-  source "https://cdo-lib.s3.amazonaws.com/solr-#{node['cdo-solr']['version']}.tgz"
+version = node['cdo-solr']['version']
+solr = "solr-#{version}"
+
+poise_service_user 'solr'
+
+ark 'solr' do
+  version version
+  url "https://cdo-lib.s3.amazonaws.com/#{solr}.tgz"
+  checksum node['cdo-solr']['checksum']
+  owner 'solr'
+  group 'solr'
 end
 
-execute "tar xvf #{Chef::Config[:file_cache_path]}/solr-#{node['cdo-solr']['version']}.tgz" do
-  command "tar xvf #{Chef::Config[:file_cache_path]}/solr-#{node['cdo-solr']['version']}.tgz"
-  cwd "/home/#{node[:current_user]}"
-  creates "/home/#{node[:current_user]}/solr-#{node['cdo-solr']['version']}"
+poise_service 'solr' do
+  command 'java -jar start.jar > solr.log 2>&1'
+  user 'solr'
+  directory '/usr/local/solr/example'
 end
