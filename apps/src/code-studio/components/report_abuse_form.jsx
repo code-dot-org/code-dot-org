@@ -67,7 +67,13 @@ export default class ReportAbuseForm extends React.Component {
    * @returns {string} Channel id, or undefined if we can't get one.
    */
   getChannelId() {
-    const match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(this.props.abuseUrl);
+    const abuseUrl = this.props.abuseUrl;
+    let match;
+    if (abuseUrl.indexOf('codeprojects') >= 0) {
+      match = /.*codeprojects.*[^\/]+\/([^\/]+)/.exec(abuseUrl);
+    } else {
+      match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(abuseUrl);
+    }
     return match && match[1];
   }
 
