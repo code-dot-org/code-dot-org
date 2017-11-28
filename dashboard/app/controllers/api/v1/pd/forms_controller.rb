@@ -11,7 +11,7 @@ class Api::V1::Pd::FormsController < ::ApplicationController
     form.form_data_hash = JSON.parse(form_data_json)
 
     # Check for idempotence
-    existing_form = form.find_existing
+    existing_form = form.check_idempotency
     return render json: {id: existing_form.id}, status: :ok if existing_form
 
     if form.save
