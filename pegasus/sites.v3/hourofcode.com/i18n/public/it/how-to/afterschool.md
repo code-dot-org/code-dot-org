@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Come insegnare un'Ora del Codice nel doposcuola
 
-Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! Se hai bisogno di una mano, puoi trovare un [volontario locale](<%= resolve_url('https://code.org/volunteer/local') %>) che ti aiuti a tenere l'Ora del Codice nella tua aula (inizialmente solo per gli USA).
+Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! Se hai bisogno di una mano, puoi trovare (solo per gli USA) un [volontario locale](<%= resolve_url('https://code.org/volunteer/local') %>) che ti aiuti a tenere l'Ora del Codice nella tua aula.
 
 ## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

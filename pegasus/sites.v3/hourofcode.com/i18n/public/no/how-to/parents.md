@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_parents) %>'
+title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -13,43 +13,43 @@ Ta en Kodetime hjemme, eller tilby å ta en Kodetime i ditt barns klasserom! Her
 
 ## 2) Velg en oppgave:
 
-Vi tilbyr en rekke morsomme, timelange innføringer for studenter i alle aldre, laget av mange ulike partnere. [Prøv dem ut!](<%= resolve_url('/learn') %>)
+Vi tilbyr en rekke morsomme, timelange oppgaver for elever og studenter i alle aldre. [Prøv dem ut!](<%= resolve_url('/learn') %>)
 
-**Alle Kodetime-innføringer gjennomføres på egenhånd. På den måten kan barnet ditt jobbe i eget tempo og ut fra sitt ferdighetsnivå**
+**Alle Kodetime-aktivitetene inneholder instruksjoner. På den måten kan barnet ditt jobbe i sitt eget tempo og ut fra sitt ferdighetsnivå.**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Planlegg dine teknologibehov
+## 3) Planlegg ditt utstyrsbehov
 
-Den beste Kodetimeopplevelsen vil være med datamaskiner koblet til internett. Men du **trenger ikke** en datamaskin. Det er mange aktiviteter som kan gjøres uten oppkobling, og kan gjøres uten noen teknologi overhode.
+Den beste opplevelsen får dere med datamaskiner koblet til internett. Men du **trenger ikke** en datamaskin. Det er mange aktiviteter som kan gjøres uten nettilgang, og endel kan utføres helt uten bruk av datamaskin.
 
-- Prøv å gå igjennom et av undervisningsoppleggene fra elevenes pc-er på forhånd. Sjekk at både lyd og video fungerer optimalt.
-- **Vil lære sammen med barnet?** Prøv [par programmering.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Informatikk er sosialt og egnet for samarbeid.
+- Kjør gjennom hele undervisningsopplegget på forhånd. Sjekk at både lyd og video fungerer i nettleseren.
+- **Vil du lære sammen med barnet ditt?** Prøv [par-programmering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Informatikk er en sosial disiplin som egner seg godt for samarbeid.
 
 ## 5) Start Kodetimen med en inspirerende video
 
-Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i dagliglivet.
+Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i hverdagen.
 
 **Vis en inspirerende video:**
 
 - Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh var med i den opprinnelige lanseringsvideoen for Code.org (Det finnes versjoner på [ett minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Den internasjonale [Kodetimen-videoen](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama oppfordrer alle elever til å lære datavitenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Finn flere inspirerende [ressurser](<%= resolve_url('https://code.org/inspire') %>) og [videoer](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-Det er helt greit om du og ditt barn ikke har datakompetanse fra før. Her er noen ideer til hvordan du kan introdusere Kodetimen din:
+Det er helt greit om hverken du eller barnet ditt har noen erfaring med informatikk fra før. Her er noen ideer til hvordan du kan presentere Kodetimen:
 
 - Forklar hvordan teknologi påvirker livene våre, gjerne med eksempler som både jenter og gutter kan kjenne seg igjen i (snakk f. eks. om å redde liv, hjelpe andre eller knytte mennesker sammen).
-- Fortell om ting fra hverdagen som inneholder kode.
-- Se tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls') %>).
+- Fortell om ting vi bruker i hverdagen som inneholder kode.
+- Vi har samlet [noen tips](<%= resolve_url('https://code.org/girls') %>) for å få jenter mer interessert i informatikk.
 
-Ønsker du flere ideer? Sjekk ut vår [mal læringsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) for beste praksis fra erfarne lærere.
+Trenger du flere ideer og forslag? I vårt [forslag til læringsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) finner du tips og triks fra erfarne lærere.
 
-## 5) Kode!
+## 5) Koding!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-Når du har valgt innføringen du ønsker, kan du bokmerke innføringens lenke.
+Når du har funnet en innføringsoppgave du vil bruke, kan du lagre adressen til oppgaven som bokmerke.
 
 **Når barnet møter problemer**
 
