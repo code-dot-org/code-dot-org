@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_partners) %>'
+title: <%= hoc_s(:title_partners) %>
 ---
 The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
