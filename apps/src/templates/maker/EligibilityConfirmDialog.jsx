@@ -60,7 +60,6 @@ export default class EligibilityConfirmDialog extends Component {
     // TODO: extract actual signature and make an ajax POST
     // fake async for now
     setTimeout(() => {
-      // TODO: now show discount code info page
       this.setState({
         submitting: false,
       });
