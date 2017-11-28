@@ -498,7 +498,8 @@ StudioApp.prototype.init = function (config) {
 };
 
 StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
-  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
+  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon &&
+      $("#projectTemplateWorkspaceIcon").is(":visible")) {
     // The callouts can't appear until the DOM is 100% rendered by react. The
     // safest method is to kick off a requestAnimationFrame from an async
     // setTimeout()
