@@ -106,14 +106,17 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
     sponsor = donor[:name_s]
   end
 
-  Magick::Draw.new.annotate(image, 0, 0, 0, 160, "#{sponsor} made the generous gift to sponsor your learning.") do
-    self.gravity = Magick::SouthGravity
-    self.pointsize = 24
-    self.font_family = 'Times'
-    self.font_weight = Magick::BoldWeight
-    self.stroke = 'none'
-    self.fill = 'rgb(87,87,87)'
+  unless ScriptConstants.script_in_category?(:minecraft, course)
+    Magick::Draw.new.annotate(image, 0, 0, 0, 160, "#{sponsor} made the generous gift to sponsor your learning.") do
+      self.gravity = Magick::SouthGravity
+      self.pointsize = 24
+      self.font_family = 'Times'
+      self.font_weight = Magick::BoldWeight
+      self.stroke = 'none'
+      self.fill = 'rgb(87,87,87)'
+    end
   end
+
   image
 end
 
