@@ -181,7 +181,8 @@ class SectionActionDropdown extends Component {
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
-          {sectionData.loginType !== (OAuthSectionTypes.clever || OAuthSectionTypes.google_classroom)}
+          {(sectionData.loginType !== OAuthSectionTypes.google_classroom &&
+            sectionData.loginType !== OAuthSectionTypes.clever) &&
             <PopUpMenu.Item
               href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}/print_signin_cards`)}
             >
