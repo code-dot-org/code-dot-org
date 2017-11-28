@@ -56,19 +56,20 @@ class Api::V1::Census::CensusController < ApplicationController
       errors[:nces_school_s] = "School id not found"
     end
 
-    if school
-      attrs = {school_id: school.id}
-    else
-      attrs = {
-        country: params[:country_s],
-        school_type: params[:school_type_s],
-        state: params[:school_state_s],
-        zip: params[:school_zip_s],
-        school_name: params[:school_name_s],
-        full_address: params[:school_location],
-        validation_type: SchoolInfo::VALIDATION_NONE
-      }
-    end
+    attrs =
+      if school
+        {school_id: school.id}
+      else
+        {
+          country: params[:country_s],
+          school_type: params[:school_type_s],
+          state: params[:school_state_s],
+          zip: params[:school_zip_s],
+          school_name: params[:school_name_s],
+          full_address: params[:school_location],
+          validation_type: SchoolInfo::VALIDATION_NONE
+        }
+      end
 
     school_info = get_duplicate_school_info(attrs)
     unless school_info
