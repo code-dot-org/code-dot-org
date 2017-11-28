@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_officials) %>'
+title: <%= hoc_s(:title_how_to_officials) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## 讓每個學校都能參與，每個學生都能學習！
 
-1. **閱讀我們的一頁式介紹**以了解為什麼計算機科學如此重要，還有你可以如何盡一己之力幫助一小時玩程式活動。 [Get the one-pager here.](/files/hoc-one-pager.pdf)
+1. **閱讀我們的一頁式介紹**以了解為什麼計算機科學如此重要，還有你可以如何盡一己之力幫助一小時玩程式活動。 [ 在這裡獲取一個呼叫器. ](/files/hoc-one-pager.pdf)
 
 2. **招募當地的學校和地區。**使用[此電子郵件](%= resolve_url('/promote/resources#sample-emails') %)或<[此引言](%= resolve_url('/promote/stats') %)為切入點，同時看看[地區與學校的相關指引](%= resolve_url('/how-to') %)
 
