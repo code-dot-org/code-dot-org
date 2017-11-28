@@ -4,7 +4,10 @@
 #
 
 # Update Chef Client to version specified by node['omnibus_updater']['version'].
-include_recipe 'omnibus_updater'
+chef_client_updater 'install' do
+  version node['omnibus_updater']['version']
+  post_install_action Chef::Config[:interval] ? 'kill' : 'exec'
+end
 
 include_recipe 'apt'
 include_recipe 'sudo-user'
