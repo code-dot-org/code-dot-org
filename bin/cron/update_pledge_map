@@ -70,11 +70,7 @@ begin
       school = DASHBOARD_DB[:schools].where(id: school_id).first
       next unless school
 
-      if pledged
-        type = "pledged"
-      else
-        type = "teaches_cs"
-      end
+      type = pledged ? "pledged" : "teaches_cs"
 
       row_id = "FORMS-#{form[:id]}"
       row = [row_id, school[:name], school[:zip], school[:city], type]
