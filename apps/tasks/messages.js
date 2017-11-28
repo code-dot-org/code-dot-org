@@ -10,8 +10,11 @@ module.exports = function (grunt) {
       filePair.src.forEach(function (src) {
         var locale = path.basename(src, '.json');
         var namespace = path.basename(filePair.dest).split('.js')[0];
+        var englishData = grunt.file.readJSON(src.replace(locale, 'en_us'));
+        var localeData = grunt.file.readJSON(src);
+        var finalData = Object.assign(englishData, localeData);
         try {
-          var formatted = process(locale, namespace, grunt.file.readJSON(src));
+          var formatted = process(locale, namespace, finalData);
           grunt.file.write(filePair.dest, formatted);
         } catch (e) {
           var errorMsg = "Error processing localization file " + src + ": " + e;
