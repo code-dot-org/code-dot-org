@@ -299,11 +299,11 @@ function throwOnConsoleEverywhere(methodName) {
       afterEach(function () {
         if (console[methodName].restore) {
           console[methodName].restore();
-          if (firstInstance) {
-            throw new Error(firstInstance);
-          }
-          firstInstance= null;
         }
+        if (firstInstance) {
+          throw new Error(firstInstance);
+        }
+        firstInstance = null;
       });
     },
 

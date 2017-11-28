@@ -44,6 +44,7 @@ class XhrProxyController < ApplicationController
     enclout.com
     githubusercontent.com
     googleapis.com
+    hamlin.myschoolapp.com
     herokuapp.com
     isenseproject.org
     lakeside-cs.org

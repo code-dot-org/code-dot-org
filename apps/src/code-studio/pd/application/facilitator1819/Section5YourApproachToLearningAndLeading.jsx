@@ -1,14 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {FormGroup} from "react-bootstrap";
-import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
+import ApplicationFormComponent from "../ApplicationFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
-export default class Section5YourApproachToLearningAndLeading extends Facilitator1819FormComponent {
-  static propTypes = {
-    ...Facilitator1819FormComponent.propTypes,
-    accountEmail: PropTypes.string.isRequired
-  };
-
+export default class Section5YourApproachToLearningAndLeading extends ApplicationFormComponent {
   static labels = PageLabels.section5YourApproachToLearningAndLeading;
 
   static associatedFields = [
