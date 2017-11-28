@@ -24,7 +24,6 @@ class CoursesStudentEnglish extends Component {
       <div>
         <CourseBlocksStudentGradeBands
           isRtl={isRtl}
-          responsive={responsive}
           showContainer={true}
           hideBottomMargin={false}
         />
@@ -35,7 +34,6 @@ class CoursesStudentEnglish extends Component {
           isRtl={isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
-          responsive={responsive}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
