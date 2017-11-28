@@ -32,6 +32,7 @@ export default class DiscountCodeSchoolChoice extends Component {
   }
 
   handleDropdownChange = (field, event) => {
+    console.log(field, event);
     if (field === 'nces') {
       this.setState({
         schoolId: event.value,
@@ -89,7 +90,7 @@ export default class DiscountCodeSchoolChoice extends Component {
             text={confirming ? i18n.confirming() : i18n.confirmSchool()}
             onClick={this.handleClickConfirmSchool}
             style={styles.button}
-            disabled={confirming}
+            disabled={confirming || !this.state.schoolId}
           />
         )}
         {this.state.schoolId === "-1" && (
