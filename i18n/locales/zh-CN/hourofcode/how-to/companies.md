@@ -12,7 +12,7 @@ nav: how_to_nav
 Code.org 可以让你的员工通过[](%= resolve_url('https://code.org/volunteer') %)志愿者身份和那些当地编程一小时课程的学生互动。他们可以通过分享技术工作上的经验里激励学生学习计算机科学的意愿。
 
 - [报名志愿者](%= resolve_url('https://code.org/volunteer') %)。
-- 请参阅[公司合作伙伴指南来获取如果鼓励员工，让他们和当地课堂互动的信息。](%= localized_file('/files/hoc-corporate-toolkit.pdf') %)
+- 请参阅[公司合作伙伴指南](%= localized_file('/files/hoc-corporate-toolkit.pdf') %)来了解如何鼓励员工参与、如何快速融入课堂的有关信息。
 
 ## 其他一些公司可以支持编程一小时活动的方式：
 

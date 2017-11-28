@@ -1,21 +1,21 @@
 ---
-title: '<%= hoc_s(:title_how_to_parents) %>'
-layout: wide
+title: <%= hoc_s(:title_how_to_parents) %>
+layout: breidt
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
 # Slik fullfører du ein Kodetime med barnet ditt
 
-Fullføre ein Kodetime heime, eller meld deg som frivillig til å rettleie i klasserommet til barnet ditt! Slik gjer du det:
+Fullfør ein Kodetime heime, eller meld deg som frivillig til å rettleie i klasserommet til barnet ditt! Slik gjer du det:
 
-## 2) Sjå denne Korleis gjer ein det videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Sjå denne 'Slik gjer ein det'- videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3) Vel ein videoguide:
+## 2) Vel ei oppgåve:
 
-Vi tilbyr en rekke morsomme, timelange innføringer for studenter i alle aldre, laget av mange ulike partnere. [Prøv dem ut!](%= resolve_url('/learn') %)
+Vi tilbyr ei rekke morosame, timeslange oppgåver for elevar i alle aldrar, laga av dei ulike samarbeidspartnarane våra. [Prøv dei!](%= resolve_url('https://code. org/learn') %)
 
-**Alle timar av kodetimen er sjølvinstruerande - slik at barnet ditt kan lære i eiga takt og på eige kunnskapsnivå**
+**Alle oppgåver i kodetimen er sjølvinstruerande - slik at barnet ditt kan lære i eiga takt og på eige kunnskapsnivå**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
@@ -33,7 +33,7 @@ Start Kodetimen med å diskutere korleis informasjonsteknologi påverker oss i d
 **Vis ein inspirerande video:**
 
 - Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eit minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Video av Kodetimen verda over](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama oppfordrar alle elevar til å lære datavitskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Finn fleire inspirerande [ressursar](%= resolve_url('https://code.org/inspire') %) og [videoar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -45,7 +45,7 @@ Det er heilt greit om du og bornet ditt ikkje har datakompetanse frå før. Her 
 
 Vil du ha fleire idear? Sjekk ut [dømet på undervisningsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) for å sjå døme på praksis frå erfarne lærarar.
 
-## 5) Kod!
+## 5) Start kodinga!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
@@ -55,7 +55,7 @@ Når du har valt rettleiinga du ønsker, kan du bokmerke lenka til rettleiinga.
 
 Det er greit å svare:
 
-- "Eg veit ikkje. Lat oss finne det ut i lag."
+- "Eg veit ikkje. La oss finne ut av det i lag."
 - «Det er ikkje alltid teknologien gjer seg slik vi vil.»
 - "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
 

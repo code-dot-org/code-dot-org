@@ -1,21 +1,32 @@
 ---
+<%
+  share_image = (DCDO.get('hoc_mode', nil) == 'soon-hoc') ? 'hoc-student-challenge.jpg' : 'celeb-challenge.jpg'
+%>
 title: #HourOfCode Challenge
 theme: responsive
 style_min: true
+social:
+  "og:title": "Celebrity Challenge"
+  "og:description": "Win a celebrity video chat for your class!"
+  "og:image" : "<%= 'https://' + request.host + '/images/fit-1920/social-media/' + share_image %>"
+  "og:image:width": '1920'
+  "og:image:height": '1080'
+  "twitter:card": "photo"
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://code.org/challenge"
+  "twitter:title": "Celebrity Challenge"
+  "twitter:description": "Win a celebrity video chat for your class!"
+  "twitter:image:src" : "<%= 'https://' + request.host + '/images/fit-1920/social-media/' + share_image %>"
 ---
 
 # Win a celebrity chat for your class!
 
 ### Create an app, game, or design with Code.org and tag #HourOfCode and one of our special guests for a chance to win a video chat for your classroom!
 
-<img src="/images/celebs-challenge.png" style="max-width: 100%">
-
-<%= view :three_circles, circles: [{img:'/images/fit-300/steph-curry.png', text: '<a href="#lookingfor">Stephen Curry</a><br>Point Guard, Golden State Warriors<br><br>Twitter: [@StephenCurry30](https://twitter.com/intent/tweet?screen_name=stephencurry30&hashtags=HourOfCode)<br>Facebook: <a href="https://www.facebook.com/StephenCurryOfficial/" target="_blank">@StephenCurryOfficial</a><br>Instagram: <a href="https://www.instagram.com/stephencurry30/" target="_blank">@stephencurry30</a>'}, {img: '/images/fit-300/stacy-plays.png', text: '<a href="#lookingfor">Stacy Hinojosa (StacyPlays)</a><br>YouTube Content Creator<br><br>Twitter: [@stacysays](https://twitter.com/intent/tweet?screen_name=stacysays&hashtags=HourOfCode)<br>Facebook: <a href="https://www.facebook.com/stacyhinojosa/" target="_blank">@stacyhinojosa</a>'}, {img: '/images/fit-300/hadi-partovi.png', text: '<a href="#lookingfor">Hadi Partovi</a><br>Founder, Code.org<br><br>Twitter: [@hadip](https://twitter.com/intent/tweet?screen_name=hadip&hashtags=HourOfCode)<br>Facebook: <a href="https://www.facebook.com/hadi/" target="_blank">@hadi</a><br>Instagram: <a href="https://www.instagram.com/hadipartovi/" target="_blank">@hadipartovi</a>'}, ] %>
-
-<%= view :three_circles, circles: [ {img: '/images/fit-300/sheryl-sandberg2.png', text: '<a href="#lookingfor">Sheryl Sandberg</a><br>COO, Facebook<br><br>Facebook: <a href="https://www.facebook.com/sheryl/" target="_blank">@Sheryl</a><br>Instagram: <a href="https://www.instagram.com/sherylsandberg/" target="_blank">@sherylsandberg</a>'}, {img: '/images/fit-300/russell-wilson.png', text: '<a href="#lookingfor">Russell Wilson</a><br>Quarterback, Seattle Seahawks<br><br>Twitter: [ @DangeRussWilson](https://twitter.com/intent/tweet?screen_name=dangerusswilson&hashtags=HourOfCode)<br>Facebook: <a href="https://www.facebook.com/dangerrusswilson/" target="_blank">@DangerRussWilson</a><br>Instagram: <a href="https://www.instagram.com/dangerusswilson/" target="_blank">@dangerusswilson</a>'}, {img: '/images/fit-300/susan-wojcicki.png', text: '<a href="#lookingfor">Susan Wojcicki</a><br>CEO, YouTube<br><br>Twitter: [@SusanWojcicki](https://twitter.com/intent/tweet?screen_name=susanwojcicki&hashtags=HourOfCode)'}, ] %>
+<a href="#stephen"><img src="/images/fit-195/steph-challenge.png"></a><a href="#stacy"><img src="/images/fit-195/stacy-challenge.png"></a><a href="#hadi"><img src="/images/fit-195/hadi-challenge.png"></a><a href="#sheryl"><img src="/images/fit-195/sheryl-challenge.png"></a><a href="#russell"><img src="/images/fit-195/russell-challenge.png"></a><a href="#susan"><img src="/images/fit-195/susan-challenge.png"></a>
 
 ## How to enter
-<img src="/images/hoc-challenge-tweets2.png" style="max-width: 100%">
+<a href="#howtowin"><img src="/images/fit-970/hoc-challenge-tweets2.png" style="max-width: 100%"></a>
 
 ## Use one of these activities
 
@@ -30,52 +41,67 @@ style_min: true
 <link rel="stylesheet" type="text/css" href="/shared/css/course-blocks.css"></link>
 <link rel="stylesheet" type="text/css" href="/css/tools.css"></link>
 
-<a name="lookingfor"></a>
+
 ## What are they looking for?
-**Stephen Curry**: I'm lucky to have gone to the NBA playoffs with the Golden State Warriors, but we would never have been there without teamwork. Show me what your team can create when you work together.   
+<a name="stephen"></a>
+### Stephen Curry 
+I'm lucky to have gone to the NBA playoffs with the Golden State Warriors, but we would never have been there without teamwork. Show me what your team can create when you work together.   
 
-<a href="https://twitter.com/intent/tweet?screen_name=StephenCurry30&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="#HourOfCode" data-show-count="false">Tweet to @StephenCurry30</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffacebook.com%2Fstephencurryofficial&layout=button_count&size=small&mobile_iframe=true&width=88&height=20&appId" width="88" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+*To tag Stephen, use @StephenCurry30 on [Twitter](https://twitter.com/StephenCurry30), @StephenCurryOfficial on [Facebook](https://www.facebook.com/StephenCurryOfficial/), or @stephencurry30 on [Instagram](https://www.instagram.com/stephencurry30/).*
 
-**Stacy Hinojosa (StacyPlays)**: Have you played the newest Minecraft activity, Hero's Journey? Did you know I helped develop it? I've been vlogging since 2013, so I know a lot about Minecraft. But there's always more for me to learn and I want to see what you can create in [Minecraft](https://code.org/minecraft) when you play it.    
+<a name="stacy"></a>
+### Stacy Hinojosa (StacyPlays)
+Have you played the newest Minecraft activity, Hero's Journey? Did you know I helped develop it? I've been vlogging since 2013, so I know a lot about Minecraft. But there's always more for me to learn and I want to see what you can create in [Minecraft](https://code.org/minecraft) when you play it.    
 
-<a href="https://twitter.com/intent/tweet?screen_name=StacySays&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="#HourOfCode" data-show-count="false">Tweet to @StacySays</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffacebook.com%2Fstacyhinojosa&layout=button_count&size=small&mobile_iframe=true&width=83&height=20&appId" width="83" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+*To tag Stacy, use @stacysays on [Twitter](https://twitter.com/stacysays) or @stacyhinojosa on [Facebook](https://www.facebook.com/stacyhinojosa/).*
 
-**Hadi Partovi**: The team of software engineers at Code.org love to build apps, and they created our newest program, App Lab. I challenge you to join them as a software engineer this week and build something fun using JavaScript in [App Lab](https://code.org/educate/applab). 
+<a name="hadi"></a>
+### Hadi Partovi
+The team of software engineers at Code.org love to build apps, and they created our newest program, App Lab. I challenge you to join them as a software engineer this week and build something fun using JavaScript in [App Lab](https://code.org/educate/applab). 
 
-<a href="https://twitter.com/intent/tweet?screen_name=hadip&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="#HourOfCode" data-show-count="false">Tweet to @Hadip</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffacebook.com%2Fhadi&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId" width="69" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+*To tag Hadi, use @hadip on [Twitter](https://twitter.com/hadip), @HadiPartovi on [Facebook](https://www.facebook.com/hadi/), or @hadipartovi on [Instagram](https://www.instagram.com/hadipartovi/).*
 
-**Sheryl Sandberg**: Girls are still underrepresented in tech and computer science from high school all the way to the workforce. We can change this! I challenge girls to Lean In to computer science and create an app using [App Lab](https://code.org/educate/applab)!
+<a name="sheryl"></a>
+### Sheryl Sandberg
+Girls are still underrepresented in tech and computer science from high school all the way through the workforce. We can change this! I encourage girls to start learning computer science and create an app using [App Lab](https://code.org/educate/applab)!
 
-<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffacebook.com%2Fsheryl&layout=button_count&size=small&mobile_iframe=true&width=75&height=20&appId" width="75" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+*To tag Sheryl, use @SherylSandberg on [Facebook](https://www.facebook.com/sheryl/).*
 
-**Russell Wilson**: Since I was in high school, I wanted to play professional football AND professional baseball. I love both games, but can you make one I'll love even more? I challenge you to create a game with [Flappy Bird](https://studio.code.org/flappy/1), [Sports](https://code.org/athletes), [Star Wars](https://code.org/starwars), or [App Lab](https://code.org/educate/applab).
+<a name="russell"></a>
+### Russell Wilson
+Since I was in high school, I wanted to play professional football AND professional baseball. I love both games, but can you make one I'll love even more? I challenge you to create a game with [Flappy Bird](https://studio.code.org/flappy/1), [Sports](https://code.org/athletes), [Star Wars](https://code.org/starwars), or [App Lab](https://code.org/educate/applab).
 
-<a href="https://twitter.com/intent/tweet?screen_name=DangeRussWilson&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="#HourOfCode" data-show-count="false">Tweet to @DangeRussWilson</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffacebook.com%2Fdangerrusswilson&layout=button_count&size=small&mobile_iframe=true&width=88&height=20&appId" width="88" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+*To tag Russell, use @DangeRussWilson on [Twitter](https://twitter.com/DangeRussWilson), @DangerRussWilson on [Facebook](https://www.facebook.com/DangerRussWilson/), or @dangerusswilson on [Instagram](https://www.instagram.com/dangerusswilson/).*
 
-**Susan Wojcicki**: At YouTube, we love good storytellers. Use [App Lab](https://code.org/educate/applab) to choose your own adventure, make a story in [Play Lab](https://code.org/playlab), or post a video story about anything you created. And who knows? Maybe your creation will go viral!
+<a name="susan"></a>
+### Susan Wojcicki
+At YouTube, we love good storytellers. Use [App Lab](https://code.org/educate/applab) to choose your own adventure, make a story in [Play Lab](https://code.org/playlab), or post a video story about anything you created. And who knows? Maybe your creation will go viral!
 
-<a href="https://twitter.com/intent/tweet?screen_name=SusanWojcicki&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="#HourOfCode" data-show-count="false">Tweet to @SusanWojcicki</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+*To tag Susan, use @SusanWojcicki on [Twitter](https://twitter.com/SusanWojcicki).*
 
 <a name="contestrules"></a>
 
 ## How do I participate?
-It's easy to get involved and win a classroom video chat with one of our special guests! 
+If you haven't already, [sign up to participate in the Hour of Code](https://hourofcode.com/#join) this year.
 
-After (or during) your Hour of Code, post and tag one of our celebrities on Twitter, Facebook, or Instagram, including their @profile and the hashtag #HourOfCode.
+After (or during) your Hour of Code, post and tag one of our celebrities on Twitter, Facebook, or Instagram, including their **@profile** and the hashtag **#HourOfCode**.
 
-This challenge is open to classrooms, after-school clubs, and individual students, starting today until the end of Computer Science Education Week (December 10). You can submit and post as many times as you like - but tag only one celebrity per post.
+This challenge is open to classrooms, after-school clubs, and individual students, starting today until the end of the day Friday, December 15th.
 
+You can submit and post as many times as you like - but tag only one celebrity per post.
+
+<a name="howtowin"></a>
 ## How do I increase my chances of winning?
 The celebrities will work with Code.org to pick a winner. <a href="#lookingfor">Read about what each celebrity is looking for</a>, then, increase your chances to win with photos or videos of yourself or your class. They'd also love to see the apps, games, or artwork your students created, so add a link to your students' work! 
 
 The posts that have the most cool stuff will have a great chance of being selected, so include a link to the coolest code creations you made on Code.org, an ANIGIF of the app you made, or a fun video explaining your Hour of Code activity. Get creative!
 
-Posts with more likes, shares, and retweets will also have a higher likelihood of winning.
+Posts with more likes, shares, and retweets will also have a higher likelihood of winning. Add an [Hour of Code frame](www.facebook.com/fbcameraeffects/tryit/1761789857455398/) to your Facebook profile picture to really get into the spirit.
 
 And since you can post as many entries as you want, across Facebook, Twitter, and Instagram, feel free to make multiple posts to increase your chances. The idea isn't to spam the internet and annoy your friends, it's to celebrate computer science. So please try to make the content you post worthwhile for all of us. 
 
 ## How do you get the project link to share? 
-When you finish one of our Hour of Code activities, on the last level you'll receive a share link. You can also take a video of you or your students demo-ing their app and share that.
+When you're done with one of our Hour of Code activities, click "Finish" on the last level you'll receive a share link. You can also take a video of you or your students demo-ing their app and share that.
 
 [col-50]
 
@@ -85,7 +111,7 @@ When you finish one of our Hour of Code activities, on the last level you'll rec
 
 [col-50]
 
-<iframe width="420" height="315" src="http://videos.code.org/social/hourofcode-challenge.mp4"> </iframe>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "mUl9Xn8efSE", play_button: 'center', letterbox: 'false' %>
 
 [/col-50]
 
