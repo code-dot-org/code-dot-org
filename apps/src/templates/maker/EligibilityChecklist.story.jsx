@@ -42,7 +42,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Eligible year submitted',
+        name: 'Eligible year submitted, user does not have a school',
         description: 'User had submitted an eligible response for unit 6 intentions',
         story: () => (
           <EligibilityChecklist
@@ -51,5 +51,23 @@ export default storybook => {
           />
         )
       },
+
+      // Ideally we would have a story here for when the user has a school, but has
+      // not confirmed it for this application, however we dont end up with any schools
+      // in our dropdown in storybook
+
+      {
+        name: 'User has confirmed school',
+        story: () => (
+          <EligibilityChecklist
+            {...defaultProps}
+            unit6Intention="yes1718"
+            schoolId="1234"
+            schoolName="Code.org Junior Academy"
+            hasConfirmedSchool={true}
+          />
+        )
+      },
+
     ]);
 };
