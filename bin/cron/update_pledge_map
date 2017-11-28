@@ -21,11 +21,27 @@ require 'googleauth'
 TABLE_ID = CDO.pledge_map_table_id.freeze
 CENSUS_FORM_KINDS = "'Census2017','HocCensus2017'".freeze
 
+def make_location(lat, long)
+  return nil if lat.nil? || long.nil?
+
+  "#{format('%.6f', lat)}, #{format('%.6f', long)}"
+end
+
 file = Tempfile.new(['data', '.csv'])
 begin
   CSV.open(file.path, 'w') do |csv|
     DASHBOARD_DB[:census_submissions].
-      select(:census_submissions__id___census_submissions_id, :how_many_10_hours, :how_many_20_hours, :pledged, :school_infos__school_id, :schools__name, :schools__zip, :schools__city).
+      select(:census_submissions__id___census_submissions_id,
+        :how_many_10_hours,
+        :how_many_20_hours,
+        :pledged,
+        :school_infos__school_id,
+        :schools__name,
+        :schools__zip,
+        :schools__city,
+        :schools__latitude,
+        :schools__longitude
+        ).
       join(:census_submissions_school_infos, census_submission_id: :id).
       join(:school_infos, id: :school_info_id).
       join(:schools, id: :school_id).
@@ -41,7 +57,8 @@ begin
 
       next unless submission[:school_id]
       row_id = "CENSUS_SUBMISSIONS-#{submission[:census_submissions_id]}"
-      row = [row_id, submission[:name], submission[:zip], submission[:city], type]
+      location = make_location(submission[:latitude], submission[:longitude])
+      row = [row_id, submission[:name], submission[:zip], submission[:city], type, location]
       csv << row
     end
 
@@ -53,7 +70,8 @@ begin
         school = DASHBOARD_DB[:schools].where(id: school_id).first
         next unless school
 
-        row = [nil, school[:name], school[:zip], school[:city], "teaches_cs"]
+        location = make_location(school[:latitude], school[:longitude])
+        row = [nil, school[:name], school[:zip], school[:city], "teaches_cs", location]
 
         csv << row
       end
