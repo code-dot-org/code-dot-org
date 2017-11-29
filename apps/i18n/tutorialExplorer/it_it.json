@@ -1,5 +1,4 @@
 {
-  "startButton": "Inizia",
   "filterOrgNames": "Creato da",
   "filterOrgNamesAll": "Tutti",
   "filterSortBy": "Ordina per",
@@ -48,7 +47,7 @@
   "roboticsButtonText": "Visualizza le attività robotiche",
   "roboticsText": "Hai dei robot? Utilizza queste attività e rendi tangibile un Ora di Codice per gli studenti di qualsiasi età!",
   "tutorialSetNoTutorials": "La tua ricerca ha prodotto alcun risultato. \nPer favore prova a rimuovere alcuni filtri per visualizzare ulteriori attività.",
-  "tutorialDetailsTeacherNotes": "Guida per l'insegnante (in inglese)",
+  "tutorialDetailsTeacherNotes": "Annotazioni del prof",
   "tutorialDetailsShortLink": "Link breve",
   "tutorialDetailInternationalLanguages": "Linguaggi",
   "tutorialDetailStandards": "Livelli di riferimento",
@@ -58,5 +57,6 @@
   "hideAllTutorialsButton": "Nascondi attività per molte lingue",
   "noTutorialsYourLanguage": "Non sono presenti attività nella tua lingua. Prova delle attività in altre lingue cliccando sul pulsante qui sotto.",
   "bottomGuidelinesLink": "Clicca qui per vedere i nostri criteri e le linee guida per le lezioni dell'Ora del Codice.",
-  "bottomSpecialNeedsLink": "Clicca qui per ulteriori informazioni sul supporto agli studenti con esigenze speciali."
+  "bottomSpecialNeedsLink": "Clicca qui per ulteriori informazioni sul supporto agli studenti con esigenze speciali.",
+  "startButton": "Start"
 }
