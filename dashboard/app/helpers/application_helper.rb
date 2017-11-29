@@ -127,10 +127,10 @@ module ApplicationHelper
     '/'
   end
 
-  def external_oauth_sign_out_url(provider)
+  def external_oauth_sign_out_url(provider, token)
     case provider.to_sym
     when :facebook
-      'https://www.facebook.com/logout.php'
+      "https://www.facebook.com/logout.php?next=#{URI.escape(CDO.studio_url('', CDO.default_scheme))}&access_token=#{token}"
     when :windowslive
       'http://login.live.com/logout.srf'
     when :google_oauth2
