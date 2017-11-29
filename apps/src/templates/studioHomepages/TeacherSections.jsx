@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
-import ContentContainer from '../ContentContainer';
+import {UnconnectedContentContainer as ContentContainer} from '../ContentContainer';
 import OwnedSections from '../teacherDashboard/OwnedSections';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 

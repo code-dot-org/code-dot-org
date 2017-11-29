@@ -89,6 +89,8 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     expected = {
       unit_6_intention: nil,
       has_confirmed_school: false,
+      school_id: nil,
+      school_name: nil,
       gets_full_discount: nil,
       discount_code: nil,
       is_pd_eligible: true,
@@ -104,6 +106,8 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     expected = {
       unit_6_intention: 'no',
       has_confirmed_school: false,
+      school_id: nil,
+      school_name: nil,
       gets_full_discount: nil,
       discount_code: nil,
       is_pd_eligible: true,
