@@ -1,5 +1,4 @@
 {
-  "startButton": "Fillo",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Të gjitha",
   "filterSortBy": "Sort by",
@@ -58,5 +57,6 @@
   "hideAllTutorialsButton": "Fshi aktivitetet për shumë gjuhë",
   "noTutorialsYourLanguage": "Nuk ka aktivitete të përshtatura në gjuhën tuaj. Provoni aktivitete në gjuhë të tjera duke klikuar butonin më poshtë.",
   "bottomGuidelinesLink": "Kliko këtu për të parë kriteret tona dhe udhëzimet e paraqitjes për tutorialet e Orës së Kodimit.",
-  "bottomSpecialNeedsLink": "Kliko këtu për më shumë informacion mbi mbështetjen e nxënësve me nevoja të veçanta."
+  "bottomSpecialNeedsLink": "Kliko këtu për më shumë informacion mbi mbështetjen e nxënësve me nevoja të veçanta.",
+  "startButton": "Start"
 }

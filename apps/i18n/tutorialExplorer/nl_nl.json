@@ -1,5 +1,4 @@
 {
-  "startButton": "Start",
   "filterOrgNames": "Gemaakt door",
   "filterOrgNamesAll": "Alle",
   "filterSortBy": "Sorteer op",
@@ -58,5 +57,6 @@
   "hideAllTutorialsButton": "Verberg activiteiten voor andere talen",
   "noTutorialsYourLanguage": "Er zijn geen activiteiten ondersteund in jouw taal. Probeer activiteiten in andere talen door te klikken op de knop hieronder.",
   "bottomGuidelinesLink": "Klik hier voor onze criteria en de richtlijnen voor Hour of Code tutorials.",
-  "bottomSpecialNeedsLink": "Klik hier voor meer informatie over ondersteuning voor studenten met functionele beperkingen."
+  "bottomSpecialNeedsLink": "Klik hier voor meer informatie over ondersteuning voor studenten met functionele beperkingen.",
+  "startButton": "Start"
 }
