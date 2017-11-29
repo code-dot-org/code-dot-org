@@ -22,7 +22,15 @@ require 'cdo/cron'
 image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
 
 self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
-self.daemon = true if environment == :adhoc || stack_name == 'staging-next'
+
+# Don't provision daemon where manually-provisioned daemon instances already exist.
+# TODO migrate stacks to cloudformation-provisioned instances.
+self.daemon = true unless %w(
+  autoscale-prod
+  test
+  staging
+  levelbuilder
+).include? stack_name
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -31,6 +39,9 @@ Parameters:
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
+  Branch:
+    Type: String
+    Default: <%=branch%>
 <% if environment == :adhoc -%>
   DatabaseUsername:
     Type: String
@@ -95,7 +106,7 @@ Resources:
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
-      LoadBalancerName: <%=stack_name%>
+      LoadBalancerName: !Ref AWS::StackName
       CrossZone: true
       SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
       Subnets: <%= public_subnets.to_json %>
@@ -122,7 +133,7 @@ Resources:
         Enabled: true
         Timeout: 300
 <% if !frontends && daemon -%>
-      Instances: [!Ref WebServer]
+      Instances: [!Ref Daemon]
 <% end -%>
 
 <% if frontends -%>
@@ -437,7 +448,7 @@ Resources:
     Properties:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
-      QueueName: <%="activities-#{stack_name}"%>
+      QueueName: !Sub "activities-${AWS::StackName}"
       RedrivePolicy:
         maxReceiveCount: 3
         deadLetterTargetArn: !GetAtt [ActivitiesDeadQueue, Arn]
@@ -446,20 +457,22 @@ Resources:
     Properties:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
-      QueueName: <%="activities_dead-#{stack_name}"%>
+      QueueName: !Sub "activities_dead-${AWS::StackName}"
 <% end -%>
 <% if daemon -%>
-  WebServer:
+  Daemon:
     Type: AWS::EC2::Instance
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
+        Timeout: PT2H
     Properties:
       ImageId: <%=image_id%>
       InstanceType: !Ref InstanceType
       IamInstanceProfile: !ImportValue IAM-<%=environment == :adhoc ? 'Frontend' : 'Staging'%>InstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
-      Tags: [{Key: Name, Value: <%=stack_name%>}]
+      Tags:
+      - Key: Name
+        Value: !Ref AWS::StackName
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
@@ -467,8 +480,8 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
-          resource_id: 'WebServer',
-          node_name: stack_name,
+          resource_id: 'Daemon',
+          node_name: '$STACK',
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],
@@ -477,34 +490,12 @@ Resources:
           daemon: true
         )%>
       NetworkInterfaces:
-        - AssociatePublicIpAddress: true
-          DeviceIndex: 0
-          SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
-<%if stack_name != 'staging-next' -%>
-      GroupSet:
-        - !ImportValue VPC-FrontendSecurityGroup
-        - !ImportValue VPC-GatewaySecurityGroup
-<% else -%>
-          GroupSet: [Ref: WebServerSecurityGroup]
-  WebServerSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Enable HTTP[S] + SSH access
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 22
-          ToPort: 22
-          CidrIp: <%=ssh_ip%>
-      VpcId: !ImportValue VPC
-<% end -%>
+      - AssociatePublicIpAddress: true
+        DeviceIndex: 0
+        SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+        GroupSet:
+          - !ImportValue VPC-FrontendSecurityGroup
+          - !ImportValue VPC-GatewaySecurityGroup
 <%end-%>
 <% if environment == :adhoc -%>
   Database:

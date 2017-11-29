@@ -150,6 +150,7 @@ WebLab.prototype.init = function (config) {
     container.className = container.className + " pin_bottom";
 
     // NOTE: if we called studioApp_.init(), these calls would not be needed...
+    this.studioApp_.initProjectTemplateWorkspaceIconCallout();
     this.studioApp_.alertIfCompletedWhilePairing(config);
     this.studioApp_.initVersionHistoryUI(config);
 
@@ -163,12 +164,6 @@ WebLab.prototype.init = function (config) {
       onPuzzleComplete: this.onFinish.bind(this),
       unsubmitUrl: this.level.unsubmitUrl
     });
-
-    // The project template workspace icon callout appears too far to the left
-    // if we don't delay this slightly (currently 0.25 seconds)
-    setTimeout(() => {
-      this.studioApp_.initProjectTemplateWorkspaceIconCallout();
-    }, 250);
   };
 
   // Push initial level properties into the Redux store

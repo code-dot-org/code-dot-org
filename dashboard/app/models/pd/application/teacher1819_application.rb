@@ -50,9 +50,9 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_create :match_partner, if: -> {regional_partner.nil?}
-    def match_partner
-      self.regional_partner = RegionalPartner.find_by_region(zip_code, state_code)
+    before_save :save_partner, if: -> {form_data_changed?}
+    def save_partner
+      self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
     PROGRAMS = {
@@ -107,6 +107,15 @@ module Pd::Application
         state: COMMON_OPTIONS[:state],
         gender_identity: COMMON_OPTIONS[:gender_identity],
         race: COMMON_OPTIONS[:race],
+
+        school_state: COMMON_OPTIONS[:state],
+        school_type: [
+          'Public school',
+          'Private school',
+          'Charter school',
+          'Other'
+        ],
+
         principal_title: COMMON_OPTIONS[:title],
 
         current_role: [
@@ -127,6 +136,19 @@ module Pd::Application
 
         subjects_teaching: SUBJECTS_THIS_YEAR,
         subjects_expect_to_teach: SUBJECTS_THIS_YEAR,
+
+        does_school_require_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+        ],
+
+        have_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+          'Not applicable - My district does not require a specific license, certification, or endorsement to teach computer science.'
+        ],
 
         subjects_licensed_to_teach: [
           'Computer Science',
@@ -166,6 +188,15 @@ module Pd::Application
           'ScratchEd',
           OTHER_PLEASE_LIST,
           "I don't have experience teaching any of these courses"
+        ],
+
+        previous_yearlong_cdo_pd: [
+          'CS Discoveries',
+          'CS Principles',
+          'Exploring Computer Science',
+          'CS in Algebra',
+          'CS in Science',
+          "I haven't participated in a yearlong Code.org Professional Learning Program"
         ],
 
         cs_offered_at_school: [
@@ -253,6 +284,11 @@ module Pd::Application
           "I don't know if I will teach this course (please explain):"
         ],
 
+        pay_fee: [
+          'Yes, my school or I will be able to pay the full summer workshop program fee',
+          'No, my school or I will not be able to pay the summer workshop program fee.'
+        ],
+
         committed: [
           YES,
           'No (please explain):'
@@ -267,6 +303,67 @@ module Pd::Application
       }
     end
 
+    def self.required_fields
+      %i(
+        country
+        school
+        first_name
+        last_name
+        phone
+        address
+        city
+        state
+        zip_code
+        gender_identity
+        race
+        principal_first_name
+        principal_last_name
+        principal_email
+        principal_confirm_email
+        principal_phone_number
+        current_role
+        grades_at_school
+        grades_teaching
+        grades_expect_to_teach
+        subjects_teaching
+        subjects_expect_to_teach
+        does_school_require_cs_license
+        have_cs_license
+        subjects_licensed_to_teach
+        taught_in_past
+        previous_yearlong_cdo_pd
+        cs_offered_at_school
+        cs_opportunities_at_school
+
+        program
+        plan_to_teach
+
+        agree
+      )
+    end
+
+    def dynamic_required_fields(hash)
+      [].tap do |required|
+        if hash[:program] == PROGRAMS[:csd]
+          required.concat [
+            :csd_which_grades,
+            :csd_course_hours_per_week,
+            :csd_course_hours_per_year,
+            :csd_terms_per_year
+          ]
+        elsif hash[:program] == PROGRAMS[:csp]
+          required.concat [
+            :csp_which_grades,
+            :csp_course_hours_per_week,
+            :csp_course_hours_per_year,
+            :csp_terms_per_year,
+            :csp_how_offer,
+            :csp_ap_exam
+          ]
+        end
+      end
+    end
+
     def program
       sanitize_form_data_hash[:program]
     end
@@ -279,8 +376,18 @@ module Pd::Application
       sanitize_form_data_hash[:state]
     end
 
+    def first_name
+      hash = sanitize_form_data_hash
+      hash[:preferred_first_name] || hash[:first_name]
+    end
+
     def state_code
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
+
+    # @override
+    def check_idempotency
+      Pd::Application::Teacher1819Application.find_by(user: user)
     end
   end
 end

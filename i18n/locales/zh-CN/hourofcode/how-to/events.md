@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -49,7 +49,7 @@ nav: how_to_nav
 
 ## 流程演示
 
-| 时间            | 活动                                                              |
+| 时长            | 活动                                                              |
 | ------------- | --------------------------------------------------------------- |
 | 上午10:00-10:05 | 以我们的一个[励志视频](%= resolve_url('/promote/resources#videos') %)开始   |
 | 上午10:05-10:15 | 校长用[数据和信息图表](%= resolve_url('/promote/stats') %)就计算机科学的重要性做开场白。 |

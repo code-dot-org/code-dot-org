@@ -1,13 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import FormComponent from '../form_components/FormComponent';
 import MarkdownSpan from '../components/markdownSpan';
 
-export default class Facilitator1819FormComponent extends FormComponent {
-  static propTypes = {
-    ...FormComponent.propTypes,
-    accountEmail: PropTypes.string.isRequired
-  };
-
+export default class ApplicationFormComponent extends FormComponent {
   /**
    * Override in derived classes
    * @type {Object} - map of control name to label
@@ -81,6 +76,35 @@ export default class Facilitator1819FormComponent extends FormComponent {
     return this.buildButtonsFromOptions({
       ...this.defaultOptions(name),
       type: "radio",
+      ...props
+    });
+  }
+
+  dynamicRadioButtonsWithAdditionalTextFieldsFor(name, options, textFieldMap, props = {}) {
+    return this.buildButtonsWithAdditionalTextFields({
+      ...this.defaultOptions(name),
+      type: "radio",
+      options,
+      textFieldMap,
+      ...props
+    });
+  }
+
+  dynamicCheckBoxesFor(name, options, props = {}) {
+    return this.buildButtons({
+      ...this.defaultOptions(name),
+      type: 'check',
+      answers: options,
+      ...props
+    });
+  }
+
+  dynamicCheckBoxesWithAdditionalTextFieldsFor(name, options, textFieldMap, props = {}) {
+    return this.buildButtonsWithAdditionalTextFields({
+      ...this.defaultOptions(name),
+      type: "check",
+      options,
+      textFieldMap,
       ...props
     });
   }
