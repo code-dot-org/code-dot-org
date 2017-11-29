@@ -154,17 +154,15 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
           year. Your completion of this survey is required for the teacher’s application
           to be considered.
         </p>
-        {this.inputFor('firstName', {value: this.props.teacherApplication.principal_first_name, readOnly: true})}
-        {this.inputFor('lastName', {value: this.props.teacherApplication.principal_last_name, readOnly: true})}
+        {this.inputFor('firstName')}
+        {this.inputFor('lastName')}
         {
           this.selectFor('title', {
             required: false,
             placeholder: 'Select a title',
-            value: this.props.teacherApplication.principal_title,
-            readOnly: true
           })
         }
-        {this.inputFor('email', {value: this.props.teacherApplication.principal_email, readOnly: true})}
+        {this.inputFor('email')}
         {
           this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
             "Other:": "other"
