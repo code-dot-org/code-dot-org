@@ -84,7 +84,7 @@ const OldMinecraft = {
 const NewMinecraft = {
   title: i18n.minecraft2017Title(),
   description: i18n.minecraft2017Desc(),
-  link: "https://education.minecraft.net/support/knowledge-base/connecting-code-connection-minecraft/",
+  link: "https://education.minecraft.net/hour-of-code",
   image: "new-minecraft",
   buttonText: i18n.minecraft2017Button(),
   MCShareLink: ""
