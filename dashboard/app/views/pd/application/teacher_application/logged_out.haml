@@ -1,0 +1,13 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%p
+  Thanks for your interest in the Facilitator Development Program!
+  To get started, you first need to be logged into your Code.org account.
+  If you have a Code.org teacher account, please log in
+  = link_to('here', "/users/sign_in?user_return_to=#{request.fullpath}") + '.'
+  If you don’t have a Code.org teacher account, please
+  = link_to('create one now', "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}") + '.'
+  If you’d like more information about the program before you start your application,
+  please check out the
+  = link_to('Professional Learning Program overview', 'https://code.org/educate/professional-learning') + '.'

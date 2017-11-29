@@ -47,6 +47,7 @@ Dashboard::Application.routes.draw do
   get 'maker/setup', to: 'maker#setup'
   get 'maker/discountcode', to: 'maker#discountcode'
   post 'maker/apply', to: 'maker#apply'
+  post 'maker/schoolchoice', to: 'maker#schoolchoice'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -398,6 +399,7 @@ Dashboard::Application.routes.draw do
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
+        post :teacher, to: 'teacher_applications#create'
       end
 
       resources :applications, controller: 'applications', only: [:index, :show, :update] do
@@ -427,6 +429,7 @@ Dashboard::Application.routes.draw do
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
+      get 'teacher', to: 'teacher_application#new'
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new'
     end
 

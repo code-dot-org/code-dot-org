@@ -1,19 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf'
+gem 'berkshelf', '< 6.0.0' # >= 6.0.0 requires Ruby 2.3
 gem 'chef', '12.7.2'
 gem 'chefspec'
+gem 'kitchen-inspec'
 
-# Test-kitchen fork, items not yet merged:
-# 564 (multiple step converge)
+gem 'test-kitchen', '< 1.17.0' # >= 1.17.0 requires Ruby 2.3
+
 gem 'kitchen-docker'
-gem 'test-kitchen', github: 'wjordan/test-kitchen', branch: 'cdo'
+gem 'kitchen-dokken'
 
-# Kitchen-ec2 fork, items not yet merged:
-# - 214 (support duration for spot instances)
-# - jk/ec2-defaults (Use searches to find AMI and AMI username)
-# - Tweak commit to support test-kitchen#564.
-gem 'kitchen-ec2', github: 'wjordan/kitchen-ec2', branch: 'cdo'
+gem 'kitchen-ec2'
 
 # Provides `sftp` transport to test-kitchen for faster cookbook upload.
 gem 'kitchen-sync'

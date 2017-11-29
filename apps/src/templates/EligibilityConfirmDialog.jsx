@@ -45,7 +45,6 @@ export default class EligibilityConfirmDialog extends Component {
         useUpdatedStyles
         uncloseable
         isOpen
-        assetUrl={() => ''}
         style={{padding:20}}
       >
         <h2>{i18n.getCode()}</h2>
