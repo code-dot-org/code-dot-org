@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. მოემზადეთ ღონისძიებისთვის
 
 - განსაზღვრეთ ადგილი, თარიღი და დრო.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- გაუგზავნეთ [წერილი](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) და მოიწვიეთ სპიკერად ქალაქის მერი, მთავრობის სხვა წარმომადგენელი ან გავლენიანი ბიზნესმენი. თუ თქვენს ღონისძიებას მთავრობის წარმომადგენელი ეწვევა, მეტი ინფორმაციის მისაღებად გადახედეთ ჩვენს [თუ-როგორ ინსტრუმენტების კომპლექტს](%=resolve_url('/files/elected-official.pdf')%).
 - დაპატიჟეთ მედია/პრესა. მაგალითად ადგილობრივი რადიო, გაზეთი, ბლოგერები. ნახეთ ჩვენი [დანართი პრესისთვის](%= resolve_url('/promote/press-kit') %).
 
 ## 2. ღონისძიების განმავლობაში

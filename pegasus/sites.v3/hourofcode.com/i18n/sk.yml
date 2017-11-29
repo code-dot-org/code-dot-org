@@ -348,10 +348,10 @@ sk:
   resources_banners: Sociálne médiá
   resources_emails: Vzorové emaily
   resources_logo: Logo Hodiny kódu
-  resources_stats: Štatistiky a upútavky
+  resources_stats: 'Štatistiky a upútavky'
   resources_press_kit: Press balíček
   resources_social: Sociálne médiá
-  resources_country_resources: Špecifické zdroje pre krajinu
+  resources_country_resources: 'Špecifické zdroje pre krajinu'
   resources_stickers: Samolepky
   resources_how_to_guides: 'Príručky - Ako na to'
   resources_promote: 'Šírte ďalej'
@@ -363,15 +363,15 @@ sk:
   resources_banner_howto_text: "Ako na to"
   resources_banner_howto_button: "Zdroje pre učiteľov a partnerov, ako zorganizovať Hodinu kódu."
   handouts_section: Zdieľať tieto podklady
-  handouts_onepager: Šírte túto aktivitu pomocou jednostránkového návodu
+  handouts_onepager: 'Šírte túto aktivitu pomocou jednostránkového návodu'
   handouts_brochure: Poskytnite túto brožúru učiteľom a školám
   handouts_participationguide: Naplánujte si Hodinu kódu s týmto sprievodcom
   videos_title: Ukážte tieto videá študentom a inšpirujte ich
-  videos_what_most_schools_dont_teach: Čo školy najčastejšie nevyučujú (5 min)
+  videos_what_most_schools_dont_teach: 'Čo školy najčastejšie nevyučujú (5 min)'
   videos_hoc_2014: Hodina kódu je tu - ktokoľvek sa môže učiť
   videos_obama_cs: Prezident Obama na informatike
   videos_anybody_can_learn: Každý sa môže učiť (1 min)
-  title_country_resources: Špecifické zdroje pre krajinu
+  title_country_resources: 'Špecifické zdroje pre krajinu'
   title_how_to_districts: Hodina kódu Návody pre kraje
   title_how_to_events: Ako na udalosť Hodina hódu
   title_how_to_organizations: Ako zogranizovať Hodinu kódu - Organizácie
@@ -387,13 +387,13 @@ sk:
   title_stats: Upútavky a štatistiky
   title_partners: Partneri
   title_resources: Zdroje
-  title_signup_thanks: Ďakujeme Vám, že organizujete udalosť Hodina kódu!
+  title_signup_thanks: 'Ďakujeme Vám, že organizujete udalosť Hodina kódu!'
   title_tutorial_guidelines: Výukový návod
-  title_whole_school: Účasť celej školy
+  title_whole_school: 'Účasť celej školy'
   events_nav_title: Udalosti Hodiny kódu
   events_nav_all: Všetky udalosti
   events_nav_whole_schools: Všetky školy
-  events_nav_special: Špeciálne udalosti
+  events_nav_special: 'Špeciálne udalosti'
   events_nav_orgs: Organizácie
   events_all_old_title: "Všetky udalosti Hodiny kódu @year"
   events_all_title: Všetky udalosti Hodiny kódu
@@ -444,7 +444,7 @@ sk:
   tutorial_highseas_name: "Dobrodružstvo na otvorenom mori"
   tutorial_capython_name: "Grafika s Pytónom a korytnačkou"
   tutorial_frzn_name: "Programuj s Annou a Elsou"
-  tutorial_cocom_name: Útok kódom
+  tutorial_cocom_name: 'CodeCombat: Uteč z väzenia!'
   tutorial_play-lab_name: "Hracie laboratórium"
   tutorial_boxisland_name: "Krabicový ostrov"
   tutorial_textcomp_name: "Kompresia textu"
@@ -482,7 +482,7 @@ sk:
   tutorial_tynkerapp_name: "Vybuduj si aplikáciu"
   tutorial_tynkerpup_name: "Dobrodružstvo šteniatka"
   tutorial_livecode_name: "LiveCode Sound Boards"
-  tutorial_cocomgame_name: 'CodeCombat: Build Your Own Game!'
+  tutorial_cocomgame_name: 'CodeCombat:  Vytvor si vlastnú hru!'
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "Build a Game with JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
@@ -576,7 +576,7 @@ sk:
   tutorial_box_name: "Krabicový ostrov"
   tutorial_hopgame_name: "Hopscotch Game Design Workshop"
   tutorial_icontrol_name: "iControl"
-  tutorial_cocomteach_name: 'CodeCombat: Teacher-Led Activities'
+  tutorial_cocomteach_name: Učiteľom riadené aktivity
   tutorial_bbcmathii_name: "Bitsbox Coding + Math (K-2)"
   tutorial_bbcphys_name: "Bitsbox Coding + Physics"
   tutorial_bitsbox_name: "Build Crazy Apps with Bitsbox"
@@ -784,7 +784,7 @@ sk:
   tutorial_nclabdrone_name: "Let's Build a Drone!"
   tutorial_gpbcircle_name: "Make an Interactive Color Circle"
   tutorial_gpbpaint_name: "Make Your Own Paint Editor"
-  tutorial_cocomarcade_name: 'CodeCombat: Build an Arcade Game!'
+  tutorial_cocomarcade_name: 'CodeCombat: Postav si Arkádu!'
   tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
   tutorial_beetik_name: "Code the Music of Franz Liszt"
   tutorial_codedj_name: "Compose Music with Code DJ"
@@ -1294,7 +1294,7 @@ sk:
   tutorial_highseas_longdescription: "Animate an ocean wave to create a setting, then tell a story that takes place on the high seas."
   tutorial_capython_longdescription: "Python is an engaging and simple language to learn. Learn about using modules, functions, loops, and lists, all while creating fun images with the help of your turtle buddies. Geometry has never been so much fun!"
   tutorial_frzn_longdescription: "Použime programovanie na pripojenie k Anne a Else pri ich objavovaní kúziel a krás ľadu. Počas korčuľovania budeš v ľade vytvárať snehové vločky a vzory a vytvor zimnú krajinu zázrakov, ktorú potom môžeš zdieľať so svojimi priateľmi!"
-  tutorial_cocom_longdescription: "Choose your hero and code your way through the ogre patrols, lava pits, and laser beams of Kithgard Dungeon. Level up, earn gems, and loot magic items to unlock new programming powers!"
+  tutorial_cocom_longdescription: "Vyber si svojho hrdinu a nakóduj svoju cestu cez hliadku ogrov, lávové priepasti a lejrové lúče Kithgardskej väznice. Zvýš si úroveň, zarob si drahokamy a množstvo magických predmetov aby si mohol odomknúť nové programovacie schpnosti!"
   tutorial_play-lab_longdescription: "Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!"
   tutorial_boxisland_longdescription: "Take a trip on Box Island and collect all the stars! Box Island is a beautiful mobile coding game that takes kids on an exciting adventure on the charming island. In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   tutorial_textcomp_longdescription: "At some point we reach a physical limit of how fast we can send bits, and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data. In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text. "
@@ -1332,7 +1332,7 @@ sk:
   tutorial_tynkerapp_longdescription: "Build your own version of your favorite game. Choose from tons of options, like platformer games, classic arcade games, racing games, programming art, storytelling projects, and more! You'll personalize your game by creating more levels, uploading or drawing custom assets, and programming more fun features."
   tutorial_tynkerpup_longdescription: "Pixel the puppy was enjoying a nice day out with his family, but they forgot to put him in the car and left without him! Can you program Pixel to find his way home? In each puzzle, you'll navigate Pixel to avoid obstacles so he can get back home to his family."
   tutorial_livecode_longdescription: "When you use our LiveCode tutorial for the Hour of Code, your students get to create their own soundboards. After creating soundboards with animal and piano sounds, students will be free to make their own customized soundboards with their own image and music selections!"
-  tutorial_cocomgame_longdescription: "First, level up your Python or JavaScript programming skills by coding your way out of danger and grabbing sweet loot. Then use your programming powers to build your own game and see if your friends can beat it!"
+  tutorial_cocomgame_longdescription: "Najskôr vylepši svoje programátorske schopnosti v Pythone alebo Javascripte, preži nebezpečné situácie a získaj zaslúženú odmenu. Potom využi svoje nové schopnosti na vytvorenie hry, ktorú si môžu zahrať aj tvoji priatelia!"
   tutorial_tynkerspin_longdescription: "In this project, you'll create an awesome customizable drawing tool. Program your pen, choose an image (or upload your own), and you'll be able to draw a rotating version of that image."
   tutorial_code-avengers_longdescription: "Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard."
   tutorial_tynkercq_longdescription: "Design your own candy troll character and go on a multi-level quest for candy to help your character find its way home. You'll solve coding puzzles to navigate your character through the human world, while avoiding obstacles and collecting gumdrops and mints."
@@ -1426,7 +1426,7 @@ sk:
   tutorial_box_longdescription: "Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide to facilitate a game design workshop, hackathon, or in-class series. \n\nMake: \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5. Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation, and a video tutorial. \n\nStudents can build off your instructions to customize their games. No prior experience required."
   tutorial_icontrol_longdescription: "This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.\n\nUsing a drag-and-drop programming environment and a programmable robotic sphere, pupils will learn that physical systems can be programmed and controlled."
-  tutorial_cocomteach_longdescription: "Introduce your students to Python or JavaScript in CodeCombat's free, one-hour Introduction to Computer Science course. We've got a dedicated lesson plan for you to help explain concepts to your students, including basic syntax, strings, arguments, loops, variables, and x- and y-coordinates, using gem-packed dungeon mazes and hero-vs-ogre battles."
+  tutorial_cocomteach_longdescription: "Uveďte svojich študentov zadarmo do jazykov Python alebo JavaScript v prostredí CodeCombat. Máte k dispozícii hodinový úvod do programovania, kde sa Vaši študenti oboznámia so základnou syntaxou, reťazcami, argumentmi, cyklami, premennými, súradnicami x a y v leveloch plných diamantov a súbojov hrdina vs. ogr."
   tutorial_bbcmathii_longdescription: "Standards-based lesson plan for grades K-2. Take your kids to the computer lab with worksheets in hand, and build apps involving arithmetic, visualization of numbers, and geometric shapes."
   tutorial_bbcphys_longdescription: "Standards-based lesson plan for grades K-5. Take your kids to the computer lab with worksheets in hand, and build apps involving physics."
   tutorial_bitsbox_longdescription: "Follow the prompts to code five fun mini-apps using real, typed Javascript. From blowing up pie in 'Food Fight' to flushing a notebook down a black hole in 'So Long, Homework!', each app is designed to delight kids while illustrating variables, methods, and more. These apps are also completely open-ended; kids can use them as a starting point for their own app creations. Beginners welcome!\n"
@@ -1634,7 +1634,7 @@ sk:
   tutorial_nclabdrone_longdescription: "Build a drone frame in ten steps with NCLab's 3D Modeling app. The drone frame can be 3D printed and used to build a real working drone!  Each step includes tutorials and instructions. Complete the code and immediately see the results.  3D Modeling is a vital part of 21st century engineering, manufacturing, art, science, medicine, and more.  This is a great way to get started! "
   tutorial_gpbcircle_longdescription: "Participants will make a circle that changes color and brightness as you move the mouse. In the process, they will explore the hue, saturation, and brightness color model."
   tutorial_gpbpaint_longdescription: "Participants will create a paint editor to draw with the mouse, then add features such as a clear button and the ability to fill areas with color."
-  tutorial_cocomarcade_longdescription: "Ready to create an even cooler game? Brush up on advanced coding concepts like functions and events using Python or JavaScript, then use those skills to build your own arcade survival game!"
+  tutorial_cocomarcade_longdescription: "Si pripravený postaviť si ešte coolovejšiu hru? Opráš pokročilé koncepty kódovania ako sú funkcie a udalosti použitím Pythonu či JavaScriptu a potom použi tieto zručnosti na postavenie vlastnej survival hry - hry o prežití!"
   tutorial_techcpp_longdescription: "Every C++ programmer aims for simpler, cleaner and more expressive ways to code. This handy tutorial picked 7 cool C++17 features that will make your code nicer."
   tutorial_beetik_longdescription: "In this activity, students reconstruct a small part of a famous piece by composer Franz Liszt. Students will learn how to embed loops and how they're used in both computer science and music. This is a step-by-step guide that will introduce algorithmic thinking in music with elements of computer science. In the last level of this activity, students will 'hack' the music by changing elements such as tempo, key, repetitions, notes, etc with the objective of making original variations based on what they learned. This activity intersects classical music with computer science."
   tutorial_codedj_longdescription: "In Code DJ, you will first discover the basics of Javascript by answering questions that will progressively become more like code. You will then reach a second world where you will actually start to make music directly with code, just by changing numbers at first, and as your mastery increases, by manipulating rhythm loops and more! You will then unlock the ability to create music freely in the Code DJ app and get it as an mp3!"
@@ -2909,7 +2909,7 @@ sk:
   tutorial_nclabdrone_string_platforms: "Všetky moderné prehliadače"
   tutorial_gpbcircle_string_platforms: "Všetky moderné prehliadače"
   tutorial_gpbpaint_string_platforms: "Všetky moderné prehliadače"
-  tutorial_cocomarcade_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox"
+  tutorial_cocomarcade_string_platforms: "všetky moderné prehliadače"
   tutorial_techcpp_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_beetik_string_platforms: "Chrome, Firefox, Android tablet, iPad"
   tutorial_codedj_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
@@ -3759,7 +3759,7 @@ sk:
   tutorial_nclabdrone_string_detail_programming_languages: "Python"
   tutorial_gpbcircle_string_detail_programming_languages: "Blocks"
   tutorial_gpbpaint_string_detail_programming_languages: "Blocks"
-  tutorial_cocomarcade_string_detail_programming_languages: "JavaScript, Python"
+  tutorial_cocomarcade_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
   tutorial_techcpp_string_detail_programming_languages: "C/C++"
   tutorial_beetik_string_detail_programming_languages: "Blocks"
   tutorial_codedj_string_detail_programming_languages: "JavaScript"

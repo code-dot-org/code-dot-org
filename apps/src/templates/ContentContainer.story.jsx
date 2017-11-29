@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentContainer from './ContentContainer';
+import {UnconnectedContentContainer as ContentContainer} from './ContentContainer';
 import CourseCard from './studioHomepages/CourseCard';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';

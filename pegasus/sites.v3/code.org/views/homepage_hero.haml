@@ -1,5 +1,6 @@
 - hoc_launch = DCDO.get('hoc_launch', nil)
 - census_announcement = DCDO.get('census_announcement', nil)
+- hoc_mode = DCDO.get('hoc_mode', nil)
 
 -# Whether we show a HOC launch background
 - show_hoc_launch_layout = hoc_launch && hoc_launch["homepage"]
@@ -59,7 +60,7 @@
 - main_actions = capture_haml do
   -# Temporary heading text for the Hour of Code
   - if request.language == "en"
-    - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs"
+    - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs" && hoc_mode == 'actual-hoc'
       = I18n.t(:homepage_hero_hoc_is_here)
     - else
       = I18n.t(:homepage_hero_hoc_is_coming)

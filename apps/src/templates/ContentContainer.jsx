@@ -1,9 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import Radium from 'radium';
-import {connect} from 'react-redux';
 
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
@@ -226,6 +226,9 @@ class Link extends Component {
   }
 }
 
+export const UnconnectedContentContainer = Radium(ContentContainer);
+
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
-}))(Radium(ContentContainer));
+  isRtl: state.isRtl,
+}))(UnconnectedContentContainer);

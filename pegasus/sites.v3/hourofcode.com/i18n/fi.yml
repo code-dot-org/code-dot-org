@@ -444,7 +444,7 @@ fi:
   tutorial_highseas_name: "Adventure on the High Seas"
   tutorial_capython_name: "Python Turtle Graphics"
   tutorial_frzn_name: "Code with Anna and Elsa"
-  tutorial_cocom_name: 'CodeCombat: Escape the Dungeon!'
+  tutorial_cocom_name: 'CodeCombat: Escape ang piitan!'
   tutorial_play-lab_name: "Play Lab"
   tutorial_boxisland_name: "Box Island"
   tutorial_textcomp_name: "Text Compression"
@@ -482,7 +482,7 @@ fi:
   tutorial_tynkerapp_name: "Build an App"
   tutorial_tynkerpup_name: "Puppy Adventure"
   tutorial_livecode_name: "LiveCode Sound Boards"
-  tutorial_cocomgame_name: 'CodeCombat: Build Your Own Game!'
+  tutorial_cocomgame_name: 'CodeCombat: Buuin ang Iyong Sariling Game!'
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "Build a Game with JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
@@ -576,7 +576,7 @@ fi:
   tutorial_box_name: "Box Island"
   tutorial_hopgame_name: "Hopscotch Game Design Workshop"
   tutorial_icontrol_name: "iControl"
-  tutorial_cocomteach_name: 'CodeCombat: Teacher-Led Activities'
+  tutorial_cocomteach_name: 'CodeCombat: lærerstyret Aktiviteter'
   tutorial_bbcmathii_name: "Bitsbox Coding + Math (K-2)"
   tutorial_bbcphys_name: "Bitsbox Coding + Physics"
   tutorial_bitsbox_name: "Build Crazy Apps with Bitsbox"
@@ -784,7 +784,7 @@ fi:
   tutorial_nclabdrone_name: "Let's Build a Drone!"
   tutorial_gpbcircle_name: "Make an Interactive Color Circle"
   tutorial_gpbpaint_name: "Make Your Own Paint Editor"
-  tutorial_cocomarcade_name: 'CodeCombat: Build an Arcade Game!'
+  tutorial_cocomarcade_name: 'CodeCombat: Bumuo ng isang Arcade Game!'
   tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
   tutorial_beetik_name: "Code the Music of Franz Liszt"
   tutorial_codedj_name: "Compose Music with Code DJ"
@@ -1294,7 +1294,7 @@ fi:
   tutorial_highseas_longdescription: "Animate an ocean wave to create a setting, then tell a story that takes place on the high seas."
   tutorial_capython_longdescription: "Python is an engaging and simple language to learn. Learn about using modules, functions, loops, and lists, all while creating fun images with the help of your turtle buddies. Geometry has never been so much fun!"
   tutorial_frzn_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-  tutorial_cocom_longdescription: "Choose your hero and code your way through the ogre patrols, lava pits, and laser beams of Kithgard Dungeon. Level up, earn gems, and loot magic items to unlock new programming powers!"
+  tutorial_cocom_longdescription: "Piliin ang iyong bayani at code ang iyong paraan sa pamamagitan ng mga patrols dambuhala, lava pits, at laser beams ng Kithgard piitan. Level up, kumita ng hiyas, at pagnakawan magic item upang i-unlock ang bagong mga kapangyarihan programming!"
   tutorial_play-lab_longdescription: "Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!"
   tutorial_boxisland_longdescription: "Take a trip on Box Island and collect all the stars! Box Island is a beautiful mobile coding game that takes kids on an exciting adventure on the charming island. In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   tutorial_textcomp_longdescription: "At some point we reach a physical limit of how fast we can send bits, and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data. In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text. "
@@ -1332,7 +1332,7 @@ fi:
   tutorial_tynkerapp_longdescription: "Build your own version of your favorite game. Choose from tons of options, like platformer games, classic arcade games, racing games, programming art, storytelling projects, and more! You'll personalize your game by creating more levels, uploading or drawing custom assets, and programming more fun features."
   tutorial_tynkerpup_longdescription: "Pixel the puppy was enjoying a nice day out with his family, but they forgot to put him in the car and left without him! Can you program Pixel to find his way home? In each puzzle, you'll navigate Pixel to avoid obstacles so he can get back home to his family."
   tutorial_livecode_longdescription: "When you use our LiveCode tutorial for the Hour of Code, your students get to create their own soundboards. After creating soundboards with animal and piano sounds, students will be free to make their own customized soundboards with their own image and music selections!"
-  tutorial_cocomgame_longdescription: "First, level up your Python or JavaScript programming skills by coding your way out of danger and grabbing sweet loot. Then use your programming powers to build your own game and see if your friends can beat it!"
+  tutorial_cocomgame_longdescription: "Una, level up ang iyong Python o JavaScript kasanayan sa programming sa pamamagitan ng coding ang iyong paraan sa labas ng panganib at daklot matamis pagnakawan. Pagkatapos ay gamitin ang iyong programming kapangyarihan upang bumuo ng iyong sariling mga laro at makita kung ang iyong kaibigan ay maaaring matalo ito!"
   tutorial_tynkerspin_longdescription: "In this project, you'll create an awesome customizable drawing tool. Program your pen, choose an image (or upload your own), and you'll be able to draw a rotating version of that image."
   tutorial_code-avengers_longdescription: "Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard."
   tutorial_tynkercq_longdescription: "Design your own candy troll character and go on a multi-level quest for candy to help your character find its way home. You'll solve coding puzzles to navigate your character through the human world, while avoiding obstacles and collecting gumdrops and mints."
@@ -1426,7 +1426,7 @@ fi:
   tutorial_box_longdescription: "Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide to facilitate a game design workshop, hackathon, or in-class series. \n\nMake: \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5. Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation, and a video tutorial. \n\nStudents can build off your instructions to customize their games. No prior experience required."
   tutorial_icontrol_longdescription: "This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.\n\nUsing a drag-and-drop programming environment and a programmable robotic sphere, pupils will learn that physical systems can be programmed and controlled."
-  tutorial_cocomteach_longdescription: "Introduce your students to Python or JavaScript in CodeCombat's free, one-hour Introduction to Computer Science course. We've got a dedicated lesson plan for you to help explain concepts to your students, including basic syntax, strings, arguments, loops, variables, and x- and y-coordinates, using gem-packed dungeon mazes and hero-vs-ogre battles."
+  tutorial_cocomteach_longdescription: "Introducere eleverne til Python eller JavaScript i CodeCombat gratis, en times introduktion til datalogi kursus. Vi har fået en dedikeret lektion plan for dig at hjælpe med at forklare begreber til dine elever, herunder grundlæggende syntaks, strygere, argumenter, sløjfer, variabler, og x- og y-koordinater, ved hjælp af perle-pakket dungeon labyrinter og helt-vs-trold slag."
   tutorial_bbcmathii_longdescription: "Standards-based lesson plan for grades K-2. Take your kids to the computer lab with worksheets in hand, and build apps involving arithmetic, visualization of numbers, and geometric shapes."
   tutorial_bbcphys_longdescription: "Standards-based lesson plan for grades K-5. Take your kids to the computer lab with worksheets in hand, and build apps involving physics."
   tutorial_bitsbox_longdescription: "Follow the prompts to code five fun mini-apps using real, typed Javascript. From blowing up pie in 'Food Fight' to flushing a notebook down a black hole in 'So Long, Homework!', each app is designed to delight kids while illustrating variables, methods, and more. These apps are also completely open-ended; kids can use them as a starting point for their own app creations. Beginners welcome!\n"
@@ -1634,7 +1634,7 @@ fi:
   tutorial_nclabdrone_longdescription: "Build a drone frame in ten steps with NCLab's 3D Modeling app. The drone frame can be 3D printed and used to build a real working drone!  Each step includes tutorials and instructions. Complete the code and immediately see the results.  3D Modeling is a vital part of 21st century engineering, manufacturing, art, science, medicine, and more.  This is a great way to get started! "
   tutorial_gpbcircle_longdescription: "Participants will make a circle that changes color and brightness as you move the mouse. In the process, they will explore the hue, saturation, and brightness color model."
   tutorial_gpbpaint_longdescription: "Participants will create a paint editor to draw with the mouse, then add features such as a clear button and the ability to fill areas with color."
-  tutorial_cocomarcade_longdescription: "Ready to create an even cooler game? Brush up on advanced coding concepts like functions and events using Python or JavaScript, then use those skills to build your own arcade survival game!"
+  tutorial_cocomarcade_longdescription: "Handa upang lumikha ng isang kahit na mas cool laro? Mag-ayos sa mga advanced na coding konseptong tulad ng mga function at mga kaganapan gamit ang Python o JavaScript, pagkatapos ay gamitin ang mga kasanayan upang bumuo ng iyong sariling mga arcade game kaligtasan ng buhay!"
   tutorial_techcpp_longdescription: "Every C++ programmer aims for simpler, cleaner and more expressive ways to code. This handy tutorial picked 7 cool C++17 features that will make your code nicer."
   tutorial_beetik_longdescription: "In this activity, students reconstruct a small part of a famous piece by composer Franz Liszt. Students will learn how to embed loops and how they're used in both computer science and music. This is a step-by-step guide that will introduce algorithmic thinking in music with elements of computer science. In the last level of this activity, students will 'hack' the music by changing elements such as tempo, key, repetitions, notes, etc with the objective of making original variations based on what they learned. This activity intersects classical music with computer science."
   tutorial_codedj_longdescription: "In Code DJ, you will first discover the basics of Javascript by answering questions that will progressively become more like code. You will then reach a second world where you will actually start to make music directly with code, just by changing numbers at first, and as your mastery increases, by manipulating rhythm loops and more! You will then unlock the ability to create music freely in the Code DJ app and get it as an mp3!"
@@ -2909,7 +2909,7 @@ fi:
   tutorial_nclabdrone_string_platforms: "All modern browsers"
   tutorial_gpbcircle_string_platforms: "All modern browsers"
   tutorial_gpbpaint_string_platforms: "All modern browsers"
-  tutorial_cocomarcade_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox"
+  tutorial_cocomarcade_string_platforms: "Ang lahat ng mga modernong browser"
   tutorial_techcpp_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_beetik_string_platforms: "Chrome, Firefox, Android tablet, iPad"
   tutorial_codedj_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
@@ -3759,7 +3759,7 @@ fi:
   tutorial_nclabdrone_string_detail_programming_languages: "Python"
   tutorial_gpbcircle_string_detail_programming_languages: "Blocks"
   tutorial_gpbpaint_string_detail_programming_languages: "Blocks"
-  tutorial_cocomarcade_string_detail_programming_languages: "JavaScript, Python"
+  tutorial_cocomarcade_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
   tutorial_techcpp_string_detail_programming_languages: "C/C++"
   tutorial_beetik_string_detail_programming_languages: "Blocks"
   tutorial_codedj_string_detail_programming_languages: "JavaScript"
