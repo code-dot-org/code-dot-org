@@ -403,6 +403,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
+  // Remember the project between when we save and when we publish
+  // while the dialog is open, but not between dialog openings.
+  let projectId = null;
+  let projectType = null;
+
   const saveButtonSelector = '#save-to-project-gallery-button';
   const saveButton = feedback.querySelector(saveButtonSelector);
   if (saveButton) {
@@ -411,8 +416,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       project.copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
         .then(() => {
+          projectId = project.getCurrentId();
+          projectType = project.getStandaloneApp();
           $(saveButtonSelector).prop('disabled', true).text(msg.addedToProjects());
-          $(publishButtonSelector).prop('disabled', true);
         }).catch(err => console.log(err));
     });
   }
@@ -426,6 +432,24 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
 
+      const store = getStore();
+
+      if (projectId && projectType) {
+        // The user previously saved and is now publishing. Publish the project
+        // which we just saved, rather than creating a new one and publishing it.
+        store.dispatch(showPublishDialog(projectId, projectType));
+        let publishDialog = FeedbackUtils.getPublishDialogElement();
+        ReactDOM.render(
+          <Provider store={store}>
+            <PublishDialog
+              afterPublish={() => showFeedbackDialog(true)}
+            />
+          </Provider>,
+          publishDialog
+        );
+        return;
+      }
+
       // project.copy relies on state not in redux, and we want to keep this
       // badness out of our redux code. Therefore, define what happens when
       // publish dialog publish button is clicked here, outside of the publish
@@ -434,7 +458,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       // Once project.js is moved onto redux, the remix-and-publish operation
       // should be moved inside the publish dialog redux.
 
-      const store = getStore();
       FeedbackUtils.showConfirmPublishDialog(() => {
         store.dispatch({type: PUBLISH_REQUEST});
         let didPublish = false;
@@ -450,9 +473,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
            if (didPublish) {
              // Only show feedback dialog again if publishing succeeded,
              // because we keep the publish dialog open if it failed.
-             showFeedbackDialog();
-             $(publishButtonSelector).prop('disabled', true).text(msg.published());
-             $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+             showFeedbackDialog(true);
            }
           });
       });
@@ -484,10 +505,15 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  function showFeedbackDialog() {
+  function showFeedbackDialog(isPublished) {
     feedbackDialog.show({
       backdrop: (options.app === 'flappy' ? 'static' : true)
     });
+
+    if (isPublished) {
+      $(publishButtonSelector).prop('disabled', true).text(msg.published());
+      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+    }
   }
 
   showFeedbackDialog();
@@ -498,15 +524,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 };
 
 FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
-  let publishDialog = document.getElementById('legacy-share-publish-dialog');
-  if (!publishDialog) {
-    publishDialog = document.createElement('div');
-    publishDialog.id = 'legacy-share-publish-dialog';
-    document.body.appendChild(publishDialog);
-  }
-
   const store = getStore();
   store.dispatch(showPublishDialog());
+  let publishDialog = FeedbackUtils.getPublishDialogElement();
   ReactDOM.render(
     <Provider store={store}>
       <PublishDialog
@@ -515,6 +535,16 @@ FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
     </Provider>,
     publishDialog
   );
+};
+
+FeedbackUtils.getPublishDialogElement = function () {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+  return publishDialog;
 };
 
 /**
