@@ -35,7 +35,7 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
       >
         <img
           style={styles.projectTemplateIcon}
-          id="projectTemplateWorkspaceIcon"
+          className="projectTemplateWorkspaceIcon"
           src={IMAGE_BASE_URL + 'connect.svg'}
           data-tip data-for={this.tooltipId}
           aria-describedby={this.tooltipId}

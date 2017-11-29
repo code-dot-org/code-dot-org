@@ -52,10 +52,10 @@
   "tutorialDetailInternationalLanguages": "Languages",
   "tutorialDetailStandards": "Standarder",
   "tutorialDetailDisabled": "This tutorial is temporarily unavailable.",
-  "headingTutorialsYourLanguage": "Activities in your language",
-  "showAllTutorialsButton": "Show activities for many languages",
-  "hideAllTutorialsButton": "Hide activities for many languages",
-  "noTutorialsYourLanguage": "There are no activities supported in your language. Try activities in other languages by clicking the button below.",
+  "headingTutorialsYourLanguage": "Aktiviteter på dit eget sprog",
+  "showAllTutorialsButton": "Vis aktiviteter for mange sprog",
+  "hideAllTutorialsButton": "Skjul aktiviteter for mange sprog",
+  "noTutorialsYourLanguage": "Der er ingen aktiviteter tilgængelige på dit sprog. Prøv aktiviteter på andre sprog ved at klikke på knappen nedenfor.",
   "bottomGuidelinesLink": "Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
   "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students."
 }

@@ -170,7 +170,7 @@ post '/api/hour/certificate' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
 
   row = DB[:hoc_activity].where(session: params[:session_s]).first
-  if row
+  if row && !row[:name]
     name = params[:name_s].to_s.strip
     DB[:hoc_activity].where(id: row[:id]).update(name: name)
     row[:name] = name

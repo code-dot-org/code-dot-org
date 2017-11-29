@@ -538,11 +538,6 @@ class User < ActiveRecord::Base
     User.find_by(hashed_email: hashed_email)
   end
 
-  def self.find_by_parent_email(email)
-    return nil if email.blank?
-    User.find_by(parent_email: email)
-  end
-
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]

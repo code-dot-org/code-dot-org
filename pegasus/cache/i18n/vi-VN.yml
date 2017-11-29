@@ -385,9 +385,8 @@
   homepage_hero_text_satya: "&ldquo;Khoa học máy tính có thể là chìa khóa đến những
     cơ hội tối nhất trên thế giới&rdquo; Satya, CEO của Microsoft"
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Khoa học máy tính trao quyền cho những người trẻ kiến tạo thế giới trong tương lai.&rdquo;
+    Satya, CEO Microsoft
   homepage_hero_text_bosh: "&ldquo;Nếu bạn biết lập trình, bạn có thể chọn khóa học
     cho cuộc sống của bạn.&rdquo; Chris Bosh"
   homepage_hero_text_student1: |-
@@ -413,8 +412,8 @@
   homepage_hero_text_stat_loc: "#loc các dòng mã học viên viết"
   homepage_hero_text_stat_students: "#student_count tài khoản học viên trên Code Studio"
   homepage_hero_text_stat_served: 'Giờ lập trình: đã phục vụ #served'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_hero_hoc_is_coming: Giờ Lập Trình đã đến
+  homepage_hero_hoc_is_here: Giờ Lập Trình tại đây
   homepage_slot_text_hoc: Một giờ lập trình
   homepage_slot_text_frozen: Băng giá với Anna và Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -557,13 +556,13 @@
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa tuổi
     6-106
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Hero''s Journey'
   minecraft_designer: Nhà thiết kế Minecraft
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  minecraft_agent_description: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt
+    động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình.
   minecraft_agent_button: Bắt đầu
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
@@ -584,11 +583,12 @@
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
-  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
-    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
-    of the new tutorial by the Minecraft team and learn about the resources and best
-    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
-    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
+  minecraft_join_online_training: Bạn đã sẵn sàng để thực hiện Giờ lập trình với Minecraft,
+    nhưng không biết bắt đầu từ đâu? Hãy tham gia webinar của chúng tôi <a href='%{minecraft_webinar_url}'>tại
+    đây</a>. Bạn sẽ được tìm hiểu và cung cấp tài liệu hỗ trợ để sẵn sàng tham gia
+    hành trình Hero's Journey từ Minecraft team. Hãy bắt đầu bằng suy nghĩ sẽ mang
+    Giờ lập trình đến với các bạn trẻ trong tuần lễ giáo dục khoa học máy tính (từ
+    ngày 4/12 - 10/12) và hơn thế nữa.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -605,8 +605,8 @@
     the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
+  minecraft_og_agent: Minecaft là nền tảng của Giờ lập trình, và bạn chính là anh
+    hùng! Hãy viết các câu lệnh để lập trình hành trình trong thế giới Minecraft.
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
