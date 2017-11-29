@@ -53,7 +53,6 @@ import ChallengeDialog from './templates/ChallengeDialog';
 /**
  * @typedef {Object} FeedbackOptions
  * @property {LiveMilestoneResponse} response
- * @property {string} app
  * @property {string} skin
  * @property {TestResult} feedbackType
  * @property {string} message
@@ -486,7 +485,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   function showFeedbackDialog() {
     feedbackDialog.show({
-      backdrop: (options.app === 'flappy' ? 'static' : true)
+      backdrop: (getStore().getState().pageConstants.appType === 'flappy' ? 'static' : true)
     });
   }
 
