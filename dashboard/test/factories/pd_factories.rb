@@ -624,6 +624,7 @@ FactoryGirl.define do
       program Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
       state 'Washington'
       add_attribute :zip_code, '98101'
+      association :school
     end
 
     initialize_with do
@@ -638,21 +639,29 @@ FactoryGirl.define do
         phone: '5558675309',
         address: '123 Fake Street',
         city: 'Buffalo',
+        state: state,
+        zip_code: zip_code,
+        gender_identity: 'Male',
+        race: ['Other'],
+        school: school.id,
         principal_first_name: 'Albus',
         principal_last_name: 'Dumbledore',
         principal_title: 'Dr.',
         principal_email: 'socks@hogwarts.edu',
-        confirm_principal_email: 'socks@hogwarts.edu',
+        principal_confirm_email: 'socks@hogwarts.edu',
         principal_phone_number: '5555882300',
         current_role: 'Teacher',
         program: program,
         grades_at_school: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'],
-        grades_teacher: ['Grade 7'],
+        grades_teaching: ['Grade 7'],
         grades_expect_to_teach: ['Grade 6', 'Grade 7'],
+        does_school_require_cs_license: 'Yes',
+        have_cs_license: 'Yes',
         subjects_teaching: ['Computer Science'],
         subjects_expect_to_teach: ['Computer Science'],
         subjects_licensed_to_teach: ['Computer Science'],
-        taught_in_the_past: ['Hour of Code'],
+        taught_in_past: ['Hour of Code'],
+        previous_yearlong_cdo_pd: ['CS in Science'],
         cs_offered_at_school: ['AP CS A'],
         cs_opportunities_at_school: ['Courses for credit'],
         plan_to_teach: 'Yes, I plan to teach this course',

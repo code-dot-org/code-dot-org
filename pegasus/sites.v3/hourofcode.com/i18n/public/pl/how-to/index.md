@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -13,9 +13,7 @@ Przyłącz się do inicjatywy i pomóż grupie uczniów zapoznać się z informa
 
 ## 2. Wybierz samouczek dla Waszej Godziny Kodowania
 
-Oferujemy różnorodne zabawy, [ samouczki dla uczniów](<%= resolve_url('/learn') %>), jak i [ samouczki dla nauczycieli](<%= resolve_url('https://code.org/educate/teacher-led') %>) dla uczestników w każdym wieku, stworzone przez wielu partnerów.
-
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+Oferujemy wiele zabawy, [ samouczki dla uczniów ](<%= resolve_url('/learn') %>) dla wszystkich grup wiekowych i poziomów zaawansowania. Uczniowie pracują samodzielnie, chociaż wielu aktywnościom towarzyszą plany lekcji dla nauczycieli (zobaczysz link, po kliknięciu na aktywność), do poprowadzenia dyskusji lub poszerzenia aktywności. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promuj swoją Godzinę Kodowania
 
@@ -50,11 +48,11 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 ## 6. Programuj!
 
-**Poproś uczniów o rozpoczęcie zadania**
+**Poproś uczniów, by rozpoczęli**
 
 - Napisz link do samouczka na tablicy. Znajdź link wymieniony w [informacji dla Twojego wybranego samouczka](<%= resolve_url('/learn') %>) pod liczbą uczestników.
 
-**Oto, co można powiedzieć, kiedy Twoi uczniowie napotkają trudności:**
+**Oto co można powiedzieć, kiedy Twoi uczniowie napotkają trudności:**
 
 - "Nie wiem. Sprawdźmy to razem."
 - "Technologia nie zawsze działa w sposób, jaki chcemy."

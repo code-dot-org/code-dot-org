@@ -184,6 +184,8 @@ class User < ActiveRecord::Base
   has_many :regional_partners,
     through: :regional_partner_program_managers
 
+  has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
@@ -534,11 +536,6 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     User.find_by(hashed_email: hashed_email)
-  end
-
-  def self.find_by_parent_email(email)
-    return nil if email.blank?
-    User.find_by(parent_email: email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)

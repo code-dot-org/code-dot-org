@@ -98,4 +98,14 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
       assert_response :success
     end
   end
+
+  test 'submit is idempotent' do
+    create :pd_teacher1819_application, user: @teacher
+
+    sign_in @teacher
+    assert_no_difference 'Pd::Application::Teacher1819Application.count' do
+      put :create, params: @test_params
+    end
+    assert_response :success
+  end
 end

@@ -9115,6 +9115,7 @@ en:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3_b: Remember that your function should only get honey *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3a_b: Use a stairstep pattern to check the first four clouds.

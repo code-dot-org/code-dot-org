@@ -244,13 +244,24 @@ class ProjectsController < ApplicationController
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
     end
 
+    begin
+      _, storage_app_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      # continue as normal, as we only use this value for stats.
+    end
+
     FirehoseClient.instance.put_record(
       'analysis-events',
-      # Use -wip suffix until we settle on an exact format for these records.
-      study: 'project-views-wip',
+      study: 'project-views',
       event: project_view_event_type(iframe_embed, sharing),
-      project_id: params[:channel_id],
+      # allow cross-referencing with the storage_apps table.
+      project_id: storage_app_id,
+      # make it easier to group by project_type.
+      data_string: params[:key],
       data_json: {
+        # not currently used, but may prove useful to have in the data later.
+        encrypted_channel_id: params[:channel_id],
+        # record type again to make it clear what data_string represents.
         project_type: params[:key],
       }.to_json
     )
@@ -273,11 +284,17 @@ class ProjectsController < ApplicationController
     end
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
+    begin
+      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return head :bad_request
+    end
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
       src: src_channel_id,
-      type: params[:key]
+      type: params[:key],
+      remix_parent_id: remix_parent_id,
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id

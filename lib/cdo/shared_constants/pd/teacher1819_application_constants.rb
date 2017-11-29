@@ -7,14 +7,15 @@ module Teacher1819ApplicationConstants
   end
 
   SECTION_HEADERS = {
-    section_1_about_you_and_your_school: 'About You and Your School',
-    section_2_choose_your_program: 'Choose Your Program',
-    section_3_summer_workshop: 'Summer Workshop',
-    section_4_submission: 'Submission'
+    section_1_about_you: 'About You',
+    section_2_your_school: 'Your School',
+    section_3_choose_your_program: 'Choose Your Program',
+    section_4_summer_workshop: 'Summer Workshop',
+    section_5_submission: 'Submission'
   }
 
   PAGE_LABELS = {
-    section_1_about_you_and_your_school: {
+    section_1_about_you: {
       country: 'Country',
       title: 'Title',
       first_name: 'First Name',
@@ -29,11 +30,22 @@ module Teacher1819ApplicationConstants
       zip_code: 'Zip Code',
       gender_identity: 'Gender Identity',
       race: 'Race',
+    },
+
+    section_2_your_school: {
+      school: 'School',
+      school_name: 'School Name',
+      school_address: 'School Address',
+      school_city: 'City',
+      school_state: 'State',
+      school_zip_code: 'Zip Code',
+      school_type: 'My school is a',
+
       principal_first_name: "Principal's first name",
       principal_last_name: "Principal's last name",
       principal_title: "Principal's Title",
       principal_email: "Principal's email address",
-      confirm_principal_email: "Confirm principal's email address",
+      principal_confirm_email: "Confirm principal's email address",
       principal_phone_number: "Principal's phone number",
       current_role: 'What is your current role at your school?',
       grades_at_school: 'What grades are served at your school? (Select all that apply)',
@@ -47,6 +59,10 @@ module Teacher1819ApplicationConstants
         'Based on current plans for the 2018-19 school year, what subject(s) do you
          expect to teach next year (2018-19)? (select all that apply)'
       ),
+      does_school_require_cs_license:
+        'Does your school district require any specific licenses, certifications, or endorsements to teach computer science?',
+      have_cs_license:
+        'Do you have the required licenses, certifications, or endorsements to teach computer science in your district?',
       subjects_licensed_to_teach:
         'Which subject area(s) are you currently licensed to teach? (select all that apply)',
       taught_in_past: clean_multiline(
@@ -55,13 +71,17 @@ module Teacher1819ApplicationConstants
          Note: no computer science experience is necessary or expected
          to participate in the Professional Learning Program.'
       ),
+      previous_yearlong_cdo_pd: clean_multiline(
+        "Have you participated in previous yearlong Code.org Professional Learning Programs?
+         If so, mark the programs you've participated in."
+      ),
       cs_offered_at_school:
         'What computer science courses or activities are currently offered at your school? (select all that apply)',
       cs_opportunities_at_school:
         'What computer science opportunities currently exist at your school? (select all that apply)',
     },
 
-    section_2_choose_your_program: {
+    section_3_choose_your_program: {
       program: clean_multiline(
         'Which professional learning program would you like to join for the 2018-19 school year?
          Note: this application is only for
@@ -102,15 +122,27 @@ module Teacher1819ApplicationConstants
       plan_to_teach: 'Do you plan to personally teach this course in the 2018-19 school year?',
     },
 
-    section_3_summer_workshop: {
+    section_4_summer_workshop: {
       able_to_attend_single: 'Are you able to attend your assigned summer workshop?',
-      able_to_attend_multiple: 'Are you able to attend any of these assigned summer workshops?',
-      alternate_workshops: clean_multiline(
-        'If you are not able to attend your assigned summer workshop, which of the following
-         alternate workshops are you available to attend? Please note that we are not able to
-         guarantee a space for you in a different location, and you will be responsible for the
-         costs related to traveling to that location. (select all that apply)'
+      able_to_attend_multiple: clean_multiline(
+        'Your Regional Partner has more than one local summer workshop in your region.
+         Are you able to attend any of these assigned summer workshops? Select all that apply.'
       ),
+      alternate_workshops: clean_multiline(
+        'If you are not able to attend your local summer workshop, which of the following
+         alternate workshops are you available to attend?
+         __Please note that we are not able to guarantee a space for you in a different location,
+         and you will be responsible for the costs related to traveling to that location.__
+         Select all that apply.'
+      ),
+      understand_fee: clean_multiline(
+        'By checking this box, you indicate that you understand there may be a program fee
+         for the summer workshop you attend.'
+      ),
+      pay_fee:
+        'If there is a fee for your summer workshop, will you or your school be able to pay for the fee?',
+      consider_for_funding:
+        'Would you like to be considered for funding support? Note that funding support is not guaranteed.',
       committed: 'Are you committed to participating in the entire Professional Learning Program?',
       willing_to_travel: clean_multiline(
         'The four one-day school year workshops are typically held on Saturdays, with an approximate
@@ -118,7 +150,7 @@ module Teacher1819ApplicationConstants
       )
     },
 
-    section_4_submission: {
+    section_5_submission: {
       agree: clean_multiline(
         'By submitting this application, I agree to share my contact information
          and application with Code.org’s Regional Partners.'

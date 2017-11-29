@@ -750,13 +750,6 @@ zh-TW:
     create: "創建專案"
     create_a_project: '創建一個新的專案：'
     new: "建立新專案"
-    new_buttons:
-      artist: "藝術家"
-      playlab: "Play Lab"
-      applab: "App Lab"
-      gamelab: "Game Lab"
-      weblab: "Web Lab (beta)"
-    new_buttons_header: "開始一個新專案"
     rename: "重新命名"
     save: "儲存"
     delete: "删除"

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:titulo_pais_recursos) %>'
+title: <%= hoc_s(:titulo_pais_recursos) %>
 layout: wide
 nav: promote_nav
 ---

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_proclamation) %>'
+title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
 ---
@@ -8,9 +8,9 @@ nav: promote_nav
 ### 下面是支持計算機科學教育週的專欄文章示例，可供國家、地方立法者參考使用。
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[眾議院, 參議院, 州, 縣或市的決議或公告 #]-而計算機科學教育周強調了計算機科學在改造我們的社會中所起的關鍵作用, 以及計算機科學是如何使創新和創造經濟機會;
 
-[HOUSE OR SENATE RESOLUTION ###]
+眾議院或參議院決議
 
 [DATE]
 
@@ -18,38 +18,38 @@ nav: promote_nav
 
 而計算機科學正在轉變工業，開闢新的經濟模式，引領革新整個科學領域，推動創新和促進生產力。
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+計算機科學正在改變工業, 創造新的商業領域, 推動科學的各個領域的創新, 以及提高已建立的經濟部門的生產率;
 
 而計算機科學領域是數位世代的基礎性科學；
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+信息技術部門具有獨特的優勢, 可以通過研究和開發新的創新來幫助經濟復甦;
 
 而計算機科學就業前景一片光明，全國有超過 500,000 個的就業機會。
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+為學生提供參加高質量的計算機科學活動的機會，使他們能夠接觸到這個領域提供的豐富機會，並提供批判性思維技能，這些技能將在他們的一生中發揮作用；
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+所有學生的計算機科學教育都應該做好全面的準備，包括擁有合格的老師，科技及與年齡相符的小學和中學水平要求的計算機科學課程；
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+計算機科學教育要應對的挑戰，包括統計面向高校畢業要求的計算機科學課程，以及為計算機科學教師提供專業發展；
 
 而在計算機科學教育週期間參與一小時玩程式活動，有助於揭開計算機科學領域的神秘面紗，並鼓勵更多的學生進一步研究計算機科學；
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+計算機科學領域同樣有需要跨越的嚴重障礙，那就是吸引更多女性和各級分枝的少數族裔參與進來；
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+格蕾絲·穆雷·赫柏，計算機科學領域的女性第一人，設計新的語言程序並開創計算機系統的標準，為計算機科學的諸多發展奠定基礎；
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+為紀念格雷斯漏斗的生日，本週的 <%= campaign_date('start-long')%> , 被指定為 ' 計算機科學教育週 ': 就現在開始。
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+解決, (眾議院或參議院, 州, 縣, 市或學校董事會)-
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) 支持指定的計算機科學教育週 (< %= campaign_date('full') %>);
 
 (2) 透過幫助學生參與一小時玩程式活動的過程中，同時鼓勵學校、教師、家長和決策者加入計算機科學週；
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) 鼓勵學校，教師，科研人員，高校，企業領導者和決策者制定教師機制，接受最先進的專業發展，讓他們可為各級教育提供計算機科學的可持續學習經驗，並鼓勵學生接觸計算機科學概念；
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) 鼓勵政策制定者消除障礙，讓計算機科學課程被視為同數學或科學一樣計入到畢業所需的學分；
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) 鼓勵通過現有方案，為女性和少數族裔在學習計算機科學方面創造機會。
 
 <%= view :signup_button %>

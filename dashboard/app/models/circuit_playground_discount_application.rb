@@ -24,6 +24,25 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   belongs_to :user
   belongs_to :circuit_playground_discount_code
 
+  enum unit_6_intention: {
+    no: 1,
+    yes1718: 2,
+    yes1819: 3,
+    yesAfter: 4,
+    unsure: 5,
+  }
+
+  def eligible_unit_6_intention?
+    yes1718? || yes1819?
+  end
+
+  # Given a studio_person_id, finds an existing application (if one exists) for any user
+  # associated. Should never return more than one result
+  def self.find_by_studio_person_id(studio_person_id)
+    associated_user_ids = User.where(studio_person_id: studio_person_id).map(&:id)
+    where(user_id: associated_user_ids).first
+  end
+
   # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
   def self.user_pd_eligible?(user)
     csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
@@ -53,6 +72,8 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
       has_confirmed_school: application.try(:has_confirmed_school) || false,
+      school_id: user.try(:school_info).try(:school_id),
+      school_name: user.try(:school_info).try(:school).try(:name),
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),

@@ -1,17 +1,17 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Làm thế nào để tổ chức một sự kiện Giờ Mã hoá
+# Làm thế nào để tổ chức một sự kiện Giờ lập trình
 
 ## 1. Chuẩn bị cho sự kiện
 
-- Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+- Xác định địa điểm và thời gian tổ chức.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Mời các đơn vị truyền thông/báo chí, bao gồm truyền hình địa phương, báo chí và các blogger về giáo dục/công nghệ. Xem [ bộ công cụ báo chí ](<%= hoc_uri('/resources/press-kit') %>) của chúng tôi để được giúp đỡ.
 
 ## 2. During your event
 

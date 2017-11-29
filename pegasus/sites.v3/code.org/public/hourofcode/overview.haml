@@ -3,8 +3,9 @@ title: Hour of Code Teacher Resources
 nav: hoc_teacher_resources_nav
 theme: responsive
 ---
-%link{:href=>"/css/student.css", :rel=>"stylesheet"}
-%link(rel='stylesheet' type='text/css' href='/shared/css/course-blocks.css')
+%link{href: "/css/student.css", rel: "stylesheet"}
+%link{href: "/css/tools.css", rel: "stylesheet"}
+%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
 %script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
 %h1 Hour of Code for all ages
@@ -12,6 +13,10 @@ theme: responsive
 The
 %a{href:"https://hourofcode.com"} Hour of Code
 is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 200+ one-hour tutorials, available in over 45 languages. Teachers, to view lesson plans and additional teacher resources please select your desired Hour of Code tutorial from the side menu to the left.
+
+#resources.responsive-body
+  = view :top_hoc_tutorials
+.clear
 
 %br
 %br
@@ -24,4 +29,4 @@ is a global movement reaching tens of millions of students in 180+ countries. An
       %h2.resource-title More Activities from Partners
       The Hour of Code website has over 100 computer science activities for all ages and experience levels, developed by Code.org and partners.
     %a{href: "/learn"}
-      %button.orange-button{:style=>"margin-bottom: 20px;"} Go
+      %button.orange-button{style: "margin-bottom: 20px;"} Go

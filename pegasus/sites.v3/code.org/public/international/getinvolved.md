@@ -16,9 +16,9 @@ We'll be sending out regular communications regarding Code.org's international p
 
 ## Host an Hour of Code anytime, anywhere 
 
-The [Hour of Code] (hourofcode.com) is the largest learning event in history. Since it first launched in 2013, it has become a truly global movement, reaching tens of millions of students in more than 180 countries. People of all ages have tried the Hour of Code, a one-hour course designed to demystify computer science and show that anybody can learn the basics. Hour of Code events can happen anytime, anywhere. 
+The [Hour of Code](https://hourofcode.com) is the largest learning event in history. Since it first launched in 2013, it has become a truly global movement, reaching tens of millions of students in more than 180 countries. People of all ages have tried the Hour of Code, a one-hour course designed to demystify computer science and show that anybody can learn the basics. Hour of Code events can happen anytime, anywhere. 
 
-[Organize an Hour of Code.] (https://hourofcode.com/how-to)
+[Organize an Hour of Code.](https://hourofcode.com/how-to)
 
 ***
 

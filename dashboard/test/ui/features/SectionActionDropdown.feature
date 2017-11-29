@@ -1,4 +1,6 @@
 Feature: Using the SectionActionDropdown
+
+  @no_ie
   # * Check that we get redirected to the right page
   Scenario: Viewing progress from SectionActionDropdown
     Given I create a teacher-associated student named "Sally"
@@ -10,7 +12,7 @@ Feature: Using the SectionActionDropdown
 
     When I sign in as "Teacher_Sally"
     And I open the section action dropdown
-    And I click selector "a:contains('View Progress')" once I see it
+    And I press the child number 0 of class ".pop-up-menu-item"
     And I wait until current URL contains "/progress"
 
   # * Check that we get redirected to the right page
@@ -19,7 +21,7 @@ Feature: Using the SectionActionDropdown
     And I am on "http://studio.code.org/"
     And I create a new section
     And I open the section action dropdown
-    And I click selector "a:contains('Manage Students')" once I see it
+    And I press the child number 1 of class ".pop-up-menu-item"
     And I wait until current URL contains "/manage"
 
   # * Check that we get redirected to the right page
@@ -28,7 +30,7 @@ Feature: Using the SectionActionDropdown
     And I am on "http://studio.code.org/"
     And I create a new section
     And I open the section action dropdown
-    And I click selector "a:contains('Print Login Cards')" once I see it
+    And I press the child number 2 of class ".pop-up-menu-item"
     And I wait until current URL contains "/print_signin_cards"
 
   # * Add a section and then opens the edit dialog.
@@ -39,7 +41,7 @@ Feature: Using the SectionActionDropdown
     And I am on "http://studio.code.org/"
     And I create a new section
     And I open the section action dropdown
-    And I click selector ".pop-up-menu-item:contains('Edit Section Details')" once I see it
+    And I press the child number 3 of class ".pop-up-menu-item"
     And I press the first ".uitest-saveButton" element
 
   # * Checks that section can be hidden and shown
@@ -53,11 +55,11 @@ Feature: Using the SectionActionDropdown
     And I am on "http://studio.code.org/"
     And I create a new section
     And I open the section action dropdown
-    And I click selector ".pop-up-menu-item:contains('Hide Section')" once I see it
+    And I press the child number 4 of class ".pop-up-menu-item"
     And I wait until I don't see selector ".ui-test-section-dropdown"
     And I click selector ".ui-test-show-hide" once I see it
     And I open the section action dropdown
-    And I click selector ".pop-up-menu-item:contains('Show Section')" once I see it
+    And I press the child number 4 of class ".pop-up-menu-item"
     And I wait until I don't see selector ".ui-test-show-hide"
     And I open the section action dropdown
-    And I click selector ".pop-up-menu-item:contains('Hide Section')" once I see it
+    And I press the child number 4 of class ".pop-up-menu-item"

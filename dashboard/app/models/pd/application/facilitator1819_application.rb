@@ -56,7 +56,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 15)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
@@ -442,6 +442,11 @@ module Pd::Application
     # e.g. 7 -> 7am, 15 -> 3pm
     private_class_method def self.format_hour(hour)
       (Date.today + hour.hours).strftime("%l%P").strip
+    end
+
+    # @override
+    def check_idempotency
+      Pd::Application::Facilitator1819Application.find_by(user: user)
     end
   end
 end
