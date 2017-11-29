@@ -24,7 +24,7 @@ export default class Summary extends React.Component {
     loading: true,
     applications: null,
     regionalPartnerName: this.props.route.regionalPartnerName,
-    regionalPartnerId: null
+    regionalPartnerValue: null
   };
 
   constructor(props) {
@@ -48,12 +48,12 @@ export default class Summary extends React.Component {
   }
 
   handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerId = selected ? selected.value : null;
-    const regionalPartnerName = regionalPartnerId ? selected.label : this.props.route.regionalPartnerName;
-    this.setState({regionalPartnerName: regionalPartnerName, regionalPartnerId: regionalPartnerId});
+    const regionalPartnerValue = selected ? selected.value : null;
+    const regionalPartnerName = regionalPartnerValue ? selected.label : this.props.route.regionalPartnerName;
+    this.setState({regionalPartnerName: regionalPartnerName, regionalPartnerValue: regionalPartnerValue});
     $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/applications?regional_partner=${regionalPartnerId}`,
+      url: `/api/v1/pd/applications?regional_partner=${regionalPartnerValue}`,
       dataType: 'json'
     })
     .done(data => {
@@ -73,7 +73,7 @@ export default class Summary extends React.Component {
         {this.state.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
-            regionalPartnerId={this.state.regionalPartnerId}
+            regionalPartnerValue={this.state.regionalPartnerValue}
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>
