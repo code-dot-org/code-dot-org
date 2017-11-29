@@ -57,40 +57,9 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
     );
   }
 
-  renderCourseReplacementSection() {
-    if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
-      return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsd', {
-        "Other (Please Explain):" : "other"
-      });
-    } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
-      return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsp',{
-        "Other (Please Explain):" : "other"
-      });
-    }
-  }
-
-  render() {
+  renderSchoolInfoSection() {
     return (
-      <FormGroup>
-        <p>
-          Thank you for your support of computer science education! A teacher at your
-          school, {this.props.teacherApplication.name} has applied to be a part of
-          Code.org’s Professional Learning Program in order to teach the {' '}
-          {this.props.teacherApplication.course} curriculum during the 2018-19  school
-          year. Your completion of this survey is required for the teacher’s application
-          to be considered.
-        </p>
-        {this.inputFor('firstName', {value: this.props.teacherApplication.principal_first_name, readOnly: true})}
-        {this.inputFor('lastName', {value: this.props.teacherApplication.principal_last_name, readOnly: true})}
-        {
-          this.selectFor('title', {
-            required: false,
-            placeholder: 'Select a title',
-            value: this.props.teacherApplication.principal_title,
-            readOnly: true
-          })
-        }
-        {this.inputFor('email', {value: this.props.teacherApplication.principal_email, readOnly: true})}
+      <div>
         {this.renderSchoolSection()}
         {this.inputFor('totalStudentEnrollment')}
         {this.inputFor('freeLunchPercent')}
@@ -101,14 +70,6 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
               return this.inputFor(race, {inlineControl: true, labelWidth: {md: 3}, controlWidth: {md: 1}});
             }
           )
-        }
-        {
-          this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
-            "Other:": "other"
-          }, {
-            label: `Do you approve of ${this.props.teacherApplication.name} participating
-                    in Code.org's 2018 - 19 Professional Learning Program?`,
-          })
         }
         {
           this.radioButtonsWithAdditionalTextFieldsFor('committedToMasterSchedule', {
@@ -166,6 +127,53 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
           de-identified and aggregated. Our Regional Partners are contractually obliged to
           treat this information with the same level of confidentiality as Code.org.
         </p>
+      </div>
+    );
+  }
+
+  renderCourseReplacementSection() {
+    if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
+      return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsd', {
+        "Other (Please Explain):" : "other"
+      });
+    } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
+      return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsp',{
+        "Other (Please Explain):" : "other"
+      });
+    }
+  }
+
+  render() {
+    return (
+      <FormGroup>
+        <p>
+          Thank you for your support of computer science education! A teacher at your
+          school, {this.props.teacherApplication.name} has applied to be a part of
+          Code.org’s Professional Learning Program in order to teach the {' '}
+          {this.props.teacherApplication.course} curriculum during the 2018-19  school
+          year. Your completion of this survey is required for the teacher’s application
+          to be considered.
+        </p>
+        {this.inputFor('firstName', {value: this.props.teacherApplication.principal_first_name, readOnly: true})}
+        {this.inputFor('lastName', {value: this.props.teacherApplication.principal_last_name, readOnly: true})}
+        {
+          this.selectFor('title', {
+            required: false,
+            placeholder: 'Select a title',
+            value: this.props.teacherApplication.principal_title,
+            readOnly: true
+          })
+        }
+        {this.inputFor('email', {value: this.props.teacherApplication.principal_email, readOnly: true})}
+        {
+          this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
+            "Other:": "other"
+          }, {
+            label: `Do you approve of ${this.props.teacherApplication.name} participating
+                    in Code.org's 2018 - 19 Professional Learning Program?`,
+          })
+        }
+        {this.props.data.doYouApprove !== 'No' && this.renderSchoolInfoSection()}
         {this.singleCheckboxFor('confirmPrincipal')}
       </FormGroup>
     );

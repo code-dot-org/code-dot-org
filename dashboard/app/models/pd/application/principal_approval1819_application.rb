@@ -90,13 +90,8 @@ module Pd::Application
 
     def self.required_fields
       %i(
-        first_name
-        last_name
-        title
-        email
-        total_student_enrollment
-        free_lunch_percent
         do_you_approve
+        confirm_principal
       )
     end
 
