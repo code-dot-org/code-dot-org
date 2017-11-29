@@ -694,7 +694,22 @@ FactoryGirl.define do
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
   end
 
+  factory :pd_principal_approval1819_application_hash, class: 'Hash' do
+    initialize_with do
+      {
+        first_name: 'Albus',
+        last_name: 'Dumbledore',
+        title: 'Dr.',
+        email: 'albus@hogwarts.edu',
+        school: 'Hogwarts Academy of Witchcraft and Wizardry',
+        total_student_enrollment: 200,
+        free_lunch_percent: '50%',
+        do_you_approve: 'Yes'
+      }.stringify_keys
+    end
+  end
+
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
-    form_data {{}}
+    form_data {build(:pd_principal_approval1819_application_hash).to_json}
   end
 end
