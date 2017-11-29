@@ -7,6 +7,7 @@ import React, {PropTypes} from 'react';
 import {FormGroup, ControlLabel} from 'react-bootstrap';
 import Select from "react-select";
 import {SelectStyleProps} from '../constants';
+import {RegionalPartnerDropdownOptions as dropdownOptions} from './constants';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const styles = {
@@ -18,13 +19,17 @@ const styles = {
 export default class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
-    regionalPartnerId: PropTypes.number
+    regionalPartnerValue: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ])
   }
 
   componentWillMount() {
     const regionalPartnersList = getScriptData("props")["regionalPartners"];
     this.regionalPartners = regionalPartnersList.map(v => ({value: v.id, label: v.name}));
-    this.regionalPartners.unshift({value: null, label: "\u00A0"});
+    this.regionalPartners.unshift(dropdownOptions.unmatched);
+    this.regionalPartners.unshift(dropdownOptions.all);
   }
 
   render() {
@@ -32,7 +37,7 @@ export default class RegionalPartnerDropdown extends React.Component {
       <FormGroup>
         <ControlLabel>Select a regional partner</ControlLabel>
         <Select
-          value={this.props.regionalPartnerId}
+          value={this.props.regionalPartnerValue}
           onChange={this.props.onChange}
           placeholder={null}
           options={this.regionalPartners}

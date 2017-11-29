@@ -9,6 +9,7 @@ import {
   IndexRedirect,
   useRouterHistory
 } from 'react-router';
+import {AllPartners} from './constants';
 import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
@@ -41,7 +42,7 @@ export default class ApplicationDashboard extends React.Component {
   };
 
   render() {
-    const regionalPartnerName = this.props.regionalPartnerName || "All Regional Partner Applications";
+    const regionalPartnerName = this.props.regionalPartnerName || AllPartners;
     return (
       <Router history={browserHistory} >
         <Route path="/" component={ApplicationDashboardHeader}>

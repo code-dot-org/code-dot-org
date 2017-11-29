@@ -6,13 +6,17 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications?regional_partner=:regional_partner
   def index
-    regional_partner_id = params[:regional_partner]
+    regional_partner_value = params[:regional_partner]
     application_data = empty_application_data
 
     ROLES.each do |role|
       apps = get_applications_by_role(role).group(:status)
-      if regional_partner_id && regional_partner_id != "null"
-        apps = apps.where(regional_partner_id: regional_partner_id)
+      if regional_partner_value && regional_partner_value != "all" && regional_partner_value != "null"
+        if regional_partner_value == "unmatched"
+          apps = apps.where(regional_partner_id: nil)
+        else
+          apps = apps.where(regional_partner_id: regional_partner_value)
+        end
       end
       apps.count.each do |status, count|
         application_data[role][status] = count

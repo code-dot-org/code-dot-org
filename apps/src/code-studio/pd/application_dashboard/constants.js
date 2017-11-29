@@ -60,3 +60,14 @@ exports.ApplicationStatuses = {
     'Withdrawn'
   ]
 };
+
+/**
+ * Constants for Regional Partner dropdown
+ */
+const allPartners = "All Regional Partner Applications";
+exports.AllPartners = allPartners;
+exports.RegionalPartnerDropdownOptions = {
+  unmatched: {value: "unmatched", label: "No Partner/Unmatched Applications"},
+  all: {value: "all", label: allPartners}
+};
+
