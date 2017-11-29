@@ -6,6 +6,8 @@ import shapes from './shapes';
 import { getTagString, getTutorialDetailString, DoNotShow } from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
+import i18nCommon from '@cdo/locale';
+
 /* global ga */
 
 const styles = {
@@ -256,7 +258,7 @@ const TutorialDetail = React.createClass({
                       target="_blank"
                       onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
                     >
-                      <button style={{marginTop: 20}}>{i18n.applabTutorialButton()}</button>
+                      <button style={{marginTop: 20}}>{i18nCommon.applabTutorialButton()}</button>
                     </a>
                   )}
                 </div>
