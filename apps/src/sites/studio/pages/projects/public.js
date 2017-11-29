@@ -22,21 +22,21 @@ $(document).ready(() => {
     getStore().dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <div>
-        <HeaderBanner
-          headingText={i18n.projects()}
-          subHeadingText={i18n.projectsSubHeading()}
-          short
-        />
-        <StartNewProject
-          isRtl={isRtl}
-          canViewFullList
-          canViewAdvancedTools
-        />
-        <Provider store={getStore()}>
+      <Provider store={getStore()}>
+        <div>
+          <HeaderBanner
+            headingText={i18n.projects()}
+            subHeadingText={i18n.projectsSubHeading()}
+            short
+          />
+          <StartNewProject
+            isRtl={isRtl}
+            canViewFullList
+            canViewAdvancedTools
+          />
           <PublicGallery />
-        </Provider>,
-      </div>,
+        </div>
+      </Provider>,
       publicGallery);
   });
 });
