@@ -20,7 +20,7 @@ const CSFAccelerated = {
 const CourseCatalog = {
   title: i18n.courseCatalogTitle(),
   description: i18n.courseCatalogDescription(),
-  link: "/courses?view=teacher",
+  link: "/courses",
   image: "course-catalog",
   buttonText: i18n.courseCatalogButton()
 };
