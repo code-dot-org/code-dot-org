@@ -177,24 +177,35 @@ class Item extends Component {
       }
     };
 
+    // Style for anchors tags nested in divs
+    const areaStyle = {
+      display: 'block',
+    };
+
     const textStyle = {
       color: this.props.color? this.props.color : color.dark_charcoal,
       textDecoration: 'none', // Remove underline from anchor tags
     };
-
-    const Tag = href ? 'a' : 'div';
     return (
-      <div
-        style={paddingStyle}
-      >
-        <Tag
-          className="pop-up-menu-item"
-          href={href}
-          style={textStyle}
-          onClick={onClick}
-        >
-          {children}
-        </Tag>
+      <div style={paddingStyle}>
+        {this.props.href &&
+          <a
+            className="pop-up-menu-item"
+            href={href}
+            style={{...textStyle, ...areaStyle}}
+          >
+            {children}
+          </a>
+        }
+        {!this.props.href &&
+          <div
+            className="pop-up-menu-item"
+            style={textStyle}
+            onClick={onClick}
+          >
+            {children}
+          </div>
+        }
       </div>
     );
   }

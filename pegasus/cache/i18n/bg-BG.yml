@@ -387,6 +387,7 @@
     по кодиране"
   homepage_hero_text_stat_served: "Часът на кодирането: #served пробваха"
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "Часът на кодирането"
   homepage_slot_text_frozen: Frozen с Анна и Елза
   homepage_slot_text_teacher: "Учителско табло"
@@ -406,6 +407,7 @@
   homepage_action_text_girlvideo: "Вдъхновете момиче"
   homepage_action_text_learn: "Започнете обучение"
   homepage_action_text_signpetition: "Подпишете петицията"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "Съгласен&#x25BE;"
   homepage_diversity_pledge: "Вземете разнообразни подаръци"
   homepage_banner_text_prizes: "Часът на кода идва отново, декември 7-13. "
@@ -527,13 +529,13 @@
   mc_gradelevel: "Възраст 6 +"
   mc_platformtext: "Съвременни браузъри, смартфони, таблети"
   mc_specs: "На много езици | Съвременни браузъри и таблети | Възраст 6 +"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Пътуването на героя'
   minecraft_designer: Minecraft дизайнер
   minecraft_adventurer: Minecraft авантюрист
   minecraft_tutorials: Minecraft Hour of Code уроци
   minecraft_specs: "Много езици | Съвременни браузъри и таблети | Клас 2 +"
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  minecraft_agent_description: Minecraft се завръща за часът на кода с чисто нова
+    дейност! Пътешествай през Minecraft с код.
   minecraft_agent_button: "Старт"
   minecraft_designer_description: "Програмирай животни и други Minecraft същества
     в своя собствена версия на Minecraft."
@@ -555,11 +557,12 @@
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
-  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
-    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
-    of the new tutorial by the Minecraft team and learn about the resources and best
-    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
-    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -576,8 +579,8 @@
     the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
+  minecraft_og_agent: Minecraft се завръща за часът на кода, и ти си героят там! Пиши
+    код за пътуване през Minecraft средата.
   sports_page_title: "Спортен Hour of Code"
   sports_og_title: "Уроци за спортен Hour of Code"
   sports_og_description: "Изберете между NBA и WNBA или от всички спортни уроци за
@@ -2108,3 +2111,15 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

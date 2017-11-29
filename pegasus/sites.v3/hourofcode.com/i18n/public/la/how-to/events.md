@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepárate para tu evento
 
 - Elige lugar, fecha y hora.
-- Envía [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) para invitar a tu alcalde, congresista, gobernador, o empresario influyente a dar una plática.
+- Envía [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) invitando al alcalde, diputado, presidente autonómico o empresario influyente para que de una charla. Consulta nuestras [herramientas prácticas](<%=resolve_url('/files/elected-official.pdf')%>) cuando alojes a un funcionario durante una hora de código para obtener más información.
 - Invita a los medios/prensa como la radio o televisión local, periódicos o blogs de educación o tecnología. Vea nuestro [kit de prensa](<%= resolve_url('/promote/press-kit') %>) para obtener ayuda.
 
 ## 2. Durante tu evento

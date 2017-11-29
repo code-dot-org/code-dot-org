@@ -189,12 +189,6 @@ export function setupApp(appOptions) {
         window.location.href = lastServerResponse.nextRedirect;
       }
     },
-    backToPreviousLevel: function () {
-      var lastServerResponse = reporting.getLastServerResponse();
-      if (lastServerResponse.previousLevelRedirect) {
-        window.location.href = lastServerResponse.previousLevelRedirect;
-      }
-    },
     showInstructionsWrapper: function (showInstructions) {
       // Always skip all pre-level popups on share levels or when configured thus
       if (this.share || appOptions.level.skipInstructionsPopup) {
@@ -519,7 +513,7 @@ export default function loadAppOptions() {
     }
     const appOptions = getAppOptions();
     if (appOptions.embedded) {
-      // when we just "embed" an app (i.e. via embed_blocks.html.erb),
+      // when we just "embed" an app (i.e. via LevelsHelper#string_or_image),
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
       resolve(appOptions);

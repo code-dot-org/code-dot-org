@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#e8adff5c475c55c3648b619f9f461e0e9b49c82d":
-  version "0.0.21"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/e8adff5c475c55c3648b619f9f461e0e9b49c82d"
+"@code-dot-org/craft@github:code-dot-org/craft#65f81632f7a2f3ba4d43b5778d1a0def24cd4b2f":
+  version "0.0.22"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/65f81632f7a2f3ba4d43b5778d1a0def24cd4b2f"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.1":
   version "0.11.1-cdo.1"
@@ -5981,10 +5981,6 @@ marked-terminal@^1.6.2:
     lodash.assign "^4.2.0"
     node-emoji "^1.4.1"
 
-marked@0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.2.tgz#015db158864438f24a64bdd61a0428b418706d09"
-
 marked@^0.3.3, marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
@@ -7380,6 +7376,10 @@ qs@~2.3.3:
 qs@~5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-5.1.0.tgz#4d932e5c7ea411cca76a312d39a606200fd50cd9"
+
+qtip2@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/qtip2/-/qtip2-2.2.0.tgz#421ea5040722624ac685cdf961baf5b740db3385"
 
 query-string@4.1.0, query-string@^4.1.0:
   version "4.1.0"

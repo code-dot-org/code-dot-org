@@ -157,7 +157,9 @@ jobs:
 
       - restore_cache:
           keys:
+            - code-dot-org-ui-test-data-v3-{{ .Branch }}-
             - code-dot-org-ui-test-data-v3-staging-
+            - code-dot-org-ui-test-data-v3-
 
       - run:
           name: seed ui tests

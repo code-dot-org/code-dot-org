@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- بھیجیں [ایک خط](<%= resolve_url('/promote/resources#sample-emails') %>) اپنے مقامی میئر، کانگریس مین، گورنر، یا مؤثر بزنس پرسن کو شرکت کے لیے مدعو کریں کہ خطاب کرے۔
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
 ## 2. During your event

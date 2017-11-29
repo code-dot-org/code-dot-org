@@ -697,6 +697,26 @@ export function navigateToHref(href) {
 }
 
 /**
+ * Takes a simple object and returns it represented as a chain of url query
+ * params, including ? and & as necessary. Does not perform escaping. Examples:
+ * {} -> ''
+ * {a: 1} -> '?a=1'
+ * {a: 1, b: 'c'} -> '?a=1&b=c'
+ *
+ * @param {Object} params Object to stringify.
+ */
+export function stringifyQueryParams(params) {
+  if (!params) {
+    return '';
+  }
+  const keys = Object.keys(params);
+  if (!keys.length) {
+    return '';
+  }
+  return '?' + keys.map(key => `${key}=${params[key]}`).join('&');
+}
+
+/**
  * Resets the animation of an aniGif by unsetting and setting the src
  * @param {Element} element the <img> element that needs to be reset
  */

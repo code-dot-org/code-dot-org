@@ -896,6 +896,7 @@ var projects = module.exports = {
   copy(newName, options = {}) {
     const { shouldPublish } = options;
     current = current || {};
+    const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
     if (shouldPublish) {
@@ -907,7 +908,7 @@ var projects = module.exports = {
       channels.create(current, (err, data) => {
         this.updateCurrentData_(err, data, options);
         err ? reject(err) : resolve();
-      });
+      }, queryParams);
     }).then(() => this.save(
       false /* forceNewVersion */,
       true /* preparingRemix */

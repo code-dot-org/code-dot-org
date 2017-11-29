@@ -28,7 +28,8 @@ const styles = {
     paddingBottom: 4,
     borderRadius: 5,
     color: color.lighter_gray,
-    margin: 3
+    margin: 3,
+    cursor: 'pointer',
   },
   hoverFocus: {
     backgroundColor: color.lighter_gray,
@@ -227,7 +228,6 @@ class SectionActionDropdown extends Component {
         <BaseDialog
           useUpdatedStyles
           uncloseable
-          assetUrl={() => {}}
           isOpen={this.state.deleting}
           style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
         >

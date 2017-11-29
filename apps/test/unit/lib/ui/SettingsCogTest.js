@@ -67,12 +67,21 @@ describe('SettingsCog', () => {
     }, 0);
   });
 
+  it('only shows manage assets when maker toggle is false', () => {
+    const wrapper = mount(<SettingsCog showMakerToggle={false} />);
+    const cog = wrapper.find(FontAwesome).first();
+    cog.simulate('click');
+    const menuWrapper = getPortalContent(wrapper);
+    const numMenuItems = menuWrapper.find(PopUpMenu.Item).length;
+    expect(numMenuItems).to.equal(1);
+  });
+
 
   describe('menu items', () => {
     let wrapper, portal, menuWrapper;
 
     beforeEach(() => {
-      wrapper = mount(<SettingsCog/>);
+      wrapper = mount(<SettingsCog showMakerToggle={true}/>);
       const cog = wrapper.find(FontAwesome).first();
       portal = wrapper.find(Portal).first();
       expect(portal).to.have.prop('isOpened', false);

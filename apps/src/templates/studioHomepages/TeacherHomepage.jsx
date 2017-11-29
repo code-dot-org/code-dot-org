@@ -30,7 +30,8 @@ export default class TeacherHomepage extends Component {
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
-    hocLaunch: PropTypes.object
+    hocLaunch: PropTypes.object,
+    isEnglish: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -41,7 +42,7 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
-    const { canViewAdvancedTools, hocLaunch } = this.props;
+    const { canViewAdvancedTools, hocLaunch, isEnglish } = this.props;
 
     return (
       <div>
@@ -55,7 +56,11 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        {hocLaunch && hocLaunch.special_announcement && hocLaunch.special_announcement === "mc2017" && (
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         (hocLaunch.special_announcement === "mc2017" ||
+          (hocLaunch.special_announcement === "applab2017" && !isEnglish) ||
+          (hocLaunch.special_announcement === "celebs2017" && !isEnglish)) && (
           <SpecialAnnouncementActionBlock
             isRtl={isRtl}
             imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
@@ -69,7 +74,59 @@ export default class TeacherHomepage extends Component {
           />
         )}
 
-        {announcements.length > 0 && (
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "applab2017" &&
+         isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcements/applab_hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeadingAppLab()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescriptionAppLab()}
+            buttons={[
+              {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+              {url: pegasus('/learn'), text: i18n.tryIt()}
+            ]}
+          />
+        )}
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "celebs2017" &&
+         isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeading()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescriptionCelebs()}
+            buttons={[
+              {url: pegasus('/challenge'), text: i18n.celebrityChallenge()},
+              {url: pegasus('/learn'), text: i18n.tryHOC()}
+            ]}
+          />
+        )}
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "celebs2017actualhoc" &&
+         isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeadingCelebs()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescriptionCelebs()}
+            buttons={[
+              {url: pegasus('/challenge'), text: i18n.celebrityChallenge()},
+              {url: pegasus('/learn'), text: i18n.tryHOC()}
+            ]}
+          />
+        )}
+
+        {announcements.length > 0 &&
+         !(hocLaunch && hocLaunch.hide_teacher_announcement) && (
           <div>
             <Notification
               type={announcements[0].type || "bullhorn"}
@@ -85,6 +142,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear}/>
           </div>
         )}
+
         <TeacherSections
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}

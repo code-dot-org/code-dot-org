@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepara il tuo evento
 
 - Stabilisci un luogo, la data e l'ora.
-- Invia [una lettera](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) per invitare il sindaco dalla tua città, le autorità locali, o più in generale le persone influenti ad intervenire.
+- Invia [una lettera](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) per invitare il sindaco dalla tua città, le autorità locali, o più in generale le persone influenti ad intervenire. Per maggiori informazioni, scopri il nostro [manuale](<%=resolve_url('/files/elected-official.pdf')%>) per ospitare un amministratore pubblico durante un'Ora del Codice (in inglese).
 - Invita la stampa, ad es. giornalisti o blogger. Guarda il nostro [kit per la stampa](<%= resolve_url('/promote/press-kit') %>) per avere qualche suggerimento.
 
 ## 2. Durante il tuo evento
