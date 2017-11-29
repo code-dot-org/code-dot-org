@@ -28,11 +28,12 @@ class K5ProfessionalDevelopmentSurvey < Form
     result[:workshop_id_i] = required data[:workshop_id_i]
     result[:section_id_i] = required data[:section_id_i]
 
-    if data[:send_materials_email_s].nil_or_empty?
-      result[:email_s] = 'anonymous@code.org'
-    else
-      result[:email_s] = data[:send_materials_email_s]
-    end
+    result[:email_s] =
+      if data[:send_materials_email_s].nil_or_empty?
+        'anonymous@code.org'
+      else
+        data[:send_materials_email_s]
+      end
 
     result[:facilitator_prepared_i] = required enum data[:facilitator_prepared_i], AGREEMENT_ANSWERS
     result[:facilitator_knowledgeable_i] = required enum data[:facilitator_knowledgeable_i], AGREEMENT_ANSWERS
