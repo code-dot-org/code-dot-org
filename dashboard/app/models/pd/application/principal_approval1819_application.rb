@@ -43,8 +43,8 @@ module Pd::Application
         school_state: COMMON_OPTIONS[:state],
         do_you_approve: [YES, NO, OTHER_WITH_TEXT],
         committed_to_master_schedule: [YES, NO, OTHER_WITH_TEXT],
-        hours_per_year: COURSE_HOURS_PER_YEAR,
-        terms_per_year: TERMS_PER_YEAR,
+        hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
+        terms_per_year: COMMON_OPTIONS[:terms_per_year],
         replace_course: [
           YES,
           "No, this course will be added to the schedule, but it won't replace an existing computer science course",

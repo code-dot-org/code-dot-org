@@ -11,10 +11,16 @@ module Pd::Application
 
       return render :not_found unless teacher_application
 
+      application_hash = teacher_application.sanitize_form_data_hash
+
       @teacher_application = {
         course: Pd::Application::ApplicationConstants::COURSE_NAMES[teacher_application.course],
         name: teacher_application.applicant_name,
-        application_guid: teacher_application.application_guid
+        application_guid: teacher_application.application_guid,
+        principal_first_name: application_hash[:principal_first_name],
+        principal_last_name: application_hash[:principal_last_name],
+        principal_title: application_hash[:principal_title],
+        principal_email: application_hash[:principal_email]
       }
 
       if Pd::Application::PrincipalApproval1819Application.exists?(application_guid: params[:application_guid])
