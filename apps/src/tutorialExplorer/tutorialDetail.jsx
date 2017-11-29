@@ -256,7 +256,7 @@ const TutorialDetail = React.createClass({
                       target="_blank"
                       onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
                     >
-                      <button style={{marginTop: 20}}>Start</button>
+                      <button style={{marginTop: 20}}>{i18n.applabTutorialButton()}</button>
                     </a>
                   )}
                 </div>
