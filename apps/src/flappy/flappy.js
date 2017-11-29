@@ -715,7 +715,6 @@ var displayFeedback = function () {
   if (!Flappy.waitingForReport) {
     dataURIFromURI(placeholder).then(feedbackImageUri => {
       studioApp().displayFeedback({
-        app: 'flappy', //XXX
         skin: skin.id,
         feedbackType: Flappy.testResults,
         response: Flappy.response,

@@ -804,7 +804,6 @@ export default class Craft {
         }
 
         studioApp().displayFeedback({
-          app: 'craft',
           skin: Craft.initialConfig.skin.id,
           feedbackType: testResultType,
           response,
