@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117010623) do
+ActiveRecord::Schema.define(version: 20171129002140) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -141,13 +141,13 @@ ActiveRecord::Schema.define(version: 20171117010623) do
   end
 
   create_table "circuit_playground_discount_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "code",             null: false
-    t.boolean  "partial_discount", null: false
-    t.datetime "expiration",       null: false
+    t.string   "code",          null: false
+    t.boolean  "full_discount", null: false
+    t.datetime "expiration",    null: false
     t.datetime "claimed_at"
     t.datetime "voided_at"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "cohorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
