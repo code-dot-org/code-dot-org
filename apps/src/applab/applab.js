@@ -940,7 +940,6 @@ Applab.runButtonClick = function () {
 var displayFeedback = function () {
   if (!Applab.waitingForReport) {
     studioApp().displayFeedback({
-      skin: skin.id,
       feedbackType: Applab.testResults,
       executionError: Applab.executionError,
       response: Applab.response,

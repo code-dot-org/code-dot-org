@@ -689,7 +689,6 @@ var displayFeedback = function (finalFeedback = false) {
     return;
   }
   var options = {
-    skin: skin.id,
     feedbackType: Maze.testResults,
     response: Maze.response,
     level: level
