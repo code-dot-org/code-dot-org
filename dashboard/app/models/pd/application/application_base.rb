@@ -46,20 +46,6 @@ module Pd::Application
     NO = 'No'.freeze
     NONE = 'None'.freeze
 
-    COURSE_HOURS_PER_YEAR = [
-      'At least 100 course hours',
-      '50 to 99 course hours',
-      'Less than 50 course hours'
-    ]
-
-    TERMS_PER_YEAR = [
-      '1 quarter',
-      '1 trimester',
-      '1 semester',
-      '2 trimesters',
-      'Full year'
-    ]
-
     COMMON_OPTIONS = {
       title: %w(Mr. Mrs. Ms. Dr.),
 
@@ -81,6 +67,20 @@ module Pd::Application
         'American Indian/Alaska Native',
         OTHER,
         'Prefer not to say'
+      ],
+
+      course_hours_per_year: [
+        'At least 100 course hours',
+        '50 to 99 course hours',
+        'Less than 50 course hours'
+      ],
+
+      terms_per_year: [
+        '1 quarter',
+        '1 trimester',
+        '1 semester',
+        '2 trimesters',
+        'Full year'
       ]
     }
 

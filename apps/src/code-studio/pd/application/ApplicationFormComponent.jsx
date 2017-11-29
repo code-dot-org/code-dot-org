@@ -3,10 +3,6 @@ import FormComponent from '../form_components/FormComponent';
 import MarkdownSpan from '../components/markdownSpan';
 
 export default class ApplicationFormComponent extends FormComponent {
-  static propTypes = {
-    ...FormComponent.propTypes
-  };
-
   /**
    * Override in derived classes
    * @type {Object} - map of control name to label

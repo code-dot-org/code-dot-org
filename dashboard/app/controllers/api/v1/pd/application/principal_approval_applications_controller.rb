@@ -4,7 +4,7 @@ module Api::V1::Pd::Application
       @application = Pd::Application::PrincipalApproval1819Application.new(
         # current_user may not exist but might as well record it
         user: current_user,
-        application_guid: params.try(:[], :application_guid)
+        application_guid: params.require(:application_guid)
       )
     end
   end
