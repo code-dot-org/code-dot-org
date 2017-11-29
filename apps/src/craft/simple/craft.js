@@ -758,7 +758,6 @@ Craft.reportResult = function (success) {
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
       studioApp().displayFeedback({
-        skin: Craft.initialConfig.skin.id,
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,

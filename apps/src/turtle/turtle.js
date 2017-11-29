@@ -1704,7 +1704,6 @@ Artist.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
   this.studioApp_.displayFeedback({
-    skin: this.skin.id,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,

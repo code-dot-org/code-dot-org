@@ -2800,7 +2800,6 @@ Studio.displayFeedback = function () {
     const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
-      skin: skin.id,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,

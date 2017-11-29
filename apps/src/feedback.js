@@ -53,7 +53,6 @@ import ChallengeDialog from './templates/ChallengeDialog';
 /**
  * @typedef {Object} FeedbackOptions
  * @property {LiveMilestoneResponse} response
- * @property {string} skin
  * @property {TestResult} feedbackType
  * @property {string} message
  * @property {Level} level
