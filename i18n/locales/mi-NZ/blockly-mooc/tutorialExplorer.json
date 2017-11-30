@@ -1,11 +1,12 @@
 {
+  "startButton": "Start",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
   "filterSortByDisplayWeight": "Recommended",
   "filterSortByPopularityRank": "Most popular",
   "filterGrades": "Ngā Tau",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "All ages",
   "filterGradesPre": "Kaipānui Nohinohi",
   "filterGrades25": "Tau 2-5",
   "filterGrades68": "Tau 6-8",
