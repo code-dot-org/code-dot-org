@@ -125,6 +125,8 @@ level 'CSDU6 piano with notes', progression: 'Playing with Sounds'
 named_level 'CSD-Arrays'
 level 'CSD U6 making music w arrays mod', progression: 'Arrays'
 level 'CSDU6 note array length', progression: 'Arrays'
+level 'CSDU6 array length predict', progression: 'Arrays'
+level 'CSDU6 note array length p2', progression: 'Arrays'
 
 stage 'Arrays', flex_category: 'csd6_2'
 named_level 'CSD: Introduction to Lists - Part 1'
