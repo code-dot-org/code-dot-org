@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EligibilityChecklist from '@cdo/apps/templates/maker/EligibilityChecklist';
+import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
 import { Status } from '@cdo/apps/lib/ui/ValidationStep';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

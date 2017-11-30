@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
-import Button from "../Button";
-import SchoolAutocompleteDropdownWithLabel from '../census2017/SchoolAutocompleteDropdownWithLabel';
-import { styles as censusFormStyles } from '../census2017/censusFormStyles';
+import Button from "@cdo/apps/templates/Button";
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import { styles as censusFormStyles } from '@cdo/apps/templates/census2017/censusFormStyles';
 
 const styles = {
   confirmed: {
