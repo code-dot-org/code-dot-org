@@ -38,7 +38,9 @@ const paths = {
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string
+    regionalPartnerName: PropTypes.string,
+    regionalPartners: PropTypes.array,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   render() {
@@ -52,6 +54,8 @@ export default class ApplicationDashboard extends React.Component {
             breadcrumbs="Summary"
             component={Summary}
             regionalPartnerName={regionalPartnerName}
+            regionalPartners={this.props.regionalPartners}
+            isWorkshopAdmin={this.props.isWorkshopAdmin}
           />
           {
             _.flatten(Object.keys(paths).map((path, i) => {
@@ -75,6 +79,8 @@ export default class ApplicationDashboard extends React.Component {
                     breadcrumbs={paths[path].name}
                     component={QuickView}
                     regionalPartnerName={regionalPartnerName}
+                    regionalPartners={this.props.regionalPartners}
+                    isWorkshopAdmin={this.props.isWorkshopAdmin}
                     applicationType={paths[path].name}
                     viewType={paths[path].type}
                   />

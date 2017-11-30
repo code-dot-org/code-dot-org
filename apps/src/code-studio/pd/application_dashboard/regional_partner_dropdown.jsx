@@ -8,7 +8,6 @@ import {FormGroup, ControlLabel} from 'react-bootstrap';
 import Select from "react-select";
 import {SelectStyleProps} from '../constants';
 import {RegionalPartnerDropdownOptions as dropdownOptions} from './constants';
-import getScriptData from '@cdo/apps/util/getScriptData';
 
 const styles = {
   select: {
@@ -22,12 +21,12 @@ export default class RegionalPartnerDropdown extends React.Component {
     regionalPartnerValue: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ])
+    ]),
+    regionalPartners: PropTypes.array
   }
 
   componentWillMount() {
-    const regionalPartnersList = getScriptData("props")["regionalPartners"];
-    this.regionalPartners = regionalPartnersList.map(v => ({value: v.id, label: v.name}));
+    this.regionalPartners = this.props.regionalPartners.map(v => ({value: v.id, label: v.name}));
     this.regionalPartners.unshift(dropdownOptions.unmatched);
     this.regionalPartners.unshift(dropdownOptions.all);
   }

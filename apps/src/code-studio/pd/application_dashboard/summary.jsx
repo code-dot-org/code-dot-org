@@ -5,14 +5,15 @@
 import React, {PropTypes} from 'react';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 
 export default class Summary extends React.Component {
   static propTypes = {
     route: PropTypes.shape({
-      regionalPartnerName: PropTypes.string.isRequired
+      regionalPartnerName: PropTypes.string.isRequired,
+      regionalPartners: PropTypes.array,
+      isWorkshopAdmin: PropTypes.bool
     })
   }
 
@@ -44,13 +45,13 @@ export default class Summary extends React.Component {
         applications: data
       });
     });
-    this.setState({isWorkshopAdmin: getScriptData("props")["isWorkshopAdmin"]});
+    this.setState({isWorkshopAdmin: this.props.route.isWorkshopAdmin});
   }
 
   handleRegionalPartnerChange = (selected) => {
     const regionalPartnerValue = selected ? selected.value : null;
     const regionalPartnerName = regionalPartnerValue ? selected.label : this.props.route.regionalPartnerName;
-    this.setState({regionalPartnerName: regionalPartnerName, regionalPartnerValue: regionalPartnerValue});
+    this.setState({regionalPartnerName, regionalPartnerValue});
     $.ajax({
       method: 'GET',
       url: `/api/v1/pd/applications?regional_partner=${regionalPartnerValue}`,
@@ -74,6 +75,8 @@ export default class Summary extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerValue={this.state.regionalPartnerValue}
+            regionalPartners={this.props.route.regionalPartners}
+            isWorkshopAdmin={this.props.route.isWorkshopAdmin}
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>
