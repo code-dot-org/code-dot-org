@@ -4600,6 +4600,8 @@ en:
               name: Arrays
             Making Music:
               name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
