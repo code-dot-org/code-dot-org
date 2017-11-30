@@ -1,4 +1,5 @@
 {
+  "startButton": "Start",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Alla",
   "filterSortBy": "Sort by",
@@ -57,6 +58,5 @@
   "hideAllTutorialsButton": "Dölj aktiviteter för många språk",
   "noTutorialsYourLanguage": "Det finns inga aktiviteter på ditt språk. Prova aktiviteter på andra språk genom att klicka på knappen nedan.",
   "bottomGuidelinesLink": "Klicka här för att se våra kriterier och inlämnings riktlinjer för Hour of Code övningar.",
-  "bottomSpecialNeedsLink": "Klicka här för mer information på att stödja elever med särskilda behov.",
-  "startButton": "Start"
+  "bottomSpecialNeedsLink": "Klicka här för mer information på att stödja elever med särskilda behov."
 }

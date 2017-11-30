@@ -1,11 +1,12 @@
 {
+  "startButton": "დაწყება",
   "filterOrgNames": "შექმნილია",
   "filterOrgNamesAll": "ყველა",
   "filterSortBy": "დალაგება",
   "filterSortByDisplayWeight": "რეკომენდირებული",
   "filterSortByPopularityRank": "ყველაზე პოპულარული",
   "filterGrades": "კლასები",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "ნებისმიერი ასაკისთვის",
   "filterGradesPre": "სკოლამდელი",
   "filterGrades25": "2-5 კლასები",
   "filterGrades68": "კლასები 6-8",

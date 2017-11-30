@@ -1,4 +1,5 @@
 {
+  "startButton": "Başlayın",
   "filterOrgNames": "Oluşturan Kişi",
   "filterOrgNamesAll": "Tamamı",
   "filterSortBy": "Göre sırala",
@@ -57,6 +58,5 @@
   "hideAllTutorialsButton": "Farklı dillerdeki etkinlikleri gizle",
   "noTutorialsYourLanguage": "Sizin dilinize uygun hiç bir etkinlik bulunamadı. Aşağıdaki butona basarak diğer dillerdeki etkinlikleri deneyebilirsiniz.",
   "bottomGuidelinesLink": "Buraya tıklayarak, 'Kod Saati' eğitimleri için başvuru kurallarını ve ilkelerini görebilirsin.",
-  "bottomSpecialNeedsLink": "Özel ihtiyaca sahip öğrencileri destekleyici daha fazla bilgiye sahip olmak için tıklayınız.",
-  "startButton": "Start"
+  "bottomSpecialNeedsLink": "Özel ihtiyaca sahip öğrencileri destekleyici daha fazla bilgiye sahip olmak için tıklayınız."
 }
