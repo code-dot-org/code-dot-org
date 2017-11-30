@@ -1,6 +1,6 @@
 import { makeEnum } from '@cdo/apps/utils';
 
-export const SET_RESPONSIVE_SIZE = 'responsive/SET_RESPONSIVE_SIZE';
+const SET_RESPONSIVE_SIZE = 'responsive/SET_RESPONSIVE_SIZE';
 export const setResponsiveSize = responsiveSize => ({ type: SET_RESPONSIVE_SIZE, responsiveSize });
 
 export const ResponsiveSize = makeEnum('lg', 'md', 'sm', 'xs');

@@ -3,8 +3,13 @@ import { assert, expect } from 'chai';
 import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
+import { combineReducers, createStore } from 'redux';
+import responsiveRedux, { setResponsiveSize, ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('StudentHomepage', () => {
+  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  store.dispatch(setResponsiveSize(ResponsiveSize.lg));
+
   it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = shallow(
       <StudentHomepage
@@ -100,7 +105,7 @@ describe('StudentHomepage', () => {
           isRtl={false}
           canLeave={false}
         />
-    ).find('StudentSections').dive().find('SectionsTable').dive();
+    ).find('StudentSections').dive({context: {store}}).find('SectionsTable').dive();
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );
