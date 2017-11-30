@@ -75,6 +75,10 @@ export default class EligibilityChecklist extends Component {
       );
     }
 
+    // TODO: if we don't have full discount, we should have text saying why it's
+    // not a full discount, and suggesting that you contact code.org according to
+    // the spec
+
     return (
       <div>
         <h2>
