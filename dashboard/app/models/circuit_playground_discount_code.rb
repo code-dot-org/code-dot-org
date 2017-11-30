@@ -13,4 +13,26 @@
 #
 
 class CircuitPlaygroundDiscountCode < ApplicationRecord
+  # Claims the next available code of the given discount amount (full/partial)
+  # and returns the code.
+  def self.claim(full_discount)
+    expiration_field = arel_table[:expiration]
+
+    code = nil
+    Retryable.retryable(on: ActiveRecord::RecordNotSaved) do
+      code = where(full_discount: full_discount).
+        where(claimed_at: nil).
+        where(voided_at: nil).
+        where(expiration_field.gt(Time.now)).
+        first
+
+      if code
+        # We use update_all so that the where/update are done in a single SQL query
+        count = where({id: code.id, claimed_at: nil}).update_all(claimed_at: Time.now)
+        raise ActiveRecord::RecordNotSaved unless count == 1
+        code.reload
+      end
+    end
+    code
+  end
 end
