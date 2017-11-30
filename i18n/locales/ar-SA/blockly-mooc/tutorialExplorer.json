@@ -1,11 +1,12 @@
 {
+  "startButton": "إبدأ",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "جميع",
   "filterSortBy": "Sort by",
   "filterSortByDisplayWeight": "Recommended",
   "filterSortByPopularityRank": "Most popular",
   "filterGrades": "الصف الدراسي",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "كل الاعمار",
   "filterGradesPre": "ما قبل القراءة",
   "filterGrades25": "من الصف 2-5",
   "filterGrades68": "من الصف 6-8",
