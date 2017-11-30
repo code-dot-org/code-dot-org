@@ -11,7 +11,6 @@ import Select from "react-select";
 import "react-select/dist/react-select.css";
 import {SelectStyleProps} from '../constants';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
@@ -37,6 +36,8 @@ export default class QuickView extends React.Component {
   static propTypes = {
     route: PropTypes.shape({
       regionalPartnerName: PropTypes.string.isRequired,
+      regionalPartners: PropTypes.array,
+      isWorkshopAdmin: PropTypes.bool,
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
       viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -71,7 +72,7 @@ export default class QuickView extends React.Component {
         applications: data
       });
     });
-    this.setState({isWorkshopAdmin: getScriptData("props")["isWorkshopAdmin"]});
+    this.setState({isWorkshopAdmin: this.props.route.isWorkshopAdmin});
 
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
@@ -90,7 +91,7 @@ export default class QuickView extends React.Component {
   handleRegionalPartnerChange = (selected) => {
     const regionalPartnerValue = selected ? selected.value : null;
     const regionalPartnerName = regionalPartnerValue ? selected.label : this.props.route.regionalPartnerName;
-    this.setState({regionalPartnerName: regionalPartnerName, regionalPartnerValue: regionalPartnerValue});
+    this.setState({regionalPartnerName, regionalPartnerValue});
   };
 
   render() {
@@ -103,6 +104,8 @@ export default class QuickView extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerValue={this.state.regionalPartnerValue}
+            regionalPartners={this.props.route.regionalPartners}
+            isWorkshopAdmin={this.props.route.isWorkshopAdmin}
           />
         }
         <Row>
