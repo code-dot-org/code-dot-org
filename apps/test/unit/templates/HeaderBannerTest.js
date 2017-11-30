@@ -3,14 +3,14 @@ import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import {allowConsoleErrors} from '../../util/testUtils';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux, {SET_RESPONSIVE_SIZE, ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import {combineReducers, createStore} from 'redux';
+import responsiveRedux, {setResponsiveSize, ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('HeaderBanner', () => {
   allowConsoleErrors();
 
   const store = createStore(combineReducers({responsive: responsiveRedux}));
-  store.dispatch({type: SET_RESPONSIVE_SIZE, responsiveSize: ResponsiveSize.lg});
+  store.dispatch(setResponsiveSize(ResponsiveSize.lg));
 
   it('renders a short HeaderBanner without a subheading or description', () => {
     const wrapper = shallow(
