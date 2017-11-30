@@ -1,9 +1,9 @@
 /** @file Confirm Dialog for Maker Discount Codes */
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import BaseDialog from "../BaseDialog";
-import DialogFooter from "../teacherDashboard/DialogFooter";
-import Button from "../Button";
+import BaseDialog from "@cdo/apps/templates/BaseDialog";
+import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
+import Button from "@cdo/apps/templates/Button";
 
 const styles = {
   subtitle: {
