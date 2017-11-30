@@ -90,9 +90,46 @@ module Pd::Application
 
     def self.required_fields
       %i(
+        first_name
+        last_name
+        title
+        email
         do_you_approve
         confirm_principal
       )
+    end
+
+    def dynamic_required_fields(hash)
+      [].tap do |required|
+        unless hash[:do_you_approve] == NO
+          required.concat [
+            :total_student_enrollment,
+            :free_lunch_percent,
+            :white,
+            :black,
+            :hispanic,
+            :asian,
+            :pacific_islander,
+            :american_indian,
+            :other,
+            :committed_to_master_schedule,
+            :hours_per_year,
+            :terms_per_year,
+            :replace_course,
+            :committed_to_diversity,
+            :understand_fee,
+            :pay_fee
+          ]
+
+          if hash[:replace_course] == YES
+            if course == 'csd'
+              required << :replace_which_course_csd
+            elsif course == 'csp'
+              required << :replace_which_course_csp
+            end
+          end
+        end
+      end
     end
 
     def additional_text_fields
