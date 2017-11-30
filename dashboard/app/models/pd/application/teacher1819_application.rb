@@ -52,7 +52,7 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_create :generate_application_guid
+    before_create :generate_application_guid, if: -> {application_guid.blank?}
     def generate_application_guid
       self.application_guid = SecureRandom.uuid
     end
@@ -327,10 +327,10 @@ module Pd::Application
         previous_yearlong_cdo_pd
         cs_offered_at_school
         cs_opportunities_at_school
-
         program
         plan_to_teach
-
+        committed
+        willing_to_travel
         agree
       )
     end
