@@ -1,4 +1,5 @@
 {
+  "startButton": "Inicio",
   "filterOrgNames": "Creado por",
   "filterOrgNamesAll": "Todos",
   "filterSortBy": "Ordenar por",
@@ -57,6 +58,5 @@
   "hideAllTutorialsButton": "Ocultar actividades para muchos idiomas",
   "noTutorialsYourLanguage": "No hay actividades disponibles en tu idioma. Prueba actividades en otros idiomas haciendo clic en el botón de abajo.",
   "bottomGuidelinesLink": "Haga clic aquí para ver nuestros criterios y nuestras reglas de envío para los tutoriales de la Hora del código.",
-  "bottomSpecialNeedsLink": "Haga clic aquí para obtener más información sobre cómo ayudar a estudiantes con necesidades especiales.",
-  "startButton": "Start"
+  "bottomSpecialNeedsLink": "Haga clic aquí para obtener más información sobre cómo ayudar a estudiantes con necesidades especiales."
 }

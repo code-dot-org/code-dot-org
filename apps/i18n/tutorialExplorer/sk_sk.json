@@ -1,4 +1,5 @@
 {
+  "startButton": "Spustiť",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Všetko",
   "filterSortBy": "Sort by",
@@ -57,6 +58,5 @@
   "hideAllTutorialsButton": "Skryť lekcie pre viacero jazykov",
   "noTutorialsYourLanguage": "Neexistuju žiadne podporované aktivity vo vašom jazyku. Skúste aktivity v iných jazykoch kliknutím na tlačidlo nižšie.",
   "bottomGuidelinesLink": "Kliknutím sem zobrazíte naše kritériu a pokyny pre kurzy Hodiny kódu.",
-  "bottomSpecialNeedsLink": "Kliknutím sem zobrazíte viac informácií o podpore študentov so špecialnými potrebami.",
-  "startButton": "Start"
+  "bottomSpecialNeedsLink": "Kliknutím sem zobrazíte viac informácií o podpore študentov so špecialnými potrebami."
 }
