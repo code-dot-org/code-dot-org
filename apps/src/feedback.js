@@ -135,12 +135,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     feedback.appendChild(feedbackMessage);
   }
   if (feedbackBlocks && feedbackBlocks.div) {
-    if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
-      // put the blocks iframe inside the feedbackMessage for this special case:
-      feedbackMessage.appendChild(feedbackBlocks.div);
-    } else {
-      feedback.appendChild(feedbackBlocks.div);
-    }
+    feedback.appendChild(feedbackBlocks.div);
   }
   if (sharingDiv) {
     feedback.appendChild(sharingDiv);
@@ -287,16 +282,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     id: 'feedback-dialog',
     showXButton: !options.hideXButton,
   });
-
-  // Update the background color if it is set to be in special design.
-  if (this.useSpecialFeedbackDesign_(options)) {
-    if (options.response.design === "white_background") {
-      document.getElementById('feedback-dialog')
-          .className += " white-background";
-      document.getElementById('feedback-content')
-          .className += " light-yellow-background";
-    }
-  }
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function () {
@@ -658,14 +643,6 @@ FeedbackUtils.prototype.getShareFailure_ = function (options) {
 };
 
 /**
- *
- */
-FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
- return options.response &&
-        options.response.design;
-};
-
-/**
  * Generates an appropriate feedback message
  * The message will be one of the following, from highest to lowest precedence:
  * 0. Failure override message specified on level (options.level.failureMessageOverride)
@@ -845,28 +822,6 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
   let message = this.getFeedbackMessage(options);
   $(feedback).text(message);
 
-  // Update the feedback box design, if the hint message came from server.
-  if (this.useSpecialFeedbackDesign_(options)) {
-    // Setup a new div
-    var feedbackDiv = document.createElement('div');
-    feedbackDiv.className = 'feedback-callout';
-    feedbackDiv.id = 'feedback-content';
-
-    // Insert an image
-    var imageDiv = document.createElement('img');
-    imageDiv.className = "hint-image";
-    imageDiv.src = this.studioApp_.assetUrl(
-      'media/lightbulb_for_' + options.response.design + '.png');
-    feedbackDiv.appendChild(imageDiv);
-    // Add new text
-    var hintHeader = document.createElement('p');
-    $(hintHeader).text(msg.hintHeader());
-    feedbackDiv.appendChild(hintHeader);
-    hintHeader.className = 'hint-header';
-    // Append the original text
-    feedbackDiv.appendChild(feedback);
-    return feedbackDiv;
-  }
   return feedback;
 };
 
