@@ -48,4 +48,22 @@ class MakerController < ApplicationController
 
     render json: {full_discount: application.full_discount?}
   end
+
+  def complete
+    signature = params.require(:signature)
+
+    # Must have started an application, and have said they were teaching unit 6, and confirmed their school
+    application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
+    return head :not_found unless application
+    return head :forbidden unless application.eligible_unit_6_intention? &&
+      application.has_confirmed_school && !application.circuit_playground_discount_code_id
+
+    code = CircuitPlaygroundDiscountCode.claim(application.full_discount?)
+    return head :not_found unless code
+
+    # associate the code with this application, and log signature
+    application.update!(signature: signature, signed_at: DateTime.now, circuit_playground_discount_code_id: code.id)
+
+    render json: {code: code.code}
+  end
 end
