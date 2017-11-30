@@ -15,8 +15,8 @@ module Pd::Application
       get :new, params: {application_guid: application_uuid}
       assert_template :submitted
       assert_response :success
-      assert_equal teacher_application.applicant_name, assigns(:applicant_name)
-      assert_equal 'Computer Science Principles', assigns(:course)
+      assert_equal teacher_application.applicant_name, assigns(:teacher_application)[:name]
+      assert_equal 'Computer Science Principles', assigns(:teacher_application)[:course]
     end
 
     test 'completed teacher application but no principal application goes to new page' do
@@ -26,8 +26,8 @@ module Pd::Application
       get :new, params: {application_guid: application_uuid}
       assert_template :new
       assert_response :success
-      assert_equal teacher_application.applicant_name, assigns(:applicant_name)
-      assert_equal 'Computer Science Principles', assigns(:course)
+      assert_equal teacher_application.applicant_name, assigns(:teacher_application)[:name]
+      assert_equal 'Computer Science Principles', assigns(:teacher_application)[:course]
     end
 
     test 'renders not available on production' do
