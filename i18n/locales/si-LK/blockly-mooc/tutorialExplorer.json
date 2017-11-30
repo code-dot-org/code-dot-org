@@ -1,11 +1,12 @@
 {
+  "startButton": "ආරම්භ කරන්න",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "සියල්ල",
   "filterSortBy": "Sort by",
   "filterSortByDisplayWeight": "Recommended",
   "filterSortByPopularityRank": "Most popular",
   "filterGrades": "ශ්‍රේණි",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "සියලුම වයස්",
   "filterGradesPre": "Pre-reader",
   "filterGrades25": "2 සිට 5 ශ්‍රේණිය දක්වා",
   "filterGrades68": "6 සිට 8 ශ්‍රේණිය දක්වා",

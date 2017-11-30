@@ -1,4 +1,5 @@
 {
+  "startButton": "Começar",
   "filterOrgNames": "Criado por",
   "filterOrgNamesAll": "Todos",
   "filterSortBy": "Ordenar por",
@@ -57,6 +58,5 @@
   "hideAllTutorialsButton": "Esconder atividades para vários idiomas",
   "noTutorialsYourLanguage": "Não há nenhuma atividade suportada no seu idioma. Tente atividades em outros idiomas, clicando no botão abaixo.",
   "bottomGuidelinesLink": "Clique aqui para ver nossos critérios e orientações de solicitação de tutoriais da Hora de Código.",
-  "bottomSpecialNeedsLink": "Clique aqui para obter mais informações sobre suporte a estudantes com necessidades especiais.",
-  "startButton": "Start"
+  "bottomSpecialNeedsLink": "Clique aqui para obter mais informações sobre suporte a estudantes com necessidades especiais."
 }
