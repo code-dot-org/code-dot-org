@@ -40,6 +40,7 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
+    OTHER_PLEASE_EXPLAIN = 'Other (Please Explain):'.freeze
     OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
@@ -66,6 +67,20 @@ module Pd::Application
         'American Indian/Alaska Native',
         OTHER,
         'Prefer not to say'
+      ],
+
+      course_hours_per_year: [
+        'At least 100 course hours',
+        '50 to 99 course hours',
+        'Less than 50 course hours'
+      ],
+
+      terms_per_year: [
+        '1 quarter',
+        '1 trimester',
+        '1 semester',
+        '2 trimesters',
+        'Full year'
       ]
     }
 

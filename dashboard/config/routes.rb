@@ -400,6 +400,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
         post :teacher, to: 'teacher_applications#create'
+        post :principal_approval, to: 'principal_approval_applications#create'
       end
 
       resources :applications, controller: 'applications', only: [:index, :show, :update] do
