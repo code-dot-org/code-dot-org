@@ -1,11 +1,10 @@
 %p
   Dear
-  = @application.principal_title_and_last_name
-  ,
+  = @application.principal_title_and_last_name + ','
 
 %p
   A teacher at your school,
-  = @applicaion.teacher_full_name
+  = @application.teacher_full_name + ','
   has submitted an application to participate in Code.org's Professional Learning Program in order to teach the
   = @application.program
   curriculum during the 2018-19 school year.
