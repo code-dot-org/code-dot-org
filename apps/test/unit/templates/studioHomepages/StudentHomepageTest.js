@@ -3,12 +3,8 @@ import { assert, expect } from 'chai';
 import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('StudentHomepage', () => {
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
-
   it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = shallow(
       <StudentHomepage
@@ -18,7 +14,7 @@ describe('StudentHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
         canLeave={false}
-      />, {context: {store}}
+      />
     );
     const headerBanner = wrapper.find('Connect(HeaderBanner)');
     assert.deepEqual(headerBanner.props(), {
@@ -36,7 +32,7 @@ describe('StudentHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
         canLeave={false}
-      />, {context: {store}}
+      />
     );
     expect(wrapper.find('ProtectedStatefulDiv').exists()).to.be.true;
   });
@@ -50,7 +46,7 @@ describe('StudentHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
         canLeave={false}
-      />, {context: {store}}
+      />
     );
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
@@ -70,7 +66,7 @@ describe('StudentHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
         canLeave={false}
-      />, {context: {store}}
+      />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
   });
@@ -84,7 +80,7 @@ describe('StudentHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
         canLeave={false}
-      />, {context: {store}}
+      />
     );
     const studentSections = wrapper.find('StudentSections');
     assert.deepEqual(studentSections.props(), {
@@ -103,9 +99,8 @@ describe('StudentHomepage', () => {
           codeOrgUrlPrefix="http://localhost:3000/"
           isRtl={false}
           canLeave={false}
-        />, {context: {store}}
+        />
     ).find('StudentSections').dive().find('SectionsTable').dive();
-
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );
