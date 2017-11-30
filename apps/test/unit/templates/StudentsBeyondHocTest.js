@@ -2,6 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import StudentsBeyondHoc from '@cdo/apps/templates/StudentsBeyondHoc';
+import {default as ResponsiveLegacy} from '@cdo/apps/responsive';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
@@ -12,12 +13,15 @@ describe('StudentsBeyondHoc', () => {
 
   beforeEach(() => {
     const store = createStore(combineReducers({responsive, isRtl}));
+    const responsiveLegacy = new ResponsiveLegacy();
+
     root = mount(
       <Provider store={store}>
         <StudentsBeyondHoc
           completedTutorialType="other"
           MCShareLink="code.org/minecraft/sharelink"
-          signedIn={true}
+          responsive={responsiveLegacy}
+          userType="signedOut"
           isEnglish={true}
         />
       </Provider>

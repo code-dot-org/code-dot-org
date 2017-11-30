@@ -7,6 +7,7 @@ import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
 import { cardSets } from './congratsBeyondHocActivityCards';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
@@ -27,19 +28,20 @@ class StudentsBeyondHoc extends Component {
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
+    responsiveSize: PropTypes.oneOf(['xs', 'md', 'lg', 'xl']).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
+    const { isRtl, responsive, responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
 
     const signedIn = (userType === "teacher" || userType === "student");
 
     const under13 = userAge < 13;
 
-    const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
+    const desktop = responsiveSize !== ResponsiveSize.xs;
 
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
 
