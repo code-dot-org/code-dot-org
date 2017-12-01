@@ -103,7 +103,7 @@ describe('FilterSet', () => {
         ]}
       />
     );
-    expect(wrapper.children()).to.have.length(1);
+    expect(wrapper.children()).to.have.length(2);
   });
 
   it('shows all items when using mobile layout', () => {
@@ -122,7 +122,7 @@ describe('FilterSet', () => {
         ]}
       />
     );
-    expect(wrapper.children()).to.have.length(2);
+    expect(wrapper.children()).to.have.length(3);
   });
 
 
@@ -142,7 +142,7 @@ describe('FilterSet', () => {
         ]}
       />
     );
-    expect(wrapper.children()).to.have.length(1);
+    expect(wrapper.children()).to.have.length(2);
   });
 
 });

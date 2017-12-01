@@ -403,7 +403,6 @@
   homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "ពេលវេលា​នៃ​កូដ"
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -423,7 +422,6 @@
   homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
-  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
@@ -2080,3 +2078,17 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
+  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_action_text_wincelebritychat: Win a celebrity chat
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

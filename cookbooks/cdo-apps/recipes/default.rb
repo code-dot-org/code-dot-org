@@ -4,7 +4,10 @@
 #
 
 # Update Chef Client to version specified by node['omnibus_updater']['version'].
-include_recipe 'omnibus_updater'
+chef_client_updater 'install' do
+  version node['omnibus_updater']['version']
+  post_install_action Chef::Config[:interval] ? 'kill' : 'exec'
+end
 
 include_recipe 'apt'
 include_recipe 'sudo-user'
@@ -101,3 +104,10 @@ include_recipe node['cdo-apps']['nginx_enabled'] ?
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'
 include_recipe 'cdo-apps::process_queues'
+
+node.default['cdo-apps']['local_redis'] = !node['cdo-secrets']['redis_primary']
+include_recipe 'cdo-redis' if node['cdo-apps']['local_redis']
+
+# non-production daemons run self-hosted solr.
+node.default['cdo-apps']['solr'] = node['cdo-apps']['daemon'] && node.chef_environment != 'production'
+include_recipe 'cdo-solr' if node['cdo-apps']['solr']

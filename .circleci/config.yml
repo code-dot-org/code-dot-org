@@ -3,6 +3,7 @@ experimental:
     branches:
       only:
         - staging
+        - staging-next
 
 version: 2
 jobs:
