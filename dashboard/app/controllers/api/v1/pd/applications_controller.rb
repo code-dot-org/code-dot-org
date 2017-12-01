@@ -4,19 +4,21 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   # This must be included after load_and_authorize_resource so the auth callback runs first
   include Api::CsvDownload
 
-  # GET /api/v1/pd/applications?regional_partner=:regional_partner
+  REGIONAL_PARTNERS_ALL = "all"
+  REGIONAL_PARTNERS_NONE = "none"
+
+  # GET /api/v1/pd/applications?regional_partner_filter=:regional_partner_filter
+  # :regional_partner_filter can be "all", "none", or a regional_partner_id
   def index
-    regional_partner_value = params[:regional_partner]
+    regional_partner_filter = params[:regional_partner_filter]
     application_data = empty_application_data
 
     ROLES.each do |role|
       apps = get_applications_by_role(role).group(:status)
-      if regional_partner_value && regional_partner_value != "all" && regional_partner_value != "null"
-        if regional_partner_value == "unmatched"
-          apps = apps.where(regional_partner_id: nil)
-        else
-          apps = apps.where(regional_partner_id: regional_partner_value)
-        end
+      if regional_partner_filter == REGIONAL_PARTNERS_NONE
+        apps = apps.where(regional_partner_id: nil)
+      elsif regional_partner_filter && regional_partner_filter != REGIONAL_PARTNERS_ALL
+        apps = apps.where(regional_partner_id: regional_partner_filter)
       end
       apps.count.each do |status, count|
         application_data[role][status] = count

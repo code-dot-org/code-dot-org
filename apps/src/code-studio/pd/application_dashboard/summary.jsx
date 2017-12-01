@@ -6,6 +6,7 @@ import React, {PropTypes} from 'react';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
+import {AllPartnersFilter} from './constants';
 import $ from 'jquery';
 
 export default class Summary extends React.Component {
@@ -25,7 +26,7 @@ export default class Summary extends React.Component {
     loading: true,
     applications: null,
     regionalPartnerName: this.props.route.regionalPartnerName,
-    regionalPartnerValue: null
+    regionalPartnerFilter: null
   };
 
   constructor(props) {
@@ -49,12 +50,12 @@ export default class Summary extends React.Component {
   }
 
   handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerValue = selected ? selected.value : null;
-    const regionalPartnerName = regionalPartnerValue ? selected.label : this.props.route.regionalPartnerName;
-    this.setState({regionalPartnerName, regionalPartnerValue});
+    const regionalPartnerFilter = selected ? selected.value : null;
+    const regionalPartnerName = selected ? selected.label : this.props.route.regionalPartnerName;
+    this.setState({regionalPartnerName, regionalPartnerFilter});
     $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/applications?regional_partner=${regionalPartnerValue}`,
+      url: `/api/v1/pd/applications?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : AllPartnersFilter}`,
       dataType: 'json'
     })
     .done(data => {
@@ -74,7 +75,7 @@ export default class Summary extends React.Component {
         {this.state.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
-            regionalPartnerValue={this.state.regionalPartnerValue}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
             regionalPartners={this.props.route.regionalPartners}
             isWorkshopAdmin={this.props.route.isWorkshopAdmin}
           />
