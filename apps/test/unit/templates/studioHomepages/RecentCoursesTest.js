@@ -8,9 +8,10 @@ import Notification from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
-import {courses, moreCourses, topCourse} from './homepagesTestData';
+import { courses, moreCourses, topCourse } from './homepagesTestData';
 
 describe('RecentCourses', () => {
+
   it('shows SetUpCourses when there are no courses', () => {
     const wrapper = shallow(
       <RecentCourses

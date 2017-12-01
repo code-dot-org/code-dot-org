@@ -1,7 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {UnconnectedTeacherSections as TeacherSections} from '@cdo/apps/templates/studioHomepages/TeacherSections';
+import {
+  UnconnectedTeacherSections as TeacherSections
+} from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import ContentContainer from "@cdo/apps/templates/ContentContainer";
 import OwnedSections from "@cdo/apps/templates/teacherDashboard/OwnedSections";
 
