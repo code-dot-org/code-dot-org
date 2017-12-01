@@ -22,10 +22,10 @@ export default class PrincipalApproval1819Application extends FormController {
     super(props);
 
     Object.assign(this.state.data, {
-      firstName: this.props.teacherApplication.principal_first_name,
-      lastName: this.props.teacherApplication.principal_last_name,
-      title: this.props.teacherApplication.principal_title,
-      email: this.props.teacherApplication.principal_email,
+      firstName: props.teacherApplication.principal_first_name,
+      lastName: props.teacherApplication.principal_last_name,
+      title: props.teacherApplication.principal_title,
+      email: props.teacherApplication.principal_email,
     });
   }
   /**
