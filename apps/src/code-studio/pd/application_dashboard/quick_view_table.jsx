@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
@@ -27,8 +28,9 @@ const styles = {
   }
 };
 
-export default class QuickViewTable extends React.Component {
+class QuickViewTable extends React.Component {
   static propTypes = {
+    showLocked: PropTypes.bool,
     path: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
@@ -88,15 +90,21 @@ export default class QuickViewTable extends React.Component {
           })
         ]
       }
-    },{
-      property: 'locked',
-      cell: {
-        format: this.formatBoolean
-      },
-      header: {
-        label: 'Locked?',
-      }
-    },{
+    });
+
+    if (this.props.showLocked) {
+      columns.push({
+        property: 'locked',
+        cell: {
+          format: this.formatBoolean
+        },
+        header: {
+          label: 'Locked?',
+        }
+      });
+    }
+
+    columns.push({
       property: 'notes',
       header: {
         label: 'Notes'
@@ -191,3 +199,7 @@ export default class QuickViewTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  showLocked: state.permissions.lockApplication,
+}))(QuickViewTable);
