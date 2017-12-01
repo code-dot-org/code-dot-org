@@ -74,9 +74,11 @@ module GitHub
     #   attribute.
     # Source: https://developer.github.com/v3/pulls/#get-a-single-pull-request
     pr = nil
+    attempt_count = 0
     loop do
       pr = Octokit.pull_request(REPO, pr_number)
-      break unless pr['mergeable'].nil?
+      attempt_count += 1
+      break unless pr['mergeable'].nil? && attempt_count < 30
       sleep 1
     end
 
