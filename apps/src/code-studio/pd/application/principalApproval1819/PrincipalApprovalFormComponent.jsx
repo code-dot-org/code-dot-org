@@ -13,7 +13,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = [
   ...MANUAL_SCHOOL_FIELDS, 'totalStudentEnrollment', 'freeLunchPercent', ...RACE_LIST,
   'committedToMasterSchedule', 'hoursPerYear', 'termsPerYear', 'replaceCourse',
   'replaceWhichCourseCsd', 'replaceWhichCourseCsp', 'committedToDiversity',
-  'understandFee', 'payFee', 'wantFunding'
+  'understandFee', 'payFee'
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 
