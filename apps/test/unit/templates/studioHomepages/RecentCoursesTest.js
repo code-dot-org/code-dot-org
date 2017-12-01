@@ -2,16 +2,15 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
-import {UnconnectedContentContainer as ContentContainer} from '@cdo/apps/templates/ContentContainer';
+import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import Notification from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
-import { courses, moreCourses, topCourse } from './homepagesTestData';
+import {courses, moreCourses, topCourse} from './homepagesTestData';
 
 describe('RecentCourses', () => {
-
   it('shows SetUpCourses when there are no courses', () => {
     const wrapper = shallow(
       <RecentCourses

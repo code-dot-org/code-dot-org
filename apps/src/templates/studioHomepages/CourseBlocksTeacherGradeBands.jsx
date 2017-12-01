@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {UnconnectedContentContainer as ContentContainer} from '../ContentContainer';
+import ContentContainer from '../ContentContainer';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import Responsive from '../../responsive';
 import i18n from "@cdo/locale";

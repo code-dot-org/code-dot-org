@@ -1,8 +1,7 @@
 import React from 'react';
 import RecentCourses from './RecentCourses';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '@cdo/apps/code-studio/responsiveRedux';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 const courses = [
   {
@@ -50,7 +49,7 @@ const topCourse = {
 };
 
 export default storybook => {
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  const store = getStore();
   return storybook
     .storiesOf('RecentCourses', module)
     .addStoryTable([

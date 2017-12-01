@@ -1,15 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
-import {allowConsoleErrors} from '../../util/testUtils';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {combineReducers, createStore} from 'redux';
-import responsiveRedux, {setResponsiveSize, ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import responsive, {setResponsiveSize, ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('HeaderBanner', () => {
-  allowConsoleErrors();
-
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  const store = createStore(combineReducers({responsive}));
   store.dispatch(setResponsiveSize(ResponsiveSize.lg));
 
   it('renders a short HeaderBanner without a subheading or description', () => {
