@@ -7,6 +7,7 @@
  *        /csp_facilitators
  */
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
 import {SelectStyleProps} from '../constants';
@@ -32,10 +33,10 @@ const styles = {
   }
 };
 
-export default class QuickView extends React.Component {
+class QuickView extends React.Component {
   static propTypes = {
+    regionalPartnerName: PropTypes.string.isRequired,
     route: PropTypes.shape({
-      regionalPartnerName: PropTypes.string.isRequired,
       regionalPartners: PropTypes.array,
       isWorkshopAdmin: PropTypes.bool,
       path: PropTypes.string.isRequired,
@@ -52,7 +53,7 @@ export default class QuickView extends React.Component {
     loading: true,
     applications: null,
     filter: null,
-    regionalPartnerName: this.props.route.regionalPartnerName,
+    regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: null
   };
 
@@ -89,7 +90,7 @@ export default class QuickView extends React.Component {
 
   handleRegionalPartnerChange = (selected) => {
     const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.route.regionalPartnerName;
+    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.regionalPartnerName;
     this.setState({regionalPartnerName, regionalPartnerFilter});
   };
 
@@ -142,3 +143,7 @@ export default class QuickView extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  regionalPartnerName: state.regionalPartnerName,
+}))(QuickView);

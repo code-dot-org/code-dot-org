@@ -3,16 +3,17 @@
  * Route: /summary
  */
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
 import {AllPartnersFilter} from './constants';
 import $ from 'jquery';
 
-export default class Summary extends React.Component {
+class Summary extends React.Component {
   static propTypes = {
+    regionalPartnerName: PropTypes.string.isRequired,
     route: PropTypes.shape({
-      regionalPartnerName: PropTypes.string.isRequired,
       regionalPartners: PropTypes.array,
       isWorkshopAdmin: PropTypes.bool
     })
@@ -25,7 +26,7 @@ export default class Summary extends React.Component {
   state = {
     loading: true,
     applications: null,
-    regionalPartnerName: this.props.route.regionalPartnerName,
+    regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: null
   };
 
@@ -50,7 +51,7 @@ export default class Summary extends React.Component {
 
   handleRegionalPartnerChange = (selected) => {
     const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = selected ? selected.label : this.props.route.regionalPartnerName;
+    const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
     this.setState({regionalPartnerName, regionalPartnerFilter});
     $.ajax({
       method: 'GET',
@@ -67,7 +68,7 @@ export default class Summary extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
     return (
       <div>
@@ -101,3 +102,7 @@ export default class Summary extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  regionalPartnerName: state.regionalPartnerName,
+}))(Summary);
