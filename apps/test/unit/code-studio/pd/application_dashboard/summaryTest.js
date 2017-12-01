@@ -29,7 +29,43 @@ describe("Summary", () => {
       [
         200,
         {"Content-Type": "application/json"},
-        JSON.stringify({"csf_facilitators":{"unreviewed":{"locked":0,"unlocked":1},"pending":{"locked":0,"unlocked":0},"accepted":{"locked":0,"unlocked":0},"declined":{"locked":0,"unlocked":0},"waitlisted":{"locked":0,"unlocked":0}},"csd_facilitators":{"unreviewed":{"locked":0,"unlocked":0},"pending":{"locked":0,"unlocked":0},"accepted":{"locked":0,"unlocked":0},"declined":{"locked":0,"unlocked":0},"waitlisted":{"locked":0,"unlocked":0}},"csp_facilitators":{"unreviewed":{"locked":0,"unlocked":0},"pending":{"locked":0,"unlocked":0},"accepted":{"locked":0,"unlocked":0},"declined":{"locked":0,"unlocked":0},"waitlisted":{"locked":0,"unlocked":0}},"csd_teachers":{"unreviewed":{"locked":0,"unlocked":1},"pending":{"locked":0,"unlocked":0},"accepted":{"locked":0,"unlocked":0},"declined":{"locked":0,"unlocked":0},"waitlisted":{"locked":0,"unlocked":0}},"csp_teachers":{"unreviewed":{"locked":1,"unlocked":1},"pending":{"locked":0,"unlocked":0},"accepted":{"locked":0,"unlocked":0},"declined":{"locked":0,"unlocked":0},"waitlisted":{"locked":0,"unlocked":0}}})
+        JSON.stringify({
+          csf_facilitators: {
+            unreviewed: { locked: 0, unlocked: 1 },
+            pending: { locked: 0, unlocked: 0 },
+            accepted: { locked: 0, unlocked: 0 },
+            declined: { locked: 0, unlocked: 0 },
+            waitlisted: { locked: 0, unlocked: 0 },
+          },
+          csd_facilitators: {
+            unreviewed: { locked: 0, unlocked: 0 },
+            pending: { locked: 0, unlocked: 0 },
+            accepted: { locked: 0, unlocked: 0 },
+            declined: { locked: 0, unlocked: 0 },
+            waitlisted: { locked: 0, unlocked: 0 },
+          },
+          csp_facilitators: {
+            unreviewed: { locked: 0, unlocked: 0 },
+            pending: { locked: 0, unlocked: 0 },
+            accepted: { locked: 0, unlocked: 0 },
+            declined: { locked: 0, unlocked: 0 },
+            waitlisted: { locked: 0, unlocked: 0 },
+          },
+          csd_teachers: {
+            unreviewed: { locked: 0, unlocked: 1 },
+            pending: { locked: 0, unlocked: 0 },
+            accepted: { locked: 0, unlocked: 0 },
+            declined: { locked: 0, unlocked: 0 },
+            waitlisted: { locked: 0, unlocked: 0 },
+          },
+          csp_teachers: {
+            unreviewed: { locked: 1, unlocked: 1 },
+            pending: { locked: 0, unlocked: 0 },
+            accepted: { locked: 0, unlocked: 0 },
+            declined: { locked: 0, unlocked: 0 },
+            waitlisted: { locked: 0, unlocked: 0 },
+          },
+        })
       ]
     );
 
