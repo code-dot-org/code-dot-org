@@ -82,20 +82,6 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
-    COURSE_HOURS_PER_YEAR = [
-      'At least 100 course hours',
-      '50 to 99 course hours',
-      'Less than 50 course hours'
-    ]
-
-    TERMS_PER_YEAR = [
-      '1 quarter',
-      '1 trimester',
-      '1 semester',
-      '2 trimesters',
-      'Full year'
-    ]
-
     def self.options
       {
         country: [
@@ -250,9 +236,9 @@ module Pd::Application
           OTHER_PLEASE_LIST
         ],
 
-        csd_course_hours_per_year: COURSE_HOURS_PER_YEAR,
+        csd_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
 
-        csd_terms_per_year: TERMS_PER_YEAR,
+        csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
         csp_which_grades: (9..12).map(&:to_s),
 
@@ -262,9 +248,9 @@ module Pd::Application
           'Less than 4 course hours per week'
         ],
 
-        csp_course_hours_per_year: COURSE_HOURS_PER_YEAR,
+        csp_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
 
-        csp_terms_per_year: TERMS_PER_YEAR,
+        csp_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
         csp_how_offer: [
           'As an introductory course',

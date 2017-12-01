@@ -8,11 +8,12 @@ module Pd::WorkshopSurveyReportCsvConverter
       survey_report_line = Hash.new
 
       survey_report[key].each_key do |question|
-        if survey_report[key][question].is_a?(Array)
-          survey_report_line[I18n.t("pd.survey.#{question}")] = survey_report[key][question].join(' / ')
-        else
-          survey_report_line[I18n.t("pd.survey.#{question}")] = survey_report[key][question]
-        end
+        survey_report_line[I18n.t("pd.survey.#{question}")] =
+          if survey_report[key][question].is_a?(Array)
+            survey_report[key][question].join(' / ')
+          else
+            survey_report[key][question]
+          end
       end
 
       csv_report << {Workshops: key.is_a?(Symbol) ? key.to_s.titleize : key}.merge(survey_report_line)

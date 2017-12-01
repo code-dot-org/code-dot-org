@@ -233,11 +233,12 @@ FactoryGirl.define do
 
         if evaluator.randomized_survey_answers
           survey_hash.each do |k, _|
-            if Pd::TeacherconSurvey.options.key? k.underscore.to_sym
-              survey_hash[k] = Pd::TeacherconSurvey.options[k.underscore.to_sym].sample
-            else
-              survey_hash[k] = SecureRandom.hex[0..8]
-            end
+            survey_hash[k] =
+              if Pd::TeacherconSurvey.options.key? k.underscore.to_sym
+                Pd::TeacherconSurvey.options[k.underscore.to_sym].sample
+              else
+                SecureRandom.hex[0..8]
+              end
           end
         end
 
@@ -387,11 +388,12 @@ FactoryGirl.define do
 
         if evaluator.randomized_survey_answers
           survey_hash.each do |k, _|
-            if Pd::LocalSummerWorkshopSurvey.options.key? k.underscore.to_sym
-              survey_hash[k] = Pd::LocalSummerWorkshopSurvey.options[k.underscore.to_sym].sample
-            else
-              survey_hash[k] = SecureRandom.hex[0..8]
-            end
+            survey_hash[k] =
+              if Pd::LocalSummerWorkshopSurvey.options.key? k.underscore.to_sym
+                Pd::LocalSummerWorkshopSurvey.options[k.underscore.to_sym].sample
+              else
+                SecureRandom.hex[0..8]
+              end
           end
         end
 
@@ -694,7 +696,22 @@ FactoryGirl.define do
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
   end
 
+  factory :pd_principal_approval1819_application_hash, class: 'Hash' do
+    initialize_with do
+      {
+        first_name: 'Albus',
+        last_name: 'Dumbledore',
+        title: 'Dr.',
+        email: 'albus@hogwarts.edu',
+        school: 'Hogwarts Academy of Witchcraft and Wizardry',
+        total_student_enrollment: 200,
+        free_lunch_percent: '50%',
+        do_you_approve: 'Yes'
+      }.stringify_keys
+    end
+  end
+
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
-    form_data {{}}
+    form_data {build(:pd_principal_approval1819_application_hash).to_json}
   end
 end
