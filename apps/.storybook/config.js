@@ -5,6 +5,8 @@ import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 import experiments from '@cdo/apps/util/experiments';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 import '../style/common.scss';
 import '../style/netsim/style.scss';
@@ -40,6 +42,7 @@ const styles = {
   },
 };
 
+const store = getStore();
 
 const storybookWrapper = Object.create(storybook);
 storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
@@ -160,7 +163,11 @@ storybook.setAddon(addStoriesGroup);
 storybook.addDecorator(story => {
   var rendered = story();
   return (
-    <Centered>{rendered}</Centered>
+    <Provider store={store}>
+      <Centered>
+        {rendered}
+      </Centered>
+    </Provider>
   );
 });
 storybook.configure(loadStories, module);
