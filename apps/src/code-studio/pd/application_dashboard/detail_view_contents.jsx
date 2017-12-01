@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import {Button, FormControl, InputGroup} from 'react-bootstrap';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
@@ -26,8 +27,9 @@ const styles = {
   }
 };
 
-export default class DetailViewContents extends React.Component {
+class DetailViewContents extends React.Component {
   static propTypes = {
+    canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       regional_partner_name: PropTypes.string,
@@ -117,12 +119,9 @@ export default class DetailViewContents extends React.Component {
 
   renderLockButton = () => {
     const statusIsLockable = ApplicationFinalStatuses.includes(this.state.status);
-    const title = statusIsLockable
-      ? ''
-      : `Can only lock if status is one of ${ApplicationFinalStatuses.join(', ')}`;
     return (
       <Button
-        title={title}
+        title={statusIsLockable && `Can only lock if status is one of ${ApplicationFinalStatuses.join(', ')}`}
         disabled={!(this.state.editing && statusIsLockable)}
         onClick={this.handleLockClick}
       >
@@ -174,11 +173,12 @@ export default class DetailViewContents extends React.Component {
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
           <InputGroup style={{marginRight: 5}}>
             <InputGroup.Button>
-              {this.renderLockButton()}
+              {this.props.canLock && this.renderLockButton()}
             </InputGroup.Button>
             <FormControl
               componentClass="select"
               disabled={this.state.locked || !this.state.editing}
+              title={this.state.locked && "The status of this application has been locked"}
               value={this.state.status}
               onChange={this.handleStatusChange}
               style={styles.statusSelect}
@@ -289,3 +289,7 @@ export default class DetailViewContents extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  canLock: state.permissions.lockApplication,
+}))(DetailViewContents);

@@ -2,6 +2,7 @@
  * Table displaying a summary of application statuses
  */
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
 import {StatusColors} from './constants';
 import _ from 'lodash';
@@ -23,8 +24,9 @@ const ApplicationDataPropType = PropTypes.shape({
   unlocked: PropTypes.number.isRequired,
 });
 
-export default class SummaryTable extends React.Component {
+class SummaryTable extends React.Component {
   static propTypes = {
+    showLocked: PropTypes.bool,
     caption: PropTypes.string.isRequired,
     data: PropTypes.shape({
       accepted: ApplicationDataPropType,
@@ -51,8 +53,8 @@ export default class SummaryTable extends React.Component {
             <td style={{...styles.statusCell[status]}}>
               {_.upperFirst(status)}
             </td>
-            <td>{data.locked}</td>
-            <td>{data.unlocked}</td>
+            {this.props.showLocked && <td>{data.locked}</td>}
+            {this.props.showLocked && <td>{data.unlocked}</td>}
             <td>{total}</td>
           </tr>
         );
@@ -73,8 +75,8 @@ export default class SummaryTable extends React.Component {
           <thead>
             <tr>
               <th>Status</th>
-              <th>Locked</th>
-              <th>Unlocked</th>
+              {this.props.showLocked && <th>Locked</th>}
+              {this.props.showLocked && <th>Unlocked</th>}
               <th>Total</th>
             </tr>
           </thead>
@@ -92,3 +94,7 @@ export default class SummaryTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  showLocked: state.permissions.lockApplication,
+}))(SummaryTable);
