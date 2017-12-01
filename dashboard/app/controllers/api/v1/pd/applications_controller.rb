@@ -52,7 +52,12 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # PATCH /api/v1/pd/applications/1
   def update
-    @application.update(application_params)
+    @application.update(application_params.except(:locked))
+
+    # only allow those with full management permission to lock or unlock
+    if application_params.key?(:locked) && can?(:manage, @application)
+      application_params[:locked] ? @application.lock! : @application.unlock!
+    end
 
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
   end
@@ -79,7 +84,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :response_scores
+      :status, :notes, :response_scores, :locked
     )
   end
 
