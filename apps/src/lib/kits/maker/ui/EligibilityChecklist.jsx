@@ -1,12 +1,23 @@
 /** @file Maker Discount Code Eligibility Checklist */
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
+import color from "@cdo/apps/util/color";
 import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Unit6ValidationStep from './Unit6ValidationStep';
 import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 import DiscountCodeInstructions from '@cdo/apps/lib/kits/maker/ui/DiscountCodeInstructions';
+
+const styles = {
+  main: {
+    color: color.charcoal
+  },
+  partialDiscountMessage: {
+    marginTop: 10,
+    marginBottom: 10
+  }
+};
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -75,12 +86,8 @@ export default class EligibilityChecklist extends Component {
       );
     }
 
-    // TODO: if we don't have full discount, we should have text saying why it's
-    // not a full discount, and suggesting that you contact code.org according to
-    // the spec
-
     return (
-      <div>
+      <div style={styles.main}>
         <h2>
           {i18n.eligibilityRequirements()}
         </h2>
@@ -113,6 +120,20 @@ export default class EligibilityChecklist extends Component {
             schoolConfirmed={this.props.hasConfirmedSchool}
             onSchoolConfirmed={this.handleSchoolConfirmed}
           />
+        }
+        {this.state.discountAmount && !this.state.getsFullDiscount &&
+          <div style={styles.partialDiscountMessage}>
+            Acoording to our data, your school has fewer than 50% of students that are
+            eligible for free/reduced-price lunches. This means that we can bring down
+            the cost of the $325 kit to just &97.50.{" "}
+            <b>
+              If this data seems inaccurate and you believe there are over 50% of students
+              that are eligible for free/reduced-price lunch at your school, please contact
+              support@code.org.
+            </b>
+            {" "}
+            Otherwise, click "Get Code" below.
+          </div>
         }
         {this.state.discountAmount  &&
           <Button
