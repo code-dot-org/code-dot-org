@@ -19,5 +19,16 @@ module Pd::Application
       teacher_application.save!
       assert_equal guid, teacher_application.application_guid
     end
+
+    test 'principal_greeting' do
+      hash_with_principal_title = build :pd_teacher1819_application_hash
+      hash_without_principal_title = build :pd_teacher1819_application_hash, principal_title: nil
+
+      application_with_principal_title = build :pd_teacher1819_application, form_data_hash: hash_with_principal_title
+      application_without_principal_title = build :pd_teacher1819_application, form_data_hash: hash_without_principal_title
+
+      assert_equal 'Dr. Dumbledore', application_with_principal_title.principal_greeting
+      assert_equal 'Albus Dumbledore', application_without_principal_title.principal_greeting
+    end
   end
 end
