@@ -33,6 +33,7 @@ $(document).ready(() => {
         schoolName={scriptData.school_name}
         hasConfirmedSchool={scriptData.has_confirmed_school}
         getsFullDiscount={scriptData.gets_full_discount}
+        initialDiscountCode={scriptData.discount_code}
       />
     </div>
     , document.getElementById('discountcode')

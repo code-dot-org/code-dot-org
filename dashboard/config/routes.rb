@@ -48,6 +48,7 @@ Dashboard::Application.routes.draw do
   get 'maker/discountcode', to: 'maker#discountcode'
   post 'maker/apply', to: 'maker#apply'
   post 'maker/schoolchoice', to: 'maker#schoolchoice'
+  post 'maker/complete', to: 'maker#complete'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
