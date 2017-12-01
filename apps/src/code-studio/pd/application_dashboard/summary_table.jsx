@@ -18,10 +18,22 @@ const styles = {
   statusCell: StatusColors
 };
 
+const ApplicationDataPropType = PropTypes.shape({
+  locked: PropTypes.number.isRequired,
+  unlocked: PropTypes.number.isRequired,
+});
+
 export default class SummaryTable extends React.Component {
   static propTypes = {
     caption: PropTypes.string.isRequired,
-    data: PropTypes.object,
+    data: PropTypes.shape({
+      accepted: ApplicationDataPropType,
+      declined: ApplicationDataPropType,
+      interview: ApplicationDataPropType,
+      pending: ApplicationDataPropType,
+      unreviewed: ApplicationDataPropType,
+      waitlisted: ApplicationDataPropType,
+    }),
     path: PropTypes.string.isRequired
   }
 
@@ -32,14 +44,16 @@ export default class SummaryTable extends React.Component {
   tableBody() {
     return Object.keys(StatusColors).map((status, i) => {
       if (this.props.data.hasOwnProperty(status)) {
+        const data = this.props.data[status];
+        const total = data.locked + data.unlocked;
         return (
           <tr key={i}>
             <td style={{...styles.statusCell[status]}}>
               {_.upperFirst(status)}
             </td>
-            <td>{this.props.data[status].total_locked}</td>
-            <td>{this.props.data[status].total_unlocked}</td>
-            <td>{this.props.data[status].total}</td>
+            <td>{data.locked}</td>
+            <td>{data.unlocked}</td>
+            <td>{total}</td>
           </tr>
         );
       }

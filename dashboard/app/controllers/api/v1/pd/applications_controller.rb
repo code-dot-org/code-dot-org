@@ -14,6 +14,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_data = empty_application_data
 
     ROLES.each do |role|
+<<<<<<< HEAD
       apps = get_applications_by_role(role).
         select(:status, :regional_partner_id, "COUNT(locked_at) as total_locked", "COUNT(id) as total")
 
@@ -25,9 +26,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
       apps.group(:status).each do |group|
         application_data[role][group.status] = {
-          total: group.total,
-          total_locked: group.total_locked,
-          total_unlocked: group.total - group.total_locked
+          locked: group.total_locked,
+          unlocked: group.total - group.total_locked
         }
       end
     end
@@ -110,9 +110,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         app_data[role] = {}
         app_type.statuses.keys.each do |status|
           app_data[role][status] = {
-            total: 0,
-            total_locked: 0,
-            total_unlocked: 0
+            locked: 0,
+            unlocked: 0
           }
         end
       end
