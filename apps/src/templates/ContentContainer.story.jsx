@@ -1,9 +1,8 @@
 import React from 'react';
-import {UnconnectedContentContainer as ContentContainer} from './ContentContainer';
+import ContentContainer from './ContentContainer';
 import CourseCard from './studioHomepages/CourseCard';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '@cdo/apps/code-studio/responsiveRedux';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 const exampleCard = {
   title: "CSP Unit 2 - Digital Information",
@@ -14,7 +13,7 @@ const exampleCard = {
 // ContentContainer is a generic component that will render whatever child components are passed to it.  CourseCards are used here as an example because it was first built to render them for the Teacher Homepage.
 
 export default storybook => {
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  const store = getStore();
   return storybook
     .storiesOf('ContentContainer', module)
     .addStoryTable([

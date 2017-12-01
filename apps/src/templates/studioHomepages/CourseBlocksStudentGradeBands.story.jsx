@@ -1,14 +1,13 @@
 import React from 'react';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
 import Responsive from '../../responsive';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '../../code-studio/responsiveRedux';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 const responsive = new Responsive();
 
 export default storybook => {
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  const store = getStore();
   return storybook
     .storiesOf('CourseBlocksStudentGradeBands', module)
     .addStoryTable([

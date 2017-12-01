@@ -1,12 +1,11 @@
 import React from 'react';
 import ProjectWidget from './ProjectWidget';
 import {generateFakePersonalProjects} from './generateFakePersonalProjects';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '@cdo/apps/code-studio/responsiveRedux';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 export default storybook => {
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  const store = getStore();
   return storybook
     .storiesOf('ProjectWidget', module)
     .addStoryTable([

@@ -1,14 +1,14 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {assert} from '../../../util/configuredChai';
 import Button from "@cdo/apps/templates/Button";
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 
 describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <SetUpCourses isRtl={false} isTeacher={true}/>
-    );
+    ).dive();
     assert(wrapper.containsMatchingElement(
       <div>
         <div>
@@ -30,9 +30,9 @@ describe('SetUpCourses', () => {
   });
 
   it('renders as expected for a student', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <SetUpCourses isRtl={false} isTeacher={false}/>
-    );
+    ).dive();
     assert(wrapper.containsMatchingElement(
       <div>
         <div>
