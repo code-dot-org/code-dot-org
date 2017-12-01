@@ -699,7 +699,7 @@ FactoryGirl.define do
   factory :pd_principal_approval1819_application_hash, class: 'Hash' do
     transient do
       approved 'Yes'
-      replace_course 'No'
+      replace_course Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
       course 'csp'
     end
     initialize_with do
