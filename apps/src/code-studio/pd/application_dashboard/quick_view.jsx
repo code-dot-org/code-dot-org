@@ -33,7 +33,7 @@ const styles = {
   }
 };
 
-class QuickView extends React.Component {
+export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
     route: PropTypes.shape({

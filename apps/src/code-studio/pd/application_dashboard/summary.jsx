@@ -10,7 +10,7 @@ import Spinner from '../components/spinner';
 import {AllPartnersFilter} from './constants';
 import $ from 'jquery';
 
-class Summary extends React.Component {
+export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
     route: PropTypes.shape({
