@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
-import {LocalClassActionBlock} from './TwoColumnActionBlock';
+import LocalClassActionBlock from './LocalClassActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
 import Responsive from '../../responsive';

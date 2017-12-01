@@ -3,7 +3,7 @@ import i18n from '@cdo/locale';
 import Responsive from '../responsive';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
-import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
+import LocalClassActionBlock from './studioHomepages/LocalClassActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
 import { cardSets } from './congratsBeyondHocActivityCards';
 

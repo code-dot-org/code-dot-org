@@ -3,7 +3,7 @@ import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
-import {AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
+import AdministratorResources from './AdministratorResources';
 import { CourseBlocksHoc } from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
@@ -88,7 +88,7 @@ class CoursesTeacherEnglish extends Component {
             responsive={responsive}
           />
 
-          <AdministratorResourcesActionBlock
+          <AdministratorResources
             isRtl={isRtl}
             responsive={responsive}
           />

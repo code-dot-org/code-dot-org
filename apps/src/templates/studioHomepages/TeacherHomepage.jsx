@@ -2,7 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
+import SpecialAnnouncementActionBlock from './SpecialAnnouncement';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -18,7 +18,10 @@ const styles = {
   clear: {
     clear: 'both',
     height: 30
-  }
+  },
+  fullWidthNonResponsive: {
+   width: 970
+  },
 };
 
 export default class TeacherHomepage extends Component {
@@ -56,6 +59,7 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
+
         {hocLaunch &&
          hocLaunch.special_announcement &&
          (hocLaunch.special_announcement === "mc2017" ||
