@@ -627,6 +627,7 @@ FactoryGirl.define do
       state 'Washington'
       add_attribute :zip_code, '98101'
       association :school
+      principal_title 'Dr.'
     end
 
     initialize_with do
@@ -648,7 +649,7 @@ FactoryGirl.define do
         school: school.id,
         principal_first_name: 'Albus',
         principal_last_name: 'Dumbledore',
-        principal_title: 'Dr.',
+        principal_title: principal_title,
         principal_email: 'socks@hogwarts.edu',
         principal_confirm_email: 'socks@hogwarts.edu',
         principal_phone_number: '5555882300',
