@@ -140,5 +140,16 @@ module Pd::Application
         [:committed_to_diversity]
       ]
     end
+
+    def underrepresented_minority_percent
+      sanitize_form_data_hash.select do |k, _|
+        [
+          :black,
+          :hispanic,
+          :pacific_islander,
+          :american_indian
+        ].include? k
+      end.values.map(&:to_f).reduce(:+)
+    end
   end
 end
