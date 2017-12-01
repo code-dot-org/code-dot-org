@@ -42,6 +42,10 @@ export default class QuickViewTable extends React.Component {
     router: PropTypes.object.isRequired
   };
 
+  formatBoolean(bool) {
+    return bool ? "Yes" : "No";
+  }
+
   constructColumns() {
     let columns = [];
     columns.push({
@@ -83,6 +87,14 @@ export default class QuickViewTable extends React.Component {
             style: {...styles.statusCellCommon, ...styles.statusCell[status]}
           })
         ]
+      }
+    },{
+      property: 'locked',
+      cell: {
+        format: this.formatBoolean
+      },
+      header: {
+        label: 'Locked?',
       }
     },{
       property: 'notes',
