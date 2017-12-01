@@ -178,33 +178,35 @@ class ActivitiesController < ApplicationController
 
     allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
-      if synchronous_save
-        @activity = Activity.new(attributes).tap(&:atomic_save!)
-      else
-        @activity = Activity.create_async!(attributes)
-      end
+      @activity =
+        if synchronous_save
+          Activity.new(attributes).tap(&:atomic_save!)
+        else
+          Activity.create_async!(attributes)
+        end
     end
     if @script_level
-      if synchronous_save
-        @new_level_completed = User.track_level_progress_sync(
-          user_id: current_user.id,
-          level_id: @level.id,
-          script_id: @script_level.script_id,
-          new_result: test_result,
-          submitted: params[:submitted] == 'true',
-          level_source_id: @level_source.try(:id),
-          pairing_user_ids: pairing_user_ids,
-        )
-      else
-        @new_level_completed = current_user.track_level_progress_async(
-          script_level: @script_level,
-          new_result: test_result,
-          submitted: params[:submitted] == "true",
-          level_source_id: @level_source.try(:id),
-          level: @level,
-          pairing_user_ids: pairing_user_ids
-        )
-      end
+      @new_level_completed =
+        if synchronous_save
+          User.track_level_progress_sync(
+            user_id: current_user.id,
+            level_id: @level.id,
+            script_id: @script_level.script_id,
+            new_result: test_result,
+            submitted: params[:submitted] == 'true',
+            level_source_id: @level_source.try(:id),
+            pairing_user_ids: pairing_user_ids,
+          )
+        else
+          current_user.track_level_progress_async(
+            script_level: @script_level,
+            new_result: test_result,
+            submitted: params[:submitted] == "true",
+            level_source_id: @level_source.try(:id),
+            level: @level,
+            pairing_user_ids: pairing_user_ids
+          )
+        end
     end
 
     passed = ActivityConstants.passing?(test_result)
@@ -242,11 +244,12 @@ class ActivitiesController < ApplicationController
 
   def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
-    if current_user || session.id
-      log_string += "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
-    else
-      log_string += "\tanon"
-    end
+    log_string +=
+      if current_user || session.id
+        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
+      else
+        "\tanon"
+      end
     log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" \
                   "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
     log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"

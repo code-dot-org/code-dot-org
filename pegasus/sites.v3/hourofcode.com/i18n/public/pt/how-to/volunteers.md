@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:titulo_como_se_voluntariar) %>'
+title: <%= hoc_s(:titulo_como_se_voluntariar) %>
 layout: wide
 nav: how_to_nav
 ---

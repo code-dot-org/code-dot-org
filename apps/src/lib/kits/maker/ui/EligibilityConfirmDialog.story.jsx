@@ -10,8 +10,8 @@ export default storybook => {
         description: 'EligibilityConfirmDialog',
         story: () => (
           <EligibilityConfirmDialog
-            handleCancel={() => {}}
-            handleSubmit={() => {}}
+            onCancel={() => {}}
+            onSuccess={() => {}}
           />
         )
       },
