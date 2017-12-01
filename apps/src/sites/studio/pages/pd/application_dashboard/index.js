@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       regionalPartnerName={getScriptData("props")['regionalPartnerName']}
       regionalPartners={getScriptData("props")["regionalPartners"]}
       isWorkshopAdmin={getScriptData("props")["isWorkshopAdmin"]}
+      canLockApplications={getScriptData("props")['canLockApplications']}
     />,
     document.getElementById('application-container')
   );
