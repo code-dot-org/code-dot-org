@@ -82,7 +82,9 @@ module GitHub
       sleep 1
     end
 
-    if pr['merged']
+    if attempt_count >= 30
+      raise ArgumentError.new("PR\##{pr_number} mergeability check timed out")
+    elsif pr['merged']
       raise ArgumentError.new("PR\##{pr_number} is already merged")
     elsif !pr['mergeable']
       raise ArgumentError.new("PR\##{pr_number} is not mergeable")
