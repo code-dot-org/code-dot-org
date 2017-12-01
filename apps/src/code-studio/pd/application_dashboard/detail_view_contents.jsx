@@ -31,6 +31,7 @@ export default class DetailViewContents extends React.Component {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       regional_partner_name: PropTypes.string,
+      locked: PropTypes.bool,
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
@@ -52,6 +53,7 @@ export default class DetailViewContents extends React.Component {
 
   state = {
     status: this.props.applicationData.status,
+    locked: this.props.applicationData.locked,
     notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:",
     response_scores: this.props.applicationData.response_scores || {},
     editing: false
@@ -61,6 +63,7 @@ export default class DetailViewContents extends React.Component {
     this.setState({
       editing: false,
       status: this.props.applicationData.status,
+      locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes
     });
   };
