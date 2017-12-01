@@ -698,21 +698,61 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval1819_application_hash, class: 'Hash' do
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
+      course 'csp'
+    end
     initialize_with do
       {
         first_name: 'Albus',
         last_name: 'Dumbledore',
         title: 'Dr.',
         email: 'albus@hogwarts.edu',
-        school: 'Hogwarts Academy of Witchcraft and Wizardry',
-        total_student_enrollment: 200,
-        free_lunch_percent: '50%',
-        do_you_approve: 'Yes'
-      }.stringify_keys
+        do_you_approve: approved,
+        confirm_principal: true
+      }.tap do |hash|
+        unless approved == Pd::Application::ApplicationBase::NO
+          hash.merge! (
+            {
+              school: 'Hogwarts Academy of Witchcraft and Wizardry',
+              total_student_enrollment: 200,
+              free_lunch_percent: '50%',
+              white: '16%',
+              black: '15%',
+              hispanic: '14%',
+              asian: '13%',
+              pacific_islander: '12%',
+              american_indian: '11%',
+              other: '10%',
+              committed_to_master_schedule: 'Yes',
+              hours_per_year: 'At least 100 course hours',
+              terms_per_year: '1 quarter',
+              replace_course: replace_course,
+              committed_to_diversity: 'Yes',
+              understand_fee: 'Yes',
+              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee'
+            }
+          )
+
+          if replace_course == Pd::Application::ApplicationBase::YES
+            if course == 'csp'
+              hash[:replace_which_course_csp] = ['Beauty and Joy of Computing']
+            elsif course == 'csd'
+              hash[:replace_which_course_csd] = ['CodeHS']
+            end
+          end
+        end
+      end.stringify_keys
     end
   end
 
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
-    form_data {build(:pd_principal_approval1819_application_hash).to_json}
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
+    end
+    course 'csp'
+    form_data {build(:pd_principal_approval1819_application_hash, course: course, approved: approved, replace_course: replace_course).to_json}
   end
 end

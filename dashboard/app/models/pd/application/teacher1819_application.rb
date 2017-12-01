@@ -102,12 +102,7 @@ module Pd::Application
         race: COMMON_OPTIONS[:race],
 
         school_state: COMMON_OPTIONS[:state],
-        school_type: [
-          'Public school',
-          'Private school',
-          'Charter school',
-          'Other'
-        ],
+        school_type: COMMON_OPTIONS[:school_type],
 
         principal_title: COMMON_OPTIONS[:title],
 

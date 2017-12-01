@@ -41,6 +41,7 @@ module Pd::Application
       {
         title: COMMON_OPTIONS[:title],
         school_state: COMMON_OPTIONS[:state],
+        school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, OTHER_WITH_TEXT],
         committed_to_master_schedule: [YES, NO, OTHER_WITH_TEXT],
         hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
@@ -94,10 +95,42 @@ module Pd::Application
         last_name
         title
         email
-        total_student_enrollment
-        free_lunch_percent
         do_you_approve
+        confirm_principal
       )
+    end
+
+    def dynamic_required_fields(hash)
+      [].tap do |required|
+        unless hash[:do_you_approve] == NO
+          required.concat [
+            :total_student_enrollment,
+            :free_lunch_percent,
+            :white,
+            :black,
+            :hispanic,
+            :asian,
+            :pacific_islander,
+            :american_indian,
+            :other,
+            :committed_to_master_schedule,
+            :hours_per_year,
+            :terms_per_year,
+            :replace_course,
+            :committed_to_diversity,
+            :understand_fee,
+            :pay_fee
+          ]
+
+          if hash[:replace_course] == YES
+            if course == 'csd'
+              required << :replace_which_course_csd
+            elsif course == 'csp'
+              required << :replace_which_course_csp
+            end
+          end
+        end
+      end
     end
 
     def additional_text_fields
