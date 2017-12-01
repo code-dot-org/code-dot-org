@@ -136,7 +136,7 @@ kk:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
-  company_sjusd: Сан Хуан Біріктірілген Мектеп аумағы
+  company_sjusd: 'Сан Хуан Біріктірілген Мектеп аумағы'
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -273,9 +273,9 @@ kk:
   map_legend_hoc_events: 'Кодтау Сағаты'
   map_legend_cs_tech_jam: 'Арнайы іс-шара'
   map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
-  meta_tag_og_title: Кодтау сағаты мұнда
+  meta_tag_og_title: 'Кодтау сағаты мұнда'
   meta_tag_og_description: 'Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр жастағы ондаған миллион оқушыны қамтитын жаһандық қозғалыс.'
-  meta_tag_twitter_title: Кодтау сағаты мұнда
+  meta_tag_twitter_title: 'Кодтау сағаты мұнда'
   meta_tag_twitter_description: 'Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр жастағы ондаған миллион оқушыны қамтитын жаһандық қозғалыс.'
   twitter_default_text: "Мен осы жылы #HourOfCode (#КодтауСағаты-на) қатысамын, сен ше? @codeorg"
   hoc_faq_title: 'Жиі қойылатын сұрақтар'
@@ -336,23 +336,23 @@ kk:
   stats_nina: '"Нәтижесі әр күн сайын біркелкі &mdash; 100% қатысу." - Нина Никольс Пери, Оқытушы'
   stats_student: '"Мұны <b>өмірде бір рет берілетін</b> шансым деп білдім." - Мариана Алзат, 5 сынып оқушысы'
   stats_michael: '"Оқушыларымның сондай қызығушылықпен оқығанын <b>бұрын көрмеппін</b>." - Майкл Кларк, оқытушы'
-  resources_how_to: Мұғалімдер үшін қалай жүргізу жолнұсқасы
-  resources_how_to_events: Қалай жүргізу жолнұсқасы
-  resources_how_to_districts: Аймақтар үшін қалай жүргізу жолнұсқасы
-  resources_how_to_officials: Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы
-  resources_handouts: Жариялау үшін үлестірме материалы
-  resources_one_pager: Бір беттік үлестірме қағаз
-  resources_brochure: кітапша
-  resources_posters: жарнама плакат
-  resources_videos: Видеолар
-  resources_banners: Әлеуметтік медиа баннерлер
-  resources_emails: электрондық хат үлгісі
-  resources_logo: Кодтау сағаты логотипі
-  resources_stats: Статистика және жарнамалау
-  resources_press_kit: Баспасөз жиынтығы
-  resources_social: Әлеуметтік
-  resources_country_resources: Мемлекетке айрықша ресурстар
-  resources_stickers: жапсырмалар
+  resources_how_to: 'Мұғалімдер үшін қалай жүргізу жолнұсқасы'
+  resources_how_to_events: 'Қалай жүргізу жолнұсқасы'
+  resources_how_to_districts: 'Аймақтар үшін қалай жүргізу жолнұсқасы'
+  resources_how_to_officials: 'Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы'
+  resources_handouts: 'Жариялау үшін үлестірме материалы'
+  resources_one_pager: 'Бір беттік үлестірме қағаз'
+  resources_brochure: 'кітапша'
+  resources_posters: 'жарнама плакат'
+  resources_videos: 'Видеолар'
+  resources_banners: 'Әлеуметтік медиа баннерлер'
+  resources_emails: 'электрондық хат үлгісі'
+  resources_logo: 'Кодтау сағаты логотипі'
+  resources_stats: 'Статистика және жарнамалау'
+  resources_press_kit: 'Баспасөз жиынтығы'
+  resources_social: 'Әлеуметтік'
+  resources_country_resources: 'Мемлекетке айрықша ресурстар'
+  resources_stickers: 'жапсырмалар'
   resources_how_to_guides: 'Қалай жүргізу жолнұсқалары'
   resources_promote: 'Жарнамалау'
   resources_nav_tutorials: 'жаттығуларды көру'
@@ -362,53 +362,53 @@ kk:
   resources_banner_promote_button: "Брошюра, шабыттандырушы постер және әлеуметтік желіге арналған баннерлер арқылы басқаларды қосылуға шақырыңыз."
   resources_banner_howto_text: "Қалай"
   resources_banner_howto_button: "Оқытушы, ата-ана, аудан өкілдері үшін Кодтау сағатын ұйымдастыруға қажет ресурстар."
-  handouts_section: Мына үлестірме материалдарымен бөлісіңіз
-  handouts_onepager: Осы бір бетті үндеухат арқылы сөз тарату
-  handouts_brochure: Мұғалімдер мен мектептерге арналған осы кітапша беріңіз
-  handouts_participationguide: Осы қатысу жолнұсқамен өз кодтау сағатыны жоспарла
-  videos_title: Мына бейне-роликтерді шабыттандыру мақсатымен көрсетіңіз
-  videos_what_most_schools_dont_teach: Мектептің көбісі үйретпейтіні (5 мин)
-  videos_hoc_2014: Кодтау сағаты келді - әркім оны үйрене алады
-  videos_obama_cs: Президент Обама Компьютер Ғылымы туралы
-  videos_anybody_can_learn: Әркім үйрене алады(1 мин)
-  title_country_resources: Мемлекетке айрықша ресурстар
-  title_how_to_districts: Аймақтарға арналған кодтау сағатының нұсқауы
-  title_how_to_events: Кодтау сағаты қалай өткізу
+  handouts_section: 'Мына үлестірме материалдарымен бөлісіңіз'
+  handouts_onepager: 'Осы бір бетті үндеухат арқылы сөз тарату'
+  handouts_brochure: 'Мұғалімдер мен мектептерге арналған осы кітапша беріңіз'
+  handouts_participationguide: 'Осы қатысу жолнұсқамен өз кодтау сағатыны жоспарла'
+  videos_title: 'Мына бейне-роликтерді шабыттандыру мақсатымен көрсетіңіз'
+  videos_what_most_schools_dont_teach: 'Мектептің көбісі үйретпейтіні (5 мин)'
+  videos_hoc_2014: 'Кодтау сағаты келді - әркім оны үйрене алады'
+  videos_obama_cs: 'Президент Обама Компьютер Ғылымы туралы'
+  videos_anybody_can_learn: 'Әркім үйрене алады(1 мин)'
+  title_country_resources: 'Мемлекетке айрықша ресурстар'
+  title_how_to_districts: 'Аймақтарға арналған кодтау сағатының нұсқауы'
+  title_how_to_events: 'Кодтау сағаты қалай өткізу'
   title_how_to_organizations: '"Кодтау Сағатын" қалай ұйымдастыруға болады - Ұжымдар үшін'
   title_how_to_companies: '"Кодтау Сағатын" қалай ұйымдастыруға болады - Компаниялар үшін'
-  title_how_to_officials: Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы
-  title_how_to_volunteers: Кодтау сағатының волонтерлерге арналған нұсқауы
-  title_how_to_parents: Ата-аналарға арналған нұсқау
-  title_how_to: Қалай жүргізу жолнұсқасы
-  title_press_release: Сайланған өкілдерге арналған Кодтау сағатының баспасөз релизі
-  title_op_ed: Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау хатының нұсқасы
-  title_press_kit: Баспасөз жиынтығы
-  title_proclamation: Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау резолюциясының (қарар) нұсқасы
-  title_stats: Статистика және жарнамалау
-  title_partners: Серіктестер
-  title_resources: Ресурстар
-  title_signup_thanks: Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!
-  title_tutorial_guidelines: Жаттығулар бағдары
-  title_whole_school: Бүкіл мектеппен қатысу
-  events_nav_title: Кодтау Сағатының бастамалары
-  events_nav_all: Барлық бастамалар
-  events_nav_whole_schools: Бүкіл мектептер
-  events_nav_special: Арнайы іс-шаралар
-  events_nav_orgs: Ұйымдастықтар
+  title_how_to_officials: 'Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы'
+  title_how_to_volunteers: 'Кодтау сағатының волонтерлерге арналған нұсқауы'
+  title_how_to_parents: 'Ата-аналарға арналған нұсқау'
+  title_how_to: 'Қалай жүргізу жолнұсқасы'
+  title_press_release: 'Сайланған өкілдерге арналған Кодтау сағатының баспасөз релизі'
+  title_op_ed: 'Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау хатының нұсқасы'
+  title_press_kit: 'Баспасөз жиынтығы'
+  title_proclamation: 'Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау резолюциясының (қарар) нұсқасы'
+  title_stats: 'Статистика және жарнамалау'
+  title_partners: 'Серіктестер'
+  title_resources: 'Ресурстар'
+  title_signup_thanks: 'Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!'
+  title_tutorial_guidelines: 'Жаттығулар бағдары'
+  title_whole_school: 'Бүкіл мектеппен қатысу'
+  events_nav_title: 'Кодтау Сағатының бастамалары'
+  events_nav_all: 'Барлық бастамалар'
+  events_nav_whole_schools: 'Бүкіл мектептер'
+  events_nav_special: 'Арнайы іс-шаралар'
+  events_nav_orgs: 'Ұйымдастықтар'
   events_all_old_title: "Барлық @year Кодтау Сағаты іс-шаралары"
-  events_all_title: Кодтау сағатының барлық іс-шаралары
-  events_whole_school_title: Бүкіл мектептік Кодтау сағаты іс-шаралары
-  events_special_title: Кодтау сағатының арнайы іс-шаралары
-  events_orgs_title: Серіктес ұйымдар жасайтын барлық кодтау сағаттары
-  event: Бастама
-  events: Бастамалар
-  highlights_title: Негізгі мезеттер
-  highlights_header: Кодтау Сағатының негізгі мезеттері
-  highlights_description: Кодтау сағатынан алынған сүйікті сәттер.
+  events_all_title: 'Кодтау сағатының барлық іс-шаралары'
+  events_whole_school_title: 'Бүкіл мектептік Кодтау сағаты іс-шаралары'
+  events_special_title: 'Кодтау сағатының арнайы іс-шаралары'
+  events_orgs_title: 'Серіктес ұйымдар жасайтын барлық кодтау сағаттары'
+  event: 'Бастама'
+  events: 'Бастамалар'
+  highlights_title: 'Негізгі мезеттер'
+  highlights_header: 'Кодтау Сағатының негізгі мезеттері'
+  highlights_description: 'Кодтау сағатынан алынған сүйікті сәттер.'
   higlights_see_more: See more highlights
   highlights_readmore: Read more
-  highlights_watchvideo: Бейне-роликті тамашалау
-  highlights_facebook: Фейсбукта бөлісу
+  highlights_watchvideo: 'Бейне-роликті тамашалау'
+  highlights_facebook: 'Фейсбукта бөлісу'
   highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
   highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
   highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
@@ -444,7 +444,7 @@ kk:
   tutorial_highseas_name: "Су үстіндегі қызықты оқиғалар"
   tutorial_capython_name: "Питонның тасбақа графикасы"
   tutorial_frzn_name: "Анна және Эльзамен Кодтау"
-  tutorial_cocom_name: КодКомбат
+  tutorial_cocom_name: 'КодКомбат'
   tutorial_play-lab_name: "Ойнау лабораториясы"
   tutorial_boxisland_name: "Қорап аралы"
   tutorial_textcomp_name: "Текстіні қысқарту"
@@ -682,7 +682,7 @@ kk:
   tutorial_tap_name: "Tynker планшетте"
   tutorial_cintl_name: "Бірінші өз компьютер бағдарламасын жаз"
   tutorial_itchstop_name: "ITCH Тоқтау кадрлері анимацияся (Скретч)"
-  tutorial_tynkerpn_name: Пиппен табиғи саяхатқа шығу
+  tutorial_tynkerpn_name: 'Пиппен табиғи саяхатқа шығу'
   tutorial_tynkerpd_name: 'Пип: достарыңмен би биле'
   tutorial_persistence_name: 'Төзімділік: іргетасты қалау'
   tutorial_getloopy_name: "Циклді болып кету"
@@ -1318,7 +1318,7 @@ kk:
   tutorial_inf_longdescription: "Оқиға не Disney кейіпкерлері қатысатын ойын жасау үшін Play Lab-ті қолданыңыз."
   tutorial_tynkersol_longdescription: "Program an interactive model of our Solar System. This project comes with step-by-step instructions that guide you through creating a simulation with planets orbiting the Sun. Then add facts about each planet that pop up when clicked."
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe ending project has students creating a game to name the States of Australia!\n\nYou'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!\n\nYou can take the activity even further by adding your own image and labels (along with many other extra project options, the fun never ends). Headphones are recommended."
-  tutorial_como_longdescription: "In 200 Story Mode and Skill Mode challenges, users help the monkey catch bananas through learning and writing code. Coding Adventure Part I teaches objects, loops, variables, array indexing, functions and more. Part II teaches boolean logic (if-else, AND, OR and NOT), comparisons, function return values and triggering events using the mouse and keyboard. Personalized hints and tips are included every step of the way. For ages 8-16."
+  tutorial_como_longdescription: "200 Story Mode және Skill Mode дағдыларында пайдаланушылар кодты үйрену және жазу арқылы баннерлерді банандарды ұстауға көмектеседі. Кодтаманың I бөлімі I нысандарды, ілмектерді, айнымалы мәндерді, массив индекстеуді, функцияларды және басқаларын үйретеді. Екінші бөлім логикалық логиканы (if-else, AND, OR және NOT), салыстыруды, функцияны қайтару мәндерін және тінтуір мен пернетақта арқылы оқиғаларды іске қосуды үйретеді."
   tutorial_processfound_longdescription: "What does it mean to write software to do the things that you often do with your hands, with paper, with pencil with paint? Could you use a computer to create drawings? To create animations? To create images?"
   tutorial_tynkerhomo_longdescription: "You'll follow step-by-step instructions to animate an interactive story with a lot of homophones in it! Each time a character says a word that is a homophone, ask the player which homophone is the correct word for that context. The player better know their homophones, or else the dialog won't make any sense!"
   tutorial_art_longdescription: "Әртіспен керемет суреттерді және жобаларды сал!"

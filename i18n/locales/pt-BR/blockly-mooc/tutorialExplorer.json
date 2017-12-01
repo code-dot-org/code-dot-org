@@ -1,11 +1,12 @@
 {
+  "startButton": "Começar",
   "filterOrgNames": "Criado por",
   "filterOrgNamesAll": "Todos",
   "filterSortBy": "Ordenar por",
   "filterSortByDisplayWeight": "Recomendado",
   "filterSortByPopularityRank": "Mais popular",
   "filterGrades": "Níveis na escola",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "Todas as idades",
   "filterGradesPre": "Leitura prévia",
   "filterGrades25": "Anos 2-5",
   "filterGrades68": "Anos 6-8",

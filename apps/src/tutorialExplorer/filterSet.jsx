@@ -4,6 +4,7 @@
 import React, {PropTypes} from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
+import FilterGroupSortBy from './filterGroupSortBy';
 import FilterGroupOrgNames from './filterGroupOrgNames';
 import { TutorialsSortByOptions } from './util';
 
@@ -33,6 +34,14 @@ export default class FilterSet extends React.Component {
   render() {
     return (
       <div>
+        {this.props.showSortDropdown && (
+          <FilterGroupSortBy
+            defaultSortBy={this.props.defaultSortBy}
+            sortBy={this.props.sortBy}
+            onUserInput={this.props.onUserInputSortBy}
+          />
+        )}
+
         <FilterGroupOrgNames
           orgName={this.props.orgName}
           uniqueOrgNames={this.props.uniqueOrgNames}

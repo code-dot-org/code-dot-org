@@ -72,6 +72,8 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
       has_confirmed_school: application.try(:has_confirmed_school) || false,
+      school_id: user.try(:school_info).try(:school_id),
+      school_name: user.try(:school_info).try(:school).try(:name),
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),

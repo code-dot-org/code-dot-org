@@ -239,7 +239,7 @@ class SectionApiHelperTest < SequelTestCase
           name: 'Make a Flappy game',
           script_name: 'flappy',
           category: 'Hour of Code',
-          position: 4,
+          position: 7,
           category_priority: 2
         }
         assert_equal expected, flappy_script

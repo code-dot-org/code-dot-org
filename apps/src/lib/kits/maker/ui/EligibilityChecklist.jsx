@@ -1,10 +1,12 @@
 /** @file Maker Discount Code Eligibility Checklist */
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import Button from "../Button";
+import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Unit6ValidationStep from './Unit6ValidationStep';
+import EligibilityConfirmDialog from './EligibilityConfirmDialog';
+import DiscountCodeInstructions from '@cdo/apps/lib/kits/maker/ui/DiscountCodeInstructions';
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -15,6 +17,7 @@ export default class EligibilityChecklist extends Component {
     schoolName: PropTypes.string,
     hasConfirmedSchool: PropTypes.bool,
     getsFullDiscount: PropTypes.bool,
+    initialDiscountCode: PropTypes.string,
   };
 
   state = {
@@ -22,6 +25,8 @@ export default class EligibilityChecklist extends Component {
     yearChoice: null, // stores the teaching-year choice until submitted
     submitting: false,
     discountAmount: null,
+    confirming: false,
+    discountCode: null
   };
 
   constructor(props) {
@@ -36,7 +41,8 @@ export default class EligibilityChecklist extends Component {
         statusYear: (props.unit6Intention === 'yes1718' ||
           props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
         discountAmount: props.hasConfirmedSchool ?
-          (props.getsFullDiscount ? "$0" : "$97.50") : null
+          (props.getsFullDiscount ? "$0" : "$97.50") : null,
+        discountCode: props.initialDiscountCode,
       };
     }
   }
@@ -53,7 +59,22 @@ export default class EligibilityChecklist extends Component {
     });
   }
 
+  confirmEligibility = () => this.setState({confirming: true})
+
+  handleCancelDialog = () => this.setState({confirming: false})
+
+  handleSuccessDialog = discountCode => this.setState({discountCode})
+
   render() {
+    if (this.state.discountCode) {
+      return (
+        <DiscountCodeInstructions
+          discountCode={this.state.discountCode}
+          fullDiscount={true}
+        />
+      );
+    }
+
     return (
       <div>
         <h2>
@@ -93,7 +114,13 @@ export default class EligibilityChecklist extends Component {
           <Button
             color={Button.ButtonColor.orange}
             text={i18n.getCodePrice({price: this.state.discountAmount})}
-            onClick={() => {}}
+            onClick={this.confirmEligibility}
+          />
+        }
+        {this.state.confirming &&
+          <EligibilityConfirmDialog
+            onCancel={this.handleCancelDialog}
+            onSuccess={this.handleSuccessDialog}
           />
         }
       </div>

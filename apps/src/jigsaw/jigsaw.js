@@ -197,8 +197,6 @@ function checkForSuccess() {
 var displayFeedback = function () {
   if (!Jigsaw.waitingForReport) {
     studioApp().displayFeedback({
-      app: 'Jigsaw',
-      skin: skin.id,
       feedbackType: Jigsaw.testResults,
       response: Jigsaw.response,
       level: level,

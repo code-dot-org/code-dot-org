@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
-import Button from "../Button";
-import SchoolAutocompleteDropdownWithLabel from '../census2017/SchoolAutocompleteDropdownWithLabel';
-import { styles as censusFormStyles } from '../census2017/censusFormStyles';
+import Button from "@cdo/apps/templates/Button";
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import { styles as censusFormStyles } from '@cdo/apps/templates/census2017/censusFormStyles';
 
 const styles = {
   confirmed: {
@@ -45,16 +45,27 @@ export default class DiscountCodeSchoolChoice extends Component {
       confirming: true
     });
 
-    // TODO: eventually this will be an API call. To start with, just fake it
-    // by at least making it async
-    setTimeout(() => {
-      this.setState({
-        confirming: false,
-        confirmed: true,
-      });
-      const fullDiscount = false;
-      this.props.onSchoolConfirmed(fullDiscount);
-    }, 1000);
+    $.ajax({
+     url: "/maker/schoolchoice",
+     type: "post",
+     dataType: "json",
+     data: {
+       nces: this.state.schoolId
+     }
+   }).done(data => {
+     this.props.onSchoolConfirmed(data.full_discount);
+     this.setState({
+       confirming: false,
+       confirmed: true,
+     });
+   }).fail((jqXHR, textStatus) => {
+     // TODO: should probably introduce/test some error UI
+     console.error(textStatus);
+     this.setState({
+       confirming: false,
+       confirmed: false
+     });
+   });
   }
 
   render() {
@@ -82,7 +93,7 @@ export default class DiscountCodeSchoolChoice extends Component {
             text={confirming ? i18n.confirming() : i18n.confirmSchool()}
             onClick={this.handleClickConfirmSchool}
             style={styles.button}
-            disabled={confirming}
+            disabled={confirming || !this.state.schoolId}
           />
         )}
         {this.state.schoolId === "-1" && (

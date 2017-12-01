@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import Button from "../Button";
+import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 const styles = {
