@@ -1,5 +1,6 @@
 {
-  "filterOrgNames": "Lisas kasutaja",
+  "startButton": "Alusta",
+  "filterOrgNames": "Autor",
   "filterOrgNamesAll": "Kõik",
   "filterSortBy": "Sorteeri",
   "filterSortByDisplayWeight": "Soovitused",
@@ -57,6 +58,5 @@
   "hideAllTutorialsButton": "Peida paljudes keeltes tegevused",
   "noTutorialsYourLanguage": "Sinu keeles ei ole tegevusi. Proovi tegevusi teistes keeltes klõpsates alumisel nupul.",
   "bottomGuidelinesLink": "Klõpsa siia, et näha meie nõudmisi KoodiTunni juhenditele ja juhiseid nende esitamiseks.",
-  "bottomSpecialNeedsLink": "Siin klõpsates leiad rohkem informatsiooni erivajadusega õpilaste toetamisest.",
-  "startButton": "Start"
+  "bottomSpecialNeedsLink": "Siin klõpsates leiad rohkem informatsiooni erivajadusega õpilaste toetamisest."
 }

@@ -1,4 +1,5 @@
 {
+  "startButton": "Bắt đầu",
   "filterOrgNames": "Được tạo bởi",
   "filterOrgNamesAll": "Tất cả",
   "filterSortBy": "Sắp xếp theo",
@@ -57,6 +58,5 @@
   "hideAllTutorialsButton": "Ẩn các hoạt động cho nhiều ngôn ngữ",
   "noTutorialsYourLanguage": "Không có các hoạt động được hỗ trợ trong ngôn ngữ của bạn. Hãy thử các hoạt động trong các ngôn ngữ khác bằng cách nhấn vào nút dưới đây.",
   "bottomGuidelinesLink": "Click vào đây để xem tiêu chuẩn của chúng tôi và nộp hướng dẫn cho Hour of Code.",
-  "bottomSpecialNeedsLink": "Nhấp vào đây để biết thêm thông tin về việc hỗ trợ học sinh có nhu cầu đặc biệt.",
-  "startButton": "Start"
+  "bottomSpecialNeedsLink": "Nhấp vào đây để biết thêm thông tin về việc hỗ trợ học sinh có nhu cầu đặc biệt."
 }

@@ -1,11 +1,12 @@
 {
+  "startButton": "Başlayın",
   "filterOrgNames": "Oluşturan Kişi",
   "filterOrgNamesAll": "Tamamı",
   "filterSortBy": "Göre sırala",
   "filterSortByDisplayWeight": "Tavsiye Edilen",
   "filterSortByPopularityRank": "En popüler",
   "filterGrades": "Sınıflar",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "Bütün Seviyeler",
   "filterGradesPre": "Okul Öncesi",
   "filterGrades25": "2. , 3. , 4. , 5. sınıflar ",
   "filterGrades68": " 6. , 7. , 8. sınıflar",
