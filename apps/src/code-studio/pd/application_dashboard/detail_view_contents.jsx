@@ -99,7 +99,7 @@ export default class DetailViewContents extends React.Component {
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify(Object.assign({}, this.state, {response_scores: JSON.stringify(this.state.response_scores)}))
-    }).done(() => {
+    }).done((applicationData) => {
       this.setState({
         editing: false
       });
