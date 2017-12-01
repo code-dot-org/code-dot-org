@@ -55,4 +55,24 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     @user.reload
     assert @user.ui_tip_dismissed_homepage_header
   end
+
+  test 'a post request to postpone_census_banner updates next_census_display' do
+    sign_in(@user)
+    @user.next_census_display = nil
+    assert @user.next_census_display.nil?
+    post :postpone_census_banner, params: {user_id: 'me'}
+    assert_response :success
+    @user.reload
+    refute @user.next_census_display.nil?
+  end
+
+  test 'a post request to dismiss_census_banner updates next_census_display' do
+    sign_in(@user)
+    @user.next_census_display = nil
+    assert @user.next_census_display.nil?
+    post :dismiss_census_banner, params: {user_id: 'me'}
+    assert_response :success
+    @user.reload
+    refute @user.next_census_display.nil?
+  end
 end
