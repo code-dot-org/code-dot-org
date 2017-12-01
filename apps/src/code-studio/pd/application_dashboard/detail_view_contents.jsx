@@ -27,7 +27,7 @@ const styles = {
   }
 };
 
-class DetailViewContents extends React.Component {
+export class DetailViewContents extends React.Component {
   static propTypes = {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,

@@ -13,12 +13,13 @@ describe("Summary", () => {
     router: fakeRouter
   };
 
-  it("Initially renders a spinner", () => {
-    let summary = shallow(
-      <Summary regionalPartnerName="A Great Organization" />,
-      { context },
-    );
+  const createSummary = () => (shallow(
+    <Summary regionalPartnerName="A Great Organization" />,
+    { context },
+  ));
 
+  it("Initially renders a spinner", () => {
+    let summary = createSummary();
     expect(summary.find('Spinner')).to.have.length(1);
   });
 
@@ -69,13 +70,10 @@ describe("Summary", () => {
       ]
     );
 
-    let summary = shallow(
-      <Summary regionalPartnerName="A Great Organization" />,
-      { context },
-    );
+    let summary = createSummary();
 
     server.respond();
-    expect(summary.find('SummaryTable')).to.have.length(3);
+    expect(summary.find('.row').children()).to.have.length(3);
     expect(summary.find('Spinner')).to.have.length(0);
   });
 });
