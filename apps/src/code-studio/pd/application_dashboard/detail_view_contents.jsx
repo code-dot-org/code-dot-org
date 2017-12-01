@@ -155,6 +155,43 @@ class DetailViewContents extends React.Component {
     }
   };
 
+  renderStatusSelect = () => {
+    const selectControl = (
+      <FormControl
+        componentClass="select"
+        disabled={this.state.locked || !this.state.editing}
+        title={this.state.locked && "The status of this application has been locked"}
+        value={this.state.status}
+        onChange={this.handleStatusChange}
+        style={styles.statusSelect}
+      >
+        {
+          this.statuses.map((status, i) => (
+            <option value={status.toLowerCase()} key={i}>
+              {status}
+            </option>
+          ))
+        }
+      </FormControl>
+    );
+
+    if (this.props.canLock) {
+      // Render the select with the lock button in a fancy InputGroup
+      return (
+        <InputGroup style={{marginRight: 5}}>
+          <InputGroup.Button>
+            {this.renderLockButton()}
+          </InputGroup.Button>
+          {selectControl}
+        </InputGroup>
+      );
+    } else {
+      // Render just the select; otherwise, rendering a single element in an
+      // InputGroup makes it look funky
+      return selectControl;
+    }
+  };
+
   renderHeader = () => {
     return (
       <div style={styles.headerWrapper}>
@@ -171,27 +208,7 @@ class DetailViewContents extends React.Component {
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          <InputGroup style={{marginRight: 5}}>
-            <InputGroup.Button>
-              {this.props.canLock && this.renderLockButton()}
-            </InputGroup.Button>
-            <FormControl
-              componentClass="select"
-              disabled={this.state.locked || !this.state.editing}
-              title={this.state.locked && "The status of this application has been locked"}
-              value={this.state.status}
-              onChange={this.handleStatusChange}
-              style={styles.statusSelect}
-            >
-              {
-                this.statuses.map((status, i) => (
-                  <option value={status.toLowerCase()} key={i}>
-                    {status}
-                  </option>
-                ))
-              }
-            </FormControl>
-          </InputGroup>
+          {this.renderStatusSelect()}
           {this.renderEditButtons()}
         </div>
       </div>
