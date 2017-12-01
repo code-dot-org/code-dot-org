@@ -112,7 +112,7 @@ storybook.setAddon({
         <Provider store={this.store}>
           {story()}
         </Provider>
-      )
+      );
     });
   }
 });
