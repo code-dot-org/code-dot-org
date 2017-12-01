@@ -5,8 +5,8 @@ import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 import experiments from '@cdo/apps/util/experiments';
+import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
 
 import '../style/common.scss';
 import '../style/netsim/style.scss';
@@ -41,8 +41,6 @@ const styles = {
     float: 'right',
   },
 };
-
-const store = getStore();
 
 const storybookWrapper = Object.create(storybook);
 storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
@@ -107,6 +105,19 @@ storybook.setAddon({
 });
 
 storybook.setAddon({
+  withReduxStore(reducers = {}) {
+    this.addDecorator(story => {
+      this.store = createStore(combineReducers(reducers));
+      return (
+        <Provider store={this.store}>
+          {story()}
+        </Provider>
+      )
+    });
+  }
+});
+
+storybook.setAddon({
   addStoryTable(items) {
     this.add(
       'Overview',
@@ -163,11 +174,7 @@ storybook.setAddon(addStoriesGroup);
 storybook.addDecorator(story => {
   var rendered = story();
   return (
-    <Provider store={store}>
-      <Centered>
-        {rendered}
-      </Centered>
-    </Provider>
+    <Centered>{rendered}</Centered>
   );
 });
 storybook.configure(loadStories, module);
