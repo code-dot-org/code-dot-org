@@ -174,6 +174,7 @@ export var blocks = [
   {func: 'toUpperCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toUpperCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'toLowerCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toLowerCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
+  {func: 'accessListItem', block: 'list[0]', category: 'Variables', noAutocomplete: true },
   {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true, tipPrefix: arrayMethodPrefix, type: 'property' },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
   {func: 'appendItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','item'], params: ["list", '"f"'], dontMarshal: true },
