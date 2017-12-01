@@ -24,5 +24,16 @@ module Pd::Application
         subject: "Approval requested: #{@application.teacher_full_name}'s participation in Code.org's Professional Learning Program"
       )
     end
+
+    def principal_approval_received(teacher_application)
+      raise "Unexpected #{teacher_application.class}" unless teacher_application.is_a? Teacher1819Application
+
+      @application = teacher_application
+
+      mail(
+        to: @application.user.email,
+        subject: "We've received your principal's approval form"
+      )
+    end
   end
 end

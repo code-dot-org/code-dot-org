@@ -7,5 +7,11 @@ module Api::V1::Pd::Application
         application_guid: params.require(:application_guid)
       )
     end
+
+    protected
+
+    def on_successful_create
+      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval_received(@application).deliver_now
+    end
   end
 end
