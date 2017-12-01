@@ -41,6 +41,7 @@ module Pd::Application
       {
         title: COMMON_OPTIONS[:title],
         school_state: COMMON_OPTIONS[:state],
+        school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, OTHER_WITH_TEXT],
         committed_to_master_schedule: [YES, NO, OTHER_WITH_TEXT],
         hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
