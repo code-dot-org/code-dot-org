@@ -431,7 +431,7 @@ Dashboard::Application.routes.draw do
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
-      get 'principal_approval/:application_guid', to: 'principal_approval_application#new'
+      get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
     end
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
