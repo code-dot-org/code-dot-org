@@ -40,9 +40,9 @@ const ProjectWidgetWithData = React.createClass({
         projectList={this.state.projectList}
         projectTypes={this.props.projectTypes}
         isLoading={this.state.isLoading}
+        isRtl={isRtl}
         canViewFullList={canViewFullList}
         canViewAdvancedTools={canViewAdvancedTools}
-        isRtl={isRtl}
       />
     );
   }
