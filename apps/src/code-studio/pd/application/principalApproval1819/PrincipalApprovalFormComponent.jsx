@@ -4,8 +4,18 @@ import {PageLabels} from '@cdo/apps/generated/pd/principalApproval1819Applicatio
 import ApplicationFormComponent from '../ApplicationFormComponent';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
+import {styles} from '../teacher1819/TeacherApplicationConstants';
 
+const MANUAL_SCHOOL_FIELDS = ['school', 'schoolName', 'schoolAddress', 'schoolCity',
+  'schoolState', 'schoolZipCode', 'schoolType'];
 const RACE_LIST = ['white', 'black', 'hispanic', 'asian', 'pacificIslander', 'americanIndian', 'other'];
+const REQUIRED_SCHOOL_INFO_FIELDS = [
+  ...MANUAL_SCHOOL_FIELDS, 'totalStudentEnrollment', 'freeLunchPercent', ...RACE_LIST,
+  'committedToMasterSchedule', 'hoursPerYear', 'termsPerYear', 'replaceCourse',
+  'replaceWhichCourseCsd', 'replaceWhichCourseCsp', 'committedToDiversity',
+  'understandFee', 'payFee', 'wantFunding'
+];
+const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 
 export default class PrincipalApprovalComponent extends ApplicationFormComponent {
   static labels = PageLabels;
@@ -44,7 +54,7 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
         </FormGroup>
         {
           this.props.data.school && this.props.data.school === '-1' &&
-          <div>
+          <div style={styles.indented}>
             {this.inputFor("schoolName")}
             {this.inputFor("schoolAddress")}
             {this.inputFor("schoolCity")}
@@ -177,6 +187,35 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
     );
   }
 
+  static getDynamicallyRequiredFields(data) {
+    const requiredFields = [];
+
+    if (data.school && data.school === '-1') {
+      requiredFields.push(
+        "schoolName",
+        "schoolAddress",
+        "schoolCity",
+        "schoolState",
+        "schoolZipCode",
+        "schoolType"
+      );
+    }
+
+    if (data.doYouApprove !== 'No') {
+      requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
+    }
+
+    if (data.replaceCourse === 'Yes') {
+      if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
+        requiredFields.push('replaceWhichCourseCsd');
+      } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
+        requiredFields.push('replaceWhichCourseCsp');
+      }
+    }
+
+    return requiredFields;
+  }
+
   /**
    * @override
    */
@@ -194,5 +233,30 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
     });
 
     return formatErrors;
+  }
+
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+    const fieldsToClear = new Set();
+
+    // Clear out all the form data if the principal rejects the application
+    if (data.doYouApprove === 'No') {
+      fieldsToClear.add([...REQUIRED_SCHOOL_INFO_FIELDS, REPLACE_COURSE_FIELDS]);
+    }
+
+    // Clear out school form data if we have a school
+    if (data.school && data.school !== -1) {
+      fieldsToClear.add(MANUAL_SCHOOL_FIELDS);
+    }
+
+    // Clear out replaced course if we are not replacing a course
+    if (data.replaceCourse !== 'Yes') {
+      fieldsToClear.add(REPLACE_COURSE_FIELDS);
+    }
+
+    return changes;
   }
 }
