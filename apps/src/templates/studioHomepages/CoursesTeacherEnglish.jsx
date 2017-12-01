@@ -67,7 +67,6 @@ class CoursesTeacherEnglish extends Component {
 
           <CourseBlocksTeacherGradeBands
             isRtl={isRtl}
-            responsive={responsive}
           />
 
           <ContentContainer

@@ -41,7 +41,6 @@ class CourseBlocksStudentGradeBands extends Component {
         linkText={linkText}
         heading={heading}
         description={description}
-        isRtl={this.props.isRtl}
         hideBottomMargin={hideBottomMargin}
       >
         <CourseBlocksGradeBands

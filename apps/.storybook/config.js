@@ -105,9 +105,12 @@ storybook.setAddon({
 });
 
 storybook.setAddon({
-  withReduxStore(reducers = {}) {
+  withReduxStore(reducers = {}, actions = []) {
     this.addDecorator(story => {
       this.store = createStore(combineReducers(reducers));
+
+      actions.forEach(action => this.store.dispatch(action));
+
       return (
         <Provider store={this.store}>
           {story()}
