@@ -18,6 +18,19 @@ export default class PrincipalApproval1819Application extends FormController {
   /**
    * @override
    */
+  constructor(props) {
+    super(props);
+
+    Object.assign(this.state.data, {
+      firstName: props.teacherApplication.principal_first_name,
+      lastName: props.teacherApplication.principal_last_name,
+      title: props.teacherApplication.principal_title,
+      email: props.teacherApplication.principal_email,
+    });
+  }
+  /**
+   * @override
+   */
   getPageComponents() {
     return [
       PrincipalApprovalComponent
