@@ -11,7 +11,7 @@ const styles = {
   },
 };
 
-export default class EligibilityChecklist extends Component {
+export default class Discount extends Component {
   static propTypes = {
     statusPD: PropTypes.oneOf(Object.values(Status)).isRequired,
     statusStudentCount: PropTypes.oneOf(Object.values(Status)).isRequired,

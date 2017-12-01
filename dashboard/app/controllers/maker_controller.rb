@@ -6,7 +6,7 @@ class MakerController < ApplicationController
 
   def discountcode
     application_status = CircuitPlaygroundDiscountApplication.application_status(current_user)
-    render 'discountcode', locals: {script_data: application_status}
+    render 'discountcode', locals: {script_data: {application: application_status, is_admin: current_user.admin?}}
   end
 
   # begins a discount code application
