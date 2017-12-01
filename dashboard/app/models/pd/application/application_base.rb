@@ -81,6 +81,12 @@ module Pd::Application
         '1 semester',
         '2 trimesters',
         'Full year'
+      ],
+      school_type: [
+        'Public school',
+        'Private school',
+        'Charter school',
+        'Other'
       ]
     }
 
