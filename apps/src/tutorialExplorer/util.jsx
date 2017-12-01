@@ -8,12 +8,24 @@ export const TutorialsSortByOptions = utils.makeEnum('popularityrank', 'displayw
 // Sort By source data field names (from gsheet) for tutorials.
 export const TutorialsSortByFieldNames = utils.makeEnum(
   'popularityrank',
+  'popularityrank_pre',
+  'popularityrank_25',
+  'popularityrank_middle',
+  'popularityrank_high',
   'displayweight',
   'displayweight_pre',
   'displayweight_25',
   'displayweight_middle',
   'displayweight_high'
 );
+
+export function isTutorialSortByFieldNamePopularity(sortByFieldName) {
+  return sortByFieldName === 'popularityrank' ||
+    sortByFieldName === 'popularityrank_pre' ||
+    sortByFieldName === 'popularityrank_25' ||
+    sortByFieldName === 'popularityrank_middle' ||
+    sortByFieldName === 'popularityrank_high';
+}
 
 // Orgname value.
 export const TutorialsOrgName = utils.makeEnum('all');

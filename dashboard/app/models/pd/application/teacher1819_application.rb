@@ -365,5 +365,10 @@ module Pd::Application
     def state_code
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
     end
+
+    # @override
+    def check_idempotency
+      Pd::Application::Teacher1819Application.find_by(user: user)
+    end
   end
 end

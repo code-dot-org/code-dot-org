@@ -119,21 +119,22 @@ class Slack
     params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
 
-    if params[:color]
-      payload = {
-        attachments: [{
-          fallback: slackified_text,
+    payload =
+      if params[:color]
+        {
+          attachments: [{
+            fallback: slackified_text,
+            text: slackified_text,
+            mrkdwn_in: [:text],
+            color: COLOR_MAP[params[:color].to_sym] || params[:color]
+          }]
+        }.merge params
+      else
+        {
           text: slackified_text,
-          mrkdwn_in: [:text],
-          color: COLOR_MAP[params[:color].to_sym] || params[:color]
-        }]
-      }.merge params
-    else
-      payload = {
-        text: slackified_text,
-        unfurl_links: true
-      }.merge params
-    end
+          unfurl_links: true
+        }.merge params
+      end
 
     url = URI.parse("https://hooks.slack.com/services/#{CDO.slack_endpoint}")
     begin
