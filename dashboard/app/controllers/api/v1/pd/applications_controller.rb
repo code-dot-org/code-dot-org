@@ -14,14 +14,21 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_data = empty_application_data
 
     ROLES.each do |role|
-      apps = get_applications_by_role(role).group(:status)
+      apps = get_applications_by_role(role).
+        select(:status, :regional_partner_id, "COUNT(locked_at) as total_locked", "COUNT(id) as total")
+
       if regional_partner_filter == REGIONAL_PARTNERS_NONE
         apps = apps.where(regional_partner_id: nil)
       elsif regional_partner_filter && regional_partner_filter != REGIONAL_PARTNERS_ALL
         apps = apps.where(regional_partner_id: regional_partner_filter)
       end
-      apps.count.each do |status, count|
-        application_data[role][status] = count
+
+      apps.group(:status).each do |group|
+        application_data[role][group.status] = {
+          total: group.total,
+          total_locked: group.total_locked,
+          total_unlocked: group.total - group.total_locked
+        }
       end
     end
 
@@ -102,7 +109,11 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       TYPES_BY_ROLE.each do |role, app_type|
         app_data[role] = {}
         app_type.statuses.keys.each do |status|
-          app_data[role][status] = 0
+          app_data[role][status] = {
+            total: 0,
+            total_locked: 0,
+            total_unlocked: 0
+          }
         end
       end
     end

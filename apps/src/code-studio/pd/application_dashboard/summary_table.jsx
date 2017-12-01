@@ -37,7 +37,9 @@ export default class SummaryTable extends React.Component {
             <td style={{...styles.statusCell[status]}}>
               {_.upperFirst(status)}
             </td>
-            <td>{this.props.data[status]}</td>
+            <td>{this.props.data[status].total_locked}</td>
+            <td>{this.props.data[status].total_unlocked}</td>
+            <td>{this.props.data[status].total}</td>
           </tr>
         );
       }
@@ -57,6 +59,8 @@ export default class SummaryTable extends React.Component {
           <thead>
             <tr>
               <th>Status</th>
+              <th>Locked</th>
+              <th>Unlocked</th>
               <th>Total</th>
             </tr>
           </thead>
