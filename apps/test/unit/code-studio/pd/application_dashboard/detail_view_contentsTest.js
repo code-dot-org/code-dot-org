@@ -1,4 +1,5 @@
 import DetailViewContents from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
+import {ApplicationStatuses, ApplicationFinalStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
@@ -97,6 +98,48 @@ describe("DetailViewContents", () => {
             return element.prop('disabled');
           })).to.deep.equal([true, true]);
         }
+      });
+
+      it(`allows for a subset of statuses to be locked in ${applicationData.type}`, () => {
+        const detailView = mountDetailView(applicationData.type);
+
+        // click edit
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+        // lock button is disabled for all statuses except "finalized"
+        ApplicationStatuses[applicationData.type.toLowerCase()].forEach((status) => {
+          // statuses in the constant are Capitalized, values in the form itself
+          // are lowercase
+          status = status.toLowerCase();
+          const statusIsFinal = ApplicationFinalStatuses.includes(status);
+          detailView
+            .find('#DetailViewHeader select')
+            .simulate('change', { target: { value: status } });
+          expect(detailView.find('#DetailViewHeader Button').first().prop('disabled')).to.equal(!statusIsFinal);
+        });
+      });
+
+      it(`disables status dropdown when locked in ${applicationData.type}`, () => {
+        const detailView = mountDetailView(applicationData.type);
+
+        // click edit
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+        // change status to approved
+        detailView
+          .find('#DetailViewHeader select')
+          .simulate('change', { target: { value: 'accepted' } });
+
+        // lock status
+        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
+        detailView.find('#DetailViewHeader Button').first().simulate('click');
+        expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.true;
+        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Unlock');
+
+        // unlock status
+        detailView.find('#DetailViewHeader Button').first().simulate('click');
+        expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.false;
+        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
       });
     });
   }
