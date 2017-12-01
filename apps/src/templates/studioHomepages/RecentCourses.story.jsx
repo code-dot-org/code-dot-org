@@ -1,7 +1,7 @@
 import React from 'react';
 import RecentCourses from './RecentCourses';
-import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 const courses = [
   {
@@ -49,100 +49,88 @@ const topCourse = {
 };
 
 export default storybook => {
-  const store = getStore();
   return storybook
     .storiesOf('RecentCourses', module)
+    .withReduxStore({responsive, isRtl})
     .addStoryTable([
       {
         name: "Recent Courses - teacher, no courses yet",
         description: "If the teacher does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
         story: () => (
-          <Provider store={store}>
-            <RecentCourses
-              courses={[]}
-              showAllCoursesLink={true}
-              heading="My Courses"
-              isTeacher={true}
-              isRtl={false}
-            />
-          </Provider>
+          <RecentCourses
+            courses={[]}
+            showAllCoursesLink={true}
+            heading="My Courses"
+            isTeacher={true}
+            isRtl={false}
+          />
         )
       },
       {
         name: "Recent Courses - student, no courses yet",
         description: "If the student does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
         story: () => (
-          <Provider store={store}>
-            <RecentCourses
-              courses={[]}
-              showAllCoursesLink={true}
-              heading="My Courses"
-              isTeacher={false}
-              isRtl={false}
-            />
-          </Provider>
+          <RecentCourses
+            courses={[]}
+            showAllCoursesLink={true}
+            heading="My Courses"
+            isTeacher={false}
+            isRtl={false}
+          />
         )
       },
       {
         name: 'Recent Courses - teacher, 4 courses ',
         description: ` Recent Courses when the teacher has sections enrolled in 4 courses.`,
         story: () => (
-          <Provider store={store}>
-            <RecentCourses
-              courses={courses.slice(0,4)}
-              showAllCoursesLink={true}
-              heading="My Courses"
-              isTeacher={true}
-              isRtl={false}
-            />
-          </Provider>
+          <RecentCourses
+            courses={courses.slice(0,4)}
+            showAllCoursesLink={true}
+            heading="My Courses"
+            isTeacher={true}
+            isRtl={false}
+          />
         )
       },
       {
         name: 'Recent Courses - student, 5 courses ',
         description: ` Recent Courses when the student has progress in 5 courses.`,
         story: () => (
-          <Provider store={store}>
-            <RecentCourses
-              courses={courses.slice(0,4)}
-              showAllCoursesLink={true}
-              heading="My Courses"
-              isTeacher={false}
-              isRtl={false}
-              topCourse={topCourse}
-            />
-          </Provider>
+          <RecentCourses
+            courses={courses.slice(0,4)}
+            showAllCoursesLink={true}
+            heading="My Courses"
+            isTeacher={false}
+            isRtl={false}
+            topCourse={topCourse}
+          />
         )
       },
       {
         name: 'Recent Courses - teacher, 7 courses ',
         description: ` Recent Courses when the teacher has sections enrolled in 7 courses. Should see a View More button`,
         story: () => (
-          <Provider store={store}>
-            <RecentCourses
-              courses={courses}
-              showAllCoursesLink={true}
-              heading="My Courses"
-              isTeacher={true}
-              isRtl={false}
-            />
-          </Provider>
+          <RecentCourses
+            courses={courses}
+            showAllCoursesLink={true}
+            heading="My Courses"
+            isTeacher={true}
+            isRtl={false}
+          />
         )
       },
       {
         name: 'Recent Courses - student, 7 courses ',
         description: ` Recent Courses when the student has progress in 7 courses. Should see a View More button`,
         story: () => (
-          <Provider store={store}>
-            <RecentCourses
-              courses={courses.slice(0,7)}
-              showAllCoursesLink={true}
-              heading="My Courses"
-              isTeacher={false}
-              isRtl={false}
-              topCourse={topCourse}
-            />
-          </Provider>
+          <RecentCourses
+            courses={courses.slice(0,7)}
+            showAllCoursesLink={true}
+            heading="My Courses"
+            isTeacher={false}
+            isRtl={false}
+            topCourse={topCourse}
+          />
         )
       },
     ]);
