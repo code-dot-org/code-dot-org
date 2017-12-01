@@ -1,4 +1,4 @@
-import DetailViewContents from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
+import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {ApplicationStatuses, ApplicationFinalStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
 import {expect} from 'chai';
@@ -8,6 +8,7 @@ describe("DetailViewContents", () => {
   const mountDetailView = (applicationType) => {
     return mount(
       <DetailViewContents
+        canLock
         applicationId="1"
         applicationData={{
           regionalPartner: 'partner',

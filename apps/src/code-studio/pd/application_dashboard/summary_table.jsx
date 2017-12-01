@@ -24,7 +24,7 @@ const ApplicationDataPropType = PropTypes.shape({
   unlocked: PropTypes.number.isRequired,
 });
 
-class SummaryTable extends React.Component {
+export class SummaryTable extends React.Component {
   static propTypes = {
     showLocked: PropTypes.bool,
     caption: PropTypes.string.isRequired,
