@@ -120,6 +120,7 @@ class User < ActiveRecord::Base
     oauth_token
     oauth_token_expiration
     sharing_disabled
+    next_census_display
   )
 
   # Include default devise modules. Others available are:
@@ -1601,6 +1602,12 @@ class User < ActiveRecord::Base
 
     (authorized_teacher? && script && !script.professional_learning_course?) ||
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
+  end
+
+  def show_census_teacher_banner?
+    # Must have an NCES school to show the banner
+    users_school = try(:school_info).try(:school)
+    teacher? && users_school && (next_census_display.nil? || Date.today > next_census_display.to_date)
   end
 
   def show_race_interstitial?(ip = nil)
