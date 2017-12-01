@@ -20,5 +20,19 @@ module Pd::Application
       application.update_form_data_hash({replace_course: 'Yes'})
       refute application.valid?
     end
+
+    test 'underrepresnted minority percent' do
+      application = build :pd_principal_approval1819_application
+      application.update_form_data_hash({
+        black: '10',
+        hispanic: '15%',
+        pacific_islander: '20.5%',
+        american_indian: '11.0',
+        white: '100000000',
+        asian: '100000000',
+        other: '100000000'
+      })
+      assert_equal 56.5, application.underrepresented_minority_percent
+    end
   end
 end
