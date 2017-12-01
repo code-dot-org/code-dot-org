@@ -53,7 +53,7 @@ export default class QuickView extends React.Component {
     applications: null,
     filter: null,
     regionalPartnerName: this.props.route.regionalPartnerName,
-    regionalPartnerValue: null
+    regionalPartnerFilter: null
   };
 
   getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
@@ -89,9 +89,9 @@ export default class QuickView extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerValue = selected ? selected.value : null;
-    const regionalPartnerName = regionalPartnerValue ? selected.label : this.props.route.regionalPartnerName;
-    this.setState({regionalPartnerName, regionalPartnerValue});
+    const regionalPartnerFilter = selected ? selected.value : null;
+    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.route.regionalPartnerName;
+    this.setState({regionalPartnerName, regionalPartnerFilter});
   };
 
   render() {
@@ -103,7 +103,7 @@ export default class QuickView extends React.Component {
         {this.state.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
-            regionalPartnerValue={this.state.regionalPartnerValue}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
             regionalPartners={this.props.route.regionalPartners}
             isWorkshopAdmin={this.props.route.isWorkshopAdmin}
           />
@@ -137,7 +137,7 @@ export default class QuickView extends React.Component {
           path={this.props.route.path}
           data={this.state.applications}
           statusFilter={this.state.filter}
-          regionalPartnerFilter={this.state.regionalPartnerValue}
+          regionalPartnerFilter={this.state.regionalPartnerFilter}
         />
       </div>
     );

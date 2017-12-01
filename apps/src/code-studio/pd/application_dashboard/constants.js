@@ -64,10 +64,13 @@ exports.ApplicationStatuses = {
 /**
  * Constants for Regional Partner dropdown
  */
-const allPartners = "All Regional Partner Applications";
-exports.AllPartners = allPartners;
+const allPartnersLabel = "All Regional Partner Applications";
+const allPartnersFilter = "all";
+exports.AllPartnersLabel = allPartnersLabel;
+exports.AllPartnersFilter = allPartnersFilter;
+
 exports.RegionalPartnerDropdownOptions = {
-  unmatched: {value: "unmatched", label: "No Partner/Unmatched Applications"},
-  all: {value: "all", label: allPartners}
+  unmatched: {value: "none", label: "No Partner/Unmatched Applications"},
+  all: {value: allPartnersFilter, label: allPartnersLabel}
 };
 

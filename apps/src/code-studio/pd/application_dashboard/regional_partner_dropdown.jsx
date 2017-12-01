@@ -18,7 +18,7 @@ const styles = {
 export default class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
-    regionalPartnerValue: PropTypes.oneOfType([
+    regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
     ]),
@@ -36,7 +36,7 @@ export default class RegionalPartnerDropdown extends React.Component {
       <FormGroup>
         <ControlLabel>Select a regional partner</ControlLabel>
         <Select
-          value={this.props.regionalPartnerValue}
+          value={this.props.regionalPartnerFilter}
           onChange={this.props.onChange}
           placeholder={null}
           options={this.regionalPartners}
