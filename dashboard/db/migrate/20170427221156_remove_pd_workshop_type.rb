@@ -9,11 +9,12 @@ class RemovePdWorkshopType < ActiveRecord::Migration[5.0]
 
     # populate with derived data
     Pd::Workshop.where("workshop_type IS NULL").each do |workshop|
-      if workshop.funded
-        workshop.workshop_type = workshop.on_map ? "Public" : "Private"
-      else
-        workshop.workshop_type = "District"
-      end
+      workshop.workshop_type =
+        if workshop.funded
+          workshop.on_map ? "Public" : "Private"
+        else
+          "District"
+        end
       workshop.save
     end
 

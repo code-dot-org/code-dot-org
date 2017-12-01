@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
-import Unit6ValidationStep from '@cdo/apps/templates/maker/Unit6ValidationStep';
+import {assert} from '../../../../../util/configuredChai';
+import Unit6ValidationStep from '@cdo/apps/lib/kits/maker/ui/Unit6ValidationStep';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 describe('Unit6ValidationStep', () => {
