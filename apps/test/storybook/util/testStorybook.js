@@ -1,5 +1,8 @@
+import React from 'react';
 import {mount} from 'enzyme';
 import experiments from '@cdo/apps/util/experiments';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided
@@ -63,6 +66,18 @@ class FakeStorybook {
 
   withExperiments(...experimentList) {
     this.experiments = experimentList;
+    return this;
+  }
+
+  withReduxStore(reducers = {}) {
+    this.addDecorator(story => {
+      this.store = createStore(combineReducers(reducers));
+      return (
+        <Provider store={this.store}>
+          {story()}
+        </Provider>
+      );
+    });
     return this;
   }
 

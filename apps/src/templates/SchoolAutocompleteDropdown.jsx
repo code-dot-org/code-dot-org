@@ -18,8 +18,8 @@ export default class SchoolAutocompleteDropdown extends Component {
   });
 
   constructSchoolNotFoundOption = () => ({
-      value: "-1",
-      label: i18n.schoolNotFound()
+    value: "-1",
+    label: i18n.schoolNotFound()
   });
 
   getOptions = (q) => {
