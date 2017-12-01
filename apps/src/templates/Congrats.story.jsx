@@ -1,12 +1,10 @@
 import React from 'react';
 import Congrats from './Congrats';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsive from '../code-studio/responsiveRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 export default storybook => {
-  const store = createStore(combineReducers({responsive, isRtl}));
+  const store = getStore();
   return storybook
     .storiesOf('Congrats', module)
     .addStoryTable([

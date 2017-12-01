@@ -1,14 +1,12 @@
 import React from 'react';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import Responsive from '../responsive';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '@cdo/apps/code-studio/responsiveRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 
 export default storybook => {
   const responsive = new Responsive();
-  const store = createStore(combineReducers({responsive: responsiveRedux, isRtl}));
+  const store = getStore();
   return storybook
     .storiesOf('StudentsBeyondHoc', module)
     .addStoryTable([
