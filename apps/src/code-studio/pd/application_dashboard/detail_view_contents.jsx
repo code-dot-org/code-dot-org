@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
-import {Button, FormControl} from 'react-bootstrap';
+import {Button, FormControl, InputGroup} from 'react-bootstrap';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
-import {ApplicationStatuses} from './constants';
+import {ApplicationStatuses, ApplicationFinalStatuses} from './constants';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 
 const styles = {
@@ -74,6 +74,12 @@ export default class DetailViewContents extends React.Component {
     });
   };
 
+  handleLockClick = () => {
+    this.setState({
+      locked: !this.state.locked,
+    });
+  }
+
   handleStatusChange = (event) => {
     this.setState({
       status: event.target.value
@@ -107,6 +113,22 @@ export default class DetailViewContents extends React.Component {
       //Reload the page, but don't display the spinner
       this.props.reload();
     });
+  };
+
+  renderLockButton = () => {
+    const statusIsLockable = ApplicationFinalStatuses.includes(this.state.status);
+    const title = statusIsLockable
+      ? ''
+      : `Can only lock if status is one of ${ApplicationFinalStatuses.join(', ')}`;
+    return (
+      <Button
+        title={title}
+        disabled={!(this.state.editing && statusIsLockable)}
+        onClick={this.handleLockClick}
+      >
+        {this.state.locked ? "Unlock" : "Lock"}
+      </Button>
+    );
   };
 
   renderEditButtons = () => {
@@ -150,21 +172,26 @@ export default class DetailViewContents extends React.Component {
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          <FormControl
-            componentClass="select"
-            disabled={!this.state.editing}
-            value={this.state.status}
-            onChange={this.handleStatusChange}
-            style={styles.statusSelect}
-          >
-            {
-              this.statuses.map((status, i) => (
-                <option value={status.toLowerCase()} key={i}>
-                  {status}
-                </option>
-              ))
-            }
-          </FormControl>
+          <InputGroup style={{marginRight: 5}}>
+            <InputGroup.Button>
+              {this.renderLockButton()}
+            </InputGroup.Button>
+            <FormControl
+              componentClass="select"
+              disabled={this.state.locked || !this.state.editing}
+              value={this.state.status}
+              onChange={this.handleStatusChange}
+              style={styles.statusSelect}
+            >
+              {
+                this.statuses.map((status, i) => (
+                  <option value={status.toLowerCase()} key={i}>
+                    {status}
+                  </option>
+                ))
+              }
+            </FormControl>
+          </InputGroup>
           {this.renderEditButtons()}
         </div>
       </div>
