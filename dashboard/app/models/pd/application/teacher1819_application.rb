@@ -390,9 +390,11 @@ module Pd::Application
       sanitize_form_data_hash[:principal_email]
     end
 
-    def principal_title_and_last_name
+    # Title & last name, or full name if no title was provided.
+    def principal_greeting
       hash = sanitize_form_data_hash
-      "#{hash[:principal_title]} #{hash[:principal_last_name]}"
+      title = hash[:principal_title]
+      "#{title.present? ? title : hash[:principal_first_name]} #{hash[:principal_last_name]}"
     end
 
     def principal_approval_url
