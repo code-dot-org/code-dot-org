@@ -32,6 +32,8 @@
 
 module Pd::Application
   class Teacher1819Application < ApplicationBase
+    include Rails.application.routes.url_helpers
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = TEACHER_APPLICATION
@@ -48,6 +50,11 @@ module Pd::Application
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    before_create :generate_application_guid, if: -> {application_guid.blank?}
+    def generate_application_guid
+      self.application_guid = SecureRandom.uuid
     end
 
     before_save :save_partner, if: -> {form_data_changed?}
@@ -320,10 +327,10 @@ module Pd::Application
         previous_yearlong_cdo_pd
         cs_offered_at_school
         cs_opportunities_at_school
-
         program
         plan_to_teach
-
+        committed
+        willing_to_travel
         agree
       )
     end
@@ -367,8 +374,31 @@ module Pd::Application
       hash[:preferred_first_name] || hash[:first_name]
     end
 
+    def last_name
+      sanitize_form_data_hash[:last_name]
+    end
+
+    def teacher_full_name
+      "#{first_name} #{last_name}"
+    end
+
     def state_code
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
+
+    def principal_email
+      sanitize_form_data_hash[:principal_email]
+    end
+
+    # Title & last name, or full name if no title was provided.
+    def principal_greeting
+      hash = sanitize_form_data_hash
+      title = hash[:principal_title]
+      "#{title.present? ? title : hash[:principal_first_name]} #{hash[:principal_last_name]}"
+    end
+
+    def principal_approval_url
+      pd_application_principal_approval_url(application_guid)
     end
 
     # @override
