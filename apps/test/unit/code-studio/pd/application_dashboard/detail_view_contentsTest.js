@@ -63,7 +63,9 @@ describe("DetailViewContents", () => {
       it(`the dropdown is disabled until the Edit button is clicked in ${applicationData.type}`, () => {
         const detailView = mountDetailView(applicationData.type);
 
-        expect(detailView.find('#DetailViewHeader Button')).to.have.length(1);
+        expect(detailView.find('#DetailViewHeader Button').map((button) => {
+          return button.text();
+        })).to.deep.equal(['Lock', 'Edit']);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
         expect(detailView.find('#Notes').prop('disabled')).to.be.true;
         if (applicationData.scoredQuestions) {
@@ -72,10 +74,10 @@ describe("DetailViewContents", () => {
           })).to.deep.equal([true, true]);
         }
 
-        detailView.find('#DetailViewHeader Button').simulate('click');
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
         expect(detailView.find('#DetailViewHeader Button').map((button) => {
           return button.text();
-        })).to.deep.equal(['Save', 'Cancel']);
+        })).to.deep.equal(['Lock', 'Save', 'Cancel']);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.false;
         expect(detailView.find('#Notes').prop('disabled')).to.be.false;
         if (applicationData.scoredQuestions) {
