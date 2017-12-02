@@ -13,7 +13,6 @@ class CourseBlocksGradeBands extends Component {
         path: PropTypes.string.isRequired
       })
     ).isRequired,
-    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -27,7 +26,6 @@ class CourseBlocksGradeBands extends Component {
               description={card.description}
               buttonText={i18n.learnMore()}
               link={pegasus(card.path)}
-              isRtl={this.props.isRtl}
             />
           )
         )}

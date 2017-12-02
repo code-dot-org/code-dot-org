@@ -67,7 +67,6 @@ class CourseBlocksTools extends Component {
                 description={card.description}
                 buttonText={i18n.learnMore()}
                 link={pegasus(`/${card.path}`)}
-                isRtl={isRtl}
               />
             )
           )}
