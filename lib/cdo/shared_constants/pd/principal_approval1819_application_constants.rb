@@ -11,7 +11,6 @@ module PrincipalApproval1819ApplicationConstants
     last_name: 'Last Name',
     title: 'Title',
     email: 'Email Address',
-    phone_number: 'Phone Number',
     total_student_enrollment: 'Total student enrollment',
     free_lunch_percent: 'Percentage of students who receive free or reduced lunch',
     white: 'White',

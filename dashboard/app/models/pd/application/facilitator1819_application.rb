@@ -423,7 +423,7 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push :Status, :Notes
+        columns.push 'Status', 'Notes', 'Regional Partner'
         csv << columns
       end
     end
