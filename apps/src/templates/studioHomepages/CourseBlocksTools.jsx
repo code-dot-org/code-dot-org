@@ -56,7 +56,7 @@ class CourseBlocksTools extends Component {
       <ContentContainer
         heading={headingText}
         description={i18n.standaloneToolsDescription()}
-        isRtl={this.props.isRtl}
+        isRtl={isRtl}
       >
         <ResourceCardResponsiveContainer>
           {this.cards.map(
