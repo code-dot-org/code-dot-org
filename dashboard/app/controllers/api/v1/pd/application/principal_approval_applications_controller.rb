@@ -11,7 +11,9 @@ module Api::V1::Pd::Application
     protected
 
     def on_successful_create
-      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval_received(@application).deliver_now
+      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval_received(
+        @application.teacher_application
+      ).deliver_now
     end
   end
 end

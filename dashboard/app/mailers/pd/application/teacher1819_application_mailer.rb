@@ -3,8 +3,6 @@ module Pd::Application
     default from: 'Code.org <facilitators@code.org>'
 
     def confirmation(teacher_application)
-      raise "Unexpected #{teacher_application.class}" unless teacher_application.is_a? Teacher1819Application
-
       @application = teacher_application
 
       mail(
@@ -14,8 +12,6 @@ module Pd::Application
     end
 
     def principal_approval(teacher_application)
-      raise "Unexpected #{teacher_application.class}" unless teacher_application.is_a? Teacher1819Application
-
       @application = teacher_application
 
       mail(
@@ -26,8 +22,6 @@ module Pd::Application
     end
 
     def principal_approval_received(teacher_application)
-      raise "Unexpected #{teacher_application.class}" unless teacher_application.is_a? Teacher1819Application
-
       @application = teacher_application
 
       mail(
