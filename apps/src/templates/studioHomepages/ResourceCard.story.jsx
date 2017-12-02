@@ -1,9 +1,11 @@
 import React from 'react';
 import ResourceCard from './ResourceCard';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 export default storybook => {
   return storybook
     .storiesOf('ResourceCard', module)
+    .withReduxStore({isRtl})
     .addStoryTable([
       {
         name: 'tool card',
@@ -14,20 +16,6 @@ export default storybook => {
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
             buttonText= "Connect Today"
             link= "link to teacher community"
-            isRtl={false}
-          />
-        )
-      },
-      {
-        name: 'tool card - RTL',
-        description: `This is an example tool card with RTL styling.`,
-        story: () => (
-          <ResourceCard
-            title= "Teacher Community"
-            description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            buttonText= "Connect Today"
-            link= "link to teacher community"
-            isRtl={true}
           />
         )
       },
@@ -40,21 +28,6 @@ export default storybook => {
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
             buttonText= "Connect Today"
             link= "link to teacher community"
-            isRtl={false}
-            allowWrap={true}
-          />
-        )
-      },
-      {
-        name: 'tool card - allow wrap, RTL',
-        description: `This is an example RTL tool card that allows the title to wrap.`,
-        story: () => (
-          <ResourceCard
-            title= "Teacher Community"
-            description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            buttonText= "Connect Today"
-            link= "link to teacher community"
-            isRtl={true}
             allowWrap={true}
           />
         )

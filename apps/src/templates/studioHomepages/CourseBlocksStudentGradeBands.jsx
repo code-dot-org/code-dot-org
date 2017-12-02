@@ -42,10 +42,10 @@ class CourseBlocksStudentGradeBands extends Component {
         heading={heading}
         description={description}
         hideBottomMargin={hideBottomMargin}
+        isRtl={this.props.isRtl}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
-          isRtl={this.props.isRtl}
         />
       </ContentContainer>
     );
