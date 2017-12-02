@@ -73,6 +73,11 @@
             = link_to build_script_level_path(script_level), build_script_level_path(script_level)
       %br/
       .project_admin
+      %br/
+      #feature_project_id
+      - storage_app_id = storage_decrypt_channel_id(request.url.split("/").last).first
+      - featured = FeaturedProject.exists?(:storage_app_id => storage_app_id)
+      = content_tag 'div', '', class: 'feature_project', data: {featured: featured}
     - if current_user.permission?(UserPermission::RESET_ABUSE)
       %br
       %div.admin-abuse{ :style => "display: none" }

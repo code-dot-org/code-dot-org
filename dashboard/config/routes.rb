@@ -6,6 +6,9 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
+
+  resources :featured_projects, only: [:create], defaults: {format: 'json'}
+
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]

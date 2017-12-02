@@ -23,6 +23,36 @@ export default () => {
     }
   }
 
+  if ($('.feature_project').length) {
+    if (dashboard.project.isProjectLevel()) {
+      var featured = $('.feature_project').data('featured');
+      if (featured) {
+        $('.feature_project').html($('<button id="feature" class="btn btn-default btn-sm">Stop featuring in gallery</button>')).click(function () {
+          console.log("You clicked the stop button");
+        });
+      } else {
+        $('.feature_project').html($('<button id="feature" class="btn btn-default btn-sm">Feature in gallery</button>')).click(function () {
+          $.ajax({
+            url:'/featured_projects',
+            type:'POST',
+            dataType:'json',
+            data: {
+              featured_project: {
+                project_id: dashboard.project.getCurrentId(),
+              }
+            },
+            success:function (data){
+              console.log("It worked! You made a new featured_project.");
+            },
+            error:function (data){
+              console.log("It didn't work. You didn't make a new project");
+            }
+          });
+        });
+      }
+    }
+  }
+
   if ($('.admin-abuse').length && dashboard.project.isProjectLevel()) {
     var abuseScore = dashboard.project.getAbuseScore();
     if (abuseScore) {
