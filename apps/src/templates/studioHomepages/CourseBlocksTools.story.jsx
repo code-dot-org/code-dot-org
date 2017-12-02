@@ -1,12 +1,12 @@
 import React from 'react';
 import CourseBlocksTools from './CourseBlocksTools';
-import responsive, {setResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 export default storybook => {
   return storybook
     .storiesOf('CourseBlocksTools', module)
-    .withReduxStore({responsive, isRtl}, [setResponsiveSize('lg')])
+    .withReduxStore({responsive, isRtl})
     .addStoryTable([
       {
         name: 'course blocks - tools',
