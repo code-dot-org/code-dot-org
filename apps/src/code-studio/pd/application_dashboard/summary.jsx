@@ -46,7 +46,6 @@ export default class Summary extends React.Component {
         applications: data
       });
     });
-    this.setState({isWorkshopAdmin: this.props.route.isWorkshopAdmin});
   }
 
   handleRegionalPartnerChange = (selected) => {
@@ -72,7 +71,7 @@ export default class Summary extends React.Component {
     }
     return (
       <div>
-        {this.state.isWorkshopAdmin &&
+        {this.props.route.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
