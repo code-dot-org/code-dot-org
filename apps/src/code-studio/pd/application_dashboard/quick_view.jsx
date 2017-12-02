@@ -72,7 +72,6 @@ export default class QuickView extends React.Component {
         applications: data
       });
     });
-    this.setState({isWorkshopAdmin: this.props.route.isWorkshopAdmin});
 
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
@@ -100,7 +99,7 @@ export default class QuickView extends React.Component {
     }
     return (
       <div>
-        {this.state.isWorkshopAdmin &&
+        {this.props.route.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
