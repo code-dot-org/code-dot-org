@@ -77,7 +77,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
-      discount_code: application.try(:circuit_playground_discount_code),
+      discount_code: application.try(:circuit_playground_discount_code).try(:code),
     }
 
     if application

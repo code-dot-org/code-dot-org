@@ -32,6 +32,10 @@ const styles = {
     marginLeft: -25,
     width: 25,
   },
+  error: {
+    color: 'red',
+    marginTop: 20,
+  }
 };
 
 export default class EligibilityConfirmDialog extends Component {
@@ -44,6 +48,7 @@ export default class EligibilityConfirmDialog extends Component {
     signature: "",
     validInput: false,
     submitting: false,
+    error: ''
   };
 
   verifyResponse = () => {
@@ -57,15 +62,21 @@ export default class EligibilityConfirmDialog extends Component {
 
   handleSubmit = () => {
     this.setState({submitting: true});
-    // TODO: extract actual signature and make an ajax POST
-    // fake async for now
-    setTimeout(() => {
-      this.setState({
-        submitting: false,
+    $.ajax({
+     url: "/maker/complete",
+     type: "post",
+     dataType: "json",
+     data: {
+       signature: this.state.signature
+     }
+   }).done(data => {
+     this.props.onSuccess(data.code);
+   }).fail((jqXHR, textStatus) => {
+     this.setState({
+       error: "We're sorry, but something went wrong. Try refreshing the page " +
+        "and submitting again.  If this does not work, please contact support@code.org."
       });
-      const discountCode = '12345';
-      this.props.onSuccess(discountCode);
-    }, 1000);
+   });
   }
 
   setSignature = (event) => {
@@ -118,7 +129,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <b>Elecontric Signature</b> {i18n.typeName()}
+              <b>Electronic Signature</b> {i18n.typeName()}
             </div>
             <input
               value={this.state.signature}
@@ -129,6 +140,9 @@ export default class EligibilityConfirmDialog extends Component {
           </label>
         </form>
         <div>{i18n.contactSupport()}</div>
+        {this.state.error &&
+          <div style={styles.error}>{this.state.error}</div>
+        }
         <DialogFooter>
           <Button
             text={i18n.dialogCancel()}
