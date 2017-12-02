@@ -38,18 +38,20 @@ describe("Principal Approval Component", () => {
   });
 
   it("Expect student enrollment to be an integer", () => {
+    ['10000', '1,000,000'].forEach((validEnrollmentNumber) => {
+      expect(PrincipalApprovalComponent.getErrorMessages({
+        totalStudentEnrollment: validEnrollmentNumber
+      })).to.deep.equal({});
+    });
+  });
+
+  it("Non integers create errors for student enrollments", () => {
     ['10.5', 'So many', '0x1234'].forEach((invalidEnrollmentNumber) => {
       expect(PrincipalApprovalComponent.getErrorMessages({
         totalStudentEnrollment: invalidEnrollmentNumber
       })).to.deep.equal({
         totalStudentEnrollment: 'Must be a valid number'
       });
-    });
-
-    ['10000', '1,000,000'].forEach((validEnrollmentNumber) => {
-      expect(PrincipalApprovalComponent.getErrorMessages({
-        totalStudentEnrollment: validEnrollmentNumber
-      })).to.deep.equal({});
     });
   });
 
@@ -60,7 +62,11 @@ describe("Principal Approval Component", () => {
           [key]: validPercent
         })).to.deep.equal({});
       });
+    });
+  });
 
+  it("Non percentages are not valid race or free lunch percents", () => {
+    ['freeLunchPercent', ...RACE_LIST].forEach((key) => {
       ['-1', '100.5', '100.5%'].forEach((invalidPercent) => {
         expect(PrincipalApprovalComponent.getErrorMessages({
           [key]: invalidPercent
