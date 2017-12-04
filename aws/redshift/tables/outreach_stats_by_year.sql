@@ -11,7 +11,7 @@ CREATE table analysis.outreach_stats_by_year AS
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
-         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc
+         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc
   FROM dashboard_production_pii.users u
     JOIN dashboard_production_pii.user_geos ug 
       ON ug.user_id = u.id
@@ -44,7 +44,7 @@ CREATE table analysis.outreach_stats_by_year AS
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
-         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc
+         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc
   FROM dashboard_production_pii.users u
     JOIN dashboard_production_pii.user_geos ug 
       ON ug.user_id = u.id
