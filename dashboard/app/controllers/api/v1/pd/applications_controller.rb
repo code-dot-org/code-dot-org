@@ -14,7 +14,6 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_data = empty_application_data
 
     ROLES.each do |role|
-<<<<<<< HEAD
       apps = get_applications_by_role(role).
         select(:status, :regional_partner_id, "COUNT(locked_at) as total_locked", "COUNT(id) as total")
 
