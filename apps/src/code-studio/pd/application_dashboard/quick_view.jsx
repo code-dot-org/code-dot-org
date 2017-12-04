@@ -9,6 +9,8 @@
 import React, {PropTypes} from 'react';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
+import {SelectStyleProps} from '../constants';
+import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
@@ -20,19 +22,6 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-
-// Default max height for the React-Select menu popup, as defined in the imported react-select.css,
-// is 200px for the container, and 198 for the actual menu (to accommodate 2px for the border).
-// React-Select has props for overriding these default css styles. Increase the max height here:
-const selectMenuMaxHeight = 400;
-const selectStyleProps = {
-  menuContainerStyle: {
-    maxHeight: selectMenuMaxHeight
-  },
-  menuStyle: {
-    maxHeight: selectMenuMaxHeight - 2
-  }
-};
 
 const styles = {
   button: {
@@ -47,6 +36,8 @@ export default class QuickView extends React.Component {
   static propTypes = {
     route: PropTypes.shape({
       regionalPartnerName: PropTypes.string.isRequired,
+      regionalPartners: PropTypes.array,
+      isWorkshopAdmin: PropTypes.bool,
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
       viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -60,7 +51,9 @@ export default class QuickView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    filter: null
+    filter: null,
+    regionalPartnerName: this.props.route.regionalPartnerName,
+    regionalPartnerFilter: null
   };
 
   getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
@@ -94,15 +87,28 @@ export default class QuickView extends React.Component {
     this.setState({filter: filter});
   };
 
+  handleRegionalPartnerChange = (selected) => {
+    const regionalPartnerFilter = selected ? selected.value : null;
+    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.route.regionalPartnerName;
+    this.setState({regionalPartnerName, regionalPartnerFilter});
+  };
+
   render() {
     if (this.state.loading) {
       return <Spinner/>;
     }
-
     return (
       <div>
+        {this.props.route.isWorkshopAdmin &&
+          <RegionalPartnerDropdown
+            onChange={this.handleRegionalPartnerChange}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            regionalPartners={this.props.route.regionalPartners}
+            isWorkshopAdmin={this.props.route.isWorkshopAdmin}
+          />
+        }
         <Row>
-          <h1>{this.props.route.regionalPartnerName}</h1>
+          <h1>{this.state.regionalPartnerName}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
             <Button
@@ -121,7 +127,7 @@ export default class QuickView extends React.Component {
                 placeholder={null}
                 options={this.statuses}
                 style={styles.select}
-                {...selectStyleProps}
+                {...SelectStyleProps}
               />
             </FormGroup>
           </Col>
@@ -130,6 +136,7 @@ export default class QuickView extends React.Component {
           path={this.props.route.path}
           data={this.state.applications}
           statusFilter={this.state.filter}
+          regionalPartnerFilter={this.state.regionalPartnerFilter}
         />
       </div>
     );
