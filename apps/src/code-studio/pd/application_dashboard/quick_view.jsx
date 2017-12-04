@@ -6,15 +6,16 @@
  *        /csd_facilitators
  *        /csp_facilitators
  */
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
-import {SelectStyleProps} from '../constants';
+import { SelectStyleProps } from '../constants';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import {ApplicationStatuses} from './constants';
+import { ApplicationStatuses } from './constants';
 import {
   Button,
   FormGroup,
@@ -32,12 +33,12 @@ const styles = {
   }
 };
 
-export default class QuickView extends React.Component {
+export class QuickView extends React.Component {
   static propTypes = {
+    regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartners: PropTypes.arrayOf(PropTypes.string),
+    isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
-      regionalPartnerName: PropTypes.string.isRequired,
-      regionalPartners: PropTypes.array,
-      isWorkshopAdmin: PropTypes.bool,
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
       viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -52,13 +53,9 @@ export default class QuickView extends React.Component {
     loading: true,
     applications: null,
     filter: null,
-    regionalPartnerName: this.props.route.regionalPartnerName,
+    regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: null
   };
-
-  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
-  getJsonUrl = () => this.getApiUrl();
-  getCsvUrl = () => this.getApiUrl('.csv');
 
   componentWillMount() {
     $.ajax({
@@ -78,33 +75,35 @@ export default class QuickView extends React.Component {
     this.statuses.unshift({value: null, label: "\u00A0"});
   }
 
+  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
+  getJsonUrl = () => this.getApiUrl();
+  getCsvUrl = () => this.getApiUrl('.csv');
+
   handleDownloadCsvClick = event => {
     window.open(this.getCsvUrl());
   };
 
   handleStateChange = (selected) => {
     const filter = selected ? selected.value : null;
-    this.setState({filter: filter});
+    this.setState({ filter });
   };
 
   handleRegionalPartnerChange = (selected) => {
     const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.route.regionalPartnerName;
-    this.setState({regionalPartnerName, regionalPartnerFilter});
+    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.regionalPartnerName;
+    this.setState({ regionalPartnerName, regionalPartnerFilter });
   };
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
     return (
       <div>
-        {this.props.route.isWorkshopAdmin &&
+        {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
-            regionalPartners={this.props.route.regionalPartners}
-            isWorkshopAdmin={this.props.route.isWorkshopAdmin}
           />
         }
         <Row>
@@ -142,3 +141,9 @@ export default class QuickView extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  regionalPartnerName: state.regionalPartnerName,
+  regionalPartners: state.regionalPartners,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
+}))(QuickView);
