@@ -27,14 +27,31 @@ module Pd::Application
         {
           black: '10',
           hispanic: '15%',
+
           pacific_islander: '20.5%',
           american_indian: '11.0',
           white: '100000000',
+
           asian: '100000000',
           other: '100000000'
         }
       )
       assert_equal 56.5, application.underrepresented_minority_percent
+    end
+
+    test 'corresponding teacher application is required' do
+      principal_application = build :pd_principal_approval1819_application, teacher_application: nil
+      refute principal_application.valid?
+      assert_equal ['Teacher application is required'], principal_application.errors.full_messages
+
+      # fake guid won't work
+      principal_application.application_guid = SecureRandom.uuid
+      refute principal_application.valid?
+
+      # real teacher application guid is required
+      teacher_application = create :pd_teacher1819_application
+      principal_application.application_guid = teacher_application.application_guid
+      assert principal_application.valid?
     end
   end
 end
