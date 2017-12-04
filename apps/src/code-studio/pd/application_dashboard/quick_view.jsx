@@ -6,16 +6,16 @@
  *        /csd_facilitators
  *        /csp_facilitators
  */
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
-import {SelectStyleProps} from '../constants';
+import { SelectStyleProps } from '../constants';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import {ApplicationStatuses} from './constants';
+import { ApplicationStatuses } from './constants';
 import {
   Button,
   FormGroup,
@@ -57,10 +57,6 @@ export class QuickView extends React.Component {
     regionalPartnerFilter: null
   };
 
-  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
-  getJsonUrl = () => this.getApiUrl();
-  getCsvUrl = () => this.getApiUrl('.csv');
-
   componentWillMount() {
     $.ajax({
       method: 'GET',
@@ -79,24 +75,28 @@ export class QuickView extends React.Component {
     this.statuses.unshift({value: null, label: "\u00A0"});
   }
 
+  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
+  getJsonUrl = () => this.getApiUrl();
+  getCsvUrl = () => this.getApiUrl('.csv');
+
   handleDownloadCsvClick = event => {
     window.open(this.getCsvUrl());
   };
 
   handleStateChange = (selected) => {
     const filter = selected ? selected.value : null;
-    this.setState({filter: filter});
+    this.setState({ filter });
   };
 
   handleRegionalPartnerChange = (selected) => {
     const regionalPartnerFilter = selected ? selected.value : null;
     const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.regionalPartnerName;
-    this.setState({regionalPartnerName, regionalPartnerFilter});
+    this.setState({ regionalPartnerName, regionalPartnerFilter });
   };
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
     return (
       <div>

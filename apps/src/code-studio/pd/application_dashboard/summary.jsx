@@ -2,12 +2,12 @@
  * Application Dashboard summary view.
  * Route: /summary
  */
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
-import {AllPartnersFilter} from './constants';
+import { AllPartnersFilter } from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
@@ -45,13 +45,12 @@ export class Summary extends React.Component {
   handleRegionalPartnerChange = (selected) => {
     const regionalPartnerFilter = selected ? selected.value : null;
     const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
-    this.setState({regionalPartnerName, regionalPartnerFilter});
+    this.setState({ regionalPartnerName, regionalPartnerFilter });
     $.ajax({
       method: 'GET',
       url: `/api/v1/pd/applications?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : AllPartnersFilter}`,
       dataType: 'json'
-    })
-    .done(data => {
+    }).done((data) => {
       this.setState({
         loading: false,
         applications: data
