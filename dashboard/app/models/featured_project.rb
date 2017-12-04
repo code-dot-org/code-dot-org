@@ -2,9 +2,11 @@
 #
 # Table name: featured_projects
 #
-#  id             :integer          not null, primary key
-#  created_at     :datetime         not null
-#  storage_app_id :integer
+#  id                    :integer          not null, primary key
+#  created_at            :datetime         not null
+#  storage_app_id        :integer
+#  who_featured_user_id  :integer
+#  whose_project_user_id :integer
 #
 # Indexes
 #
