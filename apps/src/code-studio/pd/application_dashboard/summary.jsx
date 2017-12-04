@@ -30,11 +30,6 @@ export class Summary extends React.Component {
     regionalPartnerFilter: null
   };
 
-  constructor(props) {
-    super(props);
-    this.handleRegionalPartnerChange = this.handleRegionalPartnerChange.bind(this);
-  }
-
   componentWillMount() {
     $.ajax({
       method: 'GET',
