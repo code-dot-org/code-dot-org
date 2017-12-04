@@ -36,7 +36,6 @@ const styles = {
 export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    regionalPartners: PropTypes.arrayOf(PropTypes.string),
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -144,6 +143,5 @@ export class QuickView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
-  regionalPartners: state.regionalPartners,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickView);
