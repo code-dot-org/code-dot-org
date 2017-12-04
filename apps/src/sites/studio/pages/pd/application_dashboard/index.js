@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   ReactDOM.render(
     <ApplicationDashboard
       regionalPartnerName={getScriptData("props")['regionalPartnerName']}
+      regionalPartners={getScriptData("props")["regionalPartners"]}
+      isWorkshopAdmin={getScriptData("props")["isWorkshopAdmin"]}
     />,
     document.getElementById('application-container')
   );
