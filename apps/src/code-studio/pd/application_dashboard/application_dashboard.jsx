@@ -9,6 +9,7 @@ import {
   IndexRedirect,
   useRouterHistory
 } from 'react-router';
+import {AllPartnersLabel} from './constants';
 import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
@@ -37,11 +38,13 @@ const paths = {
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string
+    regionalPartnerName: PropTypes.string,
+    regionalPartners: PropTypes.array,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   render() {
-    const regionalPartnerName = this.props.regionalPartnerName || "All Regional Partner Applications";
+    const regionalPartnerName = this.props.regionalPartnerName || AllPartnersLabel;
     return (
       <Router history={browserHistory} >
         <Route path="/" component={ApplicationDashboardHeader}>
@@ -51,6 +54,8 @@ export default class ApplicationDashboard extends React.Component {
             breadcrumbs="Summary"
             component={Summary}
             regionalPartnerName={regionalPartnerName}
+            regionalPartners={this.props.regionalPartners}
+            isWorkshopAdmin={this.props.isWorkshopAdmin}
           />
           {
             _.flatten(Object.keys(paths).map((path, i) => {
@@ -74,6 +79,8 @@ export default class ApplicationDashboard extends React.Component {
                     breadcrumbs={paths[path].name}
                     component={QuickView}
                     regionalPartnerName={regionalPartnerName}
+                    regionalPartners={this.props.regionalPartners}
+                    isWorkshopAdmin={this.props.isWorkshopAdmin}
                     applicationType={paths[path].name}
                     viewType={paths[path].type}
                   />

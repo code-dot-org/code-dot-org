@@ -145,6 +145,17 @@ module Pd::Application
       ]
     end
 
+    def underrepresented_minority_percent
+      sanitize_form_data_hash.select do |k, _|
+        [
+          :black,
+          :hispanic,
+          :pacific_islander,
+          :american_indian
+        ].include? k
+      end.values.map(&:to_f).reduce(:+)
+    end
+
     # @override
     def check_idempotency
       # only one per teacher application (guid)
