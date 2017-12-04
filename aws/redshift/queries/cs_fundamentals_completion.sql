@@ -6,20 +6,48 @@ from dashboard_production.levels_script_levels lsl
 join dashboard_production.script_levels sl on sl.id = lsl.script_level_id
 join dashboard_production.stages st on st.id = sl.stage_id
 join dashboard_production.levels le on le.id = lsl.level_id
-where sl.script_id in (1,17,18,19,23)
+where sl.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
 and type = 'Unplugged';
+
+create temp table #standalone_video_stages as 
+select script_id, absolute_position
+from
+(
+select sl.script_id, st.absolute_position, count(distinct le.id) levels, count(distinct case when type = 'StandaloneVideo' then le.id else null end) levels_standalone_video
+from dashboard_production.levels_script_levels lsl
+join dashboard_production.script_levels sl on sl.id = lsl.script_level_id
+join dashboard_production.stages st on st.id = sl.stage_id
+join dashboard_production.levels le on le.id = lsl.level_id
+where sl.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
+group by 1,2
+)
+where levels = 1 and levels_standalone_video = 1
+;
+
+create temp table #unplugged_and_standalone_video_stages as
+select *
+from #unplugged_stages
+union all
+select *
+from #standalone_video_stages;
 
 -- get script-stage counts that are plugged 
 -- (script_id, stages)
 create temp table #plugged_stage_counts as
-select script_id, case when script_id = 1 then 9 else stages end as stages -- manual fix for 20-hour, where unplugged levels are type "Blockly"
+select script_id, 
+case 
+when script_id = 1 then 9 -- manual fix for 20-hour, where unplugged levels are type "Blockly"
+when script_id = 240 then 8 -- manual fix for course e, which has optional pre-stages and end of course capstone 
+when script_id = 241 then 10 -- manual fix for course f, which has optional pre-stages and end of course capstone
+when script_id = 258 then 19 -- manual fix for express, which has end of course project
+else stages end as stages 
 from
 (
 select st.script_id, count(distinct st.absolute_position::int) stages
 from dashboard_production.stages st
-left join #unplugged_stages us on us.script_id = st.script_id and us.stage = st.absolute_position
+left join #unplugged_and_standalone_video_stages us on us.script_id = st.script_id and us.stage = st.absolute_position
 where us.stage is null
-and st.script_id in (1,17,18,19,23)
+and st.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
 group by 1
 ); 
 
@@ -35,9 +63,9 @@ join dashboard_production.script_levels sl on sl.id = lsl.script_level_id and ul
 join dashboard_production.stages st on st.id = sl.stage_id
 join dashboard_production.scripts sc on sc.id = ul.script_id
 join dashboard_production.users u on u.id = ul.user_id
-left join #unplugged_stages us on us.stage = st.absolute_position and us.script_id = ul.script_id
+left join #unplugged_and_standalone_video_stages us on us.stage = st.absolute_position and us.script_id = ul.script_id
 where us.stage is null -- filter out unplugged stages
-and ul.script_id in (1,17,18,19,23)
+and ul.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
 and u.user_type = 'student'
 group by 1,2,3;
 
@@ -48,7 +76,7 @@ create temp table #end_of_month as
 select (
     last_day(dateadd('month', -1 * row_number() over (order by true), getdate()::date))
   )::date as end_of_month
-from users limit 35;
+from users limit 48;
 
 -- THIS TAKES LIKE AN HOUR???
 -- get user-script-month-# of stages in script-# of stages started to that point in time
