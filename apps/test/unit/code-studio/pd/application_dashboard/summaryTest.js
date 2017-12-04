@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Summary from '@cdo/apps/code-studio/pd/application_dashboard/summary';
+import {Summary} from '@cdo/apps/code-studio/pd/application_dashboard/summary';
 import {expect} from 'chai';
 import sinon from 'sinon';
 
@@ -13,13 +13,10 @@ describe("Summary", () => {
     router: fakeRouter
   };
 
-  const routeProps = {
-    regionalPartnerName: 'A Great Organization'
-  };
-
   it("Initially renders a spinner", () => {
     let summary = shallow(
-      <Summary route={routeProps}/>, {context}
+      <Summary regionalPartnerName="A Great Organization" />,
+      { context },
     );
 
     expect(summary.find('Spinner')).to.have.length(1);
@@ -37,7 +34,8 @@ describe("Summary", () => {
     );
 
     let summary = shallow(
-      <Summary route={routeProps}/>, {context}
+      <Summary regionalPartnerName="A Great Organization" />,
+      { context },
     );
 
     server.respond();
