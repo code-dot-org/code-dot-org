@@ -37,6 +37,10 @@ module Pd::Application
       self.application_type = PRINCIPAL_APPROVAL_APPLICATION
     end
 
+    validates_presence_of :teacher_application
+    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
+      primary_key: :application_guid, foreign_key: :application_guid
+
     def self.options
       {
         title: COMMON_OPTIONS[:title],
@@ -150,6 +154,12 @@ module Pd::Application
           :american_indian
         ].include? k
       end.values.map(&:to_f).reduce(:+)
+    end
+
+    # @override
+    def check_idempotency
+      # only one per teacher application (guid)
+      Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
     end
   end
 end

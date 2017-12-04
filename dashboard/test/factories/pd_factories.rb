@@ -748,6 +748,7 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
+    association :teacher_application, factory: :pd_teacher1819_application
     transient do
       approved 'Yes'
       replace_course Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
