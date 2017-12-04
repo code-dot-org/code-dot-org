@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171201022617) do
+ActiveRecord::Schema.define(version: 20171204203302) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -128,7 +128,6 @@ ActiveRecord::Schema.define(version: 20171201022617) do
   create_table "circuit_playground_discount_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                                             null: false
     t.integer  "unit_6_intention"
-    t.boolean  "has_confirmed_school",                default: false, null: false
     t.boolean  "full_discount"
     t.boolean  "admin_set_status",                    default: false, null: false
     t.string   "signature"
@@ -136,7 +135,9 @@ ActiveRecord::Schema.define(version: 20171201022617) do
     t.integer  "circuit_playground_discount_code_id"
     t.datetime "created_at",                                          null: false
     t.datetime "updated_at",                                          null: false
+    t.string   "school_id"
     t.index ["circuit_playground_discount_code_id"], name: "index_circuit_playground_applications_on_code_id", using: :btree
+    t.index ["school_id"], name: "index_circuit_playground_discount_applications_on_school_id", using: :btree
     t.index ["user_id"], name: "index_circuit_playground_discount_applications_on_user_id", unique: true, using: :btree
   end
 
@@ -1312,6 +1313,7 @@ ActiveRecord::Schema.define(version: 20171201022617) do
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
+  add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "pd_payment_terms", "regional_partners"
