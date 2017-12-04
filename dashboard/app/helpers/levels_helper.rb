@@ -612,7 +612,6 @@ module LevelsHelper
         baseUrl: Blockly.base_url,
         blocks: '<xml></xml>',
         dialog: {},
-        nonGlobal: true,
       }
       app = level.game.app
       blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)

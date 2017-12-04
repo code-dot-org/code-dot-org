@@ -480,7 +480,9 @@ let APP_OPTIONS;
 export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
-  if (!appOptions.nonGlobal) {
+  // Don't override existing settings, for example on Multi levels with embedded
+  // blocks.
+  if (!window.appOptions) {
     /** @type {AppOptionsConfig} */
     window.appOptions = appOptions;
   }
