@@ -121,7 +121,7 @@ export class DetailViewContents extends React.Component {
     const statusIsLockable = ApplicationFinalStatuses.includes(this.state.status);
     return (
       <Button
-        title={statusIsLockable && `Can only lock if status is one of ${ApplicationFinalStatuses.join(', ')}`}
+        title={!statusIsLockable && `Can only lock if status is one of ${ApplicationFinalStatuses.join(', ')}`}
         disabled={!(this.state.editing && statusIsLockable)}
         onClick={this.handleLockClick}
       >
