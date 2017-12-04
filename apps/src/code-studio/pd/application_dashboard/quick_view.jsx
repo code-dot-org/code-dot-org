@@ -36,9 +36,9 @@ const styles = {
 export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartners: PropTypes.arrayOf(PropTypes.string),
+    isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
-      regionalPartners: PropTypes.array,
-      isWorkshopAdmin: PropTypes.bool,
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
       viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -100,12 +100,10 @@ export class QuickView extends React.Component {
     }
     return (
       <div>
-        {this.props.route.isWorkshopAdmin &&
+        {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
-            regionalPartners={this.props.route.regionalPartners}
-            isWorkshopAdmin={this.props.route.isWorkshopAdmin}
           />
         }
         <Row>
@@ -146,4 +144,6 @@ export class QuickView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
+  regionalPartners: state.regionalPartners,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickView);

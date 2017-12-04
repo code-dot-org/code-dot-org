@@ -3,11 +3,12 @@
  * RegionalPartner's applications to view
  */
 
-import React, {PropTypes} from 'react';
-import {FormGroup, ControlLabel} from 'react-bootstrap';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
-import {SelectStyleProps} from '../constants';
-import {RegionalPartnerDropdownOptions as dropdownOptions} from './constants';
+import { SelectStyleProps } from '../constants';
+import { RegionalPartnerDropdownOptions as dropdownOptions } from './constants';
 
 const styles = {
   select: {
@@ -15,7 +16,7 @@ const styles = {
   }
 };
 
-export default class RegionalPartnerDropdown extends React.Component {
+export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
     regionalPartnerFilter: PropTypes.oneOfType([
@@ -47,3 +48,7 @@ export default class RegionalPartnerDropdown extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  regionalPartners: state.regionalPartners,
+}))(RegionalPartnerDropdown);

@@ -13,10 +13,8 @@ import $ from 'jquery';
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    route: PropTypes.shape({
-      regionalPartners: PropTypes.array,
-      isWorkshopAdmin: PropTypes.bool
-    })
+    regionalPartners: PropTypes.array,
+    isWorkshopAdmin: PropTypes.bool
   }
 
   static contextTypes = {
@@ -67,12 +65,10 @@ export class Summary extends React.Component {
     }
     return (
       <div>
-        {this.props.route.isWorkshopAdmin &&
+        {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
-            regionalPartners={this.props.route.regionalPartners}
-            isWorkshopAdmin={this.props.route.isWorkshopAdmin}
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>
@@ -100,4 +96,6 @@ export class Summary extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
+  regionalPartners: state.regionalPartners,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(Summary);
