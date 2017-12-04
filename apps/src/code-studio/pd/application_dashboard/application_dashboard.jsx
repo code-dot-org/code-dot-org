@@ -4,7 +4,11 @@
 import React, {PropTypes} from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import applicationDashboardReducers, { setRegionalPartnerName } from './reducers';
+import applicationDashboardReducers, {
+  setRegionalPartnerName,
+  setRegionalPartners,
+  setWorkshopAdminPermission,
+} from './reducers';
 import Header from '../components/header';
 import {
   Router,
@@ -50,6 +54,14 @@ export default class ApplicationDashboard extends React.Component {
     if (this.props.regionalPartnerName) {
       store.dispatch(setRegionalPartnerName(this.props.regionalPartnerName));
     }
+
+    if (this.props.regionalPartners) {
+      store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    }
+
+    if (this.props.isWorkshopAdmin) {
+      store.dispatch(setWorkshopAdminPermission(true));
+    }
   }
 
   render() {
@@ -57,13 +69,11 @@ export default class ApplicationDashboard extends React.Component {
       <Provider store={store}>
         <Router history={browserHistory} >
           <Route path="/" component={ApplicationDashboardHeader}>
-            <IndexRedirect to="/summary"/>
+            <IndexRedirect to="/summary" />
             <Route
               path="summary"
               breadcrumbs="Summary"
               component={Summary}
-              regionalPartners={this.props.regionalPartners}
-              isWorkshopAdmin={this.props.isWorkshopAdmin}
             />
             {
               _.flatten(Object.keys(paths).map((path, i) => {
@@ -86,8 +96,6 @@ export default class ApplicationDashboard extends React.Component {
                       path={path}
                       breadcrumbs={paths[path].name}
                       component={QuickView}
-                      regionalPartners={this.props.regionalPartners}
-                      isWorkshopAdmin={this.props.isWorkshopAdmin}
                       applicationType={paths[path].name}
                       viewType={paths[path].type}
                     />
