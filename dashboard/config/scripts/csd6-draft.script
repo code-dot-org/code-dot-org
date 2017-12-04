@@ -173,6 +173,8 @@ named_level 'Challenge: Lights Picker'
 stage 'Arrays and For Loops', flex_category: 'csd6_2'
 level 'CSD U6 for loop click predict', progression: 'Programs that Repeat'
 level 'CSD U6 for loop click exit', progression: 'Programs that Repeat'
+named_level 'CSD: For Loops'
+named_level 'CSD: For Loop'
 
 stage 'For Loops', flex_category: 'csd6_2'
 named_level 'CSD: For Loops'
