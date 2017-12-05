@@ -29,10 +29,12 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
   class Teacher1819Application < ApplicationBase
     include Rails.application.routes.url_helpers
+    include Teacher1819ApplicationConstants
 
     def set_type_and_year
       self.application_year = YEAR_18_19
@@ -399,6 +401,23 @@ module Pd::Application
     # @override
     def check_idempotency
       Pd::Application::Teacher1819Application.find_by(user: user)
+    end
+
+    def meets_criteria
+      responses = Teacher1819ApplicationConstants::CRITERIA_SCORES.merge(response_score_hash).values
+      if responses.uniq == [YES]
+        # If all resolve to Yes, applicant meets criteria
+        true
+      elsif responses.include? NO
+        # If any are No, applicant does not meet criteria
+        false
+      else
+        nil
+      end
+    end
+
+    def total_score
+      response_score_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
     end
   end
 end

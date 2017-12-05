@@ -196,4 +196,9 @@ module Teacher1819ApplicationConstants
     taught_in_past: [2, 0],
     csp_ap_exam: [2, 0]
   }
+
+  CRITERIA_SCORES = VALID_SCORES.select {|_, v| v == YES_NO}
+  BONUS_POINTS = VALID_SCORES.reject {|_, v| v == YES_NO}
+
+  RESPONSE_SCORE_BASE = VALID_SCORES.transform_values {|_| nil}
 end
