@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import i18n from "@cdo/locale";
 import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import Unit6ValidationStep from './Unit6ValidationStep';
 
 const styles = {
   title: {
@@ -13,7 +14,8 @@ const styles = {
     marginTop: 5,
   },
   teacherInput: {
-    marginRight: 10
+    marginRight: 10,
+    padding: '0 10px',
   },
   radioContainer: {
     margin: '5px 0',
@@ -27,30 +29,54 @@ export default class DiscountAdminOverride extends Component {
   state = {
     submittingTeacher: false,
     submittingOverride: false,
-    teacherID: "",
+    teacherID: '',
     statusPD: Status.UNKNOWN,
     statusStudentCount: Status.UNKNOWN,
-    schoolId: null,
-    schoolFullDiscount: false,
+    statusYear: Status.UNKNOWN,
+    unit6Intention: '',
+    userSchool: {},
+    applicationSchool: {},
     adminOverride: 'None',
+    fullDiscount: false,
+    discountCode: ''
   };
 
   handleSubmitId = () => {
+    const teacherID = this.teacherID.value;
     this.setState({
       submittingTeacher: true
     });
-    setTimeout(() => {
+    $.ajax({
+      url: "/maker/application_status",
+      type: "get",
+      dataType: "json",
+      data: {
+        user: teacherID
+      }
+    }).done(data => {
+      const { application } = data;
       this.setState({
-        teacherID: this.teacherID.value,
+        teacherID,
         submittingTeacher: false,
-        // TODO: get real data from server
-        statusPD: Status.SUCCEEDED,
-        statusStudentCount: Status.FAILED,
-        schoolName: "something",
-        schoolFullDiscount: false,
-        adminOverride: 'Full Discount',
+        statusPD: application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED,
+        statusStudentCount: application.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED,
+        statusYear: (application.unit_6_intention === 'yes1718' ||
+          application.unit_6_intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
+        unit6Intention: application.unit_6_intention,
+        userSchool: application.user_school,
+        applicationSchool: application.application_school,
+        adminOverride: application.admin_set_status ?
+          (application.full_discount ? 'Full Discount' : 'Partial Discount') :
+          'None',
+        fullDiscount: application.full_discount,
+        discountCode: application.discount_code,
       });
-    }, 1000);
+    }).fail((jqXHR, textStatus) => {
+      console.log('failure');
+      this.setState({
+        submittingTeacher: false
+      });
+    });
   }
 
   handleDiscountCodeOverride = () => {
@@ -63,13 +89,15 @@ export default class DiscountAdminOverride extends Component {
   }
 
   render() {
-    // TODO: indicate somewhere if we already have an admin override
-
     return (
       <div>
-        <h1 style={styles.title}>Circuit Playground Kits Admin Override</h1>
+        <h1 style={styles.title}>
+          Circuit Playground Kits Admin Override
+        </h1>
         <label>
-          <div>Teacher email address or username (for the account they are using in the classroom):</div>
+          <div>
+            Teacher email address, username, or user_id (for the account they are using in the classroom):
+          </div>
           <div style={styles.teacherContainer}>
             <input
               ref={input => this.teacherID = input}
@@ -94,22 +122,61 @@ export default class DiscountAdminOverride extends Component {
               stepName={i18n.eligibilityReqStudentCount()}
               stepStatus={this.state.statusStudentCount}
             />
-            <ValidationStep
-              stepName={i18n.eligibilityReqYear()}
-              stepStatus={Status.UNKNOWN}
+            <Unit6ValidationStep
+              key={this.state.teacherID}
+              previousStepsSucceeded={true}
+              stepStatus={this.state.statusYear}
+              initialChoice={this.state.unit6Intention}
+              disabled={true}
+              onSubmit={() => {}}
             />
             <h2>School Data</h2>
             <div>
-              <div><b>Name: </b>{this.state.schoolName || 'None'}</div>
-              {this.state.schoolName &&
-                <div>
-                  <b>High needs (i.e. receives full discount): </b>{this.state.schoolFullDiscount.toString()}
-                </div>
+              We track both the user's current school, and also the school that they
+              confirmed in the application (if they made it that far into the process).
+              These will be different if (a) the user hasn't confirmed a school in the
+              application or (b) the user changed their school after confirming in the
+              application.
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td/>
+                  <td>Current school</td>
+                  <td>Application school</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Id:</td>
+                  <td>{this.state.userSchool.id}</td>
+                  <td>{this.state.applicationSchool.id}</td>
+                </tr>
+                <tr>
+                  <td>Name:</td>
+                  <td>{this.state.userSchool.name}</td>
+                  <td>{this.state.applicationSchool.name}</td>
+                </tr>
+                <tr>
+                  <td>High Needs?:</td>
+                  <td>
+                    {this.state.userSchool.high_needs !== null &&
+                      this.state.userSchool.high_needs.toString()}
+                  </td>
+                  <td>
+                    {this.state.applicationSchool.high_needs !== null &&
+                      this.state.applicationSchool.high_needs.toString()}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Admin Options</h2>
+            <div>Current code:{' '}
+              {this.state.discountCode &&
+                `${this.state.discountCode} (${this.state.fullDiscount ? 'FULL' : 'PARTIAL'})`
               }
             </div>
-            <h2>Existing Admin Override</h2>
-            <div>{this.state.adminOverride}</div>
-            <h2>Admin Options</h2>
+            <div>Current override: {this.state.adminOverride}</div>
             <h4>Option 1: Link teacher account with other accounts</h4>
             <div>
               If teacher meets the eligibity requirements but is simply using a

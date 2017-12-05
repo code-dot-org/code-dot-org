@@ -66,4 +66,19 @@ class MakerController < ApplicationController
 
     render json: {code: code.code}
   end
+
+  def application_status
+    return head :forbidden unless current_user.admin?
+
+    user_id = params.require(:user)
+    # TODO: similar logic to assume_identity. can/should we share?
+    user = User.where(id: user_id).first if user_id.to_i.to_s == user_id
+    user ||= User.where(username: user_id).first
+    user ||= User.find_by_email_or_hashed_email(user_id)
+
+    application = CircuitPlaygroundDiscountApplication.admin_application_status(user)
+    # In the case where the user has a school, but hasn't confirmed in the application, we
+    # still need to know whether the school meets the requirements
+    render json: {application: application}
+  end
 end

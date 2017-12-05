@@ -75,13 +75,17 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   def self.application_status(user)
     application = CircuitPlaygroundDiscountApplication.find_by_user_id(user.id)
 
+    # If our application has a confirmed school id, use that. Otherwise, see if
+    # we have a school id associated with the user
+    school_id = application.try(:school_id) || user.try(:school_info).try(:school_id)
+
     status = {
       # This will be a number from 1-5 (representing which radio button) was selected,
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
       has_confirmed_school: application.try(:has_confirmed_school?) || false,
-      school_id: user.try(:school_info).try(:school_id),
-      school_name: user.try(:school_info).try(:school).try(:name),
+      school_id: school_id,
+      school_name: school_id ? School.find(school_id).name : nil,
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
@@ -98,5 +102,36 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
         is_progress_eligible: student_progress_eligible?(user)
       )
     end
+  end
+
+  def self.admin_application_status(user)
+    application = CircuitPlaygroundDiscountApplication.find_by_user_id(user.id)
+
+    # school currently assigned to user
+    user_school = user.try(:school_info).try(:school)
+    application_school = School.find(application.school_id) if application.try(:school_id)
+
+    # School assigned to user when they confirmed school during application. Will
+    # usually be nil (if user never confirmed), or the same as user_school. The
+    # exception being if the user changed schools since confirming.
+
+    {
+      is_pd_eligible: studio_person_pd_eligible?(user),
+      is_progress_eligible: student_progress_eligible?(user),
+      user_school: {
+        id: user_school.try(:id),
+        name: user_school.try(:name),
+        high_needs: user_school.try(:high_needs?),
+      },
+      application_school: {
+        id: application_school.try(:id),
+        name: application_school.try(:name),
+        high_needs: application_school.try(:high_needs?),
+      },
+      unit_6_intention: application.try(:unit_6_intention),
+      full_discount: application.try(:full_discount),
+      admin_set_status: application.try(:admin_set_status),
+      discount_code: application.try(:circuit_playground_discount_code).try(:code)
+    }
   end
 end

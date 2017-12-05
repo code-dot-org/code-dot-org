@@ -25,6 +25,7 @@ export default class Unit6ValidationStep extends Component {
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     initialChoice: PropTypes.string,
     onSubmit: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -99,7 +100,7 @@ export default class Unit6ValidationStep extends Component {
                   color={Button.ButtonColor.orange}
                   text={this.state.submitting ? i18n.submitting() : i18n.submit()}
                   onClick={this.handleSubmit}
-                  disabled={this.state.submitting}
+                  disabled={this.state.submitting || this.props.disabled}
                 />
               }
             </form>
