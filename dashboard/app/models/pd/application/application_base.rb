@@ -221,6 +221,10 @@ module Pd::Application
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
 
+    def response_score_hash
+      JSON.parse(response_scores || '{}').symbolize_keys
+    end
+
     protected
 
     def include_additional_text(hash, field_name, *options)

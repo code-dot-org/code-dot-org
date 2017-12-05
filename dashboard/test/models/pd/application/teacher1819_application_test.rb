@@ -1,7 +1,10 @@
 require 'test_helper'
+require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
   class Teacher1819ApplicationTest < ActiveSupport::TestCase
+    include Teacher1819ApplicationConstants
+
     test 'application guid is generated on create' do
       teacher_application = build :pd_teacher1819_application
       assert_nil teacher_application.application_guid
@@ -29,6 +32,36 @@ module Pd::Application
 
       assert_equal 'Dr. Dumbledore', application_with_principal_title.principal_greeting
       assert_equal 'Albus Dumbledore', application_without_principal_title.principal_greeting
+    end
+
+    test 'meets criteria says an application meets critera when all YES_NO fields are marked yes' do
+      teacher_application = build :pd_teacher1819_application, response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORES.transform_values {|_| 'Yes'}.to_json
+      assert teacher_application.meets_criteria
+    end
+
+    test 'meets criteria says an application does not meet criteria when any YES_NO fields are marked NO' do
+      teacher_application = build :pd_teacher1819_application, response_scores: {
+        committed: 'No'
+      }.to_json
+      refute teacher_application.meets_criteria
+    end
+
+    test 'meets criteria returns nil when an application does not have YES on all YES_NO fields but has no NOs' do
+      teacher_application = build :pd_teacher1819_application, response_scores: {
+        committed: 'Yes'
+      }.to_json
+      assert_nil teacher_application.meets_criteria
+    end
+
+    test 'total score calculates the sum of all response scores' do
+      teacher_application = build :pd_teacher1819_application, response_scores: {
+        free_lunch_percent: '5',
+        underrepresented_minority_percent: '5',
+        able_to_attend_single: 'Yes',
+        csp_which_grades: nil
+      }.to_json
+
+      assert_equal 10, teacher_application.total_score
     end
   end
 end
