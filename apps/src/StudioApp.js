@@ -1963,7 +1963,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       }
 
       if (!options.embed && !options.noHowItWorks) {
-        var runButton = document.getElementById('runButton');
+        var runButton = document.getElementById('runButtonWrapper');
         var buttonRow = runButton.parentElement;
         var openWorkspace = document.createElement('button');
         openWorkspace.setAttribute('id', 'open-workspace');
