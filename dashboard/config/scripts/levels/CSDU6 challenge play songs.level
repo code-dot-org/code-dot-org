@@ -56,11 +56,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "display_name": "Song Bot"
+    "display_name": "Song Bot",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
