@@ -37,6 +37,19 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
 
+    def send_decision_notification_email
+      # We only want to email unmatched and G3-matched teachers. All teachers
+      # matched with G1 or G2 partners will be emailed by their partners.
+      return if regional_partner && regional_partner.group != 3
+
+      # Accepted, declined, and waitlisted are the only valid "final" states;
+      # all other states shouldn't need emails
+      return unless %w(accepted declined waitlisted).include?(status)
+
+      Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
+      update!(decision_notification_email_sent_at: Time.zone.now)
+    end
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = TEACHER_APPLICATION
