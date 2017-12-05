@@ -695,6 +695,7 @@ FactoryGirl.define do
     association :user, factory: :teacher, strategy: :create
     course 'csp'
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
+    application_guid nil
   end
 
   factory :pd_principal_approval1819_application_hash, class: 'Hash' do

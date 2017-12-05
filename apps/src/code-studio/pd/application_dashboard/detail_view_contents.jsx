@@ -83,7 +83,7 @@ export default class DetailViewContents extends React.Component {
 
   handleScoreChange = (event) => {
     this.setState({
-      response_scores: {...this.state.response_score, [event.target.id]: event.target.value}
+      response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
     });
   }
 
