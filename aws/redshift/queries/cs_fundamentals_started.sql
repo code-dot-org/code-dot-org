@@ -1,213 +1,204 @@
--- Note: reran several of these for June (first individual month since backpopulating), and noticed slightly different counts for previous months.
--- Queries are conditional on tables that can change.
-
 -- New CSF teachers by month
-select count(distinct user_id) value, 'New CSF teachers' metric
-from
-(
-select user_id, min(created_at) date_first_section
-from
-(
-select se.user_id, se.id section_id, se.created_at, count(distinct f.student_user_id) students
-from dashboard_production.sections se
-join dashboard_production.followers f on f.section_id = se.id
-join dashboard_production.user_scripts us on us.user_id = f.student_user_id
-where se.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and us.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-group by 1,2,3
-)
-where students >= 5
-group by 1
-)
-where date_part(month, date_first_section) = 8
-and date_part(year, date_first_section) = 2017
+SELECT COUNT(DISTINCT user_id_teacher) value,
+       'New CSF teachers' metric
+FROM (SELECT user_id_teacher,
+             user_id_student,
+             first_script_started_at,
+             ROW_NUMBER() OVER (PARTITION BY user_id_teacher ORDER BY first_script_started_at ASC) student_progress_rank
+      FROM (SELECT se.user_id user_id_teacher,
+                   us.user_id user_id_student,
+                   MIN(us.started_at) first_script_started_at
+            FROM dashboard_production.sections se
+              JOIN dashboard_production.followers f ON f.section_id = se.id
+              JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
+            WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   us.started_at IS NOT NULL
+            GROUP BY 1,
+                     2))
+WHERE student_progress_rank = 5
+AND   DATE_PART(month,first_script_started_at) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_script_started_at) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2
 
-union all
+UNION ALL
 
 -- New CSF students by month
-select count(distinct user_id) value, 'New CSF students' metric 
-from
-(
-select user_id, min(started_at) date_first_activity
-from
-(
-select us.user_id, us.started_at
-from dashboard_production.user_scripts us
-where us.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-)
-group by 1
-)
-where date_part(month, date_first_activity) = 8
-and date_part(year, date_first_activity) = 2017
+SELECT COUNT(DISTINCT user_id) value,
+       'New CSF students' metric
+FROM (SELECT user_id,
+             MIN(started_at) date_first_activity
+      FROM (SELECT us.user_id,
+                   us.started_at
+            FROM dashboard_production.user_scripts us
+              JOIN dashboard_production.users u ON u.id = us.user_id
+            WHERE us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   u.user_type = 'student')
+      GROUP BY 1)
+WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2
 
-union all
+UNION ALL
 
 -- New CSF students by month, percent female
-select COUNT(distinct case when gender = 'f' then user_id end)::float / COUNT(distinct user_id) value,
-'New CSF students, % female' metric
-from
-(
-select user_id, gender, min(started_at) date_first_activity
-from
-(
-select us.user_id, us.started_at, u.gender
-from dashboard_production.user_scripts us
-join dashboard_production_pii.users u on u.id = us.user_id
-where us.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and gender in ('m', 'f')
-)
-group by 1,2
-)
-where date_part(month, date_first_activity) = 8
-and date_part(year, date_first_activity) = 2017
+SELECT COUNT(DISTINCT CASE WHEN gender = 'f' THEN user_id END)::FLOAT/ COUNT(DISTINCT user_id) value,
+       'New CSF students, % female' metric
+FROM (SELECT user_id,
+             gender,
+             MIN(started_at) date_first_activity
+      FROM (SELECT us.user_id,
+                   us.started_at,
+                   u.gender
+            FROM dashboard_production.user_scripts us
+              JOIN dashboard_production_pii.users u ON u.id = us.user_id
+            WHERE us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   gender IN ('m','f')
+            AND   user_type = 'student')
+      GROUP BY 1,
+               2)
+WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2
 
-union all
+UNION ALL
 
 -- new teachers who started teaching who went through PD
 -- note: no check on when they started teaching vs. when they went through PD.
 -- Could have started teaching before going through PD
-select date_part(month, date_first_section) as month, date_part(year, date_first_section) as year, count(distinct user_id) teachers
-from
-(
-select user_id, min(created_at) date_first_section
-from
-(
-select se.user_id, se.id section_id, se.created_at, count(distinct f.student_user_id) students
-from dashboard_production.sections se
-join dashboard_production.followers f on f.section_id = se.id
-join dashboard_production.user_scripts us on us.user_id = f.student_user_id
-where se.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and us.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and se.user_id in 
-(
-select distinct f.student_user_id user_id
-from followers f
-join sections se on se.id = f.section_id
-where se.section_type = 'csf_workshop'
-union
-select distinct pde.user_id
-from pd_enrollments pde
-join pd_attendances pda on pda.pd_enrollment_id = pde.id
-join pd_workshops pdw on pdw.id = pde.pd_workshop_id 
-where course = 'CS Fundamentals'
-)
-group by 1,2,3
-)
-where students >= 5
-group by 1
-)
---where date_part(month, date_first_section) = 8
---and date_part(year, date_first_section) = 2017
-group by 1,2;
+SELECT COUNT(DISTINCT user_id_teacher) value,
+       'New PDd CSF teachers' metric
+FROM (SELECT user_id_teacher,
+             user_id_student,
+             first_script_started_at,
+             ROW_NUMBER() OVER (PARTITION BY user_id_teacher ORDER BY first_script_started_at ASC) student_progress_rank
+      FROM (SELECT se.user_id user_id_teacher,
+                   us.user_id user_id_student,
+                   MIN(us.started_at) first_script_started_at
+            FROM dashboard_production.sections se
+              JOIN dashboard_production.followers f ON f.section_id = se.id
+              JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
+            WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   us.started_at IS NOT NULL
+            GROUP BY 1,
+                     2))
+WHERE student_progress_rank = 5
+AND   DATE_PART(month,first_script_started_at) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_script_started_at) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+AND   user_id_teacher IN (SELECT DISTINCT f.student_user_id user_id
+                          FROM followers f
+                            JOIN sections se ON se.id = f.section_id
+                          WHERE se.section_type = 'csf_workshop'
+                          UNION
+                          SELECT DISTINCT pde.user_id
+                          FROM pd_enrollments pde
+                            JOIN pd_attendances pda ON pda.pd_enrollment_id = pde.id
+                            JOIN pd_workshops pdw ON pdw.id = pde.pd_workshop_id
+                          WHERE course = 'CS Fundamentals')
+GROUP BY 2
+
+UNION ALL
 
 -- New CSF students by month who are in classrooms with a trained teacher.
 -- note: no check on when their teachers started teaching vs. when they went through PD.
 -- Could have started teaching before going through PD
-select date_part(month, date_first_activity) as month, date_part(year, date_first_activity) as year, count(distinct user_id) students
-from
-(
-select user_id, min(started_at) date_first_activity
-from
-(
-select us.user_id, us.started_at
-from dashboard_production.sections se
-join dashboard_production.followers f on f.section_id = se.id
-join dashboard_production.user_scripts us on us.user_id = f.student_user_id
-where se.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and us.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and se.user_id in 
-(
-select distinct f.student_user_id user_id
-from followers f
-join sections se on se.id = f.section_id
-where se.section_type = 'csf_workshop'
-union
-select distinct pde.user_id
-from pd_enrollments pde
-join pd_attendances pda on pda.pd_enrollment_id = pde.id
-join pd_workshops pdw on pdw.id = pde.pd_workshop_id 
-where course = 'CS Fundamentals'
-)
-)
-group by 1
-)
---where date_part(month, date_first_activity) = 8
---and date_part(year, date_first_activity) = 2017
-group by 1,2;
+SELECT COUNT(DISTINCT user_id) value,
+       'New PDd CSF students' metric
+FROM (SELECT user_id,
+             MIN(started_at) date_first_activity
+      FROM (SELECT us.user_id,
+                   us.started_at
+            FROM dashboard_production.sections se
+              JOIN dashboard_production.followers f ON f.section_id = se.id
+              JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
+            WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            AND   se.user_id IN (SELECT DISTINCT f.student_user_id user_id
+                                 FROM followers f
+                                   JOIN sections se ON se.id = f.section_id
+                                 WHERE se.section_type = 'csf_workshop'
+                                 UNION
+                                 SELECT DISTINCT pde.user_id
+                                 FROM pd_enrollments pde
+                                   JOIN pd_attendances pda ON pda.pd_enrollment_id = pde.id
+                                   JOIN pd_workshops pdw ON pdw.id = pde.pd_workshop_id
+                                 WHERE course = 'CS Fundamentals'))
+      GROUP BY 1)
+WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2
 
+UNION ALL
 
 -- pct_female, new CSF students by month who are in classrooms with a trained teacher.
 -- note: no check on when their teachers started teaching vs. when they went through PD.
 -- Could have started teaching before going through PD
-select date_part(month, date_first_activity) as month, date_part(year, date_first_activity) as year, 
-COUNT(distinct case when gender = 'f' then user_id end)::float / COUNT(distinct user_id) pct_female
-from
-(
-select user_id, gender, min(started_at) date_first_activity
-from
-(
-select us.user_id, us.started_at, u.gender
-from dashboard_production.sections se
-join dashboard_production.followers f on f.section_id = se.id
-join dashboard_production.user_scripts us on us.user_id = f.student_user_id
-join dashboard_production_pii.users u on u.id = us.user_id
-where se.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and us.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
-and u.gender in ('m','f')
-and se.user_id in 
-(
-select distinct f.student_user_id user_id
-from followers f
-join sections se on se.id = f.section_id
-where se.section_type = 'csf_workshop'
-union
-select distinct pde.user_id
-from pd_enrollments pde
-join pd_attendances pda on pda.pd_enrollment_id = pde.id
-join pd_workshops pdw on pdw.id = pde.pd_workshop_id 
-where course = 'CS Fundamentals'
-)
-)
-group by 1,2
-)
---where date_part(month, date_first_activity) = 8
---and date_part(year, date_first_activity) = 2017
-group by 1,2;
-
--- % high needs among students in CSF classrooms with PD'd teachers
--- Only about 10K students (out of ~100K per month) who are starting with PD teachers we actually have data on their FARM status?
-SELECT DATE_PART(month,date_first_activity) AS month,
-       DATE_PART(year,date_first_activity) AS year,
-       count(*),
-       AVG(high_needs::FLOAT) pct_high_needs
-FROM (SELECT us.user_id,
-                   high_needs,
-                   min(us.started_at) date_first_activity
+SELECT COUNT(DISTINCT CASE WHEN gender = 'f' THEN user_id END)::FLOAT/ COUNT(DISTINCT user_id) value,
+       'New CSF students, % female' metric
+FROM (SELECT user_id,
+             gender,
+             MIN(started_at) date_first_activity
+      FROM (SELECT us.user_id,
+                   us.started_at,
+                   u.gender
             FROM dashboard_production.sections se
               JOIN dashboard_production.followers f ON f.section_id = se.id
               JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
-              join dashboard_production.users u on u.id = us.user_id
-              JOIN dashboard_production_pii.pd_enrollments pde ON pde.user_id = se.user_id
-              JOIN dashboard_production.school_infos si ON si.id = pde.school_info_id
-              join school_stats ss on ss.school_id = si.school_id
+              JOIN dashboard_production_pii.users u ON u.id = us.user_id
             WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
-            and u.user_type = 'student'
-            and se.user_id in 
-            (
-            select distinct f.student_user_id user_id
-            from followers f
-            join sections se on se.id = f.section_id
-            where se.section_type = 'csf_workshop'
-            union
-            select distinct pde.user_id
-            from pd_enrollments pde
-            join pd_attendances pda on pda.pd_enrollment_id = pde.id
-            join pd_workshops pdw on pdw.id = pde.pd_workshop_id 
-            where course = 'CS Fundamentals'
-            )
-            GROUP BY 1,2)
---where date_part(month, date_first_activity) = 8
---and date_part(year, date_first_activity) = 2017
-GROUP BY 1,
-         2;
+            AND   u.gender IN ('m','f')
+            AND   se.user_id IN (SELECT DISTINCT f.student_user_id user_id
+                                 FROM followers f
+                                   JOIN sections se ON se.id = f.section_id
+                                 WHERE se.section_type = 'csf_workshop'
+                                 UNION
+                                 SELECT DISTINCT pde.user_id
+                                 FROM pd_enrollments pde
+                                   JOIN pd_attendances pda ON pda.pd_enrollment_id = pde.id
+                                   JOIN pd_workshops pdw ON pdw.id = pde.pd_workshop_id
+                                 WHERE course = 'CS Fundamentals'))
+      GROUP BY 1,
+               2)
+--WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+--AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2
+
+UNION ALL
+
+-- % high needs among students in CSF classrooms with PD'd teachers
+-- Only about 10K students (out of ~100K per month) who are starting with PD teachers we actually have data on their FARM status?
+SELECT AVG(high_needs::FLOAT) value,
+       '% high needs among PDd CSF students' metric,
+       DATE_PART(month,date_first_activity),
+       DATE_PART(year,date_first_activity)
+FROM (SELECT us.user_id,
+             high_needs,
+             MIN(us.started_at) date_first_activity
+      FROM dashboard_production.sections se
+        JOIN dashboard_production.followers f ON f.section_id = se.id
+        JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
+        JOIN dashboard_production.users u ON u.id = us.user_id
+        JOIN dashboard_production_pii.pd_enrollments pde ON pde.user_id = se.user_id
+        JOIN dashboard_production.school_infos si ON si.id = pde.school_info_id
+        JOIN school_stats ss ON ss.school_id = si.school_id
+      WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+      AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+      AND   u.user_type = 'student'
+      AND   se.user_id IN (SELECT DISTINCT f.student_user_id user_id
+                           FROM followers f
+                             JOIN sections se ON se.id = f.section_id
+                           WHERE se.section_type = 'csf_workshop'
+                           UNION
+                           SELECT DISTINCT pde.user_id
+                           FROM pd_enrollments pde
+                             JOIN pd_attendances pda ON pda.pd_enrollment_id = pde.id
+                             JOIN pd_workshops pdw ON pdw.id = pde.pd_workshop_id
+                           WHERE course = 'CS Fundamentals')
+      GROUP BY 1,
+               2)
+--WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+--AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2,3,4;
+
