@@ -50,6 +50,7 @@ Dashboard::Application.routes.draw do
   post 'maker/schoolchoice', to: 'maker#schoolchoice'
   post 'maker/complete', to: 'maker#complete'
   get 'maker/application_status', to: 'maker#application_status'
+  post 'maker/override', to: 'maker#override'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
