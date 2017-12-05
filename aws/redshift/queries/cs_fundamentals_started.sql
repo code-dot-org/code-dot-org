@@ -170,9 +170,7 @@ UNION ALL
 -- % high needs among students in CSF classrooms with PD'd teachers
 -- Only about 10K students (out of ~100K per month) who are starting with PD teachers we actually have data on their FARM status?
 SELECT AVG(high_needs::FLOAT) value,
-       '% high needs among PDd CSF students' metric,
-       DATE_PART(month,date_first_activity),
-       DATE_PART(year,date_first_activity)
+       '% high needs among PDd CSF students' metric
 FROM (SELECT us.user_id,
              high_needs,
              MIN(us.started_at) date_first_activity
@@ -198,7 +196,7 @@ FROM (SELECT us.user_id,
                            WHERE course = 'CS Fundamentals')
       GROUP BY 1,
                2)
---WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
---AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
-GROUP BY 2,3,4;
+WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2;
 
