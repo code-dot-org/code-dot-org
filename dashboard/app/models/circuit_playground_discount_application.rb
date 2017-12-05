@@ -104,6 +104,8 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     end
   end
 
+  # Provides admin with information about the application status of a user's
+  # application, whether or not the user has started the application process
   def self.admin_application_status(user)
     application = CircuitPlaygroundDiscountApplication.find_by_user_id(user.id)
 
