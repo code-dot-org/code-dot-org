@@ -8,7 +8,31 @@ module Pd::Application
 
       mail(
         to: @application.user.email,
-        subject: 'We’ve received your facilitator application!'
+        subject: "We've received your facilitator application!"
+      )
+    end
+
+    def declined(facilitator_application)
+      puts 'sending decline'
+      raise "Unexpected #{facilitator_application.class}" unless facilitator_application.is_a? Facilitator1819Application
+
+      @application = facilitator_application
+
+      mail(
+        to: @application.user.email,
+        subject: "Your Code.org facilitator application status"
+      )
+    end
+
+    def waitlisted(facilitator_application)
+      puts 'sending waitlisted'
+      raise "Unexpected #{facilitator_application.class}" unless facilitator_application.is_a? Facilitator1819Application
+
+      @application = facilitator_application
+
+      mail(
+        to: @application.user.email,
+        subject: "Your Code.org facilitator application status"
       )
     end
   end
