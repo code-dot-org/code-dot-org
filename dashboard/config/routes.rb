@@ -49,6 +49,7 @@ Dashboard::Application.routes.draw do
   post 'maker/apply', to: 'maker#apply'
   post 'maker/schoolchoice', to: 'maker#schoolchoice'
   post 'maker/complete', to: 'maker#complete'
+  get 'maker/application_status', to: 'maker#application_status'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
