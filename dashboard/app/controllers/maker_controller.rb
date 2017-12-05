@@ -67,18 +67,48 @@ class MakerController < ApplicationController
     render json: {code: code.code}
   end
 
+  def user_from_params
+    user_id = params.require(:user)
+    # TODO: similar logic to assume_identity. can/should we share?
+    User.where(id: user_id).first if user_id.to_i.to_s == user_id ||
+      User.where(username: user_id).first ||
+      User.find_by_email_or_hashed_email(user_id)
+  end
+
   def application_status
     return head :forbidden unless current_user.admin?
 
-    user_id = params.require(:user)
-    # TODO: similar logic to assume_identity. can/should we share?
-    user = User.where(id: user_id).first if user_id.to_i.to_s == user_id
-    user ||= User.where(username: user_id).first
-    user ||= User.find_by_email_or_hashed_email(user_id)
+    user = user_from_params
 
-    application = CircuitPlaygroundDiscountApplication.admin_application_status(user)
-    # In the case where the user has a school, but hasn't confirmed in the application, we
-    # still need to know whether the school meets the requirements
-    render json: {application: application}
+    render json: {application: CircuitPlaygroundDiscountApplication.admin_application_status(user)}
+  end
+
+  def override
+    return head :forbidden unless current_user.admin?
+
+    full_discount = params.require(:full_discount)
+    user = user_from_params
+
+    application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(user.studio_person_id)
+
+    if application
+      # If we already have a code, void it
+      if application.circuit_playground_discount_code_id
+        application.circuit_playground_discount_code.update!(voided_at: Time.now)
+      end
+      application.update!(
+        admin_set_status: true,
+        full_discount: full_discount == 'true',
+        circuit_playground_discount_code_id: nil
+      )
+    else
+      CircuitPlaygroundDiscountApplication.create!(
+        user_id: user.id,
+        admin_set_status: true,
+        full_discount: full_discount == 'true'
+      )
+    end
+
+    render json: {application: CircuitPlaygroundDiscountApplication.admin_application_status(user)}
   end
 end

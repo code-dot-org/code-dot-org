@@ -27,8 +27,7 @@ const styles = {
 
 export default class DiscountAdminOverride extends Component {
   state = {
-    submittingTeacher: false,
-    submittingOverride: false,
+    submitting: false,
     teacherID: '',
     statusPD: Status.UNKNOWN,
     statusStudentCount: Status.UNKNOWN,
@@ -38,13 +37,14 @@ export default class DiscountAdminOverride extends Component {
     applicationSchool: {},
     adminOverride: 'None',
     fullDiscount: false,
-    discountCode: ''
+    discountCode: '',
+    overrideValue: null,
   };
 
   handleSubmitId = () => {
     const teacherID = this.teacherID.value;
     this.setState({
-      submittingTeacher: true
+      submitting: true
     });
     $.ajax({
       url: "/maker/application_status",
@@ -54,38 +54,66 @@ export default class DiscountAdminOverride extends Component {
         user: teacherID
       }
     }).done(data => {
-      const { application } = data;
-      this.setState({
-        teacherID,
-        submittingTeacher: false,
-        statusPD: application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED,
-        statusStudentCount: application.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED,
-        statusYear: (application.unit_6_intention === 'yes1718' ||
-          application.unit_6_intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
-        unit6Intention: application.unit_6_intention,
-        userSchool: application.user_school,
-        applicationSchool: application.application_school,
-        adminOverride: application.admin_set_status ?
-          (application.full_discount ? 'Full Discount' : 'Partial Discount') :
-          'None',
-        fullDiscount: application.full_discount,
-        discountCode: application.discount_code,
-      });
+      this.updateApplicationStatus(data, teacherID);
     }).fail((jqXHR, textStatus) => {
       console.log('failure');
       this.setState({
-        submittingTeacher: false
+        submitting: false
       });
     });
   }
 
+  /**
+   * Updates our local state based on data received from the server, either from
+   * calling GET /maker/application_status, or having added an override by doing
+   * a POST to /maker/override
+   */
+  updateApplicationStatus(data, teacherID) {
+    const { application } = data;
+    this.setState({
+      teacherID,
+      submitting: false,
+      statusPD: application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED,
+      statusStudentCount: application.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED,
+      statusYear: (application.unit_6_intention === 'yes1718' ||
+        application.unit_6_intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
+      unit6Intention: application.unit_6_intention,
+      userSchool: application.user_school,
+      applicationSchool: application.application_school,
+      adminOverride: application.admin_set_status ?
+        (application.full_discount ? 'Full Discount' : 'Partial Discount') :
+        'None',
+      fullDiscount: application.full_discount,
+      discountCode: application.discount_code,
+      overrideValue: null,
+    });
+  }
+
   handleDiscountCodeOverride = () => {
-    this.setState({submittingOverride: true});
-    setTimeout(() => {
+    const teacherID = this.state.teacherID;
+    this.setState({submitting: true});
+    $.ajax({
+      url: "/maker/override",
+      type: "post",
+      dataType: "json",
+      data: {
+        user: teacherID,
+        full_discount: this.state.overrideValue === 'full'
+      }
+    }).done(data => {
+      this.updateApplicationStatus(data, teacherID);
+    }).fail((jqXHR, textStatus) => {
+      console.log('failure');
       this.setState({
-        submittingOverride: false
+        submitting: false
       });
-    }, 1000);
+    });
+  }
+
+  handleOverrideChange = event => {
+    this.setState({
+      overrideValue: event.target.value
+    });
   }
 
   render() {
@@ -105,9 +133,9 @@ export default class DiscountAdminOverride extends Component {
             />
             <Button
               color={Button.ButtonColor.orange}
-              text={this.state.submittingTeacher ? i18n.submitting() : i18n.submit()}
+              text={this.state.submitting ? i18n.submitting() : i18n.submit()}
               onClick={this.handleSubmitId}
-              disabled={this.state.submittingTeacher}
+              disabled={this.state.submitting}
             />
           </div>
         </label>
@@ -199,6 +227,8 @@ export default class DiscountAdminOverride extends Component {
                   type="radio"
                   name="discountAmount"
                   value="full"
+                  checked={this.state.overrideValue === "full"}
+                  onChange={this.handleOverrideChange}
                 />
                 Teacher should receive 100% discount code (kit price would become $0)
               </label>
@@ -208,15 +238,17 @@ export default class DiscountAdminOverride extends Component {
                   type="radio"
                   name="discountAmount"
                   value="partial"
+                  checked={this.state.overrideValue === "partial"}
+                  onChange={this.handleOverrideChange}
                 />
                 Teacher should receive partial discount code (kit price would become $97.50)
               </label>
             </div>
             <Button
               color={Button.ButtonColor.orange}
-              text={this.state.submittingOverride ? i18n.submitting() : i18n.submit()}
+              text={this.state.submitting ? i18n.submitting() : i18n.submit()}
               onClick={this.handleDiscountCodeOverride}
-              disabled={this.state.submittingOverride}
+              disabled={this.state.submitting || !this.state.overrideValue}
             />
           </div>
         }
