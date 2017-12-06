@@ -2,25 +2,27 @@ import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
 
 
-const singleLineLayoutStyles = {
-  display: "table-cell",
-  width: 210,
-  verticalAlign: "middle",
-  minHeight: 42,
-  fontSize: 13,
-  fontFamily: '"Gotham 4r", sans-serif',
-  color: "#333",
-  padding: 0,
-};
-const singleLineContainerStyles = {
-  display: "table",
-  width: "100%",
-};
-const selectStyle = {
-  width: 390,
-  verticalAlign: 'top',
-  marginBottom: '5px',
-  marginTop: '5px',
+const styles = {
+  singleLineLayoutStyles: {
+    display: "table-cell",
+    width: 210,
+    verticalAlign: "middle",
+    minHeight: 42,
+    fontSize: 13,
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: "#333",
+    padding: 0,
+  },
+  singleLineContainerStyles: {
+    display: "table",
+    width: "100%",
+  },
+  selectStyle: {
+    width: 390,
+    verticalAlign: 'top',
+    marginBottom: '5px',
+    marginTop: '5px',
+  },
 };
 
 export default class SchoolTypeDropdown extends Component {
@@ -37,15 +39,15 @@ export default class SchoolTypeDropdown extends Component {
 
   render() {
     return (
-      <div style={singleLineContainerStyles}>
-        <div style={singleLineLayoutStyles} >{i18n.signupFormSchoolType()}</div>
+      <div style={styles.singleLineContainerStyles}>
+        <div style={styles.singleLineLayoutStyles} >{i18n.signupFormSchoolType()}</div>
         <select
           id="school-type"
           name={this.props.fieldName}
           type="select"
           onChange={this.props.onChange}
           value={this.props.value}
-          style={selectStyle}
+          style={styles.selectStyle}
         >
           <option
             disabled={true}
