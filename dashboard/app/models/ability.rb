@@ -137,8 +137,9 @@ class Ability
           can [:read, :quick_view, :update], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
 
           # G3 regional partners should have full management permission
-          if user.regional_partners.where(group: 3).count
-            can :manage, Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.where(group: 3).pluck(:id)
+          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
+          unless group_3_partner_ids.empty?
+            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
           end
         end
       end
