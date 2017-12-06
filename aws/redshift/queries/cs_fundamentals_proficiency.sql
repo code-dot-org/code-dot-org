@@ -50,7 +50,7 @@ SELECT COUNT(0) value, 'Level 3 proficient students' metric
 FROM users 
 INNER JOIN user_proficiencies ON user_proficiencies.user_id = users.id 
 WHERE user_type = 'student' 
-AND cast(basic_proficiency_at as date) <= '2017-08-31'
+AND cast(basic_proficiency_at as date) <= last_day(dateadd(month, -1, getdate())) -- assumes you are running this query in the month following the month you are reporting on
 
 union all
 
@@ -58,7 +58,7 @@ SELECT COUNT(distinct u.id) * (COUNT(distinct case when gender = 'f' then u.id e
 FROM users u
 INNER JOIN user_proficiencies ON user_proficiencies.user_id = u.id 
 WHERE user_type = 'student' 
-AND cast(basic_proficiency_at as date) <= '2017-08-31'
+AND cast(basic_proficiency_at as date) <= last_day(dateadd(month, -1, getdate()))
 
 union all
 
