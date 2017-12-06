@@ -404,20 +404,31 @@ module Pd::Application
     end
 
     def meets_criteria
-      responses = Teacher1819ApplicationConstants::CRITERIA_SCORES.merge(response_score_hash).values
+      response_scores = response_scores_hash
+      scored_questions =
+        if course == 'csd'
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD
+        elsif course == 'csp'
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP
+        end
+
+      responses = scored_questions.map do |key|
+        response_scores[key]
+      end
+
       if responses.uniq == [YES]
         # If all resolve to Yes, applicant meets criteria
-        true
+        :meets
       elsif responses.include? NO
         # If any are No, applicant does not meet criteria
-        false
+        :does_not_meet
       else
-        nil
+        :incomplete
       end
     end
 
     def total_score
-      response_score_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
     end
   end
 end
