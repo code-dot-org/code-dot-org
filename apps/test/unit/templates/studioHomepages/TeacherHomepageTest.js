@@ -32,7 +32,7 @@ describe('TeacherHomepage', () => {
         isEnglish={true}
       />
     );
-    const headerBanner = wrapper.find('HeaderBanner');
+    const headerBanner = wrapper.find('Connect(HeaderBanner)');
     assert.deepEqual(headerBanner.props(), {
       headingText: "My Dashboard",
       short: true
