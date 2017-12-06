@@ -46,6 +46,13 @@ module Pd::Application
       # all other states shouldn't need emails
       return unless %w(accepted declined waitlisted).include?(status)
 
+      # TODO: elijah - enable acceptance emails
+      # The template for the acceptance email is unfinished, and will need the
+      # workshop assignment work to be done before being unblocked (since the
+      # content of the email not only depends on which kind of workshop they end
+      # up with, but also references the specific workshop dates)
+      return if status == "accepted"
+
       Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
       update!(decision_notification_email_sent_at: Time.zone.now)
     end
