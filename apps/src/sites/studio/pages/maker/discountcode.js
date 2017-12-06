@@ -28,10 +28,7 @@ $(document).ready(() => {
   ReactDOM.render(
     <div>
       {is_admin &&
-        <DiscountAdminOverride
-          statusPD={Status.FAILED}
-          statusStudentCount={Status.FAILED}
-        />
+        <DiscountAdminOverride/>
       }
       {!is_admin &&
         <EligibilityChecklist
