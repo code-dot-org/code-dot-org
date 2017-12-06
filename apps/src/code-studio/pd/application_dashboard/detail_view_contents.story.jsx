@@ -20,6 +20,8 @@ export default storybook => {
               district_name: 'District Name',
               email: 'email',
               application_type: 'Facilitator',
+              meets_criteria: 'Yes',
+              bonus_points: 15,
               form_data: {
                 firstName: 'First Name',
                 lastName: 'Last Name',
@@ -34,7 +36,7 @@ export default storybook => {
               }
             }}
             viewType="facilitator"
-            updateProps={() => {}}
+            loadFunction={() => {}}
           />
         )
       }
