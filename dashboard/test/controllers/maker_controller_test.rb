@@ -5,6 +5,7 @@ class MakerControllerTest < ActionController::TestCase
 
   setup do
     @teacher = create :teacher
+    @admin = create :admin
     @school = create :school
   end
 
@@ -86,7 +87,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "schoolchoice: fails if already confirmed school" do
     sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718', has_confirmed_school: true)
+    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718', school_id: @school.id)
 
     post :schoolchoice, params: {nces: @school.id}
     assert_response :forbidden
@@ -130,7 +131,7 @@ class MakerControllerTest < ActionController::TestCase
     assert_response :forbidden
 
     # has confirmed school, but already has a code
-    application.update!(has_confirmed_school: true, circuit_playground_discount_code_id: 123)
+    application.update!(school_id: @school.id, circuit_playground_discount_code_id: 123)
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
   end
@@ -141,7 +142,7 @@ class MakerControllerTest < ActionController::TestCase
     CircuitPlaygroundDiscountApplication.create!(
       user_id: @teacher.id,
       unit_6_intention: 'yes1718',
-      has_confirmed_school: true,
+      school_id: @school.id,
       full_discount: true
     )
     CircuitPlaygroundDiscountCode.create!(
@@ -154,5 +155,112 @@ class MakerControllerTest < ActionController::TestCase
     assert_response :success
     expected = {"code" => "FAKE100_asdf123"}
     assert_equal expected, JSON.parse(@response.body)
+  end
+
+  test "application_status: fails if not admin" do
+    sign_in @teacher
+
+    get :application_status, params: {user: @teacher.id}
+    assert_response :forbidden
+  end
+
+  test "application_status: works for user without in progress application" do
+    sign_in @admin
+
+    get :application_status, params: {user: @teacher.id}
+    assert_response :success
+    refute_nil JSON.parse(@response.body)['application']
+    # actual contents tested in CircuitPlaygroundDiscountApplication tests
+  end
+
+  test "application_status: works for user with in progress application" do
+    sign_in @admin
+
+    CircuitPlaygroundDiscountApplication.create!(
+      user_id: @teacher.id,
+      unit_6_intention: 'yes1718',
+      school_id: @school.id,
+      full_discount: true
+    )
+
+    get :application_status, params: {user: @teacher.id}
+    assert_response :success
+    refute_nil JSON.parse(@response.body)['application']
+    # actual contents tested in CircuitPlaygroundDiscountApplication tests
+  end
+
+  test "override: fails if not admin" do
+    sign_in @teacher
+
+    post :override, params: {user: @teacher.id, full_discount: true}
+    assert_response :forbidden
+  end
+
+  test "override: can override discount for a user that has not started an application" do
+    sign_in @admin
+
+    assert_equal 0, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
+
+    post :override, params: {user: @teacher.id, full_discount: true}
+    assert_response :success
+    expected = {
+      "application" => {
+        "is_pd_eligible" => false,
+        "is_progress_eligible" => false,
+        "user_school" => {
+          "id" => nil,
+          "name" => nil,
+          "high_needs" => nil,
+        },
+        "application_school" => {
+          "id" => nil,
+          "name" => nil,
+          "high_needs" => nil,
+        },
+        "unit_6_intention" => nil,
+        "full_discount" => true,
+        "admin_set_status" => true,
+        "discount_code" => nil,
+      }
+    }
+    assert_equal expected, JSON.parse(@response.body)
+
+    assert_equal 1, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
+  end
+
+  test "override: can update an existing application that does not yet have a code" do
+    sign_in @admin
+
+    # Application in which user has answered question about unit6 intentions, but
+    # has not yet confirmed school
+    CircuitPlaygroundDiscountApplication.create!(
+      user_id: @teacher.id,
+      unit_6_intention: 'yes1718',
+    )
+    post :override, params: {user: @teacher.id, full_discount: true}
+    assert_response :success
+    expected = {
+      "application" => {
+        "is_pd_eligible" => false,
+        "is_progress_eligible" => false,
+        "user_school" => {
+          "id" => nil,
+          "name" => nil,
+          "high_needs" => nil,
+        },
+        "application_school" => {
+          "id" => nil,
+          "name" => nil,
+          "high_needs" => nil,
+        },
+        "unit_6_intention" => "yes1718",
+        "full_discount" => true,
+        "admin_set_status" => true,
+        "discount_code" => nil,
+      }
+    }
+    assert_equal expected, JSON.parse(@response.body)
+
+    assert_equal 1, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
   end
 end

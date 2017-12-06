@@ -1,11 +1,10 @@
 import React from 'react';
 import ResourceCard from './ResourceCard';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 export default storybook => {
   return storybook
     .storiesOf('ResourceCard', module)
-    .withReduxStore({isRtl})
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'tool card',

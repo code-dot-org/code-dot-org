@@ -9,7 +9,6 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 class CourseBlocksTools extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
   };
 
   cards = [
@@ -46,9 +45,7 @@ class CourseBlocksTools extends Component {
   ];
 
   render() {
-    const { isEnglish, isRtl } = this.props;
-
-    const headingText = isEnglish
+    const headingText = this.props.isEnglish
       ? i18n.courseBlocksToolsTitleTeacher()
       : i18n.courseBlocksToolsTitleNonEn();
 
@@ -56,7 +53,6 @@ class CourseBlocksTools extends Component {
       <ContentContainer
         heading={headingText}
         description={i18n.standaloneToolsDescription()}
-        isRtl={isRtl}
       >
         <ResourceCardResponsiveContainer>
           {this.cards.map(

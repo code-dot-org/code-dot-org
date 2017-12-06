@@ -85,36 +85,36 @@ class Congrats extends Component {
     };
 
     return (
-      <div style={contentStyle}>
-        <Certificate
-          tutorial={tutorial}
-          certificateId={certificateId}
-          isRtl={isRtl}
-          responsive={this.responsive}
-          randomDonorTwitter={randomDonorTwitter}
-        />
-        {userType === "teacher" && isEnglish && (
-          <TeachersBeyondHoc
+        <div style={contentStyle}>
+          <Certificate
+            tutorial={tutorial}
+            certificateId={certificateId}
+            isRtl={isRtl}
+            responsive={this.responsive}
+            randomDonorTwitter={randomDonorTwitter}
+          />
+          {userType === "teacher" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+          <StudentsBeyondHoc
+            completedTutorialType={tutorialType}
+            MCShareLink={MCShareLink}
             responsive={this.responsive}
             isRtl={isRtl}
+            userType={userType}
+            userAge={userAge}
+            isEnglish={isEnglish}
           />
-        )}
-        <StudentsBeyondHoc
-          completedTutorialType={tutorialType}
-          MCShareLink={MCShareLink}
-          responsive={this.responsive}
-          isRtl={isRtl}
-          userType={userType}
-          userAge={userAge}
-          isEnglish={isEnglish}
-        />
-        {userType === "signedOut" && isEnglish && (
-          <TeachersBeyondHoc
-            responsive={this.responsive}
-            isRtl={isRtl}
-          />
-        )}
-      </div>
+          {userType === "signedOut" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+        </div>
     );
   }
 }

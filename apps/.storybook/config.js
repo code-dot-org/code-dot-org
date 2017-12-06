@@ -6,6 +6,8 @@ import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/c
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 import experiments from '@cdo/apps/util/experiments';
 import {createStore, combineReducers} from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 
 import '../style/common.scss';
@@ -105,12 +107,13 @@ storybook.setAddon({
 });
 
 storybook.setAddon({
-  withReduxStore(reducers = {}, actions = []) {
+  withReduxStore(reducers = {}) {
     this.addDecorator(story => {
-      this.store = createStore(combineReducers(reducers));
-
-      actions.forEach(action => this.store.dispatch(action));
-
+      this.store = createStore(combineReducers({
+        isRtl,
+        responsive,
+        ...reducers,
+      }));
       return (
         <Provider store={this.store}>
           {story()}

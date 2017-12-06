@@ -1,6 +1,6 @@
 import {PropTypes} from 'react';
 import FormController from '../../form_components/FormController';
-import PrincipalApprovalComponent from './PrincipalApprovalFormComponent';
+import PrincipalApprovalComponent from './PrincipalApprovalComponent';
 
 export default class PrincipalApproval1819Application extends FormController {
   static propTypes = {
@@ -26,6 +26,7 @@ export default class PrincipalApproval1819Application extends FormController {
       lastName: props.teacherApplication.principal_last_name,
       title: props.teacherApplication.principal_title,
       email: props.teacherApplication.principal_email,
+      course: props.teacherApplication.course
     });
   }
   /**

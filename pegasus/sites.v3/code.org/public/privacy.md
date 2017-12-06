@@ -5,7 +5,7 @@ theme: responsive
 
 # Privacy Policy
 
-Date of Last Revision: October 25, 2017
+Date of Last Revision: December 5, 2017
 
 
 ## About Code.org
@@ -94,7 +94,7 @@ If you decide to register for a Code.org account through an Authentication Servi
 You may revoke Code.org’s access to your account on any Authentication Service at any time by updating the appropriate settings in the account preferences of the respective Authentication Service. You should check your privacy settings on each Authentication Service to understand and change the information sent to us through each Authentication Service. Please review each Authentication Service’s terms of use and privacy policies carefully before using their services and connecting to our Website.
 
 ## Other Services Provided by Code.org
-When you use certain other features of our Website, such as signing forms or petitions to help advocate for Code.org, participating in a workshop, bringing Code.org programs to your school or district, donating to Code.org, purchasing t-shirts or other items, or participating in online surveys, Code.org may ask you to provide Personal Information including your full name, email address, and postal code or school street address, as well as your billing and/or shipping information when necessary to complete a purchase or make a donation. The information is used to enable your participation in the relevant feature and to send you occasional emails with information about Code.org that we feel may interest you. All non-transactional emails we send include an “unsubscribe” link. The one exception to this paragraph is when a User under the age of 13 signs our online petition supporting Code.org’s mission, any name or email address they provide is deleted from our servers and thus never used.
+When you use certain other features of our Website, such as signing forms or petitions to help advocate for Code.org, providing information to put your school on the map of schools teaching Computer Science, participating in a workshop, bringing Code.org programs to your school or district, donating to Code.org, purchasing t-shirts or other items, or participating in online surveys, Code.org may ask you to provide Personal Information including your full name, email address, school name, and postal code or school street address, as well as your billing and/or shipping information when necessary to complete a purchase or make a donation. The information is used to enable your participation in the relevant feature and to send you occasional emails with information about Code.org that we feel may interest you. All non-transactional emails we send include an “unsubscribe” link. The one exception to this paragraph is when a User under the age of 13 signs our online petition supporting Code.org’s mission, any name or email address they provide is deleted from our servers and thus never used.
 
 If you enter your name to print a certificate of completion upon finishing our courses we save the name you enter in order to let you share your certificate digitally.
 
@@ -197,11 +197,13 @@ In particular, we do not share any Personal Information you provide with our don
 
 If your use of the Code.org Website is in the context of a partnership with your school or school district, we may allow the school or school district to access the same Student progress report that is also shared with your Teacher(s).
 
-### We may share Teacher information with training facilitators and our Regional Partners
+### We may share teacher information with training facilitators and our Regional Partners
 
 Part of our educational program is to offer professional learning workshops to prepare teachers to offer computer science courses. If you are a Teacher participating in one of these workshops, your name and contact information will be shared with the facilitator and/or professional learning organization hosting the workshop, and they may have access to your continued progress in our online professional learning courses in order to coach or facilitate your learning. They may also be able to see your overall class progress to support your classroom. They will not have any data on specific Students. If Code.org is paying for your travel to our professional learning workshops for Teachers, we will - with your explicit permission - share your name and contact information with our travel partner to facilitate booking your travel.
 
 In the context of partnerships between Code.org and school districts, we may also share this workshop attendance and professional learning data with the school district that employs the Teacher, in order to allow school districts to compensate Teachers in situations where school districts have such an arrangement with their Teachers.
+
+We also provide teachers other opportunities (such as when adding their school to the map of schools teaching Computer Science) to share their contact information — at their option and under their control — with a Code.org Regional Partner so that teachers can be contacted about local professional learning workshops, resources, and events. 
 
 ### We may share de-identified information on school or district usage with our Regional Partners
 

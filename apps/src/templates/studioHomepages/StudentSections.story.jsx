@@ -1,7 +1,5 @@
 import React from 'react';
 import StudentSections from './StudentSections';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 const sections = [
   {
@@ -38,7 +36,7 @@ const sections = [
 
 export default storybook => storybook
   .storiesOf('StudentSections', module)
-  .withReduxStore({responsive, isRtl})
+  .withReduxStore()
   .addStoryTable([
     {
       name: 'Sections - student, no sections yet',

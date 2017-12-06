@@ -11,7 +11,8 @@ module Teacher1819ApplicationConstants
     section_2_your_school: 'Your School',
     section_3_choose_your_program: 'Choose Your Program',
     section_4_summer_workshop: 'Summer Workshop',
-    section_5_submission: 'Submission'
+    section_5_submission: 'Submission',
+    detail_view_principal_approval: 'Principal Approval'
   }
 
   PAGE_LABELS = {
@@ -155,6 +156,15 @@ module Teacher1819ApplicationConstants
         'By submitting this application, I agree to share my contact information
          and application with Code.org’s Regional Partners.'
       )
+    },
+
+    detail_view_principal_approval: {
+      principal_approval: 'Principal approves this application',
+      schedule_confirmed: 'Principal has confirmed that CS will be on the master schedule',
+      wont_replace_existing_course: 'Will this replace an existing CS course?',
+      diversity_recruitment: 'Principal has committed to recruiting diverse students',
+      free_lunch_percent: 'Percent of students that receive free/reduced lunch',
+      underrepresented_minority_percent: 'Percent of students that are underrepresented minorities'
     }
   }
 
@@ -170,16 +180,23 @@ module Teacher1819ApplicationConstants
 
   VALID_SCORES = {
     regional_partner_name: YES_NO,
-    # Need to include whether the participant is new
+    # TODO: (mehal) Include whether or not the participant is a new code.org participant
     committed: YES_NO,
     able_to_attend_single: YES_NO,
     csp_which_grades: YES_NO,
     csp_course_hours_per_year: YES_NO,
     csd_which_grades: YES_NO,
-    csp_terms_per_year: YES_NO,
-    taught_in_past: [0, 2],
-    csp_ap_exam: [0, 2]
+    csd_terms_per_year: YES_NO,
+    principal_approval: YES_NO,
+    schedule_confirmed: YES_NO,
+    diversity_recruitment: YES_NO,
+    free_lunch_percent: [5, 0],
+    underrepresented_minority_percent: [5, 0],
+    wont_replace_existing_course: [5, 0],
+    taught_in_past: [2, 0],
+    csp_ap_exam: [2, 0]
   }
 
-  ALL_LABELS = PAGE_LABELS.values.reduce(:merge)
+  CRITERIA_SCORE_QUESTIONS_CSP = VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
+  CRITERIA_SCORE_QUESTIONS_CSD = VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csp_ap_exam, :csp_which_grades, :csp_course_hours_per_year]
 end

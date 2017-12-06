@@ -1,12 +1,10 @@
 import React from 'react';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 export default storybook => {
   return storybook
     .storiesOf('CourseBlocksStudentGradeBands', module)
-    .withReduxStore({responsive, isRtl})
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'course blocks - student grade bands',
