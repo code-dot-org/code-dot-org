@@ -981,14 +981,19 @@ var projects = module.exports = {
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            fetchSource(data, function () {
+            const setEditingAndFetchAbuseAndPrivacy = () => {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
               fetchAbuseScoreAndPrivacyViolations(function () {
                 deferred.resolve();
               });
-            }, queryParams('version'));
+            };
+            if (dashboard.project.getStandaloneApp() === 'weblab') {
+              setEditingAndFetchAbuseAndPrivacy();
+            } else {
+              fetchSource(data, setEditingAndFetchAbuseAndPrivacy, queryParams('version'));
+            }
           }
         });
       } else {
@@ -1001,12 +1006,17 @@ var projects = module.exports = {
         if (err) {
           deferred.reject();
         } else {
-          fetchSource(data, function () {
+          const showHeaderAndFetchAbuseAndPrivacy = () => {
             projects.showHeaderForProjectBacked();
             fetchAbuseScoreAndPrivacyViolations(function () {
               deferred.resolve();
             });
-          }, queryParams('version'));
+          };
+          if (dashboard.project.getStandaloneApp() === 'weblab') {
+            showHeaderAndFetchAbuseAndPrivacy();
+          } else {
+            fetchSource(data, showHeaderAndFetchAbuseAndPrivacy, queryParams('version'));
+          }
         }
       });
     } else {
