@@ -184,6 +184,7 @@ named_level 'CSD: For Loop'
 level 'CSDU6 - for loop - predict print', progression: 'For Loops'
 level 'CSD U6 for loop button array', progression: 'For Loops'
 level 'CSD U6 for loop list.length', progression: 'For Loops'
+level 'CSD U6 for loop images', progression: 'For Loops'
 
 stage 'For Loops', flex_category: 'csd6_2'
 named_level 'CSD: For Loops'
