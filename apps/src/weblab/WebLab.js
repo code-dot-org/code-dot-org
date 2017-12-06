@@ -18,6 +18,7 @@ var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
+import {queryParams} from '../utils';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -75,7 +76,7 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.initialFilesVersionId = config.level.lastAttempt;
+  this.initialFilesVersionId = queryParams('version');
 
   this.brambleHost = null;
 
