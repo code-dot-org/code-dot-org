@@ -43,13 +43,13 @@ export default class DetailView extends React.Component {
 
   updateData = (newProps) => {
     this.setState({
-      data: Object.assign(this.state.data, newProps)
+      data: Object.assign({}, this.state.data, newProps)
     });
   };
 
   render() {
     if (this.state.loading) {
-      return (<Spinner/>);
+      return (<Spinner />);
     } else {
       return (
         (

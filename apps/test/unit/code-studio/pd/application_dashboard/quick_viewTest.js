@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import QuickView from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
+import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
 import {expect} from 'chai';
 import sinon from 'sinon';
 
@@ -23,7 +23,11 @@ describe("Quick View", () => {
   it("Initially renders a spinner", () => {
 
     let quickView = shallow(
-      <QuickView route={routeProps}/>, {context}
+      <QuickView
+        regionalPartnerName="All Regional Partner Applications"
+        route={routeProps}
+      />,
+      { context },
     );
 
     expect(quickView.find('Spinner')).to.have.length(1);
@@ -49,7 +53,11 @@ describe("Quick View", () => {
     );
 
     let quickView = shallow(
-      <QuickView route={routeProps}/>, {context}
+      <QuickView
+        regionalPartnerName="All Regional Partner Applications"
+        route={routeProps}
+      />,
+      { context },
     );
 
     server.respond();

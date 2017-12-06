@@ -1,8 +1,6 @@
 import React from 'react';
 import ContentContainer from './ContentContainer';
 import CourseCard from './studioHomepages/CourseCard';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 const exampleCard = {
   title: "CSP Unit 2 - Digital Information",
@@ -15,7 +13,7 @@ const exampleCard = {
 export default storybook => {
   return storybook
     .storiesOf('ContentContainer', module)
-    .withReduxStore({responsive, isRtl})
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'no link',

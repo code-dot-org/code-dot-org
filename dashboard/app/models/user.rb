@@ -322,6 +322,13 @@ class User < ActiveRecord::Base
     district.try(:name)
   end
 
+  # Given a user_id, username, or email, attempts to find the relevant user
+  def self.from_identifier(identifier)
+    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
+      where(username: identifier).first ||
+      find_by_email_or_hashed_email(identifier)
+  end
+
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user

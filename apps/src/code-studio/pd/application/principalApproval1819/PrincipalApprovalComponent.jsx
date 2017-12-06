@@ -6,14 +6,12 @@ import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDr
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher1819/TeacherApplicationConstants';
 
-const MANUAL_SCHOOL_FIELDS = ['school', 'schoolName', 'schoolAddress', 'schoolCity',
+const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
   'schoolState', 'schoolZipCode', 'schoolType'];
 const RACE_LIST = ['white', 'black', 'hispanic', 'asian', 'pacificIslander', 'americanIndian', 'other'];
-const REQUIRED_SCHOOL_INFO_FIELDS = [
-  ...MANUAL_SCHOOL_FIELDS, 'totalStudentEnrollment', 'freeLunchPercent', ...RACE_LIST,
-  'committedToMasterSchedule', 'hoursPerYear', 'termsPerYear', 'replaceCourse',
-  'replaceWhichCourseCsd', 'replaceWhichCourseCsp', 'committedToDiversity',
-  'understandFee', 'payFee', 'wantFunding'
+const REQUIRED_SCHOOL_INFO_FIELDS = ['school', 'totalStudentEnrollment',
+  'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'hoursPerYear',
+  'termsPerYear', 'replaceCourse', 'committedToDiversity', 'understandFee', 'payFee'
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 
@@ -187,6 +185,9 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
     );
   }
 
+  /**
+   * @override
+   */
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
@@ -206,9 +207,9 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
     }
 
     if (data.replaceCourse === 'Yes') {
-      if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
+      if (data.course === 'Computer Science Discoveries') {
         requiredFields.push('replaceWhichCourseCsd');
-      } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
+      } else if (data.course === 'Computer Science Principles') {
         requiredFields.push('replaceWhichCourseCsp');
       }
     }
@@ -260,3 +261,5 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
     return changes;
   }
 }
+
+export {MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS, RACE_LIST};
