@@ -78,14 +78,13 @@ select (
   )::date as end_of_month
 from users limit 48;
 
--- THIS TAKES LIKE AN HOUR???
 -- get user-script-month-# of stages in script-# of stages started to that point in time
 -- (user_id, script_id, end_of_month, script_stages, progress_stages)
-drop table if exists public.bb_csf_monthly_stage_progress;
-create table public.bb_csf_monthly_stage_progress as
-select ss.user_id, ss.script_id, eom.end_of_month, psc.stages script_stages, count(distinct case when stage_created_at <= end_of_month then stage_id else null end) progress_stages
+drop table if exists #monthly_stage_progress;
+create temp table #monthly_stage_progress as
+select ss.user_id, ss.script_id, eom.end_of_month, psc.stages script_stages, count(stage_id) progress_stages
 from #stage_starts ss
-join #end_of_month eom on 1=1
+join #end_of_month eom on stage_created_at <= end_of_month
 join #plugged_stage_counts psc on psc.script_id = ss.script_id
 group by 1,2,3,4;
 
@@ -107,38 +106,47 @@ select teacher_user_id, eom.end_of_month, count(distinct case when first_month_c
 from
 (
 select se.user_id teacher_user_id, msc.first_month_complete, student_user_id
-from public.bb_csf_monthly_script_completion msc
+from #test2 msc
 join followers f on f.student_user_id = msc.user_id
 join sections se on se.id = f.section_id
 )
 join #end_of_month eom on 1=1
 group by 1,2;
 
--- # of teachers completing CSF for first time
--- (first_month_complete, teachers)
-select first_month_complete, count(*) teachers
-from
-(
+drop table if exists public.bb_csf_monthly_teacher_completion;
+create table public.bb_csf_monthly_teacher_completion as
 select teacher_user_id, min(end_of_month) first_month_complete
 from #teacher_students_progress
 where students_completed >= 5
-group by 1
-)
 group by 1;
+
+-- # of teachers completing CSF for first time
+-- (first_month_complete, teachers)
+select 'Teacher with classroom completing CSF for first time' metric, count(*) value
+from public.bb_csf_monthly_teacher_completion
+where   DATE_PART(month,first_month_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_month_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+group by 1
+
+union all
 
 -- get count by month of students completing their first script
 -- (first_script_complete, students)
-select first_script_complete, count(*) students
+select 'Students completing CSF for first time' metric, count(*) value
 from
 (
 select user_id, min(first_month_complete) first_script_complete
 from public.bb_csf_monthly_script_completion
 group by 1
 )
-group by 1;
+where   DATE_PART(month,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+group by 1
+
+union all
 
 -- pct female
-select first_script_complete, count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) pct_female
+select 'Students completing CSF for the first time, % female' metric, count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) value
 from
 (
 select user_id, min(first_month_complete) first_script_complete
@@ -146,7 +154,11 @@ from public.bb_csf_monthly_script_completion
 group by 1
 ) temp
 join users u on u.id = temp.user_id
-group by 1;
+where   DATE_PART(month,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+group by 1
+
+union all
 
 -- *******************************************************
 -- *** SAME METRICS -- ONLY FOR PD'D STUDENTS/TEACHERS ***
@@ -154,12 +166,10 @@ group by 1;
 
 -- # of PD'd teachers completing CSF for first time
 -- (first_month_complete, teachers)
-select first_month_complete, count(*) teachers
-from
-(
-select teacher_user_id, min(end_of_month) first_month_complete
-from #teacher_students_progress
-where students_completed >= 5
+select 'PDd teacher with classroom completing CSF for first time' metric, count(*) value
+from public.bb_csf_monthly_teacher_completion
+where   DATE_PART(month,first_month_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_month_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
 and teacher_user_id in
 (
 select distinct f.student_user_id user_id
@@ -174,12 +184,12 @@ join pd_workshops pdw on pdw.id = pde.pd_workshop_id
 where course = 'CS Fundamentals'
 )
 group by 1
-)
-group by 1;
+
+union all
 
 -- get count by month of students with PD'd teachers completing their first script
 -- (first_script_complete, students)
-select first_script_complete, count(*) students
+select 'Students of PDd teachers completing first script' metric, count(*) value
 from
 (
 select msc.user_id, min(first_month_complete) first_script_complete
@@ -201,10 +211,14 @@ where course = 'CS Fundamentals'
 )
 group by 1
 )
-group by 1;
+where   DATE_PART(month,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+group by 1
+
+union all
 
 -- pct female
-select first_script_complete, count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) pct_female
+select 'Students of PDd teachers completing first CSF script, % female' metric, count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) value
 from
 (
 select msc.user_id, min(first_month_complete) first_script_complete
@@ -227,4 +241,6 @@ where course = 'CS Fundamentals'
 group by 1
 ) temp
 join users u on u.id = temp.user_id
+where   DATE_PART(month,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,first_script_complete) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
 group by 1;
