@@ -5,7 +5,6 @@
 #  id                                  :integer          not null, primary key
 #  user_id                             :integer          not null
 #  unit_6_intention                    :integer
-#  has_confirmed_school                :boolean          default(FALSE), not null
 #  full_discount                       :boolean
 #  admin_set_status                    :boolean          default(FALSE), not null
 #  signature                           :string(255)
@@ -13,11 +12,13 @@
 #  circuit_playground_discount_code_id :integer
 #  created_at                          :datetime         not null
 #  updated_at                          :datetime         not null
+#  school_id                           :string(255)
 #
 # Indexes
 #
-#  index_circuit_playground_applications_on_code_id           (circuit_playground_discount_code_id)
-#  index_circuit_playground_discount_applications_on_user_id  (user_id) UNIQUE
+#  index_circuit_playground_applications_on_code_id             (circuit_playground_discount_code_id)
+#  index_circuit_playground_discount_applications_on_school_id  (school_id)
+#  index_circuit_playground_discount_applications_on_user_id    (user_id) UNIQUE
 #
 
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
@@ -34,6 +35,13 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
 
   def eligible_unit_6_intention?
     yes1718? || yes1819?
+  end
+
+  # We will set the application's school_id when the user confirms their school. This means
+  # that a user's school and user's application school can get out of sync, but it's important
+  # that we track the school that was associated with the application
+  def has_confirmed_school?
+    !school_id.nil?
   end
 
   # Given a studio_person_id, finds an existing application (if one exists) for any user
@@ -71,7 +79,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       # This will be a number from 1-5 (representing which radio button) was selected,
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
-      has_confirmed_school: application.try(:has_confirmed_school) || false,
+      has_confirmed_school: application.try(:has_confirmed_school?) || false,
       school_id: user.try(:school_info).try(:school_id),
       school_name: user.try(:school_info).try(:school).try(:name),
       # true/false once has_submitted_school is true

@@ -86,7 +86,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "schoolchoice: fails if already confirmed school" do
     sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718', has_confirmed_school: true)
+    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718', school_id: @school.id)
 
     post :schoolchoice, params: {nces: @school.id}
     assert_response :forbidden
@@ -130,7 +130,7 @@ class MakerControllerTest < ActionController::TestCase
     assert_response :forbidden
 
     # has confirmed school, but already has a code
-    application.update!(has_confirmed_school: true, circuit_playground_discount_code_id: 123)
+    application.update!(school_id: @school.id, circuit_playground_discount_code_id: 123)
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
   end
@@ -141,7 +141,7 @@ class MakerControllerTest < ActionController::TestCase
     CircuitPlaygroundDiscountApplication.create!(
       user_id: @teacher.id,
       unit_6_intention: 'yes1718',
-      has_confirmed_school: true,
+      school_id: @school.id,
       full_discount: true
     )
     CircuitPlaygroundDiscountCode.create!(
