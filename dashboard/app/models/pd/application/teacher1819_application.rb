@@ -430,5 +430,44 @@ module Pd::Application
     def total_score
       response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
     end
+
+    # Called once after the application is submitted, and the principal approval is done
+    def auto_score_application
+      responses = sanitize_form_data_hash
+
+      scores = {
+        regionalPartnerName: responses[:regional_partner_name].any? ? NO : YES,
+        committed: response_to_score(responses[:committed]),
+        ableToAttendSingle: response_to_score(responses[:able_to_attend_single]),
+        principalApproval: response_to_score(responses[:principal_approval]),
+        schedule_confirmed: response_to_score(responses[:schedule_confirmed]),
+        diversity_recruitment: response_to_score(responses[:diversity_recruitment]),
+        free_lunch_percent: responses[:free_lunch_percent].to_f >= 50 ? 5 : 0,
+        underrepresented_minority_percent: responses[:underrepresented_minority_percent].to_f >= 50 ? 5 : 2,
+        wont_replace_existing_course: responses[:wont_replace_existing_course].start_with?(NO) ?  5 : nil,
+      }
+
+      if course == 'csp'
+        scores.merge!({
+          csp_which_grades: YES
+        })
+      elsif course == 'csd'
+        scores.merge!({
+          
+        })
+      end
+    end
+
+    protected
+
+    def response_to_score(response)
+      if response == YES
+        YES
+      elsif response == NO
+        NO
+      else
+        nil
+      end
+    end
   end
 end
