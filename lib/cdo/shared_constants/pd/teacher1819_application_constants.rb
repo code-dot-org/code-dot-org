@@ -186,7 +186,7 @@ module Teacher1819ApplicationConstants
     csp_which_grades: YES_NO,
     csp_course_hours_per_year: YES_NO,
     csd_which_grades: YES_NO,
-    csp_terms_per_year: YES_NO,
+    csd_terms_per_year: YES_NO,
     principal_approval: YES_NO,
     schedule_confirmed: YES_NO,
     diversity_recruitment: YES_NO,
@@ -196,4 +196,7 @@ module Teacher1819ApplicationConstants
     taught_in_past: [2, 0],
     csp_ap_exam: [2, 0]
   }
+
+  CRITERIA_SCORE_QUESTIONS_CSP = VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
+  CRITERIA_SCORE_QUESTIONS_CSD = VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csp_ap_exam, :csp_which_grades, :csp_course_hours_per_year]
 end
