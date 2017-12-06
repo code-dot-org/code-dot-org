@@ -86,6 +86,9 @@ export default class EligibilityChecklist extends Component {
       );
     }
 
+    // TODO: if we have an admin override, dont prompt for unit6 intention
+    // TODO: account for admin override in providing code
+
     return (
       <div style={styles.main}>
         <h2>
