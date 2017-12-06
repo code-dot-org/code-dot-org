@@ -36,7 +36,7 @@ export default storybook => {
               }
             }}
             viewType="facilitator"
-            loadFunction={() => {}}
+            reload={() => {}}
           />
         )
       }

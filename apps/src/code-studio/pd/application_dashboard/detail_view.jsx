@@ -29,6 +29,11 @@ export default class DetailView extends React.Component {
     loading: true
   };
 
+  componentWillMount() {
+    this.load();
+  }
+
+
   load = () => {
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -39,10 +44,6 @@ export default class DetailView extends React.Component {
         loading: false
       });
     });
-  }
-
-  componentWillMount() {
-    this.load();
   }
 
   updateData = (newProps) => {
@@ -61,7 +62,7 @@ export default class DetailView extends React.Component {
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
             viewType={this.props.route.viewType}
-            loadFunction={this.load}
+            reload={this.load}
           />
         )
       );

@@ -43,7 +43,7 @@ export default class DetailViewContents extends React.Component {
       bonus_points: PropTypes.number
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
-    loadFunction: PropTypes.func.isRequired
+    reload: PropTypes.func.isRequired
   };
 
   componentWillMount() {
@@ -102,7 +102,7 @@ export default class DetailViewContents extends React.Component {
       });
 
       //Reload the page, but don't display the spinner
-      this.props.loadFunction();
+      this.props.reload();
     });
   };
 
