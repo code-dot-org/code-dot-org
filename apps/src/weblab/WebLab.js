@@ -415,7 +415,7 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function () {
-  filesApi.getFiles(this.initialFilesVersionId, result => {
+  filesApi.getFiles(this.getCurrentFilesVersionId(), result => {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
