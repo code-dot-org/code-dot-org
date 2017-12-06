@@ -67,18 +67,9 @@ class MakerController < ApplicationController
     render json: {code: code.code}
   end
 
-  def user_from_params
-    user_id = params.require(:user)
-    # TODO: similar logic to assume_identity. can/should we share?
-    User.where(id: user_id).first if user_id.to_i.to_s == user_id ||
-      User.where(username: user_id).first ||
-      User.find_by_email_or_hashed_email(user_id)
-  end
-
   def application_status
     return head :forbidden unless current_user.admin?
-
-    user = user_from_params
+    user = User.from_identifier(params.require(:user))
 
     render json: {application: CircuitPlaygroundDiscountApplication.admin_application_status(user)}
   end
@@ -87,7 +78,7 @@ class MakerController < ApplicationController
     return head :forbidden unless current_user.admin?
 
     full_discount = params.require(:full_discount)
-    user = user_from_params
+    user = User.from_identifier(params.require(:user))
 
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(user.studio_person_id)
 
