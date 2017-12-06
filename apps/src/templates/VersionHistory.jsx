@@ -30,8 +30,12 @@ var VersionHistory = React.createClass({
   },
 
   componentWillMount: function () {
-    // TODO: Use Dave's client api when it's finished.
-    sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
+    if (this.props.useFilesApi) {
+      filesApi.getVersionHistory(this.onVersionListReceived, this.onAjaxFailure);
+    } else {
+      // TODO: Use Dave's client api when it's finished.
+      sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
+    }
   },
 
   /**
@@ -63,33 +67,7 @@ var VersionHistory = React.createClass({
    */
   onChooseVersion: function (versionId) {
     if (this.props.useFilesApi) {
-      // Fetch the main.json with this versionId to discover the associated filesVersionId...
-      sourcesApi.getFile(
-        'main.json',
-        versionId,
-        xhr => {
-          const sourceData = JSON.parse(xhr.responseText);
-          const filesVersionId = sourceData.source;
-          // Restore the project using the filesVersionId
-          filesApi.restorePreviousVersion(
-            filesVersionId,
-            xhrRestore => {
-              const filesRestoreResult = JSON.parse(xhrRestore.responseText);
-              const sourceData = {
-                source: filesRestoreResult.filesVersionId,
-                animations: {},
-              };
-              // FilesApi restore complete, now write out a new main.json using the sourcesApi
-              // with the filesVersionId as the "source":
-              if (filesRestoreResult.filesVersionId) {
-                sourcesApi.ajax('PUT', 'main.json', this.onRestoreSuccess, this.onAjaxFailure, JSON.stringify({ sourceData }));
-              } else {
-                this.onAjaxFailure();
-              }
-            },
-            this.onAjaxFailure);
-        },
-        this.onAjaxFailure);
+      filesApi.restorePreviousVersion(versionId, this.onRestoreSuccess, this.onAjaxFailure);
     } else {
       sourcesApi.restorePreviousFileVersion('main.json', versionId, this.onRestoreSuccess, this.onAjaxFailure);
     }

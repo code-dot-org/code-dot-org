@@ -18,7 +18,7 @@ var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
-import {queryParams} from '../utils';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -76,7 +76,8 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.initialFilesVersionId = queryParams('version');
+  this.suppliedFilesVersionId = queryParams('version');
+  this.initialFilesVersionId = this.suppliedFilesVersionId;
 
   this.brambleHost = null;
 
@@ -379,8 +380,8 @@ WebLab.prototype.setBrambleHost = function (obj) {
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
   this.brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
-  if (this.initialFilesVersionId) {
-    return `${project.getCurrentId()}-${this.initialFilesVersionId}`;
+  if (this.suppliedFilesVersionId) {
+    return `${project.getCurrentId()}-${this.suppliedFilesVersionId}`;
   } else {
     return project.getCurrentId();
   }
