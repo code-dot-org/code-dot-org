@@ -567,7 +567,7 @@ class FilesApi < Sinatra::Base
     new_entry_hash.to_json
   end
 
-  # POST /v3/files/<channel-id>/?version=<version-id>&project_version=<project-version-id>
+  # POST /v3/files/<channel-id>/?version=<version-id>&files-version=<project-version-id>
   #
   # Create or replace a file. We use this method so that IE9 can still
   # upload by posting to an iframe.
@@ -589,7 +589,7 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&project_version=<project-version-id>
+  # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&files-version=<project-version-id>
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
