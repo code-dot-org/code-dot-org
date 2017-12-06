@@ -21,7 +21,7 @@ const styles = {
 
 export default class Unit6ValidationStep extends Component {
   static propTypes = {
-    previousStepsSucceeded: PropTypes.bool.isRequired,
+    showRadioButtons: PropTypes.bool.isRequired,
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     initialChoice: PropTypes.string,
     onSubmit: PropTypes.func.isRequired,
@@ -59,14 +59,14 @@ export default class Unit6ValidationStep extends Component {
   }
 
   render() {
-    const { previousStepsSucceeded, stepStatus } = this.props;
+    const { showRadioButtons, stepStatus } = this.props;
     return (
       <ValidationStep
         stepName={i18n.eligibilityReqYear()}
         stepStatus={stepStatus}
         alwaysShowChildren={true}
       >
-        {previousStepsSucceeded &&
+        {showRadioButtons &&
           <div>
             {i18n.eligibilityReqYearFail()}
             <form style={styles.unit6Form}>

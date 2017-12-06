@@ -40,6 +40,7 @@ $(document).ready(() => {
           hasConfirmedSchool={application.has_confirmed_school}
           getsFullDiscount={application.gets_full_discount}
           initialDiscountCode={application.discount_code}
+          adminSetStatus={application.admin_set_status}
         />
       }
     </div>
