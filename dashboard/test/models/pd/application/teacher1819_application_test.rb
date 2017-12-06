@@ -41,21 +41,21 @@ module Pd::Application
 
       teacher_application = build :pd_teacher1819_application, course: 'csd',
         response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD.map {|x| [x, 'Yes']}.to_h.to_json
-      assert_equal :meets, teacher_application.meets_criteria
+      assert_equal 'Yes', teacher_application.meets_criteria
     end
 
     test 'meets criteria says an application does not meet criteria when any YES_NO fields are marked NO' do
       teacher_application = build :pd_teacher1819_application, response_scores: {
         committed: 'No'
       }.to_json
-      assert_equal :does_not_meet, teacher_application.meets_criteria
+      assert_equal 'No', teacher_application.meets_criteria
     end
 
-    test 'meets criteria returns nil when an application does not have YES on all YES_NO fields but has no NOs' do
+    test 'meets criteria returns incomplete when an application does not have YES on all YES_NO fields but has no NOs' do
       teacher_application = build :pd_teacher1819_application, response_scores: {
         committed: 'Yes'
       }.to_json
-      assert_equal :incomplete, teacher_application.meets_criteria
+      assert_equal 'Incomplete', teacher_application.meets_criteria
     end
 
     test 'total score calculates the sum of all response scores' do
