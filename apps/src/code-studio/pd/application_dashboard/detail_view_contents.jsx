@@ -139,10 +139,10 @@ export default class DetailViewContents extends React.Component {
             {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
           </h1>
           <h4>
-            Meets basic criteria: {this.props.applicationData.meets_criteria}
+            Meets all criteria: {this.props.applicationData.meets_criteria}
           </h4>
           <h4>
-            Total Score: {this.props.applicationData.bonus_points}
+            Bonus Points: {this.props.applicationData.bonus_points}
           </h4>
         </div>
 
