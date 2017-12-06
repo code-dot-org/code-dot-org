@@ -57,22 +57,22 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to postpone_census_banner updates next_census_display' do
-    sign_in(@user)
-    @user.next_census_display = nil
-    assert @user.next_census_display.nil?
+    test_user = create :user
+    sign_in(test_user)
     post :postpone_census_banner, params: {user_id: 'me'}
     assert_response :success
-    @user.reload
-    refute @user.next_census_display.nil?
+    response = JSON.parse(@response.body)
+    test_user.reload
+    assert_equal response["next_census_display"], test_user.next_census_display
   end
 
   test 'a post request to dismiss_census_banner updates next_census_display' do
-    sign_in(@user)
-    @user.next_census_display = nil
-    assert @user.next_census_display.nil?
+    test_user = create :user
+    sign_in(test_user)
     post :dismiss_census_banner, params: {user_id: 'me'}
     assert_response :success
-    @user.reload
-    refute @user.next_census_display.nil?
+    response = JSON.parse(@response.body)
+    test_user.reload
+    assert_equal response["next_census_display"], test_user.next_census_display
   end
 end
