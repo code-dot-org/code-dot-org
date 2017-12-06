@@ -13,7 +13,7 @@ const styles = {
   main: {
     color: color.charcoal
   },
-  partialDiscountMessage: {
+  discountMessage: {
     marginTop: 10,
     marginBottom: 10
   }
@@ -29,6 +29,7 @@ export default class EligibilityChecklist extends Component {
     hasConfirmedSchool: PropTypes.bool,
     getsFullDiscount: PropTypes.bool,
     initialDiscountCode: PropTypes.string,
+    adminSetStatus: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -51,11 +52,27 @@ export default class EligibilityChecklist extends Component {
         yearChoice: props.unit6Intention,
         statusYear: (props.unit6Intention === 'yes1718' ||
           props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
-        discountAmount: props.hasConfirmedSchool ?
-          (props.getsFullDiscount ? "$0" : "$97.50") : null,
-        discountCode: props.initialDiscountCode,
       };
     }
+
+    if (props.adminSetStatus) {
+      this.state = {
+        ...this.state,
+        statusYear: Status.SUCCEEDED
+      };
+    }
+
+    if (props.hasConfirmedSchool || props.adminSetStatus) {
+      this.state = {
+        ...this.state,
+        discountAmount: (props.getsFullDiscount ? "$0" : "$97.50")
+      };
+    }
+
+    this.state = {
+      ...this.state,
+      discountCode: props.initialDiscountCode,
+    };
   }
 
   handleSchoolConfirmed = (fullDiscount) => {
@@ -86,9 +103,6 @@ export default class EligibilityChecklist extends Component {
       );
     }
 
-    // TODO: if we have an admin override, dont prompt for unit6 intention
-    // TODO: account for admin override in providing code
-
     return (
       <div style={styles.main}>
         <h2>
@@ -110,13 +124,13 @@ export default class EligibilityChecklist extends Component {
           {i18n.eligibilityReqStudentCountFail()}
         </ValidationStep>
         <Unit6ValidationStep
-          previousStepsSucceeded={this.props.statusStudentCount === Status.SUCCEEDED &&
-            this.props.statusPD === Status.SUCCEEDED}
+          showRadioButtons={this.props.statusStudentCount === Status.SUCCEEDED &&
+            this.props.statusPD === Status.SUCCEEDED && !this.props.adminSetStatus}
           stepStatus={this.state.statusYear}
           initialChoice={this.props.unit6Intention}
           onSubmit={this.handleUnit6Submitted}
         />
-        {this.state.statusYear === Status.SUCCEEDED &&
+        {this.state.statusYear === Status.SUCCEEDED && !this.props.adminSetStatus &&
           <DiscountCodeSchoolChoice
             initialSchoolId={this.props.schoolId}
             initialSchoolName={this.props.schoolName}
@@ -125,7 +139,8 @@ export default class EligibilityChecklist extends Component {
           />
         }
         {this.state.discountAmount && !this.state.getsFullDiscount &&
-          <div style={styles.partialDiscountMessage}>
+            !this.props.adminSetStatus &&
+          <div style={styles.discountMessage}>
             Acoording to our data, your school has fewer than 50% of students that are
             eligible for free/reduced-price lunches. This means that we can bring down
             the cost of the $325 kit to just &97.50.{" "}
@@ -136,6 +151,11 @@ export default class EligibilityChecklist extends Component {
             </b>
             {" "}
             Otherwise, click "Get Code" below.
+          </div>
+        }
+        {this.props.adminSetStatus &&
+          <div style={styles.discountMessage}>
+            {i18n.eligibilityReqYearFail()}
           </div>
         }
         {this.state.discountAmount  &&
