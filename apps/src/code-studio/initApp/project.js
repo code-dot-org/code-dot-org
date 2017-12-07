@@ -134,7 +134,14 @@ var projects = module.exports = {
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
-    return location.href;
+    return this.getLocation().href;
+  },
+
+  /**
+   * This method exists to be mocked for unit tests.
+   */
+  getLocation() {
+    return document.location;
   },
 
   /**
@@ -168,6 +175,19 @@ var projects = module.exports = {
       }
     }
     return url + fragment + queryString;
+  },
+
+  getShareUrl() {
+    if (this.isWebLab()) {
+      const location = this.getLocation();
+      const re = /([-.]?studio)?\.?code.org/i;
+      const environmentKey = location.hostname.replace(re, '');
+      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
+      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+      return `${location.protocol}//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
+    } else {
+      return this.getProjectUrl();
+    }
   },
 
   getCurrentTimestamp() {
@@ -603,6 +623,10 @@ var projects = module.exports = {
       default:
         return null;
     }
+  },
+
+  isWebLab() {
+    return this.getStandaloneApp() === 'weblab';
   },
 
   canServerSideRemix() {
@@ -1178,7 +1202,7 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
   } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
     (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.getStandaloneApp() === 'weblab')) {
+    (dashboard.project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
