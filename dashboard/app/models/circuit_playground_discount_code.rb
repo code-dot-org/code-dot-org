@@ -26,8 +26,10 @@ class CircuitPlaygroundDiscountCode < ApplicationRecord
         where(expiration_field.gt(Time.now)).
         limit(20)
 
-      if codes.length < 20
-        Honeybadger.notify("Fewer than 20 remaining circuit playground discount codes",
+      if codes.count < 20
+        Honeybadger.notify(
+          error_message: "Fewer than 20 remaining circuit playground discount codes",
+          error_class: "CircuitPlaygroundDiscountCode.limited_codes_left",
           context: {
             full_discount: full_discount,
             count: codes.length
