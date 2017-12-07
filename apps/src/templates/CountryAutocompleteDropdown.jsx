@@ -45,29 +45,35 @@ export default class CountryAutocompleteDropdown extends Component {
 
     const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
+    const showError = showErrorMsg && !value;
+    const errorDiv = (
+      <div style={styles.errors}>
+        {i18n.censusRequiredSelect()}
+      </div>
+    );
+
     return (
-      <div style={containerStyle}>
-        <div style={questionStyle}>
-          {singleLineLayout ? i18n.country() : i18n.schoolCountry()}
-          {showRequiredIndicator && (
-            <span style={styles.asterisk}> *</span>
-          )}
-          {showErrorMsg && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSelect()}
-            </div>
-          )}
+      <div>
+        <div style={containerStyle}>
+          <div style={questionStyle}>
+            {singleLineLayout ? i18n.country() : i18n.schoolCountry()}
+            {showRequiredIndicator && (
+               <span style={styles.asterisk}> *</span>
+            )}
+            {showError && !singleLineLayout && errorDiv}
+          </div>
+          <VirtualizedSelect
+            id="country"
+            name={this.props.fieldName}
+            options={COUNTRIES}
+            value={value}
+            onChange={this.handleChange}
+            placeholder={i18n.searchForCountry()}
+            labelKey="value"
+            matchPos="start"
+          />
         </div>
-        <VirtualizedSelect
-          id="country"
-          name={this.props.fieldName}
-          options={COUNTRIES}
-          value={value}
-          onChange={this.handleChange}
-          placeholder={i18n.searchForCountry()}
-          labelKey="value"
-          matchPos="start"
-        />
+        {showError && singleLineLayout && errorDiv}
       </div>
     );
   }
