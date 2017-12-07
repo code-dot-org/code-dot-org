@@ -86,4 +86,20 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     refute response['census_submission_id'].nil?, "census_submission_id expected in response: #{response}"
   end
+
+  test 'teacher banner census submission succeeds' do
+    post :create,
+      params: {
+        form_version: 'CensusTeacherBannerV1',
+        nces_school_s: '60000113717',
+        school_year: 2017,
+        submitter_email_address: "fake@email.address",
+        submitter_name: "Somebody",
+        submitter_role: 'TEACHER',
+        how_many_20_hours: 'SOME'
+      }
+    assert_response 201, @response.body.to_s
+    response = JSON.parse(@response.body)
+    refute response['census_submission_id'].nil?, "census_submission_id expected in response: #{response}"
+  end
 end
