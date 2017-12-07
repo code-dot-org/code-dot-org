@@ -88,7 +88,6 @@ export default class SchoolInfoInputs extends Component {
   }
 
   bindSchoolNotFound(snf) {
-    console.log("Setting schoolNotFound to " + snf);
     this.schoolNotFound = snf;
   }
 
