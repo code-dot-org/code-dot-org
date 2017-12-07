@@ -177,6 +177,20 @@ var projects = module.exports = {
     return url + fragment + queryString;
   },
 
+  /**
+   * Returns a share URL for the current project.
+   *
+   * Share URLs can vary by application environment and project type.  For most
+   * project types the share URL is the same as the project edit and view URLs,
+   * but has no action appended to the project's channel ID.Weblab is a special
+   * case right now, because it shares projects to codeprojects.org.
+   *
+   * This function depends on the document location to determine both the
+   * current project id and the current application enviornmnet.  It's unlikely
+   * to work if called when we're not on a project page.
+   *
+   * @returns {string} Fully-qualified share URL for the current project.
+   */
   getShareUrl() {
     if (this.isWebLab()) {
       const location = this.getLocation();
