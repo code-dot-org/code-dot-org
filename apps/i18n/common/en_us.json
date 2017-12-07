@@ -751,6 +751,7 @@
   "puzzleTitle": "Puzzle {puzzle_number} of {stage_total}",
   "question": "Question",
   "quickActions": "Quick actions",
+  "rateButtonsLabel": "Rate:",
   "readonlyWorkspaceHeader": "View only: ",
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
   "relockStage": "Re-lock stage",

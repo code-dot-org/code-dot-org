@@ -29,7 +29,7 @@ const styles = {
     borderRadius: '10px 10px 0px 0px',
   },
   content: {
-    padding: '42px 56px 10px',
+    padding: '42px 56px 5px',
   },
   bubbleContainer: {
     width: 74,
@@ -55,6 +55,8 @@ const styles = {
   buttonContainer: {
     height: 38,
     marginTop: 13,
+    display: 'flex',
+    justifyContent: 'center',
   },
   blockCountWrapper: {
     textAlign: 'center',
@@ -102,6 +104,23 @@ const styles = {
   },
   achievementRow: {
     margin: 4,
+  },
+  funometer: {
+    marginTop: 5,
+    display: 'flex',
+    flexDirection: 'row-reverse',
+  },
+  button: {
+    borderWidth: 0,
+    height: 40,
+    color: color.white,
+    margin: '0px 5px',
+  },
+  replayButton: {
+    backgroundColor: color.green,
+  },
+  continueButton: {
+    backgroundColor: color.orange,
   },
 };
 
@@ -201,18 +220,28 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getFunometer() {
-    if (!this.props.showFunometer || 1 > 0) {
+    if (!this.props.showFunometer) {
       return null;
     }
 
     return (
-      <PuzzleRatingButtons/>
+      <div style={styles.funometer}>
+        <PuzzleRatingButtons
+          useLegacyStyles
+          label={msg.rateButtonsLabel()}
+        />
+      </div>
     );
   }
 
   getButtons() {
     return [
-      <span key="replay" style={styles.replayButton} />,
+      <button key="replay" style={{...styles.button, ...styles.replayButton}}>
+        Replay
+      </button>,
+      <button key="contnue" style={{...styles.button, ...styles.continueButton}} onClick={this.props.handleClose}>
+        Continue
+      </button>,
     ];
   }
 

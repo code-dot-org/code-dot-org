@@ -87,7 +87,7 @@ export default storybook =>
               blockLimit={98}
               blocksUsed={98}
               achievements={achievements}
-              //showFunometer
+              showFunometer
               canShare
             />
           </div>
