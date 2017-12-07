@@ -15,7 +15,9 @@ describe('VisualizationResizeBar', function () {
   });
 
   afterEach(() => {
-    wrapper.unmount();
+    if (wrapper) {
+      wrapper.unmount();
+    }
     wrapper = undefined;
   });
 
