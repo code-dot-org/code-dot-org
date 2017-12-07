@@ -1462,7 +1462,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 
   try {
     options.shareLink = (options.response && options.response.level_source) ||
-      (window.location.origin + project.getPathName());
+      project.getShareUrl();
   } catch (e) {}
 
   // Special test code for edit blocks.
