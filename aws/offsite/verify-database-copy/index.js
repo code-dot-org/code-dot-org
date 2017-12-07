@@ -49,8 +49,12 @@ exports.handler = (event, context, callback) => {
             postStatusToSlack(status_message);
             callback(error);
         } else {
-            // updating an RDS database master password typically takes a few seconds.
-            // Wait until about 1 minute before this Lambda function times out before attempting to connect to the database
+            console.log('Modify database password request has been submitted successfully.  Sleep for a few minutes until it completes.');
+            // updating an RDS database master password typically takes 2-3 minutes, during which time the database transitions through several states:
+            // 1) Available with old/unknown password.  Attempting to connect with new password will fail authentication
+            // 2) Not Available (Status = resetting-master-credentials).  Attempt to connect as a mysql client or to invoke AWS describeDBInstances API fails
+            // 3) Available with new password
+            // Wait until about 2 minutes before this Lambda function reaches its 5 minute timeout before attempting to connect to the database
             setTimeout(function () {
                 // check if password update is pending
                 rds.describeDBInstances({
