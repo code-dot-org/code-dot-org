@@ -27,6 +27,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     showErrorMsg: PropTypes.bool,
     // Value is the NCES id of the school
     value: PropTypes.string,
+    fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
   };
@@ -68,6 +69,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
         </div>
         <SchoolAutocompleteDropdown
           value={this.props.value}
+          fieldName={this.props.fieldName}
           onChange={this.sendToParent}
         />
         <label>
