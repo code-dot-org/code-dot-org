@@ -37,7 +37,7 @@ module Pd::Application
     test 'meets criteria says an application meets critera when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher1819_application, course: 'csp',
         response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP.map {|x| [x, 'Yes']}.to_h.to_json
-      assert_equal :meets, teacher_application.meets_criteria
+      assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher1819_application, course: 'csd',
         response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD.map {|x| [x, 'Yes']}.to_h.to_json
