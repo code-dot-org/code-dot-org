@@ -1,8 +1,13 @@
-import React, { Component }  from 'react';
+import React, { Component, PropTypes }  from 'react';
 import SchoolInfoInputs from './SchoolInfoInputs';
 
 export default storybook => {
   class SchoolInfoInputsWrapper extends Component {
+    static propTypes = {
+      showErrors: PropTypes.bool,
+      showRequiredIndicator: PropTypes.bool,
+    };
+
     state = {
       country: '',
       schoolType: '',
@@ -51,6 +56,8 @@ export default storybook => {
             schoolCity={this.state.schoolCity}
             schoolState={this.state.schoolState}
             schoolZip={this.state.schoolZip}
+            showErrors={this.props.showErrors}
+            showRequiredIndicator={this.props.showRequiredIndicator}
           />
         </div>
       );
@@ -61,10 +68,20 @@ export default storybook => {
     .storiesOf('SchoolInfoInputs', module)
     .addStoryTable([
       {
-        name: 'Inputs for school info',
+        name: 'Inputs for school info (not required)',
         description: `Gets school info data.`,
         story: () => (
           <SchoolInfoInputsWrapper/>
+        )
+      },
+      {
+        name: 'Inputs for school info (required)',
+        description: `Gets school info data.`,
+        story: () => (
+          <SchoolInfoInputsWrapper
+            showErrors={true}
+            showRequiredIndicator={true}
+          />
         )
       },
     ]);
