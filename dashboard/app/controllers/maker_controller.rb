@@ -6,7 +6,7 @@ class MakerController < ApplicationController
 
   def discountcode
     application_status = CircuitPlaygroundDiscountApplication.application_status(current_user)
-    render 'discountcode', locals: {script_data: application_status}
+    render 'discountcode', locals: {script_data: {application: application_status, is_admin: current_user.admin?}}
   end
 
   # begins a discount code application
@@ -36,7 +36,7 @@ class MakerController < ApplicationController
     # Must have started an application, and have said they were teaching unit 6
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
     return head :not_found unless application
-    return head :forbidden unless application.eligible_unit_6_intention? && !application.has_confirmed_school
+    return head :forbidden unless application.eligible_unit_6_intention? && !application.has_confirmed_school?
 
     # Update user's school if provided school_id is different
     current_school_id = current_user.try(:school_info).try(:school_id)
@@ -44,8 +44,62 @@ class MakerController < ApplicationController
       current_user.update!(school_info: SchoolInfo.find_by_school_id(school_id))
     end
 
-    application.update!(has_confirmed_school: true, full_discount: school.high_needs?)
+    application.update!(school_id: current_school_id, full_discount: school.high_needs?)
 
     render json: {full_discount: application.full_discount?}
+  end
+
+  def complete
+    signature = params.require(:signature)
+
+    # Must have started an application, and have said they were teaching unit 6, and confirmed their school
+    application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
+    return head :not_found unless application
+    return head :forbidden unless application.eligible_unit_6_intention? &&
+      application.has_confirmed_school? && !application.circuit_playground_discount_code_id
+
+    code = CircuitPlaygroundDiscountCode.claim(application.full_discount?)
+    return head :not_found unless code
+
+    # associate the code with this application, and log signature
+    application.update!(signature: signature, signed_at: DateTime.now, circuit_playground_discount_code_id: code.id)
+
+    render json: {code: code.code}
+  end
+
+  def application_status
+    return head :forbidden unless current_user.admin?
+    user = User.from_identifier(params.require(:user))
+
+    render json: {application: CircuitPlaygroundDiscountApplication.admin_application_status(user)}
+  end
+
+  def override
+    return head :forbidden unless current_user.admin?
+
+    full_discount = params.require(:full_discount)
+    user = User.from_identifier(params.require(:user))
+
+    application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(user.studio_person_id)
+
+    if application
+      # If we already have a code, void it
+      if application.circuit_playground_discount_code_id
+        application.circuit_playground_discount_code.update!(voided_at: Time.now)
+      end
+      application.update!(
+        admin_set_status: true,
+        full_discount: full_discount == 'true',
+        circuit_playground_discount_code_id: nil
+      )
+    else
+      CircuitPlaygroundDiscountApplication.create!(
+        user_id: user.id,
+        admin_set_status: true,
+        full_discount: full_discount == 'true'
+      )
+    end
+
+    render json: {application: CircuitPlaygroundDiscountApplication.admin_application_status(user)}
   end
 end

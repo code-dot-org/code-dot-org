@@ -1,4 +1,5 @@
 {
+  "startButton": "Sākt",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -52,7 +53,7 @@
   "tutorialDetailInternationalLanguages": "Languages",
   "tutorialDetailStandards": "Standarts",
   "tutorialDetailDisabled": "This tutorial is temporarily unavailable.",
-  "headingTutorialsYourLanguage": "Aktivitātes tavā valodā",
+  "headingTutorialsYourLanguage": "Pamācības tavā valodā",
   "showAllTutorialsButton": "Parādīt aktivitātes daudzās valodās",
   "hideAllTutorialsButton": "Paslēpt aktivitātes daudzās valodās",
   "noTutorialsYourLanguage": "Jūsu valodā atbalstītu aktivitāšu nav. Izmēģiniet aktivitātes citās valodās, noklikšķinot uz zemāk esošās pogas.",

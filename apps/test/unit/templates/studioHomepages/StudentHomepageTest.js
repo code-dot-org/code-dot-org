@@ -1,11 +1,10 @@
 import React from 'react';
 import { assert, expect } from 'chai';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
 
 describe('StudentHomepage', () => {
-
   it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = shallow(
       <StudentHomepage
@@ -92,7 +91,7 @@ describe('StudentHomepage', () => {
   });
 
   it('shows section codes correctly', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
         <StudentHomepage
           courses={courses}
           topCourse={topCourse}
@@ -101,7 +100,7 @@ describe('StudentHomepage', () => {
           isRtl={false}
           canLeave={false}
         />
-    );
+    ).find('StudentSections').dive().find('SectionsTable').dive();
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );

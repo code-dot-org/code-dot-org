@@ -1,4 +1,5 @@
 {
+  "startButton": "Inizia",
   "filterOrgNames": "Creato da",
   "filterOrgNamesAll": "Tutti",
   "filterSortBy": "Ordina per",
@@ -47,7 +48,7 @@
   "roboticsButtonText": "Visualizza le attività robotiche",
   "roboticsText": "Hai dei robot? Utilizza queste attività e rendi tangibile un Ora di Codice per gli studenti di qualsiasi età!",
   "tutorialSetNoTutorials": "La tua ricerca ha prodotto alcun risultato. \nPer favore prova a rimuovere alcuni filtri per visualizzare ulteriori attività.",
-  "tutorialDetailsTeacherNotes": "Guida per l'insegnante (in inglese)",
+  "tutorialDetailsTeacherNotes": "Annotazioni del prof",
   "tutorialDetailsShortLink": "Link breve",
   "tutorialDetailInternationalLanguages": "Linguaggi",
   "tutorialDetailStandards": "Livelli di riferimento",

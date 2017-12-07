@@ -2,21 +2,22 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
+#  id                                  :integer          not null, primary key
+#  user_id                             :integer
+#  type                                :string(255)      not null
+#  application_year                    :string(255)      not null
+#  application_type                    :string(255)      not null
+#  regional_partner_id                 :integer
+#  status                              :string(255)
+#  locked_at                           :datetime
+#  notes                               :text(65535)
+#  form_data                           :text(65535)      not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  course                              :string(255)
+#  response_scores                     :text(65535)
+#  application_guid                    :string(255)
+#  decision_notification_email_sent_at :datetime
 #
 # Indexes
 #
@@ -423,7 +424,7 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push :Status, :Notes
+        columns.push 'Status', 'Notes', 'Regional Partner'
         csv << columns
       end
     end

@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
-import Button from "../Button";
-import SchoolAutocompleteDropdownWithLabel from '../census2017/SchoolAutocompleteDropdownWithLabel';
-import { styles as censusFormStyles } from '../census2017/censusFormStyles';
+import Button from "@cdo/apps/templates/Button";
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import { styles as censusFormStyles } from '@cdo/apps/templates/census2017/censusFormStyles';
 
 const styles = {
   confirmed: {
@@ -10,6 +10,9 @@ const styles = {
   },
   button: {
     marginTop: 10
+  },
+  errorText: {
+    color: 'red',
   }
 };
 
@@ -28,6 +31,7 @@ export default class DiscountCodeSchoolChoice extends Component {
       confirmed: props.schoolConfirmed,
       schoolId: props.initialSchoolId,
       schoolName: props.initialSchoolName,
+      errorText: ''
     };
   }
 
@@ -57,13 +61,15 @@ export default class DiscountCodeSchoolChoice extends Component {
      this.setState({
        confirming: false,
        confirmed: true,
+       errorText: '',
      });
    }).fail((jqXHR, textStatus) => {
-     // TODO: should probably introduce/test some error UI
      console.error(textStatus);
      this.setState({
        confirming: false,
-       confirmed: false
+       confirmed: false,
+       errorText: "We're sorry, but something went wrong. Try refreshing the page " +
+        "and submitting again.  If this does not work, please contact support@code.org."
      });
    });
   }
@@ -102,6 +108,11 @@ export default class DiscountCodeSchoolChoice extends Component {
             <b> {i18n.contactToContinue()}</b>
           </div>
         )}
+        {this.state.errorText &&
+          <div style={styles.errorText}>
+            {this.state.errorText}
+          </div>
+        }
       </div>
     );
   }

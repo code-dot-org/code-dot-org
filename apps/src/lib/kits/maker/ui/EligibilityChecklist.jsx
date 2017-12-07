@@ -1,12 +1,23 @@
 /** @file Maker Discount Code Eligibility Checklist */
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import Button from "../Button";
+import color from "@cdo/apps/util/color";
+import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Unit6ValidationStep from './Unit6ValidationStep';
 import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 import DiscountCodeInstructions from '@cdo/apps/lib/kits/maker/ui/DiscountCodeInstructions';
+
+const styles = {
+  main: {
+    color: color.charcoal
+  },
+  discountMessage: {
+    marginTop: 10,
+    marginBottom: 10
+  }
+};
 
 export default class EligibilityChecklist extends Component {
   static propTypes = {
@@ -18,6 +29,7 @@ export default class EligibilityChecklist extends Component {
     hasConfirmedSchool: PropTypes.bool,
     getsFullDiscount: PropTypes.bool,
     initialDiscountCode: PropTypes.string,
+    adminSetStatus: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -40,11 +52,27 @@ export default class EligibilityChecklist extends Component {
         yearChoice: props.unit6Intention,
         statusYear: (props.unit6Intention === 'yes1718' ||
           props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
-        discountAmount: props.hasConfirmedSchool ?
-          (props.getsFullDiscount ? "$0" : "$97.50") : null,
-        discountCode: props.initialDiscountCode,
       };
     }
+
+    if (props.adminSetStatus) {
+      this.state = {
+        ...this.state,
+        statusYear: Status.SUCCEEDED
+      };
+    }
+
+    if (props.hasConfirmedSchool || props.adminSetStatus) {
+      this.state = {
+        ...this.state,
+        discountAmount: (props.getsFullDiscount ? "$0" : "$97.50")
+      };
+    }
+
+    this.state = {
+      ...this.state,
+      discountCode: props.initialDiscountCode,
+    };
   }
 
   handleSchoolConfirmed = (fullDiscount) => {
@@ -76,7 +104,7 @@ export default class EligibilityChecklist extends Component {
     }
 
     return (
-      <div>
+      <div style={styles.main}>
         <h2>
           {i18n.eligibilityRequirements()}
         </h2>
@@ -96,19 +124,39 @@ export default class EligibilityChecklist extends Component {
           {i18n.eligibilityReqStudentCountFail()}
         </ValidationStep>
         <Unit6ValidationStep
-          previousStepsSucceeded={this.props.statusStudentCount === Status.SUCCEEDED &&
-            this.props.statusPD === Status.SUCCEEDED}
+          showRadioButtons={this.props.statusStudentCount === Status.SUCCEEDED &&
+            this.props.statusPD === Status.SUCCEEDED && !this.props.adminSetStatus}
           stepStatus={this.state.statusYear}
           initialChoice={this.props.unit6Intention}
           onSubmit={this.handleUnit6Submitted}
         />
-        {this.state.statusYear === Status.SUCCEEDED &&
+        {this.state.statusYear === Status.SUCCEEDED && !this.props.adminSetStatus &&
           <DiscountCodeSchoolChoice
             initialSchoolId={this.props.schoolId}
             initialSchoolName={this.props.schoolName}
             schoolConfirmed={this.props.hasConfirmedSchool}
             onSchoolConfirmed={this.handleSchoolConfirmed}
           />
+        }
+        {this.state.discountAmount && !this.state.getsFullDiscount &&
+            !this.props.adminSetStatus &&
+          <div style={styles.discountMessage}>
+            According to our data, your school has fewer than 50% of students that are
+            eligible for free/reduced-price lunches. This means that we can bring down
+            the cost of the $325 kit to just $97.50.{" "}
+            <b>
+              If this data seems inaccurate and you believe there are over 50% of students
+              that are eligible for free/reduced-price lunch at your school, please contact
+              support@code.org.
+            </b>
+            {" "}
+            Otherwise, click "Get Code" below.
+          </div>
+        }
+        {this.props.adminSetStatus &&
+          <div style={styles.discountMessage}>
+            {i18n.eligibilityReqYearFail()}
+          </div>
         }
         {this.state.discountAmount  &&
           <Button
