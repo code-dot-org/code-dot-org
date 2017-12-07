@@ -43,7 +43,7 @@ module Api::V1::Pd::Application
 
       sign_in @applicant
       assert_no_difference 'Pd::Application::Facilitator1819Application.count' do
-        put :create, params: {form_data: @test_params}
+        put :create, params: @test_params
       end
       assert_response :success
     end

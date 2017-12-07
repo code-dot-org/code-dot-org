@@ -5,9 +5,6 @@ import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import responsiveRedux from '../code-studio/responsiveRedux';
 
 const styles = {
   container: {
@@ -85,10 +82,8 @@ export default class Congrats extends Component {
       ...styles.container,
       width: this.responsive.getResponsiveContainerWidth()
     };
-    const store = createStore(combineReducers({responsive: responsiveRedux}));
 
     return (
-      <Provider store={store}>
         <div style={contentStyle}>
           <Certificate
             tutorial={tutorial}
@@ -119,7 +114,6 @@ export default class Congrats extends Component {
             />
           )}
         </div>
-      </Provider>
     );
   }
 }

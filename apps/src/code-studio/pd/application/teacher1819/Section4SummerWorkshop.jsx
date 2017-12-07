@@ -18,7 +18,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     ...Object.keys(PageLabels.section4SummerWorkshop),
     "regionalPartnerId",
     "regionalPartnerGroup",
-    "regionalPartnerWorkshops"
+    "regionalPartnerWorkshopCount"
   ];
 
   state = {
@@ -299,13 +299,16 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.regionalPartnerWorkshopCount === 1) {
+    if (data.regionalPartnerGroup === 3 && data.regionalPartnerWorkshopCount === 0) {
+      // Teachercon
+      requiredFields.push("ableToAttendSingle");
+    } else if (data.regionalPartnerWorkshopCount === 1) {
       requiredFields.push("ableToAttendSingle");
     } else if (data.regionalPartnerWorkshopCount > 1) {
       requiredFields.push("ableToAttendMultiple");
     }
 
-    if ([1,2].includes(data.regionalPartnerGroup)) {
+    if (data.regionalPartnerGroup === 1) {
       requiredFields.push(
         "understandFee",
         "payFee"
@@ -321,8 +324,11 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (!data.regionalPartnerId || data.regionalPartnerWorkshopCount === 0) {
+    if (!data.regionalPartnerId) {
       changes.ableToAttendSingle = undefined;
+      changes.ableToAttendMultiple = undefined;
+    } else if (data.regionalPartnerGroup === 3 && data.regionalPartnerWorkshopCount === 0) {
+      // Teachercon
       changes.ableToAttendMultiple = undefined;
     } else if (data.regionalPartnerWorkshopCount === 1) {
       changes.ableToAttendMultiple = undefined;
@@ -330,12 +336,12 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
       changes.ableToAttendSingle = undefined;
     }
 
-    if (![1,2].includes(data.regionalPartnerGroup)) {
+    if (data.regionalPartnerGroup !== 1) {
       changes.understandFee = undefined;
       changes.payFee = undefined;
     }
 
-    if (!data.payFee !== NO_PAY_FEE) {
+    if (data.payFee !== NO_PAY_FEE) {
       changes.considerForFunding = undefined;
     }
 

@@ -15,14 +15,15 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     submissions = Hash.new
     limit = params[:limit] || 50
 
-    case params[:filter]
+    reviews =
+      case params[:filter]
       when 'escalated'
-        reviews = PeerReview.escalated.where(reviewer: nil).limit(limit)
+        PeerReview.escalated.where(reviewer: nil).limit(limit)
       when 'open'
-        reviews = PeerReview.where(reviewer: nil).limit(limit)
+        PeerReview.where(reviewer: nil).limit(limit)
       else
-        reviews = PeerReview.all.limit(limit)
-    end
+        PeerReview.all.limit(limit)
+      end
 
     if params[:email].presence
       reviews = reviews.where(submitter: User.find_by_email(params[:email]))

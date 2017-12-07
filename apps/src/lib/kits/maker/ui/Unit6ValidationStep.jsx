@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import Button from "../Button";
+import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 const styles = {
@@ -16,15 +16,19 @@ const styles = {
   },
   submit: {
     marginTop: 5
+  },
+  errorText: {
+    color: 'red',
   }
 };
 
 export default class Unit6ValidationStep extends Component {
   static propTypes = {
-    previousStepsSucceeded: PropTypes.bool.isRequired,
+    showRadioButtons: PropTypes.bool.isRequired,
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     initialChoice: PropTypes.string,
     onSubmit: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -50,22 +54,30 @@ export default class Unit6ValidationStep extends Component {
      }
    }).done(data => {
      this.props.onSubmit(data.eligible);
-     this.setState({submitting: false});
+     this.setState({
+       submitting: false,
+       errorText: ''
+     });
    }).fail((jqXHR, textStatus) => {
-     // TODO: should probably introduce some error UI
      console.error(textStatus);
+     this.setState({
+       submitting: false,
+       errorText: "We're sorry, but something went wrong. Try refreshing the page " +
+        "and submitting again.  If this does not work, please contact support@code.org."
+      });
    });
   }
 
   render() {
-    const { previousStepsSucceeded, stepStatus } = this.props;
+    const { showRadioButtons, stepStatus } = this.props;
+    const { errorText } = this.state;
     return (
       <ValidationStep
         stepName={i18n.eligibilityReqYear()}
         stepStatus={stepStatus}
         alwaysShowChildren={true}
       >
-        {previousStepsSucceeded &&
+        {showRadioButtons &&
           <div>
             {i18n.eligibilityReqYearFail()}
             <form style={styles.unit6Form}>
@@ -99,8 +111,11 @@ export default class Unit6ValidationStep extends Component {
                   color={Button.ButtonColor.orange}
                   text={this.state.submitting ? i18n.submitting() : i18n.submit()}
                   onClick={this.handleSubmit}
-                  disabled={this.state.submitting}
+                  disabled={this.state.submitting || this.props.disabled}
                 />
+              }
+              {errorText &&
+                <div style={styles.errorText}>{errorText}</div>
               }
             </form>
           </div>

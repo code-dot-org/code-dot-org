@@ -28,7 +28,12 @@ export default class CountryAutocompleteDropdown extends Component {
     showErrorMsg: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
     value: PropTypes.string,
+    fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    fieldName: "country_s"
   };
 
   handleChange = (event) => {
@@ -55,7 +60,7 @@ export default class CountryAutocompleteDropdown extends Component {
         </div>
         <VirtualizedSelect
           id="country"
-          name="country_s"
+          name={this.props.fieldName}
           options={COUNTRIES}
           value={value}
           onChange={this.handleChange}

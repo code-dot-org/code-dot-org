@@ -1,14 +1,17 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
-import EligibilityChecklist from '@cdo/apps/templates/maker/EligibilityChecklist';
+import {assert} from '../../../../../util/configuredChai';
+import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import i18n from "@cdo/locale";
+
 
 describe('EligibilityChecklist', () => {
   const defaultProps = {
     statusPD: Status.SUCCEEDED,
     statusStudentCount: Status.SUCCEEDED,
     hasConfirmedSchool: false,
+    adminSetStatus: false,
   };
 
   it('renders a div if we have no discountCode', () => {
@@ -109,5 +112,65 @@ describe('EligibilityChecklist', () => {
       />
     );
     assert(wrapper.is('DiscountCodeInstructions'));
+  });
+
+  it('does not show Unit6ValidationStep radio buttons when it has admin override', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="yes1718"
+        adminSetStatus={true}
+        getsFullDiscount={true}
+      />
+    );
+    assert.equal(wrapper.find('Unit6ValidationStep').props().showRadioButtons, false);
+  });
+
+  it('claims unit6 success when it has admin override', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="no"
+        adminSetStatus={true}
+        getsFullDiscount={true}
+      />
+    );
+    assert.equal(wrapper.find('Unit6ValidationStep').props().stepStatus, Status.SUCCEEDED);
+  });
+
+  it('shows button to get code when admin override with full discount', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="no"
+        adminSetStatus={true}
+        getsFullDiscount={true}
+      />
+    );
+    assert.equal(wrapper.find('Button').props().text, 'Get Code for $0 kit');
+  });
+
+  it('shows button to get code when admin override with partial discount', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="no"
+        adminSetStatus={true}
+        getsFullDiscount={false}
+      />
+    );
+    assert.equal(wrapper.find('Button').props().text, 'Get Code for $97.50 kit');
+  });
+
+  it('shows message about subsidized kits when admin override', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="no"
+        adminSetStatus={true}
+        getsFullDiscount={true}
+      />
+    );
+    assert.equal(wrapper.find('div').last().text(), i18n.eligibilityReqYearFail());
   });
 });

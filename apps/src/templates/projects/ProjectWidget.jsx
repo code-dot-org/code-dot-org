@@ -48,7 +48,6 @@ class ProjectWidget extends React.Component {
         }
         <StartNewProject
           projectTypes={this.props.projectTypes}
-          isRtl={isRtl}
           canViewFullList={canViewFullList}
           canViewAdvancedTools={canViewAdvancedTools}
         />

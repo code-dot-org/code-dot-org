@@ -2,21 +2,22 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
+#  id                                  :integer          not null, primary key
+#  user_id                             :integer
+#  type                                :string(255)      not null
+#  application_year                    :string(255)      not null
+#  application_type                    :string(255)      not null
+#  regional_partner_id                 :integer
+#  status                              :string(255)
+#  locked_at                           :datetime
+#  notes                               :text(65535)
+#  form_data                           :text(65535)      not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  course                              :string(255)
+#  response_scores                     :text(65535)
+#  application_guid                    :string(255)
+#  decision_notification_email_sent_at :datetime
 #
 # Indexes
 #
@@ -29,9 +30,13 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
   class Teacher1819Application < ApplicationBase
+    include Rails.application.routes.url_helpers
+    include Teacher1819ApplicationConstants
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = TEACHER_APPLICATION
@@ -48,6 +53,11 @@ module Pd::Application
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    before_create :generate_application_guid, if: -> {application_guid.blank?}
+    def generate_application_guid
+      self.application_guid = SecureRandom.uuid
     end
 
     before_save :save_partner, if: -> {form_data_changed?}
@@ -82,20 +92,6 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
-    COURSE_HOURS_PER_YEAR = [
-      'At least 100 course hours',
-      '50 to 99 course hours',
-      'Less than 50 course hours'
-    ]
-
-    TERMS_PER_YEAR = [
-      '1 quarter',
-      '1 trimester',
-      '1 semester',
-      '2 trimesters',
-      'Full year'
-    ]
-
     def self.options
       {
         country: [
@@ -109,12 +105,7 @@ module Pd::Application
         race: COMMON_OPTIONS[:race],
 
         school_state: COMMON_OPTIONS[:state],
-        school_type: [
-          'Public school',
-          'Private school',
-          'Charter school',
-          'Other'
-        ],
+        school_type: COMMON_OPTIONS[:school_type],
 
         principal_title: COMMON_OPTIONS[:title],
 
@@ -250,9 +241,9 @@ module Pd::Application
           OTHER_PLEASE_LIST
         ],
 
-        csd_course_hours_per_year: COURSE_HOURS_PER_YEAR,
+        csd_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
 
-        csd_terms_per_year: TERMS_PER_YEAR,
+        csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
         csp_which_grades: (9..12).map(&:to_s),
 
@@ -262,9 +253,9 @@ module Pd::Application
           'Less than 4 course hours per week'
         ],
 
-        csp_course_hours_per_year: COURSE_HOURS_PER_YEAR,
+        csp_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
 
-        csp_terms_per_year: TERMS_PER_YEAR,
+        csp_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
         csp_how_offer: [
           'As an introductory course',
@@ -334,10 +325,10 @@ module Pd::Application
         previous_yearlong_cdo_pd
         cs_offered_at_school
         cs_opportunities_at_school
-
         program
         plan_to_teach
-
+        committed
+        willing_to_travel
         agree
       )
     end
@@ -381,13 +372,64 @@ module Pd::Application
       hash[:preferred_first_name] || hash[:first_name]
     end
 
+    def last_name
+      sanitize_form_data_hash[:last_name]
+    end
+
+    def teacher_full_name
+      "#{first_name} #{last_name}"
+    end
+
     def state_code
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
+
+    def principal_email
+      sanitize_form_data_hash[:principal_email]
+    end
+
+    # Title & last name, or full name if no title was provided.
+    def principal_greeting
+      hash = sanitize_form_data_hash
+      title = hash[:principal_title]
+      "#{title.present? ? title : hash[:principal_first_name]} #{hash[:principal_last_name]}"
+    end
+
+    def principal_approval_url
+      pd_application_principal_approval_url(application_guid)
     end
 
     # @override
     def check_idempotency
       Pd::Application::Teacher1819Application.find_by(user: user)
+    end
+
+    def meets_criteria
+      response_scores = response_scores_hash
+      scored_questions =
+        if course == 'csd'
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD
+        elsif course == 'csp'
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP
+        end
+
+      responses = scored_questions.map do |key|
+        response_scores[key]
+      end
+
+      if responses.uniq == [YES]
+        # If all resolve to Yes, applicant meets criteria
+        :meets
+      elsif responses.include? NO
+        # If any are No, applicant does not meet criteria
+        :does_not_meet
+      else
+        :incomplete
+      end
+    end
+
+    def total_score
+      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
     end
   end
 end

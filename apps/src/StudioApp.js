@@ -288,10 +288,6 @@ StudioApp.prototype.init = function (config) {
       containerId: config.containerId,
       embed: config.embed,
       level: config.level,
-      phone_share_url: config.send_to_phone_url,
-      sendToPhone: config.sendToPhone,
-      twitter: config.twitter,
-      app: config.app,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       isResponsive: getStore().getState().pageConstants.isResponsive,
@@ -1462,6 +1458,12 @@ StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
+  options.channelId = project.getCurrentId();
+
+  try {
+    options.shareLink = (options.response && options.response.level_source) ||
+      project.getShareUrl();
+  } catch (e) {}
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -1957,9 +1959,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       }
 
       if (!options.embed && !options.noHowItWorks) {
-        var runButton = document.getElementById('runButton');
-        var buttonRow = runButton.parentElement;
-        var openWorkspace = document.createElement('button');
+        const buttonRow = document.getElementById('gameButtons');
+        const openWorkspace = document.createElement('button');
         openWorkspace.setAttribute('id', 'open-workspace');
         openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
