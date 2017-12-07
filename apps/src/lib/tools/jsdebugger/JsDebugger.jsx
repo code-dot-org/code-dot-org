@@ -296,6 +296,9 @@ class JsDebugger extends React.Component {
   onMouseMoveDebugResizeBar = (event) => {
     const codeApp = document.getElementById('codeApp');
     const codeTextbox = document.getElementById('codeTextbox');
+    if (!codeApp || !codeTextbox) {
+      return;
+    }
 
     const resizeBar = this._debugResizeBar;
     const rect = resizeBar.getBoundingClientRect();
