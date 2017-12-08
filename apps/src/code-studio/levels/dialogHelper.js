@@ -11,21 +11,7 @@ import Sounds from '../../Sounds';
  * This file contains general logic for displaying modal dialogs
  */
 
-var dialogType = null;
 var adjustedScroll = false;
-
-// TODO - we should just have onHidden methods that we pass for success/error
-// dialog types
-function dialogHidden() {
-  var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
-  if (dialogType === "success" && lastServerResponse.nextRedirect) {
-    window.location.href = lastServerResponse.nextRedirect;
-  }
-
-  if (dialogType === "error") {
-    adjustScroll();
-  }
-}
 
 /**
  * @param {string|Component} typeOrComponent - Either a string identifying the DOM
@@ -37,8 +23,6 @@ function dialogHidden() {
 export function showDialog(typeOrComponent, callback, onHidden) {
   let content;
   if (typeof(typeOrComponent) === 'string') {
-    dialogType = typeOrComponent;
-
     // Use our prefabricated dialog content.
     content = document.querySelector("#" + typeOrComponent + "-dialogcontent").cloneNode(true);
   } else {
@@ -49,7 +33,7 @@ export function showDialog(typeOrComponent, callback, onHidden) {
   var dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
-    onHidden: onHidden || dialogHidden,
+    onHidden,
     autoResizeScrollableElement: '.scrollable-element'
   });
 
@@ -124,7 +108,8 @@ export function processResults(onComplete, beforeHook) {
     var submitted = results.submitted || false;
 
     if (!result) {
-      showDialog(errorType || "error");
+      const type = errorType || 'error';
+      showDialog(type, null, type === 'error' ? adjustScroll : null);
       if (!appOptions.dialog.skipSound) {
         Sounds.getSingleton().play('failure');
       }
@@ -172,7 +157,12 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            showDialog("success");
+            showDialog("success", null, () => {
+              var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+              if (lastServerResponse.nextRedirect) {
+                window.location.href = lastServerResponse.nextRedirect;
+              }
+            });
           } else {
             window.location.href = lastServerResponse.nextRedirect;
           }
