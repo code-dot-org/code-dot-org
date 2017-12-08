@@ -288,6 +288,7 @@
   "discountCodeSchoolConfirm": "Before you can receive your code, please verify the school at which you teach:",
   "documentation": "Documentation",
   "dontForget": "Don't forget",
+  "dragBlocksToMatch": "Drag the blocks to match",
   "dropletBlock_addOperator_description": "Add two numbers",
   "dropletBlock_addOperator_signatureOverride": "Add operator",
   "dropletBlock_andOperator_description": "Returns true only when both expressions are true and false otherwise",

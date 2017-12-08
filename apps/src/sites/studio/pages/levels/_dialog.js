@@ -47,6 +47,11 @@ $(document).on('click', '.submitButton', function () {
 
   var result = getResult();
   if (result.confirmationDialog) {
+    // This is only used by level_group.js, and only uses the React approach to
+    // showDialog
+    if (result.confirmationDialog === 'string') {
+      throw new Error('result.confirmationDialog only supports React approach to showDialog');
+    }
     showDialog(result.confirmationDialog, function () {
       processResults(undefined, result.beforeProcessResultsHook);
     });
