@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { hideFeedback } from '../redux/feedback';
 import BaseDialog from './BaseDialog';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
 import React, { Component, PropTypes } from 'react';
@@ -129,7 +130,8 @@ export class UnconnectedFinishDialog extends Component {
     isOpen: PropTypes.bool,
     hideBackdrop: PropTypes.bool,
 
-    handleClose: PropTypes.func,
+    onContinue: PropTypes.func,
+    onReplay: PropTypes.func,
 
     isPerfect: PropTypes.bool,
     blocksUsed: PropTypes.number,
@@ -236,10 +238,18 @@ export class UnconnectedFinishDialog extends Component {
 
   getButtons() {
     return [
-      <button key="replay" style={{...styles.button, ...styles.replayButton}}>
+      <button
+        key="replay"
+        style={{...styles.button, ...styles.replayButton}}
+        onClick={this.props.onReplay}
+      >
         Replay
       </button>,
-      <button key="contnue" style={{...styles.button, ...styles.continueButton}} onClick={this.props.handleClose}>
+      <button
+        key="contnue"
+        style={{...styles.button, ...styles.continueButton}}
+        onClick={this.props.onContinue}
+      >
         Continue
       </button>,
     ];
@@ -250,7 +260,7 @@ export class UnconnectedFinishDialog extends Component {
       <BaseDialog
         isOpen={this.props.isOpen}
         hideBackdrop={this.props.hideBackdrop}
-        handleClose={this.props.handleClose}
+        handleClose={this.props.onContinue}
         hideCloseButton
         noModalStyles
       >
@@ -285,4 +295,5 @@ export default connect(state => ({
   showFunometer: state.feedback.displayFunometer,
   canShare: state.feedback.canShare,
 }), dispatch => ({
+  onReplay: () => dispatch(hideFeedback()),
 }))(UnconnectedFinishDialog);
