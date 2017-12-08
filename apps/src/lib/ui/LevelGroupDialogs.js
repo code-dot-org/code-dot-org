@@ -1,9 +1,16 @@
-import React, { Component, PropTypes } from 'react';
+/**
+ * This file contains a set of dialogs used by level groups (and in the case of
+ * unsubmit, possibly some other places). These dialogs are used by showDialog in
+ * dialogHelper.js to create LegacyDialogs. They are similar to the dialogs defined
+ * in haml in _dialog.html.haml, but defined using React instead.
+ */
+
+import React, { PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 
 const SingleDialog = ({id, title, body}) => (
-  <div id={id}>
+  <ProtectedStatefulDiv id={id}>
     <div className="modal-content no-modal-icon">
       <p className="dialog-title">{title}</p>
       <p className="dialog-body">{body}</p>
@@ -14,7 +21,7 @@ const SingleDialog = ({id, title, body}) => (
         {i18n.okay()}
       </button>
     </div>
-  </div>
+  </ProtectedStatefulDiv>
 );
 SingleDialog.propTypes = {
   id: PropTypes.string.isRequired,
@@ -22,40 +29,26 @@ SingleDialog.propTypes = {
   body: PropTypes.string.isRequired,
 };
 
-/**
- * The way that showDialog currently works is that it is given a type (such as
- * "levelgroup-submit-incomplete") and then looks for a hidden div with the id
- * ${type}-dialogcontent. It then takes this DOM and sticks it in a LegacyDialog,
- * attaching some event handlers along the way.
- * The design/current implementation is a bit of a mess. This component is an
- * attempt to get us to a slightly cleaner state by having the initial DOM created
- * by React instead of haml.
- * Ideally, eventually we'll be able to get away from using LegacyDialog
- */
+export const IncompleteDialog = (
+  <SingleDialog
+    id="levelgroup-submit-incomplete-dialogcontent"
+    title={i18n.submitAssessment()}
+    body={i18n.submittableIncomplete()}
+  />
+);
 
-// TODO: as currently constructed, unsubmit will fail in some scenarios (as this
-// is used in non-LG places). I think better solution anyways (in next commit) is
-// to pass showDialog a component instead of a string for these
-export default class LevelGroupDialogs extends Component {
-  render() {
-    return (
-      <ProtectedStatefulDiv>
-        <SingleDialog
-          id="levelgroup-submit-incomplete-dialogcontent"
-          title={i18n.submitAssessment()}
-          body={i18n.submittableIncomplete()}
-        />
-        <SingleDialog
-          id="levelgroup-submit-complete-dialogcontent"
-          title={i18n.submitAssessment()}
-          body={i18n.submittableComplete()}
-        />
-        <SingleDialog
-          id="unsubmit-dialogcontent"
-          title={i18n.unsubmitAssessment()}
-          body={i18n.submittableUnsubmit()}
-        />
-      </ProtectedStatefulDiv>
-    );
-  }
-}
+export const CompleteDialog = (
+  <SingleDialog
+    id="levelgroup-submit-complete-dialogcontent"
+    title={i18n.submitAssessment()}
+    body={i18n.submittableComplete()}
+  />
+);
+
+export const UnsubmitDialog = (
+  <SingleDialog
+    id="unsubmit-dialogcontent"
+    title={i18n.unsubmitAssessment()}
+    body={i18n.submittableUnsubmit()}
+  />
+);

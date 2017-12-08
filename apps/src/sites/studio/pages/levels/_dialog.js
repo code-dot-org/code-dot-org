@@ -45,9 +45,8 @@ $(document).on('click', '.submitButton', function () {
   }
 
   var result = getResult();
-  var showConfirmationDialog = result.showConfirmationDialog || false;
-  if (showConfirmationDialog) {
-    showDialog(showConfirmationDialog, function () {
+  if (result.confirmationDialog) {
+    showDialog(result.confirmationDialog, function () {
       processResults(undefined, result.beforeProcessResultsHook);
     });
   } else {
