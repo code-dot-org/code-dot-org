@@ -20,11 +20,23 @@ class CircuitPlaygroundDiscountCode < ApplicationRecord
 
     code = nil
     Retryable.retryable(on: ActiveRecord::RecordNotSaved) do
-      code = where(full_discount: full_discount).
+      codes = where(full_discount: full_discount).
         where(claimed_at: nil).
         where(voided_at: nil).
         where(expiration_field.gt(Time.now)).
-        first
+        limit(20)
+
+      if codes.count < 20
+        Honeybadger.notify(
+          error_message: "Fewer than 20 remaining circuit playground discount codes",
+          error_class: "CircuitPlaygroundDiscountCode.limited_codes_left",
+          context: {
+            full_discount: full_discount,
+            count: codes.length
+          }
+        )
+      end
+      code = codes.first
 
       if code
         # We use update_all so that the where/update are done in a single SQL query
