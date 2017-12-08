@@ -1,5 +1,5 @@
 module Teacher1819ApplicationConstants
-  YES_NO = %w(Yes No)
+  YES_NO = %w(Yes No).freeze
 
   # Remove newlines and leading whitespace from multiline strings
   def self.clean_multiline(string)
@@ -13,7 +13,7 @@ module Teacher1819ApplicationConstants
     section_4_summer_workshop: 'Summer Workshop',
     section_5_submission: 'Submission',
     detail_view_principal_approval: 'Principal Approval'
-  }
+  }.freeze
 
   PAGE_LABELS = {
     section_1_about_you: {
@@ -166,7 +166,7 @@ module Teacher1819ApplicationConstants
       free_lunch_percent: 'Percent of students that receive free/reduced lunch',
       underrepresented_minority_percent: 'Percent of students that are underrepresented minorities'
     }
-  }
+  }.freeze
 
   LABEL_OVERRIDES = {
     taught_in_past: 'Have you taught computer science courses or activities in the past?',
@@ -176,7 +176,7 @@ module Teacher1819ApplicationConstants
     csp_ap_exam: 'Are you planning for your students to take the AP CS Principles exam in the spring of 2019?',
     alternate_workshops: 'Which of the following alternate workshops are you available to attend?',
     willing_to_travel: 'How far would you be willing to travel to each workshop?'
-  }
+  }.freeze
 
   VALID_SCORES = {
     regional_partner_name: YES_NO,
@@ -195,8 +195,13 @@ module Teacher1819ApplicationConstants
     wont_replace_existing_course: [5, 0],
     taught_in_past: [2, 0],
     csp_ap_exam: [2, 0]
-  }
+  }.freeze
 
-  CRITERIA_SCORE_QUESTIONS_CSP = VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
-  CRITERIA_SCORE_QUESTIONS_CSD = VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csp_ap_exam, :csp_which_grades, :csp_course_hours_per_year]
+  CRITERIA_SCORE_QUESTIONS_CSP = (
+    VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
+  ).freeze
+  CRITERIA_SCORE_QUESTIONS_CSD = (
+    VALID_SCORES.select {|_, v| v == YES_NO}.keys -
+      [:csp_ap_exam, :csp_which_grades, :csp_course_hours_per_year]
+  ).freeze
 end

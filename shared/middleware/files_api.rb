@@ -730,7 +730,7 @@ class FilesApi < Sinatra::Base
   METADATA_PATH = '.metadata'.freeze
   METADATA_FILENAMES = %w(
     thumbnail.png
-  )
+  ).freeze
 
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
