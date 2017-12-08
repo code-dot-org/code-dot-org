@@ -4,9 +4,19 @@ const style = {
   aboveFooter: {
     height: '90px',
   },
-  footer: {
+  adjustedFooter: {
     position: 'absolute',
     height: '80px',
+    padding: '0 20px 20px 20px',
+    left: '0',
+    right: '0',
+    bottom: '0',
+    background: 'white',
+    zIndex: '50',
+  },
+  footer: {
+    position: 'absolute',
+    height: '100px',
     padding: '0 20px 20px 20px',
     left: '0',
     right: '0',
@@ -29,13 +39,14 @@ const style = {
 export default class DialogFooter extends Component {
   static propTypes = {
     children: PropTypes.any,
+    adjustHeight: PropTypes.bool,
   };
 
   render() {
     return (
       <div>
         <div style={style.aboveFooter}></div>
-        <div style={style.footer}>
+        <div style={this.props.adjustHeight ? style.adjustedFooter : style.footer}>
           <hr/>
           <div style={style.buttonRow}>
             {this.props.children}
