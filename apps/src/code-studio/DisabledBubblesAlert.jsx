@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
 
@@ -13,10 +13,6 @@ const styles = {
  * postMilestone is disabled (and thus progress is disabled)
  */
 const DisabledBubblesAlert = React.createClass({
-  propTypes: {
-    isHocScript: PropTypes.bool.isRequired
-  },
-
   getInitialState() {
     // Once alert has been dismissed, don't show again.
     const disabledBubblesAlertSeen = sessionStorage.getItem('disabledBubblesAlertSeen');
