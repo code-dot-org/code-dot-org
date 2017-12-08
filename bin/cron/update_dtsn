@@ -7,7 +7,7 @@ require 'cdo/github'
 require 'cdo/developers_topic'
 require 'cdo/only_one'
 
-DTSN_FILE = '.dtsn'
+DTSN_FILE = '.dtsn'.freeze
 
 def main
   current_dtsn = DevelopersTopic.dtsn?
