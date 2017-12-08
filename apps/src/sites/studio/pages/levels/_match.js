@@ -1,5 +1,7 @@
 /*global jQuery, CDOSounds */
 
+import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
+
 jQuery.fn.swap = function (b) {
   // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
   b = jQuery(b)[0];
@@ -79,37 +81,33 @@ $(function () {
   });
 });
 
-window.dashboard.codeStudioLevels.registerGetResult(
-  function getResult() {
-    var wrongAnswer = false;
+registerGetResult(() => {
+  let wrongAnswer = false;
 
-    var elements = $("#slots li");
+  const elements = $("#slots li");
 
-    var response = [];
+  const response = [];
 
-    for (var index = 0; index < elements.length; index++) {
-      var value = elements[index];
+  for (let index = 0; index < elements.length; index++) {
+    const originalIndex = elements[index].getAttribute("originalIndex");
+    response.push(originalIndex);
+    if (originalIndex === null) {
+      // nothing dragged in this slot yet
+      wrongAnswer = true;
 
-      var originalIndex = value.getAttribute("originalIndex");
-      response.push(originalIndex);
-      if (originalIndex === null) {
-        // nothing dragged in this slot yet
-        wrongAnswer = true;
+      $("#xmark_" + index).hide();
+    } else if (originalIndex !== String(index)) {
+      // wrong answer
+      wrongAnswer = true;
 
-        $("#xmark_" + index).hide();
-      } else if (originalIndex !== String(index)) {
-        // wrong answer
-        wrongAnswer = true;
-
-        $("#xmark_" + index).show();
-      } else {
-        // correct answer
-        $("#xmark_" + index).hide();
-      }
+      $("#xmark_" + index).show();
+    } else {
+      // correct answer
+      $("#xmark_" + index).hide();
     }
-    return {
-      response: response,
-      result: !wrongAnswer
-    };
   }
-);
+  return {
+    response: response,
+    result: !wrongAnswer
+  };
+});
