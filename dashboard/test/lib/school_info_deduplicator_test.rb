@@ -12,8 +12,14 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       country: 'US',
       school_type: 'public',
       state: 'AK',
+      zip: nil,
       school_district_id: nil,
+      school_district_other: nil,
+      school_district_name: nil,
       school_id: nil,
+      school_other: nil,
+      school_name: nil,
+      full_address: nil,
       validation_type: 'none'
     }
     actual = {
@@ -35,8 +41,14 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       country: 'US',
       school_type: 'public',
       state: 'AK',
+      zip: nil,
       school_district_id: '200001',
+      school_district_other: nil,
+      school_district_name: nil,
       school_id: '20000100207',
+      school_other: nil,
+      school_name: nil,
+      full_address: nil,
       validation_type: 'none'
     }
     actual = {
@@ -60,8 +72,14 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       country: 'US',
       school_type: 'public',
       state: 'AK',
+      zip: nil,
       school_district_id: '200003',
+      school_district_other: nil,
+      school_district_name: nil,
       school_id: nil,
+      school_other: nil,
+      school_name: nil,
+      full_address: nil,
       validation_type: 'none'
     }
     actual = {
@@ -85,10 +103,14 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       country: 'US',
       school_type: 'public',
       state: 'AK',
+      zip: nil,
       school_district_id: '200003',
+      school_district_other: nil,
+      school_district_name: nil,
       school_id: nil,
       school_other: true,
       school_name: 'Test School Name',
+      full_address: nil,
       validation_type: 'none'
     }
     actual = {
@@ -112,9 +134,14 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       country: 'US',
       school_type: 'public',
       state: 'AK',
+      zip: nil,
       school_district_id: '200003',
+      school_district_other: nil,
+      school_district_name: nil,
       school_id: nil,
       school_other: true,
+      school_name: nil,
+      full_address: nil,
       validation_type: 'none'
     }
     actual = {
@@ -138,5 +165,16 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
     deduped = mock.deduplicate_school_info({school_id: school_info.school_id, validation_type: SchoolInfo::VALIDATION_NONE, state: "FAKE"}, mock)
     assert deduped, "Expected to dedupe on school id"
     assert_equal school_info.id, mock.school_info.id
+  end
+
+  test 'missing or blank fields do not match none-null values' do
+    mock = MockSchoolInfoDeduplicator.new
+    existing = create :school_info_us_private, validation_type: SchoolInfo::VALIDATION_NONE
+    new_attrs = {
+      country: existing.country,
+      validation_type: SchoolInfo::VALIDATION_NONE,
+    }
+    duplicate = mock.get_duplicate_school_info(new_attrs)
+    refute duplicate, "Did not expect to find a school info matching #{new_attrs}. Found #{duplicate.inspect}"
   end
 end
