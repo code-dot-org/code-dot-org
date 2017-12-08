@@ -71,13 +71,13 @@ class FakeStorybook {
     return this;
   }
 
-  withReduxStore(reducers = {}) {
+  withReduxStore(reducers = {}, preloadedState) {
     this.addDecorator(story => {
       this.store = createStore(combineReducers({
         isRtl,
         responsive,
         ...reducers,
-      }));
+      }), preloadedState);
       return (
         <Provider store={this.store}>
           {story()}
