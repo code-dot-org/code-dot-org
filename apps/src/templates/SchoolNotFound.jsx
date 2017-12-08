@@ -88,6 +88,34 @@ export default class SchoolNotFound extends Component {
     this.props.onChange(field, event);
   }
 
+  isNotBlank(value) {
+    return value && (value !== '');
+  }
+
+  isFieldValid(fieldValue) {
+    if ((OMIT_FIELD === fieldValue) || this.isNotBlank(fieldValue)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  isValid() {
+    if (!this.isFieldValid(this.props.schoolName) || !this.isFieldValid(this.props.schoolType)) {
+      return false;
+    }
+
+    if (this.props.useGoogleLocationSearch) {
+      return this.isFieldValid($("#registration-school-location").val());
+    } else {
+      return (
+        this.isFieldValid(this.props.schoolCity) &&
+        this.isFieldValid(this.props.schoolState) &&
+        this.isFieldValid(this.props.schoolZip)
+      );
+    }
+  }
+
   renderLabel(text) {
     const {singleLineLayout, showRequiredIndicators} = this.props;
     const questionStyle = {
@@ -110,17 +138,19 @@ export default class SchoolNotFound extends Component {
     const fieldStyle = {...styles.field, ...(singleLineLayout && singleLineFieldStyles)};
     const inputStyle = {...styles.input, ...(singleLineLayout && singleLineInputStyles)};
     const dropdownStyle = {...styles.schoolNotFoundDropdown, ...(singleLineLayout && singleLineDropdownStyles)};
+    const showError = this.props.showErrorMsg && !this.isValid();
+    const errorDiv = (
+      <div style={styles.errors}>
+        {i18n.schoolInfoRequired()}
+      </div>
+    );
 
     return (
       <div>
         {!singleLineLayout &&
           <div style={styles.question}>
             {i18n.schoolNotFoundDescription()}
-            {this.props.showErrorMsg && (
-              <div style={styles.errors}>
-                {i18n.schoolInfoRequired()}
-              </div>
-            )}
+            {showError && errorDiv}
           </div>
         }
         <div>
@@ -230,6 +260,7 @@ export default class SchoolNotFound extends Component {
           </div>
         }
         <div style={styles.clear}/>
+        {singleLineLayout && showError && errorDiv}
       </div>
     );
   }

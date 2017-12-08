@@ -30,6 +30,8 @@ export default class SchoolInfoInputs extends Component {
     schoolZip: PropTypes.string,
     useGoogleLocationSearch: PropTypes.bool,
     fieldNames: PropTypes.object,
+    showErrors: PropTypes.bool,
+    showRequiredIndicator: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -52,6 +54,43 @@ export default class SchoolInfoInputs extends Component {
     },
   };
 
+  constructor() {
+    super();
+    this.bindSchoolNotFound = this.bindSchoolNotFound.bind(this);
+  }
+
+  isSchoolNotFoundValid() {
+    return this.schoolNotFound.isValid();
+  }
+
+  isSchoolAutocompleteDropdownValid() {
+    if (!this.props.ncesSchoolId) {
+      return false;
+    }
+
+    if (this.props.ncesSchoolId === "-1") {
+      return this.isSchoolNotFoundValid();
+    } else {
+      return true;
+    }
+  }
+
+  isValid() {
+    if (!this.props.country || !this.props.schoolType) {
+      return false;
+    }
+
+    if ((this.props.country === "United States") &&  SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(this.props.schoolType)) {
+      return this.isSchoolAutocompleteDropdownValid();
+    } else {
+      return this.isSchoolNotFoundValid();
+    }
+  }
+
+  bindSchoolNotFound(snf) {
+    this.schoolNotFound = snf;
+  }
+
   render() {
     const isUS = this.props.country === 'United States';
     const outsideUS = !isUS;
@@ -71,26 +110,31 @@ export default class SchoolInfoInputs extends Component {
           onChange={this.props.onCountryChange}
           value={this.props.country}
           fieldName={this.props.fieldNames.country}
-          showErrorMsg={false}
+          showErrorMsg={this.props.showErrors}
+          showRequiredIndicator={this.props.showRequiredIndicator}
           singleLineLayout
         />
         <SchoolTypeDropdown
           value={this.props.schoolType}
           fieldName={this.props.fieldNames.schoolType}
           onChange={this.props.onSchoolTypeChange}
+          showErrorMsg={this.props.showErrors}
+          showRequiredIndicator={this.props.showRequiredIndicator}
         />
         {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(this.props.schoolType) &&
          <SchoolAutocompleteDropdownWithLabel
            setField={this.props.onSchoolChange}
            value={this.props.ncesSchoolId}
            fieldName={this.props.fieldNames.ncesSchoolId}
-           showErrorMsg={false}
+           showErrorMsg={this.props.showErrors}
            singleLineLayout
-           showRequiredIndicator={false}
+           showRequiredIndicator={this.props.showRequiredIndicator}
          />
         }
         {(outsideUS || ncesInfoNotFound || noDropdownForSchoolType) &&
+         !(outsideUS && !askForName) &&
          <SchoolNotFound
+           ref={this.bindSchoolNotFound}
            onChange={this.props.onSchoolNotFoundChange}
            schoolName={askForName ? this.props.schoolName : SchoolNotFound.OMIT_FIELD}
            schoolType={SchoolNotFound.OMIT_FIELD}
@@ -98,9 +142,9 @@ export default class SchoolInfoInputs extends Component {
            schoolState={isUS ? this.props.schoolState : SchoolNotFound.OMIT_FIELD}
            schoolZip={isUS ? this.props.schoolZip : SchoolNotFound.OMIT_FIELD}
            fieldNames={this.props.fieldNames}
-           showErrorMsg={false}
+           showErrorMsg={this.props.showErrors}
            singleLineLayout
-           showRequiredIndicators={false}
+           showRequiredIndicators={this.props.showRequiredIndicator}
            schoolNameLabel={schoolNameLabel}
            useGoogleLocationSearch={this.props.useGoogleLocationSearch}
          />
