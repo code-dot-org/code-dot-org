@@ -1,5 +1,5 @@
 module PrincipalApproval1819ApplicationConstants
-  YES_NO = %w(Yes No)
+  YES_NO = %w(Yes No).freeze
 
   # Remove newlines and leading whitespace from multiline strings
   def self.clean_multiline(string)
@@ -40,5 +40,5 @@ module PrincipalApproval1819ApplicationConstants
     school_state: 'State',
     school_zip_code: 'Zip Code',
     school_type: 'My school is a',
-  }
+  }.freeze
 end
