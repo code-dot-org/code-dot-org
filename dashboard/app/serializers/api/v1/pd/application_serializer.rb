@@ -13,7 +13,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def response_scores
-    JSON.parse(object.response_scores || '{}')
+    JSON.parse(object.response_scores || '{}').transform_keys {|x| x.camelize :lower}
   end
 
   def meets_criteria
