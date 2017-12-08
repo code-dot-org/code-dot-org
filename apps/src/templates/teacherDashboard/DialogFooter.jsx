@@ -29,14 +29,13 @@ const style = {
 export default class DialogFooter extends Component {
   static propTypes = {
     children: PropTypes.any,
-    adjustHeight: PropTypes.bool,
   };
 
   render() {
     return (
       <div>
         <div style={style.aboveFooter}></div>
-        <div style={this.props.adjustHeight ? style.adjustedFooter : style.footer}>
+        <div style={style.footer}>
           <hr/>
           <div style={style.buttonRow}>
             {this.props.children}
