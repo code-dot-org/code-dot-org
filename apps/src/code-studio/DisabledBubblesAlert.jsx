@@ -12,19 +12,21 @@ const styles = {
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is disabled)
  */
-const DisabledBubblesAlert = React.createClass({
-  getInitialState() {
+export default class DisabledBubblesAlert extends React.Component {
+  constructor(props) {
+    super(props);
+
     // Once alert has been dismissed, don't show again.
     const disabledBubblesAlertSeen = sessionStorage.getItem('disabledBubblesAlertSeen');
-    return {
+    this.state = {
       visible: !disabledBubblesAlertSeen
     };
-  },
+  }
 
-  onClose() {
+  onClose = () => {
     this.setState({visible: false});
     sessionStorage.setItem('disabledBubblesAlertSeen', true);
-  },
+  };
 
   render() {
     if (!this.state.visible) {
@@ -46,6 +48,4 @@ const DisabledBubblesAlert = React.createClass({
       </Alert>
     );
   }
-});
-
-export default DisabledBubblesAlert;
+}
