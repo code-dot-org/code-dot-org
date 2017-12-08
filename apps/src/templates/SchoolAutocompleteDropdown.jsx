@@ -9,7 +9,12 @@ export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     // Value is the NCES id of the school
-    value: PropTypes.string
+    value: PropTypes.string,
+    fieldName: PropTypes.string
+  };
+
+  static defaultProps = {
+    fieldName: "nces_school_s"
   };
 
   constructSchoolOption = school => ({
@@ -53,7 +58,7 @@ export default class SchoolAutocompleteDropdown extends Component {
     return (
       <VirtualizedSelect
         id="nces_school"
-        name="nces_school_s"
+        name={this.props.fieldName}
         async={true}
         loadOptions={this.getOptions}
         filterOption={() => true}

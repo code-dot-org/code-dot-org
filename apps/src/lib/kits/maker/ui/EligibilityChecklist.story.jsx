@@ -6,6 +6,7 @@ const defaultProps = {
   statusPD: Status.SUCCEEDED,
   statusStudentCount: Status.SUCCEEDED,
   hasConfirmedSchool: false,
+  adminSetStatus: false,
 };
 
 export default storybook => {
@@ -69,5 +70,36 @@ export default storybook => {
         )
       },
 
+      {
+        name: 'Admin override before user filled anything out',
+        description: 'All bubbles should be green. We should have a get code button',
+        story: () => (
+          <EligibilityChecklist
+            {...defaultProps}
+            unit6Intention=""
+            schoolId=""
+            schoolName=""
+            getsFullDiscount={true}
+            initialDiscountCode={null}
+            adminSetStatus={true}
+          />
+        )
+      },
+
+      {
+        name: 'Admin override after user answered unit6 intention',
+        description: 'Should still have green bubbles because of override',
+        story: () => (
+          <EligibilityChecklist
+            {...defaultProps}
+            unit6Intention="no"
+            schoolId=""
+            schoolName=""
+            getsFullDiscount={false}
+            initialDiscountCode={null}
+            adminSetStatus={true}
+          />
+        )
+      },
     ]);
 };

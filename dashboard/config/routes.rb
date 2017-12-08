@@ -526,6 +526,9 @@ Dashboard::Application.routes.draw do
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
+      post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
+      post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
