@@ -90,6 +90,7 @@ export default class CensusTeacherBanner extends Component {
     schoolDisplayName: null,
     schoolState: '',
     schoolZip: '',
+    schoolLocation: '',
   };
 
   onCountryChange(_, event) {
@@ -137,6 +138,7 @@ export default class CensusTeacherBanner extends Component {
       schoolDisplayName: null,
       schoolState: '',
       schoolZip: '',
+      schoolLocation: '',
       showSchoolInfoErrors: false,
       showSchoolInfoUnknownError: false,
     });
@@ -221,6 +223,7 @@ export default class CensusTeacherBanner extends Component {
                 schoolName={this.state.schoolName}
                 schoolState={this.state.schoolState}
                 schoolZip={this.state.schoolZip}
+                schoolLocation={this.state.schoolLocation}
                 useGoogleLocationSearch={true}
                 showErrors={this.state.showSchoolInfoErrors}
                 showRequiredIndicator={true}
@@ -269,7 +272,6 @@ export default class CensusTeacherBanner extends Component {
       }
 
       const schoolId = this.state.ncesSchoolId ? this.state.ncesSchoolId : this.props.ncesSchoolId;
-      const schoolLocation = $("#registration-school-location").val();
 
       if (schoolName) {
         return (
@@ -292,8 +294,8 @@ export default class CensusTeacherBanner extends Component {
               {this.state.schoolZip && (
                 <input type="hidden" name="school_zip_s" value={this.state.schoolZip}/>
               )}
-              {schoolLocation && (
-                <input type="hidden" name="school_location" value={schoolLocation}/>
+              {this.state.schoolLocation && (
+                <input type="hidden" name="school_location" value={this.state.schoolLocation}/>
               )}
               <input type="hidden" name="submitter_role" value="TEACHER"/>
               <input type="hidden" name="submitter_name" value={this.props.teacherName}/>
