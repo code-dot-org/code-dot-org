@@ -5,7 +5,6 @@ import i18n from "@cdo/locale";
 
 class CourseBlocksStudentGradeBands extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
     showContainer: PropTypes.bool.isRequired,
     hideBottomMargin: PropTypes.bool.isRequired
   };
@@ -42,7 +41,6 @@ class CourseBlocksStudentGradeBands extends Component {
         heading={heading}
         description={description}
         hideBottomMargin={hideBottomMargin}
-        isRtl={this.props.isRtl}
       >
         <CourseBlocksGradeBands
           cards={this.cards}

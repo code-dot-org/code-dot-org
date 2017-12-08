@@ -126,7 +126,7 @@ class ContentContainer extends Component {
     link: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
-    responsiveSize: PropTypes.oneOf(['xs', 'md', 'lg', 'xl']).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     hideBottomMargin: PropTypes.bool,
   };
 
@@ -141,8 +141,8 @@ class ContentContainer extends Component {
       hideBottomMargin
     } = this.props;
 
-    const showLinkTop = /lg|xl/.test(responsiveSize) && link && linkText;
-    const showLinkBottom = !/lg|xl/.test(responsiveSize) && link && linkText;
+    const showLinkTop = (responsiveSize === 'lg') && link && linkText;
+    const showLinkBottom = (responsiveSize !== 'lg') && link && linkText;
     const boxStyles = styles.boxResponsive;
     const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
 
