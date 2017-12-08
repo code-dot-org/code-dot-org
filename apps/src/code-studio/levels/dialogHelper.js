@@ -14,6 +14,8 @@ import Sounds from '../../Sounds';
 var dialogType = null;
 var adjustedScroll = false;
 
+// TODO - we should just have onHidden methods that we pass for success/error
+// dialog types
 function dialogHidden() {
   var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
   if (dialogType === "success" && lastServerResponse.nextRedirect) {
@@ -25,12 +27,27 @@ function dialogHidden() {
   }
 }
 
-export function showDialog(type, callback, onHidden) {
-  dialogType = type;
+/**
+ * @param {string|Component} typeOrComponent - Either a string identifying the DOM
+ *   to use in this dialog, or a ReactComponent representing the contents. Of the
+ *   two, the latter is preferable.
+ * @param {function} callback - Method to call when OK is clicked
+ * @param {function} onHidden - Method called when dialog is hidden/closed
+ */
+export function showDialog(typeOrComponent, callback, onHidden) {
+  let content;
+  if (typeof(typeOrComponent) === 'string') {
+    dialogType = typeOrComponent;
 
-  // Use our prefabricated dialog content.
-  var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
+    // Use our prefabricated dialog content.
+    content = document.querySelector("#" + typeOrComponent + "-dialogcontent").cloneNode(true);
+  } else {
+    const div = document.createElement('div');
+    ReactDOM.render(typeOrComponent, div);
+    content = div.childNodes[0];
+  }
   var dialog = new LegacyDialog({
+    // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
     onHidden: onHidden || dialogHidden,
     autoResizeScrollableElement: '.scrollable-element'
