@@ -419,12 +419,12 @@ module Pd::Application
 
       if responses.uniq == [YES]
         # If all resolve to Yes, applicant meets criteria
-        :meets
+        YES
       elsif responses.include? NO
         # If any are No, applicant does not meet criteria
-        :does_not_meet
+        NO
       else
-        :incomplete
+        'Incomplete'
       end
     end
 

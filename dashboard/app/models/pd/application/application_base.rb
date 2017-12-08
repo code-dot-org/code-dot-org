@@ -46,6 +46,7 @@ module Pd::Application
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
+    INCOMPLETE = 'Incomplete'.freeze
 
     COMMON_OPTIONS = {
       title: %w(Mr. Mrs. Ms. Dr.),

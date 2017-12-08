@@ -30,6 +30,11 @@ export default class DetailView extends React.Component {
   };
 
   componentWillMount() {
+    this.load();
+  }
+
+
+  load = () => {
     this.loadRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/pd/applications/${this.props.params.applicationId}`
@@ -56,8 +61,8 @@ export default class DetailView extends React.Component {
           <DetailViewContents
             applicationId={this.props.params.applicationId}
             applicationData={this.state.data}
-            updateProps={this.updateData}
             viewType={this.props.route.viewType}
+            reload={this.load}
           />
         )
       );

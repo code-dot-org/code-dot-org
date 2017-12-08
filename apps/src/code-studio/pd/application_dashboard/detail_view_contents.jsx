@@ -38,10 +38,12 @@ export default class DetailViewContents extends React.Component {
       email: PropTypes.string,
       form_data: PropTypes.object,
       application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
-      response_scores: PropTypes.object
+      response_scores: PropTypes.object,
+      meets_criteria: PropTypes.string,
+      bonus_points: PropTypes.number
     }),
-    updateProps: PropTypes.func.isRequired,
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    reload: PropTypes.func.isRequired
   };
 
   componentWillMount() {
@@ -98,7 +100,9 @@ export default class DetailViewContents extends React.Component {
       this.setState({
         editing: false
       });
-      this.props.updateProps({notes: this.state.notes, status: this.state.status});
+
+      //Reload the page, but don't display the spinner
+      this.props.reload();
     });
   };
 
@@ -130,9 +134,17 @@ export default class DetailViewContents extends React.Component {
   renderHeader = () => {
     return (
       <div style={styles.headerWrapper}>
-        <h1>
-          {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
-        </h1>
+        <div>
+          <h1>
+            {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
+          </h1>
+          <h4>
+            Meets all criteria: {this.props.applicationData.meets_criteria}
+          </h4>
+          <h4>
+            Bonus Points: {this.props.applicationData.bonus_points}
+          </h4>
+        </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
           <FormControl
@@ -172,7 +184,7 @@ export default class DetailViewContents extends React.Component {
                 questionId="regionalPartnerName"
                 answer={this.props.applicationData.regional_partner_name}
                 layout="panel"
-                score={this.state.response_scores['regional_partner_name']}
+                score={this.state.response_scores['regionalPartnerName']}
                 possibleScores={TeacherValidScores['regionalPartnerName']}
                 editing={this.state.editing}
                 handleScoreChange={this.handleScoreChange}
@@ -239,6 +251,7 @@ export default class DetailViewContents extends React.Component {
     return (
       <div>
         {this.renderHeader()}
+        <br/>
         {this.renderTopSection()}
         {this.renderQuestions()}
         {this.renderNotes()}
