@@ -9,7 +9,7 @@ REQUIREMENTS = {
   "Gemfile" => {cmd: "bundle install", dir: "./"},
   "Berksfile" => {cmd: "berks install", dir: "./"},
   "schema.rb" => {cmd: "rake db:migrate", dir: "./dashboard"},
-}
+}.freeze
 
 def get_modified_files
   prev_head = ARGV[1]
