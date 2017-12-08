@@ -19,7 +19,7 @@
         %a.btn.btn-large.btn-primary.unsubmitButton{style: 'display: none'}
           =t('unsubmit')
 .clear
-%div{style: 'display: none;'}
+#dialog-container{style: 'display: none;'}
   #error-dialogcontent
     .modal-content.no-modal-icon.scrollable-element
       %p.dialog-title
@@ -103,26 +103,5 @@
       #buttons
         %button#ok-button{style: 'float: right;'}
           =t('ok')
-
-  #levelgroup-submit-incomplete-dialogcontent
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.submit-incomplete-title')
-      %p.dialog-body=  t('level_group-submittable.submit-incomplete-body')
-      %button#cancel-button{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
-
-  #levelgroup-submit-complete-dialogcontent
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.submit-complete-title')
-      %p.dialog-body=  t('level_group-submittable.submit-complete-body')
-      %button#cancel-button{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
-
-  #unsubmit-dialogcontent
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.unsubmit-title')
-      %p.dialog-body=  t('level_group-submittable.unsubmit-body')
-      %button#cancel-button{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
 
 %script{src: minifiable_asset_path('js/levels/_dialog.js')}

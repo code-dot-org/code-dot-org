@@ -1,9 +1,12 @@
 /* global appOptions */
 
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import throttle from 'lodash/throttle';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import LevelGroupDialogs from '@cdo/apps/lib/ui/LevelGroupDialogs';
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
@@ -19,6 +22,17 @@ $(document).ready(() => {
       initData.page,
       initData.last_attempt
     );
+  }
+
+  // Our showDialog code works by prepolulating the DOM with hidden content,
+  // and then unhiding it as needed. This is almost certainly something we want
+  // to get away from, but as an intermediate step, I'd like to move the DOM
+  // creation to happen in React instead of haml.
+  const dialogContainer = document.getElementById('dialog-container');
+  if (dialogContainer) {
+    const div = document.createElement('div');
+    dialogContainer.appendChild(div);
+    ReactDOM.render(<LevelGroupDialogs/>, div);
   }
 });
 
