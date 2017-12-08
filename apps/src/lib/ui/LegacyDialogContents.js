@@ -1,15 +1,16 @@
 /**
- * This file contains a set of dialogs used by level groups (and in the case of
- * unsubmit, possibly some other places). These dialogs are used by showDialog in
- * dialogHelper.js to create LegacyDialogs. They are similar to the dialogs defined
- * in haml in _dialog.html.haml, but defined using React instead.
+ * This file contains a set of dialogs used by showDialog in dialogHelper.js to
+ * create LegacyDialogs. LegacyDialog expects a semi-specific format. Eventually
+ * we may be able to get away from using LegacyDialog and do this all in React.
+ * These are similar to the dialogs defined in haml in _dialog.html.haml, but
+ * defined using React instead.
  */
 
 import React, { PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 
-const SingleDialog = ({id, title, body}) => (
+const SingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
     <div className="modal-content no-modal-icon">
       <p className="dialog-title">{title}</p>
@@ -23,14 +24,14 @@ const SingleDialog = ({id, title, body}) => (
     </div>
   </ProtectedStatefulDiv>
 );
-SingleDialog.propTypes = {
+SingleLevelGroupDialog.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };
 
 export const IncompleteDialog = (
-  <SingleDialog
+  <SingleLevelGroupDialog
     id="levelgroup-submit-incomplete-dialogcontent"
     title={i18n.submitAssessment()}
     body={i18n.submittableIncomplete()}
@@ -38,7 +39,7 @@ export const IncompleteDialog = (
 );
 
 export const CompleteDialog = (
-  <SingleDialog
+  <SingleLevelGroupDialog
     id="levelgroup-submit-complete-dialogcontent"
     title={i18n.submitAssessment()}
     body={i18n.submittableComplete()}
@@ -46,9 +47,24 @@ export const CompleteDialog = (
 );
 
 export const UnsubmitDialog = (
-  <SingleDialog
+  <SingleLevelGroupDialog
     id="unsubmit-dialogcontent"
     title={i18n.unsubmitAssessment()}
     body={i18n.submittableUnsubmit()}
   />
+);
+
+export const MatchAngiGifDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.instructions()}</p>
+      <p>{i18n.dragBlocksToMatch()}</p>
+      <div className="aniGif example-image" style={{overflow: 'hidden'}}>
+        <img src="/script_assets/images/matching_ani.gif"/>
+      </div>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
 );
