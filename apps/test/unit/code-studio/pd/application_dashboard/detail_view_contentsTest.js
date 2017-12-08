@@ -35,7 +35,7 @@ describe("DetailViewContents", () => {
           }
         }}
         viewType="facilitator"
-        updateProps={() => {}}
+        reload={() => {}}
       />
     );
   };

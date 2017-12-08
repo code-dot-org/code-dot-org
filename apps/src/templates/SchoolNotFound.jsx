@@ -59,6 +59,7 @@ export default class SchoolNotFound extends Component {
     schoolState: PropTypes.string,
     schoolZip: PropTypes.string,
     schoolType: PropTypes.string,
+    fieldNames: PropTypes.object,
     showErrorMsg: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicators: PropTypes.bool,
@@ -71,6 +72,14 @@ export default class SchoolNotFound extends Component {
   static defaultProps = {
     showRequiredIndicators: true,
     schoolNameLabel: i18n.schoolName(),
+    fieldNames: {
+      schoolName: "school_name_s",
+      schoolType: "school_type_s",
+      schoolCity: "school_city_s",
+      schoolState: "school_state_s",
+      schoolZip: "school_zip_s",
+      googleLocation: "registration_location",
+    },
   };
 
   static OMIT_FIELD = OMIT_FIELD;
@@ -122,7 +131,7 @@ export default class SchoolNotFound extends Component {
                 <input
                   id="school_name"
                   type="text"
-                  name="school_name_s"
+                  name={this.props.fieldNames.schoolName}
                   value={this.props.schoolName}
                   onChange={this.handleChange.bind(this, "schoolName")}
                   style={inputStyle}
@@ -135,7 +144,7 @@ export default class SchoolNotFound extends Component {
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolType())}
                 <select
-                  name="school_type_s"
+                  name={this.props.fieldNames.schoolType}
                   value={this.props.schoolType}
                   onChange={this.handleChange.bind(this, "schoolType")}
                   style={dropdownStyle}
@@ -154,13 +163,13 @@ export default class SchoolNotFound extends Component {
           }
         </div>
         <div>
-          {!this.props.useGoogleLocationSearch &&
+          {this.props.schoolCity !== OMIT_FIELD && !this.props.useGoogleLocationSearch &&
             <div style={fieldStyle}>
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolCity())}
                 <input
                   type="text"
-                  name="school_city_s"
+                  name={this.props.fieldNames.schoolCity}
                   value={this.props.schoolCity}
                   onChange={this.handleChange.bind(this, "schoolCity")}
                   style={inputStyle}
@@ -173,7 +182,7 @@ export default class SchoolNotFound extends Component {
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolState())}
                 <select
-                  name="school_state_s"
+                  name={this.props.fieldNames.schoolState}
                   value={this.props.schoolState}
                   onChange={this.handleChange.bind(this, "schoolState")}
                   style={dropdownStyle}
@@ -198,7 +207,7 @@ export default class SchoolNotFound extends Component {
               <input
                 id="school_zipcode"
                 type="text"
-                name="school_zip_s"
+                name={this.props.fieldNames.schoolZip}
                 value={this.props.schoolZip}
                 onChange={this.handleChange.bind(this, "schoolZip")}
                 style={inputStyle}
@@ -213,7 +222,7 @@ export default class SchoolNotFound extends Component {
               <input
                 id="registration-school-location"
                 type="text"
-                name="registration_location"
+                name={this.props.fieldNames.googleLocation}
                 placeholder={i18n.schoolLocationSearchPlaceholder()}
                 style={inputStyle}
               />

@@ -10,21 +10,6 @@ $(document).ready(() => {
   const scriptData = getScriptData('discountcode');
   let { application, is_admin } = scriptData;
 
-  // Generating users with the right eligibility status is non-trivial. As a way
-  // to get around this and be able to test this feature more easily, allow tester
-  // to put data in sessionStorage to override what the server says.
-  // We may want to remove this before shipping, though we'll likely want to make
-  // the server resilient to this anyways.
-  // To set, do something like:
-  // sessionStorage.setItem('testOnlyScriptData', JSON.stringify({is_pd_eligible: true, is_progress_eligible: true}))
-  const testOnlyScriptData = sessionStorage.getItem('testOnlyScriptData');
-  if (testOnlyScriptData) {
-    application = {
-      ...application,
-      ...JSON.parse(testOnlyScriptData)
-    };
-  }
-
   ReactDOM.render(
     <div>
       {is_admin &&
@@ -40,6 +25,7 @@ $(document).ready(() => {
           hasConfirmedSchool={application.has_confirmed_school}
           getsFullDiscount={application.gets_full_discount}
           initialDiscountCode={application.discount_code}
+          adminSetStatus={application.admin_set_status}
         />
       }
     </div>
