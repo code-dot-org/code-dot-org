@@ -28,7 +28,7 @@ class StudentsBeyondHoc extends Component {
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
-    responsiveSize: PropTypes.oneOf(['xs', 'md', 'lg', 'xl']).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
@@ -116,8 +116,6 @@ class StudentsBeyondHoc extends Component {
         />
         {isEnglish && (
           <CourseBlocksStudentGradeBands
-            isRtl={isRtl}
-            responsive={responsive}
             showContainer={false}
             hideBottomMargin={true}
           />

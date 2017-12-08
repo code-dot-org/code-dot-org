@@ -1,7 +1,5 @@
 import React from 'react';
 import RecentCourses from './RecentCourses';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 const courses = [
   {
@@ -51,7 +49,7 @@ const topCourse = {
 export default storybook => {
   return storybook
     .storiesOf('RecentCourses', module)
-    .withReduxStore({responsive, isRtl})
+    .withReduxStore()
     .addStoryTable([
       {
         name: "Recent Courses - teacher, no courses yet",
