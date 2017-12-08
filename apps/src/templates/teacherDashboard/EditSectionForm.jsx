@@ -15,6 +15,7 @@ import {
 
 const style = {
   root: {
+    padding: '20px 0',
     width: styleConstants['content-width'],
   },
   dropdown: {
