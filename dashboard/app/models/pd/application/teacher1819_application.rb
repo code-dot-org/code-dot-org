@@ -59,7 +59,7 @@ module Pd::Application
       self.application_guid = SecureRandom.uuid
     end
 
-    before_save :save_partner, if: -> {form_data_changed?}
+    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
@@ -432,19 +432,22 @@ module Pd::Application
     end
 
     # Called once after the application is submitted, and the principal approval is done
-    def auto_score
+    # Automatically scores the application based on given responses for this and the
+    # principal approval application. It is idempotent, and will not override existing
+    # scores on this application
+    def auto_score!
       responses = sanitize_form_data_hash
 
       scores = {
-        regionalPartnerName: regional_partner ? YES : NO,
+        regional_partner_name: regional_partner ? YES : NO,
         committed: responses[:committed] == YES ? YES : NO,
-        ableToAttendSingle: yes_no_response_to_yes_no_score(responses[:able_to_attend_single]),
-        principalApproval: yes_no_response_to_yes_no_score(responses[:principal_approval]),
+        able_to_attend_single: yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
       }
 
       if responses[:principal_approval] == YES
         scores.merge!(
           {
+            principal_approval: YES,
             schedule_confirmed: yes_no_response_to_yes_no_score(responses[:schedule_confirmed]),
             diversity_recruitment: yes_no_response_to_yes_no_score(responses[:diversity_recruitment]),
             free_lunch_percent: responses[:free_lunch_percent].to_f >= 50 ? 5 : 0,
@@ -452,6 +455,8 @@ module Pd::Application
             wont_replace_existing_course: responses[:wont_replace_existing_course].try(:start_with?, NO) ? 5 : nil,
           }
         )
+      elsif responses[:principal_approval] == NO
+        scores[:principal_approval] = NO
       end
 
       if course == 'csp'

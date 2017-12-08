@@ -26,7 +26,7 @@ module Api::V1::Pd::Application
         }
       )
       teacher_application.save
-      teacher_application.auto_score
+      teacher_application.auto_score!
 
       ::Pd::Application::Teacher1819ApplicationMailer.principal_approval_received(
         @application.teacher_application
