@@ -297,6 +297,10 @@ class JsDebugger extends React.Component {
     const codeApp = document.getElementById('codeApp');
     const codeTextbox = document.getElementById('codeTextbox');
     if (!codeApp || !codeTextbox) {
+      // In unit tests this handler may be triggered outside its normal
+      // context, where codeApp and codeTextbox don't exist.  Also, this
+      // component isn't cleaning up mouse handlers particularly well.
+      // TODO: Add a componentWillUnmount method that cleans up all mouse handlers
       return;
     }
 

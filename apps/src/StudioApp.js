@@ -1285,6 +1285,9 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (!visualization || !visualizationResizeBar || !visualizationColumn) {
+    // In unit tests, this event may be receieved when the DOM isn't fully
+    // configured.  In those cases there's no visualization to resize, so
+    // stop here.  In production we don't expect to need this early-out.
     return;
   }
 
