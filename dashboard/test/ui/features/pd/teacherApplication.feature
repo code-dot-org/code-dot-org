@@ -72,8 +72,7 @@ Scenario: Basic teacher application submission
 
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Summer Workshop"
-   And I wait until element "h5" contains text "You have been assigned to TeacherCon"
-   And I press the first "input[name='ableToAttendSingle']" element
+   And I wait until element "#assignedWorkshops" contains text "There currently is no Regional Partner in your area."
    And I press the first "input[name='committed']" element
    And I press the first "input[name='willingToTravel']" element
   Then I see no difference for "Section 4: Summer Workshop"
