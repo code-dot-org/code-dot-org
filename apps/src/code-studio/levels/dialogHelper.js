@@ -30,7 +30,7 @@ export function showDialog(typeOrComponent, callback, onHidden) {
     ReactDOM.render(typeOrComponent, div);
     content = div.childNodes[0];
   }
-  var dialog = new LegacyDialog({
+  const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
     onHidden,
@@ -51,6 +51,7 @@ export function showDialog(typeOrComponent, callback, onHidden) {
   });
 
   dialog.show();
+  return dialog;
 }
 
 export function showStartOverDialog(callback) {

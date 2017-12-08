@@ -7,6 +7,11 @@ import {
   clearTimeoutsBetweenTests,
 } from './util/testUtils';
 
+// One of our tests depends on having jQuery.modal, which is defined in
+// bootstrap-sass, which depends on jQuery being loaded globally =/
+import $ from 'jquery';
+window.jQuery = $;
+
 var __karmaWebpackManifest__ = [];
 
 function inManifest(path) {
