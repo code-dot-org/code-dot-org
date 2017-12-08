@@ -2,7 +2,7 @@
 
 import { showDialog, processResults } from  '@cdo/apps/code-studio/levels/dialogHelper';
 import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import { UnsubmitDialog } from '@cdo/apps/lib/ui/LevelGroupDialogs';
+import { UnsubmitDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 /**
  * This file does some handling of submit button interactions.

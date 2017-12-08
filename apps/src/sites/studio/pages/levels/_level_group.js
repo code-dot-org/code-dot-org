@@ -4,7 +4,7 @@ import $ from 'jquery';
 import throttle from 'lodash/throttle';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {IncompleteDialog, CompleteDialog} from '@cdo/apps/lib/ui/LevelGroupDialogs';
+import {IncompleteDialog, CompleteDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
