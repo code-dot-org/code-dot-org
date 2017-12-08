@@ -4,20 +4,10 @@ const style = {
   aboveFooter: {
     height: '90px',
   },
-  adjustedFooter: {
-    position: 'absolute',
-    height: '80px',
-    padding: '0 20px 20px 20px',
-    left: '0',
-    right: '0',
-    bottom: '0',
-    background: 'white',
-    zIndex: '50',
-  },
   footer: {
     position: 'absolute',
     height: '100px',
-    padding: '0 20px 20px 20px',
+    padding: '0 20px',
     left: '0',
     right: '0',
     bottom: '0',
