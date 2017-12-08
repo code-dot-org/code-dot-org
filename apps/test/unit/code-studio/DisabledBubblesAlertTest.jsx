@@ -20,7 +20,7 @@ describe('DisabledBubblesAlert', () => {
   it('is visible at first, if not seen before', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
     const wrapper = shallow(
-      <DisabledBubblesAlert isHocScript={false}/>
+      <DisabledBubblesAlert/>
     );
     expect(wrapper).to.containMatchingElement(
       <Alert
@@ -44,7 +44,7 @@ describe('DisabledBubblesAlert', () => {
   it('is hidden at first, if seen before', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(true);
     const wrapper = shallow(
-      <DisabledBubblesAlert isHocScript={false}/>
+      <DisabledBubblesAlert/>
     );
     expect(wrapper).to.be.empty;
   });
@@ -52,7 +52,7 @@ describe('DisabledBubblesAlert', () => {
   it('hides and remembers that the alert was seen when closed', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
     const wrapper = shallow(
-      <DisabledBubblesAlert isHocScript={false}/>
+      <DisabledBubblesAlert/>
     );
     expect(wrapper).not.to.be.empty;
 
