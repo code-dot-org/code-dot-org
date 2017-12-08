@@ -45,6 +45,7 @@ export default storybook => {
                 isRtl={false}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -66,6 +67,7 @@ export default storybook => {
                 isRtl={false}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -86,6 +88,7 @@ export default storybook => {
                 isRtl={false}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -107,6 +110,7 @@ export default storybook => {
                 isRtl={false}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -128,6 +132,7 @@ export default storybook => {
                 isRtl={false}
                 joinedSections={joinedSections}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
