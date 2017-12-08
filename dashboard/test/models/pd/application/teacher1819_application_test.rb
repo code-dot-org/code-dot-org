@@ -84,9 +84,8 @@ module Pd::Application
         }
       )
 
-      application = create :pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json
-      application.update(regional_partner: (create :regional_partner))
-      application.auto_score
+      application = create(:pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json, regional_partner: (create :regional_partner))
+      application.auto_score!
 
       assert_equal(
         {
@@ -97,8 +96,7 @@ module Pd::Application
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
           csp_ap_exam: YES,
-          taught_in_past: 2,
-          principal_approval: nil,
+          taught_in_past: 2
         }, application.response_scores_hash
       )
 
@@ -115,8 +113,8 @@ module Pd::Application
 
       application.update(response_scores: application.response_scores_hash.merge({regional_partner_name: NO}).to_json)
 
-      application.auto_score
-
+      application.auto_score!
+      application.reload
       assert_equal(
         {
           regional_partner_name: NO,
@@ -159,7 +157,7 @@ module Pd::Application
 
       application = create :pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json
       application.update(regional_partner: (create :regional_partner))
-      application.auto_score
+      application.auto_score!
 
       assert_equal(
         {
@@ -202,7 +200,7 @@ module Pd::Application
       )
 
       application = create :pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json, regional_partner: nil
-      application.auto_score
+      application.auto_score!
 
       assert_equal(
         {
@@ -245,7 +243,7 @@ module Pd::Application
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json
       application.update(regional_partner: (create :regional_partner))
-      application.auto_score
+      application.auto_score!
 
       assert_equal(
         {
@@ -286,7 +284,7 @@ module Pd::Application
       )
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
-      application.auto_score
+      application.auto_score!
 
       assert_equal(
         {
