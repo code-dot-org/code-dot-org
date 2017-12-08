@@ -13,6 +13,7 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 
 const styles = {
   clear: {
@@ -31,8 +32,72 @@ export default class TeacherHomepage extends Component {
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     hocLaunch: PropTypes.object,
-    isEnglish: PropTypes.bool.isRequired
+    isEnglish: PropTypes.bool.isRequired,
+    showCensusBanner: PropTypes.bool.isRequired,
+    ncesSchoolId: PropTypes.string,
+    censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
+    teacherName: PropTypes.string,
+    teacherId: PropTypes.number,
+    teacherEmail: PropTypes.string,
+    schoolYear: PropTypes.number,
   };
+
+  state = {
+    showCensusBanner: this.props.showCensusBanner,
+  };
+
+  onCensusBannerChange(event) {
+    this.setState({censusBannerSelection: (event.target.id==="teachesYes")});
+  }
+
+  censusBannerOnSubmit() {
+    $.ajax({
+      url: "/dashboardapi/v1/census/CensusTeacherBannerV1",
+      type: "post",
+      dataType: "json",
+      data: $('#census-teacher-banner-form').serialize()
+    }).done(this.onCensusSubmitSuccess.bind(this)).fail(this.onCensusSubmitError.bind(this));
+  }
+
+  onCensusSubmitSuccess() {
+    this.dismissCensusBanner();
+  }
+
+  onCensusSubmitError() {
+    this.setState({
+      showCensusUnknownError: true,
+    });
+  }
+
+  hideCensusBanner() {
+    this.setState({
+      showCensusBanner: false,
+    });
+  }
+
+  dismissCensusBanner() {
+    $.ajax({
+      url: `/api/v1/users/${this.props.teacherId}/dismiss_census_banner`,
+      type: "post",
+    }).done(this.hideCensusBanner.bind(this)).fail(this.onDismissCensusBannerError.bind(this));
+  }
+
+  onDismissCensusBannerError(xhr) {
+    console.error(`Failed to dismiss census banner! ${xhr.responseText}`);
+    this.hideCensusBanner();
+  }
+
+  postponeCensusBanner() {
+    $.ajax({
+      url: `/api/v1/users/${this.props.teacherId}/postpone_census_banner`,
+      type: "post",
+    }).done(this.hideCensusBanner.bind(this)).fail(this.onPostponeCensusBannerError.bind(this));
+  }
+
+  onPostponeCensusBannerError(xhr) {
+    console.error(`Failed to postpone census banner! ${xhr.responseText}`);
+    this.hideCensusBanner();
+  }
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
@@ -43,6 +108,8 @@ export default class TeacherHomepage extends Component {
   render() {
     const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
     const { canViewAdvancedTools, hocLaunch, isEnglish } = this.props;
+    const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
+    const { teacherId, teacherName, teacherEmail } = this.props;
 
     return (
       <div>
@@ -142,7 +209,25 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear}/>
           </div>
         )}
-
+        {this.state.showCensusBanner && (
+           <div>
+             <CensusTeacherBanner
+               schoolYear={schoolYear}
+               ncesSchoolId={ncesSchoolId}
+               question={censusQuestion}
+               selection={this.state.censusBannerSelection}
+               teacherId={teacherId}
+               teacherName={teacherName}
+               teacherEmail={teacherEmail}
+               showUnknownError={this.state.showCensusUnknownError}
+               onSubmit={() => this.censusBannerOnSubmit()}
+               onDismiss={() => this.dismissCensusBanner()}
+               onPostpone={() => this.postponeCensusBanner()}
+               onChange={(event) => this.onCensusBannerChange(event)}
+             />
+             <br/>
+           </div>
+        )}
         <TeacherSections
           isRtl={isRtl}
           queryStringOpen={queryStringOpen}
