@@ -13,7 +13,7 @@ class HttpCache
     'language_',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
-  ].freeze
+  ]
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
