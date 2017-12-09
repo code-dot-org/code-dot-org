@@ -68,3 +68,15 @@ export const MatchAngiGifDialog = () => (
     </div>
   </ProtectedStatefulDiv>
 );
+
+export const TooFewDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.tooFewTitle()}</p>
+      <p>{i18n.tooFewBody()}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
