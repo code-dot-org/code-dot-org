@@ -4,7 +4,7 @@ import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
 import TopCourse from './TopCourse';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
@@ -72,7 +72,7 @@ export default class RecentCourses extends Component {
           {hasCourse && (
             <div>
               <Notification
-                type={Notification.NotificationType.course}
+                type={NotificationType.course}
                 notice={i18n.findCourse()}
                 details={i18n.findCourseDescription()}
                 buttonText={i18n.findCourse()}

@@ -6,7 +6,7 @@ import Button from "./Button";
 import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 
-const NotificationType = {
+export const NotificationType = {
   information: 'information',
   success: 'success',
   failure: 'failure',
@@ -203,7 +203,5 @@ class Notification extends Component {
     );
   }
 }
-
-Notification.NotificationType = NotificationType;
 
 export default Radium(Notification);
