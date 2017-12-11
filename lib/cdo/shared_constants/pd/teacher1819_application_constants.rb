@@ -180,7 +180,7 @@ module Teacher1819ApplicationConstants
 
   VALID_SCORES = {
     regional_partner_name: YES_NO,
-    previous_yearlong_cdo_pd: YES_NO,
+    # TODO: (mehal) Include whether or not the participant is a new code.org participant
     committed: YES_NO,
     able_to_attend_single: YES_NO,
     csp_which_grades: YES_NO,

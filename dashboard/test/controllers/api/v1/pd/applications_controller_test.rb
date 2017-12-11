@@ -132,15 +132,5 @@ module Api::V1::Pd
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :forbidden
     end
-
-    test 'editing scores converts fields to underscore case' do
-      sign_in @workshop_admin
-      application = create :pd_teacher1819_application
-      put :update, params: {id: application.id, application: {response_scores: {regionalPartnerName: 'Yes'}.to_json}}
-
-      assert_response :success
-      application.reload
-      assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
-    end
   end
 end
