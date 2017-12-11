@@ -623,7 +623,7 @@ FactoryGirl.define do
 
   factory :pd_teacher1819_application_hash, class: 'Hash' do
     transient do
-      program Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.last
+      program Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
       state 'Washington'
       add_attribute :zip_code, '98101'
       association :school
@@ -696,7 +696,6 @@ FactoryGirl.define do
     course 'csp'
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
     application_guid nil
-    regional_partner nil
   end
 
   factory :pd_principal_approval1819_application_hash, class: 'Hash' do
