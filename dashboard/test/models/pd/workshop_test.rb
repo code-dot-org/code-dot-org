@@ -772,6 +772,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal expected, workshop.pre_survey_units_and_lessons
   end
 
+  test 'friendly date range same month' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 10)
+    assert_equal 'March 10-14, 2017', workshop.friendly_date_range
+  end
+
+  test 'friendly date range different months' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30)
+    assert_equal 'March 30 - April 3, 2017', workshop.friendly_date_range
+  end
+
   private
 
   def session_on_day(day_offset)

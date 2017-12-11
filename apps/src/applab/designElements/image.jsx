@@ -147,7 +147,7 @@ class ImageEvents extends React.Component {
   }
 }
 
-function setObjectFitStyles(element, value) {
+function setObjectFitStyles(element, value, forceObjectFitNow) {
   // NOTE: neither of these will be saved (we strip these out when we serialize
   // and rely on our custom data-object-fit attribute during save/load)
 
@@ -156,7 +156,14 @@ function setObjectFitStyles(element, value) {
 
   // Set a style that will be picked up by objectFitImages() for old browsers:
   element.style.fontFamily = `'object-fit: ${value};'`;
-  applabObjectFitImages(element);
+  if (forceObjectFitNow) {
+    //
+    // Enable polyfill for this element so we can use object-fit (it relies on
+    // the style in font-family and avoid scale-down & using it in media queries)
+    // See https://www.npmjs.com/package/object-fit-images for details.
+    //
+    applabObjectFitImages(element);
+  }
 }
 
 export default {
@@ -173,7 +180,7 @@ export default {
     // New elements are created with 'contain', but the default value for
     // existing (unadorned) images is 'fill' for compatibility reasons
     element.setAttribute('data-object-fit', 'contain');
-    setObjectFitStyles(element, 'contain');
+    setObjectFitStyles(element, 'contain', true);
 
     return element;
   },
@@ -187,6 +194,11 @@ export default {
     }
     const objectFitValue = element.getAttribute('data-object-fit');
     if (objectFitValue) {
+      //
+      // NOTE: not passing forceObjectFitNow because IE will crash when it
+      // is called here and also within makeDraggable() - which is called while
+      // in parseScreenFromLevelHtml()
+      //
       setObjectFitStyles(element, objectFitValue);
     }
   },
@@ -194,7 +206,7 @@ export default {
     switch (name) {
       case 'objectFit':
         element.setAttribute('data-object-fit', value);
-        setObjectFitStyles(element, value);
+        setObjectFitStyles(element, value, true);
         break;
       default:
         return false;

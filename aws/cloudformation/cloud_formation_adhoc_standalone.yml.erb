@@ -29,6 +29,8 @@ end
 # without bringing over certain baked-in adhoc-specific characteristics
 # from an adhoc image (like the repo root folder name)
 image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
+
+iam_instance_profile = stack_name == 'staging-next' ? 'StagingInstanceProfile' : 'StandaloneFrontendInstanceProfile'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -60,7 +62,7 @@ Resources:
     Properties:
       ImageId: <%=image_id%>
       InstanceType: <%=INSTANCE_TYPE%>
-      IamInstanceProfile: !ImportValue IAM-StandaloneFrontendInstanceProfile
+      IamInstanceProfile: !ImportValue IAM-<%=iam_instance_profile%>
       KeyName: <%=SSH_KEY_NAME%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:

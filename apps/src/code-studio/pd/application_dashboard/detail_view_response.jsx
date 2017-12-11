@@ -84,7 +84,7 @@ export default class DetailViewResponse extends React.Component {
               scoredQuestion && (
                 <div className="col-md-3">
                   {
-                    this.props.layout === 'yesNoScore' ? 'Meets requirements' : 'Score'
+                    _.isEqual(this.props.possibleScores, ['Yes', 'No']) ? 'Meets requirements' : 'Score'
                   }
                 </div>
               )

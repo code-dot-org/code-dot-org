@@ -122,4 +122,8 @@ FactoryGirl.define do
       form_id 1
     end
   end
+
+  factory :census_teacher_banner_v1, parent: :census_submission, class: Census::CensusTeacherBannerV1 do
+    submitter_role "TEACHER"
+  end
 end

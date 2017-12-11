@@ -3,7 +3,7 @@ require 'sound_library_api'
 require_relative 'files_api_test_base'
 
 class SoundLibraryTest < FilesApiTestBase
-  SOUND_LIBRARY_TEST_KEY = 'test_sound.mp3'
+  SOUND_LIBRARY_TEST_KEY = 'test_sound.mp3'.freeze
 
   def build_rack_mock_session
     @session = Rack::MockSession.new(SoundLibraryApi, 'studio.code.org')
