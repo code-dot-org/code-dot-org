@@ -93,23 +93,23 @@ export default class CensusTeacherBanner extends Component {
     schoolLocation: '',
   };
 
-  onCountryChange(_, event) {
+  handleCountryChange(_, event) {
     const newCountry = event ? event.value : '';
     this.setState({country: newCountry});
   }
 
-  onSchoolTypeChange(event) {
+  handleSchoolTypeChange(event) {
     const newType = event ? event.target.value : '';
     this.setState({schoolType: newType});
   }
 
-  onSchoolChange(_, event) {
+  handleSchoolChange(_, event) {
     const newSchool = event ? event.value : '';
     this.setState({ncesSchoolId: newSchool});
     this.loadSchoolName(newSchool);
   }
 
-  onSchoolNotFoundChange(field, event) {
+  handleSchoolNotFoundChange(field, event) {
     const newValue = event ? event.target.value : '';
     this.setState({
       [field]: newValue
@@ -145,7 +145,7 @@ export default class CensusTeacherBanner extends Component {
     this.loadSchoolName(this.props.ncesSchoolId);
   }
 
-  onSchoolInfoSubmit() {
+  handleSchoolInfoSubmit() {
     if (this.schoolInfoInputs.isValid()) {
       $.ajax({
         url: "/users.json",
@@ -213,10 +213,10 @@ export default class CensusTeacherBanner extends Component {
             <div style={styles.message}>
               <SchoolInfoInputs
                 ref={this.bindSchoolInfoInputs}
-                onCountryChange={this.onCountryChange.bind(this)}
-                onSchoolTypeChange={this.onSchoolTypeChange.bind(this)}
-                onSchoolChange={this.onSchoolChange.bind(this)}
-                onSchoolNotFoundChange={this.onSchoolNotFoundChange.bind(this)}
+                onCountryChange={this.handleCountryChange.bind(this)}
+                onSchoolTypeChange={this.handleSchoolTypeChange.bind(this)}
+                onSchoolChange={this.handleSchoolChange.bind(this)}
+                onSchoolNotFoundChange={this.handleSchoolNotFoundChange.bind(this)}
                 country={this.state.country}
                 schoolType={this.state.schoolType}
                 ncesSchoolId={schoolId}
@@ -231,7 +231,7 @@ export default class CensusTeacherBanner extends Component {
             </div>
             <div style={styles.buttonDiv}>
               <Button onClick={this.dismissSchoolInfoForm.bind(this)} style={styles.button} color="gray" size="large" text="Dismiss" />
-              <Button onClick={this.onSchoolInfoSubmit.bind(this)} style={styles.button} size="large" text="Submit" />
+              <Button onClick={this.handleSchoolInfoSubmit.bind(this)} style={styles.button} size="large" text="Submit" />
             </div>
           </form>
         </div>
