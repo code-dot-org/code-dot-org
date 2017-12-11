@@ -76,7 +76,7 @@ export default class CensusTeacherBanner extends Component {
     this.loadSchoolName(this.props.ncesSchoolId);
   }
 
-  state = {
+  initialState = {
     showSchoolInfoForm: false,
     country: 'United States',
     schoolType: '',
@@ -86,7 +86,11 @@ export default class CensusTeacherBanner extends Component {
     schoolState: '',
     schoolZip: '',
     schoolLocation: '',
+    showSchoolInfoErrors: false,
+    showSchoolInfoUnknownError: false,
   };
+
+  state = this.initialState;
 
   handleCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
@@ -128,19 +132,7 @@ export default class CensusTeacherBanner extends Component {
     // may have been partial state about the school changed. We do not want
     // to use that partial state in the census submission so we need to reset
     // to the previous values.
-    this.setState({
-      showSchoolInfoForm: false,
-      country: 'United States',
-      schoolType: '',
-      ncesSchoolId: null,
-      schoolName: '',
-      schoolDisplayName: null,
-      schoolState: '',
-      schoolZip: '',
-      schoolLocation: '',
-      showSchoolInfoErrors: false,
-      showSchoolInfoUnknownError: false,
-    });
+    this.setState(this.initialState);
     this.loadSchoolName(this.props.ncesSchoolId);
   }
 
