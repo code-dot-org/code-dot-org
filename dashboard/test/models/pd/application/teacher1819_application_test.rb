@@ -71,12 +71,12 @@ module Pd::Application
 
     test 'send_decision_notification_email only sends to G3 and unmatched' do
       application = create :pd_teacher1819_application
-      application.update(status: 'accepted')
+      application.update(status: 'waitlisted')
 
       mock_mail = stub
       mock_mail.stubs(:deliver_now).returns(nil)
 
-      Pd::Application::Teacher1819ApplicationMailer.expects(:accepted).times(2).returns(mock_mail)
+      Pd::Application::Teacher1819ApplicationMailer.expects(:waitlisted).times(2).returns(mock_mail)
       application.send_decision_notification_email
 
       partner = create :regional_partner
@@ -100,7 +100,7 @@ module Pd::Application
       Pd::Application::Teacher1819ApplicationMailer.expects(:unreviewed).times(0)
       Pd::Application::Teacher1819ApplicationMailer.expects(:withdrawn).times(0)
 
-      Pd::Application::Teacher1819ApplicationMailer.expects(:accepted).times(1).returns(mock_mail)
+      Pd::Application::Teacher1819ApplicationMailer.expects(:accepted).times(0).returns(mock_mail)
       Pd::Application::Teacher1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
       Pd::Application::Teacher1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
 
