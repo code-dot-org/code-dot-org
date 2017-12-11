@@ -123,7 +123,11 @@ export default class CensusTeacherBanner extends Component {
   }
 
   dismissSchoolInfoForm = () => {
-    // Clear any state that may have been set
+    // This is handling the case where the user dismissed the
+    // "update your school" view, not the entire banner. In that case, there
+    // may have been partial state about the school changed. We do not want
+    // to use that partial state in the census submission so we need to reset
+    // to the previous values.
     this.setState({
       showSchoolInfoForm: false,
       country: 'United States',
