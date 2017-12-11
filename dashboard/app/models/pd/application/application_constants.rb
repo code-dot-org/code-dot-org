@@ -14,8 +14,5 @@ module Pd::Application
       csd: 'Computer Science Discoveries',
       csp: 'Computer Science Principles'
     }.stringify_keys
-
-    YES = 'Yes'.freeze
-    NO = 'No'.freeze
   end
 end
