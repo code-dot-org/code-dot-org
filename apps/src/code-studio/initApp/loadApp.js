@@ -482,7 +482,7 @@ export function setAppOptions(appOptions) {
   // ugh, a lot of code expects this to be on the window object pretty early on.
   // Don't override existing settings, for example on Multi levels with embedded
   // blocks.
-  if (!window.appOptions) {
+  if (!appOptions.nonGlobal) {
     /** @type {AppOptionsConfig} */
     window.appOptions = appOptions;
   }
