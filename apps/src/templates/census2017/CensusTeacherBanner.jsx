@@ -146,11 +146,28 @@ export default class CensusTeacherBanner extends Component {
 
   handleSchoolInfoSubmit = () => {
     if (this.schoolInfoInputs.isValid()) {
+      let schoolData;
+      if (this.state.ncesSchoolId === '-1') {
+        schoolData = {
+          "_method": "patch",
+          "user[school_info_attributes][country]": this.state.country,
+          "user[school_info_attributes][school_type]": this.state.schoolType,
+          "user[school_info_attributes][school_name]": this.state.schoolName,
+          "user[school_info_attributes][school_state]": this.state.schoolState,
+          "user[school_info_attributes][school_zip]": this.state.schoolZip,
+          "user[school_info_attributes][full_address]": this.state.schoolLocation,
+        };
+      } else {
+        schoolData = {
+          "_method": "patch",
+          "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
+        };
+      }
       $.ajax({
         url: "/users.json",
         type: "post",
         dataType: "json",
-        data: $("#census-school-info-form").serialize()
+        data: schoolData,
       }).done(this.hideSchoolInfoForm).fail(this.updateSchoolInfoError);
     } else {
       this.setState({
@@ -196,43 +213,64 @@ export default class CensusTeacherBanner extends Component {
     this.schoolInfoInputs = inputs;
   }
 
+  getData = () => {
+    const schoolId = this.state.ncesSchoolId ? this.state.ncesSchoolId : this.props.ncesSchoolId;
+    let data= {
+      submitter_role: "TEACHER",
+      submitter_name: this.props.teacherName,
+      submitter_email_address: this.props.teacherEmail,
+      school_year: this.props.schoolYear,
+    };
+    data[this.props.question] = "SOME";
+
+    if (schoolId === '-1') {
+      data["country_s"] = this.state.country;
+      data["school_type_s"] = this.state.schoolType;
+      data["school_name_s"] = this.state.schoolName;
+      data["school_state_s"] = this.state.schoolState;
+      data["school_zip_s"] = this.state.schoolZip;
+      data["school_location"] = this.state.schoolLocation;
+    } else {
+      data["nces_school_s"] = schoolId;
+    }
+
+    return data;
+  }
+
   render() {
     if (this.state.showSchoolInfoForm) {
       let schoolId = (this.state.ncesSchoolId !== null) ? this.state.ncesSchoolId : this.props.ncesSchoolId;
       return (
         <div style={styles.main}>
-          <form name="census-school-info-form" id="census-school-info-form">
-            <input type="hidden" name="_method" value="patch" />
-            <div style={styles.header}>
-              <h2>Update your school information</h2>
-              {this.state.showSchoolInfoUnknownError && (
-                 <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
-              )}
-            </div>
-            <div style={styles.message}>
-              <SchoolInfoInputs
-                ref={this.bindSchoolInfoInputs}
-                onCountryChange={this.handleCountryChange}
-                onSchoolTypeChange={this.handleSchoolTypeChange}
-                onSchoolChange={this.handleSchoolChange}
-                onSchoolNotFoundChange={this.handleSchoolNotFoundChange}
-                country={this.state.country}
-                schoolType={this.state.schoolType}
-                ncesSchoolId={schoolId}
-                schoolName={this.state.schoolName}
-                schoolState={this.state.schoolState}
-                schoolZip={this.state.schoolZip}
-                schoolLocation={this.state.schoolLocation}
-                useGoogleLocationSearch={true}
-                showErrors={this.state.showSchoolInfoErrors}
-                showRequiredIndicator={true}
-              />
-            </div>
-            <div style={styles.buttonDiv}>
-              <Button onClick={this.dismissSchoolInfoForm} style={styles.button} color="gray" size="large" text="Dismiss" />
-              <Button onClick={this.handleSchoolInfoSubmit} style={styles.button} size="large" text="Submit" />
-            </div>
-          </form>
+          <div style={styles.header}>
+            <h2>Update your school information</h2>
+            {this.state.showSchoolInfoUnknownError && (
+               <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
+            )}
+          </div>
+          <div style={styles.message}>
+            <SchoolInfoInputs
+              ref={this.bindSchoolInfoInputs}
+              onCountryChange={this.handleCountryChange}
+              onSchoolTypeChange={this.handleSchoolTypeChange}
+              onSchoolChange={this.handleSchoolChange}
+              onSchoolNotFoundChange={this.handleSchoolNotFoundChange}
+              country={this.state.country}
+              schoolType={this.state.schoolType}
+              ncesSchoolId={schoolId}
+              schoolName={this.state.schoolName}
+              schoolState={this.state.schoolState}
+              schoolZip={this.state.schoolZip}
+              schoolLocation={this.state.schoolLocation}
+              useGoogleLocationSearch={true}
+              showErrors={this.state.showSchoolInfoErrors}
+              showRequiredIndicator={true}
+            />
+          </div>
+          <div style={styles.buttonDiv}>
+            <Button onClick={this.dismissSchoolInfoForm} style={styles.button} color="gray" size="large" text="Dismiss" />
+            <Button onClick={this.handleSchoolInfoSubmit} style={styles.button} size="large" text="Submit" />
+          </div>
         </div>
       );
     } else {
@@ -270,74 +308,47 @@ export default class CensusTeacherBanner extends Component {
         schoolName = this.state.schoolName;
       }
 
-      const schoolId = this.state.ncesSchoolId ? this.state.ncesSchoolId : this.props.ncesSchoolId;
-
       if (schoolName) {
         return (
           <div style={styles.main}>
-            <form id="census-teacher-banner-form">
-              <input type="hidden" name="nces_school_s" value={schoolId}/>
-              <input type="hidden" name="school_year" value={this.props.schoolYear}/>
-              {this.state.country && (
-                <input type="hidden" name="country_s" value={this.state.country}/>
+            <div style={styles.header}>
+              <h2 style={styles.title}>Add {schoolName} to our map!</h2>
+              <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
+              {this.props.showUnknownError && (
+                 <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
               )}
-              {this.state.schoolType && (
-                <input type="hidden" name="school_type_s" value={this.state.schoolType}/>
-              )}
-              {this.state.schoolName && (
-                <input type="hidden" name="school_name_s" value={this.state.schoolName}/>
-              )}
-              {this.state.schoolState && (
-                <input type="hidden" name="school_state_s" value={this.state.schoolState}/>
-              )}
-              {this.state.schoolZip && (
-                <input type="hidden" name="school_zip_s" value={this.state.schoolZip}/>
-              )}
-              {this.state.schoolLocation && (
-                <input type="hidden" name="school_location" value={this.state.schoolLocation}/>
-              )}
-              <input type="hidden" name="submitter_role" value="TEACHER"/>
-              <input type="hidden" name="submitter_name" value={this.props.teacherName}/>
-              <input type="hidden" name="submitter_email_address" value={this.props.teacherEmail}/>
-              <div style={styles.header}>
-                <h2 style={styles.title}>Add {schoolName} to our map!</h2>
-                <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
-                {this.props.showUnknownError && (
-                   <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
-                )}
-              </div>
-              <div style={styles.message}>
-                <p style={styles.introQuestion}>
-                  Looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
-                </p>
-                <label>
-                  <input
-                    type="radio"
-                    id="teachesYes"
-                    name={this.props.question}
-                    value="SOME"
-                    style={styles.radio}
-                    onChange={this.props.onChange}
-                    checked={this.props.selection===true}
-                  />
-                  Yes, we’ve done {numHours} hours.
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    id="teachesNo"
-                    name={this.props.question}
-                    style={styles.radio}
-                    onChange={this.props.onChange}
-                    value="not yet"
-                    checked={this.props.selection===false}
-                  />
-                  Not yet.
-                </label>
-                {footer}
-              </div>
-              {buttons}
-            </form>
+            </div>
+            <div style={styles.message}>
+              <p style={styles.introQuestion}>
+                Looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
+              </p>
+              <label>
+                <input
+                  type="radio"
+                  id="teachesYes"
+                  name={this.props.question}
+                  value="SOME"
+                  style={styles.radio}
+                  onChange={this.props.onChange}
+                  checked={this.props.selection===true}
+                />
+                Yes, we’ve done {numHours} hours.
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  id="teachesNo"
+                  name={this.props.question}
+                  style={styles.radio}
+                  onChange={this.props.onChange}
+                  value="not yet"
+                  checked={this.props.selection===false}
+                />
+                Not yet.
+              </label>
+              {footer}
+            </div>
+            {buttons}
           </div>
           );
       } else {
