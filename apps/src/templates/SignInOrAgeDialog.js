@@ -122,7 +122,6 @@ class SignInOrAgeDialog extends Component {
         <BaseDialog
           useUpdatedStyles
           isOpen={true}
-          assetUrl={() => ''}
           uncloseable
         >
           <div style={styles.container}>
@@ -148,7 +147,6 @@ class SignInOrAgeDialog extends Component {
       <BaseDialog
         useUpdatedStyles
         isOpen={this.state.open}
-        assetUrl={() => ''}
         uncloseable
       >
         <div style={styles.container}>

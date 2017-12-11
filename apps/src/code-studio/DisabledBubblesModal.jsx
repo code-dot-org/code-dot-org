@@ -20,16 +20,12 @@ const styles = {
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is isable)
  */
-const DisabledBubblesModal = React.createClass({
-  getInitialState() {
-    return {
-      open: true
-    };
-  },
+export default class DisabledBubblesModal extends React.Component {
+  state = {
+    open: true
+  };
 
-  handleClose() {
-    this.setState({open: false});
-  },
+  handleClose = () => this.setState({open: false});
 
   render() {
     return (
@@ -61,6 +57,4 @@ const DisabledBubblesModal = React.createClass({
       </BaseDialog>
     );
   }
-});
-
-export default DisabledBubblesModal;
+}

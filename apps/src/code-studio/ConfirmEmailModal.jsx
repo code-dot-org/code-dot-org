@@ -102,7 +102,6 @@ export default class ConfirmEmailModal extends React.Component {
         fixedHeight={310}
         isOpen={this.props.isOpen}
         handleClose={this.cancel}
-        assetUrl={() => ''}
         {...this.props}
       >
         <h2 style={styles.title}>
@@ -141,4 +140,3 @@ export default class ConfirmEmailModal extends React.Component {
     );
   };
 }
-

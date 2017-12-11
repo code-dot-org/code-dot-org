@@ -136,11 +136,12 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       raise CanCan::AccessDenied.new
     end
 
-    if current_user.admin? || current_user.workshop_admin?
-      @workshops = Pd::Workshop.all
-    else
-      @workshops = Pd::Workshop.facilitated_or_organized_by(current_user)
-    end
+    @workshops =
+      if current_user.admin? || current_user.workshop_admin?
+        Pd::Workshop.all
+      else
+        Pd::Workshop.facilitated_or_organized_by(current_user)
+      end
   end
 
   def should_notify?

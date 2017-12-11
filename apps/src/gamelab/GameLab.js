@@ -1106,8 +1106,6 @@ GameLab.prototype.displayFeedback_ = function () {
   var level = this.level;
 
   this.studioApp_.displayFeedback({
-    app: 'gamelab',
-    skin: this.skin.id,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,

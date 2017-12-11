@@ -54,7 +54,7 @@ const instructionsInitialState = {
   levelVideos: []
 };
 
-export default function reducer(state = instructionsInitialState, action) {
+export default function reducer(state = {...instructionsInitialState}, action) {
   if (action.type === SET_CONSTANTS) {
     if (state.shortInstructions || state.longInstructions) {
       throw new Error('instructions constants already set');
