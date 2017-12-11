@@ -5260,6 +5260,8 @@ en:
               name: Bounce
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
