@@ -86,7 +86,7 @@ module SharedConstants
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
-  APPLAB_BLOCKS = <<-JSON
+  APPLAB_BLOCKS = <<-JSON.freeze
     {
       // UI Controls
       "onEvent": null,
@@ -285,7 +285,7 @@ module SharedConstants
 
   # Goal blocks will not appear in App Lab unless they are explicitly included
   # in the level config.
-  APPLAB_GOAL_BLOCKS = <<-JSON
+  APPLAB_GOAL_BLOCKS = <<-JSON.freeze
     {
       // Goals
       "comment_Goals_1": null,
@@ -314,7 +314,7 @@ module SharedConstants
   # This is a set of Gamelab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
-  GAMELAB_BLOCKS = <<-JSON
+  GAMELAB_BLOCKS = <<-JSON.freeze
     {
       // Game Lab
       "draw": null,

@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import NewProjectButtons from './NewProjectButtons.jsx';
 import i18n from '@cdo/locale';
 import Button from '../Button';
@@ -27,7 +28,7 @@ const styles = {
 class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isRtl: PropTypes.bool,
+    isRtl: PropTypes.bool.isRequired,
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
   };
@@ -108,4 +109,7 @@ class StartNewProject extends React.Component {
     );
   }
 }
-export default StartNewProject;
+
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(StartNewProject);

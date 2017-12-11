@@ -47,11 +47,12 @@ module Pd::Payment
       end
 
       if payment_term.per_attendee_payment?
-        if payment_term.maximum_attendees_for_payment?
-          payment_sum += [attending_teachers.size, payment_term.maximum_attendees_for_payment].min * payment_term.per_attendee_payment
-        else
-          payment_sum += attending_teachers.size * payment_term.per_attendee_payment
-        end
+        payment_sum +=
+          if payment_term.maximum_attendees_for_payment?
+            [attending_teachers.size, payment_term.maximum_attendees_for_payment].min * payment_term.per_attendee_payment
+          else
+            attending_teachers.size * payment_term.per_attendee_payment
+          end
       end
 
       if payment_term.facilitator_payment?

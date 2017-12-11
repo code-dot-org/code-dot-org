@@ -8,7 +8,7 @@ import {
   Col
 } from 'react-bootstrap';
 
-const REQUIRED = (<span style={{color: 'red'}}> *</span>);
+const REQUIRED = (<span style={{color: 'red'}}>&nbsp;*</span>);
 
 export default class FieldGroup extends React.Component {
   constructor(props) {
@@ -23,6 +23,19 @@ export default class FieldGroup extends React.Component {
     });
   }
 
+  renderControl(controlWidth, children, props) {
+    return (
+      <Col {...controlWidth}>
+        <FormControl
+          onChange={this.handleChange}
+          {...props}
+        >
+          {children}
+        </FormControl>
+      </Col>
+    );
+  }
+
   render() {
     const {
       id,
@@ -35,6 +48,7 @@ export default class FieldGroup extends React.Component {
       children,
       labelWidth,
       controlWidth,
+      inlineControl,
       ...props
     } = this.props;
 
@@ -42,19 +56,17 @@ export default class FieldGroup extends React.Component {
       <FormGroup controlId={id} validationState={validationState}>
         <Row>
           <Col {...labelWidth}>
-            <ControlLabel>{label} {required && REQUIRED}</ControlLabel>
+            <ControlLabel>{label}{required && REQUIRED}</ControlLabel>
           </Col>
+          {inlineControl && this.renderControl(controlWidth, children, props)}
         </Row>
-        <Row>
-          <Col {...controlWidth}>
-            <FormControl
-              onChange={this.handleChange}
-              {...props}
-            >
-              {children}
-            </FormControl>
-          </Col>
-        </Row>
+        {
+          !inlineControl && (
+            <Row>
+              {this.renderControl(controlWidth, children, props)}
+            </Row>
+          )
+        }
         <HelpBlock>{errorMessage}</HelpBlock>
       </FormGroup>
     );
@@ -78,5 +90,6 @@ FieldGroup.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node),
   onChange: PropTypes.func,
   labelWidth: PropTypes.object,
-  controlWidth: PropTypes.object
+  controlWidth: PropTypes.object,
+  inlineControl: PropTypes.bool
 };
