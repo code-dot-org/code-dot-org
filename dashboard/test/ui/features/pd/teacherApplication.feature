@@ -59,15 +59,25 @@ Scenario: Basic teacher application submission
   Then I see no difference for "Section 2: Your School"
    And I press the first "button#next" element
 
-  # Section 3
+  # Section 3, first fill out for CSD
   Then I wait until element "h3" contains text "Section 3: Choose Your Program"
-   And I press the first "input[name='program']" element
+   And I press the first "input[name='program'][value^='Computer Science Discoveries']" element
    And I press the first "input[name='csdWhichGrades']" element
    And I press the first "input[name='csdCourseHoursPerWeek']" element
    And I press the first "input[name='csdCourseHoursPerYear']" element
    And I press the first "input[name='csdTermsPerYear']" element
    And I press the first "input[name='planToTeach']" element
-  Then I see no difference for "Section 3: Choose Your Program"
+  Then I see no difference for "Section 3: Choose Your Program - CSD"
+
+  # Redo Section 3 for CSP
+  Then I press the first "input[name='program'][value^='Computer Science Principles']" element
+   And I press the first "input[name='cspWhichGrades']" element
+   And I press the first "input[name='cspCourseHoursPerWeek']" element
+   And I press the first "input[name='cspCourseHoursPerYear']" element
+   And I press the first "input[name='cspTermsPerYear']" element
+   And I press the first "input[name='cspHowOffer']" element
+   And I press the first "input[name='cspApExam']" element
+  Then I see no difference for "Section 3: Choose Your Program - CSP"
    And I press the first "button#next" element
 
   # Section 4
