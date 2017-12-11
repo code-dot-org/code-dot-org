@@ -52,6 +52,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # PATCH /api/v1/pd/applications/1
   def update
+    if application_params[:response_scores]
+      JSON.parse(application_params[:response_scores]).transform_keys! {|x| x.to_s.underscore}.to_json
+    end
+
     @application.update(application_params)
 
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
