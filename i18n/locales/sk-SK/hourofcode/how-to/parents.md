@@ -5,75 +5,75 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Ako splniť Hodinu kódu s svojim dieťaťom
+# Ako absolvovať Hodinu kódu s svojim dieťaťom
 
-Dokončenie Hour of Code doma, alebo dobrovoľne tak, aby bol k výučbe vášho dieťaťa! Tu je návod:
+Absolvujte Hodinu Kódu doma, prípadne navrhnite a zabezpečte jej zorganizovanie v triede Vášho dieťaťa! Tu je návod, ako na to:
 
 ## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2) Vyber si návod:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+Poskytujeme množstvo zábavy, obsiahle návody pre študentov všetkých vekových kategórií vytvorené rôznymi našimi partnermi. [Vyskúšajte si ich sami!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Všetky návody Hodiny Kódu sú individuálne - umožňujú Vašemu dieťaťu postupovať ich vlastným tempom a sú prispôsobené ich schopnostiam**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Plan your technology needs
+## 3) Pripravte si technické prostriedky
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+Najlepší zážitok z hodiny Kódu budete mať na počítačoch pripojených na Internet. Počítače však **nie sú** podmienkou. Veľa aktivít nevyžaduje počítače a môžu byť absolvované bez akýchkoľvek IT prostriedkov a techniky.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Otestujte si návody na Vašom počítači alebo zariadení. Skontrolujte, že fungujú správne v prehliadačoch so zvukom a videom.
+- **Chcete sa učiť spolu s Vašim dieťaťom?** Vyskúšajte [programovanie v páre.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Informatika je spoločenská a kolaboratívna.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) Začnite Hodinu Kódu s motivujúcim videom
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Začnite Hodinu Kódu motivovaním Vášho dieťaťa a prediskutujte s ním, ako informatika ovplyvňuje každú časť nášho života.
 
 **Ukáž inšpiratívne video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Pôvodné Code.org úvodné video s Billom Gatesom, Markom Zuckerbergom a hviezdou NBA Chrisom Boshom (Na výber sú [1 minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutová](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verzia)
+- [Celosvetové video Hodiny Kódu](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Prezident Obama vyzýva všetkých študentov, aby sa učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- Pozrite si ďaľšie motivačné [zdroje](%= resolve_url('https://code.org/inspire') %) a [videá](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Nevadí, ak Vy alebo Vaše dieťa neovládate prácu s počítačmi. Ponúkame Vám niekoľko nápadov, ako môžete začať s Hodinou Kódu:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- Vysvetlite, ako technológie ovplyvňujú naše životy vrátane príkladov, ktoré pochopia chlapci i dievčatá (hovorte o záchrane životov, pomáhaní ľuďom, spájaní ľudí atď.).
 - Menuj veci, ktoré používame v každodennom živote a používajú kód, program.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- Pozri si nápady na to, ako získať záujem dievčat o informatiku [tu](%= resolve_url('https://code.org/girls') %).
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Chcete ďalšie nápady? Pozrite si náš [ vzorový učebný plán](/files/AfterschoolEducatorLessonPlanOutline.docx) s osvedčenými postupmi od skúsených pedagógov.
 
-## 5) Code!
+## 5) Kódujte!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Keď ste si vybrali aktivitu, ktorú by ste chceli absolvovať, môžete si ju uložiť priamy odkaz na ňu.
 
-**When your child come across difficulties**
+**Čo v prípade, ak sa Vašemu dieťaťu nebude dariť**
 
-It’s okay to respond:
+Môžete odpovedať napríklad:
 
 - “Neviem. Skúsme to spoločne.”
 - “Technológie nefungujú vždy tak, ako by sme práve chceli.”
 - “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
 
-## 6) Celebrate
+## 6) Oslavujte
 
-[Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
+[Vytlačte certifikáty](%= resolve_url('https://code.org/certificates') %) pre svoje dieťa (a pre seba).
 
 Zdieľaj fotky a videá z vašej Hodiny kódu na sociálnych sieťach. Použi #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť váš úspech!
 
-**Other Hour of Code resources:**
+**Ďaľšie materiály Hodiny Kódu:**
 
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Pozrite si [Časté otázky o Hodine Kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 **Čo nasleduje po Hodine kódu?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Hodina Kódu je len prvým krokom na ceste učenia sa o tom, ako fungujú technológie a ako vytvárať softvérové aplikácie. Pre pokračovanie po tejto ceste:
 
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Povzbuďte Vaše dieťa, aby pokračovalo [v učení sa online](%= resolve_url('https://code.org/learn/beyond') %).
+- Pomôžte [v podpore](%= resolve_url('/promote') %) výučby informatiky v škole, ktorú navštevuje Vaše dieťa.
 
 <%= view :signup_button %>

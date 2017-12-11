@@ -12,7 +12,7 @@ Na okamžité zverejnenie
 Kontakt: [**CONTACT INFORMATION**]  
   
 
-<strong><center>Starosta/Poslanec/Župan/Zástupca miestneho zastupiteľstva [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong>  
+<strong><center>Starosta/Poslanec/Župan/Zástupca miestneho zastupiteľstva [VLOŽTE MENO] sa zúčastnil Hodiny Kódovania s miestnymi študentami</strong>  
 Spoločnosť sa spája, aby vyzdvihla dôležitosť vzdelávania v informatike zúčastňovaním sa na týždni vzdelávania v informatike</center>   
   
 
@@ -22,19 +22,19 @@ Spoločnosť sa spája, aby vyzdvihla dôležitosť vzdelávania v informatike z
 [**Vložte podrobnosti o podujatí, použite opisný a kvantifikovateľný jazykový štýl. Napríklad:**]  
 “Základná škola Danielsa Runa uskutočnila celoškolské podujatie Hour of Code s cieľom priblížiť jej študentom poznatky z informatiky. Viac ako 700 študentov zo všetkých ročníkov preštudovalo lekciu Hour of Code. A desiatky rodičov a dobrovoľníkov z miestnej spoločnosti pomáhalo počas dňa a spojilo deti na mimoškolskom zhromaždení s cieľom ukázať prečo je informatika dôležitá pre životy týchto študentov
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**VZOROVÝ TEXT PRE OBSAH:**]  
+Počítače sú všade, avšak informatiku učí menej škôl než pred 10 rokmi. Dievčatá a študenti iných etnicíť sú zastúpení vo výrazne nižšej miere. Dobrou správou je, že tento stav meníme na lepší. Hodina Kódu je bránou k poskytnutiu prístupu k vysokokvalitnej výučbe informatiky všetkým študentom.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Viac ako 100 miliónov študentov po celom svete už absolvovalo Hodinu Kódu. Vďaka Hodine Kódu, informatika bola na predných stránkach Googlu, MSN, Yahoo! a Disney. Prezident Obama, Shakira a Ashton Kutcher odštartovali minuloročnú Hodinu Kódu s videami. Viac ako 100 partnerov sa spojilo pre podporu tohto hnutia.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**VLOŽTE CITÁT OD AMBASÁDORA, VZOR NIŽŠIE:**]  
+“Musíme podporovať a motivovať študentov, aby sa zaujímali o informatiku,” povedal [**VLOŽTE MENO**]. "Každý študent si zaslúži mať šancu učiť sa informatiku a mať prístup k najlepším kariéram 21 storočia."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**VLOŽTE VIAC INFORMÁCIÍ O VAŠEJ AKCII A/ALEBO ORGANIZÁCII**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**VLOŽTE CITÁT OD INEJ ORGANIZÁCIE ALEBO NIEKOHO, KTO SA UŽ ZÚČASTNIL PODUJATIA**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Pre Viac informácií o [**UDALOSTI/PROGRAME/ATĎ**], navštívte [**VLOŽTE WWW STRÁNKU**] alebo kontaktujte [**VLOŽTE KONTAKTNÉ ÚDAJE**]
 
   
   
