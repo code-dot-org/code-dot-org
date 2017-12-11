@@ -5,9 +5,9 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Bir kodlama saatini çocuklarınızla nasıl tamamlarsınız
+# Bir Kod-Saatini çocuklarınızla nasıl tamamlarsınız
 
-Kodlama saatini evde tamamlayın ya da çocuklarınızın sınıfına götürmek için gönüllü olun. Nasıl olacağı şöyle:
+Kod-Saatini evde tamamlayın ya da çocuklarınızın sınıfına götürmek için gönüllü olun. Şöyle başlayın:
 
 ## 1) "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -15,13 +15,13 @@ Kodlama saatini evde tamamlayın ya da çocuklarınızın sınıfına götürmek
 
 Çeşitli ortaklar tarafından oluşturulan, her yaştaki öğrenciye yönelik eğlenceli saatlik eğitimler sunuyoruz. [Bunları deneyin](%= resolve_url('/learn') %)
 
-**Tüm kodlama saati uygulamaları kendi kendine rehberlik eder. Çocuğunuza kendi temposunda ve beceri seviyesinde çalışmasına izin verir**
+**Tüm Kod-Saati uygulamaları kendi kendine rehberlik eder. Çocuğunuza kendi temposunda ve beceri seviyesinde çalışmasına izin verir**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) teknolojik gereksinimlerinizi planlayın
+## 3) Teknolojik gereksinimlerinizi planlayın
 
-En iyi kodlama saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekleşir. Ama bilgisayara ihtiyacınız ** yok**. "fişe takılı olmayan" ve herhangi bir teknolojiye ihtiyacınız olmadan yapılabilen birçok etkinlik var.
+En iyi Kod-Saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekleşir. Ama bilgisayara ihtiyacınız ** yok.** "fişe takılı olmayan" ve herhangi bir teknolojiye ihtiyacınız olmadan yapılabilen birçok etkinlik var.
 
 - Öğreticileri bilgisayarınızda veya cihazınızda test edin. Ses ve video içeren tarayıcılarda düzgün şekilde çalıştığından emin olun.
 - **çocuğunuzla birlikte mi öğrenmek istiyorsunuz? ** [çift programlamayı ](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)deneyin. bilgisayar bilimleri sosyal ve işbirlikçidir.

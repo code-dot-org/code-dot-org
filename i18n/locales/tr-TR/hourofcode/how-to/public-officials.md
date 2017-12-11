@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Tüm okulların katılmasını sağlayın, her öğrenci öğrensin!
 
-1. Bilgisayar bilimleri eğitiminin neden önemli olduğunu ve Kodlama Saatini destekleyerek nasıl katkıda bulunabileceğiniz hakkında **kılavuzumuzu okuyun**. [Get the one-pager here.](/files/hoc-one-pager.pdf)
+1. Bilgisayar bilimleri eğitiminin neden önemli olduğunu ve Kodlama Saatini destekleyerek nasıl katkıda bulunabileceğiniz hakkında **kılavuzumuzu okuyun**. [Buradan kılavuza ulaşabilirsiniz.](/files/hoc-one-pager-public-officials-2016.pdf)
 
 2. **Yerel okul ve bölgeleri organize edin.** [Bu e-posta'yı](%= resolve_url('/promote/resources#sample-emails') %) veya [bu öneri yazısını](%= resolve_url('/promote/stats') %) bir başlangıç noktası olarak kullanın ve bunun [nasıl yapıldığını ](%= resolve_url('/how-to') %) okul ve bölgelere anlatın.
 
