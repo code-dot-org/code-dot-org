@@ -8,6 +8,7 @@ import applicationDashboardReducers, {
   setRegionalPartnerName,
   setRegionalPartners,
   setWorkshopAdminPermission,
+  setLockApplicationPermission,
 } from './reducers';
 import Header from '../components/header';
 import {
@@ -47,7 +48,8 @@ export default class ApplicationDashboard extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string,
     regionalPartners: PropTypes.array,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
+    canLockApplications: PropTypes.bool,
   };
 
   componentWillMount() {
@@ -61,6 +63,10 @@ export default class ApplicationDashboard extends React.Component {
 
     if (this.props.isWorkshopAdmin) {
       store.dispatch(setWorkshopAdminPermission(true));
+    }
+
+    if (this.props.canLockApplications) {
+      store.dispatch(setLockApplicationPermission(true));
     }
   }
 
