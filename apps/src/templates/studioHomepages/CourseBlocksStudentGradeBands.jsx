@@ -43,14 +43,12 @@ class CourseBlocksStudentGradeBands extends Component {
         linkText={linkText}
         heading={heading}
         description={description}
-        isRtl={this.props.isRtl}
         responsive={this.props.responsive}
         hideBottomMargin={hideBottomMargin}
+        isRtl={this.props.isRtl}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </ContentContainer>
     );

@@ -2,6 +2,8 @@ import React from 'react';
 import {mount} from 'enzyme';
 import experiments from '@cdo/apps/util/experiments';
 import {createStore, combineReducers} from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 
 /**
@@ -71,7 +73,11 @@ class FakeStorybook {
 
   withReduxStore(reducers = {}) {
     this.addDecorator(story => {
-      this.store = createStore(combineReducers(reducers));
+      this.store = createStore(combineReducers({
+        isRtl,
+        responsive,
+        ...reducers,
+      }));
       return (
         <Provider store={this.store}>
           {story()}

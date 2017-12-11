@@ -7,16 +7,6 @@ import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
  * This file does some handling of submit button interactions.
  */
 
-$(document).ready(function () {
-  // This setting (pre_title) is used by only a couple of levels in our system.
-  // Ideally we would get rid of it.
-  if (appOptions.dialog.preTitle) {
-    window.setTimeout(function () {
-      showDialog("pre");
-    }, 1000);
-  }
-});
-
 // Are we read-only?  This can be because we're a teacher OR because an answer
 // has been previously submitted.
 if (appOptions.readonlyWorkspace) {

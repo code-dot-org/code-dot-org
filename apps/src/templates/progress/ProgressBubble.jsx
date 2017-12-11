@@ -39,6 +39,11 @@ const styles = {
     transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
     marginTop: 3,
     marginBottom: 3,
+    // ReactTooltip sets a zIndex of 999. However, because in some cases for us
+    // the ReactTooltip is inside of a rotated div, it ends up in a different
+    // stacking context, and the zIndex doesn't work. Instead we set it here on
+    // the top component
+    zIndex: 999,
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,

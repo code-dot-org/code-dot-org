@@ -18,6 +18,7 @@ var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -75,6 +76,8 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.suppliedFilesVersionId = queryParams('version');
+  this.initialFilesVersionId = this.suppliedFilesVersionId;
 
   this.brambleHost = null;
 
@@ -92,7 +95,6 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
-  config.baseShareUrl = 'https://codeprojects.org';
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
@@ -359,7 +361,7 @@ WebLab.prototype.onInspectorChanged = function (inspectorOn) {
 /*
  * Called by Bramble host to set our reference to its interfaces
  * @param {!Object} bramble host interfaces
- * @return {String} current project id
+ * @return {String} current project path (project id plus initial version)
  */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
@@ -372,7 +374,11 @@ WebLab.prototype.setBrambleHost = function (obj) {
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
   this.brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
-  return project.getCurrentId();
+  if (this.suppliedFilesVersionId) {
+    return `${project.getCurrentId()}-${this.suppliedFilesVersionId}`;
+  } else {
+    return project.getCurrentId();
+  }
 };
 
 // Called by Bramble host to get page constants
@@ -403,11 +409,12 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function () {
-  filesApi.getFiles(result => {
+  filesApi.getFiles(this.getCurrentFilesVersionId(), result => {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
-      url: filesApi.basePath(fileEntry.filename)
+      url: filesApi.basePath(fileEntry.filename),
+      versionId: fileEntry.versionId,
     }));
     var latestFilesVersionId = result.filesVersionId;
     this.initialFilesVersionId = this.initialFilesVersionId || latestFilesVersionId;

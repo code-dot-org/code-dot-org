@@ -100,7 +100,7 @@ describe('entry tests', () => {
           '\n  2. cd <new-directory>' +
           '\n  3. npm install && grunt build-dev' +
           '\n  4. npm link' +
-          '\n  5. cd -' +
+          '\n  5. cd <code-dot-org apps directory>' +
           '\n  6. npm link @code-dot-org/piskel' +
           '\n  7. rerun your previous command' +
           '\n'));
@@ -442,6 +442,7 @@ describe('entry tests', () => {
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match':                './src/sites/studio/pages/levels/_match.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',

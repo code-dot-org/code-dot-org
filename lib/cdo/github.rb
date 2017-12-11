@@ -63,10 +63,32 @@ module GitHub
   # @raise [Exception] From calling Octokit.merge_pull_request.
   # @return [Boolean] Whether the PR was merged.
   def self.merge_pull_request(pr_number, commit_message='')
-    if pull_merged?(pr_number)
-      raise ArgumentError.new("PR\##{pr_number} is already merged")
-    end
     configure_octokit
+
+    # Let async mergeability check finish before proceeding.
+    #   The value of the mergeable attribute can be true, false, or null. If the
+    #   value is null, this means that the mergeability hasn't been computed
+    #   yet, and a background job was started to compute it. Give the job a few
+    #   moments to complete, and then submit the request again. When the job is
+    #   complete, the response will include a non-null value for the mergeable
+    #   attribute.
+    # Source: https://developer.github.com/v3/pulls/#get-a-single-pull-request
+    pr = nil
+    attempt_count = 0
+    loop do
+      pr = Octokit.pull_request(REPO, pr_number)
+      attempt_count += 1
+      break unless pr['mergeable'].nil? && attempt_count < 30
+      sleep 1
+    end
+
+    if attempt_count >= 30
+      raise ArgumentError.new("PR\##{pr_number} mergeability check timed out")
+    elsif pr['merged']
+      raise ArgumentError.new("PR\##{pr_number} is already merged")
+    elsif !pr['mergeable']
+      raise ArgumentError.new("PR\##{pr_number} is not mergeable")
+    end
     response = Octokit.merge_pull_request(REPO, pr_number, commit_message)
     response['merged']
   end
@@ -83,12 +105,6 @@ module GitHub
   def self.create_and_merge_pull_request(base:, head:, title:)
     return nil unless behind?(base: head, compare: base)
     pr_number = create_pull_request(base: base, head: head, title: title)
-    # By sleeping, we allow GitHub time to determine that a merge conflict is
-    # not present. Otherwise, empirically, we receive a 405 response error.
-    # (Brad 2017-11-07) Speculatively doubling this sleep in case the 500 errors
-    #   we've seen over the last couple of days are caused by trying to merge
-    #   too quick.
-    sleep 6
     success = merge_pull_request(pr_number, title)
     success ? pr_number : nil
   end
