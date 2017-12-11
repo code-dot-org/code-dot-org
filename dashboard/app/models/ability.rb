@@ -43,10 +43,12 @@ class Ability
       :pd_workshop_admins,
       :peer_review_submissions,
       RegionalPartner,
+      :regional_partner_workshops,
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application,
-      :maker_discount,
+      Pd::Application::Teacher1819Application,
+      :maker_discount
     ]
 
     if user.persisted?
@@ -84,8 +86,10 @@ class Ability
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
+        can [:read, :find], :regional_partner_workshops
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
+        can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
         can :manage, :maker_discount
       end
 
@@ -147,6 +151,7 @@ class Ability
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1819Application
+        can :manage, Pd::Application::Teacher1819Application
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)

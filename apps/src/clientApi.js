@@ -66,6 +66,19 @@ class CollectionsApi {
     return ajaxInternal(method, this.basePath(file), success, error, data);
   }
 
+  getFile(file, version, success, error, data) {
+    error = error || function () {};
+    if (!window.dashboard && !this.projectId) {
+      error({status: "No dashboard"});
+      return;
+    }
+    let url = this.basePath(file);
+    if (version) {
+      url = `${url}?version=${version}`;
+    }
+    return ajaxInternal('GET', url, success, error);
+  }
+
   /*
    * Restore this file to the state of a previous version
    * @param file {String} name of file
@@ -362,8 +375,12 @@ class FilesApi extends CollectionsApi {
    * @callback success {getFiles~success} callback when successful
    * @callback error {Function} callback when failed (includes xhr parameter)
    */
-  getFiles(success, error) {
-    return ajaxInternal('GET', this.basePath(''), xhr => {
+  getFiles(version, success, error) {
+    let path = this.basePath('');
+    if (version) {
+      path = path + `?version=${version}`;
+    }
+    return ajaxInternal('GET', path, xhr => {
         var parsedResponse;
         try {
           parsedResponse = JSON.parse(xhr.responseText);

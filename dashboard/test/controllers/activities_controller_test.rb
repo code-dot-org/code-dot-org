@@ -93,7 +93,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_expected_response(options = {})
     {
-      previous_level: build_script_level_path(@script_level_prev),
       total_lines: 35,
       redirect: build_script_level_path(@script_level_next),
     }.merge options
@@ -101,7 +100,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_try_again_response(options = {})
     {
-      previous_level: build_script_level_path(@script_level_prev),
       message: 'try again',
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
     }.merge options

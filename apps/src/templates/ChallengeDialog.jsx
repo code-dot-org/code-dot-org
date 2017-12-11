@@ -120,7 +120,6 @@ const ChallengeDialog = Radium(React.createClass({
     return (
       <BaseDialog
         isOpen={this.state.isOpen}
-        assetUrl={assetUrl}
         style={styles.dialog}
         handleClose={this.handlePrimary}
         hideCloseButton={true}

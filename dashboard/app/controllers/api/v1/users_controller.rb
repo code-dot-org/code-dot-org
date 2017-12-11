@@ -33,4 +33,33 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
     render status: 200, json: {set: property_name}
   end
+
+  # POST /api/v1/users/<user_id>/postpone_census_banner
+  def postpone_census_banner
+    today = Date.today
+    year = today.year
+    # Find the next scheduled date that is at least 2 weeks away
+    scheduled_display_dates = [1, 3, 5, 11].map {|month| Date.new(year, month, 15)}
+    scheduled_display_dates.push Date.new(year + 1, 1, 15)
+    next_date = scheduled_display_dates.select {|d| d > today && d > today + 2.weeks} [0]
+
+    @user.next_census_display = next_date
+    @user.save
+
+    render status: 200, json: {next_census_display: @user.next_census_display}
+  end
+
+  # POST /api/v1/users/<user_id>/dismiss_census_banner
+  def dismiss_census_banner
+    today = Date.today
+    year = today.year
+
+    # if they dismiss Aug 1 or later then don't show until next November
+    year += 1 if today.month >= 8
+
+    @user.next_census_display = Date.new(year, 11, 15)
+    @user.save
+
+    render status: 200, json: {next_census_display: @user.next_census_display}
+  end
 end
