@@ -78,7 +78,6 @@ export default class RecentCourses extends Component {
                 buttonText={i18n.findCourse()}
                 buttonLink="/courses"
                 dismissible={false}
-                isRtl={isRtl}
               />
             </div>
           )}

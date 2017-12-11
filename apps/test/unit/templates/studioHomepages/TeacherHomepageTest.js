@@ -64,7 +64,7 @@ describe('TeacherHomepage', () => {
         isEnglish={true}
       />
     );
-    const announcementContainer = wrapper.find('Notification');
+    const announcementContainer = wrapper.find('Connect(Notification)');
     assert.deepEqual(announcementContainer.props(), {
       type: "bullhorn",
       notice: announcement.heading,
@@ -74,7 +74,6 @@ describe('TeacherHomepage', () => {
       buttonLink: announcement.link,
       newWindow: true,
       analyticId: announcement.id,
-      isRtl: false
     });
   });
 

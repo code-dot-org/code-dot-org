@@ -100,7 +100,7 @@ describe('OwnedSections', () => {
     );
     expect(spy).not.to.have.been.called;
 
-    expect(wrapper.find('Notification').length).to.equal(1);
-    expect(wrapper.find('Notification').props().notice).to.equal('Add a new classroom section');
+    expect(wrapper.find('Connect(Notification)').length).to.equal(1);
+    expect(wrapper.find('Connect(Notification)').props().notice).to.equal('Add a new classroom section');
   });
 });
