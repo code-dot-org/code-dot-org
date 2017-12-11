@@ -7,7 +7,7 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
   end
 
   test 'country and school type and state' do
-    mock = MockSchoolInfoDeduplicator.new
+    deduplicator = MockSchoolInfoDeduplicator.new
     expect = {
       country: 'US',
       school_type: 'public',
@@ -32,11 +32,11 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       full_address: '',
       validation_type: 'none'
     }
-    assert_equal expect, mock.process_school_info_attributes(actual)
+    assert_equal expect, deduplicator.process_school_info_attributes(actual)
   end
 
   test 'country and type and state and school id' do
-    mock = MockSchoolInfoDeduplicator.new
+    deduplicator = MockSchoolInfoDeduplicator.new
     expect = {
       country: 'US',
       school_type: 'public',
@@ -63,11 +63,11 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       full_address: '',
       validation_type: 'none'
     }
-    assert_equal expect, mock.process_school_info_attributes(actual)
+    assert_equal expect, deduplicator.process_school_info_attributes(actual)
   end
 
   test 'with school district id' do
-    mock = MockSchoolInfoDeduplicator.new
+    deduplicator = MockSchoolInfoDeduplicator.new
     expect = {
       country: 'US',
       school_type: 'public',
@@ -94,11 +94,11 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       full_address: '',
       validation_type: 'none'
     }
-    assert_equal expect, mock.process_school_info_attributes(actual)
+    assert_equal expect, deduplicator.process_school_info_attributes(actual)
   end
 
   test 'with other school name' do
-    mock = MockSchoolInfoDeduplicator.new
+    deduplicator = MockSchoolInfoDeduplicator.new
     expect = {
       country: 'US',
       school_type: 'public',
@@ -125,11 +125,11 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       full_address: '',
       validation_type: 'none'
     }
-    assert_equal expect, mock.process_school_info_attributes(actual)
+    assert_equal expect, deduplicator.process_school_info_attributes(actual)
   end
 
   test 'without other school name' do
-    mock = MockSchoolInfoDeduplicator.new
+    deduplicator = MockSchoolInfoDeduplicator.new
     expect = {
       country: 'US',
       school_type: 'public',
@@ -156,25 +156,25 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
       full_address: '',
       validation_type: 'none'
     }
-    assert_equal expect, mock.process_school_info_attributes(actual)
+    assert_equal expect, deduplicator.process_school_info_attributes(actual)
   end
 
   test 'dedupe with school, ignoring other attrs' do
-    mock = MockSchoolInfoDeduplicator.new
+    deduplicator = MockSchoolInfoDeduplicator.new
     school_info = create :school_info_with_public_school_only
-    deduped = mock.deduplicate_school_info({school_id: school_info.school_id, validation_type: SchoolInfo::VALIDATION_NONE, state: "FAKE"}, mock)
+    deduped = deduplicator.deduplicate_school_info({school_id: school_info.school_id, validation_type: SchoolInfo::VALIDATION_NONE, state: "FAKE"}, deduplicator)
     assert deduped, "Expected to dedupe on school id"
-    assert_equal school_info.id, mock.school_info.id
+    assert_equal school_info.id, deduplicator.school_info.id
   end
 
   test 'missing or blank fields do not match none-null values' do
-    mock = MockSchoolInfoDeduplicator.new
+    deduplicator = MockSchoolInfoDeduplicator.new
     existing = create :school_info_us_private, validation_type: SchoolInfo::VALIDATION_NONE
     new_attrs = {
       country: existing.country,
       validation_type: SchoolInfo::VALIDATION_NONE,
     }
-    duplicate = mock.get_duplicate_school_info(new_attrs)
+    duplicate = deduplicator.get_duplicate_school_info(new_attrs)
     refute duplicate, "Did not expect to find a school info matching #{new_attrs}. Found #{duplicate.inspect}"
   end
 end
