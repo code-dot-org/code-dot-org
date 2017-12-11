@@ -402,351 +402,351 @@ vi:
     C1_bigevent_unplugged:
       1:
         image: 'notes/C1_bigevent_unplugged_1.png'
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: "Bài học này được gọi là sự kiện lớn. Nó đề cập đến việc làm sao chúng ta có thể kiểm soát các chương trình và thực tế là thay đổi cách 1 chương trình chạy tốc hành bằng việc sử dụng các sự kiện, như việc nhấn nút hoặc nhấp chuột."
       2:
         image: 'notes/C1_bigevent_unplugged_2.png'
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: "Với bài học này, bạn sẽ được điều khiển bởi một điều khiển từ xa. Nó giống như là một trò chơi video thực tế."
       3:
         image: 'notes/C1_bigevent_unplugged_3.png'
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: "Sự kiện là một hành động khiến một điều gì đó xảy ra. Giống như khi bạn nhấp chuột và tải một trang web. Đó là một sự kiện. Khi bạn chạm vào màn hình máy tính bảng để di chuyển, đó cũng là 1 sự kiện. Sự kiện là một cách tuyệt vời cho phép người dùng điều khiển chương trình của bạn khi họ cần hoặc muốn làm thế."
       4:
         image: 'notes/C1_bigevent_unplugged_4.png'
-        text: "Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something."
+        text: "Chúng ta đáp ứng các sự việc xảy ra. Nếu thấy đói ta sẽ đi lục tủ lạnh. Ta nghe thấy người đưa thư đến và anh ta đặt thư vào thùng thư, sau đó chúng ta ra lấy thư. Những điều này giống như là các sự kiện nhấn nút hay di chuyển cần điều khiển. Đó là những sự việc xảy ra khiến chúng ta phải có hành động hồi đáp."
       5:
         image: 'notes/C1_bigevent_unplugged_5.png'
-        text: "In video games, there's an event called \"Update\" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick."
+        text: "Trong các trò chơi video, có một sự kiện gọi là \"Cập nhật\" và nó xảy ra 30 hoặc 60 lần 1 giây. Với người lập trình video trò chơi, một sự kiện thì quan trọng hơn cái nút bấm hay cái cần điều kiển."
       6:
         image: 'notes/C1_bigevent_unplugged_6.png'
-        text: "The main event we're watching for is that \"Update\" tick happening. And then we check the joystick in the tick. So we say, \"Oh, has somebody pushed the button this frame? Yes or no?\" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything."
+        text: "Sự kiện chính mà chúng ta đang xem là việc \"Cập nhật'' diễn ra. Và sau đó chúng ta kiểm tra nhanh cần điều khiển. Vì vậy chúng ta nói, \"Ồ, có ai đó đã ấn nút khung này phải không?\". Nếu không có khác sự kiện, người chơi không thể di chuyển, bạn không thể nhảy, bạn không thể điều khiển những gì đang diễn ra. Video trò chơi sẽ không thể tạo ra hiệu ứng gì."
     C1_building_foundation:
       1:
         image: 'notes/C1_building_foundation_1.jpg'
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: "Trong nghệ thuật điêu khắc cát, bạn phải hiểu rằng thất bại là một phần của quá trình. Nhưng nếu bạn kiên trì, mọi thứ sẽ trở nên tốt đẹp và thú vị hơn nhiều. Kiên trì là mục đích của trò chơi này. Cứ chơi rồi bạn sẽ thích nó."
       2:
         image: 'notes/C1_building_foundation_2.jpg'
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: "Bài học này được gọi là xây dựng nền tảng. Trong bài học này, Chúng ta sẽ làm việc với một bài tập được coi là khó. Bạn sẽ tìm ra cách để tạo 1 cấu trúc cao tối thiểu là bằng một trong những chiếc cốc này và nó phải đủ vững chắc để đỡ được một quyển sách."
       3:
         image: 'notes/C1_building_foundation_3.jpg'
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: "Có thể có những lúc sáng tạo của chúng ta không thành công. Có thể có những lúc chúng ta thấy mệt mỏi và muốn bỏ cuộc. Có thể có rất nhiều lúc như thế. Nhưng nếu chúng ta tiếp tục cố gắng, hết lần này tới lần khác cố hết sức mình, chắc chắn chúng ta sẽ sớm đạt được điều mình muốn."
       4:
         image: 'notes/C1_building_foundation_4.jpg'
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: "Kiên trì chính là cố gắng tiếp tục khi bạn thực sự muốn từ bỏ. Nếu bạn muốn tạo ra điều gì đó mới lạ và khác biệt, con đường sẽ còn nhiều khó khăn, thất bại."
       5:
         image: 'notes/C1_building_foundation_5.jpg'
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
+        text: "Nguyên tắc kiên trì là lựa chọn bước tiếp và học hỏi từ những thất bại của bản thân thay vì bỏ cuộc vì bạn mất phương hướng. Mất phương hướng thực chất chỉ có nghĩa là điều tuyệt vời đang sắp xảy ra. Vì vậy đừng bỏ cuộc trước khi bạn đạt được điều đó. Wooo!"
     C1_getting_loopy:
       1:
         image: 'notes/C1_getting_loopy_1.png'
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: "Xin chào, tên tôi là Miral Kotb và tôi là nhà sáng tạo của Iluminate. Trong công việc của mình, có một thứ chúng tôi sử dụng trong cả nhảy múa và lập trình những bộ quần áo phát sáng. Và đó là các vòng lặp! Các vòng lặp tức là nhắc đi nhắc lại 1 hành động."
       2:
         image: 'notes/C1_getting_loopy_2.png'
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: "Khi bạn lặp lại 1 thứ nhiều lần, như hành động của tôi để giữ cho vòng lắc eo quay, tôi đang biểu diễn 1 vòng lặp của hành động đó. Đây là 1 vòng lặp. Đây cũng là 1 vòng lặp. Và đây cũng là 1 vòng lặp."
       3:
         image: 'notes/C1_getting_loopy_3.png'
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: "Hôm nay chúng ta sẽ có một buổi tiệc nhảy múa. Chúng ta sẽ tạo những vòng lặp bằng điệu nhảy mới. Điệu \"The Iteration\". Chúng ta sẽ học về vòng lặp bằng cách sử dụng một điệu nhảy. Bạn sẽ học 1 vài bước đơn giản và lặp đi lặp lại chúng để hoàn thành điệu nhảy."
       4:
         image: 'notes/C1_getting_loopy_4.png'
-        text: "Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops."
+        text: "Đây là những bước bạn cần học. Vỗ tay. Đặt tay ra sau đầu. Đặt tay lên eo. Nâng tay trái lên. Nâng tay phải lên. Khá đơn giản phải không? Bạn sẽ nhận ra là bạn có thể rút ngắn chỉ dẫn bằng cách ghi nhớ một số bước nhảy theo vòng lặp."
       5:
         image: 'notes/C1_getting_loopy_5.png'
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: "Chúng tôi thực ra có sử dụng vòng lặp trong các bài nhảy. Các vũ công trang bị các máy tính, tất cả trong cùng một mạng lưới. Tôi có thể tạo vòng các ánh sáng lặp đi lặp lại qua người vũ công. Trong vòng lặp đó, tôi có thể có 1 bước lặp khi tôi đặt lệnh rằng bạn muốn có vòng lặp qua người 6 vũ công này và sau đó trong vòng lặp bạn muốn tăng tốc độ của ánh sáng. Và tất cả điều này được tạo ra thông qua các vòng lặp. Vòng lặp quan trọng đối với khoa học máy tính vì chúng khiến công việc của chúng tôi tốn ít thời gian và dễ dàng hơn."
     C1_happy_maps_unplugged:
       1:
         image: 'notes/C1_happy_maps_unplugged_1.png'
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: "Bài học này được gọi là Các Bản Đồ Vui Vẻ. Hôm nay chúng ta sẽ giúp bạn thú nhỏ Flurb lượm trái cây,."
       2:
         image: 'notes/C1_happy_maps_unplugged_2.png'
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: "Điều khiển bạn Flurb đến chỗ hoa quả. Để làm điều này bạn cần tìm ra đường đi cho Flurb và dùng mũi tên chỉ dẫn bạn ấy. Để bạn Flurb lượm được quả táo, bạn ấy phải đi theo chỉ dẫn nào? Vạch đường để điều khiển đi lên."
       3:
         image: 'notes/C1_happy_maps_unplugged_3.png'
-        text: "To get it there you circle the direction that it has to go."
+        text: "Để tới nơi, bạn khoanh tròn chỉ dẫn mà nó phải đi."
       4:
         image: 'notes/C1_happy_maps_unplugged_4.png'
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: "Tạo ra thuật toán của bạn bằng cách dán mũi tên bên cạnh bản đồ mà bạn đang cố giải quyết. Cái thứ hai giống với cái đầu nhưng nó hướng đi xuống."
       5:
         image: 'notes/C1_happy_maps_unplugged_5.png'
-        text: "It's like programming with paper. And that's it!"
+        text: "Nó cũng giống như là lập trình trên giấy. Và thế thôi!"
     C1_maze_debugging:
       1:
         image: 'notes/C1_maze_debugging_1.png'
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: "Gỡ lỗi là việc tìm kiếm và sửa chữa vấn đề. Có rất nhiều cách để gỡ lỗi các vấn đề. Một trong những đơn giản nhất là di chuyển từng bước cho đến khi bạn tìm thấy nơi có chỗ sai. Ở đây tôi đang cố gắng để thực hiện kỹ thuật lộn sau chống tay lên sà nhưng tôi liên tục thất bại."
       2:
         image: 'notes/C1_maze_debugging_2.png'
-        text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
+        text: "Tôi lần theo mỗi phần từng bước một và đã nhận ra chỗ tôi sai sót. Tôi đã không đặt tay lên sà đúng cách. Vì thế tôi thử thực hiện lần nữa với vị trí tay mới và tôi đã thành công. Tôi thực sự đã rất vui vì đã gỡ được lỗi lộn sau chống tay của mình."
       3:
         image: 'notes/C1_maze_debugging_3.png'
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: "Để tìm hiểu về gỡ lỗi, chúng ta bắt đầu với 1 tập hợp các khối đã ở sẵn trong bàn. Bạn sẽ nhận thấy rằng các khối này sẽ không giúp bạn đến được mục tiêu. Chúng ta cần tháo gỡ giải pháp và sửa chữa nó. Điều gì không đúng? Bạn sẽ nhận thấy rằng bạn cần di chuyển thêm một khối nữa về hướng tây."
       4:
         image: 'notes/C1_maze_debugging_4.png'
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: "Hãy cùng khắc phục điều này bằng cách thêm 1 một khối nữa ở phía tây và bấm chạy để xem bạn đúng hay chưa. Và bạn đã làm đúng rồi!"
     C1_maze_intro_sequencing:
       1:
         image: 'notes/C1_maze_intro_sequencing_1.png'
-        text: "For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take."
+        text: "Với trò chơi này, bạn cần đưa con chim tới con lợn. Hãy nhìn vào trò chơi và xem hướng dẫn những điều cần làm."
       2:
         image: 'notes/C1_maze_intro_sequencing_2.png'
-        text: "You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the \"when run\" block and when you think you've got the right solution, then you can click \"Run\" and watch the bird go to the pig."
+        text: "Bạn cần phải kéo các khối từ hộp công cụ đến khu thực hành. Đảm bảo nó ở dưới khối ''Khi chạy'' và khi bạn nghĩ bạn đã có lời giải chính xác, bạn có thể nhấp ''Chạy'' và xem chú chim đi tới chỗ chú lợn."
     C1_maze_loops:
       1:
         image: 'notes/C1_maze_loops_1.png'
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: "Một trong những điều máy tính làm rất tốt đó là nhắc lại các câu lệnh. Con người sẽ thấy rất nhàm chán nếu phải làm một việc rất nhiều lần không ngừng nghỉ. Nhưng một máy tính có thể làm một việc cả triệu thậm chí cả tỷ lần mà không thấy nhàm chán và có thể thực hiện điều đó rất tốt."
       2:
         image: 'notes/C1_maze_loops_2.png'
-        text: "For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday."
+        text: "Ví dụ, nếu tôi muốn chúc mừng sinh nhật mọi người trên Facebook bằng cách gửi tin nhắn cho họ, tôi có thể mất hơn 1 thế kỷ để thực sự viết ra tất cả các tin nhắn đó. Nhưng với chỉ 1 vài dòng lệnh, tôi có thể có 1 hệ thống gửi tin nhắn đến từng người trên Facebook để chúc họ sinh nhật vui vẻ."
       3:
         image: 'notes/C1_maze_loops_3.png'
-        text: "To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the \"repeat\" block. Drag the \"repeat\" block on to the workspace and enter the number 3. Then drag the \"move North\" block into the \"repeat\" block and hit \"Run\" to see if you got it right. Congratulations, you got it!"
+        text: "Để đưa con chim tới chỗ con lợn trong cấp độ này... thay vì kéo 3 khối lệnh Phía Bắc tới không gian làm việc, bạn sẽ sử dụng khối lệnh ''lặp lại''. Kéo khối lệnh ''nhắc lại'' tới không gian làm việc và nhập vào số 3. Sau đó kéo khối lệnh ''Di chuyển phía Bắc'' vào khối lệnh ''lặp lại'' và nhấn ''Chạy\" để xem bạn làm đúng chưa. Chúc mừng, bạn đã thành công!"
     C1_moveitmoveit_unplugged:
       1:
         image: 'notes/C1_moveitmoveit_unplugged_1.png'
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: "Bài học này được gọi là di chuyển, di chuyển nó. Chúng ta sẽ cùng nhau viết một chương trình để đưa bạn bè của chúng ta từ điểm khởi đầu với bông hoa chỉ hướng đến mục tiêu mặt cười."
       2:
         image: 'notes/C1_moveitmoveit_unplugged_2.png'
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: "Nhưng biểu tượng mặt cười đang là mặt mếu và chỉ một người biết cách đi tới đó. Hãy bắt đầu chương trình này."
       3:
         image: 'notes/C1_moveitmoveit_unplugged_3.png'
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: "Một chương trình là một thuật toán đã được lập trình vào một thứ có thể chạy bằng máy móc. Hầu hết chúng ta đều nghĩ rằng chương trình là thứ chúng ta viết cho máy tính. Chương trình rất cần thiết cho máy tính nhưng chúng cũng rất hữu ích ở những nơi khác. Bạn có thể tự tạo ra trò chơi riêng hoặc thậm chí lập trình một con rô bốt làm việc cho bạn."
     C1_going_places_safely:
       1:
         image: 'notes/C1_going_places_safely_1.png'
-        text: "My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. \"Mom, can I go on the computer? Sure honey!\""
+        text: "Tên em là Jeremiah. Xin chào! Tôi 7 tuổi. Tôi rất thích chơi máy tính của mẹ nhưng tôi luôn phải xin phép trước. \"Mẹ ơi, con có thể dùng máy tính được không? Chắc chắn rồi con yêu!\""
       2:
         image: 'notes/C1_going_places_safely_2.png'
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: "Tôi thích máy tính của mẹ vì tôi có thể truy cập Internet. Internet giống kiểu như là bạn hàng xóm của bạn vậy. Bạn có thể thăm thú những nơi thú vị, bạn có thể trò chuyện với gia đình và bạn bè và bạn có thể học hỏi nhiều điều mới lạ."
       3:
         image: 'notes/C1_going_places_safely_3.png'
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: "Hôm qua, tôi đã đi thăm sở thú gần nhà. Tôi nhìn thấy 1 chú ngựa vằn con. Tôi đã chụp ảnh và thay đổi màu sọc vằn của chú, sau đó thêm 1 chiếc mũ và thêm hình ảnh đó vào bộ siêu tập động vật kì lạ của mình. Tuyệt vời! Sau đó, tôi đã đi thăm một nơi xa rất xa. Tôi đã đi thăm Kenya. Đó là 1 quốc gia ở châu Phi. Rất nhiều ngựa vằn sống ở đây."
       4:
         image: 'notes/C1_going_places_safely_4.png'
-        text: "Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. \"Yummy, I wish the Internet had smellorama!\" I can talk to different people on the Internet, like my cousin but I only talk to people I know."
+        text: "Đôi khi trên Internet, tôi trò chuyện với những người mà tôi biết, như bà ngoại tôi người sống ở 1 bang khác. Chào bà ngoại! Bà đang làm bánh để gửi cho tôi nhân ngày sinh nhật. \"Ngon quá, cháu ước Internet có thể truyền mùi vị.\" Tôi có thể trò chuyện với nhiều người khác trên Internet, như là các anh chị em họ hàng nhà tôi, nhưng tôi chỉ trò chuyện với người mà tôi quen."
       5:
         image: 'notes/C1_going_places_safely_5.png'
-        text: "What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!"
+        text: "Điều tôi thích nhất trên Internet là tôi có thể chơi những trò chơi vui nhộn. Ghi điểm! Tôi cũng thích vẽ và sáng tạo ra những thứ mới lạ và chia sẻ với bạn bè. Tuyệt vời! Đôi khi tôi truy cập vào 1 trang web và học hỏi được những điều mới lạ, nhưng tôi luôn vào những trang phù hợp với mình. Wow, những chú khủng long!"
       6:
         image: 'notes/C1_going_places_safely_6.png'
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'Internet là một nơi cực kì vui nhộn. Nhưng cũng như khi bạn đi qua đường trong khu phố nhà mình, bạn phải cẩn thận khi bạn truy cập trực tuyến. Đây là 3 quy tắc cần nhớ. Quy tắc số 1: Luôn xin phép bố mẹ trước tiên. Quy tắc số 2: Chỉ trò chuyện với những người mà bạn biết. Quy tắc số 3: Truy cập những trang web phù hợp với bạn.'
       7:
         image: 'notes/C1_going_places_safely_7.png'
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: "Wow, vừa rồi thật vui! Đến giờ ăn tối rồi. Bây giờ tôi phải đăng xuất rồi. Tôi rất nóng lòng được đăng nhập lại và xem tiếp theo mình có thể ghé thăm nơi nào."
     C1_pair_programming:
       1:
         image: 'notes/C1_pair_programming_1.png'
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: "Hôm nay chúng ta sẽ học về Lập trình Đôi. Trong lập trình đôi, bạn sẽ làm việc theo nhóm. Tại sao 2 người nên sử dụng 1 máy tính? Vì 2 cái đầu thì tốt hơn là một. Trong lập trình đôi, bạn và cộng sự sẽ cùng ngồi với nhau chung một máy tính và các bạn sẽ cùng chung 1 dự án."
       2:
         image: 'notes/C1_pair_programming_2.png'
-        text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
+        text: "Trong lập trình đôi, một người là tài xế còn một người là hoa tiêu, giống như khi lái xe. Tài xế ngồi trước máy tính và là người sử dụng bàn phím và chuột hoặc màn hình chạm và kiểm soát hoạt động chính của máy tính. Người còn lại là hoa tiêu. Hoa tiêu giúp tài xế bằng cách trả lời các câu hỏi của tài xế và chỉ ra các vấn đề hoặc lỗi tiềm tàng."
       3:
         image: 'notes/C1_pair_programming_3.png'
-        text: "Communication is key to successful pair programming. No insults, be respectful, don't be a bossy navigator, because nobody likes a backseat driver. You and your partner should always be talking. The driver can explain what she or he is doing. And the navigator can help suggest what to do next."
+        text: "Giao tiếp là chìa khoá để lập trình đôi thành công. Không công kích, tôn trọng nhau, đừng là một hoa tiêu hống hách, vì chẳng ai thích một tài xế ngồi ghế sau. Bạn và cộng sự nên luôn nói chuyện với nhau. Tài xế có thể giải thích điều họ đang làm. Và hoa tiêu có thể giúp gợi ý điều tiếp theo nên làm."
       4:
         image: 'notes/C1_pair_programming_4.png'
-        text: "The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team."
+        text: "Hoa tiêu nên suy nghĩ về bức tranh toàn cảnh còn tài xế tập trung vào các chi tiết. Cả 2 vai trò đều quan trọng. Lập trình đôi tức là làm việc với nhau như một đội."
     C1_planting_seed:
       1:
         image: 'notes/C1_planting_seed_1.png'
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: "Bài học này được gọi là gieo hạt và nó sẽ giúp chúng ta hiểu về các thuật toán. Thuật toán là những hướng dẫn cụ thể mà giải thích các việc cần làm theo thứ tự. Thậm chí hàng ngày, các việc như ăn sáng hay đánh răng cũng là thuật toán yêu cầu từng bước nhỏ để hoàn thành công việc đó."
       2:
         image: 'notes/C1_planting_seed_2.png'
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: "Máy tính có thể là rất thông minh nhưng chúng chỉ có thể hiểu bạn nếu bạn nói cho chúng chính xác điều bạn muốn từng bước một. Điều tuyệt vời về thuật toán là nếu bạn tuân theo hướng dẫn theo thứ tự, bạn có thể làm điều mà trước đây bạn chưa từng biết cách làm. Nó giống như là tuân theo một công thức."
       3:
         image: 'notes/C1_planting_seed_3.png'
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: "Hôm nay chúng ta sẽ tự gieo hạt giống sử dụng 1 thuật toán. Tạo ra thuật toán của riêng bạn bằng cách cắt các bức trah thành từng phầm. Chọn những bức tranh mà chỉ ra các bước gieo hạt và sắp xếp các bức tranh đó theo thự tự đúng."
       4:
         image: 'notes/C1_planting_seed_4.png'
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: "Bây giờ là lúc bạn xem liệu thuật toán của mình có hoạt động. Tuân thủ các bước trong thuật toán 1 cách thật cẩn thận. Chúng đã đúng thứ tự chưa? Bạn đã gieo hạt thành công bằng việc tuân thủ thuật toán chưa? Nó giống như là lập trình với các bức tranh!"
       5:
         image: 'notes/C1_planting_seed_5.png'
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: "Khi chúng ta muốn làm sô cô la, có rất nhiều bước lớn trong quá trình và trong mỗi bước lớn đó lại có tập hợp những bước nhỏ hơn và có các công thức hay thuật toán khác nhau tuỳ theo chúng ta muốn sô cô la có vị như thế nào. Mỗi bước đều quan trọng, thậm chí là các bước nhỏ, vì thiếu một bước thì các bước còn lại không thể hoàn thành. Tạo ra thuật toán mà người khác có thể hiểu được là rất quan trọng. Đó là lí do tại sao mỗi bước phải được viết ra cốt để dù ai làm thì đều ra cùng kết quả."
     C1_playlab_storytelling:
       1:
         image: 'notes/C1_playlab_storytelling_1.png'
-        text: "Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell."
+        text: "Giờ là lúc sáng tạo và sử dụng kỹ năng lập trình của bạn để kể chuyện. Câu chuyện của bạn sẽ có diễn viên và bạn có thể khiến các diễn viên này trò chuyện và tương tác vói nhau. Hãy bắt đầu nghĩ về loại câu chuyện mà bạn muốn kể."
       2:
         image: 'notes/C1_playlab_storytelling_2.png'
-        text: "The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The \"when run\" block starts everything. The \"move\" block will move your character and the \"say\" block will make your character say whatever you type."
+        text: "Con mèo luôn sợ chó và nếu con mèo nhận ra rằng con chó đang cố thân thiện? Khối lệnh \"khi chạy\" khởi động mọi thứ. Khối lệnh \"di chuyển\" sẽ di chuyển nhân vật của bạn và khối lệnh \"nói\" sẽ khiến nhân vật của bạn nói bất kỳ điều gì bạn gõ."
       3:
         image: 'notes/C1_playlab_storytelling_3.png'
-        text: "This is the \"when actors collide\" block which you can link up to the other blocks."
+        text: "Đây là khối lệnh \"khi các diễn viên gặp nhau\" mà bạn có thể liên kết tới các khối lệnh khác."
       4:
         image: 'notes/C1_playlab_storytelling_4.png'
-        text: "I was making the dog come over and say \"Hi\" but then the cat got scared so it ran away. \"Ahh\" If there was more time, it would have been a happy ending. The end!"
+        text: "Tôi đã làm con chó đi ngang qua và nói \"Xin chào\" nhưng sau đó con mèo hoảng sợ nên nó chạy mất. \"Ahhh\" nếu có thêm lần nữa, có thể có kết thúc có hậu rồi. Kết thúc!"
     C1_spelling_bee_intro:
       1:
         image: 'notes/C1_spelling_bee_intro_1.png'
-        text: "This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words."
+        text: "Đây là cấp độ con ong đánh vần. Sử dụng các mảnh ghép để di chuyển con ong. Khi nó di chuyển, nó sẽ thu thập các chữ cái để đánh vần các từ."
       2:
         image: 'notes/C1_spelling_bee_intro_2.png'
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: "Hãy xem liệu bạn có thể đánh vần từ họ cho ở trong ô phía dưới sân khấu. Nhưng con ong cẩn thận! Di chuyển sai hướng sẽ thêm chữ cái mà bạn không mong muốn."
     C1_zuck_repeat_loop:
       1:
         image: 'notes/C1_zuck_repeat_loop_1.png'
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: "Một trong những điều máy tính làm rất tốt đó là nhắc lại các câu lệnh. Con người sẽ thấy rất nhàm chán nếu phải làm một việc rất nhiều lần không ngừng nghỉ. Nhưng một máy tính có thể làm một việc cả triệu thậm chí cả tỷ lần mà không thấy nhàm chán và có thể thực hiện điều đó rất tốt."
       2:
         image: 'notes/C1_zuck_repeat_loop_2.png'
-        text: "For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday."
+        text: "Ví dụ, nếu tôi muốn chúc mừng sinh nhật mọi người trên Facebook bằng cách gửi tin nhắn cho họ, tôi có thể mất hơn 1 thế kỷ để thực sự viết ra tất cả các tin nhắn đó. Nhưng với chỉ 1 vài dòng lệnh, tôi có thể có 1 hệ thống gửi tin nhắn đến từng người trên Facebook để chúc họ sinh nhật vui vẻ."
       3:
         image: 'notes/C1_zuck_repeat_loop_3.png'
-        text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
+        text: "Trong ví dụ này, mục tiêu của bạn sẽ là di chuyển con chim tới chỗ con lợn. Bây giờ chúng ta có thể sử dụng khối lệnh lặp lại để làm điều này rất dễ dàng. Bạn có thể làm điều này bằng cách đưa vào máy tính lệnh di chuyển lên phía trước 5 lần để mỗi lần chú chim tiến một bước tới chú lợn hoặc bạn có thể yêu cầu máy tính di chuyển 1 lần, và sau đó yêu cầu nó lặp lại lệnh đó 5 lần và nó sẽ làm tương tự."
       4:
         image: 'notes/C1_zuck_repeat_loop_4.png'
-        text: "In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward."
+        text: "Để làm điều này, bạn kéo lệnh di chuyển về phía trước và sau đó bạn đặt nó vào khối lệnh lặp lại. Và bạn có thể nhấp chuột vào nó và cho biết bạn lặp lại khối lệnh bao nhiêu lần để nó biết bạn muốn nó di chuyển về phía trước bao nhiêu bước."
       5:
         image: 'notes/C1_zuck_repeat_loop_5.png'
-        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. Have fun!"
+        text: "Một điều nữa là bạn có thể đặt bao nhiêu lệnh tuỳ ý vào khối lệnh lặp lại. Vì thế trong ví dụ này, bạn sẽ yêu cầu nó di chuyển về phía trước và rẽ trái và nó sẽ thực hiện 5 lần. Chúc vui!"
     C2_artist_intro:
       1:
         image: 'notes/C2_artist_intro_1.png'
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những người thành thạo trong khoa học máy tính vì số dữ liệu mà các xe phải thu thập và sự cần thiết của việc có những người có thể viết chương trình để tìm ra cách bạn tiếp tục xây dựng giao thức."
       2:
         image: 'notes/C2_artist_intro_2.png'
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: "Trong các trò chơi này, bạn sẽ là một nghệ sỹ sử dụng bút chì để vẽ các hình dạng khác nhau. Nghệ sỹ của bạn đi đâu, nó sẽ vẽ 1 đường thẳng ở phía sau."
       3:
         image: 'notes/C2_artist_intro_3.png'
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: "Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn hình máy tính của bạn."
       4:
         image: 'notes/C2_artist_intro_4.png'
-        text: "The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn."
+        text: "Khối lệnh khác chúng ta có trong trò chơi này nói \"qua phải 1 góc 90 độ\". Và khi chúng ta kéo khối lệnh sẽ khiến nghệ sỹ của chúng ta quay 1 góc nhất định. Vì vậy bạn có thể chơi và điều khiển nghệ sỹ quay theo ý muốn. Đây là một góc quay 90 độ."
       5:
         image: 'notes/C2_artist_intro_5.png'
-        text: "And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!"
+        text: "Và đây là một góc quay 120 độ. Và nhớ là, bạn có thể thay đổi những giá trị này bằng cách nhấp vào các mũi tên bên cạnh các chỉ điểm ảnh hoặc độ. Hãy tận hưởng trò chơi!"
     C2_bee_conditionals:
       1:
         image: 'notes/C2_bee_conditionals_1.png'
-        text: "This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something."
+        text: "Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó."
       2:
         image: 'notes/C2_bee_conditionals_2.png'
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: "Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa hoặc mật ong, như chúng ta thấy ở đây với dấu hỏi này."
       3:
         image: 'notes/C2_bee_conditionals_3.png'
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: "Trong ví dụ này, chúng ta sẽ nói NẾU bông hoa đỏ có số mật hoa lớn hơn 0, lấy mật hoa. Nó sẽ khiến con ong lấy mật hoa với điều kiện là con ong ở chỗ bông hoa. Và đây!"
     C2_binary_bracelets:
       1:
         image: 'notes/C2_binary_bracelets_1.png'
-        text: "This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!"
+        text: "Đây là bài học vòng tay nhị phân. Chúng ta sẽ viết chữ cái đầu của tên mình bằng mật mã lên vòng đeo tay và cho bạn bè xem!"
       2:
         image: 'notes/C2_binary_bracelets_2.png'
-        text: "Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites."
+        text: "Nhị phân là cách thể hiện thông tin bằng cách chỉ sử dụng 2 lựa chọn. Đôi khi mọi người nghĩ cái này chỉ bao gồm 1 và 0. Nhưng bạn có thể thể hiện nhị phân với bộ đôi bật và tắt, lên và xuống, trong và ngoài hoặc bất kỳ cặp đối lập nào."
       3:
         image: 'notes/C2_binary_bracelets_3.png'
-        text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
+        text: "Xin chào, tôi là Orion và tôi lập trình rô bốt tại đây Play-im. Tất cả não bộ của máy tính và rô bốt ở mức cơ bản nhất là các cổng điện tử nhỏ. Khi cổng mở, dòng điện có thể chạy qua và khi nó đóng, dòng điện không thể chạy."
       4:
         image: 'notes/C2_binary_bracelets_4.png'
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
+        text: "Một ví dụ về nhị phân trên rô bốt là mắt của rô bốt. Những con mắt này là đèn led và đó là những bóng đèn có thể bật hoặc tắt. Nó là một hệ thống nhị phân. Chúng ta có thể sử dụng những bóng đèn này để thể hiện số nhị phân. Nếu chúng ta có một tập hợp các rô bốt, chúng ta có thể nói con rô bốt đầu tiên ở vị trí số 1, rô bốt thứ 2 ở vị trí thứ 2, rô bốt thứ 3 ở vị trí thứ 3 và tiếp tục như thế. Đó là cách bạn thể hiện số thập phân. Rô bốt sẽ làm điều đó nhờ con mắt thập phân của chúng và đếm ra cho bạn."
     C2_conditionals_with_cards:
       1:
         image: 'notes/C2_conditionals_with_cards_1.png'
-        text: "This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear."
+        text: "Bài học này được gọi là câu điều kiện bằng thẻ. Hàng ngày bạn đưa ra quyết định dựa trên những gì bạn nhìn và nghe thấy."
       2:
         image: 'notes/C2_conditionals_with_cards_2.png'
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: "Tôi muốn đi bộ ra công viên nhưng trước hết tôi phải quyết định xem liệu mình có nên mang ô không. Vì thế tôi nhìn ra ngoài cửa sổ. Nếu trời nhiều mây, tôi sẽ mang ô. Ngược lại, tôi sẽ mang kính râm. Tôi nghĩ là tôi nên mang ô. Những gì tôi nhìn và nghe thấy quyết định thứ tôi sẽ mang theo."
       3:
         image: 'notes/C2_conditionals_with_cards_3.png'
-        text: "Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says \"awww.\" Let's try it! \"Awww\" \"cheers\""
+        text: "Câu điều kiện cũng được sử dụng trong các trò chơi. Hôm nay chúng ta sẽ luyện tập sử dụng câu điều kiện bằng thẻ trò chơi. Trong trò chơi này, thẻ mà tôi giơ sẽ xác định việc bạn tôi sẽ làm. Nếu tôi giơ số 7, mọi người sẽ vỗ tay. Nếu là số khác, mọi người sẽ nói \"awww\". Hãy thử nào! \"Awww\" \"Chúc mừng\""
       4:
         image: 'notes/C2_conditionals_with_cards_4.png'
-        text: "I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action."
+        text: "Tôi đố bạn có thể nghĩ ra trò chơi vui hơn với câu điều kiện. Hãy thử xem! Câu điều kiện là những gì khiến máy tính có vẻ thông minh hơn. 1 chương trình máy tính bao gồm các câu điều kiện thì có thể tương tác lại với người dùng và thay đổi tiến trình hành động của nó."
       5:
         image: 'notes/C2_conditionals_with_cards_5.png'
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: "Hãy nghĩ về trò chơi yêu thích của bạn. Bạn có kiếm được nhiều điểm hơn cho 1 số hành động so với khi bạn làm các hành động khác? Điều này xảy ra là vì máy tính sử dụng câu điều kiện. Đây là cách máy tính ra quyết định. Thế còn nếu bạn đạt mục tiêu, bạn sẽ kiếm được 10 điểm. Nếu không, bạn mất 3 điểm. Khi bạn biết cách câu điều kiện hoạt động, bạn có thể tạo ra các loại trò chơi thú vị."
     C2_artist_debugging:
       1:
         image: 'notes/C2_artist_debugging_1.png'
-        text: "Here we already have some blocks out in our work space. But there is something wrong."
+        text: "Ở đây chúng ta có sẵn 1 số khối lệnh trên không gian làm việc. Nhưng có điều gì đó không đúng."
       2:
         image: 'notes/C2_artist_debugging_2.png'
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: "Hãy gỡ lỗi lập trình này bằng cách giảm tốc độ và xem nó chạy qua từng khối lệnh một."
       3:
         image: 'notes/C2_artist_debugging_3.png'
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: "Ôi có vấn đề rồi. Râu của con mèo dài 75 điểm ảnh, không phải 25."
     C2_bee_debugging:
       1:
         image: 'notes/C2_bee_debugging_1.png'
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: "Bạn đã bao giờ nghe đến việc gỡ lỗi 1 chương trình? Đây là cách bạn tìm ra những gì không hoạt động. Khi bạn gỡ lỗi lập trình, bạn xác định và loại bỏ các lỗi sai."
       2:
         image: 'notes/C2_bee_debugging_2.png'
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: "Ở đây chúng ta được cho sẵn 1 vài khối lệnh trong không gian làm việc. Chúng ta sẽ sử dụng nút \"Bước\" để đi qua từng khối lệnh 1, xem liệu đây đã là phương pháp đúng chưa và chỗ nào chúng ta cần sửa chữa."
       3:
         image: 'notes/C2_bee_debugging_3.png'
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: "Có vẻ như đây là vấn đề rồi! Chúng ta cần thêm 1 khối lệnh tiến về phía trước nữa. Nút \"Bước\" giúp chúng ta gỡ lỗi bằng cách xác định lỗi sai ở đâu vì thế chúng ta có thể sửa chữa nó."
     C2_digital_footprint:
       1:
         image: 'notes/C2_digital_footprint_1.png'
-        text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Giữ cái mũ ở trên cái đầu và trí khôn sẽ cho bạn biết bạn đang ở đâu và hãy nghĩ về sở thú, và gật đầu để gửi lời chào! Dùng cái đầu để suy nghĩ khi bạn lên mạng để những gì của mình thì giữ cho riêng mình và để biết cách giữ an toàn, cách để có vài khoảng không gian riêng tư trong cuộc sống! Từ đầu tới chân, dừng lại, nghĩ về điều này. Từ chân lên đầu, dừng lại, hãy nghĩ về việc lên mạng!"
       2:
         image: 'notes/C2_digital_footprint_2.png'
-        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Dùng trái tim mình để lớn dần lên, và để gương mặt hồng hào khoẻ mạnh, và để làm 1 hình trái tìm và nói cho ai đó biết rằng họ sẽ là của bạn! Dùng trái tim mình khi bạn lên mạng, cảm nhận điều gì là đúng và luôn tốt bụng, và thể hiện sự tôn trọng bạn bè, hãy công bằng và tử tế khi bạn lên mạng. Từ đầu tới chân, dừng lại, nghĩ về điều này. Từ chân lên đầu, dừng lại và nghĩ về việc lên mạng!"
       3:
         image: 'notes/C2_digital_footprint_3.png'
-        text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Dùng cái tay để ôm thú cưng của bạn, để giữ quần áo của bạn khỏi ướt, và để mặc chiếc áo yêu thích và để giúp bạn bay cao và tin tưởng. Dùng tay khi bạn lên mạng, để nghỉ ngơi và cân bằng thời gian, rời xa công nghệ và tìm 1 cái cây để leo trèo. Từ đầu tới chân, dừng lại, hãy nghĩ về điều này. Từ chân lên đầu, dừng lại và hãy nghĩ về việc lên mạng!"
       4:
         image: 'notes/C2_digital_footprint_4.png'
-        text: "Use your gut to store your food, and to listen to its growling mood, to make a belly flop, and to feel the gas in soda pop. Use your gut when you're online, to know to watch for certain signs, and to let it guide the way and tell you when it's not ok. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Dùng cái bụng để chứa đồ ăn, và để nghe cái bụng gầm gừ, để bụng nhảy ùm xuống nước, và để cảm nhận bụng đầy bọt khí khi uống nước có gas. Dùng cái bụng khi bạn lên mạng, để biết để xem những dấu hiệu nhất định, và để nó giúp bạn biết khi có gì không ổn. Từ đầu tới chân, dừng lại, nghĩ về điều này. Từ chân lên đầu, dừng lại, hãy nghĩ về việc lên mạng!"
       5:
         image: 'notes/C2_digital_footprint_5.png'
-        text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
+        text: "Vậy nên hãy suy nghĩ bằng đầu, và cảm nhận bằng trái tim, giữ cân bằng bằng tay, lắng nghe cái bụng khi lên mạng. Dùng đôi chân để chạy và đá, và để nhảy và bật nảy trên chiếc gậy nhún, và để nhảy đầy chuyên nghiệp, và để nhảy chân sáo với đôi tất bốc mùi. Dùng đôi chân khi bạn lên mạng, để đứng lên chống lại những kẻ xấu cư xử quá trớn, và nhớ hãy đứng thẳng, đối tốt với những người bạn nhỏ bé và tuyệt vời."
       6:
         image: 'notes/C2_digital_footprint_6.png'
-        text: "From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online! So think with your head, and feel with your heart, balance with your arms, listen to your gut, stand up with your legs. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Từ đầu tới chân, dừng lại, hãy nghĩ về điều này. Từ chân lên đầu, dừng lại và nghĩ về việc lên mạng! Vậy nên hãy suy nghĩ bằng đầu, và cảm nhận bằng trái tim, giữ cân bằng bằng tay, lắng nghe cái bụng, đứng thẳng bằng đôi chân của mình. Từ đầu đến chân, hãy dừng lại và nghĩ về điều này. Từ chân lên đầu, dừng lại, hãy nghĩ về việc lên mạng!"
     C2_digital_footprint_v2:
       1:
         image: 'notes/C2_digital_footprint_v2_1.png'
-        text: "Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?"
+        text: "Mỗi lần bạn lên mạng, bạn để lại 1 dấu chân mà có thể bị tìm kiếm, sao chép, chia sẻ, phát sóng và nó là vĩnh viễn. Bạn đang để lại loại dấu chân số nào? Bạn muốn để lại loại nào?"
     C2_graph_paper:
       1:
         image: 'notes/C2_graph_paper_1.png'
-        text: "This lesson is called \"Graph Paper Programming\" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows."
+        text: "Bài học này được gọi là \"Lập trình sơ đồ giấy\" và nó đề cập tới thuật toán. Hôm nay chúng ta sẽ học cách viết chương trình giúp tái tạo lại những hình ảnh đen trắng đơn giản, chỉ sử dụng các mũi tên vẽ bằng tay."
       2:
         image: 'notes/C2_graph_paper_2.png'
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: "Một thuật toán là 1 danh sách các chỉ dẫn để hoàn thành 1 nhiệm vụ. Chúng ta sẽ tuân theo các chỉ dẫn này để làm 1 cái bát. Thuật toán thực sự hữu ích khi bạn cần người khác hiểu cách làm cái gì đó."
       3:
         image: 'notes/C2_graph_paper_3.png'
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: "Nếu bạn đang viết 1 thuật toán cho máy tính, bạn phải chia ra thành các bước cực kì nhỏ. Vậy nên hoàn thành hàng này rồi tới hàng tiếp, rồi hàng tiếp theo nữa, và bạn sẽ thực hiện xong."
       4:
         image: 'notes/C2_graph_paper_4.png'
-        text: "I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done."
+        text: "Tôi sử dụng thuật toán trong công việc của mình. Nếu tôi viết ra tất cả các bước tôi có thể tái tạo lại cùng 1 việc, hoặc tôi có thể dạy người khác làm việc đó. Đặt miếng kính vào trong lò, hợp nhất lại, tuân theo phần chỉ dẫn còn lại để làm 1 chiếc bát. Thuật toán cho bạn 1 bản đồ dẫn đường để hoàn thành việc gì đó."
     C2_artist_loops:
       1:
         image: 'notes/C2_artist_loops_1.png'
-        text: "Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started."
+        text: "Ở đây chúng ta sẽ sử dụng khối lệnh lặp lại để giúp ta tiết kiệm các bước khi lập trình nhân vật nghệ sỹ. Chúng ta đã có sẵn 1 vài khối lệnh trên sân khấu nhưng chúng chỉ để ta khởi động."
       2:
         image: 'notes/C2_artist_loops_2.png'
-        text: "To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square."
+        text: "Để lặp những khối lệnh này 4 lần để vẽ cả hình vuông, chúng ta chỉ cần kéo khối lệnh lặp lại và đặt khối lệnh \"di chuyển về phía trước và rẽ phải\" trong khối lệnh \"lặp lại\". Khi chúng ta nhấn Chạy, nghệ sỹ sẽ lặp lại những bước này 4 lần để hoàn thành hình vuông."
     C2_bee_loops:
       1:
         image: 'notes/C2_bee_loops_1.png'
-        text: "A loop is a repetition of activity. Going into a hive to inspect, I look at a frame, and then I put it back. I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: "\"Vòng lặp\" là sự lặp lại liên tục của hành động. Khi định quan sát 1 tổ ong, tôi kéo 1 khung cầu ong ra xem, và sau đó lại đặt lại. Tôi lặp lại việc này nhiều lần. Việc \"lặp đi lặp lại\" như vậy gọi là Vòng lặp."
       2:
         image: 'notes/C2_bee_loops_2.png'
-        text: "This is the repeat block. Whatever you put inside the repeat block will repeat those actions the number of times that you tell it to. For example, in this level, rather than drag out move forward and get nectar three times, we're going to just drag them out once each and repeat the action three times. That made it easy!"
+        text: "Đây là khối lệnh lặp lại. Bất kì hành động nào bạn đặt vào khối lệnh sẽ lặp lại hành động đó theo số lần mà bạn yêu cầu. Ví dụ, trong cấp độ này, thay vì kéo lệnh \"di chuyển về phía trước\" và lấy mật 3 lần, chúng ta sẽ chỉ cần kéo lệnh 1 lần và nhắc lại hành động đó 3 lần. Thật dễ dàng!"
     C2_maze_intro:
       1:
         image: 'notes/C2_maze_intro_1.png'
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: "Thông thường, lập trình là dưới dạng văn bản nhưng chúng ta sẽ sử dụng Blockly tức là sử dụng các hình lệnh mà bạn kéo và thả để viết các chương trình. Dưới lớp hình, thực ra bạn vẫn đang tạo câu lệnh. Để khởi động, chúng ta sẽ xây dựng câu lệnh cho chương trình mà giúp nhân vật Angry Bird này di chuyển qua một mê cung để đến được chỗ những con lợn độc ác đã ăn cắp trứng của nó."
       2:
         image: 'notes/C2_maze_intro_2.png'
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: "Blockly được chia thành 3 phần chính. Bên trái là mê cung của chú chim, nơi chương trình của bạn sẽ chạy. Các chỉ dẫn cho mỗi cấp độ được viết bên dưới mê cung. Khu vực ở giữa là hộp công cụ và mỗi 1 khối lệnh này là 1 mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình."
       3:
         image: 'notes/C2_maze_intro_3.png'
-        text: "If I drag the move block to our work space and press \"Run\", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program."
+        text: "Nếu tôi kéo khối lệnh Di chuyển tới không gian làm việc và nhấn \"Chạy\", điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trong khung. Và nếu tôi muốn chú chim làm gì khác sau khi tiến lên 1 ô? Tôi có thể thêm khối lệnh khác vào chương trình."
       4:
         image: 'notes/C2_maze_intro_4.png'
-        text: "I'm going to choose the \"turn right\" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press \"Run\" again,  the bird will perform the commands that are stacked from top to bottom on our work space."
+        text: "Tôi sẽ chọn khối lệnh \"rẽ phải\" và tôi sẽ kéo nó đặt xuống dưới khối lệnh di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả lệnh và 2 khối lệnh sẽ chập lại với nhau. Khi tôi nhấn \"Chạy\", chú chim sẽ thực hiện lần lượt các lệnh được xếp từ trên xuống dưới trong không gian làm việc."
       5:
         image: 'notes/C2_maze_intro_5.png'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: "Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút \"Thiết lập lại\" để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu xa!"
     C2_paper_airplanes:
       1:
         image: 'notes/C2_paper_airplanes_1.png'
-        text: "This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms."
+        text: "Bài học này được gọi là Thuật toán Đời thực. Thuật toán miêu tả những gì con người làm hàng ngày. Công thức làm bánh quy và hướng dẫn xây dựng nhà cho chim đều là những thuật toán hàng ngày."
       2:
         image: 'notes/C2_paper_airplanes_2.png'
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: "Hôm nay chúng ta sẽ sáng tạo ra và kiểm tra 1 thuật toán của máy bay giấy. Nhưng trước hết, chúng ta cần chia kế hoạch lớn này thành các bước nhỏ dễ làm theo. Để tạo ra 1 chiếc máy bay giấy, chúng ta cần quyết định các bước và thứ tự tiến hành các bước đó."
       3:
         image: 'notes/C2_paper_airplanes_3.png'
-        text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
+        text: "Bạn sẽ tạo ra thuật toán trước hết bằng việc cắt nhỏ các bức tranh. Tiếp theo, bạn sẽ chọn 6 bức tranh mà chỉ ra các bước cần thiết để tạo 1 chiếc máy bay giấy và sắp xếp các bức tranh này theo thứ tự đúng. Sau khi có tất cả mọi thứ theo thứ tự, bạn sẽ trao đổi thuạt toán với nhóm học sinh khác để kiểm tra xem thuật toán có hoạt động không. Một thuật toán được thiết kế tốt là rất quan trọng để tạo ra chiếc máy bay tốt nhất."
       4:
         image: 'notes/C2_paper_airplanes_4.png'
-        text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
+        text: "Khi chúng ta muốn làm sô cô la, có rất nhiều bước lớn trong quá trình đó. Và mỗi bước lớn lại chứa tập hợp các bước nhỏ hơn. Và có rất nhiều công thức hay thuật toán khác nhau, tuỳ thuộc vào việc chúng ta muốn sô cô la có vị như thế nào. Mỗi bước đều quan trọng, thậm chí là các bước nhỏ. Vậy nên thiếu 1 bước thì các bước còn lại không thể hoàn thành. Tạo ra thuật toán mà người khác có thể hiểu được là rất quan trọng. Đó là lí do mỗi thuật toán đều phải được viết ra, để dù cho là ai làm, thì kết quả cũng không đổi."
     C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
@@ -757,16 +757,16 @@ vi:
     C2_relay_programming:
       1:
         image: 'notes/C2_relay_programming_1.png'
-        text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
+        text: "Hôm nay chúng ta sẽ thực hiện lập trình tiếp sức. Nó đề cập đến việc lập trình dưới áp lực và gỡ các lỗi thi thoảng xảy ra khi bạn làm việc rất nhanh hoặc làm trong nhóm. Chúng ta sử dụng lập trình sơ đồ trên giấy để mô phỏng việc mã hoá, và sử dụng đường chạy tiếp sức để mô phỏng việc có hạn chót."
       2:
         image: 'notes/C2_relay_programming_2.png'
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: "Trong lập trình tiếp sức, các đôi sẽ cùng đua để hoàn thành 1 chương trình sơ đồ trên giấy. Bạn sẽ phải kiểm tra công việc của đồng đội, hoặc gỡ lỗi, sửa chữa nếu có lỗi, thêm mũi tên, và chạy trở lại và chạm vào đồng đội."
       3:
         image: 'notes/C2_relay_programming_3.png'
-        text: "Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it."
+        text: "Các nhà lập trình sử dụng việc gỡ lỗi rất nhiều để tìm và sửa chữa các thuật toán hoặc mã. Có rất nhiều cách để gỡ lỗi các vấn đề. 1 trong những cách dễ nhất là di chuyển từng bước một cho đến khi bạn thấy có chỗ sai, sau đó chữa nó."
       4:
         image: 'notes/C2_relay_programming_4.png'
-        text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
+        text: "Ở đây tôi đang cố thực hiện động tác lộn sau chống tay, nhưng tôi cứ bị thất bại. Tôi kiểm tra lại từng bước một, và nhận ra lỗi của mình ở đâu. Huấn luyện viên chỉ ra rằng tôi đang không đặt tay trên xà đúng cách. Vì vậy tôi thử làm lại với vị trí tay đã sửa và tôi đã thành công! Tôi thực sự rất vui vì đã gỡ được lỗi động tác lộn sau chống tay. Chúng ta đã tìm ra cách! Gỡ lỗi là tìm ra và sửa chữa các vấn đề. Làm tốt lắm!"
     C2_zuck_repeat_loop:
       1:
         image: 'notes/C2_zuck_repeat_loop_1.png'
@@ -793,19 +793,19 @@ vi:
     C3_artist_intro:
       1:
         image: 'notes/C3_artist_intro_1.png'
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những người thành thạo trong khoa học máy tính vì số dữ liệu mà các xe phải thu thập và sự cần thiết của việc có những người có thể viết chương trình để tìm ra cách bạn tiếp tục xây dựng giao thức."
       2:
         image: 'notes/C3_artist_intro_2.png'
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: "Trong các trò chơi này, bạn sẽ là một nghệ sỹ sử dụng bút chì để vẽ các hình dạng khác nhau. Nghệ sỹ của bạn đi đâu, nó sẽ vẽ 1 đường thẳng ở phía sau."
       3:
         image: 'notes/C3_artist_intro_3.png'
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: "Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn hình máy tính của bạn."
       4:
         image: 'notes/C3_artist_intro_4.png'
-        text: "The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn."
+        text: "Khối lệnh khác chúng ta có trong trò chơi này nói \"qua phải 1 góc 90 độ\". Và khi chúng ta kéo khối lệnh sẽ khiến nghệ sỹ của chúng ta quay 1 góc nhất định. Vì vậy bạn có thể chơi và điều khiển nghệ sỹ quay theo ý muốn. Đây là một góc quay 90 độ."
       5:
         image: 'notes/C3_artist_intro_5.png'
-        text: "And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!"
+        text: "Và đây là một góc quay 120 độ. Và nhớ là, bạn có thể thay đổi những giá trị này bằng cách nhấp vào các mũi tên bên cạnh các chỉ điểm ảnh hoặc độ. Hãy tận hưởng trò chơi!"
     C3_artist_nested_loops:
       1:
         image: 'notes/C3_artist_nested_loops_1.png'
@@ -816,23 +816,23 @@ vi:
     C3_bee_conditionals:
       1:
         image: 'notes/C3_bee_conditionals_1.png'
-        text: "This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something."
+        text: "Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó."
       2:
         image: 'notes/C3_bee_conditionals_2.png'
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: "Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa hoặc mật ong, như chúng ta thấy ở đây với dấu hỏi này."
       3:
         image: 'notes/C3_bee_conditionals_3.png'
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: "Trong ví dụ này, chúng ta sẽ nói NẾU bông hoa đỏ có số mật hoa lớn hơn 0, lấy mật hoa. Nó sẽ khiến con ong lấy mật hoa với điều kiện là con ong ở chỗ bông hoa. Và đây!"
     C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: "Bạn đã bao giờ nghe đến việc gỡ lỗi 1 chương trình? Đây là cách bạn tìm ra những gì không hoạt động. Khi bạn gỡ lỗi lập trình, bạn xác định và loại bỏ các lỗi sai."
       2:
         image: 'notes/C3_debugging_bee_2.png'
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: "Ở đây chúng ta được cho sẵn 1 vài khối lệnh trong không gian làm việc. Chúng ta sẽ sử dụng nút \"Bước\" để đi qua từng khối lệnh 1, xem liệu đây đã là phương pháp đúng chưa và chỗ nào chúng ta cần sửa chữa."
       3:
         image: 'notes/C3_debugging_bee_3.png'
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: "Có vẻ như đây là vấn đề rồi! Chúng ta cần thêm 1 khối lệnh tiến về phía trước nữa. Nút \"Bước\" giúp chúng ta gỡ lỗi bằng cách xác định lỗi sai ở đâu vì thế chúng ta có thể sửa chữa nó."
     C3_bee_functions:
       1:
         image: 'notes/C3_bee_functions_1.png'
@@ -1064,10 +1064,10 @@ vi:
     C4_intro:
       1:
         image: 'notes/C4_intro_1.png'
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: "Thông thường, lập trình là dưới dạng văn bản nhưng chúng ta sẽ sử dụng Blockly tức là sử dụng các hình lệnh mà bạn kéo và thả để viết các chương trình. Dưới lớp hình, thực ra bạn vẫn đang tạo câu lệnh. Để khởi động, chúng ta sẽ xây dựng câu lệnh cho chương trình mà giúp nhân vật Angry Bird này di chuyển qua một mê cung để đến được chỗ những con lợn độc ác đã ăn cắp trứng của nó."
       2:
         image: 'notes/C4_intro_2.png'
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: "Blockly được chia thành 3 phần chính. Bên trái là mê cung của chú chim, nơi chương trình của bạn sẽ chạy. Các chỉ dẫn cho mỗi cấp độ được viết bên dưới mê cung. Khu vực ở giữa là hộp công cụ và mỗi 1 khối lệnh này là 1 mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình."
       3:
         image: 'notes/C4_intro_3.png'
         text: "If I drag the move block to our work space and press \"run\", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program."
@@ -1076,7 +1076,7 @@ vi:
         text: "I'm going to choose the \"turn right\" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press \"run\" again,  the bird will perform the commands that are stacked from top to bottom on our work space."
       5:
         image: 'notes/C4_intro_5.png'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: "Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút \"Thiết lập lại\" để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu xa!"
     C4_math_artist:
       1:
         image: 'notes/C4_math_artist_1.png'

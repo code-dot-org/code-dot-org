@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_op_ed) %>'
+title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: promote_nav
 ---
@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Pergi ke [ <% = resolve_url ( ' kode.org / mempromosikan')%> ](%= kode resolve_url('https://.org/promote') %) untuk menemukan informasi spesifik negara tentang ilmu komputer.
+Pergi ke [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) untuk menemukan informasi spesifik negara tentang ilmu komputer.
 
 **Judul: Komputasi... Dimana Pekerjaannya Ada**
 

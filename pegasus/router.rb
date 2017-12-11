@@ -459,15 +459,12 @@ class Documents < Sinatra::Base
     end
 
     def social_metadata
-      if request.site == 'csedweek.org'
-        metadata = {
-          'og:site_name'      => 'CSEd Week',
-        }
-      else
-        metadata = {
-          'og:site_name'      => 'Code.org'
-        }
-      end
+      metadata =
+        if request.site == 'csedweek.org'
+          {'og:site_name' => 'CSEd Week'}
+        else
+          {'og:site_name' => 'Code.org'}
+        end
 
       # Metatags common to all sites.
       metadata['og:title'] = @header['title'] unless @header['title'].nil_or_empty?

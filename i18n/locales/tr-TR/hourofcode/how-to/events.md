@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Etkinliğiniz için hazırlanın
 
 - Yerine, gününe ve saatine karar verin.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Belediye başkanına, bir kongre üyesine, valiye veya etkili iş adamlarına etkinliğinize katılmaları ve konuşma yapmaları için [bir mektup](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) gönderin. Kod-Saati sırasında seçilmiş bir yetkiliyi ağırlarken daha fazla bilgi için [ nasıl yapılır aracını ](%=resolve_url('/files/elected-official.pdf')%)kontrol edin.
 - Medyayı (yerel haber kanalları, gazeteler, eğitim ve teknoloji bloggerları,... vb.) davet edin. Bu konuda yardım için [basın kiti](%= resolve_url('/promote/press-kit') %)mizi inceleyin.
 
 ## 2. Etkinlik esnasında
@@ -19,7 +19,7 @@ nav: how_to_nav
 - Bu [istatistikleri ve grafikleri](%= resolve_url('/promote/stats') %) kullanarak bilgisayar biliminin öneminden bahseden bir giriş konuşması yapın.   
       
     
-- Dİğer etkinlik fikirleri: 
+- Diğer etkinlik fikirleri: 
     - Yerelde, bilgisayar bilimleri ile çalışan bir fabrika sahibini davet edin.
     - Yerel bir politikacıyı davet edin ve öğrencinize, davet ettiğiniz kişiye kodlamanın nasıl yapılacağını anlatmasını söyleyin.
     - İnternet bağlantısı gerektirmeyen bir aktiviteyi göstermek için, bir grup öğrenci seçin.

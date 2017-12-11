@@ -82,11 +82,12 @@ def create_school_info(data, processed_data)
   puts "Creating school_info with attrs: #{attrs}" if @verbose
 
   catcher = SchoolInfoCatcher.new
-  if deduplicate_school_info(attrs, catcher)
-    school_info = catcher.school_info
-  else
-    school_info = SchoolInfo.new attrs
-  end
+  school_info =
+    if deduplicate_school_info(attrs, catcher)
+      catcher.school_info
+    else
+      SchoolInfo.new attrs
+    end
 
   unless school_info.valid?
     raise "Invalid school_info: #{school_info.errors.full_messages} attrs: #{attrs}"
@@ -386,25 +387,27 @@ def process_form(form)
       return if census_data.select {|k, v| v.presence && @census_only_fields.include?(k)}.empty?
       submission = Census::CensusHoc2017v1.new census_data
     when 'HocCensus2017'
-      if no_school
-        submission = Census::CensusHoc2017v2.new census_data
-      else
-        submission = Census::CensusHoc2017v3.new census_data
-      end
+      submission =
+        if no_school
+          Census::CensusHoc2017v2.new census_data
+        else
+          Census::CensusHoc2017v3.new census_data
+        end
     when 'Census2017'
-      if form_data['version'] == "4" || form_data['version_s'] == "4"
-        submission = Census::CensusYourSchool2017v4.new census_data
-      elsif has_how_many_checkboxes?(form_data)
-        submission = Census::CensusYourSchool2017v0.new census_data
-      elsif no_school && has_any_followups?(form_data) && form_data['topic_other_desc_s'].nil?
-        # We many incorrectly classify some v1 submissions as v2 if followup questions were not shown.
-        # The submissions are indistinquishable in that case.
-        submission = Census::CensusYourSchool2017v1.new census_data
-      elsif no_school
-        submission = Census::CensusYourSchool2017v2.new census_data
-      else
-        submission = Census::CensusYourSchool2017v3.new census_data
-      end
+      submission =
+        if form_data['version'] == "4" || form_data['version_s'] == "4"
+          Census::CensusYourSchool2017v4.new census_data
+        elsif has_how_many_checkboxes?(form_data)
+          Census::CensusYourSchool2017v0.new census_data
+        elsif no_school && has_any_followups?(form_data) && form_data['topic_other_desc_s'].nil?
+          # We many incorrectly classify some v1 submissions as v2 if followup questions were not shown.
+          # The submissions are indistinquishable in that case.
+          Census::CensusYourSchool2017v1.new census_data
+        elsif no_school
+          Census::CensusYourSchool2017v2.new census_data
+        else
+          Census::CensusYourSchool2017v3.new census_data
+        end
     else
       raise "Unexpected form kind: #{kind}"
     end

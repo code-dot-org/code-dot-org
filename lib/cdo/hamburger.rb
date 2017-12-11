@@ -17,8 +17,6 @@ class Hamburger
     show_pegasus_options = HIDE_ALWAYS
     show_help_options = HIDE_ALWAYS
 
-    hamburger_class = "none"
-
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
       # to show whatever would show up in the header at desktop (and mobile) widths.
@@ -67,13 +65,14 @@ class Hamburger
 
     # Do we show hamburger on all widths, only mobile, or not at all?
     show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options, show_help_options]
-    if show_set.include? SHOW_ALWAYS
-      hamburger_class = SHOW_ALWAYS
-    elsif show_set.include? SHOW_MOBILE
-      hamburger_class = SHOW_MOBILE
-    else
-      hamburger_class = HIDE_ALWAYS
-    end
+    hamburger_class =
+      if show_set.include? SHOW_ALWAYS
+        SHOW_ALWAYS
+      elsif show_set.include? SHOW_MOBILE
+        SHOW_MOBILE
+      else
+        HIDE_ALWAYS
+      end
 
     # Return the various visibility styles.
     {
@@ -114,11 +113,12 @@ class Hamburger
     end.freeze
 
     # When viewing courses, a signed-out user in English gets the teacher view.
-    if !["teacher", "student"].include?(options[:user_type]) && options[:language] == "en"
-      teach_url = "/courses?view=teacher"
-    else
-      teach_url = "/courses"
-    end
+    teach_url =
+      if !["teacher", "student"].include?(options[:user_type]) && options[:language] == "en"
+        "/courses?view=teacher"
+      else
+        "/courses"
+      end
 
     educate_entries = [
       {title: "educate_overview", url: CDO.studio_url(teach_url), id: "educate-overview"},

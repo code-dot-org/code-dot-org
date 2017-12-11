@@ -100,7 +100,7 @@ describe('entry tests', () => {
           '\n  2. cd <new-directory>' +
           '\n  3. npm install && grunt build-dev' +
           '\n  4. npm link' +
-          '\n  5. cd -' +
+          '\n  5. cd <code-dot-org apps directory>' +
           '\n  6. npm link @code-dot-org/piskel' +
           '\n  7. rerun your previous command' +
           '\n'));
@@ -442,6 +442,7 @@ describe('entry tests', () => {
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match':                './src/sites/studio/pages/levels/_match.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
@@ -502,6 +503,7 @@ describe('entry tests', () => {
     'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
+    'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',

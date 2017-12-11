@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_stats) %>'
+title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
 ---
@@ -13,7 +13,7 @@ nav: promote_nav
 
 ## 在新聞稿中使用這則引言
 
-### Bring computer science to your school. Start with an Hour of Code!
+### 將計算機科學帶到你的學校。從《編程一小時》開始。
 
 科技改變了地球的每一個產業，計算機知識已成為生活必備的技能之一。 但不到 50% 的學校有計算機科學課程！ 好消息是我們正在改變此狀況。 如果你去年聽說過一小時玩程式（Hour of Code）活動，你也許知道它創下了些紀錄。 1 億名學生通過一小時玩程式活動學習計算機科學的入門並體驗到其中的樂趣。
 

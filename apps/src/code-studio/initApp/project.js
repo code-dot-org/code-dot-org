@@ -134,7 +134,14 @@ var projects = module.exports = {
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
-    return location.href;
+    return this.getLocation().href;
+  },
+
+  /**
+   * This method exists to be mocked for unit tests.
+   */
+  getLocation() {
+    return document.location;
   },
 
   /**
@@ -168,6 +175,33 @@ var projects = module.exports = {
       }
     }
     return url + fragment + queryString;
+  },
+
+  /**
+   * Returns a share URL for the current project.
+   *
+   * Share URLs can vary by application environment and project type.  For most
+   * project types the share URL is the same as the project edit and view URLs,
+   * but has no action appended to the project's channel ID.Weblab is a special
+   * case right now, because it shares projects to codeprojects.org.
+   *
+   * This function depends on the document location to determine both the
+   * current project id and the current application enviornmnet.  It's unlikely
+   * to work if called when we're not on a project page.
+   *
+   * @returns {string} Fully-qualified share URL for the current project.
+   */
+  getShareUrl() {
+    if (this.isWebLab()) {
+      const location = this.getLocation();
+      const re = /([-.]?studio)?\.?code.org/i;
+      const environmentKey = location.hostname.replace(re, '');
+      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
+      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+      return `${location.protocol}//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
+    } else {
+      return this.getProjectUrl();
+    }
   },
 
   getCurrentTimestamp() {
@@ -605,6 +639,10 @@ var projects = module.exports = {
     }
   },
 
+  isWebLab() {
+    return this.getStandaloneApp() === 'weblab';
+  },
+
   canServerSideRemix() {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
@@ -619,6 +657,12 @@ var projects = module.exports = {
    */
   isSupportedLevelType() {
     return !!this.getStandaloneApp();
+  },
+  /*
+   * @returns {boolean} Whether a project should use the sources api.
+   */
+  useSourcesApi() {
+    return this.getStandaloneApp() !== 'weblab';
   },
   /**
    * @returns {string} The path to the app capable of running
@@ -695,23 +739,32 @@ var projects = module.exports = {
       throw new Error('Attempting to blow away existing levelHtml');
     }
 
-    unpackSources(sourceAndHtml);
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
       current.projectType = this.getStandaloneApp();
     }
 
-    var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-    sources.put(channelId, packSources(), filename, function (err, response) {
-      currentSourceVersionId = response.versionId;
-      current.migratedToS3 = true;
+    unpackSources(sourceAndHtml);
 
+    const updateChannels = () => {
       channels.update(channelId, current, function (err, data) {
         initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
-    }.bind(this));
+    };
+
+    if (this.useSourcesApi()) {
+      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      sources.put(channelId, packSources(), filename, function (err, response) {
+        currentSourceVersionId = response.versionId;
+        current.migratedToS3 = true;
+
+        updateChannels();
+      }.bind(this));
+    } else {
+      updateChannels();
+    }
   },
 
   getSourceForChannel(channelId, callback) {
@@ -993,20 +1046,20 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        channels.fetch(pathInfo.channelId, function (err, data) {
+        channels.fetch(pathInfo.channelId, (err, data) => {
           if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            fetchSource(data, function () {
+            fetchSource(data, () => {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
               fetchAbuseScoreAndPrivacyViolations(function () {
                 deferred.resolve();
               });
-            }, queryParams('version'));
+            }, queryParams('version'), this.useSourcesApi());
           }
         });
       } else {
@@ -1015,16 +1068,16 @@ var projects = module.exports = {
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      channels.fetch(appOptions.channel, function (err, data) {
+      channels.fetch(appOptions.channel, (err, data) => {
         if (err) {
           deferred.reject();
         } else {
-          fetchSource(data, function () {
+          fetchSource(data, () => {
             projects.showHeaderForProjectBacked();
             fetchAbuseScoreAndPrivacyViolations(function () {
               deferred.resolve();
             });
-          }, queryParams('version'));
+          }, queryParams('version'), this.useSourcesApi());
         }
       });
     } else {
@@ -1098,8 +1151,9 @@ var projects = module.exports = {
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
  * @param {string?} version Optional version to load
+ * @param {boolean} useSourcesApi use sources api when true
  */
-function fetchSource(channelData, callback, version) {
+function fetchSource(channelData, callback, version, useSourcesApi) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -1110,7 +1164,7 @@ function fetchSource(channelData, callback, version) {
   current = channelData;
 
   projects.setTitle(current.name);
-  if (channelData.migratedToS3) {
+  if (useSourcesApi && channelData.migratedToS3) {
     var url = current.id + '/' + SOURCE_FILE;
     if (version) {
       url += '?version=' + version;
@@ -1178,7 +1232,7 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
   } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
     (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.getStandaloneApp() === 'weblab')) {
+    (dashboard.project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
