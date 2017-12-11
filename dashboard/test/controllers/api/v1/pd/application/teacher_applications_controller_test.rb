@@ -43,7 +43,6 @@ module Api::V1::Pd::Application
           regional_partner_name: NO,
           committed: YES,
           able_to_attend_single: YES,
-          principal_approval: nil,
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
