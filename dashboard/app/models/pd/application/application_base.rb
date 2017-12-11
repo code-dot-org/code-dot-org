@@ -131,6 +131,19 @@ module Pd::Application
     validates_presence_of :type
     validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
 
+    # decision notifications should be sent to applications that have been
+    # locked but have not yet received a decision_notification email
+    scope :should_send_decision_notification_emails, -> {where("locked_at IS NOT NULL AND decision_notification_email_sent_at IS NULL")}
+
+    # Override in derived class
+    def send_decision_notification_email
+      # intentional noop
+    end
+
+    def self.send_all_decision_notification_emails
+      should_send_decision_notification_emails.each(&:send_decision_notification_email)
+    end
+
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"
     # @return [Array<Array>] - list of fields with additional text. Each field is specified as an array of
