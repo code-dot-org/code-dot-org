@@ -46,6 +46,10 @@ export default class TeacherHomepage extends Component {
     showCensusBanner: this.props.showCensusBanner,
   };
 
+  bindCensusBanner = (banner) => {
+    this.censusBanner = banner;
+  }
+
   handleCensusBannerChange(event) {
     this.setState({censusBannerSelection: (event.target.id==="teachesYes")});
   }
@@ -55,7 +59,7 @@ export default class TeacherHomepage extends Component {
       url: "/dashboardapi/v1/census/CensusTeacherBannerV1",
       type: "post",
       dataType: "json",
-      data: $('#census-teacher-banner-form').serialize()
+      data: this.censusBanner.getData(),
     }).done(this.handleCensusSubmitSuccess).fail(this.handleCensusSubmitError);
   }
 
@@ -212,6 +216,7 @@ export default class TeacherHomepage extends Component {
         {this.state.showCensusBanner && (
            <div>
              <CensusTeacherBanner
+               ref={this.bindCensusBanner}
                schoolYear={schoolYear}
                ncesSchoolId={ncesSchoolId}
                question={censusQuestion}
