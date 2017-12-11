@@ -69,7 +69,6 @@ describe('RecentCourses', () => {
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
@@ -128,7 +127,6 @@ describe('RecentCourses', () => {
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
@@ -204,7 +202,6 @@ describe('RecentCourses', () => {
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>

@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from "./Button";
@@ -204,4 +205,6 @@ class Notification extends Component {
   }
 }
 
-export default Radium(Notification);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(Notification));

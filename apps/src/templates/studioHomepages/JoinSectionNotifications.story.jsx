@@ -3,6 +3,7 @@ import JoinSectionNotifications from './JoinSectionNotifications';
 
 export default storybook => storybook
   .storiesOf('JoinSectionNotifications', module)
+  .withReduxStore()
   .addStoryTable([
     {
       name: 'Join succeeded',
