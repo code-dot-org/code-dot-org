@@ -133,7 +133,6 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
     return {
       response: encodeURIComponent(JSON.stringify(lastAttempt)),
       result: true,
-      errorType: null,
       submitted: window.appOptions.level.submittable,
       confirmationDialog: confirmationDialog,
       beforeProcessResultsHook: submitSublevelResults

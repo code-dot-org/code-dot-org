@@ -80,3 +80,18 @@ export const TooFewDialog = () => (
     </div>
   </ProtectedStatefulDiv>
 );
+
+export const ContractMatchErrorDialog = ({text}) => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon">
+      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p>{text}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+ContractMatchErrorDialog.propTypes = {
+  text: PropTypes.string
+};
