@@ -13,8 +13,6 @@ module Pd::Application
     end
 
     def declined(facilitator_application)
-      raise "Unexpected #{facilitator_application.class}" unless facilitator_application.is_a? Facilitator1819Application
-
       @application = facilitator_application
 
       mail(
@@ -24,8 +22,6 @@ module Pd::Application
     end
 
     def waitlisted(facilitator_application)
-      raise "Unexpected #{facilitator_application.class}" unless facilitator_application.is_a? Facilitator1819Application
-
       @application = facilitator_application
 
       mail(
