@@ -12,8 +12,6 @@ module Pd::Application
     end
 
     def accepted(teacher_application)
-      raise "Unexpected #{teacher_application.class}" unless teacher_application.is_a? Teacher1819Application
-
       @application = teacher_application
 
       mail(
@@ -23,8 +21,6 @@ module Pd::Application
     end
 
     def declined(teacher_application)
-      raise "Unexpected #{teacher_application.class}" unless teacher_application.is_a? Teacher1819Application
-
       @application = teacher_application
 
       mail(
@@ -34,8 +30,6 @@ module Pd::Application
     end
 
     def waitlisted(teacher_application)
-      raise "Unexpected #{teacher_application.class}" unless teacher_application.is_a? Teacher1819Application
-
       @application = teacher_application
 
       mail(
