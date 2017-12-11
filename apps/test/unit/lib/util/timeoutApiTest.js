@@ -266,65 +266,93 @@ describe('Timeout API', () => {
     });
   });
 
+  /**
+   * Generates a unit test that checks whether the <funcName> function correctly
+   * validates that its <argName> argument must be a string.
+   *
+   * @param {!string} funcName - Name of function on the 'commands' object
+   *   imported from the API module under test.
+   * @param {!string} argName - The name of the argument to check.
+   * @param {!object} validArgs - An example of valid arguments to the function.
+   */
   function itComplainsIfArgumentIsNotANumber(funcName, argName, validArgs) {
-    it(`complains if argument ${argName} is not a number`, () => {
-      commands[funcName]({
-        ...validArgs,
-        [argName]: null
-      });
-      expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
-      expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
-        `${funcName}() ${argName} parameter value (null) is not a number.`
-      );
-
-      commands[funcName]({
-        ...validArgs,
-        [argName]: 'string'
-      });
-      expect(testErrorHandler.outputWarning).to.have.been.calledTwice;
-      expect(testErrorHandler.outputWarning.secondCall.args[0]).to.equal(
-        `${funcName}() ${argName} parameter value (string) is not a number.`
-      );
-
-      commands[funcName]({
-        ...validArgs,
-        [argName]: {obj: 5}
-      });
-      expect(testErrorHandler.outputWarning).to.have.been.calledThrice;
-      expect(testErrorHandler.outputWarning.thirdCall.args[0]).to.equal(
-        `${funcName}() ${argName} parameter value ([object Object]) is not a number.`
-      );
-    });
+    itComplainsIfArgumentIsNotOfType(funcName, argName, 'number', validArgs);
   }
 
+  /**
+   * Generates a unit test that checks whether the <funcName> function correctly
+   * validates that its <argName> argument must be a function.
+   *
+   * @param {!string} funcName - Name of function on the 'commands' object
+   *   imported from the API module under test.
+   * @param {!string} argName - The name of the argument to check.
+   * @param {!object} validArgs - An example of valid arguments to the function.
+   */
   function itComplainsIfArgumentIsNotAFunction(funcName, argName, validArgs) {
-    it(`complains if argument ${argName} is not a function`, () => {
-      commands[funcName]({
-        ...validArgs,
-        [argName]: null
-      });
-      expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
-      expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
-        `${funcName}() ${argName} parameter value (null) is not a function.`
-      );
+    itComplainsIfArgumentIsNotOfType(funcName, argName, 'function', validArgs);
+  }
 
+  /**
+   * Generates a unit test that checks whether the <funcName> function correctly
+   * validates that its <argName> argument must be an <expectedType>.
+   *
+   * @param {!string} funcName - Name of function on the 'commands' object
+   *   imported from the API module under test. e.g. 'setInterval'
+   * @param {!string} argName - The functions on the 'commands' object all take
+   *   an options object with named arguments as their first parameter, this is
+   *   the name of the argument to check for validation within that options
+   *   object.
+   * @param {!string} expectedType - The type of a valid value for the named
+   *   argument in the domain of the function, as given by the typeof operator.
+   *   Note: This could/should be extended to support the additional types
+   *   defined in the apiValidateType() function.
+   * @param {!object} validArgs - An example of valid arguments to the function
+   *   under test.  This set of valid arguments is used to generate permutations
+   *   where the argument under test is invalid in different ways, to check that
+   *   validation is functioning as expected.
+   */
+  function itComplainsIfArgumentIsNotOfType(funcName, argName, expectedType, validArgs) {
+    function callFuncWithArgValue(badValue) {
       commands[funcName]({
         ...validArgs,
-        [argName]: 'string'
+        [argName]: badValue
       });
-      expect(testErrorHandler.outputWarning).to.have.been.calledTwice;
-      expect(testErrorHandler.outputWarning.secondCall.args[0]).to.equal(
-        `${funcName}() ${argName} parameter value (string) is not a function.`
-      );
+    }
 
-      commands[funcName]({
-        ...validArgs,
-        [argName]: {obj: 5}
-      });
-      expect(testErrorHandler.outputWarning).to.have.been.calledThrice;
-      expect(testErrorHandler.outputWarning.thirdCall.args[0]).to.equal(
-        `${funcName}() ${argName} parameter value ([object Object]) is not a function.`
-      );
+    it(`complains if argument ${argName} is not a ${expectedType}`, () => {
+      if (expectedType !== 'number') {
+        testErrorHandler.outputWarning.reset();
+        callFuncWithArgValue(42);
+        expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
+        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+          `${funcName}() ${argName} parameter value (42) is not a ${expectedType}.`
+        );
+      }
+
+      if (expectedType !== 'string') {
+        testErrorHandler.outputWarning.reset();
+        callFuncWithArgValue('foobar');
+        expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
+        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+          `${funcName}() ${argName} parameter value (foobar) is not a ${expectedType}.`
+        );
+      }
+
+      if (expectedType !== 'object') {
+        testErrorHandler.outputWarning.reset();
+        callFuncWithArgValue(null);
+        expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
+        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+          `${funcName}() ${argName} parameter value (null) is not a ${expectedType}.`
+        );
+
+        testErrorHandler.outputWarning.reset();
+        callFuncWithArgValue({obj: 5});
+        expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
+        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+          `${funcName}() ${argName} parameter value ([object Object]) is not a ${expectedType}.`
+        );
+      }
     });
   }
 });
