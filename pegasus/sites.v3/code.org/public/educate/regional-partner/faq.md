@@ -7,7 +7,7 @@ nav: plc_regional_partner_nav
 # Regional Partner FAQs
 
 
-Still have questions? See below for answers to commonly asked questions or email [partner@code.org](partner@code.org). 
+Still have questions? See below for answers to commonly asked questions or email [partner@code.org](mailto:partner@code.org). 
 <br/><br/>
 **General questions:**<br/>
 

@@ -100,7 +100,7 @@ describe('entry tests', () => {
           '\n  2. cd <new-directory>' +
           '\n  3. npm install && grunt build-dev' +
           '\n  4. npm link' +
-          '\n  5. cd -' +
+          '\n  5. cd <code-dot-org apps directory>' +
           '\n  6. npm link @code-dot-org/piskel' +
           '\n  7. rerun your previous command' +
           '\n'));
@@ -442,6 +442,7 @@ describe('entry tests', () => {
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match':                './src/sites/studio/pages/levels/_match.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
@@ -501,6 +502,8 @@ describe('entry tests', () => {
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
+    'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
+    'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
@@ -546,6 +549,17 @@ describe('entry tests', () => {
       externals: [
         {
           'jquery': 'var $',
+          // qtip2 doesn't actually export anything - it's a jquery extension
+          // and modifies the jquery object when present.
+          // We also want to be free to import 'qtip2' in our code (for tests)
+          // without including a copy of it in our release bundles since it's
+          // already provided by application.js.
+          // Therefore we include it as an external here (which keeps us from
+          // including the library in release bundles) but we map it to the
+          // jquery object, which will always be available when we are depending
+          // on qtip.  Tests skip this 'external' configuration and load the
+          // npm-provided copy of qtip2.
+          'qtip2': 'var $',
         }
       ],
       plugins: [

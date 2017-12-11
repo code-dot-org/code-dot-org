@@ -23,11 +23,12 @@ class HocSignup2014 < Form
     # If the user's school is not found via the school dropdown
     # we still need to require location for US in school events to match
     # to NCES id for census data.
-    if result[:event_type_s] == 'in_school' && result[:hoc_country_s] == 'US'
-      result[:event_location_s] = required stripped data[:event_location_s]
-    else
-      result[:event_location_s] = stripped data[:event_location_s]
-    end
+    result[:event_location_s] =
+      if result[:event_type_s] == 'in_school' && result[:hoc_country_s] == 'US'
+        required stripped data[:event_location_s]
+      else
+        stripped data[:event_location_s]
+      end
 
     result
   end

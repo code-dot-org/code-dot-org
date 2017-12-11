@@ -21,7 +21,7 @@ export default class UsPhoneNumberInput extends React.Component {
     super(props);
 
     this.state = {
-      value: this.props.value
+      value: UsPhoneNumberInput.coercePhoneNumber(this.props.value)
     };
   }
 

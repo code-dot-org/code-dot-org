@@ -940,7 +940,9 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
-  applabObjectFitImages();
+  setTimeout(() => {
+    applabObjectFitImages();
+  }, 0);
 }
 
 /**

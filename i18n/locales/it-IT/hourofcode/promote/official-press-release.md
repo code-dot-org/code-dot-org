@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_press_release) %>'
+title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: promote_nav
 ---
@@ -16,7 +16,7 @@ Contatti: [**CONTATTI**]
 <strong>
 
 <center>
-  GOVERNATORE/SENATORE/DEPUTATO/RAPPRESENTANTE/SINDACO/ CONSIGLIERE [INSERT NAME][HA PRESO PARTE ALL'ORA DEL CODICE CON GLI STUDENTI LOCALI]</strong><br /> La comunità si è riunita per far conoscere l'importanza dello studio dell'informatica prendendo parte alla Computer Science Education Week
+  GOVERNATORE/SENATORE/DEPUTATO/RAPPRESENTANTE/SINDACO/ CONSIGLIERE [inserire il nome] HA PRESO PARTE ALL'ORA DEL CODICE CON GLI STUDENTI LOCALI</strong><br /> La comunità si è riunita per far conoscere l'importanza dello studio dell'informatica prendendo parte alla Computer Science Education Week
 </center>
 
 <br /> <br /></p> 
@@ -38,7 +38,7 @@ Contatti: [**CONTATTI**]
 </p>
 
 <p>
-  [<strong>INSERISCI CITAZIONE DA PORTAVOCE, ESEMPIO RIPORTATO DI SEGUITO:</strong>] <br /> "Abbiamo bisogno di incoraggiare e abbracciare l'interesse dei nostri studenti in informatica," ha detto [<strong>Inserire nome</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+  [<strong>INSERISCI CITAZIONE DA PORTAVOCE, ESEMPIO RIPORTATO DI SEGUITO:</strong>] <br /> "Abbiamo bisogno di incoraggiare e abbracciare l'interesse dei nostri studenti in informatica," ha detto [<strong>Inserire nome</strong>]. "Ogni studente merita la possibilità di imparare l'informatica per accedere alle migliori carriere del XXI secolo."
 </p>
 
 <p>

@@ -27,6 +27,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     showErrorMsg: PropTypes.bool,
     // Value is the NCES id of the school
     value: PropTypes.string,
+    fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
   };
@@ -52,30 +53,36 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     const {showRequiredIndicator, singleLineLayout} = this.props;
     const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
+    const showError = this.props.showErrorMsg && !this.props.value;
+    const errorDiv = (
+      <div style={styles.errors}>
+        {i18n.censusRequiredSelect()}
+      </div>
+    );
 
     return (
-      <div style={containerStyle}>
-        <div style={questionStyle}>
-          {singleLineLayout ? i18n.school() : i18n.schoolName()}
-          {showRequiredIndicator && (
-            <span style={styles.asterisk}> *</span>
-          )}
-          {this.props.showErrorMsg && (
-             <div style={styles.errors}>
-               {i18n.censusRequiredSelect()}
-             </div>
-          )}
+      <div>
+        <div style={containerStyle}>
+          <div style={questionStyle}>
+            {singleLineLayout ? i18n.school() : i18n.schoolName()}
+            {showRequiredIndicator && (
+               <span style={styles.asterisk}> *</span>
+            )}
+            {!singleLineLayout && showError && errorDiv}
+          </div>
+          <SchoolAutocompleteDropdown
+            value={this.props.value}
+            fieldName={this.props.fieldName}
+            onChange={this.sendToParent}
+          />
+          <label>
+            <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={this.props.value === "-1"}/>
+            <span style={styles.checkboxOption}>
+              {i18n.schoolNotFoundCheckboxLabel()}
+            </span>
+          </label>
         </div>
-        <SchoolAutocompleteDropdown
-          value={this.props.value}
-          onChange={this.sendToParent}
-        />
-        <label>
-          <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={this.props.value === "-1"}/>
-          <span style={styles.checkboxOption}>
-            {i18n.schoolNotFoundCheckboxLabel()}
-          </span>
-        </label>
+        {singleLineLayout && showError && errorDiv}
       </div>
     );
   }

@@ -3,18 +3,18 @@ title: <%=hoc_s(titre_inscription_merci) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": '<%=hoc_s(:tag_meta_titre_og) %>'
+  "og:title": <%=hoc_s(:tag_meta_titre_og) %>
   "og:description": <%= hoc_s(tag_meta_déscription_og) %>
-  "og:image": 'http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png'
+  "og:image": http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": 'http://<%=requête.hôte%>'
+  "og:url": http://<%=requête.hôte%>
   "twitter:card": joueur
   "twitter:site": '@code. org'
-  "twitter:url": 'http://<%=requête.hôte%>'
-  "twitter:title": '<%= hoc_s(:étiquette_meta_twitter_titre) %>'
-  "twitter:description": '<%=hoc_s(:étiquette_meta_twitter_déscription) %>'
-  "twitter:image:src": 'http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png'
+  "twitter:url": http://<%=requête.hôte%>
+  "twitter:title": <%= hoc_s(:étiquette_meta_twitter_titre) %>
+  "twitter:description": <%=hoc_s(:étiquette_meta_twitter_déscription) %>
+  "twitter:image:src": http://<%=requête.hôte%>/images/heureducode-2015-vignette-vidéo.png
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 

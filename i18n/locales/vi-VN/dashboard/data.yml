@@ -37,7 +37,7 @@ vi:
         'NetSim': 'bộ mô phỏng internet'
         'Custom': 'Họa sĩ'
         'CustomStudio': 'Phòng trò chơi'
-        'Gamelab': 'Game Lab'
+        'Gamelab': 'Kho Trò chơi'
     trophy:
       name:
         'Bronze': 'Đồng'
@@ -532,11 +532,11 @@ vi:
         'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
         'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
         'applab_hoc_share': 'AppLab Hour of Code - Share'
-        'mc_2017_agent_intro': 'Minecraft Hour of Code - The Agent'
+        'mc_2017_agent_intro': 'Giờ lập trình Minecraft - Đặc vụ'
         'mc_2017_repeat': 'Minecraft Hour of Code - Repeat Loops'
         'mc_2017_functions': 'Minecraft Hour of Code - Functions'
         'mc_2017_congratulations': 'Minecraft Hour of Code - Congratulations'
-        'mc_2017_puzzle_1': 'Minecraft Hour of Code - The Agent'
+        'mc_2017_puzzle_1': 'Giờ lập trình Minecraft - Đặc vụ'
         'mc_2017_puzzle_3': 'Minecraft Hour of Code - Repeat Loops'
         'mc_2017_puzzle_8': 'Minecraft Hour of Code - Functions'
         'mc_2017_puzzle_12': 'Minecraft Hour of Code - Freeplay'

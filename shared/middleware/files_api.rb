@@ -460,7 +460,7 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/files/<channel-id>
+  # GET /v3/files/<channel-id>?version=<version-id>
   #
   # List filenames and sizes.
   #
@@ -469,7 +469,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     bucket = FileBucket.new
-    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'])
+    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'], params['version'])
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
@@ -567,7 +567,7 @@ class FilesApi < Sinatra::Base
     new_entry_hash.to_json
   end
 
-  # POST /v3/files/<channel-id>/?version=<version-id>&project_version=<project-version-id>
+  # POST /v3/files/<channel-id>/?version=<version-id>&files-version=<project-version-id>
   #
   # Create or replace a file. We use this method so that IE9 can still
   # upload by posting to an iframe.
@@ -589,7 +589,7 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&project_version=<project-version-id>
+  # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&files-version=<project-version-id>
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
@@ -730,7 +730,7 @@ class FilesApi < Sinatra::Base
   METADATA_PATH = '.metadata'.freeze
   METADATA_FILENAMES = %w(
     thumbnail.png
-  )
+  ).freeze
 
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>

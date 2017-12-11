@@ -1,11 +1,12 @@
 {
+  "startButton": "Inicio",
   "filterOrgNames": "Creado por",
   "filterOrgNamesAll": "Todos",
   "filterSortBy": "Ordenar por",
   "filterSortByDisplayWeight": "Recomendado",
   "filterSortByPopularityRank": "Más popular",
   "filterGrades": "Grados",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "Todas las edades",
   "filterGradesPre": "Pre-lector",
   "filterGrades25": "Grados 2-5",
   "filterGrades68": "Grados 6-8",
