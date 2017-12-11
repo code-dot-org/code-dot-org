@@ -38,13 +38,7 @@ class MakerController < ApplicationController
     return head :not_found unless application
     return head :forbidden unless application.eligible_unit_6_intention? && !application.has_confirmed_school?
 
-    # Update user's school if provided school_id is different
-    current_school_id = current_user.try(:school_info).try(:school_id)
-    if school_id != current_school_id
-      current_user.update!(school_info: SchoolInfo.find_by_school_id(school_id))
-    end
-
-    application.update!(school_id: current_school_id, full_discount: school.high_needs?)
+    application.update!(school_id: school_id, full_discount: school.high_needs?)
 
     render json: {full_discount: application.full_discount?}
   end
