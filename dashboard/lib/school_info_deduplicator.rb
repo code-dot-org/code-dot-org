@@ -60,6 +60,7 @@ module SchoolInfoDeduplicator
       :validation_type
     ]
 
+    # Keep only the relevant attributes to use when we query for a duplicate
     attr.slice!(*relevant_attributes)
 
     # Make sure all fields are present so that they will match against only null
