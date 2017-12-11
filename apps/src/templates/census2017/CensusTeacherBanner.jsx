@@ -237,124 +237,132 @@ export default class CensusTeacherBanner extends Component {
     return data;
   }
 
-  render() {
-    if (this.state.showSchoolInfoForm) {
-      let schoolId = (this.state.ncesSchoolId !== null) ? this.state.ncesSchoolId : this.props.ncesSchoolId;
+  renderSchoolInfoForm() {
+    let schoolId = (this.state.ncesSchoolId !== null) ? this.state.ncesSchoolId : this.props.ncesSchoolId;
+    return (
+      <div style={styles.main}>
+        <div style={styles.header}>
+          <h2>Update your school information</h2>
+          {this.state.showSchoolInfoUnknownError && (
+             <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
+          )}
+        </div>
+        <div style={styles.message}>
+          <SchoolInfoInputs
+            ref={this.bindSchoolInfoInputs}
+            onCountryChange={this.handleCountryChange}
+            onSchoolTypeChange={this.handleSchoolTypeChange}
+            onSchoolChange={this.handleSchoolChange}
+            onSchoolNotFoundChange={this.handleSchoolNotFoundChange}
+            country={this.state.country}
+            schoolType={this.state.schoolType}
+            ncesSchoolId={schoolId}
+            schoolName={this.state.schoolName}
+            schoolState={this.state.schoolState}
+            schoolZip={this.state.schoolZip}
+            schoolLocation={this.state.schoolLocation}
+            useGoogleLocationSearch={true}
+            showErrors={this.state.showSchoolInfoErrors}
+            showRequiredIndicator={true}
+          />
+        </div>
+        <div style={styles.buttonDiv}>
+          <Button onClick={this.dismissSchoolInfoForm} style={styles.button} color="gray" size="large" text="Dismiss" />
+          <Button onClick={this.handleSchoolInfoSubmit} style={styles.button} size="large" text="Submit" />
+        </div>
+      </div>
+    );
+  }
+
+  renderCensusForm() {
+    const numHours = (this.props.question === 'how_many_20_hours') ? '20' : '10';
+    let  buttons;
+    let  footer;
+    if (this.props.selection===true) {
+      footer = (<hr/>);
+      buttons = (
+        <div style={styles.buttonDiv}>
+          <Button onClick={this.props.onDismiss} style={styles.button} color="gray" size="large" text="No thanks" />
+          <Button onClick={this.props.onSubmit} style={styles.button} size="large" text="Add my school to the map!" />
+        </div>
+      );
+    } else if (this.props.selection===false) {
+      footer = (
+        <div>
+          <hr/>
+          <p>We’d love to know more about computer science opportunities at your school. Please take our survey to increase access to Computer Science in the US.</p>
+        </div>
+      );
+      buttons = (
+        <div style={styles.buttonDiv}>
+          <Button onClick={this.props.onPostpone} style={styles.button} color="gray" size="large" text="Not now" />
+          <Button onClick={this.props.onPostpone} href={pegasus('/yourschool')} style={styles.button} size="large" text="Take the survey" />
+        </div>
+      );
+    }
+
+    let schoolName;
+
+    if (this.state.schoolDisplayName) {
+      schoolName = this.state.schoolDisplayName;
+    } else if (this.state.schoolName) {
+      schoolName = this.state.schoolName;
+    }
+
+    if (schoolName) {
       return (
         <div style={styles.main}>
           <div style={styles.header}>
-            <h2>Update your school information</h2>
-            {this.state.showSchoolInfoUnknownError && (
+            <h2 style={styles.title}>Add {schoolName} to our map!</h2>
+            <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
+            {this.props.showUnknownError && (
                <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
             )}
           </div>
           <div style={styles.message}>
-            <SchoolInfoInputs
-              ref={this.bindSchoolInfoInputs}
-              onCountryChange={this.handleCountryChange}
-              onSchoolTypeChange={this.handleSchoolTypeChange}
-              onSchoolChange={this.handleSchoolChange}
-              onSchoolNotFoundChange={this.handleSchoolNotFoundChange}
-              country={this.state.country}
-              schoolType={this.state.schoolType}
-              ncesSchoolId={schoolId}
-              schoolName={this.state.schoolName}
-              schoolState={this.state.schoolState}
-              schoolZip={this.state.schoolZip}
-              schoolLocation={this.state.schoolLocation}
-              useGoogleLocationSearch={true}
-              showErrors={this.state.showSchoolInfoErrors}
-              showRequiredIndicator={true}
-            />
+            <p style={styles.introQuestion}>
+              Looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
+            </p>
+            <label>
+              <input
+                type="radio"
+                id="teachesYes"
+                name={this.props.question}
+                value="SOME"
+                style={styles.radio}
+                onChange={this.props.onChange}
+                checked={this.props.selection===true}
+              />
+              Yes, we’ve done {numHours} hours.
+            </label>
+            <label>
+              <input
+                type="radio"
+                id="teachesNo"
+                name={this.props.question}
+                style={styles.radio}
+                onChange={this.props.onChange}
+                value="not yet"
+                checked={this.props.selection===false}
+              />
+              Not yet.
+            </label>
+            {footer}
           </div>
-          <div style={styles.buttonDiv}>
-            <Button onClick={this.dismissSchoolInfoForm} style={styles.button} color="gray" size="large" text="Dismiss" />
-            <Button onClick={this.handleSchoolInfoSubmit} style={styles.button} size="large" text="Submit" />
-          </div>
+          {buttons}
         </div>
       );
     } else {
-      const numHours = (this.props.question === 'how_many_20_hours') ? '20' : '10';
-      let  buttons;
-      let  footer;
-      if (this.props.selection===true) {
-        footer = (<hr/>);
-        buttons = (
-          <div style={styles.buttonDiv}>
-            <Button onClick={this.props.onDismiss} style={styles.button} color="gray" size="large" text="No thanks" />
-            <Button onClick={this.props.onSubmit} style={styles.button} size="large" text="Add my school to the map!" />
-          </div>
-        );
-      } else if (this.props.selection===false) {
-        footer = (
-          <div>
-            <hr/>
-            <p>We’d love to know more about computer science opportunities at your school. Please take our survey to increase access to Computer Science in the US.</p>
-          </div>
-        );
-        buttons = (
-          <div style={styles.buttonDiv}>
-            <Button onClick={this.props.onPostpone} style={styles.button} color="gray" size="large" text="Not now" />
-            <Button onClick={this.props.onPostpone} href={pegasus('/yourschool')} style={styles.button} size="large" text="Take the survey" />
-          </div>
-        );
-      }
+      // Don't display until school name has been loaded
+      return null;
+    }
+  }
 
-      let schoolName;
-
-      if (this.state.schoolDisplayName) {
-        schoolName = this.state.schoolDisplayName;
-      } else if (this.state.schoolName) {
-        schoolName = this.state.schoolName;
-      }
-
-      if (schoolName) {
-        return (
-          <div style={styles.main}>
-            <div style={styles.header}>
-              <h2 style={styles.title}>Add {schoolName} to our map!</h2>
-              <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
-              {this.props.showUnknownError && (
-                 <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
-              )}
-            </div>
-            <div style={styles.message}>
-              <p style={styles.introQuestion}>
-                Looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
-              </p>
-              <label>
-                <input
-                  type="radio"
-                  id="teachesYes"
-                  name={this.props.question}
-                  value="SOME"
-                  style={styles.radio}
-                  onChange={this.props.onChange}
-                  checked={this.props.selection===true}
-                />
-                Yes, we’ve done {numHours} hours.
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  id="teachesNo"
-                  name={this.props.question}
-                  style={styles.radio}
-                  onChange={this.props.onChange}
-                  value="not yet"
-                  checked={this.props.selection===false}
-                />
-                Not yet.
-              </label>
-              {footer}
-            </div>
-            {buttons}
-          </div>
-          );
-      } else {
-        // Don't display until school name has been loaded
-        return null;
-      }
+  render() {
+    if (this.state.showSchoolInfoForm) {
+      return this.renderSchoolInfoForm();
+    } else {
+      return this.renderCensusForm();
     }
   }
 }
