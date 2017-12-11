@@ -55,8 +55,8 @@ class MakerController < ApplicationController
     # Must have started an application, and have said they were teaching unit 6, and confirmed their school
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
     return head :not_found unless application
-    return head :forbidden unless application.eligible_unit_6_intention? &&
-      application.has_confirmed_school? && !application.circuit_playground_discount_code_id
+    return head :forbidden unless application.admin_set_status? || (application.eligible_unit_6_intention? &&
+      application.has_confirmed_school? && !application.circuit_playground_discount_code_id)
 
     code = CircuitPlaygroundDiscountCode.claim(application.full_discount?)
     return head :not_found unless code

@@ -157,6 +157,24 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal expected, JSON.parse(@response.body)
   end
 
+  test "complete: works after admin override" do
+    sign_in @admin
+
+    post :override, params: {user: @teacher.id, full_discount: true}
+    assert_response :success
+    sign_out @admin
+
+    CircuitPlaygroundDiscountCode.create!(
+      code: 'FAKE100_asdf123',
+      full_discount: true,
+      expiration: Time.now + 30.days
+    )
+
+    sign_in @teacher
+    post :complete, params: {signature: "My name"}
+    assert_response :success
+  end
+
   test "application_status: fails if not admin" do
     sign_in @teacher
 
