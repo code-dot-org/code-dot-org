@@ -137,7 +137,7 @@ module Pd::Application
 
     # Override in derived class
     def send_decision_notification_email
-      raise 'Abstract method must be overridden by inheriting class'
+      # intentional noop
     end
 
     def self.send_all_decision_notification_emails
