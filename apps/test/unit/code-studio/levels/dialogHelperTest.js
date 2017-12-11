@@ -2,12 +2,24 @@ import { assert } from 'chai';
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';
 import $ from 'jquery';
-// We need bootstrap-sass for $.modal. In the real app, this is provided by dashboard
-import 'bootstrap-sass';
 import sinon from 'sinon';
 import { showDialog } from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
+  let stashedWindowJquery;
+  before(() => {
+    stashedWindowJquery = window.jQuery;
+    // We need bootstrap-sass for $.modal. In the real app, this is provided by dashboard
+    // boostrap-sass also depends on window.jQuery being set. We use require instead
+    // of import for boostrap-sass, otherwise babel moves the import to the top of
+    // the file (before we've globalized jQuery)
+    window.jQuery = $;
+    require('bootstrap-sass');
+  });
+
+  after(() => {
+    window.jQuery = stashedWindowJquery;
+  });
   describe('showDialog', () => {
     let parent;
     beforeEach(() => {
