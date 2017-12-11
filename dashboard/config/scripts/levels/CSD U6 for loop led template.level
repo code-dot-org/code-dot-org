@@ -37,13 +37,38 @@
       "color": null,
       "intensity": null,
       "onBoardEvent": null,
-      "forLoop_i_0_4": null
+      "forLoop_i_0_4": null,
+      "led.on": null,
+      "led.off": null,
+      "led.blink": null,
+      "led.toggle": null,
+      "led.pulse": null,
+      "buzzer.frequency": null,
+      "buzzer.note": null,
+      "buzzer.stop": null,
+      "buzzer.play": null,
+      "isPressed": null,
+      "holdtime": null,
+      "soundSensor.value": null,
+      "soundSensor.getAveragedValue": null,
+      "soundSensor.setScale": null,
+      "lightSensor.value": null,
+      "lightSensor.getAveragedValue": null,
+      "lightSensor.setScale": null,
+      "tempSensor.F": null,
+      "tempSensor.C": null,
+      "toggleSwitch.isOpen": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "buzzer.off": null
     },
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "var images = [\"image1\", \"image2\", \"image3\", \"image4\", \"image5\", \"image6\"];\r\n\r\n// When \"thumbsup_button\" is clicked,\r\n// change all of the images in the\r\n// array images to thumbs up.\r\n",
+    "start_blocks": "// Turn all of the colorLeds on\r\n\r\n// Turn all of the colorLeds off\r\n\r\n// Set all of the colorLeds to red\r\n\r\n// Set all of the colorLeds to green\r\n\r\n// Set all of the colorLeds to blue\r\n\r\n// Set all of the colorLeds to white\r\n\r\n// Create a function that takes a color as input\r\n// and switches all of the color LEDs to that color\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -72,19 +97,24 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-thumbs-o-down\" data-object-fit=\"contain\" id=\"image1\" style=\"height: 100px; width: 100px; position: absolute; left: 10px; top: 10px; margin: 0px;\" data-icon-color=\"red\"><img data-canonical-image-url=\"icon://fa-thumbs-o-down\" data-object-fit=\"contain\" id=\"image2\" style=\"height: 100px; width: 100px; position: absolute; left: 110px; top: 10px; margin: 0px;\" data-icon-color=\"orange\"><img data-canonical-image-url=\"icon://fa-thumbs-o-down\" data-object-fit=\"contain\" id=\"image3\" style=\"height: 100px; width: 100px; position: absolute; left: 210px; top: 10px; margin: 0px;\" data-icon-color=\"yellow\"><img data-canonical-image-url=\"icon://fa-thumbs-o-down\" data-object-fit=\"contain\" id=\"image4\" style=\"height: 100px; width: 100px; position: absolute; left: 10px; top: 110px; margin: 0px;\" data-icon-color=\"green\"><img data-canonical-image-url=\"icon://fa-thumbs-o-down\" data-object-fit=\"contain\" id=\"image5\" style=\"height: 100px; width: 100px; position: absolute; left: 110px; top: 110px; margin: 0px;\" data-icon-color=\"blue\"><img data-canonical-image-url=\"icon://fa-thumbs-o-down\" data-object-fit=\"contain\" id=\"image6\" style=\"height: 100px; width: 100px; position: absolute; left: 210px; top: 110px; margin: 0px;\" data-icon-color=\"purple\"><button id=\"thumbsup_button\" style=\"padding: 0px; margin: 0px; height: 100px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 10px; top: 230px; width: 300px;\">Thumbs Up!</button></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button_on\" style=\"padding: 0px; margin: 0px; height: 80px; width: 130px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 20px; top: 20px;\">ON</button><button id=\"button_off\" style=\"padding: 0px; margin: 0px; width: 130px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 170px; top: 20px; height: 80px; font-size: 30px;\">OFF</button><button id=\"button_red\" style=\"padding: 0px; margin: 0px; width: 130px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 20px; top: 120px; height: 80px; font-size: 30px;\">Red</button><button id=\"button_green\" style=\"padding: 0px; margin: 0px; width: 130px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 170px; top: 120px; height: 80px; font-size: 30px;\">Green</button><button id=\"button_blue\" style=\"padding: 0px; margin: 0px; width: 130px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 20px; top: 220px; height: 80px; font-size: 30px;\">Blue</button><button id=\"button_white\" style=\"padding: 0px; margin: 0px; width: 130px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 170px; top: 220px; height: 80px; font-size: 30px;\">White</button></div></div>",
     "hide_view_data_button": "true",
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
-    "markdown_instructions": "# Constructing a for loop from scratch\r\n\r\nNow that you've had some practice modifying for loops to process arrays, let's see if you can do it yourself.\r\n\r\n# Do This\r\n\r\nWe've provided the design elements and an array to start with, but the rest is on you.\r\n\r\n* Add an event handler to respond to the \"thumbsup_button\" being clicked\r\n* Place a _for loop_ inside the event handler\r\n* Modify the exit condition of the _for loop_ so that it will run until it gets to the end of the array `images`\r\n* Inside your _for loop_ change the current image to \"icon://fa-thumbs-o-down\"\r\n\r\n_Challenge: Can you add a second button that turns all of the images back to thumbs down?_\r\n",
-    "contained_level_names": null
+    "makerlab_enabled": "true",
+    "markdown_instructions": "# Arrays and For Loops RGB LED Project Template",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-29 23:27:09 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-30 00:03:02 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:02:59 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:03:58 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:04:49 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:05:51 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:30:50 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-06 19:32:58 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"disable_procedure_autopopulate\",\"hide_design_mode\",\"start_html\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-11-29 23:27:09 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-30 00:03:02 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:02:59 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:03:58 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:04:49 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:05:51 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-05 00:30:50 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-06 19:32:58 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"disable_procedure_autopopulate\",\"hide_design_mode\",\"start_html\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-07 00:00:29 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-07 00:03:09 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-07 00:11:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-08 19:18:02 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-12-08 22:58:24 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
