@@ -177,4 +177,25 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
     duplicate = deduplicator.get_duplicate_school_info(new_attrs)
     refute duplicate, "Did not expect to find a school info matching #{new_attrs}. Found #{duplicate.inspect}"
   end
+
+  test 'missing or blank fields with defaults do match' do
+    deduplicator = MockSchoolInfoDeduplicator.new
+    existing = create :school_info_us_private
+    new_attrs = {
+      country: existing.country,
+      school_type: existing.school_type,
+      state: existing.state,
+      zip: existing.zip,
+      school_district_id: existing.school_district_id,
+      school_district_other: nil,
+      school_district_name: existing.school_district_name,
+      school_id: existing.school_id,
+      school_other: existing.school_other,
+      school_name: existing.school_name,
+      full_address: existing.full_address,
+      validation_type: nil
+    }
+    duplicate = deduplicator.get_duplicate_school_info(new_attrs)
+    assert_equal existing, duplicate
+  end
 end

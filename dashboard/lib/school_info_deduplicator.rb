@@ -68,6 +68,12 @@ module SchoolInfoDeduplicator
       attr[attribute] = nil if attr[attribute].blank?
     end
 
+    # validation_type defaults to 'full' so make sure we match on that rather than null if it isn't set.
+    # school_district_other and school_other also have default values, but since they are nullable
+    # they will not be given those values unless explicitly set so we don't override what was passed
+    # in for them.
+    attr[:validation_type] ||= 'full'
+
     attr
   end
 end
