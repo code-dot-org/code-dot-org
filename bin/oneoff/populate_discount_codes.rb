@@ -76,7 +76,7 @@ end
 # Because this is modifying the cohort, it should not be run on prod (or if it is,
 # you need to be sure to clean up after yourself).
 def set_user_pd_eligible(teacher)
-  teacher.cohorts << Cohort.find_or_create_by('CSD-TeacherConHouston')
+  teacher.cohorts << Cohort.find_or_create_by(name: 'CSD-TeacherConHouston')
 end
 
 # This method is not used directly in this script, but can be used to create a
