@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import Button from '../Button';
 import color from "../../util/color";
+import { connect } from 'react-redux';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
 
@@ -104,4 +105,6 @@ class ResourceCard extends Component {
   }
 }
 
-export default Radium(ResourceCard);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(ResourceCard));

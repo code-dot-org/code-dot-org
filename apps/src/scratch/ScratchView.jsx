@@ -3,8 +3,8 @@ import React, {PropTypes} from 'react';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 import ScratchVisualizationColumn from './ScratchVisualizationColumn';
-import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
+import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
 
 export default class ScratchView extends React.Component {
   static propTypes = {
@@ -25,10 +25,7 @@ export default class ScratchView extends React.Component {
           >
             <ScratchVisualizationColumn />
           </div>
-          <ProtectedStatefulDiv
-            id="visualizationResizeBar"
-            className="fa fa-ellipsis-v"
-          />
+          <VisualizationResizeBar/>
           <InstructionsWithWorkspace>
             <CodeWorkspace />
           </InstructionsWithWorkspace>
