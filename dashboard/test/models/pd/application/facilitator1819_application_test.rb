@@ -132,7 +132,8 @@ module Pd::Application
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
       assert_equal 'notes', csv_answers[-2]
-      assert_equal 'accepted', csv_answers[-3]
+      assert_equal 'false', csv_answers[-3]
+      assert_equal 'accepted', csv_answers[-4]
     end
   end
 end
