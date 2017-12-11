@@ -2,21 +2,22 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
+#  id                                  :integer          not null, primary key
+#  user_id                             :integer
+#  type                                :string(255)      not null
+#  application_year                    :string(255)      not null
+#  application_type                    :string(255)      not null
+#  regional_partner_id                 :integer
+#  status                              :string(255)
+#  locked_at                           :datetime
+#  notes                               :text(65535)
+#  form_data                           :text(65535)      not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  course                              :string(255)
+#  response_scores                     :text(65535)
+#  application_guid                    :string(255)
+#  decision_notification_email_sent_at :datetime
 #
 # Indexes
 #
@@ -40,10 +41,12 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
+    OTHER_PLEASE_EXPLAIN = 'Other (Please Explain):'.freeze
     OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
+    INCOMPLETE = 'Incomplete'.freeze
 
     COMMON_OPTIONS = {
       title: %w(Mr. Mrs. Ms. Dr.),
@@ -66,6 +69,26 @@ module Pd::Application
         'American Indian/Alaska Native',
         OTHER,
         'Prefer not to say'
+      ],
+
+      course_hours_per_year: [
+        'At least 100 course hours',
+        '50 to 99 course hours',
+        'Less than 50 course hours'
+      ],
+
+      terms_per_year: [
+        '1 quarter',
+        '1 trimester',
+        '1 semester',
+        '2 trimesters',
+        'Full year'
+      ],
+      school_type: [
+        'Public school',
+        'Private school',
+        'Charter school',
+        'Other'
       ]
     }
 
@@ -198,6 +221,10 @@ module Pd::Application
 
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
+    end
+
+    def response_scores_hash
+      JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
     end
 
     protected

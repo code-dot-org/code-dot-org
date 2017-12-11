@@ -1,5 +1,6 @@
 - hoc_launch = DCDO.get('hoc_launch', nil)
 - census_announcement = DCDO.get('census_announcement', nil)
+- hoc_mode = DCDO.get('hoc_mode', nil)
 
 -# Whether we show a HOC launch background
 - show_hoc_launch_layout = hoc_launch && hoc_launch["homepage"]
@@ -40,6 +41,10 @@
   .mobile-feature{style: "width: 100%; text-align: center; "}
     %img{src: "/images/fit-300/mc/MC_Logo_Large.png", style: "position: absolute; width: 300px; top: 237px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
 
+  -# Since we're up to real Hour of Code, non-en users should see actual-hoc actions
+  - if request.language != "en"
+    - actions = [{param1_s: "cta_button", text1_s: "get_started", param2_s: "/learn"}]
+
 -# Temporary for applab 2017 hoc tutorial launch page
 - if show_hoc_launch_layout && hoc_launch_hero_variation == "applab"
   .desktop-feature
@@ -59,10 +64,15 @@
 - main_actions = capture_haml do
   -# Temporary heading text for the Hour of Code
   - if request.language == "en"
-    - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs"
+    - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs" && hoc_mode == 'actual-hoc'
       = I18n.t(:homepage_hero_hoc_is_here)
     - else
       = I18n.t(:homepage_hero_hoc_is_coming)
+  - elsif show_hoc_launch_layout && hoc_launch_hero_variation == "mc"
+    -# Now that Hour of Code is here, we want to show non-en users a heading
+    = I18n.t(:homepage_action_text_hoc)
+    %br/
+    %br/
 
   - actions.each_with_index do |entry, index|
     - display = entry[:active_s] == "hide" ? "none" : "block"

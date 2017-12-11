@@ -60,6 +60,7 @@ import {
   setFeedback
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
+import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 
 var copyrightStrings;
 
@@ -288,13 +289,8 @@ StudioApp.prototype.init = function (config) {
       containerId: config.containerId,
       embed: config.embed,
       level: config.level,
-      phone_share_url: config.send_to_phone_url,
-      sendToPhone: config.sendToPhone,
-      twitter: config.twitter,
-      app: config.app,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
-      isResponsive: getStore().getState().pageConstants.isResponsive,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -387,31 +383,18 @@ StudioApp.prototype.init = function (config) {
   // If we are in a non-english locale using our english-specific app
   // (the Spelling Bee), display a warning.
   if (config.locale !== 'en_us' && config.skinId === 'letters') {
-      this.displayWorkspaceAlert(
-        'error',
-        <div>
-          {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
-        </div>
-      );
+    this.displayWorkspaceAlert(
+      'error',
+      <div>
+        {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
+      </div>
+    );
   }
 
-  var vizResizeBar = document.getElementById('visualizationResizeBar');
-  if (vizResizeBar) {
-    dom.addMouseDownTouchEvent(vizResizeBar,
-                               _.bind(this.onMouseDownVizResizeBar, this));
-
-    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
-    // all touchend events on the page, breaking click events...
-    document.body.addEventListener('mouseup',
-                                   _.bind(this.onMouseUpVizResizeBar, this));
-    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
-    if (mouseUpTouchEventName) {
-      document.body.addEventListener(mouseUpTouchEventName,
-                                     _.bind(this.onMouseUpVizResizeBar, this));
-    }
-  }
-
-  window.addEventListener('resize', _.bind(this.onResize, this));
+  window.addEventListener('resize', this.onResize.bind(this));
+  window.addEventListener(RESIZE_VISUALIZATION_EVENT, (e) => {
+    this.resizeVisualization(e.detail);
+  });
 
   this.reset(true);
 
@@ -499,17 +482,24 @@ StudioApp.prototype.init = function (config) {
 
 StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
   if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
-    addCallouts([{
-      id: 'projectTemplateWorkspaceIconCallout',
-      element_id: '#projectTemplateWorkspaceIcon',
-      localized_text: msg.workspaceProjectTemplateLevel(),
-      qtip_config: {
-        position: {
-          my: 'top center',
-          at: 'bottom center',
-        },
-      },
-    }]);
+    // The callouts can't appear until the DOM is 100% rendered by react. The
+    // safest method is to kick off a requestAnimationFrame from an async
+    // setTimeout()
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        addCallouts([{
+          id: 'projectTemplateWorkspaceIconCallout',
+          element_id: '.projectTemplateWorkspaceIcon:visible',
+          localized_text: msg.workspaceProjectTemplateLevel(),
+          qtip_config: {
+            position: {
+              my: 'top center',
+              at: 'bottom center',
+            },
+          },
+        }]);
+      });
+    }, 0);
   }
 };
 
@@ -1259,22 +1249,6 @@ StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
   resizePinnedBelowVisualizationArea();
 };
 
-StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
-  // When we see a mouse down in the resize bar, start tracking mouse moves:
-
-  if (!this.onMouseMoveBoundHandler) {
-    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
-    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
-    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (this.mouseMoveTouchEventName) {
-      document.body.addEventListener(this.mouseMoveTouchEventName,
-                                     this.onMouseMoveBoundHandler);
-    }
-
-    event.preventDefault();
-  }
-};
-
 function applyTransformScaleToChildren(element, scale) {
   for (var i = 0; i < element.children.length; i++) {
     applyTransformScale(element.children[i], scale);
@@ -1292,30 +1266,6 @@ function applyTransformOrigin(element, origin) {
 }
 
 /**
-*  Handle mouse moves while dragging the visualization resize bar. We set
-*  styles on each of the elements directly, overriding the normal responsive
-*  classes that would typically adjust width and scale.
-*/
-StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
-  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-
-  var rect = visualizationResizeBar.getBoundingClientRect();
-  var offset;
-  var newVizWidth;
-  if (getStore().getState().isRtl) {
-    offset = window.innerWidth -
-      (window.pageXOffset + rect.left + (rect.width / 2)) -
-      parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
-    newVizWidth = (window.innerWidth - event.pageX) - offset;
-  } else {
-    offset = window.pageXOffset + rect.left + (rect.width / 2) -
-      parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
-    newVizWidth = event.pageX - offset;
-  }
-  this.resizeVisualization(newVizWidth);
-};
-
-/**
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
  */
@@ -1324,10 +1274,18 @@ StudioApp.prototype.resizeVisualization = function (width) {
     return;
   }
 
+  // We set styles on each of the elements directly, overriding the normal
+  // responsive classes that would typically adjust width and scale.
   var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
+  if (!visualization || !visualizationResizeBar || !visualizationColumn) {
+    // In unit tests, this event may be receieved when the DOM isn't fully
+    // configured.  In those cases there's no visualization to resize, so
+    // stop here.  In production we don't expect to need this early-out.
+    return;
+  }
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
@@ -1384,19 +1342,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };
-
-StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
-  // If we have been tracking mouse moves, remove the handler now:
-  if (this.onMouseMoveBoundHandler) {
-    document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
-    if (this.mouseMoveTouchEventName) {
-      document.body.removeEventListener(this.mouseMoveTouchEventName,
-                                        this.onMouseMoveBoundHandler);
-    }
-    this.onMouseMoveBoundHandler = null;
-  }
-};
-
 
 /**
 *  Updates the width of the toolbox-header to match the width of the toolbox
@@ -1455,6 +1400,12 @@ StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
+  options.channelId = project.getCurrentId();
+
+  try {
+    options.shareLink = (options.response && options.response.level_source) ||
+      project.getShareUrl();
+  } catch (e) {}
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -1900,10 +1851,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
   workspaceDiv.style.display = 'none';
 
-  if (!options.isResponsive) {
-    document.getElementById('visualizationResizeBar').style.display = 'none';
-  }
-
   // Chrome-less share page.
   if (this.share) {
     if (options.isLegacyShare || options.wireframeShare) {
@@ -1950,9 +1897,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       }
 
       if (!options.embed && !options.noHowItWorks) {
-        var runButton = document.getElementById('runButton');
-        var buttonRow = runButton.parentElement;
-        var openWorkspace = document.createElement('button');
+        const buttonRow = document.getElementById('gameButtons');
+        const openWorkspace = document.createElement('button');
         openWorkspace.setAttribute('id', 'open-workspace');
         openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 

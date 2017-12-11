@@ -3,8 +3,6 @@ module Pd::Application
     default from: 'Code.org <facilitators@code.org>'
 
     def confirmation(facilitator_application)
-      raise "Unexpected #{facilitator_application.class}" unless facilitator_application.is_a? Facilitator1819Application
-
       @application = facilitator_application
       @signed = facilitator_application.csf? ? 'Jenna Garcia' : 'Sarah Fairweather'
 

@@ -56,19 +56,20 @@ class Api::V1::Census::CensusController < ApplicationController
       errors[:nces_school_s] = "School id not found"
     end
 
-    if school
-      attrs = {school_id: school.id}
-    else
-      attrs = {
-        country: params[:country_s],
-        school_type: params[:school_type_s],
-        state: params[:school_state_s],
-        zip: params[:school_zip_s],
-        school_name: params[:school_name_s],
-        full_address: params[:school_location],
-        validation_type: SchoolInfo::VALIDATION_NONE
-      }
-    end
+    attrs =
+      if school
+        {school_id: school.id}
+      else
+        {
+          country: params[:country_s],
+          school_type: params[:school_type_s],
+          state: params[:school_state_s],
+          zip: params[:school_zip_s],
+          school_name: params[:school_name_s],
+          full_address: params[:school_location],
+          validation_type: SchoolInfo::VALIDATION_NONE
+        }
+      end
 
     school_info = get_duplicate_school_info(attrs)
     unless school_info
@@ -95,6 +96,9 @@ class Api::V1::Census::CensusController < ApplicationController
     when 'CensusHoc2017v3'
       submission = ::Census::CensusHoc2017v3.new census_params
       template = 'hoc_census_2017_pledge_receipt' if submission.pledged
+    when 'CensusTeacherBannerV1'
+      submission = ::Census::CensusTeacherBannerV1.new census_params
+      template = nil # No email sent in this case
     else
       errors[:form_version] = "Invalid form_version"
     end
@@ -103,8 +107,8 @@ class Api::V1::Census::CensusController < ApplicationController
 
     if errors.empty?
       ActiveRecord::Base.transaction do
-        school_info.save
-        submission.save
+        school_info.save!
+        submission.save!
       end
       if template
         recipient = Poste2.create_recipient(submission.submitter_email_address,
