@@ -46,24 +46,24 @@ export default class TeacherHomepage extends Component {
     showCensusBanner: this.props.showCensusBanner,
   };
 
-  onCensusBannerChange(event) {
+  handleCensusBannerChange(event) {
     this.setState({censusBannerSelection: (event.target.id==="teachesYes")});
   }
 
-  censusBannerOnSubmit() {
+  handleCensusBannerSubmit() {
     $.ajax({
       url: "/dashboardapi/v1/census/CensusTeacherBannerV1",
       type: "post",
       dataType: "json",
       data: $('#census-teacher-banner-form').serialize()
-    }).done(this.onCensusSubmitSuccess.bind(this)).fail(this.onCensusSubmitError.bind(this));
+    }).done(this.handleCensusSubmitSuccess.bind(this)).fail(this.handleCensusSubmitError.bind(this));
   }
 
-  onCensusSubmitSuccess() {
+  handleCensusSubmitSuccess() {
     this.dismissCensusBanner();
   }
 
-  onCensusSubmitError() {
+  handleCensusSubmitError() {
     this.setState({
       showCensusUnknownError: true,
     });
@@ -79,10 +79,10 @@ export default class TeacherHomepage extends Component {
     $.ajax({
       url: `/api/v1/users/${this.props.teacherId}/dismiss_census_banner`,
       type: "post",
-    }).done(this.hideCensusBanner.bind(this)).fail(this.onDismissCensusBannerError.bind(this));
+    }).done(this.hideCensusBanner.bind(this)).fail(this.handleDismissCensusBannerError.bind(this));
   }
 
-  onDismissCensusBannerError(xhr) {
+  handleDismissCensusBannerError(xhr) {
     console.error(`Failed to dismiss census banner! ${xhr.responseText}`);
     this.hideCensusBanner();
   }
@@ -91,10 +91,10 @@ export default class TeacherHomepage extends Component {
     $.ajax({
       url: `/api/v1/users/${this.props.teacherId}/postpone_census_banner`,
       type: "post",
-    }).done(this.hideCensusBanner.bind(this)).fail(this.onPostponeCensusBannerError.bind(this));
+    }).done(this.hideCensusBanner.bind(this)).fail(this.handlePostponeCensusBannerError.bind(this));
   }
 
-  onPostponeCensusBannerError(xhr) {
+  handlePostponeCensusBannerError(xhr) {
     console.error(`Failed to postpone census banner! ${xhr.responseText}`);
     this.hideCensusBanner();
   }
@@ -220,10 +220,10 @@ export default class TeacherHomepage extends Component {
                teacherName={teacherName}
                teacherEmail={teacherEmail}
                showUnknownError={this.state.showCensusUnknownError}
-               onSubmit={() => this.censusBannerOnSubmit()}
+               onSubmit={() => this.handleCensusBannerSubmit()}
                onDismiss={() => this.dismissCensusBanner()}
                onPostpone={() => this.postponeCensusBanner()}
-               onChange={(event) => this.onCensusBannerChange(event)}
+               onChange={(event) => this.handleCensusBannerChange(event)}
              />
              <br/>
            </div>
