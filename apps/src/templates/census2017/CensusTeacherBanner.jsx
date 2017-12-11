@@ -72,11 +72,6 @@ export default class CensusTeacherBanner extends Component {
     showUnknownError: PropTypes.bool,
   };
 
-  constructor() {
-    super();
-    this.bindSchoolInfoInputs = this.bindSchoolInfoInputs.bind(this);
-  }
-
   componentDidMount() {
     this.loadSchoolName(this.props.ncesSchoolId);
   }
@@ -93,41 +88,41 @@ export default class CensusTeacherBanner extends Component {
     schoolLocation: '',
   };
 
-  handleCountryChange(_, event) {
+  handleCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
     this.setState({country: newCountry});
   }
 
-  handleSchoolTypeChange(event) {
+  handleSchoolTypeChange = (event) => {
     const newType = event ? event.target.value : '';
     this.setState({schoolType: newType});
   }
 
-  handleSchoolChange(_, event) {
+  handleSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
     this.setState({ncesSchoolId: newSchool});
     this.loadSchoolName(newSchool);
   }
 
-  handleSchoolNotFoundChange(field, event) {
+  handleSchoolNotFoundChange = (field, event) => {
     const newValue = event ? event.target.value : '';
     this.setState({
       [field]: newValue
     });
   }
 
-  showSchoolInfoForm() {
+  showSchoolInfoForm = () => {
     this.setState({showSchoolInfoForm: true});
   }
 
-  hideSchoolInfoForm() {
+  hideSchoolInfoForm = () => {
     this.setState({
       showSchoolInfoForm: false,
       showSchoolInfoErrors: false,
     });
   }
 
-  dismissSchoolInfoForm() {
+  dismissSchoolInfoForm = () => {
     // Clear any state that may have been set
     this.setState({
       showSchoolInfoForm: false,
@@ -145,14 +140,14 @@ export default class CensusTeacherBanner extends Component {
     this.loadSchoolName(this.props.ncesSchoolId);
   }
 
-  handleSchoolInfoSubmit() {
+  handleSchoolInfoSubmit = () => {
     if (this.schoolInfoInputs.isValid()) {
       $.ajax({
         url: "/users.json",
         type: "post",
         dataType: "json",
         data: $("#census-school-info-form").serialize()
-      }).done(this.hideSchoolInfoForm.bind(this)).fail(this.updateSchoolInfoError.bind(this));
+      }).done(this.hideSchoolInfoForm).fail(this.updateSchoolInfoError);
     } else {
       this.setState({
         showSchoolInfoErrors: true,
@@ -160,19 +155,19 @@ export default class CensusTeacherBanner extends Component {
     }
   }
 
-  updateSchoolInfoError() {
+  updateSchoolInfoError= () => {
     // It isn't clear what could cause an error here since none of the fields are required.
     this.setState({
       showSchoolInfoUnknownError: true,
     });
   }
 
-  loadSchoolName(schoolId) {
+  loadSchoolName = (schoolId) => {
     if (schoolId && schoolId !== '-1') {
       $.ajax({
         url: `/api/v1/schools/${schoolId}`,
         type: "get",
-      }).done(this.loadSchoolNameSuccess.bind(this)).fail(this.loadSchoolNameError.bind(this));
+      }).done(this.loadSchoolNameSuccess).fail(this.loadSchoolNameError);
     } else {
       this.setState({
         schoolDisplayName: ''
@@ -180,20 +175,20 @@ export default class CensusTeacherBanner extends Component {
     }
   }
 
-  loadSchoolNameSuccess(response) {
+  loadSchoolNameSuccess = (response) => {
     this.setState({
       schoolDisplayName: response.name,
       schoolType: response.school_type,
     });
   }
 
-  loadSchoolNameError(error) {
+  loadSchoolNameError = (error) => {
     this.setState({
       schoolDisplayName: "your school",
     });
   }
 
-  bindSchoolInfoInputs(inputs) {
+  bindSchoolInfoInputs = (inputs) => {
     this.schoolInfoInputs = inputs;
   }
 
@@ -213,10 +208,10 @@ export default class CensusTeacherBanner extends Component {
             <div style={styles.message}>
               <SchoolInfoInputs
                 ref={this.bindSchoolInfoInputs}
-                onCountryChange={this.handleCountryChange.bind(this)}
-                onSchoolTypeChange={this.handleSchoolTypeChange.bind(this)}
-                onSchoolChange={this.handleSchoolChange.bind(this)}
-                onSchoolNotFoundChange={this.handleSchoolNotFoundChange.bind(this)}
+                onCountryChange={this.handleCountryChange}
+                onSchoolTypeChange={this.handleSchoolTypeChange}
+                onSchoolChange={this.handleSchoolChange}
+                onSchoolNotFoundChange={this.handleSchoolNotFoundChange}
                 country={this.state.country}
                 schoolType={this.state.schoolType}
                 ncesSchoolId={schoolId}
@@ -230,8 +225,8 @@ export default class CensusTeacherBanner extends Component {
               />
             </div>
             <div style={styles.buttonDiv}>
-              <Button onClick={this.dismissSchoolInfoForm.bind(this)} style={styles.button} color="gray" size="large" text="Dismiss" />
-              <Button onClick={this.handleSchoolInfoSubmit.bind(this)} style={styles.button} size="large" text="Submit" />
+              <Button onClick={this.dismissSchoolInfoForm} style={styles.button} color="gray" size="large" text="Dismiss" />
+              <Button onClick={this.handleSchoolInfoSubmit} style={styles.button} size="large" text="Submit" />
             </div>
           </form>
         </div>
@@ -302,7 +297,7 @@ export default class CensusTeacherBanner extends Component {
               <input type="hidden" name="submitter_email_address" value={this.props.teacherEmail}/>
               <div style={styles.header}>
                 <h2 style={styles.title}>Add {schoolName} to our map!</h2>
-                <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm.bind(this)}>Update here</a></p>
+                <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
                 {this.props.showUnknownError && (
                    <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
                 )}

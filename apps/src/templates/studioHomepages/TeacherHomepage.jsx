@@ -56,20 +56,20 @@ export default class TeacherHomepage extends Component {
       type: "post",
       dataType: "json",
       data: $('#census-teacher-banner-form').serialize()
-    }).done(this.handleCensusSubmitSuccess.bind(this)).fail(this.handleCensusSubmitError.bind(this));
+    }).done(this.handleCensusSubmitSuccess).fail(this.handleCensusSubmitError);
   }
 
-  handleCensusSubmitSuccess() {
+  handleCensusSubmitSuccess = () => {
     this.dismissCensusBanner();
   }
 
-  handleCensusSubmitError() {
+  handleCensusSubmitError = () => {
     this.setState({
       showCensusUnknownError: true,
     });
   }
 
-  hideCensusBanner() {
+  hideCensusBanner= () =>  {
     this.setState({
       showCensusBanner: false,
     });
@@ -79,10 +79,10 @@ export default class TeacherHomepage extends Component {
     $.ajax({
       url: `/api/v1/users/${this.props.teacherId}/dismiss_census_banner`,
       type: "post",
-    }).done(this.hideCensusBanner.bind(this)).fail(this.handleDismissCensusBannerError.bind(this));
+    }).done(this.hideCensusBanner).fail(this.handleDismissCensusBannerError);
   }
 
-  handleDismissCensusBannerError(xhr) {
+  handleDismissCensusBannerError = (xhr) => {
     console.error(`Failed to dismiss census banner! ${xhr.responseText}`);
     this.hideCensusBanner();
   }
@@ -91,10 +91,10 @@ export default class TeacherHomepage extends Component {
     $.ajax({
       url: `/api/v1/users/${this.props.teacherId}/postpone_census_banner`,
       type: "post",
-    }).done(this.hideCensusBanner.bind(this)).fail(this.handlePostponeCensusBannerError.bind(this));
+    }).done(this.hideCensusBanner).fail(this.handlePostponeCensusBannerError);
   }
 
-  handlePostponeCensusBannerError(xhr) {
+  handlePostponeCensusBannerError = (xhr) => {
     console.error(`Failed to postpone census banner! ${xhr.responseText}`);
     this.hideCensusBanner();
   }
