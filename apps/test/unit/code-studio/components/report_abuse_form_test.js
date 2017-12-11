@@ -11,5 +11,6 @@ describe('report_abuse_form', () => {
     assert.equal(getChannelIdFromUrl('https://studio.code.org/projects/gamelab/123abc'), "123abc");
     assert.equal(getChannelIdFromUrl('https://studio.code.org/projects/applab/123abc'), "123abc");
     assert.equal(getChannelIdFromUrl('https://studio.code.org/projects/playlab/123abc/'), "123abc");
+    assert.equal(getChannelIdFromUrl('http://localhost-studio.code.org:3000/projects/weblab/123abc/edit'), "123abc");
   });
 });
