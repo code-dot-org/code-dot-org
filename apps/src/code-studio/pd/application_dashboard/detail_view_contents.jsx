@@ -1,9 +1,10 @@
 import React, {PropTypes} from 'react';
-import {Button, FormControl} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import {Button, FormControl, InputGroup} from 'react-bootstrap';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
-import {ApplicationStatuses} from './constants';
+import {ApplicationStatuses, ApplicationFinalStatuses} from './constants';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 
 const styles = {
@@ -26,11 +27,13 @@ const styles = {
   }
 };
 
-export default class DetailViewContents extends React.Component {
+export class DetailViewContents extends React.Component {
   static propTypes = {
+    canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       regional_partner_name: PropTypes.string,
+      locked: PropTypes.bool,
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
@@ -38,27 +41,31 @@ export default class DetailViewContents extends React.Component {
       email: PropTypes.string,
       form_data: PropTypes.object,
       application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
-      response_scores: PropTypes.object
+      response_scores: PropTypes.object,
+      meets_criteria: PropTypes.string,
+      bonus_points: PropTypes.number
     }),
-    updateProps: PropTypes.func.isRequired,
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    reload: PropTypes.func.isRequired
+  };
+
+  state = {
+    status: this.props.applicationData.status,
+    locked: this.props.applicationData.locked,
+    notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:",
+    response_scores: this.props.applicationData.response_scores || {},
+    editing: false
   };
 
   componentWillMount() {
     this.statuses = ApplicationStatuses[this.props.viewType];
   }
 
-  state = {
-    status: this.props.applicationData.status,
-    notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:",
-    response_scores: this.props.applicationData.response_scores || {},
-    editing: false
-  };
-
   handleCancelEditClick = () => {
     this.setState({
       editing: false,
       status: this.props.applicationData.status,
+      locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes
     });
   };
@@ -68,6 +75,12 @@ export default class DetailViewContents extends React.Component {
       editing: true
     });
   };
+
+  handleLockClick = () => {
+    this.setState({
+      locked: !this.state.locked,
+    });
+  }
 
   handleStatusChange = (event) => {
     this.setState({
@@ -83,7 +96,7 @@ export default class DetailViewContents extends React.Component {
 
   handleScoreChange = (event) => {
     this.setState({
-      response_scores: {...this.state.response_score, [event.target.id]: event.target.value}
+      response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
     });
   }
 
@@ -94,12 +107,27 @@ export default class DetailViewContents extends React.Component {
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify(Object.assign({}, this.state, {response_scores: JSON.stringify(this.state.response_scores)}))
-    }).done(() => {
+    }).done((applicationData) => {
       this.setState({
         editing: false
       });
-      this.props.updateProps({notes: this.state.notes, status: this.state.status});
+
+      //Reload the page, but don't display the spinner
+      this.props.reload();
     });
+  };
+
+  renderLockButton = () => {
+    const statusIsLockable = ApplicationFinalStatuses.includes(this.state.status);
+    return (
+      <Button
+        title={!statusIsLockable && `Can only lock if status is one of ${ApplicationFinalStatuses.join(', ')}`}
+        disabled={!(this.state.editing && statusIsLockable)}
+        onClick={this.handleLockClick}
+      >
+        {this.state.locked ? "Unlock" : "Lock"}
+      </Button>
+    );
   };
 
   renderEditButtons = () => {
@@ -127,29 +155,60 @@ export default class DetailViewContents extends React.Component {
     }
   };
 
+  renderStatusSelect = () => {
+    const selectControl = (
+      <FormControl
+        componentClass="select"
+        disabled={this.state.locked || !this.state.editing}
+        title={this.state.locked && "The status of this application has been locked"}
+        value={this.state.status}
+        onChange={this.handleStatusChange}
+        style={styles.statusSelect}
+      >
+        {
+          this.statuses.map((status, i) => (
+            <option value={status.toLowerCase()} key={i}>
+              {status}
+            </option>
+          ))
+        }
+      </FormControl>
+    );
+
+    if (this.props.canLock) {
+      // Render the select with the lock button in a fancy InputGroup
+      return (
+        <InputGroup style={{marginRight: 5}}>
+          <InputGroup.Button>
+            {this.renderLockButton()}
+          </InputGroup.Button>
+          {selectControl}
+        </InputGroup>
+      );
+    } else {
+      // Render just the select; otherwise, rendering a single element in an
+      // InputGroup makes it look funky
+      return selectControl;
+    }
+  };
+
   renderHeader = () => {
     return (
       <div style={styles.headerWrapper}>
-        <h1>
-          {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
-        </h1>
+        <div>
+          <h1>
+            {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
+          </h1>
+          <h4>
+            Meets all criteria: {this.props.applicationData.meets_criteria}
+          </h4>
+          <h4>
+            Bonus Points: {this.props.applicationData.bonus_points}
+          </h4>
+        </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          <FormControl
-            componentClass="select"
-            disabled={!this.state.editing}
-            value={this.state.status}
-            onChange={this.handleStatusChange}
-            style={styles.statusSelect}
-          >
-            {
-              this.statuses.map((status, i) => (
-                <option value={status.toLowerCase()} key={i}>
-                  {status}
-                </option>
-              ))
-            }
-          </FormControl>
+          {this.renderStatusSelect()}
           {this.renderEditButtons()}
         </div>
       </div>
@@ -172,7 +231,7 @@ export default class DetailViewContents extends React.Component {
                 questionId="regionalPartnerName"
                 answer={this.props.applicationData.regional_partner_name}
                 layout="panel"
-                score={this.state.response_scores['regional_partner_name']}
+                score={this.state.response_scores['regionalPartnerName']}
                 possibleScores={TeacherValidScores['regionalPartnerName']}
                 editing={this.state.editing}
                 handleScoreChange={this.handleScoreChange}
@@ -239,6 +298,7 @@ export default class DetailViewContents extends React.Component {
     return (
       <div>
         {this.renderHeader()}
+        <br/>
         {this.renderTopSection()}
         {this.renderQuestions()}
         {this.renderNotes()}
@@ -246,3 +306,7 @@ export default class DetailViewContents extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  canLock: state.permissions.lockApplication,
+}))(DetailViewContents);

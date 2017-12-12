@@ -27,37 +27,37 @@ social:
 
 # Ďakujeme Vám, že organizujete udalosť Hodina kódu!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Ako poďakovanie za pomoc pri možnosti naštartovania výuky informatiky pre študentov by sme Vám radi ponúkli zadarmo sadu profesionálnych plagátov s rôznymi vzormi pre Vašu triedu. Použite kód **FREEPOSTERS** počas objednávania. (Poznámka: Plagáty sú dostupné len do vypredania zásob a musíte uhradiť poštovné. Tieto plagáty sa zasielajú zo Spojených Štátov Amerických a poštovné na Slovensko môže byť vysoké. V prípade, že nemáte dostatočné prostriedky, môžete si vytlačiť [PDF súbory](https://code.org/inspire) pre Vašu triedu.)  
+<br /> [<button>Získajte plagáty</button>](https://store.code.org/products/code-org-posters-set-of-12) Použite kód FREEPOSTERS
 
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+<% if @country == 'us' %> Irelevantne pre SR Irelevantne pre SR Irelevantne pre SR Irelevantne pre SR Irelevantne pre SR <% end %>
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **Hodina Kódu je počas <%= campaign_date('full') %> a my Vám budeme priebežne prinášať nové návody a iné zaujímavé aktuality. Viete však, čo môžete dovtedy spraviť?**
 
-## 1. Spread the word in your school and community
+## 1. Šírte slovo vo Vašej škole a komunite
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Práve ste sa zapojili do hnutia Hodina kódu. Povedzte o tom svojim priateľom **#HourOfCode #HodinaKodu**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Invite a local politician or policy maker to visit your school for the Hour of Code. Môže to podporiť vyučovanie informatiky vo vašom okolí.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Povzbuďte ostatných k účasti [našimi vzorovými e-mailmi.](<%= resolve_url('/promote/resources#sample-emails') %>) Kontaktujte Vášho riaditeľa a povzbuďte každú triedu k účasti na aktivite. Naverbujte lokálnu skupinu - skautský klub, cirkevné spoločenstvo, univerzity, odbory alebo kamarátov. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Pozvite miestneho politika alebo zákonodarcu na návštevu vašej školy počas Hodiny Kódu. Môže to podporiť vyučovanie informatiky vo vašom okolí.
 
 Na Vašej udalosti využite [plagáty, bannery, nálepky, či videá](<%= resolve_url('/promote/resources') %>).
 
 ## 2. Nájdite si dobrovoľníka vo vašom okolí, ktorý Vám pomôže s organizáciou udalosti.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Pozrite si našu mapu s dobrovoľníkmi](<%= resolve_url('https://code.org/volunteer/local') %>) a nájdite si dobrovoľníka, ktorý vie navštíviť vašu triedu alebo sa pripojiť prostredníctvom videa a tak inšpirovať Vašich študenov.
 
-## 3. Plan your Hour of Code
+## 3. Naplánujte si Vašu Hodinu kódu
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Vyberte si [ aktivitu Hodiny Kódu](https://hourofcode.com/learn) pre Vašu triedu a [ prečítajte si tento návod](<%= resolve_url('/how-to') %>).
 
-# Go beyond an Hour of Code
+# Za hranice Hodiny Kódu
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> Hodina Kódu je len začiatkom. Či už ste správca, učiteľ, alebo ambasádor, máme [ profesionálne nástroje, osnovy a zdroje, ktoré vám pomôžu priniesť hodiny informatiky na Vašu školu alebo rozšíriť ich ponuku.](https://code.org/yourschool) Ak už informatiku vyučujete, môžete použiť tieto zdroje počas Týždňa výučby informatiky pre získanie podpory zo strany správnych orgánov, rodičov a komunity.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+Na výber máte z veľkého počtu možností. Väčšina organizácií ponúkajúca návody Hodiny Kódu má k dispozícií aj osnovy na profesionálny rozvoj. Ak nájdete hodinu, ktorá sa Vám páči, spýtajte sa, ako môžete pokračovať ďalej. Pre uľahčenie začiatku sme pre Vás zvýraznili niekoľko [poskytovateľov osnov, ktorí pomôžu Vám alebo Vaším študentom pokračovať ďalej v aktivitách, ktore začali počas Hodiny.](https://hourofcode.com/beyond)
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> Hodina Kódu je len začiatkom. Väčšina organizácií ponúkajúca návody Hodiny Kódu má k dispozícií aj osnovy na profesionálny rozvoj. Pre uľahčenie začiatku sme pre Vás zvýraznili niekoľko [poskytovateľov osnov, ktorí pomôžu Vám alebo Vaším študentom pokračovať ďalej v aktivitách, ktore začali počas Hodiny.](https://hourofcode.com/beyond)
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org ponúka pre Vás alebo Vašu školu [úvodné hodiny informatiky](https://code.org/educate/curriculum/cs-fundamentals-international) preložené do viac ako 25 jazykov a to úplne zadarmo, bez akýchkoľvek nákladov. <% end %>
 
 <%= view 'popup_window.js' %>

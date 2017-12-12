@@ -5,51 +5,51 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Nižšie nájdete vzorové memorandum podporujúce Týždeň výučby informatiky a jeho ciele, ktoré môže byť použite miestnymi a okresnými zákonodarcami.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[MEMORANDUM MESTA, OBCE, KRAJA ALEBO KRAJINY č. ###] - Nakoľko Týždeň výučby informatiky zdôrazňuje, že informatika hrá kľúčovú rolu v zmene našej spoločnosti a ako informatika umožňuje inovácie a vytvára ekonomické príležitosti;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[MEMORANDUM č. ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Nakoľko počítačové technológie predstavujú integrálnu súčasť modernej kultúry a menia spôsob, ako ľudia interagujú s ostatnými a svetom okolo seba;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Nakoľko informatika mení odvetvie, vytvára nové podnikateľské možnosti, poháňa inováciu vo všetkých vedách a zvyšuje produktivitu v už zavedených ekonomických odvetviach;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Nakoľko je informatika základom technologického odvetvia v našej ekonomika a výrazne prispieva do výkonu ekonomiky na Slovensku;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Nakoľko je informatika základnou vedou pre digitálny vek;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Nakoľko je sektor informačných technológií v jedinečnej pozícií pomôcť s obnovou ekonomiky pomocou vývoja a rozvoja nových inovácií;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Nakoľko su výhľadovo otvorené tisícky pozícií v IT sektore v celej krajine;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Nakoľko poskytnutie možnosti študentom zúčastniť sa kvalitných aktivít na hodine informatiky im otvára bohaté možnosťi uplatnenia sa v odvetví a poskytuje im kritické zručnosti, ktoré budú mocť využívať počas celého ich života;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Nakoľko si každá študent zaslúži dôkladnú prípravu a IT vzdelanie vrátane prístupu ku kvalifikovaným učiteľom, technológiam a osnovam pre príslušný vek, aby sa mohlo naučiť IT schopnosti na základnej i strednej škole;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Nakoľko má informatika pred sebou viacere výzvy vrátane požiadavky na absolvovanie informatiky pre úspešné ukončenie štúdia a poskytnutia profesionálneho rozvoja pre učiteľov informatiky;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Nakoľko účasť na Hodine Kódu počas Týždňa výuky informatiky môže pomôcť demystifikovať IT a motivovať študentov k ďaľšiemu vzdelávaniu v informatike;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Nakoľko je v informatike veľa bariér vrátane nedostatočného zastúpenia žien a minorít na všetkých leveloch;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Nakoľko Grace Murray Hopper, jedna z prvých žien v IT vyvinula nové programovacie jazyky a vytvorila štandardny pre počítačové systémy, ktoré položili základy pre veľa pokrokov v IT; a
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Nakoľko je týždeň <%= campaign_date('start-long') %>, na počesť narodenín Grace Hopper, Týždňom výuky informatiky; sa týmto
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+uznášame, že [NÁRODNÝ, KRAJSKÝ, MIESTNY, ŠKOLSKÝ PARLAMENT] -
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) podporujeme zavedenie Týždňa výuky informatiky (<%= campaign_date('full') %>);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) podporujeme školy, učiteľov, rodičov a zákonodarcov v účasti v Týždni výučby informatiky umožnením študentov zúčastniť sa Hodiny Kódu;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) podporujeme školy, učiteľov, vývojárov, univerzity, podnikateľov a zákonodarcov v identifikácií mechanizmov, aby učitelia dostali kvalitný profesný udržateľný rozvoj v informatike na všetkých úrovniach školstva a podporovali sprístupnenie informatiky a jej konceptov študentom;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) podporujeme zákonodarcov pri odstraňovaní bariér, ktoré znemožňujú započítanie hodín informatiky do rámca výuky matematiky alebo vedných disciplín;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) podporuje zlepšenie uplatnenia žien a minorít v informatike vrátane zlepšenia už existujúcich programov.
 
 <%= view :signup_button %>

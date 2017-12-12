@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import {ButtonList} from '../form_components/button_list.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
+import SingleCheckbox from "../form_components/SingleCheckbox";
 
 /**
  * Helper class for dashboard forms. Provides helper methods for easily
@@ -200,7 +201,30 @@ export default class FormComponent extends React.Component {
       throw `Cannot create buttons for ${name} without options`;
     }
 
-    const answers = this.props.options[name].map(answer => {
+    const options = this.props.options[name];
+    return this.buildButtonsWithAdditionalTextFields({name, label, type, required, options, textFieldMap, ...props});
+  }
+
+  /**
+   * Construct a controlled radio or checkbox input from the options specified
+   * in this.props with additional text fields on certain answers
+   *
+   * @param {String} name - the name of the input. Should match a key in
+   *        this.props.options
+   * @param {String} label
+   * @param {String} type - should be one of 'radio' or 'check'
+   * @param {boolean} [required=true]
+   * @param {Array<String>} options - list of available options for the ButtonList.
+   * @param {Object} textFieldMap - map specifying which answers should be followed by a text field
+   *        Each key is an answer text from options.
+   *        Each value is the suffix (appended to `${name}_`) which will become the name of the new text field
+   *
+   *        For example, {"Other" : "other"} will add a text field called `${name}_other` after the "Other" option.
+   *
+   * @returns {ButtonList}
+   */
+  buildButtonsWithAdditionalTextFields({name, label, type, required, options, textFieldMap, ...props}) {
+    const answers = options.map(answer => {
       if (!(answer in textFieldMap)) {
         return answer;
       }
@@ -246,6 +270,35 @@ export default class FormComponent extends React.Component {
         validationState={this.getValidationState(name)}
         required={required}
         type={type}
+        {...props}
+      />
+    );
+  }
+
+  /**
+   * Construct a controlled single checkbox input from the provided options
+   *
+   * @param {String} name - the name of the input. Should match a key in
+   *        this.props.options
+   * @param {String} label
+   * @param {boolean} [required=true]
+   *
+   * @returns {SingleCheckbox}
+   */
+  buildSingleCheckbox({name, label, required, ...props}) {
+    if (required === undefined) {
+      required = true;
+    }
+
+    return (
+      <SingleCheckbox
+        name={name}
+        label={label}
+        required={required}
+        validationState={this.getValidationState(name)}
+        value={this.props.data[name]}
+        onChange={this.handleChange}
+        {...props}
       />
     );
   }

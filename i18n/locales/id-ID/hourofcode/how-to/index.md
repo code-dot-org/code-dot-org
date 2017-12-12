@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Bagaimana mengajar satu jam Hour of Code</h1>
 
-Bergabunglah dengan gerakan ini dan perkenalkan sekelompok siswa pada jam pertama ilmu komputer mereka dengan langkah-langkah ini. Jam Kode mudah dijalankan - bahkan untuk pemula! Jika Anda ingin set ekstra tangan untuk membantu, Anda dapat menemukan [relawan lokal](%= resolve_url('https://code.org/volunteer/local') %) untuk membantu menjalankan Jam Kode di kelas Anda.
+Bergabung dengan gerakan dan kenalkan para pelajar tentang satu jam pertama mereka dalam mempelajari ilmu komputer dengan langkah-langkah berikut. Kelas pemograman satu jam ini sungguh mudah untuk dilakukan - bahkan untuk pemula sekalipun! Jika Anda ingin set ekstra tangan untuk membantu, Anda dapat menemukan [relawan lokal](%= resolve_url('https://code.org/volunteer/local') %) untuk membantu menjalankan Jam Kode di kelas Anda.
 
 ## 1. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,7 +33,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 ## 5. Mulai Jam Anda dari Kode off dengan speaker inspirasi atau video yang
 
-** Undang [ relawan lokal ](%= kode resolve_url('https://.org/volunteer/local') %) untuk menginspirasi siswa Anda dengan berbicara tentang luasnya kemungkinan di komputer ilmu. </ strong> Ada ribuan sukarelawan di seluruh dunia yang siap membantu Jam Kode Anda melalui kunjungan kelas atau obrolan video dengan murid-murid Anda!</p> 
+** Undang [relawan lokal](%= resolve_url('https://code.org/volunteer/local') %) untuk menginspirasi siswa Anda dengan berbicara tentang luasnya kemungkinan di komputer ilmu. ** Ada ribuan sukarelawan di seluruh dunia yang siap membantu Jam Kode Anda melalui kunjungan kelas atau obrolan video dengan murid-murid Anda!
 
 **Tampilkan rekaman gambar yang menginspirasi:**
 
@@ -44,7 +44,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 - Jelaskan bagaimana teknologi mempengaruhi kehidupan kita, dengan contoh yang akan diperhatikan anak laki-laki dan anak perempuan (berbicara tentang menyelamatkan nyawa, membantu orang, menghubungkan orang, dll.).
 - Sebagai sebuah kelas, daftarkan hal-hal yang menggunakan kode dalam kehidupan sehari-hari.
-- Lihat tips untuk mendapatkan anak perempuan tertarik pada komputer ilmu [ sini ](%= kode resolve_url('https://.org/girls')%).
+- Lihat tips untuk mendapatkan anak perempuan tertarik pada komputer ilmu [sini](%= resolve_url('https://code.org/girls')%).
 
 ## 6. Kode!
 
@@ -79,7 +79,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 [/col-33]
 
-- [ sertifikat Cetak ](%= resolve_url('https:// kode.org/certificates')%) bagi siswa Anda.
+- [sertifikat Cetak ](%= resolve_url('https://code.org/certificates')%) bagi siswa Anda.
 - [Cetak stiker "Aku telah menyelesaikan Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) untuk siswa.
 - [Pesanan kustom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk sekolah Anda.
 - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
@@ -101,7 +101,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut bagaimana teknologi bekerja dan bagaimana membuat aplikasi perangkat lunak. Untuk melanjutkan perjalanan ini:
 
-- Mendorong siswa untuk terus <a kode href="%= resolve_url('https://.org/learn/beyond')%"> belajar secara online </a>.
-- <a kode href="%= resolve_url('https://.org/professional-development-workshops') %"> Hadiri </a> workshop 1-hari, di-orang untuk menerima instruksi dari berpengalaman komputer ilmu fasilitator. (Hanya pengajar AS)
+- Mendorong siswa untuk terus [belajar secara online ](%= resolve_url('https://code.org/learn/beyond')%).
+- [Hadiri](%= resolve_url('https://code.org/professional-development-workshops') %) workshop 1-hari, di-orang untuk menerima instruksi dari berpengalaman komputer ilmu fasilitator. (Hanya pengajar AS)
 
 <%= view :signup_button %>

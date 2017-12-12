@@ -27,10 +27,16 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-- **Administration**
+- **Administration & Finance**
 	- [Director of Finance & Accounting](#accounting)
+- **Education Team**
+	- [Facilitator Development Specialist](#facilitator)
+	- [Program Associate](#associate)
 - **Internships**
-	- [Education Team intern (Chicago, IL)](#edintern)
+	- [Data Intern (Seattle, WA)](#dataintern)
+	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
+	- [Events Intern (Seattle, WA)](#eventsintern)
+	
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
@@ -77,6 +83,78 @@ The ideal candidate has at least a Bachelor’s degree in Accounting, Finance, o
 - Must pass a pre-employment background check
 
 Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
+
+To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="facilitator"href="#facilitator">Facilitator Development Specialist (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for a Facilitator Development Specialist for our Education team. In this new role on our education team, you will be a coach and mentor for Code.org’s 200+ (and growing) CS Discoveries and CS Principles facilitators, who deliver in-person workshops to thousands of middle and high school teachers each year. This is a full time, exempt position.
+
+In this role you will: 
+
+- Serve as the primary point of contact for individual facilitator support questions related to facilitation practice and workshop delivery
+- Serve as a role model for excellent participant-centered facilitation and help develop those capabilities in others
+- Identify, intervene and troubleshoot with facilitators who are struggling in the program
+- Maintain ongoing pulse checks with facilitators via 1:1 check-in calls, weekly office hours, and surveys  
+- Monitor the Code.org facilitator online community and forums
+- Analyze, triage, and follow-up when necessary on issues identified from workshop survey results
+- Work closely with the Education Team Program Managers to ensure overall facilitator program cohesiveness, recommend outcomes for in-person facilitator development workshops, and collaborate on the printed facilitation guide
+- Co-facilitate in-person workshops for the 6-12 Facilitator Development Program
+- Future-looking: Potentially develop and manage a small network of contracted regional coaches
+- This role requires travel to approximately 3 facilitator development events (typically on weekends), multiple teacher professional learning events during the summer, and quarterly travel to the Seattle office, if the employee is not based in Seattle. Depending on location, office hours for facilitators may be held after business hours (ET, CT, or MT). 
+
+**Experience and Qualifications:**
+
+We are looking for an empathetic and engaging leader in the facilitation space who is highly respected by K-12 educators, and has expertise in coaching others to deliver high quality facilitation. 
+
+You will be successful in this role if you have:
+
+- Strong facilitation skills, and demonstrated ability to support and mentor others in these domains
+- Experience coaching participants in a train-the-trainer program
+- Strong attention to detail with an ability to prioritize and follow up on issues effectively
+- Excellent written and verbal communication skills
+- Exceptional interpersonal skills and empathetic approach to problem solving
+- Demonstrated cultural competence and experience with conversations and issues related to diversity, equity, and inclusion
+- Some knowledge of computer science; direct experience teaching or facilitating Code.org’s CS Discoveries or CS Principles courses is preferred
+- Familiarity with Code.org’s CS Discoveries and/or CS Principles Professional Learning Programs
+- A Bachelor's degree or higher in Education or related field preferred 
+- 5-7 years related experience 
+
+To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="associate"href="#associate">Program Associate, Education Team (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for a detail and customer-service oriented Program Associate to join Code.org’s Education team. The Education team is responsible for the creation of Code.org’s K-12 computer science courses and the success of Code.org professional development across the U.S. The Education team supports a network of roughly 400 computer science facilitators in their delivery of these professional development workshops, which have reached over 50,000 teachers in the past 3 years.
+
+Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators. This is a full-time, exemtp position. 
+
+In this role you will: 
+
+- Communicate through our customer service system to respond to professional development questions from teachers and facilitators in a timely manner
+- Communicate via email and other channels to send reminders, requests for information, and other updates to facilitators
+- Track and manage the teacher recruitment numbers and application status for Code.org’s year-long Professional Learning Program
+- Coordinate and schedule the interview and onboarding process for new facilitators
+- Update and ensure the accuracy of our teacher and facilitator lists
+- Document common workflows and processes for internal use
+- For teacher and facilitator related in-person events, support the Events Manager with upfront and onsite logistics
+- As new programs are developed to support teachers and facilitators, support the operational aspects of these programs 
+
+**Experience and Qualifications:**
+
+We are looking for a customer-service oriented self-starter who is skilled in successfully delivering projects, enjoys multi-tasking, cheerfully excels under pressure, and works independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
+
+You will be successful in this role if you have:
+
+- Passion for Code.org’s mission (experience or background in education preferred)
+- Proficiency in working with Microsoft Office and Google Docs 
+- Proficient with Excel and/or Google Sheets. 
+- 2-3 years experience in a customer support role
+- A bachelors degree (Computer science background/experience not required)
+- Ability and willingness to travel up to 15% time
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

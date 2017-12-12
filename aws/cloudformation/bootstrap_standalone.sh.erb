@@ -86,6 +86,9 @@ jq "." <<JSON > $FIRST_BOOT
 <% unless cdn_enabled -%>
     "cdn_enabled": false,
 <% end -%>
+<% if stack_name == 'staging-next' -%>
+    "assets_bucket_prefix": "adhoc",
+<% end -%>
     "override_dashboard": "dashboard-<%=subdomain%>",
     "override_pegasus": "<%=subdomain%>"
   },

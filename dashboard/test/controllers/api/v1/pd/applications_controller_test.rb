@@ -73,7 +73,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 1, data['csf_facilitators']['unreviewed']
+      assert_equal 1, data['csf_facilitators']['unreviewed']['unlocked']
     end
 
     test 'workshop admins can only see their applications in index' do
@@ -81,7 +81,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 2, data['csf_facilitators']['unreviewed']
+      assert_equal 2, data['csf_facilitators']['unreviewed']['unlocked']
     end
 
     test 'regional partners can show their applications' do
@@ -131,6 +131,30 @@ module Api::V1::Pd
       sign_in @workshop_organizer
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :forbidden
+    end
+
+    test 'workshop admins and G3 partners can lock and unlock applications' do
+      sign_in @workshop_admin
+      put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert data['locked']
+
+      g3_organizer = create :workshop_organizer
+      create :regional_partner, program_managers: [g3_organizer], group: 3
+      sign_in g3_organizer
+      put :update, params: {id: @csf_facilitator_application_with_partner, application: {status: 'accepted', locked: 'true'}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert data['locked']
+    end
+
+    test 'ONLY workdshop admins and G3 partners can lock and unlock applications' do
+      sign_in @workshop_organizer
+      put :update, params: {id: @csf_facilitator_application_with_partner, application: {status: 'accepted', locked: 'true'}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      refute data['locked']
     end
   end
 end
