@@ -20,6 +20,7 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -757,6 +758,7 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,
@@ -773,6 +775,7 @@ Craft.reportResult = function (success) {
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
         saveToProjectGallery: true,
+        disableSaveToGallery: !isSignedIn,
       });
     }
   });

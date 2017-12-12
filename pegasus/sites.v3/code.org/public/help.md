@@ -62,6 +62,12 @@ Help bring professional learning opportunities to your community by becoming a C
 
 <a href="/educate/professional-learning/facilitator"><button>Learn more</button>
 
+## Become a Code.org Regional Partner
+Code.org is selecting United States based non-profit organizations, as partners, to help spread computer science in a local, sustainable fashion. Learn more about our program.
+
+<a href="/educate/regional-partner/"><button>Learn more</button>
+
+
 ## Are you a software engineer? Volunteer with one of these organizations
 
 [col-33]

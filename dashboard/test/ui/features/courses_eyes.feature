@@ -9,7 +9,7 @@ Scenario: Student courses
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And I click selector "#header-student-courses"
-  And I wait to see "#hero"
+  And I wait to see "#minecraft"
   And I see no difference for "student courses page"
   And I close my eyes
 
@@ -19,7 +19,7 @@ Scenario: Teacher courses
   And I wait to see ".headerlinks"
   And I see "#header-teacher-courses"
   And I click selector "#header-teacher-courses"
-  And I wait to see "#hero"
+  And I wait to see "#minecraft"
   And I see no difference for "teacher courses page"
   And I close my eyes
 
@@ -31,7 +31,7 @@ Scenario: Student courses, non-english
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And I click selector "#header-student-courses"
-  And I wait to see "#hero"
+  And I wait to see "#minecraft"
   And I see no difference for "student non-english courses page"
   And I close my eyes
 

@@ -136,7 +136,7 @@ kk:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
-  company_sjusd: 'Сан Хуан Біріктірілген Мектеп аумағы'
+  company_sjusd: Сан Хуан Біріктірілген Мектеп аумағы
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -219,6 +219,8 @@ kk:
   front_join_us_more_info: "Толық мәлімет үшін <a href='https://code.org'>code.org</a> бетіне өтіңіз."
   front_join_us_code_info: "Толық мәлімет үшін code.org бетіне өтіңіз"
   front_join_us_n_students_served: "Қызмет етілген саны"
+  front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
+  front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: '%{campaign_date} аралығында өтетін Кодтау сағатын ұйымдастыр және оны осында тіркеп қой.'
   signup_name_label: 'Аты-жөніңіз'
@@ -273,9 +275,9 @@ kk:
   map_legend_hoc_events: 'Кодтау Сағаты'
   map_legend_cs_tech_jam: 'Арнайы іс-шара'
   map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
-  meta_tag_og_title: 'Кодтау сағаты мұнда'
+  meta_tag_og_title: Кодтау сағаты мұнда
   meta_tag_og_description: 'Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр жастағы ондаған миллион оқушыны қамтитын жаһандық қозғалыс.'
-  meta_tag_twitter_title: 'Кодтау сағаты мұнда'
+  meta_tag_twitter_title: Кодтау сағаты мұнда
   meta_tag_twitter_description: 'Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр жастағы ондаған миллион оқушыны қамтитын жаһандық қозғалыс.'
   twitter_default_text: "Мен осы жылы #HourOfCode (#КодтауСағаты-на) қатысамын, сен ше? @codeorg"
   hoc_faq_title: 'Жиі қойылатын сұрақтар'
@@ -336,23 +338,23 @@ kk:
   stats_nina: '"Нәтижесі әр күн сайын біркелкі &mdash; 100% қатысу." - Нина Никольс Пери, Оқытушы'
   stats_student: '"Мұны <b>өмірде бір рет берілетін</b> шансым деп білдім." - Мариана Алзат, 5 сынып оқушысы'
   stats_michael: '"Оқушыларымның сондай қызығушылықпен оқығанын <b>бұрын көрмеппін</b>." - Майкл Кларк, оқытушы'
-  resources_how_to: 'Мұғалімдер үшін қалай жүргізу жолнұсқасы'
-  resources_how_to_events: 'Қалай жүргізу жолнұсқасы'
-  resources_how_to_districts: 'Аймақтар үшін қалай жүргізу жолнұсқасы'
-  resources_how_to_officials: 'Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы'
-  resources_handouts: 'Жариялау үшін үлестірме материалы'
-  resources_one_pager: 'Бір беттік үлестірме қағаз'
-  resources_brochure: 'кітапша'
-  resources_posters: 'жарнама плакат'
-  resources_videos: 'Видеолар'
-  resources_banners: 'Әлеуметтік медиа баннерлер'
-  resources_emails: 'электрондық хат үлгісі'
-  resources_logo: 'Кодтау сағаты логотипі'
-  resources_stats: 'Статистика және жарнамалау'
-  resources_press_kit: 'Баспасөз жиынтығы'
-  resources_social: 'Әлеуметтік'
-  resources_country_resources: 'Мемлекетке айрықша ресурстар'
-  resources_stickers: 'жапсырмалар'
+  resources_how_to: Мұғалімдер үшін қалай жүргізу жолнұсқасы
+  resources_how_to_events: Қалай жүргізу жолнұсқасы
+  resources_how_to_districts: Аймақтар үшін қалай жүргізу жолнұсқасы
+  resources_how_to_officials: Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы
+  resources_handouts: Жариялау үшін үлестірме материалы
+  resources_one_pager: Бір беттік үлестірме қағаз
+  resources_brochure: кітапша
+  resources_posters: жарнама плакат
+  resources_videos: Видеолар
+  resources_banners: Әлеуметтік медиа баннерлер
+  resources_emails: электрондық хат үлгісі
+  resources_logo: Кодтау сағаты логотипі
+  resources_stats: Статистика және жарнамалау
+  resources_press_kit: Баспасөз жиынтығы
+  resources_social: Әлеуметтік
+  resources_country_resources: Мемлекетке айрықша ресурстар
+  resources_stickers: жапсырмалар
   resources_how_to_guides: 'Қалай жүргізу жолнұсқалары'
   resources_promote: 'Жарнамалау'
   resources_nav_tutorials: 'жаттығуларды көру'
@@ -362,53 +364,53 @@ kk:
   resources_banner_promote_button: "Брошюра, шабыттандырушы постер және әлеуметтік желіге арналған баннерлер арқылы басқаларды қосылуға шақырыңыз."
   resources_banner_howto_text: "Қалай"
   resources_banner_howto_button: "Оқытушы, ата-ана, аудан өкілдері үшін Кодтау сағатын ұйымдастыруға қажет ресурстар."
-  handouts_section: 'Мына үлестірме материалдарымен бөлісіңіз'
-  handouts_onepager: 'Осы бір бетті үндеухат арқылы сөз тарату'
-  handouts_brochure: 'Мұғалімдер мен мектептерге арналған осы кітапша беріңіз'
-  handouts_participationguide: 'Осы қатысу жолнұсқамен өз кодтау сағатыны жоспарла'
-  videos_title: 'Мына бейне-роликтерді шабыттандыру мақсатымен көрсетіңіз'
-  videos_what_most_schools_dont_teach: 'Мектептің көбісі үйретпейтіні (5 мин)'
-  videos_hoc_2014: 'Кодтау сағаты келді - әркім оны үйрене алады'
-  videos_obama_cs: 'Президент Обама Компьютер Ғылымы туралы'
-  videos_anybody_can_learn: 'Әркім үйрене алады(1 мин)'
-  title_country_resources: 'Мемлекетке айрықша ресурстар'
-  title_how_to_districts: 'Аймақтарға арналған кодтау сағатының нұсқауы'
-  title_how_to_events: 'Кодтау сағаты қалай өткізу'
+  handouts_section: Мына үлестірме материалдарымен бөлісіңіз
+  handouts_onepager: Осы бір бетті үндеухат арқылы сөз тарату
+  handouts_brochure: Мұғалімдер мен мектептерге арналған осы кітапша беріңіз
+  handouts_participationguide: Осы қатысу жолнұсқамен өз кодтау сағатыны жоспарла
+  videos_title: Мына бейне-роликтерді шабыттандыру мақсатымен көрсетіңіз
+  videos_what_most_schools_dont_teach: Мектептің көбісі үйретпейтіні (5 мин)
+  videos_hoc_2014: Кодтау сағаты келді - әркім оны үйрене алады
+  videos_obama_cs: Президент Обама Компьютер Ғылымы туралы
+  videos_anybody_can_learn: Әркім үйрене алады(1 мин)
+  title_country_resources: Мемлекетке айрықша ресурстар
+  title_how_to_districts: Аймақтарға арналған кодтау сағатының нұсқауы
+  title_how_to_events: Кодтау сағаты қалай өткізу
   title_how_to_organizations: '"Кодтау Сағатын" қалай ұйымдастыруға болады - Ұжымдар үшін'
   title_how_to_companies: '"Кодтау Сағатын" қалай ұйымдастыруға болады - Компаниялар үшін'
-  title_how_to_officials: 'Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы'
-  title_how_to_volunteers: 'Кодтау сағатының волонтерлерге арналған нұсқауы'
-  title_how_to_parents: 'Ата-аналарға арналған нұсқау'
-  title_how_to: 'Қалай жүргізу жолнұсқасы'
-  title_press_release: 'Сайланған өкілдерге арналған Кодтау сағатының баспасөз релизі'
-  title_op_ed: 'Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау хатының нұсқасы'
-  title_press_kit: 'Баспасөз жиынтығы'
-  title_proclamation: 'Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау резолюциясының (қарар) нұсқасы'
-  title_stats: 'Статистика және жарнамалау'
-  title_partners: 'Серіктестер'
-  title_resources: 'Ресурстар'
-  title_signup_thanks: 'Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!'
-  title_tutorial_guidelines: 'Жаттығулар бағдары'
-  title_whole_school: 'Бүкіл мектеппен қатысу'
-  events_nav_title: 'Кодтау Сағатының бастамалары'
-  events_nav_all: 'Барлық бастамалар'
-  events_nav_whole_schools: 'Бүкіл мектептер'
-  events_nav_special: 'Арнайы іс-шаралар'
-  events_nav_orgs: 'Ұйымдастықтар'
+  title_how_to_officials: Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы
+  title_how_to_volunteers: Кодтау сағатының волонтерлерге арналған нұсқауы
+  title_how_to_parents: Ата-аналарға арналған нұсқау
+  title_how_to: Қалай жүргізу жолнұсқасы
+  title_press_release: Сайланған өкілдерге арналған Кодтау сағатының баспасөз релизі
+  title_op_ed: Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау хатының нұсқасы
+  title_press_kit: Баспасөз жиынтығы
+  title_proclamation: Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау резолюциясының (қарар) нұсқасы
+  title_stats: Статистика және жарнамалау
+  title_partners: Серіктестер
+  title_resources: Ресурстар
+  title_signup_thanks: Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!
+  title_tutorial_guidelines: Жаттығулар бағдары
+  title_whole_school: Бүкіл мектеппен қатысу
+  events_nav_title: Кодтау Сағатының бастамалары
+  events_nav_all: Барлық бастамалар
+  events_nav_whole_schools: Бүкіл мектептер
+  events_nav_special: Арнайы іс-шаралар
+  events_nav_orgs: Ұйымдастықтар
   events_all_old_title: "Барлық @year Кодтау Сағаты іс-шаралары"
-  events_all_title: 'Кодтау сағатының барлық іс-шаралары'
-  events_whole_school_title: 'Бүкіл мектептік Кодтау сағаты іс-шаралары'
-  events_special_title: 'Кодтау сағатының арнайы іс-шаралары'
-  events_orgs_title: 'Серіктес ұйымдар жасайтын барлық кодтау сағаттары'
-  event: 'Бастама'
-  events: 'Бастамалар'
-  highlights_title: 'Негізгі мезеттер'
-  highlights_header: 'Кодтау Сағатының негізгі мезеттері'
-  highlights_description: 'Кодтау сағатынан алынған сүйікті сәттер.'
+  events_all_title: Кодтау сағатының барлық іс-шаралары
+  events_whole_school_title: Бүкіл мектептік Кодтау сағаты іс-шаралары
+  events_special_title: Кодтау сағатының арнайы іс-шаралары
+  events_orgs_title: Серіктес ұйымдар жасайтын барлық кодтау сағаттары
+  event: Бастама
+  events: Бастамалар
+  highlights_title: Негізгі мезеттер
+  highlights_header: Кодтау Сағатының негізгі мезеттері
+  highlights_description: Кодтау сағатынан алынған сүйікті сәттер.
   higlights_see_more: See more highlights
   highlights_readmore: Read more
-  highlights_watchvideo: 'Бейне-роликті тамашалау'
-  highlights_facebook: 'Фейсбукта бөлісу'
+  highlights_watchvideo: Бейне-роликті тамашалау
+  highlights_facebook: Фейсбукта бөлісу
   highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
   highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
   highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
@@ -444,7 +446,7 @@ kk:
   tutorial_highseas_name: "Су үстіндегі қызықты оқиғалар"
   tutorial_capython_name: "Питонның тасбақа графикасы"
   tutorial_frzn_name: "Анна және Эльзамен Кодтау"
-  tutorial_cocom_name: 'КодКомбат'
+  tutorial_cocom_name: КодКомбат
   tutorial_play-lab_name: "Ойнау лабораториясы"
   tutorial_boxisland_name: "Қорап аралы"
   tutorial_textcomp_name: "Текстіні қысқарту"
@@ -682,7 +684,7 @@ kk:
   tutorial_tap_name: "Tynker планшетте"
   tutorial_cintl_name: "Бірінші өз компьютер бағдарламасын жаз"
   tutorial_itchstop_name: "ITCH Тоқтау кадрлері анимацияся (Скретч)"
-  tutorial_tynkerpn_name: 'Пиппен табиғи саяхатқа шығу'
+  tutorial_tynkerpn_name: Пиппен табиғи саяхатқа шығу
   tutorial_tynkerpd_name: 'Пип: достарыңмен би биле'
   tutorial_persistence_name: 'Төзімділік: іргетасты қалау'
   tutorial_getloopy_name: "Циклді болып кету"
@@ -828,11 +830,11 @@ kk:
   tutorial_lbpotato_name: 'littleBits: Hot Potato...of Doom!'
   tutorial_lbguitar_name: 'littlebits: Rockstar Guitar'
   tutorial_lbio_name: "Inputs & Outputs with littleBits"
-  tutorial_wonpuppy_name: 'Dash the Puppy (E3): Dash and Dot Challenge Cards'
-  tutorial_woncue_name: 'Cue: Getting Started with Wonder Workshop''s CUE robot'
-  tutorial_wonzoo_name: 'Dot at the Petting Zoo (B2): Dash and Dot Challenge Cards'
-  tutorial_wontrip_name: 'Dash''s Road Trip (F2): Dash and Dot Challenge Cards'
-  tutorial_woncollect_name: 'Dash the Collector (B1): Dash and Dot Challenge Cards'
+  tutorial_wonpuppy_name: "Dash the Puppy (E3)"
+  tutorial_woncue_name: "Cue's Starter Guide"
+  tutorial_wonzoo_name: "Dot at the Petting Zoo (B2)"
+  tutorial_wontrip_name: "Dash's Road Trip (F2)"
+  tutorial_woncollect_name: "Dash the Collector (B1)"
   tutorial_wonsecret_name: "Cue's Secret Message"
   tutorial_hsscience_name: 'Hopscotch: Make Interactive Science Models on Your iPad/iPhone!'
   tutorial_popculture_name: "Pop Culture Data Science"
@@ -848,7 +850,7 @@ kk:
   tutorial_cacrazy_name: "Code Crazy Creatures"
   tutorial_cajump_name: "Jumping Jam"
   tutorial_carest_name: "Robo-restaurant puzzler"
-  tutorial_accai_name: "Planet Exploration with Artificial Intelligence"
+  tutorial_accai_name: "Accenture Intelligent Space Exploration"
   tutorial_vceclipse_name: "Code the Eclipse"
   tutorial_pmzero_name: "Pac-Man ZERO"
   tutorial_hsela_name: 'Telling stories: ELA + coding'
@@ -859,6 +861,19 @@ kk:
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
   tutorial_rmedr_name: "Program VEX EDR Robots with Blockly"
+  tutorial_dksky_name: 'DevKit: Build the Sky Fall App'
+  tutorial_dkcurrency_name: 'DevKit: Build the Currency King App'
+  tutorial_dkriver_name: 'DevKit: Build the River Monsters App'
+  tutorial_dkball_name: 'DevKit: Build the Bouncing Ball App'
+  tutorial_spheroit_name: 'Blocks 2: If/Then Else'
+  tutorial_gameofcodes_name: "Game Of Codes"
+  tutorial_blocklygames_name: "Blockly Games"
+  tutorial_spherohello_name: 'Text 1: Hello World'
+  tutorial_spheroarcade_name: "Sphero Arcade Playground"
+  tutorial_bcpy1_name: "World of Python"
+  tutorial_bcpy2_name: "World of Python 2"
+  tutorial_bcjs1_name: "World of JavaScript"
+  tutorial_bcjs2_name: "World of JavaScript 2"
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana батыл, ержүрек және өз жолын табуға тырысады."
   tutorial_star-wars_shortdescription: "Дроидтарды бадғарламалап үйрен де өзіңе алыс, алыс галактикадағы Жұлдызды соғыстар туралы ойын жасап ал."
@@ -1098,7 +1113,7 @@ kk:
   tutorial_robomind-nl_shortdescription: "Виртуалды роботтың кодын жаз"
   tutorial_spheroi_shortdescription: "Introduction to Lightning Lab, The Sphero App for programming Sphero robots."
   tutorial_spherol_shortdescription: "Sphero шамдарын бақылау мен бағдарламалау шығармашылығын алуға үйреніңіз."
-  tutorial_spherov_shortdescription: "Learn about Variables and Operators to program Sphero to simulate a speeding car, a hot potato game, and a fortune teller."
+  tutorial_spherov_shortdescription: "Bring Hot Potato to life with Sphero!"
   tutorial_swb_shortdescription: "Дроидтарды бадғарламалап үйрен де өзіңе алыс, алыс галактикадағы Жұлдызды соғыстар туралы ойын жасап ал."
   tutorial_build-a-galaxy_shortdescription: "Дроидтарды бадғарламалап үйрен де өзіңе алыс, алыс галактикадағы Жұлдызды соғыстар туралы ойын жасап ал."
   tutorial_alicesims_shortdescription: "Кодтауды үйрене отырып, шығармашылығыңды көтер де әңгімелерді айт. "
@@ -1284,6 +1299,19 @@ kk:
   tutorial_idowedo_shortdescription: "Design and build a robotic vehicle then program it to transport mini figures."
   tutorial_diggindwarf_shortdescription: "Dwarfs need your help to navigate, dig, and collect gems using JavaScript."
   tutorial_rmedr_shortdescription: "Program a VEX EDR robot to navigate a maze using Blockly programming."
+  tutorial_dksky_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkcurrency_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkriver_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkball_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_spheroit_shortdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_gameofcodes_shortdescription: "Build your awesome Dragon game and export it as a standalone app."
+  tutorial_blocklygames_shortdescription: "Blockly Games is a series of educational games that teach programming."
+  tutorial_spherohello_shortdescription: "Let's go beyond blocks and learn to WRITE code. Say hello to the world of JavaScript."
+  tutorial_spheroarcade_shortdescription: "Learn to code classic home and arcade games with Sphero and Apple's Swift Playgrounds."
+  tutorial_bcpy1_shortdescription: "Build your virtual 3D world with Python."
+  tutorial_bcpy2_shortdescription: "Build your own world with Python."
+  tutorial_bcjs1_shortdescription: "Build your own world with JavaScript."
+  tutorial_bcjs2_shortdescription: "Build your world in JavaScript."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Дроидтарды бадғарламалап үйрен де өзіңе алыс, алыс галактикадағы Жұлдызды соғыстар туралы ойын жасап ал."
@@ -1493,7 +1521,7 @@ kk:
   tutorial_kfr_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
   tutorial_app-inventor_longdescription: "Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes."
   tutorial_bits_longdescription: "Bit is a little, very adventurous LEGO® robot, but as with all small creatures, sometimes Bit cannot get its programs right. You can help Bit solve the challenges by figuring out which programs are needed. You do this by creating a sequence of small behavior blocks that tells Bit what to do."
-  tutorial_blockly_longdescription: "Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick"
+  tutorial_blockly_longdescription: "Got computers with slow (or non-existent) Internet access? Download the offline version of Blockly Games - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick."
   tutorial_tynker_longdescription: "Play fun coding games to learn to code. Use programming to complete a spooktacular Monster High scavenger hunt, program a Hot Wheels car, plan your war strategy against invading goblins, and even battle monsters. Learn key programming concepts and computational thinking skills as you play. Then build your own games and share them with friends!"
   tutorial_baypt_longdescription: "Baymax-ті кодта"
   tutorial_code-combat_longdescription: "Бұл зор ойында огрларды жеңіп, Python не JavaScript үйрену керек."
@@ -1523,7 +1551,7 @@ kk:
   tutorial_robomind-nl_longdescription: "Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. "
   tutorial_spheroi_longdescription: "Everyone starts somewhere. Welcome to your first Lightning Lab activity!\n\nFollow the steps to get a quick video overview of the app, learn how to create programs using the block-based interface, and gain an understanding of loops. After that, test your skills and curiosity by playing a game with your robot and the app.\n"
   tutorial_spherol_longdescription: "Dive into the power of lights in this activity. You will discover different methods to control Sphero's lights and then build programs to put the lights to work. You will create a program that powers a robotic Jack-o'-Lantern, turns Sphero into a sensor-based spinning top, and also get creative with long exposure light art."
-  tutorial_spherov_longdescription: "In this Sphero Lightning Lab activity you will learn about powerful programming commands. This activity will simulate Sphero getting pulled over by a police officer for speeding. You will also build a hot potato game program, and turn Sphero into a fortune teller to predict the future. All of this will be accomplished with variables that let you set conditional values in the Lightning Lab app. "
+  tutorial_spherov_longdescription: "It's time for another classic game powered by Sphero. Learn how to use variables, loop until, and randomness within bounds to bring Hot Potato to life. When you're all done, grab some friends and start tossing. Don't get caught with the Sphero when the time runs out!"
   tutorial_swb_longdescription: "Дроидтарды бадғарламалап үйрен де өзіңе алыс, алыс галактикадағы Жұлдызды соғыстар туралы ойын жасап ал."
   tutorial_build-a-galaxy_longdescription: "Дроидтарды бадғарламалап үйрен де өзіңе алыс, алыс галактикадағы Жұлдызды соғыстар туралы ойын жасап ал."
   tutorial_alicesims_longdescription: "Follow the animation production process from storyboarding to programming with Alice and The Sims.  Let creativity and storytelling drive your learning in a drag and drop coding environment.  The project will guide you through what is a storyboard, translating a storyboard into a programmable script, and how to program a short 3D animation. "
@@ -1616,7 +1644,7 @@ kk:
   tutorial_techikb_longdescription: "Kotlin is a new open-source programming language from JetBrains. It can be of greatest interest to people who work with Java today, although it could also appeal to all programmers who use a garbage collected runtime (Scala, Go, Python, Ruby and JavaScript). Discover Kotlin's basics in this interactive tutorial!"
   tutorial_kanostreet_longdescription: "Art and technology unite! With Kano's Street Art Hour of Code challenges, creative minds of all abilities will code with a paintbrush, making beautiful, unique artwork. Along the way, makers will learn computer science principles while using a real programming language in an intuitive and engaging way. With our teacher resources and guided content, everyone can get in on the fun."
   tutorial_nyblebot_longdescription: "Boogie Bot is a fun and engaging coding app. Bursting with life and energy, this 3D app will introduce kids to the basics of computer programming using Google's visual programming language Blockly. Boogie Bot is a dancing robot, who can be programmed to do dance moves. App Features (all features available in full version) learn to code with coding blocks, create your own dance with code, choose from several different unique dance tracks, transform the room to a trendy party zone, add stunning special effects on stage, earn coins as you learn programming constructs, decorate the room with cool stuff, play and explore in an interactive room full of hidden features, record and save a video of your awesome creation."
-  tutorial_codemojijs_longdescription: "Beginning JavaScript is designed to get students typing simple command that have a big impact on the characters actions. The students will type command that make the characters do everything from backflips to make sounds and even talk. This activity will help you learn basic JavaScript ideas and commands."
+  tutorial_codemojijs_longdescription: "Beginning JavaScript is designed to get students typing simple commands that have a big impact on the characters' actions. The students will type commands that make the characters do everything from backflips to make sounds and even talk. This activity will help you learn basic JavaScript ideas and commands."
   tutorial_bloxmobmath_longdescription: "Create your own mobile app. Learn to be an innovative designer and become a computational thinker by creating apps you and your friends can use. Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on both iOS or Android phones immediately. Anyone and everyone can create a mobile app."
   tutorial_techapf_longdescription: "The interactive tutorial aims to introduce you to useful advanced Python features and tricks you may not know yet to improve your mastery of the Python language."
   tutorial_techfpjs_longdescription: "Functional programming is one of those things that may look too hard or too theoretical to try. Wait no more! In this interactive tutorial, you'll discover functional programming through hands-on examples and exercises in JavaScript."
@@ -1654,7 +1682,7 @@ kk:
   tutorial_ozoprogram_longdescription: "Students find out how easy it is to program robots, even if their classroom doesn't have any. This teacher-guided online tutorial helps students develop programming skills and gain confidence in their ability to understand computer science through Ozobot's Blockly games. Students discover how Bit and Evo by Ozobot will upload the program through a unique method - colors flash onto the robot's light sensors and teach the it the program."
   tutorial_ozopair_longdescription: "Students who know the OzoBlockly block-based programming language learn how to work in teams as Drivers and Navigators, and then practice by creating a single program on one computer for one Ozobot robot. This is a teacher-led tutorial that requires videos to be shown at the beginning, and then guidance to help students through completing their program when needed."
   tutorial_codesnoopy_longdescription: "Team up with friends and practice your coding skills by programming Snoopy's Beagle Scouts in a fun and silly snowball fight! Beginners and pre-readers welcome - teams write their code in secret while trying to outsmart each other. With words-free code, everyone can get in on the fun! This activity supports 1- 4 players on the same device - play against friends or the computer."
-  tutorial_applabintro_longdescription: "Create your own app in JavaScript using blocks or text. You'll make a simple app with buttons, images, sounds and multiple screens that you can share with your friends or publish to a public gallery. If you've already done some coding with blocks, this is a great next step to take your programming to the next level."
+  tutorial_applabintro_longdescription: "Create your own app in JavaScript using blocks or text. You'll make a simple app with buttons, images, sounds and multiple screens that you can share with your friends or publish to a public gallery. If you've already done some coding with blocks, take your skills to the next level."
   tutorial_cslartist_longdescription: "Did you know that there's a little artist who lives inside every computer? This PDF contains a fun story embedded with puzzles that will teach your students the fundamentals of digital art as they make their own creations using pixels, algorithms and repeat loops."
   tutorial_cslscratchjr_longdescription: "CodeSpeak's \"Let's Play with the ScratchJr Kitten!\" Activity Pack is a Read Aloud Story with accompanying worksheets. The Story walks through the code for a great first project for brand new coders. A grown-up can read the story to a class of pre-reader students and then guide students to code the story in their tablets using the ScratchJr app. Students with early reading skills can read the story themselves and independently complete the Activity Pack."
   tutorial_floevents_longdescription: "Students will explore events, a concept that allows programs to respond to specific stimuli. Events are determined in bits of code called event handlers, which listen for specific events and contain instructions on how to respond. Students will learn key vocabulary and write text for event handlers in a Mad Libs-style exercise in which they create and act out event handlers of their own."
@@ -1709,6 +1737,19 @@ kk:
   tutorial_idowedo_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical programming (robotics). Children design and build models using construction bricks and bring them to life with code! Using a visual drag-and-drop programming environment and LEGO™ WeDo parts (motor and hub and optional sensors), pupils learn that physical systems can be programmed and controlled using algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_diggindwarf_longdescription: "Dwarfs need your help to navigate, dig, and collect gems!  Learn how to use JavaScript to guide your dwarf through mazes and puzzles."
   tutorial_rmedr_longdescription: "Using Blockly in Robot Mesh Studio, program a VEX EDR robot \"mimic\" online and watch it run through a maze. Students learn about basic robot movement, and how to incorporate three sensors and one output into their programming."
+  tutorial_dksky_longdescription: "Build the awesome Sky Fall game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Sky Fall template, and follow along with the video tutorial!"
+  tutorial_dkcurrency_longdescription: "Build the awesome Currency King game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Currency King template, and follow along with the video tutorial!"
+  tutorial_dkriver_longdescription: "Build the awesome River Monsters game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the River Monsters template, and follow along with the video tutorial!"
+  tutorial_dkball_longdescription: "Build the awesome Bouncing Ball game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Bouncing Ball template, and follow along with the video tutorial!"
+  tutorial_spheroit_longdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_gameofcodes_longdescription: "Build an awesome Dragon game to defend the wall, then export it as a standalone app (for iOS, Android, PC, and Mac)."
+  tutorial_blocklygames_longdescription: "Blockly Games is a series of educational games that teach programming. It is designed for children who have not had prior experience with computer programming but who wish to learn at a more challenging pace. By the end of these games, players are ready to use conventional text-based languages."
+  tutorial_spherohello_longdescription: "Have you conquered Blocks and need a new challenge? Take the logic you have learned with block-based programming and begin to learn how to program with just text. In this first Text activity learn the basics of the text canvas, loops, and some tips to get started with your first lines of JavaScript code."
+  tutorial_spheroarcade_longdescription: "In this arcade-style playground, you can recreate classic games with a Sphero SPRK+ robot while learning the basics of game design. You'll build your very own robotic renditions of some famous games like Pong, Bop It, and Pac-Man. Each game uses Sphero in a different way such as rolling on the floor, detecting gestures, or using Sphero as a joystick."
+  tutorial_bcpy1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcpy2_longdescription: 'This Hour of Code lesson is a follow-up course to World of Python. You''ll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcjs1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcjs2_longdescription: 'This Hour of Code lesson is a follow-up course to World of JavaScript. You''ll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "Ағылшын, араб, қытай (жеңілдетілген), қытай (дәстүрлі жазу), дат, голланд, фин, француз, неміс, индонезиялық, итальян, жапон, корей, норвегиялық, поляк, полинезиялық (Самоан), португал, орыс, испан, швед, түрік, украин, вьетнам"
   tutorial_star-wars_language: "Ағылшын, араб, болгар, қытай, хорват, дат, голланд, фин, француз, неміс, грек, исланд, индонезиялық, итальян, жапон, корей, норвегиялық, парсы, поляк, португал, румын, орыс, испан, швед, түрік, украин және 19-ден астам"
@@ -2123,7 +2164,7 @@ kk:
   tutorial_cacrazy_language: "Тек ағылшынша"
   tutorial_cajump_language: "Тек ағылшынша"
   tutorial_carest_language: "Тек ағылшынша"
-  tutorial_accai_language: "English, Danish, Dutch, French, German, Greek, Italian, Portuguese, Spanish"
+  tutorial_accai_language: "English, French, Italian, and Dutch"
   tutorial_vceclipse_language: "Тек ағылшынша"
   tutorial_pmzero_language: "Тек ағылшынша"
   tutorial_hsela_language: "Тек ағылшынша"
@@ -2134,6 +2175,19 @@ kk:
   tutorial_idowedo_language: "Тек ағылшынша"
   tutorial_diggindwarf_language: "Тек ағылшынша"
   tutorial_rmedr_language: "Тек ағылшынша"
+  tutorial_dksky_language: "Тек ағылшынша"
+  tutorial_dkcurrency_language: "Тек ағылшынша"
+  tutorial_dkriver_language: "Тек ағылшынша"
+  tutorial_dkball_language: "Тек ағылшынша"
+  tutorial_spheroit_language: "Тек ағылшынша"
+  tutorial_gameofcodes_language: "Тек ағылшынша"
+  tutorial_blocklygames_language: "Испан, француз, және басқа да көптеген"
+  tutorial_spherohello_language: "Тек ағылшынша"
+  tutorial_spheroarcade_language: "Chinese (Simplified), English, French, German, Japanese, Spanish"
+  tutorial_bcpy1_language: "Тек ағылшынша"
+  tutorial_bcpy2_language: "Тек ағылшынша"
+  tutorial_bcjs1_language: "Тек ағылшынша"
+  tutorial_bcjs2_language: "Тек ағылшынша"
   tutorial_athlete_string_detail_grades: "2+ сыныптарына"
   tutorial_moana_string_detail_grades: "2+ сыныптарына"
   tutorial_star-wars_string_detail_grades: "2+ сыныптарына"
@@ -2343,7 +2397,7 @@ kk:
   tutorial_kfr_string_detail_grades: "6+ сыныптарына"
   tutorial_app-inventor_string_detail_grades: "6+ сыныптарына"
   tutorial_bits_string_detail_grades: "Әріп танымайтын - 5 cынып арасы"
-  tutorial_blockly_string_detail_grades: "2+ сыныптарына"
+  tutorial_blockly_string_detail_grades: "6+ сыныптарына"
   tutorial_tynker_string_detail_grades: "көрсетпе"
   tutorial_baypt_string_detail_grades: "Барлық жастар"
   tutorial_code-combat_string_detail_grades: "көрсетпе"
@@ -2549,7 +2603,7 @@ kk:
   tutorial_cajump_string_detail_grades: "2-8 сыныптары"
   tutorial_carest_string_detail_grades: "2-8 сыныптары"
   tutorial_accai_string_detail_grades: "2-8 сыныптары"
-  tutorial_vceclipse_string_detail_grades: "9+ сыныптарына"
+  tutorial_vceclipse_string_detail_grades: "6+ сыныптарына"
   tutorial_pmzero_string_detail_grades: "6+ сыныптарына"
   tutorial_hsela_string_detail_grades: "2-8 сыныптары"
   tutorial_ticklear_string_detail_grades: "2-8 сыныптары"
@@ -2559,6 +2613,19 @@ kk:
   tutorial_idowedo_string_detail_grades: "2-8 сыныптары"
   tutorial_diggindwarf_string_detail_grades: "6+ сыныптарына"
   tutorial_rmedr_string_detail_grades: "2-8 сыныптары"
+  tutorial_dksky_string_detail_grades: "9+ сыныптарына"
+  tutorial_dkcurrency_string_detail_grades: "9+ сыныптарына"
+  tutorial_dkriver_string_detail_grades: "9+ сыныптарына"
+  tutorial_dkball_string_detail_grades: "9+ сыныптарына"
+  tutorial_spheroit_string_detail_grades: "2+ сыныптарына"
+  tutorial_gameofcodes_string_detail_grades: "2+ сыныптарына"
+  tutorial_blocklygames_string_detail_grades: "6+ сыныптарына"
+  tutorial_spherohello_string_detail_grades: "6+ сыныптарына"
+  tutorial_spheroarcade_string_detail_grades: "6+ сыныптарына"
+  tutorial_bcpy1_string_detail_grades: "6+ сыныптарына"
+  tutorial_bcpy2_string_detail_grades: "6+ сыныптарына"
+  tutorial_bcjs1_string_detail_grades: "6+ сыныптарына"
+  tutorial_bcjs2_string_detail_grades: "9+ сыныптарына"
   tutorial_athlete_string_platforms: "Барлық заманауи браузерлер"
   tutorial_moana_string_platforms: "Барлық заманауи браузерлер, Android плашеті, iPad"
   tutorial_star-wars_string_platforms: "Барлық заманауи браузерлер, Android плашеті, iPad, Android телефоны, iPhone"
@@ -2984,6 +3051,19 @@ kk:
   tutorial_idowedo_string_platforms: "All modern browsers, Android tablet, iPad, WeDo"
   tutorial_diggindwarf_string_platforms: "Chrome, Firefox, Safari"
   tutorial_rmedr_string_platforms: "Барлық заманауи браузерлер"
+  tutorial_dksky_string_platforms: "iPad, iPhone"
+  tutorial_dkcurrency_string_platforms: "iPad, iPhone"
+  tutorial_dkriver_string_platforms: "iPad, iPhone"
+  tutorial_dkball_string_platforms: "iPad, iPhone"
+  tutorial_spheroit_string_platforms: "iPad, Android планшеті, iPhone, Android телефоны, Sphero роботы"
+  tutorial_gameofcodes_string_platforms: "Барлық заманауи браузерлер, Android плашеті, Android телефоны, iPad"
+  tutorial_blocklygames_string_platforms: "Барлық заманауи браузерлер"
+  tutorial_spherohello_string_platforms: "iPad, Android планшеті, iPhone, Android телефоны, Sphero роботы"
+  tutorial_spheroarcade_string_platforms: "iPad, Android планшеті, iPhone, Android телефоны, Sphero роботы"
+  tutorial_bcpy1_string_platforms: "Барлық заманауи браузерлер"
+  tutorial_bcpy2_string_platforms: "Барлық заманауи браузерлер"
+  tutorial_bcjs1_string_platforms: "Барлық заманауи браузерлер"
+  tutorial_bcjs2_string_platforms: "Барлық заманауи браузерлер"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
@@ -3408,7 +3488,20 @@ kk:
   tutorial_ifly_string_detail_platforms: "Parrot Minidrones"
   tutorial_idowedo_string_detail_platforms: "WeDo"
   tutorial_diggindwarf_string_detail_platforms: ""
-  tutorial_rmedr_string_detail_platforms: ""
+  tutorial_rmedr_string_detail_platforms: "Vex EDR Robots"
+  tutorial_dksky_string_detail_platforms: ""
+  tutorial_dkcurrency_string_detail_platforms: ""
+  tutorial_dkriver_string_detail_platforms: ""
+  tutorial_dkball_string_detail_platforms: ""
+  tutorial_spheroit_string_detail_platforms: "Sphero роботы"
+  tutorial_gameofcodes_string_detail_platforms: ""
+  tutorial_blocklygames_string_detail_platforms: ""
+  tutorial_spherohello_string_detail_platforms: "Sphero роботы"
+  tutorial_spheroarcade_string_detail_platforms: "Sphero роботы"
+  tutorial_bcpy1_string_detail_platforms: ""
+  tutorial_bcpy2_string_detail_platforms: ""
+  tutorial_bcjs1_string_detail_platforms: ""
+  tutorial_bcjs2_string_detail_platforms: ""
   tutorial_athlete_string_detail_programming_languages: "Блоктар"
   tutorial_moana_string_detail_programming_languages: "Блоктар"
   tutorial_star-wars_string_detail_programming_languages: "Блоктар. Javascript"
@@ -3808,7 +3901,7 @@ kk:
   tutorial_wonzoo_string_detail_programming_languages: "Блоктар"
   tutorial_wontrip_string_detail_programming_languages: "Блоктар"
   tutorial_woncollect_string_detail_programming_languages: "Блоктар"
-  tutorial_wonsecret_string_detail_programming_languages: "JavaScript"
+  tutorial_wonsecret_string_detail_programming_languages: "Блоктар. Javascript"
   tutorial_hsscience_string_detail_programming_languages: "Hopscotch"
   tutorial_popculture_string_detail_programming_languages: "Тілге тәуелсіз"
   tutorial_legorobust_string_detail_programming_languages: "Блоктар"
@@ -3834,6 +3927,19 @@ kk:
   tutorial_idowedo_string_detail_programming_languages: "Scratch"
   tutorial_diggindwarf_string_detail_programming_languages: "JavaScript"
   tutorial_rmedr_string_detail_programming_languages: "Блоктар"
+  tutorial_dksky_string_detail_programming_languages: "Блоктар"
+  tutorial_dkcurrency_string_detail_programming_languages: "Блоктар"
+  tutorial_dkriver_string_detail_programming_languages: "Блоктар"
+  tutorial_dkball_string_detail_programming_languages: "Блоктар"
+  tutorial_spheroit_string_detail_programming_languages: "Блоктар, C/C++"
+  tutorial_gameofcodes_string_detail_programming_languages: "Блоктар, Ready, Unity"
+  tutorial_blocklygames_string_detail_programming_languages: "Блоктар"
+  tutorial_spherohello_string_detail_programming_languages: "JavaScript"
+  tutorial_spheroarcade_string_detail_programming_languages: "iOS/Swift"
+  tutorial_bcpy1_string_detail_programming_languages: "Python"
+  tutorial_bcpy2_string_detail_programming_languages: "Python"
+  tutorial_bcjs1_string_detail_programming_languages: "JavaScript"
+  tutorial_bcjs2_string_detail_programming_languages: "JavaScript"
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
   school_name_error: "School name is required."

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -13,7 +13,7 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Choose a tutorial
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. Bain triail as iad
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
@@ -27,25 +27,25 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and e
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Áirítear ar an taithí is fearr leis an gCód Uair den Chód ríomhairí ceangailte le Idirlíon. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+Nach bhfuil feistí leordhóthanach ann? Bain úsáid as cláir péire. When students partner up, they help each other and rely less on the teacher. Feicfidh siad freisin go bhfuil an eolaíocht eolaíochta sóisialta agus comhoibríoch.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Start your Hour of Code off with an inspiring video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Ciceáil as do Uair de Chód trí rannpháirtithe a spreagadh agus plé a dhéanamh ar an dóigh a mbíonn tionchar ag ríomhaireachta ar gach cuid dár saol.
 
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [ Uachtarán Obama ag iarraidh ar gach mac léinn ríomhaireachta a fhoghlaim ](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
@@ -58,7 +58,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## 6. Code!
 
-**Direct participants to the activity**
+**Rannpháirtithe díreacha don ghníomhaíocht**
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 

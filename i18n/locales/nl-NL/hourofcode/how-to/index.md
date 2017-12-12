@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Hoe begeleid je een CodeUur</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! Wilt u een extra set handen om te helpen, dan kunt u een [ lokale vrijwilliger](%= resolve_url('https://code.org/volunteer/local') %) vragen om te helpen een 'Hour of Code' te geven in uw klas.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

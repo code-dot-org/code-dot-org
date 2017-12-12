@@ -44,6 +44,7 @@ namespace :seed do
     'events',
     'flappy',
     'frozen',
+    'hero',
     'hourofcode',
     'infinity',
     'mc',

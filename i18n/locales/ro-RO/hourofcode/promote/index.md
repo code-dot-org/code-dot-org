@@ -9,11 +9,11 @@ nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Get your community involved in the Hour of Code
+# Implicați comunitatea dumneavoastră în Ora de Cod
 
 ## 1. Răspândește vestea
 
-Tell your friends about the **#HourOfCode**!
+Spune-le prietenilor tăi despre **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
