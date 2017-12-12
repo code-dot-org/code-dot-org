@@ -108,7 +108,6 @@ describe('RecentCourses', () => {
                 title={courses[0].title}
                 description={courses[0].description}
                 link={courses[0].link}
-                isRtl={false}
               />
             </div>
             <div key={1}>
@@ -116,7 +115,6 @@ describe('RecentCourses', () => {
                 title={courses[1].title}
                 description={courses[1].description}
                 link={courses[1].link}
-                isRtl={false}
               />
             </div>
           </div>
@@ -164,7 +162,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[0].title}
                 description={moreCourses[0].description}
                 link={moreCourses[0].link}
-                isRtl={false}
               />
             </div>
             <div key={1}>
@@ -172,7 +169,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[1].title}
                 description={moreCourses[1].description}
                 link={moreCourses[1].link}
-                isRtl={false}
               />
             </div>
             <div key={2}>
@@ -180,7 +176,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[2].title}
                 description={moreCourses[2].description}
                 link={moreCourses[2].link}
-                isRtl={false}
               />
             </div>
             <div key={3}>
@@ -188,7 +183,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[3].title}
                 description={moreCourses[3].description}
                 link={moreCourses[3].link}
-                isRtl={false}
               />
             </div>
           </div>

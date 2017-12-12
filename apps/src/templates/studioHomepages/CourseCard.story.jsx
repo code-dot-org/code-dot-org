@@ -20,7 +20,6 @@ export default storybook => {
             title={exampleCard.title}
             description={exampleCard.description}
             link={exampleCard.link}
-            isRtl={false}
           />
         )
       }
