@@ -4,11 +4,11 @@ import {Button, FormControl, InputGroup} from 'react-bootstrap';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
-import {ApplicationStatuses, ApplicationFinalStatuses} from './constants';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {
   ApplicationStatuses,
+  ApplicationFinalStatuses,
   UnmatchedFilter,
   UnmatchedLabel
 } from './constants';
