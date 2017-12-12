@@ -43,7 +43,6 @@ describe('SeeMoreCourses', () => {
               title={courses[0].title}
               description={courses[0].description}
               link={courses[0].link}
-              isRtl={false}
             />
             <div
               style={{
@@ -60,7 +59,6 @@ describe('SeeMoreCourses', () => {
               title={courses[1].title}
               description={courses[1].description}
               link={courses[1].link}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
