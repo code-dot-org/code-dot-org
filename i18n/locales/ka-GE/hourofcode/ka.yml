@@ -26,131 +26,131 @@ ka:
   not_found_desc: 'ეს გვერდი ვერ მოიძებნა'
   not_found_instructions: 'შეამოწმეთ ვებმისამართი და სცადეთ თავიდან ან აირჩიეთ ბმული ქვემოთ მოცემული სიიდან.'
   company_4-H: 4-H ახალგაზრდული განვითარება
-  company_asa: 'კლასგარეშე ჯგუფები'
+  company_asa: კლასგარეშე ჯგუფები
   company_asos: ASOS
-  company_bgca: 'ამერიკის ბიჭებისა და გოგონების კლუბი'
-  company_bsusa: 'ამერიკის სკაუტი ბიჭები'
-  company_cgcs: 'დიდი ქალაქების სკოლების საბჭო'
-  company_gsusa: 'ამერიკის სკაუტი გოგონები'
-  company_khanacademy: 'ხანის აკადემია'
+  company_bgca: ამერიკის ბიჭებისა და გოგონების კლუბი
+  company_bsusa: ამერიკის სკაუტი ბიჭები
+  company_cgcs: დიდი ქალაქების სკოლების საბჭო
+  company_gsusa: ამერიკის სკაუტი გოგონები
+  company_khanacademy: ხანის აკადემია
   company_kipp: KIPP
-  company_mesa: 'მათემატიკა ინჟინერია მეცნიერება - მიღწევები'
-  company_napcs: 'საჯარო ქარტიული სკოლების ეროვნული კავშირი'
-  company_ngcp: 'გოგონების ეროვნული კოლაბორაციული პროექტი'
-  company_teachforall: 'სწავლება ყველასათვის'
-  company_teachforamerica: 'სწავლება ამერიკისთვის'
+  company_mesa: მათემატიკა ინჟინერია მეცნიერება - მიღწევები
+  company_napcs: საჯარო ქარტიული სკოლების ეროვნული კავშირი
+  company_ngcp: გოგონების ეროვნული კოლაბორაციული პროექტი
+  company_teachforall: სწავლება ყველასათვის
+  company_teachforamerica: სწავლება ამერიკისთვის
   company_tntp: TNTP
-  company_abss: 'ალამანს-ბურლინგტონის სასკოლო სისტემა'
-  company_aldineisd: 'ალდინეს დამოუკიდებელი სასკოლო უბანი'
-  company_afterschool: 'სკოლის შემდგომ'
-  company_laalliance: 'მოკავშირეთა კოლეჯისთვის გამზადებული საჯარო სკოლები'
-  company_asd: 'არლინგტონის საჯარო სკოლები'
-  company_arlingtonpublicschools: 'არლინგტონის საჯარო სკოლები'
-  company_bisd303: 'ბეინბრიდჯის კუნძულის სასკოლო უბანი'
-  company_beavertonschooldistrict: 'ბივერტონის სასკოლო უბანი'
-  company_bellevuepublicschools: 'ბელევუს საჯარო სკოლები'
-  company_blan: 'ბლანჩესტერის ადგილობრივი სკოლები'
-  company_bremertonschools: 'ბრემერტონის სასკოლო უბანი'
-  company_browardschools: 'ბოვარდის საგრაფოს სკოლები'
-  company_cajonvalley: 'კაჯონის ველის სასკოლო უბანი'
-  company_calistogajointunified: 'კალისტოგას გაერთიანებული სასკოლო უბანი'
-  company_canalwinchesterschools: 'ვინჩესტერის არხის ადგილობრივი სკოლები'
-  company_canyonsdistrict: 'კანიონის სასკოლო უბანი'
-  company_centralunified: 'ცენტრალური გაერთიანებული სასკოლო უბანი'
-  company_cvsd: 'ცენტრალ ველის სასკოლო უბანი'
-  company_ccboe: 'ჩარლზის საგრაფოს საჯარო სკოლები'
-  company_ChathamCountySchools: 'კლეტჰემის საგრაფოს სკოლები'
-  company_chelmsfordpublicschooldistrict: 'ჩელმსფორდის სასკოლო უბანი'
-  company_cheneysd: 'ჩენის სასკოლო უბანი'
-  company_chesterfieldschools: 'ჩესტერფილდის საგრაფოს საჯარო სკოლები'
-  company_codebrooklyn: 'წერე კოდი ბრუკლინში'
-  company_cps: 'ჩიკაგოს საჯარო სკოლები'
-  company_ccsd: 'კლარკის საგრაფოს სასკოლო უბანი'
-  company_cloverparkschooldistrict: 'კლოვერ პარკის სასკოლო უბანი'
-  company_ccsoh: 'ქალაქ კოლამბუსის სასკოლო უბანი'
-  company_cresskillboe: 'კრესკილის საჯარო სკოლები'
-  company_dallasisd: 'დალასის დამოუკიდებელი სასკოლო უბანი'
-  company_disney: 'დისნეი'
-  company_dpsk12: 'დენვერის საჯარო სკოლები'
-  company_dcsdk12: 'დუგლასის საგრაფოს სკოლები'
-  company_dpsnc: 'დარემის საჯარო სკოლები'
-  company_evsd: 'ისტ ველის სასკოლო უბანი'
-  company_eastonvilleschooldistrict: 'იტონვილის სასკოლო უბანი'
-  company_enumclawschooldistrict: 'იმუნკლაუს სასკოლო უბანი'
-  company_everettsd: 'ევერეტის საჯარო სკოლები'
-  company_fsusd: 'ფეირფილდ-საისანის გაერთიანებული სასკოლო უბანი'
-  company_fayettecountypublicschools: 'ფაიეტის საგრაფოს საჯარო სკოლები'
-  company_forsythcountyschools: 'ფორსაიტის საგრაფოს სკოლები'
-  company_fcschools: 'ფრანკლინის საგრაფოს სკოლა'
-  company_fpschools: 'ფრანკლინ პირსის სასკოლო უბანი'
-  company_frederickcountypublicschools: 'ფრედერიკის საგრაფოს საჯარო სკოლები'
-  company_fultonschools: 'ფალტონის საგრაფოს სკოლები'
-  company_vadoe: 'გუბერნატორის სასკოლო პროგრამები'
-  company_gcs: 'გრენვილის საგრაფოს სკოლები'
-  company_gcisd: 'გრეიპვაინ-კოლეივილის ISD'
+  company_abss: ალამანს-ბურლინგტონის სასკოლო სისტემა
+  company_aldineisd: ალდინეს დამოუკიდებელი სასკოლო უბანი
+  company_afterschool: სკოლის შემდგომ
+  company_laalliance: მოკავშირეთა კოლეჯისთვის გამზადებული საჯარო სკოლები
+  company_asd: არლინგტონის საჯარო სკოლები
+  company_arlingtonpublicschools: არლინგტონის საჯარო სკოლები
+  company_bisd303: ბეინბრიდჯის კუნძულის სასკოლო უბანი
+  company_beavertonschooldistrict: ბივერტონის სასკოლო უბანი
+  company_bellevuepublicschools: ბელევუს საჯარო სკოლები
+  company_blan: ბლანჩესტერის ადგილობრივი სკოლები
+  company_bremertonschools: ბრემერტონის სასკოლო უბანი
+  company_browardschools: ბოვარდის საგრაფოს სკოლები
+  company_cajonvalley: კაჯონის ველის სასკოლო უბანი
+  company_calistogajointunified: კალისტოგას გაერთიანებული სასკოლო უბანი
+  company_canalwinchesterschools: ვინჩესტერის არხის ადგილობრივი სკოლები
+  company_canyonsdistrict: კანიონის სასკოლო უბანი
+  company_centralunified: ცენტრალური გაერთიანებული სასკოლო უბანი
+  company_cvsd: ცენტრალ ველის სასკოლო უბანი
+  company_ccboe: ჩარლზის საგრაფოს საჯარო სკოლები
+  company_ChathamCountySchools: კლეტჰემის საგრაფოს სკოლები
+  company_chelmsfordpublicschooldistrict: ჩელმსფორდის სასკოლო უბანი
+  company_cheneysd: ჩენის სასკოლო უბანი
+  company_chesterfieldschools: ჩესტერფილდის საგრაფოს საჯარო სკოლები
+  company_codebrooklyn: წერე კოდი ბრუკლინში
+  company_cps: ჩიკაგოს საჯარო სკოლები
+  company_ccsd: კლარკის საგრაფოს სასკოლო უბანი
+  company_cloverparkschooldistrict: კლოვერ პარკის სასკოლო უბანი
+  company_ccsoh: ქალაქ კოლამბუსის სასკოლო უბანი
+  company_cresskillboe: კრესკილის საჯარო სკოლები
+  company_dallasisd: დალასის დამოუკიდებელი სასკოლო უბანი
+  company_disney: დისნეი
+  company_dpsk12: დენვერის საჯარო სკოლები
+  company_dcsdk12: დუგლასის საგრაფოს სკოლები
+  company_dpsnc: დარემის საჯარო სკოლები
+  company_evsd: ისტ ველის სასკოლო უბანი
+  company_eastonvilleschooldistrict: იტონვილის სასკოლო უბანი
+  company_enumclawschooldistrict: იმუნკლაუს სასკოლო უბანი
+  company_everettsd: ევერეტის საჯარო სკოლები
+  company_fsusd: ფეირფილდ-საისანის გაერთიანებული სასკოლო უბანი
+  company_fayettecountypublicschools: ფაიეტის საგრაფოს საჯარო სკოლები
+  company_forsythcountyschools: ფორსაიტის საგრაფოს სკოლები
+  company_fcschools: ფრანკლინის საგრაფოს სკოლა
+  company_fpschools: ფრანკლინ პირსის სასკოლო უბანი
+  company_frederickcountypublicschools: ფრედერიკის საგრაფოს საჯარო სკოლები
+  company_fultonschools: ფალტონის საგრაფოს სკოლები
+  company_vadoe: გუბერნატორის სასკოლო პროგრამები
+  company_gcs: გრენვილის საგრაფოს სკოლები
+  company_gcisd: გრეიპვაინ-კოლეივილის ISD
   company_godaddy: Go Daddy
-  company_greenupcountyschooldistrict: 'გრინაპის საგრაფოს სკოლები'
-  company_gwinnettcountypublicschools: 'გვინეტის საგრაფოს საჯარო სკოლები'
-  company_HamptonCitySchools: 'ქალაქ ჰემპტონის სკოლები'
-  company_HanoverCountyPublicSchools: 'ჰენოვერის საგრაფოს საჯარო სკოლები'
-  company_HenricoCountyPublicSchools: 'ჰენრიკოს საგრაფოს საჯარო სკოლები'
-  company_highlineschools: 'ჰაილაინის სასკოლო უბანი'
-  company_houstonisd: 'ჰიუსტონის დამოუკიდებელი სასკოლო უბანი'
-  company_hcpss: 'ჰოვარდის საგრაფოს საჯარო სკოლები'
-  company_idla: 'იდაჰოს ციფრული სასწავლო აკადემია'
-  company_janesvilleschooldistrict: 'ჯენესვილის სასკოლო უბანი'
-  company_johnstoncountyschools: 'ჯონსტონის საგრაფოს სკოლები'
-  company_lps: 'ლინკოლნის საჯარო სკოლა'
-  company_littletonpublicschools: 'ლითლტონის საჯარო სკოლები'
-  company_lausd: 'ლოს ანჯელესის გაერთიანებული სასკოლო უბანი'
-  company_lcps: 'ლუიზას საგრაფოს საჯარო სკოლები'
-  company_lcsedu: 'ქალაქ ლინჩბურგის სკოლები'
-  company_msvl: 'მერისვილის სასკოლო უბანი'
-  company_dadeschools: 'მაიამი-დეიდის საჯარო სკოლები'
-  company_miltonps: 'მილტონის საჯარო სკოლები'
-  company_montgomeryschoolsmd: 'მონტგომერის საგრაფოს საჯარო სკოლები'
-  company_needhampublicschools: 'ნიდჰემის საჯარო სკოლები'
-  company_NelsonCountyPublicSchools: 'ნელსონის საგრაფოს საჯარო სკოლები'
-  company_newalbanyschools: 'ნიუ ალბანი პლეინის ადგილობრივი სკოლები'
-  company_newkentschools: 'ნიუ კენტის საგრაფოს საჯარო სკოლები'
-  company_newarkcityschools: 'ქალაქ ნიუვარკის სკოლები'
-  company_nnschools: 'ნიუპორტ ნიუსის საჯარო სკოლები'
-  company_newtonpublicschools: 'ნიუტონის საჯარო სკოლები'
-  company_nps: 'ნორფოლკის საჯარო სკოლები'
-  company_nycdoe: 'ნიუ იორკის განათლების დეპარტამენტი'
-  company_ohlsd: 'ოაკ ჰილსის ადგილობრივი სასკოლო უბანი'
-  company_oneclay: 'უან კლეის საგრაფოს სასკოლო უბანი'
-  company_ocps: 'ორენჯის საგრაფის სკოლები'
-  company_orangeusd: 'ორენჯის გაერთიანებული სასკოლო უბანი'
-  company_pbsd: 'პალმ ბიჩის სასკოლო უბანი'
-  company_pvusd: 'პარადაის ველის გაერთიანებული სასკოლო უბანი'
-  company_PetersburgCityPublicSchools: 'ქალაქ პიტერსბერგის საჯარო სკოლები'
-  company_pylusd: 'პლაცენტია-იორბა ლინდას გაერთიანებული სასკოლო უბანი'
-  company_PowhatanCountyPublicSchools: 'პოუჰეტენის საგრაფოს საჯარო სკოლები'
-  company_pgcps: 'პრინც ჯორჯის საგრაფოს საჯარო სკოლები'
-  company_provocityschooldistrict: 'პროვოს საჯარო სკოლები'
-  company_reyn: 'ქალაქ რეინოლდსბურგის სასკოლო უბანი'
-  company_RichmondPublicSchools: 'რიჩმონდის საჯარო სკოლები'
-  company_RockinghamCountySchools: 'როკინჰემის საგრაფოს სკოლები'
-  company_svusd: 'სედლბექ ველის გაერთიანებული სასკოლო უბანი'
-  company_sfusd: 'სან ფრანცისკოს გაერტიანებული სასკოლო უბანი'
-  company_ShenandoahCountyPublicSchools: 'შენანდოას საგრაფოს საჯარო სკოლები'
-  company_shorelineschools: 'შორლაინის სასკოლო უბანი'
-  company_sjusd: 'სან ხუანის გაერთიანებული სკოლა'
-  company_sky: 'ცა'
-  company_spokaneschools: 'სპოკეინის საჯარო სკოლები'
-  company_StaffordCountyPublicSchools: 'სტეფორდის საგრაფოს საჯარო სკოლები'
-  company_strongnet: 'სტრონგსვილის სასკოლო უბანი'
-  company_TukwilaSchoolDistrict: 'ტუკვილას სასკოლო უბანი'
-  company_vermilionschools: 'ვერმილიონის ადგილობრივი სასკოლო უბანი'
+  company_greenupcountyschooldistrict: გრინაპის საგრაფოს სკოლები
+  company_gwinnettcountypublicschools: გვინეტის საგრაფოს საჯარო სკოლები
+  company_HamptonCitySchools: ქალაქ ჰემპტონის სკოლები
+  company_HanoverCountyPublicSchools: ჰენოვერის საგრაფოს საჯარო სკოლები
+  company_HenricoCountyPublicSchools: ჰენრიკოს საგრაფოს საჯარო სკოლები
+  company_highlineschools: ჰაილაინის სასკოლო უბანი
+  company_houstonisd: ჰიუსტონის დამოუკიდებელი სასკოლო უბანი
+  company_hcpss: ჰოვარდის საგრაფოს საჯარო სკოლები
+  company_idla: იდაჰოს ციფრული სასწავლო აკადემია
+  company_janesvilleschooldistrict: ჯენესვილის სასკოლო უბანი
+  company_johnstoncountyschools: ჯონსტონის საგრაფოს სკოლები
+  company_lps: ლინკოლნის საჯარო სკოლა
+  company_littletonpublicschools: ლითლტონის საჯარო სკოლები
+  company_lausd: ლოს ანჯელესის გაერთიანებული სასკოლო უბანი
+  company_lcps: ლუიზას საგრაფოს საჯარო სკოლები
+  company_lcsedu: ქალაქ ლინჩბურგის სკოლები
+  company_msvl: მერისვილის სასკოლო უბანი
+  company_dadeschools: მაიამი-დეიდის საჯარო სკოლები
+  company_miltonps: მილტონის საჯარო სკოლები
+  company_montgomeryschoolsmd: მონტგომერის საგრაფოს საჯარო სკოლები
+  company_needhampublicschools: ნიდჰემის საჯარო სკოლები
+  company_NelsonCountyPublicSchools: ნელსონის საგრაფოს საჯარო სკოლები
+  company_newalbanyschools: ნიუ ალბანი პლეინის ადგილობრივი სკოლები
+  company_newkentschools: ნიუ კენტის საგრაფოს საჯარო სკოლები
+  company_newarkcityschools: ქალაქ ნიუვარკის სკოლები
+  company_nnschools: ნიუპორტ ნიუსის საჯარო სკოლები
+  company_newtonpublicschools: ნიუტონის საჯარო სკოლები
+  company_nps: ნორფოლკის საჯარო სკოლები
+  company_nycdoe: ნიუ იორკის განათლების დეპარტამენტი
+  company_ohlsd: ოაკ ჰილსის ადგილობრივი სასკოლო უბანი
+  company_oneclay: უან კლეის საგრაფოს სასკოლო უბანი
+  company_ocps: ორენჯის საგრაფის სკოლები
+  company_orangeusd: ორენჯის გაერთიანებული სასკოლო უბანი
+  company_pbsd: პალმ ბიჩის სასკოლო უბანი
+  company_pvusd: პარადაის ველის გაერთიანებული სასკოლო უბანი
+  company_PetersburgCityPublicSchools: ქალაქ პიტერსბერგის საჯარო სკოლები
+  company_pylusd: პლაცენტია-იორბა ლინდას გაერთიანებული სასკოლო უბანი
+  company_PowhatanCountyPublicSchools: პოუჰეტენის საგრაფოს საჯარო სკოლები
+  company_pgcps: პრინც ჯორჯის საგრაფოს საჯარო სკოლები
+  company_provocityschooldistrict: პროვოს საჯარო სკოლები
+  company_reyn: ქალაქ რეინოლდსბურგის სასკოლო უბანი
+  company_RichmondPublicSchools: რიჩმონდის საჯარო სკოლები
+  company_RockinghamCountySchools: როკინჰემის საგრაფოს სკოლები
+  company_svusd: სედლბექ ველის გაერთიანებული სასკოლო უბანი
+  company_sfusd: სან ფრანცისკოს გაერტიანებული სასკოლო უბანი
+  company_ShenandoahCountyPublicSchools: შენანდოას საგრაფოს საჯარო სკოლები
+  company_shorelineschools: შორლაინის სასკოლო უბანი
+  company_sjusd: სან ხუანის გაერთიანებული სკოლა
+  company_sky: ცა
+  company_spokaneschools: სპოკეინის საჯარო სკოლები
+  company_StaffordCountyPublicSchools: სტეფორდის საგრაფოს საჯარო სკოლები
+  company_strongnet: სტრონგსვილის სასკოლო უბანი
+  company_TukwilaSchoolDistrict: ტუკვილას სასკოლო უბანი
+  company_vermilionschools: ვერმილიონის ადგილობრივი სასკოლო უბანი
   company_vista-equity-partners: "Vista Equity-ის პარტნიორები"
-  company_walthampublicschools: 'ვოლჰამის საჯარო სკოლები'
-  company_warrencountyschools: 'უორენის საგრაფოს სკოლები'
-  company_WaynesboroPublicSchools: 'უაინესბოროს საჯარო სკოლები'
-  company_WellesleyPublicSchools: 'ველესლის საჯარო სკოლები'
-  company_wvsd208: 'უესტ ველის სასკოლო უბანი'
-  company_wuhsd: 'უითიერის გაერთიანებული საშუალო სკოლის უბანი'
-  company_wcschools: 'უილსონის საგრაფოს სკოლები'
+  company_walthampublicschools: ვოლჰამის საჯარო სკოლები
+  company_warrencountyschools: უორენის საგრაფოს სკოლები
+  company_WaynesboroPublicSchools: უაინესბოროს საჯარო სკოლები
+  company_WellesleyPublicSchools: ველესლის საჯარო სკოლები
+  company_wvsd208: უესტ ველის სასკოლო უბანი
+  company_wuhsd: უითიერის გაერთიანებული საშუალო სკოლის უბანი
+  company_wcschools: უილსონის საგრაფოს სკოლები
   company_yelp: Yelp
   nav_back_to_resources: "რესურსებში დაბრუნება"
   how_to_nav_educators: "მასწავლებლებისთვის"
@@ -219,6 +219,8 @@ ka:
   front_join_us_more_info: "მეტი ინფორმაციისთვის, გთხოვთ ეწვიოთ <a href='https://code.org'>code.org</a>-ს."
   front_join_us_code_info: "მეტი ინფორმაციისთვის, გთხოვთ ეწვიოთ code.org-ს"
   front_join_us_n_students_served: "#–მა მოსწავლემ გამოიყენა"
+  front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
+  front_join_us_learn_more: "Learn more"
   signup_closed: 'ამჟამად რეგისტრაცია კოდის ერთ საათზე დახურულია. შემდეგ კოდის ერთ საათზე დასარეგისტრირებლად გთხოვთ, კიდევ ერთხელ სცადოთ ოქტომბერში.'
   signup_header: 'დაგეგმეთ კოდის ერთი საათი მოცემულ ვადებში: %{campaign_date} და დაარეგისტრირეთ ის აქ.'
   signup_name_label: 'თქვენი სახელი'
@@ -273,9 +275,9 @@ ka:
   map_legend_hoc_events: 'კოდის ერთი საათის ღონისძიება'
   map_legend_cs_tech_jam: 'სპეციალური ღონისძიება'
   map_warning: "კოდის საათის რუკა გვიჩვენებს პირველ 200,000 დარეგისტრირებულ ღონისძიებას. ყველა დარეგისტრირებული ღონისძიების სწორი მისამართით შეგიძლიათ იხილოთ <a href='%{events_url}'>ღონისძიებების გვერდზე.</a>"
-  meta_tag_og_title: 'კოდის ერთი საათის დროა'
+  meta_tag_og_title: კოდის ერთი საათის დროა
   meta_tag_og_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
-  meta_tag_twitter_title: 'კოდის ერთი საათის დროა'
+  meta_tag_twitter_title: კოდის ერთი საათის დროა
   meta_tag_twitter_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   twitter_default_text: "მე ვიღებ მონაწილეობას წლევანდელ #HourOfCode–ში, და შენ? @codeorg"
   hoc_faq_title: 'ხშირად დასმული კითხვები'
@@ -336,23 +338,23 @@ ka:
   stats_nina: '"ყოველდღე ერთი და იგივე შედეგი იდებოდა: ასპროცენტიანი ჩართულობა" - ნინა ნიკოლს პირი, მასწავლებელი'
   stats_student: '"ვიცოდი, რომ ეს იყო ისეთი შანსი, <b>რომელიც ცხოვრებაში ერთხელ გეძლევა</b>." - მარია ალზატე, მეხუთეკლასელი'
   stats_michael: '"მე <b>ჯერ არასდროს</b> მინახავს ჩემი მოსწავლეები სწავლით ასე აღფრთოვანებულები." - მიშელ კლარკი, მასწავლებელი'
-  resources_how_to: 'სახელმძღვანელო მასწავლებლებისთვის'
-  resources_how_to_events: 'ღონისძიების ჩატარების სახელმძღვანელო'
-  resources_how_to_districts: 'სახელმძღვანელო უბნებისთვის'
-  resources_how_to_officials: 'სახელმძღვანელო საჯარო პირებისთვის'
-  resources_handouts: 'როგორ გავავრცელოთ ინფორმაცია'
-  resources_one_pager: 'ერთგვერდიანი კონსპექტი'
-  resources_brochure: 'ბროშურა'
-  resources_posters: 'პოსტერები'
-  resources_videos: 'ვიდეოები'
-  resources_banners: 'სოციალური მედია'
-  resources_emails: 'ელ.ფოსტის ნიმუშები'
-  resources_logo: 'კოდის ერთი საათის ლოგო'
-  resources_stats: 'სასარგებლო სტატისტიკა და რეცენზიები'
-  resources_press_kit: 'პრესისთვის'
-  resources_social: 'სოციალური ქსელები'
-  resources_country_resources: 'რესურსები ქვეყნების მიხედვით'
-  resources_stickers: 'სტიკერები'
+  resources_how_to: სახელმძღვანელო მასწავლებლებისთვის
+  resources_how_to_events: ღონისძიების ჩატარების სახელმძღვანელო
+  resources_how_to_districts: სახელმძღვანელო უბნებისთვის
+  resources_how_to_officials: სახელმძღვანელო საჯარო პირებისთვის
+  resources_handouts: როგორ გავავრცელოთ ინფორმაცია
+  resources_one_pager: ერთგვერდიანი კონსპექტი
+  resources_brochure: ბროშურა
+  resources_posters: პოსტერები
+  resources_videos: ვიდეოები
+  resources_banners: სოციალური მედია
+  resources_emails: ელ.ფოსტის ნიმუშები
+  resources_logo: კოდის ერთი საათის ლოგო
+  resources_stats: სასარგებლო სტატისტიკა და რეცენზიები
+  resources_press_kit: პრესისთვის
+  resources_social: სოციალური ქსელები
+  resources_country_resources: რესურსები ქვეყნების მიხედვით
+  resources_stickers: სტიკერები
   resources_how_to_guides: 'ინსტრუქციები'
   resources_promote: 'გაუწიეთ პოპულარიზაცია'
   resources_nav_tutorials: 'სცადეთ ტუტორიალები'
@@ -362,65 +364,65 @@ ka:
   resources_banner_promote_button: "წაახალისეთ სხვებიც, რომ დარეგისტრირდნენ: გამოიყენეთ ბროშურები, შთამაგონებელი პოსტერები და სოციალური ქსელების ბანერები."
   resources_banner_howto_text: "როგორ უნდა"
   resources_banner_howto_button: "რესურსი მასწავლებლების, მშობლებისა და რაიონებისთვის კოდის ერთი საათის ჩასატარებლად."
-  handouts_section: 'ამ ბროშურის გაზიარება'
-  handouts_onepager: 'გაავრცელეთ ხმა ამ ერთგვერდიანი კონსპექტის საშუალებით'
-  handouts_brochure: 'გადაეცით ეს ბროშურა მასწავლებლებსა და სკოლებს'
-  handouts_participationguide: 'დაგეგმეთ თქვენი კოდის ერთი საათი ამ სახელმძღვანელოებით'
-  videos_title: 'შთაგონებისთვის აჩვენეთ ეს ვიდეოები სტუდენტებს'
-  videos_what_most_schools_dont_teach: 'რას არ ასწავლიან სკოლების უმეტესობაში (5 წთ)'
-  videos_hoc_2014: 'კოდის ერთი საათი დაიწყო - ყველას შეუძლია სწავლა'
-  videos_obama_cs: 'პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ'
-  videos_anybody_can_learn: 'ნებისმიერს შეუძლია სწავლა (1 წთ)'
-  title_country_resources: 'რესურსები ქვეყნების მიხედვით'
-  title_how_to_districts: 'როგორ მოვაწყოთ კოდის ერთი საათი უბანში'
-  title_how_to_events: 'კოდის ერთი საათის ორგანიზება - ინსტრუქციები'
-  title_how_to_organizations: 'როგორ მოვაწყოთ კოდის ერთი საათი - ორგანიზაციებს'
-  title_how_to_companies: 'როგორ ჩავატაროთ კოდის ერთი საათი – ორგანიზაციებს'
-  title_how_to_officials: 'სახელმძღვანელო საჯარო პირებისთვის'
-  title_how_to_volunteers: 'როგორ–უნდა სახელმძღვანელო კოდის ერთი საათის მოხალისეებისთვის'
-  title_how_to_parents: 'სახელმძღვანელო მშობლებისთვის'
-  title_how_to: 'ინსტრუქციები'
-  title_press_release: 'კოდის ერთი საათის პრეს-რელიზი'
-  title_op_ed: 'კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულისა და კოდის ერთი საათის მისაწვდომობის მხარდამჭერი განცხადების ტექსტი'
-  title_press_kit: 'პრესისთვის'
-  title_proclamation: 'კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულისა და კოდის ერთი საათის მხარდამჭერი რეზოლუციის მაგალითი'
-  title_stats: 'მონაცემები და სტატისტიკა'
-  title_partners: 'პარტნიორები'
-  title_resources: 'რესურსები'
-  title_signup_thanks: 'მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!'
-  title_tutorial_guidelines: 'აქტივობების ინსტრუქციები'
-  title_whole_school: 'მთელი სკოლის ჩართულობა'
-  events_nav_title: 'კოდის ერთი საათის ღონისძიებები'
-  events_nav_all: 'ყველა ღონისძიება'
-  events_nav_whole_schools: 'სკოლები მთლიანად'
-  events_nav_special: 'სპეცილური ღონისძიებები'
-  events_nav_orgs: 'ორგანიზაციები'
+  handouts_section: ამ ბროშურის გაზიარება
+  handouts_onepager: გაავრცელეთ ხმა ამ ერთგვერდიანი კონსპექტის საშუალებით
+  handouts_brochure: გადაეცით ეს ბროშურა მასწავლებლებსა და სკოლებს
+  handouts_participationguide: დაგეგმეთ თქვენი კოდის ერთი საათი ამ სახელმძღვანელოებით
+  videos_title: შთაგონებისთვის აჩვენეთ ეს ვიდეოები სტუდენტებს
+  videos_what_most_schools_dont_teach: რას არ ასწავლიან სკოლების უმეტესობაში (5 წთ)
+  videos_hoc_2014: კოდის ერთი საათი დაიწყო - ყველას შეუძლია სწავლა
+  videos_obama_cs: პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ
+  videos_anybody_can_learn: ნებისმიერს შეუძლია სწავლა (1 წთ)
+  title_country_resources: რესურსები ქვეყნების მიხედვით
+  title_how_to_districts: როგორ მოვაწყოთ კოდის ერთი საათი უბანში
+  title_how_to_events: კოდის ერთი საათის ორგანიზება - ინსტრუქციები
+  title_how_to_organizations: როგორ მოვაწყოთ კოდის ერთი საათი - ორგანიზაციებს
+  title_how_to_companies: როგორ ჩავატაროთ კოდის ერთი საათი – ორგანიზაციებს
+  title_how_to_officials: სახელმძღვანელო საჯარო პირებისთვის
+  title_how_to_volunteers: როგორ–უნდა სახელმძღვანელო კოდის ერთი საათის მოხალისეებისთვის
+  title_how_to_parents: სახელმძღვანელო მშობლებისთვის
+  title_how_to: ინსტრუქციები
+  title_press_release: კოდის ერთი საათის პრეს-რელიზი
+  title_op_ed: კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულისა და კოდის ერთი საათის მისაწვდომობის მხარდამჭერი განცხადების ტექსტი
+  title_press_kit: პრესისთვის
+  title_proclamation: კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულისა და კოდის ერთი საათის მხარდამჭერი რეზოლუციის მაგალითი
+  title_stats: მონაცემები და სტატისტიკა
+  title_partners: პარტნიორები
+  title_resources: რესურსები
+  title_signup_thanks: მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!
+  title_tutorial_guidelines: აქტივობების ინსტრუქციები
+  title_whole_school: მთელი სკოლის ჩართულობა
+  events_nav_title: კოდის ერთი საათის ღონისძიებები
+  events_nav_all: ყველა ღონისძიება
+  events_nav_whole_schools: სკოლები მთლიანად
+  events_nav_special: სპეცილური ღონისძიებები
+  events_nav_orgs: ორგანიზაციები
   events_all_old_title: "ყველა @წლის კოდის ერთი საათის ღონისძიებები"
-  events_all_title: 'კოდის ერთი საათი ყველა ღონისძიება'
-  events_whole_school_title: 'კოდის ერთი საათის ღონისძიებები მთელი სკოლისთვის'
-  events_special_title: 'კოდის ერთი საათის სპეციალური ღონისძიებები'
-  events_orgs_title: 'კოდის ერთი საათის ყველა ღონისძიება ორგნიზებული პარტნიორი ორგანიზეციების მიერ'
-  event: 'ღონისძიება'
-  events: 'ღონისძიებები'
-  highlights_title: 'მნიშვნელოვანი ნაწილები'
-  highlights_header: 'კოდის ერთი საათის მნიშვნელოვანი მომენტები'
-  highlights_description: 'ჩვენი საყვარელი მომენტები კოდის ერთი საათის კამპანიიდან.'
-  higlights_see_more: 'იხილეთ მეტი მთავარი მომენტი'
-  highlights_readmore: 'გაიგეთ მეტი'
-  highlights_watchvideo: 'უყურეთ ვიდეოს'
-  highlights_facebook: 'გააზირეთ Facebook-ზე'
-  highlights_constant_alba_heading: 'მსახიობმა, აქტივისტმა და ანტერპრენერმა უმასპინძლეს კოდის ერთ საათს სრული პერსონალის დასწრებით The Honest Company-ში.'
-  highlights_constant_alba_short_heading: 'ჯესიკა ალბა სწავლობს კოდის ერთი საათის ფარგლებში'
-  highlights_constant_obama_heading: 'პრეზიდენტი ობამა პირველი პრეზიდენტია, რომელმაც დაწერა კოდი, თეთრ სახლში მოსწავლეებისთვის გამართულ ისტორიული კოდის საათის მასპინძლობის დროს.'
-  highlights_constant_obama_short_heading: 'მთავარი პროგრამისტი'
+  events_all_title: კოდის ერთი საათი ყველა ღონისძიება
+  events_whole_school_title: კოდის ერთი საათის ღონისძიებები მთელი სკოლისთვის
+  events_special_title: კოდის ერთი საათის სპეციალური ღონისძიებები
+  events_orgs_title: კოდის ერთი საათის ყველა ღონისძიება ორგნიზებული პარტნიორი ორგანიზეციების მიერ
+  event: ღონისძიება
+  events: ღონისძიებები
+  highlights_title: მნიშვნელოვანი ნაწილები
+  highlights_header: კოდის ერთი საათის მნიშვნელოვანი მომენტები
+  highlights_description: ჩვენი საყვარელი მომენტები კოდის ერთი საათის კამპანიიდან.
+  higlights_see_more: იხილეთ მეტი მთავარი მომენტი
+  highlights_readmore: გაიგეთ მეტი
+  highlights_watchvideo: უყურეთ ვიდეოს
+  highlights_facebook: გააზირეთ Facebook-ზე
+  highlights_constant_alba_heading: მსახიობმა, აქტივისტმა და ანტერპრენერმა უმასპინძლეს კოდის ერთ საათს სრული პერსონალის დასწრებით The Honest Company-ში.
+  highlights_constant_alba_short_heading: ჯესიკა ალბა სწავლობს კოდის ერთი საათის ფარგლებში
+  highlights_constant_obama_heading: პრეზიდენტი ობამა პირველი პრეზიდენტია, რომელმაც დაწერა კოდი, თეთრ სახლში მოსწავლეებისთვის გამართულ ისტორიული კოდის საათის მასპინძლობის დროს.
+  highlights_constant_obama_short_heading: მთავარი პროგრამისტი
   highlights_constant_malala_heading: "\"ყველა გოგო იმსახურებს შესაძლებლობას, მონაწილეობა მიიღოს იმ ტექნოლოგიის შექმნაში, რომელიც შეცვლის ჩვენს სამყაროს და შეცვლის იმას, თუ ვინ მართავს მას.\""
-  highlights_constant_malala_short_heading: 'მშვიდობის ნობელის პრემიის ლაურეატი მალალა'
-  highlights_constant_trudeau_heading: 'კანადის პრემიერ მინისტრმა ჯასტინ ტრუდომ დაწერა მარტივი თამაში, რომელიც განასახიერებდა მის საყვარელ სპორტს.'
-  highlights_constant_trudeau_short_heading: 'პრემიერ მინისტრი ჯასტინ ტრუდო წერს თამაშის კოდს'
-  highlights_constant_ny_heading: 'ეპიკური ბრძოლის შედეგად ბრუკლინის სკოლების 80%-მა შეასრულად კოდის ერთი საათი ჩიკაგოს 60%-ის წინააღმდეგ. ცუდი არაა!'
-  highlights_constant_ny_short_heading: 'ბრუკლინი ამარცხებს ჩიკაგოს'
-  highlights_constant_athletes_heading: 'ჩემპიონები და ოქროს მედალოსნები სერენა უილიამსი, ნეიმარი უმცროსი, კარმელო ანტონი და სხვები მოუწოდებენ მოსწავლეებს, საკუთარ თავს აჯობონ.'
-  highlights_constant_athletes_short_heading: 'აჯობეთ საკუთარ თავს'
+  highlights_constant_malala_short_heading: მშვიდობის ნობელის პრემიის ლაურეატი მალალა
+  highlights_constant_trudeau_heading: კანადის პრემიერ მინისტრმა ჯასტინ ტრუდომ დაწერა მარტივი თამაში, რომელიც განასახიერებდა მის საყვარელ სპორტს.
+  highlights_constant_trudeau_short_heading: პრემიერ მინისტრი ჯასტინ ტრუდო წერს თამაშის კოდს
+  highlights_constant_ny_heading: ეპიკური ბრძოლის შედეგად ბრუკლინის სკოლების 80%-მა შეასრულად კოდის ერთი საათი ჩიკაგოს 60%-ის წინააღმდეგ. ცუდი არაა!
+  highlights_constant_ny_short_heading: ბრუკლინი ამარცხებს ჩიკაგოს
+  highlights_constant_athletes_heading: ჩემპიონები და ოქროს მედალოსნები სერენა უილიამსი, ნეიმარი უმცროსი, კარმელო ანტონი და სხვები მოუწოდებენ მოსწავლეებს, საკუთარ თავს აჯობონ.
+  highlights_constant_athletes_short_heading: აჯობეთ საკუთარ თავს
   footer_copyright_message: '%{current_year} წლის Code.org-ის საავტორო უფლებები. ყველა უფლება დაცულია.'
   footer_trademark_message: 'კოდის ერთი საათი™ არის Code.org-ის სავაჭრო ნიშანი.'
   footer_menu_partners: 'პარტნიორები'
@@ -828,11 +830,11 @@ ka:
   tutorial_lbpotato_name: 'littleBits: აპოკალიპტური... ცხელი კარტოფილი!'
   tutorial_lbguitar_name: 'littlebits: როკ ვარსკვლავის გიტარა'
   tutorial_lbio_name: "შემავალი & გამომავალი მონაცემები littleBits-თან ერთად"
-  tutorial_wonpuppy_name: 'Dash the Puppy (E3): Dash and Dot Challenge Cards'
-  tutorial_woncue_name: 'Cue: Getting Started with Wonder Workshop''s CUE robot'
-  tutorial_wonzoo_name: 'Dot at the Petting Zoo (B2): Dash and Dot Challenge Cards'
-  tutorial_wontrip_name: 'Dash''s Road Trip (F2): Dash and Dot Challenge Cards'
-  tutorial_woncollect_name: 'Dash the Collector (B1): Dash and Dot Challenge Cards'
+  tutorial_wonpuppy_name: "Dash the Puppy (E3)"
+  tutorial_woncue_name: "Cue's Starter Guide"
+  tutorial_wonzoo_name: "Dot at the Petting Zoo (B2)"
+  tutorial_wontrip_name: "Dash's Road Trip (F2)"
+  tutorial_woncollect_name: "Dash the Collector (B1)"
   tutorial_wonsecret_name: "Cue-ს საიდუმლო წერილი"
   tutorial_hsscience_name: 'Hopscotch: შექმენით ინტერაქტიული სამეცნიერო მოდელები თქვენს iPad-ზე/iPhone-ზე!'
   tutorial_popculture_name: "პოპ კულტურის მონაცემთა მეცნიერება"
@@ -859,6 +861,19 @@ ka:
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "მთხრელი ჯუჯა"
   tutorial_rmedr_name: "დააპროგრამეთ VEX EDR-ის რობოტები Blockly-ს გამოყენებით"
+  tutorial_dksky_name: 'DevKit: Build the Sky Fall App'
+  tutorial_dkcurrency_name: 'DevKit: Build the Currency King App'
+  tutorial_dkriver_name: 'DevKit: Build the River Monsters App'
+  tutorial_dkball_name: 'DevKit: Build the Bouncing Ball App'
+  tutorial_spheroit_name: 'Blocks 2: If/Then Else'
+  tutorial_gameofcodes_name: "Game Of Codes"
+  tutorial_blocklygames_name: "Blockly Games"
+  tutorial_spherohello_name: 'Text 1: Hello World'
+  tutorial_spheroarcade_name: "Sphero Arcade Playground"
+  tutorial_bcpy1_name: "World of Python"
+  tutorial_bcpy2_name: "World of Python 2"
+  tutorial_bcjs1_name: "World of JavaScript"
+  tutorial_bcjs2_name: "World of JavaScript 2"
   tutorial_athlete_shortdescription: "აირჩიეთ, თუ რისი გაკეთეა გსურთ: კალათბურთის თამაში გსურთ, თუ ერთმანეთში სპორტის სხვადასხვა სახეობის შერევა!"
   tutorial_moana_shortdescription: "მოანა მამაცი და უშიშარია და მტკიცედ აქვს გადაწყვეტილი იპოვოს საკუთარი გზა."
   tutorial_star-wars_shortdescription: "ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში."
@@ -1284,6 +1299,19 @@ ka:
   tutorial_idowedo_shortdescription: "შექმენით რობოტული სატრანსპორტო საშუალება, შემდეგ კი დააპროგრამეთ ისე, რომ გადაადგილოთ მინი ფიგურები."
   tutorial_diggindwarf_shortdescription: "ჯუჯებს თქვენი დახმარება სჭირდებათ ნავიგაციაში, გამოთხრებსა და ძვირფასი ქვების მოგროვებაში JavaScript-ის გამოყენებით."
   tutorial_rmedr_shortdescription: "Blockly პროგრამირების გამოყენებით დააპროგრამეთ VEX EDR რობოტი ლაბირინთის ნავიგაციისთვის."
+  tutorial_dksky_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkcurrency_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkriver_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkball_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_spheroit_shortdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_gameofcodes_shortdescription: "Build your awesome Dragon game and export it as a standalone app."
+  tutorial_blocklygames_shortdescription: "Blockly Games is a series of educational games that teach programming."
+  tutorial_spherohello_shortdescription: "Let's go beyond blocks and learn to WRITE code. Say hello to the world of JavaScript."
+  tutorial_spheroarcade_shortdescription: "Learn to code classic home and arcade games with Sphero and Apple's Swift Playgrounds."
+  tutorial_bcpy1_shortdescription: "Build your virtual 3D world with Python."
+  tutorial_bcpy2_shortdescription: "Build your own world with Python."
+  tutorial_bcjs1_shortdescription: "Build your own world with JavaScript."
+  tutorial_bcjs2_shortdescription: "Build your world in JavaScript."
   tutorial_athlete_longdescription: "აირჩიეთ, თუ რისი გაკეთეა გსურთ: კალათბურთის თამაში გსურთ, თუ ერთმანეთში სპორტის სხვადასხვა სახეობის შერევა!"
   tutorial_moana_longdescription: "ახალი Disney-ის კოდის ერთი საათის ტუტორიალი იყენებს პროგრამირების ვიზუალურ ენას, სადაც მოსწავლეები კოდის დასაწერად უბრალოდ ქაჩავენ და აგდებენ ვიზუალურ ბლოკებს. ვიზუალური პროგრამირება არის სახალიხო და გასაგებად მარტივი გზა კოდის წერის ლოგიკის სასწავლებლად. ვიზუალური პროგრამირების ცოდნა ქმნის საფუძველს ტექსტზე დაფუძნებული პროგრამირებისთვის, რაც უფრო რთული აქტივობაა. ეს სახელმძღვანელო გამიზნულია 8+ ასაკის ბავშვებისთვის და მათთვის, ვინც პროგრამირებას პირველად ცდის. ხელმისაწვდომია 23 ენაზე და ლოკალიზებულია აშშ-ს გარეთ. ეს სახელმძღვანელო ხელმისაწვდომია უფასოდ ონლაინ და მოიცავს ციფრულ ხელსაწყოებს ინგლისურ და ესპანურ ენებზე, მასწავლებლებისა და ღონისძიების ორგანიზატორებისთვის."
   tutorial_star-wars_longdescription: "ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში."
@@ -1545,7 +1573,7 @@ ka:
   tutorial_solopython_longdescription: "შეისწავლეთ Python-ის საფუძვლები SoloLearn-ის Python-ის აპლიკაციის პირველი მოდულის გამოყენებით, გადახედეთ დისკუსიებსა და კომენტარებს, რათა უკეთ გაიგოთ ყველაფერი, მასალის გასამტკიცებლად გაუშვით კოდის მაგალითები კომპილატორში. დაწერეთ და დააკომპილირეთ მარტივი აპლიკაცია, რომელიც მიიღებს თქვენს სახელს შეყვანილი მნიშვნელობის სახით, დათვლის ასოების რაოდენობას და გამოიყვანს შედეგს. გააზიარეთ და მიიღეთ ერთობის დადებითი შეფასებები."
   tutorial_kodableint_longdescription: "Students will learn about the role of a programmer in making machines function. Students will focus on sequence and practice giving instructions in order. This activity includes an unplugged group practice, as well as on-screen, independent practice."
   tutorial_kodableadv_longdescription: "Students will engage in developmentally appropriate lessons on higher level programming concepts such as loops, functions, variables, and object-oriented programming. Lessons included unplugged instruction, guided practice, and on-screen independent practice."
-  tutorial_tynkertj_longdescription: "Learn Python to help Fletch collect the sachets of pixie dust to unlock the mysteries of the jungle and restore the islands to their original beauty. You'll use Python commands and syntax to solve puzzles as you navigate Fletch through the islands and avoid the carnivorous plans. Along the way, you'll practice computational and algorithmic thinking skills."
+  tutorial_tynkertj_longdescription: "Learn Python to help Fletch collect the satchels of pixie dust to unlock the mysteries of the jungle and restore the islands to their original beauty. You'll use Python commands and syntax to solve puzzles as you navigate Fletch through the islands and avoid the carnivorous plants. Along the way, you'll practice computational and algorithmic thinking skills."
   tutorial_wolframa_longdescription: "ამ აქტივობაში თქვენ შექმნით ვებ-ფორმას, რომელიც დაითვლის თქვენს ასაკს დღეებში, საათებში, ნანოწამებში და ნებისმიერ სხვა, თქვენს მიერ განსაზღვრულ, დროის ერთეულში!"
   tutorial_wolframm_longdescription: "ამ აქტივობაში მოსწავლეები შექმნიან შემთხვევით მელოდიებს სხვადასხვა მუსიკალური სკალისა და ინსტრუმენტის საშუალებით. შექმენით მუსიკა კოდის საშუალებით!"
   tutorial_wolframspi_longdescription: "In this activity, there are a series of steps with code ready to run. Students start with a piece of code that works, and then modify it to do different things. Students can play melodies based on the digits of PI and explore what PI sounds like using many musical instruments."
@@ -1709,6 +1737,19 @@ ka:
   tutorial_idowedo_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical programming (robotics). Children design and build models using construction bricks and bring them to life with code! Using a visual drag-and-drop programming environment and LEGO™ WeDo parts (motor and hub and optional sensors), pupils learn that physical systems can be programmed and controlled using algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_diggindwarf_longdescription: "ჯუჯებს თქვენი დახმარება სჭირდებათ ნავიგაციაში, გამოთხრებსა და ძვირფასი ქვების მოგროვებაში! ისწავლეთ, როგორ გამოიყენოთ JavaScript, რომ გზა გაუკვლიოთ თქვენს ჯუჯას ლაბირინთებსა და თავსატეხებში."
   tutorial_rmedr_longdescription: "Robot Mesh Studio-ში Blockly-ს გამოყენებით დააპროგრამეთ VEX EDR რობოტი \"mimic\" ონლაინ და ნახეთ, როგორ გაივლის იგი ლაბირინთს. მოსწავლეები ისწავლიან რობოტის საბაზისო მოძრაობებს და პროგრამირებისას სამი სენსორისა და ერთი გამომავალი მონაცემის გამოყენებას."
+  tutorial_dksky_longdescription: "Build the awesome Sky Fall game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Sky Fall template, and follow along with the video tutorial!"
+  tutorial_dkcurrency_longdescription: "Build the awesome Currency King game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Currency King template, and follow along with the video tutorial!"
+  tutorial_dkriver_longdescription: "Build the awesome River Monsters game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the River Monsters template, and follow along with the video tutorial!"
+  tutorial_dkball_longdescription: "Build the awesome Bouncing Ball game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Bouncing Ball template, and follow along with the video tutorial!"
+  tutorial_spheroit_longdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_gameofcodes_longdescription: "Build an awesome Dragon game to defend the wall, then export it as a standalone app (for iOS, Android, PC, and Mac)."
+  tutorial_blocklygames_longdescription: "Blockly Games is a series of educational games that teach programming. It is designed for children who have not had prior experience with computer programming but who wish to learn at a more challenging pace. By the end of these games, players are ready to use conventional text-based languages."
+  tutorial_spherohello_longdescription: "Have you conquered Blocks and need a new challenge? Take the logic you have learned with block-based programming and begin to learn how to program with just text. In this first Text activity learn the basics of the text canvas, loops, and some tips to get started with your first lines of JavaScript code."
+  tutorial_spheroarcade_longdescription: "In this arcade-style playground, you can recreate classic games with a Sphero SPRK+ robot while learning the basics of game design. You'll build your very own robotic renditions of some famous games like Pong, Bop It, and Pac-Man. Each game uses Sphero in a different way such as rolling on the floor, detecting gestures, or using Sphero as a joystick."
+  tutorial_bcpy1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcpy2_longdescription: 'This Hour of Code lesson is a follow-up course to World of Python. You''ll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcjs1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcjs2_longdescription: 'This Hour of Code lesson is a follow-up course to World of JavaScript. You''ll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
   tutorial_athlete_language: "ინგლისური, ფრანგული, ესპანური, იტალიური, პორტუგალიური (ბრაზილიური)"
   tutorial_moana_language: "ინგლისური, არაბული, ჩინური (გამარტივებული), ჩინური (ტრადიციული) დანიური, ჰოლანდიური, ფინური, ფრანგული, გერმანული, ინდონეზიური, იტალიური, იაპონური, კორეული, ნორვეგიული, პოლონური, პოლინეზიური (სამოა), პორტუგალირი, რუსული, ესპანური, შვედური, თურქული, უკრაინული, ვიეტნამური"
   tutorial_star-wars_language: "ინგლისური, არაბული, ბულგარული, ჩინური, ხორვატიული, დანიური, ჰოლანდიური, ფინური, ფრანგული, გერმანული, ბერზნული, ისლანდიური, ინდონეზიური, იტალიური, იაპონური, კორეული, ნორვეგიული, სპარსული, პოლონური, პორტუგალიური, რუმინული, რუსული, ესპანური, შვედური, თურქული, უკრაინული და 19 სხვა"
@@ -2134,6 +2175,19 @@ ka:
   tutorial_idowedo_language: "მხოლოდ ინგლისური"
   tutorial_diggindwarf_language: "მხოლოდ ინგლისური"
   tutorial_rmedr_language: "მხოლოდ ინგლისური"
+  tutorial_dksky_language: "მხოლოდ ინგლისური"
+  tutorial_dkcurrency_language: "მხოლოდ ინგლისური"
+  tutorial_dkriver_language: "მხოლოდ ინგლისური"
+  tutorial_dkball_language: "მხოლოდ ინგლისური"
+  tutorial_spheroit_language: "მხოლოდ ინგლისური"
+  tutorial_gameofcodes_language: "მხოლოდ ინგლისური"
+  tutorial_blocklygames_language: "ესპანური, ფრანგული, მრავალი სხვა"
+  tutorial_spherohello_language: "მხოლოდ ინგლისური"
+  tutorial_spheroarcade_language: "ჩინური (გამარტივებული), ინგლისური, ფრანგული, გერმანული, ესპანური"
+  tutorial_bcpy1_language: "მხოლოდ ინგლისური"
+  tutorial_bcpy2_language: "მხოლოდ ინგლისური"
+  tutorial_bcjs1_language: "მხოლოდ ინგლისური"
+  tutorial_bcjs2_language: "მხოლოდ ინგლისური"
   tutorial_athlete_string_detail_grades: "კლასები 2+"
   tutorial_moana_string_detail_grades: "კლასები 2+"
   tutorial_star-wars_string_detail_grades: "კლასები 2+"
@@ -2343,7 +2397,7 @@ ka:
   tutorial_kfr_string_detail_grades: "კლასები 6+"
   tutorial_app-inventor_string_detail_grades: "კლასები 6+"
   tutorial_bits_string_detail_grades: "2-5 კლასები"
-  tutorial_blockly_string_detail_grades: "კლასები 2+"
+  tutorial_blockly_string_detail_grades: "კლასები 6+"
   tutorial_tynker_string_detail_grades: "არ-აჩვენო"
   tutorial_baypt_string_detail_grades: "ყველა ასაკისთვის"
   tutorial_code-combat_string_detail_grades: "არ-აჩვენო"
@@ -2549,7 +2603,7 @@ ka:
   tutorial_cajump_string_detail_grades: "კლასები 2-8"
   tutorial_carest_string_detail_grades: "კლასები 2-8"
   tutorial_accai_string_detail_grades: "კლასები 2-8"
-  tutorial_vceclipse_string_detail_grades: "კლასები 9+"
+  tutorial_vceclipse_string_detail_grades: "კლასები 6+"
   tutorial_pmzero_string_detail_grades: "კლასები 6+"
   tutorial_hsela_string_detail_grades: "კლასები 2-8"
   tutorial_ticklear_string_detail_grades: "კლასები 2-8"
@@ -2559,6 +2613,19 @@ ka:
   tutorial_idowedo_string_detail_grades: "კლასები 2-8"
   tutorial_diggindwarf_string_detail_grades: "კლასები 6+"
   tutorial_rmedr_string_detail_grades: "კლასები 2-8"
+  tutorial_dksky_string_detail_grades: "კლასები 9+"
+  tutorial_dkcurrency_string_detail_grades: "კლასები 9+"
+  tutorial_dkriver_string_detail_grades: "კლასები 9+"
+  tutorial_dkball_string_detail_grades: "კლასები 9+"
+  tutorial_spheroit_string_detail_grades: "კლასები 2+"
+  tutorial_gameofcodes_string_detail_grades: "კლასები 2+"
+  tutorial_blocklygames_string_detail_grades: "კლასები 6+"
+  tutorial_spherohello_string_detail_grades: "კლასები 6+"
+  tutorial_spheroarcade_string_detail_grades: "კლასები 6+"
+  tutorial_bcpy1_string_detail_grades: "კლასები 6+"
+  tutorial_bcpy2_string_detail_grades: "კლასები 6+"
+  tutorial_bcjs1_string_detail_grades: "კლასები 6+"
+  tutorial_bcjs2_string_detail_grades: "კლასები 9+"
   tutorial_athlete_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_moana_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad"
   tutorial_star-wars_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad, iPhone"
@@ -2984,6 +3051,19 @@ ka:
   tutorial_idowedo_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android tablet, iPad, WeDo"
   tutorial_diggindwarf_string_platforms: "Chrome, Firefox, Safari"
   tutorial_rmedr_string_platforms: "ყველა თანამედროვე ბრაუზერი"
+  tutorial_dksky_string_platforms: "iPad, iPhone"
+  tutorial_dkcurrency_string_platforms: "iPad, iPhone"
+  tutorial_dkriver_string_platforms: "iPad, iPhone"
+  tutorial_dkball_string_platforms: "iPad, iPhone"
+  tutorial_spheroit_string_platforms: "iPad, Android ტაბლეტი, iPhone, Android ტელეფონი, რობოტი Sphero"
+  tutorial_gameofcodes_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, Android ტელეფონი, iPad"
+  tutorial_blocklygames_string_platforms: "ყველა თანამედროვე ბრაუზერი"
+  tutorial_spherohello_string_platforms: "iPad, Android ტაბლეტი, iPhone, Android ტელეფონი, რობოტი Sphero"
+  tutorial_spheroarcade_string_platforms: "iPad, Android ტაბლეტი, iPhone, Android ტელეფონი, რობოტი Sphero"
+  tutorial_bcpy1_string_platforms: "ყველა თანამედროვე ბრაუზერი"
+  tutorial_bcpy2_string_platforms: "ყველა თანამედროვე ბრაუზერი"
+  tutorial_bcjs1_string_platforms: "ყველა თანამედროვე ბრაუზერი"
+  tutorial_bcjs2_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
@@ -3408,7 +3488,20 @@ ka:
   tutorial_ifly_string_detail_platforms: "Parrot Minidrones"
   tutorial_idowedo_string_detail_platforms: "Wedo"
   tutorial_diggindwarf_string_detail_platforms: ""
-  tutorial_rmedr_string_detail_platforms: ""
+  tutorial_rmedr_string_detail_platforms: "Vex EDR Robots"
+  tutorial_dksky_string_detail_platforms: ""
+  tutorial_dkcurrency_string_detail_platforms: ""
+  tutorial_dkriver_string_detail_platforms: ""
+  tutorial_dkball_string_detail_platforms: ""
+  tutorial_spheroit_string_detail_platforms: "რობოტი Sphero"
+  tutorial_gameofcodes_string_detail_platforms: ""
+  tutorial_blocklygames_string_detail_platforms: ""
+  tutorial_spherohello_string_detail_platforms: "რობოტი Sphero"
+  tutorial_spheroarcade_string_detail_platforms: "რობოტი Sphero"
+  tutorial_bcpy1_string_detail_platforms: ""
+  tutorial_bcpy2_string_detail_platforms: ""
+  tutorial_bcjs1_string_detail_platforms: ""
+  tutorial_bcjs2_string_detail_platforms: ""
   tutorial_athlete_string_detail_programming_languages: "ბლოკები"
   tutorial_moana_string_detail_programming_languages: "ბლოკები"
   tutorial_star-wars_string_detail_programming_languages: "ბლოკები, JavaScript"
@@ -3808,7 +3901,7 @@ ka:
   tutorial_wonzoo_string_detail_programming_languages: "ბლოკები"
   tutorial_wontrip_string_detail_programming_languages: "ბლოკები"
   tutorial_woncollect_string_detail_programming_languages: "ბლოკები"
-  tutorial_wonsecret_string_detail_programming_languages: "JavaScript"
+  tutorial_wonsecret_string_detail_programming_languages: "ბლოკები, JavaScript"
   tutorial_hsscience_string_detail_programming_languages: "Hopscotch"
   tutorial_popculture_string_detail_programming_languages: "ენისგან დამოუკიდებელი"
   tutorial_legorobust_string_detail_programming_languages: "ბლოკები"
@@ -3834,6 +3927,19 @@ ka:
   tutorial_idowedo_string_detail_programming_languages: "Scratch"
   tutorial_diggindwarf_string_detail_programming_languages: "JavaScript"
   tutorial_rmedr_string_detail_programming_languages: "ბლოკები"
+  tutorial_dksky_string_detail_programming_languages: "ბლოკები"
+  tutorial_dkcurrency_string_detail_programming_languages: "ბლოკები"
+  tutorial_dkriver_string_detail_programming_languages: "ბლოკები"
+  tutorial_dkball_string_detail_programming_languages: "ბლოკები"
+  tutorial_spheroit_string_detail_programming_languages: "ბლოკები, C/C++"
+  tutorial_gameofcodes_string_detail_programming_languages: "Blocks, Ready, Unity"
+  tutorial_blocklygames_string_detail_programming_languages: "ბლოკები"
+  tutorial_spherohello_string_detail_programming_languages: "JavaScript"
+  tutorial_spheroarcade_string_detail_programming_languages: "iOS/Swift"
+  tutorial_bcpy1_string_detail_programming_languages: "Python"
+  tutorial_bcpy2_string_detail_programming_languages: "Python"
+  tutorial_bcjs1_string_detail_programming_languages: "JavaScript"
+  tutorial_bcjs2_string_detail_programming_languages: "JavaScript"
   school_not_found_heading: "ჩვენ ვერ შევძელით თქვენი სკოლის მოძებნა. გთხოვთ, შეიყვანოთ მეტი ინფორმაცია."
   school_name: "სკოლის სახელი"
   school_name_error: "სკოლის სახელი სავალდებულოა."

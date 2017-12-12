@@ -1,6 +1,7 @@
 /** @file Non-p5 GameLab commands */
 import {singleton as studioApp} from '../StudioApp';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 
 /*
   The 'commands' file assembles a set of calls that student code can make
@@ -47,3 +48,4 @@ gamelabCommands.handleSetKeyValue = function (opts) {
 
 // Include playSound, stopSound, etc.
 Object.assign(gamelabCommands, audioCommands);
+Object.assign(gamelabCommands, timeoutCommands);

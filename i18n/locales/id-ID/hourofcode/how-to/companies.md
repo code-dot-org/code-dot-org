@@ -11,7 +11,7 @@ nav: how_to_nav
 
 Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- Kode resolve_url('https:// [ Mendaftar ](%=.org/volunteer') %) untuk menjadi sukarelawan.
+- [Mendaftar](%= resolve_url('https://code.org/volunteer') %) untuk menjadi sukarelawan.
 - Untuk petunjuk lebih lanjut tentang mendorong karyawan dan menghubungkan karyawan Anda dengan ruang kelas, lihat [ panduan untuk mitra perusahaan ](%= localized_file('/files/hoc-corporate-toolkit.pdf') %) kami.
 
 ## Cara tambahan bagi perusahaan untuk dapat mendukung Jam Pemrograman:
@@ -105,9 +105,9 @@ Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan inter
         
         ## 7) Merayakan
         
-        - [ sertifikat Print ](%= kode resolve_url('https://.org/certificates') %) bagi peserta dan siswa.
+        - [sertifikat Print](%= resolve_url('https://code.org/certificates') %) bagi peserta dan siswa.
         - [Cetak stiker "Aku telah menyelesaikan satu Jam Pemrograman!"](%= resolve_url('/promote/resources#stickers') %) untuk siswa.
-        - [ Orde custom t-shirt ](http://blog. kode.org/post/132608499493/hour-of- kode -shirts-and-more) bagi karyawan Anda.
+        - [Orde custom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) bagi karyawan Anda.
         - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
         
         [col-33]

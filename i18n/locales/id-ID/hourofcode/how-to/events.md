@@ -1,6 +1,6 @@
 ---
-title: '& lt; % = hoc_s (: title_how_to_events)% & gt;'
-layout: lebar
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
