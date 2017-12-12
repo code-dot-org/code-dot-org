@@ -1,56 +1,43 @@
 import React from 'react';
 import MiniViewTopRow from './MiniViewTopRow';
-import { combineReducers, createStore } from 'redux';
-import { Provider } from 'react-redux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 
-export default storybook => {
-  const initialState = {
-    progress: {
-      stages: [
-        {
-          levels: []
-        }
-      ],
-      focusAreaStageIds: [],
-      isSummaryView: false,
-      professionalLearningCourse: false
-    }
-  };
-
-  storybook
-    .storiesOf('MiniViewTopRow', module)
-    .addStoryTable([
+const initialState = {
+  progress: {
+    stages: [
       {
-        name: 'basic',
-        story: () => {
-          const store = createStore(combineReducers({progress}), initialState);
-          return (
-            <Provider store={store}>
-              <div style={{width: 635, position: 'relative'}}>
-                <MiniViewTopRow
-                  scriptName="course1"
-                  linesOfCodeText="Total lines of code: 120"
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name: 'no lines of text',
-        story: () => {
-          const store = createStore(combineReducers({progress}), initialState);
-          return (
-            <Provider store={store}>
-              <div style={{width: 635, position: 'relative'}}>
-                <MiniViewTopRow
-                  scriptName="course1"
-                />
-              </div>
-            </Provider>
-          );
-        }
+        levels: []
       }
-    ]);
+    ],
+    focusAreaStageIds: [],
+    isSummaryView: false,
+    professionalLearningCourse: false
+  }
 };
+
+export default storybook => storybook
+  .storiesOf('MiniViewTopRow', module)
+  .withReduxStore({progress}, initialState)
+  .addStoryTable([
+    {
+      name: 'basic',
+      story: () => (
+        <div style={{width: 635, position: 'relative'}}>
+          <MiniViewTopRow
+            scriptName="course1"
+            linesOfCodeText="Total lines of code: 120"
+          />
+        </div>
+      )
+    },
+    {
+      name: 'no lines of text',
+      story: () => (
+        <div style={{width: 635, position: 'relative'}}>
+          <MiniViewTopRow
+            scriptName="course1"
+          />
+        </div>
+      )
+    }
+  ]);

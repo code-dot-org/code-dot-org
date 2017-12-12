@@ -1,10 +1,6 @@
-import React from 'react';
 import {mount} from 'enzyme';
 import experiments from '@cdo/apps/util/experiments';
-import {createStore, combineReducers} from 'redux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import {Provider} from 'react-redux';
+import {withReduxStore} from '../../util/withReduxStore';
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided
@@ -19,6 +15,10 @@ export default function testStorybook(storiesFn) {
 }
 
 class FakeStorybook {
+  constructor() {
+    this.withReduxStore = withReduxStore;
+  }
+
   groups = [];
 
   storiesOf(name) {
@@ -68,22 +68,6 @@ class FakeStorybook {
 
   withExperiments(...experimentList) {
     this.experiments = experimentList;
-    return this;
-  }
-
-  withReduxStore(reducers = {}) {
-    this.addDecorator(story => {
-      this.store = createStore(combineReducers({
-        isRtl,
-        responsive,
-        ...reducers,
-      }));
-      return (
-        <Provider store={this.store}>
-          {story()}
-        </Provider>
-      );
-    });
     return this;
   }
 
