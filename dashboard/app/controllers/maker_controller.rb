@@ -58,7 +58,7 @@ class MakerController < ApplicationController
     # associate the code with this application, and log signature
     application.update!(signature: signature, signed_at: DateTime.now, circuit_playground_discount_code_id: code.id)
 
-    render json: {code: code.code}
+    render json: {code: code.code, expiration: code.expiration}
   end
 
   def application_status

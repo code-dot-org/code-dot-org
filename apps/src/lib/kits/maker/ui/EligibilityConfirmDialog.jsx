@@ -70,7 +70,7 @@ export default class EligibilityConfirmDialog extends Component {
        signature: this.state.signature
      }
    }).done(data => {
-     this.props.onSuccess(data.code);
+     this.props.onSuccess(data.code, data.expiration);
    }).fail((jqXHR, textStatus) => {
      this.setState({
        error: "We're sorry, but something went wrong. Try refreshing the page " +
