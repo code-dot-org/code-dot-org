@@ -27,19 +27,19 @@ vi:
         video: Unplug4
       Unplug5:
         title: Các hàm
-        desc: Trong bài học này, học sinh sẽ làm một cái vợt mặt trời (suncatcher) từ những sợi dây, hạt và một thứ xinh xắn đặc biệt. Các em sẽ làm theo một loạt những bước lặp đi lặp lại, sau đó được yêu cầu xác định một số kĩ năng đã được lặp lại nhiều lần. Một khi những kỹ năng này được xác định, chúng sẽ  được gọi từ một chương trình chính và quá trình sáng tạo tuyệt vời sẽ được ghi lại trên một tờ giấy duy nhất. Chương trình cuối cùng sẽ được hướng về toàn bộ lớp học, bất kể loại chuỗi hay hạt nào. Để có hiệu quả, các bạn sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ và tạo ra những thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng những điểm chung này là một sự giới thiệu biến tuyệt vời.
+        desc: Trong bài học này, học sinh sẽ làm một cái vợt mặt trời (suncatcher) từ những sợi dây, hạt và một thứ xinh xắn đặc biệt. Các em sẽ làm theo một loạt những bước lặp đi lặp lại, sau đó được yêu cầu xác định một số kĩ năng đã được lặp lại nhiều lần. Một khi những kỹ năng này được xác định, chúng sẽ  được gọi từ một chương trình chính và quá trình sáng tạo tuyệt vời sẽ được ghi lại trên một tờ giấy duy nhất. Chương trình cuối cùng sẽ được hướng về toàn bộ lớp học, bất kể loại chuỗi hay hạt nào. Để có hiệu quả, các bạn sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ và tạo ra những thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng những điểm chung này là một sự giới thiệu biến số tuyệt vời.
         pdfs:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: 'Điều kiện'
-        desc: 'Đây là trò chơi theo nhóm. Sau khi giới thiệu ý tưởng, mẫu if, và vòng lặp, cả lớp có thể luyện tập cùng nhau sử dụng một chương trình viết trước, một cỗ bài, và vẽ vận may.'
+        title: Điều kiện
+        desc: Đây là trò chơi trong lớp. Sau khi giới thiệu ý tưởng về các điều kiện, câu lệnh if, và vòng lặp, cả lớp có thể luyện tập cùng nhau sử dụng một chương trình viết trước, một cỗ bài, và vẽ vận may.
         pdfs:
           - unplug6
         video: Unplug6
       Unplug7:
         title: Viết nhạc
-        desc: 'Đọc lời bài hát là một việc làm theo cảm tính hết sức mạo hiểm. Chúng tôi sẽ thực hiện một hành động mà nó đã là kiến thức phổ biến và thay đổi thành một nền giáo dục vững chắc đang được xác định và đang hoạt động. Một khi các em quen thuộc với quá trình xác định/cuộc gọi, chúng tôi sẽ thêm khả năng phụ cùng với những tham số trong những cuộc gọi chức năng đó.'
+        desc: Đọc lời bài hát là một việc làm theo cảm tính hết sức mạo hiểm. Chúng tôi sẽ thực hiện một hành động mà nó đã là kiến thức phổ biến và thay đổi thành một nền giáo dục vững chắc đang được xác định và đang hoạt động. Một khi các em quen thuộc với quá trình xác định/cuộc gọi, chúng tôi sẽ thêm khả năng phụ cùng với những tham số trong những cuộc gọi chức năng đó.
         pdfs:
           - unplug7
         video: Unplug7
@@ -86,13 +86,13 @@ vi:
         title: Chương trình chuyển tiếp
         desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết đi và quay lại từ đầu từ điểm đó.
       Conditionals:
-        title: 'Điều kiện'
-        desc: 'Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."'
+        title: Điều kiện
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."
       BigEvent:
         title: Sự kiện lớn
         desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện", đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được nhấn.
       GoingPlacesSafely:
-        title: 'Đến nơi an toàn'
+        title: Đến nơi an toàn
         desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt web.
       GraphPaperProgramming:
         title: lập trình đồ thị trên giấy
@@ -122,7 +122,7 @@ vi:
         title: Kết nối mạng
         desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các bưu thiếp .
       Crowdsourcing:
-        title: 'Đa nguồn'
+        title: Đa nguồn
         desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu quả hơn hơn cố làm nó một mình.
       DigitalCitizenship:
         title: Dân kỹ thuật số
@@ -197,7 +197,7 @@ vi:
         title: Bản đồ thú vị
         desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
       courseA_unplugged_goingPlacesSafely:
-        title: 'Đến nơi an toàn'
+        title: Đến nơi an toàn
         desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt web.
       courseABC_unplugged_bigEvent:
         title: Sự kiện lớn
@@ -225,7 +225,7 @@ vi:
         desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết đi và quay lại từ đầu từ điểm đó.
       courseD_unplugged_conditionalsCards:
         title: Conditionals with Cards
-        desc: 'Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."'
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."
       courseD_unplugged_binaryImages:
         title: Hình ảnh Nhị phân
         desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực, các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
@@ -239,7 +239,7 @@ vi:
         title: Kết nối mạng
         desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các bưu thiếp .
       courseE_unplugged_crowdsourcing:
-        title: 'Đa nguồn'
+        title: Đa nguồn
         desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu quả hơn hơn cố làm nó một mình.
       courseE_unplugged_songwriting:
         title: Sáng tác với tham số

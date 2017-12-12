@@ -84,7 +84,7 @@ it:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Account Microsoft'
-    clever: 'Clever Account'
+    clever: 'Account Clever'
     forgot_password: 'Hai dimenticato la tua password?'
     need_confirmation: "Non hai ricevuto le istruzioni di conferma?"
     need_unlock: "Non hai ricevuto le istruzioni di sblocco?"
@@ -95,8 +95,8 @@ it:
     teacher_count: '%{count} insegnanti si sono già iscritti.'
     overview: "Crea un account per tenere traccia dei tuoi progressi o gestire la tua classe. <a href=\"/\"> Puoi anche svolgere gli esercizi senza un account</a>, ma dovrai iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.<br>\n<br>\n<b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href=\"https://programmailfuturo.it/chi/chi-puo-partecipare\" target=\"_blank\">Programma il Futuro</a>, sarà tutto più semplice!</b>"
     hoc_already_signed_up_heading: 'Iniziare senza effettuare il login'
-    hoc_already_signed_up_content: 'Ti sei iscritto per insegnare un''ora di codice! Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare a questo evento. Per iniziare, <a href="%{learn_url}">scegli un tutorial</a> per la tua classe e condividi il link con loro.<br/><br/>Se ti è piaciuta l''ora di codice e vuoi approfondire, puoi scegliere una password e creare un account Code Studio qui sotto per iscrivere i tuoi studenti in uno dei nostri <a href="%{educate_url}">corsi più estesi</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Grazie per aver partecipato a Ora di Codice. Per accedere a Code Studio, avrai bisogno di impostare una password per il tuo account. Questo ti permetterà di salvare i tuoi progressi e gestire i tuoi corsi. Potrai assegnare corsi agli studenti e tenere traccia dei loro progressi. <a href="%{studio_url}">Puoi anche continuare a navigare nelle varie fasi e puzzle</a>senza creare un account.'
+    hoc_already_signed_up_content: 'Ti sei iscritto per insegnare un''Ora del Codice! Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare a questo evento. Per iniziare, <a href="%{learn_url}">scegli un''esercitazione</a> per la tua classe e condividi il link con loro.<br/><br/>Se ti è piaciuta l''Ora del Codice e vuoi approfondire, puoi scegliere una password e creare un account Code Studio qui sotto per iscrivere i tuoi studenti ad uno dei nostri <a href="%{educate_url}">corsi completi</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Grazie per organizzare l''Ora del Codice. Per accedere a Code Studio, devi impostare una password per il tuo account. Questo ti permetterà di salvare i tuoi progressi e gestire le tue classi. Potrai assegnare corsi agli studenti e tenere traccia dei loro progressi. <a href="%{studio_url}">Puoi anche esplorare corsi e lezioni disponibili</a>senza creare un account.'
     teacher_educator_guide: 'Vedi la guida per l''insegnante'
     title: "Iscriviti a Code.org"
     school_name: 'Nome della scuola (facoltativo)'
@@ -122,7 +122,7 @@ it:
     user_type_student: "Studente"
     field_is_required: "è un dato obbligatorio"
     accept_terms: "Devi accettare le condizioni per creare un account"
-    error: "An error occurred."
+    error: "Si è verificato un errore."
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -364,9 +364,9 @@ it:
     create_personal_login_info: 'Se vuoi continuare ad usare il tuo account Code.org anche dopo la fine dell''anno scolastico, puoi creare le tue credenziali di accesso personali, in basso.'
     create_personal_login_terms: "Creando le mie informazioni d'accesso personali, accetto di essere vincolato dalle <a href='%{terms_of_service_url}', target='_blank'>condizioni d'uso</a>di Code.org. Se ho meno 13 anni, confermo di avere il permesso del mio genitore o tutore di usare i servizi di Code.org anche senza insegnante."
     create_personal_login_email_note: 'Nota: Gli indirizzi email non sono memorizzati in una forma tale da permetterci di contattare gli studenti. Gli studenti non riceveranno mai email da Code.org tranne per il recupero della password. Consulta le nostre <a href=''%{privacy_policy_url}'', target=''_blank''>politiche per il rispetto della privacy</a> per ulteriori informazioni.'
-    enter_new_login_info: 'Enter your new login information'
-    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
-    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    enter_new_login_info: 'Inserisci le nuove informazioni di accesso'
+    confirm_secret_words: 'Conferma la tua identità inserendo le tue parole segrete'
+    enter_parent_email: "Inserisci l'email del tuo genitore o tutore (per il recupero della password)"
   user_level:
     completed: 'Completato'
     tried: 'Provato'
@@ -386,7 +386,7 @@ it:
     teacher_student_count: Hai %{count} studenti.
     teacher_averages: In media i tuoi studenti hanno guadagnato %{trophy_average} trofei su %{trophy_max} in "Padronanza dei concetti".
     teacher_print_certificates: 'Stampa gli attestati per gli studenti che completano questo corso'
-    teacher_read_blog: 'Leggi notizie e aggiornamenti relativi al nostro materiale didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>'
+    teacher_read_blog: Leggi notizie e aggiornamenti relativi al nostro materiale didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
     classroom: La tua classe
     student_progress: I tuoi progressi di apprendimento
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza dei concetti".
@@ -425,7 +425,7 @@ it:
     announcement_go_beyond_button: "Vai oltre"
     announcement_apply_now: "Applica ora"
     announcement_all: "Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti (in inglese)</a>."
-    announcement_hoc_launch: "Migliaia di educatori in più di 180 paesi inizieranno a insegnare informatica durante l'Ora del Codice dal 5-11 dicembre. Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti mai prima verificatosi. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare Informatica."
+    announcement_hoc_launch: "Migliaia di educatori in più di 180 paesi inizieranno a insegnare informatica durante l'Ora del Codice dal 4 al 10 dicembre 2017. Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti possibile. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare Informatica."
     announcement_mc_launch: "Uno delle nostre esercitazioni dell'Ora del Codice più popolari adesso ha un seguito! Il nuovissimo <b>Programma il tuo Minecraft</b> permette allo studente di definire le sue regole del mondo di Minecraft. Potrà così creare un'esperienza con Minecraft del tutto unica, e condividerla con i suoi amici e giocarci insieme a loro. Svolgila nella tua classe come Ora del Codice."
     announcement_how_code_studio: "Non hai bisogno di alcuna esperienza per cominciare ad insegnare informatica alla tua classe. Code.org offre curriculum, lezioni, programmi di apprendimento professionali di alta qualità, and un sacco di ottimi strumenti per ogni titolo di studio&mdash;tutto quello di cui hai bisogno, senza nessun costo. Ti stai chiedendo da dove cominciare? Scarica<a href='%{video_download_url}'>questo video</a>!"
     announcement_go_beyond: "Vai oltre Ora di Codice ed esplora i concetti dell'Informatica con i tuoi studenti ogni settimana. Code.org offre curriculum, lezioni, programmi di apprendimento professionali di alta qualità, e un sacco di ottimi strumenti per ogni titolo di studio&mdash;ed è gratis. :) Non hai bisogno di nessuna esperienza per cominciare ad insegnare Informatica alla tua classe. <b>Trova il giusto prossimo passo per la tua classe.</b>"
@@ -567,6 +567,9 @@ it:
       body: "Sviluppo Giochi è un ambiente di programmazione in cui si possono realizzare semplici animazioni e giochi con oggetti e personaggi che interagiscono tra loro."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
+    hoc-encryption:
+      title: "Crittografia semplice"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Sviluppo Web (versione provvisoria)"
       body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
@@ -585,6 +588,9 @@ it:
     minecraft2016:
       title: "Minecraft"
       body: "Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
     sports:
       title: "Sports"
       body: "Crea una partita di basket o abbina diversi sport."
@@ -602,7 +608,7 @@ it:
     widgets:
       title: "Widget"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
+      audience: "Dai 14 anni"
       cta: "Scopri come"
   gallery:
     students_drew_these_with_code: "Gli studenti li hanno disegnati con dei programmi!"
@@ -843,37 +849,37 @@ it:
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Corso principale'
-    extra_course_content: 'Extra Course Content'
-    csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
-    csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    dlp: 'Reflection Prompts'
+    extra_course_content: 'Contenuti extra corso'
+    csf_e_1: 'Approfondimenti al Corso E (facoltativo)'
+    csf_e_2: 'Contenuti del Corso E'
+    csf_f_1: 'Approfondimenti al Corso F (facoltativo)'
+    csf_f_2: 'Contenuti del Corso F'
+    csd1_1: 'Capitolo 1: il Problem Solving'
+    csd1_2: 'Capitolo 2: Computers e Problem Solvig'
+    csd2_1: 'Capitolo 1: Contenuti Web e HTML'
+    csd2_2: 'Capitolo 2: Styling e CSS'
+    csd3_1: 'Capitolo 1: Immagini e animazioni'
+    csd3_2: 'Capitolo 2: Costruzione di Giochi'
+    csd4_1: 'Capitolo 1: Design a cura dell''Utente'
+    csd4_2: 'Capitolo 2: Prototipazione di App'
+    csd5_1: 'Capitolo 1: Rappresentazione delle informazioni'
+    csd5_2: 'Capitolo 2: Risoluzione dei problemi di dati'
+    csd6_1: 'Capitolo 1: Output Hardware'
+    csd6_2: 'Capitolo 2: Input Hardware'
+    csp1_1: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
+    csp1_2: 'Capitolo 2: Inventare Internet'
+    csp2_1: 'Capitolo 1: Codifica e compressione delle informazioni complesse'
+    csp2_2: 'Capitolo 2: Manipolazione e Visualizzazione dei dati'
+    csp3_1: 'Capitolo 1: Linguaggi di programmazione e algoritmi'
+    csp4_1: 'Capitolo 1: Il mondo di grandi quantità di dati e la crittografia'
+    csp5_1: 'Capitolo 1: Programmazione guidata dagli eventi'
+    csp5_2: 'Capitolo 2: Programmazione con strutture di dati'
+    cspSurvey: 'Sondaggio'
+    cspAssessment: 'Valutazione del Capitolo'
+    csp_ap_1: 'Capitolo 1: Installazione di AP Tech'
+    csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
+    csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
+    dlp: 'Punti di riflessione'
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che non è gestito da Code.org.
@@ -944,9 +950,9 @@ it:
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
   hidden_script: "Il tuo insegnante non si aspettava che tu sia qui. Per favore, chiedigli in quale lezione dovresti essere."
-  return_unit_overview: 'Go to unit overview'
+  return_unit_overview: 'Vai alla panoramica della lezione'
   return_course_overview: 'Vai alla visualizzazione delle unità'
-  view_all_units: 'View all units'
+  view_all_units: 'Visualizza tutte le lezioni'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

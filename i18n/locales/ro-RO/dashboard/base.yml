@@ -9,15 +9,15 @@ ro:
     errors:
       messages:
         blank: "este necesar"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "sunt necesare"
+        invalid_plural: "sunt nevalide"
     attributes:
       user:
         name: 'Numele afișat'
-        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
+        name_example: 'Afişează numele <br/> (de exemplu, Cool Coder sau Jane S.)'
         email: 'E-mail'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'E-mail părinte/tutore'
+        personal_email: "Adresa de e-mail personal <a href=\"%{url}\"> (click aici dacă nu aveţi o adresă de e-mail)</a>"
         username: 'nume de utilizator'
         password: 'parolă'
         password_confirmation: 'Confirmarea parolei'
@@ -59,7 +59,7 @@ ro:
   courses: 'cursuri'
   courses_page:
     title_student: "Învață in Atelierul de programare"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Predă cu Studio-ul Code"
   unplugged_activity: 'Activitate fără Calculator'
   of: "de"
   more: "MAI MULT"
@@ -122,11 +122,11 @@ ro:
     user_type_student: "elev"
     field_is_required: "este necesar"
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
-    error: "An error occurred."
+    error: "S-a produs o eroare."
   school_info:
-    title: 'School Information (optional)'
-    school_country: 'School Country'
-    select_school_type: 'School Type'
+    title: 'Informații școală (opțional)'
+    school_country: 'Țara școlii'
+    select_school_type: 'Tipul Școlii'
     charter: 'Charter'
     private: 'Private'
     public: 'Public'
@@ -563,10 +563,13 @@ ro:
       title: "Galerie"
       body: "Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri"
     gamelab:
-      title: "Game Lab"
+      title: "Laborator de jocuri"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Vârste 13 +"
       cta: "Află cum"
+    hoc-encryption:
+      title: "Criptare simplă"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ ro:
     minecraft2016:
       title: "Minecraft"
       body: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sporturi"
       body: "Make a basketball game or mix and match across sports."
@@ -976,4 +982,4 @@ ro:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Toate cursurile'
