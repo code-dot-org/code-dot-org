@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Api::V1::Pd::Application
   class PrincipalApprovalApplicationsControllerTest < ::ActionController::TestCase
+    include Pd::Application::ApplicationConstants
+
     setup_all do
       @teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
       @test_params = {
@@ -45,6 +47,25 @@ module Api::V1::Pd::Application
       actual_principal_fields = @teacher_application.sanitize_form_data_hash.select do |k, _|
         expected_principal_fields.keys.include? k
       end
+
+      assert_equal(
+        {
+          regional_partner_name: NO,
+          committed: YES,
+          able_to_attend_single: YES,
+          principal_approval: YES,
+          csp_which_grades: YES,
+          csp_course_hours_per_year: YES,
+          previous_yearlong_cdo_pd: YES,
+          csp_ap_exam: YES,
+          taught_in_past: 2,
+          schedule_confirmed: YES,
+          diversity_recruitment: YES,
+          free_lunch_percent: 5,
+          underrepresented_minority_percent: 5,
+          wont_replace_existing_course: 5
+        }, @teacher_application.response_scores_hash
+      )
 
       assert_equal expected_principal_fields, actual_principal_fields
     end
