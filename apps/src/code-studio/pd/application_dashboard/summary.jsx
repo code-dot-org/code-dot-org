@@ -7,13 +7,15 @@ import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
-import { AllPartnersFilter } from './constants';
+import {
+  AllPartnersFilter,
+  RegionalPartnerDropdownOptions as dropdownOptions
+} from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    regionalPartners: PropTypes.array,
     isWorkshopAdmin: PropTypes.bool
   }
 
@@ -68,6 +70,7 @@ export class Summary extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
+            otherOptions={dropdownOptions}
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>
