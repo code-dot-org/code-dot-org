@@ -211,7 +211,7 @@ class DynamoTable
       # We want to preserve the order of the columns so creating
       # a new hash is required.
       new_value = {}
-      value = JSON.parse(r['value'])
+      value = JSON.load(r['value'])
       value.each do |k, v|
         if k == old_name
           new_value[new_name] = v
@@ -239,7 +239,7 @@ class DynamoTable
     set_column_list_metadata(new_column_list)
 
     items.each do |r|
-      value = JSON.parse(r['value'])
+      value = JSON.load(r['value'])
       value.delete(column_name)
       update(r['row_id'], value, ip_address)
     end
@@ -305,7 +305,7 @@ class DynamoTable
   end
 
   def value_from_row(row)
-    JSON.parse(row['value']).merge('id' => row['row_id'].to_i)
+    JSON.load(row['value']).merge('id' => row['row_id'].to_i)
   end
 
   def self.table_names(channel_id)
