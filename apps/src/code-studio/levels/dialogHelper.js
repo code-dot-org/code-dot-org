@@ -55,10 +55,6 @@ export function showDialog(typeOrComponent, callback, onHidden) {
   return dialog;
 }
 
-export function showStartOverDialog(callback) {
-  showDialog('startover', callback);
-}
-
 export function showInstructionsDialog() {
   showDialog('instructions', null);
   $('details').details();
