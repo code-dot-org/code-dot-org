@@ -15,6 +15,9 @@ const styles = {
   buttonDiv: {
     textAlign: 'center'
   },
+  clear: {
+    clear: 'both',
+  },
   error: {
     color: color.red,
   },
@@ -23,6 +26,10 @@ const styles = {
     marginBottom: 10,
     marginLeft: 20,
     marginRight: 20,
+  },
+  image: {
+    float: 'right',
+    margin: 5,
   },
   introQuestion: {
     marginBottom: 5
@@ -232,7 +239,7 @@ export default class CensusTeacherBanner extends Component {
   renderSchoolInfoForm() {
     let schoolId = (this.state.ncesSchoolId !== null) ? this.state.ncesSchoolId : this.props.ncesSchoolId;
     return (
-      <div style={styles.main}>
+      <div>
         <div style={styles.header}>
           <h2>Update your school information</h2>
           {this.state.showSchoolInfoUnknownError && (
@@ -303,7 +310,7 @@ export default class CensusTeacherBanner extends Component {
 
     if (schoolName) {
       return (
-        <div style={styles.main}>
+        <div>
           <div style={styles.header}>
             <h2 style={styles.title}>Add {schoolName} to our map!</h2>
             <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
@@ -351,10 +358,27 @@ export default class CensusTeacherBanner extends Component {
   }
 
   render() {
+    let mainForm;
+
     if (this.state.showSchoolInfoForm) {
-      return this.renderSchoolInfoForm();
+      mainForm = this.renderSchoolInfoForm();
     } else {
-      return this.renderCensusForm();
+      mainForm = this.renderCensusForm();
     }
+
+    return (
+      <div style={styles.main}>
+        <div style={styles.image}>
+          <img
+            src="/shared/images/misc/census-map-with-flag.png"
+            alt="Map with flag"
+            width="180"
+            height="180"
+          />
+        </div>
+        {mainForm}
+        <div style={styles.clear} />
+      </div>
+    );
   }
 }
