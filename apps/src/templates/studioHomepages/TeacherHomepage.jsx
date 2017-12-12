@@ -62,7 +62,6 @@ export default class TeacherHomepage extends Component {
           (hocLaunch.special_announcement === "applab2017" && !isEnglish) ||
           (hocLaunch.special_announcement === "celebs2017" && !isEnglish)) && (
           <SpecialAnnouncementActionBlock
-            isRtl={isRtl}
             imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
             heading={i18n.specialAnnouncementHeading()}
             subHeading={""}
@@ -79,7 +78,6 @@ export default class TeacherHomepage extends Component {
          hocLaunch.special_announcement === "applab2017" &&
          isEnglish && (
           <SpecialAnnouncementActionBlock
-            isRtl={isRtl}
             imageUrl={pegasus('/images/fill-540x289/special-announcements/applab_hoc2017.jpg')}
             heading={i18n.specialAnnouncementHeadingAppLab()}
             subHeading={""}
@@ -96,7 +94,6 @@ export default class TeacherHomepage extends Component {
          hocLaunch.special_announcement === "celebs2017" &&
          isEnglish && (
           <SpecialAnnouncementActionBlock
-            isRtl={isRtl}
             imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
             heading={i18n.specialAnnouncementHeading()}
             subHeading={""}
@@ -113,7 +110,6 @@ export default class TeacherHomepage extends Component {
          hocLaunch.special_announcement === "celebs2017actualhoc" &&
          isEnglish && (
           <SpecialAnnouncementActionBlock
-            isRtl={isRtl}
             imageUrl={pegasus('/images/fill-540x289/special-announcements/celebs_hoc2017.jpg')}
             heading={i18n.specialAnnouncementHeadingCelebs()}
             subHeading={""}
