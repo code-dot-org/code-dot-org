@@ -6,7 +6,7 @@
   "filterSortByDisplayWeight": "Recommended",
   "filterSortByPopularityRank": "Most popular",
   "filterGrades": "Årskurser",
-  "filterGradesAll": "Alla åldrar",
+  "filterGradesAll": "All grades",
   "filterGradesPre": "Icke-läsare",
   "filterGrades25": "Årskurs 2-5",
   "filterGrades68": "Årskurs 6-8",
@@ -53,10 +53,10 @@
   "tutorialDetailInternationalLanguages": "Språk",
   "tutorialDetailStandards": "Standarder",
   "tutorialDetailDisabled": "Denna övning är inte tillgänglig just nu.",
-  "headingTutorialsYourLanguage": "Övningar på ditt språk",
+  "headingTutorialsYourLanguage": "Aktiviteter på ditt språk",
   "showAllTutorialsButton": "Visa aktiviteter för många språk",
   "hideAllTutorialsButton": "Dölj aktiviteter för många språk",
-  "noTutorialsYourLanguage": "Det finns inga aktiviteter på ditt språk. Prova aktiviteter på andra språk genom att klicka på knappen nedan.",
+  "noTutorialsYourLanguage": "Det finns inga aktiviteter med stöd för ditt språk. Prova aktiviteter på andra språk genom att klicka på knappen nedan.",
   "bottomGuidelinesLink": "Klicka här för att se våra kriterier och inlämnings riktlinjer för Hour of Code övningar.",
   "bottomSpecialNeedsLink": "Klicka här för mer information på att stödja elever med särskilda behov."
 }

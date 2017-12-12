@@ -36,11 +36,19 @@
   twentyhours_text: Ar chríochnaigh tú An Uair Chódála? Foghlaim níos mó faoin ríomheolaíocht
     agus faoi ríomhchlárú sa dara cúrsa seo.
   og_title: 'Code.org: Is féidir le héinne foghlaim'
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Tugaimis deis do gach dalta i ngach scoil staidéar a dhéanamh ar
     an ríomheolaíocht.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Tá an Uair Chódála anseo
   csedweek_og_description: 4-10 Nollaig 2017. Ba chóir do gach dalta buntús na ríomheolaíochta
     a fhoghlaim.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Glac páirt san <a href="http://hourofcode.com">Uair Chódála</a><br/>8-14
     Nollaig 2014<br/>
   hoc2014_students: Daltaí
@@ -1299,6 +1307,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
   cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
   cspunit3_gradelevel: Blianta 9-12
@@ -2187,15 +2197,5 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro

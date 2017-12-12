@@ -53,10 +53,10 @@
   "tutorialDetailInternationalLanguages": "Jazyky",
   "tutorialDetailStandards": "Standardy",
   "tutorialDetailDisabled": "Tento kurz je dočasně nedostupný.",
-  "headingTutorialsYourLanguage": "Výuka ve tvém jazyce",
-  "showAllTutorialsButton": "Zobrazit aktivity pro mnoho jazyků",
+  "headingTutorialsYourLanguage": "Aktivity ve tvém jazyce",
+  "showAllTutorialsButton": "Zobrazit aktivity pro celou řadu jazyků",
   "hideAllTutorialsButton": "Skrýt aktivity pro mnoho jazyků",
-  "noTutorialsYourLanguage": "Neexistují žádné aktivity ve vašem jazyce. Zkuste aktivity v jiných jazicích kliknutím na tlačítko níže.",
+  "noTutorialsYourLanguage": "Neexistují žádné aktivity podporované ve tvém jazyce. Vyzkoušej kliknutím na níže uvedené tlačítko aktivity v dalších jazycích.",
   "bottomGuidelinesLink": "Klepnutím sem zobrazíte naše kritéria a pokyny pro kurzy Hodiny kódu.",
   "bottomSpecialNeedsLink": "Klepněte zde pro další informace k podpoře studentů se zvláštními potřebami."
 }
