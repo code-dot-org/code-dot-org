@@ -1,96 +1,244 @@
 ---
-
 title: <%= hoc_s(:title_how_to_volunteers) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Indlela yokuqondisa yabazinikelayo
+
+### Make a difference in a classroom today!
 
 ## Kungani uvolontiya?
 
 Bona obunye ubufakazi obuvela kovolontiya baphambilini:
 
-  * "Ingxenye enhle kunazo kusipiliyoni yami kwaba ukuthi lonke ikilasi kwaba abesifazane nabantu bombala. Kuyisinika esihle lekusasa lemboni yethu ukuba sibenethuba lokufinyelela nokuphaphamisa lezi zingane."
-  * "Ikakhulukazi ngithozele ukwazi ukukhuthaza amantombazane asemancane kwezethekhinoloji. Ngizizwe sengathi ngisiza isizukulwane esilandelayo kundawo yakithi."
-  * " NGITHANDILE ukubona indlela izingane ebezijabule ngayo. Enye yezinto ezimangalisayo ukuba othisha babone ukuba abanye abafundi kulabo ababengaphumeleli kahle ezifundweni bebedlula ngokucabanga njengomthuthukisi kanti futhi bebesiza abanye abafundi - bezitholela indawo lapho bezizwa bezithemba."
+- "Ingxenye enhle kunazo kusipiliyoni yami kwaba ukuthi lonke ikilasi kwaba abesifazane nabantu bombala. Kuyisinika esihle lekusasa lemboni yethu ukuba sibenethuba lokufinyelela nokuphaphamisa lezi zingane."
+- "Ikakhulukazi ngithozele ukwazi ukukhuthaza amantombazane asemancane kwezethekhinoloji. Ngizizwe sengathi ngisiza isizukulwane esilandelayo kundawo yakithi."
+- " NGITHANDILE ukubona indlela izingane ebezijabule ngayo. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
 
-Vakashela ikilasi lendawo ukukhuthaza abafundi ukuba baqhubeka bafunde ikhompyutha sayensi.[Bhalisa manje!](https://code.org/volunteer/engineer).
+## Anyone can volunteer
 
-## Faka osebenza nabo ukuba bavolontiye
+**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
 
-Xoxela abangane nosebenza nabo ngeHora loKufingqwa. Sinezi nkulungwane zothisha ezibhalisa kanti futhi ezifuna ovolontiya, ngakhoke bacele ukuba [bhalisa njengevolontiya](https://code.org/volunteer). Cela umqashi wakho azibandakanye. [Thumale le-imeyili](https://hourofcode.com/promote/resources#email) kumphathi wakho, okanye kuCEO.
+You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
 
-## Indlela okhethiwa ngayo:
+<a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button></p> 
 
-  * Othisha bezobe befuna ovolontiya ku[mephu yovolontiya](/volunteer/local) 
-  * Othisha bazohlola iphrofayele yakho kumephu, yingakhoke linga ukuphelelisa iphrofayele yakho ukwandisa amathuba okuba othisha bakwazi ukukhetha wena.
-  * Uthisha uzothintana nawe ngokusebenzisa leli fomu (ikheli lakho le imeyili ngeke kwabelwane ngalo kuthisha). 
-      * Uma ngabe uthola izicelo eziningi ezivela kothisha, ungakwazi ukubuyekeza izintandokazi zakho ngokuchofoza ilinki ukuze uqale futhi utshintshe iminingwane yakho ezansi imeyili evela kumfundisi 
+<p>
+  <strong>Anyone passionate about expanding opportunity</strong>: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+</p>
 
-## Indlela yokuzilungiselela:
+<p>
+  How do you get started?
+</p>
 
-Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Khetha ividiyo ongayibonisa ukuze usize ikilasi likwazi ukugxila uphinde ubenze balangazelele ukwenza iHora loKufingqwa.
+<ol>
+  <li>
+    <p>
+      <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    </p>
+  </li>
+</ol>
 
-  * Bukela ukuqeqeshwa kwamavolontiya alonyaka [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) kanye [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
-  * Hlola lokhu [Amathulusi Ovolontiya beHora loKufingqwa](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Kufaka uhlolojikelele, umugqa wesikhathi, ongakusebenzisa ukuzilungiselela, kanye nongakusebenzisa ukuzimaketha. Konke okudingayo ukulungela isipiliyoni sakho soku volintiya!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>)
-  * Uma uvakashela isikole, gcwalisa amaphepha nakho konke okudingekayo
-  * [Bukisisa lamathiphi](https://code.org/files/CSTT_Volunteers.pdf) mayelana nedlela ongasebenzisana ngayo nabafundi
-  * Lungiselela Isifundiso: 
-      * Yabelana ngezindaba ezikhuthazayo; ungangena kanjani uzibandakanye kumsebenzi wethenologi nomayini ithenologi ibaluleke kuwe
-      * Yenza abafundi balangazelele! Khetha ividiyo ongayibonisa ukuze usize ikilasi likwazi ukugxila uphinde ubenze balangazelele ukwenza iHora loKufingqwa.
-  * Joyina izinkulumo kwi FB, noma Twitter Instagram, Tunblr noma # Hora lokufingqwa
-  * Xhumana nothisha ukuxoxisana ngohlele ukukhuluma ngakho ngesikhathi sokuhlangana komhlangano wakho
-  * Uma unguvolontiya weveshuwali, vivinya iA/V kanye nekhono lokwebelana ngesikrini ngaphambi kwesikhathi
+<h2>
+  Recruit your co-workers to volunteer
+</h2>
 
-### **Usuku-lomcimbi leHora lokufinqwa:**
+<p>
+  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+</p>
 
-  * Bhalisa esikoleni ubese ubingelela othisha. Qinisekisa ngohlelo okuvunyelenwe ngalo ubese uxoxisana nangamaphi amaphuzu okukhulunywa.
-  * Chitha imizuzu emihlanu uzikhulumela wena; ngubani owakuququzelaukuthi uthathe umsebenzi wethenologinoma/kanye khompyutha sayensi. 
-      * Zazise: ungabani kanti futhi wenzani
-      * Khetha ividiyo ekhuthazayo ubese uyikhombisa kukilasi lonke ndawonye. Phendula nayiphi imibuzo evela kubafundi.
-      * Xoxakabanzi ngendlela othole intshisakalo yekhompyutha sayensi. Yini okanye ngubani okufake intshisakalo? Yini oyithanda kakhulu ngomsebenzi wakho? Kugcine kukufishane! ;) Injongo ukuba izingane zizenzele ngokwabo ukukhoda, shiya isikhathi semibuzo ekugcineni.
-      * Yabelana ngendlela ikhompyutha sayensi inobubanzi, nomthelela ngakhona mhlaba wonke.
-  * Vumela abafundi ukuba baziphonse kuzifundiso. Zungeza ikilasi uphendula nayiphi na imibuzo abanayo uphinde ubahole kuzindida ezinzima. Zama ukuba unganiki abafundi isixazululo ngokushesha, esikhundleni zama ukubabuza imibuzo ukuze bazokwazi ukuphendula ngokwabo ukuba yini engahambanga kahle.
-  * Ququzela abafundi babuzane imibuzo ngokwabo. ukuzifundisa ngokwabo kubanikeza amathuba amakhulu okwazi. kanjalo izingane ziyakhona ukucazulula izinkinga kalula ngokusebenzangamacembu. 
-  * Ekucedeni kwihora lokufingqwa, nikezela konke enkampanini yakho (izitembu ezinhle kakhulu) noma phendula yonke imibuzo esele.
-  * Kanti kubalulekile ukusho uma uzothatha izithombe/amavidiyo ngesikhathi somcimbi -- ikakhulukazi nabafundi -- ukuba uthole imvumo yothisha/umzali uma ungathanda ukuzisasaza kwezokusasaza.
+<h2>
+  How to prepare
+</h2>
 
-### **Isampuli yohlelo:**
+<ul>
+  <li>
+    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+  </li>
+  <li>
+    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+  </li>
+  <li>
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+  </li>
+  <li>
+    If you're visiting a school, complete any background checks or required paperwork.
+  </li>
+  <li>
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+  </li>
+  <li>
+    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+  </li>
+  <li>
+    Connect with the teacher to discuss what you plan to speak about during your session.
+  </li>
+  <li>
+    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+  </li>
+</ul>
 
-Zazise wena: </ul>
+<h2>
+  Day-of Hour of Code Event
+</h2>
 
-  * Ingebe usebenza kuphi, usebenza ngani, kanti futhi kuyini oyithanda kakhulu ngomsebenzi wakho?
-  * Yini okanye ngubani okufake intshisakalo
-  * Ubunaye umsizi na?
-  * Yabelana ngenkulumo ngokuthi ithenologi ithela kanjani umselele kuwonkewonke</ul></td> </tr> 
-    Buza abafundi imibuzo ubese ushiya isikhathi sochungechunge lwemibuzo </ul>
+<p>
+  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+</p>
+
+<h3>
+  <strong>Sample agenda:</strong>
+</h3>
+
+<table>
+  <tr>
+    <th>
+      Isikhathi
+    </th>
     
-      * Yimuphi umsebenzi abanentshisakalo kuwo, yini abakuthanda kakhulu tech gadgets kanye apps, noma benza kanjani bacabange ukuthi bangakha? 
-      * Ingabe abafundi banayo yini imibuzo?</ul></td> </tr> 
-        </tbody> </table> 
-        ### **Emva koMcimbi:**
+    <th>
+      Uhlamvu lohlelo
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      1-5 minutes
+    </td>
+    
+    <td>
+      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      5-10 minutes
+    </td>
+    
+    <td>
+      Introduce yourself and learn more about the students: </ul>
+      
+      <li>
+        What do you work, what do you do, and what do you love most about your job?
+      </li>
+      
+      <li>
+        What or who inspired you?
+      </li>
+      
+      <li>
+        How did you get interested in computer science?
+      </li>
+      
+      <li>
+        Did you have a mentor?
+      </li>
+      
+      <li>
+        Share a story about how tech affects everyone.
+      </li>
+      
+      <br />Ask the students questions and leave time for Q&A.</br> 
+      
+      <li>
+        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+      </li>
+      
+      <li>
+        Do the students have any questions for you?</ul></td> </tr> <tr>
+          <td>
+            30-60 minutes
+          </td>
+          
+          <td>
+            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+          </td>
+        </tr>
         
-          * Yabelana ngezithombe kanye namavidiyo akho kuCode.org e giving@code.org
-          * Khumbula ukufaka amahora akho okuvolontiya kundawo yenkampani yakho yokokulandela 
-          * Yabelana ngalokhu ubuhlanganyele ngakho kwezokusasaza #iHoraloKUfungqwa! Bona amathiphu ngezansi. 
-        ## Imibuzo Ejwayelekile mayelana nokuvolontiya ngesikhathi seHora loKufingqwa
+        <tr>
+          <td>
+            1-3 minutes
+          </td>
+          
+          <td>
+            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+          </td>
+        </tr>
         
-        ### **Angikaxhumananga nothisha namanje. Ngingavolintiya kanjani?**
+        <tr>
+          <td>
+            After
+          </td>
+          
+          <td>
+            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+          </td>
+        </tr></tbody> </table> 
         
-        Zama ukufunisela ezikoleni esiseduze futhi shayela uthishanhloko/ uthisha/ihovisi eliphambili noma ungasiza kanjani.
-        
-        ### **Ukuvakashela amakilasi kuthatha isikhathi esingakanani?**
-        
-        Ukuvakashela ikilasi ngesiqu kuvamise ukuthatha imizuzu 60-90, lapho ukuvakashela ikilasi ngeveshuwali kuvame ukuthatha imizuzu 20-30
-        
-        ### **Yimiphi iminyaka ebekiwe ukuze ukwazi ukuthola izifundiso ngeHora lokufingqwa na?**
-        
-        iCode.org isongoze izifundiso zeHora loKufingqwa njengemidlalo kanye namaphazili ukuheha abafundi bamabanga wonke, abafana kanye namantombakane, abavela kuzo zonke izizinda. Yiwonkewonke, nabadala bangazijabulisa ngoku dlala phindebafunde!
-        
-        <%= view :signup_button %>
+        <h3>
+          <strong>After the Event:</strong>
+        </h3>
+        <ul>
+          <li>
+            Share your photos and stories with Code.org at giving@code.org.
+          </li>
+          <li>
+            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+          </li>
+          <li>
+            Share about your experience on social media #HourOfCode!
+          </li>
+          <li>
+            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+          </li>
+          <li>
+            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+          </li>
+        </ul>
+        <h2>
+          How you get selected as a technical volunteer of guest speaker
+        </h2>
+        <ul>
+          <li>
+            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+          </li>
+          <li>
+            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+          </li>
+          <li>
+            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+          </li>
+        </ul>
+        <h2>
+          Volunteering during the Hour of Code FAQ
+        </h2>
+        <h3>
+          <strong>I haven't been contacted by a teacher yet. How can I still volunteer?</strong>
+        </h3>
+        <p>
+          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+        </p>
+        <h3>
+          <strong>How long do classroom visits last for?</strong>
+        </h3>
+        <p>
+          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+        </p>
+        <h3>
+          <strong>What age group is the Hour of Code tutorial appropriate for?</strong>
+        </h3>
+        <p>
+          Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
+        </p>
+        <p>
+          <%= view :signup_button %>
+        </p>

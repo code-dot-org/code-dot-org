@@ -1,56 +1,55 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-### Нижче наводиться зразок резолюції підтримки тижня інформатики та її цілей, який можуть використати органи державної та місцевої влади.
+### Нижче наводиться зразок резолюції підтримки Тижня освіти з інформатики та його цілей, який можуть використати органи державної та місцевої влади.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[ПОСТАНОВА АБО ДЕКЛАРАЦІЯ АДМІНІСТРАЦІЇ ПРЕЗИДЕНТА, ВЕРХОВНОЇ, ОБЛАСНОЇ АБО МІСЬКОЇ РАДИ ЧИ АДМІНІСТРАЦІЇ ###] — Беручи до уваги, що Тиждень освіти з інформатики підкреслює вирішальну роль, яку відіграє інформатика у перетворенні нашого суспільства, і те, як інформатика уможливлює інновації та створює економічні можливості;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[ПОСТАНОВА АДМІНІСТРАЦІЇ АБО РАДИ ###]
 
-[DATE]
+[ДАТА]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Беручи до уваги, що обчислювальна техніка є невід'ємною частиною сучасної культури та змінює уявлення про те, як люди взаємодіють одне з одним та з навколишнім світом;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Беручи до уваги, що інформаційні технології перетворюють промисловість, створюючи нові галузі торгівлі, впроваджуючи інновації в усіх галузях науки та підтримуючи продуктивність в усталених секторах економіки;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Беручи до уваги, що інформатика лежить в основі сектора інформаційних технологій нашої економіки, який дає значний внесок до обсягу виробництва Сполучених Штатів;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Беручи до уваги, що галузь інформатики є основоположною наукою для цифрової епохи;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Беручи до уваги, що сектор інформаційних технологій знаходиться в унікальному становищі, дозволяючи допомогти відновленню економіки через дослідження та розробку нових інновацій;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Беручи до уваги, що огляд робочих місць в інформації висвітлює понад 500 000 відкритих вакансій по всій країні;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Беручи до уваги, що надання учням шансу взяти участь у високоякісних заходах з інформатики відкриває їм багаті можливості, які пропонує ця галузь, та забезпечує навички критичного мислення, які слугуватимуть їм протягом всього їхнього життя;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Беручи до уваги, що всі учні заслуговують на ретельну підготовку з освіти в інформатиці, включно з доступом до кваліфікованих вчителів, технологій та відповідного вікові навчального плану, необхідного для вивчення інформатики на початкових та середніх рівнях освіти;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Беручи до уваги, що освіта з інформатики має проблеми для розв'язання, включно з включенням курсів з інформатики до вимог випуску зі старшої школи, та забезпеченням професійного розвитку вчителів з інформатики;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Беручи до уваги, що участь у Годині коду під час Тижня освіти з інформатики може слугувати зняттю покрову таємничості з галузі інформатики та заохочувати більше учнів брати подальші курси з інформатики;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Беручи до уваги, що галузь інформатики має значні бар'єри рівності, які слід розв'язати, включно зі стимулюванням більшої участі жінок та недопредставлених меншин до всіх рівнів та підгалузей;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Беручи до уваги, що Грейс Мюррей Гоппер, одна з перших жінок в галузі інформатики, розробила нові мови програмування та ввела стандарти для комп'ютерних систем, які лягли в основу багатьох досягнень в інформатиці; та
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Беручи до уваги, що тиждень <%= campaign_date('start-long') %>, на честь дня народження Грейс Гоппер, визначено як «Тиждень освіти з інформатики»,
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Постановляємо, що [АДМІНІСТРАЦІЯ ПРЕЗИДЕНТА, ВЕРХОВНА, ОБЛАСНА АБО МІСЬКА РАДА ЧИ АДМІНІСТРАЦІЯ] —
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) підтримує призначення Тижня освіти з інформатики (<%= campaign_date('full') %>);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) закликає школи, вихователів, батьків та політиків взяти участь у Тижні освіти з інформатики, надавши своїм учням можливість участі в Тижні коду;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) закликає школи, вчителів, дослідників, університети, лідерів ділових кіл та політиків визначити механізми отримання вчителями професійного розвитку на передньому краї галузі, щоби забезпечувати сталий розвиток навчання з інформатики на всіх рівнях освіти, та заохочувати учнів знайомитися з поняттями інформатики;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) закликає політиків усунути бар'єри, які перешкоджають курсам з інформатики зараховуватися як внесок з математики або точних наук для задоволення вимог для випуску;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) підтримує можливості в інформатиці, в тому числі через наявні програми, для жінок та недопредставлених меншин.
 
 <%= view :signup_button %>

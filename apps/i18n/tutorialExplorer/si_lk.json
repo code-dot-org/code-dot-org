@@ -1,4 +1,5 @@
 {
+  "startButton": "ආරම්භ කරන්න",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "සියල්ල",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "2 සිට 5 ශ්‍රේණිය දක්වා",
   "filterGrades68": "6 සිට 8 ශ්‍රේණිය දක්වා",
   "filterGrades9": "9 ශ්‍රේණියේ සිට ඉහලට",
-  "filterTeacherExperience": "අධ්‍යාපක අත්දැකීම්",
-  "filterTeacherExperienceBeginner": "නවකයා",
-  "filterTeacherExperienceComfortable": "පහසු",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "ශිෂ්‍ය අත්දැකීම්",
   "filterStudentExperienceBeginner": "නවකයා",
   "filterStudentExperienceComfortable": "පහසු",

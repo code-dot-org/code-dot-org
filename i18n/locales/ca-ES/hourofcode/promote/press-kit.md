@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Consells clau
 
-  * Contacta amb els mitjans de comunicació dues setmanes abans del teu esdeveniment mitjançant e-mail. Fes seguiment per correu electrònic i telèfon si no rebeu una resposta inicial.
-  * Demana a un membre del personal de l'escola o un voluntari per fer fotos per compartir en línia o enviar a la premsa.
-  * Escriu sobre l'Hora de Codi a la pàgina principal de la teva web i en el diari de l'escola. Publica els detalls del teu esdeveniment i fotos de les activitats dels estudiants.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Contacta amb els mitjans de comunicació dues setmanes abans del teu esdeveniment mitjançant e-mail. Fes seguiment per correu electrònic i telèfon si no rebeu una resposta inicial.
+- Demana a un membre del personal de l'escola o un voluntari per fer fotos per compartir en línia o enviar a la premsa.
+- Escriu sobre l'Hora de Codi a la pàgina principal de la teva web i en el diari de l'escola. Publica els detalls del teu esdeveniment i fotos de les activitats dels estudiants.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guia pas a pas:
 
 **1. Plan your event**
 
-  * Planifica una reunió per donar inici a l'Hora de Codi.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organitza activitats en grup (com una demostració d'una activitat de programació "fora de línia"), o llueix activitats creades i dirigides pels estudiants.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+- Planifica una reunió per donar inici a l'Hora de Codi.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Organitza activitats en grup (com una demostració d'una activitat de programació "fora de línia"), o llueix activitats creades i dirigides pels estudiants.
+- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

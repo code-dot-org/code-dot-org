@@ -334,7 +334,7 @@
     "TEXT_CHARAT_RANDOM": "võta juhuslik täht",
     "TEXT_CHARAT_TAIL": "",
     "TEXT_CHARAT_TOOLTIP": "Tagastab tähe etteantud asukohast.",
-    "TEXT_CREATE_JOIN_ITEM_TOOLTIP": "Lisa tekstile elemenet.",
+    "TEXT_CREATE_JOIN_ITEM_TOOLTIP": "Lisa tekstile elemnet.",
     "TEXT_CREATE_JOIN_TITLE_JOIN": "ühenda",
     "TEXT_CREATE_JOIN_TOOLTIP": "Lisa, eemalda või järjesta ümber selle ploki osasid.",
     "TEXT_GET_SUBSTRING_END_FROM_END": "kuni täht kohal # lõpust",

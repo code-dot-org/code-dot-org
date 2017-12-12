@@ -1,14 +1,11 @@
-* * *
-
+---
 title: <%= hoc_s(:title_partners) %>
-
-* * *
-
+---
 IHora loKufingqwa liqhutshwa iKomidi yoKweluleka noku Bhekisisa ye Hora loKufingqwa kanye neViki leMfundiso yeKhompyutha Sayensi.
 
 I [Komidi yoKweluleka](%= resolve_url('/advisory-committee') %) yakhiwa abamele iK-12, ezemfundo, ezingenanzuzo, ezinenzuzo, kanye nezinhlangano eziphathelene nezizwe ezahlukene. Lekomiti ihola icebo lomkhankaso weHora loKufingqwa.
 
-I [Komidi yoku Bhekisisa](%= resolve_url('/review-committee') %) yakhiwa ngothisha abayi 15 kuma zinga amabutho eK-12 ahlola aphinde ancome imisenzi esebenzisa imigomo yeKomiti yoKweluleka. Lothisha laba babhekisisa izifundiso eziholwa abafundi kanye nohlelo lokufunda oluholwa ngothisha afakwe ngamakhulu yabahlanganyele ngokwe mfundiso, bahlaziya ukubaluleka kwemfundiso yemisebenzi, ikhono lokubandakanya abafundi, kanye nesicelo esizoheha abafundi abahlukahlukene.
+I [Komidi yoku Bhekisisa](%= resolve_url('/review-committee') %) yakhiwa ngothisha abayi 15 kuma zinga amabutho eK-12 ahlola aphinde ancome imisenzi esebenzisa imigomo yeKomiti yoKweluleka. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
 Umsebenzi kanye nokuzinikelela kwawo womabili lamakomiti kube nomthelela kumpumelelo yeHora loKufingqwa kanye nombono wayo wokunikezela ngokwazisa ikhompyutha sayensi kuwo wonke umfundi.
 
@@ -134,13 +131,13 @@ Umsebenzi kanye nokuzinikelela kwawo womabili lamakomiti kube nomthelela kumpume
 
 * * *
 
-# Abahlanganyele Ngokwe Mfundiso
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Ingqalasizinda yabahlanganyeli kanye namathulusi
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

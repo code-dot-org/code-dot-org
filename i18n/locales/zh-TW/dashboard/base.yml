@@ -567,6 +567,9 @@ zh-TW:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "年齡 13+"
       cta: "學習如何做"
+    hoc-encryption:
+      title: "簡單加密"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ zh-TW:
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -754,10 +760,10 @@ zh-TW:
     save: "儲存"
     delete: "删除"
     import: "匯入"
-    share_link_import_bad_link_header: "分享連結無法辨識"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "有地方出錯了。"
-    share_link_import_error_body: "匯入此分享連結時出錯。請再試一次。"
+    share_link_import_bad_link_header: "無法辨識分享連結"
+    share_link_import_bad_link_body: '我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。'
+    share_link_import_error_header: "發生錯誤。"
+    share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
     exit: "返回課程"
     my_projects: "我的專案"
     project_gallery: "所有專案"
@@ -945,7 +951,7 @@ zh-TW:
   hidden_stage: "你的老師沒想到你會在這，問問你的老師你該上哪堂課。"
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
   return_unit_overview: '移至單元概覽'
-  return_course_overview: '移至單元概覽'
+  return_course_overview: '移至課程概覽'
   view_all_units: '查看所有單元'
   pd:
     survey:

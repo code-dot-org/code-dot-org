@@ -27,7 +27,7 @@ export default storybook => {
         description: 'Buttons to make a new Frozen, Starwars, and both Minecraft projects',
         story: () => (
           <NewProjectButtons
-            projectTypes={['frozen', 'starwars', 'mc', 'minecraft']}
+            projectTypes={['frozen', 'starwars', 'minecraft_adventurer', 'minecraft_designer']}
             isRtl={false}
           />
         )

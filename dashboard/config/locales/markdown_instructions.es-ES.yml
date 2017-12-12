@@ -1847,25 +1847,26 @@
         **Goal:** Make the screen
         green. \r
         \r
-        **How:** Drag in the block. Set the screen's `"background-color"`
-        property to `"green"`. Then hit "Run"\r
+        **How:** Drag in a `setProperty()` block. Use the dropdowns
+        to set the screen's `"background-color"` to `"green"`. Then hit "Run".\r
         \r
-        **Stuck? Click here** ![expandable](https://images.code.org/817990cbff035c9960b84a4b228ecaba-image-1508521071643.gif)
+        **Stuck?
+        Click here:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)
       AppLab Intro 7 - Change Text 2_markdown_instruction: |-
         <div style="float:right">\r
         <img
         src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29
-        PM.png" style="height:150px;">\r
+        PM.png" style="height:200px;">\r
         </div>\r
         \r
         **Goal:** Make the text
-        bigger and blue. You'll need two lines of code.\r
+        bigger and blue.\r
         \r
-        **How:**  Give `"label1"`
+        **How:**  You'll need two lines of code. Give `"label1"`
         a `"font-size"` of `80` and `"text-color"` of `"blue"`.\r
         \r
         **Stuck?
-        Click here:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>
+        Click here:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
       AppLab Intro 7 - Full Text_markdown_instruction: |-
         <div style="float:right">\r
         <img
@@ -1874,65 +1875,73 @@
         </div>\r
         \r
         **Goal:** Make the buttons
-        `"red"` and `"blue"`. Then change the text in the label. Remember you
-        can hover over elements to see their `"id"`\r
+        `"red"` and `"blue"`. Then change the text in the large orange label.\r
         \r
-        **How:** Set the `"text"`
-        property of the label to anything you want, like `"Welcome to my app!"`.
-        Then set the `"background-color"` of the buttons.\r
+        **How:**
         \r
-        **Stuck? Click
-        here:** ![expandable](https://images.code.org/709ff200e5b5f553b24d1d0a769db6ed-image-1507565545993.gif)
+        * Remember you can hover over elements to see their `"id"`.\r
+        * Set
+        the `"background-color"` of the buttons to `"red"` and `"blue"`.\r
+        *
+        Set the `"text"` property of the label to anything you want, like `"Welcome
+        to my app!"`.\r
+        \r
+        **Stuck? Click here:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)
       AppLab Intro 7 - onEvent intro_markdown_instruction: |-
-        <img src="https://images.code.org/8ac2e62d8940bfbe6e3a8ffdb94dd43b-image-1509043765361.gif"
-        style="float:right;height:150px">\r
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif"
+        style="float:right;height:200px">\r
         \r
-        **Goal:** The screen turns `"green"`
-        when you click the button\r
+        **Goal:** The screen will start
+        out blue. Add code so it turns green when you click the "Green-ify" button.\r
         \r
-        **How:** Add code inside the `"onEvent"`
-        that sets the screen's `"background-color"` to `"green"`.\r
+        **How:**
+        Add code inside the `onEvent()` that sets the screen's `"background-color"`
+        to `"green"`.\r
         \r
-        **Stuck?
-        Click here:** ![expandable](https://images.code.org/da6f9467a7da28efcbbe2f18a7d4721f-image-1509043778833.gif)
+        **Stuck? Click here:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons_markdown_instruction: |-
         <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif"
         style="float:right;height:200px">\r
         \r
-        **Goal:** Complete this flashlight
-        app. The "Off" button should make the screen `"black"` and the text `"white"`\r
+        **Goal:** Help finish this flashlight
+        app. The "On" button already turns the screen white. Run the app and try
+        it out. Then write code so the "Off" button makes the screen black again.\r
         \r
         **How:**
-        Add code to the empty `onEvent()` block that sets the `"background-color"`
-        of the screen and `"text-color"` of the label.\r
+        Add code inside the empty `onEvent()` that sets the `"background-color"`
+        of the screen to `"black"` and `"text-color"` of the label to `"white"`.\r
         \r
-        **Stuck? Click here:**
-        ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)
+        **Stuck?
+        Click here:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab Intro 7 - playSound_markdown_instruction: |-
-        <img src="https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16
-        PM.png" style="float:right;height:200px">\r
+        <img src="https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png" style="float:right;height:200px">\r
         \r
-        **Goal:** Add an animal
-        to the sound board. If you don't want to find a picture of your animal then
-        change the color of the speaker icon to one you like.\r
+        **Goal:** This sound board
+        is almost done! Run it to see how it works. Then add an image, text, and sound
+        to the last button.\r
         \r
-        **How:** Add
-        an `onEvent()` and use `playSound()` inside of it. Find an animal sound you
-        like in the sound library. For the picture you can either upload an image
-        you find online and change the button's `"image"` property, or just change
-        the `"icon-color"`. \r
+        **How:** \r
+        * Add an `onEvent()` to the program
+        and set the "id" to `"button4"`. Drag a `playSound()` into the `onEvent()`
+        and choose a sound from the library. \r
+        * Add a `setProperty()` (outside
+        your `onEvent()`) to change the button's `"image"` property. Choose an
+        image using the third dropdown.\r
+        * Add one more `setProperty()` to change
+        the button's `"text"`.\r
         \r
-        **Stuck? Click here:** ![expandable](https://images.code.org/d33c2d008b3f03f7a9775a4a3a1bbfcf-image-1509047489327.gif)
+        **Stuck? Click here:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)
       AppLab Intro 7 - thisOrThatAddButton_markdown_instruction: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
         \r
         **Goal:** Add a second
-        button to the screen that says "Right!". Set its `"id"` to `"rightButton"`.\r
+        button to the screen that says "Right!" with an `"id"` of `"rightButton"`.\r
         \r
         **How:**
         In Design Mode drag in a new button. Position and resize it. Then set its
-        `"id"`, `"text"`, `"background color"`, and `"font size"`\r
+        `"id"`, `"text"`, `"background color"`, and `"font size"`.\r
         \r
         **Stuck?
         Click here:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
@@ -1950,27 +1959,73 @@
         **Stuck?
         Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 7 - thisOrThatPersonalize_markdown_instruction: |-
-        <img src="https://images.code.org/762507aef26d512f820c42fb2e7fc6f1-image-1508386296370.11.19
-        PM.png" style="float:right;height:200px">\r
+        <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ"
+        target="_blank"><img src="https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18
+        PM.png" style="float:right;height:200px"></a>\r
+        <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q"
+        target="_blank"><img src="https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05
+        PM.png" style="float:right;height:200px"></a>\r
+        <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg"
+        target="_blank"><img src="https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
+        PM.png" style="float:right;height:200px"></a>\r
         \r
-        **Goal:** Start building
-        your own "Choose Your Own Adventure" app. Don't forget to "Share" it
-        with someone!\r
+        **Goal:** Build your
+        own app by extending this project. Then "Share" it with someone!\r
         \r
-        **How:** Choose the basic story you want to tell, like
-        who your character is and the setting. Then change the text and images of
-        your app to match the story. You can always add more screens as you keep building
-        out your adventure.\r
+        **How:**
+        Decide what type of app you're interested in building. Then go build it by
+        adding more screens, buttons, text, sound, and user interactions to your app.
+        There's a few more blocks in the toolbox that you can experiment with as
+        well. Once you're done click "Share" to send it to yourself or a friend!
         \r
-        <details><summary><b>Stuck? Click here for some
-        ideas</b></summary>\r
         \r
-        <li>Make an adventure about your favorite fictional
-        character</li>\r
-        <li>Make an adventure about a famous (or not-so-famous person)
-        you're a big fan of</li>\r
-        <li>Make an adventure that has a lot of unexpected
-        twists or has a difficult moral choice</li>\r
+        <details><summary><b>Choose Your Own Adventure Ideas</b></summary>\r
+        \r
+        Try
+        out this <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg"
+        target="_blank">Example Choose Your Own Adventure App</a> so you can see
+        how one works. Here's some ideas to help you come up with your own story.\r
+        \r
+        <li>Make
+        an adventure about your favorite character, real or fictional.</li>\r
+        <li>Make
+        an adventure that tells the story of your favorite book, movie, or your own
+        creation.</li>\r
+        <li>Make an adventure that has a lot of unexpected twists
+        or has a difficult moral choice.</li>\r
+        <br>\r
+        </details>\r
+        \r
+        <details><summary><b>Greeting
+        Card Ideas</b></summary>\r
+        \r
+        Try out this <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q"
+        target="_blank">Example Greeting Card App</a> so you can see how one works.
+        Here's some ideas to help you come up with your own card.\r
+        \r
+        <li>Think
+        of a birthday, holiday, or other special day that's coming up. Make a card
+        to celebrate!</li>\r
+        <li>Create a thank you card for someone you appreciate.</li>\r
+        <li>Create
+        an invitation for an upcoming event.</li>\r
+        <br>\r
+        </details>\r
+        \r
+        <details><summary><b>Personality
+        Quiz Ideas</b></summary>\r
+        \r
+        Try out this <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ"
+        target="_blank">Example Personality Quiz App</a> so you can see how one
+        works. Here's some ideas to help you come up with your own quiz.\r
+        \r
+        <li>Make
+        a quiz that suggests something a person might like, for example a meal, a
+        team, a book, or a place.</li>\r
+        <li>Make an quiz that "predicts the future"
+        based on their answers.</li>\r
+        <li>Make a quiz to help people make a hard
+        decision.</li>\r
         \r
         </details>
       AppLab Intro 7 - thisOrThatSetScreen_markdown_instruction: |-
@@ -1982,12 +2037,12 @@
         \r
         **How:**
         In Code Mode add a new `onEvent()` to your program for your "Right!" button.
-        Add a `setScreen()` block inside of it that switches screens to `"thatScreen"`.\r
+        Add a `setScreen()` block inside of it that switches screens to `"rightScreen"`.\r
         \r
         **Stuck?
         Click here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       AppLab_test02_markdown_instruction: |-
-        #This is the title \r
+        # This is the title \r
         \r
         - bullet 1
         \r
@@ -5003,14 +5058,15 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
-        #Background
-        Color\r
+        #
+        Background Color\r
         \r
-        * Find the code in the style sheet that is making the background
-        of the entire page light blue.\r
-        * Change the code to make the page a different
-        color.\r
-        * Try to change the background color of just the paragraphs.
+        * Find the code in the style sheet that is making
+        the background of the entire page light blue.\r
+        * Change the code to make
+        the page a different color.\r
+        * Try to change the background color of just
+        the paragraphs.
       CSD U2 layout style body_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -5323,27 +5379,27 @@
         out some of these new CSS properties on your personal web site.\r
         \r
         * Add
-        styling of your choice to your web site. Be sure to use at least 3 new CSS
-        properties.\r
+        styling of your choice to your web site. Be sure to use at least three new
+        CSS properties.\r
         \r
         # Checklist\r
         \r
-        * At least 3 of the following CSS Properties
-        are used:\r
+        * At least three of the following
+        CSS Properties are used:\r
         \r
          * `background-color`\r
          * `height`\r
-         * `width`\r
          *
-        `border-style`\r
+        `width`\r
+         * `border-style`\r
          * `border-radius`\r
          * `border-width`\r
-         * `float`\r
 
-        * `margin`\r
+        * `float`\r
+         * `margin`\r
         \r
-        We encourage you to use more than 3 though!  Explore additional
-        CSS properties and add them to your page.
+        We encourage you to use more than three, though!  Explore
+        additional CSS properties and add them to your page.
       CSD U2 layout style margin_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -5954,14 +6010,15 @@
         blah blah answer\r
         </details>\r
         </div>\r
-        #Background
-        Color\r
+        #
+        Background Color\r
         \r
-        * Find the code in "style.css" that is making the background
-        of the entire page light blue.\r
-        * Change the code to make the page a different
-        color.\r
-        * Try to change the background color of just the paragraphs.
+        * Find the code in "style.css" that is making the
+        background of the entire page light blue.\r
+        * Change the code to make the
+        page a different color.\r
+        * Try to change the background color of just the
+        paragraphs.
       CSD U2 text style decoration_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -6118,8 +6175,8 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
-        #Changing
-        the Font\r
+        #
+        Changing the Font\r
         \r
         * Find the CSS rule-set in the style sheet that determines
         the style for the paragraph tag.\r
@@ -6362,18 +6419,18 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
-        #Making
-        a new CSS rule-set\r
+        #
+        Making a new CSS rule-set\r
         \r
-        The block of code that gives rules for a particular
-        tag is called a _rule-set_.  You can make a new rule set by copying the pattern
-        you see in the rule-set for the `h1` tag.\r
+        The block of code that gives rules for a
+        particular tag is called a _rule-set_.  You can make a new rule set by copying
+        the pattern you see in the rule-set for the `h1` tag.\r
         \r
-        * Find the CSS rule-set in
-        the style sheet that determines the styles for the h1 tag.\r
-        * Using the
-        same pattern, write a new CSS rule-set that will determine the style for the
-        h3 tag.\r
+        * Find the CSS
+        rule-set in the style sheet that determines the styles for the h1 tag.\r
+        *
+        Using the same pattern, write a new CSS rule-set that will determine the style
+        for the h3 tag.\r
         * Add code to set a different color for the h3 tags.
       CSD U2 text style sample_markdown_instruction: |
         <div style="float: right;
@@ -6448,19 +6505,19 @@
         - CSS font-family Property</a>\r
         </details>\r
         </div>\r
-        #CSS and Style sheets\r
+        # CSS and Style
+        sheets\r
         \r
+        * Look at the web page below and find some different types of
+        text stylings that you don't know how to code yet.\r
+        * Click on the style
+        sheet ("style.css" in the files area) and look at the code inside the file.\r
         *
-        Look at the web page below and find some different types of text stylings
-        that you don't know how to code yet.\r
-        * Click on the style sheet ("style.css"
-        in the files area) and look at the code inside the file.\r
-        * With your partner,
-        discuss which parts of the code you think are making the text appear differently
-        than before.\r
+        With your partner, discuss which parts of the code you think are making the
+        text appear differently than before.\r
         \r
-        In the next few lessons, you'll be changing and adding
-        new styles on this page.\r
+        In the next few lessons, you'll
+        be changing and adding new styles on this page.\r
         \r
       CSD U2 text style size_markdown_instruction: |-
         <div style="float: right; height:
@@ -8073,17 +8130,21 @@
         _You might notice some new blocks in the Sprites
         drawer, experiment with them and see if you can incorporate them into your
         conditionals._
-      CSD U3 Conditionals Apple 2_markdown_instruction: |
-        # Turning Green\r
+      CSD U3 Conditionals Apple 2_markdown_instruction: |-
+        # Turning Red\r
         \r
         Now
         that we know how to use _if_ statements, you can do more than just check if
-        the apple has reached a scale of 2, you turn it red once it happens. Use a
-        conditional in the draw loop to check whether `apple.scale` is greater than
-        2 - if it is, set the apples new animation to "apple_red".\r
+        the apple has reached a scale of 2, you turn it red once it happens.\r
+        \r
+        #
+        Do This\r
+        \r
+        Use a conditional in the draw loop to check whether `apple.scale`
+        is greater than 2 - if it is, set the apples new animation to "apple_red".\r
         \r
         _Challenge:
-        Can you also make the apple stop growing once it turns red?_\r
+        Can you also make the apple stop growing once it turns red?_
       CSD U3 Conditionals Apple_markdown_instruction: |-
         # More Practice With Booleans\r
         \r
@@ -8092,13 +8153,15 @@
         \r
         #
         Do This\r
-        There is a growing apple sprite created for you. It starts as green,
-        should turn red when it gets to a scale of 2.\r
+        There is a growing apple sprite created for you. It starts as green
+        and should turn red when it gets to a scale of 2. We won't worry about making
+        it red yet, let's just use a `console.log` command to check whether it's
+        scale is 2 yet.\r
         \r
-        * Add a `console.log`
-        statement.\r
-        * Add a Boolean expression inside the `console.log` that checks
-        whether the `apple.scale` is greater than 2.
+        * Add a `console.log` statement.\r
+        * Add a Boolean
+        expression inside the `console.log` that checks whether the `apple.scale`
+        is greater than 2.
       CSD U3 Counters assigning an expression_markdown_instruction: |-
         # Assignment
         and Expressions\r
@@ -8705,7 +8768,6 @@
         * Add code
         to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation`
         properties so that they move. You'll need to update them with `randomNumber()`.\r
-        \r
       CSD U3 Draw Loop Plugged wiggle sprite rotation_markdown_instruction: |-
         <img
         src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
@@ -9462,13 +9524,13 @@
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) to send it to your Projects Gallery.\r
-      CSD U3 L12 Freeplay_markdown_instruction: |
+      CSD U3 L12 Freeplay_markdown_instruction: |-
         # Free Play\r
         \r
         Use what you've
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        PM.png) to send it to your Projects Gallery.
       CSD U3 L13 Freeplay_markdown_instruction: |
         # Free Play\r
         \r
@@ -9476,13 +9538,13 @@
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) to send it to your Projects Gallery.\r
-      CSD U3 L15 Freeplay_markdown_instruction: |
+      CSD U3 L15 Freeplay_markdown_instruction: |-
         # Free Play\r
         \r
         Use what you've
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        PM.png) to send it to your Projects Gallery.
       CSD U3 L16 Freeplay_markdown_instruction: |
         # Free Play\r
         \r
@@ -10616,13 +10678,16 @@
         \r
         * Add `var sprite = createSprite(200,
         200)` under the comment `Creating Sprites`.\r
-        * Add `drawSprites()` under
-        the comment `Drawing`.\r
-        * **Run the code** to draw your first sprite on
-        the screen.\r
+        \t* You can ignore the yellow
+        triangle warning for now.  It's just telling you that you haven't used your
+        sprite yet.\r
+        * Add `drawSprites()` under the comment `Drawing`.\r
+        * **Run
+        the code** to draw your first sprite on the screen.\r
         \r
-        _Hint: Sprites are drawn from their center, which means
-        that center of the square (not the top left corner) is at (200, 200)._
+        _Hint: Sprites
+        are drawn from their center, which means that center of the square (not the
+        top left corner) is at (200, 200)._
       CSD U3 Sprites make template_markdown_instruction: |-
         # Make Your Own Sprite\r
         \r
@@ -11883,7 +11948,7 @@
         appear somewhere randomly on the screen.
       CSD U3 abstraction animation circle_markdown_instruction: "# Animate the Satellite\\r\n\\r\nNow\nyou
         are ready for the final piece of the drawing: making the satellite circle\nthe
-        moon.\\r\n\\r\n#Do This\\r\n\\r\nUse `setSpeed()` and `getDirection()` to\nmake
+        moon.\\r\n\\r\n# Do This\\r\n\\r\nUse `setSpeed()` and `getDirection()` to\nmake
         the satellite circle the moon. "
       CSD U3 abstraction animation rotate_markdown_instruction: |-
         # Rotation\r
@@ -11933,10 +11998,10 @@
         is like `velocityX`, but it moves things up and down.  Can you use it to make
         the dragonfly walk up the screen?\r
         \r
-        #Do This\r
+        # Do This\r
         \r
-        Use `velocityY` to
-        make the sprite go up the screen.\r
+        Use `velocityY`
+        to make the sprite go up the screen.\r
         \r
         *Hint: Should velocity by positive
         or negative to move the sprite up the screen?*
@@ -12102,7 +12167,7 @@
         is like `velocityX`, but it moves things up and down.  Can you use it to make
         the feather float the down screen?\r
         \r
-        #Do This\r
+        # Do This\r
         \r
         Use `velocityY`
         to make the sprite go down the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)
@@ -12113,10 +12178,10 @@
         is like `velocityX`, but it moves things up and down.  Can you use it to make
         the dragonfly walk up the screen?\r
         \r
-        #Do This\r
+        # Do This\r
         \r
-        Use `velocityY` to
-        make the sprite go up the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)\r
+        Use `velocityY`
+        to make the sprite go up the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)\r
         \r
         *Hint:
         Should velocity be positive or negative to move the sprite up the screen?*
@@ -12943,7 +13008,7 @@
         is like `velocityX`, but it moves things up and down.  Can you use it to make
         the feather float the down screen?\r
         \r
-        #Do This\r
+        # Do This\r
         \r
         Use `velocityY`
         to make the sprite go down the screen.&nbsp;&nbsp;  [Show me where](#triggercallout=code_triggered)
@@ -15037,6 +15102,10 @@
         [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
         *
         You can also download a CSV version of the file [here](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
+      CSD U5 Waze Data Video_markdown_instruction: |-
+        Watch this video to learn how
+        this problem is solved by Waze. As you watch think about what data is being
+        collected and where it's coming from.
       CSD U5 binary 1_markdown_instruction: |-
         # 5-Bit Number\r
         \r
@@ -15363,32 +15432,45 @@
         is a clicker game, similar to the one that you built in the last lesson.\r
         \r
         Look
-        at the code with your partner and answer the following questions:\r
+        at the code with your partner and answer the following question:\r
         \r
         *
-        What happens when the user clicks picture of the mouse?\r
-        * When will the
-        LED start to blink?\r
+        How many times do you need to click the mouse before the LED starts to blink?\r
         \r
-        Once you have answered the questions, run the code
-        and see what happens.
+        Write
+        your answer in the box below, then run the code and see what happens.
       CSD U6 Catch the Mouse_markdown_instruction: Embedded Prediction
+      CSD U6 LED all_markdown_instruction: |-
+        # Multi-function Light\r
+        \r
+        This app
+        should let you choose between three types of lights: on, blink, and pulse.  It
+        should also have a button that turns the light completely off.  Right now
+        only the "on" button works, and the "off" button is completely missing.\r
+        \r
+        #
+        Do This\r
+        * Add code to make the "blink" and "pulse" buttons work.\r
+        *
+        In design mode, add a new "off" button.\r
+        * Add code to make the "off"
+        button work.
       CSD U6 LED toggle_markdown_instruction: |-
         # Light Switch\r
         \r
-        A light switch
-        should change a light between off and on.  One of the three blocks you haven't
-        used yet will make the button work like a light switch.\r
+        There are three
+        more LED blocks that you haven't used yet. One of them can make the button
+        work like a light switch, turning the LED on when it's off, but off when
+        it's on.\r
         \r
-        ## Do this\r
-        *
-        Try the "blink", "toggle" and "pulse" blocks to see what they do.\r
-        *
-        Use one of the blocks to make the button work like a light switch.\r
-         * If
-        the LED is off, the button should turn it on.\r
-         * If the LED is on, the
-        button should turn it off.
+        # Do This\r
+        * Try the `blink`, `toggle` and `pulse` blocks
+        to see what they do.\r
+        * Use one of the blocks to make the button work like
+        a light switch.\r
+         * If the LED is off, the button should turn it on.\r
+
+        * If the LED is on, the button should turn it off.
       CSD U6 LEDbutton predict embed_markdown_instruction: |-
         # Using Events\r
         \r
@@ -15398,18 +15480,17 @@
         your answer.\r
         \r
         * Will the light turn on when the program is "Run"?  Why
-        or why not?\r
-        * What does the button do?
+        or why not?
       CSD U6 add LED button_markdown_instruction: |-
         # Using Events\r
         \r
-        You'll
-        also want a button that turns your light off.  This program has two buttons.  The
-        "on" button works, but the "off" button still needs to be programmed.\r
+        This program
+        has two buttons.  The "on" button works, but the "off" button still needs
+        to be programmed.\r
         \r
-        ##
-        Do this\r
-        * Add code so that the second button turns the LED off.
+        # Do This\r
+        * Add code so that the second button
+        turns the LED off.
       CSD U6 analog challenge_markdown_instruction: |-
         # Challenge\r
         \r
@@ -15455,7 +15536,12 @@
         This
         app is very similar to the last, but we've added a button with the ID "update_button".
         Write a program that displays the current value of the light sensor every
-        time the update button is clicked.
+        time the update button is clicked.\r
+        \r
+        # Do This\r
+        \r
+        Use an event handler
+        to update the text of "light_value" using the `lightSensor.value` block.
       CSD U6 analog rbg 1_markdown_instruction: |-
         # Displaying Sensor Readings in
         Color\r
@@ -15515,9 +15601,20 @@
       CSD U6 analog sound_markdown_instruction: |-
         # Reading the Sound Sensor\r
         \r
-        In
-        this app we've already added a text label with the id "sound_value". Using
-        the `soundSensor.value` block. display the value of the sound sensor.
+        The
+        `soundSensor.value` block allows you to get the current sound sensor reading\r
+        \r
+        #
+        Do This\r
+        \r
+        In this app we've already added a text label with the id "sound_value".
+        Using the `soundSensor.value` block, display the value of the sound sensor.\r
+        \r
+        _Tip:
+        You can drag the `soundSensor.value` block directly into any other block where
+        you could type a value instead._\r
+        \r
+        ![](https://images.code.org/3bd9ac3f869e42f48aaf190944fe1c22-image-1511293198110.png)
       CSD U6 analog temp_markdown_instruction: |-
         # Make a Thermometer App\r
         \r
@@ -15533,8 +15630,13 @@
         a simple thermometer app that reads in values from the temperature sensor.
         Your app can display the temperature in either Fahrenheit or Celsius (or both!)\r
         \r
-        _Challenge:
-        can you make your app continually update the temperature readings?_
+        *
+        Using Design Mode, create a button for updating and a label to display the
+        temperature\r
+        * Add an event handler to respond to your update button being
+        clicked\r
+        * Add code to your event handler to read the temperature sensor
+        and display the value on screen
       CSD U6 balloon clicker predict_markdown_instruction: |-
         # Make the Balloon Fly\r
         \r
@@ -15551,16 +15653,281 @@
         \r
         Once
         you have answered the questions, run the code and see what happens.
-      CSD U6 checkbox_markdown_instruction: Predict Level
-      CSD U6 create LED app_markdown_instruction: |-
-        # Make Your App\r
+      CSD U6 board getters_markdown_instruction: |-
+        # Using the Circuit Playground\r
         \r
-        Now's
-        your chance to put your plan into action.  Use what you've learned to make
-        your own LED app.
-      CSD U6 frequency_markdown_instruction: |2-
-         (Add code that makes left button turn
-        on the buzzer)
+        You
+        can also use getters and setters with the Circuit Playground.  For this level,
+        you'll need to plug in your board.\r
+        \r
+        Read through the code and predict
+        what the program will do, then hit "Run" to test your prediction.
+      CSD U6 challenge motorcycle_markdown_instruction: |-
+        # Challenge\r
+        \r
+        Use this
+        program to experiment some more with getting and setting properties. Some
+        ideas you might try include:\r
+        \r
+        * Use the toggle switch to change the
+        motorcycle's movement to go up and down.\r
+        * Use a dropdown with color names
+        to change the motorcycle's color\r
+        * Make the buzzer or LED turn on when
+        the motorcycle reaches the top or bottom of the screen.
+      CSD U6 checkbox_markdown_instruction: Predict Level
+      CSD U6 create LED app 2_markdown_instruction: |-
+        # Make Your App - The Code\r
+        \r
+        Next,
+        you'll need to add the code that makes your app work.\r
+        \r
+        # Do This\r
+        \r
+        *
+        Discuss with your partner what code you will need in your app.  Do you need...\r
+          *
+        Events?\r
+          * Variables?\r
+          * Setters?\r
+          * Random Numbers?\r
+        * In Code
+        Mode, add in the code that will make your app work.
+      CSD U6 create LED app_markdown_instruction: |-
+        # Make Your App - The Screen\r
+        \r
+        Now,
+        you and your partner can make your own app using the LED.  Discuss with your
+        partner what kind of app you want to make.\r
+        \r
+        # Do This\r
+        \r
+        * Discuss
+        with your partner what screen elements you will need in your app.  Do you
+        want...\r
+          * Buttons?\r
+          * Images?\r
+          * Text?\r
+        * In Design Mode, add
+        the elements, making sure you give each a meaningful ID.
+      CSD U6 design motorcycle_markdown_instruction: |-
+        # Add Your Own Elements\r
+        \r
+        Now
+        it's time to add some elements of your own. The motorcycle should be able
+        to move up and down right now, but how can you control its speed?\r
+        \r
+        #
+        Do This\r
+        \r
+        * Add a slider in design mode.\r
+          * Make sure you set the
+        min and max values of the slider in design mode.\r
+        * Create an event that
+        will trigger when the slider value is changed.\r
+        * Add code to get the slider
+        value and store it into the `speed` variable when the event is triggered.
+      CSD U6 emoji race demo_markdown_instruction: |-
+        # Emoji Race!\r
+        \r
+        This is
+        an example of a race game that you'll build by the end of this lesson. To
+        play, pair up with another student. The student on the left will the click
+        the left button on the Circuit Playground as fast as they can, while the student
+        on the right clicks the right button. Whoever can get their emoji to the bottom
+        of the screen first wins.\r
+        \r
+        # Do This\r
+        \r
+        Turn to a classmate and
+        make a list of the following information.\r
+        \r
+        * What components of the
+        board does this program use?\r
+        * What events is this program responding to?\r
+        *
+        What functions might you create to make this program work?
+      CSD U6 emotion machine 1_markdown_instruction: |-
+        # Changing Images\r
+        \r
+        The
+        first thing you'll need your emotion machine to do is change to the appropriate
+        image when a button is clicked. If you look at the starting code, you'll
+        see that we already added `setProperty("face", "image", "icon://fa-smile-o")`
+        to change to a smiley face when you click happy.\r
+        \r
+        # Do This\r
+        \r
+        <div
+        markdown="1" style="float:right; margin: 20px;">\r
+        \r
+        ![expandable](https://curriculum.code.org/media/uploads/select_image.gif)\r
+        \r
+        </div>\r
+        \r
+        Create
+        an event handler for "sad_button" and make it change to a sad emoji. To
+        do this you'll need to set the "image" property of the image with id "face".\r
+        \r
+        _Tip:
+        when you click the last dropdown in the `setProperty` block click "Choose..."
+        to go to your media library. From there you can select an icon from our icon
+        library or upload an image of your own._
+      CSD U6 emotion machine 2_markdown_instruction: |-
+        # Changing Color\r
+        \r
+        If
+        you look back at the example for this app, you should notice that not only
+        do the emojis change when you click a button, but their color changes as well.\r
+        \r
+        #
+        Do This\r
+        \r
+        In each of the event handlers, set the "icon-color" property
+        of "face". Pick a warm color for happy and a cool color for sad.
+      CSD U6 emotion machine 3_markdown_instruction: |-
+        # Setting Text\r
+        \r
+        Your
+        happy and sad buttons should be almost completely functional now. The only
+        thing they still need to do is change the text at the bottom of the screen.\r
+        \r
+        #
+        Do This\r
+        \r
+        Make each of the event handlers change the text of "feeling"
+        to the appropriate emotion (either "happy" or "sad")
+      CSD U6 emotion machine 4_markdown_instruction: |-
+        # Add Another Emotion\r
+        \r
+        In
+        the example app you saw earlier, you could set the emotion to happy, sad,
+        or meh. Your app only has happy and sad, can you add a third emotion?\r
+        \r
+        #
+        Do This\r
+        \r
+        Using all of the same techniques you used for the happy and
+        sad buttons, create a third emotion button. You could stick with meh, or you
+        could pick an emotion of your own.\r
+        \r
+        When you're all done, feel free
+        to add more emotions or features before submitting your final version.
+      CSD U6 emotion machine example_markdown_instruction: |-
+        # The Emotion Machine\r
+        \r
+        Check
+        out this Emotion Machine app that you'll be building next. Try clicking on
+        the buttons to see how it works.\r
+        \r
+        # Do This\r
+        \r
+        Try out the app,
+        and then with a neighbor discuss:\r
+        \r
+        * What events handlers does this
+        app use?\r
+        * Which elements are being changed with code?\r
+        * Which properties
+        are being changed when you click a button?
+      CSD U6 frequency_markdown_instruction: |-
+        # Frequency\r
+        \r
+        This buzzer controller
+        has been expanded to control frequency as well, but the code isn't finished
+        yet.\r
+        \r
+        # Do This\r
+        * Using the `duration` variable as a model, create
+        a `frequency` variable that gets the value from the *frequency* slider.\r
+        *
+        Modify the line of code that makes the buzzer sound so that it uses the `frequency`
+        variable rather than the default frequency of `500`.\r
+        * Run your code, then
+        change the frequency and the duration to hear the difference in the buzzer.  (Don't
+        forget to hit the button after you make a change!)
+      CSD U6 game project board events_markdown_instruction: |-
+        # Board Events\r
+        \r
+        Go
+        back to the Events section of your activity guide and find any events that
+        respond to your board (ones that would use `onBoardEvent()`). Create event
+        handlers for each of those now. If these events rely on functions you haven't
+        written yet, just leave yourself a comment in the code.
+      CSD U6 game project finish_markdown_instruction: |-
+        # Finishing Touches and Testing\r
+        \r
+        At
+        this point you should have most of your program in place. Now you need to
+        add whatever finishing touches are needed and do a little testing. When your
+        app is ready, have your classmates try it out. See if you can find any bugs,
+        confusing design choices, or missing features you'd like to work on.\r
+        \r
+        Once
+        you're all done with this version of your program, click Submit to turn it
+        in.
+      CSD U6 game project functions call_markdown_instruction: |-
+        # Calling your Functions\r
+        \r
+        With
+        your functions defined, you can can call them wherever you need. Go through
+        your event handlers, or anywhere else in your program that your function should
+        be used, and add calls to the function you created.
+      CSD U6 game project functions define_markdown_instruction: |-
+        # Define Your Functions\r
+        \r
+        Define
+        all of your functions at the bottom of the program, under the comment `//
+        Create your functions here`.\r
+        \r
+        Right now we're only worrying about writing
+        the function _definitions_, the part which looks like:\r
+        \r
+        ```\r
+        function
+        myFunction() {\r
+        \t// Things my function does\r
+        }\r
+        ```
+      CSD U6 game project screen links_markdown_instruction: |-
+        # UI Element Events\r
+        \r
+        Now
+        that all of your screens are designed, you can add any event handlers that
+        will respond to _screen interaction_. These should be listed in the "Events"
+        section of your activity guide. If you run into new events that you hadn't
+        thought of in the planning stage, make sure you add them to your project guide.\r
+        \r
+        Don't
+        worry about making these completely functional yet. If your events rely on
+        board elements or your own functions, we'll take care of that in later levels.
+      CSD U6 game project screens_markdown_instruction: |-
+        # Create Your Screens\r
+        \r
+        The
+        first thing you'll need to do is create all of the screens that you've sketched
+        in your planning guide.\r
+        \r
+        # Do This\r
+        \r
+        Use Design Mode to create
+        all of the screens that your program will need. Don't forget to **pick sensible
+        IDs** for all of your design elements.
+      CSD U6 get toggle_markdown_instruction: |-
+        # onChange\r
+        \r
+        This program has
+        events that detect three different changes: the toggle switch, the interval
+        slider, and the duration slider.  Because there are so many different things
+        that cause the LED and buzzer to reset, it uses functions to organize the
+        code.\r
+        \r
+        # Do This\r
+        \r
+        * Read the `updateLED` function to see what
+        it does.\r
+        * Add code to `updateBuzzer` to make the buzzer only turn on when
+        the toggle switch is open.
       CSD U6 getProperty Demo_markdown_instruction: |-
         # Updating Properties\r
         \r
@@ -15595,9 +15962,22 @@
       CSD U6 getProperty board predict_markdown_instruction: |-
         Predict Level (See
         contained level for markdown)
-      CSD U6 getProperty buzzer_markdown_instruction: |2-
-         (Add code that makes left
-        button turn on the buzzer)
+      CSD U6 getProperty buzzer_markdown_instruction: |-
+        # Using the Circuit Playground\r
+        \r
+        Here's
+        the same code you saw in the last level, but this time there's another dropdown
+        menu to control the buzzer.  You'll have to add the code to make it work.\r
+        \r
+        #
+        Do This\r
+        * Using the LED code as a model, add new code inside the buttonL
+        event that will play a long or short buzz according to the text property of
+        the *buzzer_input* dropdown menu.\r
+        * Add new code that will turn the buzzer
+        off when the right button is pressed.\r
+          * (Hint: the event is already in
+        the code.)
       CSD U6 getProperty debug_markdown_instruction: |-
         # Debug\r
         \r
@@ -15614,20 +15994,22 @@
         you want your user to pick a color, you probably want to make sure they can
         only choose colors that will actually work.\r
         \r
+        The provided dropdown with
+        the ID "color_input" allows a use to choose from a handful of background
+        colors. When the "Set Color" button is clicked, the screen will turn that
+        color.\r
+        \r
         # Do This\r
         \r
-        The provided
-        dropdown with the ID "color_input" allows a use to choose from a handful
-        of background colors. When the "Set Color" button is clicked. To make this
-        work, you'll need to do the following inside the provided `onEvent` block:\r
-        \r
+        * Inside the event block, create a variable
+        called `color` and assign it a value using the `getProperty` block.\r
+          *
+        Hint: You'll need to use the "value" property to get the user's choice.\r
         *
-        Create a variable called `color` and assign it a value using the `getProperty`
-        block\r
-        * Use the `setProperty` block to set the "background-color" property
-        of "screen1" to your variable `color`\r
-        * Test your program by picking
-        a color and clicking "Set Color"
+        Use the `setProperty` block to set the "background-color" property of "screen1"
+        to your variable `color`.\r
+        * Test your program by picking a color and clicking
+        "Set Color".
       CSD U6 getProperty input_markdown_instruction: |-
         # getProperty and Variables\r
         \r
@@ -15637,16 +16019,22 @@
         us to both get the properties of design elements and to use those values later
         on.\r
         \r
-        # Do This\r
+        This program gets the text typed into "name_input" when the Submit
+        button is clicked, and then use that to set the text property of "name_output".
+        It does this by storing the text in a variable called `name`.  It should do
+        the same for *fiend_input* and *friend_output*, but it's not finished.\r
         \r
-        This program should get the text typed into "name_input"
-        when the Submit button is clicked, and then use that to set the text property
-        of "name_output". It does this by storing the text in a variable called
-        `name`, but it's not finished.\r
-        \r
-        Using a `getProperty` block, assign
-        the `name` variable to the text property of "name_input". Test your program
-        by typing in your name and clicking "Submit."
+        #
+        Do This\r
+        * Run the program to see how it works. (Make sure you type in your
+        name and your friend's name before hitting "Submit".)\r
+        * Using the variable
+        `name` as a model, create a new variable to hold the friend's name.\r
+        *
+        Use a `getProperty` block to store the text property of *friend_input* into
+        your new variable.\r
+        * Use the `setProperty` block to assign the new variable
+        to the text property of *friend_input*.
       CSD U6 getProperty predict_markdown_instruction: |-
         # Debug\r
         \r
@@ -15715,6 +16103,30 @@
         This program includes two buttons to move the motorcycle up
         and down. Using the working "up" button as an example, can you make the
         "down" button work?
+      CSD U6 getters debug_markdown_instruction: |-
+        # LED and Buzzer Controller\r
+        \r
+        This
+        program operates the LED and the buzzer, but it has some problems.\r
+        \r
+        #
+        Do This\r
+        * Read the program to understand how it is supposed to work.\r
+        *
+        Find and correct the bugs so that the program works properly.
+      CSD U6 interval predict_markdown_instruction: |-
+        # Interval\r
+        \r
+        Now we're
+        using the slider to affect the behavior of the LED.   Just as we could change
+        the values for the frequency and duration of the buzzer, we can change the
+        value for the blink or pulse interval of the LED.\r
+        \r
+        # Do This\r
+        \r
+        *
+        Read the code and predict what the program will do, then hit "Run" to test
+        your prediction.
       CSD U6 interval_markdown_instruction: Predict Level
       CSD U6 light show predict_markdown_instruction: |-
         # Put on a Light Show\r
@@ -15727,14 +16139,45 @@
         \r
         * What does this line
         of code do: `  setProperty("screen","background-color",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r
-        });`?\r
-        *
-        Why does the program need this line: `var newNumber = randomNumber(1,4);`?\r
+        });`?
         \r
-        Once
-        you have answered the questions, run the code and click the buttons to see
-        what happens.
-      CSD U6 onChange_markdown_instruction: Predict Level
+        \r
+        Once you have answered the question, run the code and click the buttons
+        to see what happens.
+      CSD U6 move motorcycle_markdown_instruction: |-
+        # Movement with Properties\r
+        \r
+        Earlier
+        we used `setProperty` to change the x and y position of elements on the screen,
+        but we could only move them to either a single specific location, or a random
+        location. By using `getProperty` to find out an element's current position,
+        we can use the **counter pattern** from Unit 3 to update that position.\r
+        \r
+        #
+        Do This\r
+        \r
+        * Read the program and discuss with your partner how the left
+        button makes the motorcycle go up.\r
+        * Using the working left button as an
+        example, program the right button to make the motorcycle go down.
+      CSD U6 onChange_markdown_instruction: |-
+        # onChange\r
+        \r
+        In the last level,
+        the program only got the interval value from the slider when you pressed the
+        left button.  Sometimes, though, you'll want to change the interval of the
+        LED as soon as the user chooses a new value.   For that, you'll need the
+        "onChange" event.\r
+        \r
+        # Do This\r
+        \r
+        * Look at the first event block
+        in the program and find where it says "onChange".\r
+        * Inside the event
+        block, get the interval value from the slider and use it to make the LED blink
+        at that new rate.\r
+        * Run your program, moving the slider to see whether
+        the LED speed changes automatically.
       CSD U6 predict LED button_markdown_instruction: Embedded Prediction
       CSD U6 setProperty Text_markdown_instruction: |-
         # Changing the Text\r
@@ -15779,21 +16222,26 @@
       CSD U6 setProperty hidden_markdown_instruction: |-
         # Hidden\r
         \r
-        We are going
-        to start making an alarm app. We have already set up an event handler for
-        the "triggerAlarmButton" which will do two things when clicked:\r
+        Design elements
+        have a property called "hidden" that controls whether the element should
+        show on screen or not. We are going to use this property to create an alarm
+        app. Notice that when the program starts one button is hidden, and one is
+        not.\r
         \r
-        *
-        Change the _text_ property of "statusLabel" to "on"\r
-        * Set the _hidden_
-        property of "stopAlarmButton" to `false`\r
+        We have already set up an event handler for the "triggerAlarmButton"
+        which will do two things when clicked:\r
+        \r
+        * Change the "text" property
+        of "statusLabel" to "on"\r
+        * Set the "hidden" property of "stopAlarmButton"
+        to `false` (meaning it should _not_ be hidden)\r
         \r
         # Do This\r
         \r
-        * Run the
-        program and click "Trigger Alarm" to see how it works\r
-        * Add code to the
-        provided event handler that hides the "triggerAlarmButton"\r
+        * Run
+        the program and click "Trigger Alarm" to see how it works\r
+        * Add code
+        to the provided event handler that hides the "triggerAlarmButton"\r
         \r
         _Note:
         the button "stopAlarmButton" is already on the screen, but because its "hidden"
@@ -15804,7 +16252,7 @@
         It's
         not really useful to only set a property when your program is run. After all,
         you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty` you're able to do things you couldn't do with Design
+        with `setProperty`, you're able to do things you couldn't do with Design
         Mode alone.\r
         \r
         # Do This\r
@@ -15839,7 +16287,7 @@
         \r
         Every
         design element (except for the screen) has an "x" and a "y" property that
-        control their position.\r
+        controls its position.\r
         \r
         # Do This\r
         \r
@@ -15856,17 +16304,31 @@
         _Note: We've removed the Design Mode tab for now so
         you can practice working with setProperty, but it'll come back later once
         you're building apps of your own._
-      CSD U6 slider intro_markdown_instruction: |2-
-         (Add code that makes left button
-        turn on the buzzer)
+      CSD U6 slider intro_markdown_instruction: |-
+        # Sliders\r
+        \r
+        Last time, your
+        users were only able to choose between a short and long buzz.  To give the
+        user control over the exact duration of the buzzer, you'll want to use a
+        slider.\r
+        \r
+        This slider lets users choose a value between 100 and 1000
+        for the duration of the buzz, but there's something not quite right about
+        how it's working.\r
+        \r
+        # Do This\r
+        * Look over the code and find the bug
+        that's keeping the duration from being set correctly.\r
+        \t* (Hint: Hover
+        over the yellow triangles for clues as to what might be wrong with the code.)
       CSD U6 test LED_markdown_instruction: |-
         # Control the LED\r
         \r
         Now that you
         know your board is working, you can try out the different LED blocks.\r
         \r
-        ##
-        Do this\r
+        #
+        Do This\r
         * Click "Run" and discuss with your partner how the code works.\r
         *
         Try the different LED blocks to see what they do.\r
@@ -15882,32 +16344,36 @@
         \r
         # Do This\r
         \r
-        At the end of each conditional
-        that you've created to check for a winner, add code that turns on the buzzer.
-        Make sure to pick a different frequency for each player.
+        So far we've been able to
+        just use the `player` parameter directly to report which player won, but that
+        won't work for buzzing different sounds. Inside the conditional that checks
+        if a player won, you'll need to add _another_ conditional that checks which
+        player it was. If `player == "red"` the buzzer should play a high note,
+        otherwise (else) it should play a low note.
       CSD U6 tugowar conditional_markdown_instruction: |-
         # Check for a Winner\r
         \r
         Your
         game should be pretty playable by now. Two players can click their respective
-        buttons, and the bug will move to one side or the other depending on who is
-        clicking faster. We still need a way for a player to win though.\r
+        buttons, and their emojies will race down the screen. We still need a way
+        for a player to win though.\r
         \r
-        #
-        Do This\r
+        # Do This\r
         \r
-        Using conditionals, you want to check if a player has won each
-        time they click. For now, we can just use `console.log` to report the winner\r
+        Using a conditional inside
+        the `checkWin()` function, you want to check if a player has won each time
+        they click. For now, we can just use `console.log` to report the winner.\r
         \r
         *
-        In the `buttonL` event handler, use a conditional to check if the score is
-        less than -100\r
-        * In the `buttonR` event handler, use a conditional to check
-        if the score is greater than 100\r
-        * In each of your new conditionals, add
-        a `console.log` that reports which player won\r
-        * Test your program to make
-        sure that it reports a winner when the bug makes it all the way to one side.
+        Add an if statement to the bottom of `checkWin()`\r
+        * For the condition of
+        your if statement, check if `player_y` is greater than 350 (or use the bottom
+        of screen value you decided on in the last level)\r
+        * In your conditional,
+        add a `console.log` that reports which player won\r
+        * Test your program to
+        make sure that it reports a winner when one of the emojis makes it to the
+        bottom of the screen
       CSD U6 tugowar demo_markdown_instruction: |-
         # Grab that Bug!\r
         \r
@@ -15916,18 +16382,22 @@
         To play, pair up with another student. The student on the left will the click
         the left button on the Circuit Playground as fast as they can, while the student
         on the right clicks the right button. Whoever can get the bug over to their
-        side first wins.\r
+        side first wins.
+      CSD U6 tugowar design 1.5_markdown_instruction: |-
+        # Game Screen Design\r
+        \r
+        We've
+        also added a "game" screen where the game will be played. It just needs
+        a couple of tweaks.\r
         \r
         # Do This\r
         \r
-        Turn to a classmate and make a list
-        of the following information.\r
+        Switch to the "game" screen
+        and, using your planning guide, fix this screen by changing the color of the
+        two emoji images.\r
         \r
-        * What components of the board does this
-        program use?\r
-        * What events is this program responding to?\r
-        * What variables
-        are needed to make this program? What do they store?
+        Feel free to add any other design tweaks that you'd
+        like.
       CSD U6 tugowar design 1_markdown_instruction: |-
         # Getting Started: Screen Design\r
         \r
@@ -15939,29 +16409,29 @@
         #
         Do This\r
         \r
-        We've already created a "game_screen" and included the "bug"
-        image. Using your planning guide, finish creating this screen. Specifically
-        you'll want to add:\r
+        We've already created a "start" screen and included a title
+        and "play" button. Using your planning guide, finish creating this screen.
+        Specifically you'll want to:\r
         \r
-        * A title with the ID "title"\r
-        * Instructions
-        for playing with the ID "instructions"\r
+        * Update the title text to say "Emoji
+        Race"\r
+        * Add instructions for playing using the ID "instructions"\r
         \r
-        Feel free to add any other
-        design tweaks that you'd like.
+        Feel
+        free to add any other design tweaks that you'd like.
       CSD U6 tugowar design 2_markdown_instruction: |-
         # Designing the Win Screen\r
         \r
         The
-        second screen in this program shows who won. It's totally blank right now.\r
+        final screen in this program shows who won. It's totally blank right now.\r
         \r
         #
         Do This\r
         \r
-        Switch to "win_screen" and design it based on your project
-        guide. Make sure to pay close attention to the ID of each element. Once you've
-        added the required elements, feel free to add any other design tweaks that
-        you'd like.
+        Switch to "win" and design it based on your project guide.
+        Make sure to pay close attention to the ID of each element. Once you've added
+        the required elements, feel free to add any other design tweaks that you'd
+        like.
       CSD U6 tugowar final_markdown_instruction: |-
         # Make It Your Own\r
         \r
@@ -15979,10 +16449,12 @@
         and layout of the screens\r
         * Use the buzzer or the led to show when one
         of the buttons has been clicked\r
-        * Add a difficulty slider to change how
-        much the bug moves each click\r
-        * Use functions to make your code cleaner
-        and more readable
+        * Set the "icon-color" property of "winner_image"
+        to the winning color\r
+        * Make the emojis start out sad, change to meh halfway,
+        and end up happy\r
+        * Use a variable and conditionals to make sure that players
+        can only move their emojis when the "game" screen is showing
       CSD U6 tugowar movement 1_markdown_instruction: |
         # Tracking the Score\r
         \r
@@ -16015,75 +16487,112 @@
         \r
         Now
         that we have conditionals to check which player won, let's switch to the
-        "win_screen" when a player wins.\r
+        "win" screen when a player wins.\r
         \r
         # Do This\r
         \r
-        In each conditional
-        that you've created to check the score, add a `setScreen` block to change
-        to the "win_screen" screen. Make sure you test that your new code works
-        before moving on!
-      CSD U6 tugowar variables 1_markdown_instruction: |
-        # Initializing Variables\r
+        Inside the conditional
+        that you've created to check if a player has reached the bottom, add a `setScreen`
+        block to change to the "win" screen. Make sure you test that your new code
+        works before moving on!
+      CSD U6 tugowar variables 1_markdown_instruction: |-
+        # The startGame() Function\r
         \r
-        Now
-        that your screens are properly set up, let's make sure the variables are
-        properly set up. Both of your variables need a starting, or _initial_, value.
-        This is called _initializing_ your variables.\r
+        If
+        you look at the events we planned for in the planning guide, you may notice
+        that two events do essentially the same thing. The events that respond to
+        both the "play" and "replay" buttons could be written with identical code,
+        but duplicate code like this is a perfect place to use a **function**.\r
+        \r
+        #
+        Do This\r
+        \r
+        We've already added blocks that call a new function named
+        `startGame()` to the appropriate event handlers, and we've created an empty
+        function for you to build out. \r
+        \r
+        * Find the `startGame()` function definition
+        ( [Show me where](#triggercallout=block_trigger) )\r
+        * Inside the function:\r
+        \t*
+        Move both of the emoji images to the top of the screen by setting each one's
+        "y" property to 0\r
+        \t* Change the screen to "game"\r
+        \r
+        Once you've
+        fleshed out the `startGame()` function, try clicking the "play" button to
+        check that it's working.
+      CSD U6 tugowar variables 2_markdown_instruction: |-
+        # Functions with Parameters\r
+        \r
+        Most
+        of the existing functions you use in App Lab need inputs, or **parameters**,
+        to pass the function necessary information. For example, when changing a screen,
+        you pass the ID of that screen as a parameter, which looks like `setScreen("win")`.\r
+        \r
+        These
+        parameters show up as a variable that can be used inside the function, and
+        you can create functions that use parameters too!\r
         \r
         # Do This\r
+        \r
+        <div
+        markdown="1" style="float:right; margin: 20px;">\r
+        \r
+        ![expandable](https://images.code.org/2eccd9fc9f4887aefd0bfd94d7f332c8-image-1509402194012.png)\r
+        \r
+        <br/>\r
+        \r
+        Click
+        to expand\r
+        \r
+        </div>\r
+        \r
+        Instead of a separate function to move the
+        red and the blue players, we've created one function called `movePlayer()`
+        that takes the ID of the player image as a parameter called `player`. Inside
+        this function, you can use `player` any place where you need to specify the
+        ID of the player you want to control.\r
+        \r
+        * Find where `movePlayer()` is
+        defined ( [Show me where](#triggercallout=block_trigger) )\r
+        * Inside the
+        `movePlayer()` definition:\r
+          * Get the current "y" property of the player
+        and save it to a variable called `player_y`\r
+          * Increase the value of `player_y`
+        by 10\r
+          * Set the "y" property of player to your new value `player_y`\r
+        \r
+        Once
+        you've added your code, test it. You should see that _both buttons_ work
+        even though we only created one function - cool!
+      CSD U6 tugowar variables 3_markdown_instruction: |-
+        # The checkWin() Function\r
         \r
         The
-        `score` variable is already set up to start at 0. You'll need to initialize
-        the `starting_x` variable to the x position of the "bug" element at the
-        start of the game. You'll later use this variable to control how far the
-        bug should move to the left or right of center.\r
+        last function that you need to figure out is the `checkWin()` function, which
+        after each player is moved, and is used to both check if that player has made
+        it to the bottom of the screen and to announce the winner if necessary. For
+        now, we're just going to find out where the player is and log it to the console.\r
         \r
-      CSD U6 tugowar variables 2_markdown_instruction: |-
-        # Tracking the Score\r
+        #
+        Do This\r
         \r
-        Your
-        `score` variable should keep track of how many times each user has clicked
-        their button. Instead of just going up, `score` should _decrease_ if the player
-        1 clicks `buttonL` and _increase_ if player 2 clicks `buttonR`.\r
+        Just like the `movePlayer()` function, `checkWin()` takes a
+        single parameter called `player`. If you call `checkWin("red")`, then the
+        variable `player` will have the value "red".\r
         \r
-        # Do
-        This\r
-        \r
-        Inside each `onBoardEvent`, use the counter pattern to increase
-        or decrease `score`. The amount that you change `score` will change how difficult
-        the game is to win. Start with changing by 10 - you can always experiment
-        with different values when the program is more complete.\r
-        \r
-        _Tip: Add
-        `score` to your watchers in the debug drawer to you can see the variable increase
-        and decrease when the buttons are clicked._
-      CSD U6 tugowar variables 3_markdown_instruction: |-
-        # Moving the Bug\r
-        \r
-        When
-        a player clicks their button, the score should now be responding appropriately,
-        but the bug isn't yet moving. We need to use the `score` variable to change
-        the bug's location on each button click.\r
-        \r
-        # Do This\r
-        \r
-        We can calculate
-        where the bug should be by setting its "x" property to `starting_x + score`.
-        If the score is negative, this will move the bug over to the left side of
-        the screen, but if it's positive, the bug will move over towards the right.\r
-        \r
+        * Find where the function
+        is defined ( [Show me where](#triggercallout=block_trigger) )\r
+        * Create
+        a variable called `player_y` and assign it the "y" property of the player\r
         *
-        Using a `setProperty` block, update the "x" property of "bug" in the event
-        that responds to `buttonL`\r
-        * Do the same thing in the event that responds
-        to `buttonR`\r
-        * Test your program to make sure the bug moves to the left
-        when `buttonL` is clicked and to the right when `buttonR` is clicked.\r
-        \r
-        _Challenge:
-        We're using the exact same code in both event handlers. You could move that
-        code into a function improve the structure and readability of your program._
+        Use either a `console.log()` command or a watcher to report the value of `player_y`\r
+        *
+        Play the game with only one button, keeping an eye on the value of `player_y`\r
+        *
+        Decide what value of `player_y` should be considered the bottom of the screen
       'CSD: Boolean Expressions_markdown_instruction': "# Boolean Expressions Video"
       'CSD: Cake Defender Exemplar_markdown_instruction': |-
         # Defend Your Cake!\r
@@ -20800,14 +21309,45 @@
         # Using Board Events\r
         \r
         Right
-        now the LED turns on when the left button (`buttonL`) is pressed. How can
-        you turn it off using a board event?\r
+        now the LED turns on when the left button (`buttonL`) is pressed down. How
+        can you turn it off using a board event?\r
+        ![](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)\r
+        #
+        Do this\r
+        \r
+        * Add another `onBoardEvent()` block to turn the LED off when
+        the right button is pressed down.
+      CSDU6 - LED toggle buttonL down_markdown_instruction: |-
+        # Other Board Events
+        with the Buttons\r
+        \r
+        The left and right buttons have three event types:`press`,
+        `down`, and `up`\r
+        \r
+        So far you've just been using the `press` event.
+        Now, we're going to use the `up` and `down` events to make the LED turn on
+        and off with just **one** button.\r
         \r
         ## Do this\r
-        <img src="https://images.code.org/cc903e4a0fb57b241b90abe220f027ef-image-1487707484420.04.00.png"
-        style="float:right; margin-left: 10px; width: 50%">\r
-        * Add another `onBoardEvent()`
-        block to turn the LED off when the right button is pressed.
+        * Drag out an `onBoardEvent`
+        block for one of the buttons and set the event type to `down`.\r
+        * Add code
+        to turn the LED on when the button goes down.
+      CSDU6 - LED toggle buttonL up_markdown_instruction: |-
+        # Other Board Events with
+        the Buttons\r
+        \r
+        You might have noticed that the LED stays on even once
+        the button goes back up. Because the event was triggered for when the button
+        goes down only, the LED stays on. To turn it off, you'll need to trigger
+        an event for when the button pops back up.\r
+        \r
+        # Do this\r
+        * Drag out
+        another `onBoardEvent` block and set the event type to `up`. Make sure that
+        it's for the same button that you used in the last level.\r
+        * Add code to
+        turn the LED off when the button pops back up.
       CSDU6 - LED toggle buttonL_markdown_instruction: |-
         # Using Board Events with
         the LED\r
@@ -20988,6 +21528,17 @@
         handlers that listen for when someone has finished moving the slider to a
         new location? Hint: Think back to your event investigation. Which event type
         do you want?
+      CSDU6 - board event challenge_markdown_instruction: |-
+        # Challenge: Sound Board\r
+        \r
+        Check
+        with your teacher before starting the challenge.\r
+        \r
+        Now that you know
+        how to use board events, the buttons, switch, and the buzzer, try making a
+        program that turns your board into a sound board when you press the buttons
+        or flip the switch. Play around with the duration and frequencies of the sounds,
+        and listen to how it turns out.
       CSDU6 - button LED prediction_markdown_instruction: |-
         See contained level for
         markdown
@@ -21146,6 +21697,59 @@
         * What does the button do?\r
         * Does the light turn on once
         the program is run?
+      CSDU6 - buzzer duration buttons_markdown_instruction: |-
+        # Buzzer and the Buttons\r
+        \r
+        The
+        buttons on your board can interact with the buzzer as well as the LED. Using
+        the buttons, make a button that buzzes for a long duration of time, and another
+        button that buzzes for a short duration of time.\r
+        \r
+        # Do this\r
+        * Change
+        the duration parameter of `buzzer.frequency` to make the left button play
+        a long buzz, and the right button play a short buzz.
+      CSDU6 - buzzer duration_markdown_instruction: |-
+        # Buzzer Duration\r
+        \r
+        As
+        you've noticed, `buzzer.frequency()` has two parameters: frequency and duration.
+        Both of these take a number as input.\r
+        \r
+        * Frequency changes how the buzzer
+        sounds. The bigger the number you give it, the higher the buzzer's sound
+        will be.\r
+        \r
+        * Duration determines how long the buzzer is going to play
+        a sound for in milliseconds.\r
+        \r
+        For right now we're gonna focus on duration,
+        the second parameter.\r
+        \r
+        \r
+        # Do this\r
+        Try out a few things with duration:\r
+        \r
+        *
+        Change the duration of the buzzer to something longer than 100.\r
+        * Try setting
+        the duration to 0, what happens?\r
+        \r
+        Run the program multiple times to
+        see what happens before you move on.
+      CSDU6 - buzzer intro_markdown_instruction: |-
+        # Using the Buzzer\r
+        \r
+        You can
+        use the buzzer in a lot of different ways, but right now we're just going
+        to use the `buzzer.frequency()`.\r
+        \r
+        # Do this\r
+        * Pull out a `buzzer.frequency()`
+        block from the toolbox and play around with it. You'll notice it has two
+        parameters, what happens when you change either, or both of those?\r
+        * Run
+        the program and enjoy the music of your Circuit Playground.
       CSDU6 - ch 1 exemplar LEDs_markdown_instruction: |-
         # An Example Using Color
         LEDs\r
@@ -21187,6 +21791,15 @@
         your program as is to make sure that everything currently works as expected.
         Once you are confident in your program as-is, add the code to send output
         to your board.
+      CSDU6 - end challenge_markdown_instruction: |-
+        # Challenge: Board Events and
+        Outputs\r
+        \r
+        Check with your teacher before starting the challenge.\r
+        \r
+        Now
+        that you know how to use board events, the led, and the buzzer, try to create
+        an app that uses all three.
       CSDU6 - final project 1_markdown_instruction: |-
         # Designing the User Interface\r
         \r
@@ -21462,6 +22075,24 @@
         * Can you edit the patterns you created to use for loops where
         appropriate?\r
         * Can you add more patterns that use for loops?
+      CSDU6 - lightswitch toggleswitch_markdown_instruction: |-
+        # Using the Toggle
+        Switch\r
+        \r
+        The toggle switch is like a light switch, it can flip in one
+        of two positions: `open` and `close`.\r
+        \r
+        Flipping the toggle switch to
+        one of these two positions can trigger an event depending on if the switch
+        is open or closed. You're going to use these events to make a light switch.\r
+        \r
+        #
+        Do this\r
+        \r
+        * Drag out another `onBoardEvent()` block for the `toggleSwitch`
+        and set its event type to `close`\r
+        * Add code so that when the toggle switch
+        is flipped to `close` the light turns off.
       CSDU6 - lists - lists 1_markdown_instruction: |-
         # Lists\r
         \r
@@ -21569,20 +22200,20 @@
         to display different images based on sensor values
       CSDU6 - sensors experiment_markdown_instruction: |-
         <iframe width="370" height="620"
-        style="float:left; margin-right: 25px; border: 0px;" src="https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"></iframe>\r
+        style="float:right; margin-left: 25px; border: 0px;" src="https://studio.code.org/projects/applab/kxyJyJI1Bg1fV_5NIl8MHQ/embed"></iframe>\r
         \r
         #
         Sensor Experiment\r
         \r
-        Run the program to the left and experiment with your
-        board. Try interacting with your board in many different ways to figure out
-        what each sensor might be. Once you've completed the experiment, answer the
-        following questions for each sensor in the text box below.\r
+        Run the program to the right and experiment with
+        your board. Try interacting with your board in many different ways to figure
+        out what each sensor might be. Once you've completed the experiment, answer
+        the following questions for each sensor in the text box below.\r
         \r
-        * What does
-        this sensor measure?\r
-        * What is it's maximum value?\r
-        * What is it's
+        * What
+        does this sensor measure?\r
+        * What is its maximum value?\r
+        * What is its
         minimum value?
       CSDU6 - sensors light_markdown_instruction: |-
         # Light Sensor Updates\r
@@ -21953,6 +22584,58 @@
         but also to loop code infinitely. The provided program moves the image "smiley"
         to a random x position every second, can you make the image also move to a
         random y?
+      CSDU6 - toggle state LED prediction_markdown_instruction: |-
+        See contained level
+        for markdown
+      CSDU6 - toggleswitch state setProp_markdown_instruction: |-
+        # State and the Toggle
+        Switch\r
+        \r
+        The toggle switch has the `toggleSwitch.isOpen` property, which
+        keeps track of which **state** (opened or closed) the switch is in. `toggleSwitch.isOpen`
+        is a boolean, so its value is `true` if the toggle switch is open, and `false`
+        if it's closed.\r
+        \r
+        # Do this\r
+        * Complete the if-statement with the
+        `toggleSwitch.isOpen` property. Since `toggleSwitch.isOpen` is a boolean,
+        the condition reads "If true".\r
+        * If the toggle switch is open (`true`),
+        then change the text on the screen to say "Open!"\r
+        * Else, the text should
+        say "Closed!"\r
+        \r
+        ###Run the program and flip the switch. Remember to
+        press the left button, otherwise you won't see the screen change.
+      CSDU6 - toggleswitch state_markdown_instruction: |-
+        # State and the Toggle Switch\r
+        \r
+        The
+        toggle switch has the `toggleSwitch.isOpen` property, which keeps track of
+        which **state** (opened or closed) the switch is in. `toggleSwitch.isOpen`
+        is a boolean, so its value is `true` if the toggle switch is open, and `false`
+        if it's closed.\r
+        \r
+        \r
+        ## Do this\r
+        \r
+         You'll be adding to the if-else
+        statement to check if the toggle switch is open or closed.\r
+        \r
+        * Drag the
+        `toggleSwitch.isOpen` block into the condition of the if-statement. Since
+        `toggleSwitch.isOpen` is a boolean, the condition reads "If true".\r
+        \r
+        *
+        Add `console.log()` statements that say "open!" if the switch is open, and
+        "closed!" otherwise.\r
+        \r
+        * Run your code and toggle the switch to see
+        what happens.\r
+        \r
+        Remember: This program is wrapped under an event. You'll
+        _have_ to press the left button to update the program when you toggle the
+        switch.
       CSDU6 AppLab Input 1_markdown_instruction: |-
         # Input in App Lab\r
         \r
@@ -22096,6 +22779,49 @@
         \r
         If everything worked out, you should see that your LED starts
         out off, but turns on when you click the button!
+      CSDU6 array access modify_markdown_instruction: |-
+        # Accessing Items in a List\r
+        \r
+        **Starter
+        Code:** There is a list of days of the week provided as well as a command
+        to set the label on the screen.\r
+        \r
+        **Do This:** Can you change the index
+        value so that the page displays "Today is: Tuesday"
+      CSDU6 array index predict contained_markdown_instruction: |-
+        # Predict\r
+        \r
+        The
+        code below will display four things on the screen.  What do you think they
+        will be?
+      CSDU6 arrays rainbow_markdown_instruction: |-
+        # Index Practice\r
+        \r
+        <img src="https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45
+        PM.png" style="width: 150px; float: right">\r
+        \r
+        **Starter code** has
+        been provided that creates a list called `colors`.\r
+        \r
+        * Use `setProperty`
+        and the list of colors to change the `background-color` of the buttons to
+        create a rainbow. The first button has been done for you.
+      CSDU6 arrays random_markdown_instruction: |-
+        # Expressions as Indexes: Using
+        Variables\r
+        \r
+        * **Starter code** has been provided which creates an list
+        of identifiers for icons in the icon library\r
+        * **Write code** that sets
+        the image on the screen to a random icon from the list
+      CSDU6 arrays variable_markdown_instruction: |-
+        # Expressions as Indexes: Using
+        Variables\r
+        \r
+        * **Starter code** has been provided which creates an list
+        of identifiers for icons in the icon library\r
+        * **Write code** that sets
+        the image on the screen to a random icon from the list
       CSDU6 buzzer alarm_markdown_instruction: |-
         # Noisy Alarm\r
         \r
@@ -22145,6 +22871,44 @@
         * When the Stop
         button is clicked, stop the buzzer from playing\r
         \r
+      CSDU6 circuit playground piano_markdown_instruction: |-
+        # Circuit Piano\r
+        \r
+        Look
+        at the code below. You're not going to be changing it, but try to see what
+        it does. \r
+        \r
+        # Do this\r
+        \r
+        * Run the program and play with the piano
+        on the screen.
+      CSDU6 frequency creation_markdown_instruction: |-
+        # Making the Buzzer Buzz\r
+        \r
+        Now
+        that you know how to use the frequency block, try to make the buzzer play
+        a high sound when the same button pops back up.\r
+        \r
+        # Do this\r
+        * Add
+        another onBoardEvent block so the buzzer plays a high sound when the left
+        button comes back **up**
+      CSDU6 frequency modification_markdown_instruction: |-
+        # Making the Buzzer Buzz\r
+        \r
+        You've
+        already used the buzzer's duration, now you're going use the buzzer's frequency.
+        \r
+        \r
+        The frequency of the buzzer determines how high or how low the buzzer
+        will sound when it plays. The higher the number you give frequency, the higher
+        the buzzer will sound.\r
+        \r
+        # Do this\r
+        * Right now the buzzer plays a
+        high note when the left button is pressed, make the buzzer play a low note
+        instead.
+      CSDU6 frequency template_markdown_instruction: Do a thing!
       CSDU6 light sensor alarm_markdown_instruction: |-
         # Auto Alarm\r
         \r
@@ -22164,6 +22928,25 @@
         \r
         _Challenge: Can you make both the buttons and the sensor play
         nicely together?_
+      CSDU6 piano with notes_markdown_instruction: |-
+        # Piano Notes\r
+        \r
+        This is
+        the same piano that you saw at the beginning of the lesson, except some keys
+        are using the `buzzer.note()` block, some are still using the `buzzer.frequency()`
+        block, and some are using the `buzzer.note()` block but are giving it a frequency
+        instead of a note and octave.\r
+        \r
+        # Do this\r
+        \r
+        * Edit the code so that
+        all keys are using a `buzzer.note()` block to play the corresponding note.
+      CSDU6 toggle state prediction_markdown_instruction: "# More on the Toggle Switch\\r\n\\r\nThe\ntoggle
+        switch has different properties that let it be used outside of toggle\nswitch
+        related events. Look at the code below, what do you think is going\nto happen
+        when you run this program?\\r\n* Note that all of the code is contained\ninside
+        an event, why do you think that is?\\r\n\\r\nType your response and click\n\"Run\"
+        to see what happens. "
       CSDU6- predict event types_markdown_instruction: |-
         # Predict: Event Type\r
         \r
@@ -33576,12 +34359,9 @@
         secret data?\r
         \r
       Function intro Ryan_markdown_instruction: |-
-        A **function** named `build bridge`
-        is in your workspace.  All of the code you need to cross the river is built
-        right in! \r
+        Cuentas con una **función** llamada "construir puente" en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río ya está implementado! \r
          \r
-        Snap the small, green block twice into your workspace to
-        fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].
+        Lleva dos veces el pequeño bloque verde a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName} alcance la antorcha de redstone [redstone_torch].
       'Game Lab Workshop: Random_markdown_instruction': |
         # Randomized Shapes\r
         \r
@@ -33912,7 +34692,7 @@
         (this will delete cached files so the browser has to re download them while
         throttled)
       'Internet Simulator: DNS Mode_markdown_instruction': |-
-        ##The Need for DNS\r
+        ## The Need for DNS\r
         \r
         In
         this version of the Internet Simulator, a Domain Name System (DNS) is provided
@@ -33927,7 +34707,7 @@
         in the DNS tab.  \r
         ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
       'Internet Simulator: DNS_markdown_instruction': |-
-        ##The Need for DNS\r
+        ## The Need for DNS\r
         \r
         In
         this version of the Internet Simulator, a Domain Name System (DNS) is provided
@@ -33979,13 +34759,13 @@
         - The sender and receiver must be confident
         the full message was successfully transmitted and reconstructed.
       'Internet Simulator: Routers_markdown_instruction': |-
-        #An Updated Internet Simulator\r
-        Many
-        changes have been made to the Internet Simulator. \r
+        # An Updated Internet
+        Simulator\r
+        Many changes have been made to the Internet Simulator. \r
         \r
-        **Routers:** Rather
-        than being connected to your entire class you are now connected to a single
-        router. You can see who else is on your router in the network diagram.\r
+        **Routers:**
+        Rather than being connected to your entire class you are now connected to
+        a single router. You can see who else is on your router in the network diagram.\r
         \r
         ![](https://images.code.org/0311148470dc358fe435568e2b333062-image-1442008896037.51.04
         PM.png)\r
@@ -34019,7 +34799,7 @@
         ![](https://images.code.org/b24975e33f1a2b10fc6a2ca8cf1c9ad2-image-1442009358166.58.48
         PM.png)
       'Internet Simulator: Sending Binary Messages 1_markdown_instruction': |-
-        ##Coordination
+        ## Coordination
         and Binary Messages Activity\r
         \r
         **Develop your Protocol**\r
@@ -34039,7 +34819,7 @@
         Document your protocol on the worksheet provided, and test
         your protocol using the Internet Simulator
       'Internet Simulator: Sending Binary Messages_markdown_instruction': |-
-        ##Coordination
+        ## Coordination
         and Binary Messages Activity\r
         \r
         **Develop your Protocol**\r
@@ -34846,225 +35626,168 @@
         to the door and open it (using the **space bar**) so you can get to the orange
         square inside.
       MC_HOC_2017_01_markdown_instruction: |-
-        Click "Run" to move the player using
-        the **arrow keys**.  \r
+        Haz clic en "Ejecutar" para mover al jugador utilizando las **flechas direccionales**. \r
         \r
-        To pass this level, you will need to get to the
-        door and open it (using the **space bar**) so you can get to the orange square
-        inside.
-      MC_HOC_2017_01_Cole_markdown_instruction: |-
-        You need to collect all the tools
-        on this journey. Move around using the **arrow keys**, and get to the chest
-        on the path to win
-      MC_HOC_2017_01_Kiki_markdown_instruction: "To play this level, click the orange\n\"Run\"
-        button beneath the play space, then move the player around using the\n**arrow
-        keys**.  "
-      MC_HOC_2017_01_RETRY_markdown_instruction: "{currentPlayerName} is trapped\ninside
-        the house, but the Agent is here to help!   \\r\n \\r\n   \\r\nSnap a\n`move
-        forward` block onto the `when run` block in the workspace to get the\nAgent
-        to the pressure plate [PressurePlate_Up], then press \"Run\" and use\nthe
-        arrow keys to move {currentPlayerName} out of the house to collect the\n**chest**
-        [chest].  "
-      MC_HOC_2017_02_markdown_instruction: |-
-        The player needs to get into that secret
-        grove.  Help The Agent open the gate by writing code to get him to the pressure
-        plate.
-      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} is headed on\nan
-        adventure! To help, get the **map** [map_empty] behind the locked door\non
-        the right. \\r\n \\r\nSnap the code into the workspace to move the Agent\nto
-        the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get\nthrough. "
+        Para superar este nivel, tendrás que llegar a la puerta y abrirla (utilizando la **barra espaciadora**) para poder llegar al recuadro naranja del interior.
+      MC_HOC_2017_01_Cole_markdown_instruction: Necesitas hacerte con todas las herramientas
+        en este viaje. Muévete con las **flechas direccionales** y llega al cofre
+        que hay en el camino para ganar.
+      MC_HOC_2017_01_Kiki_markdown_instruction: Para jugar en este nivel, haz clic
+        en el botón naranja de "Ejecutar" que hay debajo del área de juego y mueve
+        al jugador con las **flechas direccionales**.
+      MC_HOC_2017_01_RETRY_markdown_instruction: |-
+        ¡{currentPlayerName} está atrapado en el interior de la casa, pero el Agent está aquí para ayudar!   \r
+         \r
+           \r
+        Pon un bloque de "avanzar" en el bloque de "al ejecutar" dentro del área de trabajo para llevar al Agent al plato de presión [PressurePlate_Up], y entonces pulsa "Ejecutar" y utiliza las flechas direccionales para sacar a {currentPlayerName} de la casa y conseguir el **cofre** [chest].
+      MC_HOC_2017_02_markdown_instruction: El jugador necesita llegar a esa arboleda
+        secreta. Ayuda al Agent a abrir la puerta escribiendo código para llevarlo
+        al plato de presión.
+      MC_HOC_2017_02_Cole_markdown_instruction: |-
+        ¡{currentPlayerName} se ha embarcado en una gran aventura! Para proporcionarle ayuda, tendrás que conseguir el **mapa** [map_empty] que hay detrás de la puerta cerrada que está a la derecha. \r
+         \r
+        Introduce el código en el espacio de trabajo para llevar al Agent al Plato de presión [PressurePlate_Up] para que {currentPlayerName} pueda seguir adelante.
       MC_HOC_2017_02_Kiki_markdown_instruction: |-
-        The player is headed out on an adventure,
-        but first they have to get the torch that is hidden on the other side of that
-        locked door. \r
+        El jugador se ha embarcado en una gran aventura, pero antes tiene que conseguir la antorcha que está escondida al otro lado de esa puerta cerrada. \r
         \r
-        Program the Agent to move forward twice to follow the
-        white path and get to the pressure plate so he can open the door for the player.
+        Programa al Agent para avanzar dos veces y así continuar por el camino blanco y llegar al plato de presión; de este modo, podrá abrir la puerta para el jugador.
       MC_HOC_2017_02_Will_markdown_instruction: |-
-        To finish this level, the player
-        needs to get to the orange square inside of the Secret Grove, which is behind
-        the locked door.  \r
+        Para completar este nivel, el jugador necesita llegar al recuadro naranja que hay detrás de la arboleda secreta, la cual se encuentra al otro lado de la puerta cerrada. \r
         \r
-        The code in the workspace will make the Agent move
-        forward twice to get to the pressure plate and open the door for Alex or Steve.
-      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} continues on\nthe
-        adventure and needs the **compass** [compass] to prepare for the trip.  \\r\n
-        \  \\r\nCode\nthe Agent to open the gate. "
+        El código del espacio de trabajo hará que el Agent avance dos veces para llegar al plato de presión y abrir la puerta para Alex o Steve.
+      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} continúa con
+        su aventura, y ahora necesita la **brújula** [compass] para prepararse para
+        el viaje.  \\r\n   \\r\nPrograma al Agent para abrir la puerta. "
       MC_HOC_2017_03_Kiki_markdown_instruction: |-
-        The player's adventure will begin
-        behind the locked door, in the Secret Grove!  \r
+        ¡La aventura del jugador comenzará detrás de la puerta cerrada, en la arboleda secreta! \r
         \r
         \r
-        Help The Agent open
-        the door by writing code to get him to the pressure plate.
-      MC_HOC_2017_04_markdown_instruction: |-
-        Change the loop from the last puzzle
-        to help the Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
-        \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
+        Ayuda al Agent a abrir la puerta escribiendo código para que llegue al plato de presión.
+      MC_HOC_2017_04_markdown_instruction: Cambia el bucle del último rompecabezas
+        para ayudar al Agent a crear un camino sobre la parte más ancha de este río.
+      MC_HOC_2017_04POINT5_Cole_markdown_instruction: "¡Has salido del pantano! Ahora
+        haz que el jugador llegue sano y salvo al recuadro naranja. \n\n\nAyuda al
+        Agent a despejar el camino encontrando un patrón simple y utilizando bucles
+        para cruzar los dos primeros platos de presión."
       MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |
-        You made it across! \r
+        ¡Lo has conseguido! \r
         \r
-        Now,
-        get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]\r
-      MC_HOC_2017_04_Cole_markdown_instruction: "The Agent can move across water!
-        \ \\r\n\n\\r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName}\nget
-        to the **bucket** [bucket_empty] behind the door. "
+        Ahora, haz que {currentPlayerName} atraviese sin problemas el laberinto para hacerse con el **hacha** [diamond_axe]\r
+      MC_HOC_2017_04_Cole_markdown_instruction: "¡El Agent puede moverse por el agua!
+        \ \\r\n \\r\nUtiliza un bucle de \"repetición\" para ayudar a resolver este
+        rompecabezas y ayudar a {currentPlayerName} a llegar al **cubo** [bucket_empty]
+        que hay detrás de la puerta. "
       MC_HOC_2017_04_Kiki_markdown_instruction: |-
-        The entry to the Secret Grove led
-        to this beautiful Oasis!  To pass this level, the player needs to get to the
-        orange square in the cabana.  \r
+        ¡La entrada a la arboleda secreta llevaba a este bello oasis! Para completar este nivel, el jugador necesita llegar al recuadro naranja que hay en la cabaña. \r
         \r
-        Use a `repeat` loop to help the Agent
-        get all the way up to the pressure plate, which opens the cabana door.
-      MC_HOC_2017_05_markdown_instruction: |-
-        Loops are not always helpful.\r
-        \r
-        These
-        cacti are not growing in an obvious pattern, so a loop would not clear them
-        correctly.  Instead, we've given you a function called `destroy and move`
-        that will do the hard work for you each time the Agent gets to an obstacle.
+        Utiliza un bucle de "repetición" para ayudar al Agent a llegar al plato de presión, que abre la puerta de la cabaña.
+      MC_HOC_2017_05_markdown_instruction: "Los bucles no siempre resultan de ayuda.
+        \n\n\nEstos cactus, por ejemplo, no están creciendo siguiendo un patrón evidente,
+        por lo que un bucle no los despejaría de manera correcta. En su lugar, lo
+        que te hemos dado es una función llamada \"destruir y desplazar\", que hará
+        todo el trabajo duro por ti cada vez que el Agent llegue a un obstáculo."
       MC_HOC_2017_05_Cole_markdown_instruction: |-
-        Oh no, the bridge is out! \r
+        ¡Oh, no! ¡El puente ha desaparecido! \r
         \r
-        Code
-        the Agent to rebuild the bridge using the `place` block so that {currentPlayerName}
-        can get to the **shovel** [diamond_shovel].
-      MC_HOC_2017_05_Josh_markdown_instruction: |-
-        Oh no, the bridge is out!\r
-        \r
-        Help
-        the Agent rebuild the bridge so that the player can get to the **shovel**.
+        Programa al Agent para reconstruir el puente utilizando el bloque "colocar", para que {currentPlayerName} pueda llegar a la **pala** [diamond_shovel].
+      MC_HOC_2017_05_Josh_markdown_instruction: "¡Oh, no! ¡El puente ha desaparecido!
+        \n\n\nAyuda al Agent a reconstruir el puente para que el jugador pueda llegar
+        a la **pala**."
       MC_HOC_2017_05_Kiki_markdown_instruction: |-
-        It's time for the player to leave
-        the Secret Grove and continue the adventure, but the bridge is out! \r
+        Ha llegado el momento de que el jugador abandone la arboleda secreta y prosiga su aventura, ¡pero el puente ha desaparecido! \r
         \r
-        Help
-        the Agent rebuild the bridge, then move to the wooden plank so that the player
-        can get to the orange square.
-      MC_HOC_2017_06_Cole_markdown_instruction: "Another river, but this one is much\nwider!
-        \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName}\ncan
-        get to the **pickaxe** [diamond_pickaxe]. "
+        Ayuda al Agent a reconstruir el puente, y después desplázate al tablón de madera para que el jugador pueda llegar al recuadro naranja.
+      MC_HOC_2017_06_Cole_markdown_instruction: "Otro río, ¡pero este es mucho más
+        amplio! \\r\n \\r\nArregla este código para ayudar al Agent a construir un
+        puente y así {currentPlayerName} pueda llegar al **pico** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
+        Otro río, ¡pero este es mucho más amplio! \r
         \r
-        Fix this code to help the Agent build a bridge across this
-        river.
+        Arregla este código para ayudar al Agent a levantar un puente sobre el río.
       MC_HOC_2017_06_Kiki_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
+        Otro río, ¡pero este es mucho más amplio! \r
         \r
-        Fix this code to help the Agent build a bridge across the
-        water.
-      MC_HOC_2017_07_Cole_markdown_instruction: "There's ice in the way!  \\r\n \\r\nThe\n`clear
-        path` function can help you destroy the ice and get {currentPlayerName}\nto
-        the Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Kiki_markdown_instruction: "Loops are not the only way to repeat\ncode!
-        \ \\r\n\\r\nHere, we've given you a function called `clear cacti` that\nwill
-        do the hard work of clearing three cacti every time you use it.  Use\ntwo
-        `clear cacti` blocks to clear the path to the orange square. "
-      MC_HOC_2017_07a_Kiki_markdown_instruction: |-
-        Now, edit this loop to help the
-        Agent clear a path to the orange square.
+        Arregla este código para ayudar al Agent a levantar un puente sobre el agua.
+      MC_HOC_2017_07_Cole_markdown_instruction: |-
+        ¡El hielo se interpone en tu camino! \r
+         \r
+        La función "despejar camino" puede ayudarte a destruir el hielo y conseguir que {currentPlayerName} llegue a la vagoneta [minecart_normal].
+      MC_HOC_2017_07_Kiki_markdown_instruction: |-
+        Los bucles no son la única forma de repetir código.  \r
+        \r
+        Mira, te hemos dado una función llamada "despejar cactus", que se encargará de quitar tres cactus cada vez que la uses. Utiliza dos bloques de "despejar cactus" para abrirte camino hasta el recuadro naranja.
+      MC_HOC_2017_07a_Kiki_markdown_instruction: Ahora, edita este bucle para ayudar
+        al Agent a despejar el camino hasta el recuadro naranja.
       MC_HOC_2017_08_Cole_markdown_instruction: |-
-        Now, instead of destroying before
-        you move, you will need to place a block.  \r
+        Ahora, en vez de destruir antes de moverte, necesitarás colocar un bloque. \r
         \r
-        Change the provided function
-        to work for the desert.
-      MC_HOC_2017_08_Kiki_markdown_instruction: |-
-        Now, instead of destroying cacti,
-        you will need to place stone over lava, then destroy standstone.  \r
-        \r
-        Change
-        the function to work for this level.
-      MC_HOC_2017_08_RY_markdown_instruction: |-
-        Now there are **TWO** functions to
-        choose from!\r
-        \r
-        Use these functions to quickly build a bridge across the
-        lava for {currentPlayerName}.
-      MC_HOC_2017_08_Will_markdown_instruction: |-
-        Now there are **TWO** functions
-        to choose from!\r
-        \r
-        Use these functions to quickly build a bridge across
-        the lava for the player.
-      MC_HOC_2017_09_Cole_markdown_instruction: |-
-        Use functions to help the Agent
-        destroy the giant blocks of dirt that are blocking the player's path to the
-        pressure plate.
-      MC_HOC_2017_09_Kiki_markdown_instruction: "This starting code cannot be removed.\\r\n\\r\nAdd\ncommands
-        to the `create trail` function so that the program in the workspace\nwill
-        get the Agent to the pressure plate. "
-      MC_HOC_2017_09_RS_CLONE_markdown_instruction: |-
-        Fix this function to fill in
-        the holes, then step on the pressure plate to clear a path to the torch.
-      MC_HOC_2017_10_Cole_markdown_instruction: |-
-        Use the functions to clear a path
-        for the mine cart, and walk into the Nether Portal.
-      MC_HOC_2017_10_Cole_old_markdown_instruction: |-
-        Try building a function from
-        the beginning that will make it easier for the Agent to finish this minecart
-        and get the player to the orange square.
-      MC_HOC_2017_10_Kiki_markdown_instruction: |-
-        Try building a function from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RETRY_markdown_instruction: "Can you spot the difference between\nthe
-        two functions in your workspace? \\r\n \\r\nUse these functions with other\ncode
-        from the toolbox to clear a path for the Minecart, then collect the **Flint\nand
-        Steel** [flint_and_steel]. \\r\n "
-      MC_HOC_2017_10_RYAN_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RYAN2_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_11_Kiki_markdown_instruction: |-
-        Now it's up to you! See what you
-        can create around this frozen lake.
-      MC_HOC_2017_13_Cole_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
-      MC_HOC_2017_4.5v2_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
-        \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_Ali_markdown_instruction: "Look at the functions below.  How can\nyou
-        use them to avoid the Ghasts and help {currentPlayerName} make it safely\nto
-        the **Enchanted Book** [book_enchanted]?  "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Freeplay:** Now it's up to you!\nCan
-        you challenge yourself to collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
+        Modifica la función que has recibido para que se pueda utilizar en el desierto.
+      MC_HOC_2017_08_Kiki_markdown_instruction: "Ahora, en vez de destruir cactus,
+        tendrás que colocar piedras sobre la lava, y después destruir la arenisca.
+        \\r\n\\r\nModifica la función para que opere de manera correcta en este nivel. "
+      MC_HOC_2017_08_RY_markdown_instruction: "¡Ahora hay **DOS** funciones entre
+        las que elegir! \n\n\nUtiliza estas funciones para construir rápidamente un
+        puente sobre la lava para {currentPlayerName}."
+      MC_HOC_2017_08_Will_markdown_instruction: "¡Ahora hay **DOS** funciones entre
+        las que elegir! \n\n\nUtiliza estas funciones para construir rápidamente un
+        puente sobre la lava para el jugador."
+      MC_HOC_2017_09_Cole_markdown_instruction: Utiliza funciones para ayudar al Agent
+        a destruir los bloques gigantes de tierra que bloquean el camino al plato
+        de presión.
+      MC_HOC_2017_09_Kiki_markdown_instruction: "Este código inicial no puede ser
+        eliminado. \n\n\nAñade comandos a la función \"crear rastro\" para que el
+        programa en el espacio de trabajo lleve al Agent al plato de presión."
+      MC_HOC_2017_09_RS_CLONE_markdown_instruction: Arregla esta función para rellenar
+        los huecos y a continuación sitúate sobre el plato de presión para despejar
+        el camino a la antorcha.
+      MC_HOC_2017_10_Cole_markdown_instruction: Utiliza las funciones para despejar
+        un camino para la vagoneta y adéntrate en el Portal del Inframundo.
+      MC_HOC_2017_10_Cole_old_markdown_instruction: Intenta crear una función desde
+        el principio que haga más sencillo que el Agent finalice con la vagoneta y
+        lleve al jugador al recuadro naranja.
+      MC_HOC_2017_10_Kiki_markdown_instruction: Intenta crear una función desde el
+        principio que haga más sencillo que el Agent finalice con la vagoneta y lleve
+        al jugador al recuadro naranja.
+      MC_HOC_2017_10_RETRY_markdown_instruction: "¿Eres capaz de ver la diferencia
+        entre las dos funciones en tu espacio de trabajo? \\r\n \\r\nUtiliza estas
+        funciones con otro código de la caja de herramientas para despejar el camino
+        para la vagoneta; a continuación, hazte con el **chisquero de pedernal** [flint_and_steel].
+        \\r\n "
+      MC_HOC_2017_10_RYAN_markdown_instruction: Intenta crear funciones desde el principio
+        que hagan más sencillo que el Agent finalice con la vagoneta y lleve al jugador
+        al recuadro naranja.
+      MC_HOC_2017_10_RYAN2_markdown_instruction: Intenta crear funciones desde el
+        principio que hagan más sencillo que el Agent finalice con la vagoneta y lleve
+        al jugador al recuadro naranja.
+      MC_HOC_2017_11_Kiki_markdown_instruction: "¡Te toca! Veamos qué puedes hacer
+        alrededor de este lago congelado."
+      MC_HOC_2017_13_Cole_markdown_instruction: "**Juego libre:** ¡Te toca! Utiliza
+        el código del Agent para ayudarte a explorar este mundo."
+      MC_HOC_2017_4.5v2_markdown_instruction: "¡Has salido del pantano! Ahora haz
+        que el jugador llegue sano y salvo al recuadro naranja. \n\n\nAyuda al Agent
+        a despejar el camino encontrando un patrón simple y utilizando bucles para
+        cruzar los dos primeros platos de presión."
+      MC_HOC_2017_Ali_markdown_instruction: 'Mira las funciones que hay abajo. ¿Cómo
+        puedes utilizarlas para evitar a los Ghasts y ayudar a {currentPlayerName}
+        a llegar sin problemas al **Libro Encantado** [book_enchanted]?  '
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Juego libre:** ¡Te toca! ¿Podrás
+        ponerte a prueba a ti mismo y conseguir todos los diamantes de este nivel?
+        \ "
+      MC_HOC_2017_FP10x10_RE_markdown_instruction: |
+        **Freeplay:** Now it's up to
+        you! Can you challenge yourself to collect all of the diamonds in this level?
+      MC_HOC_2017_FP20x20_markdown_instruction: "**Juego libre:** ¡Te toca! Utiliza
+        el código del Agent para ayudarte a explorar este mundo."
       MC_HOC_2017_Ryan_03_markdown_instruction: |-
-        Did you know that you can put more
-        than one piece of code into a loop?  \r
+        ¿Sabías que puedes poner más de un trozo de código en un bucle? \r
         \r
-        Use a `repeat` loop to help the
-        Agent build a bridge over the river by placing blocks in the water.
+        Utiliza un bucle de "repetición" para ayudar al Agent a construir un puente sobre el río colocando bloques en el agua.
       MC_HOC_2017_Ryan_05_markdown_instruction: |-
-        Sometimes you need to knock down
-        things that get in the way of your player.  \r
-        Use the `destroy` block to
-        clear all of the cactii between the Agent and the pressure plate.
-      MC_HOC_Kiki_02_markdown_instruction: |-
-        Someone needs to be on the pressure plate
-        before the side door will open.  Help the Agent get to the plate so the player
-        can leave the house.
+        A veces tienes que derribar cosas que se interpongan en el camino de tu jugador. \r
+        Utiliza el bloque de "destruir" para despejar todos los cactus entre el Agent y el plato de presión.
+      MC_HOC_Kiki_02_markdown_instruction: Alguien tiene que estar en el plato de
+        presión antes de que la puerta lateral se abra. Ayuda al Agent a llegar al
+        plato para que el jugador pueda abandonar la casa.
       MSM Defining Vars 1_markdown_instruction: |-
         Write a program that produces a
         50 pixel solid green triangle.
@@ -35080,6 +35803,24 @@
       MSM Defining Vars 4_markdown_instruction: |-
         Edit your `my-shape` variable so
         that it draws 75 pixel solid red stars.
+      Making Music_markdown_instruction: |-
+        Today you’re going to learn how to use
+        and create **functions**.\r
+        \r
+        Creating a function lets you make your own
+        blocks! There are two parts to a function: \r
+        \r
+        Making a newly named block
+        that has all of the code you want to run inside of it. \r
+        -xml of function
+        definition- \r
+        \r
+        The single green block itself that you use, or call, to
+        run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare to
+        get familiar with functions, learn how to edit them, and create your own!
       Matt Test Level_markdown_instruction: |
         Do 0 bits weigh less than 1 bits?
       Middle School Hackathon Pt 1_markdown_instruction: |-
@@ -35510,7 +36251,7 @@
         Your teacher will hand out more specific
         instructions for this activity.
       NetSim Standalone Classroom Routers_markdown_instruction: |-
-        #Routing messages
+        # Routing messages
         \r
         \r
         In this version of the Internet Simulator, everyone connects to a
@@ -35560,7 +36301,7 @@
         Your
         teacher will hand out more specific instructions for this activity.
       NetSim Standalone SendAB_markdown_instruction: |-
-        #Sending bits with the Internet
+        # Sending bits with the Internet
         Simulator\r
         \r
         You and your partner share a single wire that can only be
@@ -35582,22 +36323,25 @@
         Your
         teacher will hand out more specific instructions for this activity.
       NetSim Standalone Sending Numbers_markdown_instruction: |-
-        #Sending Numbers with
-        the Internet Simulator\r
+        # Sending Numbers
+        with the Internet Simulator\r
         \r
-        You and your partner can now reliably send messages
-        back and forth without extra coordination! While you're always sending bits
-        back and forth, you can also represent those bits as decimal numbers. What
-        kinds of information can you represent with this system? \r
+        You and your partner can now reliably send
+        messages back and forth without extra coordination! While you're always sending
+        bits back and forth, you can also represent those bits as decimal numbers.
+        What kinds of information can you represent with this system? \r
         \r
-        Your teacher
-        will hand out more specific instructions for this activity.
+        Your
+        teacher will hand out more specific instructions for this activity.
       NetSim_Variant2_markdown_instruction: |-
-        ##NetSim: Variant 2\r
+        ## NetSim: Variant 2\r
         \r
         Students
         connect directly to one another and send entire packets back and forth, exploring
         systems of encoding data.
+      New Minecraft Hero Project_markdown_instruction: |-
+        **Freeplay:** Now it's up
+        to you! Use the Agent's code to help you explore this world.
       Nike Example Brand Book_markdown_instruction: |
         # Brand Book\r
         \r
@@ -36030,7 +36774,7 @@
         if you want to clean up your work.
       PS FR test 7-25_markdown_instruction: Here is *some* **markdown**
       PS Log test - Define and use turnAround_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         **Define**
         a function called `turnAround` which turns the turtle around. Once you've
         defined the function **call** it to make sure it works as you expect and then
@@ -36135,7 +36879,7 @@
         Something happened
         to the bits in this image!  Find error and fix it!  Hint: a few extra bits
         were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_markdown_instruction: |
+      Pixelation - Lesson 14 - Make the Letter A_markdown_instruction: |-
         <img align="right"
         src="https://code.org/images/cspunit1/letterA.png" width="150" hspace="20">\r
         #
@@ -36144,9 +36888,9 @@
         "A" depicted (at right) using the pixelation widget. \r
         \r
         The image is
-        intially setup with the *incorrect* dimensions. Your first task is to set
+        initially setup with the *incorrect* dimensions. Your first task is to set
         the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start
-        entering pixel data to make the A.\r
+        entering pixel data to make the A.
       Pixelation - Lesson 14 - Make your own B and W Image_markdown_instruction: |
         #
         Make your own image of any size\r
@@ -37027,7 +37771,7 @@
         \r
         ![](https://images.code.org/4fa605353695afa0cd01ec01a1e2c709-image-1441772033658.gif)
       SG U3L03 Define and use turnAround_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         **Define**
         a function called `turnAround()` which turns the turtle around. Once you've
         defined the function **call** it to make sure it works as you expect and then
@@ -37055,7 +37799,7 @@
         \r
         Don't forget to name your functions.
       SG U3L03 Draw a T using turnAround_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         Get
         some more practice **calling** a function by using `turnAround()` along with
         your old friend the `moveForward()` function to create a plus sign that is
@@ -37152,7 +37896,7 @@
         before filling it in with blocks. If you're not having trouble, feel free
         to skip the subgoals.
       SG U3L03 draw diamond_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         We're finally ready
         to make our diamond! **Define** a function named `function drawDiamond()`
         that **calls** `drawSide()` multiple times in order to complete the drawing.
@@ -37199,7 +37943,7 @@
         3 times plus a couple of steps, you can make note to define and call `drawStep()`.
         Once you've planned the solution, you can fill in blocks to complete it.
       SG U3L04 - 3 by 3 with functions_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         \r
         We're
         going to revisit a familiar problem, **drawing the 3x3 square as efficiently
@@ -37217,7 +37961,7 @@
         ![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18
         PM.png)
       SG U3L04 - snowflake_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         \r
         You should have
         already worked with a partner to break down the design below into its multiple
@@ -37885,23 +38629,22 @@
         <img src="https://images.code.org/9e08dae8486f66422d492b8d8a6777eb-image-1443048962131.55.54
         PM.png" style="width: 200px; float: right">\r
         Finally, we'll add some
-        visual flourish by writing `drawAllSunbeams`. Note: you'll have to use the
-        `turnTo` command to make the turtle face the same direction prior to drawing
-        each sun beam.  \r
+        visual flourish by writing `drawAllSunbeams`. Note: The `turnTo` command makes
+        the turtle face a random direction prior to drawing each sun beam.  \r
         \r
-        # Do This:\r
+        #
+        Do This:\r
         \r
-        * **Read** the `drawSunbeam` function
-        to know how it works and what **parameters** it accepts.\r
+        * **Read** the `drawSunbeam` function to know how it works
+        and what **parameters** it accepts.\r
         \r
-        * **Add a
-        loop** to `drawAllSunbeams` to draw about 100 sunbeams. Inside your loop:\r
-
-        \r
-        * **Place the commands already inside the function in your loop.** This
-        way your code will move the turtle to a random x location at the top of the
-        image (y is 0), `turnTo` a random angle between **165 and 175 degrees**, and
-        call `drawSunbeam`.
+        * **Add a loop** to `drawAllSunbeams`
+        to draw about 100 sunbeams. Inside your loop:\r
+         \r
+        * **Place the commands
+        already inside the function in your loop.** This way your code will move the
+        turtle to a random x location at the top of the image (y is 0), `turnTo` a
+        random angle between **165 and 175 degrees**, and call `drawSunbeam`.
       SG U3L07 - topDownDesign_markdown_instruction: |-
         # Top-Down Design\r
         <img src="https://images.code.org/b4379f51db96b8b1c921de2579e16357-image-1443011791766.21.53
@@ -38013,6 +38756,9 @@
         * **Define `drawTriangle()` to have two
         parameters ** within the parentheses making sure to give them **descriptive
         and meaningful** names separated by commas, such as `(size,width)`. \r
+            *
+        This animation shows you how (without subgoals in the code) ![expandable](https://images.code.org/b1f5eead2ccb60e5ae607feff590bd3c-image-1442850344677.gif)\r
+            \r
         *
         Then **write ** the code inside `drawTriangle(size, width)` that will make
         it work as described.\r
@@ -38023,7 +38769,10 @@
         to the one below.\r
         \r
         Remember that to achieve the subgoal `//Define function`,
-        you need to give it a name, identify the parameters, and fill it in with blocks.
+        you need to give it a name, identify the parameters, and fill it in with blocks.\r
+        \r
+        ![](https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38
+        PM.png)
       SG U3L08 - digitalScene_markdown_instruction: |-
         # Design Your Digital Scene\r
         \r
@@ -38107,6 +38856,35 @@
         Use
         the space here to design your functions. Once you're done you can **share**
         this project with your groupmates.
+      SG U3L08 - introUnderTheSea - recovery_markdown_instruction: |-
+        # Under the Sea!\r
+        \r
+        In
+        the next several challenges you will be working to improve **one program**
+        that draws an underwater scene.  Each time you  finish a puzzle and move on
+        to the next one, your code will be pulled forward and you'll get new instructions
+        telling you what to add.\r
+        \r
+        # Do This:\r
+        \r
+        * **Read through ** the
+        program provided to get a basic understanding of what it does.\r
+        * **Add
+        function calls ** to the top of the program so that **two fish, two starfish,
+        and two pieces of seagrass** appear somewhere in the scene.You don't need
+        to provide values for the parameters at this stage.\r
+        * **Hint:** you need
+        to call `moveTo` before drawing a second fish, starfish or seagrass, otherwise
+        you won't see the second one because it will draw exactly over the first
+        one -- those functions draw based on where the turtle is just before the call.\r
+        *
+        Test out your code. If something doesn't work like you expect, consider whether
+        you can add anything to the functions' definitions to make them better.\r
+        *
+        **Continue ** to the next level, **where your code will be waiting for you.**\r
+        \r
+        ![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
+        PM.png)
       SG U3L08 - introUnderTheSea_markdown_instruction: |-
         # Under the Sea!\r
         \r
@@ -38341,34 +39119,25 @@
         The starting code provided has some comments already in it.\r
         \r
         #
-        (original subgoal) Do This\r
+        Do This\r
         \r
-        **Add your own comments** to the code that
-        you've been working on. Imagine that you are describing the purpose of the
-        code to one of your classmates.  Or find the most complicated part and try
-        to explain it.\r
+        Insert a comment that says `// Draw a starfish at specific
+        location` just above the section of code that will draw the starfish. \r
         \r
-        The way that you add comments is with the `// Comment`
-        block, which is in the **Functions** tab of the toolbox.\r
+        The
+        way that you add comments is with the `// Comment` block, which is in the
+        **Functions** tab of the toolbox ([Show me](#triggercallout=show_comment)).\r
         \r
-        **See how:**
-        ![expandable](https://images.code.org/fc29157949ee10369cb8a8db280b886f-image-1508515330684.gif)\r
+        **See
+        how:** ![expandable](https://images.code.org/fc29157949ee10369cb8a8db280b886f-image-1508515330684.gif)\r
         \r
-        #
-        (new) Do This\r
+        **Add
+        more comments** to the code that explain what each section of code is for.
+        Imagine that you are describing the purpose of the code to one of your classmates.  Or
+        find the most complicated part and try to explain it.\r
         \r
-        Insert a comment that says `// Draw all the starfish`
-        just above the first call to `drawStarfish()`. \r
-        \r
-        * The `// Comment`
-        block is in the Functions toolbox ([Show me](#triggercallout=show_comment))\r
-        *
-        **See how:**\r
-        ![expandable](https://images.code.org/1f97df1d6fc1ca2d5bd371ad7b0f76a3-image-1508960669302.gif)\r
-        \r
-        **Click
-        finish** once you've added the comment.  And keep adding comments as you
-        go!!!
+        **Click finish**
+        once you've added the comment.  And keep adding comments as you go!!!
       SG U3L2 Using Simple Commands part 1_markdown_instruction: |
         # Welcome to App
         Lab - Let's get started\r
@@ -39222,7 +39991,7 @@
 
 
       Test of comment block_markdown_instruction: |-
-        ##instructions\r
+        ## instructions\r
         \r
         Drag out
         the subgoal label block you want.
@@ -39622,7 +40391,7 @@
         sent the message at 1/2 the bit rate you agreed upon. What message did you
         receive instead?
       U1L4 NetSim SendAB_markdown_instruction: |-
-        ##Coordination and Binary Messages
+        ## Coordination and Binary Messages
         Activity\r
         \r
         **Develop your Protocol**\r
@@ -40365,7 +41134,7 @@
         messages in the Battleship simulator? \n\nWere there disagreements\nor problems?
         How were they resolved?\n\n\n"
       U2L04 - NetSim Routers with Addresses_markdown_instruction: |-
-        #An Updated Internet
+        # An Updated Internet
         Simulator\r
         Many changes have been made to the Internet Simulator. \r
         \r
@@ -40530,7 +41299,7 @@
         three things today about DNS: ______(1)______ , ______(2)______ ,\nand ______(3)______.
         \n\nHowever, the most important thing I learned is ______(4)______.\n"
       U2L10 NetSim Automatic DNS_markdown_instruction: |-
-        ##The Need for DNS\r
+        ## The Need for DNS\r
         \r
         In
         this version of the Internet Simulator, a Domain Name System (DNS) is provided
@@ -40594,17 +41363,17 @@
         \r
         Why or why not?\r
       U2L14 frequency random_markdown_instruction: |-
-        #Break a Caesar cipher!\r
+        # Break a Caesar cipher!\r
         \r
         This
         tool lets you play with text and do substitution ciphers. It also shows you
         a frequency analysis of the input text. (We’ll look at that more in a later
         lesson.) You can use this to either encrypt a message or decrypt it.\r
         \r
-        #Do
-        this\r
-        - Load the "Sample message (easy)" from the message dropdown. This
-        will load a message that has been encrypted with a Caesar cipher\r
+        #
+        Do this\r
+        - Load the "Sample message (easy)" from the message dropdown.
+        This will load a message that has been encrypted with a Caesar cipher\r
         \r
         ![](https://images.code.org/336a6a68cc34636df21fe5ad9f43992c-image-1443566879847.gif)\r
         \r
@@ -48492,7 +49261,7 @@
         \r
         ![](https://images.code.org/4fa605353695afa0cd01ec01a1e2c709-image-1441772033658.gif)
       U3L03 Define and use turnAround_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         **Define**
         a function called `turnAround` which turns the turtle around. Once you've
         defined the function **call** it to make sure it works as you expect and then
@@ -48509,7 +49278,7 @@
         \r
         ![](https://images.code.org/3faf16575757ffae616dffd761085ab5-image-1467818996127.gif)
       U3L03 Draw a T using turnAround_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         Get some
         more practice **calling** a function by using `turnAround()` along with your
         old friend the `moveForward()` function to create a plus sign that is centered
@@ -48593,7 +49362,7 @@
         is written to demonstrate that you can use functions you've already written
         as building blocks in new functions.
       U3L03 draw diamond_markdown_instruction: |
-        #Do This:\r
+        # Do This:\r
         We're finally ready
         to make our diamond! **Define** a function named `function drawDiamond()`
         that **calls** `drawSide()` multiple times in order to complete the drawing.
@@ -48628,7 +49397,7 @@
         \r
         \r
       U3L04 - 3 by 3 with functions_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         \r
         We're
         going to revisit a familiar problem, **drawing the 3x3 square as efficiently
@@ -48647,15 +49416,15 @@
         \r
         ![](https://images.code.org/23a714face9925e1eb8dfe3c133eb22d-image-1441815998620.png)
       U3L04 - snowflake_markdown_instruction: |-
-        #Do This:\r
+        # Do This:\r
         \r
-        You should have already
-        worked with a partner to break down the design below into its multiple layers
-        of functions. Now you'll have an opportunity to program your solution. Here
-        are a few things to keep in mind:\r
+        You should have
+        already worked with a partner to break down the design below into its multiple
+        layers of functions. Now you'll have an opportunity to program your solution.
+        Here are a few things to keep in mind:\r
         \r
-        * Identify useful patterns that can
-        be reused and give them **their own functions**.\r
+        * Identify useful patterns that
+        can be reused and give them **their own functions**.\r
         * Remember: The functions
         you design **can call one another**. This is how you create layers of abstraction.\r
         *
@@ -48899,7 +49668,6 @@
         \r
         Use `penRGB()` and `dot()` to draw two overlapping circles as shown
         in the image.\r
-        \r
       U3L06 Challenge 6 squiggles_markdown_instruction: |-
         # Multiple Parameters -
         Making Arcs\r
@@ -49362,24 +50130,22 @@
         <img src="https://images.code.org/9e08dae8486f66422d492b8d8a6777eb-image-1443048962131.55.54
         PM.png" style="width: 200px; float: right">\r
         Finally, we'll add some
-        visual flourish by writing `drawAllSunbeams`. Note: you'll have to use the
-        `turnTo` command to make the turtle face the same direction prior to drawing
-        each sun beam.  \r
+        visual flourish by writing `drawAllSunbeams`. Note: The `turnTo` command makes
+        the turtle face a random direction prior to drawing each sun beam.\r
         \r
-        # Do This:\r
+        #
+        Do This:\r
         \r
-        * **Read** the `drawSunbeam` function
-        to know how it works and what **parameters** it accepts.\r
+        * **Read** the `drawSunbeam` function to know how it works
+        and what **parameters** it accepts.\r
         \r
-        * **Add a
-        loop** to `drawAllSunbeams` to draw about 100 sunbeams. Inside your loop:\r
-
-        \r
-        * **Place the commands already inside the function in your loop.** This
-        way your code will move the turtle to a random x location at the top of the
-        image (y is 0), `turnTo` a random angle between **165 and 175 degrees**, and
-        call `drawSunbeam`.\r
-        \r
+        * **Add a loop** to `drawAllSunbeams`
+        to draw about 100 sunbeams. Inside your loop:\r
+         \r
+        * **Place the commands
+        already inside the function in your loop.** This way your code will move the
+        turtle to a random x location at the top of the image (y is 0), `turnTo` a
+        random angle between **165 and 175 degrees**, and call `drawSunbeam`.\r
       U3L07 - topDownDesign_markdown_instruction: |-
         # Top-Down Design\r
         <img src="https://images.code.org/b4379f51db96b8b1c921de2579e16357-image-1443011791766.21.53
@@ -49607,6 +50373,54 @@
         Use
         the space here to design your functions. Once you're done you can **share**
         this project with your groupmates.
+      U3L08 - introUnderTheSea - clone for recovery_markdown_instruction: |-
+        # Recover
+        your Under the Sea project code!\r
+        \r
+        Below you should see your code for
+        the Under the Sea project from CSP Unit 3 - Lesson 8 in the state it was in
+        around 3pm ET, Monday Oct. 30, 2017.\r
+        \r
+        **Students:** To get the code
+        below back into Unit 3 - Lesson 8...\r
+        * Select all your code from the workspace
+        below (Highlight with mouse, or ctrl+A)\r
+        * Copy it (Edit -> Copy, or ctrl+C)\r
+        *
+        Paste it (Edit -> Paste, or ctrl+V) into the project in Unit 3\r
+            * Here
+        is a link to the project that will open in a new window: <a href="https://studio.code.org/s/csp3/stage/8/puzzle/17"
+        target=_blank>https://studio.code.org/s/csp3/stage/8/puzzle/17</a>\r
+        \r
+        **Teachers:**
+        You can view your students' work here using the blue teacher tray.  Alternatively,
+        you can ask students to use the process above.\r
+        \r
+        **Details:**\r
+        * The
+        Under the Sea code is a "project" that sat behind eight levels ("bubbles")
+        10-17 in Unit 3, Lesson 8.  \r
+        * On Oct. 30, 2017 we updated that project
+        in a way that caused code to appear missing for those who had done work prior
+        to the change.\r
+        * Your code still exists! It's just associated with the
+        old project, which is what we have provided below.\r
+        * You can copy and paste
+        your code from below into any of the current Unit 3, Lesson 8, levels 10-17
+        and it will work for all. (In other words, the code for level 17 is actually
+        referring to the same project as levels 10-17)\r
+        \r
+        We're sorry about this
+        mistake and for the inconvenience and disappointment it may have caused. Hopefully,
+        you were able to recover the code you worked so hard on.\r
+        \r
+        If you have
+        further questions please submit a bug report (option in the top-right menu)
+        or send email to support@code.org\r
+        \r
+        Thanks,\r
+        \r
+        CSP Team
       U3L08 - introUnderTheSea with comments_markdown_instruction: |-
         # Under the Sea!\r
         \r
@@ -49664,9 +50478,6 @@
         you can add anything to the functions’ definitions to make them better.\r
         *
         **Continue ** to the next level, **where your code will be waiting for you.**\r
-        \r
-        In
-        workspace – prepopulate with what is already there\r
         \r
         ![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
         PM.png)
@@ -54176,7 +54987,7 @@
         Here's your digital
         assistant again! Time to make it a little smarter.\r
         \r
-        ###Instructions\r
+        ### Instructions\r
         \r
         *
         Add the `contains` function to your digital assistant\r
@@ -57697,6 +58508,257 @@
         * **Run your app** and test that all
         of the buttons work.
       U4 vigenere cipher 2_markdown_instruction: "# Simple Markdown?"
+      U4-AP-Practice-Choose-The-Data-Concern_markdown_instruction: |-
+        # AP Practice
+        - Identify the Data Concern\r
+        \r
+        One component of the **AP Explore Performance
+        Task** is describing a data concern related to a computing innovation.\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt">\r
+        \r
+        <b>Computing Innovation</b>\r
+        <br>\r
+        <br>\r
+        2d.  Using
+        specific details, describe\r
+        <br>\r
+        <br>\r
+        \r
+        <li>at least one data storage
+        concern, data privacy concern, or data security concern directly related to
+        the computing innovation.</li>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        ## Sample Responses\r
+        \r
+        Two
+        of the responses below qualify as a data storage, privacy or security concern
+        and two do not.  Can you identify the two that do?\r
+        \r
+        ---\r
+        \r
+        **Response
+        A:** *Facial recognition technology stores data mapping a user's face. A
+        privacy concern for this technology is that it could be used by businesses
+        and governments to identify people as they walk around in their daily lives.*\r
+        \r
+        **Response
+        B:** *Software that tracks soccer player movements on the field can be used
+        to generate new statistics that help value contributions of individual players.
+        A data concern is that this information may be used to justify getting rid
+        of less productive players.*\r
+        \r
+        **Response C:** *Social networks allow
+        users to share vast amounts of private information about their lives. A security
+        concern of this technology is that this publicly available data may enable
+        stalkers or other criminals to identify potential targets.*\r
+        \r
+        **Response
+        D:** *Self-driving vehicles store vast amounts of information about their
+        location and the world around them. A data concern for the trucking industry
+        is that all of this information could be coordinated to make trucks more efficient
+        causing many people who drive trucks for a living to lose their jobs.*\r
+        \r
+        ---\r
+        \r
+        Here's
+        the scoring guide for this part of the question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
+        PM.png">\r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        \r
+        ## Choose the two (2) responses
+        that are data concerns\r
+        \r
+        **Choose the two responses (A, B, C, or D) that
+        would earn the point as data storage, security or privacy concern. Then justify
+        why you chose them.**
+      U4-AP-Practice-Choose-The-Harmful-Effect_markdown_instruction: |
+        # AP Practice
+        - Justify the Score\r
+        \r
+        One component of the **AP Explore Performance Task**
+        is describing a data concern related to a computing innovation.\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt">\r
+        \r
+        <b>Computing Innovation</b>\r
+        <br>\r
+        <br>\r
+        2d.  Using
+        specific details, describe\r
+        <br>\r
+        <br>\r
+        <ul>\r
+        <li>at least one data
+        storage concern, data privacy concern, or data security concern directly related
+        to the computing innovation.</li>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        **Sample
+        Student Response:** A student submitted the following response as part of
+        this question.\r
+        \r
+        *"FaceApp has permission to use many devices on your
+        smartphone, including the camera. A data concern that arises from this is
+        that the company could use this permission to see what you're doing."*\r
+        \r
+        \r
+        **Scoring
+        Guide:** Here's the scoring guide for this part of the question\r
+        \r
+        <div
+        style="magin:auto">\r
+        \t<img src="https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08
+        AM.png">\r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        # Justify the Score\r
+        \r
+        Based on
+        the scoring guidelines listed above, the student would NOT get Row 6 of the
+        response and would likely not be awarded Row 7.\r
+        \r
+        **Explain why the student
+        would not be awarded either row. Make a suggestion(s) for ways this response
+        could be improved**\r
+        \r
+        \r
+      U4-AP-Practice-Device-or-Data?_markdown_instruction: |-
+        # AP Practice - Justify
+        the Score\r
+        \r
+        **Written Prompt** -- Here is a portion of the AP Explore
+        Performance Task written response prompt 2d:\r
+        \r
+        <div style="width: 80%;
+        margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif;
+        font-size: 12pt">\r
+        \r
+        <b>Computing Innovation</b>\r
+        <br>\r
+        <br>\r
+        2d.  Using
+        specific details, describe\r
+        <br><br>\r
+        <li>at least one data storage concern,
+        data privacy concern, or data security concern directly related to the computing
+        innovation.</li>\r
+        </div>\r
+        <br>\r
+        \r
+        **Sample Student Response** -- here
+        is a snippet of a sample student response addressing a data concern:\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #d9f3f5; padding: 10px;
+        font-family: serif; font-size: 12pt; line-height: 17pt">\r
+        \r
+        <em> The
+        FaceSnap app has permission to use many devices on your smartphone, including
+        the camera. A data privacy concern that arises from this is that the company
+        could access the camera to see what you're doing without your knowledge.</em>\r
+        \r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        **Zero
+        points!!!** -- based on the scoring guidelines listed below the student would
+        **NOT** get a point for Row 6 and would likely **NOT** be awarded a point
+        for Row 7 either.\r
+        \r
+        **Why?** Here are the scoring guidelines for rows
+        6 and 7.\r
+        \r
+        ![](https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08
+        AM.png)\r
+        \r
+        ## Justify the score\r
+        \r
+        In the space provided below explain:\r
+        \r
+        1.
+        Why the student would not be awarded either row based on the scoring guidelines.
+        \r
+        2. Make a suggestion(s) for how to modify the response so the student
+        would get the point.
+      U4-AP-Practice-Justify-the-Score_markdown_instruction: |-
+        # AP Practice - Justify
+        the Score\r
+        \r
+        **Written Prompt** -- Here is a portion of the AP Explore
+        Performance Task written response prompt 2d:\r
+        \r
+        <div style="width: 80%;
+        margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif;
+        font-size: 12pt">\r
+        \r
+        <b>Computing Innovation</b>\r
+        <br>\r
+        <br>\r
+        2d.  Using
+        specific details, describe\r
+        <br><br>\r
+        <li>at least one data storage concern,
+        data privacy concern, or data security concern directly related to the computing
+        innovation.</li>\r
+        </div>\r
+        <br>\r
+        \r
+        **Sample Student Response** -- here
+        is a snippet of a sample student response addressing a data concern:\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #d9f3f5; padding: 10px;
+        font-family: serif; font-size: 12pt; line-height: 17pt">\r
+        \r
+        <em> The
+        FaceSnap app has permission to use many devices on your smartphone, including
+        the camera. A data privacy concern that arises from this is that the company
+        could access the camera to see what you're doing without your knowledge.</em>\r
+        \r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        **Zero
+        points!!!** -- based on the scoring guidelines listed below the student would
+        **NOT** get a point for Row 6 and would likely **NOT** be awarded a point
+        for Row 7 either.\r
+        \r
+        **Why?** Here are the scoring guidelines for rows
+        6 and 7.\r
+        \r
+        ![](https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08
+        AM.png)\r
+        \r
+        ## Justify the score\r
+        \r
+        In the space provided below explain:\r
+        \r
+        1.
+        Why the student would not be awarded either row based on the scoring guidelines.
+        \r
+        2. Make a suggestion(s) for how to modify the response so the student
+        would get the point.
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
         text.
@@ -58260,7 +59322,7 @@
         \r
         \t\tif( buttonId == randButtonID
         ) {\r
-                \tconsole.log("You got it right!")\r
+                \tconsole.log("You got it right!");\r
                 } else {\r
                 \tconsole.log("WRONG");\r
                 }\r
@@ -58285,7 +59347,6 @@
         out the call to `setBoard()` so the board doesn't change every time when
         you click.  This would let you verify that every button works right for a
         single board setup.  Then add it back in once you're done.\r
-        \r
       U5 ColorSleuth implement end game_markdown_instruction: |
         # Challenge - Pick
         a way for the game to end and implement it\r
@@ -60923,7 +61984,7 @@
         What types of information does Siri respond to in the video?\n-\nWhat do you
         think Siri is paying attention to in order to create these answers?\n"
       allthethings_moviebot_markdown_instruction: |
-        #Please sign in to test applab
+        # Please sign in to test applab
         levels (By design, applab levels only work if signed in. Normally, we make
         people sign in, but this is only enforceable for a whole script and would
         be annoying to do for the allthethings script).
@@ -61514,12 +62575,12 @@
         Check the hints if you need help
         with these challenges!
       courseA_artist_loops10_markdown_instruction: |-
-        ##Time to head back to land.
+        ## Time to head back to land.
         Help me put down stones so I don't fall in!\r
         \r
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11_markdown_instruction: |-
-        ##Help me build steps to watch
+        ## Help me build steps to watch
         the ship sail away.\r
         \r
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
@@ -61528,7 +62589,7 @@
         in the distance.  Draw what you think he saw.\r
         \r
         ___\r
-        ###Ideas\r
+        ### Ideas\r
         \r
         ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
@@ -61551,23 +62612,24 @@
         \r
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
-        ##Draw a line seven steps long.
+        ## Draw a line seven steps long.
         This will become our horizon.\r
         \r
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6_markdown_instruction: |-
-        ##Let's put a nice hill in the
+        ## Let's put a nice hill in the
         back.\r
         \r
         ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
-        ##Use the <xml><block type="controls_repeat_simplified_dropdown"><title
+        ## Use the <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="3-10">???</title></block></xml> loop to add waves
         to the water.\r
         \r
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
-        ##We need a ladder up to the boat.\r
+        ## We need a ladder up to the
+        boat.\r
         \r
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9_markdown_instruction: |-
@@ -61773,7 +62835,8 @@
         draw a picture of what you think the artist saw when he got home.\r
         \r
         ___\r
-        ###Ideas\r
+        ###
+        Ideas\r
         \r
         ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
@@ -62610,7 +63673,7 @@
         in the last couple of puzzles, build this image from the beginning.\r
         \r
         -
-        Each hexagon has **50 pixel sides** and **60 degree angles**
+        Each hexagon has **50 pixel sides** and **60 degree turns**
       courseD_artist_nestedLoops9_markdown_instruction: |-
         **Challenge:** Can you figure
         out how to make a picture like this?\r
@@ -62790,6 +63853,9 @@
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Get creative with shapes and angles to see what kind of new snowflakes
         we can draw!"_\r
+      courseD_artist_project_embedded_markdown_instruction: |-
+        Here's what you will
+        soon be making!
       courseD_artist_ramp11_markdown_instruction: |-
         Great!  Now let's make a square
         using Artist!  The blocks are a little different, but the idea is the same.\r
@@ -62801,7 +63867,7 @@
         Use what you've learned to draw
         this triangle inside of a square.\r
         ___\r
-        #####The sides are each 200 pixels
+        ##### The sides are each 200 pixels
         long. You will need to turn 90 degrees to make the square and 120 degrees
         to make the triangle.
       courseD_bee_conditionals1_markdown_instruction: |-
@@ -62823,6 +63889,15 @@
         Check to see if there's a flower under the cloud.
         If there's a flower, get nectar.
       courseD_bee_conditionals2_markdown_instruction: |-
+        More clouds! \r
+        \r
+        Check
+        underneath every cloud to see if it is hiding a flower before you get nectar.
+        If there is a flower underneath the cloud, the bee will need to get nectar
+        *once*.  \r
+        \r
+        Remember: Not all clouds hide the same thing!
+      courseD_bee_conditionals2_test_markdown_instruction: |-
         More clouds! \r
         \r
         Check
@@ -63693,7 +64768,7 @@
         loop to make a square using Artist!  The blocks for artist are a little different
         than other puzzles, but the idea is the same.\r
         ___\r
-        #####Each side of
+        ##### Each side of
         the square has a length of 200 pixels, and you will need to turn 90 degrees
         to make each angle.
       courseE_artist_ramp8_2_markdown_instruction: |-
@@ -63701,20 +64776,20 @@
         loop to make a square using Artist!  The blocks for artist are a little different
         than other puzzles, but the idea is the same.\r
         ___\r
-        #####Each side of
+        ##### Each side of
         the square has a length of 200 pixels, and you will need to turn 90 degrees
         to make each angle.
       courseE_artist_ramp9_markdown_instruction: |-
         Use what you've learned to draw
         this triangle.\r
         ___\r
-        #####The sides are each 100 pixels long. You will
+        ##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner.
       courseE_artist_ramp9_2_markdown_instruction: |-
         Use what you've learned to draw
         this triangle.\r
         ___\r
-        #####The sides are each 100 pixels long. You will
+        ##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner.
       courseE_bee_concept1_markdown_instruction: "*\"Can you BEE-lieve all of these\nflowers?\"*\\r\n\\r\nCollect
         all of the nectar from each flower. "
@@ -63826,10 +64901,10 @@
         Now help the farmer pick all of the corn on the way
         to the pumpkin at the end.\r
         ___\r
-        #####Note: Every square on the path that
-        leads to the pumpkin will either have *one* corn nothing.  You will need to
-        use an `if` statement to check whether there is corn before you try to pick
-        it!
+        ##### Note: Every square on the path
+        that leads to the pumpkin will either have *one* corn nothing.  You will need
+        to use an `if` statement to check whether there is corn before you try to
+        pick it!
       courseE_farmer_functions2a_markdown_instruction: |-
         *"I feel so functional!"*\r
         \r
@@ -63846,7 +64921,7 @@
         Help the farmer pick the
         corn and pumpkins.\r
         ___\r
-        #####Each sprout will either grow *one* corn
+        ##### Each sprout will either grow *one* corn
         or nothing.
       courseE_farmer_functions2ba_markdown_instruction: |-
         *"I feel so functional!"*\r
@@ -63861,8 +64936,8 @@
         **function call block** into the code where you need it.\r
         \r
         ___\r
-        #####Each
-        sprout will either grow *one* corn or nothing.
+        #####
+        Each sprout will either grow *one* corn or nothing.
       courseE_farmer_functions3b_markdown_instruction: |-
         *"Oooh, veggies are cropping
         up everywhere!"*\r
@@ -63896,8 +64971,8 @@
         Now the sprouts can be either corn **or** lettuce.  What
         do you need to add to this program to check each sprout before you pick?\r
         ___\r
-        #####Note:
-        Each sprout will turn into either **one** corn or **one** lettuce.
+        #####
+        Note: Each sprout will turn into either **one** corn or **one** lettuce.
       courseE_farmer_functions7b_markdown_instruction: |-
         *"This harvest is a-MAZE-ing!"*\r
         \r
@@ -64357,7 +65432,7 @@
         Use what you've learned to draw
         this triangle.\r
         ___\r
-        #####The sides are each 100 pixels long. You will
+        ##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner.
       courseF_artist_variables10_markdown_instruction: |-
         Here's your code from the
@@ -64991,10 +66066,10 @@
         \r
         **Improv:** *A scene
         that actors make up on stage using information from the audience.*
-      courseF_playlab_variables8c_markdown_instruction: |
-        Use the `join` block to
-        make the win/lose messages more personal by incorporating both the codename
-        and the color into the responses.\r
+      courseF_playlab_variables8c_markdown_instruction: |-
+        Use the `join` block (in
+        the toolbox under "Text") to make the win/lose messages more personal by
+        incorporating both the `codename` and the `color` variables into the responses.
       courseF_playlab_variables_challenge1_markdown_instruction: |-
         Use these blocks
         to make the actors share a knock-knock joke. Change the punchline and setup
@@ -66069,6 +67144,12 @@
         \r
          \r
         \r
+      csp-post-survey-2017-FR_markdown_instruction: |-
+        Anything else you'd like to
+        say about your experience in the course?
+      csp-post-survey-2017-q36-e_markdown_instruction: |-
+        I worry because of another
+        reason:
       csp-pre-survey-2017-q36-e_markdown_instruction: |-
         I worry because of another
         reason:
@@ -66972,7 +68053,7 @@
         <br>\r
         \r
         In this lesson we talked about
-        top-down design for building up solutions to larger programming problems.  Plan
+        how to build up solutions to larger programming problems with functions.  Plan
         the code that you would use to draw this image (shown at right). Describe
         each of the functions that you would create. You should not write all the
         code, only the names of the functions that you would create with a brief description

@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Ngaphansi yisampula yesixazululo esisekela iViki leMfundiso yeKhompyutha Sayensi kanye nemigomo engasetshenziswa ngumbuso kanye nezishayamthetho zendawo.
@@ -39,11 +38,11 @@ Lapho inkambu yezekhompyutha sayensi inokubaluleka kuzithiyo zokulingana ekufane
 
 Lapho uGrace Murray Hopper, omunye wabesimame bokuqala kunkambi yekhompyutha sayensi, wanjiniyela ulwimi olusha lokuklama kanye futhi waphayona amazinga ezinhlelo zekhompyutha okuyinto ebeke isisekelo sokuthuthuka okiningi kukhompyutha sayensi; kanye
 
-Lapho iviki lo <%= mcimbi_usuku('qala-ngobubanzi')%>, ngokuhlonipha usuku lokuzalwa kukaGrace Hopper, liqokelwe njenge 'Viki leMfundiso yeKhompyutha Sayensi': Manje, ngakho, ibangiyo
+Lapho iviki lo <%= campaign_date('start-long') %>, ngokuhlonipha usuku lokuzalwa kukaGrace Hopper, liqokelwe njenge 'Viki leMfundiso yeKhompyutha Sayensi': Manje, ngakho, ibangiyo
 
 Kuxazululiwe, Ukuthi i[INDLU NOMA ISIGELE, UHULUMENI, IDOLOBHA OKANYE IBHODI YESIKOLE]--
 
-(1) ikhuthaza ukuqokwa kweViki leMfundiso yeKhompyutha Sayensi (<%=usuku_umkhankaso('olugcwele')%);
+(1) ikhuthaza ukuqokwa kweViki leMfundiso yeKhompyutha Sayensi (<%= campaign_date('full') %>);
 
 (2) khuthaza izikole, othishela, abazali kanye nezishayamthetho ukuba bazibandakanye neViki leMfundiso yeKhompyutha Sayensi ngoku nika amadla kubafundi babo ukuze bakwazi ukuthatha ichaza kuHora loKufingqwa;
 

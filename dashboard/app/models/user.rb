@@ -120,6 +120,7 @@ class User < ActiveRecord::Base
     oauth_token
     oauth_token_expiration
     sharing_disabled
+    next_census_display
   )
 
   # Include default devise modules. Others available are:
@@ -184,12 +185,16 @@ class User < ActiveRecord::Base
   has_many :regional_partners,
     through: :regional_partner_program_managers
 
+  has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
+
+  has_one :circuit_playground_discount_application
 
   after_create :associate_with_potential_pd_enrollments
 
@@ -316,6 +321,13 @@ class User < ActiveRecord::Base
 
   def district_name
     district.try(:name)
+  end
+
+  # Given a user_id, username, or email, attempts to find the relevant user
+  def self.from_identifier(identifier)
+    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
+      where(username: identifier).first ||
+      find_by_email_or_hashed_email(identifier)
   end
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
@@ -532,11 +544,6 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     User.find_by(hashed_email: hashed_email)
-  end
-
-  def self.find_by_parent_email(email)
-    return nil if email.blank?
-    User.find_by(parent_email: email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -852,10 +859,10 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
-  def last_attempt(level)
-    UserLevel.where(user_id: id, level_id: level.id).
-      order('updated_at DESC').
-      first
+  def last_attempt(level, script = nil)
+    query = UserLevel.where(user_id: id, level_id: level.id)
+    query = query.where(script_id: script.id) unless script.nil?
+    query.order('updated_at DESC').first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -1602,6 +1609,12 @@ class User < ActiveRecord::Base
 
     (authorized_teacher? && script && !script.professional_learning_course?) ||
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
+  end
+
+  def show_census_teacher_banner?
+    # Must have an NCES school to show the banner
+    users_school = try(:school_info).try(:school)
+    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
   def show_race_interstitial?(ip = nil)

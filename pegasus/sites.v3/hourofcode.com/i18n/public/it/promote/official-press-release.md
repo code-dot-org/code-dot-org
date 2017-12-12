@@ -1,52 +1,62 @@
 ---
-
 title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Esempio di comunicato stampa
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Pubblicazione immediata  
+[**DATA**]  
+Contatti: [**CONTATTI**]  
   
 
 
-**
+<strong>
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  GOVERNATORE/SENATORE/DEPUTATO/RAPPRESENTANTE/SINDACO/ CONSIGLIERE [inserire il nome] HA PRESO PARTE ALL'ORA DEL CODICE CON GLI STUDENTI LOCALI</strong><br /> La comunità si è riunita per far conoscere l'importanza dello studio dell'informatica prendendo parte alla Computer Science Education Week
 </center>
 
-  
-  
-</p> 
+<br /> <br /></p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+<p>
+  <strong>DATA</strong> - [<strong>INSERIRE NOME</strong>] si sono uniti al Dirigente Scolastico e al corpo insegnante di [<strong>INSERIRE NOME SCUOLA</strong>], agli imprenditori locali e alle famiglie per [<strong>NOME dell'EVENTO</strong>] per partecipare all'Ora del Codice. [INSERIRE NOME] e i membri della comunità hanno fatto parte dei più di 100 milioni di persone in tutto il mondo che hanno preso parte all'evento didattico più popolare del mondo.
+</p>
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+<p>
+  [<strong>INSERIRE DETTAGLI DELL'EVENTO, USANDO LINGUAGGIO DESCRITTIVO. PER ESEMPIO:</strong>]<br /> “La scuola elementare Alessandro Manzoni ha organizzato un evento dell'Ora del Codice per introdurre i suoi studenti all'informatica. Più di 700 studenti di tutte le classi hanno svolto almeno un'Ora del Codice. E dozzine di genitori e volontari della comunità hanno fornito il loro supporto durante la giornata e riunito i bambini dimostrando l'importanza dell'informatica nelle vite di questi studenti."
+</p>
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+<p>
+  [<strong>SEMPLICE CONTENUTO</strong>]<br /> I computer sono dappertutto, ma oggi le scuole che insegnano le basi culturali dell'informatica sono molto poche. Le ragazze e gli studenti extracomunitari sono decisamente poco rappresentati. La buona notizia è che stiamo cambiando tutto ciò per migliorare la situazione. L'Ora del Codice è un passo verso la possibilità di fornire un'educazione informatica di alta qualità a tutti gli studenti.
+</p>
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! e anche del sito della Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+<p>
+  Più di 100 milioni di studenti di tutto il mondo hanno già provato l'Ora del Codice. Grazie all'Ora del Codice, l'informatica è stata sulle prime pagine dei siti di Google, MSN, Yahoo! e anche del sito della Disney. Il Presidente Obama, Shakira e Ashton Kutcher hanno tutti dato il via all'Ora del Codice con un video. Oltre 100 partner si sono riuniti per sostenere questo movimento.
+</p>
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+<p>
+  [<strong>INSERISCI CITAZIONE DA PORTAVOCE, ESEMPIO RIPORTATO DI SEGUITO:</strong>] <br /> "Abbiamo bisogno di incoraggiare e abbracciare l'interesse dei nostri studenti in informatica," ha detto [<strong>Inserire nome</strong>]. "Ogni studente merita la possibilità di imparare l'informatica per accedere alle migliori carriere del XXI secolo."
+</p>
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+<p>
+  [<strong>INSERIRE ULTERIORI INFORMAZIONI PER IL VOSTRO EVENTO E/O ORGANIZZAZIONE</strong>]
+</p>
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+<p>
+  [<strong>INSERIRE LA CITAZIONE DA UN'ALTRA ORGANIZZAZIONE O QUALCUNO CHE HA PARTECIPATO ALL'EVENTO</strong>]
+</p>
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+<p>
+  Per ulteriori informazioni su [<strong>Evento/programma/ETC</strong>], visitare [<strong>Inserisci sito</strong> o contattare [<strong>Inserire informazioni di contatto</strong>]
+</p>
 
-  
-  
+<p>
+  <br /> <br />
+</p>
 
-
-<%= view :signup_button %>
+<p>
+  <%= view :signup_button %>
+</p>

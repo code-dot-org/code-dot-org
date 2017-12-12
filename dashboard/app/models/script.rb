@@ -422,6 +422,20 @@ class Script < ActiveRecord::Base
     script_levels[chapter - 1] # order is by chapter
   end
 
+  def get_bonus_script_levels(current_stage)
+    unless @all_bonus_script_levels
+      @all_bonus_script_levels = stages.map do |stage|
+        {
+          stageNumber: stage.relative_position,
+          levels: stage.script_levels.select(&:bonus).map(&:summarize_as_bonus)
+        }
+      end
+      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
+    end
+
+    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+  end
+
   def beta?
     Script.beta? name
   end
@@ -504,7 +518,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csp3-research-mxghyt csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csp3-research-mxghyt csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere applab-intro csp-explore csp-create).include?(name)
   end
 
   def has_lesson_pdf?
@@ -973,5 +987,16 @@ class Script < ActiveRecord::Base
   #   is one.
   def course_link
     course_path(course) if course
+  end
+
+  # If there is an alternate version of this script which the user should be on
+  # due to existing progress or a course experiment, return that script. Otherwise,
+  # return nil.
+  def alternate_script(user)
+    course_scripts.each do |cs|
+      alternate_cs = cs.course.select_course_script(user, cs)
+      return alternate_cs.script if cs != alternate_cs
+    end
+    nil
   end
 end

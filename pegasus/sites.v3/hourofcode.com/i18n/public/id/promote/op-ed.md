@@ -1,25 +1,22 @@
 ---
-
 title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-### Dibawah ini adalah contoh op-ed yang mendukung Pekan Edukasi Ilmu Komputer dan tujuan yang dapat digunakan oleh negara, legislator lokal, pemimpin bisnis, dll.
+### Berikut adalah contoh op-ed yang mendukung Pekan Pendidikan Ilmu Komputer dan tujuannya yang dapat digunakan oleh negara, legislator lokal, pemimpin bisnis, dll.
 
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
+Pergi ke [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) untuk menemukan informasi spesifik negara tentang ilmu komputer.
 
-**Title: Computing…Where the Jobs Are**
+**Judul: Komputasi... Dimana Pekerjaannya Ada**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**Dengan [NAMA] dan [PERTIMBANGKAN PENULISAN DENGAN PENDIDIKAN, SUPERINTENDENT ATAU PEMIMPIN BISNIS]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Komputer ada dimana-mana. Mereka ada di kantong kita. Mereka ada di dinding kita. Mereka ada di mobil kita. Mereka adalah bagian penting dari infrastruktur kami, mulai dari jaringan listrik hingga lampu lalu lintas hingga kerja keras di pasar keuangan kami. Dan semua komputer ini memiliki satu kesamaan. Mereka bergantung pada perangkat lunak untuk memberi tahu mereka apa yang harus dilakukan.
 
 But who exactly is going to write this software?
 
@@ -27,24 +24,24 @@ Considering how fast our world is being transformed by technology, you might exp
 
 At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-Why is this? And how can we address it?
+Kenapa ini? Dan bagaimana kita bisa mengatasinya?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Masalahnya dimulai di sekolah menengah dan atas. Nine out of ten of our schools do not offer computer programming classes. Di ** [SEKOLAH KECAMATAN] </ strong> tahun lalu, hanya siswa ** [NUMBER] </ strong> yang mengikuti Ujian Ilmu Komputer di Tingkat Perguruan Tinggi, hanya ** [%] </ kuat> dari semua siswa yang mengambil AP di negara kita. Kami sama sekali tidak melakukan cukup untuk mempersiapkan atau mendorong siswa kami untuk mengejar karir dengan bayaran tinggi dan vital ini.</p> 
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Hampir semua inovasi komputasi utama ditemukan di negara ini, tapi kita berisiko kehilangan kepemimpinan itu jika kita tidak melakukan sesuatu sekarang.
 
-We need to make some changes.
+Kita perlu membuat beberapa perubahan.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[OPTIONAL UNTUK NEGARA DI MANA INI BERLAKU]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. Di ** [INSERT STATE] </ strong>, kursus ilmu komputer adalah pilihan. Dengan tuntutan akademis, siswa tidak mampu mengikuti kursus sains komputer pilihan. Dan membuat perubahan ini bisa berdampak besar. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.</p> 
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Anak-anak dapat mempelajari dasar-dasar pengkodean sedini kelas dua.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Kita perlu merekrut lebih banyak guru ilmu komputer dan mendorong pengembangan profesional di bidangnya. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Setengah dari pekerjaan tersebut-4,6 juta-akan di komputasi atau teknologi informasi. And computer science is increasingly foundational knowledge for the 21st Century. Siapa yang akan mengisi pekerjaan ini jika anak kita tidak diberi kesempatan untuk mendapatkan keterampilan yang dibutuhkan?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. Saya akan bergabung dengan mereka, dan saya mengundang Anda untuk bergabung juga. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. Dan dukung usaha kami untuk membawa ilmu komputer ke lebih banyak sekolah di ** [NEGARA] </ strong>.</p> 
 
 <%= view :signup_button %>

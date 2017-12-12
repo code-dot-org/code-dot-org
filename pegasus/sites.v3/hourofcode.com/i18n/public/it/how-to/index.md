@@ -1,98 +1,67 @@
 ---
-
 title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# Come insegnare un'Ora del Codice
+<h1>Come insegnare l'Ora del Codice</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! Se hai bisogno di una mano, puoi trovare (solo per gli USA) un [volontario locale](<%= resolve_url('https://code.org/volunteer/local') %>) che ti aiuti a tenere l'Ora del Codice nella tua aula.
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial for your hour:
+## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
+## 2. Scegli un'esercitazione
 
-**[Tutti i corsi dell'Ora del Codice:](<%= resolve_url('/learn') %>)**
+Ti forniamo un'ampia varietà di divertenti [esercitazioni guidate](<%= resolve_url('/learn') %>) per partecipanti di tutte le età e di diversi livelli di esperienza. Gli studenti svolgono le esercitazioni autonomamente, anche se molte attività includono il piano della lezione per gli insegnanti, per guidare la discussione o estendere l'attività (vedrai il link quando sceglierai l'attività). [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
-  * Richiedono un tempo di preparazione minimo per gli insegnanti
-  * Sono auto-guidati — cioè permettono agli studenti di imparare secondo il proprio ritmo e livello di abilità
+## 3. Promuovi la tua Ora del Codice
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
+Promuovi la tua Ora del Codice [con questi strumenti](<%= resolve_url('/promote/resources') %>) e incoraggia altri ad ospitare i loro eventi.
 
-  * Are lesson plans that require some advance teacher preparation
-  * Are categorized by grade level *and* by subject area (eg Math, English, etc)
+## 4. Pianifica le tue necessità tecnologiche - i computer non sono indispensabili
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+Il miglior modo per godersi l'Ora del Codice è avere computer connessi a Internet. Tuttavia **non** è necessario un computer per ciascuno studente e si può addirittura svolgere l'Ora del Codice senza alcun computer.
 
-## 3) Promote your Hour of Code
+Esegui dei test sui computer degli studenti per verificare che le esercitazioni funzionino correttamente sui browser utilizzati anche con audio e video. **C'è una scarsa connessione ad Internet?** Pianifica di mostrare i video a tutta la classe, in modo da evitare che ogni studente scarichi singolarmente i video. Oppure prova le lezioni tradizionali.
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle cuffie alla tua classe o chiedi agli studenti di portarsi le loro.
 
-## 4) Verifica le esigenze di tecnologia - i computer non sono indispensabili
+**Non hai abbastanza dispositivi per tutti gli studenti?** Usa la [programmazione in coppia](https://youtu.be/sTJ85VIYDRE). Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sull'insegnante. In questo modo capiscono anche che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+<img src="/images/fit-350/group_ipad.jpg" />
 
-**Plan Ahead!** Do the following before your event starts:
+## 5. Inizia la tua Ora del Codice con un testimonial o un video stimolante
 
-  * Prova i corsi sui computer e sui dispositivi che gli studenti utilizzeranno. Assicurati che l'audio e il video funzionino correttamente sui browser.
-  * Fornisci delle cuffie alla tua classe, o chiedi agli studenti di portarsi le loro, se l'esercitazione che hai scelto funziona meglio con il sonoro.
-  * **Non hai abbastanza dispositivi per tutti gli studenti?** Usa la [programmazione in coppia](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sul docente. In questo modo capiscono che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
-  * **Hai una ridotta velocità di connessione a Internet?** Mostra tu i video a tutta la classe, in modo da evitare che ogni studente li scarichi. Oppure prova ad usare le lezioni "tradizionali" (che non necessitano di connessione ad internet).
-
-![](/images/fit-350/group_ipad.jpg)
-
-## 5) Start your Hour of Code off with an inspiring speaker or video
-
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
-
-[![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
+**Invita un [volontario locale](<%= resolve_url('https://code.org/volunteer/local') %>) (solo per gli USA) per ispirare i tuoi studenti parlando loro delle enormi possibilità a cui apre la conoscenza dell'informatica.** Nel mondo ci sono migliaia di volontari pronti ad aiutarti nella tua Ora del Codice venendo direttamente in classe o collegandosi con una video chiamata!
 
 **Mostra un video stimolante:**
 
-  * Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * Il [ video di lancio de l'Ora del Codice 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) o il <% if @country == 'uk' %>[Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [video de l'Ora del Codice 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [Il video del Presidente Obama che invita gli studenti ad imparare l'informatica](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh. (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA)) (solo in inglese)
+- Trova ancora più [risorse](<%= resolve_url('https://code.org/inspire') %>) e [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) stimolanti <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro" target="_blank">oppure questo in italiano di Programma il Futuro</a>.
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Non preoccuparti se sia tu che i tuoi studenti siete digiuni di informatica. Qui ci sono alcune idee per farti familiarizzare con le attività della tua Ora del Codice:**
 
-  * Spiega in che modo la tecnologia può incidere sulle nostre vite, con esempi che possano interessare sia i ragazzi che le ragazze (parla ad esempio di come la tecnologia salva vite umane, aiuta le persone, le mette in contatto).
-  * Come classe, elenca tutte le cose che utilizzano l'informatica nella vita quotidiana.
-  * Puoi trovare dei suggerimenti per far interessare le ragazze all'informatica [qui](<%= resolve_url('https://code.org/girls') %>).
+- Spiega in che modo la tecnologia influisce sulle nostre vite con degli esempi che interessino sia i ragazzi che le ragazze (puoi parlare di come venga utilizzata per salvare delle vite, aiutare la gente, mettere in comunicazione le persone, ecc.).
+- Elenca tutto ciò che utilizza programmi informatici nella vita quotidiana.
+- [Qui](<%= resolve_url('https://code.org/girls') %>) puoi trovare dei suggerimenti (in inglese) per far interessare le ragazze all'informatica.
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+## 6. Scrivi del codice!
 
-**Vuoi avere ulteriori suggerimenti riguardo all'insegnamento?** Scopri le [buone pratiche](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) consigliate da insegnanti esperti.
+**Guida gli studenti nell'attività**
 
-## 6) Scrivi del codice!
-
-**Direct students to the activity**
-
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
+- Scrivi il link dell'esercitazione sulla lavagna. Puoi recuperare questo link cliccando sull'[esercitazione](<%= resolve_url('/learn') %>) che desideri e copiando l'indirizzo che appare nella tabella accanto all'indicazione "Link breve".
 
 **Quando i partecipanti incontrano delle difficoltà, si può rispondere così:**
 
-  * "Non lo so. Cerchiamo di capirlo insieme."
-  * "La tecnologia non sempre funziona come vorremmo."
-  * "Imparare a programmare è come imparare una nuova lingua; non è possibile parlarla subito fluentemente."
+- "Non lo so. Cerchiamo di capirlo insieme."
+- "La tecnologia non sempre funziona come vorremmo."
+- "Imparare a programmare è come imparare una nuova lingua; non è possibile parlarla subito fluentemente."
 
-**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**Cosa fare se uno studente finisce prima?**
 
-**Cosa fare se qualcuno finisce prima del previsto?**
-
-  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-  * Oppure è possibile proporre agli studenti che hanno terminato anticipatamente di aiutare i compagni di classe che hanno difficoltà con l'attività.
+- Gli studenti possono vedere tutte le esercitazioni e [provare un'altra attività dell'Ora del Codice](<%= resolve_url('/learn')%>).
+- Oppure è possibile proporre agli studenti che hanno terminato prima, di aiutare i compagni di classe che hanno delle difficoltà.
 
 [col-33]
 
@@ -100,11 +69,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## 7) Festeggia
+## 7. Festeggia
 
 [col-33]
 
@@ -112,10 +79,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-  * [Stampa gli attestati](<%= resolve_url('https://code.org/certificates') %>) per i tuoi studenti.
-  * Stampa gli adesivi ["Ho completato un'Ora del Codice!"](<%= resolve_url('/promote/resources#stickers') %>)
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Condividi le foto e i video del tuo evento dell'Ora del codice sui social media. Usa #HourOfCode e @codeorg e @programmafuturo così anche noi possiamo rilanciare il tuo successo!
+- [Stampa gli attestati](<%= resolve_url('https://code.org/certificates')%>) in inglese oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
+- Stampa gli adesivi ["Ho completato un'Ora del Codice!"](<%= resolve_url('/promote/resources#stickers') %>)
+- [Ordina T-shirt personalizzate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per i tuoi studenti (solo per gli USA).
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 [col-33]
 
@@ -123,24 +90,18 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
 ## Altre risorse dell'Ora del Codice per gli insegnanti:
 
-  * Usa questo [modello di piano di lavoro di una lezione](/files/EducatorHourofCodeLessonPlanOutline.docx) per organizzare la tua Ora del Codice.
-  * Scopri le [buone pratiche](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) consigliate dagli insegnanti delle passate edizioni de L'Ora del Codice. 
-  * Guarda la registrazione del nostro webinar [Guida per l'Educatore all'Ora del Codice](https://youtu.be/EJeMeSW2-Mw).
-  * [Partecipa dal vivo a una sessione di Domande&Risposte](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) con il nostro fondatore, Hadi Partovi, per prepararti all'Ora del Codice.
-  * Visita il [Forum dell'Ora del Codice per gli Insegnanti](http://forum.code.org/c/plc/hour-of-code) per ricevere consigli, opinioni e assistenza dagli altri insegnanti. <% if @country == 'us' %>
-  * Controlla le [FAQ dell'Ora del Codice](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- È disponibile un [Forum in inglese di discussione per gli insegnanti](http://forum.code.org/c/plc/hour-of-code). Se sei italiano visita il [Forum italiano di Programma il Futuro](https://www.programmailfuturo.it/aiuto/forum-di-aiuto) per ricevere consigli, opinioni e assistenza dagli altri insegnanti. <% if @country == 'us' %>
+- Controlla le [FAQ dell'Ora del Codice](https://hourofcode.com/it#faq). <% end %>
 
 ## Cosa c'è dopo l'Ora del Codice?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+L'Ora del Codice è solo il primo passo in un viaggio per imparare di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio:
 
-  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Incoraggia gli studenti a continuare ad [imparare online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- [Frequentate](<%= resolve_url('https://code.org/professional-development-workshops') %>) un seminario di un giorno, per ricevere istruzioni da un esperto di informatica. (Solo per gli USA)
 
 <%= view :signup_button %>

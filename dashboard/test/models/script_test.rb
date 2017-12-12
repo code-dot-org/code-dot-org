@@ -739,4 +739,28 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, script: script, stage: stage, levels: [level]
     assert_equal false, script.logged_out_age_13_required?
   end
+
+  test "get_bonus_script_levels" do
+    script = create :script
+    stage1 = create :stage, script: script
+    create :stage, script: script
+    stage3 = create :stage, script: script
+    create :script_level, script: script, stage: stage1, bonus: true
+    create :script_level, script: script, stage: stage1, bonus: true
+    create :script_level, script: script, stage: stage3, bonus: true
+    create :script_level, script: script, stage: stage3, bonus: true
+
+    bonus_levels1 = script.get_bonus_script_levels(stage1)
+    bonus_levels3 = script.get_bonus_script_levels(stage3)
+
+    assert_equal 1, bonus_levels1.length
+    assert_equal 1, bonus_levels1[0][:stageNumber]
+    assert_equal 2, bonus_levels1[0][:levels].length
+
+    assert_equal 2, bonus_levels3.length
+    assert_equal 1, bonus_levels3[0][:stageNumber]
+    assert_equal 3, bonus_levels3[1][:stageNumber]
+    assert_equal 2, bonus_levels3[0][:levels].length
+    assert_equal 2, bonus_levels3[1][:levels].length
+  end
 end

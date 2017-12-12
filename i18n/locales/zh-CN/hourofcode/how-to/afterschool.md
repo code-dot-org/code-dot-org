@@ -1,134 +1,127 @@
-* * *
-
-title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: 如何在课后兴趣班讲授编程一小时
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # 如何在课后班讲授编程一小时
 
-## 1) 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2） 选择一个教程︰
+参与我们的活动，并向学生们介绍他们第一节“编程一小时”的课程吧！下列是教学步骤： 编程一小时的课程哪怕是对初学者来说都非常容易上手！ 如果您需要额外帮助的话，您可以[您可以找一个本地的志愿者](%= resolve_url('https://code.org/volunteer/local') %)来运作“编程一小时”课程。
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 如何在课后兴趣班讲授编程一小时 1. 观看指导视频 2. 选择教程 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-**编程一小时全部教程：**
+## 2. 选择一个教程指南
 
-  * Require minimal prep-time for organizers
-  * 包括自学向导 - 让孩子们能够凭借他们自己的技能水平用自己的速度来学习。
+我们会提供一系列由多个合作伙伴制作的，适合于各个年龄段的，有趣的，为时一小时的指南课程。 [点击这里试一试！](%= resolve_url('/learn') %)
+
+**编程一小时活动**不需要提前准备很多。参加者可以依照自己的节奏和技能水平进行自我学习。
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**需要编程一小时的课外活动大纲？** 看看这个 [模版](/files/AfterschoolEducatorLessonPlanOutline.docx)吧!
+如果你需要**编程一小时**的课外课程计划，请参照。</p> 
 
-## 3）推广您的编程一小时活动
+## 3. 推广您的编程一小时活动
 
-[使用这些工具](%= resolve_url('/promote') %) 推广您的编程一小时活动，并鼓励他人举办他们自己的活动。
+你可以用这些工具</a>来推广编程一小时，并鼓励其他人去主办自己的活动。</p> 
 
-## 4) 计划您所需的教学设备 — 这并不一定需要电脑
+## 4. 您所需的教学设备——电脑不是必需的
 
-要获得编程一小时活动的最佳体验，需要有能连接互联网的电脑 但您**不** 需要给每一个孩子提供电脑，您甚至可以没有一台电脑的情况下开展编程一小时活动。
+要获得编程一小时活动的最佳体验，需要一台联网的电脑。 但您**并不**需要给每一个孩子提供电脑，您甚至可以在没有电脑的情况下开展编程一小时活动。
 
-**提前计划 ！**在您的活动开始之前，请按以下操作︰
+在学生计算机或机台上测试这些指南，确保它们在播放器上的声音和视频能够正常运作。 **担心网速不好？** 可以在一开始就播放全部视频，这样学生就无需自行下载视频。 亦可采用线下/不上网的教学指南。
 
-  * 在学生的计算机或设备上测试教程。确保他们能够在浏览器里正常使用，并能播放视频和声音。
-  * 如果想让教程有最好的音响效果，需要给班级提供耳机，或者让他们自带耳机。
-  * **没有足够的设备吗？**采取[结对编程](https://www.youtube.com/watch?v=vgkahOzFH2Q)的方式。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们也将明白计算机科学是一种社交和协作。
-  * **宽带较低？**可计划在全班面前进行视频演示，这样就不是每个学生都在各自下载视屏，或或尝试不插电/离线教程。
+如果想让教程有最好的音响效果，需要给班级提供耳机，或者让他们自带耳机。
 
-![](/images/fit-350/group_ipad.jpg)
+**电脑不够？**采取[搭档合作编程](https://www.youtube.com/watch?v=vgkahOzFH2Q)的方式。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们将明白编程也是一种社交和协作。
 
-## 5）从鼓舞人心的视频开始您的编程一小时活动
+<img src="/images/fit-350/group_ipad.jpg" />
+
+## 5. 用一片鼓舞人心的视频来开始你的编程一小时
 
 讨论计算机科学对我们生活的各个方面的影响，鼓舞参与者，启动编程一小时活动
 
 **播放鼓舞人心的视频：**
 
-  * Code.org推出的原始视频有比尔·盖茨，马克·扎克伯格和NBA球星克里斯 - 波什（它们分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)版本）
-  * [2013年编程一小时活动视频](https://www.youtube.com/watch?v=FC5FbmsH4fw)，或者 <% if @country == 'uk'> [ 2015年编程一小时活动 视频](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ 2015 年编程一小时活动视频](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [奥巴马总统号召所有对的学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * 更多鼓舞人心的视频请见[这里](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- 原版的Code.org 的视频里讲述了比尔·盖茨，马克·扎克伯格，和NBA球星克里斯·波什的励志故事。 你可以自由选择[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)、[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)或[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)版本的视频。
+- [编程一小时 全球视频 ](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [总统奥巴马号召所有学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
+- 更多励志的视频可以[ 点此查看](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 
-**如果您从未深入接触过计算机学科也没有关系。这里是一些可以帮助您介绍编程一小时活动的小点子：**
+**哪怕你对计算机科学一无所知也没关系。这里是一些介绍你可以学习编程一小时的一些想法。**
 
-  * 解释技术在哪些方面影响着我们的生活，举出男女生都关注的例子 （比如讲讲应用程序或者一些用来拯救生命，帮助其他别人，使人际沟通变得更便捷等等的科学技术）。
-  * 列举日常生活中需要使用程序的情况。（比如做一些有规律的事情）
-  * 让女孩子也对计算机科学产生兴趣，小贴示 [在这里](%= resolve_url('https://code.org/girls') %).
+- 用无论男孩还是女孩都会关心的例子来解释技术是如何影响我们的生活的（比如一些用于挽救生命、帮助人类、沟通你我的一些软件和技术之类的例子）。
+- 列举日常生活中需要使用程序的情况。（比如做一些有规律的事情）
+- [这里](%= resolve_url('https://code.org/girls') %)是一些能让女孩对计算机科学感兴趣的小技巧。
 
-**需要更多的帮助**下载这份[课程大纲模版吧](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**需要更多的指南吗？**，请点击</a>来下载的课程大纲模板。</p> 
 
-**想要更多的教学点子？** 看看来自其他有经验的教育工作者的 [最佳实践](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) 。
-
-## 6) 编程!
+## 6. 编程！
 
 **在活动中指导参与者**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+- 把课程指南的链接写在白板上。在参加者数量下点击</a> 找到列在里你选择的指南。</li> </ul> 
+    
+    **如果有人在学的时候遇到困难的话，你可以这样回复：**
+    
+    - "我也不知道。让我们一起来找到问题的答案吧"。
+    - “科学技术并不总是同我们期望的方式一样工作。”
+    - “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；你不会马上就说得很流利。”
+    
+    **如果某些学生完成得比较快可以怎样做？**
+    
+    - 鼓励参加者参加编程一小时在[hourofcode.com/learn](%= resolve_url('/learn') %) 里的另一项活动。
+    - 或者，让那些更早完成课程的人来帮助有困难的人。
+    
+    [col-33]
+    
+    ![](/images/fit-250/highschoolgirls.jpeg)
+    
+    [/col-33]
+    
+    [col-33]
+    
+    ![](/images/fit-300/group_ar.jpg)
+    
+    [/col-33]
 
-**当学生遇到了困难的时候，可以这样回答：**
+<p style="clear:both">&nbsp;</p>
 
-  * "我也不知道。让我们一起来找到问题的答案吧"。
-  * “科学技术并不总是同我们期望的方式一样工作。”
-  * “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；不会马上就说得很流利。”
+    
+    ## 7. 庆祝
+    
+    [col-33]
+    
+    ![](/images/fit-300/boy-certificate.jpg)
+    
+    [/col-33]
+    
+    - 给你的学生打印[](%= resolve_url('https://code.org/certificates') %)证书。
+    - 为你的学生[打印"我学过《编程一小时》!"](%= resolve_url('/promote/resources#stickers') %) 贴纸。
+    - 为你的学校[预订定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
+    - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
+    
+    [col-33]
+    
+    ![](/images/fit-260/highlight-certificates.jpg)
+    
+    [/col-33]
 
-**如果某些学生完成得比较快可以怎样做？**
+<p style="clear:both">&nbsp;</p>
 
-  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
-  * 或者，请那些完成得比较快的人帮助其他遇到困难的人。
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">
-  &nbsp;
-</p>
-
-## 7) 庆祝
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
-  * 为您的学生[打印证书](%= resolve_url('https://code.org/certificates') %) 。
-  * 为你的学生[打印"我学过《编程一小时》!"](%= resolve_url('/promote/resources#stickers') %) 贴纸。
-  * 为你的学校[预订定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
-  * 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">
-  &nbsp;
-</p>
-
-## 给教育工作者的其他编程一小时的资源
-
-  * 看看这些来自参与过编程一小时的组织者的[最佳实践](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) 
-  * 观看我们 [教育工作者的编程一小时指导网络研讨会](https://youtu.be/EJeMeSW2-Mw) 的录像.
-  * 我们的创始人，哈迪帕托维为编程一小时准备的 [现场问与答 q&a](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911)。
-  * 如果你需要来自其它组织者的意见，观点和支持的话，来看看[编程一小时论坛](http://forum.code.org/c/plc/hour-of-code)吧 <% if @country == 'us' %>
-  * 阅读 [编程一小时常见问题](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %>
-
-## 编程一小时之后做什么？
-
-编程一小时只是学习技术的工作原理和创建软件应用旅程的第一步。继续这个旅程：
-
-  * 鼓励学生继续 [在线学习](%= resolve_url('https://code.org/learn/beyond') %).
-  * [参加](%= resolve_url('https://code.org/professional-development-workshops') %) 1 天的面对面的研讨会，接受有经验的计算机科学推动者的指导。 （仅适用于美国学习者）
-
-<%= view :signup_button %>
+    
+    ## 适用于教育工作者的其他编程一小时的资源
+    
+    - 参照以往编程一小时组织者提供的最佳实践指南 [ ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) 
+    - 观看我们为教育工作者主办的编程一小时在线会议回放。[](https://youtu.be/EJeMeSW2-Mw)
+    - 参加[编程一小时讨论会](http://forum.code.org/c/plc/hour-of-code)，从其他组织者身上听取意见、吸收经验、获得帮助。 <% if @country == 'us' %>
+    - 阅读 [编程一小时常见问题](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %>
+    
+    ## 编程一小时之后该做什么？
+    
+    编程一小时只是学习技术的工作原理和创建软件应用旅程的第一步。继续这个旅程：
+    
+    - 鼓励学生继续 [ 在线学习 ](%= resolve_url('https://code.org/learn/beyond') %)。
+    - [参加](%= resolve_url('https://code.org/professional-development-workshops') %) 1 天的面对面的研讨会，接受有经验的计算机科学推动者的指导。 （仅适用于美国学习者）
+    
+    <%= view :signup_button %>

@@ -155,6 +155,9 @@ export default {
       case 'defaultValue':
         element.defaultValue = value;
         break;
+      case 'sliderValue':
+        element.value = value;
+        break;
       case 'min':
         element.min = value;
         break;
@@ -174,6 +177,8 @@ export default {
     switch (name) {
       case 'defaultValue':
         return element.defaultValue;
+      case 'sliderValue':
+        return parseInt(element.value, 10);
       case 'min':
         return element.min;
       case 'max':

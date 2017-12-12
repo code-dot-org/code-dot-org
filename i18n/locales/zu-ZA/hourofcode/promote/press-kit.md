@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Indlela yokuheha abosozindaba kumcimbi wakho weHora luKufingqwa
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Amathiphu Abalulekile
 
-  * Finyelela kwezokusakaza ngaphambi kwama viki amabili omcimbi wakho nge-imeyili. Landelela nge-imeyili nango cingo uma ungatholi impendulo.
-  * Cela omunye wothisha esikoleni okanye ivolontiya ukuba athathe izithombe abelane ngazo kwabezindaba.
-  * Bhala ngeHora loKufingqwa kukhasi lewebhusayithi yakho kanye nakuphephandaba lesikole. Faka imininingwane yomcimbi wakho, kanye nemifanekiso yokusebenza kwabafundi.
-  * KuFacebook kanye nakuTwitter, yabelana ngezibuyekezo zohlelo lakho, memezela imicimbi yakho uphinde ufake imifanekiso yakho phakhathi kukaZiba. 5-11. Sebenzisa ihashtag **#iHoraloKufingqwa** ngakho iCode.org izobona iphinde ikhuthaze umcimbi wakho.
+- Finyelela kwezokusakaza ngaphambi kwama viki amabili omcimbi wakho nge-imeyili. Landelela nge-imeyili nango cingo uma ungatholi impendulo.
+- Cela omunye wothisha esikoleni okanye ivolontiya ukuba athathe izithombe abelane ngazo kwabezindaba.
+- Bhala ngeHora loKufingqwa kukhasi lewebhusayithi yakho kanye nakuphephandaba lesikole. Faka imininingwane yomcimbi wakho, kanye nemifanekiso yokusebenza kwabafundi.
+- KuFacebook kanye nakuTwitter, yabelana ngezibuyekezo zohlelo lakho, memezela imicimbi yakho uphinde ufake imifanekiso yakho phakhathi kukaZiba. 5-11. Sebenzisa ihashtag **#iHoraloKufingqwa** ngakho iCode.org izobona iphinde ikhuthaze umcimbi wakho.
 
 ### Umhlahlandlela ngegxathu negxathu:
 
 **1. Lungiselela umcimbi wakho**
 
-  * Hlela umhlangano wokuqala iHora loKufingqwa.
-  * Thumela [incwadi](%= resolve_url('/promote/resources#sample-emails') %) kubazali. Ubacele ukuba basakaze kwabanye.
-  * Thumela [incwadi](%= resolve_url('/promote/resources#sample-emails') %) ukumema uphathi dolobha, isishayamthetho, undunankulu wakho, okanye usomabhizinisi owaziwayo ukuba abekhona ebese ekhulumisa abafundi bakho.
-  * Hlela isiqumbi semisebenzi (njenge sibonakaliso sezinhlelo ezinqanyuliwe zomsebenzi), okanye obonise imisebenzi edalwe okanye eholwa abafundi.
-  * Bonisa iCode.org's [ividiyo yeHora loKufingqwa](%= resolve_url('/') %) okanye okukodwa ku[lezi](%= resolve_url('/promote/resources#videos') %) ukugqugquzela.
+- Hlela umhlangano wokuqala iHora loKufingqwa.
+- Thumela [incwadi](%= resolve_url('/promote/resources#sample-emails') %) kubazali. Ubacele ukuba basakaze kwabanye.
+- Thumela [incwadi](%= resolve_url('/promote/resources#sample-emails') %) ukumema uphathi dolobha, isishayamthetho, undunankulu wakho, okanye usomabhizinisi owaziwayo ukuba abekhona ebese ekhulumisa abafundi bakho.
+- Hlela isiqumbi semisebenzi (njenge sibonakaliso sezinhlelo ezinqanyuliwe zomsebenzi), okanye obonise imisebenzi edalwe okanye eholwa abafundi.
+- Bonisa iCode.org's [ividiyo yeHora loKufingqwa](%= resolve_url('/') %) okanye okukodwa ku[lezi](%= resolve_url('/promote/resources#videos') %) ukugqugquzela.
 
 **2. Khombisa izintatheli ezithize zendawo ezibhala ngemfundio okanye imicimbi yendawo.**
 
@@ -55,9 +54,9 @@ Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi
 
 **Nge Code.org**
 
-Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya kukhompyutha sayensi kanye nokukhulisa kokuzibandakanya kwabesimame nabafundi abangamelwanga bombala. Umbono wayo ukuba wonke umfundi kuzozonke izikole kufanele athole ithuba lokufunda ukuhlela ngekhompyutha. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org isingathwe ngiminikelo yalabo abangasiza abavela kumankampani, kuzisekelo kanye nabantu abanikelayo, okufaka phakathi iMicrosoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network kanye nabanye. Ngolwazi olubanzi, vakashela: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya kukhompyutha sayensi kanye nokukhulisa kokuzibandakanya kwabesimame nabafundi abangamelwanga bombala. Umbono wayo ukuba wonke umfundi kuzozonke izikole kufanele athole ithuba lokufunda ukuhlela ngekhompyutha. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org isingathwe ngiminikelo yalabo abangasiza abavela kumankampani, kuzisekelo kanye nabantu abanikelayo, okufaka phakathi iMicrosoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network kanye nabanye. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Thola izinsiza ezingeziwe kanye namasempula ama imeyili [lapha](%= resolve_url('/promote') %).
+Find more resources and sample emails [here](%= resolve_url('/promote') %).
 
 <%= view :signup_button %>

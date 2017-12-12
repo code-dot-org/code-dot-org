@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Παρακάτω είναι ένα δείγμα ψηφίσματος υποστηρικτή για την εβδομάδα εκπαίδευσης στην επιστήμη υπολογιστών και τους στόχους που θα μπορούσε να χρησιμοποιηθεί από το κράτος και τοπικούς νομοθέτες.

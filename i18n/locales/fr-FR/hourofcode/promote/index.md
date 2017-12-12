@@ -1,16 +1,15 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_promote) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Comment s'impliquer ?
+# Get your community involved in the Hour of Code
 
 ## 1. Parlez-en autour de vous
 
@@ -28,7 +27,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 4. Promouvez votre Heure de Code dans votre communauté
 
-[Recrutez un groupe local](%= resolve_url('/promote/resources#sample-emails') %) — associations, club de scouts, église, Université, groupe d'anciens combattants, syndicat ou tout simplement vos amis. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Utilisez ces [affiches, banderoles, autocollants, vidéos et plus encore](%= resolve_url('/promote/resources') %) pour votre évènement.
+[Recrutez un groupe local](%= resolve_url('/promote/resources#sample-emails') %) — associations, église, université, groupe d'anciens combattants, syndicat ou tout simplement vos amis. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Utilisez ces [affiches, banderoles, autocollants, vidéos et plus encore](%= resolve_url('/promote/resources') %) pour votre évènement.
 
 ## 5. Demandez à un élu local de soutenir l'initiative Une Heure de Code
 

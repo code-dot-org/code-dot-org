@@ -285,15 +285,15 @@
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: Defining Variables and Substitution
+              name: Definere variablar og substitusjon
             'Calc: Evaluation Blocks':
-              name: Evaluation Blocks and Arithmetic Expressions
+              name: Evalueringsblokker og aritmetiske uttrykk
             'Eval: Boolean Operators':
-              name: Boolean Operators
+              name: Boolske operatorar
             'Eval: Conditionals':
               name: Betingelser
             'Eval: Defining Functions':
-              name: Composite Functions
+              name: Samansatte funksjonar
             'Eval: Functions':
               name: Solving Word Problems with the Design Recipe
             'Eval: Strings and Images':
@@ -301,17 +301,17 @@
             'Eval: Writing Contracts':
               name: Writing Contracts
             'Play Lab: Animation (Big Game)':
-              name: The Big Game - Animation
+              name: Det Store Spelet - Animasjon
             'Play Lab: Boolean (Big Game)':
-              name: The Big Game - Booleans
+              name: Det Store Spelet - Boolske verdier
             'Play Lab: Booleans':
-              name: Sam the Bat
+              name: Flaggermusa Sam
             'Play Lab: Collision Detection (Big Game)':
-              name: The Big Game - Collision Detection
+              name: Det Store Spelet - Kollisjonsdeteksjon
             'Play Lab: Defining Functions':
-              name: Rocket Height
+              name: Raketthøgde
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: Det Store Spelet - Variabler
             'Unplugged: Booleans':
               name: 'Unplugged: Booleans and Logic'
             'Unplugged: Collision Detection and the Distance Formula':
@@ -341,13 +341,13 @@
             programming language used in Code.org CS in Algebra
           stages:
             Defining Simple Functions:
-              name: Defining Simple Functions
+              name: Definering av enkle funksjonar
             Defining Variables:
               name: Definering av variablar
             Evaluation Blocks:
               name: Evalueringsblokker
             Making Pictures:
-              name: Making Pictures
+              name: "Å lage bilder"
             The Design Recipe:
               name: Design oppskrifta
         K5PD:
@@ -357,17 +357,17 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogikk for Informatikk
             Introduction to PD:
               name: Introduction to PD
             K-5 Courses:
-              name: K-5 Courses
+              name: Kurs for 5. klasse
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Programmeringskonsepter: Vilkår'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Programmeringskonsepter: hendingar'
             'Programming Concept: Functions':
               name: 'Programming Concept: Functions'
             'Programming Concept: Loops':
@@ -626,7 +626,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Flaggermusa Sam
             Strings and Images:
               name: Strenger og bilder
             Your Game - Animation:
@@ -807,13 +807,13 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogikk for Informatikk
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
               name: Evalueringsblokker
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             Strings and Images:
               name: Strenger og bilder
             Teacher Dashboard:
@@ -1075,7 +1075,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Flaggermusa Sam
             Strings and Images:
               name: Strenger og bilder
             The Design Recipe:
@@ -1181,7 +1181,7 @@
             Evaluation Blocks:
               name: Evalueringsblokker
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1237,7 +1237,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Neste steg
             Planning:
               name: Planning
         ECSPD2:
@@ -1362,7 +1362,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Neste steg
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Fase 2 Online: Blanda sommerstudie'
@@ -3747,6 +3747,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -5294,7 +5296,7 @@
             Binary:
               name: Binær
             Snowflakes:
-              name: Snowflakes
+              name: Snøfnugg
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -5457,6 +5459,8 @@
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -7077,7 +7081,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Nested Loops:
@@ -7293,9 +7297,9 @@
                 all five stages of the process can be found in the beginning of the
                 project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals
-                in the world of Minecraft.
+              name: Betingelser i Minecraft
+              description_student: Unngå lavaen! Her skal du lære om betingelser i
+                Minecraft-verdenen.
               description_teacher: This lesson gives students a chance to learn and
                 practice conditionals. It features characters and settings from Minecraft,
                 and students will complete tasks such as mining and building structures
@@ -7317,7 +7321,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           title: Kurs F
@@ -7652,7 +7656,7 @@
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Betingelser i Minecraft
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
@@ -7881,6 +7885,10 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -7945,7 +7953,7 @@
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Sequence in Maze:
               name: Sequence in Maze
           title: Course E & F Ramp
@@ -8047,7 +8055,7 @@
             Conditional Loops in Maze:
               name: Conditional Loops in Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Betingelser i Minecraft
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             'Variables: Envelope Variables':
@@ -8123,7 +8131,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Dice Race':
@@ -8181,7 +8189,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Løkker i løkker i Bie/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Tangrams':
@@ -8193,7 +8201,7 @@
             Ice Age Play Lab:
               name: Istid Spel-lab
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Betingelser i Minecraft
             Envelope Variables:
               name: Konvolutt variabler
             Variables in Artist:
@@ -8426,6 +8434,8 @@
               name: CSD/P pulse check survey 2017
             CSD mid and post survey 2017 staging:
               name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -8444,7 +8454,78 @@
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
               name: Kodetimen med Minecraft
-          title: 'Minecraft: Hero''s Journey'
+          title: 'Minecraft: Heltens reise'
+          description_audience: ''
+          description_short: Minecraft er tilbake med en helt ny aktivitet til Kodetimen!
+          description: Minecraft er tilbake for Kodetimen med en helt ny aktivitet!
+            Reis gjennom Minecraft med kode.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Explore Performance Tasks.
+          description: ''
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Create Performance Tasks.
+          description: ''
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
           description_audience: ''
           description_short: ''
           description: ''

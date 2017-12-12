@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Privucite medije kako bi prisustvovali vašem Satu Kodiranja
@@ -14,20 +11,20 @@ nav: promote_nav
 
 ### Ključni Savjeti
 
-  * Obratite se medijima dva tjedna prije vašega događaja putem e-pošte. Ukoliko ne dobijete odgovor, propratite daljnjom e-poštom ili pak telefonskim razgovorom.
-  * Zamolite nekoga od školskog osoblja ili volontera da uslika događaj i podijeli slike na mreži ili ih pošalje novinama.
-  * Pišite o Satu Kodiranja na svojoj web stranici i u školskim novinama. Objavite detalje svog događaja i slike aktivnosti učenika.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Obratite se medijima dva tjedna prije vašega događaja putem e-pošte. Ukoliko ne dobijete odgovor, propratite daljnjom e-poštom ili pak telefonskim razgovorom.
+- Zamolite nekoga od školskog osoblja ili volontera da uslika događaj i podijeli slike na mreži ili ih pošalje novinama.
+- Pišite o Satu Kodiranja na svojoj web stranici i u školskim novinama. Objavite detalje svog događaja i slike aktivnosti učenika.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Vodič korak po korak:
 
 **1. Plan your event**
 
-  * Planirajte sastanak kako bi označili početak Sata Kodiranja.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organizirajte grupne aktivnosti (kao na primjer prikazivanje aktivnosti programiranja bez elektronskih uređaja) ili pokažite aktivnosti koje su izvršili i vodili učenici.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+- Planirajte sastanak kako bi označili početak Sata Kodiranja.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Organizirajte grupne aktivnosti (kao na primjer prikazivanje aktivnosti programiranja bez elektronskih uređaja) ili pokažite aktivnosti koje su izvršili i vodili učenici.
+- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

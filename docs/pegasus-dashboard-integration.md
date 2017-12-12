@@ -1,6 +1,6 @@
 ## Pegasus/Dashboard Integration!
 
-Pegaus now provides access to the dashboard database and knows which user is signed in (if any).
+Pegasus now provides access to the dashboard database and knows which user is signed in (if any).
 
 ### Accessing the Dashboard User
 

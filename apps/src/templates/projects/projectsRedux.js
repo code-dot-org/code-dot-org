@@ -67,6 +67,7 @@ const initialHasOlderProjects = {
   artist: true,
   minecraft: true,
   events: true,
+  k1: true,
 };
 
 function hasOlderProjects(state = initialHasOlderProjects, action) {

@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Kā piesaistīt medijus Programmēšanas stundas pasākumam
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Svarīgākie padomi
 
-  * Sazinies ar mēdijiem divas nedēļas pirms pasākuma izmantojot e-pastu. Seko līdzi e-pastam un tālrunim, ja uzreiz nesaņēmi atbildi.
-  * Pajautājiet skolas personālam vai kādam brīvprātīgajam, lai uzņem bildes un dalās ar tām tiešsaistē vai nosūta presei.
-  * Informāciju par "Programmēšanas stundu" ievieto mājaslapā un skolas avīzē. Ievieto pasākuma detaļas, bildes par skolnieku aktivitātēm.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Sazinies ar mēdijiem divas nedēļas pirms pasākuma izmantojot e-pastu. Seko līdzi e-pastam un tālrunim, ja uzreiz nesaņēmi atbildi.
+- Pajautājiet skolas personālam vai kādam brīvprātīgajam, lai uzņem bildes un dalās ar tām tiešsaistē vai nosūta presei.
+- Informāciju par "Programmēšanas stundu" ievieto mājaslapā un skolas avīzē. Ievieto pasākuma detaļas, bildes par skolnieku aktivitātēm.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Soli pa solim:
 
 **1. Plan your event**
 
-  * Ieplāno savu laiku, lai varētu sagatavoties pirms "Programmēšanas stundas".
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organizējiet grupu aktivitātes, piemēram, demonstrācijas vai programmēšanas aktīvitātes neizmantojot personālo datoru, vai parādi skolēnu un vadītāju izveidotās aktivitātes.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+- Ieplāno savu laiku, lai varētu sagatavoties pirms "Programmēšanas stundas".
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Organizējiet grupu aktivitātes, piemēram, demonstrācijas vai programmēšanas aktīvitātes neizmantojot personālo datoru, vai parādi skolēnu un vadītāju izveidotās aktivitātes.
+- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

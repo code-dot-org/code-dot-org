@@ -1,79 +1,79 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_parents) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# როგორ გაიაროთ კოდის ერთი საათი თქვენს შვილთან
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+შეასრულეთ კოდის ერთი საათი სახლში, ან გამოთქვით სურვილი განახორციელოთ იგი თქვენი შვილის კლასში! ამისთვის:
 
-## 1) უყურეთ ამ ინსტრუქციის ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) აირჩიეთ ტუტორიალი:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+ჩვენ გთავაზობთ სხვადასხვა პარტნიორების მიერ მოწოდებულ გასართობ, ერთსაათიან ინსტრუქციულ ვიდეოებს ნებისმიერი ასაკისთვის. [გამოსცადეთ ისინი!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**კოდის საათის ყოველი ტუტორიალი თავისით ხელმძღვანელობს მომხმარებელს - თქვენს შვილს შეუძლია იმუშაოს საკუთარი ტემპით, თავისი უნარების შესაბამისად**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Plan your technology needs
+## 3) განსაზღვრეთ თქვენი ტექნიკური საჭიროებები
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+კოდის ერთი საათის საუკეთესო გამოცდილების მიღება ინტერნეტთან დაკავშირებული კომპიუტერების საშუალებით მიიღება. მაგრამ კომპიუტერი ** არ არის ** აუცილებელი. მრავალი აქტივობა "უსადენოა" და შეიძლება, ყოველგვარი ტექნიკის გარეშე ჩატარდეს.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- შეამოწმეთ ტუტორიალები კომპიუტერზე, ან სხვა მოწყობილობაზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში.
+- ** თქვენს შვილთან ერთად გინდათ სწავლა? ** სცადეთ [ წყვილში პროგრამირება.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) კომპიუტერული მეცნიერება სოციალური და თანამშრომლობაზე დაფუძნებული მეცნიერებაა.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) დაიწყეთ კოდის ერთი საათი შთამაგონებელი ვიდეოთი
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+დაიწყეთ თქვენი ღონისძიება თქვენს შვილთან იმის განხილვით, თუ როგორ გავლენას იქონიებს მის ცხოვრებაზე კომპიუტერული მეცნიერებების ცოდნა.
 
 **აჩვენეთ შთამაგონებელი ვიდეო:**
 
 - Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [კოდის ერთი საათის პრომოვიდეო](https://www.youtube.com/watch?v=FC5FbmsH4fw), ან <% if @country == 'uk' %> [2015 წლის კოდის ერთი საათის ვიდეო ](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 წლის კოდის ერთი საათის ვიდეო](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [კოდის ერთი საათის მსოფლიო მასშტაბის ვიდეო](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- მოიძიეთ მეტი შთამაგონებელი [რესურსი](%= resolve_url('https://code.org/inspire') %) და [ვიდეო](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+არაუშავს, თუ კომპიუტერეულ მეცნიერებებში თქვენც და თქვენი შვილიც თანაბრად გამოუცდელი ხართ. აი, რამდენიმე იდეა, როგორ შეიძლება დაიწყოთ კოდის ერთი საათის აქტივობა:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- აუხსენით, როგორ გავლენას ახდენს ტექნოლოგია ჩვენს ცხოვრებაზე, ისეთი მაგალითების მოიშველიეთ, რომლებიც გოგონებისთვის და ბიჭებისთვის თანაბრად საინტერესო იქნება ( ესაუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, ადამიანების ერთმანეთთან დაკავშირებაზე და ა. შ.).
 - ჩამოწერეთ რაღაცები ყოველდღიური ცხოვრებიდან, რომლებშიც კოდი გამოიყენება.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- გაიგეთ, როგორ დააინტერესოთ გოგონები პროგრამირებითა და ინფორმატიკით [აქ](%= resolve_url('https://code.org/girls') %).
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+მეტი იდეა გაინტერესებთ? იხილეთ ჩვენი [ გაკვეთილის გეგმის ნიმუში](/files/AfterschoolEducatorLessonPlanOutline.docx) გამოცდილი მასწავლებლების საუკეთესო პრაქტიკების სანახავად.
 
-## 5) Code!
+## 5) წერეთ კოდი!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+როცა აირჩევთ სასურველ ტუტორიალს, შეგიძლიათ მისი ლინკი ჩაინიშნოთ "ბუქმარქებში".
 
-**When your child come across difficulties**
+**თუ თქვენს შვილს რაიმე სირთულე შეექმნება**
 
-It’s okay to respond:
+არაუშავს, თუ ასე უპასუხებთ:
 
 - "არ ვიცი. მოდი, ერთად ვიპოვოთ გამოსავალი"
 - ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა
 - "პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია დაუყოვნებლივ დაიწყოთ გამართულად საუბარი."
 
-## 6) Celebrate
+## 6) აღნიშნეთ
 
-[Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
+[დაბეჭდეთ სერთიფიკატები](%= resolve_url('https://code.org/certificates') %) თქვენი შვილისთვის (და თქვენთვისაც!).
 
 გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
-**Other Hour of Code resources:**
+**კოდის ერთი საათის სხვა რესურსები:**
 
 - გადახედეთ [კოდის ერთი საათის ხშირად დასმულ კითხვებს](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 **რა ხდება კოდის ერთი საათის შემდეგ?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის მხოლოდ პირველი ნაბიჯია. ამ მოგზაურობის გასაგრძელებლად:
 
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- წაახალისეთ შვილი, გააგრძელოს [სწავლა ონლაინ](%= resolve_url('https://code.org/learn/beyond') %).
+- [ხელი შეუწყვეთ](%= resolve_url('/promote') %) კომპიუტერული მეცნიერებების სწავლებას თქვენი შვილის სკოლის უბანში.
 
 <%= view :signup_button %>

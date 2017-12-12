@@ -116,3 +116,4 @@ We’ve also distributed [recruitment posters, videos, and other marketing mater
 | The teachers attending our professional development |  86% female |
 
 <br/><br/>
+We are also proud for [USA Today to rank Code.org among the top 25 small-to-medium business workplaces for women](https://www.usatoday.com/story/money/2017/11/28/godaddy-costco-adobe-among-comparablys-best-companies-women/889348001/), according to the women on our team.

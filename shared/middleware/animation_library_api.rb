@@ -2,6 +2,7 @@ require 'aws-sdk'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
+require 'cdo/aws/s3'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 
@@ -14,6 +15,10 @@ ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 # https://docs.google.com/document/d/18-LVuvKd0jKTUiGo5GYReUWM5oFWCyKRyEQURJ5HCOM/edit#
 #
 class AnimationLibraryApi < Sinatra::Base
+  helpers do
+    load(CDO.dir('shared', 'middleware', 'helpers', 'core.rb'))
+  end
+
   #
   # GET /api/v1/animation-library/<version-id>/<filename>
   #
@@ -24,7 +29,7 @@ class AnimationLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(ANIMATION_LIBRARY_BUCKET).
+        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
         object(animation_name).
         get(version_id: version_id)
       content_type result.content_type

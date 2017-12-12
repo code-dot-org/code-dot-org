@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Cum să atragi mass-media la evenimentul Hour of Code organizat de tine
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Sfaturi utile
 
-  * Luați legătura cu mass-media prin e-mail cu doua săptamâni inainte de eveniment.
-  * Adresați-vă unui membru al personalului școlii sau unui voluntar pentru a face fotografii pentru distribuire online sau trimiterea catre presă.
-  * Scrieți despre evenimentul Hour of Code pe prima pagină a site-ului dvs. și în ziarul școlii. Trimiteți detaliile despre eveniment și imagini cu activitățile studenților.
-  * Pe Facebook sau Twitter, distribuie noutati privind planurile tale, anunta evenimentele si posteaza fotografii din timpul saptamanii 5-11 decembrie. Foloseste hashtag-ul **#HourOfCode**astfel incat Code.org iti poate vedea fotografiile si promova evenimentul.
+- Luați legătura cu mass-media prin e-mail cu doua săptamâni inainte de eveniment.
+- Adresați-vă unui membru al personalului școlii sau unui voluntar pentru a face fotografii pentru distribuire online sau trimiterea catre presă.
+- Scrieți despre evenimentul Hour of Code pe prima pagină a site-ului dvs. și în ziarul școlii. Trimiteți detaliile despre eveniment și imagini cu activitățile studenților.
+- Pe Facebook sau Twitter, distribuie noutati privind planurile tale, anunta evenimentele si posteaza fotografii din timpul saptamanii 5-11 decembrie. Foloseste hashtag-ul **#HourOfCode**astfel incat Code.org iti poate vedea fotografiile si promova evenimentul.
 
 ### Ghid pas cu pas:
 
 **1. Planifică-ti evenimentul**
 
-  * Planifică o întâlnire pentru a începe evenimentul.
-  * Trimite-le[o scrisoare](%= resolve_url('/promote/resources#sample-emails') %)parintilor. Spune-le sa raspandeasca vestea.
-  * Trimite-le [o scrisoare](%= resolve_url('/promote/resources#sample-emails') %) pentru a-i invita pe primarul orasului, congresmanul, guvernatorul sau persoanele influente din business pentru a lua parte la evenimentul tau si pentru a le vorbi elevilor.
-  * Organizează activităţi de grup (cum ar fi o demonstraţie de activitate de programare "offline"), sau prezentați activităţi create şi conduse de elevi.
-  * Arata-le vide-ul[Hour of Code al Code.org](%= resolve_url('/') %)sau unul dintre[acestea](%= resolve_url('/promote/resources#videos') %)pentru a-i inspira.
+- Planifică o întâlnire pentru a începe evenimentul.
+- Trimite-le[o scrisoare](%= resolve_url('/promote/resources#sample-emails') %)parintilor. Spune-le sa raspandeasca vestea.
+- Trimite-le [o scrisoare](%= resolve_url('/promote/resources#sample-emails') %) pentru a-i invita pe primarul orasului, congresmanul, guvernatorul sau persoanele influente din business pentru a lua parte la evenimentul tau si pentru a le vorbi elevilor.
+- Organizează activităţi de grup (cum ar fi o demonstraţie de activitate de programare "offline"), sau prezentați activităţi create şi conduse de elevi.
+- Arata-le vide-ul[Hour of Code al Code.org](%= resolve_url('/') %)sau unul dintre[acestea](%= resolve_url('/promote/resources#videos') %)pentru a-i inspira.
 
 **2. Identifică reporteri locali care se ocupă de evenimente locale despre educaţie.**
 

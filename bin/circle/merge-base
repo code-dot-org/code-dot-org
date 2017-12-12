@@ -2,6 +2,8 @@
 
 require_relative '../../lib/cdo/git_utils'
 
+CIRCLE_CONFIG_FILE = '.circleci/config.yml'.freeze
+
 if ENV['CI']
   system('git config --global user.email "circleci-github@example.com"')
   system('git config --global user.name "CircleCI"')
@@ -13,13 +15,21 @@ end
 
 def circle_yml_changed
   system('git fetch')
-  !`git diff ...#{merge_branch} -- .circleci/config.yml`.empty?
+  !`git diff ...#{merge_branch} -- #{CIRCLE_CONFIG_FILE}`.empty?
 end
 
 sha = GitUtils.git_revision_branch(merge_branch)
 puts "Merging base branch #{merge_branch} #{sha}"
 
-raise ".circleci/circle.yml has changed. Please merge latest staging into your branch and try again." if circle_yml_changed
+# Most changes can be merged from the base branch (usually staging) into the
+# feature branch under test here and the build can proceed as usual.
+# Changes to the CircleCI configuration file are a special case though, because
+# it can control how the Circle container is created, and by the time we run
+# this merge step we're already _in_ the container itself - so the only way
+# to guarantee we're accurately testing the merge result is to have the config
+# change in our feature branch from the moment the build starts.  Therefore we
+# must stop and ask the user to manually merge the base branch into their own.
+raise "#{CIRCLE_CONFIG_FILE} has changed. Please merge the #{merge_branch} branch into your branch and try again." if circle_yml_changed
 
 system("git merge --no-edit #{merge_branch}")
 

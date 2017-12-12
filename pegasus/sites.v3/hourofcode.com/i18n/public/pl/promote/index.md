@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 <%
@@ -15,17 +12,17 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Jak się zaangażować
+# Zaangażuj swoją społeczność do Godziny Kodowania
 
 ## 1. Rozgłaszaj
 
-Tell your friends about the **#HourOfCode**!
+Powiadom znajomych o **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Zaproponuj całej swojej szkole udział w Godzinie Kodowania
 
-[Wyślij tego e-maila](<%= resolve_url('/promote/resources#sample-emails') %>) swojemu dyrektorowi i wezwij każdą klasę w swojej szkole, aby się zarejestrowała.
+[Wyślij tego e-maila](<%= resolve_url('/promote/resources#sample-emails') %>) swojemu dyrektorowi i poproś każdą klasę w swojej szkole, aby się zarejestrowała.
 
 ## 3. Poproś swojego pracodawcę o przyłączenie się
 
@@ -33,7 +30,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 4. Promuj Godzinę Kodowania w swojej społeczności
 
-[Zatrudnij grupę lokalną](<%= resolve_url('/promote/resources#sample-emails') %>) — klub harcerzy lub harcerek, kościół, uniwersytet, grupę weteranów, unię pracy lub nawet kilku znajomych. Nie musisz być w szkole, by nauczyć się nowych umiejętności. Użyj te [plakaty, banery, naklejki, wideo, i wiele więcej](<%= resolve_url('/promote/resources') %>) dla swojego wydarzenia.
+[Zwerbuj grupę lokalną](<%= resolve_url('/promote/resources#sample-emails') %>) — klub harcerzy lub harcerek, kościół, uniwersytet, grupę weteranów, unię pracy lub nawet kilku znajomych. Nie musisz być w szkole, by poznać nowe umiejętności. Użyj te [plakaty, banery, naklejki, wideo, i wiele więcej](<%= resolve_url('/promote/resources') %>) dla swojego wydarzenia.
 
 ## 6. Poproś władze lokalne o udzielenie wsparcia Godzinie Kodowania
 

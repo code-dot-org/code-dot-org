@@ -1,16 +1,15 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_promote) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# How to get involved
+# Get your community involved in the Hour of Code
 
 ## 1. Dalies ar informāciju
 
@@ -18,20 +17,20 @@ Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Lūdz visai skolai piedalīties "Programmēšanas stundā"
+## 2. Palūdz visai skolai piedalīties Programmēšanas stundā
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
+[Nosūti šo e-pastu](%= resolve_url('/promote/resources#sample-emails') %) savam direktoram un izaicini pieteikt katru skolas klasi.
 
-## 3. Lai iesaistītos, jautā savam darba devējam
+## 3. Aicini iesaistīties savam daba devējam
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+[Nosūti šo e-pastu](%= resolve_url('/promote/resources#sample-emails') %) savam vadītājam vai direktoram.
 
-## 4. Promote Hour of Code in your community
+## 4. Popularizē Programmēšanas stundu savā kopienā
 
-[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+[Piesaki vietējo grupu](%= resolve_url('/promote/resources#sample-emails') %) — zēnu/meiteņu klubu, baznīcu, universitāti, pensionāru grupu, arodbiedrību vai par dažus draugus. Tev nav jābūt skolā, lai apgūtu jaunas prasmes. Izmanto šos [plakātus, banerus, uzlīmes, video un citus materiālus](%= resolve_url('/promote/resources') %) savam pasākumam.
 
-## 5. Jautājiet ievēlētajai amatpersonai, lai atbalsta "Programmēšanas stundu"
+## 5. Palūdz vietējo pašvaldību atbalstīt Programmēšanas stundu
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Nosūti šo e-pastu](%= resolve_url('/promote/resources#sample-emails') %) savai pašvaldībai, pilsētas domei vai skolas padomei un uzaicini viņus apmeklēt tavas skolas Programmēšanas stundu. Tādējādi var veidot atbalstu datorzinātnēm savā reģionā arī pēc vienas stundas.
 
 <%= view :signup_button %>

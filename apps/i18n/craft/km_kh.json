@@ -290,5 +290,11 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder"
+  "weatherTypeThunder": "thunder",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool"
 }

@@ -22,8 +22,8 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
-import experiments from '../../util/experiments';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -829,7 +829,6 @@ Craft.reportResult = function (success) {
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
-  const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
   studioApp().report({
     app: 'craft',
@@ -844,9 +843,8 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
-        app: 'craft',
-        skin: Craft.initialConfig.skin.id,
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
@@ -861,7 +859,8 @@ Craft.reportResult = function (success) {
         },
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
-        saveToProjectGallery,
+        saveToProjectGallery: true,
+        disableSaveToGallery: !isSignedIn,
       });
     }
   });

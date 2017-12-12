@@ -3145,7 +3145,7 @@
           drag it back to the toolbox.
       9:
         image: notes/mc_2016_intro_9.jpg
-        text: Etter du har trykket på "Kjør" kan du alltid trykke på "Nullstill"-knappe
+        text: Etter du har trykket på "Kjør" kan du alltid trykke på "Nullstill"-knappen
           for å nullstille spillet og starte på nytt. Nå er det din tur til å lage
           din egen versjon av Minecraft. Kos deg!
     mc_2016_loops:
@@ -3182,31 +3182,31 @@
           around. Then tap the game to use the item in front of you.
       3:
         image: notes/mc_2016_events_3.jpg
-        text: Men hva skjer når du bruker dne? I Minecraft slipper sauer ull når du
+        text: Men hva skjer når du bruker den? I Minecraft slipper sauer ull når du
           klipper dem, kuer løper hvis du tar på dem og creepere eksploderer hvis
           du kommer borti dem. Disse reaksjonene skjer takket være noe som heter hendelser.
           Hendelser forteller programmet ditt at det skal lytte etter eller vente
           på at noe skjer og når det skjer, gjøre en handling.
       4:
         image: notes/mc_2016_events_4.jpg
-        text: So far, you've used one event. Code you put in the "when spawned" slot
-          runs when your creature is created or when the game starts. Over the next
-          few levels you'll have new slots for events such as "when touched" that
-          runs when you touch the creature, or "when used" for when you use the creature.
-          Or, if you want your zombie to disappear when the sun comes up, put that
-          in the "when day" slot
+        text: Fram til nå har du brukt en hendelse. Koden du plasserte under "når
+          satt ut" kjører når figuren din er opprettet eller når spillet starter.
+          I de neste oppgavene vil du ha flere nye steder å plassere kommandoer for
+          hendelser, slik som "når tatt på" som kjører når du tar på figuren. Et annet
+          eksempel er "når brukt" som kjører når du bruker figuren. Hvis du vil at
+          zombien din skal forsvinne når sola går opp, putt den kommandoen under "når
+          dag"
     mc_2016_spawn:
       1:
         image: notes/mc_2016_spawn_1.jpg
-        text: In games, spawn means the same thing as create. In this level, let's
-          make zombies spawn when the sun goes down. To do this, we'll use the "when
-          night" block.
+        text: I spill betyr sett ut det samme som opprett. I denne oppgaven skal du
+          sette ut zombier når sola går ned. For å gjøre dette må du bruke "når natt"-blokka.
       2:
         image: notes/mc_2016_spawn_2.jpg
-        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
-          block under the "when night" block. As soon as they're spawned, each zombie
-          will run the code that you put in their "when spawned" event slot. Have
-          fun spawning zombies!
+        text: Siden vi ønsker at zombiene settes ut om natta skal vi legge til blokka
+          "sett ut zombie" under blokka "når natt". Når de er satt ut vil hver zombie
+          kjøre koden du legger under zombienes "når satt ut"-hendelse. Ha det gøy
+          med å sette ut zombier!
     mc_2016_congrats:
       1:
         image: notes/mc_2016_congrats_1.jpg

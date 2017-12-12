@@ -43,6 +43,8 @@ class Census2017 < Form
 
     result[:pledge_b] = data[:pledge_b]
 
+    result[:version_s] = data[:version]
+
     result
   end
 

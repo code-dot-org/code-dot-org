@@ -1,8 +1,9 @@
-* * *
+---
+title: <%= hoc_s(:title_stats) %>
+layout: wide
+nav: promote_nav
+---
 
-title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
-
-* * *
 
 <a id="blurb"></a>
 
@@ -12,7 +13,7 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 ## Use this short blurb in newsletters
 
-### Bring computer science to your school. Start with an Hour of Code
+### Okulunuzu bilgisayar bilimi ile tanıştırın. Bir Hour of Code (Kodlama Saati) ile Başlayın!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! İyi haber şu ki, biz bu durumu değiştirmek için yola çıktık. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 

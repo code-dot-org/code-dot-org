@@ -1,10 +1,9 @@
 ---
-
 title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
-
 ---
+
 
 <a id="blurb"></a>
 
@@ -14,11 +13,11 @@ nav: promote_nav
 
 ## Gunakan blurb ini di suratkabar
 
-### Bawa ilmu komputer ke dalam sekolahmu. Mulailah dengan Hour of Code
+### Bawa ilmu komputer ke sekolah Anda. Mulailah dengan satu jam kode!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Dengan teknologi yang mengubah setiap industri di planet ini, pengetahuan komputasi telah menjadi bagian dari keterampilan terampil yang menyeluruh. Tapi kurang dari separuh sekolah mengajarkan ilmu komputer! Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. If you heard about the Hour of Code last year, you might know it made history. 100 juta siswa sekarang telah menemukan betapa mudahnya dan menyenangkannya ilmu komputer dapat dilakukan dengan hanya satu Jam Kode .
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+The Hour of Code adalah pengenalan satu jam tentang ilmu komputer, yang dirancang untuk mendemistifikasi kode dan menunjukkan bahwa setiap orang dapat mempelajari dasar-dasarnya. Pelajari lebih lanjut di [ http://HourofCode.com ](http://HourofCode.com), cobalah satu jam sendiri, atau ajak acara Hour of Code untuk mengenalkan orang lain ke dunia komputasi!
 
 <a id="infographics"></a>
 

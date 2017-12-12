@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_release) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 # Exemplo de comunicado de imprensa para representantes políticos
@@ -13,16 +12,10 @@ Para publicação imediata
 Contato: [**INFORMAÇÕES DE CONTATO**]  
   
 
-
-**
-
-<center>
-  O GOVERNADOR/SENADOR/MEMBRO DA CÂMARA/REPRESENTANTE/PREFEITO/ MEMBRO DO CONSELHO [INSERIR NOME][PARTICIPA DA HORA DO CÓDIGO COM ALUNOS DA CIDADE]</strong><br /> A comunidade se une a favor da conscientização sobre a importância da educação em ciência da computação, participando da Semana da Educação em Ciência da Computação
-</center>
-
+<strong><center>GOVERNADOR/SENADOR/MEMBRO DA ASSEMBLEIA/REPRESENTANTE/PREFEITO/MEMBRO DO CONSELHO [INSERIR NOME][PARTICIPOU DA HORA DO CÓDIGO COM ESTUDANTES LOCAIS]</strong>  
+A comunidade se reúne para aumentar a conscientização sobre a importância da educação em ciência da computação participando da Semana da Educação em Ciência da Computação</center>   
   
-  
-</p> 
+
 
 **DATA** - Hoje, [**INSERIR NOME**] reuniu-se com o diretor e o corpo docente da [**INSERIR NOME DA ESCOLA**], líderes empresariais e famílias locais para o [**NOME DO EVENTO**], para participar da Hora do Código, como parte da Semana da Educação em Ciência da Computação . [INSERIR NOME] e os membros da comunidade fizeram parte das 10 milhões de pessoas do mundo todo que participaram do maior evento de aprendizagem da história.
 

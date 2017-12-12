@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### A continuación atópase un exemplo dun artículo de opinión dando o seu apio á Semana da Educación en Informática e os seus obxectivos, que poden ser usados por lexisladores locais, líderes empreariais, etc.

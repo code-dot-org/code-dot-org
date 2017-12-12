@@ -1,4 +1,5 @@
 {
+  "startButton": "Start",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Ҳама",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Grades 2-5",
   "filterGrades68": "Grades 6-8",
   "filterGrades9": "Grades 9+",
-  "filterTeacherExperience": "Educator experience",
-  "filterTeacherExperienceBeginner": "Навкор",
-  "filterTeacherExperienceComfortable": "Comfortable",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Student experience",
   "filterStudentExperienceBeginner": "Навкор",
   "filterStudentExperienceComfortable": "Comfortable",

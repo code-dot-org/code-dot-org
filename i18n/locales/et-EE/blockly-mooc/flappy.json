@@ -98,7 +98,7 @@
   "setSpeed": "määra kiirus",
   "setSpeedTooltip": "Määrab taseme kiiruse",
   "shareFlappyTwitter": "Tutvu Flappy mänguga, mille ma tegin. Ma kirjutasin selle ise @codeorg -is",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "Vaata, millise Flappy mängu ma tegin. (Aitäh {donor}, et toetad @codeorg)",
   "shareGame": "Jaga oma mängu:",
   "soundRandom": "juhuslik",
   "soundBounce": "põrge",

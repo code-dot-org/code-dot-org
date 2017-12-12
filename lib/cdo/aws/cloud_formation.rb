@@ -1,5 +1,6 @@
 require_relative '../../../deployment'
 require 'active_support/core_ext/string/inflections'
+require 'active_support/core_ext/object/blank'
 require 'cdo/rake_utils'
 require 'aws-sdk'
 require 'json'
@@ -33,7 +34,7 @@ module AWS
 
     SSH_KEY_NAME = 'server_access_key'.freeze
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
-    INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
+    INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.large'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
@@ -56,19 +57,21 @@ module AWS
         (ENV['STACK_NAME'] || CDO.stack_name || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
       end
 
-      # CNAME to use for this stack.
-      # Suffix env-named stacks with "_cfn" during migration.
+      # CNAME prefix to use for this stack.
       def cname
-        stack_name == rack_env.to_s ? "#{stack_name}-cfn" : stack_name
+        stack_name
       end
 
-      # Fully qualified domain name
-      def fqdn
-        "#{cname}.#{DOMAIN}".downcase
+      # Fully qualified domain name, with optional pre/postfix.
+      # prod_stack_name is used to control partially-migrated resources in production.
+      def subdomain(prefix = nil, postfix = nil, prod_stack_name: true)
+        name = (rack_env?(:production) && !prod_stack_name) ? nil : cname
+        subdomain = [prefix, name, postfix].compact.join('-')
+        [subdomain.presence, DOMAIN].compact.join('.').downcase
       end
 
-      def studio_fqdn
-        "#{cname}-studio.#{DOMAIN}".downcase
+      def studio_subdomain(prod_stack_name: true)
+        subdomain nil, 'studio', prod_stack_name: prod_stack_name
       end
 
       def adhoc_image_id
@@ -87,8 +90,8 @@ module AWS
         CDO.log.info template if ENV['VERBOSE']
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
-        params = parameters(template)
-        CDO.log.info "Parameters: #{params.join("\n")}" unless params.empty?
+        params = parameters(template).reject {|x| x[:parameter_value].nil?}
+        CDO.log.info "Parameters:\n#{params.map {|p| "#{p[:parameter_key]}: #{p[:parameter_value]}"}.join("\n")}" unless params.empty?
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
@@ -144,19 +147,21 @@ module AWS
         params = YAML.load(template)['Parameters']
         return [] unless params
         params.keys.map do |key|
-          value = CDO[key.underscore]
+          value = CDO[key.underscore] || ENV[key.underscore.upcase]
           if value
             {
               parameter_key: key,
               parameter_value: value
             }
-          else
+          elsif stack_exists?
             {
               parameter_key: key,
               use_previous_value: true
             }
+          else
+            nil
           end
-        end.flatten
+        end.compact
       end
 
       def stack_options(template)
@@ -228,15 +233,17 @@ module AWS
 
       # Only way to determine whether a given stack exists using the Ruby API.
       def stack_exists?
-        !!cfn.describe_stacks(stack_name: stack_name)
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        raise e unless e.message == "Stack with id #{stack_name} does not exist"
-        false
+        @@stack_exists ||= begin
+            !!cfn.describe_stacks(stack_name: stack_name)
+          rescue Aws::CloudFormation::Errors::ValidationError => e
+            raise e unless e.message == "Stack with id #{stack_name} does not exist"
+            false
+          end
       end
 
       def update_certs
         Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.bundle_exec './update_certs', fqdn
+          RakeUtils.bundle_exec './update_certs', subdomain
         end
       end
 
@@ -291,7 +298,6 @@ module AWS
           str = "#{event.timestamp}- #{str}" unless ENV['QUIET']
           CDO.log.info str
           if event.resource_status == 'UPDATE_COMPLETE_CLEANUP_IN_PROGRESS'
-            @@event_timestamp += 600
             throw :success
           end
         end
@@ -315,7 +321,7 @@ module AWS
               print '.' unless ENV['QUIET']
             end
           end
-          tail_events(stack_id, log_resource_filter)
+          tail_events(stack_id, log_resource_filter) rescue nil
           tail_log
         rescue Aws::Waiters::Errors::FailureStateError
           tail_events(stack_id)
@@ -344,8 +350,6 @@ module AWS
           certificate_arn: CERTIFICATE_ARN,
           cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
-          subdomain: fqdn,
-          studio_subdomain: studio_fqdn,
           cname: cname,
           availability_zone: AVAILABILITY_ZONES.first,
           availability_zones: AVAILABILITY_ZONES,
@@ -386,7 +390,7 @@ module AWS
         if str.length > LAMBDA_ZIPFILE_MAX
           raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
         end
-        {'Fn::Sub': erb_eval(str, filename)}.to_json
+        erb_eval(str, filename).to_json
       end
 
       # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.

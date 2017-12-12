@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_op_ed) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Ngaphansi yisampula ye op-ed esekela iViki leMfundiso yeKhompyutha Sayensi kanye nemigomo engasetshenziswa nguMbuso, izishayamthetho zendawo, abaholi bezoshishino etc.
@@ -11,7 +10,7 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
   
 
 
-Iya ku [<%= qazulula_url('code.org/khuthaza') %>](%= resolve_url('https://code.org/promote') %) ukuthola imininingwane yezwe ethize mayelana nekhompyutha sayensi.
+Iya ku [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) ukuthola imininingwane yezwe ethize mayelana nekhompyutha sayensi.
 
 **Isihloko: Ukukhompyutha... Lapho imisebenzi ikhona**
 
@@ -43,6 +42,6 @@ Sidinga ukufaka othisha bekhompyutha sayensi kanye nokukhuthaza ukuthuthukiswa k
 
 Ngokolwazi le-Bureau yaBasebenzi ngamaNani, ngo 2020, kuyobe kunemisebenzi eyisigidi eziyishagalolunye kunkambi yeSTEM. Isigamu semisebenzi-4.6 yezigidi-izoba kwezekhompyutha okanye kwezolwazi lwethekhinoloji. Kanti futhi ikhompyutha sayensi ingulwazi oluyisisekelo ngokuya esikhathini samanje. Ngubani ozokwazi ukugcwalisa lemisebenzi uma izingane zethu zinganikwa ithuba lokuthola ulwazi oludingekayo?
 
-Kulo leliviki, <%= usuku_umkhankaso('olugcwele') %>, kuyiViki leMfundiso yeKhompyutha Sayensi. Ezikoleni ndawo yonke **[ILIZWE]**, abafundi bethu bazibandakanya kuHora loKufingqwa izwe lonke, ukwenza isihloko sekhompyutha sayensi sibonakale ubulula baso kanye nokuqinisa ukulangazelela kwabo ngethemba lokuba bazofunda ukuya phambili. Mina ngiyazibandakanya, kanti nawe ngiyakumema ukuba uzibandakanye. Wonke umuntu kufanele afunde ukufingqwa. Vakashela https://hourofcode.com/<%= @ilizwe %>funda kabanzi ubese uyaqala. Uphinde usekele imizamo yethu yokuletha ikhompyutha sayensi kuzikole eziningi **[IZWE]**.
+Kulo leliviki, <%= campaign_date('full') %>, kuyiViki leMfundiso yeKhompyutha Sayensi. Ezikoleni ndawo yonke **[ILIZWE]**, abafundi bethu bazibandakanya kuHora loKufingqwa izwe lonke, ukwenza isihloko sekhompyutha sayensi sibonakale ubulula baso kanye nokuqinisa ukulangazelela kwabo ngethemba lokuba bazofunda ukuya phambili. Mina ngiyazibandakanya, kanti nawe ngiyakumema ukuba uzibandakanye. Wonke umuntu kufanele afunde ukufingqwa. Vakashela https://hourofcode.com/<%= @ilizwe %>funda kabanzi ubese uyaqala. And support our efforts to bring computer science to more schools in **[STATE]**.
 
 <%= view :signup_button %>

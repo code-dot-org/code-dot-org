@@ -1,8 +1,9 @@
-* * *
+---
+title: <%= hoc_s(:title_stats) %>
+layout: wide
+nav: promote_nav
+---
 
-title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
-
-* * *
 
 <a id="blurb"></a>
 
@@ -12,15 +13,15 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 ## 在新聞稿中使用這則引言
 
-### 把電腦科學帶進您的學校。從Hour of Code開始!
+### 將計算機科學帶到你的學校。從《編程一小時》開始。
 
-隨著科技改變了世界上的各個產業，電腦科學已成為一個全面發展的技能。 但不到50%的學校有電腦科學課程 好消息是我們正在改變此狀況。 If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+科技改變了地球的每一個產業，計算機知識已成為生活必備的技能之一。 但不到 50% 的學校有計算機科學課程！ 好消息是我們正在改變此狀況。 如果你去年聽說過一小時玩程式（Hour of Code）活動，你也許知道它創下了些紀錄。 1 億名學生通過一小時玩程式活動學習計算機科學的入門並體驗到其中的樂趣。
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+一小時玩程式是個 1 小時介紹計算機科學的活動，旨在揭開程式碼的神秘面紗，並說明它是任何人都可以學會的基本知識。 到<http://HourofCode.com>上進一步瞭解，自己體驗一個小時，或是舉辦個一小時玩程式活動，向其他人介紹計算機世界！
 
 <a id="infographics"></a>
 
-## Infographics
+## 訊息圖表
 
 <%= view :stats_carousel %>
 
