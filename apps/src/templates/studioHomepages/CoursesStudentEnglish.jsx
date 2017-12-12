@@ -41,8 +41,6 @@ class CoursesStudentEnglish extends Component {
         </ContentContainer>
 
         <LocalClassActionBlock
-          isRtl={isRtl}
-          responsive={responsive}
           showHeading={true}
         />
       </div>
