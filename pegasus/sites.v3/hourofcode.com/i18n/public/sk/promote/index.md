@@ -12,7 +12,7 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Zapojte vašich známych do projektu Hour of Code
+# Zapojte vašich známych do projektu Hodina Kódu
 
 ## 1. Informujte ostatných
 

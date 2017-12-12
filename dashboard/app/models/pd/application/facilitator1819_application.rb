@@ -2,21 +2,22 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
+#  id                                  :integer          not null, primary key
+#  user_id                             :integer
+#  type                                :string(255)      not null
+#  application_year                    :string(255)      not null
+#  application_type                    :string(255)      not null
+#  regional_partner_id                 :integer
+#  status                              :string(255)
+#  locked_at                           :datetime
+#  notes                               :text(65535)
+#  form_data                           :text(65535)      not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  course                              :string(255)
+#  response_scores                     :text(65535)
+#  application_guid                    :string(255)
+#  decision_notification_email_sent_at :datetime
 #
 # Indexes
 #
@@ -36,6 +37,16 @@ require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 module Pd::Application
   class Facilitator1819Application < ApplicationBase
     include Facilitator1819ApplicationConstants
+
+    def send_decision_notification_email
+      # Accepted, declined, and waitlisted are the only valid "final" states;
+      # all other states shouldn't need emails, and we plan to send "Accepted"
+      # emails manually
+      return unless %w(declined waitlisted).include?(status)
+
+      Pd::Application::Facilitator1819ApplicationMailer.send(status, self).deliver_now
+      update!(decision_notification_email_sent_at: Time.zone.now)
+    end
 
     def set_type_and_year
       self.application_year = YEAR_18_19
@@ -366,6 +377,10 @@ module Pd::Application
       end
     end
 
+    def first_name
+      sanitize_form_data_hash[:first_name]
+    end
+
     def program
       sanitize_form_data_hash[:program]
     end
@@ -423,7 +438,7 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push :Status, :Notes
+        columns.push 'Status', 'Locked', 'Notes', 'Regional Partner'
         csv << columns
       end
     end
@@ -433,7 +448,7 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, notes, regional_partner_name
+        row.push status, locked?, notes, regional_partner_name
         csv << row
       end
     end
@@ -442,6 +457,11 @@ module Pd::Application
     # e.g. 7 -> 7am, 15 -> 3pm
     private_class_method def self.format_hour(hour)
       (Date.today + hour.hours).strftime("%l%P").strip
+    end
+
+    # @override
+    def check_idempotency
+      Pd::Application::Facilitator1819Application.find_by(user: user)
     end
   end
 end

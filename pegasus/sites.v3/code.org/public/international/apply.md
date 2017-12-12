@@ -6,10 +6,26 @@ theme: responsive
 
 # International Partner Program
 
-## Partnership Terms
+Take the lead to expand computer science education in your country! As a Code.org International Partner, your organization can receive support from us to become a prominent computer science hub for your country. Build upon our experiences and best practices to build a strong community of local champions for computer science education. Connect with computer science champions in other countries. Let’s grow the global momentum behind computer science!  
 
-Read the [International Partnership Terms](https://docs.google.com/document/d/1XhUCOA0IXEnSmhL0CyNinVaSPAZqCWrmt4N934Sgcpg/edit?usp=sharing) before you submit your application. 
+## What you'll get from Code.org
 
+* Official Code.org International Partner logo
+* A directory of International Partners featuring your organization's logo
+* Access to Code.org resources and best practices
+* An online community to share ideas with other International Partners worldwide
+* Latest updates on news, special events, program updates, useful resources, and more
+
+## What Code.org would expect from you
+
+* Promote computer science education in your country by hosting 3 relevant events each year
+* Partner with local organizations (government agencies, non-governmental organizations, corporations, etc.) to expand awareness about the importance of computer science education
+* Participate actively in Code.org's International Partner community and forum
+* Act as main point of contact for individuals/organizations in your country that are interested in exploring computer science education options 
+* Coordinate Hour of Code campaign efforts in your country/region
+* [Optional] If there is a main language that is not English in your country, provide a Lead Translator who can spend 8 to 10 hours per week on localization project management   
+  
+  
 ***
 
 ## Application Process

@@ -2,7 +2,7 @@
 
 require_relative '../../lib/cdo/git_utils'
 
-CIRCLE_CONFIG_FILE = '.circleci/config.yml'
+CIRCLE_CONFIG_FILE = '.circleci/config.yml'.freeze
 
 if ENV['CI']
   system('git config --global user.email "circleci-github@example.com"')

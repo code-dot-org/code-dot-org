@@ -20,7 +20,7 @@ var DialogButtons = React.createClass({
   },
 
   render: function () {
-    var okButton, cancelButton, confirmButton, previousButton, hintButton, againButton, nextButton;
+    var okButton, cancelButton, confirmButton, hintButton, againButton, nextButton;
 
     var style = {
       confirmButton: {
@@ -59,14 +59,6 @@ var DialogButtons = React.createClass({
       confirmButton = (
         <LegacyButton type="primary" id="confirm-button" className="launch" style={style.confirmButton}>
           {this.props.confirmText}
-        </LegacyButton>
-      );
-    }
-
-    if (this.props.previousLevel) {
-      previousButton = (
-        <LegacyButton type="primary" id="back-button" className="launch">
-          {msg.backToPreviousLevel()}
         </LegacyButton>
       );
     }
@@ -131,7 +123,6 @@ var DialogButtons = React.createClass({
         {okButton}
         {cancelButton}
         {confirmButton}
-        {previousButton}
         {hintButton}
         {againButton}
         {nextButton}

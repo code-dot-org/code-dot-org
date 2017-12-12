@@ -156,7 +156,7 @@ social:
             </div>
             <div class="col-sm-3 col span_3">
             <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                  <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.tremend.com/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-Tremend1.png"></a>
+                  <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://hyc.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Logo_HYC_patrat.jpg"></a>
                </div>
             </div>
       </div>
@@ -178,7 +178,7 @@ social:
             </div>
             <div class="col-sm-3 col span_3">
                <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                  <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.girlswhocode.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/GWCR_logo_300-160x160.png"></a>
+                  <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.tremend.com/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-Tremend1.png"></a>
                </div>
             </div>
       </div>

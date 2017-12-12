@@ -7,15 +7,15 @@ nav: how_to_nav
 
 # Comment enseigner une Heure de Code en activités para-scolaires ou en clubs
 
-Joignez le mouvement et introduisez un groupe d'étudiants à leur première heure d'informatique avec ces étapes. L'Heure de Code est facile à exécuter - même pour les débutants! Si vous voulez de l'aide supplémentaire, vous pouvez trouver un [bénévole local](<%= resolve_url('https://code.org/volunteer/local') %>) pour vous aider à exécuter une Heure de Code dans votre classe.
+Rejoignez le mouvement et initiez un groupe d'élèves à leur première heure d'informatique grâce à ces étapes. L'Heure de Code est facile à exécuter - même pour les débutants! Si vous voulez de l'aide supplémentaire, vous pouvez trouver un [bénévole local](<%= resolve_url('https://code.org/volunteer/local') %>) pour vous aider à exécuter une Heure de Code dans votre classe.
 
 ## 1. Regarder cette vidéo de formation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Choisir un tutoriel
 
-Nous fournissons toute une série de [tutoriels amusants d'une heur de longuer](<%= resolve_url('/learn') %>) pour les participants de tous les âges, créés par plusieurs partenaires. [N'hésitez pas à les essayer !](<%= resolve_url('/learn') %>)
+Nous fournissons toute une série de [tutoriels amusants d'une heure de long](<%= resolve_url('/learn') %>) pour les participants de tous les âges, créés par de nombreux partenaires. [N'hésitez pas à les essayer !](<%= resolve_url('/learn') %>)
 
-**Touts les tutoriels Heur de Code** demandent un minimum de temps de préparation, et sont autoguidés - permettant aux enfants de travailler à leur propre vitesse et niveau de connaissance.
+**Tous les tutoriels Heure de Code** demandent un minimum de temps de préparation, et sont autoguidés - ce qui permet aux enfants de travailler à leur propre vitesse et niveau de compétences.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 

@@ -47,6 +47,10 @@ Dashboard::Application.routes.draw do
   get 'maker/setup', to: 'maker#setup'
   get 'maker/discountcode', to: 'maker#discountcode'
   post 'maker/apply', to: 'maker#apply'
+  post 'maker/schoolchoice', to: 'maker#schoolchoice'
+  post 'maker/complete', to: 'maker#complete'
+  get 'maker/application_status', to: 'maker#application_status'
+  post 'maker/override', to: 'maker#override'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -393,9 +397,13 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      get :regional_partner_workshops, to: 'regional_partner_workshops#index'
+      get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
+        post :teacher, to: 'teacher_applications#create'
+        post :principal_approval, to: 'principal_approval_applications#create'
       end
 
       resources :applications, controller: 'applications', only: [:index, :show, :update] do
@@ -425,6 +433,8 @@ Dashboard::Application.routes.draw do
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
+      get 'teacher', to: 'teacher_application#new'
+      get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
     end
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
@@ -516,6 +526,9 @@ Dashboard::Application.routes.draw do
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
+      post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
+      post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
@@ -538,7 +551,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
   # Routes used by census
-  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#new_submission', defaults: {format: 'json'}
+  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.

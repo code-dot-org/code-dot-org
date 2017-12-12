@@ -58,6 +58,7 @@ video_player: true
 .inspire-videos{style: "clear: both;"}
   %h2.header= I18n.t(:watch_inspirational_videos)
   - videos = []
+  - videos << { id: 'steph_curry',  code: 'NYzN0a1U8mI', text: I18n.t(:video_title_steph_curry),  duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-steph-curry.mp4"}
   - videos << { id: 'draymond_green',  code: 'uJZyqeiAtlA', text: I18n.t(:video_title_draymond_green),  duration: I18n.t(:video_1min), download: "//videos.code.org/social/athlete-draymond-green.mp4"}
   - videos << { id: 'russell_okung',   code: '-aGEKVvoyLI', text: I18n.t(:video_title_russell_okung),   duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-russell-okung.mp4"}
   - videos << { id: 'real_madrid',     code: 'EmJQKAR-78g', text: I18n.t(:video_title_real_madrid),     duration: I18n.t(:video_1min)}

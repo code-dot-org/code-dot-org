@@ -5,7 +5,6 @@
 #  id                                  :integer          not null, primary key
 #  user_id                             :integer          not null
 #  unit_6_intention                    :integer
-#  has_confirmed_school                :boolean          default(FALSE), not null
 #  full_discount                       :boolean
 #  admin_set_status                    :boolean          default(FALSE), not null
 #  signature                           :string(255)
@@ -13,11 +12,13 @@
 #  circuit_playground_discount_code_id :integer
 #  created_at                          :datetime         not null
 #  updated_at                          :datetime         not null
+#  school_id                           :string(255)
 #
 # Indexes
 #
-#  index_circuit_playground_applications_on_code_id           (circuit_playground_discount_code_id)
-#  index_circuit_playground_discount_applications_on_user_id  (user_id) UNIQUE
+#  index_circuit_playground_applications_on_code_id             (circuit_playground_discount_code_id)
+#  index_circuit_playground_discount_applications_on_school_id  (school_id)
+#  index_circuit_playground_discount_applications_on_user_id    (user_id) UNIQUE
 #
 
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
@@ -34,6 +35,13 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
 
   def eligible_unit_6_intention?
     yes1718? || yes1819?
+  end
+
+  # We will set the application's school_id when the user confirms their school. This means
+  # that a user's school and user's application school can get out of sync, but it's important
+  # that we track the school that was associated with the application
+  def has_confirmed_school?
+    !school_id.nil?
   end
 
   # Given a studio_person_id, finds an existing application (if one exists) for any user
@@ -67,15 +75,22 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   def self.application_status(user)
     application = CircuitPlaygroundDiscountApplication.find_by_user_id(user.id)
 
+    # If our application has a confirmed school id, use that. Otherwise, see if
+    # we have a school id associated with the user
+    school_id = application.try(:school_id) || user.try(:school_info).try(:school_id)
+
     status = {
       # This will be a number from 1-5 (representing which radio button) was selected,
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
-      has_confirmed_school: application.try(:has_confirmed_school) || false,
+      has_confirmed_school: application.try(:has_confirmed_school?) || false,
+      school_id: school_id,
+      school_name: school_id ? School.find(school_id).name : nil,
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
-      discount_code: application.try(:circuit_playground_discount_code),
+      discount_code: application.try(:circuit_playground_discount_code).try(:code),
+      admin_set_status: application.try(:admin_set_status) || false
     }
 
     if application
@@ -88,5 +103,38 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
         is_progress_eligible: student_progress_eligible?(user)
       )
     end
+  end
+
+  # Provides admin with information about the application status of a user's
+  # application, whether or not the user has started the application process
+  def self.admin_application_status(user)
+    application = CircuitPlaygroundDiscountApplication.find_by_user_id(user.id)
+
+    # school currently assigned to user
+    user_school = user.try(:school_info).try(:school)
+    application_school = School.find(application.school_id) if application.try(:school_id)
+
+    # School assigned to user when they confirmed school during application. Will
+    # usually be nil (if user never confirmed), or the same as user_school. The
+    # exception being if the user changed schools since confirming.
+
+    {
+      is_pd_eligible: studio_person_pd_eligible?(user),
+      is_progress_eligible: student_progress_eligible?(user),
+      user_school: {
+        id: user_school.try(:id),
+        name: user_school.try(:name),
+        high_needs: user_school.try(:high_needs?),
+      },
+      application_school: {
+        id: application_school.try(:id),
+        name: application_school.try(:name),
+        high_needs: application_school.try(:high_needs?),
+      },
+      unit_6_intention: application.try(:unit_6_intention),
+      full_discount: application.try(:full_discount),
+      admin_set_status: application.try(:admin_set_status),
+      discount_code: application.try(:circuit_playground_discount_code).try(:code)
+    }
   end
 end

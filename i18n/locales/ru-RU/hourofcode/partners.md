@@ -113,7 +113,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Основные Партнеры и Корпоративные Спонсоры
+# Главные Партнеры и Корпоративные Спонсоры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 

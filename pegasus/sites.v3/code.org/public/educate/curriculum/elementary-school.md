@@ -148,7 +148,7 @@ We are working on translating Courses A-F and the Express Course to languages be
 
 If you don't have computers in your classroom, these unplugged lessons can either be used alone or with other computer science lessons on related concepts.
 
-<a href="/curriculum/unplugged"><button>View unplugged lessons</button></a>
+<a href="https://code.org/curriculum/unplugged"><button>View unplugged lessons</button></a>
 
 # Examples of student creations
 
@@ -184,12 +184,12 @@ Recommended courses from 3rd parties
 
 [/solid-block-header]
 
-[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/3rdparty -->
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
-| [Code Red Education](www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
+| [Code Red Education](http://www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
