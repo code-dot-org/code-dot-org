@@ -36,6 +36,7 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './templates/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
+import getAchievements from './achievements';
 import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -1446,20 +1447,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       store.dispatch(setFeedbackData({
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumBlocksUsed(),
-        achievements: [
-          {
-            isAchieved: true,
-            message: 'Placeholder achievement!',
-          },
-          {
-            isAchieved: true,
-            message: 'Another achievement!',
-          },
-          {
-            isAchieved: false,
-            message: 'Some lame achievement :(',
-          },
-        ],
+        achievements: getAchievements(store.getState()),
         displayFunometer: response && response.puzzle_ratings_enabled,
         studentCode: this.feedback_.getGeneratedCodeProperties(this.config.appStrings),
         canShare: !this.disableSocialShare && !options.disableSocialShare,
@@ -2938,6 +2926,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     showProjectTemplateWorkspaceIcon: !!config.level.projectTemplateLevelName &&
       !config.level.isK1 &&
       !config.readonlyWorkspace,
+    serverLevelId: config.serverLevelId,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));

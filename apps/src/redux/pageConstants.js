@@ -60,6 +60,7 @@ var ALLOWED_KEYS = new Set([
   'appType',
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
+  'serverLevelId',
 ]);
 
 const initialState = {

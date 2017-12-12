@@ -139,7 +139,8 @@ export class UnconnectedFinishDialog extends Component {
     blockLimit: PropTypes.number,
     achievements: PropTypes.arrayOf(PropTypes.shape({
       isAchieved: PropTypes.bool,
-      iconUrl: PropTypes.string,
+      successIconUrl: PropTypes.string,
+      failureIconUrl: PropTypes.string,
       message: PropTypes.string,
     })),
     showFunometer: PropTypes.bool,
@@ -215,7 +216,12 @@ export class UnconnectedFinishDialog extends Component {
               ...(achievement.isAchieved ? {} : {color: color.lighter_gray}),
             }}
           >
-            <img href={achievement.iconUrl} style={styles.achievementIcon} />
+            <img
+              src={achievement.isAchieved ?
+                achievement.successIconUrl :
+                achievement.failureIconUrl}
+              style={styles.achievementIcon}
+            />
             {achievement.message}
           </div>
         ))}
