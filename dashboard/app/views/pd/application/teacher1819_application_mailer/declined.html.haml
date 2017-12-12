@@ -1,0 +1,45 @@
+%p
+  Hi
+  = @application.first_name + ","
+
+%p
+  Thank you for applying to Code.org's Professional Learning Program for
+  = @application.course + "."
+  We appreciated the opportunity to read your application and learn more about
+  your interest in teaching computer science.
+
+- if @application.regional_partner_id
+  %p
+    We're unfortunately unable to offer you a space this year. Due to record
+    interest in this year's program and limited space, we don't have the capacity
+    to accept all applicants.
+- else
+  %p
+    Our current program model prioritizes candidates in areas where Code.org has
+    established Regional Partners who provide continued learning support
+    throughout the year.
+  %p
+    Unfortunately, without a local Partner to facilitate your professional
+    development, we cannot offer you a space in the full Professional Learning
+    Program experience this year.
+
+%p
+  Please remember that all of our curricula are free online, so you can teach
+  our courses even if you are not part of the Professional Learning Program. Be
+  sure to check out our
+  = link_to('curriculum and resources', 'http://code.org/educate')
+  , and
+  = link_to('join our forum', 'https://forum.code.org/')
+  to connect with other computer science teachers across the country for support
+  and advice.
+
+%p
+  We wish you the best in the upcoming year, and sincerely thank you for your
+  commitment to making computer science available for all students.
+
+%p
+  Sarah Fairweather
+  %br
+  Education Team Program Manager
+  %br
+  Code.org

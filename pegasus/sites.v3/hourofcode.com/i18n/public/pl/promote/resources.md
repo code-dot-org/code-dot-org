@@ -58,23 +58,23 @@ nav: promote_nav
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### Zaproś szkołę do której chodzisz, pracodawcę lub znajomych, aby również się zarejestrowali:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code
+**Temat:** Dołącz do nas i ponad 100 milionów uczniów na Godzinę Kodowania.
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Komputery są wszędzie, zmieniając każdą branżę na świecie. Jednakże mniej niż połowa szkół uczy informatyki. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszeliście o Godzinie Kodowania, to być może wiecie, że zapisała ona się już w historii. Ponad 100 milionów uczniów wzięło udział w Godzinie Kodowania!
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy sklep Apple na świecie gościł już Hour of Code i jej liderów. Prezydent Obama i kanadyjski Premier Justin Trudeau napisali pierwsze linie kodu w ramach tej kampanii.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+W tym roku, zróbmy to wydarzenie jeszcze większym. Proszę, byś przyłączył się do Godziny Kodowania 2017. Proszę, weźcie udział w Godzinie Kodowania podczas Tygodnia Edukacji Informatycznej, < % = campaign_date('full') %>.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Opowiedz o nas. Zorganizuj wydarzenie. Poproś lokalną szkołę, by się zarejestrowała lub sam spróbuj Godziny Kodowania - każdy może odnieść korzyści z nauki od podstaw.
 
-Get started at http://hourofcode.com/<%= @country %>
+Zacznij na http://hourofcode.com/<%= @country %>
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### Wolontariat w szkole:
 
 **Subject line:** Can we help you host and Hour of Code?
 
@@ -84,9 +84,9 @@ Between Dec. 4-10, ten percent of students around the world will celebrate Compu
 
 The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+Komputery są wszędzie, zmieniając każdą branżę na świecie. Jednakże mniej niż połowa szkół uczy informatyki. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
 
-Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Ponad 100 partnerskich firm wsparło tę inicjatywę. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
 
@@ -102,7 +102,7 @@ Thanks!
 
 Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 

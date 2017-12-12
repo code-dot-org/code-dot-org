@@ -3,6 +3,7 @@ import { AllPartnersLabel } from './constants';
 const SET_REGIONAL_PARTNER_NAME = 'application_dashboard/SET_REGIONAL_PARTNER_NAME';
 const SET_REGIONAL_PARTNERS = 'application_dashboard/SET_REGIONAL_PARTNERS';
 const SET_WORKSHOP_ADMIN_PERMISSION = 'application_dashboard/SET_WORKSHOP_ADMIN_PERMISSION';
+const SET_LOCK_APPLICATION_PERMISSION = 'application_dashboard/SET_LOCK_APPLICATION_PERMISSION';
 
 const initialState = {
   regionalPartnerName: AllPartnersLabel,
@@ -33,6 +34,15 @@ export default function reducer(state = initialState, action) {
         }
       };
 
+    case SET_LOCK_APPLICATION_PERMISSION:
+      return {
+        ...state,
+        permissions: {
+          ...state.permissions,
+          lockApplication: action.enabled
+        }
+      };
+
     default:
       return state;
   }
@@ -50,5 +60,10 @@ export const setRegionalPartners = (partners) => ({
 
 export const setWorkshopAdminPermission = (enabled) => ({
   type: SET_WORKSHOP_ADMIN_PERMISSION,
+  enabled
+});
+
+export const setLockApplicationPermission = (enabled) => ({
+  type: SET_LOCK_APPLICATION_PERMISSION,
   enabled
 });
