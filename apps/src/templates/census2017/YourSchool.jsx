@@ -90,7 +90,6 @@ export default class YourSchool extends Component {
             buttonLink={this.props.alertUrl}
             dismissible={false}
             newWindow={true}
-            isRtl={false}
             width="100%"
           />
         )}

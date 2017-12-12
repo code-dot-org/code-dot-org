@@ -37,6 +37,26 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
 
+    def send_decision_notification_email
+      # We only want to email unmatched and G3-matched teachers. All teachers
+      # matched with G1 or G2 partners will be emailed by their partners.
+      return if regional_partner && regional_partner.group != 3
+
+      # Accepted, declined, and waitlisted are the only valid "final" states;
+      # all other states shouldn't need emails
+      return unless %w(accepted declined waitlisted).include?(status)
+
+      # TODO: elijah - enable acceptance emails
+      # The template for the acceptance email is unfinished, and will need the
+      # workshop assignment work to be done before being unblocked (since the
+      # content of the email not only depends on which kind of workshop they end
+      # up with, but also references the specific workshop dates)
+      return if status == "accepted"
+
+      Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
+      update!(decision_notification_email_sent_at: Time.zone.now)
+    end
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = TEACHER_APPLICATION
@@ -60,7 +80,7 @@ module Pd::Application
       self.application_guid = SecureRandom.uuid
     end
 
-    before_save :save_partner, if: -> {form_data_changed?}
+    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
@@ -430,6 +450,63 @@ module Pd::Application
 
     def total_score
       response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+    end
+
+    # Called once after the application is submitted, and the principal approval is done
+    # Automatically scores the application based on given responses for this and the
+    # principal approval application. It is idempotent, and will not override existing
+    # scores on this application
+    def auto_score!
+      responses = sanitize_form_data_hash
+
+      scores = {
+        regional_partner_name: regional_partner ? YES : NO,
+        committed: responses[:committed] == YES ? YES : NO,
+        able_to_attend_single: yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
+      }
+
+      if responses[:principal_approval] == YES
+        scores.merge!(
+          {
+            principal_approval: YES,
+            schedule_confirmed: yes_no_response_to_yes_no_score(responses[:schedule_confirmed]),
+            diversity_recruitment: yes_no_response_to_yes_no_score(responses[:diversity_recruitment]),
+            free_lunch_percent: responses[:free_lunch_percent].to_f >= 50 ? 5 : 0,
+            underrepresented_minority_percent:  responses[:underrepresented_minority_percent].to_f >= 50 ? 5 : 0,
+            wont_replace_existing_course: responses[:wont_replace_existing_course].try(:start_with?, NO) ? 5 : nil,
+          }
+        )
+      elsif responses[:principal_approval] == NO
+        scores[:principal_approval] = NO
+      end
+
+      if course == 'csp'
+        scores[:csp_which_grades] = responses[:csp_which_grades].any? ? YES : NO
+        scores[:csp_course_hours_per_year] = responses[:csp_course_hours_per_year] == COMMON_OPTIONS[:course_hours_per_year].first ? YES : NO
+        scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
+        scores[:csp_ap_exam] = responses[:csp_ap_exam] != Pd::Application::Teacher1819Application.options[:csp_ap_exam].last ? YES : NO
+        scores[:taught_in_past] = responses[:taught_in_past].none? {|x| x.include? 'AP'} ? 2 : 0
+      elsif course == 'csd'
+        scores[:csd_which_grades] = (responses[:csd_which_grades].map(&:to_i) & (6..10).to_a).any? ? YES : NO
+        scores[:csd_course_hours_per_year] = responses[:csd_course_hours_per_year] != COMMON_OPTIONS[:course_hours_per_year].last ? YES : NO
+        scores[:previous_yearlong_cdo_pd] = (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
+        scores[:taught_in_past] = responses[:taught_in_past].include?(Pd::Application::Teacher1819Application.options[:taught_in_past].last) ? 2 : 0
+      end
+
+      # Update the hash, but don't override existing scores
+      update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
+    end
+
+    protected
+
+    def yes_no_response_to_yes_no_score(response)
+      if response == YES
+        YES
+      elsif response == NO
+        NO
+      else
+        nil
+      end
     end
   end
 end

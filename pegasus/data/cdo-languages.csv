@@ -3,7 +3,7 @@ ar,ar,ar,ar-SA,العربية,Arabic,TRUE,TRUE,ar,Arabic,FALSE,TRUE,TRUE,TRUE,TR
 az,az,az,az-AZ,Azərbaycan dili,Azerbaijani,TRUE,TRUE,az,Azerbaijani,FALSE,FALSE,FALSE,FALSE,TRUE
 bg,bg,bg,bg-BG,български,Bulgarian,TRUE,TRUE,bg,Bulgarian,TRUE,TRUE,TRUE,TRUE,FALSE
 bn,bn,bn,bn-BD,বাংলা,Bengali,FALSE,FALSE,bn,Bengali,FALSE,FALSE,FALSE,FALSE,FALSE
-bs,bs,bs,bs-BA,Bosanski,Bosnian,TRUE,FALSE,bs,Bosnian,FALSE,TRUE,FALSE,FALSE,FALSE
+bs,bs,bs,bs-BA,Bosanski,Bosnian,TRUE,TRUE,bs,Bosnian,FALSE,TRUE,FALSE,FALSE,FALSE
 ca,ca,ca,ca-ES,Català,Catalan,TRUE,TRUE,ca,Catalan,FALSE,TRUE,FALSE,TRUE,FALSE
 co,co,co,co-CO,Corsu,Corsican,FALSE,FALSE,co,Corsican,TRUE,TRUE,FALSE,TRUE,FALSE
 cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech,FALSE,TRUE,FALSE,TRUE,FALSE
@@ -24,21 +24,21 @@ fr,fr,fr,fr-FR,Français,French,TRUE,TRUE,fr,French,TRUE,FALSE,FALSE,FALSE,FALSE
 ga,ga,ga,ga-IE,Gaeilge,Irish,TRUE,FALSE,ga-IE,Irish,TRUE,TRUE,FALSE,TRUE,TRUE
 gl,gl,gl,gl-ES,Galego,Galician,TRUE,FALSE,gl,Galician,FALSE,FALSE,FALSE,FALSE,FALSE
 haw,ha,haw,haw-HI,ʻŌlelo Hawaiʻi,Hawaiian,FALSE,FALSE,haw,Hawaiian,FALSE,TRUE,FALSE,TRUE,FALSE
-he,he,he,he-IL,עברית,Hebrew,TRUE,FALSE,he,Hebrew,FALSE,FALSE,FALSE,FALSE,FALSE
+he,he,he,he-IL,עברית,Hebrew,TRUE,TRUE,he,Hebrew,FALSE,FALSE,FALSE,FALSE,FALSE
 hi,hi,hi,hi-IN,हिन्दी,Hindi,FALSE,TRUE,hi,Hindi,FALSE,FALSE,FALSE,TRUE,FALSE
 hr,hr,hr,hr-HR,Hrvatski,Croatian,TRUE,TRUE,hr,Croatian,FALSE,TRUE,TRUE,TRUE,FALSE
 hu,hu,hu,hu-HU,Magyar,Hungarian,TRUE,TRUE,hu,Hungarian,TRUE,TRUE,FALSE,TRUE,FALSE
 hy,hy,hy,hy-AM,Հայերեն,Armenian,TRUE,FALSE,hy-AM,Armenian,FALSE,FALSE,FALSE,TRUE,FALSE
 id,id,id,id-ID,Bahasa Indonesia,Indonesian,TRUE,TRUE,id,Indonesian,TRUE,TRUE,FALSE,TRUE,TRUE
-is,is,is,is-IS,Íslenska,Icelandic,TRUE,FALSE,is,Icelandic,TRUE,TRUE,TRUE,TRUE,TRUE
+is,is,is,is-IS,Íslenska,Icelandic,TRUE,TRUE,is,Icelandic,TRUE,TRUE,TRUE,TRUE,TRUE
 it,it,it,it-IT,Italiano,Italian,TRUE,TRUE,it,Italian,FALSE,TRUE,TRUE,TRUE,FALSE
 ja,ja,ja,ja-JP,日本語,Japanese,TRUE,TRUE,ja,Japanese,TRUE,TRUE,TRUE,TRUE,FALSE
-ka,ka,ka,ka-GE,ქართული,Georgian,TRUE,FALSE,ka,Georgian,TRUE,TRUE,FALSE,TRUE,TRUE
-kk,kk,kk,kk-KZ,Қазақша,Kazakh,TRUE,FALSE,kk,Kazakh,FALSE,FALSE,FALSE,FALSE,TRUE
-km,km,km,km-KH,ភាសាខ្មែរ,Khmer,FALSE,FALSE,km,Khmer,TRUE,TRUE,FALSE,TRUE,FALSE
+ka,ka,ka,ka-GE,ქართული,Georgian,TRUE,TRUE,ka,Georgian,TRUE,TRUE,FALSE,TRUE,TRUE
+kk,kk,kk,kk-KZ,Қазақша,Kazakh,TRUE,TRUE,kk,Kazakh,FALSE,FALSE,FALSE,FALSE,TRUE
+km,km,km,km-KH,ភាសាខ្មែរ,Khmer,TRUE,TRUE,km,Khmer,TRUE,TRUE,FALSE,TRUE,FALSE
 ko,ko,ko,ko-KR,한국어,Korean,TRUE,TRUE,ko,Korean,FALSE,FALSE,TRUE,FALSE,TRUE
 ku,ku,ku,ku-IQ,Kurdí,Kurdish,FALSE,FALSE,ku,Kurdish,FALSE,TRUE,FALSE,TRUE,FALSE
-ky,ky,ky,ky-KG,Кыргызча,Kyrgyz,FALSE,FALSE,ky,Kyrgyz,FALSE,FALSE,FALSE,FALSE,FALSE
+ky,ky,ky,ky-KG,Кыргызча,Kyrgyz,FALSE,TRUE,ky,Kyrgyz,FALSE,FALSE,FALSE,FALSE,FALSE
 lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian,FALSE,FALSE,FALSE,FALSE,TRUE
 lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian,FALSE,FALSE,FALSE,FALSE,FALSE
 mi,mi,mi,mi-NZ,Māori (NZ),Maori,TRUE,TRUE,mi,Maori,FALSE,FALSE,FALSE,FALSE,TRUE
@@ -48,7 +48,7 @@ ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay,FALSE,FALSE,FALSE,F
 mt,mt,mt,mt-MT,Malti,Maltese,FALSE,FALSE,mt,Maltese,FALSE,FALSE,FALSE,FALSE,FALSE
 ne,ne,ne,ne-NP,नेपाली,Nepali,FALSE,TRUE,ne-NP,Nepali,TRUE,TRUE,FALSE,FALSE,FALSE
 nl,nl,nl,nl-NL,Nederlands,Dutch,TRUE,TRUE,nl,Dutch,TRUE,TRUE,FALSE,TRUE,TRUE
-nn,nn,nn,nn-NO,Norsk (Nynorsk),Norwegian (Nynorsk),TRUE,FALSE,nn-NO,Norwegian Nynorsk,TRUE,TRUE,TRUE,TRUE,FALSE
+nn,nn,nn,nn-NO,Norsk (Nynorsk),Norwegian (Nynorsk),TRUE,TRUE,nn-NO,Norwegian Nynorsk,TRUE,TRUE,TRUE,TRUE,FALSE
 no,no,no,no-NO,Norsk (Bokmål),Norwegian (Bokmål),TRUE,TRUE,no,Norwegian,TRUE,TRUE,TRUE,TRUE,FALSE
 pl,pl,pl,pl-PL,Polski,Polish,TRUE,TRUE,pl,Polish,FALSE,FALSE,TRUE,FALSE,TRUE
 ps,ps,ps,ps-AF,پښتو,Pashto,FALSE,FALSE,ps,Pashto,TRUE,TRUE,FALSE,TRUE,FALSE
@@ -58,7 +58,7 @@ ro,ro,ro,ro-RO,Română,Romanian,TRUE,TRUE,ro,Romanian,TRUE,TRUE,FALSE,TRUE,FALS
 ru,ru,ru,ru-RU,Pусский,Russian,TRUE,TRUE,ru,Russian,FALSE,FALSE,TRUE,FALSE,TRUE
 se,se,se,se-FI,Davvisámegiella,Northern Sami,FALSE,FALSE,se,Northern Sami,FALSE,FALSE,FALSE,FALSE,FALSE
 si,si,si,si-LK,සිංහල,Sinhalese,TRUE,TRUE,si-LK,Sinhala,FALSE,FALSE,FALSE,FALSE,FALSE
-sk,sk,sk,sk-SK,Slovenčina,Slovak,FALSE,FALSE,sk,Slovak,FALSE,TRUE,FALSE,FALSE,TRUE
+sk,sk,sk,sk-SK,Slovenčina,Slovak,FALSE,TRUE,sk,Slovak,FALSE,TRUE,FALSE,FALSE,TRUE
 sl,sl,sl,sl-SI,Slovenščina,Slovenian,TRUE,TRUE,sl,Slovenian,FALSE,TRUE,FALSE,FALSE,FALSE
 sq,sq,sq,sq-AL,Shqip,Albanian,TRUE,TRUE,sq,Albanian,FALSE,TRUE,FALSE,TRUE,TRUE
 sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic),TRUE,TRUE,FALSE,TRUE,TRUE

@@ -35,10 +35,18 @@
   twentyhours_text: Lõpetasid oma esimese KoodiTunni? Õpi rohkem informaatika ja programmeerimise
     mõistete kohta selle järgneva kursuse abil.
   og_title: Iga laps väärib võimalust
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Igal õpilasel igas koolis peaks olema võimalus õppida arvutiteadust.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Koodi Tund on siin
   csedweek_og_description: Koodi Tund on globaalne liikumine mis ühendab kümneid miljoneid
     õpilasi igas vanuses, 180+ riigis ning üle 45 keeles.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Liitu <a href="http://hourofcode.com">KoodiTunniga</a><br/>8-14
     detsembril, 2014<br/>
   hoc2014_students: "Õpilased"
@@ -88,12 +96,12 @@
   congratulations_on_completing_course2: "Õnnitleme Kursus 2 läbimise puhul"
   congratulations_on_completing_course3: "Õnnitleme Kursus 3 läbimise puhul"
   congratulations_on_completing_course4: "Õnnitleme Kursus 4 läbimise puhul"
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: "Õnnitleme Kursus A läbimise puhul"
+  congratulations_on_completing_courseb: "Õnnitleme Kursus B läbimise puhul"
+  congratulations_on_completing_coursec: "Õnnitleme Kursus C läbimise puhul"
+  congratulations_on_completing_coursed: "Õnnitleme Kursus D läbimise puhul"
+  congratulations_on_completing_coursee: "Õnnitleme Kursus E läbimise puhul"
+  congratulations_on_completing_coursef: "Õnnitleme Kursus F läbimise puhul"
   congratulations_on_completing_accelerated: "Õnnitleme kiirkursuse läbimise puhul"
   congrats_next_tutorials_title: Proovi järgnevaid õpetusi
   congrats_next_tutorials_desc: Proovi neid lühemaid 1 tunni õpetusi, või proovi <a
@@ -181,11 +189,11 @@
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_organization: Organisatsioon
   third_party_curriculum: "Õppekava"
-  third_party_pricing: Pricing
+  third_party_pricing: Hinnad
   third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
+  third_party_cost_5permonth: "$5/ kuu klassi kohta"
   third_party_cost_299: "$2.99/download"
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
@@ -256,7 +264,7 @@
   learn_next_level: Proovi mõnda muud Code.org kursust
   learn_online: Proovi ka teisi veebikursusi
   learn_classes: Leia kohalikud kursused
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Jätka õppimist Minecraftiga
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Ma läbisin just #HourOfCode - tšekka seda! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
@@ -453,7 +461,7 @@
   homepage_slot_text_blurb_advocates: Toetada mitmekesisust arvutiteaduses
   homepage_slot_text_link_stats: Vaata statistikat
   homepage_slot_text_link_buy: Võta osa
-  homepage_slot_text_link_donate: Tee annetus
+  homepage_slot_text_link_donate: Anneta
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Code.org õpilaste loomingud
@@ -526,58 +534,51 @@
   mc_gradelevel: Vanusele 4-104
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
-  minecraft_agent: 'Minecraft: Hero’s Journey'
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  minecraft_agent: 'Minecraft: Kangelase teekond'
+  minecraft_designer: Minecraft Kujundaja
+  minecraft_adventurer: Minecraft Seikleja
+  minecraft_tutorials: Minecraft KoodiTund - juhendid
+  minecraft_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
+  minecraft_agent_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
+    Teekond läbi Minecrafti koos koodiga.
   minecraft_agent_button: Alusta
   minecraft_designer_description: Programmeeri loomi ja teisi Minecrafti tegelasi
     omaenda Minecrafti versioonis.
   minecraft_designer_button: Alusta
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: Kasuta koodi, et viia Alex või Steve seiklusele.
   minecraft_adventurer_button: Alusta
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_no_internet: Ei ole internetti?
+  minecraft_download_adventurer: Lae alla Minecraft Seikleja offline versioon.
   minecraft_subtitle: Minecrafti KoodiTund
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  sports_page_title: Sports Hour of Code
+  minecraft_store_camps: Tasuta Minecraft KoodiTunni laagrites Microsofti poodides
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'> registreeru</a> tasuta
+    Minecraft KoodTunni õpitoad Microsofti poodides Austraalias, Kanadas, Puerto Ricos
+    ja USAs. Õpi, kuidas programmeerimine on igaühe jaoks ja ühendab loovust, probleemide
+    lahendamist ja väga lõbus."
+  minecraft_host_event: Korralda Minecraft KoodiTunni üritus
+  minecraft_teach_resources: "Õpetaja materjalid ja tunnikava."
+  minecraft_leader_guide: Lae alla materjalid ürituse planeerimiseks ja läbiviimiseks.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> Lae
+    alla</a> juhendaja lühike juhend ja PowerPoint esitlused noorematele ja vanematele
+    õpilastele."
+  minecraft_join_online_training: 'Valmis oma Minecrafti KoodiTunni läbiviimiseks
+    kuid ei tea kust alustada? Tutvu meie <a href=''%{minecraft_webinar_url}''> veebiniariga</a>.
+    Saad teada parimad praktikad, juhendaja materjalid, ja saad kiire ülevaate Minecraft:
+    Kangelase teekonnast. Saad ette hakata ette valmistama oma KoodiTundi noortele
+    KoodiTunni nädalal (4.-10. detsember).'
+  minecraft_continue_learning: 'Arvutiteadus kõigile: KoodiTund Microsofti poodides'
+  minecraft_continue_learning_description: Ei ole vaja arvutialaseid eelnevaid kogemusi!
+    Aita, et kõik noored saavad õppida väärtuslikke oskusi arvutiteaduses. Sa saad
+    sellega hakkama! <a href='%{minecraft_continue_learning_url}'> Ühine täna</a>.
+  minecraft_future: Aita noori saada valmis tulevikuks
+  minecraft_future_description: Vaadake, kuidas teised koolid ja mittetulundusühingud
+    toovad digipädevused oma kogukonda. Kaalu erinevaid võimalusi, saa nõuandeid ja
+    nippe ja <a href='%{minecraft_future_url}'> kasuta </a> juhendeid.
+  minecraft_og_designer: Minecraft on tagasi uue tegevuseda KoodiTunniks. Programmeeri
+    loomi ja teisi Minecrafti olendid oma enda Minecraft versioonis.
+  minecraft_og_agent: Minecraft on KoodiTunnis tagasi, ja sa oled kangelane! Kirjutage
+    kood, et läbida teekond läbi Minecraft maailma.
+  sports_page_title: KoodiTunni Sports
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
@@ -586,7 +587,7 @@
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Tee korvpallimäng
-  sports_all_sports_title: Sega omavahel ja sobita kokku üle spordialade
+  sports_all_sports_title: Sega omavahel ja sobita kokku erinevaid spordialasid
   sports_featured_athletes: See featured athletes
   sports_athletes_title: Featured athletes
   sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
@@ -621,14 +622,14 @@
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspireeri tüdrukut
   video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_schools_dont_teach: Mida enamik koole ei õpeta
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Anybody Can Learn
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_draymond_green: KoodiTund koos Draymond Green
+  video_title_russell_okung: KoodiTund koos Russell Okung
+  video_title_real_madrid: KoodiTund koos Real Madridiga
+  video_title_marco_belinelli: KoodiTund koos Marco Belinelli
   video_title_chris_bosh: Chris Bosh on Computer Science
   video_1min: 1 min
   video_2min: 2 min
@@ -1243,6 +1244,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -1259,7 +1262,7 @@
   classicmaze_name: Klassikaline labürint
   iceage_name: Jääaeg
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (plokid)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
@@ -1612,7 +1615,7 @@
   frozen_longdescription: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
     jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise ajal
     ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
-  starwars_longdescription: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+  starwars_longdescription: "Õpi programmeerima droide ja loo oma Star Wars’i mäng
     kauges, kauges galaktikas."
   playlab_longdescription: Loo oma lugu või mäng Play Labi abil! Pane loomad, piraadid,
     zombid, ninjad ja paljud teised tegelased liikuma, hääli tegema, punkte koguma
@@ -1963,17 +1966,17 @@
   infinity_shortcode: inf
   playlab_shortcode: mängi
   artist_shortcode: art
-  header_home: Home
-  header_my_dashboard: My Dashboard
+  header_home: Kodu
+  header_my_dashboard: Minu töölaud
   header_courses: Kursused
-  header_course_catalog: Course Catalog
+  header_course_catalog: Kursuste kataloog
   header_project_gallery: Projektid
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_elementary: Algkool
+  header_educate_middle: Põhikool
+  header_educate_high: Gümnaasium
   header_educate_hoc: KoodiTund
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
@@ -1991,15 +1994,15 @@
   header_about_contact: Contact Us
   header_about_faqs: FAQs
   header_learn: Learn
-  header_teach: Teach
+  header_teach: "Õpeta"
   header_stats: Stats
   header_help_us: Help Us
-  header_about: About
+  header_about: Info
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_documentation: Dokumentatsioon
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
@@ -2059,15 +2062,5 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'Minecraft: Kangelase teekond'
   applab-intro_name: App Lab Intro

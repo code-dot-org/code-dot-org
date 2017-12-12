@@ -442,6 +442,7 @@ describe('entry tests', () => {
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match':                './src/sites/studio/pages/levels/_match.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',

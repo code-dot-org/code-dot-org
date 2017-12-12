@@ -122,8 +122,6 @@ class StudentsBeyondHoc extends Component {
         )}
         <div style={styles.spacer}/>
         <LocalClassActionBlock
-          isRtl={isRtl}
-          responsive={responsive}
           showHeading={false}
         />
       </div>
