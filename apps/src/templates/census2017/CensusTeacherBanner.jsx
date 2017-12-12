@@ -54,6 +54,14 @@ const styles = {
     verticalAlign: 'top',
     marginRight: 10,
   },
+  share: {
+    textAlign: 'center',
+  },
+  shareButton: {
+    color: color.white,
+    backgroundColor: '#7E5CA2',
+    minWidth: 40,
+  },
   title: {
     marginBottom: 0,
   },
@@ -81,6 +89,7 @@ export default class CensusTeacherBanner extends Component {
     teacherEmail: PropTypes.string.isRequired,
     showInvalidError: PropTypes.bool,
     showUnknownError: PropTypes.bool,
+    submittedSuccessfully: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -246,6 +255,38 @@ export default class CensusTeacherBanner extends Component {
     return data;
   }
 
+  renderThankYou() {
+    const yourschoolUrl = encodeURIComponent('https://code.org/yourschool');
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${yourschoolUrl}`;
+    const twitterText = encodeURIComponent('Does your school teach computer science? Expand computer science at your school or district. @codeorg');
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${yourschoolUrl}&related=codeorg&text=${twitterText}`;
+
+    return (
+      <div>
+        <div style={styles.header}>
+          <h2>Thanks for adding your school to the map!</h2>
+        </div>
+        <div style={styles.message}>
+          <p style={styles.introQuestion}>
+            Help us find out about computer science opportunities at every school in the United States!
+          </p>
+        </div>
+        <div style={styles.share}>
+          <a href={facebookShareUrl} target="_blank">
+            <button style={styles.shareButton}>
+              <i className="fa fa-facebook" /> Share on Facebook
+            </button>
+          </a>
+          <a href={twitterShareUrl} target="_blank">
+            <button style={styles.shareButton}>
+              <i className="fa fa-twitter" /> Share on Twitter
+            </button>
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   renderSchoolInfoForm() {
     let schoolId = (this.state.ncesSchoolId !== null) ? this.state.ncesSchoolId : this.props.ncesSchoolId;
     return (
@@ -402,7 +443,9 @@ export default class CensusTeacherBanner extends Component {
   render() {
     let mainForm;
 
-    if (this.state.showSchoolInfoForm) {
+    if (this.props.submittedSuccessfully) {
+      mainForm = this.renderThankYou();
+    } else if (this.state.showSchoolInfoForm) {
       mainForm = this.renderSchoolInfoForm();
     } else {
       mainForm = this.renderCensusForm();
