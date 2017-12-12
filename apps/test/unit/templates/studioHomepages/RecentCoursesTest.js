@@ -28,7 +28,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <SetUpCourses
-            isRtl={false}
             isTeacher
           />
         </ContentContainer>

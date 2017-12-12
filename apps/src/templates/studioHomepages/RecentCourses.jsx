@@ -81,7 +81,6 @@ export default class RecentCourses extends Component {
           )}
           {!hasCourse && (
             <SetUpCourses
-              isRtl={isRtl}
               isTeacher={isTeacher}
             />
           )}
