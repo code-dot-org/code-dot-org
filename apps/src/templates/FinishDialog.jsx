@@ -175,7 +175,8 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getBlockCounter() {
-    if (this.props.blockLimit === undefined) {
+    if (this.props.blockLimit === undefined ||
+      this.props.blockLimit === Infinity) {
       return null;
     }
 

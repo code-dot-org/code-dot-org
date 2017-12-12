@@ -2,9 +2,9 @@ import msg from '@cdo/locale';
 import authoredHintUtils from './authoredHintUtils';
 
 export default function getAchievements(state) {
-  return POSSIBLE_ACHIEVEMENTS.map(possibleAchievement => {
-    possibleAchievement(state);
-  }).filter(achievement => achievement);
+  return POSSIBLE_ACHIEVEMENTS.map(
+    possibleAchievement => possibleAchievement(state)
+  ).filter(achievement => achievement);
 }
 
 const POSSIBLE_ACHIEVEMENTS = [
@@ -25,10 +25,10 @@ const POSSIBLE_ACHIEVEMENTS = [
 
     let message, isAchieved;
     if (blocksUsed < blockLimit) {
-      message = msg.fewerNumberOfBlocks({numBlocks: blocksUsed});
+      message = msg.fewerNumberOfBlocks({numBlocks: blockLimit});
       isAchieved = true;
     } else if (blocksUsed === blockLimit) {
-      message = msg.exactNumberOfBlocks({numBlocks: blocksUsed});
+      message = msg.exactNumberOfBlocks({numBlocks: blockLimit});
       isAchieved = true;
     } else {
       message = msg.usingTooManyBlocks();

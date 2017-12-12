@@ -56,6 +56,7 @@ import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {
+  setAchievements,
   setBlockLimit,
   setFeedbackData,
   showFeedback,
@@ -1447,11 +1448,11 @@ StudioApp.prototype.displayFeedback = function (options) {
       store.dispatch(setFeedbackData({
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumBlocksUsed(),
-        achievements: getAchievements(store.getState()),
         displayFunometer: response && response.puzzle_ratings_enabled,
         studentCode: this.feedback_.getGeneratedCodeProperties(this.config.appStrings),
         canShare: !this.disableSocialShare && !options.disableSocialShare,
       }));
+      store.dispatch(setAchievements(getAchievements(store.getState())));
       if (!preventDialog) {
         store.dispatch(showFeedback());
       }
