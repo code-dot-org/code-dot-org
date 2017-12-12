@@ -15,6 +15,10 @@ const styles = {
   step: {
     marginTop: 25,
     fontSize: 16
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline',
   }
 };
 
@@ -45,7 +49,7 @@ export default class DiscountCodeInstructions extends Component {
         <br/>
         <div>
           To order your kit with the discount code, follow the steps below.{" "}
-          <b>You must use your discount code by December 31, 2018.</b>
+          <div style={styles.bold}>You must use your discount code by December 31, 2018.</div>
         </div>
 
         <div style={styles.step}>

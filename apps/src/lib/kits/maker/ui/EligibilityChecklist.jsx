@@ -16,6 +16,10 @@ const styles = {
   discountMessage: {
     marginTop: 10,
     marginBottom: 10
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline',
   }
 };
 
@@ -149,11 +153,11 @@ export default class EligibilityChecklist extends Component {
             According to our data, your school has fewer than 50% of students that are
             eligible for free/reduced-price lunches. This means that we can bring down
             the cost of the $325 kit to just $97.50.{" "}
-            <b>
+            <div style={styles.bold}>
               If this data seems inaccurate and you believe there are over 50% of students
               that are eligible for free/reduced-price lunch at your school, please contact
               support@code.org.
-            </b>
+            </div>
             {" "}
             Otherwise, click "Get Code" below.
           </div>
