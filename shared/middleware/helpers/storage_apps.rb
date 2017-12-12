@@ -145,6 +145,7 @@ class StorageApps
 
     # Sharing of a project is not disabled for the project owner
     # or the teachers of the project owner
+    # or if the current user paired with the owner
     if current_user_id == owner_id
       return false
     elsif teaches_student?(owner_id, current_user_id)
