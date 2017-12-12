@@ -327,11 +327,12 @@ def process_xlss(specific_year=nil)
       # Years to iterate over either determined by spec, or just a single year
       year_collection = specific_year.nil? ? spec[:years] : [specific_year]
       year_collection.each do |year|
-        if year >= 2014
-          spreadsheet = RubyXL::Parser.parse get_filename(year, state)
-        else
-          spreadsheet = Spreadsheet.open get_filename(year, state)
-        end
+        spreadsheet =
+          if year >= 2014
+            RubyXL::Parser.parse get_filename(year, state)
+          else
+            Spreadsheet.open get_filename(year, state)
+          end
         spec[:years].each do |spec_year|
           next unless spec_year == year
           spec[:tests].each do |test_name, cells_of_interest|

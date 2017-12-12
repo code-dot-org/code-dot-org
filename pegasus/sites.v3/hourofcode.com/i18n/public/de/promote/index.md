@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 <%
@@ -15,28 +12,28 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Wie kann ich mich dafür einsetzen
+# Get your community involved in the Hour of Code
 
-## 1. Weitersagen
+## Erzählen Sie es weiter
 
-Erzähle Deinen Freunden von der **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Bitte Deine Schule, eine Hour-of-Code anzubieten
+## Frage in deiner Schule nach, und biete eine Hour-of-Code an
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
+[Sende diese Email](<%= resolve_url('/promote/resources#sample-emails') %>) an Deinen Schulleiter und fordere alle Schüler an Deiner Schule auf sich anzumelden.
 
-## 3. Bitte Deinen Arbeitgeber, sich zu engagieren
+## 3. Bitte deinen Arbeitgeber sich zu engagieren
 
-[Sende eine E-Mail](<%= resolve_url('/promote/resources#sample-emails') %>) an den Verantwortlichen in Deinem Unternehmen.
+[Sende eine Email](<%= resolve_url('/promote/resources#sample-emails') %>) an den Verantwortlichen in Deinem Unternehmen.
 
 ## 4. Werbe für die Hour-of-Code in Deinem persönlichen Umfeld
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Eine lokale Gruppe anwerben](<%= resolve_url('/promote/resources#sample-emails') %>)-Vereine, Kirche, Universität, Sportklub, Gewerkschaft oder in deinem Freundeskreis. Du musst nicht in die Schule gehen, um neue Fähigkeiten zu erlernen. Benutze diese [Poster, Banner, Sticker, Videos und mehr](<%= resolve_url('/promote/resources') %>) für deine eigene Veranstaltung.
 
-## 5. Frage eine öffentliche Stelle, ob sie die Hour of Code unterstützen möchte
+## 5. Frage deine gewählten Vertreter, ob sie Hour-of-Code unterstützen möchten
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Sende diese Email](<%= resolve_url('/promote/resources#sample-emails') %>) an deinen örtlichen Vertreter, Stadtrat oder deine Schulbehörde und lade sie ein, deine Schule für Hour-of-Code zu besuchen. Das wird helfen das Verständnis für Informatilk in deiner Region zu fördern.
 
 <%= view :signup_button %>

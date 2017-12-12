@@ -1,19 +1,19 @@
 import React, {PropTypes} from 'react';
-var color = require("../util/color");
+import color from '../util/color';
 
 /**
  * Simple boot-strapped style alert.
  */
-var Alert = React.createClass({
-  propTypes: {
+export default class Alert extends React.Component {
+  static propTypes = {
     children: PropTypes.element.isRequired,
     type: PropTypes.oneOf(["error", "warning"]).isRequired,
     onClose: PropTypes.func.isRequired,
     sideMargin: PropTypes.number,
-  },
+  };
 
-  render: function () {
-    var styles = {
+  render() {
+    const styles = {
       main: {
         position: 'relative',
         zIndex: 1000,
@@ -62,7 +62,7 @@ var Alert = React.createClass({
       }
     };
 
-    var childStyle = Object.assign({}, styles.child, styles.typeSpecific[this.props.type]);
+    const childStyle = {...styles.child, ...(styles.typeSpecific[this.props.type])};
 
     return (
       <div style={styles.main}>
@@ -75,6 +75,4 @@ var Alert = React.createClass({
       </div>
     );
   }
-});
-
-module.exports = Alert;
+}

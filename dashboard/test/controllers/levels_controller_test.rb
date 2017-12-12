@@ -306,6 +306,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should update solution image when updating solution blocks" do
+    LevelSourceImage.stubs(:find_by).returns(nil)
+    LevelSourceImage.any_instance.expects(:save_to_s3).returns(true)
     post :update_blocks, params: @default_update_blocks_params.merge(
       type: 'solution_blocks',
       image: 'stub-image-data',
@@ -324,6 +326,26 @@ class LevelsControllerTest < ActionController::TestCase
     level = assigns(:level)
     assert_equal @program, level.properties['toolbox_blocks']
     assert_nil level.properties['solution_image_url']
+  end
+
+  test "should update solution image if existing one is lower resolution" do
+    small_size = mock('image_size')
+    small_size.stubs(:width).returns(154)
+    small_size.stubs(:height).returns(154)
+    large_size = mock('image_size')
+    large_size.stubs(:width).returns(400)
+    large_size.stubs(:height).returns(400)
+    ImageSize.stubs(:path).returns(small_size)
+    ImageSize.stubs(:new).returns(large_size)
+    LevelSourceImage.any_instance.stubs(:s3_url).returns('fake url')
+
+    LevelSourceImage.any_instance.expects(:save_to_s3).returns(true)
+
+    post :update_blocks, params: @default_update_blocks_params.merge(
+      type: 'solution_blocks',
+      image: 'stub-image-data',
+    )
+    assert_response :success
   end
 
   test "should not update blocks if not levelbuilder" do
@@ -713,16 +735,6 @@ class LevelsControllerTest < ActionController::TestCase
     sign_out @levelbuilder
 
     get :embed_level, params: {level_id: level}
-    assert_response :success
-  end
-
-  test 'can show embed blocks when not signed in' do
-    set_env :test
-
-    level = create :artist
-    sign_out @levelbuilder
-
-    get :embed_blocks, params: {level_id: level, block_type: :solution_blocks}
     assert_response :success
   end
 

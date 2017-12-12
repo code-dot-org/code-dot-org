@@ -29,7 +29,8 @@ const styles = {
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: 940
+    width: 940,
+    marginBottom: -10
   }
 };
 

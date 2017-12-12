@@ -10,8 +10,21 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import { TutorialsSortByOptions, TutorialsSortByFieldNames, TutorialsOrgName, mobileCheck, DoNotShow } from './util';
-import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
+import {
+  isTutorialSortByFieldNamePopularity,
+  TutorialsSortByOptions,
+  TutorialsSortByFieldNames,
+  TutorialsOrgName,
+  mobileCheck,
+  DoNotShow,
+  orgNameCodeOrg,
+  orgNameMinecraft
+} from './util';
+import {
+  getResponsiveContainerWidth,
+  isResponsiveCategoryInactive,
+  getResponsiveValue
+} from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
@@ -183,20 +196,28 @@ const TutorialExplorer = React.createClass({
   getSortByFieldName(sortBy, grade) {
     let sortByFieldName;
 
+    const gradeToDisplayWeightSortByFieldName = {
+      "all": TutorialsSortByFieldNames.displayweight,
+      "pre": TutorialsSortByFieldNames.displayweight_pre,
+      "2-5": TutorialsSortByFieldNames.displayweight_25,
+      "6-8": TutorialsSortByFieldNames.displayweight_middle,
+      "9+": TutorialsSortByFieldNames.displayweight_high
+    };
+
+    const gradeToPopularityRankSortByFieldName = {
+      "all": TutorialsSortByFieldNames.popularityrank,
+      "pre": TutorialsSortByFieldNames.popularityrank_pre,
+      "2-5": TutorialsSortByFieldNames.popularityrank_25,
+      "6-8": TutorialsSortByFieldNames.popularityrank_middle,
+      "9+": TutorialsSortByFieldNames.popularityrank_high
+    };
+
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
     // right set of data to match the currently-selected grade.
     if (sortBy === TutorialsSortByOptions.displayweight) {
-      if (grade === "all") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight;
-      } else if (grade === "pre" || grade === "2-5") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_k5;
-      } else if (grade === "6-8") {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_middle;
-      } else {
-        sortByFieldName = TutorialsSortByFieldNames.displayweight_high;
-      }
+      sortByFieldName = gradeToDisplayWeightSortByFieldName[grade];
     } else {
-      sortByFieldName = TutorialsSortByFieldNames.popularityrank;
+      sortByFieldName = gradeToPopularityRankSortByFieldName[grade];
     }
 
     return sortByFieldName;
@@ -380,8 +401,12 @@ const TutorialExplorer = React.createClass({
         }
 
         // If we are showing an explicit orgname, then filter if it doesn't
-        // match.
-        if (orgName && orgName !== TutorialsOrgName.all && tutorial.orgname !== orgName) {
+        // match.  Make an exception for Minecraft so that it shows when
+        // Code.org is selected.
+        if (orgName &&
+          orgName !== TutorialsOrgName.all &&
+          tutorial.orgname !== orgName &&
+          !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)) {
           return false;
         }
 
@@ -416,8 +441,8 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        if (sortByFieldName === TutorialsSortByFieldNames.popularityrank) {
-          return tutorial1.popularityrank - tutorial2.popularityrank;
+        if (isTutorialSortByFieldNamePopularity(sortByFieldName)) {
+          return tutorial1[sortByFieldName] - tutorial2[sortByFieldName];
         } else {
           return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
         }

@@ -40,7 +40,7 @@ Try out tutorials before heading to the classroom by going to https://code.org/l
 Prepare an intro:
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
-* Watch last year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing).
+* Watch this year's Volunteer Training [webinar](https://www.youtube.com/watch?v=2DcZePOIxOs) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing).
 * Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes all the preparation and marketing material you need to be ready for your volunteer experience!
 * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn).
 * If you're visiting a school, complete any background checks or required paperwork.

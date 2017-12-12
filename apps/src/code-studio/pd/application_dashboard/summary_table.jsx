@@ -1,9 +1,11 @@
- /**
+/**
  * Table displaying a summary of application statuses
  */
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
+import {StatusColors} from './constants';
+import _ from 'lodash';
 
 const styles = {
   table: {
@@ -13,13 +15,27 @@ const styles = {
   tableWrapper: {
     width: '33.3%',
     paddingBottom: '30px'
-  }
+  },
+  statusCell: StatusColors
 };
 
-export default class SummaryTable extends React.Component {
+const ApplicationDataPropType = PropTypes.shape({
+  locked: PropTypes.number.isRequired,
+  unlocked: PropTypes.number.isRequired,
+});
+
+export class SummaryTable extends React.Component {
   static propTypes = {
+    showLocked: PropTypes.bool,
     caption: PropTypes.string.isRequired,
-    data: PropTypes.object,
+    data: PropTypes.shape({
+      accepted: ApplicationDataPropType,
+      declined: ApplicationDataPropType,
+      interview: ApplicationDataPropType,
+      pending: ApplicationDataPropType,
+      unreviewed: ApplicationDataPropType,
+      waitlisted: ApplicationDataPropType,
+    }),
     path: PropTypes.string.isRequired
   }
 
@@ -27,17 +43,24 @@ export default class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   }
 
-  tableRow = (label, bgColor, textColor, data) =>  {
-    const status = label.toLowerCase().replace(/ /g,'_');
-    const total = data[status];
-
-    return (
-      <tr>
-        <td style={{backgroundColor: bgColor, color: textColor}}>{label}</td>
-        <td>{total}</td>
-      </tr>
-    );
-  };
+  tableBody() {
+    return Object.keys(StatusColors).map((status, i) => {
+      if (this.props.data.hasOwnProperty(status)) {
+        const data = this.props.data[status];
+        const total = data.locked + data.unlocked;
+        return (
+          <tr key={i}>
+            <td style={{...styles.statusCell[status]}}>
+              {_.upperFirst(status)}
+            </td>
+            {this.props.showLocked && <td>{data.locked}</td>}
+            {this.props.showLocked && <td>{data.unlocked}</td>}
+            <td>{total}</td>
+          </tr>
+        );
+      }
+    });
+  }
 
   handleViewClick = (event) => {
     event.preventDefault();
@@ -52,17 +75,13 @@ export default class SummaryTable extends React.Component {
           <thead>
             <tr>
               <th>Status</th>
+              {this.props.showLocked && <th>Locked</th>}
+              {this.props.showLocked && <th>Unlocked</th>}
               <th>Total</th>
             </tr>
           </thead>
           <tbody>
-            {this.tableRow('Unreviewed', color.charcoal, color.white, this.props.data)}
-            {this.tableRow('Pending', color.lighter_orange, color.black, this.props.data)}
-            {this.tableRow('Move to Interview', color.orange, color.black, this.props.data)}
-            {this.tableRow('Waitlisted', color.level_passed, color.black, this.props.data)}
-            {this.tableRow('Accepted', color.level_perfect, color.black, this.props.data)}
-            {this.tableRow('Declined', color.red, color.white, this.props.data)}
-            {this.tableRow('Withdrawn', color.lightest_red, color.black, this.props.data)}
+            {this.tableBody()}
           </tbody>
         </Table>
         <Button
@@ -75,3 +94,7 @@ export default class SummaryTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  showLocked: state.permissions.lockApplication,
+}))(SummaryTable);

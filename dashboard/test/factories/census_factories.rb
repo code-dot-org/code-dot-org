@@ -2,13 +2,14 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :census_submission, class: Census::CensusSubmission do
+    submitter_email_address "parent@school.edu"
     school_year 2017
     how_many_20_hours "none"
     how_many_10_hours "none"
     how_many_do_hoc "none"
     how_many_after_school "none"
     submitter_role "parent"
-    class_frequency "one_hour_per_week"
+    class_frequency "less_than_one_hour_per_week"
 
     transient do
       school_info_count 1
@@ -47,10 +48,6 @@ FactoryGirl.define do
       topic_other_description 'a' * 256
     end
 
-    trait :with_long_tell_us_more do
-      tell_us_more 'a' * 256
-    end
-
     trait :as_teacher do
       submitter_role "teacher"
     end
@@ -77,9 +74,10 @@ FactoryGirl.define do
     end
   end
 
-  factory :census_your_school2017v1, parent: :census_submission, class: Census::CensusYourSchool2017v1 do
-    submitter_email_address "parent@school.edu"
+  factory :census_your_school2017v0, parent: :census_submission, class: Census::CensusYourSchool2017v0 do
+  end
 
+  factory :census_your_school2017v1, parent: :census_your_school2017v0, class: Census::CensusYourSchool2017v1 do
     trait :requiring_followup do
       how_many_20_hours "all"
     end
@@ -95,8 +93,14 @@ FactoryGirl.define do
   factory :census_your_school2017v3, parent: :census_your_school2017v2, class: Census::CensusYourSchool2017v3 do
   end
 
+  factory :census_your_school2017v4, parent: :census_your_school2017v3, class: Census::CensusYourSchool2017v4 do
+  end
+
+  factory :census_your_school2017v5, parent: :census_your_school2017v4, class: Census::CensusYourSchool2017v5 do
+    share_with_regional_partners true
+  end
+
   factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
-    submitter_email_address "hoc@email.address"
     submitter_name "Hoc Submitter"
   end
 
@@ -104,5 +108,22 @@ FactoryGirl.define do
   end
 
   factory :census_hoc2017v3, parent: :census_hoc2017v2, class: Census::CensusHoc2017v3 do
+  end
+
+  factory :census_submission_form_map, class: Census::CensusSubmissionFormMap do
+    census_submission nil
+    form_id nil
+
+    trait :with_submission do
+      census_submission {build :census_hoc2017v1}
+    end
+
+    trait :with_form do
+      form_id 1
+    end
+  end
+
+  factory :census_teacher_banner_v1, parent: :census_submission, class: Census::CensusTeacherBannerV1 do
+    submitter_role "TEACHER"
   end
 end

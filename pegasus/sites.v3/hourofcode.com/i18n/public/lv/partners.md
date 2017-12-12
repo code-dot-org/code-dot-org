@@ -1,16 +1,13 @@
 ---
-
 title: <%= hoc_s(:title_partners) %>
-
 ---
+Programmēšanas stundu vada Programmēšanas stundas un datorzinātnes izglītības nedēļas konsultēšanas un vērtēšanas komitejas.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+[Konsultēšanas komiteju](<%= resolve_url('/advisory-committee') %>) pārstāv K-12, akadēmiskās vides pārstāvji, bezpeļņas, peļņas un starptautiskās organizācijas. Šī komiteja vada Programmēšanas stundas kampaņas stratēģiju.
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Vērtēšanas komiteju](<%= resolve_url('/review-committee') %>) pārstāv 15 pedagogi no K-12 pakāpju sistēmas, kuri novērtē un iesaka aktivitātes, izmantojot Konsultēšanas komitejas rubrikas. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
-
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Abu komiteju darbs un rūpes ir sekmējušas Programmēšanas stundas veiksmi un tās vīzijas izplatīšanos, piedāvājot ievadu datorzinātnē ikvienam skolēnam.
 
 <% if @country == 'la' %>
 
@@ -116,37 +113,37 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# Galvenie partneri un korporatīvie atbalstītāji
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Major Promotional Partners
+# Galvenie reklāmas partneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# International Partners
+# Starptautiskie partneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Tutorial Partners
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure partners and tools
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Additional Partners
+# Citi partneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

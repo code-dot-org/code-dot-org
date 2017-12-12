@@ -1,5 +1,6 @@
 // This gets replaced by karma webpack with the updated files on rebuild
 import 'babel-polyfill';
+import 'whatwg-fetch';
 import {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
@@ -21,7 +22,7 @@ if (!runnable.length) {
   runnable = testsContext.keys();
 }
 
-describe('unit tests', () => {
+describe('unit tests', function () {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();

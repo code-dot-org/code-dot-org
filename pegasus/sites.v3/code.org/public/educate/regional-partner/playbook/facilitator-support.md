@@ -24,12 +24,12 @@ ________________
 ## Example Facilitator One Pager
 The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
 
-Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop. 
+Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
 
 ________________
 <a id="contract"></a>
 ## Example contract
-[This is an example](/files/example-csp-facilitator-contract.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met. 
+[This is an example](/files/example-csp-facilitator-contract.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
 
 *DISCLAIMER: By providing this example, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter.*
 
@@ -38,6 +38,7 @@ ________________
 <a id="recruitment"></a>
 ## Facilitator Recruitment Resources
 
+- [2017-2018 (CURRENT) Facilitator Application Process Doc] (https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#)
 - [Facilitator Program Page](https://code.org/facilitator) - General webpage to share with potential facilitators
 - [Facilitator Development Program Overview](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit#heading=h.psnytlkvnqcd)
 - [K-12 Facilitator Qualifications and Rubric](https://docs.google.com/document/d/14yKszp5_eYiTgZ4t8KpDTi2cBB4wd5SGxCV-a_eE6c8/edit) - Guide for recruitment

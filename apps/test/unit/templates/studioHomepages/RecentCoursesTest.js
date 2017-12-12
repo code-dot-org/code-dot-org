@@ -4,7 +4,7 @@ import {expect} from '../../../util/configuredChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
@@ -28,7 +28,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <SetUpCourses
-            isRtl={false}
             isTeacher
           />
         </ContentContainer>
@@ -55,7 +54,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -63,13 +61,12 @@ describe('RecentCourses', () => {
           />
           <div>
             <Notification
-              type={Notification.NotificationType.course}
+              type={NotificationType.course}
               notice="Find a course"
               details="Try new courses to add them to your homepage."
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
@@ -96,7 +93,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -108,7 +104,6 @@ describe('RecentCourses', () => {
                 title={courses[0].title}
                 description={courses[0].description}
                 link={courses[0].link}
-                isRtl={false}
               />
             </div>
             <div key={1}>
@@ -116,19 +111,17 @@ describe('RecentCourses', () => {
                 title={courses[1].title}
                 description={courses[1].description}
                 link={courses[1].link}
-                isRtl={false}
               />
             </div>
           </div>
           <div>
             <Notification
-              type={Notification.NotificationType.course}
+              type={NotificationType.course}
               notice="Find a course"
               details="Try new courses to add them to your homepage."
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
@@ -152,7 +145,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -164,7 +156,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[0].title}
                 description={moreCourses[0].description}
                 link={moreCourses[0].link}
-                isRtl={false}
               />
             </div>
             <div key={1}>
@@ -172,7 +163,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[1].title}
                 description={moreCourses[1].description}
                 link={moreCourses[1].link}
-                isRtl={false}
               />
             </div>
             <div key={2}>
@@ -180,7 +170,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[2].title}
                 description={moreCourses[2].description}
                 link={moreCourses[2].link}
-                isRtl={false}
               />
             </div>
             <div key={3}>
@@ -188,7 +177,6 @@ describe('RecentCourses', () => {
                 title={moreCourses[3].title}
                 description={moreCourses[3].description}
                 link={moreCourses[3].link}
-                isRtl={false}
               />
             </div>
           </div>
@@ -198,13 +186,12 @@ describe('RecentCourses', () => {
           />
           <div>
             <Notification
-              type={Notification.NotificationType.course}
+              type={NotificationType.course}
               notice="Find a course"
               details="Try new courses to add them to your homepage."
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>

@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Dưới đây là mẫu nghị quyết trợ giúp Tuần Khoa Học Máy Tính và các nhà lập pháp liên bang và địa phương có thể sử dụng những mục tiêu của nó.
@@ -15,7 +12,7 @@ nav: promote_nav
 
 [HOUSE OR SENATE RESOLUTION ###]
 
-[DATE]
+[NGÀY]
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 

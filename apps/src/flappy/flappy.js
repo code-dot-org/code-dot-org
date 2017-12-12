@@ -22,7 +22,6 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
-import experiments from '../util/experiments';
 import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
 import {SignInState} from '../code-studio/progressRedux';
@@ -568,6 +567,18 @@ Flappy.init = function (config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
+
   var onMount = function () {
     studioApp().init(config);
 
@@ -704,8 +715,6 @@ var displayFeedback = function () {
   if (!Flappy.waitingForReport) {
     dataURIFromURI(placeholder).then(feedbackImageUri => {
       studioApp().displayFeedback({
-        app: 'flappy', //XXX
-        skin: skin.id,
         feedbackType: Flappy.testResults,
         response: Flappy.response,
         level: level,
@@ -715,7 +724,7 @@ var displayFeedback = function () {
           reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
           sharingText: flappyMsg.shareGame()
         },
-        saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+        saveToProjectGallery: true,
         feedbackImage: feedbackImageUri,
         disableSaveToGallery: !isSignedIn,
       });

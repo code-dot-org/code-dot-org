@@ -21,6 +21,8 @@ import { getStore } from '../../redux';
 import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -560,6 +562,7 @@ export default class Craft {
     if (first) {
       return;
     }
+    captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
     Craft.gameController.codeOrgAPI.resetAttempt();
   }
 
@@ -581,6 +584,20 @@ export default class Craft {
    */
   static resetButtonClick() {
     $('.arrow').prop("disabled", false);
+  }
+
+  static isPreAnimationFailure(testResult) {
+    switch (testResult) {
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+      case TestResults.EMPTY_FUNCTIONAL_BLOCK:
+      case TestResults.EXTRA_TOP_BLOCKS_FAIL:
+      case TestResults.EXAMPLE_FAILED:
+      case TestResults.EMPTY_BLOCK_FAIL:
+      case TestResults.EMPTY_FUNCTION_NAME:
+        return true;
+      default:
+        return false;
+    }
   }
 
   /**
@@ -620,9 +637,9 @@ export default class Craft {
       return;
     }
 
-    if (studioApp().hasUnwantedExtraTopBlocks()) {
-      // immediately check answer instead of executing, which will fail and
-      // report top level blocks (rather than executing them)
+    // Fail immediately for empty repeat blocks, etc.
+    const initialTestResults = studioApp().getTestResults(false);
+    if (Craft.isPreAnimationFailure(initialTestResults)) {
       Craft.reportResult(false);
       return;
     }
@@ -706,6 +723,12 @@ export default class Craft {
           blockType,
           'PlayerAgent');
       },
+      placeDirection: function (blockType, direction, blockID) {
+        appCodeOrgAPI.placeDirection(studioApp().highlight.bind(studioApp(), blockID),
+          blockType,
+          'PlayerAgent',
+          direction);
+      },
       moveDirection: function (direction, targetEntity, blockID) {
         const dirStringToDirection = {
           up: FacingDirection.North,
@@ -776,9 +799,13 @@ export default class Craft {
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {
+        const sharing = Craft.initialConfig.level.freePlay;
+        if (sharing && response.level_source) {
+          trySetLocalStorage('craftHeroShareLink', response.level_source);
+        }
+
+        const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
         studioApp().displayFeedback({
-          app: 'craft',
-          skin: Craft.initialConfig.skin.id,
           feedbackType: testResultType,
           response,
           level: Craft.initialConfig.level,
@@ -793,7 +820,9 @@ export default class Craft {
             generatedCodeDescription: craftMsg.generatedCodeDescription(),
           },
           feedbackImage: image,
-          showingSharing: Craft.initialConfig.level.freePlay,
+          showingSharing: sharing,
+          saveToProjectGallery: true,
+          disableSaveToGallery: !isSignedIn,
         });
       },
     });

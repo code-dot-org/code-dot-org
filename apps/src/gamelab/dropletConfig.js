@@ -4,6 +4,7 @@ var api = require('./apiJavascript.js');
 import color from '../util/color';
 var consoleApi = require('../consoleApi');
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 import {getStore} from '../redux';
 
@@ -26,7 +27,9 @@ var getAnimationDropdown;
 exports.injectGameLab = function (gamelab) {
   gameLab = gamelab;
   getAnimationDropdown = gameLab.getAnimationDropdown.bind(gameLab);
-  audioApi.injectExecuteCmd(gameLab.executeCmd.bind(gameLab));
+  const executeCmd = gameLab.executeCmd.bind(gameLab);
+  audioApi.injectExecuteCmd(executeCmd);
+  timeoutApi.injectExecuteCmd(executeCmd);
 };
 
 // Flip the argument order so we can bind `typeFilter`.
@@ -292,6 +295,12 @@ draw() - USEFUL?
   {func: 'comment_Drawing', block: '// Comment', expansion: '// ', category: 'Drawing' },
 
   // Control
+  {...timeoutApi.dropletConfig.setTimeout},
+  {...timeoutApi.dropletConfig.clearTimeout},
+  {...timeoutApi.dropletConfig.setInterval},
+  {...timeoutApi.dropletConfig.clearInterval},
+  {...timeoutApi.dropletConfig.timedLoop},
+  {...timeoutApi.dropletConfig.stopTimedLoop},
   {func: 'comment_Control', block: '// Comment', expansion: '// ', category: 'Control' },
 
   // Math

@@ -1,65 +1,62 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Cómo atraer los medios a tú evento de la "Hora del Código"
 
-*For all press and media inquiries, contact <press@code.org>*
+*Para las peticiones de prensa y los medios de comunicación, póngase en contacto con <press@code.org>*
 
 ### Consejos clave
 
-  * Contactar con los medios de comunicación dos semanas antes de su evento por correo electrónico. Continua por correo electrónico y teléfono si no recibe una respuesta inicial.
-  * Pide algún personal escolar o voluntario que haga fotos para compartirlas en línea o enviar a la prensa.
-  * Escriba sobre la Horal de Código en la página principal de su sitio web y en el periódico de la escuela. Publique los detalles de su evento y fotos de las actividades de tus estudiantes.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Contactar con los medios de comunicación dos semanas antes de su evento por correo electrónico. Continua por correo electrónico y teléfono si no recibe una respuesta inicial.
+- Pide algún personal escolar o voluntario que haga fotos para compartirlas en línea o enviar a la prensa.
+- Escriba sobre la Horal de Código en la página principal de su sitio web y en el periódico de la escuela. Publique los detalles de su evento y fotos de las actividades de tus estudiantes.
+- En Facebook y Twitter, comparta información actualizada sobre sus planes, anuncie sus eventos y publique fotos del 7 al 13 de Diciembre. Use el hashtag **#HourOfCode** para que Code.org pueda ver y promover sus eventos.
 
 ### Guía paso a paso:
 
-**1. Plan your event**
+**1. Planifique su evento**
 
-  * Haga una reunión para iniciar la Hora del Código.
-  * Envíe [una carta](<%= resolve_url('/promote/resources#sample-emails') %>) a los padres. Pídeles que corran la voz.
-  * Envíe [una carta](<%= resolve_url('/promote/resources#sample-emails') %>) para invitar a su alcalde, diputado, gobernador o un empresario influyente a asistir y conversar con sus estudiantes.
-  * Organice actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestre lo que han hecho los estudiantes y guíe las actividades.
-  * Muestre [un video de la Hora de Código](<%= resolve_url('/') %>) de Code.org o uno de [estos](<%= resolve_url('/promote/resources#videos') %>) para motivar.
+- Haga una reunión para iniciar la Hora del Código.
+- Envíe [una carta](<%= resolve_url('/promote/resources#sample-emails') %>) a los padres. Pídeles que corran la voz.
+- Envíe [una carta](<%= resolve_url('/promote/resources#sample-emails') %>) para invitar a su alcalde, diputado, gobernador o un empresario influyente a asistir y conversar con sus estudiantes.
+- Organice actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestre lo que han hecho los estudiantes y guíe las actividades.
+- Muestre [un video de la Hora de Código](<%= resolve_url('/') %>) de Code.org o uno de [estos](<%= resolve_url('/promote/resources#videos') %>) para motivar.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. Identifique a los periodistas que cubren noticias escolares ó eventos locales.**
 
-Think a local newspaper, TV station, radio station or blog.
+Piense en un periódico local, canal de TV, cadena de radio o blog.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Busca en línea para encontrar la información de contacto del reportero. Si no lo puedes encontrar, llama quien lo publica para preguntarles, o envía un correo general a la direccion consejos@NOMBREPUBLICADORES.com y pide que tu mensaje llege donde el reportero correcto.
 
-**3. Contact local media**
+**3. Contacta los medios de comunicaciones locales**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+La mejor forma de contacto es por correo electrónico. Debe ser corto y responder a la siguiente pregunta: ¿Por qué les debe importar a otras personas este evento? Incluye información de contacto (sobretodo un número de teléfono móvil) para quien esté en el sitio del evento. **Ver [ejemplo de para los medios de comunicaciones](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Prepárate para las preguntas que te hagan acerca de tu evento escolar. Aquí hay algunos ejemplos:**
 
-*Why is your school doing an Hour of Code?*
+*¿Por que hace tu escuela una Hora del Código?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Si bien todos sabemos que es importante que los estudiantes aprendan a navegar en este mundo saturado de tecnología, muchos profesores no tienen experiencia en Ciencias de la Computación y no saben por donde empezar. Este evento es una oportunidad para que todos nosotros veamos qué son las Ciencias de la Computación.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Esperamos que despierte el interes en nuestros estudiantes para seguir aprendiendo. Los investigaciones también demuestran que los niños purden aprender conceptos de programación antes de que sepan leer y escribir. De hecho, sus cerebros son mas receptivos a los lenguajes de programación a temprana edad, tal como lo son para idiomas extranjeros.
 
-*Why is this important?*
+*¿Por qué es esto importante?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. Pero 75 por ciento de las escuelas en los Estados Unidos no ensenan ciencias de computacion. Es tiempo para nosotros de avanzar al siglo Xxi. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar.
 
-**More details and a quote you can use in materials**
+**Más detalles y una cita que puedes usar para tus materiales**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"La Hora del Código ha sido diseñada para desmitificar el código y mostrar que las Ciencias de la Computación no es dificil, cualquiera puede aprender lo basico," dijo Hadi Partovi, fundador y gerente general de Code.org. "Más de 100 millones de estudiantes de todo el mundo han participado en la Hora del Código. La demanda por educación relevante en del siglo Xxi en Ciencias de la Computación cruza todas las fronteras y no conoce límites."
 
-**About Code.org**
+**Acerca de Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Su visión es que todos los estudiantes, en todas las escuelas tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de corporaciones, fundaciones y personas generosas, incluyendo Microsoft, Fundación de Infosys, USA, la familia de Ballmer Giving, Omidyar Network y otros. Para obtener más información, visite: [ < % = resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Encuentre más recursos y muestras de correos electrónicos [aquí](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>

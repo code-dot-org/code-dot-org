@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.26":
-  version "1.6.26"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.26.tgz#14677c90f5ed6a0ae58ae0c2c9e1ea4cc4f4626e"
+"@code-dot-org/blockly@1.6.28":
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.28.tgz#5dff3ea371b63fb3635e8f5f08f597bba0a1af59"
 
 "@code-dot-org/bramble@0.1.22":
   version "0.1.22"
@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#3b5a5150afcd282a030dadab2b9775672d303548":
-  version "0.0.16"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/3b5a5150afcd282a030dadab2b9775672d303548"
+"@code-dot-org/craft@github:code-dot-org/craft#65f81632f7a2f3ba4d43b5778d1a0def24cd4b2f":
+  version "0.0.22"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/65f81632f7a2f3ba4d43b5778d1a0def24cd4b2f"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.1":
   version "0.11.1-cdo.1"
@@ -79,9 +79,9 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@^1.3.5":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.5.tgz#fef6dbd3f472aac9cb175a147385dd6fd6a27ebb"
+"@code-dot-org/js-interpreter@^1.3.6":
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.6.tgz#baecfa3f802a7d15b3be86c3b9696517ece33786"
   dependencies:
     yargs "^7.0.1"
 
@@ -93,9 +93,9 @@
   version "1.1.9-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.1.9-cdo.tgz#1e84ab26b1c8a5da62659209e81b74a35688ebef"
 
-"@code-dot-org/piskel@0.10.0-cdo.0":
-  version "0.10.0-cdo.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.10.0-cdo.0.tgz#d7a8e52de51af9880d88473355a0d2e1b9d120d6"
+"@code-dot-org/piskel@0.13.0-cdo.0":
+  version "0.13.0-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.0.tgz#75b51cb66f1de75a298ae0074263c30928f6623f"
 
 "@kadira/react-split-pane@^1.4.0":
   version "1.4.7"
@@ -5043,9 +5043,9 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery-ui@1.10.5:
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.10.5.tgz#826aed3dd1f88d32ae75d74df48643dc431a5815"
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
 
 jquery@2.1.4:
   version "2.1.4"
@@ -5981,10 +5981,6 @@ marked-terminal@^1.6.2:
     lodash.assign "^4.2.0"
     node-emoji "^1.4.1"
 
-marked@0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.2.tgz#015db158864438f24a64bdd61a0428b418706d09"
-
 marked@^0.3.3, marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
@@ -6555,6 +6551,10 @@ object-assign@^3.0.0:
 object-component@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/object-component/-/object-component-0.0.3.tgz#f0c69aa50efc95b866c186f400a33769cb2f1291"
+
+object-fit-images@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/object-fit-images/-/object-fit-images-3.2.3.tgz#4089f6d0070a3b5563d3c1ab6f1b28d61331f0ac"
 
 object-is@^1.0.1:
   version "1.0.1"
@@ -7376,6 +7376,10 @@ qs@~2.3.3:
 qs@~5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-5.1.0.tgz#4d932e5c7ea411cca76a312d39a606200fd50cd9"
+
+qtip2@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/qtip2/-/qtip2-2.2.0.tgz#421ea5040722624ac685cdf961baf5b740db3385"
 
 query-string@4.1.0, query-string@^4.1.0:
   version "4.1.0"

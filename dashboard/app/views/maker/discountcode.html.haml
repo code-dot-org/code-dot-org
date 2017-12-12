@@ -1,6 +1,5 @@
-- data = {}
-- data[:eligibility_status] = { statusPD: true, studentCount: false }
+- script_data = local_assigns[:script_data]
 
-%script{src: minifiable_asset_path('js/maker/discountcode.js'), data: {discountcode: data.to_json}}}
+%script{src: minifiable_asset_path('js/maker/discountcode.js'), data: {discountcode: script_data.to_json}}}
 
 #discountcode

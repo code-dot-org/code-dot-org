@@ -60,7 +60,8 @@
       "ifBlock": null,
       "x": null,
       "y": null,
-      "randomNumber_min_max": null
+      "randomNumber_min_max": null,
+      "scale": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -100,10 +101,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-14 19:29:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

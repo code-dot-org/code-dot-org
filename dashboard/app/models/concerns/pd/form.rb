@@ -34,6 +34,14 @@ module Pd::Form
     end
   end
 
+  # Determine if this (unsaved) model is a duplicate of an existing saved form.
+  # Used for idempotence check by controller
+  # @return [nil|Form] existing form that this is a duplicate of, or nil.
+  def check_idempotency
+    # override in model to provide an idempotence check
+    nil
+  end
+
   # Dynamic options are only used for validation on the server.
   # They are not supplied to the client like #options.
   def dynamic_options

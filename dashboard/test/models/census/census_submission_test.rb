@@ -6,6 +6,16 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
     assert submission.valid?, submission.errors.full_messages
   end
 
+  test "census submission with bad email is invalid" do
+    submission = build :census_submission, submitter_email_address: "email"
+    assert_not submission.valid?, submission.errors.full_messages
+  end
+
+  test "census submission with blank email is invalid" do
+    submission = build :census_submission, submitter_email_address: "   "
+    assert_not submission.valid?, submission.errors.full_messages
+  end
+
   test "census submission without school infos" do
     submission = build(:census_submission, school_info_count: 0)
     assert_not submission.valid?, submission.errors.full_messages
@@ -58,11 +68,6 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
 
   test "census submission with long other description" do
     submission = build(:census_submission, :with_long_other_description)
-    assert_not submission.valid?, submission.errors.full_messages
-  end
-
-  test "census submission with long tell us more" do
-    submission = build(:census_submission, :with_long_tell_us_more)
     assert_not submission.valid?, submission.errors.full_messages
   end
 end

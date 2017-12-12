@@ -1,21 +1,19 @@
 ---
-
 title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Hur man genomför Hour of Code med sitt barn
 
 Genomför Hour Code hemma, eller låt någon volontär genomföra den i ditt barns klassrum! Så här kan man göra:
 
-## 1) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) Välj ett material:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+Vi erbjuder en mängd roliga, timslånga tutorials för elever i alla åldrar, skapad av en mängd partners. [Prova dem!](<%= resolve_url('/learn') %>)
 
 **Alla Hour of Code lektioner är självinstruerande och tillåter ditt barn att arbeta i sin egen takt och kunskapsnivå**
 
@@ -35,7 +33,7 @@ Inled din Hour of Code genom att inspirera deltagarna och diskutera hur datavete
 **Visa en inspirerande video:**
 
 - Originalvideon från lanseringen av Code.org, där bland annat Bill Gates, Mark Zuckerberg och basketstjärnan Chris Bosh är med (det finns olika versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuter](https://www.youtube.com/watch?v=dU1xS07N-FA) långa)
-- [Lanseringsvideon från Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) eller <% if @country == 'uk' %> [ videon för Hour of Code 2014](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %>[ Hour of Code 2015 videon](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama uppmanar alla elever att lära sig datavetenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Hitta fler inspirerande [resurser](<%= resolve_url('https://code.org/inspire') %>) och [videor](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

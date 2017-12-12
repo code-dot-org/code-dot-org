@@ -1,0 +1,15 @@
+-# During Hour of Code season, show signup form and announcements. When it's not Hour of Code, hide signup form and announcements. Show "Sign Up is closed" message.
+%a#hocsignupform{name: 'signup'}
+#join
+  %h1#join-us-header=hoc_s(:front_join_us_button)
+  -if ["post-hoc", false].include?(hoc_mode)
+    %h3#signup-closed=hoc_s(:signup_closed)
+  -else
+    %h1#thanks-header{style: "display:none;"}=hoc_s(:census_thanks)
+    %div
+      .row
+        .col-md-6
+          =view :signup_form
+        .col-md-5
+          =view :announcements
+        .col-md-1
