@@ -10,28 +10,28 @@ nav: how_to_nav
 ## 1. Chuẩn bị cho sự kiện
 
 - Xác định địa điểm và thời gian tổ chức.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Gởi [một lá thư](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) mời các cán bộ và lãnh đạo địa phương hoặc những người có tầm ảnh hưởng đến tham dự và phát biểu. Kiểm tra [công cụ hướng dẫn](%=resolve_url('/files/elected-official.pdf')%) của chúng tôi khi đón tiếp các quan chức chính phủ trong suốt Giờ Lập trình để có thêm chi tiết.
 - Mời các đơn vị truyền thông/báo chí, bao gồm truyền hình địa phương, báo chí và các blogger về giáo dục/công nghệ. Xem [ bộ công cụ báo chí ](<%= hoc_uri('/resources/press-kit') %>) của chúng tôi để được giúp đỡ.
 
-## 2. During your event
+## 2. Trong suốt sự kiện
 
-- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+- Khởi động sự kiện của bạn với một trong những [video truyền cảm hứng](%= resolve_url('/promote/resources#videos') %) của chúng tôi.
+- Đưa ra một bài giới thiệu tổng quan về tầm quan trọng của khoa học máy tính, sử dụng những [ số liệu thống kê và đồ thị](<%= hoc_uri('/resources/stats') %>) này.   
       
     
 - Những ý tưởng khác: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
+    - Mời một nhà lãnh đạo ngành công nghiệp địa phương để thảo luận về công việc của mình liên quan đến khoa học máy tính.
+    - Mời một chính trị gia địa phương đến và để cho học sinh dạy ông/bà ấy biết cách lập trình.
     - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Cho một nhóm học sinh dạy cách lập trình cho ngài Hiệu trưởng hoặc một nhóm giáo viên.
+    - Nếu trường của bạn đã dạy về khoa học máy tính rồi, hãy để các học sinh giới thiệu các dự án mẫu.
 
-## 3. Share how it went
+## 3. Chia sẻ về mọi chuyện diễn ra như thế nào
 
 - Chia sẻ những hình ảnh về sự kiện của bạn trên Facebook và Twitter. 
-- Use the hashtag **#HourOfCode**
+- Sử dụng hashtag **#HourOfCode**
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Tổ chức một Đêm Lập trình của Gia Đình với Giờ Lập trình và mời phụ huynh tham gia
 
 Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 

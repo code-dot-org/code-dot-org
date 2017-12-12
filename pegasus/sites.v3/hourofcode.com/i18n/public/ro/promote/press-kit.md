@@ -54,9 +54,9 @@ Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de des
 
 **Despre Code.org**
 
-Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a minoritatilor. Viziunea sa este că fiecare student în fiecare şcoală ar trebui să aibă posibilitatea de a invata stiinta computerelor si programare. După lansarea din 2013, Code.org a organizat campania Hour of Code – care a introdus peste 100 de milioane de studenţi in tainele informaticii pana in prezent – şi în parteneriat cu 70 districte reusesc la nivel naţional sa extinde programele de tehnologia computerelor si programare. Code.org este susţinută de donaţii filantropice din corporaţii, fundaţii şi persoane generoase, inclusiv Microsoft, Infosys Foundation, Statele Unite ale Americii, The Ballmer Family Giving, Rețeaua Omidyar şi altele. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a minoritatilor. Viziunea sa este că fiecare student în fiecare şcoală ar trebui să aibă posibilitatea de a invata stiinta computerelor si programare. După lansarea din 2013, Code.org a organizat campania Hour of Code – care a introdus peste 100 de milioane de studenţi in tainele informaticii pana in prezent – şi în parteneriat cu 70 districte reusesc la nivel naţional sa extinde programele de tehnologia computerelor si programare. Code.org este susţinută de donaţii filantropice din corporaţii, fundaţii şi persoane generoase, inclusiv Microsoft, Infosys Foundation, Statele Unite ale Americii, The Ballmer Family Giving, Rețeaua Omidyar şi altele. Pentru mai multe informaţii, vă rugăm să vizitaţi: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Găsiţi mai multe resurse şi modele de e-mailuri [aici](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>

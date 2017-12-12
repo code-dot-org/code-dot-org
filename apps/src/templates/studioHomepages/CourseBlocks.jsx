@@ -113,7 +113,7 @@ export class CourseBlocksHoc extends Component {
   };
 
   componentDidMount() {
-    $('#hero').appendTo(ReactDOM.findDOMNode(this.refs.hero)).show();
+    $('#minecraft').appendTo(ReactDOM.findDOMNode(this.refs.minecraft)).show();
     $('#starwars').appendTo(ReactDOM.findDOMNode(this.refs.starwars)).show();
     $('#frozen').appendTo(ReactDOM.findDOMNode(this.refs.frozen)).show();
     $('#hourofcode').appendTo(ReactDOM.findDOMNode(this.refs.hourofcode)).show();
@@ -127,7 +127,7 @@ export class CourseBlocksHoc extends Component {
     return (
       <div>
         <div className="row">
-          <ProtectedStatefulDiv ref="hero"/>
+          <ProtectedStatefulDiv ref="minecraft"/>
           <ProtectedStatefulDiv ref="starwars"/>
           <ProtectedStatefulDiv ref="frozen"/>
           <ProtectedStatefulDiv ref="hourofcode"/>

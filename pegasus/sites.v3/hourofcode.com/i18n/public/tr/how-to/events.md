@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Nasıl bir Kodlama Saati etkinliği düzenlerim
+# Kod-Saati etkinliğini nasıl düzenlerim
 
 ## 1. Etkinliğiniz için hazırlanın
 
@@ -20,7 +20,7 @@ nav: how_to_nav
       
     
 - Diğer etkinlik fikirleri: 
-    - Yerelde, bilgisayar bilimleri ile çalışan bir fabrika sahibini davet edin.
+    - Yerelde, bilgisayar bilimleri ile çalışan bir şirket sahibini davet edin.
     - Yerel bir politikacıyı davet edin ve öğrencinize, davet ettiğiniz kişiye kodlamanın nasıl yapılacağını anlatmasını söyleyin.
     - İnternet bağlantısı gerektirmeyen bir aktiviteyi göstermek için, bir grup öğrenci seçin.
     - Okul müdürüne ya da bir grup öğretmene, kodlamanın nasıl yapılacağını göstermek için bir grup öğrenci seçin.
@@ -31,7 +31,7 @@ nav: how_to_nav
 - Etkinliklerinizi facebook ve twitter da paylaşın 
 - **#HourofCode** etiketini kullanın
 
-## Kodlama Saati ile Aileler Gece Kodluyor etkinliğine ev sahipliği yap, aileleri katılmaları için davet et
+## Kod-Saati ile Aileler Gece Kodluyor etkinliğine ev sahipliği yap, aileleri katılmaları için davet et
 
 K-5 akşam etkinliğine düzenlemeyi ve aileleri. bir saat bilgisayar bilimleri dersinde, çocuklarına katılmalarını davet etmeyi düşün. Daha geniş toplulukları işin içine katmak ve aileleri, okulunuzda ki bilgisayar bilimleri dersi için desteklemek harika bir yöntemdir. Ortaklarımız, Aileler Gece Kodluyor etkinliğinde, kontrol listesi planlama, sunucu dosyası, davet e-postaları, posterler, powerpoint sunuları ve kendi etkinliğini çalıştırmak için hepsi dahil bir Etkinlik Kiti oluşturdular. [ Etkinlik Kitini indirmek için buraya tıklayın.](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
@@ -47,9 +47,9 @@ K-5 akşam etkinliğine düzenlemeyi ve aileleri. bir saat bilgisayar bilimleri 
   
 
 
-## Etkinlik Programı
+## Gösteriyi Başlat
 
-| Saat          | Olay                                                                                                                                                              |
+| Saat          | Etkinlik                                                                                                                                                          |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 10.00 - 10.05 | [İlham verici videolarımızdan](<%= resolve_url('/promote/resources#videos') %>) biriyle açılışı yapın                                                               |
 | 10.05 - 10.15 | Okul müdürü bilgisayar bilimlerinin öneminden bahseden bir açılış konuşması yapar. Bu [istatistik ve grafikleri](<%= resolve_url('/promote/stats') %>) kullanın.    |

@@ -107,7 +107,6 @@ class OwnedSections extends React.Component {
               dismissible={false}
               buttonText={i18n.newSectionCreate()}
               newWindow={true}
-              isRtl={isRtl}
               onButtonClick={this.beginEditingNewSection}
               buttonClassName="uitest-newsection"
             />

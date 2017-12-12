@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailViewContents from './detail_view_contents';
+import { DetailViewContents } from './detail_view_contents';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
 export default storybook => {
