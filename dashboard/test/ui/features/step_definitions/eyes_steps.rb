@@ -8,6 +8,10 @@ require 'json'
 # See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
 MATCH_TIMEOUT = 5
 
+# Prefix to print before any eyes errors. We depend on this in runner.rb to detect
+# whether there were any eyes errors.
+EYES_ERROR_PREFIX = '[Applitools Eyes error]'
+
 When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
@@ -44,7 +48,11 @@ And(/^I close my eyes$/) do
 
   @browser = @original_browser
   fail_on_mismatch = !CDO.ignore_eyes_mismatches
-  @eyes.close(fail_on_mismatch)
+  begin
+    @eyes.close(fail_on_mismatch)
+  rescue Applitools::TestFailedError => e
+    puts "#{EYES_ERROR_PREFIX} #{e}"
+  end
 end
 
 And(/^I see no difference for "([^"]*)"$/) do |identifier|
