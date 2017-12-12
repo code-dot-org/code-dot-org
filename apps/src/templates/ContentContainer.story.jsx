@@ -13,6 +13,7 @@ const exampleCard = {
 export default storybook => {
   return storybook
     .storiesOf('ContentContainer', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'no link',
