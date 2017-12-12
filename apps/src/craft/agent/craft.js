@@ -22,6 +22,7 @@ import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -803,9 +804,8 @@ export default class Craft {
           trySetLocalStorage('craftHeroShareLink', response.level_source);
         }
 
+        const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
         studioApp().displayFeedback({
-          app: 'craft',
-          skin: Craft.initialConfig.skin.id,
           feedbackType: testResultType,
           response,
           level: Craft.initialConfig.level,
@@ -822,6 +822,7 @@ export default class Craft {
           feedbackImage: image,
           showingSharing: sharing,
           saveToProjectGallery: true,
+          disableSaveToGallery: !isSignedIn,
         });
       },
     });

@@ -6,13 +6,16 @@
  *        /csd_facilitators
  *        /csp_facilitators
  */
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
+import { SelectStyleProps } from '../constants';
+import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import {ApplicationStatuses} from './constants';
+import { ApplicationStatuses } from './constants';
 import {
   Button,
   FormGroup,
@@ -20,19 +23,6 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-
-// Default max height for the React-Select menu popup, as defined in the imported react-select.css,
-// is 200px for the container, and 198 for the actual menu (to accommodate 2px for the border).
-// React-Select has props for overriding these default css styles. Increase the max height here:
-const selectMenuMaxHeight = 400;
-const selectStyleProps = {
-  menuContainerStyle: {
-    maxHeight: selectMenuMaxHeight
-  },
-  menuStyle: {
-    maxHeight: selectMenuMaxHeight - 2
-  }
-};
 
 const styles = {
   button: {
@@ -43,10 +33,11 @@ const styles = {
   }
 };
 
-export default class QuickView extends React.Component {
+export class QuickView extends React.Component {
   static propTypes = {
+    regionalPartnerName: PropTypes.string.isRequired,
+    isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
-      regionalPartnerName: PropTypes.string.isRequired,
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
       viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
@@ -60,12 +51,10 @@ export default class QuickView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    filter: null
+    filter: null,
+    regionalPartnerName: this.props.regionalPartnerName,
+    regionalPartnerFilter: null
   };
-
-  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
-  getJsonUrl = () => this.getApiUrl();
-  getCsvUrl = () => this.getApiUrl('.csv');
 
   componentWillMount() {
     $.ajax({
@@ -85,24 +74,39 @@ export default class QuickView extends React.Component {
     this.statuses.unshift({value: null, label: "\u00A0"});
   }
 
+  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
+  getJsonUrl = () => this.getApiUrl();
+  getCsvUrl = () => this.getApiUrl('.csv');
+
   handleDownloadCsvClick = event => {
     window.open(this.getCsvUrl());
   };
 
   handleStateChange = (selected) => {
     const filter = selected ? selected.value : null;
-    this.setState({filter: filter});
+    this.setState({ filter });
+  };
+
+  handleRegionalPartnerChange = (selected) => {
+    const regionalPartnerFilter = selected ? selected.value : null;
+    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.regionalPartnerName;
+    this.setState({ regionalPartnerName, regionalPartnerFilter });
   };
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
-
     return (
       <div>
+        {this.props.isWorkshopAdmin &&
+          <RegionalPartnerDropdown
+            onChange={this.handleRegionalPartnerChange}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
+          />
+        }
         <Row>
-          <h1>{this.props.route.regionalPartnerName}</h1>
+          <h1>{this.state.regionalPartnerName}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
             <Button
@@ -121,7 +125,7 @@ export default class QuickView extends React.Component {
                 placeholder={null}
                 options={this.statuses}
                 style={styles.select}
-                {...selectStyleProps}
+                {...SelectStyleProps}
               />
             </FormGroup>
           </Col>
@@ -130,8 +134,14 @@ export default class QuickView extends React.Component {
           path={this.props.route.path}
           data={this.state.applications}
           statusFilter={this.state.filter}
+          regionalPartnerFilter={this.state.regionalPartnerFilter}
         />
       </div>
     );
   }
 }
+
+export default connect(state => ({
+  regionalPartnerName: state.regionalPartnerName,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
+}))(QuickView);
